@@ -1,0 +1,159 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+final sharedPreferencesProvider = Provider<SharedPreferences>((ref) {
+  throw UnimplementedError('sharedPreferencesProvider must be overridden');
+});
+
+class SettingsState {
+  final String calculationMethod;
+  final String madhab;
+  final String audioVoice;
+  final double qiblaOffset;
+  final bool qiblaSmoothingEnabled;
+  final double fajrAngle;
+  final double ishaAngle;
+  final String? languageCode;
+  final double? latitude;
+  final double? longitude;
+  final String? locationName;
+  final bool isDarkMode;
+
+  SettingsState({
+    this.calculationMethod = 'Turkey',
+    this.madhab = 'Hanafi',
+    this.audioVoice = 'Male (Mishary Alafasy)',
+    this.qiblaOffset = 0.0,
+    this.qiblaSmoothingEnabled = true,
+    this.fajrAngle = 18.0,
+    this.ishaAngle = 17.0,
+    this.languageCode,
+    this.latitude,
+    this.longitude,
+    this.locationName,
+    this.isDarkMode = true,
+  });
+
+  SettingsState copyWith({
+    String? calculationMethod,
+    String? madhab,
+    String? audioVoice,
+    double? qiblaOffset,
+    bool? qiblaSmoothingEnabled,
+    double? fajrAngle,
+    double? ishaAngle,
+    String? languageCode,
+    double? latitude,
+    double? longitude,
+    String? locationName,
+    bool? isDarkMode,
+  }) {
+    return SettingsState(
+      calculationMethod: calculationMethod ?? this.calculationMethod,
+      madhab: madhab ?? this.madhab,
+      audioVoice: audioVoice ?? this.audioVoice,
+      qiblaOffset: qiblaOffset ?? this.qiblaOffset,
+      qiblaSmoothingEnabled: qiblaSmoothingEnabled ?? this.qiblaSmoothingEnabled,
+      fajrAngle: fajrAngle ?? this.fajrAngle,
+      ishaAngle: ishaAngle ?? this.ishaAngle,
+      languageCode: languageCode ?? this.languageCode,
+      latitude: latitude ?? this.latitude,
+      longitude: longitude ?? this.longitude,
+      locationName: locationName ?? this.locationName,
+      isDarkMode: isDarkMode ?? this.isDarkMode,
+    );
+  }
+}
+
+class SettingsNotifier extends StateNotifier<SettingsState> {
+  final SharedPreferences _prefs;
+
+  SettingsNotifier(this._prefs) : super(SettingsState(
+    calculationMethod: _prefs.getString('calculationMethod') ?? 'Turkey',
+    madhab: _prefs.getString('madhab') ?? 'Hanafi',
+    audioVoice: _prefs.getString('audioVoice') ?? 'Male (Mishary Alafasy)',
+    qiblaOffset: _prefs.getDouble('qiblaOffset') ?? 0.0,
+    qiblaSmoothingEnabled: _prefs.getBool('qiblaSmoothingEnabled') ?? true,
+    fajrAngle: _prefs.getDouble('fajrAngle') ?? 18.0,
+    ishaAngle: _prefs.getDouble('ishaAngle') ?? 17.0,
+    languageCode: _prefs.getString('languageCode'),
+    latitude: _prefs.getDouble('latitude'),
+    longitude: _prefs.getDouble('longitude'),
+    locationName: _prefs.getString('locationName'),
+    isDarkMode: _prefs.getBool('isDarkMode') ?? true,
+  ));
+
+  Future<void> updateCalculationMethod(String method) async {
+    await _prefs.setString('calculationMethod', method);
+    state = state.copyWith(calculationMethod: method);
+  }
+
+  Future<void> updateMadhab(String madhab) async {
+    await _prefs.setString('madhab', madhab);
+    state = state.copyWith(madhab: madhab);
+  }
+
+  Future<void> updateAudioVoice(String voice) async {
+    await _prefs.setString('audioVoice', voice);
+    state = state.copyWith(audioVoice: voice);
+  }
+
+  Future<void> updateQiblaOffset(double offset) async {
+    await _prefs.setDouble('qiblaOffset', offset);
+    state = state.copyWith(qiblaOffset: offset);
+  }
+
+  Future<void> toggleQiblaSmoothing(bool enabled) async {
+    await _prefs.setBool('qiblaSmoothingEnabled', enabled);
+    state = state.copyWith(qiblaSmoothingEnabled: enabled);
+  }
+
+  Future<void> updateCustomAngles(double fajr, double isha) async {
+    await _prefs.setDouble('fajrAngle', fajr);
+    await _prefs.setDouble('ishaAngle', isha);
+    state = state.copyWith(fajrAngle: fajr, ishaAngle: isha);
+  }
+
+  Future<void> updateLanguage(String? langCode) async {
+    if (langCode == null) {
+      await _prefs.remove('languageCode');
+    } else {
+      await _prefs.setString('languageCode', langCode);
+    }
+    state = state.copyWith(languageCode: langCode);
+  }
+
+  Future<void> updateLocation(double lat, double lng, String name) async {
+    await _prefs.setDouble('latitude', lat);
+    await _prefs.setDouble('longitude', lng);
+    await _prefs.setString('locationName', name);
+    state = state.copyWith(latitude: lat, longitude: lng, locationName: name);
+  }
+
+  Future<void> clearManualLocation() async {
+    await _prefs.remove('latitude');
+    await _prefs.remove('longitude');
+    await _prefs.remove('locationName');
+    state = SettingsState(
+      calculationMethod: state.calculationMethod,
+      madhab: state.madhab,
+      audioVoice: state.audioVoice,
+      qiblaOffset: state.qiblaOffset,
+      qiblaSmoothingEnabled: state.qiblaSmoothingEnabled,
+      fajrAngle: state.fajrAngle,
+      ishaAngle: state.ishaAngle,
+      languageCode: state.languageCode,
+      isDarkMode: state.isDarkMode,
+    );
+  }
+
+  Future<void> toggleDarkMode(bool value) async {
+    await _prefs.setBool('isDarkMode', value);
+    state = state.copyWith(isDarkMode: value);
+  }
+}
+
+final settingsProvider = StateNotifierProvider<SettingsNotifier, SettingsState>((ref) {
+  final prefs = ref.watch(sharedPreferencesProvider);
+  return SettingsNotifier(prefs);
+});
