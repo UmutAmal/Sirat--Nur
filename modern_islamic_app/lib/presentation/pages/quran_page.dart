@@ -5,6 +5,7 @@ import 'package:sirat_i_nur/l10n/app_localizations.dart';
 import 'package:sirat_i_nur/presentation/blocs/quran_provider.dart';
 import 'package:sirat_i_nur/presentation/blocs/quran_state_provider.dart';
 import 'package:sirat_i_nur/core/utils/l10n_utils.dart';
+import 'package:sirat_i_nur/presentation/widgets/premium_card.dart';
 
 class QuranPage extends ConsumerWidget {
   const QuranPage({super.key});
@@ -177,25 +178,29 @@ class QuranPage extends ConsumerWidget {
                   // Tab 2: Juz List
                   ListView.separated(
                     itemCount: 30,
-                    separatorBuilder: (context, index) => const Divider(height: 1),
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    separatorBuilder: (context, index) => const Divider(height: 1, indent: 80),
                     itemBuilder: (context, index) {
                       final juzNum = index + 1;
                       return ListTile(
+                        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                         leading: Container(
-                          width: 40,
-                          height: 40,
+                          width: 44,
+                          height: 44,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
+                            color: Theme.of(context).colorScheme.secondary.withValues(alpha: 0.1),
                             border: Border.all(
-                              color: Theme.of(context).colorScheme.secondary,
-                              width: 2,
+                              color: Theme.of(context).colorScheme.secondary.withValues(alpha: 0.3),
+                              width: 1,
                             ),
                           ),
                           child: Center(
                             child: Text(
                               juzNum.toString(),
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w900,
+                                fontSize: 16,
                                 color: Theme.of(context).colorScheme.secondary,
                               ),
                             ),
@@ -203,9 +208,16 @@ class QuranPage extends ConsumerWidget {
                         ),
                         title: Text(
                           trEnGlobal(context, tr: 'Cüz $juzNum', en: 'Juz $juzNum'),
-                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 18),
                         ),
-                        trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                        subtitle: Text(
+                          trEnGlobal(context, tr: 'Kur\'an-ı Kerim Bölümü', en: 'Section of the Holy Quran'),
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+                          ),
+                        ),
+                        trailing: Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3)),
                         onTap: () {
                           context.push(
                             '/quran/juz/$juzNum',
