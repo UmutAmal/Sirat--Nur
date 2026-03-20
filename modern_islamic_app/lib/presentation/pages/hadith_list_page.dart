@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/presentation/blocs/library_provider.dart';
 import 'package:sirat_i_nur/core/utils/tr_en.dart';
+import 'package:sirat_i_nur/presentation/widgets/premium_card.dart';
 
 class HadithListPage extends ConsumerWidget {
   final String collectionId;
@@ -21,7 +22,7 @@ class HadithListPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(collectionName),
+        title: Text(collectionName, style: const TextStyle(fontWeight: FontWeight.w900)),
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
@@ -50,73 +51,87 @@ class HadithListPage extends ConsumerWidget {
             );
           }
 
-          return ListView.separated(
+          return ListView.builder(
             padding: const EdgeInsets.all(16).copyWith(bottom: 100),
             itemCount: hadiths.length,
-            separatorBuilder: (context, index) => const Divider(height: 32),
             itemBuilder: (context, index) {
               final h = hadiths[index];
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              final isSahih = h.grade.toLowerCase() == 'sahih';
+              
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 16),
+                child: PremiumCard(
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: Text(
-                          '${trEn(context, tr: 'Hadis', en: 'Hadith')} ${h.hadithNumber}',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).colorScheme.primary,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                            decoration: BoxDecoration(
+                              color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Text(
+                              '${trEn(context, tr: 'HADİS', en: 'HADITH')} ${h.hadithNumber}',
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w900,
+                                color: Theme.of(context).colorScheme.primary,
+                                letterSpacing: 1,
+                              ),
+                            ),
                           ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                            decoration: BoxDecoration(
+                              color: isSahih 
+                                  ? Colors.green.withValues(alpha: 0.1) 
+                                  : Colors.orange.withValues(alpha: 0.1),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Text(
+                              h.grade.toUpperCase(),
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w900,
+                                color: isSahih ? Colors.green[800] : Colors.orange[800],
+                                letterSpacing: 1,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 24),
+                      Text(
+                        h.arabicText,
+                        textAlign: TextAlign.right,
+                        textDirection: TextDirection.rtl,
+                        style: TextStyle(
+                          fontFamily: 'Amiri',
+                          fontSize: 28,
+                          height: 1.8,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                       ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                        decoration: BoxDecoration(
-                          color: h.grade.toLowerCase() == 'sahih' 
-                              ? Colors.green.withValues(alpha: 0.1) 
-                              : Colors.orange.withValues(alpha: 0.1),
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: Text(
-                          h.grade,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: h.grade.toLowerCase() == 'sahih' 
-                                ? Colors.green[800] 
-                                : Colors.orange[800],
-                          ),
+                      const SizedBox(height: 24),
+                      Divider(color: Theme.of(context).colorScheme.outline.withValues(alpha: 0.1)),
+                      const SizedBox(height: 24),
+                      Text(
+                        h.translation,
+                        style: TextStyle(
+                          fontSize: 16,
+                          height: 1.6,
+                          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.8),
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16),
-                  Text(
-                    h.arabicText,
-                    textAlign: TextAlign.right,
-                    textDirection: TextDirection.rtl,
-                    style: const TextStyle(
-                      fontFamily: 'Amiri',
-                      fontSize: 24,
-                      height: 1.8,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  Text(
-                    h.translation,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      height: 1.5,
-                    ),
-                  ),
-                ],
+                ),
               );
             },
           );

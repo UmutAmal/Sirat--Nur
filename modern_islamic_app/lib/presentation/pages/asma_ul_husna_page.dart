@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/presentation/blocs/asma_ul_husna_provider.dart';
 import 'package:sirat_i_nur/core/utils/l10n_utils.dart';
-import 'package:sirat_i_nur/core/utils/royal_shaders.dart';
+import 'package:sirat_i_nur/presentation/widgets/premium_card.dart';
 
 class AsmaUlHusnaPage extends ConsumerWidget {
   const AsmaUlHusnaPage({super.key});
@@ -13,97 +13,70 @@ class AsmaUlHusnaPage extends ConsumerWidget {
     final names = ref.watch(localizedAsmaProvider(locale));
 
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: Stack(
-        children: [
-          Positioned.fill(
-            child: CustomPaint(
-              painter: SilkPainter(),
+      backgroundColor: Theme.of(context).colorScheme.surface,
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            backgroundColor: Colors.transparent,
+            surfaceTintColor: Colors.transparent,
+            expandedHeight: 120,
+            floating: true,
+            flexibleSpace: FlexibleSpaceBar(
+              centerTitle: true,
+              title: Text(
+                trEnGlobal(context, tr: 'Esma-ül Hüsna', en: 'Asma-ul Husna'),
+                style: const TextStyle(
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 1.5,
+                ),
+              ),
             ),
           ),
-          CustomScrollView(
-            slivers: [
-              SliverAppBar(
-                backgroundColor: Colors.transparent,
-                expandedHeight: 120,
-                floating: true,
-                flexibleSpace: FlexibleSpaceBar(
-                  centerTitle: true,
-                  title: Text(
-                    trEnGlobal(context, tr: 'Esma-ül Hüsna', en: 'Asma-ul Husna'),
-                    style: const TextStyle(
-                      color: Color(0xFFFFD700),
-                      letterSpacing: 2,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
+          SliverPadding(
+            padding: const EdgeInsets.all(16.0),
+            sliver: SliverGrid(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 16.0,
+                crossAxisSpacing: 16.0,
+                childAspectRatio: 0.85,
               ),
-              SliverPadding(
-                padding: const EdgeInsets.all(16.0),
-                sliver: SliverGrid(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 16.0,
-                    crossAxisSpacing: 16.0,
-                    childAspectRatio: 0.85,
-                  ),
-                  delegate: SliverChildBuilderDelegate(
-                    (context, index) {
-                      final nameData = names[index];
-                      return GestureDetector(
-                        onTap: () => _showDetailsBottomSheet(context, nameData, ref),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(24),
-                            gradient: LinearGradient(
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              colors: [
-                                const Color(0xFFFFD700).withValues(alpha: 0.15),
-                                Colors.black.withValues(alpha: 0.8),
-                              ],
-                            ),
-                            border: Border.all(
-                              color: const Color(0xFFFFD700).withValues(alpha: 0.3),
-                              width: 0.5,
-                            ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  nameData['arabic'],
-                                  style: const TextStyle(
-                                    fontFamily: 'Amiri',
-                                    fontSize: 28,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xFFFFD700),
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                Text(
-                                  nameData['transliteration'],
-                                  textAlign: TextAlign.center,
-                                  style: const TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.white70,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ],
-                            ),
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
+                  final nameData = names[index];
+                  return PremiumCard(
+                    onTap: () => _showDetailsBottomSheet(context, nameData, ref),
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          nameData['arabic'],
+                          style: TextStyle(
+                            fontFamily: 'Amiri',
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                            color: Theme.of(context).colorScheme.primary,
                           ),
                         ),
-                      );
-                    },
-                    childCount: names.length,
-                  ),
-                ),
+                        const SizedBox(height: 12),
+                        Text(
+                          nameData['transliteration'].toUpperCase(),
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 11,
+                            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: 1,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                childCount: names.length,
               ),
-            ],
+            ),
           ),
         ],
       ),
@@ -113,57 +86,61 @@ class AsmaUlHusnaPage extends ConsumerWidget {
   void _showDetailsBottomSheet(BuildContext context, Map<String, dynamic> data, WidgetRef ref) {
     showModalBottomSheet(
       context: context,
-      backgroundColor: Colors.black,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(32)),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(40)),
       ),
       builder: (context) {
         return Container(
-          padding: const EdgeInsets.all(24.0),
-          decoration: BoxDecoration(
-            border: Border.all(color: const Color(0xFFFFD700).withValues(alpha: 0.2)),
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
-          ),
+          padding: const EdgeInsets.all(32.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+              Container(
+                width: 40,
+                height: 4,
+                decoration: BoxDecoration(color: Theme.of(context).colorScheme.outline.withValues(alpha: 0.2), borderRadius: BorderRadius.circular(2)),
+              ),
+              const SizedBox(height: 32),
               Text(
                 data['arabic'],
-                style: const TextStyle(
+                style: TextStyle(
                   fontFamily: 'Amiri',
-                  fontSize: 56,
+                  fontSize: 64,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFFFFD700),
+                  color: Theme.of(context).colorScheme.primary,
                 ),
               ),
               const SizedBox(height: 16),
               Text(
-                data['transliteration'],
+                data['transliteration'].toUpperCase(),
                 style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 1.5,
                 ),
               ),
               const SizedBox(height: 16),
               Text(
                 data['meaning'],
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 18,
-                  color: Colors.white70,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
+                  fontWeight: FontWeight.w500,
                 ),
               ),
-              const SizedBox(height: 32),
+              const SizedBox(height: 40),
               ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFFFD700),
-                  foregroundColor: Colors.black,
-                  minimumSize: const Size(double.infinity, 56),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                  backgroundColor: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+                  foregroundColor: Theme.of(context).colorScheme.primary,
+                  elevation: 0,
+                  minimumSize: const Size(double.infinity, 64),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 ),
-                icon: const Icon(Icons.volume_up),
-                label: Text(trEnGlobal(context, tr: 'Telaffuzu Dinle', en: 'Listen Pronunciation')),
+                icon: const Icon(Icons.volume_up_rounded),
+                label: Text(trEnGlobal(context, tr: 'Telaffuzu Dinle', en: 'Listen Pronunciation'), style: const TextStyle(fontWeight: FontWeight.w900)),
                 onPressed: () async {
                    // Audio logic...
                 },
