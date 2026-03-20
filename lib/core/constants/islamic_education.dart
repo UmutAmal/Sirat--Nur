@@ -229,7 +229,7 @@ final List<EducationTopic> _ahlakTopics = [
     title: 'İslami Erdemenler',
     titleEn: 'Islamic Virtues',
     content: 'Temel erdemler: Takva (Allah korsu), İslam (barış), İhsan (iyilik), Sabır, Şükür. Mümin, insanların kendisine güvendiği kimsedir.',
-    contentEn: 'Core virtues: Taqwa (fear of Islam), Islam (peace), Ihsan (excellence), Patience, Gratitude. A believer is one whom people trust.',
+    contentEn: 'Core virtues: Taqwa (consciousness of Allah), Islam (peace), Ihsan (excellence), Patience, Gratitude. A believer is one whom people trust.',
   ),
   EducationTopic(
     id: 'ahlak_2',

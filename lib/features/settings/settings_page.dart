@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/core/constants/app_constants.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 
 class SettingsPage extends ConsumerWidget {
@@ -112,7 +113,7 @@ class SettingsPage extends ConsumerWidget {
                     icon: Icons.language_rounded,
                     title: 'Language',
                     value: settings.languageCode?.toUpperCase() ?? 'System',
-                    onTap: () {},
+                    onTap: () => _showLanguagePicker(context, ref),
                   ),
                 ],
               ),
@@ -239,6 +240,63 @@ class SettingsPage extends ConsumerWidget {
             Navigator.pop(ctx);
           },
         )).toList(),
+      ),
+    );
+  }
+
+  void _showLanguagePicker(BuildContext context, WidgetRef ref) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      builder: (ctx) => DraggableScrollableSheet(
+        initialChildSize: 0.7,
+        minChildSize: 0.4,
+        maxChildSize: 0.9,
+        expand: false,
+        builder: (context, scrollController) => Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: Text('Select Language', style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.w900)),
+            ),
+            // System default option
+            ListTile(
+              leading: const Icon(Icons.settings_suggest_rounded, color: AppColors.emerald),
+              title: const Text('System Default', style: TextStyle(fontWeight: FontWeight.w700)),
+              trailing: ref.read(settingsProvider).languageCode == null
+                ? const Icon(Icons.check_circle_rounded, color: AppColors.emerald)
+                : null,
+              onTap: () {
+                ref.read(settingsProvider.notifier).updateLanguage(null);
+                Navigator.pop(ctx);
+              },
+            ),
+            const Divider(),
+            Expanded(
+              child: ListView.builder(
+                controller: scrollController,
+                itemCount: supportedLanguages.length,
+                itemBuilder: (context, i) {
+                  final lang = supportedLanguages[i];
+                  final isSelected = ref.read(settingsProvider).languageCode == lang.code;
+                  return ListTile(
+                    title: Text(lang.nativeName, style: const TextStyle(fontWeight: FontWeight.w700)),
+                    subtitle: Text(lang.englishName, style: TextStyle(
+                      fontSize: 12, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+                    trailing: isSelected
+                      ? const Icon(Icons.check_circle_rounded, color: AppColors.emerald)
+                      : null,
+                    onTap: () {
+                      ref.read(settingsProvider.notifier).updateLanguage(lang.code);
+                      Navigator.pop(ctx);
+                    },
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
