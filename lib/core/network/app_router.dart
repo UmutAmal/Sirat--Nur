@@ -26,6 +26,7 @@ import 'package:sirat_i_nur/features/downloads/offline_downloads_page.dart';
 import 'package:sirat_i_nur/features/onboarding/onboarding_page.dart';
 import 'package:sirat_i_nur/features/analytics/analytics_page.dart';
 import 'package:sirat_i_nur/features/common/app_error_page.dart';
+import 'package:sirat_i_nur/features/library/zakat_calculator_page.dart';
 
 // Smooth slide + fade transition
 CustomTransitionPage<T> _slideTransition<T>(
@@ -234,6 +235,11 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         path: '/analytics',
         name: 'analytics',
         pageBuilder: (ctx, state) => _slideTransition(ctx, state, const AnalyticsPage()),
+      ),
+      GoRoute(
+        path: '/zakat',
+        name: 'zakat',
+        pageBuilder: (ctx, state) => _slideTransition(ctx, state, const ZakatCalculatorPage()),
       ),
     ],
   );
