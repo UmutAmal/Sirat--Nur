@@ -195,47 +195,67 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
     return Container(
       margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: hasError
-            ? theme.colorScheme.errorContainer
-            : theme.colorScheme.surfaceContainerHighest,
-        borderRadius: BorderRadius.circular(12),
+            ? theme.colorScheme.errorContainer.withValues(alpha: 0.3)
+            : theme.colorScheme.primary.withValues(alpha: 0.05),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: hasError 
+            ? theme.colorScheme.error.withValues(alpha: 0.2) 
+            : theme.colorScheme.primary.withValues(alpha: 0.1),
+          width: 1,
+        ),
       ),
       child: Row(
         children: [
-          Icon(
-            hasError ? Icons.error_outline : Icons.volume_up,
-            color: hasError ? theme.colorScheme.error : theme.colorScheme.primary,
+          Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: hasError
+                  ? theme.colorScheme.error.withValues(alpha: 0.1)
+                  : theme.colorScheme.primary.withValues(alpha: 0.1),
+              shape: BoxShape.circle,
+            ),
+            child: Icon(
+              hasError ? Icons.error_outline_rounded : Icons.volume_up_rounded,
+              color: hasError ? theme.colorScheme.error : theme.colorScheme.primary,
+              size: 20,
+            ),
           ),
-          const SizedBox(width: 12),
+          const SizedBox(width: 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   hasError 
-                    ? trEnGlobal(context, tr: 'Ses sorunu', en: 'Audio issue') 
-                    : trEnGlobal(context, tr: 'Ses hazır', en: 'Audio ready'),
+                    ? trEnGlobal(context, tr: 'Ses Sorunu', en: 'Audio Issue') 
+                    : trEnGlobal(context, tr: 'Ses Hazır', en: 'Audio Ready'),
                   style: theme.textTheme.titleSmall?.copyWith(
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w900,
+                    fontSize: 12,
+                    letterSpacing: 0.5,
                     color: hasError ? theme.colorScheme.error : theme.colorScheme.onSurface,
                   ),
                 ),
-                const SizedBox(height: 4),
+                const SizedBox(height: 2),
                 Text(
                   statusText,
                   style: theme.textTheme.bodySmall?.copyWith(
-                    color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                    fontSize: 11,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ],
             ),
           ),
-          TextButton.icon(
+          IconButton(
             onPressed: _isLoadingAudio ? null : _initAudio,
-            icon: const Icon(Icons.refresh, size: 18),
-            label: Text(trEnGlobal(context, tr: 'Tekrar Dene', en: 'Retry')),
+            icon: Icon(Icons.refresh_rounded, size: 20, color: theme.colorScheme.primary),
+            tooltip: trEnGlobal(context, tr: 'Tekrar Dene', en: 'Retry'),
           ),
         ],
       ),
@@ -268,7 +288,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.surahName),
+        title: Text(widget.surahName, style: const TextStyle(fontWeight: FontWeight.w900)),
         actions: [
           IconButton(
             icon: Icon(_showTranslation ? Icons.translate : Icons.g_translate),
@@ -303,9 +323,11 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: canPlay ? _togglePlay : null,
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        foregroundColor: Colors.white,
         child: _isLoadingAudio 
           ? const CircularProgressIndicator(color: Colors.white)
-          : Icon(_isPlaying ? Icons.pause : Icons.play_arrow),
+          : Icon(_isPlaying ? Icons.pause_rounded : Icons.play_arrow_rounded),
       ),
       body: ayahsAsync.when(
         data: (ayahs) {
@@ -335,24 +357,25 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                          Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                             Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                               decoration: BoxDecoration(
-                                color: Theme.of(context).colorScheme.surfaceContainerHighest,
-                                borderRadius: BorderRadius.circular(16),
+                                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+                                borderRadius: BorderRadius.circular(12),
                               ),
                               child: Text(
                                 '${ayah.numberInSurah}',
                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 12,
+                                  color: Theme.of(context).colorScheme.primary,
                                 ),
                               ),
                             ),
                             Row(
                               children: [
-                                IconButton(
-                                  icon: const Icon(Icons.history_edu),
+                                 IconButton(
+                                  icon: Icon(Icons.history_edu_rounded, color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.6)),
                                   tooltip: trEnGlobal(
                                     context,
                                     tr: 'Son okunan olarak ayarla',
@@ -366,6 +389,8 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                                     );
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
+                                        behavior: SnackBarBehavior.floating,
+                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                                         content: Text(
                                           trEnGlobal(
                                             context,
@@ -381,8 +406,8 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                                   builder: (context, ref, child) {
                                      final isBookmarked = ref.watch(bookmarksProvider.notifier).isBookmarked(widget.surahNumber, ayah.numberInSurah);
                                      return IconButton(
-                                       icon: Icon(isBookmarked ? Icons.bookmark : Icons.bookmark_border),
-                                       color: isBookmarked ? Theme.of(context).colorScheme.primary : null,
+                                       icon: Icon(isBookmarked ? Icons.bookmark_rounded : Icons.bookmark_border_rounded),
+                                       color: isBookmarked ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.primary.withValues(alpha: 0.6),
                                        onPressed: () {
                                          ref.read(bookmarksProvider.notifier).toggleBookmark(
                                             widget.surahNumber,

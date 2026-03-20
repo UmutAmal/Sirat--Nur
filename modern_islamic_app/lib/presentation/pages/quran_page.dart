@@ -23,13 +23,16 @@ class QuranPage extends ConsumerWidget {
           title: Text(l10n.quran),
           centerTitle: false,
           bottom: TabBar(
-            indicatorColor: Colors.white,
+            indicatorColor: Theme.of(context).colorScheme.primary,
             indicatorWeight: 3,
-            labelStyle: const TextStyle(fontWeight: FontWeight.bold),
-            unselectedLabelColor: Colors.white.withValues(alpha: 0.7),
+            labelStyle: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13),
+            unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
+            labelColor: Theme.of(context).colorScheme.primary,
+            unselectedLabelColor: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+            indicatorSize: TabBarIndicatorSize.label,
             tabs: [
-              Tab(text: trEnGlobal(context, tr: 'Sure', en: 'Surah')),
-              Tab(text: trEnGlobal(context, tr: 'Cüz', en: 'Juz')),
+              Tab(text: trEnGlobal(context, tr: 'SURE', en: 'SURAH')),
+              Tab(text: trEnGlobal(context, tr: 'CÜZ', en: 'JUZ')),
             ],
           ),
         ),
@@ -117,17 +120,14 @@ class QuranPage extends ConsumerWidget {
                         itemBuilder: (context, index) {
                           final surah = surahs[index];
                           return ListTile(
-                            contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                             leading: Container(
-                              width: 44,
-                              height: 44,
+                              width: 48,
+                              height: 48,
                               decoration: BoxDecoration(
+                                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
                                 shape: BoxShape.circle,
-                                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.08),
-                                border: Border.all(
-                                  color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.2),
-                                  width: 1,
-                                ),
+                                border: Border.all(color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1), width: 1.5),
                               ),
                               child: Center(
                                 child: Text(
@@ -142,20 +142,22 @@ class QuranPage extends ConsumerWidget {
                             ),
                             title: Text(
                               surah.englishName,
-                              style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
+                              style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 17),
                             ),
                             subtitle: Text(
                               '${surah.englishNameTranslation} • ${surah.numberOfAyahs} ${l10n.ayahs}',
                               style: TextStyle(
-                                fontSize: 13,
-                                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
                               ),
                             ),
                             trailing: Text(
                               surah.name,
                               style: TextStyle(
                                 fontFamily: 'Amiri', 
-                                fontSize: 24,
+                                fontSize: 26,
+                                height: 1.2,
                                 fontWeight: FontWeight.w900,
                                 color: Theme.of(context).colorScheme.primary,
                               ),
@@ -183,16 +185,16 @@ class QuranPage extends ConsumerWidget {
                     itemBuilder: (context, index) {
                       final juzNum = index + 1;
                       return ListTile(
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                         leading: Container(
-                          width: 44,
-                          height: 44,
+                          width: 48,
+                          height: 48,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: Theme.of(context).colorScheme.secondary.withValues(alpha: 0.1),
                             border: Border.all(
-                              color: Theme.of(context).colorScheme.secondary.withValues(alpha: 0.3),
-                              width: 1,
+                              color: Theme.of(context).colorScheme.secondary.withValues(alpha: 0.1),
+                              width: 1.5,
                             ),
                           ),
                           child: Center(
@@ -208,16 +210,17 @@ class QuranPage extends ConsumerWidget {
                         ),
                         title: Text(
                           trEnGlobal(context, tr: 'Cüz $juzNum', en: 'Juz $juzNum'),
-                          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 18),
+                          style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 17),
                         ),
                         subtitle: Text(
                           trEnGlobal(context, tr: 'Kur\'an-ı Kerim Bölümü', en: 'Section of the Holy Quran'),
                           style: TextStyle(
-                            fontSize: 13,
-                            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
                           ),
                         ),
-                        trailing: Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3)),
+                        trailing: Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.2)),
                         onTap: () {
                           context.push(
                             '/quran/juz/$juzNum',

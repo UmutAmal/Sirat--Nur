@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/services/tafsir_local_service.dart';
 import 'package:sirat_i_nur/core/utils/l10n_utils.dart';
+import 'package:sirat_i_nur/presentation/widgets/premium_card.dart';
 
 class TafsirPage extends ConsumerStatefulWidget {
   final int surahNumber;
@@ -192,10 +193,10 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
         final text = verse['text'] ?? '';
         final tafsir = verse['tafsir'] ?? '';
 
-        return Card(
-          margin: const EdgeInsets.only(bottom: 16),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 16),
+          child: PremiumCard(
+            padding: const EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -203,55 +204,66 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
                 Row(
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                       decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.primaryContainer,
-                        borderRadius: BorderRadius.circular(16),
+                        color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+                        borderRadius: BorderRadius.circular(12),
                       ),
                       child: Text(
                         '$verseNum',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Theme.of(context).colorScheme.onPrimaryContainer,
+                          fontWeight: FontWeight.w900,
+                          fontSize: 12,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                       ),
                     ),
                     const Spacer(),
                     Text(
-                      isTr ? 'Tefsir' : 'Tafsir',
-                      style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                        color: Theme.of(context).colorScheme.primary,
+                      isTr ? 'TEFSİR' : 'TAFSIR',
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 1,
+                        color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.6),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 20),
                 
                 // Arabic text
                 Container(
                   width: double.infinity,
-                  padding: const EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.surfaceContainerHighest,
-                    borderRadius: BorderRadius.circular(8),
+                    color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.05),
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1)),
                   ),
                   child: Text(
                     text,
                     textAlign: TextAlign.right,
-                    style: const TextStyle(
-                      fontSize: 20,
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                      fontSize: 26,
                       height: 1.8,
                       fontFamily: 'Amiri',
+                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).colorScheme.primary,
                     ),
                   ),
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 20),
                 
                 // Tafsir text
                 Text(
                   tafsir,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    height: 1.6,
+                    height: 1.7,
+                    fontSize: 15,
+                    color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.85),
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ],

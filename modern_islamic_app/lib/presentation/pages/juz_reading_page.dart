@@ -56,7 +56,7 @@ class _JuzReadingPageState extends ConsumerState<JuzReadingPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(widget.title, style: const TextStyle(fontWeight: FontWeight.w900)),
         actions: [
           IconButton(
             icon: Icon(_showTranslation ? Icons.translate : Icons.g_translate),
@@ -111,23 +111,24 @@ class _JuzReadingPageState extends ConsumerState<JuzReadingPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                         decoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.surfaceContainerHighest,
-                          borderRadius: BorderRadius.circular(16),
+                          color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+                          borderRadius: BorderRadius.circular(12),
                         ),
                         child: Text(
                           '${ayah.numberInSurah}',
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).colorScheme.onSurfaceVariant,
+                            fontWeight: FontWeight.w900,
+                            fontSize: 12,
+                            color: Theme.of(context).colorScheme.primary,
                           ),
                         ),
                       ),
                       Row(
                         children: [
-                          IconButton(
-                            icon: const Icon(Icons.history_edu),
+                           IconButton(
+                            icon: Icon(Icons.history_edu_rounded, color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.6)),
                             tooltip: trEn(context, tr: 'Son okunan olarak ayarla', en: 'Set as Last Read'),
                             onPressed: () {
                               final surahLabel = trEn(context, tr: 'Sure', en: 'Surah');
@@ -138,6 +139,8 @@ class _JuzReadingPageState extends ConsumerState<JuzReadingPage> {
                               );
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
+                                  behavior: SnackBarBehavior.floating,
+                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                                   content: Text(
                                     trEn(
                                       context,
@@ -153,8 +156,8 @@ class _JuzReadingPageState extends ConsumerState<JuzReadingPage> {
                             builder: (context, ref, child) {
                                final isBookmarked = ref.watch(bookmarksProvider.notifier).isBookmarked(ayah.surahNumber, ayah.numberInSurah);
                                return IconButton(
-                                 icon: Icon(isBookmarked ? Icons.bookmark : Icons.bookmark_border),
-                                 color: isBookmarked ? Theme.of(context).colorScheme.primary : null,
+                                 icon: Icon(isBookmarked ? Icons.bookmark_rounded : Icons.bookmark_border_rounded),
+                                 color: isBookmarked ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.primary.withValues(alpha: 0.6),
                                  onPressed: () {
                                    final surahLabel = trEn(context, tr: 'Sure', en: 'Surah');
                                    ref.read(bookmarksProvider.notifier).toggleBookmark(
