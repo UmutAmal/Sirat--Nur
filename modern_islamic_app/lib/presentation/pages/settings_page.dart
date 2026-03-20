@@ -5,6 +5,7 @@ import 'package:sirat_i_nur/l10n/app_localizations.dart';
 import 'package:sirat_i_nur/core/services/iap_service.dart';
 import 'package:sirat_i_nur/presentation/blocs/settings_provider.dart';
 import 'package:sirat_i_nur/presentation/blocs/quran_provider.dart';
+import 'package:sirat_i_nur/presentation/widgets/premium_card.dart';
 
 class SettingsPage extends ConsumerWidget {
   const SettingsPage({super.key});

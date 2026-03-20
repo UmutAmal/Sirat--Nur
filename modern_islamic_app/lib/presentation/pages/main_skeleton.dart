@@ -38,6 +38,8 @@ class _MainSkeletonState extends State<MainSkeleton> {
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentIndex,
         onDestinationSelected: (index) => _onItemTapped(index, context),
+        indicatorColor: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
         destinations: _getNavDestinations(l10n).cast<Widget>(),
       ),
     );
@@ -46,28 +48,28 @@ class _MainSkeletonState extends State<MainSkeleton> {
   List<dynamic> _getNavDestinations(AppLocalizations l10n) {
     return [
       NavigationDestination(
-        icon: const Icon(Icons.home_outlined),
-        selectedIcon: const Icon(Icons.home),
+        icon: Icon(Icons.home_rounded, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5)),
+        selectedIcon: Icon(Icons.home_rounded, color: Theme.of(context).colorScheme.primary),
         label: l10n.home,
       ),
       NavigationDestination(
-        icon: const Icon(Icons.menu_book_outlined),
-        selectedIcon: const Icon(Icons.menu_book),
+        icon: Icon(Icons.menu_book_rounded, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5)),
+        selectedIcon: Icon(Icons.menu_book_rounded, color: Theme.of(context).colorScheme.primary),
         label: l10n.quran,
       ),
       NavigationDestination(
-        icon: const Icon(Icons.explore_outlined),
-        selectedIcon: const Icon(Icons.explore),
+        icon: Icon(Icons.explore_rounded, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5)),
+        selectedIcon: Icon(Icons.explore_rounded, color: Theme.of(context).colorScheme.primary),
         label: l10n.qibla,
       ),
       NavigationDestination(
-        icon: const Icon(Icons.touch_app_outlined),
-        selectedIcon: const Icon(Icons.touch_app),
+        icon: Icon(Icons.touch_app_rounded, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5)),
+        selectedIcon: Icon(Icons.touch_app_rounded, color: Theme.of(context).colorScheme.primary),
         label: l10n.zikr,
       ),
       NavigationDestination(
-        icon: const Icon(Icons.calendar_month_outlined),
-        selectedIcon: const Icon(Icons.calendar_month),
+        icon: Icon(Icons.event_note_rounded, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5)),
+        selectedIcon: Icon(Icons.event_note_rounded, color: Theme.of(context).colorScheme.primary),
         label: l10n.calendar,
       ),
     ];

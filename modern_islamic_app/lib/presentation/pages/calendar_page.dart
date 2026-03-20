@@ -5,6 +5,7 @@ import 'package:sirat_i_nur/core/services/prayer_calendar_service.dart';
 import 'package:sirat_i_nur/core/utils/tr_en.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/presentation/blocs/settings_provider.dart';
+import 'package:sirat_i_nur/presentation/widgets/premium_card.dart';
 
 
 /// Helper function to get Hijri month name
@@ -161,7 +162,10 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(isTr ? 'İslami Takvim' : 'Islamic Calendar'),
+        title: Text(
+          isTr ? 'İslami Takvim' : 'Islamic Calendar',
+          style: const TextStyle(fontWeight: FontWeight.w900),
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.cloud_download),
@@ -215,15 +219,20 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
             },
             calendarStyle: CalendarStyle(
               todayDecoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.5),
+                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.15),
                 shape: BoxShape.circle,
+                border: Border.all(color: Theme.of(context).colorScheme.primary, width: 1),
               ),
+              todayTextStyle: TextStyle(color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold),
               selectedDecoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.primary,
                 shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3), blurRadius: 8, offset: const Offset(0, 2)),
+                ],
               ),
               markerDecoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.tertiary,
+                color: Theme.of(context).colorScheme.primary,
                 shape: BoxShape.circle,
               ),
             ),
@@ -231,10 +240,12 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
               formatButtonVisible: true,
               titleCentered: true,
               formatButtonShowsNext: false,
+              titleTextStyle: const TextStyle(fontWeight: FontWeight.w900, fontSize: 18),
               formatButtonDecoration: BoxDecoration(
-                border: Border.all(color: Theme.of(context).colorScheme.primary),
+                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
+              formatButtonTextStyle: TextStyle(color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold),
             ),
             calendarBuilders: CalendarBuilders(
               markerBuilder: (context, date, events) {
@@ -269,102 +280,121 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Hijri Date
-                  Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              const Icon(Icons.calendar_today, size: 20),
-                              const SizedBox(width: 8),
-                              Text(
-                                isTr ? 'Hicri Tarih' : 'Hijri Date',
-                                style: Theme.of(context).textTheme.titleMedium,
+                             PremiumCard(
+                    padding: const EdgeInsets.all(24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(8)),
+                              child: Icon(Icons.calendar_today_rounded, size: 18, color: Theme.of(context).colorScheme.primary),
+                            ),
+                            const SizedBox(width: 12),
+                            Text(
+                              (isTr ? 'Hicri Tarih' : 'Hijri Date').toUpperCase(),
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w800,
+                                letterSpacing: 1.2,
+                                color: Theme.of(context).colorScheme.primary,
                               ),
-                            ],
-                          ),
-                          const SizedBox(height: 8),
-                          Text(
-                            '${hijriDate.hDay} ${_getHijriMonthName(hijriDate.hMonth, isTr)} ${hijriDate.hYear}',
-                            style: Theme.of(context).textTheme.headlineSmall,
-                          ),
-                          if (specialDays.isNotEmpty) ...[
-                            const SizedBox(height: 8),
-                            Wrap(
-                              spacing: 8,
-                              children: specialDays.map((day) => Chip(
-                                label: Text(day[isTr ? 'tr' : 'en']!),
-                                backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-                              )).toList(),
                             ),
                           ],
+                        ),
+                        const SizedBox(height: 16),
+                        Text(
+                          '${hijriDate.hDay} ${_getHijriMonthName(hijriDate.hMonth, isTr)} ${hijriDate.hYear}',
+                          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900),
+                        ),
+                        if (specialDays.isNotEmpty) ...[
+                          const SizedBox(height: 16),
+                          Wrap(
+                            spacing: 8,
+                            runSpacing: 8,
+                            children: specialDays.map((day) => Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Text(
+                                day[isTr ? 'tr' : 'en']!,
+                                style: TextStyle(
+                                  color: Theme.of(context).colorScheme.primary,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            )).toList(),
+                          ),
                         ],
-                      ),
+                      ],
                     ),
+                  ),
                   ),
                   
                   const SizedBox(height: 16),
                   
                   // Prayer Times for Selected Day
-                  Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              const Icon(Icons.access_time, size: 20),
-                              const SizedBox(width: 8),
-                              Text(
-                                isTr ? 'Namaz Vakitleri' : 'Prayer Times',
-                                style: Theme.of(context).textTheme.titleMedium,
-                              ),
-                              const Spacer(),
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                decoration: BoxDecoration(
-                                  color: Colors.green.withValues(alpha: 0.2),
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Icon(Icons.cloud_off, size: 14, color: Colors.green[700]),
-                                    const SizedBox(width: 4),
-                                    Text(
-                                      'OFFLINE',
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.green[700],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 16),
-                          
-                          if (_isLoadingPrayerTimes)
-                            const Center(child: CircularProgressIndicator())
-                          else if (_selectedDayPrayerTimes != null)
-                            ..._buildPrayerTimeList()
-                          else
+                  PremiumCard(
+                    padding: const EdgeInsets.all(24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(8)),
+                              child: Icon(Icons.access_time_rounded, size: 18, color: Theme.of(context).colorScheme.primary),
+                            ),
+                            const SizedBox(width: 12),
                             Text(
-                              isTr 
-                                ? 'Vakitleri görmek için bir gün seçin'
-                                : 'Select a day to see prayer times',
-                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                color: Theme.of(context).colorScheme.onSurfaceVariant,
+                              (isTr ? 'Namaz Vakitleri' : 'Prayer Times').toUpperCase(),
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w800,
+                                letterSpacing: 1.2,
+                                color: Theme.of(context).colorScheme.primary,
                               ),
                             ),
-                        ],
-                      ),
+                            const Spacer(),
+                            if (!_isLoadingPrayerTimes)
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                                decoration: BoxDecoration(
+                                  color: Colors.green.withValues(alpha: 0.1),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Text(
+                                  'OFFLINE',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.green[800],
+                                    letterSpacing: 0.5,
+                                  ),
+                                ),
+                              ),
+                          ],
+                        ),
+                        const SizedBox(height: 20),
+                        
+                        if (_isLoadingPrayerTimes)
+                          const Center(child: Padding(padding: EdgeInsets.all(20), child: CircularProgressIndicator()))
+                        else if (_selectedDayPrayerTimes != null)
+                          ..._buildPrayerTimeList()
+                        else
+                          Text(
+                            isTr 
+                              ? 'Vakitleri görmek için bir gün seçin'
+                              : 'Select a day to see prayer times',
+                            style: TextStyle(color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5), fontWeight: FontWeight.w600),
+                          ),
+                      ],
                     ),
                   ),
                 ],
@@ -393,22 +423,29 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
       final hour = time.hour.toString().padLeft(2, '0');
       final minute = time.minute.toString().padLeft(2, '0');
       
-      return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8),
+      return Container(
+        margin: const EdgeInsets.only(bottom: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.3),
+          borderRadius: BorderRadius.circular(16),
+        ),
         child: Row(
           children: [
             Text(prayerIcons[index], style: const TextStyle(fontSize: 20)),
-            const SizedBox(width: 12),
+            const SizedBox(width: 16),
             Expanded(
               child: Text(
                 prayerNames[index],
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               ),
             ),
             Text(
               '$hour:$minute',
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                fontWeight: FontWeight.bold,
+              style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 18,
+                color: Theme.of(context).colorScheme.primary,
               ),
             ),
           ],

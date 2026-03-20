@@ -59,8 +59,8 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
       ),
       body: qiblaDirectionAsync.when(
         data: (qiblaDir) {
-          return orientationAsync.when(
-            data: (orientation) {
+              return orientationAsync.when(
+                data: (orientation) {
               final displayHeading = orientation.trueHeading;
               final calibratedQibla = _normalizeHeading(qiblaDir);
 
@@ -103,35 +103,40 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
                       
                       const SizedBox(height: 40),
 
-                      // 2. Alignment Status
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 300),
-                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                        padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 16),
                         decoration: BoxDecoration(
                           color: isAligned 
-                              ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.2)
-                              : Theme.of(context).colorScheme.surface.withValues(alpha: 0.5),
-                          borderRadius: BorderRadius.circular(30),
+                              ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.1)
+                              : Theme.of(context).colorScheme.surface,
+                          borderRadius: BorderRadius.circular(40),
+                          boxShadow: [
+                            BoxShadow(
+                              color: isAligned 
+                                  ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.15)
+                                  : Colors.black.withValues(alpha: 0.05),
+                              blurRadius: 20,
+                              offset: const Offset(0, 4),
+                            )
+                          ],
                           border: Border.all(
                             color: isAligned 
                                 ? Theme.of(context).colorScheme.primary
-                                : Theme.of(context).colorScheme.outline.withValues(alpha: 0.2),
+                                : Theme.of(context).colorScheme.outline.withValues(alpha: 0.1),
+                            width: 1.5,
                           ),
                         ),
-                        child: Column( // Changed to Column to hold multiple text widgets
+                        child: Column(
                           children: [
-                            if (needsCalibration)
-                              const Text(
-                                'Calibration Required: Rotate in Figure-8',
-                                textAlign: TextAlign.center,
-                              ),
                             Text(
-                              isAligned ? 'Qibla Found' : 'Rotate to Find Qibla',
+                              isAligned ? l10n.qiblaFound.toUpperCase() : l10n.rotateToFindQibla.toUpperCase(),
                               textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                                color: isAligned ? Colors.white : Theme.of(context).colorScheme.onSurface,
-                                fontWeight: FontWeight.bold,
-                                letterSpacing: -0.5,
+                              style: TextStyle(
+                                color: isAligned ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
+                                fontWeight: FontWeight.w900,
+                                fontSize: 18,
+                                letterSpacing: 1.2,
                               ),
                             ),
                           ],
@@ -228,11 +233,13 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
                             ),
                           ),
                           Container(
-                            width: 16,
-                            height: 16,
+                            width: 20,
+                            height: 20,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               color: Theme.of(context).colorScheme.primary,
+                              border: Border.all(color: Colors.white, width: 3),
+                              boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 4)],
                             ),
                           ),
                         ],
@@ -244,31 +251,36 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 24.0),
                         child: PremiumCard(
-                          padding: const EdgeInsets.all(24.0),
+                          padding: const EdgeInsets.all(28.0),
                           child: Column(
                             children: [
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
-                                  _HeaderMetric(label: "Declination", value: "${orientation.declination.toStringAsFixed(1)}°"),
-                                  _HeaderMetric(label: "Variance", value: "0.1σ"),
-                                  _HeaderMetric(label: "Altitude", value: "320m"),
+                                  _HeaderMetric(label: trEnGlobal(context, tr: "SAPMA", en: "DECLINATION"), value: "${orientation.declination.toStringAsFixed(1)}°"),
+                                  _HeaderMetric(label: "VARIANCE", value: "0.1σ"),
+                                  _HeaderMetric(label: "ALTITUDE", value: "320m"),
                                 ],
                               ),
-                              const Divider(height: 32),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 20),
+                                child: Divider(color: Theme.of(context).colorScheme.outline.withValues(alpha: 0.1)),
+                              ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
                                   Column(
                                     children: [
-                                      Text('True Heading', style: TextStyle(color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6), fontSize: 12)),
-                                      Text('${displayHeading.toStringAsFixed(0)}°', style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                                      Text(trEnGlobal(context, tr: "GERÇEK YÖN", en: "TRUE HEADING"), style: TextStyle(color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4), fontSize: 10, fontWeight: FontWeight.w800, letterSpacing: 1)),
+                                      const SizedBox(height: 4),
+                                      Text('${displayHeading.toStringAsFixed(0)}°', style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900)),
                                     ],
                                   ),
                                   Column(
                                     children: [
-                                      Text('Qibla Target', style: TextStyle(color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6), fontSize: 12)),
-                                      Text('${calibratedQibla.toStringAsFixed(0)}°', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Theme.of(context).colorScheme.primary)),
+                                      Text(trEnGlobal(context, tr: "KIBLE HEDEFİ", en: "QIBLA TARGET"), style: TextStyle(color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4), fontSize: 10, fontWeight: FontWeight.w800, letterSpacing: 1)),
+                                      const SizedBox(height: 4),
+                                      Text('${calibratedQibla.toStringAsFixed(0)}°', style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Theme.of(context).colorScheme.primary)),
                                     ],
                                   ),
                                 ],
