@@ -139,6 +139,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                   final surahNumber = int.parse(state.pathParameters['id']!);
                   return _slideTransition(ctx, state, TafsirPage(
                     surahNumber: surahNumber,
+                    surahName: '',
                   ));
                 },
               ),
