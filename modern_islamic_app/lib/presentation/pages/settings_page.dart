@@ -44,32 +44,49 @@ class SettingsPage extends ConsumerWidget {
       body: ListView(
         children: [
           if (!isPro)
-            Container(
-              margin: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Theme.of(context).colorScheme.primary,
-                    Theme.of(context).colorScheme.secondary,
-                  ],
-                ),
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: ListTile(
-                leading: const Icon(Icons.workspace_premium, color: Colors.white, size: 32),
-                title: Text(l10n.getLifetimePro, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-                subtitle: Text(l10n.unlockTajweed, style: const TextStyle(color: Colors.white70)),
-                trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white, size: 16),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: PremiumCard(
+                padding: EdgeInsets.zero,
                 onTap: () => context.push('/paywall'),
+                child: Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Theme.of(context).colorScheme.primary,
+                        const Color(0xFF2E7D32),
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
+                  child: ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    leading: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.15),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(Icons.workspace_premium_rounded, color: Colors.white, size: 28),
+                    ),
+                    title: Text(l10n.getLifetimePro, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18)),
+                    subtitle: Text(l10n.unlockTajweed, style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontWeight: FontWeight.w600)),
+                    trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white, size: 16),
+                  ),
+                ),
               ),
             ),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
             child: Text(
-              l10n.premiumIntegrity,
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+              l10n.premiumIntegrity.toUpperCase(),
+              style: TextStyle(
                 color: Theme.of(context).colorScheme.primary,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w800,
+                fontSize: 12,
+                letterSpacing: 1.5,
               ),
             ),
           ),
@@ -110,13 +127,15 @@ class SettingsPage extends ConsumerWidget {
             },
           ),
             
-           Padding(
-            padding: const EdgeInsets.all(16.0),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
             child: Text(
-              l10n.dataStorage,
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+              l10n.dataStorage.toUpperCase(),
+              style: TextStyle(
                 color: Theme.of(context).colorScheme.primary,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w800,
+                fontSize: 12,
+                letterSpacing: 1.5,
               ),
             ),
           ),
@@ -142,12 +161,14 @@ class SettingsPage extends ConsumerWidget {
           ),
           const Divider(),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
             child: Text(
-              l10n.quranIntegrity,
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+              l10n.quranIntegrity.toUpperCase(),
+              style: TextStyle(
                 color: Theme.of(context).colorScheme.primary,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w800,
+                fontSize: 12,
+                letterSpacing: 1.5,
               ),
             ),
           ),
