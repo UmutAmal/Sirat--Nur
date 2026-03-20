@@ -7,6 +7,7 @@ import 'package:sirat_i_nur/presentation/widgets/premium_card.dart';
 import 'package:vibration/vibration.dart';
 import 'package:sirat_i_nur/core/services/qibla_sensor_bridge.dart';
 import 'package:sirat_i_nur/presentation/widgets/celestial_visualizer_widget.dart';
+import 'package:sirat_i_nur/core/utils/l10n_utils.dart';
 
 class QiblaPage extends ConsumerStatefulWidget {
   const QiblaPage({super.key});

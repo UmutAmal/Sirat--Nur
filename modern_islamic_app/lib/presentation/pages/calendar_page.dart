@@ -280,7 +280,7 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                             PremiumCard(
+                  PremiumCard(
                     padding: const EdgeInsets.all(24),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -331,6 +331,68 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
                             )).toList(),
                           ),
                         ],
+                      ],
+                    ),
+                  ),
+                  
+                  const SizedBox(height: 16),
+                  
+                  // Prayer Times for Selected Day
+                  PremiumCard(
+                    padding: const EdgeInsets.all(24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(8)),
+                              child: Icon(Icons.access_time_rounded, size: 18, color: Theme.of(context).colorScheme.primary),
+                            ),
+                            const SizedBox(width: 12),
+                            Text(
+                              (isTr ? 'Namaz Vakitleri' : 'Prayer Times').toUpperCase(),
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w800,
+                                letterSpacing: 1.2,
+                                color: Theme.of(context).colorScheme.primary,
+                              ),
+                            ),
+                            const Spacer(),
+                            if (!_isLoadingPrayerTimes)
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                                decoration: BoxDecoration(
+                                  color: Colors.green.withValues(alpha: 0.1),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Text(
+                                  'OFFLINE',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.green[800],
+                                    letterSpacing: 0.5,
+                                  ),
+                                ),
+                              ),
+                          ],
+                        ),
+                        const SizedBox(height: 20),
+                        
+                        if (_isLoadingPrayerTimes)
+                          const Center(child: Padding(padding: EdgeInsets.all(20), child: CircularProgressIndicator()))
+                        else if (_selectedDayPrayerTimes != null)
+                          ..._buildPrayerTimeList()
+                        else
+                          Text(
+                            isTr 
+                              ? 'Vakitleri görmek için bir gün seçin'
+                              : 'Select a day to see prayer times',
+                            style: TextStyle(color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5), fontWeight: FontWeight.w600),
+                          ),
                       ],
                     ),
                   ),
