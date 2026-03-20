@@ -5,7 +5,7 @@ class AppTheme {
   static const Color lightPrimary = Color(0xFF1B5E20); // Deep Emerald Green
   static const Color lightSecondary = Color(0xFFF1E6D2); // Soft Beige / Cream
   static const Color lightAccent = Color(0xFFD4AF37); // Subtle Gold
-  static const Color lightBackground = Color(0xFFFCFCFC); // Nearly White
+  static const Color lightBackground = Color(0xFFFDFBF7); // Warmer, premium cream
   static const Color lightSurface = Color(0xFFFFFFFF); 
   
   // --- Dark Theme Colors ---

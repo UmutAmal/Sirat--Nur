@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/services/iap_service.dart';
-import 'package:sirat_i_nur/core/utils/tr_en.dart';
+import 'package:sirat_i_nur/core/utils/l10n_utils.dart';
 
 class PaywallPage extends ConsumerStatefulWidget {
   const PaywallPage({super.key});
@@ -17,13 +17,15 @@ class _PaywallPageState extends ConsumerState<PaywallPage> {
     setState(() => _isLoading = true);
     try {
       await ref.read(proStatusProvider.notifier).purchasePremium();
-      // Status listener handles actual unlocking
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
+            behavior: SnackBarBehavior.floating,
+            backgroundColor: Colors.red.shade800,
             content: Text(
-              trEn(context, tr: 'Hata: $e', en: 'Error: $e'),
+              trEnGlobal(context, tr: 'Hata: $e', en: 'Error: $e'),
+              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
           ),
         );
@@ -37,13 +39,15 @@ class _PaywallPageState extends ConsumerState<PaywallPage> {
     setState(() => _isLoading = true);
     try {
       await ref.read(proStatusProvider.notifier).restorePurchases();
-      // Status listener handles UI pop/toast if successful
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
+            behavior: SnackBarBehavior.floating,
+            backgroundColor: Colors.red.shade800,
             content: Text(
-              trEn(context, tr: 'Geri yüklenemedi: $e', en: 'Could not restore: $e'),
+              trEnGlobal(context, tr: 'Geri yuklenemedi: $e', en: 'Could not restore: $e'),
+              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
           ),
         );
@@ -56,140 +60,189 @@ class _PaywallPageState extends ConsumerState<PaywallPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
-      body: SafeArea(
-        child: Column(
-          children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: IconButton(
-                icon: const Icon(Icons.close),
-                onPressed: () => Navigator.pop(context),
-              ),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      body: Stack(
+        children: [
+          Positioned(
+            top: -100,
+            right: -100,
+            child: Opacity(
+              opacity: 0.05,
+              child: Icon(Icons.star_rounded, size: 400, color: Theme.of(context).colorScheme.primary),
             ),
-            Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(horizontal: 24.0),
-                child: Column(
-                  children: [
-                    const SizedBox(height: 20),
-                    Icon(
-                      Icons.workspace_premium,
-                      size: 80,
-                      color: Theme.of(context).colorScheme.primary,
+          ),
+          SafeArea(
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: IconButton(
+                      icon: const Icon(Icons.close_rounded, size: 28),
+                      onPressed: () => Navigator.pop(context),
                     ),
-                    const SizedBox(height: 24),
-                    Text(
-                      trEn(context, tr: 'Premium Ýçeriðin Kilidini Aç', en: 'Unlock Premium Content'),
-                      style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.primary,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(height: 16),
-                    Text(
-                      trEn(
-                        context,
-                        tr: 'Reklamsýz bu Ýslami uygulamanýn geliþtirilmesini destekleyin ve Kur\'an ile baðýnýzý derinleþtirecek geliþmiþ özelliklerin kilidini açýn.',
-                        en: 'Support the development of this ad-free Islamic app and unlock advanced features to deepen your connection with the Quran.',
-                      ),
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(height: 48),
-                    _buildFeatureRow(
-                      context,
-                      Icons.color_lens,
-                      trEn(context, tr: 'Tecvid Renk Kodlarý', en: 'Tajweed Color Codes'),
-                      trEn(context, tr: 'Görsel yönlendirmeli telaffuz kurallarý.', en: 'Visually guided pronunciation rules.'),
-                    ),
-                    const SizedBox(height: 24),
-                    _buildFeatureRow(
-                      context,
-                      Icons.translate,
-                      trEn(context, tr: 'Kelime Kelime Çeviri', en: 'Word-by-Word Translation'),
-                      trEn(context, tr: 'Her bir Arapça kökü anlayýn.', en: 'Understand every single Arabic root.'),
-                    ),
-                    const SizedBox(height: 24),
-                    _buildFeatureRow(
-                      context,
-                      Icons.format_paint,
-                      trEn(context, tr: 'Özel Tema Tasarýmlarý', en: 'Beautiful Custom Themes'),
-                      trEn(context, tr: 'Özel uygulama renk paletlerinin kilidini açýn.', en: 'Unlock exclusive app color palettes.'),
-                    ),
-                    const SizedBox(height: 48),
-                    
-                    SizedBox(
-                      width: double.infinity,
-                      height: 60,
-                      child: ElevatedButton(
-                        onPressed: _isLoading ? null : _handlePurchase,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Theme.of(context).colorScheme.primary,
-                          foregroundColor: Theme.of(context).colorScheme.onPrimary,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          elevation: 0,
-                        ),
-                        child: _isLoading
-                            ? const CircularProgressIndicator(color: Colors.white)
-                            : Text(
-                                trEn(context, tr: 'Ömür Boyu Eriþim - €1.00', en: 'Get Lifetime Access - €1.00'),
-                                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                              ),
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    TextButton(
-                      onPressed: _isLoading ? null : _handleRestore,
-                      child: Text(
-                        trEn(context, tr: 'Satýn Alýmlarý Geri Yükle', en: 'Restore Purchases'),
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
+                Expanded(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.symmetric(horizontal: 28.0),
+                    child: Column(
+                      children: [
+                        const SizedBox(height: 10),
+                        Container(
+                          padding: const EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.08),
+                            shape: BoxShape.circle,
+                          ),
+                          child: Icon(
+                            Icons.auto_awesome_rounded,
+                            size: 64,
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                        ),
+                        const SizedBox(height: 32),
+                        Text(
+                          'Sirat-i Nur Premium',
+                          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                            fontWeight: FontWeight.w900,
+                            color: Theme.of(context).colorScheme.primary,
+                            letterSpacing: -0.5,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          trEnGlobal(
+                            context,
+                            tr: 'Islami yolculugunuzda size rehberlik edecek tum gelismis ozelliklerin kilidini acin.',
+                            en: 'Unlock all advanced features designed to guide you on your spiritual journey.',
+                          ),
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
+                            height: 1.5,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 48),
+                        _buildFeatureRow(
+                          context,
+                          Icons.psychology_rounded,
+                          trEnGlobal(context, tr: 'Zeki Asistan Plus', en: 'Neural Assistant Plus'),
+                          trEnGlobal(context, tr: 'Daha derinlemesine dini soru-cevap ve rehberlik.', en: 'In-depth religious Q&A and spiritual guidance.'),
+                        ),
+                        const SizedBox(height: 24),
+                        _buildFeatureRow(
+                          context,
+                          Icons.cloud_download_rounded,
+                          trEnGlobal(context, tr: 'Sinirsiz Cevrimdisi', en: 'Unlimited Offline'),
+                          trEnGlobal(context, tr: 'Tum Kuran seslerini ve tefsirlerini indirin.', en: 'Download all recitations and tafsirs.'),
+                        ),
+                        const SizedBox(height: 24),
+                        _buildFeatureRow(
+                          context,
+                          Icons.palette_rounded,
+                          trEnGlobal(context, tr: 'Premium Tasarimlar', en: 'Exclusive Designs'),
+                          trEnGlobal(context, tr: 'Ozel uygulama temalari ve hat sanati fontlari.', en: 'Unlock premium themes and calligraphy fonts.'),
+                        ),
+                        const SizedBox(height: 60),
+                        
+                        Container(
+                          width: double.infinity,
+                          height: 64,
+                          decoration: BoxDecoration(
+                            gradient: const LinearGradient(
+                              colors: [
+                                Color(0xFF1B5E20),
+                                Color(0xFF2E7D32),
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                color: const Color(0xFF1B5E20).withValues(alpha: 0.3),
+                                blurRadius: 15,
+                                offset: const Offset(0, 8),
+                              ),
+                            ],
+                          ),
+                          child: ElevatedButton(
+                            onPressed: _isLoading ? null : _handlePurchase,
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.transparent,
+                              shadowColor: Colors.transparent,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                            ),
+                            child: _isLoading
+                                ? const SizedBox(
+                                    width: 24,
+                                    height: 24,
+                                    child: CircularProgressIndicator(color: Colors.white, strokeWidth: 3),
+                                  )
+                                : const Text(
+                                    'Get Lifetime Access - \$1.00',
+                                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Colors.white),
+                                  ),
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        TextButton(
+                          onPressed: _isLoading ? null : _handleRestore,
+                          child: Text(
+                            trEnGlobal(context, tr: 'Satun Alumlari Geri Yukle', en: 'Restore Previous Purchases'),
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w700,
+                              color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 32),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 
   Widget _buildFeatureRow(BuildContext context, IconData icon, String title, String subtitle) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.primaryContainer,
-            shape: BoxShape.circle,
+            color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.05),
+            borderRadius: BorderRadius.circular(16),
           ),
-          child: Icon(icon, color: Theme.of(context).colorScheme.onPrimaryContainer),
+          child: Icon(icon, color: Theme.of(context).colorScheme.primary, size: 28),
         ),
-        const SizedBox(width: 16),
+        const SizedBox(width: 20),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 title,
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16),
               ),
               const SizedBox(height: 4),
               Text(
                 subtitle,
                 style: TextStyle(
-                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
-                  fontSize: 14,
+                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  height: 1.4,
                 ),
               ),
             ],
@@ -199,5 +252,3 @@ class _PaywallPageState extends ConsumerState<PaywallPage> {
     );
   }
 }
-
-

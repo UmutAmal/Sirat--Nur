@@ -35,12 +35,28 @@ class _MainSkeletonState extends State<MainSkeleton> {
 
     return Scaffold(
       body: widget.child,
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _currentIndex,
-        onDestinationSelected: (index) => _onItemTapped(index, context),
-        indicatorColor: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
-        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-        destinations: _getNavDestinations(l10n).cast<Widget>(),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.05),
+              blurRadius: 10,
+              offset: const Offset(0, -2),
+            ),
+          ],
+        ),
+        child: NavigationBar(
+          height: 70,
+          elevation: 0,
+          backgroundColor: Theme.of(context).colorScheme.surface,
+          shadowColor: Colors.transparent,
+          surfaceTintColor: Colors.transparent,
+          selectedIndex: _currentIndex,
+          onDestinationSelected: (index) => _onItemTapped(index, context),
+          indicatorColor: Theme.of(context).colorScheme.primary.withValues(alpha: 0.12),
+          labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+          destinations: _getNavDestinations(l10n).cast<Widget>(),
+        ),
       ),
     );
   }

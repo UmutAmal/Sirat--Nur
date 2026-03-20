@@ -30,21 +30,6 @@ class ProStatusNotifier extends StateNotifier<bool> {
 
   // IAP initialization is disabled for testing/unlocked pro status.
 
-  void _listenToPurchaseUpdated(List<PurchaseDetails> purchaseDetailsList) async {
-    for (final purchaseDetails in purchaseDetailsList) {
-      if (purchaseDetails.status == PurchaseStatus.purchased || 
-          purchaseDetails.status == PurchaseStatus.restored) {
-        if (_isValidPremiumPurchase(purchaseDetails)) {
-          await _setProStatus(true);
-        }
-        if (purchaseDetails.pendingCompletePurchase) {
-          await _iap.completePurchase(purchaseDetails);
-        }
-      } else if (purchaseDetails.status == PurchaseStatus.error) {
-        // Log or handle purchase error appropriately
-      }
-    }
-  }
 
   bool _isValidPremiumPurchase(PurchaseDetails purchaseDetails) {
     if (purchaseDetails.productID != _premiumProductId) return false;
