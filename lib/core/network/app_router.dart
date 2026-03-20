@@ -114,9 +114,8 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 parentNavigatorKey: _rootNavigatorKey,
                 pageBuilder: (ctx, state) {
                   final surahNumber = int.parse(state.pathParameters['id']!);
-                  final surahName = state.extra as String? ?? 'Surah';
                   return _scaleTransition(ctx, state, SurahReadingPage(
-                    surahNumber: surahNumber, surahName: surahName,
+                    surahNumber: surahNumber,
                   ));
                 },
               ),
@@ -126,9 +125,8 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 parentNavigatorKey: _rootNavigatorKey,
                 pageBuilder: (ctx, state) {
                   final juzNumber = int.parse(state.pathParameters['id']!);
-                  final juzName = state.extra as String? ?? 'Juz';
                   return _scaleTransition(ctx, state, JuzReadingPage(
-                    juzNumber: juzNumber, title: juzName,
+                    juzNumber: juzNumber,
                   ));
                 },
               ),
@@ -138,9 +136,8 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 parentNavigatorKey: _rootNavigatorKey,
                 pageBuilder: (ctx, state) {
                   final surahNumber = int.parse(state.pathParameters['id']!);
-                  final surahName = state.extra as String? ?? 'Surah';
                   return _slideTransition(ctx, state, TafsirPage(
-                    surahNumber: surahNumber, surahName: surahName,
+                    surahNumber: surahNumber,
                   ));
                 },
               ),
@@ -216,9 +213,8 @@ final appRouterProvider = Provider<GoRouter>((ref) {
             name: 'hadith_list',
             pageBuilder: (ctx, state) {
               final collectionId = state.pathParameters['id']!;
-              final collectionName = state.extra as String? ?? 'Hadith';
               return _slideTransition(ctx, state, HadithListPage(
-                collectionId: collectionId, collectionName: collectionName,
+                collectionId: collectionId,
               ));
             },
           ),

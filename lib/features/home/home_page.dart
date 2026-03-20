@@ -3,12 +3,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/core/services/prayer_times_service.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final prayerTimes = ref.watch(prayerTimesProvider);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Sirat-i Nur'),
@@ -25,8 +28,11 @@ class HomePage extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Prayer Banner
-            _buildPrayerBanner(context),
-            const SizedBox(height: 24),
+            _buildPrayerBanner(context, prayerTimes),
+            const SizedBox(height: 20),
+            // Prayer times row
+            if (prayerTimes != null) _buildPrayerTimesRow(context, prayerTimes),
+            if (prayerTimes != null) const SizedBox(height: 20),
             // Quick Access
             Text('Quick Access',
               style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900)),
@@ -41,15 +47,21 @@ class HomePage extends ConsumerWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.auto_stories_rounded, color: AppColors.emerald, size: 20),
+                      const Icon(Icons.auto_stories_rounded, color: AppColors.emerald, size: 20),
                       const SizedBox(width: 8),
-                      Text('Daily Verse', style: TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
+                      const Text('Daily Verse', style: TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
                     ],
                   ),
                   const SizedBox(height: 12),
                   const Text(
+                    'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, height: 2.0),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 8),
+                  const Text(
                     'In the name of Allah, the Most Gracious, the Most Merciful.',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, height: 1.6),
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, height: 1.6),
                   ),
                   const SizedBox(height: 8),
                   Text('Al-Fatiha 1:1',
@@ -67,13 +79,13 @@ class HomePage extends ConsumerWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.check_circle_outline_rounded, color: AppColors.emerald, size: 20),
+                      const Icon(Icons.check_circle_outline_rounded, color: AppColors.emerald, size: 20),
                       const SizedBox(width: 8),
-                      Text("Today's Ibadah", style: TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
+                      const Text("Today's Ibadah", style: TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
                     ],
                   ),
                   const SizedBox(height: 16),
-                  _buildIbadahRow('Fajr', true),
+                  _buildIbadahRow('Fajr', false),
                   _buildIbadahRow('Dhuhr', false),
                   _buildIbadahRow('Asr', false),
                   _buildIbadahRow('Maghrib', false),
@@ -87,7 +99,14 @@ class HomePage extends ConsumerWidget {
     );
   }
 
-  Widget _buildPrayerBanner(BuildContext context) {
+  Widget _buildPrayerBanner(BuildContext context, PrayerTimesData? pt) {
+    final nextPrayer = pt?.nextPrayer ?? 'Dhuhr';
+    final nextTime = pt?.nextPrayerTime ?? '--:--';
+    final remaining = pt?.timeRemaining;
+    final remainStr = remaining != null
+        ? '${remaining.inHours}h ${remaining.inMinutes.remainder(60)}m remaining'
+        : 'Set location for prayer times';
+
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(24),
@@ -108,13 +127,48 @@ class HomePage extends ConsumerWidget {
           const Text('Next Prayer',
             style: TextStyle(color: Colors.white70, fontSize: 14, fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
-          const Text('Dhuhr',
-            style: TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.w900, letterSpacing: -0.5)),
+          Text(nextPrayer,
+            style: const TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.w900, letterSpacing: -0.5)),
           const SizedBox(height: 4),
-          Text('12:30 PM • 2h 15m remaining',
+          Text('$nextTime • $remainStr',
             style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 14, fontWeight: FontWeight.w600)),
         ],
       ),
+    );
+  }
+
+  Widget _buildPrayerTimesRow(BuildContext context, PrayerTimesData pt) {
+    return PremiumCard(
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          _prayerTimeItem(context, 'Fajr', pt.fajr, pt.nextPrayer == 'Fajr'),
+          _prayerTimeItem(context, 'Dhuhr', pt.dhuhr, pt.nextPrayer == 'Dhuhr'),
+          _prayerTimeItem(context, 'Asr', pt.asr, pt.nextPrayer == 'Asr'),
+          _prayerTimeItem(context, 'Maghrib', pt.maghrib, pt.nextPrayer == 'Maghrib'),
+          _prayerTimeItem(context, 'Isha', pt.isha, pt.nextPrayer == 'Isha'),
+        ],
+      ),
+    );
+  }
+
+  Widget _prayerTimeItem(BuildContext context, String name, String time, bool isNext) {
+    return Column(
+      children: [
+        Text(name, style: TextStyle(
+          fontSize: 11, fontWeight: FontWeight.w800,
+          color: isNext ? AppColors.emerald : Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+        const SizedBox(height: 4),
+        Text(time, style: TextStyle(
+          fontSize: 14, fontWeight: FontWeight.w900,
+          color: isNext ? AppColors.emerald : null)),
+        if (isNext) Container(
+          margin: const EdgeInsets.only(top: 4),
+          width: 6, height: 6,
+          decoration: const BoxDecoration(color: AppColors.emerald, shape: BoxShape.circle),
+        ),
+      ],
     );
   }
 
