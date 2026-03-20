@@ -28,21 +28,7 @@ class ProStatusNotifier extends StateNotifier<bool> {
 
   ProStatusNotifier(this._prefs) : super(true);
 
-  Future<void> _initIAP() async {
-    _storeAvailable = await _iap.isAvailable();
-    final purchaseUpdated = _iap.purchaseStream;
-    _subscription = purchaseUpdated.listen((purchaseDetailsList) {
-      _listenToPurchaseUpdated(purchaseDetailsList);
-    }, onDone: () {
-      _subscription?.cancel();
-    }, onError: (error) {
-      // Handle integration errors
-    });
-
-    // If pro is already true, cross-check against Play Store to prevent
-    // false positives from stale local prefs.
-    await _syncEntitlementFromStore();
-  }
+  // IAP initialization is disabled for testing/unlocked pro status.
 
   void _listenToPurchaseUpdated(List<PurchaseDetails> purchaseDetailsList) async {
     for (final purchaseDetails in purchaseDetailsList) {

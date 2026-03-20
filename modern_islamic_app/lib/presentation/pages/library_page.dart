@@ -15,7 +15,10 @@ class LibraryPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(trEn(context, tr: 'İslami Kütüphane', en: 'Islamic Library')),
+        title: Text(
+          trEn(context, tr: 'İslami Kütüphane', en: 'Islamic Library'),
+          style: const TextStyle(fontWeight: FontWeight.w900, letterSpacing: 0.5),
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
@@ -192,24 +195,32 @@ class LibraryPage extends ConsumerWidget {
 
               final col = collections[index - 2];
               return PremiumCard(
-                padding: const EdgeInsets.all(0),
+                padding: EdgeInsets.zero,
                 child: ListTile(
-                  contentPadding: const EdgeInsets.all(16),
-                  leading: CircleAvatar(
-                    backgroundColor: Theme.of(context).colorScheme.primary,
-                    child: const Icon(Icons.menu_book, color: Colors.white),
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                  leading: Container(
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(Icons.menu_book_rounded, color: Theme.of(context).colorScheme.primary),
                   ),
                   title: Text(
                     col.name,
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 18),
                   ),
                   subtitle: Text(
                     col.totalHadiths > 0
                         ? trEn(context, tr: '${col.totalHadiths} Sahih Hadis', en: '${col.totalHadiths} Authentic Hadiths')
                         : trEn(context, tr: 'Veri paketi gerekli', en: 'Data pack required'),
-                    style: TextStyle(color: Theme.of(context).colorScheme.primary),
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.8),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 13,
+                    ),
                   ),
-                  trailing: const Icon(Icons.chevron_right),
+                  trailing: Icon(Icons.chevron_right_rounded, color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3)),
                   onTap: () {
                     context.push('/library/hadith/${col.id}', extra: col.name);
                   },

@@ -9,17 +9,17 @@ class ZikrPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text(
           AppLocalizations.of(context)!.zikr.toUpperCase(),
-          style: const TextStyle(
-            color: Color(0xFFFFD700),
-            letterSpacing: 4,
-            fontWeight: FontWeight.bold,
+          style: TextStyle(
+            color: Theme.of(context).colorScheme.primary,
+            letterSpacing: 6,
+            fontWeight: FontWeight.w900,
           ),
         ),
         centerTitle: true,

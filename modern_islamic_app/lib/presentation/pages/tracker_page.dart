@@ -18,9 +18,13 @@ class TrackerPage extends ConsumerWidget {
         appBar: AppBar(
           title: Text(l10n.ibadahTracker),
           bottom: TabBar(
+            indicatorColor: Colors.white,
+            indicatorWeight: 3,
+            labelStyle: const TextStyle(fontWeight: FontWeight.bold),
+            unselectedLabelColor: Colors.white.withValues(alpha: 0.7),
             tabs: [
-              Tab(text: l10n.dailyChecklist, icon: const Icon(Icons.today_outlined)),
-              Tab(text: l10n.qazaDebt, icon: const Icon(Icons.history_outlined)),
+              Tab(text: l10n.dailyChecklist, icon: const Icon(Icons.today_rounded)),
+              Tab(text: l10n.qazaDebt, icon: const Icon(Icons.history_rounded)),
             ],
           ),
           actions: [
@@ -139,7 +143,10 @@ class _DailyChecklistSubPage extends ConsumerWidget {
                   trEnGlobal(context,
                     tr: '$completedCount / $totalCount Tamamlandı',
                     en: '$completedCount / $totalCount Completed'),
-                  style: const TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
                 ),
               ],
             ),
@@ -166,28 +173,33 @@ class _DailyChecklistSubPage extends ConsumerWidget {
   Widget _buildCheckItem(BuildContext context, WidgetRef ref, String title, bool isDone, {bool isSunnah = false}) {
     final l10n = AppLocalizations.of(context)!;
     final displayTitle = _localizeTrackerItem(context, title);
-    return Card(
-      elevation: 0,
-      margin: const EdgeInsets.symmetric(vertical: 4),
-      color: isDone ? Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.3) : Theme.of(context).colorScheme.surface,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-        side: BorderSide(color: isDone ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.outlineVariant),
-      ),
+    return PremiumCard(
+      margin: const EdgeInsets.symmetric(vertical: 6),
+      padding: EdgeInsets.zero,
       child: CheckboxListTile(
         title: Text(
           displayTitle,
-          style: TextStyle(fontWeight: FontWeight.bold, color: isDone ? Theme.of(context).colorScheme.primary : null),
+          style: TextStyle(
+            fontWeight: FontWeight.w800, 
+            color: isDone ? Theme.of(context).colorScheme.primary : null,
+          ),
         ),
         subtitle: Text(
-          isSunnah
-              ? l10n.spiritualGrowth
-              : l10n.mandatoryDuty,
+          isSunnah ? l10n.spiritualGrowth : l10n.mandatoryDuty,
+          style: TextStyle(
+            fontSize: 12,
+            color: isDone ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.7) : null,
+          ),
         ),
         value: isDone,
         onChanged: (_) => ref.read(dailyIbadahProvider.notifier).toggle(title),
-        secondary: Icon(isSunnah ? Icons.star_border : Icons.priority_high, color: isDone ? Theme.of(context).colorScheme.primary : null),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        secondary: Icon(
+          isSunnah ? Icons.star_rounded : Icons.priority_high_rounded, 
+          color: isDone ? Theme.of(context).colorScheme.primary : Colors.grey.withValues(alpha: 0.4),
+        ),
+        activeColor: Theme.of(context).colorScheme.primary,
+        checkboxShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
       ),
     );
   }
@@ -211,14 +223,18 @@ class _QazaSubPage extends ConsumerWidget {
               padding: const EdgeInsets.all(24),
               child: Column(
                 children: [
-                  Text(l10n.totalPrayers.toUpperCase(), style: const TextStyle(color: Colors.white70, fontSize: 12, letterSpacing: 2)),
+                  Text(l10n.totalPrayers.toUpperCase(), style: const TextStyle(color: Colors.white70, fontSize: 12, letterSpacing: 2, fontWeight: FontWeight.w600)),
                   const SizedBox(height: 8),
-                  Text('$totalPrayerDebt', style: const TextStyle(color: Color(0xFFFFD700), fontSize: 40, fontWeight: FontWeight.bold)),
+                  Text('$totalPrayerDebt', style: const TextStyle(color: Colors.white, fontSize: 44, fontWeight: FontWeight.w900)),
                   const SizedBox(height: 16),
-                  LinearProgressIndicator(
-                    value: totalPrayerDebt > 0 ? 0.3 : 1.0, 
-                    backgroundColor: Colors.white12, 
-                    color: const Color(0xFFFFD700)
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: LinearProgressIndicator(
+                      value: totalPrayerDebt > 0 ? 0.3 : 1.0, 
+                      backgroundColor: Colors.white.withValues(alpha: 0.15), 
+                      color: Colors.white,
+                      minHeight: 8,
+                    ),
                   ),
                 ],
               ),

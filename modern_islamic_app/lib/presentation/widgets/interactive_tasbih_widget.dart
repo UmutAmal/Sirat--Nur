@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'dart:math' as math;
 import 'package:sirat_i_nur/core/utils/royal_shaders.dart';
 
 class InteractiveTasbihWidget extends StatefulWidget {
@@ -67,12 +66,12 @@ class _InteractiveTasbihWidgetState extends State<InteractiveTasbihWidget> with 
             height: 300,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.black.withValues(alpha: 0.1),
+              color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.05),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.amber.withValues(alpha: 0.2),
-                  blurRadius: 30,
-                  spreadRadius: 5,
+                  color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+                  blurRadius: 40,
+                  spreadRadius: 10,
                 ),
               ],
             ),
@@ -92,7 +91,7 @@ class _InteractiveTasbihWidgetState extends State<InteractiveTasbihWidget> with 
                   animation: _controller,
                   builder: (context, child) {
                     return Transform.rotate(
-                      angle: _controller.value * (math.pi / 16),
+                      angle: _controller.value * (0.2), // Subtle rotation
                       child: child,
                     );
                   },
@@ -102,8 +101,8 @@ class _InteractiveTasbihWidgetState extends State<InteractiveTasbihWidget> with 
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: const Color(0xFFFFD700).withValues(alpha: 0.5),
-                        width: 4,
+                        color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3),
+                        width: 2,
                       ),
                     ),
                   ),
@@ -115,32 +114,30 @@ class _InteractiveTasbihWidgetState extends State<InteractiveTasbihWidget> with 
                   children: [
                     Text(
                       '${(_count - 1) % 33 + 1}',
-                      style: const TextStyle(
-                        fontSize: 72,
-                        fontWeight: FontWeight.bold,
+                      style: TextStyle(
+                        fontSize: 84,
+                        fontWeight: FontWeight.w900,
                         fontFamily: 'Outfit',
-                        color: Color(0xFFFFD700),
-                        shadows: [
-                          Shadow(color: Colors.black, blurRadius: 10),
-                        ],
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                     ),
                     Text(
                       _getZikrLabel(),
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        letterSpacing: 2,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.white70,
+                      style: TextStyle(
+                        fontSize: 14,
+                        letterSpacing: 3,
+                        fontWeight: FontWeight.w800,
+                        color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.8),
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 12),
                     Text(
                       'Total: $_count',
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 12,
-                        color: Colors.white38,
+                        fontWeight: FontWeight.w600,
+                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4),
                       ),
                     ),
                   ],
@@ -152,8 +149,8 @@ class _InteractiveTasbihWidgetState extends State<InteractiveTasbihWidget> with 
         const SizedBox(height: 40),
         IconButton(
           onPressed: _reset,
-          icon: const Icon(Icons.refresh, color: Colors.white54),
-          iconSize: 32,
+          icon: Icon(Icons.refresh_rounded, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3)),
+          iconSize: 28,
         ),
       ],
     );

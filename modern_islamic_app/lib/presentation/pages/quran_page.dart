@@ -22,9 +22,13 @@ class QuranPage extends ConsumerWidget {
           title: Text(l10n.quran),
           centerTitle: false,
           bottom: TabBar(
+            indicatorColor: Colors.white,
+            indicatorWeight: 3,
+            labelStyle: const TextStyle(fontWeight: FontWeight.bold),
+            unselectedLabelColor: Colors.white.withValues(alpha: 0.7),
             tabs: [
-              Tab(text: trEnGlobal(context, tr: 'Sure', en: 'Surah (Chapter)')),
-              Tab(text: trEnGlobal(context, tr: 'Cüz', en: 'Juz (Part)')),
+              Tab(text: trEnGlobal(context, tr: 'Sure', en: 'Surah')),
+              Tab(text: trEnGlobal(context, tr: 'Cüz', en: 'Juz')),
             ],
           ),
         ),
@@ -33,48 +37,45 @@ class QuranPage extends ConsumerWidget {
             if (lastRead != null)
               Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: InkWell(
+                child: PremiumCard(
+                  padding: EdgeInsets.zero,
                   onTap: () {
                     context.push('/quran/reading/${lastRead.surahNumber}', extra: lastRead.surahName);
                   },
-                  borderRadius: BorderRadius.circular(16),
                   child: Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(24),
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
                           Theme.of(context).colorScheme.primary,
-                          Theme.of(context).colorScheme.secondary,
+                          const Color(0xFF2E7D32),
                         ],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                       ),
-                      borderRadius: BorderRadius.circular(16),
-                      border: Border.all(
-                        color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Theme.of(context).colorScheme.surface.withValues(alpha: 0.7),
-                          blurRadius: 8,
-                          offset: const Offset(0, 4),
-                        )
-                      ]
                     ),
                     child: Row(
                       children: [
-                        const Icon(Icons.menu_book, size: 40, color: Colors.white),
+                        Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withValues(alpha: 0.15),
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(Icons.auto_stories_rounded, size: 28, color: Colors.white),
+                        ),
                         const SizedBox(width: 16),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                l10n.continueReading,
-                                style: const TextStyle(
-                                  color: Colors.white70,
-                                  fontWeight: FontWeight.bold,
+                                l10n.continueReading.toUpperCase(),
+                                style: TextStyle(
+                                  color: Colors.white.withValues(alpha: 0.7),
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w800,
+                                  letterSpacing: 1.2,
                                 ),
                               ),
                               const SizedBox(height: 4),
@@ -82,18 +83,21 @@ class QuranPage extends ConsumerWidget {
                                 lastRead.surahName,
                                 style: const TextStyle(
                                   color: Colors.white,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w900,
                                 ),
                               ),
                               Text(
                                 trEnGlobal(context, tr: 'Ayet ${lastRead.ayahNumber}', en: 'Ayah ${lastRead.ayahNumber}'),
-                                style: const TextStyle(color: Colors.white70),
+                                style: TextStyle(
+                                  color: Colors.white.withValues(alpha: 0.8),
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ],
                           ),
                         ),
-                        const Icon(Icons.play_circle_fill, color: Colors.white, size: 32),
+                        const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white, size: 20),
                       ],
                     ),
                   ),
@@ -112,21 +116,24 @@ class QuranPage extends ConsumerWidget {
                         itemBuilder: (context, index) {
                           final surah = surahs[index];
                           return ListTile(
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                             leading: Container(
-                              width: 40,
-                              height: 40,
+                              width: 44,
+                              height: 44,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
+                                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.08),
                                 border: Border.all(
-                                  color: Theme.of(context).colorScheme.primary,
-                                  width: 2,
+                                  color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.2),
+                                  width: 1,
                                 ),
                               ),
                               child: Center(
                                 child: Text(
                                   surah.number.toString(),
                                   style: TextStyle(
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w900,
+                                    fontSize: 16,
                                     color: Theme.of(context).colorScheme.primary,
                                   ),
                                 ),
@@ -134,15 +141,22 @@ class QuranPage extends ConsumerWidget {
                             ),
                             title: Text(
                               surah.englishName,
-                              style: const TextStyle(fontWeight: FontWeight.bold),
+                              style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
                             ),
-                            subtitle: Text('${surah.englishNameTranslation} • ${surah.numberOfAyahs} ${l10n.ayahs}'),
+                            subtitle: Text(
+                              '${surah.englishNameTranslation} • ${surah.numberOfAyahs} ${l10n.ayahs}',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+                              ),
+                            ),
                             trailing: Text(
                               surah.name,
-                              style: const TextStyle(
-                                fontFamily: 'Amiri', // Will use standard default until custom font added
-                                fontSize: 22,
-                                fontWeight: FontWeight.w600,
+                              style: TextStyle(
+                                fontFamily: 'Amiri', 
+                                fontSize: 24,
+                                fontWeight: FontWeight.w900,
+                                color: Theme.of(context).colorScheme.primary,
                               ),
                             ),
                             onTap: () {
