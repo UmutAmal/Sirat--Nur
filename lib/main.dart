@@ -8,7 +8,7 @@ import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/theme/app_theme.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
-import 'package:sirat_i_nur/core/constants/app_constants.dart';
+import 'package:sirat_i_nur/core/utils/locale_utils.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -35,27 +35,40 @@ class SplashScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              child: const Icon(Icons.mosque, size: 60, color: AppColors.emeraldLight),
+              child: const Icon(
+                Icons.mosque,
+                size: 60,
+                color: AppColors.emeraldLight,
+              ),
             ),
             const SizedBox(height: 32),
             const Text(
               'Sirat-i Nur',
               style: TextStyle(
-                fontSize: 32, fontWeight: FontWeight.w900,
-                color: Colors.white, letterSpacing: 2,
+                fontSize: 32,
+                fontWeight: FontWeight.w900,
+                color: Colors.white,
+                letterSpacing: 2,
               ),
             ),
             const SizedBox(height: 8),
             const Text(
               'Islamic Way of Light',
-              style: TextStyle(fontSize: 14, color: Colors.white54, letterSpacing: 1),
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white54,
+                letterSpacing: 1,
+              ),
             ),
             const SizedBox(height: 48),
             const SizedBox(
-              width: 50, height: 50,
+              width: 50,
+              height: 50,
               child: CircularProgressIndicator(
                 strokeWidth: 3,
-                valueColor: AlwaysStoppedAnimation<Color>(AppColors.emeraldLight),
+                valueColor: AlwaysStoppedAnimation<Color>(
+                  AppColors.emeraldLight,
+                ),
               ),
             ),
           ],
@@ -70,31 +83,35 @@ void main() async {
 
   FlutterError.onError = (details) {
     FlutterError.presentError(details);
-    Zone.current.handleUncaughtError(details.exception, details.stack ?? StackTrace.current);
+    Zone.current.handleUncaughtError(
+      details.exception,
+      details.stack ?? StackTrace.current,
+    );
   };
 
-  runZonedGuarded(() async {
-    // Initialize Supabase
-    try {
-      await SupabaseConfig.initialize();
-    } catch (e) {
-      debugPrint('Supabase init failed (non-blocking): $e');
-    }
+  runZonedGuarded(
+    () async {
+      // Initialize Supabase
+      try {
+        await SupabaseConfig.initialize();
+      } catch (e) {
+        debugPrint('Supabase init failed (non-blocking): $e');
+      }
 
-    final prefs = await SharedPreferences.getInstance();
+      final prefs = await SharedPreferences.getInstance();
 
-    runApp(
-      ProviderScope(
-        overrides: [
-          sharedPreferencesProvider.overrideWithValue(prefs),
-        ],
-        child: SiratINurApp(prefs: prefs),
-      ),
-    );
-  }, (error, stack) {
-    debugPrint('Uncaught error: $error');
-    debugPrintStack(stackTrace: stack);
-  });
+      runApp(
+        ProviderScope(
+          overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
+          child: SiratINurApp(prefs: prefs),
+        ),
+      );
+    },
+    (error, stack) {
+      debugPrint('Uncaught error: $error');
+      debugPrintStack(stackTrace: stack);
+    },
+  );
 }
 
 class SiratINurApp extends ConsumerStatefulWidget {
@@ -120,6 +137,8 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
   Widget build(BuildContext context) {
     final settings = ref.watch(settingsProvider);
     final router = ref.watch(appRouterProvider);
+    final configuredLocale = parseLocaleCode(settings.languageCode);
+    final supportedLocales = AppLocalizations.supportedLocales;
 
     if (_showSplash) {
       return MaterialApp(
@@ -130,25 +149,18 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
     }
 
     return MaterialApp.router(
-      onGenerateTitle: (context) => AppLocalizations.of(context)?.appTitle ?? 'Sirat-i Nur',
+      onGenerateTitle: (context) =>
+          AppLocalizations.of(context)?.appTitle ?? 'Sirat-i Nur',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       themeMode: settings.isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      locale: settings.languageCode != null ? Locale(settings.languageCode!) : null,
+      locale: configuredLocale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: [
-        ...AppLocalizations.supportedLocales,
-        ...supportedLanguages.map((e) => Locale(e.code)).where((l) => !AppLocalizations.supportedLocales.contains(l)),
-      ],
-      localeResolutionCallback: (locale, supportedLocales) {
-        if (locale == null) return supportedLocales.first; // English fallback
-        for (var supportedLocale in supportedLocales) {
-          if (supportedLocale.languageCode == locale.languageCode) {
-            return supportedLocale;
-          }
-        }
-        return supportedLocales.first;
+      supportedLocales: supportedLocales,
+      localeResolutionCallback: (locale, _) {
+        final requested = configuredLocale ?? locale;
+        return resolveSupportedLocale(requested, supportedLocales);
       },
       routerConfig: router,
     );

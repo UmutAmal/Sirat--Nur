@@ -42,10 +42,10 @@ class SettingsState {
     bool? qiblaSmoothingEnabled,
     double? fajrAngle,
     double? ishaAngle,
-    String? languageCode,
-    double? latitude,
-    double? longitude,
-    String? locationName,
+    Object? languageCode = _unset,
+    Object? latitude = _unset,
+    Object? longitude = _unset,
+    Object? locationName = _unset,
     bool? isDarkMode,
   }) {
     return SettingsState(
@@ -53,35 +53,51 @@ class SettingsState {
       madhab: madhab ?? this.madhab,
       audioVoice: audioVoice ?? this.audioVoice,
       qiblaOffset: qiblaOffset ?? this.qiblaOffset,
-      qiblaSmoothingEnabled: qiblaSmoothingEnabled ?? this.qiblaSmoothingEnabled,
+      qiblaSmoothingEnabled:
+          qiblaSmoothingEnabled ?? this.qiblaSmoothingEnabled,
       fajrAngle: fajrAngle ?? this.fajrAngle,
       ishaAngle: ishaAngle ?? this.ishaAngle,
-      languageCode: languageCode ?? this.languageCode,
-      latitude: latitude ?? this.latitude,
-      longitude: longitude ?? this.longitude,
-      locationName: locationName ?? this.locationName,
+      languageCode: identical(languageCode, _unset)
+          ? this.languageCode
+          : languageCode as String?,
+      latitude: identical(latitude, _unset)
+          ? this.latitude
+          : latitude as double?,
+      longitude: identical(longitude, _unset)
+          ? this.longitude
+          : longitude as double?,
+      locationName: identical(locationName, _unset)
+          ? this.locationName
+          : locationName as String?,
       isDarkMode: isDarkMode ?? this.isDarkMode,
     );
   }
 }
 
+const Object _unset = Object();
+
 class SettingsNotifier extends StateNotifier<SettingsState> {
   final SharedPreferences _prefs;
 
-  SettingsNotifier(this._prefs) : super(SettingsState(
-    calculationMethod: _prefs.getString('calculationMethod') ?? 'Turkey',
-    madhab: _prefs.getString('madhab') ?? 'Hanafi',
-    audioVoice: _prefs.getString('audioVoice') ?? 'Male (Mishary Alafasy)',
-    qiblaOffset: _prefs.getDouble('qiblaOffset') ?? 0.0,
-    qiblaSmoothingEnabled: _prefs.getBool('qiblaSmoothingEnabled') ?? true,
-    fajrAngle: _prefs.getDouble('fajrAngle') ?? 18.0,
-    ishaAngle: _prefs.getDouble('ishaAngle') ?? 17.0,
-    languageCode: _prefs.getString('languageCode'),
-    latitude: _prefs.getDouble('latitude'),
-    longitude: _prefs.getDouble('longitude'),
-    locationName: _prefs.getString('locationName'),
-    isDarkMode: _prefs.getBool('isDarkMode') ?? true,
-  ));
+  SettingsNotifier(this._prefs)
+    : super(
+        SettingsState(
+          calculationMethod: _prefs.getString('calculationMethod') ?? 'Turkey',
+          madhab: _prefs.getString('madhab') ?? 'Hanafi',
+          audioVoice:
+              _prefs.getString('audioVoice') ?? 'Male (Mishary Alafasy)',
+          qiblaOffset: _prefs.getDouble('qiblaOffset') ?? 0.0,
+          qiblaSmoothingEnabled:
+              _prefs.getBool('qiblaSmoothingEnabled') ?? true,
+          fajrAngle: _prefs.getDouble('fajrAngle') ?? 18.0,
+          ishaAngle: _prefs.getDouble('ishaAngle') ?? 17.0,
+          languageCode: _prefs.getString('languageCode'),
+          latitude: _prefs.getDouble('latitude'),
+          longitude: _prefs.getDouble('longitude'),
+          locationName: _prefs.getString('locationName'),
+          isDarkMode: _prefs.getBool('isDarkMode') ?? true,
+        ),
+      );
 
   Future<void> updateCalculationMethod(String method) async {
     await _prefs.setString('calculationMethod', method);
@@ -115,12 +131,14 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
   }
 
   Future<void> updateLanguage(String? langCode) async {
-    if (langCode == null) {
+    final normalized = langCode?.trim().replaceAll('-', '_');
+    if (normalized == null || normalized.isEmpty) {
       await _prefs.remove('languageCode');
+      state = state.copyWith(languageCode: null);
     } else {
-      await _prefs.setString('languageCode', langCode);
+      await _prefs.setString('languageCode', normalized);
+      state = state.copyWith(languageCode: normalized);
     }
-    state = state.copyWith(languageCode: langCode);
   }
 
   Future<void> updateLocation(double lat, double lng, String name) async {
@@ -134,17 +152,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
     await _prefs.remove('latitude');
     await _prefs.remove('longitude');
     await _prefs.remove('locationName');
-    state = SettingsState(
-      calculationMethod: state.calculationMethod,
-      madhab: state.madhab,
-      audioVoice: state.audioVoice,
-      qiblaOffset: state.qiblaOffset,
-      qiblaSmoothingEnabled: state.qiblaSmoothingEnabled,
-      fajrAngle: state.fajrAngle,
-      ishaAngle: state.ishaAngle,
-      languageCode: state.languageCode,
-      isDarkMode: state.isDarkMode,
-    );
+    state = state.copyWith(latitude: null, longitude: null, locationName: null);
   }
 
   Future<void> toggleDarkMode(bool value) async {
@@ -153,7 +161,9 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
   }
 }
 
-final settingsProvider = StateNotifierProvider<SettingsNotifier, SettingsState>((ref) {
-  final prefs = ref.watch(sharedPreferencesProvider);
-  return SettingsNotifier(prefs);
-});
+final settingsProvider = StateNotifierProvider<SettingsNotifier, SettingsState>(
+  (ref) {
+    final prefs = ref.watch(sharedPreferencesProvider);
+    return SettingsNotifier(prefs);
+  },
+);

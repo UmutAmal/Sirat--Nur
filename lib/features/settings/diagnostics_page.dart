@@ -1,51 +1,218 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sirat_i_nur/core/constants/live_streams.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
-class DiagnosticsPage extends StatelessWidget {
+class DiagnosticsPage extends ConsumerStatefulWidget {
   const DiagnosticsPage({super.key});
 
   @override
+  ConsumerState<DiagnosticsPage> createState() => _DiagnosticsPageState();
+}
+
+class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
+  late Future<List<_DiagnosticRow>> _rowsFuture;
+
+  @override
+  void initState() {
+    super.initState();
+    _rowsFuture = _buildRows();
+  }
+
+  Future<List<_DiagnosticRow>> _buildRows() async {
+    final settings = ref.read(settingsProvider);
+    final rows = <_DiagnosticRow>[
+      _DiagnosticRow('App Version', '2.0.0', true),
+      _DiagnosticRow('Theme', settings.isDarkMode ? 'Dark' : 'Light', true),
+      _DiagnosticRow(
+        'Language',
+        settings.languageCode ?? 'System default',
+        true,
+      ),
+      _DiagnosticRow(
+        'Location',
+        settings.locationName ?? 'Not set',
+        settings.locationName != null,
+      ),
+    ];
+
+    rows.add(
+      _DiagnosticRow(
+        'Live TV Streams',
+        '${liveStreams.length} configured',
+        liveStreams.isNotEmpty,
+      ),
+    );
+
+    try {
+      final quranJson = await rootBundle.loadString(
+        'assets/data/full_quran.json',
+      );
+      final List<dynamic> parsed = jsonDecode(quranJson) as List<dynamic>;
+      final surahCount = parsed.length;
+      final ayahCount = parsed.fold<int>(
+        0,
+        (sum, item) =>
+            sum +
+            ((item as Map<String, dynamic>)['ayahs'] as List<dynamic>? ??
+                    const [])
+                .length,
+      );
+      rows.add(
+        _DiagnosticRow('Quran Surahs', '$surahCount / 114', surahCount == 114),
+      );
+      rows.add(
+        _DiagnosticRow('Quran Ayahs', '$ayahCount / 6236', ayahCount == 6236),
+      );
+    } catch (error) {
+      rows.add(_DiagnosticRow('Quran Dataset', 'Load failed: $error', false));
+    }
+
+    try {
+      final manifestJson = await rootBundle.loadString('AssetManifest.json');
+      final Map<String, dynamic> manifest =
+          jsonDecode(manifestJson) as Map<String, dynamic>;
+      final assets = manifest.keys.toList();
+
+      final adhan = assets
+          .where(
+            (asset) =>
+                asset.startsWith('assets/audio/adhan/') &&
+                !asset.endsWith('.gitkeep'),
+          )
+          .length;
+      final ui = assets
+          .where(
+            (asset) =>
+                asset.startsWith('assets/audio/ui/') &&
+                !asset.endsWith('.gitkeep'),
+          )
+          .length;
+      final quran = assets
+          .where(
+            (asset) =>
+                asset.startsWith('assets/audio/quran/') &&
+                !asset.endsWith('.gitkeep'),
+          )
+          .length;
+
+      rows.add(_DiagnosticRow('Adhan Audio Assets', '$adhan files', adhan > 0));
+      rows.add(_DiagnosticRow('UI Audio Assets', '$ui files', ui > 0));
+      rows.add(_DiagnosticRow('Quran Audio Assets', '$quran files', quran > 0));
+    } catch (error) {
+      rows.add(
+        _DiagnosticRow('Audio Assets', 'Manifest read failed: $error', false),
+      );
+    }
+
+    rows.add(
+      _DiagnosticRow(
+        'Localization Locales',
+        '${AppLocalizations.supportedLocales.length} supported',
+        AppLocalizations.supportedLocales.length > 3,
+      ),
+    );
+
+    return rows;
+  }
+
+  Future<void> _refresh() async {
+    setState(() {
+      _rowsFuture = _buildRows();
+    });
+    await _rowsFuture;
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: const Text('Diagnostics')),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            PremiumCard(
+      appBar: AppBar(
+        title: Text(l10n.diagnostics),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh_rounded),
+            onPressed: _refresh,
+          ),
+        ],
+      ),
+      body: FutureBuilder<List<_DiagnosticRow>>(
+        future: _rowsFuture,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(
+              child: CircularProgressIndicator(color: AppColors.emerald),
+            );
+          }
+
+          if (snapshot.hasError) {
+            return Center(
+              child: Padding(
+                padding: const EdgeInsets.all(24),
+                child: Text(
+                  '${l10n.error}: ${snapshot.error}',
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            );
+          }
+
+          final rows = snapshot.data ?? const <_DiagnosticRow>[];
+          return SingleChildScrollView(
+            padding: const EdgeInsets.all(20),
+            child: PremiumCard(
               child: Column(
                 children: [
-                  _infoRow(context, 'App Version', '2.0.0'),
-                  const Divider(height: 24),
-                  _infoRow(context, 'Flutter', 'Stable'),
-                  const Divider(height: 24),
-                  _infoRow(context, 'Dart', 'Latest'),
-                  const Divider(height: 24),
-                  _infoRow(context, 'Supabase', 'Connected'),
-                  const Divider(height: 24),
-                  _infoRow(context, 'Premium', 'Free'),
-                  const Divider(height: 24),
-                  _infoRow(context, 'L10n Files', '3 (EN, TR, AR)'),
-                  const Divider(height: 24),
-                  _infoRow(context, 'Local DB', 'Active'),
+                  for (int i = 0; i < rows.length; i++) ...[
+                    _infoRow(context, rows[i]),
+                    if (i != rows.length - 1) const Divider(height: 24),
+                  ],
                 ],
               ),
             ),
-          ],
-        ),
+          );
+        },
       ),
     );
   }
 
-  Widget _infoRow(BuildContext context, String label, String value) {
+  Widget _infoRow(BuildContext context, _DiagnosticRow row) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(label, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 14)),
-        Text(value, style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14, color: AppColors.emerald)),
+        Expanded(
+          child: Text(
+            row.label,
+            style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
+          ),
+        ),
+        const SizedBox(width: 12),
+        Flexible(
+          child: Text(
+            row.value,
+            textAlign: TextAlign.right,
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              fontSize: 13,
+              color: row.isHealthy ? AppColors.emerald : Colors.orangeAccent,
+            ),
+          ),
+        ),
       ],
     );
   }
+}
+
+class _DiagnosticRow {
+  final String label;
+  final String value;
+  final bool isHealthy;
+
+  const _DiagnosticRow(this.label, this.value, this.isHealthy);
 }

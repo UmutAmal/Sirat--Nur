@@ -20,6 +20,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
   bool _isLoading = true;
   late AudioPlayer _audioPlayer;
   bool _isPlaying = false;
+  bool _isAudioLoading = false;
   bool _isBookmarked = false;
 
   @override
@@ -43,7 +44,9 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
   Future<void> _loadSurah() async {
     try {
-      final jsonStr = await rootBundle.loadString('assets/data/full_quran.json');
+      final jsonStr = await rootBundle.loadString(
+        'assets/data/full_quran.json',
+      );
       final List<dynamic> data = jsonDecode(jsonStr);
       final surahData = data.firstWhere(
         (s) => s['number'] == widget.surahNumber,
@@ -61,30 +64,66 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     }
   }
 
-  void _togglePlay(String audioVoice) async {
+  Future<void> _togglePlay(String audioVoice) async {
     if (_isPlaying) {
       await _audioPlayer.pause();
-    } else {
-      try {
-        // Map audioVoice setting to Mp3Quran servers
-        String prefix = 'afs'; // default Alafasy
-        if (audioVoice.contains('Sudais')) prefix = 'sds';
-        if (audioVoice.contains('AbdulBaset')) prefix = 'basit';
+      return;
+    }
 
-        final sNum = widget.surahNumber.toString().padLeft(3, '0');
-        final url = 'https://server8.mp3quran.net/$prefix/$sNum.mp3';
-        
+    setState(() => _isAudioLoading = true);
+    final surahNumber = widget.surahNumber.toString().padLeft(3, '0');
+    final normalizedVoice = audioVoice.toLowerCase();
+    final candidates = _audioCandidatesForVoice(
+      normalizedVoice,
+    ).map((baseUrl) => '$baseUrl/$surahNumber.mp3').toList();
+
+    Object? lastError;
+    for (final url in candidates) {
+      try {
         await _audioPlayer.setUrl(url);
         await _audioPlayer.play();
-      } catch (e) {
-        debugPrint('Audio error: $e');
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Could not play audio. Check internet.')),
-          );
-        }
+        if (!mounted) return;
+        setState(() => _isAudioLoading = false);
+        return;
+      } catch (error) {
+        lastError = error;
+        debugPrint('Audio source failed: $url, error: $error');
       }
     }
+
+    if (!mounted) return;
+    setState(() => _isAudioLoading = false);
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text(
+          'Could not play audio. Please check connection and try again.',
+        ),
+      ),
+    );
+    if (lastError != null) {
+      debugPrint('Audio playback failed for all sources: $lastError');
+    }
+  }
+
+  List<String> _audioCandidatesForVoice(String normalizedVoice) {
+    if (normalizedVoice.contains('sudais')) {
+      return const [
+        'https://download.quranicaudio.com/quran/abdurrahmaan_as-sudays',
+        'https://server8.mp3quran.net/sds',
+      ];
+    }
+    if (normalizedVoice.contains('abdulbaset') ||
+        normalizedVoice.contains('abdulbasit')) {
+      return const [
+        'https://download.quranicaudio.com/quran/abdul_basit_murattal',
+        'https://server8.mp3quran.net/basit',
+      ];
+    }
+
+    return const [
+      'https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee',
+      'https://server8.mp3quran.net/afs',
+    ];
   }
 
   @override
@@ -95,7 +134,10 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
   @override
   Widget build(BuildContext context) {
-    final surahInfo = allSurahs.firstWhere((s) => s.number == widget.surahNumber, orElse: () => allSurahs.first);
+    final surahInfo = allSurahs.firstWhere(
+      (s) => s.number == widget.surahNumber,
+      orElse: () => allSurahs.first,
+    );
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final settings = ref.watch(settingsProvider);
     final isTr = settings.languageCode == 'tr';
@@ -105,25 +147,45 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
         title: Text(surahInfo.transliteration),
         actions: [
           IconButton(
-            icon: Icon(_isBookmarked ? Icons.bookmark_rounded : Icons.bookmark_border_rounded),
+            icon: Icon(
+              _isBookmarked
+                  ? Icons.bookmark_rounded
+                  : Icons.bookmark_border_rounded,
+            ),
             color: _isBookmarked ? AppColors.emerald : null,
             onPressed: () {
               setState(() => _isBookmarked = !_isBookmarked);
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                content: Text(_isBookmarked ? 'Bookmark Added' : 'Bookmark Removed'),
-                duration: const Duration(seconds: 1),
-              ));
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    _isBookmarked ? 'Bookmark Added' : 'Bookmark Removed',
+                  ),
+                  duration: const Duration(seconds: 1),
+                ),
+              );
             },
           ),
           IconButton(
-            icon: Icon(_isPlaying ? Icons.pause_circle_filled_rounded : Icons.volume_up_rounded),
-            color: _isPlaying ? AppColors.emerald : null,
+            icon: _isAudioLoading
+                ? const SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: CircularProgressIndicator(strokeWidth: 2),
+                  )
+                : Icon(
+                    _isPlaying
+                        ? Icons.pause_circle_filled_rounded
+                        : Icons.volume_up_rounded,
+                  ),
+            color: _isPlaying || _isAudioLoading ? AppColors.emerald : null,
             onPressed: () => _togglePlay(settings.audioVoice),
           ),
         ],
       ),
       body: _isLoading
-          ? const Center(child: CircularProgressIndicator(color: AppColors.emerald))
+          ? const Center(
+              child: CircularProgressIndicator(color: AppColors.emerald),
+            )
           : ListView.builder(
               padding: const EdgeInsets.all(20),
               itemCount: _ayahs.length + 2,
@@ -139,14 +201,32 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                     ),
                     child: Column(
                       children: [
-                        Text(surahInfo.nameArabic,
-                          style: const TextStyle(color: Colors.white, fontSize: 36, fontWeight: FontWeight.w900, fontFamily: 'Amiri')),
+                        Text(
+                          surahInfo.nameArabic,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 36,
+                            fontWeight: FontWeight.w900,
+                            fontFamily: 'Amiri',
+                          ),
+                        ),
                         const SizedBox(height: 8),
-                        Text(surahInfo.nameEnglish,
-                          style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 16, fontWeight: FontWeight.w700)),
+                        Text(
+                          surahInfo.nameEnglish,
+                          style: TextStyle(
+                            color: Colors.white.withValues(alpha: 0.8),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
                         const SizedBox(height: 4),
-                        Text('${surahInfo.ayahCount} Ayat • ${surahInfo.revelationType}',
-                          style: TextStyle(color: Colors.white.withValues(alpha: 0.6), fontSize: 13)),
+                        Text(
+                          '${surahInfo.ayahCount} Ayat • ${surahInfo.revelationType}',
+                          style: TextStyle(
+                            color: Colors.white.withValues(alpha: 0.6),
+                            fontSize: 13,
+                          ),
+                        ),
                       ],
                     ),
                   );
@@ -155,9 +235,17 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                   if (widget.surahNumber != 9) {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 24),
-                      child: Text('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
-                        style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900, color: AppColors.emerald, height: 2.0, fontFamily: 'Amiri'),
-                        textAlign: TextAlign.center),
+                      child: Text(
+                        'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
+                        style: TextStyle(
+                          fontSize: 26,
+                          fontWeight: FontWeight.w900,
+                          color: AppColors.emerald,
+                          height: 2.0,
+                          fontFamily: 'Amiri',
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                     );
                   }
                   return const SizedBox.shrink();
@@ -165,7 +253,9 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
                 final ayah = _ayahs[i - 2];
                 final textAr = ayah['text'] ?? '';
-                final textTrans = isTr ? (ayah['tr_translation'] ?? '') : (ayah['en_translation'] ?? '');
+                final textTrans = isTr
+                    ? (ayah['tr_translation'] ?? '')
+                    : (ayah['en_translation'] ?? '');
 
                 return Container(
                   margin: const EdgeInsets.only(bottom: 16),
@@ -173,7 +263,12 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                   decoration: BoxDecoration(
                     color: isDark ? AppColors.darkCard : AppColors.cardLight,
                     borderRadius: BorderRadius.circular(16),
-                    boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8)],
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.04),
+                        blurRadius: 8,
+                      ),
+                    ],
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -181,29 +276,62 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                       Row(
                         children: [
                           Container(
-                            width: 32, height: 32,
+                            width: 32,
+                            height: 32,
                             decoration: BoxDecoration(
                               color: AppColors.emeraldSurface,
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            child: Center(child: Text('${ayah['numberInSurah']}',
-                              style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald, fontSize: 12))),
+                            child: Center(
+                              child: Text(
+                                '${ayah['numberInSurah']}',
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  color: AppColors.emerald,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ),
                           ),
                           const Spacer(),
-                          IconButton(icon: const Icon(Icons.share_rounded, size: 18), onPressed: () {}),
-                          IconButton(icon: const Icon(Icons.bookmark_border_rounded, size: 18), onPressed: () {}),
+                          IconButton(
+                            icon: const Icon(Icons.share_rounded, size: 18),
+                            onPressed: () {},
+                          ),
+                          IconButton(
+                            icon: const Icon(
+                              Icons.bookmark_border_rounded,
+                              size: 18,
+                            ),
+                            onPressed: () {},
+                          ),
                         ],
                       ),
                       const SizedBox(height: 12),
-                      Text(textAr,
-                        style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, height: 2.2, fontFamily: 'Amiri'),
-                        textAlign: TextAlign.right, textDirection: TextDirection.rtl),
+                      Text(
+                        textAr,
+                        style: const TextStyle(
+                          fontSize: 26,
+                          fontWeight: FontWeight.w700,
+                          height: 2.2,
+                          fontFamily: 'Amiri',
+                        ),
+                        textAlign: TextAlign.right,
+                        textDirection: TextDirection.rtl,
+                      ),
                       const SizedBox(height: 12),
                       Align(
                         alignment: Alignment.centerLeft,
-                        child: Text(textTrans,
-                          style: TextStyle(fontSize: 14, height: 1.7,
-                            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.8))),
+                        child: Text(
+                          textTrans,
+                          style: TextStyle(
+                            fontSize: 14,
+                            height: 1.7,
+                            color: Theme.of(
+                              context,
+                            ).colorScheme.onSurface.withValues(alpha: 0.8),
+                          ),
+                        ),
                       ),
                     ],
                   ),
