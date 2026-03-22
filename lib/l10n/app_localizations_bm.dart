@@ -15,7 +15,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get home => 'So';
 
   @override
-  String get quran => 'KuranÉ›';
+  String get quran => 'Kuranɛ';
 
   @override
   String get qibla => 'Qibla';
@@ -24,10 +24,10 @@ class AppLocalizationsBm extends AppLocalizations {
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'Kalandriya min bÉ› kÉ›';
+  String get calendar => 'Kalandriya min bɛ kɛ';
 
   @override
-  String get settings => 'Settings (LabÉ›nw)';
+  String get settings => 'Settings (Labɛnw)';
 
   @override
   String get nextPrayer => 'Delili nata';
@@ -36,22 +36,22 @@ class AppLocalizationsBm extends AppLocalizations {
   String get prayerTimes => 'Delili Waati';
 
   @override
-  String get continueReading => 'TÉ›mÉ›n ka kalan kÉ›';
+  String get continueReading => 'Tɛmɛn ka kalan kɛ';
 
   @override
-  String get getLifetimePro => 'Aw ye Lifetime Pro sÉ”rÉ”';
+  String get getLifetimePro => 'Aw ye Lifetime Pro sɔrɔ';
 
   @override
-  String get unlockTajweed => 'Tajweed & FÉ›nÉ²É›nÉ›mafagalanw da wuli';
+  String get unlockTajweed => 'Tajweed & Fɛnɲɛnɛmafagalanw da wuli';
 
   @override
-  String get prayerCalculation => 'Delili JatebÉ”';
+  String get prayerCalculation => 'Delili Jatebɔ';
 
   @override
-  String get method => 'Jatebla kÉ›cogo';
+  String get method => 'Jatebla kɛcogo';
 
   @override
-  String get madhab => 'Asr sariya siratigÉ› la';
+  String get madhab => 'Asr sariya siratigɛ la';
 
   @override
   String get surahs => 'Suraw (Suuraw).';
@@ -63,7 +63,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'TilebÉ”';
+  String get sunrise => 'Tilebɔ';
 
   @override
   String get dhuhr => 'Dhuhr ye';
@@ -81,13 +81,13 @@ class AppLocalizationsBm extends AppLocalizations {
   String get dataStorage => 'Donanw & Ladonni';
 
   @override
-  String get clearCache => 'Cache (Cache) jÉ›ya';
+  String get clearCache => 'Cache (Cache) jɛya';
 
   @override
-  String get cacheClearedSuccess => 'Cache (Cache) saniyalen don ka É²É›';
+  String get cacheClearedSuccess => 'Cache (Cache) saniyalen don ka ɲɛ';
 
   @override
-  String get location => 'SigiyÉ”rÉ”';
+  String get location => 'Sigiyɔrɔ';
 
   @override
   String get language => 'Kan';
@@ -96,22 +96,22 @@ class AppLocalizationsBm extends AppLocalizations {
   String get selectLanguage => 'Kan sugandi';
 
   @override
-  String get searchLanguage => 'Kan 180+ É²ini...';
+  String get searchLanguage => 'Kan 180+ ɲini...';
 
   @override
-  String get systemDefault => 'SisÎµmÎµti Dafalen';
+  String get systemDefault => 'Sisεmεti Dafalen';
 
   @override
-  String get currentLocation => 'YÉ”rÉ” min bÉ› yen sisan (GPS) .';
+  String get currentLocation => 'Yɔrɔ min bɛ yen sisan (GPS) .';
 
   @override
-  String get search => 'Æini';
+  String get search => 'Ɲini';
 
   @override
-  String get searchHint => 'Æini...';
+  String get searchHint => 'Ɲini...';
 
   @override
-  String get noResults => 'O jaabi si ma SÉ”rÉ”';
+  String get noResults => 'O jaabi si ma Sɔrɔ';
 
   @override
   String get loading => 'Loading...';
@@ -120,7 +120,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get error => 'Filijuru';
 
   @override
-  String get retry => 'Aw ye a lajÉ› kokura';
+  String get retry => 'Aw ye a lajɛ kokura';
 
   @override
   String get cancel => 'ka dankari';
@@ -129,7 +129,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get save => 'Ka mara';
 
   @override
-  String get delete => 'Ka jÉ”si';
+  String get delete => 'Ka jɔsi';
 
   @override
   String get edit => 'Ka korize';
@@ -138,10 +138,10 @@ class AppLocalizationsBm extends AppLocalizations {
   String get close => 'Ka datugu';
 
   @override
-  String get ok => 'N SÆ†NNA';
+  String get ok => 'N SƆNNA';
 
   @override
-  String get yes => 'AwÉ”';
+  String get yes => 'Awɔ';
 
   @override
   String get no => 'Ayi';
@@ -153,28 +153,28 @@ class AppLocalizationsBm extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'ÆÉ› 10nan na';
+  String get page => 'Ɲɛ 10nan na';
 
   @override
   String get reading => 'Gafekalan';
 
   @override
-  String get recitation => 'KalanjÉ› ni sÉ›bÉ›nni';
+  String get recitation => 'Kalanjɛ ni sɛbɛnni';
 
   @override
-  String get translation => 'Bamanankan baarakÉ›cogo';
+  String get translation => 'Bamanankan baarakɛcogo';
 
   @override
   String get tafsir => 'Tafsir ye';
 
   @override
-  String get bookmarks => 'TaamaÊƒyÉ›nw (bookmarks).';
+  String get bookmarks => 'Taamaʃyɛnw (bookmarks).';
 
   @override
-  String get addBookmark => 'Aâ€™ ye Bookmark fara a kan';
+  String get addBookmark => 'A’ ye Bookmark fara a kan';
 
   @override
-  String get removeBookmark => 'Bookmark bÉ” yen';
+  String get removeBookmark => 'Bookmark bɔ yen';
 
   @override
   String get lastRead => 'Kalan laban';
@@ -183,10 +183,10 @@ class AppLocalizationsBm extends AppLocalizations {
   String get dailyZikr => 'Don o don Zikr';
 
   @override
-  String get morningZikr => 'SÉ”gÉ”mada Zikr';
+  String get morningZikr => 'Sɔgɔmada Zikr';
 
   @override
-  String get eveningZikr => 'SufÉ› Zikr';
+  String get eveningZikr => 'Sufɛ Zikr';
 
   @override
   String get tasbih => 'Tasbih ye';
@@ -201,25 +201,25 @@ class AppLocalizationsBm extends AppLocalizations {
   String get hadith => 'Hadisi';
 
   @override
-  String get hadithCollection => 'Hadisiw lajÉ›len';
+  String get hadithCollection => 'Hadisiw lajɛlen';
 
   @override
   String get hadithBooks => 'Hadisi gafew';
 
   @override
-  String get searchHadith => 'Hadisi É²inini';
+  String get searchHadith => 'Hadisi ɲinini';
 
   @override
-  String get asmaulHusna => 'Asma-ul-Husna ye baara kÉ›';
+  String get asmaulHusna => 'Asma-ul-Husna ye baara kɛ';
 
   @override
-  String get namesOfAllah => 'Allah tÉ”gÉ”w';
+  String get namesOfAllah => 'Allah tɔgɔw';
 
   @override
-  String get liveTv => 'TelewisÉ”n É²É›nama';
+  String get liveTv => 'Telewisɔn ɲɛnama';
 
   @override
-  String get watchLive => 'Aw ye a lajÉ› Live';
+  String get watchLive => 'Aw ye a lajɛ Live';
 
   @override
   String get streamError => 'Stream fili ye';
@@ -231,13 +231,13 @@ class AppLocalizationsBm extends AppLocalizations {
   String get openInYoutube => 'Da wuli YouTube kan';
 
   @override
-  String get ibadahTracker => 'Ibadah ka tugu-tugu-É²É”gÉ”n kÉ”';
+  String get ibadahTracker => 'Ibadah ka tugu-tugu-ɲɔgɔn kɔ';
 
   @override
-  String get fasting => 'SunÉ”gÉ”';
+  String get fasting => 'Sunɔgɔ';
 
   @override
-  String get quranReading => 'KuranÉ› kalanni';
+  String get quranReading => 'Kuranɛ kalanni';
 
   @override
   String get prayers => 'Deliliw';
@@ -246,13 +246,13 @@ class AppLocalizationsBm extends AppLocalizations {
   String get dhikrCount => 'Dhikr Jate';
 
   @override
-  String get weeklyProgress => 'DÉ”gÉ”kun o dÉ”gÉ”kun É²É›taa';
+  String get weeklyProgress => 'Dɔgɔkun o dɔgɔkun ɲɛtaa';
 
   @override
-  String get monthlyProgress => 'Kalo o kalo É²É›taa';
+  String get monthlyProgress => 'Kalo o kalo ɲɛtaa';
 
   @override
-  String get statistics => 'JateminÉ›w';
+  String get statistics => 'Jateminɛw';
 
   @override
   String get hijriCalendar => 'Hijri kalandriya';
@@ -270,7 +270,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get yesterday => 'Kunu';
 
   @override
-  String get specialDays => 'Don kÉ›rÉ›nkÉ›rÉ›nnenw';
+  String get specialDays => 'Don kɛrɛnkɛrɛnnenw';
 
   @override
   String get ramadan => 'Ramadan na';
@@ -282,40 +282,40 @@ class AppLocalizationsBm extends AppLocalizations {
   String get eidAlAdha => 'Eid Al-Adha ka seliba';
 
   @override
-  String get laylatAlQadr => 'Laylat Al-Qadr ye baara kÉ›';
+  String get laylatAlQadr => 'Laylat Al-Qadr ye baara kɛ';
 
   @override
-  String get qiblaDirection => 'Qibla ÆÉ›jirali';
+  String get qiblaDirection => 'Qibla Ɲɛjirali';
 
   @override
   String get compass => 'Boussole (Boussole) ye';
 
   @override
-  String get degrees => 'degÉ›rÉ›w sÉ”rÉ”';
+  String get degrees => 'degɛrɛw sɔrɔ';
 
   @override
   String get north => 'Saheli';
 
   @override
-  String get qiblaFound => 'Qibla sÉ”rÉ”la!';
+  String get qiblaFound => 'Qibla sɔrɔla!';
 
   @override
-  String get turnDevice => 'Aw bÉ› aw ka minÉ›n wuli ka É²É›sin Qibla ma';
+  String get turnDevice => 'Aw bɛ aw ka minɛn wuli ka ɲɛsin Qibla ma';
 
   @override
-  String get notifications => 'LadÉ”nniyaliw';
+  String get notifications => 'Ladɔnniyaliw';
 
   @override
   String get prayerNotifications => 'Delili kunnafoniw';
 
   @override
-  String get enableNotifications => 'LadÉ”nniyaliw daminÉ›';
+  String get enableNotifications => 'Ladɔnniyaliw daminɛ';
 
   @override
-  String get notificationTime => 'LadÉ”nniyali Waati';
+  String get notificationTime => 'Ladɔnniyali Waati';
 
   @override
-  String get beforePrayer => 'miniti damadÉ” ka kÉ”n delili É²É›';
+  String get beforePrayer => 'miniti damadɔ ka kɔn delili ɲɛ';
 
   @override
   String get theme => 'Dakun';
@@ -327,22 +327,22 @@ class AppLocalizationsBm extends AppLocalizations {
   String get darkMode => 'Mode Dibi la';
 
   @override
-  String get systemTheme => 'SistÉ›mu barokun';
+  String get systemTheme => 'Sistɛmu barokun';
 
   @override
   String get about => 'Kan';
 
   @override
-  String get version => 'WÉ›risiyÉ”n';
+  String get version => 'Wɛrisiyɔn';
 
   @override
   String get privacyPolicy => 'Kunnafoni dogolenw maracogo';
 
   @override
-  String get termsOfService => 'BaarakÉ›cogo sariyaw';
+  String get termsOfService => 'Baarakɛcogo sariyaw';
 
   @override
-  String get contactUs => 'Aw ye É²É”gÉ”n sÉ”rÉ” Anw fÉ›';
+  String get contactUs => 'Aw ye ɲɔgɔn sɔrɔ Anw fɛ';
 
   @override
   String get rateApp => 'Tarifu App ye';
@@ -351,53 +351,52 @@ class AppLocalizationsBm extends AppLocalizations {
   String get shareApp => 'Share App';
 
   @override
-  String get downloadManager =>
-      'TÃ©lÃ©charger Manager (TÃ©lÃ©chargement Manager).';
+  String get downloadManager => 'Télécharger Manager (Téléchargement Manager).';
 
   @override
-  String get downloads => 'TÃ©lÃ©chargements (TÃ©lÃ©chargements).';
+  String get downloads => 'Téléchargements (Téléchargements).';
 
   @override
-  String get downloading => 'TÃ©lÃ©chargement...';
+  String get downloading => 'Téléchargement...';
 
   @override
-  String get downloadComplete => 'TÃ©lÃ©charger Complete';
+  String get downloadComplete => 'Télécharger Complete';
 
   @override
-  String get downloadFailed => 'TÃ©lÃ©chargement Failed';
+  String get downloadFailed => 'Téléchargement Failed';
 
   @override
-  String get offlineMode => 'Mode (Mode) min tÉ› IntÉ›rinÉ›ti kan';
+  String get offlineMode => 'Mode (Mode) min tɛ Intɛrinɛti kan';
 
   @override
-  String get noInternet => 'ÆntÉ›rinÉ›ti JÉ›É²É”gÉ”nya tÉ› yen';
+  String get noInternet => 'Ɛntɛrinɛti Jɛɲɔgɔnya tɛ yen';
 
   @override
-  String get checkConnection => 'Aw ye aw ka jÉ›gÉ›nsira lajÉ›';
+  String get checkConnection => 'Aw ye aw ka jɛgɛnsira lajɛ';
 
   @override
-  String get premium => 'Kalite fÉ”lÉ”';
+  String get premium => 'Kalite fɔlɔ';
 
   @override
-  String get upgradeToPro => 'YÉ›lÉ›ma donna Pro la';
+  String get upgradeToPro => 'Yɛlɛma donna Pro la';
 
   @override
-  String get proFeatures => 'Pro ka baarakÉ›cogo';
+  String get proFeatures => 'Pro ka baarakɛcogo';
 
   @override
-  String get removeAds => 'Piblisitew bÉ” yen';
+  String get removeAds => 'Piblisitew bɔ yen';
 
   @override
-  String get unlockAll => 'KÉ”nÉ”kow bÉ›É› da wuli';
+  String get unlockAll => 'Kɔnɔkow bɛɛ da wuli';
 
   @override
-  String get exclusiveContent => 'KÉ”nÉ”kow danfaralenw';
+  String get exclusiveContent => 'Kɔnɔkow danfaralenw';
 
   @override
   String get welcome => 'I danse';
 
   @override
-  String get getStarted => 'Aw ye a daminÉ›';
+  String get getStarted => 'Aw ye a daminɛ';
 
   @override
   String get skip => 'Ka lasogo';
@@ -406,28 +405,28 @@ class AppLocalizationsBm extends AppLocalizations {
   String get next => 'Nata';
 
   @override
-  String get done => 'A kÉ›ra';
+  String get done => 'A kɛra';
 
   @override
   String get onboarding1Title => 'Aw ni ce Allah ka sira la';
 
   @override
   String get onboarding1Desc =>
-      'Aw ka silamÉ›ya taamaÉ²É”gÉ”n app dafalen delili waatiw, KuranÉ›, ani fÉ›n wÉ›rÉ›w';
+      'Aw ka silamɛya taamaɲɔgɔn app dafalen delili waatiw, Kuranɛ, ani fɛn wɛrɛw';
 
   @override
   String get onboarding2Title => 'Delili Waati';
 
   @override
   String get onboarding2Desc =>
-      'Delili waati tigitigiw ka kÉ›É²É› ni i sigiyÉ”rÉ” ye';
+      'Delili waati tigitigiw ka kɛɲɛ ni i sigiyɔrɔ ye';
 
   @override
-  String get onboarding3Title => 'KuranÉ› & More';
+  String get onboarding3Title => 'Kuranɛ & More';
 
   @override
   String get onboarding3Desc =>
-      'KuranÉ› kalan, ka i ka kalan nÉ”fÉ›, ani ka silamÉ›ya kÉ”nÉ”kow sÉ›gÉ›sÉ›gÉ›';
+      'Kuranɛ kalan, ka i ka kalan nɔfɛ, ani ka silamɛya kɔnɔkow sɛgɛsɛgɛ';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -622,7 +621,7 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

@@ -342,7 +342,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get termsOfService => 'Telerau Gwasanaeth';
 
   @override
-  String get contactUs => 'Cysylltwch Ã¢ Ni';
+  String get contactUs => 'Cysylltwch â Ni';
 
   @override
   String get rateApp => 'App Cyfradd';
@@ -621,7 +621,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

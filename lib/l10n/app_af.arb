@@ -1,4 +1,4 @@
-﻿{
+{
   "@@locale": "af",
   "appTitle": "Weg van Allah",
   "home": "Tuis",
@@ -58,7 +58,7 @@
   "removeBookmark": "Verwyder boekmerk",
   "lastRead": "Laas gelees",
   "dailyZikr": "Daaglikse Zikr",
-  "morningZikr": "MÃ´re Zikr",
+  "morningZikr": "Môre Zikr",
   "eveningZikr": "Aand Zikr",
   "tasbih": "Tasbih",
   "ahkab": "Ahkam",
@@ -85,7 +85,7 @@
   "hijriCalendar": "Hijri-kalender",
   "gregorianCalendar": "Gregoriaanse kalender",
   "today": "Vandag",
-  "tomorrow": "MÃ´re",
+  "tomorrow": "Môre",
   "yesterday": "Gister",
   "specialDays": "Spesiale Dae",
   "ramadan": "Ramadan",

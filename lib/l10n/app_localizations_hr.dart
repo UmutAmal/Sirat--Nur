@@ -30,25 +30,25 @@ class AppLocalizationsHr extends AppLocalizations {
   String get settings => 'postavke';
 
   @override
-  String get nextPrayer => 'SljedeÄ‡a molitva';
+  String get nextPrayer => 'Sljedeća molitva';
 
   @override
   String get prayerTimes => 'Vrijeme molitve';
 
   @override
-  String get continueReading => 'Nastavite Äitati';
+  String get continueReading => 'Nastavite čitati';
 
   @override
   String get getLifetimePro => 'Nabavite Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'OtkljuÄaj Tajweed i napredne znaÄajke';
+  String get unlockTajweed => 'Otključaj Tajweed i napredne značajke';
 
   @override
-  String get prayerCalculation => 'IzraÄun molitve';
+  String get prayerCalculation => 'Izračun molitve';
 
   @override
-  String get method => 'Metoda izraÄuna';
+  String get method => 'Metoda izračuna';
 
   @override
   String get madhab => 'Pravna metoda Asr';
@@ -81,10 +81,10 @@ class AppLocalizationsHr extends AppLocalizations {
   String get dataStorage => 'Podaci i pohrana';
 
   @override
-  String get clearCache => 'OÄisti predmemoriju';
+  String get clearCache => 'Očisti predmemoriju';
 
   @override
-  String get cacheClearedSuccess => 'Predmemorija je uspjeÅ¡no izbrisana';
+  String get cacheClearedSuccess => 'Predmemorija je uspješno izbrisana';
 
   @override
   String get location => 'Mjesto';
@@ -96,7 +96,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get selectLanguage => 'Odaberite jezik';
 
   @override
-  String get searchLanguage => 'PretraÅ¾i viÅ¡e od 180 jezika...';
+  String get searchLanguage => 'Pretraži više od 180 jezika...';
 
   @override
   String get systemDefault => 'Zadane postavke sustava';
@@ -105,28 +105,28 @@ class AppLocalizationsHr extends AppLocalizations {
   String get currentLocation => 'Trenutna lokacija (GPS)';
 
   @override
-  String get search => 'PretraÅ¾ivanje';
+  String get search => 'Pretraživanje';
 
   @override
-  String get searchHint => 'PretraÅ¾ivanje...';
+  String get searchHint => 'Pretraživanje...';
 
   @override
   String get noResults => 'Nema rezultata';
 
   @override
-  String get loading => 'UÄitavanje...';
+  String get loading => 'Učitavanje...';
 
   @override
-  String get error => 'GreÅ¡ka';
+  String get error => 'Greška';
 
   @override
-  String get retry => 'PokuÅ¡aj ponovo';
+  String get retry => 'Pokušaj ponovo';
 
   @override
   String get cancel => 'Otkazati';
 
   @override
-  String get save => 'UÅ¡tedjeti';
+  String get save => 'Uštedjeti';
 
   @override
   String get delete => 'Izbrisati';
@@ -150,13 +150,13 @@ class AppLocalizationsHr extends AppLocalizations {
   String get surah => 'Sura';
 
   @override
-  String get juz => 'dÅ¾uz';
+  String get juz => 'džuz';
 
   @override
   String get page => 'Stranica';
 
   @override
-  String get reading => 'ÄŒitanje';
+  String get reading => 'Čitanje';
 
   @override
   String get recitation => 'Recitacija';
@@ -168,7 +168,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get tafsir => 'tefsir';
 
   @override
-  String get bookmarks => 'KnjiÅ¾ne oznake';
+  String get bookmarks => 'Knjižne oznake';
 
   @override
   String get addBookmark => 'Dodaj oznaku';
@@ -177,7 +177,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get removeBookmark => 'Ukloni oznaku';
 
   @override
-  String get lastRead => 'Zadnje Äitanje';
+  String get lastRead => 'Zadnje čitanje';
 
   @override
   String get dailyZikr => 'Dnevni zikr';
@@ -186,7 +186,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get morningZikr => 'Jutarnji zikr';
 
   @override
-  String get eveningZikr => 'VeÄernji zikr';
+  String get eveningZikr => 'Večernji zikr';
 
   @override
   String get tasbih => 'tesbih';
@@ -207,7 +207,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get hadithBooks => 'Knjige hadisa';
 
   @override
-  String get searchHadith => 'TraÅ¾i hadis';
+  String get searchHadith => 'Traži hadis';
 
   @override
   String get asmaulHusna => 'Esma-ul-Husna';
@@ -216,16 +216,16 @@ class AppLocalizationsHr extends AppLocalizations {
   String get namesOfAllah => 'Allahova imena';
 
   @override
-  String get liveTv => 'TV uÅ¾ivo';
+  String get liveTv => 'TV uživo';
 
   @override
-  String get watchLive => 'Gledajte uÅ¾ivo';
+  String get watchLive => 'Gledajte uživo';
 
   @override
-  String get streamError => 'PogreÅ¡ka streama';
+  String get streamError => 'Pogreška streama';
 
   @override
-  String get reload => 'Ponovno uÄitaj';
+  String get reload => 'Ponovno učitaj';
 
   @override
   String get openInYoutube => 'Otvorite na YouTubeu';
@@ -237,7 +237,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get fasting => 'Post';
 
   @override
-  String get quranReading => 'ÄŒitanje Kur\'ana';
+  String get quranReading => 'Čitanje Kur\'ana';
 
   @override
   String get prayers => 'molitve';
@@ -249,13 +249,13 @@ class AppLocalizationsHr extends AppLocalizations {
   String get weeklyProgress => 'Tjedni napredak';
 
   @override
-  String get monthlyProgress => 'MjeseÄni napredak';
+  String get monthlyProgress => 'Mjesečni napredak';
 
   @override
   String get statistics => 'Statistika';
 
   @override
-  String get hijriCalendar => 'HidÅ¾retski kalendar';
+  String get hijriCalendar => 'Hidžretski kalendar';
 
   @override
   String get gregorianCalendar => 'Gregorijanski kalendar';
@@ -267,7 +267,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get tomorrow => 'Sutra';
 
   @override
-  String get yesterday => 'JuÄer';
+  String get yesterday => 'Jučer';
 
   @override
   String get specialDays => 'Posebni dani';
@@ -297,10 +297,10 @@ class AppLocalizationsHr extends AppLocalizations {
   String get north => 'Sjeverno';
 
   @override
-  String get qiblaFound => 'Kibla pronaÄ‘ena!';
+  String get qiblaFound => 'Kibla pronađena!';
 
   @override
-  String get turnDevice => 'Okrenite ureÄ‘aj prema Qibli';
+  String get turnDevice => 'Okrenite uređaj prema Qibli';
 
   @override
   String get notifications => 'Obavijesti';
@@ -309,7 +309,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get prayerNotifications => 'Molitvene obavijesti';
 
   @override
-  String get enableNotifications => 'OmoguÄ‡i obavijesti';
+  String get enableNotifications => 'Omogući obavijesti';
 
   @override
   String get notificationTime => 'Vrijeme obavijesti';
@@ -321,10 +321,10 @@ class AppLocalizationsHr extends AppLocalizations {
   String get theme => 'Tema';
 
   @override
-  String get lightMode => 'NaÄin svjetla';
+  String get lightMode => 'Način svjetla';
 
   @override
-  String get darkMode => 'Tamni naÄin rada';
+  String get darkMode => 'Tamni način rada';
 
   @override
   String get systemTheme => 'Tema sustava';
@@ -360,13 +360,13 @@ class AppLocalizationsHr extends AppLocalizations {
   String get downloading => 'Preuzimanje...';
 
   @override
-  String get downloadComplete => 'Preuzimanje dovrÅ¡eno';
+  String get downloadComplete => 'Preuzimanje dovršeno';
 
   @override
   String get downloadFailed => 'Preuzimanje nije uspjelo';
 
   @override
-  String get offlineMode => 'IzvanmreÅ¾ni naÄin rada';
+  String get offlineMode => 'Izvanmrežni način rada';
 
   @override
   String get noInternet => 'Nema internetske veze';
@@ -381,52 +381,52 @@ class AppLocalizationsHr extends AppLocalizations {
   String get upgradeToPro => 'Nadogradite na Pro';
 
   @override
-  String get proFeatures => 'Pro znaÄajke';
+  String get proFeatures => 'Pro značajke';
 
   @override
   String get removeAds => 'Ukloni oglase';
 
   @override
-  String get unlockAll => 'OtkljuÄaj sav sadrÅ¾aj';
+  String get unlockAll => 'Otključaj sav sadržaj';
 
   @override
-  String get exclusiveContent => 'Ekskluzivni sadrÅ¾aj';
+  String get exclusiveContent => 'Ekskluzivni sadržaj';
 
   @override
-  String get welcome => 'DobrodoÅ¡li';
+  String get welcome => 'Dobrodošli';
 
   @override
-  String get getStarted => 'ZapoÄnite';
+  String get getStarted => 'Započnite';
 
   @override
-  String get skip => 'PreskoÄiti';
+  String get skip => 'Preskočiti';
 
   @override
-  String get next => 'SljedeÄ‡i';
+  String get next => 'Sljedeći';
 
   @override
   String get done => 'Gotovo';
 
   @override
-  String get onboarding1Title => 'Dobro doÅ¡li na Allahov put';
+  String get onboarding1Title => 'Dobro došli na Allahov put';
 
   @override
   String get onboarding1Desc =>
-      'VaÅ¡a potpuna islamska prateÄ‡a aplikacija za vrijeme molitve, Kuran i joÅ¡ mnogo toga';
+      'Vaša potpuna islamska prateća aplikacija za vrijeme molitve, Kuran i još mnogo toga';
 
   @override
   String get onboarding2Title => 'Vrijeme molitve';
 
   @override
   String get onboarding2Desc =>
-      'ToÄna vremena molitve na temelju vaÅ¡e lokacije';
+      'Točna vremena molitve na temelju vaše lokacije';
 
   @override
-  String get onboarding3Title => 'Kur\'an i viÅ¡e';
+  String get onboarding3Title => 'Kur\'an i više';
 
   @override
   String get onboarding3Desc =>
-      'ÄŒitajte Kuran, pratite svoje Äitanje i istraÅ¾ujte islamski sadrÅ¾aj';
+      'Čitajte Kuran, pratite svoje čitanje i istražujte islamski sadržaj';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -621,7 +621,7 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

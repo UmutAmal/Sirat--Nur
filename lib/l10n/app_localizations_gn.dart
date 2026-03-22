@@ -12,10 +12,10 @@ class AppLocalizationsGn extends AppLocalizations {
   String get appTitle => 'Allah Rape rehegua';
 
   @override
-  String get home => 'Ã“ga';
+  String get home => 'Óga';
 
   @override
-  String get quran => 'CorÃ¡n rehegua';
+  String get quran => 'Corán rehegua';
 
   @override
   String get qibla => 'Qibla';
@@ -27,35 +27,35 @@ class AppLocalizationsGn extends AppLocalizations {
   String get calendar => 'Calendario rehegua';
 
   @override
-  String get settings => 'Ã‘emboheko';
+  String get settings => 'Ñemboheko';
 
   @override
-  String get nextPrayer => 'Ã‘emboâ€™e oÃºva';
+  String get nextPrayer => 'Ñembo’e oúva';
 
   @override
-  String get prayerTimes => 'Ã‘emboâ€™e Aravo';
+  String get prayerTimes => 'Ñembo’e Aravo';
 
   @override
-  String get continueReading => 'EmoÃ±eâ€™áº½ meme';
+  String get continueReading => 'Emoñe’ẽ meme';
 
   @override
   String get getLifetimePro => 'Ojehupyty Pro Tekove pukukue';
 
   @override
   String get unlockTajweed =>
-      'Desbloquear Tajweed & CaracterÃ­sticas Avanzadas rehegua';
+      'Desbloquear Tajweed & Características Avanzadas rehegua';
 
   @override
-  String get prayerCalculation => 'Ã‘emboâ€™e CÃ¡lculo rehegua';
+  String get prayerCalculation => 'Ñembo’e Cálculo rehegua';
 
   @override
-  String get method => 'MÃ©todo de CÃ¡lculo rehegua';
+  String get method => 'Método de Cálculo rehegua';
 
   @override
-  String get madhab => 'Asr MÃ©todo JurÃ­dico rehegua';
+  String get madhab => 'Asr Método Jurídico rehegua';
 
   @override
-  String get surahs => 'SurahkuÃ©ra rehegua';
+  String get surahs => 'Surahkuéra rehegua';
 
   @override
   String get ayahs => 'Ayahs rehegua';
@@ -64,7 +64,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Kuarahy resáº½';
+  String get sunrise => 'Kuarahy resẽ';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -79,31 +79,31 @@ class AppLocalizationsGn extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
-  String get dataStorage => 'Datos & Ã‘eÃ±ongatuha';
+  String get dataStorage => 'Datos & Ñeñongatuha';
 
   @override
-  String get clearCache => 'EmopotÄ© CachÃ©';
+  String get clearCache => 'Emopotĩ Caché';
 
   @override
-  String get cacheClearedSuccess => 'CachÃ© oÃ±embogue porÃ£';
+  String get cacheClearedSuccess => 'Caché oñembogue porã';
 
   @override
-  String get location => 'Ã‘eimeha';
+  String get location => 'Ñeimeha';
 
   @override
-  String get language => 'Ã‘e\'áº½';
+  String get language => 'Ñe\'ẽ';
 
   @override
-  String get selectLanguage => 'Eiporavo Ã‘eâ€™áº½';
+  String get selectLanguage => 'Eiporavo Ñe’ẽ';
 
   @override
-  String get searchLanguage => 'Eheka 180+ Ã±e\'áº½...';
+  String get searchLanguage => 'Eheka 180+ ñe\'ẽ...';
 
   @override
   String get systemDefault => 'Sistema rehegua Por defecto';
 
   @override
-  String get currentLocation => 'MoÃµpa oÄ© koâ€™Ã¡Äa (GPS) .';
+  String get currentLocation => 'Moõpa oĩ ko’áĝa (GPS) .';
 
   @override
   String get search => 'Jeheka';
@@ -112,22 +112,22 @@ class AppLocalizationsGn extends AppLocalizations {
   String get searchHint => 'Jeheka...';
 
   @override
-  String get noResults => 'NdojejuhÃºi resultado';
+  String get noResults => 'Ndojejuhúi resultado';
 
   @override
-  String get loading => 'Ojekarga hÃ­na...';
+  String get loading => 'Ojekarga hína...';
 
   @override
   String get error => 'Jejavy';
 
   @override
-  String get retry => 'EÃ±ehaâ€™Ã£ jey';
+  String get retry => 'Eñeha’ã jey';
 
   @override
   String get cancel => 'Heja';
 
   @override
-  String get save => 'PysyrÃµ';
+  String get save => 'Pysyrõ';
 
   @override
   String get delete => 'Mboje\'oha';
@@ -139,13 +139,13 @@ class AppLocalizationsGn extends AppLocalizations {
   String get close => 'Mboty';
 
   @override
-  String get ok => 'OÄ¨MA';
+  String get ok => 'OĨMA';
 
   @override
-  String get yes => 'heáº½';
+  String get yes => 'heẽ';
 
   @override
-  String get no => 'nahÃ¡niri';
+  String get no => 'nahániri';
 
   @override
   String get surah => 'Surah rehegua';
@@ -154,16 +154,16 @@ class AppLocalizationsGn extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'PÃ¡gina';
+  String get page => 'Página';
 
   @override
-  String get reading => 'MoÃ±e\'áº½rÃ£';
+  String get reading => 'Moñe\'ẽrã';
 
   @override
-  String get recitation => 'RecitaciÃ³n rehegua';
+  String get recitation => 'Recitación rehegua';
 
   @override
-  String get translation => 'Ã‘embohasaha';
+  String get translation => 'Ñembohasaha';
 
   @override
   String get tafsir => 'Tafsir rehegua';
@@ -175,19 +175,19 @@ class AppLocalizationsGn extends AppLocalizations {
   String get addBookmark => 'Ombojoapy Marcador';
 
   @override
-  String get removeBookmark => 'Oipeâ€™a Marcador';
+  String get removeBookmark => 'Oipe’a Marcador';
 
   @override
-  String get lastRead => 'MoÃ±eâ€™áº½rÃ£ paha';
+  String get lastRead => 'Moñe’ẽrã paha';
 
   @override
-  String get dailyZikr => 'Ãra ha Ã¡ra Zikr';
+  String get dailyZikr => 'Ára ha ára Zikr';
 
   @override
   String get morningZikr => 'Pyhareve Zikr';
 
   @override
-  String get eveningZikr => 'Kaâ€™aru Zikr';
+  String get eveningZikr => 'Ka’aru Zikr';
 
   @override
   String get tasbih => 'Tasbih rehegua';
@@ -202,7 +202,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get hadith => 'Hadith rehegua';
 
   @override
-  String get hadithCollection => 'Hadith Ã‘embyaty';
+  String get hadithCollection => 'Hadith Ñembyaty';
 
   @override
   String get hadithBooks => 'Aranduka Hadith rehegua';
@@ -214,7 +214,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get asmaulHusna => 'Asma-ul-Husna rehegua';
 
   @override
-  String get namesOfAllah => 'Allah rÃ©ra';
+  String get namesOfAllah => 'Allah réra';
 
   @override
   String get liveTv => 'TV en vivo rehegua';
@@ -229,7 +229,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get reload => 'Recarga jey';
 
   @override
-  String get openInYoutube => 'Ojepeâ€™a YouTube-pe';
+  String get openInYoutube => 'Ojepe’a YouTube-pe';
 
   @override
   String get ibadahTracker => 'Ibadah Rastreador rehegua';
@@ -238,22 +238,22 @@ class AppLocalizationsGn extends AppLocalizations {
   String get fasting => 'Ayuno';
 
   @override
-  String get quranReading => 'CorÃ¡n MoÃ±eâ€™áº½rÃ£';
+  String get quranReading => 'Corán Moñe’ẽrã';
 
   @override
-  String get prayers => 'Ã‘emboâ€™e';
+  String get prayers => 'Ñembo’e';
 
   @override
   String get dhikrCount => 'Dhikr Conteo rehegua';
 
   @override
-  String get weeklyProgress => 'Progreso SemÃ¡na rehegua';
+  String get weeklyProgress => 'Progreso Semána rehegua';
 
   @override
   String get monthlyProgress => 'Progreso Mensual rehegua';
 
   @override
-  String get statistics => 'EstadÃ­stica rehegua';
+  String get statistics => 'Estadística rehegua';
 
   @override
   String get hijriCalendar => 'Hijri Calendario rehegua';
@@ -262,19 +262,19 @@ class AppLocalizationsGn extends AppLocalizations {
   String get gregorianCalendar => 'Calendario Gregoriano rehegua';
 
   @override
-  String get today => 'Ko Ã¡rape';
+  String get today => 'Ko árape';
 
   @override
-  String get tomorrow => 'Ko\'áº½rÃµ';
+  String get tomorrow => 'Ko\'ẽrõ';
 
   @override
   String get yesterday => 'Kuehe';
 
   @override
-  String get specialDays => 'Ãra Especial rehegua';
+  String get specialDays => 'Ára Especial rehegua';
 
   @override
-  String get ramadan => 'RamadÃ¡n-pe';
+  String get ramadan => 'Ramadán-pe';
 
   @override
   String get eidAlFitr => 'Eid Al-Fitr rehegua';
@@ -286,64 +286,64 @@ class AppLocalizationsGn extends AppLocalizations {
   String get laylatAlQadr => 'Laylat Al-Qadr rehegua';
 
   @override
-  String get qiblaDirection => 'Qibla DirecciÃ³n rehegua';
+  String get qiblaDirection => 'Qibla Dirección rehegua';
 
   @override
-  String get compass => 'BrÃºjula rehegua';
+  String get compass => 'Brújula rehegua';
 
   @override
   String get degrees => 'grados rehegua';
 
   @override
-  String get north => 'YvatÃ©vo';
+  String get north => 'Yvatévo';
 
   @override
-  String get qiblaFound => 'Â¡Qibla ojejuhu!';
+  String get qiblaFound => '¡Qibla ojejuhu!';
 
   @override
-  String get turnDevice => 'Embojere nde tembipuru embohovake hagÌƒua Qibla';
+  String get turnDevice => 'Embojere nde tembipuru embohovake hag̃ua Qibla';
 
   @override
-  String get notifications => 'MarandukuÃ©ra';
+  String get notifications => 'Marandukuéra';
 
   @override
-  String get prayerNotifications => 'Ã‘emboâ€™e Ã‘eâ€™áº½mondo';
+  String get prayerNotifications => 'Ñembo’e Ñe’ẽmondo';
 
   @override
-  String get enableNotifications => 'Emboguata MarandukuÃ©ra';
+  String get enableNotifications => 'Emboguata Marandukuéra';
 
   @override
   String get notificationTime => 'Marandu Aravo';
 
   @override
-  String get beforePrayer => 'minuto oÃ±emboâ€™e mboyve';
+  String get beforePrayer => 'minuto oñembo’e mboyve';
 
   @override
-  String get theme => 'Ã‘e\'áº½rÃ£';
+  String get theme => 'Ñe\'ẽrã';
 
   @override
   String get lightMode => 'Modo Tesape rehegua';
 
   @override
-  String get darkMode => 'Modo PytÅ©mby';
+  String get darkMode => 'Modo Pytũmby';
 
   @override
   String get systemTheme => 'Tema Sistema rehegua';
 
   @override
-  String get about => 'UpÃ©va rehegua';
+  String get about => 'Upéva rehegua';
 
   @override
-  String get version => 'Je\'ehÃ¡icha';
+  String get version => 'Je\'eháicha';
 
   @override
-  String get privacyPolicy => 'PolÃ­tika Privasida rehegua';
+  String get privacyPolicy => 'Polítika Privasida rehegua';
 
   @override
-  String get termsOfService => 'TÃ©rminos de Servicio rehegua';
+  String get termsOfService => 'Términos de Servicio rehegua';
 
   @override
-  String get contactUs => 'EÃ±e\'áº½ orendive';
+  String get contactUs => 'Eñe\'ẽ orendive';
 
   @override
   String get rateApp => 'Tasa App rehegua';
@@ -352,7 +352,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get shareApp => 'Compartir App';
 
   @override
-  String get downloadManager => 'Ã‘emboguejy MoakÃ£ha';
+  String get downloadManager => 'Ñemboguejy Moakãha';
 
   @override
   String get downloads => 'Umi descarga rehegua';
@@ -364,16 +364,16 @@ class AppLocalizationsGn extends AppLocalizations {
   String get downloadComplete => 'Descargar Completo';
 
   @override
-  String get downloadFailed => 'Ojegueru ndoikÃ³i';
+  String get downloadFailed => 'Ojegueru ndoikói';
 
   @override
   String get offlineMode => 'Modo Offline rehegua';
 
   @override
-  String get noInternet => 'NdaipÃ³ri ConexiÃ³n Internet-pe';
+  String get noInternet => 'Ndaipóri Conexión Internet-pe';
 
   @override
-  String get checkConnection => 'EhechÃ¡ke ne joaju';
+  String get checkConnection => 'Ehecháke ne joaju';
 
   @override
   String get premium => 'Prima';
@@ -382,10 +382,10 @@ class AppLocalizationsGn extends AppLocalizations {
   String get upgradeToPro => 'Embopyahu Pro-pe';
 
   @override
-  String get proFeatures => 'Pro CaracterÃ­sticas rehegua';
+  String get proFeatures => 'Pro Características rehegua';
 
   @override
-  String get removeAds => 'Oipeâ€™a umi Anuncios';
+  String get removeAds => 'Oipe’a umi Anuncios';
 
   @override
   String get unlockAll => 'Emboguejy Opaite Contenido';
@@ -394,40 +394,40 @@ class AppLocalizationsGn extends AppLocalizations {
   String get exclusiveContent => 'Contenido Exclusivo rehegua';
 
   @override
-  String get welcome => 'TapegÌƒuaháº½porÃ£ite';
+  String get welcome => 'Tapeg̃uahẽporãite';
 
   @override
-  String get getStarted => 'EÃ±epyrÅ©';
+  String get getStarted => 'Eñepyrũ';
 
   @override
   String get skip => 'Jepopo';
 
   @override
-  String get next => 'AgÌƒui';
+  String get next => 'Ag̃ui';
 
   @override
   String get done => 'Apopyre';
 
   @override
-  String get onboarding1Title => 'Peju porÃ£ite Allah rape rehe';
+  String get onboarding1Title => 'Peju porãite Allah rape rehe';
 
   @override
   String get onboarding1Desc =>
-      'Nde app compaÃ±ero islÃ¡mico completo umi tiempo de oraciÃ³n, CorÃ¡n ha hetave mbaâ€™Ã©pe ÄuarÃ£';
+      'Nde app compañero islámico completo umi tiempo de oración, Corán ha hetave mba’épe ĝuarã';
 
   @override
-  String get onboarding2Title => 'Ã‘emboâ€™e Aravo';
+  String get onboarding2Title => 'Ñembo’e Aravo';
 
   @override
   String get onboarding2Desc =>
-      'Umi horario exacto oÃ±emboâ€™e haÄua oÃ±emopyendÃ¡va moÃµpa reime';
+      'Umi horario exacto oñembo’e haĝua oñemopyendáva moõpa reime';
 
   @override
-  String get onboarding3Title => 'CorÃ¡n & Hetave mba\'e';
+  String get onboarding3Title => 'Corán & Hetave mba\'e';
 
   @override
   String get onboarding3Desc =>
-      'EmoÃ±eâ€™áº½ CorÃ¡n, esegui ne moÃ±eâ€™áº½rÃ£ ha ehesaâ€™á»¹ijo contenido islÃ¡mico';
+      'Emoñe’ẽ Corán, esegui ne moñe’ẽrã ha ehesa’ỹijo contenido islámico';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -622,7 +622,7 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

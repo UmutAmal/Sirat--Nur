@@ -9,7 +9,7 @@ class AppLocalizationsLus extends AppLocalizations {
   AppLocalizationsLus([String locale = 'lus']) : super(locale);
 
   @override
-  String get appTitle => 'Sirat-Ä± Nur chuan a rawn ti a';
+  String get appTitle => 'Sirat-ı Nur chuan a rawn ti a';
 
   @override
   String get home => 'In lamah';
@@ -408,7 +408,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get done => 'Tih zo tawh';
 
   @override
-  String get onboarding1Title => 'Sirat-Ä± Nur-ah hian kan lo lawm a che';
+  String get onboarding1Title => 'Sirat-ı Nur-ah hian kan lo lawm a che';
 
   @override
   String get onboarding1Desc =>
@@ -622,7 +622,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Tunah hian: $offsetÂ°';
+    return 'Tunah hian: $offset°';
   }
 
   @override

@@ -30,22 +30,22 @@ class AppLocalizationsDa extends AppLocalizations {
   String get settings => 'Indstillinger';
 
   @override
-  String get nextPrayer => 'NÃ¦ste bÃ¸n';
+  String get nextPrayer => 'Næste bøn';
 
   @override
   String get prayerTimes => 'Bedetider';
 
   @override
-  String get continueReading => 'FortsÃ¦t med at lÃ¦se';
+  String get continueReading => 'Fortsæt med at læse';
 
   @override
-  String get getLifetimePro => 'FÃ¥ Lifetime Pro';
+  String get getLifetimePro => 'Få Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'LÃ¥s Tajweed og avancerede funktioner op';
+  String get unlockTajweed => 'Lås Tajweed og avancerede funktioner op';
 
   @override
-  String get prayerCalculation => 'BÃ¸nberegning';
+  String get prayerCalculation => 'Bønberegning';
 
   @override
   String get method => 'Beregningsmetode';
@@ -93,37 +93,37 @@ class AppLocalizationsDa extends AppLocalizations {
   String get language => 'Sprog';
 
   @override
-  String get selectLanguage => 'VÃ¦lg sprog';
+  String get selectLanguage => 'Vælg sprog';
 
   @override
-  String get searchLanguage => 'SÃ¸g i mere end 180 sprog...';
+  String get searchLanguage => 'Søg i mere end 180 sprog...';
 
   @override
   String get systemDefault => 'Systemstandard';
 
   @override
-  String get currentLocation => 'NuvÃ¦rende placering (GPS)';
+  String get currentLocation => 'Nuværende placering (GPS)';
 
   @override
-  String get search => 'SÃ¸ge';
+  String get search => 'Søge';
 
   @override
-  String get searchHint => 'SÃ¸ge...';
+  String get searchHint => 'Søge...';
 
   @override
   String get noResults => 'Ingen resultater fundet';
 
   @override
-  String get loading => 'IndlÃ¦ser...';
+  String get loading => 'Indlæser...';
 
   @override
   String get error => 'Fejl';
 
   @override
-  String get retry => 'PrÃ¸v igen';
+  String get retry => 'Prøv igen';
 
   @override
-  String get cancel => 'OphÃ¦ve';
+  String get cancel => 'Ophæve';
 
   @override
   String get save => 'Spare';
@@ -135,7 +135,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get edit => 'Redigere';
 
   @override
-  String get close => 'TÃ¦t';
+  String get close => 'Tæt';
 
   @override
   String get ok => 'OK';
@@ -156,28 +156,28 @@ class AppLocalizationsDa extends AppLocalizations {
   String get page => 'Side';
 
   @override
-  String get reading => 'LÃ¦sning';
+  String get reading => 'Læsning';
 
   @override
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'OversÃ¦ttelse';
+  String get translation => 'Oversættelse';
 
   @override
   String get tafsir => 'Tafsir';
 
   @override
-  String get bookmarks => 'BogmÃ¦rker';
+  String get bookmarks => 'Bogmærker';
 
   @override
-  String get addBookmark => 'TilfÃ¸j bogmÃ¦rke';
+  String get addBookmark => 'Tilføj bogmærke';
 
   @override
-  String get removeBookmark => 'Fjern bogmÃ¦rke';
+  String get removeBookmark => 'Fjern bogmærke';
 
   @override
-  String get lastRead => 'Sidst lÃ¦st';
+  String get lastRead => 'Sidst læst';
 
   @override
   String get dailyZikr => 'Daglig Zikr';
@@ -204,10 +204,10 @@ class AppLocalizationsDa extends AppLocalizations {
   String get hadithCollection => 'Hadith samling';
 
   @override
-  String get hadithBooks => 'Hadith bÃ¸ger';
+  String get hadithBooks => 'Hadith bøger';
 
   @override
-  String get searchHadith => 'SÃ¸g efter Hadith';
+  String get searchHadith => 'Søg efter Hadith';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';
@@ -225,7 +225,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get streamError => 'Stream fejl';
 
   @override
-  String get reload => 'GenindlÃ¦s';
+  String get reload => 'Genindlæs';
 
   @override
   String get openInYoutube => 'Ã…bn i YouTube';
@@ -237,19 +237,19 @@ class AppLocalizationsDa extends AppLocalizations {
   String get fasting => 'Faste';
 
   @override
-  String get quranReading => 'KoranlÃ¦sning';
+  String get quranReading => 'Koranlæsning';
 
   @override
-  String get prayers => 'BÃ¸nner';
+  String get prayers => 'Bønner';
 
   @override
-  String get dhikrCount => 'Dhikr tÃ¦ller';
+  String get dhikrCount => 'Dhikr tæller';
 
   @override
   String get weeklyProgress => 'Ugentlige fremskridt';
 
   @override
-  String get monthlyProgress => 'MÃ¥nedlig fremgang';
+  String get monthlyProgress => 'Månedlig fremgang';
 
   @override
   String get statistics => 'Statistik';
@@ -267,10 +267,10 @@ class AppLocalizationsDa extends AppLocalizations {
   String get tomorrow => 'I morgen';
 
   @override
-  String get yesterday => 'I gÃ¥r';
+  String get yesterday => 'I går';
 
   @override
-  String get specialDays => 'SÃ¦rlige dage';
+  String get specialDays => 'Særlige dage';
 
   @override
   String get ramadan => 'Ramadan';
@@ -300,13 +300,13 @@ class AppLocalizationsDa extends AppLocalizations {
   String get qiblaFound => 'Qibla fundet!';
 
   @override
-  String get turnDevice => 'Drej din enhed, sÃ¥ den vender mod Qibla';
+  String get turnDevice => 'Drej din enhed, så den vender mod Qibla';
 
   @override
   String get notifications => 'Meddelelser';
 
   @override
-  String get prayerNotifications => 'BÃ¸nsmeddelelser';
+  String get prayerNotifications => 'Bønsmeddelelser';
 
   @override
   String get enableNotifications => 'Aktiver meddelelser';
@@ -315,7 +315,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get notificationTime => 'Underretningstid';
 
   @override
-  String get beforePrayer => 'minutter fÃ¸r bÃ¸n';
+  String get beforePrayer => 'minutter før bøn';
 
   @override
   String get theme => 'Tema';
@@ -324,7 +324,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get lightMode => 'Lys tilstand';
 
   @override
-  String get darkMode => 'MÃ¸rk tilstand';
+  String get darkMode => 'Mørk tilstand';
 
   @override
   String get systemTheme => 'System tema';
@@ -339,13 +339,13 @@ class AppLocalizationsDa extends AppLocalizations {
   String get privacyPolicy => 'Privatlivspolitik';
 
   @override
-  String get termsOfService => 'ServicevilkÃ¥r';
+  String get termsOfService => 'Servicevilkår';
 
   @override
   String get contactUs => 'Kontakt os';
 
   @override
-  String get rateApp => 'BedÃ¸m app';
+  String get rateApp => 'Bedøm app';
 
   @override
   String get shareApp => 'Del app';
@@ -360,7 +360,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get downloading => 'Downloader...';
 
   @override
-  String get downloadComplete => 'Download fuldfÃ¸rt';
+  String get downloadComplete => 'Download fuldført';
 
   @override
   String get downloadFailed => 'Download mislykkedes';
@@ -375,7 +375,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get checkConnection => 'Tjek venligst din forbindelse';
 
   @override
-  String get premium => 'PrÃ¦mie';
+  String get premium => 'Præmie';
 
   @override
   String get upgradeToPro => 'Opgrader til Pro';
@@ -387,7 +387,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get removeAds => 'Fjern annoncer';
 
   @override
-  String get unlockAll => 'LÃ¥s alt indhold op';
+  String get unlockAll => 'Lås alt indhold op';
 
   @override
   String get exclusiveContent => 'Eksklusivt indhold';
@@ -402,10 +402,10 @@ class AppLocalizationsDa extends AppLocalizations {
   String get skip => 'Springe';
 
   @override
-  String get next => 'NÃ¦ste';
+  String get next => 'Næste';
 
   @override
-  String get done => 'FÃ¦rdig';
+  String get done => 'Færdig';
 
   @override
   String get onboarding1Title => 'Velkommen til Allahs vej';
@@ -418,15 +418,14 @@ class AppLocalizationsDa extends AppLocalizations {
   String get onboarding2Title => 'Bedetider';
 
   @override
-  String get onboarding2Desc =>
-      'NÃ¸jagtige bÃ¸ntider baseret pÃ¥ din placering';
+  String get onboarding2Desc => 'Nøjagtige bøntider baseret på din placering';
 
   @override
   String get onboarding3Title => 'Koranen og mere';
 
   @override
   String get onboarding3Desc =>
-      'LÃ¦s Koranen, spor din lÃ¦sning og udforsk islamisk indhold';
+      'Læs Koranen, spor din læsning og udforsk islamisk indhold';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -621,7 +620,7 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

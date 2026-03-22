@@ -27,13 +27,13 @@ class AppLocalizationsHt extends AppLocalizations {
   String get calendar => 'Kalandriye';
 
   @override
-  String get settings => 'AnviwÃ²nman';
+  String get settings => 'Anviwònman';
 
   @override
-  String get nextPrayer => 'Next LapriyÃ¨';
+  String get nextPrayer => 'Next Lapriyè';
 
   @override
-  String get prayerTimes => 'Tan LapriyÃ¨';
+  String get prayerTimes => 'Tan Lapriyè';
 
   @override
   String get continueReading => 'Kontinye lekti';
@@ -45,13 +45,13 @@ class AppLocalizationsHt extends AppLocalizations {
   String get unlockTajweed => 'Debloke Tajweed ak karakteristik avanse';
 
   @override
-  String get prayerCalculation => 'Kalkil lapriyÃ¨';
+  String get prayerCalculation => 'Kalkil lapriyè';
 
   @override
-  String get method => 'MetÃ²d kalkil';
+  String get method => 'Metòd kalkil';
 
   @override
-  String get madhab => 'Asr MetÃ²d Jiristik';
+  String get madhab => 'Asr Metòd Jiristik';
 
   @override
   String get surahs => 'Soure yo';
@@ -63,7 +63,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'SolÃ¨y leve';
+  String get sunrise => 'Solèy leve';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -81,10 +81,10 @@ class AppLocalizationsHt extends AppLocalizations {
   String get dataStorage => 'Done & Depo';
 
   @override
-  String get clearCache => 'KlÃ¨ Cache';
+  String get clearCache => 'Klè Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache netwaye avÃ¨k siksÃ¨';
+  String get cacheClearedSuccess => 'Cache netwaye avèk siksè';
 
   @override
   String get location => 'Kote';
@@ -96,19 +96,19 @@ class AppLocalizationsHt extends AppLocalizations {
   String get selectLanguage => 'Chwazi Lang';
 
   @override
-  String get searchLanguage => 'ChÃ¨che plis pase 180 lang...';
+  String get searchLanguage => 'Chèche plis pase 180 lang...';
 
   @override
-  String get systemDefault => 'SistÃ¨m Default';
+  String get systemDefault => 'Sistèm Default';
 
   @override
-  String get currentLocation => 'Kote aktyÃ¨l (GPS)';
+  String get currentLocation => 'Kote aktyèl (GPS)';
 
   @override
-  String get search => 'RechÃ¨ch';
+  String get search => 'Rechèch';
 
   @override
-  String get searchHint => 'ChÃ¨che...';
+  String get searchHint => 'Chèche...';
 
   @override
   String get noResults => 'Pa gen rezilta yo jwenn';
@@ -117,10 +117,10 @@ class AppLocalizationsHt extends AppLocalizations {
   String get loading => 'Chaje...';
 
   @override
-  String get error => 'ErÃ¨';
+  String get error => 'Erè';
 
   @override
-  String get retry => 'Eseye ankÃ²';
+  String get retry => 'Eseye ankò';
 
   @override
   String get cancel => 'Anile';
@@ -135,7 +135,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get edit => 'Edit';
 
   @override
-  String get close => 'FÃ¨men';
+  String get close => 'Fèmen';
 
   @override
   String get ok => 'OK';
@@ -177,7 +177,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get removeBookmark => 'Retire Bookmark';
 
   @override
-  String get lastRead => 'DÃ¨nye lekti';
+  String get lastRead => 'Dènye lekti';
 
   @override
   String get dailyZikr => 'Zikr chak jou';
@@ -186,7 +186,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get morningZikr => 'Maten Zikr';
 
   @override
-  String get eveningZikr => 'AswÃ¨ Zikr';
+  String get eveningZikr => 'Aswè Zikr';
 
   @override
   String get tasbih => 'Tasbih';
@@ -207,7 +207,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get hadithBooks => 'Liv Hadith';
 
   @override
-  String get searchHadith => 'RechÃ¨ch Hadith';
+  String get searchHadith => 'Rechèch Hadith';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';
@@ -222,7 +222,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get watchLive => 'Gade Live';
 
   @override
-  String get streamError => 'ErÃ¨ kouran';
+  String get streamError => 'Erè kouran';
 
   @override
   String get reload => 'Rechaje';
@@ -234,22 +234,22 @@ class AppLocalizationsHt extends AppLocalizations {
   String get ibadahTracker => 'Ibadah Tracker';
 
   @override
-  String get fasting => 'JÃ¨n';
+  String get fasting => 'Jèn';
 
   @override
   String get quranReading => 'Lekti koran';
 
   @override
-  String get prayers => 'LapriyÃ¨';
+  String get prayers => 'Lapriyè';
 
   @override
   String get dhikrCount => 'Dhikr Konte';
 
   @override
-  String get weeklyProgress => 'PwogrÃ¨ chak semÃ¨n';
+  String get weeklyProgress => 'Pwogrè chak semèn';
 
   @override
-  String get monthlyProgress => 'PwogrÃ¨ chak mwa';
+  String get monthlyProgress => 'Pwogrè chak mwa';
 
   @override
   String get statistics => 'Estatistik';
@@ -267,7 +267,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get tomorrow => 'Demen';
 
   @override
-  String get yesterday => 'YÃ¨';
+  String get yesterday => 'Yè';
 
   @override
   String get specialDays => 'Jou espesyal';
@@ -288,58 +288,58 @@ class AppLocalizationsHt extends AppLocalizations {
   String get qiblaDirection => 'Direksyon Qibla';
 
   @override
-  String get compass => 'BousÃ²l';
+  String get compass => 'Bousòl';
 
   @override
   String get degrees => 'degre';
 
   @override
-  String get north => 'NÃ²';
+  String get north => 'Nò';
 
   @override
   String get qiblaFound => 'Qibla jwenn!';
 
   @override
-  String get turnDevice => 'Vire aparÃ¨y ou an pou fÃ¨ fas a Qibla';
+  String get turnDevice => 'Vire aparèy ou an pou fè fas a Qibla';
 
   @override
   String get notifications => 'Notifikasyon';
 
   @override
-  String get prayerNotifications => 'Notifikasyon lapriyÃ¨';
+  String get prayerNotifications => 'Notifikasyon lapriyè';
 
   @override
-  String get enableNotifications => 'PÃ¨mÃ¨t Notifikasyon yo';
+  String get enableNotifications => 'Pèmèt Notifikasyon yo';
 
   @override
   String get notificationTime => 'Tan Notifikasyon';
 
   @override
-  String get beforePrayer => 'minit anvan lapriyÃ¨';
+  String get beforePrayer => 'minit anvan lapriyè';
 
   @override
-  String get theme => 'TÃ¨m';
+  String get theme => 'Tèm';
 
   @override
-  String get lightMode => 'MÃ²d limyÃ¨';
+  String get lightMode => 'Mòd limyè';
 
   @override
-  String get darkMode => 'MÃ²d nwa';
+  String get darkMode => 'Mòd nwa';
 
   @override
-  String get systemTheme => 'TÃ¨m sistÃ¨m';
+  String get systemTheme => 'Tèm sistèm';
 
   @override
-  String get about => 'KonsÃ¨nan';
+  String get about => 'Konsènan';
 
   @override
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'RÃ¨gleman sou enfÃ²masyon prive';
+  String get privacyPolicy => 'Règleman sou enfòmasyon prive';
 
   @override
-  String get termsOfService => 'Regleman SÃ¨vis';
+  String get termsOfService => 'Regleman Sèvis';
 
   @override
   String get contactUs => 'Kontakte nou';
@@ -351,7 +351,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get shareApp => 'Pataje App';
 
   @override
-  String get downloadManager => 'Telechaje ManadjÃ¨';
+  String get downloadManager => 'Telechaje Manadjè';
 
   @override
   String get downloads => 'Telechajman';
@@ -360,7 +360,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get downloading => 'Telechaje...';
 
   @override
-  String get downloadComplete => 'Telechaje konplÃ¨';
+  String get downloadComplete => 'Telechaje konplè';
 
   @override
   String get downloadFailed => 'Telechaje echwe';
@@ -369,7 +369,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'Pa gen koneksyon entÃ¨nÃ¨t';
+  String get noInternet => 'Pa gen koneksyon entènèt';
 
   @override
   String get checkConnection => 'Tanpri tcheke koneksyon ou';
@@ -396,7 +396,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get welcome => 'Byenvini';
 
   @override
-  String get getStarted => 'KÃ²manse';
+  String get getStarted => 'Kòmanse';
 
   @override
   String get skip => 'Sote';
@@ -405,23 +405,23 @@ class AppLocalizationsHt extends AppLocalizations {
   String get next => 'Next';
 
   @override
-  String get done => 'FÃ¨';
+  String get done => 'Fè';
 
   @override
   String get onboarding1Title => 'Byenveni nan Way of Allah';
 
   @override
   String get onboarding1Desc =>
-      'Aplikasyon konplÃ¨ Islamik konpayon ou a pou tan lapriyÃ¨, koran, ak plis ankÃ²';
+      'Aplikasyon konplè Islamik konpayon ou a pou tan lapriyè, koran, ak plis ankò';
 
   @override
-  String get onboarding2Title => 'Tan LapriyÃ¨';
+  String get onboarding2Title => 'Tan Lapriyè';
 
   @override
-  String get onboarding2Desc => 'Tan lapriyÃ¨ egzat ki baze sou kote ou';
+  String get onboarding2Desc => 'Tan lapriyè egzat ki baze sou kote ou';
 
   @override
-  String get onboarding3Title => 'Koran ak plis ankÃ²';
+  String get onboarding3Title => 'Koran ak plis ankò';
 
   @override
   String get onboarding3Desc =>
@@ -620,7 +620,7 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

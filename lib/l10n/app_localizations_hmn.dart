@@ -408,7 +408,7 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get done => 'Ua tiav';
 
   @override
-  String get onboarding1Title => 'Txais tos rau Sirat-Ä± Nur';
+  String get onboarding1Title => 'Txais tos rau Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
@@ -621,7 +621,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Tam sim no: $offsetÂ°';
+    return 'Tam sim no: $offset°';
   }
 
   @override

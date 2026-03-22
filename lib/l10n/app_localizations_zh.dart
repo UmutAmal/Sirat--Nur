@@ -408,7 +408,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-Ä± Nur';
+  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
@@ -620,7 +620,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override
@@ -658,423 +658,421 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   AppLocalizationsZhCn() : super('zh_CN');
 
   @override
-  String get appTitle => 'å®‰æ‹‰ä¹‹é“';
+  String get appTitle => '安拉之道';
 
   @override
-  String get home => 'å®¶';
+  String get home => '家';
 
   @override
-  String get quran => 'å¤å…°ç»';
+  String get quran => '古兰经';
 
   @override
-  String get qibla => 'æœæ‹œ';
+  String get qibla => '朝拜';
 
   @override
-  String get zikr => 'åˆ™å…‹å°”';
+  String get zikr => '则克尔';
 
   @override
-  String get calendar => 'æ—¥å†';
+  String get calendar => '日历';
 
   @override
-  String get settings => 'è®¾ç½®';
+  String get settings => '设置';
 
   @override
-  String get nextPrayer => 'ä¸‹ä¸€ä¸ªç¥·å‘Š';
+  String get nextPrayer => '下一个祷告';
 
   @override
-  String get prayerTimes => 'ç¥ˆç¥·æ—¶é—´';
+  String get prayerTimes => '祈祷时间';
 
   @override
-  String get continueReading => 'ç»§ç»­é˜…è¯»';
+  String get continueReading => '继续阅读';
 
   @override
-  String get getLifetimePro => 'è·å–ç»ˆèº«ä¸“ä¸šç‰ˆ';
+  String get getLifetimePro => '获取终身专业版';
 
   @override
-  String get unlockTajweed => 'è§£é” Tajweed å’Œé«˜çº§åŠŸèƒ½';
+  String get unlockTajweed => '解锁 Tajweed 和高级功能';
 
   @override
-  String get prayerCalculation => 'ç¥·å‘Šè®¡ç®—';
+  String get prayerCalculation => '祷告计算';
 
   @override
-  String get method => 'è®¡ç®—æ–¹æ³•';
+  String get method => '计算方法';
 
   @override
-  String get madhab => 'æ™¡ç¤¼æ³•å¾‹æ–¹æ³•';
+  String get madhab => '晡礼法律方法';
 
   @override
-  String get surahs => 'å¤å…°ç»';
+  String get surahs => '古兰经';
 
   @override
-  String get ayahs => 'é˜¿äºšæ–¯';
+  String get ayahs => '阿亚斯';
 
   @override
-  String get fajr => 'æ™¨æ›¦';
+  String get fajr => '晨曦';
 
   @override
-  String get sunrise => 'æ—¥å‡º';
+  String get sunrise => '日出';
 
   @override
-  String get dhuhr => 'æœå°”';
+  String get dhuhr => '杜尔';
 
   @override
-  String get asr => 'æ™¡æ°”';
+  String get asr => '晡气';
 
   @override
-  String get maghrib => 'æ˜ç¤¼';
+  String get maghrib => '昏礼';
 
   @override
-  String get isha => 'ä¼Šè';
+  String get isha => '伊莎';
 
   @override
-  String get dataStorage => 'æ•°æ®ä¸å­˜å‚¨';
+  String get dataStorage => '数据与存储';
 
   @override
-  String get clearCache => 'æ¸…é™¤ç¼“å­˜';
+  String get clearCache => '清除缓存';
 
   @override
-  String get cacheClearedSuccess => 'ç¼“å­˜æ¸…é™¤æˆåŠŸ';
+  String get cacheClearedSuccess => '缓存清除成功';
 
   @override
-  String get location => 'åœ°ç‚¹';
+  String get location => '地点';
 
   @override
-  String get language => 'è¯­è¨€';
+  String get language => '语言';
 
   @override
-  String get selectLanguage => 'é€‰æ‹©è¯­è¨€';
+  String get selectLanguage => '选择语言';
 
   @override
-  String get searchLanguage => 'æœç´¢ 180 å¤šç§è¯­è¨€...';
+  String get searchLanguage => '搜索 180 多种语言...';
 
   @override
-  String get systemDefault => 'ç³»ç»Ÿé»˜è®¤å€¼';
+  String get systemDefault => '系统默认值';
 
   @override
-  String get currentLocation => 'å½“å‰ä½ç½®ï¼ˆGPSï¼‰';
+  String get currentLocation => '当前位置（GPS）';
 
   @override
-  String get search => 'æœç´¢';
+  String get search => '搜索';
 
   @override
-  String get searchHint => 'æœç´¢...';
+  String get searchHint => '搜索...';
 
   @override
-  String get noResults => 'æ²¡æœ‰æ‰¾åˆ°ç»“æœ';
+  String get noResults => '没有找到结果';
 
   @override
-  String get loading => 'åŠ è½½ä¸­...';
+  String get loading => '加载中...';
 
   @override
-  String get error => 'é”™è¯¯';
+  String get error => '错误';
 
   @override
-  String get retry => 'é‡è¯•';
+  String get retry => '重试';
 
   @override
-  String get cancel => 'å–æ¶ˆ';
+  String get cancel => '取消';
 
   @override
-  String get save => 'èŠ‚çœ';
+  String get save => '节省';
 
   @override
-  String get delete => 'åˆ é™¤';
+  String get delete => '删除';
 
   @override
-  String get edit => 'ç¼–è¾‘';
+  String get edit => '编辑';
 
   @override
-  String get close => 'å…³é—­';
+  String get close => '关闭';
 
   @override
-  String get ok => 'å¥½çš„';
+  String get ok => '好的';
 
   @override
-  String get yes => 'æ˜¯çš„';
+  String get yes => '是的';
 
   @override
-  String get no => 'ä¸';
+  String get no => '不';
 
   @override
-  String get surah => 'å¤å…°ç»';
+  String get surah => '古兰经';
 
   @override
-  String get juz => 'æœ±å…¹';
+  String get juz => '朱兹';
 
   @override
-  String get page => 'é¡µ';
+  String get page => '页';
 
   @override
-  String get reading => 'é˜…è¯»';
+  String get reading => '阅读';
 
   @override
-  String get recitation => 'èƒŒè¯µ';
+  String get recitation => '背诵';
 
   @override
-  String get translation => 'ç¿»è¯‘';
+  String get translation => '翻译';
 
   @override
-  String get tafsir => 'å¡”å¤«è¥¿å°”';
+  String get tafsir => '塔夫西尔';
 
   @override
-  String get bookmarks => 'ä¹¦ç­¾';
+  String get bookmarks => '书签';
 
   @override
-  String get addBookmark => 'æ·»åŠ ä¹¦ç­¾';
+  String get addBookmark => '添加书签';
 
   @override
-  String get removeBookmark => 'åˆ é™¤ä¹¦ç­¾';
+  String get removeBookmark => '删除书签';
 
   @override
-  String get lastRead => 'æœ€åé˜…è¯»';
+  String get lastRead => '最后阅读';
 
   @override
-  String get dailyZikr => 'æ¯æ—¥åˆ™å…‹å°”';
+  String get dailyZikr => '每日则克尔';
 
   @override
-  String get morningZikr => 'æ—©æ™¨åˆ™å…‹å°”';
+  String get morningZikr => '早晨则克尔';
 
   @override
-  String get eveningZikr => 'æ™šä¸Šåˆ™å…‹å°”';
+  String get eveningZikr => '晚上则克尔';
 
   @override
-  String get tasbih => 'å¡”æ–¯æ¯”èµ«';
+  String get tasbih => '塔斯比赫';
 
   @override
-  String get ahkab => 'é˜¿å¡å§†';
+  String get ahkab => '阿卡姆';
 
   @override
-  String get masaail => 'é©¬è¨ä¼Šå‹’';
+  String get masaail => '马萨伊勒';
 
   @override
-  String get hadith => 'åœ£è®­';
+  String get hadith => '圣训';
 
   @override
-  String get hadithCollection => 'åœ£è®­é›†';
+  String get hadithCollection => '圣训集';
 
   @override
-  String get hadithBooks => 'åœ£è®­ä¹¦ç±';
+  String get hadithBooks => '圣训书籍';
 
   @override
-  String get searchHadith => 'æœç´¢åœ£è®­';
+  String get searchHadith => '搜索圣训';
 
   @override
-  String get asmaulHusna => 'é˜¿æ–¯ç›ä¹Œæ–¯çº³';
+  String get asmaulHusna => '阿斯玛乌斯纳';
 
   @override
-  String get namesOfAllah => 'å®‰æ‹‰çš„åå­—';
+  String get namesOfAllah => '安拉的名字';
 
   @override
-  String get liveTv => 'ç”µè§†ç›´æ’­';
+  String get liveTv => '电视直播';
 
   @override
-  String get watchLive => 'è§‚çœ‹ç›´æ’­';
+  String get watchLive => '观看直播';
 
   @override
-  String get streamError => 'ç æµé”™è¯¯';
+  String get streamError => '码流错误';
 
   @override
-  String get reload => 'é‡æ–°åŠ è½½';
+  String get reload => '重新加载';
 
   @override
-  String get openInYoutube => 'åœ¨ YouTube ä¸­æ‰“å¼€';
+  String get openInYoutube => '在 YouTube 中打开';
 
   @override
-  String get ibadahTracker => 'ä¼Šå·´è¾¾è¿½è¸ªå™¨';
+  String get ibadahTracker => '伊巴达追踪器';
 
   @override
-  String get fasting => 'ç¦é£Ÿ';
+  String get fasting => '禁食';
 
   @override
-  String get quranReading => 'å¤å…°ç»é˜…è¯»';
+  String get quranReading => '古兰经阅读';
 
   @override
-  String get prayers => 'ç¥ˆç¥·';
+  String get prayers => '祈祷';
 
   @override
-  String get dhikrCount => 'è¿ªå…‹å°”ä¼¯çˆµ';
+  String get dhikrCount => '迪克尔伯爵';
 
   @override
-  String get weeklyProgress => 'æ¯å‘¨è¿›åº¦';
+  String get weeklyProgress => '每周进度';
 
   @override
-  String get monthlyProgress => 'æ¯æœˆè¿›åº¦';
+  String get monthlyProgress => '每月进度';
 
   @override
-  String get statistics => 'ç»Ÿè®¡æ•°æ®';
+  String get statistics => '统计数据';
 
   @override
-  String get hijriCalendar => 'å›å†';
+  String get hijriCalendar => '回历';
 
   @override
-  String get gregorianCalendar => 'å…¬å†';
+  String get gregorianCalendar => '公历';
 
   @override
-  String get today => 'ä»Šå¤©';
+  String get today => '今天';
 
   @override
-  String get tomorrow => 'æ˜å¤©';
+  String get tomorrow => '明天';
 
   @override
-  String get yesterday => 'æ˜¨å¤©';
+  String get yesterday => '昨天';
 
   @override
-  String get specialDays => 'ç‰¹åˆ«çš„æ—¥å­';
+  String get specialDays => '特别的日子';
 
   @override
-  String get ramadan => 'æ–‹æœˆ';
+  String get ramadan => '斋月';
 
   @override
-  String get eidAlFitr => 'å¼€æ–‹èŠ‚';
+  String get eidAlFitr => '开斋节';
 
   @override
-  String get eidAlAdha => 'å¤å°”é‚¦èŠ‚';
+  String get eidAlAdha => '古尔邦节';
 
   @override
-  String get laylatAlQadr => 'è±æ‹‰ç‰¹Â·ç›–å¾·å°”';
+  String get laylatAlQadr => '莱拉特·盖德尔';
 
   @override
-  String get qiblaDirection => 'æœæ‹œæ–¹å‘';
+  String get qiblaDirection => '朝拜方向';
 
   @override
-  String get compass => 'ç½—ç›˜';
+  String get compass => '罗盘';
 
   @override
-  String get degrees => 'åº¦';
+  String get degrees => '度';
 
   @override
-  String get north => 'åŒ—';
+  String get north => '北';
 
   @override
-  String get qiblaFound => 'æœæ‹œå‘ç°äº†ï¼';
+  String get qiblaFound => '朝拜发现了！';
 
   @override
-  String get turnDevice => 'å°†æ‚¨çš„è®¾å¤‡è½¬å‘æœæ‹œ';
+  String get turnDevice => '将您的设备转向朝拜';
 
   @override
-  String get notifications => 'é€šçŸ¥';
+  String get notifications => '通知';
 
   @override
-  String get prayerNotifications => 'ç¥·å‘Šé€šçŸ¥';
+  String get prayerNotifications => '祷告通知';
 
   @override
-  String get enableNotifications => 'å¯ç”¨é€šçŸ¥';
+  String get enableNotifications => '启用通知';
 
   @override
-  String get notificationTime => 'é€šçŸ¥æ—¶é—´';
+  String get notificationTime => '通知时间';
 
   @override
-  String get beforePrayer => 'ç¥ˆç¥·å‰å‡ åˆ†é’Ÿ';
+  String get beforePrayer => '祈祷前几分钟';
 
   @override
-  String get theme => 'ä¸»é¢˜';
+  String get theme => '主题';
 
   @override
-  String get lightMode => 'ç¯å…‰æ¨¡å¼';
+  String get lightMode => '灯光模式';
 
   @override
-  String get darkMode => 'æ·±è‰²æ¨¡å¼';
+  String get darkMode => '深色模式';
 
   @override
-  String get systemTheme => 'ç³»ç»Ÿä¸»é¢˜';
+  String get systemTheme => '系统主题';
 
   @override
-  String get about => 'å…³äº';
+  String get about => '关于';
 
   @override
-  String get version => 'ç‰ˆæœ¬';
+  String get version => '版本';
 
   @override
-  String get privacyPolicy => 'éšç§æ”¿ç­–';
+  String get privacyPolicy => '隐私政策';
 
   @override
-  String get termsOfService => 'æœåŠ¡æ¡æ¬¾';
+  String get termsOfService => '服务条款';
 
   @override
-  String get contactUs => 'è”ç³»æˆ‘ä»¬';
+  String get contactUs => '联系我们';
 
   @override
-  String get rateApp => 'è¯„ä»·åº”ç”¨ç¨‹åº';
+  String get rateApp => '评价应用程序';
 
   @override
-  String get shareApp => 'åˆ†äº«åº”ç”¨ç¨‹åº';
+  String get shareApp => '分享应用程序';
 
   @override
-  String get downloadManager => 'ä¸‹è½½ç®¡ç†å™¨';
+  String get downloadManager => '下载管理器';
 
   @override
-  String get downloads => 'ä¸‹è½½';
+  String get downloads => '下载';
 
   @override
-  String get downloading => 'æ­£åœ¨ä¸‹è½½...';
+  String get downloading => '正在下载...';
 
   @override
-  String get downloadComplete => 'ä¸‹è½½å®Œæˆ';
+  String get downloadComplete => '下载完成';
 
   @override
-  String get downloadFailed => 'ä¸‹è½½å¤±è´¥';
+  String get downloadFailed => '下载失败';
 
   @override
-  String get offlineMode => 'ç¦»çº¿æ¨¡å¼';
+  String get offlineMode => '离线模式';
 
   @override
-  String get noInternet => 'æ— äº’è”ç½‘è¿æ¥';
+  String get noInternet => '无互联网连接';
 
   @override
-  String get checkConnection => 'è¯·æ£€æŸ¥æ‚¨çš„è¿æ¥';
+  String get checkConnection => '请检查您的连接';
 
   @override
-  String get premium => 'ä¼˜è´¨çš„';
+  String get premium => '优质的';
 
   @override
-  String get upgradeToPro => 'å‡çº§åˆ°ä¸“ä¸šç‰ˆ';
+  String get upgradeToPro => '升级到专业版';
 
   @override
-  String get proFeatures => 'ä¸“ä¸šåŠŸèƒ½';
+  String get proFeatures => '专业功能';
 
   @override
-  String get removeAds => 'åˆ é™¤å¹¿å‘Š';
+  String get removeAds => '删除广告';
 
   @override
-  String get unlockAll => 'è§£é”æ‰€æœ‰å†…å®¹';
+  String get unlockAll => '解锁所有内容';
 
   @override
-  String get exclusiveContent => 'ç‹¬å®¶å†…å®¹';
+  String get exclusiveContent => '独家内容';
 
   @override
-  String get welcome => 'æ¬¢è¿';
+  String get welcome => '欢迎';
 
   @override
-  String get getStarted => 'å¼€å§‹ä½¿ç”¨';
+  String get getStarted => '开始使用';
 
   @override
-  String get skip => 'è·³è¿‡';
+  String get skip => '跳过';
 
   @override
-  String get next => 'ä¸‹ä¸€ä¸ª';
+  String get next => '下一个';
 
   @override
-  String get done => 'å®Œæ¯•';
+  String get done => '完毕';
 
   @override
-  String get onboarding1Title => 'æ¬¢è¿æ¥åˆ°é˜¿æ‹‰ä¹‹é“';
+  String get onboarding1Title => '欢迎来到阿拉之道';
 
   @override
-  String get onboarding1Desc =>
-      'æ‚¨å®Œæ•´çš„ä¼Šæ–¯å…°ä¼´ä¾£åº”ç”¨ç¨‹åºï¼Œç”¨äºç¥ˆç¥·æ—¶é—´ã€å¤å…°ç»ç­‰';
+  String get onboarding1Desc => '您完整的伊斯兰伴侣应用程序，用于祈祷时间、古兰经等';
 
   @override
-  String get onboarding2Title => 'ç¥ˆç¥·æ—¶é—´';
+  String get onboarding2Title => '祈祷时间';
 
   @override
-  String get onboarding2Desc => 'æ ¹æ®æ‚¨æ‰€åœ¨ä½ç½®çš„å‡†ç¡®ç¥ˆç¥·æ—¶é—´';
+  String get onboarding2Desc => '根据您所在位置的准确祈祷时间';
 
   @override
-  String get onboarding3Title => 'å¤å…°ç»åŠæ›´å¤š';
+  String get onboarding3Title => '古兰经及更多';
 
   @override
-  String get onboarding3Desc =>
-      'é˜…è¯»ã€Šå¤å…°ç»ã€‹ã€è·Ÿè¸ªæ‚¨çš„é˜…è¯»æƒ…å†µå¹¶æ¢ç´¢ä¼Šæ–¯å…°å†…å®¹';
+  String get onboarding3Desc => '阅读《古兰经》、跟踪您的阅读情况并探索伊斯兰内容';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -1082,421 +1080,419 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   AppLocalizationsZhTw() : super('zh_TW');
 
   @override
-  String get appTitle => 'å®‰æ‹‰ä¹‹é“';
+  String get appTitle => '安拉之道';
 
   @override
-  String get home => 'å®¶';
+  String get home => '家';
 
   @override
-  String get quran => 'å¤è˜­ç¶“';
+  String get quran => '古蘭經';
 
   @override
-  String get qibla => 'æœæ‹œ';
+  String get qibla => '朝拜';
 
   @override
-  String get zikr => 'å‰‡å…‹çˆ¾';
+  String get zikr => '則克爾';
 
   @override
-  String get calendar => 'æ—¥æ›†';
+  String get calendar => '日曆';
 
   @override
-  String get settings => 'è¨­å®š';
+  String get settings => '設定';
 
   @override
-  String get nextPrayer => 'ä¸‹ä¸€å€‹ç¦±å‘Š';
+  String get nextPrayer => '下一個禱告';
 
   @override
-  String get prayerTimes => 'ç¥ˆç¦±æ™‚é–“';
+  String get prayerTimes => '祈禱時間';
 
   @override
-  String get continueReading => 'ç¹¼çºŒé–±è®€';
+  String get continueReading => '繼續閱讀';
 
   @override
-  String get getLifetimePro => 'å–å¾—çµ‚èº«å°ˆæ¥­ç‰ˆ';
+  String get getLifetimePro => '取得終身專業版';
 
   @override
-  String get unlockTajweed => 'è§£é– Tajweed å’Œé«˜ç´šåŠŸèƒ½';
+  String get unlockTajweed => '解鎖 Tajweed 和高級功能';
 
   @override
-  String get prayerCalculation => 'ç¦±å‘Šè¨ˆç®—';
+  String get prayerCalculation => '禱告計算';
 
   @override
-  String get method => 'è¨ˆç®—æ–¹æ³•';
+  String get method => '計算方法';
 
   @override
-  String get madhab => 'æ™¡ç¦®æ³•å¾‹æ–¹æ³•';
+  String get madhab => '晡禮法律方法';
 
   @override
-  String get surahs => 'å¤è˜­ç¶“';
+  String get surahs => '古蘭經';
 
   @override
-  String get ayahs => 'é˜¿äºæ–¯';
+  String get ayahs => '阿亞斯';
 
   @override
-  String get fajr => 'æ™¨æ›¦';
+  String get fajr => '晨曦';
 
   @override
-  String get sunrise => 'æ—¥å‡º';
+  String get sunrise => '日出';
 
   @override
-  String get dhuhr => 'æœçˆ¾';
+  String get dhuhr => '杜爾';
 
   @override
-  String get asr => 'æ™¡æ°£';
+  String get asr => '晡氣';
 
   @override
-  String get maghrib => 'æ˜ç¦®';
+  String get maghrib => '昏禮';
 
   @override
-  String get isha => 'ä¼Šè';
+  String get isha => '伊莎';
 
   @override
-  String get dataStorage => 'è³‡æ–™èˆ‡å„²å­˜';
+  String get dataStorage => '資料與儲存';
 
   @override
-  String get clearCache => 'æ¸…é™¤å¿«å–';
+  String get clearCache => '清除快取';
 
   @override
-  String get cacheClearedSuccess => 'å¿«å–æ¸…é™¤æˆåŠŸ';
+  String get cacheClearedSuccess => '快取清除成功';
 
   @override
-  String get location => 'åœ°é»';
+  String get location => '地點';
 
   @override
-  String get language => 'èªè¨€';
+  String get language => '語言';
 
   @override
-  String get selectLanguage => 'é¸æ“‡èªè¨€';
+  String get selectLanguage => '選擇語言';
 
   @override
-  String get searchLanguage => 'æœå°‹ 180 å¤šç¨®èªè¨€...';
+  String get searchLanguage => '搜尋 180 多種語言...';
 
   @override
-  String get systemDefault => 'ç³»çµ±é è¨­å€¼';
+  String get systemDefault => '系統預設值';
 
   @override
-  String get currentLocation => 'ç›®å‰ä½ç½®ï¼ˆGPSï¼‰';
+  String get currentLocation => '目前位置（GPS）';
 
   @override
-  String get search => 'æœå°‹';
+  String get search => '搜尋';
 
   @override
-  String get searchHint => 'æœå°‹...';
+  String get searchHint => '搜尋...';
 
   @override
-  String get noResults => 'æ²’æœ‰æ‰¾åˆ°çµæœ';
+  String get noResults => '沒有找到結果';
 
   @override
-  String get loading => 'è¼‰å…¥ä¸­...';
+  String get loading => '載入中...';
 
   @override
-  String get error => 'éŒ¯èª¤';
+  String get error => '錯誤';
 
   @override
-  String get retry => 'é‡è©¦';
+  String get retry => '重試';
 
   @override
-  String get cancel => 'å–æ¶ˆ';
+  String get cancel => '取消';
 
   @override
-  String get save => 'ç¯€çœ';
+  String get save => '節省';
 
   @override
-  String get delete => 'åˆªé™¤';
+  String get delete => '刪除';
 
   @override
-  String get edit => 'ç·¨è¼¯';
+  String get edit => '編輯';
 
   @override
-  String get close => 'é—œé–‰';
+  String get close => '關閉';
 
   @override
-  String get ok => 'å¥½çš„';
+  String get ok => '好的';
 
   @override
-  String get yes => 'æ˜¯çš„';
+  String get yes => '是的';
 
   @override
-  String get no => 'ä¸';
+  String get no => '不';
 
   @override
-  String get surah => 'å¤è˜­ç¶“';
+  String get surah => '古蘭經';
 
   @override
-  String get juz => 'èŒ±èŒ²';
+  String get juz => '茱茲';
 
   @override
-  String get page => 'é ';
+  String get page => '頁';
 
   @override
-  String get reading => 'é–±è®€';
+  String get reading => '閱讀';
 
   @override
-  String get recitation => 'èƒŒèª¦';
+  String get recitation => '背誦';
 
   @override
-  String get translation => 'ç¿»è­¯';
+  String get translation => '翻譯';
 
   @override
-  String get tafsir => 'å¡”å¤«è¥¿çˆ¾';
+  String get tafsir => '塔夫西爾';
 
   @override
-  String get bookmarks => 'æ›¸ç±¤';
+  String get bookmarks => '書籤';
 
   @override
-  String get addBookmark => 'æ–°å¢æ›¸ç±¤';
+  String get addBookmark => '新增書籤';
 
   @override
-  String get removeBookmark => 'åˆªé™¤æ›¸ç±¤';
+  String get removeBookmark => '刪除書籤';
 
   @override
-  String get lastRead => 'æœ€å¾Œé–±è®€';
+  String get lastRead => '最後閱讀';
 
   @override
-  String get dailyZikr => 'æ¯æ—¥å‰‡å…‹çˆ¾';
+  String get dailyZikr => '每日則克爾';
 
   @override
-  String get morningZikr => 'æ—©æ™¨å‰‡å…‹çˆ¾';
+  String get morningZikr => '早晨則克爾';
 
   @override
-  String get eveningZikr => 'æ™šä¸Šå‰‡å…‹çˆ¾';
+  String get eveningZikr => '晚上則克爾';
 
   @override
-  String get tasbih => 'å¡”æ–¯æ¯”èµ«';
+  String get tasbih => '塔斯比赫';
 
   @override
-  String get ahkab => 'é˜¿å¡å§†';
+  String get ahkab => '阿卡姆';
 
   @override
-  String get masaail => 'é¦¬è–©ä¼Šå‹’';
+  String get masaail => '馬薩伊勒';
 
   @override
-  String get hadith => 'è–è¨“';
+  String get hadith => '聖訓';
 
   @override
-  String get hadithCollection => 'è–è¨“é›†';
+  String get hadithCollection => '聖訓集';
 
   @override
-  String get hadithBooks => 'è–è¨“æ›¸ç±';
+  String get hadithBooks => '聖訓書籍';
 
   @override
-  String get searchHadith => 'æœå°‹è–è¨“';
+  String get searchHadith => '搜尋聖訓';
 
   @override
-  String get asmaulHusna => 'é˜¿æ–¯ç‘ªçƒæ–¯ç´';
+  String get asmaulHusna => '阿斯瑪烏斯納';
 
   @override
-  String get namesOfAllah => 'å®‰æ‹‰çš„åå­—';
+  String get namesOfAllah => '安拉的名字';
 
   @override
-  String get liveTv => 'é›»è¦–ç›´æ’­';
+  String get liveTv => '電視直播';
 
   @override
-  String get watchLive => 'è§€çœ‹ç›´æ’­';
+  String get watchLive => '觀看直播';
 
   @override
-  String get streamError => 'ç¢¼æµéŒ¯èª¤';
+  String get streamError => '碼流錯誤';
 
   @override
-  String get reload => 'é‡æ–°è¼‰å…¥';
+  String get reload => '重新載入';
 
   @override
-  String get openInYoutube => 'åœ¨ YouTube ä¸­æ‰“é–‹';
+  String get openInYoutube => '在 YouTube 中打開';
 
   @override
-  String get ibadahTracker => 'ä¼Šå·´é”è¿½è¹¤å™¨';
+  String get ibadahTracker => '伊巴達追蹤器';
 
   @override
-  String get fasting => 'ç¦é£Ÿ';
+  String get fasting => '禁食';
 
   @override
-  String get quranReading => 'å¤è˜­ç¶“é–±è®€';
+  String get quranReading => '古蘭經閱讀';
 
   @override
-  String get prayers => 'ç¥ˆç¦±';
+  String get prayers => '祈禱';
 
   @override
-  String get dhikrCount => 'è¿ªå…‹çˆ¾ä¼¯çˆµ';
+  String get dhikrCount => '迪克爾伯爵';
 
   @override
-  String get weeklyProgress => 'æ¯é€±é€²åº¦';
+  String get weeklyProgress => '每週進度';
 
   @override
-  String get monthlyProgress => 'æ¯æœˆé€²åº¦';
+  String get monthlyProgress => '每月進度';
 
   @override
-  String get statistics => 'çµ±è¨ˆæ•¸æ“š';
+  String get statistics => '統計數據';
 
   @override
-  String get hijriCalendar => 'å›æ›†';
+  String get hijriCalendar => '回曆';
 
   @override
-  String get gregorianCalendar => 'å…¬æ›†';
+  String get gregorianCalendar => '公曆';
 
   @override
-  String get today => 'ä»Šå¤©';
+  String get today => '今天';
 
   @override
-  String get tomorrow => 'æ˜å¤©';
+  String get tomorrow => '明天';
 
   @override
-  String get yesterday => 'æ˜¨å¤©';
+  String get yesterday => '昨天';
 
   @override
-  String get specialDays => 'ç‰¹åˆ¥çš„æ—¥å­';
+  String get specialDays => '特別的日子';
 
   @override
-  String get ramadan => 'é½‹æˆ’æœˆ';
+  String get ramadan => '齋戒月';
 
   @override
-  String get eidAlFitr => 'é–‹é½‹ç¯€';
+  String get eidAlFitr => '開齋節';
 
   @override
-  String get eidAlAdha => 'å¤çˆ¾é‚¦ç¯€';
+  String get eidAlAdha => '古爾邦節';
 
   @override
-  String get laylatAlQadr => 'èŠæ‹‰ç‰¹Â·è“‹å¾·çˆ¾';
+  String get laylatAlQadr => '萊拉特·蓋德爾';
 
   @override
-  String get qiblaDirection => 'æœæ‹œæ–¹å‘';
+  String get qiblaDirection => '朝拜方向';
 
   @override
-  String get compass => 'ç¾…ç›¤';
+  String get compass => '羅盤';
 
   @override
-  String get degrees => 'åº¦';
+  String get degrees => '度';
 
   @override
-  String get north => 'åŒ—';
+  String get north => '北';
 
   @override
-  String get qiblaFound => 'æœæ‹œç™¼ç¾äº†ï¼';
+  String get qiblaFound => '朝拜發現了！';
 
   @override
-  String get turnDevice => 'å°‡æ‚¨çš„è£ç½®è½‰å‘æœæ‹œ';
+  String get turnDevice => '將您的裝置轉向朝拜';
 
   @override
-  String get notifications => 'é€šçŸ¥';
+  String get notifications => '通知';
 
   @override
-  String get prayerNotifications => 'ç¦±å‘Šé€šçŸ¥';
+  String get prayerNotifications => '禱告通知';
 
   @override
-  String get enableNotifications => 'å•Ÿç”¨é€šçŸ¥';
+  String get enableNotifications => '啟用通知';
 
   @override
-  String get notificationTime => 'é€šçŸ¥æ™‚é–“';
+  String get notificationTime => '通知時間';
 
   @override
-  String get beforePrayer => 'ç¥ˆç¦±å‰å¹¾åˆ†é˜';
+  String get beforePrayer => '祈禱前幾分鐘';
 
   @override
-  String get theme => 'ä¸»é¡Œ';
+  String get theme => '主題';
 
   @override
-  String get lightMode => 'ç‡ˆå…‰æ¨¡å¼';
+  String get lightMode => '燈光模式';
 
   @override
-  String get darkMode => 'æ·±è‰²æ¨¡å¼';
+  String get darkMode => '深色模式';
 
   @override
-  String get systemTheme => 'ç³»çµ±ä¸»é¡Œ';
+  String get systemTheme => '系統主題';
 
   @override
-  String get about => 'é—œæ–¼';
+  String get about => '關於';
 
   @override
-  String get version => 'ç‰ˆæœ¬';
+  String get version => '版本';
 
   @override
-  String get privacyPolicy => 'éš±ç§æ¬Šæ”¿ç­–';
+  String get privacyPolicy => '隱私權政策';
 
   @override
-  String get termsOfService => 'æœå‹™æ¢æ¬¾';
+  String get termsOfService => '服務條款';
 
   @override
-  String get contactUs => 'è¯çµ¡æˆ‘å€‘';
+  String get contactUs => '聯絡我們';
 
   @override
-  String get rateApp => 'è©•åƒ¹æ‡‰ç”¨ç¨‹å¼';
+  String get rateApp => '評價應用程式';
 
   @override
-  String get shareApp => 'åˆ†äº«æ‡‰ç”¨ç¨‹å¼';
+  String get shareApp => '分享應用程式';
 
   @override
-  String get downloadManager => 'ä¸‹è¼‰ç®¡ç†å™¨';
+  String get downloadManager => '下載管理器';
 
   @override
-  String get downloads => 'ä¸‹è¼‰';
+  String get downloads => '下載';
 
   @override
-  String get downloading => 'æ­£åœ¨ä¸‹è¼‰...';
+  String get downloading => '正在下載...';
 
   @override
-  String get downloadComplete => 'ä¸‹è¼‰å®Œæˆ';
+  String get downloadComplete => '下載完成';
 
   @override
-  String get downloadFailed => 'ä¸‹è¼‰å¤±æ•—';
+  String get downloadFailed => '下載失敗';
 
   @override
-  String get offlineMode => 'é›¢ç·šæ¨¡å¼';
+  String get offlineMode => '離線模式';
 
   @override
-  String get noInternet => 'ç„¡ç¶²è·¯é€£ç·š';
+  String get noInternet => '無網路連線';
 
   @override
-  String get checkConnection => 'è«‹æª¢æŸ¥æ‚¨çš„é€£æ¥';
+  String get checkConnection => '請檢查您的連接';
 
   @override
-  String get premium => 'å„ªè³ªçš„';
+  String get premium => '優質的';
 
   @override
-  String get upgradeToPro => 'å‡ç´šåˆ°å°ˆæ¥­ç‰ˆ';
+  String get upgradeToPro => '升級到專業版';
 
   @override
-  String get proFeatures => 'å°ˆæ¥­åŠŸèƒ½';
+  String get proFeatures => '專業功能';
 
   @override
-  String get removeAds => 'åˆªé™¤å»£å‘Š';
+  String get removeAds => '刪除廣告';
 
   @override
-  String get unlockAll => 'è§£é–æ‰€æœ‰å…§å®¹';
+  String get unlockAll => '解鎖所有內容';
 
   @override
-  String get exclusiveContent => 'ç¨å®¶å…§å®¹';
+  String get exclusiveContent => '獨家內容';
 
   @override
-  String get welcome => 'æ­¡è¿';
+  String get welcome => '歡迎';
 
   @override
-  String get getStarted => 'é–‹å§‹ä½¿ç”¨';
+  String get getStarted => '開始使用';
 
   @override
-  String get skip => 'è·³é';
+  String get skip => '跳過';
 
   @override
-  String get next => 'ä¸‹ä¸€å€‹';
+  String get next => '下一個';
 
   @override
-  String get done => 'å®Œç•¢';
+  String get done => '完畢';
 
   @override
-  String get onboarding1Title => 'æ­¡è¿ä¾†åˆ°é˜¿æ‹‰ä¹‹é“';
+  String get onboarding1Title => '歡迎來到阿拉之道';
 
   @override
-  String get onboarding1Desc =>
-      'æ‚¨å®Œæ•´çš„ä¼Šæ–¯è˜­ä¼´ä¾¶æ‡‰ç”¨ç¨‹åºï¼Œç”¨æ–¼ç¥ˆç¦±æ™‚é–“ã€å¤è˜­ç¶“ç­‰';
+  String get onboarding1Desc => '您完整的伊斯蘭伴侶應用程序，用於祈禱時間、古蘭經等';
 
   @override
-  String get onboarding2Title => 'ç¥ˆç¦±æ™‚é–“';
+  String get onboarding2Title => '祈禱時間';
 
   @override
-  String get onboarding2Desc => 'æ ¹æ“šæ‚¨æ‰€åœ¨ä½ç½®çš„æº–ç¢ºç¥ˆç¦±æ™‚é–“';
+  String get onboarding2Desc => '根據您所在位置的準確祈禱時間';
 
   @override
-  String get onboarding3Title => 'å¤è˜­ç¶“åŠæ›´å¤š';
+  String get onboarding3Title => '古蘭經及更多';
 
   @override
-  String get onboarding3Desc =>
-      'é–±è®€ã€Šå¤è˜­ç¶“ã€‹ã€è¿½è¹¤æ‚¨çš„é–±è®€æƒ…æ³ä¸¦æ¢ç´¢ä¼Šæ–¯è˜­å…§å®¹';
+  String get onboarding3Desc => '閱讀《古蘭經》、追蹤您的閱讀情況並探索伊斯蘭內容';
 }

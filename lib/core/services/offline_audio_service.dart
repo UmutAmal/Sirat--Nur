@@ -1,11 +1,13 @@
 import 'dart:io';
+
 import 'package:dio/dio.dart';
+import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 
-/// Offline Quran Audio Service
-/// Manages download and playback of Quran audio for offline use
+typedef SurahDownloadProgress =
+    void Function(double progress, int surahNumber, int totalSurahs);
+
 class OfflineAudioService {
-  /// Get the offline audio directory
   static Future<Directory> get _audioDir async {
     final appDir = await getApplicationDocumentsDirectory();
     final audioDir = Directory('${appDir.path}/quran_audio');
@@ -14,129 +16,138 @@ class OfflineAudioService {
     }
     return audioDir;
   }
-  
-  /// Get audio file path for a surah
+
   static Future<String> getAudioPath(int surahNumber, String reciterId) async {
     final dir = await _audioDir;
     final paddedSurah = surahNumber.toString().padLeft(3, '0');
     return '${dir.path}/${reciterId}_$paddedSurah.mp3';
   }
-  
-  /// Check if audio is downloaded
+
   static Future<bool> isAudioDownloaded(int surahNumber, String reciterId) async {
     final path = await getAudioPath(surahNumber, reciterId);
     return File(path).exists();
   }
-  
-  /// Download a single surah audio
+
   static Future<bool> downloadSurahAudio({
     required int surahNumber,
     required String reciterId,
     required String audioUrl,
-    Function(double, int, int)? onProgress,
+    void Function(double progress)? onProgress,
+    CancelToken? cancelToken,
   }) async {
     try {
       final dio = Dio();
       final savePath = await getAudioPath(surahNumber, reciterId);
-      
+
       await dio.download(
         audioUrl,
         savePath,
+        cancelToken: cancelToken,
         onReceiveProgress: (received, total) {
-          if (total != -1) {
-            double progress = (received / total) * 100;
-            onProgress?.call(progress, surahNumber, -1);
-          }
+          if (total <= 0) return;
+          onProgress?.call(received / total);
         },
       );
-      
+
       return true;
-    } catch (e) {
+    } catch (_) {
       return false;
     }
   }
-  
-  /// Download all 114 surahs for a reciter
+
   static Future<void> downloadAllSurahs({
     required String reciterId,
-    required Map<String, String> surahUrls,
-    Function(double, int, int)? onProgress,
-    Function(int, bool)? onSurahComplete,
+    required Map<int, String> surahUrls,
+    SurahDownloadProgress? onProgress,
+    void Function(int surahNumber, bool success)? onSurahComplete,
+    bool Function()? shouldCancel,
   }) async {
-    int completed = 0;
-    int total = surahUrls.length;
-    
-    for (final entry in surahUrls.entries) {
-      final surahNumber = int.parse(entry.key);
-      final url = entry.value;
-      
+    final sortedSurahs = surahUrls.keys.toList()..sort();
+    final total = sortedSurahs.length;
+    var completed = 0;
+
+    for (final surahNumber in sortedSurahs) {
+      if (shouldCancel?.call() == true) return;
+
+      final url = surahUrls[surahNumber]!;
       final success = await downloadSurahAudio(
         surahNumber: surahNumber,
         reciterId: reciterId,
         audioUrl: url,
-        onProgress: (progress, _, _) {
-          double overallProgress = ((completed * 100) + progress) / total;
-          onProgress?.call(overallProgress, surahNumber, total);
+        onProgress: (singleProgress) {
+          final overall = (completed + singleProgress) / total;
+          onProgress?.call(overall, surahNumber, total);
         },
       );
-      
+
       completed++;
       onSurahComplete?.call(surahNumber, success);
+      onProgress?.call(completed / total, surahNumber, total);
     }
   }
-  
-  /// Get list of downloaded surahs
+
   static Future<List<int>> getDownloadedSurahs(String reciterId) async {
-    final List<int> downloaded = [];
+    final downloaded = <int>[];
     final dir = await _audioDir;
-    
+
     final files = await dir.list().toList();
-    for (final file in files) {
-      if (file is File && file.path.contains(reciterId)) {
-        String filename = file.path.split('/').last;
-        filename = filename.replaceAll('.mp3', '');
-        filename = filename.replaceAll('${reciterId}_', '');
-        try {
-          int surahNum = int.parse(filename);
-          downloaded.add(surahNum);
-        } catch (e) {
-          // Skip invalid filenames
-        }
+    for (final entity in files) {
+      if (entity is! File) continue;
+      final fileName = p.basename(entity.path);
+      if (!fileName.startsWith('${reciterId}_') || !fileName.endsWith('.mp3')) {
+        continue;
+      }
+
+      final surahPart = fileName
+          .replaceFirst('${reciterId}_', '')
+          .replaceFirst('.mp3', '');
+      final surahNumber = int.tryParse(surahPart);
+      if (surahNumber != null) {
+        downloaded.add(surahNumber);
       }
     }
-    
+
+    downloaded.sort();
     return downloaded;
   }
-  
-  /// Delete all downloaded audio for a reciter
+
   static Future<void> deleteReciterAudio(String reciterId) async {
     final dir = await _audioDir;
     final files = await dir.list().toList();
-    
-    for (final file in files) {
-      if (file is File && file.path.contains(reciterId)) {
-        await file.delete();
+
+    for (final entity in files) {
+      if (entity is! File) continue;
+      final fileName = p.basename(entity.path);
+      if (!fileName.startsWith('${reciterId}_') || !fileName.endsWith('.mp3')) {
+        continue;
       }
+      await entity.delete();
     }
   }
-  
-  /// Get total downloaded size in MB
+
   static Future<double> getTotalDownloadedSize() async {
     final dir = await _audioDir;
-    int totalBytes = 0;
-    
+    var totalBytes = 0;
+
     final files = await dir.list().toList();
-    for (final file in files) {
-      if (file is File) {
-        totalBytes += await file.length();
+    for (final entity in files) {
+      if (entity is File) {
+        totalBytes += await entity.length();
       }
     }
-    
+
     return totalBytes / (1024 * 1024);
+  }
+
+  static Future<Map<String, int>> getDownloadedCountByReciter() async {
+    final result = <String, int>{};
+    for (final reciterId in OfflineReciters.reciters.keys) {
+      result[reciterId] = (await getDownloadedSurahs(reciterId)).length;
+    }
+    return result;
   }
 }
 
-/// Available reciters for offline download
 class OfflineReciters {
   static const Map<String, Map<String, String>> reciters = {
     'alafasy': {
@@ -159,22 +170,24 @@ class OfflineReciters {
       'name': 'Saoud Al-Shuraim',
       'baseUrl': 'https://server8.mp3quran.net/shuraim',
     },
+    'sudais': {
+      'name': 'Abdul Rahman Al-Sudais',
+      'baseUrl': 'https://server8.mp3quran.net/sds',
+    },
   };
-  
-  /// Get URL for a surah
+
   static String getSurahUrl(String reciterId, int surahNumber) {
     final reciter = reciters[reciterId];
     if (reciter == null) return '';
-    
+
     final paddedSurah = surahNumber.toString().padLeft(3, '0');
     return '${reciter['baseUrl']}/$paddedSurah.mp3';
   }
-  
-  /// Get all surah URLs for a reciter
-  static Map<String, String> getAllSurahUrls(String reciterId) {
-    final Map<String, String> urls = {};
-    for (int i = 1; i <= 114; i++) {
-      urls[i.toString()] = getSurahUrl(reciterId, i);
+
+  static Map<int, String> getAllSurahUrls(String reciterId) {
+    final urls = <int, String>{};
+    for (var i = 1; i <= 114; i++) {
+      urls[i] = getSurahUrl(reciterId, i);
     }
     return urls;
   }

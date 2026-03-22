@@ -30,13 +30,13 @@ class AppLocalizationsEt extends AppLocalizations {
   String get settings => 'Seaded';
 
   @override
-  String get nextPrayer => 'JÃ¤rgmine palve';
+  String get nextPrayer => 'Järgmine palve';
 
   @override
   String get prayerTimes => 'Palveajad';
 
   @override
-  String get continueReading => 'JÃ¤tka lugemist';
+  String get continueReading => 'Jätka lugemist';
 
   @override
   String get getLifetimePro => 'Hankige Lifetime Pro';
@@ -63,7 +63,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'PÃ¤ikesetÃµus';
+  String get sunrise => 'Päikesetõus';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -81,10 +81,10 @@ class AppLocalizationsEt extends AppLocalizations {
   String get dataStorage => 'Andmed ja salvestusruum';
 
   @override
-  String get clearCache => 'TÃ¼hjenda vahemÃ¤lu';
+  String get clearCache => 'Tühjenda vahemälu';
 
   @override
-  String get cacheClearedSuccess => 'VahemÃ¤lu tÃ¼hjendamine Ãµnnestus';
+  String get cacheClearedSuccess => 'Vahemälu tühjendamine õnnestus';
 
   @override
   String get location => 'Asukoht';
@@ -99,7 +99,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get searchLanguage => 'Otsige 180+ keelest...';
 
   @override
-  String get systemDefault => 'SÃ¼steemi vaikeseade';
+  String get systemDefault => 'Süsteemi vaikeseade';
 
   @override
   String get currentLocation => 'Praegune asukoht (GPS)';
@@ -123,7 +123,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get retry => 'Proovi uuesti';
 
   @override
-  String get cancel => 'TÃ¼hista';
+  String get cancel => 'Tühista';
 
   @override
   String get save => 'Salvesta';
@@ -153,7 +153,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'LehekÃ¼lg';
+  String get page => 'Lehekülg';
 
   @override
   String get reading => 'Lugemine';
@@ -162,31 +162,31 @@ class AppLocalizationsEt extends AppLocalizations {
   String get recitation => 'Ettelugemine';
 
   @override
-  String get translation => 'TÃµlge';
+  String get translation => 'Tõlge';
 
   @override
   String get tafsir => 'Tafsir';
 
   @override
-  String get bookmarks => 'JÃ¤rjehoidjad';
+  String get bookmarks => 'Järjehoidjad';
 
   @override
-  String get addBookmark => 'Lisa jÃ¤rjehoidja';
+  String get addBookmark => 'Lisa järjehoidja';
 
   @override
-  String get removeBookmark => 'Eemalda jÃ¤rjehoidja';
+  String get removeBookmark => 'Eemalda järjehoidja';
 
   @override
   String get lastRead => 'Viimane lugemine';
 
   @override
-  String get dailyZikr => 'IgapÃ¤evane Zikr';
+  String get dailyZikr => 'Igapäevane Zikr';
 
   @override
   String get morningZikr => 'Hommik Zikr';
 
   @override
-  String get eveningZikr => 'Ã•htu Zikr';
+  String get eveningZikr => 'Õhtu Zikr';
 
   @override
   String get tasbih => 'Tasbih';
@@ -219,7 +219,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get liveTv => 'Otsetelevisioon';
 
   @override
-  String get watchLive => 'Vaadake otseÃ¼lekannet';
+  String get watchLive => 'Vaadake otseülekannet';
 
   @override
   String get streamError => 'Voo viga';
@@ -246,7 +246,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get dhikrCount => 'Dhikri krahv';
 
   @override
-  String get weeklyProgress => 'NÃ¤dala edenemine';
+  String get weeklyProgress => 'Nädala edenemine';
 
   @override
   String get monthlyProgress => 'Igakuine edusammud';
@@ -261,7 +261,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get gregorianCalendar => 'Gregoriuse kalender';
 
   @override
-  String get today => 'TÃ¤na';
+  String get today => 'Täna';
 
   @override
   String get tomorrow => 'Homme';
@@ -270,7 +270,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get yesterday => 'eile';
 
   @override
-  String get specialDays => 'Erilised pÃ¤evad';
+  String get specialDays => 'Erilised päevad';
 
   @override
   String get ramadan => 'Ramadaan';
@@ -294,22 +294,22 @@ class AppLocalizationsEt extends AppLocalizations {
   String get degrees => 'kraadid';
 
   @override
-  String get north => 'PÃµhja';
+  String get north => 'Põhja';
 
   @override
   String get qiblaFound => 'Qibla leitud!';
 
   @override
-  String get turnDevice => 'PÃ¶Ã¶rake seade Qibla poole';
+  String get turnDevice => 'Pöörake seade Qibla poole';
 
   @override
-  String get notifications => 'MÃ¤rguanded';
+  String get notifications => 'Märguanded';
 
   @override
   String get prayerNotifications => 'Palveteated';
 
   @override
-  String get enableNotifications => 'Luba mÃ¤rguanded';
+  String get enableNotifications => 'Luba märguanded';
 
   @override
   String get notificationTime => 'Teavitamise aeg';
@@ -321,13 +321,13 @@ class AppLocalizationsEt extends AppLocalizations {
   String get theme => 'Teema';
 
   @override
-  String get lightMode => 'ValgusreÅ¾iim';
+  String get lightMode => 'Valgusrežiim';
 
   @override
-  String get darkMode => 'Tume reÅ¾iim';
+  String get darkMode => 'Tume režiim';
 
   @override
-  String get systemTheme => 'SÃ¼steemi teema';
+  String get systemTheme => 'Süsteemi teema';
 
   @override
   String get about => 'Umbes';
@@ -342,7 +342,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get termsOfService => 'Kasutustingimused';
 
   @override
-  String get contactUs => 'VÃµtke meiega Ã¼hendust';
+  String get contactUs => 'Võtke meiega ühendust';
 
   @override
   String get rateApp => 'Hinda rakendust';
@@ -360,25 +360,25 @@ class AppLocalizationsEt extends AppLocalizations {
   String get downloading => 'Allalaadimine...';
 
   @override
-  String get downloadComplete => 'Allalaadimine on lÃµpetatud';
+  String get downloadComplete => 'Allalaadimine on lõpetatud';
 
   @override
-  String get downloadFailed => 'Allalaadimine ebaÃµnnestus';
+  String get downloadFailed => 'Allalaadimine ebaõnnestus';
 
   @override
-  String get offlineMode => 'VÃµrguÃ¼henduseta reÅ¾iim';
+  String get offlineMode => 'Võrguühenduseta režiim';
 
   @override
-  String get noInternet => 'Interneti-Ã¼hendus puudub';
+  String get noInternet => 'Interneti-ühendus puudub';
 
   @override
-  String get checkConnection => 'Palun kontrollige oma Ã¼hendust';
+  String get checkConnection => 'Palun kontrollige oma ühendust';
 
   @override
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Minge Ã¼le Pro versioonile';
+  String get upgradeToPro => 'Minge üle Pro versioonile';
 
   @override
   String get proFeatures => 'Pro funktsioonid';
@@ -399,7 +399,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get getStarted => 'Alustage';
 
   @override
-  String get skip => 'JÃ¤ta vahele';
+  String get skip => 'Jäta vahele';
 
   @override
   String get next => 'Edasi';
@@ -412,20 +412,20 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get onboarding1Desc =>
-      'Teie tÃ¤ielik islami kaaslase rakendus palveaegade, Koraani ja muu jaoks';
+      'Teie täielik islami kaaslase rakendus palveaegade, Koraani ja muu jaoks';
 
   @override
   String get onboarding2Title => 'Palveajad';
 
   @override
-  String get onboarding2Desc => 'TÃ¤psed palveajad teie asukoha pÃµhjal';
+  String get onboarding2Desc => 'Täpsed palveajad teie asukoha põhjal';
 
   @override
   String get onboarding3Title => 'Koraan ja palju muud';
 
   @override
   String get onboarding3Desc =>
-      'Lugege Koraani, jÃ¤lgige oma lugemist ja uurige islami sisu';
+      'Lugege Koraani, jälgige oma lugemist ja uurige islami sisu';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -620,7 +620,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

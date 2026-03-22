@@ -1,218 +1,246 @@
-# Sirat-i Nur - Handover State (Detailed)
+﻿# Sirat-i Nur - HANDOVER STATE (Antigravity Devralma Dokümanı)
 
-## 1. Session Meta
-- Date: 2026-03-22
-- Working directory used in this session: `C:\Users\UMUT\OneDrive\Masaüstü\Way of Allah\sirat_i_nur_work`
-- Source repo (upstream): `https://github.com/UmutAmal/Sirat--Nur.git`
-- Active branch in working copy: `master`
-- Reason for working in `sirat_i_nur_work`:
-  - Original requested path was `A:\Way of Allah\sirat_i_nur`.
-  - Direct write permissions to `A:` were restricted in this Codex sandbox session.
-  - Project was mirrored into writable workspace and all fixes were applied there.
+## 1) Oturum Özeti
+- Tarih: 2026-03-22
+- Aktif repo yolu: `A:\Way of Allah\sirat_i_nur`
+- Branch: `master`
+- Uzak depo: `https://github.com/UmutAmal/Sirat--Nur`
+- Hedef: Özellik eksiltmeden, kritik hataları kapatıp uygulama bütünlüğünü güçlendirmek, çok ayrıntılı handover bırakmak.
 
-## 2. User Intent (Non-Negotiable)
-- Do not remove existing features.
-- Add as many meaningful improvements as possible.
-- Fix every detectable critical bug.
-- Ensure application integrity and polish.
-- Write an extremely detailed handover so Antigravity can continue immediately.
+## 2) Kullanıcıdan Gelen Kritik Öncelikler (Bu Turda Korunan)
+- Hiçbir mevcut özelliği kaldırmamak.
+- Ses oynatma ve Live TV sorunlarını çözmek/güçlendirmek.
+- Dil/bölge ve çok dilli metin bozulmalarını temizlemek.
+- Tespit edilen no-op/placeholder davranışları işlevsel yapmak.
+- Antigravity’ye bırakılacak raporu aşırı detaylı hazırlamak.
 
-## 3. Primary Complaints Investigated
-- "Antigravity says fixed but still broken/incomplete."
-- Audio playback instability.
-- Live TV feature instability.
-- Language/region issues in locale behavior.
-- Placeholder/incomplete screens.
+## 3) Bu Tur Başında Tespit Edilen Durum
+- Repo’da daha önceki çalışmalardan gelen geniş bir değişiklik seti mevcuttu.
+- `tafsir_page.dart` dosyasında açık mojibake/bozuk metin ve eski kaynak ID eşlemesi kalmıştı.
+- `offline_downloads_page.dart` önceki revizyonda iyileştirilmişti ancak son kalite turunda ek temizliğe ihtiyaç vardı.
+- `live_tv_page.dart` hata/fallback davranışı yeterince dayanıklı değildi.
+- `settings_page.dart` içinde boş davranış (`onTap: () {}`) kalıntısı vardı.
+- `sukun_audio_page.dart` içindeki slider ve kart etkileşimleri işlevsizdi.
+- Çok dilli ARB setinde yaygın encoding bozulmaları (özellikle TR/AR ve çeşitli yerel dosyalarda byte-yorumlama kaynaklı bozulma) gözlemlendi.
 
-## 4. Root Causes Identified Before Fixes
-1. `Juz` reader was a hard placeholder page.
-2. `Places` screen was hardcoded sample UI, not real functional flow.
-3. Locale handling used `Locale(settings.languageCode!)`, which breaks composite codes like `zh_CN`.
-4. `SettingsState.copyWith` could not explicitly set nullable values to `null`.
-   - This directly impacted language reset to system default and clean null updates.
-5. TV page had no robust error handling/fallback UX.
-6. Surah audio used single-source URL strategy; failures had weak fallback behavior.
-7. Diagnostics page had static fake values (for example "L10n Files: 3") and did not reflect real system state.
-8. Location detection flow in settings was simulated, not real GPS-based.
-9. Lint quality issues remained in `premium_provider.dart` and `tool/translate_arbs.dart`.
+## 4) Uygulanan Düzeltmeler (Detaylı)
 
-## 5. Implemented Fixes (File-by-File)
+### 4.1 Tefsir ekranı baştan temizlendi
+Dosya: `lib/features/quran/tafsir_page.dart`
 
-### 5.1 Locale and Region Reliability
-- Added: `lib/core/utils/locale_utils.dart`
-  - `parseLocaleCode(...)` for robust parsing (`en`, `tr`, `zh_CN`, `zh-TW`, script/country combos).
-  - `localeKey(...)` for normalized matching.
-  - `resolveSupportedLocale(...)` for deterministic fallback to supported locales.
+Yapılanlar:
+- Ekran tamamen yeniden yazıldı.
+- Eski, bozuk ve elle tutulmuş kaynak listesi kaldırıldı.
+- Kaynak menüsü doğrudan `TafsirLocalService.availableTafsirs` üzerinden besleniyor.
+- `TafsirLoader` ile yükleme akışı standartlaştırıldı.
+- `forceRefresh` destekli yenileme eklendi.
+- Yükleme ilerlemesi (`LinearProgressIndicator`) ve mesajı eklendi.
+- Hata/boş durumları ayrıştırıldı.
+- `ayahNumber` verildiğinde ayet bazlı filtreleme aktif.
+- `surahName` boş gelirse güvenli fallback başlık üretiliyor.
+- Bozuk stringler (mojibake) temizlendi.
 
-- Updated: `lib/main.dart`
-  - Replaced fragile locale construction with parsed locale handling.
-  - Simplified supported locales to generated `AppLocalizations.supportedLocales`.
-  - Locale resolution now uses robust matching strategy.
+Neden:
+- Tefsir ekranında kullanıcıya bozuk metin gösteriliyordu.
+- Kaynak seçimi eski/yanlış ID’lere bağlı kaldığı için data tutarsızlığı oluşuyordu.
 
-### 5.2 Critical State Bug in Settings (`null` propagation)
-- Updated: `lib/features/settings/settings_provider.dart`
-  - Reworked `SettingsState.copyWith(...)` using `_unset` sentinel to allow explicit `null` assignment on nullable fields.
-  - Fixed `updateLanguage(...)` normalization and reset logic.
-  - Simplified `clearManualLocation()` to actually null out location fields via `copyWith`.
+### 4.2 Tefsir cache servisi API uyumu (önceki değişikliklerin devam doğrulaması)
+Dosya: `lib/core/services/tafsir_local_service.dart`
 
-Impact:
-- System default language reset now behaves correctly.
-- Null-state transitions are no longer silently ignored.
+Yapılanlar:
+- Çalışan endpoint modeli (`/tafsirs/{id}/by_chapter/{surah}`) kullanımı doğrulandı.
+- Cache yazım/okuma, kaynak canonicalization ve ilerleme callback yapısı korundu.
+- `TafsirLoader` içindeki `progress` tipi düzeltildi:
+  - `final progress = total == 0 ? 0.0 : current / total;`
 
-### 5.3 Settings UX + Localization + Deprecated API Fix
-- Rebuilt: `lib/features/settings/settings_page.dart`
-  - Migrated key labels and sections to `AppLocalizations`.
-  - Fixed deprecated share API usage:
-    - from: `Share.share(...)`
-    - to: `SharePlus.instance.share(ShareParams(...))`
-  - Improved language display label logic with locale normalization.
-  - Updated calibration dialog text/button localization and degree rendering (`\u00B0`).
+Neden:
+- `flutter analyze` bu noktada `num -> double` uyumsuzluğu veriyordu.
 
-### 5.4 Real GPS/Geocoding Location Flow
-- Rebuilt: `lib/features/settings/location_selection_page.dart`
-  - Replaced simulated GPS with real `geolocator` permission/service flow.
-  - Added reverse geocoding via `geocoding` for better location names.
-  - Added loading state for detection button.
-  - Kept city/country manual picker and improved user feedback.
+### 4.3 Surah okuma ekranında ses dayanıklılığı + no-op temizliği
+Dosya: `lib/features/quran/surah_reading_page.dart`
 
-### 5.5 Juz Reader Placeholder Removed, Real Data Bound
-- Rebuilt: `lib/features/quran/juz_reading_page.dart`
-  - Now loads from `assets/data/full_quran.json`.
-  - Filters ayahs by selected `juz`.
-  - Renders grouped surah headers + ayah cards.
-  - Uses setting-aware translation selection (`tr` vs `en`).
-  - Added loading/error/empty states and manual refresh action.
+Yapılanlar:
+- Ses oynatma akışı güçlendirildi:
+  - Önce offline indirilen dosya (`OfflineAudioService.getAudioPath`) deneniyor.
+  - Yoksa çoklu URL fallback sırayla deneniyor.
+- Reciter eşleme eklendi (`_reciterIdForVoice`).
+- Ses kaynağı deneme başarısızlıkları loglanıyor, kullanıcıya tutarlı snackbar dönüyor.
+- Ayet paylaşma aksiyonu eklendi (`SharePlus`).
+- Ayet bazlı bookmark toggle eklendi (UI no-op kaldırıldı).
+- Basmala metni doğru Arapça form ile düzeltildi.
+- Bozuk karakterli ayraç/metinler temizlendi.
 
-### 5.6 Surah Audio Playback Hardening
-- Updated: `lib/features/quran/surah_reading_page.dart`
-  - Added buffering/loading state in toolbar.
-  - Added multi-source fallback strategy per selected voice.
-  - Added resilient playback attempts across candidate sources.
-  - Improved failure handling/logging and user feedback.
+Neden:
+- Kullanıcı ses oynatmada süreklilik sorunu bildiriyordu.
+- Ekranda boş tık davranışları kaliteyi düşürüyordu.
 
-### 5.7 Live TV Stability + Fallback UX
-- Updated: `lib/core/constants/live_streams.dart`
-  - Stream model now has:
-    - `embedUrl`
-    - `externalUrl`
-  - Enables explicit in-app player vs external fallback behavior.
+### 4.4 Offline indirme yöneticisi no-op/lint/geri bildirim güçlendirmesi
+Dosya: `lib/features/downloads/offline_downloads_page.dart`
 
-- Rebuilt: `lib/features/tv/live_tv_page.dart`
-  - Added page loading state.
-  - Added web resource error state.
-  - Added retry (`Reload`) action.
-  - Added `Open in YouTube` fallback action.
-  - Added localized UI labels where keys exist.
+Yapılanlar:
+- Progress callback’inde reciter bazlı durum metni eklendi:
+  - `Downloading surah X / Y`
+- Başarısız tekil surah indirmelerinde debug log eklendi.
+- İndirme/iptal/tamamlanma sonrası state temizliği sıkılaştırıldı (`_downloadStatusText` dahil).
+- Lint kaynaklı callback parametre kullanımı düzenlendi.
 
-### 5.8 Places Feature Converted from Placeholder to Functional Flow
-- Rebuilt: `lib/features/places/places_map_page.dart`
-  - Converted to `ConsumerStatefulWidget`.
-  - Connected anchor point to selected app location (fallback: Istanbul).
-  - Added category filtering (Mosques / Halal Food / Education).
-  - Added text search.
-  - Added distance computation with `latlong2 Distance`.
-  - Added interactive map centering on list tap.
-  - Added external directions launching via Google Maps.
+Neden:
+- İlerleme sürecinde kullanıcıya daha açık geri bildirim gerekliydi.
+- Analyze infos temizlenerek kalite standardı yükseltildi.
 
-### 5.9 Diagnostics Made Real and Actionable
-- Rebuilt: `lib/features/settings/diagnostics_page.dart`
-  - Replaced static fake rows with live checks:
-    - app version/theme/language/location snapshot
-    - configured live streams count
-    - Quran dataset load + surah/ayah counts
-    - audio asset counts from `AssetManifest`
-    - supported locale count from generated localizations
-  - Added refresh action.
+### 4.5 Live TV ekranı fallback katmanı ve hata dayanıklılığı
+Dosya: `lib/features/tv/live_tv_page.dart`
+Dosya: `lib/core/constants/live_streams.dart`
 
-### 5.10 Lint/Quality Cleanup
-- Updated: `lib/features/premium/premium_provider.dart`
-  - Added explicit type for `_prefs` (`SharedPreferences`).
+Yapılanlar:
+- `LiveStreamInfo` modeli genişletildi:
+  - `fallbackEmbedUrl` eklendi.
+- WebView akışına çok-kademeli URL aday denemesi eklendi:
+  - embed URL -> fallback embed -> external URL
+- `onWebResourceError` sonrası otomatik sıradaki adaya geçiş mekanizması yazıldı.
+- Son aşamada anlamlı hata overlay + retry/open external aksiyonu korunuyor.
+- `intent://` istekleri prevent edilerek kırık yönlendirme azaltıldı.
+- Dış uygulamada açma öncesi `canLaunchUrl` kontrolü eklendi.
+- `setMediaPlaybackRequiresUserGesture` çağrısı kaldırıldı (mevcut plugin sürümünde method bulunmadığı için analyze hatası veriyordu).
 
-- Updated: `tool/translate_arbs.dart`
-  - Replaced `print` with `stdout.writeln`.
-  - Added braces for flow-control lint compliance.
+Neden:
+- Kullanıcı TV özelliğinde istikrarsızlık bildiriyordu.
+- Tek URL başarısızlığında ekranın kilitlenmesi önlendi.
 
-## 6. Verification Performed
+### 4.6 Ayarlar ekranı no-op kaldırma
+Dosya: `lib/features/settings/settings_page.dart`
 
-### Dependencies
-- Command: `flutter pub get`
-- Result: success.
-- Note: localization tool reported many untranslated messages; this is a data-content gap, not a build blocker.
+Yapılanlar:
+- `Version` satırındaki boş `onTap` kaldırıldı.
+- Yerine `showAboutDialog(...)` bağlandı.
 
-### Static Analysis
-- Command: `flutter analyze`
-- Final result: **No issues found**.
+Neden:
+- Kullanıcı etkileşiminde boş davranış kalmaması için.
 
-### Tests
-- Command: `flutter test`
-- Result: `All tests passed` (current suite contains smoke test only).
+### 4.7 Sukun ekranı işlevselleştirme
+Dosya: `lib/features/library/sukun_audio_page.dart`
 
-## 7. Current File Change List
-- `lib/main.dart`
-- `lib/core/utils/locale_utils.dart` (new)
-- `lib/features/settings/settings_provider.dart`
-- `lib/features/settings/settings_page.dart`
-- `lib/features/settings/location_selection_page.dart`
-- `lib/features/settings/diagnostics_page.dart`
-- `lib/features/quran/juz_reading_page.dart`
+Yapılanlar:
+- `ConsumerWidget` -> `ConsumerStatefulWidget` dönüştürüldü.
+- Slider’lar artık state + service (`setVolumes`) güncelliyor.
+- Sound grid kartları artık no-op değil:
+  - `playSukun(type)` çağrılıyor.
+  - seçili ses state’i işleniyor.
+  - kullanıcıya snackbar geri bildirimi veriliyor.
+- Async sonrası `context` kullanımı `context.mounted` ile güvenli hale getirildi.
+
+Neden:
+- Ekran mock davranıştan fonksiyonel davranışa çekildi.
+
+### 4.8 Router tefsir başlığı düzeltmesi
+Dosya: `lib/core/network/app_router.dart`
+
+Yapılanlar:
+- `/quran/tafsir/:id` route’unda `surahName` artık boş gönderilmiyor.
+- `allSurahs` üzerinden ilgili sure transliteration adı geçirilerek başlık tutarlılığı sağlandı.
+
+Neden:
+- Tefsir başlığında boş/eksik sure adı görünümü giderildi.
+
+### 4.9 Dil listesi veri kalitesi
+Dosya: `lib/core/constants/app_constants.dart`
+
+Yapılanlar:
+- Dil native adlarında bozulan karakterler temizlendi.
+- Dosya içinde control-char / bozulan Latin-1 kalıntıları temizlendi.
+- `Română` gibi bozulmuş görünen alanlar düzeltildi.
+
+Neden:
+- Dil seçici ekranında kullanıcıya bozuk metin gösterimi engellendi.
+
+## 5) Çok Dilli ARB Encoding Onarımı (Forensik + Pipeline)
+
+### 5.1 Sorunun tipi
+- ARB dosyalarının bir kısmı “UTF-8 byte’larının yanlış encoding tablosu ile tekrar yorumlanması” sonucu mojibake üretiyordu.
+- Kısım kısım cp1252/cp1254 etkisi vardı.
+
+### 5.2 Uygulanan teknik
+- Python 3.12 tam yolu kullanıldı:
+  - `C:\Users\UMUT\AppData\Local\Programs\Python\Python312\python.exe`
+- `git show HEAD:<file>` üzerinden head içeriği alındı.
+- Karışık bozulan karakterler için ters byte eşlemesi kuruldu:
+  - cp1252 inverse map
+  - cp1254 inverse map
+- İçerik, “orijinal byte akışına” geri çevrilip UTF-8 decode edilerek JSON yeniden üretildi.
+- Sadece iyileşme durumunda dosya overwrite edildi (marker/control sayısı azalıyorsa).
+
+### 5.3 Sonuç
+- ARB setinde çoklu dosya düzeltmesi yapıldı.
+- Önemli örnekler: `app_tr.arb`, `app_ar.arb`, `app_dv.arb` ve ek bozuk dosyalar.
+- Control karakter denetiminde sonuç:
+  - `lib/l10n/app_*.arb` içinde `control char` sayısı: **0**
+- Not:
+  - `app_da.arb` ve `app_gd.arb` içinde görülen bazı karakterler dilin doğal ortografik karakterleri (ör. Å/Ù kökenli) olabileceği için agresif değiştirilmedi.
+
+## 6) L10n Kod Üretimi
+- Komut çalıştırıldı:
+  - `flutter gen-l10n`
+- Sonuç:
+  - Başarılı üretim.
+  - Çok sayıda locale için "untranslated" raporu normal şekilde devam ediyor (veri kapsam durumu, build blocker değil).
+
+## 7) Kalite Kapısı Sonuçları
+
+### 7.1 Static Analyze
+- Komut: `flutter analyze`
+- Sonuç: **No issues found**
+
+### 7.2 Test
+- Komut: `flutter test`
+- Sonuç: **All tests passed**
+- Mevcut test kapsamı: smoke test ağırlıklı.
+
+## 8) Bu Turdaki Kritik Dosyalar (Kod)
+- `lib/features/quran/tafsir_page.dart`
+- `lib/core/services/tafsir_local_service.dart`
 - `lib/features/quran/surah_reading_page.dart`
-- `lib/core/constants/live_streams.dart`
+- `lib/features/downloads/offline_downloads_page.dart`
 - `lib/features/tv/live_tv_page.dart`
-- `lib/features/places/places_map_page.dart`
-- `lib/features/premium/premium_provider.dart`
-- `tool/translate_arbs.dart`
+- `lib/core/constants/live_streams.dart`
+- `lib/features/settings/settings_page.dart`
+- `lib/features/library/sukun_audio_page.dart`
+- `lib/core/network/app_router.dart`
+- `lib/core/constants/app_constants.dart`
 
-## 8. Remaining Risk / Known Gaps (Important for Antigravity)
-1. **Localization content completeness**
-   - Many ARB locales still contain untranslated/fallback English segments.
-   - Infra now handles locale codes better; content quality still needs phased translation QA.
+## 9) Bu Turdaki Kritik Dosyalar (Localization)
+- Çoklu ARB iyileştirme uygulandı (yüksek sayıda dosya değişti).
+- Özellikle onarılan temel dosyalar:
+  - `lib/l10n/app_tr.arb`
+  - `lib/l10n/app_ar.arb`
+  - `lib/l10n/app_en.arb`
+  - `lib/l10n/app_dv.arb`
+  - ve diğer bozuk marker/control içeren locale dosyaları.
+- `flutter gen-l10n` sonrası ilgili `app_localizations_*.dart` dosyaları güncellendi.
 
-2. **Live TV source validation**
-   - Streams now have robust error/fallback UX, but channel source authenticity should be reviewed/verified by product owner.
-   - If channel IDs change, TV still fails gracefully and offers external open.
+## 10) Bilinen Kalan Durumlar / Antigravity İçin Açık İşler
+1. Çeviri kapsamı (untranslated mesajlar)
+- Şu an teknik bozukluk temizlenmiş olsa da birçok locale’de içerik eksik.
+- Bu, encode hatası değil içerik tamamlama işi.
 
-3. **Audio assets**
-   - Local asset folders currently have very limited/no actual media files in this branch.
-   - Surah playback now has stronger URL fallbacks, but local adhan/UI sounds still depend on asset pack completion.
+2. Live TV kaynak doğrulaması
+- Fallback mimarisi güçlendirildi.
+- Ürün tarafından onaylı stream listesiyle son kanal doğrulaması yapılmalı.
 
-4. **Automated coverage depth**
-   - Test suite is currently shallow (smoke only).
-   - Functional widget/integration coverage should be expanded (see next section).
+3. Test kapsamı
+- Analyze/test temiz.
+- Ancak entegrasyon düzeyi senaryolar (TV fallback, offline audio akışı, locale picker uç durumları) için ilave widget/integration test önerilir.
 
-## 9. Recommended Next Steps for Antigravity (Priority Order)
-
-### P0 (Do Next)
-1. Add widget/integration tests for:
-   - Juz data loading and rendering for at least one juz.
-   - Locale reset path (`system default`) and composite locale (`zh_CN`) application.
-   - TV page error state and fallback button behavior.
-   - GPS permission denied/allowed branches in location page.
-
-2. Validate live stream channel IDs against product-approved source list and update `live_streams.dart`.
-
-3. Provide/ship audio asset packs (adhan + UI) or shift those actions to remote URLs with explicit offline policy.
-
-### P1
-1. Continue migrating hardcoded strings in other feature pages to `AppLocalizations`.
-2. Add diagnostics export/share capability for bug reporting.
-3. Add structured logger for media/network failures.
-
-### P2
-1. Improve place dataset coverage by region and optionally user geocoded country.
-2. Add caching strategy for Quran/juz parsed data to reduce repeated JSON parse cost.
-
-## 10. Sync and Delivery Notes
-- This work is currently in:
-  - `C:\Users\UMUT\OneDrive\Masaüstü\Way of Allah\sirat_i_nur_work`
-- Requested canonical path is:
+## 11) Antigravity Devralma Notları (Operasyonel)
+- Geliştirme ve doğrulama bu path’te yapıldı:
   - `A:\Way of Allah\sirat_i_nur`
+- Python tam yolu tespit edildi ve kullanılabilir:
+  - `C:\Users\UMUT\AppData\Local\Programs\Python\Python312\python.exe`
+- Flutter kilit dosyaları gerektiğinde temizlendi:
+  - `C:\src\flutter\bin\cache\flutter.bat.lock`
+  - `C:\src\flutter\bin\cache\lockfile`
 
-If Antigravity is resuming directly on `A:\...`, it should pull/apply these exact file changes from this working copy or from pushed GitHub commits once synced.
-
-## 11. Final Status
-- Placeholder removals completed for key complaint areas (`Juz`, `Places`).
-- Critical locale-state bug fixed.
-- TV and audio reliability significantly hardened.
-- Diagnostics converted from static to factual checks.
-- `flutter analyze` clean.
-- `flutter test` passing.
+## 12) Son Durum (Teslim Cümlesi)
+- Ses, TV, tefsir, dil/bölge ve no-op akışlarında bu tur için kritik stabilizasyon tamamlandı.
+- Analyze ve test yeşil.
+- Çok dilli encoding bozulmalarında geniş çaplı onarım uygulandı.
+- Antigravity bu state’ten doğrudan feature hardening + translation completeness + integration test genişletmesiyle devam edebilir.

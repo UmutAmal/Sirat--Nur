@@ -36,7 +36,7 @@ class AppLocalizationsCo extends AppLocalizations {
   String get prayerTimes => 'Tempi di preghiera';
 
   @override
-  String get continueReading => 'CuntinuÃ  Reading';
+  String get continueReading => 'Cuntinuà Reading';
 
   @override
   String get getLifetimePro => 'Ottene Lifetime Pro';
@@ -84,7 +84,7 @@ class AppLocalizationsCo extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'A cache hÃ¨ stata sguassata';
+  String get cacheClearedSuccess => 'A cache hè stata sguassata';
 
   @override
   String get location => 'Locu';
@@ -93,10 +93,10 @@ class AppLocalizationsCo extends AppLocalizations {
   String get language => 'Lingua';
 
   @override
-  String get selectLanguage => 'SelezziunÃ  a lingua';
+  String get selectLanguage => 'Selezziunà a lingua';
 
   @override
-  String get searchLanguage => 'Cerca in piÃ¹ di 180 lingue...';
+  String get searchLanguage => 'Cerca in più di 180 lingue...';
 
   @override
   String get systemDefault => 'Sistema Default';
@@ -126,10 +126,10 @@ class AppLocalizationsCo extends AppLocalizations {
   String get cancel => 'Cancella';
 
   @override
-  String get save => 'SalvÃ ';
+  String get save => 'Salvà';
 
   @override
-  String get delete => 'SguassÃ ';
+  String get delete => 'Sguassà';
 
   @override
   String get edit => 'Edit';
@@ -141,10 +141,10 @@ class AppLocalizationsCo extends AppLocalizations {
   String get ok => 'OK';
 
   @override
-  String get yes => 'IÃ¨';
+  String get yes => 'Iè';
 
   @override
-  String get no => 'InnÃ²';
+  String get no => 'Innò';
 
   @override
   String get surah => 'Sura';
@@ -300,7 +300,7 @@ class AppLocalizationsCo extends AppLocalizations {
   String get qiblaFound => 'Qibla trovu!';
 
   @override
-  String get turnDevice => 'Turn u vostru dispusitivu per affruntÃ  u Qibla';
+  String get turnDevice => 'Turn u vostru dispusitivu per affruntà u Qibla';
 
   @override
   String get notifications => 'Notificazioni';
@@ -330,7 +330,7 @@ class AppLocalizationsCo extends AppLocalizations {
   String get systemTheme => 'Tema di u sistema';
 
   @override
-  String get about => 'Ã€ propositu';
+  String get about => 'À propositu';
 
   @override
   String get version => 'Versione';
@@ -372,13 +372,13 @@ class AppLocalizationsCo extends AppLocalizations {
   String get noInternet => 'Nisuna cunnessione Internet';
 
   @override
-  String get checkConnection => 'Per piacÃ¨ verificate a vostra cunnessione';
+  String get checkConnection => 'Per piacè verificate a vostra cunnessione';
 
   @override
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Avanzate Ã  Pro';
+  String get upgradeToPro => 'Avanzate à Pro';
 
   @override
   String get proFeatures => 'Funzioni Pro';
@@ -399,7 +399,7 @@ class AppLocalizationsCo extends AppLocalizations {
   String get getStarted => 'Cuminciate';
 
   @override
-  String get skip => 'SaltÃ ';
+  String get skip => 'Saltà';
 
   @override
   String get next => 'Dopu';
@@ -408,25 +408,25 @@ class AppLocalizationsCo extends AppLocalizations {
   String get done => 'Fattu';
 
   @override
-  String get onboarding1Title => 'Benvenuti Ã  a Via di Allah';
+  String get onboarding1Title => 'Benvenuti à a Via di Allah';
 
   @override
   String get onboarding1Desc =>
-      'A vostra app completa di cumpagnie islamica per i tempi di preghiera, Coran, Ã¨ piÃ¹';
+      'A vostra app completa di cumpagnie islamica per i tempi di preghiera, Coran, è più';
 
   @override
   String get onboarding2Title => 'Tempi di preghiera';
 
   @override
   String get onboarding2Desc =>
-      'Tempi di preghiera precisi basatu annantu Ã  a vostra situazione';
+      'Tempi di preghiera precisi basatu annantu à a vostra situazione';
 
   @override
   String get onboarding3Title => 'Coran & More';
 
   @override
   String get onboarding3Desc =>
-      'Leghjite u Coran, seguite a vostra lettura Ã¨ esplora u cuntenutu islamicu';
+      'Leghjite u Coran, seguite a vostra lettura è esplora u cuntenutu islamicu';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -621,7 +621,7 @@ class AppLocalizationsCo extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

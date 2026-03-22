@@ -9,13 +9,13 @@ class AppLocalizationsCs extends AppLocalizations {
   AppLocalizationsCs([String locale = 'cs']) : super(locale);
 
   @override
-  String get appTitle => 'Cesta AllÃ¡ha';
+  String get appTitle => 'Cesta Alláha';
 
   @override
   String get home => 'Domov';
 
   @override
-  String get quran => 'KorÃ¡n';
+  String get quran => 'Korán';
 
   @override
   String get qibla => 'Qibla';
@@ -24,37 +24,37 @@ class AppLocalizationsCs extends AppLocalizations {
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'KalendÃ¡Å™';
+  String get calendar => 'Kalendář';
 
   @override
-  String get settings => 'NastavenÃ­';
+  String get settings => 'Nastavení';
 
   @override
-  String get nextPrayer => 'DalÅ¡Ã­ modlitba';
+  String get nextPrayer => 'Další modlitba';
 
   @override
-  String get prayerTimes => 'ModlitebnÃ­ Äasy';
+  String get prayerTimes => 'Modlitební časy';
 
   @override
-  String get continueReading => 'PokraÄovat ve ÄtenÃ­';
+  String get continueReading => 'Pokračovat ve čtení';
 
   @override
-  String get getLifetimePro => 'ZÃ­skejte Lifetime Pro';
+  String get getLifetimePro => 'Získejte Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'OdemknÄ›te Tajweed a pokroÄilÃ© funkce';
+  String get unlockTajweed => 'Odemkněte Tajweed a pokročilé funkce';
 
   @override
-  String get prayerCalculation => 'VÃ½poÄet modlitby';
+  String get prayerCalculation => 'Výpočet modlitby';
 
   @override
-  String get method => 'Metoda vÃ½poÄtu';
+  String get method => 'Metoda výpočtu';
 
   @override
-  String get madhab => 'Asr JuristickÃ¡ metoda';
+  String get madhab => 'Asr Juristická metoda';
 
   @override
-  String get surahs => 'sÃºry';
+  String get surahs => 'súry';
 
   @override
   String get ayahs => 'Ayahs';
@@ -63,7 +63,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'VÃ½chod slunce';
+  String get sunrise => 'Východ slunce';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -78,16 +78,16 @@ class AppLocalizationsCs extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
-  String get dataStorage => 'Data a ÃºloÅ¾iÅ¡tÄ›';
+  String get dataStorage => 'Data a úložiště';
 
   @override
-  String get clearCache => 'Vymazat mezipamÄ›Å¥';
+  String get clearCache => 'Vymazat mezipaměť';
 
   @override
-  String get cacheClearedSuccess => 'MezipamÄ›Å¥ byla ÃºspÄ›Å¡nÄ› vymazÃ¡na';
+  String get cacheClearedSuccess => 'Mezipaměť byla úspěšně vymazána';
 
   @override
-  String get location => 'UmÃ­stÄ›nÃ­';
+  String get location => 'Umístění';
 
   @override
   String get language => 'Jazyk';
@@ -96,25 +96,25 @@ class AppLocalizationsCs extends AppLocalizations {
   String get selectLanguage => 'Vyberte Jazyk';
 
   @override
-  String get searchLanguage => 'Hledejte ve vÃ­ce neÅ¾ 180 jazycÃ­ch...';
+  String get searchLanguage => 'Hledejte ve více než 180 jazycích...';
 
   @override
-  String get systemDefault => 'VÃ½chozÃ­ nastavenÃ­ systÃ©mu';
+  String get systemDefault => 'Výchozí nastavení systému';
 
   @override
-  String get currentLocation => 'AktuÃ¡lnÃ­ poloha (GPS)';
+  String get currentLocation => 'Aktuální poloha (GPS)';
 
   @override
-  String get search => 'VyhledÃ¡vÃ¡nÃ­';
+  String get search => 'Vyhledávání';
 
   @override
-  String get searchHint => 'VyhledÃ¡vÃ¡nÃ­...';
+  String get searchHint => 'Vyhledávání...';
 
   @override
-  String get noResults => 'Nebyly nalezeny Å¾Ã¡dnÃ© vÃ½sledky';
+  String get noResults => 'Nebyly nalezeny žádné výsledky';
 
   @override
-  String get loading => 'NaÄÃ­tÃ¡nÃ­...';
+  String get loading => 'Načítání...';
 
   @override
   String get error => 'Chyba';
@@ -123,10 +123,10 @@ class AppLocalizationsCs extends AppLocalizations {
   String get retry => 'Zkuste to znovu';
 
   @override
-  String get cancel => 'ZruÅ¡it';
+  String get cancel => 'Zrušit';
 
   @override
-  String get save => 'UloÅ¾it';
+  String get save => 'Uložit';
 
   @override
   String get delete => 'Vymazat';
@@ -135,7 +135,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get edit => 'Upravit';
 
   @override
-  String get close => 'BlÃ­zko';
+  String get close => 'Blízko';
 
   @override
   String get ok => 'OK';
@@ -144,10 +144,10 @@ class AppLocalizationsCs extends AppLocalizations {
   String get yes => 'Ano';
 
   @override
-  String get no => 'Å½Ã¡dnÃ½';
+  String get no => 'Žádný';
 
   @override
-  String get surah => 'sÃºra';
+  String get surah => 'súra';
 
   @override
   String get juz => 'Juz';
@@ -156,37 +156,37 @@ class AppLocalizationsCs extends AppLocalizations {
   String get page => 'Strana';
 
   @override
-  String get reading => 'ÄŒtenÃ­';
+  String get reading => 'Čtení';
 
   @override
-  String get recitation => 'PÅ™ednes';
+  String get recitation => 'Přednes';
 
   @override
-  String get translation => 'PÅ™eklad';
+  String get translation => 'Překlad';
 
   @override
   String get tafsir => 'Tafsir';
 
   @override
-  String get bookmarks => 'ZÃ¡loÅ¾ky';
+  String get bookmarks => 'Záložky';
 
   @override
-  String get addBookmark => 'PÅ™idat zÃ¡loÅ¾ku';
+  String get addBookmark => 'Přidat záložku';
 
   @override
-  String get removeBookmark => 'Odebrat zÃ¡loÅ¾ku';
+  String get removeBookmark => 'Odebrat záložku';
 
   @override
-  String get lastRead => 'Naposledy pÅ™eÄteno';
+  String get lastRead => 'Naposledy přečteno';
 
   @override
-  String get dailyZikr => 'DennÃ­ Zikr';
+  String get dailyZikr => 'Denní Zikr';
 
   @override
-  String get morningZikr => 'RÃ¡no Zikr';
+  String get morningZikr => 'Ráno Zikr';
 
   @override
-  String get eveningZikr => 'VeÄernÃ­ Zikr';
+  String get eveningZikr => 'Večerní Zikr';
 
   @override
   String get tasbih => 'Tasbih';
@@ -198,7 +198,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get masaail => 'Masa\'il';
 
   @override
-  String get hadith => 'hadÃ­sy';
+  String get hadith => 'hadísy';
 
   @override
   String get hadithCollection => 'Hadith Collection';
@@ -207,73 +207,73 @@ class AppLocalizationsCs extends AppLocalizations {
   String get hadithBooks => 'Hadith knihy';
 
   @override
-  String get searchHadith => 'Prohledejte hadÃ­sy';
+  String get searchHadith => 'Prohledejte hadísy';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';
 
   @override
-  String get namesOfAllah => 'JmÃ©na AllÃ¡ha';
+  String get namesOfAllah => 'Jména Alláha';
 
   @override
-  String get liveTv => 'Å½ivÃ¡ televize';
+  String get liveTv => 'Živá televize';
 
   @override
-  String get watchLive => 'Sledujte Å¾ivÄ›';
+  String get watchLive => 'Sledujte živě';
 
   @override
-  String get streamError => 'Chyba streamovÃ¡nÃ­';
+  String get streamError => 'Chyba streamování';
 
   @override
-  String get reload => 'Znovu naÄÃ­st';
+  String get reload => 'Znovu načíst';
 
   @override
-  String get openInYoutube => 'OtevÅ™Ã­t na YouTube';
+  String get openInYoutube => 'Otevřít na YouTube';
 
   @override
   String get ibadahTracker => 'Ibadah Tracker';
 
   @override
-  String get fasting => 'PÅ¯st';
+  String get fasting => 'Půst';
 
   @override
-  String get quranReading => 'ÄŒtenÃ­ KorÃ¡nu';
+  String get quranReading => 'Čtení Koránu';
 
   @override
   String get prayers => 'Modlitby';
 
   @override
-  String get dhikrCount => 'HrabÄ› Dhikr';
+  String get dhikrCount => 'Hrabě Dhikr';
 
   @override
-  String get weeklyProgress => 'TÃ½dennÃ­ pokrok';
+  String get weeklyProgress => 'Týdenní pokrok';
 
   @override
-  String get monthlyProgress => 'MÄ›sÃ­ÄnÃ­ pokrok';
+  String get monthlyProgress => 'Měsíční pokrok';
 
   @override
   String get statistics => 'Statistika';
 
   @override
-  String get hijriCalendar => 'KalendÃ¡Å™ hidÅ¾ra';
+  String get hijriCalendar => 'Kalendář hidžra';
 
   @override
-  String get gregorianCalendar => 'GregoriÃ¡nskÃ½ kalendÃ¡Å™';
+  String get gregorianCalendar => 'Gregoriánský kalendář';
 
   @override
   String get today => 'Dnes';
 
   @override
-  String get tomorrow => 'ZÃ­tra';
+  String get tomorrow => 'Zítra';
 
   @override
-  String get yesterday => 'VÄera';
+  String get yesterday => 'Včera';
 
   @override
-  String get specialDays => 'SpeciÃ¡lnÃ­ dny';
+  String get specialDays => 'Speciální dny';
 
   @override
-  String get ramadan => 'RamadÃ¡n';
+  String get ramadan => 'Ramadán';
 
   @override
   String get eidAlFitr => 'Eid Al-Fitr';
@@ -285,49 +285,49 @@ class AppLocalizationsCs extends AppLocalizations {
   String get laylatAlQadr => 'Laylat Al-Qadr';
 
   @override
-  String get qiblaDirection => 'SmÄ›r Qibla';
+  String get qiblaDirection => 'Směr Qibla';
 
   @override
   String get compass => 'Kompas';
 
   @override
-  String get degrees => 'stupnÄ›';
+  String get degrees => 'stupně';
 
   @override
-  String get north => 'SevernÃ­';
+  String get north => 'Severní';
 
   @override
   String get qiblaFound => 'Qibla nalezena!';
 
   @override
-  String get turnDevice => 'OtoÄte svÃ© zaÅ™Ã­zenÃ­ Äelem k Qibla';
+  String get turnDevice => 'Otočte své zařízení čelem k Qibla';
 
   @override
-  String get notifications => 'OznÃ¡menÃ­';
+  String get notifications => 'Oznámení';
 
   @override
-  String get prayerNotifications => 'ModlitebnÃ­ oznÃ¡menÃ­';
+  String get prayerNotifications => 'Modlitební oznámení';
 
   @override
-  String get enableNotifications => 'Povolit oznÃ¡menÃ­';
+  String get enableNotifications => 'Povolit oznámení';
 
   @override
-  String get notificationTime => 'ÄŒas oznÃ¡menÃ­';
+  String get notificationTime => 'Čas oznámení';
 
   @override
-  String get beforePrayer => 'minut pÅ™ed modlitbou';
+  String get beforePrayer => 'minut před modlitbou';
 
   @override
-  String get theme => 'TÃ©ma';
+  String get theme => 'Téma';
 
   @override
-  String get lightMode => 'SvÄ›telnÃ½ reÅ¾im';
+  String get lightMode => 'Světelný režim';
 
   @override
-  String get darkMode => 'TmavÃ½ reÅ¾im';
+  String get darkMode => 'Tmavý režim';
 
   @override
-  String get systemTheme => 'SystÃ©movÃ© tÃ©ma';
+  String get systemTheme => 'Systémové téma';
 
   @override
   String get about => 'O';
@@ -336,46 +336,46 @@ class AppLocalizationsCs extends AppLocalizations {
   String get version => 'Verze';
 
   @override
-  String get privacyPolicy => 'ZÃ¡sady ochrany osobnÃ­ch ÃºdajÅ¯';
+  String get privacyPolicy => 'Zásady ochrany osobních údajů';
 
   @override
-  String get termsOfService => 'PodmÃ­nky sluÅ¾by';
+  String get termsOfService => 'Podmínky služby';
 
   @override
-  String get contactUs => 'Kontaktujte nÃ¡s';
+  String get contactUs => 'Kontaktujte nás';
 
   @override
-  String get rateApp => 'OhodnoÅ¥te aplikaci';
+  String get rateApp => 'Ohodnoťte aplikaci';
 
   @override
-  String get shareApp => 'SdÃ­let aplikaci';
+  String get shareApp => 'Sdílet aplikaci';
 
   @override
-  String get downloadManager => 'SprÃ¡vce stahovÃ¡nÃ­';
+  String get downloadManager => 'Správce stahování';
 
   @override
-  String get downloads => 'StahovÃ¡nÃ­';
+  String get downloads => 'Stahování';
 
   @override
-  String get downloading => 'StahovÃ¡nÃ­...';
+  String get downloading => 'Stahování...';
 
   @override
-  String get downloadComplete => 'StahovÃ¡nÃ­ dokonÄeno';
+  String get downloadComplete => 'Stahování dokončeno';
 
   @override
-  String get downloadFailed => 'StahovÃ¡nÃ­ se nezdaÅ™ilo';
+  String get downloadFailed => 'Stahování se nezdařilo';
 
   @override
-  String get offlineMode => 'ReÅ¾im offline';
+  String get offlineMode => 'Režim offline';
 
   @override
-  String get noInternet => 'Å½Ã¡dnÃ© pÅ™ipojenÃ­ k internetu';
+  String get noInternet => 'Žádné připojení k internetu';
 
   @override
-  String get checkConnection => 'Zkontrolujte prosÃ­m svÃ© pÅ™ipojenÃ­';
+  String get checkConnection => 'Zkontrolujte prosím své připojení';
 
   @override
-  String get premium => 'PojistnÃ©';
+  String get premium => 'Pojistné';
 
   @override
   String get upgradeToPro => 'Upgradujte na Pro';
@@ -387,46 +387,45 @@ class AppLocalizationsCs extends AppLocalizations {
   String get removeAds => 'Odebrat reklamy';
 
   @override
-  String get unlockAll => 'Odemknout veÅ¡kerÃ½ obsah';
+  String get unlockAll => 'Odemknout veškerý obsah';
 
   @override
-  String get exclusiveContent => 'ExkluzivnÃ­ obsah';
+  String get exclusiveContent => 'Exkluzivní obsah';
 
   @override
-  String get welcome => 'VÃ­tejte';
+  String get welcome => 'Vítejte';
 
   @override
-  String get getStarted => 'ZaÄnÄ›te';
+  String get getStarted => 'Začněte';
 
   @override
-  String get skip => 'PÅ™eskoÄit';
+  String get skip => 'Přeskočit';
 
   @override
-  String get next => 'DalÅ¡Ã­';
+  String get next => 'Další';
 
   @override
   String get done => 'Hotovo';
 
   @override
-  String get onboarding1Title => 'VÃ­tejte na cestÄ› AllÃ¡ha';
+  String get onboarding1Title => 'Vítejte na cestě Alláha';
 
   @override
   String get onboarding1Desc =>
-      'VaÅ¡e kompletnÃ­ islÃ¡mskÃ¡ doprovodnÃ¡ aplikace pro modlitebnÃ­ Äasy, KorÃ¡n a dalÅ¡Ã­';
+      'Vaše kompletní islámská doprovodná aplikace pro modlitební časy, Korán a další';
 
   @override
-  String get onboarding2Title => 'ModlitebnÃ­ Äasy';
+  String get onboarding2Title => 'Modlitební časy';
 
   @override
-  String get onboarding2Desc =>
-      'PÅ™esnÃ© Äasy modliteb na zÃ¡kladÄ› vaÅ¡Ã­ polohy';
+  String get onboarding2Desc => 'Přesné časy modliteb na základě vaší polohy';
 
   @override
-  String get onboarding3Title => 'KorÃ¡n a dalÅ¡Ã­';
+  String get onboarding3Title => 'Korán a další';
 
   @override
   String get onboarding3Desc =>
-      'PÅ™eÄtÄ›te si KorÃ¡n, sledujte svÃ© ÄtenÃ­ a prozkoumejte islÃ¡mskÃ½ obsah';
+      'Přečtěte si Korán, sledujte své čtení a prozkoumejte islámský obsah';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -621,7 +620,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

@@ -1,6 +1,6 @@
-﻿{
+{
   "@@locale": "lus",
-  "appTitle": "Sirat-Ä± Nur chuan a rawn ti a",
+  "appTitle": "Sirat-ı Nur chuan a rawn ti a",
   "home": "In lamah",
   "quran": "Quran a ni",
   "qibla": "Qibla a ni",
@@ -133,7 +133,7 @@
   "skip": "Skip rawh",
   "next": "A dawtah chuan",
   "done": "Tih zo tawh",
-  "onboarding1Title": "Sirat-Ä± Nur-ah hian kan lo lawm a che",
+  "onboarding1Title": "Sirat-ı Nur-ah hian kan lo lawm a che",
   "onboarding1Desc": "Tawngtai hun, Quran, leh thil dang tam tak tan Islamic companion app kimchang",
   "onboarding2Title": "Tawngtai Hun",
   "onboarding2Desc": "I awmna hmun a zirin tawngtai hun dik tak",
@@ -195,7 +195,7 @@
   "compassSmoothing": "Compass hmanga tihfai",
   "reduceSensorJitter": "Needle nghet zawk neih theih nan sensor jitter tihtlem.",
   "calibrationOffset": "Calibration Offset a ni",
-  "currentOffset": "Tunah hian: {offset}Â°",
+  "currentOffset": "Tunah hian: {offset}°",
   "manualCorrectionDesc": "I compass-in manual correction a mamawh chuan siamrem rawh. Positive value te chu darkar lam hawiin a inher thin.",
   "apply": "Dil rawh",
   "resetOnboarding": "Onboarding chu reset rawh",

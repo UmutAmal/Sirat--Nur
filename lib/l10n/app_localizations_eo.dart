@@ -18,7 +18,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get quran => 'Korano';
 
   @override
-  String get qibla => 'Äˆiblo';
+  String get qibla => 'Ĉiblo';
 
   @override
   String get zikr => 'Zikr';
@@ -30,22 +30,22 @@ class AppLocalizationsEo extends AppLocalizations {
   String get settings => 'Agordoj';
 
   @override
-  String get nextPrayer => 'Sekva PreÄo';
+  String get nextPrayer => 'Sekva Preĝo';
 
   @override
-  String get prayerTimes => 'PreÄaj Tempoj';
+  String get prayerTimes => 'Preĝaj Tempoj';
 
   @override
-  String get continueReading => 'DaÅ­re Legado';
+  String get continueReading => 'Daŭre Legado';
 
   @override
   String get getLifetimePro => 'Akiru Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'MalÅlosu Tajweed kaj Altnivelajn Trajtojn';
+  String get unlockTajweed => 'Malŝlosu Tajweed kaj Altnivelajn Trajtojn';
 
   @override
-  String get prayerCalculation => 'PreÄa Kalkulo';
+  String get prayerCalculation => 'Preĝa Kalkulo';
 
   @override
   String get method => 'Kalkula Metodo';
@@ -63,7 +63,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'SunleviÄo';
+  String get sunrise => 'Sunleviĝo';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -81,10 +81,10 @@ class AppLocalizationsEo extends AppLocalizations {
   String get dataStorage => 'Datumoj kaj Stokado';
 
   @override
-  String get clearCache => 'Malplenigi KaÅmemoron';
+  String get clearCache => 'Malplenigi Kaŝmemoron';
 
   @override
-  String get cacheClearedSuccess => 'KaÅmemoro malpleniÄis sukcese';
+  String get cacheClearedSuccess => 'Kaŝmemoro malpleniĝis sukcese';
 
   @override
   String get location => 'Loko';
@@ -96,25 +96,25 @@ class AppLocalizationsEo extends AppLocalizations {
   String get selectLanguage => 'Elektu Lingvon';
 
   @override
-  String get searchLanguage => 'SerÄ‰u pli ol 180 lingvojn...';
+  String get searchLanguage => 'Serĉu pli ol 180 lingvojn...';
 
   @override
-  String get systemDefault => 'Sistemo DefaÅ­lto';
+  String get systemDefault => 'Sistemo Defaŭlto';
 
   @override
   String get currentLocation => 'Nuna Loko (GPS)';
 
   @override
-  String get search => 'SerÄ‰u';
+  String get search => 'Serĉu';
 
   @override
-  String get searchHint => 'SerÄ‰u...';
+  String get searchHint => 'Serĉu...';
 
   @override
   String get noResults => 'Neniuj rezultoj trovitaj';
 
   @override
-  String get loading => 'Åœargante...';
+  String get loading => 'Ŝargante...';
 
   @override
   String get error => 'Eraro';
@@ -153,7 +153,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'PaÄo';
+  String get page => 'Paĝo';
 
   @override
   String get reading => 'Legado';
@@ -180,7 +180,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get lastRead => 'Lasta Legita';
 
   @override
-  String get dailyZikr => 'Äˆiutaga Zikr';
+  String get dailyZikr => 'Ĉiutaga Zikr';
 
   @override
   String get morningZikr => 'Matene Zikr';
@@ -207,7 +207,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get hadithBooks => 'Hadito-Libroj';
 
   @override
-  String get searchHadith => 'SerÄ‰u Haditon';
+  String get searchHadith => 'Serĉu Haditon';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';
@@ -225,7 +225,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get streamError => 'Flua eraro';
 
   @override
-  String get reload => 'ReÅargi';
+  String get reload => 'Reŝargi';
 
   @override
   String get openInYoutube => 'Malfermu en Jutubo';
@@ -240,7 +240,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get quranReading => 'Legado de la Korano';
 
   @override
-  String get prayers => 'PreÄoj';
+  String get prayers => 'Preĝoj';
 
   @override
   String get dhikrCount => 'Dhikr Grafo';
@@ -261,13 +261,13 @@ class AppLocalizationsEo extends AppLocalizations {
   String get gregorianCalendar => 'Gregoria Kalendaro';
 
   @override
-  String get today => 'HodiaÅ­';
+  String get today => 'Hodiaŭ';
 
   @override
-  String get tomorrow => 'MorgaÅ­';
+  String get tomorrow => 'Morgaŭ';
 
   @override
-  String get yesterday => 'HieraÅ­';
+  String get yesterday => 'Hieraŭ';
 
   @override
   String get specialDays => 'Specialaj Tagoj';
@@ -297,7 +297,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get north => 'Nordo';
 
   @override
-  String get qiblaFound => 'Äˆiblo trovita!';
+  String get qiblaFound => 'Ĉiblo trovita!';
 
   @override
   String get turnDevice => 'Turnu vian aparaton por alfronti la Kiblon';
@@ -306,7 +306,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get notifications => 'Sciigoj';
 
   @override
-  String get prayerNotifications => 'PreÄaj Sciigoj';
+  String get prayerNotifications => 'Preĝaj Sciigoj';
 
   @override
   String get enableNotifications => 'Ebligu Sciigojn';
@@ -315,16 +315,16 @@ class AppLocalizationsEo extends AppLocalizations {
   String get notificationTime => 'Tempo de Sciigo';
 
   @override
-  String get beforePrayer => 'minutojn antaÅ­ preÄo';
+  String get beforePrayer => 'minutojn antaŭ preĝo';
 
   @override
   String get theme => 'Temo';
 
   @override
-  String get lightMode => 'Luma ReÄimo';
+  String get lightMode => 'Luma Reĝimo';
 
   @override
-  String get darkMode => 'Malhela ReÄimo';
+  String get darkMode => 'Malhela Reĝimo';
 
   @override
   String get systemTheme => 'Sistema Temo';
@@ -339,7 +339,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get privacyPolicy => 'Privateca Politiko';
 
   @override
-  String get termsOfService => 'ServokondiÄ‰oj';
+  String get termsOfService => 'Servokondiĉoj';
 
   @override
   String get contactUs => 'Kontaktu Nin';
@@ -351,22 +351,22 @@ class AppLocalizationsEo extends AppLocalizations {
   String get shareApp => 'Kunhavigi Apon';
 
   @override
-  String get downloadManager => 'ElÅuta Administranto';
+  String get downloadManager => 'Elŝuta Administranto';
 
   @override
-  String get downloads => 'ElÅutoj';
+  String get downloads => 'Elŝutoj';
 
   @override
-  String get downloading => 'ElÅutante...';
+  String get downloading => 'Elŝutante...';
 
   @override
-  String get downloadComplete => 'ElÅutu Kompleta';
+  String get downloadComplete => 'Elŝutu Kompleta';
 
   @override
-  String get downloadFailed => 'ElÅuto malsukcesis';
+  String get downloadFailed => 'Elŝuto malsukcesis';
 
   @override
-  String get offlineMode => 'Senkonekta ReÄimo';
+  String get offlineMode => 'Senkonekta Reĝimo';
 
   @override
   String get noInternet => 'Neniu Interreta Konekto';
@@ -378,7 +378,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Äœisdatigu al Pro';
+  String get upgradeToPro => 'Ĝisdatigu al Pro';
 
   @override
   String get proFeatures => 'Profesiaj Trajtoj';
@@ -387,7 +387,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get removeAds => 'Forigi Reklamojn';
 
   @override
-  String get unlockAll => 'MalÅlosu Äˆian Enhavon';
+  String get unlockAll => 'Malŝlosu Ĉian Enhavon';
 
   @override
   String get exclusiveContent => 'Ekskluziva Enhavo';
@@ -412,13 +412,13 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String get onboarding1Desc =>
-      'Via kompleta islama akompana aplikaÄµo por preÄtempoj, Korano kaj pli';
+      'Via kompleta islama akompana aplikaĵo por preĝtempoj, Korano kaj pli';
 
   @override
-  String get onboarding2Title => 'PreÄaj Tempoj';
+  String get onboarding2Title => 'Preĝaj Tempoj';
 
   @override
-  String get onboarding2Desc => 'Precizaj preÄtempoj bazitaj sur via loko';
+  String get onboarding2Desc => 'Precizaj preĝtempoj bazitaj sur via loko';
 
   @override
   String get onboarding3Title => 'Korano & Pli';
@@ -620,7 +620,7 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

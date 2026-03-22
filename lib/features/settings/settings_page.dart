@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:share_plus/share_plus.dart';
@@ -169,7 +169,12 @@ class SettingsPage extends ConsumerWidget {
                     icon: Icons.info_outline_rounded,
                     title: l10n.version,
                     value: '2.0.0',
-                    onTap: () {},
+                    onTap: () => showAboutDialog(
+                      context: context,
+                      applicationName: 'Sirat-i Nur',
+                      applicationVersion: '2.0.0',
+                      applicationLegalese: '© Sirat-i Nur',
+                    ),
                   ),
                   const Divider(height: 1),
                   _settingsTile(
@@ -543,3 +548,4 @@ class SettingsPage extends ConsumerWidget {
     return code.toUpperCase();
   }
 }
+

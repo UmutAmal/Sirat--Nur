@@ -9,7 +9,7 @@ class AppLocalizationsNso extends AppLocalizations {
   AppLocalizationsNso([String locale = 'nso']) : super(locale);
 
   @override
-  String get appTitle => 'Sirat-Ä± Nur';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get home => 'Gae';
@@ -24,7 +24,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'TÅ¡hupamabaka';
+  String get calendar => 'Tšhupamabaka';
 
   @override
   String get settings => 'Dipeakanyo';
@@ -33,17 +33,17 @@ class AppLocalizationsNso extends AppLocalizations {
   String get nextPrayer => 'Thapelo e Latelago';
 
   @override
-  String get prayerTimes => 'Dinako tÅ¡a Thapelo';
+  String get prayerTimes => 'Dinako tša Thapelo';
 
   @override
   String get continueReading => 'Tswela pele go Bala';
 
   @override
-  String get getLifetimePro => 'HwetÅ¡a Pro ya Bophelo ka Moka';
+  String get getLifetimePro => 'Hwetša Pro ya Bophelo ka Moka';
 
   @override
   String get unlockTajweed =>
-      'Notlolla Tajweed & Dikarolo tÅ¡e di TÅ¡wetÅ¡ego Pele';
+      'Notlolla Tajweed & Dikarolo tše di Tšwetšego Pele';
 
   @override
   String get prayerCalculation => 'Palo ya Thapelo';
@@ -55,7 +55,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get madhab => 'Asr Mokgwa wa Molao';
 
   @override
-  String get surahs => 'Di- Surah tÅ¡a go swana le';
+  String get surahs => 'Di- Surah tša go swana le';
 
   @override
   String get ayahs => 'Di-Ayah';
@@ -64,7 +64,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Go hlaba ga letÅ¡atÅ¡i';
+  String get sunrise => 'Go hlaba ga letšatši';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -100,7 +100,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get searchLanguage => 'Batla maleme a 180+...';
 
   @override
-  String get systemDefault => 'TshepediÅ¡o ya Tlwaelo';
+  String get systemDefault => 'Tshepedišo ya Tlwaelo';
 
   @override
   String get currentLocation => 'Lefelo la Bjale (GPS) .';
@@ -112,13 +112,13 @@ class AppLocalizationsNso extends AppLocalizations {
   String get searchHint => 'Batla...';
 
   @override
-  String get noResults => 'Ga go na dipoelo tÅ¡e di hweditÅ¡wego';
+  String get noResults => 'Ga go na dipoelo tše di hweditšwego';
 
   @override
   String get loading => 'Loading...';
 
   @override
-  String get error => 'PhoÅ¡o';
+  String get error => 'Phošo';
 
   @override
   String get retry => 'Leka gape';
@@ -169,25 +169,25 @@ class AppLocalizationsNso extends AppLocalizations {
   String get tafsir => 'Tafsir e ile ya re';
 
   @override
-  String get bookmarks => 'Dipuku tÅ¡a go swaya';
+  String get bookmarks => 'Dipuku tša go swaya';
 
   @override
-  String get addBookmark => 'OketÅ¡a Letshwao la Puku';
+  String get addBookmark => 'Oketša Letshwao la Puku';
 
   @override
-  String get removeBookmark => 'TloÅ¡a Letshwao la Puku';
+  String get removeBookmark => 'Tloša Letshwao la Puku';
 
   @override
   String get lastRead => 'Bala La Mafelelo';
 
   @override
-  String get dailyZikr => 'Zikr ya letÅ¡atÅ¡i le letÅ¡atÅ¡i';
+  String get dailyZikr => 'Zikr ya letšatši le letšatši';
 
   @override
   String get morningZikr => 'Mesong Zikr';
 
   @override
-  String get eveningZikr => 'MantÅ¡iboa Zikr';
+  String get eveningZikr => 'Mantšiboa Zikr';
 
   @override
   String get tasbih => 'Tasbih ya go swana';
@@ -202,10 +202,10 @@ class AppLocalizationsNso extends AppLocalizations {
   String get hadith => 'Hadith ya go swana le yona';
 
   @override
-  String get hadithCollection => 'KgoboketÅ¡o ya Hadith';
+  String get hadithCollection => 'Kgoboketšo ya Hadith';
 
   @override
-  String get hadithBooks => 'Dipuku tÅ¡a Hadith';
+  String get hadithBooks => 'Dipuku tša Hadith';
 
   @override
   String get searchHadith => 'Batla Hadith';
@@ -223,10 +223,10 @@ class AppLocalizationsNso extends AppLocalizations {
   String get watchLive => 'Lebelela Live';
 
   @override
-  String get streamError => 'PhoÅ¡o ya moela';
+  String get streamError => 'Phošo ya moela';
 
   @override
-  String get reload => 'LaetÅ¡a gape';
+  String get reload => 'Laetša gape';
 
   @override
   String get openInYoutube => 'Bula ka YouTube';
@@ -256,10 +256,10 @@ class AppLocalizationsNso extends AppLocalizations {
   String get statistics => 'Dipalopalo';
 
   @override
-  String get hijriCalendar => 'TÅ¡hupamabaka ya Hijri';
+  String get hijriCalendar => 'Tšhupamabaka ya Hijri';
 
   @override
-  String get gregorianCalendar => 'TÅ¡hupamabaka ya Gregorian';
+  String get gregorianCalendar => 'Tšhupamabaka ya Gregorian';
 
   @override
   String get today => 'Lehono';
@@ -271,7 +271,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get yesterday => 'Maabane';
 
   @override
-  String get specialDays => 'MatÅ¡atÅ¡i a Kgethegilego';
+  String get specialDays => 'Matšatši a Kgethegilego';
 
   @override
   String get ramadan => 'Ramadan ya Ramadan';
@@ -298,22 +298,22 @@ class AppLocalizationsNso extends AppLocalizations {
   String get north => 'Leboa';
 
   @override
-  String get qiblaFound => 'Qibla e hweditÅ¡we!';
+  String get qiblaFound => 'Qibla e hweditšwe!';
 
   @override
   String get turnDevice => 'Retolla sesebediswa sa hao ho tobana le Qibla';
 
   @override
-  String get notifications => 'DitsebiÅ¡o';
+  String get notifications => 'Ditsebišo';
 
   @override
-  String get prayerNotifications => 'DitsebiÅ¡o tÅ¡a Thapelo';
+  String get prayerNotifications => 'Ditsebišo tša Thapelo';
 
   @override
-  String get enableNotifications => 'KgontÅ¡ha DitsebiÅ¡o';
+  String get enableNotifications => 'Kgontšha Ditsebišo';
 
   @override
-  String get notificationTime => 'Nako ya TsebiÅ¡o';
+  String get notificationTime => 'Nako ya Tsebišo';
 
   @override
   String get beforePrayer => 'metsotso pele ga thapelo';
@@ -322,13 +322,13 @@ class AppLocalizationsNso extends AppLocalizations {
   String get theme => 'Sehlogo sa ditaba';
 
   @override
-  String get lightMode => 'Mokgwa wa SeetÅ¡a';
+  String get lightMode => 'Mokgwa wa Seetša';
 
   @override
   String get darkMode => 'Mokgwa wa Lefifi';
 
   @override
-  String get systemTheme => 'Sehlogo sa TshepediÅ¡o';
+  String get systemTheme => 'Sehlogo sa Tshepedišo';
 
   @override
   String get about => 'Mabapi le';
@@ -364,7 +364,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get downloadComplete => 'Download Feletseng';
 
   @override
-  String get downloadFailed => 'Download e paletÅ¡we';
+  String get downloadFailed => 'Download e paletšwe';
 
   @override
   String get offlineMode => 'Mokgwa wa ka ntle ga Inthanete';
@@ -382,19 +382,19 @@ class AppLocalizationsNso extends AppLocalizations {
   String get upgradeToPro => 'Ntlafatsa go Pro';
 
   @override
-  String get proFeatures => 'Dikarolo tÅ¡a Pro';
+  String get proFeatures => 'Dikarolo tša Pro';
 
   @override
-  String get removeAds => 'TloÅ¡a DipapatÅ¡o';
+  String get removeAds => 'Tloša Dipapatšo';
 
   @override
   String get unlockAll => 'Notlolla Diteng ka Moka';
 
   @override
-  String get exclusiveContent => 'Diteng tÅ¡e di Kgethegilego';
+  String get exclusiveContent => 'Diteng tše di Kgethegilego';
 
   @override
-  String get welcome => 'Re a amogetÅ¡we';
+  String get welcome => 'Re a amogetšwe';
 
   @override
   String get getStarted => 'Thoma';
@@ -409,25 +409,25 @@ class AppLocalizationsNso extends AppLocalizations {
   String get done => 'E dirilwe';
 
   @override
-  String get onboarding1Title => 'Re a go amogela mo Sirat-Ä± Nur';
+  String get onboarding1Title => 'Re a go amogela mo Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
-      'Tiriso ya gago ya molekane wa Boiselamo ka botlalo bakeng sa dinako tÅ¡a thapelo, Quran, le tÅ¡e dingwe';
+      'Tiriso ya gago ya molekane wa Boiselamo ka botlalo bakeng sa dinako tša thapelo, Quran, le tše dingwe';
 
   @override
-  String get onboarding2Title => 'Dinako tÅ¡a Thapelo';
+  String get onboarding2Title => 'Dinako tša Thapelo';
 
   @override
   String get onboarding2Desc =>
-      'Dinako tÅ¡e di nepagetÅ¡ego tÅ¡a thapelo go ya ka lefelo la gago';
+      'Dinako tše di nepagetšego tša thapelo go ya ka lefelo la gago';
 
   @override
   String get onboarding3Title => 'Quran & Tse dingwe';
 
   @override
   String get onboarding3Desc =>
-      'Bala Quran, latela go bala ga gago, gomme o hlahlobje diteng tÅ¡a Boiselamo';
+      'Bala Quran, latela go bala ga gago, gomme o hlahlobje diteng tša Boiselamo';
 
   @override
   String get dhikrLibrary => 'Bokgobapuku bja Dhikr';
@@ -436,7 +436,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get resetCounter => 'Seta gape Sebadi';
 
   @override
-  String get changeTarget => 'FetoÅ¡a Sepheo';
+  String get changeTarget => 'Fetoša Sepheo';
 
   @override
   String get newTarget => 'Sepheo se Secha';
@@ -450,8 +450,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get tapToCount => 'Tlanya go bala';
 
   @override
-  String get dailyChecklist =>
-      'Lenaneo la go Hlahloba la LetÅ¡atÅ¡i le LetÅ¡atÅ¡i';
+  String get dailyChecklist => 'Lenaneo la go Hlahloba la Letšatši le Letšatši';
 
   @override
   String get qazaDebt => 'Qaza (Sekoloto) .';
@@ -469,10 +468,10 @@ class AppLocalizationsNso extends AppLocalizations {
   String get tahajjud => 'Tahajjud wa go swana le yena';
 
   @override
-  String get dailyProgress => 'Kgatelopele ya LetÅ¡atÅ¡i le LetÅ¡atÅ¡i';
+  String get dailyProgress => 'Kgatelopele ya Letšatši le Letšatši';
 
   @override
-  String get mandatoryPrayers => 'Dithapelo tÅ¡e di KgapeletÅ¡ago';
+  String get mandatoryPrayers => 'Dithapelo tše di Kgapeletšago';
 
   @override
   String get sunnahAndOthers => 'Sunnah & Ba bangwe';
@@ -481,7 +480,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get spiritualGrowth => 'Kgolo ya Moya';
 
   @override
-  String get mandatoryDuty => 'MoÅ¡omo wa KgapeletÅ¡o';
+  String get mandatoryDuty => 'Mošomo wa Kgapeletšo';
 
   @override
   String get totalPrayers => 'Palomoka ya Dithapelo';
@@ -496,7 +495,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get reset => 'Seta gape';
 
   @override
-  String get days => 'MatÅ¡atÅ¡i';
+  String get days => 'Matšatši';
 
   @override
   String get premiumIntegrity => 'Botshepegi bja Premium';
@@ -506,16 +505,16 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get syncStore =>
-      'NyalantÅ¡ha le lebenkele go tiiÅ¡etÅ¡a tshwanelo ya gago.';
+      'Nyalantšha le lebenkele go tiišetša tshwanelo ya gago.';
 
   @override
   String get checkingPremium => 'Go hlahloba maemo a premium...';
 
   @override
-  String get premiumVerified => 'Premium e netefaditÅ¡we.';
+  String get premiumVerified => 'Premium e netefaditšwe.';
 
   @override
-  String get premiumNotFound => 'Premium ga se ya hwetÅ¡wa.';
+  String get premiumNotFound => 'Premium ga se ya hwetšwa.';
 
   @override
   String premiumRefreshError(Object error) {
@@ -541,11 +540,11 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get verifyQuranContent =>
-      'NetefatÅ¡a di- surah tÅ¡e 114 le di-ayah tÅ¡e 6236.';
+      'Netefatša di- surah tše 114 le di-ayah tše 6236.';
 
   @override
   String get checkingQuranDb =>
-      'Go hlahloba polokelo ya tshedimoÅ¡o ya Quran...';
+      'Go hlahloba polokelo ya tshedimošo ya Quran...';
 
   @override
   String get okLabel => 'OK';
@@ -566,12 +565,12 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (go letetÅ¡we 114) .';
+    return 'Surahs: $count (go letetšwe 114) .';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (go letetÅ¡we 6236) .';
+    return 'Ayahs: $count (go letetšwe 6236) .';
   }
 
   @override
@@ -586,7 +585,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String missingTurkish(Object count) {
-    return 'Seturkey se se timetÅ¡ego: $count .';
+    return 'Seturkey se se timetšego: $count .';
   }
 
   @override
@@ -601,11 +600,11 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Tlhahlobo ya Quran e paletÅ¡we: $error';
+    return 'Tlhahlobo ya Quran e paletšwe: $error';
   }
 
   @override
-  String get audioVoice => 'LentÅ¡u la Mamelwang';
+  String get audioVoice => 'Lentšu la Mamelwang';
 
   @override
   String get fajrAngle => 'Khutlo ya Fajr';
@@ -617,23 +616,23 @@ class AppLocalizationsNso extends AppLocalizations {
   String get qiblaCalibration => 'Go Lekanya ga Qibla';
 
   @override
-  String get compassSmoothing => 'Go BoreletÅ¡a Khamphase';
+  String get compassSmoothing => 'Go Boreletša Khamphase';
 
   @override
   String get reduceSensorJitter =>
-      'FokotÅ¡a kutlo jitter bakeng sa nale e tsitsitseng.';
+      'Fokotša kutlo jitter bakeng sa nale e tsitsitseng.';
 
   @override
   String get calibrationOffset => 'Offset ya go lekanya';
 
   @override
   String currentOffset(Object offset) {
-    return 'Bjale: $offsetÂ°';
+    return 'Bjale: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Beakanya ge e ba khamphase ya gago e nyaka phoÅ¡ollo ya seatla. DitekanyetÅ¡o tÅ¡e dibotse di dikologa ka go lebana le tÅ¡hupamabaka.';
+      'Beakanya ge e ba khamphase ya gago e nyaka phošollo ya seatla. Ditekanyetšo tše dibotse di dikologa ka go lebana le tšhupamabaka.';
 
   @override
   String get apply => 'Dira kgopelo';
@@ -642,22 +641,22 @@ class AppLocalizationsNso extends AppLocalizations {
   String get resetOnboarding => 'Seta gape go Tsenya ka Sekepeng';
 
   @override
-  String get rerunSetup => 'Matha gape tshepediÅ¡o ya mathomo ya go hloma.';
+  String get rerunSetup => 'Matha gape tshepedišo ya mathomo ya go hloma.';
 
   @override
-  String get diagnostics => 'Diteko tÅ¡a go hlahloba bolwetÅ¡i';
+  String get diagnostics => 'Diteko tša go hlahloba bolwetši';
 
   @override
   String get healthCheckDesc =>
-      'Matha ditlhahlobo tÅ¡a maphelo gomme o lebelele maemo a tshepediÅ¡o.';
+      'Matha ditlhahlobo tša maphelo gomme o lebelele maemo a tshepedišo.';
 
   @override
-  String get qiblaAligned => 'Qibla e lokeleditÅ¡we';
+  String get qiblaAligned => 'Qibla e lokeleditšwe';
 
   @override
-  String get rotateToFindQibla => 'DikoloÅ¡a go HwetÅ¡a Qibla';
+  String get rotateToFindQibla => 'Dikološa go Hwetša Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Go nyakega ga go lekanya. DikoloÅ¡a sesebediswa ka setÅ¡oantÅ¡o-8.';
+      'Go nyakega ga go lekanya. Dikološa sesebediswa ka setšoantšo-8.';
 }

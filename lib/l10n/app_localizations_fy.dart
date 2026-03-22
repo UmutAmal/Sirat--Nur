@@ -12,7 +12,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
-  String get home => 'ThÃºs';
+  String get home => 'Thús';
 
   @override
   String get quran => 'Koran';
@@ -36,7 +36,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get prayerTimes => 'Gebedstiden';
 
   @override
-  String get continueReading => 'Trochgean mei lÃªzen';
+  String get continueReading => 'Trochgean mei lêzen';
 
   @override
   String get getLifetimePro => 'Krij Lifetime Pro';
@@ -111,7 +111,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get searchHint => 'Sykje...';
 
   @override
-  String get noResults => 'Gjin resultaten fÃ»n';
+  String get noResults => 'Gjin resultaten fûn';
 
   @override
   String get loading => 'Loading...';
@@ -126,7 +126,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get cancel => 'Ofbrekke';
 
   @override
-  String get save => 'RÃªde';
+  String get save => 'Rêde';
 
   @override
   String get delete => 'Wiskje';
@@ -156,7 +156,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get page => 'Side';
 
   @override
-  String get reading => 'LÃªzing';
+  String get reading => 'Lêzing';
 
   @override
   String get recitation => 'Resitaasje';
@@ -168,16 +168,16 @@ class AppLocalizationsFy extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get bookmarks => 'BlÃªdwizers';
+  String get bookmarks => 'Blêdwizers';
 
   @override
-  String get addBookmark => 'BlÃªdwizer tafoegje';
+  String get addBookmark => 'Blêdwizer tafoegje';
 
   @override
-  String get removeBookmark => 'BlÃªdwizer fuortsmite';
+  String get removeBookmark => 'Blêdwizer fuortsmite';
 
   @override
-  String get lastRead => 'LÃªste lÃªzen';
+  String get lastRead => 'Lêste lêzen';
 
   @override
   String get dailyZikr => 'Daily Zikr';
@@ -186,7 +186,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get morningZikr => 'Moarn Zikr';
 
   @override
-  String get eveningZikr => 'JÃ»n Zikr';
+  String get eveningZikr => 'Jûn Zikr';
 
   @override
   String get tasbih => 'Tasbih';
@@ -234,10 +234,10 @@ class AppLocalizationsFy extends AppLocalizations {
   String get ibadahTracker => 'Ibadah Tracker';
 
   @override
-  String get fasting => 'FÃªste';
+  String get fasting => 'Fêste';
 
   @override
-  String get quranReading => 'KoranlÃªzing';
+  String get quranReading => 'Koranlêzing';
 
   @override
   String get prayers => 'Gebeden';
@@ -246,7 +246,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get dhikrCount => 'Dhikr Count';
 
   @override
-  String get weeklyProgress => 'Wyklikse foarÃºtgong';
+  String get weeklyProgress => 'Wyklikse foarútgong';
 
   @override
   String get monthlyProgress => 'Monthly Progress';
@@ -297,7 +297,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get north => 'Noard';
 
   @override
-  String get qiblaFound => 'Qibla fÃ»n!';
+  String get qiblaFound => 'Qibla fûn!';
 
   @override
   String get turnDevice => 'Draai jo apparaat nei de Qibla';
@@ -342,7 +342,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get termsOfService => 'Terms of Service';
 
   @override
-  String get contactUs => 'Kontakt mei Ãºs opnimme';
+  String get contactUs => 'Kontakt mei ús opnimme';
 
   @override
   String get rateApp => 'Rate App';
@@ -387,10 +387,10 @@ class AppLocalizationsFy extends AppLocalizations {
   String get removeAds => 'Fuortsmite Ads';
 
   @override
-  String get unlockAll => 'Alle ynhÃ¢ld Ã»ntsluten';
+  String get unlockAll => 'Alle ynhâld ûntsluten';
 
   @override
-  String get exclusiveContent => 'Eksklusive ynhÃ¢ld';
+  String get exclusiveContent => 'Eksklusive ynhâld';
 
   @override
   String get welcome => 'Wolkom';
@@ -425,7 +425,7 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String get onboarding3Desc =>
-      'LÃªs de Koran, folgje jo lÃªzen en ferkenne islamityske ynhÃ¢ld';
+      'Lês de Koran, folgje jo lêzen en ferkenne islamityske ynhâld';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -620,7 +620,7 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

@@ -12,7 +12,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get appTitle => 'Rruga e Allahut';
 
   @override
-  String get home => 'ShtÃ«pi';
+  String get home => 'Shtëpi';
 
   @override
   String get quran => 'Kurani';
@@ -27,13 +27,13 @@ class AppLocalizationsSq extends AppLocalizations {
   String get calendar => 'Kalendari';
 
   @override
-  String get settings => 'CilÃ«simet';
+  String get settings => 'Cilësimet';
 
   @override
-  String get nextPrayer => 'Lutja e radhÃ«s';
+  String get nextPrayer => 'Lutja e radhës';
 
   @override
-  String get prayerTimes => 'KohÃ«t e lutjes';
+  String get prayerTimes => 'Kohët e lutjes';
 
   @override
   String get continueReading => 'Vazhdo Leximi';
@@ -42,13 +42,13 @@ class AppLocalizationsSq extends AppLocalizations {
   String get getLifetimePro => 'Merr Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Zhbllokoni Tajweed dhe veÃ§oritÃ« e avancuara';
+  String get unlockTajweed => 'Zhbllokoni Tajweed dhe veçoritë e avancuara';
 
   @override
   String get prayerCalculation => 'Llogaritja e namazit';
 
   @override
-  String get method => 'MÃ«nyra e Llogaritjes';
+  String get method => 'Mënyra e Llogaritjes';
 
   @override
   String get madhab => 'Metoda Juristike Asr';
@@ -78,7 +78,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
-  String get dataStorage => 'TÃ« dhÃ«nat dhe ruajtja';
+  String get dataStorage => 'Të dhënat dhe ruajtja';
 
   @override
   String get clearCache => 'Pastro cache';
@@ -93,10 +93,10 @@ class AppLocalizationsSq extends AppLocalizations {
   String get language => 'Gjuha';
 
   @override
-  String get selectLanguage => 'Zgjidhni gjuhÃ«n';
+  String get selectLanguage => 'Zgjidhni gjuhën';
 
   @override
-  String get searchLanguage => 'KÃ«rko mbi 180 gjuhÃ«...';
+  String get searchLanguage => 'Kërko mbi 180 gjuhë...';
 
   @override
   String get systemDefault => 'Parazgjedhja e sistemit';
@@ -105,13 +105,13 @@ class AppLocalizationsSq extends AppLocalizations {
   String get currentLocation => 'Vendndodhja aktuale (GPS)';
 
   @override
-  String get search => 'KÃ«rko';
+  String get search => 'Kërko';
 
   @override
-  String get searchHint => 'KÃ«rko...';
+  String get searchHint => 'Kërko...';
 
   @override
-  String get noResults => 'Nuk u gjet asnjÃ« rezultat';
+  String get noResults => 'Nuk u gjet asnjë rezultat';
 
   @override
   String get loading => 'Po ngarkohet...';
@@ -120,7 +120,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get error => 'Gabim';
 
   @override
-  String get retry => 'Provo sÃ«rish';
+  String get retry => 'Provo sërish';
 
   @override
   String get cancel => 'Anulo';
@@ -162,19 +162,19 @@ class AppLocalizationsSq extends AppLocalizations {
   String get recitation => 'Recitim';
 
   @override
-  String get translation => 'PÃ«rkthimi';
+  String get translation => 'Përkthimi';
 
   @override
   String get tafsir => 'Tefsir';
 
   @override
-  String get bookmarks => 'FaqerojtÃ«sit';
+  String get bookmarks => 'Faqerojtësit';
 
   @override
-  String get addBookmark => 'Shto faqeshÃ«nues';
+  String get addBookmark => 'Shto faqeshënues';
 
   @override
-  String get removeBookmark => 'Hiq faqeshÃ«nuesin';
+  String get removeBookmark => 'Hiq faqeshënuesin';
 
   @override
   String get lastRead => 'Leximi i fundit';
@@ -183,10 +183,10 @@ class AppLocalizationsSq extends AppLocalizations {
   String get dailyZikr => 'Zikri ditor';
 
   @override
-  String get morningZikr => 'Zikri i mÃ«ngjesit';
+  String get morningZikr => 'Zikri i mëngjesit';
 
   @override
-  String get eveningZikr => 'Zikri i mbrÃ«mjes';
+  String get eveningZikr => 'Zikri i mbrëmjes';
 
   @override
   String get tasbih => 'Tasbih';
@@ -207,7 +207,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get hadithBooks => 'Librat e Hadithit';
 
   @override
-  String get searchHadith => 'KÃ«rko Hadith';
+  String get searchHadith => 'Kërko Hadith';
 
   @override
   String get asmaulHusna => 'Esma-ul-Husna';
@@ -216,10 +216,10 @@ class AppLocalizationsSq extends AppLocalizations {
   String get namesOfAllah => 'Emrat e Allahut';
 
   @override
-  String get liveTv => 'TV drejtpÃ«rdrejt';
+  String get liveTv => 'TV drejtpërdrejt';
 
   @override
-  String get watchLive => 'Shikoni drejtpÃ«rdrejt';
+  String get watchLive => 'Shikoni drejtpërdrejt';
 
   @override
   String get streamError => 'Gabim transmetimi';
@@ -228,13 +228,13 @@ class AppLocalizationsSq extends AppLocalizations {
   String get reload => 'Ringarko';
 
   @override
-  String get openInYoutube => 'Hape nÃ« YouTube';
+  String get openInYoutube => 'Hape në YouTube';
 
   @override
   String get ibadahTracker => 'Gjurmuesi i ibadetit';
 
   @override
-  String get fasting => 'agjÃ«rimi';
+  String get fasting => 'agjërimi';
 
   @override
   String get quranReading => 'Leximi i Kuranit';
@@ -246,7 +246,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get dhikrCount => 'Kont Dhikri';
 
   @override
-  String get weeklyProgress => 'PÃ«rparimi javor';
+  String get weeklyProgress => 'Përparimi javor';
 
   @override
   String get monthlyProgress => 'Progresi mujor';
@@ -264,19 +264,19 @@ class AppLocalizationsSq extends AppLocalizations {
   String get today => 'Sot';
 
   @override
-  String get tomorrow => 'NesÃ«r';
+  String get tomorrow => 'Nesër';
 
   @override
   String get yesterday => 'Dje';
 
   @override
-  String get specialDays => 'DitÃ« tÃ« veÃ§anta';
+  String get specialDays => 'Ditë të veçanta';
 
   @override
   String get ramadan => 'Ramazani';
 
   @override
-  String get eidAlFitr => 'FitÃ«r Bajrami';
+  String get eidAlFitr => 'Fitër Bajrami';
 
   @override
   String get eidAlAdha => 'Kurban Bajrami';
@@ -285,13 +285,13 @@ class AppLocalizationsSq extends AppLocalizations {
   String get laylatAlQadr => 'Nata e Kadrit';
 
   @override
-  String get qiblaDirection => 'Drejtimi i KiblÃ«s';
+  String get qiblaDirection => 'Drejtimi i Kiblës';
 
   @override
   String get compass => 'Kompas';
 
   @override
-  String get degrees => 'gradÃ«';
+  String get degrees => 'gradë';
 
   @override
   String get north => 'Veriu';
@@ -300,13 +300,13 @@ class AppLocalizationsSq extends AppLocalizations {
   String get qiblaFound => 'Kibla u gjet!';
 
   @override
-  String get turnDevice => 'Kthejeni pajisjen tuaj nÃ« drejtim tÃ« KiblÃ«s';
+  String get turnDevice => 'Kthejeni pajisjen tuaj në drejtim të Kiblës';
 
   @override
   String get notifications => 'Njoftimet';
 
   @override
-  String get prayerNotifications => 'Njoftimet pÃ«r lutjen';
+  String get prayerNotifications => 'Njoftimet për lutjen';
 
   @override
   String get enableNotifications => 'Aktivizo Njoftimet';
@@ -321,10 +321,10 @@ class AppLocalizationsSq extends AppLocalizations {
   String get theme => 'Tema';
 
   @override
-  String get lightMode => 'Modaliteti i dritÃ«s';
+  String get lightMode => 'Modaliteti i dritës';
 
   @override
-  String get darkMode => 'Modaliteti i errÃ«t';
+  String get darkMode => 'Modaliteti i errët';
 
   @override
   String get systemTheme => 'Tema e Sistemit';
@@ -336,16 +336,16 @@ class AppLocalizationsSq extends AppLocalizations {
   String get version => 'Versioni';
 
   @override
-  String get privacyPolicy => 'Politika e privatÃ«sisÃ«';
+  String get privacyPolicy => 'Politika e privatësisë';
 
   @override
-  String get termsOfService => 'Kushtet e ShÃ«rbimit';
+  String get termsOfService => 'Kushtet e Shërbimit';
 
   @override
   String get contactUs => 'Na kontaktoni';
 
   @override
-  String get rateApp => 'VlerÃ«soni aplikacionin';
+  String get rateApp => 'Vlerësoni aplikacionin';
 
   @override
   String get shareApp => 'Ndani aplikacionin';
@@ -360,13 +360,13 @@ class AppLocalizationsSq extends AppLocalizations {
   String get downloading => 'Po shkarkohet...';
 
   @override
-  String get downloadComplete => 'Shkarkimi pÃ«rfundoi';
+  String get downloadComplete => 'Shkarkimi përfundoi';
 
   @override
-  String get downloadFailed => 'Shkarkimi dÃ«shtoi';
+  String get downloadFailed => 'Shkarkimi dështoi';
 
   @override
-  String get offlineMode => 'Modaliteti jashtÃ« linje';
+  String get offlineMode => 'Modaliteti jashtë linje';
 
   @override
   String get noInternet => 'Nuk ka lidhje interneti';
@@ -378,7 +378,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'PÃ«rmirÃ«sojeni nÃ« Pro';
+  String get upgradeToPro => 'Përmirësojeni në Pro';
 
   @override
   String get proFeatures => 'Karakteristikat Pro';
@@ -387,19 +387,19 @@ class AppLocalizationsSq extends AppLocalizations {
   String get removeAds => 'Hiq reklamat';
 
   @override
-  String get unlockAll => 'Zhbllokoni tÃ« gjithÃ« pÃ«rmbajtjen';
+  String get unlockAll => 'Zhbllokoni të gjithë përmbajtjen';
 
   @override
-  String get exclusiveContent => 'PÃ«rmbajtje ekskluzive';
+  String get exclusiveContent => 'Përmbajtje ekskluzive';
 
   @override
-  String get welcome => 'MirÃ« se vini';
+  String get welcome => 'Mirë se vini';
 
   @override
   String get getStarted => 'Filloni';
 
   @override
-  String get skip => 'KapÃ«rce';
+  String get skip => 'Kapërce';
 
   @override
   String get next => 'Tjetra';
@@ -408,25 +408,25 @@ class AppLocalizationsSq extends AppLocalizations {
   String get done => 'U krye';
 
   @override
-  String get onboarding1Title => 'MirÃ« se vini nÃ« RrugÃ«n e Allahut';
+  String get onboarding1Title => 'Mirë se vini në Rrugën e Allahut';
 
   @override
   String get onboarding1Desc =>
-      'Aplikacioni juaj i plotÃ« shoqÃ«rues islamik pÃ«r kohÃ«t e lutjes, Kuranin dhe mÃ« shumÃ«';
+      'Aplikacioni juaj i plotë shoqërues islamik për kohët e lutjes, Kuranin dhe më shumë';
 
   @override
-  String get onboarding2Title => 'KohÃ«t e lutjes';
+  String get onboarding2Title => 'Kohët e lutjes';
 
   @override
   String get onboarding2Desc =>
-      'KohÃ«t e sakta tÃ« lutjes bazuar nÃ« vendndodhjen tuaj';
+      'Kohët e sakta të lutjes bazuar në vendndodhjen tuaj';
 
   @override
-  String get onboarding3Title => 'Kuran dhe mÃ« shumÃ«';
+  String get onboarding3Title => 'Kuran dhe më shumë';
 
   @override
   String get onboarding3Desc =>
-      'Lexoni Kuranin, gjurmoni leximin tuaj dhe eksploroni pÃ«rmbajtjen islame';
+      'Lexoni Kuranin, gjurmoni leximin tuaj dhe eksploroni përmbajtjen islame';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -621,7 +621,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

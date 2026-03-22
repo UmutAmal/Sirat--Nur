@@ -24,19 +24,19 @@ class AppLocalizationsGd extends AppLocalizations {
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'MÃ¬osachan';
+  String get calendar => 'Mìosachan';
 
   @override
   String get settings => 'Suidhichidhean';
 
   @override
-  String get nextPrayer => 'An ath Ã™rnaigh';
+  String get nextPrayer => 'An ath Ùrnaigh';
 
   @override
-  String get prayerTimes => 'Amannan Ã™rnuigh';
+  String get prayerTimes => 'Amannan Ùrnuigh';
 
   @override
-  String get continueReading => 'Lean air adhart aâ€™ leughadh';
+  String get continueReading => 'Lean air adhart a’ leughadh';
 
   @override
   String get getLifetimePro => 'Faigh Lifetime Pro';
@@ -45,13 +45,13 @@ class AppLocalizationsGd extends AppLocalizations {
   String get unlockTajweed => 'Fuasgail Tajweed & Feartan Adhartach';
 
   @override
-  String get prayerCalculation => 'Ã€ireamhachadh Ã¹rnaigh';
+  String get prayerCalculation => 'Àireamhachadh ùrnaigh';
 
   @override
-  String get method => 'DÃ²igh Ã ireamhachaidh';
+  String get method => 'Dòigh àireamhachaidh';
 
   @override
-  String get madhab => 'DÃ²igh lagha Asr';
+  String get madhab => 'Dòigh lagha Asr';
 
   @override
   String get surahs => 'Surahs';
@@ -63,7 +63,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Ã¨irigh na grÃ¨ine';
+  String get sunrise => 'èirigh na grèine';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -78,7 +78,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
-  String get dataStorage => 'DÃ ta & StÃ²radh';
+  String get dataStorage => 'Dàta & Stòradh';
 
   @override
   String get clearCache => 'Glan an tasgadan';
@@ -88,22 +88,22 @@ class AppLocalizationsGd extends AppLocalizations {
       'Chaidh an tasgadan a ghlanadh gu soirbheachail';
 
   @override
-  String get location => 'Ã€ite';
+  String get location => 'Àite';
 
   @override
-  String get language => 'CÃ nain';
+  String get language => 'Cànain';
 
   @override
-  String get selectLanguage => 'Tagh CÃ nan';
+  String get selectLanguage => 'Tagh Cànan';
 
   @override
-  String get searchLanguage => 'Rannsaich 180+ cÃ nan...';
+  String get searchLanguage => 'Rannsaich 180+ cànan...';
 
   @override
   String get systemDefault => 'Default siostam';
 
   @override
-  String get currentLocation => 'Ã€ite an-drÃ sta (GPS)';
+  String get currentLocation => 'Àite an-dràsta (GPS)';
 
   @override
   String get search => 'Rannsaich';
@@ -127,19 +127,19 @@ class AppLocalizationsGd extends AppLocalizations {
   String get cancel => 'Sguir dheth';
 
   @override
-  String get save => 'SÃ bhail';
+  String get save => 'Sàbhail';
 
   @override
-  String get delete => 'Sguab Ã s';
+  String get delete => 'Sguab às';
 
   @override
   String get edit => 'Deasaich';
 
   @override
-  String get close => 'DÃ¹in';
+  String get close => 'Dùin';
 
   @override
-  String get ok => 'ceart gu leÃ²r';
+  String get ok => 'ceart gu leòr';
 
   @override
   String get yes => 'Tha';
@@ -181,7 +181,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get lastRead => 'Leughadh mu dheireadh';
 
   @override
-  String get dailyZikr => 'Zikr lÃ itheil';
+  String get dailyZikr => 'Zikr làitheil';
 
   @override
   String get morningZikr => 'Madainn Zikr';
@@ -217,10 +217,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get namesOfAllah => 'Ainmean Allah';
 
   @override
-  String get liveTv => 'Tbh beÃ²';
+  String get liveTv => 'Tbh beò';
 
   @override
-  String get watchLive => 'Coimhead beÃ²';
+  String get watchLive => 'Coimhead beò';
 
   @override
   String get streamError => 'Mearachd sruth';
@@ -241,7 +241,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get quranReading => 'Leughadh an Quran';
 
   @override
-  String get prayers => 'Ã™rnaighean';
+  String get prayers => 'Ùrnaighean';
 
   @override
   String get dhikrCount => 'Cunnt Dhikr';
@@ -250,28 +250,28 @@ class AppLocalizationsGd extends AppLocalizations {
   String get weeklyProgress => 'Adhartas Seachdaineach';
 
   @override
-  String get monthlyProgress => 'Adhartas MÃ¬osail';
+  String get monthlyProgress => 'Adhartas Mìosail';
 
   @override
   String get statistics => 'Staitistig';
 
   @override
-  String get hijriCalendar => 'MÃ¬osachan Hijri';
+  String get hijriCalendar => 'Mìosachan Hijri';
 
   @override
-  String get gregorianCalendar => 'MÃ¬osachan Gregorian';
+  String get gregorianCalendar => 'Mìosachan Gregorian';
 
   @override
   String get today => 'An-diugh';
 
   @override
-  String get tomorrow => 'A-mÃ ireach';
+  String get tomorrow => 'A-màireach';
 
   @override
-  String get yesterday => 'An-dÃ¨';
+  String get yesterday => 'An-dè';
 
   @override
-  String get specialDays => 'LÃ ithean SÃ²nraichte';
+  String get specialDays => 'Làithean Sònraichte';
 
   @override
   String get ramadan => 'Ramadan';
@@ -286,7 +286,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get laylatAlQadr => 'Laylat Al-Qadr';
 
   @override
-  String get qiblaDirection => 'StiÃ¹ireadh Qibla';
+  String get qiblaDirection => 'Stiùireadh Qibla';
 
   @override
   String get compass => 'Compass';
@@ -308,10 +308,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get notifications => 'Brathan';
 
   @override
-  String get prayerNotifications => 'Brathan Ã™rnaigh';
+  String get prayerNotifications => 'Brathan Ùrnaigh';
 
   @override
-  String get enableNotifications => 'DÃ¨an comas air fiosan';
+  String get enableNotifications => 'Dèan comas air fiosan';
 
   @override
   String get notificationTime => 'Uair Fios';
@@ -338,7 +338,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get version => 'Tionndadh';
 
   @override
-  String get privacyPolicy => 'Poileasaidh DÃ¬omhaireachd';
+  String get privacyPolicy => 'Poileasaidh Dìomhaireachd';
 
   @override
   String get termsOfService => 'Teirmean seirbheis';
@@ -353,35 +353,34 @@ class AppLocalizationsGd extends AppLocalizations {
   String get shareApp => 'Co-roinn App';
 
   @override
-  String get downloadManager => 'Luchdaich sÃ¬os Manaidsear';
+  String get downloadManager => 'Luchdaich sìos Manaidsear';
 
   @override
-  String get downloads => 'Luchdaich sÃ¬os';
+  String get downloads => 'Luchdaich sìos';
 
   @override
-  String get downloading => 'A\' luchdachadh sÃ¬os...';
+  String get downloading => 'A\' luchdachadh sìos...';
 
   @override
-  String get downloadComplete => 'Luchdaich sÃ¬os Complete';
+  String get downloadComplete => 'Luchdaich sìos Complete';
 
   @override
-  String get downloadFailed => 'Dh\'fhÃ illig an luchdachadh sÃ¬os';
+  String get downloadFailed => 'Dh\'fhàillig an luchdachadh sìos';
 
   @override
   String get offlineMode => 'Modh far loidhne';
 
   @override
-  String get noInternet => 'Gun cheangal eadar-lÃ¬n';
+  String get noInternet => 'Gun cheangal eadar-lìn';
 
   @override
-  String get checkConnection =>
-      'Feuch an toir thu sÃ¹il air aâ€™ cheangal agad';
+  String get checkConnection => 'Feuch an toir thu sùil air a’ cheangal agad';
 
   @override
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Ã€rdachadh gu Pro';
+  String get upgradeToPro => 'Àrdachadh gu Pro';
 
   @override
   String get proFeatures => 'Feartan Pro';
@@ -396,10 +395,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get exclusiveContent => 'Susbaint air leth';
 
   @override
-  String get welcome => 'FÃ ilte';
+  String get welcome => 'Fàilte';
 
   @override
-  String get getStarted => 'TÃ²isich';
+  String get getStarted => 'Tòisich';
 
   @override
   String get skip => 'Leum';
@@ -408,28 +407,27 @@ class AppLocalizationsGd extends AppLocalizations {
   String get next => 'Air adhart';
 
   @override
-  String get done => 'DÃ¨anta';
+  String get done => 'Dèanta';
 
   @override
-  String get onboarding1Title => 'FÃ ilte gu Slighe Allah';
+  String get onboarding1Title => 'Fàilte gu Slighe Allah';
 
   @override
   String get onboarding1Desc =>
-      'An app companach Ioslamach iomlan agad airson amannan Ã¹rnaigh, Quran, agus barrachd';
+      'An app companach Ioslamach iomlan agad airson amannan ùrnaigh, Quran, agus barrachd';
 
   @override
-  String get onboarding2Title => 'Amannan Ã™rnuigh';
+  String get onboarding2Title => 'Amannan Ùrnuigh';
 
   @override
-  String get onboarding2Desc =>
-      'Amannan Ã¹rnaigh ceart stÃ¨idhichte air d â€™Ã ite';
+  String get onboarding2Desc => 'Amannan ùrnaigh ceart stèidhichte air d ’àite';
 
   @override
   String get onboarding3Title => 'Quran agus barrachd';
 
   @override
   String get onboarding3Desc =>
-      'Leugh Quran, cÃ¹m sÃ¹il air do leughadh, agus rannsaich susbaint Ioslamach';
+      'Leugh Quran, cùm sùil air do leughadh, agus rannsaich susbaint Ioslamach';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -624,7 +622,7 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

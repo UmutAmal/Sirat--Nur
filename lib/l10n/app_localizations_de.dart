@@ -30,7 +30,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get settings => 'Einstellungen';
 
   @override
-  String get nextPrayer => 'NÃ¤chstes Gebet';
+  String get nextPrayer => 'Nächstes Gebet';
 
   @override
   String get prayerTimes => 'Gebetszeiten';
@@ -94,7 +94,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get language => 'Sprache';
 
   @override
-  String get selectLanguage => 'WÃ¤hlen Sie Sprache aus';
+  String get selectLanguage => 'Wählen Sie Sprache aus';
 
   @override
   String get searchLanguage => 'Durchsuchen Sie mehr als 180 Sprachen...';
@@ -130,13 +130,13 @@ class AppLocalizationsDe extends AppLocalizations {
   String get save => 'Speichern';
 
   @override
-  String get delete => 'LÃ¶schen';
+  String get delete => 'Löschen';
 
   @override
   String get edit => 'Bearbeiten';
 
   @override
-  String get close => 'SchlieÃŸen';
+  String get close => 'Schließen';
 
   @override
   String get ok => 'OK';
@@ -157,13 +157,13 @@ class AppLocalizationsDe extends AppLocalizations {
   String get page => 'Seite';
 
   @override
-  String get reading => 'LektÃ¼re';
+  String get reading => 'Lektüre';
 
   @override
   String get recitation => 'Rezitation';
 
   @override
-  String get translation => 'Ãœbersetzung';
+  String get translation => 'Übersetzung';
 
   @override
   String get tafsir => 'Tafsir';
@@ -172,7 +172,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get bookmarks => 'Lesezeichen';
 
   @override
-  String get addBookmark => 'Lesezeichen hinzufÃ¼gen';
+  String get addBookmark => 'Lesezeichen hinzufügen';
 
   @override
   String get removeBookmark => 'Lesezeichen entfernen';
@@ -181,7 +181,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get lastRead => 'Zuletzt gelesen';
 
   @override
-  String get dailyZikr => 'TÃ¤gliches Zikr';
+  String get dailyZikr => 'Tägliches Zikr';
 
   @override
   String get morningZikr => 'Morgen Zikr';
@@ -205,7 +205,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get hadithCollection => 'Hadith-Sammlung';
 
   @override
-  String get hadithBooks => 'Hadith-BÃ¼cher';
+  String get hadithBooks => 'Hadith-Bücher';
 
   @override
   String get searchHadith => 'Hadith durchsuchen';
@@ -229,7 +229,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get reload => 'Neu laden';
 
   @override
-  String get openInYoutube => 'Auf YouTube Ã¶ffnen';
+  String get openInYoutube => 'Auf YouTube öffnen';
 
   @override
   String get ibadahTracker => 'Ibadah-Tracker';
@@ -244,10 +244,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get prayers => 'Gebete';
 
   @override
-  String get dhikrCount => 'Dhikr-ZÃ¤hlung';
+  String get dhikrCount => 'Dhikr-Zählung';
 
   @override
-  String get weeklyProgress => 'WÃ¶chentlicher Fortschritt';
+  String get weeklyProgress => 'Wöchentlicher Fortschritt';
 
   @override
   String get monthlyProgress => 'Monatlicher Fortschritt';
@@ -302,7 +302,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get turnDevice =>
-      'Drehen Sie Ihr GerÃ¤t so, dass es der Qibla zugewandt ist';
+      'Drehen Sie Ihr Gerät so, dass es der Qibla zugewandt ist';
 
   @override
   String get notifications => 'Benachrichtigungen';
@@ -374,10 +374,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get noInternet => 'Keine Internetverbindung';
 
   @override
-  String get checkConnection => 'Bitte Ã¼berprÃ¼fen Sie Ihre Verbindung';
+  String get checkConnection => 'Bitte überprüfen Sie Ihre Verbindung';
 
   @override
-  String get premium => 'PrÃ¤mie';
+  String get premium => 'Prämie';
 
   @override
   String get upgradeToPro => 'Upgrade auf Pro';
@@ -401,10 +401,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get getStarted => 'Legen Sie los';
 
   @override
-  String get skip => 'Ãœberspringen';
+  String get skip => 'Überspringen';
 
   @override
-  String get next => 'NÃ¤chste';
+  String get next => 'Nächste';
 
   @override
   String get done => 'Erledigt';
@@ -414,7 +414,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get onboarding1Desc =>
-      'Ihre komplette islamische Begleit-App fÃ¼r Gebetszeiten, Koran und mehr';
+      'Ihre komplette islamische Begleit-App für Gebetszeiten, Koran und mehr';
 
   @override
   String get onboarding2Title => 'Gebetszeiten';
@@ -428,7 +428,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get onboarding3Desc =>
-      'Lesen Sie den Koran, verfolgen Sie Ihre LektÃ¼re und erkunden Sie islamische Inhalte';
+      'Lesen Sie den Koran, verfolgen Sie Ihre Lektüre und erkunden Sie islamische Inhalte';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -623,7 +623,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

@@ -487,7 +487,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'Sirat-Ä± Nur'**
+  /// **'Sirat-i Nur'**
   String get appTitle;
 
   /// No description provided for @home.
@@ -1285,7 +1285,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboarding1Title.
   ///
   /// In en, this message translates to:
-  /// **'Welcome to Sirat-Ä± Nur'**
+  /// **'Welcome to Sirat-ı Nur'**
   String get onboarding1Title;
 
   /// No description provided for @onboarding1Desc.
@@ -1657,7 +1657,7 @@ abstract class AppLocalizations {
   /// No description provided for @currentOffset.
   ///
   /// In en, this message translates to:
-  /// **'Current: {offset}Â°'**
+  /// **'Current: {offset}°'**
   String currentOffset(Object offset);
 
   /// No description provided for @manualCorrectionDesc.

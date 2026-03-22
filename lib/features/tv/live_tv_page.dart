@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:sirat_i_nur/core/constants/live_streams.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
@@ -14,10 +14,23 @@ class LiveTvPage extends StatefulWidget {
 
 class _LiveTvPageState extends State<LiveTvPage> {
   int _selectedIndex = 0;
+  int _candidateIndex = 0;
   late final WebViewController _controller;
   bool _isLoading = true;
   bool _hasError = false;
   String? _errorText;
+
+  List<String> get _currentCandidates {
+    final stream = liveStreams[_selectedIndex];
+    final urls = <String>[stream.embedUrl];
+    if (stream.fallbackEmbedUrl != null && stream.fallbackEmbedUrl!.trim().isNotEmpty) {
+      urls.add(stream.fallbackEmbedUrl!);
+    }
+    if (!urls.contains(stream.externalUrl)) {
+      urls.add(stream.externalUrl);
+    }
+    return urls;
+  }
 
   @override
   void initState() {
@@ -32,15 +45,27 @@ class _LiveTvPageState extends State<LiveTvPage> {
             setState(() {
               _isLoading = true;
               _hasError = false;
-              _errorText = null;
             });
           },
           onPageFinished: (_) {
             if (!mounted) return;
             setState(() => _isLoading = false);
           },
+          onNavigationRequest: (request) {
+            if (request.url.startsWith('intent://')) {
+              return NavigationDecision.prevent;
+            }
+            return NavigationDecision.navigate;
+          },
           onWebResourceError: (error) {
             if (!mounted) return;
+            final next = _candidateIndex + 1;
+            if (next < _currentCandidates.length) {
+              _candidateIndex = next;
+              _loadCurrentCandidate();
+              return;
+            }
+
             setState(() {
               _isLoading = false;
               _hasError = true;
@@ -53,25 +78,58 @@ class _LiveTvPageState extends State<LiveTvPage> {
     _loadSelectedStream();
   }
 
+  void _loadCurrentCandidate() {
+    final candidates = _currentCandidates;
+    if (_candidateIndex < 0 || _candidateIndex >= candidates.length) {
+      setState(() {
+        _isLoading = false;
+        _hasError = true;
+        _errorText = 'No valid stream URL found.';
+      });
+      return;
+    }
+
+    final url = candidates[_candidateIndex];
+    _controller.loadRequest(Uri.parse(url));
+  }
+
   void _loadSelectedStream() {
-    final stream = liveStreams[_selectedIndex];
-    _controller.loadRequest(Uri.parse(stream.embedUrl));
+    _candidateIndex = 0;
+    setState(() {
+      _isLoading = true;
+      _hasError = false;
+      _errorText = null;
+    });
+    _loadCurrentCandidate();
   }
 
   void _changeStream(int index) {
     if (_selectedIndex == index) return;
     setState(() {
       _selectedIndex = index;
+      _candidateIndex = 0;
+      _isLoading = true;
+      _hasError = false;
+      _errorText = null;
     });
-    _loadSelectedStream();
+    _loadCurrentCandidate();
   }
 
   Future<void> _openExternal() async {
     final stream = liveStreams[_selectedIndex];
-    await launchUrl(
-      Uri.parse(stream.externalUrl),
-      mode: LaunchMode.externalApplication,
-    );
+    final uri = Uri.parse(stream.externalUrl);
+
+    if (!await canLaunchUrl(uri)) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(AppLocalizations.of(context)!.streamError),
+        ),
+      );
+      return;
+    }
+
+    await launchUrl(uri, mode: LaunchMode.externalApplication);
   }
 
   @override
@@ -185,9 +243,7 @@ class _LiveTvPageState extends State<LiveTvPage> {
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w700,
-                      color: Theme.of(
-                        context,
-                      ).colorScheme.onSurface.withValues(alpha: 0.6),
+                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
                     ),
                   ),
                 ),
@@ -209,9 +265,7 @@ class _LiveTvPageState extends State<LiveTvPage> {
                         ? AppColors.emeraldSurface
                         : (isDark ? AppColors.darkCard : AppColors.cardLight),
                     borderRadius: BorderRadius.circular(16),
-                    border: isSelected
-                        ? Border.all(color: AppColors.emerald, width: 2)
-                        : null,
+                    border: isSelected ? Border.all(color: AppColors.emerald, width: 2) : null,
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black.withValues(alpha: 0.06),
@@ -220,10 +274,7 @@ class _LiveTvPageState extends State<LiveTvPage> {
                     ],
                   ),
                   child: ListTile(
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 8,
-                    ),
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     leading: Container(
                       width: 48,
                       height: 48,
@@ -231,10 +282,7 @@ class _LiveTvPageState extends State<LiveTvPage> {
                         color: AppColors.emeraldSurface,
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      child: const Icon(
-                        Icons.mosque_rounded,
-                        color: AppColors.emerald,
-                      ),
+                      child: const Icon(Icons.mosque_rounded, color: AppColors.emerald),
                     ),
                     title: Text(
                       item.title,
@@ -247,9 +295,7 @@ class _LiveTvPageState extends State<LiveTvPage> {
                       item.subtitle,
                       style: TextStyle(
                         fontSize: 12,
-                        color: Theme.of(
-                          context,
-                        ).colorScheme.onSurface.withValues(alpha: 0.5),
+                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
                       ),
                     ),
                     trailing: isSelected
@@ -258,10 +304,7 @@ class _LiveTvPageState extends State<LiveTvPage> {
                             color: AppColors.emerald,
                             size: 32,
                           )
-                        : const Icon(
-                            Icons.play_circle_outline_rounded,
-                            size: 28,
-                          ),
+                        : const Icon(Icons.play_circle_outline_rounded, size: 28),
                     onTap: () => _changeStream(index),
                   ),
                 );
@@ -273,3 +316,4 @@ class _LiveTvPageState extends State<LiveTvPage> {
     );
   }
 }
+

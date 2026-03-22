@@ -9,7 +9,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   AppLocalizationsIlo([String locale = 'ilo']) : super(locale);
 
   @override
-  String get appTitle => 'Sirat-Ä± Nur';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get home => 'Taeng';
@@ -408,7 +408,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get done => 'Naaramiden';
 
   @override
-  String get onboarding1Title => 'Maikablaawkayo iti Sirat-Ä± Nur';
+  String get onboarding1Title => 'Maikablaawkayo iti Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
@@ -624,7 +624,7 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Agdama: $offsetÂ°';
+    return 'Agdama: $offset°';
   }
 
   @override

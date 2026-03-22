@@ -1,4 +1,4 @@
-﻿{
+{
   "@@locale": "hmn",
   "appTitle": "Sirat-i Nur",
   "home": "Tsev",
@@ -133,7 +133,7 @@
   "skip": "Hla",
   "next": "Tom ntej no",
   "done": "Ua tiav",
-  "onboarding1Title": "Txais tos rau Sirat-Ä± Nur",
+  "onboarding1Title": "Txais tos rau Sirat-ı Nur",
   "onboarding1Desc": "Koj ua tiav Islamic khub app rau lub sijhawm thov Vajtswv, Quran, thiab ntau dua",
   "onboarding2Title": "Lub Sijhawm Thov Vajtswv",
   "onboarding2Desc": "Lub sijhawm thov Vajtswv raug raws li koj qhov chaw nyob",
@@ -195,7 +195,7 @@
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Txo cov sensor jitter rau ib rab koob khov kho.",
   "calibrationOffset": "Calibration Offset",
-  "currentOffset": "Tam sim no: {offset}Â°",
+  "currentOffset": "Tam sim no: {offset}°",
   "manualCorrectionDesc": "Kho yog tias koj lub compass xav tau phau ntawv kho. Cov txiaj ntsig zoo tig clockwise.",
   "apply": "Thov",
   "resetOnboarding": "Pib dua Onboarding",

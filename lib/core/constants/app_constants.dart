@@ -1,4 +1,4 @@
-/// All supported languages with native names for the language picker.
+﻿/// All supported languages with native names for the language picker.
 class AppLanguage {
   final String code;
   final String nativeName;
@@ -301,3 +301,5 @@ const List<CityData> globalCities = [
   CityData(name: 'Manama', country: 'Bahrain', countryCode: 'BH', lat: 26.2285, lng: 50.5860, timezone: 'Asia/Bahrain'),
   CityData(name: 'Muscat', country: 'Oman', countryCode: 'OM', lat: 23.5880, lng: 58.3829, timezone: 'Asia/Muscat'),
 ];
+
+

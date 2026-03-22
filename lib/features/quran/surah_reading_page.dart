@@ -1,14 +1,19 @@
-import 'dart:convert';
+﻿import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:sirat_i_nur/core/constants/quran_data.dart';
+import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
+import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 
 class SurahReadingPage extends ConsumerStatefulWidget {
   final int surahNumber;
+
   const SurahReadingPage({super.key, required this.surahNumber});
 
   @override
@@ -18,49 +23,49 @@ class SurahReadingPage extends ConsumerStatefulWidget {
 class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
   List<dynamic> _ayahs = [];
   bool _isLoading = true;
-  late AudioPlayer _audioPlayer;
+  late final AudioPlayer _audioPlayer;
   bool _isPlaying = false;
   bool _isAudioLoading = false;
   bool _isBookmarked = false;
+  final Set<int> _bookmarkedAyahs = <int>{};
 
   @override
   void initState() {
     super.initState();
     _audioPlayer = AudioPlayer();
     _audioPlayer.playerStateStream.listen((state) {
-      if (mounted) {
-        setState(() {
-          _isPlaying = state.playing;
-          if (state.processingState == ProcessingState.completed) {
-            _isPlaying = false;
-            _audioPlayer.seek(Duration.zero);
-            _audioPlayer.pause();
-          }
-        });
-      }
+      if (!mounted) return;
+      setState(() {
+        _isPlaying = state.playing;
+        if (state.processingState == ProcessingState.completed) {
+          _isPlaying = false;
+          _audioPlayer.seek(Duration.zero);
+          _audioPlayer.pause();
+        }
+      });
     });
     _loadSurah();
   }
 
   Future<void> _loadSurah() async {
     try {
-      final jsonStr = await rootBundle.loadString(
-        'assets/data/full_quran.json',
-      );
-      final List<dynamic> data = jsonDecode(jsonStr);
+      final jsonStr = await rootBundle.loadString('assets/data/full_quran.json');
+      final List<dynamic> data = jsonDecode(jsonStr) as List<dynamic>;
       final surahData = data.firstWhere(
         (s) => s['number'] == widget.surahNumber,
         orElse: () => data.first,
-      );
-      if (mounted) {
-        setState(() {
-          _ayahs = surahData['ayahs'] ?? [];
-          _isLoading = false;
-        });
-      }
+      ) as Map<String, dynamic>;
+
+      if (!mounted) return;
+      setState(() {
+        _ayahs = surahData['ayahs'] as List<dynamic>? ?? const <dynamic>[];
+        _isLoading = false;
+      });
     } catch (e) {
       debugPrint('Error loading quran json: $e');
-      if (mounted) setState(() => _isLoading = false);
+      if (mounted) {
+        setState(() => _isLoading = false);
+      }
     }
   }
 
@@ -70,39 +75,68 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
       return;
     }
 
+    if (!mounted) return;
     setState(() => _isAudioLoading = true);
-    final surahNumber = widget.surahNumber.toString().padLeft(3, '0');
-    final normalizedVoice = audioVoice.toLowerCase();
-    final candidates = _audioCandidatesForVoice(
-      normalizedVoice,
-    ).map((baseUrl) => '$baseUrl/$surahNumber.mp3').toList();
 
-    Object? lastError;
-    for (final url in candidates) {
-      try {
-        await _audioPlayer.setUrl(url);
-        await _audioPlayer.play();
-        if (!mounted) return;
+    final surahCode = widget.surahNumber.toString().padLeft(3, '0');
+    final normalizedVoice = audioVoice.toLowerCase();
+
+    try {
+      final reciterId = _reciterIdForVoice(normalizedVoice);
+      if (reciterId != null) {
+        final localPath = await OfflineAudioService.getAudioPath(widget.surahNumber, reciterId);
+        if (await File(localPath).exists()) {
+          await _audioPlayer.setFilePath(localPath);
+          await _audioPlayer.play();
+          return;
+        }
+      }
+
+      final candidates = _audioCandidatesForVoice(
+        normalizedVoice,
+      ).map((baseUrl) => '$baseUrl/$surahCode.mp3');
+
+      Object? lastError;
+      for (final url in candidates) {
+        try {
+          await _audioPlayer.setUrl(url);
+          await _audioPlayer.play();
+          return;
+        } catch (error) {
+          lastError = error;
+          debugPrint('Audio source failed: $url, error: $error');
+        }
+      }
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Could not play audio. Please check connection and try again.'),
+          ),
+        );
+      }
+
+      if (lastError != null) {
+        debugPrint('Audio playback failed for all sources: $lastError');
+      }
+    } finally {
+      if (mounted) {
         setState(() => _isAudioLoading = false);
-        return;
-      } catch (error) {
-        lastError = error;
-        debugPrint('Audio source failed: $url, error: $error');
       }
     }
+  }
 
-    if (!mounted) return;
-    setState(() => _isAudioLoading = false);
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text(
-          'Could not play audio. Please check connection and try again.',
-        ),
-      ),
-    );
-    if (lastError != null) {
-      debugPrint('Audio playback failed for all sources: $lastError');
+  String? _reciterIdForVoice(String normalizedVoice) {
+    if (normalizedVoice.contains('sudais')) {
+      return 'sudais';
     }
+    if (normalizedVoice.contains('abdulbaset') || normalizedVoice.contains('abdulbasit')) {
+      return 'abdul_basit_murattal';
+    }
+    if (normalizedVoice.contains('alafasy') || normalizedVoice.contains('mishary')) {
+      return 'alafasy';
+    }
+    return 'alafasy';
   }
 
   List<String> _audioCandidatesForVoice(String normalizedVoice) {
@@ -112,10 +146,10 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
         'https://server8.mp3quran.net/sds',
       ];
     }
-    if (normalizedVoice.contains('abdulbaset') ||
-        normalizedVoice.contains('abdulbasit')) {
+    if (normalizedVoice.contains('abdulbaset') || normalizedVoice.contains('abdulbasit')) {
       return const [
         'https://download.quranicaudio.com/quran/abdul_basit_murattal',
+        'https://server8.mp3quran.net/basit_murattal',
         'https://server8.mp3quran.net/basit',
       ];
     }
@@ -124,6 +158,50 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
       'https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee',
       'https://server8.mp3quran.net/afs',
     ];
+  }
+
+  Future<void> _shareAyah({
+    required SurahData surahInfo,
+    required Map<String, dynamic> ayah,
+    required bool isTr,
+  }) async {
+    final ayahNumber = ayah['numberInSurah']?.toString() ?? '-';
+    final arabicText = (ayah['text'] ?? '').toString().trim();
+    final translation = (isTr ? ayah['tr_translation'] : ayah['en_translation'])
+        ?.toString()
+        .trim();
+
+    final header = isTr
+        ? '${surahInfo.transliteration} Suresi - Ayet $ayahNumber'
+        : '${surahInfo.transliteration} - Ayah $ayahNumber';
+
+    await SharePlus.instance.share(
+      ShareParams(
+        text: [
+          header,
+          arabicText,
+          if (translation != null && translation.isNotEmpty) translation,
+        ].join('\n\n'),
+      ),
+    );
+  }
+
+  void _toggleAyahBookmark(int ayahNumber) {
+    final alreadySaved = _bookmarkedAyahs.contains(ayahNumber);
+    setState(() {
+      if (alreadySaved) {
+        _bookmarkedAyahs.remove(ayahNumber);
+      } else {
+        _bookmarkedAyahs.add(ayahNumber);
+      }
+    });
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        duration: const Duration(milliseconds: 900),
+        content: Text(alreadySaved ? 'Ayah bookmark removed' : 'Ayah bookmarked'),
+      ),
+    );
   }
 
   @override
@@ -140,27 +218,23 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     );
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final settings = ref.watch(settingsProvider);
-    final isTr = settings.languageCode == 'tr';
+    final locale = Localizations.localeOf(context);
+    final langCode = settings.languageCode ?? locale.languageCode;
+    final isTr = langCode.toLowerCase().startsWith('tr');
 
     return Scaffold(
       appBar: AppBar(
         title: Text(surahInfo.transliteration),
         actions: [
           IconButton(
-            icon: Icon(
-              _isBookmarked
-                  ? Icons.bookmark_rounded
-                  : Icons.bookmark_border_rounded,
-            ),
+            icon: Icon(_isBookmarked ? Icons.bookmark_rounded : Icons.bookmark_border_rounded),
             color: _isBookmarked ? AppColors.emerald : null,
             onPressed: () {
               setState(() => _isBookmarked = !_isBookmarked);
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: Text(
-                    _isBookmarked ? 'Bookmark Added' : 'Bookmark Removed',
-                  ),
                   duration: const Duration(seconds: 1),
+                  content: Text(_isBookmarked ? 'Bookmark added' : 'Bookmark removed'),
                 ),
               );
             },
@@ -183,9 +257,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
         ],
       ),
       body: _isLoading
-          ? const Center(
-              child: CircularProgressIndicator(color: AppColors.emerald),
-            )
+          ? const Center(child: CircularProgressIndicator(color: AppColors.emerald))
           : ListView.builder(
               padding: const EdgeInsets.all(20),
               itemCount: _ayahs.length + 2,
@@ -231,12 +303,13 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                     ),
                   );
                 }
+
                 if (i == 1) {
                   if (widget.surahNumber != 9) {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 24),
                       child: Text(
-                        'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
+                        'بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
                         style: TextStyle(
                           fontSize: 26,
                           fontWeight: FontWeight.w900,
@@ -251,11 +324,13 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                   return const SizedBox.shrink();
                 }
 
-                final ayah = _ayahs[i - 2];
-                final textAr = ayah['text'] ?? '';
-                final textTrans = isTr
-                    ? (ayah['tr_translation'] ?? '')
-                    : (ayah['en_translation'] ?? '');
+                final ayah = _ayahs[i - 2] as Map<String, dynamic>;
+                final textAr = (ayah['text'] ?? '').toString();
+                final textTrans = (isTr ? ayah['tr_translation'] : ayah['en_translation'])
+                        ?.toString() ??
+                    '';
+                final ayahNumber = ayah['numberInSurah'] as int? ?? 0;
+                final isAyahBookmarked = _bookmarkedAyahs.contains(ayahNumber);
 
                 return Container(
                   margin: const EdgeInsets.only(bottom: 16),
@@ -284,7 +359,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                             ),
                             child: Center(
                               child: Text(
-                                '${ayah['numberInSurah']}',
+                                '$ayahNumber',
                                 style: const TextStyle(
                                   fontWeight: FontWeight.w900,
                                   color: AppColors.emerald,
@@ -296,14 +371,21 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                           const Spacer(),
                           IconButton(
                             icon: const Icon(Icons.share_rounded, size: 18),
-                            onPressed: () {},
+                            onPressed: () => _shareAyah(
+                              surahInfo: surahInfo,
+                              ayah: ayah,
+                              isTr: isTr,
+                            ),
                           ),
                           IconButton(
-                            icon: const Icon(
-                              Icons.bookmark_border_rounded,
+                            icon: Icon(
+                              isAyahBookmarked
+                                  ? Icons.bookmark_rounded
+                                  : Icons.bookmark_border_rounded,
                               size: 18,
+                              color: isAyahBookmarked ? AppColors.emerald : null,
                             ),
-                            onPressed: () {},
+                            onPressed: () => _toggleAyahBookmark(ayahNumber),
                           ),
                         ],
                       ),
@@ -327,9 +409,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                           style: TextStyle(
                             fontSize: 14,
                             height: 1.7,
-                            color: Theme.of(
-                              context,
-                            ).colorScheme.onSurface.withValues(alpha: 0.8),
+                            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.8),
                           ),
                         ),
                       ),

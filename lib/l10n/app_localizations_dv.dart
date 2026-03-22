@@ -12,440 +12,422 @@ class AppLocalizationsDv extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
-  String get home => 'ŞŞ¬';
+  String get home => 'ގެ';
 
   @override
-  String get quran => 'Ş¤ŞªŞƒŞªŞ‡Ş§Ş‚Ş°';
+  String get quran => 'ޤުރުއާން';
 
   @override
-  String get qibla => 'Ş¤Ş¨Ş„Ş°ŞŞ§ Ş‡Ş¬ŞˆŞ¬';
+  String get qibla => 'ޤިބްލާ އެވެ';
 
   @override
-  String get zikr => 'Ş’Ş¨Ş†ŞªŞƒŞª...';
+  String get zikr => 'ޒިކުރު...';
 
   @override
-  String get calendar => 'Ş†Ş¦ŞŞ¦Ş‚Ş°Ş‘Ş¦ŞƒŞ¬ŞˆŞ¬';
+  String get calendar => 'ކަލަންޑަރެވެ';
 
   @override
-  String get settings => 'ŞŞ¬Ş“Ş¨Ş‚Ş°ŞŞŞ°';
+  String get settings => 'ސެޓިންގސް';
 
   @override
-  String get nextPrayer => 'Ş‹Ş¬Ş‚Ş° Ş‡Ş®Ş‚Ş°Ş‚Ş¦ Ş‹ŞªŞ¢Ş§';
+  String get nextPrayer => 'ދެން އޮންނަ ދުޢާ';
 
   @override
-  String get prayerTimes => 'Ş‚Ş¦Ş‰Ş§Ş‹Şª ŞˆŞ¦ŞŞªŞŒŞªŞŒŞ¦Ş†Ş¬ŞˆŞ¬';
+  String get prayerTimes => 'ނަމާދު ވަގުތުތަކެވެ';
 
   @override
-  String get continueReading =>
-      'Ş†Ş¨Ş”Ş¬ŞˆŞªŞ‚Ş° Ş†ŞªŞƒŞ¨Ş‡Ş¦ŞŞ° ŞŞ¬Ş‚Ş°Ş‹Ş¦ŞˆŞ§';
+  String get continueReading => 'ކިޔެވުން ކުރިއަށް ގެންދަވާ';
 
   @override
-  String get getLifetimePro =>
-      'ŞŞ¦Ş‡Ş¨ŞŠŞ°Ş“Ş¦Ş‡Ş¨Ş‰Ş° Ş•Ş°ŞƒŞ¯ Ş€Ş¯Ş‹Ş§ŞŞ¬ŞˆŞ¬';
+  String get getLifetimePro => 'ލައިފްޓައިމް ޕްރޯ ހޯދާށެވެ';
 
   @override
   String get unlockTajweed =>
-      'ŞŒŞ¦Ş–Ş°ŞˆŞ©Ş‹Şª Ş‡Ş¦Ş‹Ş¨ Ş‡Ş¬Ş‘Ş°ŞˆŞ§Ş‚Ş°ŞŞ°Ş‘Ş° ŞŠŞ©Ş—Ş§ŞŞ° Ş‡Ş¦Ş‚Ş°ŞŞ®Ş†Ş° Ş†Ş®ŞŞ°ŞŞ¦Ş‡Ş°ŞˆŞ§ŞŞ¬ŞˆŞ¬';
+      'ތަޖްވީދު އަދި އެޑްވާންސްޑް ފީޗާސް އަންލޮކް ކޮށްލައްވާށެވެ';
 
   @override
-  String get prayerCalculation => 'Ş‚Ş¦Ş‰Ş§Ş‹Şª Ş€Ş¨ŞŞ§Ş„ŞªŞ†ŞªŞƒŞªŞ‚Ş°';
+  String get prayerCalculation => 'ނަމާދު ހިސާބުކުރުން';
 
   @override
-  String get method => 'Ş€Ş¨ŞŞ§Ş„ŞªŞ†ŞªŞƒŞªŞ‰ŞªŞŞ¬ Ş‡ŞªŞŞ«ŞŞª';
+  String get method => 'ހިސާބުކުރުމުގެ އުސޫލު';
 
   @override
-  String get madhab => 'Ş‡Ş¦ŞŞ°ŞƒŞª Ş–ŞªŞƒŞ¨ŞŞ°Ş“Ş¨Ş†Ş° Ş‰Ş¬ŞŒŞ¯Ş‘Ş°';
+  String get madhab => 'އަސްރު ޖުރިސްޓިކް މެތޯޑް';
 
   @override
-  String get surahs => 'ŞŞ«ŞƒŞ¦ŞŒŞ°ŞŒŞ¦Ş†Ş¬ŞˆŞ¬';
+  String get surahs => 'ސޫރަތްތަކެވެ';
 
   @override
-  String get ayahs => 'Ş‡Ş¦Ş”Ş§Ş€Ş°ŞŞ°';
+  String get ayahs => 'އަޔާހްސް';
 
   @override
-  String get fajr => 'ŞŠŞ¦Ş–ŞªŞƒŞª';
+  String get fajr => 'ފަޖުރު';
 
   @override
-  String get sunrise => 'Ş‡Ş¨ŞƒŞªŞ‡Ş¦ŞƒŞ§';
+  String get sunrise => 'އިރުއަރާ';
 
   @override
-  String get dhuhr => 'Ş‹ŞªŞ€ŞªŞƒŞª Ş‡Ş¬ŞˆŞ¬';
+  String get dhuhr => 'ދުހުރު އެވެ';
 
   @override
-  String get asr => 'Ş‡Ş¦ŞŞ°ŞƒŞª';
+  String get asr => 'އަސްރު';
 
   @override
-  String get maghrib => 'Ş‰Ş¦Ş£Ş°ŞƒŞ¨Ş„Şª';
+  String get maghrib => 'މަޣްރިބު';
 
   @override
-  String get isha => 'Ş‡Ş¨ŞŞ§Ş‡Ş¬ŞˆŞ¬';
+  String get isha => 'އިޝާއެވެ';
 
   @override
-  String get dataStorage => 'Ş‘Ş­Ş“Ş§ Ş‡Ş¬Ş‚Ş°Ş‘Ş° ŞŞ°Ş“Ş¯ŞƒŞ­Ş–Ş°';
+  String get dataStorage => 'ޑޭޓާ އެންޑް ސްޓޯރޭޖް';
 
   @override
-  String get clearCache => 'Ş†Ş¬ŞŞ° ŞŞ§ŞŠŞªŞ†ŞªŞƒŞªŞ‚Ş°';
+  String get clearCache => 'ކެޝް ސާފުކުރުން';
 
   @override
-  String get cacheClearedSuccess =>
-      'Ş†Ş¬ŞŞ° Ş†Ş§Ş‰Ş¨Ş”Ş§Ş„ŞªŞ†Ş¦Ş‰Ş§Ş‡Ş¬Ş†Şª Ş†Ş°ŞŞ¨Ş‡Ş¦Şƒ Ş†ŞªŞƒŞ¬ŞˆŞªŞ‚Ş¬ŞˆŞ¬';
+  String get cacheClearedSuccess => 'ކެޝް ކާމިޔާބުކަމާއެކު ކްލިއަރ ކުރެވުނެވެ';
 
   @override
-  String get location => 'ŞŞ¦ŞƒŞ¦Ş€Ş¦Ş‡Ş°Ş‹Şª';
+  String get location => 'ސަރަހައްދު';
 
   @override
-  String get language => 'Ş„Ş¦ŞŞ°';
+  String get language => 'ބަސް';
 
   @override
-  String get selectLanguage => 'Ş„Ş¦ŞŞ° Ş€Ş®ŞˆŞ§ŞŞ¬ŞˆŞ¬';
+  String get selectLanguage => 'ބަސް ހޮވާށެވެ';
 
   @override
-  String get searchLanguage => '180+ Ş„Ş¦ŞŞ° Ş€Ş¯Ş‹ŞªŞ‚Ş°...';
+  String get searchLanguage => '180+ ބަސް ހޯދުން...';
 
   @override
-  String get systemDefault => 'ŞŞ¨ŞŞ°Ş“Ş¦Ş‰Ş° Ş‘Ş¨ŞŠŞ¯ŞŞ°Ş“Ş°';
+  String get systemDefault => 'ސިސްޓަމް ޑިފޯލްޓް';
 
   @override
-  String get currentLocation =>
-      'Ş‰Ş¨Ş€Ş§ŞƒŞª Ş€ŞªŞƒŞ¨ ŞŒŞ¦Ş‚Ş° (Ş–Ş©Ş•Ş©Ş‡Ş¬ŞŞ°)';
+  String get currentLocation => 'މިހާރު ހުރި ތަން (ޖީޕީއެސް)';
 
   @override
-  String get search => 'Ş€Ş¯Ş‹ŞªŞ‚Ş°';
+  String get search => 'ހޯދުން';
 
   @override
-  String get searchHint => 'Ş€Ş¯Ş‹ŞªŞ‚Ş°...';
+  String get searchHint => 'ހޯދުން...';
 
   @override
-  String get noResults =>
-      'Ş‡Ş¬Ş‡Ş°ŞˆŞ¬ŞŞ° Ş‚Ş¦ŞŒŞ©Ş–Ş§Ş‡Ş¬Ş‡Ş° Ş‚ŞªŞŠŞ¬Ş‚Ş¬Ş‡Ş¬ŞˆŞ¬';
+  String get noResults => 'އެއްވެސް ނަތީޖާއެއް ނުފެނެއެވެ';
 
   @override
-  String get loading => 'ŞŞ¯Ş‘Ş¨Ş‚Ş°Ş...';
+  String get loading => 'ލޯޑިންގ...';
 
   @override
-  String get error => 'Ş†ŞªŞŞ°';
+  String get error => 'ކުށް';
 
   @override
-  String get retry => 'Ş‡Ş¦ŞŞªŞ‚Ş° Ş‰Ş¦ŞŞ¦Ş‡Ş°Ş†Ş¦ŞŒŞ° Ş†ŞªŞƒŞ§ŞŞ¬ŞˆŞ¬';
+  String get retry => 'އަލުން މަސައްކަތް ކުރާށެވެ';
 
   @override
-  String get cancel => 'Ş†Ş¬Ş‚Ş°ŞŞ¦ŞŞ°';
+  String get cancel => 'ކެންސަލް';
 
   @override
-  String get save => 'ŞƒŞ¦Ş‡Ş°Ş†Ş§Ş†ŞªŞƒŞªŞ‚Ş°';
+  String get save => 'ރައްކާކުރުން';
 
   @override
-  String get delete => 'Ş‘Ş¨ŞŞ©Ş“Ş°';
+  String get delete => 'ޑިލީޓް';
 
   @override
-  String get edit => 'Ş„Ş¦Ş‹Ş¦ŞŞª ŞŞ¬Ş‚Ş¦Ş‡ŞªŞ‚Ş°';
+  String get edit => 'ބަދަލު ގެނައުން';
 
   @override
-  String get close => 'ŞŞ¬Ş‡Ş°Ş•ŞªŞ‚Ş°';
+  String get close => 'ލެއްޕުން';
 
   @override
-  String get ok => 'Ş‡Ş¬Ş‚Ş°Ş‰Ş¬ ŞƒŞ¦Ş‚ŞŞ¦Ş…Şª';
+  String get ok => 'އެންމެ ރަނގަޅު';
 
   @override
-  String get yes => 'Ş‡Ş§Ş‚';
+  String get yes => 'އާނ';
 
   @override
-  String get no => 'Ş‚Ş«Ş‚Ş°';
+  String get no => 'ނޫން';
 
   @override
-  String get surah => 'ŞŞ«ŞƒŞ¦ŞŒŞ¬ŞˆŞ¬';
+  String get surah => 'ސޫރަތެވެ';
 
   @override
-  String get juz => 'Ş–Ş«Ş’Ş°';
+  String get juz => 'ޖޫޒް';
 
   @override
-  String get page => 'ŞŞ¦ŞŠŞ°Ş™Ş§';
+  String get page => 'ޞަފްޙާ';
 
   @override
-  String get reading => 'Ş†Ş¨Ş”ŞªŞ‚Ş°';
+  String get reading => 'ކިޔުން';
 
   @override
-  String get recitation => 'Ş†Ş¨Ş”Ş¬ŞˆŞªŞ‚Ş°';
+  String get recitation => 'ކިޔެވުން';
 
   @override
-  String get translation => 'ŞŒŞ¦ŞƒŞªŞ–Ş¦Ş‰Ş§';
+  String get translation => 'ތަރުޖަމާ';
 
   @override
-  String get tafsir => 'ŞŒŞ¦ŞŠŞ°ŞŞ©ŞƒŞ¬ŞˆŞ¬';
+  String get tafsir => 'ތަފްސީރެވެ';
 
   @override
-  String get bookmarks => 'Ş„ŞªŞ†Ş°Ş‰Ş§Ş†Ş°ŞŞ°';
+  String get bookmarks => 'ބުކްމާކްސް';
 
   @override
-  String get addBookmark => 'Ş„ŞªŞ†Ş°Ş‰Ş§Ş†Ş° Ş‡Ş¨ŞŒŞªŞƒŞªŞ†ŞªŞƒŞªŞ‚Ş°';
+  String get addBookmark => 'ބުކްމާކް އިތުރުކުރުން';
 
   @override
-  String get removeBookmark => 'Ş„ŞªŞ†Ş°Ş‰Ş§Ş†Ş° Ş‚Ş¦Ş‡Ş°ŞŒŞ§ŞŞ§ŞŞ¬ŞˆŞ¬';
+  String get removeBookmark => 'ބުކްމާކް ނައްތާލާށެވެ';
 
   @override
-  String get lastRead => 'Ş‡Ş¬Ş‚Ş°Ş‰Ş¬ ŞŠŞ¦Ş€Şª Ş†Ş¨Ş”ŞªŞ‚Ş°';
+  String get lastRead => 'އެންމެ ފަހު ކިޔުން';
 
   @override
-  String get dailyZikr => 'Ş‹ŞªŞˆŞ¦Ş€ŞªŞ‚Ş° Ş‹ŞªŞˆŞ¦Ş€Ş¦ŞŞ° Ş’Ş¨Ş†ŞªŞƒŞª...';
+  String get dailyZikr => 'ދުވަހުން ދުވަހަށް ޒިކުރު...';
 
   @override
-  String get morningZikr => 'Ş€Ş¬Ş‚Ş‹ŞªŞ‚Şª Ş’Ş¨Ş†ŞªŞƒŞª';
+  String get morningZikr => 'ހެނދުނު ޒިކުރު';
 
   @override
-  String get eveningZikr => 'Ş€Ş¦ŞˆŞ©ŞƒŞª Ş’Ş¨Ş†ŞªŞƒŞª';
+  String get eveningZikr => 'ހަވީރު ޒިކުރު';
 
   @override
-  String get tasbih => 'ŞŒŞ¦ŞŞ°Ş„Ş©Ş€Ş¬ŞˆŞ¬';
+  String get tasbih => 'ތަސްބީހެވެ';
 
   @override
-  String get ahkab => 'Ş‡Ş¦Ş€ŞªŞ†Ş¦Ş‰Ş°';
+  String get ahkab => 'އަހުކަމް';
 
   @override
-  String get masaail => 'Ş‰Ş¦ŞŞ§Ş¢Ş¨ŞŞ° Ş‡Ş¬ŞˆŞ¬';
+  String get masaail => 'މަސާޢިލް އެވެ';
 
   @override
-  String get hadith => 'Ş™Ş¦Ş‹Ş©Ş˜Ş°ŞŠŞªŞ…Ş¬ŞˆŞ¬';
+  String get hadith => 'ޙަދީޘްފުޅެވެ';
 
   @override
-  String get hadithCollection => 'Ş™Ş¦Ş‹Ş©Ş˜Ş° Ş†Ş¦ŞŞ¬Ş†Ş°ŞŞ¦Ş‚Ş°';
+  String get hadithCollection => 'ޙަދީޘް ކަލެކްޝަން';
 
   @override
-  String get hadithBooks => 'Ş™Ş¦Ş‹Ş©Ş˜Ş° ŞŠŞ®ŞŒŞ°ŞŒŞ¦Ş†Ş¬ŞˆŞ¬';
+  String get hadithBooks => 'ޙަދީޘް ފޮތްތަކެވެ';
 
   @override
-  String get searchHadith => 'Ş™Ş¦Ş‹Ş©Ş˜Ş° Ş€Ş¯Ş‹ŞªŞ‚Ş°';
+  String get searchHadith => 'ޙަދީޘް ހޯދުން';
 
   @override
-  String get asmaulHusna => 'Ş‡Ş¦ŞŞ°Ş‰Ş§Ş‡ŞªŞŞ°Ş€ŞªŞŞ°Ş‚Ş§ Ş‡Ş¬ŞˆŞ¬';
+  String get asmaulHusna => 'އަސްމާއުލްހުސްނާ އެވެ';
 
   @override
-  String get namesOfAllah => 'Ø§Ù„Ù„Ù‡ ŞŞ¬ Ş‚Ş¦Ş‚Ş°ŞŠŞªŞ…ŞªŞŒŞ¦Ş†Ş¬ŞˆŞ¬';
+  String get namesOfAllah => 'الله ގެ ނަންފުޅުތަކެވެ';
 
   @override
-  String get liveTv => 'ŞŞ¦Ş‡Ş¨ŞˆŞ° Ş“Ş©ŞˆŞ©';
+  String get liveTv => 'ލައިވް ޓީވީ';
 
   @override
-  String get watchLive => 'ŞŞ¦Ş‡Ş¨ŞˆŞ° Ş„Ş¦Ş‡Ş°ŞŞ¦ŞˆŞ§ŞŞ¬ŞˆŞ¬';
+  String get watchLive => 'ލައިވް ބައްލަވާށެވެ';
 
   @override
-  String get streamError => 'ŞŞ°Ş“Ş°ŞƒŞ©Ş‰Ş° Ş‡Ş¬ŞƒŞ¦Şƒ';
+  String get streamError => 'ސްޓްރީމް އެރަރ';
 
   @override
-  String get reload => 'ŞƒŞ©ŞŞ¯Ş‘Ş°';
+  String get reload => 'ރީލޯޑް';
 
   @override
-  String get openInYoutube =>
-      'Ş”Ş«Ş“Ş¨Ş‡ŞªŞ„Ş°ŞŞ¦Ş‡Ş¨ Ş€ŞªŞ…ŞªŞˆŞ§ŞŠŞ¦Ş‡Ş¨ Ş€ŞªŞƒŞ¬Ş‡Ş¬ŞˆŞ¬';
+  String get openInYoutube => 'ޔޫޓިއުބްގައި ހުޅުވާފައި ހުރެއެވެ';
 
   @override
-  String get ibadahTracker => 'Ş‡Ş¨Ş„Ş§Ş‹Ş§ Ş“Ş°ŞƒŞ¬Ş†Ş¦Şƒ Ş‡Ş¬ŞˆŞ¬';
+  String get ibadahTracker => 'އިބާދާ ޓްރެކަރ އެވެ';
 
   @override
-  String get fasting => 'ŞƒŞ¯Ş‹Ş¦ Ş€Ş¨ŞŠŞªŞ‰Ş¬ŞˆŞ¬';
+  String get fasting => 'ރޯދަ ހިފުމެވެ';
 
   @override
-  String get quranReading => 'Ş¤ŞªŞƒŞªŞ‡Ş§Ş‚Ş° Ş†Ş¨Ş”Ş¬ŞˆŞªŞ‚Ş°';
+  String get quranReading => 'ޤުރުއާން ކިޔެވުން';
 
   @override
-  String get prayers => 'Ş‹ŞªŞ¢Ş§ŞŒŞ¦Ş†Ş¬ŞˆŞ¬';
+  String get prayers => 'ދުޢާތަކެވެ';
 
   @override
-  String get dhikrCount => 'Ş‹Ş¨Ş†Ş°ŞƒŞª Ş†Ş¦Ş‡ŞªŞ‚Ş°Ş“Ş°';
+  String get dhikrCount => 'ދިކްރު ކައުންޓް';
 
   @override
-  String get weeklyProgress =>
-      'Ş€Ş¦ŞŠŞ°ŞŒŞ§Ş‡Ş¦Ş†Şª Ş‡Ş¬Ş‡Ş°ŞŠŞ¦Ş€Ş¦ŞƒŞª Ş†ŞªŞƒŞ¨Ş‡Ş¬ŞƒŞªŞ‚Ş°';
+  String get weeklyProgress => 'ހަފްތާއަކު އެއްފަހަރު ކުރިއެރުން';
 
   @override
-  String get monthlyProgress =>
-      'Ş‰Ş¦Ş€ŞªŞ‚Ş° Ş‰Ş¦Ş€Ş¦ŞŞ° Ş†ŞªŞƒŞ¨Ş‡Ş¬ŞƒŞªŞ‚Ş°';
+  String get monthlyProgress => 'މަހުން މަހަށް ކުރިއެރުން';
 
   @override
-  String get statistics => 'ŞŒŞ¦ŞŠŞ§ŞŞ°Ş€Ş¨ŞŞ§Ş„Şª';
+  String get statistics => 'ތަފާސްހިސާބު';
 
   @override
-  String get hijriCalendar => 'Ş€Ş¨Ş–ŞªŞƒŞ© Ş†Ş¦ŞŞ¦Ş‚Ş°Ş‘Ş¦ŞƒŞ¬ŞˆŞ¬';
+  String get hijriCalendar => 'ހިޖުރީ ކަލަންޑަރެވެ';
 
   @override
-  String get gregorianCalendar =>
-      'ŞŞ°ŞƒŞ¬ŞŞ¯ŞƒŞ¨Ş‡Ş¦Ş‚Ş° Ş†Ş¦ŞŞ¦Ş‚Ş°Ş‘Ş¦ŞƒŞ¬ŞˆŞ¬';
+  String get gregorianCalendar => 'ގްރެގޯރިއަން ކަލަންޑަރެވެ';
 
   @override
-  String get today => 'Ş‰Ş¨Ş‡Ş¦Ş‹Şª';
+  String get today => 'މިއަދު';
 
   @override
-  String get tomorrow => 'Ş‰Ş§Ş‹Ş¦Ş‰Ş§';
+  String get tomorrow => 'މާދަމާ';
 
   @override
-  String get yesterday => 'Ş‡Ş¨Ş‡Ş°Ş”Ş¬';
+  String get yesterday => 'އިއްޔެ';
 
   @override
-  String get specialDays => 'Ş€Ş§Ş‡Ş°ŞŞ¦ Ş‹ŞªŞˆŞ¦ŞŞ°ŞŒŞ¦Ş†Ş¬ŞˆŞ¬';
+  String get specialDays => 'ހާއްސަ ދުވަސްތަކެވެ';
 
   @override
-  String get ramadan => 'ŞƒŞ¦Ş‰Ş¦ŞŸŞ§Ş‚Ş°Ş‰Ş¦Ş€Şª';
+  String get ramadan => 'ރަމަޟާންމަހު';
 
   @override
-  String get eidAlFitr => 'ŞŠŞ¨ŞŒŞªŞƒŞª Ş‡Ş©Ş‹Şª Ş‡Ş¬ŞˆŞ¬';
+  String get eidAlFitr => 'ފިތުރު އީދު އެވެ';
 
   @override
-  String get eidAlAdha => 'Ş‡Ş¦ŞŸŞ°Ş™Ş§ Ş¢Ş©Ş‹Ş¬ŞˆŞ¬';
+  String get eidAlAdha => 'އަޟްޙާ ޢީދެވެ';
 
   @override
-  String get laylatAlQadr => 'ŞŞ¦Ş‡Ş¨ŞŞ¦ŞŒŞªŞŞ° Ş¤Ş¦Ş‹Ş°ŞƒŞ¬ŞˆŞ¬';
+  String get laylatAlQadr => 'ލައިލަތުލް ޤަދްރެވެ';
 
   @override
-  String get qiblaDirection => 'Ş¤Ş¨Ş„Ş°ŞŞ§ Ş‘Ş¨ŞƒŞ¬Ş†Ş°ŞŞ¦Ş‚Ş°';
+  String get qiblaDirection => 'ޤިބްލާ ޑިރެކްޝަން';
 
   @override
-  String get compass => 'Ş†Ş®Ş‰Ş°Ş•Ş¦ŞŞ° Ş‡Ş¬ŞˆŞ¬';
+  String get compass => 'ކޮމްޕަސް އެވެ';
 
   @override
-  String get degrees => 'Ş‘Ş¨ŞŞ°ŞƒŞ© Ş‡Ş¬ŞˆŞ¬';
+  String get degrees => 'ޑިގްރީ އެވެ';
 
   @override
-  String get north => 'Ş‡ŞªŞŒŞªŞƒŞª';
+  String get north => 'އުތުރު';
 
   @override
-  String get qiblaFound => 'Ş¤Ş¨Ş„Ş°ŞŞ§ Ş€Ş¯Ş‹Ş¨Ş‡Ş°Ş–Ş¬!';
+  String get qiblaFound => 'ޤިބްލާ ހޯދިއްޖެ!';
 
   @override
-  String get turnDevice =>
-      'Ş¤Ş¨Ş„Ş°ŞŞ§Ş‡Ş§ Ş‹Ş¨Ş‰Ş§Ş‡Ş¦ŞŞ° Ş‘Ş¨ŞˆŞ¦Ş‡Ş¨ŞŞ° Ş‡Ş¦Ş‚Ş„ŞªŞƒŞ§ŞŞ§ŞŞ¬ŞˆŞ¬';
+  String get turnDevice => 'ޤިބްލާއާ ދިމާއަށް ޑިވައިސް އަނބުރާލާށެވެ';
 
   @override
-  String get notifications => 'Ş‚Ş®Ş“Ş¨ŞŠŞ¨Ş†Ş­ŞŞ¦Ş‚Ş°ŞŒŞ¦Ş‡Ş°';
+  String get notifications => 'ނޮޓިފިކޭޝަންތައް';
 
   @override
-  String get prayerNotifications => 'Ş‚Ş¦Ş‰Ş§Ş‹Şª Ş‚Ş®Ş“Ş¨ŞŠŞ¨Ş†Ş­ŞŞ¦Ş‚Ş°ŞŞ°';
+  String get prayerNotifications => 'ނަމާދު ނޮޓިފިކޭޝަންސް';
 
   @override
-  String get enableNotifications =>
-      'Ş‚Ş®Ş“Ş¨ŞŠŞ¨Ş†Ş­ŞŞ¦Ş‚Ş°ŞŒŞ¦Ş‡Ş° Ş‡Ş¬Ş‚Ş¬Ş„Ş¦ŞŞ°Ş†ŞªŞƒŞªŞ‚Ş°';
+  String get enableNotifications => 'ނޮޓިފިކޭޝަންތައް އެނެބަލްކުރުން';
 
   @override
-  String get notificationTime => 'Ş‚Ş®Ş“Ş¨ŞŠŞ¨Ş†Ş­ŞŞ¦Ş‚Ş° ŞŞ¦Ş‘Ş¨';
+  String get notificationTime => 'ނޮޓިފިކޭޝަން ގަޑި';
 
   @override
-  String get beforePrayer =>
-      'Ş‚Ş¦Ş‰Ş§Ş‹Şª Ş†ŞªŞƒŞªŞ‰ŞªŞŞ¬ Ş‰Ş¨Ş‚Ş¨Ş“Ş° Ş†ŞªŞƒŞ¨Ş‚Ş°Ş‚Ş¬ŞˆŞ¬';
+  String get beforePrayer => 'ނަމާދު ކުރުމުގެ މިނިޓް ކުރިންނެވެ';
 
   @override
-  String get theme => 'ŞŒŞ©Ş‰Ş°';
+  String get theme => 'ތީމް';
 
   @override
-  String get lightMode => 'ŞŞ¦Ş‡Ş¨Ş“Ş° Ş‰Ş¯Ş‘Ş°';
+  String get lightMode => 'ލައިޓް މޯޑް';
 
   @override
-  String get darkMode => 'Ş‘Ş§Ş†Ş° Ş‰Ş¯Ş‘Ş¬ŞˆŞ¬';
+  String get darkMode => 'ޑާކް މޯޑެވެ';
 
   @override
-  String get systemTheme => 'ŞŞ¨ŞŞ°Ş“Ş¦Ş‰Ş° ŞŒŞ©Ş‰Ş°';
+  String get systemTheme => 'ސިސްޓަމް ތީމް';
 
   @override
-  String get about => 'ŞŞªŞ…Ş¨ŞŞ¬Ş‚Ş°';
+  String get about => 'ގުޅިގެން';
 
   @override
-  String get version => 'ŞˆŞ¦ŞƒŞŞ¦Ş‚Ş°';
+  String get version => 'ވަރޝަން';
 
   @override
-  String get privacyPolicy => 'Ş•Ş°ŞƒŞ¦Ş‡Ş¨ŞˆŞ¬ŞŞ© Ş•Ş®ŞŞ¨ŞŞ©';
+  String get privacyPolicy => 'ޕްރައިވެސީ ޕޮލިސީ';
 
   @override
-  String get termsOfService => 'ŞšŞ¨Ş‹ŞªŞ‰Ş¦ŞŒŞªŞŞ¬ ŞŞ¦ŞƒŞªŞŒŞªŞŒŞ¦Ş‡Ş°';
+  String get termsOfService => 'ޚިދުމަތުގެ ޝަރުތުތައް';
 
   @override
-  String get contactUs => 'Ş†Ş®Ş‚Ş°Ş“Ş¬Ş†Ş°Ş“Ş° Ş‡Ş¦ŞŞ°';
+  String get contactUs => 'ކޮންޓެކްޓް އަސް';
 
   @override
-  String get rateApp => 'ŞƒŞ­Ş“Ş° Ş‡Ş¬Ş•Ş°';
+  String get rateApp => 'ރޭޓް އެޕް';
 
   @override
-  String get shareApp => 'ŞŞ¬Ş‡Ş§ Ş‡Ş¬Ş•Ş°';
+  String get shareApp => 'ޝެއާ އެޕް';
 
   @override
-  String get downloadManager => 'Ş‘Ş¦Ş‡ŞªŞ‚Ş°ŞŞ¯Ş‘Ş° Ş‰Ş¬Ş‚Ş­Ş–Ş¦Şƒ';
+  String get downloadManager => 'ޑައުންލޯޑް މެނޭޖަރ';
 
   @override
-  String get downloads => 'Ş‘Ş¦Ş‡ŞªŞ‚Ş°ŞŞ¯Ş‘Ş°ŞŞ°';
+  String get downloads => 'ޑައުންލޯޑްސް';
 
   @override
-  String get downloading => 'Ş‘Ş¦Ş‡ŞªŞ‚Ş°ŞŞ¯Ş‘Ş° Ş†ŞªŞƒŞ¦Ş‰ŞªŞ‚Ş°...';
+  String get downloading => 'ޑައުންލޯޑް ކުރަމުން...';
 
   @override
-  String get downloadComplete => 'Ş‘Ş¦Ş‡ŞªŞ‚Ş°ŞŞ¯Ş‘Ş° ŞŠŞªŞƒŞ¨Ş€Ş¦Ş‰Ş¦';
+  String get downloadComplete => 'ޑައުންލޯޑް ފުރިހަމަ';
 
   @override
-  String get downloadFailed => 'Ş‘Ş¦Ş‡ŞªŞ‚Ş°ŞŞ¯Ş‘Ş° ŞŠŞ¬Ş‡Ş¨ŞŞ°ŞˆŞ¬Ş‡Ş°Ş–Ş¬';
+  String get downloadFailed => 'ޑައުންލޯޑް ފެއިލްވެއްޖެ';
 
   @override
-  String get offlineMode => 'Ş‡Ş®ŞŠŞ°ŞŞ¦Ş‡Ş¨Ş‚Ş° Ş‰Ş¯Ş‘Ş°';
+  String get offlineMode => 'އޮފްލައިން މޯޑް';
 
   @override
-  String get noInternet =>
-      'Ş‡Ş¨Ş‚Ş°Ş“Ş¦Ş‚Ş¬Ş“Ş° Ş†Ş¦Ş‚Ş¬Ş†Ş°ŞŞ¦Ş‚Ş° Ş‚Ş¬ŞŒŞ¬ŞˆŞ¬';
+  String get noInternet => 'އިންޓަނެޓް ކަނެކްޝަން ނެތެވެ';
 
   @override
-  String get checkConnection =>
-      'Ş†Ş¦Ş‚Ş¬Ş†Ş°ŞŞ¦Ş‚Ş° Ş—Ş¬Ş†Ş° Ş†ŞªŞƒŞ¦Ş‡Ş°ŞˆŞ§ŞŞ¬ŞˆŞ¬';
+  String get checkConnection => 'ކަނެކްޝަން ޗެކް ކުރައްވާށެވެ';
 
   @override
-  String get premium => 'Ş‰Ş®Ş…Şª';
+  String get premium => 'މޮޅު';
 
   @override
-  String get upgradeToPro =>
-      'Ş•Ş°ŞƒŞ¯ Ş‡Ş¦ŞŞ° Ş‡Ş¦Ş•Ş°ŞŞ°ŞƒŞ­Ş‘Ş° Ş†ŞªŞƒŞªŞ‚Ş°';
+  String get upgradeToPro => 'ޕްރޯ އަށް އަޕްގްރޭޑް ކުރުން';
 
   @override
-  String get proFeatures => 'Ş•Ş°ŞƒŞ¯ ŞŠŞ©Ş—Ş§ŞŞ°';
+  String get proFeatures => 'ޕްރޯ ފީޗާސް';
 
   @override
-  String get removeAds => 'Ş‡Ş¨ŞŞ°ŞŒŞ¨Ş€Ş§ŞƒŞªŞŒŞ¦Ş‡Ş° Ş‚Ş¦Ş‡Ş°ŞŒŞ§ŞŞªŞ‚Ş°';
+  String get removeAds => 'އިޝްތިހާރުތައް ނައްތާލުން';
 
   @override
-  String get unlockAll =>
-      'Ş€ŞªŞƒŞ¨Ş€Ş§ Ş†Ş®Ş‚Ş°Ş“Ş¬Ş‚Ş°Ş“Ş¬Ş‡Ş° Ş‡Ş¦Ş‚Ş°ŞŞ®Ş†Ş° Ş†Ş®ŞŞ°ŞŞ§ŞŞ¬ŞˆŞ¬';
+  String get unlockAll => 'ހުރިހާ ކޮންޓެންޓެއް އަންލޮކް ކޮށްލާށެވެ';
 
   @override
-  String get exclusiveContent =>
-      'Ş‡Ş¬Ş†Ş°ŞŞ°Ş†Ş°ŞŞ«ŞŞ¨ŞˆŞ° Ş†Ş®Ş‚Ş°Ş“Ş¬Ş‚Ş°Ş“Ş°';
+  String get exclusiveContent => 'އެކްސްކްލޫސިވް ކޮންޓެންޓް';
 
   @override
-  String get welcome => 'Ş‰Ş¦ŞƒŞªŞ™Ş¦Ş„Ş§';
+  String get welcome => 'މަރުޙަބާ';
 
   @override
-  String get getStarted => 'ŞŠŞ¦ŞŞ§ŞŞ¬ŞˆŞ¬';
+  String get getStarted => 'ފަށާށެވެ';
 
   @override
-  String get skip => 'Ş‹Ş«Ş†Ş®ŞŞ°ŞŞªŞ‚Ş°';
+  String get skip => 'ދޫކޮށްލުން';
 
   @override
-  String get next => 'Ş‹Ş¬Ş‚Ş°';
+  String get next => 'ދެން';
 
   @override
-  String get done => 'Ş‚Ş¨Ş‰Ş¨Ş‡Ş°Ş–Şª';
+  String get done => 'ނިމިއްޖު';
 
   @override
-  String get onboarding1Title =>
-      'Ø§Ù„Ù„Ù‡ Ş‡Ş®ŞŠŞ° Ø§Ù„Ù„Ù‡ Ş‡Ş¦ŞŞ° Ş‰Ş¦ŞƒŞªŞ€Ş¦Ş„Ş§';
+  String get onboarding1Title => 'الله އޮފް الله އަށް މަރުހަބާ';
 
   @override
   String get onboarding1Desc =>
-      'Ş‚Ş¦Ş‰Ş§Ş‹Şª ŞˆŞ¦ŞŞªŞŒŞªŞŒŞ¦Ş†Ş§Ş‡Ş¨ØŒ Ş¤ŞªŞƒŞªŞ‡Ş§Ş‚Ş§Ş‡Ş¨ØŒ Ş‡Ş¦Ş‹Ş¨ Ş‡Ş¬Ş€Ş¬Ş‚Ş¨Ş€Ş¬Ş‚Ş° Ş†Ş¦Ş‚Ş°Ş†Ş¦Ş‰Ş¦ŞŞ° ŞŒŞ¨Ş„Ş§ŞŞ¬ ŞŠŞªŞƒŞ¨Ş€Ş¦Ş‰Ş¦ Ş‡Ş¨ŞŞ°ŞŞ§Ş‰Ş© Ş‡Ş¬Ş†ŞªŞˆŞ¬ŞƒŞ¨Ş”Ş§ Ş‡Ş¬Ş•Ş°';
+      'ނަމާދު ވަގުތުތަކާއި، ޤުރުއާނާއި، އަދި އެހެނިހެން ކަންކަމަށް ތިބާގެ ފުރިހަމަ އިސްލާމީ އެކުވެރިޔާ އެޕް';
 
   @override
-  String get onboarding2Title => 'Ş‚Ş¦Ş‰Ş§Ş‹Şª ŞˆŞ¦ŞŞªŞŒŞªŞŒŞ¦Ş†Ş¬ŞˆŞ¬';
+  String get onboarding2Title => 'ނަމާދު ވަގުތުތަކެވެ';
 
   @override
   String get onboarding2Desc =>
-      'ŞŒŞ¨Ş‰Ş§ Ş€ŞªŞ‚Ş°Ş‚Ş¦ ŞŒŞ¦Ş‚Ş¦ŞŞ° Ş„Ş¦ŞŞ¦Ş‡Ş¨ŞŞ¬Ş‚Ş° Ş‚Ş¦Ş‰Ş§Ş‹ŞªŞ†ŞªŞƒŞ§ ŞˆŞ¦ŞŞªŞŒŞªŞŒŞ¦Ş‡Ş° ŞŞ¦Ş‡Ş°Ş™Ş¦';
+      'ތިމާ ހުންނަ ތަނަށް ބަލައިގެން ނަމާދުކުރާ ވަގުތުތައް ޞައްޙަ';
 
   @override
-  String get onboarding3Title => 'Ş¤ŞªŞƒŞªŞ‡Ş§Ş‚Ş° Ş‡Ş¬Ş‚Ş°Ş‘Ş° Ş‰Ş¯Şƒ';
+  String get onboarding3Title => 'ޤުރުއާން އެންޑް މޯރ';
 
   @override
   String get onboarding3Desc =>
-      'Ş¤ŞªŞƒŞªŞ‡Ş§Ş‚Ş° Ş†Ş¨Ş”Ş¦Ş‡Ş¨ØŒ Ş†Ş¨Ş”Ş¬ŞˆŞªŞ‚Ş° Ş“Ş°ŞƒŞ¬Ş†Ş°Ş†Ş®ŞŞ°ØŒ Ş‡Ş¨ŞŞ°ŞŞ§Ş‰Ş© Ş†Ş®Ş‚Ş°Ş“Ş¬Ş‚Ş°Ş“Ş° Ş€Ş¯Ş‹Ş§ŞŞ¬ŞˆŞ¬';
+      'ޤުރުއާން ކިޔައި، ކިޔެވުން ޓްރެކްކޮށް، އިސްލާމީ ކޮންޓެންޓް ހޯދާށެވެ';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -640,7 +622,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override

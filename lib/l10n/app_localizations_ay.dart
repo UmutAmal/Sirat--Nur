@@ -9,50 +9,49 @@ class AppLocalizationsAy extends AppLocalizations {
   AppLocalizationsAy([String locale = 'ay']) : super(locale);
 
   @override
-  String get appTitle => 'Way Of Allah ukax mÃ¤ jachâ€™a thakhiwa';
+  String get appTitle => 'Way Of Allah ukax mä jach’a thakhiwa';
 
   @override
   String get home => 'Uta';
 
   @override
-  String get quran => 'Quran ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get quran => 'Quran ukax mä juk’a pachanakanwa';
 
   @override
   String get qibla => 'Qibla';
 
   @override
-  String get zikr => 'Zikr ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get zikr => 'Zikr ukax mä juk’a pachanakanwa';
 
   @override
-  String get calendar => 'Calendario ukat jukâ€™ampinaka';
+  String get calendar => 'Calendario ukat juk’ampinaka';
 
   @override
-  String get settings => 'Ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get settings => 'Ukax mä juk’a pachanakanwa';
 
   @override
-  String get nextPrayer => 'JutÃ¯r OraciÃ³n luraÃ±a';
+  String get nextPrayer => 'Jutïr Oración luraña';
 
   @override
-  String get prayerTimes => 'MayisiÃ± pachanaka';
+  String get prayerTimes => 'Mayisiñ pachanaka';
 
   @override
-  String get continueReading => 'UÃ±akiptâ€™askakiÃ±ani';
+  String get continueReading => 'Uñakipt’askakiñani';
 
   @override
-  String get getLifetimePro => 'JakaÃ± pacha Pro';
+  String get getLifetimePro => 'Jakañ pacha Pro';
 
   @override
-  String get unlockTajweed =>
-      'Tajweed & Nayrar sartaÃ± lurawinakat jistâ€™araÃ±a';
+  String get unlockTajweed => 'Tajweed & Nayrar sartañ lurawinakat jist’araña';
 
   @override
   String get prayerCalculation => 'Oracionan Jakhuwipa';
 
   @override
-  String get method => 'JakhuÃ±a thakhi';
+  String get method => 'Jakhuña thakhi';
 
   @override
-  String get madhab => 'Asr MÃ©todo JurÃ­dico ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get madhab => 'Asr Método Jurídico ukax mä juk’a pachanakanwa';
 
   @override
   String get surahs => 'Surahanaka';
@@ -67,26 +66,25 @@ class AppLocalizationsAy extends AppLocalizations {
   String get sunrise => 'Inti jalsu';
 
   @override
-  String get dhuhr => 'Dhuhr ukat jukâ€™ampinaka';
+  String get dhuhr => 'Dhuhr ukat juk’ampinaka';
 
   @override
   String get asr => 'Asr';
 
   @override
-  String get maghrib => 'Maghrib ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get maghrib => 'Maghrib ukax mä juk’a pachanakanwa';
 
   @override
   String get isha => 'Isha';
 
   @override
-  String get dataStorage =>
-      'Datos & Almacenamiento ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get dataStorage => 'Datos & Almacenamiento ukax mä juk’a pachanakanwa';
 
   @override
-  String get clearCache => 'CachÃ© ukax qâ€™umachaÃ±a';
+  String get clearCache => 'Caché ukax q’umachaña';
 
   @override
-  String get cacheClearedSuccess => 'CachÃ© ukax wali suma qâ€™umachatawa';
+  String get cacheClearedSuccess => 'Caché ukax wali suma q’umachatawa';
 
   @override
   String get location => 'Kawkhachiqa';
@@ -95,13 +93,13 @@ class AppLocalizationsAy extends AppLocalizations {
   String get language => 'Aru';
 
   @override
-  String get selectLanguage => 'Aru ajlliÃ±ani';
+  String get selectLanguage => 'Aru ajlliñani';
 
   @override
-  String get searchLanguage => '180+ arunaka thaqhaÃ±a...';
+  String get searchLanguage => '180+ arunaka thaqhaña...';
 
   @override
-  String get systemDefault => 'Sistema Default ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get systemDefault => 'Sistema Default ukax mä juk’a pachanakanwa';
 
   @override
   String get currentLocation => 'Jichha pachanx (GPS) .';
@@ -116,34 +114,34 @@ class AppLocalizationsAy extends AppLocalizations {
   String get noResults => 'Janiw kuna askis jikxataskiti';
 
   @override
-  String get loading => 'Ukax mÃ¤...';
+  String get loading => 'Ukax mä...';
 
   @override
   String get error => 'Pantja';
 
   @override
-  String get retry => 'Wasitat yantÊ¼aÃ±amawa';
+  String get retry => 'Wasitat yantʼañamawa';
 
   @override
-  String get cancel => 'KansilaÃ±a';
+  String get cancel => 'Kansilaña';
 
   @override
-  String get save => 'ImaÃ±a';
+  String get save => 'Imaña';
 
   @override
-  String get delete => 'PhiskhsuÃ±a';
+  String get delete => 'Phiskhsuña';
 
   @override
-  String get edit => 'LuraÃ±a';
+  String get edit => 'Luraña';
 
   @override
-  String get close => 'Jist\'antaÃ±a';
+  String get close => 'Jist\'antaña';
 
   @override
   String get ok => 'WALIKI';
 
   @override
-  String get yes => 'JÃ¯sa';
+  String get yes => 'Jïsa';
 
   @override
   String get no => 'Janiwa';
@@ -155,55 +153,55 @@ class AppLocalizationsAy extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get page => 'Ukax mä juk’a pachanakanwa';
 
   @override
-  String get reading => 'UllaÃ±a';
+  String get reading => 'Ullaña';
 
   @override
-  String get recitation => 'UÃ±akiptâ€™aÃ±a';
+  String get recitation => 'Uñakipt’aña';
 
   @override
-  String get translation => 'JaqukipaÃ±a';
+  String get translation => 'Jaqukipaña';
 
   @override
-  String get tafsir => 'Tafsir ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get tafsir => 'Tafsir ukax mä juk’a pachanakanwa';
 
   @override
   String get bookmarks => 'Markachirinaka';
 
   @override
-  String get addBookmark => 'Marka uÃ±tâ€™ayaÃ±a';
+  String get addBookmark => 'Marka uñt’ayaña';
 
   @override
   String get removeBookmark => 'Ukax Bookmark satawa';
 
   @override
-  String get lastRead => 'Qhipa UÃ±akipÃ¤wi';
+  String get lastRead => 'Qhipa Uñakipäwi';
 
   @override
   String get dailyZikr => 'Sapa uru Zikr';
 
   @override
-  String get morningZikr => 'Alwajj Zikr satÃ¤nwa';
+  String get morningZikr => 'Alwajj Zikr satänwa';
 
   @override
-  String get eveningZikr => 'Jaypâ€™u tuqiru Zikr';
+  String get eveningZikr => 'Jayp’u tuqiru Zikr';
 
   @override
-  String get tasbih => 'Tasbih ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get tasbih => 'Tasbih ukax mä juk’a pachanakanwa';
 
   @override
-  String get ahkab => 'Ahkam ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get ahkab => 'Ahkam ukax mä juk’a pachanakanwa';
 
   @override
-  String get masaail => 'Masa\'il satÃ¤nwa';
+  String get masaail => 'Masa\'il satänwa';
 
   @override
-  String get hadith => 'Hadith ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get hadith => 'Hadith ukax mä juk’a pachanakanwa';
 
   @override
-  String get hadithCollection => 'Hadith ukax mÃ¤ jamuqawa';
+  String get hadithCollection => 'Hadith ukax mä jamuqawa';
 
   @override
   String get hadithBooks => 'Hadith sat libronaka';
@@ -212,34 +210,34 @@ class AppLocalizationsAy extends AppLocalizations {
   String get searchHadith => 'Hadith sat qillqatanakat thaqhapxam';
 
   @override
-  String get asmaulHusna => 'Asma-ul-Husna sat kullakaruw uÃ±tâ€™ayi';
+  String get asmaulHusna => 'Asma-ul-Husna sat kullakaruw uñt’ayi';
 
   @override
   String get namesOfAllah => 'Allah ukan sutinakapax';
 
   @override
-  String get liveTv => 'TV en vivo ukax mÃ¤ jachâ€™a uÃ±achtâ€™Ã¤wiwa';
+  String get liveTv => 'TV en vivo ukax mä jach’a uñacht’äwiwa';
 
   @override
-  String get watchLive => 'UÃ±tapxam Live';
+  String get watchLive => 'Uñtapxam Live';
 
   @override
   String get streamError => 'Jawira pantjasiwi';
 
   @override
-  String get reload => 'Recargar ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get reload => 'Recargar ukax mä juk’a pachanakanwa';
 
   @override
-  String get openInYoutube => 'YouTube ukan jistâ€™aratawa';
+  String get openInYoutube => 'YouTube ukan jist’aratawa';
 
   @override
-  String get ibadahTracker => 'Ibadah ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get ibadahTracker => 'Ibadah ukax mä juk’a pachanakanwa';
 
   @override
-  String get fasting => 'AyunaÃ±a';
+  String get fasting => 'Ayunaña';
 
   @override
-  String get quranReading => 'Quran UÃ±akiptâ€™aÃ±ataki';
+  String get quranReading => 'Quran Uñakipt’añataki';
 
   @override
   String get prayers => 'Oracionanaka';
@@ -248,51 +246,50 @@ class AppLocalizationsAy extends AppLocalizations {
   String get dhikrCount => 'Dhikr Jakhuwi';
 
   @override
-  String get weeklyProgress => 'Sapa semanan nayrar sartaÃ±a';
+  String get weeklyProgress => 'Sapa semanan nayrar sartaña';
 
   @override
   String get monthlyProgress => 'Sapa phaxsi nayrar sartawi';
 
   @override
-  String get statistics => 'EstadÃ­sticas ukanaka';
+  String get statistics => 'Estadísticas ukanaka';
 
   @override
-  String get hijriCalendar =>
-      'Hijri Calendario ukax mÃ¤ jachâ€™a uÃ±achtâ€™Ã¤wiwa';
+  String get hijriCalendar => 'Hijri Calendario ukax mä jach’a uñacht’äwiwa';
 
   @override
   String get gregorianCalendar =>
-      'Calendario Gregoriano ukax mÃ¤ jachâ€™a uÃ±achtâ€™Ã¤wiwa';
+      'Calendario Gregoriano ukax mä jach’a uñacht’äwiwa';
 
   @override
-  String get today => 'JichhÃ¼ru';
+  String get today => 'Jichhüru';
 
   @override
-  String get tomorrow => 'QharÃ¼ru';
+  String get tomorrow => 'Qharüru';
 
   @override
-  String get yesterday => 'WasÃ¼ru';
+  String get yesterday => 'Wasüru';
 
   @override
   String get specialDays => 'Especial Urunaka';
 
   @override
-  String get ramadan => 'RamadÃ¡n urunxa';
+  String get ramadan => 'Ramadán urunxa';
 
   @override
-  String get eidAlFitr => 'Eid Al-Fitr ukax mÃ¤ jachâ€™a uÃ±achtâ€™Ã¤wiwa';
+  String get eidAlFitr => 'Eid Al-Fitr ukax mä jach’a uñacht’äwiwa';
 
   @override
-  String get eidAlAdha => 'Eid Al-Adha ukax mÃ¤ jachâ€™a uÃ±achtâ€™Ã¤wiwa';
+  String get eidAlAdha => 'Eid Al-Adha ukax mä jach’a uñacht’äwiwa';
 
   @override
   String get laylatAlQadr => 'Laylat Al-Qadr ukat yaqhanakampi';
 
   @override
-  String get qiblaDirection => 'Qibla DirecciÃ³n';
+  String get qiblaDirection => 'Qibla Dirección';
 
   @override
-  String get compass => 'BrÃºjula ukampi';
+  String get compass => 'Brújula ukampi';
 
   @override
   String get degrees => 'grados ukanaka';
@@ -304,32 +301,31 @@ class AppLocalizationsAy extends AppLocalizations {
   String get qiblaFound => 'Qibla jikxatawayi!';
 
   @override
-  String get turnDevice =>
-      'Dispositivo ukax Qibla uÃ±katasiÃ±apatakiw turkaÃ±ama';
+  String get turnDevice => 'Dispositivo ukax Qibla uñkatasiñapatakiw turkañama';
 
   @override
   String get notifications => 'Yatiyawinaka';
 
   @override
-  String get prayerNotifications => 'Oracionan YatiyÃ¤winakapa';
+  String get prayerNotifications => 'Oracionan Yatiyäwinakapa';
 
   @override
-  String get enableNotifications => 'Yatiyawinak châ€™amanchaÃ±a';
+  String get enableNotifications => 'Yatiyawinak ch’amanchaña';
 
   @override
   String get notificationTime => 'Yatiyawi pacha';
 
   @override
-  String get beforePrayer => 'minutonaka janÃ¯r mayisiÃ±ataki';
+  String get beforePrayer => 'minutonaka janïr mayisiñataki';
 
   @override
   String get theme => 'Timatika';
 
   @override
-  String get lightMode => 'Modo de Luz ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get lightMode => 'Modo de Luz ukax mä juk’a pachanakanwa';
 
   @override
-  String get darkMode => 'Châ€™amaka Modo';
+  String get darkMode => 'Ch’amaka Modo';
 
   @override
   String get systemTheme => 'Sistema ukax Tema ukawa';
@@ -347,66 +343,66 @@ class AppLocalizationsAy extends AppLocalizations {
   String get termsOfService => 'Condiciones de Servicio ukaxa';
 
   @override
-  String get contactUs => 'Jiwasampiw aruskiptâ€™apxaÃ±Ã¤ni';
+  String get contactUs => 'Jiwasampiw aruskipt’apxañäni';
 
   @override
   String get rateApp => 'Tarifa ukax App';
 
   @override
-  String get shareApp => 'Compartir App ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get shareApp => 'Compartir App ukax mä juk’a pachanakanwa';
 
   @override
-  String get downloadManager => 'UÃ±stayaÃ±a Gestor';
+  String get downloadManager => 'Uñstayaña Gestor';
 
   @override
-  String get downloads => 'Ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get downloads => 'Ukax mä juk’a pachanakanwa';
 
   @override
-  String get downloading => 'Ukax mÃ¤...';
+  String get downloading => 'Ukax mä...';
 
   @override
   String get downloadComplete =>
-      'Descargar Completo ukax mÃ¤ jukâ€™a pachanakanwa';
+      'Descargar Completo ukax mä juk’a pachanakanwa';
 
   @override
-  String get downloadFailed => 'UÃ±stayaÃ±ax janiw phuqhaskiti';
+  String get downloadFailed => 'Uñstayañax janiw phuqhaskiti';
 
   @override
-  String get offlineMode => 'Modo Offline ukax mÃ¤ jukâ€™a pachanakanwa';
+  String get offlineMode => 'Modo Offline ukax mä juk’a pachanakanwa';
 
   @override
   String get noInternet => 'Janiw Internet ukax utjkiti';
 
   @override
-  String get checkConnection => 'Ukhamaraki, uka conexiÃ³n uÃ±akiptâ€™aÃ±amawa';
+  String get checkConnection => 'Ukhamaraki, uka conexión uñakipt’añamawa';
 
   @override
   String get premium => 'Nayrir kust\'ata';
 
   @override
-  String get upgradeToPro => 'Pro ukar machaqar tukuyaÃ±a';
+  String get upgradeToPro => 'Pro ukar machaqar tukuyaña';
 
   @override
-  String get proFeatures => 'Pro UÃ±achtâ€™awinaka';
+  String get proFeatures => 'Pro Uñacht’awinaka';
 
   @override
-  String get removeAds => 'Anuncios ukanaka apsuÃ±a';
+  String get removeAds => 'Anuncios ukanaka apsuña';
 
   @override
-  String get unlockAll => 'Taqi kunatix utjki ukanak jistâ€™araÃ±a';
+  String get unlockAll => 'Taqi kunatix utjki ukanak jist’araña';
 
   @override
   String get exclusiveContent =>
-      'Contenido exclusivo ukax mÃ¤ jukâ€™a pachanakanwa';
+      'Contenido exclusivo ukax mä juk’a pachanakanwa';
 
   @override
-  String get welcome => 'Aski jutÃ¤wi';
+  String get welcome => 'Aski jutäwi';
 
   @override
-  String get getStarted => 'QalltaÃ±ataki';
+  String get getStarted => 'Qalltañataki';
 
   @override
-  String get skip => 'WillikipaÃ±a';
+  String get skip => 'Willikipaña';
 
   @override
   String get next => 'Jutiri';
@@ -419,21 +415,21 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get onboarding1Desc =>
-      'Juman phuqhat app compaÃ±ero islÃ¡mico ukax oraciÃ³n pachanakataki, Quran ukat jukâ€™ampinakataki';
+      'Juman phuqhat app compañero islámico ukax oración pachanakataki, Quran ukat juk’ampinakataki';
 
   @override
-  String get onboarding2Title => 'MayisiÃ± pachanaka';
+  String get onboarding2Title => 'Mayisiñ pachanaka';
 
   @override
   String get onboarding2Desc =>
-      'KawkhantÃ¯ jikjjataskta ukarjamaw kuna horasas oraciÃ³n luraÃ±apa uk cheqaparjam qhanaÃ±chaÃ±a';
+      'Kawkhantï jikjjataskta ukarjamaw kuna horasas oración lurañapa uk cheqaparjam qhanañchaña';
 
   @override
-  String get onboarding3Title => 'Quran & More ukat jukâ€™ampinaka';
+  String get onboarding3Title => 'Quran & More ukat juk’ampinaka';
 
   @override
   String get onboarding3Desc =>
-      'Quran uÃ±xattâ€™aÃ±a, ullartâ€™awinakam arknaqaÃ±a, ukat contenido islÃ¡mico ukar uÃ±akiptâ€™aÃ±a';
+      'Quran uñxatt’aña, ullart’awinakam arknaqaña, ukat contenido islámico ukar uñakipt’aña';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -628,7 +624,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offsetÂ°';
+    return 'Current: $offset°';
   }
 
   @override
