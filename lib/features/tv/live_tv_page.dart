@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:sirat_i_nur/core/constants/live_streams.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
@@ -59,6 +59,9 @@ class _LiveTvPageState extends State<LiveTvPage> {
           },
           onWebResourceError: (error) {
             if (!mounted) return;
+            // Only react to main-frame failures, not sub-resources
+            // (favicon, analytics, CSS, etc.)
+            if (error.isForMainFrame != true) return;
             final next = _candidateIndex + 1;
             if (next < _currentCandidates.length) {
               _candidateIndex = next;
