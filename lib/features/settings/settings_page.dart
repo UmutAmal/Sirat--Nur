@@ -5,6 +5,8 @@ import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/core/constants/app_constants.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:share_plus/share_plus.dart';
 
 class SettingsPage extends ConsumerWidget {
   const SettingsPage({super.key});
@@ -53,7 +55,7 @@ class SettingsPage extends ConsumerWidget {
                     icon: Icons.music_note_rounded,
                     title: 'Audio Voice',
                     value: settings.audioVoice,
-                    onTap: () {},
+                    onTap: () => _showAudioVoicePicker(context, ref),
                   ),
                 ],
               ),
@@ -81,7 +83,7 @@ class SettingsPage extends ConsumerWidget {
                     icon: Icons.tune_rounded,
                     title: 'Qibla Offset',
                     value: '${settings.qiblaOffset.toStringAsFixed(1)}°',
-                    onTap: () {},
+                    onTap: () => _showQiblaOffsetDialog(context, ref),
                   ),
                   const Divider(height: 1),
                   _switchTile(
@@ -130,8 +132,10 @@ class SettingsPage extends ConsumerWidget {
                     title: 'Clear Cache',
                     value: '',
                     onTap: () {
+                      PaintingBinding.instance.imageCache.clear();
+                      PaintingBinding.instance.imageCache.clearLiveImages();
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Cache cleared')),
+                        const SnackBar(content: Text('Image Cache successfully cleared.')),
                       );
                     },
                   ),
@@ -154,11 +158,17 @@ class SettingsPage extends ConsumerWidget {
                 children: [
                   _settingsTile(context, icon: Icons.info_outline_rounded, title: 'App Version', value: '2.0.0', onTap: () {}),
                   const Divider(height: 1),
-                  _settingsTile(context, icon: Icons.star_rate_rounded, title: 'Rate App', value: '', onTap: () {}),
+                  _settingsTile(context, icon: Icons.star_rate_rounded, title: 'Rate App', value: '', onTap: () {
+                    launchUrl(Uri.parse('https://play.google.com/store/apps/details?id=com.umutamal.sirat_i_nur'));
+                  }),
                   const Divider(height: 1),
-                  _settingsTile(context, icon: Icons.share_rounded, title: 'Share App', value: '', onTap: () {}),
+                  _settingsTile(context, icon: Icons.share_rounded, title: 'Share App', value: '', onTap: () {
+                    Share.share('Check out Sirat-i Nur: The ultimate Islamic lifestyle app! https://siratinur.com');
+                  }),
                   const Divider(height: 1),
-                  _settingsTile(context, icon: Icons.privacy_tip_outlined, title: 'Privacy Policy', value: '', onTap: () {}),
+                  _settingsTile(context, icon: Icons.privacy_tip_outlined, title: 'Privacy Policy', value: '', onTap: () {
+                    launchUrl(Uri.parse('https://siratinur.com/privacy'));
+                  }),
                 ],
               ),
             ),
@@ -240,6 +250,66 @@ class SettingsPage extends ConsumerWidget {
             Navigator.pop(ctx);
           },
         )).toList(),
+      ),
+    );
+  }
+
+  void _showAudioVoicePicker(BuildContext context, WidgetRef ref) {
+    const voices = ['Male (Mishary Alafasy)', 'Male (AbdulBaset)', 'Male (Sudais)'];
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) => ListView(
+        shrinkWrap: true,
+        children: voices.map((v) => ListTile(
+          title: Text(v, style: const TextStyle(fontWeight: FontWeight.w700)),
+          onTap: () {
+            ref.read(settingsProvider.notifier).updateAudioVoice(v);
+            Navigator.pop(ctx);
+          },
+        )).toList(),
+      ),
+    );
+  }
+
+  void _showQiblaOffsetDialog(BuildContext context, WidgetRef ref) {
+    double tempOffset = ref.read(settingsProvider).qiblaOffset;
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Qibla Offset', style: TextStyle(fontWeight: FontWeight.w900)),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('Manually calibrate the compass by adding a degree offset.'),
+            const SizedBox(height: 20),
+            StatefulBuilder(
+              builder: (context, setState) => Column(
+                children: [
+                  Text('${tempOffset.toStringAsFixed(1)}°', style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                  Slider(
+                    value: tempOffset,
+                    min: -180,
+                    max: 180,
+                    divisions: 360,
+                    activeColor: AppColors.emerald,
+                    onChanged: (val) => setState(() => tempOffset = val),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: AppColors.emerald),
+            onPressed: () {
+              ref.read(settingsProvider.notifier).updateQiblaOffset(tempOffset);
+              Navigator.pop(ctx);
+            },
+            child: const Text('Save', style: TextStyle(color: Colors.white)),
+          ),
+        ],
       ),
     );
   }

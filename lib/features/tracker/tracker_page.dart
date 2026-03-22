@@ -4,20 +4,20 @@ import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 
 // Prayer tracking state
-final _prayerDoneProvider = StateProvider<Map<String, bool>>((ref) => {
+final prayerDoneProvider = StateProvider<Map<String, bool>>((ref) => {
   'Fajr': false, 'Dhuhr': false, 'Asr': false, 'Maghrib': false, 'Isha': false,
 });
-final _quranPagesProvider = StateProvider<int>((ref) => 0);
-final _fastingProvider = StateProvider<bool>((ref) => false);
+final quranPagesProvider = StateProvider<int>((ref) => 0);
+final fastingProvider = StateProvider<bool>((ref) => false);
 
 class TrackerPage extends ConsumerWidget {
   const TrackerPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final prayerDone = ref.watch(_prayerDoneProvider);
-    final quranPages = ref.watch(_quranPagesProvider);
-    final fasting = ref.watch(_fastingProvider);
+    final prayerDone = ref.watch(prayerDoneProvider);
+    final quranPages = ref.watch(quranPagesProvider);
+    final fasting = ref.watch(fastingProvider);
     final prayerCount = prayerDone.values.where((v) => v).length;
 
     return Scaffold(
@@ -49,7 +49,7 @@ class TrackerPage extends ConsumerWidget {
                     onTap: () {
                       final map = Map<String, bool>.from(prayerDone);
                       map[entry.key] = !entry.value;
-                      ref.read(_prayerDoneProvider.notifier).state = map;
+                      ref.read(prayerDoneProvider.notifier).state = map;
                     },
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 10),
@@ -85,7 +85,7 @@ class TrackerPage extends ConsumerWidget {
                   IconButton(
                     icon: const Icon(Icons.remove_circle_outline_rounded),
                     onPressed: quranPages > 0
-                      ? () => ref.read(_quranPagesProvider.notifier).state--
+                      ? () => ref.read(quranPagesProvider.notifier).state--
                       : null,
                   ),
                   Expanded(child: Column(
@@ -96,7 +96,7 @@ class TrackerPage extends ConsumerWidget {
                   )),
                   IconButton(
                     icon: const Icon(Icons.add_circle_outline_rounded, color: AppColors.emerald),
-                    onPressed: () => ref.read(_quranPagesProvider.notifier).state++,
+                    onPressed: () => ref.read(quranPagesProvider.notifier).state++,
                   ),
                 ],
               ),
@@ -106,7 +106,7 @@ class TrackerPage extends ConsumerWidget {
             Text('Fasting', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900)),
             const SizedBox(height: 12),
             PremiumCard(
-              onTap: () => ref.read(_fastingProvider.notifier).state = !fasting,
+              onTap: () => ref.read(fastingProvider.notifier).state = !fasting,
               child: Row(
                 children: [
                   Icon(

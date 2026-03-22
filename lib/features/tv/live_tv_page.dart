@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/constants/live_streams.dart';
 
@@ -10,10 +11,33 @@ class LiveTvPage extends StatefulWidget {
 
 class _LiveTvPageState extends State<LiveTvPage> {
   int _selectedIndex = 0;
+  late WebViewController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _initWebView();
+  }
+
+  void _initWebView() {
+    final stream = liveStreams[_selectedIndex];
+    _controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setBackgroundColor(Colors.black)
+      ..loadRequest(Uri.parse(stream.url));
+  }
+
+  void _changeStream(int index) {
+    if (_selectedIndex == index) return;
+    setState(() {
+      _selectedIndex = index;
+    });
+    final stream = liveStreams[_selectedIndex];
+    _controller.loadRequest(Uri.parse(stream.url));
+  }
 
   @override
   Widget build(BuildContext context) {
-    final stream = liveStreams[_selectedIndex];
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
@@ -23,7 +47,7 @@ class _LiveTvPageState extends State<LiveTvPage> {
           // Video area
           Container(
             width: double.infinity,
-            height: 220,
+            height: 240,
             decoration: BoxDecoration(
               color: isDark ? AppColors.darkCard : Colors.black,
               borderRadius: const BorderRadius.only(
@@ -31,33 +55,8 @@ class _LiveTvPageState extends State<LiveTvPage> {
                 bottomRight: Radius.circular(24),
               ),
             ),
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                // Placeholder for YouTube player
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.live_tv_rounded, size: 56, color: Colors.white.withValues(alpha: 0.6)),
-                    const SizedBox(height: 12),
-                    Text(stream.title,
-                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18)),
-                    const SizedBox(height: 4),
-                    Text(stream.subtitle,
-                      style: TextStyle(color: Colors.white.withValues(alpha: 0.6), fontSize: 13)),
-                    const SizedBox(height: 8),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                      decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      child: const Text('LIVE', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 11)),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+            clipBehavior: Clip.hardEdge,
+            child: WebViewWidget(controller: _controller),
           ),
           const SizedBox(height: 24),
           // Channel selector
@@ -100,7 +99,7 @@ class _LiveTvPageState extends State<LiveTvPage> {
                     trailing: isSelected
                       ? const Icon(Icons.play_circle_filled_rounded, color: AppColors.emerald, size: 32)
                       : const Icon(Icons.play_circle_outline_rounded, size: 28),
-                    onTap: () => setState(() => _selectedIndex = i),
+                    onTap: () => _changeStream(i),
                   ),
                 );
               },

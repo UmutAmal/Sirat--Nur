@@ -51,7 +51,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       } else {
                         final prefs = await SharedPreferences.getInstance();
                         await prefs.setBool('isFirstLaunch', false);
-                        if (context.mounted) context.go('/home');
+                        if (context.mounted) context.go('/');
                       }
                     },
                     style: ElevatedButton.styleFrom(

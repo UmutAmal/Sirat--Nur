@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sirat_i_nur/features/premium/premium_provider.dart';
 
-class PaywallPage extends StatelessWidget {
+class PaywallPage extends ConsumerWidget {
   const PaywallPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(gradient: AppColors.darkGradient),
@@ -71,7 +73,13 @@ class PaywallPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(20),
-                            onTap: () {},
+                            onTap: () async {
+                               await ref.read(premiumProvider.notifier).unlockPremium();
+                               if (context.mounted) {
+                                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Successfully unlocked Premium!')));
+                                  context.pop();
+                               }
+                            },
                             child: const Center(
                               child: Text('Get Lifetime Access — \$1.00',
                                 style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18)),
@@ -81,7 +89,13 @@ class PaywallPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 16),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () async {
+                           await ref.read(premiumProvider.notifier).unlockPremium();
+                           if (context.mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Purchases Restored')));
+                              context.pop();
+                           }
+                        },
                         child: Text('Restore Purchases',
                           style: TextStyle(color: Colors.white.withValues(alpha: 0.5), fontWeight: FontWeight.w700)),
                       ),

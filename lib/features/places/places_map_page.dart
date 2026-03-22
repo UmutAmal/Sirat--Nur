@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong2/latlong.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 
@@ -12,23 +14,35 @@ class PlacesMapPage extends StatelessWidget {
       body: Column(
         children: [
           // Map placeholder
-          Container(
-            height: 300,
-            width: double.infinity,
-            color: Theme.of(context).brightness == Brightness.dark ? AppColors.darkCard : Colors.grey.shade200,
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.map_rounded, size: 64, color: AppColors.emerald.withValues(alpha: 0.5)),
-                  const SizedBox(height: 12),
-                  Text('Map View', style: TextStyle(fontWeight: FontWeight.w900,
-                    color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
-                  const SizedBox(height: 4),
-                  Text('Requires Google Maps API key', style: TextStyle(fontSize: 12,
-                    color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3))),
-                ],
+          Expanded(
+            flex: 2,
+            child: FlutterMap(
+              options: MapOptions(
+                initialCenter: const LatLng(41.0082, 28.9784), // Istanbul
+                initialZoom: 13.0,
               ),
+              children: [
+                TileLayer(
+                  urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                  userAgentPackageName: 'com.umutamal.sirat_i_nur',
+                ),
+                MarkerLayer(
+                  markers: [
+                    Marker(
+                      point: const LatLng(41.0082, 28.9784),
+                      width: 40,
+                      height: 40,
+                      child: const Icon(Icons.location_on, color: AppColors.emerald, size: 40),
+                    ),
+                    Marker(
+                      point: const LatLng(41.0092, 28.9800),
+                      width: 40,
+                      height: 40,
+                      child: const Icon(Icons.mosque_rounded, color: Colors.blue, size: 40),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
           // Category tabs
@@ -46,6 +60,7 @@ class PlacesMapPage extends StatelessWidget {
           ),
           // Place list
           Expanded(
+            flex: 3,
             child: ListView(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               children: _samplePlaces.asMap().entries.map((e) {
@@ -71,7 +86,7 @@ class PlacesMapPage extends StatelessWidget {
                             color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
                         ],
                       )),
-                      Icon(Icons.directions_rounded, color: AppColors.emerald),
+                      const Icon(Icons.directions_rounded, color: AppColors.emerald),
                     ],
                   ),
                 );

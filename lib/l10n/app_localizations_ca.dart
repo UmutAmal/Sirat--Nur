@@ -1,0 +1,656 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Catalan Valencian (`ca`).
+class AppLocalizationsCa extends AppLocalizations {
+  AppLocalizationsCa([String locale = 'ca']) : super(locale);
+
+  @override
+  String get appTitle => 'Camí d\'Al·là';
+
+  @override
+  String get home => 'a casa';
+
+  @override
+  String get quran => 'Alcorà';
+
+  @override
+  String get qibla => 'Qibla';
+
+  @override
+  String get zikr => 'Zikr';
+
+  @override
+  String get calendar => 'Calendari';
+
+  @override
+  String get settings => 'Configuració';
+
+  @override
+  String get nextPrayer => 'Pregària següent';
+
+  @override
+  String get prayerTimes => 'Temps de pregària';
+
+  @override
+  String get continueReading => 'Continuar llegint';
+
+  @override
+  String get getLifetimePro => 'Obteniu Lifetime Pro';
+
+  @override
+  String get unlockTajweed => 'Desbloqueja Tajweed i funcions avançades';
+
+  @override
+  String get prayerCalculation => 'Càlcul de l\'oració';
+
+  @override
+  String get method => 'Mètode de càlcul';
+
+  @override
+  String get madhab => 'Asr Mètode Jurístic';
+
+  @override
+  String get surahs => 'Sures';
+
+  @override
+  String get ayahs => 'Ayahs';
+
+  @override
+  String get fajr => 'Fajr';
+
+  @override
+  String get sunrise => 'Sortida del sol';
+
+  @override
+  String get dhuhr => 'Dhuhr';
+
+  @override
+  String get asr => 'Asr';
+
+  @override
+  String get maghrib => 'Magrib';
+
+  @override
+  String get isha => 'Isha';
+
+  @override
+  String get dataStorage => 'Dades i emmagatzematge';
+
+  @override
+  String get clearCache => 'Esborra la memòria cau';
+
+  @override
+  String get cacheClearedSuccess =>
+      'La memòria cau s\'ha esborrat correctament';
+
+  @override
+  String get location => 'Ubicació';
+
+  @override
+  String get language => 'Llengua';
+
+  @override
+  String get selectLanguage => 'Seleccioneu Idioma';
+
+  @override
+  String get searchLanguage => 'Cerca més de 180 idiomes...';
+
+  @override
+  String get systemDefault => 'Sistema per defecte';
+
+  @override
+  String get currentLocation => 'Ubicació actual (GPS)';
+
+  @override
+  String get search => 'Cerca';
+
+  @override
+  String get searchHint => 'Cerca...';
+
+  @override
+  String get noResults => 'No s\'han trobat resultats';
+
+  @override
+  String get loading => 'Carregant...';
+
+  @override
+  String get error => 'Error';
+
+  @override
+  String get retry => 'Torna-ho a provar';
+
+  @override
+  String get cancel => 'Cancel·la';
+
+  @override
+  String get save => 'Desa';
+
+  @override
+  String get delete => 'Suprimeix';
+
+  @override
+  String get edit => 'Edita';
+
+  @override
+  String get close => 'Tancar';
+
+  @override
+  String get ok => 'D\'acord';
+
+  @override
+  String get yes => 'Sí';
+
+  @override
+  String get no => 'No';
+
+  @override
+  String get surah => 'Sura';
+
+  @override
+  String get juz => 'Juz';
+
+  @override
+  String get page => 'Pàgina';
+
+  @override
+  String get reading => 'Lectura';
+
+  @override
+  String get recitation => 'Recitació';
+
+  @override
+  String get translation => 'Traducció';
+
+  @override
+  String get tafsir => 'Tafsir';
+
+  @override
+  String get bookmarks => 'Adreces d\'interès';
+
+  @override
+  String get addBookmark => 'Afegeix un marcador';
+
+  @override
+  String get removeBookmark => 'Elimina el marcador';
+
+  @override
+  String get lastRead => 'Última lectura';
+
+  @override
+  String get dailyZikr => 'Zikr diari';
+
+  @override
+  String get morningZikr => 'Zikr al matí';
+
+  @override
+  String get eveningZikr => 'Zikr al vespre';
+
+  @override
+  String get tasbih => 'Tasbih';
+
+  @override
+  String get ahkab => 'Ahkam';
+
+  @override
+  String get masaail => 'Masa\'il';
+
+  @override
+  String get hadith => 'Hadith';
+
+  @override
+  String get hadithCollection => 'Col·lecció Hadith';
+
+  @override
+  String get hadithBooks => 'Llibres de Hadith';
+
+  @override
+  String get searchHadith => 'Cerca Hadith';
+
+  @override
+  String get asmaulHusna => 'Asma-ul-Husna';
+
+  @override
+  String get namesOfAllah => 'Noms d\'Al·là';
+
+  @override
+  String get liveTv => 'TV en directe';
+
+  @override
+  String get watchLive => 'Mira en directe';
+
+  @override
+  String get streamError => 'Error de reproducció';
+
+  @override
+  String get reload => 'Torna a carregar';
+
+  @override
+  String get openInYoutube => 'Obre a YouTube';
+
+  @override
+  String get ibadahTracker => 'Seguidor d\'Ibadah';
+
+  @override
+  String get fasting => 'Dejuni';
+
+  @override
+  String get quranReading => 'Lectura de l\'Alcorà';
+
+  @override
+  String get prayers => 'Oracions';
+
+  @override
+  String get dhikrCount => 'Comte Dhikr';
+
+  @override
+  String get weeklyProgress => 'Progrés setmanal';
+
+  @override
+  String get monthlyProgress => 'Progrés mensual';
+
+  @override
+  String get statistics => 'Estadístiques';
+
+  @override
+  String get hijriCalendar => 'Calendari Hijri';
+
+  @override
+  String get gregorianCalendar => 'Calendari gregorià';
+
+  @override
+  String get today => 'Avui';
+
+  @override
+  String get tomorrow => 'Demà';
+
+  @override
+  String get yesterday => 'Ahir';
+
+  @override
+  String get specialDays => 'Dies especials';
+
+  @override
+  String get ramadan => 'Ramadà';
+
+  @override
+  String get eidAlFitr => 'Eid Al-Fitr';
+
+  @override
+  String get eidAlAdha => 'Eid Al-Adha';
+
+  @override
+  String get laylatAlQadr => 'Laylat Al-Qadr';
+
+  @override
+  String get qiblaDirection => 'Direcció de la Qibla';
+
+  @override
+  String get compass => 'Brúixola';
+
+  @override
+  String get degrees => 'graus';
+
+  @override
+  String get north => 'nord';
+
+  @override
+  String get qiblaFound => 'Qibla trobada!';
+
+  @override
+  String get turnDevice => 'Gireu el vostre dispositiu de cara a la Qibla';
+
+  @override
+  String get notifications => 'Notificacions';
+
+  @override
+  String get prayerNotifications => 'Notificacions d\'oració';
+
+  @override
+  String get enableNotifications => 'Activa les notificacions';
+
+  @override
+  String get notificationTime => 'Hora de notificació';
+
+  @override
+  String get beforePrayer => 'minuts abans de l\'oració';
+
+  @override
+  String get theme => 'Tema';
+
+  @override
+  String get lightMode => 'Mode de llum';
+
+  @override
+  String get darkMode => 'Mode fosc';
+
+  @override
+  String get systemTheme => 'Tema del sistema';
+
+  @override
+  String get about => 'Sobre';
+
+  @override
+  String get version => 'Versió';
+
+  @override
+  String get privacyPolicy => 'Política de privadesa';
+
+  @override
+  String get termsOfService => 'Condicions del servei';
+
+  @override
+  String get contactUs => 'Contacta amb nosaltres';
+
+  @override
+  String get rateApp => 'Valora l\'aplicació';
+
+  @override
+  String get shareApp => 'Comparteix l\'aplicació';
+
+  @override
+  String get downloadManager => 'Gestor de descàrregues';
+
+  @override
+  String get downloads => 'Descàrregues';
+
+  @override
+  String get downloading => 'S\'està baixant...';
+
+  @override
+  String get downloadComplete => 'Descàrrega completa';
+
+  @override
+  String get downloadFailed => 'La baixada ha fallat';
+
+  @override
+  String get offlineMode => 'Mode fora de línia';
+
+  @override
+  String get noInternet => 'Sense connexió a Internet';
+
+  @override
+  String get checkConnection => 'Comproveu la vostra connexió';
+
+  @override
+  String get premium => 'Premium';
+
+  @override
+  String get upgradeToPro => 'Actualitza a Pro';
+
+  @override
+  String get proFeatures => 'Característiques Pro';
+
+  @override
+  String get removeAds => 'Elimina els anuncis';
+
+  @override
+  String get unlockAll => 'Desbloqueja tot el contingut';
+
+  @override
+  String get exclusiveContent => 'Contingut exclusiu';
+
+  @override
+  String get welcome => 'Benvingut';
+
+  @override
+  String get getStarted => 'Comença';
+
+  @override
+  String get skip => 'Saltar';
+
+  @override
+  String get next => 'A continuació';
+
+  @override
+  String get done => 'Fet';
+
+  @override
+  String get onboarding1Title => 'Benvinguts al Camí d\'Allah';
+
+  @override
+  String get onboarding1Desc =>
+      'La vostra aplicació complementària islàmica completa per als temps de pregària, l\'Alcorà i molt més';
+
+  @override
+  String get onboarding2Title => 'Temps de pregària';
+
+  @override
+  String get onboarding2Desc =>
+      'Temps d\'oració precisos segons la vostra ubicació';
+
+  @override
+  String get onboarding3Title => 'Alcorà i més';
+
+  @override
+  String get onboarding3Desc =>
+      'Llegiu l\'Alcorà, feu un seguiment de la vostra lectura i exploreu contingut islàmic';
+
+  @override
+  String get dhikrLibrary => 'Dhikr Library';
+
+  @override
+  String get resetCounter => 'Reset Counter';
+
+  @override
+  String get changeTarget => 'Change Target';
+
+  @override
+  String get newTarget => 'New Target';
+
+  @override
+  String targetCount(Object target) {
+    return 'Target: $target';
+  }
+
+  @override
+  String get tapToCount => 'Tap to count';
+
+  @override
+  String get dailyChecklist => 'Daily Checklist';
+
+  @override
+  String get qazaDebt => 'Qaza (Debt)';
+
+  @override
+  String get resetQazaData => 'Reset Qaza Data';
+
+  @override
+  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+
+  @override
+  String get rawatib => 'Rawatib';
+
+  @override
+  String get tahajjud => 'Tahajjud';
+
+  @override
+  String get dailyProgress => 'Daily Progress';
+
+  @override
+  String get mandatoryPrayers => 'Mandatory Prayers';
+
+  @override
+  String get sunnahAndOthers => 'Sunnah & Others';
+
+  @override
+  String get spiritualGrowth => 'Spiritual Growth';
+
+  @override
+  String get mandatoryDuty => 'Mandatory Duty';
+
+  @override
+  String get totalPrayers => 'Total Prayers';
+
+  @override
+  String get prayerDebt => 'Prayer Debt';
+
+  @override
+  String get fastingDebt => 'Fasting Debt';
+
+  @override
+  String get reset => 'Reset';
+
+  @override
+  String get days => 'Days';
+
+  @override
+  String get premiumIntegrity => 'Premium Integrity';
+
+  @override
+  String get recheckPremium => 'Recheck Premium Status';
+
+  @override
+  String get syncStore => 'Sync with the store to confirm your entitlement.';
+
+  @override
+  String get checkingPremium => 'Checking premium status...';
+
+  @override
+  String get premiumVerified => 'Premium verified.';
+
+  @override
+  String get premiumNotFound => 'Premium not found.';
+
+  @override
+  String premiumRefreshError(Object error) {
+    return 'Could not refresh premium status: $error';
+  }
+
+  @override
+  String get offlineDownloadManager => 'Offline Download Manager';
+
+  @override
+  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+
+  @override
+  String get freeStorage => 'Free up internal device storage.';
+
+  @override
+  String get quranIntegrity => 'Quran Integrity';
+
+  @override
+  String get checkQuranDb => 'Check Quran Database';
+
+  @override
+  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+
+  @override
+  String get checkingQuranDb => 'Checking Quran database...';
+
+  @override
+  String get okLabel => 'OK';
+
+  @override
+  String get incomplete => 'Incomplete';
+
+  @override
+  String get notSeeded => 'Not seeded';
+
+  @override
+  String get quranDbStatus => 'Quran Database Status';
+
+  @override
+  String statusLabel(Object status) {
+    return 'Status: $status';
+  }
+
+  @override
+  String surahsCount(Object count) {
+    return 'Surahs: $count (expected 114)';
+  }
+
+  @override
+  String ayahsCount(Object count) {
+    return 'Ayahs: $count (expected 6236)';
+  }
+
+  @override
+  String missingArabic(Object count) {
+    return 'Missing Arabic: $count';
+  }
+
+  @override
+  String missingEnglish(Object count) {
+    return 'Missing English: $count';
+  }
+
+  @override
+  String missingTurkish(Object count) {
+    return 'Missing Turkish: $count';
+  }
+
+  @override
+  String dbVersion(Object version) {
+    return 'DB Version: $version';
+  }
+
+  @override
+  String dbPath(Object path) {
+    return 'Path: $path';
+  }
+
+  @override
+  String quranCheckFailed(Object error) {
+    return 'Quran check failed: $error';
+  }
+
+  @override
+  String get audioVoice => 'Audio Voice';
+
+  @override
+  String get fajrAngle => 'Fajr Angle';
+
+  @override
+  String get ishaAngle => 'Isha Angle';
+
+  @override
+  String get qiblaCalibration => 'Qibla Calibration';
+
+  @override
+  String get compassSmoothing => 'Compass Smoothing';
+
+  @override
+  String get reduceSensorJitter =>
+      'Reduce sensor jitter for a steadier needle.';
+
+  @override
+  String get calibrationOffset => 'Calibration Offset';
+
+  @override
+  String currentOffset(Object offset) {
+    return 'Current: $offset°';
+  }
+
+  @override
+  String get manualCorrectionDesc =>
+      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+
+  @override
+  String get apply => 'Apply';
+
+  @override
+  String get resetOnboarding => 'Reset Onboarding';
+
+  @override
+  String get rerunSetup => 'Re-run the initial setup process.';
+
+  @override
+  String get diagnostics => 'Diagnostics';
+
+  @override
+  String get healthCheckDesc => 'Run health checks and view system status.';
+
+  @override
+  String get qiblaAligned => 'Qibla Aligned';
+
+  @override
+  String get rotateToFindQibla => 'Rotate to Find Qibla';
+
+  @override
+  String get calibrationRequiredFigure8 =>
+      'Calibration required. Rotate device in figure-8.';
+}

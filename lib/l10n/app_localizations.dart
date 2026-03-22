@@ -5,26 +5,192 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
+import 'app_localizations_aa.dart';
+import 'app_localizations_ab.dart';
+import 'app_localizations_ae.dart';
+import 'app_localizations_af.dart';
+import 'app_localizations_ak.dart';
+import 'app_localizations_am.dart';
+import 'app_localizations_an.dart';
 import 'app_localizations_ar.dart';
+import 'app_localizations_as.dart';
+import 'app_localizations_av.dart';
+import 'app_localizations_ay.dart';
+import 'app_localizations_az.dart';
+import 'app_localizations_ba.dart';
+import 'app_localizations_be.dart';
+import 'app_localizations_bg.dart';
+import 'app_localizations_bh.dart';
+import 'app_localizations_bi.dart';
+import 'app_localizations_bm.dart';
 import 'app_localizations_bn.dart';
+import 'app_localizations_bo.dart';
+import 'app_localizations_br.dart';
 import 'app_localizations_bs.dart';
+import 'app_localizations_ca.dart';
+import 'app_localizations_ce.dart';
+import 'app_localizations_ceb.dart';
+import 'app_localizations_ch.dart';
+import 'app_localizations_co.dart';
+import 'app_localizations_cr.dart';
+import 'app_localizations_cs.dart';
+import 'app_localizations_cu.dart';
+import 'app_localizations_cv.dart';
+import 'app_localizations_cy.dart';
+import 'app_localizations_da.dart';
 import 'app_localizations_de.dart';
+import 'app_localizations_dv.dart';
+import 'app_localizations_dz.dart';
+import 'app_localizations_ee.dart';
+import 'app_localizations_el.dart';
 import 'app_localizations_en.dart';
+import 'app_localizations_eo.dart';
 import 'app_localizations_es.dart';
+import 'app_localizations_et.dart';
+import 'app_localizations_eu.dart';
 import 'app_localizations_fa.dart';
+import 'app_localizations_ff.dart';
+import 'app_localizations_fi.dart';
+import 'app_localizations_fj.dart';
+import 'app_localizations_fo.dart';
 import 'app_localizations_fr.dart';
+import 'app_localizations_fy.dart';
+import 'app_localizations_ga.dart';
+import 'app_localizations_gd.dart';
+import 'app_localizations_gl.dart';
+import 'app_localizations_gn.dart';
+import 'app_localizations_gu.dart';
+import 'app_localizations_gv.dart';
+import 'app_localizations_ha.dart';
+import 'app_localizations_haw.dart';
+import 'app_localizations_he.dart';
+import 'app_localizations_hi.dart';
+import 'app_localizations_ho.dart';
+import 'app_localizations_hr.dart';
+import 'app_localizations_ht.dart';
+import 'app_localizations_hu.dart';
+import 'app_localizations_hy.dart';
+import 'app_localizations_hz.dart';
+import 'app_localizations_ia.dart';
 import 'app_localizations_id.dart';
+import 'app_localizations_ie.dart';
+import 'app_localizations_ig.dart';
+import 'app_localizations_ii.dart';
+import 'app_localizations_ik.dart';
+import 'app_localizations_io.dart';
+import 'app_localizations_is.dart';
 import 'app_localizations_it.dart';
+import 'app_localizations_iu.dart';
 import 'app_localizations_ja.dart';
+import 'app_localizations_jv.dart';
+import 'app_localizations_ka.dart';
+import 'app_localizations_kg.dart';
+import 'app_localizations_ki.dart';
+import 'app_localizations_kj.dart';
+import 'app_localizations_kk.dart';
+import 'app_localizations_kl.dart';
+import 'app_localizations_km.dart';
+import 'app_localizations_kn.dart';
 import 'app_localizations_ko.dart';
+import 'app_localizations_kr.dart';
+import 'app_localizations_ks.dart';
+import 'app_localizations_ku.dart';
+import 'app_localizations_kv.dart';
+import 'app_localizations_kw.dart';
+import 'app_localizations_ky.dart';
+import 'app_localizations_la.dart';
+import 'app_localizations_lb.dart';
+import 'app_localizations_lg.dart';
+import 'app_localizations_li.dart';
+import 'app_localizations_ln.dart';
+import 'app_localizations_lo.dart';
+import 'app_localizations_lt.dart';
+import 'app_localizations_lu.dart';
+import 'app_localizations_lv.dart';
+import 'app_localizations_mg.dart';
+import 'app_localizations_mh.dart';
+import 'app_localizations_mi.dart';
+import 'app_localizations_mk.dart';
+import 'app_localizations_ml.dart';
+import 'app_localizations_mn.dart';
+import 'app_localizations_mr.dart';
 import 'app_localizations_ms.dart';
+import 'app_localizations_mt.dart';
+import 'app_localizations_my.dart';
+import 'app_localizations_na.dart';
+import 'app_localizations_nb.dart';
+import 'app_localizations_nd.dart';
+import 'app_localizations_ne.dart';
+import 'app_localizations_ng.dart';
 import 'app_localizations_nl.dart';
+import 'app_localizations_nn.dart';
+import 'app_localizations_no.dart';
+import 'app_localizations_nr.dart';
+import 'app_localizations_nv.dart';
+import 'app_localizations_ny.dart';
+import 'app_localizations_oc.dart';
+import 'app_localizations_oj.dart';
+import 'app_localizations_om.dart';
+import 'app_localizations_or.dart';
+import 'app_localizations_os.dart';
+import 'app_localizations_pa.dart';
+import 'app_localizations_pi.dart';
+import 'app_localizations_pl.dart';
+import 'app_localizations_ps.dart';
 import 'app_localizations_pt.dart';
+import 'app_localizations_qu.dart';
+import 'app_localizations_rm.dart';
+import 'app_localizations_rn.dart';
+import 'app_localizations_ro.dart';
 import 'app_localizations_ru.dart';
+import 'app_localizations_rw.dart';
+import 'app_localizations_sa.dart';
+import 'app_localizations_sc.dart';
+import 'app_localizations_sd.dart';
+import 'app_localizations_se.dart';
+import 'app_localizations_sg.dart';
+import 'app_localizations_si.dart';
+import 'app_localizations_sk.dart';
+import 'app_localizations_sl.dart';
+import 'app_localizations_sm.dart';
+import 'app_localizations_sn.dart';
+import 'app_localizations_so.dart';
+import 'app_localizations_sq.dart';
+import 'app_localizations_sr.dart';
+import 'app_localizations_ss.dart';
+import 'app_localizations_st.dart';
+import 'app_localizations_su.dart';
+import 'app_localizations_sv.dart';
 import 'app_localizations_sw.dart';
+import 'app_localizations_ta.dart';
+import 'app_localizations_te.dart';
+import 'app_localizations_tg.dart';
+import 'app_localizations_th.dart';
+import 'app_localizations_ti.dart';
+import 'app_localizations_tk.dart';
+import 'app_localizations_tl.dart';
+import 'app_localizations_tn.dart';
+import 'app_localizations_to.dart';
 import 'app_localizations_tr.dart';
+import 'app_localizations_ts.dart';
+import 'app_localizations_tt.dart';
+import 'app_localizations_tw.dart';
+import 'app_localizations_ty.dart';
+import 'app_localizations_ug.dart';
+import 'app_localizations_uk.dart';
 import 'app_localizations_ur.dart';
+import 'app_localizations_uz.dart';
+import 'app_localizations_ve.dart';
+import 'app_localizations_vi.dart';
+import 'app_localizations_vo.dart';
+import 'app_localizations_wa.dart';
+import 'app_localizations_wo.dart';
+import 'app_localizations_xh.dart';
+import 'app_localizations_yi.dart';
+import 'app_localizations_yo.dart';
+import 'app_localizations_za.dart';
 import 'app_localizations_zh.dart';
+import 'app_localizations_zu.dart';
 
 // ignore_for_file: type=lint
 
@@ -112,32 +278,200 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
+    Locale('aa'),
+    Locale('ab'),
+    Locale('ae'),
+    Locale('af'),
+    Locale('ak'),
+    Locale('am'),
+    Locale('an'),
     Locale('ar'),
+    Locale('as'),
+    Locale('av'),
+    Locale('ay'),
+    Locale('az'),
+    Locale('ba'),
+    Locale('be'),
+    Locale('bg'),
+    Locale('bh'),
+    Locale('bi'),
+    Locale('bm'),
     Locale('bn'),
+    Locale('bo'),
+    Locale('br'),
     Locale('bs'),
+    Locale('ca'),
+    Locale('ce'),
+    Locale('ceb'),
+    Locale('ch'),
+    Locale('co'),
+    Locale('cr'),
+    Locale('cs'),
+    Locale('cu'),
+    Locale('cv'),
+    Locale('cy'),
+    Locale('da'),
     Locale('de'),
+    Locale('dv'),
+    Locale('dz'),
+    Locale('ee'),
+    Locale('el'),
     Locale('en'),
+    Locale('eo'),
     Locale('es'),
+    Locale('et'),
+    Locale('eu'),
     Locale('fa'),
+    Locale('ff'),
+    Locale('fi'),
+    Locale('fj'),
+    Locale('fo'),
     Locale('fr'),
+    Locale('fy'),
+    Locale('ga'),
+    Locale('gd'),
+    Locale('gl'),
+    Locale('gn'),
+    Locale('gu'),
+    Locale('gv'),
+    Locale('ha'),
+    Locale('haw'),
+    Locale('he'),
+    Locale('hi'),
+    Locale('ho'),
+    Locale('hr'),
+    Locale('ht'),
+    Locale('hu'),
+    Locale('hy'),
+    Locale('hz'),
+    Locale('ia'),
     Locale('id'),
+    Locale('ie'),
+    Locale('ig'),
+    Locale('ii'),
+    Locale('ik'),
+    Locale('io'),
+    Locale('is'),
     Locale('it'),
+    Locale('iu'),
     Locale('ja'),
+    Locale('jv'),
+    Locale('ka'),
+    Locale('kg'),
+    Locale('ki'),
+    Locale('kj'),
+    Locale('kk'),
+    Locale('kl'),
+    Locale('km'),
+    Locale('kn'),
     Locale('ko'),
+    Locale('kr'),
+    Locale('ks'),
+    Locale('ku'),
+    Locale('kv'),
+    Locale('kw'),
+    Locale('ky'),
+    Locale('la'),
+    Locale('lb'),
+    Locale('lg'),
+    Locale('li'),
+    Locale('ln'),
+    Locale('lo'),
+    Locale('lt'),
+    Locale('lu'),
+    Locale('lv'),
+    Locale('mg'),
+    Locale('mh'),
+    Locale('mi'),
+    Locale('mk'),
+    Locale('ml'),
+    Locale('mn'),
+    Locale('mr'),
     Locale('ms'),
+    Locale('mt'),
+    Locale('my'),
+    Locale('na'),
+    Locale('nb'),
+    Locale('nd'),
+    Locale('ne'),
+    Locale('ng'),
     Locale('nl'),
+    Locale('nn'),
+    Locale('no'),
+    Locale('nr'),
+    Locale('nv'),
+    Locale('ny'),
+    Locale('oc'),
+    Locale('oj'),
+    Locale('om'),
+    Locale('or'),
+    Locale('os'),
+    Locale('pa'),
+    Locale('pi'),
+    Locale('pl'),
+    Locale('ps'),
     Locale('pt'),
+    Locale('qu'),
+    Locale('rm'),
+    Locale('rn'),
+    Locale('ro'),
     Locale('ru'),
+    Locale('rw'),
+    Locale('sa'),
+    Locale('sc'),
+    Locale('sd'),
+    Locale('se'),
+    Locale('sg'),
+    Locale('si'),
+    Locale('sk'),
+    Locale('sl'),
+    Locale('sm'),
+    Locale('sn'),
+    Locale('so'),
+    Locale('sq'),
+    Locale('sr'),
+    Locale('ss'),
+    Locale('st'),
+    Locale('su'),
+    Locale('sv'),
     Locale('sw'),
+    Locale('ta'),
+    Locale('te'),
+    Locale('tg'),
+    Locale('th'),
+    Locale('ti'),
+    Locale('tk'),
+    Locale('tl'),
+    Locale('tn'),
+    Locale('to'),
     Locale('tr'),
+    Locale('ts'),
+    Locale('tt'),
+    Locale('tw'),
+    Locale('ty'),
+    Locale('ug'),
+    Locale('uk'),
     Locale('ur'),
+    Locale('uz'),
+    Locale('ve'),
+    Locale('vi'),
+    Locale('vo'),
+    Locale('wa'),
+    Locale('wo'),
+    Locale('xh'),
+    Locale('yi'),
+    Locale('yo'),
+    Locale('za'),
     Locale('zh'),
+    Locale('zh', 'CN'),
+    Locale('zh', 'TW'),
+    Locale('zu'),
   ];
 
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'Sirat-i Nur'**
+  /// **'Sirat-ı Nur'**
   String get appTitle;
 
   /// No description provided for @home.
@@ -200,11 +534,11 @@ abstract class AppLocalizations {
   /// **'Get Lifetime Pro'**
   String get getLifetimePro;
 
-  /// No description provided for @unlockFeatures.
+  /// No description provided for @unlockTajweed.
   ///
   /// In en, this message translates to:
-  /// **'Unlock Advanced Features'**
-  String get unlockFeatures;
+  /// **'Unlock Tajweed & Advanced Features'**
+  String get unlockTajweed;
 
   /// No description provided for @prayerCalculation.
   ///
@@ -311,7 +645,7 @@ abstract class AppLocalizations {
   /// No description provided for @searchLanguage.
   ///
   /// In en, this message translates to:
-  /// **'Search languages...'**
+  /// **'Search 180+ languages...'**
   String get searchLanguage;
 
   /// No description provided for @systemDefault.
@@ -482,185 +816,53 @@ abstract class AppLocalizations {
   /// **'Daily Zikr'**
   String get dailyZikr;
 
-  /// No description provided for @tracker.
+  /// No description provided for @morningZikr.
   ///
   /// In en, this message translates to:
-  /// **'Tracker'**
-  String get tracker;
+  /// **'Morning Zikr'**
+  String get morningZikr;
 
-  /// No description provided for @library.
+  /// No description provided for @eveningZikr.
   ///
   /// In en, this message translates to:
-  /// **'Library'**
-  String get library;
+  /// **'Evening Zikr'**
+  String get eveningZikr;
 
-  /// No description provided for @chatbot.
+  /// No description provided for @tasbih.
   ///
   /// In en, this message translates to:
-  /// **'Assistant'**
-  String get chatbot;
+  /// **'Tasbih'**
+  String get tasbih;
 
-  /// No description provided for @liveTv.
+  /// No description provided for @ahkab.
   ///
   /// In en, this message translates to:
-  /// **'Live TV'**
-  String get liveTv;
+  /// **'Ahkam'**
+  String get ahkab;
 
-  /// No description provided for @places.
+  /// No description provided for @masaail.
   ///
   /// In en, this message translates to:
-  /// **'Places'**
-  String get places;
+  /// **'Masa\'il'**
+  String get masaail;
 
-  /// No description provided for @downloads.
+  /// No description provided for @hadith.
   ///
   /// In en, this message translates to:
-  /// **'Downloads'**
-  String get downloads;
+  /// **'Hadith'**
+  String get hadith;
 
-  /// No description provided for @premium.
+  /// No description provided for @hadithCollection.
   ///
   /// In en, this message translates to:
-  /// **'Premium'**
-  String get premium;
+  /// **'Hadith Collection'**
+  String get hadithCollection;
 
-  /// No description provided for @onboarding.
+  /// No description provided for @hadithBooks.
   ///
   /// In en, this message translates to:
-  /// **'Welcome'**
-  String get onboarding;
-
-  /// No description provided for @analytics.
-  ///
-  /// In en, this message translates to:
-  /// **'Analytics'**
-  String get analytics;
-
-  /// No description provided for @offlineManager.
-  ///
-  /// In en, this message translates to:
-  /// **'Offline Manager'**
-  String get offlineManager;
-
-  /// No description provided for @restore.
-  ///
-  /// In en, this message translates to:
-  /// **'Restore Purchases'**
-  String get restore;
-
-  /// No description provided for @getLifetimeAccess.
-  ///
-  /// In en, this message translates to:
-  /// **'Get Lifetime Access'**
-  String get getLifetimeAccess;
-
-  /// No description provided for @premiumRequired.
-  ///
-  /// In en, this message translates to:
-  /// **'Premium Required'**
-  String get premiumRequired;
-
-  /// No description provided for @upgradeNow.
-  ///
-  /// In en, this message translates to:
-  /// **'Upgrade Now'**
-  String get upgradeNow;
-
-  /// No description provided for @downloadNow.
-  ///
-  /// In en, this message translates to:
-  /// **'Download Now'**
-  String get downloadNow;
-
-  /// No description provided for @downloading.
-  ///
-  /// In en, this message translates to:
-  /// **'Downloading...'**
-  String get downloading;
-
-  /// No description provided for @downloadComplete.
-  ///
-  /// In en, this message translates to:
-  /// **'Download complete!'**
-  String get downloadComplete;
-
-  /// No description provided for @readyForOffline.
-  ///
-  /// In en, this message translates to:
-  /// **'Ready for Offline Use'**
-  String get readyForOffline;
-
-  /// No description provided for @installedOnDevice.
-  ///
-  /// In en, this message translates to:
-  /// **'Installed on device'**
-  String get installedOnDevice;
-
-  /// No description provided for @notDownloaded.
-  ///
-  /// In en, this message translates to:
-  /// **'Not downloaded yet'**
-  String get notDownloaded;
-
-  /// No description provided for @deletePack.
-  ///
-  /// In en, this message translates to:
-  /// **'Delete Pack?'**
-  String get deletePack;
-
-  /// No description provided for @deletePackDesc.
-  ///
-  /// In en, this message translates to:
-  /// **'This will remove the offline pack. Internet will be required for playback.'**
-  String get deletePackDesc;
-
-  /// No description provided for @neuralAssistant.
-  ///
-  /// In en, this message translates to:
-  /// **'Neural Assistant'**
-  String get neuralAssistant;
-
-  /// No description provided for @askQuestion.
-  ///
-  /// In en, this message translates to:
-  /// **'Ask a question...'**
-  String get askQuestion;
-
-  /// No description provided for @freeQueries.
-  ///
-  /// In en, this message translates to:
-  /// **'Free queries remaining'**
-  String get freeQueries;
-
-  /// No description provided for @unlimitedQueries.
-  ///
-  /// In en, this message translates to:
-  /// **'Unlimited queries with Premium'**
-  String get unlimitedQueries;
-
-  /// No description provided for @asmaUlHusna.
-  ///
-  /// In en, this message translates to:
-  /// **'Asma-ul-Husna'**
-  String get asmaUlHusna;
-
-  /// No description provided for @namesOfAllah.
-  ///
-  /// In en, this message translates to:
-  /// **'99 Names of Allah'**
-  String get namesOfAllah;
-
-  /// No description provided for @islamicEducation.
-  ///
-  /// In en, this message translates to:
-  /// **'Islamic Education'**
-  String get islamicEducation;
-
-  /// No description provided for @hadithCollections.
-  ///
-  /// In en, this message translates to:
-  /// **'Hadith Collections'**
-  String get hadithCollections;
+  /// **'Hadith Books'**
+  String get hadithBooks;
 
   /// No description provided for @searchHadith.
   ///
@@ -668,29 +870,155 @@ abstract class AppLocalizations {
   /// **'Search Hadith'**
   String get searchHadith;
 
-  /// No description provided for @duas.
+  /// No description provided for @asmaulHusna.
   ///
   /// In en, this message translates to:
-  /// **'Duas'**
-  String get duas;
+  /// **'Asma-ul-Husna'**
+  String get asmaulHusna;
 
-  /// No description provided for @dailyDuas.
+  /// No description provided for @namesOfAllah.
   ///
   /// In en, this message translates to:
-  /// **'Daily Duas'**
-  String get dailyDuas;
+  /// **'Names of Allah'**
+  String get namesOfAllah;
 
-  /// No description provided for @makkahLive.
+  /// No description provided for @liveTv.
   ///
   /// In en, this message translates to:
-  /// **'Makkah Live'**
-  String get makkahLive;
+  /// **'Live TV'**
+  String get liveTv;
 
-  /// No description provided for @madinahLive.
+  /// No description provided for @watchLive.
   ///
   /// In en, this message translates to:
-  /// **'Madinah Live'**
-  String get madinahLive;
+  /// **'Watch Live'**
+  String get watchLive;
+
+  /// No description provided for @streamError.
+  ///
+  /// In en, this message translates to:
+  /// **'Stream error'**
+  String get streamError;
+
+  /// No description provided for @reload.
+  ///
+  /// In en, this message translates to:
+  /// **'Reload'**
+  String get reload;
+
+  /// No description provided for @openInYoutube.
+  ///
+  /// In en, this message translates to:
+  /// **'Open in YouTube'**
+  String get openInYoutube;
+
+  /// No description provided for @ibadahTracker.
+  ///
+  /// In en, this message translates to:
+  /// **'Ibadah Tracker'**
+  String get ibadahTracker;
+
+  /// No description provided for @fasting.
+  ///
+  /// In en, this message translates to:
+  /// **'Fasting'**
+  String get fasting;
+
+  /// No description provided for @quranReading.
+  ///
+  /// In en, this message translates to:
+  /// **'Quran Reading'**
+  String get quranReading;
+
+  /// No description provided for @prayers.
+  ///
+  /// In en, this message translates to:
+  /// **'Prayers'**
+  String get prayers;
+
+  /// No description provided for @dhikrCount.
+  ///
+  /// In en, this message translates to:
+  /// **'Dhikr Count'**
+  String get dhikrCount;
+
+  /// No description provided for @weeklyProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly Progress'**
+  String get weeklyProgress;
+
+  /// No description provided for @monthlyProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly Progress'**
+  String get monthlyProgress;
+
+  /// No description provided for @statistics.
+  ///
+  /// In en, this message translates to:
+  /// **'Statistics'**
+  String get statistics;
+
+  /// No description provided for @hijriCalendar.
+  ///
+  /// In en, this message translates to:
+  /// **'Hijri Calendar'**
+  String get hijriCalendar;
+
+  /// No description provided for @gregorianCalendar.
+  ///
+  /// In en, this message translates to:
+  /// **'Gregorian Calendar'**
+  String get gregorianCalendar;
+
+  /// No description provided for @today.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get today;
+
+  /// No description provided for @tomorrow.
+  ///
+  /// In en, this message translates to:
+  /// **'Tomorrow'**
+  String get tomorrow;
+
+  /// No description provided for @yesterday.
+  ///
+  /// In en, this message translates to:
+  /// **'Yesterday'**
+  String get yesterday;
+
+  /// No description provided for @specialDays.
+  ///
+  /// In en, this message translates to:
+  /// **'Special Days'**
+  String get specialDays;
+
+  /// No description provided for @ramadan.
+  ///
+  /// In en, this message translates to:
+  /// **'Ramadan'**
+  String get ramadan;
+
+  /// No description provided for @eidAlFitr.
+  ///
+  /// In en, this message translates to:
+  /// **'Eid Al-Fitr'**
+  String get eidAlFitr;
+
+  /// No description provided for @eidAlAdha.
+  ///
+  /// In en, this message translates to:
+  /// **'Eid Al-Adha'**
+  String get eidAlAdha;
+
+  /// No description provided for @laylatAlQadr.
+  ///
+  /// In en, this message translates to:
+  /// **'Laylat Al-Qadr'**
+  String get laylatAlQadr;
 
   /// No description provided for @qiblaDirection.
   ///
@@ -698,107 +1026,77 @@ abstract class AppLocalizations {
   /// **'Qibla Direction'**
   String get qiblaDirection;
 
-  /// No description provided for @calibrate.
+  /// No description provided for @compass.
   ///
   /// In en, this message translates to:
-  /// **'Calibrate'**
-  String get calibrate;
+  /// **'Compass'**
+  String get compass;
 
-  /// No description provided for @prayerTracker.
+  /// No description provided for @degrees.
   ///
   /// In en, this message translates to:
-  /// **'Prayer Tracker'**
-  String get prayerTracker;
+  /// **'degrees'**
+  String get degrees;
 
-  /// No description provided for @quranTracker.
+  /// No description provided for @north.
   ///
   /// In en, this message translates to:
-  /// **'Quran Reading'**
-  String get quranTracker;
+  /// **'North'**
+  String get north;
 
-  /// No description provided for @fastingTracker.
+  /// No description provided for @qiblaFound.
   ///
   /// In en, this message translates to:
-  /// **'Fasting'**
-  String get fastingTracker;
+  /// **'Qibla found!'**
+  String get qiblaFound;
 
-  /// No description provided for @zakatCalculator.
+  /// No description provided for @turnDevice.
   ///
   /// In en, this message translates to:
-  /// **'Zakat Calculator'**
-  String get zakatCalculator;
+  /// **'Turn your device to face the Qibla'**
+  String get turnDevice;
 
-  /// No description provided for @selectCity.
+  /// No description provided for @notifications.
   ///
   /// In en, this message translates to:
-  /// **'Select City'**
-  String get selectCity;
+  /// **'Notifications'**
+  String get notifications;
 
-  /// No description provided for @detectLocation.
+  /// No description provided for @prayerNotifications.
   ///
   /// In en, this message translates to:
-  /// **'Detect Location'**
-  String get detectLocation;
+  /// **'Prayer Notifications'**
+  String get prayerNotifications;
 
-  /// No description provided for @manualSelection.
+  /// No description provided for @enableNotifications.
   ///
   /// In en, this message translates to:
-  /// **'Manual Selection'**
-  String get manualSelection;
+  /// **'Enable Notifications'**
+  String get enableNotifications;
 
-  /// No description provided for @diagnostics.
+  /// No description provided for @notificationTime.
   ///
   /// In en, this message translates to:
-  /// **'Diagnostics'**
-  String get diagnostics;
+  /// **'Notification Time'**
+  String get notificationTime;
 
-  /// No description provided for @appVersion.
+  /// No description provided for @beforePrayer.
   ///
   /// In en, this message translates to:
-  /// **'App Version'**
-  String get appVersion;
+  /// **'minutes before prayer'**
+  String get beforePrayer;
 
-  /// No description provided for @audioVoice.
+  /// No description provided for @theme.
   ///
   /// In en, this message translates to:
-  /// **'Audio Voice'**
-  String get audioVoice;
+  /// **'Theme'**
+  String get theme;
 
-  /// No description provided for @qiblaOffset.
+  /// No description provided for @lightMode.
   ///
   /// In en, this message translates to:
-  /// **'Qibla Offset'**
-  String get qiblaOffset;
-
-  /// No description provided for @smoothing.
-  ///
-  /// In en, this message translates to:
-  /// **'Smoothing'**
-  String get smoothing;
-
-  /// No description provided for @customAngles.
-  ///
-  /// In en, this message translates to:
-  /// **'Custom Angles'**
-  String get customAngles;
-
-  /// No description provided for @fajrAngle.
-  ///
-  /// In en, this message translates to:
-  /// **'Fajr Angle'**
-  String get fajrAngle;
-
-  /// No description provided for @ishaAngle.
-  ///
-  /// In en, this message translates to:
-  /// **'Isha Angle'**
-  String get ishaAngle;
-
-  /// No description provided for @appearance.
-  ///
-  /// In en, this message translates to:
-  /// **'Appearance'**
-  String get appearance;
+  /// **'Light Mode'**
+  String get lightMode;
 
   /// No description provided for @darkMode.
   ///
@@ -806,23 +1104,23 @@ abstract class AppLocalizations {
   /// **'Dark Mode'**
   String get darkMode;
 
+  /// No description provided for @systemTheme.
+  ///
+  /// In en, this message translates to:
+  /// **'System Theme'**
+  String get systemTheme;
+
   /// No description provided for @about.
   ///
   /// In en, this message translates to:
   /// **'About'**
   String get about;
 
-  /// No description provided for @rateApp.
+  /// No description provided for @version.
   ///
   /// In en, this message translates to:
-  /// **'Rate App'**
-  String get rateApp;
-
-  /// No description provided for @shareApp.
-  ///
-  /// In en, this message translates to:
-  /// **'Share App'**
-  String get shareApp;
+  /// **'Version'**
+  String get version;
 
   /// No description provided for @privacyPolicy.
   ///
@@ -836,53 +1134,113 @@ abstract class AppLocalizations {
   /// **'Terms of Service'**
   String get termsOfService;
 
-  /// No description provided for @hijriCalendar.
+  /// No description provided for @contactUs.
   ///
   /// In en, this message translates to:
-  /// **'Hijri Calendar'**
-  String get hijriCalendar;
+  /// **'Contact Us'**
+  String get contactUs;
 
-  /// No description provided for @todayIbadah.
+  /// No description provided for @rateApp.
   ///
   /// In en, this message translates to:
-  /// **'Today\'s Ibadah'**
-  String get todayIbadah;
+  /// **'Rate App'**
+  String get rateApp;
 
-  /// No description provided for @dailyVerse.
+  /// No description provided for @shareApp.
   ///
   /// In en, this message translates to:
-  /// **'Daily Verse'**
-  String get dailyVerse;
+  /// **'Share App'**
+  String get shareApp;
 
-  /// No description provided for @quickAccess.
+  /// No description provided for @downloadManager.
   ///
   /// In en, this message translates to:
-  /// **'Quick Access'**
-  String get quickAccess;
+  /// **'Download Manager'**
+  String get downloadManager;
 
-  /// No description provided for @welcomeTitle.
+  /// No description provided for @downloads.
   ///
   /// In en, this message translates to:
-  /// **'Welcome to Sirat-i Nur'**
-  String get welcomeTitle;
+  /// **'Downloads'**
+  String get downloads;
 
-  /// No description provided for @welcomeSubtitle.
+  /// No description provided for @downloading.
   ///
   /// In en, this message translates to:
-  /// **'Your complete Islamic companion'**
-  String get welcomeSubtitle;
+  /// **'Downloading...'**
+  String get downloading;
 
-  /// No description provided for @selectLocation.
+  /// No description provided for @downloadComplete.
   ///
   /// In en, this message translates to:
-  /// **'Select Your Location'**
-  String get selectLocation;
+  /// **'Download Complete'**
+  String get downloadComplete;
 
-  /// No description provided for @selectLanguageOnboard.
+  /// No description provided for @downloadFailed.
   ///
   /// In en, this message translates to:
-  /// **'Select Your Language'**
-  String get selectLanguageOnboard;
+  /// **'Download Failed'**
+  String get downloadFailed;
+
+  /// No description provided for @offlineMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Offline Mode'**
+  String get offlineMode;
+
+  /// No description provided for @noInternet.
+  ///
+  /// In en, this message translates to:
+  /// **'No Internet Connection'**
+  String get noInternet;
+
+  /// No description provided for @checkConnection.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check your connection'**
+  String get checkConnection;
+
+  /// No description provided for @premium.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium'**
+  String get premium;
+
+  /// No description provided for @upgradeToPro.
+  ///
+  /// In en, this message translates to:
+  /// **'Upgrade to Pro'**
+  String get upgradeToPro;
+
+  /// No description provided for @proFeatures.
+  ///
+  /// In en, this message translates to:
+  /// **'Pro Features'**
+  String get proFeatures;
+
+  /// No description provided for @removeAds.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove Ads'**
+  String get removeAds;
+
+  /// No description provided for @unlockAll.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock All Content'**
+  String get unlockAll;
+
+  /// No description provided for @exclusiveContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Exclusive Content'**
+  String get exclusiveContent;
+
+  /// No description provided for @welcome.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome'**
+  String get welcome;
 
   /// No description provided for @getStarted.
   ///
@@ -902,107 +1260,443 @@ abstract class AppLocalizations {
   /// **'Next'**
   String get next;
 
-  /// No description provided for @mosqueNearby.
+  /// No description provided for @done.
   ///
   /// In en, this message translates to:
-  /// **'Nearby Mosques'**
-  String get mosqueNearby;
+  /// **'Done'**
+  String get done;
 
-  /// No description provided for @halalPlaces.
+  /// No description provided for @onboarding1Title.
   ///
   /// In en, this message translates to:
-  /// **'Halal Places'**
-  String get halalPlaces;
+  /// **'Welcome to Sirat-ı Nur'**
+  String get onboarding1Title;
 
-  /// No description provided for @quranAudioPack.
+  /// No description provided for @onboarding1Desc.
   ///
   /// In en, this message translates to:
-  /// **'Quran Audio Pack'**
-  String get quranAudioPack;
+  /// **'Your complete Islamic companion app for prayer times, Quran, and more'**
+  String get onboarding1Desc;
 
-  /// No description provided for @offlineData.
+  /// No description provided for @onboarding2Title.
   ///
   /// In en, this message translates to:
-  /// **'Offline Data'**
-  String get offlineData;
+  /// **'Prayer Times'**
+  String get onboarding2Title;
 
-  /// No description provided for @offlineDataDesc.
+  /// No description provided for @onboarding2Desc.
   ///
   /// In en, this message translates to:
-  /// **'Download recitations for seamless offline access.'**
-  String get offlineDataDesc;
+  /// **'Accurate prayer times based on your location'**
+  String get onboarding2Desc;
 
-  /// No description provided for @downloadPremiumDesc.
+  /// No description provided for @onboarding3Title.
   ///
   /// In en, this message translates to:
-  /// **'Offline Downloads are available exclusively for Premium members.'**
-  String get downloadPremiumDesc;
+  /// **'Quran & More'**
+  String get onboarding3Title;
 
-  /// No description provided for @neuralAssistantPlus.
+  /// No description provided for @onboarding3Desc.
   ///
   /// In en, this message translates to:
-  /// **'Neural Assistant Plus'**
-  String get neuralAssistantPlus;
+  /// **'Read Quran, track your reading, and explore Islamic content'**
+  String get onboarding3Desc;
 
-  /// No description provided for @neuralAssistantPlusDesc.
+  /// No description provided for @dhikrLibrary.
   ///
   /// In en, this message translates to:
-  /// **'In-depth religious Q&A and spiritual guidance.'**
-  String get neuralAssistantPlusDesc;
+  /// **'Dhikr Library'**
+  String get dhikrLibrary;
 
-  /// No description provided for @unlimitedOffline.
+  /// No description provided for @resetCounter.
   ///
   /// In en, this message translates to:
-  /// **'Unlimited Offline'**
-  String get unlimitedOffline;
+  /// **'Reset Counter'**
+  String get resetCounter;
 
-  /// No description provided for @unlimitedOfflineDesc.
+  /// No description provided for @changeTarget.
   ///
   /// In en, this message translates to:
-  /// **'Download all recitations and tafsirs.'**
-  String get unlimitedOfflineDesc;
+  /// **'Change Target'**
+  String get changeTarget;
 
-  /// No description provided for @exclusiveDesigns.
+  /// No description provided for @newTarget.
   ///
   /// In en, this message translates to:
-  /// **'Exclusive Designs'**
-  String get exclusiveDesigns;
+  /// **'New Target'**
+  String get newTarget;
 
-  /// No description provided for @exclusiveDesignsDesc.
+  /// No description provided for @targetCount.
   ///
   /// In en, this message translates to:
-  /// **'Unlock premium themes and calligraphy fonts.'**
-  String get exclusiveDesignsDesc;
+  /// **'Target: {target}'**
+  String targetCount(Object target);
 
-  /// No description provided for @siratNurPremium.
+  /// No description provided for @tapToCount.
   ///
   /// In en, this message translates to:
-  /// **'Sirat-i Nur Premium'**
-  String get siratNurPremium;
+  /// **'Tap to count'**
+  String get tapToCount;
 
-  /// No description provided for @premiumSubtitle.
+  /// No description provided for @dailyChecklist.
   ///
   /// In en, this message translates to:
-  /// **'Unlock all advanced features designed to guide you on your spiritual journey.'**
-  String get premiumSubtitle;
+  /// **'Daily Checklist'**
+  String get dailyChecklist;
 
-  /// No description provided for @errorOccurred.
+  /// No description provided for @qazaDebt.
   ///
   /// In en, this message translates to:
-  /// **'An error occurred'**
-  String get errorOccurred;
+  /// **'Qaza (Debt)'**
+  String get qazaDebt;
 
-  /// No description provided for @goHome.
+  /// No description provided for @resetQazaData.
   ///
   /// In en, this message translates to:
-  /// **'Go Home'**
-  String get goHome;
+  /// **'Reset Qaza Data'**
+  String get resetQazaData;
 
-  /// No description provided for @noInternetConnection.
+  /// No description provided for @resetQazaDebtQuestion.
   ///
   /// In en, this message translates to:
-  /// **'No internet connection'**
-  String get noInternetConnection;
+  /// **'Reset Qaza Debt?'**
+  String get resetQazaDebtQuestion;
+
+  /// No description provided for @rawatib.
+  ///
+  /// In en, this message translates to:
+  /// **'Rawatib'**
+  String get rawatib;
+
+  /// No description provided for @tahajjud.
+  ///
+  /// In en, this message translates to:
+  /// **'Tahajjud'**
+  String get tahajjud;
+
+  /// No description provided for @dailyProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Progress'**
+  String get dailyProgress;
+
+  /// No description provided for @mandatoryPrayers.
+  ///
+  /// In en, this message translates to:
+  /// **'Mandatory Prayers'**
+  String get mandatoryPrayers;
+
+  /// No description provided for @sunnahAndOthers.
+  ///
+  /// In en, this message translates to:
+  /// **'Sunnah & Others'**
+  String get sunnahAndOthers;
+
+  /// No description provided for @spiritualGrowth.
+  ///
+  /// In en, this message translates to:
+  /// **'Spiritual Growth'**
+  String get spiritualGrowth;
+
+  /// No description provided for @mandatoryDuty.
+  ///
+  /// In en, this message translates to:
+  /// **'Mandatory Duty'**
+  String get mandatoryDuty;
+
+  /// No description provided for @totalPrayers.
+  ///
+  /// In en, this message translates to:
+  /// **'Total Prayers'**
+  String get totalPrayers;
+
+  /// No description provided for @prayerDebt.
+  ///
+  /// In en, this message translates to:
+  /// **'Prayer Debt'**
+  String get prayerDebt;
+
+  /// No description provided for @fastingDebt.
+  ///
+  /// In en, this message translates to:
+  /// **'Fasting Debt'**
+  String get fastingDebt;
+
+  /// No description provided for @reset.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset'**
+  String get reset;
+
+  /// No description provided for @days.
+  ///
+  /// In en, this message translates to:
+  /// **'Days'**
+  String get days;
+
+  /// No description provided for @premiumIntegrity.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium Integrity'**
+  String get premiumIntegrity;
+
+  /// No description provided for @recheckPremium.
+  ///
+  /// In en, this message translates to:
+  /// **'Recheck Premium Status'**
+  String get recheckPremium;
+
+  /// No description provided for @syncStore.
+  ///
+  /// In en, this message translates to:
+  /// **'Sync with the store to confirm your entitlement.'**
+  String get syncStore;
+
+  /// No description provided for @checkingPremium.
+  ///
+  /// In en, this message translates to:
+  /// **'Checking premium status...'**
+  String get checkingPremium;
+
+  /// No description provided for @premiumVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium verified.'**
+  String get premiumVerified;
+
+  /// No description provided for @premiumNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium not found.'**
+  String get premiumNotFound;
+
+  /// No description provided for @premiumRefreshError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not refresh premium status: {error}'**
+  String premiumRefreshError(Object error);
+
+  /// No description provided for @offlineDownloadManager.
+  ///
+  /// In en, this message translates to:
+  /// **'Offline Download Manager'**
+  String get offlineDownloadManager;
+
+  /// No description provided for @manageDatasets.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage massive offline audio & dataset packs.'**
+  String get manageDatasets;
+
+  /// No description provided for @freeStorage.
+  ///
+  /// In en, this message translates to:
+  /// **'Free up internal device storage.'**
+  String get freeStorage;
+
+  /// No description provided for @quranIntegrity.
+  ///
+  /// In en, this message translates to:
+  /// **'Quran Integrity'**
+  String get quranIntegrity;
+
+  /// No description provided for @checkQuranDb.
+  ///
+  /// In en, this message translates to:
+  /// **'Check Quran Database'**
+  String get checkQuranDb;
+
+  /// No description provided for @verifyQuranContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify 114 surahs and 6236 ayahs.'**
+  String get verifyQuranContent;
+
+  /// No description provided for @checkingQuranDb.
+  ///
+  /// In en, this message translates to:
+  /// **'Checking Quran database...'**
+  String get checkingQuranDb;
+
+  /// No description provided for @okLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'OK'**
+  String get okLabel;
+
+  /// No description provided for @incomplete.
+  ///
+  /// In en, this message translates to:
+  /// **'Incomplete'**
+  String get incomplete;
+
+  /// No description provided for @notSeeded.
+  ///
+  /// In en, this message translates to:
+  /// **'Not seeded'**
+  String get notSeeded;
+
+  /// No description provided for @quranDbStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Quran Database Status'**
+  String get quranDbStatus;
+
+  /// No description provided for @statusLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Status: {status}'**
+  String statusLabel(Object status);
+
+  /// No description provided for @surahsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'Surahs: {count} (expected 114)'**
+  String surahsCount(Object count);
+
+  /// No description provided for @ayahsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'Ayahs: {count} (expected 6236)'**
+  String ayahsCount(Object count);
+
+  /// No description provided for @missingArabic.
+  ///
+  /// In en, this message translates to:
+  /// **'Missing Arabic: {count}'**
+  String missingArabic(Object count);
+
+  /// No description provided for @missingEnglish.
+  ///
+  /// In en, this message translates to:
+  /// **'Missing English: {count}'**
+  String missingEnglish(Object count);
+
+  /// No description provided for @missingTurkish.
+  ///
+  /// In en, this message translates to:
+  /// **'Missing Turkish: {count}'**
+  String missingTurkish(Object count);
+
+  /// No description provided for @dbVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'DB Version: {version}'**
+  String dbVersion(Object version);
+
+  /// No description provided for @dbPath.
+  ///
+  /// In en, this message translates to:
+  /// **'Path: {path}'**
+  String dbPath(Object path);
+
+  /// No description provided for @quranCheckFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Quran check failed: {error}'**
+  String quranCheckFailed(Object error);
+
+  /// No description provided for @audioVoice.
+  ///
+  /// In en, this message translates to:
+  /// **'Audio Voice'**
+  String get audioVoice;
+
+  /// No description provided for @fajrAngle.
+  ///
+  /// In en, this message translates to:
+  /// **'Fajr Angle'**
+  String get fajrAngle;
+
+  /// No description provided for @ishaAngle.
+  ///
+  /// In en, this message translates to:
+  /// **'Isha Angle'**
+  String get ishaAngle;
+
+  /// No description provided for @qiblaCalibration.
+  ///
+  /// In en, this message translates to:
+  /// **'Qibla Calibration'**
+  String get qiblaCalibration;
+
+  /// No description provided for @compassSmoothing.
+  ///
+  /// In en, this message translates to:
+  /// **'Compass Smoothing'**
+  String get compassSmoothing;
+
+  /// No description provided for @reduceSensorJitter.
+  ///
+  /// In en, this message translates to:
+  /// **'Reduce sensor jitter for a steadier needle.'**
+  String get reduceSensorJitter;
+
+  /// No description provided for @calibrationOffset.
+  ///
+  /// In en, this message translates to:
+  /// **'Calibration Offset'**
+  String get calibrationOffset;
+
+  /// No description provided for @currentOffset.
+  ///
+  /// In en, this message translates to:
+  /// **'Current: {offset}°'**
+  String currentOffset(Object offset);
+
+  /// No description provided for @manualCorrectionDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Adjust if your compass needs a manual correction. Positive values rotate clockwise.'**
+  String get manualCorrectionDesc;
+
+  /// No description provided for @apply.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply'**
+  String get apply;
+
+  /// No description provided for @resetOnboarding.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset Onboarding'**
+  String get resetOnboarding;
+
+  /// No description provided for @rerunSetup.
+  ///
+  /// In en, this message translates to:
+  /// **'Re-run the initial setup process.'**
+  String get rerunSetup;
+
+  /// No description provided for @diagnostics.
+  ///
+  /// In en, this message translates to:
+  /// **'Diagnostics'**
+  String get diagnostics;
+
+  /// No description provided for @healthCheckDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Run health checks and view system status.'**
+  String get healthCheckDesc;
+
+  /// No description provided for @qiblaAligned.
+  ///
+  /// In en, this message translates to:
+  /// **'Qibla Aligned'**
+  String get qiblaAligned;
+
+  /// No description provided for @rotateToFindQibla.
+  ///
+  /// In en, this message translates to:
+  /// **'Rotate to Find Qibla'**
+  String get rotateToFindQibla;
+
+  /// No description provided for @calibrationRequiredFigure8.
+  ///
+  /// In en, this message translates to:
+  /// **'Calibration required. Rotate device in figure-8.'**
+  String get calibrationRequiredFigure8;
 }
 
 class _AppLocalizationsDelegate
@@ -1016,26 +1710,192 @@ class _AppLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) => <String>[
+    'aa',
+    'ab',
+    'ae',
+    'af',
+    'ak',
+    'am',
+    'an',
     'ar',
+    'as',
+    'av',
+    'ay',
+    'az',
+    'ba',
+    'be',
+    'bg',
+    'bh',
+    'bi',
+    'bm',
     'bn',
+    'bo',
+    'br',
     'bs',
+    'ca',
+    'ce',
+    'ceb',
+    'ch',
+    'co',
+    'cr',
+    'cs',
+    'cu',
+    'cv',
+    'cy',
+    'da',
     'de',
+    'dv',
+    'dz',
+    'ee',
+    'el',
     'en',
+    'eo',
     'es',
+    'et',
+    'eu',
     'fa',
+    'ff',
+    'fi',
+    'fj',
+    'fo',
     'fr',
+    'fy',
+    'ga',
+    'gd',
+    'gl',
+    'gn',
+    'gu',
+    'gv',
+    'ha',
+    'haw',
+    'he',
+    'hi',
+    'ho',
+    'hr',
+    'ht',
+    'hu',
+    'hy',
+    'hz',
+    'ia',
     'id',
+    'ie',
+    'ig',
+    'ii',
+    'ik',
+    'io',
+    'is',
     'it',
+    'iu',
     'ja',
+    'jv',
+    'ka',
+    'kg',
+    'ki',
+    'kj',
+    'kk',
+    'kl',
+    'km',
+    'kn',
     'ko',
+    'kr',
+    'ks',
+    'ku',
+    'kv',
+    'kw',
+    'ky',
+    'la',
+    'lb',
+    'lg',
+    'li',
+    'ln',
+    'lo',
+    'lt',
+    'lu',
+    'lv',
+    'mg',
+    'mh',
+    'mi',
+    'mk',
+    'ml',
+    'mn',
+    'mr',
     'ms',
+    'mt',
+    'my',
+    'na',
+    'nb',
+    'nd',
+    'ne',
+    'ng',
     'nl',
+    'nn',
+    'no',
+    'nr',
+    'nv',
+    'ny',
+    'oc',
+    'oj',
+    'om',
+    'or',
+    'os',
+    'pa',
+    'pi',
+    'pl',
+    'ps',
     'pt',
+    'qu',
+    'rm',
+    'rn',
+    'ro',
     'ru',
+    'rw',
+    'sa',
+    'sc',
+    'sd',
+    'se',
+    'sg',
+    'si',
+    'sk',
+    'sl',
+    'sm',
+    'sn',
+    'so',
+    'sq',
+    'sr',
+    'ss',
+    'st',
+    'su',
+    'sv',
     'sw',
+    'ta',
+    'te',
+    'tg',
+    'th',
+    'ti',
+    'tk',
+    'tl',
+    'tn',
+    'to',
     'tr',
+    'ts',
+    'tt',
+    'tw',
+    'ty',
+    'ug',
+    'uk',
     'ur',
+    'uz',
+    've',
+    'vi',
+    'vo',
+    'wa',
+    'wo',
+    'xh',
+    'yi',
+    'yo',
+    'za',
     'zh',
+    'zu',
   ].contains(locale.languageCode);
 
   @override
@@ -1043,48 +1903,394 @@ class _AppLocalizationsDelegate
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
+  // Lookup logic when language+country codes are specified.
+  switch (locale.languageCode) {
+    case 'zh':
+      {
+        switch (locale.countryCode) {
+          case 'CN':
+            return AppLocalizationsZhCn();
+          case 'TW':
+            return AppLocalizationsZhTw();
+        }
+        break;
+      }
+  }
+
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
+    case 'aa':
+      return AppLocalizationsAa();
+    case 'ab':
+      return AppLocalizationsAb();
+    case 'ae':
+      return AppLocalizationsAe();
+    case 'af':
+      return AppLocalizationsAf();
+    case 'ak':
+      return AppLocalizationsAk();
+    case 'am':
+      return AppLocalizationsAm();
+    case 'an':
+      return AppLocalizationsAn();
     case 'ar':
       return AppLocalizationsAr();
+    case 'as':
+      return AppLocalizationsAs();
+    case 'av':
+      return AppLocalizationsAv();
+    case 'ay':
+      return AppLocalizationsAy();
+    case 'az':
+      return AppLocalizationsAz();
+    case 'ba':
+      return AppLocalizationsBa();
+    case 'be':
+      return AppLocalizationsBe();
+    case 'bg':
+      return AppLocalizationsBg();
+    case 'bh':
+      return AppLocalizationsBh();
+    case 'bi':
+      return AppLocalizationsBi();
+    case 'bm':
+      return AppLocalizationsBm();
     case 'bn':
       return AppLocalizationsBn();
+    case 'bo':
+      return AppLocalizationsBo();
+    case 'br':
+      return AppLocalizationsBr();
     case 'bs':
       return AppLocalizationsBs();
+    case 'ca':
+      return AppLocalizationsCa();
+    case 'ce':
+      return AppLocalizationsCe();
+    case 'ceb':
+      return AppLocalizationsCeb();
+    case 'ch':
+      return AppLocalizationsCh();
+    case 'co':
+      return AppLocalizationsCo();
+    case 'cr':
+      return AppLocalizationsCr();
+    case 'cs':
+      return AppLocalizationsCs();
+    case 'cu':
+      return AppLocalizationsCu();
+    case 'cv':
+      return AppLocalizationsCv();
+    case 'cy':
+      return AppLocalizationsCy();
+    case 'da':
+      return AppLocalizationsDa();
     case 'de':
       return AppLocalizationsDe();
+    case 'dv':
+      return AppLocalizationsDv();
+    case 'dz':
+      return AppLocalizationsDz();
+    case 'ee':
+      return AppLocalizationsEe();
+    case 'el':
+      return AppLocalizationsEl();
     case 'en':
       return AppLocalizationsEn();
+    case 'eo':
+      return AppLocalizationsEo();
     case 'es':
       return AppLocalizationsEs();
+    case 'et':
+      return AppLocalizationsEt();
+    case 'eu':
+      return AppLocalizationsEu();
     case 'fa':
       return AppLocalizationsFa();
+    case 'ff':
+      return AppLocalizationsFf();
+    case 'fi':
+      return AppLocalizationsFi();
+    case 'fj':
+      return AppLocalizationsFj();
+    case 'fo':
+      return AppLocalizationsFo();
     case 'fr':
       return AppLocalizationsFr();
+    case 'fy':
+      return AppLocalizationsFy();
+    case 'ga':
+      return AppLocalizationsGa();
+    case 'gd':
+      return AppLocalizationsGd();
+    case 'gl':
+      return AppLocalizationsGl();
+    case 'gn':
+      return AppLocalizationsGn();
+    case 'gu':
+      return AppLocalizationsGu();
+    case 'gv':
+      return AppLocalizationsGv();
+    case 'ha':
+      return AppLocalizationsHa();
+    case 'haw':
+      return AppLocalizationsHaw();
+    case 'he':
+      return AppLocalizationsHe();
+    case 'hi':
+      return AppLocalizationsHi();
+    case 'ho':
+      return AppLocalizationsHo();
+    case 'hr':
+      return AppLocalizationsHr();
+    case 'ht':
+      return AppLocalizationsHt();
+    case 'hu':
+      return AppLocalizationsHu();
+    case 'hy':
+      return AppLocalizationsHy();
+    case 'hz':
+      return AppLocalizationsHz();
+    case 'ia':
+      return AppLocalizationsIa();
     case 'id':
       return AppLocalizationsId();
+    case 'ie':
+      return AppLocalizationsIe();
+    case 'ig':
+      return AppLocalizationsIg();
+    case 'ii':
+      return AppLocalizationsIi();
+    case 'ik':
+      return AppLocalizationsIk();
+    case 'io':
+      return AppLocalizationsIo();
+    case 'is':
+      return AppLocalizationsIs();
     case 'it':
       return AppLocalizationsIt();
+    case 'iu':
+      return AppLocalizationsIu();
     case 'ja':
       return AppLocalizationsJa();
+    case 'jv':
+      return AppLocalizationsJv();
+    case 'ka':
+      return AppLocalizationsKa();
+    case 'kg':
+      return AppLocalizationsKg();
+    case 'ki':
+      return AppLocalizationsKi();
+    case 'kj':
+      return AppLocalizationsKj();
+    case 'kk':
+      return AppLocalizationsKk();
+    case 'kl':
+      return AppLocalizationsKl();
+    case 'km':
+      return AppLocalizationsKm();
+    case 'kn':
+      return AppLocalizationsKn();
     case 'ko':
       return AppLocalizationsKo();
+    case 'kr':
+      return AppLocalizationsKr();
+    case 'ks':
+      return AppLocalizationsKs();
+    case 'ku':
+      return AppLocalizationsKu();
+    case 'kv':
+      return AppLocalizationsKv();
+    case 'kw':
+      return AppLocalizationsKw();
+    case 'ky':
+      return AppLocalizationsKy();
+    case 'la':
+      return AppLocalizationsLa();
+    case 'lb':
+      return AppLocalizationsLb();
+    case 'lg':
+      return AppLocalizationsLg();
+    case 'li':
+      return AppLocalizationsLi();
+    case 'ln':
+      return AppLocalizationsLn();
+    case 'lo':
+      return AppLocalizationsLo();
+    case 'lt':
+      return AppLocalizationsLt();
+    case 'lu':
+      return AppLocalizationsLu();
+    case 'lv':
+      return AppLocalizationsLv();
+    case 'mg':
+      return AppLocalizationsMg();
+    case 'mh':
+      return AppLocalizationsMh();
+    case 'mi':
+      return AppLocalizationsMi();
+    case 'mk':
+      return AppLocalizationsMk();
+    case 'ml':
+      return AppLocalizationsMl();
+    case 'mn':
+      return AppLocalizationsMn();
+    case 'mr':
+      return AppLocalizationsMr();
     case 'ms':
       return AppLocalizationsMs();
+    case 'mt':
+      return AppLocalizationsMt();
+    case 'my':
+      return AppLocalizationsMy();
+    case 'na':
+      return AppLocalizationsNa();
+    case 'nb':
+      return AppLocalizationsNb();
+    case 'nd':
+      return AppLocalizationsNd();
+    case 'ne':
+      return AppLocalizationsNe();
+    case 'ng':
+      return AppLocalizationsNg();
     case 'nl':
       return AppLocalizationsNl();
+    case 'nn':
+      return AppLocalizationsNn();
+    case 'no':
+      return AppLocalizationsNo();
+    case 'nr':
+      return AppLocalizationsNr();
+    case 'nv':
+      return AppLocalizationsNv();
+    case 'ny':
+      return AppLocalizationsNy();
+    case 'oc':
+      return AppLocalizationsOc();
+    case 'oj':
+      return AppLocalizationsOj();
+    case 'om':
+      return AppLocalizationsOm();
+    case 'or':
+      return AppLocalizationsOr();
+    case 'os':
+      return AppLocalizationsOs();
+    case 'pa':
+      return AppLocalizationsPa();
+    case 'pi':
+      return AppLocalizationsPi();
+    case 'pl':
+      return AppLocalizationsPl();
+    case 'ps':
+      return AppLocalizationsPs();
     case 'pt':
       return AppLocalizationsPt();
+    case 'qu':
+      return AppLocalizationsQu();
+    case 'rm':
+      return AppLocalizationsRm();
+    case 'rn':
+      return AppLocalizationsRn();
+    case 'ro':
+      return AppLocalizationsRo();
     case 'ru':
       return AppLocalizationsRu();
+    case 'rw':
+      return AppLocalizationsRw();
+    case 'sa':
+      return AppLocalizationsSa();
+    case 'sc':
+      return AppLocalizationsSc();
+    case 'sd':
+      return AppLocalizationsSd();
+    case 'se':
+      return AppLocalizationsSe();
+    case 'sg':
+      return AppLocalizationsSg();
+    case 'si':
+      return AppLocalizationsSi();
+    case 'sk':
+      return AppLocalizationsSk();
+    case 'sl':
+      return AppLocalizationsSl();
+    case 'sm':
+      return AppLocalizationsSm();
+    case 'sn':
+      return AppLocalizationsSn();
+    case 'so':
+      return AppLocalizationsSo();
+    case 'sq':
+      return AppLocalizationsSq();
+    case 'sr':
+      return AppLocalizationsSr();
+    case 'ss':
+      return AppLocalizationsSs();
+    case 'st':
+      return AppLocalizationsSt();
+    case 'su':
+      return AppLocalizationsSu();
+    case 'sv':
+      return AppLocalizationsSv();
     case 'sw':
       return AppLocalizationsSw();
+    case 'ta':
+      return AppLocalizationsTa();
+    case 'te':
+      return AppLocalizationsTe();
+    case 'tg':
+      return AppLocalizationsTg();
+    case 'th':
+      return AppLocalizationsTh();
+    case 'ti':
+      return AppLocalizationsTi();
+    case 'tk':
+      return AppLocalizationsTk();
+    case 'tl':
+      return AppLocalizationsTl();
+    case 'tn':
+      return AppLocalizationsTn();
+    case 'to':
+      return AppLocalizationsTo();
     case 'tr':
       return AppLocalizationsTr();
+    case 'ts':
+      return AppLocalizationsTs();
+    case 'tt':
+      return AppLocalizationsTt();
+    case 'tw':
+      return AppLocalizationsTw();
+    case 'ty':
+      return AppLocalizationsTy();
+    case 'ug':
+      return AppLocalizationsUg();
+    case 'uk':
+      return AppLocalizationsUk();
     case 'ur':
       return AppLocalizationsUr();
+    case 'uz':
+      return AppLocalizationsUz();
+    case 've':
+      return AppLocalizationsVe();
+    case 'vi':
+      return AppLocalizationsVi();
+    case 'vo':
+      return AppLocalizationsVo();
+    case 'wa':
+      return AppLocalizationsWa();
+    case 'wo':
+      return AppLocalizationsWo();
+    case 'xh':
+      return AppLocalizationsXh();
+    case 'yi':
+      return AppLocalizationsYi();
+    case 'yo':
+      return AppLocalizationsYo();
+    case 'za':
+      return AppLocalizationsZa();
     case 'zh':
       return AppLocalizationsZh();
+    case 'zu':
+      return AppLocalizationsZu();
   }
 
   throw FlutterError(

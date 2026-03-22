@@ -8,6 +8,7 @@ import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/theme/app_theme.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'package:sirat_i_nur/core/constants/app_constants.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -136,7 +137,19 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
       themeMode: settings.isDarkMode ? ThemeMode.dark : ThemeMode.light,
       locale: settings.languageCode != null ? Locale(settings.languageCode!) : null,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
+      supportedLocales: [
+        ...AppLocalizations.supportedLocales,
+        ...supportedLanguages.map((e) => Locale(e.code)).where((l) => !AppLocalizations.supportedLocales.contains(l)),
+      ],
+      localeResolutionCallback: (locale, supportedLocales) {
+        if (locale == null) return supportedLocales.first; // English fallback
+        for (var supportedLocale in supportedLocales) {
+          if (supportedLocale.languageCode == locale.languageCode) {
+            return supportedLocale;
+          }
+        }
+        return supportedLocales.first;
+      },
       routerConfig: router,
     );
   }

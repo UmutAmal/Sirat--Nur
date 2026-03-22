@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/core/services/prayer_times_service.dart';
+import 'package:sirat_i_nur/features/tracker/tracker_page.dart';
+import 'package:sirat_i_nur/core/constants/daily_ayat_data.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
@@ -11,6 +13,8 @@ class HomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final prayerTimes = ref.watch(prayerTimesProvider);
+    final prayerDone = ref.watch(prayerDoneProvider);
+    final dailyAyat = getDailyAyat();
 
     return Scaffold(
       appBar: AppBar(
@@ -53,18 +57,18 @@ class HomePage extends ConsumerWidget {
                     ],
                   ),
                   const SizedBox(height: 12),
-                  const Text(
-                    'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, height: 2.0),
+                  Text(
+                    dailyAyat.arabic,
+                    style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, height: 2.0, fontFamily: 'Amiri'),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 8),
-                  const Text(
-                    'In the name of Allah, the Most Gracious, the Most Merciful.',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, height: 1.6),
+                  Text(
+                    dailyAyat.english,
+                    style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, height: 1.6),
                   ),
                   const SizedBox(height: 8),
-                  Text('Al-Fatiha 1:1',
+                  Text('${dailyAyat.surahName} ${dailyAyat.reference}',
                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700,
                       color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
                 ],
@@ -85,11 +89,11 @@ class HomePage extends ConsumerWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-                  _buildIbadahRow('Fajr', false),
-                  _buildIbadahRow('Dhuhr', false),
-                  _buildIbadahRow('Asr', false),
-                  _buildIbadahRow('Maghrib', false),
-                  _buildIbadahRow('Isha', false),
+                  _buildIbadahRow('Fajr', prayerDone['Fajr'] ?? false),
+                  _buildIbadahRow('Dhuhr', prayerDone['Dhuhr'] ?? false),
+                  _buildIbadahRow('Asr', prayerDone['Asr'] ?? false),
+                  _buildIbadahRow('Maghrib', prayerDone['Maghrib'] ?? false),
+                  _buildIbadahRow('Isha', prayerDone['Isha'] ?? false),
                 ],
               ),
             ),

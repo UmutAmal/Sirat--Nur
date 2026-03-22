@@ -9,7 +9,7 @@ class AppLocalizationsRu extends AppLocalizations {
   AppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get appTitle => 'Sirat-i Nur';
+  String get appTitle => 'Way Of Allah';
 
   @override
   String get home => 'Home';
@@ -42,7 +42,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get getLifetimePro => 'Get Lifetime Pro';
 
   @override
-  String get unlockFeatures => 'Unlock Advanced Features';
+  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -96,7 +96,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search languages...';
+  String get searchLanguage => 'Search 180+ languages...';
 
   @override
   String get systemDefault => 'System Default';
@@ -183,176 +183,157 @@ class AppLocalizationsRu extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
-  String get tracker => 'Tracker';
+  String get morningZikr => 'Morning Zikr';
 
   @override
-  String get library => 'Library';
+  String get eveningZikr => 'Evening Zikr';
 
   @override
-  String get chatbot => 'Assistant';
+  String get tasbih => 'Tasbih';
 
   @override
-  String get liveTv => 'Live TV';
+  String get ahkab => 'Ahkam';
 
   @override
-  String get places => 'Places';
+  String get masaail => 'Masa\'il';
 
   @override
-  String get downloads => 'Downloads';
+  String get hadith => 'Hadith';
 
   @override
-  String get premium => 'Premium';
+  String get hadithCollection => 'Hadith Collection';
 
   @override
-  String get onboarding => 'Welcome';
-
-  @override
-  String get analytics => 'Analytics';
-
-  @override
-  String get offlineManager => 'Offline Manager';
-
-  @override
-  String get restore => 'Restore Purchases';
-
-  @override
-  String get getLifetimeAccess => 'Get Lifetime Access';
-
-  @override
-  String get premiumRequired => 'Premium Required';
-
-  @override
-  String get upgradeNow => 'Upgrade Now';
-
-  @override
-  String get downloadNow => 'Download Now';
-
-  @override
-  String get downloading => 'Downloading...';
-
-  @override
-  String get downloadComplete => 'Download complete!';
-
-  @override
-  String get readyForOffline => 'Ready for Offline Use';
-
-  @override
-  String get installedOnDevice => 'Installed on device';
-
-  @override
-  String get notDownloaded => 'Not downloaded yet';
-
-  @override
-  String get deletePack => 'Delete Pack?';
-
-  @override
-  String get deletePackDesc =>
-      'This will remove the offline pack. Internet will be required for playback.';
-
-  @override
-  String get neuralAssistant => 'Neural Assistant';
-
-  @override
-  String get askQuestion => 'Ask a question...';
-
-  @override
-  String get freeQueries => 'Free queries remaining';
-
-  @override
-  String get unlimitedQueries => 'Unlimited queries with Premium';
-
-  @override
-  String get asmaUlHusna => 'Asma-ul-Husna';
-
-  @override
-  String get namesOfAllah => '99 Names of Allah';
-
-  @override
-  String get islamicEducation => 'Islamic Education';
-
-  @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithBooks => 'Hadith Books';
 
   @override
   String get searchHadith => 'Search Hadith';
 
   @override
-  String get duas => 'Duas';
+  String get asmaulHusna => 'Asma-ul-Husna';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get makkahLive => 'Makkah Live';
+  String get liveTv => 'Live TV';
 
   @override
-  String get madinahLive => 'Madinah Live';
+  String get watchLive => 'Watch Live';
+
+  @override
+  String get streamError => 'Stream error';
+
+  @override
+  String get reload => 'Reload';
+
+  @override
+  String get openInYoutube => 'Open in YouTube';
+
+  @override
+  String get ibadahTracker => 'Ibadah Tracker';
+
+  @override
+  String get fasting => 'Fasting';
+
+  @override
+  String get quranReading => 'Quran Reading';
+
+  @override
+  String get prayers => 'Prayers';
+
+  @override
+  String get dhikrCount => 'Dhikr Count';
+
+  @override
+  String get weeklyProgress => 'Weekly Progress';
+
+  @override
+  String get monthlyProgress => 'Monthly Progress';
+
+  @override
+  String get statistics => 'Statistics';
+
+  @override
+  String get hijriCalendar => 'Hijri Calendar';
+
+  @override
+  String get gregorianCalendar => 'Gregorian Calendar';
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get tomorrow => 'Tomorrow';
+
+  @override
+  String get yesterday => 'Yesterday';
+
+  @override
+  String get specialDays => 'Special Days';
+
+  @override
+  String get ramadan => 'Ramadan';
+
+  @override
+  String get eidAlFitr => 'Eid Al-Fitr';
+
+  @override
+  String get eidAlAdha => 'Eid Al-Adha';
+
+  @override
+  String get laylatAlQadr => 'Laylat Al-Qadr';
 
   @override
   String get qiblaDirection => 'Qibla Direction';
 
   @override
-  String get calibrate => 'Calibrate';
+  String get compass => 'Compass';
 
   @override
-  String get prayerTracker => 'Prayer Tracker';
+  String get degrees => 'degrees';
 
   @override
-  String get quranTracker => 'Quran Reading';
+  String get north => 'North';
 
   @override
-  String get fastingTracker => 'Fasting';
+  String get qiblaFound => 'Qibla found!';
 
   @override
-  String get zakatCalculator => 'Zakat Calculator';
+  String get turnDevice => 'Turn your device to face the Qibla';
 
   @override
-  String get selectCity => 'Select City';
+  String get notifications => 'Notifications';
 
   @override
-  String get detectLocation => 'Detect Location';
+  String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get manualSelection => 'Manual Selection';
+  String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get notificationTime => 'Notification Time';
 
   @override
-  String get appVersion => 'App Version';
+  String get beforePrayer => 'minutes before prayer';
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get theme => 'Theme';
 
   @override
-  String get qiblaOffset => 'Qibla Offset';
-
-  @override
-  String get smoothing => 'Smoothing';
-
-  @override
-  String get customAngles => 'Custom Angles';
-
-  @override
-  String get fajrAngle => 'Fajr Angle';
-
-  @override
-  String get ishaAngle => 'Isha Angle';
-
-  @override
-  String get appearance => 'Appearance';
+  String get lightMode => 'Light Mode';
 
   @override
   String get darkMode => 'Dark Mode';
 
   @override
+  String get systemTheme => 'System Theme';
+
+  @override
   String get about => 'About';
 
   @override
-  String get rateApp => 'Rate App';
-
-  @override
-  String get shareApp => 'Share App';
+  String get version => 'Version';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -361,28 +342,58 @@ class AppLocalizationsRu extends AppLocalizations {
   String get termsOfService => 'Terms of Service';
 
   @override
-  String get hijriCalendar => 'Hijri Calendar';
+  String get contactUs => 'Contact Us';
 
   @override
-  String get todayIbadah => 'Today\'s Ibadah';
+  String get rateApp => 'Rate App';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get shareApp => 'Share App';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get downloadManager => 'Download Manager';
 
   @override
-  String get welcomeTitle => 'Welcome to Sirat-i Nur';
+  String get downloads => 'Downloads';
 
   @override
-  String get welcomeSubtitle => 'Your complete Islamic companion';
+  String get downloading => 'Downloading...';
 
   @override
-  String get selectLocation => 'Select Your Location';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get selectLanguageOnboard => 'Select Your Language';
+  String get downloadFailed => 'Download Failed';
+
+  @override
+  String get offlineMode => 'Offline Mode';
+
+  @override
+  String get noInternet => 'No Internet Connection';
+
+  @override
+  String get checkConnection => 'Please check your connection';
+
+  @override
+  String get premium => 'Premium';
+
+  @override
+  String get upgradeToPro => 'Upgrade to Pro';
+
+  @override
+  String get proFeatures => 'Pro Features';
+
+  @override
+  String get removeAds => 'Remove Ads';
+
+  @override
+  String get unlockAll => 'Unlock All Content';
+
+  @override
+  String get exclusiveContent => 'Exclusive Content';
+
+  @override
+  String get welcome => 'Welcome';
 
   @override
   String get getStarted => 'Get Started';
@@ -394,58 +405,250 @@ class AppLocalizationsRu extends AppLocalizations {
   String get next => 'Next';
 
   @override
-  String get mosqueNearby => 'Nearby Mosques';
+  String get done => 'Done';
 
   @override
-  String get halalPlaces => 'Halal Places';
+  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
 
   @override
-  String get quranAudioPack => 'Quran Audio Pack';
+  String get onboarding1Desc =>
+      'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get offlineData => 'Offline Data';
+  String get onboarding2Title => 'Prayer Times';
 
   @override
-  String get offlineDataDesc =>
-      'Download recitations for seamless offline access.';
+  String get onboarding2Desc => 'Accurate prayer times based on your location';
 
   @override
-  String get downloadPremiumDesc =>
-      'Offline Downloads are available exclusively for Premium members.';
+  String get onboarding3Title => 'Quran & More';
 
   @override
-  String get neuralAssistantPlus => 'Neural Assistant Plus';
+  String get onboarding3Desc =>
+      'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get neuralAssistantPlusDesc =>
-      'In-depth religious Q&A and spiritual guidance.';
+  String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get unlimitedOffline => 'Unlimited Offline';
+  String get resetCounter => 'Reset Counter';
 
   @override
-  String get unlimitedOfflineDesc => 'Download all recitations and tafsirs.';
+  String get changeTarget => 'Change Target';
 
   @override
-  String get exclusiveDesigns => 'Exclusive Designs';
+  String get newTarget => 'New Target';
 
   @override
-  String get exclusiveDesignsDesc =>
-      'Unlock premium themes and calligraphy fonts.';
+  String targetCount(Object target) {
+    return 'Target: $target';
+  }
 
   @override
-  String get siratNurPremium => 'Sirat-i Nur Premium';
+  String get tapToCount => 'Tap to count';
 
   @override
-  String get premiumSubtitle =>
-      'Unlock all advanced features designed to guide you on your spiritual journey.';
+  String get dailyChecklist => 'Daily Checklist';
 
   @override
-  String get errorOccurred => 'An error occurred';
+  String get qazaDebt => 'Qaza (Debt)';
 
   @override
-  String get goHome => 'Go Home';
+  String get resetQazaData => 'Reset Qaza Data';
 
   @override
-  String get noInternetConnection => 'No internet connection';
+  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+
+  @override
+  String get rawatib => 'Rawatib';
+
+  @override
+  String get tahajjud => 'Tahajjud';
+
+  @override
+  String get dailyProgress => 'Daily Progress';
+
+  @override
+  String get mandatoryPrayers => 'Mandatory Prayers';
+
+  @override
+  String get sunnahAndOthers => 'Sunnah & Others';
+
+  @override
+  String get spiritualGrowth => 'Spiritual Growth';
+
+  @override
+  String get mandatoryDuty => 'Mandatory Duty';
+
+  @override
+  String get totalPrayers => 'Total Prayers';
+
+  @override
+  String get prayerDebt => 'Prayer Debt';
+
+  @override
+  String get fastingDebt => 'Fasting Debt';
+
+  @override
+  String get reset => 'Reset';
+
+  @override
+  String get days => 'Days';
+
+  @override
+  String get premiumIntegrity => 'Premium Integrity';
+
+  @override
+  String get recheckPremium => 'Recheck Premium Status';
+
+  @override
+  String get syncStore => 'Sync with the store to confirm your entitlement.';
+
+  @override
+  String get checkingPremium => 'Checking premium status...';
+
+  @override
+  String get premiumVerified => 'Premium verified.';
+
+  @override
+  String get premiumNotFound => 'Premium not found.';
+
+  @override
+  String premiumRefreshError(Object error) {
+    return 'Could not refresh premium status: $error';
+  }
+
+  @override
+  String get offlineDownloadManager => 'Offline Download Manager';
+
+  @override
+  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+
+  @override
+  String get freeStorage => 'Free up internal device storage.';
+
+  @override
+  String get quranIntegrity => 'Quran Integrity';
+
+  @override
+  String get checkQuranDb => 'Check Quran Database';
+
+  @override
+  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+
+  @override
+  String get checkingQuranDb => 'Checking Quran database...';
+
+  @override
+  String get okLabel => 'OK';
+
+  @override
+  String get incomplete => 'Incomplete';
+
+  @override
+  String get notSeeded => 'Not seeded';
+
+  @override
+  String get quranDbStatus => 'Quran Database Status';
+
+  @override
+  String statusLabel(Object status) {
+    return 'Status: $status';
+  }
+
+  @override
+  String surahsCount(Object count) {
+    return 'Surahs: $count (expected 114)';
+  }
+
+  @override
+  String ayahsCount(Object count) {
+    return 'Ayahs: $count (expected 6236)';
+  }
+
+  @override
+  String missingArabic(Object count) {
+    return 'Missing Arabic: $count';
+  }
+
+  @override
+  String missingEnglish(Object count) {
+    return 'Missing English: $count';
+  }
+
+  @override
+  String missingTurkish(Object count) {
+    return 'Missing Turkish: $count';
+  }
+
+  @override
+  String dbVersion(Object version) {
+    return 'DB Version: $version';
+  }
+
+  @override
+  String dbPath(Object path) {
+    return 'Path: $path';
+  }
+
+  @override
+  String quranCheckFailed(Object error) {
+    return 'Quran check failed: $error';
+  }
+
+  @override
+  String get audioVoice => 'Audio Voice';
+
+  @override
+  String get fajrAngle => 'Fajr Angle';
+
+  @override
+  String get ishaAngle => 'Isha Angle';
+
+  @override
+  String get qiblaCalibration => 'Qibla Calibration';
+
+  @override
+  String get compassSmoothing => 'Compass Smoothing';
+
+  @override
+  String get reduceSensorJitter =>
+      'Reduce sensor jitter for a steadier needle.';
+
+  @override
+  String get calibrationOffset => 'Calibration Offset';
+
+  @override
+  String currentOffset(Object offset) {
+    return 'Current: $offset°';
+  }
+
+  @override
+  String get manualCorrectionDesc =>
+      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+
+  @override
+  String get apply => 'Apply';
+
+  @override
+  String get resetOnboarding => 'Reset Onboarding';
+
+  @override
+  String get rerunSetup => 'Re-run the initial setup process.';
+
+  @override
+  String get diagnostics => 'Diagnostics';
+
+  @override
+  String get healthCheckDesc => 'Run health checks and view system status.';
+
+  @override
+  String get qiblaAligned => 'Qibla Aligned';
+
+  @override
+  String get rotateToFindQibla => 'Rotate to Find Qibla';
+
+  @override
+  String get calibrationRequiredFigure8 =>
+      'Calibration required. Rotate device in figure-8.';
 }
