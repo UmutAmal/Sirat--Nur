@@ -1,0 +1,659 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Iloko (`ilo`).
+class AppLocalizationsIlo extends AppLocalizations {
+  AppLocalizationsIlo([String locale = 'ilo']) : super(locale);
+
+  @override
+  String get appTitle => 'Sirat-Ä± Nur';
+
+  @override
+  String get home => 'Taeng';
+
+  @override
+  String get quran => 'Quran';
+
+  @override
+  String get qibla => 'Qibla';
+
+  @override
+  String get zikr => 'Zikr';
+
+  @override
+  String get calendar => 'Kalendario';
+
+  @override
+  String get settings => 'Dagiti Setting';
+
+  @override
+  String get nextPrayer => 'Sumaruno a Kararag';
+
+  @override
+  String get prayerTimes => 'Panawen ti Kararag';
+
+  @override
+  String get continueReading => 'Ituloy ti Panagbasa';
+
+  @override
+  String get getLifetimePro => 'Mangala iti Lifetime Pro';
+
+  @override
+  String get unlockTajweed => 'Ilukat ti Tajweed & Narang-ay a Tampok';
+
+  @override
+  String get prayerCalculation => 'Kalkulasion ti Kararag';
+
+  @override
+  String get method => 'Pamay-an ti Panagkuenta';
+
+  @override
+  String get madhab => 'Asr Pamay-an ti Huristiko';
+
+  @override
+  String get surahs => 'Dagiti Surah';
+
+  @override
+  String get ayahs => 'Ayahs nga';
+
+  @override
+  String get fajr => 'Fajr';
+
+  @override
+  String get sunrise => 'Panagsilnag ti init';
+
+  @override
+  String get dhuhr => 'Dhuhr';
+
+  @override
+  String get asr => 'Asr';
+
+  @override
+  String get maghrib => 'Maghrib nga';
+
+  @override
+  String get isha => 'Isha';
+
+  @override
+  String get dataStorage => 'Datos & Pagidulin';
+
+  @override
+  String get clearCache => 'I-clear ti Cache';
+
+  @override
+  String get cacheClearedSuccess => 'Naballigi a na-clear ti cache';
+
+  @override
+  String get location => 'Lugar';
+
+  @override
+  String get language => 'Pagsasao';
+
+  @override
+  String get selectLanguage => 'Pilien ti Lenguahe';
+
+  @override
+  String get searchLanguage => 'Agbirok iti 180+ a pagsasao...';
+
+  @override
+  String get systemDefault => 'Default ti Sistema';
+
+  @override
+  String get currentLocation => 'Agdama a Lugar (GPS) .';
+
+  @override
+  String get search => 'Agbirok';
+
+  @override
+  String get searchHint => 'Agbirok iti...';
+
+  @override
+  String get noResults => 'Awan ti nasarakan a resulta';
+
+  @override
+  String get loading => 'Karga ti...';
+
+  @override
+  String get error => 'Biddut nga';
+
+  @override
+  String get retry => 'Padasem manen';
+
+  @override
+  String get cancel => 'Kanselaen';
+
+  @override
+  String get save => 'Idulin';
+
+  @override
+  String get delete => 'Buraken';
+
+  @override
+  String get edit => 'Urnosen ti';
+
+  @override
+  String get close => 'Agserra';
+
+  @override
+  String get ok => 'OK';
+
+  @override
+  String get yes => 'Wen';
+
+  @override
+  String get no => 'Saan';
+
+  @override
+  String get surah => 'Surah';
+
+  @override
+  String get juz => 'Juz';
+
+  @override
+  String get page => 'Panid';
+
+  @override
+  String get reading => 'Panagbasa';
+
+  @override
+  String get recitation => 'Panagsao';
+
+  @override
+  String get translation => 'Panagpatarus';
+
+  @override
+  String get tafsir => 'Tafsir nga';
+
+  @override
+  String get bookmarks => 'Dagiti Bookmark';
+
+  @override
+  String get addBookmark => 'Inayon ti Bookmark';
+
+  @override
+  String get removeBookmark => 'Ikkaten ti Bookmark';
+
+  @override
+  String get lastRead => 'Maudi a Panagbasa';
+
+  @override
+  String get dailyZikr => 'Inaldaw a Zikr';
+
+  @override
+  String get morningZikr => 'Agsapa Zikr';
+
+  @override
+  String get eveningZikr => 'Malem Zikr';
+
+  @override
+  String get tasbih => 'Tasbih nga';
+
+  @override
+  String get ahkab => 'Ahkam';
+
+  @override
+  String get masaail => 'Masa\'il';
+
+  @override
+  String get hadith => 'Hadith ti';
+
+  @override
+  String get hadithCollection => 'Koleksion ti Hadith';
+
+  @override
+  String get hadithBooks => 'Dagiti Libro ti Hadith';
+
+  @override
+  String get searchHadith => 'Agbirok iti Hadith';
+
+  @override
+  String get asmaulHusna => 'Ni Asma-ul-Husna ket ni Asma-ul-Husna';
+
+  @override
+  String get namesOfAllah => 'Dagiti nagan ni Allah';
+
+  @override
+  String get liveTv => 'Live TV';
+
+  @override
+  String get watchLive => 'Buyaen ti Live';
+
+  @override
+  String get streamError => 'Biddut ti panagayus';
+
+  @override
+  String get reload => 'Ikarga manen';
+
+  @override
+  String get openInYoutube => 'Lumakad iti YouTube';
+
+  @override
+  String get ibadahTracker => 'Ibadah nga Pagsurot';
+
+  @override
+  String get fasting => 'Panagayuno';
+
+  @override
+  String get quranReading => 'Panagbasa iti Quran';
+
+  @override
+  String get prayers => 'Dagiti kararag';
+
+  @override
+  String get dhikrCount => 'Dhikr nga Konde';
+
+  @override
+  String get weeklyProgress => 'Linnawas a Panagrang-ay';
+
+  @override
+  String get monthlyProgress => 'Binulan a Panagrang-ay';
+
+  @override
+  String get statistics => 'Estadistika';
+
+  @override
+  String get hijriCalendar => 'Kalendario ti Hijri';
+
+  @override
+  String get gregorianCalendar => 'Kalendario Gregoriano';
+
+  @override
+  String get today => 'Ita nga aldaw';
+
+  @override
+  String get tomorrow => 'Inton bigat';
+
+  @override
+  String get yesterday => 'Idi kalman';
+
+  @override
+  String get specialDays => 'Naisangsangayan nga Aldaw';
+
+  @override
+  String get ramadan => 'Ramadan nga';
+
+  @override
+  String get eidAlFitr => 'Eid Al-Fitr';
+
+  @override
+  String get eidAlAdha => 'Eid Al-Adha nga Eid';
+
+  @override
+  String get laylatAlQadr => 'Ni Laylat Al-Qadr ken ni';
+
+  @override
+  String get qiblaDirection => 'Direksion ti Qibla';
+
+  @override
+  String get compass => 'Kompas nga';
+
+  @override
+  String get degrees => 'degrees';
+
+  @override
+  String get north => 'Amianan';
+
+  @override
+  String get qiblaFound => 'Qibla ti nasarakan!';
+
+  @override
+  String get turnDevice => 'Iturno ti device-mo tapno sumango iti Qibla';
+
+  @override
+  String get notifications => 'Dagiti Pakaammo';
+
+  @override
+  String get prayerNotifications => 'Dagiti Pakaammo iti Kararag';
+
+  @override
+  String get enableNotifications => 'Pagbalinen a Pakaammo';
+
+  @override
+  String get notificationTime => 'Oras ti Pakaammo';
+
+  @override
+  String get beforePrayer => 'minuto sakbay ti kararag';
+
+  @override
+  String get theme => 'Tema';
+
+  @override
+  String get lightMode => 'Modo ti Lawag';
+
+  @override
+  String get darkMode => 'Nasipnget a Modo';
+
+  @override
+  String get systemTheme => 'Tema ti Sistema';
+
+  @override
+  String get about => 'Maipapan iti';
+
+  @override
+  String get version => 'Bersion';
+
+  @override
+  String get privacyPolicy => 'Pagannurotan iti Kinapribado';
+
+  @override
+  String get termsOfService => 'Dagiti Kondision ti Serbisio';
+
+  @override
+  String get contactUs => 'Kontaken Kadakami';
+
+  @override
+  String get rateApp => 'Rate ti App';
+
+  @override
+  String get shareApp => 'Ibinglay ti App';
+
+  @override
+  String get downloadManager => 'Manager ti Panag-download';
+
+  @override
+  String get downloads => 'Dagiti nai-download';
+
+  @override
+  String get downloading => 'Pag-download ti...';
+
+  @override
+  String get downloadComplete => 'I-download nga Kompleto';
+
+  @override
+  String get downloadFailed => 'Napaay ti panag-download';
+
+  @override
+  String get offlineMode => 'Offline nga Modo';
+
+  @override
+  String get noInternet => 'Awan ti Koneksyon iti Internet';
+
+  @override
+  String get checkConnection => 'Pangngaasiyo ta kitaenyo ti koneksionyo';
+
+  @override
+  String get premium => 'Premium';
+
+  @override
+  String get upgradeToPro => 'Ag-upgrade iti Pro';
+
+  @override
+  String get proFeatures => 'Dagiti Tampok ti Pro';
+
+  @override
+  String get removeAds => 'Ikkaten dagiti Ads';
+
+  @override
+  String get unlockAll => 'Ilukat ti Amin a Linaon';
+
+  @override
+  String get exclusiveContent => 'Eksklusibo a Linaon';
+
+  @override
+  String get welcome => 'Maikablaawkayo';
+
+  @override
+  String get getStarted => 'Mangrugika';
+
+  @override
+  String get skip => 'Laktawan';
+
+  @override
+  String get next => 'Sumaruno';
+
+  @override
+  String get done => 'Naaramiden';
+
+  @override
+  String get onboarding1Title => 'Maikablaawkayo iti Sirat-Ä± Nur';
+
+  @override
+  String get onboarding1Desc =>
+      'Ti kompleto nga Islamic companion app-yo para kadagiti oras ti kararag, Quran, ken dadduma pay';
+
+  @override
+  String get onboarding2Title => 'Panawen ti Kararag';
+
+  @override
+  String get onboarding2Desc =>
+      'Umiso nga oras ti panagkararag maibatay iti ayanmo';
+
+  @override
+  String get onboarding3Title => 'Quran & Ad-adu pay';
+
+  @override
+  String get onboarding3Desc =>
+      'Basaen ti Quran, subadan ti panagbasam, ken sukimatem ti linaon ti Islam';
+
+  @override
+  String get dhikrLibrary => 'Libraria ti Dhikr';
+
+  @override
+  String get resetCounter => 'I-reset ti Counter';
+
+  @override
+  String get changeTarget => 'Baliwan ti Target';
+
+  @override
+  String get newTarget => 'Baro a Target';
+
+  @override
+  String targetCount(Object target) {
+    return 'Target: $target .';
+  }
+
+  @override
+  String get tapToCount => 'I-tap tapno mabilang';
+
+  @override
+  String get dailyChecklist => 'Inaldaw a Listaan ti Panangsukimat';
+
+  @override
+  String get qazaDebt => 'Qaza (Utang) .';
+
+  @override
+  String get resetQazaData => 'I-reset ti Datos ti Qaza';
+
+  @override
+  String get resetQazaDebtQuestion => 'I-reset ti Utang ti Qaza?';
+
+  @override
+  String get rawatib => 'Rawatib';
+
+  @override
+  String get tahajjud => 'Tahajjud ni Tahajjud';
+
+  @override
+  String get dailyProgress => 'Inaldaw a Panagrang-ay';
+
+  @override
+  String get mandatoryPrayers => 'Dagiti Mandatory a Kararag';
+
+  @override
+  String get sunnahAndOthers => 'Sunnah & Dagiti Dadduma pay';
+
+  @override
+  String get spiritualGrowth => 'Naespirituan a Panagrang-ay';
+
+  @override
+  String get mandatoryDuty => 'Mandatory nga Pagrebbengan';
+
+  @override
+  String get totalPrayers => 'Dagup a Kararag';
+
+  @override
+  String get prayerDebt => 'Utang ti Kararag';
+
+  @override
+  String get fastingDebt => 'Utang ti Panagayunar';
+
+  @override
+  String get reset => 'I-reset-na';
+
+  @override
+  String get days => 'Aldaw';
+
+  @override
+  String get premiumIntegrity => 'Premium nga Integridad';
+
+  @override
+  String get recheckPremium => 'Sukimaten manen ti Kasasaad ti Premium';
+
+  @override
+  String get syncStore =>
+      'Ag-sync iti tiendaan tapno mapasingkedan ti entitlement-mo.';
+
+  @override
+  String get checkingPremium => 'Ti panangsukimat iti kasasaad ti premium...';
+
+  @override
+  String get premiumVerified => 'Naberipika ti premium.';
+
+  @override
+  String get premiumNotFound => 'Premium saan a nasarakan.';
+
+  @override
+  String premiumRefreshError(Object error) {
+    return 'Saan a ma-refresh ti kasasaad ti premium: $error';
+  }
+
+  @override
+  String get offlineDownloadManager => 'Offline a Manager ti Panag-download';
+
+  @override
+  String get manageDatasets =>
+      'Imanehar dagiti dakkel nga offline nga audio & dataset pack.';
+
+  @override
+  String get freeStorage => 'Libre ti internal device storage.';
+
+  @override
+  String get quranIntegrity => 'Kinatarnaw ti Quran';
+
+  @override
+  String get checkQuranDb => 'Sukimaten ti Database ti Quran';
+
+  @override
+  String get verifyQuranContent =>
+      'Beripikar ti 114 a surah ken 6236 nga ayah.';
+
+  @override
+  String get checkingQuranDb => 'Ti panangsukimat iti database ti Quran...';
+
+  @override
+  String get okLabel => 'OK';
+
+  @override
+  String get incomplete => 'Saan a kompleto';
+
+  @override
+  String get notSeeded => 'Saan a nabukel';
+
+  @override
+  String get quranDbStatus => 'Kasasaad ti Database ti Quran';
+
+  @override
+  String statusLabel(Object status) {
+    return 'Kasasaad: $status .';
+  }
+
+  @override
+  String surahsCount(Object count) {
+    return 'Surahs: $count (manamnama a 114) .';
+  }
+
+  @override
+  String ayahsCount(Object count) {
+    return 'Ayahs: $count (manamnama a 6236) .';
+  }
+
+  @override
+  String missingArabic(Object count) {
+    return 'Nakurang nga Arabiko: $count .';
+  }
+
+  @override
+  String missingEnglish(Object count) {
+    return 'Kurang nga Ingles: $count';
+  }
+
+  @override
+  String missingTurkish(Object count) {
+    return 'Napukaw a Turko: $count .';
+  }
+
+  @override
+  String dbVersion(Object version) {
+    return 'Bersion ti DB: $version';
+  }
+
+  @override
+  String dbPath(Object path) {
+    return 'Dalan: $path.';
+  }
+
+  @override
+  String quranCheckFailed(Object error) {
+    return 'Napaay ti panangsukimat ti Quran: $error .';
+  }
+
+  @override
+  String get audioVoice => 'Audio nga Boses';
+
+  @override
+  String get fajrAngle => 'Fajr nga Anggulo';
+
+  @override
+  String get ishaAngle => 'Isha nga Anggulo';
+
+  @override
+  String get qiblaCalibration => 'Kalibrasion ti Qibla';
+
+  @override
+  String get compassSmoothing => 'Panag-smoothing ti Kompas';
+
+  @override
+  String get reduceSensorJitter =>
+      'Kissayan ti sensor jitter para iti nataltalged a dagum.';
+
+  @override
+  String get calibrationOffset => 'Offset ti Kalibrasion';
+
+  @override
+  String currentOffset(Object offset) {
+    return 'Agdama: $offsetÂ°';
+  }
+
+  @override
+  String get manualCorrectionDesc =>
+      'Ibagaymo no kasapulan ti kompasmo ti manual a panangkorehir. Agturong dagiti positibo a pateg iti agpakannawan ti relo.';
+
+  @override
+  String get apply => 'Agaplikar';
+
+  @override
+  String get resetOnboarding => 'I-reset ti Onboarding';
+
+  @override
+  String get rerunSetup => 'Ipataray manen ti umuna a proseso ti panagisaad.';
+
+  @override
+  String get diagnostics => 'Dagiti panagdayagnos';
+
+  @override
+  String get healthCheckDesc =>
+      'Ipataray dagiti panangsukimat iti salun-at ken kitaen ti kasasaad ti sistema.';
+
+  @override
+  String get qiblaAligned => 'Qibla Naitunos';
+
+  @override
+  String get rotateToFindQibla => 'Agturong tapno Agbirok iti Qibla';
+
+  @override
+  String get calibrationRequiredFigure8 =>
+      'Masapul ti kalibrasion. I-rotate ti device iti figure-8.';
+}

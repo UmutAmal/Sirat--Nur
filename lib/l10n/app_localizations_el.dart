@@ -9,13 +9,13 @@ class AppLocalizationsEl extends AppLocalizations {
   AppLocalizationsEl([String locale = 'el']) : super(locale);
 
   @override
-  String get appTitle => 'Ο δρόμος του Αλλάχ';
+  String get appTitle => 'ÎŸ Î´ÏÏŒÎ¼Î¿Ï‚ Ï„Î¿Ï… Î‘Î»Î»Î¬Ï‡';
 
   @override
-  String get home => 'Σπίτι';
+  String get home => 'Î£Ï€Î¯Ï„Î¹';
 
   @override
-  String get quran => 'Κοράνι';
+  String get quran => 'ÎšÎ¿ÏÎ¬Î½Î¹';
 
   @override
   String get qibla => 'Qibla';
@@ -24,46 +24,47 @@ class AppLocalizationsEl extends AppLocalizations {
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'Ημερολόγιο';
+  String get calendar => 'Î—Î¼ÎµÏÎ¿Î»ÏŒÎ³Î¹Î¿';
 
   @override
-  String get settings => 'Ρυθμίσεις';
+  String get settings => 'Î¡Ï…Î¸Î¼Î¯ÏƒÎµÎ¹Ï‚';
 
   @override
-  String get nextPrayer => 'Επόμενη Προσευχή';
+  String get nextPrayer => 'Î•Ï€ÏŒÎ¼ÎµÎ½Î· Î ÏÎ¿ÏƒÎµÏ…Ï‡Î®';
 
   @override
-  String get prayerTimes => 'Ώρες προσευχής';
+  String get prayerTimes => 'ÎÏÎµÏ‚ Ï€ÏÎ¿ÏƒÎµÏ…Ï‡Î®Ï‚';
 
   @override
-  String get continueReading => 'Συνεχίστε την ανάγνωση';
+  String get continueReading => 'Î£Ï…Î½ÎµÏ‡Î¯ÏƒÏ„Îµ Ï„Î·Î½ Î±Î½Î¬Î³Î½Ï‰ÏƒÎ·';
 
   @override
-  String get getLifetimePro => 'Αποκτήστε Lifetime Pro';
+  String get getLifetimePro => 'Î‘Ï€Î¿ÎºÏ„Î®ÏƒÏ„Îµ Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Ξεκλειδώστε Tajweed & Προηγμένες λειτουργίες';
+  String get unlockTajweed =>
+      'ÎÎµÎºÎ»ÎµÎ¹Î´ÏÏƒÏ„Îµ Tajweed & Î ÏÎ¿Î·Î³Î¼Î­Î½ÎµÏ‚ Î»ÎµÎ¹Ï„Î¿Ï…ÏÎ³Î¯ÎµÏ‚';
 
   @override
-  String get prayerCalculation => 'Υπολογισμός Προσευχής';
+  String get prayerCalculation => 'Î¥Ï€Î¿Î»Î¿Î³Î¹ÏƒÎ¼ÏŒÏ‚ Î ÏÎ¿ÏƒÎµÏ…Ï‡Î®Ï‚';
 
   @override
-  String get method => 'Μέθοδος Υπολογισμού';
+  String get method => 'ÎœÎ­Î¸Î¿Î´Î¿Ï‚ Î¥Ï€Î¿Î»Î¿Î³Î¹ÏƒÎ¼Î¿Ï';
 
   @override
   String get madhab => 'Asr Juristic Method';
 
   @override
-  String get surahs => 'Σούρες';
+  String get surahs => 'Î£Î¿ÏÏÎµÏ‚';
 
   @override
-  String get ayahs => 'Άγια';
+  String get ayahs => 'Î†Î³Î¹Î±';
 
   @override
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Ανατολή ηλίου';
+  String get sunrise => 'Î‘Î½Î±Ï„Î¿Î»Î® Î·Î»Î¯Î¿Ï…';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -72,208 +73,210 @@ class AppLocalizationsEl extends AppLocalizations {
   String get asr => 'Asr';
 
   @override
-  String get maghrib => 'Μαγκρίμπ';
+  String get maghrib => 'ÎœÎ±Î³ÎºÏÎ¯Î¼Ï€';
 
   @override
   String get isha => 'Isha';
 
   @override
-  String get dataStorage => 'Δεδομένα & Αποθήκευση';
+  String get dataStorage => 'Î”ÎµÎ´Î¿Î¼Î­Î½Î± & Î‘Ï€Î¿Î¸Î®ÎºÎµÏ…ÏƒÎ·';
 
   @override
-  String get clearCache => 'Εκκαθάριση προσωρινής μνήμης';
+  String get clearCache =>
+      'Î•ÎºÎºÎ±Î¸Î¬ÏÎ¹ÏƒÎ· Ï€ÏÎ¿ÏƒÏ‰ÏÎ¹Î½Î®Ï‚ Î¼Î½Î®Î¼Î·Ï‚';
 
   @override
-  String get cacheClearedSuccess => 'Η προσωρινή μνήμη διαγράφηκε με επιτυχία';
+  String get cacheClearedSuccess =>
+      'Î— Ï€ÏÎ¿ÏƒÏ‰ÏÎ¹Î½Î® Î¼Î½Î®Î¼Î· Î´Î¹Î±Î³ÏÎ¬Ï†Î·ÎºÎµ Î¼Îµ ÎµÏ€Î¹Ï„Ï…Ï‡Î¯Î±';
 
   @override
-  String get location => 'Τοποθεσία';
+  String get location => 'Î¤Î¿Ï€Î¿Î¸ÎµÏƒÎ¯Î±';
 
   @override
-  String get language => 'Γλώσσα';
+  String get language => 'Î“Î»ÏÏƒÏƒÎ±';
 
   @override
-  String get selectLanguage => 'Επιλέξτε Γλώσσα';
+  String get selectLanguage => 'Î•Ï€Î¹Î»Î­Î¾Ï„Îµ Î“Î»ÏÏƒÏƒÎ±';
 
   @override
-  String get searchLanguage => 'Αναζήτηση 180+ γλωσσών...';
+  String get searchLanguage => 'Î‘Î½Î±Î¶Î®Ï„Î·ÏƒÎ· 180+ Î³Î»Ï‰ÏƒÏƒÏÎ½...';
 
   @override
-  String get systemDefault => 'Προεπιλογή συστήματος';
+  String get systemDefault => 'Î ÏÎ¿ÎµÏ€Î¹Î»Î¿Î³Î® ÏƒÏ…ÏƒÏ„Î®Î¼Î±Ï„Î¿Ï‚';
 
   @override
-  String get currentLocation => 'Τρέχουσα τοποθεσία (GPS)';
+  String get currentLocation => 'Î¤ÏÎ­Ï‡Î¿Ï…ÏƒÎ± Ï„Î¿Ï€Î¿Î¸ÎµÏƒÎ¯Î± (GPS)';
 
   @override
-  String get search => 'Ερευνα';
+  String get search => 'Î•ÏÎµÏ…Î½Î±';
 
   @override
-  String get searchHint => 'Ερευνα...';
+  String get searchHint => 'Î•ÏÎµÏ…Î½Î±...';
 
   @override
-  String get noResults => 'Δεν βρέθηκαν αποτελέσματα';
+  String get noResults => 'Î”ÎµÎ½ Î²ÏÎ­Î¸Î·ÎºÎ±Î½ Î±Ï€Î¿Ï„ÎµÎ»Î­ÏƒÎ¼Î±Ï„Î±';
 
   @override
-  String get loading => 'Φόρτωση...';
+  String get loading => 'Î¦ÏŒÏÏ„Ï‰ÏƒÎ·...';
 
   @override
-  String get error => 'Σφάλμα';
+  String get error => 'Î£Ï†Î¬Î»Î¼Î±';
 
   @override
-  String get retry => 'Δοκιμάζω πάλι';
+  String get retry => 'Î”Î¿ÎºÎ¹Î¼Î¬Î¶Ï‰ Ï€Î¬Î»Î¹';
 
   @override
-  String get cancel => 'Ματαίωση';
+  String get cancel => 'ÎœÎ±Ï„Î±Î¯Ï‰ÏƒÎ·';
 
   @override
-  String get save => 'Εκτός';
+  String get save => 'Î•ÎºÏ„ÏŒÏ‚';
 
   @override
-  String get delete => 'Διαγράφω';
+  String get delete => 'Î”Î¹Î±Î³ÏÎ¬Ï†Ï‰';
 
   @override
-  String get edit => 'Εκδίδω';
+  String get edit => 'Î•ÎºÎ´Î¯Î´Ï‰';
 
   @override
-  String get close => 'Κοντά';
+  String get close => 'ÎšÎ¿Î½Ï„Î¬';
 
   @override
-  String get ok => 'ΕΝΤΑΞΕΙ';
+  String get ok => 'Î•ÎÎ¤Î‘ÎÎ•Î™';
 
   @override
-  String get yes => 'Ναί';
+  String get yes => 'ÎÎ±Î¯';
 
   @override
-  String get no => 'Οχι';
+  String get no => 'ÎŸÏ‡Î¹';
 
   @override
-  String get surah => 'Σούρα';
+  String get surah => 'Î£Î¿ÏÏÎ±';
 
   @override
   String get juz => 'Juz';
 
   @override
-  String get page => 'Σελίδα';
+  String get page => 'Î£ÎµÎ»Î¯Î´Î±';
 
   @override
-  String get reading => 'Ανάγνωση';
+  String get reading => 'Î‘Î½Î¬Î³Î½Ï‰ÏƒÎ·';
 
   @override
-  String get recitation => 'Απαγγελία';
+  String get recitation => 'Î‘Ï€Î±Î³Î³ÎµÎ»Î¯Î±';
 
   @override
-  String get translation => 'Μετάφραση';
+  String get translation => 'ÎœÎµÏ„Î¬Ï†ÏÎ±ÏƒÎ·';
 
   @override
   String get tafsir => 'Tafsir';
 
   @override
-  String get bookmarks => 'Σελιδοδείκτες';
+  String get bookmarks => 'Î£ÎµÎ»Î¹Î´Î¿Î´ÎµÎ¯ÎºÏ„ÎµÏ‚';
 
   @override
-  String get addBookmark => 'Προσθήκη σελιδοδείκτη';
+  String get addBookmark => 'Î ÏÎ¿ÏƒÎ¸Î®ÎºÎ· ÏƒÎµÎ»Î¹Î´Î¿Î´ÎµÎ¯ÎºÏ„Î·';
 
   @override
-  String get removeBookmark => 'Κατάργηση σελιδοδείκτη';
+  String get removeBookmark => 'ÎšÎ±Ï„Î¬ÏÎ³Î·ÏƒÎ· ÏƒÎµÎ»Î¹Î´Î¿Î´ÎµÎ¯ÎºÏ„Î·';
 
   @override
-  String get lastRead => 'Τελευταία Ανάγνωση';
+  String get lastRead => 'Î¤ÎµÎ»ÎµÏ…Ï„Î±Î¯Î± Î‘Î½Î¬Î³Î½Ï‰ÏƒÎ·';
 
   @override
-  String get dailyZikr => 'Καθημερινό Ζικρ';
+  String get dailyZikr => 'ÎšÎ±Î¸Î·Î¼ÎµÏÎ¹Î½ÏŒ Î–Î¹ÎºÏ';
 
   @override
-  String get morningZikr => 'Πρωινό Ζικρ';
+  String get morningZikr => 'Î ÏÏ‰Î¹Î½ÏŒ Î–Î¹ÎºÏ';
 
   @override
-  String get eveningZikr => 'Εσπερινός Ζικρ';
+  String get eveningZikr => 'Î•ÏƒÏ€ÎµÏÎ¹Î½ÏŒÏ‚ Î–Î¹ÎºÏ';
 
   @override
   String get tasbih => 'Tasbih';
 
   @override
-  String get ahkab => 'Αχκάμ';
+  String get ahkab => 'Î‘Ï‡ÎºÎ¬Î¼';
 
   @override
   String get masaail => 'Masa\'il';
 
   @override
-  String get hadith => 'Χαντίθ';
+  String get hadith => 'Î§Î±Î½Ï„Î¯Î¸';
 
   @override
-  String get hadithCollection => 'Συλλογή Χαντίθ';
+  String get hadithCollection => 'Î£Ï…Î»Î»Î¿Î³Î® Î§Î±Î½Ï„Î¯Î¸';
 
   @override
-  String get hadithBooks => 'Βιβλία Χαντίθ';
+  String get hadithBooks => 'Î’Î¹Î²Î»Î¯Î± Î§Î±Î½Ï„Î¯Î¸';
 
   @override
-  String get searchHadith => 'Αναζήτηση Χαντίθ';
+  String get searchHadith => 'Î‘Î½Î±Î¶Î®Ï„Î·ÏƒÎ· Î§Î±Î½Ï„Î¯Î¸';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';
 
   @override
-  String get namesOfAllah => 'Ονόματα του Αλλάχ';
+  String get namesOfAllah => 'ÎŸÎ½ÏŒÎ¼Î±Ï„Î± Ï„Î¿Ï… Î‘Î»Î»Î¬Ï‡';
 
   @override
-  String get liveTv => 'Ζωντανή τηλεόραση';
+  String get liveTv => 'Î–Ï‰Î½Ï„Î±Î½Î® Ï„Î·Î»ÎµÏŒÏÎ±ÏƒÎ·';
 
   @override
-  String get watchLive => 'Παρακολουθήστε Ζωντανά';
+  String get watchLive => 'Î Î±ÏÎ±ÎºÎ¿Î»Î¿Ï…Î¸Î®ÏƒÏ„Îµ Î–Ï‰Î½Ï„Î±Î½Î¬';
 
   @override
-  String get streamError => 'Σφάλμα ροής';
+  String get streamError => 'Î£Ï†Î¬Î»Î¼Î± ÏÎ¿Î®Ï‚';
 
   @override
-  String get reload => 'Γεμίζω πάλι';
+  String get reload => 'Î“ÎµÎ¼Î¯Î¶Ï‰ Ï€Î¬Î»Î¹';
 
   @override
-  String get openInYoutube => 'Ανοίξτε στο YouTube';
+  String get openInYoutube => 'Î‘Î½Î¿Î¯Î¾Ï„Îµ ÏƒÏ„Î¿ YouTube';
 
   @override
   String get ibadahTracker => 'Ibadah Tracker';
 
   @override
-  String get fasting => 'Νηστεία';
+  String get fasting => 'ÎÎ·ÏƒÏ„ÎµÎ¯Î±';
 
   @override
-  String get quranReading => 'Ανάγνωση Κορανίου';
+  String get quranReading => 'Î‘Î½Î¬Î³Î½Ï‰ÏƒÎ· ÎšÎ¿ÏÎ±Î½Î¯Î¿Ï…';
 
   @override
-  String get prayers => 'Προσευχές';
+  String get prayers => 'Î ÏÎ¿ÏƒÎµÏ…Ï‡Î­Ï‚';
 
   @override
-  String get dhikrCount => 'Ντικρ Κόμη';
+  String get dhikrCount => 'ÎÏ„Î¹ÎºÏ ÎšÏŒÎ¼Î·';
 
   @override
-  String get weeklyProgress => 'Εβδομαδιαία Πρόοδος';
+  String get weeklyProgress => 'Î•Î²Î´Î¿Î¼Î±Î´Î¹Î±Î¯Î± Î ÏÏŒÎ¿Î´Î¿Ï‚';
 
   @override
-  String get monthlyProgress => 'Μηνιαία Πρόοδος';
+  String get monthlyProgress => 'ÎœÎ·Î½Î¹Î±Î¯Î± Î ÏÏŒÎ¿Î´Î¿Ï‚';
 
   @override
-  String get statistics => 'Στατιστική';
+  String get statistics => 'Î£Ï„Î±Ï„Î¹ÏƒÏ„Î¹ÎºÎ®';
 
   @override
-  String get hijriCalendar => 'Ημερολόγιο Hijri';
+  String get hijriCalendar => 'Î—Î¼ÎµÏÎ¿Î»ÏŒÎ³Î¹Î¿ Hijri';
 
   @override
-  String get gregorianCalendar => 'Γρηγοριανό Ημερολόγιο';
+  String get gregorianCalendar => 'Î“ÏÎ·Î³Î¿ÏÎ¹Î±Î½ÏŒ Î—Î¼ÎµÏÎ¿Î»ÏŒÎ³Î¹Î¿';
 
   @override
-  String get today => 'Σήμερα';
+  String get today => 'Î£Î®Î¼ÎµÏÎ±';
 
   @override
-  String get tomorrow => 'Αύριο';
+  String get tomorrow => 'Î‘ÏÏÎ¹Î¿';
 
   @override
-  String get yesterday => 'Εχθές';
+  String get yesterday => 'Î•Ï‡Î¸Î­Ï‚';
 
   @override
-  String get specialDays => 'Ειδικές Ημέρες';
+  String get specialDays => 'Î•Î¹Î´Î¹ÎºÎ­Ï‚ Î—Î¼Î­ÏÎµÏ‚';
 
   @override
-  String get ramadan => 'Ραμαζάνι';
+  String get ramadan => 'Î¡Î±Î¼Î±Î¶Î¬Î½Î¹';
 
   @override
   String get eidAlFitr => 'Eid Al-Fitr';
@@ -285,148 +288,154 @@ class AppLocalizationsEl extends AppLocalizations {
   String get laylatAlQadr => 'Laylat Al-Qadr';
 
   @override
-  String get qiblaDirection => 'Κατεύθυνση Qibla';
+  String get qiblaDirection => 'ÎšÎ±Ï„ÎµÏÎ¸Ï…Î½ÏƒÎ· Qibla';
 
   @override
-  String get compass => 'Πυξίδα';
+  String get compass => 'Î Ï…Î¾Î¯Î´Î±';
 
   @override
-  String get degrees => 'βαθμούς';
+  String get degrees => 'Î²Î±Î¸Î¼Î¿ÏÏ‚';
 
   @override
-  String get north => 'Βόρειος';
+  String get north => 'Î’ÏŒÏÎµÎ¹Î¿Ï‚';
 
   @override
-  String get qiblaFound => 'Η Qibla βρέθηκε!';
+  String get qiblaFound => 'Î— Qibla Î²ÏÎ­Î¸Î·ÎºÎµ!';
 
   @override
-  String get turnDevice => 'Γυρίστε τη συσκευή σας προς την Qibla';
+  String get turnDevice =>
+      'Î“Ï…ÏÎ¯ÏƒÏ„Îµ Ï„Î· ÏƒÏ…ÏƒÎºÎµÏ…Î® ÏƒÎ±Ï‚ Ï€ÏÎ¿Ï‚ Ï„Î·Î½ Qibla';
 
   @override
-  String get notifications => 'Ειδοποιήσεις';
+  String get notifications => 'Î•Î¹Î´Î¿Ï€Î¿Î¹Î®ÏƒÎµÎ¹Ï‚';
 
   @override
-  String get prayerNotifications => 'Ειδοποιήσεις προσευχής';
+  String get prayerNotifications =>
+      'Î•Î¹Î´Î¿Ï€Î¿Î¹Î®ÏƒÎµÎ¹Ï‚ Ï€ÏÎ¿ÏƒÎµÏ…Ï‡Î®Ï‚';
 
   @override
-  String get enableNotifications => 'Ενεργοποίηση Ειδοποιήσεων';
+  String get enableNotifications =>
+      'Î•Î½ÎµÏÎ³Î¿Ï€Î¿Î¯Î·ÏƒÎ· Î•Î¹Î´Î¿Ï€Î¿Î¹Î®ÏƒÎµÏ‰Î½';
 
   @override
-  String get notificationTime => 'Ώρα ειδοποίησης';
+  String get notificationTime => 'ÎÏÎ± ÎµÎ¹Î´Î¿Ï€Î¿Î¯Î·ÏƒÎ·Ï‚';
 
   @override
-  String get beforePrayer => 'λεπτά πριν την προσευχή';
+  String get beforePrayer => 'Î»ÎµÏ€Ï„Î¬ Ï€ÏÎ¹Î½ Ï„Î·Î½ Ï€ÏÎ¿ÏƒÎµÏ…Ï‡Î®';
 
   @override
-  String get theme => 'Θέμα';
+  String get theme => 'Î˜Î­Î¼Î±';
 
   @override
-  String get lightMode => 'Λειτουργία φωτός';
+  String get lightMode => 'Î›ÎµÎ¹Ï„Î¿Ï…ÏÎ³Î¯Î± Ï†Ï‰Ï„ÏŒÏ‚';
 
   @override
-  String get darkMode => 'Σκοτεινή λειτουργία';
+  String get darkMode => 'Î£ÎºÎ¿Ï„ÎµÎ¹Î½Î® Î»ÎµÎ¹Ï„Î¿Ï…ÏÎ³Î¯Î±';
 
   @override
-  String get systemTheme => 'Θέμα συστήματος';
+  String get systemTheme => 'Î˜Î­Î¼Î± ÏƒÏ…ÏƒÏ„Î®Î¼Î±Ï„Î¿Ï‚';
 
   @override
-  String get about => 'Για';
+  String get about => 'Î“Î¹Î±';
 
   @override
-  String get version => 'Εκδοχή';
+  String get version => 'Î•ÎºÎ´Î¿Ï‡Î®';
 
   @override
-  String get privacyPolicy => 'Πολιτική Απορρήτου';
+  String get privacyPolicy => 'Î Î¿Î»Î¹Ï„Î¹ÎºÎ® Î‘Ï€Î¿ÏÏÎ®Ï„Î¿Ï…';
 
   @override
-  String get termsOfService => 'Όροι Παροχής Υπηρεσιών';
+  String get termsOfService => 'ÎŒÏÎ¿Î¹ Î Î±ÏÎ¿Ï‡Î®Ï‚ Î¥Ï€Î·ÏÎµÏƒÎ¹ÏÎ½';
 
   @override
-  String get contactUs => 'Επικοινωνήστε μαζί μας';
+  String get contactUs => 'Î•Ï€Î¹ÎºÎ¿Î¹Î½Ï‰Î½Î®ÏƒÏ„Îµ Î¼Î±Î¶Î¯ Î¼Î±Ï‚';
 
   @override
-  String get rateApp => 'Βαθμολογήστε την εφαρμογή';
+  String get rateApp => 'Î’Î±Î¸Î¼Î¿Î»Î¿Î³Î®ÏƒÏ„Îµ Ï„Î·Î½ ÎµÏ†Î±ÏÎ¼Î¿Î³Î®';
 
   @override
-  String get shareApp => 'Κοινή χρήση εφαρμογής';
+  String get shareApp => 'ÎšÎ¿Î¹Î½Î® Ï‡ÏÎ®ÏƒÎ· ÎµÏ†Î±ÏÎ¼Î¿Î³Î®Ï‚';
 
   @override
-  String get downloadManager => 'Διαχείριση λήψεων';
+  String get downloadManager => 'Î”Î¹Î±Ï‡ÎµÎ¯ÏÎ¹ÏƒÎ· Î»Î®ÏˆÎµÏ‰Î½';
 
   @override
-  String get downloads => 'Λήψεις';
+  String get downloads => 'Î›Î®ÏˆÎµÎ¹Ï‚';
 
   @override
-  String get downloading => 'Λήψη...';
+  String get downloading => 'Î›Î®ÏˆÎ·...';
 
   @override
-  String get downloadComplete => 'Η λήψη ολοκληρώθηκε';
+  String get downloadComplete => 'Î— Î»Î®ÏˆÎ· Î¿Î»Î¿ÎºÎ»Î·ÏÏÎ¸Î·ÎºÎµ';
 
   @override
-  String get downloadFailed => 'Η λήψη απέτυχε';
+  String get downloadFailed => 'Î— Î»Î®ÏˆÎ· Î±Ï€Î­Ï„Ï…Ï‡Îµ';
 
   @override
-  String get offlineMode => 'Λειτουργία εκτός σύνδεσης';
+  String get offlineMode => 'Î›ÎµÎ¹Ï„Î¿Ï…ÏÎ³Î¯Î± ÎµÎºÏ„ÏŒÏ‚ ÏƒÏÎ½Î´ÎµÏƒÎ·Ï‚';
 
   @override
-  String get noInternet => 'Χωρίς σύνδεση στο Διαδίκτυο';
+  String get noInternet =>
+      'Î§Ï‰ÏÎ¯Ï‚ ÏƒÏÎ½Î´ÎµÏƒÎ· ÏƒÏ„Î¿ Î”Î¹Î±Î´Î¯ÎºÏ„Ï…Î¿';
 
   @override
-  String get checkConnection => 'Ελέγξτε τη σύνδεσή σας';
+  String get checkConnection => 'Î•Î»Î­Î³Î¾Ï„Îµ Ï„Î· ÏƒÏÎ½Î´ÎµÏƒÎ® ÏƒÎ±Ï‚';
 
   @override
-  String get premium => 'Ασφάλιστρο';
+  String get premium => 'Î‘ÏƒÏ†Î¬Î»Î¹ÏƒÏ„ÏÎ¿';
 
   @override
-  String get upgradeToPro => 'Αναβάθμιση σε Pro';
+  String get upgradeToPro => 'Î‘Î½Î±Î²Î¬Î¸Î¼Î¹ÏƒÎ· ÏƒÎµ Pro';
 
   @override
-  String get proFeatures => 'Pro Χαρακτηριστικά';
+  String get proFeatures => 'Pro Î§Î±ÏÎ±ÎºÏ„Î·ÏÎ¹ÏƒÏ„Î¹ÎºÎ¬';
 
   @override
-  String get removeAds => 'Κατάργηση διαφημίσεων';
+  String get removeAds => 'ÎšÎ±Ï„Î¬ÏÎ³Î·ÏƒÎ· Î´Î¹Î±Ï†Î·Î¼Î¯ÏƒÎµÏ‰Î½';
 
   @override
-  String get unlockAll => 'Ξεκλειδώστε όλο το περιεχόμενο';
+  String get unlockAll =>
+      'ÎÎµÎºÎ»ÎµÎ¹Î´ÏÏƒÏ„Îµ ÏŒÎ»Î¿ Ï„Î¿ Ï€ÎµÏÎ¹ÎµÏ‡ÏŒÎ¼ÎµÎ½Î¿';
 
   @override
-  String get exclusiveContent => 'Αποκλειστικό Περιεχόμενο';
+  String get exclusiveContent =>
+      'Î‘Ï€Î¿ÎºÎ»ÎµÎ¹ÏƒÏ„Î¹ÎºÏŒ Î ÎµÏÎ¹ÎµÏ‡ÏŒÎ¼ÎµÎ½Î¿';
 
   @override
-  String get welcome => 'Καλωσόρισμα';
+  String get welcome => 'ÎšÎ±Î»Ï‰ÏƒÏŒÏÎ¹ÏƒÎ¼Î±';
 
   @override
-  String get getStarted => 'Ξεκινήστε';
+  String get getStarted => 'ÎÎµÎºÎ¹Î½Î®ÏƒÏ„Îµ';
 
   @override
-  String get skip => 'Παραλείπω';
+  String get skip => 'Î Î±ÏÎ±Î»ÎµÎ¯Ï€Ï‰';
 
   @override
-  String get next => 'Επόμενος';
+  String get next => 'Î•Ï€ÏŒÎ¼ÎµÎ½Î¿Ï‚';
 
   @override
-  String get done => 'Γινώμενος';
+  String get done => 'Î“Î¹Î½ÏÎ¼ÎµÎ½Î¿Ï‚';
 
   @override
-  String get onboarding1Title => 'Καλώς ήρθατε στο Way of Allah';
+  String get onboarding1Title => 'ÎšÎ±Î»ÏÏ‚ Î®ÏÎ¸Î±Ï„Îµ ÏƒÏ„Î¿ Way of Allah';
 
   @override
   String get onboarding1Desc =>
-      'Η πλήρης ισλαμική συντροφική σας εφαρμογή για ώρες προσευχής, Κοράνι και πολλά άλλα';
+      'Î— Ï€Î»Î®ÏÎ·Ï‚ Î¹ÏƒÎ»Î±Î¼Î¹ÎºÎ® ÏƒÏ…Î½Ï„ÏÎ¿Ï†Î¹ÎºÎ® ÏƒÎ±Ï‚ ÎµÏ†Î±ÏÎ¼Î¿Î³Î® Î³Î¹Î± ÏÏÎµÏ‚ Ï€ÏÎ¿ÏƒÎµÏ…Ï‡Î®Ï‚, ÎšÎ¿ÏÎ¬Î½Î¹ ÎºÎ±Î¹ Ï€Î¿Î»Î»Î¬ Î¬Î»Î»Î±';
 
   @override
-  String get onboarding2Title => 'Ώρες προσευχής';
+  String get onboarding2Title => 'ÎÏÎµÏ‚ Ï€ÏÎ¿ÏƒÎµÏ…Ï‡Î®Ï‚';
 
   @override
   String get onboarding2Desc =>
-      'Ακριβείς ώρες προσευχής με βάση την τοποθεσία σας';
+      'Î‘ÎºÏÎ¹Î²ÎµÎ¯Ï‚ ÏÏÎµÏ‚ Ï€ÏÎ¿ÏƒÎµÏ…Ï‡Î®Ï‚ Î¼Îµ Î²Î¬ÏƒÎ· Ï„Î·Î½ Ï„Î¿Ï€Î¿Î¸ÎµÏƒÎ¯Î± ÏƒÎ±Ï‚';
 
   @override
-  String get onboarding3Title => 'Κοράνι και άλλα';
+  String get onboarding3Title => 'ÎšÎ¿ÏÎ¬Î½Î¹ ÎºÎ±Î¹ Î¬Î»Î»Î±';
 
   @override
   String get onboarding3Desc =>
-      'Διαβάστε το Κοράνι, παρακολουθήστε την ανάγνωσή σας και εξερευνήστε το ισλαμικό περιεχόμενο';
+      'Î”Î¹Î±Î²Î¬ÏƒÏ„Îµ Ï„Î¿ ÎšÎ¿ÏÎ¬Î½Î¹, Ï€Î±ÏÎ±ÎºÎ¿Î»Î¿Ï…Î¸Î®ÏƒÏ„Îµ Ï„Î·Î½ Î±Î½Î¬Î³Î½Ï‰ÏƒÎ® ÏƒÎ±Ï‚ ÎºÎ±Î¹ ÎµÎ¾ÎµÏÎµÏ…Î½Î®ÏƒÏ„Îµ Ï„Î¿ Î¹ÏƒÎ»Î±Î¼Î¹ÎºÏŒ Ï€ÎµÏÎ¹ÎµÏ‡ÏŒÎ¼ÎµÎ½Î¿';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -621,7 +630,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Current: $offsetÂ°';
   }
 
   @override

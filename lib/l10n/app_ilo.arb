@@ -1,6 +1,6 @@
-{
+﻿{
   "@@locale": "ilo",
-  "appTitle": "Sirat-ı Nur",
+  "appTitle": "Sirat-Ä± Nur",
   "home": "Taeng",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -133,7 +133,7 @@
   "skip": "Laktawan",
   "next": "Sumaruno",
   "done": "Naaramiden",
-  "onboarding1Title": "Maikablaawkayo iti Sirat-ı Nur",
+  "onboarding1Title": "Maikablaawkayo iti Sirat-Ä± Nur",
   "onboarding1Desc": "Ti kompleto nga Islamic companion app-yo para kadagiti oras ti kararag, Quran, ken dadduma pay",
   "onboarding2Title": "Panawen ti Kararag",
   "onboarding2Desc": "Umiso nga oras ti panagkararag maibatay iti ayanmo",
@@ -195,7 +195,7 @@
   "compassSmoothing": "Panag-smoothing ti Kompas",
   "reduceSensorJitter": "Kissayan ti sensor jitter para iti nataltalged a dagum.",
   "calibrationOffset": "Offset ti Kalibrasion",
-  "currentOffset": "Agdama: {offset}°",
+  "currentOffset": "Agdama: {offset}Â°",
   "manualCorrectionDesc": "Ibagaymo no kasapulan ti kompasmo ti manual a panangkorehir. Agturong dagiti positibo a pateg iti agpakannawan ti relo.",
   "apply": "Agaplikar",
   "resetOnboarding": "I-reset ti Onboarding",

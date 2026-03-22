@@ -9,422 +9,430 @@ class AppLocalizationsAm extends AppLocalizations {
   AppLocalizationsAm([String locale = 'am']) : super(locale);
 
   @override
-  String get appTitle => 'የአላህ መንገድ';
+  String get appTitle => 'á‹¨áŠ áˆ‹áˆ… áˆ˜áŠ•áŒˆá‹µ';
 
   @override
-  String get home => 'ቤት';
+  String get home => 'á‰¤á‰µ';
 
   @override
-  String get quran => 'ቁርኣን';
+  String get quran => 'á‰áˆ­áŠ£áŠ•';
 
   @override
-  String get qibla => 'ቂብላ';
+  String get qibla => 'á‰‚á‰¥áˆ‹';
 
   @override
-  String get zikr => 'ዚክር';
+  String get zikr => 'á‹šáŠ­áˆ­';
 
   @override
-  String get calendar => 'የቀን መቁጠሪያ';
+  String get calendar => 'á‹¨á‰€áŠ• áˆ˜á‰áŒ áˆªá‹«';
 
   @override
-  String get settings => 'ቅንብሮች';
+  String get settings => 'á‰…áŠ•á‰¥áˆ®á‰½';
 
   @override
-  String get nextPrayer => 'ቀጣይ ጸሎት';
+  String get nextPrayer => 'á‰€áŒ£á‹­ áŒ¸áˆá‰µ';
 
   @override
-  String get prayerTimes => 'የጸሎት ጊዜያት';
+  String get prayerTimes => 'á‹¨áŒ¸áˆá‰µ áŒŠá‹œá‹«á‰µ';
 
   @override
-  String get continueReading => 'ማንበቡን ይቀጥሉ';
+  String get continueReading => 'áˆ›áŠ•á‰ á‰¡áŠ• á‹­á‰€áŒ¥áˆ‰';
 
   @override
-  String get getLifetimePro => 'የህይወት ዘመን ፕሮ';
+  String get getLifetimePro => 'á‹¨áˆ…á‹­á‹ˆá‰µ á‹˜áˆ˜áŠ• á•áˆ®';
 
   @override
-  String get unlockTajweed => 'Tajweed እና የላቁ ባህሪያትን ይክፈቱ';
+  String get unlockTajweed =>
+      'Tajweed áŠ¥áŠ“ á‹¨áˆ‹á‰ á‰£áˆ…áˆªá‹«á‰µáŠ• á‹­áŠ­áˆá‰±';
 
   @override
-  String get prayerCalculation => 'የጸሎት ስሌት';
+  String get prayerCalculation => 'á‹¨áŒ¸áˆá‰µ áˆµáˆŒá‰µ';
 
   @override
-  String get method => 'የሂሳብ ዘዴ';
+  String get method => 'á‹¨áˆ‚áˆ³á‰¥ á‹˜á‹´';
 
   @override
-  String get madhab => 'የአሳር የሕግ ዘዴ';
+  String get madhab => 'á‹¨áŠ áˆ³áˆ­ á‹¨áˆ•áŒ á‹˜á‹´';
 
   @override
-  String get surahs => 'ሱራዎች';
+  String get surahs => 'áˆ±áˆ«á‹á‰½';
 
   @override
-  String get ayahs => 'አያህ';
+  String get ayahs => 'áŠ á‹«áˆ…';
 
   @override
-  String get fajr => 'ፈጅር';
+  String get fajr => 'áˆáŒ…áˆ­';
 
   @override
-  String get sunrise => 'የፀሐይ መውጣት';
+  String get sunrise => 'á‹¨á€áˆá‹­ áˆ˜á‹áŒ£á‰µ';
 
   @override
-  String get dhuhr => 'ድሁር';
+  String get dhuhr => 'á‹µáˆáˆ­';
 
   @override
-  String get asr => 'አስር';
+  String get asr => 'áŠ áˆµáˆ­';
 
   @override
-  String get maghrib => 'መግሪብ';
+  String get maghrib => 'áˆ˜áŒáˆªá‰¥';
 
   @override
-  String get isha => 'ኢሻ';
+  String get isha => 'áŠ¢áˆ»';
 
   @override
-  String get dataStorage => 'ውሂብ እና ማከማቻ';
+  String get dataStorage => 'á‹áˆ‚á‰¥ áŠ¥áŠ“ áˆ›áŠ¨áˆ›á‰»';
 
   @override
-  String get clearCache => 'መሸጎጫ አጽዳ';
+  String get clearCache => 'áˆ˜áˆ¸áŒáŒ« áŠ áŒ½á‹³';
 
   @override
-  String get cacheClearedSuccess => 'መሸጎጫ በተሳካ ሁኔታ ጸድቷል።';
+  String get cacheClearedSuccess =>
+      'áˆ˜áˆ¸áŒáŒ« á‰ á‰°áˆ³áŠ« áˆáŠ”á‰³ áŒ¸á‹µá‰·áˆá¢';
 
   @override
-  String get location => 'አካባቢ';
+  String get location => 'áŠ áŠ«á‰£á‰¢';
 
   @override
-  String get language => 'ቋንቋ';
+  String get language => 'á‰‹áŠ•á‰‹';
 
   @override
-  String get selectLanguage => 'ቋንቋ ይምረጡ';
+  String get selectLanguage => 'á‰‹áŠ•á‰‹ á‹­áˆáˆ¨áŒ¡';
 
   @override
-  String get searchLanguage => 'ከ180 በላይ ቋንቋዎችን ፈልግ...';
+  String get searchLanguage =>
+      'áŠ¨180 á‰ áˆ‹á‹­ á‰‹áŠ•á‰‹á‹á‰½áŠ• áˆáˆáŒ...';
 
   @override
-  String get systemDefault => 'የስርዓት ነባሪ';
+  String get systemDefault => 'á‹¨áˆµáˆ­á‹“á‰µ áŠá‰£áˆª';
 
   @override
-  String get currentLocation => 'የአሁኑ አካባቢ (ጂፒኤስ)';
+  String get currentLocation => 'á‹¨áŠ áˆáŠ‘ áŠ áŠ«á‰£á‰¢ (áŒ‚á’áŠ¤áˆµ)';
 
   @override
-  String get search => 'ፈልግ';
+  String get search => 'áˆáˆáŒ';
 
   @override
-  String get searchHint => 'ፈልግ...';
+  String get searchHint => 'áˆáˆáŒ...';
 
   @override
-  String get noResults => 'ምንም ውጤቶች አልተገኙም።';
+  String get noResults => 'áˆáŠ•áˆ á‹áŒ¤á‰¶á‰½ áŠ áˆá‰°áŒˆáŠ™áˆá¢';
 
   @override
-  String get loading => 'በመጫን ላይ...';
+  String get loading => 'á‰ áˆ˜áŒ«áŠ• áˆ‹á‹­...';
 
   @override
-  String get error => 'ስህተት';
+  String get error => 'áˆµáˆ…á‰°á‰µ';
 
   @override
-  String get retry => 'እንደገና ይሞክሩ';
+  String get retry => 'áŠ¥áŠ•á‹°áŒˆáŠ“ á‹­áˆáŠ­áˆ©';
 
   @override
-  String get cancel => 'ሰርዝ';
+  String get cancel => 'áˆ°áˆ­á‹';
 
   @override
-  String get save => 'አስቀምጥ';
+  String get save => 'áŠ áˆµá‰€áˆáŒ¥';
 
   @override
-  String get delete => 'ሰርዝ';
+  String get delete => 'áˆ°áˆ­á‹';
 
   @override
-  String get edit => 'አርትዕ';
+  String get edit => 'áŠ áˆ­á‰µá‹•';
 
   @override
-  String get close => 'ገጠመ';
+  String get close => 'áŒˆáŒ áˆ˜';
 
   @override
-  String get ok => 'እሺ';
+  String get ok => 'áŠ¥áˆº';
 
   @override
-  String get yes => 'አዎ';
+  String get yes => 'áŠ á‹';
 
   @override
-  String get no => 'አይ';
+  String get no => 'áŠ á‹­';
 
   @override
-  String get surah => 'ሱራ';
+  String get surah => 'áˆ±áˆ«';
 
   @override
-  String get juz => 'ጁዝ';
+  String get juz => 'áŒá‹';
 
   @override
-  String get page => 'ገጽ';
+  String get page => 'áŒˆáŒ½';
 
   @override
-  String get reading => 'ማንበብ';
+  String get reading => 'áˆ›áŠ•á‰ á‰¥';
 
   @override
-  String get recitation => 'ንባብ';
+  String get recitation => 'áŠ•á‰£á‰¥';
 
   @override
-  String get translation => 'ትርጉም';
+  String get translation => 'á‰µáˆ­áŒ‰áˆ';
 
   @override
-  String get tafsir => 'ተፍሲር';
+  String get tafsir => 'á‰°ááˆ²áˆ­';
 
   @override
-  String get bookmarks => 'ዕልባቶች';
+  String get bookmarks => 'á‹•áˆá‰£á‰¶á‰½';
 
   @override
-  String get addBookmark => 'ዕልባት ጨምር';
+  String get addBookmark => 'á‹•áˆá‰£á‰µ áŒ¨áˆáˆ­';
 
   @override
-  String get removeBookmark => 'ዕልባት አስወግድ';
+  String get removeBookmark => 'á‹•áˆá‰£á‰µ áŠ áˆµá‹ˆáŒá‹µ';
 
   @override
-  String get lastRead => 'ለመጨረሻ ጊዜ የተነበበ';
+  String get lastRead => 'áˆˆáˆ˜áŒ¨áˆ¨áˆ» áŒŠá‹œ á‹¨á‰°áŠá‰ á‰ ';
 
   @override
-  String get dailyZikr => 'ዕለታዊ ዚክር';
+  String get dailyZikr => 'á‹•áˆˆá‰³á‹Š á‹šáŠ­áˆ­';
 
   @override
-  String get morningZikr => 'ጥዋት ዚክር';
+  String get morningZikr => 'áŒ¥á‹‹á‰µ á‹šáŠ­áˆ­';
 
   @override
-  String get eveningZikr => 'ምሽት ዚክር';
+  String get eveningZikr => 'áˆáˆ½á‰µ á‹šáŠ­áˆ­';
 
   @override
-  String get tasbih => 'ተስቢህ';
+  String get tasbih => 'á‰°áˆµá‰¢áˆ…';
 
   @override
-  String get ahkab => 'አህካም';
+  String get ahkab => 'áŠ áˆ…áŠ«áˆ';
 
   @override
-  String get masaail => 'ማሳኢል';
+  String get masaail => 'áˆ›áˆ³áŠ¢áˆ';
 
   @override
-  String get hadith => 'ሀዲስ';
+  String get hadith => 'áˆ€á‹²áˆµ';
 
   @override
-  String get hadithCollection => 'የሀዲስ ስብስብ';
+  String get hadithCollection => 'á‹¨áˆ€á‹²áˆµ áˆµá‰¥áˆµá‰¥';
 
   @override
-  String get hadithBooks => 'የሐዲስ መጽሐፍት።';
+  String get hadithBooks => 'á‹¨áˆá‹²áˆµ áˆ˜áŒ½áˆáá‰µá¢';
 
   @override
-  String get searchHadith => 'ሀዲስ ፈልግ';
+  String get searchHadith => 'áˆ€á‹²áˆµ áˆáˆáŒ';
 
   @override
-  String get asmaulHusna => 'አስማ-አል-ሑስና';
+  String get asmaulHusna => 'áŠ áˆµáˆ›-áŠ áˆ-áˆ‘áˆµáŠ“';
 
   @override
-  String get namesOfAllah => 'የአላህ ስሞች';
+  String get namesOfAllah => 'á‹¨áŠ áˆ‹áˆ… áˆµáˆá‰½';
 
   @override
-  String get liveTv => 'የቀጥታ ቲቪ';
+  String get liveTv => 'á‹¨á‰€áŒ¥á‰³ á‰²á‰ª';
 
   @override
-  String get watchLive => 'ቀጥታ ይመልከቱ';
+  String get watchLive => 'á‰€áŒ¥á‰³ á‹­áˆ˜áˆáŠ¨á‰±';
 
   @override
-  String get streamError => 'የዥረት ስህተት';
+  String get streamError => 'á‹¨á‹¥áˆ¨á‰µ áˆµáˆ…á‰°á‰µ';
 
   @override
-  String get reload => 'ዳግም ጫን';
+  String get reload => 'á‹³áŒáˆ áŒ«áŠ•';
 
   @override
-  String get openInYoutube => 'በዩቲዩብ ውስጥ ክፈት';
+  String get openInYoutube => 'á‰ á‹©á‰²á‹©á‰¥ á‹áˆµáŒ¥ áŠ­áˆá‰µ';
 
   @override
-  String get ibadahTracker => 'ኢባዳ መከታተያ';
+  String get ibadahTracker => 'áŠ¢á‰£á‹³ áˆ˜áŠ¨á‰³á‰°á‹«';
 
   @override
-  String get fasting => 'መጾም';
+  String get fasting => 'áˆ˜áŒ¾áˆ';
 
   @override
-  String get quranReading => 'የቁርኣን ንባብ';
+  String get quranReading => 'á‹¨á‰áˆ­áŠ£áŠ• áŠ•á‰£á‰¥';
 
   @override
-  String get prayers => 'ጸሎቶች';
+  String get prayers => 'áŒ¸áˆá‰¶á‰½';
 
   @override
-  String get dhikrCount => 'ዚክር ቆጠራ';
+  String get dhikrCount => 'á‹šáŠ­áˆ­ á‰†áŒ áˆ«';
 
   @override
-  String get weeklyProgress => 'ሳምንታዊ እድገት';
+  String get weeklyProgress => 'áˆ³áˆáŠ•á‰³á‹Š áŠ¥á‹µáŒˆá‰µ';
 
   @override
-  String get monthlyProgress => 'ወርሃዊ እድገት';
+  String get monthlyProgress => 'á‹ˆáˆ­áˆƒá‹Š áŠ¥á‹µáŒˆá‰µ';
 
   @override
-  String get statistics => 'ስታትስቲክስ';
+  String get statistics => 'áˆµá‰³á‰µáˆµá‰²áŠ­áˆµ';
 
   @override
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'የግሪጎሪያን የቀን መቁጠሪያ';
+  String get gregorianCalendar =>
+      'á‹¨áŒáˆªáŒáˆªá‹«áŠ• á‹¨á‰€áŠ• áˆ˜á‰áŒ áˆªá‹«';
 
   @override
-  String get today => 'ዛሬ';
+  String get today => 'á‹›áˆ¬';
 
   @override
-  String get tomorrow => 'ነገ';
+  String get tomorrow => 'áŠáŒˆ';
 
   @override
-  String get yesterday => 'ትናንት';
+  String get yesterday => 'á‰µáŠ“áŠ•á‰µ';
 
   @override
-  String get specialDays => 'ልዩ ቀናት';
+  String get specialDays => 'áˆá‹© á‰€áŠ“á‰µ';
 
   @override
-  String get ramadan => 'ረመዳን';
+  String get ramadan => 'áˆ¨áˆ˜á‹³áŠ•';
 
   @override
-  String get eidAlFitr => 'ኢድ አልፈጥር';
+  String get eidAlFitr => 'áŠ¢á‹µ áŠ áˆáˆáŒ¥áˆ­';
 
   @override
-  String get eidAlAdha => 'ኢድ አል-አድሓ';
+  String get eidAlAdha => 'áŠ¢á‹µ áŠ áˆ-áŠ á‹µáˆ“';
 
   @override
-  String get laylatAlQadr => 'ሌይላት አልቃድር';
+  String get laylatAlQadr => 'áˆŒá‹­áˆ‹á‰µ áŠ áˆá‰ƒá‹µáˆ­';
 
   @override
-  String get qiblaDirection => 'የቂብላ አቅጣጫ';
+  String get qiblaDirection => 'á‹¨á‰‚á‰¥áˆ‹ áŠ á‰…áŒ£áŒ«';
 
   @override
-  String get compass => 'ኮምፓስ';
+  String get compass => 'áŠ®áˆá“áˆµ';
 
   @override
-  String get degrees => 'ዲግሪዎች';
+  String get degrees => 'á‹²áŒáˆªá‹á‰½';
 
   @override
-  String get north => 'ሰሜን';
+  String get north => 'áˆ°áˆœáŠ•';
 
   @override
-  String get qiblaFound => 'ቂብላ ተገኘ!';
+  String get qiblaFound => 'á‰‚á‰¥áˆ‹ á‰°áŒˆáŠ˜!';
 
   @override
-  String get turnDevice => 'መሳሪያዎን ወደ ቂብላ ያዙሩት';
+  String get turnDevice => 'áˆ˜áˆ³áˆªá‹«á‹áŠ• á‹ˆá‹° á‰‚á‰¥áˆ‹ á‹«á‹™áˆ©á‰µ';
 
   @override
-  String get notifications => 'ማሳወቂያዎች';
+  String get notifications => 'áˆ›áˆ³á‹ˆá‰‚á‹«á‹á‰½';
 
   @override
-  String get prayerNotifications => 'የጸሎት ማሳወቂያዎች';
+  String get prayerNotifications => 'á‹¨áŒ¸áˆá‰µ áˆ›áˆ³á‹ˆá‰‚á‹«á‹á‰½';
 
   @override
-  String get enableNotifications => 'ማሳወቂያዎችን አንቃ';
+  String get enableNotifications => 'áˆ›áˆ³á‹ˆá‰‚á‹«á‹á‰½áŠ• áŠ áŠ•á‰ƒ';
 
   @override
-  String get notificationTime => 'የማሳወቂያ ጊዜ';
+  String get notificationTime => 'á‹¨áˆ›áˆ³á‹ˆá‰‚á‹« áŒŠá‹œ';
 
   @override
-  String get beforePrayer => 'ከጸሎት በፊት ደቂቃዎች';
+  String get beforePrayer => 'áŠ¨áŒ¸áˆá‰µ á‰ áŠá‰µ á‹°á‰‚á‰ƒá‹á‰½';
 
   @override
-  String get theme => 'ጭብጥ';
+  String get theme => 'áŒ­á‰¥áŒ¥';
 
   @override
-  String get lightMode => 'የብርሃን ሁነታ';
+  String get lightMode => 'á‹¨á‰¥áˆ­áˆƒáŠ• áˆáŠá‰³';
 
   @override
-  String get darkMode => 'ጨለማ ሁነታ';
+  String get darkMode => 'áŒ¨áˆˆáˆ› áˆáŠá‰³';
 
   @override
-  String get systemTheme => 'የስርዓት ጭብጥ';
+  String get systemTheme => 'á‹¨áˆµáˆ­á‹“á‰µ áŒ­á‰¥áŒ¥';
 
   @override
-  String get about => 'ስለ';
+  String get about => 'áˆµáˆˆ';
 
   @override
-  String get version => 'ሥሪት';
+  String get version => 'áˆ¥áˆªá‰µ';
 
   @override
-  String get privacyPolicy => 'የግላዊነት ፖሊሲ';
+  String get privacyPolicy => 'á‹¨áŒáˆ‹á‹ŠáŠá‰µ á–áˆŠáˆ²';
 
   @override
-  String get termsOfService => 'የአገልግሎት ውል';
+  String get termsOfService => 'á‹¨áŠ áŒˆáˆáŒáˆá‰µ á‹áˆ';
 
   @override
-  String get contactUs => 'ያግኙን';
+  String get contactUs => 'á‹«áŒáŠ™áŠ•';
 
   @override
-  String get rateApp => 'መተግበሪያ ደረጃ ይስጡ';
+  String get rateApp => 'áˆ˜á‰°áŒá‰ áˆªá‹« á‹°áˆ¨áŒƒ á‹­áˆµáŒ¡';
 
   @override
-  String get shareApp => 'መተግበሪያ አጋራ';
+  String get shareApp => 'áˆ˜á‰°áŒá‰ áˆªá‹« áŠ áŒ‹áˆ«';
 
   @override
-  String get downloadManager => 'አውርድ አስተዳዳሪ';
+  String get downloadManager => 'áŠ á‹áˆ­á‹µ áŠ áˆµá‰°á‹³á‹³áˆª';
 
   @override
-  String get downloads => 'ውርዶች';
+  String get downloads => 'á‹áˆ­á‹¶á‰½';
 
   @override
-  String get downloading => 'በማውረድ ላይ...';
+  String get downloading => 'á‰ áˆ›á‹áˆ¨á‹µ áˆ‹á‹­...';
 
   @override
-  String get downloadComplete => 'ማውረድ ተጠናቋል';
+  String get downloadComplete => 'áˆ›á‹áˆ¨á‹µ á‰°áŒ áŠ“á‰‹áˆ';
 
   @override
-  String get downloadFailed => 'ማውረድ አልተሳካም።';
+  String get downloadFailed => 'áˆ›á‹áˆ¨á‹µ áŠ áˆá‰°áˆ³áŠ«áˆá¢';
 
   @override
-  String get offlineMode => 'ከመስመር ውጭ ሁነታ';
+  String get offlineMode => 'áŠ¨áˆ˜áˆµáˆ˜áˆ­ á‹áŒ­ áˆáŠá‰³';
 
   @override
-  String get noInternet => 'የበይነመረብ ግንኙነት የለም።';
+  String get noInternet => 'á‹¨á‰ á‹­áŠáˆ˜áˆ¨á‰¥ áŒáŠ•áŠ™áŠá‰µ á‹¨áˆˆáˆá¢';
 
   @override
-  String get checkConnection => 'እባክዎ ግንኙነትዎን ያረጋግጡ';
+  String get checkConnection =>
+      'áŠ¥á‰£áŠ­á‹ áŒáŠ•áŠ™áŠá‰µá‹áŠ• á‹«áˆ¨áŒ‹áŒáŒ¡';
 
   @override
-  String get premium => 'ፕሪሚየም';
+  String get premium => 'á•áˆªáˆšá‹¨áˆ';
 
   @override
-  String get upgradeToPro => 'ወደ ፕሮ ያሻሽሉ።';
+  String get upgradeToPro => 'á‹ˆá‹° á•áˆ® á‹«áˆ»áˆ½áˆ‰á¢';
 
   @override
-  String get proFeatures => 'Pro ባህሪዎች';
+  String get proFeatures => 'Pro á‰£áˆ…áˆªá‹á‰½';
 
   @override
-  String get removeAds => 'ማስታወቂያዎችን ያስወግዱ';
+  String get removeAds => 'áˆ›áˆµá‰³á‹ˆá‰‚á‹«á‹á‰½áŠ• á‹«áˆµá‹ˆáŒá‹±';
 
   @override
-  String get unlockAll => 'ሁሉንም ይዘቶች ይክፈቱ';
+  String get unlockAll => 'áˆáˆ‰áŠ•áˆ á‹­á‹˜á‰¶á‰½ á‹­áŠ­áˆá‰±';
 
   @override
-  String get exclusiveContent => 'ልዩ ይዘት';
+  String get exclusiveContent => 'áˆá‹© á‹­á‹˜á‰µ';
 
   @override
-  String get welcome => 'እንኳን ደህና መጣህ';
+  String get welcome => 'áŠ¥áŠ•áŠ³áŠ• á‹°áˆ…áŠ“ áˆ˜áŒ£áˆ…';
 
   @override
-  String get getStarted => 'እንጀምር';
+  String get getStarted => 'áŠ¥áŠ•áŒ€áˆáˆ­';
 
   @override
-  String get skip => 'ዝለል';
+  String get skip => 'á‹áˆˆáˆ';
 
   @override
-  String get next => 'ቀጥሎ';
+  String get next => 'á‰€áŒ¥áˆ';
 
   @override
-  String get done => 'ተከናውኗል';
+  String get done => 'á‰°áŠ¨áŠ“á‹áŠ—áˆ';
 
   @override
-  String get onboarding1Title => 'እንኳን ወደ አላህ መንገድ በደህና መጡ';
+  String get onboarding1Title =>
+      'áŠ¥áŠ•áŠ³áŠ• á‹ˆá‹° áŠ áˆ‹áˆ… áˆ˜áŠ•áŒˆá‹µ á‰ á‹°áˆ…áŠ“ áˆ˜áŒ¡';
 
   @override
   String get onboarding1Desc =>
-      'ለጸሎት ጊዜ፣ ቁርኣን እና ሌሎችም የእርስዎ ሙሉ ኢስላማዊ ጓደኛ መተግበሪያ';
+      'áˆˆáŒ¸áˆá‰µ áŒŠá‹œá£ á‰áˆ­áŠ£áŠ• áŠ¥áŠ“ áˆŒáˆá‰½áˆ á‹¨áŠ¥áˆ­áˆµá‹ áˆ™áˆ‰ áŠ¢áˆµáˆ‹áˆ›á‹Š áŒ“á‹°áŠ› áˆ˜á‰°áŒá‰ áˆªá‹«';
 
   @override
-  String get onboarding2Title => 'የጸሎት ጊዜያት';
+  String get onboarding2Title => 'á‹¨áŒ¸áˆá‰µ áŒŠá‹œá‹«á‰µ';
 
   @override
-  String get onboarding2Desc => 'በአከባቢዎ ላይ በመመስረት ትክክለኛ የጸሎት ጊዜያት';
+  String get onboarding2Desc =>
+      'á‰ áŠ áŠ¨á‰£á‰¢á‹ áˆ‹á‹­ á‰ áˆ˜áˆ˜áˆµáˆ¨á‰µ á‰µáŠ­áŠ­áˆˆáŠ› á‹¨áŒ¸áˆá‰µ áŒŠá‹œá‹«á‰µ';
 
   @override
-  String get onboarding3Title => 'ቁርኣን እና ሌሎችም።';
+  String get onboarding3Title => 'á‰áˆ­áŠ£áŠ• áŠ¥áŠ“ áˆŒáˆá‰½áˆá¢';
 
   @override
-  String get onboarding3Desc => 'ቁርኣንን አንብብ፣ ንባብህን ተከታተል እና ኢስላማዊ ይዘትን አስስ';
+  String get onboarding3Desc =>
+      'á‰áˆ­áŠ£áŠ•áŠ• áŠ áŠ•á‰¥á‰¥á£ áŠ•á‰£á‰¥áˆ…áŠ• á‰°áŠ¨á‰³á‰°áˆ áŠ¥áŠ“ áŠ¢áˆµáˆ‹áˆ›á‹Š á‹­á‹˜á‰µáŠ• áŠ áˆµáˆµ';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -619,7 +627,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Current: $offsetÂ°';
   }
 
   @override

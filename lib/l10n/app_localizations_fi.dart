@@ -42,16 +42,16 @@ class AppLocalizationsFi extends AppLocalizations {
   String get getLifetimePro => 'Hanki Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Avaa Tajweed ja lisäominaisuudet';
+  String get unlockTajweed => 'Avaa Tajweed ja lisÃ¤ominaisuudet';
 
   @override
   String get prayerCalculation => 'Rukouslaskenta';
 
   @override
-  String get method => 'Laskentamenetelmä';
+  String get method => 'LaskentamenetelmÃ¤';
 
   @override
-  String get madhab => 'Asr Juristinen menetelmä';
+  String get madhab => 'Asr Juristinen menetelmÃ¤';
 
   @override
   String get surahs => 'Suurat';
@@ -81,10 +81,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get dataStorage => 'Tiedot ja tallennus';
 
   @override
-  String get clearCache => 'Tyhjennä välimuisti';
+  String get clearCache => 'TyhjennÃ¤ vÃ¤limuisti';
 
   @override
-  String get cacheClearedSuccess => 'Välimuisti tyhjennetty onnistuneesti';
+  String get cacheClearedSuccess => 'VÃ¤limuisti tyhjennetty onnistuneesti';
 
   @override
   String get location => 'Sijainti';
@@ -96,10 +96,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get selectLanguage => 'Valitse Kieli';
 
   @override
-  String get searchLanguage => 'Hae yli 180 kielellä...';
+  String get searchLanguage => 'Hae yli 180 kielellÃ¤...';
 
   @override
-  String get systemDefault => 'Järjestelmän oletusarvo';
+  String get systemDefault => 'JÃ¤rjestelmÃ¤n oletusarvo';
 
   @override
   String get currentLocation => 'Nykyinen sijainti (GPS)';
@@ -111,7 +111,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get searchHint => 'Haku...';
 
   @override
-  String get noResults => 'Tuloksia ei löytynyt';
+  String get noResults => 'Tuloksia ei lÃ¶ytynyt';
 
   @override
   String get loading => 'Ladataan...';
@@ -120,7 +120,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get error => 'Virhe';
 
   @override
-  String get retry => 'Yritä uudelleen';
+  String get retry => 'YritÃ¤ uudelleen';
 
   @override
   String get cancel => 'Peruuttaa';
@@ -135,13 +135,13 @@ class AppLocalizationsFi extends AppLocalizations {
   String get edit => 'Muokata';
 
   @override
-  String get close => 'Lähellä';
+  String get close => 'LÃ¤hellÃ¤';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Kyllä';
+  String get yes => 'KyllÃ¤';
 
   @override
   String get no => 'Ei';
@@ -162,7 +162,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get recitation => 'Lausunta';
 
   @override
-  String get translation => 'Käännös';
+  String get translation => 'KÃ¤Ã¤nnÃ¶s';
 
   @override
   String get tafsir => 'Tafsir';
@@ -171,7 +171,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get bookmarks => 'Kirjanmerkit';
 
   @override
-  String get addBookmark => 'Lisää kirjanmerkki';
+  String get addBookmark => 'LisÃ¤Ã¤ kirjanmerkki';
 
   @override
   String get removeBookmark => 'Poista kirjanmerkki';
@@ -180,7 +180,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get lastRead => 'Viimeksi luettu';
 
   @override
-  String get dailyZikr => 'Päivittäinen Zikr';
+  String get dailyZikr => 'PÃ¤ivittÃ¤inen Zikr';
 
   @override
   String get morningZikr => 'Huomenta Zikr';
@@ -261,7 +261,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get gregorianCalendar => 'Gregoriaaninen kalenteri';
 
   @override
-  String get today => 'Tänään';
+  String get today => 'TÃ¤nÃ¤Ã¤n';
 
   @override
   String get tomorrow => 'Huomenna';
@@ -270,7 +270,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get yesterday => 'Eilen';
 
   @override
-  String get specialDays => 'Erikoispäivät';
+  String get specialDays => 'ErikoispÃ¤ivÃ¤t';
 
   @override
   String get ramadan => 'Ramadan';
@@ -297,10 +297,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get north => 'Pohjois';
 
   @override
-  String get qiblaFound => 'Qibla löytyi!';
+  String get qiblaFound => 'Qibla lÃ¶ytyi!';
 
   @override
-  String get turnDevice => 'Käännä laitteesi Qiblaa kohti';
+  String get turnDevice => 'KÃ¤Ã¤nnÃ¤ laitteesi Qiblaa kohti';
 
   @override
   String get notifications => 'Ilmoitukset';
@@ -309,7 +309,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get prayerNotifications => 'Rukousilmoitukset';
 
   @override
-  String get enableNotifications => 'Ota ilmoitukset käyttöön';
+  String get enableNotifications => 'Ota ilmoitukset kÃ¤yttÃ¶Ã¶n';
 
   @override
   String get notificationTime => 'Ilmoitusaika';
@@ -327,7 +327,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get darkMode => 'Tumma tila';
 
   @override
-  String get systemTheme => 'Järjestelmän teema';
+  String get systemTheme => 'JÃ¤rjestelmÃ¤n teema';
 
   @override
   String get about => 'Noin';
@@ -336,13 +336,13 @@ class AppLocalizationsFi extends AppLocalizations {
   String get version => 'Versio';
 
   @override
-  String get privacyPolicy => 'Tietosuojakäytäntö';
+  String get privacyPolicy => 'TietosuojakÃ¤ytÃ¤ntÃ¶';
 
   @override
   String get termsOfService => 'Palveluehdot';
 
   @override
-  String get contactUs => 'Ota yhteyttä';
+  String get contactUs => 'Ota yhteyttÃ¤';
 
   @override
   String get rateApp => 'Arvioi sovellus';
@@ -363,13 +363,13 @@ class AppLocalizationsFi extends AppLocalizations {
   String get downloadComplete => 'Lataus valmis';
 
   @override
-  String get downloadFailed => 'Lataus epäonnistui';
+  String get downloadFailed => 'Lataus epÃ¤onnistui';
 
   @override
   String get offlineMode => 'Offline-tila';
 
   @override
-  String get noInternet => 'Ei Internet-yhteyttä';
+  String get noInternet => 'Ei Internet-yhteyttÃ¤';
 
   @override
   String get checkConnection => 'Tarkista yhteys';
@@ -378,7 +378,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Päivitä Pro-versioon';
+  String get upgradeToPro => 'PÃ¤ivitÃ¤ Pro-versioon';
 
   @override
   String get proFeatures => 'Pro-ominaisuudet';
@@ -387,10 +387,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get removeAds => 'Poista mainokset';
 
   @override
-  String get unlockAll => 'Avaa koko sisältö';
+  String get unlockAll => 'Avaa koko sisÃ¤ltÃ¶';
 
   @override
-  String get exclusiveContent => 'Eksklusiivinen sisältö';
+  String get exclusiveContent => 'Eksklusiivinen sisÃ¤ltÃ¶';
 
   @override
   String get welcome => 'Tervetuloa';
@@ -412,7 +412,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get onboarding1Desc =>
-      'Täydellinen islamilainen kumppanisovelluksesi rukousaikoihin, Koraaniin ja muuhun';
+      'TÃ¤ydellinen islamilainen kumppanisovelluksesi rukousaikoihin, Koraaniin ja muuhun';
 
   @override
   String get onboarding2Title => 'Rukousajat';
@@ -425,7 +425,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get onboarding3Desc =>
-      'Lue Koraania, seuraa lukemistasi ja tutki islamilaista sisältöä';
+      'Lue Koraania, seuraa lukemistasi ja tutki islamilaista sisÃ¤ltÃ¶Ã¤';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -620,7 +620,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Current: $offsetÂ°';
   }
 
   @override

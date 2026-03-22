@@ -9,423 +9,427 @@ class AppLocalizationsFa extends AppLocalizations {
   AppLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get appTitle => 'راه الله';
+  String get appTitle => 'Ø±Ø§Ù‡ Ø§Ù„Ù„Ù‡';
 
   @override
-  String get home => 'خانه';
+  String get home => 'Ø®Ø§Ù†Ù‡';
 
   @override
-  String get quran => 'قرآن';
+  String get quran => 'Ù‚Ø±Ø¢Ù†';
 
   @override
-  String get qibla => 'قبله';
+  String get qibla => 'Ù‚Ø¨Ù„Ù‡';
 
   @override
-  String get zikr => 'ذکر';
+  String get zikr => 'Ø°Ú©Ø±';
 
   @override
-  String get calendar => 'تقویم';
+  String get calendar => 'ØªÙ‚ÙˆÛŒÙ…';
 
   @override
-  String get settings => 'تنظیمات';
+  String get settings => 'ØªÙ†Ø¸ÛŒÙ…Ø§Øª';
 
   @override
-  String get nextPrayer => 'نماز بعدی';
+  String get nextPrayer => 'Ù†Ù…Ø§Ø² Ø¨Ø¹Ø¯ÛŒ';
 
   @override
-  String get prayerTimes => 'اوقات نماز';
+  String get prayerTimes => 'Ø§ÙˆÙ‚Ø§Øª Ù†Ù…Ø§Ø²';
 
   @override
-  String get continueReading => 'ادامه مطالعه';
+  String get continueReading => 'Ø§Ø¯Ø§Ù…Ù‡ Ù…Ø·Ø§Ù„Ø¹Ù‡';
 
   @override
-  String get getLifetimePro => 'دریافت Lifetime Pro';
+  String get getLifetimePro => 'Ø¯Ø±ÛŒØ§ÙØª Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'تجوید و ویژگی‌های پیشرفته';
+  String get unlockTajweed =>
+      'ØªØ¬ÙˆÛŒØ¯ Ùˆ ÙˆÛŒÚ˜Ú¯ÛŒâ€ŒÙ‡Ø§ÛŒ Ù¾ÛŒØ´Ø±ÙØªÙ‡';
 
   @override
-  String get prayerCalculation => 'محاسبه نماز';
+  String get prayerCalculation => 'Ù…Ø­Ø§Ø³Ø¨Ù‡ Ù†Ù…Ø§Ø²';
 
   @override
-  String get method => 'روش محاسبه';
+  String get method => 'Ø±ÙˆØ´ Ù…Ø­Ø§Ø³Ø¨Ù‡';
 
   @override
-  String get madhab => 'روش فقهی عصر';
+  String get madhab => 'Ø±ÙˆØ´ ÙÙ‚Ù‡ÛŒ Ø¹ØµØ±';
 
   @override
-  String get surahs => 'سوره‌ها';
+  String get surahs => 'Ø³ÙˆØ±Ù‡â€ŒÙ‡Ø§';
 
   @override
-  String get ayahs => 'آیات';
+  String get ayahs => 'Ø¢ÛŒØ§Øª';
 
   @override
-  String get fajr => 'فجر';
+  String get fajr => 'ÙØ¬Ø±';
 
   @override
-  String get sunrise => 'طلوع آفتاب';
+  String get sunrise => 'Ø·Ù„ÙˆØ¹ Ø¢ÙØªØ§Ø¨';
 
   @override
-  String get dhuhr => 'ظهر';
+  String get dhuhr => 'Ø¸Ù‡Ø±';
 
   @override
-  String get asr => 'عصر';
+  String get asr => 'Ø¹ØµØ±';
 
   @override
-  String get maghrib => 'مغرب';
+  String get maghrib => 'Ù…ØºØ±Ø¨';
 
   @override
-  String get isha => 'عشاء';
+  String get isha => 'Ø¹Ø´Ø§Ø¡';
 
   @override
-  String get dataStorage => 'داده و ذخیره‌سازی';
+  String get dataStorage => 'Ø¯Ø§Ø¯Ù‡ Ùˆ Ø°Ø®ÛŒØ±Ù‡â€ŒØ³Ø§Ø²ÛŒ';
 
   @override
-  String get clearCache => 'پاک کردن کش';
+  String get clearCache => 'Ù¾Ø§Ú© Ú©Ø±Ø¯Ù† Ú©Ø´';
 
   @override
-  String get cacheClearedSuccess => 'کش با موفقیت پاک شد';
+  String get cacheClearedSuccess => 'Ú©Ø´ Ø¨Ø§ Ù…ÙˆÙÙ‚ÛŒØª Ù¾Ø§Ú© Ø´Ø¯';
 
   @override
-  String get location => 'مکان';
+  String get location => 'Ù…Ú©Ø§Ù†';
 
   @override
-  String get language => 'زبان';
+  String get language => 'Ø²Ø¨Ø§Ù†';
 
   @override
-  String get selectLanguage => 'انتخاب زبان';
+  String get selectLanguage => 'Ø§Ù†ØªØ®Ø§Ø¨ Ø²Ø¨Ø§Ù†';
 
   @override
-  String get searchLanguage => 'جستجو در 180+ زبان...';
+  String get searchLanguage => 'Ø¬Ø³ØªØ¬Ùˆ Ø¯Ø± 180+ Ø²Ø¨Ø§Ù†...';
 
   @override
-  String get systemDefault => 'پیش‌فرض سیستم';
+  String get systemDefault => 'Ù¾ÛŒØ´â€ŒÙØ±Ø¶ Ø³ÛŒØ³ØªÙ…';
 
   @override
-  String get currentLocation => 'مکان فعلی (GPS)';
+  String get currentLocation => 'Ù…Ú©Ø§Ù† ÙØ¹Ù„ÛŒ (GPS)';
 
   @override
-  String get search => 'جستجو';
+  String get search => 'Ø¬Ø³ØªØ¬Ùˆ';
 
   @override
-  String get searchHint => 'جستجو...';
+  String get searchHint => 'Ø¬Ø³ØªØ¬Ùˆ...';
 
   @override
-  String get noResults => 'نتیجه‌ای یافت نشد';
+  String get noResults => 'Ù†ØªÛŒØ¬Ù‡â€ŒØ§ÛŒ ÛŒØ§ÙØª Ù†Ø´Ø¯';
 
   @override
-  String get loading => 'در حال بارگیری...';
+  String get loading => 'Ø¯Ø± Ø­Ø§Ù„ Ø¨Ø§Ø±Ú¯ÛŒØ±ÛŒ...';
 
   @override
-  String get error => 'خطا';
+  String get error => 'Ø®Ø·Ø§';
 
   @override
-  String get retry => 'تلاش مجدد';
+  String get retry => 'ØªÙ„Ø§Ø´ Ù…Ø¬Ø¯Ø¯';
 
   @override
-  String get cancel => 'لغو';
+  String get cancel => 'Ù„ØºÙˆ';
 
   @override
-  String get save => 'ذخیره';
+  String get save => 'Ø°Ø®ÛŒØ±Ù‡';
 
   @override
-  String get delete => 'حذف';
+  String get delete => 'Ø­Ø°Ù';
 
   @override
-  String get edit => 'ویرایش';
+  String get edit => 'ÙˆÛŒØ±Ø§ÛŒØ´';
 
   @override
-  String get close => 'بستن';
+  String get close => 'Ø¨Ø³ØªÙ†';
 
   @override
-  String get ok => 'تایید';
+  String get ok => 'ØªØ§ÛŒÛŒØ¯';
 
   @override
-  String get yes => 'بله';
+  String get yes => 'Ø¨Ù„Ù‡';
 
   @override
-  String get no => 'خیر';
+  String get no => 'Ø®ÛŒØ±';
 
   @override
-  String get surah => 'سوره';
+  String get surah => 'Ø³ÙˆØ±Ù‡';
 
   @override
-  String get juz => 'جزء';
+  String get juz => 'Ø¬Ø²Ø¡';
 
   @override
-  String get page => 'صفحه';
+  String get page => 'ØµÙØ­Ù‡';
 
   @override
-  String get reading => 'خواندن';
+  String get reading => 'Ø®ÙˆØ§Ù†Ø¯Ù†';
 
   @override
-  String get recitation => 'تلاوت';
+  String get recitation => 'ØªÙ„Ø§ÙˆØª';
 
   @override
-  String get translation => 'ترجمه';
+  String get translation => 'ØªØ±Ø¬Ù…Ù‡';
 
   @override
-  String get tafsir => 'تفسیر';
+  String get tafsir => 'ØªÙØ³ÛŒØ±';
 
   @override
-  String get bookmarks => 'نشانک‌ها';
+  String get bookmarks => 'Ù†Ø´Ø§Ù†Ú©â€ŒÙ‡Ø§';
 
   @override
-  String get addBookmark => 'افزودن نشانک';
+  String get addBookmark => 'Ø§ÙØ²ÙˆØ¯Ù† Ù†Ø´Ø§Ù†Ú©';
 
   @override
-  String get removeBookmark => 'حذف نشانک';
+  String get removeBookmark => 'Ø­Ø°Ù Ù†Ø´Ø§Ù†Ú©';
 
   @override
-  String get lastRead => 'آخرین خوانده شده';
+  String get lastRead => 'Ø¢Ø®Ø±ÛŒÙ† Ø®ÙˆØ§Ù†Ø¯Ù‡ Ø´Ø¯Ù‡';
 
   @override
-  String get dailyZikr => 'ذکر روزانه';
+  String get dailyZikr => 'Ø°Ú©Ø± Ø±ÙˆØ²Ø§Ù†Ù‡';
 
   @override
-  String get morningZikr => 'ذکر صبح';
+  String get morningZikr => 'Ø°Ú©Ø± ØµØ¨Ø­';
 
   @override
-  String get eveningZikr => 'ذکر شب';
+  String get eveningZikr => 'Ø°Ú©Ø± Ø´Ø¨';
 
   @override
-  String get tasbih => 'تسبیح';
+  String get tasbih => 'ØªØ³Ø¨ÛŒØ­';
 
   @override
-  String get ahkab => 'احکام';
+  String get ahkab => 'Ø§Ø­Ú©Ø§Ù…';
 
   @override
-  String get masaail => 'مسائل';
+  String get masaail => 'Ù…Ø³Ø§Ø¦Ù„';
 
   @override
-  String get hadith => 'حدیث';
+  String get hadith => 'Ø­Ø¯ÛŒØ«';
 
   @override
-  String get hadithCollection => 'مجموعه حدیث';
+  String get hadithCollection => 'Ù…Ø¬Ù…ÙˆØ¹Ù‡ Ø­Ø¯ÛŒØ«';
 
   @override
-  String get hadithBooks => 'کتب حدیث';
+  String get hadithBooks => 'Ú©ØªØ¨ Ø­Ø¯ÛŒØ«';
 
   @override
-  String get searchHadith => 'جستجوی حدیث';
+  String get searchHadith => 'Ø¬Ø³ØªØ¬ÙˆÛŒ Ø­Ø¯ÛŒØ«';
 
   @override
-  String get asmaulHusna => 'اسماءالحسنی';
+  String get asmaulHusna => 'Ø§Ø³Ù…Ø§Ø¡Ø§Ù„Ø­Ø³Ù†ÛŒ';
 
   @override
-  String get namesOfAllah => 'نام‌های خدا';
+  String get namesOfAllah => 'Ù†Ø§Ù…â€ŒÙ‡Ø§ÛŒ Ø®Ø¯Ø§';
 
   @override
-  String get liveTv => 'تلویزیون زنده';
+  String get liveTv => 'ØªÙ„ÙˆÛŒØ²ÛŒÙˆÙ† Ø²Ù†Ø¯Ù‡';
 
   @override
-  String get watchLive => 'مشاهده زنده';
+  String get watchLive => 'Ù…Ø´Ø§Ù‡Ø¯Ù‡ Ø²Ù†Ø¯Ù‡';
 
   @override
-  String get streamError => 'خطای استریم';
+  String get streamError => 'Ø®Ø·Ø§ÛŒ Ø§Ø³ØªØ±ÛŒÙ…';
 
   @override
-  String get reload => 'بارگیری مجدد';
+  String get reload => 'Ø¨Ø§Ø±Ú¯ÛŒØ±ÛŒ Ù…Ø¬Ø¯Ø¯';
 
   @override
-  String get openInYoutube => 'باز کردن در یوتیوب';
+  String get openInYoutube => 'Ø¨Ø§Ø² Ú©Ø±Ø¯Ù† Ø¯Ø± ÛŒÙˆØªÛŒÙˆØ¨';
 
   @override
-  String get ibadahTracker => 'ردیاب عبادت';
+  String get ibadahTracker => 'Ø±Ø¯ÛŒØ§Ø¨ Ø¹Ø¨Ø§Ø¯Øª';
 
   @override
-  String get fasting => 'روزه';
+  String get fasting => 'Ø±ÙˆØ²Ù‡';
 
   @override
-  String get quranReading => 'خواندن قرآن';
+  String get quranReading => 'Ø®ÙˆØ§Ù†Ø¯Ù† Ù‚Ø±Ø¢Ù†';
 
   @override
-  String get prayers => 'نمازها';
+  String get prayers => 'Ù†Ù…Ø§Ø²Ù‡Ø§';
 
   @override
-  String get dhikrCount => 'تعداد ذکر';
+  String get dhikrCount => 'ØªØ¹Ø¯Ø§Ø¯ Ø°Ú©Ø±';
 
   @override
-  String get weeklyProgress => 'پیشرفت هفتگی';
+  String get weeklyProgress => 'Ù¾ÛŒØ´Ø±ÙØª Ù‡ÙØªÚ¯ÛŒ';
 
   @override
-  String get monthlyProgress => 'پیشرفت ماهانه';
+  String get monthlyProgress => 'Ù¾ÛŒØ´Ø±ÙØª Ù…Ø§Ù‡Ø§Ù†Ù‡';
 
   @override
-  String get statistics => 'آمار';
+  String get statistics => 'Ø¢Ù…Ø§Ø±';
 
   @override
-  String get hijriCalendar => 'تقویم هجری';
+  String get hijriCalendar => 'ØªÙ‚ÙˆÛŒÙ… Ù‡Ø¬Ø±ÛŒ';
 
   @override
-  String get gregorianCalendar => 'تقویم میلادی';
+  String get gregorianCalendar => 'ØªÙ‚ÙˆÛŒÙ… Ù…ÛŒÙ„Ø§Ø¯ÛŒ';
 
   @override
-  String get today => 'امروز';
+  String get today => 'Ø§Ù…Ø±ÙˆØ²';
 
   @override
-  String get tomorrow => 'فردا';
+  String get tomorrow => 'ÙØ±Ø¯Ø§';
 
   @override
-  String get yesterday => 'دیروز';
+  String get yesterday => 'Ø¯ÛŒØ±ÙˆØ²';
 
   @override
-  String get specialDays => 'روزهای خاص';
+  String get specialDays => 'Ø±ÙˆØ²Ù‡Ø§ÛŒ Ø®Ø§Øµ';
 
   @override
-  String get ramadan => 'رمضان';
+  String get ramadan => 'Ø±Ù…Ø¶Ø§Ù†';
 
   @override
-  String get eidAlFitr => 'عید فطر';
+  String get eidAlFitr => 'Ø¹ÛŒØ¯ ÙØ·Ø±';
 
   @override
-  String get eidAlAdha => 'عید قربان';
+  String get eidAlAdha => 'Ø¹ÛŒØ¯ Ù‚Ø±Ø¨Ø§Ù†';
 
   @override
-  String get laylatAlQadr => 'شب قدر';
+  String get laylatAlQadr => 'Ø´Ø¨ Ù‚Ø¯Ø±';
 
   @override
-  String get qiblaDirection => 'جهت قبله';
+  String get qiblaDirection => 'Ø¬Ù‡Øª Ù‚Ø¨Ù„Ù‡';
 
   @override
-  String get compass => 'قطب‌نما';
+  String get compass => 'Ù‚Ø·Ø¨â€ŒÙ†Ù…Ø§';
 
   @override
-  String get degrees => 'درجه';
+  String get degrees => 'Ø¯Ø±Ø¬Ù‡';
 
   @override
-  String get north => 'شمال';
+  String get north => 'Ø´Ù…Ø§Ù„';
 
   @override
-  String get qiblaFound => 'قبله یافت شد!';
+  String get qiblaFound => 'Ù‚Ø¨Ù„Ù‡ ÛŒØ§ÙØª Ø´Ø¯!';
 
   @override
-  String get turnDevice => 'دستگاه خود را به سمت قبله بچرخانید';
+  String get turnDevice =>
+      'Ø¯Ø³ØªÚ¯Ø§Ù‡ Ø®ÙˆØ¯ Ø±Ø§ Ø¨Ù‡ Ø³Ù…Øª Ù‚Ø¨Ù„Ù‡ Ø¨Ú†Ø±Ø®Ø§Ù†ÛŒØ¯';
 
   @override
-  String get notifications => 'اعلان‌ها';
+  String get notifications => 'Ø§Ø¹Ù„Ø§Ù†â€ŒÙ‡Ø§';
 
   @override
-  String get prayerNotifications => 'اعلان‌های نماز';
+  String get prayerNotifications => 'Ø§Ø¹Ù„Ø§Ù†â€ŒÙ‡Ø§ÛŒ Ù†Ù…Ø§Ø²';
 
   @override
-  String get enableNotifications => 'فعال کردن اعلان‌ها';
+  String get enableNotifications => 'ÙØ¹Ø§Ù„ Ú©Ø±Ø¯Ù† Ø§Ø¹Ù„Ø§Ù†â€ŒÙ‡Ø§';
 
   @override
-  String get notificationTime => 'زمان اعلان';
+  String get notificationTime => 'Ø²Ù…Ø§Ù† Ø§Ø¹Ù„Ø§Ù†';
 
   @override
-  String get beforePrayer => 'دقیقه قبل از نماز';
+  String get beforePrayer => 'Ø¯Ù‚ÛŒÙ‚Ù‡ Ù‚Ø¨Ù„ Ø§Ø² Ù†Ù…Ø§Ø²';
 
   @override
-  String get theme => 'پوسته';
+  String get theme => 'Ù¾ÙˆØ³ØªÙ‡';
 
   @override
-  String get lightMode => 'حالت روشن';
+  String get lightMode => 'Ø­Ø§Ù„Øª Ø±ÙˆØ´Ù†';
 
   @override
-  String get darkMode => 'حالت تاریک';
+  String get darkMode => 'Ø­Ø§Ù„Øª ØªØ§Ø±ÛŒÚ©';
 
   @override
-  String get systemTheme => 'پوسته سیستم';
+  String get systemTheme => 'Ù¾ÙˆØ³ØªÙ‡ Ø³ÛŒØ³ØªÙ…';
 
   @override
-  String get about => 'درباره';
+  String get about => 'Ø¯Ø±Ø¨Ø§Ø±Ù‡';
 
   @override
-  String get version => 'نسخه';
+  String get version => 'Ù†Ø³Ø®Ù‡';
 
   @override
-  String get privacyPolicy => 'سیاست حفظ حریم خصوصی';
+  String get privacyPolicy => 'Ø³ÛŒØ§Ø³Øª Ø­ÙØ¸ Ø­Ø±ÛŒÙ… Ø®ØµÙˆØµÛŒ';
 
   @override
-  String get termsOfService => 'شرایط خدمات';
+  String get termsOfService => 'Ø´Ø±Ø§ÛŒØ· Ø®Ø¯Ù…Ø§Øª';
 
   @override
-  String get contactUs => 'تماس با ما';
+  String get contactUs => 'ØªÙ…Ø§Ø³ Ø¨Ø§ Ù…Ø§';
 
   @override
-  String get rateApp => 'رتبه‌بندی برنامه';
+  String get rateApp => 'Ø±ØªØ¨Ù‡â€ŒØ¨Ù†Ø¯ÛŒ Ø¨Ø±Ù†Ø§Ù…Ù‡';
 
   @override
-  String get shareApp => 'اشتراک‌گذاری برنامه';
+  String get shareApp => 'Ø§Ø´ØªØ±Ø§Ú©â€ŒÚ¯Ø°Ø§Ø±ÛŒ Ø¨Ø±Ù†Ø§Ù…Ù‡';
 
   @override
-  String get downloadManager => 'مدیر دانلود';
+  String get downloadManager => 'Ù…Ø¯ÛŒØ± Ø¯Ø§Ù†Ù„ÙˆØ¯';
 
   @override
-  String get downloads => 'دانلودها';
+  String get downloads => 'Ø¯Ø§Ù†Ù„ÙˆØ¯Ù‡Ø§';
 
   @override
-  String get downloading => 'در حال دانلود...';
+  String get downloading => 'Ø¯Ø± Ø­Ø§Ù„ Ø¯Ø§Ù†Ù„ÙˆØ¯...';
 
   @override
-  String get downloadComplete => 'دانلود کامل شد';
+  String get downloadComplete => 'Ø¯Ø§Ù†Ù„ÙˆØ¯ Ú©Ø§Ù…Ù„ Ø´Ø¯';
 
   @override
-  String get downloadFailed => 'دانلود ناموفق';
+  String get downloadFailed => 'Ø¯Ø§Ù†Ù„ÙˆØ¯ Ù†Ø§Ù…ÙˆÙÙ‚';
 
   @override
-  String get offlineMode => 'حالت آفلاین';
+  String get offlineMode => 'Ø­Ø§Ù„Øª Ø¢ÙÙ„Ø§ÛŒÙ†';
 
   @override
-  String get noInternet => 'اتصال اینترنت وجود ندارد';
+  String get noInternet => 'Ø§ØªØµØ§Ù„ Ø§ÛŒÙ†ØªØ±Ù†Øª ÙˆØ¬ÙˆØ¯ Ù†Ø¯Ø§Ø±Ø¯';
 
   @override
-  String get checkConnection => 'لطفاً اتصال خود را بررسی کنید';
+  String get checkConnection =>
+      'Ù„Ø·ÙØ§Ù‹ Ø§ØªØµØ§Ù„ Ø®ÙˆØ¯ Ø±Ø§ Ø¨Ø±Ø±Ø³ÛŒ Ú©Ù†ÛŒØ¯';
 
   @override
-  String get premium => 'پریمیوم';
+  String get premium => 'Ù¾Ø±ÛŒÙ…ÛŒÙˆÙ…';
 
   @override
-  String get upgradeToPro => 'ارتقا به پرو';
+  String get upgradeToPro => 'Ø§Ø±ØªÙ‚Ø§ Ø¨Ù‡ Ù¾Ø±Ùˆ';
 
   @override
-  String get proFeatures => 'ویژگی‌های پرو';
+  String get proFeatures => 'ÙˆÛŒÚ˜Ú¯ÛŒâ€ŒÙ‡Ø§ÛŒ Ù¾Ø±Ùˆ';
 
   @override
-  String get removeAds => 'حذف تبلیغات';
+  String get removeAds => 'Ø­Ø°Ù ØªØ¨Ù„ÛŒØºØ§Øª';
 
   @override
-  String get unlockAll => 'باز کردن همه محتوا';
+  String get unlockAll => 'Ø¨Ø§Ø² Ú©Ø±Ø¯Ù† Ù‡Ù…Ù‡ Ù…Ø­ØªÙˆØ§';
 
   @override
-  String get exclusiveContent => 'محتوای انحصاری';
+  String get exclusiveContent => 'Ù…Ø­ØªÙˆØ§ÛŒ Ø§Ù†Ø­ØµØ§Ø±ÛŒ';
 
   @override
-  String get welcome => 'خوش آمدید';
+  String get welcome => 'Ø®ÙˆØ´ Ø¢Ù…Ø¯ÛŒØ¯';
 
   @override
-  String get getStarted => 'شروع کنید';
+  String get getStarted => 'Ø´Ø±ÙˆØ¹ Ú©Ù†ÛŒØ¯';
 
   @override
-  String get skip => 'رد کردن';
+  String get skip => 'Ø±Ø¯ Ú©Ø±Ø¯Ù†';
 
   @override
-  String get next => 'بعدی';
+  String get next => 'Ø¨Ø¹Ø¯ÛŒ';
 
   @override
-  String get done => 'انجام شد';
+  String get done => 'Ø§Ù†Ø¬Ø§Ù… Ø´Ø¯';
 
   @override
-  String get onboarding1Title => 'به راه الله خوش آمدید';
+  String get onboarding1Title => 'Ø¨Ù‡ Ø±Ø§Ù‡ Ø§Ù„Ù„Ù‡ Ø®ÙˆØ´ Ø¢Ù…Ø¯ÛŒØ¯';
 
   @override
   String get onboarding1Desc =>
-      'همراه کامل اسلامی شما برای اوقات نماز، قرآن و موارد دیگر';
+      'Ù‡Ù…Ø±Ø§Ù‡ Ú©Ø§Ù…Ù„ Ø§Ø³Ù„Ø§Ù…ÛŒ Ø´Ù…Ø§ Ø¨Ø±Ø§ÛŒ Ø§ÙˆÙ‚Ø§Øª Ù†Ù…Ø§Ø²ØŒ Ù‚Ø±Ø¢Ù† Ùˆ Ù…ÙˆØ§Ø±Ø¯ Ø¯ÛŒÚ¯Ø±';
 
   @override
-  String get onboarding2Title => 'اوقات نماز';
+  String get onboarding2Title => 'Ø§ÙˆÙ‚Ø§Øª Ù†Ù…Ø§Ø²';
 
   @override
-  String get onboarding2Desc => 'اوقات نماز دقیق بر اساس مکان شما';
+  String get onboarding2Desc =>
+      'Ø§ÙˆÙ‚Ø§Øª Ù†Ù…Ø§Ø² Ø¯Ù‚ÛŒÙ‚ Ø¨Ø± Ø§Ø³Ø§Ø³ Ù…Ú©Ø§Ù† Ø´Ù…Ø§';
 
   @override
-  String get onboarding3Title => 'قرآن و بیشتر';
+  String get onboarding3Title => 'Ù‚Ø±Ø¢Ù† Ùˆ Ø¨ÛŒØ´ØªØ±';
 
   @override
   String get onboarding3Desc =>
-      'قرآن بخوانید، خواندن خود را ردیابی کنید و محتوای اسلامی را کاوش کنید';
+      'Ù‚Ø±Ø¢Ù† Ø¨Ø®ÙˆØ§Ù†ÛŒØ¯ØŒ Ø®ÙˆØ§Ù†Ø¯Ù† Ø®ÙˆØ¯ Ø±Ø§ Ø±Ø¯ÛŒØ§Ø¨ÛŒ Ú©Ù†ÛŒØ¯ Ùˆ Ù…Ø­ØªÙˆØ§ÛŒ Ø§Ø³Ù„Ø§Ù…ÛŒ Ø±Ø§ Ú©Ø§ÙˆØ´ Ú©Ù†ÛŒØ¯';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -620,7 +624,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Current: $offsetÂ°';
   }
 
   @override

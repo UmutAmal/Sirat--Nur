@@ -21,6 +21,7 @@ import 'app_localizations_ba.dart';
 import 'app_localizations_be.dart';
 import 'app_localizations_bg.dart';
 import 'app_localizations_bh.dart';
+import 'app_localizations_bho.dart';
 import 'app_localizations_bi.dart';
 import 'app_localizations_bm.dart';
 import 'app_localizations_bn.dart';
@@ -65,6 +66,7 @@ import 'app_localizations_ha.dart';
 import 'app_localizations_haw.dart';
 import 'app_localizations_he.dart';
 import 'app_localizations_hi.dart';
+import 'app_localizations_hmn.dart';
 import 'app_localizations_ho.dart';
 import 'app_localizations_hr.dart';
 import 'app_localizations_ht.dart';
@@ -77,6 +79,7 @@ import 'app_localizations_ie.dart';
 import 'app_localizations_ig.dart';
 import 'app_localizations_ii.dart';
 import 'app_localizations_ik.dart';
+import 'app_localizations_ilo.dart';
 import 'app_localizations_io.dart';
 import 'app_localizations_is.dart';
 import 'app_localizations_it.dart';
@@ -93,6 +96,7 @@ import 'app_localizations_km.dart';
 import 'app_localizations_kn.dart';
 import 'app_localizations_ko.dart';
 import 'app_localizations_kr.dart';
+import 'app_localizations_kri.dart';
 import 'app_localizations_ks.dart';
 import 'app_localizations_ku.dart';
 import 'app_localizations_kv.dart';
@@ -106,13 +110,16 @@ import 'app_localizations_ln.dart';
 import 'app_localizations_lo.dart';
 import 'app_localizations_lt.dart';
 import 'app_localizations_lu.dart';
+import 'app_localizations_lus.dart';
 import 'app_localizations_lv.dart';
+import 'app_localizations_mai.dart';
 import 'app_localizations_mg.dart';
 import 'app_localizations_mh.dart';
 import 'app_localizations_mi.dart';
 import 'app_localizations_mk.dart';
 import 'app_localizations_ml.dart';
 import 'app_localizations_mn.dart';
+import 'app_localizations_mni.dart';
 import 'app_localizations_mr.dart';
 import 'app_localizations_ms.dart';
 import 'app_localizations_mt.dart';
@@ -126,6 +133,7 @@ import 'app_localizations_nl.dart';
 import 'app_localizations_nn.dart';
 import 'app_localizations_no.dart';
 import 'app_localizations_nr.dart';
+import 'app_localizations_nso.dart';
 import 'app_localizations_nv.dart';
 import 'app_localizations_ny.dart';
 import 'app_localizations_oc.dart';
@@ -294,6 +302,7 @@ abstract class AppLocalizations {
     Locale('be'),
     Locale('bg'),
     Locale('bh'),
+    Locale('bho'),
     Locale('bi'),
     Locale('bm'),
     Locale('bn'),
@@ -338,6 +347,7 @@ abstract class AppLocalizations {
     Locale('haw'),
     Locale('he'),
     Locale('hi'),
+    Locale('hmn'),
     Locale('ho'),
     Locale('hr'),
     Locale('ht'),
@@ -350,6 +360,7 @@ abstract class AppLocalizations {
     Locale('ig'),
     Locale('ii'),
     Locale('ik'),
+    Locale('ilo'),
     Locale('io'),
     Locale('is'),
     Locale('it'),
@@ -366,6 +377,7 @@ abstract class AppLocalizations {
     Locale('kn'),
     Locale('ko'),
     Locale('kr'),
+    Locale('kri'),
     Locale('ks'),
     Locale('ku'),
     Locale('kv'),
@@ -379,13 +391,16 @@ abstract class AppLocalizations {
     Locale('lo'),
     Locale('lt'),
     Locale('lu'),
+    Locale('lus'),
     Locale('lv'),
+    Locale('mai'),
     Locale('mg'),
     Locale('mh'),
     Locale('mi'),
     Locale('mk'),
     Locale('ml'),
     Locale('mn'),
+    Locale('mni'),
     Locale('mr'),
     Locale('ms'),
     Locale('mt'),
@@ -399,6 +414,7 @@ abstract class AppLocalizations {
     Locale('nn'),
     Locale('no'),
     Locale('nr'),
+    Locale('nso'),
     Locale('nv'),
     Locale('ny'),
     Locale('oc'),
@@ -471,7 +487,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'Sirat-ı Nur'**
+  /// **'Sirat-Ä± Nur'**
   String get appTitle;
 
   /// No description provided for @home.
@@ -1269,7 +1285,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboarding1Title.
   ///
   /// In en, this message translates to:
-  /// **'Welcome to Sirat-ı Nur'**
+  /// **'Welcome to Sirat-Ä± Nur'**
   String get onboarding1Title;
 
   /// No description provided for @onboarding1Desc.
@@ -1641,7 +1657,7 @@ abstract class AppLocalizations {
   /// No description provided for @currentOffset.
   ///
   /// In en, this message translates to:
-  /// **'Current: {offset}°'**
+  /// **'Current: {offset}Â°'**
   String currentOffset(Object offset);
 
   /// No description provided for @manualCorrectionDesc.
@@ -1726,6 +1742,7 @@ class _AppLocalizationsDelegate
     'be',
     'bg',
     'bh',
+    'bho',
     'bi',
     'bm',
     'bn',
@@ -1770,6 +1787,7 @@ class _AppLocalizationsDelegate
     'haw',
     'he',
     'hi',
+    'hmn',
     'ho',
     'hr',
     'ht',
@@ -1782,6 +1800,7 @@ class _AppLocalizationsDelegate
     'ig',
     'ii',
     'ik',
+    'ilo',
     'io',
     'is',
     'it',
@@ -1798,6 +1817,7 @@ class _AppLocalizationsDelegate
     'kn',
     'ko',
     'kr',
+    'kri',
     'ks',
     'ku',
     'kv',
@@ -1811,13 +1831,16 @@ class _AppLocalizationsDelegate
     'lo',
     'lt',
     'lu',
+    'lus',
     'lv',
+    'mai',
     'mg',
     'mh',
     'mi',
     'mk',
     'ml',
     'mn',
+    'mni',
     'mr',
     'ms',
     'mt',
@@ -1831,6 +1854,7 @@ class _AppLocalizationsDelegate
     'nn',
     'no',
     'nr',
+    'nso',
     'nv',
     'ny',
     'oc',
@@ -1951,6 +1975,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsBg();
     case 'bh':
       return AppLocalizationsBh();
+    case 'bho':
+      return AppLocalizationsBho();
     case 'bi':
       return AppLocalizationsBi();
     case 'bm':
@@ -2039,6 +2065,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsHe();
     case 'hi':
       return AppLocalizationsHi();
+    case 'hmn':
+      return AppLocalizationsHmn();
     case 'ho':
       return AppLocalizationsHo();
     case 'hr':
@@ -2063,6 +2091,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsIi();
     case 'ik':
       return AppLocalizationsIk();
+    case 'ilo':
+      return AppLocalizationsIlo();
     case 'io':
       return AppLocalizationsIo();
     case 'is':
@@ -2095,6 +2125,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsKo();
     case 'kr':
       return AppLocalizationsKr();
+    case 'kri':
+      return AppLocalizationsKri();
     case 'ks':
       return AppLocalizationsKs();
     case 'ku':
@@ -2121,8 +2153,12 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsLt();
     case 'lu':
       return AppLocalizationsLu();
+    case 'lus':
+      return AppLocalizationsLus();
     case 'lv':
       return AppLocalizationsLv();
+    case 'mai':
+      return AppLocalizationsMai();
     case 'mg':
       return AppLocalizationsMg();
     case 'mh':
@@ -2135,6 +2171,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsMl();
     case 'mn':
       return AppLocalizationsMn();
+    case 'mni':
+      return AppLocalizationsMni();
     case 'mr':
       return AppLocalizationsMr();
     case 'ms':
@@ -2161,6 +2199,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsNo();
     case 'nr':
       return AppLocalizationsNr();
+    case 'nso':
+      return AppLocalizationsNso();
     case 'nv':
       return AppLocalizationsNv();
     case 'ny':

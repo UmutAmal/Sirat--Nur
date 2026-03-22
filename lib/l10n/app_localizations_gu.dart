@@ -9,423 +9,440 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
-  String get appTitle => 'અલ્લાહનો માર્ગ';
+  String get appTitle => 'àª…àª²à«àª²àª¾àª¹àª¨à«‹ àª®àª¾àª°à«àª—';
 
   @override
-  String get home => 'ઘર';
+  String get home => 'àª˜àª°';
 
   @override
-  String get quran => 'કુરાન';
+  String get quran => 'àª•à«àª°àª¾àª¨';
 
   @override
-  String get qibla => 'કિબલા';
+  String get qibla => 'àª•àª¿àª¬àª²àª¾';
 
   @override
-  String get zikr => 'ઝિક્ર';
+  String get zikr => 'àªàª¿àª•à«àª°';
 
   @override
-  String get calendar => 'કેલેન્ડર';
+  String get calendar => 'àª•à«‡àª²à«‡àª¨à«àª¡àª°';
 
   @override
-  String get settings => 'સેટિંગ્સ';
+  String get settings => 'àª¸à«‡àªŸàª¿àª‚àª—à«àª¸';
 
   @override
-  String get nextPrayer => 'આગામી પ્રાર્થના';
+  String get nextPrayer => 'àª†àª—àª¾àª®à«€ àªªà«àª°àª¾àª°à«àª¥àª¨àª¾';
 
   @override
-  String get prayerTimes => 'પ્રાર્થનાના સમય';
+  String get prayerTimes => 'àªªà«àª°àª¾àª°à«àª¥àª¨àª¾àª¨àª¾ àª¸àª®àª¯';
 
   @override
-  String get continueReading => 'વાંચન ચાલુ રાખો';
+  String get continueReading => 'àªµàª¾àª‚àªšàª¨ àªšàª¾àª²à« àª°àª¾àª–à«‹';
 
   @override
-  String get getLifetimePro => 'આજીવન પ્રો મેળવો';
+  String get getLifetimePro => 'àª†àªœà«€àªµàª¨ àªªà«àª°à«‹ àª®à«‡àª³àªµà«‹';
 
   @override
-  String get unlockTajweed => 'તાજવીદ અને અદ્યતન સુવિધાઓને અનલૉક કરો';
+  String get unlockTajweed =>
+      'àª¤àª¾àªœàªµà«€àª¦ àª…àª¨à«‡ àª…àª¦à«àª¯àª¤àª¨ àª¸à«àªµàª¿àª§àª¾àª“àª¨à«‡ àª…àª¨àª²à«‰àª• àª•àª°à«‹';
 
   @override
-  String get prayerCalculation => 'પ્રાર્થના ગણતરી';
+  String get prayerCalculation => 'àªªà«àª°àª¾àª°à«àª¥àª¨àª¾ àª—àª£àª¤àª°à«€';
 
   @override
-  String get method => 'ગણતરી પદ્ધતિ';
+  String get method => 'àª—àª£àª¤àª°à«€ àªªàª¦à«àª§àª¤àª¿';
 
   @override
-  String get madhab => 'Asr ન્યાયિક પદ્ધતિ';
+  String get madhab => 'Asr àª¨à«àª¯àª¾àª¯àª¿àª• àªªàª¦à«àª§àª¤àª¿';
 
   @override
-  String get surahs => 'સુરાઓ';
+  String get surahs => 'àª¸à«àª°àª¾àª“';
 
   @override
-  String get ayahs => 'અયહાસ';
+  String get ayahs => 'àª…àª¯àª¹àª¾àª¸';
 
   @override
-  String get fajr => 'ફજર';
+  String get fajr => 'àª«àªœàª°';
 
   @override
-  String get sunrise => 'સૂર્યોદય';
+  String get sunrise => 'àª¸à«‚àª°à«àª¯à«‹àª¦àª¯';
 
   @override
-  String get dhuhr => 'ધુહર';
+  String get dhuhr => 'àª§à«àª¹àª°';
 
   @override
-  String get asr => 'અસ્ર';
+  String get asr => 'àª…àª¸à«àª°';
 
   @override
-  String get maghrib => 'મગરીબ';
+  String get maghrib => 'àª®àª—àª°à«€àª¬';
 
   @override
-  String get isha => 'ઈશા';
+  String get isha => 'àªˆàª¶àª¾';
 
   @override
-  String get dataStorage => 'ડેટા અને સ્ટોરેજ';
+  String get dataStorage => 'àª¡à«‡àªŸàª¾ àª…àª¨à«‡ àª¸à«àªŸà«‹àª°à«‡àªœ';
 
   @override
-  String get clearCache => 'કેશ સાફ કરો';
+  String get clearCache => 'àª•à«‡àª¶ àª¸àª¾àª« àª•àª°à«‹';
 
   @override
-  String get cacheClearedSuccess => 'કેશ સફળતાપૂર્વક સાફ કરી';
+  String get cacheClearedSuccess =>
+      'àª•à«‡àª¶ àª¸àª«àª³àª¤àª¾àªªà«‚àª°à«àªµàª• àª¸àª¾àª« àª•àª°à«€';
 
   @override
-  String get location => 'સ્થાન';
+  String get location => 'àª¸à«àª¥àª¾àª¨';
 
   @override
-  String get language => 'ભાષા';
+  String get language => 'àª­àª¾àª·àª¾';
 
   @override
-  String get selectLanguage => 'ભાષા પસંદ કરો';
+  String get selectLanguage => 'àª­àª¾àª·àª¾ àªªàª¸àª‚àª¦ àª•àª°à«‹';
 
   @override
-  String get searchLanguage => '180+ ભાષાઓ શોધો...';
+  String get searchLanguage => '180+ àª­àª¾àª·àª¾àª“ àª¶à«‹àª§à«‹...';
 
   @override
-  String get systemDefault => 'સિસ્ટમ ડિફોલ્ટ';
+  String get systemDefault => 'àª¸àª¿àª¸à«àªŸàª® àª¡àª¿àª«à«‹àª²à«àªŸ';
 
   @override
-  String get currentLocation => 'વર્તમાન સ્થાન (GPS)';
+  String get currentLocation => 'àªµàª°à«àª¤àª®àª¾àª¨ àª¸à«àª¥àª¾àª¨ (GPS)';
 
   @override
-  String get search => 'શોધો';
+  String get search => 'àª¶à«‹àª§à«‹';
 
   @override
-  String get searchHint => 'શોધો...';
+  String get searchHint => 'àª¶à«‹àª§à«‹...';
 
   @override
-  String get noResults => 'કોઈ પરિણામો મળ્યા નથી';
+  String get noResults =>
+      'àª•à«‹àªˆ àªªàª°àª¿àª£àª¾àª®à«‹ àª®àª³à«àª¯àª¾ àª¨àª¥à«€';
 
   @override
-  String get loading => 'લોડ કરી રહ્યું છે...';
+  String get loading => 'àª²à«‹àª¡ àª•àª°à«€ àª°àª¹à«àª¯à«àª‚ àª›à«‡...';
 
   @override
-  String get error => 'ભૂલ';
+  String get error => 'àª­à«‚àª²';
 
   @override
-  String get retry => 'ફરી પ્રયાસ કરો';
+  String get retry => 'àª«àª°à«€ àªªà«àª°àª¯àª¾àª¸ àª•àª°à«‹';
 
   @override
-  String get cancel => 'રદ કરો';
+  String get cancel => 'àª°àª¦ àª•àª°à«‹';
 
   @override
-  String get save => 'સાચવો';
+  String get save => 'àª¸àª¾àªšàªµà«‹';
 
   @override
-  String get delete => 'કાઢી નાખો';
+  String get delete => 'àª•àª¾àª¢à«€ àª¨àª¾àª–à«‹';
 
   @override
-  String get edit => 'સંપાદિત કરો';
+  String get edit => 'àª¸àª‚àªªàª¾àª¦àª¿àª¤ àª•àª°à«‹';
 
   @override
-  String get close => 'બંધ કરો';
+  String get close => 'àª¬àª‚àª§ àª•àª°à«‹';
 
   @override
-  String get ok => 'ઠીક છે';
+  String get ok => 'àª à«€àª• àª›à«‡';
 
   @override
-  String get yes => 'હા';
+  String get yes => 'àª¹àª¾';
 
   @override
-  String get no => 'ના';
+  String get no => 'àª¨àª¾';
 
   @override
-  String get surah => 'સુરા';
+  String get surah => 'àª¸à«àª°àª¾';
 
   @override
-  String get juz => 'જુઝ';
+  String get juz => 'àªœà«àª';
 
   @override
-  String get page => 'પૃષ્ઠ';
+  String get page => 'àªªà«ƒàª·à«àª ';
 
   @override
-  String get reading => 'વાંચન';
+  String get reading => 'àªµàª¾àª‚àªšàª¨';
 
   @override
-  String get recitation => 'પઠન';
+  String get recitation => 'àªªàª àª¨';
 
   @override
-  String get translation => 'અનુવાદ';
+  String get translation => 'àª…àª¨à«àªµàª¾àª¦';
 
   @override
-  String get tafsir => 'તફસીર';
+  String get tafsir => 'àª¤àª«àª¸à«€àª°';
 
   @override
-  String get bookmarks => 'બુકમાર્ક્સ';
+  String get bookmarks => 'àª¬à«àª•àª®àª¾àª°à«àª•à«àª¸';
 
   @override
-  String get addBookmark => 'બુકમાર્ક ઉમેરો';
+  String get addBookmark => 'àª¬à«àª•àª®àª¾àª°à«àª• àª‰àª®à«‡àª°à«‹';
 
   @override
-  String get removeBookmark => 'બુકમાર્ક દૂર કરો';
+  String get removeBookmark => 'àª¬à«àª•àª®àª¾àª°à«àª• àª¦à«‚àª° àª•àª°à«‹';
 
   @override
-  String get lastRead => 'છેલ્લું વાંચ્યું';
+  String get lastRead => 'àª›à«‡àª²à«àª²à«àª‚ àªµàª¾àª‚àªšà«àª¯à«àª‚';
 
   @override
-  String get dailyZikr => 'દૈનિક ઝિક્ર';
+  String get dailyZikr => 'àª¦à«ˆàª¨àª¿àª• àªàª¿àª•à«àª°';
 
   @override
-  String get morningZikr => 'સવારનો ઝિક્ર';
+  String get morningZikr => 'àª¸àªµàª¾àª°àª¨à«‹ àªàª¿àª•à«àª°';
 
   @override
-  String get eveningZikr => 'સાંજે ઝિક્ર';
+  String get eveningZikr => 'àª¸àª¾àª‚àªœà«‡ àªàª¿àª•à«àª°';
 
   @override
-  String get tasbih => 'તસ્બીહ';
+  String get tasbih => 'àª¤àª¸à«àª¬à«€àª¹';
 
   @override
-  String get ahkab => 'અહકામ';
+  String get ahkab => 'àª…àª¹àª•àª¾àª®';
 
   @override
-  String get masaail => 'મસાઇલ';
+  String get masaail => 'àª®àª¸àª¾àª‡àª²';
 
   @override
-  String get hadith => 'હદીસ';
+  String get hadith => 'àª¹àª¦à«€àª¸';
 
   @override
-  String get hadithCollection => 'હદીસ સંગ્રહ';
+  String get hadithCollection => 'àª¹àª¦à«€àª¸ àª¸àª‚àª—à«àª°àª¹';
 
   @override
-  String get hadithBooks => 'હદીસ પુસ્તકો';
+  String get hadithBooks => 'àª¹àª¦à«€àª¸ àªªà«àª¸à«àª¤àª•à«‹';
 
   @override
-  String get searchHadith => 'હદીસ શોધો';
+  String get searchHadith => 'àª¹àª¦à«€àª¸ àª¶à«‹àª§à«‹';
 
   @override
-  String get asmaulHusna => 'અસમા-ઉલ-હુસ્ના';
+  String get asmaulHusna => 'àª…àª¸àª®àª¾-àª‰àª²-àª¹à«àª¸à«àª¨àª¾';
 
   @override
-  String get namesOfAllah => 'અલ્લાહના નામો';
+  String get namesOfAllah => 'àª…àª²à«àª²àª¾àª¹àª¨àª¾ àª¨àª¾àª®à«‹';
 
   @override
-  String get liveTv => 'લાઈવ ટીવી';
+  String get liveTv => 'àª²àª¾àªˆàªµ àªŸà«€àªµà«€';
 
   @override
-  String get watchLive => 'લાઈવ જુઓ';
+  String get watchLive => 'àª²àª¾àªˆàªµ àªœà«àª“';
 
   @override
-  String get streamError => 'સ્ટ્રીમ ભૂલ';
+  String get streamError => 'àª¸à«àªŸà«àª°à«€àª® àª­à«‚àª²';
 
   @override
-  String get reload => 'ફરીથી લોડ કરો';
+  String get reload => 'àª«àª°à«€àª¥à«€ àª²à«‹àª¡ àª•àª°à«‹';
 
   @override
-  String get openInYoutube => 'YouTube માં ખોલો';
+  String get openInYoutube => 'YouTube àª®àª¾àª‚ àª–à«‹àª²à«‹';
 
   @override
-  String get ibadahTracker => 'Ibadah ટ્રેકર';
+  String get ibadahTracker => 'Ibadah àªŸà«àª°à«‡àª•àª°';
 
   @override
-  String get fasting => 'ઉપવાસ';
+  String get fasting => 'àª‰àªªàªµàª¾àª¸';
 
   @override
-  String get quranReading => 'કુરાન વાંચન';
+  String get quranReading => 'àª•à«àª°àª¾àª¨ àªµàª¾àª‚àªšàª¨';
 
   @override
-  String get prayers => 'પ્રાર્થનાઓ';
+  String get prayers => 'àªªà«àª°àª¾àª°à«àª¥àª¨àª¾àª“';
 
   @override
-  String get dhikrCount => 'ધિકર ગણતરી';
+  String get dhikrCount => 'àª§àª¿àª•àª° àª—àª£àª¤àª°à«€';
 
   @override
-  String get weeklyProgress => 'સાપ્તાહિક પ્રગતિ';
+  String get weeklyProgress => 'àª¸àª¾àªªà«àª¤àª¾àª¹àª¿àª• àªªà«àª°àª—àª¤àª¿';
 
   @override
-  String get monthlyProgress => 'માસિક પ્રગતિ';
+  String get monthlyProgress => 'àª®àª¾àª¸àª¿àª• àªªà«àª°àª—àª¤àª¿';
 
   @override
-  String get statistics => 'આંકડા';
+  String get statistics => 'àª†àª‚àª•àª¡àª¾';
 
   @override
-  String get hijriCalendar => 'હિજરી કેલેન્ડર';
+  String get hijriCalendar => 'àª¹àª¿àªœàª°à«€ àª•à«‡àª²à«‡àª¨à«àª¡àª°';
 
   @override
-  String get gregorianCalendar => 'ગ્રેગોરિયન કેલેન્ડર';
+  String get gregorianCalendar =>
+      'àª—à«àª°à«‡àª—à«‹àª°àª¿àª¯àª¨ àª•à«‡àª²à«‡àª¨à«àª¡àª°';
 
   @override
-  String get today => 'આજે';
+  String get today => 'àª†àªœà«‡';
 
   @override
-  String get tomorrow => 'કાલે';
+  String get tomorrow => 'àª•àª¾àª²à«‡';
 
   @override
-  String get yesterday => 'ગઈકાલે';
+  String get yesterday => 'àª—àªˆàª•àª¾àª²à«‡';
 
   @override
-  String get specialDays => 'ખાસ દિવસો';
+  String get specialDays => 'àª–àª¾àª¸ àª¦àª¿àªµàª¸à«‹';
 
   @override
-  String get ramadan => 'રમઝાન';
+  String get ramadan => 'àª°àª®àªàª¾àª¨';
 
   @override
-  String get eidAlFitr => 'ઈદ અલ-ફિત્ર';
+  String get eidAlFitr => 'àªˆàª¦ àª…àª²-àª«àª¿àª¤à«àª°';
 
   @override
-  String get eidAlAdha => 'ઈદ અલ-અધા';
+  String get eidAlAdha => 'àªˆàª¦ àª…àª²-àª…àª§àª¾';
 
   @override
-  String get laylatAlQadr => 'લયલાત અલ-કદર';
+  String get laylatAlQadr => 'àª²àª¯àª²àª¾àª¤ àª…àª²-àª•àª¦àª°';
 
   @override
-  String get qiblaDirection => 'કિબલા દિશા';
+  String get qiblaDirection => 'àª•àª¿àª¬àª²àª¾ àª¦àª¿àª¶àª¾';
 
   @override
-  String get compass => 'હોકાયંત્ર';
+  String get compass => 'àª¹à«‹àª•àª¾àª¯àª‚àª¤à«àª°';
 
   @override
-  String get degrees => 'ડિગ્રી';
+  String get degrees => 'àª¡àª¿àª—à«àª°à«€';
 
   @override
-  String get north => 'ઉત્તર';
+  String get north => 'àª‰àª¤à«àª¤àª°';
 
   @override
-  String get qiblaFound => 'કિબલા મળી!';
+  String get qiblaFound => 'àª•àª¿àª¬àª²àª¾ àª®àª³à«€!';
 
   @override
-  String get turnDevice => 'તમારા ઉપકરણને કિબલા તરફ વળો';
+  String get turnDevice =>
+      'àª¤àª®àª¾àª°àª¾ àª‰àªªàª•àª°àª£àª¨à«‡ àª•àª¿àª¬àª²àª¾ àª¤àª°àª« àªµàª³à«‹';
 
   @override
-  String get notifications => 'સૂચનાઓ';
+  String get notifications => 'àª¸à«‚àªšàª¨àª¾àª“';
 
   @override
-  String get prayerNotifications => 'પ્રાર્થના સૂચનાઓ';
+  String get prayerNotifications =>
+      'àªªà«àª°àª¾àª°à«àª¥àª¨àª¾ àª¸à«‚àªšàª¨àª¾àª“';
 
   @override
-  String get enableNotifications => 'સૂચનાઓ સક્ષમ કરો';
+  String get enableNotifications =>
+      'àª¸à«‚àªšàª¨àª¾àª“ àª¸àª•à«àª·àª® àª•àª°à«‹';
 
   @override
-  String get notificationTime => 'સૂચના સમય';
+  String get notificationTime => 'àª¸à«‚àªšàª¨àª¾ àª¸àª®àª¯';
 
   @override
-  String get beforePrayer => 'પ્રાર્થના પહેલા મિનિટો';
+  String get beforePrayer =>
+      'àªªà«àª°àª¾àª°à«àª¥àª¨àª¾ àªªàª¹à«‡àª²àª¾ àª®àª¿àª¨àª¿àªŸà«‹';
 
   @override
-  String get theme => 'થીમ';
+  String get theme => 'àª¥à«€àª®';
 
   @override
-  String get lightMode => 'લાઇટ મોડ';
+  String get lightMode => 'àª²àª¾àª‡àªŸ àª®à«‹àª¡';
 
   @override
-  String get darkMode => 'ડાર્ક મોડ';
+  String get darkMode => 'àª¡àª¾àª°à«àª• àª®à«‹àª¡';
 
   @override
-  String get systemTheme => 'સિસ્ટમ થીમ';
+  String get systemTheme => 'àª¸àª¿àª¸à«àªŸàª® àª¥à«€àª®';
 
   @override
-  String get about => 'વિશે';
+  String get about => 'àªµàª¿àª¶à«‡';
 
   @override
-  String get version => 'સંસ્કરણ';
+  String get version => 'àª¸àª‚àª¸à«àª•àª°àª£';
 
   @override
-  String get privacyPolicy => 'ગોપનીયતા નીતિ';
+  String get privacyPolicy => 'àª—à«‹àªªàª¨à«€àª¯àª¤àª¾ àª¨à«€àª¤àª¿';
 
   @override
-  String get termsOfService => 'સેવાની શરતો';
+  String get termsOfService => 'àª¸à«‡àªµàª¾àª¨à«€ àª¶àª°àª¤à«‹';
 
   @override
-  String get contactUs => 'અમારો સંપર્ક કરો';
+  String get contactUs => 'àª…àª®àª¾àª°à«‹ àª¸àª‚àªªàª°à«àª• àª•àª°à«‹';
 
   @override
-  String get rateApp => 'એપ્લિકેશનને રેટ કરો';
+  String get rateApp => 'àªàªªà«àª²àª¿àª•à«‡àª¶àª¨àª¨à«‡ àª°à«‡àªŸ àª•àª°à«‹';
 
   @override
-  String get shareApp => 'એપ શેર કરો';
+  String get shareApp => 'àªàªª àª¶à«‡àª° àª•àª°à«‹';
 
   @override
-  String get downloadManager => 'મેનેજર ડાઉનલોડ કરો';
+  String get downloadManager =>
+      'àª®à«‡àª¨à«‡àªœàª° àª¡àª¾àª‰àª¨àª²à«‹àª¡ àª•àª°à«‹';
 
   @override
-  String get downloads => 'ડાઉનલોડ્સ';
+  String get downloads => 'àª¡àª¾àª‰àª¨àª²à«‹àª¡à«àª¸';
 
   @override
-  String get downloading => 'ડાઉનલોડ કરી રહ્યું છે...';
+  String get downloading =>
+      'àª¡àª¾àª‰àª¨àª²à«‹àª¡ àª•àª°à«€ àª°àª¹à«àª¯à«àª‚ àª›à«‡...';
 
   @override
-  String get downloadComplete => 'ડાઉનલોડ પૂર્ણ';
+  String get downloadComplete => 'àª¡àª¾àª‰àª¨àª²à«‹àª¡ àªªà«‚àª°à«àª£';
 
   @override
-  String get downloadFailed => 'ડાઉનલોડ નિષ્ફળ થયું';
+  String get downloadFailed =>
+      'àª¡àª¾àª‰àª¨àª²à«‹àª¡ àª¨àª¿àª·à«àª«àª³ àª¥àª¯à«àª‚';
 
   @override
-  String get offlineMode => 'ઑફલાઇન મોડ';
+  String get offlineMode => 'àª‘àª«àª²àª¾àª‡àª¨ àª®à«‹àª¡';
 
   @override
-  String get noInternet => 'ઇન્ટરનેટ કનેક્શન નથી';
+  String get noInternet =>
+      'àª‡àª¨à«àªŸàª°àª¨à«‡àªŸ àª•àª¨à«‡àª•à«àª¶àª¨ àª¨àª¥à«€';
 
   @override
-  String get checkConnection => 'કૃપા કરીને તમારું કનેક્શન તપાસો';
+  String get checkConnection =>
+      'àª•à«ƒàªªàª¾ àª•àª°à«€àª¨à«‡ àª¤àª®àª¾àª°à«àª‚ àª•àª¨à«‡àª•à«àª¶àª¨ àª¤àªªàª¾àª¸à«‹';
 
   @override
-  String get premium => 'પ્રીમિયમ';
+  String get premium => 'àªªà«àª°à«€àª®àª¿àª¯àª®';
 
   @override
-  String get upgradeToPro => 'પ્રો પર અપગ્રેડ કરો';
+  String get upgradeToPro =>
+      'àªªà«àª°à«‹ àªªàª° àª…àªªàª—à«àª°à«‡àª¡ àª•àª°à«‹';
 
   @override
-  String get proFeatures => 'પ્રો ફીચર્સ';
+  String get proFeatures => 'àªªà«àª°à«‹ àª«à«€àªšàª°à«àª¸';
 
   @override
-  String get removeAds => 'જાહેરાતો દૂર કરો';
+  String get removeAds => 'àªœàª¾àª¹à«‡àª°àª¾àª¤à«‹ àª¦à«‚àª° àª•àª°à«‹';
 
   @override
-  String get unlockAll => 'બધી સામગ્રીને અનલૉક કરો';
+  String get unlockAll =>
+      'àª¬àª§à«€ àª¸àª¾àª®àª—à«àª°à«€àª¨à«‡ àª…àª¨àª²à«‰àª• àª•àª°à«‹';
 
   @override
-  String get exclusiveContent => 'વિશિષ્ટ સામગ્રી';
+  String get exclusiveContent => 'àªµàª¿àª¶àª¿àª·à«àªŸ àª¸àª¾àª®àª—à«àª°à«€';
 
   @override
-  String get welcome => 'સ્વાગત છે';
+  String get welcome => 'àª¸à«àªµàª¾àª—àª¤ àª›à«‡';
 
   @override
-  String get getStarted => 'પ્રારંભ કરો';
+  String get getStarted => 'àªªà«àª°àª¾àª°àª‚àª­ àª•àª°à«‹';
 
   @override
-  String get skip => 'છોડો';
+  String get skip => 'àª›à«‹àª¡à«‹';
 
   @override
-  String get next => 'આગળ';
+  String get next => 'àª†àª—àª³';
 
   @override
-  String get done => 'થઈ ગયું';
+  String get done => 'àª¥àªˆ àª—àª¯à«àª‚';
 
   @override
-  String get onboarding1Title => 'અલ્લાહના માર્ગમાં આપનું સ્વાગત છે';
+  String get onboarding1Title =>
+      'àª…àª²à«àª²àª¾àª¹àª¨àª¾ àª®àª¾àª°à«àª—àª®àª¾àª‚ àª†àªªàª¨à«àª‚ àª¸à«àªµàª¾àª—àª¤ àª›à«‡';
 
   @override
   String get onboarding1Desc =>
-      'પ્રાર્થનાના સમય, કુરાન અને વધુ માટે તમારી સંપૂર્ણ ઇસ્લામિક સાથી એપ્લિકેશન';
+      'àªªà«àª°àª¾àª°à«àª¥àª¨àª¾àª¨àª¾ àª¸àª®àª¯, àª•à«àª°àª¾àª¨ àª…àª¨à«‡ àªµàª§à« àª®àª¾àªŸà«‡ àª¤àª®àª¾àª°à«€ àª¸àª‚àªªà«‚àª°à«àª£ àª‡àª¸à«àª²àª¾àª®àª¿àª• àª¸àª¾àª¥à«€ àªàªªà«àª²àª¿àª•à«‡àª¶àª¨';
 
   @override
-  String get onboarding2Title => 'પ્રાર્થનાના સમય';
+  String get onboarding2Title => 'àªªà«àª°àª¾àª°à«àª¥àª¨àª¾àª¨àª¾ àª¸àª®àª¯';
 
   @override
-  String get onboarding2Desc => 'તમારા સ્થાનના આધારે પ્રાર્થનાના ચોક્કસ સમય';
+  String get onboarding2Desc =>
+      'àª¤àª®àª¾àª°àª¾ àª¸à«àª¥àª¾àª¨àª¨àª¾ àª†àª§àª¾àª°à«‡ àªªà«àª°àª¾àª°à«àª¥àª¨àª¾àª¨àª¾ àªšà«‹àª•à«àª•àª¸ àª¸àª®àª¯';
 
   @override
-  String get onboarding3Title => 'કુરાન અને વધુ';
+  String get onboarding3Title => 'àª•à«àª°àª¾àª¨ àª…àª¨à«‡ àªµàª§à«';
 
   @override
   String get onboarding3Desc =>
-      'કુરાન વાંચો, તમારા વાંચનને ટ્રૅક કરો અને ઇસ્લામિક સામગ્રીનું અન્વેષણ કરો';
+      'àª•à«àª°àª¾àª¨ àªµàª¾àª‚àªšà«‹, àª¤àª®àª¾àª°àª¾ àªµàª¾àª‚àªšàª¨àª¨à«‡ àªŸà«àª°à«…àª• àª•àª°à«‹ àª…àª¨à«‡ àª‡àª¸à«àª²àª¾àª®àª¿àª• àª¸àª¾àª®àª—à«àª°à«€àª¨à«àª‚ àª…àª¨à«àªµà«‡àª·àª£ àª•àª°à«‹';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -620,7 +637,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Current: $offsetÂ°';
   }
 
   @override

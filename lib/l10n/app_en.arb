@@ -1,6 +1,6 @@
-{
+﻿{
   "@@locale": "en",
-  "appTitle": "Sirat-ı Nur",
+  "appTitle": "Sirat-Ä± Nur",
   "home": "Home",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -133,7 +133,7 @@
   "skip": "Skip",
   "next": "Next",
   "done": "Done",
-  "onboarding1Title": "Welcome to Sirat-ı Nur",
+  "onboarding1Title": "Welcome to Sirat-Ä± Nur",
   "onboarding1Desc": "Your complete Islamic companion app for prayer times, Quran, and more",
   "onboarding2Title": "Prayer Times",
   "onboarding2Desc": "Accurate prayer times based on your location",
@@ -195,7 +195,7 @@
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
   "calibrationOffset": "Calibration Offset",
-  "currentOffset": "Current: {offset}°",
+  "currentOffset": "Current: {offset}Â°",
   "manualCorrectionDesc": "Adjust if your compass needs a manual correction. Positive values rotate clockwise.",
   "apply": "Apply",
   "resetOnboarding": "Reset Onboarding",

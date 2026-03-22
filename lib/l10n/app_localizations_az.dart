@@ -9,7 +9,7 @@ class AppLocalizationsAz extends AppLocalizations {
   AppLocalizationsAz([String locale = 'az']) : super(locale);
 
   @override
-  String get appTitle => 'Allahın yolu';
+  String get appTitle => 'AllahÄ±n yolu';
 
   @override
   String get home => 'Ev';
@@ -18,91 +18,91 @@ class AppLocalizationsAz extends AppLocalizations {
   String get quran => 'Quran';
 
   @override
-  String get qibla => 'qiblə';
+  String get qibla => 'qiblÉ™';
 
   @override
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'Təqvim';
+  String get calendar => 'TÉ™qvim';
 
   @override
-  String get settings => 'Parametrlər';
+  String get settings => 'ParametrlÉ™r';
 
   @override
-  String get nextPrayer => 'Növbəti Namaz';
+  String get nextPrayer => 'NÃ¶vbÉ™ti Namaz';
 
   @override
-  String get prayerTimes => 'Namaz vaxtları';
+  String get prayerTimes => 'Namaz vaxtlarÄ±';
 
   @override
-  String get continueReading => 'Oxumağa Davam et';
+  String get continueReading => 'OxumaÄŸa Davam et';
 
   @override
-  String get getLifetimePro => 'Lifetime Pro əldə edin';
+  String get getLifetimePro => 'Lifetime Pro É™ldÉ™ edin';
 
   @override
-  String get unlockTajweed => 'Tajweed və Qabaqcıl Xüsusiyyətləri açın';
+  String get unlockTajweed => 'Tajweed vÉ™ QabaqcÄ±l XÃ¼susiyyÉ™tlÉ™ri aÃ§Ä±n';
 
   @override
-  String get prayerCalculation => 'Namazın hesablanması';
+  String get prayerCalculation => 'NamazÄ±n hesablanmasÄ±';
 
   @override
   String get method => 'Hesablama metodu';
 
   @override
-  String get madhab => 'Əsr hüquq üsulu';
+  String get madhab => 'Æsr hÃ¼quq Ã¼sulu';
 
   @override
-  String get surahs => 'surələr';
+  String get surahs => 'surÉ™lÉ™r';
 
   @override
-  String get ayahs => 'Ayələr';
+  String get ayahs => 'AyÉ™lÉ™r';
 
   @override
-  String get fajr => 'Sübh';
+  String get fajr => 'SÃ¼bh';
 
   @override
-  String get sunrise => 'Günəşin doğuşu';
+  String get sunrise => 'GÃ¼nÉ™ÅŸin doÄŸuÅŸu';
 
   @override
-  String get dhuhr => 'Zöhr';
+  String get dhuhr => 'ZÃ¶hr';
 
   @override
-  String get asr => 'Əsr';
+  String get asr => 'Æsr';
 
   @override
-  String get maghrib => 'Mağrib';
+  String get maghrib => 'MaÄŸrib';
 
   @override
-  String get isha => 'İşa';
+  String get isha => 'Ä°ÅŸa';
 
   @override
-  String get dataStorage => 'Məlumat və Saxlama';
+  String get dataStorage => 'MÉ™lumat vÉ™ Saxlama';
 
   @override
-  String get clearCache => 'Keşi təmizləyin';
+  String get clearCache => 'KeÅŸi tÉ™mizlÉ™yin';
 
   @override
-  String get cacheClearedSuccess => 'Keş uğurla təmizləndi';
+  String get cacheClearedSuccess => 'KeÅŸ uÄŸurla tÉ™mizlÉ™ndi';
 
   @override
-  String get location => 'Məkan';
+  String get location => 'MÉ™kan';
 
   @override
   String get language => 'Dil';
 
   @override
-  String get selectLanguage => 'Dil seçin';
+  String get selectLanguage => 'Dil seÃ§in';
 
   @override
-  String get searchLanguage => '180+ dildə axtar...';
+  String get searchLanguage => '180+ dildÉ™ axtar...';
 
   @override
   String get systemDefault => 'Sistem Defolt';
 
   @override
-  String get currentLocation => 'Cari Məkan (GPS)';
+  String get currentLocation => 'Cari MÉ™kan (GPS)';
 
   @override
   String get search => 'Axtar';
@@ -111,19 +111,19 @@ class AppLocalizationsAz extends AppLocalizations {
   String get searchHint => 'Axtar...';
 
   @override
-  String get noResults => 'Heç bir nəticə tapılmadı';
+  String get noResults => 'HeÃ§ bir nÉ™ticÉ™ tapÄ±lmadÄ±';
 
   @override
-  String get loading => 'Yüklənir...';
+  String get loading => 'YÃ¼klÉ™nir...';
 
   @override
-  String get error => 'Xəta';
+  String get error => 'XÉ™ta';
 
   @override
-  String get retry => 'Yenidən cəhd edin';
+  String get retry => 'YenidÉ™n cÉ™hd edin';
 
   @override
-  String get cancel => 'Ləğv et';
+  String get cancel => 'LÉ™ÄŸv et';
 
   @override
   String get save => 'Saxla';
@@ -132,106 +132,106 @@ class AppLocalizationsAz extends AppLocalizations {
   String get delete => 'Sil';
 
   @override
-  String get edit => 'Redaktə et';
+  String get edit => 'RedaktÉ™ et';
 
   @override
-  String get close => 'Bağlayın';
+  String get close => 'BaÄŸlayÄ±n';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Bəli';
+  String get yes => 'BÉ™li';
 
   @override
   String get no => 'yox';
 
   @override
-  String get surah => 'surə';
+  String get surah => 'surÉ™';
 
   @override
   String get juz => 'Juz';
 
   @override
-  String get page => 'Səhifə';
+  String get page => 'SÉ™hifÉ™';
 
   @override
   String get reading => 'Oxumaq';
 
   @override
-  String get recitation => 'Qiraət';
+  String get recitation => 'QiraÉ™t';
 
   @override
-  String get translation => 'Tərcümə';
+  String get translation => 'TÉ™rcÃ¼mÉ™';
 
   @override
-  String get tafsir => 'Təfsir';
+  String get tafsir => 'TÉ™fsir';
 
   @override
-  String get bookmarks => 'Əlfəcinlər';
+  String get bookmarks => 'ÆlfÉ™cinlÉ™r';
 
   @override
-  String get addBookmark => 'Əlfəcin əlavə edin';
+  String get addBookmark => 'ÆlfÉ™cin É™lavÉ™ edin';
 
   @override
-  String get removeBookmark => 'Əlfəcin silin';
+  String get removeBookmark => 'ÆlfÉ™cin silin';
 
   @override
   String get lastRead => 'Son Oxu';
 
   @override
-  String get dailyZikr => 'Gündəlik Zikr';
+  String get dailyZikr => 'GÃ¼ndÉ™lik Zikr';
 
   @override
-  String get morningZikr => 'Səhər Zikr';
+  String get morningZikr => 'SÉ™hÉ™r Zikr';
 
   @override
-  String get eveningZikr => 'Axşam Zikr';
+  String get eveningZikr => 'AxÅŸam Zikr';
 
   @override
-  String get tasbih => 'Təsbih';
+  String get tasbih => 'TÉ™sbih';
 
   @override
-  String get ahkab => 'Əhkam';
+  String get ahkab => 'Æhkam';
 
   @override
-  String get masaail => 'Məsail';
+  String get masaail => 'MÉ™sail';
 
   @override
-  String get hadith => 'hədis';
+  String get hadith => 'hÉ™dis';
 
   @override
-  String get hadithCollection => 'Hədislər toplusu';
+  String get hadithCollection => 'HÉ™dislÉ™r toplusu';
 
   @override
-  String get hadithBooks => 'Hədis kitabları';
+  String get hadithBooks => 'HÉ™dis kitablarÄ±';
 
   @override
-  String get searchHadith => 'Hədis axtarın';
+  String get searchHadith => 'HÉ™dis axtarÄ±n';
 
   @override
-  String get asmaulHusna => 'Əsma-ül-Hüsna';
+  String get asmaulHusna => 'Æsma-Ã¼l-HÃ¼sna';
 
   @override
-  String get namesOfAllah => 'Allahın adları';
+  String get namesOfAllah => 'AllahÄ±n adlarÄ±';
 
   @override
-  String get liveTv => 'Canlı TV';
+  String get liveTv => 'CanlÄ± TV';
 
   @override
-  String get watchLive => 'Canlı izlə';
+  String get watchLive => 'CanlÄ± izlÉ™';
 
   @override
-  String get streamError => 'Yayım xətası';
+  String get streamError => 'YayÄ±m xÉ™tasÄ±';
 
   @override
-  String get reload => 'Yenidən yükləyin';
+  String get reload => 'YenidÉ™n yÃ¼klÉ™yin';
 
   @override
-  String get openInYoutube => 'YouTube-da açın';
+  String get openInYoutube => 'YouTube-da aÃ§Ä±n';
 
   @override
-  String get ibadahTracker => 'Ibadah İzləyicisi';
+  String get ibadahTracker => 'Ibadah Ä°zlÉ™yicisi';
 
   @override
   String get fasting => 'Oruc tutmaq';
@@ -243,189 +243,189 @@ class AppLocalizationsAz extends AppLocalizations {
   String get prayers => 'Dualar';
 
   @override
-  String get dhikrCount => 'Zikr sayı';
+  String get dhikrCount => 'Zikr sayÄ±';
 
   @override
-  String get weeklyProgress => 'Həftəlik Tərəqqi';
+  String get weeklyProgress => 'HÉ™ftÉ™lik TÉ™rÉ™qqi';
 
   @override
-  String get monthlyProgress => 'Aylıq tərəqqi';
+  String get monthlyProgress => 'AylÄ±q tÉ™rÉ™qqi';
 
   @override
   String get statistics => 'Statistika';
 
   @override
-  String get hijriCalendar => 'Hicri Təqvim';
+  String get hijriCalendar => 'Hicri TÉ™qvim';
 
   @override
-  String get gregorianCalendar => 'Qriqorian təqvimi';
+  String get gregorianCalendar => 'Qriqorian tÉ™qvimi';
 
   @override
-  String get today => 'Bu gün';
+  String get today => 'Bu gÃ¼n';
 
   @override
   String get tomorrow => 'Sabah';
 
   @override
-  String get yesterday => 'Dünən';
+  String get yesterday => 'DÃ¼nÉ™n';
 
   @override
-  String get specialDays => 'Xüsusi Günlər';
+  String get specialDays => 'XÃ¼susi GÃ¼nlÉ™r';
 
   @override
   String get ramadan => 'Ramazan';
 
   @override
-  String get eidAlFitr => 'Fitr bayramı';
+  String get eidAlFitr => 'Fitr bayramÄ±';
 
   @override
-  String get eidAlAdha => 'Qurban bayramı';
+  String get eidAlAdha => 'Qurban bayramÄ±';
 
   @override
-  String get laylatAlQadr => 'Qədr gecəsi';
+  String get laylatAlQadr => 'QÉ™dr gecÉ™si';
 
   @override
-  String get qiblaDirection => 'Qiblə istiqaməti';
+  String get qiblaDirection => 'QiblÉ™ istiqamÉ™ti';
 
   @override
   String get compass => 'Kompas';
 
   @override
-  String get degrees => 'dərəcə';
+  String get degrees => 'dÉ™rÉ™cÉ™';
 
   @override
-  String get north => 'Şimal';
+  String get north => 'Åimal';
 
   @override
-  String get qiblaFound => 'Qiblə tapıldı!';
+  String get qiblaFound => 'QiblÉ™ tapÄ±ldÄ±!';
 
   @override
-  String get turnDevice => 'Cihazınızı qibləyə tərəf çevirin';
+  String get turnDevice => 'CihazÄ±nÄ±zÄ± qiblÉ™yÉ™ tÉ™rÉ™f Ã§evirin';
 
   @override
-  String get notifications => 'Bildirişlər';
+  String get notifications => 'BildiriÅŸlÉ™r';
 
   @override
-  String get prayerNotifications => 'Namaz Bildirişləri';
+  String get prayerNotifications => 'Namaz BildiriÅŸlÉ™ri';
 
   @override
-  String get enableNotifications => 'Bildirişləri aktivləşdirin';
+  String get enableNotifications => 'BildiriÅŸlÉ™ri aktivlÉ™ÅŸdirin';
 
   @override
-  String get notificationTime => 'Bildiriş vaxtı';
+  String get notificationTime => 'BildiriÅŸ vaxtÄ±';
 
   @override
-  String get beforePrayer => 'dəqiqə namazdan əvvəl';
+  String get beforePrayer => 'dÉ™qiqÉ™ namazdan É™vvÉ™l';
 
   @override
-  String get theme => 'Mövzu';
+  String get theme => 'MÃ¶vzu';
 
   @override
-  String get lightMode => 'İşıq rejimi';
+  String get lightMode => 'Ä°ÅŸÄ±q rejimi';
 
   @override
-  String get darkMode => 'Qaranlıq rejim';
+  String get darkMode => 'QaranlÄ±q rejim';
 
   @override
-  String get systemTheme => 'Sistem mövzusu';
+  String get systemTheme => 'Sistem mÃ¶vzusu';
 
   @override
-  String get about => 'Haqqında';
+  String get about => 'HaqqÄ±nda';
 
   @override
   String get version => 'Versiya';
 
   @override
-  String get privacyPolicy => 'Məxfilik Siyasəti';
+  String get privacyPolicy => 'MÉ™xfilik SiyasÉ™ti';
 
   @override
-  String get termsOfService => 'Xidmət Şərtləri';
+  String get termsOfService => 'XidmÉ™t ÅÉ™rtlÉ™ri';
 
   @override
-  String get contactUs => 'Bizimlə əlaqə saxlayın';
+  String get contactUs => 'BizimlÉ™ É™laqÉ™ saxlayÄ±n';
 
   @override
-  String get rateApp => 'Qiymətləndirmə Tətbiqi';
+  String get rateApp => 'QiymÉ™tlÉ™ndirmÉ™ TÉ™tbiqi';
 
   @override
-  String get shareApp => 'Tətbiqi paylaşın';
+  String get shareApp => 'TÉ™tbiqi paylaÅŸÄ±n';
 
   @override
-  String get downloadManager => 'Yükləmə meneceri';
+  String get downloadManager => 'YÃ¼klÉ™mÉ™ meneceri';
 
   @override
-  String get downloads => 'Yükləmələr';
+  String get downloads => 'YÃ¼klÉ™mÉ™lÉ™r';
 
   @override
   String get downloading => 'Endirilir...';
 
   @override
-  String get downloadComplete => 'Yükləmə tamamlandı';
+  String get downloadComplete => 'YÃ¼klÉ™mÉ™ tamamlandÄ±';
 
   @override
-  String get downloadFailed => 'Yükləmə uğursuz oldu';
+  String get downloadFailed => 'YÃ¼klÉ™mÉ™ uÄŸursuz oldu';
 
   @override
   String get offlineMode => 'Oflayn rejim';
 
   @override
-  String get noInternet => 'İnternet bağlantısı yoxdur';
+  String get noInternet => 'Ä°nternet baÄŸlantÄ±sÄ± yoxdur';
 
   @override
-  String get checkConnection => 'Bağlantınızı yoxlayın';
+  String get checkConnection => 'BaÄŸlantÄ±nÄ±zÄ± yoxlayÄ±n';
 
   @override
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Pro-a yüksəldin';
+  String get upgradeToPro => 'Pro-a yÃ¼ksÉ™ldin';
 
   @override
-  String get proFeatures => 'Pro Xüsusiyyətləri';
+  String get proFeatures => 'Pro XÃ¼susiyyÉ™tlÉ™ri';
 
   @override
-  String get removeAds => 'Reklamları Sil';
+  String get removeAds => 'ReklamlarÄ± Sil';
 
   @override
-  String get unlockAll => 'Bütün Məzmunu Kilidini Açın';
+  String get unlockAll => 'BÃ¼tÃ¼n MÉ™zmunu Kilidini AÃ§Ä±n';
 
   @override
-  String get exclusiveContent => 'Eksklüziv Məzmun';
+  String get exclusiveContent => 'EksklÃ¼ziv MÉ™zmun';
 
   @override
-  String get welcome => 'Xoş gəldiniz';
+  String get welcome => 'XoÅŸ gÉ™ldiniz';
 
   @override
-  String get getStarted => 'Başlayın';
+  String get getStarted => 'BaÅŸlayÄ±n';
 
   @override
-  String get skip => 'Keç';
+  String get skip => 'KeÃ§';
 
   @override
-  String get next => 'Sonrakı';
+  String get next => 'SonrakÄ±';
 
   @override
   String get done => 'Bitdi';
 
   @override
-  String get onboarding1Title => 'Allah yolunda xoş gəlmisiniz';
+  String get onboarding1Title => 'Allah yolunda xoÅŸ gÉ™lmisiniz';
 
   @override
   String get onboarding1Desc =>
-      'Namaz vaxtları, Quran və s. üçün tam İslam yoldaş tətbiqiniz';
+      'Namaz vaxtlarÄ±, Quran vÉ™ s. Ã¼Ã§Ã¼n tam Ä°slam yoldaÅŸ tÉ™tbiqiniz';
 
   @override
-  String get onboarding2Title => 'Namaz vaxtları';
+  String get onboarding2Title => 'Namaz vaxtlarÄ±';
 
   @override
-  String get onboarding2Desc => 'Yerinizə görə dəqiq namaz vaxtları';
+  String get onboarding2Desc => 'YerinizÉ™ gÃ¶rÉ™ dÉ™qiq namaz vaxtlarÄ±';
 
   @override
-  String get onboarding3Title => 'Quran və daha çox';
+  String get onboarding3Title => 'Quran vÉ™ daha Ã§ox';
 
   @override
   String get onboarding3Desc =>
-      'Quran oxuyun, oxuduğunuzu izləyin və İslam məzmununu araşdırın';
+      'Quran oxuyun, oxuduÄŸunuzu izlÉ™yin vÉ™ Ä°slam mÉ™zmununu araÅŸdÄ±rÄ±n';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -620,7 +620,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Current: $offsetÂ°';
   }
 
   @override

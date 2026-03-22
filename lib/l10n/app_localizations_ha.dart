@@ -42,7 +42,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get getLifetimePro => 'Samun Rayuwa Pro';
 
   @override
-  String get unlockTajweed => 'Buɗe Tajweed & Nagartattun Fasaloli';
+  String get unlockTajweed => 'BuÉ—e Tajweed & Nagartattun Fasaloli';
 
   @override
   String get prayerCalculation => 'Lissafin Addu\'a';
@@ -93,7 +93,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get language => 'Harshe';
 
   @override
-  String get selectLanguage => 'Zaɓi Harshe';
+  String get selectLanguage => 'ZaÉ“i Harshe';
 
   @override
   String get searchLanguage => 'Bincika harsuna 180+';
@@ -171,7 +171,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get bookmarks => 'Alamomi';
 
   @override
-  String get addBookmark => 'Ƙara Alamar';
+  String get addBookmark => 'Æ˜ara Alamar';
 
   @override
   String get removeBookmark => 'Cire Alamar';
@@ -243,7 +243,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get prayers => 'Addu\'a';
 
   @override
-  String get dhikrCount => 'Ƙididdiga na Dhikr';
+  String get dhikrCount => 'Æ˜ididdiga na Dhikr';
 
   @override
   String get weeklyProgress => 'Ci gaban mako-mako';
@@ -300,7 +300,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get qiblaFound => 'Qibla samu!';
 
   @override
-  String get turnDevice => 'Juya na\'urarka don fuskantar alƙibla';
+  String get turnDevice => 'Juya na\'urarka don fuskantar alÆ™ibla';
 
   @override
   String get notifications => 'Sanarwa';
@@ -339,7 +339,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get privacyPolicy => 'takardar kebantawa';
 
   @override
-  String get termsOfService => 'Sharuɗɗan Sabis';
+  String get termsOfService => 'SharuÉ—É—an Sabis';
 
   @override
   String get contactUs => 'Tuntube Mu';
@@ -369,16 +369,16 @@ class AppLocalizationsHa extends AppLocalizations {
   String get offlineMode => 'Yanayin Wuta';
 
   @override
-  String get noInternet => 'Babu Haɗin Intanet';
+  String get noInternet => 'Babu HaÉ—in Intanet';
 
   @override
-  String get checkConnection => 'Da fatan za a duba haɗin ku';
+  String get checkConnection => 'Da fatan za a duba haÉ—in ku';
 
   @override
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Haɓaka zuwa Pro';
+  String get upgradeToPro => 'HaÉ“aka zuwa Pro';
 
   @override
   String get proFeatures => 'Siffofin Pro';
@@ -387,10 +387,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get removeAds => 'Cire Talla';
 
   @override
-  String get unlockAll => 'Buɗe Duk Abun ciki';
+  String get unlockAll => 'BuÉ—e Duk Abun ciki';
 
   @override
-  String get exclusiveContent => 'Keɓaɓɓen Abun ciki';
+  String get exclusiveContent => 'KeÉ“aÉ“É“en Abun ciki';
 
   @override
   String get welcome => 'Barka da zuwa';
@@ -412,7 +412,7 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get onboarding1Desc =>
-      'Cikakken app na abokan hulɗarku na Musulunci don lokutan sallah, Al-Qur\'ani, da ƙari';
+      'Cikakken app na abokan hulÉ—arku na Musulunci don lokutan sallah, Al-Qur\'ani, da Æ™ari';
 
   @override
   String get onboarding2Title => 'Lokutan Sallah';
@@ -621,7 +621,7 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Current: $offsetÂ°';
   }
 
   @override

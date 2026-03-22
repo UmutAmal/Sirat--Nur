@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appTitle => 'Sirat-ı Nur';
+  String get appTitle => 'Sirat-Ä± Nur';
 
   @override
   String get home => 'Home';
@@ -408,7 +408,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Welcome to Sirat-Ä± Nur';
 
   @override
   String get onboarding1Desc =>
@@ -620,7 +620,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Current: $offsetÂ°';
   }
 
   @override

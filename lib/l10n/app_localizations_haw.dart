@@ -27,7 +27,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get calendar => 'Kalena';
 
   @override
-  String get settings => 'Nā hoʻonohonoho';
+  String get settings => 'NÄ hoÊ»onohonoho';
 
   @override
   String get nextPrayer => 'Pule Hou';
@@ -39,10 +39,10 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get continueReading => 'E hoomau Heluhelu';
 
   @override
-  String get getLifetimePro => 'Loaʻa iā Lifetime Pro';
+  String get getLifetimePro => 'LoaÊ»a iÄ Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Wehe i nā hiʻohiʻona Tajweed & Advanced';
+  String get unlockTajweed => 'Wehe i nÄ hiÊ»ohiÊ»ona Tajweed & Advanced';
 
   @override
   String get prayerCalculation => 'Helu pule';
@@ -51,25 +51,25 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get method => 'Heluhelu';
 
   @override
-  String get madhab => 'ʻO ke ʻano hoʻokolokolo Asr';
+  String get madhab => 'Ê»O ke Ê»ano hoÊ»okolokolo Asr';
 
   @override
-  String get surahs => 'Nā Surah';
+  String get surahs => 'NÄ Surah';
 
   @override
-  String get ayahs => 'ʻAha';
+  String get ayahs => 'Ê»Aha';
 
   @override
-  String get fajr => 'ʻO ka pō';
+  String get fajr => 'Ê»O ka pÅ';
 
   @override
-  String get sunrise => 'Puka lā';
+  String get sunrise => 'Puka lÄ';
 
   @override
   String get dhuhr => 'Dhuhr';
 
   @override
-  String get asr => 'ʻO Asr';
+  String get asr => 'Ê»O Asr';
 
   @override
   String get maghrib => 'Maghrib';
@@ -78,31 +78,31 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
-  String get dataStorage => 'ʻIkepili & Waihona';
+  String get dataStorage => 'Ê»Ikepili & Waihona';
 
   @override
   String get clearCache => 'Holoi huna';
 
   @override
-  String get cacheClearedSuccess => 'Holoi ʻia ka waihona';
+  String get cacheClearedSuccess => 'Holoi Ê»ia ka waihona';
 
   @override
   String get location => 'Wahi';
 
   @override
-  String get language => 'ʻŌlelo';
+  String get language => 'Ê»ÅŒlelo';
 
   @override
-  String get selectLanguage => 'E koho i ka ʻōlelo';
+  String get selectLanguage => 'E koho i ka Ê»Ålelo';
 
   @override
-  String get searchLanguage => 'Huli 180+ ʻōlelo...';
+  String get searchLanguage => 'Huli 180+ Ê»Ålelo...';
 
   @override
-  String get systemDefault => 'Pūnaehana Default';
+  String get systemDefault => 'PÅ«naehana Default';
 
   @override
-  String get currentLocation => 'Kahi o kēia manawa (GPS)';
+  String get currentLocation => 'Kahi o kÄ“ia manawa (GPS)';
 
   @override
   String get search => 'Huli';
@@ -111,10 +111,10 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get searchHint => 'Huli...';
 
   @override
-  String get noResults => 'ʻAʻohe hopena i loaʻa';
+  String get noResults => 'Ê»AÊ»ohe hopena i loaÊ»a';
 
   @override
-  String get loading => 'Ke hoʻouka nei...';
+  String get loading => 'Ke hoÊ»ouka nei...';
 
   @override
   String get error => 'Kuhihewa';
@@ -123,16 +123,16 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get retry => 'E hoao hou';
 
   @override
-  String get cancel => 'Hoʻopau';
+  String get cancel => 'HoÊ»opau';
 
   @override
-  String get save => 'Mālama';
+  String get save => 'MÄlama';
 
   @override
   String get delete => 'Holoi';
 
   @override
-  String get edit => 'Hoʻoponopono';
+  String get edit => 'HoÊ»oponopono';
 
   @override
   String get close => 'Pani';
@@ -141,19 +141,19 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get ok => 'OK';
 
   @override
-  String get yes => 'ʻAe';
+  String get yes => 'Ê»Ae';
 
   @override
-  String get no => 'ʻAʻole';
+  String get no => 'Ê»AÊ»ole';
 
   @override
   String get surah => 'Surah';
 
   @override
-  String get juz => 'ʻO Juz';
+  String get juz => 'Ê»O Juz';
 
   @override
-  String get page => 'ʻAoʻao';
+  String get page => 'Ê»AoÊ»ao';
 
   @override
   String get reading => 'Heluhelu';
@@ -168,10 +168,10 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get bookmarks => 'Nā kaha puke';
+  String get bookmarks => 'NÄ kaha puke';
 
   @override
-  String get addBookmark => 'Hoʻohui i ka Bookmark';
+  String get addBookmark => 'HoÊ»ohui i ka Bookmark';
 
   @override
   String get removeBookmark => 'Wehe i ka Bookmark';
@@ -180,7 +180,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get lastRead => 'Heluhelu hope';
 
   @override
-  String get dailyZikr => 'Zikr i kēlā me kēia lā';
+  String get dailyZikr => 'Zikr i kÄ“lÄ me kÄ“ia lÄ';
 
   @override
   String get morningZikr => 'Kakahiaka Zikr';
@@ -195,13 +195,13 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get ahkab => 'Ahkam';
 
   @override
-  String get masaail => 'Masaʻil';
+  String get masaail => 'MasaÊ»il';
 
   @override
   String get hadith => 'Hadith';
 
   @override
-  String get hadithCollection => 'Hōʻiliʻili Hadith';
+  String get hadithCollection => 'HÅÊ»iliÊ»ili Hadith';
 
   @override
   String get hadithBooks => 'Buke Hadith';
@@ -219,13 +219,13 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get liveTv => 'TV ola';
 
   @override
-  String get watchLive => 'Nānā Live';
+  String get watchLive => 'NÄnÄ Live';
 
   @override
   String get streamError => 'Holoi hewa';
 
   @override
-  String get reload => 'Hoʻouka hou';
+  String get reload => 'HoÊ»ouka hou';
 
   @override
   String get openInYoutube => 'Wehe ma YouTube';
@@ -261,16 +261,16 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get gregorianCalendar => 'Kalena Gregorian';
 
   @override
-  String get today => 'I kēia lā';
+  String get today => 'I kÄ“ia lÄ';
 
   @override
-  String get tomorrow => 'ʻāpōpō';
+  String get tomorrow => 'Ê»ÄpÅpÅ';
 
   @override
   String get yesterday => 'I nehinei';
 
   @override
-  String get specialDays => 'Nā lā kūikawā';
+  String get specialDays => 'NÄ lÄ kÅ«ikawÄ';
 
   @override
   String get ramadan => 'Lamadana';
@@ -288,7 +288,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get qiblaDirection => 'Kuhikuhi Qibla';
 
   @override
-  String get compass => 'Pāpana';
+  String get compass => 'PÄpana';
 
   @override
   String get degrees => 'degere';
@@ -297,10 +297,10 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get north => 'Ke akau';
 
   @override
-  String get qiblaFound => 'Loaʻa iā Qibla!';
+  String get qiblaFound => 'LoaÊ»a iÄ Qibla!';
 
   @override
-  String get turnDevice => 'E hoʻohuli i kāu kelepona e alo i ka Qibla';
+  String get turnDevice => 'E hoÊ»ohuli i kÄu kelepona e alo i ka Qibla';
 
   @override
   String get notifications => 'Hoolaha';
@@ -309,7 +309,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get prayerNotifications => 'Hoolaha Pule';
 
   @override
-  String get enableNotifications => 'E ho\'ā i nā hoʻolaha';
+  String get enableNotifications => 'E ho\'Ä i nÄ hoÊ»olaha';
 
   @override
   String get notificationTime => 'Manawa Hoolaha';
@@ -321,13 +321,13 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get theme => 'Kumuhana';
 
   @override
-  String get lightMode => 'ʻAno māmā';
+  String get lightMode => 'Ê»Ano mÄmÄ';
 
   @override
-  String get darkMode => 'ʻAno ʻeleʻele';
+  String get darkMode => 'Ê»Ano Ê»eleÊ»ele';
 
   @override
-  String get systemTheme => 'Kumuhana Pūnaehana';
+  String get systemTheme => 'Kumuhana PÅ«naehana';
 
   @override
   String get about => 'E pili ana';
@@ -339,70 +339,70 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get privacyPolicy => 'Kulekele pilikino';
 
   @override
-  String get termsOfService => 'Kūlana o ka lawelawe';
+  String get termsOfService => 'KÅ«lana o ka lawelawe';
 
   @override
-  String get contactUs => 'Kāhea iā mā˚ou';
+  String get contactUs => 'KÄhea iÄ mÄËšou';
 
   @override
   String get rateApp => 'Loko App';
 
   @override
-  String get shareApp => 'Kaʻana like App';
+  String get shareApp => 'KaÊ»ana like App';
 
   @override
-  String get downloadManager => 'Luna Hoʻoiho';
+  String get downloadManager => 'Luna HoÊ»oiho';
 
   @override
-  String get downloads => 'Hoʻoiho';
+  String get downloads => 'HoÊ»oiho';
 
   @override
-  String get downloading => 'Hoʻoiho ʻia...';
+  String get downloading => 'HoÊ»oiho Ê»ia...';
 
   @override
-  String get downloadComplete => 'Hoʻoiho Pau';
+  String get downloadComplete => 'HoÊ»oiho Pau';
 
   @override
-  String get downloadFailed => 'ʻAʻole i hoʻoiho ʻia';
+  String get downloadFailed => 'Ê»AÊ»ole i hoÊ»oiho Ê»ia';
 
   @override
   String get offlineMode => 'Ke ano pahemo';
 
   @override
-  String get noInternet => 'ʻAʻohe pili pūnaewele';
+  String get noInternet => 'Ê»AÊ»ohe pili pÅ«naewele';
 
   @override
-  String get checkConnection => 'E ʻoluʻolu e nānā i kāu pili';
+  String get checkConnection => 'E Ê»oluÊ»olu e nÄnÄ i kÄu pili';
 
   @override
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Hoʻonui iā Pro';
+  String get upgradeToPro => 'HoÊ»onui iÄ Pro';
 
   @override
-  String get proFeatures => 'Nā hiʻohiʻona Pro';
+  String get proFeatures => 'NÄ hiÊ»ohiÊ»ona Pro';
 
   @override
-  String get removeAds => 'Wehe i nā hoʻolaha';
+  String get removeAds => 'Wehe i nÄ hoÊ»olaha';
 
   @override
   String get unlockAll => 'Wehe i na mea a pau';
 
   @override
-  String get exclusiveContent => 'Maʻiʻo kūʻokoʻa';
+  String get exclusiveContent => 'MaÊ»iÊ»o kÅ«Ê»okoÊ»a';
 
   @override
   String get welcome => 'Welina';
 
   @override
-  String get getStarted => 'E hoʻomaka';
+  String get getStarted => 'E hoÊ»omaka';
 
   @override
   String get skip => 'Holoi';
 
   @override
-  String get next => 'Aʻe';
+  String get next => 'AÊ»e';
 
   @override
   String get done => 'Pau';
@@ -412,21 +412,21 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String get onboarding1Desc =>
-      'ʻO kāu app hoa Islam piha no nā manawa pule, Quran, a me nā mea hou aku';
+      'Ê»O kÄu app hoa Islam piha no nÄ manawa pule, Quran, a me nÄ mea hou aku';
 
   @override
   String get onboarding2Title => 'Manawa Pule';
 
   @override
   String get onboarding2Desc =>
-      'ʻO nā manawa pule pololei e pili ana i kou wahi';
+      'Ê»O nÄ manawa pule pololei e pili ana i kou wahi';
 
   @override
   String get onboarding3Title => 'Quran a me na mea hou aku';
 
   @override
   String get onboarding3Desc =>
-      'E heluhelu i ka Quran, e hahai i kāu heluhelu, a e ʻimi i ka ʻike Islam';
+      'E heluhelu i ka Quran, e hahai i kÄu heluhelu, a e Ê»imi i ka Ê»ike Islam';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -621,7 +621,7 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Current: $offsetÂ°';
   }
 
   @override

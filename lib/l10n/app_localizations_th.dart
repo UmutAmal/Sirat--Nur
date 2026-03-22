@@ -408,7 +408,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Welcome to Sirat-Ä± Nur';
 
   @override
   String get onboarding1Desc =>
@@ -620,7 +620,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Current: $offsetÂ°';
   }
 
   @override

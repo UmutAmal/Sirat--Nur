@@ -183,7 +183,7 @@ class AppLocalizationsAf extends AppLocalizations {
   String get dailyZikr => 'Daaglikse Zikr';
 
   @override
-  String get morningZikr => 'Môre Zikr';
+  String get morningZikr => 'MÃ´re Zikr';
 
   @override
   String get eveningZikr => 'Aand Zikr';
@@ -264,7 +264,7 @@ class AppLocalizationsAf extends AppLocalizations {
   String get today => 'Vandag';
 
   @override
-  String get tomorrow => 'Môre';
+  String get tomorrow => 'MÃ´re';
 
   @override
   String get yesterday => 'Gister';
@@ -620,7 +620,7 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Current: $offsetÂ°';
   }
 
   @override

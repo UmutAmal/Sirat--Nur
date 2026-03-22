@@ -195,7 +195,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get ahkab => 'Ahkam';
 
   @override
-  String get masaail => 'Masaïl';
+  String get masaail => 'MasaÃ¯l';
 
   @override
   String get hadith => 'Hadith';
@@ -621,7 +621,7 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Current: $offsetÂ°';
   }
 
   @override
