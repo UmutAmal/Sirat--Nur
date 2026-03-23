@@ -1,16 +1,26 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/services/qibla_sensor_bridge.dart';
 import 'package:sirat_i_nur/core/utils/qibla_utils.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
-class QiblaPage extends ConsumerWidget {
+class QiblaPage extends ConsumerStatefulWidget {
   const QiblaPage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<QiblaPage> createState() => _QiblaPageState();
+}
+
+class _QiblaPageState extends ConsumerState<QiblaPage> {
+  bool _hasVibrated = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final isDark = Theme.of(context).brightness == Brightness.dark;
     
     final settings = ref.watch(settingsProvider);
@@ -21,8 +31,12 @@ class QiblaPage extends ConsumerWidget {
     final qiblaBearing = QiblaUtils.calculateQiblaDirection(userLat, userLng);
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text('Qibla Compass'),
+        title: Text(l10n.qiblaDirection, style: const TextStyle(fontWeight: FontWeight.w800)),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: true,
         actions: [
           IconButton(
             icon: const Icon(Icons.info_outline_rounded),
@@ -31,9 +45,9 @@ class QiblaPage extends ConsumerWidget {
                 context: context,
                 builder: (ctx) => AlertDialog(
                   title: const Text('Calibration', style: TextStyle(fontWeight: FontWeight.w900)),
-                  content: const Text('Move your phone in a figure-8 pattern to calibrate the compass sensor for accurate Qibla direction.'),
+                  content: Text(l10n.calibrationRequiredFigure8),
                   actions: [
-                    TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('OK')),
+                    TextButton(onPressed: () => Navigator.pop(ctx), child: Text(l10n.ok)),
                   ],
                 ),
               );
@@ -41,115 +55,231 @@ class QiblaPage extends ConsumerWidget {
           ),
         ],
       ),
-      body: qiblaStream.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (err, stack) => Center(child: Text('Compass Error: $err')),
-        data: (qiblaState) {
-          // qiblaState.trueHeading is the phone's heading relative to North
-          // To point the needle to Qibla, we rotate the needle by (Qibla Bearing - True Heading)
-          final trueHeading = qiblaState.trueHeading;
-          
-          // Apply user offset from settings if needed
-          final needleAngle = (qiblaBearing - trueHeading + settings.qiblaOffset) % 360;
-          final compassAngle = -trueHeading % 360;
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: isDark 
+              ? [AppColors.darkBg, AppColors.darkSurface] 
+              : [AppColors.emeraldSurface, Colors.white],
+            stops: const [0.0, 0.4],
+          )
+        ),
+        child: SafeArea(
+          child: qiblaStream.when(
+            loading: () => const Center(child: CircularProgressIndicator(color: AppColors.emerald)),
+            error: (err, stack) => Center(child: Text('Compass Error: $err')),
+            data: (qiblaState) {
+              final trueHeading = qiblaState.trueHeading;
+              final needleAngle = (qiblaBearing - trueHeading + settings.qiblaOffset) % 360;
+              final compassAngle = -trueHeading % 360;
 
-          return Center(
-            child: Padding(
-              padding: const EdgeInsets.all(32),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // Qibla direction label
-                  Text('Qibla Direction',
-                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 14,
-                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
-                  const SizedBox(height: 8),
-                  Text('${qiblaBearing.toStringAsFixed(1)}°',
-                    style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 36, color: AppColors.emerald)),
-                  const SizedBox(height: 40),
-                  // Compass
-                  SizedBox(
-                    width: 280, height: 280,
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        // Outer ring rotating with magnetic north
-                        Transform.rotate(
-                          angle: compassAngle * (math.pi / 180),
-                          child: Stack(
-                            alignment: Alignment.center,
-                            children: [
-                              Container(
-                                width: 280, height: 280,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: isDark ? AppColors.darkCard : AppColors.cardLight,
-                                  border: Border.all(
-                                    color: AppColors.emerald.withValues(alpha: 0.3), width: 3,
+              // Check alignment for haptic feedback
+              // If within 2 degrees of Qibla, vibrate.
+              final diff = (needleAngle > 180 ? 360 - needleAngle : needleAngle).abs();
+              final isAligned = diff < 2.0;
+
+              if (isAligned && !_hasVibrated) {
+                _hasVibrated = true;
+                HapticFeedback.heavyImpact();
+              } else if (!isAligned) {
+                _hasVibrated = false;
+              }
+
+              return Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      // Info Banner
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 300),
+                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                        decoration: BoxDecoration(
+                          color: isAligned ? AppColors.emerald : (isDark ? Colors.white10 : Colors.black.withValues(alpha: 0.05)),
+                          borderRadius: BorderRadius.circular(30),
+                          boxShadow: isAligned ? [
+                            BoxShadow(color: AppColors.emerald.withValues(alpha: 0.4), blurRadius: 20, spreadRadius: 2)
+                          ] : [],
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(isAligned ? Icons.check_circle_rounded : Icons.explore_rounded, 
+                              color: isAligned ? Colors.white : AppColors.emerald, size: 20),
+                            const SizedBox(width: 8),
+                            Text(isAligned ? l10n.qiblaFound : l10n.turnDevice, 
+                              style: TextStyle(
+                                fontWeight: FontWeight.w800, 
+                                fontSize: 13,
+                                color: isAligned ? Colors.white : Theme.of(context).colorScheme.onSurface,
+                              )
+                            ),
+                          ],
+                        ),
+                      ),
+                      
+                      const SizedBox(height: 48),
+
+                      // Premium 3D Compass Dial
+                      Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          // Outer glow
+                          Container(
+                            width: 320, height: 320,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: isAligned ? AppColors.emerald.withValues(alpha: 0.2) : Colors.black.withValues(alpha: 0.05),
+                                  blurRadius: 40, spreadRadius: 10
+                                )
+                              ]
+                            ),
+                          ),
+                          
+                          // Rotating Base Dial
+                          AnimatedRotation(
+                            turns: compassAngle / 360,
+                            duration: const Duration(milliseconds: 200), // Smooth updates
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                // The Dial background
+                                Container(
+                                  width: 300, height: 300,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: isDark ? const Color(0xFF1E293B) : Colors.white,
+                                    border: Border.all(
+                                      color: isAligned ? AppColors.emerald : (isDark ? Colors.white12 : Colors.black12), 
+                                      width: 8,
+                                    ),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: isDark ? Colors.black54 : Colors.grey.withValues(alpha: 0.3),
+                                        blurRadius: 20,
+                                      ),
+                                    ],
                                   ),
-                                  boxShadow: [BoxShadow(
-                                    color: AppColors.emerald.withValues(alpha: 0.2),
-                                    blurRadius: 30, spreadRadius: 5,
-                                  )],
+                                ),
+                                
+                                // Compass Ticks
+                                ..._buildTicks(context),
+                                
+                                // Compass Letters
+                                ..._buildDirectionMarkers(context),
+                              ],
+                            ),
+                          ),
+
+                          // Target Qibla Marker (Kaaba icon on the ring)
+                          AnimatedRotation(
+                            turns: needleAngle / 360,
+                            duration: const Duration(milliseconds: 200),
+                            child: SizedBox(
+                              width: 320, height: 320, // slightly larger than dial
+                              child: Align(
+                                alignment: Alignment.topCenter,
+                                child: Container(
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.emerald,
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.white, width: 2),
+                                    boxShadow: [BoxShadow(color: AppColors.emerald.withValues(alpha: 0.5), blurRadius: 10)]
+                                  ),
+                                  child: const Icon(Icons.mosque_rounded, color: Colors.white, size: 24),
                                 ),
                               ),
-                              ..._buildDirectionMarkers(context),
-                            ],
+                            ),
                           ),
-                        ),
-                        // Fixed Needle pointing to Qibla
-                        Transform.rotate(
-                          angle: needleAngle * (math.pi / 180),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              const Icon(Icons.navigation_rounded, size: 60, color: AppColors.emerald),
-                              const SizedBox(height: 4),
-                              Container(
-                                width: 3, height: 40,
-                                decoration: BoxDecoration(
-                                  color: AppColors.emerald,
-                                  borderRadius: BorderRadius.circular(2),
+
+                          // Center Node & Needle Line
+                          AnimatedRotation(
+                            turns: needleAngle / 360,
+                            duration: const Duration(milliseconds: 200),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                // Guide line
+                                Container(
+                                  width: 4, height: 100,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topCenter, end: Alignment.bottomCenter,
+                                      colors: [AppColors.emerald, AppColors.emerald.withValues(alpha: 0.0)]
+                                    ),
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
                                 ),
-                              ),
-                            ],
+                                // Center point
+                                Container(
+                                  width: 24, height: 24,
+                                  padding: const EdgeInsets.all(4),
+                                  decoration: BoxDecoration(
+                                    color: isDark ? AppColors.darkSurface : Colors.white,
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: AppColors.emerald, width: 3),
+                                  ),
+                                  child: Container(
+                                    decoration: const BoxDecoration(color: AppColors.emerald, shape: BoxShape.circle),
+                                  ),
+                                ),
+                                // Balance line below center
+                                Container(
+                                  width: 2, height: 60,
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey.withValues(alpha: 0.2),
+                                    borderRadius: BorderRadius.circular(1),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                        // Center dot
-                        Container(
-                          width: 16, height: 16,
-                          decoration: BoxDecoration(
-                            color: AppColors.emerald,
-                            shape: BoxShape.circle,
-                            boxShadow: [BoxShadow(color: AppColors.emerald.withValues(alpha: 0.4), blurRadius: 8)],
-                          ),
-                        ),
-                      ],
-                    ),
+                        ],
+                      ),
+                      
+                      const SizedBox(height: 60),
+                      
+                      // Values Bottom
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          _buildValueCard(context, 'Qibla', '${qiblaBearing.toStringAsFixed(1)}°'),
+                          _buildValueCard(context, 'Heading', '${trueHeading.toStringAsFixed(1)}°'),
+                        ],
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 40),
-                  // Kaaba icon
-                  Container(
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: AppColors.emeraldSurface,
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Icon(Icons.mosque_rounded, color: AppColors.emerald),
-                        const SizedBox(width: 8),
-                        const Text('Kaaba, Makkah', style: TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          );
-        },
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildValueCard(BuildContext context, String label, String value) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      decoration: BoxDecoration(
+        color: isDark ? AppColors.darkSurface : Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
+        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.02), blurRadius: 10)]
+      ),
+      child: Column(
+        children: [
+          Text(label, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+          const SizedBox(height: 4),
+          Text(value, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900)),
+        ],
       ),
     );
   }
@@ -158,13 +288,47 @@ class QiblaPage extends ConsumerWidget {
     const directions = ['N', 'E', 'S', 'W'];
     return List.generate(4, (i) {
       final angle = i * 90.0 * (math.pi / 180);
+      final isNorth = directions[i] == 'N';
       return Positioned(
-        left: 140 + 110 * math.sin(angle) - 10,
-        top: 140 - 110 * math.cos(angle) - 10,
-        child: Text(directions[i], style: TextStyle(
-          fontWeight: FontWeight.w900, fontSize: 16,
-          color: directions[i] == 'N' ? Colors.red : Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4),
-        )),
+        left: 150 + 115 * math.sin(angle) - 15,
+        top: 150 - 115 * math.cos(angle) - 15,
+        child: SizedBox(
+          width: 30, height: 30,
+          child: Center(
+            child: Text(directions[i], style: TextStyle(
+              fontWeight: FontWeight.w900, 
+              fontSize: 18,
+              color: isNorth ? Colors.redAccent : Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+            )),
+          ),
+        ),
+      );
+    });
+  }
+
+  List<Widget> _buildTicks(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final tickColor = isDark ? Colors.white24 : Colors.black12;
+    final majorTickColor = isDark ? Colors.white54 : Colors.black38;
+
+    return List.generate(72, (i) { // every 5 degrees
+      final angle = i * 5.0 * (math.pi / 180);
+      final isMajor = i % 6 == 0; // every 30 degrees
+      
+      return Positioned(
+        left: 150 + 135 * math.sin(angle) - (isMajor ? 1.5 : 1),
+        top: 150 - 135 * math.cos(angle) - (isMajor ? 4 : 3),
+        child: Transform.rotate(
+          angle: angle,
+          child: Container(
+            width: isMajor ? 3 : 2,
+            height: isMajor ? 8 : 6,
+            decoration: BoxDecoration(
+              color: isMajor ? majorTickColor : tickColor,
+              borderRadius: BorderRadius.circular(2),
+            ),
+          ),
+        ),
       );
     });
   }

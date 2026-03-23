@@ -652,4 +652,25 @@ class AppLocalizationsCo extends AppLocalizations {
   @override
   String get calibrationRequiredFigure8 =>
       'Calibration required. Rotate device in figure-8.';
+
+  @override
+  String get dailyVerse => 'Daily Verse';
+
+  @override
+  String get todaysIbadah => 'Today\'s Ibadah';
+
+  @override
+  String get quickAccess => 'Quick Access';
+
+  @override
+  String get assistant => 'Assistant';
+
+  @override
+  String get places => 'Places';
+
+  @override
+  String get library => 'Library';
+
+  @override
+  String get analytics => 'Analytics';
 }

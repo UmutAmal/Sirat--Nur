@@ -1713,6 +1713,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Calibration required. Rotate device in figure-8.'**
   String get calibrationRequiredFigure8;
+
+  /// No description provided for @dailyVerse.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Verse'**
+  String get dailyVerse;
+
+  /// No description provided for @todaysIbadah.
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s Ibadah'**
+  String get todaysIbadah;
+
+  /// No description provided for @quickAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Access'**
+  String get quickAccess;
+
+  /// No description provided for @assistant.
+  ///
+  /// In en, this message translates to:
+  /// **'Assistant'**
+  String get assistant;
+
+  /// No description provided for @places.
+  ///
+  /// In en, this message translates to:
+  /// **'Places'**
+  String get places;
+
+  /// No description provided for @library.
+  ///
+  /// In en, this message translates to:
+  /// **'Library'**
+  String get library;
+
+  /// No description provided for @analytics.
+  ///
+  /// In en, this message translates to:
+  /// **'Analytics'**
+  String get analytics;
 }
 
 class _AppLocalizationsDelegate

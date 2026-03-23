@@ -1,9 +1,11 @@
+import 'dart:convert';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:http/http.dart' as http;
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
-import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -19,48 +21,133 @@ class PlacesMapPage extends ConsumerStatefulWidget {
 
 class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
   final MapController _mapController = MapController();
-  final TextEditingController _searchController = TextEditingController();
   final Distance _distance = const Distance();
-
+  
   _PlaceCategory _selectedCategory = _PlaceCategory.mosque;
-  String _query = '';
-
+  LatLng? _currentCenter;
+  LatLng? _lastFetchCenter;
+  
+  List<_IslamicPlace> _places = [];
+  bool _isLoading = false;
+  String? _error;
+  
+  // Custom marker size and animation handling could be added here
+  
   @override
-  void dispose() {
-    _searchController.dispose();
-    super.dispose();
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final settings = ref.read(settingsProvider);
+      final initialAnchor = _currentAnchor(settings);
+      setState(() => _currentCenter = initialAnchor);
+      _fetchPlaces(initialAnchor, _selectedCategory);
+    });
   }
 
   LatLng _currentAnchor(SettingsState settings) {
-    final lat = settings.latitude;
-    final lng = settings.longitude;
-    if (lat == null || lng == null) {
-      return const LatLng(41.0082, 28.9784); // Istanbul fallback
+    if (settings.latitude != null && settings.longitude != null) {
+      return LatLng(settings.latitude!, settings.longitude!);
     }
-    return LatLng(lat, lng);
+    return const LatLng(41.0082, 28.9784); // Istanbul fallback
   }
 
-  List<_PlaceWithDistance> _filteredPlaces(LatLng anchor) {
-    final filtered = _allPlaces.where((place) {
-      final inCategory = place.category == _selectedCategory;
-      if (!inCategory) return false;
-      if (_query.isEmpty) return true;
-      final q = _query.toLowerCase();
-      return place.name.toLowerCase().contains(q) ||
-          place.description.toLowerCase().contains(q);
+  Future<void> _fetchPlaces(LatLng center, _PlaceCategory category) async {
+    if (_isLoading) return;
+    setState(() {
+      _isLoading = true;
+      _error = null;
     });
 
-    final enriched =
-        filtered
-            .map(
-              (place) => _PlaceWithDistance(
-                place,
-                _distance.as(LengthUnit.Kilometer, anchor, place.position),
-              ),
-            )
-            .toList()
-          ..sort((a, b) => a.distanceKm.compareTo(b.distanceKm));
-    return enriched;
+    try {
+      String queryTags = '';
+      if (category == _PlaceCategory.mosque) {
+        queryTags = '["amenity"="place_of_worship"]["religion"="muslim"]';
+      } else if (category == _PlaceCategory.halalFood) {
+        queryTags = '["diet:halal"="yes"]';
+      } else if (category == _PlaceCategory.education) {
+        queryTags = '["amenity"="school"]["religion"="muslim"]'; // Basic approximation
+      }
+
+      // 5km radius search
+      final query = '''
+        [out:json][timeout:15];
+        (
+          node$queryTags(around:5000, ${center.latitude}, ${center.longitude});
+          way$queryTags(around:5000, ${center.latitude}, ${center.longitude});
+        );
+        out center;
+      ''';
+
+      final response = await http.post(
+        Uri.parse('https://overpass-api.de/api/interpreter'),
+        body: query,
+      );
+
+      if (response.statusCode == 200) {
+        final data = json.decode(response.body);
+        final elements = data['elements'] as List;
+        
+        final List<_IslamicPlace> fetchedPlaces = [];
+        
+        for (final el in elements) {
+          final tags = el['tags'] ?? {};
+          final name = tags['name'] ?? tags['name:en'] ?? 'Unknown Name';
+          final lat = el['lat'] ?? el['center']?['lat'];
+          final lon = el['lon'] ?? el['center']?['lon'];
+          
+          if (lat != null && lon != null) {
+            IconData icon = Icons.mosque_rounded;
+            Color color = AppColors.emerald;
+            
+            if (category == _PlaceCategory.halalFood) {
+              icon = Icons.restaurant_rounded;
+              color = Colors.deepOrange;
+            } else if (category == _PlaceCategory.education) {
+              icon = Icons.school_rounded;
+              color = Colors.indigo;
+            }
+
+            fetchedPlaces.add(_IslamicPlace(
+              id: el['id'].toString(),
+              name: name,
+              description: tags['amenity'] ?? tags['shop'] ?? 'Islamic Place',
+              position: LatLng(lat, lon),
+              icon: icon,
+              color: color,
+              category: category,
+            ));
+          }
+        }
+        
+        setState(() {
+          _places = fetchedPlaces;
+          _lastFetchCenter = center;
+        });
+      } else {
+        setState(() => _error = 'API Error: ${response.statusCode}');
+      }
+    } catch (e) {
+      setState(() => _error = 'Network error. Please try again.');
+    } finally {
+      if (mounted) setState(() => _isLoading = false);
+    }
+  }
+
+  void _onMapPositionChanged(MapCamera camera, bool hasGesture) {
+    if (hasGesture) {
+      setState(() => _currentCenter = camera.center);
+    }
+  }
+  
+  void _changeCategory(_PlaceCategory cat) {
+    if (cat == _selectedCategory) return;
+    setState(() {
+      _selectedCategory = cat;
+      _places.clear(); // Clear old results immediately
+    });
+    if (_currentCenter != null) {
+      _fetchPlaces(_currentCenter!, cat);
+    }
   }
 
   Future<void> _openDirections(_PlaceWithDistance place) async {
@@ -70,8 +157,8 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
     await launchUrl(uri, mode: LaunchMode.externalApplication);
   }
 
-  void _focusPlace(_PlaceWithDistance place) {
-    _mapController.move(place.place.position, 14.5);
+  void _focusPlace(_PlaceWithDistance p) {
+    _mapController.move(p.place.position, 15.5);
   }
 
   @override
@@ -80,208 +167,338 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
     final settings = ref.watch(settingsProvider);
     final anchor = _currentAnchor(settings);
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    final places = _filteredPlaces(anchor);
+
+    // Sort places by distance from current anchor (or last fetched center)
+    final mapCenter = _currentCenter ?? anchor;
+    final enrichedPlaces = _places.map((p) => 
+      _PlaceWithDistance(p, _distance.as(LengthUnit.Kilometer, mapCenter, p.position))
+    ).toList();
+    enrichedPlaces.sort((a, b) => a.distanceKm.compareTo(b.distanceKm));
+
+    // Determine if "Search Here" button should show
+    final showSearchHere = !_isLoading && _lastFetchCenter != null && _currentCenter != null 
+        && _distance.as(LengthUnit.Meter, _lastFetchCenter!, _currentCenter!) > 1000;
 
     return Scaffold(
-      appBar: AppBar(title: Text('${l10n.location} • ${l10n.prayers}')),
-      body: Column(
-        children: [
-          Expanded(
-            flex: 2,
-            child: FlutterMap(
-              mapController: _mapController,
-              options: MapOptions(initialCenter: anchor, initialZoom: 12.5),
-              children: [
-                TileLayer(
-                  urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                  userAgentPackageName: 'com.umutamal.sirat_i_nur',
-                ),
-                MarkerLayer(
-                  markers: [
-                    Marker(
-                      point: anchor,
-                      width: 44,
-                      height: 44,
-                      child: const Icon(
-                        Icons.my_location_rounded,
-                        color: AppColors.emerald,
-                        size: 34,
-                      ),
-                    ),
-                    ...places.map(
-                      (place) => Marker(
-                        point: place.place.position,
-                        width: 40,
-                        height: 40,
-                        child: Icon(
-                          place.place.icon,
-                          color: place.place.color,
-                          size: 34,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        title: Text('${l10n.location} • ${l10n.prayers}', style: const TextStyle(fontWeight: FontWeight.w800, color: Colors.white)),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: true,
+        iconTheme: const IconThemeData(color: Colors.white),
+        flexibleSpace: ClipRect(
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+            child: Container(
+              color: Colors.black.withValues(alpha: 0.3),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
-            child: TextField(
-              controller: _searchController,
-              onChanged: (value) => setState(() => _query = value.trim()),
-              decoration: InputDecoration(
-                hintText: '${l10n.search}...',
-                prefixIcon: const Icon(Icons.search_rounded),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(16),
-                  borderSide: BorderSide.none,
-                ),
-                filled: true,
-                fillColor: isDark
-                    ? AppColors.darkSurface
-                    : AppColors.emeraldSurface,
+        ),
+      ),
+      body: Stack(
+        children: [
+          // THE MAP
+          FlutterMap(
+            mapController: _mapController,
+            options: MapOptions(
+              initialCenter: anchor, 
+              initialZoom: 13.5,
+              onPositionChanged: _onMapPositionChanged,
+            ),
+            children: [
+              TileLayer(
+                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                userAgentPackageName: 'com.umutamal.sirat_i_nur',
+                // Optional: add a dark mode tile filter here if using a custom package
+              ),
+              MarkerLayer(
+                markers: [
+                  // User Center Marker
+                  Marker(
+                    point: anchor,
+                    width: 50,
+                    height: 50,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Container(
+                          width: 48, height: 48,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: AppColors.emerald.withValues(alpha: 0.2),
+                          ),
+                        ),
+                        Container(
+                          width: 20, height: 20,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: AppColors.emerald,
+                            border: Border.all(color: Colors.white, width: 3),
+                            boxShadow: [
+                              BoxShadow(color: AppColors.emeraldDeep.withValues(alpha: 0.5), blurRadius: 8, spreadRadius: 2)
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  // Places Markers
+                  ...enrichedPlaces.map((p) => Marker(
+                    point: p.place.position,
+                    width: 40,
+                    height: 40,
+                    child: GestureDetector(
+                      onTap: () => _focusPlace(p),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: p.place.color,
+                          shape: BoxShape.circle,
+                          border: Border.all(color: Colors.white, width: 2),
+                          boxShadow: [
+                            BoxShadow(color: Colors.black.withValues(alpha: 0.2), blurRadius: 4, offset: const Offset(0, 2))
+                          ]
+                        ),
+                        child: Icon(p.place.icon, color: Colors.white, size: 20),
+                      ),
+                    ),
+                  )),
+                ],
+              ),
+            ],
+          ),
+
+          // TOP CATEGORY SCROLL
+          Positioned(
+            top: kToolbarHeight + MediaQuery.of(context).padding.top + 16,
+            left: 0,
+            right: 0,
+            child: SizedBox(
+              height: 44,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                children: [
+                  _categoryChip(
+                    context: context,
+                    label: 'Mosques',
+                    icon: Icons.mosque_rounded,
+                    selected: _selectedCategory == _PlaceCategory.mosque,
+                    onTap: () => _changeCategory(_PlaceCategory.mosque),
+                  ),
+                  _categoryChip(
+                    context: context,
+                    label: 'Halal Food',
+                    icon: Icons.restaurant_rounded,
+                    selected: _selectedCategory == _PlaceCategory.halalFood,
+                    onTap: () => _changeCategory(_PlaceCategory.halalFood),
+                  ),
+                  _categoryChip(
+                    context: context,
+                    label: 'Education',
+                    icon: Icons.school_rounded,
+                    selected: _selectedCategory == _PlaceCategory.education,
+                    onTap: () => _changeCategory(_PlaceCategory.education),
+                  ),
+                ],
               ),
             ),
           ),
-          SizedBox(
-            height: 44,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              children: [
-                _categoryChip(
-                  context: context,
-                  label: 'Mosques',
-                  icon: Icons.mosque_rounded,
-                  selected: _selectedCategory == _PlaceCategory.mosque,
-                  onTap: () =>
-                      setState(() => _selectedCategory = _PlaceCategory.mosque),
-                ),
-                _categoryChip(
-                  context: context,
-                  label: 'Halal Food',
-                  icon: Icons.restaurant_rounded,
-                  selected: _selectedCategory == _PlaceCategory.halalFood,
-                  onTap: () => setState(
-                    () => _selectedCategory = _PlaceCategory.halalFood,
-                  ),
-                ),
-                _categoryChip(
-                  context: context,
-                  label: 'Education',
-                  icon: Icons.school_rounded,
-                  selected: _selectedCategory == _PlaceCategory.education,
-                  onTap: () => setState(
-                    () => _selectedCategory = _PlaceCategory.education,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 8),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              children: [
-                Text(
-                  '${places.length} ${l10n.location}',
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w700,
-                    color: Theme.of(
-                      context,
-                    ).colorScheme.onSurface.withValues(alpha: 0.5),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            flex: 3,
-            child: places.isEmpty
-                ? Center(
-                    child: Text(
-                      l10n.noResults,
-                      style: TextStyle(
-                        color: Theme.of(
-                          context,
-                        ).colorScheme.onSurface.withValues(alpha: 0.55),
-                        fontWeight: FontWeight.w700,
+
+          // SEARCH HERE BUTTON
+          if (showSearchHere)
+            Positioned(
+              top: kToolbarHeight + MediaQuery.of(context).padding.top + 76,
+              left: 0,
+              right: 0,
+              child: Center(
+                child: TweenAnimationBuilder<double>(
+                  tween: Tween(begin: 0.0, end: 1.0),
+                  duration: const Duration(milliseconds: 300),
+                  builder: (context, val, child) => Transform.scale(
+                    scale: val,
+                    child: Opacity(
+                      opacity: val,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          if (_currentCenter != null) _fetchPlaces(_currentCenter!, _selectedCategory);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: AppColors.emerald,
+                          foregroundColor: Colors.white,
+                          elevation: 8,
+                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                        ),
+                        icon: const Icon(Icons.refresh_rounded, size: 20),
+                        label: const Text('Search this area', style: TextStyle(fontWeight: FontWeight.w800)),
                       ),
                     ),
-                  )
-                : ListView.builder(
-                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 20),
-                    itemCount: places.length,
-                    itemBuilder: (context, index) {
-                      final place = places[index];
-                      return AnimatedPremiumCard(
-                        animationDelay: index * 60,
-                        onTap: () => _focusPlace(place),
-                        child: Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(10),
-                              decoration: BoxDecoration(
-                                color: AppColors.emeraldSurface,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Icon(
-                                place.place.icon,
-                                color: place.place.color,
-                              ),
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    place.place.name,
-                                    style: const TextStyle(
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 2),
-                                  Text(
-                                    place.place.description,
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSurface
-                                          .withValues(alpha: 0.65),
-                                    ),
-                                  ),
-                                  const SizedBox(height: 2),
-                                  Text(
-                                    '${place.distanceKm.toStringAsFixed(1)} km',
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w800,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSurface
-                                          .withValues(alpha: 0.5),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            IconButton(
-                              icon: const Icon(
-                                Icons.directions_rounded,
-                                color: AppColors.emerald,
-                              ),
-                              onPressed: () => _openDirections(place),
-                            ),
-                          ],
-                        ),
-                      );
-                    },
                   ),
+                ),
+              ),
+            ),
+
+          // LOADING OVERLAY (Subtle)
+          if (_isLoading)
+            Positioned(
+              top: kToolbarHeight + MediaQuery.of(context).padding.top + 76,
+              left: 0,
+              right: 0,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).scaffoldBackgroundColor,
+                    shape: BoxShape.circle,
+                    boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 10)],
+                  ),
+                  child: const SizedBox(
+                    width: 20, height: 20,
+                    child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.emerald),
+                  ),
+                ),
+              ),
+            ),
+
+          // BOTTOM SHEET (DRAGGABLE)
+          DraggableScrollableSheet(
+            initialChildSize: 0.35,
+            minChildSize: 0.15,
+            maxChildSize: 0.8,
+            builder: (context, scrollController) {
+              return Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
+                  boxShadow: [
+                    BoxShadow(color: Colors.black.withValues(alpha: 0.1), blurRadius: 20, offset: const Offset(0, -5))
+                  ]
+                ),
+                child: Column(
+                  children: [
+                    // Handle
+                    Center(
+                      child: Container(
+                        margin: const EdgeInsets.only(top: 12, bottom: 12),
+                        width: 40, height: 5,
+                        decoration: BoxDecoration(
+                          color: Colors.grey.withValues(alpha: 0.3),
+                          borderRadius: BorderRadius.circular(10)
+                        ),
+                      ),
+                    ),
+                    // Title Bar
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                      child: Row(
+                        children: [
+                          Text(
+                            _selectedCategory == _PlaceCategory.mosque ? 'Nearby Mosques' :
+                            _selectedCategory == _PlaceCategory.halalFood ? 'Halal Food' : 'Islamic Schools',
+                            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+                          ),
+                          const Spacer(),
+                          Text(
+                            '${enrichedPlaces.length} found',
+                            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.emerald),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Divider(height: 1),
+                    // List
+                    Expanded(
+                      child: _error != null 
+                        ? Center(child: Text(_error!, style: const TextStyle(color: Colors.red)))
+                        : enrichedPlaces.isEmpty && !_isLoading
+                          ? Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.location_off_rounded, size: 48, color: Colors.grey.withValues(alpha: 0.5)),
+                                  const SizedBox(height: 16),
+                                  Text(l10n.noResults, style: TextStyle(fontWeight: FontWeight.w700, color: Colors.grey)),
+                                ],
+                              )
+                            )
+                          : ListView.separated(
+                              controller: scrollController,
+                              padding: const EdgeInsets.fromLTRB(20, 16, 20, 40),
+                              itemCount: enrichedPlaces.length,
+                              separatorBuilder: (context, index) => const SizedBox(height: 12),
+                              itemBuilder: (context, index) {
+                                final place = enrichedPlaces[index];
+                                return InkWell(
+                                  onTap: () => _focusPlace(place),
+                                  borderRadius: BorderRadius.circular(16),
+                                  child: Container(
+                                    padding: const EdgeInsets.all(16),
+                                    decoration: BoxDecoration(
+                                      color: isDark ? AppColors.darkSurface : AppColors.emeraldSurface,
+                                      borderRadius: BorderRadius.circular(16),
+                                      border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(12),
+                                          decoration: BoxDecoration(
+                                            color: place.place.color.withValues(alpha: 0.1),
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Icon(place.place.icon, color: place.place.color, size: 24),
+                                        ),
+                                        const SizedBox(width: 16),
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                place.place.name,
+                                                style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15),
+                                                maxLines: 1, overflow: TextOverflow.ellipsis,
+                                              ),
+                                              const SizedBox(height: 4),
+                                              Row(
+                                                children: [
+                                                  Icon(Icons.location_on_rounded, size: 14, color: AppColors.emerald),
+                                                  const SizedBox(width: 4),
+                                                  Text(
+                                                    '${place.distanceKm.toStringAsFixed(1)} km away',
+                                                    style: TextStyle(
+                                                      fontSize: 13,
+                                                      fontWeight: FontWeight.w700,
+                                                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        IconButton(
+                                          icon: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            decoration: const BoxDecoration(
+                                              color: AppColors.emerald,
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: const Icon(Icons.directions_rounded, color: Colors.white, size: 20),
+                                          ),
+                                          onPressed: () => _openDirections(place),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                    )
+                  ],
+                ),
+              );
+            },
           ),
         ],
       ),
@@ -295,35 +512,47 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
     required bool selected,
     required VoidCallback onTap,
   }) {
+    // Beautiful glassmorphic chips
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 4),
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(12),
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-          decoration: BoxDecoration(
-            color: selected ? AppColors.emerald : AppColors.emeraldSurface,
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(
-                icon,
-                size: 16,
-                color: selected ? Colors.white : AppColors.emerald,
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(20),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: selected ? AppColors.emerald : Theme.of(context).scaffoldBackgroundColor.withValues(alpha: 0.85),
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                color: selected ? AppColors.emeraldLight : Colors.grey.withValues(alpha: 0.2),
+                width: 1.5,
               ),
-              const SizedBox(width: 6),
-              Text(
-                label,
-                style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 12,
+              boxShadow: selected ? [
+                BoxShadow(color: AppColors.emeraldDeep.withValues(alpha: 0.4), blurRadius: 8, offset: const Offset(0, 4))
+              ] : [],
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  icon,
+                  size: 16,
                   color: selected ? Colors.white : AppColors.emerald,
                 ),
-              ),
-            ],
+                const SizedBox(width: 8),
+                Text(
+                  label,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 13,
+                    color: selected ? Colors.white : Theme.of(context).colorScheme.onSurface,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -339,6 +568,7 @@ class _PlaceWithDistance {
 }
 
 class _IslamicPlace {
+  final String id;
   final String name;
   final String description;
   final LatLng position;
@@ -347,6 +577,7 @@ class _IslamicPlace {
   final _PlaceCategory category;
 
   const _IslamicPlace({
+    required this.id,
     required this.name,
     required this.description,
     required this.position,
@@ -355,110 +586,3 @@ class _IslamicPlace {
     required this.category,
   });
 }
-
-const List<_IslamicPlace> _allPlaces = [
-  _IslamicPlace(
-    name: 'Sultan Ahmed Mosque',
-    description: 'Historic Ottoman mosque in Istanbul',
-    position: LatLng(41.0054, 28.9768),
-    icon: Icons.mosque_rounded,
-    color: AppColors.emerald,
-    category: _PlaceCategory.mosque,
-  ),
-  _IslamicPlace(
-    name: 'Suleymaniye Mosque',
-    description: 'Classical imperial mosque complex',
-    position: LatLng(41.0164, 28.9642),
-    icon: Icons.mosque_rounded,
-    color: AppColors.emerald,
-    category: _PlaceCategory.mosque,
-  ),
-  _IslamicPlace(
-    name: 'Eyup Sultan Mosque',
-    description: 'Major spiritual center and ziyara site',
-    position: LatLng(41.0470, 28.9339),
-    icon: Icons.mosque_rounded,
-    color: AppColors.emerald,
-    category: _PlaceCategory.mosque,
-  ),
-  _IslamicPlace(
-    name: 'Camlica Mosque',
-    description: 'Large modern mosque with panoramic view',
-    position: LatLng(41.0279, 29.0713),
-    icon: Icons.mosque_rounded,
-    color: AppColors.emerald,
-    category: _PlaceCategory.mosque,
-  ),
-  _IslamicPlace(
-    name: 'Fatih Mosque',
-    description: 'Historic mosque and madrasah area',
-    position: LatLng(41.0196, 28.9499),
-    icon: Icons.mosque_rounded,
-    color: AppColors.emerald,
-    category: _PlaceCategory.mosque,
-  ),
-  _IslamicPlace(
-    name: 'Kanaat Lokantasi',
-    description: 'Traditional halal cuisine in Uskudar',
-    position: LatLng(41.0265, 29.0156),
-    icon: Icons.restaurant_rounded,
-    color: Colors.deepOrange,
-    category: _PlaceCategory.halalFood,
-  ),
-  _IslamicPlace(
-    name: 'Sultanahmet Koftecisi',
-    description: 'Popular halal restaurant near old city',
-    position: LatLng(41.0087, 28.9786),
-    icon: Icons.restaurant_rounded,
-    color: Colors.deepOrange,
-    category: _PlaceCategory.halalFood,
-  ),
-  _IslamicPlace(
-    name: 'Hamdi Restaurant',
-    description: 'Halal Turkish food by the Golden Horn',
-    position: LatLng(41.0169, 28.9702),
-    icon: Icons.restaurant_rounded,
-    color: Colors.deepOrange,
-    category: _PlaceCategory.halalFood,
-  ),
-  _IslamicPlace(
-    name: 'Halat by Divan',
-    description: 'Modern halal kitchen and desserts',
-    position: LatLng(41.0368, 28.9859),
-    icon: Icons.restaurant_rounded,
-    color: Colors.deepOrange,
-    category: _PlaceCategory.halalFood,
-  ),
-  _IslamicPlace(
-    name: 'Istanbul University Theology',
-    description: 'Faculty of Theology and Islamic studies',
-    position: LatLng(41.0126, 28.9604),
-    icon: Icons.school_rounded,
-    color: Colors.indigo,
-    category: _PlaceCategory.education,
-  ),
-  _IslamicPlace(
-    name: 'Marmara University Theology',
-    description: 'Islamic sciences and research center',
-    position: LatLng(41.0290, 29.0426),
-    icon: Icons.school_rounded,
-    color: Colors.indigo,
-    category: _PlaceCategory.education,
-  ),
-  _IslamicPlace(
-    name: '29 Mayis University Theology',
-    description: 'Academic programs for Islamic scholarship',
-    position: LatLng(41.0390, 29.0458),
-    icon: Icons.school_rounded,
-    color: Colors.indigo,
-    category: _PlaceCategory.education,
-  ),
-  _IslamicPlace(
-    name: 'ISUZEM Islamic Studies Center',
-    description: 'Courses and community Islamic education',
-    position: LatLng(41.0075, 28.9462),
-    icon: Icons.school_rounded,
-    color: Colors.indigo,
-    category: _PlaceCategory.education,
-  ),
-];

@@ -652,4 +652,25 @@ class AppLocalizationsMai extends AppLocalizations {
   @override
   String get calibrationRequiredFigure8 =>
       'अंशांकन आवश्यक। चित्र-8 मे डिवाइस घुमाउ।';
+
+  @override
+  String get dailyVerse => 'Daily Verse';
+
+  @override
+  String get todaysIbadah => 'Today\'s Ibadah';
+
+  @override
+  String get quickAccess => 'Quick Access';
+
+  @override
+  String get assistant => 'Assistant';
+
+  @override
+  String get places => 'Places';
+
+  @override
+  String get library => 'Library';
+
+  @override
+  String get analytics => 'Analytics';
 }

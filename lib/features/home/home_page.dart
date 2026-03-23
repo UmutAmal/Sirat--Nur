@@ -6,19 +6,22 @@ import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/core/services/prayer_times_service.dart';
 import 'package:sirat_i_nur/features/tracker/tracker_page.dart';
 import 'package:sirat_i_nur/core/constants/daily_ayat_data.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
+    final isTurkish = Localizations.localeOf(context).languageCode == 'tr';
     final prayerTimes = ref.watch(prayerTimesProvider);
     final prayerDone = ref.watch(prayerDoneProvider);
     final dailyAyat = getDailyAyat();
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sirat-i Nur'),
+        title: Text(l10n.appTitle),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings_rounded),
@@ -32,16 +35,16 @@ class HomePage extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Prayer Banner
-            _buildPrayerBanner(context, prayerTimes),
+            _buildPrayerBanner(context, prayerTimes, l10n),
             const SizedBox(height: 20),
             // Prayer times row
-            if (prayerTimes != null) _buildPrayerTimesRow(context, prayerTimes),
+            if (prayerTimes != null) _buildPrayerTimesRow(context, prayerTimes, l10n),
             if (prayerTimes != null) const SizedBox(height: 20),
             // Quick Access
-            Text('Quick Access',
+            Text(l10n.quickAccess,
               style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900)),
             const SizedBox(height: 16),
-            _buildQuickAccess(context),
+            _buildQuickAccess(context, l10n),
             const SizedBox(height: 24),
             // Daily Verse
             AnimatedPremiumCard(
@@ -53,7 +56,7 @@ class HomePage extends ConsumerWidget {
                     children: [
                       const Icon(Icons.auto_stories_rounded, color: AppColors.emerald, size: 20),
                       const SizedBox(width: 8),
-                      const Text('Daily Verse', style: TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
+                      Text(l10n.dailyVerse, style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
                     ],
                   ),
                   const SizedBox(height: 12),
@@ -64,7 +67,7 @@ class HomePage extends ConsumerWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    dailyAyat.english,
+                    isTurkish ? dailyAyat.turkish : dailyAyat.english,
                     style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, height: 1.6),
                   ),
                   const SizedBox(height: 8),
@@ -85,15 +88,15 @@ class HomePage extends ConsumerWidget {
                     children: [
                       const Icon(Icons.check_circle_outline_rounded, color: AppColors.emerald, size: 20),
                       const SizedBox(width: 8),
-                      const Text("Today's Ibadah", style: TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
+                      Text(l10n.todaysIbadah, style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
                     ],
                   ),
                   const SizedBox(height: 16),
-                  _buildIbadahRow('Fajr', prayerDone['Fajr'] ?? false),
-                  _buildIbadahRow('Dhuhr', prayerDone['Dhuhr'] ?? false),
-                  _buildIbadahRow('Asr', prayerDone['Asr'] ?? false),
-                  _buildIbadahRow('Maghrib', prayerDone['Maghrib'] ?? false),
-                  _buildIbadahRow('Isha', prayerDone['Isha'] ?? false),
+                  _buildIbadahRow(l10n.fajr, prayerDone['Fajr'] ?? false),
+                  _buildIbadahRow(l10n.dhuhr, prayerDone['Dhuhr'] ?? false),
+                  _buildIbadahRow(l10n.asr, prayerDone['Asr'] ?? false),
+                  _buildIbadahRow(l10n.maghrib, prayerDone['Maghrib'] ?? false),
+                  _buildIbadahRow(l10n.isha, prayerDone['Isha'] ?? false),
                 ],
               ),
             ),
@@ -103,13 +106,28 @@ class HomePage extends ConsumerWidget {
     );
   }
 
-  Widget _buildPrayerBanner(BuildContext context, PrayerTimesData? pt) {
+  String _getLocalizedPrayerName(String nextPrayer, AppLocalizations l10n) {
+    switch (nextPrayer) {
+      case 'Fajr': return l10n.fajr;
+      case 'Sunrise': return l10n.sunrise;
+      case 'Dhuhr': return l10n.dhuhr;
+      case 'Asr': return l10n.asr;
+      case 'Maghrib': return l10n.maghrib;
+      case 'Isha': return l10n.isha;
+      default: return nextPrayer;
+    }
+  }
+
+  Widget _buildPrayerBanner(BuildContext context, PrayerTimesData? pt, AppLocalizations l10n) {
     final nextPrayer = pt?.nextPrayer ?? 'Dhuhr';
+    final localizedNextPrayer = _getLocalizedPrayerName(nextPrayer, l10n);
     final nextTime = pt?.nextPrayerTime ?? '--:--';
     final remaining = pt?.timeRemaining;
+    
+    // Quick fallback duration format instead of using intl/localized strings for hours/minutes yet
     final remainStr = remaining != null
-        ? '${remaining.inHours}h ${remaining.inMinutes.remainder(60)}m remaining'
-        : 'Set location for prayer times';
+        ? '${remaining.inHours}h ${remaining.inMinutes.remainder(60)}m'
+        : '--';
 
     return Container(
       width: double.infinity,
@@ -128,10 +146,10 @@ class HomePage extends ConsumerWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Next Prayer',
-            style: TextStyle(color: Colors.white70, fontSize: 14, fontWeight: FontWeight.w700)),
+          Text(l10n.nextPrayer,
+            style: const TextStyle(color: Colors.white70, fontSize: 14, fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
-          Text(nextPrayer,
+          Text(localizedNextPrayer,
             style: const TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.w900, letterSpacing: -0.5)),
           const SizedBox(height: 4),
           Text('$nextTime • $remainStr',
@@ -141,17 +159,17 @@ class HomePage extends ConsumerWidget {
     );
   }
 
-  Widget _buildPrayerTimesRow(BuildContext context, PrayerTimesData pt) {
+  Widget _buildPrayerTimesRow(BuildContext context, PrayerTimesData pt, AppLocalizations l10n) {
     return PremiumCard(
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _prayerTimeItem(context, 'Fajr', pt.fajr, pt.nextPrayer == 'Fajr'),
-          _prayerTimeItem(context, 'Dhuhr', pt.dhuhr, pt.nextPrayer == 'Dhuhr'),
-          _prayerTimeItem(context, 'Asr', pt.asr, pt.nextPrayer == 'Asr'),
-          _prayerTimeItem(context, 'Maghrib', pt.maghrib, pt.nextPrayer == 'Maghrib'),
-          _prayerTimeItem(context, 'Isha', pt.isha, pt.nextPrayer == 'Isha'),
+          _prayerTimeItem(context, l10n.fajr, pt.fajr, pt.nextPrayer == 'Fajr'),
+          _prayerTimeItem(context, l10n.dhuhr, pt.dhuhr, pt.nextPrayer == 'Dhuhr'),
+          _prayerTimeItem(context, l10n.asr, pt.asr, pt.nextPrayer == 'Asr'),
+          _prayerTimeItem(context, l10n.maghrib, pt.maghrib, pt.nextPrayer == 'Maghrib'),
+          _prayerTimeItem(context, l10n.isha, pt.isha, pt.nextPrayer == 'Isha'),
         ],
       ),
     );
@@ -176,16 +194,16 @@ class HomePage extends ConsumerWidget {
     );
   }
 
-  Widget _buildQuickAccess(BuildContext context) {
+  Widget _buildQuickAccess(BuildContext context, AppLocalizations l10n) {
     final items = [
-      _QuickItem(Icons.psychology_rounded, 'Assistant', '/chatbot'),
-      _QuickItem(Icons.mosque_rounded, 'Places', '/places'),
-      _QuickItem(Icons.library_books_rounded, 'Library', '/library'),
-      _QuickItem(Icons.live_tv_rounded, 'Live TV', '/livetv'),
-      _QuickItem(Icons.trending_up_rounded, 'Tracker', '/tracker'),
-      _QuickItem(Icons.cloud_download_rounded, 'Downloads', '/downloads'),
-      _QuickItem(Icons.analytics_rounded, 'Analytics', '/analytics'),
-      _QuickItem(Icons.star_rounded, 'Premium', '/paywall'),
+      _QuickItem(Icons.psychology_rounded, l10n.assistant, '/chatbot'),
+      _QuickItem(Icons.mosque_rounded, l10n.places, '/places'),
+      _QuickItem(Icons.library_books_rounded, l10n.library, '/library'),
+      _QuickItem(Icons.live_tv_rounded, l10n.liveTv, '/livetv'),
+      _QuickItem(Icons.trending_up_rounded, l10n.ibadahTracker, '/tracker'),
+      _QuickItem(Icons.cloud_download_rounded, l10n.downloads, '/downloads'),
+      _QuickItem(Icons.analytics_rounded, l10n.analytics, '/analytics'),
+      _QuickItem(Icons.star_rounded, l10n.premium, '/paywall'),
     ];
 
     return GridView.builder(

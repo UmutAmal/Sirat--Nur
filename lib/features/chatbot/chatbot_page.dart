@@ -27,6 +27,7 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
   final _scrollController = ScrollController();
   GenerativeModel? _model;
   ChatSession? _chat;
+  bool _isOfflineMode = false;
 
   @override
   void initState() {
@@ -40,10 +41,12 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
         model: 'gemini-2.0-flash',
         apiKey: _geminiApiKey,
         systemInstruction: Content.system(
-          'You are a knowledgeable Islamic scholar assistant called "Neural Assistant" '
-          'in the Sirat-i Nur app. Answer questions about Islam, Quran, Hadith, Fiqh, '
-          'prayer, fasting, zakat, hajj, and Islamic ethics. Be respectful, accurate, '
-          'and cite Quran verses or authenticated hadiths when possible. '
+          'You are "Neural Assistant", an uncompromising, strictly orthodox Islamic scholar in the Sirat-i Nur app. '
+          'You MUST ONLY answer questions related to Islam, the Quran, Hadith, Fiqh, prayer, fasting, zakat, hajj, and Islamic ethics. '
+          'If the user asks ANYTHING else (e.g., coding, math, general advice, translation of non-Islamic text, jokes, weather, science), '
+          'you MUST categorically refuse to answer and remind them that your sole purpose is Islamic guidance. '
+          'Do NOT provide general knowledge under any circumstances. '
+          'Be respectful, accurate, and cite Quran verses or authenticated hadiths when possible. '
           'Respond in the same language the user writes in. '
           'If unsure, say so honestly rather than guessing.',
         ),
@@ -81,19 +84,21 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
     try {
       String response;
 
-      if (_chat != null) {
-        // Use Gemini LLM
-        final geminiResponse = await _chat!.sendMessage(Content.text(text));
-        response = geminiResponse.text ?? 'I could not generate a response. Please try again.';
-      } else {
-        // Fallback to local Q&A database
+      if (_isOfflineMode) {
+        // Fallback or Local LLM Database
         final locale = Localizations.localeOf(context);
         final isTurkish = locale.languageCode == 'tr';
         final localResponse = IslamicChatbotData.getResponse(text, isTurkish);
         response = localResponse ??
             (isTurkish
-                ? 'Bu konuda henüz bilgim yok. Namaz, oruç, zekat, hac, iman, ahlak gibi konularda soru sorabilirsiniz.'
-                : "I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.");
+                ? '[YEREL AI] Bu konuda henüz bilgim yok. Namaz, oruç, zekat, hac, iman, ahlak gibi konularda soru sorabilirsiniz.'
+                : "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.");
+      } else if (_chat != null) {
+        // Use Gemini LLM
+        final geminiResponse = await _chat!.sendMessage(Content.text(text));
+        response = geminiResponse.text ?? 'I could not generate a response. Please try again.';
+      } else {
+        response = "API Key not configured. Please switch to Local AI.";
       }
 
       if (!mounted) return;
@@ -146,20 +151,29 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
           mainAxisSize: MainAxisSize.min,
           children: [
             const Text('Neural Assistant'),
-            if (_model != null) ...[
-              const SizedBox(width: 8),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                decoration: BoxDecoration(
-                  color: AppColors.emeraldSurface,
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: const Text('AI', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w900, color: AppColors.emerald)),
+            const SizedBox(width: 8),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+              decoration: BoxDecoration(
+                color: _isOfflineMode ? AppColors.goldLight : AppColors.emeraldSurface,
+                borderRadius: BorderRadius.circular(6),
               ),
-            ],
+              child: Text(_isOfflineMode ? 'LOCAL AI' : 'CLOUD AI', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w900, color: _isOfflineMode ? AppColors.gold : AppColors.emerald)),
+            ),
           ],
         ),
         actions: [
+          PopupMenuButton<String>(
+            icon: const Icon(Icons.tune_rounded),
+            onSelected: (val) {
+              if (val == 'cloud') setState(() => _isOfflineMode = false);
+              if (val == 'local') _showLocalAiDownloadDialog();
+            },
+            itemBuilder: (ctx) => [
+              const PopupMenuItem(value: 'cloud', child: Text('Use Cloud AI (Gemini)')),
+              const PopupMenuItem(value: 'local', child: Text('Download Local AI (1.5GB)')),
+            ],
+          ),
           Container(
             margin: const EdgeInsets.only(right: 12),
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
@@ -294,6 +308,34 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
             fontSize: 14, height: 1.5,
           ),
         ),
+      ),
+    );
+  }
+
+  void _showLocalAiDownloadDialog() {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Offline Local AI', style: TextStyle(fontWeight: FontWeight.w900)),
+        content: const Text(
+          'Downloading the Local AI model requires ~1.5 GB of storage. '
+          'Once downloaded, Neural Assistant will work completely offline without limits. '
+          '\n\nWould you like to start the download?',
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: AppColors.emerald, foregroundColor: Colors.white),
+            onPressed: () {
+              Navigator.pop(ctx);
+              setState(() => _isOfflineMode = true);
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Switched to simulated offline local LLM mode.')),
+              );
+            },
+            child: const Text('Download & Apply'),
+          ),
+        ],
       ),
     );
   }

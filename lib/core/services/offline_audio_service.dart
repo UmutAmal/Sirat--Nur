@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 typedef SurahDownloadProgress =
     void Function(double progress, int surahNumber, int totalSurahs);
@@ -149,39 +150,37 @@ class OfflineAudioService {
 }
 
 class OfflineReciters {
+  // We no longer store third-party URLs. All audio is fetched from our own Supabase Storage bucket.
   static const Map<String, Map<String, String>> reciters = {
     'alafasy': {
       'name': 'Mishary Rashid Alafasy',
-      'baseUrl': 'https://server8.mp3quran.net/afs',
     },
     'husary': {
       'name': 'Mahmoud Khalil Al-Husary',
-      'baseUrl': 'https://server8.mp3quran.net/husr',
     },
     'abdul_basit_murattal': {
       'name': 'Abdul Basit (Murattal)',
-      'baseUrl': 'https://server8.mp3quran.net/basit_murattal',
     },
     'abdul_basit_mujawwad': {
       'name': 'Abdul Basit (Mujawwad)',
-      'baseUrl': 'https://server8.mp3quran.net/basit',
     },
     'shuraim': {
       'name': 'Saoud Al-Shuraim',
-      'baseUrl': 'https://server8.mp3quran.net/shuraim',
     },
     'sudais': {
       'name': 'Abdul Rahman Al-Sudais',
-      'baseUrl': 'https://server8.mp3quran.net/sds',
     },
   };
 
   static String getSurahUrl(String reciterId, int surahNumber) {
-    final reciter = reciters[reciterId];
-    if (reciter == null) return '';
+    if (!reciters.containsKey(reciterId)) return '';
 
     final paddedSurah = surahNumber.toString().padLeft(3, '0');
-    return '${reciter['baseUrl']}/$paddedSurah.mp3';
+    // Generates a public URL pointing to the app's own Supabase bucket 'sirat_assets'.
+    // Requires the user to upload mp3 files to: sirat_assets/audio/{reciterId}_{surahNumber}.mp3
+    return Supabase.instance.client.storage
+        .from('sirat_assets')
+        .getPublicUrl('audio/${reciterId}_$paddedSurah.mp3');
   }
 
   static Map<int, String> getAllSurahUrls(String reciterId) {

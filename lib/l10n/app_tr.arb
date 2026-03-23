@@ -203,5 +203,12 @@
   "healthCheckDesc": "Sistem durumunu kontrol et ve sağlık taraması yap.",
   "qiblaAligned": "Kıble Hizalandı",
   "rotateToFindQibla": "Kıbleyi Bulmak İçin Çevir",
-  "calibrationRequiredFigure8": "Kalibrasyon gerekli. Cihazı 8 çizerek çevirin."
+  "calibrationRequiredFigure8": "Kalibrasyon gerekli. Cihazı 8 çizerek çevirin.",
+  "dailyVerse": "Günün Ayeti",
+  "todaysIbadah": "Bugünün İbadeti",
+  "quickAccess": "Hızlı Erişim",
+  "assistant": "Asistan",
+  "places": "Mekanlar",
+  "library": "Kütüphane",
+  "analytics": "Analitik"
 }

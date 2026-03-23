@@ -9,141 +9,78 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/widget_background"
+        android:background="@drawable/widget_bg_emerald"
         android:orientation="vertical"
-        android:padding="12dp">
+        android:padding="16dp"
+        android:elevation="8dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Namaz Vakitleri / Prayer Times"
-            android:textColor="#4CAF50"
+            android:text="DAILY PRAYER TIMES"
+            android:textColor="#B3FFFFFF"
             android:textSize="11sp"
+            android:textAlignment="center"
+            android:letterSpacing="0.1"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
+            android:weightSum="5"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sabah"
-                    android:textColor="#A0A0A0"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/tv_fajr"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="05:15"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fajr" android:textColor="#A0A0A0" android:textSize="12sp" />
+                <TextView android:id="@+id/tv_fajr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="05:15" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Öğle"
-                    android:textColor="#A0A0A0"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/tv_dhuhr"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="12:30"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dhuhr" android:textColor="#A0A0A0" android:textSize="12sp" />
+                <TextView android:id="@+id/tv_dhuhr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12:30" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="İkindi"
-                    android:textColor="#A0A0A0"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/tv_asr"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="15:45"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Asr" android:textColor="#A0A0A0" android:textSize="12sp" />
+                <TextView android:id="@+id/tv_asr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15:45" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Akşam"
-                    android:textColor="#A0A0A0"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/tv_maghrib"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="18:30"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Maghrib" android:textColor="#A0A0A0" android:textSize="12sp" />
+                <TextView android:id="@+id/tv_maghrib" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="18:30" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Yatsı"
-                    android:textColor="#A0A0A0"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/tv_isha"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="20:00"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Isha" android:textColor="#A0A0A0" android:textSize="12sp" />
+                <TextView android:id="@+id/tv_isha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20:00" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
             </LinearLayout>
 
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>

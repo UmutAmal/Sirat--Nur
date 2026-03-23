@@ -653,4 +653,25 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get calibrationRequiredFigure8 =>
       'Kalibrasyon gerekli. Cihazı 8 çizerek çevirin.';
+
+  @override
+  String get dailyVerse => 'Günün Ayeti';
+
+  @override
+  String get todaysIbadah => 'Bugünün İbadeti';
+
+  @override
+  String get quickAccess => 'Hızlı Erişim';
+
+  @override
+  String get assistant => 'Asistan';
+
+  @override
+  String get places => 'Mekanlar';
+
+  @override
+  String get library => 'Kütüphane';
+
+  @override
+  String get analytics => 'Analitik';
 }

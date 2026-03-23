@@ -165,24 +165,8 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
   }
 
   List<String> _audioCandidatesForVoice(String normalizedVoice) {
-    if (normalizedVoice.contains('sudais')) {
-      return const [
-        'https://download.quranicaudio.com/quran/abdurrahmaan_as-sudays',
-        'https://server8.mp3quran.net/sds',
-      ];
-    }
-    if (normalizedVoice.contains('abdulbaset') || normalizedVoice.contains('abdulbasit')) {
-      return const [
-        'https://download.quranicaudio.com/quran/abdul_basit_murattal',
-        'https://server8.mp3quran.net/basit_murattal',
-        'https://server8.mp3quran.net/basit',
-      ];
-    }
-
-    return const [
-      'https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee',
-      'https://server8.mp3quran.net/afs',
-    ];
+    final reciterId = _reciterIdForVoice(normalizedVoice) ?? 'alafasy';
+    return [OfflineReciters.getSurahUrl(reciterId, widget.surahNumber)];
   }
 
   Future<void> _shareAyah({
