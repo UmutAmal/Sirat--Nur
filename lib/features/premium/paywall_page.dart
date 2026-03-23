@@ -9,6 +9,15 @@ class PaywallPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final premiumState = ref.watch(premiumProvider);
+
+    // If already premium, just show confirmation and pop
+    if (premiumState.isPremium) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (context.mounted) context.pop();
+      });
+    }
+
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(gradient: AppColors.darkGradient),
@@ -59,7 +68,17 @@ class PaywallPage extends ConsumerWidget {
                       _featureRow(Icons.palette_rounded, 'Exclusive Designs', 'Premium themes & fonts'),
                       _featureRow(Icons.block_rounded, 'Ad-Free', 'Zero advertisements'),
                       const SizedBox(height: 40),
-                      // Price button
+                      // Error message
+                      if (premiumState.error != null)
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 16),
+                          child: Text(
+                            premiumState.error!,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(color: Colors.redAccent, fontSize: 13),
+                          ),
+                        ),
+                      // Purchase button
                       Container(
                         width: double.infinity,
                         height: 64,
@@ -73,29 +92,30 @@ class PaywallPage extends ConsumerWidget {
                           borderRadius: BorderRadius.circular(20),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(20),
-                            onTap: () async {
-                               await ref.read(premiumProvider.notifier).unlockPremium();
-                               if (context.mounted) {
-                                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Successfully unlocked Premium!')));
-                                  context.pop();
-                               }
-                            },
-                            child: const Center(
-                              child: Text('Get Lifetime Access — \$1.00',
-                                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18)),
+                            onTap: premiumState.isLoading
+                                ? null
+                                : () => ref.read(premiumProvider.notifier).purchasePremium(),
+                            child: Center(
+                              child: premiumState.isLoading
+                                  ? const SizedBox(
+                                      width: 24,
+                                      height: 24,
+                                      child: CircularProgressIndicator(
+                                        strokeWidth: 2.5,
+                                        color: Colors.white,
+                                      ),
+                                    )
+                                  : const Text('Get Lifetime Access — \$1.00',
+                                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18)),
                             ),
                           ),
                         ),
                       ),
                       const SizedBox(height: 16),
                       TextButton(
-                        onPressed: () async {
-                           await ref.read(premiumProvider.notifier).unlockPremium();
-                           if (context.mounted) {
-                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Purchases Restored')));
-                              context.pop();
-                           }
-                        },
+                        onPressed: premiumState.isLoading
+                            ? null
+                            : () => ref.read(premiumProvider.notifier).restorePurchases(),
                         child: Text('Restore Purchases',
                           style: TextStyle(color: Colors.white.withValues(alpha: 0.5), fontWeight: FontWeight.w700)),
                       ),

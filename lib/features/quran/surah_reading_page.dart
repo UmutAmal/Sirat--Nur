@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:sirat_i_nur/core/constants/quran_data.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
@@ -44,7 +45,31 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
         }
       });
     });
+    _loadBookmarks();
     _loadSurah();
+  }
+
+  Future<void> _loadBookmarks() async {
+    final prefs = await SharedPreferences.getInstance();
+    final surahKey = 'bookmark_surah_${widget.surahNumber}';
+    final ayahKey = 'bookmark_ayahs_${widget.surahNumber}';
+    final savedAyahs = prefs.getStringList(ayahKey);
+    if (!mounted) return;
+    setState(() {
+      _isBookmarked = prefs.getBool(surahKey) ?? false;
+      if (savedAyahs != null) {
+        _bookmarkedAyahs.addAll(savedAyahs.map(int.parse));
+      }
+    });
+  }
+
+  Future<void> _saveBookmarks() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('bookmark_surah_${widget.surahNumber}', _isBookmarked);
+    await prefs.setStringList(
+      'bookmark_ayahs_${widget.surahNumber}',
+      _bookmarkedAyahs.map((e) => e.toString()).toList(),
+    );
   }
 
   Future<void> _loadSurah() async {
@@ -195,6 +220,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
         _bookmarkedAyahs.add(ayahNumber);
       }
     });
+    _saveBookmarks();
 
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
