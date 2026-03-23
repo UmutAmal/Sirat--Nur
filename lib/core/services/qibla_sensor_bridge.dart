@@ -1,4 +1,4 @@
-﻿import 'dart:async';
+import 'dart:async';
 import 'package:flutter_compass/flutter_compass.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:sirat_i_nur/core/utils/astronomical_math_util.dart';
@@ -31,23 +31,33 @@ class QiblaSensorBridge {
   final double _lastVariance = 1.0;
 
   Stream<QiblaOrientation> get orientationStream async* {
-    final pos = await Geolocator.getLastKnownPosition() ?? 
-                await Geolocator.getCurrentPosition(locationSettings: const LocationSettings(accuracy: LocationAccuracy.low));
-    
+    final pos =
+        await Geolocator.getLastKnownPosition() ??
+        await Geolocator.getCurrentPosition(
+          locationSettings: const LocationSettings(
+            accuracy: LocationAccuracy.low,
+          ),
+        );
+
     final declination = AstronomicalMathUtil.calculateMagneticDeclination(
-      pos.latitude, 
-      pos.longitude, 
-      pos.altitude / 1000, 
-      DateTime.now().year.toDouble() + (DateTime.now().dayOfYear / 365)
+      pos.latitude,
+      pos.longitude,
+      pos.altitude / 1000,
+      DateTime.now().year.toDouble() + (DateTime.now().dayOfYear / 365),
     );
 
-    await for (final event in FlutterCompass.events!) {
+    final events = FlutterCompass.events;
+    if (events == null) {
+      throw StateError('Compass sensor unavailable on this device.');
+    }
+
+    await for (final event in events) {
       if (event.heading == null) continue;
 
       _lastFilteredHeading = AstronomicalMathUtil.ekfUpdate(
-        event.heading!, 
-        _lastFilteredHeading, 
-        _lastVariance
+        event.heading!,
+        _lastFilteredHeading,
+        _lastVariance,
       );
 
       final trueHeading = (_lastFilteredHeading + declination) % 360;
@@ -67,4 +77,3 @@ extension DateTimeExt on DateTime {
     return difference(DateTime(year, 1, 1)).inDays + 1;
   }
 }
-

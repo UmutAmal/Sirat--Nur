@@ -22,17 +22,17 @@ class PlacesMapPage extends ConsumerStatefulWidget {
 class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
   final MapController _mapController = MapController();
   final Distance _distance = const Distance();
-  
+
   _PlaceCategory _selectedCategory = _PlaceCategory.mosque;
   LatLng? _currentCenter;
   LatLng? _lastFetchCenter;
-  
+
   List<_IslamicPlace> _places = [];
   bool _isLoading = false;
   String? _error;
-  
+
   // Custom marker size and animation handling could be added here
-  
+
   @override
   void initState() {
     super.initState();
@@ -65,11 +65,13 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
       } else if (category == _PlaceCategory.halalFood) {
         queryTags = '["diet:halal"="yes"]';
       } else if (category == _PlaceCategory.education) {
-        queryTags = '["amenity"="school"]["religion"="muslim"]'; // Basic approximation
+        queryTags =
+            '["amenity"="school"]["religion"="muslim"]'; // Basic approximation
       }
 
       // 5km radius search
-      final query = '''
+      final query =
+          '''
         [out:json][timeout:15];
         (
           node$queryTags(around:5000, ${center.latitude}, ${center.longitude});
@@ -86,19 +88,19 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
         final elements = data['elements'] as List;
-        
+
         final List<_IslamicPlace> fetchedPlaces = [];
-        
+
         for (final el in elements) {
           final tags = el['tags'] ?? {};
           final name = tags['name'] ?? tags['name:en'] ?? 'Unknown Name';
           final lat = el['lat'] ?? el['center']?['lat'];
           final lon = el['lon'] ?? el['center']?['lon'];
-          
+
           if (lat != null && lon != null) {
             IconData icon = Icons.mosque_rounded;
             Color color = AppColors.emerald;
-            
+
             if (category == _PlaceCategory.halalFood) {
               icon = Icons.restaurant_rounded;
               color = Colors.deepOrange;
@@ -107,26 +109,31 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
               color = Colors.indigo;
             }
 
-            fetchedPlaces.add(_IslamicPlace(
-              id: el['id'].toString(),
-              name: name,
-              description: tags['amenity'] ?? tags['shop'] ?? 'Islamic Place',
-              position: LatLng(lat, lon),
-              icon: icon,
-              color: color,
-              category: category,
-            ));
+            fetchedPlaces.add(
+              _IslamicPlace(
+                id: el['id'].toString(),
+                name: name,
+                description: tags['amenity'] ?? tags['shop'] ?? 'Islamic Place',
+                position: LatLng(lat, lon),
+                icon: icon,
+                color: color,
+                category: category,
+              ),
+            );
           }
         }
-        
+
+        if (!mounted) return;
         setState(() {
           _places = fetchedPlaces;
           _lastFetchCenter = center;
         });
       } else {
+        if (!mounted) return;
         setState(() => _error = 'API Error: ${response.statusCode}');
       }
     } catch (e) {
+      if (!mounted) return;
       setState(() => _error = 'Network error. Please try again.');
     } finally {
       if (mounted) setState(() => _isLoading = false);
@@ -138,7 +145,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
       setState(() => _currentCenter = camera.center);
     }
   }
-  
+
   void _changeCategory(_PlaceCategory cat) {
     if (cat == _selectedCategory) return;
     setState(() {
@@ -170,19 +177,34 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
 
     // Sort places by distance from current anchor (or last fetched center)
     final mapCenter = _currentCenter ?? anchor;
-    final enrichedPlaces = _places.map((p) => 
-      _PlaceWithDistance(p, _distance.as(LengthUnit.Kilometer, mapCenter, p.position))
-    ).toList();
+    final enrichedPlaces = _places
+        .map(
+          (p) => _PlaceWithDistance(
+            p,
+            _distance.as(LengthUnit.Kilometer, mapCenter, p.position),
+          ),
+        )
+        .toList();
     enrichedPlaces.sort((a, b) => a.distanceKm.compareTo(b.distanceKm));
 
     // Determine if "Search Here" button should show
-    final showSearchHere = !_isLoading && _lastFetchCenter != null && _currentCenter != null 
-        && _distance.as(LengthUnit.Meter, _lastFetchCenter!, _currentCenter!) > 1000;
+    final showSearchHere =
+        !_isLoading &&
+        _lastFetchCenter != null &&
+        _currentCenter != null &&
+        _distance.as(LengthUnit.Meter, _lastFetchCenter!, _currentCenter!) >
+            1000;
 
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text('${l10n.location} • ${l10n.prayers}', style: const TextStyle(fontWeight: FontWeight.w800, color: Colors.white)),
+        title: Text(
+          '${l10n.location} • ${l10n.prayers}',
+          style: const TextStyle(
+            fontWeight: FontWeight.w800,
+            color: Colors.white,
+          ),
+        ),
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
@@ -190,9 +212,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
         flexibleSpace: ClipRect(
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-            child: Container(
-              color: Colors.black.withValues(alpha: 0.3),
-            ),
+            child: Container(color: Colors.black.withValues(alpha: 0.3)),
           ),
         ),
       ),
@@ -202,7 +222,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
           FlutterMap(
             mapController: _mapController,
             options: MapOptions(
-              initialCenter: anchor, 
+              initialCenter: anchor,
               initialZoom: 13.5,
               onPositionChanged: _onMapPositionChanged,
             ),
@@ -223,20 +243,28 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                       alignment: Alignment.center,
                       children: [
                         Container(
-                          width: 48, height: 48,
+                          width: 48,
+                          height: 48,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: AppColors.emerald.withValues(alpha: 0.2),
                           ),
                         ),
                         Container(
-                          width: 20, height: 20,
+                          width: 20,
+                          height: 20,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: AppColors.emerald,
                             border: Border.all(color: Colors.white, width: 3),
                             boxShadow: [
-                              BoxShadow(color: AppColors.emeraldDeep.withValues(alpha: 0.5), blurRadius: 8, spreadRadius: 2)
+                              BoxShadow(
+                                color: AppColors.emeraldDeep.withValues(
+                                  alpha: 0.5,
+                                ),
+                                blurRadius: 8,
+                                spreadRadius: 2,
+                              ),
                             ],
                           ),
                         ),
@@ -244,25 +272,35 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                     ),
                   ),
                   // Places Markers
-                  ...enrichedPlaces.map((p) => Marker(
-                    point: p.place.position,
-                    width: 40,
-                    height: 40,
-                    child: GestureDetector(
-                      onTap: () => _focusPlace(p),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: p.place.color,
-                          shape: BoxShape.circle,
-                          border: Border.all(color: Colors.white, width: 2),
-                          boxShadow: [
-                            BoxShadow(color: Colors.black.withValues(alpha: 0.2), blurRadius: 4, offset: const Offset(0, 2))
-                          ]
+                  ...enrichedPlaces.map(
+                    (p) => Marker(
+                      point: p.place.position,
+                      width: 40,
+                      height: 40,
+                      child: GestureDetector(
+                        onTap: () => _focusPlace(p),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: p.place.color,
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.white, width: 2),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withValues(alpha: 0.2),
+                                blurRadius: 4,
+                                offset: const Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                          child: Icon(
+                            p.place.icon,
+                            color: Colors.white,
+                            size: 20,
+                          ),
                         ),
-                        child: Icon(p.place.icon, color: Colors.white, size: 20),
                       ),
                     ),
-                  )),
+                  ),
                 ],
               ),
             ],
@@ -321,17 +359,27 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                       opacity: val,
                       child: ElevatedButton.icon(
                         onPressed: () {
-                          if (_currentCenter != null) _fetchPlaces(_currentCenter!, _selectedCategory);
+                          if (_currentCenter != null) {
+                            _fetchPlaces(_currentCenter!, _selectedCategory);
+                          }
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.emerald,
                           foregroundColor: Colors.white,
                           elevation: 8,
-                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 12,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
                         ),
                         icon: const Icon(Icons.refresh_rounded, size: 20),
-                        label: const Text('Search this area', style: TextStyle(fontWeight: FontWeight.w800)),
+                        label: const Text(
+                          'Search this area',
+                          style: TextStyle(fontWeight: FontWeight.w800),
+                        ),
                       ),
                     ),
                   ),
@@ -351,11 +399,17 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                   decoration: BoxDecoration(
                     color: Theme.of(context).scaffoldBackgroundColor,
                     shape: BoxShape.circle,
-                    boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 10)],
+                    boxShadow: [
+                      BoxShadow(color: Colors.black12, blurRadius: 10),
+                    ],
                   ),
                   child: const SizedBox(
-                    width: 20, height: 20,
-                    child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.emerald),
+                    width: 20,
+                    height: 20,
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2,
+                      color: AppColors.emerald,
+                    ),
                   ),
                 ),
               ),
@@ -370,10 +424,16 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
               return Container(
                 decoration: BoxDecoration(
                   color: Theme.of(context).scaffoldBackgroundColor,
-                  borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
+                  borderRadius: const BorderRadius.vertical(
+                    top: Radius.circular(24),
+                  ),
                   boxShadow: [
-                    BoxShadow(color: Colors.black.withValues(alpha: 0.1), blurRadius: 20, offset: const Offset(0, -5))
-                  ]
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: 0.1),
+                      blurRadius: 20,
+                      offset: const Offset(0, -5),
+                    ),
+                  ],
                 ),
                 child: Column(
                   children: [
@@ -381,27 +441,41 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                     Center(
                       child: Container(
                         margin: const EdgeInsets.only(top: 12, bottom: 12),
-                        width: 40, height: 5,
+                        width: 40,
+                        height: 5,
                         decoration: BoxDecoration(
                           color: Colors.grey.withValues(alpha: 0.3),
-                          borderRadius: BorderRadius.circular(10)
+                          borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                     ),
                     // Title Bar
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 8,
+                      ),
                       child: Row(
                         children: [
                           Text(
-                            _selectedCategory == _PlaceCategory.mosque ? 'Nearby Mosques' :
-                            _selectedCategory == _PlaceCategory.halalFood ? 'Halal Food' : 'Islamic Schools',
-                            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+                            _selectedCategory == _PlaceCategory.mosque
+                                ? 'Nearby Mosques'
+                                : _selectedCategory == _PlaceCategory.halalFood
+                                ? 'Halal Food'
+                                : 'Islamic Schools',
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w900,
+                            ),
                           ),
                           const Spacer(),
                           Text(
                             '${enrichedPlaces.length} found',
-                            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.emerald),
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w700,
+                              color: AppColors.emerald,
+                            ),
                           ),
                         ],
                       ),
@@ -409,24 +483,45 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                     const Divider(height: 1),
                     // List
                     Expanded(
-                      child: _error != null 
-                        ? Center(child: Text(_error!, style: const TextStyle(color: Colors.red)))
-                        : enrichedPlaces.isEmpty && !_isLoading
+                      child: _error != null
+                          ? Center(
+                              child: Text(
+                                _error!,
+                                style: const TextStyle(color: Colors.red),
+                              ),
+                            )
+                          : enrichedPlaces.isEmpty && !_isLoading
                           ? Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(Icons.location_off_rounded, size: 48, color: Colors.grey.withValues(alpha: 0.5)),
+                                  Icon(
+                                    Icons.location_off_rounded,
+                                    size: 48,
+                                    color: Colors.grey.withValues(alpha: 0.5),
+                                  ),
                                   const SizedBox(height: 16),
-                                  Text(l10n.noResults, style: TextStyle(fontWeight: FontWeight.w700, color: Colors.grey)),
+                                  Text(
+                                    l10n.noResults,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
                                 ],
-                              )
+                              ),
                             )
                           : ListView.separated(
                               controller: scrollController,
-                              padding: const EdgeInsets.fromLTRB(20, 16, 20, 40),
+                              padding: const EdgeInsets.fromLTRB(
+                                20,
+                                16,
+                                20,
+                                40,
+                              ),
                               itemCount: enrichedPlaces.length,
-                              separatorBuilder: (context, index) => const SizedBox(height: 12),
+                              separatorBuilder: (context, index) =>
+                                  const SizedBox(height: 12),
                               itemBuilder: (context, index) {
                                 final place = enrichedPlaces[index];
                                 return InkWell(
@@ -435,41 +530,68 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                                   child: Container(
                                     padding: const EdgeInsets.all(16),
                                     decoration: BoxDecoration(
-                                      color: isDark ? AppColors.darkSurface : AppColors.emeraldSurface,
+                                      color: isDark
+                                          ? AppColors.darkSurface
+                                          : AppColors.emeraldSurface,
                                       borderRadius: BorderRadius.circular(16),
-                                      border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
+                                      border: Border.all(
+                                        color: Colors.grey.withValues(
+                                          alpha: 0.1,
+                                        ),
+                                      ),
                                     ),
                                     child: Row(
                                       children: [
                                         Container(
                                           padding: const EdgeInsets.all(12),
                                           decoration: BoxDecoration(
-                                            color: place.place.color.withValues(alpha: 0.1),
+                                            color: place.place.color.withValues(
+                                              alpha: 0.1,
+                                            ),
                                             shape: BoxShape.circle,
                                           ),
-                                          child: Icon(place.place.icon, color: place.place.color, size: 24),
+                                          child: Icon(
+                                            place.place.icon,
+                                            color: place.place.color,
+                                            size: 24,
+                                          ),
                                         ),
                                         const SizedBox(width: 16),
                                         Expanded(
                                           child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               Text(
                                                 place.place.name,
-                                                style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15),
-                                                maxLines: 1, overflow: TextOverflow.ellipsis,
+                                                style: const TextStyle(
+                                                  fontWeight: FontWeight.w800,
+                                                  fontSize: 15,
+                                                ),
+                                                maxLines: 1,
+                                                overflow: TextOverflow.ellipsis,
                                               ),
                                               const SizedBox(height: 4),
                                               Row(
                                                 children: [
-                                                  Icon(Icons.location_on_rounded, size: 14, color: AppColors.emerald),
+                                                  Icon(
+                                                    Icons.location_on_rounded,
+                                                    size: 14,
+                                                    color: AppColors.emerald,
+                                                  ),
                                                   const SizedBox(width: 4),
                                                   Text(
                                                     '${place.distanceKm.toStringAsFixed(1)} km away',
                                                     style: TextStyle(
                                                       fontSize: 13,
-                                                      fontWeight: FontWeight.w700,
-                                                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                      color: Theme.of(context)
+                                                          .colorScheme
+                                                          .onSurface
+                                                          .withValues(
+                                                            alpha: 0.6,
+                                                          ),
                                                     ),
                                                   ),
                                                 ],
@@ -484,9 +606,14 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                                               color: AppColors.emerald,
                                               shape: BoxShape.circle,
                                             ),
-                                            child: const Icon(Icons.directions_rounded, color: Colors.white, size: 20),
+                                            child: const Icon(
+                                              Icons.directions_rounded,
+                                              color: Colors.white,
+                                              size: 20,
+                                            ),
                                           ),
-                                          onPressed: () => _openDirections(place),
+                                          onPressed: () =>
+                                              _openDirections(place),
                                         ),
                                       ],
                                     ),
@@ -494,7 +621,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                                 );
                               },
                             ),
-                    )
+                    ),
                   ],
                 ),
               );
@@ -524,15 +651,27 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: selected ? AppColors.emerald : Theme.of(context).scaffoldBackgroundColor.withValues(alpha: 0.85),
+              color: selected
+                  ? AppColors.emerald
+                  : Theme.of(
+                      context,
+                    ).scaffoldBackgroundColor.withValues(alpha: 0.85),
               borderRadius: BorderRadius.circular(20),
               border: Border.all(
-                color: selected ? AppColors.emeraldLight : Colors.grey.withValues(alpha: 0.2),
+                color: selected
+                    ? AppColors.emeraldLight
+                    : Colors.grey.withValues(alpha: 0.2),
                 width: 1.5,
               ),
-              boxShadow: selected ? [
-                BoxShadow(color: AppColors.emeraldDeep.withValues(alpha: 0.4), blurRadius: 8, offset: const Offset(0, 4))
-              ] : [],
+              boxShadow: selected
+                  ? [
+                      BoxShadow(
+                        color: AppColors.emeraldDeep.withValues(alpha: 0.4),
+                        blurRadius: 8,
+                        offset: const Offset(0, 4),
+                      ),
+                    ]
+                  : [],
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -548,7 +687,9 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                   style: TextStyle(
                     fontWeight: FontWeight.w800,
                     fontSize: 13,
-                    color: selected ? Colors.white : Theme.of(context).colorScheme.onSurface,
+                    color: selected
+                        ? Colors.white
+                        : Theme.of(context).colorScheme.onSurface,
                   ),
                 ),
               ],

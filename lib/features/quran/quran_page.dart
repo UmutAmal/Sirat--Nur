@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/constants/quran_data.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class QuranPage extends ConsumerStatefulWidget {
   const QuranPage({super.key});
@@ -10,7 +11,8 @@ class QuranPage extends ConsumerStatefulWidget {
   ConsumerState<QuranPage> createState() => _QuranPageState();
 }
 
-class _QuranPageState extends ConsumerState<QuranPage> with SingleTickerProviderStateMixin {
+class _QuranPageState extends ConsumerState<QuranPage>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final _searchController = TextEditingController();
   String _query = '';
@@ -31,24 +33,40 @@ class _QuranPageState extends ConsumerState<QuranPage> with SingleTickerProvider
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final l10n = AppLocalizations.of(context)!;
     final filteredSurahs = _query.isEmpty
-      ? allSurahs
-      : allSurahs.where((s) =>
-          s.nameArabic.contains(_query) ||
-          s.nameEnglish.toLowerCase().contains(_query.toLowerCase()) ||
-          s.nameTurkish.toLowerCase().contains(_query.toLowerCase()) ||
-          s.transliteration.toLowerCase().contains(_query.toLowerCase()) ||
-          s.number.toString() == _query
-        ).toList();
+        ? allSurahs
+        : allSurahs
+              .where(
+                (s) =>
+                    s.nameArabic.contains(_query) ||
+                    s.nameEnglish.toLowerCase().contains(
+                      _query.toLowerCase(),
+                    ) ||
+                    s.nameTurkish.toLowerCase().contains(
+                      _query.toLowerCase(),
+                    ) ||
+                    s.transliteration.toLowerCase().contains(
+                      _query.toLowerCase(),
+                    ) ||
+                    s.number.toString() == _query,
+              )
+              .toList();
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Quran'),
+        title: Text(l10n.quran),
         bottom: TabBar(
           controller: _tabController,
-          tabs: const [Tab(text: 'Surahs'), Tab(text: 'Juz')],
+          tabs: [
+            Tab(text: l10n.surahs),
+            Tab(text: l10n.juz),
+          ],
           indicatorSize: TabBarIndicatorSize.label,
-          labelStyle: const TextStyle(fontWeight: FontWeight.w900, fontSize: 14),
+          labelStyle: const TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 14,
+          ),
         ),
       ),
       body: Column(
@@ -60,11 +78,16 @@ class _QuranPageState extends ConsumerState<QuranPage> with SingleTickerProvider
               controller: _searchController,
               onChanged: (v) => setState(() => _query = v),
               decoration: InputDecoration(
-                hintText: 'Search surah...',
+                hintText: '${l10n.search} ${l10n.surah.toLowerCase()}...',
                 prefixIcon: const Icon(Icons.search_rounded),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(16),
+                  borderSide: BorderSide.none,
+                ),
                 filled: true,
-                fillColor: isDark ? AppColors.darkSurface : AppColors.emeraldSurface,
+                fillColor: isDark
+                    ? AppColors.darkSurface
+                    : AppColors.emeraldSurface,
               ),
             ),
           ),
@@ -87,53 +110,106 @@ class _QuranPageState extends ConsumerState<QuranPage> with SingleTickerProvider
       padding: const EdgeInsets.symmetric(horizontal: 16),
       itemCount: surahs.length,
       itemBuilder: (context, index) {
+        final l10n = AppLocalizations.of(context)!;
         final surah = surahs[index];
         return Container(
           margin: const EdgeInsets.only(bottom: 8),
           decoration: BoxDecoration(
-            color: Theme.of(context).brightness == Brightness.dark ? AppColors.darkCard : AppColors.cardLight,
+            color: Theme.of(context).brightness == Brightness.dark
+                ? AppColors.darkCard
+                : AppColors.cardLight,
             borderRadius: BorderRadius.circular(16),
-            boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8)],
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.04),
+                blurRadius: 8,
+              ),
+            ],
           ),
           child: ListTile(
-            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+            contentPadding: const EdgeInsets.symmetric(
+              horizontal: 16,
+              vertical: 4,
+            ),
             leading: Container(
-              width: 44, height: 44,
+              width: 44,
+              height: 44,
               decoration: BoxDecoration(
                 color: AppColors.emeraldSurface,
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Center(child: Text('${surah.number}', style: const TextStyle(
-                fontWeight: FontWeight.w900, color: AppColors.emerald, fontSize: 14))),
+              child: Center(
+                child: Text(
+                  '${surah.number}',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w900,
+                    color: AppColors.emerald,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
             ),
             title: Row(
               children: [
-                Expanded(child: Text(surah.transliteration, style: const TextStyle(
-                  fontWeight: FontWeight.w800, fontSize: 15))),
-                Text(surah.nameArabic, style: const TextStyle(
-                  fontSize: 18, fontWeight: FontWeight.w900, color: AppColors.emerald)),
+                Expanded(
+                  child: Text(
+                    surah.transliteration,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w800,
+                      fontSize: 15,
+                    ),
+                  ),
+                ),
+                Text(
+                  surah.nameArabic,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w900,
+                    color: AppColors.emerald,
+                  ),
+                ),
               ],
             ),
             subtitle: Row(
               children: [
-                Text(surah.nameEnglish, style: TextStyle(fontSize: 12,
-                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+                Text(
+                  surah.nameEnglish,
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Theme.of(
+                      context,
+                    ).colorScheme.onSurface.withValues(alpha: 0.5),
+                  ),
+                ),
                 const Spacer(),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 6,
+                    vertical: 2,
+                  ),
                   decoration: BoxDecoration(
                     color: surah.revelationType == 'Meccan'
-                      ? AppColors.emeraldSurface
-                      : AppColors.goldLight,
+                        ? AppColors.emeraldSurface
+                        : AppColors.goldLight,
                     borderRadius: BorderRadius.circular(6),
                   ),
-                  child: Text('${surah.ayahCount} ayat • ${surah.revelationType}',
-                    style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700,
-                      color: surah.revelationType == 'Meccan' ? AppColors.emerald : AppColors.gold)),
+                  child: Text(
+                    '${surah.ayahCount} ${l10n.ayahs.toLowerCase()} • ${surah.revelationType}',
+                    style: TextStyle(
+                      fontSize: 10,
+                      fontWeight: FontWeight.w700,
+                      color: surah.revelationType == 'Meccan'
+                          ? AppColors.emerald
+                          : AppColors.gold,
+                    ),
+                  ),
                 ),
               ],
             ),
-            onTap: () => context.push('/quran/reading/${surah.number}', extra: surah.transliteration),
+            onTap: () => context.push(
+              '/quran/reading/${surah.number}',
+              extra: surah.transliteration,
+            ),
           ),
         );
       },
@@ -141,6 +217,7 @@ class _QuranPageState extends ConsumerState<QuranPage> with SingleTickerProvider
   }
 
   Widget _buildJuzList(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return ListView.builder(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       itemCount: 30,
@@ -149,26 +226,56 @@ class _QuranPageState extends ConsumerState<QuranPage> with SingleTickerProvider
         return Container(
           margin: const EdgeInsets.only(bottom: 8),
           decoration: BoxDecoration(
-            color: Theme.of(context).brightness == Brightness.dark ? AppColors.darkCard : AppColors.cardLight,
+            color: Theme.of(context).brightness == Brightness.dark
+                ? AppColors.darkCard
+                : AppColors.cardLight,
             borderRadius: BorderRadius.circular(16),
-            boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8)],
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.04),
+                blurRadius: 8,
+              ),
+            ],
           ),
           child: ListTile(
-            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            contentPadding: const EdgeInsets.symmetric(
+              horizontal: 16,
+              vertical: 8,
+            ),
             leading: Container(
-              width: 44, height: 44,
+              width: 44,
+              height: 44,
               decoration: BoxDecoration(
                 color: AppColors.emeraldSurface,
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Center(child: Text('$num', style: const TextStyle(
-                fontWeight: FontWeight.w900, color: AppColors.emerald, fontSize: 16))),
+              child: Center(
+                child: Text(
+                  '$num',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w900,
+                    color: AppColors.emerald,
+                    fontSize: 16,
+                  ),
+                ),
+              ),
             ),
-            title: Text('Juz $num', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
-            subtitle: Text('Para $num', style: TextStyle(fontSize: 12,
-              color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+            title: Text(
+              '${l10n.juz} $num',
+              style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15),
+            ),
+            subtitle: Text(
+              '${l10n.page} $num',
+              style: TextStyle(
+                fontSize: 12,
+                color: Theme.of(
+                  context,
+                ).colorScheme.onSurface.withValues(alpha: 0.5),
+              ),
+            ),
             trailing: const Icon(Icons.chevron_right_rounded),
-            onTap: () => context.push('/quran/juz/$num', extra: 'Juz $num'),
+            onTap: () =>
+                context.push('/quran/juz/$num', extra: '${l10n.juz} $num'),
           ),
         );
       },

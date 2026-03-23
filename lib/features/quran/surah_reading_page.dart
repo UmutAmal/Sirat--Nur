@@ -11,6 +11,7 @@ import 'package:sirat_i_nur/core/constants/quran_data.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class SurahReadingPage extends ConsumerStatefulWidget {
   final int surahNumber;
@@ -58,7 +59,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     setState(() {
       _isBookmarked = prefs.getBool(surahKey) ?? false;
       if (savedAyahs != null) {
-        _bookmarkedAyahs.addAll(savedAyahs.map(int.parse));
+        _bookmarkedAyahs.addAll(savedAyahs.map(int.tryParse).whereType<int>());
       }
     });
   }
@@ -74,12 +75,16 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
   Future<void> _loadSurah() async {
     try {
-      final jsonStr = await rootBundle.loadString('assets/data/full_quran.json');
+      final jsonStr = await rootBundle.loadString(
+        'assets/data/full_quran.json',
+      );
       final List<dynamic> data = jsonDecode(jsonStr) as List<dynamic>;
-      final surahData = data.firstWhere(
-        (s) => s['number'] == widget.surahNumber,
-        orElse: () => data.first,
-      ) as Map<String, dynamic>;
+      final surahData =
+          data.firstWhere(
+                (s) => s['number'] == widget.surahNumber,
+                orElse: () => data.first,
+              )
+              as Map<String, dynamic>;
 
       if (!mounted) return;
       setState(() {
@@ -109,7 +114,10 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     try {
       final reciterId = _reciterIdForVoice(normalizedVoice);
       if (reciterId != null) {
-        final localPath = await OfflineAudioService.getAudioPath(widget.surahNumber, reciterId);
+        final localPath = await OfflineAudioService.getAudioPath(
+          widget.surahNumber,
+          reciterId,
+        );
         if (await File(localPath).exists()) {
           await _audioPlayer.setFilePath(localPath);
           await _audioPlayer.play();
@@ -134,9 +142,10 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
       }
 
       if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Could not play audio. Please check connection and try again.'),
+          SnackBar(
+            content: Text('${l10n.streamError}. ${l10n.checkConnection}'),
           ),
         );
       }
@@ -155,10 +164,12 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     if (normalizedVoice.contains('sudais')) {
       return 'sudais';
     }
-    if (normalizedVoice.contains('abdulbaset') || normalizedVoice.contains('abdulbasit')) {
+    if (normalizedVoice.contains('abdulbaset') ||
+        normalizedVoice.contains('abdulbasit')) {
       return 'abdul_basit_murattal';
     }
-    if (normalizedVoice.contains('alafasy') || normalizedVoice.contains('mishary')) {
+    if (normalizedVoice.contains('alafasy') ||
+        normalizedVoice.contains('mishary')) {
       return 'alafasy';
     }
     return 'alafasy';
@@ -209,7 +220,9 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         duration: const Duration(milliseconds: 900),
-        content: Text(alreadySaved ? 'Ayah bookmark removed' : 'Ayah bookmarked'),
+        content: Text(
+          alreadySaved ? 'Ayah bookmark removed' : 'Ayah bookmarked',
+        ),
       ),
     );
   }
@@ -237,14 +250,21 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
         title: Text(surahInfo.transliteration),
         actions: [
           IconButton(
-            icon: Icon(_isBookmarked ? Icons.bookmark_rounded : Icons.bookmark_border_rounded),
+            icon: Icon(
+              _isBookmarked
+                  ? Icons.bookmark_rounded
+                  : Icons.bookmark_border_rounded,
+            ),
             color: _isBookmarked ? AppColors.emerald : null,
             onPressed: () {
               setState(() => _isBookmarked = !_isBookmarked);
+              _saveBookmarks();
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   duration: const Duration(seconds: 1),
-                  content: Text(_isBookmarked ? 'Bookmark added' : 'Bookmark removed'),
+                  content: Text(
+                    _isBookmarked ? 'Bookmark added' : 'Bookmark removed',
+                  ),
                 ),
               );
             },
@@ -267,7 +287,9 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
         ],
       ),
       body: _isLoading
-          ? const Center(child: CircularProgressIndicator(color: AppColors.emerald))
+          ? const Center(
+              child: CircularProgressIndicator(color: AppColors.emerald),
+            )
           : ListView.builder(
               padding: const EdgeInsets.all(20),
               itemCount: _ayahs.length + 2,
@@ -336,7 +358,8 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
                 final ayah = _ayahs[i - 2] as Map<String, dynamic>;
                 final textAr = (ayah['text'] ?? '').toString();
-                final textTrans = (isTr ? ayah['tr_translation'] : ayah['en_translation'])
+                final textTrans =
+                    (isTr ? ayah['tr_translation'] : ayah['en_translation'])
                         ?.toString() ??
                     '';
                 final ayahNumber = ayah['numberInSurah'] as int? ?? 0;
@@ -393,7 +416,9 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                                   ? Icons.bookmark_rounded
                                   : Icons.bookmark_border_rounded,
                               size: 18,
-                              color: isAyahBookmarked ? AppColors.emerald : null,
+                              color: isAyahBookmarked
+                                  ? AppColors.emerald
+                                  : null,
                             ),
                             onPressed: () => _toggleAyahBookmark(ayahNumber),
                           ),
@@ -419,7 +444,9 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                           style: TextStyle(
                             fontSize: 14,
                             height: 1.7,
-                            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.8),
+                            color: Theme.of(
+                              context,
+                            ).colorScheme.onSurface.withValues(alpha: 0.8),
                           ),
                         ),
                       ),

@@ -5,7 +5,8 @@ import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
 class AdhanSchedulerService {
-  final FlutterLocalNotificationsPlugin _notifications = FlutterLocalNotificationsPlugin();
+  final FlutterLocalNotificationsPlugin _notifications =
+      FlutterLocalNotificationsPlugin();
 
   Future<void> init() async {
     tz.initializeTimeZones();
@@ -15,14 +16,17 @@ class AdhanSchedulerService {
       android: androidInit,
       iOS: darwinInit,
     );
-    await _notifications.initialize(
-      settings: initSettings,
-    );
+    await _notifications.initialize(settings: initSettings);
   }
 
   /// Proactive 30-Day Adhan Scheduling
   /// Hardened against OS battery optimizations.
-  Future<void> scheduleAdhans(double lat, double lon, String method, String madhab) async {
+  Future<void> scheduleAdhans(
+    double lat,
+    double lon,
+    String method,
+    String madhab,
+  ) async {
     // 1. Clear existing schedules to avoid duplicates
     await _notifications.cancelAll();
 
@@ -41,7 +45,10 @@ class AdhanSchedulerService {
     }
   }
 
-  Future<void> _scheduleDailyEvents(PrayerTimesEntity times, int dayIndex) async {
+  Future<void> _scheduleDailyEvents(
+    PrayerTimesEntity times,
+    int dayIndex,
+  ) async {
     final dailyPrayers = {
       'Fajr': times.fajr,
       'Dhuhr': times.dhuhr,
@@ -51,7 +58,7 @@ class AdhanSchedulerService {
     };
 
     int baseId = dayIndex * 10;
-    
+
     for (var entry in dailyPrayers.entries) {
       if (entry.value.isBefore(DateTime.now())) continue;
 
@@ -71,7 +78,6 @@ class AdhanSchedulerService {
             playSound: true,
           ),
           iOS: DarwinNotificationDetails(
-            sound: 'adhan.aiff',
             presentAlert: true,
             presentBadge: true,
             presentSound: true,

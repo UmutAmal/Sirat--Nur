@@ -244,3 +244,165 @@ Neden:
 - Analyze ve test yeşil.
 - Çok dilli encoding bozulmalarında geniş çaplı onarım uygulandı.
 - Antigravity bu state’ten doğrudan feature hardening + translation completeness + integration test genişletmesiyle devam edebilir.
+
+## 13) 2026-03-24 Stabilization Pass (Codex)
+
+Bu bölüm, son turda **gerçek runtime kırıkları** (özellikle ses/TV/dil görünürlüğü) için yapılan ek stabilizasyonları kapsar.
+
+### 13.1 Ses Altyapısı: Placeholder -> Çalışan Dosya Seti
+
+Sorun:
+- `assets/audio/*` altında yalnızca `.gitkeep` bulunuyordu.
+- Kod gerçek dosya bekliyor, dosya yokluğu sessizce playback fail üretiyordu.
+- Android bildirim kanalında `RawResourceAndroidNotificationSound('adhan')` tanımı vardı fakat `res/raw/adhan.*` mevcut değildi.
+
+Yapılanlar:
+- Gerçek ses dosyaları üretildi (WAV):
+  - `assets/audio/adhan/adhan_makkah.wav`
+  - `assets/audio/adhan/adhan_madinah.wav`
+  - `assets/audio/adhan/adhan_fajr.wav`
+  - `assets/audio/ui/tasbih_click.wav`
+  - `assets/audio/ui/tasbih_complete.wav`
+  - `assets/audio/ui/notification.wav`
+  - `assets/audio/ui/prayer_reminder.wav`
+  - `assets/audio/ui/page_flip.wav`
+  - `assets/audio/ui/success.wav`
+- Android raw kaynak eklendi:
+  - `android/app/src/main/res/raw/adhan.wav`
+- Kod tarafı WAV path’lerine geçirildi:
+  - `lib/core/services/audio_player_service.dart`
+- iOS tarafında missing custom sound riskini azaltmak için adhan scheduler’da özel dosya adı kaldırıldı:
+  - `lib/core/services/adhan_scheduler_service.dart`
+- Notification service Android tarafında raw adhan sesi ile hizalandı:
+  - `lib/core/services/notification_service.dart`
+
+Neden:
+- Kullanıcı raporlarındaki “ses oynatmıyor” davranışını teknik olarak ortadan kaldırmak.
+
+### 13.2 Kur’an Okuma: Sure Bookmark Kalıcılığı Onarımı
+
+Sorun:
+- Sure bookmark appbar toggle, state’i değiştiriyor ama kalıcı depoya yazmıyordu.
+
+Yapılanlar:
+- Toggle sonrası `_saveBookmarks()` çağrısı eklendi.
+- Kayıt okurken bozuk string/int parse için korumalı parse yapıldı (`int.tryParse`).
+- Audio playback error snackbar metni mevcut l10n anahtarları ile iyileştirildi.
+
+Dosya:
+- `lib/features/quran/surah_reading_page.dart`
+
+### 13.3 Live TV Stabilizasyonu ve Fallback Kalitesi
+
+Sorun:
+- Madinah fallback URL’i arama sonuç sayfasına gidiyordu.
+- Candidate URL parse/scheme hatalarında zincir kırılabiliyordu.
+- `mutedByDefault` alanı modelde tanımlı ama runtime’da aktif kullanılmıyordu.
+
+Yapılanlar:
+- Madinah stream URL seti düzeltildi:
+  - fallback -> `youtube-nocookie` embed
+  - external -> kanalın `/live` URL’i
+- TV candidate pipeline harden edildi:
+  - Geçersiz URL/scheme filtreleme
+  - YouTube search-result URL’lerini WebView candidate setinden çıkarma
+  - URL parse fail durumunda sıradaki adaya otomatik geçiş
+  - `mutedByDefault` query param normalizasyonu
+
+Dosyalar:
+- `lib/core/constants/live_streams.dart`
+- `lib/features/tv/live_tv_page.dart`
+
+### 13.4 Dil Görünürlüğü (Hardcoded İngilizce Azaltımı)
+
+Yapılanlar:
+- Kur’an ekranında başlık/tab/search ve bazı metinler l10n’a bağlandı.
+- Tracker ekranında appbar/section/etiketler l10n’a taşındı.
+- Namaz adları tracker UI’da lokalize edildi.
+- TR ARB’de eksik `days` anahtarı eklendi.
+- `gen-l10n` yeniden çalıştırıldı.
+
+Dosyalar:
+- `lib/features/quran/quran_page.dart`
+- `lib/features/tracker/tracker_page.dart`
+- `lib/l10n/app_tr.arb`
+- `lib/l10n/app_localizations_tr.dart` (generated)
+
+Not:
+- Çeviri kapsamı global olarak halen eksik (çok sayıda locale untranslated).
+- Bu tur odak noktası UI’da sert kırıkları ve görünür dil tutarsızlıklarını azaltmaktı.
+
+### 13.5 Takvim Sayfası: Lint + Locale Hassasiyeti
+
+Yapılanlar:
+- `dart:ui` gereksiz import kaldırıldı.
+- If/underscore lint kaynakları temizlendi.
+- Ay/hafta etiketlerinde locale-temelli format (`intl DateFormat`) kullanıldı.
+- Hijri locale seti `languageCode` ile align edildi, unsupported durumda EN fallback eklendi.
+- Özel gün listesi kısmen l10n anahtarlarına bağlandı.
+
+Dosya:
+- `lib/features/calendar/calendar_page.dart`
+
+### 13.6 Places Map: Async State Güvenliği
+
+Sorun:
+- Ağ çağrısı sonrası bazı `setState` çağrıları `mounted` kontrolü olmadan çalışıyordu.
+
+Yapılanlar:
+- `_fetchPlaces` içinde response/error/catch yollarında `mounted` güvenlik kontrolleri eklendi.
+
+Dosya:
+- `lib/features/places/places_map_page.dart`
+
+### 13.7 Qibla Sensor Bridge: Null-Stream Koruması
+
+Sorun:
+- `FlutterCompass.events!` null-assert ile kullanılıyordu.
+
+Yapılanlar:
+- Null-safe stream guard eklendi; sensör yoksa açıklayıcı `StateError` fırlatılıyor.
+
+Dosya:
+- `lib/core/services/qibla_sensor_bridge.dart`
+
+### 13.8 Build Asset Güvencesi: Boş Icon/Splash Dosyaları
+
+Sorun:
+- `assets/icon/app_icon.png` ve `assets/icon/splash_logo.png` 0-byte idi.
+- Launcher/splash üretim adımlarında platform tarafı arıza riski taşıyordu.
+
+Yapılanlar:
+- Her iki dosya da geçerli PNG olarak yeniden üretildi.
+
+Dosyalar:
+- `assets/icon/app_icon.png`
+- `assets/icon/splash_logo.png`
+
+## 14) Bu Tur Sonu Doğrulama
+
+### 14.1 Lokalizasyon Üretimi
+- Komut: `flutter gen-l10n`
+- Sonuç: Başarılı (untranslated uyarıları devam ediyor; build blocker değil).
+
+### 14.2 Static Analyze
+- Komut: `flutter analyze`
+- Sonuç: **No issues found**
+
+### 14.3 Test
+- Komut: `flutter test`
+- Sonuç: **All tests passed (21)**
+
+## 15) Kalan Bilinçli Açıklar (Sonraki Tur İçin)
+
+1. Çok dilli içerik kapsamı
+- Teknik olarak sağlam; ancak çok sayıda locale’de içerik eksik.
+- Sonraki adım: öncelikli diller için tamamlayıcı çeviri backlog’u.
+
+2. Ürün kalitesi (premium/chatbot/harita metinleri)
+- Bazı ekranlarda halen hardcoded metinler mevcut.
+- Sonraki adım: kalan ekranları da sistematik l10n pass’inden geçirmek.
+
+3. Timezone bazlı prayer/notification doğruluğu
+- City dataset’te timezone alanı var; runtime hesaplarda tam kullanılmıyor.
+- Sonraki adım: selected city timezone’u state’e taşıyıp prayer+notification pipeline ile entegre etmek.

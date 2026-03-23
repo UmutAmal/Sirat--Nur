@@ -5,17 +5,17 @@ import 'package:just_audio/just_audio.dart' as just_audio;
 /// Local audio asset paths — all sounds stored in assets/audio/
 class LocalAudio {
   // Adhan (call to prayer) — local assets
-  static const String adhanMakkah = 'assets/audio/adhan/adhan_makkah.mp3';
-  static const String adhanMadinah = 'assets/audio/adhan/adhan_madinah.mp3';
-  static const String adhanFajr = 'assets/audio/adhan/adhan_fajr.mp3';
+  static const String adhanMakkah = 'assets/audio/adhan/adhan_makkah.wav';
+  static const String adhanMadinah = 'assets/audio/adhan/adhan_madinah.wav';
+  static const String adhanFajr = 'assets/audio/adhan/adhan_fajr.wav';
 
   // UI sounds — local assets
-  static const String tasbihClick = 'assets/audio/ui/tasbih_click.mp3';
-  static const String tasbihComplete = 'assets/audio/ui/tasbih_complete.mp3';
-  static const String notificationTone = 'assets/audio/ui/notification.mp3';
-  static const String prayerReminder = 'assets/audio/ui/prayer_reminder.mp3';
-  static const String pageFlip = 'assets/audio/ui/page_flip.mp3';
-  static const String success = 'assets/audio/ui/success.mp3';
+  static const String tasbihClick = 'assets/audio/ui/tasbih_click.wav';
+  static const String tasbihComplete = 'assets/audio/ui/tasbih_complete.wav';
+  static const String notificationTone = 'assets/audio/ui/notification.wav';
+  static const String prayerReminder = 'assets/audio/ui/prayer_reminder.wav';
+  static const String pageFlip = 'assets/audio/ui/page_flip.wav';
+  static const String success = 'assets/audio/ui/success.wav';
 
   // Quran reciters info (for downloadable content)
   static const Map<String, String> quranReciters = {
@@ -73,23 +73,30 @@ class AudioPlayerService {
   /// Play adhan from local asset
   Future<bool> playAdhan({String style = 'makkah'}) async {
     switch (style) {
-      case 'madinah': return await playAsset(LocalAudio.adhanMadinah);
-      case 'fajr': return await playAsset(LocalAudio.adhanFajr);
-      default: return await playAsset(LocalAudio.adhanMakkah);
+      case 'madinah':
+        return await playAsset(LocalAudio.adhanMadinah);
+      case 'fajr':
+        return await playAsset(LocalAudio.adhanFajr);
+      default:
+        return await playAsset(LocalAudio.adhanMakkah);
     }
   }
 
   /// Play tasbih click sound
-  Future<bool> playTasbihClick() async => await playAsset(LocalAudio.tasbihClick);
+  Future<bool> playTasbihClick() async =>
+      await playAsset(LocalAudio.tasbihClick);
 
   /// Play tasbih completion sound
-  Future<bool> playTasbihComplete() async => await playAsset(LocalAudio.tasbihComplete);
+  Future<bool> playTasbihComplete() async =>
+      await playAsset(LocalAudio.tasbihComplete);
 
   /// Play notification tone
-  Future<bool> playNotification() async => await playAsset(LocalAudio.notificationTone);
+  Future<bool> playNotification() async =>
+      await playAsset(LocalAudio.notificationTone);
 
   /// Play prayer reminder
-  Future<bool> playPrayerReminder() async => await playAsset(LocalAudio.prayerReminder);
+  Future<bool> playPrayerReminder() async =>
+      await playAsset(LocalAudio.prayerReminder);
 
   /// Play page flip sound (for Quran reading)
   Future<bool> playPageFlip() async => await playAsset(LocalAudio.pageFlip);
@@ -98,7 +105,10 @@ class AudioPlayerService {
   Future<bool> playSuccess() async => await playAsset(LocalAudio.success);
 
   /// Play Quran surah from local download
-  Future<bool> playQuranSurah(int surahNumber, {String reciter = 'mishary_rashid_alafasy'}) async {
+  Future<bool> playQuranSurah(
+    int surahNumber, {
+    String reciter = 'mishary_rashid_alafasy',
+  }) async {
     final path = LocalAudio.getQuranLocalPath(reciter, surahNumber);
     return await playAsset(path);
   }
@@ -107,8 +117,10 @@ class AudioPlayerService {
   Future<void> resume() async => await _player.play();
   Future<void> stop() async => await _player.stop();
   Future<void> seek(Duration position) async => await _player.seek(position);
-  Future<void> setVolume(double volume) async => await _player.setVolume(volume.clamp(0.0, 1.0));
-  Future<void> setSpeed(double speed) async => await _player.setSpeed(speed.clamp(0.5, 2.0));
+  Future<void> setVolume(double volume) async =>
+      await _player.setVolume(volume.clamp(0.0, 1.0));
+  Future<void> setSpeed(double speed) async =>
+      await _player.setSpeed(speed.clamp(0.5, 2.0));
 
   void dispose() {
     _player.dispose();

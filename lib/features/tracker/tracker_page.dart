@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 // ──────────────────────────────────────────────────────────────
 // Persistent tracker providers — date-keyed, surviving app restarts
@@ -27,7 +28,13 @@ class TrackerNotifier extends StateNotifier<Map<String, bool>> {
       final decoded = jsonDecode(json) as Map<String, dynamic>;
       return decoded.map((k, v) => MapEntry(k, v as bool));
     }
-    return {'Fajr': false, 'Dhuhr': false, 'Asr': false, 'Maghrib': false, 'Isha': false};
+    return {
+      'Fajr': false,
+      'Dhuhr': false,
+      'Asr': false,
+      'Maghrib': false,
+      'Isha': false,
+    };
   }
 
   void toggle(String prayer) {
@@ -40,13 +47,13 @@ class TrackerNotifier extends StateNotifier<Map<String, bool>> {
 
 final prayerDoneProvider =
     StateNotifierProvider<TrackerNotifier, Map<String, bool>>((ref) {
-  return TrackerNotifier(ref.watch(sharedPreferencesProvider));
-});
+      return TrackerNotifier(ref.watch(sharedPreferencesProvider));
+    });
 
 class QuranPagesNotifier extends StateNotifier<int> {
   final SharedPreferences _prefs;
   QuranPagesNotifier(this._prefs)
-      : super(_prefs.getInt('quranPages_${_todayKey()}') ?? 0);
+    : super(_prefs.getInt('quranPages_${_todayKey()}') ?? 0);
 
   void increment() {
     state++;
@@ -61,15 +68,16 @@ class QuranPagesNotifier extends StateNotifier<int> {
   }
 }
 
-final quranPagesProvider =
-    StateNotifierProvider<QuranPagesNotifier, int>((ref) {
+final quranPagesProvider = StateNotifierProvider<QuranPagesNotifier, int>((
+  ref,
+) {
   return QuranPagesNotifier(ref.watch(sharedPreferencesProvider));
 });
 
 class FastingNotifier extends StateNotifier<bool> {
   final SharedPreferences _prefs;
   FastingNotifier(this._prefs)
-      : super(_prefs.getBool('fasting_${_todayKey()}') ?? false);
+    : super(_prefs.getBool('fasting_${_todayKey()}') ?? false);
 
   void toggle() {
     state = !state;
@@ -77,8 +85,7 @@ class FastingNotifier extends StateNotifier<bool> {
   }
 }
 
-final fastingProvider =
-    StateNotifierProvider<FastingNotifier, bool>((ref) {
+final fastingProvider = StateNotifierProvider<FastingNotifier, bool>((ref) {
   return FastingNotifier(ref.watch(sharedPreferencesProvider));
 });
 
@@ -91,13 +98,14 @@ class TrackerPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final prayerDone = ref.watch(prayerDoneProvider);
     final quranPages = ref.watch(quranPagesProvider);
     final fasting = ref.watch(fastingProvider);
     final prayerCount = prayerDone.values.where((v) => v).length;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Ibadah Tracker')),
+      appBar: AppBar(title: Text(l10n.ibadahTracker)),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -108,38 +116,84 @@ class TrackerPage extends ConsumerWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  _statCircle(context, '$prayerCount/5', 'Prayers', prayerCount / 5, AppColors.emerald),
-                  _statCircle(context, '$quranPages', 'Pages', (quranPages / 20).clamp(0, 1).toDouble(), AppColors.gold),
-                  _statCircle(context, fasting ? '✓' : '✗', 'Fasting', fasting ? 1.0 : 0.0, Colors.blue),
+                  _statCircle(
+                    context,
+                    '$prayerCount/5',
+                    l10n.prayers,
+                    prayerCount / 5,
+                    AppColors.emerald,
+                  ),
+                  _statCircle(
+                    context,
+                    '$quranPages',
+                    l10n.page,
+                    (quranPages / 20).clamp(0, 1).toDouble(),
+                    AppColors.gold,
+                  ),
+                  _statCircle(
+                    context,
+                    fasting ? '✓' : '✗',
+                    l10n.fasting,
+                    fasting ? 1.0 : 0.0,
+                    Colors.blue,
+                  ),
                 ],
               ),
             ),
             // Prayer tracking
             const SizedBox(height: 8),
-            Text('Prayer Tracker', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900)),
+            Text(
+              l10n.prayers,
+              style: Theme.of(
+                context,
+              ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900),
+            ),
             const SizedBox(height: 12),
             PremiumCard(
               child: Column(
                 children: prayerDone.entries.map((entry) {
+                  final prayerName = _localizedPrayerName(entry.key, l10n);
                   return InkWell(
-                    onTap: () => ref.read(prayerDoneProvider.notifier).toggle(entry.key),
+                    onTap: () =>
+                        ref.read(prayerDoneProvider.notifier).toggle(entry.key),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 10),
                       child: Row(
                         children: [
                           Icon(
-                            entry.value ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
-                            color: entry.value ? AppColors.emerald : Colors.grey, size: 24,
+                            entry.value
+                                ? Icons.check_circle_rounded
+                                : Icons.radio_button_unchecked_rounded,
+                            color: entry.value
+                                ? AppColors.emerald
+                                : Colors.grey,
+                            size: 24,
                           ),
                           const SizedBox(width: 16),
-                          Text(entry.key, style: TextStyle(
-                            fontWeight: FontWeight.w800, fontSize: 16,
-                            decoration: entry.value ? TextDecoration.lineThrough : null,
-                            color: entry.value ? Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4) : null,
-                          )),
+                          Text(
+                            prayerName,
+                            style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 16,
+                              decoration: entry.value
+                                  ? TextDecoration.lineThrough
+                                  : null,
+                              color: entry.value
+                                  ? Theme.of(context).colorScheme.onSurface
+                                        .withValues(alpha: 0.4)
+                                  : null,
+                            ),
+                          ),
                           const Spacer(),
                           if (entry.value)
-                            const Text('Done', style: TextStyle(color: AppColors.emerald, fontWeight: FontWeight.w700, fontSize: 12)),
+                            Text(
+                              l10n.done,
+                              style: const TextStyle(
+                                color: AppColors.emerald,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 12,
+                              ),
+                            ),
                         ],
                       ),
                     ),
@@ -149,7 +203,12 @@ class TrackerPage extends ConsumerWidget {
             ),
             // Quran reading
             const SizedBox(height: 8),
-            Text('Quran Reading', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900)),
+            Text(
+              l10n.quranReading,
+              style: Theme.of(
+                context,
+              ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900),
+            ),
             const SizedBox(height: 12),
             PremiumCard(
               child: Row(
@@ -157,40 +216,75 @@ class TrackerPage extends ConsumerWidget {
                   IconButton(
                     icon: const Icon(Icons.remove_circle_outline_rounded),
                     onPressed: quranPages > 0
-                      ? () => ref.read(quranPagesProvider.notifier).decrement()
-                      : null,
+                        ? () =>
+                              ref.read(quranPagesProvider.notifier).decrement()
+                        : null,
                   ),
-                  Expanded(child: Column(
-                    children: [
-                      Text('$quranPages', style: const TextStyle(fontSize: 32, fontWeight: FontWeight.w900, color: AppColors.emerald)),
-                      const Text('pages today', style: TextStyle(fontSize: 13, color: Colors.grey)),
-                    ],
-                  )),
+                  Expanded(
+                    child: Column(
+                      children: [
+                        Text(
+                          '$quranPages',
+                          style: const TextStyle(
+                            fontSize: 32,
+                            fontWeight: FontWeight.w900,
+                            color: AppColors.emerald,
+                          ),
+                        ),
+                        Text(
+                          '${l10n.page.toLowerCase()} ${l10n.today.toLowerCase()}',
+                          style: const TextStyle(
+                            fontSize: 13,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                   IconButton(
-                    icon: const Icon(Icons.add_circle_outline_rounded, color: AppColors.emerald),
-                    onPressed: () => ref.read(quranPagesProvider.notifier).increment(),
+                    icon: const Icon(
+                      Icons.add_circle_outline_rounded,
+                      color: AppColors.emerald,
+                    ),
+                    onPressed: () =>
+                        ref.read(quranPagesProvider.notifier).increment(),
                   ),
                 ],
               ),
             ),
             // Fasting
             const SizedBox(height: 8),
-            Text('Fasting', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900)),
+            Text(
+              l10n.fasting,
+              style: Theme.of(
+                context,
+              ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900),
+            ),
             const SizedBox(height: 12),
             PremiumCard(
               onTap: () => ref.read(fastingProvider.notifier).toggle(),
               child: Row(
                 children: [
                   Icon(
-                    fasting ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
-                    color: fasting ? AppColors.emerald : Colors.grey, size: 28,
+                    fasting
+                        ? Icons.check_circle_rounded
+                        : Icons.radio_button_unchecked_rounded,
+                    color: fasting ? AppColors.emerald : Colors.grey,
+                    size: 28,
                   ),
                   const SizedBox(width: 16),
-                  Expanded(child: Text(
-                    fasting ? 'Fasting today ✓' : 'Not fasting today',
-                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16,
-                      color: fasting ? AppColors.emerald : null),
-                  )),
+                  Expanded(
+                    child: Text(
+                      fasting
+                          ? '${l10n.fasting} ${l10n.today} ✓'
+                          : '${l10n.fasting}: ${l10n.no}',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 16,
+                        color: fasting ? AppColors.emerald : null,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -200,11 +294,18 @@ class TrackerPage extends ConsumerWidget {
     );
   }
 
-  Widget _statCircle(BuildContext context, String value, String label, double progress, Color color) {
+  Widget _statCircle(
+    BuildContext context,
+    String value,
+    String label,
+    double progress,
+    Color color,
+  ) {
     return Column(
       children: [
         SizedBox(
-          width: 68, height: 68,
+          width: 68,
+          height: 68,
           child: Stack(
             alignment: Alignment.center,
             children: [
@@ -214,14 +315,46 @@ class TrackerPage extends ConsumerWidget {
                 backgroundColor: color.withValues(alpha: 0.15),
                 valueColor: AlwaysStoppedAnimation<Color>(color),
               ),
-              Text(value, style: TextStyle(fontWeight: FontWeight.w900, color: color, fontSize: 16)),
+              Text(
+                value,
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  color: color,
+                  fontSize: 16,
+                ),
+              ),
             ],
           ),
         ),
         const SizedBox(height: 8),
-        Text(label, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700,
-          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w700,
+            color: Theme.of(
+              context,
+            ).colorScheme.onSurface.withValues(alpha: 0.5),
+          ),
+        ),
       ],
     );
+  }
+
+  String _localizedPrayerName(String key, AppLocalizations l10n) {
+    switch (key) {
+      case 'Fajr':
+        return l10n.fajr;
+      case 'Dhuhr':
+        return l10n.dhuhr;
+      case 'Asr':
+        return l10n.asr;
+      case 'Maghrib':
+        return l10n.maghrib;
+      case 'Isha':
+        return l10n.isha;
+      default:
+        return key;
+    }
   }
 }

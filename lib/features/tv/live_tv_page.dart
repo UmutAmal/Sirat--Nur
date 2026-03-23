@@ -22,14 +22,52 @@ class _LiveTvPageState extends State<LiveTvPage> {
 
   List<String> get _currentCandidates {
     final stream = liveStreams[_selectedIndex];
-    final urls = <String>[stream.embedUrl];
-    if (stream.fallbackEmbedUrl != null && stream.fallbackEmbedUrl!.trim().isNotEmpty) {
-      urls.add(stream.fallbackEmbedUrl!);
+    final urls = <String>[];
+
+    void addUrl(String? rawUrl) {
+      final trimmed = rawUrl?.trim();
+      if (trimmed == null || trimmed.isEmpty) return;
+
+      final uri = Uri.tryParse(trimmed);
+      if (uri == null || !uri.hasScheme || _isSearchResultUrl(uri)) return;
+
+      final normalized = _normalizeCandidateUrl(
+        uri,
+        mutedByDefault: stream.mutedByDefault,
+      );
+
+      if (!urls.contains(normalized)) {
+        urls.add(normalized);
+      }
     }
-    if (!urls.contains(stream.externalUrl)) {
-      urls.add(stream.externalUrl);
+
+    addUrl(stream.embedUrl);
+    addUrl(stream.fallbackEmbedUrl);
+
+    if (urls.isEmpty) {
+      addUrl(stream.externalUrl);
     }
+
     return urls;
+  }
+
+  bool _isSearchResultUrl(Uri uri) {
+    return uri.host.contains('youtube') && uri.path.contains('/results');
+  }
+
+  String _normalizeCandidateUrl(Uri uri, {required bool mutedByDefault}) {
+    if (!uri.host.contains('youtube')) {
+      return uri.toString();
+    }
+
+    final queryParams = <String, String>{
+      ...uri.queryParameters,
+      'autoplay': uri.queryParameters['autoplay'] ?? '1',
+      'playsinline': uri.queryParameters['playsinline'] ?? '1',
+      'mute': mutedByDefault ? '1' : '0',
+    };
+
+    return uri.replace(queryParameters: queryParams).toString();
   }
 
   @override
@@ -87,13 +125,30 @@ class _LiveTvPageState extends State<LiveTvPage> {
       setState(() {
         _isLoading = false;
         _hasError = true;
-        _errorText = 'No valid stream URL found.';
+        _errorText = 'Stream error';
       });
       return;
     }
 
-    final url = candidates[_candidateIndex];
-    _controller.loadRequest(Uri.parse(url));
+    final url = candidates[_candidateIndex].trim();
+    final uri = Uri.tryParse(url);
+    if (uri == null || !uri.hasScheme) {
+      final next = _candidateIndex + 1;
+      if (next < candidates.length) {
+        _candidateIndex = next;
+        _loadCurrentCandidate();
+        return;
+      }
+
+      setState(() {
+        _isLoading = false;
+        _hasError = true;
+        _errorText = 'Stream error';
+      });
+      return;
+    }
+
+    _controller.loadRequest(uri);
   }
 
   void _loadSelectedStream() {
@@ -125,9 +180,7 @@ class _LiveTvPageState extends State<LiveTvPage> {
     if (!await canLaunchUrl(uri)) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(AppLocalizations.of(context)!.streamError),
-        ),
+        SnackBar(content: Text(AppLocalizations.of(context)!.streamError)),
       );
       return;
     }
@@ -246,7 +299,9 @@ class _LiveTvPageState extends State<LiveTvPage> {
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w700,
-                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
+                      color: Theme.of(
+                        context,
+                      ).colorScheme.onSurface.withValues(alpha: 0.6),
                     ),
                   ),
                 ),
@@ -268,7 +323,9 @@ class _LiveTvPageState extends State<LiveTvPage> {
                         ? AppColors.emeraldSurface
                         : (isDark ? AppColors.darkCard : AppColors.cardLight),
                     borderRadius: BorderRadius.circular(16),
-                    border: isSelected ? Border.all(color: AppColors.emerald, width: 2) : null,
+                    border: isSelected
+                        ? Border.all(color: AppColors.emerald, width: 2)
+                        : null,
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black.withValues(alpha: 0.06),
@@ -277,7 +334,10 @@ class _LiveTvPageState extends State<LiveTvPage> {
                     ],
                   ),
                   child: ListTile(
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 8,
+                    ),
                     leading: Container(
                       width: 48,
                       height: 48,
@@ -285,7 +345,10 @@ class _LiveTvPageState extends State<LiveTvPage> {
                         color: AppColors.emeraldSurface,
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      child: const Icon(Icons.mosque_rounded, color: AppColors.emerald),
+                      child: const Icon(
+                        Icons.mosque_rounded,
+                        color: AppColors.emerald,
+                      ),
                     ),
                     title: Text(
                       item.title,
@@ -298,7 +361,9 @@ class _LiveTvPageState extends State<LiveTvPage> {
                       item.subtitle,
                       style: TextStyle(
                         fontSize: 12,
-                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+                        color: Theme.of(
+                          context,
+                        ).colorScheme.onSurface.withValues(alpha: 0.5),
                       ),
                     ),
                     trailing: isSelected
@@ -307,7 +372,10 @@ class _LiveTvPageState extends State<LiveTvPage> {
                             color: AppColors.emerald,
                             size: 32,
                           )
-                        : const Icon(Icons.play_circle_outline_rounded, size: 28),
+                        : const Icon(
+                            Icons.play_circle_outline_rounded,
+                            size: 28,
+                          ),
                     onTap: () => _changeStream(index),
                   ),
                 );
@@ -319,4 +387,3 @@ class _LiveTvPageState extends State<LiveTvPage> {
     );
   }
 }
-

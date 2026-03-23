@@ -21,19 +21,22 @@ class NotificationService {
     tz.initializeTimeZones();
 
     const AndroidInitializationSettings initializationSettingsAndroid =
-        AndroidInitializationSettings('@drawable/ic_notification_icon'); // Custom notification icon
+        AndroidInitializationSettings(
+          '@drawable/ic_notification_icon',
+        ); // Custom notification icon
 
     const DarwinInitializationSettings initializationSettingsDarwin =
         DarwinInitializationSettings(
-      requestSoundPermission: true,
-      requestBadgePermission: true,
-      requestAlertPermission: true,
-    );
+          requestSoundPermission: true,
+          requestBadgePermission: true,
+          requestAlertPermission: true,
+        );
 
-    const InitializationSettings initializationSettings = InitializationSettings(
-      android: initializationSettingsAndroid,
-      iOS: initializationSettingsDarwin,
-    );
+    const InitializationSettings initializationSettings =
+        InitializationSettings(
+          android: initializationSettingsAndroid,
+          iOS: initializationSettingsDarwin,
+        );
 
     await flutterLocalNotificationsPlugin.initialize(
       settings: initializationSettings,
@@ -46,20 +49,18 @@ class NotificationService {
   Future<void> requestPermissions() async {
     final androidPL = flutterLocalNotificationsPlugin
         .resolvePlatformSpecificImplementation<
-            AndroidFlutterLocalNotificationsPlugin>();
+          AndroidFlutterLocalNotificationsPlugin
+        >();
     if (androidPL != null) {
       await androidPL.requestNotificationsPermission();
     }
 
     final iOSPL = flutterLocalNotificationsPlugin
         .resolvePlatformSpecificImplementation<
-            IOSFlutterLocalNotificationsPlugin>();
+          IOSFlutterLocalNotificationsPlugin
+        >();
     if (iOSPL != null) {
-      await iOSPL.requestPermissions(
-        alert: true,
-        badge: true,
-        sound: true,
-      );
+      await iOSPL.requestPermissions(alert: true, badge: true, sound: true);
     }
   }
 
@@ -69,9 +70,10 @@ class NotificationService {
   }) async {
     // Cancel previous notifications to avoid duplicates over days
     await flutterLocalNotificationsPlugin.cancelAll();
-    
+
     final now = DateTime.now();
-    final resolvedLocale = locale ?? WidgetsBinding.instance.platformDispatcher.locale;
+    final resolvedLocale =
+        locale ?? WidgetsBinding.instance.platformDispatcher.locale;
     final isTr = resolvedLocale.languageCode == 'tr';
 
     // Mapping prayer times
@@ -86,7 +88,10 @@ class NotificationService {
 
     int id = 0;
     for (var entry in prayerMap.entries) {
-      final localizedName = PrayerLocalizer.localize(entry.key, resolvedLocale.languageCode);
+      final localizedName = PrayerLocalizer.localize(
+        entry.key,
+        resolvedLocale.languageCode,
+      );
       final title = isTr ? '$localizedName Vakti' : 'Time for $localizedName';
       final body = isTr
           ? '$localizedName vakti geldi.'
@@ -121,17 +126,20 @@ class NotificationService {
           channelDescription: 'Notifications for daily prayer times',
           importance: Importance.max,
           priority: Priority.high,
+          sound: RawResourceAndroidNotificationSound('adhan'),
           // Small icon for notification bar
           icon: '@drawable/ic_notification_icon',
           // Large icon for expanded notification
-          largeIcon: const DrawableResourceAndroidBitmap('ic_notification_icon'),
+          largeIcon: const DrawableResourceAndroidBitmap(
+            'ic_notification_icon',
+          ),
           // play sound
           playSound: true,
         ),
         iOS: DarwinNotificationDetails(
-           presentSound: true,
-           presentAlert: true,
-           presentBadge: true,
+          presentSound: true,
+          presentAlert: true,
+          presentBadge: true,
         ),
       ),
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,

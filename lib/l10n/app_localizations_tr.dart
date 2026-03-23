@@ -493,7 +493,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get reset => 'Sıfırla';
 
   @override
-  String get days => 'Days';
+  String get days => 'Gün';
 
   @override
   String get premiumIntegrity => 'Premium Doğrulama';

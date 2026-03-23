@@ -160,6 +160,7 @@
   "prayerDebt": "Namaz Borcu",
   "fastingDebt": "Oruç Borcu",
   "reset": "Sıfırla",
+  "days": "Gün",
   "premiumIntegrity": "Premium Doğrulama",
   "recheckPremium": "Premium Durumunu Yeniden Kontrol Et",
   "syncStore": "Mağaza ile eşitleyerek hakkınızı doğrulayın.",

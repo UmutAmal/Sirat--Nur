@@ -1,4 +1,4 @@
-﻿class LiveStreamInfo {
+class LiveStreamInfo {
   final String shortLabel;
   final String title;
   final String subtitle;
@@ -27,7 +27,8 @@ const List<LiveStreamInfo> liveStreams = [
         'https://www.youtube.com/embed/live_stream?channel=UCKJooOkz2wzQ_ofz_yX1_5A&autoplay=1&mute=1&playsinline=1',
     fallbackEmbedUrl:
         'https://www.youtube-nocookie.com/embed/live_stream?channel=UCKJooOkz2wzQ_ofz_yX1_5A&autoplay=1&mute=1&playsinline=1',
-    externalUrl: 'https://www.youtube.com/channel/UCKJooOkz2wzQ_ofz_yX1_5A/live',
+    externalUrl:
+        'https://www.youtube.com/channel/UCKJooOkz2wzQ_ofz_yX1_5A/live',
     mutedByDefault: true,
   ),
   LiveStreamInfo(
@@ -36,8 +37,10 @@ const List<LiveStreamInfo> liveStreams = [
     subtitle: 'Live from Masjid an-Nabawi',
     embedUrl:
         'https://www.youtube.com/embed/live_stream?channel=UCos6Hg8mF5P01sO8fQ7v7WA&autoplay=1&mute=1&playsinline=1',
-    fallbackEmbedUrl: 'https://www.youtube.com/results?search_query=Masjid+an+Nabawi+live',
-    externalUrl: 'https://www.youtube.com/results?search_query=Masjid+an+Nabawi+live',
+    fallbackEmbedUrl:
+        'https://www.youtube-nocookie.com/embed/live_stream?channel=UCos6Hg8mF5P01sO8fQ7v7WA&autoplay=1&mute=1&playsinline=1',
+    externalUrl:
+        'https://www.youtube.com/channel/UCos6Hg8mF5P01sO8fQ7v7WA/live',
     mutedByDefault: true,
   ),
 ];
