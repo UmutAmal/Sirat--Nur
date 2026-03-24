@@ -105,6 +105,17 @@ class AppLocalizationsAy extends AppLocalizations {
   String get currentLocation => 'Jichha pachanx (GPS) .';
 
   @override
+  String get locationServiceDisabled => 'Location services are disabled.';
+
+  @override
+  String get locationPermissionDenied => 'Location permission denied.';
+
+  @override
+  String citiesCount(String count) {
+    return '$count cities';
+  }
+
+  @override
   String get search => 'Thaqhata';
 
   @override

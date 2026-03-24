@@ -105,6 +105,17 @@ class AppLocalizationsBho extends AppLocalizations {
   String get currentLocation => 'वर्तमान स्थान (जीपीएस) के बा।';
 
   @override
+  String get locationServiceDisabled => 'Location services are disabled.';
+
+  @override
+  String get locationPermissionDenied => 'Location permission denied.';
+
+  @override
+  String citiesCount(String count) {
+    return '$count cities';
+  }
+
+  @override
   String get search => 'खोजल जाव';
 
   @override

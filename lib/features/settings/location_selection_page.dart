@@ -62,7 +62,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
     try {
       final serviceEnabled = await Geolocator.isLocationServiceEnabled();
       if (!serviceEnabled) {
-        _showMessage('Location service is disabled.');
+        _showMessage(l10n.locationServiceDisabled);
         return;
       }
 
@@ -73,7 +73,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
 
       if (permission == LocationPermission.denied ||
           permission == LocationPermission.deniedForever) {
-        _showMessage('Location permission denied.');
+        _showMessage(l10n.locationPermissionDenied);
         return;
       }
 
@@ -106,9 +106,19 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
         // Keep generic label when reverse geocoding fails.
       }
 
+      final inferredTimezone = _inferTimezoneFromCoordinates(
+        position.latitude,
+        position.longitude,
+      );
+
       await ref
           .read(settingsProvider.notifier)
-          .updateLocation(position.latitude, position.longitude, locationName);
+          .updateLocation(
+            position.latitude,
+            position.longitude,
+            locationName,
+            timezone: inferredTimezone,
+          );
 
       if (!mounted) return;
       _showMessage('${l10n.location}: $locationName');
@@ -125,6 +135,23 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
   void _showMessage(String text) {
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(text)));
+  }
+
+  String? _inferTimezoneFromCoordinates(double latitude, double longitude) {
+    CityData? nearestCity;
+    var minDistance = double.infinity;
+
+    for (final city in globalCities) {
+      final latDiff = city.lat - latitude;
+      final lngDiff = city.lng - longitude;
+      final distance = (latDiff * latDiff) + (lngDiff * lngDiff);
+      if (distance < minDistance) {
+        minDistance = distance;
+        nearestCity = city;
+      }
+    }
+
+    return nearestCity?.timezone;
   }
 
   @override
@@ -235,7 +262,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
             child: Row(
               children: [
                 Text(
-                  '${cities.length} cities',
+                  l10n.citiesCount(cities.length.toString()),
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w700,
@@ -311,6 +338,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
                             city.lat,
                             city.lng,
                             '${city.name}, ${city.country}',
+                            timezone: city.timezone,
                           );
                       _showMessage(
                         '${l10n.location}: ${city.name}, ${city.country}',

@@ -36,7 +36,10 @@ void main() {
     });
 
     test('copyWith with no arguments returns equivalent state', () {
-      final state = SettingsState(calculationMethod: 'Egyptian', madhab: 'Hanafi');
+      final state = SettingsState(
+        calculationMethod: 'Egyptian',
+        madhab: 'Hanafi',
+      );
       final copy = state.copyWith();
       expect(copy.calculationMethod, state.calculationMethod);
       expect(copy.madhab, state.madhab);
@@ -80,6 +83,40 @@ void main() {
       expect(notifier.state.languageCode, 'tr');
       expect(notifier.state.latitude, 41.0);
       expect(notifier.state.longitude, 29.0);
+    });
+
+    test('updateLocation persists timezone in state and storage', () async {
+      final notifier = SettingsNotifier(prefs);
+
+      await notifier.updateLocation(
+        41.0082,
+        28.9784,
+        'Istanbul, Turkey',
+        timezone: 'Europe/Istanbul',
+      );
+
+      expect(notifier.state.locationName, 'Istanbul, Turkey');
+      expect(notifier.state.timezone, 'Europe/Istanbul');
+      expect(prefs.getString('timezone'), 'Europe/Istanbul');
+    });
+
+    test('clearManualLocation removes timezone from state and storage', () async {
+      SharedPreferences.setMockInitialValues({
+        'latitude': 21.3891,
+        'longitude': 39.8579,
+        'locationName': 'Makkah, Saudi Arabia',
+        'timezone': 'Asia/Riyadh',
+      });
+      prefs = await SharedPreferences.getInstance();
+      final notifier = SettingsNotifier(prefs);
+
+      await notifier.clearManualLocation();
+
+      expect(notifier.state.latitude, isNull);
+      expect(notifier.state.longitude, isNull);
+      expect(notifier.state.locationName, isNull);
+      expect(notifier.state.timezone, isNull);
+      expect(prefs.containsKey('timezone'), isFalse);
     });
   });
 }

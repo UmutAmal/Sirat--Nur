@@ -67,11 +67,13 @@ class NotificationService {
   Future<void> schedulePrayerNotifications(
     PrayerTimesEntity todayTimes, {
     Locale? locale,
+    String? timezoneName,
   }) async {
     // Cancel previous notifications to avoid duplicates over days
     await flutterLocalNotificationsPlugin.cancelAll();
 
-    final now = DateTime.now();
+    final location = _resolveLocation(timezoneName);
+    final now = tz.TZDateTime.now(location);
     final resolvedLocale =
         locale ?? WidgetsBinding.instance.platformDispatcher.locale;
     final isTr = resolvedLocale.languageCode == 'tr';
@@ -103,6 +105,7 @@ class NotificationService {
           title: title,
           body: body,
           scheduledTime: entry.value,
+          timezoneName: timezoneName,
         );
       }
     }
@@ -113,12 +116,26 @@ class NotificationService {
     required String title,
     required String body,
     required DateTime scheduledTime,
+    String? timezoneName,
   }) async {
+    final location = _resolveLocation(timezoneName);
+    final zonedScheduleTime = tz.TZDateTime(
+      location,
+      scheduledTime.year,
+      scheduledTime.month,
+      scheduledTime.day,
+      scheduledTime.hour,
+      scheduledTime.minute,
+      scheduledTime.second,
+      scheduledTime.millisecond,
+      scheduledTime.microsecond,
+    );
+
     await flutterLocalNotificationsPlugin.zonedSchedule(
       id: id,
       title: title,
       body: body,
-      scheduledDate: tz.TZDateTime.from(scheduledTime, tz.local),
+      scheduledDate: zonedScheduleTime,
       notificationDetails: NotificationDetails(
         android: AndroidNotificationDetails(
           'adhan_channel',
@@ -144,5 +161,17 @@ class NotificationService {
       ),
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
     );
+  }
+
+  tz.Location _resolveLocation(String? timezoneName) {
+    if (timezoneName == null || timezoneName.trim().isEmpty) {
+      return tz.local;
+    }
+
+    try {
+      return tz.getLocation(timezoneName);
+    } catch (_) {
+      return tz.local;
+    }
   }
 }

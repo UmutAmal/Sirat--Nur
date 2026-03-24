@@ -25,12 +25,13 @@ class AdhanSchedulerService {
     double lat,
     double lon,
     String method,
-    String madhab,
-  ) async {
+    String madhab, {
+    String? timezoneName,
+  }) async {
     // 1. Clear existing schedules to avoid duplicates
     await _notifications.cancelAll();
 
-    final now = DateTime.now();
+    final now = _nowForTimezone(timezoneName);
     for (int i = 0; i < 30; i++) {
       final date = now.add(Duration(days: i));
       final times = PrayerCalendarService.calculatePrayerTimes(
@@ -39,16 +40,18 @@ class AdhanSchedulerService {
         date: date,
         method: method,
         madhab: madhab,
+        timezone: timezoneName,
       );
 
-      await _scheduleDailyEvents(times, i);
+      await _scheduleDailyEvents(times, i, timezoneName: timezoneName);
     }
   }
 
   Future<void> _scheduleDailyEvents(
     PrayerTimesEntity times,
-    int dayIndex,
-  ) async {
+    int dayIndex, {
+    String? timezoneName,
+  }) async {
     final dailyPrayers = {
       'Fajr': times.fajr,
       'Dhuhr': times.dhuhr,
@@ -58,15 +61,27 @@ class AdhanSchedulerService {
     };
 
     int baseId = dayIndex * 10;
+    final now = _nowForTimezone(timezoneName);
+    final location = _resolveLocation(timezoneName);
 
     for (var entry in dailyPrayers.entries) {
-      if (entry.value.isBefore(DateTime.now())) continue;
+      if (entry.value.isBefore(now)) continue;
 
       await _notifications.zonedSchedule(
         id: baseId++,
         title: 'Adhan: ${entry.key}',
         body: 'It is time for ${entry.key} prayer.',
-        scheduledDate: tz.TZDateTime.from(entry.value, tz.local),
+        scheduledDate: tz.TZDateTime(
+          location,
+          entry.value.year,
+          entry.value.month,
+          entry.value.day,
+          entry.value.hour,
+          entry.value.minute,
+          entry.value.second,
+          entry.value.millisecond,
+          entry.value.microsecond,
+        ),
         notificationDetails: const NotificationDetails(
           android: AndroidNotificationDetails(
             'adhan_channel_high_precision',
@@ -85,6 +100,31 @@ class AdhanSchedulerService {
         ),
         androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
       );
+    }
+  }
+
+  DateTime _nowForTimezone(String? timezoneName) {
+    if (timezoneName == null || timezoneName.trim().isEmpty) {
+      return DateTime.now();
+    }
+
+    try {
+      final location = tz.getLocation(timezoneName);
+      return tz.TZDateTime.now(location);
+    } catch (_) {
+      return DateTime.now();
+    }
+  }
+
+  tz.Location _resolveLocation(String? timezoneName) {
+    if (timezoneName == null || timezoneName.trim().isEmpty) {
+      return tz.local;
+    }
+
+    try {
+      return tz.getLocation(timezoneName);
+    } catch (_) {
+      return tz.local;
     }
   }
 }

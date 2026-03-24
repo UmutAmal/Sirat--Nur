@@ -105,6 +105,17 @@ class AppLocalizationsTr extends AppLocalizations {
   String get currentLocation => 'Mevcut Konum (GPS)';
 
   @override
+  String get locationServiceDisabled => 'Konum servisleri kapalı.';
+
+  @override
+  String get locationPermissionDenied => 'Konum izni reddedildi.';
+
+  @override
+  String citiesCount(String count) {
+    return '$count şehir';
+  }
+
+  @override
   String get search => 'Ara';
 
   @override
