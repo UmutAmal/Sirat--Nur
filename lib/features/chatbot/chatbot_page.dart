@@ -8,7 +8,7 @@ import 'package:sirat_i_nur/core/constants/islamic_chatbot_data.dart';
 // Gemini API key — injected via --dart-define for production,
 // falls back to empty string (which uses local Q&A fallback).
 // ──────────────────────────────────────────────────────────────
-const String _geminiApiKey = String.fromEnvironment('GEMINI_API_KEY', defaultValue: 'AIzaSyCrzIJvLDpMnshuyBkeAmmUuAmCZdcXkS0');
+const String _geminiApiKey = String.fromEnvironment('GEMINI_API_KEY', defaultValue: '');
 
 final _chatMessagesProvider = StateProvider<List<_ChatMsg>>((ref) => [
   _ChatMsg(text: 'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.', isUser: false),
