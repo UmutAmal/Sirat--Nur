@@ -91,4 +91,29 @@ class AdhanSchedulerService {
       );
     }
   }
+
+  DateTime _nowForTimezone(String? timezoneName) {
+    if (timezoneName == null || timezoneName.trim().isEmpty) {
+      return DateTime.now();
+    }
+
+    try {
+      final location = tz.getLocation(timezoneName);
+      return tz.TZDateTime.now(location);
+    } catch (_) {
+      return DateTime.now();
+    }
+  }
+
+  tz.Location _resolveLocation(String? timezoneName) {
+    if (timezoneName == null || timezoneName.trim().isEmpty) {
+      return tz.local;
+    }
+
+    try {
+      return tz.getLocation(timezoneName);
+    } catch (_) {
+      return tz.local;
+    }
+  }
 }

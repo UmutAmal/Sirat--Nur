@@ -92,6 +92,12 @@ void main() async {
 
   runZonedGuarded(
     () async {
+      try {
+        tzdata.initializeTimeZones();
+      } catch (e) {
+        debugPrint('Timezone init failed (non-blocking): $e');
+      }
+
       // Initialize Supabase
       try {
         await SupabaseConfig.initialize();

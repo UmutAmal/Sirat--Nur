@@ -3,12 +3,13 @@ import 'package:sirat_i_nur/domain/entities/prayer_times_entity.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
 import 'dart:convert';
+import 'package:timezone/timezone.dart' as tz;
 
 /// Offline Prayer Times Service using Adhan package
 /// Calculates prayer times for any date without internet
 class PrayerCalendarService {
   static const String _cacheKey = 'prayer_times_cache';
-  
+
   /// Calculate prayer times for a specific date
   static PrayerTimesEntity calculatePrayerTimes({
     required double latitude,
@@ -23,7 +24,7 @@ class PrayerCalendarService {
   }) {
     final coordinates = Coordinates(latitude, longitude);
     final params = _getCalculationParameters(method, fajrAngle, ishaAngle);
-    
+
     if (highLatitudeRule != null) {
       params.highLatitudeRule = highLatitudeRule;
     } else {
@@ -32,14 +33,14 @@ class PrayerCalendarService {
         params.highLatitudeRule = HighLatitudeRule.twilight_angle;
       }
     }
-    
+
     // Set madhab
     if (madhab == 'Shafii' || madhab == 'Maliki' || madhab == 'Hanbali') {
       params.madhab = Madhab.shafi;
     } else {
       params.madhab = Madhab.hanafi;
     }
-    
+
     final dateComponents = DateComponents.from(date);
     final prayerTimes = PrayerTimes(coordinates, dateComponents, params);
     final timeDelta = TimezoneUtils.timezoneDeltaForDate(date, timezone);
@@ -74,7 +75,7 @@ class PrayerCalendarService {
       nextTime = isha;
       nextName = 'Isha';
     }
-    
+
     return PrayerTimesEntity(
       fajr: fajr,
       sunrise: sunrise,
@@ -86,7 +87,7 @@ class PrayerCalendarService {
       nextPrayerTime: nextTime,
     );
   }
-  
+
   /// Calculate prayer times for a whole month
   static List<PrayerTimesEntity> calculateMonth({
     required double latitude,
@@ -101,7 +102,7 @@ class PrayerCalendarService {
   }) {
     final List<PrayerTimesEntity> monthTimes = [];
     final daysInMonth = DateTime(year, month + 1, 0).day;
-    
+
     for (int day = 1; day <= daysInMonth; day++) {
       final date = DateTime(year, month, day);
       monthTimes.add(calculatePrayerTimes(
@@ -115,10 +116,10 @@ class PrayerCalendarService {
         ishaAngle: ishaAngle,
       ));
     }
-    
+
     return monthTimes;
   }
-  
+
   /// Calculate prayer times for the next 10 years
   /// This creates a complete offline prayer calendar
   static List<PrayerTimesEntity> calculate10Years({
@@ -137,7 +138,7 @@ class PrayerCalendarService {
       for (int month = 1; month <= 12; month++) {
         // Skip months in current year that have passed
         if (year == now.year && month < now.month) continue;
-        
+
         final monthTimes = calculateMonth(
           latitude: latitude,
           longitude: longitude,
@@ -149,24 +150,52 @@ class PrayerCalendarService {
           fajrAngle: fajrAngle,
           ishaAngle: ishaAngle,
         );
-        
+
         allTimes.addAll(monthTimes);
       }
     }
-    
+
     return allTimes;
   }
-  
+
+  static DateTime _nowForTimezone(String? timezoneName) {
+    if (timezoneName == null || timezoneName.trim().isEmpty) {
+      return DateTime.now();
+    }
+
+    try {
+      final location = tz.getLocation(timezoneName);
+      return tz.TZDateTime.now(location);
+    } catch (_) {
+      return DateTime.now();
+    }
+  }
+
+  static Duration _timezoneDelta(String? timezoneName) {
+    if (timezoneName == null || timezoneName.trim().isEmpty) {
+      return Duration.zero;
+    }
+
+    try {
+      final location = tz.getLocation(timezoneName);
+      final localNow = DateTime.now();
+      final timezoneNow = tz.TZDateTime.now(location);
+      return timezoneNow.timeZoneOffset - localNow.timeZoneOffset;
+    } catch (_) {
+      return Duration.zero;
+    }
+  }
+
   /// Get calculation parameters based on method
   static CalculationParameters _getCalculationParameters(
-    String method, 
-    double? fajrAngle, 
+    String method,
+    double? fajrAngle,
     double? ishaAngle,
   ) {
     switch (method) {
       case 'Custom':
         return CalculationParameters(
-          fajrAngle: fajrAngle ?? 18.0, 
+          fajrAngle: fajrAngle ?? 18.0,
           ishaAngle: ishaAngle ?? 17.0,
         );
       case 'Muslim World League':
@@ -202,7 +231,7 @@ class PrayerCalendarService {
         return CalculationMethod.muslim_world_league.getParameters();
     }
   }
-  
+
   /// Cache prayer times locally for offline use
   static Future<void> cachePrayerTimes({
     required double latitude,
@@ -244,56 +273,62 @@ class PrayerCalendarService {
       'times': jsonList,
     }));
   }
-  
+
   /// Get cached prayer times (offline)
   static Future<List<PrayerTimesEntity>?> getCachedPrayerTimes() async {
     final prefs = await SharedPreferences.getInstance();
     final cached = prefs.getString(_cacheKey);
-    
+
     if (cached == null) return null;
-    
+
     try {
       final Map<String, dynamic> data = jsonDecode(cached);
       final List<dynamic> timesList = data['times'];
-      
-      return timesList.map((t) => PrayerTimesEntity(
-        fajr: DateTime.parse(t['fajr']),
-        sunrise: DateTime.parse(t['sunrise']),
-        dhuhr: DateTime.parse(t['dhuhr']),
-        asr: DateTime.parse(t['asr']),
-        maghrib: DateTime.parse(t['maghrib']),
-        isha: DateTime.parse(t['isha']),
-        nextPrayerName: t['nextPrayerName'],
-        nextPrayerTime: DateTime.parse(t['nextPrayerTime']),
-      )).toList();
+
+      return timesList
+          .map(
+            (t) => PrayerTimesEntity(
+              fajr: DateTime.parse(t['fajr']),
+              sunrise: DateTime.parse(t['sunrise']),
+              dhuhr: DateTime.parse(t['dhuhr']),
+              asr: DateTime.parse(t['asr']),
+              maghrib: DateTime.parse(t['maghrib']),
+              isha: DateTime.parse(t['isha']),
+              nextPrayerName: t['nextPrayerName'],
+              nextPrayerTime: DateTime.parse(t['nextPrayerTime']),
+            ),
+          )
+          .toList();
     } catch (e) {
       return null;
     }
   }
-  
+
   /// Get cached prayer time for a specific date
-  static Future<PrayerTimesEntity?> getCachedPrayerTimeForDate(DateTime date) async {
+  static Future<PrayerTimesEntity?> getCachedPrayerTimeForDate(
+    DateTime date,
+  ) async {
     final cached = await getCachedPrayerTimes();
     if (cached == null) return null;
-    
+
     final dateOnly = DateTime(date.year, date.month, date.day);
-    
+
     for (final time in cached) {
       final timeDate = DateTime(time.fajr.year, time.fajr.month, time.fajr.day);
       if (timeDate == dateOnly) {
         return time;
       }
     }
-    
+
     return null;
   }
-  
+
   /// Check if cache exists
   static Future<bool> hasCachedTimes() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.containsKey(_cacheKey);
   }
-  
+
   /// Clear cache
   static Future<void> clearCache() async {
     final prefs = await SharedPreferences.getInstance();
@@ -305,23 +340,37 @@ class PrayerCalendarService {
 extension PrayerTimesEntityExtension on PrayerTimesEntity {
   /// Get prayer name in Turkish
   static String getPrayerNameTurkish(int index) {
-    const names = ['Sabah (Fajr)', 'Güneş (Sunrise)', 'Öğle (Dhuhr)', 'İkindi (Asr)', 'Akşam (Maghrib)', 'Yatsı (Isha)'];
+    const names = [
+      'Sabah (Fajr)',
+      'Güneş (Sunrise)',
+      'Öğle (Dhuhr)',
+      'İkindi (Asr)',
+      'Akşam (Maghrib)',
+      'Yatsı (Isha)',
+    ];
     return names[index];
   }
-  
+
   /// Get prayer name in English
   static String getPrayerNameEnglish(int index) {
-    const names = ['Fajr (Dawn)', 'Sunrise', 'Dhuhr (Noon)', 'Asr (Afternoon)', 'Maghrib (Evening)', 'Isha (Night)'];
+    const names = [
+      'Fajr (Dawn)',
+      'Sunrise',
+      'Dhuhr (Noon)',
+      'Asr (Afternoon)',
+      'Maghrib (Evening)',
+      'Isha (Night)',
+    ];
     return names[index];
   }
-  
+
   /// Format time as HH:mm
   String formatTime(DateTime time) {
     final hour = time.hour.toString().padLeft(2, '0');
     final minute = time.minute.toString().padLeft(2, '0');
     return '$hour:$minute';
   }
-  
+
   /// Get formatted times map
   Map<String, String> get formattedTimes => {
     'Fajr': formatTime(fajr),

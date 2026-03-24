@@ -24,23 +24,35 @@ class PrayerTimesData {
 
 CalculationMethod _methodFromString(String method) {
   switch (method) {
-    case 'Turkey': return CalculationMethod.turkey;
-    case 'Egyptian': return CalculationMethod.egyptian;
-    case 'ISNA': return CalculationMethod.north_america;
-    case 'MWL': return CalculationMethod.muslim_world_league;
-    case 'Karachi': return CalculationMethod.karachi;
-    case 'Umm al-Qura': return CalculationMethod.umm_al_qura;
-    case 'Dubai': return CalculationMethod.dubai;
-    case 'Kuwait': return CalculationMethod.kuwait;
-    case 'Singapore': return CalculationMethod.singapore;
-    default: return CalculationMethod.turkey;
+    case 'Turkey':
+      return CalculationMethod.turkey;
+    case 'Egyptian':
+      return CalculationMethod.egyptian;
+    case 'ISNA':
+      return CalculationMethod.north_america;
+    case 'MWL':
+      return CalculationMethod.muslim_world_league;
+    case 'Karachi':
+      return CalculationMethod.karachi;
+    case 'Umm al-Qura':
+      return CalculationMethod.umm_al_qura;
+    case 'Dubai':
+      return CalculationMethod.dubai;
+    case 'Kuwait':
+      return CalculationMethod.kuwait;
+    case 'Singapore':
+      return CalculationMethod.singapore;
+    default:
+      return CalculationMethod.turkey;
   }
 }
 
 Madhab _madhabFromString(String madhab) {
   switch (madhab) {
-    case 'Hanafi': return Madhab.hanafi;
-    default: return Madhab.shafi;
+    case 'Hanafi':
+      return Madhab.hanafi;
+    default:
+      return Madhab.shafi;
   }
 }
 
@@ -48,6 +60,34 @@ String _formatTime(DateTime dt) {
   final h = dt.hour.toString().padLeft(2, '0');
   final m = dt.minute.toString().padLeft(2, '0');
   return '$h:$m';
+}
+
+DateTime _nowForTimezone(String? timezoneName) {
+  if (timezoneName == null || timezoneName.trim().isEmpty) {
+    return DateTime.now();
+  }
+
+  try {
+    final location = tz.getLocation(timezoneName);
+    return tz.TZDateTime.now(location);
+  } catch (_) {
+    return DateTime.now();
+  }
+}
+
+Duration _timezoneDelta(String? timezoneName) {
+  if (timezoneName == null || timezoneName.trim().isEmpty) {
+    return Duration.zero;
+  }
+
+  try {
+    final location = tz.getLocation(timezoneName);
+    final localNow = DateTime.now();
+    final timezoneNow = tz.TZDateTime.now(location);
+    return timezoneNow.timeZoneOffset - localNow.timeZoneOffset;
+  } catch (_) {
+    return Duration.zero;
+  }
 }
 
 final prayerTimesProvider = Provider<PrayerTimesData?>((ref) {

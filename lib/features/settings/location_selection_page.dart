@@ -113,6 +113,11 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
         // Keep generic label when reverse geocoding fails.
       }
 
+      final inferredTimezone = _inferTimezoneFromCoordinates(
+        position.latitude,
+        position.longitude,
+      );
+
       await ref
           .read(settingsProvider.notifier)
           .updateLocation(

@@ -72,7 +72,8 @@ class NotificationService {
     // Cancel previous notifications to avoid duplicates over days
     await flutterLocalNotificationsPlugin.cancelAll();
 
-    final now = DateTime.now();
+    final location = _resolveLocation(timezoneName);
+    final now = tz.TZDateTime.now(location);
     final resolvedLocale =
         locale ?? WidgetsBinding.instance.platformDispatcher.locale;
     final isTr = resolvedLocale.languageCode == 'tr';
@@ -149,5 +150,17 @@ class NotificationService {
       ),
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
     );
+  }
+
+  tz.Location _resolveLocation(String? timezoneName) {
+    if (timezoneName == null || timezoneName.trim().isEmpty) {
+      return tz.local;
+    }
+
+    try {
+      return tz.getLocation(timezoneName);
+    } catch (_) {
+      return tz.local;
+    }
   }
 }

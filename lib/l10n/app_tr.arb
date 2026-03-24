@@ -32,6 +32,16 @@
   "searchLanguage": "180+ dilde ara...",
   "systemDefault": "Sistem Varsayılanı",
   "currentLocation": "Mevcut Konum (GPS)",
+  "locationServiceDisabled": "Konum servisleri kapalı.",
+  "locationPermissionDenied": "Konum izni reddedildi.",
+  "citiesCount": "{count} şehir",
+  "@citiesCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
   "search": "Ara",
   "searchHint": "Ara...",
   "noResults": "Sonuç bulunamadı",

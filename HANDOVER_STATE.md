@@ -406,3 +406,199 @@ Dosyalar:
 3. Timezone bazlı prayer/notification doğruluğu
 - City dataset’te timezone alanı var; runtime hesaplarda tam kullanılmıyor.
 - Sonraki adım: selected city timezone’u state’e taşıyıp prayer+notification pipeline ile entegre etmek.
+---
+
+## 16) 2026-03-24 Ek Stabilizasyon Turu (Timezone + Dil/Bölge Zinciri)
+
+### 16.1 Bu turun başlama bağlamı
+- Kullanıcı talebi: "kalan herşeyi tamamla".
+- İncelenen aktif repo: `C:\Users\UMUT\OneDrive\Masaüstü\Way of Allah\sirat_i_nur_work`
+- Başlangıç git durumu:
+  - `master...origin/master`
+  - çalışma ağacı temizdi.
+- Kritik tespit:
+  - Önceki dokümanda tariflenen timezone iyileştirmeleri bu repoya tam yansımamıştı.
+  - `settings` içinde timezone state yoktu.
+  - Konum seçimi timezone saklamıyordu.
+  - `prayer_times_service`, `prayer_calendar_service`, `notification_service`, `adhan_scheduler_service` seçilen şehir timezone’una bağlı değildi.
+  - `location_selection_page` içinde hardcoded İngilizce hata mesajları vardı.
+  - l10n’da `locationServiceDisabled`, `locationPermissionDenied`, `citiesCount` anahtarları yoktu.
+
+### 16.2 Hedeflenen teknik sonuç
+1. Kullanıcı şehir seçtiğinde timezone kalıcı saklansın.
+2. GPS ile otomatik konumda da timezone tahmini yapılıp kaydedilsin.
+3. Namaz vakti hesaplama/next-prayer/scheduler zinciri seçilen timezone ile tutarlı çalışsın.
+4. Bildirim zamanlama `tz.local` yerine mümkün olduğunda seçili timezone location ile yapılsın.
+5. Dil/bölge tarafında yeni UI metinleri l10n üzerinden gelsin; hardcoded metin kalmasın.
+6. Bu tur sonunda analyze/test tekrar yeşil olsun.
+
+### 16.3 Dosya bazlı uygulanan değişiklikler
+
+#### A) `lib/features/settings/settings_provider.dart`
+- `SettingsState` içine `timezone` alanı eklendi.
+- `copyWith` fonksiyonuna `timezone` eklendi (`_unset` destekli).
+- SharedPreferences yükleme/yazma hattına `timezone` dahil edildi:
+  - load: `getString('timezone')`
+  - save/remove: `setString/remove`
+- `updateLocation(...)` imzası genişletildi:
+  - Yeni imza: `updateLocation(lat, lng, name, {String? timezone})`
+  - timezone boşsa pref key silinir, doluysa yazılır.
+- `clearManualLocation()` artık timezone key’ini de temizliyor.
+
+Etkisi:
+- Konum seçimi ile birlikte saat dilimi de state + disk üzerinde persist edilir.
+
+#### B) `lib/features/settings/location_selection_page.dart`
+- Servis/izin mesajlarında hardcoded İngilizce kaldırıldı:
+  - `l10n.locationServiceDisabled`
+  - `l10n.locationPermissionDenied`
+- GPS seçiminde nearest-city yaklaşımı ile timezone tahmini eklendi:
+  - `_inferTimezoneFromCoordinates(latitude, longitude)`
+  - `globalCities` üzerinde en yakın şehri seçip `city.timezone` döndürür.
+- `updateLocation(...)` çağrıları timezone ile güncellendi:
+  - GPS akışında inferred timezone
+  - şehir listesi tıklamasında `city.timezone`
+- Üstteki şehir sayısı metni lokalize edildi:
+  - Eski: `'{n} cities'`
+  - Yeni: `l10n.citiesCount(n.toString())`
+
+Etkisi:
+- Dil bağımsız tutarlı mesaj gösterimi.
+- Konum seçiminden timezone state’e gerçek veri akışı.
+
+#### C) `lib/core/services/prayer_times_service.dart`
+- `timezone` importu eklendi.
+- Yeni yardımcılar eklendi:
+  - `_nowForTimezone(String?)`
+  - `_timezoneDelta(String?)`
+- `prayerTimesProvider` artık `settings.timezone` kullanıyor:
+  - `now` timezone-aware hesaplanıyor.
+  - namaz vakitleri timezone delta ile kaydırılıyor.
+  - next prayer karşılaştırmaları adjusted times ile yapılıyor.
+  - ertesi gün fajr da aynı mekanizma ile adjusted.
+
+Etkisi:
+- Seçili şehir ile cihaz timezone’u farklı olduğunda next-prayer ve saatler daha tutarlı hale gelir.
+
+#### D) `lib/core/services/prayer_calendar_service.dart`
+- `timezone` importu eklendi.
+- API yüzeyine opsiyonel timezone parametresi eklendi:
+  - `calculatePrayerTimes(...)`
+  - `calculateMonth(...)`
+  - `calculate10Years(...)`
+  - `cachePrayerTimes(...)`
+- Yardımcılar eklendi:
+  - `_nowForTimezone(...)`
+  - `_timezoneDelta(...)`
+- Hesaplanan vakitler adjusted olarak entity’ye yazılıyor.
+- Next-prayer hesabı timezone-aware `now` ile yapılıyor.
+- Cache metadata’ya `timezone` alanı yazılıyor.
+
+Etkisi:
+- Offline takvim üretimi ve ileri tarih cache’inde timezone tutarlılığı artar.
+
+#### E) `lib/core/services/notification_service.dart`
+- `schedulePrayerNotifications(...)` imzası genişletildi:
+  - `String? timezoneName`
+- Zamanlama artık hedef timezone location üzerinden yapılıyor:
+  - `_resolveLocation(timezoneName)` helper eklendi.
+  - `_scheduleNotification(...)` içinde `tz.TZDateTime(location, y,m,d,h,m,s,...)` kullanımı.
+- `now` hesaplaması schedule tarafında timezone-aware yapıldı.
+
+Etkisi:
+- Bildirim planlama local timezone’a kilitlenmek yerine seçili timezone’a uyarlanabilir hale geldi.
+
+#### F) `lib/core/services/adhan_scheduler_service.dart`
+- `scheduleAdhans(...)` imzası genişletildi:
+  - `String? timezoneName`
+- 30 günlük planlama döngüsü timezone-aware `now` kullanıyor.
+- `PrayerCalendarService.calculatePrayerTimes(...)` çağrısına timezone aktarılıyor.
+- `_scheduleDailyEvents(...)` timezone parametresi alıyor.
+- Zamanlama `tz.TZDateTime.from(..., tz.local)` yerine resolved location ile explicit constructor kullanıyor.
+- Helperlar eklendi:
+  - `_nowForTimezone(...)`
+  - `_resolveLocation(...)`
+
+Etkisi:
+- Adhan planlama hattında şehir timezone’u ile cihaz timezone’u ayrıştığında yanlış schedule riski azalır.
+
+#### G) `lib/main.dart`
+- `timezone/data/latest.dart` import edildi.
+- App başlangıcında non-blocking timezone init eklendi:
+  - `tzdata.initializeTimeZones()` (try/catch)
+
+Etkisi:
+- `tz.getLocation(...)` kullanan akışların runtime’da dataset hazır olma güveni arttı.
+
+#### H) `lib/features/settings/settings_page.dart`
+- Konum satırı değeri iyileştirildi:
+  - Eski: sadece `locationName`
+  - Yeni: `locationName (timezone)` formatı (timezone varsa)
+- `_locationLabel(SettingsState)` helper eklendi.
+
+Etkisi:
+- Kullanıcı seçili konumun timezone bilgisini ayarlar ekranında doğrulayabilir.
+
+#### I) Localization
+Dosyalar:
+- `lib/l10n/app_en.arb`
+- `lib/l10n/app_tr.arb`
+
+Eklenen anahtarlar:
+- `locationServiceDisabled`
+- `locationPermissionDenied`
+- `citiesCount`
+- `@citiesCount.placeholders.count`
+
+Ardından:
+- `flutter gen-l10n` çalıştırıldı.
+- `app_localizations.dart` ve tüm `app_localizations_*.dart` dosyaları yeniden üretildi.
+
+Etkisi:
+- Yeni UI mesajları compile-safe şekilde localization katmanına bağlandı.
+
+### 16.4 Çalıştırılan komutlar ve sonuçlar
+1. `dart format` (değiştirilen Dart dosyaları)
+- Sonuç: format başarılı.
+
+2. `flutter gen-l10n`
+- Sonuç: başarılı.
+- Not: Çok sayıda locale için untranslated mesaj raporu normal (build blocker değil).
+
+3. `flutter analyze`
+- Sonuç: **No issues found**.
+
+4. `flutter test`
+- Sonuç: **All tests passed**.
+- Test seti:
+  - `test/widget_test.dart` smoke test
+  - `test/settings_provider_test.dart` timezone persist/clear davranış testleri
+
+### 16.5 Bu tur sonunda oluşan değiştirilmiş dosya grupları
+- Doğrudan logic değişen dosyalar:
+  - `lib/features/settings/settings_provider.dart`
+  - `lib/features/settings/location_selection_page.dart`
+  - `lib/features/settings/settings_page.dart`
+  - `lib/core/services/prayer_times_service.dart`
+  - `lib/core/services/prayer_calendar_service.dart`
+  - `lib/core/services/notification_service.dart`
+  - `lib/core/services/adhan_scheduler_service.dart`
+  - `lib/main.dart`
+  - `lib/l10n/app_en.arb`
+  - `lib/l10n/app_tr.arb`
+  - `test/settings_provider_test.dart`
+- Otomatik üretilen localization çıktıları:
+  - `lib/l10n/app_localizations.dart`
+  - `lib/l10n/app_localizations_*.dart` (geniş set)
+
+### 16.6 Antigravity için uygulama bütünlüğü notları
+1. Timezone zinciri bu turda uygulamaya bağlandı, ancak bildirim/scheduler çağrılarının UI’dan aktif tetik noktaları ayrıca product flow test edilmelidir (bu repoda doğrudan call-site görünmüyor).
+2. Çoklu dil setinde içerik eksikleri halen bulunuyor; teknik bozulma değil, çeviri kapsam işi.
+3. Bu turdaki hedef "hata azaltma + tutarlılık" olduğundan, davranış kıran bir feature eksiltmesi yapılmadı.
+
+### 16.7 Devralma sırasında ilk kontrol checklist’i (önerilen)
+1. Konum ekranından farklı kıtalardan şehir seçip `settings` ekranında timezone etiketini doğrula.
+2. Prayer times kartında seçilen şehre göre saat farkı beklentisini manuel spot-check yap.
+3. Bildirim planlamasını (UI tetik varsa) timezone farklı cihazlarda test et.
+4. Live TV fallback akışında en az iki stream’i network kesik/açık senaryoda dene.
+5. Çok dilli modda (TR/EN/AR) location permission/service mesajlarının localized geldiğini doğrula.

@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:share_plus/share_plus.dart';
@@ -551,5 +551,14 @@ class SettingsPage extends ConsumerWidget {
 
     return code.toUpperCase();
   }
-}
 
+  String _locationLabel(SettingsState settings) {
+    final locationName = settings.locationName;
+    if (locationName == null || locationName.isEmpty) return '-';
+
+    final timezone = settings.timezone;
+    if (timezone == null || timezone.isEmpty) return locationName;
+
+    return '$locationName ($timezone)';
+  }
+}
