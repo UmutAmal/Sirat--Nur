@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:go_router/go_router.dart';
+import 'package:latlong2/latlong.dart';
+import 'package:lat_lng_to_timezone/lat_lng_to_timezone.dart' as tzmap;
 import 'package:sirat_i_nur/core/constants/app_constants.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
@@ -21,6 +23,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
   final TextEditingController _searchController = TextEditingController();
   String _selectedCountry = 'All';
   bool _isDetecting = false;
+  final Distance _distance = const Distance();
 
   @override
   void dispose() {
@@ -62,7 +65,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
     try {
       final serviceEnabled = await Geolocator.isLocationServiceEnabled();
       if (!serviceEnabled) {
-        _showMessage('Location service is disabled.');
+        _showMessage(l10n.locationServiceDisabled);
         return;
       }
 
@@ -73,7 +76,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
 
       if (permission == LocationPermission.denied ||
           permission == LocationPermission.deniedForever) {
-        _showMessage('Location permission denied.');
+        _showMessage(l10n.locationPermissionDenied);
         return;
       }
 
@@ -83,6 +86,10 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
         ),
       );
       var locationName = l10n.currentLocation;
+      var timezone = _inferTimezoneFromCoordinates(
+        position.latitude,
+        position.longitude,
+      );
 
       try {
         final placemarks = await placemarkFromCoordinates(
@@ -108,7 +115,12 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
 
       await ref
           .read(settingsProvider.notifier)
-          .updateLocation(position.latitude, position.longitude, locationName);
+          .updateLocation(
+            position.latitude,
+            position.longitude,
+            locationName,
+            timezone: timezone,
+          );
 
       if (!mounted) return;
       _showMessage('${l10n.location}: $locationName');
@@ -125,6 +137,14 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
   void _showMessage(String text) {
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(text)));
+  }
+
+  String? _inferTimezoneFromCoordinates(double lat, double lng) {
+    try {
+      return tzmap.latLngToTimezoneString(lat, lng);
+    } catch (_) {
+      return null;
+    }
   }
 
   @override
@@ -235,7 +255,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
             child: Row(
               children: [
                 Text(
-                  '${cities.length} cities',
+                  l10n.citiesCount(cities.length.toString()),
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w700,
@@ -311,9 +331,10 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
                             city.lat,
                             city.lng,
                             '${city.name}, ${city.country}',
+                            timezone: city.timezone,
                           );
                       _showMessage(
-                        '${l10n.location}: ${city.name}, ${city.country}',
+                        '${l10n.location}: ${city.name}, ${city.country} (${city.timezone})',
                       );
                       context.pop();
                     },

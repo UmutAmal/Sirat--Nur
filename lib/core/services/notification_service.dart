@@ -3,7 +3,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:sirat_i_nur/core/utils/prayer_name_localization.dart';
 import 'package:sirat_i_nur/domain/entities/prayer_times_entity.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
-import 'package:timezone/timezone.dart' as tz;
+import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
 
 class NotificationService {
   static final NotificationService _instance = NotificationService._internal();
@@ -67,6 +67,7 @@ class NotificationService {
   Future<void> schedulePrayerNotifications(
     PrayerTimesEntity todayTimes, {
     Locale? locale,
+    String? timezoneName,
   }) async {
     // Cancel previous notifications to avoid duplicates over days
     await flutterLocalNotificationsPlugin.cancelAll();
@@ -103,6 +104,7 @@ class NotificationService {
           title: title,
           body: body,
           scheduledTime: entry.value,
+          timezoneName: timezoneName,
         );
       }
     }
@@ -113,12 +115,15 @@ class NotificationService {
     required String title,
     required String body,
     required DateTime scheduledTime,
+    String? timezoneName,
   }) async {
+    final zonedDate = TimezoneUtils.toTZDateTime(scheduledTime, timezoneName);
+
     await flutterLocalNotificationsPlugin.zonedSchedule(
       id: id,
       title: title,
       body: body,
-      scheduledDate: tz.TZDateTime.from(scheduledTime, tz.local),
+      scheduledDate: zonedDate,
       notificationDetails: NotificationDetails(
         android: AndroidNotificationDetails(
           'adhan_channel',

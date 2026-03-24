@@ -5,7 +5,7 @@ import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/core/services/prayer_times_service.dart';
 import 'package:sirat_i_nur/features/tracker/tracker_page.dart';
-import 'package:sirat_i_nur/core/constants/daily_ayat_data.dart';
+import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class HomePage extends ConsumerWidget {
@@ -17,7 +17,7 @@ class HomePage extends ConsumerWidget {
     final isTurkish = Localizations.localeOf(context).languageCode == 'tr';
     final prayerTimes = ref.watch(prayerTimesProvider);
     final prayerDone = ref.watch(prayerDoneProvider);
-    final dailyAyat = getDailyAyat();
+    final dailyAyatAsync = ref.watch(dailyAyatProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -46,35 +46,55 @@ class HomePage extends ConsumerWidget {
             const SizedBox(height: 16),
             _buildQuickAccess(context, l10n),
             const SizedBox(height: 24),
-            // Daily Verse
+            // Daily Verse Cloud Render
             AnimatedPremiumCard(
               animationDelay: 100,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      const Icon(Icons.auto_stories_rounded, color: AppColors.emerald, size: 20),
-                      const SizedBox(width: 8),
-                      Text(l10n.dailyVerse, style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
-                    ],
-                  ),
-                  const SizedBox(height: 12),
-                  Text(
-                    dailyAyat.arabic,
-                    style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, height: 2.0, fontFamily: 'Amiri'),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    isTurkish ? dailyAyat.turkish : dailyAyat.english,
-                    style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, height: 1.6),
-                  ),
-                  const SizedBox(height: 8),
-                  Text('${dailyAyat.surahName} ${dailyAyat.reference}',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700,
-                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
-                ],
+              child: dailyAyatAsync.when(
+                data: (dailyAyat) => Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(Icons.auto_stories_rounded, color: AppColors.emerald, size: 20),
+                        const SizedBox(width: 8),
+                        Text(l10n.dailyVerse, style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                    Text(
+                      dailyAyat['content_ar'] ?? '',
+                      style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, height: 2.0, fontFamily: 'Amiri'),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      isTurkish ? (dailyAyat['content_tr'] ?? '') : (dailyAyat['content_en'] ?? ''),
+                      style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, height: 1.6),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(dailyAyat['reference'] ?? '',
+                      style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700,
+                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+                  ],
+                ),
+                loading: () => const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 24),
+                  child: Center(child: CircularProgressIndicator(color: AppColors.emerald)),
+                ),
+                error: (error, stack) => Column( // Minimal fallback for immediate loading flash or rare glitch
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(Icons.auto_stories_rounded, color: AppColors.emerald, size: 20),
+                        const SizedBox(width: 8),
+                        Text(l10n.dailyVerse, style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                    const Text('Error loading content', style: TextStyle(color: Colors.red)),
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 8),

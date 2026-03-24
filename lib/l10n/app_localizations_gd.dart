@@ -106,6 +106,17 @@ class AppLocalizationsGd extends AppLocalizations {
   String get currentLocation => 'Àite an-dràsta (GPS)';
 
   @override
+  String get locationServiceDisabled => 'Location service is disabled.';
+
+  @override
+  String get locationPermissionDenied => 'Location permission denied.';
+
+  @override
+  String citiesCount(String count) {
+    return '$count cities';
+  }
+
+  @override
   String get search => 'Rannsaich';
 
   @override

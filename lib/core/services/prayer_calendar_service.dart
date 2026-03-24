@@ -1,6 +1,7 @@
 import 'package:adhan/adhan.dart';
 import 'package:sirat_i_nur/domain/entities/prayer_times_entity.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
 import 'dart:convert';
 
 /// Offline Prayer Times Service using Adhan package
@@ -15,6 +16,7 @@ class PrayerCalendarService {
     required DateTime date,
     required String method,
     required String madhab,
+    String? timezone,
     double? fajrAngle,
     double? ishaAngle,
     HighLatitudeRule? highLatitudeRule,
@@ -40,39 +42,46 @@ class PrayerCalendarService {
     
     final dateComponents = DateComponents.from(date);
     final prayerTimes = PrayerTimes(coordinates, dateComponents, params);
+    final timeDelta = TimezoneUtils.timezoneDeltaForDate(date, timezone);
+    final fajr = prayerTimes.fajr.add(timeDelta);
+    final sunrise = prayerTimes.sunrise.add(timeDelta);
+    final dhuhr = prayerTimes.dhuhr.add(timeDelta);
+    final asr = prayerTimes.asr.add(timeDelta);
+    final maghrib = prayerTimes.maghrib.add(timeDelta);
+    final isha = prayerTimes.isha.add(timeDelta);
     
     // Calculate next prayer
-    final now = DateTime.now();
-    DateTime nextTime = prayerTimes.fajr;
+    final now = TimezoneUtils.nowForTimezone(timezone);
+    DateTime nextTime = fajr;
     String nextName = 'Fajr';
     
-    if (now.isBefore(prayerTimes.fajr)) {
-      nextTime = prayerTimes.fajr;
+    if (now.isBefore(fajr)) {
+      nextTime = fajr;
       nextName = 'Fajr';
-    } else if (now.isBefore(prayerTimes.sunrise)) {
-      nextTime = prayerTimes.sunrise;
+    } else if (now.isBefore(sunrise)) {
+      nextTime = sunrise;
       nextName = 'Sunrise';
-    } else if (now.isBefore(prayerTimes.dhuhr)) {
-      nextTime = prayerTimes.dhuhr;
+    } else if (now.isBefore(dhuhr)) {
+      nextTime = dhuhr;
       nextName = 'Dhuhr';
-    } else if (now.isBefore(prayerTimes.asr)) {
-      nextTime = prayerTimes.asr;
+    } else if (now.isBefore(asr)) {
+      nextTime = asr;
       nextName = 'Asr';
-    } else if (now.isBefore(prayerTimes.maghrib)) {
-      nextTime = prayerTimes.maghrib;
+    } else if (now.isBefore(maghrib)) {
+      nextTime = maghrib;
       nextName = 'Maghrib';
     } else {
-      nextTime = prayerTimes.isha;
+      nextTime = isha;
       nextName = 'Isha';
     }
     
     return PrayerTimesEntity(
-      fajr: prayerTimes.fajr,
-      sunrise: prayerTimes.sunrise,
-      dhuhr: prayerTimes.dhuhr,
-      asr: prayerTimes.asr,
-      maghrib: prayerTimes.maghrib,
-      isha: prayerTimes.isha,
+      fajr: fajr,
+      sunrise: sunrise,
+      dhuhr: dhuhr,
+      asr: asr,
+      maghrib: maghrib,
+      isha: isha,
       nextPrayerName: nextName,
       nextPrayerTime: nextTime,
     );
@@ -86,6 +95,7 @@ class PrayerCalendarService {
     required int month,
     required String method,
     required String madhab,
+    String? timezone,
     double? fajrAngle,
     double? ishaAngle,
   }) {
@@ -100,6 +110,7 @@ class PrayerCalendarService {
         date: date,
         method: method,
         madhab: madhab,
+        timezone: timezone,
         fajrAngle: fajrAngle,
         ishaAngle: ishaAngle,
       ));
@@ -115,11 +126,12 @@ class PrayerCalendarService {
     required double longitude,
     required String method,
     required String madhab,
+    String? timezone,
     double? fajrAngle,
     double? ishaAngle,
   }) {
     final List<PrayerTimesEntity> allTimes = [];
-    final now = DateTime.now();
+    final now = TimezoneUtils.nowForTimezone(timezone);
     
     for (int year = now.year; year <= now.year + 10; year++) {
       for (int month = 1; month <= 12; month++) {
@@ -133,6 +145,7 @@ class PrayerCalendarService {
           month: month,
           method: method,
           madhab: madhab,
+          timezone: timezone,
           fajrAngle: fajrAngle,
           ishaAngle: ishaAngle,
         );
@@ -196,6 +209,7 @@ class PrayerCalendarService {
     required double longitude,
     required String method,
     required String madhab,
+    String? timezone,
     double? fajrAngle,
     double? ishaAngle,
   }) async {
@@ -205,6 +219,7 @@ class PrayerCalendarService {
       longitude: longitude,
       method: method,
       madhab: madhab,
+      timezone: timezone,
       fajrAngle: fajrAngle,
       ishaAngle: ishaAngle,
     );
@@ -225,6 +240,7 @@ class PrayerCalendarService {
       'longitude': longitude,
       'method': method,
       'madhab': madhab,
+      'timezone': timezone,
       'times': jsonList,
     }));
   }

@@ -17,6 +17,7 @@ class SettingsState {
   final double? latitude;
   final double? longitude;
   final String? locationName;
+  final String? timezone;
   final bool isDarkMode;
 
   SettingsState({
@@ -31,6 +32,7 @@ class SettingsState {
     this.latitude,
     this.longitude,
     this.locationName,
+    this.timezone,
     this.isDarkMode = true,
   });
 
@@ -46,6 +48,7 @@ class SettingsState {
     Object? latitude = _unset,
     Object? longitude = _unset,
     Object? locationName = _unset,
+    Object? timezone = _unset,
     bool? isDarkMode,
   }) {
     return SettingsState(
@@ -69,6 +72,7 @@ class SettingsState {
       locationName: identical(locationName, _unset)
           ? this.locationName
           : locationName as String?,
+      timezone: identical(timezone, _unset) ? this.timezone : timezone as String?,
       isDarkMode: isDarkMode ?? this.isDarkMode,
     );
   }
@@ -95,6 +99,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
           latitude: _prefs.getDouble('latitude'),
           longitude: _prefs.getDouble('longitude'),
           locationName: _prefs.getString('locationName'),
+          timezone: _prefs.getString('timezone'),
           isDarkMode: _prefs.getBool('isDarkMode') ?? true,
         ),
       );
@@ -141,18 +146,39 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
     }
   }
 
-  Future<void> updateLocation(double lat, double lng, String name) async {
+  Future<void> updateLocation(
+    double lat,
+    double lng,
+    String name, {
+    String? timezone,
+  }) async {
     await _prefs.setDouble('latitude', lat);
     await _prefs.setDouble('longitude', lng);
     await _prefs.setString('locationName', name);
-    state = state.copyWith(latitude: lat, longitude: lng, locationName: name);
+    if (timezone == null || timezone.trim().isEmpty) {
+      await _prefs.remove('timezone');
+    } else {
+      await _prefs.setString('timezone', timezone);
+    }
+    state = state.copyWith(
+      latitude: lat,
+      longitude: lng,
+      locationName: name,
+      timezone: timezone,
+    );
   }
 
   Future<void> clearManualLocation() async {
     await _prefs.remove('latitude');
     await _prefs.remove('longitude');
     await _prefs.remove('locationName');
-    state = state.copyWith(latitude: null, longitude: null, locationName: null);
+    await _prefs.remove('timezone');
+    state = state.copyWith(
+      latitude: null,
+      longitude: null,
+      locationName: null,
+      timezone: null,
+    );
   }
 
   Future<void> toggleDarkMode(bool value) async {

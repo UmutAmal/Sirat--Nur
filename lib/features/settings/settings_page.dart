@@ -69,7 +69,11 @@ class SettingsPage extends ConsumerWidget {
                 context,
                 icon: Icons.location_on_rounded,
                 title: l10n.location,
-                value: settings.locationName ?? '-',
+                value: settings.locationName == null
+                    ? '-'
+                    : (settings.timezone == null
+                        ? settings.locationName!
+                        : '${settings.locationName} (${settings.timezone})'),
                 onTap: () => context.push('/settings/location'),
               ),
             ),

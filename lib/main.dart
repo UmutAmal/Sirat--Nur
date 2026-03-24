@@ -9,6 +9,7 @@ import 'package:sirat_i_nur/core/theme/app_theme.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/core/utils/locale_utils.dart';
+import 'package:timezone/data/latest.dart' as tz;
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -96,6 +97,12 @@ void main() async {
         await SupabaseConfig.initialize();
       } catch (e) {
         debugPrint('Supabase init failed (non-blocking): $e');
+      }
+
+      try {
+        tz.initializeTimeZones();
+      } catch (e) {
+        debugPrint('Timezone init failed (non-blocking): $e');
       }
 
       final prefs = await SharedPreferences.getInstance();

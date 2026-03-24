@@ -105,6 +105,17 @@ class AppLocalizationsAk extends AppLocalizations {
   String get currentLocation => 'Mprempren Beae (GPS) .';
 
   @override
+  String get locationServiceDisabled => 'Location service is disabled.';
+
+  @override
+  String get locationPermissionDenied => 'Location permission denied.';
+
+  @override
+  String citiesCount(String count) {
+    return '$count cities';
+  }
+
+  @override
   String get search => 'Hwehwɛ';
 
   @override

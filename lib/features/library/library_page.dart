@@ -3,9 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
-import 'package:sirat_i_nur/core/constants/islamic_education.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
 import 'package:sirat_i_nur/core/constants/asma_ul_husna_data.dart';
+import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 
 class LibraryPage extends ConsumerWidget {
   const LibraryPage({super.key});
@@ -73,38 +73,45 @@ class LibraryPage extends ConsumerWidget {
                 ],
               ),
             ),
-            // Islamic Education
+            
+            // Islamic Education (SUPABASE CLOUD)
             const SizedBox(height: 8),
             Text('Islamic Education', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900)),
             const SizedBox(height: 12),
-            ...IslamicEducation.categories.asMap().entries.map((entry) {
-              final i = entry.key;
-              final cat = entry.value;
-              return AnimatedPremiumCard(
-                animationDelay: 200 + (i * 80),
-                onTap: () => _openEducationCategory(context, cat),
-                child: Row(
-                  children: [
-                    Text(cat.icon, style: const TextStyle(fontSize: 28)),
-                    const SizedBox(width: 16),
-                    Expanded(child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+            ref.watch(educationCategoriesProvider).when(
+              data: (categories) => Column(
+                children: categories.asMap().entries.map((entry) {
+                  final i = entry.key;
+                  final cat = entry.value;
+                  return AnimatedPremiumCard(
+                    animationDelay: 200 + (i * 80),
+                    onTap: () => _openEducationCategory(context, cat['id'], cat['title']),
+                    child: Row(
                       children: [
-                        Text(cat.title, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 15)),
-                        Text(cat.titleEn, style: TextStyle(
-                          fontSize: 12, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+                        Text(cat['icon'] ?? '📚', style: const TextStyle(fontSize: 28)),
+                        const SizedBox(width: 16),
+                        Expanded(child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(cat['title'] ?? '', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 15)),
+                            Text(cat['title_en'] ?? '', style: TextStyle(
+                              fontSize: 12, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+                          ],
+                        )),
+                        const Icon(Icons.cloud_rounded, size: 16, color: AppColors.emerald),
+                        const SizedBox(width: 8),
+                        const Icon(Icons.chevron_right_rounded),
                       ],
-                    )),
-                    Text('${cat.topics.length}', style: TextStyle(fontWeight: FontWeight.w900,
-                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3))),
-                    const SizedBox(width: 4),
-                    const Icon(Icons.chevron_right_rounded),
-                  ],
-                ),
-              );
-            }),
+                    ),
+                  );
+                }).toList(),
+              ),
+              loading: () => const Center(child: Padding(padding: EdgeInsets.all(24), child: CircularProgressIndicator(color: AppColors.emerald))),
+              error: (e, s) => const PremiumCard(child: Text('Failed to load cloud categories. Check connection.', style: TextStyle(color: Colors.red))),
+            ),
+
             // Hadith Collections
-            const SizedBox(height: 8),
+            const SizedBox(height: 16),
             Text('Hadith Collections', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900)),
             const SizedBox(height: 12),
             ..._hadithCollections.asMap().entries.map((entry) {
@@ -151,8 +158,8 @@ class LibraryPage extends ConsumerWidget {
     Navigator.push(context, MaterialPageRoute(builder: (_) => const _DuasView()));
   }
 
-  void _openEducationCategory(BuildContext context, EducationCategory cat) {
-    Navigator.push(context, MaterialPageRoute(builder: (_) => _EducationView(category: cat)));
+  void _openEducationCategory(BuildContext context, String categoryId, String title) {
+    Navigator.push(context, MaterialPageRoute(builder: (_) => _EducationView(categoryId: categoryId, title: title)));
   }
 
   static const _hadithCollections = [
@@ -191,7 +198,7 @@ class _AsmaUlHusnaView extends StatelessWidget {
               children: [
                 Container(
                   width: 40, height: 40,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: AppColors.emeraldSurface,
                     shape: BoxShape.circle,
                   ),
@@ -233,7 +240,7 @@ class _DuasView extends StatelessWidget {
           return PremiumCard(
             margin: const EdgeInsets.only(bottom: 16),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
@@ -268,34 +275,53 @@ class _DuasView extends StatelessWidget {
   }
 }
 
-// ─── Education Category Subview ───
-class _EducationView extends StatelessWidget {
-  final EducationCategory category;
-  const _EducationView({required this.category});
+// ─── Education Category Subview (SUPABASE CLOUD) ───
+class _EducationView extends ConsumerWidget {
+  final String categoryId;
+  final String title;
+  const _EducationView({required this.categoryId, required this.title});
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(title: Text(category.title)),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(16),
-        itemCount: category.topics.length,
-        itemBuilder: (context, i) {
-          final topic = category.topics[i];
-          return PremiumCard(
-            margin: const EdgeInsets.only(bottom: 16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(topic.title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900)),
-                Text(topic.titleEn, style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700,
-                  color: AppColors.emerald)),
-                const SizedBox(height: 12),
-                Text(topic.content, style: TextStyle(fontSize: 14, height: 1.7,
-                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7))),
-              ],
-            ),
+      appBar: AppBar(
+        title: Text(title),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 16.0),
+            child: Icon(Icons.cloud_sync_rounded, color: AppColors.emerald, size: 20),
+          )
+        ],
+      ),
+      body: ref.watch(educationTopicsProvider(categoryId)).when(
+        data: (topics) {
+          if (topics.isEmpty) {
+            return const Center(child: Text('No content available yet.'));
+          }
+          return ListView.builder(
+            padding: const EdgeInsets.all(16),
+            itemCount: topics.length,
+            itemBuilder: (context, i) {
+              final topic = topics[i];
+              return PremiumCard(
+                margin: const EdgeInsets.only(bottom: 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(topic['title'] ?? '', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900)),
+                    Text(topic['title_en'] ?? '', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700,
+                      color: AppColors.emerald)),
+                    const SizedBox(height: 12),
+                    Text(topic['content'] ?? '', style: TextStyle(fontSize: 14, height: 1.7,
+                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7))),
+                  ],
+                ),
+              );
+            },
           );
         },
+        loading: () => const Center(child: CircularProgressIndicator(color: AppColors.emerald)),
+        error: (e, s) => Center(child: Text('Failed to load from cloud: $e')),
       ),
     );
   }

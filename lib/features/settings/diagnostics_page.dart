@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:sirat_i_nur/core/constants/live_streams.dart';
+// Removed legacy static stream import
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
@@ -45,8 +45,8 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
     rows.add(
       _DiagnosticRow(
         'Live TV Streams',
-        '${liveStreams.length} configured',
-        liveStreams.isNotEmpty,
+        'Cloud Driven',
+        true,
       ),
     );
 

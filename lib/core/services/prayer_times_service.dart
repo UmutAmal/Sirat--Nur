@@ -1,6 +1,7 @@
 import 'package:adhan/adhan.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
 
 class PrayerTimesData {
   final String fajr, sunrise, dhuhr, asr, maghrib, isha;
@@ -63,52 +64,60 @@ final prayerTimesProvider = Provider<PrayerTimesData?>((ref) {
   if (settings.fajrAngle != 18.0) params.fajrAngle = settings.fajrAngle;
   if (settings.ishaAngle != 17.0) params.ishaAngle = settings.ishaAngle;
 
-  final now = DateTime.now();
+  final now = TimezoneUtils.nowForTimezone(settings.timezone);
   final date = DateComponents.from(now);
   final prayerTimes = PrayerTimes(coordinates, date, params);
+  final timeDelta = TimezoneUtils.timezoneDeltaForDate(now, settings.timezone);
+
+  DateTime adjust(DateTime dt) => dt.add(timeDelta);
+  final fajr = adjust(prayerTimes.fajr);
+  final sunrise = adjust(prayerTimes.sunrise);
+  final dhuhr = adjust(prayerTimes.dhuhr);
+  final asr = adjust(prayerTimes.asr);
+  final maghrib = adjust(prayerTimes.maghrib);
+  final isha = adjust(prayerTimes.isha);
 
   // Determine next prayer
   String nextPrayer;
   DateTime nextTime;
-  if (now.isBefore(prayerTimes.fajr)) {
+  if (now.isBefore(fajr)) {
     nextPrayer = 'Fajr';
-    nextTime = prayerTimes.fajr;
-  } else if (now.isBefore(prayerTimes.sunrise)) {
+    nextTime = fajr;
+  } else if (now.isBefore(sunrise)) {
     nextPrayer = 'Sunrise';
-    nextTime = prayerTimes.sunrise;
-  } else if (now.isBefore(prayerTimes.dhuhr)) {
+    nextTime = sunrise;
+  } else if (now.isBefore(dhuhr)) {
     nextPrayer = 'Dhuhr';
-    nextTime = prayerTimes.dhuhr;
-  } else if (now.isBefore(prayerTimes.asr)) {
+    nextTime = dhuhr;
+  } else if (now.isBefore(asr)) {
     nextPrayer = 'Asr';
-    nextTime = prayerTimes.asr;
-  } else if (now.isBefore(prayerTimes.maghrib)) {
+    nextTime = asr;
+  } else if (now.isBefore(maghrib)) {
     nextPrayer = 'Maghrib';
-    nextTime = prayerTimes.maghrib;
-  } else if (now.isBefore(prayerTimes.isha)) {
+    nextTime = maghrib;
+  } else if (now.isBefore(isha)) {
     nextPrayer = 'Isha';
-    nextTime = prayerTimes.isha;
+    nextTime = isha;
   } else {
     nextPrayer = 'Fajr';
     // Tomorrow's fajr
     final tomorrow = now.add(const Duration(days: 1));
     final tomorrowDate = DateComponents.from(tomorrow);
     final tomorrowPrayers = PrayerTimes(coordinates, tomorrowDate, params);
-    nextTime = tomorrowPrayers.fajr;
+    nextTime = adjust(tomorrowPrayers.fajr);
   }
 
   final remaining = nextTime.difference(now);
 
   return PrayerTimesData(
-    fajr: _formatTime(prayerTimes.fajr),
-    sunrise: _formatTime(prayerTimes.sunrise),
-    dhuhr: _formatTime(prayerTimes.dhuhr),
-    asr: _formatTime(prayerTimes.asr),
-    maghrib: _formatTime(prayerTimes.maghrib),
-    isha: _formatTime(prayerTimes.isha),
+    fajr: _formatTime(fajr),
+    sunrise: _formatTime(sunrise),
+    dhuhr: _formatTime(dhuhr),
+    asr: _formatTime(asr),
+    maghrib: _formatTime(maghrib),
+    isha: _formatTime(isha),
     nextPrayer: nextPrayer,
     nextPrayerTime: _formatTime(nextTime),
     timeRemaining: remaining,
   );
 });
-

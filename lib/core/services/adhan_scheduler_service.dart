@@ -2,7 +2,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:sirat_i_nur/domain/entities/prayer_times_entity.dart';
 import 'package:sirat_i_nur/core/services/prayer_calendar_service.dart';
 import 'package:timezone/data/latest.dart' as tz;
-import 'package:timezone/timezone.dart' as tz;
+import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
 
 class AdhanSchedulerService {
   final FlutterLocalNotificationsPlugin _notifications =
@@ -25,12 +25,13 @@ class AdhanSchedulerService {
     double lat,
     double lon,
     String method,
-    String madhab,
-  ) async {
+    String madhab, {
+    String? timezoneName,
+  }) async {
     // 1. Clear existing schedules to avoid duplicates
     await _notifications.cancelAll();
 
-    final now = DateTime.now();
+    final now = TimezoneUtils.nowForTimezone(timezoneName);
     for (int i = 0; i < 30; i++) {
       final date = now.add(Duration(days: i));
       final times = PrayerCalendarService.calculatePrayerTimes(
@@ -39,16 +40,18 @@ class AdhanSchedulerService {
         date: date,
         method: method,
         madhab: madhab,
+        timezone: timezoneName,
       );
 
-      await _scheduleDailyEvents(times, i);
+      await _scheduleDailyEvents(times, i, timezoneName: timezoneName);
     }
   }
 
   Future<void> _scheduleDailyEvents(
     PrayerTimesEntity times,
-    int dayIndex,
-  ) async {
+    int dayIndex, {
+    String? timezoneName,
+  }) async {
     final dailyPrayers = {
       'Fajr': times.fajr,
       'Dhuhr': times.dhuhr,
@@ -58,15 +61,16 @@ class AdhanSchedulerService {
     };
 
     int baseId = dayIndex * 10;
+    final now = TimezoneUtils.nowForTimezone(timezoneName);
 
     for (var entry in dailyPrayers.entries) {
-      if (entry.value.isBefore(DateTime.now())) continue;
+      if (entry.value.isBefore(now)) continue;
 
       await _notifications.zonedSchedule(
         id: baseId++,
         title: 'Adhan: ${entry.key}',
         body: 'It is time for ${entry.key} prayer.',
-        scheduledDate: tz.TZDateTime.from(entry.value, tz.local),
+        scheduledDate: TimezoneUtils.toTZDateTime(entry.value, timezoneName),
         notificationDetails: const NotificationDetails(
           android: AndroidNotificationDetails(
             'adhan_channel_high_precision',

@@ -105,6 +105,17 @@ class AppLocalizationsEe extends AppLocalizations {
   String get currentLocation => 'Teƒe si Wole Fifia (GPS) .';
 
   @override
+  String get locationServiceDisabled => 'Location service is disabled.';
+
+  @override
+  String get locationPermissionDenied => 'Location permission denied.';
+
+  @override
+  String citiesCount(String count) {
+    return '$count cities';
+  }
+
+  @override
   String get search => 'Di';
 
   @override

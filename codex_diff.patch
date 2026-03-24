@@ -1,0 +1,766 @@
+diff --git a/lib/core/services/adhan_scheduler_service.dart b/lib/core/services/adhan_scheduler_service.dart
+index 4240271..ad60995 100644
+--- a/lib/core/services/adhan_scheduler_service.dart
++++ b/lib/core/services/adhan_scheduler_service.dart
+@@ -25,12 +25,13 @@ class AdhanSchedulerService {
+     double lat,
+     double lon,
+     String method,
+-    String madhab,
++    String madhab, {
++    String? timezoneName,
+   ) async {
+     // 1. Clear existing schedules to avoid duplicates
+     await _notifications.cancelAll();
+ 
+-    final now = DateTime.now();
++    final now = _nowForTimezone(timezoneName);
+     for (int i = 0; i < 30; i++) {
+       final date = now.add(Duration(days: i));
+       final times = PrayerCalendarService.calculatePrayerTimes(
+@@ -39,15 +40,17 @@ class AdhanSchedulerService {
+         date: date,
+         method: method,
+         madhab: madhab,
++        timezone: timezoneName,
+       );
+ 
+-      await _scheduleDailyEvents(times, i);
++      await _scheduleDailyEvents(times, i, timezoneName: timezoneName);
+     }
+   }
+ 
+   Future<void> _scheduleDailyEvents(
+     PrayerTimesEntity times,
+-    int dayIndex,
++    int dayIndex, {
++    String? timezoneName,
+   ) async {
+     final dailyPrayers = {
+       'Fajr': times.fajr,
+@@ -58,15 +61,27 @@ class AdhanSchedulerService {
+     };
+ 
+     int baseId = dayIndex * 10;
++    final location = _resolveLocation(timezoneName);
++    final now = _nowForTimezone(timezoneName);
+ 
+     for (var entry in dailyPrayers.entries) {
+-      if (entry.value.isBefore(DateTime.now())) continue;
++      if (entry.value.isBefore(now)) continue;
+ 
+       await _notifications.zonedSchedule(
+         id: baseId++,
+         title: 'Adhan: ${entry.key}',
+         body: 'It is time for ${entry.key} prayer.',
+-        scheduledDate: tz.TZDateTime.from(entry.value, tz.local),
++        scheduledDate: tz.TZDateTime(
++          location,
++          entry.value.year,
++          entry.value.month,
++          entry.value.day,
++          entry.value.hour,
++          entry.value.minute,
++          entry.value.second,
++          entry.value.millisecond,
++          entry.value.microsecond,
++        ),
+         notificationDetails: const NotificationDetails(
+           android: AndroidNotificationDetails(
+             'adhan_channel_high_precision',
+@@ -87,4 +102,31 @@ class AdhanSchedulerService {
+       );
+     }
+   }
++
++  DateTime _nowForTimezone(String? timezoneName) {
++    final location = _resolveLocation(timezoneName);
++    final nowTz = tz.TZDateTime.now(location);
++    return DateTime(
++      nowTz.year,
++      nowTz.month,
++      nowTz.day,
++      nowTz.hour,
++      nowTz.minute,
++      nowTz.second,
++      nowTz.millisecond,
++      nowTz.microsecond,
++    );
++  }
++
++  tz.Location _resolveLocation(String? timezoneName) {
++    if (timezoneName == null || timezoneName.trim().isEmpty) {
++      return tz.local;
++    }
++
++    try {
++      return tz.getLocation(timezoneName);
++    } catch (_) {
++      return tz.local;
++    }
++  }
+ }
+diff --git a/lib/core/services/notification_service.dart b/lib/core/services/notification_service.dart
+index 0b88f4e..2c155e0 100644
+--- a/lib/core/services/notification_service.dart
++++ b/lib/core/services/notification_service.dart
+@@ -67,6 +67,7 @@ class NotificationService {
+   Future<void> schedulePrayerNotifications(
+     PrayerTimesEntity todayTimes, {
+     Locale? locale,
++    String? timezoneName,
+   }) async {
+     // Cancel previous notifications to avoid duplicates over days
+     await flutterLocalNotificationsPlugin.cancelAll();
+@@ -103,6 +104,7 @@ class NotificationService {
+           title: title,
+           body: body,
+           scheduledTime: entry.value,
++          timezoneName: timezoneName,
+         );
+       }
+     }
+@@ -113,12 +115,26 @@ class NotificationService {
+     required String title,
+     required String body,
+     required DateTime scheduledTime,
++    String? timezoneName,
+   }) async {
++    final location = _resolveLocation(timezoneName);
++    final zonedDate = tz.TZDateTime(
++      location,
++      scheduledTime.year,
++      scheduledTime.month,
++      scheduledTime.day,
++      scheduledTime.hour,
++      scheduledTime.minute,
++      scheduledTime.second,
++      scheduledTime.millisecond,
++      scheduledTime.microsecond,
++    );
++
+     await flutterLocalNotificationsPlugin.zonedSchedule(
+       id: id,
+       title: title,
+       body: body,
+-      scheduledDate: tz.TZDateTime.from(scheduledTime, tz.local),
++      scheduledDate: zonedDate,
+       notificationDetails: NotificationDetails(
+         android: AndroidNotificationDetails(
+           'adhan_channel',
+@@ -145,4 +161,16 @@ class NotificationService {
+       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+     );
+   }
++
++  tz.Location _resolveLocation(String? timezoneName) {
++    if (timezoneName == null || timezoneName.trim().isEmpty) {
++      return tz.local;
++    }
++
++    try {
++      return tz.getLocation(timezoneName);
++    } catch (_) {
++      return tz.local;
++    }
++  }
+ }
+diff --git a/lib/core/services/prayer_calendar_service.dart b/lib/core/services/prayer_calendar_service.dart
+index e415f75..6beabca 100644
+--- a/lib/core/services/prayer_calendar_service.dart
++++ b/lib/core/services/prayer_calendar_service.dart
+@@ -1,6 +1,7 @@
+ import 'package:adhan/adhan.dart';
+ import 'package:sirat_i_nur/domain/entities/prayer_times_entity.dart';
+ import 'package:shared_preferences/shared_preferences.dart';
++import 'package:timezone/timezone.dart' as tz;
+ import 'dart:convert';
+ 
+ /// Offline Prayer Times Service using Adhan package
+@@ -15,6 +16,7 @@ class PrayerCalendarService {
+     required DateTime date,
+     required String method,
+     required String madhab,
++    String? timezone,
+     double? fajrAngle,
+     double? ishaAngle,
+     HighLatitudeRule? highLatitudeRule,
+@@ -40,39 +42,46 @@ class PrayerCalendarService {
+     
+     final dateComponents = DateComponents.from(date);
+     final prayerTimes = PrayerTimes(coordinates, dateComponents, params);
++    final timeDelta = _timezoneDelta(timezone);
++    final fajr = prayerTimes.fajr.add(timeDelta);
++    final sunrise = prayerTimes.sunrise.add(timeDelta);
++    final dhuhr = prayerTimes.dhuhr.add(timeDelta);
++    final asr = prayerTimes.asr.add(timeDelta);
++    final maghrib = prayerTimes.maghrib.add(timeDelta);
++    final isha = prayerTimes.isha.add(timeDelta);
+     
+     // Calculate next prayer
+-    final now = DateTime.now();
+-    DateTime nextTime = prayerTimes.fajr;
++    final now = _nowForTimezone(timezone);
++    DateTime nextTime = fajr;
+     String nextName = 'Fajr';
+     
+-    if (now.isBefore(prayerTimes.fajr)) {
+-      nextTime = prayerTimes.fajr;
++    if (now.isBefore(fajr)) {
++      nextTime = fajr;
+       nextName = 'Fajr';
+-    } else if (now.isBefore(prayerTimes.sunrise)) {
+-      nextTime = prayerTimes.sunrise;
++    } else if (now.isBefore(sunrise)) {
++      nextTime = sunrise;
+       nextName = 'Sunrise';
+-    } else if (now.isBefore(prayerTimes.dhuhr)) {
+-      nextTime = prayerTimes.dhuhr;
++    } else if (now.isBefore(dhuhr)) {
++      nextTime = dhuhr;
+       nextName = 'Dhuhr';
+-    } else if (now.isBefore(prayerTimes.asr)) {
+-      nextTime = prayerTimes.asr;
++    } else if (now.isBefore(asr)) {
++      nextTime = asr;
+       nextName = 'Asr';
+-    } else if (now.isBefore(prayerTimes.maghrib)) {
+-      nextTime = prayerTimes.maghrib;
++    } else if (now.isBefore(maghrib)) {
++      nextTime = maghrib;
+       nextName = 'Maghrib';
+     } else {
+-      nextTime = prayerTimes.isha;
++      nextTime = isha;
+       nextName = 'Isha';
+     }
+     
+     return PrayerTimesEntity(
+-      fajr: prayerTimes.fajr,
+-      sunrise: prayerTimes.sunrise,
+-      dhuhr: prayerTimes.dhuhr,
+-      asr: prayerTimes.asr,
+-      maghrib: prayerTimes.maghrib,
+-      isha: prayerTimes.isha,
++      fajr: fajr,
++      sunrise: sunrise,
++      dhuhr: dhuhr,
++      asr: asr,
++      maghrib: maghrib,
++      isha: isha,
+       nextPrayerName: nextName,
+       nextPrayerTime: nextTime,
+     );
+@@ -86,6 +95,7 @@ class PrayerCalendarService {
+     required int month,
+     required String method,
+     required String madhab,
++    String? timezone,
+     double? fajrAngle,
+     double? ishaAngle,
+   }) {
+@@ -100,6 +110,7 @@ class PrayerCalendarService {
+         date: date,
+         method: method,
+         madhab: madhab,
++        timezone: timezone,
+         fajrAngle: fajrAngle,
+         ishaAngle: ishaAngle,
+       ));
+@@ -115,11 +126,12 @@ class PrayerCalendarService {
+     required double longitude,
+     required String method,
+     required String madhab,
++    String? timezone,
+     double? fajrAngle,
+     double? ishaAngle,
+   }) {
+     final List<PrayerTimesEntity> allTimes = [];
+-    final now = DateTime.now();
++    final now = _nowForTimezone(timezone);
+     
+     for (int year = now.year; year <= now.year + 10; year++) {
+       for (int month = 1; month <= 12; month++) {
+@@ -133,6 +145,7 @@ class PrayerCalendarService {
+           month: month,
+           method: method,
+           madhab: madhab,
++          timezone: timezone,
+           fajrAngle: fajrAngle,
+           ishaAngle: ishaAngle,
+         );
+@@ -196,6 +209,7 @@ class PrayerCalendarService {
+     required double longitude,
+     required String method,
+     required String madhab,
++    String? timezone,
+     double? fajrAngle,
+     double? ishaAngle,
+   }) async {
+@@ -205,6 +219,7 @@ class PrayerCalendarService {
+       longitude: longitude,
+       method: method,
+       madhab: madhab,
++      timezone: timezone,
+       fajrAngle: fajrAngle,
+       ishaAngle: ishaAngle,
+     );
+@@ -225,6 +240,7 @@ class PrayerCalendarService {
+       'longitude': longitude,
+       'method': method,
+       'madhab': madhab,
++      'timezone': timezone,
+       'times': jsonList,
+     }));
+   }
+@@ -283,6 +299,46 @@ class PrayerCalendarService {
+     final prefs = await SharedPreferences.getInstance();
+     await prefs.remove(_cacheKey);
+   }
++
++  static DateTime _nowForTimezone(String? timezone) {
++    if (timezone == null || timezone.trim().isEmpty) {
++      return DateTime.now();
++    }
++
++    try {
++      final location = tz.getLocation(timezone);
++      final nowTz = tz.TZDateTime.now(location);
++      return DateTime(
++        nowTz.year,
++        nowTz.month,
++        nowTz.day,
++        nowTz.hour,
++        nowTz.minute,
++        nowTz.second,
++        nowTz.millisecond,
++        nowTz.microsecond,
++      );
++    } catch (_) {
++      return DateTime.now();
++    }
++  }
++
++  static Duration _timezoneDelta(String? timezone) {
++    if (timezone == null || timezone.trim().isEmpty) {
++      return Duration.zero;
++    }
++
++    try {
++      final location = tz.getLocation(timezone);
++      final targetNow = tz.TZDateTime.now(location);
++      final localNow = DateTime.now();
++      final deltaMinutes =
++          targetNow.timeZoneOffset.inMinutes - localNow.timeZoneOffset.inMinutes;
++      return Duration(minutes: deltaMinutes);
++    } catch (_) {
++      return Duration.zero;
++    }
++  }
+ }
+ 
+ /// Extension to convert PrayerTimesEntity to more useful formats
+diff --git a/lib/core/services/prayer_times_service.dart b/lib/core/services/prayer_times_service.dart
+index ce34d59..2a080ff 100644
+--- a/lib/core/services/prayer_times_service.dart
++++ b/lib/core/services/prayer_times_service.dart
+@@ -1,6 +1,7 @@
+ import 'package:adhan/adhan.dart';
+ import 'package:flutter_riverpod/flutter_riverpod.dart';
+ import 'package:sirat_i_nur/features/settings/settings_provider.dart';
++import 'package:timezone/timezone.dart' as tz;
+ 
+ class PrayerTimesData {
+   final String fajr, sunrise, dhuhr, asr, maghrib, isha;
+@@ -49,6 +50,46 @@ String _formatTime(DateTime dt) {
+   return '$h:$m';
+ }
+ 
++DateTime _nowForTimezone(String? timezoneName) {
++  if (timezoneName == null || timezoneName.trim().isEmpty) {
++    return DateTime.now();
++  }
++
++  try {
++    final location = tz.getLocation(timezoneName);
++    final nowTz = tz.TZDateTime.now(location);
++    return DateTime(
++      nowTz.year,
++      nowTz.month,
++      nowTz.day,
++      nowTz.hour,
++      nowTz.minute,
++      nowTz.second,
++      nowTz.millisecond,
++      nowTz.microsecond,
++    );
++  } catch (_) {
++    return DateTime.now();
++  }
++}
++
++Duration _timezoneDelta(String? timezoneName) {
++  if (timezoneName == null || timezoneName.trim().isEmpty) {
++    return Duration.zero;
++  }
++
++  try {
++    final location = tz.getLocation(timezoneName);
++    final targetNow = tz.TZDateTime.now(location);
++    final localNow = DateTime.now();
++    final deltaMinutes =
++        targetNow.timeZoneOffset.inMinutes - localNow.timeZoneOffset.inMinutes;
++    return Duration(minutes: deltaMinutes);
++  } catch (_) {
++    return Duration.zero;
++  }
++}
++
+ final prayerTimesProvider = Provider<PrayerTimesData?>((ref) {
+   final settings = ref.watch(settingsProvider);
+   final lat = settings.latitude;
+@@ -63,52 +104,60 @@ final prayerTimesProvider = Provider<PrayerTimesData?>((ref) {
+   if (settings.fajrAngle != 18.0) params.fajrAngle = settings.fajrAngle;
+   if (settings.ishaAngle != 17.0) params.ishaAngle = settings.ishaAngle;
+ 
+-  final now = DateTime.now();
++  final now = _nowForTimezone(settings.timezone);
+   final date = DateComponents.from(now);
+   final prayerTimes = PrayerTimes(coordinates, date, params);
++  final timeDelta = _timezoneDelta(settings.timezone);
++
++  DateTime adjust(DateTime dt) => dt.add(timeDelta);
++  final fajr = adjust(prayerTimes.fajr);
++  final sunrise = adjust(prayerTimes.sunrise);
++  final dhuhr = adjust(prayerTimes.dhuhr);
++  final asr = adjust(prayerTimes.asr);
++  final maghrib = adjust(prayerTimes.maghrib);
++  final isha = adjust(prayerTimes.isha);
+ 
+   // Determine next prayer
+   String nextPrayer;
+   DateTime nextTime;
+-  if (now.isBefore(prayerTimes.fajr)) {
++  if (now.isBefore(fajr)) {
+     nextPrayer = 'Fajr';
+-    nextTime = prayerTimes.fajr;
+-  } else if (now.isBefore(prayerTimes.sunrise)) {
++    nextTime = fajr;
++  } else if (now.isBefore(sunrise)) {
+     nextPrayer = 'Sunrise';
+-    nextTime = prayerTimes.sunrise;
+-  } else if (now.isBefore(prayerTimes.dhuhr)) {
++    nextTime = sunrise;
++  } else if (now.isBefore(dhuhr)) {
+     nextPrayer = 'Dhuhr';
+-    nextTime = prayerTimes.dhuhr;
+-  } else if (now.isBefore(prayerTimes.asr)) {
++    nextTime = dhuhr;
++  } else if (now.isBefore(asr)) {
+     nextPrayer = 'Asr';
+-    nextTime = prayerTimes.asr;
+-  } else if (now.isBefore(prayerTimes.maghrib)) {
++    nextTime = asr;
++  } else if (now.isBefore(maghrib)) {
+     nextPrayer = 'Maghrib';
+-    nextTime = prayerTimes.maghrib;
+-  } else if (now.isBefore(prayerTimes.isha)) {
++    nextTime = maghrib;
++  } else if (now.isBefore(isha)) {
+     nextPrayer = 'Isha';
+-    nextTime = prayerTimes.isha;
++    nextTime = isha;
+   } else {
+     nextPrayer = 'Fajr';
+     // Tomorrow's fajr
+     final tomorrow = now.add(const Duration(days: 1));
+     final tomorrowDate = DateComponents.from(tomorrow);
+     final tomorrowPrayers = PrayerTimes(coordinates, tomorrowDate, params);
+-    nextTime = tomorrowPrayers.fajr;
++    nextTime = adjust(tomorrowPrayers.fajr);
+   }
+ 
+   final remaining = nextTime.difference(now);
+ 
+   return PrayerTimesData(
+-    fajr: _formatTime(prayerTimes.fajr),
+-    sunrise: _formatTime(prayerTimes.sunrise),
+-    dhuhr: _formatTime(prayerTimes.dhuhr),
+-    asr: _formatTime(prayerTimes.asr),
+-    maghrib: _formatTime(prayerTimes.maghrib),
+-    isha: _formatTime(prayerTimes.isha),
++    fajr: _formatTime(fajr),
++    sunrise: _formatTime(sunrise),
++    dhuhr: _formatTime(dhuhr),
++    asr: _formatTime(asr),
++    maghrib: _formatTime(maghrib),
++    isha: _formatTime(isha),
+     nextPrayer: nextPrayer,
+     nextPrayerTime: _formatTime(nextTime),
+     timeRemaining: remaining,
+   );
+ });
+-
+diff --git a/lib/features/settings/location_selection_page.dart b/lib/features/settings/location_selection_page.dart
+index c1852d7..73b96d5 100644
+--- a/lib/features/settings/location_selection_page.dart
++++ b/lib/features/settings/location_selection_page.dart
+@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
+ import 'package:geocoding/geocoding.dart';
+ import 'package:geolocator/geolocator.dart';
+ import 'package:go_router/go_router.dart';
++import 'package:latlong2/latlong.dart';
+ import 'package:sirat_i_nur/core/constants/app_constants.dart';
+ import 'package:sirat_i_nur/core/theme/app_colors.dart';
+ import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+@@ -21,6 +22,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
+   final TextEditingController _searchController = TextEditingController();
+   String _selectedCountry = 'All';
+   bool _isDetecting = false;
++  final Distance _distance = const Distance();
+ 
+   @override
+   void dispose() {
+@@ -62,7 +64,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
+     try {
+       final serviceEnabled = await Geolocator.isLocationServiceEnabled();
+       if (!serviceEnabled) {
+-        _showMessage('Location service is disabled.');
++        _showMessage(l10n.locationServiceDisabled);
+         return;
+       }
+ 
+@@ -73,7 +75,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
+ 
+       if (permission == LocationPermission.denied ||
+           permission == LocationPermission.deniedForever) {
+-        _showMessage('Location permission denied.');
++        _showMessage(l10n.locationPermissionDenied);
+         return;
+       }
+ 
+@@ -83,6 +85,10 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
+         ),
+       );
+       var locationName = l10n.currentLocation;
++      var timezone = _inferTimezoneFromCoordinates(
++        position.latitude,
++        position.longitude,
++      );
+ 
+       try {
+         final placemarks = await placemarkFromCoordinates(
+@@ -108,7 +114,12 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
+ 
+       await ref
+           .read(settingsProvider.notifier)
+-          .updateLocation(position.latitude, position.longitude, locationName);
++          .updateLocation(
++            position.latitude,
++            position.longitude,
++            locationName,
++            timezone: timezone,
++          );
+ 
+       if (!mounted) return;
+       _showMessage('${l10n.location}: $locationName');
+@@ -127,6 +138,28 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
+     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(text)));
+   }
+ 
++  String? _inferTimezoneFromCoordinates(double lat, double lng) {
++    if (globalCities.isEmpty) return null;
++
++    final user = LatLng(lat, lng);
++    CityData? bestCity;
++    var bestDistance = double.infinity;
++
++    for (final city in globalCities) {
++      final distanceKm = _distance.as(
++        LengthUnit.Kilometer,
++        user,
++        LatLng(city.lat, city.lng),
++      );
++      if (distanceKm < bestDistance) {
++        bestDistance = distanceKm;
++        bestCity = city;
++      }
++    }
++
++    return bestCity?.timezone;
++  }
++
+   @override
+   Widget build(BuildContext context) {
+     final l10n = AppLocalizations.of(context)!;
+@@ -235,7 +268,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
+             child: Row(
+               children: [
+                 Text(
+-                  '${cities.length} cities',
++                  l10n.citiesCount(cities.length.toString()),
+                   style: TextStyle(
+                     fontSize: 12,
+                     fontWeight: FontWeight.w700,
+@@ -311,9 +344,10 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
+                             city.lat,
+                             city.lng,
+                             '${city.name}, ${city.country}',
++                            timezone: city.timezone,
+                           );
+                       _showMessage(
+-                        '${l10n.location}: ${city.name}, ${city.country}',
++                        '${l10n.location}: ${city.name}, ${city.country} (${city.timezone})',
+                       );
+                       context.pop();
+                     },
+diff --git a/lib/features/settings/settings_page.dart b/lib/features/settings/settings_page.dart
+index a02a228..fd6b474 100644
+--- a/lib/features/settings/settings_page.dart
++++ b/lib/features/settings/settings_page.dart
+@@ -69,7 +69,11 @@ class SettingsPage extends ConsumerWidget {
+                 context,
+                 icon: Icons.location_on_rounded,
+                 title: l10n.location,
+-                value: settings.locationName ?? '-',
++                value: settings.locationName == null
++                    ? '-'
++                    : (settings.timezone == null
++                        ? settings.locationName!
++                        : '${settings.locationName} (${settings.timezone})'),
+                 onTap: () => context.push('/settings/location'),
+               ),
+             ),
+diff --git a/lib/features/settings/settings_provider.dart b/lib/features/settings/settings_provider.dart
+index 6d31d7b..bc1dbb3 100644
+--- a/lib/features/settings/settings_provider.dart
++++ b/lib/features/settings/settings_provider.dart
+@@ -17,6 +17,7 @@ class SettingsState {
+   final double? latitude;
+   final double? longitude;
+   final String? locationName;
++  final String? timezone;
+   final bool isDarkMode;
+ 
+   SettingsState({
+@@ -31,6 +32,7 @@ class SettingsState {
+     this.latitude,
+     this.longitude,
+     this.locationName,
++    this.timezone,
+     this.isDarkMode = true,
+   });
+ 
+@@ -46,6 +48,7 @@ class SettingsState {
+     Object? latitude = _unset,
+     Object? longitude = _unset,
+     Object? locationName = _unset,
++    Object? timezone = _unset,
+     bool? isDarkMode,
+   }) {
+     return SettingsState(
+@@ -69,6 +72,7 @@ class SettingsState {
+       locationName: identical(locationName, _unset)
+           ? this.locationName
+           : locationName as String?,
++      timezone: identical(timezone, _unset) ? this.timezone : timezone as String?,
+       isDarkMode: isDarkMode ?? this.isDarkMode,
+     );
+   }
+@@ -95,6 +99,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
+           latitude: _prefs.getDouble('latitude'),
+           longitude: _prefs.getDouble('longitude'),
+           locationName: _prefs.getString('locationName'),
++          timezone: _prefs.getString('timezone'),
+           isDarkMode: _prefs.getBool('isDarkMode') ?? true,
+         ),
+       );
+@@ -141,18 +146,39 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
+     }
+   }
+ 
+-  Future<void> updateLocation(double lat, double lng, String name) async {
++  Future<void> updateLocation(
++    double lat,
++    double lng,
++    String name, {
++    String? timezone,
++  }) async {
+     await _prefs.setDouble('latitude', lat);
+     await _prefs.setDouble('longitude', lng);
+     await _prefs.setString('locationName', name);
+-    state = state.copyWith(latitude: lat, longitude: lng, locationName: name);
++    if (timezone == null || timezone.trim().isEmpty) {
++      await _prefs.remove('timezone');
++    } else {
++      await _prefs.setString('timezone', timezone);
++    }
++    state = state.copyWith(
++      latitude: lat,
++      longitude: lng,
++      locationName: name,
++      timezone: timezone,
++    );
+   }
+ 
+   Future<void> clearManualLocation() async {
+     await _prefs.remove('latitude');
+     await _prefs.remove('longitude');
+     await _prefs.remove('locationName');
+-    state = state.copyWith(latitude: null, longitude: null, locationName: null);
++    await _prefs.remove('timezone');
++    state = state.copyWith(
++      latitude: null,
++      longitude: null,
++      locationName: null,
++      timezone: null,
++    );
+   }
+ 
+   Future<void> toggleDarkMode(bool value) async {
+diff --git a/lib/l10n/app_en.arb b/lib/l10n/app_en.arb
+index 2894c8e..bef5b19 100644
+--- a/lib/l10n/app_en.arb
++++ b/lib/l10n/app_en.arb
+@@ -32,6 +32,16 @@
+   "searchLanguage": "Search 180+ languages...",
+   "systemDefault": "System Default",
+   "currentLocation": "Current Location (GPS)",
++  "locationServiceDisabled": "Location service is disabled.",
++  "locationPermissionDenied": "Location permission denied.",
++  "citiesCount": "{count} cities",
++  "@citiesCount": {
++    "placeholders": {
++      "count": {
++        "type": "String"
++      }
++    }
++  },
+   "search": "Search",
+   "searchHint": "Search...",
+   "noResults": "No results found",
+diff --git a/lib/main.dart b/lib/main.dart
+index c6051c6..49db97c 100644
+--- a/lib/main.dart
++++ b/lib/main.dart
+@@ -9,6 +9,7 @@ import 'package:sirat_i_nur/core/theme/app_theme.dart';
+ import 'package:sirat_i_nur/core/theme/app_colors.dart';
+ import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+ import 'package:sirat_i_nur/core/utils/locale_utils.dart';
++import 'package:timezone/data/latest.dart' as tz;
+ 
+ class SplashScreen extends StatelessWidget {
+   const SplashScreen({super.key});
+@@ -98,6 +99,12 @@ void main() async {
+         debugPrint('Supabase init failed (non-blocking): $e');
+       }
+ 
++      try {
++        tz.initializeTimeZones();
++      } catch (e) {
++        debugPrint('Timezone init failed (non-blocking): $e');
++      }
++
+       final prefs = await SharedPreferences.getInstance();
+ 
+       runApp(
