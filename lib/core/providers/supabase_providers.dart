@@ -22,7 +22,7 @@ final dailyAyatProvider = FutureProvider<Map<String, dynamic>>((ref) async {
         .maybeSingle();
         
     if (res != null) {
-      return res as Map<String, dynamic>;
+      return res;
     }
   } catch (_) {}
 
@@ -36,7 +36,7 @@ final dailyAyatProvider = FutureProvider<Map<String, dynamic>>((ref) async {
         .maybeSingle();
         
     if (fallbackRes != null) {
-      return fallbackRes as Map<String, dynamic>;
+      return fallbackRes;
     }
   } catch (_) {}
 

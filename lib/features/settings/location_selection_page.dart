@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:go_router/go_router.dart';
-import 'package:latlong2/latlong.dart';
+
 import 'package:lat_lng_to_timezone/lat_lng_to_timezone.dart' as tzmap;
 import 'package:sirat_i_nur/core/constants/app_constants.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
@@ -23,7 +23,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
   final TextEditingController _searchController = TextEditingController();
   String _selectedCountry = 'All';
   bool _isDetecting = false;
-  final Distance _distance = const Distance();
+
 
   @override
   void dispose() {
@@ -113,10 +113,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
         // Keep generic label when reverse geocoding fails.
       }
 
-      final inferredTimezone = _inferTimezoneFromCoordinates(
-        position.latitude,
-        position.longitude,
-      );
+
 
       await ref
           .read(settingsProvider.notifier)

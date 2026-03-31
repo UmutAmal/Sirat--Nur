@@ -62,33 +62,6 @@ String _formatTime(DateTime dt) {
   return '$h:$m';
 }
 
-DateTime _nowForTimezone(String? timezoneName) {
-  if (timezoneName == null || timezoneName.trim().isEmpty) {
-    return DateTime.now();
-  }
-
-  try {
-    final location = tz.getLocation(timezoneName);
-    return tz.TZDateTime.now(location);
-  } catch (_) {
-    return DateTime.now();
-  }
-}
-
-Duration _timezoneDelta(String? timezoneName) {
-  if (timezoneName == null || timezoneName.trim().isEmpty) {
-    return Duration.zero;
-  }
-
-  try {
-    final location = tz.getLocation(timezoneName);
-    final localNow = DateTime.now();
-    final timezoneNow = tz.TZDateTime.now(location);
-    return timezoneNow.timeZoneOffset - localNow.timeZoneOffset;
-  } catch (_) {
-    return Duration.zero;
-  }
-}
 
 final prayerTimesProvider = Provider<PrayerTimesData?>((ref) {
   final settings = ref.watch(settingsProvider);

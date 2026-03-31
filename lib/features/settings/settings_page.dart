@@ -552,13 +552,5 @@ class SettingsPage extends ConsumerWidget {
     return code.toUpperCase();
   }
 
-  String _locationLabel(SettingsState settings) {
-    final locationName = settings.locationName;
-    if (locationName == null || locationName.isEmpty) return '-';
 
-    final timezone = settings.timezone;
-    if (timezone == null || timezone.isEmpty) return locationName;
-
-    return '$locationName ($timezone)';
-  }
 }

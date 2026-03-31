@@ -3,7 +3,7 @@ import 'package:sirat_i_nur/domain/entities/prayer_times_entity.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
 import 'dart:convert';
-import 'package:timezone/timezone.dart' as tz;
+
 
 /// Offline Prayer Times Service using Adhan package
 /// Calculates prayer times for any date without internet
@@ -158,33 +158,7 @@ class PrayerCalendarService {
     return allTimes;
   }
 
-  static DateTime _nowForTimezone(String? timezoneName) {
-    if (timezoneName == null || timezoneName.trim().isEmpty) {
-      return DateTime.now();
-    }
 
-    try {
-      final location = tz.getLocation(timezoneName);
-      return tz.TZDateTime.now(location);
-    } catch (_) {
-      return DateTime.now();
-    }
-  }
-
-  static Duration _timezoneDelta(String? timezoneName) {
-    if (timezoneName == null || timezoneName.trim().isEmpty) {
-      return Duration.zero;
-    }
-
-    try {
-      final location = tz.getLocation(timezoneName);
-      final localNow = DateTime.now();
-      final timezoneNow = tz.TZDateTime.now(location);
-      return timezoneNow.timeZoneOffset - localNow.timeZoneOffset;
-    } catch (_) {
-      return Duration.zero;
-    }
-  }
 
   /// Get calculation parameters based on method
   static CalculationParameters _getCalculationParameters(
