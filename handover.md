@@ -120,3 +120,34 @@
 
 ### Sonraki Adım
 - `library_page.dart` ve alt görünümlerdeki hardcoded kullanıcı metinleri localization zincirine taşınacak.
+
+## 2026-04-07 TUR-06 — Library Generic Error Surface Localization
+### Yapılan İşlem
+- `library_page.dart` içinde mevcut `library`, `error` ve `noResults` anahtarları kullanılarak generic hata ve empty-state yüzeyi lokalize edildi.
+- Ana library ekranı app bar başlığı `l10n.library` ile değiştirildi.
+- Eğitim kategori yükleme hatası ve eğitim içerik empty/error yüzeyi top-level yardımcı fonksiyonlarla standartlaştırıldı.
+- `test/library_page_test.dart` ile bu yardımcıların TR ve EN davranışı doğrulandı.
+
+### Neden Yapıldı
+- [library_page.dart] erişilebilir akışta generic İngilizce hata/boş durum metinleri döndürüyordu.
+- Yeni 180+ çeviri anahtarı açmadan, mevcut localization anahtarlarıyla yüksek etkili generic yüzeyi temizlemek mümkün ve daha düşük riskliydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Library ana ekranındaki generic hata ve empty-state metinleri artık lokalize.
+- Ana library app bar başlığı artık localization zincirine bağlı.
+- Domain-spesifik alt içerikler hâlâ hardcoded olsa da generic yüzey kırığı kapatıldı.
+
+### Test Sonucu
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`43/43`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Library generic hardcoded error surface: `7/25 → 3/25`
+
+### Sonraki Adım
+- `library_page.dart` içindeki domain-spesifik başlıklar ve alt görünümler parça parça localization zincirine taşınacak.

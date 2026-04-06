@@ -6,14 +6,25 @@ import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
 import 'package:sirat_i_nur/core/constants/asma_ul_husna_data.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
+
+String buildLibraryErrorText(AppLocalizations l10n, Object error) {
+  return '${l10n.error}: $error';
+}
+
+String buildLibraryEmptyText(AppLocalizations l10n) {
+  return l10n.noResults;
+}
 
 class LibraryPage extends ConsumerWidget {
   const LibraryPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Islamic Library')),
+      appBar: AppBar(title: Text(l10n.library)),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -107,7 +118,12 @@ class LibraryPage extends ConsumerWidget {
                 }).toList(),
               ),
               loading: () => const Center(child: Padding(padding: EdgeInsets.all(24), child: CircularProgressIndicator(color: AppColors.emerald))),
-              error: (e, s) => const PremiumCard(child: Text('Failed to load cloud categories. Check connection.', style: TextStyle(color: Colors.red))),
+              error: (e, s) => PremiumCard(
+                child: Text(
+                  buildLibraryErrorText(l10n, e),
+                  style: const TextStyle(color: Colors.red),
+                ),
+              ),
             ),
 
             // Hadith Collections
@@ -283,6 +299,8 @@ class _EducationView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -296,7 +314,7 @@ class _EducationView extends ConsumerWidget {
       body: ref.watch(educationTopicsProvider(categoryId)).when(
         data: (topics) {
           if (topics.isEmpty) {
-            return const Center(child: Text('No content available yet.'));
+            return Center(child: Text(buildLibraryEmptyText(l10n)));
           }
           return ListView.builder(
             padding: const EdgeInsets.all(16),
@@ -321,7 +339,8 @@ class _EducationView extends ConsumerWidget {
           );
         },
         loading: () => const Center(child: CircularProgressIndicator(color: AppColors.emerald)),
-        error: (e, s) => Center(child: Text('Failed to load from cloud: $e')),
+        error: (e, s) =>
+            Center(child: Text(buildLibraryErrorText(l10n, e))),
       ),
     );
   }
