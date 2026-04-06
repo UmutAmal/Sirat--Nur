@@ -1773,6 +1773,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Analytics'**
   String get analytics;
+
+  /// No description provided for @dailyDuas.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Duas'**
+  String get dailyDuas;
+
+  /// No description provided for @essentialDuas.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} essential duas'**
+  String essentialDuas(String count);
+
+  /// No description provided for @islamicEducation.
+  ///
+  /// In en, this message translates to:
+  /// **'Islamic Education'**
+  String get islamicEducation;
+
+  /// No description provided for @hadithCollections.
+  ///
+  /// In en, this message translates to:
+  /// **'Hadith Collections'**
+  String get hadithCollections;
 }
 
 class _AppLocalizationsDelegate

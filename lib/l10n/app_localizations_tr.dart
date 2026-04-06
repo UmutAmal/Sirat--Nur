@@ -685,4 +685,18 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get analytics => 'Analitik';
+
+  @override
+  String get dailyDuas => 'Günlük Dualar';
+
+  @override
+  String essentialDuas(String count) {
+    return '$count temel dua';
+  }
+
+  @override
+  String get islamicEducation => 'İslami Eğitim';
+
+  @override
+  String get hadithCollections => 'Hadis Koleksiyonları';
 }

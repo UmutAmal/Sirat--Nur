@@ -6,6 +6,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/network/app_router.dart';
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/services/prayer_notification_coordinator.dart';
+import 'package:sirat_i_nur/core/services/widget_service.dart';
+import 'package:sirat_i_nur/core/services/prayer_calendar_service.dart';
+
 import 'package:sirat_i_nur/core/theme/app_theme.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
@@ -148,6 +151,11 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
   Future<void> _initializePrayerNotificationSync() async {
     try {
       await _prayerNotificationCoordinator.init();
+      try {
+        await WidgetService().init();
+      } catch (e) {
+        debugPrint('WidgetService init failed (non-blocking): $e');
+      }
       if (!mounted) return;
 
       _settingsSubscription = ref.listenManual<SettingsState>(
@@ -157,12 +165,31 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
             return;
           }
           unawaited(_prayerNotificationCoordinator.sync(next));
+          unawaited(_updateHomeWidgets(next));
         },
         fireImmediately: true,
       );
     } catch (error, stackTrace) {
       debugPrint('Prayer notification bootstrap failed: $error');
       debugPrintStack(stackTrace: stackTrace);
+    }
+  }
+
+  Future<void> _updateHomeWidgets(SettingsState settings) async {
+    try {
+      if (settings.latitude == null || settings.longitude == null) return;
+      final entity = PrayerCalendarService.calculatePrayerTimes(
+        latitude: settings.latitude!,
+        longitude: settings.longitude!,
+        date: DateTime.now(),
+        method: settings.calculationMethod,
+        madhab: settings.madhab,
+        timezone: settings.timezone,
+      );
+      await WidgetService().updatePrayerWidget(entity);
+      await WidgetService().updateAllPrayersWidget(entity);
+    } catch (e) {
+      debugPrint('Widget update failed (non-blocking): $e');
     }
   }
 

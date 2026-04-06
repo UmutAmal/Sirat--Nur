@@ -688,4 +688,18 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get analytics => 'Analytics';
+
+  @override
+  String get dailyDuas => 'Daily Duas';
+
+  @override
+  String essentialDuas(String count) {
+    return '$count essential duas';
+  }
+
+  @override
+  String get islamicEducation => 'Islamic Education';
+
+  @override
+  String get hadithCollections => 'Hadith Collections';
 }

@@ -134,15 +134,15 @@ class LibraryPage extends ConsumerWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'Daily Duas',
+                        Text(
+                          l10n.dailyDuas,
                           style: TextStyle(
                             fontWeight: FontWeight.w900,
                             fontSize: 16,
                           ),
                         ),
                         Text(
-                          '${dailyDuas.length} essential duas',
+                          l10n.essentialDuas(dailyDuas.length.toString()),
                           style: TextStyle(
                             fontSize: 13,
                             color: Theme.of(
@@ -161,7 +161,7 @@ class LibraryPage extends ConsumerWidget {
             // Islamic Education (SUPABASE CLOUD)
             const SizedBox(height: 8),
             Text(
-              'Islamic Education',
+              l10n.islamicEducation,
               style: Theme.of(
                 context,
               ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900),
@@ -243,7 +243,7 @@ class LibraryPage extends ConsumerWidget {
             // Hadith Collections
             const SizedBox(height: 16),
             Text(
-              'Hadith Collections',
+              l10n.hadithCollections,
               style: Theme.of(
                 context,
               ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900),
@@ -441,9 +441,10 @@ class _DuasView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final locale = Localizations.localeOf(context);
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Daily Duas')),
+      appBar: AppBar(title: Text(l10n.dailyDuas)),
       body: ListView.builder(
         padding: const EdgeInsets.all(16),
         itemCount: dailyDuas.length,

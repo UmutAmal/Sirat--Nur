@@ -221,5 +221,16 @@
   "assistant": "Asistan",
   "places": "Mekanlar",
   "library": "Kütüphane",
-  "analytics": "Analitik"
+  "analytics": "Analitik",
+  "dailyDuas": "Günlük Dualar",
+  "essentialDuas": "{count} temel dua",
+  "@essentialDuas": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "islamicEducation": "İslami Eğitim",
+  "hadithCollections": "Hadis Koleksiyonları"
 }
