@@ -151,3 +151,32 @@
 
 ### Sonraki Adım
 - `library_page.dart` içindeki domain-spesifik başlıklar ve alt görünümler parça parça localization zincirine taşınacak.
+
+## 2026-04-07 TUR-07 — Asma Translation Locale Fallback Fix
+### Yapılan İşlem
+- `library_page.dart` içinde `resolveAsmaTranslation` yardımcı fonksiyonu eklendi ve Asma-ul-Husna detay ekranı artık aktif uygulama diline göre anlam metni seçiyor.
+- Asma-ul-Husna kart başlığı ile detay ekranı app bar başlığı mevcut localization anahtarlarına bağlandı.
+- `test/library_page_test.dart` içine locale önceliği ve İngilizce fallback için regresyon testleri eklendi.
+
+### Neden Yapıldı
+- [library_page.dart] Asma-ul-Husna ekranında `translations['en']` değerini doğrudan kullandığı için uygulama dili Türkçe olsa bile anlamlar hep İngilizce gösteriliyordu.
+- Veri kaynağı [asma_ul_husna_data.dart] zaten `en` ve `tr` çeviri map'lerini taşıyor; sorun veri eksikliği değil, UI katmanındaki yanlış seçimdi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Asma-ul-Husna anlamları artık aktif locale ile eşleşen çeviriyi gösteriyor, yoksa İngilizceye güvenli şekilde dönüyor.
+- Asma yüzeyindeki iki görünür başlık daha localization zincirine taşındı.
+
+### Test Sonucu
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`45/45`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Asma translation locale mismatch: `8/25 → 3/25` hedefleniyor
+
+### Sonraki Adım
+- `library_page.dart` içindeki kalan domain-spesifik hardcoded başlıklar mevcut localization anahtarlarıyla dar parçalara bölünerek temizlenecek.

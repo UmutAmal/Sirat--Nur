@@ -16,6 +16,29 @@ String buildLibraryEmptyText(AppLocalizations l10n) {
   return l10n.noResults;
 }
 
+String resolveAsmaTranslation(
+  Map<String, dynamic> translations,
+  Locale locale,
+) {
+  final localized = translations[locale.languageCode];
+  if (localized is String && localized.isNotEmpty) {
+    return localized;
+  }
+
+  final english = translations['en'];
+  if (english is String && english.isNotEmpty) {
+    return english;
+  }
+
+  for (final value in translations.values) {
+    if (value is String && value.isNotEmpty) {
+      return value;
+    }
+  }
+
+  return '';
+}
+
 class LibraryPage extends ConsumerWidget {
   const LibraryPage({super.key});
 
@@ -42,17 +65,36 @@ class LibraryPage extends ConsumerWidget {
                       color: AppColors.emeraldSurface,
                       borderRadius: BorderRadius.circular(14),
                     ),
-                    child: const Icon(Icons.star_rounded, color: AppColors.emerald, size: 28),
+                    child: const Icon(
+                      Icons.star_rounded,
+                      color: AppColors.emerald,
+                      size: 28,
+                    ),
                   ),
                   const SizedBox(width: 16),
-                  Expanded(child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text('Asma-ul-Husna', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
-                      Text('99 Names of Allah', style: TextStyle(
-                        fontSize: 13, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
-                    ],
-                  )),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          l10n.asmaulHusna,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 16,
+                          ),
+                        ),
+                        Text(
+                          l10n.namesOfAllah,
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: Theme.of(
+                              context,
+                            ).colorScheme.onSurface.withValues(alpha: 0.5),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                   const Icon(Icons.chevron_right_rounded),
                 ],
               ),
@@ -69,92 +111,182 @@ class LibraryPage extends ConsumerWidget {
                       color: AppColors.goldLight,
                       borderRadius: BorderRadius.circular(14),
                     ),
-                    child: const Icon(Icons.menu_book_rounded, color: AppColors.gold, size: 28),
+                    child: const Icon(
+                      Icons.menu_book_rounded,
+                      color: AppColors.gold,
+                      size: 28,
+                    ),
                   ),
                   const SizedBox(width: 16),
-                  Expanded(child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text('Daily Duas', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
-                      Text('${dailyDuas.length} essential duas', style: TextStyle(
-                        fontSize: 13, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
-                    ],
-                  )),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Daily Duas',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 16,
+                          ),
+                        ),
+                        Text(
+                          '${dailyDuas.length} essential duas',
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: Theme.of(
+                              context,
+                            ).colorScheme.onSurface.withValues(alpha: 0.5),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                   const Icon(Icons.chevron_right_rounded),
                 ],
               ),
             ),
-            
+
             // Islamic Education (SUPABASE CLOUD)
             const SizedBox(height: 8),
-            Text('Islamic Education', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900)),
-            const SizedBox(height: 12),
-            ref.watch(educationCategoriesProvider).when(
-              data: (categories) => Column(
-                children: categories.asMap().entries.map((entry) {
-                  final i = entry.key;
-                  final cat = entry.value;
-                  return AnimatedPremiumCard(
-                    animationDelay: 200 + (i * 80),
-                    onTap: () => _openEducationCategory(context, cat['id'], cat['title']),
-                    child: Row(
-                      children: [
-                        Text(cat['icon'] ?? '📚', style: const TextStyle(fontSize: 28)),
-                        const SizedBox(width: 16),
-                        Expanded(child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(cat['title'] ?? '', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 15)),
-                            Text(cat['title_en'] ?? '', style: TextStyle(
-                              fontSize: 12, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
-                          ],
-                        )),
-                        const Icon(Icons.cloud_rounded, size: 16, color: AppColors.emerald),
-                        const SizedBox(width: 8),
-                        const Icon(Icons.chevron_right_rounded),
-                      ],
-                    ),
-                  );
-                }).toList(),
-              ),
-              loading: () => const Center(child: Padding(padding: EdgeInsets.all(24), child: CircularProgressIndicator(color: AppColors.emerald))),
-              error: (e, s) => PremiumCard(
-                child: Text(
-                  buildLibraryErrorText(l10n, e),
-                  style: const TextStyle(color: Colors.red),
-                ),
-              ),
+            Text(
+              'Islamic Education',
+              style: Theme.of(
+                context,
+              ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900),
             ),
+            const SizedBox(height: 12),
+            ref
+                .watch(educationCategoriesProvider)
+                .when(
+                  data: (categories) => Column(
+                    children: categories.asMap().entries.map((entry) {
+                      final i = entry.key;
+                      final cat = entry.value;
+                      return AnimatedPremiumCard(
+                        animationDelay: 200 + (i * 80),
+                        onTap: () => _openEducationCategory(
+                          context,
+                          cat['id'],
+                          cat['title'],
+                        ),
+                        child: Row(
+                          children: [
+                            Text(
+                              cat['icon'] ?? '📚',
+                              style: const TextStyle(fontSize: 28),
+                            ),
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    cat['title'] ?? '',
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                  Text(
+                                    cat['title_en'] ?? '',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onSurface
+                                          .withValues(alpha: 0.5),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const Icon(
+                              Icons.cloud_rounded,
+                              size: 16,
+                              color: AppColors.emerald,
+                            ),
+                            const SizedBox(width: 8),
+                            const Icon(Icons.chevron_right_rounded),
+                          ],
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                  loading: () => const Center(
+                    child: Padding(
+                      padding: EdgeInsets.all(24),
+                      child: CircularProgressIndicator(
+                        color: AppColors.emerald,
+                      ),
+                    ),
+                  ),
+                  error: (e, s) => PremiumCard(
+                    child: Text(
+                      buildLibraryErrorText(l10n, e),
+                      style: const TextStyle(color: Colors.red),
+                    ),
+                  ),
+                ),
 
             // Hadith Collections
             const SizedBox(height: 16),
-            Text('Hadith Collections', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900)),
+            Text(
+              'Hadith Collections',
+              style: Theme.of(
+                context,
+              ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900),
+            ),
             const SizedBox(height: 12),
             ..._hadithCollections.asMap().entries.map((entry) {
               final i = entry.key;
               final h = entry.value;
               return AnimatedPremiumCard(
                 animationDelay: 600 + (i * 80),
-                onTap: () => context.push('/library/hadith/${h.id}', extra: h.name),
+                onTap: () =>
+                    context.push('/library/hadith/${h.id}', extra: h.name),
                 child: Row(
                   children: [
                     Container(
-                      width: 40, height: 40,
+                      width: 40,
+                      height: 40,
                       decoration: BoxDecoration(
                         color: AppColors.emeraldSurface,
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      child: Center(child: Text('${i + 1}', style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald))),
+                      child: Center(
+                        child: Text(
+                          '${i + 1}',
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w900,
+                            color: AppColors.emerald,
+                          ),
+                        ),
+                      ),
                     ),
                     const SizedBox(width: 16),
-                    Expanded(child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(h.name, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 15)),
-                        Text(h.desc, style: TextStyle(
-                          fontSize: 12, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
-                      ],
-                    )),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            h.name,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w900,
+                              fontSize: 15,
+                            ),
+                          ),
+                          Text(
+                            h.desc,
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Theme.of(
+                                context,
+                              ).colorScheme.onSurface.withValues(alpha: 0.5),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                     const Icon(Icons.chevron_right_rounded),
                   ],
                 ),
@@ -167,15 +299,30 @@ class LibraryPage extends ConsumerWidget {
   }
 
   void _openAsmaUlHusna(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (_) => const _AsmaUlHusnaView()));
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => const _AsmaUlHusnaView()),
+    );
   }
 
   void _openDuas(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (_) => const _DuasView()));
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => const _DuasView()),
+    );
   }
 
-  void _openEducationCategory(BuildContext context, String categoryId, String title) {
-    Navigator.push(context, MaterialPageRoute(builder: (_) => _EducationView(categoryId: categoryId, title: title)));
+  void _openEducationCategory(
+    BuildContext context,
+    String categoryId,
+    String title,
+  ) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => _EducationView(categoryId: categoryId, title: title),
+      ),
+    );
   }
 
   static const _hadithCollections = [
@@ -198,9 +345,11 @@ class _AsmaUlHusnaView extends StatelessWidget {
   const _AsmaUlHusnaView();
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final locale = Localizations.localeOf(context);
     final names = AsmaUlHusnaData.names;
     return Scaffold(
-      appBar: AppBar(title: const Text('99 Names of Allah')),
+      appBar: AppBar(title: Text(l10n.namesOfAllah)),
       body: ListView.builder(
         padding: const EdgeInsets.all(16),
         itemCount: names.length,
@@ -213,25 +362,58 @@ class _AsmaUlHusnaView extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  width: 40, height: 40,
+                  width: 40,
+                  height: 40,
                   decoration: const BoxDecoration(
                     color: AppColors.emeraldSurface,
                     shape: BoxShape.circle,
                   ),
-                  child: Center(child: Text('${name['id']}', style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald, fontSize: 12))),
+                  child: Center(
+                    child: Text(
+                      '${name['id']}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w900,
+                        color: AppColors.emerald,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ),
                 ),
                 const SizedBox(width: 12),
-                Expanded(child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(name['arabic'] as String, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
-                    Text(name['transliteration'] as String, style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700,
-                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6))),
-                    const SizedBox(height: 4),
-                    Text(translations['en'] as String, style: TextStyle(fontSize: 12,
-                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4))),
-                  ],
-                )),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        name['arabic'] as String,
+                        style: const TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                      Text(
+                        name['transliteration'] as String,
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w700,
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.onSurface.withValues(alpha: 0.6),
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        resolveAsmaTranslation(translations, locale),
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.onSurface.withValues(alpha: 0.4),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           );
@@ -256,32 +438,72 @@ class _DuasView extends StatelessWidget {
           return PremiumCard(
             margin: const EdgeInsets.only(bottom: 16),
             child: Column(
-               crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 4,
+                      ),
                       decoration: BoxDecoration(
                         color: AppColors.emeraldSurface,
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: Text(dua.category, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800, color: AppColors.emerald)),
+                      child: Text(
+                        dua.category,
+                        style: const TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w800,
+                          color: AppColors.emerald,
+                        ),
+                      ),
                     ),
                     const Spacer(),
-                    Text(dua.source, style: TextStyle(fontSize: 11,
-                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4))),
+                    Text(
+                      dua.source,
+                      style: TextStyle(
+                        fontSize: 11,
+                        color: Theme.of(
+                          context,
+                        ).colorScheme.onSurface.withValues(alpha: 0.4),
+                      ),
+                    ),
                   ],
                 ),
                 const SizedBox(height: 16),
-                Text(dua.arabic, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, height: 2.0),
-                  textAlign: TextAlign.right, textDirection: TextDirection.rtl),
+                Text(
+                  dua.arabic,
+                  style: const TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w900,
+                    height: 2.0,
+                  ),
+                  textAlign: TextAlign.right,
+                  textDirection: TextDirection.rtl,
+                ),
                 const SizedBox(height: 12),
-                Text(dua.transliteration, style: TextStyle(fontSize: 13, fontStyle: FontStyle.italic,
-                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6))),
+                Text(
+                  dua.transliteration,
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontStyle: FontStyle.italic,
+                    color: Theme.of(
+                      context,
+                    ).colorScheme.onSurface.withValues(alpha: 0.6),
+                  ),
+                ),
                 const SizedBox(height: 8),
-                Text(dua.english, style: TextStyle(fontSize: 13,
-                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+                Text(
+                  dua.english,
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: Theme.of(
+                      context,
+                    ).colorScheme.onSurface.withValues(alpha: 0.5),
+                  ),
+                ),
               ],
             ),
           );
@@ -307,41 +529,69 @@ class _EducationView extends ConsumerWidget {
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 16.0),
-            child: Icon(Icons.cloud_sync_rounded, color: AppColors.emerald, size: 20),
-          )
+            child: Icon(
+              Icons.cloud_sync_rounded,
+              color: AppColors.emerald,
+              size: 20,
+            ),
+          ),
         ],
       ),
-      body: ref.watch(educationTopicsProvider(categoryId)).when(
-        data: (topics) {
-          if (topics.isEmpty) {
-            return Center(child: Text(buildLibraryEmptyText(l10n)));
-          }
-          return ListView.builder(
-            padding: const EdgeInsets.all(16),
-            itemCount: topics.length,
-            itemBuilder: (context, i) {
-              final topic = topics[i];
-              return PremiumCard(
-                margin: const EdgeInsets.only(bottom: 16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(topic['title'] ?? '', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900)),
-                    Text(topic['title_en'] ?? '', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700,
-                      color: AppColors.emerald)),
-                    const SizedBox(height: 12),
-                    Text(topic['content'] ?? '', style: TextStyle(fontSize: 14, height: 1.7,
-                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7))),
-                  ],
-                ),
+      body: ref
+          .watch(educationTopicsProvider(categoryId))
+          .when(
+            data: (topics) {
+              if (topics.isEmpty) {
+                return Center(child: Text(buildLibraryEmptyText(l10n)));
+              }
+              return ListView.builder(
+                padding: const EdgeInsets.all(16),
+                itemCount: topics.length,
+                itemBuilder: (context, i) {
+                  final topic = topics[i];
+                  return PremiumCard(
+                    margin: const EdgeInsets.only(bottom: 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          topic['title'] ?? '',
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
+                        Text(
+                          topic['title_en'] ?? '',
+                          style: const TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                            color: AppColors.emerald,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          topic['content'] ?? '',
+                          style: TextStyle(
+                            fontSize: 14,
+                            height: 1.7,
+                            color: Theme.of(
+                              context,
+                            ).colorScheme.onSurface.withValues(alpha: 0.7),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
               );
             },
-          );
-        },
-        loading: () => const Center(child: CircularProgressIndicator(color: AppColors.emerald)),
-        error: (e, s) =>
-            Center(child: Text(buildLibraryErrorText(l10n, e))),
-      ),
+            loading: () => const Center(
+              child: CircularProgressIndicator(color: AppColors.emerald),
+            ),
+            error: (e, s) =>
+                Center(child: Text(buildLibraryErrorText(l10n, e))),
+          ),
     );
   }
 }
