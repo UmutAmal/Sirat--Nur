@@ -213,3 +213,32 @@
 - Kanıt 2: `library_page.dart` satır `469` ve `479` `dua.category` ile `dua.source` alanlarını doğrudan basıyor.
 - Kanıt 3: `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart` satır `32-140` aralığındaki `category` ve çoğu `source` değeri Türkçe/Türkçe karışık veri olarak geliyor; İngilizce locale'de karışık dil yüzeyi üretiyor.
 - Uygulama önerisi: yeni tur başlamadan önce yine `remote`, `branch`, `status`, `flutter doctor -v`, `flutter analyze`, `flutter test` çalıştırılsın; bu handover yön gösterici olsun ama yeniden tam tarama yapılmadan doğrudan varsayımla patch yazılmasın.
+
+## 2026-04-07 TUR-09 — WidgetService Lifecycle Wiring + Orphan Cleanup + Library L10n
+### Yapılan İşlem
+- **P0: WidgetService orphan bağlantısı çözüldü.** `widget_service.dart` uygulama içinde hiçbir yerden çağrılmıyordu; Android ana ekran widget'ları daima boş veri gösteriyordu. `main.dart` içinde `_SiratINurAppState.initState` → `_initializePrayerNotificationSync` akışına `WidgetService().init()` + settings listener'da `_updateHomeWidgets()` eklendi.
+- **P1: 2 orphan stub dosya silindi:**
+  - `offline_map_service.dart` — `Future.delayed` simülasyonu, `return true` — tamamen sahte, hiçbir yerden çağrılmıyordu.
+  - `spiritual_ai_service.dart` — Hardcoded İngilizce string döndüren placeholder, hiçbir yerden çağrılmıyordu.
+- **P1: `library_page.dart` 5 hardcoded metin l10n'a bağlandı:**
+  - `'Daily Duas'` → `l10n.dailyDuas`
+  - `'${n} essential duas'` → `l10n.essentialDuas(n)`
+  - `'Islamic Education'` → `l10n.islamicEducation`
+  - `'Hadith Collections'` → `l10n.hadithCollections`
+  - `_DuasView` appbar `'Daily Duas'` → `l10n.dailyDuas`
+- EN ve TR ARB dosyalarına 4 yeni anahtar eklendi, `flutter gen-l10n` çalıştırıldı.
+
+### Değiştirilen Dosyalar
+- `lib/main.dart` — WidgetService init + _updateHomeWidgets
+- `lib/features/library/library_page.dart` — 5 hardcoded → l10n
+- `lib/l10n/app_en.arb`, `lib/l10n/app_tr.arb` — 4 yeni anahtar
+- Silinen: `lib/core/services/offline_map_service.dart`, `lib/core/services/spiritual_ai_service.dart`
+
+### Test Sonucu
+- `flutter analyze` → PASS (No issues found)
+- `flutter test` → PASS (47/47)
+
+### Sonraki Adım
+- `library_page.dart` satır 469, 479: `dua.category` ve `dua.source` alanları hâlâ hardcoded basılıyor; locale-aware çözüm gerekli.
+- `hadith_list_page.dart`: Tüm UI metinleri (narrator, collection names) hardcoded İngilizce.
+- `hadith_search_page.dart` L41: `'Enter a keyword to search across all hadith collections.'` hardcoded.

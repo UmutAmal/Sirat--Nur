@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class HadithSearchPage extends StatefulWidget {
   const HadithSearchPage({super.key});
@@ -19,8 +20,9 @@ class _HadithSearchPageState extends State<HadithSearchPage> {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: const Text('Search Hadith')),
+      appBar: AppBar(title: Text(l10n.searchHadith)),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -28,7 +30,7 @@ class _HadithSearchPageState extends State<HadithSearchPage> {
             TextField(
               controller: _controller,
               decoration: InputDecoration(
-                hintText: 'Search by keyword...',
+                hintText: l10n.searchHint,
                 prefixIcon: const Icon(Icons.search_rounded),
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
                 filled: true,
@@ -38,7 +40,7 @@ class _HadithSearchPageState extends State<HadithSearchPage> {
             const SizedBox(height: 24),
             Expanded(
               child: Center(
-                child: Text('Enter a keyword to search across all hadith collections.',
+                child: Text(l10n.searchHint,
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 14,
                     color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4))),
