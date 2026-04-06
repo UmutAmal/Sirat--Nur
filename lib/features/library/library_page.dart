@@ -39,6 +39,18 @@ String resolveAsmaTranslation(
   return '';
 }
 
+String resolveDuaMeaning(DuaData dua, Locale locale) {
+  if (locale.languageCode == 'tr' && dua.turkish.isNotEmpty) {
+    return dua.turkish;
+  }
+
+  if (dua.english.isNotEmpty) {
+    return dua.english;
+  }
+
+  return dua.turkish;
+}
+
 class LibraryPage extends ConsumerWidget {
   const LibraryPage({super.key});
 
@@ -428,6 +440,8 @@ class _DuasView extends StatelessWidget {
   const _DuasView();
   @override
   Widget build(BuildContext context) {
+    final locale = Localizations.localeOf(context);
+
     return Scaffold(
       appBar: AppBar(title: const Text('Daily Duas')),
       body: ListView.builder(
@@ -496,7 +510,7 @@ class _DuasView extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  dua.english,
+                  resolveDuaMeaning(dua, locale),
                   style: TextStyle(
                     fontSize: 13,
                     color: Theme.of(

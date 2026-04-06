@@ -180,3 +180,36 @@
 
 ### Sonraki Adım
 - `library_page.dart` içindeki kalan domain-spesifik hardcoded başlıklar mevcut localization anahtarlarıyla dar parçalara bölünerek temizlenecek.
+
+## 2026-04-07 TUR-08 — Dua Meaning Locale Selection Fix
+### Yapılan İşlem
+- `library_page.dart` içine `resolveDuaMeaning` yardımcı fonksiyonu eklendi.
+- `_DuasView` artık dua anlamını aktif locale'a göre seçiyor; Türkçe locale'de `dua.turkish`, diğer dillerde `dua.english` gösteriliyor.
+- `test/library_page_test.dart` içine Türkçe önceliği ve İngilizce fallback için regresyon testleri eklendi.
+
+### Neden Yapıldı
+- [duas_data.dart] veri modeli aynı dua için hem `turkish` hem `english` açıklama taşıyor.
+- [library_page.dart] Dua detay ekranı yalnızca `dua.english` alanını kullandığı için uygulama dili Türkçe olsa bile anlamlar İngilizce gösteriliyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Dua detay ekranı artık mevcut veri setindeki iki dilli anlam alanını doğru kullanıyor.
+- Türkçe kullanıcılar İngilizceye kilitlenmiş anlam yerine Türkçe açıklamayı görüyor.
+
+### Test Sonucu
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`47/47`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Dua meaning locale mismatch: `8/25 → 3/25` hedefleniyor
+
+### Sonraki Adım
+- Öncelik 1: `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart` içinde kalan sabit İngilizce yüzeyler dar parçalara ayrılacak.
+- Kanıt 1: `library_page.dart` satır `138`, `145`, `164`, `246`, `446` hâlâ sırasıyla `Daily Duas`, `${dailyDuas.length} essential duas`, `Islamic Education`, `Hadith Collections`, `Daily Duas` metinlerini hardcoded taşıyor.
+- Kanıt 2: `library_page.dart` satır `469` ve `479` `dua.category` ile `dua.source` alanlarını doğrudan basıyor.
+- Kanıt 3: `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart` satır `32-140` aralığındaki `category` ve çoğu `source` değeri Türkçe/Türkçe karışık veri olarak geliyor; İngilizce locale'de karışık dil yüzeyi üretiyor.
+- Uygulama önerisi: yeni tur başlamadan önce yine `remote`, `branch`, `status`, `flutter doctor -v`, `flutter analyze`, `flutter test` çalıştırılsın; bu handover yön gösterici olsun ama yeniden tam tarama yapılmadan doğrudan varsayımla patch yazılmasın.

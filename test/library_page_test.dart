@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/constants/duas_data.dart';
 import 'package:sirat_i_nur/features/library/library_page.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
@@ -37,6 +38,34 @@ void main() {
         resolveAsmaTranslation(translations, const Locale('fr')),
         'The Beneficent',
       );
+    });
+
+    test('dua meaning prefers Turkish text for the Turkish locale', () {
+      const dua = DuaData(
+        id: '1',
+        arabic: 'arabic',
+        transliteration: 'transliteration',
+        turkish: 'Turkce anlam',
+        english: 'English meaning',
+        source: 'source',
+        category: 'category',
+      );
+
+      expect(resolveDuaMeaning(dua, const Locale('tr')), 'Turkce anlam');
+    });
+
+    test('dua meaning falls back to English for non-Turkish locales', () {
+      const dua = DuaData(
+        id: '1',
+        arabic: 'arabic',
+        transliteration: 'transliteration',
+        turkish: 'Turkce anlam',
+        english: 'English meaning',
+        source: 'source',
+        category: 'category',
+      );
+
+      expect(resolveDuaMeaning(dua, const Locale('de')), 'English meaning');
     });
   });
 }
