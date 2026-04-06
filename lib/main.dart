@@ -5,6 +5,7 @@ import 'package:sirat_i_nur/l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/network/app_router.dart';
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
+import 'package:sirat_i_nur/core/services/prayer_notification_coordinator.dart';
 import 'package:sirat_i_nur/core/theme/app_theme.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
@@ -131,6 +132,9 @@ class SiratINurApp extends ConsumerStatefulWidget {
 
 class _SiratINurAppState extends ConsumerState<SiratINurApp> {
   bool _showSplash = true;
+  final PrayerNotificationCoordinator _prayerNotificationCoordinator =
+      PrayerNotificationCoordinator();
+  ProviderSubscription<SettingsState>? _settingsSubscription;
 
   @override
   void initState() {
@@ -138,6 +142,34 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
     Future.delayed(const Duration(milliseconds: 2500), () {
       if (mounted) setState(() => _showSplash = false);
     });
+    unawaited(_initializePrayerNotificationSync());
+  }
+
+  Future<void> _initializePrayerNotificationSync() async {
+    try {
+      await _prayerNotificationCoordinator.init();
+      if (!mounted) return;
+
+      _settingsSubscription = ref.listenManual<SettingsState>(
+        settingsProvider,
+        (previous, next) {
+          if (!PrayerNotificationCoordinator.shouldResync(previous, next)) {
+            return;
+          }
+          unawaited(_prayerNotificationCoordinator.sync(next));
+        },
+        fireImmediately: true,
+      );
+    } catch (error, stackTrace) {
+      debugPrint('Prayer notification bootstrap failed: $error');
+      debugPrintStack(stackTrace: stackTrace);
+    }
+  }
+
+  @override
+  void dispose() {
+    _settingsSubscription?.close();
+    super.dispose();
   }
 
   @override

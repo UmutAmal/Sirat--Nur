@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
@@ -15,6 +16,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       backgroundColor: AppColors.darkBg,
       body: SafeArea(
@@ -25,9 +28,24 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 controller: _controller,
                 onPageChanged: (p) => setState(() => _page = p),
                 children: [
-                  _buildPage(Icons.mosque_rounded, 'Sirat-i Nur', 'Your complete Islamic companion for prayer, Quran, and spiritual growth.'),
-                  _buildPage(Icons.explore_rounded, 'Find Your Way', 'Qibla compass, prayer times, and mosque finder for any location worldwide.'),
-                  _buildPage(Icons.auto_stories_rounded, 'Learn & Grow', 'Quran reading, hadith, education, and AI-powered Islamic assistant.'),
+                  _buildPage(
+                    context,
+                    Icons.mosque_rounded,
+                    l10n.onboarding1Title,
+                    l10n.onboarding1Desc,
+                  ),
+                  _buildPage(
+                    context,
+                    Icons.explore_rounded,
+                    l10n.onboarding2Title,
+                    l10n.onboarding2Desc,
+                  ),
+                  _buildPage(
+                    context,
+                    Icons.auto_stories_rounded,
+                    l10n.onboarding3Title,
+                    l10n.onboarding3Desc,
+                  ),
                 ],
               ),
             ),
@@ -36,18 +54,29 @@ class _OnboardingPageState extends State<OnboardingPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(children: List.generate(3, (i) => Container(
-                    width: _page == i ? 24 : 8, height: 8,
-                    margin: const EdgeInsets.only(right: 6),
-                    decoration: BoxDecoration(
-                      color: _page == i ? AppColors.emeraldLight : Colors.white24,
-                      borderRadius: BorderRadius.circular(4),
+                  Row(
+                    children: List.generate(
+                      3,
+                      (i) => Container(
+                        width: _page == i ? 24 : 8,
+                        height: 8,
+                        margin: const EdgeInsets.only(right: 6),
+                        decoration: BoxDecoration(
+                          color: _page == i
+                              ? AppColors.emeraldLight
+                              : Colors.white24,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                      ),
                     ),
-                  ))),
+                  ),
                   ElevatedButton(
                     onPressed: () async {
                       if (_page < 2) {
-                        _controller.nextPage(duration: const Duration(milliseconds: 300), curve: Curves.easeOut);
+                        _controller.nextPage(
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.easeOut,
+                        );
                       } else {
                         final prefs = await SharedPreferences.getInstance();
                         await prefs.setBool('isFirstLaunch', false);
@@ -56,10 +85,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.emeraldLight,
-                      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 14),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 32,
+                        vertical: 14,
+                      ),
                     ),
-                    child: Text(_page < 2 ? 'Next' : 'Get Started',
-                      style: const TextStyle(fontWeight: FontWeight.w900)),
+                    child: Text(
+                      _page < 2 ? l10n.next : l10n.getStarted,
+                      style: const TextStyle(fontWeight: FontWeight.w900),
+                    ),
                   ),
                 ],
               ),
@@ -70,7 +104,12 @@ class _OnboardingPageState extends State<OnboardingPage> {
     );
   }
 
-  Widget _buildPage(IconData icon, String title, String desc) {
+  Widget _buildPage(
+    BuildContext context,
+    IconData icon,
+    String title,
+    String desc,
+  ) {
     return Padding(
       padding: const EdgeInsets.all(48),
       child: Column(
@@ -85,10 +124,24 @@ class _OnboardingPageState extends State<OnboardingPage> {
             child: Icon(icon, size: 80, color: AppColors.emeraldLight),
           ),
           const SizedBox(height: 48),
-          Text(title, style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Colors.white)),
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 28,
+              fontWeight: FontWeight.w900,
+              color: Colors.white,
+            ),
+          ),
           const SizedBox(height: 16),
-          Text(desc, textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 16, color: Colors.white60, height: 1.6)),
+          Text(
+            desc,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 16,
+              color: Colors.white60,
+              height: 1.6,
+            ),
+          ),
         ],
       ),
     );
