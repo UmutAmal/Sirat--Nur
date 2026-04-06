@@ -54,3 +54,34 @@
 ### Sonraki Adım
 - `audio_sovereignty_service.dart` ve `sukun_audio_page.dart` için false-success/stub zinciri ele alınacak.
 - `library_page.dart` ve ilişkili alt görünümlerdeki yoğun hardcoded metinler parça parça localization zincirine taşınacak.
+
+## 2026-04-07 TUR-04 — Location Filter Sentinel Removal
+### Yapılan İşlem
+- `location_selection_page.dart` içindeki ülke filtresi `'All'` string sentinel’inden çıkarıldı.
+- Filtreleme mantığı `filterCities` ve `buildCountryFilters` yardımcılarına ayrıldı.
+- Seçili ülke filtresi artık `null` ile temsil ediliyor; seçili chip’e tekrar basınca filtre temizleniyor.
+- `test/location_selection_page_test.dart` ile sentinel bağımsız filtreleme davranışı doğrulandı.
+
+### Neden Yapıldı
+- Erişilebilir ayar akışında [location_selection_page.dart] içindeki `'All'` sentinel’i hem hardcoded metin bırakıyordu hem de filtre davranışını kullanıcı metnine bağımlı hale getiriyordu.
+- AGENTS.md Section 8, `LOCATION & SETTINGS` odağında bu sentinel örneğini açıkça hedefliyor.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\location_selection_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Ülke filtresi artık veri-temelli çalışıyor; kullanıcı metni mantık anahtarı olmaktan çıktı.
+- Filtreyi sıfırlamak için ek bir sentinel chip göstermeden aynı chip üstünden temizleme yapılabiliyor.
+- Bu akışın test kapsaması oluştu.
+
+### Test Sonucu
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`35/35`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Location sentinel / filtre bağımlılığı: `8/25 → 3/25`
+
+### Sonraki Adım
+- `audio_sovereignty_service.dart` ve `sukun_audio_page.dart` içindeki stub ve false-success zinciri ele alınacak.

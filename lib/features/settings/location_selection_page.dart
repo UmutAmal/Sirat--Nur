@@ -10,6 +10,34 @@ import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
+List<CityData> filterCities(
+  Iterable<CityData> source, {
+  String? selectedCountry,
+  String query = '',
+}) {
+  var cities = source.toList();
+  if (selectedCountry != null) {
+    cities = cities.where((city) => city.country == selectedCountry).toList();
+  }
+  if (query.isNotEmpty) {
+    final lowered = query.toLowerCase();
+    cities = cities
+        .where(
+          (city) =>
+              city.name.toLowerCase().contains(lowered) ||
+              city.country.toLowerCase().contains(lowered) ||
+              city.countryCode.toLowerCase().contains(lowered),
+        )
+        .toList();
+  }
+  return cities;
+}
+
+List<String> buildCountryFilters(Iterable<CityData> source) {
+  final countries = source.map((city) => city.country).toSet().toList()..sort();
+  return countries;
+}
+
 class LocationSelectionPage extends ConsumerStatefulWidget {
   const LocationSelectionPage({super.key});
 
@@ -21,7 +49,7 @@ class LocationSelectionPage extends ConsumerStatefulWidget {
 class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
   String _query = '';
   final TextEditingController _searchController = TextEditingController();
-  String _selectedCountry = 'All';
+  String? _selectedCountry;
   bool _isDetecting = false;
 
 
@@ -32,30 +60,15 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
   }
 
   List<CityData> get _filteredCities {
-    var cities = globalCities.toList();
-    if (_selectedCountry != 'All') {
-      cities = cities
-          .where((city) => city.country == _selectedCountry)
-          .toList();
-    }
-    if (_query.isNotEmpty) {
-      final lowered = _query.toLowerCase();
-      cities = cities
-          .where(
-            (city) =>
-                city.name.toLowerCase().contains(lowered) ||
-                city.country.toLowerCase().contains(lowered) ||
-                city.countryCode.toLowerCase().contains(lowered),
-          )
-          .toList();
-    }
-    return cities;
+    return filterCities(
+      globalCities,
+      selectedCountry: _selectedCountry,
+      query: _query,
+    );
   }
 
   List<String> get _uniqueCountries {
-    final countries = globalCities.map((city) => city.country).toSet().toList()
-      ..sort();
-    return ['All', ...countries];
+    return buildCountryFilters(globalCities);
   }
 
   Future<void> _detectCurrentLocation(AppLocalizations l10n) async {
@@ -244,8 +257,10 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
                     ),
                     selected: isSelected,
                     selectedColor: AppColors.emerald,
-                    onSelected: (_) =>
-                        setState(() => _selectedCountry = country),
+                    onSelected: (_) => setState(
+                      () =>
+                          _selectedCountry = isSelected ? null : country,
+                    ),
                   ),
                 );
               },
