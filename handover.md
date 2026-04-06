@@ -85,3 +85,38 @@
 
 ### Sonraki Adım
 - `audio_sovereignty_service.dart` ve `sukun_audio_page.dart` içindeki stub ve false-success zinciri ele alınacak.
+
+## 2026-04-07 TUR-05 — Audio Contract and False-Success Removal
+### Yapılan İşlem
+- `audio_sovereignty_service.dart` boş gövdeli mimari placeholder olmaktan çıkarıldı; gerçek bir `SovereignAudioEngine` kontratı ve `LocalAudioEngine` adaptörü eklendi.
+- `playQuran` ve `playSukun` artık `bool` döndürerek gerçek playback başlayıp başlamadığını bildiriyor.
+- `sukun_audio_page.dart` başarı varmış gibi snackbar göstermeyi bıraktı; playback başarısızsa yalnızca lokalize `error` mesajı gösteriyor ve seçili durum güncellenmiyor.
+- `test/audio_sovereignty_service_test.dart` ve `test/sukun_audio_page_test.dart` ile servis ve UI davranışı doğrulandı.
+- Self-heal adımında ilk widget test viewport erişim problemi izole edilip yalnızca test dosyasında düzeltilerek regresyon kapatıldı.
+
+### Neden Yapıldı
+- [audio_sovereignty_service.dart] içindeki `playQuran` ve `playSukun` boş implementasyondu.
+- [sukun_audio_page.dart] ise `await service.playSukun(type)` çağrısından sonra sonucu kontrol etmeden "başarılı" davranış üretiyordu.
+- Paketlenmiş `assets/audio/quran` altında gerçek Quran dosyaları yok; bu durumda sistemin dürüstçe başarısızlık dönmesi gerekiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\audio_sovereignty_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\audio_sovereignty_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\sukun_audio_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Audio sovereignty katmanı artık boş implementasyon değil; test edilebilir ve dürüst bir playback kontratı sunuyor.
+- Sukun ekranı playback olmayan durumda başarı göstermiyor; false-success kaldırıldı.
+- Pakette gerçek soundscape asset’i olmadığı için UI artık bunu başarı gibi göstermiyor.
+
+### Test Sonucu
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`41/41`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Audio false-success / empty implementation: `9/25 → 4/25`
+
+### Sonraki Adım
+- `library_page.dart` ve alt görünümlerdeki hardcoded kullanıcı metinleri localization zincirine taşınacak.

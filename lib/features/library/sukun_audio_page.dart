@@ -1,7 +1,8 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class SukunAudioPage extends ConsumerStatefulWidget {
   const SukunAudioPage({super.key});
@@ -26,6 +27,7 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
   @override
   Widget build(BuildContext context) {
     final audio = ref.watch(audioSovereigntyServiceProvider);
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       backgroundColor: Colors.black,
@@ -68,7 +70,7 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
                   delegate: SliverChildListDelegate([
                     _buildMixerSection(context, audio),
                     const SizedBox(height: 30),
-                    _buildSoundGrid(context, audio),
+                    _buildSoundGrid(context, audio, l10n),
                   ]),
                 ),
               ),
@@ -79,7 +81,10 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
     );
   }
 
-  Widget _buildMixerSection(BuildContext context, AudioSovereigntyService service) {
+  Widget _buildMixerSection(
+    BuildContext context,
+    AudioSovereigntyService service,
+  ) {
     return PremiumCard(
       padding: const EdgeInsets.all(24),
       child: Column(
@@ -134,7 +139,11 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
     );
   }
 
-  Widget _buildSoundGrid(BuildContext context, AudioSovereigntyService service) {
+  Widget _buildSoundGrid(
+    BuildContext context,
+    AudioSovereigntyService service,
+    AppLocalizations l10n,
+  ) {
     final sounds = [
       {'name': 'Rain of Mercy', 'icon': Icons.water_drop, 'type': 'rain'},
       {'name': 'Garden of Peace', 'icon': Icons.park, 'type': 'forest'},
@@ -160,16 +169,20 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
 
         return PremiumCard(
           onTap: () async {
-            await service.playSukun(type);
+            final played = await service.playSukun(type);
             if (!context.mounted) return;
 
+            if (!played) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  duration: const Duration(milliseconds: 900),
+                  content: Text(l10n.error),
+                ),
+              );
+              return;
+            }
+
             setState(() => _selectedSound = type);
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                duration: const Duration(milliseconds: 900),
-                content: Text('Now playing: $name'),
-              ),
-            );
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -195,4 +208,3 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
     );
   }
 }
-
