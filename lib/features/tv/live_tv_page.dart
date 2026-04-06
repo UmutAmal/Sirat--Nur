@@ -6,6 +6,14 @@ import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+String buildLiveTvProviderErrorText(AppLocalizations l10n, Object error) {
+  return '${l10n.error}: $error';
+}
+
+String buildLiveTvEmptyStateText(AppLocalizations l10n) {
+  return l10n.noResults;
+}
+
 class LiveTvPage extends ConsumerStatefulWidget {
   const LiveTvPage({super.key});
 
@@ -121,7 +129,7 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
       setState(() {
         _isLoading = false;
         _hasError = true;
-        _errorText = 'Stream error';
+        _errorText = null;
       });
       return;
     }
@@ -138,7 +146,7 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
       setState(() {
         _isLoading = false;
         _hasError = true;
-        _errorText = 'Stream error';
+        _errorText = null;
       });
       return;
     }
@@ -219,10 +227,11 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
       ),
       body: liveTvAsync.when(
         loading: () => const Center(child: CircularProgressIndicator(color: AppColors.emerald)),
-        error: (e, s) => Center(child: Text('Cloud sync error: $e')),
+        error: (e, s) =>
+            Center(child: Text(buildLiveTvProviderErrorText(l10n, e))),
         data: (fetchedStreams) {
           if (fetchedStreams.isEmpty) {
-            return const Center(child: Text('No live TV channels found.'));
+            return Center(child: Text(buildLiveTvEmptyStateText(l10n)));
           }
           
           // Triggers load on first successful fetch
@@ -271,12 +280,14 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
                                 style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 16),
                               ),
                               const SizedBox(height: 8),
-                              Text(
-                                _errorText ?? '',
-                                textAlign: TextAlign.center,
-                                style: const TextStyle(color: Colors.white70, fontSize: 12),
-                              ),
-                              const SizedBox(height: 12),
+                              if ((_errorText ?? '').isNotEmpty) ...[
+                                Text(
+                                  _errorText!,
+                                  textAlign: TextAlign.center,
+                                  style: const TextStyle(color: Colors.white70, fontSize: 12),
+                                ),
+                                const SizedBox(height: 12),
+                              ],
                               Wrap(
                                 alignment: WrapAlignment.center,
                                 spacing: 8,

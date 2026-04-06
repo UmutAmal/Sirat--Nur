@@ -1,6 +1,7 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/features/common/main_skeleton.dart';
 import 'package:sirat_i_nur/features/home/home_page.dart';
@@ -76,20 +77,39 @@ CustomTransitionPage<T> _scaleTransition<T>(
 final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
 final _shellNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'shell');
 
+bool _isFirstLaunch(SharedPreferences prefs) {
+  return prefs.getBool('isFirstLaunch') ?? true;
+}
+
+String resolveInitialLocation(SharedPreferences prefs) {
+  return _isFirstLaunch(prefs) ? '/onboarding' : '/home';
+}
+
+String? resolveOnboardingRedirect(
+  SharedPreferences prefs,
+  String matchedLocation,
+) {
+  final isFirstLaunch = _isFirstLaunch(prefs);
+  if (isFirstLaunch) {
+    return matchedLocation == '/onboarding' ? null : '/onboarding';
+  }
+
+  if (matchedLocation == '/onboarding') {
+    return '/home';
+  }
+
+  return null;
+}
+
 final appRouterProvider = Provider<GoRouter>((ref) {
   final prefs = ref.watch(sharedPreferencesProvider);
-  final isFirstLaunch = prefs.getBool('isFirstLaunch') ?? true;
 
   return GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: isFirstLaunch ? '/onboarding' : '/home',
+    initialLocation: resolveInitialLocation(prefs),
     errorBuilder: (context, state) => AppErrorPage(error: state.error),
-    redirect: (context, state) {
-      if (isFirstLaunch && state.matchedLocation != '/onboarding') {
-        return '/onboarding';
-      }
-      return null;
-    },
+    redirect: (context, state) =>
+        resolveOnboardingRedirect(prefs, state.matchedLocation),
     routes: [
       GoRoute(
         path: '/onboarding',
