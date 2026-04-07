@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/features/premium/premium_provider.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class PaywallPage extends ConsumerWidget {
   const PaywallPage({super.key});
@@ -10,6 +11,7 @@ class PaywallPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final premiumState = ref.watch(premiumProvider);
+    final l10n = AppLocalizations.of(context)!;
 
     // If already premium, just show confirmation and pop
     if (premiumState.isPremium) {
@@ -55,18 +57,18 @@ class PaywallPage extends ConsumerWidget {
                       const SizedBox(height: 4),
                       ShaderMask(
                         shaderCallback: (bounds) => const LinearGradient(colors: [AppColors.gold, AppColors.emeraldLight]).createShader(bounds),
-                        child: const Text('PREMIUM', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Colors.white, letterSpacing: 4)),
+                        child: Text(l10n.premium.toUpperCase(), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Colors.white, letterSpacing: 4)),
                       ),
                       const SizedBox(height: 16),
-                      Text('Unlock all features for your spiritual journey',
+                      Text(l10n.paywallUnlockAll,
                         textAlign: TextAlign.center,
                         style: TextStyle(color: Colors.white.withValues(alpha: 0.6), fontSize: 15, height: 1.6)),
                       const SizedBox(height: 40),
                       // Features
-                      _featureRow(Icons.psychology_rounded, 'Neural Assistant Plus', 'Unlimited AI-powered Q&A'),
-                      _featureRow(Icons.cloud_download_rounded, 'Unlimited Offline', 'Download all recitations'),
-                      _featureRow(Icons.palette_rounded, 'Exclusive Designs', 'Premium themes & fonts'),
-                      _featureRow(Icons.block_rounded, 'Ad-Free', 'Zero advertisements'),
+                      _featureRow(Icons.psychology_rounded, l10n.paywallFeature1Title, l10n.paywallFeature1Desc),
+                      _featureRow(Icons.cloud_download_rounded, l10n.paywallFeature2Title, l10n.paywallFeature2Desc),
+                      _featureRow(Icons.palette_rounded, l10n.paywallFeature3Title, l10n.paywallFeature3Desc),
+                      _featureRow(Icons.block_rounded, l10n.paywallFeature4Title, l10n.paywallFeature4Desc),
                       const SizedBox(height: 40),
                       // Error message
                       if (premiumState.error != null)
@@ -105,8 +107,8 @@ class PaywallPage extends ConsumerWidget {
                                         color: Colors.white,
                                       ),
                                     )
-                                  : const Text('Get Lifetime Access — \$1.00',
-                                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18)),
+                                  : Text(l10n.paywallGetAccess,
+                                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18)),
                             ),
                           ),
                         ),
@@ -116,7 +118,7 @@ class PaywallPage extends ConsumerWidget {
                         onPressed: premiumState.isLoading
                             ? null
                             : () => ref.read(premiumProvider.notifier).restorePurchases(),
-                        child: Text('Restore Purchases',
+                        child: Text(l10n.restorePurchases,
                           style: TextStyle(color: Colors.white.withValues(alpha: 0.5), fontWeight: FontWeight.w700)),
                       ),
                       const SizedBox(height: 24),

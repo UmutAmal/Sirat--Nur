@@ -435,6 +435,32 @@ class _AsmaUlHusnaView extends StatelessWidget {
   }
 }
 
+String _translateDuaCategory(String category, String lang) {
+  if (lang != 'en') return category;
+  switch (category) {
+    case 'Sabah Akşam': return 'Morning & Evening';
+    case 'Tesbih': return 'Tasbih';
+    case 'Koruma': return 'Protection';
+    case 'Başlangıç': return 'Starting';
+    case 'Uyku': return 'Sleep';
+    case 'Yemek': return 'Food & Drink';
+    case 'Af Duası': return 'Forgiveness';
+    case 'Ev': return 'Home';
+    default: return category;
+  }
+}
+
+String _translateDuaSource(String source, String lang) {
+  if (lang != 'en') return source;
+  return source
+      .replaceAll('Buhari', 'Bukhari')
+      .replaceAll('Müslim', 'Muslim')
+      .replaceAll('Ebu Davud', 'Abu Dawud')
+      .replaceAll('Tirmizi', 'Tirmidhi')
+      .replaceAll('Ahmed', 'Ahmad')
+      .replaceAll('Kuran-ı Kerim', 'Quran');
+}
+
 // ─── Duas Subview ───
 class _DuasView extends StatelessWidget {
   const _DuasView();
@@ -467,7 +493,7 @@ class _DuasView extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
-                        dua.category,
+                        _translateDuaCategory(dua.category, locale.languageCode),
                         style: const TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w800,
@@ -477,7 +503,7 @@ class _DuasView extends StatelessWidget {
                     ),
                     const Spacer(),
                     Text(
-                      dua.source,
+                      _translateDuaSource(dua.source, locale.languageCode),
                       style: TextStyle(
                         fontSize: 11,
                         color: Theme.of(

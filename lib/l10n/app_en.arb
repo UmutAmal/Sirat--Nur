@@ -232,5 +232,47 @@
     }
   },
   "islamicEducation": "Islamic Education",
-  "hadithCollections": "Hadith Collections"
+  "hadithCollections": "Hadith Collections",
+  "paywallUnlockAll": "Unlock all features for your spiritual journey",
+  "paywallFeature1Title": "Neural Assistant Plus",
+  "paywallFeature1Desc": "Unlimited AI-powered Q&A",
+  "paywallFeature2Title": "Unlimited Offline",
+  "paywallFeature2Desc": "Download all recitations",
+  "paywallFeature3Title": "Exclusive Designs",
+  "paywallFeature3Desc": "Premium themes & fonts",
+  "paywallFeature4Title": "Ad-Free",
+  "paywallFeature4Desc": "Zero advertisements",
+  "paywallGetAccess": "Get Lifetime Access — $1.00",
+  "restorePurchases": "Restore Purchases",
+  "zakatCalculator": "Zakat Calculator",
+  "zakatGold": "Gold (Altın)",
+  "zakatSilver": "Silver (Gümüş)",
+  "zakatCashBank": "Cash / Bank",
+  "zakatBusiness": "Business",
+  "zakatInvestments": "Investments",
+  "zakatWeightGrams": "Weight (g)",
+  "zakatPricePerGram": "Price/g",
+  "zakatTotalAmount": "Total Amount",
+  "zakatInventoryValue": "Inventory Value",
+  "zakatDebts": "Debts",
+  "zakatTotal": "Total",
+  "calculateZakat": "Calculate Zakat",
+  "nisabNotReached": "Nisab not reached. Zakat is not obligatory.",
+  "totalZakat": "Total Zakat",
+  "nisabSummary": "Nisab: {nisab} • Assets: {assets}",
+  "@nisabSummary": {
+    "placeholders": {
+      "nisab": {
+        "type": "String"
+      },
+      "assets": {
+        "type": "String"
+      }
+    }
+  },
+  "zakatGoldZakat": "Gold Zakat",
+  "zakatSilverZakat": "Silver Zakat",
+  "zakatCashZakat": "Cash Zakat",
+  "zakatBusinessZakat": "Business Zakat",
+  "zakatInvestmentZakat": "Investment Zakat"
 }

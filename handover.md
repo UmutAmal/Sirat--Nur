@@ -241,4 +241,23 @@
 ### Sonraki Adım
 - `library_page.dart` satır 469, 479: `dua.category` ve `dua.source` alanları hâlâ hardcoded basılıyor; locale-aware çözüm gerekli.
 - `hadith_list_page.dart`: Tüm UI metinleri (narrator, collection names) hardcoded İngilizce.
-- `hadith_search_page.dart` L41: `'Enter a keyword to search across all hadith collections.'` hardcoded.
+- `zakat_calculator_page.dart`: ~20 hardcoded İngilizce metin (section headers, button labels, result labels).
+- `paywall_page.dart`: 'PREMIUM', 'Get Lifetime Access — $1.00' hardcoded.
+
+## 2026-04-07 TUR-10 — Batch Localization: 6 Feature Pages
+### Yapılan İşlem
+- **home_page.dart**: `'Error loading content'` → `l10n.error`
+- **chatbot_page.dart**: `'Neural Assistant'` → `l10n.assistant`, `'Cancel'` → `l10n.cancel`, `'Offline Local AI'` → `l10n.offlineMode` + scope fix (_showLocalAiDownloadDialog'da l10n tanımsızdı)
+- **analytics_page.dart**: `'Analytics'` → `l10n.analytics`
+- **zikr_page.dart**: `'Zikr & Tasbih'` → `l10n.zikr`, `'Tap the circle to count'` → `l10n.tapToCount`
+- **qibla_page.dart**: `'Calibration'` → `l10n.qiblaCalibration`
+- **offline_downloads_page.dart**: `'Offline Manager'` → `l10n.downloadManager`
+
+### Test Sonucu
+- `flutter analyze` → PASS (No issues found)
+- `flutter test` → PASS (47/47)
+
+### Sonraki Adım
+- `zakat_calculator_page.dart`: En çok hardcoded string (~20) içeren dosya, tam l10n geçişi gerekli.
+- `paywall_page.dart`: 'PREMIUM', 'Get Lifetime Access — $1.00' hardcoded.
+- `library_page.dart`: `dua.category` ve `dua.source` alanları locale-unaware.

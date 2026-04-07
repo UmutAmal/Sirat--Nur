@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 /// Comprehensive Zakat Calculator
 class ZakatCalculator {
@@ -121,9 +122,10 @@ class _ZakatCalculatorPageState extends State<ZakatCalculatorPage> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Zakat Calculator'),
+        title: Text(l10n.zakatCalculator),
         actions: [
           PopupMenuButton<String>(
             onSelected: (v) => setState(() => _currency = v),
@@ -140,33 +142,33 @@ class _ZakatCalculatorPageState extends State<ZakatCalculatorPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _section('Gold (Altın)', Icons.diamond_outlined),
+            _section(l10n.zakatGold, Icons.diamond_outlined),
             const SizedBox(height: 8),
             PremiumCard(child: Row(children: [
-              Expanded(child: _input(_goldGC, 'Weight (g)')),
+              Expanded(child: _input(_goldGC, l10n.zakatWeightGrams)),
               const SizedBox(width: 12),
-              Expanded(child: _input(_goldPC, 'Price/g (\$)')),
+              Expanded(child: _input(_goldPC, '${l10n.zakatPricePerGram} (\$_currency)')),
             ])),
-            _section('Silver (Gümüş)', Icons.circle_outlined),
+            _section(l10n.zakatSilver, Icons.circle_outlined),
             const SizedBox(height: 8),
             PremiumCard(child: Row(children: [
-              Expanded(child: _input(_silverGC, 'Weight (g)')),
+              Expanded(child: _input(_silverGC, l10n.zakatWeightGrams)),
               const SizedBox(width: 12),
-              Expanded(child: _input(_silverPC, 'Price/g (\$)')),
+              Expanded(child: _input(_silverPC, '${l10n.zakatPricePerGram} (\$_currency)')),
             ])),
-            _section('Cash / Bank', Icons.account_balance_wallet_outlined),
+            _section(l10n.zakatCashBank, Icons.account_balance_wallet_outlined),
             const SizedBox(height: 8),
-            PremiumCard(child: _input(_cashC, 'Total Amount (\$)')),
-            _section('Business', Icons.business_outlined),
+            PremiumCard(child: _input(_cashC, '${l10n.zakatTotalAmount} (\$_currency)')),
+            _section(l10n.zakatBusiness, Icons.business_outlined),
             const SizedBox(height: 8),
             PremiumCard(child: Column(children: [
-              _input(_invC, 'Inventory Value (\$)'),
+              _input(_invC, '${l10n.zakatInventoryValue} (\$_currency)'),
               const SizedBox(height: 8),
-              _input(_debtC, 'Debts (\$)'),
+              _input(_debtC, '${l10n.zakatDebts} (\$_currency)'),
             ])),
-            _section('Investments', Icons.trending_up_outlined),
+            _section(l10n.zakatInvestments, Icons.trending_up_outlined),
             const SizedBox(height: 8),
-            PremiumCard(child: _input(_investC, 'Total (\$)')),
+            PremiumCard(child: _input(_investC, '${l10n.zakatTotal} (\$_currency)')),
             const SizedBox(height: 24),
             // Calculate
             SizedBox(
@@ -179,7 +181,7 @@ class _ZakatCalculatorPageState extends State<ZakatCalculatorPage> {
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                 ),
-                child: const Text('Calculate Zakat', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900)),
+                child: Text(l10n.calculateZakat, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900)),
               ),
             ),
             if (_result != null) ...[
@@ -196,28 +198,28 @@ class _ZakatCalculatorPageState extends State<ZakatCalculatorPage> {
                           color: Colors.orange.withValues(alpha: 0.15),
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: const Row(children: [
-                          Icon(Icons.info_outline_rounded, color: Colors.orange, size: 20),
-                          SizedBox(width: 8),
-                          Expanded(child: Text('Nisab not reached. Zakat is not obligatory.',
-                            style: TextStyle(color: Colors.orange, fontWeight: FontWeight.w600, fontSize: 13))),
+                        child: Row(children: [
+                          const Icon(Icons.info_outline_rounded, color: Colors.orange, size: 20),
+                          const SizedBox(width: 8),
+                          Expanded(child: Text(l10n.nisabNotReached,
+                            style: const TextStyle(color: Colors.orange, fontWeight: FontWeight.w600, fontSize: 13))),
                         ]),
                       ),
-                    Text('Total Zakat', style: TextStyle(
+                    Text(l10n.totalZakat, style: TextStyle(
                       color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
                       fontWeight: FontWeight.w700)),
                     const SizedBox(height: 8),
                     Text(_fmt(_result!.totalZakat), style: const TextStyle(
                       fontSize: 32, fontWeight: FontWeight.w900, color: AppColors.emerald)),
                     const SizedBox(height: 4),
-                    Text('Nisab: ${_fmt(_result!.nisabValue)} • Assets: ${_fmt(_result!.totalAssets)}',
+                    Text(l10n.nisabSummary(_fmt(_result!.nisabValue), _fmt(_result!.totalAssets)),
                       style: TextStyle(fontSize: 12, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4))),
                     const SizedBox(height: 16),
-                    _resultRow('Gold Zakat', _result!.goldZakat),
-                    _resultRow('Silver Zakat', _result!.silverZakat),
-                    _resultRow('Cash Zakat', _result!.cashZakat),
-                    _resultRow('Business Zakat', _result!.businessZakat),
-                    _resultRow('Investment Zakat', _result!.investmentZakat),
+                    _resultRow(l10n.zakatGoldZakat, _result!.goldZakat),
+                    _resultRow(l10n.zakatSilverZakat, _result!.silverZakat),
+                    _resultRow(l10n.zakatCashZakat, _result!.cashZakat),
+                    _resultRow(l10n.zakatBusinessZakat, _result!.businessZakat),
+                    _resultRow(l10n.zakatInvestmentZakat, _result!.investmentZakat),
                   ],
                 ),
               ),

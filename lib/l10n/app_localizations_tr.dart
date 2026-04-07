@@ -699,4 +699,104 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get hadithCollections => 'Hadis Koleksiyonları';
+
+  @override
+  String get paywallUnlockAll =>
+      'Ruhsal yolculuğunuz için tüm özellikleri açın';
+
+  @override
+  String get paywallFeature1Title => 'Neural Assistant Plus';
+
+  @override
+  String get paywallFeature1Desc => 'Sınırsız yapay zeka destekli soru-cevap';
+
+  @override
+  String get paywallFeature2Title => 'Sınırsız Çevrimdışı';
+
+  @override
+  String get paywallFeature2Desc => 'Tüm tilavetleri indirin';
+
+  @override
+  String get paywallFeature3Title => 'Özel Tasarımlar';
+
+  @override
+  String get paywallFeature3Desc => 'Premium temalar ve yazı tipleri';
+
+  @override
+  String get paywallFeature4Title => 'Reklamsız';
+
+  @override
+  String get paywallFeature4Desc => 'Sıfır reklam deneyimi';
+
+  @override
+  String get paywallGetAccess => 'Ömür Boyu Erişim — \$1.00';
+
+  @override
+  String get restorePurchases => 'Satın Alımları Geri Yükle';
+
+  @override
+  String get zakatCalculator => 'Zekat Hesaplayıcı';
+
+  @override
+  String get zakatGold => 'Altın';
+
+  @override
+  String get zakatSilver => 'Gümüş';
+
+  @override
+  String get zakatCashBank => 'Nakit / Banka';
+
+  @override
+  String get zakatBusiness => 'Ticaret';
+
+  @override
+  String get zakatInvestments => 'Yatırımlar';
+
+  @override
+  String get zakatWeightGrams => 'Ağırlık (g)';
+
+  @override
+  String get zakatPricePerGram => 'Fiyat/g';
+
+  @override
+  String get zakatTotalAmount => 'Toplam Miktar';
+
+  @override
+  String get zakatInventoryValue => 'Envanter Değeri';
+
+  @override
+  String get zakatDebts => 'Borçlar';
+
+  @override
+  String get zakatTotal => 'Toplam';
+
+  @override
+  String get calculateZakat => 'Zekatı Hesapla';
+
+  @override
+  String get nisabNotReached =>
+      'Nisap miktarına ulaşılmadı. Zekat farz değildir.';
+
+  @override
+  String get totalZakat => 'Toplam Zekat';
+
+  @override
+  String nisabSummary(String nisab, String assets) {
+    return 'Nisap: $nisab • Varlıklar: $assets';
+  }
+
+  @override
+  String get zakatGoldZakat => 'Altın Zekatı';
+
+  @override
+  String get zakatSilverZakat => 'Gümüş Zekatı';
+
+  @override
+  String get zakatCashZakat => 'Nakit Zekatı';
+
+  @override
+  String get zakatBusinessZakat => 'Ticaret Zekatı';
+
+  @override
+  String get zakatInvestmentZakat => 'Yatırım Zekatı';
 }

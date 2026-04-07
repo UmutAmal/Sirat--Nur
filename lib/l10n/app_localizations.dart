@@ -1797,6 +1797,198 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hadith Collections'**
   String get hadithCollections;
+
+  /// No description provided for @paywallUnlockAll.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock all features for your spiritual journey'**
+  String get paywallUnlockAll;
+
+  /// No description provided for @paywallFeature1Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Neural Assistant Plus'**
+  String get paywallFeature1Title;
+
+  /// No description provided for @paywallFeature1Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlimited AI-powered Q&A'**
+  String get paywallFeature1Desc;
+
+  /// No description provided for @paywallFeature2Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlimited Offline'**
+  String get paywallFeature2Title;
+
+  /// No description provided for @paywallFeature2Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Download all recitations'**
+  String get paywallFeature2Desc;
+
+  /// No description provided for @paywallFeature3Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Exclusive Designs'**
+  String get paywallFeature3Title;
+
+  /// No description provided for @paywallFeature3Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium themes & fonts'**
+  String get paywallFeature3Desc;
+
+  /// No description provided for @paywallFeature4Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Ad-Free'**
+  String get paywallFeature4Title;
+
+  /// No description provided for @paywallFeature4Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Zero advertisements'**
+  String get paywallFeature4Desc;
+
+  /// No description provided for @paywallGetAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Lifetime Access — \$1.00'**
+  String get paywallGetAccess;
+
+  /// No description provided for @restorePurchases.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore Purchases'**
+  String get restorePurchases;
+
+  /// No description provided for @zakatCalculator.
+  ///
+  /// In en, this message translates to:
+  /// **'Zakat Calculator'**
+  String get zakatCalculator;
+
+  /// No description provided for @zakatGold.
+  ///
+  /// In en, this message translates to:
+  /// **'Gold (Altın)'**
+  String get zakatGold;
+
+  /// No description provided for @zakatSilver.
+  ///
+  /// In en, this message translates to:
+  /// **'Silver (Gümüş)'**
+  String get zakatSilver;
+
+  /// No description provided for @zakatCashBank.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash / Bank'**
+  String get zakatCashBank;
+
+  /// No description provided for @zakatBusiness.
+  ///
+  /// In en, this message translates to:
+  /// **'Business'**
+  String get zakatBusiness;
+
+  /// No description provided for @zakatInvestments.
+  ///
+  /// In en, this message translates to:
+  /// **'Investments'**
+  String get zakatInvestments;
+
+  /// No description provided for @zakatWeightGrams.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight (g)'**
+  String get zakatWeightGrams;
+
+  /// No description provided for @zakatPricePerGram.
+  ///
+  /// In en, this message translates to:
+  /// **'Price/g'**
+  String get zakatPricePerGram;
+
+  /// No description provided for @zakatTotalAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Total Amount'**
+  String get zakatTotalAmount;
+
+  /// No description provided for @zakatInventoryValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Inventory Value'**
+  String get zakatInventoryValue;
+
+  /// No description provided for @zakatDebts.
+  ///
+  /// In en, this message translates to:
+  /// **'Debts'**
+  String get zakatDebts;
+
+  /// No description provided for @zakatTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Total'**
+  String get zakatTotal;
+
+  /// No description provided for @calculateZakat.
+  ///
+  /// In en, this message translates to:
+  /// **'Calculate Zakat'**
+  String get calculateZakat;
+
+  /// No description provided for @nisabNotReached.
+  ///
+  /// In en, this message translates to:
+  /// **'Nisab not reached. Zakat is not obligatory.'**
+  String get nisabNotReached;
+
+  /// No description provided for @totalZakat.
+  ///
+  /// In en, this message translates to:
+  /// **'Total Zakat'**
+  String get totalZakat;
+
+  /// No description provided for @nisabSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Nisab: {nisab} • Assets: {assets}'**
+  String nisabSummary(String nisab, String assets);
+
+  /// No description provided for @zakatGoldZakat.
+  ///
+  /// In en, this message translates to:
+  /// **'Gold Zakat'**
+  String get zakatGoldZakat;
+
+  /// No description provided for @zakatSilverZakat.
+  ///
+  /// In en, this message translates to:
+  /// **'Silver Zakat'**
+  String get zakatSilverZakat;
+
+  /// No description provided for @zakatCashZakat.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash Zakat'**
+  String get zakatCashZakat;
+
+  /// No description provided for @zakatBusinessZakat.
+  ///
+  /// In en, this message translates to:
+  /// **'Business Zakat'**
+  String get zakatBusinessZakat;
+
+  /// No description provided for @zakatInvestmentZakat.
+  ///
+  /// In en, this message translates to:
+  /// **'Investment Zakat'**
+  String get zakatInvestmentZakat;
 }
 
 class _AppLocalizationsDelegate
