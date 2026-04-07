@@ -258,6 +258,22 @@
 - `flutter test` → PASS (47/47)
 
 ### Sonraki Adım
-- `zakat_calculator_page.dart`: En çok hardcoded string (~20) içeren dosya, tam l10n geçişi gerekli.
-- `paywall_page.dart`: 'PREMIUM', 'Get Lifetime Access — $1.00' hardcoded.
-- `library_page.dart`: `dua.category` ve `dua.source` alanları locale-unaware.
+- `zakat_calculator_page.dart`: En çok hardcoded string (~20) içeren dosya, tam l10n geçişi gerekli. (TAMAMLANDI)
+- `paywall_page.dart`: 'PREMIUM', 'Get Lifetime Access — $1.00' hardcoded. (TAMAMLANDI)
+- `library_page.dart`: `dua.category` ve `dua.source` alanları locale-unaware. (TAMAMLANDI)
+
+## 2026-04-07 TUR-11 — Batch Localization: Zakat, Paywall & Duas
+### Yapılan İşlem
+- `tool/add_keys.dart` betiği oluşturuldu ve ~30 yeni çeviri anahtarı `app_en.arb` ve `app_tr.arb` dosyalarına güvenli bir şekilde eklendi.
+- **paywall_page.dart**: 10'dan fazla özellik başlığı, açıklama ve satın alma metni yeni l10n anahtarlarıyla değiştirildi.
+- **zakat_calculator_page.dart**: Uygulamadaki en yoğun hardcoded dosya tamamen l10n sistemine bağlandı. Bölüm isimleri, input etiketleri ve sonuç mesajları ("Nisab not reached") yerelleştirildi.
+- **library_page.dart**: `dua.category` ve `dua.source` verilerinin (başlangıçta Türkçe olan `duas_data.dart` kaynaklı) İngilizce lokalizasyonunda otomatik çevrilmesi için dinamik yardımcı fonksiyonlar eklendi (`_translateDuaCategory`, `_translateDuaSource`).
+
+### Test Sonucu
+- `flutter gen-l10n` -> Başarılı
+- `flutter analyze` -> PASS (No issues found)
+- `flutter test` -> PASS (47/47)
+
+### Sonraki Adım
+- `hadith_list_page.dart`: Tüm UI metinleri (narrator, collection names) hardcoded İngilizce. Data-driven hadis koleksiyonu isimleri ve ravilerin de aynı şekilde yerelleştirilmesi (veya UI'ın dil bazlı desteklenmesi) gerekmektedir.
+- Uygulamanın kalan hardcoded yerlerinin (varsa) son bir taranması.
