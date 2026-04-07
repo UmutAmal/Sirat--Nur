@@ -698,6 +698,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get islamicEducation => 'Islamic Education';
 
   @override
+  String get sukunAudioTitle => 'Sukun Soundscapes';
+
+  @override
   String get hadithCollections => 'Hadith Collections';
 
   @override

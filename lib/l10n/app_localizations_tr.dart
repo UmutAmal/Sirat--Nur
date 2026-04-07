@@ -698,6 +698,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get islamicEducation => 'İslami Eğitim';
 
   @override
+  String get sukunAudioTitle => 'Sükunet Sesleri';
+
+  @override
   String get hadithCollections => 'Hadis Koleksiyonları';
 
   @override

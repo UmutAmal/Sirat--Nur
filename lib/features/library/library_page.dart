@@ -158,6 +158,54 @@ class LibraryPage extends ConsumerWidget {
               ),
             ),
 
+            // Sukun Soundscapes (Orphan Feature Integration)
+            const SizedBox(height: 8),
+            AnimatedPremiumCard(
+              animationDelay: 150,
+              onTap: () => context.go('/library/sukun-audio'),
+              child: Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: AppColors.emeraldLight,
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: const Icon(
+                      Icons.spa_rounded,
+                      color: AppColors.emerald,
+                      size: 28,
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          l10n.sukunAudioTitle,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 16,
+                          ),
+                        ),
+                        Text(
+                          "Nature & Qur'an Mixer",
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: Theme.of(
+                              context,
+                            ).colorScheme.onSurface.withValues(alpha: 0.5),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Icon(Icons.chevron_right_rounded),
+                ],
+              ),
+            ),
+
             // Islamic Education (SUPABASE CLOUD)
             const SizedBox(height: 8),
             Text(

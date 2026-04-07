@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -29,6 +29,7 @@ import 'package:sirat_i_nur/features/onboarding/onboarding_page.dart';
 import 'package:sirat_i_nur/features/analytics/analytics_page.dart';
 import 'package:sirat_i_nur/features/common/app_error_page.dart';
 import 'package:sirat_i_nur/features/library/zakat_calculator_page.dart';
+import 'package:sirat_i_nur/features/library/sukun_audio_page.dart';
 
 // Smooth slide + fade transition
 CustomTransitionPage<T> _slideTransition<T>(
@@ -246,6 +247,11 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 collectionId: collectionId,
               ));
             },
+          ),
+          GoRoute(
+            path: 'sukun-audio',
+            name: 'sukun_audio',
+            pageBuilder: (ctx, state) => _slideTransition(ctx, state, const SukunAudioPage()),
           ),
         ],
       ),

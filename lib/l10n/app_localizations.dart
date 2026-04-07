@@ -1792,6 +1792,12 @@ abstract class AppLocalizations {
   /// **'Islamic Education'**
   String get islamicEducation;
 
+  /// No description provided for @sukunAudioTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sukun Soundscapes'**
+  String get sukunAudioTitle;
+
   /// No description provided for @hadithCollections.
   ///
   /// In en, this message translates to:

@@ -1,6 +1,14 @@
-﻿import 'package:dio/dio.dart';
+import 'package:dio/dio.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
+
+class TafsirException implements Exception {
+  final String message;
+  TafsirException(this.message);
+  
+  @override
+  String toString() => 'TafsirException: $message';
+}
 
 class TafsirLocalService {
   static Database? _database;
@@ -103,13 +111,13 @@ class TafsirLocalService {
         .timeout(const Duration(minutes: 2));
 
     if (response.statusCode != 200) {
-      throw Exception('Tafsir API responded with ${response.statusCode}');
+      throw TafsirException('Tafsir API responded with ${response.statusCode}');
     }
 
     final data = response.data as Map<String, dynamic>;
     final tafsirs = (data['tafsirs'] as List<dynamic>? ?? const <dynamic>[]);
     if (tafsirs.isEmpty) {
-      throw Exception('No tafsir entries returned from API.');
+      throw TafsirException('No tafsir entries returned from API.');
     }
 
     await db.delete(
