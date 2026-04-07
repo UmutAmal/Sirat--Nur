@@ -275,5 +275,22 @@
   "zakatSilverZakat": "Silver Zakat",
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Business Zakat",
-  "zakatInvestmentZakat": "Investment Zakat"
+  "zakatInvestmentZakat": "Investment Zakat",
+  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
+  "chatbotErrorMsg": "I could not generate a response. Please try again.",
+  "chatbotOfflinePrompt": "Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?",
+  "chatbotOfflineSwitched": "Switched to simulated offline local LLM mode.",
+  "chatbotOfflineDownloadLabel": "Download & Apply",
+  "downloadPreparing": "Preparing download...",
+  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "@downloadingSurah": {
+    "placeholders": {
+      "surah": {"type": "String"},
+      "total": {"type": "String"}
+    }
+  },
+  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "chatbotHint": "Ask a question...",
+  "chatbotThinking": "Thinking..."
 }

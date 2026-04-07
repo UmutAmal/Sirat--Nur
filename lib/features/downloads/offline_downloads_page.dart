@@ -49,7 +49,8 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
       _isDownloading[reciterId] = true;
       _cancelRequested[reciterId] = false;
       _downloadProgress[reciterId] = 0;
-      _downloadStatusText[reciterId] = 'Preparing download...';
+      final l10n = AppLocalizations.of(context)!;
+      _downloadStatusText[reciterId] = l10n.downloadPreparing;
     });
 
     final downloaded = await OfflineAudioService.getDownloadedSurahs(reciterId);
@@ -67,7 +68,8 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
         _isDownloading[reciterId] = false;
         _downloadProgress.remove(reciterId);
       });
-      _showSnack('All surahs already downloaded for this reciter.');
+      final l10n = AppLocalizations.of(context)!;
+      _showSnack(l10n.downloadCompleted);
       return;
     }
 
@@ -78,7 +80,8 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
         if (!mounted) return;
         setState(() {
           _downloadProgress[reciterId] = progress.clamp(0.0, 1.0);
-          _downloadStatusText[reciterId] = 'Downloading surah $surahNumber / $totalSurahs';
+          final l10n = AppLocalizations.of(context)!;
+          _downloadStatusText[reciterId] = l10n.downloadingSurah(surahNumber.toString(), totalSurahs.toString());
         });
       },
       onSurahComplete: (surahNumber, success) {

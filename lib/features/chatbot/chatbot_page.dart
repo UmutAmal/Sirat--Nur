@@ -12,7 +12,7 @@ import 'package:sirat_i_nur/l10n/app_localizations.dart';
 const String _geminiApiKey = String.fromEnvironment('GEMINI_API_KEY', defaultValue: '');
 
 final _chatMessagesProvider = StateProvider<List<_ChatMsg>>((ref) => [
-  _ChatMsg(text: 'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.', isUser: false),
+  _ChatMsg(text: '__GREETING__', isUser: false),
 ]);
 final _queriesLeftProvider = StateProvider<int>((ref) => 20);
 final _isLoadingProvider = StateProvider<bool>((ref) => false);
@@ -69,8 +69,9 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
 
     final queriesLeft = ref.read(_queriesLeftProvider);
     if (queriesLeft <= 0) {
+      final l10n = AppLocalizations.of(context)!;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Daily query limit reached. Upgrade to Premium for unlimited.')),
+        SnackBar(content: Text(l10n.chatbotLimitReached)),
       );
       return;
     }
@@ -97,9 +98,14 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
       } else if (_chat != null) {
         // Use Gemini LLM
         final geminiResponse = await _chat!.sendMessage(Content.text(text));
-        response = geminiResponse.text ?? 'I could not generate a response. Please try again.';
+        final l10n = AppLocalizations.of(context)!;
+        response = geminiResponse.text ?? l10n.chatbotErrorMsg;
       } else {
-        response = "API Key not configured. Please switch to Local AI.";
+        final locale = Localizations.localeOf(context);
+        final isTurkish = locale.languageCode == 'tr';
+        response = isTurkish 
+            ? "Bulut API ayarlanmadı. Lütfen ayarlardan Local AI moduna geçin."
+            : "Cloud API not configured. Please switch to Local AI.";
       }
 
       if (!mounted) return;
@@ -224,7 +230,7 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
                     child: TextField(
                       controller: _controller,
                       decoration: InputDecoration(
-                        hintText: 'Ask a question...',
+                        hintText: AppLocalizations.of(context)!.chatbotHint,
                         hintStyle: TextStyle(color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3)),
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
                         filled: true,
@@ -277,7 +283,7 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
           children: [
             SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.emerald.withValues(alpha: 0.6))),
             const SizedBox(width: 10),
-            Text('Thinking...', style: TextStyle(color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5), fontStyle: FontStyle.italic, fontSize: 13)),
+            Text(AppLocalizations.of(context)!.chatbotThinking, style: TextStyle(color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5), fontStyle: FontStyle.italic, fontSize: 13)),
           ],
         ),
       ),
@@ -304,7 +310,7 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
           boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 8, offset: const Offset(0, 2))],
         ),
         child: SelectableText(
-          msg.text,
+          msg.text == '__GREETING__' ? AppLocalizations.of(context)!.chatbotGreeting : msg.text,
           style: TextStyle(
             color: msg.isUser ? Colors.white : Theme.of(context).colorScheme.onSurface,
             fontSize: 14, height: 1.5,
@@ -320,10 +326,8 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
       context: context,
       builder: (ctx) => AlertDialog(
         title: Text(l10n.offlineMode, style: const TextStyle(fontWeight: FontWeight.w900)),
-        content: const Text(
-          'Downloading the Local AI model requires ~1.5 GB of storage. '
-          'Once downloaded, Neural Assistant will work completely offline without limits. '
-          '\n\nWould you like to start the download?',
+        content: Text(
+          l10n.chatbotOfflinePrompt,
         ),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx), child: Text(l10n.cancel)),
@@ -333,10 +337,10 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
               Navigator.pop(ctx);
               setState(() => _isOfflineMode = true);
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Switched to simulated offline local LLM mode.')),
+                SnackBar(content: Text(l10n.chatbotOfflineSwitched)),
               );
             },
-            child: const Text('Download & Apply'),
+            child: Text(l10n.chatbotOfflineDownloadLabel),
           ),
         ],
       ),

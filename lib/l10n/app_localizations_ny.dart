@@ -801,4 +801,45 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String get zakatInvestmentZakat => 'Investment Zakat';
+
+  @override
+  String get chatbotGreeting =>
+      'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
+
+  @override
+  String get chatbotLimitReached =>
+      'Daily query limit reached. Upgrade to Premium for unlimited.';
+
+  @override
+  String get chatbotErrorMsg =>
+      'I could not generate a response. Please try again.';
+
+  @override
+  String get chatbotOfflinePrompt =>
+      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+
+  @override
+  String get chatbotOfflineSwitched =>
+      'Switched to simulated offline local LLM mode.';
+
+  @override
+  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+
+  @override
+  String get downloadPreparing => 'Preparing download...';
+
+  @override
+  String downloadingSurah(String surah, String total) {
+    return 'Downloading surah $surah / $total';
+  }
+
+  @override
+  String get downloadCompleted =>
+      'All surahs already downloaded for this reciter.';
+
+  @override
+  String get chatbotHint => 'Ask a question...';
+
+  @override
+  String get chatbotThinking => 'Thinking...';
 }

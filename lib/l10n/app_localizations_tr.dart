@@ -802,4 +802,44 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get zakatInvestmentZakat => 'Yatırım Zekatı';
+
+  @override
+  String get chatbotGreeting =>
+      'Selamun Aleyküm! Ben İslami asistanınızım. Bana namaz, oruç, zekat veya dini konularda sorular sorabilirsiniz.';
+
+  @override
+  String get chatbotLimitReached =>
+      'Günlük soru limitinize ulaştınız. Sınırsız erişim için Premium\'a geçin.';
+
+  @override
+  String get chatbotErrorMsg =>
+      'Bir cevap oluşturamadım. Lütfen tekrar deneyin.';
+
+  @override
+  String get chatbotOfflinePrompt =>
+      'Yerel Yapay Zeka modelini indirmek yaklaşık 1.5 GB alan gerektirir. İndirildikten sonra, Asistan tamamen çevrimdışı ve sınırsız çalışacaktır. \n\nİndirmeyi başlatmak ister misiniz?';
+
+  @override
+  String get chatbotOfflineSwitched =>
+      'Simüle edilmiş çevrimdışı yerel LLM moduna geçildi.';
+
+  @override
+  String get chatbotOfflineDownloadLabel => 'İndir ve Uygula';
+
+  @override
+  String get downloadPreparing => 'İndirme hazırlanıyor...';
+
+  @override
+  String downloadingSurah(String surah, String total) {
+    return '$surah. sure indiriliyor (Toplam: $total)';
+  }
+
+  @override
+  String get downloadCompleted => 'Bu hafız için tüm sureler zaten indirildi.';
+
+  @override
+  String get chatbotHint => 'Bir soru sorun...';
+
+  @override
+  String get chatbotThinking => 'Düşünüyor...';
 }

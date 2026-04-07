@@ -1995,6 +1995,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Investment Zakat'**
   String get zakatInvestmentZakat;
+
+  /// No description provided for @chatbotGreeting.
+  ///
+  /// In en, this message translates to:
+  /// **'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.'**
+  String get chatbotGreeting;
+
+  /// No description provided for @chatbotLimitReached.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily query limit reached. Upgrade to Premium for unlimited.'**
+  String get chatbotLimitReached;
+
+  /// No description provided for @chatbotErrorMsg.
+  ///
+  /// In en, this message translates to:
+  /// **'I could not generate a response. Please try again.'**
+  String get chatbotErrorMsg;
+
+  /// No description provided for @chatbotOfflinePrompt.
+  ///
+  /// In en, this message translates to:
+  /// **'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?'**
+  String get chatbotOfflinePrompt;
+
+  /// No description provided for @chatbotOfflineSwitched.
+  ///
+  /// In en, this message translates to:
+  /// **'Switched to simulated offline local LLM mode.'**
+  String get chatbotOfflineSwitched;
+
+  /// No description provided for @chatbotOfflineDownloadLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Download & Apply'**
+  String get chatbotOfflineDownloadLabel;
+
+  /// No description provided for @downloadPreparing.
+  ///
+  /// In en, this message translates to:
+  /// **'Preparing download...'**
+  String get downloadPreparing;
+
+  /// No description provided for @downloadingSurah.
+  ///
+  /// In en, this message translates to:
+  /// **'Downloading surah {surah} / {total}'**
+  String downloadingSurah(String surah, String total);
+
+  /// No description provided for @downloadCompleted.
+  ///
+  /// In en, this message translates to:
+  /// **'All surahs already downloaded for this reciter.'**
+  String get downloadCompleted;
+
+  /// No description provided for @chatbotHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask a question...'**
+  String get chatbotHint;
+
+  /// No description provided for @chatbotThinking.
+  ///
+  /// In en, this message translates to:
+  /// **'Thinking...'**
+  String get chatbotThinking;
 }
 
 class _AppLocalizationsDelegate

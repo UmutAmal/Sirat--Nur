@@ -265,5 +265,22 @@
   "zakatSilverZakat": "Gümüş Zekatı",
   "zakatCashZakat": "Nakit Zekatı",
   "zakatBusinessZakat": "Ticaret Zekatı",
-  "zakatInvestmentZakat": "Yatırım Zekatı"
+  "zakatInvestmentZakat": "Yatırım Zekatı",
+  "chatbotGreeting": "Selamun Aleyküm! Ben İslami asistanınızım. Bana namaz, oruç, zekat veya dini konularda sorular sorabilirsiniz.",
+  "chatbotLimitReached": "Günlük soru limitinize ulaştınız. Sınırsız erişim için Premium'a geçin.",
+  "chatbotErrorMsg": "Bir cevap oluşturamadım. Lütfen tekrar deneyin.",
+  "chatbotOfflinePrompt": "Yerel Yapay Zeka modelini indirmek yaklaşık 1.5 GB alan gerektirir. İndirildikten sonra, Asistan tamamen çevrimdışı ve sınırsız çalışacaktır. \n\nİndirmeyi başlatmak ister misiniz?",
+  "chatbotOfflineSwitched": "Simüle edilmiş çevrimdışı yerel LLM moduna geçildi.",
+  "chatbotOfflineDownloadLabel": "İndir ve Uygula",
+  "downloadPreparing": "İndirme hazırlanıyor...",
+  "downloadingSurah": "{surah}. sure indiriliyor (Toplam: {total})",
+  "@downloadingSurah": {
+    "placeholders": {
+      "surah": {"type": "String"},
+      "total": {"type": "String"}
+    }
+  },
+  "downloadCompleted": "Bu hafız için tüm sureler zaten indirildi.",
+  "chatbotHint": "Bir soru sorun...",
+  "chatbotThinking": "Düşünüyor..."
 }
