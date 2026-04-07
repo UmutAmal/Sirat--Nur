@@ -1,7 +1,8 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class OfflineDownloadsPage extends StatefulWidget {
   const OfflineDownloadsPage({super.key});
@@ -141,10 +142,11 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
   @override
   Widget build(BuildContext context) {
     final reciterIds = OfflineReciters.reciters.keys.toList();
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Offline Manager'),
+        title: Text(l10n.downloadManager),
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh_rounded),

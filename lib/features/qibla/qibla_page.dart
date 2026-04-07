@@ -44,7 +44,7 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
               showDialog(
                 context: context,
                 builder: (ctx) => AlertDialog(
-                  title: const Text('Calibration', style: TextStyle(fontWeight: FontWeight.w900)),
+                  title: Text(l10n.qiblaCalibration, style: const TextStyle(fontWeight: FontWeight.w900)),
                   content: Text(l10n.calibrationRequiredFigure8),
                   actions: [
                     TextButton(onPressed: () => Navigator.pop(ctx), child: Text(l10n.ok)),

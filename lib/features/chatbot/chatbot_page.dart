@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/constants/islamic_chatbot_data.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 // ──────────────────────────────────────────────────────────────
 // Gemini API key — injected via --dart-define for production,
@@ -144,13 +145,14 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
     final queriesLeft = ref.watch(_queriesLeftProvider);
     final isLoading = ref.watch(_isLoadingProvider);
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       appBar: AppBar(
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text('Neural Assistant'),
+            Text(l10n.assistant),
             const SizedBox(width: 8),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
@@ -313,17 +315,18 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
   }
 
   void _showLocalAiDownloadDialog() {
+    final l10n = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Offline Local AI', style: TextStyle(fontWeight: FontWeight.w900)),
+        title: Text(l10n.offlineMode, style: const TextStyle(fontWeight: FontWeight.w900)),
         content: const Text(
           'Downloading the Local AI model requires ~1.5 GB of storage. '
           'Once downloaded, Neural Assistant will work completely offline without limits. '
           '\n\nWould you like to start the download?',
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+          TextButton(onPressed: () => Navigator.pop(ctx), child: Text(l10n.cancel)),
           ElevatedButton(
             style: ElevatedButton.styleFrom(backgroundColor: AppColors.emerald, foregroundColor: Colors.white),
             onPressed: () {

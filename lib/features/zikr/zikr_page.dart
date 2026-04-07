@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 final _zikrCountProvider = StateProvider<int>((ref) => 0);
 final _zikrTargetProvider = StateProvider<int>((ref) => 33);
@@ -28,10 +29,11 @@ class ZikrPage extends ConsumerWidget {
     final zikr = _zikrs[selectedIdx];
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final progress = target > 0 ? (count / target).clamp(0.0, 1.0) : 0.0;
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Zikr & Tasbih'),
+        title: Text(l10n.zikr),
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh_rounded),
@@ -138,7 +140,7 @@ class ZikrPage extends ConsumerWidget {
                 ),
               ),
             const SizedBox(height: 24),
-            Text('Tap the circle to count', style: TextStyle(
+            Text(l10n.tapToCount, style: TextStyle(
               fontSize: 13, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4))),
           ],
         ),

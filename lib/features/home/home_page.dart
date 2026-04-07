@@ -92,7 +92,7 @@ class HomePage extends ConsumerWidget {
                       ],
                     ),
                     const SizedBox(height: 12),
-                    const Text('Error loading content', style: TextStyle(color: Colors.red)),
+                    Text(l10n.error, style: const TextStyle(color: Colors.red)),
                   ],
                 ),
               ),
