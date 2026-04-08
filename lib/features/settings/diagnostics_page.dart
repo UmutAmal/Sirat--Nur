@@ -107,9 +107,7 @@ String resolveDiagnosticsVersion({
 
 @visibleForTesting
 bool isOfficialPrayerProfile(PrayerCalculationProfile profile) {
-  return normalizeCalculationMethod(profile.calculationMethod) !=
-          customPrayerMethod &&
-      profile.sourceUrl.trim().isNotEmpty;
+  return hasOfficialPrayerAuthority(profile);
 }
 
 @visibleForTesting

@@ -248,6 +248,12 @@ String displayMadhabLabel(String madhab) {
   }
 }
 
+bool hasOfficialPrayerAuthority(PrayerCalculationProfile profile) {
+  return normalizeCalculationMethod(profile.calculationMethod) !=
+          customPrayerMethod &&
+      profile.sourceUrl.trim().isNotEmpty;
+}
+
 PrayerCalculationProfile profileForMethod(String method, {String? madhab}) {
   final normalizedMethod = normalizeCalculationMethod(method);
   final normalizedMadhab = madhab == null ? null : normalizeMadhab(madhab);

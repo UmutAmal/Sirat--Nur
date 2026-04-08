@@ -62,14 +62,28 @@ void main() {
       expect(params.ishaAngle, isNull);
     });
 
-    test('builds Tehran profile with maghrib angle and jafari-compatible shadow factor', () {
-      final params = buildCalculationParameters(tehranPrayerMethod)
-        ..madhab = resolveAdhanMadhab(jafariMadhab);
+    test(
+      'builds Tehran profile with maghrib angle and jafari-compatible shadow factor',
+      () {
+        final params = buildCalculationParameters(tehranPrayerMethod)
+          ..madhab = resolveAdhanMadhab(jafariMadhab);
 
-      expect(params.fajrAngle, 17.7);
-      expect(params.maghribAngle, 4.5);
-      expect(params.ishaAngle, 14.0);
-      expect(params.madhab.name, 'shafi');
+        expect(params.fajrAngle, 17.7);
+        expect(params.maghribAngle, 4.5);
+        expect(params.ishaAngle, 14.0);
+        expect(params.madhab.name, 'shafi');
+      },
+    );
+
+    test('marks only institution-backed profiles as official authorities', () {
+      expect(
+        hasOfficialPrayerAuthority(profileForMethod(diyanetPrayerMethod)),
+        isTrue,
+      );
+      expect(
+        hasOfficialPrayerAuthority(profileForMethod(customPrayerMethod)),
+        isFalse,
+      );
     });
   });
 }

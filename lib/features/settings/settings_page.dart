@@ -18,6 +18,14 @@ class SettingsPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final settings = ref.watch(settingsProvider);
     final l10n = AppLocalizations.of(context)!;
+    final prayerProfile = profileForMethod(
+      settings.calculationMethod,
+      madhab: settings.madhab,
+    );
+    final prayerAuthorityIsOfficial = hasOfficialPrayerAuthority(prayerProfile);
+    final prayerAuthorityDetails = prayerAuthorityIsOfficial
+        ? '${prayerProfile.sourceName}\n${prayerProfile.sourceUrl}'
+        : l10n.diagnosticsPrayerCustomSource;
 
     return Scaffold(
       appBar: AppBar(
@@ -51,6 +59,45 @@ class SettingsPage extends ConsumerWidget {
                     title: l10n.madhab,
                     value: settings.madhab,
                     onTap: () => _showMadhabPicker(context, ref),
+                  ),
+                  const Divider(height: 1),
+                  ListTile(
+                    dense: true,
+                    contentPadding: EdgeInsets.zero,
+                    leading: Icon(
+                      Icons.verified_user_rounded,
+                      color: AppColors.emerald,
+                      size: 22,
+                    ),
+                    title: Text(
+                      l10n.diagnosticsPrayerSource,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 14,
+                      ),
+                    ),
+                    subtitle: Padding(
+                      padding: const EdgeInsets.only(top: 4),
+                      child: Text(
+                        prayerAuthorityDetails,
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.onSurface.withValues(alpha: 0.65),
+                        ),
+                      ),
+                    ),
+                    trailing: Icon(
+                      prayerAuthorityIsOfficial
+                          ? Icons.open_in_new_rounded
+                          : Icons.block_rounded,
+                      size: 20,
+                    ),
+                    onTap: prayerAuthorityIsOfficial
+                        ? () => launchUrl(Uri.parse(prayerProfile.sourceUrl))
+                        : null,
                   ),
                   const Divider(height: 1),
                   _settingsTile(

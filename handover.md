@@ -2010,3 +2010,42 @@
 ### Sonraki Adım
 - Sıradaki prayer şeffaflık turunda aynı resmî kaynak bilgisi diagnostics dışına taşınıp [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_page.dart) içinde ana prayer ayarları akışında doğrudan görünür hale getirilecek.
 - Böylece kullanıcı diagnostics ekranına girmeden de seçili ülke/bölge profili ve kurumsal kaynağı ana ayarlar ekranında görebilecek.
+
+## 2026-04-08 TUR-51 — Show Prayer Authority In Main Settings Flow
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_page.dart) prayer calculation kartına yeni bir `Prayer Authority` satırı eklendi.
+- Satır aktif profile göre [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_profile_service.dart) içinden kurum adı ve URL çözüyor; resmî kaynak varsa `open_in_new`, custom modda `block` ikonu gösteriyor.
+- Aynı servis içine `hasOfficialPrayerAuthority` helper’ı eklendi ve diagnostics ile settings aynı authority kuralını kullanacak şekilde hizalandı.
+- [A:\Way of Allah\sirat_i_nur\test\features\settings\settings_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/settings/settings_page_test.dart) eklendi; resmî kurum satırı ve custom mod dürüstlük durumu widget seviyesinde test edildi.
+- [A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/prayer_profile_service_test.dart) authority helper davranışıyla genişletildi.
+
+### Neden Yapıldı
+- Diagnostics ekranı prayer authority bilgisini gösteriyor olsa da ana ayarlar akışında kullanıcı hâlâ hangi kuruma göre namaz vakti üretildiğini göremiyordu.
+- Bu durum, ülke/bölgeye göre resmî profile hizalanan sistemin kullanıcı tarafından ana ekrandan doğrulanamamasına yol açıyordu.
+- Kök sebep, prayer authority bilgisinin yalnız servis katmanında ve diagnostics ekranında kalmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\settings_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kullanıcı artık prayer method ve madhab seçimlerinin hemen altında hangi resmî kurum kaynağının esas alındığını görebiliyor.
+- Resmî kaynak varsa kurum URL’si açılabiliyor; custom modda sahte tıklanabilirlik veya kurumsal otorite izlenimi verilmiyor.
+- Settings ve diagnostics authority karar mantığı tek helper üzerinden hizalandığı için drift riski azaldı.
+
+### Test Sonucu
+- `flutter test test/prayer_profile_service_test.dart` → PASS (`8/8`)
+- `flutter test test/features/settings/settings_page_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`149/149`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Prayer authority visibility existing only in diagnostics instead of the main settings flow: `7/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki turda prayer/settings yüzeyindeki kalan hardcoded about/share/version akışı runtime metadata ve localization zincirine taşınacak.
+- Ardından prayer-notification zincirinde bölge/timezone bazlı kenar durumlar yeniden taranacak.
