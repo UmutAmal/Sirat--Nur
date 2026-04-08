@@ -491,5 +491,21 @@
   },
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place"
+  "islamicPlaceFallback": "Islamic Place",
+  "prayerNotificationTitle": "የ{prayerName} ጊዜ",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} ለመጸለይ ጊዜው አሁን ነው።",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

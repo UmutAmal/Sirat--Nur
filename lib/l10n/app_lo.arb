@@ -17,12 +17,12 @@
   "madhab": "Asr Juristic Method",
   "surahs": "Surahs",
   "ayahs": "Ayahs",
-  "fajr": "Fajr",
-  "sunrise": "Sunrise",
+  "fajr": "ຟາຈ",
+  "sunrise": "ຕາເວັນຂຶ້ນ",
   "dhuhr": "Dhuhr",
   "asr": "Asr",
   "maghrib": "Maghrib",
-  "isha": "Isha",
+  "isha": "ອິຊາ",
   "dataStorage": "Data & Storage",
   "clearCache": "Clear Cache",
   "cacheClearedSuccess": "Cache cleared successfully",
@@ -491,5 +491,21 @@
   },
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place"
+  "islamicPlaceFallback": "Islamic Place",
+  "prayerNotificationTitle": "ເວລາສຳລັບ {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "ມັນແມ່ນເວລາທີ່ຈະອະທິຖານ {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

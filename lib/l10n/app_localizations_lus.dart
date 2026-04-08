@@ -78,6 +78,16 @@ class AppLocalizationsLus extends AppLocalizations {
   String get isha => 'Isha chuan';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName hun hman a ni.';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '$prayerName tawngtai a hun ta.';
+  }
+
+  @override
   String get dataStorage => 'Data & Storage a ni';
 
   @override

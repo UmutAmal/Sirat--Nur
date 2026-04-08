@@ -491,5 +491,21 @@
   },
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place"
+  "islamicPlaceFallback": "Islamic Place",
+  "prayerNotificationTitle": "Bere a wɔde yɛ {prayerName}.",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Ɛyɛ bere a ɛsɛ sɛ yɛbɔ mpae {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

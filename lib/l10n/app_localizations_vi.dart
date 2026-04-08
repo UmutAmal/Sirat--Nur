@@ -63,7 +63,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'Bình minh';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -76,6 +76,16 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get isha => 'Isha';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Đã đến lúc dành cho $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Đã đến lúc cầu nguyện $prayerName.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

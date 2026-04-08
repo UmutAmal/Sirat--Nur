@@ -492,5 +492,21 @@
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
-  "eidAdha": "Hari Raya Aidiladha"
+  "eidAdha": "Hari Raya Aidiladha",
+  "prayerNotificationTitle": "Masa untuk {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Sudah tiba masanya untuk berdoa {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

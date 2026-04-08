@@ -18,10 +18,10 @@
   "surahs": "Surahs",
   "ayahs": "Ayahs",
   "fajr": "Fajr",
-  "sunrise": "Sunrise",
+  "sunrise": "Răsărit de soare",
   "dhuhr": "Dhuhr",
   "asr": "Asr",
-  "maghrib": "Maghrib",
+  "maghrib": "Magribul",
   "isha": "Isha",
   "dataStorage": "Data & Storage",
   "clearCache": "Clear Cache",
@@ -491,5 +491,21 @@
   },
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place"
+  "islamicPlaceFallback": "Islamic Place",
+  "prayerNotificationTitle": "Este timpul pentru {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Este timpul să ne rugăm {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

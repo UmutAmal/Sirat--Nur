@@ -60,10 +60,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get ayahs => 'Ayahs';
 
   @override
-  String get fajr => 'Fajr';
+  String get fajr => 'Fecr';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'Rohilatî';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -76,6 +76,16 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get isha => 'Isha';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Dema $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Wextê duakirinê ye $prayerName.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

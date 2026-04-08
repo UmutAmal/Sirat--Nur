@@ -17,12 +17,12 @@
   "madhab": "Asr Juristic Method",
   "surahs": "Surahs",
   "ayahs": "Ayahs",
-  "fajr": "Fajr",
-  "sunrise": "Sunrise",
+  "fajr": "Karaka",
+  "sunrise": "Te whitinga o te ra",
   "dhuhr": "Dhuhr",
-  "asr": "Asr",
+  "asr": "Ko Asr",
   "maghrib": "Maghrib",
-  "isha": "Isha",
+  "isha": "Iha",
   "dataStorage": "Data & Storage",
   "clearCache": "Clear Cache",
   "cacheClearedSuccess": "Cache cleared successfully",
@@ -491,5 +491,21 @@
   },
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place"
+  "islamicPlaceFallback": "Islamic Place",
+  "prayerNotificationTitle": "Te wa mo {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Kua tae ki te wa ki te inoi {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

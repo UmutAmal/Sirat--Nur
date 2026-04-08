@@ -17,12 +17,12 @@
   "madhab": "Asr Juristic Method",
   "surahs": "Surahs",
   "ayahs": "Ayahs",
-  "fajr": "Fajr",
-  "sunrise": "Sunrise",
-  "dhuhr": "Dhuhr",
-  "asr": "Asr",
-  "maghrib": "Maghrib",
-  "isha": "Isha",
+  "fajr": "ファジル",
+  "sunrise": "日の出",
+  "dhuhr": "ドゥフル",
+  "asr": "アスル",
+  "maghrib": "マグリブ",
+  "isha": "イシャ",
   "dataStorage": "Data & Storage",
   "clearCache": "Clear Cache",
   "cacheClearedSuccess": "Cache cleared successfully",
@@ -491,5 +491,21 @@
   },
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place"
+  "islamicPlaceFallback": "Islamic Place",
+  "prayerNotificationTitle": "{prayerName}の時間です",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} を祈る時間です。",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

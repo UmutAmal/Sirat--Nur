@@ -18,11 +18,11 @@
   "surahs": "Surahs",
   "ayahs": "Ayahs",
   "fajr": "Fajr",
-  "sunrise": "Sunrise",
-  "dhuhr": "Dhuhr",
+  "sunrise": "ព្រះអាទិត្យរះ",
+  "dhuhr": "ឌូហរ",
   "asr": "Asr",
-  "maghrib": "Maghrib",
-  "isha": "Isha",
+  "maghrib": "ម៉ាហ្គ្រីប",
+  "isha": "អ៊ីសា",
   "dataStorage": "Data & Storage",
   "clearCache": "Clear Cache",
   "cacheClearedSuccess": "Cache cleared successfully",
@@ -491,5 +491,21 @@
   },
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place"
+  "islamicPlaceFallback": "Islamic Place",
+  "prayerNotificationTitle": "ពេលវេលាសម្រាប់ {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "ដល់ពេលអធិស្ឋាន {prayerName}។",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

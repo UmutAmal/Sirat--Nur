@@ -78,6 +78,16 @@ class AppLocalizationsUr extends AppLocalizations {
   String get isha => 'عشاء';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName کا وقت';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'یہ نماز کا وقت ہے $prayerName۔';
+  }
+
+  @override
   String get dataStorage => 'ڈیٹا اور اسٹوریج';
 
   @override

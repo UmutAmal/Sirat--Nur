@@ -18,11 +18,11 @@
   "surahs": "Surahs",
   "ayahs": "Ayahs",
   "fajr": "Fajr",
-  "sunrise": "Sunrise",
+  "sunrise": "Günüň dogmagy",
   "dhuhr": "Dhuhr",
   "asr": "Asr",
-  "maghrib": "Maghrib",
-  "isha": "Isha",
+  "maghrib": "Magrib",
+  "isha": "Işa",
   "dataStorage": "Data & Storage",
   "clearCache": "Clear Cache",
   "cacheClearedSuccess": "Cache cleared successfully",
@@ -491,5 +491,21 @@
   },
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place"
+  "islamicPlaceFallback": "Islamic Place",
+  "prayerNotificationTitle": "{prayerName} wagty",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} doga etmegiň wagty geldi.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

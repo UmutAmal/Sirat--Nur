@@ -18,7 +18,7 @@
   "surahs": "Surahs",
   "ayahs": "Ayahs",
   "fajr": "Fajr",
-  "sunrise": "Sunrise",
+  "sunrise": "Soluppgång",
   "dhuhr": "Dhuhr",
   "asr": "Asr",
   "maghrib": "Maghrib",
@@ -491,5 +491,21 @@
   },
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place"
+  "islamicPlaceFallback": "Islamic Place",
+  "prayerNotificationTitle": "Dags för {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Det är dags att be {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

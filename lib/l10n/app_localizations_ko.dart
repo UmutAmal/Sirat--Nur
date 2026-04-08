@@ -60,22 +60,32 @@ class AppLocalizationsKo extends AppLocalizations {
   String get ayahs => 'Ayahs';
 
   @override
-  String get fajr => 'Fajr';
+  String get fajr => '파즈르';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => '해돋이';
 
   @override
-  String get dhuhr => 'Dhuhr';
+  String get dhuhr => '두르';
 
   @override
   String get asr => 'Asr';
 
   @override
-  String get maghrib => 'Maghrib';
+  String get maghrib => '마그리브';
 
   @override
-  String get isha => 'Isha';
+  String get isha => '이샤';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName 시간입니다';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '이제 $prayerName을(를) 기도할 시간입니다.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

@@ -79,6 +79,16 @@ class AppLocalizationsNso extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Nako ya $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Ke nako ya go rapela $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Datha & Polokelo';
 
   @override

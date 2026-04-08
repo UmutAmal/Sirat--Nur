@@ -17,12 +17,12 @@
   "madhab": "Asr Juristic Method",
   "surahs": "Surahs",
   "ayahs": "Ayahs",
-  "fajr": "Fajr",
-  "sunrise": "Sunrise",
-  "dhuhr": "Dhuhr",
-  "asr": "Asr",
-  "maghrib": "Maghrib",
-  "isha": "Isha",
+  "fajr": "ਫਜਰ",
+  "sunrise": "ਸੂਰਜ ਚੜ੍ਹਨਾ",
+  "dhuhr": "ਧੂਹਰ",
+  "asr": "ਐਸ.ਆਰ",
+  "maghrib": "ਮਗਰੀਬ",
+  "isha": "ਈਸ਼ਾ",
   "dataStorage": "Data & Storage",
   "clearCache": "Clear Cache",
   "cacheClearedSuccess": "Cache cleared successfully",
@@ -491,5 +491,21 @@
   },
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place"
+  "islamicPlaceFallback": "Islamic Place",
+  "prayerNotificationTitle": "{prayerName} ਦਾ ਸਮਾਂ",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "ਇਹ ਪ੍ਰਾਰਥਨਾ ਦਾ ਸਮਾਂ ਹੈ {prayerName}।",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

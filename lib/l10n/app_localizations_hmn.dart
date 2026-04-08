@@ -78,6 +78,16 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Sijhawm rau $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Nws yog lub sij hawm thov Vajtswv $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Cov ntaub ntawv & Cia';
 
   @override

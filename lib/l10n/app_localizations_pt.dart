@@ -63,19 +63,29 @@ class AppLocalizationsPt extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'Nascer do sol';
 
   @override
-  String get dhuhr => 'Dhuhr';
+  String get dhuhr => 'Duhr';
 
   @override
   String get asr => 'Asr';
 
   @override
-  String get maghrib => 'Maghrib';
+  String get maghrib => 'Magreb';
 
   @override
   String get isha => 'Isha';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Hora de $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'É hora de orar $prayerName.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

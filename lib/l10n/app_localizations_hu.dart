@@ -63,7 +63,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'Napkelte';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -76,6 +76,16 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get isha => 'Isha';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Ideje a $prayerName számára';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Ideje imádkozni: $prayerName.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

@@ -78,6 +78,16 @@ class AppLocalizationsTr extends AppLocalizations {
   String get isha => 'Yatsı';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName vakti';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '$prayerName vakti geldi.';
+  }
+
+  @override
   String get dataStorage => 'Veri ve Depolama';
 
   @override

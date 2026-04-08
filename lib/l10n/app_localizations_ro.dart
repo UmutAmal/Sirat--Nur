@@ -63,7 +63,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'Răsărit de soare';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -72,10 +72,20 @@ class AppLocalizationsRo extends AppLocalizations {
   String get asr => 'Asr';
 
   @override
-  String get maghrib => 'Maghrib';
+  String get maghrib => 'Magribul';
 
   @override
   String get isha => 'Isha';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Este timpul pentru $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Este timpul să ne rugăm $prayerName.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

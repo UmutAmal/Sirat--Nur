@@ -63,19 +63,29 @@ class AppLocalizationsKm extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'ព្រះអាទិត្យរះ';
 
   @override
-  String get dhuhr => 'Dhuhr';
+  String get dhuhr => 'ឌូហរ';
 
   @override
   String get asr => 'Asr';
 
   @override
-  String get maghrib => 'Maghrib';
+  String get maghrib => 'ម៉ាហ្គ្រីប';
 
   @override
-  String get isha => 'Isha';
+  String get isha => 'អ៊ីសា';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'ពេលវេលាសម្រាប់ $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'ដល់ពេលអធិស្ឋាន $prayerName។';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

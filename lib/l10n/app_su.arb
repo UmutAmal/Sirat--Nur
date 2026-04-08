@@ -17,11 +17,11 @@
   "madhab": "Asr Juristic Method",
   "surahs": "Surahs",
   "ayahs": "Ayahs",
-  "fajr": "Fajr",
-  "sunrise": "Sunrise",
-  "dhuhr": "Dhuhr",
-  "asr": "Asr",
-  "maghrib": "Maghrib",
+  "fajr": "Subuh",
+  "sunrise": "Panonpoé surup",
+  "dhuhr": "Dzuhur",
+  "asr": "Asar",
+  "maghrib": "Magrib",
   "isha": "Isha",
   "dataStorage": "Data & Storage",
   "clearCache": "Clear Cache",
@@ -491,5 +491,21 @@
   },
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place"
+  "islamicPlaceFallback": "Islamic Place",
+  "prayerNotificationTitle": "Waktu keur {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Geus waktuna pikeun ngadoa {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

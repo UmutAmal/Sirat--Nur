@@ -96,23 +96,19 @@ class AdhanSchedulerService {
 
     int baseId = dayIndex * 10;
     final now = TimezoneUtils.nowForTimezone(timezoneName);
-    final normalizedLanguageCode = languageCode
-        .split(RegExp(r'[-_]'))
-        .first
-        .toLowerCase();
-    final isTr = normalizedLanguageCode == 'tr';
+    final normalizedLanguageCode = languageCode.trim();
 
     for (var entry in dailyPrayers.entries) {
       if (entry.value.isBefore(now)) continue;
 
-      final localizedName = PrayerLocalizer.localize(
+      final title = PrayerLocalizer.notificationTitle(
         entry.key,
         normalizedLanguageCode,
       );
-      final title = isTr ? '$localizedName Vakti' : 'Time for $localizedName';
-      final body = isTr
-          ? '$localizedName vakti geldi.'
-          : 'It is time to pray $localizedName.';
+      final body = PrayerLocalizer.notificationBody(
+        entry.key,
+        normalizedLanguageCode,
+      );
 
       await _notifications.zonedSchedule(
         id: baseId++,

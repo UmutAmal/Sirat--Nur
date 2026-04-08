@@ -78,6 +78,16 @@ class AppLocalizationsZh extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Time for $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'It is time to pray $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Data & Storage';
 
   @override
@@ -1158,6 +1168,16 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get isha => '伊莎';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName 时间到了';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '是时候祈祷$prayerName了。';
+  }
+
+  @override
   String get dataStorage => '数据与存储';
 
   @override
@@ -2234,6 +2254,16 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get isha => '伊莎';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName 時間到了';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '是時候祈禱$prayerName了。';
+  }
 
   @override
   String get dataStorage => '資料與儲存';

@@ -60,22 +60,32 @@ class AppLocalizationsSi extends AppLocalizations {
   String get ayahs => 'Ayahs';
 
   @override
-  String get fajr => 'Fajr';
+  String get fajr => 'ෆජ්ර්';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'හිරු උදාව';
 
   @override
   String get dhuhr => 'Dhuhr';
 
   @override
-  String get asr => 'Asr';
+  String get asr => 'අසර්';
 
   @override
-  String get maghrib => 'Maghrib';
+  String get maghrib => 'මැග්රිබ්';
 
   @override
-  String get isha => 'Isha';
+  String get isha => 'ඉෂා';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName සඳහා වේලාව';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '$prayerName යාච්ඤා කිරීමට කාලයයි.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

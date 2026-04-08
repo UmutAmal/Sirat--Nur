@@ -79,6 +79,16 @@ class AppLocalizationsGn extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Aravo $prayerName rehegua.';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Oguahẽma ára ñañembo\'e haguã $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Datos & Ñeñongatuha';
 
   @override

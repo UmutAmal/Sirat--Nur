@@ -78,6 +78,16 @@ class AppLocalizationsBho extends AppLocalizations {
   String get isha => 'ईशा के बा';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName के समय।';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '$prayerName प्रार्थना करे के समय आ गईल बा।';
+  }
+
+  @override
   String get dataStorage => 'डाटा एंड स्टोरेज के बारे में बतावल गइल बा';
 
   @override

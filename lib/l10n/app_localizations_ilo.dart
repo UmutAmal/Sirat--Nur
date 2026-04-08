@@ -78,6 +78,16 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Oras para iti $prayerName.';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Panawenen ti panagkararag $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Datos & Pagidulin';
 
   @override

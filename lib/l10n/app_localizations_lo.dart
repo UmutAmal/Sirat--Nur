@@ -60,10 +60,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get ayahs => 'Ayahs';
 
   @override
-  String get fajr => 'Fajr';
+  String get fajr => 'ຟາຈ';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'ຕາເວັນຂຶ້ນ';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -75,7 +75,17 @@ class AppLocalizationsLo extends AppLocalizations {
   String get maghrib => 'Maghrib';
 
   @override
-  String get isha => 'Isha';
+  String get isha => 'ອິຊາ';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'ເວລາສຳລັບ $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'ມັນແມ່ນເວລາທີ່ຈະອະທິຖານ $prayerName.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

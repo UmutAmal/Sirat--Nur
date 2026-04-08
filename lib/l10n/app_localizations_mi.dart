@@ -60,22 +60,32 @@ class AppLocalizationsMi extends AppLocalizations {
   String get ayahs => 'Ayahs';
 
   @override
-  String get fajr => 'Fajr';
+  String get fajr => 'Karaka';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'Te whitinga o te ra';
 
   @override
   String get dhuhr => 'Dhuhr';
 
   @override
-  String get asr => 'Asr';
+  String get asr => 'Ko Asr';
 
   @override
   String get maghrib => 'Maghrib';
 
   @override
-  String get isha => 'Isha';
+  String get isha => 'Iha';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Te wa mo $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Kua tae ki te wa ki te inoi $prayerName.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

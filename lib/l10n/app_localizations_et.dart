@@ -78,6 +78,16 @@ class AppLocalizationsEt extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Aeg $prayerName jaoks';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'On aeg palvetada $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Andmed ja salvestusruum';
 
   @override

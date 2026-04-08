@@ -60,10 +60,10 @@ class AppLocalizationsZu extends AppLocalizations {
   String get ayahs => 'Ayahs';
 
   @override
-  String get fajr => 'Fajr';
+  String get fajr => 'I-Fajr';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'Ukuphuma kwelanga';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -76,6 +76,16 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get isha => 'Isha';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Isikhathi se-$prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Isikhathi sokuthandaza $prayerName.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

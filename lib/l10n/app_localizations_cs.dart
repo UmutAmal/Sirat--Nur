@@ -78,6 +78,16 @@ class AppLocalizationsCs extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Čas na $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Je čas se modlit $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Data a úložiště';
 
   @override

@@ -63,7 +63,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'Günüň dogmagy';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -72,10 +72,20 @@ class AppLocalizationsTk extends AppLocalizations {
   String get asr => 'Asr';
 
   @override
-  String get maghrib => 'Maghrib';
+  String get maghrib => 'Magrib';
 
   @override
-  String get isha => 'Isha';
+  String get isha => 'Işa';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName wagty';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '$prayerName doga etmegiň wagty geldi.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

@@ -78,6 +78,16 @@ class AppLocalizationsNy extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Nthawi ya $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Yakwana nthawi yopemphera $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Data & Kusunga';
 
   @override

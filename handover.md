@@ -2131,3 +2131,47 @@
 ### Sonraki Adım
 - Sıradaki prayer pipeline turunda scheduler ile widget/provider zinciri arasında kalan locale/title ve audio channel yüzeyi yeniden taranacak.
 - Ardından settings/about dışında kalan orphan ve hardcoded yüzeyler için yeni P1/P2 sıralaması çıkarılacak.
+
+## 2026-04-08 TUR-54 — Localize Prayer Notification Copy Across All Locales
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\utils\prayer_name_localization.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/utils/prayer_name_localization.dart) statik 20-dil map yaklaşımından çıkarıldı; prayer name ve notification copy artık generated [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations.dart) üzerinden çözülüyor.
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/adhan_scheduler_service.dart) içindeki TR/EN hardcoded title-body üretimi kaldırıldı; scheduler artık locale-aware notification title/body helper’larını kullanıyor.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) ve tüm `app_*.arb` dosyalarına `prayerNotificationTitle` ile `prayerNotificationBody` placeholder anahtarları eklendi; generated localization dosyaları yenilendi.
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) eklendi; seçili ARB anahtarlarını 196 locale setine placeholder imzasını koruyarak çeviriyor ve yanlış placeholder içeren mevcut değerleri yeniden üretebiliyor.
+- [A:\Way of Allah\sirat_i_nur\test\prayer_name_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/prayer_name_localization_test.dart) eklendi; generated prayer names, localized TR notification copy ve English fallback kilitlendi.
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/adhan_scheduler_service.dart) title/body tarafında yalnızca Türkçe ve İngilizce cümle şablonu kullanıyordu.
+- Bu akışta Almanca, Fransızca, Arapça, Endonezce ve diğer tüm locale’ler kısmi veya tam İngilizce notification cümlesi alıyordu; AGENTS.md’deki tam localization zinciri kuralı delinmişti.
+- Kök sebep, prayer notification copy’nin ARB zincirine hiç girmemesi ve prayer names için sınırlı dil setine sahip ayrı bir hardcoded map kullanılmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\prayer_name_localization.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_name_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Namaz isimleri ve bildirim cümleleri artık aynı localization kaynağından çözülüyor; scheduler ve widget/localizer zinciri ayrışmıyor.
+- Yeni notification copy tüm locale setine placeholder-safe şekilde yayıldı; ICU syntax kırığı self-heal edilerek kapatıldı.
+- Dini içerik doğruluğu denetiminde asıl bir sonraki yüksek riskin [A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/islamic_chatbot_data.dart) olduğu netleşti: İngilizce response blokları Türkçe/karma içerik ve doğruluk riski taşıyor.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart fajr sunrise dhuhr asr maghrib isha prayerNotificationTitle prayerNotificationBody` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/prayer_name_localization_test.dart` → PASS (`3/3`)
+- `flutter test test/arb_coverage_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`155/155`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Prayer notifications using TR/EN-only hardcoded copy outside the ARB chain: `9/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/islamic_chatbot_data.dart) içerik bazlı doğruluk, dil tutarlılığı ve kaynak dürüstlüğü açısından satır satır temizlenecek.
+- Özellikle İngilizce response bloklarındaki Türkçe metin, hatalı dua/transliterasyon ve “4 temel unsur” deyip 6 unsur listeleme gibi semantik hatalar kök sebep düzeyinde giderilecek.

@@ -78,6 +78,16 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Oras para sa $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Panahon na sa pag-ampo $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Data ug Pagtipig';
 
   @override

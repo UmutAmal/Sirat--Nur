@@ -78,6 +78,16 @@ class AppLocalizationsEu extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName egiteko ordua';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '$prayerName otoitz egiteko garaia da.';
+  }
+
+  @override
   String get dataStorage => 'Datuak eta biltegiratzea';
 
   @override

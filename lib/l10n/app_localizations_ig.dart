@@ -63,19 +63,29 @@ class AppLocalizationsIg extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'Ọwụwa anyanwụ';
 
   @override
-  String get dhuhr => 'Dhuhr';
+  String get dhuhr => 'Dhuh';
 
   @override
   String get asr => 'Asr';
 
   @override
-  String get maghrib => 'Maghrib';
+  String get maghrib => 'Magrib';
 
   @override
   String get isha => 'Isha';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Oge maka $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Oge eruola ikpe ekpere $prayerName.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

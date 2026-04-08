@@ -78,6 +78,16 @@ class AppLocalizationsCy extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Amser ar gyfer $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Mae\'n amser i weddïo $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Data a Storio';
 
   @override

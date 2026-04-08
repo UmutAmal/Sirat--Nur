@@ -78,6 +78,16 @@ class AppLocalizationsCo extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Tempu per $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Hè u tempu di pricà $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Dati & Storage';
 
   @override

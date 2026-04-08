@@ -78,6 +78,16 @@ class AppLocalizationsTl extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Oras para sa $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Oras na para manalangin ng $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Data at Imbakan';
 
   @override

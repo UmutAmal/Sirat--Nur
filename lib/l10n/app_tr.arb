@@ -23,6 +23,22 @@
   "asr": "İkindi",
   "maghrib": "Akşam",
   "isha": "Yatsı",
+  "prayerNotificationTitle": "{prayerName} vakti",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} vakti geldi.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Veri ve Depolama",
   "clearCache": "Önbelleği Temizle",
   "cacheClearedSuccess": "Önbellek başarıyla temizlendi",

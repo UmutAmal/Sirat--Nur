@@ -78,6 +78,16 @@ class AppLocalizationsEo extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Tempo por $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Estas tempo preĝi $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Datumoj kaj Stokado';
 
   @override

@@ -63,19 +63,29 @@ class AppLocalizationsYi extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'זונופגאַנג';
 
   @override
-  String get dhuhr => 'Dhuhr';
+  String get dhuhr => 'דהוהר';
 
   @override
   String get asr => 'Asr';
 
   @override
-  String get maghrib => 'Maghrib';
+  String get maghrib => 'מאַהריב';
 
   @override
-  String get isha => 'Isha';
+  String get isha => 'ישא';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'צייט פֿאַר $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'עס איז צייט צו דאַוונען $prayerName.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

@@ -69,13 +69,23 @@ class AppLocalizationsUg extends AppLocalizations {
   String get dhuhr => 'Dhuhr';
 
   @override
-  String get asr => 'Asr';
+  String get asr => 'ئەسر';
 
   @override
   String get maghrib => 'Maghrib';
 
   @override
   String get isha => 'Isha';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '$prayerName دۇئا قىلىدىغان ۋاقىت كەلدى.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

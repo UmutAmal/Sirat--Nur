@@ -78,6 +78,16 @@ class AppLocalizationsEe extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Ɣeyiɣi na $prayerName.';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Ɣeyiɣia de be míado gbe ɖa $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Nyatakakawo & Nudzraɖoƒe';
 
   @override

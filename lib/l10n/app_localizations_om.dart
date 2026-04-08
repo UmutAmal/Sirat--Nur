@@ -63,7 +63,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'Biiftuu bahuu';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -72,10 +72,20 @@ class AppLocalizationsOm extends AppLocalizations {
   String get asr => 'Asr';
 
   @override
-  String get maghrib => 'Maghrib';
+  String get maghrib => 'Maghrib jedhamuun beekama';
 
   @override
-  String get isha => 'Isha';
+  String get isha => 'Ishaa';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Yeroo $prayerName.';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Yeroon kadhannaa $prayerName amma.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

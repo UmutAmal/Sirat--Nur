@@ -79,6 +79,16 @@ class AppLocalizationsDv extends AppLocalizations {
   String get isha => 'އިޝާއެވެ';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName އަށް ވަގުތު';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '$prayerName ނަމާދު ކުރަންވީ ވަގުތެވެ.';
+  }
+
+  @override
   String get dataStorage => 'ޑޭޓާ އެންޑް ސްޓޯރޭޖް';
 
   @override

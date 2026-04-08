@@ -1,29 +1,58 @@
-/// Prayer name localization for all 20 supported languages.
+import 'package:flutter/widgets.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
+
 class PrayerLocalizer {
-  static String localize(String prayerName, String langCode) {
-    return _translations[langCode]?[prayerName] ?? prayerName;
+  static String localize(String prayerName, String languageCode) {
+    final l10n = _lookup(languageCode);
+    switch (prayerName) {
+      case 'Fajr':
+        return l10n.fajr;
+      case 'Sunrise':
+        return l10n.sunrise;
+      case 'Dhuhr':
+        return l10n.dhuhr;
+      case 'Asr':
+        return l10n.asr;
+      case 'Maghrib':
+        return l10n.maghrib;
+      case 'Isha':
+        return l10n.isha;
+      default:
+        return prayerName;
+    }
   }
 
-  static const Map<String, Map<String, String>> _translations = {
-    'en': {'Fajr': 'Fajr', 'Sunrise': 'Sunrise', 'Dhuhr': 'Dhuhr', 'Asr': 'Asr', 'Maghrib': 'Maghrib', 'Isha': 'Isha'},
-    'tr': {'Fajr': 'İmsak', 'Sunrise': 'Güneş', 'Dhuhr': 'Öğle', 'Asr': 'İkindi', 'Maghrib': 'Akşam', 'Isha': 'Yatsı'},
-    'ar': {'Fajr': 'الفجر', 'Sunrise': 'الشروق', 'Dhuhr': 'الظهر', 'Asr': 'العصر', 'Maghrib': 'المغرب', 'Isha': 'العشاء'},
-    'de': {'Fajr': 'Fadschr', 'Sunrise': 'Sonnenaufgang', 'Dhuhr': 'Dhuhr', 'Asr': 'Asr', 'Maghrib': 'Maghrib', 'Isha': 'Ischa'},
-    'fr': {'Fajr': 'Fajr', 'Sunrise': 'Lever du soleil', 'Dhuhr': 'Dohr', 'Asr': 'Asr', 'Maghrib': 'Maghreb', 'Isha': 'Isha'},
-    'es': {'Fajr': 'Fayr', 'Sunrise': 'Amanecer', 'Dhuhr': 'Dhuhr', 'Asr': 'Asr', 'Maghrib': 'Magrib', 'Isha': 'Isha'},
-    'pt': {'Fajr': 'Fajr', 'Sunrise': 'Nascer do sol', 'Dhuhr': 'Dhuhr', 'Asr': 'Asr', 'Maghrib': 'Maghrib', 'Isha': 'Isha'},
-    'it': {'Fajr': 'Fajr', 'Sunrise': 'Alba', 'Dhuhr': 'Dhuhr', 'Asr': 'Asr', 'Maghrib': 'Maghrib', 'Isha': 'Isha'},
-    'nl': {'Fajr': 'Fajr', 'Sunrise': 'Zonsopgang', 'Dhuhr': 'Dhuhr', 'Asr': 'Asr', 'Maghrib': 'Maghrib', 'Isha': 'Isha'},
-    'ru': {'Fajr': 'Фаджр', 'Sunrise': 'Восход', 'Dhuhr': 'Зухр', 'Asr': 'Аср', 'Maghrib': 'Магриб', 'Isha': 'Иша'},
-    'ur': {'Fajr': 'فجر', 'Sunrise': 'طلوع آفتاب', 'Dhuhr': 'ظہر', 'Asr': 'عصر', 'Maghrib': 'مغرب', 'Isha': 'عشاء'},
-    'fa': {'Fajr': 'صبح', 'Sunrise': 'طلوع', 'Dhuhr': 'ظهر', 'Asr': 'عصر', 'Maghrib': 'مغرب', 'Isha': 'عشاء'},
-    'id': {'Fajr': 'Subuh', 'Sunrise': 'Syuruq', 'Dhuhr': 'Dzuhur', 'Asr': 'Ashar', 'Maghrib': 'Maghrib', 'Isha': 'Isya'},
-    'ms': {'Fajr': 'Subuh', 'Sunrise': 'Syuruk', 'Dhuhr': 'Zohor', 'Asr': 'Asar', 'Maghrib': 'Maghrib', 'Isha': 'Isyak'},
-    'bn': {'Fajr': 'ফজর', 'Sunrise': 'সূর্যোদয়', 'Dhuhr': 'যোহর', 'Asr': 'আসর', 'Maghrib': 'মাগরিব', 'Isha': 'এশা'},
-    'bs': {'Fajr': 'Sabah', 'Sunrise': 'Izlazak', 'Dhuhr': 'Podne', 'Asr': 'Ikindija', 'Maghrib': 'Akšam', 'Isha': 'Jacija'},
-    'zh': {'Fajr': '晨礼', 'Sunrise': '日出', 'Dhuhr': '晌礼', 'Asr': '晡礼', 'Maghrib': '昏礼', 'Isha': '宵礼'},
-    'ja': {'Fajr': 'ファジュル', 'Sunrise': '日の出', 'Dhuhr': 'ズフル', 'Asr': 'アスル', 'Maghrib': 'マグリブ', 'Isha': 'イシャー'},
-    'ko': {'Fajr': '파즈르', 'Sunrise': '일출', 'Dhuhr': '주흐르', 'Asr': '아스르', 'Maghrib': '마그리브', 'Isha': '이샤'},
-    'sw': {'Fajr': 'Alfajiri', 'Sunrise': 'Sunrise', 'Dhuhr': 'Adhuhuri', 'Asr': 'Alasiri', 'Maghrib': 'Magharibi', 'Isha': 'Ishaa'},
-  };
+  static String notificationTitle(String prayerName, String languageCode) {
+    final l10n = _lookup(languageCode);
+    return l10n.prayerNotificationTitle(localize(prayerName, languageCode));
+  }
+
+  static String notificationBody(String prayerName, String languageCode) {
+    final l10n = _lookup(languageCode);
+    return l10n.prayerNotificationBody(localize(prayerName, languageCode));
+  }
+
+  static AppLocalizations _lookup(String languageCode) {
+    try {
+      return lookupAppLocalizations(_parseLocale(languageCode));
+    } catch (_) {
+      return lookupAppLocalizations(const Locale('en'));
+    }
+  }
+
+  static Locale _parseLocale(String languageCode) {
+    final normalized = languageCode.trim().replaceAll('-', '_');
+    if (normalized.isEmpty) {
+      return const Locale('en');
+    }
+
+    final parts = normalized.split('_');
+    final language = parts.first.toLowerCase();
+    if (parts.length == 1) {
+      return Locale(language);
+    }
+
+    final country = parts[1].toUpperCase();
+    return Locale(language, country);
+  }
 }

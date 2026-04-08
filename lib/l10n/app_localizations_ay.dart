@@ -78,6 +78,16 @@ class AppLocalizationsAy extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName ukan pachapa.';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '$prayerName mayiñ pachaw purini.';
+  }
+
+  @override
   String get dataStorage => 'Datos & Almacenamiento ukax mä juk’a pachanakanwa';
 
   @override

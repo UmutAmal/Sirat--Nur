@@ -78,6 +78,16 @@ class AppLocalizationsKri extends AppLocalizations {
   String get isha => 'Isha we de na di wɔl';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Taym fɔ $prayerName.';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Na tɛm fɔ pre $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Data & Stɔrej';
 
   @override

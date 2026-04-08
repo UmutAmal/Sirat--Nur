@@ -78,6 +78,16 @@ class AppLocalizationsAm extends AppLocalizations {
   String get isha => 'ኢሻ';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'የ$prayerName ጊዜ';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return '$prayerName ለመጸለይ ጊዜው አሁን ነው።';
+  }
+
+  @override
   String get dataStorage => 'ውሂብ እና ማከማቻ';
 
   @override

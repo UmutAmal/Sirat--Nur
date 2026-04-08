@@ -78,6 +78,16 @@ class AppLocalizationsAk extends AppLocalizations {
   String get isha => 'Isha na ɔyɛ';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Bere a wɔde yɛ $prayerName.';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Ɛyɛ bere a ɛsɛ sɛ yɛbɔ mpae $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Data & Nneɛma a Wɔkora So';
 
   @override

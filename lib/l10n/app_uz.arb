@@ -17,11 +17,11 @@
   "madhab": "Asr Juristic Method",
   "surahs": "Surahs",
   "ayahs": "Ayahs",
-  "fajr": "Fajr",
-  "sunrise": "Sunrise",
-  "dhuhr": "Dhuhr",
+  "fajr": "Bomdod",
+  "sunrise": "Quyosh chiqishi",
+  "dhuhr": "Peshin",
   "asr": "Asr",
-  "maghrib": "Maghrib",
+  "maghrib": "Shom",
   "isha": "Isha",
   "dataStorage": "Data & Storage",
   "clearCache": "Clear Cache",
@@ -491,5 +491,21 @@
   },
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place"
+  "islamicPlaceFallback": "Islamic Place",
+  "prayerNotificationTitle": "{prayerName} vaqti",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} ibodat qilish vaqti keldi.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  }
 }

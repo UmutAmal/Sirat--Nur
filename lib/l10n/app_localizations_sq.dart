@@ -78,6 +78,16 @@ class AppLocalizationsSq extends AppLocalizations {
   String get isha => 'Isha';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Koha për $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Është koha për t\'u lutur $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Të dhënat dhe ruajtja';
 
   @override

@@ -60,22 +60,32 @@ class AppLocalizationsTe extends AppLocalizations {
   String get ayahs => 'Ayahs';
 
   @override
-  String get fajr => 'Fajr';
+  String get fajr => 'ఫజర్';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'సూర్యోదయం';
 
   @override
-  String get dhuhr => 'Dhuhr';
+  String get dhuhr => 'ధుర్';
 
   @override
-  String get asr => 'Asr';
+  String get asr => 'అసర్';
 
   @override
-  String get maghrib => 'Maghrib';
+  String get maghrib => 'మగ్రిబ్';
 
   @override
-  String get isha => 'Isha';
+  String get isha => 'ఇషా';
+
+  @override
+  String prayerNotificationTitle(String prayerName) {
+    return '$prayerName కోసం సమయం';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'ఇది $prayerName ప్రార్థన చేయడానికి సమయం.';
+  }
 
   @override
   String get dataStorage => 'Data & Storage';

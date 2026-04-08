@@ -78,6 +78,16 @@ class AppLocalizationsKa extends AppLocalizations {
   String get isha => 'იშა';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'დროა $prayerName';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'ლოცვის დროა $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'მონაცემთა და შენახვა';
 
   @override

@@ -78,6 +78,16 @@ class AppLocalizationsBm extends AppLocalizations {
   String get isha => 'Isha ye';
 
   @override
+  String prayerNotificationTitle(String prayerName) {
+    return 'Waati min bɛ $prayerName la.';
+  }
+
+  @override
+  String prayerNotificationBody(String prayerName) {
+    return 'Delili waati sera $prayerName.';
+  }
+
+  @override
   String get dataStorage => 'Donanw & Ladonni';
 
   @override

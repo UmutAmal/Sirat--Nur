@@ -622,6 +622,18 @@ abstract class AppLocalizations {
   /// **'Isha'**
   String get isha;
 
+  /// No description provided for @prayerNotificationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Time for {prayerName}'**
+  String prayerNotificationTitle(String prayerName);
+
+  /// No description provided for @prayerNotificationBody.
+  ///
+  /// In en, this message translates to:
+  /// **'It is time to pray {prayerName}.'**
+  String prayerNotificationBody(String prayerName);
+
   /// No description provided for @dataStorage.
   ///
   /// In en, this message translates to:
