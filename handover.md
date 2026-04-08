@@ -1775,3 +1775,38 @@
 ### Sonraki Adım
 - Sıradaki prayer pipeline turunda `cancelAll()` temizleme akışının duplicate/çakışan schedule davranışı analiz edilecek.
 - Özellikle `PrayerNotificationCoordinator.sync()` ile [A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/adhan_scheduler_service.dart) arasındaki clear/schedule zinciri kanıta dayalı olarak daraltılacak.
+
+## 2026-04-08 TUR-45 — Remove Duplicate Notification Bootstrap Path
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\main.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/main.dart) içinden `NotificationService` importu ve `NotificationService().init()` bootstrap çağrısı kaldırıldı.
+- Üretim zincirinde başka hiçbir referansı kalmayan [A:\Way of Allah\sirat_i_nur\lib\core\services\notification_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/notification_service.dart) dosyası silindi.
+- [A:\Way of Allah\sirat_i_nur\test\notification_service_guard_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/notification_service_guard_test.dart) eklendi; legacy servis dosyasının ve import/bootstrap izlerinin geri dönmesini engelliyor.
+
+### Neden Yapıldı
+- Call-chain taraması [A:\Way of Allah\sirat_i_nur\lib\main.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/main.dart) dışında `NotificationService` kullanımının olmadığını gösterdi.
+- Aynı anda [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_notification_coordinator.dart) zaten kendi `AdhanSchedulerService.init()` ve `requestPermissions()` akışını yürütüyordu.
+- Bu yapı aynı bildirim ekosistemini iki ayrı plugin örneğiyle init etme ve izin isteme riskini taşıyordu; kök sebep yaşayan scheduling zinciri dışında kalmış orphan bootstrap yoluydu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\main.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\notification_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\notification_service_guard_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Bildirim bootstrap akışı tek yaşayan prayer scheduler zincirine indirildi.
+- Duplicate init / duplicate permission path riski kapandı.
+- Orphan notification service geri dönmeyecek şekilde test guard’ıyla kilitlendi.
+
+### Test Sonucu
+- `flutter test test/notification_service_guard_test.dart` → PASS (`1/1`)
+- `flutter test test/prayer_notification_coordinator_test.dart` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`125/125`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Duplicate notification bootstrap path with orphan service still initializing local notifications: `7/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki prayer pipeline turunda `PrayerNotificationCoordinator.sync()` ile `AdhanSchedulerService.scheduleAdhans()` arasındaki yarış/çakışma yüzeyi incelenecek.
+- Özellikle hızlı ardışık settings değişimlerinde eski sync’in yeni sync’i yanlışlıkla temizleyip temizlemediği izole edilecek.

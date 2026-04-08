@@ -8,7 +8,6 @@ import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/services/prayer_notification_coordinator.dart';
 import 'package:sirat_i_nur/core/services/widget_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_calendar_service.dart';
-import 'package:sirat_i_nur/core/services/notification_service.dart';
 
 import 'package:sirat_i_nur/core/theme/app_theme.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
@@ -108,12 +107,6 @@ void main() async {
         tz.initializeTimeZones();
       } catch (e) {
         debugPrint('Timezone init failed (non-blocking): $e');
-      }
-
-      try {
-        await NotificationService().init();
-      } catch (e) {
-        debugPrint('NotificationService init failed (non-blocking): $e');
       }
 
       final prefs = await SharedPreferences.getInstance();
