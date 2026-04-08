@@ -10,8 +10,33 @@ const Set<String> expectedSukunSoundTypes = {
   'ocean',
 };
 
+bool isRemoteAudioSource(String source) {
+  final uri = Uri.tryParse(source.trim());
+  if (uri == null) {
+    return false;
+  }
+
+  return uri.isScheme('http') || uri.isScheme('https');
+}
+
+String? resolveSukunSoundType(String candidate) {
+  final normalized = candidate.trim().toLowerCase();
+  if (normalized.isEmpty) {
+    return null;
+  }
+
+  for (final soundType in expectedSukunSoundTypes) {
+    if (normalized == soundType || normalized.contains(soundType)) {
+      return soundType;
+    }
+  }
+
+  return null;
+}
+
 abstract class SovereignAudioEngine {
   Future<bool> playAsset(String assetPath);
+  Future<bool> playUrl(String url);
   Future<void> stop();
   Future<void> setVolume(double volume);
   void dispose();
@@ -25,6 +50,9 @@ class LocalAudioEngine implements SovereignAudioEngine {
 
   @override
   Future<bool> playAsset(String assetPath) => _player.playAsset(assetPath);
+
+  @override
+  Future<bool> playUrl(String url) => _player.playUrl(url);
 
   @override
   Future<void> stop() => _player.stop();
@@ -58,7 +86,11 @@ class AudioSovereigntyService {
   Set<String> get configuredSukunTypes => _sukunAssets.keys.toSet();
 
   String? resolveSukunAssetPath(String natureType) {
-    final normalized = natureType.trim().toLowerCase();
+    final normalized = resolveSukunSoundType(natureType);
+    if (normalized == null) {
+      return null;
+    }
+
     final assetPath = _sukunAssets[normalized];
     if (assetPath == null || assetPath.trim().isEmpty) {
       return null;
@@ -66,28 +98,52 @@ class AudioSovereigntyService {
     return assetPath;
   }
 
-  Future<bool> playQuran(String assetPath) async {
-    final normalized = assetPath.trim();
+  String? resolveSukunSource(
+    String natureType, {
+    Map<String, String> cloudSources = const {},
+  }) {
+    final normalized = resolveSukunSoundType(natureType);
+    if (normalized == null) {
+      return null;
+    }
+
+    final cloudSource = cloudSources[normalized]?.trim();
+    if (cloudSource != null && cloudSource.isNotEmpty) {
+      return cloudSource;
+    }
+
+    return resolveSukunAssetPath(normalized);
+  }
+
+  Future<bool> playSource(String source) async {
+    final normalized = source.trim();
     if (normalized.isEmpty) {
       _isPlaying = false;
       return false;
     }
 
-    final played = await _engine.playAsset(normalized);
+    final played = isRemoteAudioSource(normalized)
+        ? await _engine.playUrl(normalized)
+        : await _engine.playAsset(normalized);
     _isPlaying = played;
     return played;
   }
 
-  Future<bool> playSukun(String natureType) async {
-    final assetPath = resolveSukunAssetPath(natureType);
-    if (assetPath == null) {
+  Future<bool> playQuran(String assetPath) async {
+    return playSource(assetPath);
+  }
+
+  Future<bool> playSukun(
+    String natureType, {
+    Map<String, String> cloudSources = const {},
+  }) async {
+    final source = resolveSukunSource(natureType, cloudSources: cloudSources);
+    if (source == null) {
       _isPlaying = false;
       return false;
     }
 
-    final played = await _engine.playAsset(assetPath);
-    _isPlaying = played;
-    return played;
+    return playSource(source);
   }
 
   void setVolumes({double? quran, double? nature}) {
@@ -115,7 +171,9 @@ class AudioSovereigntyService {
   }
 }
 
-final audioSovereigntyServiceProvider = Provider<AudioSovereigntyService>((ref) {
+final audioSovereigntyServiceProvider = Provider<AudioSovereigntyService>((
+  ref,
+) {
   final service = AudioSovereigntyService();
   ref.onDispose(service.dispose);
   return service;

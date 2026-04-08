@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/constants/asma_ul_husna_data.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
+import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -77,7 +78,9 @@ Map<String, dynamic>? readCachedDailyAyat(
     return null;
   }
 
-  final age = (now ?? DateTime.now()).toUtc().difference(parsedStoredAt.toUtc());
+  final age = (now ?? DateTime.now()).toUtc().difference(
+    parsedStoredAt.toUtc(),
+  );
   if (age > dailyAyatCacheTtl) {
     return null;
   }
@@ -158,6 +161,47 @@ final liveTvProvider = FutureProvider<List<Map<String, dynamic>>>((ref) async {
       .select()
       .order('sort_order', ascending: true);
   return List<Map<String, dynamic>>.from(res);
+});
+
+Map<String, String> resolveCloudSukunSources(List<Map<String, dynamic>> rows) {
+  final sources = <String, String>{};
+
+  for (final row in rows) {
+    final type = row['type']?.toString().trim().toLowerCase();
+    if (type != 'sukun' && type != 'nature') {
+      continue;
+    }
+
+    final source = _readFirstAyatValue(row, ['url']);
+    if (source == null) {
+      continue;
+    }
+
+    final soundType =
+        resolveSukunSoundType(row['title']?.toString() ?? '') ??
+        resolveSukunSoundType(row['storage_path']?.toString() ?? '') ??
+        resolveSukunSoundType(source);
+    if (soundType == null) {
+      continue;
+    }
+
+    sources.putIfAbsent(soundType, () => source);
+  }
+
+  return Map.unmodifiable(sources);
+}
+
+final sukunAudioSourcesProvider = FutureProvider<Map<String, String>>((
+  ref,
+) async {
+  final supabase = ref.read(supabaseClientProvider);
+
+  try {
+    final res = await supabase.from('audio_files').select().order('id');
+    return resolveCloudSukunSources(List<Map<String, dynamic>>.from(res));
+  } catch (_) {
+    return const {};
+  }
 });
 
 final educationCategoriesProvider = FutureProvider<List<Map<String, dynamic>>>((

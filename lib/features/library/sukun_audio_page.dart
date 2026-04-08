@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
@@ -27,11 +28,19 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
   @override
   Widget build(BuildContext context) {
     final audio = ref.watch(audioSovereigntyServiceProvider);
+    final cloudSourcesAsync = ref.watch(sukunAudioSourcesProvider);
+    final cloudSources = cloudSourcesAsync.valueOrNull ?? const {};
     final l10n = AppLocalizations.of(context)!;
     final soundOptions = _buildSoundOptions(l10n);
-    final availableSoundTypes = audio.configuredSukunTypes
-        .where(expectedSukunSoundTypes.contains)
-        .toSet();
+    final localSoundTypes = audio.configuredSukunTypes.where(
+      expectedSukunSoundTypes.contains,
+    );
+    final availableSoundTypes = {
+      ...localSoundTypes,
+      ...cloudSources.keys.where(expectedSukunSoundTypes.contains),
+    };
+    final isResolvingCloudSources =
+        localSoundTypes.isEmpty && cloudSourcesAsync.isLoading;
 
     return Scaffold(
       backgroundColor: Colors.black,
@@ -80,6 +89,8 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
                       l10n,
                       soundOptions,
                       availableSoundTypes,
+                      cloudSources,
+                      isResolvingCloudSources,
                     ),
                   ]),
                 ),
@@ -139,7 +150,10 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label, style: const TextStyle(color: Colors.white70, fontSize: 14)),
+        Text(
+          label,
+          style: const TextStyle(color: Colors.white70, fontSize: 14),
+        ),
         Slider(
           value: value.clamp(0.0, 1.0),
           onChanged: onChanged,
@@ -156,7 +170,18 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
     AppLocalizations l10n,
     List<_SukunSoundOption> sounds,
     Set<String> availableSoundTypes,
+    Map<String, String> cloudSources,
+    bool isResolvingCloudSources,
   ) {
+    if (availableSoundTypes.isEmpty && isResolvingCloudSources) {
+      return const PremiumCard(
+        padding: EdgeInsets.all(24),
+        child: Center(
+          child: CircularProgressIndicator(color: Color(0xFFFFD700)),
+        ),
+      );
+    }
+
     if (availableSoundTypes.isEmpty) {
       return PremiumCard(
         padding: const EdgeInsets.all(24),
@@ -204,7 +229,10 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
           onTap: !isAvailable
               ? null
               : () async {
-                  final played = await service.playSukun(sound.type);
+                  final played = await service.playSukun(
+                    sound.type,
+                    cloudSources: cloudSources,
+                  );
                   if (!context.mounted) return;
 
                   if (!played) {

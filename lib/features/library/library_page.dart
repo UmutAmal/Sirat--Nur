@@ -20,6 +20,17 @@ bool isSukunAudioAvailable(AudioSovereigntyService audio) {
   return audio.configuredSukunTypes.any(expectedSukunSoundTypes.contains);
 }
 
+bool hasCloudSukunAudio(Map<String, String> cloudSources) {
+  return cloudSources.keys.any(expectedSukunSoundTypes.contains);
+}
+
+bool resolveSukunAvailability(
+  AudioSovereigntyService audio, {
+  Map<String, String> cloudSources = const {},
+}) {
+  return isSukunAudioAvailable(audio) || hasCloudSukunAudio(cloudSources);
+}
+
 String resolveSukunLibrarySubtitle(AppLocalizations l10n, bool isAvailable) {
   return isAvailable ? l10n.sukunMixerSubtitle : l10n.sukunUnavailableTitle;
 }
@@ -48,7 +59,12 @@ class LibraryPage extends ConsumerWidget {
     final l10n = AppLocalizations.of(context)!;
     final duas = resolveLibraryDuas(ref.watch(dailyDuasProvider));
     final audio = ref.watch(audioSovereigntyServiceProvider);
-    final isSukunAvailable = isSukunAudioAvailable(audio);
+    final cloudSukunSources =
+        ref.watch(sukunAudioSourcesProvider).valueOrNull ?? const {};
+    final isSukunAvailable = resolveSukunAvailability(
+      audio,
+      cloudSources: cloudSukunSources,
+    );
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.library)),

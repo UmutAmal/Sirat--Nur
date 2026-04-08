@@ -13,6 +13,9 @@ class _NoopAudioEngine implements SovereignAudioEngine {
   Future<bool> playAsset(String assetPath) async => true;
 
   @override
+  Future<bool> playUrl(String url) async => true;
+
+  @override
   Future<void> setVolume(double volume) async {}
 
   @override
@@ -97,8 +100,21 @@ void main() {
         final audio = AudioSovereigntyService(engine: _NoopAudioEngine());
 
         expect(isSukunAudioAvailable(audio), isFalse);
+        expect(resolveSukunAvailability(audio), isFalse);
       },
     );
+
+    test('cloud sukun sources mark library entry as available', () {
+      final audio = AudioSovereigntyService(engine: _NoopAudioEngine());
+
+      expect(
+        resolveSukunAvailability(
+          audio,
+          cloudSources: const {'rain': 'https://cdn.example.com/rain.mp3'},
+        ),
+        isTrue,
+      );
+    });
 
     test('sukun subtitle switches to unavailable copy when audio is empty', () {
       final en = lookupAppLocalizations(const Locale('en'));

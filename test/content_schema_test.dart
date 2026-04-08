@@ -6,26 +6,34 @@ void main() {
   group('content_schema.sql', () {
     final schemaFile = File('content_schema.sql');
 
-    test('defines public duas, asma and quran tables for cloud-first content', () {
-      final schema = schemaFile.readAsStringSync();
+    test(
+      'defines public duas, asma, quran and audio tables for cloud-first content',
+      () {
+        final schema = schemaFile.readAsStringSync();
 
-      expect(schemaFile.existsSync(), isTrue);
-      expect(schema, contains('create table if not exists public.duas'));
-      expect(
-        schema,
-        contains('create table if not exists public.asma_ul_husna'),
-      );
-      expect(
-        schema,
-        contains('create table if not exists public.quran_surahs'),
-      );
-      expect(
-        schema,
-        contains('create table if not exists public.quran_ayahs'),
-      );
-      expect(schema, contains('juz_number smallint'));
-      expect(schema, contains('verified_at timestamptz not null'));
-    });
+        expect(schemaFile.existsSync(), isTrue);
+        expect(schema, contains('create table if not exists public.duas'));
+        expect(
+          schema,
+          contains('create table if not exists public.asma_ul_husna'),
+        );
+        expect(
+          schema,
+          contains('create table if not exists public.quran_surahs'),
+        );
+        expect(
+          schema,
+          contains('create table if not exists public.quran_ayahs'),
+        );
+        expect(
+          schema,
+          contains('create table if not exists public.audio_files'),
+        );
+        expect(schema, contains('storage_path text'));
+        expect(schema, contains('juz_number smallint'));
+        expect(schema, contains('verified_at timestamptz not null'));
+      },
+    );
 
     test('enables RLS and public select policies for all content tables', () {
       final schema = schemaFile.readAsStringSync();
@@ -50,6 +58,11 @@ void main() {
         contains('alter table public.quran_ayahs enable row level security;'),
       );
       expect(schema, contains('create policy "Public read quran ayahs"'));
+      expect(
+        schema,
+        contains('alter table public.audio_files enable row level security;'),
+      );
+      expect(schema, contains('create policy "Public read audio files"'));
     });
   });
 }

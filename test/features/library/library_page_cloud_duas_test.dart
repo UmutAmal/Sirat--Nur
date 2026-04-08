@@ -15,6 +15,9 @@ class _NoopAudioEngine implements SovereignAudioEngine {
   Future<bool> playAsset(String assetPath) async => true;
 
   @override
+  Future<bool> playUrl(String url) async => true;
+
+  @override
   Future<void> setVolume(double volume) async {}
 
   @override
@@ -25,6 +28,7 @@ Future<void> pumpLibraryPage(
   WidgetTester tester, {
   required List<DuaData> duas,
   AudioSovereigntyService? audioService,
+  Map<String, String>? cloudSources,
 }) async {
   await tester.pumpWidget(
     ProviderScope(
@@ -35,6 +39,9 @@ Future<void> pumpLibraryPage(
         ),
         audioSovereigntyServiceProvider.overrideWithValue(
           audioService ?? AudioSovereigntyService(engine: _NoopAudioEngine()),
+        ),
+        sukunAudioSourcesProvider.overrideWith(
+          (ref) async => cloudSources ?? const {},
         ),
       ],
       child: const MaterialApp(
@@ -102,6 +109,25 @@ void main() {
       expect(tester.takeException(), isNull);
       expect(find.byType(LibraryPage), findsOneWidget);
       expect(find.text(en.sukunUnavailableTitle), findsOneWidget);
+    } finally {
+      await disposeLibraryPage(tester);
+    }
+  });
+
+  testWidgets('LibraryPage enables sukun subtitle when cloud audio exists', (
+    tester,
+  ) async {
+    final en = lookupAppLocalizations(const Locale('en'));
+
+    try {
+      await pumpLibraryPage(
+        tester,
+        duas: const [],
+        cloudSources: const {'rain': 'https://cdn.example.com/rain.mp3'},
+      );
+
+      expect(find.text(en.sukunMixerSubtitle), findsOneWidget);
+      expect(find.text(en.sukunUnavailableTitle), findsNothing);
     } finally {
       await disposeLibraryPage(tester);
     }

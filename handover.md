@@ -1488,3 +1488,57 @@
 
 ### Sonraki Adım
 - Sıradaki yüksek etkili açık alan, Sukun zincirini gerçek asset veya Supabase-backed `audio_files` kaydıyla doldurmak; dürüst disabled state artık var ama içerik hâlâ varsayılan kurulumda yok.
+
+## 2026-04-08 TUR-38 — Add Cloud-First Sukun Audio Sources
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\audio_sovereignty_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/audio_sovereignty_service.dart) içine `isRemoteAudioSource`, `resolveSukunSoundType`, `resolveSukunSource` ve `playSource` eklendi; service artık local asset ile remote URL arasında dürüst seçim yapabiliyor.
+- Aynı dosyada `SovereignAudioEngine` ve `LocalAudioEngine` `playUrl` desteği alacak şekilde genişletildi.
+- [A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/providers/supabase_providers.dart) içine `resolveCloudSukunSources` ve `sukunAudioSourcesProvider` eklendi; `audio_files` tablosundaki oynatılabilir `url` alanları beklenen `rain/forest/night/ocean` tiplerine normalize ediliyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) artık local mapping ile cloud mapping birleşiminden availability hesaplıyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/sukun_audio_page.dart) `sukunAudioSourcesProvider` izliyor; cloud kaynak çözülürken loading kartı gösteriyor ve remote URL geldiğinde `playSukun(..., cloudSources:)` üzerinden oynatıyor.
+- [A:\Way of Allah\sirat_i_nur\content_schema.sql](A:/Way%20of%20Allah/sirat_i_nur/content_schema.sql) içine `public.audio_files` tablosu, indeks ve public read policy eklendi.
+- Yeni regresyon testleri eklendi: [A:\Way of Allah\sirat_i_nur\test\sukun_audio_sources_provider_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/sukun_audio_sources_provider_test.dart), ayrıca audio/library/sukun/content schema testleri cloud-first akış için genişletildi.
+
+### Neden Yapıldı
+- Sukun özelliği artık dürüst disabled-state gösteriyordu fakat gerçek cloud source zinciri yoktu; provider varsayılanı hâlâ boş local mapping ile sınırlıydı.
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\audio_player_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/audio_player_service.dart) remote `playUrl` desteğine sahip olmasına rağmen bu yetenek `AudioSovereigntyService` tarafından kullanılmıyordu.
+- `audio_files` bootstrap tablosu da eksik olduğu için Supabase üzerinden verified Sukun seslerini bağlayacak şema zemini bulunmuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\content_schema.sql`
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\audio_sovereignty_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\audio_sovereignty_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\sukun_audio_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\sukun_audio_sources_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Sukun feature’ı artık yalnızca local asset’lere değil, Supabase `audio_files` tablosundan gelen verified remote URL’lere de bağlanabiliyor.
+- Library girişi ve detay sayfası aynı cloud-first availability bilgisini kullanıyor.
+- Cloud provider ilk frame’de loading iken sayfa artık yanlış unavailable-state üretmiyor.
+- `audio_files` tablosu ve policy’si hazır olduğu için bir sonraki turda verified seed/load işlemi doğrudan bu şema üstünden yapılabilecek.
+
+### Test Sonucu
+- `flutter test test/audio_sovereignty_service_test.dart` → PASS (`8/8`)
+- `flutter test test/sukun_audio_sources_provider_test.dart` → PASS (`2/2`)
+- `flutter test test/sukun_audio_page_test.dart --reporter expanded` → PASS (`3/3`)
+- `flutter test test/library_page_test.dart` → PASS (`9/9`)
+- `flutter test test/features/library/library_page_cloud_duas_test.dart --reporter expanded` → PASS (`3/3`)
+- `flutter test test/content_schema_test.dart` → PASS (`2/2`)
+- `flutter test test/features/settings/diagnostics_page_test.dart` → PASS (`5/5`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`111/111`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Sukun feature relying only on empty local mappings with no cloud source path: `7/25 → 3/25`
+- Missing `audio_files` Supabase bootstrap for cloud audio rollout: `7/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki yüksek etkili açık alan, kabul edilen resmi kaynaklardan gerçek Sukun/nature seslerini çekip `audio_files` ve storage zincirine verified seed olarak yüklemek; runtime cloud-first hazır ama içerik satırları henüz boş.
