@@ -7,7 +7,7 @@ import 'package:sirat_i_nur/core/network/app_router.dart';
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/services/prayer_notification_coordinator.dart';
 import 'package:sirat_i_nur/core/services/widget_service.dart';
-import 'package:sirat_i_nur/core/services/prayer_calendar_service.dart';
+import 'package:sirat_i_nur/core/services/prayer_widget_sync_service.dart';
 
 import 'package:sirat_i_nur/core/theme/app_theme.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
@@ -137,6 +137,8 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
   bool _showSplash = true;
   final PrayerNotificationCoordinator _prayerNotificationCoordinator =
       PrayerNotificationCoordinator();
+  final PrayerWidgetSyncService _prayerWidgetSyncService =
+      PrayerWidgetSyncService();
   ProviderSubscription<SettingsState>? _settingsSubscription;
 
   @override
@@ -177,15 +179,8 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
 
   Future<void> _updateHomeWidgets(SettingsState settings) async {
     try {
-      if (settings.latitude == null || settings.longitude == null) return;
-      final entity = PrayerCalendarService.calculatePrayerTimes(
-        latitude: settings.latitude!,
-        longitude: settings.longitude!,
-        date: DateTime.now(),
-        method: settings.calculationMethod,
-        madhab: settings.madhab,
-        timezone: settings.timezone,
-      );
+      final entity = _prayerWidgetSyncService.buildPrayerTimesEntity(settings);
+      if (entity == null) return;
       await WidgetService().updatePrayerWidget(entity);
       await WidgetService().updateAllPrayersWidget(entity);
     } catch (e) {

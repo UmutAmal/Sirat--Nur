@@ -1934,3 +1934,37 @@
 ### Sonraki Adım
 - Sıradaki prayer pipeline turunda widget zincirindeki tarih/zaman dilimi drift’i giderilecek; [A:\Way of Allah\sirat_i_nur\lib\main.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/main.dart) içindeki widget update akışı `DateTime.now()` yerine lokasyon timezone’ına göre hesaplanacak.
 - Ardından prayer profile source bilgisi diagnostics yüzeyine taşınıp hangi resmî profile’in aktif olduğu kullanıcıya dürüst biçimde gösterilecek.
+
+## 2026-04-08 TUR-49 — Fix Prayer Widget Timezone Drift
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_widget_sync_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_widget_sync_service.dart) eklendi; widget güncellemesi için timezone-aware referans zamanı çözüp tek noktadan `PrayerTimesEntity` üretiyor.
+- [A:\Way of Allah\sirat_i_nur\lib\main.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/main.dart) içindeki `_updateHomeWidgets()` akışı doğrudan `DateTime.now()` ile hesap yapmak yerine yeni helper’ı kullanacak şekilde değiştirildi.
+- [A:\Way of Allah\sirat_i_nur\test\prayer_widget_sync_service_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/prayer_widget_sync_service_test.dart) eklendi; lokasyon yokken `null` dönmesi ve timezone-aware referans tarihinin aynı güne göre hesap üretmesi kilitlendi.
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\main.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/main.dart) önceki halinde widget zinciri cihazın yerel `DateTime.now()` tarihini kullanıyordu.
+- Kullanıcı İstanbul dışındaki bir lokasyonu seçtiğinde, özellikle gece yarısı civarında cihaz tarihi ile seçilen lokasyonun tarihi ayrışabiliyor ve widget tarafında yanlış günün vakitleri üretilebiliyordu.
+- Kök sebep, notification/provider zincirinde kullanılan timezone-aware `now` ile widget zincirinde kullanılan cihaz-local `now` değerinin farklı olmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_widget_sync_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\main.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_widget_sync_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Prayer widget hesapları artık seçilen lokasyonun timezone’una göre aynı referans günden üretiliyor.
+- Notification scheduler, provider ve widget zinciri aynı zaman referans mantığında hizalanmış oldu.
+- Gece yarısı çevresindeki gün kayması riski kapandı.
+
+### Test Sonucu
+- `flutter test test/prayer_widget_sync_service_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`144/144`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Home widget prayer schedule using device-local date instead of selected location timezone: `9/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki prayer pipeline turunda aktif resmî prayer profile adı ve kaynağı diagnostics yüzeyine taşınacak.
+- Böylece kullanıcı hangi kurum/profile göre vakit hesaplandığını uygulama içinden doğrudan görebilecek.
