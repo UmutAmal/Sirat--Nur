@@ -315,3 +315,37 @@
 - Uygulamanın kalan hardcoded yerlerinin (varsa) son bir taranması. (TAMAMLANDI - 0 Bulgu)
 
 **TÜM LOKALİZASYON P1 İŞLERİ TAMAMLANDI.** Codebase 100% lokalize edildi. Yeni build tetiklendi.
+
+## 2026-04-08 TUR-13 — Safe Dependency Refresh Audit
+### Yapılan İşlem
+- `flutter pub outdated` ile repo bağımlılıklarının güncellik fotoğrafı çıkarıldı.
+- Yalnızca çözümü mevcut constraint seti içinde güvenli olan doğrudan bağımlılıklar yükseltildi:
+  - `cupertino_icons 1.0.8 -> 1.0.9`
+  - `go_router 17.1.0 -> 17.2.0`
+  - `share_plus 12.0.1 -> 12.0.2`
+  - `shared_preferences 2.5.4 -> 2.5.5`
+  - `supabase_flutter 2.12.0 -> 2.12.2`
+- Bu yükseltmelerle birlikte lockfile üzerinden bağlı paketler de güncellendi (`gotrue`, `realtime_client`, `storage_client`, `supabase`).
+
+### Neden Yapıldı
+- Kullanıcının “özellikler ve kod sistemleri en güncel hallerinde olsun” talebi doğrultusunda önce düşük riskli ve çözülebilir güncellemeler alınmalıydı.
+- `flutter pub outdated` çıktısı bu beş doğrudan paketin daha yeni ve çözülebilir sürümleri olduğunu gösterdi; majör kırılım gerektiren paketler ise ayrı risk turuna bırakıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\pubspec.lock`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Repo, mevcut constraint seti bozulmadan daha güncel ve güvenli bağımlılık sürümlerine taşındı.
+- Router, paylaşım, tercihler ve Supabase istemci katmanı son patch/minor çizgisine yaklaştırıldı.
+
+### Test Sonucu
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`53/53`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Safe dependency staleness: `7/25 → 3/25`
+
+### Sonraki Adım
+- Majör/constraint bloklu paketler (`fl_chart`, `flutter_riverpod`, `geocoding`, `google_mobile_ads` vb.) resmi changelog/API notlarıyla ayrı risk analizi gerektiriyor.
+- Ürün yüzeyinde kalan hardcoded analytics/chatbot/places metinleri ayrıca temizlenecek.
