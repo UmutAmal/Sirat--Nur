@@ -615,3 +615,51 @@
 - `content_schema.sql` yalnızca tablo ve policy katmanını kuruyor; sonraki turda kabul edilen resmi kaynaklardan doğrulanmış `duas` ve `asma_ul_husna` seed içeriği üretilip SQL insert katmanı eklenmeli.
 - `seed.sql` şu an bu iki tabloyu beslemiyor; canlı veri zincirinin tamamlanması için kaynak-doğrulanmış seed dosyası gerekiyor.
 - `flutter gen-l10n` kaynaklı eksik çeviri uyarıları ayrıca kapatılacak.
+
+## 2026-04-08 TUR-19 — Full ARB Key Synchronization and L10n Coverage Gate
+### Yapılan İşlem
+- `tool/sync_arb_keys.dart` eklendi.
+- Script şu davranışı kalıcı hale getiriyor:
+  - `app_en.arb` şablonunu referans alıyor
+  - tüm `app_*.arb` dosyalarını tarıyor
+  - eksik mesaj anahtarlarını otomatik ekliyor
+  - eksik placeholder metadata anahtarlarını (`@key`) da otomatik ekliyor
+  - TR dosyası için metin fallback’ini TR, metadata fallback’ini EN şablonundan alıyor
+- Script çalıştırıldı ve tüm `lib/l10n/app_*.arb` dosyaları eşitlendi.
+- `flutter gen-l10n` tekrar çalıştırıldı.
+  - Önceki turlardaki yüzlerce `untranslated message(s)` uyarısı kapandı
+  - üretim sessiz tamamlandı
+- Yeni `arb_coverage_test.dart` eklendi:
+  - tüm ARB dosyalarının `app_en.arb` ile eşit key kapsamına sahip olduğunu doğruluyor
+  - templated mesaj metadata’sının tüm dillere yayıldığını doğruluyor
+
+### Neden Yapıldı
+- `flutter gen-l10n` önceki durumda neredeyse tüm locale dosyaları için büyük miktarda `untranslated message(s)` uyarısı veriyordu.
+- Kök sebep, repo içindeki çok sayıda ARB dosyasının yeni eklenen localization anahtarlarını hiç taşımıyor olmasıydı.
+- Bu durum AGENTS.md içindeki `Her dil eşit kapsamda olmalı` kuralını ihlal ediyordu ve çeviri zincirini sürdürülemez hale getiriyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\sync_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_coverage_test.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Tüm locale dosyaları artık EN şablonuyla aynı anahtar kapsamına sahip.
+- `flutter gen-l10n` sessiz çalışıyor; çeviri borcu görünür uyarı düzeyinde kapanmış durumda.
+- Gelecek localization turlarında eksik anahtarların tekrar birikmesini önlemek için repo içinde tekrar çalıştırılabilir bir senkron aracı oluştu.
+
+### Test Sonucu
+- `flutter test test/arb_coverage_test.dart` → PASS (`2/2`)
+- `flutter gen-l10n` → PASS, uyarısız
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`68/68`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Repo-genel eksik ARB kapsamı ve gen-l10n uyarı borcu: `8/25 → 2/25`
+
+### Sonraki Adım
+- Section 13 tarafında sıradaki ana eksik, `content_schema.sql` üstüne doğrulanmış canlı seed katmanını yazmak.
+- Özellikle `public.duas` ve `public.asma_ul_husna` için kabul edilen resmi kaynaklara dayalı insert seti hazırlanmalı.
+- Sonraki kalite turunda root düzeyindeki eski anlatı/dokümantasyon iddiaları ile güncel cloud-first mimari uyumu yeniden denetlenecek.

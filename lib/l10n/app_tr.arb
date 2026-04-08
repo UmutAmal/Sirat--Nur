@@ -261,6 +261,16 @@
   "nisabNotReached": "Nisap miktarına ulaşılmadı. Zekat farz değildir.",
   "totalZakat": "Toplam Zekat",
   "nisabSummary": "Nisap: {nisab} • Varlıklar: {assets}",
+  "@nisabSummary": {
+    "placeholders": {
+      "nisab": {
+        "type": "String"
+      },
+      "assets": {
+        "type": "String"
+      }
+    }
+  },
   "zakatGoldZakat": "Altın Zekatı",
   "zakatSilverZakat": "Gümüş Zekatı",
   "zakatCashZakat": "Nakit Zekatı",
