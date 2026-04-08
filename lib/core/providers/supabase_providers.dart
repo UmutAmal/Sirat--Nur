@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sirat_i_nur/core/constants/duas_data.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 final supabaseClientProvider = Provider<SupabaseClient>((ref) {
@@ -7,10 +8,10 @@ final supabaseClientProvider = Provider<SupabaseClient>((ref) {
 
 final dailyAyatProvider = FutureProvider<Map<String, dynamic>>((ref) async {
   final supabase = ref.read(supabaseClientProvider);
-  
+
   // Try to find an ayat for today or a future date
   final formattedDate = DateTime.now().toIso8601String().split('T')[0];
-  
+
   try {
     final res = await supabase
         .from('daily_content')
@@ -20,7 +21,7 @@ final dailyAyatProvider = FutureProvider<Map<String, dynamic>>((ref) async {
         .order('display_date', ascending: true)
         .limit(1)
         .maybeSingle();
-        
+
     if (res != null) {
       return res;
     }
@@ -34,7 +35,7 @@ final dailyAyatProvider = FutureProvider<Map<String, dynamic>>((ref) async {
         .eq('content_type', 'ayat')
         .limit(1)
         .maybeSingle();
-        
+
     if (fallbackRes != null) {
       return fallbackRes;
     }
@@ -45,7 +46,7 @@ final dailyAyatProvider = FutureProvider<Map<String, dynamic>>((ref) async {
     'content_ar': 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
     'content_en': 'In the name of Allah, the Most Gracious, the Most Merciful.',
     'content_tr': 'Rahman ve Rahim olan Allah\'ın adıyla.',
-    'reference': 'Al-Fatihah 1:1'
+    'reference': 'Al-Fatihah 1:1',
   };
 });
 
@@ -58,7 +59,9 @@ final liveTvProvider = FutureProvider<List<Map<String, dynamic>>>((ref) async {
   return List<Map<String, dynamic>>.from(res);
 });
 
-final educationCategoriesProvider = FutureProvider<List<Map<String, dynamic>>>((ref) async {
+final educationCategoriesProvider = FutureProvider<List<Map<String, dynamic>>>((
+  ref,
+) async {
   final supabase = ref.read(supabaseClientProvider);
   final res = await supabase
       .from('education_categories')
@@ -67,12 +70,30 @@ final educationCategoriesProvider = FutureProvider<List<Map<String, dynamic>>>((
   return List<Map<String, dynamic>>.from(res);
 });
 
-final educationTopicsProvider = FutureProvider.family<List<Map<String, dynamic>>, String>((ref, categoryId) async {
+final educationTopicsProvider =
+    FutureProvider.family<List<Map<String, dynamic>>, String>((
+      ref,
+      categoryId,
+    ) async {
+      final supabase = ref.read(supabaseClientProvider);
+      final res = await supabase
+          .from('education_topics')
+          .select()
+          .eq('category_id', categoryId)
+          .order('sort_order', ascending: true);
+      return List<Map<String, dynamic>>.from(res);
+    });
+
+final dailyDuasProvider = FutureProvider<List<DuaData>>((ref) async {
   final supabase = ref.read(supabaseClientProvider);
-  final res = await supabase
-      .from('education_topics')
-      .select()
-      .eq('category_id', categoryId)
-      .order('sort_order', ascending: true);
-  return List<Map<String, dynamic>>.from(res);
+
+  try {
+    final res = await supabase
+        .from('duas')
+        .select()
+        .order('id', ascending: true);
+    return resolveCloudDuas(List<Map<String, dynamic>>.from(res));
+  } catch (_) {
+    return dailyDuas;
+  }
 });

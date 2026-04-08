@@ -465,3 +465,53 @@
   - `asma_ul_husna_data.dart` satır 2: `static const List<Map<String, dynamic>> names = [`
 - Bu içeriklerin bir sonraki turda doğrulanmış kaynak + Supabase + offline fallback zincirine taşınması gerekiyor.
 - `flutter gen-l10n` hâlâ çok sayıda dil dosyası için repo genelinden gelen `untranslated message(s)` uyarıları veriyor; bu durum ayrıca bir çeviri sertleştirme turu gerektiriyor.
+
+## 2026-04-08 TUR-16 — Cloud-First Daily Duas Provider Gate
+### Yapılan İşlem
+- `duas_data.dart` içine cloud veri satırlarını mevcut `DuaData` modeline dönüştüren `DuaData.fromSupabaseRow` factory’si eklendi.
+- Aynı dosyada `resolveCloudDuas` eklendi:
+  - Supabase satırları geçerli dua içeriğine dönüştürülüyor
+  - Sonuç boşsa veya anlamsızsa mevcut `dailyDuas` listesine fallback yapılıyor
+- `supabase_providers.dart` içine `dailyDuasProvider` eklendi:
+  - önce `duas` tablosu okunuyor
+  - sorgu fail ederse veya tablo yoksa bundled `dailyDuas` fallback dönülüyor
+- `library_page.dart` güncellendi:
+  - ana Library kartındaki dua sayısı artık `dailyDuasProvider` üzerinden çözülüyor
+  - `_DuasView` artık `ConsumerWidget`; dua listesi cloud-first provider’dan geliyor
+  - bundled liste yalnızca `valueOrNull` yoksa offline fallback olarak kullanılıyor
+- Yeni testler eklendi:
+  - `library_page_test.dart`: cloud row mapping ve empty-row fallback
+  - `library_page_cloud_duas_test.dart`: provider override ile gerçek UI’ın cloud dua verisini kullandığı doğrulandı
+- Gerçek backend doğrulaması yapıldı:
+  - `daily_content`, `education_categories`, `education_topics`, `live_tv_channels` tabloları erişilebilir
+  - `public.duas` mevcut Supabase REST schema cache’inde bulunamadı (`PGRST205`)
+
+### Neden Yapıldı
+- [library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) önceki durumda dua kartı ve dua listesi doğrudan [duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) içindeki bundled sabitleri okuyordu.
+- Section 13 gereği içerik akışının Supabase-first olması gerekiyordu; ancak backend’de `duas` tablosu henüz hazır olmadığı için geçişin kırılmadan ilerlemesi adına cloud-first + safe fallback mimarisi kuruldu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Daily Duas feature’ı artık sabite doğrudan bağlı değil; Supabase’de `duas` tablosu seed edildiğinde UI ek patch olmadan cloud veriye dönebilecek.
+- Backend eksikliği nedeniyle kullanıcı akışı kırılmıyor; offline/bundled fallback korunuyor.
+- Bu tur Section 13 için mimari hazırlığı gerçek veri zincirine yaklaştırdı ve sonraki backend turunun write-set’ini daralttı.
+
+### Test Sonucu
+- `flutter test test/library_page_test.dart test/features/library/library_page_cloud_duas_test.dart` → PASS (`7/7`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`61/61`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Daily Duas static-only content pipeline: `10/25 → 4/25`
+
+### Sonraki Adım
+- `asma_ul_husna_data.dart` hâlâ tamamen bundled içerikten okunuyor; aynı cloud-first + fallback deseni burada da kurulmalı.
+- `public.duas` tablosu backend’de mevcut değil; içerik gerçekten Supabase’den beslenecekse sonraki turda tablo oluşturma/yükleme yetkisi olan kanal üzerinden seed/migration gerekecek.
+- `flutter gen-l10n` uyarılarındaki eksik çeviri anahtarları ayrıca sertleştirilecek.

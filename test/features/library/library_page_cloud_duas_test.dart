@@ -1,0 +1,69 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/constants/duas_data.dart';
+import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
+import 'package:sirat_i_nur/features/library/library_page.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
+
+Future<void> pumpLibraryPage(
+  WidgetTester tester, {
+  required List<DuaData> duas,
+}) async {
+  await tester.pumpWidget(
+    ProviderScope(
+      overrides: [
+        dailyDuasProvider.overrideWith((ref) async => duas),
+        educationCategoriesProvider.overrideWith(
+          (ref) async => <Map<String, dynamic>>[],
+        ),
+      ],
+      child: const MaterialApp(
+        locale: Locale('en'),
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: LibraryPage(),
+      ),
+    ),
+  );
+
+  await tester.pump(const Duration(milliseconds: 900));
+}
+
+Future<void> disposeLibraryPage(WidgetTester tester) async {
+  await tester.pumpWidget(const SizedBox.shrink());
+  await tester.pumpAndSettle();
+}
+
+void main() {
+  testWidgets('LibraryPage uses cloud dua data when provider resolves', (
+    tester,
+  ) async {
+    const cloudDua = DuaData(
+      id: 'cloud-1',
+      arabic: 'دعاء سحابي',
+      transliteration: 'cloud dua',
+      turkish: 'Bulut dua',
+      english: 'Cloud dua meaning',
+      source: 'Buhari',
+      category: 'Sabah Akşam',
+    );
+
+    try {
+      await pumpLibraryPage(tester, duas: const [cloudDua]);
+
+      expect(find.text('1 essential duas'), findsOneWidget);
+
+      await tester.tap(find.text('Daily Duas').first);
+      await tester.pumpAndSettle();
+
+      expect(find.text('دعاء سحابي'), findsOneWidget);
+      expect(find.text('cloud dua'), findsOneWidget);
+      expect(find.text('Cloud dua meaning'), findsOneWidget);
+      expect(find.text('Morning & Evening'), findsOneWidget);
+      expect(find.text('Bukhari'), findsOneWidget);
+    } finally {
+      await disposeLibraryPage(tester);
+    }
+  });
+}

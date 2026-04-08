@@ -15,6 +15,9 @@ String buildLibraryEmptyText(AppLocalizations l10n) {
   return l10n.noResults;
 }
 
+List<DuaData> resolveLibraryDuas(AsyncValue<List<DuaData>> asyncDuas) {
+  return asyncDuas.valueOrNull ?? dailyDuas;
+}
 
 String resolveDuaMeaning(DuaData dua, Locale locale) {
   if (locale.languageCode == 'tr' && dua.turkish.isNotEmpty) {
@@ -34,6 +37,7 @@ class LibraryPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
+    final duas = resolveLibraryDuas(ref.watch(dailyDuasProvider));
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.library)),
@@ -119,7 +123,7 @@ class LibraryPage extends ConsumerWidget {
                           ),
                         ),
                         Text(
-                          l10n.essentialDuas(dailyDuas.length.toString()),
+                          l10n.essentialDuas(duas.length.toString()),
                           style: TextStyle(
                             fontSize: 13,
                             color: Theme.of(
@@ -374,19 +378,27 @@ class _HadithCollection {
   const _HadithCollection(this.id, this.name, this.desc);
 }
 
-
 String _translateDuaCategory(String category, String lang) {
   if (lang != 'en') return category;
   switch (category) {
-    case 'Sabah Akşam': return 'Morning & Evening';
-    case 'Tesbih': return 'Tasbih';
-    case 'Koruma': return 'Protection';
-    case 'Başlangıç': return 'Starting';
-    case 'Uyku': return 'Sleep';
-    case 'Yemek': return 'Food & Drink';
-    case 'Af Duası': return 'Forgiveness';
-    case 'Ev': return 'Home';
-    default: return category;
+    case 'Sabah Akşam':
+      return 'Morning & Evening';
+    case 'Tesbih':
+      return 'Tasbih';
+    case 'Koruma':
+      return 'Protection';
+    case 'Başlangıç':
+      return 'Starting';
+    case 'Uyku':
+      return 'Sleep';
+    case 'Yemek':
+      return 'Food & Drink';
+    case 'Af Duası':
+      return 'Forgiveness';
+    case 'Ev':
+      return 'Home';
+    default:
+      return category;
   }
 }
 
@@ -402,20 +414,21 @@ String _translateDuaSource(String source, String lang) {
 }
 
 // ─── Duas Subview ───
-class _DuasView extends StatelessWidget {
+class _DuasView extends ConsumerWidget {
   const _DuasView();
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final locale = Localizations.localeOf(context);
     final l10n = AppLocalizations.of(context)!;
+    final duas = resolveLibraryDuas(ref.watch(dailyDuasProvider));
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.dailyDuas)),
       body: ListView.builder(
         padding: const EdgeInsets.all(16),
-        itemCount: dailyDuas.length,
+        itemCount: duas.length,
         itemBuilder: (context, i) {
-          final dua = dailyDuas[i];
+          final dua = duas[i];
           return PremiumCard(
             margin: const EdgeInsets.only(bottom: 16),
             child: Column(
@@ -433,7 +446,10 @@ class _DuasView extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
-                        _translateDuaCategory(dua.category, locale.languageCode),
+                        _translateDuaCategory(
+                          dua.category,
+                          locale.languageCode,
+                        ),
                         style: const TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w800,
