@@ -515,3 +515,56 @@
 - `asma_ul_husna_data.dart` hâlâ tamamen bundled içerikten okunuyor; aynı cloud-first + fallback deseni burada da kurulmalı.
 - `public.duas` tablosu backend’de mevcut değil; içerik gerçekten Supabase’den beslenecekse sonraki turda tablo oluşturma/yükleme yetkisi olan kanal üzerinden seed/migration gerekecek.
 - `flutter gen-l10n` uyarılarındaki eksik çeviri anahtarları ayrıca sertleştirilecek.
+
+## 2026-04-08 TUR-17 — Cloud-First Asma-ul Husna Provider Gate
+### Yapılan İşlem
+- `asma_ul_husna_data.dart` içine cloud satırlarını ekranın beklediği bundled şekle dönüştüren yardımcılar eklendi:
+  - `normalizeAsmaUlHusnaRow`
+  - `resolveCloudAsmaUlHusnaRows`
+- Aynı yardımcılar bir Supabase satırından şu alanları normalize ediyor:
+  - `name_ar` / `arabic` / `title_ar`
+  - `transliteration`
+  - `meaning_tr`, `meaning_en`
+  - `audio_url`
+- `supabase_providers.dart` içine `asmaUlHusnaProvider` eklendi:
+  - önce `asma_ul_husna` tablosu okunuyor
+  - sorgu fail ederse bundled `AsmaUlHusnaData.names` fallback dönülüyor
+- `asma_ul_husna_page.dart` artık listeyi doğrudan sabitten değil `asmaUlHusnaProvider` üstünden çözüyor.
+  - Sayfa yine kırılmadan açılıyor
+  - Cloud veri gelirse UI otomatik olarak provider verisini gösteriyor
+  - Cloud veri yoksa bundled fallback korunuyor
+- Yeni testler eklendi:
+  - `asma_ul_husna_data_test.dart`: empty-row fallback ve Supabase row normalization
+  - `asma_ul_husna_page_test.dart`: provider override ile ekranın cloud Asma verisini kullandığı doğrulandı
+- Gerçek backend doğrulaması yapıldı:
+  - `public.asma_ul_husna` REST endpoint’i `404` döndü; canlı tabloda şu an erişilebilir kayıt yok
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/asma_ul_husna_page.dart) önceki durumda Asma-ul Husna ekranını tamamen [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki sabit listeden besliyordu.
+- Section 13 gereği dini içerik akışının Supabase-first olması gerekiyor. Canlı backend tablosu henüz hazır değilken ekranı kırmadan ilerlemek için cloud-first + safe fallback deseni kuruldu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Asma-ul Husna feature’ı artık sabit veriye doğrudan bağlı değil; `asma_ul_husna` tablosu seed edildiğinde UI ek Flutter patch olmadan cloud veriye dönebilecek.
+- Backend hazır olmadan kullanıcı akışı bozulmuyor; fallback katmanı korunuyor.
+- Böylece Library içindeki ikinci büyük sabit dini içerik yüzeyi de cloud-first mimariye geçirildi.
+
+### Test Sonucu
+- `flutter test test/asma_ul_husna_data_test.dart test/features/library/asma_ul_husna_page_test.dart` → PASS (`6/6`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`64/64`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Asma-ul Husna static-only content pipeline: `10/25 → 4/25`
+
+### Sonraki Adım
+- `public.duas` ve `public.asma_ul_husna` canlı backend’de erişilebilir değil; sonraki turda SQL schema/seed kanalı repo içine eklenmeli ve tablo hazırlığı kapatılmalı.
+- Section 13 kapsamında bir sonraki yüksek etkili iş, statik dini içeriğin backend seed zincirini repo içinde doğrulanabilir SQL dosyalarına taşımak.
+- `flutter gen-l10n` kaynaklı eksik çeviri uyarıları ayrıca sertleştirilecek.

@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/constants/asma_ul_husna_data.dart';
+import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 import 'package:sirat_i_nur/core/services/audio_player_service.dart';
+
+List<Map<String, dynamic>> resolveAsmaUlHusnaItems(
+  AsyncValue<List<Map<String, dynamic>>> asyncNames,
+) {
+  return asyncNames.valueOrNull ?? AsmaUlHusnaData.names;
+}
 
 class AsmaUlHusnaPage extends ConsumerStatefulWidget {
   const AsmaUlHusnaPage({super.key});
@@ -21,8 +28,9 @@ class _AsmaUlHusnaPageState extends ConsumerState<AsmaUlHusnaPage> {
     final l10n = AppLocalizations.of(context)!;
     final locale = Localizations.localeOf(context);
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final names = resolveAsmaUlHusnaItems(ref.watch(asmaUlHusnaProvider));
 
-    final filteredNames = AsmaUlHusnaData.names.where((name) {
+    final filteredNames = names.where((name) {
       if (_searchQuery.isEmpty) return true;
       final q = _searchQuery.toLowerCase();
       final transliteration = (name['transliteration'] as String).toLowerCase();
@@ -68,7 +76,8 @@ class _AsmaUlHusnaPageState extends ConsumerState<AsmaUlHusnaPage> {
         itemBuilder: (context, index) {
           final item = filteredNames[index];
           final translations = item['translations'] as Map<String, dynamic>;
-          final meaning = translations[locale.languageCode] ?? translations['en'] ?? '';
+          final meaning =
+              translations[locale.languageCode] ?? translations['en'] ?? '';
 
           return Hero(
             tag: 'asma_${item['id']}',
@@ -125,7 +134,8 @@ class _AsmaUlHusnaPageState extends ConsumerState<AsmaUlHusnaPage> {
                               style: const TextStyle(
                                 fontSize: 26,
                                 fontWeight: FontWeight.w900,
-                                fontFamily: 'Amiri', // Assuming Amiri is available or falls back
+                                fontFamily:
+                                    'Amiri', // Assuming Amiri is available or falls back
                               ),
                               textAlign: TextAlign.center,
                             ),
@@ -145,9 +155,7 @@ class _AsmaUlHusnaPageState extends ConsumerState<AsmaUlHusnaPage> {
                                 style: TextStyle(
                                   fontSize: 11,
                                   height: 1.3,
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .onSurface
+                                  color: Theme.of(context).colorScheme.onSurface
                                       .withValues(alpha: 0.6),
                                 ),
                                 textAlign: TextAlign.center,
@@ -181,9 +189,9 @@ class _AsmaUlHusnaPageState extends ConsumerState<AsmaUlHusnaPage> {
     } catch (e) {
       if (mounted) {
         final l10n = AppLocalizations.of(context)!;
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(l10n.audioPlayFailed)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(l10n.audioPlayFailed)));
       }
     }
   }

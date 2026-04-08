@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sirat_i_nur/core/constants/asma_ul_husna_data.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -95,5 +96,21 @@ final dailyDuasProvider = FutureProvider<List<DuaData>>((ref) async {
     return resolveCloudDuas(List<Map<String, dynamic>>.from(res));
   } catch (_) {
     return dailyDuas;
+  }
+});
+
+final asmaUlHusnaProvider = FutureProvider<List<Map<String, dynamic>>>((
+  ref,
+) async {
+  final supabase = ref.read(supabaseClientProvider);
+
+  try {
+    final res = await supabase
+        .from('asma_ul_husna')
+        .select()
+        .order('id', ascending: true);
+    return resolveCloudAsmaUlHusnaRows(List<Map<String, dynamic>>.from(res));
+  } catch (_) {
+    return AsmaUlHusnaData.names;
   }
 });

@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/features/library/asma_ul_husna_page.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 void main() {
-  Widget createWidgetUnderTest() {
-    return const ProviderScope(
+  Widget createWidgetUnderTest({List<Map<String, dynamic>>? asmaNames}) {
+    return ProviderScope(
+      overrides: [
+        if (asmaNames != null)
+          asmaUlHusnaProvider.overrideWith((ref) async => asmaNames),
+      ],
       child: MaterialApp(
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        home: AsmaUlHusnaPage(),
+        home: const AsmaUlHusnaPage(),
       ),
     );
   }
@@ -49,6 +54,29 @@ void main() {
         findsWidgets,
       );
       expect(find.text('الرَّحْمَنُ'), findsNothing);
+    });
+
+    testWidgets('Uses cloud asma data when provider resolves', (tester) async {
+      await tester.pumpWidget(
+        createWidgetUnderTest(
+          asmaNames: [
+            {
+              'id': 101,
+              'arabic': 'الْوَدُودُ',
+              'transliteration': 'Al Wudood',
+              'translations': {
+                'en': 'Provider English Meaning',
+                'tr': 'Saglayici Turkce anlam',
+              },
+              'audioUrl': 'https://example.com/audio.mp3',
+            },
+          ],
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.text('Al Wudood'), findsOneWidget);
+      expect(find.text('Provider English Meaning'), findsOneWidget);
     });
   });
 }
