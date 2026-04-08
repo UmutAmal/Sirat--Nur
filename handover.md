@@ -810,3 +810,65 @@
 ### Sonraki Adım
 - `quran_ayahs` için kabul edilen resmi kaynaklardan verified seed katmanı hazırlanmalı.
 - Sonraki uygulama turunda `quran_page.dart`, `surah_reading_page.dart` ve `app_router.dart` içindeki `allSurahs` bağı cloud-first provider + fallback zincirine taşınmalı.
+
+## 2026-04-08 TUR-23 — Verified Quran Ayah Seed from Quran.com API
+### Yapılan İşlem
+- `tool/generate_quran_ayah_seed.dart` eklendi.
+- Script resmi Quran.com endpointlerinden ayet seed verisini çekiyor:
+  - `https://api.quran.com/api/v4/chapters?language=en`
+  - `https://api.quran.com/api/v4/resources/translations`
+  - `https://api.quran.com/api/v4/verses/by_chapter/{surah}?fields=text_uthmani&translations=52,85&per_page=300&page=1`
+- Script şu doğrulamaları yapıyor:
+  - `chapters` payload’ında `114` sure bulunması
+  - her sure için dönen ayet sayısının resmi `verses_count` ile eşleşmesi
+  - ayet numaralarının `1..n` sıralı gelmesi
+  - `text_uthmani`, seçilen TR resource ve seçilen EN resource alanlarının boş olmaması
+- Canlı kalite doğrulamasında Quran.com `77` numaralı `Turkish Translation(Diyanet)` resource’unun bazı kısa surelerde ayet bazlı değil, tüm sure mealini her ayete kopyaladığı tespit edildi.
+- Bu nedenle verified seed katmanında ayet bazlı tutarlı resmi payload veren `52` numaralı `Elmalili Hamdi Yazir` TR resource ve `85` numaralı `M.A.S. Abdel Haleem` EN resource seçildi.
+- Translation text temizleme katmanı eklendi:
+  - HTML tag’leri kaldırılıyor
+  - HTML entity’leri decode ediliyor
+  - çoklu boşluklar normalize ediliyor
+- Script çalıştırıldı ve `content_seed_quran_ayahs.sql` üretildi.
+- Üretilen SQL dosyası:
+  - `public.quran_ayahs` için `6236` adet upsert içeriyor
+  - her kayıt için `source` alanına chapter-level resmi endpoint URL’sini yazıyor
+  - `verified_at` alanını üretim timestamp’i ile dolduruyor
+  - foreign key için `public.quran_surahs` üzerinden `surah_id` çözüyor
+- `test/quran_ayah_seed_test.dart` eklendi:
+  - `6236` ayet upsert’ini doğruluyor
+  - kullanılan resmi source endpointlerini doğruluyor
+  - seçilen translation resource isimlerini doğruluyor
+  - ilk ve son ayet örneklerini doğruluyor
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/surah_reading_page.dart) hâlâ `assets/data/full_quran.json` üzerinden bundled ayet içeriği okuyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\quran\quran_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/quran_page.dart), [A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/network/app_router.dart) ve [A:\Way of Allah\sirat_i_nur\lib\core\constants\quran_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/quran_data.dart) bundled Quran zincirine bağlı.
+- Önceki turda sure metadata seed katmanı tamamlanmıştı, fakat ayet seviyesi verified seed henüz yoktu.
+- Yanlış TR resource ile seed üretmek, Section 13 “uydurma/yanlış içerik yok” kuralını ihlal edeceği için önce canlı resmi payload kalite kontrolü yapıldı ve bozuk resource elendi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_ayah_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql`
+- `A:\Way of Allah\sirat_i_nur\test\quran_ayah_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Repo artık Quran ayet içeriği için resmi kaynaktan tekrar üretilebilen verified SQL seed katmanına sahip.
+- Section 13 gereği Quran metnini Supabase’e taşıma zincirinde ayet seviyesindeki veri boşluğu kapandı.
+- Seed dosyası, bozuk `77` Diyanet payload riskini devre dışı bırakıp ayet-bazlı tutarlı TR/EN veri kaynağıyla ilerliyor.
+- Sonraki turda `quran_page.dart`, `surah_reading_page.dart` ve `app_router.dart` içindeki bundled Quran bağı cloud-first provider refactor’una geçirilebilir.
+
+### Test Sonucu
+- `dart run tool/generate_quran_ayah_seed.dart` → PASS
+- `flutter test test/quran_ayah_seed_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`76/76`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Missing verified Quran ayah seed layer: `8/25 → 3/25`
+- Wrong Turkish translation resource silently duplicating whole-surah text per ayah: `10/25 → 2/25`
+
+### Sonraki Adım
+- [A:\Way of Allah\sirat_i_nur\lib\features\quran\quran_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/quran_page.dart), [A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/surah_reading_page.dart) ve [A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/network/app_router.dart) içindeki bundled `allSurahs` / `full_quran.json` bağı cloud-first Riverpod provider zincirine taşınmalı.
+- Bu refactor sırasında offline fallback yalnızca cache üzerinden verilmeli; başarısız durumda kullanıcıya dürüst bağlantı mesajı gösterilmeli.
