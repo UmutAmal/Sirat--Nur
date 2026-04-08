@@ -81,7 +81,7 @@ class HomePage extends ConsumerWidget {
                   padding: EdgeInsets.symmetric(vertical: 24),
                   child: Center(child: CircularProgressIndicator(color: AppColors.emerald)),
                 ),
-                error: (error, stack) => Column( // Minimal fallback for immediate loading flash or rare glitch
+                error: (error, stack) => Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
@@ -92,7 +92,15 @@ class HomePage extends ConsumerWidget {
                       ],
                     ),
                     const SizedBox(height: 12),
-                    Text(l10n.error, style: const TextStyle(color: Colors.red)),
+                    Text(
+                      l10n.noInternet,
+                      style: const TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(l10n.checkConnection),
                   ],
                 ),
               ),

@@ -663,3 +663,55 @@
 - Section 13 tarafında sıradaki ana eksik, `content_schema.sql` üstüne doğrulanmış canlı seed katmanını yazmak.
 - Özellikle `public.duas` ve `public.asma_ul_husna` için kabul edilen resmi kaynaklara dayalı insert seti hazırlanmalı.
 - Sonraki kalite turunda root düzeyindeki eski anlatı/dokümantasyon iddiaları ile güncel cloud-first mimari uyumu yeniden denetlenecek.
+
+## 2026-04-08 TUR-20 — Daily Ayat Cache Gate and Honest Offline Failure
+### Yapılan İşlem
+- `supabase_providers.dart` içinde `dailyAyatProvider` için hardcoded ayet fallback kaldırıldı.
+- Aynı dosyaya günlük ayet akışı için 24 saatlik cache yardımcıları eklendi:
+  - `normalizeDailyAyat`
+  - `cacheDailyAyat`
+  - `readCachedDailyAyat`
+  - `resolveDailyAyat`
+- Yeni akış şu sırayı izliyor:
+  - önce `daily_content` içinde tarih bazlı kayıt aranıyor
+  - yoksa tarihsiz cloud fallback deneniyor
+  - ikisi de başarısızsa son 24 saat içinde kaydedilmiş local cache okunuyor
+  - cache de yoksa `StateError` fırlatılıyor
+- `home_page.dart` üzerindeki günlük ayet kartının error dalı dürüst bağlantı mesajına çevrildi:
+  - `No Internet Connection`
+  - `Please check your connection`
+- Yeni testler eklendi:
+  - `daily_ayat_provider_test.dart`
+  - `features/home/home_page_test.dart`
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/providers/supabase_providers.dart) önceki durumda cloud hata verse bile doğrudan sabit bir ayet döndürüyordu.
+- Bu akış:
+  - Section 13 içindeki `Tüm içerik Supabase'den okunur` kuralıyla çelişiyordu
+  - `Offline mod: ... metin içeriği 24 saat` şartını karşılamıyordu
+  - kullanıcıya gerçek veri gelmemesine rağmen sahte başarı gösterdiği için false-success üretiyordu
+- Kök sebep, provider katmanında cache ve dürüst hata modelinin hiç olmamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\daily_ayat_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\home\home_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Günlük ayet akışı artık resmi olmayan sabit metinle kullanıcıyı yanıltmıyor.
+- Son başarılı ayet 24 saat boyunca offline okunabildiği için ana sayfa cloud kesintilerinde daha dayanıklı hale geldi.
+- Cache süresi dolmuşsa UI dürüst şekilde bağlantı hatasını gösteriyor; boş ekran ya da uydurma içerik kalmıyor.
+
+### Test Sonucu
+- `flutter test test/daily_ayat_provider_test.dart test/features/home/home_page_test.dart` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`72/72`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Daily ayat hardcoded fallback + missing cache pipeline: `9/25 → 3/25`
+
+### Sonraki Adım
+- `quran_data.dart` hâlâ 114 sure metadata’sını bundled olarak taşıyor ve [A:\Way of Allah\sirat_i_nur\lib\features\quran\quran_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/quran_page.dart), [A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/surah_reading_page.dart), [A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/network/app_router.dart) bu bundled metadata’yı doğrudan kullanıyor.
+- Section 13’e göre sonraki yüksek etkili tur, `quran_surahs` / `quran_ayahs` schema + verified seed + cloud-first provider zincirini bu yüzeylere taşımak.
