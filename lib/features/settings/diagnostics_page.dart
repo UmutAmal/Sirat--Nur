@@ -18,18 +18,106 @@ class DiagnosticsPage extends ConsumerStatefulWidget {
   ConsumerState<DiagnosticsPage> createState() => _DiagnosticsPageState();
 }
 
+@visibleForTesting
+class DiagnosticsRowsDependencies {
+  final String localeTag;
+  final bool isDarkMode;
+  final String? languageCode;
+  final String? locationName;
+
+  const DiagnosticsRowsDependencies({
+    required this.localeTag,
+    required this.isDarkMode,
+    required this.languageCode,
+    required this.locationName,
+  });
+
+  factory DiagnosticsRowsDependencies.fromState(
+    SettingsState settings,
+    Locale locale,
+  ) {
+    return DiagnosticsRowsDependencies(
+      localeTag: locale.toLanguageTag(),
+      isDarkMode: settings.isDarkMode,
+      languageCode: settings.languageCode,
+      locationName: settings.locationName,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+
+    return other is DiagnosticsRowsDependencies &&
+        other.localeTag == localeTag &&
+        other.isDarkMode == isDarkMode &&
+        other.languageCode == languageCode &&
+        other.locationName == locationName;
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    localeTag,
+    isDarkMode,
+    languageCode,
+    locationName,
+  );
+}
+
 class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
   late Future<List<_DiagnosticRow>> _rowsFuture;
-  bool _didInitRows = false;
+  ProviderSubscription<SettingsState>? _settingsSubscription;
+  DiagnosticsRowsDependencies? _rowsDependencies;
+
+  @override
+  void initState() {
+    super.initState();
+    _settingsSubscription = ref.listenManual<SettingsState>(
+      settingsProvider,
+      (_, next) {
+        if (!mounted) {
+          return;
+        }
+        _syncRowsFuture(notify: true);
+      },
+    );
+  }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (_didInitRows) {
+    _syncRowsFuture();
+  }
+
+  @override
+  void dispose() {
+    _settingsSubscription?.close();
+    super.dispose();
+  }
+
+  void _syncRowsFuture({bool notify = false}) {
+    final nextDependencies = DiagnosticsRowsDependencies.fromState(
+      ref.read(settingsProvider),
+      Localizations.localeOf(context),
+    );
+
+    if (_rowsDependencies == nextDependencies) {
       return;
     }
-    _rowsFuture = _buildRows();
-    _didInitRows = true;
+
+    void assign() {
+      _rowsDependencies = nextDependencies;
+      _rowsFuture = _buildRows();
+    }
+
+    if (notify && mounted) {
+      setState(assign);
+      return;
+    }
+
+    assign();
   }
 
   Future<List<_DiagnosticRow>> _buildRows() async {

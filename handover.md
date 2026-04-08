@@ -1310,3 +1310,35 @@
 - En yüksek açık risk artık diagnostics ekranındaki bazı teknik değerlerin hâlâ presentation-only string olması:
   - [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart)
 - Sonraki turda app version ve benzeri metadata’lar package/runtime kaynağından okunmalı; stale sabit değerler kaldırılmalı.
+
+## 2026-04-08 TUR-33 — Refresh Diagnostics Rows On Locale Change
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart) içine `DiagnosticsRowsDependencies` eklendi.
+- Aynı sayfa artık locale veya ekranda gösterilen settings alanları değiştiğinde diagnostics future’ını yeniden kuruyor.
+- `ref.listenManual(settingsProvider, ...)` ile açık diagnostics ekranındaki state değişimleri izlenip stale satırlar engellendi.
+- [A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/settings/diagnostics_page_test.dart) ile locale ve görünür settings değişimlerinde dependency imzasının değiştiği regresyon testleri eklendi.
+
+### Neden Yapıldı
+- TUR-32 sonrasında diagnostics satırları localization ile üretiliyordu ancak `_rowsFuture` sadece ilk dependency geçişinde kuruluyordu.
+- Bu yapı, sayfa açıkken dil veya görünür settings değişirse eski locale/state snapshot’ını koruyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Diagnostics sayfası artık locale değişiminde stale çeviri göstermiyor.
+- Tema, dil kodu ve konum adı gibi görünür diagnostics alanları açık sayfada değiştiğinde yeni state’i yansıtıyor.
+
+### Test Sonucu
+- `flutter test test/features/settings/diagnostics_page_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`96/96`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Diagnostics page holding stale localized rows after locale switch: `6/25 → 2/25`
+- Open diagnostics screen not reflecting visible settings updates: `6/25 → 2/25`
+
+### Sonraki Adım
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart) içindeki sabit sürüm satırını runtime build/version kaynağına taşı.
