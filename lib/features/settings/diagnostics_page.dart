@@ -5,6 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 // Removed legacy static stream import
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
+import 'package:sirat_i_nur/core/services/audio_player_service.dart';
+import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/features/settings/quran_diagnostics.dart';
@@ -89,6 +91,68 @@ String resolveDiagnosticsVersion({
   }
 
   return '$normalizedBuildName+$normalizedBuildNumber';
+}
+
+@visibleForTesting
+class AudioDiagnosticsSnapshot {
+  final int adhanAssetsPresent;
+  final int uiAssetsPresent;
+  final int quranAssetsPresent;
+  final int sukunAssetsReady;
+
+  const AudioDiagnosticsSnapshot({
+    required this.adhanAssetsPresent,
+    required this.uiAssetsPresent,
+    required this.quranAssetsPresent,
+    required this.sukunAssetsReady,
+  });
+}
+
+@visibleForTesting
+const Set<String> requiredAdhanAudioAssets = {
+  LocalAudio.adhanMakkah,
+  LocalAudio.adhanMadinah,
+  LocalAudio.adhanFajr,
+};
+
+@visibleForTesting
+const Set<String> requiredUiAudioAssets = {
+  LocalAudio.tasbihClick,
+  LocalAudio.tasbihComplete,
+  LocalAudio.notificationTone,
+  LocalAudio.prayerReminder,
+  LocalAudio.pageFlip,
+  LocalAudio.success,
+};
+
+@visibleForTesting
+AudioDiagnosticsSnapshot buildAudioDiagnosticsSnapshot({
+  required Iterable<String> manifestAssets,
+  required AudioSovereigntyService audioService,
+}) {
+  final assetSet = manifestAssets.toSet();
+  final adhanAssetsPresent = requiredAdhanAudioAssets
+      .where(assetSet.contains)
+      .length;
+  final uiAssetsPresent = requiredUiAudioAssets.where(assetSet.contains).length;
+  final quranAssetsPresent = assetSet
+      .where(
+        (asset) =>
+            asset.startsWith('assets/audio/quran/') &&
+            !asset.endsWith('.gitkeep'),
+      )
+      .length;
+  final sukunAssetsReady = expectedSukunSoundTypes.where((type) {
+    final assetPath = audioService.resolveSukunAssetPath(type);
+    return assetPath != null && assetSet.contains(assetPath);
+  }).length;
+
+  return AudioDiagnosticsSnapshot(
+    adhanAssetsPresent: adhanAssetsPresent,
+    uiAssetsPresent: uiAssetsPresent,
+    quranAssetsPresent: quranAssetsPresent,
+    sukunAssetsReady: sukunAssetsReady,
+  );
 }
 
 class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
@@ -240,48 +304,44 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
       final Map<String, dynamic> manifest =
           jsonDecode(manifestJson) as Map<String, dynamic>;
       final assets = manifest.keys.toList();
-
-      final adhan = assets
-          .where(
-            (asset) =>
-                asset.startsWith('assets/audio/adhan/') &&
-                !asset.endsWith('.gitkeep'),
-          )
-          .length;
-      final ui = assets
-          .where(
-            (asset) =>
-                asset.startsWith('assets/audio/ui/') &&
-                !asset.endsWith('.gitkeep'),
-          )
-          .length;
-      final quran = assets
-          .where(
-            (asset) =>
-                asset.startsWith('assets/audio/quran/') &&
-                !asset.endsWith('.gitkeep'),
-          )
-          .length;
+      final audioService = ref.read(audioSovereigntyServiceProvider);
+      final snapshot = buildAudioDiagnosticsSnapshot(
+        manifestAssets: assets,
+        audioService: audioService,
+      );
 
       rows.add(
         _DiagnosticRow(
           l10n.diagnosticsAdhanAudioAssets,
-          l10n.diagnosticsFilesCount('$adhan'),
-          adhan > 0,
+          l10n.diagnosticsFilesCount(
+            '${snapshot.adhanAssetsPresent}/${requiredAdhanAudioAssets.length}',
+          ),
+          snapshot.adhanAssetsPresent == requiredAdhanAudioAssets.length,
         ),
       );
       rows.add(
         _DiagnosticRow(
           l10n.diagnosticsUiAudioAssets,
-          l10n.diagnosticsFilesCount('$ui'),
-          ui > 0,
+          l10n.diagnosticsFilesCount(
+            '${snapshot.uiAssetsPresent}/${requiredUiAudioAssets.length}',
+          ),
+          snapshot.uiAssetsPresent == requiredUiAudioAssets.length,
         ),
       );
       rows.add(
         _DiagnosticRow(
           l10n.diagnosticsQuranAudioAssets,
-          l10n.diagnosticsFilesCount('$quran'),
-          quran > 0,
+          l10n.diagnosticsFilesCount('${snapshot.quranAssetsPresent}'),
+          snapshot.quranAssetsPresent > 0,
+        ),
+      );
+      rows.add(
+        _DiagnosticRow(
+          l10n.sukunNatureLabel,
+          l10n.diagnosticsSupportedCount(
+            '${snapshot.sukunAssetsReady}/${expectedSukunSoundTypes.length}',
+          ),
+          snapshot.sukunAssetsReady == expectedSukunSoundTypes.length,
         ),
       );
     } catch (error) {

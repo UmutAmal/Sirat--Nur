@@ -70,6 +70,19 @@ void main() {
       expect(engine.lastAssetPath, 'assets/audio/ui/notification.wav');
     });
 
+    test('normalizes sukun asset lookup keys before resolving paths', () async {
+      final service = AudioSovereigntyService(
+        engine: FakeSovereignAudioEngine(),
+        sukunAssets: const {'rain': 'assets/audio/ui/notification.wav'},
+      );
+
+      expect(
+        service.resolveSukunAssetPath(' Rain '),
+        'assets/audio/ui/notification.wav',
+      );
+      expect(service.resolveSukunAssetPath('forest'), isNull);
+    });
+
     test('setVolumes clamps values and forwards the mixed volume', () async {
       final engine = FakeSovereignAudioEngine();
       final service = AudioSovereigntyService(engine: engine);

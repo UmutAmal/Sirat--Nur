@@ -3,6 +3,13 @@ import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/services/audio_player_service.dart';
 
+const Set<String> expectedSukunSoundTypes = {
+  'rain',
+  'forest',
+  'night',
+  'ocean',
+};
+
 abstract class SovereignAudioEngine {
   Future<bool> playAsset(String assetPath);
   Future<void> stop();
@@ -48,6 +55,16 @@ class AudioSovereigntyService {
   bool get isPlaying => _isPlaying;
   double get quranVolume => _volumeQuran;
   double get natureVolume => _volumeNature;
+  Set<String> get configuredSukunTypes => _sukunAssets.keys.toSet();
+
+  String? resolveSukunAssetPath(String natureType) {
+    final normalized = natureType.trim().toLowerCase();
+    final assetPath = _sukunAssets[normalized];
+    if (assetPath == null || assetPath.trim().isEmpty) {
+      return null;
+    }
+    return assetPath;
+  }
 
   Future<bool> playQuran(String assetPath) async {
     final normalized = assetPath.trim();
@@ -62,8 +79,8 @@ class AudioSovereigntyService {
   }
 
   Future<bool> playSukun(String natureType) async {
-    final assetPath = _sukunAssets[natureType.trim().toLowerCase()];
-    if (assetPath == null || assetPath.isEmpty) {
+    final assetPath = resolveSukunAssetPath(natureType);
+    if (assetPath == null) {
       _isPlaying = false;
       return false;
     }

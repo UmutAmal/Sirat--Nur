@@ -1372,3 +1372,42 @@
 
 ### Sonraki Adım
 - Settings/diagnostics çevresinde kalan yüksek sinyalli tarama, özellikle paketlenmiş asset ve runtime capability satırlarının dürüstlük açısından yeniden gözden geçirilmesi.
+
+## 2026-04-08 TUR-35 — Harden Audio Diagnostics Against False Readiness
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\audio_sovereignty_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/audio_sovereignty_service.dart) içine `expectedSukunSoundTypes` ve `resolveSukunAssetPath` eklendi; Sukun tipi çözümleme artık normalize edilip tek noktadan yapılıyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart) içine `buildAudioDiagnosticsSnapshot` eklendi.
+- Diagnostics ses satırları artık sadece klasör saymıyor; beklenen adhan/UI asset setinin gerçekten var olup olmadığını ve Sukun için tanımlı tiplerin gerçekten manifestte çözülebilir olup olmadığını ölçüyor.
+- Diagnostics ekranına `Sukun (Nature)` üzerinden hazır ses manzarası kapsamı satırı eklendi.
+- [A:\Way of Allah\sirat_i_nur\test\audio_sovereignty_service_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/audio_sovereignty_service_test.dart) ve [A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/settings/diagnostics_page_test.dart) yeni sözleşme için genişletildi.
+
+### Neden Yapıldı
+- Önceki diagnostics zinciri `assets/audio/adhan`, `assets/audio/ui` ve `assets/audio/quran` klasörlerindeki dosya sayısını raporluyordu.
+- Bu yaklaşım, uygulamanın gerçekten beklediği sabit asset seti eksikse veya Sukun mapping boşsa yine de yanıltıcı şekilde “hazır” sinyali verebiliyordu.
+- Mevcut repo durumunda Sukun sayfası dört ses tipi sunuyor ancak provider varsayılanında bunlara karşılık gelen mapping bulunmuyor; diagnostics bunu ayrı bir risk olarak yansıtmıyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\audio_sovereignty_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\audio_sovereignty_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Diagnostics artık adhan ve UI tarafında tam beklenen asset setini `x/y files` biçiminde raporluyor.
+- Sukun zinciri artık `0/4 supported` gibi dürüst bir satır üretiyor; boş mapping gizlenmiyor.
+- AudioSovereigntyService içindeki Sukun çözümleme mantığı normalize lookup ile tek noktaya toplandı.
+
+### Test Sonucu
+- `flutter test test/audio_sovereignty_service_test.dart` → PASS (`6/6`)
+- `flutter test test/features/settings/diagnostics_page_test.dart` → PASS (`5/5`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`100/100`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Diagnostics reporting directory counts instead of required audio readiness: `4/25 → 1/25`
+- Hidden Sukun soundscape mapping gap in diagnostics: `7/25 → 3/25`
+
+### Sonraki Adım
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/sukun_audio_page.dart) içindeki hardcoded başlık ve ses isimlerini localization zincirine taşı.
+- Aynı turda boş Sukun mapping için kullanıcıya diagnostics ile tutarlı, dürüst bir empty-state/disabled-state yüzeyi oluştur.
