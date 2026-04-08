@@ -1,8 +1,23 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
+import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/features/library/library_page.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
+
+class _NoopAudioEngine implements SovereignAudioEngine {
+  @override
+  void dispose() {}
+
+  @override
+  Future<bool> playAsset(String assetPath) async => true;
+
+  @override
+  Future<void> setVolume(double volume) async {}
+
+  @override
+  Future<void> stop() async {}
+}
 
 void main() {
   group('Library localized copy helpers', () {
@@ -74,6 +89,23 @@ void main() {
       expect(resolved.first.english, 'English dua');
       expect(resolved.first.source, 'Diyanet');
       expect(resolved.first.category, 'Sabah Akşam');
+    });
+
+    test(
+      'sukun availability is false when no configured soundscapes exist',
+      () {
+        final audio = AudioSovereigntyService(engine: _NoopAudioEngine());
+
+        expect(isSukunAudioAvailable(audio), isFalse);
+      },
+    );
+
+    test('sukun subtitle switches to unavailable copy when audio is empty', () {
+      final en = lookupAppLocalizations(const Locale('en'));
+      final tr = lookupAppLocalizations(const Locale('tr'));
+
+      expect(resolveSukunLibrarySubtitle(en, false), en.sukunUnavailableTitle);
+      expect(resolveSukunLibrarySubtitle(tr, true), tr.sukunMixerSubtitle);
     });
   });
 }

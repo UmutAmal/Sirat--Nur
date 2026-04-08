@@ -1452,3 +1452,39 @@
 
 ### Sonraki Adım
 - Sıradaki yüksek sinyalli açık alan, Sukun zincirinin gerçekten asset-backed hale getirilmesi veya library girişinde availability bilgisiyle koşullu gösterim sağlanması.
+
+## 2026-04-08 TUR-37 — Disable Empty Sukun Entry In Library
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) içine `isSukunAudioAvailable` ve `resolveSukunLibrarySubtitle` yardımcıları eklendi.
+- Aynı dosyada library ekranı artık `audioSovereigntyServiceProvider` üzerinden varsayılan Sukun mapping var mı diye bakıyor.
+- Sukun mapping yoksa kartın `onTap` davranışı kapatıldı, subtitle `sukunUnavailableTitle` ile değiştirildi ve trailing ikon `block_rounded` oldu.
+- [A:\Way of Allah\sirat_i_nur\test\library_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/library_page_test.dart) içine availability ve subtitle helper regresyon testleri eklendi.
+- [A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/library/library_page_cloud_duas_test.dart) içine boş soundscape mapping senaryosunda Sukun kartının disabled kaldığını doğrulayan widget testi eklendi.
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\audio_sovereignty_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/audio_sovereignty_service.dart) varsayılan provider akışı boş `sukunAssets` ile kuruluyor.
+- Buna rağmen [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) Sukun kartını normal çalışan feature gibi gösterip `/library/sukun-audio` yönlendirmesini açık bırakıyordu.
+- Bu durum giriş yüzeyinde false-success üretiyor ve kullanıcıyı varsayılan olarak boş bir experience’e sokuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Library girişinde Sukun feature’ı artık yalnızca gerçekten yapılandırılmış soundscape varsa açılabilir görünüyor.
+- Varsayılan boş mapping senaryosunda kullanıcı dürüst unavailable copy görüyor ve yanlış navigasyona yönlendirilmiyor.
+- Sukun availability kararı artık giriş kartı ile detay sayfasında aynı servis kaynağından türetiliyor.
+
+### Test Sonucu
+- `flutter test test/library_page_test.dart` → PASS (`8/8`)
+- `flutter test test/features/library/library_page_cloud_duas_test.dart --reporter expanded` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`104/104`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Empty Sukun mapping still exposed as tappable library feature: `6/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki yüksek etkili açık alan, Sukun zincirini gerçek asset veya Supabase-backed `audio_files` kaydıyla doldurmak; dürüst disabled state artık var ama içerik hâlâ varsayılan kurulumda yok.

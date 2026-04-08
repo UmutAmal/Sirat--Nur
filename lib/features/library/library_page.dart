@@ -5,6 +5,7 @@ import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
+import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 String buildLibraryErrorText(AppLocalizations l10n, Object error) {
@@ -13,6 +14,14 @@ String buildLibraryErrorText(AppLocalizations l10n, Object error) {
 
 String buildLibraryEmptyText(AppLocalizations l10n) {
   return l10n.noResults;
+}
+
+bool isSukunAudioAvailable(AudioSovereigntyService audio) {
+  return audio.configuredSukunTypes.any(expectedSukunSoundTypes.contains);
+}
+
+String resolveSukunLibrarySubtitle(AppLocalizations l10n, bool isAvailable) {
+  return isAvailable ? l10n.sukunMixerSubtitle : l10n.sukunUnavailableTitle;
 }
 
 List<DuaData> resolveLibraryDuas(AsyncValue<List<DuaData>> asyncDuas) {
@@ -38,6 +47,8 @@ class LibraryPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
     final duas = resolveLibraryDuas(ref.watch(dailyDuasProvider));
+    final audio = ref.watch(audioSovereigntyServiceProvider);
+    final isSukunAvailable = isSukunAudioAvailable(audio);
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.library)),
@@ -143,7 +154,9 @@ class LibraryPage extends ConsumerWidget {
             const SizedBox(height: 8),
             AnimatedPremiumCard(
               animationDelay: 150,
-              onTap: () => context.go('/library/sukun-audio'),
+              onTap: isSukunAvailable
+                  ? () => context.go('/library/sukun-audio')
+                  : null,
               child: Row(
                 children: [
                   Container(
@@ -171,7 +184,7 @@ class LibraryPage extends ConsumerWidget {
                           ),
                         ),
                         Text(
-                          l10n.sukunMixerSubtitle,
+                          resolveSukunLibrarySubtitle(l10n, isSukunAvailable),
                           style: TextStyle(
                             fontSize: 13,
                             color: Theme.of(
@@ -182,7 +195,14 @@ class LibraryPage extends ConsumerWidget {
                       ],
                     ),
                   ),
-                  const Icon(Icons.chevron_right_rounded),
+                  Icon(
+                    isSukunAvailable
+                        ? Icons.chevron_right_rounded
+                        : Icons.block_rounded,
+                    color: Theme.of(
+                      context,
+                    ).colorScheme.onSurface.withValues(alpha: 0.4),
+                  ),
                 ],
               ),
             ),

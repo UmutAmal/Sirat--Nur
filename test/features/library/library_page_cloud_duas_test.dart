@@ -3,12 +3,28 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
+import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/features/library/library_page.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
+
+class _NoopAudioEngine implements SovereignAudioEngine {
+  @override
+  void dispose() {}
+
+  @override
+  Future<bool> playAsset(String assetPath) async => true;
+
+  @override
+  Future<void> setVolume(double volume) async {}
+
+  @override
+  Future<void> stop() async {}
+}
 
 Future<void> pumpLibraryPage(
   WidgetTester tester, {
   required List<DuaData> duas,
+  AudioSovereigntyService? audioService,
 }) async {
   await tester.pumpWidget(
     ProviderScope(
@@ -16,6 +32,9 @@ Future<void> pumpLibraryPage(
         dailyDuasProvider.overrideWith((ref) async => duas),
         educationCategoriesProvider.overrideWith(
           (ref) async => <Map<String, dynamic>>[],
+        ),
+        audioSovereigntyServiceProvider.overrideWithValue(
+          audioService ?? AudioSovereigntyService(engine: _NoopAudioEngine()),
         ),
       ],
       child: const MaterialApp(
@@ -62,6 +81,27 @@ void main() {
       expect(find.text('Cloud dua meaning'), findsOneWidget);
       expect(find.text('Morning & Evening'), findsOneWidget);
       expect(find.text('Bukhari'), findsOneWidget);
+    } finally {
+      await disposeLibraryPage(tester);
+    }
+  });
+
+  testWidgets('LibraryPage disables sukun entry when no soundscapes exist', (
+    tester,
+  ) async {
+    final en = lookupAppLocalizations(const Locale('en'));
+
+    try {
+      await pumpLibraryPage(tester, duas: const []);
+
+      expect(find.text(en.sukunUnavailableTitle), findsOneWidget);
+
+      await tester.tap(find.text(en.sukunAudioTitle).first);
+      await tester.pumpAndSettle();
+
+      expect(tester.takeException(), isNull);
+      expect(find.byType(LibraryPage), findsOneWidget);
+      expect(find.text(en.sukunUnavailableTitle), findsOneWidget);
     } finally {
       await disposeLibraryPage(tester);
     }
