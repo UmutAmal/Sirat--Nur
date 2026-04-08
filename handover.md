@@ -1151,8 +1151,60 @@
 - Reader/juz flow breaking during cloud migration: `7/25 → 3/25`
 
 ### Sonraki Adım
-- En yüksek açık risk, `juz` ve benzeri yapısal metadata’nın hâlâ bundled payload’dan gelmesi:
+- En yüksek açık risk, `juz` ve benzeri yapısal metadata'nın hâlâ bundled payload'dan gelmesi:
   - [A:\Way of Allah\sirat_i_nur\content_schema.sql](A:/Way%20of%20Allah/sirat_i_nur/content_schema.sql)
   - [A:\Way of Allah\sirat_i_nur\tool\generate_quran_ayah_seed.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/generate_quran_ayah_seed.dart)
   - [A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql](A:/Way%20of%20Allah/sirat_i_nur/content_seed_quran_ayahs.sql)
 - Sonraki turda `quran_ayahs` verified seed katmanına structural metadata eklenmeli ve provider içindeki bundled metadata merge ihtiyacı kaldırılmalı.
+
+## 2026-04-08 TUR-30 — Seed Quran Juz Metadata And Keep Runtime Backward Compatible
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\content_schema.sql](A:/Way%20of%20Allah/sirat_i_nur/content_schema.sql) içine `quran_ayahs.juz_number` alanı eklendi ve mevcut canlı tabloları kırmamak için `add column if not exists` migration satırı yazıldı.
+- [A:\Way of Allah\sirat_i_nur\tool\generate_quran_ayah_seed.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/generate_quran_ayah_seed.dart) resmi verse payload içindeki `juz_number` alanını okuyacak şekilde güncellendi; SQL insert/upsert bloklarına bu kolon dahil edildi.
+- [A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql](A:/Way%20of%20Allah/sirat_i_nur/content_seed_quran_ayahs.sql) yeniden üretildi.
+- [A:\Way of Allah\sirat_i_nur\lib\features\quran\providers\bundled_quran_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/providers/bundled_quran_provider.dart) cloud ayah sorgusunda önce `juz_number` kolonunu deneyecek, kolon henüz canlıda yoksa eski sorguya düşecek şekilde sertleştirildi.
+- Aynı provider normalize aşamasında:
+  - cloud `juz_number` varsa onu kullanıyor
+  - yoksa bundled metadata fallback ile çalışmaya devam ediyor
+- Testler güncellendi:
+  - [A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/content_schema_test.dart)
+  - [A:\Way of Allah\sirat_i_nur\test\quran_ayah_seed_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/quran_ayah_seed_test.dart)
+  - [A:\Way of Allah\sirat_i_nur\test\features\quran\providers\bundled_quran_provider_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/quran/providers/bundled_quran_provider_test.dart)
+
+### Neden Yapıldı
+- TUR-29 sonunda runtime cloud-first çalışıyordu ama `juz` metadata hâlâ local payload’dan geliyordu; bu, verified seed zincirinin eksik kaldığını gösteriyordu.
+- Resmi Quran Foundation verse endpoint canlı örneğinde `juz_number` alanı bulunduğu doğrulandı; dolayısıyla bu metadata’yı seed ve schema seviyesine almak mümkün ve gerekliydi.
+- Bununla birlikte canlı Supabase şemasının henüz güncellenmemiş olma riski vardı. Bu yüzden runtime provider kırıcı bir sorguya zorlanmadı; önce yeni kolonu dener, olmazsa eski shape’e geri düşer.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\content_schema.sql`
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_ayah_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql`
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\providers\bundled_quran_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\quran_ayah_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\providers\bundled_quran_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Verified Quran ayah seed artık `juz_number` taşıyor; future live bootstrap sonrası runtime provider local yapısal metadata’ya daha az ihtiyaç duyacak.
+- Runtime akış backward-compatible kaldı; canlı Supabase henüz migrate edilmemiş olsa bile provider fallback ile çalışmayı sürdürüyor.
+- Schema bootstrap dosyası artık yeni proje kurulumlarında ve mevcut tabloların genişletilmesinde aynı kolonu tanımlıyor.
+
+### Test Sonucu
+- `dart run tool/generate_quran_ayah_seed.dart` → PASS
+- `flutter test test/quran_ayah_seed_test.dart` → PASS (`2/2`)
+- `flutter test test/content_schema_test.dart` → PASS (`2/2`)
+- `flutter test test/features/quran/providers/bundled_quran_provider_test.dart` → PASS (`9/9`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`92/92`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Quran structural metadata absent from verified ayah seed: `7/25 → 2/25`
+- Runtime break risk while rolling out new `juz_number` column: `7/25 → 3/25`
+
+### Sonraki Adım
+- En yüksek açık risk artık diagnostics tarafında dataset “tam” görünse bile structural migration seviyesini ölçmemesi:
+  - [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart)
+  - [A:\Way of Allah\sirat_i_nur\lib\features\settings\quran_diagnostics.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/quran_diagnostics.dart)
+- Sonraki turda diagnostics zinciri `juz_number` kolonunun varlığını / doluluğunu da dürüst şekilde raporlayacak hale getirilmeli.

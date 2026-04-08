@@ -19,6 +19,7 @@ void main() {
       expect(seed, contains('translations=52,85'));
       expect(seed, contains('Turkish resource (52): Elmalili Hamdi Yazir'));
       expect(seed, contains('English resource (85): M.A.S. Abdel Haleem'));
+      expect(seed, contains('juz_number'));
       expect(seed, contains("TIMESTAMPTZ '"));
       expect(seed, contains('ON CONFLICT (surah_id, ayah_number) DO UPDATE SET'));
     });
@@ -30,7 +31,7 @@ void main() {
         seed,
         contains(
           "SELECT\n"
-          "  id, 1, 'بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ', "
+          "  id, 1, 1, 'بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ', "
           "'Rahmân ve Rahîm olan Allah''ın ismiyle.', "
           "'In the name of God, the Lord of Mercy, the Giver of Mercy!', NULL",
         ),
@@ -45,7 +46,7 @@ void main() {
       expect(
         seed,
         contains(
-          "id, 6, 'مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ', "
+          "id, 6, 30, 'مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ', "
           "'Gerek cinlerden, gerek insanlardan.', "
           "'whether they be jinn or people.’', NULL",
         ),

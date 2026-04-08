@@ -23,6 +23,7 @@ void main() {
         schema,
         contains('create table if not exists public.quran_ayahs'),
       );
+      expect(schema, contains('juz_number smallint'));
       expect(schema, contains('verified_at timestamptz not null'));
     });
 

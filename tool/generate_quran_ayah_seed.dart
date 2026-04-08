@@ -80,6 +80,7 @@ Future<void> main() async {
         }
 
         final textArabic = _requiredString(verse, 'text_uthmani');
+        final juzNumber = _requiredInt(verse, 'juz_number');
         final textTurkish = _translationText(
           verse,
           turkishTranslationResourceId,
@@ -92,18 +93,19 @@ Future<void> main() async {
         buffer
           ..writeln('INSERT INTO public.quran_ayahs (')
           ..writeln(
-            '  surah_id, ayah_number, text_ar, text_tr, text_en, audio_url, source, verified_at',
+            '  surah_id, ayah_number, juz_number, text_ar, text_tr, text_en, audio_url, source, verified_at',
           )
           ..writeln(')')
           ..writeln('SELECT')
           ..writeln(
-            "  id, $ayahNumber, '${_escapeSql(textArabic)}', "
+            "  id, $ayahNumber, $juzNumber, '${_escapeSql(textArabic)}', "
             "'${_escapeSql(textTurkish)}', '${_escapeSql(textEnglish)}', "
             "NULL, '$chapterSourceUrl', TIMESTAMPTZ '$verifiedAt'",
           )
           ..writeln('FROM public.quran_surahs')
           ..writeln('WHERE surah_number = $surahNumber')
           ..writeln('ON CONFLICT (surah_id, ayah_number) DO UPDATE SET')
+          ..writeln('  juz_number = EXCLUDED.juz_number,')
           ..writeln('  text_ar = EXCLUDED.text_ar,')
           ..writeln('  text_tr = EXCLUDED.text_tr,')
           ..writeln('  text_en = EXCLUDED.text_en,')

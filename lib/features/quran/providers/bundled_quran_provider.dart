@@ -66,11 +66,7 @@ Future<List<Map<String, dynamic>>?> loadCloudQuranRows({
           'id, surah_number, name_ar, name_en, name_transliteration, ayah_count, revelation_type',
         )
         .order('surah_number', ascending: true);
-    final ayahResponse = await supabase
-        .from('quran_ayahs')
-        .select('surah_id, ayah_number, text_ar, text_tr, text_en')
-        .order('surah_id', ascending: true)
-        .order('ayah_number', ascending: true);
+    final ayahResponse = await _loadCloudAyahRows(supabase);
 
     return normalizeCloudQuranRows(
       surahRows: List<Map<String, dynamic>>.from(surahResponse),
@@ -79,6 +75,22 @@ Future<List<Map<String, dynamic>>?> loadCloudQuranRows({
     );
   } catch (_) {
     return null;
+  }
+}
+
+Future<List<dynamic>> _loadCloudAyahRows(SupabaseClient supabase) async {
+  try {
+    return await supabase
+        .from('quran_ayahs')
+        .select('surah_id, ayah_number, juz_number, text_ar, text_tr, text_en')
+        .order('surah_id', ascending: true)
+        .order('ayah_number', ascending: true);
+  } catch (_) {
+    return supabase
+        .from('quran_ayahs')
+        .select('surah_id, ayah_number, text_ar, text_tr, text_en')
+        .order('surah_id', ascending: true)
+        .order('ayah_number', ascending: true);
   }
 }
 
@@ -215,7 +227,8 @@ List<Map<String, dynamic>>? normalizeCloudQuranRows({
     final textArabic = _nonEmptyString(ayahRow['text_ar']);
     final textTurkish = _nonEmptyString(ayahRow['text_tr']);
     final textEnglish = _nonEmptyString(ayahRow['text_en']);
-    final juzNumber = _toInt(bundledAyahMeta['juz']);
+    final juzNumber =
+        _toInt(ayahRow['juz_number']) ?? _toInt(bundledAyahMeta['juz']);
     if (textArabic == null ||
         textTurkish == null ||
         textEnglish == null ||
