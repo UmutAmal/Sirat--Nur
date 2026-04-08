@@ -354,9 +354,9 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?",
-  "chatbotOfflineSwitched": "Switched to simulated offline local LLM mode.",
-  "chatbotOfflineDownloadLabel": "Download & Apply",
+  "chatbotOfflinePrompt": "Basis pengetahuan Islam offline yang terverifikasi masih dalam proses kurasi. Anda dapat mengaktifkan penggantian offline sekarang, namun ini hanya akan menampilkan pesan aman terbatas hingga kumpulan data yang bersumber siap.\n\nApakah Anda ingin mengaktifkan penggantian offline?",
+  "chatbotOfflineSwitched": "Penggantian offline diaktifkan. Jawaban Islami lokal yang terverifikasi belum siap.",
+  "chatbotOfflineDownloadLabel": "Aktifkan Penggantian Offline",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
@@ -447,9 +447,9 @@
   "dayStreak": "Day streak",
   "bestStreak": "Best streak",
   "chatbotCloudAiLabel": "Cloud AI",
-  "chatbotLocalAiLabel": "Local AI",
+  "chatbotLocalAiLabel": "Penggantian Offline",
   "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+  "chatbotDownloadLocalAi": "Aktifkan Penggantian Offline",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
-  "chatbotLocalNoInfo": "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+  "chatbotLocalNoInfo": "[OFFLINE] Panduan Islam lokal yang terverifikasi belum tersedia. Beralih ke Cloud AI untuk mendapatkan jawaban bersumber.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Search this area",

@@ -912,14 +912,14 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Lub hauv paus kev paub txog kev paub txog kev txheeb xyuas offline Islamic tseem raug kho. Koj tuaj yeem qhib offline fallback tam sim no, tab sis nws tsuas yog qhia cov lus tsis muaj kev nyab xeeb kom txog thaum cov ntaub ntawv tau npaj txhij.\n\nKoj puas xav qhib offline fallback?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Offline fallback enabled. Txheeb xyuas cov lus teb hauv zos Islamic tseem tsis tau npaj.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'Qhib Offline Fallback';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1035,13 +1035,13 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Qhib Offline Fallback';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1054,7 +1054,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Txheeb xyuas cov lus qhia hauv zos Islamic tseem tsis tau muaj. Hloov mus rau Cloud AI rau cov lus teb tau txais.';
 
   @override
   String get mosques => 'Mosques';

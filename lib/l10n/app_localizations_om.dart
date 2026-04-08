@@ -910,14 +910,14 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Bu\'uurri beekumsa Islaamaa toora ala ta\'ee mirkanaa\'e ammallee qophaa\'aa jira. Amma kufaatii sarara ala dandeessisuu dandeessa, garuu hanga kuusaan deetaa madda ta\'etti ergaawwan nageenya qaban daangeffaman qofa agarsiisa.\n\nOffline fallback dandeessisuun barbaadduu?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Kufaatii sarara ala ta\'e dandeessifameera. Deebiin Islaamaa naannoo mirkanaa\'e ammallee qophii miti.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'Fallback Sarara Alaa dandeessisi';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1033,13 @@ class AppLocalizationsOm extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Toora ala Fallback';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Fallback Sarara Alaa dandeessisi';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1052,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Qajeelfamni Islaamaa naannoo mirkanaa\'e ammallee hin jiru. Deebii madda irraa argamuuf gara Cloud AI tti jijjiiraa.';
 
   @override
   String get mosques => 'Mosques';

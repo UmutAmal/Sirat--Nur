@@ -910,14 +910,14 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Ekifo eky’okumanya kw’Obusiraamu ekikakasiddwa nga tekirina mutimbagano kikyakuumibwa. Osobola okusobozesa offline fallback kati, naye ejja kulaga obubaka obutono bwokka obutebenkevu okutuusa nga dataset evudde ensibuko yeetegese.\n\nWandyagadde okusobozesa okugwa ku mutimbagano?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Offline fallback esobozeseddwa. Eby\'okuddamu by\'Obusiraamu eby\'omu kitundu ebikakasibwa tebinnaba kwetegekera.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'Ssobozesa Okugwa ku mutimbagano';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1033,13 @@ class AppLocalizationsLg extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Ssobozesa Okugwa ku mutimbagano';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1052,7 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Obulagirizi bw\'Obusiraamu obw\'omu kitundu obukakasibwa tebunnabaawo. Switch to Cloud AI for sourced answers.';
 
   @override
   String get mosques => 'Mosques';

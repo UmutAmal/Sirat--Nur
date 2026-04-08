@@ -911,14 +911,14 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Kinu-curate pa rin ang na-verify na offline na Islamic knowledge base. Maaari mong paganahin ang offline na fallback ngayon, ngunit magpapakita lamang ito ng mga limitadong ligtas na mensahe hanggang sa handa na ang pinagkunan na dataset.\n\nGusto mo bang paganahin ang offline na fallback?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Naka-enable ang offline na fallback. Ang mga na-verify na lokal na sagot sa Islam ay hindi pa handa.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'Paganahin ang Offline Fallback';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1034,13 +1034,13 @@ class AppLocalizationsTl extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Offline na Fallback';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Paganahin ang Offline Fallback';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1053,7 +1053,7 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Hindi pa available ang na-verify na lokal na gabay sa Islam. Lumipat sa Cloud AI para sa mga sourced na sagot.';
 
   @override
   String get mosques => 'Mosques';

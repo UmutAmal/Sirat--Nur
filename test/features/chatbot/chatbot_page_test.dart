@@ -39,7 +39,7 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.text('Use Cloud AI (Gemini)'), findsOneWidget);
-      expect(find.text('Download Local AI (1.5 GB)'), findsOneWidget);
+      expect(find.text('Enable Offline Fallback'), findsOneWidget);
       await tester.tap(find.text('Use Cloud AI (Gemini)'));
       await tester.pumpAndSettle();
 
@@ -73,7 +73,7 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.text('Bulut AI Kullan (Gemini)'), findsOneWidget);
-      expect(find.text("Yerel AI'yi İndir (1.5 GB)"), findsOneWidget);
+      expect(find.text("Çevrimdışı Fallback'i Etkinleştir"), findsOneWidget);
       await tester.tap(find.text('Bulut AI Kullan (Gemini)'));
       await tester.pumpAndSettle();
 
@@ -86,6 +86,48 @@ void main() {
 
       expect(
         find.text('Bulut API ayarlanmadı. Lütfen Yerel AI moduna geçin.'),
+        findsOneWidget,
+      );
+    } finally {
+      await disposeChatbotPage(tester);
+    }
+  });
+
+  testWidgets('ChatbotPage shows an honest offline fallback message', (
+    tester,
+  ) async {
+    try {
+      await pumpChatbotPage(tester, const Locale('en'));
+
+      await tester.tap(find.byIcon(Icons.tune_rounded));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Enable Offline Fallback'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('Offline Mode'), findsOneWidget);
+      expect(
+        find.textContaining(
+          'verified offline Islamic knowledge base is still being curated',
+        ),
+        findsOneWidget,
+      );
+
+      await tester.tap(find.text('Enable Offline Fallback'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('Offline Fallback'), findsOneWidget);
+
+      await tester.ensureVisible(find.byType(TextField));
+      await tester.enterText(find.byType(TextField), 'prayer');
+      await tester.testTextInput.receiveAction(TextInputAction.done);
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 500));
+      await tester.pumpAndSettle();
+
+      expect(
+        find.textContaining(
+          'Verified local Islamic guidance is not available yet.',
+        ),
         findsOneWidget,
       );
     } finally {

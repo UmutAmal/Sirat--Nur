@@ -354,9 +354,9 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?",
-  "chatbotOfflineSwitched": "Switched to simulated offline local LLM mode.",
-  "chatbotOfflineDownloadLabel": "Download & Apply",
+  "chatbotOfflinePrompt": "Motheo wa tsebo ya Boiselamo wo o netefaditšwego wa ka ntle ga inthanete o sa dutše o hlokomelwa. O ka kgontšha go boela morago ka ntle ga inthanete bjale, eupša e tla bontšha fela melaetša ye e bolokegilego ye e lekanyeditšwego go fihlela sete ya datha ye e hweditšwego e lokile.\n\nNa o ka rata go kgontšha go boela morago ka ntle ga inthanete?",
+  "chatbotOfflineSwitched": "Fallback ya ka ntle ga inthanete e kgontšhitšwe. Dikarabo tša selegae tša Boiselamo tše di netefaditšwego ga se tša lokela ga bjale.",
+  "chatbotOfflineDownloadLabel": "Kgontšha Fallback ya ka ntle ga inthanete",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
@@ -447,9 +447,9 @@
   "dayStreak": "Day streak",
   "bestStreak": "Best streak",
   "chatbotCloudAiLabel": "Cloud AI",
-  "chatbotLocalAiLabel": "Local AI",
+  "chatbotLocalAiLabel": "Fallback ya ka ntle ga inthanete",
   "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+  "chatbotDownloadLocalAi": "Kgontšha Fallback ya ka ntle ga inthanete",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
-  "chatbotLocalNoInfo": "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+  "chatbotLocalNoInfo": "[OFFLINE] Tlhahlo ya selegae ya Boiselamo ye e netefaditšwego ga e hwetšagale ga bjale. Fetogela go Cloud AI bakeng sa dikarabo tše di hweditšwego.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Search this area",

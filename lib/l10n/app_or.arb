@@ -354,9 +354,9 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?",
-  "chatbotOfflineSwitched": "Switched to simulated offline local LLM mode.",
-  "chatbotOfflineDownloadLabel": "Download & Apply",
+  "chatbotOfflinePrompt": "ଯାଞ୍ଚ ହୋଇଥିବା ଅଫଲାଇନ୍ ଇସଲାମିକ୍ ଜ୍ଞାନ ଆଧାରକୁ ବର୍ତ୍ତମାନ ମଧ୍ୟ କ୍ୟୁରେଟ୍ କରାଯାଉଛି | ଆପଣ ବର୍ତ୍ତମାନ ଅଫଲାଇନ୍ ଫଲବ୍ୟାକ୍ ସକ୍ଷମ କରିପାରିବେ, କିନ୍ତୁ ସୋର୍ସଡ୍ ଡାଟାସେଟ୍ ପ୍ରସ୍ତୁତ ନହେବା ପର୍ଯ୍ୟନ୍ତ ଏହା କେବଳ ସୀମିତ ସୁରକ୍ଷିତ ବାର୍ତ୍ତା ଦେଖାଇବ |\n\nଆପଣ ଅଫଲାଇନ୍ ଫଲବ୍ୟାକ୍ ସକ୍ଷମ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
+  "chatbotOfflineSwitched": "ଅଫଲାଇନ୍ ଫଲବ୍ୟାକ୍ ସକ୍ଷମ ହୋଇଛି | ଯାଞ୍ଚ ହୋଇଥିବା ସ୍ଥାନୀୟ ଇସଲାମିକ ଉତ୍ତରଗୁଡିକ ଏପର୍ଯ୍ୟନ୍ତ ପ୍ରସ୍ତୁତ ନୁହେଁ |",
+  "chatbotOfflineDownloadLabel": "ଅଫଲାଇନ୍ ଫଲବ୍ୟାକ୍ ସକ୍ଷମ କରନ୍ତୁ |",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
@@ -447,9 +447,9 @@
   "dayStreak": "Day streak",
   "bestStreak": "Best streak",
   "chatbotCloudAiLabel": "Cloud AI",
-  "chatbotLocalAiLabel": "Local AI",
+  "chatbotLocalAiLabel": "ଅଫଲାଇନ୍ ଫଲବ୍ୟାକ୍ |",
   "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+  "chatbotDownloadLocalAi": "ଅଫଲାଇନ୍ ଫଲବ୍ୟାକ୍ ସକ୍ଷମ କରନ୍ତୁ |",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
-  "chatbotLocalNoInfo": "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+  "chatbotLocalNoInfo": "[OFFINE] ଯାଞ୍ଚ ହୋଇଥିବା ସ୍ଥାନୀୟ ଇସଲାମିକ ମାର୍ଗଦର୍ଶନ ଏପର୍ଯ୍ୟନ୍ତ ଉପଲବ୍ଧ ନାହିଁ | ସୋର୍ସଡ୍ ଉତ୍ତରଗୁଡିକ ପାଇଁ କ୍ଲାଉଡ୍ AI କୁ ସୁଇଚ୍ କରନ୍ତୁ |",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Search this area",

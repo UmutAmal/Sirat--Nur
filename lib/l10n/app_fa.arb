@@ -354,9 +354,9 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?",
-  "chatbotOfflineSwitched": "Switched to simulated offline local LLM mode.",
-  "chatbotOfflineDownloadLabel": "Download & Apply",
+  "chatbotOfflinePrompt": "پایگاه دانش آفلاین اسلامی تأیید شده هنوز در حال مدیریت است. اکنون می‌توانید بازگشت آفلاین را فعال کنید، اما فقط تا زمانی که مجموعه داده منبع آماده شود، پیام‌های امن محدودی را نشان می‌دهد.\n\nآیا می‌خواهید بازگشت آفلاین را فعال کنید؟",
+  "chatbotOfflineSwitched": "بازگشت آفلاین فعال شد. پاسخ‌های اسلامی محلی تأیید شده هنوز آماده نیست.",
+  "chatbotOfflineDownloadLabel": "بازگشت به حالت آفلاین را فعال کنید",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
@@ -447,9 +447,9 @@
   "dayStreak": "Day streak",
   "bestStreak": "Best streak",
   "chatbotCloudAiLabel": "Cloud AI",
-  "chatbotLocalAiLabel": "Local AI",
+  "chatbotLocalAiLabel": "بازگشت به حالت آفلاین",
   "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+  "chatbotDownloadLocalAi": "بازگشت به حالت آفلاین را فعال کنید",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
-  "chatbotLocalNoInfo": "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+  "chatbotLocalNoInfo": "[آفلاین] راهنمایی اسلامی محلی تأیید شده هنوز در دسترس نیست. برای پاسخ‌های منبع، به Cloud AI بروید.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Search this area",

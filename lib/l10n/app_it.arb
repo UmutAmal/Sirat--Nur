@@ -354,9 +354,9 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?",
-  "chatbotOfflineSwitched": "Switched to simulated offline local LLM mode.",
-  "chatbotOfflineDownloadLabel": "Download & Apply",
+  "chatbotOfflinePrompt": "La base di conoscenza islamica offline verificata è ancora in fase di cura. Puoi abilitare il fallback offline ora, ma mostrerà solo messaggi sicuri limitati finché il set di dati di origine non sarà pronto.\n\nDesideri abilitare il fallback offline?",
+  "chatbotOfflineSwitched": "Fallback offline abilitato. Le risposte islamiche locali verificate non sono ancora pronte.",
+  "chatbotOfflineDownloadLabel": "Abilita il fallback offline",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
@@ -447,9 +447,9 @@
   "dayStreak": "Day streak",
   "bestStreak": "Best streak",
   "chatbotCloudAiLabel": "Cloud AI",
-  "chatbotLocalAiLabel": "Local AI",
+  "chatbotLocalAiLabel": "Fallback offline",
   "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+  "chatbotDownloadLocalAi": "Abilita il fallback offline",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
-  "chatbotLocalNoInfo": "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+  "chatbotLocalNoInfo": "[OFFLINE] La guida islamica locale verificata non è ancora disponibile. Passa all'AI cloud per ottenere risposte provenienti dall'origine.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Search this area",

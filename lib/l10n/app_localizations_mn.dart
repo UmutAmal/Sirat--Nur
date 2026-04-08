@@ -910,14 +910,14 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Баталгаажсан офлайн Исламын мэдлэгийн баазыг боловсруулсаар байна. Та одоо офлайн нөхөн сэргээх ажиллагааг идэвхжүүлж болно, гэхдээ эх сурвалжийн өгөгдлийн багц бэлэн болтол энэ нь зөвхөн хязгаарлагдмал аюулгүй мессежийг харуулах болно.\n\nТа офлайн нөөцийг идэвхжүүлэхийг хүсэж байна уу?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Офлайн буцаалтыг идэвхжүүлсэн. Баталгаажсан орон нутгийн Исламын хариулт хараахан бэлэн болоогүй байна.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'Офлайн буцаалтыг идэвхжүүлэх';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1033,13 @@ class AppLocalizationsMn extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Офлайн буцаалтыг идэвхжүүлэх';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1052,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Баталгаажсан орон нутгийн Исламын удирдамж хараахан боломжгүй байна. Эх сурвалжтай хариулт авахын тулд Cloud AI руу шилжинэ үү.';
 
   @override
   String get mosques => 'Mosques';

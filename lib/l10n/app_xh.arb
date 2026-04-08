@@ -354,9 +354,9 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?",
-  "chatbotOfflineSwitched": "Switched to simulated offline local LLM mode.",
-  "chatbotOfflineDownloadLabel": "Download & Apply",
+  "chatbotOfflinePrompt": "Isiseko solwazi lwamaSilamsi ngaphandle kweintanethi siqinisekisiweyo sisagcinwa. Unokwenza ukubuyisela umva ngaphandle kweintanethi ngoku, kodwa iya kubonisa kuphela imiyalezo ekhuselekileyo elinganiselweyo de idatabase efunyenweyo ilungile.\n\nNgaba ungathanda ukwenza ukubuyisela umva ngaphandle kweintanethi?",
+  "chatbotOfflineSwitched": "Ukubuyisela umva ngaphandle kweintanethi kuvuliwe. Iimpendulo eziqinisekisiweyo zasekhaya zamaSilamsi azikalungi.",
+  "chatbotOfflineDownloadLabel": "Yenza i-Fallback ngaphandle kwe-intanethi",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
@@ -447,9 +447,9 @@
   "dayStreak": "Day streak",
   "bestStreak": "Best streak",
   "chatbotCloudAiLabel": "Cloud AI",
-  "chatbotLocalAiLabel": "Local AI",
+  "chatbotLocalAiLabel": "Ukubuyela umva ngaphandle kweintanethi",
   "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+  "chatbotDownloadLocalAi": "Yenza i-Fallback ngaphandle kwe-intanethi",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
-  "chatbotLocalNoInfo": "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+  "chatbotLocalNoInfo": "[OFFLINE] Izikhokelo eziqinisekisiweyo zasekhaya zamaSilamsi azikafumaneki. Tshintshela kwi-Cloud AI ukufumana iimpendulo ezifunyenweyo.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Search this area",

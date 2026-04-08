@@ -2,8 +2,16 @@
 // All content is local - works offline
 
 class IslamicChatbotData {
+  /// Local religious answers stay disabled until the dataset is curated
+  /// against verified Quran/Hadith sources.
+  static const bool hasVerifiedDataset = false;
+
   /// Get response for a question
   static String? getResponse(String question, bool isTurkish) {
+    if (!hasVerifiedDataset) {
+      return null;
+    }
+
     final q = question.toLowerCase();
     
     // Search through all categories
@@ -15,7 +23,7 @@ class IslamicChatbotData {
       }
     }
     
-    return null; // No match found
+    return null; // No verified match found
   }
 
   static final List<_Category> _categories = [

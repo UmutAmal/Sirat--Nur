@@ -910,14 +910,14 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Saldhigga aqoonta islamka ee khadka tooska ah ee la xaqiijiyay ayaa wali la soo saarayaa. Waxaad awood u siin kartaa soo noqoshada khadka tooska ah hadda, laakiin waxay tusi doontaa oo kaliya fariimaha badbaadada xaddidan ilaa inta xog-ururinta laga keenay diyaar yahay.\n\nMa jeclaan lahayd inaad karti u yeelato dib u dhaca khadka tooska ah?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Dib u dhaca khadka tooska ah waa la furay Jawaabaha islaamiga ah ee maxaliga ah ee la xaqiijiyay wali diyaar uma aha.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'Daar dib-u-dhaca khadka tooska ah';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1033,13 @@ class AppLocalizationsSo extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Dib-u-dhaca Khadka Tooska ah';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Daar dib-u-dhaca khadka tooska ah';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1052,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Hanuun Islaami ah oo la xaqiijiyay weli lama heli karo. U beddel Cloud AI jawaabaha laga soo xigtay.';
 
   @override
   String get mosques => 'Mosques';

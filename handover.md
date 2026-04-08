@@ -2175,3 +2175,47 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/islamic_chatbot_data.dart) içerik bazlı doğruluk, dil tutarlılığı ve kaynak dürüstlüğü açısından satır satır temizlenecek.
 - Özellikle İngilizce response bloklarındaki Türkçe metin, hatalı dua/transliterasyon ve “4 temel unsur” deyip 6 unsur listeleme gibi semantik hatalar kök sebep düzeyinde giderilecek.
+
+## 2026-04-08 TUR-55 — Disable Unverified Local Islamic Chatbot Answers
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/islamic_chatbot_data.dart) içine `hasVerifiedDataset = false` guard’ı eklendi; `getResponse` artık doğrulanmış dataset yokken bilinçli olarak `null` dönüyor ve sabit dini cevapları runtime’dan çıkarıyor.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) ve tüm `app_*.arb` setinde chatbot offline/local metinleri dürüst fallback söylemine çevrildi: `chatbotLocalAiLabel`, `chatbotDownloadLocalAi`, `chatbotOfflinePrompt`, `chatbotOfflineSwitched`, `chatbotOfflineDownloadLabel`, `chatbotLocalNoInfo`.
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force` desteği alacak şekilde genişletildi; anlamı değişen chatbot anahtarları eski çevirileri korumadan 196 locale setine yeniden yayıldı.
+- [A:\Way of Allah\sirat_i_nur\test\features\chatbot\chatbot_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/chatbot/chatbot_page_test.dart) güncellendi; offline fallback seçiminden sonra artık dürüst unavailable mesajı gösterdiği doğrulandı.
+- [A:\Way of Allah\sirat_i_nur\test\islamic_chatbot_data_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/islamic_chatbot_data_test.dart) eklendi; doğrulanmamış dataset varken lokal dini cevapların hiç dönmediği kilitlendi.
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/islamic_chatbot_data.dart) içinde İngilizce response bloklarında Türkçe içerik, hatalı dua/transliterasyon ve semantik/doktrinel doğruluk riski bulunuyor.
+- Mevcut chatbot akışı bu sabit içeriği `Local AI` etiketiyle kullanıcıya dini rehberlik gibi sunuyordu; bu hem false success hem de dini açıdan yüksek riskliydi.
+- Kök sebep, verified source pipeline kurulmadan sabit metin deposunun üretim fallback’i olarak kullanılması ve UI’ın bunu “indirilebilir local AI” gibi pazarlamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\chatbot\chatbot_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\islamic_chatbot_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Doğrulanmamış lokal dini içerik artık hiçbir dilde chatbot yanıtı olarak servis edilmiyor.
+- Offline chatbot yüzeyi sahte “1.5 GB local AI download” anlatımından çıkarıldı; kullanıcıya verified local dataset’in hazır olmadığı dürüstçe gösteriliyor.
+- Tüm locale seti yeni dürüst offline fallback metinlerini aldı; chatbot UI ile runtime davranışı hizalandı.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart --force chatbotOfflinePrompt chatbotOfflineSwitched chatbotOfflineDownloadLabel chatbotLocalAiLabel chatbotDownloadLocalAi chatbotLocalNoInfo` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/islamic_chatbot_data_test.dart` → PASS (`1/1`)
+- `flutter test test/features/chatbot/chatbot_page_test.dart` → PASS (`3/3`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`157/157`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Unverified local Islamic chatbot dataset being served as authoritative guidance: `14/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/islamic_chatbot_data.dart) tamamen verified-source tabanlı yeni bir içerik pipeline’ına taşınacak veya repo dışı doğrulanmış dataset gelene kadar production akışından kaldırılacak.
+- Ayrıca [A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json](A:/Way%20of%20Allah/sirat_i_nur/assets/data/full_quran.json) ile official Quran seed zinciri arasında örneklem ve sayım doğrulaması eklenerek fallback asset’in de kaynak dürüstlüğü testle kilitlenecek.

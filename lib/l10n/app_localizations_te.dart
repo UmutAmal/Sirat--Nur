@@ -910,14 +910,15 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'ధృవీకరించబడిన ఆఫ్‌లైన్ ఇస్లామిక్ నాలెడ్జ్ బేస్ ఇప్పటికీ క్యూరేట్ చేయబడుతోంది. మీరు ఇప్పుడు ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ను ప్రారంభించవచ్చు, కానీ మూలాధార డేటాసెట్ సిద్ధమయ్యే వరకు ఇది పరిమిత సురక్షిత సందేశాలను మాత్రమే చూపుతుంది.\n\nమీరు ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ని ప్రారంభించాలనుకుంటున్నారా?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'ఆఫ్‌లైన్ ఫాల్‌బ్యాక్ ప్రారంభించబడింది. ధృవీకరించబడిన స్థానిక ఇస్లామిక్ సమాధానాలు ఇంకా సిద్ధంగా లేవు.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel =>
+      'ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ని ప్రారంభించండి';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1034,13 @@ class AppLocalizationsTe extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'ఆఫ్‌లైన్ ఫాల్‌బ్యాక్';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ని ప్రారంభించండి';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1053,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] ధృవీకరించబడిన స్థానిక ఇస్లామిక్ మార్గదర్శకత్వం ఇంకా అందుబాటులో లేదు. మూలాధార సమాధానాల కోసం క్లౌడ్ AIకి మారండి.';
 
   @override
   String get mosques => 'Mosques';

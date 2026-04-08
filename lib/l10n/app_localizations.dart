@@ -2167,19 +2167,19 @@ abstract class AppLocalizations {
   /// No description provided for @chatbotOfflinePrompt.
   ///
   /// In en, this message translates to:
-  /// **'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?'**
+  /// **'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?'**
   String get chatbotOfflinePrompt;
 
   /// No description provided for @chatbotOfflineSwitched.
   ///
   /// In en, this message translates to:
-  /// **'Switched to simulated offline local LLM mode.'**
+  /// **'Offline fallback enabled. Verified local Islamic answers are not ready yet.'**
   String get chatbotOfflineSwitched;
 
   /// No description provided for @chatbotOfflineDownloadLabel.
   ///
   /// In en, this message translates to:
-  /// **'Download & Apply'**
+  /// **'Enable Offline Fallback'**
   String get chatbotOfflineDownloadLabel;
 
   /// No description provided for @downloadPreparing.
@@ -2377,7 +2377,7 @@ abstract class AppLocalizations {
   /// No description provided for @chatbotLocalAiLabel.
   ///
   /// In en, this message translates to:
-  /// **'Local AI'**
+  /// **'Offline Fallback'**
   String get chatbotLocalAiLabel;
 
   /// No description provided for @chatbotUseCloudAi.
@@ -2389,7 +2389,7 @@ abstract class AppLocalizations {
   /// No description provided for @chatbotDownloadLocalAi.
   ///
   /// In en, this message translates to:
-  /// **'Download Local AI (1.5 GB)'**
+  /// **'Enable Offline Fallback'**
   String get chatbotDownloadLocalAi;
 
   /// No description provided for @chatbotQueriesLeft.
@@ -2407,7 +2407,7 @@ abstract class AppLocalizations {
   /// No description provided for @chatbotLocalNoInfo.
   ///
   /// In en, this message translates to:
-  /// **'[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.'**
+  /// **'[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.'**
   String get chatbotLocalNoInfo;
 
   /// No description provided for @mosques.

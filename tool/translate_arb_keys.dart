@@ -4,9 +4,12 @@ import 'dart:io';
 import 'package:translator/translator.dart';
 
 Future<void> main(List<String> arguments) async {
-  if (arguments.isEmpty) {
+  final force = arguments.contains('--force');
+  final keys = arguments.where((argument) => argument != '--force').toList();
+
+  if (keys.isEmpty) {
     stderr.writeln(
-      'Usage: dart run tool/translate_arb_keys.dart <key> [<key> ...]',
+      'Usage: dart run tool/translate_arb_keys.dart [--force] <key> [<key> ...]',
     );
     exitCode = 64;
     return;
@@ -23,7 +26,7 @@ Future<void> main(List<String> arguments) async {
       .toList()
     ..sort((a, b) => a.path.compareTo(b.path));
 
-  for (final key in arguments) {
+  for (final key in keys) {
     if (!english.containsKey(key)) {
       stderr.writeln('Missing template key in app_en.arb: $key');
       exitCode = 65;
@@ -38,7 +41,7 @@ Future<void> main(List<String> arguments) async {
     final current = _readArb(file.path);
     final updated = Map<String, dynamic>.from(current);
 
-    for (final key in arguments) {
+    for (final key in keys) {
       final englishValue = english[key];
       final metadataKey = '@$key';
 
@@ -46,7 +49,7 @@ Future<void> main(List<String> arguments) async {
         updated[key] = englishValue;
       } else if (locale == 'tr') {
         updated[key] = turkish[key] ?? englishValue;
-      } else if (_shouldPreserve(current[key], englishValue)) {
+      } else if (!force && _shouldPreserve(current[key], englishValue)) {
         updated[key] = current[key];
       } else if (englishValue is String) {
         updated[key] = await _translateValue(

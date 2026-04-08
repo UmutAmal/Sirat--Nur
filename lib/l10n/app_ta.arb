@@ -354,9 +354,9 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?",
-  "chatbotOfflineSwitched": "Switched to simulated offline local LLM mode.",
-  "chatbotOfflineDownloadLabel": "Download & Apply",
+  "chatbotOfflinePrompt": "சரிபார்க்கப்பட்ட ஆஃப்லைன் இஸ்லாமிய அறிவுத் தளம் இன்னும் நிர்வகிக்கப்படுகிறது. நீங்கள் இப்போது ஆஃப்லைன் ஃபால்பேக்கை இயக்கலாம், ஆனால் ஆதார் தரவுத்தொகுப்பு தயாராகும் வரை அது வரையறுக்கப்பட்ட பாதுகாப்பான செய்திகளை மட்டுமே காண்பிக்கும்.\n\nஆஃப்லைன் ஃபால்பேக்கை இயக்க விரும்புகிறீர்களா?",
+  "chatbotOfflineSwitched": "ஆஃப்லைன் ஃபால்பேக் இயக்கப்பட்டது. சரிபார்க்கப்பட்ட உள்ளூர் இஸ்லாமிய பதில்கள் இன்னும் தயாராகவில்லை.",
+  "chatbotOfflineDownloadLabel": "ஆஃப்லைன் ஃபால்பேக்கை இயக்கு",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
@@ -447,9 +447,9 @@
   "dayStreak": "Day streak",
   "bestStreak": "Best streak",
   "chatbotCloudAiLabel": "Cloud AI",
-  "chatbotLocalAiLabel": "Local AI",
+  "chatbotLocalAiLabel": "ஆஃப்லைன் ஃபால்பேக்",
   "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+  "chatbotDownloadLocalAi": "ஆஃப்லைன் ஃபால்பேக்கை இயக்கு",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
-  "chatbotLocalNoInfo": "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+  "chatbotLocalNoInfo": "[ஆஃப்லைன்] சரிபார்க்கப்பட்ட உள்ளூர் இஸ்லாமிய வழிகாட்டுதல் இன்னும் கிடைக்கவில்லை. ஆதாரமான பதில்களுக்கு Cloud AIக்கு மாறவும்.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Search this area",

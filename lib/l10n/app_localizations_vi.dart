@@ -910,14 +910,14 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Cơ sở kiến ​​thức Hồi giáo ngoại tuyến đã được xác minh vẫn đang được quản lý. Bạn có thể bật tính năng dự phòng ngoại tuyến ngay bây giờ nhưng tính năng này sẽ chỉ hiển thị các thông báo an toàn có giới hạn cho đến khi tập dữ liệu có nguồn sẵn sàng.\n\nBạn có muốn bật dự phòng ngoại tuyến không?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Đã bật dự phòng ngoại tuyến. Các câu trả lời Hồi giáo địa phương đã được xác minh vẫn chưa sẵn sàng.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'Bật dự phòng ngoại tuyến';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1033,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Dự phòng ngoại tuyến';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Bật dự phòng ngoại tuyến';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1052,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Hiện chưa có hướng dẫn Hồi giáo địa phương đã được xác minh. Chuyển sang Cloud AI để có câu trả lời có nguồn gốc.';
 
   @override
   String get mosques => 'Mosques';

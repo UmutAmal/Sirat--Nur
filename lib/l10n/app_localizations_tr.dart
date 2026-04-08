@@ -913,14 +913,15 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Yerel Yapay Zeka modelini indirmek yaklaşık 1.5 GB alan gerektirir. İndirildikten sonra, Asistan tamamen çevrimdışı ve sınırsız çalışacaktır. \n\nİndirmeyi başlatmak ister misiniz?';
+      'Doğrulanmış çevrimdışı İslami bilgi tabanı hâlâ kaynak bazında hazırlanıyor. Çevrimdışı fallback modunu şimdi açabilirsiniz; ancak doğrulanmış veri yüklenene kadar yalnızca sınırlı güvenli mesajlar gösterilecektir.\n\nÇevrimdışı fallback modunu etkinleştirmek ister misiniz?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Simüle edilmiş çevrimdışı yerel LLM moduna geçildi.';
+      'Çevrimdışı fallback etkinleştirildi. Doğrulanmış yerel İslami cevaplar henüz hazır değil.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'İndir ve Uygula';
+  String get chatbotOfflineDownloadLabel =>
+      'Çevrimdışı Fallback\'i Etkinleştir';
 
   @override
   String get downloadPreparing => 'İndirme hazırlanıyor...';
@@ -1035,13 +1036,13 @@ class AppLocalizationsTr extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Bulut AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Yerel AI';
+  String get chatbotLocalAiLabel => 'Çevrimdışı Fallback';
 
   @override
   String get chatbotUseCloudAi => 'Bulut AI Kullan (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Yerel AI\'yi İndir (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Çevrimdışı Fallback\'i Etkinleştir';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1054,7 +1055,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[YEREL AI] Bu konuda henüz bilgim yok. Namaz, oruç, zekat, hac, iman veya ahlak hakkında soru sorabilirsiniz.';
+      '[ÇEVRİMDIŞI] Doğrulanmış yerel İslami rehberlik henüz hazır değil. Kaynaklı cevaplar için Bulut AI moduna geçin.';
 
   @override
   String get mosques => 'Camiler';

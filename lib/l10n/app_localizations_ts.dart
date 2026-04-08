@@ -910,14 +910,15 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Xivandla xa vutivi bya Xiislam lexi tiyisisiweke xa le handle ka inthanete xa ha hlayisiwa. U nga pfumelela ku tlhelela endzhaku ka le handle ka inthanete sweswi, kambe yi ta kombisa ntsena marungula lama hlayisekeke lama nga nyawuriki ku kondza dataset leyi humaka eka xihlovo yi lunghekile.\n\nXana u nga tsakela ku endla leswaku ku va na ku tlhelela endzhaku ka offline?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Offline fallback yi tirhisiwile. Tinhlamulo ta Xiislam ta laha kaya leti tiyisisiweke a ti si lungheka.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel =>
+      'Endla leswaku Offline Fallback yi tirha';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1034,14 @@ class AppLocalizationsTs extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi =>
+      'Endla leswaku Offline Fallback yi tirha';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1054,7 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Nkongomiso wa laha kaya lowu tiyisisiweke wa Xiislam a wu si kumeka. Cinca eka Cloud AI ku kuma tinhlamulo leti humaka eka xihlovo.';
 
   @override
   String get mosques => 'Mosques';

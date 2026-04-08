@@ -910,14 +910,15 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Preverjena baza islamskega znanja brez povezave je še vedno v pripravi. Nadomestni način brez povezave lahko omogočite zdaj, vendar bo prikazoval samo omejena varna sporočila, dokler izvorni nabor podatkov ne bo pripravljen.\n\nAli želite omogočiti nadomestni način brez povezave?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Nadomestni način brez povezave je omogočen. Preverjeni lokalni islamski odgovori še niso pripravljeni.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel =>
+      'Omogoči nadomestni način brez povezave';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1034,13 @@ class AppLocalizationsSl extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Nadomestni način brez povezave';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Omogoči nadomestni način brez povezave';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1053,7 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Preverjene lokalne islamske smernice še niso na voljo. Preklopite na Cloud AI za pridobljene odgovore.';
 
   @override
   String get mosques => 'Mosques';

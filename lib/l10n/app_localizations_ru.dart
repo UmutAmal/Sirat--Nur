@@ -910,14 +910,15 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Подтвержденная автономная база исламских знаний все еще находится на стадии курирования. Сейчас вы можете включить резервный режим автономного режима, но он будет отображать только ограниченное количество безопасных сообщений, пока исходный набор данных не будет готов.\n\nХотите включить резервный режим автономного режима?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Автономный резерв включен. Проверенные местные исламские ответы еще не готовы.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel =>
+      'Включить автономный резервный режим';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1034,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Автономный резерв';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Включить автономный резервный режим';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1053,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Проверенные местные исламские рекомендации пока недоступны. Переключитесь на Cloud AI для получения ответов.';
 
   @override
   String get mosques => 'Mosques';

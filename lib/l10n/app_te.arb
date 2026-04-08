@@ -354,9 +354,9 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?",
-  "chatbotOfflineSwitched": "Switched to simulated offline local LLM mode.",
-  "chatbotOfflineDownloadLabel": "Download & Apply",
+  "chatbotOfflinePrompt": "ధృవీకరించబడిన ఆఫ్‌లైన్ ఇస్లామిక్ నాలెడ్జ్ బేస్ ఇప్పటికీ క్యూరేట్ చేయబడుతోంది. మీరు ఇప్పుడు ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ను ప్రారంభించవచ్చు, కానీ మూలాధార డేటాసెట్ సిద్ధమయ్యే వరకు ఇది పరిమిత సురక్షిత సందేశాలను మాత్రమే చూపుతుంది.\n\nమీరు ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ని ప్రారంభించాలనుకుంటున్నారా?",
+  "chatbotOfflineSwitched": "ఆఫ్‌లైన్ ఫాల్‌బ్యాక్ ప్రారంభించబడింది. ధృవీకరించబడిన స్థానిక ఇస్లామిక్ సమాధానాలు ఇంకా సిద్ధంగా లేవు.",
+  "chatbotOfflineDownloadLabel": "ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ని ప్రారంభించండి",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
@@ -447,9 +447,9 @@
   "dayStreak": "Day streak",
   "bestStreak": "Best streak",
   "chatbotCloudAiLabel": "Cloud AI",
-  "chatbotLocalAiLabel": "Local AI",
+  "chatbotLocalAiLabel": "ఆఫ్‌లైన్ ఫాల్‌బ్యాక్",
   "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+  "chatbotDownloadLocalAi": "ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ని ప్రారంభించండి",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
-  "chatbotLocalNoInfo": "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+  "chatbotLocalNoInfo": "[OFFLINE] ధృవీకరించబడిన స్థానిక ఇస్లామిక్ మార్గదర్శకత్వం ఇంకా అందుబాటులో లేదు. మూలాధార సమాధానాల కోసం క్లౌడ్ AIకి మారండి.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Search this area",

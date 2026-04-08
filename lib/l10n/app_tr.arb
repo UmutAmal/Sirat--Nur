@@ -370,9 +370,9 @@
   "chatbotGreeting": "Selamun Aleyküm! Ben İslami asistanınızım. Bana namaz, oruç, zekat veya dini konularda sorular sorabilirsiniz.",
   "chatbotLimitReached": "Günlük soru limitinize ulaştınız. Sınırsız erişim için Premium'a geçin.",
   "chatbotErrorMsg": "Bir cevap oluşturamadım. Lütfen tekrar deneyin.",
-  "chatbotOfflinePrompt": "Yerel Yapay Zeka modelini indirmek yaklaşık 1.5 GB alan gerektirir. İndirildikten sonra, Asistan tamamen çevrimdışı ve sınırsız çalışacaktır. \n\nİndirmeyi başlatmak ister misiniz?",
-  "chatbotOfflineSwitched": "Simüle edilmiş çevrimdışı yerel LLM moduna geçildi.",
-  "chatbotOfflineDownloadLabel": "İndir ve Uygula",
+  "chatbotOfflinePrompt": "Doğrulanmış çevrimdışı İslami bilgi tabanı hâlâ kaynak bazında hazırlanıyor. Çevrimdışı fallback modunu şimdi açabilirsiniz; ancak doğrulanmış veri yüklenene kadar yalnızca sınırlı güvenli mesajlar gösterilecektir.\n\nÇevrimdışı fallback modunu etkinleştirmek ister misiniz?",
+  "chatbotOfflineSwitched": "Çevrimdışı fallback etkinleştirildi. Doğrulanmış yerel İslami cevaplar henüz hazır değil.",
+  "chatbotOfflineDownloadLabel": "Çevrimdışı Fallback'i Etkinleştir",
   "downloadPreparing": "İndirme hazırlanıyor...",
   "downloadingSurah": "{surah}. sure indiriliyor (Toplam: {total})",
   "@downloadingSurah": {
@@ -463,9 +463,9 @@
   "dayStreak": "Gün serisi",
   "bestStreak": "En iyi seri",
   "chatbotCloudAiLabel": "Bulut AI",
-  "chatbotLocalAiLabel": "Yerel AI",
+  "chatbotLocalAiLabel": "Çevrimdışı Fallback",
   "chatbotUseCloudAi": "Bulut AI Kullan (Gemini)",
-  "chatbotDownloadLocalAi": "Yerel AI'yi İndir (1.5 GB)",
+  "chatbotDownloadLocalAi": "Çevrimdışı Fallback'i Etkinleştir",
   "chatbotQueriesLeft": "{count} kaldı",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -475,7 +475,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Bulut API ayarlanmadı. Lütfen Yerel AI moduna geçin.",
-  "chatbotLocalNoInfo": "[YEREL AI] Bu konuda henüz bilgim yok. Namaz, oruç, zekat, hac, iman veya ahlak hakkında soru sorabilirsiniz.",
+  "chatbotLocalNoInfo": "[ÇEVRİMDIŞI] Doğrulanmış yerel İslami rehberlik henüz hazır değil. Kaynaklı cevaplar için Bulut AI moduna geçin.",
   "mosques": "Camiler",
   "halalFood": "Helal Gıda",
   "placesSearchArea": "Bu alanı ara",

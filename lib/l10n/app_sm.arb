@@ -354,9 +354,9 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?",
-  "chatbotOfflineSwitched": "Switched to simulated offline local LLM mode.",
-  "chatbotOfflineDownloadLabel": "Download & Apply",
+  "chatbotOfflinePrompt": "O lo'o fa'atumauina pea le fa'amaumauga tu'ufa'atasia fa'a-Islam. E mafai ona e fa'agaoioia le fa'afo'i tui i tua i le taimi nei, ae na'o le fa'aalia o fe'au saogalemu fa'atapula'a se'ia o'o ina saunia le fa'amaumauga.\n\nE te mana'o e fa'aagaoioi le fa'afo'i fa'afoma'i?",
+  "chatbotOfflineSwitched": "Ua mafai ona toe fa'afo'i le initaneti. E le'i saunia tali fa'a-Isalama fa'apitonu'u.",
+  "chatbotOfflineDownloadLabel": "Fa'aola le Fa'asolo i tua",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
@@ -447,9 +447,9 @@
   "dayStreak": "Day streak",
   "bestStreak": "Best streak",
   "chatbotCloudAiLabel": "Cloud AI",
-  "chatbotLocalAiLabel": "Local AI",
+  "chatbotLocalAiLabel": "Tu'u i tua i luga ole laiga",
   "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+  "chatbotDownloadLocalAi": "Fa'aola le Fa'asolo i tua",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
-  "chatbotLocalNoInfo": "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+  "chatbotLocalNoInfo": "[OFFLINE] E le'i maua le ta'ita'iga fa'a-Isalama fa'apitonu'u. Su'e ile Cloud AI mo tali maua'a.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Search this area",

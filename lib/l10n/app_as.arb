@@ -354,9 +354,9 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?",
-  "chatbotOfflineSwitched": "Switched to simulated offline local LLM mode.",
-  "chatbotOfflineDownloadLabel": "Download & Apply",
+  "chatbotOfflinePrompt": "পৰীক্ষিত অফলাইন ইছলামিক জ্ঞানৰ ভিত্তি এতিয়াও কিউৰেট কৰা হৈছে। আপুনি এতিয়া অফলাইন ফ'লবেক সামৰ্থবান কৰিব পাৰিব, কিন্তু ই কেৱল সীমিত সুৰক্ষিত বাৰ্তাসমূহ দেখুৱাব যেতিয়ালৈকে উৎস ডাটাছেট প্ৰস্তুত নহয়।\n\nআপুনি অফলাইন ফ'লবেক সামৰ্থবান কৰিব বিচাৰেনে?",
+  "chatbotOfflineSwitched": "অফলাইন ফ'লবেক সামৰ্থবান কৰা হৈছে। পৰীক্ষিত স্থানীয় ইছলামিক উত্তৰ এতিয়াও সাজু হোৱা নাই।",
+  "chatbotOfflineDownloadLabel": "অফলাইন ফ'লবেক সামৰ্থবান কৰক",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
@@ -447,9 +447,9 @@
   "dayStreak": "Day streak",
   "bestStreak": "Best streak",
   "chatbotCloudAiLabel": "Cloud AI",
-  "chatbotLocalAiLabel": "Local AI",
+  "chatbotLocalAiLabel": "অফলাইন Fallback",
   "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+  "chatbotDownloadLocalAi": "অফলাইন ফ'লবেক সামৰ্থবান কৰক",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
-  "chatbotLocalNoInfo": "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+  "chatbotLocalNoInfo": "[OFFLINE] পৰীক্ষা কৰা স্থানীয় ইছলামিক নিৰ্দেশনা এতিয়াও উপলব্ধ নহয়। উৎস উত্তৰৰ বাবে ক্লাউড AI লৈ সলনি কৰক।",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Search this area",

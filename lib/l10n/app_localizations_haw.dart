@@ -911,14 +911,14 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Ke mālama ʻia nei ka waihona ʻike Islam offline i hōʻoia ʻia. Hiki iā ʻoe ke ʻae i ka hāʻule hoʻihoʻi waho i kēia manawa, akā e hōʻike wale ia i nā memo palekana a hiki i ka mākaukau ʻana o ka waihona kumu.\n\nMakemake ʻoe e hoʻā i ka hāʻule hoʻopahemo?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Hoʻohana ʻia ka hāʻule hoʻopahemo. ʻAʻole mākaukau nā pane Islamic kūloko i kēia manawa.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'E ho\'ā i ka hāʻule hoʻopahemo';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1034,13 +1034,13 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Hāʻule hoʻopahemo';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'E ho\'ā i ka hāʻule hoʻopahemo';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1053,7 +1053,7 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] ʻAʻole i loaʻa i kēia manawa ke alakaʻi Islam kūloko. E hoʻololi i Cloud AI no nā pane kumu.';
 
   @override
   String get mosques => 'Mosques';

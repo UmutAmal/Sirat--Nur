@@ -354,9 +354,9 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?",
-  "chatbotOfflineSwitched": "Switched to simulated offline local LLM mode.",
-  "chatbotOfflineDownloadLabel": "Download & Apply",
+  "chatbotOfflinePrompt": "പരിശോധിച്ച ഓഫ്‌ലൈൻ ഇസ്ലാമിക് വിജ്ഞാന അടിത്തറ ഇപ്പോഴും ക്യൂറേറ്റ് ചെയ്യപ്പെടുകയാണ്. നിങ്ങൾക്ക് ഇപ്പോൾ ഓഫ്‌ലൈൻ ഫാൾബാക്ക് പ്രവർത്തനക്ഷമമാക്കാൻ കഴിയും, എന്നാൽ ഉറവിട ഡാറ്റാസെറ്റ് തയ്യാറാകുന്നത് വരെ പരിമിതമായ സുരക്ഷിത സന്ദേശങ്ങൾ മാത്രമേ ഇത് കാണിക്കൂ.\n\nഓഫ്‌ലൈൻ ഫാൾബാക്ക് പ്രവർത്തനക്ഷമമാക്കാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?",
+  "chatbotOfflineSwitched": "ഓഫ്‌ലൈൻ ഫാൾബാക്ക് പ്രവർത്തനക്ഷമമാക്കി. പരിശോധിച്ചുറപ്പിച്ച പ്രാദേശിക ഇസ്ലാമിക ഉത്തരങ്ങൾ ഇതുവരെ തയ്യാറായിട്ടില്ല.",
+  "chatbotOfflineDownloadLabel": "ഓഫ്‌ലൈൻ ഫോൾബാക്ക് പ്രവർത്തനക്ഷമമാക്കുക",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
@@ -447,9 +447,9 @@
   "dayStreak": "Day streak",
   "bestStreak": "Best streak",
   "chatbotCloudAiLabel": "Cloud AI",
-  "chatbotLocalAiLabel": "Local AI",
+  "chatbotLocalAiLabel": "ഓഫ്‌ലൈൻ ഫോൾബാക്ക്",
   "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+  "chatbotDownloadLocalAi": "ഓഫ്‌ലൈൻ ഫോൾബാക്ക് പ്രവർത്തനക്ഷമമാക്കുക",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
-  "chatbotLocalNoInfo": "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+  "chatbotLocalNoInfo": "[ഓഫ്‌ലൈൻ] പരിശോധിച്ചുറപ്പിച്ച പ്രാദേശിക ഇസ്ലാമിക മാർഗ്ഗനിർദ്ദേശം ഇതുവരെ ലഭ്യമല്ല. ഉറവിട ഉത്തരങ്ങൾക്കായി ക്ലൗഡ് AI-ലേക്ക് മാറുക.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Search this area",

@@ -910,14 +910,14 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Az ellenőrzött offline iszlám tudásbázis gondozása még folyamatban van. Most engedélyezheti az offline tartalékot, de csak korlátozott számú biztonságos üzenetet jelenít meg, amíg a forrásból származó adatkészlet el nem készül.\n\nSzeretné engedélyezni az offline tartalékot?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Offline tartalék engedélyezve. Az ellenőrzött helyi iszlám válaszok még nem állnak készen.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'Offline tartalék engedélyezése';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1033,13 @@ class AppLocalizationsHu extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Offline tartalék';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Offline tartalék engedélyezése';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1052,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Az ellenőrzött helyi iszlám útmutatás még nem érhető el. A forrásból származó válaszokért váltson a Cloud AI-re.';
 
   @override
   String get mosques => 'Mosques';

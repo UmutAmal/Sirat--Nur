@@ -910,14 +910,15 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Isiseko solwazi lwamaSilamsi ngaphandle kweintanethi siqinisekisiweyo sisagcinwa. Unokwenza ukubuyisela umva ngaphandle kweintanethi ngoku, kodwa iya kubonisa kuphela imiyalezo ekhuselekileyo elinganiselweyo de idatabase efunyenweyo ilungile.\n\nNgaba ungathanda ukwenza ukubuyisela umva ngaphandle kweintanethi?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Ukubuyisela umva ngaphandle kweintanethi kuvuliwe. Iimpendulo eziqinisekisiweyo zasekhaya zamaSilamsi azikalungi.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel =>
+      'Yenza i-Fallback ngaphandle kwe-intanethi';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1034,14 @@ class AppLocalizationsXh extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Ukubuyela umva ngaphandle kweintanethi';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi =>
+      'Yenza i-Fallback ngaphandle kwe-intanethi';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1054,7 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Izikhokelo eziqinisekisiweyo zasekhaya zamaSilamsi azikafumaneki. Tshintshela kwi-Cloud AI ukufumana iimpendulo ezifunyenweyo.';
 
   @override
   String get mosques => 'Mosques';

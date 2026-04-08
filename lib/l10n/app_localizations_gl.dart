@@ -911,14 +911,15 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'A base de coñecemento islámico fóra de liña verificada aínda está a ser seleccionada. Agora podes activar a alternativa sen conexión, pero só mostrará mensaxes seguras limitadas ata que o conxunto de datos de orixe estea listo.\n\nQueres activar a alternativa sen conexión?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Activouse a alternativa sen conexión. As respostas islámicas locais verificadas aínda non están listas.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel =>
+      'Activar a alternativa sen conexión';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1034,13 +1035,13 @@ class AppLocalizationsGl extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Fallback sen conexión';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Activar a alternativa sen conexión';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1053,7 +1054,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] A orientación islámica local verificada aínda non está dispoñible. Cambia a Cloud AI para obter respostas de orixe.';
 
   @override
   String get mosques => 'Mosques';

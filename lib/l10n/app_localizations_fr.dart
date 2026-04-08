@@ -912,14 +912,14 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'La base de connaissances islamiques hors ligne vérifiée est toujours en cours de conservation. Vous pouvez activer le secours hors ligne maintenant, mais il n\'affichera qu\'un nombre limité de messages sécurisés jusqu\'à ce que l\'ensemble de données source soit prêt.\n\nSouhaitez-vous activer le remplacement hors ligne ?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Repli hors ligne activé. Les réponses islamiques locales vérifiées ne sont pas encore prêtes.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'Activer le repli hors ligne';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1035,13 +1035,13 @@ class AppLocalizationsFr extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Repli hors ligne';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Activer le repli hors ligne';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1054,7 +1054,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[HORS LIGNE] Les conseils islamiques locaux vérifiés ne sont pas encore disponibles. Passez à Cloud AI pour obtenir des réponses sourcées.';
 
   @override
   String get mosques => 'Mosques';

@@ -912,14 +912,15 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'ވެރިފައިޑް އޮފްލައިން އިސްލާމިކް ނޮލެޖް ބޭސް މިހާރުވެސް ދަނީ ކިއުރެޓް ކުރަމުންނެވެ. މިހާރު އޮފްލައިން ފޯލްބެކް އެނެބަލް ކުރެވޭނެ ނަމަވެސް ސޯސްޑް ޑޭޓާސެޓް ތައްޔާރުވާންދެން އެއިން ދައްކާނީ ލިމިޓެޑް ސޭފް މެސެޖްތަކެކެވެ.\n\nއޮފްލައިން ފޯލްބެކް އެނެބަލް ކުރަން ބޭނުން ހެއްޔެވެ؟';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'އޮފްލައިން ފޯލްބެކް އެނެބަލްކޮށްފައި. ވެރިފައިޑް ލޯކަލް އިސްލާމިކް ޖަވާބުތައް އަދި ތައްޔާރު ނުވެއެވެ.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel =>
+      'އޮފްލައިން ފޯލްބެކް އެނެބަލް ކުރާށެވެ';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1035,13 +1036,13 @@ class AppLocalizationsDv extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'އޮފްލައިން ފޯލްބެކް';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'އޮފްލައިން ފޯލްބެކް އެނެބަލް ކުރާށެވެ';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1054,7 +1055,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[އޮފްލައިން] ވެރިފައިޑް ލޯކަލް އިސްލާމިކް ގައިޑްލައިން އަދި ނުލިބެއެވެ. ސޯސްޑް ޖަވާބުތަކަށް ކްލައުޑް އެއައި އަށް ބަދަލުވާށެވެ.';
 
   @override
   String get mosques => 'Mosques';

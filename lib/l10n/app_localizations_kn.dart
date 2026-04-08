@@ -910,14 +910,15 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'ಪರಿಶೀಲಿಸಿದ ಆಫ್‌ಲೈನ್ ಇಸ್ಲಾಮಿಕ್ ಜ್ಞಾನ ಮೂಲವನ್ನು ಇನ್ನೂ ಕ್ಯುರೇಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ. ನೀವು ಇದೀಗ ಆಫ್‌ಲೈನ್ ಫಾಲ್‌ಬ್ಯಾಕ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಬಹುದು, ಆದರೆ ಮೂಲದ ಡೇಟಾಸೆಟ್ ಸಿದ್ಧವಾಗುವವರೆಗೆ ಇದು ಸೀಮಿತ ಸುರಕ್ಷಿತ ಸಂದೇಶಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸುತ್ತದೆ.\n\nನೀವು ಆಫ್‌ಲೈನ್ ಫಾಲ್‌ಬ್ಯಾಕ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಬಯಸುವಿರಾ?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'ಆಫ್‌ಲೈನ್ ಫಾಲ್‌ಬ್ಯಾಕ್ ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ. ಪರಿಶೀಲಿಸಿದ ಸ್ಥಳೀಯ ಇಸ್ಲಾಮಿಕ್ ಉತ್ತರಗಳು ಇನ್ನೂ ಸಿದ್ಧವಾಗಿಲ್ಲ.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel =>
+      'ಆಫ್‌ಲೈನ್ ಫಾಲ್‌ಬ್ಯಾಕ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1034,14 @@ class AppLocalizationsKn extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'ಆಫ್‌ಲೈನ್ ಫಾಲ್‌ಬ್ಯಾಕ್';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi =>
+      'ಆಫ್‌ಲೈನ್ ಫಾಲ್‌ಬ್ಯಾಕ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1054,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[ಆಫ್‌ಲೈನ್] ಪರಿಶೀಲಿಸಿದ ಸ್ಥಳೀಯ ಇಸ್ಲಾಮಿಕ್ ಮಾರ್ಗದರ್ಶನ ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ. ಮೂಲದ ಉತ್ತರಗಳಿಗಾಗಿ ಕ್ಲೌಡ್ AI ಗೆ ಬದಲಿಸಿ.';
 
   @override
   String get mosques => 'Mosques';

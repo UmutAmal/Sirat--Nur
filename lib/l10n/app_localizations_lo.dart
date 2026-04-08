@@ -910,14 +910,14 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'ພື້ນຖານຄວາມຮູ້ອິດສະລາມແບບອອບໄລນ໌ທີ່ຢັ້ງຢືນແລ້ວແມ່ນຍັງຖືກຈັດຫາຢູ່. ທ່ານ​ສາ​ມາດ​ເປີດ​ໃຊ້​ງານ offline offline ໃນ​ປັດ​ຈຸ​ບັນ​, ແຕ່​ວ່າ​ມັນ​ຈະ​ສະ​ແດງ​ໃຫ້​ເຫັນ​ພຽງ​ແຕ່​ຂໍ້​ຄວາມ​ປອດ​ໄພ​ຈໍາ​ກັດ​ຈົນ​ກ​່​ວາ​ຊຸດ​ຂໍ້​ມູນ​ທີ່​ມາ​ຈະ​ພ້ອມ​.\n\nທ່ານຕ້ອງການເປີດໃຊ້ທາງເລືອກ offline ບໍ?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'ເປີດໃຊ້ທາງເລືອກ Offline ແລ້ວ. ຄໍາຕອບຂອງຊາວອິດສະລາມທ້ອງຖິ່ນທີ່ຢືນຢັນແລ້ວຍັງບໍ່ພ້ອມເທື່ອ.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'ເປີດໃຊ້ Offline Fallback';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1033,13 @@ class AppLocalizationsLo extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'ເປີດໃຊ້ Offline Fallback';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1052,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFLINE] ການຊີ້ນໍາອິດສະລາມທ້ອງຖິ່ນທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ທັນມີໃຫ້ເທື່ອ. ສະຫຼັບໄປໃຊ້ Cloud AI ສໍາລັບຄໍາຕອບທີ່ມາຈາກ.';
 
   @override
   String get mosques => 'Mosques';

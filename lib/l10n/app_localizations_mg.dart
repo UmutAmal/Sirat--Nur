@@ -910,14 +910,14 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Mbola karakaraina ny toby fahalalana Islamika ivelan\'ny aterineto voamarina. Azonao atao ny mamela ny fiverenana an-tserasera amin\'izao fotoana izao, fa ireo hafatra azo antoka voafetra ihany no hanehoana azy mandra-pahavitan\'ny angon-drakitra nalaina.\n\nTe-hanalefa ny fiverenana an-tserasera ve ianao?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Nalefa ny fiverenana an-tserasera. Tsy mbola vonona ny valinteny islamika voamarina ao an-toerana.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'Alefaso ny Fallback an-tserasera';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1033,13 +1033,13 @@ class AppLocalizationsMg extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Fallback an-tserasera';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Alefaso ny Fallback an-tserasera';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1052,7 +1052,7 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Tsy mbola misy ny fitarihana Islamika ao an-toerana voamarina. Miverena any amin\'ny Cloud AI hahazoana valiny azo avy amin\'ny loharano.';
 
   @override
   String get mosques => 'Mosques';

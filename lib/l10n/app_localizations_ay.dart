@@ -914,14 +914,15 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Base de conocimiento islámico offline ukan chiqapar uñjatax wali curado ukhamawa. Jichhax jan internetan fallback ukar ch’amanchañax wakisispawa, ukampis ukax mä juk’a seguro yatiyawinakakiw uñacht’ayasini, kunawsatix fuente de datos ukax wakicht’atäñapkama.\n\n¿Jumax offline fallback ukar ch’amanchañ munasmati?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Offline fallback ukax ch’amanchatawa. Islámico local ukan chiqanchata jaysäwinakapax janiw wakicht’atäkiti.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel =>
+      'Offline Fallback ukar ch’amanchaña';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1037,13 +1038,13 @@ class AppLocalizationsAy extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Jan uñt’at Fallback';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Offline Fallback ukar ch’amanchaña';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1056,7 +1057,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Verificado local islámico guia ukax janiw jichhakamax utjkiti. Cloud AI ukaruw mayjt’ayañama, ukax fuente ukan jaysäwinakapawa.';
 
   @override
   String get mosques => 'Mosques';

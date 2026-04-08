@@ -918,14 +918,15 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Motheo wa tsebo ya Boiselamo wo o netefaditšwego wa ka ntle ga inthanete o sa dutše o hlokomelwa. O ka kgontšha go boela morago ka ntle ga inthanete bjale, eupša e tla bontšha fela melaetša ye e bolokegilego ye e lekanyeditšwego go fihlela sete ya datha ye e hweditšwego e lokile.\n\nNa o ka rata go kgontšha go boela morago ka ntle ga inthanete?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Fallback ya ka ntle ga inthanete e kgontšhitšwe. Dikarabo tša selegae tša Boiselamo tše di netefaditšwego ga se tša lokela ga bjale.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel =>
+      'Kgontšha Fallback ya ka ntle ga inthanete';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1041,13 +1042,14 @@ class AppLocalizationsNso extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Fallback ya ka ntle ga inthanete';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi =>
+      'Kgontšha Fallback ya ka ntle ga inthanete';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1060,7 +1062,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Tlhahlo ya selegae ya Boiselamo ye e netefaditšwego ga e hwetšagale ga bjale. Fetogela go Cloud AI bakeng sa dikarabo tše di hweditšwego.';
 
   @override
   String get mosques => 'Mosques';

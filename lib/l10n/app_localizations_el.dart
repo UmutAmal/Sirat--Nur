@@ -911,14 +911,15 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Η επαληθευμένη βάση ισλαμικών γνώσεων εκτός σύνδεσης βρίσκεται ακόμη υπό επιμέλεια. Μπορείτε να ενεργοποιήσετε την εναλλακτική λύση εκτός σύνδεσης τώρα, αλλά θα εμφανίζει μόνο περιορισμένα ασφαλή μηνύματα μέχρι να είναι έτοιμο το σύνολο δεδομένων προέλευσης.\n\nΘέλετε να ενεργοποιήσετε την εναλλακτική λύση εκτός σύνδεσης;';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Ενεργοποιήθηκε η εναλλακτική λύση εκτός σύνδεσης. Οι επαληθευμένες τοπικές ισλαμικές απαντήσεις δεν είναι ακόμη έτοιμες.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel =>
+      'Ενεργοποιήστε την εναλλακτική λύση εκτός σύνδεσης';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1034,13 +1035,14 @@ class AppLocalizationsEl extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Επιστροφή εκτός σύνδεσης';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi =>
+      'Ενεργοποιήστε την εναλλακτική λύση εκτός σύνδεσης';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1053,7 +1055,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Η επαληθευμένη τοπική ισλαμική καθοδήγηση δεν είναι ακόμη διαθέσιμη. Μεταβείτε στο Cloud AI για απαντήσεις από πηγές.';
 
   @override
   String get mosques => 'Mosques';

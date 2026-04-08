@@ -915,14 +915,14 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Downloading the Local AI model requires ~1.5 GB of storage. Once downloaded, Neural Assistant will work completely offline without limits. \n\nWould you like to start the download?';
+      'Ti naberipikado nga offline Islamic knowledge base ket ma-curate pay laeng. Mabalinmo nga ipalubos ti offline fallback ita, ngem ipakitana laeng dagiti limitado a natalged a mensahe agingga a nakasaganan ti nagtaudan a dataset.\n\nKayatmo kadi nga ipalubos ti offline fallback?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Switched to simulated offline local LLM mode.';
+      'Na-enable ti offline a fallback. Saan pay a nakasagana dagiti naberipikado a lokal nga Islamiko a sungbat.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Download & Apply';
+  String get chatbotOfflineDownloadLabel => 'Pagbalinen nga Offline Fallback';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1038,13 +1038,13 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Local AI';
+  String get chatbotLocalAiLabel => 'Offline nga Fallback';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+  String get chatbotDownloadLocalAi => 'Pagbalinen nga Offline Fallback';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1057,7 +1057,7 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+      '[OFFLINE] Saan pay a magun-od ti naberipikado a lokal nga Islamiko a panangiwanwan. Agbalbaliw iti Cloud AI para kadagiti nagtaudan a sungbat.';
 
   @override
   String get mosques => 'Mosques';
