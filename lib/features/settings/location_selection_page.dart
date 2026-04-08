@@ -103,6 +103,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
         position.latitude,
         position.longitude,
       );
+      String? countryCode;
 
       try {
         final placemarks = await placemarkFromCoordinates(
@@ -111,6 +112,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
         );
         if (placemarks.isNotEmpty) {
           final place = placemarks.first;
+          countryCode = place.isoCountryCode?.trim();
           final city = (place.locality ?? place.subAdministrativeArea ?? '')
               .trim();
           final country = (place.country ?? '').trim();
@@ -135,6 +137,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
             position.longitude,
             locationName,
             timezone: timezone,
+            countryCode: countryCode,
           );
 
       if (!mounted) return;
@@ -349,6 +352,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
                             city.lng,
                             '${city.name}, ${city.country}',
                             timezone: city.timezone,
+                            countryCode: city.countryCode,
                           );
                       _showMessage(
                         '${l10n.location}: ${city.name}, ${city.country} (${city.timezone})',

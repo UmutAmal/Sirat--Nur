@@ -1885,3 +1885,52 @@
 ### Sonraki Adım
 - Sıradaki prayer pipeline turunda ülke/bölge bazlı resmî dini kurum namaz hesap yöntemi zinciri doğrulanacak.
 - Özellikle `location_selection_page.dart`, `settings_provider.dart`, `prayer_times_service.dart` ve `prayer_calendar_service.dart` arasında calculation method / madhab varsayılanları tek kaynağa indirilecek.
+
+## 2026-04-08 TUR-48 — Align Prayer Defaults With Official Regional Profiles
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_profile_service.dart) eklendi; canonical calculation method listesi, legacy string normalizer’ları, ülke/zaman dilimi bazlı prayer profile resolver’ı ve ortak `CalculationParameters` üreticisi burada toplandı.
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_provider.dart) artık lokasyon güncellemesinde `countryCode` alıp resmî profile göre method/madhab/default angle set ediyor; legacy `Turkey`, `ISNA`, `Shafi` gibi kayıtları canonical forma normalize ediyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/location_selection_page.dart) manuel şehir seçimi ve GPS tespitinde `countryCode` geçiriyor.
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_times_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_times_service.dart) ve [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_calendar_service.dart) artık ayrı ayrı method switch’leri yerine ortak profile builder kullanıyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_page.dart) method/madhab picker’larını canonical profile listesine taşıdı; `Ja'fari` seçeneği eklendi.
+- [A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/prayer_profile_service_test.dart), [A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/settings_provider_test.dart) ve [A:\Way of Allah\sirat_i_nur\test\prayer_calendar_service_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/prayer_calendar_service_test.dart) ile profile çözümü, legacy migration ve resmî interval-profile regresyonları kilitlendi.
+
+### Neden Yapıldı
+- Mevcut akışta [A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/location_selection_page.dart) yalnız koordinat yazıyor, method/madhab varsayılanlarını resmî ülke profiline göre güncellemiyordu.
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_times_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_times_service.dart) ile [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_calendar_service.dart) aynı string’leri farklı yorumluyordu; bu da aynı ayarın farklı ekran ve scheduler zincirlerinde farklı sonuç vermesine yol açabiliyordu.
+- Önceki model resmî profillerin `ishaInterval` / `maghribAngle` gibi parametrelerini method isminden tekrar üretmek yerine stale custom angle değerlerini sızdırabiliyordu; özellikle `Umm al-Qura` ve `Tehran` için bu dinî doğruluk riskiydi.
+- Resmî kaynak dayanağı olarak Diyanet, Dar al-Ifta, JAKIM, Kemenag, MUIS ve diğer ülke/kurum homepageleri esas alındı; adhan engine’de bire bir karşılığı olmayan bölgeler en yakın desteklenen profile açıkça infer edildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_times_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_calendar_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Lokasyon değiştiğinde namaz hesap yöntemi ve Asr gölgeleme varsayılanı artık ülke/bölge profiline göre otomatik hizalanıyor.
+- Prayer provider, offline calendar, widget/scheduler zinciri aynı method resolver’ı kullandığı için aynı ayardan farklı sonuç üretme riski kapandı.
+- `Umm al-Qura` interval tabanlı Isha ve `Tehran` maghrib angle gibi engine profilleri stale custom açıyla bozulmuyor.
+- İran için `Ja'fari` label’ı eklendi; engine teknik olarak yalnız Hanafi vs. standard shadow factor ayırdığı için bu alan Adhan paketinin sınırı içinde standard shadow factor’a map edildi.
+
+### Test Sonucu
+- `flutter test test/prayer_profile_service_test.dart` → PASS (`7/7`)
+- `flutter test test/settings_provider_test.dart` → PASS (`9/9`)
+- `flutter test test/prayer_calendar_service_test.dart` → PASS (`2/2`)
+- `flutter test test/prayer_notification_coordinator_test.dart` → PASS (`6/6`)
+- `flutter test test/location_selection_page_test.dart` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`142/142`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Country and region prayer defaults staying on arbitrary or inconsistent calculation profiles across services: `12/25 → 4/25`
+
+### Sonraki Adım
+- Sıradaki prayer pipeline turunda widget zincirindeki tarih/zaman dilimi drift’i giderilecek; [A:\Way of Allah\sirat_i_nur\lib\main.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/main.dart) içindeki widget update akışı `DateTime.now()` yerine lokasyon timezone’ına göre hesaplanacak.
+- Ardından prayer profile source bilgisi diagnostics yüzeyine taşınıp hangi resmî profile’in aktif olduğu kullanıcıya dürüst biçimde gösterilecek.

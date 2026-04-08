@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 
 final sharedPreferencesProvider = Provider<SharedPreferences>((ref) {
   throw UnimplementedError('sharedPreferencesProvider must be overridden');
@@ -21,8 +22,8 @@ class SettingsState {
   final bool isDarkMode;
 
   SettingsState({
-    this.calculationMethod = 'Turkey',
-    this.madhab = 'Hanafi',
+    this.calculationMethod = diyanetPrayerMethod,
+    this.madhab = hanafiMadhab,
     this.audioVoice = 'Male (Mishary Alafasy)',
     this.qiblaOffset = 0.0,
     this.qiblaSmoothingEnabled = true,
@@ -85,33 +86,57 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
 
   SettingsNotifier(this._prefs)
     : super(
-        SettingsState(
-          calculationMethod: _prefs.getString('calculationMethod') ?? 'Turkey',
-          madhab: _prefs.getString('madhab') ?? 'Hanafi',
+        (() {
+          final storedMethod = normalizeCalculationMethod(
+            _prefs.getString('calculationMethod') ?? diyanetPrayerMethod,
+          );
+          final storedMadhab = normalizeMadhab(
+            _prefs.getString('madhab') ?? hanafiMadhab,
+          );
+          final (defaultFajrAngle, defaultIshaAngle) =
+              _defaultAnglesForMethod(storedMethod);
+
+          return SettingsState(
+            calculationMethod: storedMethod,
+            madhab: storedMadhab,
           audioVoice:
               _prefs.getString('audioVoice') ?? 'Male (Mishary Alafasy)',
           qiblaOffset: _prefs.getDouble('qiblaOffset') ?? 0.0,
           qiblaSmoothingEnabled:
               _prefs.getBool('qiblaSmoothingEnabled') ?? true,
-          fajrAngle: _prefs.getDouble('fajrAngle') ?? 18.0,
-          ishaAngle: _prefs.getDouble('ishaAngle') ?? 17.0,
+            fajrAngle: storedMethod == customPrayerMethod
+                ? _prefs.getDouble('fajrAngle') ?? 18.0
+                : defaultFajrAngle,
+            ishaAngle: storedMethod == customPrayerMethod
+                ? _prefs.getDouble('ishaAngle') ?? 17.0
+                : defaultIshaAngle,
           languageCode: _prefs.getString('languageCode'),
           latitude: _prefs.getDouble('latitude'),
           longitude: _prefs.getDouble('longitude'),
           locationName: _prefs.getString('locationName'),
           timezone: _prefs.getString('timezone'),
           isDarkMode: _prefs.getBool('isDarkMode') ?? true,
-        ),
+          );
+        })(),
       );
 
   Future<void> updateCalculationMethod(String method) async {
-    await _prefs.setString('calculationMethod', method);
-    state = state.copyWith(calculationMethod: method);
+    final normalizedMethod = normalizeCalculationMethod(method);
+    final (fajrAngle, ishaAngle) = _defaultAnglesForMethod(normalizedMethod);
+    await _prefs.setString('calculationMethod', normalizedMethod);
+    await _prefs.setDouble('fajrAngle', fajrAngle);
+    await _prefs.setDouble('ishaAngle', ishaAngle);
+    state = state.copyWith(
+      calculationMethod: normalizedMethod,
+      fajrAngle: fajrAngle,
+      ishaAngle: ishaAngle,
+    );
   }
 
   Future<void> updateMadhab(String madhab) async {
-    await _prefs.setString('madhab', madhab);
-    state = state.copyWith(madhab: madhab);
+    final normalizedMadhab = normalizeMadhab(madhab);
+    await _prefs.setString('madhab', normalizedMadhab);
+    state = state.copyWith(madhab: normalizedMadhab);
   }
 
   Future<void> updateAudioVoice(String voice) async {
@@ -130,9 +155,14 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
   }
 
   Future<void> updateCustomAngles(double fajr, double isha) async {
+    await _prefs.setString('calculationMethod', customPrayerMethod);
     await _prefs.setDouble('fajrAngle', fajr);
     await _prefs.setDouble('ishaAngle', isha);
-    state = state.copyWith(fajrAngle: fajr, ishaAngle: isha);
+    state = state.copyWith(
+      calculationMethod: customPrayerMethod,
+      fajrAngle: fajr,
+      ishaAngle: isha,
+    );
   }
 
   Future<void> updateLanguage(String? langCode) async {
@@ -151,16 +181,33 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
     double lng,
     String name, {
     String? timezone,
+    String? countryCode,
   }) async {
+    final profile = resolvePrayerProfile(
+      countryCode: countryCode,
+      timezone: timezone,
+    );
+    final (fajrAngle, ishaAngle) = _defaultAnglesForMethod(
+      profile.calculationMethod,
+    );
+
     await _prefs.setDouble('latitude', lat);
     await _prefs.setDouble('longitude', lng);
     await _prefs.setString('locationName', name);
+    await _prefs.setString('calculationMethod', profile.calculationMethod);
+    await _prefs.setString('madhab', profile.madhab);
+    await _prefs.setDouble('fajrAngle', fajrAngle);
+    await _prefs.setDouble('ishaAngle', ishaAngle);
     if (timezone == null || timezone.trim().isEmpty) {
       await _prefs.remove('timezone');
     } else {
       await _prefs.setString('timezone', timezone);
     }
     state = state.copyWith(
+      calculationMethod: profile.calculationMethod,
+      madhab: profile.madhab,
+      fajrAngle: fajrAngle,
+      ishaAngle: ishaAngle,
       latitude: lat,
       longitude: lng,
       locationName: name,
@@ -193,3 +240,12 @@ final settingsProvider = StateNotifierProvider<SettingsNotifier, SettingsState>(
     return SettingsNotifier(prefs);
   },
 );
+
+(double, double) _defaultAnglesForMethod(String method) {
+  if (normalizeCalculationMethod(method) == customPrayerMethod) {
+    return (18.0, 17.0);
+  }
+
+  final params = buildCalculationParameters(method);
+  return (params.fajrAngle, params.ishaAngle ?? 0.0);
+}

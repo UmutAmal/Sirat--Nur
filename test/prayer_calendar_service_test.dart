@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/services/prayer_calendar_service.dart';
+import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 
 void main() {
   group('PrayerCalendarService', () {
@@ -29,6 +30,39 @@ void main() {
       expect(today.nextPrayerName, 'Fajr');
       expect(today.nextPrayerTime, tomorrow.fajr);
       expect(today.nextPrayerTime.isAfter(afterIsha), isTrue);
+    });
+
+    test('uses official Umm al-Qura interval instead of stale custom isha angles', () {
+      const latitude = 21.3891;
+      const longitude = 39.8579;
+      final date = DateTime(2026, 4, 8);
+      final currentTime = DateTime(2026, 4, 8, 12);
+
+      final official = PrayerCalendarService.calculatePrayerTimes(
+        latitude: latitude,
+        longitude: longitude,
+        date: date,
+        method: ummAlQuraPrayerMethod,
+        madhab: hanbaliMadhab,
+        ishaAngle: 5.0,
+        currentTime: currentTime,
+      );
+      final custom = PrayerCalendarService.calculatePrayerTimes(
+        latitude: latitude,
+        longitude: longitude,
+        date: date,
+        method: customPrayerMethod,
+        madhab: hanbaliMadhab,
+        fajrAngle: 18.5,
+        ishaAngle: 5.0,
+        currentTime: currentTime,
+      );
+
+      expect(
+        official.isha.difference(official.maghrib),
+        const Duration(minutes: 90),
+      );
+      expect(custom.isha.difference(custom.maghrib), isNot(const Duration(minutes: 90)));
     });
   });
 }

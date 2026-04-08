@@ -1,4 +1,5 @@
 import 'package:adhan/adhan.dart';
+import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/domain/entities/prayer_times_entity.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
@@ -23,7 +24,11 @@ class PrayerCalendarService {
     DateTime? currentTime,
   }) {
     final coordinates = Coordinates(latitude, longitude);
-    final params = _getCalculationParameters(method, fajrAngle, ishaAngle);
+    final params = buildCalculationParameters(
+      method,
+      fajrAngle: fajrAngle,
+      ishaAngle: ishaAngle,
+    );
 
     if (highLatitudeRule != null) {
       params.highLatitudeRule = highLatitudeRule;
@@ -35,11 +40,7 @@ class PrayerCalendarService {
     }
 
     // Set madhab
-    if (madhab == 'Shafii' || madhab == 'Maliki' || madhab == 'Hanbali') {
-      params.madhab = Madhab.shafi;
-    } else {
-      params.madhab = Madhab.hanafi;
-    }
+    params.madhab = resolveAdhanMadhab(madhab);
 
     final dateComponents = DateComponents.from(date);
     final prayerTimes = PrayerTimes(coordinates, dateComponents, params);
@@ -172,52 +173,6 @@ class PrayerCalendarService {
     }
 
     return allTimes;
-  }
-
-  /// Get calculation parameters based on method
-  static CalculationParameters _getCalculationParameters(
-    String method,
-    double? fajrAngle,
-    double? ishaAngle,
-  ) {
-    switch (method) {
-      case 'Custom':
-        return CalculationParameters(
-          fajrAngle: fajrAngle ?? 18.0,
-          ishaAngle: ishaAngle ?? 17.0,
-        );
-      case 'Muslim World League':
-        return CalculationMethod.muslim_world_league.getParameters();
-      case 'Egyptian':
-        return CalculationMethod.egyptian.getParameters();
-      case 'Karachi':
-        return CalculationMethod.karachi.getParameters();
-      case 'Umm Al-Qura':
-        return CalculationMethod.umm_al_qura.getParameters();
-      case 'Dubai':
-        return CalculationMethod.dubai.getParameters();
-      case 'Moonsighting Committee':
-        return CalculationMethod.moon_sighting_committee.getParameters();
-      case 'North America (ISNA)':
-        return CalculationMethod.north_america.getParameters();
-      case 'Kuwait':
-        return CalculationMethod.kuwait.getParameters();
-      case 'Qatar':
-        return CalculationMethod.qatar.getParameters();
-      case 'Singapore':
-      case 'JAKIM (Malaysia)':
-      case 'KEMENAG (Indonesia)':
-        return CalculationMethod.singapore.getParameters();
-      case 'Turkey':
-      case 'Diyanet':
-        return CalculationMethod.turkey.getParameters();
-      case 'Tehran':
-        return CalculationMethod.tehran.getParameters();
-      case 'Morocco':
-        return CalculationMethod.muslim_world_league.getParameters();
-      default:
-        return CalculationMethod.muslim_world_league.getParameters();
-    }
   }
 
   /// Cache prayer times locally for offline use

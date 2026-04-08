@@ -1,13 +1,14 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 
 void main() {
   group('SettingsState', () {
     test('default values are correct', () {
       final state = SettingsState();
-      expect(state.calculationMethod, 'Turkey');
-      expect(state.madhab, 'Hanafi');
+      expect(state.calculationMethod, diyanetPrayerMethod);
+      expect(state.madhab, hanafiMadhab);
       expect(state.fajrAngle, 18.0);
       expect(state.ishaAngle, 17.0);
       expect(state.isDarkMode, true);
@@ -22,12 +23,12 @@ void main() {
     test('copyWith creates a new instance with updated values', () {
       final state = SettingsState();
       final updated = state.copyWith(
-        calculationMethod: 'ISNA',
-        madhab: 'Shafi',
+        calculationMethod: isnaPrayerMethod,
+        madhab: shafiiMadhab,
         fajrAngle: 15.0,
       );
-      expect(updated.calculationMethod, 'ISNA');
-      expect(updated.madhab, 'Shafi');
+      expect(updated.calculationMethod, isnaPrayerMethod);
+      expect(updated.madhab, shafiiMadhab);
       expect(updated.fajrAngle, 15.0);
       // Unchanged values remain
       expect(updated.ishaAngle, 17.0);
@@ -38,7 +39,7 @@ void main() {
     test('copyWith with no arguments returns equivalent state', () {
       final state = SettingsState(
         calculationMethod: 'Egyptian',
-        madhab: 'Hanafi',
+        madhab: hanafiMadhab,
       );
       final copy = state.copyWith();
       expect(copy.calculationMethod, state.calculationMethod);
@@ -56,14 +57,14 @@ void main() {
 
     test('loads defaults when no saved preferences', () {
       final notifier = SettingsNotifier(prefs);
-      expect(notifier.state.calculationMethod, 'Turkey');
-      expect(notifier.state.madhab, 'Hanafi');
+      expect(notifier.state.calculationMethod, diyanetPrayerMethod);
+      expect(notifier.state.madhab, hanafiMadhab);
     });
 
-    test('loads saved preferences correctly', () async {
+    test('loads saved preferences correctly and normalizes legacy values', () async {
       SharedPreferences.setMockInitialValues({
-        'calculationMethod': 'Egyptian',
-        'madhab': 'Shafi',
+        'calculationMethod': 'Turkey',
+        'madhab': "Shafi'i",
         'fajrAngle': 15.0,
         'ishaAngle': 14.0,
         'isDarkMode': false,
@@ -74,10 +75,10 @@ void main() {
       });
       prefs = await SharedPreferences.getInstance();
       final notifier = SettingsNotifier(prefs);
-      expect(notifier.state.calculationMethod, 'Egyptian');
-      expect(notifier.state.madhab, 'Shafi');
-      expect(notifier.state.fajrAngle, 15.0);
-      expect(notifier.state.ishaAngle, 14.0);
+      expect(notifier.state.calculationMethod, diyanetPrayerMethod);
+      expect(notifier.state.madhab, shafiiMadhab);
+      expect(notifier.state.fajrAngle, 18.0);
+      expect(notifier.state.ishaAngle, 17.0);
       expect(notifier.state.isDarkMode, false);
       expect(notifier.state.audioVoice, 'Sudais');
       expect(notifier.state.languageCode, 'tr');
@@ -93,11 +94,46 @@ void main() {
         28.9784,
         'Istanbul, Turkey',
         timezone: 'Europe/Istanbul',
+        countryCode: 'TR',
       );
 
       expect(notifier.state.locationName, 'Istanbul, Turkey');
       expect(notifier.state.timezone, 'Europe/Istanbul');
+      expect(notifier.state.calculationMethod, diyanetPrayerMethod);
+      expect(notifier.state.madhab, hanafiMadhab);
       expect(prefs.getString('timezone'), 'Europe/Istanbul');
+    });
+
+    test('updateLocation applies official profile defaults for country code', () async {
+      final notifier = SettingsNotifier(prefs);
+
+      await notifier.updateLocation(
+        3.1390,
+        101.6869,
+        'Kuala Lumpur, Malaysia',
+        timezone: 'Asia/Kuala_Lumpur',
+        countryCode: 'MY',
+      );
+
+      expect(notifier.state.calculationMethod, jakimPrayerMethod);
+      expect(notifier.state.madhab, shafiiMadhab);
+      expect(notifier.state.fajrAngle, 20.0);
+      expect(notifier.state.ishaAngle, 18.0);
+      expect(prefs.getString('calculationMethod'), jakimPrayerMethod);
+      expect(prefs.getString('madhab'), shafiiMadhab);
+    });
+
+    test('updateCalculationMethod resets angles to the selected official profile', () async {
+      final notifier = SettingsNotifier(prefs);
+      await notifier.updateCustomAngles(14.5, 13.5);
+
+      await notifier.updateCalculationMethod(ummAlQuraPrayerMethod);
+
+      expect(notifier.state.calculationMethod, ummAlQuraPrayerMethod);
+      expect(notifier.state.fajrAngle, 18.5);
+      expect(notifier.state.ishaAngle, 0.0);
+      expect(prefs.getDouble('fajrAngle'), 18.5);
+      expect(prefs.getDouble('ishaAngle'), 0.0);
     });
 
     test('clearManualLocation removes timezone from state and storage', () async {

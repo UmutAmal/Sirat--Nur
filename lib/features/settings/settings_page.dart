@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:sirat_i_nur/core/constants/app_constants.dart';
+import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/utils/locale_utils.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
@@ -300,22 +301,11 @@ class SettingsPage extends ConsumerWidget {
   }
 
   void _showMethodPicker(BuildContext context, WidgetRef ref) {
-    const methods = [
-      'Turkey',
-      'Egyptian',
-      'ISNA',
-      'MWL',
-      'Karachi',
-      'Umm al-Qura',
-      'Dubai',
-      'Kuwait',
-      'Singapore',
-    ];
     showModalBottomSheet(
       context: context,
       builder: (sheetContext) => ListView(
         shrinkWrap: true,
-        children: methods
+        children: selectablePrayerMethods
             .map(
               (method) => ListTile(
                 title: Text(
@@ -336,16 +326,15 @@ class SettingsPage extends ConsumerWidget {
   }
 
   void _showMadhabPicker(BuildContext context, WidgetRef ref) {
-    const madhabs = ['Hanafi', "Shafi'i", 'Maliki', 'Hanbali'];
     showModalBottomSheet(
       context: context,
       builder: (sheetContext) => ListView(
         shrinkWrap: true,
-        children: madhabs
+        children: selectableMadhabs
             .map(
               (madhab) => ListTile(
                 title: Text(
-                  madhab,
+                  _displayMadhab(madhab),
                   style: const TextStyle(fontWeight: FontWeight.w700),
                 ),
                 onTap: () {
@@ -552,5 +541,15 @@ class SettingsPage extends ConsumerWidget {
     return code.toUpperCase();
   }
 
+  String _displayMadhab(String madhab) {
+    switch (madhab) {
+      case shafiiMadhab:
+        return "Shafi'i";
+      case jafariMadhab:
+        return "Ja'fari";
+      default:
+        return madhab;
+    }
+  }
 
 }
