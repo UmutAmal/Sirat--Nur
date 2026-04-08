@@ -2626,3 +2626,38 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/hadith_api_service.dart) ve [A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/providers/hadith_provider.dart) doğrulanmış dataset gelene kadar production zincirinden tamamen izole edilip edilmeyeceği denetlenecek.
 - Ardından dua source-attribution ve rare-locale religious copy audit’i devam edecek.
+
+## 2026-04-09 TUR-67 — Localize Hadith Collection Names Through One Shared Source
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_collection_copy.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_collection_copy.dart) eklendi; hadith koleksiyon adlarını locale-aware çözen tek kaynak fonksiyon oluşturuldu.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_list_page.dart) ve [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) bu ortak fonksiyona taşındı.
+- [A:\Way of Allah\sirat_i_nur\test\features\library\hadith_collection_copy_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/library/hadith_collection_copy_test.dart) ile Türkçe ve İngilizce kanonik adlar kilitlendi.
+
+### Neden Yapıldı
+- Hadith browse akışı dürüst biçimde kapatılmış olsa da library kartları koleksiyon adlarını hâlâ sabit İngilizce string’lerle gösteriyordu.
+- Aynı koleksiyonun [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_list_page.dart) içinde Türkçe, [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) içinde İngilizce görünmesi locale tutarsızlığı üretiyordu.
+- Kök sebep, koleksiyon adlarının iki farklı yerde ayrı sabitlerle tutulmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_collection_copy.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_collection_copy_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Hadith koleksiyon adları artık tek yerden çözülüyor; Türkçe görünümde `Sahih-i Buhârî`, `Sünen-i Nesâî` gibi kanonik adlar doğru yüzeye geliyor.
+- Library kartı ve hadith sayfası aynı locale mantığını kullanıyor; dini içerik adlandırmasında tutarsızlık azaldı.
+- Ortak helper testi bu isimlerin sessizce İngilizce sabite geri dönmesini engelleyecek.
+
+### Test Sonucu
+- `flutter test test/features/library/hadith_collection_copy_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`174/174`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Hadith collection names diverging across library surfaces by locale: `8/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki turda rare-locale hadith güvenilirlik kopyasında İngilizce fallback kalan locale’ler ölçülüp uygun olanlar daraltılacak.
+- Paralelde [A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/providers/hadith_provider.dart) production akışından tamamen koparılabilecek mi denetlenecek.

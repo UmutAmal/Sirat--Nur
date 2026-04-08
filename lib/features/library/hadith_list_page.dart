@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/features/library/hadith_collection_copy.dart';
 import 'package:sirat_i_nur/features/library/providers/hadith_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
@@ -13,7 +14,7 @@ class HadithListPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = Localizations.localeOf(context).languageCode;
-    final name = _getCollectionName(collectionId, lang);
+    final name = resolveHadithCollectionName(collectionId, lang);
     final l10n = AppLocalizations.of(context)!;
 
     if (!hasVerifiedHadithDataset) {
@@ -163,26 +164,4 @@ class HadithListPage extends ConsumerWidget {
     );
   }
 
-  static String _getCollectionName(String id, String lang) {
-    if (lang == 'tr') {
-      switch (id) {
-        case 'bukhari': return 'Sahih-i Buhârî';
-        case 'muslim': return 'Sahih-i Müslim';
-        case 'tirmidhi': return 'Sünen-i Tirmizî';
-        case 'abudawud': return 'Sünen-i Ebû Dâvûd';
-        case 'nasai': return 'Sünen-i Nesâî';
-        case 'ibnmajah': return 'Sünen-i İbn Mâce';
-        default: return id;
-      }
-    }
-    switch (id) {
-      case 'bukhari': return 'Sahih al-Bukhari';
-      case 'muslim': return 'Sahih Muslim';
-      case 'tirmidhi': return 'Jami at-Tirmidhi';
-      case 'abudawud': return 'Sunan Abu Dawud';
-      case 'nasai': return "Sunan an-Nasa'i";
-      case 'ibnmajah': return 'Sunan Ibn Majah';
-      default: return id;
-    }
-  }
 }

@@ -7,6 +7,7 @@ import 'package:sirat_i_nur/core/constants/duas_data.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
+import 'package:sirat_i_nur/features/library/hadith_collection_copy.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 String buildLibraryErrorText(AppLocalizations l10n, Object error) {
@@ -354,10 +355,14 @@ class LibraryPage extends ConsumerWidget {
             ..._hadithCollections.asMap().entries.map((entry) {
               final i = entry.key;
               final h = entry.value;
+              final hadithName = resolveHadithCollectionName(
+                h.id,
+                Localizations.localeOf(context).languageCode,
+              );
               return AnimatedPremiumCard(
                 animationDelay: 600 + (i * 80),
                 onTap: areHadithsAvailable
-                    ? () => context.push('/library/hadith/${h.id}', extra: h.name)
+                    ? () => context.push('/library/hadith/${h.id}', extra: hadithName)
                     : null,
                 child: Row(
                   children: [
@@ -384,7 +389,7 @@ class LibraryPage extends ConsumerWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            h.name,
+                            hadithName,
                             style: const TextStyle(
                               fontWeight: FontWeight.w900,
                               fontSize: 15,
@@ -442,18 +447,18 @@ class LibraryPage extends ConsumerWidget {
   }
 
   static const _hadithCollections = [
-    _HadithCollection('bukhari', 'Sahih al-Bukhari'),
-    _HadithCollection('muslim', 'Sahih Muslim'),
-    _HadithCollection('tirmidhi', 'Jami at-Tirmidhi'),
-    _HadithCollection('abudawud', 'Sunan Abu Dawud'),
-    _HadithCollection('nasai', "Sunan an-Nasa'i"),
-    _HadithCollection('ibnmajah', 'Sunan Ibn Majah'),
+    _HadithCollection('bukhari'),
+    _HadithCollection('muslim'),
+    _HadithCollection('tirmidhi'),
+    _HadithCollection('abudawud'),
+    _HadithCollection('nasai'),
+    _HadithCollection('ibnmajah'),
   ];
 }
 
 class _HadithCollection {
-  final String id, name;
-  const _HadithCollection(this.id, this.name);
+  final String id;
+  const _HadithCollection(this.id);
 }
 
 String _translateDuaCategory(String category, AppLocalizations l10n) {
