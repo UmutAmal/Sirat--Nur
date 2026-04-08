@@ -9,9 +9,7 @@ class AsmaUlHusnaData {
         'tr':
             'Dünyadaki bütün yaratılmışlara merhamet eden, acıyan, esirgeyen.',
       },
-      'audioUrl':
-          'https://download.quranicaudio.com/quran/mishari_rashid_al-afasy/001.mp3',
-    }, // Note: Using high precision CDN
+    },
     {
       'id': 2,
       'arabic': 'الرَّحِيمُ',
@@ -20,8 +18,6 @@ class AsmaUlHusnaData {
         'en': 'The Merciful',
         'tr': 'Ahirette müminlere sonsuz ihsanda, lütufta ve ikramda bulunan.',
       },
-      'audioUrl':
-          'https://download.quranicaudio.com/quran/mishari_rashid_al-afasy/002.mp3',
     },
     {
       'id': 3,
@@ -32,8 +28,6 @@ class AsmaUlHusnaData {
         'tr':
             'Kainatın sahibi, mülk ve saltanatı sürekli olan, hakimiyetin mutlak sahibi.',
       },
-      'audioUrl':
-          'https://download.quranicaudio.com/quran/mishari_rashid_al-afasy/003.mp3',
     },
     {
       'id': 4,
@@ -44,8 +38,6 @@ class AsmaUlHusnaData {
         'tr':
             'Her türlü eksiklikten uzak olan, her türlü noksanlıktan münezzeh.',
       },
-      'audioUrl':
-          'https://download.quranicaudio.com/quran/mishari_rashid_al-afasy/004.mp3',
     },
     {
       'id': 5,
@@ -55,8 +47,6 @@ class AsmaUlHusnaData {
         'en': 'The Source of Peace',
         'tr': 'Her tehlikeden selamete çıkaran, esenlik veren.',
       },
-      'audioUrl':
-          'https://download.quranicaudio.com/quran/mishari_rashid_al-afasy/005.mp3',
     },
     {
       'id': 6,
@@ -66,8 +56,6 @@ class AsmaUlHusnaData {
         'en': 'The inspirer of faith',
         'tr': 'Güven veren, emin kılan, koruyan, vaadine güvenilen.',
       },
-      'audioUrl':
-          'https://download.quranicaudio.com/quran/mishari_rashid_al-afasy/006.mp3',
     },
     {
       'id': 7,
@@ -78,8 +66,6 @@ class AsmaUlHusnaData {
         'tr':
             'Her şeyi görüp gözeten, denetleyen, kâinatın hâkim ve yöneticisi.',
       },
-      'audioUrl':
-          'https://download.quranicaudio.com/quran/mishari_rashid_al-afasy/007.mp3',
     },
     {
       'id': 8,
@@ -89,8 +75,6 @@ class AsmaUlHusnaData {
         'en': 'The Precious / The Most Mighty',
         'tr': 'İzzet sahibi, her şeye galip olan, mutlak güç sahibi.',
       },
-      'audioUrl':
-          'https://download.quranicaudio.com/quran/mishari_rashid_al-afasy/008.mp3',
     },
     {
       'id': 9,
@@ -100,8 +84,6 @@ class AsmaUlHusnaData {
         'en': 'The Compeller',
         'tr': 'Azamet ve kudret sahibi, dilediğini yapan ve yaptıran.',
       },
-      'audioUrl':
-          'https://download.quranicaudio.com/quran/mishari_rashid_al-afasy/009.mp3',
     },
     {
       'id': 10,
@@ -111,12 +93,7 @@ class AsmaUlHusnaData {
         'en': 'The Greatest',
         'tr': 'Büyüklükte eşi, benzeri olmayan, azametini gösteren.',
       },
-      'audioUrl':
-          'https://download.quranicaudio.com/quran/mishari_rashid_al-afasy/010.mp3',
     },
-    // ... Simplified for brevity in this call, but I will ensure the pattern is consistent
-    // Actually I should update all of them to be high quality.
-    // I'll update the first few and the pattern logic.
     {
       'id': 11,
       'arabic': 'الْخَالِقُ',
@@ -125,8 +102,6 @@ class AsmaUlHusnaData {
         'en': 'The Creator',
         'tr': 'Yaratan, yoktan var eden, varlıkların hallerini takdir eden.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/011.mp3',
     },
     {
       'id': 12,
@@ -136,8 +111,6 @@ class AsmaUlHusnaData {
         'en': 'The Maker of Order',
         'tr': 'Her şeyi kusursuz ve uyumlu yaratan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/012.mp3',
     },
     {
       'id': 13,
@@ -147,8 +120,6 @@ class AsmaUlHusnaData {
         'en': 'The Shaper of Beauty',
         'tr': 'Varlıklara şekil veren ve onları birbirinden farklı kılan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/013.mp3',
     },
     {
       'id': 14,
@@ -158,8 +129,6 @@ class AsmaUlHusnaData {
         'en': 'The Forgiving',
         'tr': 'Çok mağfiret eden, daima affeden, günahları bağışlayan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/014.mp3',
     },
     {
       'id': 15,
@@ -169,8 +138,6 @@ class AsmaUlHusnaData {
         'en': 'The Subduer',
         'tr': 'Her şeye hakim ve galip, yenilmeyen mutlak galip.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/015.mp3',
     },
     {
       'id': 16,
@@ -180,8 +147,6 @@ class AsmaUlHusnaData {
         'en': 'The Giver of All',
         'tr': 'Karşılık beklemeden bol bol lütfeden ve veren.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/016.mp3',
     },
     {
       'id': 17,
@@ -191,8 +156,6 @@ class AsmaUlHusnaData {
         'en': 'The Sustainer',
         'tr': 'Bedenlerin ve ruhların gıdasını yaratıp veren.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/017.mp3',
     },
     {
       'id': 18,
@@ -202,8 +165,6 @@ class AsmaUlHusnaData {
         'en': 'The Opener',
         'tr': 'İyilik kapılarını açan, hakemlik yapan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/018.mp3',
     },
     {
       'id': 19,
@@ -213,8 +174,6 @@ class AsmaUlHusnaData {
         'en': 'The Knower of all',
         'tr': 'Her şeyi hakkıyla bilen, her şeyi en iyi bilen.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/019.mp3',
     },
     {
       'id': 20,
@@ -224,8 +183,6 @@ class AsmaUlHusnaData {
         'en': 'The Constrictor',
         'tr': 'Dilediğine darlık veren, sıkan, daraltan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/020.mp3',
     },
     {
       'id': 21,
@@ -235,16 +192,12 @@ class AsmaUlHusnaData {
         'en': 'The Reliever',
         'tr': 'Dilediğine bolluk veren, açan, genişleten.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/021.mp3',
     },
     {
       'id': 22,
       'arabic': 'الْخَافِضُ',
       'transliteration': 'Al Khaafid',
       'translations': {'en': 'The Abaser', 'tr': 'Alçaltan, aşağı indiren.'},
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/022.mp3',
     },
     {
       'id': 23,
@@ -254,8 +207,6 @@ class AsmaUlHusnaData {
         'en': 'The Exalter',
         'tr': 'Şeref verip yükselten, dilediğini yücelten.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/023.mp3',
     },
     {
       'id': 24,
@@ -265,8 +216,6 @@ class AsmaUlHusnaData {
         'en': 'The Bestower of Honour',
         'tr': 'Dilediğini aziz eden, izzet ve şeref veren.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/024.mp3',
     },
     {
       'id': 25,
@@ -276,8 +225,6 @@ class AsmaUlHusnaData {
         'en': 'The Humiliator',
         'tr': 'Dilediğini zillete düşüren, alçaltan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/025.mp3',
     },
     {
       'id': 26,
@@ -287,8 +234,6 @@ class AsmaUlHusnaData {
         'en': 'The Hearer of all',
         'tr': 'Her şeyi en iyi işiten.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/026.mp3',
     },
     {
       'id': 27,
@@ -298,8 +243,6 @@ class AsmaUlHusnaData {
         'en': 'The Seer of all',
         'tr': 'Gizli açık, her şeyi en iyi gören.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/027.mp3',
     },
     {
       'id': 28,
@@ -309,8 +252,6 @@ class AsmaUlHusnaData {
         'en': 'The Judge',
         'tr': 'Mutlak hakim, hakkı batıldan ayıran, son hükmü veren.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/028.mp3',
     },
     {
       'id': 29,
@@ -320,8 +261,6 @@ class AsmaUlHusnaData {
         'en': 'The Just',
         'tr': 'Mutlak adil, çok adaletli, yerli yerinde yapan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/029.mp3',
     },
     {
       'id': 30,
@@ -331,8 +270,6 @@ class AsmaUlHusnaData {
         'en': 'The Subtle One',
         'tr': 'Lütuf ve ihsan sahibi, bütün incelikleri bilen.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/030.mp3',
     },
     {
       'id': 31,
@@ -342,8 +279,6 @@ class AsmaUlHusnaData {
         'en': 'The All Aware',
         'tr': 'Olmuş olacak her şeyin iç yüzünden haberdar olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/031.mp3',
     },
     {
       'id': 32,
@@ -353,20 +288,16 @@ class AsmaUlHusnaData {
         'en': 'The Forebearing',
         'tr': 'Cezada acele etmeyen, yumuşak davranan, hilm sahibi.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/032.mp3',
     },
     {
       'id': 33,
       'arabic': 'الْعَظِيمُ',
       'transliteration': 'Al \'Azeem',
       'translations': {
-        'en': 'The Maginificent',
+        'en': 'The Magnificent',
         'tr':
             'Pek yüce, zat ve sıfatlarının mahiyeti anlaşılamayacak kadar yüce.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/033.mp3',
     },
     {
       'id': 34,
@@ -376,8 +307,6 @@ class AsmaUlHusnaData {
         'en': 'The Great Forgiver',
         'tr': 'Affı, mağfireti bol, bütün günahları bağışlayan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/034.mp3',
     },
     {
       'id': 35,
@@ -387,16 +316,12 @@ class AsmaUlHusnaData {
         'en': 'The Rewarder of Thankfulness',
         'tr': 'Az amele, çok sevap veren, şükürleri kabul eden.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/035.mp3',
     },
     {
       'id': 36,
       'arabic': 'الْعَلِيُّ',
       'transliteration': 'Al \'Aliyy',
       'translations': {'en': 'The Highest', 'tr': 'Yüceler yücesi, çok yüce.'},
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/036.mp3',
     },
     {
       'id': 37,
@@ -406,8 +331,6 @@ class AsmaUlHusnaData {
         'en': 'The Greatest',
         'tr': 'Büyüklükte benzeri olmayan, pek büyük.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/037.mp3',
     },
     {
       'id': 38,
@@ -417,8 +340,6 @@ class AsmaUlHusnaData {
         'en': 'The Preserver',
         'tr': 'Her şeyi koruyucu olan, koruyup gözeten.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/038.mp3',
     },
     {
       'id': 39,
@@ -428,8 +349,6 @@ class AsmaUlHusnaData {
         'en': 'The Nourisher',
         'tr': 'Her yaratılmışın rızkını, gıdasını veren ve tayin eden.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/039.mp3',
     },
     {
       'id': 40,
@@ -439,8 +358,6 @@ class AsmaUlHusnaData {
         'en': 'The Reckoner',
         'tr': 'Kulların hesabını en iyi gören.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/040.mp3',
     },
     {
       'id': 41,
@@ -450,8 +367,6 @@ class AsmaUlHusnaData {
         'en': 'The Majestic',
         'tr': 'Celal ve azamet sahibi olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/041.mp3',
     },
     {
       'id': 42,
@@ -461,8 +376,6 @@ class AsmaUlHusnaData {
         'en': 'The Generous',
         'tr': 'Keremi, lütuf ve ihsanı bol, çok ikram eden.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/042.mp3',
     },
     {
       'id': 43,
@@ -472,8 +385,6 @@ class AsmaUlHusnaData {
         'en': 'The Watchful One',
         'tr': 'Her varlığı her an görüp gözeten, kontrolü altında tutan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/043.mp3',
     },
     {
       'id': 44,
@@ -483,8 +394,6 @@ class AsmaUlHusnaData {
         'en': 'The Responder to Prayer',
         'tr': 'Duaları, istekleri kabul eden.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/044.mp3',
     },
     {
       'id': 45,
@@ -494,8 +403,6 @@ class AsmaUlHusnaData {
         'en': 'The All Comprehending',
         'tr': 'İlmi ve rahmeti her şeyi kuşatan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/045.mp3',
     },
     {
       'id': 46,
@@ -505,8 +412,6 @@ class AsmaUlHusnaData {
         'en': 'The Perfectly Wise',
         'tr': 'Her işi hikmetli, her şeyi hikmetle yaratan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/046.mp3',
     },
     {
       'id': 47,
@@ -516,8 +421,6 @@ class AsmaUlHusnaData {
         'en': 'The Loving One',
         'tr': 'Kullarını en fazla seven, sevilmeye en layık olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/047.mp3',
     },
     {
       'id': 48,
@@ -527,8 +430,6 @@ class AsmaUlHusnaData {
         'en': 'The Most Glorious One',
         'tr': 'Her türlü övgüye layık, kadri ve şânı büyük.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/048.mp3',
     },
     {
       'id': 49,
@@ -538,8 +439,6 @@ class AsmaUlHusnaData {
         'en': 'The Resurrector',
         'tr': 'Ölüleri dirilten, peygamber gönderen.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/049.mp3',
     },
     {
       'id': 50,
@@ -549,8 +448,6 @@ class AsmaUlHusnaData {
         'en': 'The Witness',
         'tr': 'Her zaman her yerde hazır ve nazır olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/050.mp3',
     },
     {
       'id': 51,
@@ -560,8 +457,6 @@ class AsmaUlHusnaData {
         'en': 'The Truth',
         'tr': 'Varlığı hiç değişmeden duran, var olan, hakkı ortaya çıkaran.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/051.mp3',
     },
     {
       'id': 52,
@@ -571,8 +466,6 @@ class AsmaUlHusnaData {
         'en': 'The Trustee',
         'tr': 'Kendisine tevekkül edenlerin işlerini en iyi sonuçlandıran.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/052.mp3',
     },
     {
       'id': 53,
@@ -582,8 +475,6 @@ class AsmaUlHusnaData {
         'en': 'The Possessor of all strength',
         'tr': 'Kudreti en üstün ve hiç azalmaz olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/053.mp3',
     },
     {
       'id': 54,
@@ -593,16 +484,12 @@ class AsmaUlHusnaData {
         'en': 'The Forceful',
         'tr': 'Kuvvet ve kudret kaynağı, pek güçlü.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/054.mp3',
     },
     {
       'id': 55,
       'arabic': 'الْوَلِيُّ',
       'transliteration': 'Al Waliyy',
       'translations': {'en': 'The Protector', 'tr': 'Dost ve yardımcı olan.'},
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/055.mp3',
     },
     {
       'id': 56,
@@ -612,8 +499,6 @@ class AsmaUlHusnaData {
         'en': 'The Praised',
         'tr': 'Her türlü övgüye, hamd ve senaya layık olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/056.mp3',
     },
     {
       'id': 57,
@@ -623,8 +508,6 @@ class AsmaUlHusnaData {
         'en': 'The Appraiser',
         'tr': 'Her şeyin sayısını bilen, her şeyi tek tek sayan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/057.mp3',
     },
     {
       'id': 58,
@@ -634,8 +517,6 @@ class AsmaUlHusnaData {
         'en': 'The Originator',
         'tr': 'Yarattıklarını maddesiz ve modelsiz olarak ilk baştan yaratan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/058.mp3',
     },
     {
       'id': 59,
@@ -645,8 +526,6 @@ class AsmaUlHusnaData {
         'en': 'The Restorer',
         'tr': 'Yarattıklarını yok edip, sonra tekrar diriltecek olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/059.mp3',
     },
     {
       'id': 60,
@@ -656,8 +535,6 @@ class AsmaUlHusnaData {
         'en': 'The Giver of life',
         'tr': 'İhya eden, dirilten, can veren.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/060.mp3',
     },
     {
       'id': 61,
@@ -667,8 +544,6 @@ class AsmaUlHusnaData {
         'en': 'The Taker of life',
         'tr': 'Her canlıya ölümü tattıran.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/061.mp3',
     },
     {
       'id': 62,
@@ -678,8 +553,6 @@ class AsmaUlHusnaData {
         'en': 'The Ever Living',
         'tr': 'Ezeli ve ebedi hayat sahibi, daima diri olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/062.mp3',
     },
     {
       'id': 63,
@@ -689,8 +562,6 @@ class AsmaUlHusnaData {
         'en': 'The Self Existing',
         'tr': 'Varlıkları diri tutan, zatı ile kaim olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/063.mp3',
     },
     {
       'id': 64,
@@ -700,8 +571,6 @@ class AsmaUlHusnaData {
         'en': 'The Finder',
         'tr': 'İstediğini, istediği vakit bulan, hiçbir şeye muhtaç olmayan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/064.mp3',
     },
     {
       'id': 65,
@@ -711,8 +580,6 @@ class AsmaUlHusnaData {
         'en': 'The Glorious',
         'tr': 'Kadri ve şanı büyük, keremi, ihsanı bol olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/065.mp3',
     },
     {
       'id': 66,
@@ -722,8 +589,6 @@ class AsmaUlHusnaData {
         'en': 'The Only One',
         'tr': 'Zat, sıfat ve fiillerinde ortağı olmayan, tek olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/066.mp3',
     },
     {
       'id': 67,
@@ -733,8 +598,6 @@ class AsmaUlHusnaData {
         'en': 'The One',
         'tr': 'Zatında tek olan (Vahidin pekiştirilmiş hali).',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/067.mp3',
     },
     {
       'id': 68,
@@ -744,8 +607,6 @@ class AsmaUlHusnaData {
         'en': 'The Supreme Provider',
         'tr': 'Hiçbir şeye ihtiyacı olmayan, herkesin muhtaç olduğu merci.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/068.mp3',
     },
     {
       'id': 69,
@@ -755,8 +616,6 @@ class AsmaUlHusnaData {
         'en': 'The Powerful',
         'tr': 'Dilediğini dilediği gibi yaratmaya muktedir olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/069.mp3',
     },
     {
       'id': 70,
@@ -766,8 +625,6 @@ class AsmaUlHusnaData {
         'en': 'The Creator of all power',
         'tr': 'Dilediği gibi tasarruf eden, her şeye gücü yeten.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/070.mp3',
     },
     {
       'id': 71,
@@ -777,8 +634,6 @@ class AsmaUlHusnaData {
         'en': 'The Expediter',
         'tr': 'Dilediğini öne alan, yükselten.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/071.mp3',
     },
     {
       'id': 72,
@@ -788,8 +643,6 @@ class AsmaUlHusnaData {
         'en': 'The Delayer',
         'tr': 'Dilediğini sona alan, erteleyen, geriye bırakan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/072.mp3',
     },
     {
       'id': 73,
@@ -799,8 +652,6 @@ class AsmaUlHusnaData {
         'en': 'The First',
         'tr': 'Ezeli olan, varlığının başlangıcı olmayan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/073.mp3',
     },
     {
       'id': 74,
@@ -810,8 +661,6 @@ class AsmaUlHusnaData {
         'en': 'The Last',
         'tr': 'Ebedi olan, varlığının sonu olmayan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/074.mp3',
     },
     {
       'id': 75,
@@ -821,8 +670,6 @@ class AsmaUlHusnaData {
         'en': 'The Manifest',
         'tr': 'Varlığı açık, aşikar olan, kesin delillerle bilinen.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/075.mp3',
     },
     {
       'id': 76,
@@ -832,24 +679,18 @@ class AsmaUlHusnaData {
         'en': 'The Hidden',
         'tr': 'Akılların idrak edemeyeceği yüceliği gizli olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/076.mp3',
     },
     {
       'id': 77,
       'arabic': 'الْوَالِي',
       'transliteration': 'Al Waali',
       'translations': {'en': 'The Governor', 'tr': 'Bütün kainatı idare eden.'},
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/077.mp3',
     },
     {
       'id': 78,
       'arabic': 'الْمُتَعَالِي',
       'transliteration': 'Al Muta’ali',
       'translations': {'en': 'The Supreme One', 'tr': 'Son derece yüce olan.'},
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/078.mp3',
     },
     {
       'id': 79,
@@ -859,8 +700,6 @@ class AsmaUlHusnaData {
         'en': 'The Doer of Good',
         'tr': 'İyilik ve ihsanı bol, iyilik kaynağı.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/079.mp3',
     },
     {
       'id': 80,
@@ -870,8 +709,6 @@ class AsmaUlHusnaData {
         'en': 'The Guide to Repentence',
         'tr': 'Tevbeleri kabul edip, günahları bağışlayan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/080.mp3',
     },
     {
       'id': 81,
@@ -881,8 +718,6 @@ class AsmaUlHusnaData {
         'en': 'The Avenger',
         'tr': 'Zalimlerin cezasını veren, intikam alan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/081.mp3',
     },
     {
       'id': 82,
@@ -892,8 +727,6 @@ class AsmaUlHusnaData {
         'en': 'The Forgiver',
         'tr': 'Affı çok olan, günahları silen.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/082.mp3',
     },
     {
       'id': 83,
@@ -903,8 +736,6 @@ class AsmaUlHusnaData {
         'en': 'The Clement',
         'tr': 'Çok merhametli, pek şefkatli.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/083.mp3',
     },
     {
       'id': 84,
@@ -914,8 +745,6 @@ class AsmaUlHusnaData {
         'en': 'The Owner / Soverign of All',
         'tr': 'Mülkün, her varlığın asıl sahibi.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/084.mp3',
     },
     {
       'id': 85,
@@ -925,8 +754,6 @@ class AsmaUlHusnaData {
         'en': 'Possessor of Majesty and Bounty',
         'tr': 'Celal, azamet ve pek büyük ikram sahibi.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/085.mp3',
     },
     {
       'id': 86,
@@ -936,8 +763,6 @@ class AsmaUlHusnaData {
         'en': 'The Equitable One',
         'tr': 'Her işi birbirine uygun yapan, adaletle hükmeden.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/086.mp3',
     },
     {
       'id': 87,
@@ -947,8 +772,6 @@ class AsmaUlHusnaData {
         'en': 'The Gatherer',
         'tr': 'Mahşerde mahlükatı bir araya toplayan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/087.mp3',
     },
     {
       'id': 88,
@@ -958,8 +781,6 @@ class AsmaUlHusnaData {
         'en': 'The Rich One',
         'tr': 'İhtiyaçsız, hiç kimseye muhtaç olmayan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/088.mp3',
     },
     {
       'id': 89,
@@ -969,8 +790,6 @@ class AsmaUlHusnaData {
         'en': 'The Enricher',
         'tr': 'İhtiyaç gideren, zengin eden.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/089.mp3',
     },
     {
       'id': 90,
@@ -980,8 +799,6 @@ class AsmaUlHusnaData {
         'en': 'The Preventer of harm',
         'tr': 'Dilemediği şeye mani olan, engelleyen.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/090.mp3',
     },
     {
       'id': 91,
@@ -991,8 +808,6 @@ class AsmaUlHusnaData {
         'en': 'The Creator of the harmful',
         'tr': 'Elem ve zarar verenleri yaratan, dilediğine zarar veren.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/091.mp3',
     },
     {
       'id': 92,
@@ -1002,8 +817,6 @@ class AsmaUlHusnaData {
         'en': 'The Bestower of Benefits',
         'tr': 'Fayda veren şeyleri yaratan, dilediğine fayda veren.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/092.mp3',
     },
     {
       'id': 93,
@@ -1013,8 +826,6 @@ class AsmaUlHusnaData {
         'en': 'The Light',
         'tr': 'Âlemleri nurlandıran, dilediğine nur veren.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/093.mp3',
     },
     {
       'id': 94,
@@ -1024,8 +835,6 @@ class AsmaUlHusnaData {
         'en': 'The Guider',
         'tr': 'Hidayet veren, doğru yola ileten.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/094.mp3',
     },
     {
       'id': 95,
@@ -1035,8 +844,6 @@ class AsmaUlHusnaData {
         'en': 'The Originator',
         'tr': 'Örneksiz, hayret verici harikalar yaratan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/095.mp3',
     },
     {
       'id': 96,
@@ -1046,8 +853,6 @@ class AsmaUlHusnaData {
         'en': 'The Everlasting One',
         'tr': 'Varlığının sonu olmayan, ebedi olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/096.mp3',
     },
     {
       'id': 97,
@@ -1057,8 +862,6 @@ class AsmaUlHusnaData {
         'en': 'The Inhertior',
         'tr': 'Her şeyin asıl sahibi ve varisi olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/097.mp3',
     },
     {
       'id': 98,
@@ -1068,8 +871,6 @@ class AsmaUlHusnaData {
         'en': 'The Most Righteous Guide',
         'tr': 'Doğru yolu gösteren, irşad eden.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/098.mp3',
     },
     {
       'id': 99,
@@ -1079,8 +880,6 @@ class AsmaUlHusnaData {
         'en': 'The Patient One',
         'tr': 'Cezada acele etmeyen, sabırlı olan.',
       },
-      'audioUrl':
-          'https://server7.mp3quran.net/basit/Almusshaf-Al-Moalim/099.mp3',
     },
   ];
 }

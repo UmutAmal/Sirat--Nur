@@ -2414,3 +2414,37 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) bundled meaning/transliteration ve legacy audio URL yüzeyi authoritative source-attribution açısından temizlenecek.
 - Bunun ardından hadith/library isimlendirmesinde kalan hardcoded collection label yüzeyi taranacak.
+
+## 2026-04-09 TUR-61 — Sanitize Bundled Asma Fallback
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki bundled `AsmaUlHusnaData.names` listesinden tüm legacy external `audioUrl` değerleri çıkarıldı; bundled source artık üçüncü taraf MP3 URL taşımıyor.
+- Aynı dosyadaki authoring-note kalıntıları temizlendi ve `The Maginificent` yazımı `The Magnificent` olarak düzeltildi.
+- `buildBundledAsmaUlHusnaFallback()` bundled fallback için dürüst biçimde boş `audioUrl` üretmeye devam edecek şekilde korundu; `normalizeAsmaUlHusnaRow()` ise cloud satırlardan gelen gerçek `audio_url` alanını normalize edip UI zincirine aktarmaya devam etti.
+- [A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/asma_ul_husna_data_test.dart) genişletildi; source dosyada legacy CDN URL’leri ve authoring-note kalıntıları kalmadığını guard testiyle kilitliyor.
+
+### Neden Yapıldı
+- Önceki Asma fallback verisi repo içinde eski harici ses URL’lerini ve üretim-notu yorumlarını tutuyordu; runtime sessiz fallback kullansa bile source-of-truth kirli kalıyordu.
+- Kök sebep, bundled fallback’in cloud veriden ayrıştırılmasına rağmen source dosyanın tarihsel authoring artıklarıyla birlikte commit edilmiş olmasıydı.
+- Kullanıcının talep ettiği “repo içinde de sahte/yanlış/dışa bağımlı dini içerik bırakmama” kuralı için sadece runtime guard yeterli değildi; bundled kaynağın kendisinin de temizlenmesi gerekiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Bundled Asma fallback artık doğrulanmamış üçüncü taraf ses bağlantılarını repo içinde taşımıyor.
+- Cloud veri varsa gerçek `audio_url` zinciri çalışmaya devam ediyor; cloud yoksa UI dürüst biçimde sessiz fallback gösteriyor.
+- Legacy authoring-note veya dış URL yeniden eklenirse guard testi doğrudan fail verecek.
+
+### Test Sonucu
+- `flutter test test/asma_ul_husna_data_test.dart` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`166/166`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Bundled Asma source embedding legacy external audio URLs and authoring artifacts: `10/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki İngilizce içerik kalitesi ve olası typo yüzeyi authoritative meaning ve dil kalitesi açısından taranacak.
+- Ardından tüm locale setinde Asma anlam zinciri ile bundled data arasında anlamsal drift olup olmadığı kontrol edilecek.

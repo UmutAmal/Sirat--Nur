@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/constants/asma_ul_husna_data.dart';
+import 'dart:io';
 
 void main() {
   group('AsmaUlHusna data helpers', () {
@@ -51,5 +52,16 @@ void main() {
         expect(resolved.first['arabic'], AsmaUlHusnaData.names.first['arabic']);
       },
     );
+
+    test('bundled source no longer embeds legacy audio urls or authoring notes', () {
+      final source = File(
+        'lib/core/constants/asma_ul_husna_data.dart',
+      ).readAsStringSync();
+
+      expect(source.contains('https://download.quranicaudio.com'), isFalse);
+      expect(source.contains('https://server7.mp3quran.net'), isFalse);
+      expect(source.contains('Simplified for brevity'), isFalse);
+      expect(source.contains('high precision CDN'), isFalse);
+    });
   });
 }
