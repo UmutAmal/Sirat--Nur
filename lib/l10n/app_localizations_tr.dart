@@ -362,6 +362,11 @@ class AppLocalizationsTr extends AppLocalizations {
   String get shareApp => 'Uygulamayı Paylaş';
 
   @override
+  String shareAppMessage(String appName, String url) {
+    return '$appName uygulamasına göz atın: En kapsamlı İslami yaşam uygulaması! $url';
+  }
+
+  @override
   String get downloadManager => 'İndirme Yöneticisi';
 
   @override

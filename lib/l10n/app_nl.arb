@@ -124,6 +124,17 @@
   "contactUs": "Neem contact met ons op",
   "rateApp": "Beoordeel app",
   "shareApp": "Deel app",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Beheerder downloaden",
   "downloads": "Downloads",
   "downloading": "Downloaden...",

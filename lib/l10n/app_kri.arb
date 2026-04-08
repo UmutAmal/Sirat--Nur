@@ -124,6 +124,17 @@
   "contactUs": "Kɔntakt Wi",
   "rateApp": "Rate App",
   "shareApp": "Share App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Daunlod Maneja",
   "downloads": "Di tin dɛn we dɛn kin dawnlod",
   "downloading": "We yu de dawnlod...",

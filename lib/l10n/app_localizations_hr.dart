@@ -362,6 +362,11 @@ class AppLocalizationsHr extends AppLocalizations {
   String get shareApp => 'Dijeli aplikaciju';
 
   @override
+  String shareAppMessage(String appName, String url) {
+    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+  }
+
+  @override
   String get downloadManager => 'Upravitelj preuzimanja';
 
   @override

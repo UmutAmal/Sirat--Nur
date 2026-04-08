@@ -124,6 +124,17 @@
   "contactUs": "हमसे संपर्क करें",
   "rateApp": "दर एप्लिकेशन",
   "shareApp": "शेयर ऐप",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "डाउनलोड प्रबंधक",
   "downloads": "डाउनलोड",
   "downloading": "डाउनलोड क रहल छी...",

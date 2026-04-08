@@ -124,6 +124,17 @@
   "contactUs": "Kontaka Kami",
   "rateApp": "Rate nga App",
   "shareApp": "Ipakigbahin ang App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Download Manager",
   "downloads": "Mga pag-download",
   "downloading": "Nag-download...",

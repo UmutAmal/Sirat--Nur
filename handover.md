@@ -2049,3 +2049,46 @@
 ### Sonraki Adım
 - Sıradaki turda prayer/settings yüzeyindeki kalan hardcoded about/share/version akışı runtime metadata ve localization zincirine taşınacak.
 - Ardından prayer-notification zincirinde bölge/timezone bazlı kenar durumlar yeniden taranacak.
+
+## 2026-04-08 TUR-52 — Remove Hardcoded About And Share Metadata
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\app_metadata_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/app_metadata_service.dart) eklendi; runtime sürüm çözümü, legalese üretimi ve ortak uygulama URL sabitleri tek yerde toplandı.
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_page.dart) artık `version`, `applicationName`, `applicationVersion`, `applicationLegalese`, share text ve dış URL’leri hardcoded değil ortak metadata + localization zinciri üzerinden çözüyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart) içindeki version resolver yeni ortak metadata helper’ına bağlandı; settings ve diagnostics aynı sürüm kaynağını kullanıyor.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) ve tüm `app_*.arb` setine `shareAppMessage` anahtarı yayıldı; generated localization dosyaları yenilendi.
+- [A:\Way of Allah\sirat_i_nur\test\features\settings\settings_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/settings/settings_page_test.dart) genişletildi; runtime sürüm değeri ve localized share message kilitlendi.
+
+### Neden Yapıldı
+- Ana ayarlar ekranında `2.0.0`, `Sirat-i Nur`, `© Sirat-i Nur` ve paylaşım mesajı sabit string olarak duruyordu.
+- Bu durum build metadata değiştiğinde UI ile gerçek sürümün ayrışmasına ve localization zincirinin about/share yüzeyinde delinmesine neden oluyordu.
+- Kök sebep, sürüm/uygulama metadata’sının ortak yardımcı katmanda toplanmaması ve share metninin l10n yerine inline string ile üretilmesiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\app_metadata_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\settings_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Settings ve diagnostics artık aynı runtime sürüm kaynağını gösteriyor.
+- About dialog uygulama adını locale-aware `appTitle` üzerinden alıyor.
+- Share akışı her dilde localization zinciri üzerinden üretiliyor; inline İngilizce pazarlama metni kaldırıldı.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/features/settings/settings_page_test.dart` → PASS (`3/3`)
+- `flutter test test/features/settings/diagnostics_page_test.dart` → PASS (`9/9`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`150/150`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Settings about/share flow using stale hardcoded metadata instead of runtime and localized values: `6/25 → 1/25`
+
+### Sonraki Adım
+- Sıradaki turda prayer-notification zinciri, özellikle bölge/timezone değişimlerinde scheduler ve displayed times arasında kenar durum drift’i açısından yeniden taranacak.
+- Ardından kalan hardcoded veya orphan yüzeyler için yeni risk sıralaması açılacak.

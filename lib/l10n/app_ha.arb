@@ -124,6 +124,17 @@
   "contactUs": "Tuntube Mu",
   "rateApp": "Rate App",
   "shareApp": "Raba App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Download Manager",
   "downloads": "Zazzagewa",
   "downloading": "Ana saukewa...",

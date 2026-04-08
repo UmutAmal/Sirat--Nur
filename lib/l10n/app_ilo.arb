@@ -124,6 +124,17 @@
   "contactUs": "Kontaken Kadakami",
   "rateApp": "Rate ti App",
   "shareApp": "Ibinglay ti App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Manager ti Panag-download",
   "downloads": "Dagiti nai-download",
   "downloading": "Pag-download ti...",

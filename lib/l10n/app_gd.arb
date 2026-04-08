@@ -124,6 +124,17 @@
   "contactUs": "Cuir fios thugainn",
   "rateApp": "App astar",
   "shareApp": "Co-roinn App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Luchdaich sìos Manaidsear",
   "downloads": "Luchdaich sìos",
   "downloading": "A' luchdachadh sìos...",

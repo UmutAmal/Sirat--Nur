@@ -124,6 +124,17 @@
   "contactUs": "Te Ðe Mía Ŋu",
   "rateApp": "Rate App",
   "shareApp": "Mamã ƒe App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Download Manager",
   "downloads": "Nusiwo woate ŋu awɔ kɔpi na",
   "downloading": "Wole eƒe kɔpi wɔm...",

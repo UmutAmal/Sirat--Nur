@@ -124,6 +124,17 @@
   "contactUs": "Déan Teagmháil Linn",
   "rateApp": "App Ráta",
   "shareApp": "Comhroinn App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Bainisteoir íoslódáil",
   "downloads": "Íoslódálacha",
   "downloading": "Ag íosluchtú...",

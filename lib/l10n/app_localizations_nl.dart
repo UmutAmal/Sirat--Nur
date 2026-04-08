@@ -362,6 +362,11 @@ class AppLocalizationsNl extends AppLocalizations {
   String get shareApp => 'Deel app';
 
   @override
+  String shareAppMessage(String appName, String url) {
+    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+  }
+
+  @override
   String get downloadManager => 'Beheerder downloaden';
 
   @override

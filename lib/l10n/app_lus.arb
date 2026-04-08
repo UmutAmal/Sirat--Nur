@@ -124,6 +124,17 @@
   "contactUs": "Min rawn biak theih reng e",
   "rateApp": "Rate App a ni",
   "shareApp": "Share App tih hi a ni",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Download Manager tur a ni",
   "downloads": "Downloads te pawh a awm",
   "downloading": "Download mek a ni...",

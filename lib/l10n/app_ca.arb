@@ -124,6 +124,17 @@
   "contactUs": "Contacta amb nosaltres",
   "rateApp": "Valora l'aplicació",
   "shareApp": "Comparteix l'aplicació",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Gestor de descàrregues",
   "downloads": "Descàrregues",
   "downloading": "S'està baixant...",

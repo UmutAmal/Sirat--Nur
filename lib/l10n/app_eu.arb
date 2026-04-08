@@ -124,6 +124,17 @@
   "contactUs": "Jarri gurekin harremanetan",
   "rateApp": "Tarifa aplikazioa",
   "shareApp": "Partekatu aplikazioa",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Deskarga kudeatzailea",
   "downloads": "Deskargak",
   "downloading": "Deskargatzen...",

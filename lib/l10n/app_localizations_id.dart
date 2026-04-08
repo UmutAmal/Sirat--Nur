@@ -362,6 +362,11 @@ class AppLocalizationsId extends AppLocalizations {
   String get shareApp => 'Bagikan Aplikasi';
 
   @override
+  String shareAppMessage(String appName, String url) {
+    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+  }
+
+  @override
   String get downloadManager => 'Manajer Unduhan';
 
   @override

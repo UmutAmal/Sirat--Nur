@@ -124,6 +124,17 @@
   "contactUs": "დაგვიკავშირდით",
   "rateApp": "შეაფასეთ აპლიკაცია",
   "shareApp": "აპის გაზიარება",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "ჩამოტვირთვის მენეჯერი",
   "downloads": "ჩამოტვირთვები",
   "downloading": "მიმდინარეობს ჩამოტვირთვა...",

@@ -124,6 +124,17 @@
   "contactUs": "Kontaktirajte nas",
   "rateApp": "Ocijenite aplikaciju",
   "shareApp": "Dijeli aplikaciju",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Upravitelj preuzimanja",
   "downloads": "Preuzimanja",
   "downloading": "Preuzimanje...",

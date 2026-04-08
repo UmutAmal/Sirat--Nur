@@ -124,6 +124,17 @@
   "contactUs": "Կապ մեզ հետ",
   "rateApp": "Գնահատեք հավելվածը",
   "shareApp": "Համօգտագործել հավելվածը",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Ներբեռնման մենեջեր",
   "downloads": "Ներբեռնումներ",
   "downloading": "Ներբեռնվում է...",

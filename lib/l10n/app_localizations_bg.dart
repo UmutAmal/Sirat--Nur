@@ -362,6 +362,11 @@ class AppLocalizationsBg extends AppLocalizations {
   String get shareApp => 'Приложение за споделяне';
 
   @override
+  String shareAppMessage(String appName, String url) {
+    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+  }
+
+  @override
   String get downloadManager => 'Мениджър за изтегляне';
 
   @override

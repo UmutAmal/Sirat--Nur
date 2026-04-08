@@ -124,6 +124,17 @@
   "contactUs": "Hubungi Kami",
   "rateApp": "Nilai Aplikasi",
   "shareApp": "Kongsikan Aplikasi",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Pengurus Muat Turun",
   "downloads": "Muat Turun",
   "downloading": "Muat Turun...",

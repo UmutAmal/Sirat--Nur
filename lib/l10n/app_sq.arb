@@ -124,6 +124,17 @@
   "contactUs": "Na kontaktoni",
   "rateApp": "Vlerësoni aplikacionin",
   "shareApp": "Ndani aplikacionin",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Menaxheri i Shkarkimit",
   "downloads": "Shkarkimet",
   "downloading": "Po shkarkohet...",

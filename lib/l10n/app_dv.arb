@@ -124,6 +124,17 @@
   "contactUs": "ކޮންޓެކްޓް އަސް",
   "rateApp": "ރޭޓް އެޕް",
   "shareApp": "ޝެއާ އެޕް",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "ޑައުންލޯޑް މެނޭޖަރ",
   "downloads": "ޑައުންލޯޑްސް",
   "downloading": "ޑައުންލޯޑް ކުރަމުން...",

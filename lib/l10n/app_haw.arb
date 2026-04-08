@@ -124,6 +124,17 @@
   "contactUs": "Kāhea iā mā˚ou",
   "rateApp": "Loko App",
   "shareApp": "Kaʻana like App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Luna Hoʻoiho",
   "downloads": "Hoʻoiho",
   "downloading": "Hoʻoiho ʻia...",

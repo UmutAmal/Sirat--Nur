@@ -124,6 +124,17 @@
   "contactUs": "Jiwasampiw aruskipt’apxañäni",
   "rateApp": "Tarifa ukax App",
   "shareApp": "Compartir App ukax mä juk’a pachanakanwa",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Uñstayaña Gestor",
   "downloads": "Ukax mä juk’a pachanakanwa",
   "downloading": "Ukax mä...",

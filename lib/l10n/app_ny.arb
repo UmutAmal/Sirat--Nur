@@ -124,6 +124,17 @@
   "contactUs": "Lumikizanani nafe",
   "rateApp": "Rate App",
   "shareApp": "Gawani App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Download Manager",
   "downloads": "Zotsitsa",
   "downloading": "Kutsitsa...",

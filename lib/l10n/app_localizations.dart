@@ -1186,6 +1186,12 @@ abstract class AppLocalizations {
   /// **'Share App'**
   String get shareApp;
 
+  /// No description provided for @shareAppMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Check out {appName}: The ultimate Islamic lifestyle app! {url}'**
+  String shareAppMessage(String appName, String url);
+
   /// No description provided for @downloadManager.
   ///
   /// In en, this message translates to:

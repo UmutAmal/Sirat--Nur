@@ -362,6 +362,11 @@ class AppLocalizationsLus extends AppLocalizations {
   String get shareApp => 'Share App tih hi a ni';
 
   @override
+  String shareAppMessage(String appName, String url) {
+    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+  }
+
+  @override
   String get downloadManager => 'Download Manager tur a ni';
 
   @override

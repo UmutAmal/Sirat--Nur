@@ -124,6 +124,17 @@
   "contactUs": "Bize Ulaşın",
   "rateApp": "Uygulamayı Değerlendir",
   "shareApp": "Uygulamayı Paylaş",
+  "shareAppMessage": "{appName} uygulamasına göz atın: En kapsamlı İslami yaşam uygulaması! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "İndirme Yöneticisi",
   "downloads": "İndirilenler",
   "downloading": "İndiriliyor...",

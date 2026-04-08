@@ -124,6 +124,17 @@
   "contactUs": "Ikgokaganye le Rena",
   "rateApp": "Sekhahla App",
   "shareApp": "Share App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Molaodi wa Download",
   "downloads": "Di-download",
   "downloading": "Go taonelouta...",

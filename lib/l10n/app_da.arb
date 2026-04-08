@@ -124,6 +124,17 @@
   "contactUs": "Kontakt os",
   "rateApp": "Bedøm app",
   "shareApp": "Del app",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Download Manager",
   "downloads": "Downloads",
   "downloading": "Downloader...",

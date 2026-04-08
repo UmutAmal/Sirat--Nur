@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:sirat_i_nur/core/constants/app_constants.dart';
+import 'package:sirat_i_nur/core/services/app_metadata_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/utils/locale_utils.dart';
@@ -18,6 +19,7 @@ class SettingsPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final settings = ref.watch(settingsProvider);
     final l10n = AppLocalizations.of(context)!;
+    final appVersion = resolveAppVersion();
     final prayerProfile = profileForMethod(
       settings.calculationMethod,
       madhab: settings.madhab,
@@ -220,12 +222,12 @@ class SettingsPage extends ConsumerWidget {
                     context,
                     icon: Icons.info_outline_rounded,
                     title: l10n.version,
-                    value: '2.0.0',
+                    value: appVersion,
                     onTap: () => showAboutDialog(
                       context: context,
-                      applicationName: 'Sirat-i Nur',
-                      applicationVersion: '2.0.0',
-                      applicationLegalese: '© Sirat-i Nur',
+                      applicationName: l10n.appTitle,
+                      applicationVersion: appVersion,
+                      applicationLegalese: resolveAppLegalese(l10n.appTitle),
                     ),
                   ),
                   const Divider(height: 1),
@@ -234,11 +236,7 @@ class SettingsPage extends ConsumerWidget {
                     icon: Icons.star_rate_rounded,
                     title: l10n.rateApp,
                     value: '',
-                    onTap: () => launchUrl(
-                      Uri.parse(
-                        'https://play.google.com/store/apps/details?id=com.umutamal.sirat_i_nur',
-                      ),
-                    ),
+                    onTap: () => launchUrl(Uri.parse(playStoreUrl)),
                   ),
                   const Divider(height: 1),
                   _settingsTile(
@@ -248,10 +246,7 @@ class SettingsPage extends ConsumerWidget {
                     value: '',
                     onTap: () {
                       SharePlus.instance.share(
-                        ShareParams(
-                          text:
-                              'Check out Sirat-i Nur: The ultimate Islamic lifestyle app! https://siratinur.com',
-                        ),
+                        ShareParams(text: buildSettingsShareText(l10n)),
                       );
                     },
                   ),
@@ -261,8 +256,7 @@ class SettingsPage extends ConsumerWidget {
                     icon: Icons.privacy_tip_outlined,
                     title: l10n.privacyPolicy,
                     value: '',
-                    onTap: () =>
-                        launchUrl(Uri.parse('https://siratinur.com/privacy')),
+                    onTap: () => launchUrl(Uri.parse(privacyPolicyUrl)),
                   ),
                 ],
               ),
@@ -591,4 +585,12 @@ class SettingsPage extends ConsumerWidget {
   String _displayMadhab(String madhab) {
     return displayMadhabLabel(madhab);
   }
+}
+
+@visibleForTesting
+String buildSettingsShareText(
+  AppLocalizations l10n, {
+  String appUrl = appWebsiteUrl,
+}) {
+  return l10n.shareAppMessage(l10n.appTitle, appUrl);
 }

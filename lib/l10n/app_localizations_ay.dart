@@ -363,6 +363,11 @@ class AppLocalizationsAy extends AppLocalizations {
   String get shareApp => 'Compartir App ukax mä juk’a pachanakanwa';
 
   @override
+  String shareAppMessage(String appName, String url) {
+    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+  }
+
+  @override
   String get downloadManager => 'Uñstayaña Gestor';
 
   @override

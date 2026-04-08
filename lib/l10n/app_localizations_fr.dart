@@ -363,6 +363,11 @@ class AppLocalizationsFr extends AppLocalizations {
   String get shareApp => 'Partager l\'application';
 
   @override
+  String shareAppMessage(String appName, String url) {
+    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+  }
+
+  @override
   String get downloadManager => 'Gestionnaire de téléchargement';
 
   @override

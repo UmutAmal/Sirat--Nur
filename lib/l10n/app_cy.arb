@@ -124,6 +124,17 @@
   "contactUs": "Cysylltwch â Ni",
   "rateApp": "App Cyfradd",
   "shareApp": "Rhannu App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Rheolwr Lawrlwytho",
   "downloads": "Lawrlwythiadau",
   "downloading": "Wrthi'n llwytho i lawr...",

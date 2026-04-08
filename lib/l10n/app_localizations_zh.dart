@@ -362,6 +362,11 @@ class AppLocalizationsZh extends AppLocalizations {
   String get shareApp => 'Share App';
 
   @override
+  String shareAppMessage(String appName, String url) {
+    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+  }
+
+  @override
   String get downloadManager => 'Download Manager';
 
   @override
@@ -1437,6 +1442,11 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get shareApp => '分享应用程序';
 
   @override
+  String shareAppMessage(String appName, String url) {
+    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+  }
+
+  @override
   String get downloadManager => '下载管理器';
 
   @override
@@ -2508,6 +2518,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get shareApp => '分享應用程式';
+
+  @override
+  String shareAppMessage(String appName, String url) {
+    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+  }
 
   @override
   String get downloadManager => '下載管理器';

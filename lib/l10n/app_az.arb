@@ -124,6 +124,17 @@
   "contactUs": "Bizimlə əlaqə saxlayın",
   "rateApp": "Qiymətləndirmə Tətbiqi",
   "shareApp": "Tətbiqi paylaşın",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Yükləmə meneceri",
   "downloads": "Yükləmələr",
   "downloading": "Endirilir...",

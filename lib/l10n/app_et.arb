@@ -124,6 +124,17 @@
   "contactUs": "Võtke meiega ühendust",
   "rateApp": "Hinda rakendust",
   "shareApp": "Jaga rakendust",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Allalaadimishaldur",
   "downloads": "Allalaadimised",
   "downloading": "Allalaadimine...",

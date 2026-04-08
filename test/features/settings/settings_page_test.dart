@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sirat_i_nur/core/services/app_metadata_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/features/settings/settings_page.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
@@ -43,6 +44,7 @@ void main() {
     );
 
     expect(find.text('Prayer Authority'), findsOneWidget);
+    expect(find.text(resolveAppVersion()), findsOneWidget);
     expect(find.textContaining('Diyanet Isleri Baskanligi'), findsOneWidget);
     expect(
       find.textContaining('https://namazvakitleri.diyanet.gov.tr'),
@@ -67,5 +69,26 @@ void main() {
     expect(find.text('Kurumsal kaynak yok; manuel özel açı'), findsOneWidget);
     expect(find.byIcon(Icons.block_rounded), findsOneWidget);
     expect(find.byIcon(Icons.open_in_new_rounded), findsNothing);
+  });
+
+  testWidgets('SettingsPage builds localized share text from app metadata', (
+    tester,
+  ) async {
+    await pumpSettingsPage(
+      tester,
+      prefsValues: const {
+        'calculationMethod': diyanetPrayerMethod,
+        'madhab': hanafiMadhab,
+      },
+      locale: const Locale('tr'),
+    );
+
+    final context = tester.element(find.byType(SettingsPage));
+    final l10n = AppLocalizations.of(context)!;
+
+    expect(
+      buildSettingsShareText(l10n),
+      'Sirat-ı Nur uygulamasına göz atın: En kapsamlı İslami yaşam uygulaması! https://siratinur.com',
+    );
   });
 }

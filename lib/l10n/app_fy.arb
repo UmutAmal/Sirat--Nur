@@ -124,6 +124,17 @@
   "contactUs": "Kontakt mei ús opnimme",
   "rateApp": "Rate App",
   "shareApp": "Diele App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Downloadbehearder",
   "downloads": "Downloads",
   "downloading": "Ynladen...",

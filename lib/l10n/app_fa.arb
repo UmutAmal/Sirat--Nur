@@ -124,6 +124,17 @@
   "contactUs": "تماس با ما",
   "rateApp": "رتبه‌بندی برنامه",
   "shareApp": "اشتراک‌گذاری برنامه",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "مدیر دانلود",
   "downloads": "دانلودها",
   "downloading": "در حال دانلود...",

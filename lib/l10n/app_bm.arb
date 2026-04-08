@@ -124,6 +124,17 @@
   "contactUs": "Aw ye ɲɔgɔn sɔrɔ Anw fɛ",
   "rateApp": "Tarifu App ye",
   "shareApp": "Share App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Télécharger Manager (Téléchargement Manager).",
   "downloads": "Téléchargements (Téléchargements).",
   "downloading": "Téléchargement...",

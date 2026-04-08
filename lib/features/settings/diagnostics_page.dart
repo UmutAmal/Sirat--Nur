@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 // Removed legacy static stream import
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
+import 'package:sirat_i_nur/core/services/app_metadata_service.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import 'package:sirat_i_nur/core/services/audio_player_service.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
@@ -91,18 +92,7 @@ String resolveDiagnosticsVersion({
     defaultValue: '1',
   ),
 }) {
-  final normalizedBuildName = buildName.trim();
-  final normalizedBuildNumber = buildNumber.trim();
-
-  if (normalizedBuildName.isEmpty) {
-    return normalizedBuildNumber.isEmpty ? 'unknown' : normalizedBuildNumber;
-  }
-
-  if (normalizedBuildNumber.isEmpty) {
-    return normalizedBuildName;
-  }
-
-  return '$normalizedBuildName+$normalizedBuildNumber';
+  return resolveAppVersion(buildName: buildName, buildNumber: buildNumber);
 }
 
 @visibleForTesting

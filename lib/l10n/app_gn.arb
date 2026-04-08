@@ -124,6 +124,17 @@
   "contactUs": "Eñe'ẽ orendive",
   "rateApp": "Tasa App rehegua",
   "shareApp": "Compartir App",
+  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "@shareAppMessage": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
   "downloadManager": "Ñemboguejy Moakãha",
   "downloads": "Umi descarga rehegua",
   "downloading": "Ojegueru jave...",
