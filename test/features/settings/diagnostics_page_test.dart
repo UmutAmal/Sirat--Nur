@@ -5,6 +5,20 @@ import 'package:sirat_i_nur/features/settings/diagnostics_page.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 
 void main() {
+  test('resolveDiagnosticsVersion includes build number when available', () {
+    expect(
+      resolveDiagnosticsVersion(buildName: '2.0.0', buildNumber: '1'),
+      '2.0.0+1',
+    );
+  });
+
+  test('resolveDiagnosticsVersion omits empty build number', () {
+    expect(
+      resolveDiagnosticsVersion(buildName: '2.0.0', buildNumber: ''),
+      '2.0.0',
+    );
+  });
+
   test('DiagnosticsRowsDependencies changes when locale changes', () {
     final settings = SettingsState(
       isDarkMode: true,

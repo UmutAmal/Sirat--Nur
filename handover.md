@@ -1342,3 +1342,33 @@
 
 ### Sonraki Adım
 - [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart) içindeki sabit sürüm satırını runtime build/version kaynağına taşı.
+
+## 2026-04-08 TUR-34 — Source Diagnostics Version From Build Metadata
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart) içine `resolveDiagnosticsVersion` eklendi.
+- Diagnostics sürüm satırı artık sabit `'2.0.0'` yerine `FLUTTER_BUILD_NAME` ve `FLUTTER_BUILD_NUMBER` metadata’sından üretiliyor.
+- [A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/settings/diagnostics_page_test.dart) içine build numarası dolu/boş senaryoları için regresyon testleri eklendi.
+
+### Neden Yapıldı
+- Diagnostics ekranı sürüm satırını sabit presentation string olarak gösteriyordu.
+- Bu, build metadata değişse bile ekranın geride kalmasına neden oluyordu ve “en güncel sistem” hedefiyle çelişiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Diagnostics sürüm satırı build name/build number ile senkron hale geldi.
+- Build numarası boşsa gereksiz `+` eki üretilmiyor; fallback davranışı testle kilitlendi.
+
+### Test Sonucu
+- `flutter test test/features/settings/diagnostics_page_test.dart` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`98/98`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Diagnostics version row drifting behind real build metadata: `5/25 → 1/25`
+
+### Sonraki Adım
+- Settings/diagnostics çevresinde kalan yüksek sinyalli tarama, özellikle paketlenmiş asset ve runtime capability satırlarının dürüstlük açısından yeniden gözden geçirilmesi.

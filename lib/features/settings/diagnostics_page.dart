@@ -66,6 +66,31 @@ class DiagnosticsRowsDependencies {
   );
 }
 
+@visibleForTesting
+String resolveDiagnosticsVersion({
+  String buildName = const String.fromEnvironment(
+    'FLUTTER_BUILD_NAME',
+    defaultValue: '2.0.0',
+  ),
+  String buildNumber = const String.fromEnvironment(
+    'FLUTTER_BUILD_NUMBER',
+    defaultValue: '1',
+  ),
+}) {
+  final normalizedBuildName = buildName.trim();
+  final normalizedBuildNumber = buildNumber.trim();
+
+  if (normalizedBuildName.isEmpty) {
+    return normalizedBuildNumber.isEmpty ? 'unknown' : normalizedBuildNumber;
+  }
+
+  if (normalizedBuildNumber.isEmpty) {
+    return normalizedBuildName;
+  }
+
+  return '$normalizedBuildName+$normalizedBuildNumber';
+}
+
 class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
   late Future<List<_DiagnosticRow>> _rowsFuture;
   ProviderSubscription<SettingsState>? _settingsSubscription;
@@ -124,7 +149,7 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
     final l10n = AppLocalizations.of(context)!;
     final settings = ref.read(settingsProvider);
     final rows = <_DiagnosticRow>[
-      _DiagnosticRow(l10n.version, '2.0.0', true),
+      _DiagnosticRow(l10n.version, resolveDiagnosticsVersion(), true),
       _DiagnosticRow(
         l10n.theme,
         settings.isDarkMode ? l10n.darkMode : l10n.lightMode,
