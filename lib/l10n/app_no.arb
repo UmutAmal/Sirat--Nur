@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Verifisert kilde venter",
+  "hadithUnavailableTitle": "Verifiserte hadith-samlinger er ikke tilgjengelige ennå",
+  "hadithUnavailableBody": "Denne konstruksjonen avhenger fortsatt av en ubekreftet ekstern hadith-feed. Hadith-surfing forblir deaktivert til et hentet datasett synkroniseres."
 }

@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "සත්‍යාපිත මූලාශ්‍රය පොරොත්තුවෙන්",
+  "hadithUnavailableTitle": "සත්‍යාපිත හදීස් එකතු කිරීම් තවම නොමැත",
+  "hadithUnavailableBody": "මෙම ගොඩනැගීම තවමත් සත්‍යාපනය නොකළ බාහිර හදීස් සංග්‍රහයක් මත රඳා පවතී. මූලාශ්‍ර දත්ත කට්ටලයක් සමමුහුර්ත වන තෙක් හදීස් බ්‍රවුස් කිරීම අක්‍රියව පවතී."
 }

@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Chiqapa phuqhata phuqhawi suyt’ata",
+  "hadithUnavailableTitle": "Chiqapa hadith apthapitanakax janiw jichhakamax utjkiti",
+  "hadithUnavailableBody": "Aka lurawix waliw mä jan chiqapar uñjat anqäx hadith manq’añat dependi. Hadith uñakipañax jan ch’amanchataw qhiparaski, mä fuente de datos ukan sincronización ukar puriñkama."
 }

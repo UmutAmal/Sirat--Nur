@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Laukiama patvirtinto šaltinio",
+  "hadithUnavailableTitle": "Patvirtintos haditų kolekcijos dar nepasiekiamos",
+  "hadithUnavailableBody": "Ši konstrukcija vis dar priklauso nuo nepatvirtinto išorinio haditų sklaidos kanalo. Hadith naršymas lieka išjungtas, kol nebus sinchronizuojamas šaltinio duomenų rinkinys."
 }

@@ -2581,3 +2581,48 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\hadith_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/hadith_data.dart) ve [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) üzerinden hadith source-attribution zinciri taranacak.
 - Ardından [A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) içindeki verified fallback referansları kaynak başlığı açısından tek tek denetlenecek.
+
+## 2026-04-09 TUR-66 — Disable Unverified Hadith Browsing
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/hadith_api_service.dart) içine `hasVerifiedHadithDataset = false` sözleşmesi eklendi.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) hadith kartlarını bu sözleşmeye bağladı; doğrulanmamış durumda sayı bazlı subtitle kaldırıldı, `Verified source pending` kopyası ve blok ikonuna geçildi, kart tap davranışı kapatıldı.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_list_page.dart) ve [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_search_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_search_page.dart) doğrulanmamış dış feed varken dürüst unavailable-state göstermeye alındı.
+- Yeni hadith güvenilirlik metinleri tüm [A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) ve generated localization zincirine yayıldı.
+
+### Neden Yapıldı
+- Tarama sırasında [A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/hadith_api_service.dart) hadith içeriğini doğrulanmamış bir GitHub/CDN feed’inden çektiği halde UI’nın bunu doğrulanmış dini veri gibi sunduğu kanıtlandı.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) içindeki sabit `7,563 hadith` benzeri sayaçlar da kaynak-atıfsız kesinlik izlenimi veriyordu.
+- Kullanıcının “sahte olmasın” ve dini içerikte doğruluk talebi nedeniyle doğrulanmamış hadith browse akışı dürüst biçimde kapatıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_search_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_gate_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_religious_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Doğrulanmamış harici hadith feed artık kullanıcıya sanki doğrulanmış hadis koleksiyonuymuş gibi açılmıyor.
+- Kaynaksız hadith sayıları ve browse akışı dürüst unavailable-state ile değiştirildi.
+- Priority locale’lerde yeni hadith güvenilirlik kopyası İngilizce fallback’e düşmüyor.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart --force hadithSourcePending hadithUnavailableTitle hadithUnavailableBody` → PASS
+- `flutter gen-l10n` → PASS (locale uyarı raporu mevcut olsa da priority locale testi geçti)
+- `flutter test test/features/library/hadith_gate_test.dart` → PASS (`2/2`)
+- `flutter test test/library_page_test.dart` → PASS (`11/11`)
+- `flutter test test/arb_religious_localization_test.dart` → PASS (`1/1`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`172/172`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Unverified external hadith feed presented as trusted religious browsing data: `16/25 → 4/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/hadith_api_service.dart) ve [A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/providers/hadith_provider.dart) doğrulanmış dataset gelene kadar production zincirinden tamamen izole edilip edilmeyeceği denetlenecek.
+- Ardından dua source-attribution ve rare-locale religious copy audit’i devam edecek.

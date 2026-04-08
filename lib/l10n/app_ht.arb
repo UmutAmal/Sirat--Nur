@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Sous verifye annatant",
+  "hadithUnavailableTitle": "Koleksyon adit verifye yo poko disponib",
+  "hadithUnavailableBody": "Konstriksyon sa a toujou depann de yon manje adit ekstèn ki pa verifye. Navigasyon Hadith rete enfim jiskaske yon seri done sous senkronize."
 }

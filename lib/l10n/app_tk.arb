@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Barlanylan çeşme garaşylýar",
+  "hadithUnavailableTitle": "Barlanylan hadys ýygyndylary entek elýeterli däl",
+  "hadithUnavailableBody": "Bu gurluş henizem tassyklanmadyk daşarky hadys iýmitine baglydyr. Hadyslara göz aýlamak, maglumat bazasy sinhronlanýança ýapyk bolýar."
 }

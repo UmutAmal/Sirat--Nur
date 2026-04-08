@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Ellenőrzött forrás függőben",
+  "hadithUnavailableTitle": "Az ellenőrzött hadíszgyűjtemények még nem állnak rendelkezésre",
+  "hadithUnavailableBody": "Ez a build továbbra is egy ellenőrizetlen külső hadísz hírfolyamtól függ. A hadísz-böngészés le van tiltva a forrásból származó adatkészlet szinkronizálásáig."
 }

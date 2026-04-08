@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Ekwenyere na isi iyi na-echere",
+  "hadithUnavailableTitle": "Nchịkọta haddi ekwenyeghị ekwenye adịbeghị",
+  "hadithUnavailableBody": "Nke a na-ewu ka na-adabere na unverified mpụga hadith ndepụta. A na-enwe nkwarụ chọgharịa haddith ruo mgbe emekọrịtara ntọala data ewepụtara."
 }

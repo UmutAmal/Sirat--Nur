@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "ચકાસાયેલ સ્રોત બાકી છે",
+  "hadithUnavailableTitle": "ચકાસાયેલ હદીસ સંગ્રહ હજુ ઉપલબ્ધ નથી",
+  "hadithUnavailableBody": "આ બિલ્ડ હજુ પણ વણચકાસાયેલ બાહ્ય હદીસ ફીડ પર આધાર રાખે છે. જ્યાં સુધી સ્રોત ડેટાસેટ સમન્વયિત ન થાય ત્યાં સુધી હદીસ બ્રાઉઝિંગ અક્ષમ રહે છે."
 }

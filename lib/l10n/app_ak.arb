@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Verified source a ɛda so ara wɔ hɔ",
+  "hadithUnavailableTitle": "Hadith ahorow a wɔaboaboa ano a wɔagye atom no nnya mmae",
+  "hadithUnavailableBody": "Saa ɔdan yi da so ara gyina abɔnten hadith feed a wɔannye antom so. Hadith browsing kɔ so yɛ adwuma kosi sɛ wɔbɛma dataset a wɔanya fibea no ayɛ sync."
 }

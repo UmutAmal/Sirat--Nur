@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "แหล่งที่มาที่ได้รับการยืนยันอยู่ระหว่างการพิจารณา",
+  "hadithUnavailableTitle": "คอลเลกชันสุนัตที่ตรวจสอบแล้วยังไม่มีให้บริการ",
+  "hadithUnavailableBody": "โครงสร้างนี้ยังขึ้นอยู่กับฟีดสุนัตภายนอกที่ไม่ได้รับการยืนยัน การเรียกดูหะดีษจะยังคงปิดใช้งานอยู่จนกว่าจะซิงค์ชุดข้อมูลที่มา"
 }

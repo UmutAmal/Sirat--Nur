@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "المصدر الذي تم التحقق منه معلق",
+  "hadithUnavailableTitle": "مجموعات الحديث التي تم التحقق منها ليست متاحة بعد",
+  "hadithUnavailableBody": "لا يزال هذا البناء يعتمد على خلاصة حديث خارجية لم يتم التحقق منها. يظل تصفح الحديث معطلاً حتى تتم مزامنة مجموعة البيانات المصدر."
 }

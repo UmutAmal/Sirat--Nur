@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "ຢືນຢັນແຫຼ່ງທີ່ລໍຖ້າຢູ່",
+  "hadithUnavailableTitle": "ຄໍເລັກຊັນ hadith ທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ທັນມີໃຫ້ເທື່ອ",
+  "hadithUnavailableBody": "ການກໍ່ສ້າງນີ້ຍັງຂຶ້ນກັບອາຫານ hadith ພາຍນອກທີ່ບໍ່ໄດ້ຮັບການຢືນຢັນ. ການ​ຊອກ​ຫາ Hadith ຈະ​ປິດ​ການ​ໃຊ້​ງານ​ຈົນ​ກ​່​ວາ​ຊຸດ​ຂໍ້​ມູນ​ທີ່​ມາ​ໄດ້​ຖືກ​ຊິງ​."
 }

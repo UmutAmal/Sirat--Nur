@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Stòr dearbhte ri feitheamh",
+  "hadithUnavailableTitle": "Chan eil cruinneachaidhean hadith dearbhte rim faighinn fhathast",
+  "hadithUnavailableBody": "Tha an togail seo fhathast an urra ri biadhadh hadith taobh a-muigh neo-dhearbhte. Bidh brobhsadh Hadith a’ fuireach ciorramach gus an tèid stòr-dàta a fhuaras a shioncronachadh."
 }

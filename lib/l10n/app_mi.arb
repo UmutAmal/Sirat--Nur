@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Kei te tarewa te puna manatoko",
+  "hadithUnavailableTitle": "Ko nga kohinga hadith kua whakamanahia kaore ano kia waatea",
+  "hadithUnavailableBody": "Kei te whakawhirinaki tonu tenei hanga ki te whangai hadith o waho kaore i whakamanahia. Ka noho monohia te tirotiro Hadith tae noa ki te tukutahia he huinga raraunga puna."
 }

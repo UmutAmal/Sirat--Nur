@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "منبع تأیید شده در انتظار است",
+  "hadithUnavailableTitle": "مجموعه احادیث تایید شده هنوز در دسترس نیست",
+  "hadithUnavailableBody": "این ساخت هنوز به یک خوراک حدیث خارجی تایید نشده بستگی دارد. مرور حدیث تا زمانی که یک مجموعه داده منبع همگام‌سازی نشود، غیرفعال می‌ماند."
 }

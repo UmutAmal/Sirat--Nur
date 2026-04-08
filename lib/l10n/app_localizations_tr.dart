@@ -849,6 +849,17 @@ class AppLocalizationsTr extends AppLocalizations {
   String get hadithCollections => 'Hadis Koleksiyonları';
 
   @override
+  String get hadithSourcePending => 'Doğrulanmış kaynak bekleniyor';
+
+  @override
+  String get hadithUnavailableTitle =>
+      'Doğrulanmış hadis koleksiyonları henüz hazır değil';
+
+  @override
+  String get hadithUnavailableBody =>
+      'Bu sürüm hâlâ doğrulanmamış harici bir hadis akışına dayanıyor. Kaynaklandırılmış veri kümesi senkronlanana kadar hadis gezintisi kapalı tutuluyor.';
+
+  @override
   String get paywallUnlockAll =>
       'Ruhsal yolculuğunuz için tüm özellikleri açın';
 

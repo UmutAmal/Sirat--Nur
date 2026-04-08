@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Верификован извор на чекању",
+  "hadithUnavailableTitle": "Верификоване збирке хадиса још увек нису доступне",
+  "hadithUnavailableBody": "Ова изградња и даље зависи од непровереног спољног хадиског фееда. Претраживање хадиса остаје онемогућено док се изворни скуп података не синхронизује."
 }

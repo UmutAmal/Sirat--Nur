@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Sors ivverifikat pendenti",
+  "hadithUnavailableTitle": "Il-kollezzjonijiet verifikati tal-hadith għadhom mhumiex disponibbli",
+  "hadithUnavailableBody": "Din il-bini għadha tiddependi fuq għalf hadith estern mhux ivverifikat. L-ibbrawżjar tal-Hadith jibqa' diżattivat sakemm sett ta' data misjub jiġi sinkronizzat."
 }

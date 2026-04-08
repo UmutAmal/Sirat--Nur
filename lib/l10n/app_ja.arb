@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "検証済みのソースは保留中です",
+  "hadithUnavailableTitle": "検証済みのハディース コレクションはまだ利用できません",
+  "hadithUnavailableBody": "このビルドはまだ未検証の外部ハディース フィードに依存しています。ハディース ブラウジングは、ソース データセットが同期されるまで無効のままです。"
 }

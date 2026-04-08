@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Ստուգված աղբյուրը սպասվում է",
+  "hadithUnavailableTitle": "Հադիսների ստուգված հավաքածուները դեռ հասանելի չեն",
+  "hadithUnavailableBody": "Այս կառուցումը դեռևս կախված է չստուգված արտաքին հադիսների հոսքից: Հադիսների զննարկումն անջատված է մնում այնքան ժամանակ, քանի դեռ աղբյուրի տվյալների բազան չի համաժամացվում:"
 }

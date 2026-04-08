@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Umthombo oqinisekisiweyo usalindile",
+  "hadithUnavailableTitle": "Iingqokelela ze hadith eziqinisekisiweyo azikafumaneki",
+  "hadithUnavailableBody": "Olu lwakhiwo kusaxhomekeke kwi feed hadith engangqinisiswanga yangaphandle. Ukhangelo lweHadith luhlala luvaliwe de idataset efunyenweyo ingqanyaniswe."
 }

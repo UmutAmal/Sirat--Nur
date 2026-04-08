@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "រង់ចាំប្រភពដែលបានផ្ទៀងផ្ទាត់",
+  "hadithUnavailableTitle": "ការប្រមូល hadith ដែលបានផ្ទៀងផ្ទាត់មិនទាន់មាននៅឡើយទេ",
+  "hadithUnavailableBody": "ការស្ថាបនានេះនៅតែពឹងផ្អែកលើមតិព័ត៌មាន hadith ខាងក្រៅដែលមិនបានបញ្ជាក់។ ការរុករក Hadith នៅតែបិទរហូតដល់សំណុំទិន្នន័យប្រភពត្រូវបានធ្វើសមកាលកម្ម។"
 }

@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Текшерилген булак күтүүдө",
+  "hadithUnavailableTitle": "Текшерилген хадис жыйнактары азырынча жеткиликтүү эмес",
+  "hadithUnavailableBody": "Бул түзүлүшү дагы эле текшерилбеген тышкы хадис түрмөгүнөн көз каранды. Булактан алынган маалымат топтому шайкештирилмейинче, хадисти карап чыгуу өчүрүлгөн бойдон калат."
 }

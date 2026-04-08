@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "सत्यापितः स्रोतः लम्बितः अस्ति",
+  "hadithUnavailableTitle": "सत्यापिताः हदीससङ्ग्रहाः अद्यापि न उपलभ्यन्ते",
+  "hadithUnavailableBody": "इदं बिल्ड् अद्यापि असत्यापितबाह्यहदीसफीड् इत्यस्य उपरि निर्भरं भवति । यावत् स्रोतः दत्तांशसमूहः समन्वयितः न भवति तावत् हदीथ-ब्राउजिंग् अक्षमं तिष्ठति ।"
 }

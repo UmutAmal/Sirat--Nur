@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "যাচাইকৃত উৎস মুলতুবি আছে",
+  "hadithUnavailableTitle": "যাচাইকৃত হাদীস সংগ্রহ এখনো পাওয়া যায় নি",
+  "hadithUnavailableBody": "এই বিল্ড এখনও একটি অযাচাই করা বহিরাগত হাদীস ফিড উপর নির্ভর করে. একটি উৎসকৃত ডেটাসেট সিঙ্ক না হওয়া পর্যন্ত হাদিস ব্রাউজিং নিষ্ক্রিয় থাকে৷"
 }

@@ -524,5 +524,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Sumber yang disahkan belum selesai",
+  "hadithUnavailableTitle": "Koleksi hadith yang disahkan masih belum tersedia",
+  "hadithUnavailableBody": "Binaan ini masih bergantung pada suapan hadith luaran yang belum disahkan. Penyemakan imbas hadis kekal dilumpuhkan sehingga set data bersumber disegerakkan."
 }

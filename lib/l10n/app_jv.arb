@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Sumber sing diverifikasi ditundha",
+  "hadithUnavailableTitle": "Koleksi hadits sing wis diverifikasi durung kasedhiya",
+  "hadithUnavailableBody": "Iki mbangun isih gumantung ing feed hadits external durung diverifikasi. Browsing hadits tetep dipateni nganti dataset sumber diselarasake."
 }

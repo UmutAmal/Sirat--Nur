@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "ވެރިފައިޑް ސޯސް ޕެންޑިންގް",
+  "hadithUnavailableTitle": "ވެރިފައިޑް ޙަދީޘް ކަލެކްޝަންތައް އަދި ނުލިބެއެވެ",
+  "hadithUnavailableBody": "މި ބިލްޑް އަދިވެސް ބަރޯސާވެފައިވަނީ ޔަގީން ނުކުރެވޭ ބޭރު ޙަދީޘް ފީޑެއްގެ މައްޗަށެވެ. ސޯސްޑް ޑޭޓާސެޓެއް ސިންކް ކުރެވެންދެން ޙަދީޘް ބްރައުޒިންގ ޑިސެބިލް ކޮށްފައި ހުރެއެވެ."
 }

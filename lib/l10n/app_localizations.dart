@@ -2050,6 +2050,24 @@ abstract class AppLocalizations {
   /// **'Hadith Collections'**
   String get hadithCollections;
 
+  /// No description provided for @hadithSourcePending.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified source pending'**
+  String get hadithSourcePending;
+
+  /// No description provided for @hadithUnavailableTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified hadith collections are not available yet'**
+  String get hadithUnavailableTitle;
+
+  /// No description provided for @hadithUnavailableBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.'**
+  String get hadithUnavailableBody;
+
   /// No description provided for @paywallUnlockAll.
   ///
   /// In en, this message translates to:

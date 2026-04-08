@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Isha la xaqiijiyay",
+  "hadithUnavailableTitle": "Ururinta xadiisyada la xaqiijiyay wali lama hayo",
+  "hadithUnavailableBody": "Dhismahani wuxuu weli ku xiran yahay quudinta xadiiska dibadda ah ee aan la xaqiijin. Baadhitaanka xadiisku waxa uu ahaanayaa mid naafo ah ilaa xogta laga soo xigtay la isku dhejiyo."
 }

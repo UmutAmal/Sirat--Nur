@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Staðfest heimild í bið",
+  "hadithUnavailableTitle": "Staðfest hadith söfn eru ekki tiltæk ennþá",
+  "hadithUnavailableBody": "Þessi smíði er enn háð óstaðfestu utanaðkomandi hadith straumi. Hadith vafra er óvirkt þar til gagnasett er samstillt."
 }

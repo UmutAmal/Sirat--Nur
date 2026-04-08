@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Chiqapchasqa pukyuta pendiente",
+  "hadithUnavailableTitle": "Chiqapchasqa hadith huñusqakunaqa manaraqmi kanchu",
+  "hadithUnavailableBody": "Kay ruwayqa kunankamapas mana chiqapchasqa hawa hadith mikhuymantam hapipakun. Hadith maskayqa mana llamk'achisqa qhipan huk pukyuta willay huñu tinkisqa kanankama."
 }

@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Dzɔtsoƒe si ŋu woɖo kpee le lalam",
+  "hadithUnavailableTitle": "Hadith nuƒoƒoƒu siwo ŋu woɖo kpee la meli haɖe o",
+  "hadithUnavailableBody": "Tututu sia gakpɔtɔ nɔ te ɖe gotagome hadith nuɖuɖu si ŋu womeɖo kpee o dzi. Hadith ƒe ʋuʋu nɔa dɔmawɔmawɔ me vaseɖe esime woawɔ nyatakakadzraɖoƒe si wokpɔ tso eme la ɖekae."
 }

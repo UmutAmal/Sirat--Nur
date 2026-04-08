@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Čeká se na ověřený zdroj",
+  "hadithUnavailableTitle": "Ověřené sbírky hadísů zatím nejsou k dispozici",
+  "hadithUnavailableBody": "Toto sestavení stále závisí na neověřeném externím zdroji hadísů. Procházení hadísů zůstane zakázáno, dokud nebude synchronizována zdrojová datová sada."
 }

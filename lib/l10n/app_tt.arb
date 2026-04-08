@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Тикшерелгән чыганак көтелә",
+  "hadithUnavailableTitle": "Тикшерелгән хәдис коллекцияләре әлегә юк",
+  "hadithUnavailableBody": "Бу төзү әле расланмаган тышкы хәдис азыкына бәйле. Хәдисне карау, мәгълүматлар базасы синхронланганчы инвалид булып кала."
 }

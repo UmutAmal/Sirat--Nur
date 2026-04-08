@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Mohlodi o netefaditšwego o sa emetše",
+  "hadithUnavailableTitle": "Dikgoboketšo tša hadith tše di netefaditšwego ga se tša hwetšagala ga bjale",
+  "hadithUnavailableBody": "Go aga mo go sa ithekgile ka phepo ya hadith ya ka ntle yeo e sa netefatšwago. Go phetla Hadith go dula go šitišitšwe go fihlela sete ya data yeo e hweditšwego e nyalantšhwa."
 }

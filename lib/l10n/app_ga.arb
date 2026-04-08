@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Foinse deimhnithe ar feitheamh",
+  "hadithUnavailableTitle": "Níl bailiúcháin hadith fíoraithe ar fáil go fóill",
+  "hadithUnavailableBody": "Braitheann an tógáil seo fós ar bheathú hadith seachtrach neamhfhíoraithe. Fanann brabhsáil Hadith díchumasaithe go dtí go sioncronófar tacar sonraí foinseach."
 }

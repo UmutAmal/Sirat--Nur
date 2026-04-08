@@ -21,6 +21,8 @@ void main() {
     const localizedKeys = [
       'dailyDuas',
       'hadithCollections',
+      'hadithSourcePending',
+      'hadithUnavailableTitle',
       'duaUnavailableTitle',
     ];
 

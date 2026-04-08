@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Verified source a awm mek a ni",
+  "hadithUnavailableTitle": "Verified hadith collection hi a la awm lo",
+  "hadithUnavailableBody": "He build hi unverified external hadith feed ah a la innghat reng a ni. Sourced dataset sync a nih hma chuan Hadith browsing chu disabled a ni reng."
 }

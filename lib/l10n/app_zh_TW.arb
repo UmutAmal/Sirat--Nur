@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "來源待核實",
+  "hadithUnavailableTitle": "尚未提供經過驗證的聖訓集",
+  "hadithUnavailableBody": "此構建仍然依賴未經驗證的外部聖訓提要。在來源資料集同步之前，聖訓瀏覽保持停用狀態。"
 }

@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "დადასტურებული წყარო ელოდება",
+  "hadithUnavailableTitle": "დადასტურებული ჰადისის კრებულები ჯერ არ არის ხელმისაწვდომი",
+  "hadithUnavailableBody": "ეს კონსტრუქცია ჯერ კიდევ დამოკიდებულია დაუმოწმებელ გარე ჰადისის არხზე. ჰადისების დათვალიერება გათიშული რჩება მანამ, სანამ არ მოხდება მონაცემთა ნაკრების სინქრონიზაცია."
 }

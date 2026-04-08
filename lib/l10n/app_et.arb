@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Kinnitatud allikas on ootel",
+  "hadithUnavailableTitle": "Kontrollitud hadithide kollektsioonid pole veel saadaval",
+  "hadithUnavailableBody": "See ehitamine sõltub endiselt kontrollimata välisest hadithivoost. Hadith-sirvimine jääb keelatuks, kuni lähteandmestik sünkroonitakse."
 }

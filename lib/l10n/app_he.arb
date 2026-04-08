@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "מקור מאומת בהמתנה",
+  "hadithUnavailableTitle": "אוספי חדית' מאומתים אינם זמינים עדיין",
+  "hadithUnavailableBody": "המבנה הזה עדיין תלוי בפיד חדית' חיצוני לא מאומת. הגלישה בחדית' נשארת מושבתת עד שמסנכרן מערך נתונים ממקור."
 }

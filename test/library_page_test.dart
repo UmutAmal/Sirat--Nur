@@ -157,5 +157,14 @@ void main() {
       expect(resolveSukunLibrarySubtitle(en, false), en.sukunUnavailableTitle);
       expect(resolveSukunLibrarySubtitle(tr, true), tr.sukunMixerSubtitle);
     });
+
+    test('hadith subtitle switches to honest unavailable copy', () {
+      final en = lookupAppLocalizations(const Locale('en'));
+      final tr = lookupAppLocalizations(const Locale('tr'));
+
+      expect(areHadithCollectionsAvailable(), isFalse);
+      expect(resolveHadithLibrarySubtitle(en), en.hadithSourcePending);
+      expect(resolveHadithLibrarySubtitle(tr), tr.hadithSourcePending);
+    });
   });
 }

@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Tabbatar da tushe yana jiran",
+  "hadithUnavailableTitle": "Ba a samu ingantattun tarin hadisai ba tukuna",
+  "hadithUnavailableBody": "Wannan ginin har yanzu ya dogara da ingantaccen abinci na hadisi na waje. Ana kashe binciken hadisi har sai an daidaita saitin bayanan da aka samo asali."
 }

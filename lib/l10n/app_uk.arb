@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Перевірене джерело очікує на розгляд",
+  "hadithUnavailableTitle": "Перевірені збірки хадисів поки що недоступні",
+  "hadithUnavailableBody": "Ця збірка все ще залежить від неперевіреної зовнішньої стрічки хадисів. Перегляд хадисів залишається вимкненим, доки не буде синхронізовано вихідний набір даних."
 }

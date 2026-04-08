@@ -6,6 +6,7 @@ import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
+import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 String buildLibraryErrorText(AppLocalizations l10n, Object error) {
@@ -33,6 +34,16 @@ bool resolveSukunAvailability(
 
 String resolveSukunLibrarySubtitle(AppLocalizations l10n, bool isAvailable) {
   return isAvailable ? l10n.sukunMixerSubtitle : l10n.sukunUnavailableTitle;
+}
+
+bool areHadithCollectionsAvailable() {
+  return hasVerifiedHadithDataset;
+}
+
+String resolveHadithLibrarySubtitle(AppLocalizations l10n) {
+  return areHadithCollectionsAvailable()
+      ? l10n.hadithBooks
+      : l10n.hadithSourcePending;
 }
 
 List<DuaData> resolveLibraryDuas(AsyncValue<List<DuaData>> asyncDuas) {
@@ -83,6 +94,7 @@ class LibraryPage extends ConsumerWidget {
       cloudSources: cloudSukunSources,
     );
     final areDuasAvailable = areDailyDuasAvailable(duas);
+    final areHadithsAvailable = areHadithCollectionsAvailable();
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.library)),
@@ -344,8 +356,9 @@ class LibraryPage extends ConsumerWidget {
               final h = entry.value;
               return AnimatedPremiumCard(
                 animationDelay: 600 + (i * 80),
-                onTap: () =>
-                    context.push('/library/hadith/${h.id}', extra: h.name),
+                onTap: areHadithsAvailable
+                    ? () => context.push('/library/hadith/${h.id}', extra: h.name)
+                    : null,
                 child: Row(
                   children: [
                     Container(
@@ -378,7 +391,7 @@ class LibraryPage extends ConsumerWidget {
                             ),
                           ),
                           Text(
-                            h.desc,
+                            resolveHadithLibrarySubtitle(l10n),
                             style: TextStyle(
                               fontSize: 12,
                               color: Theme.of(
@@ -389,7 +402,11 @@ class LibraryPage extends ConsumerWidget {
                         ],
                       ),
                     ),
-                    const Icon(Icons.chevron_right_rounded),
+                    Icon(
+                      areHadithsAvailable
+                          ? Icons.chevron_right_rounded
+                          : Icons.block_rounded,
+                    ),
                   ],
                 ),
               );
@@ -425,18 +442,18 @@ class LibraryPage extends ConsumerWidget {
   }
 
   static const _hadithCollections = [
-    _HadithCollection('bukhari', 'Sahih al-Bukhari', '7,563 hadith'),
-    _HadithCollection('muslim', 'Sahih Muslim', '7,500 hadith'),
-    _HadithCollection('tirmidhi', 'Jami at-Tirmidhi', '3,956 hadith'),
-    _HadithCollection('abudawud', 'Sunan Abu Dawud', '5,274 hadith'),
-    _HadithCollection('nasai', "Sunan an-Nasa'i", '5,758 hadith'),
-    _HadithCollection('ibnmajah', 'Sunan Ibn Majah', '4,341 hadith'),
+    _HadithCollection('bukhari', 'Sahih al-Bukhari'),
+    _HadithCollection('muslim', 'Sahih Muslim'),
+    _HadithCollection('tirmidhi', 'Jami at-Tirmidhi'),
+    _HadithCollection('abudawud', 'Sunan Abu Dawud'),
+    _HadithCollection('nasai', "Sunan an-Nasa'i"),
+    _HadithCollection('ibnmajah', 'Sunan Ibn Majah'),
   ];
 }
 
 class _HadithCollection {
-  final String id, name, desc;
-  const _HadithCollection(this.id, this.name, this.desc);
+  final String id, name;
+  const _HadithCollection(this.id, this.name);
 }
 
 String _translateDuaCategory(String category, AppLocalizations l10n) {

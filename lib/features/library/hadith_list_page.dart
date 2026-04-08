@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/features/library/providers/hadith_provider.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class HadithListPage extends ConsumerWidget {
   final String collectionId;
@@ -12,6 +14,50 @@ class HadithListPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = Localizations.localeOf(context).languageCode;
     final name = _getCollectionName(collectionId, lang);
+    final l10n = AppLocalizations.of(context)!;
+
+    if (!hasVerifiedHadithDataset) {
+      return Scaffold(
+        appBar: AppBar(title: Text(name)),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: PremiumCard(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(
+                    Icons.block_rounded,
+                    size: 40,
+                    color: AppColors.emerald,
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    l10n.hadithUnavailableTitle,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    l10n.hadithUnavailableBody,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 13,
+                      height: 1.6,
+                      color: Theme.of(
+                        context,
+                      ).colorScheme.onSurface.withValues(alpha: 0.7),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      );
+    }
     
     final hadithReq = HadithRequest(collectionId, lang);
     final hadithData = ref.watch(hadithSectionProvider(hadithReq));

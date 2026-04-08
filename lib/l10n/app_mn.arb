@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Баталгаажсан эх сурвалж хүлээгдэж байна",
+  "hadithUnavailableTitle": "Баталгаажсан хадис цуглуулгууд хараахан байхгүй байна",
+  "hadithUnavailableBody": "Энэ бүтэц нь батлагдаагүй гадны хадис тэжээлээс хамааралтай хэвээр байна. Эх сурвалжийн өгөгдлийн багцыг синк хийх хүртэл Хадис үзэх нь идэвхгүй хэвээр байна."
 }

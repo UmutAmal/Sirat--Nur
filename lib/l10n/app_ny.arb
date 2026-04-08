@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Gwero lotsimikizika likudikirira",
+  "hadithUnavailableTitle": "Zopereka zotsimikizika za hadith sizinapezekebe",
+  "hadithUnavailableBody": "Kumanga uku kumadalirabe chakudya cha hadith chosatsimikizika. Kusakatula kwa Hadith kumakhala kozimitsidwa mpaka dataset yochokera kulumikizidwa."
 }

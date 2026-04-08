@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Ferifiearre boarne yn ôfwachting",
+  "hadithUnavailableTitle": "Ferifiearre hadith-kolleksjes binne noch net beskikber",
+  "hadithUnavailableBody": "Dizze build is noch ôfhinklik fan in net ferifiearre eksterne hadith feed. Hadith-blêdzjen bliuwt útskeakele oant in boarne dataset wurdt syngronisearre."
 }

@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Fuente verificada pendiente",
+  "hadithUnavailableTitle": "Umi colección de hadith verificado ndojeguerekói gueteri",
+  "hadithUnavailableBody": "Ko ñemopu’ã odepende gueteri peteĩ feed hadith externo ndojehecháiva rehe. Hadith jeheka opyta oñemboykéva oñembojoaju peve peteĩ datokuéra ryru fuente-gui."
 }

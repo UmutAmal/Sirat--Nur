@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Maddi mirkanaa'e eegamaa jira",
+  "hadithUnavailableTitle": "Kuusaan hadiisa mirkanaa'e hanga ammaatti hin argamu",
+  "hadithUnavailableBody": "Ijaarsi kun ammallee nyaata hadiisa alaa hin mirkanoofne irratti hundaa’a. Daawwachuun Hadiisa hanga kuusaan deetaa madda walsimsiifamutti hojii irraa oolfamee hafa."
 }

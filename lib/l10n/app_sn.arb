@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Verified source yakamirira",
+  "hadithUnavailableTitle": "Verified hadith collections haisati yavapo",
+  "hadithUnavailableBody": "Ichi chivakwa chichiri kutsamira pane isina kusimbiswa ekunze hadith feed. Kubhurawuza kweHadith kunoramba kwakavharwa kudzamara dataset yawanikwa yawiriraniswa."
 }

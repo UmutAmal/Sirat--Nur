@@ -523,5 +523,8 @@
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad"
+  "duaSourceAhmad": "Ahmad",
+  "hadithSourcePending": "Geverifieerde bron hangende",
+  "hadithUnavailableTitle": "Geverifieerde hadith-versamelings is nog nie beskikbaar nie",
+  "hadithUnavailableBody": "Hierdie bou is steeds afhanklik van 'n ongeverifieerde eksterne hadith-feed. Hadith-blaai bly gedeaktiveer totdat 'n brondatastel gesinkroniseer word."
 }
