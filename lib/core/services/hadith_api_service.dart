@@ -3,6 +3,13 @@ import 'package:http/http.dart' as http;
 
 const bool hasVerifiedHadithDataset = false;
 
+class VerifiedHadithDatasetUnavailable implements Exception {
+  const VerifiedHadithDatasetUnavailable();
+
+  @override
+  String toString() => 'VerifiedHadithDatasetUnavailable';
+}
+
 class HadithApiService {
   static const String baseUrl = 'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions';
 
@@ -14,6 +21,10 @@ class HadithApiService {
     required String langCode,
     int section = 1,
   }) async {
+    if (!hasVerifiedHadithDataset) {
+      throw const VerifiedHadithDatasetUnavailable();
+    }
+
     final languageKey = langCode.startsWith('tr') ? 'tur' : 'eng';
     final url = Uri.parse('$baseUrl/$languageKey-$collectionId/sections/$section.json');
     final response = await http.get(url);
@@ -34,6 +45,10 @@ class HadithApiService {
     required String collectionId,
     int section = 1,
   }) async {
+    if (!hasVerifiedHadithDataset) {
+      throw const VerifiedHadithDatasetUnavailable();
+    }
+
     final url = Uri.parse('$baseUrl/ara-$collectionId/sections/$section.json');
     final response = await http.get(url);
 

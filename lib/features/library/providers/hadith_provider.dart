@@ -33,6 +33,10 @@ class HadithRequest {
 }
 
 final hadithSectionProvider = FutureProvider.family<List<HadithItem>, HadithRequest>((ref, req) async {
+  if (!hasVerifiedHadithDataset) {
+    throw const VerifiedHadithDatasetUnavailable();
+  }
+
   // Try fetching section 1 as a proof of concept. 
   // In a full app, we would paginate, but section 1 alone contains enough typical hadiths for view.
   final translations = await HadithApiService.fetchHadiths(

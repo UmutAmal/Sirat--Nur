@@ -2661,3 +2661,37 @@
 ### Sonraki Adım
 - Sıradaki turda rare-locale hadith güvenilirlik kopyasında İngilizce fallback kalan locale’ler ölçülüp uygun olanlar daraltılacak.
 - Paralelde [A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/providers/hadith_provider.dart) production akışından tamamen koparılabilecek mi denetlenecek.
+
+## 2026-04-09 TUR-68 — Isolate Unverified Hadith Provider
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/hadith_api_service.dart) içine `VerifiedHadithDatasetUnavailable` exception’ı eklendi; `fetchHadiths` ve `fetchArabicHadiths` doğrulanmış dataset yoksa ağa çıkmadan fail-fast davranacak şekilde sertleştirildi.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/providers/hadith_provider.dart) `hasVerifiedHadithDataset = false` durumunda aynı exception ile provider seviyesinde de zinciri kesti.
+- [A:\Way of Allah\sirat_i_nur\test\hadith_provider_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/hadith_provider_test.dart) eklendi; service ve Riverpod provider’ın doğrulanmamış harici hadith feed’e istemeden erişemediği regresyonla kilitlendi.
+
+### Neden Yapıldı
+- Önceki turda UI dürüst unavailable-state göstermeye alınmış olsa da production zincirinde [A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/hadith_api_service.dart) ve [A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/providers/hadith_provider.dart) üzerinden doğrulanmamış harici hadith feed’e kod seviyesinde hâlâ erişim mümkündü.
+- Kullanıcı akışı dışından veya gelecekte eklenecek yeni bir yüzeyden bu provider çağrılırsa sistem tekrar kaynaksız dini içeriği network’ten çekebilirdi.
+- Kök sebep, güvenilirlik kontrolünün yalnızca UI katmanında yapılması, servis ve provider katmanının fail-fast davranmamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\hadith_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Doğrulanmamış hadith feed artık yalnızca UI’da gizlenmiyor; service ve provider katmanı da bunu bilinçli olarak reddediyor.
+- İleride yeni bir ekran veya background call yanlışlıkla hadith provider’ı çağırsa bile sistem harici kaynağa erişmeden dürüst hata üretecek.
+- Production zinciri “unverified dataset kapalı” sözleşmesini tüm katmanlarda tutarlı hale getirdi.
+
+### Test Sonucu
+- `flutter test test/hadith_provider_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`176/176`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Unverified external hadith feed still reachable through production provider/service chain: `12/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda hadith unavailable kopyasında İngilizce fallback kalan rare locale’ler ölçülüp kapatılacak.
+- Ardından production yüzeyinde kullanılmayan hadith network kodu tamamen retire edilebiliyor mu denetlenecek.
