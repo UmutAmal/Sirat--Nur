@@ -9,11 +9,14 @@ import 'package:sirat_i_nur/l10n/app_localizations.dart';
 // Gemini API key — injected via --dart-define for production,
 // falls back to empty string (which uses local Q&A fallback).
 // ──────────────────────────────────────────────────────────────
-const String _geminiApiKey = String.fromEnvironment('GEMINI_API_KEY', defaultValue: '');
+const String _geminiApiKey = String.fromEnvironment(
+  'GEMINI_API_KEY',
+  defaultValue: '',
+);
 
-final _chatMessagesProvider = StateProvider<List<_ChatMsg>>((ref) => [
-  _ChatMsg(text: '__GREETING__', isUser: false),
-]);
+final _chatMessagesProvider = StateProvider<List<_ChatMsg>>(
+  (ref) => [_ChatMsg(text: '__GREETING__', isUser: false)],
+);
 final _queriesLeftProvider = StateProvider<int>((ref) => 20);
 final _isLoadingProvider = StateProvider<bool>((ref) => false);
 
@@ -70,9 +73,9 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
     final queriesLeft = ref.read(_queriesLeftProvider);
     if (queriesLeft <= 0) {
       final l10n = AppLocalizations.of(context)!;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(l10n.chatbotLimitReached)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(l10n.chatbotLimitReached)));
       return;
     }
 
@@ -91,19 +94,20 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
         final locale = Localizations.localeOf(context);
         final isTurkish = locale.languageCode == 'tr';
         final localResponse = IslamicChatbotData.getResponse(text, isTurkish);
-        response = localResponse ??
+        response =
+            localResponse ??
             (isTurkish
                 ? '[YEREL AI] Bu konuda henüz bilgim yok. Namaz, oruç, zekat, hac, iman, ahlak gibi konularda soru sorabilirsiniz.'
                 : "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.");
       } else if (_chat != null) {
         // Use Gemini LLM
-        final geminiResponse = await _chat!.sendMessage(Content.text(text));
         final l10n = AppLocalizations.of(context)!;
+        final geminiResponse = await _chat!.sendMessage(Content.text(text));
         response = geminiResponse.text ?? l10n.chatbotErrorMsg;
       } else {
         final locale = Localizations.localeOf(context);
         final isTurkish = locale.languageCode == 'tr';
-        response = isTurkish 
+        response = isTurkish
             ? "Bulut API ayarlanmadı. Lütfen ayarlardan Local AI moduna geçin."
             : "Cloud API not configured. Please switch to Local AI.";
       }
@@ -119,12 +123,17 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
       final isTurkish = locale.languageCode == 'tr';
       final localResponse = IslamicChatbotData.getResponse(text, isTurkish);
       final msgs = ref.read(_chatMessagesProvider.notifier);
-      msgs.state = [...msgs.state, _ChatMsg(
-        text: localResponse ?? (isTurkish
-            ? 'Bir hata oluştu. Lütfen tekrar deneyin.'
-            : 'An error occurred. Please try again.'),
-        isUser: false,
-      )];
+      msgs.state = [
+        ...msgs.state,
+        _ChatMsg(
+          text:
+              localResponse ??
+              (isTurkish
+                  ? 'Bir hata oluştu. Lütfen tekrar deneyin.'
+                  : 'An error occurred. Please try again.'),
+          isUser: false,
+        ),
+      ];
     } finally {
       if (mounted) {
         ref.read(_isLoadingProvider.notifier).state = false;
@@ -163,10 +172,19 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
               decoration: BoxDecoration(
-                color: _isOfflineMode ? AppColors.goldLight : AppColors.emeraldSurface,
+                color: _isOfflineMode
+                    ? AppColors.goldLight
+                    : AppColors.emeraldSurface,
                 borderRadius: BorderRadius.circular(6),
               ),
-              child: Text(_isOfflineMode ? 'LOCAL AI' : 'CLOUD AI', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w900, color: _isOfflineMode ? AppColors.gold : AppColors.emerald)),
+              child: Text(
+                _isOfflineMode ? 'LOCAL AI' : 'CLOUD AI',
+                style: TextStyle(
+                  fontSize: 10,
+                  fontWeight: FontWeight.w900,
+                  color: _isOfflineMode ? AppColors.gold : AppColors.emerald,
+                ),
+              ),
             ),
           ],
         ),
@@ -178,8 +196,14 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
               if (val == 'local') _showLocalAiDownloadDialog();
             },
             itemBuilder: (ctx) => [
-              const PopupMenuItem(value: 'cloud', child: Text('Use Cloud AI (Gemini)')),
-              const PopupMenuItem(value: 'local', child: Text('Download Local AI (1.5GB)')),
+              const PopupMenuItem(
+                value: 'cloud',
+                child: Text('Use Cloud AI (Gemini)'),
+              ),
+              const PopupMenuItem(
+                value: 'local',
+                child: Text('Download Local AI (1.5GB)'),
+              ),
             ],
           ),
           Container(
@@ -192,9 +216,20 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(Icons.bolt_rounded, color: AppColors.emerald, size: 16),
+                const Icon(
+                  Icons.bolt_rounded,
+                  color: AppColors.emerald,
+                  size: 16,
+                ),
                 const SizedBox(width: 4),
-                Text('$queriesLeft left', style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.emerald, fontSize: 12)),
+                Text(
+                  '$queriesLeft left',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.emerald,
+                    fontSize: 12,
+                  ),
+                ),
               ],
             ),
           ),
@@ -220,7 +255,13 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: isDark ? AppColors.darkSurface : AppColors.cardLight,
-              boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 10, offset: const Offset(0, -2))],
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, -2),
+                ),
+              ],
             ),
             child: SafeArea(
               top: false,
@@ -231,11 +272,23 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
                       controller: _controller,
                       decoration: InputDecoration(
                         hintText: AppLocalizations.of(context)!.chatbotHint,
-                        hintStyle: TextStyle(color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3)),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
+                        hintStyle: TextStyle(
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.onSurface.withValues(alpha: 0.3),
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(16),
+                          borderSide: BorderSide.none,
+                        ),
                         filled: true,
-                        fillColor: isDark ? AppColors.darkBg : AppColors.emeraldSurface,
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                        fillColor: isDark
+                            ? AppColors.darkBg
+                            : AppColors.emeraldSurface,
+                        contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 12,
+                        ),
                       ),
                       onSubmitted: (_) => _sendMessage(),
                       enabled: !isLoading,
@@ -249,7 +302,14 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
                     ),
                     child: IconButton(
                       icon: isLoading
-                          ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                          ? const SizedBox(
+                              width: 20,
+                              height: 20,
+                              child: CircularProgressIndicator(
+                                strokeWidth: 2,
+                                color: Colors.white,
+                              ),
+                            )
                           : const Icon(Icons.send_rounded, color: Colors.white),
                       onPressed: isLoading ? null : _sendMessage,
                     ),
@@ -281,9 +341,25 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.emerald.withValues(alpha: 0.6))),
+            SizedBox(
+              width: 16,
+              height: 16,
+              child: CircularProgressIndicator(
+                strokeWidth: 2,
+                color: AppColors.emerald.withValues(alpha: 0.6),
+              ),
+            ),
             const SizedBox(width: 10),
-            Text(AppLocalizations.of(context)!.chatbotThinking, style: TextStyle(color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5), fontStyle: FontStyle.italic, fontSize: 13)),
+            Text(
+              AppLocalizations.of(context)!.chatbotThinking,
+              style: TextStyle(
+                color: Theme.of(
+                  context,
+                ).colorScheme.onSurface.withValues(alpha: 0.5),
+                fontStyle: FontStyle.italic,
+                fontSize: 13,
+              ),
+            ),
           ],
         ),
       ),
@@ -296,24 +372,37 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
       child: Container(
         margin: const EdgeInsets.only(bottom: 12),
         padding: const EdgeInsets.all(14),
-        constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.8),
+        constraints: BoxConstraints(
+          maxWidth: MediaQuery.of(context).size.width * 0.8,
+        ),
         decoration: BoxDecoration(
           color: msg.isUser
-            ? AppColors.emerald
-            : (isDark ? AppColors.darkCard : AppColors.cardLight),
+              ? AppColors.emerald
+              : (isDark ? AppColors.darkCard : AppColors.cardLight),
           borderRadius: BorderRadius.only(
             topLeft: const Radius.circular(18),
             topRight: const Radius.circular(18),
             bottomLeft: Radius.circular(msg.isUser ? 18 : 4),
             bottomRight: Radius.circular(msg.isUser ? 4 : 18),
           ),
-          boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 8, offset: const Offset(0, 2))],
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.06),
+              blurRadius: 8,
+              offset: const Offset(0, 2),
+            ),
+          ],
         ),
         child: SelectableText(
-          msg.text == '__GREETING__' ? AppLocalizations.of(context)!.chatbotGreeting : msg.text,
+          msg.text == '__GREETING__'
+              ? AppLocalizations.of(context)!.chatbotGreeting
+              : msg.text,
           style: TextStyle(
-            color: msg.isUser ? Colors.white : Theme.of(context).colorScheme.onSurface,
-            fontSize: 14, height: 1.5,
+            color: msg.isUser
+                ? Colors.white
+                : Theme.of(context).colorScheme.onSurface,
+            fontSize: 14,
+            height: 1.5,
           ),
         ),
       ),
@@ -325,14 +414,21 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text(l10n.offlineMode, style: const TextStyle(fontWeight: FontWeight.w900)),
-        content: Text(
-          l10n.chatbotOfflinePrompt,
+        title: Text(
+          l10n.offlineMode,
+          style: const TextStyle(fontWeight: FontWeight.w900),
         ),
+        content: Text(l10n.chatbotOfflinePrompt),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: Text(l10n.cancel)),
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: Text(l10n.cancel),
+          ),
           ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: AppColors.emerald, foregroundColor: Colors.white),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.emerald,
+              foregroundColor: Colors.white,
+            ),
             onPressed: () {
               Navigator.pop(ctx);
               setState(() => _isOfflineMode = true);

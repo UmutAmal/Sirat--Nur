@@ -22,7 +22,7 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    
+
     final settings = ref.watch(settingsProvider);
     final qiblaStream = ref.watch(qiblaSensorProvider);
 
@@ -33,7 +33,10 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text(l10n.qiblaDirection, style: const TextStyle(fontWeight: FontWeight.w800)),
+        title: Text(
+          l10n.qiblaDirection,
+          style: const TextStyle(fontWeight: FontWeight.w800),
+        ),
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
@@ -44,10 +47,16 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
               showDialog(
                 context: context,
                 builder: (ctx) => AlertDialog(
-                  title: Text(l10n.qiblaCalibration, style: const TextStyle(fontWeight: FontWeight.w900)),
+                  title: Text(
+                    l10n.qiblaCalibration,
+                    style: const TextStyle(fontWeight: FontWeight.w900),
+                  ),
                   content: Text(l10n.calibrationRequiredFigure8),
                   actions: [
-                    TextButton(onPressed: () => Navigator.pop(ctx), child: Text(l10n.ok)),
+                    TextButton(
+                      onPressed: () => Navigator.pop(ctx),
+                      child: Text(l10n.ok),
+                    ),
                   ],
                 ),
               );
@@ -60,24 +69,28 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: isDark 
-              ? [AppColors.darkBg, AppColors.darkSurface] 
-              : [AppColors.emeraldSurface, Colors.white],
+            colors: isDark
+                ? [AppColors.darkBg, AppColors.darkSurface]
+                : [AppColors.emeraldSurface, Colors.white],
             stops: const [0.0, 0.4],
-          )
+          ),
         ),
         child: SafeArea(
           child: qiblaStream.when(
-            loading: () => const Center(child: CircularProgressIndicator(color: AppColors.emerald)),
+            loading: () => const Center(
+              child: CircularProgressIndicator(color: AppColors.emerald),
+            ),
             error: (err, stack) => Center(child: Text('Compass Error: $err')),
             data: (qiblaState) {
               final trueHeading = qiblaState.trueHeading;
-              final needleAngle = (qiblaBearing - trueHeading + settings.qiblaOffset) % 360;
+              final needleAngle =
+                  (qiblaBearing - trueHeading + settings.qiblaOffset) % 360;
               final compassAngle = -trueHeading % 360;
 
               // Check alignment for haptic feedback
               // If within 2 degrees of Qibla, vibrate.
-              final diff = (needleAngle > 180 ? 360 - needleAngle : needleAngle).abs();
+              final diff = (needleAngle > 180 ? 360 - needleAngle : needleAngle)
+                  .abs();
               final isAligned = diff < 2.0;
 
               if (isAligned && !_hasVibrated) {
@@ -96,31 +109,56 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
                       // Info Banner
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 300),
-                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 24,
+                          vertical: 12,
+                        ),
                         decoration: BoxDecoration(
-                          color: isAligned ? AppColors.emerald : (isDark ? Colors.white10 : Colors.black.withValues(alpha: 0.05)),
+                          color: isAligned
+                              ? AppColors.emerald
+                              : (isDark
+                                    ? Colors.white10
+                                    : Colors.black.withValues(alpha: 0.05)),
                           borderRadius: BorderRadius.circular(30),
-                          boxShadow: isAligned ? [
-                            BoxShadow(color: AppColors.emerald.withValues(alpha: 0.4), blurRadius: 20, spreadRadius: 2)
-                          ] : [],
+                          boxShadow: isAligned
+                              ? [
+                                  BoxShadow(
+                                    color: AppColors.emerald.withValues(
+                                      alpha: 0.4,
+                                    ),
+                                    blurRadius: 20,
+                                    spreadRadius: 2,
+                                  ),
+                                ]
+                              : [],
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(isAligned ? Icons.check_circle_rounded : Icons.explore_rounded, 
-                              color: isAligned ? Colors.white : AppColors.emerald, size: 20),
+                            Icon(
+                              isAligned
+                                  ? Icons.check_circle_rounded
+                                  : Icons.explore_rounded,
+                              color: isAligned
+                                  ? Colors.white
+                                  : AppColors.emerald,
+                              size: 20,
+                            ),
                             const SizedBox(width: 8),
-                            Text(isAligned ? l10n.qiblaFound : l10n.turnDevice, 
+                            Text(
+                              isAligned ? l10n.qiblaFound : l10n.turnDevice,
                               style: TextStyle(
-                                fontWeight: FontWeight.w800, 
+                                fontWeight: FontWeight.w800,
                                 fontSize: 13,
-                                color: isAligned ? Colors.white : Theme.of(context).colorScheme.onSurface,
-                              )
+                                color: isAligned
+                                    ? Colors.white
+                                    : Theme.of(context).colorScheme.onSurface,
+                              ),
                             ),
                           ],
                         ),
                       ),
-                      
+
                       const SizedBox(height: 48),
 
                       // Premium 3D Compass Dial
@@ -129,47 +167,64 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
                         children: [
                           // Outer glow
                           Container(
-                            width: 320, height: 320,
+                            width: 320,
+                            height: 320,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               boxShadow: [
                                 BoxShadow(
-                                  color: isAligned ? AppColors.emerald.withValues(alpha: 0.2) : Colors.black.withValues(alpha: 0.05),
-                                  blurRadius: 40, spreadRadius: 10
-                                )
-                              ]
+                                  color: isAligned
+                                      ? AppColors.emerald.withValues(alpha: 0.2)
+                                      : Colors.black.withValues(alpha: 0.05),
+                                  blurRadius: 40,
+                                  spreadRadius: 10,
+                                ),
+                              ],
                             ),
                           ),
-                          
+
                           // Rotating Base Dial
                           AnimatedRotation(
                             turns: compassAngle / 360,
-                            duration: const Duration(milliseconds: 200), // Smooth updates
+                            duration: const Duration(
+                              milliseconds: 200,
+                            ), // Smooth updates
                             child: Stack(
                               alignment: Alignment.center,
                               children: [
                                 // The Dial background
                                 Container(
-                                  width: 300, height: 300,
+                                  width: 300,
+                                  height: 300,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: isDark ? const Color(0xFF1E293B) : Colors.white,
+                                    color: isDark
+                                        ? const Color(0xFF1E293B)
+                                        : Colors.white,
                                     border: Border.all(
-                                      color: isAligned ? AppColors.emerald : (isDark ? Colors.white12 : Colors.black12), 
+                                      color: isAligned
+                                          ? AppColors.emerald
+                                          : (isDark
+                                                ? Colors.white12
+                                                : Colors.black12),
                                       width: 8,
                                     ),
                                     boxShadow: [
                                       BoxShadow(
-                                        color: isDark ? Colors.black54 : Colors.grey.withValues(alpha: 0.3),
+                                        color: isDark
+                                            ? Colors.black54
+                                            : Colors.grey.withValues(
+                                                alpha: 0.3,
+                                              ),
                                         blurRadius: 20,
                                       ),
                                     ],
                                   ),
                                 ),
-                                
+
                                 // Compass Ticks
                                 ..._buildTicks(context),
-                                
+
                                 // Compass Letters
                                 ..._buildDirectionMarkers(context),
                               ],
@@ -181,7 +236,8 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
                             turns: needleAngle / 360,
                             duration: const Duration(milliseconds: 200),
                             child: SizedBox(
-                              width: 320, height: 320, // slightly larger than dial
+                              width: 320,
+                              height: 320, // slightly larger than dial
                               child: Align(
                                 alignment: Alignment.topCenter,
                                 child: Container(
@@ -189,10 +245,24 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
                                   decoration: BoxDecoration(
                                     color: AppColors.emerald,
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: Colors.white, width: 2),
-                                    boxShadow: [BoxShadow(color: AppColors.emerald.withValues(alpha: 0.5), blurRadius: 10)]
+                                    border: Border.all(
+                                      color: Colors.white,
+                                      width: 2,
+                                    ),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: AppColors.emerald.withValues(
+                                          alpha: 0.5,
+                                        ),
+                                        blurRadius: 10,
+                                      ),
+                                    ],
                                   ),
-                                  child: const Icon(Icons.mosque_rounded, color: Colors.white, size: 24),
+                                  child: const Icon(
+                                    Icons.mosque_rounded,
+                                    color: Colors.white,
+                                    size: 24,
+                                  ),
                                 ),
                               ),
                             ),
@@ -207,31 +277,48 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
                               children: [
                                 // Guide line
                                 Container(
-                                  width: 4, height: 100,
+                                  width: 4,
+                                  height: 100,
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
-                                      begin: Alignment.topCenter, end: Alignment.bottomCenter,
-                                      colors: [AppColors.emerald, AppColors.emerald.withValues(alpha: 0.0)]
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [
+                                        AppColors.emerald,
+                                        AppColors.emerald.withValues(
+                                          alpha: 0.0,
+                                        ),
+                                      ],
                                     ),
                                     borderRadius: BorderRadius.circular(2),
                                   ),
                                 ),
                                 // Center point
                                 Container(
-                                  width: 24, height: 24,
+                                  width: 24,
+                                  height: 24,
                                   padding: const EdgeInsets.all(4),
                                   decoration: BoxDecoration(
-                                    color: isDark ? AppColors.darkSurface : Colors.white,
+                                    color: isDark
+                                        ? AppColors.darkSurface
+                                        : Colors.white,
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: AppColors.emerald, width: 3),
+                                    border: Border.all(
+                                      color: AppColors.emerald,
+                                      width: 3,
+                                    ),
                                   ),
                                   child: Container(
-                                    decoration: const BoxDecoration(color: AppColors.emerald, shape: BoxShape.circle),
+                                    decoration: const BoxDecoration(
+                                      color: AppColors.emerald,
+                                      shape: BoxShape.circle,
+                                    ),
                                   ),
                                 ),
                                 // Balance line below center
                                 Container(
-                                  width: 2, height: 60,
+                                  width: 2,
+                                  height: 60,
                                   decoration: BoxDecoration(
                                     color: Colors.grey.withValues(alpha: 0.2),
                                     borderRadius: BorderRadius.circular(1),
@@ -242,15 +329,28 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
                           ),
                         ],
                       ),
-                      
+
                       const SizedBox(height: 60),
-                      
+
                       // Values Bottom
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          _buildValueCard(context, 'Qibla', '${qiblaBearing.toStringAsFixed(1)}°'),
-                          _buildValueCard(context, 'Heading', '${trueHeading.toStringAsFixed(1)}°'),
+                          Expanded(
+                            child: _buildValueCard(
+                              context,
+                              'Qibla',
+                              '${qiblaBearing.toStringAsFixed(1)}°',
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: _buildValueCard(
+                              context,
+                              'Heading',
+                              '${trueHeading.toStringAsFixed(1)}°',
+                            ),
+                          ),
                         ],
                       ),
                     ],
@@ -272,13 +372,30 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
         color: isDark ? AppColors.darkSurface : Colors.white,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
-        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.02), blurRadius: 10)]
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.02),
+            blurRadius: 10,
+          ),
+        ],
       ),
       child: Column(
         children: [
-          Text(label, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+          Text(
+            label,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w700,
+              color: Theme.of(
+                context,
+              ).colorScheme.onSurface.withValues(alpha: 0.5),
+            ),
+          ),
           const SizedBox(height: 4),
-          Text(value, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900)),
+          Text(
+            value,
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
+          ),
         ],
       ),
     );
@@ -293,13 +410,21 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
         left: 150 + 115 * math.sin(angle) - 15,
         top: 150 - 115 * math.cos(angle) - 15,
         child: SizedBox(
-          width: 30, height: 30,
+          width: 30,
+          height: 30,
           child: Center(
-            child: Text(directions[i], style: TextStyle(
-              fontWeight: FontWeight.w900, 
-              fontSize: 18,
-              color: isNorth ? Colors.redAccent : Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
-            )),
+            child: Text(
+              directions[i],
+              style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 18,
+                color: isNorth
+                    ? Colors.redAccent
+                    : Theme.of(
+                        context,
+                      ).colorScheme.onSurface.withValues(alpha: 0.5),
+              ),
+            ),
           ),
         ),
       );
@@ -311,10 +436,11 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
     final tickColor = isDark ? Colors.white24 : Colors.black12;
     final majorTickColor = isDark ? Colors.white54 : Colors.black38;
 
-    return List.generate(72, (i) { // every 5 degrees
+    return List.generate(72, (i) {
+      // every 5 degrees
       final angle = i * 5.0 * (math.pi / 180);
       final isMajor = i % 6 == 0; // every 30 degrees
-      
+
       return Positioned(
         left: 150 + 135 * math.sin(angle) - (isMajor ? 1.5 : 1),
         top: 150 - 135 * math.cos(angle) - (isMajor ? 4 : 3),

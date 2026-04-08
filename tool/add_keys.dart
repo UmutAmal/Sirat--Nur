@@ -33,14 +33,14 @@ void main() {
     "@nisabSummary": {
       "placeholders": {
         "nisab": {"type": "String"},
-        "assets": {"type": "String"}
-      }
+        "assets": {"type": "String"},
+      },
     },
     "zakatGoldZakat": "Gold Zakat",
     "zakatSilverZakat": "Silver Zakat",
     "zakatCashZakat": "Cash Zakat",
     "zakatBusinessZakat": "Business Zakat",
-    "zakatInvestmentZakat": "Investment Zakat"
+    "zakatInvestmentZakat": "Investment Zakat",
   };
 
   final keysTr = {
@@ -75,21 +75,21 @@ void main() {
     "zakatSilverZakat": "Gümüş Zekatı",
     "zakatCashZakat": "Nakit Zekatı",
     "zakatBusinessZakat": "Ticaret Zekatı",
-    "zakatInvestmentZakat": "Yatırım Zekatı"
+    "zakatInvestmentZakat": "Yatırım Zekatı",
   };
 
   void updateArb(String path, Map<String, dynamic> newKeys) {
     final file = File(path);
     if (!file.existsSync()) return;
-    
+
     final content = file.readAsStringSync();
     final Map<String, dynamic> json = jsonDecode(content);
-    
+
     json.addAll(newKeys);
-    
+
     const encoder = JsonEncoder.withIndent('  ');
     file.writeAsStringSync(encoder.convert(json));
-    print('Updated \$path');
+    stdout.writeln('Updated \$path');
   }
 
   updateArb('lib/l10n/app_en.arb', keysEn);
