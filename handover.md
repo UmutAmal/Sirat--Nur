@@ -2219,3 +2219,39 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/islamic_chatbot_data.dart) tamamen verified-source tabanlı yeni bir içerik pipeline’ına taşınacak veya repo dışı doğrulanmış dataset gelene kadar production akışından kaldırılacak.
 - Ayrıca [A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json](A:/Way%20of%20Allah/sirat_i_nur/assets/data/full_quran.json) ile official Quran seed zinciri arasında örneklem ve sayım doğrulaması eklenerek fallback asset’in de kaynak dürüstlüğü testle kilitlenecek.
+
+## 2026-04-08 TUR-56 — Rebuild Bundled Quran Fallback From Verified Seed
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\generate_bundled_quran_asset.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/generate_bundled_quran_asset.dart) eklendi; committed `content_seed_quran_surahs.sql` ve `content_seed_quran_ayahs.sql` dosyalarını parse edip [A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json](A:/Way%20of%20Allah/sirat_i_nur/assets/data/full_quran.json) dosyasını yeniden üretiyor.
+- Aynı araç çalıştırılarak [A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json](A:/Way%20of%20Allah/sirat_i_nur/assets/data/full_quran.json) resmi Quran.com seed zinciriyle birebir hizalandı.
+- [A:\Way of Allah\sirat_i_nur\test\bundled_quran_asset_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/bundled_quran_asset_test.dart) eklendi; committed asset’in seed’den türetilen beklenen payload ile tam eşleştiği ve kritik ayetlerin doğru metin/meal taşıdığı testle kilitlendi.
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json](A:/Way%20of%20Allah/sirat_i_nur/assets/data/full_quran.json) yaşayan fallback olarak üretimde kalıyordu.
+- Dosya içeriğinde satır bazlı dini doğruluk kırığı vardı: örneğin Bakara 1. ayetin Arapça alanına besmele gömülmüşken İngilizce alan yalnızca `Alif Lam Mim` diyordu; bu, fallback asset’in authoritative seed zincirinden koptuğunu gösteriyordu.
+- Kök sebep, fallback JSON’un verified source zincirinden tekrar üretilebilir şekilde türetilmemesi ve testle korunmamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\generate_bundled_quran_asset.dart`
+- `A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json`
+- `A:\Way of Allah\sirat_i_nur\test\bundled_quran_asset_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Bundled Quran fallback artık resmi seed zincirinden otomatik türetiliyor; sessiz içerik sapması test olmadan repo’ya giremiyor.
+- Fatiha, Bakara ve Nâs dahil kritik ayetlerde Arapça metin ve TR/EN meal seed ile aynı hale geldi.
+- Kullanıcı çevrimdışı fallback’te de cloud zinciriyle aynı doğrulanmış Quran içeriğini görüyor.
+
+### Test Sonucu
+- `dart run tool/generate_bundled_quran_asset.dart` → PASS
+- `flutter test test/bundled_quran_asset_test.dart` → PASS (`2/2`)
+- `flutter test test/features/quran/providers/bundled_quran_provider_test.dart` → PASS (`9/9`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`159/159`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Bundled Quran fallback asset drifting away from the verified source chain: `15/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) sabit duası satır satır resmi kaynak ve zincir dürüstlüğü açısından denetlenecek.
+- Özellikle yanlış/hatalı transliterasyon, zayıf veya belirsiz kaynak atfı ve standard dua metni olmayan girişler verified pipeline gelene kadar production fallback’ten çıkarılacak.
