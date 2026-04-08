@@ -1705,3 +1705,39 @@
 ### Sonraki Adım
 - Sıradaki uygulanabilir risk, verified resmi Kur'an ses dosyalarını gerektiğinde bizim tarafımıza tekrar üretilebilir şekilde çekebilen bir mirror/download aracı eklemek.
 - Bu araç, repo’ya dev binary yığmadan accepted source’tan kontrollü indirme yapmalı ve eksik/bozuk indirmeleri dürüst raporlamalı.
+
+## 2026-04-08 TUR-43 — Add Repeatable Verified Quran Audio Mirror Tool
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/download_verified_quran_audio.dart) eklendi; bu araç versioned [A:\Way of Allah\sirat_i_nur\content_seed_quran_audio.sql](A:/Way%20of%20Allah/sirat_i_nur/content_seed_quran_audio.sql) içindeki verified resmi Kur'an audio satırlarını parse edip fiziksel MP3 dosyalarını seçili klasöre indiriyor.
+- Araç, `--reciters`, `--surahs`, `--output-dir`, `--overwrite` seçenekleriyle kısmi veya tam mirror çalıştırabiliyor; başarıyla inen dosyalar için `manifest.json` üretiyor.
+- [A:\Way of Allah\sirat_i_nur\test\download_verified_quran_audio_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/download_verified_quran_audio_test.dart) eklendi; parser, katalog gruplama, committed seed kapsamı ve invalid surah selection doğrulanıyor.
+- Canlı smoke doğrulama çalıştırıldı: `dart run tool/download_verified_quran_audio.dart --reciters=alafasy --surahs=1 --output-dir=build/verified_quran_audio_smoke --overwrite`
+- Smoke sonucu fiziksel dosya oluştu: `A:\Way of Allah\sirat_i_nur\build\verified_quran_audio_smoke\alafasy\001.mp3` (`793327` byte) ve manifest üretildi.
+
+### Neden Yapıldı
+- Verified SQL seed ve runtime cloud katalog vardı, fakat resmi ses dosyalarını “bizim tarafa” tekrar üretilebilir ve kontrollü biçimde çekmek için repo içi araç yoktu.
+- Bu eksik, cloud seed doğru olsa bile bağımsız içerik arşivleme, backup ve kontrollü ingest akışlarını dışarıda bırakıyordu.
+- Kök sebep, verified metadata ile fiziksel dosya materialization adımının birbirinden kopuk olmasıydı; bu turda ikisi repo içinde birleşti.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart`
+- `A:\Way of Allah\sirat_i_nur\test\download_verified_quran_audio_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Resmi, doğrulanmış Kur'an audio URLs artık repo içinden tekrar üretilebilir şekilde fiziksel MP3’e indirilebiliyor.
+- Büyük binary’leri git’e doldurmadan kontrollü mirror akışı oluştu.
+- Manifest sayesinde hangi reciter/surah dosyasının hangi resmi kaynaktan ve hangi verified timestamp ile geldiği izlenebilir hale geldi.
+
+### Test Sonucu
+- `flutter test test/download_verified_quran_audio_test.dart` → PASS (`4/4`)
+- `dart run tool/download_verified_quran_audio.dart --reciters=alafasy --surahs=1 --output-dir=build/verified_quran_audio_smoke --overwrite` → PASS (`1` dosya indirildi, `0` fail)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`123/123`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- No repeatable repo-native way to materialize verified Quran audio files locally: `7/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki tarama odağı prayer & notification pipeline olacak: `prayer_notification_coordinator.dart`, `adhan_scheduler_service.dart`, `notification_service.dart`, `prayer_times_service.dart`.
+- Özellikle location değişimi sonrası reschedule zinciri, duplicate cancel/schedule davranışı ve timezone/DST kenar durumları yeniden doğrulanacak.
