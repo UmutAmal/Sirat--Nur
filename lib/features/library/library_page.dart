@@ -167,7 +167,7 @@ class LibraryPage extends ConsumerWidget {
                           ),
                         ),
                         Text(
-                          "Nature & Qur'an Mixer",
+                          l10n.sukunMixerSubtitle,
                           style: TextStyle(
                             fontSize: 13,
                             color: Theme.of(

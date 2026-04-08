@@ -842,4 +842,13 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chatbotThinking => 'Düşünüyor...';
+
+  @override
+  String get sukunMixerSubtitle => 'Doğa ve Kur\'an Mikseri';
+
+  @override
+  String get audioPlayFailed => 'Ses çalınamadı';
+
+  @override
+  String get sukunNatureLabel => 'Sükun (Doğa)';
 }

@@ -2061,6 +2061,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Thinking...'**
   String get chatbotThinking;
+
+  /// No description provided for @sukunMixerSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Nature & Qur\'an Mixer'**
+  String get sukunMixerSubtitle;
+
+  /// No description provided for @audioPlayFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Audio playback failed'**
+  String get audioPlayFailed;
+
+  /// No description provided for @sukunNatureLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Sukun (Nature)'**
+  String get sukunNatureLabel;
 }
 
 class _AppLocalizationsDelegate

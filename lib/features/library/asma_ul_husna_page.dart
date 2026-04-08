@@ -180,8 +180,9 @@ class _AsmaUlHusnaPageState extends ConsumerState<AsmaUlHusnaPage> {
       await _audioService.playUrl(url);
     } catch (e) {
       if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Audio play failed: $e')),
+          SnackBar(content: Text(l10n.audioPlayFailed)),
         );
       }
     }

@@ -282,5 +282,8 @@
   },
   "downloadCompleted": "Bu hafız için tüm sureler zaten indirildi.",
   "chatbotHint": "Bir soru sorun...",
-  "chatbotThinking": "Düşünüyor..."
+  "chatbotThinking": "Düşünüyor...",
+  "sukunMixerSubtitle": "Doğa ve Kur'an Mikseri",
+  "audioPlayFailed": "Ses çalınamadı",
+  "sukunNatureLabel": "Sükun (Doğa)"
 }

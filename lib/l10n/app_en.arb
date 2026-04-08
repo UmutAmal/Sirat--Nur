@@ -292,5 +292,8 @@
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
   "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking..."
+  "chatbotThinking": "Thinking...",
+  "sukunMixerSubtitle": "Nature & Qur'an Mixer",
+  "audioPlayFailed": "Audio playback failed",
+  "sukunNatureLabel": "Sukun (Nature)"
 }

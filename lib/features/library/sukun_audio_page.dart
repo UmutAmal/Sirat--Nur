@@ -68,7 +68,7 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
                 padding: const EdgeInsets.all(20),
                 sliver: SliverList(
                   delegate: SliverChildListDelegate([
-                    _buildMixerSection(context, audio),
+                    _buildMixerSection(context, audio, l10n),
                     const SizedBox(height: 30),
                     _buildSoundGrid(context, audio, l10n),
                   ]),
@@ -84,6 +84,7 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
   Widget _buildMixerSection(
     BuildContext context,
     AudioSovereigntyService service,
+    AppLocalizations l10n,
   ) {
     return PremiumCard(
       padding: const EdgeInsets.all(24),
@@ -108,7 +109,7 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
           ),
           const SizedBox(height: 10),
           _buildSlider(
-            label: 'Sukun (Nature)',
+            label: l10n.sukunNatureLabel,
             value: _natureVolume,
             onChanged: (value) {
               setState(() => _natureVolume = value);
@@ -138,6 +139,7 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
       ],
     );
   }
+
 
   Widget _buildSoundGrid(
     BuildContext context,

@@ -843,4 +843,13 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get chatbotThinking => 'Thinking...';
+
+  @override
+  String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
+
+  @override
+  String get audioPlayFailed => 'Audio playback failed';
+
+  @override
+  String get sukunNatureLabel => 'Sukun (Nature)';
 }
