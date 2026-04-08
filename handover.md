@@ -2346,3 +2346,36 @@
 ### Sonraki Adım
 - Sıradaki turda verified fallback dışında kalan dini içerik sabitleri taranacak; özellikle [A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/islamic_chatbot_data.dart) ve benzeri yerlerde authoritative olmayan dini cevap şablonları varsa ayrıştırılacak.
 - Ardından dua/hadis/kategori zincirinin tüm locale setinde anlamsal tutarlılığı ve hardcoded proper noun yüzeyi denetlenecek.
+
+## 2026-04-09 TUR-59 — Remove Retired Local Chatbot Corpus
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/islamic_chatbot_data.dart) sadeleştirildi; file artık yalnızca `hasVerifiedDataset = false` guard’ını ve her durumda `null` dönen dürüst offline sözleşmesini taşıyor.
+- Aynı dosyadan doğrulanmamış namaz, oruç, Kur'an, hadis ve mezhep cevap corpus’u tamamen çıkarıldı; repo içinde geri açılabilir sahte dini fallback bırakılmadı.
+- [A:\Way of Allah\sirat_i_nur\test\islamic_chatbot_data_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/islamic_chatbot_data_test.dart) genişletildi; disabled contract’e ek olarak eski corpus’tan kalan `6666 Ayet`, yanlış iftar duası ve benzeri marker’ların dosyada bulunmadığını guard testiyle kilitliyor.
+
+### Neden Yapıldı
+- Önceki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/islamic_chatbot_data.dart) runtime’da kapalı olsa da repo içinde hatalı ve doğrulanmamış dini cevap bloklarını barındırıyordu.
+- Kök sebep, `hasVerifiedDataset = false` bayrağının veri corpus’unu fiziksel olarak da temizlemek yerine yalnızca erişimi durdurmasıydı.
+- Kullanıcının talep ettiği “repo içinde de saçma/yanlış dini metin bırakmama” kuralı için disabled state tek başına yeterli değildi; corpus’un kendisini kaldırmak gerekiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart`
+- `A:\Way of Allah\sirat_i_nur\test\islamic_chatbot_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Offline chatbot fallback’i artık yalnızca verified dataset geldiğinde açılabilecek temiz bir contract olarak kaldı.
+- Repo içinde yanlış ayet sayısı, uydurma/bozuk dua ve zayıf dini genelleme içeren statik corpus tamamen kaldırıldı.
+- Bu modül yanlışlıkla yeniden aktifleştirilse bile authoritative olmayan yerel cevap üretmeyecek.
+
+### Test Sonucu
+- `flutter test test/islamic_chatbot_data_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`164/164`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Retired local chatbot corpus storing inaccurate religious guidance inside the repo: `12/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki bundled meaning/transliteration yüzeyi authoritative source ve source-attribution açısından denetlenecek.
+- Ardından hadith ve library kaynak adları için proper-noun/localization semantiği ayrı bir kalite turunda gözden geçirilecek.
