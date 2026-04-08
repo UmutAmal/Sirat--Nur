@@ -212,6 +212,17 @@
   "rerunSetup": "Ri-rɔn di fɔs sɛtup prɔses.",
   "diagnostics": "Diagnostik dɛn we dɛn kin du",
   "diagnosticsNotSet": "Not set",
+  "diagnosticsPrayerProfile": "Prayer Profile",
+  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "@diagnosticsPrayerCustomProfile": {
+    "placeholders": {
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",

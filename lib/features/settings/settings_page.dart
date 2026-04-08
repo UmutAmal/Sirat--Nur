@@ -73,8 +73,8 @@ class SettingsPage extends ConsumerWidget {
                 value: settings.locationName == null
                     ? '-'
                     : (settings.timezone == null
-                        ? settings.locationName!
-                        : '${settings.locationName} (${settings.timezone})'),
+                          ? settings.locationName!
+                          : '${settings.locationName} (${settings.timezone})'),
                 onTap: () => context.push('/settings/location'),
               ),
             ),
@@ -542,14 +542,6 @@ class SettingsPage extends ConsumerWidget {
   }
 
   String _displayMadhab(String madhab) {
-    switch (madhab) {
-      case shafiiMadhab:
-        return "Shafi'i";
-      case jafariMadhab:
-        return "Ja'fari";
-      default:
-        return madhab;
-    }
+    return displayMadhabLabel(madhab);
   }
-
 }

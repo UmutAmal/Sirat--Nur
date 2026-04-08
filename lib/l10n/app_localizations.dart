@@ -1714,6 +1714,30 @@ abstract class AppLocalizations {
   /// **'Not set'**
   String get diagnosticsNotSet;
 
+  /// No description provided for @diagnosticsPrayerProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Prayer Profile'**
+  String get diagnosticsPrayerProfile;
+
+  /// No description provided for @diagnosticsPrayerSource.
+  ///
+  /// In en, this message translates to:
+  /// **'Prayer Authority'**
+  String get diagnosticsPrayerSource;
+
+  /// No description provided for @diagnosticsPrayerCustomProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom / {madhab}'**
+  String diagnosticsPrayerCustomProfile(String madhab);
+
+  /// No description provided for @diagnosticsPrayerCustomSource.
+  ///
+  /// In en, this message translates to:
+  /// **'Manual custom angles (no institutional source)'**
+  String get diagnosticsPrayerCustomSource;
+
   /// No description provided for @diagnosticsCloudDriven.
   ///
   /// In en, this message translates to:

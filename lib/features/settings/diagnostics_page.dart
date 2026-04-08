@@ -8,6 +8,7 @@ import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import 'package:sirat_i_nur/core/services/audio_player_service.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
+import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/features/settings/quran_diagnostics.dart';
@@ -27,12 +28,16 @@ class DiagnosticsRowsDependencies {
   final bool isDarkMode;
   final String? languageCode;
   final String? locationName;
+  final String calculationMethod;
+  final String madhab;
 
   const DiagnosticsRowsDependencies({
     required this.localeTag,
     required this.isDarkMode,
     required this.languageCode,
     required this.locationName,
+    required this.calculationMethod,
+    required this.madhab,
   });
 
   factory DiagnosticsRowsDependencies.fromState(
@@ -44,6 +49,8 @@ class DiagnosticsRowsDependencies {
       isDarkMode: settings.isDarkMode,
       languageCode: settings.languageCode,
       locationName: settings.locationName,
+      calculationMethod: settings.calculationMethod,
+      madhab: settings.madhab,
     );
   }
 
@@ -57,12 +64,20 @@ class DiagnosticsRowsDependencies {
         other.localeTag == localeTag &&
         other.isDarkMode == isDarkMode &&
         other.languageCode == languageCode &&
-        other.locationName == locationName;
+        other.locationName == locationName &&
+        other.calculationMethod == calculationMethod &&
+        other.madhab == madhab;
   }
 
   @override
-  int get hashCode =>
-      Object.hash(localeTag, isDarkMode, languageCode, locationName);
+  int get hashCode => Object.hash(
+    localeTag,
+    isDarkMode,
+    languageCode,
+    locationName,
+    calculationMethod,
+    madhab,
+  );
 }
 
 @visibleForTesting
@@ -88,6 +103,39 @@ String resolveDiagnosticsVersion({
   }
 
   return '$normalizedBuildName+$normalizedBuildNumber';
+}
+
+@visibleForTesting
+bool isOfficialPrayerProfile(PrayerCalculationProfile profile) {
+  return normalizeCalculationMethod(profile.calculationMethod) !=
+          customPrayerMethod &&
+      profile.sourceUrl.trim().isNotEmpty;
+}
+
+@visibleForTesting
+String resolvePrayerProfileValue(
+  PrayerCalculationProfile profile, {
+  String? customProfileValue,
+}) {
+  if (normalizeCalculationMethod(profile.calculationMethod) ==
+          customPrayerMethod &&
+      customProfileValue != null) {
+    return customProfileValue;
+  }
+
+  return '${profile.calculationMethod} / ${displayMadhabLabel(profile.madhab)}';
+}
+
+@visibleForTesting
+String resolvePrayerSourceValue(
+  PrayerCalculationProfile profile, {
+  String? customSourceValue,
+}) {
+  if (!isOfficialPrayerProfile(profile)) {
+    return customSourceValue ?? profile.sourceName;
+  }
+
+  return '${profile.sourceName} (${profile.sourceUrl})';
 }
 
 @visibleForTesting
@@ -223,6 +271,11 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
   Future<List<_DiagnosticRow>> _buildRows() async {
     final l10n = AppLocalizations.of(context)!;
     final settings = ref.read(settingsProvider);
+    final prayerProfile = profileForMethod(
+      settings.calculationMethod,
+      madhab: settings.madhab,
+    );
+    final prayerProfileIsOfficial = isOfficialPrayerProfile(prayerProfile);
     final rows = <_DiagnosticRow>[
       _DiagnosticRow(l10n.version, resolveDiagnosticsVersion(), true),
       _DiagnosticRow(
@@ -239,6 +292,24 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
         l10n.location,
         settings.locationName ?? l10n.diagnosticsNotSet,
         settings.locationName != null,
+      ),
+      _DiagnosticRow(
+        l10n.diagnosticsPrayerProfile,
+        resolvePrayerProfileValue(
+          prayerProfile,
+          customProfileValue: l10n.diagnosticsPrayerCustomProfile(
+            displayMadhabLabel(prayerProfile.madhab),
+          ),
+        ),
+        prayerProfileIsOfficial,
+      ),
+      _DiagnosticRow(
+        l10n.diagnosticsPrayerSource,
+        resolvePrayerSourceValue(
+          prayerProfile,
+          customSourceValue: l10n.diagnosticsPrayerCustomSource,
+        ),
+        prayerProfileIsOfficial,
       ),
     ];
 

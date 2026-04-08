@@ -1968,3 +1968,45 @@
 ### Sonraki Adım
 - Sıradaki prayer pipeline turunda aktif resmî prayer profile adı ve kaynağı diagnostics yüzeyine taşınacak.
 - Böylece kullanıcı hangi kurum/profile göre vakit hesaplandığını uygulama içinden doğrudan görebilecek.
+
+## 2026-04-08 TUR-50 — Surface Active Prayer Authority In Diagnostics
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart) içine aktif namaz profili ve namaz kurumu satırları eklendi; satırlar doğrudan `settings.calculationMethod` + `settings.madhab` üzerinden [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_profile_service.dart) tarafından çözülen resmî profile bağlandı.
+- Aynı diagnostics zincirinde dependency anahtarı genişletildi; locale, tema, dil ve lokasyonun yanına `calculationMethod` ve `madhab` da eklendi.
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_profile_service.dart) içine ortak `displayMadhabLabel` helper’ı eklendi ve [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_page.dart) ile diagnostics aynı madhab label gösterimine hizalandı.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) ve tüm `app_*.arb` setine yeni diagnostics prayer anahtarları yayıldı; generated localization dosyaları yenilendi.
+- [A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/settings/diagnostics_page_test.dart) genişletildi; prayer ayarı değişince dependency hash’in değişmesi, resmî profil çözümü ve custom profilde kurumsal kaynak yok uyarısı testle kilitlendi.
+
+### Neden Yapıldı
+- Önceki diagnostics ekranı lokasyon, tema ve veri seti sağlığını gösteriyordu ancak aktif namaz saatlerinin hangi resmî kuruma ve hangi mezhep/Asr kuralına göre hesaplandığını göstermiyordu.
+- Ayrıca diagnostics dependency anahtarı `calculationMethod` ve `madhab` içermediği için kullanıcı ayar ekranından method veya mezhep değiştirince diagnostics açıkken satırlar stale kalabiliyordu.
+- Kök sebep, prayer profile bilgisinin servis katmanında bulunmasına rağmen diagnostics görünümüne hiç taşınmaması ve invalidate koşulunun eksik kurulmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kullanıcı artık diagnostics ekranında aktif namaz profilini, mezhep label’ını ve hangi kurumsal kaynağın esas alındığını doğrudan görebiliyor.
+- `Custom` modda uygulama kurumsal otorite varmış gibi davranmıyor; satır `kurumsal kaynak yok; manuel özel açı` olarak dürüst uyarı veriyor.
+- Diagnostics ekranı prayer ayarı değişince stale kalmıyor; method veya madhab değişiminde satırlar yeniden üretiliyor.
+
+### Test Sonucu
+- `flutter test test/features/settings/diagnostics_page_test.dart` → PASS (`9/9`)
+- `flutter gen-l10n` → PASS
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`146/146`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Active prayer authority being invisible or stale in diagnostics despite country/region based official profiles: `8/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki prayer şeffaflık turunda aynı resmî kaynak bilgisi diagnostics dışına taşınıp [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_page.dart) içinde ana prayer ayarları akışında doğrudan görünür hale getirilecek.
+- Böylece kullanıcı diagnostics ekranına girmeden de seçili ülke/bölge profili ve kurumsal kaynağı ana ayarlar ekranında görebilecek.

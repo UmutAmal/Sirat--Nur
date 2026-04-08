@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
+import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/features/settings/diagnostics_page.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 
@@ -107,8 +108,70 @@ void main() {
           ),
         ),
       );
+      expect(
+        base,
+        isNot(
+          DiagnosticsRowsDependencies.fromState(
+            SettingsState(
+              isDarkMode: true,
+              languageCode: 'en',
+              locationName: 'Istanbul',
+              calculationMethod: mwlPrayerMethod,
+            ),
+            const Locale('en'),
+          ),
+        ),
+      );
+      expect(
+        base,
+        isNot(
+          DiagnosticsRowsDependencies.fromState(
+            SettingsState(
+              isDarkMode: true,
+              languageCode: 'en',
+              locationName: 'Istanbul',
+              madhab: shafiiMadhab,
+            ),
+            const Locale('en'),
+          ),
+        ),
+      );
     },
   );
+
+  test(
+    'resolvePrayerProfileValue renders official profile and madhab label',
+    () {
+      final profile = profileForMethod(
+        diyanetPrayerMethod,
+        madhab: hanafiMadhab,
+      );
+
+      expect(resolvePrayerProfileValue(profile), 'Diyanet / Hanafi');
+      expect(
+        resolvePrayerSourceValue(profile),
+        'Diyanet Isleri Baskanligi (https://namazvakitleri.diyanet.gov.tr)',
+      );
+      expect(isOfficialPrayerProfile(profile), isTrue);
+    },
+  );
+
+  test('resolvePrayerProfileValue flags custom profiles honestly', () {
+    final profile = profileForMethod(customPrayerMethod, madhab: jafariMadhab);
+
+    expect(
+      resolvePrayerProfileValue(profile, customProfileValue: "Ozel / Ja'fari"),
+      "Ozel / Ja'fari",
+    );
+    expect(
+      resolvePrayerSourceValue(
+        profile,
+        customSourceValue: 'Kurumsal kaynak yok',
+      ),
+      'Kurumsal kaynak yok',
+    );
+    expect(isOfficialPrayerProfile(profile), isFalse);
+  });
 
   test(
     'buildAudioDiagnosticsSnapshot measures required audio coverage honestly',

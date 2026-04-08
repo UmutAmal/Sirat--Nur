@@ -212,6 +212,17 @@
   "rerunSetup": "İlk kurulum sürecini yeniden başlatın.",
   "diagnostics": "Tanılama",
   "diagnosticsNotSet": "Ayarlanmadı",
+  "diagnosticsPrayerProfile": "Namaz Profili",
+  "diagnosticsPrayerSource": "Namaz Kurumu",
+  "diagnosticsPrayerCustomProfile": "Özel / {madhab}",
+  "@diagnosticsPrayerCustomProfile": {
+    "placeholders": {
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerCustomSource": "Kurumsal kaynak yok; manuel özel açı",
   "diagnosticsCloudDriven": "Bulut Tabanlı",
   "diagnosticsAdhanAudioAssets": "Ezan Ses Varlıkları",
   "diagnosticsUiAudioAssets": "Arayüz Ses Varlıkları",

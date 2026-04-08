@@ -237,6 +237,17 @@ String normalizeMadhab(String madhab) {
   }
 }
 
+String displayMadhabLabel(String madhab) {
+  switch (normalizeMadhab(madhab)) {
+    case shafiiMadhab:
+      return "Shafi'i";
+    case jafariMadhab:
+      return "Ja'fari";
+    default:
+      return normalizeMadhab(madhab);
+  }
+}
+
 PrayerCalculationProfile profileForMethod(String method, {String? madhab}) {
   final normalizedMethod = normalizeCalculationMethod(method);
   final normalizedMadhab = madhab == null ? null : normalizeMadhab(madhab);

@@ -657,6 +657,21 @@ class AppLocalizationsDe extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
+  String get diagnosticsPrayerProfile => 'Prayer Profile';
+
+  @override
+  String get diagnosticsPrayerSource => 'Prayer Authority';
+
+  @override
+  String diagnosticsPrayerCustomProfile(String madhab) {
+    return 'Custom / $madhab';
+  }
+
+  @override
+  String get diagnosticsPrayerCustomSource =>
+      'Manual custom angles (no institutional source)';
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

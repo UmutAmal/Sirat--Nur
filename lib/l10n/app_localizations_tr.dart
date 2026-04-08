@@ -655,6 +655,21 @@ class AppLocalizationsTr extends AppLocalizations {
   String get diagnosticsNotSet => 'Ayarlanmadı';
 
   @override
+  String get diagnosticsPrayerProfile => 'Namaz Profili';
+
+  @override
+  String get diagnosticsPrayerSource => 'Namaz Kurumu';
+
+  @override
+  String diagnosticsPrayerCustomProfile(String madhab) {
+    return 'Özel / $madhab';
+  }
+
+  @override
+  String get diagnosticsPrayerCustomSource =>
+      'Kurumsal kaynak yok; manuel özel açı';
+
+  @override
   String get diagnosticsCloudDriven => 'Bulut Tabanlı';
 
   @override
