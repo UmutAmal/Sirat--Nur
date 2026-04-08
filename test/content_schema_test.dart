@@ -30,7 +30,14 @@ void main() {
           contains('create table if not exists public.audio_files'),
         );
         expect(schema, contains('storage_path text'));
+        expect(schema, contains('surah_number smallint'));
         expect(schema, contains('juz_number smallint'));
+        expect(
+          schema,
+          contains(
+            'create unique index if not exists audio_files_quran_surah_unique_idx',
+          ),
+        );
         expect(schema, contains('verified_at timestamptz not null'));
       },
     );

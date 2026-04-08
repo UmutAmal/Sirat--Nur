@@ -1611,3 +1611,59 @@
 ### Sonraki Adım
 - Kabul edilen kaynak taramasında Sukun/nature için resmi katalog doğrulanamadı; bilgi eksikliği var, uydurma seed üretilmedi.
 - Sıradaki uygulanabilir yüksek risk, doğrulanmış official source setiyle `audio_files` içine gerçek adhan/quran/asma audio seed katmanı üretmek.
+
+## 2026-04-08 TUR-41 — Seed Verified Quran Audio And Remove Synthetic Bucket URLs
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\content_schema.sql](A:/Way%20of%20Allah/sirat_i_nur/content_schema.sql) içine `audio_files.surah_number` kolonu ve `type + reciter + surah_number` unique index’i eklendi; `audio_files` tablosu artık sure bazlı Kur'an seslerini yapısal olarak taşıyabiliyor.
+- [A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_seed.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/generate_quran_audio_seed.dart) eklendi; resmi Quran.com `chapter_recitations` endpointlerinden `alafasy`, `husary`, `abdul_basit_murattal`, `abdul_basit_mujawwad`, `sudais`, `shuraim` için 6x114 verified audio satırı üretiyor.
+- Bu araç çalıştırılarak [A:\Way of Allah\sirat_i_nur\content_seed_quran_audio.sql](A:/Way%20of%20Allah/sirat_i_nur/content_seed_quran_audio.sql) üretildi.
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/offline_audio_service.dart) içindeki `OfflineReciters.getSurahUrl` ve `getAllSurahUrls` artık sentetik Supabase bucket URL üretmiyor; doğrudan `audio_files` tablosundan verified `quran_surah` satırlarını okuyor.
+- Aynı dosyada `resolveCloudQuranSurahUrls`, `resolvePlayableCloudAudioUrl` ve `missingQuranSurahAudioSources` eklendi; incomplete/malformed cloud satırları filtreleniyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/surah_reading_page.dart) artık tam URL adaylarını async çözüyor; bucket taban URL + `/$surah.mp3` birleştirme kaldırıldı.
+- [A:\Way of Allah\sirat_i_nur\lib\features\downloads\offline_downloads_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/downloads/offline_downloads_page.dart) verified cloud katalog yoksa veya 114 sure tamam değilse dürüst hata veriyor; sentetik veya eksik paket üstünden toplu indirme başlatmıyor.
+- Aynı ekrandaki belirgin hardcoded metinler localization zincirine taşındı; yeni anahtarlar tüm `app_*.arb` dosyalarına ve generated l10n dosyalarına yayıldı.
+- Yeni testler eklendi: [A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/offline_audio_service_test.dart) ve [A:\Way of Allah\sirat_i_nur\test\quran_audio_seed_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/quran_audio_seed_test.dart).
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/offline_audio_service.dart) önceki durumda `sirat_assets/audio/{reciter}_{surah}.mp3` URL’lerini veritabanından bağımsız olarak üretiyordu; bu, verified seed yokken sahte link anlamına geliyordu.
+- [A:\Way of Allah\sirat_i_nur\lib\features\downloads\offline_downloads_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/downloads/offline_downloads_page.dart) bu sentetik URL’lerle toplu indirme başlatabildiği için kullanıcıya yanlış “hazır katalog” sinyali verebiliyordu.
+- `audio_files` tablosu Sukun için yeterliydi ancak Kur'an sure seslerinde `surah_number` olmadığı için runtime ve seed katmanı güvenilir şekilde birleşemiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\content_schema.sql`
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_audio.sql`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\downloads\offline_downloads_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\quran_audio_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kur'an ses akışı artık doğrulanmış resmi katalog olmadan sentetik link üretmiyor.
+- Sure oynatma ve çevrimdışı indirme aynı `audio_files` source-of-truth üstünden çalışıyor.
+- `content_seed_quran_audio.sql` sayesinde verified ses kayıtları projeye taşındı; kullanıcı cihazına indirilen MP3’ler artık resmi Quran.com chapter recitation URL’lerinden geliyor.
+- Offline download UI incomplete cloud seed durumunu dürüst şekilde raporluyor.
+
+### Test Sonucu
+- `dart run tool/generate_quran_audio_seed.dart` → PASS (`684` audio insert)
+- `flutter test test/offline_audio_service_test.dart` → PASS (`2/2`)
+- `flutter test test/quran_audio_seed_test.dart` → PASS (`2/2`)
+- `flutter test test/content_schema_test.dart` → PASS (`2/2`)
+- `flutter test test/features/downloads/offline_downloads_test.dart` → PASS (`1/1`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`117/117`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Synthetic Supabase bucket URLs masking missing Quran audio seed: `8/25 → 2/25`
+- Offline downloads starting from incomplete or unverifiable Quran audio catalog: `7/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki yüksek etkili açık alan, diagnostics ekranının cloud-first Kur'an audio completeness bilgisini de raporlaması; şu an ses sağlığı satırları daha çok local asset odaklı.
+- Ardından accepted sources uygunsa adhan ve doğrulanabilir Asma audio seed katmanı `audio_files` üstünde genişletilecek; resmi kaynak yoksa bilgi eksikliği dürüstçe korunacak.

@@ -8,6 +8,67 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 typedef SurahDownloadProgress =
     void Function(double progress, int surahNumber, int totalSurahs);
 
+String? resolvePlayableCloudAudioUrl(Map<String, dynamic> row) {
+  for (final key in const ['url']) {
+    final value = row[key]?.toString().trim();
+    if (value != null && value.isNotEmpty) {
+      return value;
+    }
+  }
+
+  return null;
+}
+
+Map<int, String> resolveCloudQuranSurahUrls(
+  List<Map<String, dynamic>> rows, {
+  required String reciterId,
+}) {
+  final urls = <int, String>{};
+
+  for (final row in rows) {
+    final type = row['type']?.toString().trim().toLowerCase();
+    if (type != 'quran_surah') {
+      continue;
+    }
+
+    final reciter = row['reciter']?.toString().trim();
+    if (reciter != reciterId) {
+      continue;
+    }
+
+    final surahNumber = switch (row['surah_number']) {
+      int value => value,
+      num value => value.toInt(),
+      String value => int.tryParse(value),
+      _ => null,
+    };
+    if (surahNumber == null || surahNumber < 1 || surahNumber > 114) {
+      continue;
+    }
+
+    final url = resolvePlayableCloudAudioUrl(row);
+    if (url == null) {
+      continue;
+    }
+
+    urls.putIfAbsent(surahNumber, () => url);
+  }
+
+  return Map.unmodifiable(urls);
+}
+
+List<int> missingQuranSurahAudioSources(Map<int, String> surahUrls) {
+  final missing = <int>[];
+
+  for (var surahNumber = 1; surahNumber <= 114; surahNumber++) {
+    if (!surahUrls.containsKey(surahNumber)) {
+      missing.add(surahNumber);
+    }
+  }
+
+  return List.unmodifiable(missing);
+}
+
 class OfflineAudioService {
   static Future<Directory> get _audioDir async {
     final appDir = await getApplicationDocumentsDirectory();
@@ -24,7 +85,10 @@ class OfflineAudioService {
     return '${dir.path}/${reciterId}_$paddedSurah.mp3';
   }
 
-  static Future<bool> isAudioDownloaded(int surahNumber, String reciterId) async {
+  static Future<bool> isAudioDownloaded(
+    int surahNumber,
+    String reciterId,
+  ) async {
     final path = await getAudioPath(surahNumber, reciterId);
     return File(path).exists();
   }
@@ -150,44 +214,55 @@ class OfflineAudioService {
 }
 
 class OfflineReciters {
-  // We no longer store third-party URLs. All audio is fetched from our own Supabase Storage bucket.
   static const Map<String, Map<String, String>> reciters = {
-    'alafasy': {
-      'name': 'Mishary Rashid Alafasy',
-    },
-    'husary': {
-      'name': 'Mahmoud Khalil Al-Husary',
-    },
-    'abdul_basit_murattal': {
-      'name': 'Abdul Basit (Murattal)',
-    },
-    'abdul_basit_mujawwad': {
-      'name': 'Abdul Basit (Mujawwad)',
-    },
-    'shuraim': {
-      'name': 'Saoud Al-Shuraim',
-    },
-    'sudais': {
-      'name': 'Abdul Rahman Al-Sudais',
-    },
+    'alafasy': {'name': 'Mishary Rashid Alafasy'},
+    'husary': {'name': 'Mahmoud Khalil Al-Husary'},
+    'abdul_basit_murattal': {'name': 'Abdul Basit (Murattal)'},
+    'abdul_basit_mujawwad': {'name': 'Abdul Basit (Mujawwad)'},
+    'shuraim': {'name': 'Saoud Al-Shuraim'},
+    'sudais': {'name': 'Abdul Rahman Al-Sudais'},
   };
 
-  static String getSurahUrl(String reciterId, int surahNumber) {
-    if (!reciters.containsKey(reciterId)) return '';
+  static Future<String?> getSurahUrl(String reciterId, int surahNumber) async {
+    if (!reciters.containsKey(reciterId)) return null;
 
-    final paddedSurah = surahNumber.toString().padLeft(3, '0');
-    // Generates a public URL pointing to the app's own Supabase bucket 'sirat_assets'.
-    // Requires the user to upload mp3 files to: sirat_assets/audio/{reciterId}_{surahNumber}.mp3
-    return Supabase.instance.client.storage
-        .from('sirat_assets')
-        .getPublicUrl('audio/${reciterId}_$paddedSurah.mp3');
+    try {
+      final row = await Supabase.instance.client
+          .from('audio_files')
+          .select('type, reciter, surah_number, url')
+          .eq('type', 'quran_surah')
+          .eq('reciter', reciterId)
+          .eq('surah_number', surahNumber)
+          .maybeSingle();
+      if (row == null) {
+        return null;
+      }
+
+      return resolvePlayableCloudAudioUrl(Map<String, dynamic>.from(row));
+    } catch (_) {
+      return null;
+    }
   }
 
-  static Map<int, String> getAllSurahUrls(String reciterId) {
-    final urls = <int, String>{};
-    for (var i = 1; i <= 114; i++) {
-      urls[i] = getSurahUrl(reciterId, i);
+  static Future<Map<int, String>> getAllSurahUrls(String reciterId) async {
+    if (!reciters.containsKey(reciterId)) {
+      return const {};
     }
-    return urls;
+
+    try {
+      final rows = await Supabase.instance.client
+          .from('audio_files')
+          .select('type, reciter, surah_number, url')
+          .eq('type', 'quran_surah')
+          .eq('reciter', reciterId)
+          .order('surah_number', ascending: true);
+
+      return resolveCloudQuranSurahUrls(
+        List<Map<String, dynamic>>.from(rows),
+        reciterId: reciterId,
+      );
+    } catch (_) {
+      return const {};
+    }
   }
 }

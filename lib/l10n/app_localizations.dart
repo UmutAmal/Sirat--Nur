@@ -2158,6 +2158,84 @@ abstract class AppLocalizations {
   /// **'All surahs already downloaded for this reciter.'**
   String get downloadCompleted;
 
+  /// No description provided for @offlineQuranAudioPacks.
+  ///
+  /// In en, this message translates to:
+  /// **'Offline Quran Audio Packs'**
+  String get offlineQuranAudioPacks;
+
+  /// No description provided for @storedOnDeviceMb.
+  ///
+  /// In en, this message translates to:
+  /// **'Stored on device: {size} MB'**
+  String storedOnDeviceMb(String size);
+
+  /// No description provided for @downloadedSurahProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'{downloaded} / {total} surahs downloaded'**
+  String downloadedSurahProgress(String downloaded, String total);
+
+  /// No description provided for @redownloadMissingRepair.
+  ///
+  /// In en, this message translates to:
+  /// **'Repair / Download Missing'**
+  String get redownloadMissingRepair;
+
+  /// No description provided for @downloadAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Download'**
+  String get downloadAction;
+
+  /// No description provided for @resumeDownload.
+  ///
+  /// In en, this message translates to:
+  /// **'Resume Download'**
+  String get resumeDownload;
+
+  /// No description provided for @deleteDownloadedFiles.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Downloaded Files'**
+  String get deleteDownloadedFiles;
+
+  /// No description provided for @downloadCancelling.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancelling...'**
+  String get downloadCancelling;
+
+  /// No description provided for @downloadCanceledForReciter.
+  ///
+  /// In en, this message translates to:
+  /// **'Download canceled for {reciter}.'**
+  String downloadCanceledForReciter(String reciter);
+
+  /// No description provided for @downloadFinishedForReciter.
+  ///
+  /// In en, this message translates to:
+  /// **'Download completed for {reciter}.'**
+  String downloadFinishedForReciter(String reciter);
+
+  /// No description provided for @deletedOfflineFilesForReciter.
+  ///
+  /// In en, this message translates to:
+  /// **'Deleted offline files for {reciter}.'**
+  String deletedOfflineFilesForReciter(String reciter);
+
+  /// No description provided for @quranAudioSourcesUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified Quran audio sources are unavailable right now.'**
+  String get quranAudioSourcesUnavailable;
+
+  /// No description provided for @quranAudioSourcesIncomplete.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.'**
+  String quranAudioSourcesIncomplete(String available, String total);
+
   /// No description provided for @chatbotHint.
   ///
   /// In en, this message translates to:

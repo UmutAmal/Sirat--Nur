@@ -348,6 +348,67 @@
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "@storedOnDeviceMb": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "@downloadedSurahProgress": {
+    "placeholders": {
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "redownloadMissingRepair": "Repair / Download Missing",
+  "downloadAction": "Download",
+  "resumeDownload": "Resume Download",
+  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadCancelling": "Cancelling...",
+  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "@downloadCanceledForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      }
+    }
+  },
+  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "@downloadFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      }
+    }
+  },
+  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "@deletedOfflineFilesForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      }
+    }
+  },
+  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
+  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "@quranAudioSourcesIncomplete": {
+    "placeholders": {
+      "available": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
   "chatbotHint": "Ask a question...",
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "Nature & Qur'an Mixer",

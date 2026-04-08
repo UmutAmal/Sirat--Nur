@@ -108,6 +108,7 @@ create table if not exists public.audio_files (
   title text not null,
   url text,
   storage_path text,
+  surah_number smallint,
   duration_seconds integer,
   reciter text,
   language text,
@@ -116,8 +117,14 @@ create table if not exists public.audio_files (
   created_at timestamptz not null default timezone('utc', now())
 );
 
+alter table public.audio_files
+add column if not exists surah_number smallint;
+
 create index if not exists audio_files_type_idx
 on public.audio_files (type);
+
+create unique index if not exists audio_files_quran_surah_unique_idx
+on public.audio_files (type, reciter, surah_number);
 
 alter table public.audio_files enable row level security;
 

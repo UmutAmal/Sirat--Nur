@@ -115,7 +115,6 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     if (!mounted) return;
     setState(() => _isAudioLoading = true);
 
-    final surahCode = widget.surahNumber.toString().padLeft(3, '0');
     final normalizedVoice = audioVoice.toLowerCase();
 
     try {
@@ -132,9 +131,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
         }
       }
 
-      final candidates = _audioCandidatesForVoice(
-        normalizedVoice,
-      ).map((baseUrl) => '$baseUrl/$surahCode.mp3');
+      final candidates = await _audioCandidatesForVoice(normalizedVoice);
 
       Object? lastError;
       for (final url in candidates) {
@@ -182,9 +179,13 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     return 'alafasy';
   }
 
-  List<String> _audioCandidatesForVoice(String normalizedVoice) {
+  Future<List<String>> _audioCandidatesForVoice(String normalizedVoice) async {
     final reciterId = _reciterIdForVoice(normalizedVoice) ?? 'alafasy';
-    return [OfflineReciters.getSurahUrl(reciterId, widget.surahNumber)];
+    final url = await OfflineReciters.getSurahUrl(
+      reciterId,
+      widget.surahNumber,
+    );
+    return [if (url != null && url.isNotEmpty) url];
   }
 
   Future<void> _shareAyah({
@@ -228,9 +229,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         duration: const Duration(milliseconds: 900),
-        content: Text(
-          alreadySaved ? l10n.removeBookmark : l10n.addBookmark,
-        ),
+        content: Text(alreadySaved ? l10n.removeBookmark : l10n.addBookmark),
       ),
     );
   }

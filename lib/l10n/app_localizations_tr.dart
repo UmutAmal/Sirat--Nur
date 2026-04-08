@@ -904,6 +904,58 @@ class AppLocalizationsTr extends AppLocalizations {
   String get downloadCompleted => 'Bu hafız için tüm sureler zaten indirildi.';
 
   @override
+  String get offlineQuranAudioPacks => 'Çevrimdışı Kur\'an Ses Paketleri';
+
+  @override
+  String storedOnDeviceMb(String size) {
+    return 'Cihazda depolanan: $size MB';
+  }
+
+  @override
+  String downloadedSurahProgress(String downloaded, String total) {
+    return '$total sureden $downloaded indirildi';
+  }
+
+  @override
+  String get redownloadMissingRepair => 'Eksikleri Onar / İndir';
+
+  @override
+  String get downloadAction => 'İndir';
+
+  @override
+  String get resumeDownload => 'İndirmeye Devam Et';
+
+  @override
+  String get deleteDownloadedFiles => 'İndirilen Dosyaları Sil';
+
+  @override
+  String get downloadCancelling => 'İptal ediliyor...';
+
+  @override
+  String downloadCanceledForReciter(String reciter) {
+    return '$reciter için indirme iptal edildi.';
+  }
+
+  @override
+  String downloadFinishedForReciter(String reciter) {
+    return '$reciter için indirme tamamlandı.';
+  }
+
+  @override
+  String deletedOfflineFilesForReciter(String reciter) {
+    return '$reciter için çevrimdışı dosyalar silindi.';
+  }
+
+  @override
+  String get quranAudioSourcesUnavailable =>
+      'Doğrulanmış Kur\'an ses kaynakları şu anda kullanılamıyor.';
+
+  @override
+  String quranAudioSourcesIncomplete(String available, String total) {
+    return 'Doğrulanmış Kur\'an ses paketi eksik ($available/$total). Cloud seed\'i yenileyip tekrar deneyin.';
+  }
+
+  @override
   String get chatbotHint => 'Bir soru sorun...';
 
   @override

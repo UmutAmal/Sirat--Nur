@@ -348,6 +348,67 @@
     }
   },
   "downloadCompleted": "Bu hafız için tüm sureler zaten indirildi.",
+  "offlineQuranAudioPacks": "Çevrimdışı Kur'an Ses Paketleri",
+  "storedOnDeviceMb": "Cihazda depolanan: {size} MB",
+  "@storedOnDeviceMb": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "downloadedSurahProgress": "{total} sureden {downloaded} indirildi",
+  "@downloadedSurahProgress": {
+    "placeholders": {
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "redownloadMissingRepair": "Eksikleri Onar / İndir",
+  "downloadAction": "İndir",
+  "resumeDownload": "İndirmeye Devam Et",
+  "deleteDownloadedFiles": "İndirilen Dosyaları Sil",
+  "downloadCancelling": "İptal ediliyor...",
+  "downloadCanceledForReciter": "{reciter} için indirme iptal edildi.",
+  "@downloadCanceledForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      }
+    }
+  },
+  "downloadFinishedForReciter": "{reciter} için indirme tamamlandı.",
+  "@downloadFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      }
+    }
+  },
+  "deletedOfflineFilesForReciter": "{reciter} için çevrimdışı dosyalar silindi.",
+  "@deletedOfflineFilesForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      }
+    }
+  },
+  "quranAudioSourcesUnavailable": "Doğrulanmış Kur'an ses kaynakları şu anda kullanılamıyor.",
+  "quranAudioSourcesIncomplete": "Doğrulanmış Kur'an ses paketi eksik ({available}/{total}). Cloud seed'i yenileyip tekrar deneyin.",
+  "@quranAudioSourcesIncomplete": {
+    "placeholders": {
+      "available": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
   "chatbotHint": "Bir soru sorun...",
   "chatbotThinking": "Düşünüyor...",
   "sukunMixerSubtitle": "Doğa ve Kur'an Mikseri",

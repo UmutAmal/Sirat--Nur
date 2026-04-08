@@ -902,6 +902,58 @@ class AppLocalizationsLi extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
+  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+
+  @override
+  String storedOnDeviceMb(String size) {
+    return 'Stored on device: $size MB';
+  }
+
+  @override
+  String downloadedSurahProgress(String downloaded, String total) {
+    return '$downloaded / $total surahs downloaded';
+  }
+
+  @override
+  String get redownloadMissingRepair => 'Repair / Download Missing';
+
+  @override
+  String get downloadAction => 'Download';
+
+  @override
+  String get resumeDownload => 'Resume Download';
+
+  @override
+  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+
+  @override
+  String get downloadCancelling => 'Cancelling...';
+
+  @override
+  String downloadCanceledForReciter(String reciter) {
+    return 'Download canceled for $reciter.';
+  }
+
+  @override
+  String downloadFinishedForReciter(String reciter) {
+    return 'Download completed for $reciter.';
+  }
+
+  @override
+  String deletedOfflineFilesForReciter(String reciter) {
+    return 'Deleted offline files for $reciter.';
+  }
+
+  @override
+  String get quranAudioSourcesUnavailable =>
+      'Verified Quran audio sources are unavailable right now.';
+
+  @override
+  String quranAudioSourcesIncomplete(String available, String total) {
+    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+  }
+
+  @override
   String get chatbotHint => 'Ask a question...';
 
   @override
