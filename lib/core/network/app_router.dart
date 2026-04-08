@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/features/common/main_skeleton.dart';
 import 'package:sirat_i_nur/features/home/home_page.dart';
@@ -102,6 +103,31 @@ String? resolveOnboardingRedirect(
   return null;
 }
 
+bool _isDisabledHadithRoute(String uriPath) {
+  if (hasVerifiedHadithDataset) {
+    return false;
+  }
+
+  return uriPath == '/library/search' || uriPath.startsWith('/library/hadith/');
+}
+
+String? resolveAppRedirect(
+  SharedPreferences prefs,
+  String matchedLocation,
+  String uriPath,
+) {
+  final onboardingRedirect = resolveOnboardingRedirect(prefs, matchedLocation);
+  if (onboardingRedirect != null) {
+    return onboardingRedirect;
+  }
+
+  if (_isDisabledHadithRoute(uriPath)) {
+    return '/library';
+  }
+
+  return null;
+}
+
 final appRouterProvider = Provider<GoRouter>((ref) {
   final prefs = ref.watch(sharedPreferencesProvider);
 
@@ -110,7 +136,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
     initialLocation: resolveInitialLocation(prefs),
     errorBuilder: (context, state) => AppErrorPage(error: state.error),
     redirect: (context, state) =>
-        resolveOnboardingRedirect(prefs, state.matchedLocation),
+        resolveAppRedirect(prefs, state.matchedLocation, state.uri.path),
     routes: [
       GoRoute(
         path: '/onboarding',

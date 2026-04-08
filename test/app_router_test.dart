@@ -30,5 +30,31 @@ void main() {
         expect(resolveOnboardingRedirect(prefs, '/onboarding'), '/home');
       },
     );
+
+    test('blocks hadith routes when verified dataset is unavailable', () async {
+      SharedPreferences.setMockInitialValues({'isFirstLaunch': false});
+      final prefs = await SharedPreferences.getInstance();
+
+      expect(resolveAppRedirect(prefs, '/library/search', '/library/search'), '/library');
+      expect(
+        resolveAppRedirect(
+          prefs,
+          '/library/hadith/:id',
+          '/library/hadith/bukhari',
+        ),
+        '/library',
+      );
+      expect(resolveAppRedirect(prefs, '/library', '/library'), isNull);
+    });
+
+    test('keeps onboarding redirect ahead of hadith route blocking', () async {
+      SharedPreferences.setMockInitialValues({});
+      final prefs = await SharedPreferences.getInstance();
+
+      expect(
+        resolveAppRedirect(prefs, '/library/search', '/library/search'),
+        '/onboarding',
+      );
+    });
   });
 }

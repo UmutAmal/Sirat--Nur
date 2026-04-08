@@ -2695,3 +2695,36 @@
 ### Sonraki Adım
 - Sıradaki turda hadith unavailable kopyasında İngilizce fallback kalan rare locale’ler ölçülüp kapatılacak.
 - Ardından production yüzeyinde kullanılmayan hadith network kodu tamamen retire edilebiliyor mu denetlenecek.
+
+## 2026-04-09 TUR-69 — Block Unverified Hadith Routes At Router Level
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/network/app_router.dart) içine `resolveAppRedirect` ve hadith route guard’ı eklendi.
+- `/library/search` ve `/library/hadith/:id` yolları, `hasVerifiedHadithDataset = false` durumunda router seviyesinde `/library` ekranına geri yönlendirilecek şekilde kapatıldı.
+- [A:\Way of Allah\sirat_i_nur\test\app_router_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/app_router_test.dart) iki yeni regresyon testiyle hem hadith route bloklamasını hem de onboarding redirect’in önceliğini kilitledi.
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_list_page.dart) ve [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_search_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_search_page.dart) dürüst unavailable-state gösterse de [A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/network/app_router.dart) deep-link veya manuel route erişimini hâlâ açık bırakıyordu.
+- Bu durum production’da doğrulanmamış hadith feature’ının halen kullanılabilir bir yüzeyi varmış izlenimi veriyordu.
+- Kök sebep, hadith dataset doğrulama sözleşmesinin router katmanına kadar taşınmamış olmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart`
+- `A:\Way of Allah\sirat_i_nur\test\app_router_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Doğrulanmamış hadith route’ları artık yalnızca sayfa içinde hata veren yüzeyler değil; router seviyesinde production akışından çıkarıldı.
+- Uygulama dışından gelen derin link veya manuel navigation denemeleri kullanıcıyı tekrar library köküne döndürüyor.
+- Onboarding guard önceliği korunarak yeni route koruması sessiz regresyon üretmeden eklendi.
+
+### Test Sonucu
+- `flutter test test/app_router_test.dart` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`178/178`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Unverified hadith routes still reachable through deep-link/manual navigation: `9/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki turda rare-locale hadith unavailable kopyasında İngilizce fallback kalan locale’ler translation pipeline açısından sınıflandırılacak.
+- Ardından doğrulanmış hadith dataset gelene kadar production’da kalan hadith network kodu tamamen retire edilebiliyor mu denetlenecek.
