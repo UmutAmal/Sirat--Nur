@@ -919,6 +919,25 @@ class AppLocalizationsTr extends AppLocalizations {
   String get sukunNatureLabel => 'Sükun (Doğa)';
 
   @override
+  String get sukunRainOfMercy => 'Rahmet Yağmuru';
+
+  @override
+  String get sukunGardenOfPeace => 'Huzur Bahçesi';
+
+  @override
+  String get sukunMidnightCalm => 'Gece Sükuneti';
+
+  @override
+  String get sukunOceanTawheed => 'Tevhid Okyanusu';
+
+  @override
+  String get sukunUnavailableTitle => 'Ses manzaraları kullanılamıyor';
+
+  @override
+  String get sukunUnavailableBody =>
+      'Bu build henüz gerekli Sükun ses manzarası asset\'lerini içermiyor.';
+
+  @override
   String get prayerCompletion => 'Namaz Tamamlama';
 
   @override

@@ -20,7 +20,8 @@ class NoopSovereignAudioEngine implements SovereignAudioEngine {
 }
 
 class FakePageAudioService extends AudioSovereigntyService {
-  FakePageAudioService(this.playResult) : super(engine: NoopSovereignAudioEngine());
+  FakePageAudioService(this.playResult, {super.sukunAssets})
+    : super(engine: NoopSovereignAudioEngine());
 
   final bool playResult;
   String? requestedType;
@@ -33,7 +34,7 @@ class FakePageAudioService extends AudioSovereigntyService {
 }
 
 void main() {
-  testWidgets('shows a localized error instead of false success when playback fails', (
+  testWidgets('shows an honest unavailable state when no sukun mappings exist', (
     tester,
   ) async {
     await tester.binding.setSurfaceSize(const Size(800, 1200));
@@ -47,6 +48,43 @@ void main() {
           audioSovereigntyServiceProvider.overrideWithValue(service),
         ],
         child: MaterialApp(
+          locale: const Locale('en'),
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: const SukunAudioPage(),
+        ),
+      ),
+    );
+
+    expect(find.text('Soundscapes unavailable'), findsOneWidget);
+    expect(
+      find.text(
+        'This build does not include the required Sukun soundscape assets yet.',
+      ),
+      findsOneWidget,
+    );
+    expect(find.text('Rain of Mercy'), findsNothing);
+    expect(service.requestedType, isNull);
+  });
+
+  testWidgets('shows a localized playback error when a mapped sound fails', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(800, 1200));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    final service = FakePageAudioService(
+      false,
+      sukunAssets: const {'rain': 'assets/audio/ui/notification.wav'},
+    );
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          audioSovereigntyServiceProvider.overrideWithValue(service),
+        ],
+        child: MaterialApp(
+          locale: const Locale('en'),
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
           home: const SukunAudioPage(),
@@ -58,7 +96,7 @@ void main() {
     await tester.pump();
 
     expect(service.requestedType, 'rain');
-    expect(find.text('Error'), findsOneWidget);
+    expect(find.text('Audio playback failed'), findsOneWidget);
     expect(find.textContaining('Now playing:'), findsNothing);
   });
 }

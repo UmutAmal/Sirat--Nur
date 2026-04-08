@@ -2188,6 +2188,42 @@ abstract class AppLocalizations {
   /// **'Sukun (Nature)'**
   String get sukunNatureLabel;
 
+  /// No description provided for @sukunRainOfMercy.
+  ///
+  /// In en, this message translates to:
+  /// **'Rain of Mercy'**
+  String get sukunRainOfMercy;
+
+  /// No description provided for @sukunGardenOfPeace.
+  ///
+  /// In en, this message translates to:
+  /// **'Garden of Peace'**
+  String get sukunGardenOfPeace;
+
+  /// No description provided for @sukunMidnightCalm.
+  ///
+  /// In en, this message translates to:
+  /// **'Midnight Calm'**
+  String get sukunMidnightCalm;
+
+  /// No description provided for @sukunOceanTawheed.
+  ///
+  /// In en, this message translates to:
+  /// **'Ocean Tawheed'**
+  String get sukunOceanTawheed;
+
+  /// No description provided for @sukunUnavailableTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Soundscapes unavailable'**
+  String get sukunUnavailableTitle;
+
+  /// No description provided for @sukunUnavailableBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This build does not include the required Sukun soundscape assets yet.'**
+  String get sukunUnavailableBody;
+
   /// No description provided for @prayerCompletion.
   ///
   /// In en, this message translates to:

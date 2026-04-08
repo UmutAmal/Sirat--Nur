@@ -917,6 +917,25 @@ class AppLocalizationsPa extends AppLocalizations {
   String get sukunNatureLabel => 'Sukun (Nature)';
 
   @override
+  String get sukunRainOfMercy => 'Rain of Mercy';
+
+  @override
+  String get sukunGardenOfPeace => 'Garden of Peace';
+
+  @override
+  String get sukunMidnightCalm => 'Midnight Calm';
+
+  @override
+  String get sukunOceanTawheed => 'Ocean Tawheed';
+
+  @override
+  String get sukunUnavailableTitle => 'Soundscapes unavailable';
+
+  @override
+  String get sukunUnavailableBody =>
+      'This build does not include the required Sukun soundscape assets yet.';
+
+  @override
   String get prayerCompletion => 'Prayer Completion';
 
   @override

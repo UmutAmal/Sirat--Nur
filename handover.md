@@ -1411,3 +1411,44 @@
 ### Sonraki Adım
 - [A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/sukun_audio_page.dart) içindeki hardcoded başlık ve ses isimlerini localization zincirine taşı.
 - Aynı turda boş Sukun mapping için kullanıcıya diagnostics ile tutarlı, dürüst bir empty-state/disabled-state yüzeyi oluştur.
+
+## 2026-04-08 TUR-36 — Localize And Disable Empty Sukun Soundscapes
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/sukun_audio_page.dart) içindeki hardcoded başlıklar kaldırıldı; sayfa artık `sukunAudioTitle`, `sukunMixerSubtitle`, `quran`, `audioPlayFailed` ve yeni soundscape adlarını kullanıyor.
+- Aynı sayfa, `configuredSukunTypes` boşsa dürüst bir unavailable-state gösteriyor ve kart grid’ini gizliyor.
+- Mapping varsa ama playback başarısızsa snackbar artık generic `error` yerine `audioPlayFailed` gösteriyor.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) içine Sukun ses adları ve unavailable-state anahtarları eklendi.
+- `dart run tool/sync_arb_keys.dart` ve `flutter gen-l10n` çalıştırılarak tüm `app_*.arb` ve generated localization dosyaları senkronlandı.
+- [A:\Way of Allah\sirat_i_nur\test\sukun_audio_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/sukun_audio_page_test.dart) unavailable-state ve mapped-failure senaryoları için genişletildi.
+
+### Neden Yapıldı
+- Sukun ekranı kullanıcıya tam bir ses manzarası feature’ı gösteriyordu ancak provider varsayılanında hiçbir mapping yoktu.
+- Bu durumda ekran hem İngilizce hardcoded metin taşıyor hem de feature availability bilgisini dürüst biçimde göstermiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\sukun_audio_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Sukun sayfası artık boş mapping varken dürüst unavailable-state gösteriyor.
+- Ses adı ve başlık yüzeyi localization zincirine girdi.
+- Mapping var ama playback yoksa kullanıcı artık daha doğru bir hata mesajı görüyor.
+
+### Test Sonucu
+- `flutter test test/sukun_audio_page_test.dart` → PASS (`2/2`)
+- `flutter test test/arb_coverage_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`101/101`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Hardcoded Sukun UI strings bypassing l10n: `6/25 → 1/25`
+- Empty Sukun mapping still presenting as ready-to-use feature: `7/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki yüksek sinyalli açık alan, Sukun zincirinin gerçekten asset-backed hale getirilmesi veya library girişinde availability bilgisiyle koşullu gösterim sağlanması.

@@ -28,6 +28,10 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
   Widget build(BuildContext context) {
     final audio = ref.watch(audioSovereigntyServiceProvider);
     final l10n = AppLocalizations.of(context)!;
+    final soundOptions = _buildSoundOptions(l10n);
+    final availableSoundTypes = audio.configuredSukunTypes
+        .where(expectedSukunSoundTypes.contains)
+        .toSet();
 
     return Scaffold(
       backgroundColor: Colors.black,
@@ -54,12 +58,12 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
                 expandedHeight: 200,
                 flexibleSpace: FlexibleSpaceBar(
                   centerTitle: true,
-                  title: const Text(
-                    'SUKUN SOUNDSCAPES',
-                    style: TextStyle(
+                  title: Text(
+                    l10n.sukunAudioTitle,
+                    style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      letterSpacing: 4,
+                      letterSpacing: 2,
                     ),
                   ),
                 ),
@@ -70,7 +74,13 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
                   delegate: SliverChildListDelegate([
                     _buildMixerSection(context, audio, l10n),
                     const SizedBox(height: 30),
-                    _buildSoundGrid(context, audio, l10n),
+                    _buildSoundGrid(
+                      context,
+                      audio,
+                      l10n,
+                      soundOptions,
+                      availableSoundTypes,
+                    ),
                   ]),
                 ),
               ),
@@ -90,9 +100,9 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
       padding: const EdgeInsets.all(24),
       child: Column(
         children: [
-          const Text(
-            'DIVINE HARMONY MIXER',
-            style: TextStyle(
+          Text(
+            l10n.sukunMixerSubtitle,
+            style: const TextStyle(
               color: Color(0xFFFFD700),
               fontSize: 12,
               fontWeight: FontWeight.bold,
@@ -100,7 +110,7 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
           ),
           const SizedBox(height: 20),
           _buildSlider(
-            label: 'Qur\'an',
+            label: l10n.quran,
             value: _quranVolume,
             onChanged: (value) {
               setState(() => _quranVolume = value);
@@ -140,18 +150,40 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
     );
   }
 
-
   Widget _buildSoundGrid(
     BuildContext context,
     AudioSovereigntyService service,
     AppLocalizations l10n,
+    List<_SukunSoundOption> sounds,
+    Set<String> availableSoundTypes,
   ) {
-    final sounds = [
-      {'name': 'Rain of Mercy', 'icon': Icons.water_drop, 'type': 'rain'},
-      {'name': 'Garden of Peace', 'icon': Icons.park, 'type': 'forest'},
-      {'name': 'Midnight Calm', 'icon': Icons.nightlight_round, 'type': 'night'},
-      {'name': 'Ocean Tawheed', 'icon': Icons.waves, 'type': 'ocean'},
-    ];
+    if (availableSoundTypes.isEmpty) {
+      return PremiumCard(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              l10n.sukunUnavailableTitle,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              l10n.sukunUnavailableBody,
+              style: const TextStyle(
+                color: Colors.white70,
+                fontSize: 14,
+                height: 1.4,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
 
     return GridView.builder(
       shrinkWrap: true,
@@ -164,41 +196,46 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
       ),
       itemCount: sounds.length,
       itemBuilder: (context, index) {
-        final name = sounds[index]['name']! as String;
-        final icon = sounds[index]['icon']! as IconData;
-        final type = sounds[index]['type']! as String;
-        final isSelected = _selectedSound == type;
+        final sound = sounds[index];
+        final isSelected = _selectedSound == sound.type;
+        final isAvailable = availableSoundTypes.contains(sound.type);
 
         return PremiumCard(
-          onTap: () async {
-            final played = await service.playSukun(type);
-            if (!context.mounted) return;
+          onTap: !isAvailable
+              ? null
+              : () async {
+                  final played = await service.playSukun(sound.type);
+                  if (!context.mounted) return;
 
-            if (!played) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  duration: const Duration(milliseconds: 900),
-                  content: Text(l10n.error),
-                ),
-              );
-              return;
-            }
+                  if (!played) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        duration: const Duration(milliseconds: 900),
+                        content: Text(l10n.audioPlayFailed),
+                      ),
+                    );
+                    return;
+                  }
 
-            setState(() => _selectedSound = type);
-          },
+                  setState(() => _selectedSound = sound.type);
+                },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(
-                icon,
-                color: isSelected ? Colors.white : const Color(0xFFFFD700),
+                sound.icon,
+                color: !isAvailable
+                    ? Colors.white24
+                    : isSelected
+                    ? Colors.white
+                    : const Color(0xFFFFD700),
                 size: 32,
               ),
               const SizedBox(height: 12),
               Text(
-                name,
+                sound.name,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: isAvailable ? Colors.white : Colors.white38,
                   fontSize: 13,
                   fontWeight: isSelected ? FontWeight.w900 : FontWeight.bold,
                 ),
@@ -209,4 +246,41 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
       },
     );
   }
+
+  List<_SukunSoundOption> _buildSoundOptions(AppLocalizations l10n) {
+    return [
+      _SukunSoundOption(
+        name: l10n.sukunRainOfMercy,
+        icon: Icons.water_drop,
+        type: 'rain',
+      ),
+      _SukunSoundOption(
+        name: l10n.sukunGardenOfPeace,
+        icon: Icons.park,
+        type: 'forest',
+      ),
+      _SukunSoundOption(
+        name: l10n.sukunMidnightCalm,
+        icon: Icons.nightlight_round,
+        type: 'night',
+      ),
+      _SukunSoundOption(
+        name: l10n.sukunOceanTawheed,
+        icon: Icons.waves,
+        type: 'ocean',
+      ),
+    ];
+  }
+}
+
+class _SukunSoundOption {
+  final String name;
+  final IconData icon;
+  final String type;
+
+  const _SukunSoundOption({
+    required this.name,
+    required this.icon,
+    required this.type,
+  });
 }
