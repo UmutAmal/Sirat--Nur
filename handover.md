@@ -1107,3 +1107,52 @@
   - [A:\Way of Allah\sirat_i_nur\lib\features\quran\juz_reading_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/juz_reading_page.dart)
   - [A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/surah_reading_page.dart)
 - Bunun ardından verified seed uygulanmış Supabase tabloları üzerinden live content bootstrap ve offline fallback davranışı aynı repository altında birleştirilmeli.
+
+## 2026-04-08 TUR-29 — Prefer Cloud Quran Content With Bundled Structural Fallback
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\quran\providers\bundled_quran_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/providers/bundled_quran_provider.dart) genişletildi:
+  - `loadBundledQuranRows`
+  - `loadCloudQuranRows`
+  - `normalizeCloudQuranRows`
+  - `resolveQuranRows`
+- Aynı provider artık önce `quran_surahs` ve `quran_ayahs` tablolarından cloud veri çekiyor; dataset eksik, hatalı veya erişilemezse bundled asset fallback zincirine dönüyor.
+- Cloud dataset normalize edilirken uygulamanın beklediği JSON şekli korunuyor:
+  - sure metadata cloud’dan
+  - ayet metinleri ve çeviriler cloud’dan
+  - `juz` ve global ayet numarası gibi yapısal metadata mevcut bundled payload’dan
+- [A:\Way of Allah\sirat_i_nur\test\features\quran\providers\bundled_quran_provider_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/quran/providers/bundled_quran_provider_test.dart) genişletildi:
+  - cloud row -> reader payload normalize testi
+  - eksik cloud dataset fallback testi
+  - exception fallback testi
+
+### Neden Yapıldı
+- TUR-28 sonunda yaşayan tek Quran veri kaynağı [A:\Way of Allah\sirat_i_nur\lib\features\quran\providers\bundled_quran_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/providers/bundled_quran_provider.dart) idi; ancak provider hâlâ tamamen local asset okuyordu.
+- Repo içinde verified seed ve Supabase şeması hazır olmasına rağmen runtime tarafı bu veriyi kullanmıyordu; bu nedenle cloud-first mimari fiilen devreye girmemişti.
+- Aynı zamanda reader/juz ekranları `juz` gibi yapısal metadata beklediği için doğrudan cloud tablo şekline geçmek kırık call-chain üretebilirdi. Bu turda minimum diff ile cloud içerik tercih edilip eksik yapısal metadata bundled kaynaktan tamamlandı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\providers\bundled_quran_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\providers\bundled_quran_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran ekranları artık mümkün olduğunda Supabase’teki güncel/verified sure ve ayet içeriğini tüketiyor.
+- Cloud veri eksikse veya sorgu hata verirse kullanıcı tarafında kırık durum oluşmadan bundled asset zinciri çalışmaya devam ediyor.
+- `QuranPage`, `JuzReadingPage` ve `SurahReadingPage` için aynı payload shape korunduğu için UI katmanında ek diff gerekmedi.
+- Bundled asset bağımlılığı tamamen kalkmadı; `juz` ve bazı structural alanlar hâlâ local payload’dan geliyor. Bu bağımlılık bir sonraki tur için açık şekilde izole edilmiş durumda.
+
+### Test Sonucu
+- `flutter test test/features/quran/providers/bundled_quran_provider_test.dart` → PASS (`8/8`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`91/91`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Quran runtime still ignoring verified cloud content: `8/25 → 3/25`
+- Reader/juz flow breaking during cloud migration: `7/25 → 3/25`
+
+### Sonraki Adım
+- En yüksek açık risk, `juz` ve benzeri yapısal metadata’nın hâlâ bundled payload’dan gelmesi:
+  - [A:\Way of Allah\sirat_i_nur\content_schema.sql](A:/Way%20of%20Allah/sirat_i_nur/content_schema.sql)
+  - [A:\Way of Allah\sirat_i_nur\tool\generate_quran_ayah_seed.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/generate_quran_ayah_seed.dart)
+  - [A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql](A:/Way%20of%20Allah/sirat_i_nur/content_seed_quran_ayahs.sql)
+- Sonraki turda `quran_ayahs` verified seed katmanına structural metadata eklenmeli ve provider içindeki bundled metadata merge ihtiyacı kaldırılmalı.
