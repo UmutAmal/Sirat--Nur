@@ -1,9 +1,7 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:sirat_i_nur/features/quran/providers/bundled_quran_provider.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
@@ -26,21 +24,21 @@ class _JuzReadingPageState extends ConsumerState<JuzReadingPage> {
     _loadJuzData();
   }
 
-  Future<void> _loadJuzData() async {
+  Future<void> _loadJuzData({bool forceRefresh = false}) async {
     setState(() {
       _isLoading = true;
       _error = null;
     });
 
     try {
-      final jsonString = await rootBundle.loadString(
-        'assets/data/full_quran.json',
-      );
-      final List<dynamic> data = jsonDecode(jsonString) as List<dynamic>;
+      if (forceRefresh) {
+        ref.invalidate(bundledQuranProvider);
+      }
+      final data = await ref.read(bundledQuranProvider.future);
       final entries = <_JuzAyahEntry>[];
 
       for (final surah in data) {
-        final surahMap = surah as Map<String, dynamic>;
+        final surahMap = surah;
         final surahNumber = (surahMap['number'] as num?)?.toInt() ?? 0;
         final surahArabicName = (surahMap['name'] ?? '').toString();
         final surahEnglishName = (surahMap['englishName'] ?? '').toString();
@@ -93,7 +91,7 @@ class _JuzReadingPageState extends ConsumerState<JuzReadingPage> {
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh_rounded),
-            onPressed: _loadJuzData,
+            onPressed: () => _loadJuzData(forceRefresh: true),
           ),
         ],
       ),
@@ -345,7 +343,7 @@ class _JuzReadingPageState extends ConsumerState<JuzReadingPage> {
             ),
             const SizedBox(height: 16),
             ElevatedButton.icon(
-              onPressed: _loadJuzData,
+              onPressed: () => _loadJuzData(forceRefresh: true),
               icon: const Icon(Icons.refresh_rounded),
               label: Text(l10n.retry),
             ),

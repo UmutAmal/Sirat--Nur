@@ -1,10 +1,8 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:sirat_i_nur/features/quran/providers/bundled_quran_provider.dart';
 import 'package:sirat_i_nur/features/quran/surah_display_info.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
@@ -38,17 +36,17 @@ class _QuranPageState extends ConsumerState<QuranPage>
     super.dispose();
   }
 
-  Future<void> _loadSurahs() async {
+  Future<void> _loadSurahs({bool forceRefresh = false}) async {
     setState(() {
       _isLoading = true;
       _error = null;
     });
 
     try {
-      final jsonString = await rootBundle.loadString(
-        'assets/data/full_quran.json',
-      );
-      final data = jsonDecode(jsonString) as List<dynamic>;
+      if (forceRefresh) {
+        ref.invalidate(bundledQuranProvider);
+      }
+      final data = await ref.read(bundledQuranProvider.future);
 
       if (!mounted) return;
       setState(() {
@@ -351,7 +349,7 @@ class _QuranPageState extends ConsumerState<QuranPage>
             ),
             const SizedBox(height: 16),
             ElevatedButton.icon(
-              onPressed: _loadSurahs,
+              onPressed: () => _loadSurahs(forceRefresh: true),
               icon: const Icon(Icons.refresh_rounded),
               label: Text(l10n.retry),
             ),

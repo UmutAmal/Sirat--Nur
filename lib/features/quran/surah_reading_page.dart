@@ -1,14 +1,13 @@
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:sirat_i_nur/features/quran/providers/bundled_quran_provider.dart';
 import 'package:sirat_i_nur/features/quran/surah_display_info.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
@@ -26,6 +25,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
   List<dynamic> _ayahs = [];
   Map<String, dynamic>? _surahData;
   bool _isLoading = true;
+  String? _error;
   late final AudioPlayer _audioPlayer;
   bool _isPlaying = false;
   bool _isAudioLoading = false;
@@ -74,29 +74,34 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     );
   }
 
-  Future<void> _loadSurah() async {
+  Future<void> _loadSurah({bool forceRefresh = false}) async {
+    setState(() {
+      _isLoading = true;
+      _error = null;
+    });
+
     try {
-      final jsonStr = await rootBundle.loadString(
-        'assets/data/full_quran.json',
-      );
-      final List<dynamic> data = jsonDecode(jsonStr) as List<dynamic>;
-      final surahData =
-          data.firstWhere(
-                (s) => s['number'] == widget.surahNumber,
-                orElse: () => data.first,
-              )
-              as Map<String, dynamic>;
+      if (forceRefresh) {
+        ref.invalidate(bundledQuranProvider);
+      }
+      final data = await ref.read(bundledQuranProvider.future);
+      final surahData = findBundledSurahData(data, widget.surahNumber);
 
       if (!mounted) return;
+      final l10n = AppLocalizations.of(context)!;
       setState(() {
         _surahData = surahData;
-        _ayahs = surahData['ayahs'] as List<dynamic>? ?? const <dynamic>[];
+        _ayahs = surahData?['ayahs'] as List<dynamic>? ?? const <dynamic>[];
+        _error = surahData == null ? l10n.noResults : null;
         _isLoading = false;
       });
     } catch (e) {
       debugPrint('Error loading quran json: $e');
       if (mounted) {
-        setState(() => _isLoading = false);
+        setState(() {
+          _isLoading = false;
+          _error = e.toString();
+        });
       }
     }
   }
@@ -219,11 +224,12 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     });
     _saveBookmarks();
 
+    final l10n = AppLocalizations.of(context)!;
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         duration: const Duration(milliseconds: 900),
         content: Text(
-          alreadySaved ? 'Ayah bookmark removed' : 'Ayah bookmarked',
+          alreadySaved ? l10n.removeBookmark : l10n.addBookmark,
         ),
       ),
     );
@@ -259,12 +265,13 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
             onPressed: () {
               setState(() => _isBookmarked = !_isBookmarked);
               _saveBookmarks();
+              final actionLabel = _isBookmarked
+                  ? l10n.addBookmark
+                  : l10n.removeBookmark;
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   duration: const Duration(seconds: 1),
-                  content: Text(
-                    _isBookmarked ? 'Bookmark added' : 'Bookmark removed',
-                  ),
+                  content: Text(actionLabel),
                 ),
               );
             },
@@ -290,6 +297,8 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
           ? const Center(
               child: CircularProgressIndicator(color: AppColors.emerald),
             )
+          : _error != null
+          ? _buildErrorState(context, l10n)
           : ListView.builder(
               padding: const EdgeInsets.all(20),
               itemCount: _ayahs.length + 2,
@@ -455,6 +464,46 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                 );
               },
             ),
+    );
+  }
+
+  Widget _buildErrorState(BuildContext context, AppLocalizations l10n) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(
+              Icons.error_outline_rounded,
+              color: Colors.redAccent,
+              size: 44,
+            ),
+            const SizedBox(height: 12),
+            Text(
+              l10n.error,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              _error ?? l10n.noResults,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 13,
+                color: Theme.of(
+                  context,
+                ).colorScheme.onSurface.withValues(alpha: 0.6),
+              ),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton.icon(
+              onPressed: () => _loadSurah(forceRefresh: true),
+              icon: const Icon(Icons.refresh_rounded),
+              label: Text(l10n.retry),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
