@@ -98,8 +98,20 @@ void main() {
       };
 
       expect(
+        (byId[4]!['translations'] as Map<String, dynamic>)['en'],
+        'The Most Holy',
+      );
+      expect(
         (byId[6]!['translations'] as Map<String, dynamic>)['en'],
         'The Giver of Security',
+      );
+      expect(
+        (byId[52]!['translations'] as Map<String, dynamic>)['en'],
+        'The All-Sufficient Trustee',
+      );
+      expect(
+        (byId[63]!['translations'] as Map<String, dynamic>)['en'],
+        'The Self-Subsisting Sustainer',
       );
       expect(
         (byId[68]!['translations'] as Map<String, dynamic>)['en'],

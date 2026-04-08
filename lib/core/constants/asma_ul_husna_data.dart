@@ -34,7 +34,7 @@ class AsmaUlHusnaData {
       'arabic': 'الْقُدُّوسُ',
       'transliteration': 'Al Quddus',
       'translations': {
-        'en': 'The Purest',
+        'en': 'The Most Holy',
         'tr':
             'Her türlü eksiklikten uzak olan, her türlü noksanlıktan münezzeh.',
       },
@@ -463,7 +463,7 @@ class AsmaUlHusnaData {
       'arabic': 'الْوَكِيلُ',
       'transliteration': 'Al Wakeel',
       'translations': {
-        'en': 'The Trustee',
+        'en': 'The All-Sufficient Trustee',
         'tr': 'Kendisine tevekkül edenlerin işlerini en iyi sonuçlandıran.',
       },
     },
@@ -559,7 +559,7 @@ class AsmaUlHusnaData {
       'arabic': 'الْقَيُّومُ',
       'transliteration': 'Al Qayyoom',
       'translations': {
-        'en': 'The Self Existing',
+        'en': 'The Self-Subsisting Sustainer',
         'tr': 'Varlıkları diri tutan, zatı ile kaim olan.',
       },
     },

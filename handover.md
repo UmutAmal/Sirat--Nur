@@ -2549,3 +2549,35 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki ikinci grup semantik riskler (`Al Quddus`, `Al Wakeel`, `Al Qayyoom`, `Al Waajid`) resmi kaynakla dar kapsamlı denetlenecek.
 - Ardından dini içerik zincirinde hadith ve dua source-attribution yüzeyi taranacak.
+
+## 2026-04-09 TUR-65 — Align Secondary Asma Glosses With Official Semantics
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içinde ikinci grup yüksek güvenli semantik kaymalar düzeltildi: `Al Quddus` için `The Most Holy`, `Al Wakeel` için `The All-Sufficient Trustee`, `Al Qayyoom` için `The Self-Subsisting Sustainer`.
+- [A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/asma_ul_husna_data_test.dart) aynı kaynak uyumunu test seviyesinde kilitleyecek şekilde genişletildi.
+
+### Neden Yapıldı
+- `The Purest`, `The Trustee` ve `The Self Existing` gloss’ları ilgili isimlerin TDV anlam katmanını ya fazla daraltıyor ya da kullanıcıya eksik semantik veriyordu.
+- `Kuddûs` için resmi metin her türlü noksanlıktan tenzih ve yücelik vurgusuna dayanıyor; `Vekîl` için yeterlilik ve tevekkül edilen işlerin üstlenilmesi boyutu öne çıkıyor; `Kayyûm` için ise hem bizâtihi kâim oluş hem de bütün varlığı ayakta tutma anlamı birlikte korunmalıydı.
+- Kullanıcıya cloud fallback veya bundled fallback modunda eksik dini anlam göstermemek için bu üç satır önce kapatıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Bundled Asma fallback artık üç temel isimde resmi semantiğe daha yakın, daha az eksik İngilizce gloss gösteriyor.
+- UI tarafında kullanıcıya görünen dini içerik kalitesi yükseldi; özellikle `Al Qayyoom` için yalnızca “self-existing” eksenine sıkışan anlam genişletildi.
+- Regresyon testi bu düzeltmelerin sessizce geri alınmasını önleyecek.
+
+### Test Sonucu
+- `flutter test test/asma_ul_husna_data_test.dart` → PASS (`6/6`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`169/169`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Secondary bundled Asma glosses understating official semantic scope: `10/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\hadith_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/hadith_data.dart) ve [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) üzerinden hadith source-attribution zinciri taranacak.
+- Ardından [A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) içindeki verified fallback referansları kaynak başlığı açısından tek tek denetlenecek.
