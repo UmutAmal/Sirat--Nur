@@ -7,9 +7,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:sirat_i_nur/core/constants/quran_data.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:sirat_i_nur/features/quran/surah_display_info.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
@@ -24,6 +24,7 @@ class SurahReadingPage extends ConsumerStatefulWidget {
 
 class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
   List<dynamic> _ayahs = [];
+  Map<String, dynamic>? _surahData;
   bool _isLoading = true;
   late final AudioPlayer _audioPlayer;
   bool _isPlaying = false;
@@ -88,6 +89,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
       if (!mounted) return;
       setState(() {
+        _surahData = surahData;
         _ayahs = surahData['ayahs'] as List<dynamic>? ?? const <dynamic>[];
         _isLoading = false;
       });
@@ -181,7 +183,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
   }
 
   Future<void> _shareAyah({
-    required SurahData surahInfo,
+    required SurahDisplayInfo surahInfo,
     required Map<String, dynamic> ayah,
     required bool isTr,
   }) async {
@@ -235,12 +237,10 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
   @override
   Widget build(BuildContext context) {
-    final surahInfo = allSurahs.firstWhere(
-      (s) => s.number == widget.surahNumber,
-      orElse: () => allSurahs.first,
-    );
+    final surahInfo = resolveSurahDisplayInfo(_surahData, widget.surahNumber);
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final settings = ref.watch(settingsProvider);
+    final l10n = AppLocalizations.of(context)!;
     final locale = Localizations.localeOf(context);
     final langCode = settings.languageCode ?? locale.languageCode;
     final isTr = langCode.toLowerCase().startsWith('tr');
@@ -316,7 +316,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          surahInfo.nameEnglish,
+                          surahInfo.translatedName,
                           style: TextStyle(
                             color: Colors.white.withValues(alpha: 0.8),
                             fontSize: 16,
@@ -325,7 +325,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          '${surahInfo.ayahCount} Ayat • ${surahInfo.revelationType}',
+                          '${surahInfo.ayahCount} ${l10n.ayahs} • ${surahInfo.revelationType}',
                           style: TextStyle(
                             color: Colors.white.withValues(alpha: 0.6),
                             fontSize: 13,

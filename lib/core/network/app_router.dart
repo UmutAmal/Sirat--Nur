@@ -9,7 +9,6 @@ import 'package:sirat_i_nur/features/quran/quran_page.dart';
 import 'package:sirat_i_nur/features/quran/surah_reading_page.dart';
 import 'package:sirat_i_nur/features/quran/juz_reading_page.dart';
 import 'package:sirat_i_nur/features/quran/tafsir_page.dart';
-import 'package:sirat_i_nur/core/constants/quran_data.dart';
 import 'package:sirat_i_nur/features/qibla/qibla_page.dart';
 import 'package:sirat_i_nur/features/zikr/zikr_page.dart';
 import 'package:sirat_i_nur/features/calendar/calendar_page.dart';
@@ -160,15 +159,9 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 parentNavigatorKey: _rootNavigatorKey,
                 pageBuilder: (ctx, state) {
                   final surahNumber = int.parse(state.pathParameters['id']!);
-                  final surahName = allSurahs
-                      .firstWhere(
-                        (item) => item.number == surahNumber,
-                        orElse: () => allSurahs.first,
-                      )
-                      .transliteration;
                   return _slideTransition(ctx, state, TafsirPage(
                     surahNumber: surahNumber,
-                    surahName: surahName,
+                    surahName: '',
                   ));
                 },
               ),
