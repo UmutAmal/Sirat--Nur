@@ -211,6 +211,59 @@
   "resetOnboarding": "Onboarding'i Sıfırla",
   "rerunSetup": "İlk kurulum sürecini yeniden başlatın.",
   "diagnostics": "Tanılama",
+  "diagnosticsNotSet": "Ayarlanmadı",
+  "diagnosticsCloudDriven": "Bulut Tabanlı",
+  "diagnosticsAdhanAudioAssets": "Ezan Ses Varlıkları",
+  "diagnosticsUiAudioAssets": "Arayüz Ses Varlıkları",
+  "diagnosticsQuranAudioAssets": "Kur'an Ses Varlıkları",
+  "diagnosticsAudioAssets": "Ses Varlıkları",
+  "diagnosticsFilesCount": "{count} dosya",
+  "@diagnosticsFilesCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsManifestReadFailed": "Manifest okunamadı: {error}",
+  "@diagnosticsManifestReadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsLocalizationLocales": "Yerelleştirme Dilleri",
+  "diagnosticsSupportedCount": "{count} destekleniyor",
+  "@diagnosticsSupportedCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsQuranDataset": "Kur'an Veri Seti",
+  "diagnosticsQuranSurahs": "Kur'an Sureleri",
+  "diagnosticsQuranAyahs": "Kur'an Ayetleri",
+  "diagnosticsQuranJuzMetadata": "Kur'an Cüz Metaverisi",
+  "diagnosticsQuranCloudTablesMissing": "Supabase bulut tabloları eksik; gömülü fallback aktif",
+  "diagnosticsQuranCloudCheckFailed": "Bulut kontrolü başarısız: {error}",
+  "@diagnosticsQuranCloudCheckFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsQuranCloudJuzMissing": "Bulut cüz metaverisi eksik; gömülü yapısal fallback aktif",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Bulut yapısal kontrolü başarısız: {error}",
+  "@diagnosticsQuranCloudStructuralCheckFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "healthCheckDesc": "Sistem durumunu kontrol et ve sağlık taraması yap.",
   "qiblaAligned": "Kıble Hizalandı",
   "rotateToFindQibla": "Kıbleyi Bulmak İçin Çevir",

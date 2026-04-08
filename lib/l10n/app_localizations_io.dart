@@ -651,6 +651,72 @@ class AppLocalizationsIo extends AppLocalizations {
   String get diagnostics => 'Diagnostics';
 
   @override
+  String get diagnosticsNotSet => 'Not set';
+
+  @override
+  String get diagnosticsCloudDriven => 'Cloud Driven';
+
+  @override
+  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+
+  @override
+  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+
+  @override
+  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+
+  @override
+  String get diagnosticsAudioAssets => 'Audio Assets';
+
+  @override
+  String diagnosticsFilesCount(String count) {
+    return '$count files';
+  }
+
+  @override
+  String diagnosticsManifestReadFailed(String error) {
+    return 'Manifest read failed: $error';
+  }
+
+  @override
+  String get diagnosticsLocalizationLocales => 'Localization Locales';
+
+  @override
+  String diagnosticsSupportedCount(String count) {
+    return '$count supported';
+  }
+
+  @override
+  String get diagnosticsQuranDataset => 'Quran Dataset';
+
+  @override
+  String get diagnosticsQuranSurahs => 'Quran Surahs';
+
+  @override
+  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+
+  @override
+  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+
+  @override
+  String get diagnosticsQuranCloudTablesMissing =>
+      'Cloud tables missing in Supabase; bundled fallback active';
+
+  @override
+  String diagnosticsQuranCloudCheckFailed(String error) {
+    return 'Cloud check failed: $error';
+  }
+
+  @override
+  String get diagnosticsQuranCloudJuzMissing =>
+      'Cloud juz metadata missing; bundled structural fallback active';
+
+  @override
+  String diagnosticsQuranCloudStructuralCheckFailed(String error) {
+    return 'Cloud structural check failed: $error';
+  }
+
+  @override
   String get healthCheckDesc => 'Run health checks and view system status.';
 
   @override

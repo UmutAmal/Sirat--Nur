@@ -1708,6 +1708,114 @@ abstract class AppLocalizations {
   /// **'Diagnostics'**
   String get diagnostics;
 
+  /// No description provided for @diagnosticsNotSet.
+  ///
+  /// In en, this message translates to:
+  /// **'Not set'**
+  String get diagnosticsNotSet;
+
+  /// No description provided for @diagnosticsCloudDriven.
+  ///
+  /// In en, this message translates to:
+  /// **'Cloud Driven'**
+  String get diagnosticsCloudDriven;
+
+  /// No description provided for @diagnosticsAdhanAudioAssets.
+  ///
+  /// In en, this message translates to:
+  /// **'Adhan Audio Assets'**
+  String get diagnosticsAdhanAudioAssets;
+
+  /// No description provided for @diagnosticsUiAudioAssets.
+  ///
+  /// In en, this message translates to:
+  /// **'UI Audio Assets'**
+  String get diagnosticsUiAudioAssets;
+
+  /// No description provided for @diagnosticsQuranAudioAssets.
+  ///
+  /// In en, this message translates to:
+  /// **'Quran Audio Assets'**
+  String get diagnosticsQuranAudioAssets;
+
+  /// No description provided for @diagnosticsAudioAssets.
+  ///
+  /// In en, this message translates to:
+  /// **'Audio Assets'**
+  String get diagnosticsAudioAssets;
+
+  /// No description provided for @diagnosticsFilesCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} files'**
+  String diagnosticsFilesCount(String count);
+
+  /// No description provided for @diagnosticsManifestReadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Manifest read failed: {error}'**
+  String diagnosticsManifestReadFailed(String error);
+
+  /// No description provided for @diagnosticsLocalizationLocales.
+  ///
+  /// In en, this message translates to:
+  /// **'Localization Locales'**
+  String get diagnosticsLocalizationLocales;
+
+  /// No description provided for @diagnosticsSupportedCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} supported'**
+  String diagnosticsSupportedCount(String count);
+
+  /// No description provided for @diagnosticsQuranDataset.
+  ///
+  /// In en, this message translates to:
+  /// **'Quran Dataset'**
+  String get diagnosticsQuranDataset;
+
+  /// No description provided for @diagnosticsQuranSurahs.
+  ///
+  /// In en, this message translates to:
+  /// **'Quran Surahs'**
+  String get diagnosticsQuranSurahs;
+
+  /// No description provided for @diagnosticsQuranAyahs.
+  ///
+  /// In en, this message translates to:
+  /// **'Quran Ayahs'**
+  String get diagnosticsQuranAyahs;
+
+  /// No description provided for @diagnosticsQuranJuzMetadata.
+  ///
+  /// In en, this message translates to:
+  /// **'Quran Juz Metadata'**
+  String get diagnosticsQuranJuzMetadata;
+
+  /// No description provided for @diagnosticsQuranCloudTablesMissing.
+  ///
+  /// In en, this message translates to:
+  /// **'Cloud tables missing in Supabase; bundled fallback active'**
+  String get diagnosticsQuranCloudTablesMissing;
+
+  /// No description provided for @diagnosticsQuranCloudCheckFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Cloud check failed: {error}'**
+  String diagnosticsQuranCloudCheckFailed(String error);
+
+  /// No description provided for @diagnosticsQuranCloudJuzMissing.
+  ///
+  /// In en, this message translates to:
+  /// **'Cloud juz metadata missing; bundled structural fallback active'**
+  String get diagnosticsQuranCloudJuzMissing;
+
+  /// No description provided for @diagnosticsQuranCloudStructuralCheckFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Cloud structural check failed: {error}'**
+  String diagnosticsQuranCloudStructuralCheckFailed(String error);
+
   /// No description provided for @healthCheckDesc.
   ///
   /// In en, this message translates to:

@@ -652,6 +652,72 @@ class AppLocalizationsTr extends AppLocalizations {
   String get diagnostics => 'Tanılama';
 
   @override
+  String get diagnosticsNotSet => 'Ayarlanmadı';
+
+  @override
+  String get diagnosticsCloudDriven => 'Bulut Tabanlı';
+
+  @override
+  String get diagnosticsAdhanAudioAssets => 'Ezan Ses Varlıkları';
+
+  @override
+  String get diagnosticsUiAudioAssets => 'Arayüz Ses Varlıkları';
+
+  @override
+  String get diagnosticsQuranAudioAssets => 'Kur\'an Ses Varlıkları';
+
+  @override
+  String get diagnosticsAudioAssets => 'Ses Varlıkları';
+
+  @override
+  String diagnosticsFilesCount(String count) {
+    return '$count dosya';
+  }
+
+  @override
+  String diagnosticsManifestReadFailed(String error) {
+    return 'Manifest okunamadı: $error';
+  }
+
+  @override
+  String get diagnosticsLocalizationLocales => 'Yerelleştirme Dilleri';
+
+  @override
+  String diagnosticsSupportedCount(String count) {
+    return '$count destekleniyor';
+  }
+
+  @override
+  String get diagnosticsQuranDataset => 'Kur\'an Veri Seti';
+
+  @override
+  String get diagnosticsQuranSurahs => 'Kur\'an Sureleri';
+
+  @override
+  String get diagnosticsQuranAyahs => 'Kur\'an Ayetleri';
+
+  @override
+  String get diagnosticsQuranJuzMetadata => 'Kur\'an Cüz Metaverisi';
+
+  @override
+  String get diagnosticsQuranCloudTablesMissing =>
+      'Supabase bulut tabloları eksik; gömülü fallback aktif';
+
+  @override
+  String diagnosticsQuranCloudCheckFailed(String error) {
+    return 'Bulut kontrolü başarısız: $error';
+  }
+
+  @override
+  String get diagnosticsQuranCloudJuzMissing =>
+      'Bulut cüz metaverisi eksik; gömülü yapısal fallback aktif';
+
+  @override
+  String diagnosticsQuranCloudStructuralCheckFailed(String error) {
+    return 'Bulut yapısal kontrolü başarısız: $error';
+  }
+
+  @override
   String get healthCheckDesc =>
       'Sistem durumunu kontrol et ve sağlık taraması yap.';
 

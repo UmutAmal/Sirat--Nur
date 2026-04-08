@@ -20,34 +20,44 @@ class DiagnosticsPage extends ConsumerStatefulWidget {
 
 class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
   late Future<List<_DiagnosticRow>> _rowsFuture;
+  bool _didInitRows = false;
 
   @override
-  void initState() {
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_didInitRows) {
+      return;
+    }
     _rowsFuture = _buildRows();
+    _didInitRows = true;
   }
 
   Future<List<_DiagnosticRow>> _buildRows() async {
+    final l10n = AppLocalizations.of(context)!;
     final settings = ref.read(settingsProvider);
     final rows = <_DiagnosticRow>[
-      _DiagnosticRow('App Version', '2.0.0', true),
-      _DiagnosticRow('Theme', settings.isDarkMode ? 'Dark' : 'Light', true),
+      _DiagnosticRow(l10n.version, '2.0.0', true),
       _DiagnosticRow(
-        'Language',
-        settings.languageCode ?? 'System default',
+        l10n.theme,
+        settings.isDarkMode ? l10n.darkMode : l10n.lightMode,
         true,
       ),
       _DiagnosticRow(
-        'Location',
-        settings.locationName ?? 'Not set',
+        l10n.language,
+        settings.languageCode ?? l10n.systemDefault,
+        true,
+      ),
+      _DiagnosticRow(
+        l10n.location,
+        settings.locationName ?? l10n.diagnosticsNotSet,
         settings.locationName != null,
       ),
     ];
 
     rows.add(
       _DiagnosticRow(
-        'Live TV Streams',
-        'Cloud Driven',
+        l10n.liveTv,
+        l10n.diagnosticsCloudDriven,
         true,
       ),
     );
@@ -70,6 +80,20 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
 
       rows.addAll(
         buildQuranDiagnosticRows(
+          strings: QuranDiagnosticStrings(
+            datasetLabel: l10n.diagnosticsQuranDataset,
+            surahsLabel: l10n.diagnosticsQuranSurahs,
+            ayahsLabel: l10n.diagnosticsQuranAyahs,
+            juzMetadataLabel: l10n.diagnosticsQuranJuzMetadata,
+            cloudTablesMissing: l10n.diagnosticsQuranCloudTablesMissing,
+            cloudJuzMissing: l10n.diagnosticsQuranCloudJuzMissing,
+            cloudCheckFailed: (error) =>
+                l10n.diagnosticsQuranCloudCheckFailed(error.toString()),
+            cloudStructuralCheckFailed: (error) =>
+                l10n.diagnosticsQuranCloudStructuralCheckFailed(
+                  error.toString(),
+                ),
+          ),
           surahCount: surahCount,
           ayahCount: ayahCount,
           ayahsWithJuzCount: ayahsWithJuzCount,
@@ -79,6 +103,20 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
     } catch (error) {
       rows.addAll(
         buildQuranDiagnosticRows(
+          strings: QuranDiagnosticStrings(
+            datasetLabel: l10n.diagnosticsQuranDataset,
+            surahsLabel: l10n.diagnosticsQuranSurahs,
+            ayahsLabel: l10n.diagnosticsQuranAyahs,
+            juzMetadataLabel: l10n.diagnosticsQuranJuzMetadata,
+            cloudTablesMissing: l10n.diagnosticsQuranCloudTablesMissing,
+            cloudJuzMissing: l10n.diagnosticsQuranCloudJuzMissing,
+            cloudCheckFailed: (err) =>
+                l10n.diagnosticsQuranCloudCheckFailed(err.toString()),
+            cloudStructuralCheckFailed: (err) =>
+                l10n.diagnosticsQuranCloudStructuralCheckFailed(
+                  err.toString(),
+                ),
+          ),
           error: error,
         ).map((row) => _DiagnosticRow(row.label, row.value, row.isHealthy)),
       );
@@ -112,19 +150,43 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
           )
           .length;
 
-      rows.add(_DiagnosticRow('Adhan Audio Assets', '$adhan files', adhan > 0));
-      rows.add(_DiagnosticRow('UI Audio Assets', '$ui files', ui > 0));
-      rows.add(_DiagnosticRow('Quran Audio Assets', '$quran files', quran > 0));
+      rows.add(
+        _DiagnosticRow(
+          l10n.diagnosticsAdhanAudioAssets,
+          l10n.diagnosticsFilesCount('$adhan'),
+          adhan > 0,
+        ),
+      );
+      rows.add(
+        _DiagnosticRow(
+          l10n.diagnosticsUiAudioAssets,
+          l10n.diagnosticsFilesCount('$ui'),
+          ui > 0,
+        ),
+      );
+      rows.add(
+        _DiagnosticRow(
+          l10n.diagnosticsQuranAudioAssets,
+          l10n.diagnosticsFilesCount('$quran'),
+          quran > 0,
+        ),
+      );
     } catch (error) {
       rows.add(
-        _DiagnosticRow('Audio Assets', 'Manifest read failed: $error', false),
+        _DiagnosticRow(
+          l10n.diagnosticsAudioAssets,
+          l10n.diagnosticsManifestReadFailed(error.toString()),
+          false,
+        ),
       );
     }
 
     rows.add(
       _DiagnosticRow(
-        'Localization Locales',
-        '${AppLocalizations.supportedLocales.length} supported',
+        l10n.diagnosticsLocalizationLocales,
+        l10n.diagnosticsSupportedCount(
+          '${AppLocalizations.supportedLocales.length}',
+        ),
         AppLocalizations.supportedLocales.length > 3,
       ),
     );

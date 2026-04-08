@@ -211,6 +211,59 @@
   "resetOnboarding": "Reset Onboarding",
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
+  "diagnosticsNotSet": "Not set",
+  "diagnosticsCloudDriven": "Cloud Driven",
+  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsAudioAssets": "Audio Assets",
+  "diagnosticsFilesCount": "{count} files",
+  "@diagnosticsFilesCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "@diagnosticsManifestReadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsSupportedCount": "{count} supported",
+  "@diagnosticsSupportedCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsQuranDataset": "Quran Dataset",
+  "diagnosticsQuranSurahs": "Quran Surahs",
+  "diagnosticsQuranAyahs": "Quran Ayahs",
+  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "@diagnosticsQuranCloudCheckFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "@diagnosticsQuranCloudStructuralCheckFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "healthCheckDesc": "Run health checks and view system status.",
   "qiblaAligned": "Qibla Aligned",
   "rotateToFindQibla": "Rotate to Find Qibla",

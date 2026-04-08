@@ -1257,3 +1257,56 @@
   - [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart)
   - [A:\Way of Allah\sirat_i_nur\lib\features\settings\quran_diagnostics.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/quran_diagnostics.dart)
 - Sonraki turda bu metinler localization zincirine taşınmalı ve diagnostics ekranı l10n ile hizalanmalı.
+
+## 2026-04-08 TUR-32 — Localize Diagnostics And Quran Diagnostic Messaging
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart) içindeki hardcoded diagnostics metinleri localization zincirine taşındı.
+- Aynı dosyada `AppLocalizations.of(context)` bağımlılığı güvenli noktaya alındı; `_rowsFuture` başlatması `didChangeDependencies` üzerinden yapılıyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\quran_diagnostics.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/quran_diagnostics.dart) artık `QuranDiagnosticStrings` ile çalışıyor; helper İngilizce sabit metin döndürmüyor.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) diagnostics anahtarlarıyla genişletildi:
+  - statik satır başlıkları
+  - dosya/supported count placeholder’ları
+  - manifest hata mesajı
+  - Quran dataset / surah / ayah / juz metadata label’ları
+  - cloud structural error mesajları
+- [A:\Way of Allah\sirat_i_nur\tool\sync_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/sync_arb_keys.dart) çalıştırıldı ve `lib/l10n/app_*.arb` dosyalarının tamamı yeni anahtarlarla senkronlandı.
+- `flutter gen-l10n` ile generated dosyalar yeniden üretildi:
+  - [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations.dart)
+  - [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n)
+- [A:\Way of Allah\sirat_i_nur\test\quran_diagnostics_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/quran_diagnostics_test.dart) yeni localization-aware helper sözleşmesine göre güncellendi.
+
+### Neden Yapıldı
+- TUR-31 sonrasında diagnostics zinciri yapısal eksikleri dürüst raporluyordu fakat metin yüzeyi hâlâ İngilizce sabitlerden oluşuyordu.
+- Bu, translation engine kuralı ve “hardcoded string bırakma” yasağıyla çelişiyordu.
+- Ayrıca `_buildRows()` içinde lokalizasyon kullanımına geçilirken `initState` bağlamı uygun değildi; bu yüzden aynı turda lifecycle uyumu da düzeltildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\quran_diagnostics.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\quran_diagnostics_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Diagnostics ekranının statik ve dinamik tüm metinleri artık locale üzerinden geliyor.
+- Quran diagnostics helper artık reusable/localizable hale geldi; İngilizce sabitleri core helper içinde barındırmıyor.
+- 196 locale dosyası yeni diagnostics anahtarlarıyla eşitlendi; `arb_coverage` ve `gen-l10n` zinciri temiz kaldı.
+
+### Test Sonucu
+- `flutter test test/quran_diagnostics_test.dart` → PASS (`4/4`)
+- `flutter test test/arb_coverage_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`94/94`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Hardcoded English diagnostics/settings copy bypassing l10n chain: `5/25 → 1/25`
+- Locale mismatch risk after diagnostics hardening: `5/25 → 1/25`
+
+### Sonraki Adım
+- En yüksek açık risk artık diagnostics ekranındaki bazı teknik değerlerin hâlâ presentation-only string olması:
+  - [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart)
+- Sonraki turda app version ve benzeri metadata’lar package/runtime kaynağından okunmalı; stale sabit değerler kaldırılmalı.
