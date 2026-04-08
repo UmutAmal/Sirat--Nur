@@ -760,3 +760,53 @@
 ### Sonraki Adım
 - Kabul edilen resmi kaynaklardan `quran_surahs` ve `quran_ayahs` için verified seed katmanı hazırlanmalı.
 - Ardından `quran_page.dart`, `surah_reading_page.dart` ve `app_router.dart` içindeki `allSurahs` bağı cloud-first provider zincirine taşınmalı.
+
+## 2026-04-08 TUR-22 — Verified Quran Surah Seed from Quran.com API
+### Yapılan İşlem
+- `tool/generate_quran_surah_seed.dart` eklendi.
+- Script resmi Quran Foundation endpointlerinden sure metadata çekiyor:
+  - `https://api.quran.com/api/v4/chapters?language=en`
+  - `https://api.quran.com/api/v4/chapters?language=tr`
+- Script şu doğrulamaları yapıyor:
+  - her iki locale için de `114` sure dönmesi
+  - id sıralarının birebir eşleşmesi
+  - `name_arabic`, `translated_name.name`, `name_simple`, `verses_count`, `revelation_place` alanlarının boş olmaması
+- Script çalıştırıldı ve `content_seed_quran_surahs.sql` üretildi.
+- Üretilen SQL dosyası:
+  - `public.quran_surahs` için `114` adet upsert içeriyor
+  - `source` alanını `https://api.quran.com/api/v4/chapters` olarak dolduruyor
+  - `verified_at` alanını üretim timestamp’i ile yazıyor
+  - `revelation_place` değerlerini uygulamadaki mevcut modele uyum için `Meccan` / `Medinan` olarak normalize ediyor
+- `quran_surah_seed_test.dart` eklendi:
+  - dosyada `114` sure upsert’i olduğunu doğruluyor
+  - resmi EN/TR endpoint yorumlarını doğruluyor
+  - ilk ve son sure metadata’sını örnek olarak doğruluyor
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\quran_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/quran_data.dart) içindeki sure listesi hâlâ bundled ve Section 13 gereği verified canlı içerik zincirine taşınması gerekiyor.
+- Önceki turda schema zemini tamamlandı fakat repo içinde resmi kaynaktan üretilmiş bir seed katmanı yoktu.
+- Bu tur, uygulama tarafındaki provider/refactor işinden önce sure metadata’sı için tekrar üretilebilir ve kanıtlanabilir resmi seed kaynağını oluşturdu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_surah_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_surahs.sql`
+- `A:\Way of Allah\sirat_i_nur\test\quran_surah_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Repo artık Quran surah metadata’sı için resmi kaynaktan tekrar üretilebilen verified SQL seed katmanına sahip.
+- Bundled `allSurahs` listesinden cloud-first provider zincirine geçiş için veri zemini oluştu.
+- Kaynak URL ve üretim zamanı SQL dosyasında açıkça taşındığı için sonraki devralmalarda doğrulama kolaylaştı.
+
+### Test Sonucu
+- `dart run tool/generate_quran_surah_seed.dart` → PASS
+- `flutter test test/quran_surah_seed_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`74/74`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Missing verified Quran surah seed layer: `7/25 → 2/25`
+
+### Sonraki Adım
+- `quran_ayahs` için kabul edilen resmi kaynaklardan verified seed katmanı hazırlanmalı.
+- Sonraki uygulama turunda `quran_page.dart`, `surah_reading_page.dart` ve `app_router.dart` içindeki `allSurahs` bağı cloud-first provider + fallback zincirine taşınmalı.
