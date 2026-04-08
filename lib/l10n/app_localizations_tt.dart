@@ -781,12 +781,19 @@ class AppLocalizationsTt extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Көн саен Дуас';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count кирәкле дуа';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Тикшерелгән дуалар әлегә юк';
+
+  @override
+  String get duaUnavailableBody =>
+      'Тикшерелгән көндәлек дуа бу җайланмага синхронлашмаган. Тикшерелмәгән кире кайту урынына болыт чыганагына тоташыгыз.';
 
   @override
   String get islamicEducation => 'Islamic Education';

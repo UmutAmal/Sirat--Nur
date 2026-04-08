@@ -783,12 +783,19 @@ class AppLocalizationsLus extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Nitin Duas';
 
   @override
   String essentialDuas(String count) {
     return '$count essential duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Verified duas hi a la awm lo';
+
+  @override
+  String get duaUnavailableBody =>
+      'Verified daily duas hi he device ah hian sync a la ni lo. Unverified fallback ai chuan sourced duas load turin cloud source ah connect rawh.';
 
   @override
   String get islamicEducation => 'Islamic Education';

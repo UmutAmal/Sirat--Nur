@@ -781,12 +781,20 @@ class AppLocalizationsKy extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Күнүмдүк дуалар';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count маанилүү дуалар';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Текшерилген дуалар азырынча жеткиликтүү эмес';
+
+  @override
+  String get duaUnavailableBody =>
+      'Текшерилген күнүмдүк дуалар азырынча бул түзмөккө шайкештириле элек. Текшерилбеген калыбына келтирүүнүн ордуна булактан алынган дуаларды жүктөө үчүн булут булагына туташыңыз.';
 
   @override
   String get islamicEducation => 'Islamic Education';

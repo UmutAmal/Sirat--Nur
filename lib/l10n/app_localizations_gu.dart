@@ -781,12 +781,19 @@ class AppLocalizationsGu extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'દૈનિક દુઆ';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count આવશ્યક દુઆઓ';
   }
+
+  @override
+  String get duaUnavailableTitle => 'ચકાસાયેલ દુઆઓ હજી ઉપલબ્ધ નથી';
+
+  @override
+  String get duaUnavailableBody =>
+      'ચકાસાયેલ દૈનિક દુઆઓ હજુ સુધી આ ઉપકરણ સાથે સમન્વયિત કરવામાં આવી નથી. વણચકાસાયેલ ફોલબેકને બદલે સોર્સ્ડ ડ્યુઆસ લોડ કરવા માટે ક્લાઉડ સ્ત્રોત સાથે કનેક્ટ કરો.';
 
   @override
   String get islamicEducation => 'Islamic Education';

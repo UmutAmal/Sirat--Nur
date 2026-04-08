@@ -781,12 +781,19 @@ class AppLocalizationsLo extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas ປະຈໍາວັນ';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count duas ທີ່ສໍາຄັນ';
   }
+
+  @override
+  String get duaUnavailableTitle => 'duas ທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ສາມາດໃຊ້ໄດ້ເທື່ອ';
+
+  @override
+  String get duaUnavailableBody =>
+      'ຢືນຢັນ duas ປະຈໍາວັນຍັງບໍ່ໄດ້ຖືກຊິງຄ໌ກັບອຸປະກອນນີ້ເທື່ອ. ເຊື່ອມຕໍ່ຫາແຫຼ່ງຄລາວເພື່ອໂຫລດ duas ທີ່ມີແຫຼ່ງທີ່ມາແທນທີ່ຈະເປັນທາງເລືອກທີ່ບໍ່ໄດ້ຮັບການຢືນຢັນ.';
 
   @override
   String get islamicEducation => 'Islamic Education';

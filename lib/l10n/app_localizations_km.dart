@@ -781,12 +781,19 @@ class AppLocalizationsKm extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas ប្រចាំថ្ងៃ';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count duas សំខាន់';
   }
+
+  @override
+  String get duaUnavailableTitle => 'duas ដែលបានផ្ទៀងផ្ទាត់មិនទាន់មាននៅឡើយទេ';
+
+  @override
+  String get duaUnavailableBody =>
+      'duas ប្រចាំថ្ងៃដែលបានផ្ទៀងផ្ទាត់មិនទាន់ត្រូវបានធ្វើសមកាលកម្មទៅឧបករណ៍នេះនៅឡើយទេ។ ភ្ជាប់ទៅប្រភពពពកដើម្បីផ្ទុក duas ដែលមានប្រភពជំនួសឱ្យការត្រលប់មកវិញដែលមិនបានបញ្ជាក់។';
 
   @override
   String get islamicEducation => 'Islamic Education';

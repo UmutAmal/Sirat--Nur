@@ -781,12 +781,19 @@ class AppLocalizationsLv extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Ikdienas Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count būtiskas duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Verificētās duas vēl nav pieejamas';
+
+  @override
+  String get duaUnavailableBody =>
+      'Verificētās ikdienas duas vēl nav sinhronizētas ar šo ierīci. Izveidojiet savienojumu ar mākoņa avotu, lai ielādētu avota duas, nevis nepārbaudītu atkāpšanos.';
 
   @override
   String get islamicEducation => 'Islamic Education';

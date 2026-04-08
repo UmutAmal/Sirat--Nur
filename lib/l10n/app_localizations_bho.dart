@@ -782,12 +782,19 @@ class AppLocalizationsBho extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'रोजाना दुआस के बा';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count जरूरी दुआ';
   }
+
+  @override
+  String get duaUnavailableTitle => 'सत्यापन दुआ अभी तक उपलब्ध नइखे';
+
+  @override
+  String get duaUnavailableBody =>
+      'सत्यापन कइल गइल दैनिक दुआ अबहीं ले एह डिवाइस पर सिंक नइखे भइल. असत्यापित फॉलबैक के बजाय सोर्स कइल दुआ लोड करे खातिर क्लाउड स्रोत से कनेक्ट होखीं।';
 
   @override
   String get islamicEducation => 'Islamic Education';

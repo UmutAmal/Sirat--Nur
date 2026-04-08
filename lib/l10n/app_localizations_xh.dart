@@ -781,12 +781,19 @@ class AppLocalizationsXh extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'IiDuas zemihla ngemihla';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count ii-duas ezibalulekileyo';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Iiduas eziqinisekisiweyo azikafumaneki';
+
+  @override
+  String get duaUnavailableBody =>
+      'Iiduas zemihla ngemihla eziqinisekisiweyo ayikadityaniswanga kwesi sixhobo okwangoku. Qhagamshela kumthombo welifu ukuze ulayishe i-duas efunyenweyo endaweni yokubuyela umva okungaqinisekanga.';
 
   @override
   String get islamicEducation => 'Islamic Education';

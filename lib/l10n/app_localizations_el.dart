@@ -782,12 +782,20 @@ class AppLocalizationsEl extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Καθημερινή Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count βασικές δέες';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Οι επαληθευμένες ντους δεν είναι ακόμα διαθέσιμες';
+
+  @override
+  String get duaUnavailableBody =>
+      'Οι επαληθευμένες καθημερινές δέες δεν έχουν συγχρονιστεί ακόμα με αυτήν τη συσκευή. Συνδεθείτε στην πηγή cloud για να φορτώσετε duas που προέρχονται αντί για μη επαληθευμένη εναλλακτική.';
 
   @override
   String get islamicEducation => 'Islamic Education';

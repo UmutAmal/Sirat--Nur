@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Duas ɛvride",
+  "essentialDuas": "{count} impɔtant dua dɛn",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Verified duas nɔ de yet",
+  "duaUnavailableBody": "Verified daily duas nɔ dɔn sink to dis divays yet. Konekt to di klawd sɔs fɔ lod sɔs duas instead ɔf wan unverified fallback."
 }

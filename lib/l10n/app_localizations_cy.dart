@@ -782,12 +782,19 @@ class AppLocalizationsCy extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas Dyddiol';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count deuodau hanfodol';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Nid yw deuodau wedi\'u dilysu ar gael eto';
+
+  @override
+  String get duaUnavailableBody =>
+      'Nid yw deuodau dyddiol wedi\'u dilysu wedi\'u cysoni â\'r ddyfais hon eto. Cysylltwch â ffynhonnell y cwmwl i lwytho deuodau o ffynonellau yn lle wrth gefn heb ei wirio.';
 
   @override
   String get islamicEducation => 'Islamic Education';

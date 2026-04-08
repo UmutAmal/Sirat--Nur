@@ -781,12 +781,20 @@ class AppLocalizationsAf extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Daaglikse Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count noodsaaklike duas';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Geverifieerde duas is nog nie beskikbaar nie';
+
+  @override
+  String get duaUnavailableBody =>
+      'Geverifieerde daaglikse duas is nog nie met hierdie toestel gesinkroniseer nie. Koppel aan die wolkbron om verkrygde duas te laai in plaas van \'n ongeverifieerde terugval.';
 
   @override
   String get islamicEducation => 'Islamic Education';

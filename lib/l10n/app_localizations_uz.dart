@@ -781,12 +781,19 @@ class AppLocalizationsUz extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Kundalik duolar';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count muhim duolar';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Tasdiqlangan duolar hali mavjud emas';
+
+  @override
+  String get duaUnavailableBody =>
+      'Tasdiqlangan kundalik duolar hali bu qurilmaga sinxronlanmagan. Tasdiqlanmagan zaxira oʻrniga manbali duolarni yuklash uchun bulut manbasiga ulaning.';
 
   @override
   String get islamicEducation => 'Islamic Education';

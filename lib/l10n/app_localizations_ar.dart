@@ -781,12 +781,20 @@ class AppLocalizationsAr extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'ادعية يومية';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count أدعية أساسية';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'الأدعية التي تم التحقق منها ليست متاحة بعد';
+
+  @override
+  String get duaUnavailableBody =>
+      'لم تتم مزامنة الأدعية اليومية التي تم التحقق منها مع هذا الجهاز حتى الآن. اتصل بالمصدر السحابي لتحميل الأدعية المصدرية بدلاً من الإجراء الاحتياطي الذي لم يتم التحقق منه.';
 
   @override
   String get islamicEducation => 'Islamic Education';

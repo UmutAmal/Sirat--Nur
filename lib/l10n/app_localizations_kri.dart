@@ -780,12 +780,19 @@ class AppLocalizationsKri extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas ɛvride';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count impɔtant dua dɛn';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Verified duas nɔ de yet';
+
+  @override
+  String get duaUnavailableBody =>
+      'Verified daily duas nɔ dɔn sink to dis divays yet. Konekt to di klawd sɔs fɔ lod sɔs duas instead ɔf wan unverified fallback.';
 
   @override
   String get islamicEducation => 'Islamic Education';

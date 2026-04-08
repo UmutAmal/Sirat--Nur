@@ -785,8 +785,15 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count bitne dove';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Provjerene due još nisu dostupne';
+
+  @override
+  String get duaUnavailableBody =>
+      'Provjerene dnevne dojave još uvijek nisu sinhronizirane na ovaj uređaj. Povežite se s izvorom u oblaku za učitavanje dua-a iz izvora umjesto neprovjerenog rezervnog.';
 
   @override
   String get islamicEducation => 'Islamic Education';

@@ -783,12 +783,20 @@ class AppLocalizationsGd extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas làitheil';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count duas riatanach';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Chan eil dàs dearbhte rim faighinn fhathast';
+
+  @override
+  String get duaUnavailableBody =>
+      'Cha deach dus làitheil dearbhte a shioncronachadh ris an inneal seo fhathast. Ceangail ris an stòr sgòthan gus duas a luchdachadh sìos an àite tuiteam air ais gun dearbhadh.';
 
   @override
   String get islamicEducation => 'Islamic Education';

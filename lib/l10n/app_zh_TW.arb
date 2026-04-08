@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "每日杜阿",
+  "essentialDuas": "{count} 基本杜阿",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "已驗證的 dua 尚不可用",
+  "duaUnavailableBody": "已驗證的每日 duas 尚未同步到此裝置。連接到雲端來源以載入來源的 dua，而不是未經驗證的後備。"
 }

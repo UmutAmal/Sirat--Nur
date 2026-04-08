@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "দৈনিক দুয়াছ",
+  "essentialDuas": "{count} অত্যাৱশ্যকীয় দুয়া",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "পৰীক্ষিত duas এতিয়াও উপলব্ধ নহয়",
+  "duaUnavailableBody": "পৰীক্ষা কৰা দৈনিক duas এই ডিভাইচত এতিয়াও সিঙ্ক কৰা হোৱা নাই। এটা অসত্যাপন কৰা ফ'লবেকৰ পৰিবৰ্তে উৎস কৰা দুয়াসমূহ লোড কৰিবলে ক্লাউড উৎসৰ সৈতে সংযোগ কৰক।"
 }

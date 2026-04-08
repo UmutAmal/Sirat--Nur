@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "နေ့စဉ် Duas",
+  "essentialDuas": "{count} မရှိမဖြစ်လိုအပ်သော duas",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "အတည်ပြုထားသော duas များကို မရရှိနိုင်သေးပါ။",
+  "duaUnavailableBody": "အတည်ပြုထားသော နေ့စဉ် duas ကို ဤစက်ပစ္စည်းသို့ စင့်ခ်မလုပ်ရသေးပါ။ အတည်မပြုရသေးသော တုံ့ပြန်မှုအစား အရင်းအမြစ်မှ duas ကို တင်ရန် cloud အရင်းအမြစ်သို့ ချိတ်ဆက်ပါ။"
 }

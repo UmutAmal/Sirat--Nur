@@ -297,7 +297,7 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
+  "dailyDuas": "Guyyaa guyyaan Duas",
   "essentialDuas": "{count} essential duas",
   "@essentialDuas": {
     "placeholders": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Duaa mirkanaa'e ammallee hin jiru",
+  "duaUnavailableBody": "Duas guyyaa guyyaa mirkanaa'e hanga ammaatti meeshaa kana waliin wal hin simne. Kufaatii hin mirkanoofne osoo hin taane duas madda fe'uuf madda duumessaa waliin walqabsiisi."
 }

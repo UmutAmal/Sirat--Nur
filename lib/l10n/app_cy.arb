@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Duas Dyddiol",
+  "essentialDuas": "{count} deuodau hanfodol",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Nid yw deuodau wedi'u dilysu ar gael eto",
+  "duaUnavailableBody": "Nid yw deuodau dyddiol wedi'u dilysu wedi'u cysoni â'r ddyfais hon eto. Cysylltwch â ffynhonnell y cwmwl i lwytho deuodau o ffynonellau yn lle wrth gefn heb ei wirio."
 }

@@ -781,12 +781,20 @@ class AppLocalizationsOr extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'ଦ Daily ନିକ ଡୁଆସ୍ |';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count ଅତ୍ୟାବଶ୍ୟକ ଯୁଗଳ |';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'ଯାଞ୍ଚ ହୋଇଥିବା ଯୁଗଳ ଏପର୍ଯ୍ୟନ୍ତ ଉପଲବ୍ଧ ନାହିଁ |';
+
+  @override
+  String get duaUnavailableBody =>
+      'ଯାଞ୍ଚ ହୋଇଥିବା ଦ daily ନିକ ଯୁଗଳ ଏପର୍ଯ୍ୟନ୍ତ ଏହି ଡିଭାଇସ୍ ସହିତ ସିଙ୍କ ହୋଇନାହିଁ | ଏକ ଯାଞ୍ଚ ହୋଇନଥିବା ଫଲବ୍ୟାକ୍ ପରିବର୍ତ୍ତେ ସୋର୍ସଡ୍ ଡୁଆସ୍ ଲୋଡ୍ କରିବାକୁ କ୍ଲାଉଡ୍ ଉତ୍ସ ସହିତ ସଂଯୋଗ କରନ୍ତୁ |';
 
   @override
   String get islamicEducation => 'Islamic Education';

@@ -782,12 +782,20 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Adlaw-adlaw nga Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count importante nga duha';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Ang gi-verify nga mga duha wala pa magamit';
+
+  @override
+  String get duaUnavailableBody =>
+      'Ang gi-verify nga adlaw-adlaw nga duha wala pa ma-sync sa kini nga aparato. Sumpaysumpaya ang tinubdan sa panganod aron ma-load ang mga sourced nga duha imbes nga usa ka wala mapamatud-an nga fallback.';
 
   @override
   String get islamicEducation => 'Islamic Education';

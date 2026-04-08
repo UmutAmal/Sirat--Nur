@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Duas di ogni ghjornu",
+  "essentialDuas": "{count} duas essenziale",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Duas verificate ùn sò ancu dispunibili",
+  "duaUnavailableBody": "Duas di ogni ghjornu verificate ùn sò micca stati sincronizzati cù stu dispusitivu. Cunnettete à a surgente nuvola per caricate duas provenienti invece di un fallback micca verificatu."
 }

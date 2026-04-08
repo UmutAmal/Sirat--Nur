@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "தினசரி துஆ",
+  "essentialDuas": "{count} அத்தியாவசிய துவாக்கள்",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "சரிபார்க்கப்பட்ட துவாக்கள் இன்னும் கிடைக்கவில்லை",
+  "duaUnavailableBody": "சரிபார்க்கப்பட்ட தினசரி துவாக்கள் இந்தச் சாதனத்தில் இன்னும் ஒத்திசைக்கப்படவில்லை. சரிபார்க்கப்படாத ஃபால்பேக்கிற்குப் பதிலாக ஆதாரமான துவாக்களை ஏற்றுவதற்கு கிளவுட் மூலத்துடன் இணைக்கவும்."
 }

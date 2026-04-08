@@ -297,7 +297,7 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
+  "dailyDuas": "መዓልታዊ ዱዋስ",
   "essentialDuas": "{count} essential duas",
   "@essentialDuas": {
     "placeholders": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "ዝተረጋገጹ ዱዓታት ገና ኣይተረኽቡን።",
+  "duaUnavailableBody": "ዝተረጋገጹ መዓልታዊ ዱዓታት ገና ምስዚ መሳርሒ ኣይተሰማምዑን። ኣብ ክንዲ ዘይተረጋገጸ ምምላስ ምምላስ ምንጪ ዘለዎም ዱዓታት ንምጽዓን ምስቲ ምንጪ ደበና ምትእስሳር።"
 }

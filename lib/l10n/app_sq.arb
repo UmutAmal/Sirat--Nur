@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Duas ditore",
+  "essentialDuas": "{count} dua thelbësore",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Duat e verifikuara nuk ofrohen ende",
+  "duaUnavailableBody": "Duat e verifikuara ditore nuk janë sinkronizuar ende me këtë pajisje. Lidhu me burimin cloud për të ngarkuar duatë me burim në vend të një kthimi të paverifikuar."
 }

@@ -36,7 +36,20 @@ String resolveSukunLibrarySubtitle(AppLocalizations l10n, bool isAvailable) {
 }
 
 List<DuaData> resolveLibraryDuas(AsyncValue<List<DuaData>> asyncDuas) {
-  return asyncDuas.valueOrNull ?? dailyDuas;
+  return asyncDuas.valueOrNull ?? bundledDailyDuaFallback();
+}
+
+bool areDailyDuasAvailable(List<DuaData> duas) {
+  return duas.isNotEmpty;
+}
+
+String resolveDailyDuasLibrarySubtitle(
+  AppLocalizations l10n,
+  List<DuaData> duas,
+) {
+  return areDailyDuasAvailable(duas)
+      ? l10n.essentialDuas(duas.length.toString())
+      : l10n.duaUnavailableTitle;
 }
 
 String resolveDuaMeaning(DuaData dua, Locale locale) {
@@ -65,6 +78,7 @@ class LibraryPage extends ConsumerWidget {
       audio,
       cloudSources: cloudSukunSources,
     );
+    final areDuasAvailable = areDailyDuasAvailable(duas);
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.library)),
@@ -122,7 +136,7 @@ class LibraryPage extends ConsumerWidget {
             // Daily Duas
             AnimatedPremiumCard(
               animationDelay: 100,
-              onTap: () => _openDuas(context),
+              onTap: areDuasAvailable ? () => _openDuas(context) : null,
               child: Row(
                 children: [
                   Container(
@@ -150,7 +164,7 @@ class LibraryPage extends ConsumerWidget {
                           ),
                         ),
                         Text(
-                          l10n.essentialDuas(duas.length.toString()),
+                          resolveDailyDuasLibrarySubtitle(l10n, duas),
                           style: TextStyle(
                             fontSize: 13,
                             color: Theme.of(
@@ -161,7 +175,14 @@ class LibraryPage extends ConsumerWidget {
                       ],
                     ),
                   ),
-                  const Icon(Icons.chevron_right_rounded),
+                  Icon(
+                    areDuasAvailable
+                        ? Icons.chevron_right_rounded
+                        : Icons.block_rounded,
+                    color: Theme.of(
+                      context,
+                    ).colorScheme.onSurface.withValues(alpha: 0.4),
+                  ),
                 ],
               ),
             ),
@@ -460,88 +481,105 @@ class _DuasView extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.dailyDuas)),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(16),
-        itemCount: duas.length,
-        itemBuilder: (context, i) {
-          final dua = duas[i];
-          return PremiumCard(
-            margin: const EdgeInsets.only(bottom: 16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 4,
-                      ),
-                      decoration: BoxDecoration(
-                        color: AppColors.emeraldSurface,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Text(
-                        _translateDuaCategory(
-                          dua.category,
-                          locale.languageCode,
-                        ),
-                        style: const TextStyle(
-                          fontSize: 11,
-                          fontWeight: FontWeight.w800,
-                          color: AppColors.emerald,
-                        ),
-                      ),
-                    ),
-                    const Spacer(),
-                    Text(
-                      _translateDuaSource(dua.source, locale.languageCode),
-                      style: TextStyle(
-                        fontSize: 11,
-                        color: Theme.of(
-                          context,
-                        ).colorScheme.onSurface.withValues(alpha: 0.4),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 16),
-                Text(
-                  dua.arabic,
-                  style: const TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w900,
-                    height: 2.0,
-                  ),
-                  textAlign: TextAlign.right,
-                  textDirection: TextDirection.rtl,
-                ),
-                const SizedBox(height: 12),
-                Text(
-                  dua.transliteration,
+      body: duas.isEmpty
+          ? Center(
+              child: Padding(
+                padding: const EdgeInsets.all(24),
+                child: Text(
+                  l10n.duaUnavailableBody,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 13,
-                    fontStyle: FontStyle.italic,
+                    fontSize: 14,
+                    height: 1.6,
                     color: Theme.of(
                       context,
                     ).colorScheme.onSurface.withValues(alpha: 0.6),
                   ),
                 ),
-                const SizedBox(height: 8),
-                Text(
-                  resolveDuaMeaning(dua, locale),
-                  style: TextStyle(
-                    fontSize: 13,
-                    color: Theme.of(
-                      context,
-                    ).colorScheme.onSurface.withValues(alpha: 0.5),
+              ),
+            )
+          : ListView.builder(
+              padding: const EdgeInsets.all(16),
+              itemCount: duas.length,
+              itemBuilder: (context, i) {
+                final dua = duas[i];
+                return PremiumCard(
+                  margin: const EdgeInsets.only(bottom: 16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 4,
+                            ),
+                            decoration: BoxDecoration(
+                              color: AppColors.emeraldSurface,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Text(
+                              _translateDuaCategory(
+                                dua.category,
+                                locale.languageCode,
+                              ),
+                              style: const TextStyle(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w800,
+                                color: AppColors.emerald,
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          Text(
+                            _translateDuaSource(dua.source, locale.languageCode),
+                            style: TextStyle(
+                              fontSize: 11,
+                              color: Theme.of(
+                                context,
+                              ).colorScheme.onSurface.withValues(alpha: 0.4),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
+                        dua.arabic,
+                        style: const TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w900,
+                          height: 2.0,
+                        ),
+                        textAlign: TextAlign.right,
+                        textDirection: TextDirection.rtl,
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        dua.transliteration,
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontStyle: FontStyle.italic,
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.onSurface.withValues(alpha: 0.6),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        resolveDuaMeaning(dua, locale),
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.onSurface.withValues(alpha: 0.5),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
+                );
+              },
             ),
-          );
-        },
-      ),
     );
   }
 }

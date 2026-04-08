@@ -781,12 +781,19 @@ class AppLocalizationsTg extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Дуои ҳаррӯза';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count дуоҳои муҳим';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Дуоҳои тасдиқшуда ҳанӯз дастрас нестанд';
+
+  @override
+  String get duaUnavailableBody =>
+      'Дуоҳои ҳаррӯзаи тасдиқшуда то ҳол бо ин дастгоҳ ҳамоҳанг карда нашудаанд. Ба манбаи абр пайваст шавед, то дуоҳои сарчашмаро ба ҷои бозгашти тасдиқнашуда бор кунед.';
 
   @override
   String get islamicEducation => 'Islamic Education';

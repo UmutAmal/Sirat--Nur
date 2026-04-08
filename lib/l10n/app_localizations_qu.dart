@@ -781,12 +781,19 @@ class AppLocalizationsQu extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Sapa punchaw Duas';
 
   @override
   String essentialDuas(String count) {
     return '$count essential duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Verified duas manaraqmi kanchu';
+
+  @override
+  String get duaUnavailableBody =>
+      'Chiqaqchasqa sapa p\'unchaw duas manaraq kay dispositivoman tinkisqachu. Puyu pukyuta tinkiy pukyuta duakuna karganapaq mana chiqaqchasqa urmaymantaqa.';
 
   @override
   String get islamicEducation => 'Islamic Education';

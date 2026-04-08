@@ -781,12 +781,19 @@ class AppLocalizationsJv extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Saben dina';
 
   @override
   String essentialDuas(String count) {
     return '$count essential duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Duas sing diverifikasi durung kasedhiya';
+
+  @override
+  String get duaUnavailableBody =>
+      'Duas saben dina sing wis diverifikasi durung diselarasake karo piranti iki. Sambungake menyang sumber maya kanggo mbukak sumber sumber tinimbang mundur sing ora diverifikasi.';
 
   @override
   String get islamicEducation => 'Islamic Education';

@@ -1936,6 +1936,18 @@ abstract class AppLocalizations {
   /// **'{count} essential duas'**
   String essentialDuas(String count);
 
+  /// No description provided for @duaUnavailableTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified duas are not available yet'**
+  String get duaUnavailableTitle;
+
+  /// No description provided for @duaUnavailableBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.'**
+  String get duaUnavailableBody;
+
   /// No description provided for @islamicEducation.
   ///
   /// In en, this message translates to:

@@ -782,12 +782,19 @@ class AppLocalizationsCo extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas di ogni ghjornu';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count duas essenziale';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Duas verificate ùn sò ancu dispunibili';
+
+  @override
+  String get duaUnavailableBody =>
+      'Duas di ogni ghjornu verificate ùn sò micca stati sincronizzati cù stu dispusitivu. Cunnettete à a surgente nuvola per caricate duas provenienti invece di un fallback micca verificatu.';
 
   @override
   String get islamicEducation => 'Islamic Education';

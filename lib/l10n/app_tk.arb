@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Gündelik Duas",
+  "essentialDuas": "{count} zerur duas",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Barlanylan dualar entek elýeterli däl",
+  "duaUnavailableBody": "Barlanylan gündelik dualar entek bu enjam bilen sinhronlanmady. Barlanmadyk yza gaýtmagyň ýerine bulut çeşmesine birikdiriň."
 }

@@ -782,12 +782,20 @@ class AppLocalizationsNl extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Dagelijkse Dua\'s';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count essentiële dua\'s';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Er zijn nog geen geverifieerde dua\'s beschikbaar';
+
+  @override
+  String get duaUnavailableBody =>
+      'Geverifieerde dagelijkse dua\'s zijn nog niet met dit apparaat gesynchroniseerd. Maak verbinding met de cloudbron om afkomstige dua\'s te laden in plaats van een niet-geverifieerde terugval.';
 
   @override
   String get islamicEducation => 'Islamic Education';

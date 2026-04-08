@@ -789,12 +789,20 @@ class AppLocalizationsNso extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas ya letšatši le letšatši';
 
   @override
   String essentialDuas(String count) {
     return '$count essential duas';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Di-dua tše di netefaditšwego ga di hwetšagale ga bjale';
+
+  @override
+  String get duaUnavailableBody =>
+      'Di-dua tša letšatši le letšatši tše di netefaditšwego ga se tša nyalantšhwa le sedirišwa se ga bjale. Ikgokaganye le mothopo wa leru go laetša di-duas tšeo di tšwago mothopo go e na le go boela morago mo go sa netefatšwago.';
 
   @override
   String get islamicEducation => 'Islamic Education';

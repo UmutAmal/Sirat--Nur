@@ -781,12 +781,19 @@ class AppLocalizationsKu extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Rojane Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count duayên bingehîn';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Duayên verastkirî hîn ne berdest in';
+
+  @override
+  String get duaUnavailableBody =>
+      'Duayên rojane yên pejirandî hîn bi vê cîhazê re nehatine hevdeng kirin. Bi çavkaniya ewr ve girêdin da ku li şûna paşverûyek nerastkirî duayên jêderkirî bar bikin.';
 
   @override
   String get islamicEducation => 'Islamic Education';

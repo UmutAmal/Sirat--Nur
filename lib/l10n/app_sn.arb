@@ -298,7 +298,7 @@
   "library": "Library",
   "analytics": "Analytics",
   "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "essentialDuas": "{count} maduas akakosha",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Maduas akasimbiswa haasati awanikwa",
+  "duaUnavailableBody": "Madua emazuva ese anosimbiswa haasati awiriraniswa pamudziyo uyu. Batanidza kune iyo cloud source kuti uise sourced duas pachinzvimbo chefour unverified fallback."
 }

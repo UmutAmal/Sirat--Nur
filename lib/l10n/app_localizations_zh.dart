@@ -789,6 +789,13 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
+  String get duaUnavailableTitle => 'Verified duas are not available yet';
+
+  @override
+  String get duaUnavailableBody =>
+      'Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override
@@ -1869,12 +1876,19 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => '每日杜阿';
 
   @override
   String essentialDuas(String count) {
     return '$count essential duas';
   }
+
+  @override
+  String get duaUnavailableTitle => '已验证的 dua 尚不可用';
+
+  @override
+  String get duaUnavailableBody =>
+      '已验证的每日 duas 尚未同步到此设备。连接到云源以加载来源的 dua，而不是未经验证的后备。';
 
   @override
   String get islamicEducation => 'Islamic Education';
@@ -2955,12 +2969,19 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => '每日杜阿';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count 基本杜阿';
   }
+
+  @override
+  String get duaUnavailableTitle => '已驗證的 dua 尚不可用';
+
+  @override
+  String get duaUnavailableBody =>
+      '已驗證的每日 duas 尚未同步到此裝置。連接到雲端來源以載入來源的 dua，而不是未經驗證的後備。';
 
   @override
   String get islamicEducation => 'Islamic Education';

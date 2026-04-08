@@ -297,7 +297,7 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
+  "dailyDuas": "Ára ha ára Duas",
   "essentialDuas": "{count} essential duas",
   "@essentialDuas": {
     "placeholders": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Umi duas verificado ndojeguerekói gueteri",
+  "duaUnavailableBody": "Umi duas diario ojehechaukáva noñembojoajúi gueteri ko tembipuru’ípe. Embojoaju arai fuente-pe ekargávo duas fuente-gui peteĩ fallback ndojehecháiva rangue."
 }

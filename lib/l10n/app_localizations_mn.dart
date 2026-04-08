@@ -781,12 +781,19 @@ class AppLocalizationsMn extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Өдөр тутмын дуа';
 
   @override
   String essentialDuas(String count) {
     return '$count essential duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Баталгаажсан дуга хараахан байхгүй байна';
+
+  @override
+  String get duaUnavailableBody =>
+      'Баталгаажсан өдөр тутмын дулаа энэ төхөөрөмжид хараахан синк хийгдээгүй байна. Баталгаажаагүй нөөцийн оронд эх сурвалжаас авсан дуусыг ачаалахын тулд үүлэн эх сурвалжтай холбогдоно уу.';
 
   @override
   String get islamicEducation => 'Islamic Education';

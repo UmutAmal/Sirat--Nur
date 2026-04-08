@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Duas diàries",
+  "essentialDuas": "{count} duas essencials",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Les dues verificades encara no estan disponibles",
+  "duaUnavailableBody": "Les duas diàries verificades encara no s'han sincronitzat amb aquest dispositiu. Connecteu-vos a la font del núvol per carregar duas d'origen en lloc d'una alternativa no verificada."
 }

@@ -781,12 +781,19 @@ class AppLocalizationsYi extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'טעגלעך דואַס';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count יקערדיק דואַס';
   }
+
+  @override
+  String get duaUnavailableTitle => 'וועריפיעד דואַס זענען נישט בנימצא נאָך';
+
+  @override
+  String get duaUnavailableBody =>
+      'וועריפיעד טעגלעך דואַס זענען נישט סינסעד צו דעם מיטל נאָך. קאָננעקט צו די וואָלקן מקור צו לאָדן סאָרסעד דואַס אַנשטאָט פון אַן אַנוועראַפייד פאַלבאַק.';
 
   @override
   String get islamicEducation => 'Islamic Education';

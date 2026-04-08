@@ -2255,3 +2255,48 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) sabit duası satır satır resmi kaynak ve zincir dürüstlüğü açısından denetlenecek.
 - Özellikle yanlış/hatalı transliterasyon, zayıf veya belirsiz kaynak atfı ve standard dua metni olmayan girişler verified pipeline gelene kadar production fallback’ten çıkarılacak.
+
+## 2026-04-08 TUR-57 — Disable Unverified Bundled Dua Fallback
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) içine `hasVerifiedBundledDuas = false` ve `bundledDailyDuaFallback()` eklendi; `resolveCloudDuas` artık cloud veri boşsa doğrulanmamış sabit listeye değil boş güvenli fallback’e dönüyor.
+- [A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/providers/supabase_providers.dart) `dailyDuasProvider` catch dalında da aynı verified fallback kuralına geçirildi.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) daily duas kartını availability-aware hale getirdi; veri yoksa kart bloklanıyor, sahte `12 essential duas` sayacı yerine dürüst unavailable kopyası gösteriliyor ve detay ekranı boş liste yerine açıklayıcı unavailable mesajı veriyor.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) ve tüm `app_*.arb` setinde `dailyDuas`, `essentialDuas`, `duaUnavailableTitle`, `duaUnavailableBody` zinciri güncellendi; ardından `flutter gen-l10n` yeniden üretildi.
+- [A:\Way of Allah\sirat_i_nur\test\library_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/library_page_test.dart) ve [A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/library/library_page_cloud_duas_test.dart) yeni verified fallback davranışını kilitleyecek şekilde genişletildi.
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) içindeki sabit dualar arasında hatalı transliterasyon, standart dua metni olmayan girişler ve belirsiz kaynak atıfları bulunuyor.
+- Buna rağmen [A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/providers/supabase_providers.dart) ile [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) bu sabitleri production fallback olarak kullanıcıya gerçek verified içerik gibi sunuyordu.
+- Kök sebep, verified dua seed zinciri kurulmadan sabit listenin otomatik fallback olarak kalması ve UI’ın bunu dürüstçe işaretlememesiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Cloud `duas` tablosu boşsa veya erişilemezse kullanıcıya artık doğrulanmamış dua içeriği servis edilmiyor.
+- Daily duas kartı ve detay sayfası, yanlış dini içerik yerine verified içerik eksikliğini dürüstçe bildiriyor.
+- `dailyDuas` ve ilgili unavailable copy yeni turda tüm locale setine yayıldı; generated localization sınıfları ARB ile yeniden senkronlandı.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart dailyDuas essentialDuas duaUnavailableTitle duaUnavailableBody` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/library_page_test.dart` → PASS (`10/10`)
+- `flutter test test/features/library/library_page_cloud_duas_test.dart` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`161/161`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Unverified bundled dua content being shown as trustworthy production fallback: `14/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) repo içinde bırakılan sabit listenin kendisi kaynak bazında tek tek ayıklanacak veya verified dua seed hattı kurulana kadar tamamen production dışı yardımcı dataset statüsüne indirilecek.
+- Ardından [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) ve `duas` cloud zinciri için resmi/kurumsal seed pipeline hazırlanacak.

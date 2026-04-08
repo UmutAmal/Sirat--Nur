@@ -789,6 +789,13 @@ class AppLocalizationsMg extends AppLocalizations {
   }
 
   @override
+  String get duaUnavailableTitle => 'Tsy mbola misy ny roa voamarina';
+
+  @override
+  String get duaUnavailableBody =>
+      'Ny duas isan\'andro voamarina dia tsy mbola narindra tamin\'ity fitaovana ity. Ampifandraiso amin\'ny loharanon-drahona mba hametahana ny roa avy amin\'ny loharano fa tsy fiverenana tsy voamarina.';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

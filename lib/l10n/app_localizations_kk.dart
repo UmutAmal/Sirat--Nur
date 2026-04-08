@@ -781,12 +781,19 @@ class AppLocalizationsKk extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Күнделікті дұғалар';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count маңызды дұғалар';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Расталған дұғалар әлі қол жетімді емес';
+
+  @override
+  String get duaUnavailableBody =>
+      'Расталған күнделікті дұғалар бұл құрылғыға әлі синхрондалмаған. Тексерілмеген қалпына келтірудің орнына бастапқы дуаларды жүктеу үшін бұлт көзіне қосылыңыз.';
 
   @override
   String get islamicEducation => 'Islamic Education';

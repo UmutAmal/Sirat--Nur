@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Dagliga Duas",
+  "essentialDuas": "{count} viktiga duas",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Verifierade duas är inte tillgängliga ännu",
+  "duaUnavailableBody": "Verifierade dagliga duas har inte synkroniserats med den här enheten ännu. Anslut till molnkällan för att läsa in duas med källa istället för en overifierad reserv."
 }

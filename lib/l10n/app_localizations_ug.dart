@@ -785,8 +785,16 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count مۇھىم دۇئاسى';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'دەلىللەنگەن دۇئانى تېخى ئىشلەتكىلى بولمايدۇ';
+
+  @override
+  String get duaUnavailableBody =>
+      'تەكشۈرۈلگەن كۈندىلىك دۇئاسى تېخى بۇ ئۈسكۈنىگە ماسقەدەملەنمىدى. بۇلۇت مەنبەسىگە ئۇلىنىپ ، دەلىللەنمىگەن خاتالىقنىڭ ئورنىغا مەنبەلىك دۇئانى يۈكلەڭ.';
 
   @override
   String get islamicEducation => 'Islamic Education';

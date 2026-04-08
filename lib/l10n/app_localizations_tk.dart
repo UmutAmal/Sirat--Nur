@@ -781,12 +781,19 @@ class AppLocalizationsTk extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Gündelik Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count zerur duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Barlanylan dualar entek elýeterli däl';
+
+  @override
+  String get duaUnavailableBody =>
+      'Barlanylan gündelik dualar entek bu enjam bilen sinhronlanmady. Barlanmadyk yza gaýtmagyň ýerine bulut çeşmesine birikdiriň.';
 
   @override
   String get islamicEducation => 'Islamic Education';

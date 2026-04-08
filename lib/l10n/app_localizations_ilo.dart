@@ -786,12 +786,19 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Inaldaw a Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count nasken a duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Saan pay a magun-od dagiti verified duas';
+
+  @override
+  String get duaUnavailableBody =>
+      'Dagiti naberipikado nga inaldaw a dua ket saan pay a nai-sync iti daytoy nga alikamen. Konektaen ti gubuayan ti ulep tapno maikarga dagiti nagtaudan a duas imbes a ti saan a naberipikado a fallback.';
 
   @override
   String get islamicEducation => 'Islamic Education';

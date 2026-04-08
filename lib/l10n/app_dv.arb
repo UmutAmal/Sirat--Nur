@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "ޑެއިލީ ދުއާސް އެވެ",
+  "essentialDuas": "{count} ކޮންމެހެން ބޭނުންވާ ދުޢާތަކެވެ",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "ވެރިފައިޑް ދުއާސް އަދި ނުލިބެއެވެ",
+  "duaUnavailableBody": "ވެރިފައިޑް ޑެއިލީ ދުއާސް އަދި މި ޑިވައިސްއަށް ސިންކްކޮށްފައެއް ނުވެއެވެ. ޔަޤީން ނުކުރެވޭ ފޯލްބެކެއްގެ ބަދަލުގައި ސޯސްޑް ޑޫއާސް ލޯޑް ކުރުމަށް ކްލައުޑް ސޯސް އާއި ގުޅުން."
 }

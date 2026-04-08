@@ -781,12 +781,20 @@ class AppLocalizationsEu extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Egunero Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count ezinbestekoak dira';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Egiaztatutako duak ez daude eskuragarri oraindik';
+
+  @override
+  String get duaUnavailableBody =>
+      'Egiaztatutako eguneroko duak ez dira oraindik sinkronizatu gailu honekin. Konektatu hodeiko iturburura iturriko duak kargatzeko, egiaztatu gabeko ordezkapen baten ordez.';
 
   @override
   String get islamicEducation => 'Islamic Education';

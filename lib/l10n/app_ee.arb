@@ -297,7 +297,7 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
+  "dailyDuas": "Gbesiagbe Duas",
   "essentialDuas": "{count} essential duas",
   "@essentialDuas": {
     "placeholders": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Dua siwo ŋu woɖo kpee la meli haɖe o",
+  "duaUnavailableBody": "Womewɔ ɖeka kple gbesiagbe dua siwo ŋu woɖo kpee haɖe o. Do ka kple alilikpo dzɔtsoƒe be nàtsɔ dua siwo tso dzɔtsoƒe la ade agba me tsɔ wu be nàtsɔ fallback si ŋu womeɖo kpee o."
 }

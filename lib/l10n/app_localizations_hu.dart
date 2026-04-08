@@ -781,12 +781,19 @@ class AppLocalizationsHu extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Napi Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count alapvető duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Ellenőrzött duák még nem érhetők el';
+
+  @override
+  String get duaUnavailableBody =>
+      'Az ellenőrzött napi duák még nincsenek szinkronizálva ezzel az eszközzel. Csatlakozzon a felhőforráshoz a forrásból származó duák betöltéséhez az ellenőrizetlen tartalék helyett.';
 
   @override
   String get islamicEducation => 'Islamic Education';

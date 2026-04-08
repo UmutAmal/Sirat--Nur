@@ -781,12 +781,19 @@ class AppLocalizationsSu extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas poean';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count penting duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'duas diverifikasi teu sadia acan';
+
+  @override
+  String get duaUnavailableBody =>
+      'Duas poean anu diverifikasi teu acan disingkronkeun ka alat ieu. Sambungkeun ka sumber awan pikeun muka duas sourced tinimbang fallback unverified.';
 
   @override
   String get islamicEducation => 'Islamic Education';

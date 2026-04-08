@@ -298,7 +298,7 @@
   "library": "Library",
   "analytics": "Analytics",
   "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "essentialDuas": "{count} essensjele duas",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Ferifiearre duas binne noch net beskikber",
+  "duaUnavailableBody": "Ferifiearre deistige duas binne noch net syngronisearre mei dit apparaat. Ferbine mei de wolkboarne om boarne duas te laden ynstee fan in net ferifiearre fallback."
 }

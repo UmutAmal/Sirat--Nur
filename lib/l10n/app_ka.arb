@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "ყოველდღიური დუასი",
+  "essentialDuas": "{count} აუცილებელი დუები",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "დადასტურებული დუა ჯერ არ არის ხელმისაწვდომი",
+  "duaUnavailableBody": "დადასტურებული ყოველდღიური დუაები ჯერ არ არის სინქრონიზებული ამ მოწყობილობასთან. დაუკავშირდით ღრუბლოვან წყაროს, რომ ჩატვირთოთ მოპოვებული დუები დაუდასტურებელი სარეზერვო ნაცვლად."
 }

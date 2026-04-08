@@ -781,12 +781,20 @@ class AppLocalizationsMt extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas kuljum';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count duas essenzjali';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Duas verifikati għadhom mhumiex disponibbli';
+
+  @override
+  String get duaUnavailableBody =>
+      'Duas ta\' kuljum ivverifikati għadhom ma ġewx issinkronizzati ma\' dan l-apparat. Qabbad mas-sors tas-sħab biex tagħbija duas minn sorsi minflok riżerva mhux verifikata.';
 
   @override
   String get islamicEducation => 'Islamic Education';

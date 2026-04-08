@@ -781,12 +781,20 @@ class AppLocalizationsSv extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Dagliga Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count viktiga duas';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Verifierade duas är inte tillgängliga ännu';
+
+  @override
+  String get duaUnavailableBody =>
+      'Verifierade dagliga duas har inte synkroniserats med den här enheten ännu. Anslut till molnkällan för att läsa in duas med källa istället för en overifierad reserv.';
 
   @override
   String get islamicEducation => 'Islamic Education';

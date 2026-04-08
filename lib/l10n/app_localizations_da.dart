@@ -781,12 +781,20 @@ class AppLocalizationsDa extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Daglige Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count væsentlige duas';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Verificerede duas er ikke tilgængelige endnu';
+
+  @override
+  String get duaUnavailableBody =>
+      'Bekræftede daglige duas er ikke blevet synkroniseret til denne enhed endnu. Opret forbindelse til cloud-kilden for at indlæse duas fra kilder i stedet for en ubekræftet fallback.';
 
   @override
   String get islamicEducation => 'Islamic Education';

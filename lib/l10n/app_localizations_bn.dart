@@ -781,12 +781,19 @@ class AppLocalizationsBn extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'প্রতিদিনের দোয়া';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count প্রয়োজনীয় দোয়া';
   }
+
+  @override
+  String get duaUnavailableTitle => 'যাচাইকৃত দুআ এখনো পাওয়া যায় না';
+
+  @override
+  String get duaUnavailableBody =>
+      'যাচাই করা দৈনিক ডুয়াস এখনও এই ডিভাইসে সিঙ্ক করা হয়নি। অযাচাইকৃত ফলব্যাকের পরিবর্তে সোর্সড ডুয়াস লোড করতে ক্লাউড সোর্সের সাথে সংযোগ করুন৷';
 
   @override
   String get islamicEducation => 'Islamic Education';

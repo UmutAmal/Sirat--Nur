@@ -781,12 +781,19 @@ class AppLocalizationsOm extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Guyyaa guyyaan Duas';
 
   @override
   String essentialDuas(String count) {
     return '$count essential duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Duaa mirkanaa\'e ammallee hin jiru';
+
+  @override
+  String get duaUnavailableBody =>
+      'Duas guyyaa guyyaa mirkanaa\'e hanga ammaatti meeshaa kana waliin wal hin simne. Kufaatii hin mirkanoofne osoo hin taane duas madda fe\'uuf madda duumessaa waliin walqabsiisi.';
 
   @override
   String get islamicEducation => 'Islamic Education';

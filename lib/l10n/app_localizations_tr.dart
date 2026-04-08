@@ -791,6 +791,13 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
+  String get duaUnavailableTitle => 'Doğrulanmış dualar henüz hazır değil';
+
+  @override
+  String get duaUnavailableBody =>
+      'Doğrulanmış günlük dualar henüz bu cihaza senkronlanmadı. Doğrulanmamış fallback yerine kaynaklı duaları yüklemek için bulut kaynağına bağlanın.';
+
+  @override
   String get islamicEducation => 'İslami Eğitim';
 
   @override

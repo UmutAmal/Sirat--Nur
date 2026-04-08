@@ -787,8 +787,15 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count tseem ceeb duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Verified duas tseem tsis tau muaj';
+
+  @override
+  String get duaUnavailableBody =>
+      'Txheeb xyuas txhua hnub duas tseem tsis tau synced rau lub cuab yeej no. Txuas mus rau huab qhov chaw thauj khoom duas es tsis txhob muaj qhov rov qab tsis tau lees paub.';
 
   @override
   String get islamicEducation => 'Islamic Education';

@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Dagelijkse Dua's",
+  "essentialDuas": "{count} essentiële dua's",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Er zijn nog geen geverifieerde dua's beschikbaar",
+  "duaUnavailableBody": "Geverifieerde dagelijkse dua's zijn nog niet met dit apparaat gesynchroniseerd. Maak verbinding met de cloudbron om afkomstige dua's te laden in plaats van een niet-geverifieerde terugval."
 }

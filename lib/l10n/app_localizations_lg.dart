@@ -781,12 +781,19 @@ class AppLocalizationsLg extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Buli lunaku Duas';
 
   @override
   String essentialDuas(String count) {
     return '$count essential duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Verified duas tezinnabaawo';
+
+  @override
+  String get duaUnavailableBody =>
+      'Verified daily duas tezinnaba kukwatagana na kyuma kino. Yunga ku nsibuko y\'ekire okutikka duas ezisibuka mu kifo ky\'okugwa emabega okutakakasiddwa.';
 
   @override
   String get islamicEducation => 'Islamic Education';

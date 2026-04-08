@@ -781,12 +781,19 @@ class AppLocalizationsJa extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'デイリーデュアス';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count 必須デュアス';
   }
+
+  @override
+  String get duaUnavailableTitle => '検証済みのデュアはまだ利用できません';
+
+  @override
+  String get duaUnavailableBody =>
+      '毎日のデュアがまだこのデバイスに同期されていないことを確認しました。クラウド ソースに接続して、未検証のフォールバックではなく、ソースされたデュアをロードします。';
 
   @override
   String get islamicEducation => 'Islamic Education';

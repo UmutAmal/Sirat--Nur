@@ -781,12 +781,19 @@ class AppLocalizationsVi extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas hàng ngày';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count bộ đôi thiết yếu';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Bộ đôi đã được xác minh chưa có sẵn';
+
+  @override
+  String get duaUnavailableBody =>
+      'Bộ đôi hàng ngày đã được xác minh chưa được đồng bộ hóa với thiết bị này. Kết nối với nguồn đám mây để tải các bản song ca có nguồn gốc thay vì bản dự phòng chưa được xác minh.';
 
   @override
   String get islamicEducation => 'Islamic Education';

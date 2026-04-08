@@ -785,8 +785,15 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count maduas akakosha';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Maduas akasimbiswa haasati awanikwa';
+
+  @override
+  String get duaUnavailableBody =>
+      'Madua emazuva ese anosimbiswa haasati awiriraniswa pamudziyo uyu. Batanidza kune iyo cloud source kuti uise sourced duas pachinzvimbo chefour unverified fallback.';
 
   @override
   String get islamicEducation => 'Islamic Education';

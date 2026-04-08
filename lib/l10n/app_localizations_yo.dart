@@ -781,12 +781,19 @@ class AppLocalizationsYo extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas ojoojumọ';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count duas pataki';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Awọn duas ti a rii daju ko si sibẹsibẹ';
+
+  @override
+  String get duaUnavailableBody =>
+      'Awọn duas ojoojumọ ti a rii daju ko ti muuṣiṣẹpọ si ẹrọ yii sibẹsibẹ. Sopọ si orisun awọsanma lati ṣajọpọ duas ti o ti jade dipo idasẹhin ti a ko rii daju.';
 
   @override
   String get islamicEducation => 'Islamic Education';

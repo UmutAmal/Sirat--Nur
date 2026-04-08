@@ -781,12 +781,20 @@ class AppLocalizationsMy extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'နေ့စဉ် Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count မရှိမဖြစ်လိုအပ်သော duas';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'အတည်ပြုထားသော duas များကို မရရှိနိုင်သေးပါ။';
+
+  @override
+  String get duaUnavailableBody =>
+      'အတည်ပြုထားသော နေ့စဉ် duas ကို ဤစက်ပစ္စည်းသို့ စင့်ခ်မလုပ်ရသေးပါ။ အတည်မပြုရသေးသော တုံ့ပြန်မှုအစား အရင်းအမြစ်မှ duas ကို တင်ရန် cloud အရင်းအမြစ်သို့ ချိတ်ဆက်ပါ။';
 
   @override
   String get islamicEducation => 'Islamic Education';

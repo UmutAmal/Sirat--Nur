@@ -297,7 +297,7 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
+  "dailyDuas": "Duas ya letšatši le letšatši",
   "essentialDuas": "{count} essential duas",
   "@essentialDuas": {
     "placeholders": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Di-dua tše di netefaditšwego ga di hwetšagale ga bjale",
+  "duaUnavailableBody": "Di-dua tša letšatši le letšatši tše di netefaditšwego ga se tša nyalantšhwa le sedirišwa se ga bjale. Ikgokaganye le mothopo wa leru go laetša di-duas tšeo di tšwago mothopo go e na le go boela morago mo go sa netefatšwago."
 }

@@ -297,7 +297,7 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
+  "dailyDuas": "Don o don Duas",
   "essentialDuas": "{count} essential duas",
   "@essentialDuas": {
     "placeholders": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Dua sɛgɛsɛgɛlenw ma sɔrɔ fɔlɔ",
+  "duaUnavailableBody": "Don o don duas sɛgɛsɛgɛlenw ma sinsin nin minɛn in kan fɔlɔ. Aw bɛ ɲɔgɔn Jɛ ni sankaba sɔrɔyɔrɔ ye walasa ka duaw doni sɔrɔyɔrɔ la sanni ka fallback sɔrɔ min ma sɛgɛsɛgɛ."
 }

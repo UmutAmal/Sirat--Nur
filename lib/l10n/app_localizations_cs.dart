@@ -781,12 +781,19 @@ class AppLocalizationsCs extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Denní Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count zásadní duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Ověřené dua zatím nejsou k dispozici';
+
+  @override
+  String get duaUnavailableBody =>
+      'Ověřené denní dua zatím nebyly synchronizovány do tohoto zařízení. Připojte se ke cloudovému zdroji a načtěte duas ze zdrojů namísto neověřeného záložního řešení.';
 
   @override
   String get islamicEducation => 'Islamic Education';

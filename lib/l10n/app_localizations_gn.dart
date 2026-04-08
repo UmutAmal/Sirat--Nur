@@ -783,12 +783,19 @@ class AppLocalizationsGn extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Ára ha ára Duas';
 
   @override
   String essentialDuas(String count) {
     return '$count essential duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Umi duas verificado ndojeguerekói gueteri';
+
+  @override
+  String get duaUnavailableBody =>
+      'Umi duas diario ojehechaukáva noñembojoajúi gueteri ko tembipuru’ípe. Embojoaju arai fuente-pe ekargávo duas fuente-gui peteĩ fallback ndojehecháiva rangue.';
 
   @override
   String get islamicEducation => 'Islamic Education';

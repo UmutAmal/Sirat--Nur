@@ -781,12 +781,19 @@ class AppLocalizationsHe extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'דואס יומי';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count דואס חיוני';
   }
+
+  @override
+  String get duaUnavailableTitle => 'דואס מאומת אינם זמינים עדיין';
+
+  @override
+  String get duaUnavailableBody =>
+      'עדיין לא סונכרנו דואס יומיים מאומתים עם המכשיר הזה. התחבר למקור הענן כדי לטעון דואס ממקור במקום סתירה לא מאומתת.';
 
   @override
   String get islamicEducation => 'Islamic Education';

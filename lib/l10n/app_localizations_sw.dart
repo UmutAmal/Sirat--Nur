@@ -781,12 +781,19 @@ class AppLocalizationsSw extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Dua za kila siku';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count dua muhimu';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Dua zilizothibitishwa bado hazipatikani';
+
+  @override
+  String get duaUnavailableBody =>
+      'Dua za kila siku zilizothibitishwa bado hazijasawazishwa kwenye kifaa hiki. Unganisha kwenye chanzo cha wingu ili kupakia dua zilizotoka badala ya njia mbadala ambayo haijathibitishwa.';
 
   @override
   String get islamicEducation => 'Islamic Education';

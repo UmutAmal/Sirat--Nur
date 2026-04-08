@@ -781,12 +781,19 @@ class AppLocalizationsKo extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => '일일 듀아';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count 필수 듀아';
   }
+
+  @override
+  String get duaUnavailableTitle => '인증된 이중화는 아직 사용할 수 없습니다.';
+
+  @override
+  String get duaUnavailableBody =>
+      '확인된 일일 듀아가 아직 이 기기에 동기화되지 않았습니다. 확인되지 않은 대체 대신 소스가 있는 duas를 로드하려면 클라우드 소스에 연결하세요.';
 
   @override
   String get islamicEducation => 'Islamic Education';

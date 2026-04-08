@@ -781,12 +781,19 @@ class AppLocalizationsLn extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas ya mokolo na mokolo';
 
   @override
   String essentialDuas(String count) {
     return '$count essential duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Ba duas vérifiés ezali nanu te';
+
+  @override
+  String get duaUnavailableBody =>
+      'Ba duas ya mokolo na mokolo oyo e vérifié e synchronisé nanu na dispositif oyo te. Connecter na source ya cloud pona ko charger ba duas sourced au lieu ya fallback oyo e vérifié te.';
 
   @override
   String get islamicEducation => 'Islamic Education';

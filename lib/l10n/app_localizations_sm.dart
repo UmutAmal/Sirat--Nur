@@ -781,12 +781,19 @@ class AppLocalizationsSm extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas i aso uma';
 
   @override
   String essentialDuas(String count) {
     return '$count essential duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'E le\'o avanoa nei duas fa\'amaonia';
+
+  @override
+  String get duaUnavailableBody =>
+      'E le\'i fa\'asa\'o le duas fa\'amaonia i aso uma i lenei masini. Fa\'afeso\'ota\'i i le puna o ao e fa\'amomoli mai ai duas ae le o se fa\'afouga e le\'i fa\'amaonia.';
 
   @override
   String get islamicEducation => 'Islamic Education';

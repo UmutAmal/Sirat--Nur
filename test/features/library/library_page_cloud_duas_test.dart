@@ -114,6 +114,27 @@ void main() {
     }
   });
 
+  testWidgets('LibraryPage disables daily duas when verified data is missing', (
+    tester,
+  ) async {
+    final en = lookupAppLocalizations(const Locale('en'));
+
+    try {
+      await pumpLibraryPage(tester, duas: const []);
+
+      expect(find.text(en.duaUnavailableTitle), findsOneWidget);
+
+      await tester.tap(find.text(en.dailyDuas).first);
+      await tester.pumpAndSettle();
+
+      expect(tester.takeException(), isNull);
+      expect(find.byType(LibraryPage), findsOneWidget);
+      expect(find.text(en.duaUnavailableTitle), findsOneWidget);
+    } finally {
+      await disposeLibraryPage(tester);
+    }
+  });
+
   testWidgets('LibraryPage enables sukun subtitle when cloud audio exists', (
     tester,
   ) async {

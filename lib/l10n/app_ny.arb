@@ -298,7 +298,7 @@
   "library": "Library",
   "analytics": "Analytics",
   "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "essentialDuas": "{count} ma dua ofunikira",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Ma dua otsimikizika sakupezeka pano",
+  "duaUnavailableBody": "Ma dua otsimikiziridwa tsiku ndi tsiku sanagwirizanitsidwe ku chipangizochi panobe. Lumikizani ku mtambo kuti mutsegule ma duas m'malo mobwerera komwe sikunatsimikizidwe."
 }

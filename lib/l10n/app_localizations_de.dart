@@ -784,12 +784,20 @@ class AppLocalizationsDe extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Tägliche Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count wesentliche Duas';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Verifizierte Duas sind noch nicht verfügbar';
+
+  @override
+  String get duaUnavailableBody =>
+      'Verifizierte tägliche Duas wurden noch nicht mit diesem Gerät synchronisiert. Stellen Sie eine Verbindung zur Cloud-Quelle her, um Quell-Duas anstelle eines nicht verifizierten Fallbacks zu laden.';
 
   @override
   String get islamicEducation => 'Islamic Education';

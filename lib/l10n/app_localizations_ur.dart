@@ -781,12 +781,19 @@ class AppLocalizationsUr extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'روزانہ کی دعا';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count ضروری دعائیں';
   }
+
+  @override
+  String get duaUnavailableTitle => 'تصدیق شدہ دعائیں ابھی دستیاب نہیں ہیں۔';
+
+  @override
+  String get duaUnavailableBody =>
+      'تصدیق شدہ روزانہ کی دعاؤں کو ابھی تک اس ڈیوائس سے ہم آہنگ نہیں کیا گیا ہے۔ غیر تصدیق شدہ فال بیک کی بجائے سورس شدہ دعاؤں کو لوڈ کرنے کے لیے کلاؤڈ سورس سے جڑیں۔';
 
   @override
   String get islamicEducation => 'Islamic Education';

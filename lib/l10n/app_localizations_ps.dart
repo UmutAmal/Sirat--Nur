@@ -781,12 +781,19 @@ class AppLocalizationsPs extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'ورځنۍ دعا';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count ضروري دعاګانې';
   }
+
+  @override
+  String get duaUnavailableTitle => 'تایید شوي دعاګانې لاهم شتون نلري';
+
+  @override
+  String get duaUnavailableBody =>
+      'تایید شوي ورځني دعاګانې لا تر اوسه دې وسیله سره همغږي شوي ندي. د بادل سرچینې سره وصل شئ ترڅو د غیر تصدیق شوي فال بیک پرځای د سرچینې شوي دعا بار کړئ.';
 
   @override
   String get islamicEducation => 'Islamic Education';

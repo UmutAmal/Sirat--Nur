@@ -297,7 +297,7 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
+  "dailyDuas": "Sapa uru Duas",
   "essentialDuas": "{count} essential duas",
   "@essentialDuas": {
     "placeholders": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Verificado duas ukax janiw jichhakamax utjkiti",
+  "duaUnavailableBody": "Verificado diario duas ukax janiw aka dispositivo ukarux sincronizadokiti. Qhixu qhixu phunchhawimp chikt’atäñapawa, jan chiqapar uñjat fallback ukat sipanx duas fuente ukar apkatañataki."
 }

@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Ĉiutaga Duas",
+  "essentialDuas": "{count} esencaj duas",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Kontrolitaj duoj ankoraŭ ne haveblas",
+  "duaUnavailableBody": "Konfirmitaj ĉiutagaj duoj ankoraŭ ne estis sinkronigitaj kun ĉi tiu aparato. Konektiĝu al la nuba fonto por ŝargi fontan duason anstataŭ nekontrolita falo."
 }

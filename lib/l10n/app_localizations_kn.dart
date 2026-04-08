@@ -781,12 +781,19 @@ class AppLocalizationsKn extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'ದೈನಂದಿನ ದುವಾಸ್';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count ಅಗತ್ಯ ದುವಾಸ್';
   }
+
+  @override
+  String get duaUnavailableTitle => 'ಪರಿಶೀಲಿಸಿದ ದುವಾಗಳು ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ';
+
+  @override
+  String get duaUnavailableBody =>
+      'ಪರಿಶೀಲಿಸಲಾದ ದೈನಂದಿನ ದುವಾಗಳನ್ನು ಈ ಸಾಧನಕ್ಕೆ ಇನ್ನೂ ಸಿಂಕ್ ಮಾಡಲಾಗಿಲ್ಲ. ಪರಿಶೀಲಿಸದ ಫಾಲ್‌ಬ್ಯಾಕ್ ಬದಲಿಗೆ ಮೂಲದ ದುವಾಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಕ್ಲೌಡ್ ಮೂಲಕ್ಕೆ ಸಂಪರ್ಕಿಸಿ.';
 
   @override
   String get islamicEducation => 'Islamic Education';

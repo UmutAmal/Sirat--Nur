@@ -47,6 +47,8 @@ class DuaData {
   }
 }
 
+const bool hasVerifiedBundledDuas = false;
+
 const List<DuaData> dailyDuas = [
   // Morning & Evening Duas
   DuaData(
@@ -204,6 +206,10 @@ const List<DuaData> dailyDuas = [
   ),
 ];
 
+List<DuaData> bundledDailyDuaFallback() {
+  return hasVerifiedBundledDuas ? dailyDuas : const <DuaData>[];
+}
+
 List<DuaData> resolveCloudDuas(List<Map<String, dynamic>> rows) {
   final parsed = rows
       .map(DuaData.fromSupabaseRow)
@@ -214,7 +220,7 @@ List<DuaData> resolveCloudDuas(List<Map<String, dynamic>> rows) {
       )
       .toList();
 
-  return parsed.isEmpty ? dailyDuas : parsed;
+  return parsed.isEmpty ? bundledDailyDuaFallback() : parsed;
 }
 
 /// Get duas by category

@@ -69,7 +69,9 @@ void main() {
     });
 
     test('cloud duas fall back to bundled duas when rows are empty', () {
-      expect(resolveCloudDuas([]), same(dailyDuas));
+      expect(resolveCloudDuas([]), isEmpty);
+      expect(bundledDailyDuaFallback(), isEmpty);
+      expect(hasVerifiedBundledDuas, isFalse);
     });
 
     test('cloud duas map Supabase rows into DuaData objects', () {
@@ -92,6 +94,30 @@ void main() {
       expect(resolved.first.english, 'English dua');
       expect(resolved.first.source, 'Diyanet');
       expect(resolved.first.category, 'Sabah Akşam');
+    });
+
+    test('daily dua library subtitle switches to unavailable copy', () {
+      final en = lookupAppLocalizations(const Locale('en'));
+      final tr = lookupAppLocalizations(const Locale('tr'));
+
+      expect(
+        resolveDailyDuasLibrarySubtitle(en, const []),
+        en.duaUnavailableTitle,
+      );
+      expect(
+        resolveDailyDuasLibrarySubtitle(tr, const [
+          DuaData(
+            id: '1',
+            arabic: 'دعاء',
+            transliteration: 'dua',
+            turkish: 'Türkçe',
+            english: 'English',
+            source: 'source',
+            category: 'category',
+          ),
+        ]),
+        tr.essentialDuas('1'),
+      );
     });
 
     test(

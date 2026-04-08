@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "ଦ Daily ନିକ ଡୁଆସ୍ |",
+  "essentialDuas": "{count} ଅତ୍ୟାବଶ୍ୟକ ଯୁଗଳ |",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "ଯାଞ୍ଚ ହୋଇଥିବା ଯୁଗଳ ଏପର୍ଯ୍ୟନ୍ତ ଉପଲବ୍ଧ ନାହିଁ |",
+  "duaUnavailableBody": "ଯାଞ୍ଚ ହୋଇଥିବା ଦ daily ନିକ ଯୁଗଳ ଏପର୍ଯ୍ୟନ୍ତ ଏହି ଡିଭାଇସ୍ ସହିତ ସିଙ୍କ ହୋଇନାହିଁ | ଏକ ଯାଞ୍ଚ ହୋଇନଥିବା ଫଲବ୍ୟାକ୍ ପରିବର୍ତ୍ତେ ସୋର୍ସଡ୍ ଡୁଆସ୍ ଲୋଡ୍ କରିବାକୁ କ୍ଲାଉଡ୍ ଉତ୍ସ ସହିତ ସଂଯୋଗ କରନ୍ତୁ |"
 }

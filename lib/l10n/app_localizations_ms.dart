@@ -782,12 +782,19 @@ class AppLocalizationsMs extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Doa harian';
 
   @override
   String essentialDuas(String count) {
     return '$count essential duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Doa yang disahkan belum tersedia lagi';
+
+  @override
+  String get duaUnavailableBody =>
+      'Doa harian yang disahkan belum disegerakkan ke peranti ini lagi. Sambung ke sumber awan untuk memuatkan dua sumber dan bukannya sandaran yang tidak disahkan.';
 
   @override
   String get islamicEducation => 'Islamic Education';

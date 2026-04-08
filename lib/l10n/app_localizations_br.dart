@@ -789,6 +789,13 @@ class AppLocalizationsBr extends AppLocalizations {
   }
 
   @override
+  String get duaUnavailableTitle => 'Verified duas are not available yet';
+
+  @override
+  String get duaUnavailableBody =>
+      'Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

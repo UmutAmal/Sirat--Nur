@@ -786,8 +786,15 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count էական աղոթքներ';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Ստուգված դուաները դեռ հասանելի չեն';
+
+  @override
+  String get duaUnavailableBody =>
+      'Ստուգված ամենօրյա դուաները դեռ չեն համաժամացվել այս սարքի հետ: Միացեք ամպային աղբյուրին՝ չստուգված հետադարձի փոխարեն բեռնելու աղբյուրից ստացված դուաները:';
 
   @override
   String get islamicEducation => 'Islamic Education';

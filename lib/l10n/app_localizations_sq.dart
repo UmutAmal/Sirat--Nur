@@ -782,12 +782,19 @@ class AppLocalizationsSq extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas ditore';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count dua thelbësore';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Duat e verifikuara nuk ofrohen ende';
+
+  @override
+  String get duaUnavailableBody =>
+      'Duat e verifikuara ditore nuk janë sinkronizuar ende me këtë pajisje. Lidhu me burimin cloud për të ngarkuar duatë me burim në vend të një kthimi të paverifikuar.';
 
   @override
   String get islamicEducation => 'Islamic Education';

@@ -781,12 +781,19 @@ class AppLocalizationsRw extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Buri munsi Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count duas ngombwa';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Duas yemejwe ntabwo iraboneka';
+
+  @override
+  String get duaUnavailableBody =>
+      'Kugenzura duas buri munsi ntabwo byahujwe niki gikoresho kugeza ubu. Ihuze nigicu kugirango utware duas ikomoka aho gusubira inyuma.';
 
   @override
   String get islamicEducation => 'Islamic Education';

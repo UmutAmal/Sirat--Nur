@@ -297,7 +297,7 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
+  "dailyDuas": "Doa harian",
   "essentialDuas": "{count} essential duas",
   "@essentialDuas": {
     "placeholders": {
@@ -508,5 +508,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Doa yang disahkan belum tersedia lagi",
+  "duaUnavailableBody": "Doa harian yang disahkan belum disegerakkan ke peranti ini lagi. Sambung ke sumber awan untuk memuatkan dua sumber dan bukannya sandaran yang tidak disahkan."
 }

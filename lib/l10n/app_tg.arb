@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Дуои ҳаррӯза",
+  "essentialDuas": "{count} дуоҳои муҳим",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Дуоҳои тасдиқшуда ҳанӯз дастрас нестанд",
+  "duaUnavailableBody": "Дуоҳои ҳаррӯзаи тасдиқшуда то ҳол бо ин дастгоҳ ҳамоҳанг карда нашудаанд. Ба манбаи абр пайваст шавед, то дуоҳои сарчашмаро ба ҷои бозгашти тасдиқнашуда бор кунед."
 }

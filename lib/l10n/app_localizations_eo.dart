@@ -781,12 +781,19 @@ class AppLocalizationsEo extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Ĉiutaga Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count esencaj duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Kontrolitaj duoj ankoraŭ ne haveblas';
+
+  @override
+  String get duaUnavailableBody =>
+      'Konfirmitaj ĉiutagaj duoj ankoraŭ ne estis sinkronigitaj kun ĉi tiu aparato. Konektiĝu al la nuba fonto por ŝargi fontan duason anstataŭ nekontrolita falo.';
 
   @override
   String get islamicEducation => 'Islamic Education';

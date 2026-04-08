@@ -782,12 +782,20 @@ class AppLocalizationsTl extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Araw-araw na Duas';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count mahahalagang duas';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Hindi pa available ang mga na-verify na dua';
+
+  @override
+  String get duaUnavailableBody =>
+      'Ang mga na-verify na pang-araw-araw na dua ay hindi pa na-sync sa device na ito. Kumonekta sa cloud source para i-load ang mga sourced na dua sa halip na isang hindi na-verify na fallback.';
 
   @override
   String get islamicEducation => 'Islamic Education';

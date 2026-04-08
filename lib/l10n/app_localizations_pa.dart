@@ -781,12 +781,19 @@ class AppLocalizationsPa extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'ਰੋਜ਼ਾਨਾ ਦੁਆਵਾਂ';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count ਜ਼ਰੂਰੀ ਦੁਆਵਾਂ';
   }
+
+  @override
+  String get duaUnavailableTitle => 'ਪ੍ਰਮਾਣਿਤ ਦੁਆਵਾਂ ਅਜੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ';
+
+  @override
+  String get duaUnavailableBody =>
+      'ਤਸਦੀਕ ਕੀਤੇ ਰੋਜ਼ਾਨਾ ਦੁਆਵਾਂ ਨੂੰ ਅਜੇ ਤੱਕ ਇਸ ਡਿਵਾਈਸ ਨਾਲ ਸਿੰਕ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ। ਗੈਰ-ਪ੍ਰਮਾਣਿਤ ਫਾਲਬੈਕ ਦੀ ਬਜਾਏ ਸਰੋਤ ਕੀਤੇ ਡੁਆਸ ਨੂੰ ਲੋਡ ਕਰਨ ਲਈ ਕਲਾਉਡ ਸਰੋਤ ਨਾਲ ਕਨੈਕਟ ਕਰੋ।';
 
   @override
   String get islamicEducation => 'Islamic Education';

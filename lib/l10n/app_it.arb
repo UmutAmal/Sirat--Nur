@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Duas giornalieri",
+  "essentialDuas": "{count} duas essenziali",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "I duas verificati non sono ancora disponibili",
+  "duaUnavailableBody": "I duas giornalieri verificati non sono stati ancora sincronizzati su questo dispositivo. Connettiti all'origine cloud per caricare i duas di origine invece di un fallback non verificato."
 }

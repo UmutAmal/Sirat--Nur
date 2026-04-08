@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "ʻElua mau lā",
+  "essentialDuas": "{count} pono ʻelua",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "ʻAʻole loaʻa nā duas i hōʻoia ʻia",
+  "duaUnavailableBody": "ʻAʻole i hoʻopaʻa ʻia nā ʻelua i kēlā me kēia lā i kēia hāmeʻa. Hoʻohui i ke kumu ao e hoʻouka i nā kumu ʻelua ma kahi o kahi hāʻule hōʻoia ʻole."
 }

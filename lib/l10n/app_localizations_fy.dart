@@ -785,8 +785,15 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count essensjele duas';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Ferifiearre duas binne noch net beskikber';
+
+  @override
+  String get duaUnavailableBody =>
+      'Ferifiearre deistige duas binne noch net syngronisearre mei dit apparaat. Ferbine mei de wolkboarne om boarne duas te laden ynstee fan in net ferifiearre fallback.';
 
   @override
   String get islamicEducation => 'Islamic Education';

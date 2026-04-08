@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Daaglikse Duas",
+  "essentialDuas": "{count} noodsaaklike duas",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Geverifieerde duas is nog nie beskikbaar nie",
+  "duaUnavailableBody": "Geverifieerde daaglikse duas is nog nie met hierdie toestel gesinkroniseer nie. Koppel aan die wolkbron om verkrygde duas te laai in plaas van 'n ongeverifieerde terugval."
 }

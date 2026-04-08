@@ -781,12 +781,19 @@ class AppLocalizationsFa extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'دعای روزانه';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count دعاهای ضروری';
   }
+
+  @override
+  String get duaUnavailableTitle => 'دعاهای تأیید شده هنوز در دسترس نیستند';
+
+  @override
+  String get duaUnavailableBody =>
+      'دعاهای روزانه تأیید شده هنوز با این دستگاه همگام سازی نشده است. به منبع ابری متصل شوید تا duas های منبع را به جای نسخه بازگشتی تأیید نشده بارگیری کنید.';
 
   @override
   String get islamicEducation => 'Islamic Education';

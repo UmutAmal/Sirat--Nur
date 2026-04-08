@@ -781,12 +781,19 @@ class AppLocalizationsHt extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas chak jou';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count esansyèl';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Dous verifye yo poko disponib';
+
+  @override
+  String get duaUnavailableBody =>
+      'Duas chak jou verifye yo poko senkronize ak aparèy sa a. Konekte ak sous nwaj la pou chaje duas ki soti olye pou yo yon repitasyon ki pa verifye.';
 
   @override
   String get islamicEducation => 'Islamic Education';

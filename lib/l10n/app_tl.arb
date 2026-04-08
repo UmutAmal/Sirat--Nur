@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Araw-araw na Duas",
+  "essentialDuas": "{count} mahahalagang duas",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "Hindi pa available ang mga na-verify na dua",
+  "duaUnavailableBody": "Ang mga na-verify na pang-araw-araw na dua ay hindi pa na-sync sa device na ito. Kumonekta sa cloud source para i-load ang mga sourced na dua sa halip na isang hindi na-verify na fallback."
 }

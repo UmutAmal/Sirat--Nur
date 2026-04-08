@@ -782,12 +782,19 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'ʻElua mau lā';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count pono ʻelua';
   }
+
+  @override
+  String get duaUnavailableTitle => 'ʻAʻole loaʻa nā duas i hōʻoia ʻia';
+
+  @override
+  String get duaUnavailableBody =>
+      'ʻAʻole i hoʻopaʻa ʻia nā ʻelua i kēlā me kēia lā i kēia hāmeʻa. Hoʻohui i ke kumu ao e hoʻouka i nā kumu ʻelua ma kahi o kahi hāʻule hōʻoia ʻole.';
 
   @override
   String get islamicEducation => 'Islamic Education';

@@ -783,12 +783,19 @@ class AppLocalizationsDv extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'ޑެއިލީ ދުއާސް އެވެ';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count ކޮންމެހެން ބޭނުންވާ ދުޢާތަކެވެ';
   }
+
+  @override
+  String get duaUnavailableTitle => 'ވެރިފައިޑް ދުއާސް އަދި ނުލިބެއެވެ';
+
+  @override
+  String get duaUnavailableBody =>
+      'ވެރިފައިޑް ޑެއިލީ ދުއާސް އަދި މި ޑިވައިސްއަށް ސިންކްކޮށްފައެއް ނުވެއެވެ. ޔަޤީން ނުކުރެވޭ ފޯލްބެކެއްގެ ބަދަލުގައި ސޯސްޑް ޑޫއާސް ލޯޑް ކުރުމަށް ކްލައުޑް ސޯސް އާއި ގުޅުން.';
 
   @override
   String get islamicEducation => 'Islamic Education';

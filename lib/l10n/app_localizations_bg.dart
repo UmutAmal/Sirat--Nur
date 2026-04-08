@@ -782,12 +782,19 @@ class AppLocalizationsBg extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Ежедневни дуа';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count основни дуа';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Проверените дуа все още не са налични';
+
+  @override
+  String get duaUnavailableBody =>
+      'Проверените ежедневни дуа все още не са синхронизирани с това устройство. Свържете се с облачния източник, за да заредите дуа с източник вместо непотвърден резервен вариант.';
 
   @override
   String get islamicEducation => 'Islamic Education';

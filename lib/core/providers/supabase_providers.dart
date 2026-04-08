@@ -239,7 +239,7 @@ final dailyDuasProvider = FutureProvider<List<DuaData>>((ref) async {
         .order('id', ascending: true);
     return resolveCloudDuas(List<Map<String, dynamic>>.from(res));
   } catch (_) {
-    return dailyDuas;
+    return bundledDailyDuaFallback();
   }
 });
 

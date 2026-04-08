@@ -781,12 +781,19 @@ class AppLocalizationsTh extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas รายวัน';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count ดุอาสำคัญ';
   }
+
+  @override
+  String get duaUnavailableTitle => 'duas ที่ยืนยันแล้วยังไม่พร้อมใช้งาน';
+
+  @override
+  String get duaUnavailableBody =>
+      'Duas รายวันที่ยืนยันแล้วยังไม่ได้ซิงค์กับอุปกรณ์นี้ เชื่อมต่อกับต้นทางคลาวด์เพื่อโหลด duas ที่มาจากแทนทางเลือกที่ไม่ได้รับการยืนยัน';
 
   @override
   String get islamicEducation => 'Islamic Education';

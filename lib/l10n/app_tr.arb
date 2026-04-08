@@ -322,6 +322,8 @@
       }
     }
   },
+  "duaUnavailableTitle": "Doğrulanmış dualar henüz hazır değil",
+  "duaUnavailableBody": "Doğrulanmış günlük dualar henüz bu cihaza senkronlanmadı. Doğrulanmamış fallback yerine kaynaklı duaları yüklemek için bulut kaynağına bağlanın.",
   "islamicEducation": "İslami Eğitim",
   "sukunAudioTitle": "Sükunet Sesleri",
   "hadithCollections": "Hadis Koleksiyonları",

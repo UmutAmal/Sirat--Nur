@@ -782,12 +782,20 @@ class AppLocalizationsKa extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'ყოველდღიური დუასი';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count აუცილებელი დუები';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'დადასტურებული დუა ჯერ არ არის ხელმისაწვდომი';
+
+  @override
+  String get duaUnavailableBody =>
+      'დადასტურებული ყოველდღიური დუაები ჯერ არ არის სინქრონიზებული ამ მოწყობილობასთან. დაუკავშირდით ღრუბლოვან წყაროს, რომ ჩატვირთოთ მოპოვებული დუები დაუდასტურებელი სარეზერვო ნაცვლად.';
 
   @override
   String get islamicEducation => 'Islamic Education';

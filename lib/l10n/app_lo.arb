@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "Duas ປະຈໍາວັນ",
+  "essentialDuas": "{count} duas ທີ່ສໍາຄັນ",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "duas ທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ສາມາດໃຊ້ໄດ້ເທື່ອ",
+  "duaUnavailableBody": "ຢືນຢັນ duas ປະຈໍາວັນຍັງບໍ່ໄດ້ຖືກຊິງຄ໌ກັບອຸປະກອນນີ້ເທື່ອ. ເຊື່ອມຕໍ່ຫາແຫຼ່ງຄລາວເພື່ອໂຫລດ duas ທີ່ມີແຫຼ່ງທີ່ມາແທນທີ່ຈະເປັນທາງເລືອກທີ່ບໍ່ໄດ້ຮັບການຢືນຢັນ."
 }

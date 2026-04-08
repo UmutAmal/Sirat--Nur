@@ -297,8 +297,8 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
-  "essentialDuas": "{count} essential duas",
+  "dailyDuas": "दैनिक दुआस",
+  "essentialDuas": "{count} आवश्यक दुआ",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -507,5 +507,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "duaUnavailableTitle": "सत्यापित दुआ एखन धरि उपलब्ध नहि अछि",
+  "duaUnavailableBody": "सत्यापित दैनिक दुआ एखन धरि एहि डिवाइस पर सिंक नहि कएल गेल अछि । असत्यापित फॉलबैक कें बजाय स्रोत सं प्राप्त दुआ लोड करय कें लेल क्लाउड स्रोत सं कनेक्ट करूं."
 }

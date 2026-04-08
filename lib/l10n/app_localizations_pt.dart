@@ -781,12 +781,20 @@ class AppLocalizationsPt extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Duas diárias';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count duas essenciais';
   }
+
+  @override
+  String get duaUnavailableTitle =>
+      'Duas verificadas ainda não estão disponíveis';
+
+  @override
+  String get duaUnavailableBody =>
+      'As duas diárias verificadas ainda não foram sincronizadas com este dispositivo. Conecte-se à fonte da nuvem para carregar duas de origem em vez de um substituto não verificado.';
 
   @override
   String get islamicEducation => 'Islamic Education';

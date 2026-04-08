@@ -781,12 +781,19 @@ class AppLocalizationsId extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Doa Harian';
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count doa penting';
   }
+
+  @override
+  String get duaUnavailableTitle => 'Doa yang terverifikasi belum tersedia';
+
+  @override
+  String get duaUnavailableBody =>
+      'Doa harian yang terverifikasi belum disinkronkan ke perangkat ini. Hubungkan ke sumber cloud untuk memuat doa yang bersumber, bukan fallback yang belum diverifikasi.';
 
   @override
   String get islamicEducation => 'Islamic Education';
