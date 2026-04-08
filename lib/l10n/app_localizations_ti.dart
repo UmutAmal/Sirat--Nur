@@ -796,6 +796,48 @@ class AppLocalizationsTi extends AppLocalizations {
       'ዝተረጋገጹ መዓልታዊ ዱዓታት ገና ምስዚ መሳርሒ ኣይተሰማምዑን። ኣብ ክንዲ ዘይተረጋገጸ ምምላስ ምምላስ ምንጪ ዘለዎም ዱዓታት ንምጽዓን ምስቲ ምንጪ ደበና ምትእስሳር።';
 
   @override
+  String get duaCategoryQuranic => 'ቁርኣናዊ ዱዓ';
+
+  @override
+  String get duaCategoryMorningEvening => 'ንግሆ & ምሸት';
+
+  @override
+  String get duaCategoryTasbih => 'ታስቢህ';
+
+  @override
+  String get duaCategoryProtection => 'ምክልኻል';
+
+  @override
+  String get duaCategoryBeginning => 'መጀመርታ';
+
+  @override
+  String get duaCategorySleep => 'ደቅስ';
+
+  @override
+  String get duaCategoryFoodDrink => 'መግቢን መስተን።';
+
+  @override
+  String get duaCategoryForgiveness => 'ይቕሬታ';
+
+  @override
+  String get duaCategoryHome => 'ገዛ';
+
+  @override
+  String get duaSourceBukhari => 'ቡካሪ';
+
+  @override
+  String get duaSourceMuslim => 'ኣስላማይ';
+
+  @override
+  String get duaSourceAbuDawud => 'ኣቡ ዳውድ';
+
+  @override
+  String get duaSourceTirmidhi => 'ትርሚድሂ';
+
+  @override
+  String get duaSourceAhmad => 'ኣሕመድ';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Bộ đôi đã được xác minh chưa có sẵn",
-  "duaUnavailableBody": "Bộ đôi hàng ngày đã được xác minh chưa được đồng bộ hóa với thiết bị này. Kết nối với nguồn đám mây để tải các bản song ca có nguồn gốc thay vì bản dự phòng chưa được xác minh."
+  "duaUnavailableBody": "Bộ đôi hàng ngày đã được xác minh chưa được đồng bộ hóa với thiết bị này. Kết nối với nguồn đám mây để tải các bản song ca có nguồn gốc thay vì bản dự phòng chưa được xác minh.",
+  "duaCategoryQuranic": "Kinh Qur'an dua",
+  "duaCategoryMorningEvening": "Sáng & Tối",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Sự bảo vệ",
+  "duaCategoryBeginning": "Sự khởi đầu",
+  "duaCategorySleep": "Ngủ",
+  "duaCategoryFoodDrink": "Đồ ăn & Đồ uống",
+  "duaCategoryForgiveness": "sự tha thứ",
+  "duaCategoryHome": "Trang chủ",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Hồi giáo",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "tirmidi",
+  "duaSourceAhmad": "Ahmad"
 }

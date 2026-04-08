@@ -797,6 +797,48 @@ class AppLocalizationsBho extends AppLocalizations {
       'सत्यापन कइल गइल दैनिक दुआ अबहीं ले एह डिवाइस पर सिंक नइखे भइल. असत्यापित फॉलबैक के बजाय सोर्स कइल दुआ लोड करे खातिर क्लाउड स्रोत से कनेक्ट होखीं।';
 
   @override
+  String get duaCategoryQuranic => 'कुरान के दुआ';
+
+  @override
+  String get duaCategoryMorningEvening => 'सुबह & शाम के समय';
+
+  @override
+  String get duaCategoryTasbih => 'तसबीह के बा';
+
+  @override
+  String get duaCategoryProtection => 'संरक्षण के काम होला';
+
+  @override
+  String get duaCategoryBeginning => 'शुरुआत भइल बा';
+
+  @override
+  String get duaCategorySleep => 'सुतल';
+
+  @override
+  String get duaCategoryFoodDrink => 'खाए-पीए के सामान';
+
+  @override
+  String get duaCategoryForgiveness => 'माफी के बात बा';
+
+  @override
+  String get duaCategoryHome => 'घर';
+
+  @override
+  String get duaSourceBukhari => 'बुखारी के बा';
+
+  @override
+  String get duaSourceMuslim => 'मुसलमान के ह';
+
+  @override
+  String get duaSourceAbuDawud => 'अबू दाऊद के ह';
+
+  @override
+  String get duaSourceTirmidhi => 'तिरमिढ़ी के बा';
+
+  @override
+  String get duaSourceAhmad => 'अहमद के ह';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

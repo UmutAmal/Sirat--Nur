@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verified duas manaraqmi kanchu",
-  "duaUnavailableBody": "Chiqaqchasqa sapa p'unchaw duas manaraq kay dispositivoman tinkisqachu. Puyu pukyuta tinkiy pukyuta duakuna karganapaq mana chiqaqchasqa urmaymantaqa."
+  "duaUnavailableBody": "Chiqaqchasqa sapa p'unchaw duas manaraq kay dispositivoman tinkisqachu. Puyu pukyuta tinkiy pukyuta duakuna karganapaq mana chiqaqchasqa urmaymantaqa.",
+  "duaCategoryQuranic": "Quranmanta dua",
+  "duaCategoryMorningEvening": "Paqarin & Chisi",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Amachay",
+  "duaCategoryBeginning": "Qallariykuna",
+  "duaCategorySleep": "Puñuy",
+  "duaCategoryFoodDrink": "Mikhuy & Upyana",
+  "duaCategoryForgiveness": "Pampachay",
+  "duaCategoryHome": "Wasi",
+  "duaSourceBukhari": "Bukhari sutiyuq runa",
+  "duaSourceMuslim": "Musulmán",
+  "duaSourceAbuDawud": "Abu Dawud sutiyuq runa",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad sutiyuq runa"
 }

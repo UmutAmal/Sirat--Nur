@@ -64,6 +64,10 @@ String resolveDuaMeaning(DuaData dua, Locale locale) {
   return dua.turkish;
 }
 
+bool hasDuaTransliteration(DuaData dua) {
+  return dua.transliteration.trim().isNotEmpty;
+}
+
 class LibraryPage extends ConsumerWidget {
   const LibraryPage({super.key});
 
@@ -435,39 +439,43 @@ class _HadithCollection {
   const _HadithCollection(this.id, this.name, this.desc);
 }
 
-String _translateDuaCategory(String category, String lang) {
-  if (lang != 'en') return category;
+String _translateDuaCategory(String category, AppLocalizations l10n) {
   switch (category) {
+    case quranicDuaCategory:
+      return l10n.duaCategoryQuranic;
     case 'Sabah Akşam':
-      return 'Morning & Evening';
+      return l10n.duaCategoryMorningEvening;
     case 'Tesbih':
-      return 'Tasbih';
+      return l10n.duaCategoryTasbih;
     case 'Koruma':
-      return 'Protection';
+      return l10n.duaCategoryProtection;
     case 'Başlangıç':
-      return 'Starting';
+      return l10n.duaCategoryBeginning;
     case 'Uyku':
-      return 'Sleep';
+      return l10n.duaCategorySleep;
     case 'Yemek':
-      return 'Food & Drink';
+      return l10n.duaCategoryFoodDrink;
     case 'Af Duası':
-      return 'Forgiveness';
+      return l10n.duaCategoryForgiveness;
     case 'Ev':
-      return 'Home';
+      return l10n.duaCategoryHome;
     default:
       return category;
   }
 }
 
-String _translateDuaSource(String source, String lang) {
-  if (lang != 'en') return source;
+String _translateDuaSource(String source, AppLocalizations l10n) {
+  if (source.startsWith('Quran ')) {
+    return '${l10n.quran} ${source.substring('Quran '.length)}';
+  }
+
   return source
-      .replaceAll('Buhari', 'Bukhari')
-      .replaceAll('Müslim', 'Muslim')
-      .replaceAll('Ebu Davud', 'Abu Dawud')
-      .replaceAll('Tirmizi', 'Tirmidhi')
-      .replaceAll('Ahmed', 'Ahmad')
-      .replaceAll('Kuran-ı Kerim', 'Quran');
+      .replaceAll('Buhari', l10n.duaSourceBukhari)
+      .replaceAll('Müslim', l10n.duaSourceMuslim)
+      .replaceAll('Ebu Davud', l10n.duaSourceAbuDawud)
+      .replaceAll('Tirmizi', l10n.duaSourceTirmidhi)
+      .replaceAll('Ahmed', l10n.duaSourceAhmad)
+      .replaceAll('Kuran-ı Kerim', l10n.quran);
 }
 
 // ─── Duas Subview ───
@@ -520,10 +528,7 @@ class _DuasView extends ConsumerWidget {
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Text(
-                              _translateDuaCategory(
-                                dua.category,
-                                locale.languageCode,
-                              ),
+                              _translateDuaCategory(dua.category, l10n),
                               style: const TextStyle(
                                 fontSize: 11,
                                 fontWeight: FontWeight.w800,
@@ -533,7 +538,7 @@ class _DuasView extends ConsumerWidget {
                           ),
                           const Spacer(),
                           Text(
-                            _translateDuaSource(dua.source, locale.languageCode),
+                            _translateDuaSource(dua.source, l10n),
                             style: TextStyle(
                               fontSize: 11,
                               color: Theme.of(
@@ -555,17 +560,19 @@ class _DuasView extends ConsumerWidget {
                         textDirection: TextDirection.rtl,
                       ),
                       const SizedBox(height: 12),
-                      Text(
-                        dua.transliteration,
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontStyle: FontStyle.italic,
-                          color: Theme.of(
-                            context,
-                          ).colorScheme.onSurface.withValues(alpha: 0.6),
+                      if (hasDuaTransliteration(dua)) ...[
+                        Text(
+                          dua.transliteration,
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontStyle: FontStyle.italic,
+                            color: Theme.of(
+                              context,
+                            ).colorScheme.onSurface.withValues(alpha: 0.6),
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 8),
+                        const SizedBox(height: 8),
+                      ],
                       Text(
                         resolveDuaMeaning(dua, locale),
                         style: TextStyle(

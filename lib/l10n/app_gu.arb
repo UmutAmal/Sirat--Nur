@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "ચકાસાયેલ દુઆઓ હજી ઉપલબ્ધ નથી",
-  "duaUnavailableBody": "ચકાસાયેલ દૈનિક દુઆઓ હજુ સુધી આ ઉપકરણ સાથે સમન્વયિત કરવામાં આવી નથી. વણચકાસાયેલ ફોલબેકને બદલે સોર્સ્ડ ડ્યુઆસ લોડ કરવા માટે ક્લાઉડ સ્ત્રોત સાથે કનેક્ટ કરો."
+  "duaUnavailableBody": "ચકાસાયેલ દૈનિક દુઆઓ હજુ સુધી આ ઉપકરણ સાથે સમન્વયિત કરવામાં આવી નથી. વણચકાસાયેલ ફોલબેકને બદલે સોર્સ્ડ ડ્યુઆસ લોડ કરવા માટે ક્લાઉડ સ્ત્રોત સાથે કનેક્ટ કરો.",
+  "duaCategoryQuranic": "કુરાની દુઆ",
+  "duaCategoryMorningEvening": "સવાર અને સાંજ",
+  "duaCategoryTasbih": "તસ્બીહ",
+  "duaCategoryProtection": "રક્ષણ",
+  "duaCategoryBeginning": "શરૂઆત",
+  "duaCategorySleep": "ઊંઘ",
+  "duaCategoryFoodDrink": "ખોરાક અને પીણું",
+  "duaCategoryForgiveness": "ક્ષમા",
+  "duaCategoryHome": "ઘર",
+  "duaSourceBukhari": "બુખારી",
+  "duaSourceMuslim": "મુસ્લિમ",
+  "duaSourceAbuDawud": "અબુ દાઉદ",
+  "duaSourceTirmidhi": "તિર્મિ",
+  "duaSourceAhmad": "અહમદ"
 }

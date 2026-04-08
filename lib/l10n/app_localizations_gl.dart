@@ -798,6 +798,48 @@ class AppLocalizationsGl extends AppLocalizations {
       'As duas diarias verificadas aínda non se sincronizaron con este dispositivo. Conéctate á fonte da nube para cargar duas de orixe en lugar dunha alternativa non verificada.';
 
   @override
+  String get duaCategoryQuranic => 'Dua coránica';
+
+  @override
+  String get duaCategoryMorningEvening => 'Mañá e Noite';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Protección';
+
+  @override
+  String get duaCategoryBeginning => 'Comezos';
+
+  @override
+  String get duaCategorySleep => 'Durmir';
+
+  @override
+  String get duaCategoryFoodDrink => 'Comida e bebida';
+
+  @override
+  String get duaCategoryForgiveness => 'O perdón';
+
+  @override
+  String get duaCategoryHome => 'Casa';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'musulmán';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

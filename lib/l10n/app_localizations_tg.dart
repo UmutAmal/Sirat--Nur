@@ -796,6 +796,48 @@ class AppLocalizationsTg extends AppLocalizations {
       'Дуоҳои ҳаррӯзаи тасдиқшуда то ҳол бо ин дастгоҳ ҳамоҳанг карда нашудаанд. Ба манбаи абр пайваст шавед, то дуоҳои сарчашмаро ба ҷои бозгашти тасдиқнашуда бор кунед.';
 
   @override
+  String get duaCategoryQuranic => 'Дуои Қуръон';
+
+  @override
+  String get duaCategoryMorningEvening => 'Субх ва шом';
+
+  @override
+  String get duaCategoryTasbih => 'Тасбих';
+
+  @override
+  String get duaCategoryProtection => 'Муҳофизат';
+
+  @override
+  String get duaCategoryBeginning => 'Оғозҳо';
+
+  @override
+  String get duaCategorySleep => 'Хоб';
+
+  @override
+  String get duaCategoryFoodDrink => 'Хӯрок ва нӯшокӣ';
+
+  @override
+  String get duaCategoryForgiveness => 'бахшидан';
+
+  @override
+  String get duaCategoryHome => 'Хона';
+
+  @override
+  String get duaSourceBukhari => 'Бухори';
+
+  @override
+  String get duaSourceMuslim => 'мусулмон';
+
+  @override
+  String get duaSourceAbuDawud => 'Абу Довуд';
+
+  @override
+  String get duaSourceTirmidhi => 'Тирмизӣ';
+
+  @override
+  String get duaSourceAhmad => 'Ахмад';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -797,6 +797,48 @@ class AppLocalizationsCo extends AppLocalizations {
       'Duas di ogni ghjornu verificate ùn sò micca stati sincronizzati cù stu dispusitivu. Cunnettete à a surgente nuvola per caricate duas provenienti invece di un fallback micca verificatu.';
 
   @override
+  String get duaCategoryQuranic => 'Dua coranique';
+
+  @override
+  String get duaCategoryMorningEvening => 'Mattina è sera';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Prutezzione';
+
+  @override
+  String get duaCategoryBeginning => 'I principii';
+
+  @override
+  String get duaCategorySleep => 'Dormi';
+
+  @override
+  String get duaCategoryFoodDrink => 'Food & Drink';
+
+  @override
+  String get duaCategoryForgiveness => 'u pirdunu';
+
+  @override
+  String get duaCategoryHome => 'A casa';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'musulmani';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

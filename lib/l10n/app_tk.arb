@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Barlanylan dualar entek elýeterli däl",
-  "duaUnavailableBody": "Barlanylan gündelik dualar entek bu enjam bilen sinhronlanmady. Barlanmadyk yza gaýtmagyň ýerine bulut çeşmesine birikdiriň."
+  "duaUnavailableBody": "Barlanylan gündelik dualar entek bu enjam bilen sinhronlanmady. Barlanmadyk yza gaýtmagyň ýerine bulut çeşmesine birikdiriň.",
+  "duaCategoryQuranic": "Kuran dua",
+  "duaCategoryMorningEvening": "Irden we agşam",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Gorag",
+  "duaCategoryBeginning": "Başlangyçlar",
+  "duaCategorySleep": "Uka",
+  "duaCategoryFoodDrink": "Iýmit we içgi",
+  "duaCategoryForgiveness": "Bagyşlamak",
+  "duaCategoryHome": "Öý",
+  "duaSourceBukhari": "Buhari",
+  "duaSourceMuslim": "Musulman",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmizi",
+  "duaSourceAhmad": "Ahmet"
 }

@@ -796,6 +796,48 @@ class AppLocalizationsTh extends AppLocalizations {
       'Duas รายวันที่ยืนยันแล้วยังไม่ได้ซิงค์กับอุปกรณ์นี้ เชื่อมต่อกับต้นทางคลาวด์เพื่อโหลด duas ที่มาจากแทนทางเลือกที่ไม่ได้รับการยืนยัน';
 
   @override
+  String get duaCategoryQuranic => 'ดุอาอ์กุรอาน';
+
+  @override
+  String get duaCategoryMorningEvening => 'เช้าและเย็น';
+
+  @override
+  String get duaCategoryTasbih => 'ตัสบีห์';
+
+  @override
+  String get duaCategoryProtection => 'การป้องกัน';
+
+  @override
+  String get duaCategoryBeginning => 'จุดเริ่มต้น';
+
+  @override
+  String get duaCategorySleep => 'นอน';
+
+  @override
+  String get duaCategoryFoodDrink => 'อาหารและเครื่องดื่ม';
+
+  @override
+  String get duaCategoryForgiveness => 'การให้อภัย';
+
+  @override
+  String get duaCategoryHome => 'บ้าน';
+
+  @override
+  String get duaSourceBukhari => 'บุคอรี';
+
+  @override
+  String get duaSourceMuslim => 'มุสลิม';
+
+  @override
+  String get duaSourceAbuDawud => 'อบู ดาวูด';
+
+  @override
+  String get duaSourceTirmidhi => 'ติรมีซี';
+
+  @override
+  String get duaSourceAhmad => 'อาหมัด';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

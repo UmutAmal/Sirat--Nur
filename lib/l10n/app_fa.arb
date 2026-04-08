@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "دعاهای تأیید شده هنوز در دسترس نیستند",
-  "duaUnavailableBody": "دعاهای روزانه تأیید شده هنوز با این دستگاه همگام سازی نشده است. به منبع ابری متصل شوید تا duas های منبع را به جای نسخه بازگشتی تأیید نشده بارگیری کنید."
+  "duaUnavailableBody": "دعاهای روزانه تأیید شده هنوز با این دستگاه همگام سازی نشده است. به منبع ابری متصل شوید تا duas های منبع را به جای نسخه بازگشتی تأیید نشده بارگیری کنید.",
+  "duaCategoryQuranic": "دعای قرآنی",
+  "duaCategoryMorningEvening": "صبح و عصر",
+  "duaCategoryTasbih": "تسبیح",
+  "duaCategoryProtection": "حفاظت",
+  "duaCategoryBeginning": "آغازها",
+  "duaCategorySleep": "بخواب",
+  "duaCategoryFoodDrink": "غذا و نوشیدنی",
+  "duaCategoryForgiveness": "بخشش",
+  "duaCategoryHome": "صفحه اصلی",
+  "duaSourceBukhari": "بخاری",
+  "duaSourceMuslim": "مسلمان",
+  "duaSourceAbuDawud": "ابو داود",
+  "duaSourceTirmidhi": "ترمذی",
+  "duaSourceAhmad": "احمد"
 }

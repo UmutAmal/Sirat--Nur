@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "ధృవీకరించబడిన దువాలు ఇంకా అందుబాటులో లేవు",
-  "duaUnavailableBody": "ధృవీకరించబడిన రోజువారీ దువాలు ఇంకా ఈ పరికరానికి సమకాలీకరించబడలేదు. ధృవీకరించని ఫాల్‌బ్యాక్‌కు బదులుగా మూలాధారమైన దువాలను లోడ్ చేయడానికి క్లౌడ్ సోర్స్‌కి కనెక్ట్ చేయండి."
+  "duaUnavailableBody": "ధృవీకరించబడిన రోజువారీ దువాలు ఇంకా ఈ పరికరానికి సమకాలీకరించబడలేదు. ధృవీకరించని ఫాల్‌బ్యాక్‌కు బదులుగా మూలాధారమైన దువాలను లోడ్ చేయడానికి క్లౌడ్ సోర్స్‌కి కనెక్ట్ చేయండి.",
+  "duaCategoryQuranic": "ఖురాన్ దువా",
+  "duaCategoryMorningEvening": "ఉదయం & సాయంత్రం",
+  "duaCategoryTasbih": "తస్బిహ్",
+  "duaCategoryProtection": "రక్షణ",
+  "duaCategoryBeginning": "ప్రారంభం",
+  "duaCategorySleep": "నిద్రించు",
+  "duaCategoryFoodDrink": "ఆహారం & పానీయం",
+  "duaCategoryForgiveness": "క్షమాపణ",
+  "duaCategoryHome": "హోమ్",
+  "duaSourceBukhari": "బుఖారీ",
+  "duaSourceMuslim": "ముస్లిం",
+  "duaSourceAbuDawud": "అబూ దావూద్",
+  "duaSourceTirmidhi": "తిర్మిది",
+  "duaSourceAhmad": "అహ్మద్"
 }

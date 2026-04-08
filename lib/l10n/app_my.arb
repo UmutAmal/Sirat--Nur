@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "အတည်ပြုထားသော duas များကို မရရှိနိုင်သေးပါ။",
-  "duaUnavailableBody": "အတည်ပြုထားသော နေ့စဉ် duas ကို ဤစက်ပစ္စည်းသို့ စင့်ခ်မလုပ်ရသေးပါ။ အတည်မပြုရသေးသော တုံ့ပြန်မှုအစား အရင်းအမြစ်မှ duas ကို တင်ရန် cloud အရင်းအမြစ်သို့ ချိတ်ဆက်ပါ။"
+  "duaUnavailableBody": "အတည်ပြုထားသော နေ့စဉ် duas ကို ဤစက်ပစ္စည်းသို့ စင့်ခ်မလုပ်ရသေးပါ။ အတည်မပြုရသေးသော တုံ့ပြန်မှုအစား အရင်းအမြစ်မှ duas ကို တင်ရန် cloud အရင်းအမြစ်သို့ ချိတ်ဆက်ပါ။",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "မနက်ပိုင်း ညပိုင်း",
+  "duaCategoryTasbih": "တက်ဗိ",
+  "duaCategoryProtection": "အကာအကွယ်",
+  "duaCategoryBeginning": "အစပိုင်း",
+  "duaCategorySleep": "အိပ်ပါ။",
+  "duaCategoryFoodDrink": "အစားအသောက်နှင့် သောက်စရာ",
+  "duaCategoryForgiveness": "ခွင့်လွှတ်ပါ။",
+  "duaCategoryHome": "အိမ်",
+  "duaSourceBukhari": "ဘူခါရီ",
+  "duaSourceMuslim": "မွတ်ဆလင်",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "အဟ်မဒ်"
 }

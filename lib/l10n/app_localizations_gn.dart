@@ -798,6 +798,48 @@ class AppLocalizationsGn extends AppLocalizations {
       'Umi duas diario ojehechaukáva noñembojoajúi gueteri ko tembipuru’ípe. Embojoaju arai fuente-pe ekargávo duas fuente-gui peteĩ fallback ndojehecháiva rangue.';
 
   @override
+  String get duaCategoryQuranic => 'Dua Corán rehegua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Pyhareve & Ka\'aru';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih rehegua';
+
+  @override
+  String get duaCategoryProtection => 'Ñangareko rehegua';
+
+  @override
+  String get duaCategoryBeginning => 'Ñepyrũrã';
+
+  @override
+  String get duaCategorySleep => 'Ke';
+
+  @override
+  String get duaCategoryFoodDrink => 'Tembi’u & Mba’e’yru';
+
+  @override
+  String get duaCategoryForgiveness => 'Ñembyasy';
+
+  @override
+  String get duaCategoryHome => 'Óga';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari rehegua';
+
+  @override
+  String get duaSourceMuslim => 'Musulmán';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud rehegua';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi rehegua';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad rehegua';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

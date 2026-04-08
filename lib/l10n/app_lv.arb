@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verificētās duas vēl nav pieejamas",
-  "duaUnavailableBody": "Verificētās ikdienas duas vēl nav sinhronizētas ar šo ierīci. Izveidojiet savienojumu ar mākoņa avotu, lai ielādētu avota duas, nevis nepārbaudītu atkāpšanos."
+  "duaUnavailableBody": "Verificētās ikdienas duas vēl nav sinhronizētas ar šo ierīci. Izveidojiet savienojumu ar mākoņa avotu, lai ielādētu avota duas, nevis nepārbaudītu atkāpšanos.",
+  "duaCategoryQuranic": "Korāna dua",
+  "duaCategoryMorningEvening": "Rīts & Vakars",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Aizsardzība",
+  "duaCategoryBeginning": "Sākums",
+  "duaCategorySleep": "Gulēt",
+  "duaCategoryFoodDrink": "Ēdiens un dzērieni",
+  "duaCategoryForgiveness": "Piedošana",
+  "duaCategoryHome": "Sākums",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "musulmanis",
+  "duaSourceAbuDawud": "Abū Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmads"
 }

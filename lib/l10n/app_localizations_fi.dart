@@ -797,6 +797,48 @@ class AppLocalizationsFi extends AppLocalizations {
       'Vahvistettuja päivittäisiä duaseja ei ole vielä synkronoitu tähän laitteeseen. Yhdistä pilvilähteeseen ladataksesi lähteen duas vahvistamattoman varaosan sijaan.';
 
   @override
+  String get duaCategoryQuranic => 'Koraani dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Aamu & Ilta';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Suojaus';
+
+  @override
+  String get duaCategoryBeginning => 'Alkuja';
+
+  @override
+  String get duaCategorySleep => 'Nukkua';
+
+  @override
+  String get duaCategoryFoodDrink => 'Ruoka & Juoma';
+
+  @override
+  String get duaCategoryForgiveness => 'Anteeksianto';
+
+  @override
+  String get duaCategoryHome => 'Kotiin';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'muslimi';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

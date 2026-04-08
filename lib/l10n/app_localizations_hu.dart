@@ -796,6 +796,48 @@ class AppLocalizationsHu extends AppLocalizations {
       'Az ellenőrzött napi duák még nincsenek szinkronizálva ezzel az eszközzel. Csatlakozzon a felhőforráshoz a forrásból származó duák betöltéséhez az ellenőrizetlen tartalék helyett.';
 
   @override
+  String get duaCategoryQuranic => 'Korán dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Reggel & Este';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Védelem';
+
+  @override
+  String get duaCategoryBeginning => 'Kezdetek';
+
+  @override
+  String get duaCategorySleep => 'Alvás';
+
+  @override
+  String get duaCategoryFoodDrink => 'Étel és ital';
+
+  @override
+  String get duaCategoryForgiveness => 'Megbocsátás';
+
+  @override
+  String get duaCategoryHome => 'Otthon';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'muzulmán';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

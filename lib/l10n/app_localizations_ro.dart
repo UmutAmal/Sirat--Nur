@@ -797,6 +797,48 @@ class AppLocalizationsRo extends AppLocalizations {
       'Duaurile zilnice verificate nu au fost încă sincronizate cu acest dispozitiv. Conectați-vă la sursa cloud pentru a încărca duas-ul sursă în loc de o rezervă neverificată.';
 
   @override
+  String get duaCategoryQuranic => 'Dua Coranică';
+
+  @override
+  String get duaCategoryMorningEvening => 'Dimineața și seara';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Protecţie';
+
+  @override
+  String get duaCategoryBeginning => 'Începuturile';
+
+  @override
+  String get duaCategorySleep => 'Dormi';
+
+  @override
+  String get duaCategoryFoodDrink => 'Mâncare și băutură';
+
+  @override
+  String get duaCategoryForgiveness => 'Iertare';
+
+  @override
+  String get duaCategoryHome => 'Acasă';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'musulman';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "சரிபார்க்கப்பட்ட துவாக்கள் இன்னும் கிடைக்கவில்லை",
-  "duaUnavailableBody": "சரிபார்க்கப்பட்ட தினசரி துவாக்கள் இந்தச் சாதனத்தில் இன்னும் ஒத்திசைக்கப்படவில்லை. சரிபார்க்கப்படாத ஃபால்பேக்கிற்குப் பதிலாக ஆதாரமான துவாக்களை ஏற்றுவதற்கு கிளவுட் மூலத்துடன் இணைக்கவும்."
+  "duaUnavailableBody": "சரிபார்க்கப்பட்ட தினசரி துவாக்கள் இந்தச் சாதனத்தில் இன்னும் ஒத்திசைக்கப்படவில்லை. சரிபார்க்கப்படாத ஃபால்பேக்கிற்குப் பதிலாக ஆதாரமான துவாக்களை ஏற்றுவதற்கு கிளவுட் மூலத்துடன் இணைக்கவும்.",
+  "duaCategoryQuranic": "குர்ஆன் துஆ",
+  "duaCategoryMorningEvening": "காலை & மாலை",
+  "duaCategoryTasbih": "தஸ்பிஹ்",
+  "duaCategoryProtection": "பாதுகாப்பு",
+  "duaCategoryBeginning": "ஆரம்பம்",
+  "duaCategorySleep": "தூங்கு",
+  "duaCategoryFoodDrink": "உணவு & பானம்",
+  "duaCategoryForgiveness": "மன்னிப்பு",
+  "duaCategoryHome": "வீடு",
+  "duaSourceBukhari": "புகாரி",
+  "duaSourceMuslim": "முஸ்லிம்",
+  "duaSourceAbuDawud": "அபு தாவூத்",
+  "duaSourceTirmidhi": "திர்மிதி",
+  "duaSourceAhmad": "அஹ்மத்"
 }

@@ -796,6 +796,48 @@ class AppLocalizationsFa extends AppLocalizations {
       'دعاهای روزانه تأیید شده هنوز با این دستگاه همگام سازی نشده است. به منبع ابری متصل شوید تا duas های منبع را به جای نسخه بازگشتی تأیید نشده بارگیری کنید.';
 
   @override
+  String get duaCategoryQuranic => 'دعای قرآنی';
+
+  @override
+  String get duaCategoryMorningEvening => 'صبح و عصر';
+
+  @override
+  String get duaCategoryTasbih => 'تسبیح';
+
+  @override
+  String get duaCategoryProtection => 'حفاظت';
+
+  @override
+  String get duaCategoryBeginning => 'آغازها';
+
+  @override
+  String get duaCategorySleep => 'بخواب';
+
+  @override
+  String get duaCategoryFoodDrink => 'غذا و نوشیدنی';
+
+  @override
+  String get duaCategoryForgiveness => 'بخشش';
+
+  @override
+  String get duaCategoryHome => 'صفحه اصلی';
+
+  @override
+  String get duaSourceBukhari => 'بخاری';
+
+  @override
+  String get duaSourceMuslim => 'مسلمان';
+
+  @override
+  String get duaSourceAbuDawud => 'ابو داود';
+
+  @override
+  String get duaSourceTirmidhi => 'ترمذی';
+
+  @override
+  String get duaSourceAhmad => 'احمد';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "ዝተረጋገጹ ዱዓታት ገና ኣይተረኽቡን።",
-  "duaUnavailableBody": "ዝተረጋገጹ መዓልታዊ ዱዓታት ገና ምስዚ መሳርሒ ኣይተሰማምዑን። ኣብ ክንዲ ዘይተረጋገጸ ምምላስ ምምላስ ምንጪ ዘለዎም ዱዓታት ንምጽዓን ምስቲ ምንጪ ደበና ምትእስሳር።"
+  "duaUnavailableBody": "ዝተረጋገጹ መዓልታዊ ዱዓታት ገና ምስዚ መሳርሒ ኣይተሰማምዑን። ኣብ ክንዲ ዘይተረጋገጸ ምምላስ ምምላስ ምንጪ ዘለዎም ዱዓታት ንምጽዓን ምስቲ ምንጪ ደበና ምትእስሳር።",
+  "duaCategoryQuranic": "ቁርኣናዊ ዱዓ",
+  "duaCategoryMorningEvening": "ንግሆ & ምሸት",
+  "duaCategoryTasbih": "ታስቢህ",
+  "duaCategoryProtection": "ምክልኻል",
+  "duaCategoryBeginning": "መጀመርታ",
+  "duaCategorySleep": "ደቅስ",
+  "duaCategoryFoodDrink": "መግቢን መስተን።",
+  "duaCategoryForgiveness": "ይቕሬታ",
+  "duaCategoryHome": "ገዛ",
+  "duaSourceBukhari": "ቡካሪ",
+  "duaSourceMuslim": "ኣስላማይ",
+  "duaSourceAbuDawud": "ኣቡ ዳውድ",
+  "duaSourceTirmidhi": "ትርሚድሂ",
+  "duaSourceAhmad": "ኣሕመድ"
 }

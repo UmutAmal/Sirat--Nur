@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Duco la xaqiijiyay wali lama hayo",
-  "duaUnavailableBody": "Duas maalinle ah oo la xaqiijiyay weli lama midin qalabkan. Ku xidh isha daruuraha si aad ugu shubto duas laga keenay halkii aad ka ahaan lahayd dib u dhac aan la xaqiijin."
+  "duaUnavailableBody": "Duas maalinle ah oo la xaqiijiyay weli lama midin qalabkan. Ku xidh isha daruuraha si aad ugu shubto duas laga keenay halkii aad ka ahaan lahayd dib u dhac aan la xaqiijin.",
+  "duaCategoryQuranic": "ducada quraanka",
+  "duaCategoryMorningEvening": "Subax & Fiid",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Ilaalinta",
+  "duaCategoryBeginning": "Bilawga",
+  "duaCategorySleep": "Hurdo",
+  "duaCategoryFoodDrink": "Cunto & Cabbitaan",
+  "duaCategoryForgiveness": "Cafiska",
+  "duaCategoryHome": "Guriga",
+  "duaSourceBukhari": "Bukhaari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abuu Daawuud",
+  "duaSourceTirmidhi": "Tirmidi",
+  "duaSourceAhmad": "Axmad"
 }

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "duas diverifikasi teu sadia acan",
-  "duaUnavailableBody": "Duas poean anu diverifikasi teu acan disingkronkeun ka alat ieu. Sambungkeun ka sumber awan pikeun muka duas sourced tinimbang fallback unverified."
+  "duaUnavailableBody": "Duas poean anu diverifikasi teu acan disingkronkeun ka alat ieu. Sambungkeun ka sumber awan pikeun muka duas sourced tinimbang fallback unverified.",
+  "duaCategoryQuranic": "Qur'an dua",
+  "duaCategoryMorningEvening": "Isuk & Sore",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Panyalindungan",
+  "duaCategoryBeginning": "Mimiti",
+  "duaCategorySleep": "Saré",
+  "duaCategoryFoodDrink": "Dahareun & Inuman",
+  "duaCategoryForgiveness": "Hampura",
+  "duaCategoryHome": "Imah",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidzi",
+  "duaSourceAhmad": "Ahmad"
 }

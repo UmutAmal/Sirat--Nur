@@ -797,6 +797,48 @@ class AppLocalizationsGa extends AppLocalizations {
       'Níor sioncronaíodh dus laethúil fíoraithe leis an ngléas seo fós. Ceangail leis an bhfoinse néil chun duas foinsithe a lódáil in ionad aischúiteamh neamhfhíoraithe.';
 
   @override
+  String get duaCategoryQuranic => 'Dua Quranic';
+
+  @override
+  String get duaCategoryMorningEvening => 'Maidin & Tráthnóna';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Cosaint';
+
+  @override
+  String get duaCategoryBeginning => 'Tús';
+
+  @override
+  String get duaCategorySleep => 'Codladh';
+
+  @override
+  String get duaCategoryFoodDrink => 'Bia & Deoch';
+
+  @override
+  String get duaCategoryForgiveness => 'Maithiúnas';
+
+  @override
+  String get duaCategoryHome => 'Baile';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Moslamach';
+
+  @override
+  String get duaSourceAbuDawud => 'Abú Dhabhúd';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

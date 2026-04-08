@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "וועריפיעד דואַס זענען נישט בנימצא נאָך",
-  "duaUnavailableBody": "וועריפיעד טעגלעך דואַס זענען נישט סינסעד צו דעם מיטל נאָך. קאָננעקט צו די וואָלקן מקור צו לאָדן סאָרסעד דואַס אַנשטאָט פון אַן אַנוועראַפייד פאַלבאַק."
+  "duaUnavailableBody": "וועריפיעד טעגלעך דואַס זענען נישט סינסעד צו דעם מיטל נאָך. קאָננעקט צו די וואָלקן מקור צו לאָדן סאָרסעד דואַס אַנשטאָט פון אַן אַנוועראַפייד פאַלבאַק.",
+  "duaCategoryQuranic": "קווראַניק דואַ",
+  "duaCategoryMorningEvening": "מאָרגן & אָוונט",
+  "duaCategoryTasbih": "טאַסביה",
+  "duaCategoryProtection": "שוץ",
+  "duaCategoryBeginning": "אָנהייב",
+  "duaCategorySleep": "שלאָף",
+  "duaCategoryFoodDrink": "עסנוואַרג & טרינקען",
+  "duaCategoryForgiveness": "מחילה",
+  "duaCategoryHome": "היים",
+  "duaSourceBukhari": "בוכארי",
+  "duaSourceMuslim": "מוסלים",
+  "duaSourceAbuDawud": "אבו דאוד",
+  "duaSourceTirmidhi": "טירמידהי",
+  "duaSourceAhmad": "אַחמד"
 }

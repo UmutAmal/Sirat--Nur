@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Ko nga rua kua whakamanahia kaore ano kia waatea",
-  "duaUnavailableBody": "Ko nga rua kua whakamanahia ia ra kaore ano kia tukutahia ki tenei taputapu. Hono atu ki te puna kapua ki te uta i nga rua i puta mai hei utu mo te hokinga whakamuri."
+  "duaUnavailableBody": "Ko nga rua kua whakamanahia ia ra kaore ano kia tukutahia ki tenei taputapu. Hono atu ki te puna kapua ki te uta i nga rua i puta mai hei utu mo te hokinga whakamuri.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Ata me te ahiahi",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Parenga",
+  "duaCategoryBeginning": "Nga timatanga",
+  "duaCategorySleep": "Moe mai",
+  "duaCategoryFoodDrink": "Kai me te Inu",
+  "duaCategoryForgiveness": "Te murunga hara",
+  "duaCategoryHome": "Kainga",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Mahometa",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

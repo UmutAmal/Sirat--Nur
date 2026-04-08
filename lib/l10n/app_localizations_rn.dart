@@ -796,6 +796,48 @@ class AppLocalizationsRn extends AppLocalizations {
       'Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.';
 
   @override
+  String get duaCategoryQuranic => 'Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Morning & Evening';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Protection';
+
+  @override
+  String get duaCategoryBeginning => 'Beginnings';
+
+  @override
+  String get duaCategorySleep => 'Sleep';
+
+  @override
+  String get duaCategoryFoodDrink => 'Food & Drink';
+
+  @override
+  String get duaCategoryForgiveness => 'Forgiveness';
+
+  @override
+  String get duaCategoryHome => 'Home';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

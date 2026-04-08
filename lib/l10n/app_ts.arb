@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Ti duas leti tiyisisiweke a ti se kumeka",
-  "duaUnavailableBody": "Ti duas ta siku na siku leti tiyisisiweke a ti si hlanganisiwa na xitirhisiwa lexi. Hlanganisa na xihlovo xa mapapa ku layicha ti duas leti humaka eka xihlovo ematshan’wini ya fallback leyi nga tiyisisiwangiki."
+  "duaUnavailableBody": "Ti duas ta siku na siku leti tiyisisiweke a ti si hlanganisiwa na xitirhisiwa lexi. Hlanganisa na xihlovo xa mapapa ku layicha ti duas leti humaka eka xihlovo ematshan’wini ya fallback leyi nga tiyisisiwangiki.",
+  "duaCategoryQuranic": "Dua ya Quranic",
+  "duaCategoryMorningEvening": "Mixo & Madyambu",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Nsirhelelo",
+  "duaCategoryBeginning": "Masungulo",
+  "duaCategorySleep": "Etlela",
+  "duaCategoryFoodDrink": "Swakudya & Swinwiwa",
+  "duaCategoryForgiveness": "Ku rivalela",
+  "duaCategoryHome": "Kaya",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Mumoslem",
+  "duaSourceAbuDawud": "Abu Dawud, ku vula yena",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

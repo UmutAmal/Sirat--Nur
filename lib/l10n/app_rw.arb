@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Duas yemejwe ntabwo iraboneka",
-  "duaUnavailableBody": "Kugenzura duas buri munsi ntabwo byahujwe niki gikoresho kugeza ubu. Ihuze nigicu kugirango utware duas ikomoka aho gusubira inyuma."
+  "duaUnavailableBody": "Kugenzura duas buri munsi ntabwo byahujwe niki gikoresho kugeza ubu. Ihuze nigicu kugirango utware duas ikomoka aho gusubira inyuma.",
+  "duaCategoryQuranic": "Qor'an dua",
+  "duaCategoryMorningEvening": "Igitondo & nimugoroba",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Kurinda",
+  "duaCategoryBeginning": "Intangiriro",
+  "duaCategorySleep": "Sinzira",
+  "duaCategoryFoodDrink": "Ibiryo & Ibinyobwa",
+  "duaCategoryForgiveness": "Kubabarira",
+  "duaCategoryHome": "Murugo",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Umuyisilamu",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

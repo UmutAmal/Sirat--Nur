@@ -796,6 +796,48 @@ class AppLocalizationsPs extends AppLocalizations {
       'تایید شوي ورځني دعاګانې لا تر اوسه دې وسیله سره همغږي شوي ندي. د بادل سرچینې سره وصل شئ ترڅو د غیر تصدیق شوي فال بیک پرځای د سرچینې شوي دعا بار کړئ.';
 
   @override
+  String get duaCategoryQuranic => 'قرآنی دعا';
+
+  @override
+  String get duaCategoryMorningEvening => 'سهار او ماښام';
+
+  @override
+  String get duaCategoryTasbih => 'تسبیح';
+
+  @override
+  String get duaCategoryProtection => 'ساتنه';
+
+  @override
+  String get duaCategoryBeginning => 'پیل';
+
+  @override
+  String get duaCategorySleep => 'خوب';
+
+  @override
+  String get duaCategoryFoodDrink => 'خواړه او څښاک';
+
+  @override
+  String get duaCategoryForgiveness => 'بخښنه';
+
+  @override
+  String get duaCategoryHome => 'کور';
+
+  @override
+  String get duaSourceBukhari => 'بخاري';
+
+  @override
+  String get duaSourceMuslim => 'مسلمان';
+
+  @override
+  String get duaSourceAbuDawud => 'ابوداود';
+
+  @override
+  String get duaSourceTirmidhi => 'ترمذي';
+
+  @override
+  String get duaSourceAhmad => 'احمد';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

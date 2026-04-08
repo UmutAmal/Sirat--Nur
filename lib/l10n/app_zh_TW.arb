@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "已驗證的 dua 尚不可用",
-  "duaUnavailableBody": "已驗證的每日 duas 尚未同步到此裝置。連接到雲端來源以載入來源的 dua，而不是未經驗證的後備。"
+  "duaUnavailableBody": "已驗證的每日 duas 尚未同步到此裝置。連接到雲端來源以載入來源的 dua，而不是未經驗證的後備。",
+  "duaCategoryQuranic": "古蘭經杜阿",
+  "duaCategoryMorningEvening": "早上和晚上",
+  "duaCategoryTasbih": "塔斯比赫",
+  "duaCategoryProtection": "保護",
+  "duaCategoryBeginning": "開始",
+  "duaCategorySleep": "睡覺",
+  "duaCategoryFoodDrink": "食品和飲料",
+  "duaCategoryForgiveness": "饒恕",
+  "duaCategoryHome": "家",
+  "duaSourceBukhari": "布哈里",
+  "duaSourceMuslim": "穆斯林",
+  "duaSourceAbuDawud": "阿布達烏德",
+  "duaSourceTirmidhi": "鐵爾米吉",
+  "duaSourceAhmad": "艾哈邁德"
 }

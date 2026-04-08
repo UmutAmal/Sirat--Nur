@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Duasele verificate nu sunt încă disponibile",
-  "duaUnavailableBody": "Duaurile zilnice verificate nu au fost încă sincronizate cu acest dispozitiv. Conectați-vă la sursa cloud pentru a încărca duas-ul sursă în loc de o rezervă neverificată."
+  "duaUnavailableBody": "Duaurile zilnice verificate nu au fost încă sincronizate cu acest dispozitiv. Conectați-vă la sursa cloud pentru a încărca duas-ul sursă în loc de o rezervă neverificată.",
+  "duaCategoryQuranic": "Dua Coranică",
+  "duaCategoryMorningEvening": "Dimineața și seara",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Protecţie",
+  "duaCategoryBeginning": "Începuturile",
+  "duaCategorySleep": "Dormi",
+  "duaCategoryFoodDrink": "Mâncare și băutură",
+  "duaCategoryForgiveness": "Iertare",
+  "duaCategoryHome": "Acasă",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "musulman",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

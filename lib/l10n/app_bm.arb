@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Dua sɛgɛsɛgɛlenw ma sɔrɔ fɔlɔ",
-  "duaUnavailableBody": "Don o don duas sɛgɛsɛgɛlenw ma sinsin nin minɛn in kan fɔlɔ. Aw bɛ ɲɔgɔn Jɛ ni sankaba sɔrɔyɔrɔ ye walasa ka duaw doni sɔrɔyɔrɔ la sanni ka fallback sɔrɔ min ma sɛgɛsɛgɛ."
+  "duaUnavailableBody": "Don o don duas sɛgɛsɛgɛlenw ma sinsin nin minɛn in kan fɔlɔ. Aw bɛ ɲɔgɔn Jɛ ni sankaba sɔrɔyɔrɔ ye walasa ka duaw doni sɔrɔyɔrɔ la sanni ka fallback sɔrɔ min ma sɛgɛsɛgɛ.",
+  "duaCategoryQuranic": "Kuranɛ dua",
+  "duaCategoryMorningEvening": "Sɔgɔma & Sufɛ",
+  "duaCategoryTasbih": "Tasbih ye",
+  "duaCategoryProtection": "Lakanali",
+  "duaCategoryBeginning": "Daminɛw",
+  "duaCategorySleep": "Ka sunɔgɔ",
+  "duaCategoryFoodDrink": "Dumuni & Minfɛnw",
+  "duaCategoryForgiveness": "Yafali",
+  "duaCategoryHome": "So",
+  "duaSourceBukhari": "Bukhari ye",
+  "duaSourceMuslim": "Silamɛ",
+  "duaSourceAbuDawud": "Abu Dawud ye",
+  "duaSourceTirmidhi": "Tirmidhi ye",
+  "duaSourceAhmad": "Ahmad ye"
 }

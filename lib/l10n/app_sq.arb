@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Duat e verifikuara nuk ofrohen ende",
-  "duaUnavailableBody": "Duat e verifikuara ditore nuk janë sinkronizuar ende me këtë pajisje. Lidhu me burimin cloud për të ngarkuar duatë me burim në vend të një kthimi të paverifikuar."
+  "duaUnavailableBody": "Duat e verifikuara ditore nuk janë sinkronizuar ende me këtë pajisje. Lidhu me burimin cloud për të ngarkuar duatë me burim në vend të një kthimi të paverifikuar.",
+  "duaCategoryQuranic": "dua Kur'anore",
+  "duaCategoryMorningEvening": "Mëngjes & Mbrëmje",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Mbrojtja",
+  "duaCategoryBeginning": "Fillimet",
+  "duaCategorySleep": "Flini",
+  "duaCategoryFoodDrink": "Ushqim & Pije",
+  "duaCategoryForgiveness": "falje",
+  "duaCategoryHome": "Shtëpi",
+  "duaSourceBukhari": "Buhariu",
+  "duaSourceMuslim": "musliman",
+  "duaSourceAbuDawud": "Ebu Davudi",
+  "duaSourceTirmidhi": "Tirmidhiu",
+  "duaSourceAhmad": "Ahmedi"
 }

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Zweryfikowane duas nie są jeszcze dostępne",
-  "duaUnavailableBody": "Zweryfikowane codzienne duas nie zostały jeszcze zsynchronizowane z tym urządzeniem. Połącz się ze źródłem w chmurze, aby załadować źródła Dua zamiast niezweryfikowanego źródła zastępczego."
+  "duaUnavailableBody": "Zweryfikowane codzienne duas nie zostały jeszcze zsynchronizowane z tym urządzeniem. Połącz się ze źródłem w chmurze, aby załadować źródła Dua zamiast niezweryfikowanego źródła zastępczego.",
+  "duaCategoryQuranic": "Koraniczny dua",
+  "duaCategoryMorningEvening": "Rano i wieczór",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Ochrona",
+  "duaCategoryBeginning": "Początki",
+  "duaCategorySleep": "Spać",
+  "duaCategoryFoodDrink": "Jedzenie i napoje",
+  "duaCategoryForgiveness": "Przebaczenie",
+  "duaCategoryHome": "Dom",
+  "duaSourceBukhari": "Buchari",
+  "duaSourceMuslim": "muzułmański",
+  "duaSourceAbuDawud": "Abu Dawuda",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

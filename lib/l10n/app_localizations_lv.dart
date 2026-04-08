@@ -796,6 +796,48 @@ class AppLocalizationsLv extends AppLocalizations {
       'Verificētās ikdienas duas vēl nav sinhronizētas ar šo ierīci. Izveidojiet savienojumu ar mākoņa avotu, lai ielādētu avota duas, nevis nepārbaudītu atkāpšanos.';
 
   @override
+  String get duaCategoryQuranic => 'Korāna dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Rīts & Vakars';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Aizsardzība';
+
+  @override
+  String get duaCategoryBeginning => 'Sākums';
+
+  @override
+  String get duaCategorySleep => 'Gulēt';
+
+  @override
+  String get duaCategoryFoodDrink => 'Ēdiens un dzērieni';
+
+  @override
+  String get duaCategoryForgiveness => 'Piedošana';
+
+  @override
+  String get duaCategoryHome => 'Sākums';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'musulmanis';
+
+  @override
+  String get duaSourceAbuDawud => 'Abū Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmads';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

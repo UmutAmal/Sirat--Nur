@@ -798,6 +798,48 @@ class AppLocalizationsNy extends AppLocalizations {
       'Ma dua otsimikiziridwa tsiku ndi tsiku sanagwirizanitsidwe ku chipangizochi panobe. Lumikizani ku mtambo kuti mutsegule ma duas m\'malo mobwerera komwe sikunatsimikizidwe.';
 
   @override
+  String get duaCategoryQuranic => 'Dua ya Quran';
+
+  @override
+  String get duaCategoryMorningEvening => 'M\'mawa ndi Madzulo';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Chitetezo';
+
+  @override
+  String get duaCategoryBeginning => 'Zoyambira';
+
+  @override
+  String get duaCategorySleep => 'Gona';
+
+  @override
+  String get duaCategoryFoodDrink => 'Chakudya & Chakumwa';
+
+  @override
+  String get duaCategoryForgiveness => 'Kukhululuka';
+
+  @override
+  String get duaCategoryHome => 'Kunyumba';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

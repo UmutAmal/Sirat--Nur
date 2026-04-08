@@ -797,6 +797,48 @@ class AppLocalizationsBg extends AppLocalizations {
       'Проверените ежедневни дуа все още не са синхронизирани с това устройство. Свържете се с облачния източник, за да заредите дуа с източник вместо непотвърден резервен вариант.';
 
   @override
+  String get duaCategoryQuranic => 'Коранската дуа';
+
+  @override
+  String get duaCategoryMorningEvening => 'Сутрин и вечер';
+
+  @override
+  String get duaCategoryTasbih => 'тасбих';
+
+  @override
+  String get duaCategoryProtection => 'защита';
+
+  @override
+  String get duaCategoryBeginning => 'Наченки';
+
+  @override
+  String get duaCategorySleep => 'сън';
+
+  @override
+  String get duaCategoryFoodDrink => 'Храна и напитки';
+
+  @override
+  String get duaCategoryForgiveness => 'прошка';
+
+  @override
+  String get duaCategoryHome => 'Начало';
+
+  @override
+  String get duaSourceBukhari => 'Бухари';
+
+  @override
+  String get duaSourceMuslim => 'мюсюлманин';
+
+  @override
+  String get duaSourceAbuDawud => 'Абу Дауд';
+
+  @override
+  String get duaSourceTirmidhi => 'Тирмизи';
+
+  @override
+  String get duaSourceAhmad => 'Ахмад';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

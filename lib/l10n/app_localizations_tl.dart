@@ -798,6 +798,48 @@ class AppLocalizationsTl extends AppLocalizations {
       'Ang mga na-verify na pang-araw-araw na dua ay hindi pa na-sync sa device na ito. Kumonekta sa cloud source para i-load ang mga sourced na dua sa halip na isang hindi na-verify na fallback.';
 
   @override
+  String get duaCategoryQuranic => 'Quranikong dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Umaga at Gabi';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Proteksyon';
+
+  @override
+  String get duaCategoryBeginning => 'Mga simula';
+
+  @override
+  String get duaCategorySleep => 'Matulog';
+
+  @override
+  String get duaCategoryFoodDrink => 'Pagkain at Inumin';
+
+  @override
+  String get duaCategoryForgiveness => 'Pagpapatawad';
+
+  @override
+  String get duaCategoryHome => 'Bahay';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

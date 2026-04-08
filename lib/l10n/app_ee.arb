@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Dua siwo ŋu woɖo kpee la meli haɖe o",
-  "duaUnavailableBody": "Womewɔ ɖeka kple gbesiagbe dua siwo ŋu woɖo kpee haɖe o. Do ka kple alilikpo dzɔtsoƒe be nàtsɔ dua siwo tso dzɔtsoƒe la ade agba me tsɔ wu be nàtsɔ fallback si ŋu womeɖo kpee o."
+  "duaUnavailableBody": "Womewɔ ɖeka kple gbesiagbe dua siwo ŋu woɖo kpee haɖe o. Do ka kple alilikpo dzɔtsoƒe be nàtsɔ dua siwo tso dzɔtsoƒe la ade agba me tsɔ wu be nàtsɔ fallback si ŋu womeɖo kpee o.",
+  "duaCategoryQuranic": "Quran ƒe dua",
+  "duaCategoryMorningEvening": "Ŋdi & Fiẽ",
+  "duaCategoryTasbih": "Tasbih ƒe ŋkɔ",
+  "duaCategoryProtection": "Ametakpɔkpɔ",
+  "duaCategoryBeginning": "Gɔmedzedzewo",
+  "duaCategorySleep": "Dᴐ alɔ̃",
+  "duaCategoryFoodDrink": "Nuɖuɖu & Nunono",
+  "duaCategoryForgiveness": "Tsɔtsɔke",
+  "duaCategoryHome": "Aƒeme",
+  "duaSourceBukhari": "Bukhari ƒe nya",
+  "duaSourceMuslim": "Moslemtɔwo",
+  "duaSourceAbuDawud": "Abu Dawud ƒe nya",
+  "duaSourceTirmidhi": "Tirmidhi ƒe nyawo",
+  "duaSourceAhmad": "Ahmad ƒe nya"
 }

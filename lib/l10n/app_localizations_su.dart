@@ -796,6 +796,48 @@ class AppLocalizationsSu extends AppLocalizations {
       'Duas poean anu diverifikasi teu acan disingkronkeun ka alat ieu. Sambungkeun ka sumber awan pikeun muka duas sourced tinimbang fallback unverified.';
 
   @override
+  String get duaCategoryQuranic => 'Qur\'an dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Isuk & Sore';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Panyalindungan';
+
+  @override
+  String get duaCategoryBeginning => 'Mimiti';
+
+  @override
+  String get duaCategorySleep => 'Saré';
+
+  @override
+  String get duaCategoryFoodDrink => 'Dahareun & Inuman';
+
+  @override
+  String get duaCategoryForgiveness => 'Hampura';
+
+  @override
+  String get duaCategoryHome => 'Imah';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidzi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

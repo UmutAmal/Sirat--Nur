@@ -796,6 +796,48 @@ class AppLocalizationsSw extends AppLocalizations {
       'Dua za kila siku zilizothibitishwa bado hazijasawazishwa kwenye kifaa hiki. Unganisha kwenye chanzo cha wingu ili kupakia dua zilizotoka badala ya njia mbadala ambayo haijathibitishwa.';
 
   @override
+  String get duaCategoryQuranic => 'Dua ya Quran';
+
+  @override
+  String get duaCategoryMorningEvening => 'Asubuhi na Jioni';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Ulinzi';
+
+  @override
+  String get duaCategoryBeginning => 'Mwanzo';
+
+  @override
+  String get duaCategorySleep => 'Kulala';
+
+  @override
+  String get duaCategoryFoodDrink => 'Chakula na Vinywaji';
+
+  @override
+  String get duaCategoryForgiveness => 'Msamaha';
+
+  @override
+  String get duaCategoryHome => 'Nyumbani';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muislamu';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

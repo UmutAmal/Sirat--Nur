@@ -796,6 +796,48 @@ class AppLocalizationsSa extends AppLocalizations {
       'सत्यापिताः दैनिकदुआः अद्यापि अस्मिन् यन्त्रे समन्वयिताः न सन्ति । असत्यापितस्य फॉलबैकस्य स्थाने स्रोतः दुआस् लोड् कर्तुं मेघस्रोतेन सह संयोजयन्तु ।';
 
   @override
+  String get duaCategoryQuranic => 'कुरान दुआ';
+
+  @override
+  String get duaCategoryMorningEvening => 'प्रातः & सायं';
+
+  @override
+  String get duaCategoryTasbih => 'तस्बिः';
+
+  @override
+  String get duaCategoryProtection => 'रक्षणम्';
+
+  @override
+  String get duaCategoryBeginning => 'आरम्भाः';
+
+  @override
+  String get duaCategorySleep => 'शयनं करोतु';
+
+  @override
+  String get duaCategoryFoodDrink => 'भोजन एवं पेय';
+
+  @override
+  String get duaCategoryForgiveness => 'क्षमा';
+
+  @override
+  String get duaCategoryHome => 'गृहम्‌';
+
+  @override
+  String get duaSourceBukhari => 'बुखारी';
+
+  @override
+  String get duaSourceMuslim => 'मुस्लिम';
+
+  @override
+  String get duaSourceAbuDawud => 'अबू दाऊद';
+
+  @override
+  String get duaSourceTirmidhi => 'तिरमिधि';
+
+  @override
+  String get duaSourceAhmad => 'अहमद';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

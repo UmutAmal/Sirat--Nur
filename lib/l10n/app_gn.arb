@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Umi duas verificado ndojeguerekói gueteri",
-  "duaUnavailableBody": "Umi duas diario ojehechaukáva noñembojoajúi gueteri ko tembipuru’ípe. Embojoaju arai fuente-pe ekargávo duas fuente-gui peteĩ fallback ndojehecháiva rangue."
+  "duaUnavailableBody": "Umi duas diario ojehechaukáva noñembojoajúi gueteri ko tembipuru’ípe. Embojoaju arai fuente-pe ekargávo duas fuente-gui peteĩ fallback ndojehecháiva rangue.",
+  "duaCategoryQuranic": "Dua Corán rehegua",
+  "duaCategoryMorningEvening": "Pyhareve & Ka'aru",
+  "duaCategoryTasbih": "Tasbih rehegua",
+  "duaCategoryProtection": "Ñangareko rehegua",
+  "duaCategoryBeginning": "Ñepyrũrã",
+  "duaCategorySleep": "Ke",
+  "duaCategoryFoodDrink": "Tembi’u & Mba’e’yru",
+  "duaCategoryForgiveness": "Ñembyasy",
+  "duaCategoryHome": "Óga",
+  "duaSourceBukhari": "Bukhari rehegua",
+  "duaSourceMuslim": "Musulmán",
+  "duaSourceAbuDawud": "Abu Dawud rehegua",
+  "duaSourceTirmidhi": "Tirmidhi rehegua",
+  "duaSourceAhmad": "Ahmad rehegua"
 }

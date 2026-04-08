@@ -510,5 +510,19 @@
     }
   },
   "duaUnavailableTitle": "Doa yang disahkan belum tersedia lagi",
-  "duaUnavailableBody": "Doa harian yang disahkan belum disegerakkan ke peranti ini lagi. Sambung ke sumber awan untuk memuatkan dua sumber dan bukannya sandaran yang tidak disahkan."
+  "duaUnavailableBody": "Doa harian yang disahkan belum disegerakkan ke peranti ini lagi. Sambung ke sumber awan untuk memuatkan dua sumber dan bukannya sandaran yang tidak disahkan.",
+  "duaCategoryQuranic": "Quranic doa",
+  "duaCategoryMorningEvening": "Pagi & Petang",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Perlindungan",
+  "duaCategoryBeginning": "Permulaan",
+  "duaCategorySleep": "tidur",
+  "duaCategoryFoodDrink": "Makanan & Minuman",
+  "duaCategoryForgiveness": "Pengampunan",
+  "duaCategoryHome": "Rumah",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidzi",
+  "duaSourceAhmad": "Ahmad"
 }

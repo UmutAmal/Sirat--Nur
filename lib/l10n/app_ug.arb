@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "دەلىللەنگەن دۇئانى تېخى ئىشلەتكىلى بولمايدۇ",
-  "duaUnavailableBody": "تەكشۈرۈلگەن كۈندىلىك دۇئاسى تېخى بۇ ئۈسكۈنىگە ماسقەدەملەنمىدى. بۇلۇت مەنبەسىگە ئۇلىنىپ ، دەلىللەنمىگەن خاتالىقنىڭ ئورنىغا مەنبەلىك دۇئانى يۈكلەڭ."
+  "duaUnavailableBody": "تەكشۈرۈلگەن كۈندىلىك دۇئاسى تېخى بۇ ئۈسكۈنىگە ماسقەدەملەنمىدى. بۇلۇت مەنبەسىگە ئۇلىنىپ ، دەلىللەنمىگەن خاتالىقنىڭ ئورنىغا مەنبەلىك دۇئانى يۈكلەڭ.",
+  "duaCategoryQuranic": "قۇرئان دۇئاسى",
+  "duaCategoryMorningEvening": "ئەتىگەن ۋە كەچ",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "قوغداش",
+  "duaCategoryBeginning": "باشلىنىش",
+  "duaCategorySleep": "ئۇخلاش",
+  "duaCategoryFoodDrink": "يېمەكلىك ۋە ئىچىملىك",
+  "duaCategoryForgiveness": "كەچۈرۈم قىلىش",
+  "duaCategoryHome": "ئۆي",
+  "duaSourceBukhari": "بۇخارى",
+  "duaSourceMuslim": "مۇسۇلمان",
+  "duaSourceAbuDawud": "ئەبۇ داۋۇد",
+  "duaSourceTirmidhi": "تىرمىزى",
+  "duaSourceAhmad": "ئەھمەد"
 }

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Chan eil dàs dearbhte rim faighinn fhathast",
-  "duaUnavailableBody": "Cha deach dus làitheil dearbhte a shioncronachadh ris an inneal seo fhathast. Ceangail ris an stòr sgòthan gus duas a luchdachadh sìos an àite tuiteam air ais gun dearbhadh."
+  "duaUnavailableBody": "Cha deach dus làitheil dearbhte a shioncronachadh ris an inneal seo fhathast. Ceangail ris an stòr sgòthan gus duas a luchdachadh sìos an àite tuiteam air ais gun dearbhadh.",
+  "duaCategoryQuranic": "Dà Quranic",
+  "duaCategoryMorningEvening": "Madainn & Feasgar",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Dìon",
+  "duaCategoryBeginning": "Toiseachan",
+  "duaCategorySleep": "Cadal",
+  "duaCategoryFoodDrink": "Biadh & Deoch",
+  "duaCategoryForgiveness": "Maitheanas",
+  "duaCategoryHome": "Dhachaigh",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslamach",
+  "duaSourceAbuDawud": "Abu Dhuibh",
+  "duaSourceTirmidhi": "Tirmidi",
+  "duaSourceAhmad": "Ahmad"
 }

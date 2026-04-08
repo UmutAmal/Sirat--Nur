@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verified duas hi a la awm lo",
-  "duaUnavailableBody": "Verified daily duas hi he device ah hian sync a la ni lo. Unverified fallback ai chuan sourced duas load turin cloud source ah connect rawh."
+  "duaUnavailableBody": "Verified daily duas hi he device ah hian sync a la ni lo. Unverified fallback ai chuan sourced duas load turin cloud source ah connect rawh.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Zing & Zanlai",
+  "duaCategoryTasbih": "Tasbih a ni",
+  "duaCategoryProtection": "Hriselna atana venhimna",
+  "duaCategoryBeginning": "A bul tanna",
+  "duaCategorySleep": "Mu",
+  "duaCategoryFoodDrink": "Ei leh in tur",
+  "duaCategoryForgiveness": "Ngaihdamna",
+  "duaCategoryHome": "In",
+  "duaSourceBukhari": "Bukhari a ni",
+  "duaSourceMuslim": "Muslim a ni",
+  "duaSourceAbuDawud": "Abu Dawud chuan a rawn ti a",
+  "duaSourceTirmidhi": "Tirmidhi a ni",
+  "duaSourceAhmad": "Ahmad chuan a rawn ti a"
 }

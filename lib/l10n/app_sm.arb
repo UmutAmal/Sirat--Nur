@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "E le'o avanoa nei duas fa'amaonia",
-  "duaUnavailableBody": "E le'i fa'asa'o le duas fa'amaonia i aso uma i lenei masini. Fa'afeso'ota'i i le puna o ao e fa'amomoli mai ai duas ae le o se fa'afouga e le'i fa'amaonia."
+  "duaUnavailableBody": "E le'i fa'asa'o le duas fa'amaonia i aso uma i lenei masini. Fa'afeso'ota'i i le puna o ao e fa'amomoli mai ai duas ae le o se fa'afouga e le'i fa'amaonia.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Taeao & Afiafi",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Puipuiga",
+  "duaCategoryBeginning": "Amataga",
+  "duaCategorySleep": "Moe",
+  "duaCategoryFoodDrink": "Mea'ai & Meainu",
+  "duaCategoryForgiveness": "Fa'amagalo",
+  "duaCategoryHome": "Aiga",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Mosalemi",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

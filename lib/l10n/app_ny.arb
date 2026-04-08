@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Ma dua otsimikizika sakupezeka pano",
-  "duaUnavailableBody": "Ma dua otsimikiziridwa tsiku ndi tsiku sanagwirizanitsidwe ku chipangizochi panobe. Lumikizani ku mtambo kuti mutsegule ma duas m'malo mobwerera komwe sikunatsimikizidwe."
+  "duaUnavailableBody": "Ma dua otsimikiziridwa tsiku ndi tsiku sanagwirizanitsidwe ku chipangizochi panobe. Lumikizani ku mtambo kuti mutsegule ma duas m'malo mobwerera komwe sikunatsimikizidwe.",
+  "duaCategoryQuranic": "Dua ya Quran",
+  "duaCategoryMorningEvening": "M'mawa ndi Madzulo",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Chitetezo",
+  "duaCategoryBeginning": "Zoyambira",
+  "duaCategorySleep": "Gona",
+  "duaCategoryFoodDrink": "Chakudya & Chakumwa",
+  "duaCategoryForgiveness": "Kukhululuka",
+  "duaCategoryHome": "Kunyumba",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

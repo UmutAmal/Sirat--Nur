@@ -797,6 +797,48 @@ class AppLocalizationsMs extends AppLocalizations {
       'Doa harian yang disahkan belum disegerakkan ke peranti ini lagi. Sambung ke sumber awan untuk memuatkan dua sumber dan bukannya sandaran yang tidak disahkan.';
 
   @override
+  String get duaCategoryQuranic => 'Quranic doa';
+
+  @override
+  String get duaCategoryMorningEvening => 'Pagi & Petang';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Perlindungan';
+
+  @override
+  String get duaCategoryBeginning => 'Permulaan';
+
+  @override
+  String get duaCategorySleep => 'tidur';
+
+  @override
+  String get duaCategoryFoodDrink => 'Makanan & Minuman';
+
+  @override
+  String get duaCategoryForgiveness => 'Pengampunan';
+
+  @override
+  String get duaCategoryHome => 'Rumah';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidzi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

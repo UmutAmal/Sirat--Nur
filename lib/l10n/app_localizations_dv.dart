@@ -798,6 +798,48 @@ class AppLocalizationsDv extends AppLocalizations {
       'ވެރިފައިޑް ޑެއިލީ ދުއާސް އަދި މި ޑިވައިސްއަށް ސިންކްކޮށްފައެއް ނުވެއެވެ. ޔަޤީން ނުކުރެވޭ ފޯލްބެކެއްގެ ބަދަލުގައި ސޯސްޑް ޑޫއާސް ލޯޑް ކުރުމަށް ކްލައުޑް ސޯސް އާއި ގުޅުން.';
 
   @override
+  String get duaCategoryQuranic => 'ޤުރުއާނުގެ ދުޢާ';
+
+  @override
+  String get duaCategoryMorningEvening => 'ހެނދުނު & ހަވީރު';
+
+  @override
+  String get duaCategoryTasbih => 'ތަސްބީހެވެ';
+
+  @override
+  String get duaCategoryProtection => 'ރައްކާތެރިކަން';
+
+  @override
+  String get duaCategoryBeginning => 'ފެށުންތަކެވެ';
+
+  @override
+  String get duaCategorySleep => 'ނިދުން';
+
+  @override
+  String get duaCategoryFoodDrink => 'ކާބޯތަކެތި އަދި ބުއިން';
+
+  @override
+  String get duaCategoryForgiveness => 'މާފުކުރުން';
+
+  @override
+  String get duaCategoryHome => 'ގެ';
+
+  @override
+  String get duaSourceBukhari => 'ބުޚާރީ އެވެ';
+
+  @override
+  String get duaSourceMuslim => 'މުސްލިމް އެވެ';
+
+  @override
+  String get duaSourceAbuDawud => 'އަބޫ ދާއޫދު އެވެ';
+
+  @override
+  String get duaSourceTirmidhi => 'ތިރުމިދީ އެވެ';
+
+  @override
+  String get duaSourceAhmad => 'އަހުމަދު އެވެ';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

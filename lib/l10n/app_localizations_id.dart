@@ -796,6 +796,48 @@ class AppLocalizationsId extends AppLocalizations {
       'Doa harian yang terverifikasi belum disinkronkan ke perangkat ini. Hubungkan ke sumber cloud untuk memuat doa yang bersumber, bukan fallback yang belum diverifikasi.';
 
   @override
+  String get duaCategoryQuranic => 'Doa Al-Quran';
+
+  @override
+  String get duaCategoryMorningEvening => 'Pagi & Sore';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Perlindungan';
+
+  @override
+  String get duaCategoryBeginning => 'Awal';
+
+  @override
+  String get duaCategorySleep => 'Tidur';
+
+  @override
+  String get duaCategoryFoodDrink => 'Makanan & Minuman';
+
+  @override
+  String get duaCategoryForgiveness => 'Pengampunan';
+
+  @override
+  String get duaCategoryHome => 'Rumah';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidzi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

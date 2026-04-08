@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Babu tabbacin duas tukuna",
-  "duaUnavailableBody": "Tabbatar da duas na yau da kullun ba a daidaita su da wannan na'urar ba tukuna. Haɗa zuwa tushen gajimare don loda duas da aka samo maimakon faɗuwar da ba a tabbatar ba."
+  "duaUnavailableBody": "Tabbatar da duas na yau da kullun ba a daidaita su da wannan na'urar ba tukuna. Haɗa zuwa tushen gajimare don loda duas da aka samo maimakon faɗuwar da ba a tabbatar ba.",
+  "duaCategoryQuranic": "Qur'ani dua",
+  "duaCategoryMorningEvening": "Safiya & Maraice",
+  "duaCategoryTasbih": "Tasbihi",
+  "duaCategoryProtection": "Kariya",
+  "duaCategoryBeginning": "Farko",
+  "duaCategorySleep": "Barci",
+  "duaCategoryFoodDrink": "Abinci & Abin sha",
+  "duaCategoryForgiveness": "Gafara",
+  "duaCategoryHome": "Gida",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "musulmi",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

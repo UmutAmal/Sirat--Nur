@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Maduas akasimbiswa haasati awanikwa",
-  "duaUnavailableBody": "Madua emazuva ese anosimbiswa haasati awiriraniswa pamudziyo uyu. Batanidza kune iyo cloud source kuti uise sourced duas pachinzvimbo chefour unverified fallback."
+  "duaUnavailableBody": "Madua emazuva ese anosimbiswa haasati awiriraniswa pamudziyo uyu. Batanidza kune iyo cloud source kuti uise sourced duas pachinzvimbo chefour unverified fallback.",
+  "duaCategoryQuranic": "Quran dua",
+  "duaCategoryMorningEvening": "Mangwanani & Manheru",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Dziviriro",
+  "duaCategoryBeginning": "Mavambo",
+  "duaCategorySleep": "Rara",
+  "duaCategoryFoodDrink": "Zvokudya Nekunwa",
+  "duaCategoryForgiveness": "Kukanganwira",
+  "duaCategoryHome": "Kumba",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

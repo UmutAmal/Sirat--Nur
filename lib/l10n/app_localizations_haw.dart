@@ -797,6 +797,48 @@ class AppLocalizationsHaw extends AppLocalizations {
       'ʻAʻole i hoʻopaʻa ʻia nā ʻelua i kēlā me kēia lā i kēia hāmeʻa. Hoʻohui i ke kumu ao e hoʻouka i nā kumu ʻelua ma kahi o kahi hāʻule hōʻoia ʻole.';
 
   @override
+  String get duaCategoryQuranic => 'Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Kakahiaka & ahiahi';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Palekana';
+
+  @override
+  String get duaCategoryBeginning => 'Hoomaka';
+
+  @override
+  String get duaCategorySleep => 'Moe';
+
+  @override
+  String get duaCategoryFoodDrink => 'ʻAi a me ka mea inu';
+
+  @override
+  String get duaCategoryForgiveness => 'kala kala';
+
+  @override
+  String get duaCategoryHome => 'Home';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Mahometa';
+
+  @override
+  String get duaSourceAbuDawud => 'ʻO Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidzi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

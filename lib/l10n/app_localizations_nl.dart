@@ -798,6 +798,48 @@ class AppLocalizationsNl extends AppLocalizations {
       'Geverifieerde dagelijkse dua\'s zijn nog niet met dit apparaat gesynchroniseerd. Maak verbinding met de cloudbron om afkomstige dua\'s te laden in plaats van een niet-geverifieerde terugval.';
 
   @override
+  String get duaCategoryQuranic => 'Koranische dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Ochtend & Avond';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Bescherming';
+
+  @override
+  String get duaCategoryBeginning => 'Begin';
+
+  @override
+  String get duaCategorySleep => 'Slaap';
+
+  @override
+  String get duaCategoryFoodDrink => 'Eten en drinken';
+
+  @override
+  String get duaCategoryForgiveness => 'Vergiffenis';
+
+  @override
+  String get duaCategoryHome => 'Thuis';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Moslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Aboe Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -796,6 +796,48 @@ class AppLocalizationsHe extends AppLocalizations {
       'עדיין לא סונכרנו דואס יומיים מאומתים עם המכשיר הזה. התחבר למקור הענן כדי לטעון דואס ממקור במקום סתירה לא מאומתת.';
 
   @override
+  String get duaCategoryQuranic => 'דואה קוראנית';
+
+  @override
+  String get duaCategoryMorningEvening => 'בוקר וערב';
+
+  @override
+  String get duaCategoryTasbih => 'טסביח';
+
+  @override
+  String get duaCategoryProtection => 'הֲגָנָה';
+
+  @override
+  String get duaCategoryBeginning => 'התחלות';
+
+  @override
+  String get duaCategorySleep => 'לִישׁוֹן';
+
+  @override
+  String get duaCategoryFoodDrink => 'אוכל ושתייה';
+
+  @override
+  String get duaCategoryForgiveness => 'סְלִיחָה';
+
+  @override
+  String get duaCategoryHome => 'בַּיִת';
+
+  @override
+  String get duaSourceBukhari => 'בוכרי';
+
+  @override
+  String get duaSourceMuslim => 'מוסלמי';
+
+  @override
+  String get duaSourceAbuDawud => 'אבו דאוד';
+
+  @override
+  String get duaSourceTirmidhi => 'טירמידי';
+
+  @override
+  String get duaSourceAhmad => 'אחמד';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

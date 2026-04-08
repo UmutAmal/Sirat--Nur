@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "تایید شوي دعاګانې لاهم شتون نلري",
-  "duaUnavailableBody": "تایید شوي ورځني دعاګانې لا تر اوسه دې وسیله سره همغږي شوي ندي. د بادل سرچینې سره وصل شئ ترڅو د غیر تصدیق شوي فال بیک پرځای د سرچینې شوي دعا بار کړئ."
+  "duaUnavailableBody": "تایید شوي ورځني دعاګانې لا تر اوسه دې وسیله سره همغږي شوي ندي. د بادل سرچینې سره وصل شئ ترڅو د غیر تصدیق شوي فال بیک پرځای د سرچینې شوي دعا بار کړئ.",
+  "duaCategoryQuranic": "قرآنی دعا",
+  "duaCategoryMorningEvening": "سهار او ماښام",
+  "duaCategoryTasbih": "تسبیح",
+  "duaCategoryProtection": "ساتنه",
+  "duaCategoryBeginning": "پیل",
+  "duaCategorySleep": "خوب",
+  "duaCategoryFoodDrink": "خواړه او څښاک",
+  "duaCategoryForgiveness": "بخښنه",
+  "duaCategoryHome": "کور",
+  "duaSourceBukhari": "بخاري",
+  "duaSourceMuslim": "مسلمان",
+  "duaSourceAbuDawud": "ابوداود",
+  "duaSourceTirmidhi": "ترمذي",
+  "duaSourceAhmad": "احمد"
 }

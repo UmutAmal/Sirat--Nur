@@ -801,6 +801,48 @@ class AppLocalizationsIlo extends AppLocalizations {
       'Dagiti naberipikado nga inaldaw a dua ket saan pay a nai-sync iti daytoy nga alikamen. Konektaen ti gubuayan ti ulep tapno maikarga dagiti nagtaudan a duas imbes a ti saan a naberipikado a fallback.';
 
   @override
+  String get duaCategoryQuranic => 'Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Agsapa & Malem';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih nga';
+
+  @override
+  String get duaCategoryProtection => 'Pannakasalaknib';
+
+  @override
+  String get duaCategoryBeginning => 'Dagiti pangrugian';
+
+  @override
+  String get duaCategorySleep => 'Maturog';
+
+  @override
+  String get duaCategoryFoodDrink => 'Taraon & Inumen';
+
+  @override
+  String get duaCategoryForgiveness => 'Pammakawan';
+
+  @override
+  String get duaCategoryHome => 'Balay';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari nga';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud ni Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi nga';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad ni Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -796,6 +796,48 @@ class AppLocalizationsMn extends AppLocalizations {
       'Баталгаажсан өдөр тутмын дулаа энэ төхөөрөмжид хараахан синк хийгдээгүй байна. Баталгаажаагүй нөөцийн оронд эх сурвалжаас авсан дуусыг ачаалахын тулд үүлэн эх сурвалжтай холбогдоно уу.';
 
   @override
+  String get duaCategoryQuranic => 'Коран судрын залбирал';
+
+  @override
+  String get duaCategoryMorningEvening => 'Өглөө ба орой';
+
+  @override
+  String get duaCategoryTasbih => 'Тасбих';
+
+  @override
+  String get duaCategoryProtection => 'Хамгаалалт';
+
+  @override
+  String get duaCategoryBeginning => 'Эхлэл';
+
+  @override
+  String get duaCategorySleep => 'Унтах';
+
+  @override
+  String get duaCategoryFoodDrink => 'Хоол, ундаа';
+
+  @override
+  String get duaCategoryForgiveness => 'Өршөөл';
+
+  @override
+  String get duaCategoryHome => 'Гэр';
+
+  @override
+  String get duaSourceBukhari => 'Бухари';
+
+  @override
+  String get duaSourceMuslim => 'Мусульман';
+
+  @override
+  String get duaSourceAbuDawud => 'Абу Давуд';
+
+  @override
+  String get duaSourceTirmidhi => 'Тирмизи';
+
+  @override
+  String get duaSourceAhmad => 'Ахмад';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

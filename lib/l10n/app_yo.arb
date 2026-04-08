@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Awọn duas ti a rii daju ko si sibẹsibẹ",
-  "duaUnavailableBody": "Awọn duas ojoojumọ ti a rii daju ko ti muuṣiṣẹpọ si ẹrọ yii sibẹsibẹ. Sopọ si orisun awọsanma lati ṣajọpọ duas ti o ti jade dipo idasẹhin ti a ko rii daju."
+  "duaUnavailableBody": "Awọn duas ojoojumọ ti a rii daju ko ti muuṣiṣẹpọ si ẹrọ yii sibẹsibẹ. Sopọ si orisun awọsanma lati ṣajọpọ duas ti o ti jade dipo idasẹhin ti a ko rii daju.",
+  "duaCategoryQuranic": "Al-Qur’an dua",
+  "duaCategoryMorningEvening": "Owurọ & Aṣalẹ",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Idaabobo",
+  "duaCategoryBeginning": "Awọn ibẹrẹ",
+  "duaCategorySleep": "Orun",
+  "duaCategoryFoodDrink": "Ounje & mimu",
+  "duaCategoryForgiveness": "Idariji",
+  "duaCategoryHome": "Ile",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Musulumi",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

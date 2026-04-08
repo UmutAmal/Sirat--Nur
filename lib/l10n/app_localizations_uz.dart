@@ -796,6 +796,48 @@ class AppLocalizationsUz extends AppLocalizations {
       'Tasdiqlangan kundalik duolar hali bu qurilmaga sinxronlanmagan. Tasdiqlanmagan zaxira oʻrniga manbali duolarni yuklash uchun bulut manbasiga ulaning.';
 
   @override
+  String get duaCategoryQuranic => 'Qur\'on duo';
+
+  @override
+  String get duaCategoryMorningEvening => 'Ertalab va kechqurun';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Himoya';
+
+  @override
+  String get duaCategoryBeginning => 'Boshlanishlar';
+
+  @override
+  String get duaCategorySleep => 'Uxlash';
+
+  @override
+  String get duaCategoryFoodDrink => 'Oziq-ovqat va ichimliklar';
+
+  @override
+  String get duaCategoryForgiveness => 'Kechirim';
+
+  @override
+  String get duaCategoryHome => 'Uy';
+
+  @override
+  String get duaSourceBukhari => 'Buxoriy';
+
+  @override
+  String get duaSourceMuslim => 'musulmon';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dovud';
+
+  @override
+  String get duaSourceTirmidhi => 'Termiziy';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

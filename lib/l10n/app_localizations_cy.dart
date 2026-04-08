@@ -797,6 +797,48 @@ class AppLocalizationsCy extends AppLocalizations {
       'Nid yw deuodau dyddiol wedi\'u dilysu wedi\'u cysoni â\'r ddyfais hon eto. Cysylltwch â ffynhonnell y cwmwl i lwytho deuodau o ffynonellau yn lle wrth gefn heb ei wirio.';
 
   @override
+  String get duaCategoryQuranic => 'Dua Quranic';
+
+  @override
+  String get duaCategoryMorningEvening => 'Bore a Hwyr';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Amddiffyniad';
+
+  @override
+  String get duaCategoryBeginning => 'Dechreuadau';
+
+  @override
+  String get duaCategorySleep => 'Cwsg';
+
+  @override
+  String get duaCategoryFoodDrink => 'Bwyd a Diod';
+
+  @override
+  String get duaCategoryForgiveness => 'Maddeuant';
+
+  @override
+  String get duaCategoryHome => 'Cartref';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Mwslemaidd';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmihi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

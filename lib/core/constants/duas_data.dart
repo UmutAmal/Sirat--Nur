@@ -1,5 +1,4 @@
-// Essential Islamic Duas (Prayers) collection
-// These are important duas for daily life
+// Verified Quranic dua fallback collection derived from the bundled Quran seed.
 
 class DuaData {
   final String id;
@@ -47,162 +46,104 @@ class DuaData {
   }
 }
 
-const bool hasVerifiedBundledDuas = false;
+const bool hasVerifiedBundledDuas = true;
+const String quranicDuaCategory = 'quranic_dua';
 
 const List<DuaData> dailyDuas = [
-  // Morning & Evening Duas
   DuaData(
     id: '1',
     arabic:
-        'أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ وَالْحَمْدُ لِلَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ',
-    transliteration:
-        'Asbahna wa asbalhu al-mulku lillah wal-hamdu lillah la ilaha illallah wahdahu la sharika lah',
+        'وَمِنْهُم مَّن يَقُولُ رَبَّنَآ ءَاتِنَا فِى ٱلدُّنْيَا حَسَنَةً وَفِى ٱلْـَٔاخِرَةِ حَسَنَةً وَقِنَا عَذَابَ ٱلنَّارِ',
+    transliteration: '',
     turkish:
-        'Allah\'ın mülkü ile sabah olduk. Hamd Allah\'a mahsustur. Allah\'tan başka ilah yoktur. O tektir, ortağı yoktur.',
+        'Yine onlardan: "Ey Rabbimiz! Bize dünyada bir güzellik ve ahirette de bir güzellik ver ve bizi ateş azabından koru!" diyenler vardır.',
     english:
-        'We have reached the morning and at this time all sovereignty belongs to Allah. Praise be to Allah. There is no god but Allah alone, without any partner.',
-    source: 'Buhari, Muslim',
-    category: 'Sabah Akşam',
+        'others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’',
+    source: 'Quran 2:201',
+    category: quranicDuaCategory,
   ),
   DuaData(
     id: '2',
     arabic:
-        'اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ',
-    transliteration:
-        'Allahumma bika asbahna wa bika amsayna wa bika nahya wa bika namutu wa ilayka an-nushur',
+        'لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا ۚ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا ٱكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَآ إِن نَّسِينَآ أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ إِصْرًا كَمَا حَمَلْتَهُۥ عَلَى ٱلَّذِينَ مِن قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِۦ ۖ وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَآ ۚ أَنتَ مَوْلَىٰنَا فَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَـٰفِرِينَ',
+    transliteration: '',
     turkish:
-        'Allah\'ım! Seninle sabahladık, seninle akşamladık, seninle yaşıyoruz ve seninle öleceğiz. Dönüş de sanadır.',
+        'Allah hiç kimseye gücünün yeteceğinden başka yük yüklemez. Herkesin kazandığı hayır kendisine, yaptığı kötülüğün zararı yine kendisinedir. Ey Rabbimiz, eğer unuttuk ya da yanıldıysak bizi tutup sorguya çekme! Ey Rabbimiz, bize bizden öncekilere yüklediğin gibi ağır yük yükleme! Ey Rabbimiz, bize gücümüzün yetmeyeceği yükü de yükleme! Bağışla bizi, mağfiret et bizi, rahmet et bize! Sensin bizim Mevlamız, kâfir kavimlere karşı yardım et bize.',
     english:
-        'O Allah, by You we have reached the morning and by You we have reached the evening. By You we live and by You die, and to You is the return.',
-    source: 'Tirmizi, Ebu Davud',
-    category: 'Sabah Akşam',
+        'God does not burden any soul with more than it can bear: each gains whatever good it has done, and suffers its bad- ‘ Lord, do not take us to task if we forget or make mistakes. Lord, do not burden us as You burdened those before us. Lord, do not burden us with more than we have strength to bear. Pardon us, forgive us, and have mercy on us. You are our Protector, so help us against the disbelievers.’',
+    source: 'Quran 2:286',
+    category: quranicDuaCategory,
   ),
   DuaData(
     id: '3',
     arabic:
-        'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ',
-    transliteration:
-        'Subhanallahi wa bi-hamdihi adada khalqihi wa rida nafsihi wa zinata arshihi wa midad kalimatih',
+        'رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً ۚ إِنَّكَ أَنتَ ٱلْوَهَّابُ',
+    transliteration: '',
     turkish:
-        'Allah\'ı, yarattığı sayısınca, nefsinin rızasınca, arşının ağırlığınca ve kelimelerinin mürekkebi kadar hamd ile tesbih ederim.',
+        'Ey Rabbimiz! Bize ihsan ettiğin hidayetten sonra kalblerimizi haktan saptırma, bize kendi katından rahmet ihsan eyle! Şüphesiz ki, Sen bol ihsan sahibisin.',
     english:
-        'Glory and praise be to Allah as many as the number of His creation, to the extent of His pleasure, to the weight of His Throne, and to the ink of His words.',
-    source: 'Müslim',
-    category: 'Tesbih',
+        '‘Our Lord, do not let our hearts deviate after You have guided us. Grant us Your mercy: You are the Ever Giving.',
+    source: 'Quran 3:8',
+    category: quranicDuaCategory,
   ),
-  // Protection Duas
   DuaData(
     id: '4',
-    arabic: 'أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ',
-    transliteration: 'Auzu bi-kalimatillah at-tammati min shari ma khalaq',
+    arabic:
+        'رَبِّ ٱجْعَلْنِى مُقِيمَ ٱلصَّلَوٰةِ وَمِن ذُرِّيَّتِى ۚ رَبَّنَا وَتَقَبَّلْ دُعَآءِ',
+    transliteration: '',
     turkish:
-        'Yarattığı şeylerin şerrinden, Allah\'ın tam kelimelerine sığınırım.',
+        '"Ey Rabbim! Beni ve soyumdan gelecekleri namazını dosdoğru kılanlardan eyle! Ey Rabbimiz! duamı kabul et!',
     english:
-        'I seek refuge in the perfect words of Allah from the evil of what He has created.',
-    source: 'Müslim',
-    category: 'Koruma',
+        'Lord, grant that I and my offspring may keep up the prayer. Our Lord, accept my request.',
+    source: 'Quran 14:40',
+    category: quranicDuaCategory,
   ),
   DuaData(
     id: '5',
-    arabic: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ',
-    transliteration: 'Bismillahirrahmanirrahim',
-    turkish: 'Rahman ve Rahim olan Allah\'ın adıyla.',
-    english: 'In the name of Allah, the Most Gracious, the Most Merciful.',
-    source: 'Kuran-ı Kerim - Fatiha Suresi 1:1',
-    category: 'Başlangıç',
+    arabic:
+        'وَٱخْفِضْ لَهُمَا جَنَاحَ ٱلذُّلِّ مِنَ ٱلرَّحْمَةِ وَقُل رَّبِّ ٱرْحَمْهُمَا كَمَا رَبَّيَانِى صَغِيرًا',
+    transliteration: '',
+    turkish:
+        'İkisine de acıyarak tevazu kanatlarını indir. Ve şöyle de: "Ey Rabbim! Onların beni küçükten terbiye edip yetiştirdikleri gibi, sen de kendilerine merhamet et."',
+    english:
+        'and lower your wing in humility towards them in kindness and say, ‘Lord, have mercy on them, just as they cared for me when I was little.’',
+    source: 'Quran 17:24',
+    category: quranicDuaCategory,
   ),
-  // Before Sleep
   DuaData(
     id: '6',
     arabic:
-        'اللَّهُمَّ أَمْسَكَ نَفْسِي وَتَوَفَّنِي وَأَلْحِقْنِي بِالصَّالِحِينَ',
-    transliteration:
-        'Allahumma amsik nafsi wa tawaffani wa alhiqni bis-salihin',
+        'فَتَعَـٰلَى ٱللَّهُ ٱلْمَلِكُ ٱلْحَقُّ ۗ وَلَا تَعْجَلْ بِٱلْقُرْءَانِ مِن قَبْلِ أَن يُقْضَىٰٓ إِلَيْكَ وَحْيُهُۥ ۖ وَقُل رَّبِّ زِدْنِى عِلْمًا',
+    transliteration: '',
     turkish:
-        'Allah\'ım! Nefsimi tut, beni vefat ettir ve beni salihlerin arasına kat.',
+        'Hükmü her yerde geçerli gerçek hükümdar olan Allah yücedir. (Ey Muhammed!) Kur''ân sana vahyedilirken, vahiy bitmeden önce (unutma korkusu ile) Kur''ân''ı okumada acele etme; "Rabbim! benim ilmimi artır" de.',
     english:
-        'O Allah, take my soul while I am a believer, and make my death a means of joining the righteous.',
-    source: 'Buhari, Müslim',
-    category: 'Uyku',
+        'exalted be God, the one who is truly in control. [Prophet], do not rush to recite before the revelation is fully complete but say, ‘Lord, increase me in knowledge!’',
+    source: 'Quran 20:114',
+    category: quranicDuaCategory,
   ),
-  // After Sleep
   DuaData(
     id: '7',
-    arabic:
-        'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ',
-    transliteration:
-        'Alhmadu lillahil-lazi ahyaana ba\'da ma amatana wa ilayhi an-nushur',
+    arabic: 'وَقُل رَّبِّ ٱغْفِرْ وَٱرْحَمْ وَأَنتَ خَيْرُ ٱلرَّٰحِمِينَ',
+    transliteration: '',
     turkish:
-        'Bizi öldürdükten sonra dirilten Allah\'a hamdolsun. Dönüş de sanadır.',
+        'Resulüm! De ki: "Rabbim, bağışla ve merhamet et! Sen merhametlilerin en iyisisin."',
     english:
-        'Praise be to Allah who gave us life after causing us to die, and to Him is the return.',
-    source: 'Buhari',
-    category: 'Uyku',
+        'Say [Prophet], ‘Lord, forgive and have mercy: You are the most merciful of all.’',
+    source: 'Quran 23:118',
+    category: quranicDuaCategory,
   ),
-  // Before Eating
   DuaData(
     id: '8',
-    arabic: 'بِسْمِ اللَّهِ وَجَبَ رِزْقُنَا',
-    transliteration: 'Bismillah wa jaba rizquna',
-    turkish:
-        'Allah\'ın adıyla (yemeye başladık), rızkımız da (bu şekilde) helal oldu.',
-    english: 'In the name of Allah, and our sustenance has become lawful.',
-    source: 'Ebu Davud, Tirmizi',
-    category: 'Yemek',
-  ),
-  // After Eating
-  DuaData(
-    id: '9',
     arabic:
-        'الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ',
-    transliteration:
-        'Alhmadu lillahil-lazi at-amana wa saqana wa ja\'alana muslimeen',
-    turkish: 'Bize yediren, içiren ve Müslüman yaratan Allah\'a hamdolsun.',
-    english:
-        'Praise be to Allah who fed us and gave us drink and made us Muslims.',
-    source: 'Ahmed, Ebu Davud',
-    category: 'Yemek',
-  ),
-  // Forgiveness
-  DuaData(
-    id: '10',
-    arabic:
-        'اللَّهُمَّ اغْفِرْ لِي وَارْحَمْنِي وَاهْدِنِي وَعَافِنِي وَارْزُقْنِي',
-    transliteration: 'Allahumma-ghfir li warhamni wahdini wa afini warzuqni',
+        'وَٱلَّذِينَ يَقُولُونَ رَبَّنَا هَبْ لَنَا مِنْ أَزْوَٰجِنَا وَذُرِّيَّـٰتِنَا قُرَّةَ أَعْيُنٍ وَٱجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا',
+    transliteration: '',
     turkish:
-        'Allah\'ım! Beni affet, bana merhamet et, bana hidayet ver, bana afiyet ver ve bana rızkını ver.',
+        'Ve onlar ki: "Ey Rabbimiz! Bize gözümüzü aydınlatacak eşler ve zürriyetler bağışla ve bizi takva sahiplerine önder kıl" derler.',
     english:
-        'O Allah, forgive me, have mercy on me, guide me, grant me well-being, and provide for me.',
-    source: 'Müslim',
-    category: 'Af Duası',
-  ),
-  // Entering Home
-  DuaData(
-    id: '11',
-    arabic:
-        'اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ الْمَوْلِجِ وَخَيْرَ الْمَخْرَجِ بِسْمِ اللَّهِ وَلَجْنَا وَبِسْمِ اللَّهِ خَرَجْنَا',
-    transliteration:
-        'Allahumma innii as-aluka khayra al-mawliji wa khayra al-makhruji bismillah walajna wa bismillah kharajna',
-    turkish:
-        'Allah\'ım! İyi giriş ve iyi çıkış isterim. Allah\'ın adıyla girdik ve Allah\'ın adıyla çıktık.',
-    english:
-        'O Allah, I ask You for the best entry and the best exit. In the name of Allah we enter and in the name of Allah we exit.',
-    source: 'Ebu Davud, Tirmizi',
-    category: 'Ev',
-  ),
-  // For children
-  DuaData(
-    id: '12',
-    arabic:
-        'أُعِوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ وَمِنْ كُلِّ عَيْنٍ لَامَّةٍ',
-    transliteration:
-        'Auzu bi-kalimatillah at-tammati min kulli shaytanin wa hammatin wa min kulli aynin lammatin',
-    turkish:
-        'Her şeytandan, her zararlı haşerattan ve her nazar eden gözden, Allah\'ın tam kelimelerine sığınırım.',
-    english:
-        'I seek refuge in the perfect words of Allah from every devil and every pest and from every envious eye.',
-    source: 'Buhari',
-    category: 'Koruma',
+        'those who pray, ‘Our Lord, give us joy in our spouses and offspring. Make us good examples to those who are aware of You’.',
+    source: 'Quran 25:74',
+    category: quranicDuaCategory,
   ),
 ];
 

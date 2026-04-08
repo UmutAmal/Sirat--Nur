@@ -796,6 +796,48 @@ class AppLocalizationsKm extends AppLocalizations {
       'duas ប្រចាំថ្ងៃដែលបានផ្ទៀងផ្ទាត់មិនទាន់ត្រូវបានធ្វើសមកាលកម្មទៅឧបករណ៍នេះនៅឡើយទេ។ ភ្ជាប់ទៅប្រភពពពកដើម្បីផ្ទុក duas ដែលមានប្រភពជំនួសឱ្យការត្រលប់មកវិញដែលមិនបានបញ្ជាក់។';
 
   @override
+  String get duaCategoryQuranic => 'គម្ពីគូរ៉ានឌូ';
+
+  @override
+  String get duaCategoryMorningEvening => 'ពេលព្រឹក និងពេលល្ងាច';
+
+  @override
+  String get duaCategoryTasbih => 'តាសប៊ី';
+
+  @override
+  String get duaCategoryProtection => 'ការការពារ';
+
+  @override
+  String get duaCategoryBeginning => 'ការចាប់ផ្តើម';
+
+  @override
+  String get duaCategorySleep => 'គេង';
+
+  @override
+  String get duaCategoryFoodDrink => 'អាហារ និងភេសជ្ជៈ';
+
+  @override
+  String get duaCategoryForgiveness => 'ការអភ័យទោស';
+
+  @override
+  String get duaCategoryHome => 'ផ្ទះ';
+
+  @override
+  String get duaSourceBukhari => 'ប៊ូខារី';
+
+  @override
+  String get duaSourceMuslim => 'មូស្លីម';
+
+  @override
+  String get duaSourceAbuDawud => 'អាប៊ូ ដាវុដ';
+
+  @override
+  String get duaSourceTirmidhi => 'ធីមមីឌី';
+
+  @override
+  String get duaSourceAhmad => 'អាម៉ាដ';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

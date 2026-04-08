@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Duas verificate ùn sò ancu dispunibili",
-  "duaUnavailableBody": "Duas di ogni ghjornu verificate ùn sò micca stati sincronizzati cù stu dispusitivu. Cunnettete à a surgente nuvola per caricate duas provenienti invece di un fallback micca verificatu."
+  "duaUnavailableBody": "Duas di ogni ghjornu verificate ùn sò micca stati sincronizzati cù stu dispusitivu. Cunnettete à a surgente nuvola per caricate duas provenienti invece di un fallback micca verificatu.",
+  "duaCategoryQuranic": "Dua coranique",
+  "duaCategoryMorningEvening": "Mattina è sera",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Prutezzione",
+  "duaCategoryBeginning": "I principii",
+  "duaCategorySleep": "Dormi",
+  "duaCategoryFoodDrink": "Food & Drink",
+  "duaCategoryForgiveness": "u pirdunu",
+  "duaCategoryHome": "A casa",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "musulmani",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

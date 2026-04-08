@@ -796,6 +796,48 @@ class AppLocalizationsAk extends AppLocalizations {
       'Verified daily duas no nnya nyɛɛ sync wɔ saa afiri yi so. Fa bata mununkum fibea no ho na fa duas a efi mu ba no hyɛ mu sen sɛ wobɛfa fallback a wɔannye antom.';
 
   @override
+  String get duaCategoryQuranic => 'Kur’aan dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Anɔpa & Anwummere';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih na ɛyɛ';
+
+  @override
+  String get duaCategoryProtection => 'Ahobammɔ';
+
+  @override
+  String get duaCategoryBeginning => 'Mfiase ahorow';
+
+  @override
+  String get duaCategorySleep => 'Da';
+
+  @override
+  String get duaCategoryFoodDrink => 'Aduan & Nnuan a Wɔnom';
+
+  @override
+  String get duaCategoryForgiveness => 'Bɔne fafiri';
+
+  @override
+  String get duaCategoryHome => 'Fie';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari na ɔkyerɛwee';
+
+  @override
+  String get duaSourceMuslim => 'Muslimfoɔ';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud na ɔkyerɛwee';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi a ɛwɔ hɔ';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad na ɔkyerɛwee';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "ଯାଞ୍ଚ ହୋଇଥିବା ଯୁଗଳ ଏପର୍ଯ୍ୟନ୍ତ ଉପଲବ୍ଧ ନାହିଁ |",
-  "duaUnavailableBody": "ଯାଞ୍ଚ ହୋଇଥିବା ଦ daily ନିକ ଯୁଗଳ ଏପର୍ଯ୍ୟନ୍ତ ଏହି ଡିଭାଇସ୍ ସହିତ ସିଙ୍କ ହୋଇନାହିଁ | ଏକ ଯାଞ୍ଚ ହୋଇନଥିବା ଫଲବ୍ୟାକ୍ ପରିବର୍ତ୍ତେ ସୋର୍ସଡ୍ ଡୁଆସ୍ ଲୋଡ୍ କରିବାକୁ କ୍ଲାଉଡ୍ ଉତ୍ସ ସହିତ ସଂଯୋଗ କରନ୍ତୁ |"
+  "duaUnavailableBody": "ଯାଞ୍ଚ ହୋଇଥିବା ଦ daily ନିକ ଯୁଗଳ ଏପର୍ଯ୍ୟନ୍ତ ଏହି ଡିଭାଇସ୍ ସହିତ ସିଙ୍କ ହୋଇନାହିଁ | ଏକ ଯାଞ୍ଚ ହୋଇନଥିବା ଫଲବ୍ୟାକ୍ ପରିବର୍ତ୍ତେ ସୋର୍ସଡ୍ ଡୁଆସ୍ ଲୋଡ୍ କରିବାକୁ କ୍ଲାଉଡ୍ ଉତ୍ସ ସହିତ ସଂଯୋଗ କରନ୍ତୁ |",
+  "duaCategoryQuranic": "କୁରାନୀୟ ଦୁଆ |",
+  "duaCategoryMorningEvening": "ସକାଳ ଏବଂ ସନ୍ଧ୍ୟା |",
+  "duaCategoryTasbih": "ତସବିହ |",
+  "duaCategoryProtection": "ସୁରକ୍ଷା",
+  "duaCategoryBeginning": "ଆରମ୍ଭ",
+  "duaCategorySleep": "ଶୋଇବା |",
+  "duaCategoryFoodDrink": "ଖାଦ୍ୟ ଏବଂ ପାନୀୟ",
+  "duaCategoryForgiveness": "କ୍ଷମା",
+  "duaCategoryHome": "ଘର",
+  "duaSourceBukhari": "ବୁଖାରୀ |",
+  "duaSourceMuslim": "ମୁସଲମାନ",
+  "duaSourceAbuDawud": "ଆବୁ ଦ ud ଦ",
+  "duaSourceTirmidhi": "ତିରମିଡି",
+  "duaSourceAhmad": "ଅହମ୍ମଦ"
 }

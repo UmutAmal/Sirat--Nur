@@ -797,6 +797,48 @@ class AppLocalizationsEe extends AppLocalizations {
       'Womewɔ ɖeka kple gbesiagbe dua siwo ŋu woɖo kpee haɖe o. Do ka kple alilikpo dzɔtsoƒe be nàtsɔ dua siwo tso dzɔtsoƒe la ade agba me tsɔ wu be nàtsɔ fallback si ŋu womeɖo kpee o.';
 
   @override
+  String get duaCategoryQuranic => 'Quran ƒe dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Ŋdi & Fiẽ';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih ƒe ŋkɔ';
+
+  @override
+  String get duaCategoryProtection => 'Ametakpɔkpɔ';
+
+  @override
+  String get duaCategoryBeginning => 'Gɔmedzedzewo';
+
+  @override
+  String get duaCategorySleep => 'Dᴐ alɔ̃';
+
+  @override
+  String get duaCategoryFoodDrink => 'Nuɖuɖu & Nunono';
+
+  @override
+  String get duaCategoryForgiveness => 'Tsɔtsɔke';
+
+  @override
+  String get duaCategoryHome => 'Aƒeme';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari ƒe nya';
+
+  @override
+  String get duaSourceMuslim => 'Moslemtɔwo';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud ƒe nya';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi ƒe nyawo';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad ƒe nya';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

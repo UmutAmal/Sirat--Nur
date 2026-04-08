@@ -797,6 +797,48 @@ class AppLocalizationsHa extends AppLocalizations {
       'Tabbatar da duas na yau da kullun ba a daidaita su da wannan na\'urar ba tukuna. Haɗa zuwa tushen gajimare don loda duas da aka samo maimakon faɗuwar da ba a tabbatar ba.';
 
   @override
+  String get duaCategoryQuranic => 'Qur\'ani dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Safiya & Maraice';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbihi';
+
+  @override
+  String get duaCategoryProtection => 'Kariya';
+
+  @override
+  String get duaCategoryBeginning => 'Farko';
+
+  @override
+  String get duaCategorySleep => 'Barci';
+
+  @override
+  String get duaCategoryFoodDrink => 'Abinci & Abin sha';
+
+  @override
+  String get duaCategoryForgiveness => 'Gafara';
+
+  @override
+  String get duaCategoryHome => 'Gida';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'musulmi';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

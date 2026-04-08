@@ -797,6 +797,48 @@ class AppLocalizationsMi extends AppLocalizations {
       'Ko nga rua kua whakamanahia ia ra kaore ano kia tukutahia ki tenei taputapu. Hono atu ki te puna kapua ki te uta i nga rua i puta mai hei utu mo te hokinga whakamuri.';
 
   @override
+  String get duaCategoryQuranic => 'Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Ata me te ahiahi';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Parenga';
+
+  @override
+  String get duaCategoryBeginning => 'Nga timatanga';
+
+  @override
+  String get duaCategorySleep => 'Moe mai';
+
+  @override
+  String get duaCategoryFoodDrink => 'Kai me te Inu';
+
+  @override
+  String get duaCategoryForgiveness => 'Te murunga hara';
+
+  @override
+  String get duaCategoryHome => 'Kainga';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Mahometa';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

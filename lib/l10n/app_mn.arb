@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Баталгаажсан дуга хараахан байхгүй байна",
-  "duaUnavailableBody": "Баталгаажсан өдөр тутмын дулаа энэ төхөөрөмжид хараахан синк хийгдээгүй байна. Баталгаажаагүй нөөцийн оронд эх сурвалжаас авсан дуусыг ачаалахын тулд үүлэн эх сурвалжтай холбогдоно уу."
+  "duaUnavailableBody": "Баталгаажсан өдөр тутмын дулаа энэ төхөөрөмжид хараахан синк хийгдээгүй байна. Баталгаажаагүй нөөцийн оронд эх сурвалжаас авсан дуусыг ачаалахын тулд үүлэн эх сурвалжтай холбогдоно уу.",
+  "duaCategoryQuranic": "Коран судрын залбирал",
+  "duaCategoryMorningEvening": "Өглөө ба орой",
+  "duaCategoryTasbih": "Тасбих",
+  "duaCategoryProtection": "Хамгаалалт",
+  "duaCategoryBeginning": "Эхлэл",
+  "duaCategorySleep": "Унтах",
+  "duaCategoryFoodDrink": "Хоол, ундаа",
+  "duaCategoryForgiveness": "Өршөөл",
+  "duaCategoryHome": "Гэр",
+  "duaSourceBukhari": "Бухари",
+  "duaSourceMuslim": "Мусульман",
+  "duaSourceAbuDawud": "Абу Давуд",
+  "duaSourceTirmidhi": "Тирмизи",
+  "duaSourceAhmad": "Ахмад"
 }

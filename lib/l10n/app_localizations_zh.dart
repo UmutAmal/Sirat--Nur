@@ -796,6 +796,48 @@ class AppLocalizationsZh extends AppLocalizations {
       'Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.';
 
   @override
+  String get duaCategoryQuranic => 'Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Morning & Evening';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Protection';
+
+  @override
+  String get duaCategoryBeginning => 'Beginnings';
+
+  @override
+  String get duaCategorySleep => 'Sleep';
+
+  @override
+  String get duaCategoryFoodDrink => 'Food & Drink';
+
+  @override
+  String get duaCategoryForgiveness => 'Forgiveness';
+
+  @override
+  String get duaCategoryHome => 'Home';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override
@@ -1891,6 +1933,48 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
       '已验证的每日 duas 尚未同步到此设备。连接到云源以加载来源的 dua，而不是未经验证的后备。';
 
   @override
+  String get duaCategoryQuranic => '古兰经杜阿';
+
+  @override
+  String get duaCategoryMorningEvening => '早上和晚上';
+
+  @override
+  String get duaCategoryTasbih => '塔斯比赫';
+
+  @override
+  String get duaCategoryProtection => '保护';
+
+  @override
+  String get duaCategoryBeginning => '开始';
+
+  @override
+  String get duaCategorySleep => '睡觉';
+
+  @override
+  String get duaCategoryFoodDrink => '食品和饮料';
+
+  @override
+  String get duaCategoryForgiveness => '饶恕';
+
+  @override
+  String get duaCategoryHome => '家';
+
+  @override
+  String get duaSourceBukhari => '布哈里';
+
+  @override
+  String get duaSourceMuslim => '穆斯林';
+
+  @override
+  String get duaSourceAbuDawud => '阿布达乌德';
+
+  @override
+  String get duaSourceTirmidhi => '铁尔米吉';
+
+  @override
+  String get duaSourceAhmad => '艾哈迈德';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override
@@ -2982,6 +3066,48 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   @override
   String get duaUnavailableBody =>
       '已驗證的每日 duas 尚未同步到此裝置。連接到雲端來源以載入來源的 dua，而不是未經驗證的後備。';
+
+  @override
+  String get duaCategoryQuranic => '古蘭經杜阿';
+
+  @override
+  String get duaCategoryMorningEvening => '早上和晚上';
+
+  @override
+  String get duaCategoryTasbih => '塔斯比赫';
+
+  @override
+  String get duaCategoryProtection => '保護';
+
+  @override
+  String get duaCategoryBeginning => '開始';
+
+  @override
+  String get duaCategorySleep => '睡覺';
+
+  @override
+  String get duaCategoryFoodDrink => '食品和飲料';
+
+  @override
+  String get duaCategoryForgiveness => '饒恕';
+
+  @override
+  String get duaCategoryHome => '家';
+
+  @override
+  String get duaSourceBukhari => '布哈里';
+
+  @override
+  String get duaSourceMuslim => '穆斯林';
+
+  @override
+  String get duaSourceAbuDawud => '阿布達烏德';
+
+  @override
+  String get duaSourceTirmidhi => '鐵爾米吉';
+
+  @override
+  String get duaSourceAhmad => '艾哈邁德';
 
   @override
   String get islamicEducation => 'Islamic Education';

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Doa yang terverifikasi belum tersedia",
-  "duaUnavailableBody": "Doa harian yang terverifikasi belum disinkronkan ke perangkat ini. Hubungkan ke sumber cloud untuk memuat doa yang bersumber, bukan fallback yang belum diverifikasi."
+  "duaUnavailableBody": "Doa harian yang terverifikasi belum disinkronkan ke perangkat ini. Hubungkan ke sumber cloud untuk memuat doa yang bersumber, bukan fallback yang belum diverifikasi.",
+  "duaCategoryQuranic": "Doa Al-Quran",
+  "duaCategoryMorningEvening": "Pagi & Sore",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Perlindungan",
+  "duaCategoryBeginning": "Awal",
+  "duaCategorySleep": "Tidur",
+  "duaCategoryFoodDrink": "Makanan & Minuman",
+  "duaCategoryForgiveness": "Pengampunan",
+  "duaCategoryHome": "Rumah",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidzi",
+  "duaSourceAhmad": "Ahmad"
 }

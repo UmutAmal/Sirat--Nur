@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Di-dua tše di netefaditšwego ga di hwetšagale ga bjale",
-  "duaUnavailableBody": "Di-dua tša letšatši le letšatši tše di netefaditšwego ga se tša nyalantšhwa le sedirišwa se ga bjale. Ikgokaganye le mothopo wa leru go laetša di-duas tšeo di tšwago mothopo go e na le go boela morago mo go sa netefatšwago."
+  "duaUnavailableBody": "Di-dua tša letšatši le letšatši tše di netefaditšwego ga se tša nyalantšhwa le sedirišwa se ga bjale. Ikgokaganye le mothopo wa leru go laetša di-duas tšeo di tšwago mothopo go e na le go boela morago mo go sa netefatšwago.",
+  "duaCategoryQuranic": "Dua ya Quranic",
+  "duaCategoryMorningEvening": "Mesong & Mantšiboa",
+  "duaCategoryTasbih": "Tasbih ya go swana",
+  "duaCategoryProtection": "Tšhireletšo",
+  "duaCategoryBeginning": "Mathomo",
+  "duaCategorySleep": "Robala",
+  "duaCategoryFoodDrink": "Dijo & Dino",
+  "duaCategoryForgiveness": "Tshwarelo",
+  "duaCategoryHome": "Gae",
+  "duaSourceBukhari": "Bukhari ya go swana le yona",
+  "duaSourceMuslim": "Momoseleme",
+  "duaSourceAbuDawud": "Abu Dawud o ile a hlokomela",
+  "duaSourceTirmidhi": "Tirmidhi ya go swana le yona",
+  "duaSourceAhmad": "Ahmad"
 }

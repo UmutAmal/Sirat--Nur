@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "සත්‍යාපිත duas තවමත් නොමැත",
-  "duaUnavailableBody": "සත්‍යාපිත දෛනික duas තවමත් මෙම උපාංගයට සමමුහුර්ත කර නොමැත. සත්‍යාපනය නොකළ පසුබැසීමක් වෙනුවට මූලාශ්‍රගත duas පූරණය කිරීමට ක්ලවුඩ් ප්‍රභවයට සම්බන්ධ වන්න."
+  "duaUnavailableBody": "සත්‍යාපිත දෛනික duas තවමත් මෙම උපාංගයට සමමුහුර්ත කර නොමැත. සත්‍යාපනය නොකළ පසුබැසීමක් වෙනුවට මූලාශ්‍රගත duas පූරණය කිරීමට ක්ලවුඩ් ප්‍රභවයට සම්බන්ධ වන්න.",
+  "duaCategoryQuranic": "කුර්ආන් දූවා",
+  "duaCategoryMorningEvening": "උදෑසන සහ සවස",
+  "duaCategoryTasbih": "තස්බිහ්",
+  "duaCategoryProtection": "ආරක්ෂාව",
+  "duaCategoryBeginning": "ආරම්භය",
+  "duaCategorySleep": "නිදාගන්න",
+  "duaCategoryFoodDrink": "ආහාර පාන",
+  "duaCategoryForgiveness": "සමාව දීම",
+  "duaCategoryHome": "නිවස",
+  "duaSourceBukhari": "බුහාරි",
+  "duaSourceMuslim": "මුස්ලිම්",
+  "duaSourceAbuDawud": "අබු දාවුද්",
+  "duaSourceTirmidhi": "තිර්මිදි",
+  "duaSourceAhmad": "අහමඩ්"
 }

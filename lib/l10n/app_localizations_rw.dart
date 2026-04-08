@@ -796,6 +796,48 @@ class AppLocalizationsRw extends AppLocalizations {
       'Kugenzura duas buri munsi ntabwo byahujwe niki gikoresho kugeza ubu. Ihuze nigicu kugirango utware duas ikomoka aho gusubira inyuma.';
 
   @override
+  String get duaCategoryQuranic => 'Qor\'an dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Igitondo & nimugoroba';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Kurinda';
+
+  @override
+  String get duaCategoryBeginning => 'Intangiriro';
+
+  @override
+  String get duaCategorySleep => 'Sinzira';
+
+  @override
+  String get duaCategoryFoodDrink => 'Ibiryo & Ibinyobwa';
+
+  @override
+  String get duaCategoryForgiveness => 'Kubabarira';
+
+  @override
+  String get duaCategoryHome => 'Murugo';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Umuyisilamu';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

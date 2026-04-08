@@ -795,6 +795,48 @@ class AppLocalizationsAm extends AppLocalizations {
       'የተረጋገጡ ዕለታዊ ዱዓዎች እስካሁን ከዚህ መሳሪያ ጋር አልተመሳሰሉም። ካልተረጋገጠ መመለሻ ይልቅ የመነጩ ዱአዎችን ለመጫን ከደመና ምንጭ ጋር ይገናኙ።';
 
   @override
+  String get duaCategoryQuranic => 'የቁርዓን ዱአ';
+
+  @override
+  String get duaCategoryMorningEvening => 'ጥዋት እና ምሽት';
+
+  @override
+  String get duaCategoryTasbih => 'ተስቢህ';
+
+  @override
+  String get duaCategoryProtection => 'ጥበቃ';
+
+  @override
+  String get duaCategoryBeginning => 'ጅምር';
+
+  @override
+  String get duaCategorySleep => 'እንቅልፍ';
+
+  @override
+  String get duaCategoryFoodDrink => 'ምግብ እና መጠጥ';
+
+  @override
+  String get duaCategoryForgiveness => 'ይቅርታ';
+
+  @override
+  String get duaCategoryHome => 'ቤት';
+
+  @override
+  String get duaSourceBukhari => 'ቡኻሪ';
+
+  @override
+  String get duaSourceMuslim => 'ሙስሊም';
+
+  @override
+  String get duaSourceAbuDawud => 'አቡ ዳውድ';
+
+  @override
+  String get duaSourceTirmidhi => 'ቲርሚዚ';
+
+  @override
+  String get duaSourceAhmad => 'አህመድ';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

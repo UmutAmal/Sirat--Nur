@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Ama-duas aqinisekisiwe awatholakali okwamanje",
-  "duaUnavailableBody": "I-duas yansuku zonke eqinisekisiwe ayikavunyelaniswa kule divayisi okwamanje. Xhuma kumthombo wamafu ukuze ulayishe ama-duas atholakala esikhundleni sokubuyela emuva okungaqinisekisiwe."
+  "duaUnavailableBody": "I-duas yansuku zonke eqinisekisiwe ayikavunyelaniswa kule divayisi okwamanje. Xhuma kumthombo wamafu ukuze ulayishe ama-duas atholakala esikhundleni sokubuyela emuva okungaqinisekisiwe.",
+  "duaCategoryQuranic": "I-Quranic dua",
+  "duaCategoryMorningEvening": "Ekuseni nakusihlwa",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Ukuvikelwa",
+  "duaCategoryBeginning": "Iziqalo",
+  "duaCategorySleep": "Lala",
+  "duaCategoryFoodDrink": "Ukudla Neziphuzo",
+  "duaCategoryForgiveness": "Ukuthethelela",
+  "duaCategoryHome": "Ikhaya",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "U-Ahmad"
 }

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Geverifieerde duas is nog nie beskikbaar nie",
-  "duaUnavailableBody": "Geverifieerde daaglikse duas is nog nie met hierdie toestel gesinkroniseer nie. Koppel aan die wolkbron om verkrygde duas te laai in plaas van 'n ongeverifieerde terugval."
+  "duaUnavailableBody": "Geverifieerde daaglikse duas is nog nie met hierdie toestel gesinkroniseer nie. Koppel aan die wolkbron om verkrygde duas te laai in plaas van 'n ongeverifieerde terugval.",
+  "duaCategoryQuranic": "Koraniese dua",
+  "duaCategoryMorningEvening": "Oggend en aand",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Beskerming",
+  "duaCategoryBeginning": "Beginsels",
+  "duaCategorySleep": "Slaap",
+  "duaCategoryFoodDrink": "Kos & Drank",
+  "duaCategoryForgiveness": "Vergifnis",
+  "duaCategoryHome": "Tuis",
+  "duaSourceBukhari": "Boekhari",
+  "duaSourceMuslim": "Moslem",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Tsy mbola misy ny roa voamarina",
-  "duaUnavailableBody": "Ny duas isan'andro voamarina dia tsy mbola narindra tamin'ity fitaovana ity. Ampifandraiso amin'ny loharanon-drahona mba hametahana ny roa avy amin'ny loharano fa tsy fiverenana tsy voamarina."
+  "duaUnavailableBody": "Ny duas isan'andro voamarina dia tsy mbola narindra tamin'ity fitaovana ity. Ampifandraiso amin'ny loharanon-drahona mba hametahana ny roa avy amin'ny loharano fa tsy fiverenana tsy voamarina.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Maraina & hariva",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "MIARO",
+  "duaCategoryBeginning": "fiandohana",
+  "duaCategorySleep": "torimaso",
+  "duaCategoryFoodDrink": "Sakafo sy zava-pisotro",
+  "duaCategoryForgiveness": "Famelan-keloka",
+  "duaCategoryHome": "an-trano",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "MIOZOLOMANA",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

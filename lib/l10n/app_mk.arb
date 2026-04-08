@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Потврдените дуи сè уште не се достапни",
-  "duaUnavailableBody": "Потврдените дневни дуа сè уште не се синхронизирани со уредов. Поврзете се со изворот на облак за да ги вчитате изворните дуа наместо непроверена резервна копија."
+  "duaUnavailableBody": "Потврдените дневни дуа сè уште не се синхронизирани со уредов. Поврзете се со изворот на облак за да ги вчитате изворните дуа наместо непроверена резервна копија.",
+  "duaCategoryQuranic": "Куранска дуа",
+  "duaCategoryMorningEvening": "Наутро и навечер",
+  "duaCategoryTasbih": "Тасбих",
+  "duaCategoryProtection": "Заштита",
+  "duaCategoryBeginning": "Почетоци",
+  "duaCategorySleep": "Спиј",
+  "duaCategoryFoodDrink": "Храна и пијалок",
+  "duaCategoryForgiveness": "Простување",
+  "duaCategoryHome": "Дома",
+  "duaSourceBukhari": "Бухари",
+  "duaSourceMuslim": "муслиман",
+  "duaSourceAbuDawud": "Абу Давуд",
+  "duaSourceTirmidhi": "Тирмиди",
+  "duaSourceAhmad": "Ахмад"
 }

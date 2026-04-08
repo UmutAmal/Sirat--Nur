@@ -796,6 +796,48 @@ class AppLocalizationsMl extends AppLocalizations {
       'പരിശോധിച്ചുറപ്പിച്ച പ്രതിദിന ദുആകൾ ഇതുവരെ ഈ ഉപകരണത്തിലേക്ക് സമന്വയിപ്പിച്ചിട്ടില്ല. പരിശോധിച്ചുറപ്പിക്കാത്ത ഫാൾബാക്കിന് പകരം സോഴ്‌സ് ചെയ്‌ത ദുആകൾ ലോഡുചെയ്യാൻ ക്ലൗഡ് ഉറവിടത്തിലേക്ക് കണക്റ്റുചെയ്യുക.';
 
   @override
+  String get duaCategoryQuranic => 'ഖുർആൻ ദുആ';
+
+  @override
+  String get duaCategoryMorningEvening => 'രാവിലെയും വൈകുന്നേരവും';
+
+  @override
+  String get duaCategoryTasbih => 'തസ്ബിഹ്';
+
+  @override
+  String get duaCategoryProtection => 'സംരക്ഷണം';
+
+  @override
+  String get duaCategoryBeginning => 'തുടക്കം';
+
+  @override
+  String get duaCategorySleep => 'ഉറങ്ങുക';
+
+  @override
+  String get duaCategoryFoodDrink => 'ഭക്ഷണവും പാനീയവും';
+
+  @override
+  String get duaCategoryForgiveness => 'ക്ഷമാപണം';
+
+  @override
+  String get duaCategoryHome => 'വീട്';
+
+  @override
+  String get duaSourceBukhari => 'ബുഖാരി';
+
+  @override
+  String get duaSourceMuslim => 'മുസ്ലീം';
+
+  @override
+  String get duaSourceAbuDawud => 'അബു ദാവൂദ്';
+
+  @override
+  String get duaSourceTirmidhi => 'തിര്മിദി';
+
+  @override
+  String get duaSourceAhmad => 'അഹ്മദ്';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

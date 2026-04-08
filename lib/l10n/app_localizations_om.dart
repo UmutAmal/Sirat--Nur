@@ -796,6 +796,48 @@ class AppLocalizationsOm extends AppLocalizations {
       'Duas guyyaa guyyaa mirkanaa\'e hanga ammaatti meeshaa kana waliin wal hin simne. Kufaatii hin mirkanoofne osoo hin taane duas madda fe\'uuf madda duumessaa waliin walqabsiisi.';
 
   @override
+  String get duaCategoryQuranic => 'Duaa Qur\'aanaa';
+
+  @override
+  String get duaCategoryMorningEvening => 'Ganama & Galgala';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Eegumsa';
+
+  @override
+  String get duaCategoryBeginning => 'Jalqaba';
+
+  @override
+  String get duaCategorySleep => 'Rafuu';
+
+  @override
+  String get duaCategoryFoodDrink => 'Nyaata fi Dhugaatii';
+
+  @override
+  String get duaCategoryForgiveness => 'Dhiifama';
+
+  @override
+  String get duaCategoryHome => 'Mana';
+
+  @override
+  String get duaSourceBukhari => 'Bukhaariin';
+
+  @override
+  String get duaSourceMuslim => 'Muslima';
+
+  @override
+  String get duaSourceAbuDawud => 'Abuu Daawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

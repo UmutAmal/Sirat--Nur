@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Duayên verastkirî hîn ne berdest in",
-  "duaUnavailableBody": "Duayên rojane yên pejirandî hîn bi vê cîhazê re nehatine hevdeng kirin. Bi çavkaniya ewr ve girêdin da ku li şûna paşverûyek nerastkirî duayên jêderkirî bar bikin."
+  "duaUnavailableBody": "Duayên rojane yên pejirandî hîn bi vê cîhazê re nehatine hevdeng kirin. Bi çavkaniya ewr ve girêdin da ku li şûna paşverûyek nerastkirî duayên jêderkirî bar bikin.",
+  "duaCategoryQuranic": "Dua Quranê",
+  "duaCategoryMorningEvening": "Sibeh & Êvar",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Parastinî",
+  "duaCategoryBeginning": "Destpêk",
+  "duaCategorySleep": "Xew",
+  "duaCategoryFoodDrink": "Xwarin & Vexwarin",
+  "duaCategoryForgiveness": "Lêborînî",
+  "duaCategoryHome": "Xane",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Ebû Dawûd",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

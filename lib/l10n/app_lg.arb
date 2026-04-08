@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verified duas tezinnabaawo",
-  "duaUnavailableBody": "Verified daily duas tezinnaba kukwatagana na kyuma kino. Yunga ku nsibuko y'ekire okutikka duas ezisibuka mu kifo ky'okugwa emabega okutakakasiddwa."
+  "duaUnavailableBody": "Verified daily duas tezinnaba kukwatagana na kyuma kino. Yunga ku nsibuko y'ekire okutikka duas ezisibuka mu kifo ky'okugwa emabega okutakakasiddwa.",
+  "duaCategoryQuranic": "Dua ya Quran",
+  "duaCategoryMorningEvening": "Enkya & Akawungeezi",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Obukuumi",
+  "duaCategoryBeginning": "Entandikwa",
+  "duaCategorySleep": "Otulo",
+  "duaCategoryFoodDrink": "Emmere & Ebyokunywa",
+  "duaCategoryForgiveness": "Okusonyiwa",
+  "duaCategoryHome": "Ewaka",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Omusiraamu",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

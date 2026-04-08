@@ -796,6 +796,48 @@ class AppLocalizationsTs extends AppLocalizations {
       'Ti duas ta siku na siku leti tiyisisiweke a ti si hlanganisiwa na xitirhisiwa lexi. Hlanganisa na xihlovo xa mapapa ku layicha ti duas leti humaka eka xihlovo ematshan’wini ya fallback leyi nga tiyisisiwangiki.';
 
   @override
+  String get duaCategoryQuranic => 'Dua ya Quranic';
+
+  @override
+  String get duaCategoryMorningEvening => 'Mixo & Madyambu';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Nsirhelelo';
+
+  @override
+  String get duaCategoryBeginning => 'Masungulo';
+
+  @override
+  String get duaCategorySleep => 'Etlela';
+
+  @override
+  String get duaCategoryFoodDrink => 'Swakudya & Swinwiwa';
+
+  @override
+  String get duaCategoryForgiveness => 'Ku rivalela';
+
+  @override
+  String get duaCategoryHome => 'Kaya';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Mumoslem';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud, ku vula yena';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

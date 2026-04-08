@@ -801,6 +801,48 @@ class AppLocalizationsAy extends AppLocalizations {
       'Verificado diario duas ukax janiw aka dispositivo ukarux sincronizadokiti. Qhixu qhixu phunchhawimp chikt’atäñapawa, jan chiqapar uñjat fallback ukat sipanx duas fuente ukar apkatañataki.';
 
   @override
+  String get duaCategoryQuranic => 'Quran ukax dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Alwa & Jayp’u';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih ukax mä juk’a pachanakanwa';
+
+  @override
+  String get duaCategoryProtection => 'Jark’aqaña';
+
+  @override
+  String get duaCategoryBeginning => 'Qalltawinaka';
+
+  @override
+  String get duaCategorySleep => 'Ikiña';
+
+  @override
+  String get duaCategoryFoodDrink => 'Manq’añanaka & Umañanaka';
+
+  @override
+  String get duaCategoryForgiveness => 'Perdonaña';
+
+  @override
+  String get duaCategoryHome => 'Uta';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari ukax mä juk’a pachanakanwa';
+
+  @override
+  String get duaSourceMuslim => 'Musulmán';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud sat jilataw ukham luräna';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi ukax mä juk’a pachanakanwa';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad jupax ukham sataynawa';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

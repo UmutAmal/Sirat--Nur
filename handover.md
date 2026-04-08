@@ -2300,3 +2300,49 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) repo içinde bırakılan sabit listenin kendisi kaynak bazında tek tek ayıklanacak veya verified dua seed hattı kurulana kadar tamamen production dışı yardımcı dataset statüsüne indirilecek.
 - Ardından [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) ve `duas` cloud zinciri için resmi/kurumsal seed pipeline hazırlanacak.
+
+## 2026-04-09 TUR-58 — Restore Verified Quranic Dua Fallback
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) içindeki bundled dua listesi tamamen yenilendi; artık yalnızca verified bundled Quran seed zincirinden alınan `Quran 2:201`, `Quran 2:286`, `Quran 3:8`, `Quran 14:40`, `Quran 17:24`, `Quran 20:114`, `Quran 23:118` ve `Quran 25:74` ayetlerini taşıyor.
+- Aynı dosyada doğrulanmamış transliterasyonlar payload’dan çıkarıldı; fallback dua nesnelerinde `transliteration` alanı bilinçli olarak boş bırakıldı.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) quranic dua kategorisini ve kaynak etiketlerini localization zincirine taşıdı; transliterasyon boşsa UI artık sahte/eksik satır göstermiyor.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) ve tüm `app_*.arb` setine dua kategori ve kaynak anahtarları yayıldı; ardından `flutter gen-l10n` yeniden üretildi.
+- [A:\Way of Allah\sirat_i_nur\test\duas_data_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/duas_data_test.dart) eklendi; [A:\Way of Allah\sirat_i_nur\test\library_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/library_page_test.dart) ve [A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/library/library_page_cloud_duas_test.dart) verified fallback davranışını kilitleyecek şekilde güncellendi.
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) içinde production dışında dursa bile doğrulanmamış dua/transliterasyon içerikleri repo’da kalıyordu; kullanıcı yeniden verified fallback açıldığında ikinci kez temizlik gerekecekti.
+- Kök sebep, bundled Quran seed zinciri doğrulanmış olmasına rağmen dua fallback’inin bu zincirden tekrar türetilmemesi ve UI’ın `quranic_dua` gibi iç anahtarları gösterebilmesiydi.
+- Dini içerik doğruluğunu iki kez çevirmek yerine önce authoritative içerik setini sabitledim; çevrilecek şey yalnızca arayüz kategorileri ve kaynak etiketleri olarak bırakıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\duas_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Cloud `duas` verisi yoksa uygulama artık boş unavailable durumu yerine doğrulanmış Quranic dua fallback’i gösterebiliyor.
+- Fallback içerikte yanlış veya doğrulanmamış transliterasyon kalmadı; kullanıcıya eksik veriyi tamamlanmış gibi gösteren satır da kaldırıldı.
+- Dua kategori ve kaynak çipi tüm locale zincirinde ham teknik anahtar veya sabit Türkçe/İngilizce metin sızdırmıyor.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart duaCategoryQuranic duaCategoryMorningEvening duaCategoryTasbih duaCategoryProtection duaCategoryBeginning duaCategorySleep duaCategoryFoodDrink duaCategoryForgiveness duaCategoryHome duaSourceBukhari duaSourceMuslim duaSourceAbuDawud duaSourceTirmidhi duaSourceAhmad` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/duas_data_test.dart` → PASS (`2/2`)
+- `flutter test test/library_page_test.dart` → PASS (`10/10`)
+- `flutter test test/features/library/library_page_cloud_duas_test.dart` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`163/163`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Bundled dua fallback containing unverified religious content and leaking raw technical category keys: `13/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda verified fallback dışında kalan dini içerik sabitleri taranacak; özellikle [A:\Way of Allah\sirat_i_nur\lib\core\constants\islamic_chatbot_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/islamic_chatbot_data.dart) ve benzeri yerlerde authoritative olmayan dini cevap şablonları varsa ayrıştırılacak.
+- Ardından dua/hadis/kategori zincirinin tüm locale setinde anlamsal tutarlılığı ve hardcoded proper noun yüzeyi denetlenecek.

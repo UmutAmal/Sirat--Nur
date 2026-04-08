@@ -797,6 +797,48 @@ class AppLocalizationsKy extends AppLocalizations {
       'Текшерилген күнүмдүк дуалар азырынча бул түзмөккө шайкештириле элек. Текшерилбеген калыбына келтирүүнүн ордуна булактан алынган дуаларды жүктөө үчүн булут булагына туташыңыз.';
 
   @override
+  String get duaCategoryQuranic => 'Куран дубасы';
+
+  @override
+  String get duaCategoryMorningEvening => 'Эртең менен жана кечинде';
+
+  @override
+  String get duaCategoryTasbih => 'Тасбих';
+
+  @override
+  String get duaCategoryProtection => 'Коргоо';
+
+  @override
+  String get duaCategoryBeginning => 'Башталышы';
+
+  @override
+  String get duaCategorySleep => 'Уйку';
+
+  @override
+  String get duaCategoryFoodDrink => 'Тамак-аш жана суусундук';
+
+  @override
+  String get duaCategoryForgiveness => 'кечирүү';
+
+  @override
+  String get duaCategoryHome => 'Үй';
+
+  @override
+  String get duaSourceBukhari => 'Бухари';
+
+  @override
+  String get duaSourceMuslim => 'мусулман';
+
+  @override
+  String get duaSourceAbuDawud => 'Абу Давуд';
+
+  @override
+  String get duaSourceTirmidhi => 'Тирмизи';
+
+  @override
+  String get duaSourceAhmad => 'Ахмад';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

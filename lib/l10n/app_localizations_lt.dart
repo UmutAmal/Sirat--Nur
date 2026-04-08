@@ -796,6 +796,48 @@ class AppLocalizationsLt extends AppLocalizations {
       'Patvirtinti kasdieniniai duai dar nebuvo sinchronizuoti su šiuo įrenginiu. Prisijunkite prie debesies šaltinio, kad įkeltumėte šaltinio duas, o ne nepatvirtintą atsarginį failą.';
 
   @override
+  String get duaCategoryQuranic => 'Korano dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Rytas & Vakaras';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbihas';
+
+  @override
+  String get duaCategoryProtection => 'Apsauga';
+
+  @override
+  String get duaCategoryBeginning => 'Pradžios';
+
+  @override
+  String get duaCategorySleep => 'Miegoti';
+
+  @override
+  String get duaCategoryFoodDrink => 'Maistas ir gėrimai';
+
+  @override
+  String get duaCategoryForgiveness => 'Atleidimas';
+
+  @override
+  String get duaCategoryHome => 'Pradžia';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'musulmonas';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmadas';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verified duas no nnya mmae",
-  "duaUnavailableBody": "Verified daily duas no nnya nyɛɛ sync wɔ saa afiri yi so. Fa bata mununkum fibea no ho na fa duas a efi mu ba no hyɛ mu sen sɛ wobɛfa fallback a wɔannye antom."
+  "duaUnavailableBody": "Verified daily duas no nnya nyɛɛ sync wɔ saa afiri yi so. Fa bata mununkum fibea no ho na fa duas a efi mu ba no hyɛ mu sen sɛ wobɛfa fallback a wɔannye antom.",
+  "duaCategoryQuranic": "Kur’aan dua",
+  "duaCategoryMorningEvening": "Anɔpa & Anwummere",
+  "duaCategoryTasbih": "Tasbih na ɛyɛ",
+  "duaCategoryProtection": "Ahobammɔ",
+  "duaCategoryBeginning": "Mfiase ahorow",
+  "duaCategorySleep": "Da",
+  "duaCategoryFoodDrink": "Aduan & Nnuan a Wɔnom",
+  "duaCategoryForgiveness": "Bɔne fafiri",
+  "duaCategoryHome": "Fie",
+  "duaSourceBukhari": "Bukhari na ɔkyerɛwee",
+  "duaSourceMuslim": "Muslimfoɔ",
+  "duaSourceAbuDawud": "Abu Dawud na ɔkyerɛwee",
+  "duaSourceTirmidhi": "Tirmidhi a ɛwɔ hɔ",
+  "duaSourceAhmad": "Ahmad na ɔkyerɛwee"
 }

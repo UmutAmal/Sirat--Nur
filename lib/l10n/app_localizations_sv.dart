@@ -797,6 +797,48 @@ class AppLocalizationsSv extends AppLocalizations {
       'Verifierade dagliga duas har inte synkroniserats med den här enheten ännu. Anslut till molnkällan för att läsa in duas med källa istället för en overifierad reserv.';
 
   @override
+  String get duaCategoryQuranic => 'Koranisk dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Morgon & Kväll';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Skydd';
+
+  @override
+  String get duaCategoryBeginning => 'Början';
+
+  @override
+  String get duaCategorySleep => 'Sova';
+
+  @override
+  String get duaCategoryFoodDrink => 'Mat & Dryck';
+
+  @override
+  String get duaCategoryForgiveness => 'Förlåtelse';
+
+  @override
+  String get duaCategoryHome => 'Hem';
+
+  @override
+  String get duaSourceBukhari => 'Buchari';
+
+  @override
+  String get duaSourceMuslim => 'muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

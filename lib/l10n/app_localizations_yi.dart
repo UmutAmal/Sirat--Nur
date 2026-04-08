@@ -796,6 +796,48 @@ class AppLocalizationsYi extends AppLocalizations {
       'וועריפיעד טעגלעך דואַס זענען נישט סינסעד צו דעם מיטל נאָך. קאָננעקט צו די וואָלקן מקור צו לאָדן סאָרסעד דואַס אַנשטאָט פון אַן אַנוועראַפייד פאַלבאַק.';
 
   @override
+  String get duaCategoryQuranic => 'קווראַניק דואַ';
+
+  @override
+  String get duaCategoryMorningEvening => 'מאָרגן & אָוונט';
+
+  @override
+  String get duaCategoryTasbih => 'טאַסביה';
+
+  @override
+  String get duaCategoryProtection => 'שוץ';
+
+  @override
+  String get duaCategoryBeginning => 'אָנהייב';
+
+  @override
+  String get duaCategorySleep => 'שלאָף';
+
+  @override
+  String get duaCategoryFoodDrink => 'עסנוואַרג & טרינקען';
+
+  @override
+  String get duaCategoryForgiveness => 'מחילה';
+
+  @override
+  String get duaCategoryHome => 'היים';
+
+  @override
+  String get duaSourceBukhari => 'בוכארי';
+
+  @override
+  String get duaSourceMuslim => 'מוסלים';
+
+  @override
+  String get duaSourceAbuDawud => 'אבו דאוד';
+
+  @override
+  String get duaSourceTirmidhi => 'טירמידהי';
+
+  @override
+  String get duaSourceAhmad => 'אַחמד';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -796,6 +796,48 @@ class AppLocalizationsMr extends AppLocalizations {
       'सत्यापित दैनिक दुआ अद्याप या डिव्हाइसवर समक्रमित केले गेले नाहीत. असत्यापित फॉलबॅक ऐवजी सोर्स केलेले डुआ लोड करण्यासाठी क्लाउड स्त्रोताशी कनेक्ट करा.';
 
   @override
+  String get duaCategoryQuranic => 'कुराणची दुआ';
+
+  @override
+  String get duaCategoryMorningEvening => 'सकाळ आणि संध्याकाळ';
+
+  @override
+  String get duaCategoryTasbih => 'तस्बिह';
+
+  @override
+  String get duaCategoryProtection => 'संरक्षण';
+
+  @override
+  String get duaCategoryBeginning => 'सुरुवात';
+
+  @override
+  String get duaCategorySleep => 'झोप';
+
+  @override
+  String get duaCategoryFoodDrink => 'अन्न आणि पेय';
+
+  @override
+  String get duaCategoryForgiveness => 'क्षमा';
+
+  @override
+  String get duaCategoryHome => 'घर';
+
+  @override
+  String get duaSourceBukhari => 'बुखारी';
+
+  @override
+  String get duaSourceMuslim => 'मुस्लिम';
+
+  @override
+  String get duaSourceAbuDawud => 'अबू दाऊद';
+
+  @override
+  String get duaSourceTirmidhi => 'तिरमिधी';
+
+  @override
+  String get duaSourceAhmad => 'अहमद';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

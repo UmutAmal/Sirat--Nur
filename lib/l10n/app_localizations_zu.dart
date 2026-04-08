@@ -797,6 +797,48 @@ class AppLocalizationsZu extends AppLocalizations {
       'I-duas yansuku zonke eqinisekisiwe ayikavunyelaniswa kule divayisi okwamanje. Xhuma kumthombo wamafu ukuze ulayishe ama-duas atholakala esikhundleni sokubuyela emuva okungaqinisekisiwe.';
 
   @override
+  String get duaCategoryQuranic => 'I-Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Ekuseni nakusihlwa';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Ukuvikelwa';
+
+  @override
+  String get duaCategoryBeginning => 'Iziqalo';
+
+  @override
+  String get duaCategorySleep => 'Lala';
+
+  @override
+  String get duaCategoryFoodDrink => 'Ukudla Neziphuzo';
+
+  @override
+  String get duaCategoryForgiveness => 'Ukuthethelela';
+
+  @override
+  String get duaCategoryHome => 'Ikhaya';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'U-Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

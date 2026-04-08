@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "الأدعية التي تم التحقق منها ليست متاحة بعد",
-  "duaUnavailableBody": "لم تتم مزامنة الأدعية اليومية التي تم التحقق منها مع هذا الجهاز حتى الآن. اتصل بالمصدر السحابي لتحميل الأدعية المصدرية بدلاً من الإجراء الاحتياطي الذي لم يتم التحقق منه."
+  "duaUnavailableBody": "لم تتم مزامنة الأدعية اليومية التي تم التحقق منها مع هذا الجهاز حتى الآن. اتصل بالمصدر السحابي لتحميل الأدعية المصدرية بدلاً من الإجراء الاحتياطي الذي لم يتم التحقق منه.",
+  "duaCategoryQuranic": "الدعاء القرآني",
+  "duaCategoryMorningEvening": "الصباح والمساء",
+  "duaCategoryTasbih": "التسبيح",
+  "duaCategoryProtection": "حماية",
+  "duaCategoryBeginning": "البدايات",
+  "duaCategorySleep": "ينام",
+  "duaCategoryFoodDrink": "الطعام والشراب",
+  "duaCategoryForgiveness": "مغفرة",
+  "duaCategoryHome": "بيت",
+  "duaSourceBukhari": "البخاري",
+  "duaSourceMuslim": "مسلم",
+  "duaSourceAbuDawud": "ابو داود",
+  "duaSourceTirmidhi": "الترمذي",
+  "duaSourceAhmad": "احمد"
 }

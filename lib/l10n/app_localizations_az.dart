@@ -796,6 +796,48 @@ class AppLocalizationsAz extends AppLocalizations {
       'Doğrulanmış gündəlik dualar hələ bu cihaza sinxronlaşdırılmayıb. Təsdiqlənməmiş ehtiyat əvəzinə mənbəli duaları yükləmək üçün bulud mənbəyinə qoşulun.';
 
   @override
+  String get duaCategoryQuranic => 'Quran duası';
+
+  @override
+  String get duaCategoryMorningEvening => 'Səhər & Axşam';
+
+  @override
+  String get duaCategoryTasbih => 'Təsbih';
+
+  @override
+  String get duaCategoryProtection => 'Qoruma';
+
+  @override
+  String get duaCategoryBeginning => 'Başlanğıclar';
+
+  @override
+  String get duaCategorySleep => 'yatmaq';
+
+  @override
+  String get duaCategoryFoodDrink => 'Qida və İçki';
+
+  @override
+  String get duaCategoryForgiveness => 'bağışlanma';
+
+  @override
+  String get duaCategoryHome => 'Ev';
+
+  @override
+  String get duaSourceBukhari => 'Buxari';
+
+  @override
+  String get duaSourceMuslim => 'müsəlman';
+
+  @override
+  String get duaSourceAbuDawud => 'Əbu Davud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmizi';
+
+  @override
+  String get duaSourceAhmad => 'Əhməd';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

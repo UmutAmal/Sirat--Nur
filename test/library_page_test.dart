@@ -68,10 +68,18 @@ void main() {
       expect(resolveDuaMeaning(dua, const Locale('de')), 'English meaning');
     });
 
-    test('cloud duas fall back to bundled duas when rows are empty', () {
-      expect(resolveCloudDuas([]), isEmpty);
-      expect(bundledDailyDuaFallback(), isEmpty);
-      expect(hasVerifiedBundledDuas, isFalse);
+    test('cloud duas fall back to verified bundled Quran duas when rows are empty', () {
+      final resolved = resolveCloudDuas([]);
+      final bundled = bundledDailyDuaFallback();
+
+      expect(resolved, isNotEmpty);
+      expect(bundled, hasLength(8));
+      expect(resolved, bundled);
+      expect(hasVerifiedBundledDuas, isTrue);
+      expect(bundled.every((dua) => dua.category == quranicDuaCategory), isTrue);
+      expect(bundled.first.source, 'Quran 2:201');
+      expect(bundled[1].source, 'Quran 2:286');
+      expect(bundled.every((dua) => dua.transliteration.isEmpty), isTrue);
     });
 
     test('cloud duas map Supabase rows into DuaData objects', () {

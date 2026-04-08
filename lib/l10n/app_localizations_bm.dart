@@ -797,6 +797,48 @@ class AppLocalizationsBm extends AppLocalizations {
       'Don o don duas sɛgɛsɛgɛlenw ma sinsin nin minɛn in kan fɔlɔ. Aw bɛ ɲɔgɔn Jɛ ni sankaba sɔrɔyɔrɔ ye walasa ka duaw doni sɔrɔyɔrɔ la sanni ka fallback sɔrɔ min ma sɛgɛsɛgɛ.';
 
   @override
+  String get duaCategoryQuranic => 'Kuranɛ dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Sɔgɔma & Sufɛ';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih ye';
+
+  @override
+  String get duaCategoryProtection => 'Lakanali';
+
+  @override
+  String get duaCategoryBeginning => 'Daminɛw';
+
+  @override
+  String get duaCategorySleep => 'Ka sunɔgɔ';
+
+  @override
+  String get duaCategoryFoodDrink => 'Dumuni & Minfɛnw';
+
+  @override
+  String get duaCategoryForgiveness => 'Yafali';
+
+  @override
+  String get duaCategoryHome => 'So';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari ye';
+
+  @override
+  String get duaSourceMuslim => 'Silamɛ';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud ye';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi ye';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad ye';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

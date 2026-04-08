@@ -797,6 +797,48 @@ class AppLocalizationsMt extends AppLocalizations {
       'Duas ta\' kuljum ivverifikati għadhom ma ġewx issinkronizzati ma\' dan l-apparat. Qabbad mas-sors tas-sħab biex tagħbija duas minn sorsi minflok riżerva mhux verifikata.';
 
   @override
+  String get duaCategoryQuranic => 'Dua Koraniku';
+
+  @override
+  String get duaCategoryMorningEvening => 'Filgħodu u Filgħaxija';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Protezzjoni';
+
+  @override
+  String get duaCategoryBeginning => 'Bidu';
+
+  @override
+  String get duaCategorySleep => 'Irqad';
+
+  @override
+  String get duaCategoryFoodDrink => 'Ikel u Xorb';
+
+  @override
+  String get duaCategoryForgiveness => 'Maħfra';
+
+  @override
+  String get duaCategoryHome => 'Dar';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Musulmani';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

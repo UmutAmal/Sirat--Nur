@@ -796,6 +796,48 @@ class AppLocalizationsTe extends AppLocalizations {
       'ధృవీకరించబడిన రోజువారీ దువాలు ఇంకా ఈ పరికరానికి సమకాలీకరించబడలేదు. ధృవీకరించని ఫాల్‌బ్యాక్‌కు బదులుగా మూలాధారమైన దువాలను లోడ్ చేయడానికి క్లౌడ్ సోర్స్‌కి కనెక్ట్ చేయండి.';
 
   @override
+  String get duaCategoryQuranic => 'ఖురాన్ దువా';
+
+  @override
+  String get duaCategoryMorningEvening => 'ఉదయం & సాయంత్రం';
+
+  @override
+  String get duaCategoryTasbih => 'తస్బిహ్';
+
+  @override
+  String get duaCategoryProtection => 'రక్షణ';
+
+  @override
+  String get duaCategoryBeginning => 'ప్రారంభం';
+
+  @override
+  String get duaCategorySleep => 'నిద్రించు';
+
+  @override
+  String get duaCategoryFoodDrink => 'ఆహారం & పానీయం';
+
+  @override
+  String get duaCategoryForgiveness => 'క్షమాపణ';
+
+  @override
+  String get duaCategoryHome => 'హోమ్';
+
+  @override
+  String get duaSourceBukhari => 'బుఖారీ';
+
+  @override
+  String get duaSourceMuslim => 'ముస్లిం';
+
+  @override
+  String get duaSourceAbuDawud => 'అబూ దావూద్';
+
+  @override
+  String get duaSourceTirmidhi => 'తిర్మిది';
+
+  @override
+  String get duaSourceAhmad => 'అహ్మద్';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

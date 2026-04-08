@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verifierade duas är inte tillgängliga ännu",
-  "duaUnavailableBody": "Verifierade dagliga duas har inte synkroniserats med den här enheten ännu. Anslut till molnkällan för att läsa in duas med källa istället för en overifierad reserv."
+  "duaUnavailableBody": "Verifierade dagliga duas har inte synkroniserats med den här enheten ännu. Anslut till molnkällan för att läsa in duas med källa istället för en overifierad reserv.",
+  "duaCategoryQuranic": "Koranisk dua",
+  "duaCategoryMorningEvening": "Morgon & Kväll",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Skydd",
+  "duaCategoryBeginning": "Början",
+  "duaCategorySleep": "Sova",
+  "duaCategoryFoodDrink": "Mat & Dryck",
+  "duaCategoryForgiveness": "Förlåtelse",
+  "duaCategoryHome": "Hem",
+  "duaSourceBukhari": "Buchari",
+  "duaSourceMuslim": "muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

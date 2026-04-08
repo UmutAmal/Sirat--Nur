@@ -796,6 +796,48 @@ class AppLocalizationsHt extends AppLocalizations {
       'Duas chak jou verifye yo poko senkronize ak aparèy sa a. Konekte ak sous nwaj la pou chaje duas ki soti olye pou yo yon repitasyon ki pa verifye.';
 
   @override
+  String get duaCategoryQuranic => 'Koranik dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Maten & Aswè';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Pwoteksyon';
+
+  @override
+  String get duaCategoryBeginning => 'Kòmansman';
+
+  @override
+  String get duaCategorySleep => 'Dòmi';
+
+  @override
+  String get duaCategoryFoodDrink => 'Manje & Bwè';
+
+  @override
+  String get duaCategoryForgiveness => 'padon';
+
+  @override
+  String get duaCategoryHome => 'Lakay';
+
+  @override
+  String get duaSourceBukhari => 'Boukhari';
+
+  @override
+  String get duaSourceMuslim => 'Mizilman';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -796,6 +796,48 @@ class AppLocalizationsVi extends AppLocalizations {
       'Bộ đôi hàng ngày đã được xác minh chưa được đồng bộ hóa với thiết bị này. Kết nối với nguồn đám mây để tải các bản song ca có nguồn gốc thay vì bản dự phòng chưa được xác minh.';
 
   @override
+  String get duaCategoryQuranic => 'Kinh Qur\'an dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Sáng & Tối';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Sự bảo vệ';
+
+  @override
+  String get duaCategoryBeginning => 'Sự khởi đầu';
+
+  @override
+  String get duaCategorySleep => 'Ngủ';
+
+  @override
+  String get duaCategoryFoodDrink => 'Đồ ăn & Đồ uống';
+
+  @override
+  String get duaCategoryForgiveness => 'sự tha thứ';
+
+  @override
+  String get duaCategoryHome => 'Trang chủ';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Hồi giáo';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'tirmidi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

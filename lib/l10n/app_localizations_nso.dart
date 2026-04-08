@@ -805,6 +805,48 @@ class AppLocalizationsNso extends AppLocalizations {
       'Di-dua tša letšatši le letšatši tše di netefaditšwego ga se tša nyalantšhwa le sedirišwa se ga bjale. Ikgokaganye le mothopo wa leru go laetša di-duas tšeo di tšwago mothopo go e na le go boela morago mo go sa netefatšwago.';
 
   @override
+  String get duaCategoryQuranic => 'Dua ya Quranic';
+
+  @override
+  String get duaCategoryMorningEvening => 'Mesong & Mantšiboa';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih ya go swana';
+
+  @override
+  String get duaCategoryProtection => 'Tšhireletšo';
+
+  @override
+  String get duaCategoryBeginning => 'Mathomo';
+
+  @override
+  String get duaCategorySleep => 'Robala';
+
+  @override
+  String get duaCategoryFoodDrink => 'Dijo & Dino';
+
+  @override
+  String get duaCategoryForgiveness => 'Tshwarelo';
+
+  @override
+  String get duaCategoryHome => 'Gae';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari ya go swana le yona';
+
+  @override
+  String get duaSourceMuslim => 'Momoseleme';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud o ile a hlokomela';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi ya go swana le yona';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

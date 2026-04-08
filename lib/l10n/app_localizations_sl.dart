@@ -796,6 +796,48 @@ class AppLocalizationsSl extends AppLocalizations {
       'Preverjeni dnevni dua še niso bili sinhronizirani s to napravo. Povežite se z virom v oblaku, da naložite izvirne due namesto nepreverjenega nadomestnega.';
 
   @override
+  String get duaCategoryQuranic => 'Kur\'anska dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Zjutraj in zvečer';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Zaščita';
+
+  @override
+  String get duaCategoryBeginning => 'Začetki';
+
+  @override
+  String get duaCategorySleep => 'spi';
+
+  @override
+  String get duaCategoryFoodDrink => 'Hrana in pijača';
+
+  @override
+  String get duaCategoryForgiveness => 'Odpuščanje';
+
+  @override
+  String get duaCategoryHome => 'domov';
+
+  @override
+  String get duaSourceBukhari => 'Buhari';
+
+  @override
+  String get duaSourceMuslim => 'musliman';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmizi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "تصدیق شدہ دعائیں ابھی دستیاب نہیں ہیں۔",
-  "duaUnavailableBody": "تصدیق شدہ روزانہ کی دعاؤں کو ابھی تک اس ڈیوائس سے ہم آہنگ نہیں کیا گیا ہے۔ غیر تصدیق شدہ فال بیک کی بجائے سورس شدہ دعاؤں کو لوڈ کرنے کے لیے کلاؤڈ سورس سے جڑیں۔"
+  "duaUnavailableBody": "تصدیق شدہ روزانہ کی دعاؤں کو ابھی تک اس ڈیوائس سے ہم آہنگ نہیں کیا گیا ہے۔ غیر تصدیق شدہ فال بیک کی بجائے سورس شدہ دعاؤں کو لوڈ کرنے کے لیے کلاؤڈ سورس سے جڑیں۔",
+  "duaCategoryQuranic": "قرآنی دعا",
+  "duaCategoryMorningEvening": "صبح و شام",
+  "duaCategoryTasbih": "تسبیح",
+  "duaCategoryProtection": "تحفظ",
+  "duaCategoryBeginning": "آغاز",
+  "duaCategorySleep": "سونا",
+  "duaCategoryFoodDrink": "کھانا اور پینا",
+  "duaCategoryForgiveness": "بخشش",
+  "duaCategoryHome": "گھر",
+  "duaSourceBukhari": "بخاری",
+  "duaSourceMuslim": "مسلمان",
+  "duaSourceAbuDawud": "ابوداؤد",
+  "duaSourceTirmidhi": "ترمذی ۔",
+  "duaSourceAhmad": "احمد"
 }

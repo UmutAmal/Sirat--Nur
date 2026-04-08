@@ -797,6 +797,48 @@ class AppLocalizationsEu extends AppLocalizations {
       'Egiaztatutako eguneroko duak ez dira oraindik sinkronizatu gailu honekin. Konektatu hodeiko iturburura iturriko duak kargatzeko, egiaztatu gabeko ordezkapen baten ordez.';
 
   @override
+  String get duaCategoryQuranic => 'Koranikoa dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Goizez eta arratsaldez';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Babesa';
+
+  @override
+  String get duaCategoryBeginning => 'Hastapenak';
+
+  @override
+  String get duaCategorySleep => 'Lo egin';
+
+  @override
+  String get duaCategoryFoodDrink => 'Janaria eta edaria';
+
+  @override
+  String get duaCategoryForgiveness => 'Barkamena';
+
+  @override
+  String get duaCategoryHome => 'Hasiera';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Musulmana';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

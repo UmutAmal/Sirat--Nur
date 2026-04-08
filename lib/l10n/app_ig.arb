@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Duas akwadoro adịghị",
-  "duaUnavailableBody": "Emekọrịtabeghị duas kwa ụbọchị na ngwaọrụ a. Jikọọ na isi iyi ígwé ojii iji buo duas ewepụtara kama ịdaghachi azụ achọpụtaghị."
+  "duaUnavailableBody": "Emekọrịtabeghị duas kwa ụbọchị na ngwaọrụ a. Jikọọ na isi iyi ígwé ojii iji buo duas ewepụtara kama ịdaghachi azụ achọpụtaghị.",
+  "duaCategoryQuranic": "Quran dua",
+  "duaCategoryMorningEvening": "Ụtụtụ na mgbede",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Nchedo",
+  "duaCategoryBeginning": "Mmalite",
+  "duaCategorySleep": "Ụra",
+  "duaCategoryFoodDrink": "Nri na ihe ọṅụṅụ",
+  "duaCategoryForgiveness": "Mgbaghara",
+  "duaCategoryHome": "Ụlọ",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

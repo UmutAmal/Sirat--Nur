@@ -796,6 +796,48 @@ class AppLocalizationsKo extends AppLocalizations {
       '확인된 일일 듀아가 아직 이 기기에 동기화되지 않았습니다. 확인되지 않은 대체 대신 소스가 있는 duas를 로드하려면 클라우드 소스에 연결하세요.';
 
   @override
+  String get duaCategoryQuranic => '꾸란 두아';
+
+  @override
+  String get duaCategoryMorningEvening => '아침 & 저녁';
+
+  @override
+  String get duaCategoryTasbih => '타스비';
+
+  @override
+  String get duaCategoryProtection => '보호';
+
+  @override
+  String get duaCategoryBeginning => '시작';
+
+  @override
+  String get duaCategorySleep => '잠';
+
+  @override
+  String get duaCategoryFoodDrink => '음식 및 음료';
+
+  @override
+  String get duaCategoryForgiveness => '용서';
+
+  @override
+  String get duaCategoryHome => '집';
+
+  @override
+  String get duaSourceBukhari => '부하리';
+
+  @override
+  String get duaSourceMuslim => '무슬림';
+
+  @override
+  String get duaSourceAbuDawud => '아부 다우드';
+
+  @override
+  String get duaSourceTirmidhi => '티르미디';
+
+  @override
+  String get duaSourceAhmad => '아마드';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

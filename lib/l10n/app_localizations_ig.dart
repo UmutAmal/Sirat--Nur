@@ -796,6 +796,48 @@ class AppLocalizationsIg extends AppLocalizations {
       'Emekọrịtabeghị duas kwa ụbọchị na ngwaọrụ a. Jikọọ na isi iyi ígwé ojii iji buo duas ewepụtara kama ịdaghachi azụ achọpụtaghị.';
 
   @override
+  String get duaCategoryQuranic => 'Quran dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Ụtụtụ na mgbede';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Nchedo';
+
+  @override
+  String get duaCategoryBeginning => 'Mmalite';
+
+  @override
+  String get duaCategorySleep => 'Ụra';
+
+  @override
+  String get duaCategoryFoodDrink => 'Nri na ihe ọṅụṅụ';
+
+  @override
+  String get duaCategoryForgiveness => 'Mgbaghara';
+
+  @override
+  String get duaCategoryHome => 'Ụlọ';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

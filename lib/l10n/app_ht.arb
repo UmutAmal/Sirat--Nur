@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Dous verifye yo poko disponib",
-  "duaUnavailableBody": "Duas chak jou verifye yo poko senkronize ak aparèy sa a. Konekte ak sous nwaj la pou chaje duas ki soti olye pou yo yon repitasyon ki pa verifye."
+  "duaUnavailableBody": "Duas chak jou verifye yo poko senkronize ak aparèy sa a. Konekte ak sous nwaj la pou chaje duas ki soti olye pou yo yon repitasyon ki pa verifye.",
+  "duaCategoryQuranic": "Koranik dua",
+  "duaCategoryMorningEvening": "Maten & Aswè",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Pwoteksyon",
+  "duaCategoryBeginning": "Kòmansman",
+  "duaCategorySleep": "Dòmi",
+  "duaCategoryFoodDrink": "Manje & Bwè",
+  "duaCategoryForgiveness": "padon",
+  "duaCategoryHome": "Lakay",
+  "duaSourceBukhari": "Boukhari",
+  "duaSourceMuslim": "Mizilman",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidi",
+  "duaSourceAhmad": "Ahmad"
 }

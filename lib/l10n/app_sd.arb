@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "تصديق ٿيل دعا اڃا تائين دستياب ناهي",
-  "duaUnavailableBody": "تصديق ٿيل روزاني دعا اڃا تائين هن ڊوائيس سان هم وقت نه ڪئي وئي آهي. اڻ تصديق ٿيل فال بيڪ بدران sourced duas لوڊ ڪرڻ لاءِ ڪلائوڊ ماخذ سان ڳنڍيو."
+  "duaUnavailableBody": "تصديق ٿيل روزاني دعا اڃا تائين هن ڊوائيس سان هم وقت نه ڪئي وئي آهي. اڻ تصديق ٿيل فال بيڪ بدران sourced duas لوڊ ڪرڻ لاءِ ڪلائوڊ ماخذ سان ڳنڍيو.",
+  "duaCategoryQuranic": "قرآني دعا",
+  "duaCategoryMorningEvening": "صبح ۽ شام",
+  "duaCategoryTasbih": "تسبيح",
+  "duaCategoryProtection": "تحفظ",
+  "duaCategoryBeginning": "شروعات",
+  "duaCategorySleep": "سمهڻ",
+  "duaCategoryFoodDrink": "کاڌو ۽ پيئڻ",
+  "duaCategoryForgiveness": "بخشش",
+  "duaCategoryHome": "گهر",
+  "duaSourceBukhari": "بخاري",
+  "duaSourceMuslim": "مسلمان",
+  "duaSourceAbuDawud": "ابوداؤد",
+  "duaSourceTirmidhi": "ترمذي",
+  "duaSourceAhmad": "احمد"
 }

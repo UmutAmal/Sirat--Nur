@@ -796,6 +796,48 @@ class AppLocalizationsKu extends AppLocalizations {
       'Duayên rojane yên pejirandî hîn bi vê cîhazê re nehatine hevdeng kirin. Bi çavkaniya ewr ve girêdin da ku li şûna paşverûyek nerastkirî duayên jêderkirî bar bikin.';
 
   @override
+  String get duaCategoryQuranic => 'Dua Quranê';
+
+  @override
+  String get duaCategoryMorningEvening => 'Sibeh & Êvar';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Parastinî';
+
+  @override
+  String get duaCategoryBeginning => 'Destpêk';
+
+  @override
+  String get duaCategorySleep => 'Xew';
+
+  @override
+  String get duaCategoryFoodDrink => 'Xwarin & Vexwarin';
+
+  @override
+  String get duaCategoryForgiveness => 'Lêborînî';
+
+  @override
+  String get duaCategoryHome => 'Xane';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Ebû Dawûd';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

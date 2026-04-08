@@ -798,6 +798,48 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Ang gi-verify nga adlaw-adlaw nga duha wala pa ma-sync sa kini nga aparato. Sumpaysumpaya ang tinubdan sa panganod aron ma-load ang mga sourced nga duha imbes nga usa ka wala mapamatud-an nga fallback.';
 
   @override
+  String get duaCategoryQuranic => 'Quranikong duha';
+
+  @override
+  String get duaCategoryMorningEvening => 'Buntag ug Gabii';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Proteksyon';
+
+  @override
+  String get duaCategoryBeginning => 'Mga Sinugdanan';
+
+  @override
+  String get duaCategorySleep => 'Pagkatulog';
+
+  @override
+  String get duaCategoryFoodDrink => 'Pagkaon ug Ilimnon';
+
+  @override
+  String get duaCategoryForgiveness => 'Pagpasaylo';
+
+  @override
+  String get duaCategoryHome => 'Balay';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

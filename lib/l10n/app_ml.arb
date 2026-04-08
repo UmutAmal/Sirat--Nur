@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "പരിശോധിച്ച ദുആകൾ ഇതുവരെ ലഭ്യമല്ല",
-  "duaUnavailableBody": "പരിശോധിച്ചുറപ്പിച്ച പ്രതിദിന ദുആകൾ ഇതുവരെ ഈ ഉപകരണത്തിലേക്ക് സമന്വയിപ്പിച്ചിട്ടില്ല. പരിശോധിച്ചുറപ്പിക്കാത്ത ഫാൾബാക്കിന് പകരം സോഴ്‌സ് ചെയ്‌ത ദുആകൾ ലോഡുചെയ്യാൻ ക്ലൗഡ് ഉറവിടത്തിലേക്ക് കണക്റ്റുചെയ്യുക."
+  "duaUnavailableBody": "പരിശോധിച്ചുറപ്പിച്ച പ്രതിദിന ദുആകൾ ഇതുവരെ ഈ ഉപകരണത്തിലേക്ക് സമന്വയിപ്പിച്ചിട്ടില്ല. പരിശോധിച്ചുറപ്പിക്കാത്ത ഫാൾബാക്കിന് പകരം സോഴ്‌സ് ചെയ്‌ത ദുആകൾ ലോഡുചെയ്യാൻ ക്ലൗഡ് ഉറവിടത്തിലേക്ക് കണക്റ്റുചെയ്യുക.",
+  "duaCategoryQuranic": "ഖുർആൻ ദുആ",
+  "duaCategoryMorningEvening": "രാവിലെയും വൈകുന്നേരവും",
+  "duaCategoryTasbih": "തസ്ബിഹ്",
+  "duaCategoryProtection": "സംരക്ഷണം",
+  "duaCategoryBeginning": "തുടക്കം",
+  "duaCategorySleep": "ഉറങ്ങുക",
+  "duaCategoryFoodDrink": "ഭക്ഷണവും പാനീയവും",
+  "duaCategoryForgiveness": "ക്ഷമാപണം",
+  "duaCategoryHome": "വീട്",
+  "duaSourceBukhari": "ബുഖാരി",
+  "duaSourceMuslim": "മുസ്ലീം",
+  "duaSourceAbuDawud": "അബു ദാവൂദ്",
+  "duaSourceTirmidhi": "തിര്മിദി",
+  "duaSourceAhmad": "അഹ്മദ്"
 }

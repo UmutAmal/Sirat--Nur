@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Перевірені дуа ще недоступні",
-  "duaUnavailableBody": "Перевірені щоденні дуа ще не синхронізовано з цим пристроєм. Підключіться до хмарного джерела, щоб завантажити вихідні дуа замість неперевіреного резервного варіанту."
+  "duaUnavailableBody": "Перевірені щоденні дуа ще не синхронізовано з цим пристроєм. Підключіться до хмарного джерела, щоб завантажити вихідні дуа замість неперевіреного резервного варіанту.",
+  "duaCategoryQuranic": "Коранічна дуа",
+  "duaCategoryMorningEvening": "Ранок і вечір",
+  "duaCategoryTasbih": "Тасбіх",
+  "duaCategoryProtection": "захист",
+  "duaCategoryBeginning": "Початки",
+  "duaCategorySleep": "сон",
+  "duaCategoryFoodDrink": "Їжа та напої",
+  "duaCategoryForgiveness": "Прощення",
+  "duaCategoryHome": "додому",
+  "duaSourceBukhari": "Бухарі",
+  "duaSourceMuslim": "мусульманський",
+  "duaSourceAbuDawud": "Абу Дауд",
+  "duaSourceTirmidhi": "Тірмізі",
+  "duaSourceAhmad": "Ахмад"
 }

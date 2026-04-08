@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "דואס מאומת אינם זמינים עדיין",
-  "duaUnavailableBody": "עדיין לא סונכרנו דואס יומיים מאומתים עם המכשיר הזה. התחבר למקור הענן כדי לטעון דואס ממקור במקום סתירה לא מאומתת."
+  "duaUnavailableBody": "עדיין לא סונכרנו דואס יומיים מאומתים עם המכשיר הזה. התחבר למקור הענן כדי לטעון דואס ממקור במקום סתירה לא מאומתת.",
+  "duaCategoryQuranic": "דואה קוראנית",
+  "duaCategoryMorningEvening": "בוקר וערב",
+  "duaCategoryTasbih": "טסביח",
+  "duaCategoryProtection": "הֲגָנָה",
+  "duaCategoryBeginning": "התחלות",
+  "duaCategorySleep": "לִישׁוֹן",
+  "duaCategoryFoodDrink": "אוכל ושתייה",
+  "duaCategoryForgiveness": "סְלִיחָה",
+  "duaCategoryHome": "בַּיִת",
+  "duaSourceBukhari": "בוכרי",
+  "duaSourceMuslim": "מוסלמי",
+  "duaSourceAbuDawud": "אבו דאוד",
+  "duaSourceTirmidhi": "טירמידי",
+  "duaSourceAhmad": "אחמד"
 }

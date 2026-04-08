@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Ellenőrzött duák még nem érhetők el",
-  "duaUnavailableBody": "Az ellenőrzött napi duák még nincsenek szinkronizálva ezzel az eszközzel. Csatlakozzon a felhőforráshoz a forrásból származó duák betöltéséhez az ellenőrizetlen tartalék helyett."
+  "duaUnavailableBody": "Az ellenőrzött napi duák még nincsenek szinkronizálva ezzel az eszközzel. Csatlakozzon a felhőforráshoz a forrásból származó duák betöltéséhez az ellenőrizetlen tartalék helyett.",
+  "duaCategoryQuranic": "Korán dua",
+  "duaCategoryMorningEvening": "Reggel & Este",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Védelem",
+  "duaCategoryBeginning": "Kezdetek",
+  "duaCategorySleep": "Alvás",
+  "duaCategoryFoodDrink": "Étel és ital",
+  "duaCategoryForgiveness": "Megbocsátás",
+  "duaCategoryHome": "Otthon",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "muzulmán",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

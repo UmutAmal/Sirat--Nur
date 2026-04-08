@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "ਪ੍ਰਮਾਣਿਤ ਦੁਆਵਾਂ ਅਜੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ",
-  "duaUnavailableBody": "ਤਸਦੀਕ ਕੀਤੇ ਰੋਜ਼ਾਨਾ ਦੁਆਵਾਂ ਨੂੰ ਅਜੇ ਤੱਕ ਇਸ ਡਿਵਾਈਸ ਨਾਲ ਸਿੰਕ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ। ਗੈਰ-ਪ੍ਰਮਾਣਿਤ ਫਾਲਬੈਕ ਦੀ ਬਜਾਏ ਸਰੋਤ ਕੀਤੇ ਡੁਆਸ ਨੂੰ ਲੋਡ ਕਰਨ ਲਈ ਕਲਾਉਡ ਸਰੋਤ ਨਾਲ ਕਨੈਕਟ ਕਰੋ।"
+  "duaUnavailableBody": "ਤਸਦੀਕ ਕੀਤੇ ਰੋਜ਼ਾਨਾ ਦੁਆਵਾਂ ਨੂੰ ਅਜੇ ਤੱਕ ਇਸ ਡਿਵਾਈਸ ਨਾਲ ਸਿੰਕ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ। ਗੈਰ-ਪ੍ਰਮਾਣਿਤ ਫਾਲਬੈਕ ਦੀ ਬਜਾਏ ਸਰੋਤ ਕੀਤੇ ਡੁਆਸ ਨੂੰ ਲੋਡ ਕਰਨ ਲਈ ਕਲਾਉਡ ਸਰੋਤ ਨਾਲ ਕਨੈਕਟ ਕਰੋ।",
+  "duaCategoryQuranic": "ਕੁਰਾਨ ਦੀ ਦੁਆ",
+  "duaCategoryMorningEvening": "ਸਵੇਰ ਅਤੇ ਸ਼ਾਮ",
+  "duaCategoryTasbih": "ਤਸਬੀਹ",
+  "duaCategoryProtection": "ਸੁਰੱਖਿਆ",
+  "duaCategoryBeginning": "ਸ਼ੁਰੂਆਤ",
+  "duaCategorySleep": "ਸਲੀਪ",
+  "duaCategoryFoodDrink": "ਭੋਜਨ ਅਤੇ ਪੀਣ",
+  "duaCategoryForgiveness": "ਮਾਫ਼ੀ",
+  "duaCategoryHome": "ਘਰ",
+  "duaSourceBukhari": "ਬੁਖਾਰੀ",
+  "duaSourceMuslim": "ਮੁਸਲਮਾਨ",
+  "duaSourceAbuDawud": "ਅਬੂ ਦਾਊਦ",
+  "duaSourceTirmidhi": "ਤਿਰਮਿਧੀ",
+  "duaSourceAhmad": "ਅਹਿਮਦ"
 }

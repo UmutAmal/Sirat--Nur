@@ -796,6 +796,48 @@ class AppLocalizationsHi extends AppLocalizations {
       'सत्यापित दैनिक दुआओं को अभी तक इस डिवाइस से समन्वयित नहीं किया गया है। असत्यापित फ़ॉलबैक के बजाय स्रोतित युगल को लोड करने के लिए क्लाउड स्रोत से कनेक्ट करें।';
 
   @override
+  String get duaCategoryQuranic => 'कुरानिक दुआ';
+
+  @override
+  String get duaCategoryMorningEvening => 'सुबह और शाम';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'सुरक्षा';
+
+  @override
+  String get duaCategoryBeginning => 'शुरुआत';
+
+  @override
+  String get duaCategorySleep => 'नींद';
+
+  @override
+  String get duaCategoryFoodDrink => 'भोजन पेय';
+
+  @override
+  String get duaCategoryForgiveness => 'क्षमा';
+
+  @override
+  String get duaCategoryHome => 'घर';
+
+  @override
+  String get duaSourceBukhari => 'बुखारी';
+
+  @override
+  String get duaSourceMuslim => 'मुसलमान';
+
+  @override
+  String get duaSourceAbuDawud => 'अबू दाऊद';
+
+  @override
+  String get duaSourceTirmidhi => 'तिर्मिज़ी';
+
+  @override
+  String get duaSourceAhmad => 'अहमद';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -796,6 +796,48 @@ class AppLocalizationsXh extends AppLocalizations {
       'Iiduas zemihla ngemihla eziqinisekisiweyo ayikadityaniswanga kwesi sixhobo okwangoku. Qhagamshela kumthombo welifu ukuze ulayishe i-duas efunyenweyo endaweni yokubuyela umva okungaqinisekanga.';
 
   @override
+  String get duaCategoryQuranic => 'I-Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Ekuseni nangokuhlwa';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Ukhuseleko';
+
+  @override
+  String get duaCategoryBeginning => 'Iziqalo';
+
+  @override
+  String get duaCategorySleep => 'Lala';
+
+  @override
+  String get duaCategoryFoodDrink => 'Ukutya & Iziselo';
+
+  @override
+  String get duaCategoryForgiveness => 'Uxolelo';
+
+  @override
+  String get duaCategoryHome => 'Ekhaya';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'UmSilamsi';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'UTirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Duas verifikati għadhom mhumiex disponibbli",
-  "duaUnavailableBody": "Duas ta' kuljum ivverifikati għadhom ma ġewx issinkronizzati ma' dan l-apparat. Qabbad mas-sors tas-sħab biex tagħbija duas minn sorsi minflok riżerva mhux verifikata."
+  "duaUnavailableBody": "Duas ta' kuljum ivverifikati għadhom ma ġewx issinkronizzati ma' dan l-apparat. Qabbad mas-sors tas-sħab biex tagħbija duas minn sorsi minflok riżerva mhux verifikata.",
+  "duaCategoryQuranic": "Dua Koraniku",
+  "duaCategoryMorningEvening": "Filgħodu u Filgħaxija",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Protezzjoni",
+  "duaCategoryBeginning": "Bidu",
+  "duaCategorySleep": "Irqad",
+  "duaCategoryFoodDrink": "Ikel u Xorb",
+  "duaCategoryForgiveness": "Maħfra",
+  "duaCategoryHome": "Dar",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Musulmani",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

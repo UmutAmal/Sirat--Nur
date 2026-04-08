@@ -797,6 +797,48 @@ class AppLocalizationsMai extends AppLocalizations {
       'सत्यापित दैनिक दुआ एखन धरि एहि डिवाइस पर सिंक नहि कएल गेल अछि । असत्यापित फॉलबैक कें बजाय स्रोत सं प्राप्त दुआ लोड करय कें लेल क्लाउड स्रोत सं कनेक्ट करूं.';
 
   @override
+  String get duaCategoryQuranic => 'कुरान दुआ';
+
+  @override
+  String get duaCategoryMorningEvening => 'सुबह एवं साँझ';
+
+  @override
+  String get duaCategoryTasbih => 'तसबीह';
+
+  @override
+  String get duaCategoryProtection => 'संरक्षण';
+
+  @override
+  String get duaCategoryBeginning => 'शुरुआत';
+
+  @override
+  String get duaCategorySleep => 'नींद';
+
+  @override
+  String get duaCategoryFoodDrink => 'खाद्य एवं पेय पदार्थ';
+
+  @override
+  String get duaCategoryForgiveness => 'क्षमा करब';
+
+  @override
+  String get duaCategoryHome => 'घर';
+
+  @override
+  String get duaSourceBukhari => 'बुखारी';
+
+  @override
+  String get duaSourceMuslim => 'मुस्लिम';
+
+  @override
+  String get duaSourceAbuDawud => 'अबू दाऊद';
+
+  @override
+  String get duaSourceTirmidhi => 'तिरमिधि';
+
+  @override
+  String get duaSourceAhmad => 'अहमद';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

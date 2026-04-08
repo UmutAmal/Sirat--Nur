@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Ստուգված դուաները դեռ հասանելի չեն",
-  "duaUnavailableBody": "Ստուգված ամենօրյա դուաները դեռ չեն համաժամացվել այս սարքի հետ: Միացեք ամպային աղբյուրին՝ չստուգված հետադարձի փոխարեն բեռնելու աղբյուրից ստացված դուաները:"
+  "duaUnavailableBody": "Ստուգված ամենօրյա դուաները դեռ չեն համաժամացվել այս սարքի հետ: Միացեք ամպային աղբյուրին՝ չստուգված հետադարձի փոխարեն բեռնելու աղբյուրից ստացված դուաները:",
+  "duaCategoryQuranic": "Ղուրանի դուտա",
+  "duaCategoryMorningEvening": "Առավոտ և երեկո",
+  "duaCategoryTasbih": "Թասբիհ",
+  "duaCategoryProtection": "Պաշտպանություն",
+  "duaCategoryBeginning": "սկիզբներ",
+  "duaCategorySleep": "Քնել",
+  "duaCategoryFoodDrink": "Սնունդ և խմիչք",
+  "duaCategoryForgiveness": "Ներողամտություն",
+  "duaCategoryHome": "Տուն",
+  "duaSourceBukhari": "Բուխարի",
+  "duaSourceMuslim": "մահմեդական",
+  "duaSourceAbuDawud": "Աբու Դաուդ",
+  "duaSourceTirmidhi": "Տիրմիդի",
+  "duaSourceAhmad": "Ահմադ"
 }

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verified duas tseem tsis tau muaj",
-  "duaUnavailableBody": "Txheeb xyuas txhua hnub duas tseem tsis tau synced rau lub cuab yeej no. Txuas mus rau huab qhov chaw thauj khoom duas es tsis txhob muaj qhov rov qab tsis tau lees paub."
+  "duaUnavailableBody": "Txheeb xyuas txhua hnub duas tseem tsis tau synced rau lub cuab yeej no. Txuas mus rau huab qhov chaw thauj khoom duas es tsis txhob muaj qhov rov qab tsis tau lees paub.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Sawv ntxov & yav tsaus ntuj",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Kev tiv thaiv",
+  "duaCategoryBeginning": "Pib",
+  "duaCategorySleep": "Pw tsaug zog",
+  "duaCategoryFoodDrink": "Khoom noj & haus",
+  "duaCategoryForgiveness": "Kev zam txim",
+  "duaCategoryHome": "Tsev",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawd",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

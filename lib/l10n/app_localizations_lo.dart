@@ -796,6 +796,48 @@ class AppLocalizationsLo extends AppLocalizations {
       'ຢືນຢັນ duas ປະຈໍາວັນຍັງບໍ່ໄດ້ຖືກຊິງຄ໌ກັບອຸປະກອນນີ້ເທື່ອ. ເຊື່ອມຕໍ່ຫາແຫຼ່ງຄລາວເພື່ອໂຫລດ duas ທີ່ມີແຫຼ່ງທີ່ມາແທນທີ່ຈະເປັນທາງເລືອກທີ່ບໍ່ໄດ້ຮັບການຢືນຢັນ.';
 
   @override
+  String get duaCategoryQuranic => 'Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'ເຊົ້າ ແລະ ແລງ';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'ການປົກປ້ອງ';
+
+  @override
+  String get duaCategoryBeginning => 'ເລີ່ມຕົ້ນ';
+
+  @override
+  String get duaCategorySleep => 'ນອນ';
+
+  @override
+  String get duaCategoryFoodDrink => 'ອາຫານ ແລະ ເຄື່ອງດື່ມ';
+
+  @override
+  String get duaCategoryForgiveness => 'ການໃຫ້ອະໄພ';
+
+  @override
+  String get duaCategoryHome => 'ບ້ານ';
+
+  @override
+  String get duaSourceBukhari => 'ບູຄາຣີ';
+
+  @override
+  String get duaSourceMuslim => 'ມຸດສະລິມ';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

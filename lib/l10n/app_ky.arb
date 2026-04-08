@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Текшерилген дуалар азырынча жеткиликтүү эмес",
-  "duaUnavailableBody": "Текшерилген күнүмдүк дуалар азырынча бул түзмөккө шайкештириле элек. Текшерилбеген калыбына келтирүүнүн ордуна булактан алынган дуаларды жүктөө үчүн булут булагына туташыңыз."
+  "duaUnavailableBody": "Текшерилген күнүмдүк дуалар азырынча бул түзмөккө шайкештириле элек. Текшерилбеген калыбына келтирүүнүн ордуна булактан алынган дуаларды жүктөө үчүн булут булагына туташыңыз.",
+  "duaCategoryQuranic": "Куран дубасы",
+  "duaCategoryMorningEvening": "Эртең менен жана кечинде",
+  "duaCategoryTasbih": "Тасбих",
+  "duaCategoryProtection": "Коргоо",
+  "duaCategoryBeginning": "Башталышы",
+  "duaCategorySleep": "Уйку",
+  "duaCategoryFoodDrink": "Тамак-аш жана суусундук",
+  "duaCategoryForgiveness": "кечирүү",
+  "duaCategoryHome": "Үй",
+  "duaSourceBukhari": "Бухари",
+  "duaSourceMuslim": "мусулман",
+  "duaSourceAbuDawud": "Абу Давуд",
+  "duaSourceTirmidhi": "Тирмизи",
+  "duaSourceAhmad": "Ахмад"
 }

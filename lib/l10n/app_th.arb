@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "duas ที่ยืนยันแล้วยังไม่พร้อมใช้งาน",
-  "duaUnavailableBody": "Duas รายวันที่ยืนยันแล้วยังไม่ได้ซิงค์กับอุปกรณ์นี้ เชื่อมต่อกับต้นทางคลาวด์เพื่อโหลด duas ที่มาจากแทนทางเลือกที่ไม่ได้รับการยืนยัน"
+  "duaUnavailableBody": "Duas รายวันที่ยืนยันแล้วยังไม่ได้ซิงค์กับอุปกรณ์นี้ เชื่อมต่อกับต้นทางคลาวด์เพื่อโหลด duas ที่มาจากแทนทางเลือกที่ไม่ได้รับการยืนยัน",
+  "duaCategoryQuranic": "ดุอาอ์กุรอาน",
+  "duaCategoryMorningEvening": "เช้าและเย็น",
+  "duaCategoryTasbih": "ตัสบีห์",
+  "duaCategoryProtection": "การป้องกัน",
+  "duaCategoryBeginning": "จุดเริ่มต้น",
+  "duaCategorySleep": "นอน",
+  "duaCategoryFoodDrink": "อาหารและเครื่องดื่ม",
+  "duaCategoryForgiveness": "การให้อภัย",
+  "duaCategoryHome": "บ้าน",
+  "duaSourceBukhari": "บุคอรี",
+  "duaSourceMuslim": "มุสลิม",
+  "duaSourceAbuDawud": "อบู ดาวูด",
+  "duaSourceTirmidhi": "ติรมีซี",
+  "duaSourceAhmad": "อาหมัด"
 }

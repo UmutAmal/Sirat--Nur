@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verifizéiert Duas sinn nach net verfügbar",
-  "duaUnavailableBody": "Verifizéiert alldeeglech Duas goufen nach net mat dësem Apparat synchroniséiert. Connectéiert mat der Wollekquell fir Quelle Duas ze lueden amplaz vun engem onverifizéierte Réckfall."
+  "duaUnavailableBody": "Verifizéiert alldeeglech Duas goufen nach net mat dësem Apparat synchroniséiert. Connectéiert mat der Wollekquell fir Quelle Duas ze lueden amplaz vun engem onverifizéierte Réckfall.",
+  "duaCategoryQuranic": "Koran dua",
+  "duaCategoryMorningEvening": "Moien & Owend",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Schutz",
+  "duaCategoryBeginning": "Ufank",
+  "duaCategorySleep": "Schlof",
+  "duaCategoryFoodDrink": "Iessen & Drénken",
+  "duaCategoryForgiveness": "Verzeiung",
+  "duaCategoryHome": "Doheem",
+  "duaSourceBukhari": "Buchari",
+  "duaSourceMuslim": "Moslem",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

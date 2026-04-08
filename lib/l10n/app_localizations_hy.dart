@@ -797,6 +797,48 @@ class AppLocalizationsHy extends AppLocalizations {
       'Ստուգված ամենօրյա դուաները դեռ չեն համաժամացվել այս սարքի հետ: Միացեք ամպային աղբյուրին՝ չստուգված հետադարձի փոխարեն բեռնելու աղբյուրից ստացված դուաները:';
 
   @override
+  String get duaCategoryQuranic => 'Ղուրանի դուտա';
+
+  @override
+  String get duaCategoryMorningEvening => 'Առավոտ և երեկո';
+
+  @override
+  String get duaCategoryTasbih => 'Թասբիհ';
+
+  @override
+  String get duaCategoryProtection => 'Պաշտպանություն';
+
+  @override
+  String get duaCategoryBeginning => 'սկիզբներ';
+
+  @override
+  String get duaCategorySleep => 'Քնել';
+
+  @override
+  String get duaCategoryFoodDrink => 'Սնունդ և խմիչք';
+
+  @override
+  String get duaCategoryForgiveness => 'Ներողամտություն';
+
+  @override
+  String get duaCategoryHome => 'Տուն';
+
+  @override
+  String get duaSourceBukhari => 'Բուխարի';
+
+  @override
+  String get duaSourceMuslim => 'մահմեդական';
+
+  @override
+  String get duaSourceAbuDawud => 'Աբու Դաուդ';
+
+  @override
+  String get duaSourceTirmidhi => 'Տիրմիդի';
+
+  @override
+  String get duaSourceAhmad => 'Ահմադ';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -1948,6 +1948,90 @@ abstract class AppLocalizations {
   /// **'Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.'**
   String get duaUnavailableBody;
 
+  /// No description provided for @duaCategoryQuranic.
+  ///
+  /// In en, this message translates to:
+  /// **'Quranic dua'**
+  String get duaCategoryQuranic;
+
+  /// No description provided for @duaCategoryMorningEvening.
+  ///
+  /// In en, this message translates to:
+  /// **'Morning & Evening'**
+  String get duaCategoryMorningEvening;
+
+  /// No description provided for @duaCategoryTasbih.
+  ///
+  /// In en, this message translates to:
+  /// **'Tasbih'**
+  String get duaCategoryTasbih;
+
+  /// No description provided for @duaCategoryProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Protection'**
+  String get duaCategoryProtection;
+
+  /// No description provided for @duaCategoryBeginning.
+  ///
+  /// In en, this message translates to:
+  /// **'Beginnings'**
+  String get duaCategoryBeginning;
+
+  /// No description provided for @duaCategorySleep.
+  ///
+  /// In en, this message translates to:
+  /// **'Sleep'**
+  String get duaCategorySleep;
+
+  /// No description provided for @duaCategoryFoodDrink.
+  ///
+  /// In en, this message translates to:
+  /// **'Food & Drink'**
+  String get duaCategoryFoodDrink;
+
+  /// No description provided for @duaCategoryForgiveness.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgiveness'**
+  String get duaCategoryForgiveness;
+
+  /// No description provided for @duaCategoryHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get duaCategoryHome;
+
+  /// No description provided for @duaSourceBukhari.
+  ///
+  /// In en, this message translates to:
+  /// **'Bukhari'**
+  String get duaSourceBukhari;
+
+  /// No description provided for @duaSourceMuslim.
+  ///
+  /// In en, this message translates to:
+  /// **'Muslim'**
+  String get duaSourceMuslim;
+
+  /// No description provided for @duaSourceAbuDawud.
+  ///
+  /// In en, this message translates to:
+  /// **'Abu Dawud'**
+  String get duaSourceAbuDawud;
+
+  /// No description provided for @duaSourceTirmidhi.
+  ///
+  /// In en, this message translates to:
+  /// **'Tirmidhi'**
+  String get duaSourceTirmidhi;
+
+  /// No description provided for @duaSourceAhmad.
+  ///
+  /// In en, this message translates to:
+  /// **'Ahmad'**
+  String get duaSourceAhmad;
+
   /// No description provided for @islamicEducation.
   ///
   /// In en, this message translates to:

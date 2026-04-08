@@ -796,6 +796,48 @@ class AppLocalizationsLa extends AppLocalizations {
       'Verificatur quotidie duas duas notae adhuc huic notae non synced. Coniunge ad fontem nubem ut duas ordientes duplices pro fallatico oneris non moveat.';
 
   @override
+  String get duaCategoryQuranic => 'Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Mane & Vespere';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Praesidium';
+
+  @override
+  String get duaCategoryBeginning => 'Initia';
+
+  @override
+  String get duaCategorySleep => 'Somnus';
+
+  @override
+  String get duaCategoryFoodDrink => 'Cibum & potum';
+
+  @override
+  String get duaCategoryForgiveness => 'remissio';
+
+  @override
+  String get duaCategoryHome => 'Home';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Musulmanus';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

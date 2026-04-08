@@ -797,6 +797,48 @@ class AppLocalizationsMy extends AppLocalizations {
       'အတည်ပြုထားသော နေ့စဉ် duas ကို ဤစက်ပစ္စည်းသို့ စင့်ခ်မလုပ်ရသေးပါ။ အတည်မပြုရသေးသော တုံ့ပြန်မှုအစား အရင်းအမြစ်မှ duas ကို တင်ရန် cloud အရင်းအမြစ်သို့ ချိတ်ဆက်ပါ။';
 
   @override
+  String get duaCategoryQuranic => 'Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'မနက်ပိုင်း ညပိုင်း';
+
+  @override
+  String get duaCategoryTasbih => 'တက်ဗိ';
+
+  @override
+  String get duaCategoryProtection => 'အကာအကွယ်';
+
+  @override
+  String get duaCategoryBeginning => 'အစပိုင်း';
+
+  @override
+  String get duaCategorySleep => 'အိပ်ပါ။';
+
+  @override
+  String get duaCategoryFoodDrink => 'အစားအသောက်နှင့် သောက်စရာ';
+
+  @override
+  String get duaCategoryForgiveness => 'ခွင့်လွှတ်ပါ။';
+
+  @override
+  String get duaCategoryHome => 'အိမ်';
+
+  @override
+  String get duaSourceBukhari => 'ဘူခါရီ';
+
+  @override
+  String get duaSourceMuslim => 'မွတ်ဆလင်';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'အဟ်မဒ်';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verified duas nɔ de yet",
-  "duaUnavailableBody": "Verified daily duas nɔ dɔn sink to dis divays yet. Konekt to di klawd sɔs fɔ lod sɔs duas instead ɔf wan unverified fallback."
+  "duaUnavailableBody": "Verified daily duas nɔ dɔn sink to dis divays yet. Konekt to di klawd sɔs fɔ lod sɔs duas instead ɔf wan unverified fallback.",
+  "duaCategoryQuranic": "Dua we de na di Kɔran",
+  "duaCategoryMorningEvening": "Mɔnin & Ivinin",
+  "duaCategoryTasbih": "Tasbih bin de",
+  "duaCategoryProtection": "Protɛkshɔn fɔ di pɔsin",
+  "duaCategoryBeginning": "Di biginin dɛn",
+  "duaCategorySleep": "Slip",
+  "duaCategoryFoodDrink": "Fɔd & Drink fɔ it",
+  "duaCategoryForgiveness": "Fɔ fɔgiv",
+  "duaCategoryHome": "Os",
+  "duaSourceBukhari": "Bukhari we de na di wɔl",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud bin de tɔk bɔt am",
+  "duaSourceTirmidhi": "Tirmidhi we de na di wɔl",
+  "duaSourceAhmad": "Ahmad bin tɔk bɔt"
 }

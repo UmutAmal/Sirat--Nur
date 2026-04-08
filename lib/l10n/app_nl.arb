@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Er zijn nog geen geverifieerde dua's beschikbaar",
-  "duaUnavailableBody": "Geverifieerde dagelijkse dua's zijn nog niet met dit apparaat gesynchroniseerd. Maak verbinding met de cloudbron om afkomstige dua's te laden in plaats van een niet-geverifieerde terugval."
+  "duaUnavailableBody": "Geverifieerde dagelijkse dua's zijn nog niet met dit apparaat gesynchroniseerd. Maak verbinding met de cloudbron om afkomstige dua's te laden in plaats van een niet-geverifieerde terugval.",
+  "duaCategoryQuranic": "Koranische dua",
+  "duaCategoryMorningEvening": "Ochtend & Avond",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Bescherming",
+  "duaCategoryBeginning": "Begin",
+  "duaCategorySleep": "Slaap",
+  "duaCategoryFoodDrink": "Eten en drinken",
+  "duaCategoryForgiveness": "Vergiffenis",
+  "duaCategoryHome": "Thuis",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Moslim",
+  "duaSourceAbuDawud": "Aboe Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Dua zilizothibitishwa bado hazipatikani",
-  "duaUnavailableBody": "Dua za kila siku zilizothibitishwa bado hazijasawazishwa kwenye kifaa hiki. Unganisha kwenye chanzo cha wingu ili kupakia dua zilizotoka badala ya njia mbadala ambayo haijathibitishwa."
+  "duaUnavailableBody": "Dua za kila siku zilizothibitishwa bado hazijasawazishwa kwenye kifaa hiki. Unganisha kwenye chanzo cha wingu ili kupakia dua zilizotoka badala ya njia mbadala ambayo haijathibitishwa.",
+  "duaCategoryQuranic": "Dua ya Quran",
+  "duaCategoryMorningEvening": "Asubuhi na Jioni",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Ulinzi",
+  "duaCategoryBeginning": "Mwanzo",
+  "duaCategorySleep": "Kulala",
+  "duaCategoryFoodDrink": "Chakula na Vinywaji",
+  "duaCategoryForgiveness": "Msamaha",
+  "duaCategoryHome": "Nyumbani",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muislamu",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Egiaztatutako duak ez daude eskuragarri oraindik",
-  "duaUnavailableBody": "Egiaztatutako eguneroko duak ez dira oraindik sinkronizatu gailu honekin. Konektatu hodeiko iturburura iturriko duak kargatzeko, egiaztatu gabeko ordezkapen baten ordez."
+  "duaUnavailableBody": "Egiaztatutako eguneroko duak ez dira oraindik sinkronizatu gailu honekin. Konektatu hodeiko iturburura iturriko duak kargatzeko, egiaztatu gabeko ordezkapen baten ordez.",
+  "duaCategoryQuranic": "Koranikoa dua",
+  "duaCategoryMorningEvening": "Goizez eta arratsaldez",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Babesa",
+  "duaCategoryBeginning": "Hastapenak",
+  "duaCategorySleep": "Lo egin",
+  "duaCategoryFoodDrink": "Janaria eta edaria",
+  "duaCategoryForgiveness": "Barkamena",
+  "duaCategoryHome": "Hasiera",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Musulmana",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

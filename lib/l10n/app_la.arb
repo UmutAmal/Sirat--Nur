@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verified duas non sunt available adhuc",
-  "duaUnavailableBody": "Verificatur quotidie duas duas notae adhuc huic notae non synced. Coniunge ad fontem nubem ut duas ordientes duplices pro fallatico oneris non moveat."
+  "duaUnavailableBody": "Verificatur quotidie duas duas notae adhuc huic notae non synced. Coniunge ad fontem nubem ut duas ordientes duplices pro fallatico oneris non moveat.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Mane & Vespere",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Praesidium",
+  "duaCategoryBeginning": "Initia",
+  "duaCategorySleep": "Somnus",
+  "duaCategoryFoodDrink": "Cibum & potum",
+  "duaCategoryForgiveness": "remissio",
+  "duaCategoryHome": "Home",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Musulmanus",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "सत्यापिताः दुआः अद्यापि न उपलभ्यन्ते",
-  "duaUnavailableBody": "सत्यापिताः दैनिकदुआः अद्यापि अस्मिन् यन्त्रे समन्वयिताः न सन्ति । असत्यापितस्य फॉलबैकस्य स्थाने स्रोतः दुआस् लोड् कर्तुं मेघस्रोतेन सह संयोजयन्तु ।"
+  "duaUnavailableBody": "सत्यापिताः दैनिकदुआः अद्यापि अस्मिन् यन्त्रे समन्वयिताः न सन्ति । असत्यापितस्य फॉलबैकस्य स्थाने स्रोतः दुआस् लोड् कर्तुं मेघस्रोतेन सह संयोजयन्तु ।",
+  "duaCategoryQuranic": "कुरान दुआ",
+  "duaCategoryMorningEvening": "प्रातः & सायं",
+  "duaCategoryTasbih": "तस्बिः",
+  "duaCategoryProtection": "रक्षणम्",
+  "duaCategoryBeginning": "आरम्भाः",
+  "duaCategorySleep": "शयनं करोतु",
+  "duaCategoryFoodDrink": "भोजन एवं पेय",
+  "duaCategoryForgiveness": "क्षमा",
+  "duaCategoryHome": "गृहम्‌",
+  "duaSourceBukhari": "बुखारी",
+  "duaSourceMuslim": "मुस्लिम",
+  "duaSourceAbuDawud": "अबू दाऊद",
+  "duaSourceTirmidhi": "तिरमिधि",
+  "duaSourceAhmad": "अहमद"
 }

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Οι επαληθευμένες ντους δεν είναι ακόμα διαθέσιμες",
-  "duaUnavailableBody": "Οι επαληθευμένες καθημερινές δέες δεν έχουν συγχρονιστεί ακόμα με αυτήν τη συσκευή. Συνδεθείτε στην πηγή cloud για να φορτώσετε duas που προέρχονται αντί για μη επαληθευμένη εναλλακτική."
+  "duaUnavailableBody": "Οι επαληθευμένες καθημερινές δέες δεν έχουν συγχρονιστεί ακόμα με αυτήν τη συσκευή. Συνδεθείτε στην πηγή cloud για να φορτώσετε duas που προέρχονται αντί για μη επαληθευμένη εναλλακτική.",
+  "duaCategoryQuranic": "Κορανική ντουέτα",
+  "duaCategoryMorningEvening": "Πρωί & Βράδυ",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Προστασία",
+  "duaCategoryBeginning": "Αρχές",
+  "duaCategorySleep": "Υπνος",
+  "duaCategoryFoodDrink": "Φαγητό & Ποτό",
+  "duaCategoryForgiveness": "Συγχώρεση",
+  "duaCategoryHome": "Σπίτι",
+  "duaSourceBukhari": "Μπουχάρι",
+  "duaSourceMuslim": "Μουσουλμάνος",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ο Αχμάντ"
 }

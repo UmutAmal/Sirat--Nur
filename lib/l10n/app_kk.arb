@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Расталған дұғалар әлі қол жетімді емес",
-  "duaUnavailableBody": "Расталған күнделікті дұғалар бұл құрылғыға әлі синхрондалмаған. Тексерілмеген қалпына келтірудің орнына бастапқы дуаларды жүктеу үшін бұлт көзіне қосылыңыз."
+  "duaUnavailableBody": "Расталған күнделікті дұғалар бұл құрылғыға әлі синхрондалмаған. Тексерілмеген қалпына келтірудің орнына бастапқы дуаларды жүктеу үшін бұлт көзіне қосылыңыз.",
+  "duaCategoryQuranic": "Құран дұғасы",
+  "duaCategoryMorningEvening": "Таңертең және кешке",
+  "duaCategoryTasbih": "Тасбих",
+  "duaCategoryProtection": "Қорғау",
+  "duaCategoryBeginning": "Басталуы",
+  "duaCategorySleep": "Ұйқы",
+  "duaCategoryFoodDrink": "Тамақ және сусын",
+  "duaCategoryForgiveness": "Кешірім",
+  "duaCategoryHome": "Үй",
+  "duaSourceBukhari": "Бұхари",
+  "duaSourceMuslim": "мұсылман",
+  "duaSourceAbuDawud": "Әбу Дәуіт",
+  "duaSourceTirmidhi": "Тирмизи",
+  "duaSourceAhmad": "Ахмад"
 }

@@ -797,6 +797,48 @@ class AppLocalizationsAr extends AppLocalizations {
       'لم تتم مزامنة الأدعية اليومية التي تم التحقق منها مع هذا الجهاز حتى الآن. اتصل بالمصدر السحابي لتحميل الأدعية المصدرية بدلاً من الإجراء الاحتياطي الذي لم يتم التحقق منه.';
 
   @override
+  String get duaCategoryQuranic => 'الدعاء القرآني';
+
+  @override
+  String get duaCategoryMorningEvening => 'الصباح والمساء';
+
+  @override
+  String get duaCategoryTasbih => 'التسبيح';
+
+  @override
+  String get duaCategoryProtection => 'حماية';
+
+  @override
+  String get duaCategoryBeginning => 'البدايات';
+
+  @override
+  String get duaCategorySleep => 'ينام';
+
+  @override
+  String get duaCategoryFoodDrink => 'الطعام والشراب';
+
+  @override
+  String get duaCategoryForgiveness => 'مغفرة';
+
+  @override
+  String get duaCategoryHome => 'بيت';
+
+  @override
+  String get duaSourceBukhari => 'البخاري';
+
+  @override
+  String get duaSourceMuslim => 'مسلم';
+
+  @override
+  String get duaSourceAbuDawud => 'ابو داود';
+
+  @override
+  String get duaSourceTirmidhi => 'الترمذي';
+
+  @override
+  String get duaSourceAhmad => 'احمد';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

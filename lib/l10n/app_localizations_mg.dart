@@ -796,6 +796,48 @@ class AppLocalizationsMg extends AppLocalizations {
       'Ny duas isan\'andro voamarina dia tsy mbola narindra tamin\'ity fitaovana ity. Ampifandraiso amin\'ny loharanon-drahona mba hametahana ny roa avy amin\'ny loharano fa tsy fiverenana tsy voamarina.';
 
   @override
+  String get duaCategoryQuranic => 'Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Maraina & hariva';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'MIARO';
+
+  @override
+  String get duaCategoryBeginning => 'fiandohana';
+
+  @override
+  String get duaCategorySleep => 'torimaso';
+
+  @override
+  String get duaCategoryFoodDrink => 'Sakafo sy zava-pisotro';
+
+  @override
+  String get duaCategoryForgiveness => 'Famelan-keloka';
+
+  @override
+  String get duaCategoryHome => 'an-trano';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'MIOZOLOMANA';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

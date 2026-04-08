@@ -797,6 +797,48 @@ class AppLocalizationsSq extends AppLocalizations {
       'Duat e verifikuara ditore nuk janë sinkronizuar ende me këtë pajisje. Lidhu me burimin cloud për të ngarkuar duatë me burim në vend të një kthimi të paverifikuar.';
 
   @override
+  String get duaCategoryQuranic => 'dua Kur\'anore';
+
+  @override
+  String get duaCategoryMorningEvening => 'Mëngjes & Mbrëmje';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Mbrojtja';
+
+  @override
+  String get duaCategoryBeginning => 'Fillimet';
+
+  @override
+  String get duaCategorySleep => 'Flini';
+
+  @override
+  String get duaCategoryFoodDrink => 'Ushqim & Pije';
+
+  @override
+  String get duaCategoryForgiveness => 'falje';
+
+  @override
+  String get duaCategoryHome => 'Shtëpi';
+
+  @override
+  String get duaSourceBukhari => 'Buhariu';
+
+  @override
+  String get duaSourceMuslim => 'musliman';
+
+  @override
+  String get duaSourceAbuDawud => 'Ebu Davudi';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhiu';
+
+  @override
+  String get duaSourceAhmad => 'Ahmedi';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verificerede duas er ikke tilgængelige endnu",
-  "duaUnavailableBody": "Bekræftede daglige duas er ikke blevet synkroniseret til denne enhed endnu. Opret forbindelse til cloud-kilden for at indlæse duas fra kilder i stedet for en ubekræftet fallback."
+  "duaUnavailableBody": "Bekræftede daglige duas er ikke blevet synkroniseret til denne enhed endnu. Opret forbindelse til cloud-kilden for at indlæse duas fra kilder i stedet for en ubekræftet fallback.",
+  "duaCategoryQuranic": "Koranens dua",
+  "duaCategoryMorningEvening": "Morgen & aften",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Beskyttelse",
+  "duaCategoryBeginning": "Begyndelser",
+  "duaCategorySleep": "Sove",
+  "duaCategoryFoodDrink": "Mad & drikke",
+  "duaCategoryForgiveness": "Tilgivelse",
+  "duaCategoryHome": "Hjem",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

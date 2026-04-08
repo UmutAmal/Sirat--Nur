@@ -799,6 +799,48 @@ class AppLocalizationsGd extends AppLocalizations {
       'Cha deach dus làitheil dearbhte a shioncronachadh ris an inneal seo fhathast. Ceangail ris an stòr sgòthan gus duas a luchdachadh sìos an àite tuiteam air ais gun dearbhadh.';
 
   @override
+  String get duaCategoryQuranic => 'Dà Quranic';
+
+  @override
+  String get duaCategoryMorningEvening => 'Madainn & Feasgar';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Dìon';
+
+  @override
+  String get duaCategoryBeginning => 'Toiseachan';
+
+  @override
+  String get duaCategorySleep => 'Cadal';
+
+  @override
+  String get duaCategoryFoodDrink => 'Biadh & Deoch';
+
+  @override
+  String get duaCategoryForgiveness => 'Maitheanas';
+
+  @override
+  String get duaCategoryHome => 'Dhachaigh';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslamach';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dhuibh';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

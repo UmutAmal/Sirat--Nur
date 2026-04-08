@@ -796,6 +796,48 @@ class AppLocalizationsSn extends AppLocalizations {
       'Madua emazuva ese anosimbiswa haasati awiriraniswa pamudziyo uyu. Batanidza kune iyo cloud source kuti uise sourced duas pachinzvimbo chefour unverified fallback.';
 
   @override
+  String get duaCategoryQuranic => 'Quran dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Mangwanani & Manheru';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Dziviriro';
+
+  @override
+  String get duaCategoryBeginning => 'Mavambo';
+
+  @override
+  String get duaCategorySleep => 'Rara';
+
+  @override
+  String get duaCategoryFoodDrink => 'Zvokudya Nekunwa';
+
+  @override
+  String get duaCategoryForgiveness => 'Kukanganwira';
+
+  @override
+  String get duaCategoryHome => 'Kumba';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -796,6 +796,48 @@ class AppLocalizationsUr extends AppLocalizations {
       'تصدیق شدہ روزانہ کی دعاؤں کو ابھی تک اس ڈیوائس سے ہم آہنگ نہیں کیا گیا ہے۔ غیر تصدیق شدہ فال بیک کی بجائے سورس شدہ دعاؤں کو لوڈ کرنے کے لیے کلاؤڈ سورس سے جڑیں۔';
 
   @override
+  String get duaCategoryQuranic => 'قرآنی دعا';
+
+  @override
+  String get duaCategoryMorningEvening => 'صبح و شام';
+
+  @override
+  String get duaCategoryTasbih => 'تسبیح';
+
+  @override
+  String get duaCategoryProtection => 'تحفظ';
+
+  @override
+  String get duaCategoryBeginning => 'آغاز';
+
+  @override
+  String get duaCategorySleep => 'سونا';
+
+  @override
+  String get duaCategoryFoodDrink => 'کھانا اور پینا';
+
+  @override
+  String get duaCategoryForgiveness => 'بخشش';
+
+  @override
+  String get duaCategoryHome => 'گھر';
+
+  @override
+  String get duaSourceBukhari => 'بخاری';
+
+  @override
+  String get duaSourceMuslim => 'مسلمان';
+
+  @override
+  String get duaSourceAbuDawud => 'ابوداؤد';
+
+  @override
+  String get duaSourceTirmidhi => 'ترمذی ۔';
+
+  @override
+  String get duaSourceAhmad => 'احمد';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

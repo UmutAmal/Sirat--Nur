@@ -798,6 +798,48 @@ class AppLocalizationsEl extends AppLocalizations {
       'Οι επαληθευμένες καθημερινές δέες δεν έχουν συγχρονιστεί ακόμα με αυτήν τη συσκευή. Συνδεθείτε στην πηγή cloud για να φορτώσετε duas που προέρχονται αντί για μη επαληθευμένη εναλλακτική.';
 
   @override
+  String get duaCategoryQuranic => 'Κορανική ντουέτα';
+
+  @override
+  String get duaCategoryMorningEvening => 'Πρωί & Βράδυ';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Προστασία';
+
+  @override
+  String get duaCategoryBeginning => 'Αρχές';
+
+  @override
+  String get duaCategorySleep => 'Υπνος';
+
+  @override
+  String get duaCategoryFoodDrink => 'Φαγητό & Ποτό';
+
+  @override
+  String get duaCategoryForgiveness => 'Συγχώρεση';
+
+  @override
+  String get duaCategoryHome => 'Σπίτι';
+
+  @override
+  String get duaSourceBukhari => 'Μπουχάρι';
+
+  @override
+  String get duaSourceMuslim => 'Μουσουλμάνος';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ο Αχμάντ';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

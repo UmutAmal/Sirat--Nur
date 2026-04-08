@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Saan pay a magun-od dagiti verified duas",
-  "duaUnavailableBody": "Dagiti naberipikado nga inaldaw a dua ket saan pay a nai-sync iti daytoy nga alikamen. Konektaen ti gubuayan ti ulep tapno maikarga dagiti nagtaudan a duas imbes a ti saan a naberipikado a fallback."
+  "duaUnavailableBody": "Dagiti naberipikado nga inaldaw a dua ket saan pay a nai-sync iti daytoy nga alikamen. Konektaen ti gubuayan ti ulep tapno maikarga dagiti nagtaudan a duas imbes a ti saan a naberipikado a fallback.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Agsapa & Malem",
+  "duaCategoryTasbih": "Tasbih nga",
+  "duaCategoryProtection": "Pannakasalaknib",
+  "duaCategoryBeginning": "Dagiti pangrugian",
+  "duaCategorySleep": "Maturog",
+  "duaCategoryFoodDrink": "Taraon & Inumen",
+  "duaCategoryForgiveness": "Pammakawan",
+  "duaCategoryHome": "Balay",
+  "duaSourceBukhari": "Bukhari nga",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud ni Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi nga",
+  "duaSourceAhmad": "Ahmad ni Ahmad"
 }

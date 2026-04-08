@@ -798,6 +798,48 @@ class AppLocalizationsKa extends AppLocalizations {
       'დადასტურებული ყოველდღიური დუაები ჯერ არ არის სინქრონიზებული ამ მოწყობილობასთან. დაუკავშირდით ღრუბლოვან წყაროს, რომ ჩატვირთოთ მოპოვებული დუები დაუდასტურებელი სარეზერვო ნაცვლად.';
 
   @override
+  String get duaCategoryQuranic => 'ყურანის დუა';
+
+  @override
+  String get duaCategoryMorningEvening => 'დილა და საღამო';
+
+  @override
+  String get duaCategoryTasbih => 'ტასბიჰ';
+
+  @override
+  String get duaCategoryProtection => 'დაცვა';
+
+  @override
+  String get duaCategoryBeginning => 'საწყისები';
+
+  @override
+  String get duaCategorySleep => 'დაიძინე';
+
+  @override
+  String get duaCategoryFoodDrink => 'საკვები და სასმელი';
+
+  @override
+  String get duaCategoryForgiveness => 'პატიება';
+
+  @override
+  String get duaCategoryHome => 'მთავარი';
+
+  @override
+  String get duaSourceBukhari => 'ბუხარი';
+
+  @override
+  String get duaSourceMuslim => 'მუსლიმი';
+
+  @override
+  String get duaSourceAbuDawud => 'აბუ დაუდი';
+
+  @override
+  String get duaSourceTirmidhi => 'ტირმიდი';
+
+  @override
+  String get duaSourceAhmad => 'აჰმადი';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

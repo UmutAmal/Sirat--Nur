@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "পৰীক্ষিত duas এতিয়াও উপলব্ধ নহয়",
-  "duaUnavailableBody": "পৰীক্ষা কৰা দৈনিক duas এই ডিভাইচত এতিয়াও সিঙ্ক কৰা হোৱা নাই। এটা অসত্যাপন কৰা ফ'লবেকৰ পৰিবৰ্তে উৎস কৰা দুয়াসমূহ লোড কৰিবলে ক্লাউড উৎসৰ সৈতে সংযোগ কৰক।"
+  "duaUnavailableBody": "পৰীক্ষা কৰা দৈনিক duas এই ডিভাইচত এতিয়াও সিঙ্ক কৰা হোৱা নাই। এটা অসত্যাপন কৰা ফ'লবেকৰ পৰিবৰ্তে উৎস কৰা দুয়াসমূহ লোড কৰিবলে ক্লাউড উৎসৰ সৈতে সংযোগ কৰক।",
+  "duaCategoryQuranic": "কোৰআনৰ দুআ",
+  "duaCategoryMorningEvening": "ৰাতিপুৱা আৰু সন্ধিয়া",
+  "duaCategoryTasbih": "তছবিহ",
+  "duaCategoryProtection": "সুৰক্ষা",
+  "duaCategoryBeginning": "আৰম্ভণি",
+  "duaCategorySleep": "টোপনি",
+  "duaCategoryFoodDrink": "খাদ্য আৰু পানীয়",
+  "duaCategoryForgiveness": "ক্ষমা",
+  "duaCategoryHome": "গৃহ",
+  "duaSourceBukhari": "বুখাৰী",
+  "duaSourceMuslim": "মুছলমান",
+  "duaSourceAbuDawud": "আবু দাউদ",
+  "duaSourceTirmidhi": "তিৰমিধি",
+  "duaSourceAhmad": "আহমদ"
 }

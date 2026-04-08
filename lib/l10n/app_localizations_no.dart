@@ -797,6 +797,48 @@ class AppLocalizationsNo extends AppLocalizations {
       'Verifiserte daglige duas er ikke synkronisert til denne enheten ennå. Koble til skykilden for å laste inn hentede duas i stedet for en ubekreftet reserve.';
 
   @override
+  String get duaCategoryQuranic => 'Koranisk dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Morgen og kveld';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Beskyttelse';
+
+  @override
+  String get duaCategoryBeginning => 'Begynnelser';
+
+  @override
+  String get duaCategorySleep => 'Sove';
+
+  @override
+  String get duaCategoryFoodDrink => 'Mat og drikke';
+
+  @override
+  String get duaCategoryForgiveness => 'Tilgivelse';
+
+  @override
+  String get duaCategoryHome => 'Hjem';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

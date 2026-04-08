@@ -797,6 +797,48 @@ class AppLocalizationsOr extends AppLocalizations {
       'ଯାଞ୍ଚ ହୋଇଥିବା ଦ daily ନିକ ଯୁଗଳ ଏପର୍ଯ୍ୟନ୍ତ ଏହି ଡିଭାଇସ୍ ସହିତ ସିଙ୍କ ହୋଇନାହିଁ | ଏକ ଯାଞ୍ଚ ହୋଇନଥିବା ଫଲବ୍ୟାକ୍ ପରିବର୍ତ୍ତେ ସୋର୍ସଡ୍ ଡୁଆସ୍ ଲୋଡ୍ କରିବାକୁ କ୍ଲାଉଡ୍ ଉତ୍ସ ସହିତ ସଂଯୋଗ କରନ୍ତୁ |';
 
   @override
+  String get duaCategoryQuranic => 'କୁରାନୀୟ ଦୁଆ |';
+
+  @override
+  String get duaCategoryMorningEvening => 'ସକାଳ ଏବଂ ସନ୍ଧ୍ୟା |';
+
+  @override
+  String get duaCategoryTasbih => 'ତସବିହ |';
+
+  @override
+  String get duaCategoryProtection => 'ସୁରକ୍ଷା';
+
+  @override
+  String get duaCategoryBeginning => 'ଆରମ୍ଭ';
+
+  @override
+  String get duaCategorySleep => 'ଶୋଇବା |';
+
+  @override
+  String get duaCategoryFoodDrink => 'ଖାଦ୍ୟ ଏବଂ ପାନୀୟ';
+
+  @override
+  String get duaCategoryForgiveness => 'କ୍ଷମା';
+
+  @override
+  String get duaCategoryHome => 'ଘର';
+
+  @override
+  String get duaSourceBukhari => 'ବୁଖାରୀ |';
+
+  @override
+  String get duaSourceMuslim => 'ମୁସଲମାନ';
+
+  @override
+  String get duaSourceAbuDawud => 'ଆବୁ ଦ ud ଦ';
+
+  @override
+  String get duaSourceTirmidhi => 'ତିରମିଡି';
+
+  @override
+  String get duaSourceAhmad => 'ଅହମ୍ମଦ';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

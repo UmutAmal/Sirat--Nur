@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Li-dua tse netefalitsoeng ha li so fumanehe",
-  "duaUnavailableBody": "Li-dua tse netefalitsoeng tsa letsatsi le letsatsi ha li so hokahanngoa sesebelisoa sena. Hokela mohloling oa cloud ho kenya li-duas ho e-na le mokhoa o sa netefatsoang."
+  "duaUnavailableBody": "Li-dua tse netefalitsoeng tsa letsatsi le letsatsi ha li so hokahanngoa sesebelisoa sena. Hokela mohloling oa cloud ho kenya li-duas ho e-na le mokhoa o sa netefatsoang.",
+  "duaCategoryQuranic": "Dua ea Quran",
+  "duaCategoryMorningEvening": "Hoseng le Mantsiboea",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Tshireletso",
+  "duaCategoryBeginning": "Qalo",
+  "duaCategorySleep": "Robala",
+  "duaCategoryFoodDrink": "Lijo & Lino",
+  "duaCategoryForgiveness": "Tšoarelo",
+  "duaCategoryHome": "Lehae",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Mamosleme",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

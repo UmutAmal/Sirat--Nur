@@ -796,6 +796,48 @@ class AppLocalizationsNe extends AppLocalizations {
       'प्रमाणित दैनिक दुआहरू अझै यस यन्त्रमा सिंक गरिएको छैन। अप्रमाणित फलब्याकको सट्टा सोर्स गरिएको डुआ लोड गर्न क्लाउड स्रोतमा जडान गर्नुहोस्।';
 
   @override
+  String get duaCategoryQuranic => 'कुरानिक दुआ';
+
+  @override
+  String get duaCategoryMorningEvening => 'बिहान र साँझ';
+
+  @override
+  String get duaCategoryTasbih => 'तस्बिह';
+
+  @override
+  String get duaCategoryProtection => 'संरक्षण';
+
+  @override
+  String get duaCategoryBeginning => 'शुरुवात';
+
+  @override
+  String get duaCategorySleep => 'सुत्नुहोस्';
+
+  @override
+  String get duaCategoryFoodDrink => 'खाना र पेय';
+
+  @override
+  String get duaCategoryForgiveness => 'क्षमा';
+
+  @override
+  String get duaCategoryHome => 'घर';
+
+  @override
+  String get duaSourceBukhari => 'बुखारी';
+
+  @override
+  String get duaSourceMuslim => 'मुस्लिम';
+
+  @override
+  String get duaSourceAbuDawud => 'अबु दाउद';
+
+  @override
+  String get duaSourceTirmidhi => 'तिर्मिधि';
+
+  @override
+  String get duaSourceAhmad => 'अहमद';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

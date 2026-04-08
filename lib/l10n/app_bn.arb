@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "যাচাইকৃত দুআ এখনো পাওয়া যায় না",
-  "duaUnavailableBody": "যাচাই করা দৈনিক ডুয়াস এখনও এই ডিভাইসে সিঙ্ক করা হয়নি। অযাচাইকৃত ফলব্যাকের পরিবর্তে সোর্সড ডুয়াস লোড করতে ক্লাউড সোর্সের সাথে সংযোগ করুন৷"
+  "duaUnavailableBody": "যাচাই করা দৈনিক ডুয়াস এখনও এই ডিভাইসে সিঙ্ক করা হয়নি। অযাচাইকৃত ফলব্যাকের পরিবর্তে সোর্সড ডুয়াস লোড করতে ক্লাউড সোর্সের সাথে সংযোগ করুন৷",
+  "duaCategoryQuranic": "কুরআনী দুআ",
+  "duaCategoryMorningEvening": "সকাল ও সন্ধ্যা",
+  "duaCategoryTasbih": "তসবিহ",
+  "duaCategoryProtection": "সুরক্ষা",
+  "duaCategoryBeginning": "শুরু",
+  "duaCategorySleep": "ঘুম",
+  "duaCategoryFoodDrink": "খাদ্য ও পানীয়",
+  "duaCategoryForgiveness": "ক্ষমা",
+  "duaCategoryHome": "বাড়ি",
+  "duaSourceBukhari": "বুখারী",
+  "duaSourceMuslim": "মুসলিম",
+  "duaSourceAbuDawud": "আবু দাউদ",
+  "duaSourceTirmidhi": "তিরমিযী",
+  "duaSourceAhmad": "আহমদ"
 }

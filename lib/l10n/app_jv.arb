@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Duas sing diverifikasi durung kasedhiya",
-  "duaUnavailableBody": "Duas saben dina sing wis diverifikasi durung diselarasake karo piranti iki. Sambungake menyang sumber maya kanggo mbukak sumber sumber tinimbang mundur sing ora diverifikasi."
+  "duaUnavailableBody": "Duas saben dina sing wis diverifikasi durung diselarasake karo piranti iki. Sambungake menyang sumber maya kanggo mbukak sumber sumber tinimbang mundur sing ora diverifikasi.",
+  "duaCategoryQuranic": "Qur'an do'a",
+  "duaCategoryMorningEvening": "Esuk & Sore",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "pangayoman",
+  "duaCategoryBeginning": "Wiwitan",
+  "duaCategorySleep": "Turu",
+  "duaCategoryFoodDrink": "Panganan & Ombenan",
+  "duaCategoryForgiveness": "pangapunten",
+  "duaCategoryHome": "Ngarep",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

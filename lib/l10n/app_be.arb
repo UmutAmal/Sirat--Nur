@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Правераныя дуа пакуль недаступныя",
-  "duaUnavailableBody": "Правераныя штодзённыя дуа яшчэ не сінхранізаваны з гэтай прыладай. Падключыцеся да воблачнай крыніцы, каб загрузіць дуа з крыніцы замест неправеранага запаснога варыянту."
+  "duaUnavailableBody": "Правераныя штодзённыя дуа яшчэ не сінхранізаваны з гэтай прыладай. Падключыцеся да воблачнай крыніцы, каб загрузіць дуа з крыніцы замест неправеранага запаснога варыянту.",
+  "duaCategoryQuranic": "Каранічная дуа",
+  "duaCategoryMorningEvening": "Раніцай і вечарам",
+  "duaCategoryTasbih": "тасбіх",
+  "duaCategoryProtection": "Ахова",
+  "duaCategoryBeginning": "Пачаткі",
+  "duaCategorySleep": "спаць",
+  "duaCategoryFoodDrink": "Ежа і напоі",
+  "duaCategoryForgiveness": "Дараванне",
+  "duaCategoryHome": "дадому",
+  "duaSourceBukhari": "Бухары",
+  "duaSourceMuslim": "мусульманскі",
+  "duaSourceAbuDawud": "Абу Дауд",
+  "duaSourceTirmidhi": "Тырмізі",
+  "duaSourceAhmad": "Ахмад"
 }

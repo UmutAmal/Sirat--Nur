@@ -796,6 +796,48 @@ class AppLocalizationsPa extends AppLocalizations {
       'ਤਸਦੀਕ ਕੀਤੇ ਰੋਜ਼ਾਨਾ ਦੁਆਵਾਂ ਨੂੰ ਅਜੇ ਤੱਕ ਇਸ ਡਿਵਾਈਸ ਨਾਲ ਸਿੰਕ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ। ਗੈਰ-ਪ੍ਰਮਾਣਿਤ ਫਾਲਬੈਕ ਦੀ ਬਜਾਏ ਸਰੋਤ ਕੀਤੇ ਡੁਆਸ ਨੂੰ ਲੋਡ ਕਰਨ ਲਈ ਕਲਾਉਡ ਸਰੋਤ ਨਾਲ ਕਨੈਕਟ ਕਰੋ।';
 
   @override
+  String get duaCategoryQuranic => 'ਕੁਰਾਨ ਦੀ ਦੁਆ';
+
+  @override
+  String get duaCategoryMorningEvening => 'ਸਵੇਰ ਅਤੇ ਸ਼ਾਮ';
+
+  @override
+  String get duaCategoryTasbih => 'ਤਸਬੀਹ';
+
+  @override
+  String get duaCategoryProtection => 'ਸੁਰੱਖਿਆ';
+
+  @override
+  String get duaCategoryBeginning => 'ਸ਼ੁਰੂਆਤ';
+
+  @override
+  String get duaCategorySleep => 'ਸਲੀਪ';
+
+  @override
+  String get duaCategoryFoodDrink => 'ਭੋਜਨ ਅਤੇ ਪੀਣ';
+
+  @override
+  String get duaCategoryForgiveness => 'ਮਾਫ਼ੀ';
+
+  @override
+  String get duaCategoryHome => 'ਘਰ';
+
+  @override
+  String get duaSourceBukhari => 'ਬੁਖਾਰੀ';
+
+  @override
+  String get duaSourceMuslim => 'ਮੁਸਲਮਾਨ';
+
+  @override
+  String get duaSourceAbuDawud => 'ਅਬੂ ਦਾਊਦ';
+
+  @override
+  String get duaSourceTirmidhi => 'ਤਿਰਮਿਧੀ';
+
+  @override
+  String get duaSourceAhmad => 'ਅਹਿਮਦ';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

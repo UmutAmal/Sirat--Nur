@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verifizierte Duas sind noch nicht verfügbar",
-  "duaUnavailableBody": "Verifizierte tägliche Duas wurden noch nicht mit diesem Gerät synchronisiert. Stellen Sie eine Verbindung zur Cloud-Quelle her, um Quell-Duas anstelle eines nicht verifizierten Fallbacks zu laden."
+  "duaUnavailableBody": "Verifizierte tägliche Duas wurden noch nicht mit diesem Gerät synchronisiert. Stellen Sie eine Verbindung zur Cloud-Quelle her, um Quell-Duas anstelle eines nicht verifizierten Fallbacks zu laden.",
+  "duaCategoryQuranic": "Koran-Dua",
+  "duaCategoryMorningEvening": "Morgens und abends",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Schutz",
+  "duaCategoryBeginning": "Anfänge",
+  "duaCategorySleep": "Schlafen",
+  "duaCategoryFoodDrink": "Essen & Trinken",
+  "duaCategoryForgiveness": "Vergebung",
+  "duaCategoryHome": "Heim",
+  "duaSourceBukhari": "Buchari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

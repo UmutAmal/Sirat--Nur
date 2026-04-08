@@ -796,6 +796,48 @@ class AppLocalizationsLg extends AppLocalizations {
       'Verified daily duas tezinnaba kukwatagana na kyuma kino. Yunga ku nsibuko y\'ekire okutikka duas ezisibuka mu kifo ky\'okugwa emabega okutakakasiddwa.';
 
   @override
+  String get duaCategoryQuranic => 'Dua ya Quran';
+
+  @override
+  String get duaCategoryMorningEvening => 'Enkya & Akawungeezi';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Obukuumi';
+
+  @override
+  String get duaCategoryBeginning => 'Entandikwa';
+
+  @override
+  String get duaCategorySleep => 'Otulo';
+
+  @override
+  String get duaCategoryFoodDrink => 'Emmere & Ebyokunywa';
+
+  @override
+  String get duaCategoryForgiveness => 'Okusonyiwa';
+
+  @override
+  String get duaCategoryHome => 'Ewaka';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Omusiraamu';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

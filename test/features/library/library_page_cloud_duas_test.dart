@@ -114,22 +114,25 @@ void main() {
     }
   });
 
-  testWidgets('LibraryPage disables daily duas when verified data is missing', (
+  testWidgets('LibraryPage shows verified Quran fallback when cloud duas are empty', (
     tester,
   ) async {
     final en = lookupAppLocalizations(const Locale('en'));
 
     try {
-      await pumpLibraryPage(tester, duas: const []);
+      await pumpLibraryPage(tester, duas: resolveCloudDuas(const []));
 
-      expect(find.text(en.duaUnavailableTitle), findsOneWidget);
+      expect(find.text(en.essentialDuas('8')), findsOneWidget);
+      expect(find.text(en.duaUnavailableTitle), findsNothing);
 
       await tester.tap(find.text(en.dailyDuas).first);
       await tester.pumpAndSettle();
 
       expect(tester.takeException(), isNull);
-      expect(find.byType(LibraryPage), findsOneWidget);
-      expect(find.text(en.duaUnavailableTitle), findsOneWidget);
+      expect(find.textContaining('وَمِنْهُم مَّن يَقُولُ رَبَّنَآ'), findsOneWidget);
+      expect(find.text(en.duaCategoryQuranic), findsWidgets);
+      expect(find.text('${en.quran} 2:201'), findsOneWidget);
+      expect(find.text(en.duaUnavailableBody), findsNothing);
     } finally {
       await disposeLibraryPage(tester);
     }

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "検証済みのデュアはまだ利用できません",
-  "duaUnavailableBody": "毎日のデュアがまだこのデバイスに同期されていないことを確認しました。クラウド ソースに接続して、未検証のフォールバックではなく、ソースされたデュアをロードします。"
+  "duaUnavailableBody": "毎日のデュアがまだこのデバイスに同期されていないことを確認しました。クラウド ソースに接続して、未検証のフォールバックではなく、ソースされたデュアをロードします。",
+  "duaCategoryQuranic": "コーランのドゥア",
+  "duaCategoryMorningEvening": "朝と夕方",
+  "duaCategoryTasbih": "タスビ",
+  "duaCategoryProtection": "保護",
+  "duaCategoryBeginning": "始まり",
+  "duaCategorySleep": "寝る",
+  "duaCategoryFoodDrink": "食べ物と飲み物",
+  "duaCategoryForgiveness": "許し",
+  "duaCategoryHome": "家",
+  "duaSourceBukhari": "ブハーリ",
+  "duaSourceMuslim": "イスラム教徒",
+  "duaSourceAbuDawud": "アブ・ダウド",
+  "duaSourceTirmidhi": "ティルミディ",
+  "duaSourceAhmad": "アフマド"
 }

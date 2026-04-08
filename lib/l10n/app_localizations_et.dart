@@ -796,6 +796,48 @@ class AppLocalizationsEt extends AppLocalizations {
       'Kinnitatud igapäevaseid duasid pole veel selle seadmega sünkroonitud. Ühendage pilveallikaga, et laadida lähtestatud duasid kinnitamata varu asemel.';
 
   @override
+  String get duaCategoryQuranic => 'Koraani dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Hommik & Õhtu';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Kaitse';
+
+  @override
+  String get duaCategoryBeginning => 'Algused';
+
+  @override
+  String get duaCategorySleep => 'Magama';
+
+  @override
+  String get duaCategoryFoodDrink => 'Söök ja jook';
+
+  @override
+  String get duaCategoryForgiveness => 'Andestus';
+
+  @override
+  String get duaCategoryHome => 'Kodu';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'moslem';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

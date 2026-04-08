@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "सत्यापन दुआ अभी तक उपलब्ध नइखे",
-  "duaUnavailableBody": "सत्यापन कइल गइल दैनिक दुआ अबहीं ले एह डिवाइस पर सिंक नइखे भइल. असत्यापित फॉलबैक के बजाय सोर्स कइल दुआ लोड करे खातिर क्लाउड स्रोत से कनेक्ट होखीं।"
+  "duaUnavailableBody": "सत्यापन कइल गइल दैनिक दुआ अबहीं ले एह डिवाइस पर सिंक नइखे भइल. असत्यापित फॉलबैक के बजाय सोर्स कइल दुआ लोड करे खातिर क्लाउड स्रोत से कनेक्ट होखीं।",
+  "duaCategoryQuranic": "कुरान के दुआ",
+  "duaCategoryMorningEvening": "सुबह & शाम के समय",
+  "duaCategoryTasbih": "तसबीह के बा",
+  "duaCategoryProtection": "संरक्षण के काम होला",
+  "duaCategoryBeginning": "शुरुआत भइल बा",
+  "duaCategorySleep": "सुतल",
+  "duaCategoryFoodDrink": "खाए-पीए के सामान",
+  "duaCategoryForgiveness": "माफी के बात बा",
+  "duaCategoryHome": "घर",
+  "duaSourceBukhari": "बुखारी के बा",
+  "duaSourceMuslim": "मुसलमान के ह",
+  "duaSourceAbuDawud": "अबू दाऊद के ह",
+  "duaSourceTirmidhi": "तिरमिढ़ी के बा",
+  "duaSourceAhmad": "अहमद के ह"
 }

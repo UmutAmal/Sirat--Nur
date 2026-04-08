@@ -796,6 +796,48 @@ class AppLocalizationsQu extends AppLocalizations {
       'Chiqaqchasqa sapa p\'unchaw duas manaraq kay dispositivoman tinkisqachu. Puyu pukyuta tinkiy pukyuta duakuna karganapaq mana chiqaqchasqa urmaymantaqa.';
 
   @override
+  String get duaCategoryQuranic => 'Quranmanta dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Paqarin & Chisi';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Amachay';
+
+  @override
+  String get duaCategoryBeginning => 'Qallariykuna';
+
+  @override
+  String get duaCategorySleep => 'Puñuy';
+
+  @override
+  String get duaCategoryFoodDrink => 'Mikhuy & Upyana';
+
+  @override
+  String get duaCategoryForgiveness => 'Pampachay';
+
+  @override
+  String get duaCategoryHome => 'Wasi';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari sutiyuq runa';
+
+  @override
+  String get duaSourceMuslim => 'Musulmán';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud sutiyuq runa';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad sutiyuq runa';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

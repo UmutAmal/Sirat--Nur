@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Iiduas eziqinisekisiweyo azikafumaneki",
-  "duaUnavailableBody": "Iiduas zemihla ngemihla eziqinisekisiweyo ayikadityaniswanga kwesi sixhobo okwangoku. Qhagamshela kumthombo welifu ukuze ulayishe i-duas efunyenweyo endaweni yokubuyela umva okungaqinisekanga."
+  "duaUnavailableBody": "Iiduas zemihla ngemihla eziqinisekisiweyo ayikadityaniswanga kwesi sixhobo okwangoku. Qhagamshela kumthombo welifu ukuze ulayishe i-duas efunyenweyo endaweni yokubuyela umva okungaqinisekanga.",
+  "duaCategoryQuranic": "I-Quranic dua",
+  "duaCategoryMorningEvening": "Ekuseni nangokuhlwa",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Ukhuseleko",
+  "duaCategoryBeginning": "Iziqalo",
+  "duaCategorySleep": "Lala",
+  "duaCategoryFoodDrink": "Ukutya & Iziselo",
+  "duaCategoryForgiveness": "Uxolelo",
+  "duaCategoryHome": "Ekhaya",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "UmSilamsi",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "UTirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

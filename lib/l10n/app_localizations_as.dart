@@ -797,6 +797,48 @@ class AppLocalizationsAs extends AppLocalizations {
       'পৰীক্ষা কৰা দৈনিক duas এই ডিভাইচত এতিয়াও সিঙ্ক কৰা হোৱা নাই। এটা অসত্যাপন কৰা ফ\'লবেকৰ পৰিবৰ্তে উৎস কৰা দুয়াসমূহ লোড কৰিবলে ক্লাউড উৎসৰ সৈতে সংযোগ কৰক।';
 
   @override
+  String get duaCategoryQuranic => 'কোৰআনৰ দুআ';
+
+  @override
+  String get duaCategoryMorningEvening => 'ৰাতিপুৱা আৰু সন্ধিয়া';
+
+  @override
+  String get duaCategoryTasbih => 'তছবিহ';
+
+  @override
+  String get duaCategoryProtection => 'সুৰক্ষা';
+
+  @override
+  String get duaCategoryBeginning => 'আৰম্ভণি';
+
+  @override
+  String get duaCategorySleep => 'টোপনি';
+
+  @override
+  String get duaCategoryFoodDrink => 'খাদ্য আৰু পানীয়';
+
+  @override
+  String get duaCategoryForgiveness => 'ক্ষমা';
+
+  @override
+  String get duaCategoryHome => 'গৃহ';
+
+  @override
+  String get duaSourceBukhari => 'বুখাৰী';
+
+  @override
+  String get duaSourceMuslim => 'মুছলমান';
+
+  @override
+  String get duaSourceAbuDawud => 'আবু দাউদ';
+
+  @override
+  String get duaSourceTirmidhi => 'তিৰমিধি';
+
+  @override
+  String get duaSourceAhmad => 'আহমদ';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

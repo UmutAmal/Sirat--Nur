@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Kontrolitaj duoj ankoraŭ ne haveblas",
-  "duaUnavailableBody": "Konfirmitaj ĉiutagaj duoj ankoraŭ ne estis sinkronigitaj kun ĉi tiu aparato. Konektiĝu al la nuba fonto por ŝargi fontan duason anstataŭ nekontrolita falo."
+  "duaUnavailableBody": "Konfirmitaj ĉiutagaj duoj ankoraŭ ne estis sinkronigitaj kun ĉi tiu aparato. Konektiĝu al la nuba fonto por ŝargi fontan duason anstataŭ nekontrolita falo.",
+  "duaCategoryQuranic": "Korana dua",
+  "duaCategoryMorningEvening": "Mateno & Vespero",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Protekto",
+  "duaCategoryBeginning": "Komencoj",
+  "duaCategorySleep": "Dormu",
+  "duaCategoryFoodDrink": "Manĝaĵo & Trinkaĵo",
+  "duaCategoryForgiveness": "Pardono",
+  "duaCategoryHome": "Hejmo",
+  "duaSourceBukhari": "Buĥari",
+  "duaSourceMuslim": "islamano",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

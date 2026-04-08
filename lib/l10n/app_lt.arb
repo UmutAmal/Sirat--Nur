@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Patvirtintos duos dar nepasiekiamos",
-  "duaUnavailableBody": "Patvirtinti kasdieniniai duai dar nebuvo sinchronizuoti su šiuo įrenginiu. Prisijunkite prie debesies šaltinio, kad įkeltumėte šaltinio duas, o ne nepatvirtintą atsarginį failą."
+  "duaUnavailableBody": "Patvirtinti kasdieniniai duai dar nebuvo sinchronizuoti su šiuo įrenginiu. Prisijunkite prie debesies šaltinio, kad įkeltumėte šaltinio duas, o ne nepatvirtintą atsarginį failą.",
+  "duaCategoryQuranic": "Korano dua",
+  "duaCategoryMorningEvening": "Rytas & Vakaras",
+  "duaCategoryTasbih": "Tasbihas",
+  "duaCategoryProtection": "Apsauga",
+  "duaCategoryBeginning": "Pradžios",
+  "duaCategorySleep": "Miegoti",
+  "duaCategoryFoodDrink": "Maistas ir gėrimai",
+  "duaCategoryForgiveness": "Atleidimas",
+  "duaCategoryHome": "Pradžia",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "musulmonas",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmadas"
 }

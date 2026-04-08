@@ -797,6 +797,48 @@ class AppLocalizationsSt extends AppLocalizations {
       'Li-dua tse netefalitsoeng tsa letsatsi le letsatsi ha li so hokahanngoa sesebelisoa sena. Hokela mohloling oa cloud ho kenya li-duas ho e-na le mokhoa o sa netefatsoang.';
 
   @override
+  String get duaCategoryQuranic => 'Dua ea Quran';
+
+  @override
+  String get duaCategoryMorningEvening => 'Hoseng le Mantsiboea';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Tshireletso';
+
+  @override
+  String get duaCategoryBeginning => 'Qalo';
+
+  @override
+  String get duaCategorySleep => 'Robala';
+
+  @override
+  String get duaCategoryFoodDrink => 'Lijo & Lino';
+
+  @override
+  String get duaCategoryForgiveness => 'Tšoarelo';
+
+  @override
+  String get duaCategoryHome => 'Lehae';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Mamosleme';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

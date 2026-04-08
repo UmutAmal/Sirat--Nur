@@ -796,6 +796,48 @@ class AppLocalizationsTt extends AppLocalizations {
       'Тикшерелгән көндәлек дуа бу җайланмага синхронлашмаган. Тикшерелмәгән кире кайту урынына болыт чыганагына тоташыгыз.';
 
   @override
+  String get duaCategoryQuranic => 'Коръән дуа';
+
+  @override
+  String get duaCategoryMorningEvening => 'Таң һәм кич';
+
+  @override
+  String get duaCategoryTasbih => 'Тасбих';
+
+  @override
+  String get duaCategoryProtection => 'Саклау';
+
+  @override
+  String get duaCategoryBeginning => 'Башлангычлар';
+
+  @override
+  String get duaCategorySleep => 'Йокла';
+
+  @override
+  String get duaCategoryFoodDrink => 'Ашамлык һәм эчемлек';
+
+  @override
+  String get duaCategoryForgiveness => 'Кичерү';
+
+  @override
+  String get duaCategoryHome => 'Өй';
+
+  @override
+  String get duaSourceBukhari => 'Бохари';
+
+  @override
+  String get duaSourceMuslim => 'Мөселман';
+
+  @override
+  String get duaSourceAbuDawud => 'Абу Давуд';
+
+  @override
+  String get duaSourceTirmidhi => 'Тирмизи';
+
+  @override
+  String get duaSourceAhmad => 'Әхмәт';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

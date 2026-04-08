@@ -796,6 +796,48 @@ class AppLocalizationsGu extends AppLocalizations {
       'ચકાસાયેલ દૈનિક દુઆઓ હજુ સુધી આ ઉપકરણ સાથે સમન્વયિત કરવામાં આવી નથી. વણચકાસાયેલ ફોલબેકને બદલે સોર્સ્ડ ડ્યુઆસ લોડ કરવા માટે ક્લાઉડ સ્ત્રોત સાથે કનેક્ટ કરો.';
 
   @override
+  String get duaCategoryQuranic => 'કુરાની દુઆ';
+
+  @override
+  String get duaCategoryMorningEvening => 'સવાર અને સાંજ';
+
+  @override
+  String get duaCategoryTasbih => 'તસ્બીહ';
+
+  @override
+  String get duaCategoryProtection => 'રક્ષણ';
+
+  @override
+  String get duaCategoryBeginning => 'શરૂઆત';
+
+  @override
+  String get duaCategorySleep => 'ઊંઘ';
+
+  @override
+  String get duaCategoryFoodDrink => 'ખોરાક અને પીણું';
+
+  @override
+  String get duaCategoryForgiveness => 'ક્ષમા';
+
+  @override
+  String get duaCategoryHome => 'ઘર';
+
+  @override
+  String get duaSourceBukhari => 'બુખારી';
+
+  @override
+  String get duaSourceMuslim => 'મુસ્લિમ';
+
+  @override
+  String get duaSourceAbuDawud => 'અબુ દાઉદ';
+
+  @override
+  String get duaSourceTirmidhi => 'તિર્મિ';
+
+  @override
+  String get duaSourceAhmad => 'અહમદ';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

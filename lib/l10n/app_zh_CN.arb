@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "已验证的 dua 尚不可用",
-  "duaUnavailableBody": "已验证的每日 duas 尚未同步到此设备。连接到云源以加载来源的 dua，而不是未经验证的后备。"
+  "duaUnavailableBody": "已验证的每日 duas 尚未同步到此设备。连接到云源以加载来源的 dua，而不是未经验证的后备。",
+  "duaCategoryQuranic": "古兰经杜阿",
+  "duaCategoryMorningEvening": "早上和晚上",
+  "duaCategoryTasbih": "塔斯比赫",
+  "duaCategoryProtection": "保护",
+  "duaCategoryBeginning": "开始",
+  "duaCategorySleep": "睡觉",
+  "duaCategoryFoodDrink": "食品和饮料",
+  "duaCategoryForgiveness": "饶恕",
+  "duaCategoryHome": "家",
+  "duaSourceBukhari": "布哈里",
+  "duaSourceMuslim": "穆斯林",
+  "duaSourceAbuDawud": "阿布达乌德",
+  "duaSourceTirmidhi": "铁尔米吉",
+  "duaSourceAhmad": "艾哈迈德"
 }

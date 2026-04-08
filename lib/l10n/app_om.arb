@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Duaa mirkanaa'e ammallee hin jiru",
-  "duaUnavailableBody": "Duas guyyaa guyyaa mirkanaa'e hanga ammaatti meeshaa kana waliin wal hin simne. Kufaatii hin mirkanoofne osoo hin taane duas madda fe'uuf madda duumessaa waliin walqabsiisi."
+  "duaUnavailableBody": "Duas guyyaa guyyaa mirkanaa'e hanga ammaatti meeshaa kana waliin wal hin simne. Kufaatii hin mirkanoofne osoo hin taane duas madda fe'uuf madda duumessaa waliin walqabsiisi.",
+  "duaCategoryQuranic": "Duaa Qur'aanaa",
+  "duaCategoryMorningEvening": "Ganama & Galgala",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Eegumsa",
+  "duaCategoryBeginning": "Jalqaba",
+  "duaCategorySleep": "Rafuu",
+  "duaCategoryFoodDrink": "Nyaata fi Dhugaatii",
+  "duaCategoryForgiveness": "Dhiifama",
+  "duaCategoryHome": "Mana",
+  "duaSourceBukhari": "Bukhaariin",
+  "duaSourceMuslim": "Muslima",
+  "duaSourceAbuDawud": "Abuu Daawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

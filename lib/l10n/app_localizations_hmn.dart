@@ -798,6 +798,48 @@ class AppLocalizationsHmn extends AppLocalizations {
       'Txheeb xyuas txhua hnub duas tseem tsis tau synced rau lub cuab yeej no. Txuas mus rau huab qhov chaw thauj khoom duas es tsis txhob muaj qhov rov qab tsis tau lees paub.';
 
   @override
+  String get duaCategoryQuranic => 'Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Sawv ntxov & yav tsaus ntuj';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Kev tiv thaiv';
+
+  @override
+  String get duaCategoryBeginning => 'Pib';
+
+  @override
+  String get duaCategorySleep => 'Pw tsaug zog';
+
+  @override
+  String get duaCategoryFoodDrink => 'Khoom noj & haus';
+
+  @override
+  String get duaCategoryForgiveness => 'Kev zam txim';
+
+  @override
+  String get duaCategoryHome => 'Tsev';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawd';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

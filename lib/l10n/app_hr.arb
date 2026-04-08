@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Potvrđene dove još nisu dostupne",
-  "duaUnavailableBody": "Potvrđeni dnevni dua još nisu sinkronizirani s ovim uređajem. Povežite se s izvorom u oblaku za učitavanje izvornih dua umjesto neprovjerenog rezervnog."
+  "duaUnavailableBody": "Potvrđeni dnevni dua još nisu sinkronizirani s ovim uređajem. Povežite se s izvorom u oblaku za učitavanje izvornih dua umjesto neprovjerenog rezervnog.",
+  "duaCategoryQuranic": "Kur'anska dova",
+  "duaCategoryMorningEvening": "Ujutro i navečer",
+  "duaCategoryTasbih": "tesbih",
+  "duaCategoryProtection": "Zaštita",
+  "duaCategoryBeginning": "Počeci",
+  "duaCategorySleep": "Spavati",
+  "duaCategoryFoodDrink": "Hrana i piće",
+  "duaCategoryForgiveness": "Opraštanje",
+  "duaCategoryHome": "Dom",
+  "duaSourceBukhari": "Buhari",
+  "duaSourceMuslim": "muslimanski",
+  "duaSourceAbuDawud": "Ebu Davud",
+  "duaSourceTirmidhi": "Tirmizi",
+  "duaSourceAhmad": "Ahmad"
 }

@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Верификоване дуа још увек нису доступне",
-  "duaUnavailableBody": "Верификоване дневне дојаве још увек нису синхронизоване са овим уређајем. Повежите се са извором у облаку да бисте учитали дуа-ове из извора уместо непровереног резервног."
+  "duaUnavailableBody": "Верификоване дневне дојаве још увек нису синхронизоване са овим уређајем. Повежите се са извором у облаку да бисте учитали дуа-ове из извора уместо непровереног резервног.",
+  "duaCategoryQuranic": "Кур'анска дова",
+  "duaCategoryMorningEvening": "Јутро & Вече",
+  "duaCategoryTasbih": "Тасбих",
+  "duaCategoryProtection": "Заштита",
+  "duaCategoryBeginning": "Почеци",
+  "duaCategorySleep": "Спавај",
+  "duaCategoryFoodDrink": "Храна и пиће",
+  "duaCategoryForgiveness": "Опрост",
+  "duaCategoryHome": "Хоме",
+  "duaSourceBukhari": "Бухари",
+  "duaSourceMuslim": "муслимански",
+  "duaSourceAbuDawud": "Абу Давуд",
+  "duaSourceTirmidhi": "Тирмизи",
+  "duaSourceAhmad": "Ахмад"
 }

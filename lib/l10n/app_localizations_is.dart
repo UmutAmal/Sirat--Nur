@@ -796,6 +796,48 @@ class AppLocalizationsIs extends AppLocalizations {
       'Staðfest dagleg duas hafa ekki verið samstillt við þetta tæki ennþá. Tengstu við skýjagjafann til að hlaða upprunnin duas í stað óstaðfestrar vara.';
 
   @override
+  String get duaCategoryQuranic => 'Kóranísk dúa';
+
+  @override
+  String get duaCategoryMorningEvening => 'Morgun & kvöld';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Vörn';
+
+  @override
+  String get duaCategoryBeginning => 'Upphaf';
+
+  @override
+  String get duaCategorySleep => 'Sofðu';
+
+  @override
+  String get duaCategoryFoodDrink => 'Matur & drykkur';
+
+  @override
+  String get duaCategoryForgiveness => 'Fyrirgefning';
+
+  @override
+  String get duaCategoryHome => 'Heim';
+
+  @override
+  String get duaSourceBukhari => 'Búkhari';
+
+  @override
+  String get duaSourceMuslim => 'múslima';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

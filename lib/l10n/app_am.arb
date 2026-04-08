@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "የተረጋገጡ ዱዓዎች እስካሁን አይገኙም።",
-  "duaUnavailableBody": "የተረጋገጡ ዕለታዊ ዱዓዎች እስካሁን ከዚህ መሳሪያ ጋር አልተመሳሰሉም። ካልተረጋገጠ መመለሻ ይልቅ የመነጩ ዱአዎችን ለመጫን ከደመና ምንጭ ጋር ይገናኙ።"
+  "duaUnavailableBody": "የተረጋገጡ ዕለታዊ ዱዓዎች እስካሁን ከዚህ መሳሪያ ጋር አልተመሳሰሉም። ካልተረጋገጠ መመለሻ ይልቅ የመነጩ ዱአዎችን ለመጫን ከደመና ምንጭ ጋር ይገናኙ።",
+  "duaCategoryQuranic": "የቁርዓን ዱአ",
+  "duaCategoryMorningEvening": "ጥዋት እና ምሽት",
+  "duaCategoryTasbih": "ተስቢህ",
+  "duaCategoryProtection": "ጥበቃ",
+  "duaCategoryBeginning": "ጅምር",
+  "duaCategorySleep": "እንቅልፍ",
+  "duaCategoryFoodDrink": "ምግብ እና መጠጥ",
+  "duaCategoryForgiveness": "ይቅርታ",
+  "duaCategoryHome": "ቤት",
+  "duaSourceBukhari": "ቡኻሪ",
+  "duaSourceMuslim": "ሙስሊም",
+  "duaSourceAbuDawud": "አቡ ዳውድ",
+  "duaSourceTirmidhi": "ቲርሚዚ",
+  "duaSourceAhmad": "አህመድ"
 }

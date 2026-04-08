@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Staðfest duas eru ekki tiltæk ennþá",
-  "duaUnavailableBody": "Staðfest dagleg duas hafa ekki verið samstillt við þetta tæki ennþá. Tengstu við skýjagjafann til að hlaða upprunnin duas í stað óstaðfestrar vara."
+  "duaUnavailableBody": "Staðfest dagleg duas hafa ekki verið samstillt við þetta tæki ennþá. Tengstu við skýjagjafann til að hlaða upprunnin duas í stað óstaðfestrar vara.",
+  "duaCategoryQuranic": "Kóranísk dúa",
+  "duaCategoryMorningEvening": "Morgun & kvöld",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Vörn",
+  "duaCategoryBeginning": "Upphaf",
+  "duaCategorySleep": "Sofðu",
+  "duaCategoryFoodDrink": "Matur & drykkur",
+  "duaCategoryForgiveness": "Fyrirgefning",
+  "duaCategoryHome": "Heim",
+  "duaSourceBukhari": "Búkhari",
+  "duaSourceMuslim": "múslima",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

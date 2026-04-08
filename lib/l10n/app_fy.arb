@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Ferifiearre duas binne noch net beskikber",
-  "duaUnavailableBody": "Ferifiearre deistige duas binne noch net syngronisearre mei dit apparaat. Ferbine mei de wolkboarne om boarne duas te laden ynstee fan in net ferifiearre fallback."
+  "duaUnavailableBody": "Ferifiearre deistige duas binne noch net syngronisearre mei dit apparaat. Ferbine mei de wolkboarne om boarne duas te laden ynstee fan in net ferifiearre fallback.",
+  "duaCategoryQuranic": "Koranyske dua",
+  "duaCategoryMorningEvening": "Moarn & Jûn",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Beskerming",
+  "duaCategoryBeginning": "Beginings",
+  "duaCategorySleep": "Sliep",
+  "duaCategoryFoodDrink": "Iten & Drinken",
+  "duaCategoryForgiveness": "Ferjouwing",
+  "duaCategoryHome": "Thús",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "moslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

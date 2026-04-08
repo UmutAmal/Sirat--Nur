@@ -796,6 +796,48 @@ class AppLocalizationsLb extends AppLocalizations {
       'Verifizéiert alldeeglech Duas goufen nach net mat dësem Apparat synchroniséiert. Connectéiert mat der Wollekquell fir Quelle Duas ze lueden amplaz vun engem onverifizéierte Réckfall.';
 
   @override
+  String get duaCategoryQuranic => 'Koran dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Moien & Owend';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Schutz';
+
+  @override
+  String get duaCategoryBeginning => 'Ufank';
+
+  @override
+  String get duaCategorySleep => 'Schlof';
+
+  @override
+  String get duaCategoryFoodDrink => 'Iessen & Drénken';
+
+  @override
+  String get duaCategoryForgiveness => 'Verzeiung';
+
+  @override
+  String get duaCategoryHome => 'Doheem';
+
+  @override
+  String get duaSourceBukhari => 'Buchari';
+
+  @override
+  String get duaSourceMuslim => 'Moslem';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

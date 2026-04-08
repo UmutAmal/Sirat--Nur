@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Tasdiqlangan duolar hali mavjud emas",
-  "duaUnavailableBody": "Tasdiqlangan kundalik duolar hali bu qurilmaga sinxronlanmagan. Tasdiqlanmagan zaxira oʻrniga manbali duolarni yuklash uchun bulut manbasiga ulaning."
+  "duaUnavailableBody": "Tasdiqlangan kundalik duolar hali bu qurilmaga sinxronlanmagan. Tasdiqlanmagan zaxira oʻrniga manbali duolarni yuklash uchun bulut manbasiga ulaning.",
+  "duaCategoryQuranic": "Qur'on duo",
+  "duaCategoryMorningEvening": "Ertalab va kechqurun",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Himoya",
+  "duaCategoryBeginning": "Boshlanishlar",
+  "duaCategorySleep": "Uxlash",
+  "duaCategoryFoodDrink": "Oziq-ovqat va ichimliklar",
+  "duaCategoryForgiveness": "Kechirim",
+  "duaCategoryHome": "Uy",
+  "duaSourceBukhari": "Buxoriy",
+  "duaSourceMuslim": "musulmon",
+  "duaSourceAbuDawud": "Abu Dovud",
+  "duaSourceTirmidhi": "Termiziy",
+  "duaSourceAhmad": "Ahmad"
 }

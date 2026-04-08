@@ -796,6 +796,48 @@ class AppLocalizationsCs extends AppLocalizations {
       'Ověřené denní dua zatím nebyly synchronizovány do tohoto zařízení. Připojte se ke cloudovému zdroji a načtěte duas ze zdrojů namísto neověřeného záložního řešení.';
 
   @override
+  String get duaCategoryQuranic => 'Dua koránu';
+
+  @override
+  String get duaCategoryMorningEvening => 'Ráno & Večer';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Ochrana';
+
+  @override
+  String get duaCategoryBeginning => 'Začátky';
+
+  @override
+  String get duaCategorySleep => 'Spát';
+
+  @override
+  String get duaCategoryFoodDrink => 'Jídlo a pití';
+
+  @override
+  String get duaCategoryForgiveness => 'Odpuštění';
+
+  @override
+  String get duaCategoryHome => 'Domov';
+
+  @override
+  String get duaSourceBukhari => 'Buchari';
+
+  @override
+  String get duaSourceMuslim => 'muslimský';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

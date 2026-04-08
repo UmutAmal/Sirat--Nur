@@ -796,6 +796,48 @@ class AppLocalizationsLn extends AppLocalizations {
       'Ba duas ya mokolo na mokolo oyo e vérifié e synchronisé nanu na dispositif oyo te. Connecter na source ya cloud pona ko charger ba duas sourced au lieu ya fallback oyo e vérifié te.';
 
   @override
+  String get duaCategoryQuranic => 'Dua ya Coran';
+
+  @override
+  String get duaCategoryMorningEvening => 'Tongo & Pokwa';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih, oyo azali';
+
+  @override
+  String get duaCategoryProtection => 'Bobateli';
+
+  @override
+  String get duaCategoryBeginning => 'Ebandeli';
+
+  @override
+  String get duaCategorySleep => 'Mpongi';
+
+  @override
+  String get duaCategoryFoodDrink => 'Bilei & Masanga';
+
+  @override
+  String get duaCategoryForgiveness => 'Bolimbisi';
+
+  @override
+  String get duaCategoryHome => 'Ndako';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari, oyo azali';
+
+  @override
+  String get duaSourceMuslim => 'Moyisalaele';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud, oyo azali na mbongo mingi';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi na nkombo';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

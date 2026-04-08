@@ -796,6 +796,48 @@ class AppLocalizationsSd extends AppLocalizations {
       'تصديق ٿيل روزاني دعا اڃا تائين هن ڊوائيس سان هم وقت نه ڪئي وئي آهي. اڻ تصديق ٿيل فال بيڪ بدران sourced duas لوڊ ڪرڻ لاءِ ڪلائوڊ ماخذ سان ڳنڍيو.';
 
   @override
+  String get duaCategoryQuranic => 'قرآني دعا';
+
+  @override
+  String get duaCategoryMorningEvening => 'صبح ۽ شام';
+
+  @override
+  String get duaCategoryTasbih => 'تسبيح';
+
+  @override
+  String get duaCategoryProtection => 'تحفظ';
+
+  @override
+  String get duaCategoryBeginning => 'شروعات';
+
+  @override
+  String get duaCategorySleep => 'سمهڻ';
+
+  @override
+  String get duaCategoryFoodDrink => 'کاڌو ۽ پيئڻ';
+
+  @override
+  String get duaCategoryForgiveness => 'بخشش';
+
+  @override
+  String get duaCategoryHome => 'گهر';
+
+  @override
+  String get duaSourceBukhari => 'بخاري';
+
+  @override
+  String get duaSourceMuslim => 'مسلمان';
+
+  @override
+  String get duaSourceAbuDawud => 'ابوداؤد';
+
+  @override
+  String get duaSourceTirmidhi => 'ترمذي';
+
+  @override
+  String get duaSourceAhmad => 'احمد';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

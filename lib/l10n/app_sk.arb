@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Overené duá zatiaľ nie sú k dispozícii",
-  "duaUnavailableBody": "Overené denné duá zatiaľ neboli synchronizované do tohto zariadenia. Pripojte sa ku cloudovému zdroju a načítajte duas zo zdrojov namiesto neoverenej zálohy."
+  "duaUnavailableBody": "Overené denné duá zatiaľ neboli synchronizované do tohto zariadenia. Pripojte sa ku cloudovému zdroju a načítajte duas zo zdrojov namiesto neoverenej zálohy.",
+  "duaCategoryQuranic": "Dua koránu",
+  "duaCategoryMorningEvening": "Ráno a večer",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Ochrana",
+  "duaCategoryBeginning": "Začiatky",
+  "duaCategorySleep": "Spánok",
+  "duaCategoryFoodDrink": "Jedlo a pitie",
+  "duaCategoryForgiveness": "Odpustenie",
+  "duaCategoryHome": "Domov",
+  "duaSourceBukhari": "Buchari",
+  "duaSourceMuslim": "moslimský",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

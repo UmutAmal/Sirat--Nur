@@ -797,6 +797,48 @@ class AppLocalizationsUg extends AppLocalizations {
       'تەكشۈرۈلگەن كۈندىلىك دۇئاسى تېخى بۇ ئۈسكۈنىگە ماسقەدەملەنمىدى. بۇلۇت مەنبەسىگە ئۇلىنىپ ، دەلىللەنمىگەن خاتالىقنىڭ ئورنىغا مەنبەلىك دۇئانى يۈكلەڭ.';
 
   @override
+  String get duaCategoryQuranic => 'قۇرئان دۇئاسى';
+
+  @override
+  String get duaCategoryMorningEvening => 'ئەتىگەن ۋە كەچ';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'قوغداش';
+
+  @override
+  String get duaCategoryBeginning => 'باشلىنىش';
+
+  @override
+  String get duaCategorySleep => 'ئۇخلاش';
+
+  @override
+  String get duaCategoryFoodDrink => 'يېمەكلىك ۋە ئىچىملىك';
+
+  @override
+  String get duaCategoryForgiveness => 'كەچۈرۈم قىلىش';
+
+  @override
+  String get duaCategoryHome => 'ئۆي';
+
+  @override
+  String get duaSourceBukhari => 'بۇخارى';
+
+  @override
+  String get duaSourceMuslim => 'مۇسۇلمان';
+
+  @override
+  String get duaSourceAbuDawud => 'ئەبۇ داۋۇد';
+
+  @override
+  String get duaSourceTirmidhi => 'تىرمىزى';
+
+  @override
+  String get duaSourceAhmad => 'ئەھمەد';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

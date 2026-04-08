@@ -796,6 +796,48 @@ class AppLocalizationsSm extends AppLocalizations {
       'E le\'i fa\'asa\'o le duas fa\'amaonia i aso uma i lenei masini. Fa\'afeso\'ota\'i i le puna o ao e fa\'amomoli mai ai duas ae le o se fa\'afouga e le\'i fa\'amaonia.';
 
   @override
+  String get duaCategoryQuranic => 'Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Taeao & Afiafi';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Puipuiga';
+
+  @override
+  String get duaCategoryBeginning => 'Amataga';
+
+  @override
+  String get duaCategorySleep => 'Moe';
+
+  @override
+  String get duaCategoryFoodDrink => 'Mea\'ai & Meainu';
+
+  @override
+  String get duaCategoryForgiveness => 'Fa\'amagalo';
+
+  @override
+  String get duaCategoryHome => 'Aiga';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Mosalemi';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

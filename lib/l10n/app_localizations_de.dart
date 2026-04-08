@@ -800,6 +800,48 @@ class AppLocalizationsDe extends AppLocalizations {
       'Verifizierte tägliche Duas wurden noch nicht mit diesem Gerät synchronisiert. Stellen Sie eine Verbindung zur Cloud-Quelle her, um Quell-Duas anstelle eines nicht verifizierten Fallbacks zu laden.';
 
   @override
+  String get duaCategoryQuranic => 'Koran-Dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Morgens und abends';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Schutz';
+
+  @override
+  String get duaCategoryBeginning => 'Anfänge';
+
+  @override
+  String get duaCategorySleep => 'Schlafen';
+
+  @override
+  String get duaCategoryFoodDrink => 'Essen & Trinken';
+
+  @override
+  String get duaCategoryForgiveness => 'Vergebung';
+
+  @override
+  String get duaCategoryHome => 'Heim';
+
+  @override
+  String get duaSourceBukhari => 'Buchari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

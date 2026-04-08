@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "I duas verificati non sono ancora disponibili",
-  "duaUnavailableBody": "I duas giornalieri verificati non sono stati ancora sincronizzati su questo dispositivo. Connettiti all'origine cloud per caricare i duas di origine invece di un fallback non verificato."
+  "duaUnavailableBody": "I duas giornalieri verificati non sono stati ancora sincronizzati su questo dispositivo. Connettiti all'origine cloud per caricare i duas di origine invece di un fallback non verificato.",
+  "duaCategoryQuranic": "Dua coranico",
+  "duaCategoryMorningEvening": "Mattina e sera",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Protezione",
+  "duaCategoryBeginning": "Inizi",
+  "duaCategorySleep": "Sonno",
+  "duaCategoryFoodDrink": "Cibo e bevande",
+  "duaCategoryForgiveness": "Perdono",
+  "duaCategoryHome": "Casa",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "musulmano",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

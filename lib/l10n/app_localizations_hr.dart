@@ -797,6 +797,48 @@ class AppLocalizationsHr extends AppLocalizations {
       'Potvrđeni dnevni dua još nisu sinkronizirani s ovim uređajem. Povežite se s izvorom u oblaku za učitavanje izvornih dua umjesto neprovjerenog rezervnog.';
 
   @override
+  String get duaCategoryQuranic => 'Kur\'anska dova';
+
+  @override
+  String get duaCategoryMorningEvening => 'Ujutro i navečer';
+
+  @override
+  String get duaCategoryTasbih => 'tesbih';
+
+  @override
+  String get duaCategoryProtection => 'Zaštita';
+
+  @override
+  String get duaCategoryBeginning => 'Počeci';
+
+  @override
+  String get duaCategorySleep => 'Spavati';
+
+  @override
+  String get duaCategoryFoodDrink => 'Hrana i piće';
+
+  @override
+  String get duaCategoryForgiveness => 'Opraštanje';
+
+  @override
+  String get duaCategoryHome => 'Dom';
+
+  @override
+  String get duaSourceBukhari => 'Buhari';
+
+  @override
+  String get duaSourceMuslim => 'muslimanski';
+
+  @override
+  String get duaSourceAbuDawud => 'Ebu Davud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmizi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

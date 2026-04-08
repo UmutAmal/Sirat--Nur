@@ -796,6 +796,48 @@ class AppLocalizationsJa extends AppLocalizations {
       '毎日のデュアがまだこのデバイスに同期されていないことを確認しました。クラウド ソースに接続して、未検証のフォールバックではなく、ソースされたデュアをロードします。';
 
   @override
+  String get duaCategoryQuranic => 'コーランのドゥア';
+
+  @override
+  String get duaCategoryMorningEvening => '朝と夕方';
+
+  @override
+  String get duaCategoryTasbih => 'タスビ';
+
+  @override
+  String get duaCategoryProtection => '保護';
+
+  @override
+  String get duaCategoryBeginning => '始まり';
+
+  @override
+  String get duaCategorySleep => '寝る';
+
+  @override
+  String get duaCategoryFoodDrink => '食べ物と飲み物';
+
+  @override
+  String get duaCategoryForgiveness => '許し';
+
+  @override
+  String get duaCategoryHome => '家';
+
+  @override
+  String get duaSourceBukhari => 'ブハーリ';
+
+  @override
+  String get duaSourceMuslim => 'イスラム教徒';
+
+  @override
+  String get duaSourceAbuDawud => 'アブ・ダウド';
+
+  @override
+  String get duaSourceTirmidhi => 'ティルミディ';
+
+  @override
+  String get duaSourceAhmad => 'アフマド';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

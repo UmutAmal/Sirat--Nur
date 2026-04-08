@@ -796,6 +796,48 @@ class AppLocalizationsTk extends AppLocalizations {
       'Barlanylan gündelik dualar entek bu enjam bilen sinhronlanmady. Barlanmadyk yza gaýtmagyň ýerine bulut çeşmesine birikdiriň.';
 
   @override
+  String get duaCategoryQuranic => 'Kuran dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Irden we agşam';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Gorag';
+
+  @override
+  String get duaCategoryBeginning => 'Başlangyçlar';
+
+  @override
+  String get duaCategorySleep => 'Uka';
+
+  @override
+  String get duaCategoryFoodDrink => 'Iýmit we içgi';
+
+  @override
+  String get duaCategoryForgiveness => 'Bagyşlamak';
+
+  @override
+  String get duaCategoryHome => 'Öý';
+
+  @override
+  String get duaSourceBukhari => 'Buhari';
+
+  @override
+  String get duaSourceMuslim => 'Musulman';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmizi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmet';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

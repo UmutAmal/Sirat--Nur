@@ -797,6 +797,48 @@ class AppLocalizationsTa extends AppLocalizations {
       'சரிபார்க்கப்பட்ட தினசரி துவாக்கள் இந்தச் சாதனத்தில் இன்னும் ஒத்திசைக்கப்படவில்லை. சரிபார்க்கப்படாத ஃபால்பேக்கிற்குப் பதிலாக ஆதாரமான துவாக்களை ஏற்றுவதற்கு கிளவுட் மூலத்துடன் இணைக்கவும்.';
 
   @override
+  String get duaCategoryQuranic => 'குர்ஆன் துஆ';
+
+  @override
+  String get duaCategoryMorningEvening => 'காலை & மாலை';
+
+  @override
+  String get duaCategoryTasbih => 'தஸ்பிஹ்';
+
+  @override
+  String get duaCategoryProtection => 'பாதுகாப்பு';
+
+  @override
+  String get duaCategoryBeginning => 'ஆரம்பம்';
+
+  @override
+  String get duaCategorySleep => 'தூங்கு';
+
+  @override
+  String get duaCategoryFoodDrink => 'உணவு & பானம்';
+
+  @override
+  String get duaCategoryForgiveness => 'மன்னிப்பு';
+
+  @override
+  String get duaCategoryHome => 'வீடு';
+
+  @override
+  String get duaSourceBukhari => 'புகாரி';
+
+  @override
+  String get duaSourceMuslim => 'முஸ்லிம்';
+
+  @override
+  String get duaSourceAbuDawud => 'அபு தாவூத்';
+
+  @override
+  String get duaSourceTirmidhi => 'திர்மிதி';
+
+  @override
+  String get duaSourceAhmad => 'அஹ்மத்';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

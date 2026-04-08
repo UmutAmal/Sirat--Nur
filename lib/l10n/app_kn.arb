@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "ಪರಿಶೀಲಿಸಿದ ದುವಾಗಳು ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ",
-  "duaUnavailableBody": "ಪರಿಶೀಲಿಸಲಾದ ದೈನಂದಿನ ದುವಾಗಳನ್ನು ಈ ಸಾಧನಕ್ಕೆ ಇನ್ನೂ ಸಿಂಕ್ ಮಾಡಲಾಗಿಲ್ಲ. ಪರಿಶೀಲಿಸದ ಫಾಲ್‌ಬ್ಯಾಕ್ ಬದಲಿಗೆ ಮೂಲದ ದುವಾಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಕ್ಲೌಡ್ ಮೂಲಕ್ಕೆ ಸಂಪರ್ಕಿಸಿ."
+  "duaUnavailableBody": "ಪರಿಶೀಲಿಸಲಾದ ದೈನಂದಿನ ದುವಾಗಳನ್ನು ಈ ಸಾಧನಕ್ಕೆ ಇನ್ನೂ ಸಿಂಕ್ ಮಾಡಲಾಗಿಲ್ಲ. ಪರಿಶೀಲಿಸದ ಫಾಲ್‌ಬ್ಯಾಕ್ ಬದಲಿಗೆ ಮೂಲದ ದುವಾಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಕ್ಲೌಡ್ ಮೂಲಕ್ಕೆ ಸಂಪರ್ಕಿಸಿ.",
+  "duaCategoryQuranic": "ಕುರಾನ್ ದುವಾ",
+  "duaCategoryMorningEvening": "ಬೆಳಿಗ್ಗೆ ಮತ್ತು ಸಂಜೆ",
+  "duaCategoryTasbih": "ತಸ್ಬಿಹ್",
+  "duaCategoryProtection": "ರಕ್ಷಣೆ",
+  "duaCategoryBeginning": "ಆರಂಭಗಳು",
+  "duaCategorySleep": "ನಿದ್ರೆ",
+  "duaCategoryFoodDrink": "ಆಹಾರ ಮತ್ತು ಪಾನೀಯ",
+  "duaCategoryForgiveness": "ಕ್ಷಮೆ",
+  "duaCategoryHome": "ಮುಖಪುಟ",
+  "duaSourceBukhari": "ಬುಖಾರಿ",
+  "duaSourceMuslim": "ಮುಸ್ಲಿಂ",
+  "duaSourceAbuDawud": "ಅಬು ದಾವೂದ್",
+  "duaSourceTirmidhi": "ತಿರ್ಮಿದಿ",
+  "duaSourceAhmad": "ಅಹ್ಮದ್"
 }

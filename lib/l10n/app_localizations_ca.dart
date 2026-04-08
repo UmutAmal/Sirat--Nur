@@ -799,6 +799,48 @@ class AppLocalizationsCa extends AppLocalizations {
       'Les duas diàries verificades encara no s\'han sincronitzat amb aquest dispositiu. Connecteu-vos a la font del núvol per carregar duas d\'origen en lloc d\'una alternativa no verificada.';
 
   @override
+  String get duaCategoryQuranic => 'dua alcorànica';
+
+  @override
+  String get duaCategoryMorningEvening => 'Matí i vespre';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Protecció';
+
+  @override
+  String get duaCategoryBeginning => 'Els inicis';
+
+  @override
+  String get duaCategorySleep => 'Dormir';
+
+  @override
+  String get duaCategoryFoodDrink => 'Menjar i beure';
+
+  @override
+  String get duaCategoryForgiveness => 'El perdó';
+
+  @override
+  String get duaCategoryHome => 'Casa';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'musulmà';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

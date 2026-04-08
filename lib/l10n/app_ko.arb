@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "인증된 이중화는 아직 사용할 수 없습니다.",
-  "duaUnavailableBody": "확인된 일일 듀아가 아직 이 기기에 동기화되지 않았습니다. 확인되지 않은 대체 대신 소스가 있는 duas를 로드하려면 클라우드 소스에 연결하세요."
+  "duaUnavailableBody": "확인된 일일 듀아가 아직 이 기기에 동기화되지 않았습니다. 확인되지 않은 대체 대신 소스가 있는 duas를 로드하려면 클라우드 소스에 연결하세요.",
+  "duaCategoryQuranic": "꾸란 두아",
+  "duaCategoryMorningEvening": "아침 & 저녁",
+  "duaCategoryTasbih": "타스비",
+  "duaCategoryProtection": "보호",
+  "duaCategoryBeginning": "시작",
+  "duaCategorySleep": "잠",
+  "duaCategoryFoodDrink": "음식 및 음료",
+  "duaCategoryForgiveness": "용서",
+  "duaCategoryHome": "집",
+  "duaSourceBukhari": "부하리",
+  "duaSourceMuslim": "무슬림",
+  "duaSourceAbuDawud": "아부 다우드",
+  "duaSourceTirmidhi": "티르미디",
+  "duaSourceAhmad": "아마드"
 }

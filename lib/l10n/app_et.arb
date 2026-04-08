@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Kinnitatud duad pole veel saadaval",
-  "duaUnavailableBody": "Kinnitatud igapäevaseid duasid pole veel selle seadmega sünkroonitud. Ühendage pilveallikaga, et laadida lähtestatud duasid kinnitamata varu asemel."
+  "duaUnavailableBody": "Kinnitatud igapäevaseid duasid pole veel selle seadmega sünkroonitud. Ühendage pilveallikaga, et laadida lähtestatud duasid kinnitamata varu asemel.",
+  "duaCategoryQuranic": "Koraani dua",
+  "duaCategoryMorningEvening": "Hommik & Õhtu",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Kaitse",
+  "duaCategoryBeginning": "Algused",
+  "duaCategorySleep": "Magama",
+  "duaCategoryFoodDrink": "Söök ja jook",
+  "duaCategoryForgiveness": "Andestus",
+  "duaCategoryHome": "Kodu",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "moslem",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

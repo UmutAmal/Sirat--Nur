@@ -798,6 +798,48 @@ class AppLocalizationsTr extends AppLocalizations {
       'Doğrulanmış günlük dualar henüz bu cihaza senkronlanmadı. Doğrulanmamış fallback yerine kaynaklı duaları yüklemek için bulut kaynağına bağlanın.';
 
   @override
+  String get duaCategoryQuranic => 'Kur\'an duası';
+
+  @override
+  String get duaCategoryMorningEvening => 'Sabah ve akşam';
+
+  @override
+  String get duaCategoryTasbih => 'Tesbih';
+
+  @override
+  String get duaCategoryProtection => 'Korunma';
+
+  @override
+  String get duaCategoryBeginning => 'Başlangıç';
+
+  @override
+  String get duaCategorySleep => 'Uyku';
+
+  @override
+  String get duaCategoryFoodDrink => 'Yeme ve içme';
+
+  @override
+  String get duaCategoryForgiveness => 'Bağışlanma';
+
+  @override
+  String get duaCategoryHome => 'Ev';
+
+  @override
+  String get duaSourceBukhari => 'Buhari';
+
+  @override
+  String get duaSourceMuslim => 'Müslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Ebu Davud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmizi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmed';
+
+  @override
   String get islamicEducation => 'İslami Eğitim';
 
   @override

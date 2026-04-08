@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "დადასტურებული დუა ჯერ არ არის ხელმისაწვდომი",
-  "duaUnavailableBody": "დადასტურებული ყოველდღიური დუაები ჯერ არ არის სინქრონიზებული ამ მოწყობილობასთან. დაუკავშირდით ღრუბლოვან წყაროს, რომ ჩატვირთოთ მოპოვებული დუები დაუდასტურებელი სარეზერვო ნაცვლად."
+  "duaUnavailableBody": "დადასტურებული ყოველდღიური დუაები ჯერ არ არის სინქრონიზებული ამ მოწყობილობასთან. დაუკავშირდით ღრუბლოვან წყაროს, რომ ჩატვირთოთ მოპოვებული დუები დაუდასტურებელი სარეზერვო ნაცვლად.",
+  "duaCategoryQuranic": "ყურანის დუა",
+  "duaCategoryMorningEvening": "დილა და საღამო",
+  "duaCategoryTasbih": "ტასბიჰ",
+  "duaCategoryProtection": "დაცვა",
+  "duaCategoryBeginning": "საწყისები",
+  "duaCategorySleep": "დაიძინე",
+  "duaCategoryFoodDrink": "საკვები და სასმელი",
+  "duaCategoryForgiveness": "პატიება",
+  "duaCategoryHome": "მთავარი",
+  "duaSourceBukhari": "ბუხარი",
+  "duaSourceMuslim": "მუსლიმი",
+  "duaSourceAbuDawud": "აბუ დაუდი",
+  "duaSourceTirmidhi": "ტირმიდი",
+  "duaSourceAhmad": "აჰმადი"
 }

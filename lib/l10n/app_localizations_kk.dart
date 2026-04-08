@@ -796,6 +796,48 @@ class AppLocalizationsKk extends AppLocalizations {
       'Расталған күнделікті дұғалар бұл құрылғыға әлі синхрондалмаған. Тексерілмеген қалпына келтірудің орнына бастапқы дуаларды жүктеу үшін бұлт көзіне қосылыңыз.';
 
   @override
+  String get duaCategoryQuranic => 'Құран дұғасы';
+
+  @override
+  String get duaCategoryMorningEvening => 'Таңертең және кешке';
+
+  @override
+  String get duaCategoryTasbih => 'Тасбих';
+
+  @override
+  String get duaCategoryProtection => 'Қорғау';
+
+  @override
+  String get duaCategoryBeginning => 'Басталуы';
+
+  @override
+  String get duaCategorySleep => 'Ұйқы';
+
+  @override
+  String get duaCategoryFoodDrink => 'Тамақ және сусын';
+
+  @override
+  String get duaCategoryForgiveness => 'Кешірім';
+
+  @override
+  String get duaCategoryHome => 'Үй';
+
+  @override
+  String get duaSourceBukhari => 'Бұхари';
+
+  @override
+  String get duaSourceMuslim => 'мұсылман';
+
+  @override
+  String get duaSourceAbuDawud => 'Әбу Дәуіт';
+
+  @override
+  String get duaSourceTirmidhi => 'Тирмизи';
+
+  @override
+  String get duaSourceAhmad => 'Ахмад';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -795,6 +795,48 @@ class AppLocalizationsKri extends AppLocalizations {
       'Verified daily duas nɔ dɔn sink to dis divays yet. Konekt to di klawd sɔs fɔ lod sɔs duas instead ɔf wan unverified fallback.';
 
   @override
+  String get duaCategoryQuranic => 'Dua we de na di Kɔran';
+
+  @override
+  String get duaCategoryMorningEvening => 'Mɔnin & Ivinin';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih bin de';
+
+  @override
+  String get duaCategoryProtection => 'Protɛkshɔn fɔ di pɔsin';
+
+  @override
+  String get duaCategoryBeginning => 'Di biginin dɛn';
+
+  @override
+  String get duaCategorySleep => 'Slip';
+
+  @override
+  String get duaCategoryFoodDrink => 'Fɔd & Drink fɔ it';
+
+  @override
+  String get duaCategoryForgiveness => 'Fɔ fɔgiv';
+
+  @override
+  String get duaCategoryHome => 'Os';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari we de na di wɔl';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud bin de tɔk bɔt am';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi we de na di wɔl';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad bin tɔk bɔt';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

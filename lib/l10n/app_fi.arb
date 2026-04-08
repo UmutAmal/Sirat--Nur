@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Vahvistetut duat eivät ole vielä saatavilla",
-  "duaUnavailableBody": "Vahvistettuja päivittäisiä duaseja ei ole vielä synkronoitu tähän laitteeseen. Yhdistä pilvilähteeseen ladataksesi lähteen duas vahvistamattoman varaosan sijaan."
+  "duaUnavailableBody": "Vahvistettuja päivittäisiä duaseja ei ole vielä synkronoitu tähän laitteeseen. Yhdistä pilvilähteeseen ladataksesi lähteen duas vahvistamattoman varaosan sijaan.",
+  "duaCategoryQuranic": "Koraani dua",
+  "duaCategoryMorningEvening": "Aamu & Ilta",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Suojaus",
+  "duaCategoryBeginning": "Alkuja",
+  "duaCategorySleep": "Nukkua",
+  "duaCategoryFoodDrink": "Ruoka & Juoma",
+  "duaCategoryForgiveness": "Anteeksianto",
+  "duaCategoryHome": "Kotiin",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "muslimi",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

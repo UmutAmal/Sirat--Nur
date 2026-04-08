@@ -796,6 +796,48 @@ class AppLocalizationsEo extends AppLocalizations {
       'Konfirmitaj ĉiutagaj duoj ankoraŭ ne estis sinkronigitaj kun ĉi tiu aparato. Konektiĝu al la nuba fonto por ŝargi fontan duason anstataŭ nekontrolita falo.';
 
   @override
+  String get duaCategoryQuranic => 'Korana dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Mateno & Vespero';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Protekto';
+
+  @override
+  String get duaCategoryBeginning => 'Komencoj';
+
+  @override
+  String get duaCategorySleep => 'Dormu';
+
+  @override
+  String get duaCategoryFoodDrink => 'Manĝaĵo & Trinkaĵo';
+
+  @override
+  String get duaCategoryForgiveness => 'Pardono';
+
+  @override
+  String get duaCategoryHome => 'Hejmo';
+
+  @override
+  String get duaSourceBukhari => 'Buĥari';
+
+  @override
+  String get duaSourceMuslim => 'islamano';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

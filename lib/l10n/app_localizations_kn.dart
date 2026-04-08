@@ -796,6 +796,48 @@ class AppLocalizationsKn extends AppLocalizations {
       'ಪರಿಶೀಲಿಸಲಾದ ದೈನಂದಿನ ದುವಾಗಳನ್ನು ಈ ಸಾಧನಕ್ಕೆ ಇನ್ನೂ ಸಿಂಕ್ ಮಾಡಲಾಗಿಲ್ಲ. ಪರಿಶೀಲಿಸದ ಫಾಲ್‌ಬ್ಯಾಕ್ ಬದಲಿಗೆ ಮೂಲದ ದುವಾಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಕ್ಲೌಡ್ ಮೂಲಕ್ಕೆ ಸಂಪರ್ಕಿಸಿ.';
 
   @override
+  String get duaCategoryQuranic => 'ಕುರಾನ್ ದುವಾ';
+
+  @override
+  String get duaCategoryMorningEvening => 'ಬೆಳಿಗ್ಗೆ ಮತ್ತು ಸಂಜೆ';
+
+  @override
+  String get duaCategoryTasbih => 'ತಸ್ಬಿಹ್';
+
+  @override
+  String get duaCategoryProtection => 'ರಕ್ಷಣೆ';
+
+  @override
+  String get duaCategoryBeginning => 'ಆರಂಭಗಳು';
+
+  @override
+  String get duaCategorySleep => 'ನಿದ್ರೆ';
+
+  @override
+  String get duaCategoryFoodDrink => 'ಆಹಾರ ಮತ್ತು ಪಾನೀಯ';
+
+  @override
+  String get duaCategoryForgiveness => 'ಕ್ಷಮೆ';
+
+  @override
+  String get duaCategoryHome => 'ಮುಖಪುಟ';
+
+  @override
+  String get duaSourceBukhari => 'ಬುಖಾರಿ';
+
+  @override
+  String get duaSourceMuslim => 'ಮುಸ್ಲಿಂ';
+
+  @override
+  String get duaSourceAbuDawud => 'ಅಬು ದಾವೂದ್';
+
+  @override
+  String get duaSourceTirmidhi => 'ತಿರ್ಮಿದಿ';
+
+  @override
+  String get duaSourceAhmad => 'ಅಹ್ಮದ್';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

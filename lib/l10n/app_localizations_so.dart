@@ -796,6 +796,48 @@ class AppLocalizationsSo extends AppLocalizations {
       'Duas maalinle ah oo la xaqiijiyay weli lama midin qalabkan. Ku xidh isha daruuraha si aad ugu shubto duas laga keenay halkii aad ka ahaan lahayd dib u dhac aan la xaqiijin.';
 
   @override
+  String get duaCategoryQuranic => 'ducada quraanka';
+
+  @override
+  String get duaCategoryMorningEvening => 'Subax & Fiid';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Ilaalinta';
+
+  @override
+  String get duaCategoryBeginning => 'Bilawga';
+
+  @override
+  String get duaCategorySleep => 'Hurdo';
+
+  @override
+  String get duaCategoryFoodDrink => 'Cunto & Cabbitaan';
+
+  @override
+  String get duaCategoryForgiveness => 'Cafiska';
+
+  @override
+  String get duaCategoryHome => 'Guriga';
+
+  @override
+  String get duaSourceBukhari => 'Bukhaari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abuu Daawuud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidi';
+
+  @override
+  String get duaSourceAhmad => 'Axmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

@@ -798,6 +798,48 @@ class AppLocalizationsLus extends AppLocalizations {
       'Verified daily duas hi he device ah hian sync a la ni lo. Unverified fallback ai chuan sourced duas load turin cloud source ah connect rawh.';
 
   @override
+  String get duaCategoryQuranic => 'Quranic dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Zing & Zanlai';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih a ni';
+
+  @override
+  String get duaCategoryProtection => 'Hriselna atana venhimna';
+
+  @override
+  String get duaCategoryBeginning => 'A bul tanna';
+
+  @override
+  String get duaCategorySleep => 'Mu';
+
+  @override
+  String get duaCategoryFoodDrink => 'Ei leh in tur';
+
+  @override
+  String get duaCategoryForgiveness => 'Ngaihdamna';
+
+  @override
+  String get duaCategoryHome => 'In';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari a ni';
+
+  @override
+  String get duaSourceMuslim => 'Muslim a ni';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud chuan a rawn ti a';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi a ni';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad chuan a rawn ti a';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

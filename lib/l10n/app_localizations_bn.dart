@@ -796,6 +796,48 @@ class AppLocalizationsBn extends AppLocalizations {
       'যাচাই করা দৈনিক ডুয়াস এখনও এই ডিভাইসে সিঙ্ক করা হয়নি। অযাচাইকৃত ফলব্যাকের পরিবর্তে সোর্সড ডুয়াস লোড করতে ক্লাউড সোর্সের সাথে সংযোগ করুন৷';
 
   @override
+  String get duaCategoryQuranic => 'কুরআনী দুআ';
+
+  @override
+  String get duaCategoryMorningEvening => 'সকাল ও সন্ধ্যা';
+
+  @override
+  String get duaCategoryTasbih => 'তসবিহ';
+
+  @override
+  String get duaCategoryProtection => 'সুরক্ষা';
+
+  @override
+  String get duaCategoryBeginning => 'শুরু';
+
+  @override
+  String get duaCategorySleep => 'ঘুম';
+
+  @override
+  String get duaCategoryFoodDrink => 'খাদ্য ও পানীয়';
+
+  @override
+  String get duaCategoryForgiveness => 'ক্ষমা';
+
+  @override
+  String get duaCategoryHome => 'বাড়ি';
+
+  @override
+  String get duaSourceBukhari => 'বুখারী';
+
+  @override
+  String get duaSourceMuslim => 'মুসলিম';
+
+  @override
+  String get duaSourceAbuDawud => 'আবু দাউদ';
+
+  @override
+  String get duaSourceTirmidhi => 'তিরমিযী';
+
+  @override
+  String get duaSourceAhmad => 'আহমদ';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

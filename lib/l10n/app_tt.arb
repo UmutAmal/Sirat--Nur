@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Тикшерелгән дуалар әлегә юк",
-  "duaUnavailableBody": "Тикшерелгән көндәлек дуа бу җайланмага синхронлашмаган. Тикшерелмәгән кире кайту урынына болыт чыганагына тоташыгыз."
+  "duaUnavailableBody": "Тикшерелгән көндәлек дуа бу җайланмага синхронлашмаган. Тикшерелмәгән кире кайту урынына болыт чыганагына тоташыгыз.",
+  "duaCategoryQuranic": "Коръән дуа",
+  "duaCategoryMorningEvening": "Таң һәм кич",
+  "duaCategoryTasbih": "Тасбих",
+  "duaCategoryProtection": "Саклау",
+  "duaCategoryBeginning": "Башлангычлар",
+  "duaCategorySleep": "Йокла",
+  "duaCategoryFoodDrink": "Ашамлык һәм эчемлек",
+  "duaCategoryForgiveness": "Кичерү",
+  "duaCategoryHome": "Өй",
+  "duaSourceBukhari": "Бохари",
+  "duaSourceMuslim": "Мөселман",
+  "duaSourceAbuDawud": "Абу Давуд",
+  "duaSourceTirmidhi": "Тирмизи",
+  "duaSourceAhmad": "Әхмәт"
 }

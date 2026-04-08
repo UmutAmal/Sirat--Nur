@@ -796,6 +796,48 @@ class AppLocalizationsFy extends AppLocalizations {
       'Ferifiearre deistige duas binne noch net syngronisearre mei dit apparaat. Ferbine mei de wolkboarne om boarne duas te laden ynstee fan in net ferifiearre fallback.';
 
   @override
+  String get duaCategoryQuranic => 'Koranyske dua';
+
+  @override
+  String get duaCategoryMorningEvening => 'Moarn & Jûn';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Beskerming';
+
+  @override
+  String get duaCategoryBeginning => 'Beginings';
+
+  @override
+  String get duaCategorySleep => 'Sliep';
+
+  @override
+  String get duaCategoryFoodDrink => 'Iten & Drinken';
+
+  @override
+  String get duaCategoryForgiveness => 'Ferjouwing';
+
+  @override
+  String get duaCategoryHome => 'Thús';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'moslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

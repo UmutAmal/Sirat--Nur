@@ -796,6 +796,48 @@ class AppLocalizationsBs extends AppLocalizations {
       'Provjerene dnevne dojave još uvijek nisu sinhronizirane na ovaj uređaj. Povežite se s izvorom u oblaku za učitavanje dua-a iz izvora umjesto neprovjerenog rezervnog.';
 
   @override
+  String get duaCategoryQuranic => 'Kur\'anska dova';
+
+  @override
+  String get duaCategoryMorningEvening => 'Jutro & Večer';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'Zaštita';
+
+  @override
+  String get duaCategoryBeginning => 'Počeci';
+
+  @override
+  String get duaCategorySleep => 'Spavaj';
+
+  @override
+  String get duaCategoryFoodDrink => 'Hrana i piće';
+
+  @override
+  String get duaCategoryForgiveness => 'Oprost';
+
+  @override
+  String get duaCategoryHome => 'Dom';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Musliman';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmizi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

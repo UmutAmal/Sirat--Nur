@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Ang gi-verify nga mga duha wala pa magamit",
-  "duaUnavailableBody": "Ang gi-verify nga adlaw-adlaw nga duha wala pa ma-sync sa kini nga aparato. Sumpaysumpaya ang tinubdan sa panganod aron ma-load ang mga sourced nga duha imbes nga usa ka wala mapamatud-an nga fallback."
+  "duaUnavailableBody": "Ang gi-verify nga adlaw-adlaw nga duha wala pa ma-sync sa kini nga aparato. Sumpaysumpaya ang tinubdan sa panganod aron ma-load ang mga sourced nga duha imbes nga usa ka wala mapamatud-an nga fallback.",
+  "duaCategoryQuranic": "Quranikong duha",
+  "duaCategoryMorningEvening": "Buntag ug Gabii",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Proteksyon",
+  "duaCategoryBeginning": "Mga Sinugdanan",
+  "duaCategorySleep": "Pagkatulog",
+  "duaCategoryFoodDrink": "Pagkaon ug Ilimnon",
+  "duaCategoryForgiveness": "Pagpasaylo",
+  "duaCategoryHome": "Balay",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

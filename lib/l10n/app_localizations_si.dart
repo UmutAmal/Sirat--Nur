@@ -796,6 +796,48 @@ class AppLocalizationsSi extends AppLocalizations {
       'සත්‍යාපිත දෛනික duas තවමත් මෙම උපාංගයට සමමුහුර්ත කර නොමැත. සත්‍යාපනය නොකළ පසුබැසීමක් වෙනුවට මූලාශ්‍රගත duas පූරණය කිරීමට ක්ලවුඩ් ප්‍රභවයට සම්බන්ධ වන්න.';
 
   @override
+  String get duaCategoryQuranic => 'කුර්ආන් දූවා';
+
+  @override
+  String get duaCategoryMorningEvening => 'උදෑසන සහ සවස';
+
+  @override
+  String get duaCategoryTasbih => 'තස්බිහ්';
+
+  @override
+  String get duaCategoryProtection => 'ආරක්ෂාව';
+
+  @override
+  String get duaCategoryBeginning => 'ආරම්භය';
+
+  @override
+  String get duaCategorySleep => 'නිදාගන්න';
+
+  @override
+  String get duaCategoryFoodDrink => 'ආහාර පාන';
+
+  @override
+  String get duaCategoryForgiveness => 'සමාව දීම';
+
+  @override
+  String get duaCategoryHome => 'නිවස';
+
+  @override
+  String get duaSourceBukhari => 'බුහාරි';
+
+  @override
+  String get duaSourceMuslim => 'මුස්ලිම්';
+
+  @override
+  String get duaSourceAbuDawud => 'අබු දාවුද්';
+
+  @override
+  String get duaSourceTirmidhi => 'තිර්මිදි';
+
+  @override
+  String get duaSourceAhmad => 'අහමඩ්';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

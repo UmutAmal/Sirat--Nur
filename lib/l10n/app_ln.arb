@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Ba duas vérifiés ezali nanu te",
-  "duaUnavailableBody": "Ba duas ya mokolo na mokolo oyo e vérifié e synchronisé nanu na dispositif oyo te. Connecter na source ya cloud pona ko charger ba duas sourced au lieu ya fallback oyo e vérifié te."
+  "duaUnavailableBody": "Ba duas ya mokolo na mokolo oyo e vérifié e synchronisé nanu na dispositif oyo te. Connecter na source ya cloud pona ko charger ba duas sourced au lieu ya fallback oyo e vérifié te.",
+  "duaCategoryQuranic": "Dua ya Coran",
+  "duaCategoryMorningEvening": "Tongo & Pokwa",
+  "duaCategoryTasbih": "Tasbih, oyo azali",
+  "duaCategoryProtection": "Bobateli",
+  "duaCategoryBeginning": "Ebandeli",
+  "duaCategorySleep": "Mpongi",
+  "duaCategoryFoodDrink": "Bilei & Masanga",
+  "duaCategoryForgiveness": "Bolimbisi",
+  "duaCategoryHome": "Ndako",
+  "duaSourceBukhari": "Bukhari, oyo azali",
+  "duaSourceMuslim": "Moyisalaele",
+  "duaSourceAbuDawud": "Abu Dawud, oyo azali na mbongo mingi",
+  "duaSourceTirmidhi": "Tirmidhi na nkombo",
+  "duaSourceAhmad": "Ahmad"
 }

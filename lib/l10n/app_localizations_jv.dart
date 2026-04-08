@@ -796,6 +796,48 @@ class AppLocalizationsJv extends AppLocalizations {
       'Duas saben dina sing wis diverifikasi durung diselarasake karo piranti iki. Sambungake menyang sumber maya kanggo mbukak sumber sumber tinimbang mundur sing ora diverifikasi.';
 
   @override
+  String get duaCategoryQuranic => 'Qur\'an do\'a';
+
+  @override
+  String get duaCategoryMorningEvening => 'Esuk & Sore';
+
+  @override
+  String get duaCategoryTasbih => 'Tasbih';
+
+  @override
+  String get duaCategoryProtection => 'pangayoman';
+
+  @override
+  String get duaCategoryBeginning => 'Wiwitan';
+
+  @override
+  String get duaCategorySleep => 'Turu';
+
+  @override
+  String get duaCategoryFoodDrink => 'Panganan & Ombenan';
+
+  @override
+  String get duaCategoryForgiveness => 'pangapunten';
+
+  @override
+  String get duaCategoryHome => 'Ngarep';
+
+  @override
+  String get duaSourceBukhari => 'Bukhari';
+
+  @override
+  String get duaSourceMuslim => 'Muslim';
+
+  @override
+  String get duaSourceAbuDawud => 'Abu Dawud';
+
+  @override
+  String get duaSourceTirmidhi => 'Tirmidhi';
+
+  @override
+  String get duaSourceAhmad => 'Ahmad';
+
+  @override
   String get islamicEducation => 'Islamic Education';
 
   @override

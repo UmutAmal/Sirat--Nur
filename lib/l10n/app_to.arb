@@ -509,5 +509,19 @@
     }
   },
   "duaUnavailableTitle": "Verified duas are not available yet",
-  "duaUnavailableBody": "Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback."
+  "duaUnavailableBody": "Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Morning & Evening",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Protection",
+  "duaCategoryBeginning": "Beginnings",
+  "duaCategorySleep": "Sleep",
+  "duaCategoryFoodDrink": "Food & Drink",
+  "duaCategoryForgiveness": "Forgiveness",
+  "duaCategoryHome": "Home",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }
