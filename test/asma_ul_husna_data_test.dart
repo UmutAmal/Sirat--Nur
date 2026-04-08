@@ -91,5 +91,24 @@ void main() {
         'The Inheritor',
       );
     });
+
+    test('bundled source keeps TDV-aligned meanings for high-risk names', () {
+      final byId = {
+        for (final item in AsmaUlHusnaData.names) item['id']: item,
+      };
+
+      expect(
+        (byId[6]!['translations'] as Map<String, dynamic>)['en'],
+        'The Giver of Security',
+      );
+      expect(
+        (byId[68]!['translations'] as Map<String, dynamic>)['en'],
+        'The One Sought by All',
+      );
+      expect(
+        (byId[91]!['translations'] as Map<String, dynamic>)['en'],
+        'The Bringer of Harm',
+      );
+    });
   });
 }

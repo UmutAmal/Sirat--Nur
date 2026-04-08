@@ -2517,3 +2517,35 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) anlam satırları authoritative Türkçe kaynağa göre semantik audit’ten geçirilecek.
 - Ardından nadir locale’lerde İngilizce kalan dini UI anahtarları destek/borrowing/belirsizlik ekseninde raporlanıp mümkün olan ek locale map’leriyle daraltılacak.
+
+## 2026-04-09 TUR-64 — Align High-Risk Asma Meanings With Official Sources
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içinde resmi kaynakla anlam kayması üreten üç yüksek riskli İngilizce gloss dar kapsamlı olarak düzeltildi: `Al Mu'min` için `The Giver of Security`, `As Samad` için `The One Sought by All`, `Ad Darr` için `The Bringer of Harm`.
+- [A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/asma_ul_husna_data_test.dart) içine bu üç ismi kilitleyen yeni regresyon testi eklendi.
+
+### Neden Yapıldı
+- Tarama sonrası bundled fallback hâlâ [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içinde resmi Türkçe açıklamayla çelişen veya onu daraltan İngilizce gloss’lar taşıyordu.
+- `Al Mu'min` için eski `The Inspirer of Faith` ifadesi güven ve eminlik anlamını kaçırıyordu; `As Samad` için `The Supreme Provider` ifadesi Diyanet tefsirindeki “herkesin kendisine ihtiyacını arz ettiği” boyutunu daraltıyordu; `Ad Darr` için `The Creator of the harmful` ifadesi de TDV açıklamasındaki kullanım biçimini bozuk ve kaba veriyordu.
+- Kullanıcının dini içerikte doğruluk talebi nedeniyle yalnızca resmi ve birincil kaynakla yüksek güvenli hizalanabilen isimler seçildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Bundled Asma fallback artık üç kritik isimde resmi anlam eksenine daha yakın ve kullanıcıya daha dürüst İngilizce gloss gösteriyor.
+- Cloud veri yokken doğrudan UI’ya düşen dini içerikte anlam kayması azaltıldı.
+- Regresyon testi bu üç düzeltmenin yanlışlıkla geri alınmasını engelleyecek.
+
+### Test Sonucu
+- `flutter test test/asma_ul_husna_data_test.dart` → PASS (`6/6`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`169/169`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- High-risk bundled Asma English glosses diverging from official Turkish meaning: `12/25 → 4/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki ikinci grup semantik riskler (`Al Quddus`, `Al Wakeel`, `Al Qayyoom`, `Al Waajid`) resmi kaynakla dar kapsamlı denetlenecek.
+- Ardından dini içerik zincirinde hadith ve dua source-attribution yüzeyi taranacak.

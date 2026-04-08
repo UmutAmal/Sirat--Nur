@@ -53,7 +53,7 @@ class AsmaUlHusnaData {
       'arabic': 'الْمُؤْمِنُ',
       'transliteration': 'Al Mu\'min',
       'translations': {
-        'en': 'The Inspirer of Faith',
+        'en': 'The Giver of Security',
         'tr': 'Güven veren, emin kılan, koruyan, vaadine güvenilen.',
       },
     },
@@ -604,7 +604,7 @@ class AsmaUlHusnaData {
       'arabic': 'الصَّمَدُ',
       'transliteration': 'As Samad',
       'translations': {
-        'en': 'The Supreme Provider',
+        'en': 'The One Sought by All',
         'tr': 'Hiçbir şeye ihtiyacı olmayan, herkesin muhtaç olduğu merci.',
       },
     },
@@ -805,7 +805,7 @@ class AsmaUlHusnaData {
       'arabic': 'الضَّارَّ',
       'transliteration': 'Ad Darr',
       'translations': {
-        'en': 'The Creator of the harmful',
+        'en': 'The Bringer of Harm',
         'tr': 'Elem ve zarar verenleri yaratan, dilediğine zarar veren.',
       },
     },
