@@ -29,7 +29,6 @@ String _formatTime(DateTime dt) {
   return '$h:$m';
 }
 
-
 final prayerTimesProvider = Provider<PrayerTimesData?>((ref) {
   final settings = ref.watch(settingsProvider);
   final lat = settings.latitude;
@@ -48,9 +47,8 @@ final prayerTimesProvider = Provider<PrayerTimesData?>((ref) {
   final now = TimezoneUtils.nowForTimezone(settings.timezone);
   final date = DateComponents.from(now);
   final prayerTimes = PrayerTimes(coordinates, date, params);
-  final timeDelta = TimezoneUtils.timezoneDeltaForDate(now, settings.timezone);
-
-  DateTime adjust(DateTime dt) => dt.add(timeDelta);
+  DateTime adjust(DateTime dt) =>
+      TimezoneUtils.adjustCalculationTime(dt, settings.timezone);
   final fajr = adjust(prayerTimes.fajr);
   final sunrise = adjust(prayerTimes.sunrise);
   final dhuhr = adjust(prayerTimes.dhuhr);

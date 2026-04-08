@@ -2092,3 +2092,42 @@
 ### Sonraki Adım
 - Sıradaki turda prayer-notification zinciri, özellikle bölge/timezone değişimlerinde scheduler ve displayed times arasında kenar durum drift’i açısından yeniden taranacak.
 - Ardından kalan hardcoded veya orphan yüzeyler için yeni risk sıralaması açılacak.
+
+## 2026-04-08 TUR-53 — Fix Prayer DST Offset Drift
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\utils\timezone_utils.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/utils/timezone_utils.dart) içine `adjustCalculationTime` helper’ı eklendi; timezone ofseti artık referans gün/saat yerine doğrudan her hesaplanan vakit anına göre uygulanıyor.
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_calendar_service.dart) tüm vakitleri ve ertesi gün Fajr hesabını yeni vakit-bazlı helper üzerinden ayarlayacak şekilde düzeltildi.
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_times_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_times_service.dart) da aynı helper’a bağlandı; UI ve scheduler/calendar zinciri aynı DST mantığını kullanıyor.
+- [A:\Way of Allah\sirat_i_nur\test\prayer_calendar_service_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/prayer_calendar_service_test.dart) Berlin DST geçiş gününde referans-ofset yaklaşımının yanlış olduğunu ve servis çıktısının vakit-bazlı ofsetle eşleştiğini kilitledi.
+- [A:\Way of Allah\sirat_i_nur\test\timezone_utils_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/timezone_utils_test.dart) eklendi; aynı hedef gün içinde DST değişince `timezoneDeltaForDate` farkının değiştiğini doğruluyor.
+
+### Neden Yapıldı
+- Önceki akış `timezoneDeltaForDate(dateOrNow, timezone)` sonucunu tek bir sabit delta olarak günün tüm vakitlerine uyguluyordu.
+- Yaz/kış saati geçiş günü gece yarısından önce yapılan hesapta, aynı gün içindeki Fajr/Dhuhr gibi vakitler geçişten sonraki doğru ofset yerine referans anın ofsetini taşıyabiliyordu.
+- Kök sebep, timezone ofsetinin vakit anına göre değil hesaplama başlangıç anına göre uygulanmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\timezone_utils.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_times_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_calendar_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\timezone_utils_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- DST geçiş günlerinde prayer UI, offline calendar ve notification scheduler aynı doğru vakit-bazlı timezone düzeltmesini kullanıyor.
+- Gece yarısına yakın hesaplanan günlerde gün içi future prayers’ın bir saat kayması riski kapandı.
+- AGENTS.md’de işaretlenen timezone/DST edge-case sınıfı doğrudan testle kapsandı.
+
+### Test Sonucu
+- `flutter test test/timezone_utils_test.dart` → PASS (`1/1`)
+- `flutter test test/prayer_calendar_service_test.dart` → PASS (`3/3`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`152/152`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Prayer times using a single reference timezone delta across DST transition days: `10/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki prayer pipeline turunda scheduler ile widget/provider zinciri arasında kalan locale/title ve audio channel yüzeyi yeniden taranacak.
+- Ardından settings/about dışında kalan orphan ve hardcoded yüzeyler için yeni P1/P2 sıralaması çıkarılacak.

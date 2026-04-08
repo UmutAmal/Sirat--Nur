@@ -44,13 +44,27 @@ class PrayerCalendarService {
 
     final dateComponents = DateComponents.from(date);
     final prayerTimes = PrayerTimes(coordinates, dateComponents, params);
-    final timeDelta = TimezoneUtils.timezoneDeltaForDate(date, timezone);
-    final fajr = prayerTimes.fajr.add(timeDelta);
-    final sunrise = prayerTimes.sunrise.add(timeDelta);
-    final dhuhr = prayerTimes.dhuhr.add(timeDelta);
-    final asr = prayerTimes.asr.add(timeDelta);
-    final maghrib = prayerTimes.maghrib.add(timeDelta);
-    final isha = prayerTimes.isha.add(timeDelta);
+    final fajr = TimezoneUtils.adjustCalculationTime(
+      prayerTimes.fajr,
+      timezone,
+    );
+    final sunrise = TimezoneUtils.adjustCalculationTime(
+      prayerTimes.sunrise,
+      timezone,
+    );
+    final dhuhr = TimezoneUtils.adjustCalculationTime(
+      prayerTimes.dhuhr,
+      timezone,
+    );
+    final asr = TimezoneUtils.adjustCalculationTime(prayerTimes.asr, timezone);
+    final maghrib = TimezoneUtils.adjustCalculationTime(
+      prayerTimes.maghrib,
+      timezone,
+    );
+    final isha = TimezoneUtils.adjustCalculationTime(
+      prayerTimes.isha,
+      timezone,
+    );
 
     // Calculate next prayer
     final now = currentTime ?? TimezoneUtils.nowForTimezone(timezone);
@@ -83,11 +97,10 @@ class PrayerCalendarService {
         tomorrowDateComponents,
         params,
       );
-      final tomorrowTimeDelta = TimezoneUtils.timezoneDeltaForDate(
-        tomorrow,
+      nextTime = TimezoneUtils.adjustCalculationTime(
+        tomorrowPrayerTimes.fajr,
         timezone,
       );
-      nextTime = tomorrowPrayerTimes.fajr.add(tomorrowTimeDelta);
       nextName = 'Fajr';
     }
 

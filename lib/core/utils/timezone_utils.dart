@@ -42,7 +42,19 @@ class TimezoneUtils {
     );
   }
 
-  static Duration timezoneDeltaForDate(DateTime targetDate, String? timezoneName) {
+  static DateTime adjustCalculationTime(
+    DateTime calculatedTime,
+    String? timezoneName,
+  ) {
+    return calculatedTime.add(
+      timezoneDeltaForDate(calculatedTime, timezoneName),
+    );
+  }
+
+  static Duration timezoneDeltaForDate(
+    DateTime targetDate,
+    String? timezoneName,
+  ) {
     if (timezoneName == null || timezoneName.trim().isEmpty) {
       return Duration.zero;
     }
@@ -58,7 +70,8 @@ class TimezoneUtils {
         targetDate.second,
       );
       final localTz = tz.TZDateTime.from(targetDate, tz.local);
-      final deltaMinutes = targetTz.timeZoneOffset.inMinutes - localTz.timeZoneOffset.inMinutes;
+      final deltaMinutes =
+          targetTz.timeZoneOffset.inMinutes - localTz.timeZoneOffset.inMinutes;
 
       return Duration(minutes: deltaMinutes);
     } catch (_) {
