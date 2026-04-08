@@ -219,19 +219,19 @@ class AppLocalizationsTi extends AppLocalizations {
   String get masaail => 'Masa\'il';
 
   @override
-  String get hadith => 'Hadith';
+  String get hadith => 'ሓዲስ';
 
   @override
-  String get hadithCollection => 'Hadith Collection';
+  String get hadithCollection => 'እኩብ ሓዲስ';
 
   @override
-  String get hadithBooks => 'Hadith Books';
+  String get hadithBooks => 'መጻሕፍቲ ሓዲስ';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => 'ሓዲስ ድለዩ።';
 
   @override
-  String get asmaulHusna => 'Asma-ul-Husna';
+  String get asmaulHusna => 'ኣስማ-ኡል-ሑስና።';
 
   @override
   String get namesOfAllah => 'Names of Allah';
@@ -793,7 +793,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get duaUnavailableBody =>
-      'ዝተረጋገጹ መዓልታዊ ዱዓታት ገና ምስዚ መሳርሒ ኣይተሰማምዑን። ኣብ ክንዲ ዘይተረጋገጸ ምምላስ ምምላስ ምንጪ ዘለዎም ዱዓታት ንምጽዓን ምስቲ ምንጪ ደበና ምትእስሳር።';
+      'ዝተረጋገጹ መዓልታዊ ዱዓታት ክሳብ ሕጂ ምስዚ መሳርሒ ኣይተሰማምዑን። ኣብ ክንዲ ዘይተረጋገጸ ምምላስ ምምላስ ምንጪ ዘለዎም ዱዓታት ንምጽዓን ምስቲ ምንጪ ደበና ምትእስሳር።';
 
   @override
   String get duaCategoryQuranic => 'ቁርኣናዊ ዱዓ';
@@ -844,7 +844,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'እኩባት ሓዲስ';
 
   @override
   String get paywallUnlockAll =>

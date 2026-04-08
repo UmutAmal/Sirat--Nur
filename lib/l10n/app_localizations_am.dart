@@ -784,7 +784,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String essentialDuas(String count) {
-    return '$count አስፈላጊ ዱአዎች';
+    return '$count አስፈላጊ ዱዓዎች';
   }
 
   @override
@@ -843,7 +843,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'የሀዲስ ስብስቦች';
 
   @override
   String get paywallUnlockAll =>

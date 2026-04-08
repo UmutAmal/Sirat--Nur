@@ -228,7 +228,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get hadithBooks => 'Hadith Books';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => 'Quaerere Hadith';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';
@@ -793,7 +793,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get duaUnavailableBody =>
-      'Verificatur quotidie duas duas notae adhuc huic notae non synced. Coniunge ad fontem nubem ut duas ordientes duplices pro fallatico oneris non moveat.';
+      'Verificatur quotidie duas duas notae adhuc huic notae non synced. Coniunge ad fontem nubem ut duas in loco non ficta fallback oriatur, ut oneremus.';
 
   @override
   String get duaCategoryQuranic => 'Quranic dua';

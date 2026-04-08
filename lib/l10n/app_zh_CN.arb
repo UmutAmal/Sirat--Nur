@@ -298,7 +298,7 @@
   "library": "Library",
   "analytics": "Analytics",
   "dailyDuas": "每日杜阿",
-  "essentialDuas": "{count} essential duas",
+  "essentialDuas": "{count} 基本杜阿",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -308,7 +308,7 @@
   },
   "islamicEducation": "Islamic Education",
   "sukunAudioTitle": "Sukun Soundscapes",
-  "hadithCollections": "Hadith Collections",
+  "hadithCollections": "圣训集",
   "paywallUnlockAll": "Unlock all features for your spiritual journey",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Unlimited AI-powered Q&A",

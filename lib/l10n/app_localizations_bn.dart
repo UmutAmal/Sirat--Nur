@@ -222,16 +222,16 @@ class AppLocalizationsBn extends AppLocalizations {
   String get hadith => 'হাদিস';
 
   @override
-  String get hadithCollection => 'হাদিস সংকলন';
+  String get hadithCollection => 'হাদিস সংগ্রহ';
 
   @override
   String get hadithBooks => 'হাদিসের বই';
 
   @override
-  String get searchHadith => 'হাদিস খুঁজুন';
+  String get searchHadith => 'হাদিস অনুসন্ধান করুন';
 
   @override
-  String get asmaulHusna => 'আসমাউল হুসনা';
+  String get asmaulHusna => 'আসমা-উল-হুসনা';
 
   @override
   String get namesOfAllah => 'আল্লাহর নাম';
@@ -844,7 +844,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'হাদিস সংগ্রহ';
 
   @override
   String get paywallUnlockAll =>

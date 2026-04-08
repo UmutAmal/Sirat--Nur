@@ -1922,7 +1922,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count 基本杜阿';
   }
 
   @override
@@ -1981,7 +1981,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => '圣训集';
 
   @override
   String get paywallUnlockAll =>
@@ -2499,7 +2499,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get hadithCollection => '聖訓集';
 
   @override
-  String get hadithBooks => '聖訓書籍';
+  String get hadithBooks => 'Hadith Books';
 
   @override
   String get searchHadith => '搜尋聖訓';
@@ -3116,7 +3116,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => '聖訓集';
 
   @override
   String get paywallUnlockAll =>

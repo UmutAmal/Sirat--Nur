@@ -308,7 +308,7 @@
   },
   "islamicEducation": "Islamic Education",
   "sukunAudioTitle": "Sukun Soundscapes",
-  "hadithCollections": "Hadith Collections",
+  "hadithCollections": "Bailiúcháin de hadith saor in aisce,",
   "paywallUnlockAll": "Unlock all features for your spiritual journey",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Unlimited AI-powered Q&A",
@@ -509,7 +509,7 @@
     }
   },
   "duaUnavailableTitle": "Níl dus deimhnithe ar fáil go fóill",
-  "duaUnavailableBody": "Níor sioncronaíodh dus laethúil fíoraithe leis an ngléas seo fós. Ceangail leis an bhfoinse néil chun duas foinsithe a lódáil in ionad aischúiteamh neamhfhíoraithe.",
+  "duaUnavailableBody": "Níor sioncronaíodh dus laethúil fíoraithe leis an ngléas seo fós. Ceangail leis an bhfoinse néil chun duas foinsithe a lódáil in ionad aisghnó neamhfhíoraithe.",
   "duaCategoryQuranic": "Dua Quranic",
   "duaCategoryMorningEvening": "Maidin & Tráthnóna",
   "duaCategoryTasbih": "Tasbih",

@@ -222,13 +222,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get hadith => 'Hadith';
 
   @override
-  String get hadithCollection => 'Hadith Collection';
+  String get hadithCollection => 'Bộ sưu tập Hadith';
 
   @override
-  String get hadithBooks => 'Hadith Books';
+  String get hadithBooks => 'Sách Hadith';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => 'Tìm kiếm Hadith';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';
@@ -844,7 +844,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Bộ sưu tập Hadith';
 
   @override
   String get paywallUnlockAll =>

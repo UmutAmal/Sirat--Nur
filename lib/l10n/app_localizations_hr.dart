@@ -845,7 +845,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Zbirke hadisa';
 
   @override
   String get paywallUnlockAll =>

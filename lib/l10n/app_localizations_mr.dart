@@ -219,19 +219,19 @@ class AppLocalizationsMr extends AppLocalizations {
   String get masaail => 'Masa\'il';
 
   @override
-  String get hadith => 'Hadith';
+  String get hadith => 'हदीस';
 
   @override
-  String get hadithCollection => 'Hadith Collection';
+  String get hadithCollection => 'हदीस संग्रह';
 
   @override
-  String get hadithBooks => 'Hadith Books';
+  String get hadithBooks => 'हदीस पुस्तके';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => 'हदीस शोधा';
 
   @override
-  String get asmaulHusna => 'Asma-ul-Husna';
+  String get asmaulHusna => 'अस्मा-उल-हुस्ना';
 
   @override
   String get namesOfAllah => 'Names of Allah';
@@ -796,7 +796,7 @@ class AppLocalizationsMr extends AppLocalizations {
       'सत्यापित दैनिक दुआ अद्याप या डिव्हाइसवर समक्रमित केले गेले नाहीत. असत्यापित फॉलबॅक ऐवजी सोर्स केलेले डुआ लोड करण्यासाठी क्लाउड स्त्रोताशी कनेक्ट करा.';
 
   @override
-  String get duaCategoryQuranic => 'कुराणची दुआ';
+  String get duaCategoryQuranic => 'कुराण दुआ';
 
   @override
   String get duaCategoryMorningEvening => 'सकाळ आणि संध्याकाळ';
@@ -844,7 +844,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'हदीस संग्रह';
 
   @override
   String get paywallUnlockAll =>

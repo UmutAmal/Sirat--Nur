@@ -786,7 +786,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String essentialDuas(String count) {
-    return '$count importante nga duha';
+    return '$count importante nga mga duha';
   }
 
   @override
@@ -846,7 +846,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Mga Koleksyon sa Hadith';
 
   @override
   String get paywallUnlockAll =>

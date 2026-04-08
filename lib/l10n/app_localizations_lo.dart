@@ -222,13 +222,13 @@ class AppLocalizationsLo extends AppLocalizations {
   String get hadith => 'Hadith';
 
   @override
-  String get hadithCollection => 'Hadith Collection';
+  String get hadithCollection => 'ການເກັບກໍາ Hadith';
 
   @override
-  String get hadithBooks => 'Hadith Books';
+  String get hadithBooks => 'ປຶ້ມ Hadith';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => 'ຊອກຫາ Hadith';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';
@@ -793,7 +793,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get duaUnavailableBody =>
-      'ຢືນຢັນ duas ປະຈໍາວັນຍັງບໍ່ໄດ້ຖືກຊິງຄ໌ກັບອຸປະກອນນີ້ເທື່ອ. ເຊື່ອມຕໍ່ຫາແຫຼ່ງຄລາວເພື່ອໂຫລດ duas ທີ່ມີແຫຼ່ງທີ່ມາແທນທີ່ຈະເປັນທາງເລືອກທີ່ບໍ່ໄດ້ຮັບການຢືນຢັນ.';
+      'ຢືນຢັນ duas ປະຈໍາວັນຍັງບໍ່ໄດ້ຖືກຊິງຄ໌ກັບອຸປະກອນນີ້ເທື່ອ. ເຊື່ອມຕໍ່ຫາແຫຼ່ງຄລາວເພື່ອໂຫຼດ duas ທີ່ມາແທນການທົດແທນທີ່ບໍ່ໄດ້ຮັບການຢືນຢັນ.';
 
   @override
   String get duaCategoryQuranic => 'Quranic dua';
@@ -844,7 +844,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'ການເກັບກໍາ Hadith';
 
   @override
   String get paywallUnlockAll =>

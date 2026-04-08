@@ -853,7 +853,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Dikgoboketšo tša Hadith';
 
   @override
   String get paywallUnlockAll =>

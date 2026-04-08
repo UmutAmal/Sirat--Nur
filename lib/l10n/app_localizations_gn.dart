@@ -226,7 +226,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get hadithCollection => 'Hadith Ñembyaty';
 
   @override
-  String get hadithBooks => 'Aranduka Hadith rehegua';
+  String get hadithBooks => 'Hadith Arandukakuéra';
 
   @override
   String get searchHadith => 'Ojeporeka Hadith-pe';
@@ -846,7 +846,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Hadith Ñembyatykuéra';
 
   @override
   String get paywallUnlockAll =>

@@ -794,7 +794,7 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String get duaUnavailableBody =>
-      'ʻAʻole i hoʻopaʻa ʻia nā ʻelua i kēlā me kēia lā i kēia hāmeʻa. Hoʻohui i ke kumu ao e hoʻouka i nā kumu ʻelua ma kahi o kahi hāʻule hōʻoia ʻole.';
+      'ʻAʻole i hoʻopaʻa ʻia nā ʻelua i kēlā me kēia lā i kēia hāmeʻa. Hoʻohui i ke kumu ao e hoʻouka i nā kumu ʻelua ma mua o kahi hāʻule hōʻoia ʻole.';
 
   @override
   String get duaCategoryQuranic => 'Quranic dua';
@@ -845,7 +845,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Nā Hōʻiliʻili Hadith';
 
   @override
   String get paywallUnlockAll =>

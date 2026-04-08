@@ -219,19 +219,19 @@ class AppLocalizationsKm extends AppLocalizations {
   String get masaail => 'Masa\'il';
 
   @override
-  String get hadith => 'Hadith';
+  String get hadith => 'ហាឌីត';
 
   @override
-  String get hadithCollection => 'Hadith Collection';
+  String get hadithCollection => 'ការប្រមូល Hadith';
 
   @override
-  String get hadithBooks => 'Hadith Books';
+  String get hadithBooks => 'សៀវភៅ Hadith';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => 'ស្វែងរក Hadith';
 
   @override
-  String get asmaulHusna => 'Asma-ul-Husna';
+  String get asmaulHusna => 'អាម៉ា-អ៊ូល-ហ៊ូសណា';
 
   @override
   String get namesOfAllah => 'Names of Allah';
@@ -844,7 +844,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'ការប្រមូល Hadith';
 
   @override
   String get paywallUnlockAll =>

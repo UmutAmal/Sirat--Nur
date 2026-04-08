@@ -845,7 +845,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'हदीस संग्रह के बारे में बतावल गइल बा';
 
   @override
   String get paywallUnlockAll =>

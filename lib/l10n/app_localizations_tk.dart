@@ -219,16 +219,16 @@ class AppLocalizationsTk extends AppLocalizations {
   String get masaail => 'Masa\'il';
 
   @override
-  String get hadith => 'Hadith';
+  String get hadith => 'Hadys';
 
   @override
-  String get hadithCollection => 'Hadith Collection';
+  String get hadithCollection => 'Hadys ýygyndysy';
 
   @override
-  String get hadithBooks => 'Hadith Books';
+  String get hadithBooks => 'Hadys kitaplary';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => 'Hadys gözläň';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';
@@ -844,7 +844,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Hadys ýygyndylary';
 
   @override
   String get paywallUnlockAll =>

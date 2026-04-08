@@ -219,19 +219,19 @@ class AppLocalizationsKo extends AppLocalizations {
   String get masaail => 'Masa\'il';
 
   @override
-  String get hadith => 'Hadith';
+  String get hadith => '하디스';
 
   @override
-  String get hadithCollection => 'Hadith Collection';
+  String get hadithCollection => '하디스 컬렉션';
 
   @override
-  String get hadithBooks => 'Hadith Books';
+  String get hadithBooks => '하디스 도서';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => '하디스 검색';
 
   @override
-  String get asmaulHusna => 'Asma-ul-Husna';
+  String get asmaulHusna => '아스마울후스나';
 
   @override
   String get namesOfAllah => 'Names of Allah';
@@ -793,7 +793,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get duaUnavailableBody =>
-      '확인된 일일 듀아가 아직 이 기기에 동기화되지 않았습니다. 확인되지 않은 대체 대신 소스가 있는 duas를 로드하려면 클라우드 소스에 연결하세요.';
+      '확인된 일일 듀아가 아직 이 기기에 동기화되지 않았습니다. 확인되지 않은 폴백 대신 소스가 있는 duas를 로드하려면 클라우드 소스에 연결하세요.';
 
   @override
   String get duaCategoryQuranic => '꾸란 두아';
@@ -844,7 +844,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => '하디스 컬렉션';
 
   @override
   String get paywallUnlockAll =>

@@ -76,7 +76,7 @@
   "hadith": "Hadith",
   "hadithCollection": "Hadith Collection",
   "hadithBooks": "Hadith Books",
-  "searchHadith": "Search Hadith",
+  "searchHadith": "Quaerere Hadith",
   "asmaulHusna": "Asma-ul-Husna",
   "namesOfAllah": "Names of Allah",
   "liveTv": "Live TV",
@@ -509,7 +509,7 @@
     }
   },
   "duaUnavailableTitle": "Verified duas non sunt available adhuc",
-  "duaUnavailableBody": "Verificatur quotidie duas duas notae adhuc huic notae non synced. Coniunge ad fontem nubem ut duas ordientes duplices pro fallatico oneris non moveat.",
+  "duaUnavailableBody": "Verificatur quotidie duas duas notae adhuc huic notae non synced. Coniunge ad fontem nubem ut duas in loco non ficta fallback oriatur, ut oneremus.",
   "duaCategoryQuranic": "Quranic dua",
   "duaCategoryMorningEvening": "Mane & Vespere",
   "duaCategoryTasbih": "Tasbih",

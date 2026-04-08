@@ -298,7 +298,7 @@
   "library": "Library",
   "analytics": "Analytics",
   "dailyDuas": "Adlaw-adlaw nga Duas",
-  "essentialDuas": "{count} importante nga duha",
+  "essentialDuas": "{count} importante nga mga duha",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -308,7 +308,7 @@
   },
   "islamicEducation": "Islamic Education",
   "sukunAudioTitle": "Sukun Soundscapes",
-  "hadithCollections": "Hadith Collections",
+  "hadithCollections": "Mga Koleksyon sa Hadith",
   "paywallUnlockAll": "Unlock all features for your spiritual journey",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Unlimited AI-powered Q&A",

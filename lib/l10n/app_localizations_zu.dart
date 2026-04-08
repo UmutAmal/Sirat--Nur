@@ -222,13 +222,13 @@ class AppLocalizationsZu extends AppLocalizations {
   String get hadith => 'Hadith';
 
   @override
-  String get hadithCollection => 'Hadith Collection';
+  String get hadithCollection => 'Iqoqo leHadith';
 
   @override
-  String get hadithBooks => 'Hadith Books';
+  String get hadithBooks => 'Hadith Izincwadi';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => 'Sesha iHadith';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';
@@ -845,7 +845,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Hadith Amaqoqo';
 
   @override
   String get paywallUnlockAll =>

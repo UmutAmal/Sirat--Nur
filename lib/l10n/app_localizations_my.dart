@@ -219,16 +219,16 @@ class AppLocalizationsMy extends AppLocalizations {
   String get masaail => 'Masa\'il';
 
   @override
-  String get hadith => 'Hadith';
+  String get hadith => 'ဟဒီးစ်';
 
   @override
-  String get hadithCollection => 'Hadith Collection';
+  String get hadithCollection => 'Hadith စုစည်းမှု';
 
   @override
-  String get hadithBooks => 'Hadith Books';
+  String get hadithBooks => 'Hadith စာအုပ်များ';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => 'Hadith ကိုရှာပါ။';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';
@@ -845,7 +845,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Hadith စုဆောင်းမှုများ';
 
   @override
   String get paywallUnlockAll =>

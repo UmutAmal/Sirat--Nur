@@ -222,7 +222,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get hadith => 'Hadito';
 
   @override
-  String get hadithCollection => 'Hadith-Kolekto';
+  String get hadithCollection => 'Hadito-Kolekto';
 
   @override
   String get hadithBooks => 'Hadito-Libroj';
@@ -844,7 +844,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Hadith-Kolektoj';
 
   @override
   String get paywallUnlockAll =>

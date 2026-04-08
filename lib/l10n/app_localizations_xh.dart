@@ -225,10 +225,10 @@ class AppLocalizationsXh extends AppLocalizations {
   String get hadithCollection => 'Hadith Collection';
 
   @override
-  String get hadithBooks => 'Hadith Books';
+  String get hadithBooks => 'Iincwadi zeHadith';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => 'Khangela iHadith';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';

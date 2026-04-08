@@ -794,7 +794,7 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String get duaUnavailableBody =>
-      'Níor sioncronaíodh dus laethúil fíoraithe leis an ngléas seo fós. Ceangail leis an bhfoinse néil chun duas foinsithe a lódáil in ionad aischúiteamh neamhfhíoraithe.';
+      'Níor sioncronaíodh dus laethúil fíoraithe leis an ngléas seo fós. Ceangail leis an bhfoinse néil chun duas foinsithe a lódáil in ionad aisghnó neamhfhíoraithe.';
 
   @override
   String get duaCategoryQuranic => 'Dua Quranic';
@@ -845,7 +845,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Bailiúcháin de hadith saor in aisce,';
 
   @override
   String get paywallUnlockAll =>

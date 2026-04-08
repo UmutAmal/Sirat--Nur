@@ -2482,3 +2482,38 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki anlam satırları authoritative Türkçe kaynakla semantik hizaya göre denetlenecek.
 - Ardından Asma UI’de bu meanings/transliterations için locale-specific presentation ve source-attribution yüzeyi taranacak.
+
+## 2026-04-09 TUR-63 — Localize Religious UI Keys Across Supported Locales
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) üç kontrollü batch ile çalıştırıldı; dini UI yüzeyindeki `hadith`, `hadithCollection`, `hadithBooks`, `searchHadith`, `asmaulHusna`, `dailyDuas`, `essentialDuas`, `duaUnavailableTitle`, `duaUnavailableBody`, `duaCategory*`, `hadithCollections` anahtarları desteklenen locale’lerde yeniden çevrildi.
+- Sonuçlar tüm ilgili [A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) dosyalarına ve generated [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations.dart) zincirine yayıldı.
+- [A:\Way of Allah\sirat_i_nur\test\arb_religious_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_religious_localization_test.dart) eklendi; `de`, `fr`, `es`, `ar`, `hi`, `zh_CN`, `zh_TW`, `ru`, `id`, `pt` locale’lerinde `dailyDuas`, `hadithCollections`, `duaUnavailableTitle` değerlerinin İngilizceye düşmediğini guard ediyor.
+
+### Neden Yapıldı
+- Tarama sırasında 194 locale’de dini UI anahtarlarının en az bir kısmının hâlâ İngilizce kaldığı kanıtlandı; özellikle `dailyDuas`, `hadithCollections` ve `duaUnavailableTitle` zinciri yeni dini içerik yüzeyinde görünür İngilizce fallback üretiyordu.
+- Kök sebep, önceki localization turlarının bütün dini anahtarları bütün locale setine aynı yoğunlukta yaymamasıydı.
+- Kullanıcının “tüm diller için tam çeviri” talebine yaklaşmak için desteklenen locale’lerde gerçek çeviri tekrar üretildi; belirsiz veya nadir locale’lerde ise AGENTS.md kuralına uygun olarak gerektiğinde EN referans korunmuş oldu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_religious_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Ana hedef dillerde dini UI metni artık İngilizce fallback yerine yerel çeviriyle geliyor.
+- `dailyDuas`, `hadithCollections`, `duaUnavailableTitle` gibi doğrudan kullanıcıya görünen dini yüzeylerde locale-semantic kalite yükseldi.
+- Guard testi sayesinde bu çekirdek dini UI kopyası hedef dillerde tekrar İngilizceye düşerse CI seviyesinde yakalanacak.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_religious_localization_test.dart` → PASS (`1/1`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`168/168`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Religious UI strings falling back to English across supported locales: `11/25 → 4/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) anlam satırları authoritative Türkçe kaynağa göre semantik audit’ten geçirilecek.
+- Ardından nadir locale’lerde İngilizce kalan dini UI anahtarları destek/borrowing/belirsizlik ekseninde raporlanıp mümkün olan ek locale map’leriyle daraltılacak.

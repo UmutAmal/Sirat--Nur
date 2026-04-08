@@ -846,7 +846,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Hadith khawlkhawm te';
 
   @override
   String get paywallUnlockAll =>

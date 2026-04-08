@@ -844,7 +844,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'હદીસ સંગ્રહ';
 
   @override
   String get paywallUnlockAll =>
