@@ -861,4 +861,68 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get bestStreak => 'Best streak';
+
+  @override
+  String get chatbotCloudAiLabel => 'Cloud AI';
+
+  @override
+  String get chatbotLocalAiLabel => 'Local AI';
+
+  @override
+  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+
+  @override
+  String get chatbotDownloadLocalAi => 'Download Local AI (1.5 GB)';
+
+  @override
+  String chatbotQueriesLeft(String count) {
+    return '$count left';
+  }
+
+  @override
+  String get chatbotCloudNotConfigured =>
+      'Cloud API not configured. Please switch to Local AI.';
+
+  @override
+  String get chatbotLocalNoInfo =>
+      '[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.';
+
+  @override
+  String get mosques => 'Mosques';
+
+  @override
+  String get halalFood => 'Halal Food';
+
+  @override
+  String get placesSearchArea => 'Search this area';
+
+  @override
+  String get nearbyMosques => 'Nearby Mosques';
+
+  @override
+  String get islamicSchools => 'Islamic Schools';
+
+  @override
+  String placesFoundCount(String count) {
+    return '$count found';
+  }
+
+  @override
+  String distanceAwayKm(String distance) {
+    return '$distance km away';
+  }
+
+  @override
+  String placesApiError(String statusCode) {
+    return 'API Error: $statusCode';
+  }
+
+  @override
+  String get placesNetworkError => 'Network error. Please try again.';
+
+  @override
+  String get unknownPlaceName => 'Unknown Name';
+
+  @override
+  String get islamicPlaceFallback => 'Islamic Place';
 }

@@ -69,10 +69,10 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
   Future<void> _sendMessage() async {
     final text = _controller.text.trim();
     if (text.isEmpty) return;
+    final l10n = AppLocalizations.of(context)!;
 
     final queriesLeft = ref.read(_queriesLeftProvider);
     if (queriesLeft <= 0) {
-      final l10n = AppLocalizations.of(context)!;
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text(l10n.chatbotLimitReached)));
@@ -94,22 +94,13 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
         final locale = Localizations.localeOf(context);
         final isTurkish = locale.languageCode == 'tr';
         final localResponse = IslamicChatbotData.getResponse(text, isTurkish);
-        response =
-            localResponse ??
-            (isTurkish
-                ? '[YEREL AI] Bu konuda henüz bilgim yok. Namaz, oruç, zekat, hac, iman, ahlak gibi konularda soru sorabilirsiniz.'
-                : "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.");
+        response = localResponse ?? l10n.chatbotLocalNoInfo;
       } else if (_chat != null) {
         // Use Gemini LLM
-        final l10n = AppLocalizations.of(context)!;
         final geminiResponse = await _chat!.sendMessage(Content.text(text));
         response = geminiResponse.text ?? l10n.chatbotErrorMsg;
       } else {
-        final locale = Localizations.localeOf(context);
-        final isTurkish = locale.languageCode == 'tr';
-        response = isTurkish
-            ? "Bulut API ayarlanmadı. Lütfen ayarlardan Local AI moduna geçin."
-            : "Cloud API not configured. Please switch to Local AI.";
+        response = l10n.chatbotCloudNotConfigured;
       }
 
       if (!mounted) return;
@@ -125,14 +116,7 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
       final msgs = ref.read(_chatMessagesProvider.notifier);
       msgs.state = [
         ...msgs.state,
-        _ChatMsg(
-          text:
-              localResponse ??
-              (isTurkish
-                  ? 'Bir hata oluştu. Lütfen tekrar deneyin.'
-                  : 'An error occurred. Please try again.'),
-          isUser: false,
-        ),
+        _ChatMsg(text: localResponse ?? l10n.chatbotErrorMsg, isUser: false),
       ];
     } finally {
       if (mounted) {
@@ -178,7 +162,9 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
                 borderRadius: BorderRadius.circular(6),
               ),
               child: Text(
-                _isOfflineMode ? 'LOCAL AI' : 'CLOUD AI',
+                _isOfflineMode
+                    ? l10n.chatbotLocalAiLabel
+                    : l10n.chatbotCloudAiLabel,
                 style: TextStyle(
                   fontSize: 10,
                   fontWeight: FontWeight.w900,
@@ -196,13 +182,13 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
               if (val == 'local') _showLocalAiDownloadDialog();
             },
             itemBuilder: (ctx) => [
-              const PopupMenuItem(
+              PopupMenuItem(
                 value: 'cloud',
-                child: Text('Use Cloud AI (Gemini)'),
+                child: Text(l10n.chatbotUseCloudAi),
               ),
-              const PopupMenuItem(
+              PopupMenuItem(
                 value: 'local',
-                child: Text('Download Local AI (1.5GB)'),
+                child: Text(l10n.chatbotDownloadLocalAi),
               ),
             ],
           ),
@@ -223,7 +209,7 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
                 ),
                 const SizedBox(width: 4),
                 Text(
-                  '$queriesLeft left',
+                  l10n.chatbotQueriesLeft('$queriesLeft'),
                   style: const TextStyle(
                     fontWeight: FontWeight.w800,
                     color: AppColors.emerald,

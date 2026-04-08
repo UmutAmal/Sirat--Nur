@@ -404,3 +404,64 @@
   - satır 473: `'${enrichedPlaces.length} found'`
   - satır 584: `'${place.distanceKm.toStringAsFixed(1)} km away'`
 - `flutter gen-l10n` çalışıyor ancak çok sayıda dil dosyasında repo genelinden gelen eski `untranslated message(s)` uyarıları sürüyor; bu uyarılar analytics turunu bloklamadı fakat ayrı bir çeviri sertleştirme turu gerektiriyor.
+
+## 2026-04-08 TUR-15 — Chatbot and Places Localization Gate
+### Yapılan İşlem
+- `chatbot_page.dart` içindeki kalan kullanıcıya görünen hardcoded AI mod metinleri l10n zincirine taşındı:
+  - AI durum rozeti
+  - popup menü seçenekleri
+  - `queries left` sayacı
+  - cloud API yapılandırma fallback mesajı
+  - local no-info fallback mesajı
+  - generic error fallback, mevcut `chatbotErrorMsg` anahtarına bağlandı
+- `places_map_page.dart` içindeki kalan hardcoded yüzeyler l10n zincirine taşındı:
+  - kategori chip etiketleri
+  - `Search this area`
+  - alt sheet başlıkları
+  - sonuç sayısı
+  - mesafe etiketi
+  - API/network hata metinleri
+  - `Unknown Name` ve `Islamic Place` fallback metinleri
+- Yeni chatbot ve places anahtarları tüm `lib/l10n/app_*.arb` dosyalarına aynı turda eklendi.
+  - `app_tr.arb` için Türkçe değerler yazıldı.
+  - Diğer tüm diller için repo kuralı doğrultusunda İngilizce fallback eklendi; eksik anahtar bırakılmadı.
+- `flutter gen-l10n` tekrar çalıştırıldı ve generated localization dosyaları güncellendi.
+- Yeni/yenilenen widget testleri eklendi:
+  - `chatbot_page_test.dart`: İngilizce ve Türkçe AI mod kontrolleri + cloud fallback cevabı
+  - `places_map_page_test.dart`: İngilizce ve Türkçe kategori/bottom-sheet chrome doğrulaması
+
+### Neden Yapıldı
+- `chatbot_page.dart` ve `places_map_page.dart` kullanıcıya doğrudan görünen sabit İngilizce metinler taşıyordu; bu durum AGENTS.md içindeki `Hardcoded string bırakma` kuralını ihlal ediyordu.
+- Bu metinler özellikle chatbot mod seçimi ve places keşif akışında yüksek görünürlükteydi; locale değişiminde arayüz tutarlılığını bozuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\chatbot\chatbot_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\add_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Chatbot ekranı artık AI mod durumunu ve fallback cevaplarını locale-aware gösteriyor.
+- Places ekranı artık keşif akışındaki başlık, sayaç, mesafe ve hata metinlerini locale-aware gösteriyor.
+- Her iki feature için de locale regresyonu widget testleriyle koruma altına alındı.
+
+### Test Sonucu
+- `flutter gen-l10n` → Başarılı
+- `flutter test test/features/chatbot/chatbot_page_test.dart` → PASS (`2/2`)
+- `flutter test test/features/places/places_map_page_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`58/58`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Chatbot + Places hardcoded UI copy: `9/25 → 2/25`
+
+### Sonraki Adım
+- Section 13 kapsamındaki yerel dini içerik yüzeyleri hâlâ repo içindeki sabit veri dosyalarından okunuyor:
+  - `duas_data.dart` satır 21: `const List<DuaData> dailyDuas = [`
+  - `asma_ul_husna_data.dart` satır 2: `static const List<Map<String, dynamic>> names = [`
+- Bu içeriklerin bir sonraki turda doğrulanmış kaynak + Supabase + offline fallback zincirine taşınması gerekiyor.
+- `flutter gen-l10n` hâlâ çok sayıda dil dosyası için repo genelinden gelen `untranslated message(s)` uyarıları veriyor; bu durum ayrıca bir çeviri sertleştirme turu gerektiriyor.

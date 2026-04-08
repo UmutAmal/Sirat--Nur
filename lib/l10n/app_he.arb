@@ -29,5 +29,51 @@
   "prayerCompletion": "Prayer Completion",
   "streaks": "Streaks",
   "dayStreak": "Day streak",
-  "bestStreak": "Best streak"
+  "bestStreak": "Best streak",
+  "chatbotCloudAiLabel": "Cloud AI",
+  "chatbotLocalAiLabel": "Local AI",
+  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+  "chatbotQueriesLeft": "{count} left",
+  "@chatbotQueriesLeft": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotLocalNoInfo": "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+  "mosques": "Mosques",
+  "halalFood": "Halal Food",
+  "placesSearchArea": "Search this area",
+  "nearbyMosques": "Nearby Mosques",
+  "islamicSchools": "Islamic Schools",
+  "placesFoundCount": "{count} found",
+  "@placesFoundCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "distanceAwayKm": "{distance} km away",
+  "@distanceAwayKm": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "placesApiError": "API Error: {statusCode}",
+  "@placesApiError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "placesNetworkError": "Network error. Please try again.",
+  "unknownPlaceName": "Unknown Name",
+  "islamicPlaceFallback": "Islamic Place"
 }

@@ -86,6 +86,8 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
       );
 
       if (response.statusCode == 200) {
+        if (!mounted) return;
+        final l10n = AppLocalizations.of(context)!;
         final data = json.decode(response.body);
         final elements = data['elements'] as List;
 
@@ -93,7 +95,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
 
         for (final el in elements) {
           final tags = el['tags'] ?? {};
-          final name = tags['name'] ?? tags['name:en'] ?? 'Unknown Name';
+          final name = tags['name'] ?? tags['name:en'] ?? l10n.unknownPlaceName;
           final lat = el['lat'] ?? el['center']?['lat'];
           final lon = el['lon'] ?? el['center']?['lon'];
 
@@ -113,7 +115,10 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
               _IslamicPlace(
                 id: el['id'].toString(),
                 name: name,
-                description: tags['amenity'] ?? tags['shop'] ?? 'Islamic Place',
+                description:
+                    tags['amenity'] ??
+                    tags['shop'] ??
+                    l10n.islamicPlaceFallback,
                 position: LatLng(lat, lon),
                 icon: icon,
                 color: color,
@@ -123,18 +128,19 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
           }
         }
 
-        if (!mounted) return;
         setState(() {
           _places = fetchedPlaces;
           _lastFetchCenter = center;
         });
       } else {
         if (!mounted) return;
-        setState(() => _error = 'API Error: ${response.statusCode}');
+        final l10n = AppLocalizations.of(context)!;
+        setState(() => _error = l10n.placesApiError('${response.statusCode}'));
       }
     } catch (e) {
       if (!mounted) return;
-      setState(() => _error = 'Network error. Please try again.');
+      final l10n = AppLocalizations.of(context)!;
+      setState(() => _error = l10n.placesNetworkError);
     } finally {
       if (mounted) setState(() => _isLoading = false);
     }
@@ -319,21 +325,21 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                 children: [
                   _categoryChip(
                     context: context,
-                    label: 'Mosques',
+                    label: l10n.mosques,
                     icon: Icons.mosque_rounded,
                     selected: _selectedCategory == _PlaceCategory.mosque,
                     onTap: () => _changeCategory(_PlaceCategory.mosque),
                   ),
                   _categoryChip(
                     context: context,
-                    label: 'Halal Food',
+                    label: l10n.halalFood,
                     icon: Icons.restaurant_rounded,
                     selected: _selectedCategory == _PlaceCategory.halalFood,
                     onTap: () => _changeCategory(_PlaceCategory.halalFood),
                   ),
                   _categoryChip(
                     context: context,
-                    label: 'Education',
+                    label: l10n.islamicEducation,
                     icon: Icons.school_rounded,
                     selected: _selectedCategory == _PlaceCategory.education,
                     onTap: () => _changeCategory(_PlaceCategory.education),
@@ -376,8 +382,8 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                           ),
                         ),
                         icon: const Icon(Icons.refresh_rounded, size: 20),
-                        label: const Text(
-                          'Search this area',
+                        label: Text(
+                          l10n.placesSearchArea,
                           style: TextStyle(fontWeight: FontWeight.w800),
                         ),
                       ),
@@ -459,10 +465,10 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                         children: [
                           Text(
                             _selectedCategory == _PlaceCategory.mosque
-                                ? 'Nearby Mosques'
+                                ? l10n.nearbyMosques
                                 : _selectedCategory == _PlaceCategory.halalFood
-                                ? 'Halal Food'
-                                : 'Islamic Schools',
+                                ? l10n.halalFood
+                                : l10n.islamicSchools,
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w900,
@@ -470,7 +476,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                           ),
                           const Spacer(),
                           Text(
-                            '${enrichedPlaces.length} found',
+                            l10n.placesFoundCount('${enrichedPlaces.length}'),
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w700,
@@ -581,7 +587,10 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                                                   ),
                                                   const SizedBox(width: 4),
                                                   Text(
-                                                    '${place.distanceKm.toStringAsFixed(1)} km away',
+                                                    l10n.distanceAwayKm(
+                                                      place.distanceKm
+                                                          .toStringAsFixed(1),
+                                                    ),
                                                     style: TextStyle(
                                                       fontSize: 13,
                                                       fontWeight:

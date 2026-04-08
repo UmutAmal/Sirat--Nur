@@ -293,5 +293,51 @@
   "prayerCompletion": "Namaz Tamamlama",
   "streaks": "Seriler",
   "dayStreak": "Gün serisi",
-  "bestStreak": "En iyi seri"
+  "bestStreak": "En iyi seri",
+  "chatbotCloudAiLabel": "Bulut AI",
+  "chatbotLocalAiLabel": "Yerel AI",
+  "chatbotUseCloudAi": "Bulut AI Kullan (Gemini)",
+  "chatbotDownloadLocalAi": "Yerel AI'yi İndir (1.5 GB)",
+  "chatbotQueriesLeft": "{count} kaldı",
+  "@chatbotQueriesLeft": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "chatbotCloudNotConfigured": "Bulut API ayarlanmadı. Lütfen Yerel AI moduna geçin.",
+  "chatbotLocalNoInfo": "[YEREL AI] Bu konuda henüz bilgim yok. Namaz, oruç, zekat, hac, iman veya ahlak hakkında soru sorabilirsiniz.",
+  "mosques": "Camiler",
+  "halalFood": "Helal Gıda",
+  "placesSearchArea": "Bu alanı ara",
+  "nearbyMosques": "Yakındaki Camiler",
+  "islamicSchools": "İslami Okullar",
+  "placesFoundCount": "{count} bulundu",
+  "@placesFoundCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "distanceAwayKm": "{distance} km uzakta",
+  "@distanceAwayKm": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "placesApiError": "API Hatası: {statusCode}",
+  "@placesApiError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "placesNetworkError": "Ağ hatası. Lütfen tekrar deneyin.",
+  "unknownPlaceName": "Bilinmeyen Ad",
+  "islamicPlaceFallback": "İslami Mekan"
 }

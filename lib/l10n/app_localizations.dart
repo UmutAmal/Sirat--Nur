@@ -2103,6 +2103,114 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Best streak'**
   String get bestStreak;
+
+  /// No description provided for @chatbotCloudAiLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cloud AI'**
+  String get chatbotCloudAiLabel;
+
+  /// No description provided for @chatbotLocalAiLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Local AI'**
+  String get chatbotLocalAiLabel;
+
+  /// No description provided for @chatbotUseCloudAi.
+  ///
+  /// In en, this message translates to:
+  /// **'Use Cloud AI (Gemini)'**
+  String get chatbotUseCloudAi;
+
+  /// No description provided for @chatbotDownloadLocalAi.
+  ///
+  /// In en, this message translates to:
+  /// **'Download Local AI (1.5 GB)'**
+  String get chatbotDownloadLocalAi;
+
+  /// No description provided for @chatbotQueriesLeft.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} left'**
+  String chatbotQueriesLeft(String count);
+
+  /// No description provided for @chatbotCloudNotConfigured.
+  ///
+  /// In en, this message translates to:
+  /// **'Cloud API not configured. Please switch to Local AI.'**
+  String get chatbotCloudNotConfigured;
+
+  /// No description provided for @chatbotLocalNoInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'[LOCAL AI] I don\'t have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.'**
+  String get chatbotLocalNoInfo;
+
+  /// No description provided for @mosques.
+  ///
+  /// In en, this message translates to:
+  /// **'Mosques'**
+  String get mosques;
+
+  /// No description provided for @halalFood.
+  ///
+  /// In en, this message translates to:
+  /// **'Halal Food'**
+  String get halalFood;
+
+  /// No description provided for @placesSearchArea.
+  ///
+  /// In en, this message translates to:
+  /// **'Search this area'**
+  String get placesSearchArea;
+
+  /// No description provided for @nearbyMosques.
+  ///
+  /// In en, this message translates to:
+  /// **'Nearby Mosques'**
+  String get nearbyMosques;
+
+  /// No description provided for @islamicSchools.
+  ///
+  /// In en, this message translates to:
+  /// **'Islamic Schools'**
+  String get islamicSchools;
+
+  /// No description provided for @placesFoundCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} found'**
+  String placesFoundCount(String count);
+
+  /// No description provided for @distanceAwayKm.
+  ///
+  /// In en, this message translates to:
+  /// **'{distance} km away'**
+  String distanceAwayKm(String distance);
+
+  /// No description provided for @placesApiError.
+  ///
+  /// In en, this message translates to:
+  /// **'API Error: {statusCode}'**
+  String placesApiError(String statusCode);
+
+  /// No description provided for @placesNetworkError.
+  ///
+  /// In en, this message translates to:
+  /// **'Network error. Please try again.'**
+  String get placesNetworkError;
+
+  /// No description provided for @unknownPlaceName.
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown Name'**
+  String get unknownPlaceName;
+
+  /// No description provided for @islamicPlaceFallback.
+  ///
+  /// In en, this message translates to:
+  /// **'Islamic Place'**
+  String get islamicPlaceFallback;
 }
 
 class _AppLocalizationsDelegate

@@ -863,4 +863,68 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get bestStreak => 'En iyi seri';
+
+  @override
+  String get chatbotCloudAiLabel => 'Bulut AI';
+
+  @override
+  String get chatbotLocalAiLabel => 'Yerel AI';
+
+  @override
+  String get chatbotUseCloudAi => 'Bulut AI Kullan (Gemini)';
+
+  @override
+  String get chatbotDownloadLocalAi => 'Yerel AI\'yi İndir (1.5 GB)';
+
+  @override
+  String chatbotQueriesLeft(String count) {
+    return '$count kaldı';
+  }
+
+  @override
+  String get chatbotCloudNotConfigured =>
+      'Bulut API ayarlanmadı. Lütfen Yerel AI moduna geçin.';
+
+  @override
+  String get chatbotLocalNoInfo =>
+      '[YEREL AI] Bu konuda henüz bilgim yok. Namaz, oruç, zekat, hac, iman veya ahlak hakkında soru sorabilirsiniz.';
+
+  @override
+  String get mosques => 'Camiler';
+
+  @override
+  String get halalFood => 'Helal Gıda';
+
+  @override
+  String get placesSearchArea => 'Bu alanı ara';
+
+  @override
+  String get nearbyMosques => 'Yakındaki Camiler';
+
+  @override
+  String get islamicSchools => 'İslami Okullar';
+
+  @override
+  String placesFoundCount(String count) {
+    return '$count bulundu';
+  }
+
+  @override
+  String distanceAwayKm(String distance) {
+    return '$distance km uzakta';
+  }
+
+  @override
+  String placesApiError(String statusCode) {
+    return 'API Hatası: $statusCode';
+  }
+
+  @override
+  String get placesNetworkError => 'Ağ hatası. Lütfen tekrar deneyin.';
+
+  @override
+  String get unknownPlaceName => 'Bilinmeyen Ad';
+
+  @override
+  String get islamicPlaceFallback => 'İslami Mekan';
 }
