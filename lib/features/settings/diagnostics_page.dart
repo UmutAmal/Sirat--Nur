@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 // Removed legacy static stream import
+import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/features/settings/quran_diagnostics.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
@@ -51,27 +53,21 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
     );
 
     try {
-      final quranJson = await rootBundle.loadString(
-        'assets/data/full_quran.json',
-      );
-      final List<dynamic> parsed = jsonDecode(quranJson) as List<dynamic>;
-      final surahCount = parsed.length;
-      final ayahCount = parsed.fold<int>(
-        0,
-        (sum, item) =>
-            sum +
-            ((item as Map<String, dynamic>)['ayahs'] as List<dynamic>? ??
-                    const [])
-                .length,
-      );
-      rows.add(
-        _DiagnosticRow('Quran Surahs', '$surahCount / 114', surahCount == 114),
-      );
-      rows.add(
-        _DiagnosticRow('Quran Ayahs', '$ayahCount / 6236', ayahCount == 6236),
+      final supabase = ref.read(supabaseClientProvider);
+      final surahCount = await supabase.from('quran_surahs').count();
+      final ayahCount = await supabase.from('quran_ayahs').count();
+      rows.addAll(
+        buildQuranDiagnosticRows(
+          surahCount: surahCount,
+          ayahCount: ayahCount,
+        ).map((row) => _DiagnosticRow(row.label, row.value, row.isHealthy)),
       );
     } catch (error) {
-      rows.add(_DiagnosticRow('Quran Dataset', 'Load failed: $error', false));
+      rows.addAll(
+        buildQuranDiagnosticRows(
+          error: error,
+        ).map((row) => _DiagnosticRow(row.label, row.value, row.isHealthy)),
+      );
     }
 
     try {
