@@ -2,6 +2,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/services/adhan_scheduler_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_notification_coordinator.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'dart:async';
+import 'dart:collection';
 
 class FakeAdhanSchedulerService extends AdhanSchedulerService {
   int initCalls = 0;
@@ -53,6 +55,72 @@ class FakeAdhanSchedulerService extends AdhanSchedulerService {
     this.languageCode = languageCode;
     this.fajrAngle = fajrAngle;
     this.ishaAngle = ishaAngle;
+  }
+}
+
+class BlockingAdhanSchedulerService extends FakeAdhanSchedulerService {
+  final Queue<Completer<void>> _preparedBlockers = Queue<Completer<void>>();
+  final Queue<Completer<void>> _activeBlockers = Queue<Completer<void>>();
+  final List<String> operations = <String>[];
+  int concurrentOperations = 0;
+  int maxConcurrentOperations = 0;
+
+  void enqueueOperationBlocker() {
+    _preparedBlockers.add(Completer<void>());
+  }
+
+  void releaseNextOperation() {
+    if (_activeBlockers.isEmpty) {
+      throw StateError('No blocked scheduler operation to release.');
+    }
+    _activeBlockers.removeFirst().complete();
+  }
+
+  Future<void> _runBlockedOperation(String operation) async {
+    operations.add(operation);
+    concurrentOperations++;
+    if (concurrentOperations > maxConcurrentOperations) {
+      maxConcurrentOperations = concurrentOperations;
+    }
+
+    final blocker = _preparedBlockers.isNotEmpty
+        ? _preparedBlockers.removeFirst()
+        : null;
+    if (blocker != null) {
+      _activeBlockers.add(blocker);
+      await blocker.future;
+    }
+
+    concurrentOperations--;
+  }
+
+  @override
+  Future<void> clearScheduledAdhans() async {
+    clearCalls++;
+    await _runBlockedOperation('clear');
+  }
+
+  @override
+  Future<void> scheduleAdhans(
+    double lat,
+    double lon,
+    String method,
+    String madhab, {
+    String? timezoneName,
+    String languageCode = 'en',
+    double? fajrAngle,
+    double? ishaAngle,
+  }) async {
+    scheduleCalls++;
+    this.lat = lat;
+    this.lon = lon;
+    this.method = method;
+    this.madhab = madhab;
+    this.timezoneName = timezoneName;
+    this.languageCode = languageCode;
+    this.fajrAngle = fajrAngle;
+    this.ishaAngle = ishaAngle;
+    await _runBlockedOperation('schedule:$lat,$lon');
   }
 }
 
@@ -134,5 +202,105 @@ void main() {
         isFalse,
       );
     });
+
+    test(
+      'serializes rapid location changes and keeps only the latest schedule',
+      () async {
+        final scheduler = BlockingAdhanSchedulerService()
+          ..enqueueOperationBlocker()
+          ..enqueueOperationBlocker();
+        final coordinator = PrayerNotificationCoordinator(scheduler: scheduler);
+        final firstSettings = SettingsState(
+          latitude: 41.0082,
+          longitude: 28.9784,
+          locationName: 'Istanbul, Turkey',
+          timezone: 'Europe/Istanbul',
+        );
+        final secondSettings = firstSettings.copyWith(
+          latitude: 39.9334,
+          longitude: 32.8597,
+          locationName: 'Ankara, Turkey',
+        );
+        final thirdSettings = firstSettings.copyWith(
+          latitude: 21.4225,
+          longitude: 39.8262,
+          locationName: 'Makkah, Saudi Arabia',
+          timezone: 'Asia/Riyadh',
+        );
+
+        final firstSync = coordinator.sync(firstSettings);
+        await Future<void>.delayed(Duration.zero);
+
+        final secondSync = coordinator.sync(secondSettings);
+        final thirdSync = coordinator.sync(thirdSettings);
+        await Future<void>.delayed(Duration.zero);
+
+        expect(scheduler.scheduleCalls, 1);
+        expect(scheduler.maxConcurrentOperations, 1);
+
+        scheduler.releaseNextOperation();
+        await Future<void>.delayed(Duration.zero);
+
+        expect(scheduler.scheduleCalls, 2);
+        expect(scheduler.maxConcurrentOperations, 1);
+
+        scheduler.releaseNextOperation();
+        await Future.wait([firstSync, secondSync, thirdSync]);
+
+        expect(scheduler.scheduleCalls, 2);
+        expect(scheduler.clearCalls, 0);
+        expect(scheduler.maxConcurrentOperations, 1);
+        expect(scheduler.lat, 21.4225);
+        expect(scheduler.lon, 39.8262);
+        expect(scheduler.timezoneName, 'Asia/Riyadh');
+        expect(scheduler.operations, <String>[
+          'schedule:41.0082,28.9784',
+          'schedule:21.4225,39.8262',
+        ]);
+      },
+    );
+
+    test(
+      'applies queued location removal after an in-flight schedule finishes',
+      () async {
+        final scheduler = BlockingAdhanSchedulerService()
+          ..enqueueOperationBlocker()
+          ..enqueueOperationBlocker();
+        final coordinator = PrayerNotificationCoordinator(scheduler: scheduler);
+        final locatedSettings = SettingsState(
+          latitude: 41.0082,
+          longitude: 28.9784,
+          locationName: 'Istanbul, Turkey',
+          timezone: 'Europe/Istanbul',
+        );
+
+        final firstSync = coordinator.sync(locatedSettings);
+        await Future<void>.delayed(Duration.zero);
+
+        final secondSync = coordinator.sync(SettingsState());
+        await Future<void>.delayed(Duration.zero);
+
+        expect(scheduler.scheduleCalls, 1);
+        expect(scheduler.clearCalls, 0);
+        expect(scheduler.maxConcurrentOperations, 1);
+
+        scheduler.releaseNextOperation();
+        await Future<void>.delayed(Duration.zero);
+
+        expect(scheduler.clearCalls, 1);
+        expect(scheduler.maxConcurrentOperations, 1);
+
+        scheduler.releaseNextOperation();
+        await Future.wait([firstSync, secondSync]);
+
+        expect(scheduler.scheduleCalls, 1);
+        expect(scheduler.clearCalls, 1);
+        expect(scheduler.maxConcurrentOperations, 1);
+        expect(scheduler.operations, <String>[
+          'schedule:41.0082,28.9784',
+          'clear',
+        ]);
+      },
+    );
   });
 }

@@ -1853,3 +1853,35 @@
 ### Sonraki Adım
 - Service-role veya eşdeğer güvenli write kanalı geldiğinde, mirror edilmiş dosyalar `quran-audio` bucket’ına yüklenip üretilen storage-backed seed `audio_files` tablosuna uygulanacak.
 - Kod tarafında sıradaki açık risk yine prayer pipeline yarış koşulları: hızlı ardışık settings değişimlerinde sync çakışmaları.
+
+## 2026-04-08 TUR-47 — Serialize Prayer Sync Queue
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_notification_coordinator.dart) içine `_queuedSettings` ve `_activeSync` eklendi; `sync()` artık hızlı ardışık çağrıları sıraya alıp tek drain döngüsünde işliyor.
+- Aynı dosyada `_drainQueuedSyncs()` eklendi; in-flight schedule temizlenmeden ikinci bir schedule/clear başlatılmıyor ve aradaki eskimiş fingerprint’ler atlanıyor.
+- [A:\Way of Allah\sirat_i_nur\test\prayer_notification_coordinator_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/prayer_notification_coordinator_test.dart) içine bloke edilebilen `BlockingAdhanSchedulerService` ve iki regresyon testi eklendi.
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_notification_coordinator.dart) içindeki önceki akış her `sync()` çağrısını bağımsız `scheduleAdhans()` / `clearScheduledAdhans()` çalıştırıyordu.
+- Hızlı ardışık lokasyon değişimlerinde eski sync tamamlanmadan yeni sync başlayabildiği için scheduler tarafında aynı anda iki operasyon çalıştırma ve ara state’i planlama riski vardı.
+- Kök sebep, coordinator katmanında son ayarların kuyruğa alınıp tek aktif scheduler işlemiyle seri biçimde işlenmemesiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_notification_coordinator_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Prayer scheduling zinciri aynı anda birden fazla clear/schedule operasyonu başlatmıyor.
+- Çok hızlı ayar değişimlerinde ara lokasyonlar yerine en güncel state uygulanıyor.
+- Queue davranışı testle kilitlendi; ileride concurrency regresyonu daha kolay yakalanacak.
+
+### Test Sonucu
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`132/132`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Overlapping prayer notification sync calls causing stale or conflicting schedule operations: `8/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki prayer pipeline turunda ülke/bölge bazlı resmî dini kurum namaz hesap yöntemi zinciri doğrulanacak.
+- Özellikle `location_selection_page.dart`, `settings_provider.dart`, `prayer_times_service.dart` ve `prayer_calendar_service.dart` arasında calculation method / madhab varsayılanları tek kaynağa indirilecek.

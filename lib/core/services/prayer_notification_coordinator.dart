@@ -9,6 +9,8 @@ class PrayerNotificationCoordinator {
   final AdhanSchedulerService _scheduler;
   bool _isInitialized = false;
   String? _lastFingerprint;
+  SettingsState? _queuedSettings;
+  Future<void>? _activeSync;
 
   Future<void> init() async {
     if (_isInitialized) return;
@@ -25,26 +27,59 @@ class PrayerNotificationCoordinator {
 
     final fingerprint = settingsFingerprint(settings);
     if (_lastFingerprint == fingerprint) return;
+    _queuedSettings = settings;
 
-    try {
-      if (!_hasLocation(settings)) {
-        await _scheduler.clearScheduledAdhans();
+    while (true) {
+      final activeSync = _activeSync;
+      if (activeSync == null) {
+        final drainFuture = _drainQueuedSyncs();
+        _activeSync = drainFuture;
+        try {
+          await drainFuture;
+        } finally {
+          if (identical(_activeSync, drainFuture)) {
+            _activeSync = null;
+          }
+        }
       } else {
-        await _scheduler.scheduleAdhans(
-          settings.latitude!,
-          settings.longitude!,
-          settings.calculationMethod,
-          settings.madhab,
-          timezoneName: settings.timezone,
-          languageCode: _resolveLanguageCode(settings.languageCode),
-          fajrAngle: settings.fajrAngle,
-          ishaAngle: settings.ishaAngle,
-        );
+        await activeSync;
       }
-      _lastFingerprint = fingerprint;
-    } catch (error, stackTrace) {
-      debugPrint('Prayer notification sync failed: $error');
-      debugPrintStack(stackTrace: stackTrace);
+
+      if (_queuedSettings == null) {
+        return;
+      }
+    }
+  }
+
+  Future<void> _drainQueuedSyncs() async {
+    while (_queuedSettings != null) {
+      final settings = _queuedSettings!;
+      _queuedSettings = null;
+      final fingerprint = settingsFingerprint(settings);
+      if (_lastFingerprint == fingerprint) {
+        continue;
+      }
+
+      try {
+        if (!_hasLocation(settings)) {
+          await _scheduler.clearScheduledAdhans();
+        } else {
+          await _scheduler.scheduleAdhans(
+            settings.latitude!,
+            settings.longitude!,
+            settings.calculationMethod,
+            settings.madhab,
+            timezoneName: settings.timezone,
+            languageCode: _resolveLanguageCode(settings.languageCode),
+            fajrAngle: settings.fajrAngle,
+            ishaAngle: settings.ishaAngle,
+          );
+        }
+        _lastFingerprint = fingerprint;
+      } catch (error, stackTrace) {
+        debugPrint('Prayer notification sync failed: $error');
+        debugPrintStack(stackTrace: stackTrace);
+      }
     }
   }
 
