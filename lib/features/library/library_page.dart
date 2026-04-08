@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
-import 'package:sirat_i_nur/core/constants/asma_ul_husna_data.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
@@ -16,28 +15,6 @@ String buildLibraryEmptyText(AppLocalizations l10n) {
   return l10n.noResults;
 }
 
-String resolveAsmaTranslation(
-  Map<String, dynamic> translations,
-  Locale locale,
-) {
-  final localized = translations[locale.languageCode];
-  if (localized is String && localized.isNotEmpty) {
-    return localized;
-  }
-
-  final english = translations['en'];
-  if (english is String && english.isNotEmpty) {
-    return english;
-  }
-
-  for (final value in translations.values) {
-    if (value is String && value.isNotEmpty) {
-      return value;
-    }
-  }
-
-  return '';
-}
 
 String resolveDuaMeaning(DuaData dua, Locale locale) {
   if (locale.languageCode == 'tr' && dua.turkish.isNotEmpty) {
@@ -359,10 +336,7 @@ class LibraryPage extends ConsumerWidget {
   }
 
   void _openAsmaUlHusna(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (_) => const _AsmaUlHusnaView()),
-    );
+    context.push('/library/asma-ul-husna');
   }
 
   void _openDuas(BuildContext context) {
@@ -400,88 +374,6 @@ class _HadithCollection {
   const _HadithCollection(this.id, this.name, this.desc);
 }
 
-// ─── Asma-ul-Husna Subview ───
-class _AsmaUlHusnaView extends StatelessWidget {
-  const _AsmaUlHusnaView();
-  @override
-  Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-    final locale = Localizations.localeOf(context);
-    final names = AsmaUlHusnaData.names;
-    return Scaffold(
-      appBar: AppBar(title: Text(l10n.namesOfAllah)),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(16),
-        itemCount: names.length,
-        itemBuilder: (context, i) {
-          final name = names[i];
-          final translations = name['translations'] as Map<String, dynamic>;
-          return PremiumCard(
-            margin: const EdgeInsets.only(bottom: 12),
-            padding: const EdgeInsets.all(16),
-            child: Row(
-              children: [
-                Container(
-                  width: 40,
-                  height: 40,
-                  decoration: const BoxDecoration(
-                    color: AppColors.emeraldSurface,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Center(
-                    child: Text(
-                      '${name['id']}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.w900,
-                        color: AppColors.emerald,
-                        fontSize: 12,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        name['arabic'] as String,
-                        style: const TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.w900,
-                        ),
-                      ),
-                      Text(
-                        name['transliteration'] as String,
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w700,
-                          color: Theme.of(
-                            context,
-                          ).colorScheme.onSurface.withValues(alpha: 0.6),
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        resolveAsmaTranslation(translations, locale),
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Theme.of(
-                            context,
-                          ).colorScheme.onSurface.withValues(alpha: 0.4),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          );
-        },
-      ),
-    );
-  }
-}
 
 String _translateDuaCategory(String category, String lang) {
   if (lang != 'en') return category;

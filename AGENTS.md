@@ -1364,7 +1364,393 @@ SECTION 12 — KESİN YASAKLAR
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-SECTION 13 — BAŞLANGIÇ GÖREVİ
+SECTION 13 — CANLI İÇERİK \& SUPABASE ENTEGRASYONU
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+AMAÇ:
+
+&#x20; Uygulamadaki tüm hardcoded, uydurma veya eksik içerikleri kaldır.
+
+&#x20; Tüm dini içerik, ses, dua, ayet, hadis, bilgi ve görseller
+
+&#x20; doğrulanmış resmi kaynaklardan çekilip Supabase'e yüklenecek.
+
+&#x20; Uygulama tüm içeriği Supabase'den okuyacak.
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+KABUL EDİLEN KAYNAKLAR (SADECE BUNLAR)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+KATEGORİ 1 — Resmi Devlet \& Dini Kurumlar (En Yüksek Öncelik):
+
+&#x20; - Diyanet İşleri Başkanlığı       : diyanet.gov.tr / api.diyanet.gov.tr
+
+&#x20; - Türkiye Diyanet Vakfı İslam Ans.: islamansiklopedisi.org.tr
+
+&#x20; - Saudi Arabia Ministry of Awqaf  : quran.gov.sa
+
+&#x20; - Egypt Dar al-Ifta               : dar-alifta.org
+
+&#x20; - Morocco Ministry of Awqaf       : habous.gov.ma
+
+
+
+KATEGORİ 2 — Doğrulanmış İslami Dijital Kaynaklar:
+
+&#x20; - Quran.com API                   : api.quran.com (açık API, lisanslı)
+
+&#x20; - Sunnah.com API                  : sunnah.com (hadis veritabanı)
+
+&#x20; - IslamHouse.com                  : islamhouse.com (çok dilli içerik)
+
+&#x20; - MP3Quran.net                    : ses dosyaları için
+
+&#x20; - EveryAyah.com                   : ayet ses dosyaları için
+
+
+
+KESINLIKLE KABUL EDİLMEYEN:
+
+&#x20; - Blog, forum, sosyal medya
+
+&#x20; - Kaynağı belirsiz siteler
+
+&#x20; - Uydurma / AI üretimi dini içerik
+
+&#x20; - Telif hakkı belirsiz ses dosyaları
+
+&#x20; - Doğrulanmamış hadis veya ayet metinleri
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SUPABASE MİMARİSİ
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+TABLOLAR (gerekirse oluştur, varsa kullan):
+
+
+
+&#x20; quran\_surahs
+
+&#x20;   id, surah\_number, name\_ar, name\_tr, name\_en,
+
+&#x20;   name\_transliteration, ayah\_count, revelation\_type,
+
+&#x20;   source, verified\_at
+
+
+
+&#x20; quran\_ayahs
+
+&#x20;   id, surah\_id, ayah\_number, text\_ar, text\_tr, text\_en,
+
+&#x20;   audio\_url, source, verified\_at
+
+
+
+&#x20; duas
+
+&#x20;   id, title\_tr, title\_ar, title\_en, text\_ar, text\_tr, text\_en,
+
+&#x20;   audio\_url, category, source, verified\_at
+
+
+
+&#x20; hadiths
+
+&#x20;   id, book, number, text\_ar, text\_tr, text\_en,
+
+&#x20;   narrator, grade, source, verified\_at
+
+
+
+&#x20; prayer\_content
+
+&#x20;   id, name\_tr, name\_ar, name\_en, description\_tr,
+
+&#x20;   description\_en, audio\_url, source, verified\_at
+
+
+
+&#x20; islamic\_content
+
+&#x20;   id, type, title, body, language, media\_url,
+
+&#x20;   source, verified\_at
+
+
+
+&#x20; audio\_files
+
+&#x20;   id, type (adhan/dua/quran/sukun/nature),
+
+&#x20;   title, url, storage\_path, duration\_seconds,
+
+&#x20;   reciter, language, source, verified\_at
+
+
+
+&#x20; app\_config
+
+&#x20;   key, value, updated\_at
+
+&#x20;   (uygulama geneli ayarlar, feature flag'lar)
+
+
+
+STORAGE BUCKETS:
+
+&#x20; - audio-adhan      : ezan sesleri
+
+&#x20; - audio-quran      : Kuran tilavetleri
+
+&#x20; - audio-dua        : dua sesleri
+
+&#x20; - audio-sukun      : doğa ve sukun sesleri
+
+&#x20; - images-content   : görseller
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+VERİ ÇEKME \& DOĞRULAMA AKIŞI
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+Her içerik türü için şu akış izlenir:
+
+
+
+&#x20; 1. KAYNAK TESPİT
+
+&#x20;    - Kabul edilen kaynaklar listesinden en uygun kaynağı seç
+
+&#x20;    - API erişilebilir mi kontrol et
+
+&#x20;    - Lisans ve kullanım koşullarını doğrula
+
+
+
+&#x20; 2. VERİ ÇEK
+
+&#x20;    - Resmi API'den JSON formatında çek
+
+&#x20;    - Ses dosyalarını doğrudan URL ile al
+
+&#x20;    - Görseller için CDN veya resmi kaynak kullan
+
+
+
+&#x20; 3. DOĞRULA
+
+&#x20;    - Veri tam mı? Eksik alan var mı?
+
+&#x20;    - Arapça metin doğru encoding'de mi? (UTF-8)
+
+&#x20;    - Ses dosyası çalışıyor mu?
+
+&#x20;    - Kaynak güvenilir mi? source alanına yaz
+
+
+
+&#x20; 4. SUPABASE'E YÜKle
+
+&#x20;    - verified\_at alanına timestamp yaz
+
+&#x20;    - source alanına kaynak URL yaz
+
+&#x20;    - Ses dosyalarını Storage bucket'a yükle
+
+&#x20;    - Tablo kaydına storage\_path yaz
+
+
+
+&#x20; 5. UYGULAMA BAĞLANTISI
+
+&#x20;    - Hardcoded içeriği bul ve kaldır
+
+&#x20;    - Supabase sorgusu ile değiştir
+
+&#x20;    - Offline fallback: cache'den oku
+
+&#x20;    - Hata durumu: kullanıcıya dürüst mesaj göster
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+İÇERİK KATEGORİLERİ \& ÖNCELIK SIRASI
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+Öncelik 1 — Sesli İçerik (stub olan her şey):
+
+&#x20; - Ezan sesleri (farklı müezzinler, farklı makamlar)
+
+&#x20; - Kuran tilavetleri (sure bazlı, ayet bazlı)
+
+&#x20; - Dua sesleri (Arapça orijinal + TR çeviri)
+
+&#x20; - Sukun / doğa sesleri (yağmur, nehir, kuş, rüzgar)
+
+&#x20; Kaynak: MP3Quran.net, EveryAyah.com, Diyanet
+
+
+
+Öncelik 2 — Kuran İçeriği:
+
+&#x20; - 114 sure, tüm ayetler
+
+&#x20; - Arapça metin + Türkçe meal + İngilizce meal
+
+&#x20; - Her ayetin ses dosyası
+
+&#x20; Kaynak: Quran.com API, quran.gov.sa
+
+
+
+Öncelik 3 — Dua İçeriği:
+
+&#x20; - Günlük dualar (sabah, akşam, yemek, yatış)
+
+&#x20; - Namaz duaları ve tesbihatlar
+
+&#x20; - Özel günler duaları
+
+&#x20; Kaynak: Diyanet, islamhouse.com
+
+
+
+Öncelik 4 — Hadis İçeriği:
+
+&#x20; - Kütüb-i Sitte'den seçmeler
+
+&#x20; - Günlük hadis
+
+&#x20; Kaynak: Sunnah.com API
+
+
+
+Öncelik 5 — Genel Dini İçerik:
+
+&#x20; - İslam'ın 5 şartı açıklamaları
+
+&#x20; - Namaz vakitleri ve anlamları
+
+&#x20; - İslami takvim içeriği
+
+&#x20; Kaynak: Diyanet, islamansiklopedisi.org.tr
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+UYGULAMA TARAFI KURALLAR
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+&#x20; - Tüm içerik Supabase'den okunur, hiçbir şey hardcoded olmaz
+
+&#x20; - Her içerik tipi için ayrı Riverpod provider yazılır
+
+&#x20; - Offline mod: Hive veya shared\_preferences ile local cache
+
+&#x20; - Cache süresi: ses dosyaları kalıcı, metin içeriği 24 saat
+
+&#x20; - Hata durumu: "İçerik yüklenemedi, internet bağlantınızı kontrol edin"
+
+&#x20;   mesajı gösterilir — asla boş ekran veya çökme olmaz
+
+&#x20; - Supabase RLS (Row Level Security) aktif olmalı
+
+&#x20; - API key'ler .env veya flutter\_dotenv ile yönetilir,
+
+&#x20;   kesinlikle koda gömülmez
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+UYGULAMA ADIMI (AGENTS.MD DÖNGÜSÜNE ENTEGRE)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+&#x20; 1. Projedeki tüm hardcoded dini içeriği tara ve listele
+
+&#x20; 2. Her hardcoded alan için Supabase tablosu tasarla veya kullan
+
+&#x20; 3. Kaynaktan veriyi çek, doğrula, Supabase'e yükle
+
+&#x20; 4. Flutter tarafında Supabase sorgusunu yaz
+
+&#x20; 5. Hardcoded kodu kaldır, Supabase sorgusunu bağla
+
+&#x20; 6. Offline cache ekle
+
+&#x20; 7. Hata yönetimi ekle
+
+&#x20; 8. flutter analyze + flutter test çalıştır
+
+&#x20; 9. Commit + push
+
+&#x20; 10. handover.md güncelle
+
+&#x20; 11. Bir sonraki hardcoded içeriğe geç
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+KESİN YASAKLAR (BU SECTION İÇİN)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+&#x20; ✗  Doğrulanmamış kaynaktan içerik alma
+
+&#x20; ✗  AI ile dini metin üretme
+
+&#x20; ✗  Telif hakkı belirsiz ses dosyası kullanma
+
+&#x20; ✗  API key'i koda gömmek
+
+&#x20; ✗  source ve verified\_at alanlarını boş bırakmak
+
+&#x20; ✗  Supabase'e yüklemeden uygulamaya bağlamak
+
+&#x20; ✗  Offline fallback olmadan canlı veri kullanmak
+
+&#x20; ✗  RLS devre dışı bırakmak
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SECTION 14 — BAŞLANGIÇ GÖREVİ
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

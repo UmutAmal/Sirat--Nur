@@ -22,23 +22,7 @@ void main() {
       expect(buildLibraryEmptyText(tr), 'Sonuç bulunamadı');
     });
 
-    test('asma translation prefers the active locale when available', () {
-      const translations = {'en': 'The Beneficent', 'tr': 'Merhamet eden'};
 
-      expect(
-        resolveAsmaTranslation(translations, const Locale('tr')),
-        'Merhamet eden',
-      );
-    });
-
-    test('asma translation falls back to English when locale is missing', () {
-      const translations = {'en': 'The Beneficent', 'tr': 'Merhamet eden'};
-
-      expect(
-        resolveAsmaTranslation(translations, const Locale('fr')),
-        'The Beneficent',
-      );
-    });
 
     test('dua meaning prefers Turkish text for the Turkish locale', () {
       const dua = DuaData(

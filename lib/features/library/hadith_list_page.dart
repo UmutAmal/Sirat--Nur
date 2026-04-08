@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/features/library/providers/hadith_provider.dart';
-import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class HadithListPage extends ConsumerWidget {
   final String collectionId;

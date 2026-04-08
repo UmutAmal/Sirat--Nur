@@ -30,6 +30,7 @@ import 'package:sirat_i_nur/features/analytics/analytics_page.dart';
 import 'package:sirat_i_nur/features/common/app_error_page.dart';
 import 'package:sirat_i_nur/features/library/zakat_calculator_page.dart';
 import 'package:sirat_i_nur/features/library/sukun_audio_page.dart';
+import 'package:sirat_i_nur/features/library/asma_ul_husna_page.dart';
 
 // Smooth slide + fade transition
 CustomTransitionPage<T> _slideTransition<T>(
@@ -252,6 +253,11 @@ final appRouterProvider = Provider<GoRouter>((ref) {
             path: 'sukun-audio',
             name: 'sukun_audio',
             pageBuilder: (ctx, state) => _slideTransition(ctx, state, const SukunAudioPage()),
+          ),
+          GoRoute(
+            path: 'asma-ul-husna',
+            name: 'asma_ul_husna',
+            pageBuilder: (ctx, state) => _slideTransition(ctx, state, const AsmaUlHusnaPage()),
           ),
         ],
       ),

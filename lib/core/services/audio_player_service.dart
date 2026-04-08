@@ -56,6 +56,20 @@ class AudioPlayerService {
   Stream<Duration> get positionStream => _player.positionStream;
   Stream<Duration?> get durationStream => _player.durationStream;
 
+  /// Play from remote URL
+  Future<bool> playUrl(String url) async {
+    try {
+      await _player.stop();
+      await _player.setUrl(url);
+      await _player.play();
+      debugPrint('Playing remote URL: $url');
+      return true;
+    } catch (e) {
+      debugPrint('URL playback error: $e');
+      return false;
+    }
+  }
+
   /// Play from local asset
   Future<bool> playAsset(String assetPath) async {
     try {
