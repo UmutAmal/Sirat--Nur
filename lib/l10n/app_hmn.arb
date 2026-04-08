@@ -204,5 +204,9 @@
   "healthCheckDesc": "Khiav kev kuaj mob thiab saib xyuas qhov system.",
   "qiblaAligned": "Qibla Aligned",
   "rotateToFindQibla": "Tig mus Nrhiav Qibla",
-  "calibrationRequiredFigure8": "Calibration yuav tsum tau. Tig lub cuab yeej hauv daim duab-8."
+  "calibrationRequiredFigure8": "Calibration yuav tsum tau. Tig lub cuab yeej hauv daim duab-8.",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

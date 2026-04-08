@@ -138,5 +138,9 @@
   "onboarding2Title": "প্ৰাৰ্থনাৰ সময়",
   "onboarding2Desc": "আপোনাৰ স্থানৰ ওপৰত ভিত্তি কৰি সঠিক প্ৰাৰ্থনাৰ সময়",
   "onboarding3Title": "কোৰআন আৰু অধিক",
-  "onboarding3Desc": "কোৰআন পঢ়ক, আপোনাৰ পঢ়া অনুসৰণ কৰক, আৰু ইছলামিক বিষয়বস্তু অন্বেষণ কৰক"
+  "onboarding3Desc": "কোৰআন পঢ়ক, আপোনাৰ পঢ়া অনুসৰণ কৰক, আৰু ইছলামিক বিষয়বস্তু অন্বেষণ কৰক",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

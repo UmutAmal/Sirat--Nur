@@ -138,5 +138,9 @@
   "onboarding2Title": "Namaz vaxtları",
   "onboarding2Desc": "Yerinizə görə dəqiq namaz vaxtları",
   "onboarding3Title": "Quran və daha çox",
-  "onboarding3Desc": "Quran oxuyun, oxuduğunuzu izləyin və İslam məzmununu araşdırın"
+  "onboarding3Desc": "Quran oxuyun, oxuduğunuzu izləyin və İslam məzmununu araşdırın",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

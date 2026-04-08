@@ -138,5 +138,9 @@
   "onboarding2Title": "Ñembo’e Aravo",
   "onboarding2Desc": "Umi horario exacto oñembo’e haĝua oñemopyendáva moõpa reime",
   "onboarding3Title": "Corán & Hetave mba'e",
-  "onboarding3Desc": "Emoñe’ẽ Corán, esegui ne moñe’ẽrã ha ehesa’ỹijo contenido islámico"
+  "onboarding3Desc": "Emoñe’ẽ Corán, esegui ne moñe’ẽrã ha ehesa’ỹijo contenido islámico",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

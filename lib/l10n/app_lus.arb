@@ -204,5 +204,9 @@
   "healthCheckDesc": "Health checks run la, system status en rawh.",
   "qiblaAligned": "Qibla Aligned a ni",
   "rotateToFindQibla": "Qibla zawng turin rotate rawh",
-  "calibrationRequiredFigure8": "Calibration a ngai a ni. Figure-8-a device chu rotate rawh."
+  "calibrationRequiredFigure8": "Calibration a ngai a ni. Figure-8-a device chu rotate rawh.",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

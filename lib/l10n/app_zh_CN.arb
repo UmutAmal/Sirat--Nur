@@ -138,5 +138,9 @@
   "onboarding2Title": "祈祷时间",
   "onboarding2Desc": "根据您所在位置的准确祈祷时间",
   "onboarding3Title": "古兰经及更多",
-  "onboarding3Desc": "阅读《古兰经》、跟踪您的阅读情况并探索伊斯兰内容"
+  "onboarding3Desc": "阅读《古兰经》、跟踪您的阅读情况并探索伊斯兰内容",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

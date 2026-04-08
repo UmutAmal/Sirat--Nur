@@ -138,5 +138,9 @@
   "onboarding2Title": "Amseroedd Gweddi",
   "onboarding2Desc": "Amseroedd gweddi cywir yn seiliedig ar eich lleoliad",
   "onboarding3Title": "Quran a Mwy",
-  "onboarding3Desc": "Darllenwch Quran, olrhain eich darllen, ac archwilio cynnwys Islamaidd"
+  "onboarding3Desc": "Darllenwch Quran, olrhain eich darllen, ac archwilio cynnwys Islamaidd",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

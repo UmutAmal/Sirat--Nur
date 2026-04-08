@@ -849,6 +849,18 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get sukunNatureLabel => 'Sukun (Nature)';
+
+  @override
+  String get prayerCompletion => 'Prayer Completion';
+
+  @override
+  String get streaks => 'Streaks';
+
+  @override
+  String get dayStreak => 'Day streak';
+
+  @override
+  String get bestStreak => 'Best streak';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -1271,6 +1283,18 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get onboarding3Desc => '阅读《古兰经》、跟踪您的阅读情况并探索伊斯兰内容';
+
+  @override
+  String get prayerCompletion => 'Prayer Completion';
+
+  @override
+  String get streaks => 'Streaks';
+
+  @override
+  String get dayStreak => 'Day streak';
+
+  @override
+  String get bestStreak => 'Best streak';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -1693,4 +1717,16 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get onboarding3Desc => '閱讀《古蘭經》、追蹤您的閱讀情況並探索伊斯蘭內容';
+
+  @override
+  String get prayerCompletion => 'Prayer Completion';
+
+  @override
+  String get streaks => 'Streaks';
+
+  @override
+  String get dayStreak => 'Day streak';
+
+  @override
+  String get bestStreak => 'Best streak';
 }

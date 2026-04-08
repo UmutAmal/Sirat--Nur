@@ -276,8 +276,12 @@
   "downloadingSurah": "{surah}. sure indiriliyor (Toplam: {total})",
   "@downloadingSurah": {
     "placeholders": {
-      "surah": {"type": "String"},
-      "total": {"type": "String"}
+      "surah": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
     }
   },
   "downloadCompleted": "Bu hafız için tüm sureler zaten indirildi.",
@@ -285,5 +289,9 @@
   "chatbotThinking": "Düşünüyor...",
   "sukunMixerSubtitle": "Doğa ve Kur'an Mikseri",
   "audioPlayFailed": "Ses çalınamadı",
-  "sukunNatureLabel": "Sükun (Doğa)"
+  "sukunNatureLabel": "Sükun (Doğa)",
+  "prayerCompletion": "Namaz Tamamlama",
+  "streaks": "Seriler",
+  "dayStreak": "Gün serisi",
+  "bestStreak": "En iyi seri"
 }

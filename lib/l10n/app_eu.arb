@@ -1,4 +1,4 @@
-﻿{
+{
   "@@locale": "eu",
   "appTitle": "Ala Bidea",
   "home": "Hasiera",
@@ -138,5 +138,9 @@
   "onboarding2Title": "Otoitz Orduak",
   "onboarding2Desc": "Otoitz ordu zehatzak zure kokapenaren arabera",
   "onboarding3Title": "Quran eta gehiago",
-  "onboarding3Desc": "Irakurri Quran, jarraitu zure irakurketa eta arakatu islamiar edukia"
+  "onboarding3Desc": "Irakurri Quran, jarraitu zure irakurketa eta arakatu islamiar edukia",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

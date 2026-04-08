@@ -138,5 +138,9 @@
   "onboarding2Title": "أوقات الصلاة",
   "onboarding2Desc": "أوقات صلاة دقيقة بناءً على موقعك",
   "onboarding3Title": "القرآن والمزيد",
-  "onboarding3Desc": "اقرأ القرآن وتتبع قراءتك واستكشف المحتوى الإسلامي"
+  "onboarding3Desc": "اقرأ القرآن وتتبع قراءتك واستكشف المحتوى الإسلامي",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

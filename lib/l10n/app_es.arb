@@ -138,5 +138,9 @@
   "onboarding2Title": "Horarios de oración",
   "onboarding2Desc": "Tiempos de oración precisos según su ubicación",
   "onboarding3Title": "Corán y más",
-  "onboarding3Desc": "Lea el Corán, realice un seguimiento de su lectura y explore contenido islámico"
+  "onboarding3Desc": "Lea el Corán, realice un seguimiento de su lectura y explore contenido islámico",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

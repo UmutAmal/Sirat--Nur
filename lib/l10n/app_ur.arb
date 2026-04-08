@@ -138,5 +138,9 @@
   "onboarding2Title": "نماز کے اوقات",
   "onboarding2Desc": "آپ کے مقام کی بنیاد پر درست نماز کے اوقات",
   "onboarding3Title": "قرآن اور مزید",
-  "onboarding3Desc": "قرآن پڑھیں، اپنی پڑھائی کو ٹریک کریں اور اسلامی مواد دریافت کریں"
+  "onboarding3Desc": "قرآن پڑھیں، اپنی پڑھائی کو ٹریک کریں اور اسلامی مواد دریافت کریں",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

@@ -138,5 +138,9 @@
   "onboarding2Title": "Времена за молитва",
   "onboarding2Desc": "Точни часове за молитва въз основа на вашето местоположение",
   "onboarding3Title": "Коран и още",
-  "onboarding3Desc": "Четете Корана, проследявайте четенето си и изследвайте ислямско съдържание"
+  "onboarding3Desc": "Четете Корана, проследявайте четенето си и изследвайте ислямско съдържание",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

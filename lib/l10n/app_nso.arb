@@ -204,5 +204,9 @@
   "healthCheckDesc": "Matha ditlhahlobo tša maphelo gomme o lebelele maemo a tshepedišo.",
   "qiblaAligned": "Qibla e lokeleditšwe",
   "rotateToFindQibla": "Dikološa go Hwetša Qibla",
-  "calibrationRequiredFigure8": "Go nyakega ga go lekanya. Dikološa sesebediswa ka setšoantšo-8."
+  "calibrationRequiredFigure8": "Go nyakega ga go lekanya. Dikološa sesebediswa ka setšoantšo-8.",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

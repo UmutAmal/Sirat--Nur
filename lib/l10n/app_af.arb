@@ -138,5 +138,9 @@
   "onboarding2Title": "Gebedstye",
   "onboarding2Desc": "Akkurate gebedstye gebaseer op jou ligging",
   "onboarding3Title": "Koran en meer",
-  "onboarding3Desc": "Lees Koran, hou jou lees dop en verken Islamitiese inhoud"
+  "onboarding3Desc": "Lees Koran, hou jou lees dop en verken Islamitiese inhoud",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

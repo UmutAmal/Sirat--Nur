@@ -138,5 +138,9 @@
   "onboarding2Title": "Kohët e lutjes",
   "onboarding2Desc": "Kohët e sakta të lutjes bazuar në vendndodhjen tuaj",
   "onboarding3Title": "Kuran dhe më shumë",
-  "onboarding3Desc": "Lexoni Kuranin, gjurmoni leximin tuaj dhe eksploroni përmbajtjen islame"
+  "onboarding3Desc": "Lexoni Kuranin, gjurmoni leximin tuaj dhe eksploroni përmbajtjen islame",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

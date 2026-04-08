@@ -138,5 +138,9 @@
   "onboarding2Title": "Աղոթքի ժամանակներ",
   "onboarding2Desc": "Աղոթքի ճշգրիտ ժամերը՝ հիմնված ձեր գտնվելու վայրի վրա",
   "onboarding3Title": "Ղուրան և ավելին",
-  "onboarding3Desc": "Կարդացեք Ղուրանը, հետևեք ձեր ընթերցանությանը և ուսումնասիրեք իսլամական բովանդակությունը"
+  "onboarding3Desc": "Կարդացեք Ղուրանը, հետևեք ձեր ընթերցանությանը և ուսումնասիրեք իսլամական բովանդակությունը",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

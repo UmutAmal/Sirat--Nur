@@ -204,5 +204,9 @@
   "healthCheckDesc": "स्वास्थ्य जांच चलाईं आ सिस्टम के स्थिति देखीं.",
   "qiblaAligned": "किबला संरेखित हो गइल",
   "rotateToFindQibla": "किबला के खोजे खातिर घुमाईं",
-  "calibrationRequiredFigure8": "कैलिब्रेशन के जरूरत बा। चित्र-8 में डिवाइस के घुमावल जाला।"
+  "calibrationRequiredFigure8": "कैलिब्रेशन के जरूरत बा। चित्र-8 में डिवाइस के घुमावल जाला।",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

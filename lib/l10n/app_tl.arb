@@ -1,4 +1,4 @@
-﻿{
+{
   "@@locale": "tl",
   "appTitle": "Daan ng Allah",
   "home": "Bahay",
@@ -138,5 +138,9 @@
   "onboarding2Title": "Oras ng Panalangin",
   "onboarding2Desc": "Tumpak na oras ng panalangin batay sa iyong lokasyon",
   "onboarding3Title": "Quran at Higit Pa",
-  "onboarding3Desc": "Magbasa ng Quran, subaybayan ang iyong pagbabasa, at tuklasin ang nilalamang Islamiko"
+  "onboarding3Desc": "Magbasa ng Quran, subaybayan ang iyong pagbabasa, at tuklasin ang nilalamang Islamiko",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

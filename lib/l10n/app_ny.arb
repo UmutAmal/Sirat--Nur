@@ -1,4 +1,4 @@
-﻿{
+{
   "@@locale": "ny",
   "appTitle": "Njira Ya Allah",
   "home": "Kunyumba",
@@ -138,5 +138,9 @@
   "onboarding2Title": "Nthawi za Mapemphero",
   "onboarding2Desc": "Nthawi zolondola zopemphera kutengera komwe muli",
   "onboarding3Title": "Quran & Zambiri",
-  "onboarding3Desc": "Werengani Korani, tsatirani zomwe mwawerenga, ndikuwona zachisilamu"
+  "onboarding3Desc": "Werengani Korani, tsatirani zomwe mwawerenga, ndikuwona zachisilamu",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

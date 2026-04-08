@@ -138,5 +138,9 @@
   "onboarding2Title": "ლოცვის დრო",
   "onboarding2Desc": "ლოცვის ზუსტი დრო თქვენი მდებარეობიდან გამომდინარე",
   "onboarding3Title": "ყურანი და სხვა",
-  "onboarding3Desc": "წაიკითხეთ ყურანი, თვალყური ადევნეთ თქვენს კითხვას და შეისწავლეთ ისლამური შინაარსი"
+  "onboarding3Desc": "წაიკითხეთ ყურანი, თვალყური ადევნეთ თქვენს კითხვას და შეისწავლეთ ისლამური შინაარსი",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

@@ -138,5 +138,9 @@
   "onboarding2Title": "Amannan Ùrnuigh",
   "onboarding2Desc": "Amannan ùrnaigh ceart stèidhichte air d ’àite",
   "onboarding3Title": "Quran agus barrachd",
-  "onboarding3Desc": "Leugh Quran, cùm sùil air do leughadh, agus rannsaich susbaint Ioslamach"
+  "onboarding3Desc": "Leugh Quran, cùm sùil air do leughadh, agus rannsaich susbaint Ioslamach",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

@@ -138,5 +138,9 @@
   "onboarding2Title": "Modlitební časy",
   "onboarding2Desc": "Přesné časy modliteb na základě vaší polohy",
   "onboarding3Title": "Korán a další",
-  "onboarding3Desc": "Přečtěte si Korán, sledujte své čtení a prozkoumejte islámský obsah"
+  "onboarding3Desc": "Přečtěte si Korán, sledujte své čtení a prozkoumejte islámský obsah",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

@@ -138,5 +138,9 @@
   "onboarding2Title": "اوقات نماز",
   "onboarding2Desc": "اوقات نماز دقیق بر اساس مکان شما",
   "onboarding3Title": "قرآن و بیشتر",
-  "onboarding3Desc": "قرآن بخوانید، خواندن خود را ردیابی کنید و محتوای اسلامی را کاوش کنید"
+  "onboarding3Desc": "قرآن بخوانید، خواندن خود را ردیابی کنید و محتوای اسلامی را کاوش کنید",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

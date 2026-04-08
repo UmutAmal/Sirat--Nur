@@ -1,4 +1,4 @@
-﻿{
+{
   "appTitle": "Way Of Allah",
   "home": "Home",
   "quran": "Quran",
@@ -24,5 +24,9 @@
   "isha": "Isha",
   "dataStorage": "Data & Storage",
   "clearCache": "Clear Cache",
-  "cacheClearedSuccess": "Cache cleared successfully"
+  "cacheClearedSuccess": "Cache cleared successfully",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

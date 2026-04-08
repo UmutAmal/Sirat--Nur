@@ -138,5 +138,9 @@
   "onboarding2Title": "Ώρες προσευχής",
   "onboarding2Desc": "Ακριβείς ώρες προσευχής με βάση την τοποθεσία σας",
   "onboarding3Title": "Κοράνι και άλλα",
-  "onboarding3Desc": "Διαβάστε το Κοράνι, παρακολουθήστε την ανάγνωσή σας και εξερευνήστε το ισλαμικό περιεχόμενο"
+  "onboarding3Desc": "Διαβάστε το Κοράνι, παρακολουθήστε την ανάγνωσή σας και εξερευνήστε το ισλαμικό περιεχόμενο",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

@@ -1,4 +1,4 @@
-﻿{
+{
   "@@locale": "ha",
   "appTitle": "Wayyo Allah",
   "home": "Gida",
@@ -138,5 +138,9 @@
   "onboarding2Title": "Lokutan Sallah",
   "onboarding2Desc": "Madaidaicin lokutan addu'a dangane da wurin da kuke",
   "onboarding3Title": "Alqur'ani & More",
-  "onboarding3Desc": "Karanta Al-Qur'ani, ku bibiyi karatun ku, da kuma bincika abubuwan Musulunci"
+  "onboarding3Desc": "Karanta Al-Qur'ani, ku bibiyi karatun ku, da kuma bincika abubuwan Musulunci",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

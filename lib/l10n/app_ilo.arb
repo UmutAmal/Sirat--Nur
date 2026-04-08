@@ -204,5 +204,9 @@
   "healthCheckDesc": "Ipataray dagiti panangsukimat iti salun-at ken kitaen ti kasasaad ti sistema.",
   "qiblaAligned": "Qibla Naitunos",
   "rotateToFindQibla": "Agturong tapno Agbirok iti Qibla",
-  "calibrationRequiredFigure8": "Masapul ti kalibrasion. I-rotate ti device iti figure-8."
+  "calibrationRequiredFigure8": "Masapul ti kalibrasion. I-rotate ti device iti figure-8.",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

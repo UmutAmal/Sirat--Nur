@@ -138,5 +138,9 @@
   "onboarding2Title": "ނަމާދު ވަގުތުތަކެވެ",
   "onboarding2Desc": "ތިމާ ހުންނަ ތަނަށް ބަލައިގެން ނަމާދުކުރާ ވަގުތުތައް ޞައްޙަ",
   "onboarding3Title": "ޤުރުއާން އެންޑް މޯރ",
-  "onboarding3Desc": "ޤުރުއާން ކިޔައި، ކިޔެވުން ޓްރެކްކޮށް، އިސްލާމީ ކޮންޓެންޓް ހޯދާށެވެ"
+  "onboarding3Desc": "ޤުރުއާން ކިޔައި، ކިޔެވުން ޓްރެކްކޮށް، އިސްލާމީ ކޮންޓެންޓް ހޯދާށެވެ",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

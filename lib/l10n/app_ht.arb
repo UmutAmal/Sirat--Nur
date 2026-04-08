@@ -138,5 +138,9 @@
   "onboarding2Title": "Tan Lapriyè",
   "onboarding2Desc": "Tan lapriyè egzat ki baze sou kote ou",
   "onboarding3Title": "Koran ak plis ankò",
-  "onboarding3Desc": "Li koran, swiv lekti ou, epi eksplore kontni Islamik"
+  "onboarding3Desc": "Li koran, swiv lekti ou, epi eksplore kontni Islamik",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

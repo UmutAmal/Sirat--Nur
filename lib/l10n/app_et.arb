@@ -138,5 +138,9 @@
   "onboarding2Title": "Palveajad",
   "onboarding2Desc": "Täpsed palveajad teie asukoha põhjal",
   "onboarding3Title": "Koraan ja palju muud",
-  "onboarding3Desc": "Lugege Koraani, jälgige oma lugemist ja uurige islami sisu"
+  "onboarding3Desc": "Lugege Koraani, jälgige oma lugemist ja uurige islami sisu",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

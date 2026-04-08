@@ -138,5 +138,9 @@
   "onboarding2Title": "नमाज़ के वक्त",
   "onboarding2Desc": "आपके स्थान के आधार पर सही नमाज़ के वक्त",
   "onboarding3Title": "कुरान और अधिक",
-  "onboarding3Desc": "कुरान पढ़ें, अपना पढ़ना ट्रैक करें और इस्लामिक कंटेंट खोजें"
+  "onboarding3Desc": "कुरान पढ़ें, अपना पढ़ना ट्रैक करें और इस्लामिक कंटेंट खोजें",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

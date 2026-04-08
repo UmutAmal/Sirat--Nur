@@ -204,5 +204,9 @@
   "healthCheckDesc": "Run health checks and view system status.",
   "qiblaAligned": "Qibla Aligned",
   "rotateToFindQibla": "Rotate to Find Qibla",
-  "calibrationRequiredFigure8": "Calibration required. Rotate device in figure-8."
+  "calibrationRequiredFigure8": "Calibration required. Rotate device in figure-8.",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

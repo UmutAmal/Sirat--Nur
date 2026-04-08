@@ -138,5 +138,9 @@
   "onboarding2Title": "Час малітвы",
   "onboarding2Desc": "Дакладны час малітвы ў залежнасці ад вашага месцазнаходжання",
   "onboarding3Title": "Каран і многае іншае",
-  "onboarding3Desc": "Чытайце Каран, адсочвайце сваё чытанне і вывучайце ісламскі кантэнт"
+  "onboarding3Desc": "Чытайце Каран, адсочвайце сваё чытанне і вывучайце ісламскі кантэнт",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

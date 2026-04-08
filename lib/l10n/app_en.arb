@@ -286,8 +286,12 @@
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
-      "surah": {"type": "String"},
-      "total": {"type": "String"}
+      "surah": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
@@ -295,5 +299,9 @@
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "Nature & Qur'an Mixer",
   "audioPlayFailed": "Audio playback failed",
-  "sukunNatureLabel": "Sukun (Nature)"
+  "sukunNatureLabel": "Sukun (Nature)",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

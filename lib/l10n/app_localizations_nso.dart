@@ -857,4 +857,16 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get sukunNatureLabel => 'Sukun (Nature)';
+
+  @override
+  String get prayerCompletion => 'Prayer Completion';
+
+  @override
+  String get streaks => 'Streaks';
+
+  @override
+  String get dayStreak => 'Day streak';
+
+  @override
+  String get bestStreak => 'Best streak';
 }

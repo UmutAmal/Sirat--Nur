@@ -138,5 +138,9 @@
   "onboarding2Title": "Temps de pregària",
   "onboarding2Desc": "Temps d'oració precisos segons la vostra ubicació",
   "onboarding3Title": "Alcorà i més",
-  "onboarding3Desc": "Llegiu l'Alcorà, feu un seguiment de la vostra lectura i exploreu contingut islàmic"
+  "onboarding3Desc": "Llegiu l'Alcorà, feu un seguiment de la vostra lectura i exploreu contingut islàmic",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

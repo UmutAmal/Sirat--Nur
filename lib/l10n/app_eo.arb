@@ -138,5 +138,9 @@
   "onboarding2Title": "Preĝaj Tempoj",
   "onboarding2Desc": "Precizaj preĝtempoj bazitaj sur via loko",
   "onboarding3Title": "Korano & Pli",
-  "onboarding3Desc": "Legu Koranon, spuru vian legadon kaj esploru islaman enhavon"
+  "onboarding3Desc": "Legu Koranon, spuru vian legadon kaj esploru islaman enhavon",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

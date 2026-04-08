@@ -138,5 +138,9 @@
   "onboarding2Title": "Gebedstiden",
   "onboarding2Desc": "Akkurate gebedstiden basearre op jo lokaasje",
   "onboarding3Title": "Koran en mear",
-  "onboarding3Desc": "Lês de Koran, folgje jo lêzen en ferkenne islamityske ynhâld"
+  "onboarding3Desc": "Lês de Koran, folgje jo lêzen en ferkenne islamityske ynhâld",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

@@ -138,5 +138,9 @@
   "onboarding2Title": "Manawa Pule",
   "onboarding2Desc": "ʻO nā manawa pule pololei e pili ana i kou wahi",
   "onboarding3Title": "Quran a me na mea hou aku",
-  "onboarding3Desc": "E heluhelu i ka Quran, e hahai i kāu heluhelu, a e ʻimi i ka ʻike Islam"
+  "onboarding3Desc": "E heluhelu i ka Quran, e hahai i kāu heluhelu, a e ʻimi i ka ʻike Islam",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

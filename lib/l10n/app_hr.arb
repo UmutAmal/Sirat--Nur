@@ -138,5 +138,9 @@
   "onboarding2Title": "Vrijeme molitve",
   "onboarding2Desc": "Točna vremena molitve na temelju vaše lokacije",
   "onboarding3Title": "Kur'an i više",
-  "onboarding3Desc": "Čitajte Kuran, pratite svoje čitanje i istražujte islamski sadržaj"
+  "onboarding3Desc": "Čitajte Kuran, pratite svoje čitanje i istražujte islamski sadržaj",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

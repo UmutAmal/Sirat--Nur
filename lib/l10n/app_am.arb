@@ -138,5 +138,9 @@
   "onboarding2Title": "የጸሎት ጊዜያት",
   "onboarding2Desc": "በአከባቢዎ ላይ በመመስረት ትክክለኛ የጸሎት ጊዜያት",
   "onboarding3Title": "ቁርኣን እና ሌሎችም።",
-  "onboarding3Desc": "ቁርኣንን አንብብ፣ ንባብህን ተከታተል እና ኢስላማዊ ይዘትን አስስ"
+  "onboarding3Desc": "ቁርኣንን አንብብ፣ ንባብህን ተከታተል እና ኢስላማዊ ይዘትን አስስ",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

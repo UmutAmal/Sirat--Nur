@@ -138,5 +138,9 @@
   "onboarding2Title": "Mayisiñ pachanaka",
   "onboarding2Desc": "Kawkhantï jikjjataskta ukarjamaw kuna horasas oración lurañapa uk cheqaparjam qhanañchaña",
   "onboarding3Title": "Quran & More ukat juk’ampinaka",
-  "onboarding3Desc": "Quran uñxatt’aña, ullart’awinakam arknaqaña, ukat contenido islámico ukar uñakipt’aña"
+  "onboarding3Desc": "Quran uñxatt’aña, ullart’awinakam arknaqaña, ukat contenido islámico ukar uñakipt’aña",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

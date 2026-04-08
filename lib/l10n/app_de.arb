@@ -138,5 +138,9 @@
   "onboarding2Title": "Gebetszeiten",
   "onboarding2Desc": "Genaue Gebetszeiten basierend auf Ihrem Standort",
   "onboarding3Title": "Koran und mehr",
-  "onboarding3Desc": "Lesen Sie den Koran, verfolgen Sie Ihre Lektüre und erkunden Sie islamische Inhalte"
+  "onboarding3Desc": "Lesen Sie den Koran, verfolgen Sie Ihre Lektüre und erkunden Sie islamische Inhalte",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

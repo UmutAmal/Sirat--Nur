@@ -204,5 +204,9 @@
   "healthCheckDesc": "Rɔn wɛlbɔdi chɛk ɛn si di sistɛm stetɔs.",
   "qiblaAligned": "Qibla we dɛn dɔn alaynɛd",
   "rotateToFindQibla": "Rotate fɔ Fɛn Qibla",
-  "calibrationRequiredFigure8": "Kalibreshɔn nid fɔ de. Rotate divays na figa-8."
+  "calibrationRequiredFigure8": "Kalibreshɔn nid fɔ de. Rotate divays na figa-8.",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

@@ -1,4 +1,4 @@
-﻿{
+{
   "@@locale": "id",
   "appTitle": "Jalan Allah",
   "home": "Beranda",
@@ -138,6 +138,9 @@
   "onboarding2Title": "Waktu Sholat",
   "onboarding2Desc": "Waktu sholat akurat berdasarkan lokasi Anda",
   "onboarding3Title": "Quran dan Lainnya",
-  "onboarding3Desc": "Baca Quran, lacak bacaan Anda, dan jelajahi konten Islami"
+  "onboarding3Desc": "Baca Quran, lacak bacaan Anda, dan jelajahi konten Islami",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }
-

@@ -138,5 +138,9 @@
   "onboarding2Title": "પ્રાર્થનાના સમય",
   "onboarding2Desc": "તમારા સ્થાનના આધારે પ્રાર્થનાના ચોક્કસ સમય",
   "onboarding3Title": "કુરાન અને વધુ",
-  "onboarding3Desc": "કુરાન વાંચો, તમારા વાંચનને ટ્રૅક કરો અને ઇસ્લામિક સામગ્રીનું અન્વેષણ કરો"
+  "onboarding3Desc": "કુરાન વાંચો, તમારા વાંચનને ટ્રૅક કરો અને ઇસ્લામિક સામગ્રીનું અન્વેષણ કરો",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

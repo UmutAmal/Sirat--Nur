@@ -851,4 +851,16 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get sukunNatureLabel => 'Sükun (Doğa)';
+
+  @override
+  String get prayerCompletion => 'Namaz Tamamlama';
+
+  @override
+  String get streaks => 'Seriler';
+
+  @override
+  String get dayStreak => 'Gün serisi';
+
+  @override
+  String get bestStreak => 'En iyi seri';
 }

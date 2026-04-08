@@ -2079,6 +2079,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sukun (Nature)'**
   String get sukunNatureLabel;
+
+  /// No description provided for @prayerCompletion.
+  ///
+  /// In en, this message translates to:
+  /// **'Prayer Completion'**
+  String get prayerCompletion;
+
+  /// No description provided for @streaks.
+  ///
+  /// In en, this message translates to:
+  /// **'Streaks'**
+  String get streaks;
+
+  /// No description provided for @dayStreak.
+  ///
+  /// In en, this message translates to:
+  /// **'Day streak'**
+  String get dayStreak;
+
+  /// No description provided for @bestStreak.
+  ///
+  /// In en, this message translates to:
+  /// **'Best streak'**
+  String get bestStreak;
 }
 
 class _AppLocalizationsDelegate

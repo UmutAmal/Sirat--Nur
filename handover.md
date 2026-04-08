@@ -349,3 +349,58 @@
 ### Sonraki Adım
 - Majör/constraint bloklu paketler (`fl_chart`, `flutter_riverpod`, `geocoding`, `google_mobile_ads` vb.) resmi changelog/API notlarıyla ayrı risk analizi gerektiriyor.
 - Ürün yüzeyinde kalan hardcoded analytics/chatbot/places metinleri ayrıca temizlenecek.
+
+## 2026-04-08 TUR-14 — Analytics Weekly Overview Localization Gate
+### Yapılan İşlem
+- `analytics_page.dart` içindeki haftalık analytics yüzeyinde kalan hardcoded başlıklar kaldırıldı:
+  - `Prayer Completion`
+  - `Streaks`
+  - `Day streak`
+  - `Best streak`
+- Haftalık bar grafiğindeki gün etiketleri sabit `Mon/Tue/...` dizgileri yerine locale tabanlı `DateFormat.E(...)` ile üretilecek şekilde değiştirildi.
+- Yeni analytics anahtarları (`prayerCompletion`, `streaks`, `dayStreak`, `bestStreak`) tüm `lib/l10n/app_*.arb` dosyalarına aynı turda eklendi.
+  - `app_tr.arb` için Türkçe değerler yazıldı.
+  - Diğer diller için mevcut repo kuralı doğrultusunda İngilizce fallback eklendi; böylece hiçbir ARB dosyasında anahtar eksik kalmadı.
+- `flutter gen-l10n` tekrar çalıştırıldı ve generated localization dosyaları güncellendi.
+- Yeni widget testi eklendi:
+  - İngilizce locale doğrulaması
+  - Türkçe locale doğrulaması
+  - `AnimatedPremiumCard` kaynaklı pending timer problemi, test içinde kontrollü `pump` ve teardown ile giderildi.
+
+### Neden Yapıldı
+- Kullanıcıya görünen analytics haftalık görünümünde hâlâ sabit İngilizce metinler vardı; bu durum AGENTS.md içindeki `Hardcoded string bırakma` kuralını ihlal ediyordu.
+- Önceki analytics widget testi, `AnimatedPremiumCard` içindeki gecikmeli animasyon timer'ını serbest bırakmadan sonlandığı için `A Timer is still pending even after the widget tree was disposed.` hatası üretiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\analytics\analytics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\analytics\analytics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\add_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Analytics ekranındaki haftalık özet artık locale-aware başlık ve gün etiketleri kullanıyor.
+- Yeni analytics anahtarları tüm ARB setine yayıldığı için generated localizations ile runtime anahtar uyuşmazlığı riski kaldırıldı.
+- Analytics widget testi artık animasyon yaşam döngüsünü temiz kapatıyor; tam test turunda ek sızıntı bırakmıyor.
+
+### Test Sonucu
+- `flutter gen-l10n` → Başarılı
+- `flutter analyze` → PASS
+- `flutter test test/features/analytics/analytics_page_test.dart` → PASS (`2/2`)
+- `flutter test` → PASS (`55/55`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Analytics hardcoded weekly overview + test instability: `8/25 → 2/25`
+
+### Sonraki Adım
+- `chatbot_page.dart` üzerinde kalan yüksek görünürlükte hardcoded AI mod metinleri:
+  - satır 181: `'LOCAL AI' : 'CLOUD AI'`
+  - satır 201: `'Use Cloud AI (Gemini)'`
+  - satır 205: `'Download Local AI (1.5GB)'`
+  - satır 112: `"Cloud API not configured. Please switch to Local AI."`
+- `places_map_page.dart` üzerinde kalan hardcoded liste metinleri:
+  - satır 462: `'Nearby Mosques'`
+  - satır 473: `'${enrichedPlaces.length} found'`
+  - satır 584: `'${place.distanceKm.toStringAsFixed(1)} km away'`
+- `flutter gen-l10n` çalışıyor ancak çok sayıda dil dosyasında repo genelinden gelen eski `untranslated message(s)` uyarıları sürüyor; bu uyarılar analytics turunu bloklamadı fakat ayrı bir çeviri sertleştirme turu gerektiriyor.

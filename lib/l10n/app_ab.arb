@@ -1,4 +1,4 @@
-﻿{
+{
   "@@locale": "ab",
   "appTitle": "Way Of Allah",
   "home": "Home",
@@ -138,5 +138,9 @@
   "onboarding2Title": "Prayer Times",
   "onboarding2Desc": "Accurate prayer times based on your location",
   "onboarding3Title": "Quran & More",
-  "onboarding3Desc": "Read Quran, track your reading, and explore Islamic content"
+  "onboarding3Desc": "Read Quran, track your reading, and explore Islamic content",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

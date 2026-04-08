@@ -1,4 +1,4 @@
-﻿{
+{
   "@@locale": "ceb",
   "appTitle": "Dalan sa Allah",
   "home": "Balay",
@@ -138,5 +138,9 @@
   "onboarding2Title": "Panahon sa Pag-ampo",
   "onboarding2Desc": "Tukma nga mga oras sa pag-ampo base sa imong lokasyon",
   "onboarding3Title": "Quran ug uban pa",
-  "onboarding3Desc": "Pagbasa sa Quran, pagsubay sa imong pagbasa, ug pagsuhid sa sulud sa Islam"
+  "onboarding3Desc": "Pagbasa sa Quran, pagsubay sa imong pagbasa, ug pagsuhid sa sulud sa Islam",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

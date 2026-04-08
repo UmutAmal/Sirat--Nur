@@ -138,5 +138,9 @@
   "onboarding2Title": "Tempi di preghiera",
   "onboarding2Desc": "Tempi di preghiera precisi basatu annantu à a vostra situazione",
   "onboarding3Title": "Coran & More",
-  "onboarding3Desc": "Leghjite u Coran, seguite a vostra lettura è esplora u cuntenutu islamicu"
+  "onboarding3Desc": "Leghjite u Coran, seguite a vostra lettura è esplora u cuntenutu islamicu",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

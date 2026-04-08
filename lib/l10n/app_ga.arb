@@ -138,5 +138,9 @@
   "onboarding2Title": "Amanna Paidir",
   "onboarding2Desc": "Amanna urnaí cruinn bunaithe ar do shuíomh",
   "onboarding3Title": "Quran & níos mó",
-  "onboarding3Desc": "Léigh an Quran, rianaigh do léamh, agus fiosraigh ábhar Ioslamach"
+  "onboarding3Desc": "Léigh an Quran, rianaigh do léamh, agus fiosraigh ábhar Ioslamach",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }

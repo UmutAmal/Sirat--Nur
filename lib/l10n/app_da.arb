@@ -138,5 +138,9 @@
   "onboarding2Title": "Bedetider",
   "onboarding2Desc": "Nøjagtige bøntider baseret på din placering",
   "onboarding3Title": "Koranen og mere",
-  "onboarding3Desc": "Læs Koranen, spor din læsning og udforsk islamisk indhold"
+  "onboarding3Desc": "Læs Koranen, spor din læsning og udforsk islamisk indhold",
+  "prayerCompletion": "Prayer Completion",
+  "streaks": "Streaks",
+  "dayStreak": "Day streak",
+  "bestStreak": "Best streak"
 }
