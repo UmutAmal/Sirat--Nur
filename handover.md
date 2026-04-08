@@ -568,3 +568,50 @@
 - `public.duas` ve `public.asma_ul_husna` canlı backend’de erişilebilir değil; sonraki turda SQL schema/seed kanalı repo içine eklenmeli ve tablo hazırlığı kapatılmalı.
 - Section 13 kapsamında bir sonraki yüksek etkili iş, statik dini içeriğin backend seed zincirini repo içinde doğrulanabilir SQL dosyalarına taşımak.
 - `flutter gen-l10n` kaynaklı eksik çeviri uyarıları ayrıca sertleştirilecek.
+
+## 2026-04-08 TUR-18 — Content Schema Bootstrap for Missing Supabase Tables
+### Yapılan İşlem
+- Repo köküne `content_schema.sql` eklendi.
+- Dosya içine cloud-first içerik akışının şu an gerçekten kullandığı ama canlı backend’de eksik olan iki tablo için bootstrap DDL yazıldı:
+  - `public.duas`
+  - `public.asma_ul_husna`
+- Her iki tablo için:
+  - gerekli içerik kolonları tanımlandı
+  - `source` ve `verified_at` alanları zorunlu tutuldu
+  - `enable row level security` eklendi
+  - public read policy eklendi
+- `duas` için `category` index’i eklendi.
+- Yeni `content_schema_test.dart` ile schema dosyasının:
+  - iki tabloyu tanımladığı
+  - `verified_at` zorunluluğunu içerdiği
+  - RLS ve public select policy barındırdığı doğrulandı
+
+### Neden Yapıldı
+- Önceki iki turda Flutter tarafı `duas` ve `asma_ul_husna` için cloud-first provider’a geçirildi.
+- Ancak canlı Supabase REST tarafında:
+  - `public.duas` erişilemiyordu
+  - `public.asma_ul_husna` erişilemiyordu
+- Yani uygulama tarafı hazır olsa da repo içinde eksik olan şey backend bootstrap kanalının kendisiydi. Bu tur, Section 13’teki canlı içerik geçişinin repo-seviyesi schema temelini oluşturdu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\content_schema.sql`
+- `A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Repo artık eksik canlı içerik tabloları için uygulanabilir ve tekrar çalıştırılabilir bir schema dosyasına sahip.
+- `seed.sql` öncesi uygulanabilecek net bir bootstrap katmanı oluştu.
+- Sonraki turda doğrulanmış içerik insert/seed çalışması bu dosyanın üstüne bindirilebilecek.
+
+### Test Sonucu
+- `flutter test test/content_schema_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`66/66`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Missing backend schema for cloud-first duas + asma tables: `9/25 → 4/25`
+
+### Sonraki Adım
+- `content_schema.sql` yalnızca tablo ve policy katmanını kuruyor; sonraki turda kabul edilen resmi kaynaklardan doğrulanmış `duas` ve `asma_ul_husna` seed içeriği üretilip SQL insert katmanı eklenmeli.
+- `seed.sql` şu an bu iki tabloyu beslemiyor; canlı veri zincirinin tamamlanması için kaynak-doğrulanmış seed dosyası gerekiyor.
+- `flutter gen-l10n` kaynaklı eksik çeviri uyarıları ayrıca kapatılacak.
