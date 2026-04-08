@@ -520,8 +520,8 @@
   "duaCategoryForgiveness": "Maithiúnas",
   "duaCategoryHome": "Baile",
   "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Moslamach",
-  "duaSourceAbuDawud": "Abú Dhabhúd",
-  "duaSourceTirmidhi": "Tirmidi",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
   "duaSourceAhmad": "Ahmad"
 }

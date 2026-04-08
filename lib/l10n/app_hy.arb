@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Սնունդ և խմիչք",
   "duaCategoryForgiveness": "Ներողամտություն",
   "duaCategoryHome": "Տուն",
-  "duaSourceBukhari": "Բուխարի",
-  "duaSourceMuslim": "մահմեդական",
-  "duaSourceAbuDawud": "Աբու Դաուդ",
-  "duaSourceTirmidhi": "Տիրմիդի",
-  "duaSourceAhmad": "Ահմադ"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

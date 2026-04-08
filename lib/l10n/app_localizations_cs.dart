@@ -823,16 +823,16 @@ class AppLocalizationsCs extends AppLocalizations {
   String get duaCategoryHome => 'Domov';
 
   @override
-  String get duaSourceBukhari => 'Buchari';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'muslimský';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
   String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'tirmidhi';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
   String get duaSourceAhmad => 'Ahmad';

@@ -519,8 +519,8 @@
   "duaCategoryFoodDrink": "ອາຫານ ແລະ ເຄື່ອງດື່ມ",
   "duaCategoryForgiveness": "ການໃຫ້ອະໄພ",
   "duaCategoryHome": "ບ້ານ",
-  "duaSourceBukhari": "ບູຄາຣີ",
-  "duaSourceMuslim": "ມຸດສະລິມ",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
   "duaSourceAhmad": "Ahmad"

@@ -825,19 +825,19 @@ class AppLocalizationsLus extends AppLocalizations {
   String get duaCategoryHome => 'In';
 
   @override
-  String get duaSourceBukhari => 'Bukhari a ni';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'Muslim a ni';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'Abu Dawud chuan a rawn ti a';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'Tirmidhi a ni';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
-  String get duaSourceAhmad => 'Ahmad chuan a rawn ti a';
+  String get duaSourceAhmad => 'Ahmad';
 
   @override
   String get islamicEducation => 'Islamic Education';

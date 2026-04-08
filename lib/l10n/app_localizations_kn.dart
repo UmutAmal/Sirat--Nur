@@ -823,19 +823,19 @@ class AppLocalizationsKn extends AppLocalizations {
   String get duaCategoryHome => 'ಮುಖಪುಟ';
 
   @override
-  String get duaSourceBukhari => 'ಬುಖಾರಿ';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'ಮುಸ್ಲಿಂ';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'ಅಬು ದಾವೂದ್';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'ತಿರ್ಮಿದಿ';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
-  String get duaSourceAhmad => 'ಅಹ್ಮದ್';
+  String get duaSourceAhmad => 'Ahmad';
 
   @override
   String get islamicEducation => 'Islamic Education';

@@ -827,13 +827,13 @@ class AppLocalizationsGa extends AppLocalizations {
   String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'Moslamach';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'Abú Dhabhúd';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'Tirmidi';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
   String get duaSourceAhmad => 'Ahmad';

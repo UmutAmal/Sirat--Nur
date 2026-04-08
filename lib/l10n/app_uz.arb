@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Oziq-ovqat va ichimliklar",
   "duaCategoryForgiveness": "Kechirim",
   "duaCategoryHome": "Uy",
-  "duaSourceBukhari": "Buxoriy",
-  "duaSourceMuslim": "musulmon",
-  "duaSourceAbuDawud": "Abu Dovud",
-  "duaSourceTirmidhi": "Termiziy",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
   "duaSourceAhmad": "Ahmad"
 }

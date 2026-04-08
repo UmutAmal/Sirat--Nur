@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Ushqim & Pije",
   "duaCategoryForgiveness": "falje",
   "duaCategoryHome": "Shtëpi",
-  "duaSourceBukhari": "Buhariu",
-  "duaSourceMuslim": "musliman",
-  "duaSourceAbuDawud": "Ebu Davudi",
-  "duaSourceTirmidhi": "Tirmidhiu",
-  "duaSourceAhmad": "Ahmedi"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

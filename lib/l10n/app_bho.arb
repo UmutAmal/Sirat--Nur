@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "खाए-पीए के सामान",
   "duaCategoryForgiveness": "माफी के बात बा",
   "duaCategoryHome": "घर",
-  "duaSourceBukhari": "बुखारी के बा",
-  "duaSourceMuslim": "मुसलमान के ह",
-  "duaSourceAbuDawud": "अबू दाऊद के ह",
-  "duaSourceTirmidhi": "तिरमिढ़ी के बा",
-  "duaSourceAhmad": "अहमद के ह"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

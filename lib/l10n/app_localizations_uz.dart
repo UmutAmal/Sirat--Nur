@@ -823,16 +823,16 @@ class AppLocalizationsUz extends AppLocalizations {
   String get duaCategoryHome => 'Uy';
 
   @override
-  String get duaSourceBukhari => 'Buxoriy';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'musulmon';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'Abu Dovud';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'Termiziy';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
   String get duaSourceAhmad => 'Ahmad';

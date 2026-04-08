@@ -827,7 +827,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'muslimi';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
   String get duaSourceAbuDawud => 'Abu Dawud';

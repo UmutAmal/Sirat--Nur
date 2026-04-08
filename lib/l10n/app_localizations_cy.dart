@@ -827,13 +827,13 @@ class AppLocalizationsCy extends AppLocalizations {
   String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'Mwslemaidd';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
   String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'Tirmihi';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
   String get duaSourceAhmad => 'Ahmad';

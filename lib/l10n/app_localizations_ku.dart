@@ -829,7 +829,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'Ebû Dawûd';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
   String get duaSourceTirmidhi => 'Tirmidhi';

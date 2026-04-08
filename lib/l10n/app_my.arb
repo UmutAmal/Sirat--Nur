@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "အစားအသောက်နှင့် သောက်စရာ",
   "duaCategoryForgiveness": "ခွင့်လွှတ်ပါ။",
   "duaCategoryHome": "အိမ်",
-  "duaSourceBukhari": "ဘူခါရီ",
-  "duaSourceMuslim": "မွတ်ဆလင်",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "အဟ်မဒ်"
+  "duaSourceAhmad": "Ahmad"
 }

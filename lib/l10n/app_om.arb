@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Nyaata fi Dhugaatii",
   "duaCategoryForgiveness": "Dhiifama",
   "duaCategoryHome": "Mana",
-  "duaSourceBukhari": "Bukhaariin",
-  "duaSourceMuslim": "Muslima",
-  "duaSourceAbuDawud": "Abuu Daawud",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
   "duaSourceAhmad": "Ahmad"
 }

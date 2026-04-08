@@ -823,16 +823,16 @@ class AppLocalizationsLn extends AppLocalizations {
   String get duaCategoryHome => 'Ndako';
 
   @override
-  String get duaSourceBukhari => 'Bukhari, oyo azali';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'Moyisalaele';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'Abu Dawud, oyo azali na mbongo mingi';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'Tirmidhi na nkombo';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
   String get duaSourceAhmad => 'Ahmad';

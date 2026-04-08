@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Bilei & Masanga",
   "duaCategoryForgiveness": "Bolimbisi",
   "duaCategoryHome": "Ndako",
-  "duaSourceBukhari": "Bukhari, oyo azali",
-  "duaSourceMuslim": "Moyisalaele",
-  "duaSourceAbuDawud": "Abu Dawud, oyo azali na mbongo mingi",
-  "duaSourceTirmidhi": "Tirmidhi na nkombo",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
   "duaSourceAhmad": "Ahmad"
 }

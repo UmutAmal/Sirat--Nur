@@ -836,7 +836,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
-  String get duaSourceAhmad => 'U-Ahmad';
+  String get duaSourceAhmad => 'Ahmad';
 
   @override
   String get islamicEducation => 'Islamic Education';

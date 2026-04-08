@@ -827,7 +827,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'muslim';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
   String get duaSourceAbuDawud => 'Abu Dawud';

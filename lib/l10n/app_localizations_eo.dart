@@ -823,10 +823,10 @@ class AppLocalizationsEo extends AppLocalizations {
   String get duaCategoryHome => 'Hejmo';
 
   @override
-  String get duaSourceBukhari => 'Buĥari';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'islamano';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
   String get duaSourceAbuDawud => 'Abu Dawud';

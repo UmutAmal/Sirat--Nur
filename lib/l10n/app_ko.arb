@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "음식 및 음료",
   "duaCategoryForgiveness": "용서",
   "duaCategoryHome": "집",
-  "duaSourceBukhari": "부하리",
-  "duaSourceMuslim": "무슬림",
-  "duaSourceAbuDawud": "아부 다우드",
-  "duaSourceTirmidhi": "티르미디",
-  "duaSourceAhmad": "아마드"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

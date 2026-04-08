@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Mikhuy & Upyana",
   "duaCategoryForgiveness": "Pampachay",
   "duaCategoryHome": "Wasi",
-  "duaSourceBukhari": "Bukhari sutiyuq runa",
-  "duaSourceMuslim": "Musulmán",
-  "duaSourceAbuDawud": "Abu Dawud sutiyuq runa",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad sutiyuq runa"
+  "duaSourceAhmad": "Ahmad"
 }

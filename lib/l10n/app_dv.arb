@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "ކާބޯތަކެތި އަދި ބުއިން",
   "duaCategoryForgiveness": "މާފުކުރުން",
   "duaCategoryHome": "ގެ",
-  "duaSourceBukhari": "ބުޚާރީ އެވެ",
-  "duaSourceMuslim": "މުސްލިމް އެވެ",
-  "duaSourceAbuDawud": "އަބޫ ދާއޫދު އެވެ",
-  "duaSourceTirmidhi": "ތިރުމިދީ އެވެ",
-  "duaSourceAhmad": "އަހުމަދު އެވެ"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

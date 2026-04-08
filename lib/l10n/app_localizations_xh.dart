@@ -826,13 +826,13 @@ class AppLocalizationsXh extends AppLocalizations {
   String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'UmSilamsi';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
   String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'UTirmidhi';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
   String get duaSourceAhmad => 'Ahmad';

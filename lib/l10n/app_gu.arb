@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "ખોરાક અને પીણું",
   "duaCategoryForgiveness": "ક્ષમા",
   "duaCategoryHome": "ઘર",
-  "duaSourceBukhari": "બુખારી",
-  "duaSourceMuslim": "મુસ્લિમ",
-  "duaSourceAbuDawud": "અબુ દાઉદ",
-  "duaSourceTirmidhi": "તિર્મિ",
-  "duaSourceAhmad": "અહમદ"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

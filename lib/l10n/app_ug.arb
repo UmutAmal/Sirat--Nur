@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "يېمەكلىك ۋە ئىچىملىك",
   "duaCategoryForgiveness": "كەچۈرۈم قىلىش",
   "duaCategoryHome": "ئۆي",
-  "duaSourceBukhari": "بۇخارى",
-  "duaSourceMuslim": "مۇسۇلمان",
-  "duaSourceAbuDawud": "ئەبۇ داۋۇد",
-  "duaSourceTirmidhi": "تىرمىزى",
-  "duaSourceAhmad": "ئەھمەد"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

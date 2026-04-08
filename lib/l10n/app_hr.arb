@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Hrana i piće",
   "duaCategoryForgiveness": "Opraštanje",
   "duaCategoryHome": "Dom",
-  "duaSourceBukhari": "Buhari",
-  "duaSourceMuslim": "muslimanski",
-  "duaSourceAbuDawud": "Ebu Davud",
-  "duaSourceTirmidhi": "Tirmizi",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
   "duaSourceAhmad": "Ahmad"
 }

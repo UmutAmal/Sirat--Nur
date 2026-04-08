@@ -827,7 +827,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get duaCategoryHome => 'Heim';
 
   @override
-  String get duaSourceBukhari => 'Buchari';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
   String get duaSourceMuslim => 'Muslim';

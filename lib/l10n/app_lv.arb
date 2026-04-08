@@ -520,8 +520,8 @@
   "duaCategoryForgiveness": "Piedošana",
   "duaCategoryHome": "Sākums",
   "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "musulmanis",
-  "duaSourceAbuDawud": "Abū Dawud",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmads"
+  "duaSourceAhmad": "Ahmad"
 }

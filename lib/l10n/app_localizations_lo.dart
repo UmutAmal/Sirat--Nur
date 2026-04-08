@@ -823,10 +823,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get duaCategoryHome => 'ບ້ານ';
 
   @override
-  String get duaSourceBukhari => 'ບູຄາຣີ';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'ມຸດສະລິມ';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
   String get duaSourceAbuDawud => 'Abu Dawud';

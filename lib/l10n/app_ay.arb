@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Manq’añanaka & Umañanaka",
   "duaCategoryForgiveness": "Perdonaña",
   "duaCategoryHome": "Uta",
-  "duaSourceBukhari": "Bukhari ukax mä juk’a pachanakanwa",
-  "duaSourceMuslim": "Musulmán",
-  "duaSourceAbuDawud": "Abu Dawud sat jilataw ukham luräna",
-  "duaSourceTirmidhi": "Tirmidhi ukax mä juk’a pachanakanwa",
-  "duaSourceAhmad": "Ahmad jupax ukham sataynawa"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

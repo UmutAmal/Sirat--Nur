@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Φαγητό & Ποτό",
   "duaCategoryForgiveness": "Συγχώρεση",
   "duaCategoryHome": "Σπίτι",
-  "duaSourceBukhari": "Μπουχάρι",
-  "duaSourceMuslim": "Μουσουλμάνος",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ο Αχμάντ"
+  "duaSourceAhmad": "Ahmad"
 }

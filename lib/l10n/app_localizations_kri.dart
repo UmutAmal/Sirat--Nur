@@ -822,19 +822,19 @@ class AppLocalizationsKri extends AppLocalizations {
   String get duaCategoryHome => 'Os';
 
   @override
-  String get duaSourceBukhari => 'Bukhari we de na di wɔl';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
   String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'Abu Dawud bin de tɔk bɔt am';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'Tirmidhi we de na di wɔl';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
-  String get duaSourceAhmad => 'Ahmad bin tɔk bɔt';
+  String get duaSourceAhmad => 'Ahmad';
 
   @override
   String get islamicEducation => 'Islamic Education';

@@ -825,19 +825,19 @@ class AppLocalizationsKa extends AppLocalizations {
   String get duaCategoryHome => 'მთავარი';
 
   @override
-  String get duaSourceBukhari => 'ბუხარი';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'მუსლიმი';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'აბუ დაუდი';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'ტირმიდი';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
-  String get duaSourceAhmad => 'აჰმადი';
+  String get duaSourceAhmad => 'Ahmad';
 
   @override
   String get islamicEducation => 'Islamic Education';

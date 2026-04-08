@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Ei leh in tur",
   "duaCategoryForgiveness": "Ngaihdamna",
   "duaCategoryHome": "In",
-  "duaSourceBukhari": "Bukhari a ni",
-  "duaSourceMuslim": "Muslim a ni",
-  "duaSourceAbuDawud": "Abu Dawud chuan a rawn ti a",
-  "duaSourceTirmidhi": "Tirmidhi a ni",
-  "duaSourceAhmad": "Ahmad chuan a rawn ti a"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

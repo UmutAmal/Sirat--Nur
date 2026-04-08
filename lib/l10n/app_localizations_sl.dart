@@ -823,16 +823,16 @@ class AppLocalizationsSl extends AppLocalizations {
   String get duaCategoryHome => 'domov';
 
   @override
-  String get duaSourceBukhari => 'Buhari';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'musliman';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
   String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'Tirmizi';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
   String get duaSourceAhmad => 'Ahmad';

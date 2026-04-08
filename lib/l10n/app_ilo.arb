@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Taraon & Inumen",
   "duaCategoryForgiveness": "Pammakawan",
   "duaCategoryHome": "Balay",
-  "duaSourceBukhari": "Bukhari nga",
+  "duaSourceBukhari": "Bukhari",
   "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud ni Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi nga",
-  "duaSourceAhmad": "Ahmad ni Ahmad"
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

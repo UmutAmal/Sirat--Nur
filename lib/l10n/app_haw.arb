@@ -520,8 +520,8 @@
   "duaCategoryForgiveness": "kala kala",
   "duaCategoryHome": "Home",
   "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Mahometa",
-  "duaSourceAbuDawud": "ʻO Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidzi",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
   "duaSourceAhmad": "Ahmad"
 }

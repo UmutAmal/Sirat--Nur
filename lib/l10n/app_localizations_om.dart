@@ -823,13 +823,13 @@ class AppLocalizationsOm extends AppLocalizations {
   String get duaCategoryHome => 'Mana';
 
   @override
-  String get duaSourceBukhari => 'Bukhaariin';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'Muslima';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'Abuu Daawud';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
   String get duaSourceTirmidhi => 'Tirmidhi';

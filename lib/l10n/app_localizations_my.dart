@@ -824,10 +824,10 @@ class AppLocalizationsMy extends AppLocalizations {
   String get duaCategoryHome => 'အိမ်';
 
   @override
-  String get duaSourceBukhari => 'ဘူခါရီ';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'မွတ်ဆလင်';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
   String get duaSourceAbuDawud => 'Abu Dawud';
@@ -836,7 +836,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
-  String get duaSourceAhmad => 'အဟ်မဒ်';
+  String get duaSourceAhmad => 'Ahmad';
 
   @override
   String get islamicEducation => 'Islamic Education';

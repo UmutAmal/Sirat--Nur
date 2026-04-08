@@ -828,19 +828,19 @@ class AppLocalizationsAy extends AppLocalizations {
   String get duaCategoryHome => 'Uta';
 
   @override
-  String get duaSourceBukhari => 'Bukhari ukax mä juk’a pachanakanwa';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'Musulmán';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'Abu Dawud sat jilataw ukham luräna';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'Tirmidhi ukax mä juk’a pachanakanwa';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
-  String get duaSourceAhmad => 'Ahmad jupax ukham sataynawa';
+  String get duaSourceAhmad => 'Ahmad';
 
   @override
   String get islamicEducation => 'Islamic Education';

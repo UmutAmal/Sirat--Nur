@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "ఆహారం & పానీయం",
   "duaCategoryForgiveness": "క్షమాపణ",
   "duaCategoryHome": "హోమ్",
-  "duaSourceBukhari": "బుఖారీ",
-  "duaSourceMuslim": "ముస్లిం",
-  "duaSourceAbuDawud": "అబూ దావూద్",
-  "duaSourceTirmidhi": "తిర్మిది",
-  "duaSourceAhmad": "అహ్మద్"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

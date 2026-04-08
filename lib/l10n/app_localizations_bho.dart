@@ -824,19 +824,19 @@ class AppLocalizationsBho extends AppLocalizations {
   String get duaCategoryHome => 'घर';
 
   @override
-  String get duaSourceBukhari => 'बुखारी के बा';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'मुसलमान के ह';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'अबू दाऊद के ह';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'तिरमिढ़ी के बा';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
-  String get duaSourceAhmad => 'अहमद के ह';
+  String get duaSourceAhmad => 'Ahmad';
 
   @override
   String get islamicEducation => 'Islamic Education';

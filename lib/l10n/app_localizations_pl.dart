@@ -824,13 +824,13 @@ class AppLocalizationsPl extends AppLocalizations {
   String get duaCategoryHome => 'Dom';
 
   @override
-  String get duaSourceBukhari => 'Buchari';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'muzułmański';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'Abu Dawuda';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
   String get duaSourceTirmidhi => 'Tirmidhi';

@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Dijo & Dino",
   "duaCategoryForgiveness": "Tshwarelo",
   "duaCategoryHome": "Gae",
-  "duaSourceBukhari": "Bukhari ya go swana le yona",
-  "duaSourceMuslim": "Momoseleme",
-  "duaSourceAbuDawud": "Abu Dawud o ile a hlokomela",
-  "duaSourceTirmidhi": "Tirmidhi ya go swana le yona",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
   "duaSourceAhmad": "Ahmad"
 }

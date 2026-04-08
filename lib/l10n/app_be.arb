@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Ежа і напоі",
   "duaCategoryForgiveness": "Дараванне",
   "duaCategoryHome": "дадому",
-  "duaSourceBukhari": "Бухары",
-  "duaSourceMuslim": "мусульманскі",
-  "duaSourceAbuDawud": "Абу Дауд",
-  "duaSourceTirmidhi": "Тырмізі",
-  "duaSourceAhmad": "Ахмад"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

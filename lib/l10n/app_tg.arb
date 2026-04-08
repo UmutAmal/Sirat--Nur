@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Хӯрок ва нӯшокӣ",
   "duaCategoryForgiveness": "бахшидан",
   "duaCategoryHome": "Хона",
-  "duaSourceBukhari": "Бухори",
-  "duaSourceMuslim": "мусулмон",
-  "duaSourceAbuDawud": "Абу Довуд",
-  "duaSourceTirmidhi": "Тирмизӣ",
-  "duaSourceAhmad": "Ахмад"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

@@ -1960,19 +1960,19 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get duaCategoryHome => '家';
 
   @override
-  String get duaSourceBukhari => '布哈里';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => '穆斯林';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => '阿布达乌德';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => '铁尔米吉';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
-  String get duaSourceAhmad => '艾哈迈德';
+  String get duaSourceAhmad => 'Ahmad';
 
   @override
   String get islamicEducation => 'Islamic Education';
@@ -3095,19 +3095,19 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get duaCategoryHome => '家';
 
   @override
-  String get duaSourceBukhari => '布哈里';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => '穆斯林';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => '阿布達烏德';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => '鐵爾米吉';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
-  String get duaSourceAhmad => '艾哈邁德';
+  String get duaSourceAhmad => 'Ahmad';
 
   @override
   String get islamicEducation => 'Islamic Education';

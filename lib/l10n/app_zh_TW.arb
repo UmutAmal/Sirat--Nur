@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "食品和飲料",
   "duaCategoryForgiveness": "饒恕",
   "duaCategoryHome": "家",
-  "duaSourceBukhari": "布哈里",
-  "duaSourceMuslim": "穆斯林",
-  "duaSourceAbuDawud": "阿布達烏德",
-  "duaSourceTirmidhi": "鐵爾米吉",
-  "duaSourceAhmad": "艾哈邁德"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

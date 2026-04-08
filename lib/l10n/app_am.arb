@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "ምግብ እና መጠጥ",
   "duaCategoryForgiveness": "ይቅርታ",
   "duaCategoryHome": "ቤት",
-  "duaSourceBukhari": "ቡኻሪ",
-  "duaSourceMuslim": "ሙስሊም",
-  "duaSourceAbuDawud": "አቡ ዳውድ",
-  "duaSourceTirmidhi": "ቲርሚዚ",
-  "duaSourceAhmad": "አህመድ"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

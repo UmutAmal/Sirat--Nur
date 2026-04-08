@@ -2379,3 +2379,38 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki bundled meaning/transliteration yüzeyi authoritative source ve source-attribution açısından denetlenecek.
 - Ardından hadith ve library kaynak adları için proper-noun/localization semantiği ayrı bir kalite turunda gözden geçirilecek.
+
+## 2026-04-09 TUR-60 — Canonicalize Hadith Source Proper Nouns
+### Yapılan İşlem
+- Tüm [A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) setinde `duaSourceBukhari`, `duaSourceMuslim`, `duaSourceAbuDawud`, `duaSourceTirmidhi`, `duaSourceAhmad` anahtarları kanonik proper noun değerlerine sabitlendi: `Bukhari`, `Muslim`, `Abu Dawud`, `Tirmidhi`, `Ahmad`.
+- Ardından `flutter gen-l10n` yeniden üretildi; generated localization sınıfları yeni proper noun kuralıyla senkronlandı.
+- [A:\Way of Allah\sirat_i_nur\test\arb_proper_noun_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_proper_noun_test.dart) eklendi; tüm ARB dosyalarında hadis kaynak adlarının makine çevirisiyle drift etmediğini test ediyor.
+
+### Neden Yapıldı
+- Önceki turdaki otomatik çeviri yayılımı bazı locale’lerde proper noun olan hadis kaynak adlarını ortak isimlere veya açıklayıcı ifadelere çevirmişti; örneğin `Muslim` bazı dosyalarda “müslüman” anlamına kayıyordu.
+- Kök sebep, proper noun ile çevirilebilir UI terimlerinin aynı otomatik çeviri hattına bırakılmasıydı.
+- Hadis referans zincirinde anlam kayması dini doğruluk ve kaynak atfı açısından kabul edilemez olduğu için kanonik adlar tüm dillere ortaklaştırıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_proper_noun_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Dua ve hadis kaynak çipleri artık hiçbir locale’de “Muslim = müslüman” gibi semantik bozulmaya uğramıyor.
+- Proper noun olan hadis müellif adları tüm uygulamada tek ve güvenli referans biçimiyle gösteriliyor.
+- Bu anahtarlar yeniden otomatik çeviriye kayarsa guard testi hemen fail verecek.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_proper_noun_test.dart` → PASS (`1/1`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`165/165`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Hadith source proper nouns drifting into mistranslated common nouns across locales: `8/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) bundled meaning/transliteration ve legacy audio URL yüzeyi authoritative source-attribution açısından temizlenecek.
+- Bunun ardından hadith/library isimlendirmesinde kalan hardcoded collection label yüzeyi taranacak.

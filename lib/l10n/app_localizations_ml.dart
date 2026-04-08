@@ -823,19 +823,19 @@ class AppLocalizationsMl extends AppLocalizations {
   String get duaCategoryHome => 'വീട്';
 
   @override
-  String get duaSourceBukhari => 'ബുഖാരി';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'മുസ്ലീം';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'അബു ദാവൂദ്';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'തിര്മിദി';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
-  String get duaSourceAhmad => 'അഹ്മദ്';
+  String get duaSourceAhmad => 'Ahmad';
 
   @override
   String get islamicEducation => 'Islamic Education';

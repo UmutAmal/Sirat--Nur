@@ -832,16 +832,16 @@ class AppLocalizationsNso extends AppLocalizations {
   String get duaCategoryHome => 'Gae';
 
   @override
-  String get duaSourceBukhari => 'Bukhari ya go swana le yona';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'Momoseleme';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'Abu Dawud o ile a hlokomela';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'Tirmidhi ya go swana le yona';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
   String get duaSourceAhmad => 'Ahmad';

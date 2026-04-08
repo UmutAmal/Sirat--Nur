@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "עסנוואַרג & טרינקען",
   "duaCategoryForgiveness": "מחילה",
   "duaCategoryHome": "היים",
-  "duaSourceBukhari": "בוכארי",
-  "duaSourceMuslim": "מוסלים",
-  "duaSourceAbuDawud": "אבו דאוד",
-  "duaSourceTirmidhi": "טירמידהי",
-  "duaSourceAhmad": "אַחמד"
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad"
 }

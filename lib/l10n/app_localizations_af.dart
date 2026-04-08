@@ -824,10 +824,10 @@ class AppLocalizationsAf extends AppLocalizations {
   String get duaCategoryHome => 'Tuis';
 
   @override
-  String get duaSourceBukhari => 'Boekhari';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
-  String get duaSourceMuslim => 'Moslem';
+  String get duaSourceMuslim => 'Muslim';
 
   @override
   String get duaSourceAbuDawud => 'Abu Dawud';

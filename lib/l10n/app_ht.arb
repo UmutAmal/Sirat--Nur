@@ -519,9 +519,9 @@
   "duaCategoryFoodDrink": "Manje & Bwè",
   "duaCategoryForgiveness": "padon",
   "duaCategoryHome": "Lakay",
-  "duaSourceBukhari": "Boukhari",
-  "duaSourceMuslim": "Mizilman",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidi",
+  "duaSourceTirmidhi": "Tirmidhi",
   "duaSourceAhmad": "Ahmad"
 }

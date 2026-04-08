@@ -828,19 +828,19 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get duaCategoryHome => 'Balay';
 
   @override
-  String get duaSourceBukhari => 'Bukhari nga';
+  String get duaSourceBukhari => 'Bukhari';
 
   @override
   String get duaSourceMuslim => 'Muslim';
 
   @override
-  String get duaSourceAbuDawud => 'Abu Dawud ni Abu Dawud';
+  String get duaSourceAbuDawud => 'Abu Dawud';
 
   @override
-  String get duaSourceTirmidhi => 'Tirmidhi nga';
+  String get duaSourceTirmidhi => 'Tirmidhi';
 
   @override
-  String get duaSourceAhmad => 'Ahmad ni Ahmad';
+  String get duaSourceAhmad => 'Ahmad';
 
   @override
   String get islamicEducation => 'Islamic Education';
