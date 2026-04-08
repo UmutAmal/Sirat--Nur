@@ -1,12 +1,16 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
-import 'package:sirat_i_nur/core/constants/quran_data.dart';
+import 'package:sirat_i_nur/features/quran/surah_display_info.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class QuranPage extends ConsumerStatefulWidget {
   const QuranPage({super.key});
+
   @override
   ConsumerState<QuranPage> createState() => _QuranPageState();
 }
@@ -15,12 +19,16 @@ class _QuranPageState extends ConsumerState<QuranPage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final _searchController = TextEditingController();
+  List<SurahDisplayInfo> _surahs = const [];
+  bool _isLoading = true;
+  String? _error;
   String _query = '';
 
   @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
+    _loadSurahs();
   }
 
   @override
@@ -30,28 +38,37 @@ class _QuranPageState extends ConsumerState<QuranPage>
     super.dispose();
   }
 
+  Future<void> _loadSurahs() async {
+    setState(() {
+      _isLoading = true;
+      _error = null;
+    });
+
+    try {
+      final jsonString = await rootBundle.loadString(
+        'assets/data/full_quran.json',
+      );
+      final data = jsonDecode(jsonString) as List<dynamic>;
+
+      if (!mounted) return;
+      setState(() {
+        _surahs = parseBundledSurahDisplayInfoList(data);
+        _isLoading = false;
+      });
+    } catch (error) {
+      if (!mounted) return;
+      setState(() {
+        _isLoading = false;
+        _error = error.toString();
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final l10n = AppLocalizations.of(context)!;
-    final filteredSurahs = _query.isEmpty
-        ? allSurahs
-        : allSurahs
-              .where(
-                (s) =>
-                    s.nameArabic.contains(_query) ||
-                    s.nameEnglish.toLowerCase().contains(
-                      _query.toLowerCase(),
-                    ) ||
-                    s.nameTurkish.toLowerCase().contains(
-                      _query.toLowerCase(),
-                    ) ||
-                    s.transliteration.toLowerCase().contains(
-                      _query.toLowerCase(),
-                    ) ||
-                    s.number.toString() == _query,
-              )
-              .toList();
+    final filteredSurahs = filterSurahDisplayInfos(_surahs, _query);
 
     return Scaffold(
       appBar: AppBar(
@@ -71,12 +88,12 @@ class _QuranPageState extends ConsumerState<QuranPage>
       ),
       body: Column(
         children: [
-          // Search
           Padding(
             padding: const EdgeInsets.all(16),
             child: TextField(
               controller: _searchController,
-              onChanged: (v) => setState(() => _query = v),
+              onChanged: (value) => setState(() => _query = value),
+              enabled: !_isLoading && _error == null,
               decoration: InputDecoration(
                 hintText: '${l10n.search} ${l10n.surah.toLowerCase()}...',
                 prefixIcon: const Icon(Icons.search_rounded),
@@ -92,26 +109,45 @@ class _QuranPageState extends ConsumerState<QuranPage>
             ),
           ),
           Expanded(
-            child: TabBarView(
-              controller: _tabController,
-              children: [
-                _buildSurahList(context, filteredSurahs),
-                _buildJuzList(context),
-              ],
-            ),
+            child: _buildBody(context, filteredSurahs),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildSurahList(BuildContext context, List<SurahData> surahs) {
+  Widget _buildBody(BuildContext context, List<SurahDisplayInfo> surahs) {
+    final l10n = AppLocalizations.of(context)!;
+
+    if (_isLoading) {
+      return const Center(
+        child: CircularProgressIndicator(color: AppColors.emerald),
+      );
+    }
+
+    if (_error != null) {
+      return _buildErrorState(context, l10n);
+    }
+
+    return TabBarView(
+      controller: _tabController,
+      children: [
+        surahs.isEmpty
+            ? _buildEmptyState(context, l10n)
+            : _buildSurahList(context, surahs),
+        _buildJuzList(context),
+      ],
+    );
+  }
+
+  Widget _buildSurahList(BuildContext context, List<SurahDisplayInfo> surahs) {
     return ListView.builder(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       itemCount: surahs.length,
       itemBuilder: (context, index) {
         final l10n = AppLocalizations.of(context)!;
         final surah = surahs[index];
+
         return Container(
           margin: const EdgeInsets.only(bottom: 8),
           decoration: BoxDecoration(
@@ -172,16 +208,19 @@ class _QuranPageState extends ConsumerState<QuranPage>
             ),
             subtitle: Row(
               children: [
-                Text(
-                  surah.nameEnglish,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Theme.of(
-                      context,
-                    ).colorScheme.onSurface.withValues(alpha: 0.5),
+                Expanded(
+                  child: Text(
+                    surah.translatedName,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Theme.of(
+                        context,
+                      ).colorScheme.onSurface.withValues(alpha: 0.5),
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
-                const Spacer(),
+                const SizedBox(width: 12),
                 Container(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 6,
@@ -279,6 +318,79 @@ class _QuranPageState extends ConsumerState<QuranPage>
           ),
         );
       },
+    );
+  }
+
+  Widget _buildErrorState(BuildContext context, AppLocalizations l10n) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(
+              Icons.error_outline_rounded,
+              color: Colors.redAccent,
+              size: 44,
+            ),
+            const SizedBox(height: 12),
+            Text(
+              l10n.error,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              _error ?? '',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 13,
+                color: Theme.of(
+                  context,
+                ).colorScheme.onSurface.withValues(alpha: 0.6),
+              ),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton.icon(
+              onPressed: _loadSurahs,
+              icon: const Icon(Icons.refresh_rounded),
+              label: Text(l10n.retry),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildEmptyState(BuildContext context, AppLocalizations l10n) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(
+              Icons.menu_book_rounded,
+              color: AppColors.emerald,
+              size: 44,
+            ),
+            const SizedBox(height: 12),
+            Text(
+              l10n.noResults,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              '${l10n.search} ${l10n.surah.toLowerCase()}',
+              style: TextStyle(
+                fontSize: 13,
+                color: Theme.of(
+                  context,
+                ).colorScheme.onSurface.withValues(alpha: 0.6),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -35,4 +35,66 @@ void main() {
       expect(info.revelationType, isEmpty);
     });
   });
+
+  group('parseBundledSurahDisplayInfoList', () {
+    test('maps bundled rows and drops invalid entries', () {
+      final infos = parseBundledSurahDisplayInfoList([
+        {
+          'number': 1,
+          'name': 'الفاتحة',
+          'englishName': 'Al-Faatiha',
+          'englishNameTranslation': 'The Opening',
+          'revelationType': 'Meccan',
+          'ayahs': const [
+            {'numberInSurah': 1},
+          ],
+        },
+        {
+          'number': 0,
+          'name': 'invalid',
+          'englishName': 'Invalid',
+          'englishNameTranslation': 'Invalid',
+          'revelationType': 'Meccan',
+          'ayahs': const [],
+        },
+      ]);
+
+      expect(infos, hasLength(1));
+      expect(infos.single.number, 1);
+      expect(infos.single.transliteration, 'Al-Faatiha');
+    });
+  });
+
+  group('filterSurahDisplayInfos', () {
+    test('matches simplified transliteration, translation, Arabic, and number', () {
+      final surahs = parseBundledSurahDisplayInfoList([
+        {
+          'number': 1,
+          'name': 'الفاتحة',
+          'englishName': 'Al-Faatiha',
+          'englishNameTranslation': 'The Opening',
+          'revelationType': 'Meccan',
+          'ayahs': const [
+            {'numberInSurah': 1},
+          ],
+        },
+        {
+          'number': 2,
+          'name': 'البقرة',
+          'englishName': 'Al-Baqarah',
+          'englishNameTranslation': 'The Cow',
+          'revelationType': 'Medinan',
+          'ayahs': const [
+            {'numberInSurah': 1},
+          ],
+        },
+      ]);
+
+      expect(filterSurahDisplayInfos(surahs, 'fatiha').single.number, 1);
+      expect(filterSurahDisplayInfos(surahs, 'opening').single.number, 1);
+      expect(filterSurahDisplayInfos(surahs, 'البقرة').single.number, 2);
+      expect(filterSurahDisplayInfos(surahs, 'bakara').single.number, 2);
+      expect(filterSurahDisplayInfos(surahs, '2').single.number, 2);
+    });
+  });
 }
