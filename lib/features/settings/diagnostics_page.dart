@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 // Removed legacy static stream import
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
+import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import 'package:sirat_i_nur/core/services/audio_player_service.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
@@ -93,13 +94,15 @@ String resolveDiagnosticsVersion({
 class AudioDiagnosticsSnapshot {
   final int adhanAssetsPresent;
   final int uiAssetsPresent;
-  final int quranAssetsPresent;
+  final int quranCloudSourcesPresent;
+  final int quranCloudRecitersReady;
   final int sukunAssetsReady;
 
   const AudioDiagnosticsSnapshot({
     required this.adhanAssetsPresent,
     required this.uiAssetsPresent,
-    required this.quranAssetsPresent,
+    required this.quranCloudSourcesPresent,
+    required this.quranCloudRecitersReady,
     required this.sukunAssetsReady,
   });
 }
@@ -126,19 +129,22 @@ AudioDiagnosticsSnapshot buildAudioDiagnosticsSnapshot({
   required Iterable<String> manifestAssets,
   required AudioSovereigntyService audioService,
   Map<String, String> cloudSukunSources = const {},
+  Map<String, Map<int, String>> cloudQuranCatalog = const {},
 }) {
   final assetSet = manifestAssets.toSet();
   final adhanAssetsPresent = requiredAdhanAudioAssets
       .where(assetSet.contains)
       .length;
   final uiAssetsPresent = requiredUiAudioAssets.where(assetSet.contains).length;
-  final quranAssetsPresent = assetSet
-      .where(
-        (asset) =>
-            asset.startsWith('assets/audio/quran/') &&
-            !asset.endsWith('.gitkeep'),
-      )
-      .length;
+  final quranCloudSourcesPresent = cloudQuranCatalog.values.fold<int>(
+    0,
+    (sum, surahs) => sum + surahs.length,
+  );
+  final quranCloudRecitersReady = OfflineReciters.reciters.keys.where((
+    reciterId,
+  ) {
+    return (cloudQuranCatalog[reciterId] ?? const {}).length == 114;
+  }).length;
   final sukunAssetsReady = expectedSukunSoundTypes.where((type) {
     final source = audioService.resolveSukunSource(
       type,
@@ -154,7 +160,8 @@ AudioDiagnosticsSnapshot buildAudioDiagnosticsSnapshot({
   return AudioDiagnosticsSnapshot(
     adhanAssetsPresent: adhanAssetsPresent,
     uiAssetsPresent: uiAssetsPresent,
-    quranAssetsPresent: quranAssetsPresent,
+    quranCloudSourcesPresent: quranCloudSourcesPresent,
+    quranCloudRecitersReady: quranCloudRecitersReady,
     sukunAssetsReady: sukunAssetsReady,
   );
 }
@@ -302,11 +309,26 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
       final cloudSukunSources = await ref.read(
         sukunAudioSourcesProvider.future,
       );
+      final cloudQuranCatalog = await OfflineReciters.getQuranAudioCatalog();
       final snapshot = buildAudioDiagnosticsSnapshot(
         manifestAssets: assets,
         audioService: audioService,
         cloudSukunSources: cloudSukunSources,
+        cloudQuranCatalog: cloudQuranCatalog,
       );
+      final expectedQuranAudioSources = OfflineReciters.reciters.length * 114;
+      final quranAudioIsComplete =
+          snapshot.quranCloudSourcesPresent == expectedQuranAudioSources &&
+          snapshot.quranCloudRecitersReady == OfflineReciters.reciters.length;
+      final quranAudioValue = switch (snapshot.quranCloudSourcesPresent) {
+        0 => l10n.quranAudioSourcesUnavailable,
+        final count when count == expectedQuranAudioSources =>
+          l10n.diagnosticsFilesCount('$count/$expectedQuranAudioSources'),
+        final count => l10n.quranAudioSourcesIncomplete(
+          count.toString(),
+          expectedQuranAudioSources.toString(),
+        ),
+      };
 
       rows.add(
         _DiagnosticRow(
@@ -329,8 +351,8 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
       rows.add(
         _DiagnosticRow(
           l10n.diagnosticsQuranAudioAssets,
-          l10n.diagnosticsFilesCount('${snapshot.quranAssetsPresent}'),
-          snapshot.quranAssetsPresent > 0,
+          quranAudioValue,
+          quranAudioIsComplete,
         ),
       );
       rows.add(

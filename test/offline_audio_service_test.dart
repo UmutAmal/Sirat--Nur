@@ -63,5 +63,42 @@ void main() {
       expect(missingQuranSurahAudioSources(urls), containsAll(<int>[2, 114]));
       expect(missingQuranSurahAudioSources(urls), hasLength(113));
     });
+
+    test('groups verified rows into a per-reciter quran catalog', () {
+      final catalog = resolveCloudQuranAudioCatalog(const [
+        {
+          'type': 'quran_surah',
+          'reciter': 'alafasy',
+          'surah_number': 1,
+          'url': 'https://cdn.example.com/alafasy/001.mp3',
+        },
+        {
+          'type': 'quran_surah',
+          'reciter': 'alafasy',
+          'surah_number': 2,
+          'url': 'https://cdn.example.com/alafasy/002.mp3',
+        },
+        {
+          'type': 'quran_surah',
+          'reciter': 'husary',
+          'surah_number': 1,
+          'url': 'https://cdn.example.com/husary/001.mp3',
+        },
+        {
+          'type': 'sukun',
+          'title': 'rain',
+          'url': 'https://cdn.example.com/rain.mp3',
+        },
+      ]);
+
+      expect(catalog['alafasy'], const {
+        1: 'https://cdn.example.com/alafasy/001.mp3',
+        2: 'https://cdn.example.com/alafasy/002.mp3',
+      });
+      expect(catalog['husary'], const {
+        1: 'https://cdn.example.com/husary/001.mp3',
+      });
+      expect(catalog.containsKey('sudais'), isFalse);
+    });
   });
 }

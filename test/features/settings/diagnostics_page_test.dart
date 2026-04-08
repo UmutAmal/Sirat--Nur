@@ -124,7 +124,6 @@ void main() {
           'assets/audio/ui/prayer_reminder.wav',
           'assets/audio/ui/page_flip.wav',
           'assets/audio/ui/success.wav',
-          'assets/audio/quran/mishary_rashid_alafasy_001.mp3',
           'assets/audio/ui/rain.wav',
           'assets/audio/ui/forest.wav',
         ],
@@ -141,7 +140,8 @@ void main() {
 
       expect(snapshot.adhanAssetsPresent, 3);
       expect(snapshot.uiAssetsPresent, 6);
-      expect(snapshot.quranAssetsPresent, 1);
+      expect(snapshot.quranCloudSourcesPresent, 0);
+      expect(snapshot.quranCloudRecitersReady, 0);
       expect(snapshot.sukunAssetsReady, 2);
     },
   );
@@ -162,5 +162,25 @@ void main() {
 
     expect(snapshot.adhanAssetsPresent, 3);
     expect(snapshot.sukunAssetsReady, 2);
+  });
+
+  test('buildAudioDiagnosticsSnapshot counts cloud quran catalog honestly', () {
+    final snapshot = buildAudioDiagnosticsSnapshot(
+      manifestAssets: const [],
+      audioService: AudioSovereigntyService(engine: _NoopAudioEngine()),
+      cloudQuranCatalog: {
+        'alafasy': {
+          for (var surahNumber = 1; surahNumber <= 114; surahNumber++)
+            surahNumber: 'https://cdn.example.com/alafasy/$surahNumber.mp3',
+        },
+        'husary': {
+          1: 'https://cdn.example.com/husary/1.mp3',
+          2: 'https://cdn.example.com/husary/2.mp3',
+        },
+      },
+    );
+
+    expect(snapshot.quranCloudSourcesPresent, 116);
+    expect(snapshot.quranCloudRecitersReady, 1);
   });
 }

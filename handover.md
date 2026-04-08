@@ -1667,3 +1667,41 @@
 ### Sonraki Adım
 - Sıradaki yüksek etkili açık alan, diagnostics ekranının cloud-first Kur'an audio completeness bilgisini de raporlaması; şu an ses sağlığı satırları daha çok local asset odaklı.
 - Ardından accepted sources uygunsa adhan ve doğrulanabilir Asma audio seed katmanı `audio_files` üstünde genişletilecek; resmi kaynak yoksa bilgi eksikliği dürüstçe korunacak.
+
+## 2026-04-08 TUR-42 — Align Quran Audio Diagnostics With Cloud Catalog
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/offline_audio_service.dart) içine `resolveCloudQuranAudioCatalog` ve `OfflineReciters.getQuranAudioCatalog()` tamamlandı; runtime ve diagnostics artık aynı verified cloud Kur'an audio katalog çözümleyicisini paylaşıyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart) içindeki `buildAudioDiagnosticsSnapshot` local `assets/audio/quran/*` sayımı yerine cloud catalog completeness ölçer hale getirildi.
+- Aynı sayfada Kur'an audio satırı artık `audio_files` içindeki verified `quran_surah` satırlarını raporluyor; `0/684` yerine dürüst unavailable mesajı, kısmi katalogda incomplete mesajı, tam katalogda `684/684 files` gösteriyor.
+- [A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/settings/diagnostics_page_test.dart) cloud Quran catalog coverage testini aldı.
+- [A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/offline_audio_service_test.dart) per-reciter catalog grouping regresyonunu aldı.
+
+### Neden Yapıldı
+- Runtime Kur'an audio akışı [A:\Way of Allah\sirat_i_nur\content_seed_quran_audio.sql](A:/Way%20of%20Allah/sirat_i_nur/content_seed_quran_audio.sql) ve `audio_files` tablosundaki verified cloud kaynaklara taşınmıştı; diagnostics ise hâlâ bundle içindeki yerel `assets/audio/quran/*` dosyalarını sayıyordu.
+- Bu ayrışma, cloud catalog eksik veya bozuk olsa bile diagnostics ekranının sağlıklı görünebilmesine yol açabiliyordu.
+- Kök sebep, health report ile gerçek playback/download source-of-truth’un farklı olmasıydı; bu turda iki zincir tek helper altında birleştirildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Diagnostics ekranı artık runtime ile aynı verified Kur'an audio katalogunu ölçüyor.
+- Eksik veya boş cloud catalog, local asset varmış gibi sahte sağlıklı görünmüyor.
+- Kısmi cloud seed durumları, indirme ekranındaki dürüst incomplete mesajıyla aynı doğrulukta raporlanıyor.
+
+### Test Sonucu
+- `flutter test test/features/settings/diagnostics_page_test.dart` → PASS (`7/7`)
+- `flutter test test/offline_audio_service_test.dart` → PASS (`3/3`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`119/119`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Diagnostics reporting bundled Quran audio assets while runtime depends on verified cloud catalog: `6/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki uygulanabilir risk, verified resmi Kur'an ses dosyalarını gerektiğinde bizim tarafımıza tekrar üretilebilir şekilde çekebilen bir mirror/download aracı eklemek.
+- Bu araç, repo’ya dev binary yığmadan accepted source’tan kontrollü indirme yapmalı ve eksik/bozuk indirmeleri dürüst raporlamalı.

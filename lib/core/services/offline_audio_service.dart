@@ -69,6 +69,24 @@ List<int> missingQuranSurahAudioSources(Map<int, String> surahUrls) {
   return List.unmodifiable(missing);
 }
 
+Map<String, Map<int, String>> resolveCloudQuranAudioCatalog(
+  List<Map<String, dynamic>> rows,
+) {
+  final catalog = <String, Map<int, String>>{};
+
+  for (final reciterId in OfflineReciters.reciters.keys) {
+    final surahUrls = resolveCloudQuranSurahUrls(rows, reciterId: reciterId);
+    if (surahUrls.isNotEmpty) {
+      catalog[reciterId] = surahUrls;
+    }
+  }
+
+  return Map.unmodifiable({
+    for (final entry in catalog.entries)
+      entry.key: Map<int, String>.unmodifiable(entry.value),
+  });
+}
+
 class OfflineAudioService {
   static Future<Directory> get _audioDir async {
     final appDir = await getApplicationDocumentsDirectory();
@@ -250,16 +268,24 @@ class OfflineReciters {
     }
 
     try {
+      final catalog = await getQuranAudioCatalog();
+      return catalog[reciterId] ?? const {};
+    } catch (_) {
+      return const {};
+    }
+  }
+
+  static Future<Map<String, Map<int, String>>> getQuranAudioCatalog() async {
+    try {
       final rows = await Supabase.instance.client
           .from('audio_files')
           .select('type, reciter, surah_number, url')
           .eq('type', 'quran_surah')
-          .eq('reciter', reciterId)
+          .order('reciter', ascending: true)
           .order('surah_number', ascending: true);
 
-      return resolveCloudQuranSurahUrls(
+      return resolveCloudQuranAudioCatalog(
         List<Map<String, dynamic>>.from(rows),
-        reciterId: reciterId,
       );
     } catch (_) {
       return const {};
