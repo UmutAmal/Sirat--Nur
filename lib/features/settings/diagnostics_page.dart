@@ -56,10 +56,24 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
       final supabase = ref.read(supabaseClientProvider);
       final surahCount = await supabase.from('quran_surahs').count();
       final ayahCount = await supabase.from('quran_ayahs').count();
+      int? ayahsWithJuzCount;
+      Object? structuralError;
+
+      try {
+        ayahsWithJuzCount = await supabase
+            .from('quran_ayahs')
+            .count()
+            .not('juz_number', 'is', null);
+      } catch (error) {
+        structuralError = error;
+      }
+
       rows.addAll(
         buildQuranDiagnosticRows(
           surahCount: surahCount,
           ayahCount: ayahCount,
+          ayahsWithJuzCount: ayahsWithJuzCount,
+          structuralError: structuralError,
         ).map((row) => _DiagnosticRow(row.label, row.value, row.isHealthy)),
       );
     } catch (error) {

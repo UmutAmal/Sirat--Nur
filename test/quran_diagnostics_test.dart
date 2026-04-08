@@ -7,15 +7,50 @@ void main() {
       final rows = buildQuranDiagnosticRows(
         surahCount: 114,
         ayahCount: 6236,
+        ayahsWithJuzCount: 6236,
       );
 
-      expect(rows, hasLength(2));
+      expect(rows, hasLength(3));
       expect(rows[0].label, 'Quran Surahs');
       expect(rows[0].value, '114 / 114');
       expect(rows[0].isHealthy, isTrue);
       expect(rows[1].label, 'Quran Ayahs');
       expect(rows[1].value, '6236 / 6236');
       expect(rows[1].isHealthy, isTrue);
+      expect(rows[2].label, 'Quran Juz Metadata');
+      expect(rows[2].value, '6236 / 6236');
+      expect(rows[2].isHealthy, isTrue);
+    });
+
+    test('flags incomplete juz metadata even when table counts look healthy', () {
+      final rows = buildQuranDiagnosticRows(
+        surahCount: 114,
+        ayahCount: 6236,
+        ayahsWithJuzCount: 6200,
+      );
+
+      expect(rows, hasLength(3));
+      expect(rows[2].label, 'Quran Juz Metadata');
+      expect(rows[2].value, '6200 / 6236');
+      expect(rows[2].isHealthy, isFalse);
+    });
+
+    test('surfaces missing juz column as structural fallback warning', () {
+      final rows = buildQuranDiagnosticRows(
+        surahCount: 114,
+        ayahCount: 6236,
+        structuralError: Exception(
+          "PostgrestException(message: column quran_ayahs.juz_number does not exist, code: PGRST204)",
+        ),
+      );
+
+      expect(rows, hasLength(3));
+      expect(rows[2].label, 'Quran Juz Metadata');
+      expect(
+        rows[2].value,
+        'Cloud juz metadata missing; bundled structural fallback active',
+      );
+      expect(rows[2].isHealthy, isFalse);
     });
 
     test('surfaces missing Supabase tables as honest fallback warning', () {

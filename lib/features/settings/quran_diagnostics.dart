@@ -9,7 +9,9 @@ class QuranDiagnosticRowData {
 List<QuranDiagnosticRowData> buildQuranDiagnosticRows({
   int? surahCount,
   int? ayahCount,
+  int? ayahsWithJuzCount,
   Object? error,
+  Object? structuralError,
 }) {
   if (error != null) {
     return [
@@ -23,6 +25,7 @@ List<QuranDiagnosticRowData> buildQuranDiagnosticRows({
 
   final normalizedSurahCount = surahCount ?? 0;
   final normalizedAyahCount = ayahCount ?? 0;
+  final normalizedAyahsWithJuzCount = ayahsWithJuzCount ?? 0;
 
   return [
     QuranDiagnosticRowData(
@@ -34,6 +37,13 @@ List<QuranDiagnosticRowData> buildQuranDiagnosticRows({
       'Quran Ayahs',
       '$normalizedAyahCount / 6236',
       normalizedAyahCount == 6236,
+    ),
+    QuranDiagnosticRowData(
+      'Quran Juz Metadata',
+      structuralError == null
+          ? '$normalizedAyahsWithJuzCount / 6236'
+          : summarizeQuranStructuralError(structuralError),
+      structuralError == null && normalizedAyahsWithJuzCount == 6236,
     ),
   ];
 }
@@ -50,4 +60,19 @@ String summarizeQuranCloudError(Object error) {
   }
 
   return 'Cloud check failed: $message';
+}
+
+String summarizeQuranStructuralError(Object error) {
+  final message = error.toString();
+  final normalized = message.toLowerCase();
+  final isMissingColumn = normalized.contains('juz_number') &&
+      (normalized.contains('column') ||
+          normalized.contains('schema cache') ||
+          normalized.contains('pgrst'));
+
+  if (isMissingColumn) {
+    return 'Cloud juz metadata missing; bundled structural fallback active';
+  }
+
+  return 'Cloud structural check failed: $message';
 }

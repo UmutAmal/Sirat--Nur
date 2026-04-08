@@ -1208,3 +1208,52 @@
   - [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart)
   - [A:\Way of Allah\sirat_i_nur\lib\features\settings\quran_diagnostics.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/quran_diagnostics.dart)
 - Sonraki turda diagnostics zinciri `juz_number` kolonunun varlığını / doluluğunu da dürüst şekilde raporlayacak hale getirilmeli.
+
+## 2026-04-08 TUR-31 — Surface Quran Structural Migration Health In Diagnostics
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart) içinde Quran diagnostics sorgusu genişletildi:
+  - `quran_surahs` count
+  - `quran_ayahs` count
+  - `quran_ayahs.juz_number is not null` count
+- Aynı akışta yeni kolon henüz canlıda yoksa diagnostics ekranı çökmüyor; structural hata ayrı yakalanıp helper’a taşınıyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\quran_diagnostics.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/quran_diagnostics.dart) güncellendi:
+  - `ayahsWithJuzCount`
+  - `structuralError`
+  - `Quran Juz Metadata` satırı
+  - `summarizeQuranStructuralError`
+- [A:\Way of Allah\sirat_i_nur\test\quran_diagnostics_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/quran_diagnostics_test.dart) genişletildi:
+  - tam structural dataset
+  - eksik `juz` metadata
+  - eksik `juz_number` kolonu
+  - eksik tablo fallback
+
+### Neden Yapıldı
+- TUR-30 ile seed ve schema `juz_number` taşımaya başlamış olsa da diagnostics zinciri yalnızca toplam satır sayısına bakıyordu.
+- Bu durumda dataset row count olarak “tam” görünebilir ama structural migration eksik olduğu halde kullanıcıya sağlıklı sinyal verilebilirdi; bu false-success sınıfına giriyordu.
+- AGENTS.md’deki dürüstlük ve kök sebep ilkesi gereği diagnostics ekranı artık yapısal göçün tamamlanıp tamamlanmadığını ayrı satırda raporluyor.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\quran_diagnostics.dart`
+- `A:\Way of Allah\sirat_i_nur\test\quran_diagnostics_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Diagnostics ekranı artık row count temiz olsa bile `juz_number` migration eksikliğini gizlemiyor.
+- Canlı Supabase henüz yeni kolonu taşımıyorsa kullanıcıya açıkça `Cloud juz metadata missing; bundled structural fallback active` mesajı gösterilecek.
+- `quran_ayahs.juz_number` doluluğu `6236 / 6236` seviyesinde doğrulanana kadar structural satır unhealthy kalacak.
+
+### Test Sonucu
+- `flutter test test/quran_diagnostics_test.dart` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`94/94`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Diagnostics marking structurally incomplete Quran dataset as healthy: `6/25 → 2/25`
+- Hidden migration gap after `juz_number` rollout: `6/25 → 2/25`
+
+### Sonraki Adım
+- En yüksek açık risk artık diagnostics ve settings ekranlarındaki hardcoded İngilizce yüzeyler:
+  - [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart)
+  - [A:\Way of Allah\sirat_i_nur\lib\features\settings\quran_diagnostics.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/quran_diagnostics.dart)
+- Sonraki turda bu metinler localization zincirine taşınmalı ve diagnostics ekranı l10n ile hizalanmalı.
