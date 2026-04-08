@@ -2448,3 +2448,37 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki İngilizce içerik kalitesi ve olası typo yüzeyi authoritative meaning ve dil kalitesi açısından taranacak.
 - Ardından tüm locale setinde Asma anlam zinciri ile bundled data arasında anlamsal drift olup olmadığı kontrol edilecek.
+
+## 2026-04-09 TUR-62 — Correct Bundled Asma Typos
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki yüksek güvenli typo ve formatting bozuklukları düzeltildi.
+- İngilizce anlam satırlarında `Repentence -> Repentance`, `Soverign -> Sovereign`, `Inhertior -> Inheritor` gibi açık yazım hataları temizlendi; ayrıca `The Inspirer of Faith`, `The Knower of All`, `The Hearer of All`, `The Seer of All`, `The Possessor of Majesty and Bounty` gibi başlıklar tutarlı büyük harf formatına çekildi.
+- Transliterasyon yüzeyinde `Al Mujeeb ` sondaki boşluğu kaldırıldı; `Al Mughi -> Al Mughni` ve `Ad Daaarr -> Ad Darr` düzeltmeleri yapıldı.
+- [A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/asma_ul_husna_data_test.dart) genişletildi; typo-prone satırların geri dönmesini engelleyen guard testi eklendi.
+
+### Neden Yapıldı
+- Önceki turda legacy URL ve authoring-note yüzeyi temizlenmiş olsa da bundled Asma verisi içinde kullanıcıya doğrudan görünen bariz dil ve transliteration hataları kalıyordu.
+- Kök sebep, bundled fallback verisinin uzun süredir yeniden kalite denetiminden geçmemesi ve cloud kaynak gelmediğinde bu metinlerin doğrudan UI’ya yansımasıydı.
+- Kullanıcının “önce dini içerik doğru olsun” talebi için semantik olmayan ama güven erozyonu yaratan typo katmanı önce kapatıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Bundled Asma fallback artık belirgin İngilizce yazım hataları ve bozuk transliterasyonlarla kullanıcıya görünmüyor.
+- `Al Mughni` ve `Ad Darr` gibi isimlerde yanlış karakter dizileri temizlendi; sonraki semantic audit için zemin sadeleşti.
+- Guard testi bu typo yüzeyinin yeniden repo’ya sızmasını engelleyecek.
+
+### Test Sonucu
+- `flutter test test/asma_ul_husna_data_test.dart` → PASS (`5/5`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`167/167`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Bundled Asma dataset exposing visible spelling and transliteration defects in fallback mode: `9/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki anlam satırları authoritative Türkçe kaynakla semantik hizaya göre denetlenecek.
+- Ardından Asma UI’de bu meanings/transliterations için locale-specific presentation ve source-attribution yüzeyi taranacak.

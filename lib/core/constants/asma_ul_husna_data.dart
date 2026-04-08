@@ -53,7 +53,7 @@ class AsmaUlHusnaData {
       'arabic': 'الْمُؤْمِنُ',
       'transliteration': 'Al Mu\'min',
       'translations': {
-        'en': 'The inspirer of faith',
+        'en': 'The Inspirer of Faith',
         'tr': 'Güven veren, emin kılan, koruyan, vaadine güvenilen.',
       },
     },
@@ -171,7 +171,7 @@ class AsmaUlHusnaData {
       'arabic': 'اَلْعَلِيْمُ',
       'transliteration': 'Al \'Aleem',
       'translations': {
-        'en': 'The Knower of all',
+        'en': 'The Knower of All',
         'tr': 'Her şeyi hakkıyla bilen, her şeyi en iyi bilen.',
       },
     },
@@ -231,7 +231,7 @@ class AsmaUlHusnaData {
       'arabic': 'السَّمِيعُ',
       'transliteration': 'As Samee\'',
       'translations': {
-        'en': 'The Hearer of all',
+        'en': 'The Hearer of All',
         'tr': 'Her şeyi en iyi işiten.',
       },
     },
@@ -240,7 +240,7 @@ class AsmaUlHusnaData {
       'arabic': 'الْبَصِيرُ',
       'transliteration': 'Al Baseer',
       'translations': {
-        'en': 'The Seer of all',
+        'en': 'The Seer of All',
         'tr': 'Gizli açık, her şeyi en iyi gören.',
       },
     },
@@ -389,7 +389,7 @@ class AsmaUlHusnaData {
     {
       'id': 44,
       'arabic': 'الْمُجِيبُ',
-      'transliteration': 'Al Mujeeb ',
+      'transliteration': 'Al Mujeeb',
       'translations': {
         'en': 'The Responder to Prayer',
         'tr': 'Duaları, istekleri kabul eden.',
@@ -472,7 +472,7 @@ class AsmaUlHusnaData {
       'arabic': 'الْقَوِيُّ',
       'transliteration': 'Al Qawiyy',
       'translations': {
-        'en': 'The Possessor of all strength',
+        'en': 'The Possessor of All Strength',
         'tr': 'Kudreti en üstün ve hiç azalmaz olan.',
       },
     },
@@ -532,7 +532,7 @@ class AsmaUlHusnaData {
       'arabic': 'الْمُحْيِي',
       'transliteration': 'Al Muhiy',
       'translations': {
-        'en': 'The Giver of life',
+        'en': 'The Giver of Life',
         'tr': 'İhya eden, dirilten, can veren.',
       },
     },
@@ -541,7 +541,7 @@ class AsmaUlHusnaData {
       'arabic': 'اَلْمُمِيتُ',
       'transliteration': 'Al Mumeet',
       'translations': {
-        'en': 'The Taker of life',
+        'en': 'The Taker of Life',
         'tr': 'Her canlıya ölümü tattıran.',
       },
     },
@@ -706,7 +706,7 @@ class AsmaUlHusnaData {
       'arabic': 'التَّوَابُ',
       'transliteration': 'At Tawwaab',
       'translations': {
-        'en': 'The Guide to Repentence',
+        'en': 'The Guide to Repentance',
         'tr': 'Tevbeleri kabul edip, günahları bağışlayan.',
       },
     },
@@ -742,7 +742,7 @@ class AsmaUlHusnaData {
       'arabic': 'مَالِكُ الْمُلْكِ',
       'transliteration': 'Maalik Ul Mulk',
       'translations': {
-        'en': 'The Owner / Soverign of All',
+        'en': 'The Owner / Sovereign of All',
         'tr': 'Mülkün, her varlığın asıl sahibi.',
       },
     },
@@ -751,7 +751,7 @@ class AsmaUlHusnaData {
       'arabic': 'ذُوالْجَلاَلِ وَالإكْرَامِ',
       'transliteration': 'Dhu Al Jalaali Wa Al Ikraam',
       'translations': {
-        'en': 'Possessor of Majesty and Bounty',
+        'en': 'The Possessor of Majesty and Bounty',
         'tr': 'Celal, azamet ve pek büyük ikram sahibi.',
       },
     },
@@ -785,7 +785,7 @@ class AsmaUlHusnaData {
     {
       'id': 89,
       'arabic': 'الْمُغْنِي',
-      'transliteration': 'Al Mughi',
+      'transliteration': 'Al Mughni',
       'translations': {
         'en': 'The Enricher',
         'tr': 'İhtiyaç gideren, zengin eden.',
@@ -796,14 +796,14 @@ class AsmaUlHusnaData {
       'arabic': 'اَلْمَانِعُ',
       'transliteration': 'Al Maani\'',
       'translations': {
-        'en': 'The Preventer of harm',
+        'en': 'The Preventer of Harm',
         'tr': 'Dilemediği şeye mani olan, engelleyen.',
       },
     },
     {
       'id': 91,
       'arabic': 'الضَّارَّ',
-      'transliteration': 'Ad Daaarr',
+      'transliteration': 'Ad Darr',
       'translations': {
         'en': 'The Creator of the harmful',
         'tr': 'Elem ve zarar verenleri yaratan, dilediğine zarar veren.',
@@ -859,7 +859,7 @@ class AsmaUlHusnaData {
       'arabic': 'الْوَارِثُ',
       'transliteration': 'Al Waarith',
       'translations': {
-        'en': 'The Inhertior',
+        'en': 'The Inheritor',
         'tr': 'Her şeyin asıl sahibi ve varisi olan.',
       },
     },

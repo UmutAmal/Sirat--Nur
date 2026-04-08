@@ -63,5 +63,33 @@ void main() {
       expect(source.contains('Simplified for brevity'), isFalse);
       expect(source.contains('high precision CDN'), isFalse);
     });
+
+    test('bundled source keeps corrected asma spellings and transliterations', () {
+      final byId = {
+        for (final item in AsmaUlHusnaData.names) item['id']: item,
+      };
+
+      expect(byId[44]!['transliteration'], 'Al Mujeeb');
+      expect(byId[80]!['transliteration'], 'At Tawwaab');
+      expect(byId[89]!['transliteration'], 'Al Mughni');
+      expect(byId[91]!['transliteration'], 'Ad Darr');
+
+      expect(
+        (byId[80]!['translations'] as Map<String, dynamic>)['en'],
+        'The Guide to Repentance',
+      );
+      expect(
+        (byId[84]!['translations'] as Map<String, dynamic>)['en'],
+        'The Owner / Sovereign of All',
+      );
+      expect(
+        (byId[85]!['translations'] as Map<String, dynamic>)['en'],
+        'The Possessor of Majesty and Bounty',
+      );
+      expect(
+        (byId[97]!['translations'] as Map<String, dynamic>)['en'],
+        'The Inheritor',
+      );
+    });
   });
 }
