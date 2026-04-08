@@ -23,12 +23,14 @@ class SupabaseConfig {
     defaultValue: 'sb_publishable_OHSZX1gWTVJyvGLA2YbCdQ_aXwaXVD8',
   );
 
+  static const String quranAudioBucket = String.fromEnvironment(
+    'SUPABASE_QURAN_AUDIO_BUCKET',
+    defaultValue: 'quran-audio',
+  );
+
   static SupabaseClient get client => Supabase.instance.client;
 
   static Future<void> initialize() async {
-    await Supabase.initialize(
-      url: url,
-      anonKey: anonKey,
-    );
+    await Supabase.initialize(url: url, anonKey: anonKey);
   }
 }

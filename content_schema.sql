@@ -133,3 +133,14 @@ create policy "Public read audio files"
 on public.audio_files
 for select
 using (true);
+
+insert into storage.buckets (id, name, public)
+values ('quran-audio', 'quran-audio', true)
+on conflict (id) do update
+set public = excluded.public;
+
+drop policy if exists "Public read quran audio bucket" on storage.objects;
+create policy "Public read quran audio bucket"
+on storage.objects
+for select
+using (bucket_id = 'quran-audio');

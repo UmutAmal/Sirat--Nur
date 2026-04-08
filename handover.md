@@ -1810,3 +1810,46 @@
 ### Sonraki Adım
 - Sıradaki prayer pipeline turunda `PrayerNotificationCoordinator.sync()` ile `AdhanSchedulerService.scheduleAdhans()` arasındaki yarış/çakışma yüzeyi incelenecek.
 - Özellikle hızlı ardışık settings değişimlerinde eski sync’in yeni sync’i yanlışlıkla temizleyip temizlemediği izole edilecek.
+
+## 2026-04-08 TUR-46 — Prepare Storage-Backed Quran Audio Ingest
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/network/supabase_config.dart) içine `SUPABASE_QURAN_AUDIO_BUCKET` / varsayılan `quran-audio` tanımı eklendi.
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/offline_audio_service.dart) artık `storage_path` dolu satırlardan kendi Supabase public storage URL’ini türetebiliyor; `url` alanı boş bırakılmış storage-backed `audio_files` satırları runtime’da çözülebilir hale geldi.
+- [A:\Way of Allah\sirat_i_nur\content_schema.sql](A:/Way%20of%20Allah/sirat_i_nur/content_schema.sql) içine `quran-audio` public bucket bootstrap’i ve `storage.objects` select policy eklendi.
+- [A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/generate_quran_audio_storage_seed.dart) eklendi; mirror manifest’ten `url = NULL`, `storage_path = reciter/file.mp3` kullanan storage-backed `audio_files` SQL seed üretiyor.
+- [A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/generate_quran_audio_storage_seed_test.dart) eklendi; manifest parse, SQL üretimi ve smoke manifest dönüşümü doğrulandı.
+- Smoke üretimi çalıştırıldı: `dart run tool/generate_quran_audio_storage_seed.dart --manifest=build/verified_quran_audio_smoke/manifest.json --output=build/verified_quran_audio_smoke_storage.sql`
+
+### Neden Yapıldı
+- Kullanıcı yönlendirmesi doğrultusunda dış Quran audio linklerinin kalıcı source-of-truth olması kabul edilmedi; dosyaların bizim storage/database zincirimize alınması gerekiyor.
+- Bu oturumda service-role/CLI erişimi olmadığı için production Supabase’e doğrudan write yapılamadı; buna rağmen sahte işlem yapılmadan gerçek ingest hattı repo içinde tamamlandı.
+- Kök eksik, resmi dosyaları indirdikten sonra bunları internal `storage_path` tabanlı `audio_files` satırlarına çevirecek araç ve runtime desteğinin olmamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\content_schema.sql`
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran audio runtime’ı artık kendi Supabase storage bucket yolundan beslenebilecek durumda.
+- Mirror edilmiş resmi MP3 dosyalar, dış link olmadan `audio_files.storage_path` tabanlı iç kaynağa çevrilebiliyor.
+- `build\verified_quran_audio_smoke_storage.sql` ile storage-backed ingest’in uçtan uca smoke doğrulaması alındı.
+
+### Test Sonucu
+- `flutter test test/generate_quran_audio_storage_seed_test.dart` → PASS (`4/4`)
+- `flutter test test/offline_audio_service_test.dart` → PASS (`4/4`)
+- `dart run tool/generate_quran_audio_storage_seed.dart --manifest=build/verified_quran_audio_smoke/manifest.json --output=build/verified_quran_audio_smoke_storage.sql` → PASS (`1` row)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`130/130`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Runtime depending on external Quran audio URLs with no internal storage-backed ingest path: `8/25 → 3/25`
+
+### Sonraki Adım
+- Service-role veya eşdeğer güvenli write kanalı geldiğinde, mirror edilmiş dosyalar `quran-audio` bucket’ına yüklenip üretilen storage-backed seed `audio_files` tablosuna uygulanacak.
+- Kod tarafında sıradaki açık risk yine prayer pipeline yarış koşulları: hızlı ardışık settings değişimlerinde sync çakışmaları.

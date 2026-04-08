@@ -100,5 +100,21 @@ void main() {
       });
       expect(catalog.containsKey('sudais'), isFalse);
     });
+
+    test('prefers Supabase storage-backed rows when storage_path is present', () {
+      final url = resolvePlayableCloudAudioUrl(const {
+        'type': 'quran_surah',
+        'reciter': 'alafasy',
+        'surah_number': 1,
+        'storage_path': 'quran-audio/alafasy/001.mp3',
+        'url':
+            'https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/1.mp3',
+      });
+
+      expect(
+        url,
+        'https://amevotnudldbbwogtrtw.supabase.co/storage/v1/object/public/quran-audio/alafasy/001.mp3',
+      );
+    });
   });
 }

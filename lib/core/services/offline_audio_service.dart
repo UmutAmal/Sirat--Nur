@@ -3,12 +3,18 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
+import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 typedef SurahDownloadProgress =
     void Function(double progress, int surahNumber, int totalSurahs);
 
 String? resolvePlayableCloudAudioUrl(Map<String, dynamic> row) {
+  final storagePath = row['storage_path']?.toString().trim();
+  if (storagePath != null && storagePath.isNotEmpty) {
+    return buildSupabaseStoragePublicUrl(storagePath);
+  }
+
   for (final key in const ['url']) {
     final value = row[key]?.toString().trim();
     if (value != null && value.isNotEmpty) {
@@ -17,6 +23,42 @@ String? resolvePlayableCloudAudioUrl(Map<String, dynamic> row) {
   }
 
   return null;
+}
+
+String normalizeStorageObjectPath(
+  String storagePath, {
+  String bucketName = SupabaseConfig.quranAudioBucket,
+}) {
+  final normalized = storagePath.trim().replaceAll('\\', '/');
+  if (normalized.isEmpty) {
+    return normalized;
+  }
+
+  final withoutLeadingSlash = normalized.replaceFirst(RegExp(r'^/+'), '');
+  final bucketPrefix = '$bucketName/';
+  if (withoutLeadingSlash.startsWith(bucketPrefix)) {
+    return withoutLeadingSlash.substring(bucketPrefix.length);
+  }
+
+  return withoutLeadingSlash;
+}
+
+String buildSupabaseStoragePublicUrl(
+  String storagePath, {
+  String supabaseUrl = SupabaseConfig.url,
+  String bucketName = SupabaseConfig.quranAudioBucket,
+}) {
+  final normalizedPath = normalizeStorageObjectPath(
+    storagePath,
+    bucketName: bucketName,
+  );
+  final encodedSegments = normalizedPath
+      .split('/')
+      .where((segment) => segment.isNotEmpty)
+      .map(Uri.encodeComponent)
+      .join('/');
+
+  return '$supabaseUrl/storage/v1/object/public/$bucketName/$encodedSegments';
 }
 
 Map<int, String> resolveCloudQuranSurahUrls(
