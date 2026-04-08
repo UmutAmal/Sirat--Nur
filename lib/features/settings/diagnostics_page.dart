@@ -60,12 +60,8 @@ class DiagnosticsRowsDependencies {
   }
 
   @override
-  int get hashCode => Object.hash(
-    localeTag,
-    isDarkMode,
-    languageCode,
-    locationName,
-  );
+  int get hashCode =>
+      Object.hash(localeTag, isDarkMode, languageCode, locationName);
 }
 
 @visibleForTesting
@@ -129,6 +125,7 @@ const Set<String> requiredUiAudioAssets = {
 AudioDiagnosticsSnapshot buildAudioDiagnosticsSnapshot({
   required Iterable<String> manifestAssets,
   required AudioSovereigntyService audioService,
+  Map<String, String> cloudSukunSources = const {},
 }) {
   final assetSet = manifestAssets.toSet();
   final adhanAssetsPresent = requiredAdhanAudioAssets
@@ -143,8 +140,15 @@ AudioDiagnosticsSnapshot buildAudioDiagnosticsSnapshot({
       )
       .length;
   final sukunAssetsReady = expectedSukunSoundTypes.where((type) {
-    final assetPath = audioService.resolveSukunAssetPath(type);
-    return assetPath != null && assetSet.contains(assetPath);
+    final source = audioService.resolveSukunSource(
+      type,
+      cloudSources: cloudSukunSources,
+    );
+    if (source == null) {
+      return false;
+    }
+
+    return isRemoteAudioSource(source) || assetSet.contains(source);
   }).length;
 
   return AudioDiagnosticsSnapshot(
@@ -163,15 +167,15 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
   @override
   void initState() {
     super.initState();
-    _settingsSubscription = ref.listenManual<SettingsState>(
-      settingsProvider,
-      (_, next) {
-        if (!mounted) {
-          return;
-        }
-        _syncRowsFuture(notify: true);
-      },
-    );
+    _settingsSubscription = ref.listenManual<SettingsState>(settingsProvider, (
+      _,
+      next,
+    ) {
+      if (!mounted) {
+        return;
+      }
+      _syncRowsFuture(notify: true);
+    });
   }
 
   @override
@@ -231,13 +235,7 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
       ),
     ];
 
-    rows.add(
-      _DiagnosticRow(
-        l10n.liveTv,
-        l10n.diagnosticsCloudDriven,
-        true,
-      ),
-    );
+    rows.add(_DiagnosticRow(l10n.liveTv, l10n.diagnosticsCloudDriven, true));
 
     try {
       final supabase = ref.read(supabaseClientProvider);
@@ -266,10 +264,8 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
             cloudJuzMissing: l10n.diagnosticsQuranCloudJuzMissing,
             cloudCheckFailed: (error) =>
                 l10n.diagnosticsQuranCloudCheckFailed(error.toString()),
-            cloudStructuralCheckFailed: (error) =>
-                l10n.diagnosticsQuranCloudStructuralCheckFailed(
-                  error.toString(),
-                ),
+            cloudStructuralCheckFailed: (error) => l10n
+                .diagnosticsQuranCloudStructuralCheckFailed(error.toString()),
           ),
           surahCount: surahCount,
           ayahCount: ayahCount,
@@ -290,9 +286,7 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
             cloudCheckFailed: (err) =>
                 l10n.diagnosticsQuranCloudCheckFailed(err.toString()),
             cloudStructuralCheckFailed: (err) =>
-                l10n.diagnosticsQuranCloudStructuralCheckFailed(
-                  err.toString(),
-                ),
+                l10n.diagnosticsQuranCloudStructuralCheckFailed(err.toString()),
           ),
           error: error,
         ).map((row) => _DiagnosticRow(row.label, row.value, row.isHealthy)),
@@ -305,9 +299,13 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
           jsonDecode(manifestJson) as Map<String, dynamic>;
       final assets = manifest.keys.toList();
       final audioService = ref.read(audioSovereigntyServiceProvider);
+      final cloudSukunSources = await ref.read(
+        sukunAudioSourcesProvider.future,
+      );
       final snapshot = buildAudioDiagnosticsSnapshot(
         manifestAssets: assets,
         audioService: audioService,
+        cloudSukunSources: cloudSukunSources,
       );
 
       rows.add(

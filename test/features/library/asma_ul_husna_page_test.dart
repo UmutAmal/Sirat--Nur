@@ -38,6 +38,7 @@ void main() {
 
       // Check for the first English/Turkish meaning
       expect(find.textContaining('Beneficent'), findsWidgets);
+      expect(find.byIcon(Icons.volume_off_rounded), findsWidgets);
     });
 
     testWidgets('Search filters correctly', (tester) async {
@@ -77,6 +78,7 @@ void main() {
 
       expect(find.text('Al Wudood'), findsOneWidget);
       expect(find.text('Provider English Meaning'), findsOneWidget);
+      expect(find.byIcon(Icons.volume_up_rounded), findsOneWidget);
     });
   });
 }

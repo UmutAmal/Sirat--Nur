@@ -1542,3 +1542,72 @@
 
 ### Sonraki Adım
 - Sıradaki yüksek etkili açık alan, kabul edilen resmi kaynaklardan gerçek Sukun/nature seslerini çekip `audio_files` ve storage zincirine verified seed olarak yüklemek; runtime cloud-first hazır ama içerik satırları henüz boş.
+
+## 2026-04-08 TUR-39 — Align Diagnostics With Cloud Audio Sources
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart) içindeki `buildAudioDiagnosticsSnapshot` helper’ı `cloudSukunSources` alacak şekilde genişletildi.
+- Aynı helper artık `resolveSukunSource` kullanarak local asset ile remote URL kaynaklarını birlikte değerlendiriyor; remote URL varsa hazır kabul ediyor.
+- Diagnostics build akışı artık [A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/providers/supabase_providers.dart) içindeki `sukunAudioSourcesProvider.future` değerini okuyup cloud Sukun kaynaklarını readiness hesabına katıyor.
+- [A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/settings/diagnostics_page_test.dart) içine cloud source readiness regresyon testi eklendi.
+
+### Neden Yapıldı
+- Bir önceki turda runtime cloud-first Sukun oynatımı açıldıktan sonra diagnostics ekranı hâlâ yalnızca local asset saydığı için yanlış negatif sağlık sonucu üretebiliyordu.
+- Aynı feature’ın library ekranında “hazır”, diagnostics ekranında “eksik” görünmesi sistem bütünlüğünü bozuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Diagnostics artık cloud-first Sukun kaynaklarını doğru sayıyor.
+- Library/Sukun runtime zinciri ile diagnostics sağlık göstergesi aynı source-of-truth üzerinden çalışıyor.
+
+### Test Sonucu
+- `flutter test test/features/settings/diagnostics_page_test.dart` → PASS (`6/6`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`113/113`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Diagnostics showing false-negative Sukun readiness after cloud rollout: `5/25 → 1/25`
+
+### Sonraki Adım
+- Sıradaki yüksek etkili açık alan, bundled Asma fallback verisinin yanlış sûre MP3’lerini oynatmasıydı; bunu bir sonraki turda kapattım.
+
+## 2026-04-08 TUR-40 — Disable Wrong Bundled Asma Audio Playback
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içine `buildBundledAsmaUlHusnaFallback()` eklendi; bundled fallback artık `audioUrl` alanlarını bilinçli olarak boşaltıyor.
+- Aynı dosyadaki `resolveCloudAsmaUlHusnaRows` boş cloud durumda doğrudan raw bundled liste yerine bu sanitized fallback’i döndürüyor.
+- [A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/providers/supabase_providers.dart) catch fallback’i de sanitized Asma listesine geçirildi.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/asma_ul_husna_page.dart) içinde `hasPlayableAsmaAudio` eklendi; audio yoksa kart tap’i kapanıyor ve `volume_off_rounded` gösteriliyor.
+- [A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/asma_ul_husna_data_test.dart) ve [A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/library/asma_ul_husna_page_test.dart) false playback regresyonları için genişletildi.
+
+### Neden Yapıldı
+- Bundled `AsmaUlHusnaData.names` içinde `audioUrl` alanları, isim telaffuzu yerine numaralı Kur’an/sûre MP3’lerine gidiyordu.
+- Cloud içerik yokken kullanıcının yanlış dini içeriği “Asma audio” gibi dinlemesi Section 13 ve false-success kurallarını ihlal ediyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Cloud `audio_url` yoksa Asma ekranı artık yanlış ses çalmıyor.
+- Doğrulanmış cloud audio geldiğinde ses oynatma davranışı korunuyor.
+- Bundled fallback, yanlış dini medya ile kullanıcıyı yanıltmayan dürüst moda geçti.
+
+### Test Sonucu
+- `flutter test test/asma_ul_husna_data_test.dart` → PASS (`3/3`)
+- `flutter test test/features/library/asma_ul_husna_page_test.dart` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`113/113`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Bundled Asma fallback playing unrelated surah MP3s as if they were Asma audio: `9/25 → 2/25`
+
+### Sonraki Adım
+- Kabul edilen kaynak taramasında Sukun/nature için resmi katalog doğrulanamadı; bilgi eksikliği var, uydurma seed üretilmedi.
+- Sıradaki uygulanabilir yüksek risk, doğrulanmış official source setiyle `audio_files` içine gerçek adhan/quran/asma audio seed katmanı üretmek.

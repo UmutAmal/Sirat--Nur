@@ -255,6 +255,6 @@ final asmaUlHusnaProvider = FutureProvider<List<Map<String, dynamic>>>((
         .order('id', ascending: true);
     return resolveCloudAsmaUlHusnaRows(List<Map<String, dynamic>>.from(res));
   } catch (_) {
-    return AsmaUlHusnaData.names;
+    return buildBundledAsmaUlHusnaFallback();
   }
 });

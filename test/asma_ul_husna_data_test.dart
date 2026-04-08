@@ -4,7 +4,11 @@ import 'package:sirat_i_nur/core/constants/asma_ul_husna_data.dart';
 void main() {
   group('AsmaUlHusna data helpers', () {
     test('cloud rows fall back to bundled names when rows are empty', () {
-      expect(resolveCloudAsmaUlHusnaRows([]), same(AsmaUlHusnaData.names));
+      final resolved = resolveCloudAsmaUlHusnaRows([]);
+
+      expect(resolved, isNot(same(AsmaUlHusnaData.names)));
+      expect(resolved, hasLength(AsmaUlHusnaData.names.length));
+      expect(resolved.first['audioUrl'], isEmpty);
     });
 
     test('cloud rows map Supabase fields into bundled item shape', () {
@@ -33,5 +37,19 @@ void main() {
       );
       expect(resolved.first['audioUrl'], 'https://example.com/001.mp3');
     });
+
+    test(
+      'bundled fallback strips bundled audio urls to avoid false playback',
+      () {
+        final resolved = buildBundledAsmaUlHusnaFallback();
+
+        expect(resolved, hasLength(AsmaUlHusnaData.names.length));
+        expect(
+          resolved.every((item) => (item['audioUrl'] ?? '') == ''),
+          isTrue,
+        );
+        expect(resolved.first['arabic'], AsmaUlHusnaData.names.first['arabic']);
+      },
+    );
   });
 }

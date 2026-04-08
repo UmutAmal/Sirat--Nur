@@ -1085,6 +1085,12 @@ class AsmaUlHusnaData {
   ];
 }
 
+List<Map<String, dynamic>> buildBundledAsmaUlHusnaFallback() {
+  return AsmaUlHusnaData.names
+      .map((item) => {...item, 'audioUrl': ''})
+      .toList(growable: false);
+}
+
 String _readAsmaString(Map<String, dynamic> row, List<String> keys) {
   for (final key in keys) {
     final value = row[key];
@@ -1145,5 +1151,5 @@ List<Map<String, dynamic>> resolveCloudAsmaUlHusnaRows(
         (turkish.isNotEmpty || english.isNotEmpty);
   }).toList();
 
-  return parsed.isEmpty ? AsmaUlHusnaData.names : parsed;
+  return parsed.isEmpty ? buildBundledAsmaUlHusnaFallback() : parsed;
 }

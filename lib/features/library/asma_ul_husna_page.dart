@@ -9,7 +9,12 @@ import 'package:sirat_i_nur/core/services/audio_player_service.dart';
 List<Map<String, dynamic>> resolveAsmaUlHusnaItems(
   AsyncValue<List<Map<String, dynamic>>> asyncNames,
 ) {
-  return asyncNames.valueOrNull ?? AsmaUlHusnaData.names;
+  return asyncNames.valueOrNull ?? buildBundledAsmaUlHusnaFallback();
+}
+
+bool hasPlayableAsmaAudio(Map<String, dynamic> item) {
+  final audioUrl = item['audioUrl'];
+  return audioUrl is String && audioUrl.trim().isNotEmpty;
 }
 
 class AsmaUlHusnaPage extends ConsumerStatefulWidget {
@@ -78,13 +83,14 @@ class _AsmaUlHusnaPageState extends ConsumerState<AsmaUlHusnaPage> {
           final translations = item['translations'] as Map<String, dynamic>;
           final meaning =
               translations[locale.languageCode] ?? translations['en'] ?? '';
+          final hasAudio = hasPlayableAsmaAudio(item);
 
           return Hero(
             tag: 'asma_${item['id']}',
             child: Material(
               color: Colors.transparent,
               child: InkWell(
-                onTap: () => _playAudio(item['audioUrl']),
+                onTap: hasAudio ? () => _playAudio(item['audioUrl']) : null,
                 borderRadius: BorderRadius.circular(24),
                 child: Container(
                   decoration: BoxDecoration(
@@ -163,10 +169,15 @@ class _AsmaUlHusnaPageState extends ConsumerState<AsmaUlHusnaPage> {
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ),
-                            const Icon(
-                              Icons.volume_up_rounded,
+                            Icon(
+                              hasAudio
+                                  ? Icons.volume_up_rounded
+                                  : Icons.volume_off_rounded,
                               size: 16,
-                              color: AppColors.emerald,
+                              color: hasAudio
+                                  ? AppColors.emerald
+                                  : Theme.of(context).colorScheme.onSurface
+                                        .withValues(alpha: 0.35),
                             ),
                           ],
                         ),

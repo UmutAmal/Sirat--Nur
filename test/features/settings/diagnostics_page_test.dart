@@ -145,4 +145,22 @@ void main() {
       expect(snapshot.sukunAssetsReady, 2);
     },
   );
+
+  test('buildAudioDiagnosticsSnapshot counts cloud sukun sources as ready', () {
+    final snapshot = buildAudioDiagnosticsSnapshot(
+      manifestAssets: const [
+        'assets/audio/adhan/adhan_makkah.wav',
+        'assets/audio/adhan/adhan_madinah.wav',
+        'assets/audio/adhan/adhan_fajr.wav',
+      ],
+      audioService: AudioSovereigntyService(engine: _NoopAudioEngine()),
+      cloudSukunSources: const {
+        'rain': 'https://cdn.example.com/audio/rain.mp3',
+        'forest': 'https://cdn.example.com/audio/forest.mp3',
+      },
+    );
+
+    expect(snapshot.adhanAssetsPresent, 3);
+    expect(snapshot.sukunAssetsReady, 2);
+  });
 }
