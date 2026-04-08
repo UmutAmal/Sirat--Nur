@@ -1741,3 +1741,37 @@
 ### Sonraki Adım
 - Sıradaki tarama odağı prayer & notification pipeline olacak: `prayer_notification_coordinator.dart`, `adhan_scheduler_service.dart`, `notification_service.dart`, `prayer_times_service.dart`.
 - Özellikle location değişimi sonrası reschedule zinciri, duplicate cancel/schedule davranışı ve timezone/DST kenar durumları yeniden doğrulanacak.
+
+## 2026-04-08 TUR-44 — Fix Post-Isha Next Prayer Regression
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_calendar_service.dart) içine test edilebilir `currentTime` parametresi eklendi.
+- Aynı servis içinde `maghrib` sonrası dallanma ayrıldı; `Isha` geçildikten sonra `nextPrayerName` artık yarının `Fajr` vaktine dönüyor.
+- [A:\Way of Allah\sirat_i_nur\test\prayer_calendar_service_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/prayer_calendar_service_test.dart) eklendi; gün sonu senaryosunda `nextPrayerTime` yarının `fajr` alanına eşitleniyor.
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/prayer_calendar_service.dart) önceki durumda `now.isBefore(maghrib)` sonrasındaki tüm zamanı `Isha` kabul ediyordu.
+- Bu, `Isha` sonrası kullanıcının bir sonraki vakti yanlış görmesine neden olabiliyordu; özellikle AGENTS.md’de işaretlenen “Fajr yarınki hesabı” kenar durumuyla birebir çakışıyordu.
+- Kök sebep, gün sonu geçişinde `Isha` ile “yarının Fajr’ı” arasındaki ayrımın hiç yapılmamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_calendar_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Gün sonu prayer state artık `Isha` sonrası yanlış vakit göstermiyor.
+- Offline prayer calendar hesaplaması, prayer times provider’daki “yarının fajr’ı” mantığıyla hizalandı.
+- Bu düzeltme scheduler için kullanılan hesaplanan zaman yapısını da daha tutarlı hale getirdi.
+
+### Test Sonucu
+- `flutter test test/prayer_calendar_service_test.dart` → PASS (`1/1`)
+- `flutter test test/prayer_notification_coordinator_test.dart` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`124/124`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Post-Isha next prayer incorrectly staying on same-day Isha instead of tomorrow Fajr: `8/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki prayer pipeline turunda `cancelAll()` temizleme akışının duplicate/çakışan schedule davranışı analiz edilecek.
+- Özellikle `PrayerNotificationCoordinator.sync()` ile [A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/adhan_scheduler_service.dart) arasındaki clear/schedule zinciri kanıta dayalı olarak daraltılacak.

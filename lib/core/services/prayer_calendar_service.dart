@@ -4,7 +4,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
 import 'dart:convert';
 
-
 /// Offline Prayer Times Service using Adhan package
 /// Calculates prayer times for any date without internet
 class PrayerCalendarService {
@@ -21,6 +20,7 @@ class PrayerCalendarService {
     double? fajrAngle,
     double? ishaAngle,
     HighLatitudeRule? highLatitudeRule,
+    DateTime? currentTime,
   }) {
     final coordinates = Coordinates(latitude, longitude);
     final params = _getCalculationParameters(method, fajrAngle, ishaAngle);
@@ -50,12 +50,12 @@ class PrayerCalendarService {
     final asr = prayerTimes.asr.add(timeDelta);
     final maghrib = prayerTimes.maghrib.add(timeDelta);
     final isha = prayerTimes.isha.add(timeDelta);
-    
+
     // Calculate next prayer
-    final now = TimezoneUtils.nowForTimezone(timezone);
+    final now = currentTime ?? TimezoneUtils.nowForTimezone(timezone);
     DateTime nextTime = fajr;
     String nextName = 'Fajr';
-    
+
     if (now.isBefore(fajr)) {
       nextTime = fajr;
       nextName = 'Fajr';
@@ -71,9 +71,23 @@ class PrayerCalendarService {
     } else if (now.isBefore(maghrib)) {
       nextTime = maghrib;
       nextName = 'Maghrib';
-    } else {
+    } else if (now.isBefore(isha)) {
       nextTime = isha;
       nextName = 'Isha';
+    } else {
+      final tomorrow = date.add(const Duration(days: 1));
+      final tomorrowDateComponents = DateComponents.from(tomorrow);
+      final tomorrowPrayerTimes = PrayerTimes(
+        coordinates,
+        tomorrowDateComponents,
+        params,
+      );
+      final tomorrowTimeDelta = TimezoneUtils.timezoneDeltaForDate(
+        tomorrow,
+        timezone,
+      );
+      nextTime = tomorrowPrayerTimes.fajr.add(tomorrowTimeDelta);
+      nextName = 'Fajr';
     }
 
     return PrayerTimesEntity(
@@ -105,16 +119,18 @@ class PrayerCalendarService {
 
     for (int day = 1; day <= daysInMonth; day++) {
       final date = DateTime(year, month, day);
-      monthTimes.add(calculatePrayerTimes(
-        latitude: latitude,
-        longitude: longitude,
-        date: date,
-        method: method,
-        madhab: madhab,
-        timezone: timezone,
-        fajrAngle: fajrAngle,
-        ishaAngle: ishaAngle,
-      ));
+      monthTimes.add(
+        calculatePrayerTimes(
+          latitude: latitude,
+          longitude: longitude,
+          date: date,
+          method: method,
+          madhab: madhab,
+          timezone: timezone,
+          fajrAngle: fajrAngle,
+          ishaAngle: ishaAngle,
+        ),
+      );
     }
 
     return monthTimes;
@@ -133,7 +149,7 @@ class PrayerCalendarService {
   }) {
     final List<PrayerTimesEntity> allTimes = [];
     final now = TimezoneUtils.nowForTimezone(timezone);
-    
+
     for (int year = now.year; year <= now.year + 10; year++) {
       for (int month = 1; month <= 12; month++) {
         // Skip months in current year that have passed
@@ -157,8 +173,6 @@ class PrayerCalendarService {
 
     return allTimes;
   }
-
-
 
   /// Get calculation parameters based on method
   static CalculationParameters _getCalculationParameters(
@@ -226,26 +240,33 @@ class PrayerCalendarService {
       fajrAngle: fajrAngle,
       ishaAngle: ishaAngle,
     );
-    
-    final jsonList = times.map((t) => {
-      'fajr': t.fajr.toIso8601String(),
-      'sunrise': t.sunrise.toIso8601String(),
-      'dhuhr': t.dhuhr.toIso8601String(),
-      'asr': t.asr.toIso8601String(),
-      'maghrib': t.maghrib.toIso8601String(),
-      'isha': t.isha.toIso8601String(),
-      'nextPrayerName': t.nextPrayerName,
-      'nextPrayerTime': t.nextPrayerTime.toIso8601String(),
-    }).toList();
-    
-    await prefs.setString(_cacheKey, jsonEncode({
-      'latitude': latitude,
-      'longitude': longitude,
-      'method': method,
-      'madhab': madhab,
-      'timezone': timezone,
-      'times': jsonList,
-    }));
+
+    final jsonList = times
+        .map(
+          (t) => {
+            'fajr': t.fajr.toIso8601String(),
+            'sunrise': t.sunrise.toIso8601String(),
+            'dhuhr': t.dhuhr.toIso8601String(),
+            'asr': t.asr.toIso8601String(),
+            'maghrib': t.maghrib.toIso8601String(),
+            'isha': t.isha.toIso8601String(),
+            'nextPrayerName': t.nextPrayerName,
+            'nextPrayerTime': t.nextPrayerTime.toIso8601String(),
+          },
+        )
+        .toList();
+
+    await prefs.setString(
+      _cacheKey,
+      jsonEncode({
+        'latitude': latitude,
+        'longitude': longitude,
+        'method': method,
+        'madhab': madhab,
+        'timezone': timezone,
+        'times': jsonList,
+      }),
+    );
   }
 
   /// Get cached prayer times (offline)
