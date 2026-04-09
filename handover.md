@@ -2795,3 +2795,35 @@
 ### Sonraki Adım
 - Sıradaki turda kalan `66` rare locale için sibling-fallback uygulanabilirlik matrisi çıkarılacak.
 - Ardından hadith network kodu doğrulanmış dataset gelene kadar daha da retire edilebiliyor mu denetlenecek.
+
+## 2026-04-09 TUR-72 — Retire Unverified Hadith Network Path
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/hadith_api_service.dart) içindeki `dart:convert`, `http` importları ve tüm harici CDN fetch implementasyonu kaldırıldı.
+- `HadithApiService.fetchHadiths` ve `HadithApiService.fetchArabicHadiths` artık doğrudan `VerifiedHadithDatasetUnavailable` fırlatan dürüst sözleşmeye indirildi.
+- Mevcut [A:\Way of Allah\sirat_i_nur\test\hadith_provider_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/hadith_provider_test.dart) ve tam test koşusu ile provider zincirinin bu değişiklikten etkilenmeden aynı dürüst fail-fast davranışı koruduğu doğrulandı.
+
+### Neden Yapıldı
+- Önceki turlarda UI, provider ve router katmanı hadith feed’i kapatmış olsa da [A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/hadith_api_service.dart) içinde doğrulanmamış harici CDN endpoint’lerine ait tüm network yolu hâlâ repo içinde duruyordu.
+- Bu kod production’da çalışmasa bile tekrar yanlışlıkla etkinleştirilebilecek latent bir harici bağımlılık ve dini içerik riski taşıyordu.
+- Kök sebep, “dataset yoksa fail-fast” kararının servis implementasyonundan ziyade method başındaki guard ile sınırlı kalmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Doğrulanmamış hadith CDN entegrasyonu artık kod tabanında yaşayan bir network yolu olarak kalmıyor.
+- Harici hadith feed’i yanlışlıkla yeniden çağırabilecek latent HTTP akışı tamamen söküldü.
+- Servis katmanı artık repo düzeyinde de “verified dataset yoksa hadith yok” sözleşmesiyle uyumlu.
+
+### Test Sonucu
+- `flutter test test/hadith_provider_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`178/178`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Dormant unverified hadith CDN code still present in production service layer: `11/25 → 1/25`
+
+### Sonraki Adım
+- Sıradaki turda kalan `66` rare locale sibling-fallback ve EN-reference kümelerine ayrılacak.
+- Ardından kalan dini UI çeviri yüzeyi için güvenilir şekilde ilerlenebilen locale’ler tek tek kapatılacak.
