@@ -249,7 +249,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get reload => 'Reload';
 
   @override
-  String get openInYoutube => 'Open in YouTube';
+  String get openInYoutube => 'Fungura muri YouTube';
 
   @override
   String get ibadahTracker => 'Ibadah Tracker';

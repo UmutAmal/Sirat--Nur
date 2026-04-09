@@ -249,7 +249,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get reload => 'Reload';
 
   @override
-  String get openInYoutube => 'Open in YouTube';
+  String get openInYoutube => 'په یوټیوب کې خلاص کړئ';
 
   @override
   String get ibadahTracker => 'Ibadah Tracker';

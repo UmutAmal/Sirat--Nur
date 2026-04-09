@@ -2907,3 +2907,41 @@
 ### Sonraki Adım
 - Sıradaki turda kalan `65` rare locale içinden başka güvenli sibling veya makrodil eşleşmesi olanlar ayıklanacak.
 - Ardından sibling’i olmayan belirsiz locale kümesi için EN-reference audit matrisi çıkarılacak.
+
+## 2026-04-09 TUR-75 — Localize Live TV YouTube Action Across Priority Locales
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force openInYoutube` ile tüm `app_*.arb` dosyalarında yeniden çalıştırıldı.
+- Bu turda [A:\Way of Allah\sirat_i_nur\lib\l10n\app_da.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_da.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_he.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_he.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_ja.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_ja.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nb.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nb.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nn.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nn.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_no.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_no.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_vi.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_vi.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_zh.arb) ve diğer desteklenen locale dosyalarında `openInYoutube` artık İngilizce değil.
+- Generated localization çıktıları yenilendi; örnek olarak [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_da.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_da.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_he.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_he.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ja.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_ja.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_nb.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_nb.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_zh.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_zh.dart) güncellendi.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) eklendi; Live TV üzerindeki `openInYoutube` eyleminin öncelikli locale setinde İngilizce fallback’e dönmesi engellendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart#L222](A:/Way%20of%20Allah/sirat_i_nur/lib/features/tv/live_tv_page.dart#L222) ve [A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart#L303](A:/Way%20of%20Allah/sirat_i_nur/lib/features/tv/live_tv_page.dart#L303) tarafından kullanılan `openInYoutube` anahtarının `135` locale’de hâlâ İngilizce kaldığı doğrulandı.
+- Bu boşluk, uygulamanın görünür bir aksiyonunda geniş çaplı localization kırığı oluşturuyordu.
+- Aynı anahtarın desteklenen dillerde çevrilebildiği kanıtlandığı için bu turda en yüksek etkili localization boşluğu olarak seçildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` içindeki `openInYoutube` alanı güncellenen dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` generated dosyaları
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `openInYoutube` için İngilizce fallback taşıyan locale sayısı `135`ten `63`e düştü.
+- `tr`, `de`, `fr`, `es`, `ar`, `da`, `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `tw`, `vi`, `zh`, `zh_CN`, `zh_TW` priority seti artık bu aksiyonda İngilizce göstermiyor.
+- Kalan `63` locale, çeviri aracıyla güvenilir çıktı üretmeyen rare/uncertain küme olarak ayrıştırıldı; bunlar sonraki turda sibling/makrodil eşleşmesi olanlar ve dürüst EN-reference kalması gerekenler diye sınıflanacak.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart --force openInYoutube` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`1/1`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`180/180`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Live TV action label still falling back to English across a broad locale surface: `14/25 → 5/25`
+
+### Sonraki Adım
+- Sıradaki turda kalan `63` rare locale içinden güvenli sibling veya makrodil eşleşmesi olanlar kapatılacak.
+- Sibling’i olmayan locale’ler için key bazlı EN-reference audit matrisi çıkarılıp hangi anahtarların dürüstçe EN’de kalacağı ayrı kayda alınacak.

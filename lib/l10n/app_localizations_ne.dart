@@ -249,7 +249,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get reload => 'Reload';
 
   @override
-  String get openInYoutube => 'Open in YouTube';
+  String get openInYoutube => 'YouTube मा खोल्नुहोस्';
 
   @override
   String get ibadahTracker => 'Ibadah Tracker';

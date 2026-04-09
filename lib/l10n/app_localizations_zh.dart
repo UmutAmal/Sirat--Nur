@@ -2539,7 +2539,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get reload => '重新載入';
 
   @override
-  String get openInYoutube => '在 YouTube 中打開';
+  String get openInYoutube => '在 YouTube 中開啟';
 
   @override
   String get ibadahTracker => '伊巴達追蹤器';

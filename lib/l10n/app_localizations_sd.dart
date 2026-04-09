@@ -249,7 +249,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get reload => 'Reload';
 
   @override
-  String get openInYoutube => 'Open in YouTube';
+  String get openInYoutube => 'يوٽيوب ۾ کوليو';
 
   @override
   String get ibadahTracker => 'Ibadah Tracker';

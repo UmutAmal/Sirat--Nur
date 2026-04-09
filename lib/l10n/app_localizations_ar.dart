@@ -249,7 +249,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get reload => 'إعادة تحميل';
 
   @override
-  String get openInYoutube => 'فتح في يوتيوب';
+  String get openInYoutube => 'افتح في يوتيوب';
 
   @override
   String get ibadahTracker => 'متتبع العبادة';

@@ -249,7 +249,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get reload => 'بارگیری مجدد';
 
   @override
-  String get openInYoutube => 'باز کردن در یوتیوب';
+  String get openInYoutube => 'در یوتیوب باز کنید';
 
   @override
   String get ibadahTracker => 'ردیاب عبادت';
