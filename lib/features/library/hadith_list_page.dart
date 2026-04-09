@@ -7,6 +7,14 @@ import 'package:sirat_i_nur/features/library/hadith_collection_copy.dart';
 import 'package:sirat_i_nur/features/library/providers/hadith_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
+String buildHadithListErrorText(AppLocalizations l10n, Object error) {
+  return '${l10n.error}: $error\n${l10n.checkConnection}';
+}
+
+String buildHadithListEmptyText(AppLocalizations l10n) {
+  return l10n.noResults;
+}
+
 class HadithListPage extends ConsumerWidget {
   final String collectionId;
   const HadithListPage({super.key, required this.collectionId});
@@ -99,7 +107,7 @@ class HadithListPage extends ConsumerWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(32.0),
                   child: Text(
-                    'Error loading hadiths.\nCheck internet connection.',
+                    buildHadithListErrorText(l10n, err),
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Theme.of(context).colorScheme.error),
                   ),
@@ -107,7 +115,7 @@ class HadithListPage extends ConsumerWidget {
               ),
               data: (list) {
                 if (list.isEmpty) {
-                  return const Center(child: Text('No hadiths found here.'));
+                  return Center(child: Text(buildHadithListEmptyText(l10n)));
                 }
                 return Column(
                   children: list.asMap().entries.map((e) {

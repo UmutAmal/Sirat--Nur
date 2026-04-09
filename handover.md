@@ -3420,3 +3420,36 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_list_page.dart) içindeki `No hadiths found here.` residual yüzeyi ele alınacak.
 - Ardından [A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/zikr/zikr_page.dart) üzerindeki `Completed! MashAllah` hardcoded başarı metni için aynı loop açılacak.
+
+## 2026-04-09 TUR-87 — Localize Hadith List Error and Empty States
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_list_page.dart) içinde `buildHadithListErrorText` ve `buildHadithListEmptyText` yardımcıları eklendi.
+- Hadith listesi data dalında hardcoded `Error loading hadiths.\nCheck internet connection.` ve `No hadiths found here.` metinleri kaldırıldı; mevcut `error`, `checkConnection` ve `noResults` localization zinciri kullanılmaya başlandı.
+- [A:\Way of Allah\sirat_i_nur\test\features\library\hadith_list_copy_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/library/hadith_list_copy_test.dart) eklendi ve helper çıktıları EN/TR için kilitlendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart#L86](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_list_page.dart#L86) ve [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart#L94](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_list_page.dart#L94) hadith liste yüzeyinin hâlâ İngilizce hardcoded hata ve boş durum metinleri kullandığını gösterdi.
+- Route bugün verified dataset kapısı nedeniyle çoğu akışta bloklu olsa da, dataset açıldığında ilk görülecek data yüzeyi burası olacağı için residual risk hemen kapatıldı.
+- Yeni key açılmadı; mevcut localization anahtarlarıyla minimal doğrulanabilir diff tercih edildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_list_copy_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Hadith listesi verified dataset açıldığında artık İngilizce hardcoded hata ve empty-state göstermeyecek.
+- Hata mesajı locale-aware `Error/Hata` etiketi ve bağlantı uyarısıyla dürüst biçimde üretilecek.
+- Empty-state tüm destekli dillerde mevcut `noResults` anahtarıyla hizalandı.
+
+### Test Sonucu
+- `flutter test test/features/library/hadith_list_copy_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`199/199`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Hadith list surface still exposing hardcoded English data states: `10/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/zikr/zikr_page.dart) içindeki `Completed! MashAllah` hardcoded başarı yüzeyi localization zincirine taşınacak.
+- Ardından low-surface residual taraması yeniden çalıştırılacak.
