@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Preverjene zbirke hadisov še niso na voljo",
   "hadithUnavailableBody": "Ta zgradba je še vedno odvisna od nepreverjenega zunanjega vira hadisa. Brskanje po hadisih ostane onemogočeno, dokler se izvorni nabor podatkov ne sinhronizira.",
   "appErrorOccurred": "Prišlo je do napake",
-  "appUnknownError": "Neznana napaka"
+  "appUnknownError": "Neznana napaka",
+  "qiblaCompassErrorDetails": "Napaka kompasa: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

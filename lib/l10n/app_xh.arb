@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Iingqokelela ze hadith eziqinisekisiweyo azikafumaneki",
   "hadithUnavailableBody": "Olu lwakhiwo kusaxhomekeke kwi feed hadith engangqinisiswanga yangaphandle. Ukhangelo lweHadith luhlala luvaliwe de idataset efunyenweyo ingqanyaniswe.",
   "appErrorOccurred": "Impazamo yenzekile",
-  "appUnknownError": "Imposiso engaziwayo"
+  "appUnknownError": "Imposiso engaziwayo",
+  "qiblaCompassErrorDetails": "Impazamo yekhampasi: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

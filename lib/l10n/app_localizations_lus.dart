@@ -330,6 +330,11 @@ class AppLocalizationsLus extends AppLocalizations {
   String get turnDevice => 'I device chu Qibla lam hawiin her rawh';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Compass error: $error';
+  }
+
+  @override
   String get notifications => 'Hriattirna te';
 
   @override

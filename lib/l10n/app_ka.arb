@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "დადასტურებული ჰადისის კრებულები ჯერ არ არის ხელმისაწვდომი",
   "hadithUnavailableBody": "ეს კონსტრუქცია ჯერ კიდევ დამოკიდებულია დაუმოწმებელ გარე ჰადისის არხზე. ჰადისების დათვალიერება გათიშული რჩება მანამ, სანამ არ მოხდება მონაცემთა ნაკრების სინქრონიზაცია.",
   "appErrorOccurred": "მოხდა შეცდომა",
-  "appUnknownError": "უცნობი შეცდომა"
+  "appUnknownError": "უცნობი შეცდომა",
+  "qiblaCompassErrorDetails": "კომპასის შეცდომა: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

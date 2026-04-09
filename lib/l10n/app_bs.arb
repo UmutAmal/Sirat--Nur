@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Provjerene zbirke hadisa još uvijek nisu dostupne",
   "hadithUnavailableBody": "Ova izgradnja još uvijek ovisi o neprovjerenom vanjskom hadiskom feedu. Pretraživanje hadisa ostaje onemogućeno dok se izvorni skup podataka ne sinkronizira.",
   "appErrorOccurred": "Došlo je do greške",
-  "appUnknownError": "Nepoznata greška"
+  "appUnknownError": "Nepoznata greška",
+  "qiblaCompassErrorDetails": "Greška kompasa: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

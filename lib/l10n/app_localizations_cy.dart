@@ -331,6 +331,11 @@ class AppLocalizationsCy extends AppLocalizations {
   String get turnDevice => 'Trowch eich dyfais i wynebu\'r Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Gwall cwmpawd: $error';
+  }
+
+  @override
   String get notifications => 'Hysbysiadau';
 
   @override

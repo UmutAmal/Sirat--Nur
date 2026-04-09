@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Les col·leccions de hadiz verificades encara no estan disponibles",
   "hadithUnavailableBody": "Aquesta compilació encara depèn d'un feed de hadith extern no verificat. La navegació d'hadith roman desactivada fins que es sincronitzi un conjunt de dades d'origen.",
   "appErrorOccurred": "S'ha produït un error",
-  "appUnknownError": "Error desconegut"
+  "appUnknownError": "Error desconegut",
+  "qiblaCompassErrorDetails": "Error de brúixola: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

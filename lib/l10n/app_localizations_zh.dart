@@ -330,6 +330,11 @@ class AppLocalizationsZh extends AppLocalizations {
   String get turnDevice => '将您的设备转向朝拜';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return '指南针错误：$error';
+  }
+
+  @override
   String get notifications => '通知';
 
   @override
@@ -1475,6 +1480,11 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get turnDevice => '将您的设备转向朝拜';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return '指南针错误：$error';
+  }
+
+  @override
   String get notifications => '通知';
 
   @override
@@ -2618,6 +2628,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get turnDevice => '將您的裝置轉向朝拜';
+
+  @override
+  String qiblaCompassErrorDetails(String error) {
+    return '指南針錯誤：$error';
+  }
 
   @override
   String get notifications => '通知';

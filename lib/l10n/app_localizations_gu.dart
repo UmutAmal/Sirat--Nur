@@ -330,6 +330,11 @@ class AppLocalizationsGu extends AppLocalizations {
   String get turnDevice => 'તમારા ઉપકરણને કિબલા તરફ વળો';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'કંપાસ ભૂલ: $error';
+  }
+
+  @override
   String get notifications => 'સૂચનાઓ';
 
   @override

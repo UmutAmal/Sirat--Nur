@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "ଯାଞ୍ଚ ହୋଇଥିବା ହାଡିସ୍ ସଂଗ୍ରହ ଏପର୍ଯ୍ୟନ୍ତ ଉପଲବ୍ଧ ନାହିଁ |",
   "hadithUnavailableBody": "ଏହି ବିଲ୍ଡ ଏପର୍ଯ୍ୟନ୍ତ ଏକ ଯାଞ୍ଚ ହୋଇନଥିବା ବାହ୍ୟ ହାଡିସ୍ ଫିଡ୍ ଉପରେ ନିର୍ଭର କରେ | ଏକ ସୋର୍ସଡ୍ ଡାଟାସେଟ୍ ସିଙ୍କ୍ ନହେବା ପର୍ଯ୍ୟନ୍ତ ହାଡିସ୍ ବ୍ରାଉଜିଙ୍ଗ୍ ଅକ୍ଷମ ରହିଥାଏ |",
   "appErrorOccurred": "ଏକ ତ୍ରୁଟି ଘଟିଲା |",
-  "appUnknownError": "ଅଜ୍ଞାତ ତ୍ରୁଟି |"
+  "appUnknownError": "ଅଜ୍ଞାତ ତ୍ରୁଟି |",
+  "qiblaCompassErrorDetails": "କମ୍ପାସ୍ ତ୍ରୁଟି: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

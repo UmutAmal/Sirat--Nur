@@ -332,6 +332,11 @@ class AppLocalizationsGd extends AppLocalizations {
       'Tionndaidh an inneal agad gus aghaidh a thoirt air an Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Mearachd a\' chomais: $error';
+  }
+
+  @override
   String get notifications => 'Brathan';
 
   @override

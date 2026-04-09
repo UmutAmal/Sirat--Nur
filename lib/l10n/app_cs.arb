@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Ověřené sbírky hadísů zatím nejsou k dispozici",
   "hadithUnavailableBody": "Toto sestavení stále závisí na neověřeném externím zdroji hadísů. Procházení hadísů zůstane zakázáno, dokud nebude synchronizována zdrojová datová sada.",
   "appErrorOccurred": "Došlo k chybě",
-  "appUnknownError": "Neznámá chyba"
+  "appUnknownError": "Neznámá chyba",
+  "qiblaCompassErrorDetails": "Chyba kompasu: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

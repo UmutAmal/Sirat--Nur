@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "E cullezzione di hadith verificate ùn sò micca dispunibili",
   "hadithUnavailableBody": "Sta custruzione dipende sempre da un alimentu di hadith esternu micca verificatu. A navigazione di Hadith resta disattivata finu à chì un set di dati di origine hè sincronizatu.",
   "appErrorOccurred": "Un errore hè accadutu",
-  "appUnknownError": "Errore scunnisciutu"
+  "appUnknownError": "Errore scunnisciutu",
+  "qiblaCompassErrorDetails": "Errore di bussola: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

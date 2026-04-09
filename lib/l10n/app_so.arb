@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Ururinta xadiisyada la xaqiijiyay wali lama hayo",
   "hadithUnavailableBody": "Dhismahani wuxuu weli ku xiran yahay quudinta xadiiska dibadda ah ee aan la xaqiijin. Baadhitaanka xadiisku waxa uu ahaanayaa mid naafo ah ilaa xogta laga soo xigtay la isku dhejiyo.",
   "appErrorOccurred": "Khalad ayaa dhacay",
-  "appUnknownError": "Khalad aan la garanayn"
+  "appUnknownError": "Khalad aan la garanayn",
+  "qiblaCompassErrorDetails": "Cilad kambaska: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

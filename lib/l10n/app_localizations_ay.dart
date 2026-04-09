@@ -333,6 +333,11 @@ class AppLocalizationsAy extends AppLocalizations {
   String get turnDevice => 'Dispositivo ukax Qibla uñkatasiñapatakiw turkañama';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Brújula ukan pantjasiwipa: $error .';
+  }
+
+  @override
   String get notifications => 'Yatiyawinaka';
 
   @override

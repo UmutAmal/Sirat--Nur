@@ -330,6 +330,11 @@ class AppLocalizationsCs extends AppLocalizations {
   String get turnDevice => 'Otočte své zařízení čelem k Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Chyba kompasu: $error';
+  }
+
+  @override
   String get notifications => 'Oznámení';
 
   @override

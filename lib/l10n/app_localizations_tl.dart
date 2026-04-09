@@ -332,6 +332,11 @@ class AppLocalizationsTl extends AppLocalizations {
   String get turnDevice => 'Lumiko ang iyong device upang humarap sa Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Error sa compass: $error';
+  }
+
+  @override
   String get notifications => 'Mga abiso';
 
   @override

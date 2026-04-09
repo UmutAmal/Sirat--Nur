@@ -331,6 +331,11 @@ class AppLocalizationsBho extends AppLocalizations {
   String get turnDevice => 'किबला के ओर मुँह करे खातिर आपन डिवाइस घुमाईं';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'कम्पास त्रुटि: $error बा।';
+  }
+
+  @override
   String get notifications => 'सूचना दिहल गइल बा';
 
   @override

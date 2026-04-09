@@ -330,6 +330,11 @@ class AppLocalizationsAf extends AppLocalizations {
   String get turnDevice => 'Draai jou toestel om na die Qibla te kyk';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Kompasfout: $error';
+  }
+
+  @override
   String get notifications => 'Kennisgewings';
 
   @override

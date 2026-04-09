@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "دەلىللەنگەن ھەدىس توپلىمى تېخىچە تېپىلمىدى",
   "hadithUnavailableBody": "بۇ قۇرۇلۇش يەنىلا دەلىللەنمىگەن تاشقى ھەدىس يەملىرىگە باغلىق. مەنبەلىك سانلىق مەلۇمات ماسقەدەملەنگۈچە ھەدىس كۆرۈش چەكلىنىدۇ.",
   "appErrorOccurred": "خاتالىق كۆرۈلدى",
-  "appUnknownError": "نامەلۇم خاتالىق"
+  "appUnknownError": "نامەلۇم خاتالىق",
+  "qiblaCompassErrorDetails": "كومپاس خاتالىقى: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

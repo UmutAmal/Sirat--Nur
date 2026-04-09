@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "ވެރިފައިޑް ޙަދީޘް ކަލެކްޝަންތައް އަދި ނުލިބެއެވެ",
   "hadithUnavailableBody": "މި ބިލްޑް އަދިވެސް ބަރޯސާވެފައިވަނީ ޔަގީން ނުކުރެވޭ ބޭރު ޙަދީޘް ފީޑެއްގެ މައްޗަށެވެ. ސޯސްޑް ޑޭޓާސެޓެއް ސިންކް ކުރެވެންދެން ޙަދީޘް ބްރައުޒިންގ ޑިސެބިލް ކޮށްފައި ހުރެއެވެ.",
   "appErrorOccurred": "ގޯހެއް ދިމާވިއެވެ",
-  "appUnknownError": "ނޭނގޭ ގޯހެއް"
+  "appUnknownError": "ނޭނގޭ ގޯހެއް",
+  "qiblaCompassErrorDetails": "ކޮމްޕަސް އެރަރ: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

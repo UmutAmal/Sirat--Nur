@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Ba collections ya hadith vérifié ezali nanu te",
   "hadithUnavailableBody": "Kotonga oyo etali kaka alimentation ya hadith ya libanda oyo e vérifié te. Navigation ya Hadith etikalaka désactivé kino ensemble ya ba données sourced ekozala synchronisée.",
   "appErrorOccurred": "Libunga moko esalemaki",
-  "appUnknownError": "Libunga eyebani te"
+  "appUnknownError": "Libunga eyebani te",
+  "qiblaCompassErrorDetails": "Compass error: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

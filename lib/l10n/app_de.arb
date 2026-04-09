@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Verifizierte Hadith-Sammlungen sind noch nicht verfügbar",
   "hadithUnavailableBody": "Dieser Build hängt immer noch von einem ungeprüften externen Hadith-Feed ab. Das Durchsuchen von Hadithen bleibt deaktiviert, bis ein Quelldatensatz synchronisiert wird.",
   "appErrorOccurred": "Es ist ein Fehler aufgetreten",
-  "appUnknownError": "Unbekannter Fehler"
+  "appUnknownError": "Unbekannter Fehler",
+  "qiblaCompassErrorDetails": "Kompassfehler: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

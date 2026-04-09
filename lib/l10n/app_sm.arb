@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "E le'i maua ni fa'aputuga o hadith fa'amaonia",
   "hadithUnavailableBody": "O lenei fausiaina o loʻo faʻalagolago pea i luga o se fafaga hadith fafo e leʻi faʻamaonia. E tumau le fa'aletonu o su'esu'ega o Hadith se'ia o'o ina fa'amaopoopo se fa'amaumauga.",
   "appErrorOccurred": "Ua tupu se mea sese",
-  "appUnknownError": "Sese le iloa"
+  "appUnknownError": "Sese le iloa",
+  "qiblaCompassErrorDetails": "Sese tapasa: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

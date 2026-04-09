@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Verifierade hadith-samlingar är inte tillgängliga ännu",
   "hadithUnavailableBody": "Denna konstruktion beror fortfarande på ett overifierat externt hadithflöde. Hadith-surfning förblir inaktiverad tills en källdatauppsättning synkroniseras.",
   "appErrorOccurred": "Ett fel uppstod",
-  "appUnknownError": "Okänt fel"
+  "appUnknownError": "Okänt fel",
+  "qiblaCompassErrorDetails": "Kompassfel: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

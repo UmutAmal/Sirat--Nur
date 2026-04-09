@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Маҷмӯаҳои ҳадисҳои тасдиқшуда ҳанӯз дастрас нестанд",
   "hadithUnavailableBody": "Ин сохтмон то ҳол аз як канали ҳадисҳои берунии тасдиқнашуда вобаста аст. Баррасии ҳадисҳо то синхронизатсияи маҷмӯи додаҳои манбаъ ғайрифаъол мемонад.",
   "appErrorOccurred": "Хатогӣ рӯй дод",
-  "appUnknownError": "Хатогии номаълум"
+  "appUnknownError": "Хатогии номаълум",
+  "qiblaCompassErrorDetails": "Хатогии компас: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

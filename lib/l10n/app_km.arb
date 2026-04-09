@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "ការប្រមូល hadith ដែលបានផ្ទៀងផ្ទាត់មិនទាន់មាននៅឡើយទេ",
   "hadithUnavailableBody": "ការស្ថាបនានេះនៅតែពឹងផ្អែកលើមតិព័ត៌មាន hadith ខាងក្រៅដែលមិនបានបញ្ជាក់។ ការរុករក Hadith នៅតែបិទរហូតដល់សំណុំទិន្នន័យប្រភពត្រូវបានធ្វើសមកាលកម្ម។",
   "appErrorOccurred": "កំហុសមួយបានកើតឡើង",
-  "appUnknownError": "កំហុសមិនស្គាល់"
+  "appUnknownError": "កំហុសមិនស្គាល់",
+  "qiblaCompassErrorDetails": "កំហុសត្រីវិស័យ៖ {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

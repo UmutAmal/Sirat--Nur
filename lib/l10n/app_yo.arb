@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Awọn akojọpọ hadith ti o ni idaniloju ko si sibẹsibẹ",
   "hadithUnavailableBody": "Kọ yii tun da lori ifunni hadith ita ti a ko rii daju. Lilọ kiri ayelujara Hadith duro ni alaabo titi ti ipilẹ data ti o ti muṣiṣẹpọ.",
   "appErrorOccurred": "Aṣiṣe kan ṣẹlẹ",
-  "appUnknownError": "Aṣiṣe aimọ"
+  "appUnknownError": "Aṣiṣe aimọ",
+  "qiblaCompassErrorDetails": "Aṣiṣe Kompasi: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Потврдени збирки на хадиси сè уште не се достапни",
   "hadithUnavailableBody": "Оваа конструкција сè уште зависи од непроверена надворешна храна за хадис. Прелистувањето хадиси останува оневозможено додека не се синхронизира изворната база на податоци.",
   "appErrorOccurred": "Се појави грешка",
-  "appUnknownError": "Непозната грешка"
+  "appUnknownError": "Непозната грешка",
+  "qiblaCompassErrorDetails": "Грешка на компасот: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

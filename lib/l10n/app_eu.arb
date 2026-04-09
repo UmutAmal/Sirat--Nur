@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Egiaztatutako hadith bildumak ez daude eskuragarri oraindik",
   "hadithUnavailableBody": "Eraikuntza hau egiaztatu gabeko kanpoko hadith jario baten menpe dago oraindik. Hadith arakatzea desgaituta egongo da jatorriko datu-multzo bat sinkronizatu arte.",
   "appErrorOccurred": "Errore bat gertatu da",
-  "appUnknownError": "Errore ezezaguna"
+  "appUnknownError": "Errore ezezaguna",
+  "qiblaCompassErrorDetails": "Iparrorratza errorea: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

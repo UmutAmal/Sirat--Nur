@@ -330,6 +330,11 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get turnDevice => 'Tig koj lub cuab yeej kom fim Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Compass yuam kev: $error';
+  }
+
+  @override
   String get notifications => 'Kev ceeb toom';
 
   @override

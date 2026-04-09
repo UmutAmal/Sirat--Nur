@@ -126,6 +126,14 @@
   "north": "North",
   "qiblaFound": "Qibla found!",
   "turnDevice": "Turn your device to face the Qibla",
+  "qiblaCompassErrorDetails": "Compass error: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",

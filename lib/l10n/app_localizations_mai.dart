@@ -330,6 +330,11 @@ class AppLocalizationsMai extends AppLocalizations {
   String get turnDevice => 'अपन डिवाइस के किबला के सामना करय लेल घुमाउ';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'कम्पास त्रुटि: $error';
+  }
+
+  @override
   String get notifications => 'अधिसूचना';
 
   @override

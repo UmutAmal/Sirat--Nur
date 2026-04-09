@@ -330,6 +330,11 @@ class AppLocalizationsEu extends AppLocalizations {
   String get turnDevice => 'Biratu gailua Qiblari begira';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Iparrorratza errorea: $error';
+  }
+
+  @override
   String get notifications => 'Jakinarazpenak';
 
   @override

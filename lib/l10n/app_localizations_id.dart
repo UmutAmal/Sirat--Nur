@@ -330,6 +330,11 @@ class AppLocalizationsId extends AppLocalizations {
   String get turnDevice => 'Putar perangkat Anda menghadap kiblat';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Kesalahan kompas: $error';
+  }
+
+  @override
   String get notifications => 'Notifikasi';
 
   @override

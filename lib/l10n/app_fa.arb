@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "مجموعه احادیث تایید شده هنوز در دسترس نیست",
   "hadithUnavailableBody": "این ساخت هنوز به یک خوراک حدیث خارجی تایید نشده بستگی دارد. مرور حدیث تا زمانی که یک مجموعه داده منبع همگام‌سازی نشود، غیرفعال می‌ماند.",
   "appErrorOccurred": "خطایی رخ داد",
-  "appUnknownError": "خطای ناشناخته"
+  "appUnknownError": "خطای ناشناخته",
+  "qiblaCompassErrorDetails": "خطای قطب نما: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

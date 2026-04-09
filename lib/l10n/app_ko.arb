@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "검증된 hadith 컬렉션은 아직 사용할 수 없습니다.",
   "hadithUnavailableBody": "이 빌드는 여전히 확인되지 않은 외부 hadith 피드에 의존합니다. Hadith 검색은 소스 데이터 세트가 동기화될 때까지 비활성화된 상태로 유지됩니다.",
   "appErrorOccurred": "오류가 발생했습니다",
-  "appUnknownError": "알 수 없는 오류"
+  "appUnknownError": "알 수 없는 오류",
+  "qiblaCompassErrorDetails": "나침반 오류: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

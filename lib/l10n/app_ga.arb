@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Níl bailiúcháin hadith fíoraithe ar fáil go fóill",
   "hadithUnavailableBody": "Braitheann an tógáil seo fós ar bheathú hadith seachtrach neamhfhíoraithe. Fanann brabhsáil Hadith díchumasaithe go dtí go sioncronófar tacar sonraí foinseach.",
   "appErrorOccurred": "Tharla earráid",
-  "appUnknownError": "Earráid anaithnid"
+  "appUnknownError": "Earráid anaithnid",
+  "qiblaCompassErrorDetails": "Earráid chompáis: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

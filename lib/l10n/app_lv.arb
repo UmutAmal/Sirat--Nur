@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Verificētās hadītu kolekcijas vēl nav pieejamas",
   "hadithUnavailableBody": "Šī versija joprojām ir atkarīga no nepārbaudītas ārējās hadīsu plūsmas. Hadith pārlūkošana paliek atspējota, līdz tiek sinhronizēta iegūtā datu kopa.",
   "appErrorOccurred": "Radās kļūda",
-  "appUnknownError": "Nezināma kļūda"
+  "appUnknownError": "Nezināma kļūda",
+  "qiblaCompassErrorDetails": "Kompasa kļūda: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

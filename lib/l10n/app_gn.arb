@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Umi colección de hadith verificado ndojeguerekói gueteri",
   "hadithUnavailableBody": "Ko ñemopu’ã odepende gueteri peteĩ feed hadith externo ndojehecháiva rehe. Hadith jeheka opyta oñemboykéva oñembojoaju peve peteĩ datokuéra ryru fuente-gui.",
   "appErrorOccurred": "Oiko peteĩ jejavy",
-  "appUnknownError": "Ojejavy ndojekuaáiva"
+  "appUnknownError": "Ojejavy ndojekuaáiva",
+  "qiblaCompassErrorDetails": "Brújula jejavy: {error} .",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

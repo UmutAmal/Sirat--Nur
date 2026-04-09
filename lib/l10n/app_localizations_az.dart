@@ -330,6 +330,11 @@ class AppLocalizationsAz extends AppLocalizations {
   String get turnDevice => 'Cihazınızı qibləyə tərəf çevirin';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Kompas xətası: $error';
+  }
+
+  @override
   String get notifications => 'Bildirişlər';
 
   @override

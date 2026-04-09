@@ -331,6 +331,11 @@ class AppLocalizationsFi extends AppLocalizations {
   String get turnDevice => 'Käännä laitteesi Qiblaa kohti';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Kompassivirhe: $error';
+  }
+
+  @override
   String get notifications => 'Ilmoitukset';
 
   @override

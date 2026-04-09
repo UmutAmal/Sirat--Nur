@@ -330,6 +330,11 @@ class AppLocalizationsEo extends AppLocalizations {
   String get turnDevice => 'Turnu vian aparaton por alfronti la Kiblon';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Kompaseraro: $error';
+  }
+
+  @override
   String get notifications => 'Sciigoj';
 
   @override

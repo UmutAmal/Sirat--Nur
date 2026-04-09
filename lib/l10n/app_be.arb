@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Правераныя зборнікі хадзісаў пакуль недаступныя",
   "hadithUnavailableBody": "Гэтая зборка па-ранейшаму залежыць ад неправеранай знешняй стужкі хадысаў. Прагляд хадысаў застаецца адключаным, пакуль не будзе сінхранізаваны зыходны набор даных.",
   "appErrorOccurred": "Адбылася памылка",
-  "appUnknownError": "Невядомая памылка"
+  "appUnknownError": "Невядомая памылка",
+  "qiblaCompassErrorDetails": "Памылка компаса: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

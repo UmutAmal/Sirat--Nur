@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Koléksi hadits anu diverifikasi henteu acan sayogi",
   "hadithUnavailableBody": "Ieu ngawangun masih gumantung kana feed hadits éksternal unverified. Ngotéktak Hadits tetep ditumpurkeun dugi ka set data sumber disingkronkeun.",
   "appErrorOccurred": "Aya kasalahan",
-  "appUnknownError": "Kasalahan teu dipikanyaho"
+  "appUnknownError": "Kasalahan teu dipikanyaho",
+  "qiblaCompassErrorDetails": "Kasalahan kompas: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

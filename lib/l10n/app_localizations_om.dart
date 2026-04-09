@@ -331,6 +331,11 @@ class AppLocalizationsOm extends AppLocalizations {
   String get turnDevice => 'Turn your device to face the Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Compass error: $error';
+  }
+
+  @override
   String get notifications => 'Notifications';
 
   @override

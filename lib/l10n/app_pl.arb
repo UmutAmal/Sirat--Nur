@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Zweryfikowane zbiory hadisów nie są jeszcze dostępne",
   "hadithUnavailableBody": "Ta wersja nadal zależy od niezweryfikowanego zewnętrznego źródła hadisów. Przeglądanie hadisów pozostaje wyłączone do czasu zsynchronizowania źródłowego zbioru danych.",
   "appErrorOccurred": "Wystąpił błąd",
-  "appUnknownError": "Nieznany błąd"
+  "appUnknownError": "Nieznany błąd",
+  "qiblaCompassErrorDetails": "Błąd kompasu: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

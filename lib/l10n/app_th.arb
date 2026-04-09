@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "คอลเลกชันสุนัตที่ตรวจสอบแล้วยังไม่มีให้บริการ",
   "hadithUnavailableBody": "โครงสร้างนี้ยังขึ้นอยู่กับฟีดสุนัตภายนอกที่ไม่ได้รับการยืนยัน การเรียกดูหะดีษจะยังคงปิดใช้งานอยู่จนกว่าจะซิงค์ชุดข้อมูลที่มา",
   "appErrorOccurred": "เกิดข้อผิดพลาด",
-  "appUnknownError": "ข้อผิดพลาดที่ไม่รู้จัก"
+  "appUnknownError": "ข้อผิดพลาดที่ไม่รู้จัก",
+  "qiblaCompassErrorDetails": "ข้อผิดพลาดของเข็มทิศ: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

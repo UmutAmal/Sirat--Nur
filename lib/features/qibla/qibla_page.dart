@@ -76,11 +76,16 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
           ),
         ),
         child: SafeArea(
-          child: qiblaStream.when(
+        child: qiblaStream.when(
             loading: () => const Center(
               child: CircularProgressIndicator(color: AppColors.emerald),
             ),
-            error: (err, stack) => Center(child: Text('Compass Error: $err')),
+            error: (err, stack) => Center(
+              child: Text(
+                l10n.qiblaCompassErrorDetails(err.toString()),
+                textAlign: TextAlign.center,
+              ),
+            ),
             data: (qiblaState) {
               final trueHeading = qiblaState.trueHeading;
               final needleAngle =
@@ -339,7 +344,7 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
                           Expanded(
                             child: _buildValueCard(
                               context,
-                              'Qibla',
+                              l10n.qibla,
                               '${qiblaBearing.toStringAsFixed(1)}°',
                             ),
                           ),
@@ -347,7 +352,7 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
                           Expanded(
                             child: _buildValueCard(
                               context,
-                              'Heading',
+                              l10n.compass,
                               '${trueHeading.toStringAsFixed(1)}°',
                             ),
                           ),

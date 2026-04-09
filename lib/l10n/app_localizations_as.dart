@@ -330,6 +330,11 @@ class AppLocalizationsAs extends AppLocalizations {
   String get turnDevice => 'আপোনাৰ ডিভাইচটো Qibla ৰ ফালে ঘূৰাই দিয়ক';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'কম্পাছৰ ভুল: $error';
+  }
+
+  @override
   String get notifications => 'জাননীসমূহ';
 
   @override

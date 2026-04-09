@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "အတည်ပြုထားသော hadith စုဆောင်းမှုများကို မရရှိနိုင်သေးပါ။",
   "hadithUnavailableBody": "ဤတည်ဆောက်မှုသည် အတည်မပြုရသေးသော ပြင်ပဟဒီးသ်အဒ်အပေါ် မူတည်နေသေးသည်။ ရင်းမြစ်ဒေတာအစုံကို ထပ်တူပြုသည့်အချိန်အထိ Hadith ရှာဖွေခြင်းကို ပိတ်ထားသည်။",
   "appErrorOccurred": "အမှားအယွင်းတစ်ခု ဖြစ်ပွားခဲ့သည်။",
-  "appUnknownError": "အမည်မသိ အမှား"
+  "appUnknownError": "အမည်မသိ အမှား",
+  "qiblaCompassErrorDetails": "သံလိုက်အိမ်မြှောင် အမှား- {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Tasdiqlangan hadis to‘plamlari hozircha mavjud emas",
   "hadithUnavailableBody": "Bu tuzilish hali ham tasdiqlanmagan tashqi hadis tasmasiga bog'liq. Hadislarni koʻrib chiqish manba maʼlumotlar toʻplami sinxronlanmaguncha oʻchirib qoʻyiladi.",
   "appErrorOccurred": "Xatolik yuz berdi",
-  "appUnknownError": "Noma'lum xato"
+  "appUnknownError": "Noma'lum xato",
+  "qiblaCompassErrorDetails": "Kompas xatosi: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

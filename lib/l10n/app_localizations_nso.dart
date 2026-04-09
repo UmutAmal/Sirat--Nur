@@ -331,6 +331,11 @@ class AppLocalizationsNso extends AppLocalizations {
   String get turnDevice => 'Retolla sesebediswa sa hao ho tobana le Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Compass error: $error';
+  }
+
+  @override
   String get notifications => 'Ditsebišo';
 
   @override

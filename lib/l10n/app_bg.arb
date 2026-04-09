@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Все още не са налични проверени колекции от хадиси",
   "hadithUnavailableBody": "Тази компилация все още зависи от непотвърдена външна емисия на хадиси. Преглеждането на хадиси остава деактивирано, докато не бъде синхронизиран набор от данни.",
   "appErrorOccurred": "Възникна грешка",
-  "appUnknownError": "Неизвестна грешка"
+  "appUnknownError": "Неизвестна грешка",
+  "qiblaCompassErrorDetails": "Грешка в компаса: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

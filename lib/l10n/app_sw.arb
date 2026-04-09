@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Mkusanyiko wa Hadith zilizothibitishwa bado hazipatikani",
   "hadithUnavailableBody": "Muundo huu bado unategemea mlisho wa Hadith wa nje ambao haujathibitishwa. Uvinjari wa Hadith husalia kuzimwa hadi mkusanyiko wa data uliopatikana ulandanishwe.",
   "appErrorOccurred": "Hitilafu imetokea",
-  "appUnknownError": "Hitilafu isiyojulikana"
+  "appUnknownError": "Hitilafu isiyojulikana",
+  "qiblaCompassErrorDetails": "Hitilafu ya dira: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

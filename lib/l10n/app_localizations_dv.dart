@@ -332,6 +332,11 @@ class AppLocalizationsDv extends AppLocalizations {
   String get turnDevice => 'ޤިބްލާއާ ދިމާއަށް ޑިވައިސް އަނބުރާލާށެވެ';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'ކޮމްޕަސް އެރަރ: $error';
+  }
+
+  @override
   String get notifications => 'ނޮޓިފިކޭޝަންތައް';
 
   @override

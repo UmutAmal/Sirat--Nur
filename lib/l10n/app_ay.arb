@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Chiqapa hadith apthapitanakax janiw jichhakamax utjkiti",
   "hadithUnavailableBody": "Aka lurawix waliw mä jan chiqapar uñjat anqäx hadith manq’añat dependi. Hadith uñakipañax jan ch’amanchataw qhiparaski, mä fuente de datos ukan sincronización ukar puriñkama.",
   "appErrorOccurred": "Mä pantjasiwiw utjawayi",
-  "appUnknownError": "Jan uñt’at pantjasiwi"
+  "appUnknownError": "Jan uñt’at pantjasiwi",
+  "qiblaCompassErrorDetails": "Brújula ukan pantjasiwipa: {error} .",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

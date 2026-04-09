@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Geverifieerde hadith-versamelings is nog nie beskikbaar nie",
   "hadithUnavailableBody": "Hierdie bou is steeds afhanklik van 'n ongeverifieerde eksterne hadith-feed. Hadith-blaai bly gedeaktiveer totdat 'n brondatastel gesinkroniseer word.",
   "appErrorOccurred": "'n Fout het voorgekom",
-  "appUnknownError": "Onbekende fout"
+  "appUnknownError": "Onbekende fout",
+  "qiblaCompassErrorDetails": "Kompasfout: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

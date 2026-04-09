@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "የተረጋገጡ የሀዲስ ስብስቦች እስካሁን አይገኙም።",
   "hadithUnavailableBody": "ይህ ግንባታ አሁንም ባልተረጋገጠ የውጪ የሀዲስ ምግብ ላይ የተመሰረተ ነው። የተገኘ የውሂብ ስብስብ እስኪሰምር ድረስ የሃዲስ አሰሳ እንደተሰናከለ ይቆያል።",
   "appErrorOccurred": "ስህተት ተከስቷል።",
-  "appUnknownError": "ያልታወቀ ስህተት"
+  "appUnknownError": "ያልታወቀ ስህተት",
+  "qiblaCompassErrorDetails": "የኮምፓስ ስህተት፡ {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

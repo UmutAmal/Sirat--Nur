@@ -126,6 +126,14 @@
   "north": "Kuzey",
   "qiblaFound": "Kıble bulundu!",
   "turnDevice": "Kıbleye dönmek için cihazınızı çevirin",
+  "qiblaCompassErrorDetails": "Pusula hatası: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "notifications": "Bildirimler",
   "prayerNotifications": "Namaz Bildirimleri",
   "enableNotifications": "Bildirimleri Etkinleştir",

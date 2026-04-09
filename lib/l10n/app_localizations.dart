@@ -1114,6 +1114,12 @@ abstract class AppLocalizations {
   /// **'Turn your device to face the Qibla'**
   String get turnDevice;
 
+  /// No description provided for @qiblaCompassErrorDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Compass error: {error}'**
+  String qiblaCompassErrorDetails(String error);
+
   /// No description provided for @notifications.
   ///
   /// In en, this message translates to:

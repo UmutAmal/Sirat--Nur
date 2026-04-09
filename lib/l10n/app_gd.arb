@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Chan eil cruinneachaidhean hadith dearbhte rim faighinn fhathast",
   "hadithUnavailableBody": "Tha an togail seo fhathast an urra ri biadhadh hadith taobh a-muigh neo-dhearbhte. Bidh brobhsadh Hadith a’ fuireach ciorramach gus an tèid stòr-dàta a fhuaras a shioncronachadh.",
   "appErrorOccurred": "Thachair mearachd",
-  "appUnknownError": "Mearachd neo-aithnichte"
+  "appUnknownError": "Mearachd neo-aithnichte",
+  "qiblaCompassErrorDetails": "Mearachd a' chomais: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

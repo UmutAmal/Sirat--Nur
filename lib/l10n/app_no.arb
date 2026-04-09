@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Verifiserte hadith-samlinger er ikke tilgjengelige ennå",
   "hadithUnavailableBody": "Denne konstruksjonen avhenger fortsatt av en ubekreftet ekstern hadith-feed. Hadith-surfing forblir deaktivert til et hentet datasett synkroniseres.",
   "appErrorOccurred": "Det oppsto en feil",
-  "appUnknownError": "Ukjent feil"
+  "appUnknownError": "Ukjent feil",
+  "qiblaCompassErrorDetails": "Kompassfeil: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

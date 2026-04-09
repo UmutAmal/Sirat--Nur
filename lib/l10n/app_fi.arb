@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Vahvistetut hadith-kokoelmat eivät ole vielä saatavilla",
   "hadithUnavailableBody": "Tämä versio riippuu edelleen vahvistamattomasta ulkoisesta hadith-syötteestä. Hadith-selaus pysyy poissa käytöstä, kunnes lähdetietojoukko synkronoidaan.",
   "appErrorOccurred": "Tapahtui virhe",
-  "appUnknownError": "Tuntematon virhe"
+  "appUnknownError": "Tuntematon virhe",
+  "qiblaCompassErrorDetails": "Kompassivirhe: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

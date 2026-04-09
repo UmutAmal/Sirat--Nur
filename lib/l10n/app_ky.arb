@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Текшерилген хадис жыйнактары азырынча жеткиликтүү эмес",
   "hadithUnavailableBody": "Бул түзүлүшү дагы эле текшерилбеген тышкы хадис түрмөгүнөн көз каранды. Булактан алынган маалымат топтому шайкештирилмейинче, хадисти карап чыгуу өчүрүлгөн бойдон калат.",
   "appErrorOccurred": "Ката кетти",
-  "appUnknownError": "Белгисиз ката"
+  "appUnknownError": "Белгисиз ката",
+  "qiblaCompassErrorDetails": "Компас катасы: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

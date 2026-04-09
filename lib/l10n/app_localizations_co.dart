@@ -330,6 +330,11 @@ class AppLocalizationsCo extends AppLocalizations {
   String get turnDevice => 'Turn u vostru dispusitivu per affruntà u Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Errore di bussola: $error';
+  }
+
+  @override
   String get notifications => 'Notificazioni';
 
   @override

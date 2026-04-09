@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Ko nga kohinga hadith kua whakamanahia kaore ano kia waatea",
   "hadithUnavailableBody": "Kei te whakawhirinaki tonu tenei hanga ki te whangai hadith o waho kaore i whakamanahia. Ka noho monohia te tirotiro Hadith tae noa ki te tukutahia he huinga raraunga puna.",
   "appErrorOccurred": "I puta he hapa",
-  "appUnknownError": "Hapa kore mohio"
+  "appUnknownError": "Hapa kore mohio",
+  "qiblaCompassErrorDetails": "Hapa kāpehu: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -330,6 +330,11 @@ class AppLocalizationsKa extends AppLocalizations {
   String get turnDevice => 'მოაბრუნეთ თქვენი მოწყობილობა ქიბლასკენ';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'კომპასის შეცდომა: $error';
+  }
+
+  @override
   String get notifications => 'შეტყობინებები';
 
   @override

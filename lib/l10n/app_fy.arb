@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Ferifiearre hadith-kolleksjes binne noch net beskikber",
   "hadithUnavailableBody": "Dizze build is noch ôfhinklik fan in net ferifiearre eksterne hadith feed. Hadith-blêdzjen bliuwt útskeakele oant in boarne dataset wurdt syngronisearre.",
   "appErrorOccurred": "Der barde in flater",
-  "appUnknownError": "Unbekende flater"
+  "appUnknownError": "Unbekende flater",
+  "qiblaCompassErrorDetails": "Kompasflater: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

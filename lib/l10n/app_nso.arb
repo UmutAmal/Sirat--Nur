@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Dikgoboketšo tša hadith tše di netefaditšwego ga se tša hwetšagala ga bjale",
   "hadithUnavailableBody": "Go aga mo go sa ithekgile ka phepo ya hadith ya ka ntle yeo e sa netefatšwago. Go phetla Hadith go dula go šitišitšwe go fihlela sete ya data yeo e hweditšwego e nyalantšhwa.",
   "appErrorOccurred": "Go ile gwa direga phošo",
-  "appUnknownError": "Phošo yeo e sa tsebjego"
+  "appUnknownError": "Phošo yeo e sa tsebjego",
+  "qiblaCompassErrorDetails": "Compass error: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

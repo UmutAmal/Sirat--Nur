@@ -331,6 +331,11 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get turnDevice => 'Iturno ti device-mo tapno sumango iti Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Biddut ti kompas: $error .';
+  }
+
+  @override
   String get notifications => 'Dagiti Pakaammo';
 
   @override

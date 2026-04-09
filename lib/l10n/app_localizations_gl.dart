@@ -331,6 +331,11 @@ class AppLocalizationsGl extends AppLocalizations {
   String get turnDevice => 'Xire o dispositivo para enfrontarse á Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Erro do compás: $error';
+  }
+
+  @override
   String get notifications => 'Notificacións';
 
   @override

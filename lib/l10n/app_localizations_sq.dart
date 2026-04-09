@@ -331,6 +331,11 @@ class AppLocalizationsSq extends AppLocalizations {
   String get turnDevice => 'Kthejeni pajisjen tuaj në drejtim të Kiblës';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Gabim busull: $error';
+  }
+
+  @override
   String get notifications => 'Njoftimet';
 
   @override

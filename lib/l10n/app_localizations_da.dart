@@ -330,6 +330,11 @@ class AppLocalizationsDa extends AppLocalizations {
   String get turnDevice => 'Drej din enhed, så den vender mod Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Kompasfejl: $error';
+  }
+
+  @override
   String get notifications => 'Meddelelser';
 
   @override

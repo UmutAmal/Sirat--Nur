@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "পৰীক্ষিত হাদীছ সংগ্ৰহ এতিয়াও উপলব্ধ নহয়",
   "hadithUnavailableBody": "এই বিল্ড এতিয়াও এটা অপৰীক্ষিত বাহ্যিক হাদীছ ফিডৰ ওপৰত নিৰ্ভৰশীল। এটা উৎস ডাটাছেট সিঙ্ক নকৰালৈকে হাদীছ ব্ৰাউজিং নিষ্ক্ৰিয় হৈ থাকে।",
   "appErrorOccurred": "এটা ভুল হ’ল",
-  "appUnknownError": "অজ্ঞাত ভুল"
+  "appUnknownError": "অজ্ঞাত ভুল",
+  "qiblaCompassErrorDetails": "কম্পাছৰ ভুল: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

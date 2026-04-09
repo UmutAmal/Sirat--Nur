@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Расталған хадис жинақтары әлі қол жетімді емес",
   "hadithUnavailableBody": "Бұл құрастыру әлі де расталмаған сыртқы хадис арнасына байланысты. Хадистерді шолу бастапқы деректер жинағы синхрондалғанша өшірілген күйде қалады.",
   "appErrorOccurred": "Қате орын алды",
-  "appUnknownError": "Белгісіз қате"
+  "appUnknownError": "Белгісіз қате",
+  "qiblaCompassErrorDetails": "Компас қатесі: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -330,6 +330,11 @@ class AppLocalizationsFy extends AppLocalizations {
   String get turnDevice => 'Draai jo apparaat nei de Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Kompasflater: $error';
+  }
+
+  @override
   String get notifications => 'Notifikaasjes';
 
   @override

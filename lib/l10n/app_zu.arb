@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Amaqoqo ama-hadith aqinisekisiwe awatholakali okwamanje",
   "hadithUnavailableBody": "Lokhu kwakhiwa kusancike kokuphakelayo kwe-hadith yangaphandle engaqinisekisiwe. Ukuphequlula kwe-Hadith kuhlala kuvaliwe kuze kube yilapho isethi yedatha etholakalayo ivunyelaniswa.",
   "appErrorOccurred": "Kwenzeke iphutha",
-  "appUnknownError": "Iphutha elingaziwa"
+  "appUnknownError": "Iphutha elingaziwa",
+  "qiblaCompassErrorDetails": "Iphutha lekhampasi: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

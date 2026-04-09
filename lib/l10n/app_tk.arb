@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Barlanylan hadys ýygyndylary entek elýeterli däl",
   "hadithUnavailableBody": "Bu gurluş henizem tassyklanmadyk daşarky hadys iýmitine baglydyr. Hadyslara göz aýlamak, maglumat bazasy sinhronlanýança ýapyk bolýar.",
   "appErrorOccurred": "Erroralňyşlyk ýüze çykdy",
-  "appUnknownError": "Näbelli ýalňyşlyk"
+  "appUnknownError": "Näbelli ýalňyşlyk",
+  "qiblaCompassErrorDetails": "Kompas ýalňyşlygy: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "सत्यापित हदीस संग्रह अद्याप उपलब्ध नाहीत",
   "hadithUnavailableBody": "हे बिल्ड अजूनही असत्यापित बाह्य हदीस फीडवर अवलंबून आहे. स्त्रोत केलेला डेटासेट समक्रमित होईपर्यंत हदीथ ब्राउझिंग अक्षम राहते.",
   "appErrorOccurred": "एक त्रुटी आली",
-  "appUnknownError": "अज्ञात त्रुटी"
+  "appUnknownError": "अज्ञात त्रुटी",
+  "qiblaCompassErrorDetails": "कंपास त्रुटी: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "مجموعات الحديث التي تم التحقق منها ليست متاحة بعد",
   "hadithUnavailableBody": "لا يزال هذا البناء يعتمد على خلاصة حديث خارجية لم يتم التحقق منها. يظل تصفح الحديث معطلاً حتى تتم مزامنة مجموعة البيانات المصدر.",
   "appErrorOccurred": "حدث خطأ",
-  "appUnknownError": "خطأ غير معروف"
+  "appUnknownError": "خطأ غير معروف",
+  "qiblaCompassErrorDetails": "خطأ البوصلة: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

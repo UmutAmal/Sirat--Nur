@@ -330,6 +330,11 @@ class AppLocalizationsAr extends AppLocalizations {
   String get turnDevice => 'قم بتدوير جهازك لمواجهة القبلة';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'خطأ البوصلة: $error';
+  }
+
+  @override
   String get notifications => 'الإشعارات';
 
   @override

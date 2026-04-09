@@ -331,6 +331,11 @@ class AppLocalizationsBn extends AppLocalizations {
   String get turnDevice => 'কিবলার দিকে মুখ করতে আপনার ডিভাইস ঘুরান';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'কম্পাস ত্রুটি: $error';
+  }
+
+  @override
   String get notifications => 'নোটিফিকেশন';
 
   @override

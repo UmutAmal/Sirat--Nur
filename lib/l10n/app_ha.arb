@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Ba a samu ingantattun tarin hadisai ba tukuna",
   "hadithUnavailableBody": "Wannan ginin har yanzu ya dogara da ingantaccen abinci na hadisi na waje. Ana kashe binciken hadisi har sai an daidaita saitin bayanan da aka samo asali.",
   "appErrorOccurred": "An sami kuskure",
-  "appUnknownError": "Kuskuren da ba a sani ba"
+  "appUnknownError": "Kuskuren da ba a sani ba",
+  "qiblaCompassErrorDetails": "Kuskuren Compass: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -330,6 +330,11 @@ class AppLocalizationsHt extends AppLocalizations {
   String get turnDevice => 'Vire aparèy ou an pou fè fas a Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Erè konpa: $error';
+  }
+
+  @override
   String get notifications => 'Notifikasyon';
 
   @override

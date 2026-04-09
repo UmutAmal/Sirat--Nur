@@ -332,6 +332,11 @@ class AppLocalizationsBe extends AppLocalizations {
   String get turnDevice => 'Павярніце прыладу тварам да Кіблы';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Памылка компаса: $error';
+  }
+
+  @override
   String get notifications => 'Апавяшчэнні';
 
   @override

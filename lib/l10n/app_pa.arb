@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "ਪ੍ਰਮਾਣਿਤ ਹਦੀਸ ਸੰਗ੍ਰਹਿ ਅਜੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ",
   "hadithUnavailableBody": "ਇਹ ਬਿਲਡ ਅਜੇ ਵੀ ਗੈਰ-ਪ੍ਰਮਾਣਿਤ ਬਾਹਰੀ ਹਦੀਸ ਫੀਡ 'ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ। ਹਦੀਸ ਬ੍ਰਾਊਜ਼ਿੰਗ ਉਦੋਂ ਤੱਕ ਅਸਮਰੱਥ ਰਹਿੰਦੀ ਹੈ ਜਦੋਂ ਤੱਕ ਇੱਕ ਸਰੋਤ ਕੀਤੇ ਡੇਟਾਸੈਟ ਨੂੰ ਸਿੰਕ ਨਹੀਂ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।",
   "appErrorOccurred": "ਇੱਕ ਤਰੁੱਟੀ ਉਤਪੰਨ ਹੋਈ",
-  "appUnknownError": "ਅਗਿਆਤ ਤਰੁੱਟੀ"
+  "appUnknownError": "ਅਗਿਆਤ ਤਰੁੱਟੀ",
+  "qiblaCompassErrorDetails": "ਕੰਪਾਸ ਗਲਤੀ: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

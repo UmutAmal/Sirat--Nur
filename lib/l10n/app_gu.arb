@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "ચકાસાયેલ હદીસ સંગ્રહ હજુ ઉપલબ્ધ નથી",
   "hadithUnavailableBody": "આ બિલ્ડ હજુ પણ વણચકાસાયેલ બાહ્ય હદીસ ફીડ પર આધાર રાખે છે. જ્યાં સુધી સ્રોત ડેટાસેટ સમન્વયિત ન થાય ત્યાં સુધી હદીસ બ્રાઉઝિંગ અક્ષમ રહે છે.",
   "appErrorOccurred": "એક ભૂલ આવી",
-  "appUnknownError": "અજાણી ભૂલ"
+  "appUnknownError": "અજાણી ભૂલ",
+  "qiblaCompassErrorDetails": "કંપાસ ભૂલ: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

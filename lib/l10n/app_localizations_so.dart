@@ -330,6 +330,11 @@ class AppLocalizationsSo extends AppLocalizations {
   String get turnDevice => 'Turn your device to face the Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Cilad kambaska: $error';
+  }
+
+  @override
   String get notifications => 'Notifications';
 
   @override

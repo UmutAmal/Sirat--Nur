@@ -45,6 +45,23 @@ void main() {
     );
   }
 
+  Widget createErrorWidgetUnderTest(SharedPreferences prefs, {Locale? locale}) {
+    return ProviderScope(
+      overrides: [
+        sharedPreferencesProvider.overrideWithValue(prefs),
+        qiblaSensorProvider.overrideWith(
+          (ref) => Stream<QiblaOrientation>.error(Exception('Sensor unavailable')),
+        ),
+      ],
+      child: MaterialApp(
+        locale: locale,
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: const QiblaPage(),
+      ),
+    );
+  }
+
   group('QiblaPage Tests', () {
     testWidgets('Renders compass and direction label', (tester) async {
       tester.view.physicalSize = const Size(
@@ -61,6 +78,17 @@ void main() {
 
       // Expect to see the compass or the Qibla string
       expect(find.textContaining('Qibla'), findsWidgets);
+    });
+
+    testWidgets('Localizes compass errors in Turkish', (tester) async {
+      final prefs = await SharedPreferences.getInstance();
+      await tester.pumpWidget(
+        createErrorWidgetUnderTest(prefs, locale: const Locale('tr')),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.textContaining('Pusula hatası:'), findsOneWidget);
+      expect(find.textContaining('Sensor unavailable'), findsOneWidget);
     });
   });
 }

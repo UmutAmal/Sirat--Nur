@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Kontrolitaj hadito-kolektoj ankoraŭ ne haveblas",
   "hadithUnavailableBody": "Ĉi tiu konstruo daŭre dependas de nekontrolita ekstera hadito-fluo. Hadith-retumado restas malŝaltita ĝis fontita datumaro estas sinkronigita.",
   "appErrorOccurred": "Eraro okazis",
-  "appUnknownError": "Nekonata eraro"
+  "appUnknownError": "Nekonata eraro",
+  "qiblaCompassErrorDetails": "Kompaseraro: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

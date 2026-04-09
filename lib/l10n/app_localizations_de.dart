@@ -332,6 +332,11 @@ class AppLocalizationsDe extends AppLocalizations {
       'Drehen Sie Ihr Gerät so, dass es der Qibla zugewandt ist';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Kompassfehler: $error';
+  }
+
+  @override
   String get notifications => 'Benachrichtigungen';
 
   @override

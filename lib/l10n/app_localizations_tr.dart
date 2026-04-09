@@ -330,6 +330,11 @@ class AppLocalizationsTr extends AppLocalizations {
   String get turnDevice => 'Kıbleye dönmek için cihazınızı çevirin';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Pusula hatası: $error';
+  }
+
+  @override
   String get notifications => 'Bildirimler';
 
   @override

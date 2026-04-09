@@ -332,6 +332,11 @@ class AppLocalizationsGn extends AppLocalizations {
   String get turnDevice => 'Embojere nde tembipuru embohovake hag̃ua Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Brújula jejavy: $error .';
+  }
+
+  @override
   String get notifications => 'Marandukuéra';
 
   @override

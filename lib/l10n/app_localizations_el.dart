@@ -331,6 +331,11 @@ class AppLocalizationsEl extends AppLocalizations {
   String get turnDevice => 'Γυρίστε τη συσκευή σας προς την Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Σφάλμα πυξίδας: $error';
+  }
+
+  @override
   String get notifications => 'Ειδοποιήσεις';
 
   @override

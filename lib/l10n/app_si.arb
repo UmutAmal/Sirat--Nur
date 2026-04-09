@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "සත්‍යාපිත හදීස් එකතු කිරීම් තවම නොමැත",
   "hadithUnavailableBody": "මෙම ගොඩනැගීම තවමත් සත්‍යාපනය නොකළ බාහිර හදීස් සංග්‍රහයක් මත රඳා පවතී. මූලාශ්‍ර දත්ත කට්ටලයක් සමමුහුර්ත වන තෙක් හදීස් බ්‍රවුස් කිරීම අක්‍රියව පවතී.",
   "appErrorOccurred": "දෝෂයක් සිදු විය",
-  "appUnknownError": "නොදන්නා දෝෂයකි"
+  "appUnknownError": "නොදන්නා දෝෂයකි",
+  "qiblaCompassErrorDetails": "මාලිමා දෝෂය: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

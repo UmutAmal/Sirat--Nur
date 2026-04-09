@@ -332,6 +332,11 @@ class AppLocalizationsHy extends AppLocalizations {
   String get turnDevice => 'Ձեր սարքը դարձրեք դեպի Քիբլան';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Կողմնացույցի սխալ՝ $error';
+  }
+
+  @override
   String get notifications => 'Ծանուցումներ';
 
   @override

@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Colecțiile verificate de hadith nu sunt încă disponibile",
   "hadithUnavailableBody": "Această construcție depinde în continuare de un flux de hadith extern neverificat. Navigarea Hadith rămâne dezactivată până când un set de date sursă este sincronizat.",
   "appErrorOccurred": "A apărut o eroare",
-  "appUnknownError": "Eroare necunoscută"
+  "appUnknownError": "Eroare necunoscută",
+  "qiblaCompassErrorDetails": "Eroare busola: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

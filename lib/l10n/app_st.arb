@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Lipokello tsa hadith tse netefalitsoeng ha li so fumanehe",
   "hadithUnavailableBody": "Kaho ena e ntse e itšetlehile ka phepelo ea hadith e sa netefatsoang. Mokhoa oa ho bala oa Hadith o lula o koalehile ho fihlela dataset ea mohloli o hokahanngoa.",
   "appErrorOccurred": "Phoso e etsahetse",
-  "appUnknownError": "Phoso e sa tsejoeng"
+  "appUnknownError": "Phoso e sa tsejoeng",
+  "qiblaCompassErrorDetails": "Phoso ea sesupa-tsela: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

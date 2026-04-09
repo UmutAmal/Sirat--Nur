@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "ಪರಿಶೀಲಿಸಿದ ಹದೀಸ್ ಸಂಗ್ರಹಗಳು ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ",
   "hadithUnavailableBody": "ಈ ನಿರ್ಮಾಣವು ಇನ್ನೂ ಪರಿಶೀಲಿಸದ ಬಾಹ್ಯ ಹದೀಸ್ ಫೀಡ್ ಅನ್ನು ಅವಲಂಬಿಸಿರುತ್ತದೆ. ಮೂಲ ಡೇಟಾಸೆಟ್ ಸಿಂಕ್ ಆಗುವವರೆಗೆ ಹದೀಸ್ ಬ್ರೌಸಿಂಗ್ ನಿಷ್ಕ್ರಿಯವಾಗಿರುತ್ತದೆ.",
   "appErrorOccurred": "ದೋಷ ಸಂಭವಿಸಿದೆ",
-  "appUnknownError": "ಅಜ್ಞಾತ ದೋಷ"
+  "appUnknownError": "ಅಜ್ಞಾತ ದೋಷ",
+  "qiblaCompassErrorDetails": "ದಿಕ್ಸೂಚಿ ದೋಷ: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

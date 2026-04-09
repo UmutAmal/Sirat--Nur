@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "検証済みのハディース コレクションはまだ利用できません",
   "hadithUnavailableBody": "このビルドはまだ未検証の外部ハディース フィードに依存しています。ハディース ブラウジングは、ソース データセットが同期されるまで無効のままです。",
   "appErrorOccurred": "エラーが発生しました",
-  "appUnknownError": "不明なエラー"
+  "appUnknownError": "不明なエラー",
+  "qiblaCompassErrorDetails": "コンパス エラー: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -3380,3 +3380,43 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/qibla/qibla_page.dart) üzerindeki `Compass Error` hardcoded hata yüzeyi ele alınacak.
 - Ardından [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_list_page.dart) ve kalan low-surface hardcoded metinler yeniden sıralanacak.
+
+## 2026-04-09 TUR-86 — Localize Qibla Error Surface
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/qibla/qibla_page.dart) içindeki hardcoded `Compass Error` dalı localization zincirine taşındı ve değer kartlarındaki sabit `Qibla` / `Heading` etiketleri mevcut `qibla` ve `compass` anahtarlarına bağlandı.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) içine placeholder’lı `qiblaCompassErrorDetails` anahtarı eklendi.
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force qiblaCompassErrorDetails` ile çalıştırıldı ve tüm locale setine yayıldı.
+- [A:\Way of Allah\sirat_i_nur\test\features\qibla\qibla_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/qibla/qibla_page_test.dart) genişletildi; Türkçe hata yüzeyi doğrulandı. [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) broad guard ile güncellendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart#L76](A:/Way%20of%20Allah/sirat_i_nur/lib/features/qibla/qibla_page.dart#L76), [A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart#L291](A:/Way%20of%20Allah/sirat_i_nur/lib/features/qibla/qibla_page.dart#L291) ve [A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart#L299](A:/Way%20of%20Allah/sirat_i_nur/lib/features/qibla/qibla_page.dart#L299) Qibla ekranında hâlâ İngilizce hardcoded hata ve kart etiketi kullandığını gösterdi.
+- Bu yüzey sensör hatasında doğrudan kullanıcıya gösterildiği için hata anında dürüst ama yerelleşmiş mesaj vermek kritik oldu.
+- Rare-locale self-heal turunda `ak/tw` varyantlarının İngilizce residual taşıdığı görüldü; mevcut sibling hata kalıbıyla uyumlu `Compass mfomso: {error}` satırı manuel kapatıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\qibla\qibla_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `qiblaCompassErrorDetails` için İngilizce fallback sayısı `195`ten `71`e düştü.
+- Priority locale seti Qibla hata yüzeyinde artık İngilizce fallback göstermiyor.
+- Qibla değer kartları mevcut yerelleştirilmiş `qibla` ve `compass` anahtarlarını kullandığı için aynı ekran içinde terminoloji tutarlı hale geldi.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart --force qiblaCompassErrorDetails` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/features/qibla/qibla_page_test.dart` → PASS (`2/2`)
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`14/14`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`197/197`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Qibla screen still exposes hardcoded English error feedback: `12/25 → 4/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_list_page.dart) içindeki `No hadiths found here.` residual yüzeyi ele alınacak.
+- Ardından [A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/zikr/zikr_page.dart) üzerindeki `Completed! MashAllah` hardcoded başarı metni için aynı loop açılacak.

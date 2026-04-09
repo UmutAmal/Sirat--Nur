@@ -331,6 +331,11 @@ class AppLocalizationsKri extends AppLocalizations {
   String get turnDevice => 'Turn yu divais fo fes di Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Kɔmpas mistek: $error .';
+  }
+
+  @override
   String get notifications => 'Notis dɛn we dɛn kin gi';
 
   @override

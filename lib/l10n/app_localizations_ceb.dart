@@ -330,6 +330,11 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get turnDevice => 'Ibalik ang imong device aron mag-atubang sa Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Error sa kompas: $error';
+  }
+
+  @override
   String get notifications => 'Mga pahibalo';
 
   @override

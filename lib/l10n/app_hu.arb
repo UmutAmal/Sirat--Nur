@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Az ellenőrzött hadíszgyűjtemények még nem állnak rendelkezésre",
   "hadithUnavailableBody": "Ez a build továbbra is egy ellenőrizetlen külső hadísz hírfolyamtól függ. A hadísz-böngészés le van tiltva a forrásból származó adatkészlet szinkronizálásáig.",
   "appErrorOccurred": "Hiba történt",
-  "appUnknownError": "Ismeretlen hiba"
+  "appUnknownError": "Ismeretlen hiba",
+  "qiblaCompassErrorDetails": "Iránytű hiba: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

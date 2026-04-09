@@ -330,6 +330,11 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get turnDevice => 'E hoʻohuli i kāu kelepona e alo i ka Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Kuwahe ka panana panana: $error';
+  }
+
+  @override
   String get notifications => 'Hoolaha';
 
   @override

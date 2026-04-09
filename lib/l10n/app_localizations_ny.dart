@@ -331,6 +331,11 @@ class AppLocalizationsNy extends AppLocalizations {
       'Sinthani chipangizo chanu kuti chiyang\'ane ndi Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Vuto la Kampasi: $error';
+  }
+
+  @override
   String get notifications => 'Zidziwitso';
 
   @override

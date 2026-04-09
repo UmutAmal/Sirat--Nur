@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "אוספי חדית' מאומתים אינם זמינים עדיין",
   "hadithUnavailableBody": "המבנה הזה עדיין תלוי בפיד חדית' חיצוני לא מאומת. הגלישה בחדית' נשארת מושבתת עד שמסנכרן מערך נתונים ממקור.",
   "appErrorOccurred": "אירעה שגיאה",
-  "appUnknownError": "שגיאה לא ידועה"
+  "appUnknownError": "שגיאה לא ידועה",
+  "qiblaCompassErrorDetails": "שגיאת מצפן: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

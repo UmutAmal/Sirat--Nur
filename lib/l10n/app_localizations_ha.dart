@@ -330,6 +330,11 @@ class AppLocalizationsHa extends AppLocalizations {
   String get turnDevice => 'Juya na\'urarka don fuskantar alÆ™ibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Kuskuren Compass: $error';
+  }
+
+  @override
   String get notifications => 'Sanarwa';
 
   @override

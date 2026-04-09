@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Тикшерелгән хәдис коллекцияләре әлегә юк",
   "hadithUnavailableBody": "Бу төзү әле расланмаган тышкы хәдис азыкына бәйле. Хәдисне карау, мәгълүматлар базасы синхронланганчы инвалид булып кала.",
   "appErrorOccurred": "Хата килеп чыкты",
-  "appUnknownError": "Билгесез хата"
+  "appUnknownError": "Билгесез хата",
+  "qiblaCompassErrorDetails": "Компас хата: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

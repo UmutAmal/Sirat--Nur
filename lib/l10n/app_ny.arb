@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Zopereka zotsimikizika za hadith sizinapezekebe",
   "hadithUnavailableBody": "Kumanga uku kumadalirabe chakudya cha hadith chosatsimikizika. Kusakatula kwa Hadith kumakhala kozimitsidwa mpaka dataset yochokera kulumikizidwa.",
   "appErrorOccurred": "Zalakwika",
-  "appUnknownError": "Cholakwika chosadziwika"
+  "appUnknownError": "Cholakwika chosadziwika",
+  "qiblaCompassErrorDetails": "Vuto la Kampasi: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

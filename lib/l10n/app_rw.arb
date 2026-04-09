@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Ibyegeranyo bya Hadithi byemejwe ntibiraboneka",
   "hadithUnavailableBody": "Iyi nyubako iracyaterwa nigaburo rya Hadithi yo hanze itagenzuwe. Gushakisha Hadith bigumaho kugeza igihe dataset ikomoka.",
   "appErrorOccurred": "Habayeho ikosa",
-  "appUnknownError": "Ikosa ritazwi"
+  "appUnknownError": "Ikosa ritazwi",
+  "qiblaCompassErrorDetails": "Ikosa rya compass: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

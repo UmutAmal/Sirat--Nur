@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Bộ sưu tập hadith đã được xác minh chưa có sẵn",
   "hadithUnavailableBody": "Bản dựng này vẫn phụ thuộc vào nguồn cấp dữ liệu hadith bên ngoài chưa được xác minh. Trình duyệt Hadith vẫn bị vô hiệu hóa cho đến khi tập dữ liệu có nguồn gốc được đồng bộ hóa.",
   "appErrorOccurred": "Đã xảy ra lỗi",
-  "appUnknownError": "Lỗi không xác định"
+  "appUnknownError": "Lỗi không xác định",
+  "qiblaCompassErrorDetails": "Lỗi la bàn: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

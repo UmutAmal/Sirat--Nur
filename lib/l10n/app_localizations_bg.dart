@@ -332,6 +332,11 @@ class AppLocalizationsBg extends AppLocalizations {
   String get turnDevice => 'Обърнете устройството си с лице към Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Грешка в компаса: $error';
+  }
+
+  @override
   String get notifications => 'Известия';
 
   @override

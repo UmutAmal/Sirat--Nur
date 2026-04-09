@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Les collections de hadiths vérifiées ne sont pas encore disponibles",
   "hadithUnavailableBody": "Cette version dépend toujours d'un flux de hadith externe non vérifié. La navigation dans les hadiths reste désactivée jusqu'à ce qu'un ensemble de données source soit synchronisé.",
   "appErrorOccurred": "Une erreur s'est produite",
-  "appUnknownError": "Erreur inconnue"
+  "appUnknownError": "Erreur inconnue",
+  "qiblaCompassErrorDetails": "Erreur de boussole : {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

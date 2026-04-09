@@ -331,6 +331,11 @@ class AppLocalizationsGa extends AppLocalizations {
       'Cas ar do ghléas chun aghaidh a thabhairt ar an Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Earráid chompáis: $error';
+  }
+
+  @override
   String get notifications => 'Fógraí';
 
   @override

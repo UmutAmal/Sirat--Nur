@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "د حدیثو تصدیق شوي ټولګه لا تر اوسه شتون نلري",
   "hadithUnavailableBody": "دا جوړښت لاهم په غیر تصدیق شوي بهرني حدیث فیډ پورې اړه لري. د حدیث لټون کول غیر فعال پاتې کیږي تر هغه چې سرچینه شوي ډیټاسیټ همغږي نشي.",
   "appErrorOccurred": "یوه تېروتنه رامنځته شوه",
-  "appUnknownError": "نامعلومه تېروتنه"
+  "appUnknownError": "نامعلومه تېروتنه",
+  "qiblaCompassErrorDetails": "د کمپاس تېروتنه: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

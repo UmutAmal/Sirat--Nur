@@ -332,6 +332,11 @@ class AppLocalizationsCa extends AppLocalizations {
   String get turnDevice => 'Gireu el vostre dispositiu de cara a la Qibla';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Error de brúixola: $error';
+  }
+
+  @override
   String get notifications => 'Notificacions';
 
   @override

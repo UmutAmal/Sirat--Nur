@@ -330,6 +330,11 @@ class AppLocalizationsBm extends AppLocalizations {
   String get turnDevice => 'Aw bɛ aw ka minɛn wuli ka ɲɛsin Qibla ma';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'Compass error: $error';
+  }
+
+  @override
   String get notifications => 'Ladɔnniyaliw';
 
   @override

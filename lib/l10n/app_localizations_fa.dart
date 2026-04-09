@@ -330,6 +330,11 @@ class AppLocalizationsFa extends AppLocalizations {
   String get turnDevice => 'دستگاه خود را به سمت قبله بچرخانید';
 
   @override
+  String qiblaCompassErrorDetails(String error) {
+    return 'خطای قطب نما: $error';
+  }
+
+  @override
   String get notifications => 'اعلان‌ها';
 
   @override

@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Ebikuŋŋaanyizo bya hadith ebikakasibwa tebinnaba kufunibwa",
   "hadithUnavailableBody": "Okuzimba kuno kukyasinziira ku feed ya hadith ey’ebweru etakakasiddwa. Okulambula Hadith kusigala nga kulemeseddwa okutuusa nga dataset evuddemu ekwataganye.",
   "appErrorOccurred": "Ensobi ebaddewo",
-  "appUnknownError": "Ensobi etamanyiddwa"
+  "appUnknownError": "Ensobi etamanyiddwa",
+  "qiblaCompassErrorDetails": "Ensobi mu kampasi: {error} .",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }

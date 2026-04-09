@@ -528,5 +528,13 @@
   "hadithUnavailableTitle": "Patvirtintos haditų kolekcijos dar nepasiekiamos",
   "hadithUnavailableBody": "Ši konstrukcija vis dar priklauso nuo nepatvirtinto išorinio haditų sklaidos kanalo. Hadith naršymas lieka išjungtas, kol nebus sinchronizuojamas šaltinio duomenų rinkinys.",
   "appErrorOccurred": "Įvyko klaida",
-  "appUnknownError": "Nežinoma klaida"
+  "appUnknownError": "Nežinoma klaida",
+  "qiblaCompassErrorDetails": "Kompaso klaida: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  }
 }
