@@ -761,25 +761,25 @@ class AppLocalizationsBho extends AppLocalizations {
       'कैलिब्रेशन के जरूरत बा। चित्र-8 में डिवाइस के घुमावल जाला।';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => 'दैनिक छंद के बा';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'आज के इबादा के बा';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => 'त्वरित पहुँच के बारे में बतावल गइल बा';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'सहायक';
 
   @override
-  String get places => 'Places';
+  String get places => 'जगह';
 
   @override
-  String get library => 'Library';
+  String get library => 'पुस्तकालय';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'विश्लेषणात्मकता के बारे में बतावल गइल बा';
 
   @override
   String get dailyDuas => 'रोजाना दुआस के बा';
@@ -839,7 +839,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'इस्लामी शिक्षा के बारे में बतावल गइल बा';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

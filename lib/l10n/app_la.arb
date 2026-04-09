@@ -290,10 +290,10 @@
   "qiblaAligned": "Qibla Aligned",
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibration required. Rotate device in figure-8.",
-  "dailyVerse": "Daily Verse",
-  "todaysIbadah": "Today's Ibadah",
-  "quickAccess": "Quick Access",
-  "assistant": "Assistant",
+  "dailyVerse": "Quotidie Versus",
+  "todaysIbadah": "Hodie Ibadah",
+  "quickAccess": "Velox Access",
+  "assistant": "Suffragium",
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
@@ -306,7 +306,7 @@
       }
     }
   },
-  "islamicEducation": "Islamic Education",
+  "islamicEducation": "Education islamica",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Hadith Collections",
   "paywallUnlockAll": "Unlock all features for your spiritual journey",

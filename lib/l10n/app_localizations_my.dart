@@ -760,25 +760,25 @@ class AppLocalizationsMy extends AppLocalizations {
       'Calibration required. Rotate device in figure-8.';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => 'နေ့စဉ်ကျမ်းပိုဒ်';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'ယနေ့ အီဗဒ';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => 'အမြန်ဝင်ရောက်ပါ။';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'လက်ထောက်';
 
   @override
-  String get places => 'Places';
+  String get places => 'နေရာများ';
 
   @override
-  String get library => 'Library';
+  String get library => 'စာကြည့်တိုက်';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'ပိုင်းခြားစိတ်ဖြာပါ။';
 
   @override
   String get dailyDuas => 'နေ့စဉ် Duas';
@@ -839,7 +839,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'အစ္စလာမ့်ပညာရေး';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

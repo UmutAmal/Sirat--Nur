@@ -37,6 +37,29 @@ void main() {
         );
       }
     });
+
+    test('priority locales do not fall back to English for home dashboard copy', () {
+      const localizedKeys = [
+        'dailyVerse',
+        'todaysIbadah',
+        'quickAccess',
+        'places',
+        'library',
+        'islamicEducation',
+      ];
+
+      for (final locale in priorityLocales) {
+        final arb = _readArb('lib/l10n/app_$locale.arb');
+
+        for (final key in localizedKeys) {
+          expect(
+            arb[key],
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+        }
+      }
+    });
   });
 }
 

@@ -291,12 +291,12 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibration required. Rotate device in figure-8.",
   "dailyVerse": "Daily Verse",
-  "todaysIbadah": "Today's Ibadah",
-  "quickAccess": "Quick Access",
-  "assistant": "Assistant",
-  "places": "Places",
-  "library": "Library",
-  "analytics": "Analytics",
+  "todaysIbadah": "Бүгүнкү Ибадат",
+  "quickAccess": "Ыкчам жетүү",
+  "assistant": "Жардамчы",
+  "places": "жерлер",
+  "library": "Китепкана",
+  "analytics": "Аналитика",
   "dailyDuas": "Күнүмдүк дуалар",
   "essentialDuas": "{count} маанилүү дуалар",
   "@essentialDuas": {
@@ -306,7 +306,7 @@
       }
     }
   },
-  "islamicEducation": "Islamic Education",
+  "islamicEducation": "Ислам билими",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Хадис жыйнактары",
   "paywallUnlockAll": "Unlock all features for your spiritual journey",

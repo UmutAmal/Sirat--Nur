@@ -290,13 +290,13 @@
   "qiblaAligned": "Qibla Aligned a ni",
   "rotateToFindQibla": "Qibla zawng turin rotate rawh",
   "calibrationRequiredFigure8": "Calibration a ngai a ni. Figure-8-a device chu rotate rawh.",
-  "dailyVerse": "Daily Verse",
-  "todaysIbadah": "Today's Ibadah",
-  "quickAccess": "Quick Access",
-  "assistant": "Assistant",
-  "places": "Places",
+  "dailyVerse": "Nitin Châng",
+  "todaysIbadah": "Vawiin kan Ibadah",
+  "quickAccess": "Quick Access a ni",
+  "assistant": "Tanpuitu",
+  "places": "Hmun",
   "library": "Library",
-  "analytics": "Analytics",
+  "analytics": "Analytics lam thil a ni",
   "dailyDuas": "Nitin Duas",
   "essentialDuas": "{count} essential duas",
   "@essentialDuas": {
@@ -306,7 +306,7 @@
       }
     }
   },
-  "islamicEducation": "Islamic Education",
+  "islamicEducation": "Islamic Zirna",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Hadith khawlkhawm te",
   "paywallUnlockAll": "Unlock all features for your spiritual journey",

@@ -763,16 +763,16 @@ class AppLocalizationsSn extends AppLocalizations {
   String get dailyVerse => 'Daily Verse';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'Nhasi Ibadah';
 
   @override
   String get quickAccess => 'Quick Access';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'Mubatsiri';
 
   @override
-  String get places => 'Places';
+  String get places => 'Nzvimbo';
 
   @override
   String get library => 'Library';
@@ -838,7 +838,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Dzidzo yechiIslam';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

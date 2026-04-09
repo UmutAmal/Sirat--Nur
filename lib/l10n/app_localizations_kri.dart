@@ -759,25 +759,25 @@ class AppLocalizationsKri extends AppLocalizations {
       'Kalibreshɔn nid fɔ de. Rotate divays na figa-8.';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => 'Vas we dɛn kin yuz ɛvride';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'Tide na Ibadah';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => 'Kwik Akses';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'Pɔsin we de ɛp';
 
   @override
-  String get places => 'Places';
+  String get places => 'Ples dɛn';
 
   @override
-  String get library => 'Library';
+  String get library => 'Laybri';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Analitiks fɔ du tin';
 
   @override
   String get dailyDuas => 'Duas ɛvride';
@@ -837,7 +837,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Islamik Ɛdyukeshɔn';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

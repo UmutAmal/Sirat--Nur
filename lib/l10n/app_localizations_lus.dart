@@ -762,25 +762,25 @@ class AppLocalizationsLus extends AppLocalizations {
       'Calibration a ngai a ni. Figure-8-a device chu rotate rawh.';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => 'Nitin Châng';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'Vawiin kan Ibadah';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => 'Quick Access a ni';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'Tanpuitu';
 
   @override
-  String get places => 'Places';
+  String get places => 'Hmun';
 
   @override
   String get library => 'Library';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Analytics lam thil a ni';
 
   @override
   String get dailyDuas => 'Nitin Duas';
@@ -840,7 +840,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Islamic Zirna';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

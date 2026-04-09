@@ -765,25 +765,25 @@ class AppLocalizationsIlo extends AppLocalizations {
       'Masapul ti kalibrasion. I-rotate ti device iti figure-8.';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => 'Inaldaw a Bersikulo';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'Ibadah ita nga aldaw';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => 'Napartak a Pannakagun-od';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'Mangbaddang';
 
   @override
-  String get places => 'Places';
+  String get places => 'Dagiti lugar';
 
   @override
-  String get library => 'Library';
+  String get library => 'Biblioteka';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Analitika';
 
   @override
   String get dailyDuas => 'Inaldaw a Duas';
@@ -843,7 +843,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Islamiko nga Edukasion';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

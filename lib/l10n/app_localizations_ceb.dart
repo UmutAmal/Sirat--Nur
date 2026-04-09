@@ -761,19 +761,19 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Calibration required. Rotate device in figure-8.';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => 'Adlaw-adlaw nga Bersikulo';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'Ibadah karon';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => 'Dali nga Pag-access';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'Katabang';
 
   @override
-  String get places => 'Places';
+  String get places => 'Mga dapit';
 
   @override
   String get library => 'Library';
@@ -840,7 +840,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Edukasyon sa Islam';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

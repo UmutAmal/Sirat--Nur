@@ -762,22 +762,22 @@ class AppLocalizationsGd extends AppLocalizations {
       'Calibration required. Rotate device in figure-8.';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => 'Rann làitheil';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'Ibadah an-diugh';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => 'Cothrom luath';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'Neach-cuideachaidh';
 
   @override
-  String get places => 'Places';
+  String get places => 'Àiteachan';
 
   @override
-  String get library => 'Library';
+  String get library => 'Leabharlann';
 
   @override
   String get analytics => 'Analytics';
@@ -841,7 +841,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Foghlam Ioslamach';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

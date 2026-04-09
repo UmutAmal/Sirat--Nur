@@ -762,22 +762,22 @@ class AppLocalizationsHmn extends AppLocalizations {
       'Calibration yuav tsum tau. Tig lub cuab yeej hauv daim duab-8.';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => 'Txhua Hnub Verse';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'Hnub no yog Ibadah';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => 'Kev nkag ceev';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'Tus pab';
 
   @override
-  String get places => 'Places';
+  String get places => 'Qhov chaw';
 
   @override
-  String get library => 'Library';
+  String get library => 'Lub tsev qiv ntawv';
 
   @override
   String get analytics => 'Analytics';
@@ -840,7 +840,7 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Kev Kawm Islamic';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

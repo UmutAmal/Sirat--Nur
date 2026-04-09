@@ -761,25 +761,25 @@ class AppLocalizationsMai extends AppLocalizations {
       'अंशांकन आवश्यक। चित्र-8 मे डिवाइस घुमाउ।';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => 'दैनिक छंद';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'आजुक इबादा';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => 'त्वरित पहुँच';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'सहायक';
 
   @override
-  String get places => 'Places';
+  String get places => 'जगह';
 
   @override
-  String get library => 'Library';
+  String get library => 'पुस्तकालय';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'विश्लेषणात्मकता';
 
   @override
   String get dailyDuas => 'दैनिक दुआस';
@@ -839,7 +839,7 @@ class AppLocalizationsMai extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'इस्लामी शिक्षा';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

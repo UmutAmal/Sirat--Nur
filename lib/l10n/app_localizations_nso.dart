@@ -768,25 +768,25 @@ class AppLocalizationsNso extends AppLocalizations {
       'Go nyakega ga go lekanya. Dikološa sesebediswa ka setšoantšo-8.';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => 'Temana ya Letšatši le Letšatši';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'Ibadah ya lehono';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => 'Phihlelelo ya Kapejana';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'Mothuši';
 
   @override
-  String get places => 'Places';
+  String get places => 'Mafelo';
 
   @override
-  String get library => 'Library';
+  String get library => 'Bokgobapuku';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Ditshekatsheko';
 
   @override
   String get dailyDuas => 'Duas ya letšatši le letšatši';
@@ -847,7 +847,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Thuto ya Boiselamo';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

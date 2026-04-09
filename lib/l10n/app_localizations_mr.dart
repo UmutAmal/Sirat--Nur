@@ -760,25 +760,25 @@ class AppLocalizationsMr extends AppLocalizations {
       'Calibration required. Rotate device in figure-8.';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => 'दैनिक श्लोक';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'आजचा इबादा';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => 'द्रुत प्रवेश';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'सहाय्यक';
 
   @override
-  String get places => 'Places';
+  String get places => 'ठिकाणे';
 
   @override
-  String get library => 'Library';
+  String get library => 'लायब्ररी';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'विश्लेषण';
 
   @override
   String get dailyDuas => 'रोजची दुआ';
@@ -838,7 +838,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'इस्लामिक शिक्षण';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

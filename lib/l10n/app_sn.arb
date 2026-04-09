@@ -291,10 +291,10 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibration required. Rotate device in figure-8.",
   "dailyVerse": "Daily Verse",
-  "todaysIbadah": "Today's Ibadah",
+  "todaysIbadah": "Nhasi Ibadah",
   "quickAccess": "Quick Access",
-  "assistant": "Assistant",
-  "places": "Places",
+  "assistant": "Mubatsiri",
+  "places": "Nzvimbo",
   "library": "Library",
   "analytics": "Analytics",
   "dailyDuas": "Daily Duas",
@@ -306,7 +306,7 @@
       }
     }
   },
-  "islamicEducation": "Islamic Education",
+  "islamicEducation": "Dzidzo yechiIslam",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Vadivelu Comedy Hadith Collections",
   "paywallUnlockAll": "Unlock all features for your spiritual journey",

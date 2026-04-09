@@ -763,22 +763,22 @@ class AppLocalizationsKy extends AppLocalizations {
   String get dailyVerse => 'Daily Verse';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => 'Бүгүнкү Ибадат';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => 'Ыкчам жетүү';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => 'Жардамчы';
 
   @override
-  String get places => 'Places';
+  String get places => 'жерлер';
 
   @override
-  String get library => 'Library';
+  String get library => 'Китепкана';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Аналитика';
 
   @override
   String get dailyDuas => 'Күнүмдүк дуалар';
@@ -839,7 +839,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Ислам билими';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

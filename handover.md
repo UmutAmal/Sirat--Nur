@@ -2945,3 +2945,45 @@
 ### Sonraki Adım
 - Sıradaki turda kalan `63` rare locale içinden güvenli sibling veya makrodil eşleşmesi olanlar kapatılacak.
 - Sibling’i olmayan locale’ler için key bazlı EN-reference audit matrisi çıkarılıp hangi anahtarların dürüstçe EN’de kalacağı ayrı kayda alınacak.
+
+## 2026-04-09 TUR-76 — Localize Home Dashboard Labels Across Priority Locales
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force dailyVerse todaysIbadah quickAccess assistant places library analytics islamicEducation` ile tüm `app_*.arb` setinde yeniden çalıştırıldı.
+- Özellikle [A:\Way of Allah\sirat_i_nur\lib\l10n\app_da.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_da.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_he.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_he.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_ja.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_ja.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nb.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nb.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_zh.arb) ve diğer desteklenen locale dosyalarında ana ekran kopyası güncellendi.
+- Generated localization çıktıları yenilendi; örnek olarak [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_da.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_da.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_he.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_he.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ja.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_ja.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_nb.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_nb.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_zh.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_zh.dart) senkronlandı.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) genişletildi; `dailyVerse`, `todaysIbadah`, `quickAccess`, `places`, `library`, `islamicEducation` anahtarları için priority locale setinde İngilizce fallback regresyonu engellendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart#L44](A:/Way%20of%20Allah/sirat_i_nur/lib/features/home/home_page.dart#L44), [A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart#L60](A:/Way%20of%20Allah/sirat_i_nur/lib/features/home/home_page.dart#L60), [A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart#L119](A:/Way%20of%20Allah/sirat_i_nur/lib/features/home/home_page.dart#L119), [A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart#L227](A:/Way%20of%20Allah/sirat_i_nur/lib/features/home/home_page.dart#L227) tarafından kullanılan home dashboard anahtarlarının `194` locale’de İngilizce kaldığı doğrulandı.
+- Bu cluster uygulamanın ana giriş ekranında yer aldığı için kullanıcı etkisi, nadir locale sorunlarından daha yüksekti.
+- `assistant` ve `analytics` anahtarları bazı dillerde loanword olarak İngilizceyle aynı kaldığı için bu turda sahte fail oluşturmamak adına ayrı audit listesine alındı; kesin lokalize olan altı anahtar testle kilitlendi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` içindeki home dashboard anahtarları güncellenen dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` generated dosyaları
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `dailyVerse` için İngilizce fallback sayısı `194`ten `66`ya düştü.
+- `todaysIbadah` için `194`ten `63`e düştü.
+- `quickAccess` için `194`ten `64`e düştü.
+- `places` için `194`ten `65`e düştü.
+- `library` için `194`ten `68`e düştü.
+- `islamicEducation` için `194`ten `63`e düştü.
+- Priority locale seti ana ekran kopyasında artık İngilizce fallback göstermiyor.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart --force dailyVerse todaysIbadah quickAccess assistant places library analytics islamicEducation` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`181/181`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Home dashboard core labels still falling back to English across most locales: `15/25 → 6/25`
+
+### Sonraki Adım
+- Sıradaki turda `diagnostics*` ve `shareAppMessage` gibi `194` locale’de İngilizce kalan geniş UI anahtarları ele alınacak.
+- Paralel audit olarak `analytics` ve `assistant` gibi loanword davranışı gösteren anahtarlar için locale bazlı kabul matrisi çıkarılacak.

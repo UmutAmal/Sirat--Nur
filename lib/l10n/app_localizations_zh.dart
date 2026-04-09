@@ -758,25 +758,25 @@ class AppLocalizationsZh extends AppLocalizations {
       'Calibration required. Rotate device in figure-8.';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => '每日诗歌';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => '今天的伊巴达';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => '快速访问';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => '助手';
 
   @override
-  String get places => 'Places';
+  String get places => '地点';
 
   @override
-  String get library => 'Library';
+  String get library => '图书馆';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => '分析';
 
   @override
   String get dailyDuas => '每日杜阿';
@@ -836,7 +836,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => '伊斯兰教育';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';
@@ -1903,25 +1903,25 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
       'Calibration required. Rotate device in figure-8.';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => '每日诗歌';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => '今天的伊巴达';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => '快速访问';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => '助手';
 
   @override
-  String get places => 'Places';
+  String get places => '地点';
 
   @override
-  String get library => 'Library';
+  String get library => '图书馆';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => '分析';
 
   @override
   String get dailyDuas => '每日杜阿';
@@ -1981,7 +1981,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => '伊斯兰教育';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';
@@ -3048,25 +3048,25 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
       'Calibration required. Rotate device in figure-8.';
 
   @override
-  String get dailyVerse => 'Daily Verse';
+  String get dailyVerse => '每日詩歌';
 
   @override
-  String get todaysIbadah => 'Today\'s Ibadah';
+  String get todaysIbadah => '今天的伊巴達';
 
   @override
-  String get quickAccess => 'Quick Access';
+  String get quickAccess => '快速存取';
 
   @override
-  String get assistant => 'Assistant';
+  String get assistant => '助理';
 
   @override
-  String get places => 'Places';
+  String get places => '地點';
 
   @override
-  String get library => 'Library';
+  String get library => '圖書館';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => '分析';
 
   @override
   String get dailyDuas => '每日杜阿';
@@ -3126,7 +3126,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => '伊斯蘭教育';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';
