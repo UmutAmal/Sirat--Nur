@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Elkészült! MashAllah"
+  "zikrCompletedMashAllah": "Elkészült! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah minden tökéletlenség felett áll.",
+  "zikrMeaningAlhamdulillah": "Minden dicséret Allahot illeti.",
+  "zikrMeaningAllahuAkbar": "Allah a Legnagyobb.",
+  "zikrMeaningLaIlahaIllallah": "Nincs más isten, csak Allah.",
+  "zikrMeaningAstaghfirullah": "Allah bocsánatát kérem.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nincs hatalom és nincs erő, csak Allah által."
 }

@@ -490,6 +490,27 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Nalpasen! MashAllah nga ni';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Adayo a nangatngato ngem ni Allah iti tunggal kinaimperpekto.';
+
+  @override
+  String get zikrMeaningAlhamdulillah =>
+      'Amin a pammadayaw ket kukua ni Allah.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Ni Allah ti Kadakkelan.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Awan ti dios no di ni Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Sapsapulek ti pammakawan ni Allah.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Awan ti bileg ken pigsa malaksid babaen ken Allah.';
+
+  @override
   String get dailyChecklist => 'Inaldaw a Listaan ti Panangsukimat';
 
   @override

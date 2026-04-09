@@ -488,6 +488,26 @@ class AppLocalizationsKn extends AppLocalizations {
   String get zikrCompletedMashAllah => 'ಪೂರ್ಣಗೊಂಡಿದೆ! ಮಾಶಾ ಅಲ್ಲಾ';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'ಅಲ್ಲಾಹನು ಎಲ್ಲಾ ಅಪರಿಪೂರ್ಣತೆಗಳಿಗಿಂತಲೂ ಹೆಚ್ಚಿನವನಾಗಿದ್ದಾನೆ.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'ಎಲ್ಲ ಹೊಗಳಿಕೆಯೂ ಅಲ್ಲಾಹನಿಗೆ.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'ಅಲ್ಲಾಹನೇ ಶ್ರೇಷ್ಠ.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'ಅಲ್ಲಾ ಹೊರತು ಬೇರೆ ದೇವರಿಲ್ಲ.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'ನಾನು ಅಲ್ಲಾಹನ ಕ್ಷಮೆಯನ್ನು ಬೇಡುತ್ತೇನೆ.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'ಅಲ್ಲಾನ ಮೂಲಕ ಹೊರತುಪಡಿಸಿ ಯಾವುದೇ ಶಕ್ತಿ ಮತ್ತು ಶಕ್ತಿ ಇಲ್ಲ.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

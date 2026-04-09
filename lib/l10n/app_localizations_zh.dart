@@ -486,6 +486,24 @@ class AppLocalizationsZh extends AppLocalizations {
   String get zikrCompletedMashAllah => '完全的！玛什真主';
 
   @override
+  String get zikrMeaningSubhanAllah => '安拉远高于一切缺陷。';
+
+  @override
+  String get zikrMeaningAlhamdulillah => '所有赞美都属于安拉。';
+
+  @override
+  String get zikrMeaningAllahuAkbar => '安拉是最伟大的。';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => '除安拉外，别无上帝。';
+
+  @override
+  String get zikrMeaningAstaghfirullah => '我寻求阿拉的宽恕。';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata => '除了安拉之外，没有任何力量和力量。';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override
@@ -1639,6 +1657,24 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get zikrCompletedMashAllah => '完全的！玛什真主';
 
   @override
+  String get zikrMeaningSubhanAllah => '安拉远高于一切缺陷。';
+
+  @override
+  String get zikrMeaningAlhamdulillah => '所有赞美都属于安拉。';
+
+  @override
+  String get zikrMeaningAllahuAkbar => '安拉是最伟大的。';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => '除安拉外，别无上帝。';
+
+  @override
+  String get zikrMeaningAstaghfirullah => '我寻求阿拉的宽恕。';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata => '除了安拉之外，没有任何力量和力量。';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override
@@ -2790,6 +2826,24 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get zikrCompletedMashAllah => '完全的！瑪什真主';
+
+  @override
+  String get zikrMeaningSubhanAllah => '安拉遠高於一切缺陷。';
+
+  @override
+  String get zikrMeaningAlhamdulillah => '所有讚美都屬於安拉。';
+
+  @override
+  String get zikrMeaningAllahuAkbar => '安拉是最偉大的。';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => '除安拉外，別無上帝。';
+
+  @override
+  String get zikrMeaningAstaghfirullah => '我尋求阿拉的寬恕。';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata => '除了安拉之外，沒有任何力量和力量。';
 
   @override
   String get dailyChecklist => 'Daily Checklist';

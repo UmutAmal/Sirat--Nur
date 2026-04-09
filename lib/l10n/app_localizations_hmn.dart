@@ -489,6 +489,27 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Ua tiav! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Allah nyob deb tshaj txhua qhov tsis zoo.';
+
+  @override
+  String get zikrMeaningAlhamdulillah =>
+      'Tag nrho cov qhuas belongs rau Allah.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah yog tus loj tshaj.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Tsis muaj Vajtswv tab sis Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Kuv nrhiav Allah kev zam txim.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Tsis muaj hwj chim thiab tsis muaj zog tsuas yog los ntawm Allah.';
+
+  @override
   String get dailyChecklist => 'Daim ntawv txheeb xyuas txhua hnub';
 
   @override

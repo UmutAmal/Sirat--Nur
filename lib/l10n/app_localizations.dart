@@ -1414,6 +1414,42 @@ abstract class AppLocalizations {
   /// **'Completed! MashAllah'**
   String get zikrCompletedMashAllah;
 
+  /// No description provided for @zikrMeaningSubhanAllah.
+  ///
+  /// In en, this message translates to:
+  /// **'Allah is far above every imperfection.'**
+  String get zikrMeaningSubhanAllah;
+
+  /// No description provided for @zikrMeaningAlhamdulillah.
+  ///
+  /// In en, this message translates to:
+  /// **'All praise belongs to Allah.'**
+  String get zikrMeaningAlhamdulillah;
+
+  /// No description provided for @zikrMeaningAllahuAkbar.
+  ///
+  /// In en, this message translates to:
+  /// **'Allah is the Greatest.'**
+  String get zikrMeaningAllahuAkbar;
+
+  /// No description provided for @zikrMeaningLaIlahaIllallah.
+  ///
+  /// In en, this message translates to:
+  /// **'There is no god but Allah.'**
+  String get zikrMeaningLaIlahaIllallah;
+
+  /// No description provided for @zikrMeaningAstaghfirullah.
+  ///
+  /// In en, this message translates to:
+  /// **'I seek Allah\'s forgiveness.'**
+  String get zikrMeaningAstaghfirullah;
+
+  /// No description provided for @zikrMeaningLaHawlaWaLaQuwwata.
+  ///
+  /// In en, this message translates to:
+  /// **'There is no power and no strength except through Allah.'**
+  String get zikrMeaningLaHawlaWaLaQuwwata;
+
   /// No description provided for @dailyChecklist.
   ///
   /// In en, this message translates to:

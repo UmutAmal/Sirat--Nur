@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Voltooid! MasAllah"
+  "zikrCompletedMashAllah": "Voltooid! MasAllah",
+  "zikrMeaningSubhanAllah": "Allah is ver boven elke onvolmaaktheid.",
+  "zikrMeaningAlhamdulillah": "Alle lof behoort aan Allah.",
+  "zikrMeaningAllahuAkbar": "Allah is de Grootste.",
+  "zikrMeaningLaIlahaIllallah": "Er is geen god dan Allah.",
+  "zikrMeaningAstaghfirullah": "Ik zoek de vergiffenis van Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Er is geen macht en geen kracht behalve door Allah."
 }

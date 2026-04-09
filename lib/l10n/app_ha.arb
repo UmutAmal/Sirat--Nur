@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "An kammala! MashaAllah"
+  "zikrCompletedMashAllah": "An kammala! MashaAllah",
+  "zikrMeaningSubhanAllah": "Lalle ne Allah Yã kasance a kan kõwane azzãlumai.",
+  "zikrMeaningAlhamdulillah": "Dukkan godiya ta tabbata ga Allah.",
+  "zikrMeaningAllahuAkbar": "Allah shi ne mafi girma.",
+  "zikrMeaningLaIlahaIllallah": "Bãbu abin bautãwa fãce Allah.",
+  "zikrMeaningAstaghfirullah": "Ina neman gafarar Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Babu karfi babu karfi sai ta Allah."
 }

@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Konplete! MashAllah"
+  "zikrCompletedMashAllah": "Konplete! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah pi wo pase tout enpèfeksyon.",
+  "zikrMeaningAlhamdulillah": "Tout lwanj se pou Allah.",
+  "zikrMeaningAllahuAkbar": "Allah se pi gran an.",
+  "zikrMeaningLaIlahaIllallah": "Pa gen okenn bondye men Allah.",
+  "zikrMeaningAstaghfirullah": "Mwen chache padon Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Pa gen okenn pouvwa ak pa gen fòs eksepte nan Allah."
 }

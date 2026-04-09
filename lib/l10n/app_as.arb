@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "সম্পূৰ্ণ হ’ল! মাছআল্লাহ"
+  "zikrCompletedMashAllah": "সম্পূৰ্ণ হ’ল! মাছআল্লাহ",
+  "zikrMeaningSubhanAllah": "আল্লাহ প্ৰতিটো অসম্পূৰ্ণতাৰ বহু ওপৰত।",
+  "zikrMeaningAlhamdulillah": "সকলো প্ৰশংসা আল্লাহৰ।",
+  "zikrMeaningAllahuAkbar": "আল্লাহ সৰ্বশ্ৰেষ্ঠ।",
+  "zikrMeaningLaIlahaIllallah": "আল্লাহৰ বাহিৰে আন কোনো ভগৱান নাই।",
+  "zikrMeaningAstaghfirullah": "মই আল্লাহৰ পৰা ক্ষমা বিচাৰিছো।",
+  "zikrMeaningLaHawlaWaLaQuwwata": "আল্লাহৰ বাহিৰে কোনো শক্তি আৰু শক্তি নাই।"
 }

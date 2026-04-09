@@ -488,6 +488,24 @@ class AppLocalizationsKo extends AppLocalizations {
   String get zikrCompletedMashAllah => '완전한! 마쉬알라';
 
   @override
+  String get zikrMeaningSubhanAllah => '알라는 모든 불완전함보다 훨씬 뛰어납니다.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => '모든 찬양은 알라께 속합니다.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => '알라는 가장 위대하다.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => '알라 외에는 신이 없습니다.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => '나는 알라의 용서를 구합니다.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata => '알라를 통하지 않고는 힘도 없고 힘도 없습니다.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

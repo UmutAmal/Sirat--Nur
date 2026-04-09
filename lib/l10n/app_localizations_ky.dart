@@ -490,6 +490,25 @@ class AppLocalizationsKy extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Аякталды! МашАллах';
 
   @override
+  String get zikrMeaningSubhanAllah => 'Аллах бардык кемчиликтерден жогору.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Бардык мактоолор Аллахка таандык.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Аллах эң улуу.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Аллахтан башка кудай жок.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Алладан кечирим сурайм.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Алладан башка эч кандай күч жана күч жок.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

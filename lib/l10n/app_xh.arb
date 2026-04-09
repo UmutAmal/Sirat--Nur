@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Igqityiwe! MashaAllah"
+  "zikrCompletedMashAllah": "Igqityiwe! MashaAllah",
+  "zikrMeaningSubhanAllah": "UAllh Ungaphezulu lee kuko konke ukungafezeki.",
+  "zikrMeaningAlhamdulillah": "Yonke indumiso yeka-Allh.",
+  "zikrMeaningAllahuAkbar": "UAllh ngoyena mkhulu.",
+  "zikrMeaningLaIlahaIllallah": "Akukho thixo wumbi ngaphandle koAllh.",
+  "zikrMeaningAstaghfirullah": "Ndicela uxolo kuAllh.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Akukho mandla, akukho mandla ngaphandle kuka-Allh."
 }

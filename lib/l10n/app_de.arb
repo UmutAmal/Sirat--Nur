@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Vollendet! MaschAllah"
+  "zikrCompletedMashAllah": "Vollendet! MaschAllah",
+  "zikrMeaningSubhanAllah": "Allah steht weit über jeder Unvollkommenheit.",
+  "zikrMeaningAlhamdulillah": "Alles Lob gebührt Allah.",
+  "zikrMeaningAllahuAkbar": "Allah ist der Größte.",
+  "zikrMeaningLaIlahaIllallah": "Es gibt keinen Gott außer Allah.",
+  "zikrMeaningAstaghfirullah": "Ich bitte Allah um Vergebung.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Es gibt keine Macht und keine Stärke außer durch Allah."
 }

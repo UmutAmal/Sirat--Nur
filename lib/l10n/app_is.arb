@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Lokið! MashAllah"
+  "zikrCompletedMashAllah": "Lokið! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah er langt yfir hverri ófullkomleika.",
+  "zikrMeaningAlhamdulillah": "Allt lof tilheyrir Allah.",
+  "zikrMeaningAllahuAkbar": "Allah er hinn mesti.",
+  "zikrMeaningLaIlahaIllallah": "Það er enginn guð nema Allah.",
+  "zikrMeaningAstaghfirullah": "Ég bið Allah fyrirgefningar.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Það er enginn kraftur og enginn styrkur nema í gegnum Allah."
 }

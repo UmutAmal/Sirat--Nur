@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Avslutad! MashAllah"
+  "zikrCompletedMashAllah": "Avslutad! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah är långt över varje ofullkomlighet.",
+  "zikrMeaningAlhamdulillah": "All lovsång tillhör Allah.",
+  "zikrMeaningAllahuAkbar": "Allah är den Störste.",
+  "zikrMeaningLaIlahaIllallah": "Det finns ingen gud utom Allah.",
+  "zikrMeaningAstaghfirullah": "Jag ber Allahs förlåtelse.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Det finns ingen makt och ingen styrka förutom genom Allah."
 }

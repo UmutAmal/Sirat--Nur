@@ -488,6 +488,25 @@ class AppLocalizationsEu extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Osatua! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah => 'Ala inperfekzio guztien gainetik dago.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Laudorio guztiak Allahrenak dira.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Ala Handiena da.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Ez dago Jainkorik Ala baino.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Alaren barkamena bilatzen dut.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Ez dago botererik eta indarrik Ala bidez izan ezik.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

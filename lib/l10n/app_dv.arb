@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "ނިމިއްޖެ! މާޝްالله އެވެ"
+  "zikrCompletedMashAllah": "ނިމިއްޖެ! މާޝްالله އެވެ",
+  "zikrMeaningSubhanAllah": "الله އަކީ ކޮންމެ ނުފުރިހަމަކަމަކަށްވުރެ މާ މަތީގައެވެ.",
+  "zikrMeaningAlhamdulillah": "ހުރިހާ ޙަމްދުތަކަކީ الله އަށެވެ.",
+  "zikrMeaningAllahuAkbar": "الله އަކީ އެންމެ ބޮޑު ރަސްކަލާނގެއެވެ.",
+  "zikrMeaningLaIlahaIllallah": "الله ފިޔަވައި އެހެން އިލާހެއް ނެތެވެ.",
+  "zikrMeaningAstaghfirullah": "ﷲ ގެ މާފު އެދެމެވެ.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "الله ގެ ޙަޟްރަތުން މެނުވީ އެއްވެސް ބާރެއް އަދި ބާރެއް ނެތެވެ."
 }

@@ -488,6 +488,27 @@ class AppLocalizationsSw extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Imekamilika! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Mwenyezi Mungu yu mbali sana juu ya kila upungufu.';
+
+  @override
+  String get zikrMeaningAlhamdulillah =>
+      'Sifa njema zote ni za Mwenyezi Mungu.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Mwenyezi Mungu ndiye Mkubwa.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Hapana mungu ila Mwenyezi Mungu.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Naomba msamaha kwa Mwenyezi Mungu.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Hakuna nguvu wala nguvu ila kwa Mwenyezi Mungu.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Dokončené! MashAllah"
+  "zikrCompletedMashAllah": "Dokončené! MashAllah",
+  "zikrMeaningSubhanAllah": "Alah je vysoko nad každou nedokonalosťou.",
+  "zikrMeaningAlhamdulillah": "Všetka chvála patrí Alahovi.",
+  "zikrMeaningAllahuAkbar": "Alah je najväčší.",
+  "zikrMeaningLaIlahaIllallah": "Niet boha okrem Alaha.",
+  "zikrMeaningAstaghfirullah": "Žiadam Alaha o odpustenie.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Neexistuje žiadna sila a žiadna sila, iba cez Alaha."
 }

@@ -488,6 +488,26 @@ class AppLocalizationsId extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Selesai! Masya Allah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Allah jauh diatas segala ketidaksempurnaan.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Segala puji milik Allah.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah Maha Besar.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Tidak ada Tuhan selain Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Saya mohon ampun kepada Allah.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Tidak ada daya dan kekuatan kecuali melalui Allah.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

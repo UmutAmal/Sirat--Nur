@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Osatua! MashAllah"
+  "zikrCompletedMashAllah": "Osatua! MashAllah",
+  "zikrMeaningSubhanAllah": "Ala inperfekzio guztien gainetik dago.",
+  "zikrMeaningAlhamdulillah": "Laudorio guztiak Allahrenak dira.",
+  "zikrMeaningAllahuAkbar": "Ala Handiena da.",
+  "zikrMeaningLaIlahaIllallah": "Ez dago Jainkorik Ala baino.",
+  "zikrMeaningAstaghfirullah": "Alaren barkamena bilatzen dut.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ez dago botererik eta indarrik Ala bidez izan ezik."
 }

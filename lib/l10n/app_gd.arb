@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Crìochnaichte! MashAllah"
+  "zikrCompletedMashAllah": "Crìochnaichte! MashAllah",
+  "zikrMeaningSubhanAllah": "Tha Allah fada os cionn gach neo-fhoirfeachd.",
+  "zikrMeaningAlhamdulillah": "Buinidh a h-uile moladh do Dhia.",
+  "zikrMeaningAllahuAkbar": "Is e Allah am fear as motha.",
+  "zikrMeaningLaIlahaIllallah": "Chan eil dia ann ach Allah.",
+  "zikrMeaningAstaghfirullah": "Tha mi a’ sireadh maitheanas Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Chan eil cumhachd no neart ann ach tro Dhia."
 }

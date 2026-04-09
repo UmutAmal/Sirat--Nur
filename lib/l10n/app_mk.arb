@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Завршено! МашАлах"
+  "zikrCompletedMashAllah": "Завршено! МашАлах",
+  "zikrMeaningSubhanAllah": "Алах е далеку над секоја несовршеност.",
+  "zikrMeaningAlhamdulillah": "Сите пофалби му припаѓаат на Аллах.",
+  "zikrMeaningAllahuAkbar": "Аллах е најголем.",
+  "zikrMeaningLaIlahaIllallah": "Нема бог освен Алах.",
+  "zikrMeaningAstaghfirullah": "Барам прошка од Аллах.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Нема сила и сила освен преку Аллах."
 }

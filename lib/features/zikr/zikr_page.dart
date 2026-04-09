@@ -13,16 +13,35 @@ String resolveZikrCompletedText(AppLocalizations l10n) {
   return l10n.zikrCompletedMashAllah;
 }
 
+String resolveZikrMeaning(AppLocalizations l10n, int index) {
+  switch (index) {
+    case 0:
+      return l10n.zikrMeaningSubhanAllah;
+    case 1:
+      return l10n.zikrMeaningAlhamdulillah;
+    case 2:
+      return l10n.zikrMeaningAllahuAkbar;
+    case 3:
+      return l10n.zikrMeaningLaIlahaIllallah;
+    case 4:
+      return l10n.zikrMeaningAstaghfirullah;
+    case 5:
+      return l10n.zikrMeaningLaHawlaWaLaQuwwata;
+    default:
+      return l10n.zikrMeaningSubhanAllah;
+  }
+}
+
 class ZikrPage extends ConsumerWidget {
   const ZikrPage({super.key});
 
   static const _zikrs = [
-    _ZikrItem('سُبْحَانَ ٱللَّهِ', 'SubhanAllah', 'Glory be to Allah', 33),
-    _ZikrItem('ٱلْحَمْدُ لِلَّهِ', 'Alhamdulillah', 'Praise be to Allah', 33),
-    _ZikrItem('ٱللَّهُ أَكْبَرُ', 'Allahu Akbar', 'Allah is Greatest', 33),
-    _ZikrItem('لَا إِلَٰهَ إِلَّا ٱللَّهُ', 'La ilaha illallah', 'There is no god but Allah', 100),
-    _ZikrItem('أَسْتَغْفِرُ ٱللَّهَ', 'Astaghfirullah', 'I seek forgiveness from Allah', 100),
-    _ZikrItem('لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِٱللَّهِ', 'La hawla wa la quwwata illa billah', 'No power except by Allah', 33),
+    _ZikrItem('سُبْحَانَ ٱللَّهِ', 'SubhanAllah', 33),
+    _ZikrItem('ٱلْحَمْدُ لِلَّهِ', 'Alhamdulillah', 33),
+    _ZikrItem('ٱللَّهُ أَكْبَرُ', 'Allahu Akbar', 33),
+    _ZikrItem('لَا إِلَٰهَ إِلَّا ٱللَّهُ', 'La ilaha illallah', 100),
+    _ZikrItem('أَسْتَغْفِرُ ٱللَّهَ', 'Astaghfirullah', 100),
+    _ZikrItem('لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِٱللَّهِ', 'La hawla wa la quwwata illa billah', 33),
   ];
 
   @override
@@ -88,7 +107,7 @@ class ZikrPage extends ConsumerWidget {
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700,
                 color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
             const SizedBox(height: 4),
-            Text(zikr.meaning,
+            Text(resolveZikrMeaning(l10n, selectedIdx),
               style: TextStyle(fontSize: 13, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4))),
             const SizedBox(height: 40),
             // Counter circle
@@ -162,7 +181,6 @@ class ZikrPage extends ConsumerWidget {
 class _ZikrItem {
   final String arabic;
   final String transliteration;
-  final String meaning;
   final int defaultTarget;
-  const _ZikrItem(this.arabic, this.transliteration, this.meaning, this.defaultTarget);
+  const _ZikrItem(this.arabic, this.transliteration, this.defaultTarget);
 }

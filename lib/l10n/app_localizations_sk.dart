@@ -489,6 +489,26 @@ class AppLocalizationsSk extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Dokončené! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Alah je vysoko nad každou nedokonalosťou.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Všetka chvála patrí Alahovi.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Alah je najväčší.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Niet boha okrem Alaha.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Žiadam Alaha o odpustenie.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Neexistuje žiadna sila a žiadna sila, iba cez Alaha.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

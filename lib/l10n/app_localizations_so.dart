@@ -488,6 +488,26 @@ class AppLocalizationsSo extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Dhammaystiran! Maasha Allaah';
 
   @override
+  String get zikrMeaningSubhanAllah => 'Eebbana waa ka sarreeyaa cillad kasta.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Mahad oo dhan Allaah ayaa iska leh.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allaah ayaa u weyn.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Allaah mooyee ilaah kale ma jiro.';
+
+  @override
+  String get zikrMeaningAstaghfirullah =>
+      'Allaah ayaan danbi dhaaf waydiisanayaa.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Awood iyo xoogna ma jiro Allaah mooyee.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

@@ -538,5 +538,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Selesai! MashAllah"
+  "zikrCompletedMashAllah": "Selesai! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah jauh mengatasi setiap ketidaksempurnaan.",
+  "zikrMeaningAlhamdulillah": "Segala puji bagi Allah.",
+  "zikrMeaningAllahuAkbar": "Allah Maha Besar.",
+  "zikrMeaningLaIlahaIllallah": "Tiada tuhan selain Allah.",
+  "zikrMeaningAstaghfirullah": "Saya memohon ampun kepada Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Tiada daya dan kekuatan melainkan dengan pertolongan Allah."
 }

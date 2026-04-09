@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Kiwedde! MashAllah"
+  "zikrCompletedMashAllah": "Kiwedde! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah asinga wala buli butatuukiridde.",
+  "zikrMeaningAlhamdulillah": "Amatendo gonna ga Allah.",
+  "zikrMeaningAllahuAkbar": "Allah y’asinga obukulu.",
+  "zikrMeaningLaIlahaIllallah": "Tewali katonda yenna okuggyako Allah.",
+  "zikrMeaningAstaghfirullah": "Nsaba Allah okusonyiyibwa.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Tewali maanyi na maanyi okuggyako okuyita mu Allah."
 }

@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Bajarildi! MashAlloh"
+  "zikrCompletedMashAllah": "Bajarildi! MashAlloh",
+  "zikrMeaningSubhanAllah": "Alloh taolo har bir nuqsondan uzoqdir.",
+  "zikrMeaningAlhamdulillah": "Hamma hamdlar Allohga xosdir.",
+  "zikrMeaningAllahuAkbar": "Alloh eng buyukdir.",
+  "zikrMeaningLaIlahaIllallah": "Allohdan o'zga iloh yo'q.",
+  "zikrMeaningAstaghfirullah": "Allohdan mag'firat so'rayman.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Allohdan boshqa hech qanday kuch va quvvat yo'q."
 }

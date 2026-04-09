@@ -488,6 +488,26 @@ class AppLocalizationsVi extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Hoàn thành! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah => 'Allah vượt xa mọi sự không hoàn hảo.';
+
+  @override
+  String get zikrMeaningAlhamdulillah =>
+      'Mọi lời khen ngợi đều thuộc về Allah.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah là Đấng vĩ đại nhất.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Không có thần nào ngoài Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Tôi tìm kiếm sự tha thứ của Allah.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Không có sức mạnh và sức mạnh nào ngoại trừ thông qua Allah.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

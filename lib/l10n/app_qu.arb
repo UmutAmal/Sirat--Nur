@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "¡Tukusqaña! MashAllah sutiyuq runa"
+  "zikrCompletedMashAllah": "¡Tukusqaña! MashAllah sutiyuq runa",
+  "zikrMeaningSubhanAllah": "Allahqa tukuy mana hunt’asqa kaymanta aswan hatunmi.",
+  "zikrMeaningAlhamdulillah": "Tukuy yupaychayqa Allahpaqmi.",
+  "zikrMeaningAllahuAkbar": "Allahmi Aswan Hatun.",
+  "zikrMeaningLaIlahaIllallah": "Manam kanchu dios aswanqa Allah.",
+  "zikrMeaningAstaghfirullah": "Allahpa pampachaynintam maskani.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Manan kanchu atiypas, manan kallpapas kanchu, aswanpas Allah nisqawanmi."
 }

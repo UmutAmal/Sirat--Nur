@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "पुरा होना! Mashallah"
+  "zikrCompletedMashAllah": "पुरा होना! Mashallah",
+  "zikrMeaningSubhanAllah": "अल्लाह हर अपूर्णता से बहुत ऊपर है.",
+  "zikrMeaningAlhamdulillah": "सारी प्रशंसा अल्लाह के लिए है।",
+  "zikrMeaningAllahuAkbar": "अल्लाह महानतम है।",
+  "zikrMeaningLaIlahaIllallah": "कोई भगवान नहीं है सिर्फ अल्लाह।",
+  "zikrMeaningAstaghfirullah": "मैं अल्लाह से माफ़ी चाहता हूँ.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "अल्लाह के सिवा कोई शक्ति और शक्ति नहीं।"
 }

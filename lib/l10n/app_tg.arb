@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Ба итмом расид! МашаАллах"
+  "zikrCompletedMashAllah": "Ба итмом расид! МашаАллах",
+  "zikrMeaningSubhanAllah": "Аллоҳ ҳар бир ноқулайликдан устундир.",
+  "zikrMeaningAlhamdulillah": "Ҳамду ситоиш аз они Худост.",
+  "zikrMeaningAllahuAkbar": "Аллоҳ бузургтар аст.",
+  "zikrMeaningLaIlahaIllallah": "Ҳеҷ худое ҷуз Аллоҳ нест.",
+  "zikrMeaningAstaghfirullah": "Аллоҳдан мағфират сўрайман.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ҳеҷ қудрат ва тавоноӣ ҷуз ба воситаи Аллоҳ нест."
 }

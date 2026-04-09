@@ -488,6 +488,25 @@ class AppLocalizationsPs extends AppLocalizations {
   String get zikrCompletedMashAllah => 'بشپړ شو! ماشاءالله';
 
   @override
+  String get zikrMeaningSubhanAllah => 'الله جل جلاله له هر عیب څخه لوړ دی.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'ټول ستاينه د الله لره ده.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'الله لوی دی.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'له الله پرته بل معبود نشته.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'زه د الله تعالی څخه بخښنه غواړم.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'د الله جل جلاله له لاری پرته هیڅ ځواک او قوت نشته.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

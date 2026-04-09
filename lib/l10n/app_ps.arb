@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "بشپړ شو! ماشاءالله"
+  "zikrCompletedMashAllah": "بشپړ شو! ماشاءالله",
+  "zikrMeaningSubhanAllah": "الله جل جلاله له هر عیب څخه لوړ دی.",
+  "zikrMeaningAlhamdulillah": "ټول ستاينه د الله لره ده.",
+  "zikrMeaningAllahuAkbar": "الله لوی دی.",
+  "zikrMeaningLaIlahaIllallah": "له الله پرته بل معبود نشته.",
+  "zikrMeaningAstaghfirullah": "زه د الله تعالی څخه بخښنه غواړم.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "د الله جل جلاله له لاری پرته هیڅ ځواک او قوت نشته."
 }

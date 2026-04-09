@@ -488,6 +488,26 @@ class AppLocalizationsEt extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Lõpetatud! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Allah on kaugelt üle kõigist ebatäiuslikkusest.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Kogu kiitus kuulub Allahile.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah on Suurim.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Ei ole jumalat peale Allahi.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Ma otsin Jumalalt andestust.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Pole jõudu ega jõudu, välja arvatud Allahi kaudu.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

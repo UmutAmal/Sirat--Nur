@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "הושלם! משאאללה"
+  "zikrCompletedMashAllah": "הושלם! משאאללה",
+  "zikrMeaningSubhanAllah": "אללה הוא הרבה מעל כל חוסר שלמות.",
+  "zikrMeaningAlhamdulillah": "כל השבחים שייכים לאללה.",
+  "zikrMeaningAllahuAkbar": "אללה הוא הגדול ביותר.",
+  "zikrMeaningLaIlahaIllallah": "אין אלוהים מלבד אללה.",
+  "zikrMeaningAstaghfirullah": "אני מבקש את סליחתו של אללה.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "אין כוח ואין כוח אלא דרך אללה."
 }

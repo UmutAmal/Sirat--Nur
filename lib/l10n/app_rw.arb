@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Byarangiye! MashAllah"
+  "zikrCompletedMashAllah": "Byarangiye! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah aruta kure cyane kudatungana.",
+  "zikrMeaningAlhamdulillah": "Ibisingizo byose ni ibya Allah.",
+  "zikrMeaningAllahuAkbar": "Allah niwe Ukomeye.",
+  "zikrMeaningLaIlahaIllallah": "Nta yindi mana ibaho uretse Allah.",
+  "zikrMeaningAstaghfirullah": "Ndashaka imbabazi za Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nta mbaraga n'imbaraga keretse binyuze kuri Allah."
 }

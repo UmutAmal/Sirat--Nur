@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Réngsé! MasyaAllah"
+  "zikrCompletedMashAllah": "Réngsé! MasyaAllah",
+  "zikrMeaningSubhanAllah": "Allah jauh di luhur sagala kasampurnaan.",
+  "zikrMeaningAlhamdulillah": "Sadaya puji kagungan Allah.",
+  "zikrMeaningAllahuAkbar": "Allah Maha Agung.",
+  "zikrMeaningLaIlahaIllallah": "Teu aya tuhan anging Alloh.",
+  "zikrMeaningAstaghfirullah": "Abdi nyuhunkeun pangampura Alloh.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Teu aya kakuatan sareng kakuatan iwal ti Allah."
 }

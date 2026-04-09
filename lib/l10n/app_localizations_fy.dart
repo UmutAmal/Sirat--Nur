@@ -488,6 +488,26 @@ class AppLocalizationsFy extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Foltôge! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Allah is fier boppe elke ûnfolsleinens.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Alle lof heart oan Allah.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah is de Grutste.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'D\'r is gjin god behalve Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Ik sykje Allah syn ferjouwing.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'D\'r is gjin macht en gjin krêft útsein troch Allah.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

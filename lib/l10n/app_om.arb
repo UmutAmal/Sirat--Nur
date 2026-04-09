@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Xumurameera! MashAllah"
+  "zikrCompletedMashAllah": "Xumurameera! MashAllah",
+  "zikrMeaningSubhanAllah": "Rabbiin mudaa hundarra baay’ee ol ta’a.",
+  "zikrMeaningAlhamdulillah": "Galanni hundi kan Rabbiiti.",
+  "zikrMeaningAllahuAkbar": "Rabbiin Guddaadha.",
+  "zikrMeaningLaIlahaIllallah": "Rabbiin malee gabbaramaan biraa hin jiru.",
+  "zikrMeaningAstaghfirullah": "Araarama Rabbii nan barbaada.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Karaa Rabbiin malee humni fi humni hin jiru."
 }

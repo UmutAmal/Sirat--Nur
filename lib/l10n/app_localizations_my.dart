@@ -489,6 +489,29 @@ class AppLocalizationsMy extends AppLocalizations {
   String get zikrCompletedMashAllah => 'ပြီးပါပြီ။ MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'အလ္လာဟ်အရှင်မြတ်သည် မပြည့်စုံမှုတိုင်းထက် သာလွန်တော်မူ၏။';
+
+  @override
+  String get zikrMeaningAlhamdulillah =>
+      'ချီးမွမ်းခြင်းအားလုံးသည် အလ္လာဟ်အရှင်မြတ်နှင့်သက်ဆိုင်သည်။';
+
+  @override
+  String get zikrMeaningAllahuAkbar =>
+      'အလ္လာဟ်အရှင်မြတ်သည် အကြီးမြတ်ဆုံးဖြစ်သည်။';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'အလ္လာဟ်အရှင်မြတ်မှတပါး ဘုရားမရှိ။';
+
+  @override
+  String get zikrMeaningAstaghfirullah =>
+      'အလ္လာဟ်အရှင်မြတ်ရဲ့ ခွင့်လွှတ်မှုကို ငါရှာတယ်။';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'အလ္လာဟ်အရှင်မြတ်အားဖြင့်မှတပါး တန်ခိုးနှင့် တန်ခိုးမရှိပေ။';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

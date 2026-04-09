@@ -488,6 +488,26 @@ class AppLocalizationsEo extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Kompletigita! Maŝalaho';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Alaho estas multe super ĉiu neperfekteco.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Ĉiu laŭdo apartenas al Alaho.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Alaho estas la Plej Granda.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Ne ekzistas dio krom Alaho.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Mi serĉas la pardonon de Alaho.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Ne ekzistas potenco kaj forto krom per Alaho.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

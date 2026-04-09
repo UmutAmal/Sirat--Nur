@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Fuldført! MashAllah"
+  "zikrCompletedMashAllah": "Fuldført! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah er langt over enhver ufuldkommenhed.",
+  "zikrMeaningAlhamdulillah": "Al lovprisning tilhører Allah.",
+  "zikrMeaningAllahuAkbar": "Allah er den Største.",
+  "zikrMeaningLaIlahaIllallah": "Der er ingen anden gud end Allah.",
+  "zikrMeaningAstaghfirullah": "Jeg søger Allahs tilgivelse.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Der er ingen magt og ingen styrke undtagen gennem Allah."
 }

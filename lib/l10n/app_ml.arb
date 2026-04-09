@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "പൂർത്തിയായി! മാഷാ അല്ലാഹ്"
+  "zikrCompletedMashAllah": "പൂർത്തിയായി! മാഷാ അല്ലാഹ്",
+  "zikrMeaningSubhanAllah": "എല്ലാ അപൂർണതകൾക്കും അതീതനാണ് അല്ലാഹു.",
+  "zikrMeaningAlhamdulillah": "എല്ലാ സ്തുതിയും അല്ലാഹുവിനാണ്.",
+  "zikrMeaningAllahuAkbar": "അല്ലാഹുവാണ് ഏറ്റവും വലിയവൻ.",
+  "zikrMeaningLaIlahaIllallah": "അല്ലാഹുവല്ലാതെ ഒരു ദൈവവുമില്ല.",
+  "zikrMeaningAstaghfirullah": "ഞാൻ അല്ലാഹുവിനോട് പാപമോചനം തേടുന്നു.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "അല്ലാഹുവിലൂടെയല്ലാതെ ഒരു ശക്തിയും ശക്തിയുമില്ല."
 }

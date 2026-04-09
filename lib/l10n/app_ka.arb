@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "დასრულდა! მაშალაჰ"
+  "zikrCompletedMashAllah": "დასრულდა! მაშალაჰ",
+  "zikrMeaningSubhanAllah": "ალაჰი მაღლა დგას ყოველგვარ არასრულყოფილებაზე.",
+  "zikrMeaningAlhamdulillah": "ყველა დიდება ალაჰს ეკუთვნის.",
+  "zikrMeaningAllahuAkbar": "ალაჰი უდიდესია.",
+  "zikrMeaningLaIlahaIllallah": "არ არსებობს ღმერთი გარდა ალაჰისა.",
+  "zikrMeaningAstaghfirullah": "მე ვთხოვ ალაჰის პატიებას.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "არ არსებობს ძალა და ძალა, გარდა ალლაჰის მეშვეობით."
 }

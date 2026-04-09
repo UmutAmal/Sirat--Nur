@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "ተጠናቀቀ! ማሻአላህ"
+  "zikrCompletedMashAllah": "ተጠናቀቀ! ማሻአላህ",
+  "zikrMeaningSubhanAllah": "አላህ ከጉድለት ሁሉ በላይ ነው።",
+  "zikrMeaningAlhamdulillah": "ምስጋና ሁሉ የአላህ ነው።",
+  "zikrMeaningAllahuAkbar": "አላህ ታላቅ ነው።",
+  "zikrMeaningLaIlahaIllallah": "ከአላህ በስተቀር ሌላ አምላክ የለም።",
+  "zikrMeaningAstaghfirullah": "የአላህን ምህረት እጠይቃለሁ።",
+  "zikrMeaningLaHawlaWaLaQuwwata": "በአላህ ካልሆነ በስተቀር ምንም ሃይል እና ጥንካሬ የለም።"
 }

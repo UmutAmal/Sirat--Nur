@@ -488,6 +488,27 @@ class AppLocalizationsLus extends AppLocalizations {
   String get zikrCompletedMashAllah => 'A zo tawh! MashAllah chuan a rawn ti a';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Allah hi famkim lohna zawng zawng aiin a chungnung zawk daih a ni.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Fakna zawng zawng hi Allah ta a ni.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah hi a Ropui ber a ni.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah =>
+      'Allah tih loh chu pathian dang a awm lo.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Allah ngaihdamna ka dil a ni.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Allah kaltlanga tih loh chu thiltihtheihna leh chakna a awm lo.';
+
+  @override
   String get dailyChecklist => 'Nitin Checklist';
 
   @override

@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Hoàn thành! MashAllah"
+  "zikrCompletedMashAllah": "Hoàn thành! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah vượt xa mọi sự không hoàn hảo.",
+  "zikrMeaningAlhamdulillah": "Mọi lời khen ngợi đều thuộc về Allah.",
+  "zikrMeaningAllahuAkbar": "Allah là Đấng vĩ đại nhất.",
+  "zikrMeaningLaIlahaIllallah": "Không có thần nào ngoài Allah.",
+  "zikrMeaningAstaghfirullah": "Tôi tìm kiếm sự tha thứ của Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Không có sức mạnh và sức mạnh nào ngoại trừ thông qua Allah."
 }

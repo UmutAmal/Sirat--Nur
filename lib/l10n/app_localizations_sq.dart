@@ -490,6 +490,26 @@ class AppLocalizationsSq extends AppLocalizations {
   String get zikrCompletedMashAllah => 'E përfunduar! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Allahu është shumë mbi çdo papërsosmëri.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'I gjithë lavdërimi i takon Allahut.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allahu është më i madhi.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Nuk ka zot përveç Allahut.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Kërkoj falje nga Allahu.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Nuk ka fuqi dhe fuqi përveçse nëpërmjet Allahut.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

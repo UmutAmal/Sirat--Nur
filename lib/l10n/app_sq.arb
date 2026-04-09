@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "E përfunduar! MashAllah"
+  "zikrCompletedMashAllah": "E përfunduar! MashAllah",
+  "zikrMeaningSubhanAllah": "Allahu është shumë mbi çdo papërsosmëri.",
+  "zikrMeaningAlhamdulillah": "I gjithë lavdërimi i takon Allahut.",
+  "zikrMeaningAllahuAkbar": "Allahu është më i madhi.",
+  "zikrMeaningLaIlahaIllallah": "Nuk ka zot përveç Allahut.",
+  "zikrMeaningAstaghfirullah": "Kërkoj falje nga Allahu.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nuk ka fuqi dhe fuqi përveçse nëpërmjet Allahut."
 }

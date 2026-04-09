@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "完全的！瑪什真主"
+  "zikrCompletedMashAllah": "完全的！瑪什真主",
+  "zikrMeaningSubhanAllah": "安拉遠高於一切缺陷。",
+  "zikrMeaningAlhamdulillah": "所有讚美都屬於安拉。",
+  "zikrMeaningAllahuAkbar": "安拉是最偉大的。",
+  "zikrMeaningLaIlahaIllallah": "除安拉外，別無上帝。",
+  "zikrMeaningAstaghfirullah": "我尋求阿拉的寬恕。",
+  "zikrMeaningLaHawlaWaLaQuwwata": "除了安拉之外，沒有任何力量和力量。"
 }

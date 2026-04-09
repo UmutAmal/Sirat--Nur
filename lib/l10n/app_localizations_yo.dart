@@ -488,6 +488,25 @@ class AppLocalizationsYo extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Ti pari! MashaAllah';
 
   @override
+  String get zikrMeaningSubhanAllah => 'Allāhu ga ju gbogbo àìpé lọ.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Gbogbo iyin ti Olohun ni.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allāhu ni Alájùlọ.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Kosi Olorun miran ayafi Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Mo wa aforiji Allah.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Ko si agbara ati agbara ayafi ti Olohun.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

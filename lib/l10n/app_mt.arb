@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Tlesti! MashAllah"
+  "zikrCompletedMashAllah": "Tlesti! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah huwa ferm ogħla minn kull imperfezzjoni.",
+  "zikrMeaningAlhamdulillah": "It-tifħir kollu jappartjeni lil Alla.",
+  "zikrMeaningAllahuAkbar": "Allah huwa l-Akbar.",
+  "zikrMeaningLaIlahaIllallah": "M'hemm l-ebda alla ħlief Alla.",
+  "zikrMeaningAstaghfirullah": "Infittex il-maħfra ta’ Alla.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "M'hemm l-ebda qawwa u l-ebda saħħa ħlief permezz ta 'Allah."
 }

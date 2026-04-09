@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "مڪمل ٿيو! ماشاءالله"
+  "zikrCompletedMashAllah": "مڪمل ٿيو! ماشاءالله",
+  "zikrMeaningSubhanAllah": "الله تعاليٰ هر عيب کان مٿانهون آهي.",
+  "zikrMeaningAlhamdulillah": "سڀ تعريفون الله جي لاءِ آهن.",
+  "zikrMeaningAllahuAkbar": "الله سڀ کان وڏو آهي.",
+  "zikrMeaningLaIlahaIllallah": "الله کان سواءِ ڪوبه معبود ناهي.",
+  "zikrMeaningAstaghfirullah": "مان الله کان معافي گهران ٿو.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "الله تعالى کان سواءِ ڪابه طاقت ۽ طاقت نه آهي."
 }

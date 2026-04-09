@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Ti pari! MashaAllah"
+  "zikrCompletedMashAllah": "Ti pari! MashaAllah",
+  "zikrMeaningSubhanAllah": "Allāhu ga ju gbogbo àìpé lọ.",
+  "zikrMeaningAlhamdulillah": "Gbogbo iyin ti Olohun ni.",
+  "zikrMeaningAllahuAkbar": "Allāhu ni Alájùlọ.",
+  "zikrMeaningLaIlahaIllallah": "Kosi Olorun miran ayafi Allah.",
+  "zikrMeaningAstaghfirullah": "Mo wa aforiji Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ko si agbara ati agbara ayafi ti Olohun."
 }

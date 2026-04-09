@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Dhammaystiran! Maasha Allaah"
+  "zikrCompletedMashAllah": "Dhammaystiran! Maasha Allaah",
+  "zikrMeaningSubhanAllah": "Eebbana waa ka sarreeyaa cillad kasta.",
+  "zikrMeaningAlhamdulillah": "Mahad oo dhan Allaah ayaa iska leh.",
+  "zikrMeaningAllahuAkbar": "Allaah ayaa u weyn.",
+  "zikrMeaningLaIlahaIllallah": "Allaah mooyee ilaah kale ma jiro.",
+  "zikrMeaningAstaghfirullah": "Allaah ayaan danbi dhaaf waydiisanayaa.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Awood iyo xoogna ma jiro Allaah mooyee."
 }

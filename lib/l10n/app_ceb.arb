@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Nakompleto na! MashAllah"
+  "zikrCompletedMashAllah": "Nakompleto na! MashAllah",
+  "zikrMeaningSubhanAllah": "Si Allah labaw sa tanang pagkadili hingpit.",
+  "zikrMeaningAlhamdulillah": "Ang tanang pagdayeg iya ni Allah.",
+  "zikrMeaningAllahuAkbar": "Si Allah ang Labing Gamhanan.",
+  "zikrMeaningLaIlahaIllallah": "Walay dios gawas sa Allah.",
+  "zikrMeaningAstaghfirullah": "Nangayo ko sa pasaylo ni Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Walay gahum ug walay kusog gawas kon pinaagi ni Allah."
 }

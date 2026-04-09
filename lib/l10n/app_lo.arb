@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "ສຳເລັດແລ້ວ! MashAllah"
+  "zikrCompletedMashAllah": "ສຳເລັດແລ້ວ! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah ແມ່ນຢູ່ເຫນືອຄວາມບໍ່ສົມບູນແບບ.",
+  "zikrMeaningAlhamdulillah": "ຄໍາສັນລະເສີນທັງຫມົດເປັນຂອງ Allah.",
+  "zikrMeaningAllahuAkbar": "Allah ແມ່ນຍິ່ງໃຫຍ່ທີ່ສຸດ.",
+  "zikrMeaningLaIlahaIllallah": "ບໍ່ມີພຣະເຈົ້າແຕ່ Allah.",
+  "zikrMeaningAstaghfirullah": "ຂ້າພະເຈົ້າຊອກຫາການໃຫ້ອະໄພ Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "ບໍ່ມີພະລັງງານແລະບໍ່ມີຄວາມເຂັ້ມແຂງຍົກເວັ້ນໂດຍຜ່ານ Allah."
 }

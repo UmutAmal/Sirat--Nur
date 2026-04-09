@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "مكتمل! ما شاء الله"
+  "zikrCompletedMashAllah": "مكتمل! ما شاء الله",
+  "zikrMeaningSubhanAllah": "والله فوق كل نقص.",
+  "zikrMeaningAlhamdulillah": "الحمد لله.",
+  "zikrMeaningAllahuAkbar": "الله أكبر.",
+  "zikrMeaningLaIlahaIllallah": "لا إله إلا الله.",
+  "zikrMeaningAstaghfirullah": "أستغفر الله .",
+  "zikrMeaningLaHawlaWaLaQuwwata": "ولا حول ولا قوة إلا بالله."
 }

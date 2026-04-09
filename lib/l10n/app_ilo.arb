@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Nalpasen! MashAllah nga ni"
+  "zikrCompletedMashAllah": "Nalpasen! MashAllah nga ni",
+  "zikrMeaningSubhanAllah": "Adayo a nangatngato ngem ni Allah iti tunggal kinaimperpekto.",
+  "zikrMeaningAlhamdulillah": "Amin a pammadayaw ket kukua ni Allah.",
+  "zikrMeaningAllahuAkbar": "Ni Allah ti Kadakkelan.",
+  "zikrMeaningLaIlahaIllallah": "Awan ti dios no di ni Allah.",
+  "zikrMeaningAstaghfirullah": "Sapsapulek ti pammakawan ni Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Awan ti bileg ken pigsa malaksid babaen ken Allah."
 }

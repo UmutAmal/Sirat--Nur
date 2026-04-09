@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Emechaala! MashaAllah"
+  "zikrCompletedMashAllah": "Emechaala! MashaAllah",
+  "zikrMeaningSubhanAllah": "Allah dị elu karịa ezughị okè ọ bụla.",
+  "zikrMeaningAlhamdulillah": "Otuto niile bụ nke Allah.",
+  "zikrMeaningAllahuAkbar": "Allah kachasi ike.",
+  "zikrMeaningLaIlahaIllallah": "Ọ dịghị chi ma ọ bụghị Allah.",
+  "zikrMeaningAstaghfirullah": "M na-arịọ Allah mgbaghara.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ọ dịghị ike na ọ dịghị ike ma e wezụga site Allah."
 }

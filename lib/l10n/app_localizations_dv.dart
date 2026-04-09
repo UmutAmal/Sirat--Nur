@@ -491,6 +491,27 @@ class AppLocalizationsDv extends AppLocalizations {
   String get zikrCompletedMashAllah => 'ނިމިއްޖެ! މާޝްالله އެވެ';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'الله އަކީ ކޮންމެ ނުފުރިހަމަކަމަކަށްވުރެ މާ މަތީގައެވެ.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'ހުރިހާ ޙަމްދުތަކަކީ الله އަށެވެ.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'الله އަކީ އެންމެ ބޮޑު ރަސްކަލާނގެއެވެ.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah =>
+      'الله ފިޔަވައި އެހެން އިލާހެއް ނެތެވެ.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'ﷲ ގެ މާފު އެދެމެވެ.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'الله ގެ ޙަޟްރަތުން މެނުވީ އެއްވެސް ބާރެއް އަދި ބާރެއް ނެތެވެ.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

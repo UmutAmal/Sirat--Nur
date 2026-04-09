@@ -489,6 +489,25 @@ class AppLocalizationsBho extends AppLocalizations {
   String get zikrCompletedMashAllah => 'पूरा हो गइल! मशअल्लाह के ह';
 
   @override
+  String get zikrMeaningSubhanAllah => 'अल्लाह हर अपूर्णता से बहुत ऊपर बाड़े।';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'सब तारीफ अल्लाह के ह।';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'अल्लाह सबसे बड़ बाड़े।';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'अल्लाह के अलावा कवनो देवता नइखे।';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'अल्लाह से माफी मांगत बानी।';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'अल्लाह के सिवाय कवनो शक्ति आ कवनो ताकत नइखे.';
+
+  @override
   String get dailyChecklist => 'रोजाना के चेकलिस्ट बा';
 
   @override

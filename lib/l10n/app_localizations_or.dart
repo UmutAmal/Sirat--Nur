@@ -488,6 +488,27 @@ class AppLocalizationsOr extends AppLocalizations {
   String get zikrCompletedMashAllah => 'ସମାପ୍ତ! ମଶା ଆଲ୍ଲା';
 
   @override
+  String get zikrMeaningSubhanAllah => 'ଆଲ୍ଲା ପ୍ରତ୍ୟେକ ଅପାରଗତାଠାରୁ ବହୁତ ଅଧିକ |';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'ସମସ୍ତ ପ୍ରଶଂସା ଆଲ୍ଲାଙ୍କର ଅଟେ |';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'ଆଲ୍ଲା ସର୍ବଶ୍ରେଷ୍ଠ |';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah =>
+      'ଆଲ୍ଲା ବ୍ୟତୀତ ଅନ୍ୟ କ god ଣସି ଦେବତା ନାହିଁ।';
+
+  @override
+  String get zikrMeaningAstaghfirullah =>
+      'ମୁଁ ଆଲ୍ଲାଙ୍କର କ୍ଷମା ପ୍ରାର୍ଥନା କରୁଛି |';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'ଆଲ୍ଲା ବ୍ୟତୀତ କ no ଣସି ଶକ୍ତି ଏବଂ ଶକ୍ତି ନାହିଁ |';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

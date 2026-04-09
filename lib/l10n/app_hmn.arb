@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Ua tiav! MashAllah"
+  "zikrCompletedMashAllah": "Ua tiav! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah nyob deb tshaj txhua qhov tsis zoo.",
+  "zikrMeaningAlhamdulillah": "Tag nrho cov qhuas belongs rau Allah.",
+  "zikrMeaningAllahuAkbar": "Allah yog tus loj tshaj.",
+  "zikrMeaningLaIlahaIllallah": "Tsis muaj Vajtswv tab sis Allah.",
+  "zikrMeaningAstaghfirullah": "Kuv nrhiav Allah kev zam txim.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Tsis muaj hwj chim thiab tsis muaj zog tsuas yog los ntawm Allah."
 }

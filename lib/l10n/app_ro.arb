@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Finalizat! MashAllah"
+  "zikrCompletedMashAllah": "Finalizat! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah este cu mult deasupra oricărei imperfecțiuni.",
+  "zikrMeaningAlhamdulillah": "Toată lauda îi aparține lui Allah.",
+  "zikrMeaningAllahuAkbar": "Allah este Cel Mai Mare.",
+  "zikrMeaningLaIlahaIllallah": "Nu există zeu în afară de Allah.",
+  "zikrMeaningAstaghfirullah": "Caut iertarea lui Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nu există putere și putere decât prin Allah."
 }

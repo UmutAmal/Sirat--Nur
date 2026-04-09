@@ -488,6 +488,25 @@ class AppLocalizationsKu extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Temam kirin! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah => 'Allah ji her kêmasiyan pir e.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Hemd ji Xweda re ye.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Xwedayê herî mezin e.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Ji Xweda pêve tu Xweda tune.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Ez ji Xwedê lêborînê dixwazim.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Ji Xwedê pê ve tu hêz û hêz tune ye.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

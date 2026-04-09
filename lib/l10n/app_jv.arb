@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Rampung! MasyaAllah"
+  "zikrCompletedMashAllah": "Rampung! MasyaAllah",
+  "zikrMeaningSubhanAllah": "Allah iku adoh saka saben cacat.",
+  "zikrMeaningAlhamdulillah": "Kabeh puji kagungane Allah.",
+  "zikrMeaningAllahuAkbar": "Allah iku Maha Agung.",
+  "zikrMeaningLaIlahaIllallah": "Ora ana sesembahan kajaba Allah.",
+  "zikrMeaningAstaghfirullah": "Aku njaluk pangapura marang Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ora ana daya lan kekuwatan kajaba mung liwat Allah."
 }

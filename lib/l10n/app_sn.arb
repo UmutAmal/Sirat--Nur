@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Yakapedzwa! MashAllah"
+  "zikrCompletedMashAllah": "Yakapedzwa! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah vari pamusoro pekusakwana kwese.",
+  "zikrMeaningAlhamdulillah": "Kurumbidzwa kwese ndekwaAllah.",
+  "zikrMeaningAllahuAkbar": "Allah ndivo Mukuru.",
+  "zikrMeaningLaIlahaIllallah": "Hakuna mwari kunze kwaAllah.",
+  "zikrMeaningAstaghfirullah": "Ndinokumbira ruregerero kuna Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Hapana simba uye hapana simba kunze kwekuna Allah."
 }

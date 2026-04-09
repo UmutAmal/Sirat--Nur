@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Дууслаа! МашАллах"
+  "zikrCompletedMashAllah": "Дууслаа! МашАллах",
+  "zikrMeaningSubhanAllah": "Аллах бүх төгс бус байдлаас хол байдаг.",
+  "zikrMeaningAlhamdulillah": "Бүх магтаал Аллахад хамаатай.",
+  "zikrMeaningAllahuAkbar": "Аллах бол хамгийн агуу.",
+  "zikrMeaningLaIlahaIllallah": "Аллахаас өөр бурхан байхгүй.",
+  "zikrMeaningAstaghfirullah": "Би Аллахаас өршөөл гуйж байна.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Аллахаас өөр хүч чадал, хүч чадал байхгүй."
 }

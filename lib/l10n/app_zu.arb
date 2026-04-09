@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Kuqediwe! MashaAllah"
+  "zikrCompletedMashAllah": "Kuqediwe! MashaAllah",
+  "zikrMeaningSubhanAllah": "UAllah ungaphezulu kakhulu kukho konke ukungapheleli.",
+  "zikrMeaningAlhamdulillah": "Udumo lonke malube kuAllah.",
+  "zikrMeaningAllahuAkbar": "UAllah mkhulu.",
+  "zikrMeaningLaIlahaIllallah": "Akekho unkulunkulu ngaphandle kukaAllah.",
+  "zikrMeaningAstaghfirullah": "Ngicela intethelelo kuAllah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Akukho mandla namandla ngaphandle kukaAllah."
 }

@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Тәмамланды! МашАллах"
+  "zikrCompletedMashAllah": "Тәмамланды! МашАллах",
+  "zikrMeaningSubhanAllah": "Аллаһ һәр камилсезлектән өстен.",
+  "zikrMeaningAlhamdulillah": "Бөтен мактау Аллаһныкы.",
+  "zikrMeaningAllahuAkbar": "Аллаһ иң бөек.",
+  "zikrMeaningLaIlahaIllallah": "Аллаһудан башка илаһ юк.",
+  "zikrMeaningAstaghfirullah": "Мин Аллаһның кичерүен сорыйм.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Аллаһудан башка көч һәм көч юк."
 }

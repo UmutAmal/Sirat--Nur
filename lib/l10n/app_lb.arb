@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Ofgeschloss! MashAllah"
+  "zikrCompletedMashAllah": "Ofgeschloss! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah ass wäit iwwer all Imperfektioun.",
+  "zikrMeaningAlhamdulillah": "All Luef gehéiert dem Allah.",
+  "zikrMeaningAllahuAkbar": "Allah ass dee Groussste.",
+  "zikrMeaningLaIlahaIllallah": "Et gëtt kee Gott ausser Allah.",
+  "zikrMeaningAstaghfirullah": "Ech sichen dem Allah seng Verzeiung.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Et gëtt keng Kraaft a keng Kraaft ausser duerch Allah."
 }

@@ -489,6 +489,26 @@ class AppLocalizationsEe extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Wowu enu! MashAllah ye nye ema';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Allah ƒo blibomademade ɖesiaɖe ta sãsãsã.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Kafukafuwo katã nye Allah tɔ.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah ye nye Gãtɔ.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Mawu aɖeke meli o negbe Allah ko.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Mele Allah ƒe tsɔtsɔke dim.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Ŋusẽ kple ŋusẽ aɖeke meli o negbe to Allah dzi ko.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

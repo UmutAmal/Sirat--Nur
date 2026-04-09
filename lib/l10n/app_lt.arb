@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Baigta! MashAllah"
+  "zikrCompletedMashAllah": "Baigta! MashAllah",
+  "zikrMeaningSubhanAllah": "Alachas yra daug aukščiau už visus netobulumus.",
+  "zikrMeaningAlhamdulillah": "Visos šlovės priklauso Allahui.",
+  "zikrMeaningAllahuAkbar": "Allah is the Greatest.",
+  "zikrMeaningLaIlahaIllallah": "Nėra kito dievo, išskyrus Allah.",
+  "zikrMeaningAstaghfirullah": "Aš prašau Allaho atleidimo.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nėra jėgos ir jėgos, išskyrus per Allahą."
 }

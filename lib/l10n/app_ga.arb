@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Críochnaithe! MashAllah"
+  "zikrCompletedMashAllah": "Críochnaithe! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah i bhfad os cionn gach imperfection.",
+  "zikrMeaningAlhamdulillah": "Baineann gach moladh le Allah.",
+  "zikrMeaningAllahuAkbar": "Is é Allah an ceann is mó.",
+  "zikrMeaningLaIlahaIllallah": "Níl aon dia ann ach Allah.",
+  "zikrMeaningAstaghfirullah": "Lorgaím maithiúnas Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Níl aon chumhacht agus aon neart ach amháin trí Allah."
 }

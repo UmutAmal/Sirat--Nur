@@ -30,4 +30,14 @@ void main() {
 
     expect(find.text('Tamamlandı! Maşallah'), findsOneWidget);
   });
+
+  testWidgets('ZikrPage shows localized zikr meanings in Turkish', (
+    tester,
+  ) async {
+    await tester.pumpWidget(buildTestApp(locale: const Locale('tr')));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Allah her türlü noksanlıktan uzaktır.'), findsOneWidget);
+    expect(find.text('Glory be to Allah'), findsNothing);
+  });
 }

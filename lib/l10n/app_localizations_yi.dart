@@ -488,6 +488,26 @@ class AppLocalizationsYi extends AppLocalizations {
   String get zikrCompletedMashAllah => 'געענדיקט! מאַשאַלאַ';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'אַלאַ איז ווייַט אויבן יעדער ימפּערפעקשאַן.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'אַלע לויב געהערט צו אַלאַ.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'אַלאַ איז דער גרעסטער.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'עס איז קיין גאָט אָבער אַלאַ.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'איך זוכן אַלאַ ס מחילה.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'עס איז קיין מאַכט און קיין שטאַרקייַט אַחוץ דורך אַלאַ.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

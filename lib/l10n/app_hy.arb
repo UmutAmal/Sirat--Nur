@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Ավարտված է ՄաշԱլլահ"
+  "zikrCompletedMashAllah": "Ավարտված է ՄաշԱլլահ",
+  "zikrMeaningSubhanAllah": "Ալլահը շատ վեր է ամեն անկատարությունից:",
+  "zikrMeaningAlhamdulillah": "Ամբողջ փառքը պատկանում է Ալլահին:",
+  "zikrMeaningAllahuAkbar": "Ալլահը ամենամեծն է:",
+  "zikrMeaningLaIlahaIllallah": "Ալլահից բացի այլ աստված չկա:",
+  "zikrMeaningAstaghfirullah": "Ես Ալլահի ներում եմ խնդրում:",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Չկա ուժ և ուժ, բացի Ալլահի միջոցով:"
 }

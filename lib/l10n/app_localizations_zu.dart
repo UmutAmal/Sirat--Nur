@@ -488,6 +488,27 @@ class AppLocalizationsZu extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Kuqediwe! MashaAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'UAllah ungaphezulu kakhulu kukho konke ukungapheleli.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Udumo lonke malube kuAllah.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'UAllah mkhulu.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah =>
+      'Akekho unkulunkulu ngaphandle kukaAllah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Ngicela intethelelo kuAllah.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Akukho mandla namandla ngaphandle kukaAllah.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

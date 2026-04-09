@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Tamamlandy! MaşAllah"
+  "zikrCompletedMashAllah": "Tamamlandy! MaşAllah",
+  "zikrMeaningSubhanAllah": "Allah her bir kemçilikden ýokarydyr.",
+  "zikrMeaningAlhamdulillah": "Hemme öwgi Allaha degişlidir.",
+  "zikrMeaningAllahuAkbar": "Allah iň beýikdir.",
+  "zikrMeaningLaIlahaIllallah": "Alladan başga hudaý ýok.",
+  "zikrMeaningAstaghfirullah": "Allanyň bagyşlamagyny soraýaryn.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Alladan başga güýç we güýç ýok."
 }

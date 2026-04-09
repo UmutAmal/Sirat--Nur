@@ -489,6 +489,25 @@ class AppLocalizationsBm extends AppLocalizations {
   String get zikrCompletedMashAllah => 'A dafara! MashAllah ye baara kɛ';
 
   @override
+  String get zikrMeaningSubhanAllah => 'Allah ka bon ni dafabaliya bɛɛ ye.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Tanuli bɛɛ ye Allah ta ye.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah de ka bon.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Ala foyi tɛ yen ni Allah tɛ.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Ne bɛ Allah ka yafa ɲini.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Fanga ni fanga foyi tɛ yen fo Allah fɛ.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

@@ -488,6 +488,25 @@ class AppLocalizationsUr extends AppLocalizations {
   String get zikrCompletedMashAllah => 'مکمل! ماشاءاللہ';
 
   @override
+  String get zikrMeaningSubhanAllah => 'اللہ ہر نقص سے بالاتر ہے۔';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'تمام تعریفیں اللہ کے لیے ہیں۔';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'اللہ سب سے بڑا ہے۔';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'اللہ کے سوا کوئی معبود نہیں۔';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'میں اللہ سے معافی چاہتا ہوں۔';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'اللہ کے سوا کوئی طاقت اور طاقت نہیں ہے۔';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

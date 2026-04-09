@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "完成しました！マシュアッラー"
+  "zikrCompletedMashAllah": "完成しました！マシュアッラー",
+  "zikrMeaningSubhanAllah": "アッラーはあらゆる不完全さをはるかに超えておられます。",
+  "zikrMeaningAlhamdulillah": "すべての賛美はアッラーに属します。",
+  "zikrMeaningAllahuAkbar": "アッラーは最も偉大な方です。",
+  "zikrMeaningLaIlahaIllallah": "アッラー以外に神はありません。",
+  "zikrMeaningAstaghfirullah": "私はアッラーの許しを求めます。",
+  "zikrMeaningLaHawlaWaLaQuwwata": "アッラーを通してでなければ力も強さもありません。"
 }

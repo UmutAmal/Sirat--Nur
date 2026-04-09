@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "تکمیل شد! ماشاالله"
+  "zikrCompletedMashAllah": "تکمیل شد! ماشاالله",
+  "zikrMeaningSubhanAllah": "خداوند بسیار بالاتر از هر نقصی است.",
+  "zikrMeaningAlhamdulillah": "تمام حمد و ستایش از آن خداست.",
+  "zikrMeaningAllahuAkbar": "الله اکبر است.",
+  "zikrMeaningLaIlahaIllallah": "معبودی جز الله نیست.",
+  "zikrMeaningAstaghfirullah": "از خداوند طلب آمرزش می کنم.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "هیچ قدرت و نیرویی جز به وسیله خداوند نیست."
 }

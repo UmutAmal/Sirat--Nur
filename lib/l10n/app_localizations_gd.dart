@@ -490,6 +490,26 @@ class AppLocalizationsGd extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Crìochnaichte! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Tha Allah fada os cionn gach neo-fhoirfeachd.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Buinidh a h-uile moladh do Dhia.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Is e Allah am fear as motha.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Chan eil dia ann ach Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Tha mi a’ sireadh maitheanas Allah.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Chan eil cumhachd no neart ann ach tro Dhia.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

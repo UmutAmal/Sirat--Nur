@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Wɔawie! MashAllah na ɔyɛ"
+  "zikrCompletedMashAllah": "Wɔawie! MashAllah na ɔyɛ",
+  "zikrMeaningSubhanAllah": "Allah boro pɛyɛ biara so koraa.",
+  "zikrMeaningAlhamdulillah": "Ayeyi nyinaa ye Allah dea.",
+  "zikrMeaningAllahuAkbar": "Allah ne Ɔkɛseɛ.",
+  "zikrMeaningLaIlahaIllallah": "Onyame biara nni ho gyese Allah.",
+  "zikrMeaningAstaghfirullah": "Mehwehwe Allah bonefakye.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Tumi ne ahoɔden biara nni hɔ gyese ɛnam Allah so."
 }

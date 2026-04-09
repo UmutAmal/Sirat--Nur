@@ -3493,3 +3493,44 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/zikr/zikr_page.dart) içindeki hardcoded zikr meaning gloss’ları doğrulanmış dini anlamlarla localization zincirine taşınacak.
 - Ardından kalan residual hardcoded taraması yeniden çalıştırılacak.
+
+## 2026-04-09 TUR-89 — Localize Verified Zikr Meanings
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/zikr/zikr_page.dart) içinde `resolveZikrMeaning` yardımcı fonksiyonu eklendi; zikr kartındaki hardcoded İngilizce meaning gloss’ları kaldırıldı ve localization anahtarlarına bağlandı.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) içine altı zikr meaning anahtarı eklendi.
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force zikrMeaningSubhanAllah zikrMeaningAlhamdulillah zikrMeaningAllahuAkbar zikrMeaningLaIlahaIllallah zikrMeaningAstaghfirullah zikrMeaningLaHawlaWaLaQuwwata` ile çalıştırıldı ve tüm locale setine yayıldı.
+- [A:\Way of Allah\sirat_i_nur\test\features\zikr\zikr_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/zikr/zikr_page_test.dart) genişletildi; Türkçe meaning görünümü doğrulandı.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) broad guard ile yeni zikr meaning anahtarları için güncellendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart#L18](A:/Way%20of%20Allah/sirat_i_nur/lib/features/zikr/zikr_page.dart#L18) sonrası `_zikrs` listesinde meaning alanlarının hâlâ İngilizce hardcoded dini gloss taşıdığı tespit edildi.
+- Kullanıcı talimatına göre dini içerik çeviri turundan önce semantik doğruluk sabitlenmeliydi; bu yüzden zikr anlamları localization’a taşınmadan önce doğrulanmış formülasyonla yeniden yazıldı.
+- Amaç yalnızca UI yerelleştirmesi değil, zikr gloss’larının dini olarak daha doğru ve tutarlı hale getirilmesiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\zikr\zikr_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Zikr ekranındaki altı meaning gloss artık hardcoded İngilizce değil, tüm locale setinde localization zincirinden geliyor.
+- Priority locale seti bu anahtarlar için İngilizce fallback göstermiyor.
+- Türkçe religious gloss’lar UI’de daha doğru formülasyonla görünür hale geldi.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart --force zikrMeaningSubhanAllah zikrMeaningAlhamdulillah zikrMeaningAllahuAkbar zikrMeaningLaIlahaIllallah zikrMeaningAstaghfirullah zikrMeaningLaHawlaWaLaQuwwata` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/features/zikr/zikr_page_test.dart` → PASS (`2/2`)
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`16/16`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`203/203`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Zikr screen still exposing English hardcoded religious glosses: `13/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki cloud parser’ın çok dilli `translations` map’ini yalnızca `tr/en`’e düşürme sorunu düzeltilecek.
+- Ardından [A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/asma_ul_husna_page.dart) üzerindeki locale-agnostic search/filter yüzeyi yeniden değerlendirilecek.

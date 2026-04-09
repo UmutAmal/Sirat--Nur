@@ -490,6 +490,26 @@ class AppLocalizationsNso extends AppLocalizations {
   String get zikrCompletedMashAllah => 'E phethilwe! MashAllah ke yena';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Allah o ka godimo kudu ga go se phethagale mo gongwe le mo gongwe.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Theto yohle ke ya Allah.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah ke yo Mogolo.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Ga go na modimo ge e se Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Ke nyaka tshwarelo ya Allah.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Ga go na maatla le maatla ntle le ka Allah.';
+
+  @override
   String get dailyChecklist => 'Lenaneo la go Hlahloba la Letšatši le Letšatši';
 
   @override

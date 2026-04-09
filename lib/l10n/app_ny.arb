@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Zatha! MashaAllah"
+  "zikrCompletedMashAllah": "Zatha! MashaAllah",
+  "zikrMeaningSubhanAllah": "Allah ali Pamwambamwamba pa chilichonse chopanda ungwiro.",
+  "zikrMeaningAlhamdulillah": "Kuyamikidwa konse nkwa Mulungu.",
+  "zikrMeaningAllahuAkbar": "Allah ndi wamkulu.",
+  "zikrMeaningLaIlahaIllallah": "Palibe wopembedzedwa mwachoonadi koma Allah.",
+  "zikrMeaningAstaghfirullah": "Ndikupempha chikhululuko kwa Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Palibe mphamvu ndi mphamvu koma kudzera mwa Mulungu."
 }

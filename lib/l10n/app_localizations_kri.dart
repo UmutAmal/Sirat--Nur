@@ -489,6 +489,26 @@ class AppLocalizationsKri extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Dɛn dɔn dɔn am! MashAllah na di pɔsin';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Allah de fa fawe pas ɔl di tin dɛn we nɔ pafɛkt.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Ɔl di prez na fɔ Allah.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah na di wan we pas ɔlman.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'No gɔd nɔ de pas Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'A de luk fɔ Allah in fɔgivnɛs.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'No pawa ɛn trɛnk nɔ de pas tru Allah.';
+
+  @override
   String get dailyChecklist => 'Chɛklist ɛvride';
 
   @override

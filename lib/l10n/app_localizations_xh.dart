@@ -488,6 +488,27 @@ class AppLocalizationsXh extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Igqityiwe! MashaAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'UAllh Ungaphezulu lee kuko konke ukungafezeki.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Yonke indumiso yeka-Allh.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'UAllh ngoyena mkhulu.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah =>
+      'Akukho thixo wumbi ngaphandle koAllh.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Ndicela uxolo kuAllh.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Akukho mandla, akukho mandla ngaphandle kuka-Allh.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

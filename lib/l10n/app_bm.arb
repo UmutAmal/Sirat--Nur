@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "A dafara! MashAllah ye baara kɛ"
+  "zikrCompletedMashAllah": "A dafara! MashAllah ye baara kɛ",
+  "zikrMeaningSubhanAllah": "Allah ka bon ni dafabaliya bɛɛ ye.",
+  "zikrMeaningAlhamdulillah": "Tanuli bɛɛ ye Allah ta ye.",
+  "zikrMeaningAllahuAkbar": "Allah de ka bon.",
+  "zikrMeaningLaIlahaIllallah": "Ala foyi tɛ yen ni Allah tɛ.",
+  "zikrMeaningAstaghfirullah": "Ne bɛ Allah ka yafa ɲini.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Fanga ni fanga foyi tɛ yen fo Allah fɛ."
 }

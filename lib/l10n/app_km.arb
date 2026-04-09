@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "ចប់ហើយ! MashAllah"
+  "zikrCompletedMashAllah": "ចប់ហើយ! MashAllah",
+  "zikrMeaningSubhanAllah": "អល់ឡោះគឺខ្ពស់ជាងរាល់ភាពមិនល្អឥតខ្ចោះ។",
+  "zikrMeaningAlhamdulillah": "ការសរសើរទាំងអស់ជាកម្មសិទ្ធិរបស់អល់ឡោះ។",
+  "zikrMeaningAllahuAkbar": "អល់ឡោះគឺអស្ចារ្យបំផុត។",
+  "zikrMeaningLaIlahaIllallah": "គ្មានព្រះក្រៅពីអល់ឡោះទេ។",
+  "zikrMeaningAstaghfirullah": "ខ្ញុំស្វែងរកការអភ័យទោសពីអល់ឡោះ។",
+  "zikrMeaningLaHawlaWaLaQuwwata": "គ្មានអំណាច និងគ្មានកម្លាំងទេ លើកលែងតែតាមរយៈអល់ឡោះ។"
 }

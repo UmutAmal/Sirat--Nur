@@ -489,6 +489,27 @@ class AppLocalizationsOm extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Xumurameera! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Rabbiin mudaa hundarra baay’ee ol ta’a.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Galanni hundi kan Rabbiiti.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Rabbiin Guddaadha.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah =>
+      'Rabbiin malee gabbaramaan biraa hin jiru.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Araarama Rabbii nan barbaada.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Karaa Rabbiin malee humni fi humni hin jiru.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

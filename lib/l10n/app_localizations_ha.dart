@@ -489,6 +489,26 @@ class AppLocalizationsHa extends AppLocalizations {
   String get zikrCompletedMashAllah => 'An kammala! MashaAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Lalle ne Allah Yã kasance a kan kõwane azzãlumai.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Dukkan godiya ta tabbata ga Allah.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah shi ne mafi girma.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Bãbu abin bautãwa fãce Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Ina neman gafarar Allah.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Babu karfi babu karfi sai ta Allah.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

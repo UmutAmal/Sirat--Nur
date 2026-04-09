@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Completado! MashAllah"
+  "zikrCompletedMashAllah": "Completado! MashAllah",
+  "zikrMeaningSubhanAllah": "Alá está moi por riba de toda imperfección.",
+  "zikrMeaningAlhamdulillah": "Todos os eloxios pertencen a Deus.",
+  "zikrMeaningAllahuAkbar": "Alá é o Maior.",
+  "zikrMeaningLaIlahaIllallah": "Non hai deus senón Alá.",
+  "zikrMeaningAstaghfirullah": "Busco o perdón de Deus.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Non hai poder nin forza excepto por Deus."
 }

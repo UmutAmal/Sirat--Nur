@@ -488,6 +488,26 @@ class AppLocalizationsPl extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Zakończony! MaszAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Allah jest daleko ponad wszelką niedoskonałością.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Wszelka chwała należy się Allahowi.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah jest Największy.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Nie ma boga prócz Allaha.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Szukam przebaczenia Allaha.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Nie ma mocy ani siły, jak tylko dzięki Allahowi.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

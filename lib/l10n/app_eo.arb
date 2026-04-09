@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Kompletigita! Maŝalaho"
+  "zikrCompletedMashAllah": "Kompletigita! Maŝalaho",
+  "zikrMeaningSubhanAllah": "Alaho estas multe super ĉiu neperfekteco.",
+  "zikrMeaningAlhamdulillah": "Ĉiu laŭdo apartenas al Alaho.",
+  "zikrMeaningAllahuAkbar": "Alaho estas la Plej Granda.",
+  "zikrMeaningLaIlahaIllallah": "Ne ekzistas dio krom Alaho.",
+  "zikrMeaningAstaghfirullah": "Mi serĉas la pardonon de Alaho.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ne ekzistas potenco kaj forto krom per Alaho."
 }

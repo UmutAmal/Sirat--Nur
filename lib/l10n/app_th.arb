@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "สมบูรณ์! มาชาอัลลอฮ์"
+  "zikrCompletedMashAllah": "สมบูรณ์! มาชาอัลลอฮ์",
+  "zikrMeaningSubhanAllah": "อัลลอฮ์ทรงอยู่เหนือความไม่สมบูรณ์ทุกอย่างมาก",
+  "zikrMeaningAlhamdulillah": "การสรรเสริญทั้งหมดเป็นของอัลลอฮ์",
+  "zikrMeaningAllahuAkbar": "อัลลอฮฺคือผู้ทรงยิ่งใหญ่",
+  "zikrMeaningLaIlahaIllallah": "ไม่มีพระเจ้าอื่นใดนอกจากอัลลอฮ์",
+  "zikrMeaningAstaghfirullah": "ฉันขอการอภัยโทษจากอัลลอฮ.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "ไม่มีอำนาจและไม่มีความแข็งแกร่งใด ๆ เว้นแต่ผ่านทางอัลลอฮ์"
 }

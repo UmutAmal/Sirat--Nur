@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "E phethilwe! MashAllah ke yena"
+  "zikrCompletedMashAllah": "E phethilwe! MashAllah ke yena",
+  "zikrMeaningSubhanAllah": "Allah o ka godimo kudu ga go se phethagale mo gongwe le mo gongwe.",
+  "zikrMeaningAlhamdulillah": "Theto yohle ke ya Allah.",
+  "zikrMeaningAllahuAkbar": "Allah ke yo Mogolo.",
+  "zikrMeaningLaIlahaIllallah": "Ga go na modimo ge e se Allah.",
+  "zikrMeaningAstaghfirullah": "Ke nyaka tshwarelo ya Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ga go na maatla le maatla ntle le ka Allah."
 }

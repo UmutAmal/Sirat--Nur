@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Ua pau! MashAllah"
+  "zikrCompletedMashAllah": "Ua pau! MashAllah",
+  "zikrMeaningSubhanAllah": "ʻO ke Akua ma mua o nā hemahema a pau.",
+  "zikrMeaningAlhamdulillah": "No Allah ka mahalo.",
+  "zikrMeaningAllahuAkbar": "ʻO Allah ka Mea Nui.",
+  "zikrMeaningLaIlahaIllallah": "ʻAʻohe akua ʻo Allah wale nō.",
+  "zikrMeaningAstaghfirullah": "ʻImi au i ke kala ʻana o ke Akua.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "ʻAʻohe mana a ʻaʻohe ikaika ke ʻole ma ke Akua."
 }

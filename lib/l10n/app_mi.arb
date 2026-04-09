@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Kua oti! MashAllah"
+  "zikrCompletedMashAllah": "Kua oti! MashAllah",
+  "zikrMeaningSubhanAllah": "Kei runga ake a Allah i nga ngoikoretanga katoa.",
+  "zikrMeaningAlhamdulillah": "Ma Allah nga mihi katoa.",
+  "zikrMeaningAllahuAkbar": "Ko Allah te Mea Nui.",
+  "zikrMeaningLaIlahaIllallah": "Karekau he atua engari ko Allah.",
+  "zikrMeaningAstaghfirullah": "E rapu ana ahau i te murunga hara a Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Karekau he kaha me te kaha engari ma Allah."
 }

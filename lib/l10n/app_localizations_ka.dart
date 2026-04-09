@@ -489,6 +489,26 @@ class AppLocalizationsKa extends AppLocalizations {
   String get zikrCompletedMashAllah => 'დასრულდა! მაშალაჰ';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'ალაჰი მაღლა დგას ყოველგვარ არასრულყოფილებაზე.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'ყველა დიდება ალაჰს ეკუთვნის.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'ალაჰი უდიდესია.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'არ არსებობს ღმერთი გარდა ალაჰისა.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'მე ვთხოვ ალაჰის პატიებას.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'არ არსებობს ძალა და ძალა, გარდა ალლაჰის მეშვეობით.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

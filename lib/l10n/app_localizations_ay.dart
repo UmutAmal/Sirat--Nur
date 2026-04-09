@@ -495,6 +495,28 @@ class AppLocalizationsAy extends AppLocalizations {
       '¡Tukuyatäxiwa! MashAllah ukax mä juk’a pachanakanwa';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Allah ukax taqi pantjasiwinakat sipanx juk’amp jach’awa.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Taqi jach’añchäwix Allah ukankiwa.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah ukax Jach’akiwa.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah =>
+      'Janiw kuna diosas utjkiti, jan ukasti Allah ukaw utji.';
+
+  @override
+  String get zikrMeaningAstaghfirullah =>
+      'Nayax Allahan pampachäwip thaqhaskta.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Janiw kuna ch’amas ch’amas utjkiti jan ukasti Allah tuqikiw utji.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

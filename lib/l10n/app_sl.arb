@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Dokončano! MashAllah"
+  "zikrCompletedMashAllah": "Dokončano! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah je daleč nad vsako nepopolnostjo.",
+  "zikrMeaningAlhamdulillah": "Vsa slava pripada Allahu.",
+  "zikrMeaningAllahuAkbar": "Allah je največji.",
+  "zikrMeaningLaIlahaIllallah": "Ni boga razen Allaha.",
+  "zikrMeaningAstaghfirullah": "Iščem Allahovo odpuščanje.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ni moči in moči razen prek Allaha."
 }

@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Temam kirin! MashAllah"
+  "zikrCompletedMashAllah": "Temam kirin! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah ji her kêmasiyan pir e.",
+  "zikrMeaningAlhamdulillah": "Hemd ji Xweda re ye.",
+  "zikrMeaningAllahuAkbar": "Xwedayê herî mezin e.",
+  "zikrMeaningLaIlahaIllallah": "Ji Xweda pêve tu Xweda tune.",
+  "zikrMeaningAstaghfirullah": "Ez ji Xwedê lêborînê dixwazim.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ji Xwedê pê ve tu hêz û hêz tune ye."
 }

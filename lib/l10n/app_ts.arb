@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Ku hetiwile! MashAllah, loyi a nga"
+  "zikrCompletedMashAllah": "Ku hetiwile! MashAllah, loyi a nga",
+  "zikrMeaningSubhanAllah": "Allah u le henhla swinene ka ku nga hetiseki kun’wana ni kun’wana.",
+  "zikrMeaningAlhamdulillah": "Ku dzunisiwa hinkwako i ka Allah.",
+  "zikrMeaningAllahuAkbar": "Allah hi yena Lonkulu.",
+  "zikrMeaningLaIlahaIllallah": "A ku na xikwembu handle ka Allah.",
+  "zikrMeaningAstaghfirullah": "Ndzi lava ku rivaleriwa ka Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "A ku na matimba na matimba handle ka hi Allah."
 }

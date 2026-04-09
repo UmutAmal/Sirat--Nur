@@ -488,6 +488,25 @@ class AppLocalizationsTg extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Ба итмом расид! МашаАллах';
 
   @override
+  String get zikrMeaningSubhanAllah => 'Аллоҳ ҳар бир ноқулайликдан устундир.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Ҳамду ситоиш аз они Худост.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Аллоҳ бузургтар аст.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Ҳеҷ худое ҷуз Аллоҳ нест.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Аллоҳдан мағфират сўрайман.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Ҳеҷ қудрат ва тавоноӣ ҷуз ба воситаи Аллоҳ нест.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

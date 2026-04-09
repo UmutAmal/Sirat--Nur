@@ -489,6 +489,26 @@ class AppLocalizationsGa extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Críochnaithe! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Allah i bhfad os cionn gach imperfection.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Baineann gach moladh le Allah.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Is é Allah an ceann is mó.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Níl aon dia ann ach Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Lorgaím maithiúnas Allah.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Níl aon chumhacht agus aon neart ach amháin trí Allah.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

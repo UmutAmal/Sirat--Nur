@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Wedi'i gwblhau! MashAllah"
+  "zikrCompletedMashAllah": "Wedi'i gwblhau! MashAllah",
+  "zikrMeaningSubhanAllah": "Mae Allah ymhell uwchlaw pob amherffeithrwydd.",
+  "zikrMeaningAlhamdulillah": "Mae pob clod yn perthyn i Allah.",
+  "zikrMeaningAllahuAkbar": "Allah yw'r Mwyaf.",
+  "zikrMeaningLaIlahaIllallah": "Nid oes duw ond Allah.",
+  "zikrMeaningAstaghfirullah": "Rwy'n ceisio maddeuant Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nid oes unrhyw bŵer a dim cryfder ac eithrio trwy Allah."
 }

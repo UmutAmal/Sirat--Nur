@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "पूरा हो गइल! मशअल्लाह के ह"
+  "zikrCompletedMashAllah": "पूरा हो गइल! मशअल्लाह के ह",
+  "zikrMeaningSubhanAllah": "अल्लाह हर अपूर्णता से बहुत ऊपर बाड़े।",
+  "zikrMeaningAlhamdulillah": "सब तारीफ अल्लाह के ह।",
+  "zikrMeaningAllahuAkbar": "अल्लाह सबसे बड़ बाड़े।",
+  "zikrMeaningLaIlahaIllallah": "अल्लाह के अलावा कवनो देवता नइखे।",
+  "zikrMeaningAstaghfirullah": "अल्लाह से माफी मांगत बानी।",
+  "zikrMeaningLaHawlaWaLaQuwwata": "अल्लाह के सिवाय कवनो शक्ति आ कवनो ताकत नइखे."
 }

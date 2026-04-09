@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Valmis! MashAllah"
+  "zikrCompletedMashAllah": "Valmis! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah on paljon kaikkien epätäydellisyyksien yläpuolella.",
+  "zikrMeaningAlhamdulillah": "Kaikki ylistys kuuluu Allahille.",
+  "zikrMeaningAllahuAkbar": "Allah on Suurin.",
+  "zikrMeaningLaIlahaIllallah": "Ei ole muuta jumalaa kuin Allah.",
+  "zikrMeaningAstaghfirullah": "Pyydän Allahin anteeksiantoa.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ei ole voimaa eikä voimaa muuten kuin Allahin kautta."
 }

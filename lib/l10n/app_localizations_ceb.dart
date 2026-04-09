@@ -489,6 +489,26 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Nakompleto na! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Si Allah labaw sa tanang pagkadili hingpit.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Ang tanang pagdayeg iya ni Allah.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Si Allah ang Labing Gamhanan.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Walay dios gawas sa Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Nangayo ko sa pasaylo ni Allah.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Walay gahum ug walay kusog gawas kon pinaagi ni Allah.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

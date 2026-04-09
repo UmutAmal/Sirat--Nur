@@ -490,6 +490,26 @@ class AppLocalizationsCy extends AppLocalizations {
   String get zikrCompletedMashAllah => 'Wedi\'i gwblhau! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah =>
+      'Mae Allah ymhell uwchlaw pob amherffeithrwydd.';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'Mae pob clod yn perthyn i Allah.';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'Allah yw\'r Mwyaf.';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'Nid oes duw ond Allah.';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'Rwy\'n ceisio maddeuant Allah.';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'Nid oes unrhyw bŵer a dim cryfder ac eithrio trwy Allah.';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Cumplitu ! MashAllah"
+  "zikrCompletedMashAllah": "Cumplitu ! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah hè assai sopra ogni imperfezione.",
+  "zikrMeaningAlhamdulillah": "Ogni lode appartene à Allah.",
+  "zikrMeaningAllahuAkbar": "Allah hè u più grande.",
+  "zikrMeaningLaIlahaIllallah": "Ùn ci hè un diu chè Allah.",
+  "zikrMeaningAstaghfirullah": "Cercu u pirdunu di Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ùn ci hè nè putenza nè forza fora di Allah."
 }

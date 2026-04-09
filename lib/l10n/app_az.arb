@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Tamamlandı! MaşAllah"
+  "zikrCompletedMashAllah": "Tamamlandı! MaşAllah",
+  "zikrMeaningSubhanAllah": "Allah hər bir qüsurdan uzaqdır.",
+  "zikrMeaningAlhamdulillah": "Bütün həmdlər Allaha məxsusdur.",
+  "zikrMeaningAllahuAkbar": "Allah ən böyükdür.",
+  "zikrMeaningLaIlahaIllallah": "Allahdan başqa ilah yoxdur.",
+  "zikrMeaningAstaghfirullah": "Allahdan bağışlanma diləyirəm.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Allahdan başqa heç bir güc və güc yoxdur."
 }

@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Pabeigts! MashAllah"
+  "zikrCompletedMashAllah": "Pabeigts! MashAllah",
+  "zikrMeaningSubhanAllah": "Allāhs ir daudz augstāks par visām nepilnībām.",
+  "zikrMeaningAlhamdulillah": "Visas uzslavas pieder Allāham.",
+  "zikrMeaningAllahuAkbar": "Allāhs ir vislielākais.",
+  "zikrMeaningLaIlahaIllallah": "Nav cita dieva, izņemot Allāhu.",
+  "zikrMeaningAstaghfirullah": "Es meklēju Allāha piedošanu.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nav spēka un spēka, izņemot caur Allāhu."
 }

@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Ua mae'a! MashAllah"
+  "zikrCompletedMashAllah": "Ua mae'a! MashAllah",
+  "zikrMeaningSubhanAllah": "E sili mamao atu Allah i mea le atoatoa uma.",
+  "zikrMeaningAlhamdulillah": "O viiga uma e ia Allah.",
+  "zikrMeaningAllahuAkbar": "O Allah le Silisiliese.",
+  "zikrMeaningLaIlahaIllallah": "E leai se atua na o Allah.",
+  "zikrMeaningAstaghfirullah": "Ou te sailia le faamagaloga a le Atua.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "E leai se malosi ma leai se malosi vagana ai e ala mai ia Allah."
 }

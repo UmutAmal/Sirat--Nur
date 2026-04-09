@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "A zo tawh! MashAllah chuan a rawn ti a"
+  "zikrCompletedMashAllah": "A zo tawh! MashAllah chuan a rawn ti a",
+  "zikrMeaningSubhanAllah": "Allah hi famkim lohna zawng zawng aiin a chungnung zawk daih a ni.",
+  "zikrMeaningAlhamdulillah": "Fakna zawng zawng hi Allah ta a ni.",
+  "zikrMeaningAllahuAkbar": "Allah hi a Ropui ber a ni.",
+  "zikrMeaningLaIlahaIllallah": "Allah tih loh chu pathian dang a awm lo.",
+  "zikrMeaningAstaghfirullah": "Allah ngaihdamna ka dil a ni.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Allah kaltlanga tih loh chu thiltihtheihna leh chakna a awm lo."
 }

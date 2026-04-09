@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "تامام! MashAllah"
+  "zikrCompletedMashAllah": "تامام! MashAllah",
+  "zikrMeaningSubhanAllah": "ئاللاھ ھەر بىر مۇكەممەللىكتىن ئۈستۈن تۇرىدۇ.",
+  "zikrMeaningAlhamdulillah": "بارلىق مەدھىيە ئاللاھقا مەنسۇپ.",
+  "zikrMeaningAllahuAkbar": "ئاللاھ ئەڭ ئۇلۇغدۇر.",
+  "zikrMeaningLaIlahaIllallah": "ئاللاھتىن باشقا ئىلاھ يوق.",
+  "zikrMeaningAstaghfirullah": "ئاللاھنىڭ مەغپىرىتىنى تىلەيمەن.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "ئاللاھتىن باشقا كۈچ ۋە كۈچ يوق."
 }

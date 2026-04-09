@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Tapos na! MashAllah"
+  "zikrCompletedMashAllah": "Tapos na! MashAllah",
+  "zikrMeaningSubhanAllah": "Si Allah ay higit sa lahat ng di-kasakdalan.",
+  "zikrMeaningAlhamdulillah": "Ang lahat ng papuri ay kay Allah.",
+  "zikrMeaningAllahuAkbar": "Si Allah ang Pinakamadakila.",
+  "zikrMeaningLaIlahaIllallah": "Walang diyos kundi si Allah.",
+  "zikrMeaningAstaghfirullah": "Humihingi ako ng kapatawaran sa Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Walang kapangyarihan at walang lakas maliban sa pamamagitan ng Allah."
 }

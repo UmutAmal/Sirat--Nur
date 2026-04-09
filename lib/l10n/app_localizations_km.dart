@@ -488,6 +488,26 @@ class AppLocalizationsKm extends AppLocalizations {
   String get zikrCompletedMashAllah => 'ចប់ហើយ! MashAllah';
 
   @override
+  String get zikrMeaningSubhanAllah => 'អល់ឡោះគឺខ្ពស់ជាងរាល់ភាពមិនល្អឥតខ្ចោះ។';
+
+  @override
+  String get zikrMeaningAlhamdulillah =>
+      'ការសរសើរទាំងអស់ជាកម្មសិទ្ធិរបស់អល់ឡោះ។';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'អល់ឡោះគឺអស្ចារ្យបំផុត។';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'គ្មានព្រះក្រៅពីអល់ឡោះទេ។';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'ខ្ញុំស្វែងរកការអភ័យទោសពីអល់ឡោះ។';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'គ្មានអំណាច និងគ្មានកម្លាំងទេ លើកលែងតែតាមរយៈអល់ឡោះ។';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

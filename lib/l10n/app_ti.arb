@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "ተዛዚሙ! ማሽኣላህ"
+  "zikrCompletedMashAllah": "ተዛዚሙ! ማሽኣላህ",
+  "zikrMeaningSubhanAllah": "ኣላህ ልዕሊ ኩሉ ዘይፍጽምና ኣዝዩ እዩ።",
+  "zikrMeaningAlhamdulillah": "ኩሉ ምስጋና ናይ ኣላህ እዩ።",
+  "zikrMeaningAllahuAkbar": "ኣላህ እቲ ዝዓበየ እዩ።",
+  "zikrMeaningLaIlahaIllallah": "ብዘይካ ኣላህ ካልእ ኣምላኽ የለን።",
+  "zikrMeaningAstaghfirullah": "ካብ ኣላህ ይቕሬታ ​​እደሊ ኣለኹ።",
+  "zikrMeaningLaHawlaWaLaQuwwata": "ብዘይካ ብኣሏህ ሓይልን ሓይልን የለን።"
 }

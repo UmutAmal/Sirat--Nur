@@ -487,6 +487,25 @@ class AppLocalizationsAm extends AppLocalizations {
   String get zikrCompletedMashAllah => 'ተጠናቀቀ! ማሻአላህ';
 
   @override
+  String get zikrMeaningSubhanAllah => 'አላህ ከጉድለት ሁሉ በላይ ነው።';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'ምስጋና ሁሉ የአላህ ነው።';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'አላህ ታላቅ ነው።';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'ከአላህ በስተቀር ሌላ አምላክ የለም።';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'የአላህን ምህረት እጠይቃለሁ።';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata =>
+      'በአላህ ካልሆነ በስተቀር ምንም ሃይል እና ጥንካሬ የለም።';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

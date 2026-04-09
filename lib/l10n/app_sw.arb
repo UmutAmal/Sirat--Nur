@@ -537,5 +537,11 @@
       }
     }
   },
-  "zikrCompletedMashAllah": "Imekamilika! MashAllah"
+  "zikrCompletedMashAllah": "Imekamilika! MashAllah",
+  "zikrMeaningSubhanAllah": "Mwenyezi Mungu yu mbali sana juu ya kila upungufu.",
+  "zikrMeaningAlhamdulillah": "Sifa njema zote ni za Mwenyezi Mungu.",
+  "zikrMeaningAllahuAkbar": "Mwenyezi Mungu ndiye Mkubwa.",
+  "zikrMeaningLaIlahaIllallah": "Hapana mungu ila Mwenyezi Mungu.",
+  "zikrMeaningAstaghfirullah": "Naomba msamaha kwa Mwenyezi Mungu.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Hakuna nguvu wala nguvu ila kwa Mwenyezi Mungu."
 }

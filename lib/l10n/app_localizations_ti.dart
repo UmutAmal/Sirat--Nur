@@ -488,6 +488,24 @@ class AppLocalizationsTi extends AppLocalizations {
   String get zikrCompletedMashAllah => 'ተዛዚሙ! ማሽኣላህ';
 
   @override
+  String get zikrMeaningSubhanAllah => 'ኣላህ ልዕሊ ኩሉ ዘይፍጽምና ኣዝዩ እዩ።';
+
+  @override
+  String get zikrMeaningAlhamdulillah => 'ኩሉ ምስጋና ናይ ኣላህ እዩ።';
+
+  @override
+  String get zikrMeaningAllahuAkbar => 'ኣላህ እቲ ዝዓበየ እዩ።';
+
+  @override
+  String get zikrMeaningLaIlahaIllallah => 'ብዘይካ ኣላህ ካልእ ኣምላኽ የለን።';
+
+  @override
+  String get zikrMeaningAstaghfirullah => 'ካብ ኣላህ ይቕሬታ ​​እደሊ ኣለኹ።';
+
+  @override
+  String get zikrMeaningLaHawlaWaLaQuwwata => 'ብዘይካ ብኣሏህ ሓይልን ሓይልን የለን።';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override
