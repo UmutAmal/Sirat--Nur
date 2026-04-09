@@ -6,13 +6,17 @@ import 'package:sirat_i_nur/features/library/asma_ul_husna_page.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 void main() {
-  Widget createWidgetUnderTest({List<Map<String, dynamic>>? asmaNames}) {
+  Widget createWidgetUnderTest({
+    List<Map<String, dynamic>>? asmaNames,
+    Locale? locale,
+  }) {
     return ProviderScope(
       overrides: [
         if (asmaNames != null)
           asmaUlHusnaProvider.overrideWith((ref) async => asmaNames),
       ],
       child: MaterialApp(
+        locale: locale,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         home: const AsmaUlHusnaPage(),
@@ -79,6 +83,33 @@ void main() {
       expect(find.text('Al Wudood'), findsOneWidget);
       expect(find.text('Provider English Meaning'), findsOneWidget);
       expect(find.byIcon(Icons.volume_up_rounded), findsOneWidget);
+    });
+
+    testWidgets('Uses locale-specific cloud translation when available', (
+      tester,
+    ) async {
+      await tester.pumpWidget(
+        createWidgetUnderTest(
+          locale: const Locale('de'),
+          asmaNames: [
+            {
+              'id': 101,
+              'arabic': 'الْوَدُودُ',
+              'transliteration': 'Al Wudood',
+              'translations': {
+                'en': 'Provider English Meaning',
+                'tr': 'Saglayici Turkce anlam',
+                'de': 'Deutsche Bedeutung',
+              },
+              'audioUrl': 'https://example.com/audio.mp3',
+            },
+          ],
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.text('Deutsche Bedeutung'), findsOneWidget);
+      expect(find.text('Provider English Meaning'), findsNothing);
     });
   });
 }

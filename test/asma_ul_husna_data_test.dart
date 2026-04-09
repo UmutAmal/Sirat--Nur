@@ -39,6 +39,26 @@ void main() {
       expect(resolved.first['audioUrl'], 'https://example.com/001.mp3');
     });
 
+    test('cloud rows preserve locale-specific translation maps', () {
+      final resolved = resolveCloudAsmaUlHusnaRows([
+        {
+          'id': '1',
+          'name_ar': 'الرَّحْمَنُ',
+          'transliteration': 'Ar Rahmaan',
+          'translations': {
+            'en': 'The Beneficent',
+            'tr': 'Rahmeti her seyi kusatan',
+            'de': 'Der Allerbarmer',
+          },
+        },
+      ]);
+
+      final translations = resolved.first['translations'] as Map<String, dynamic>;
+      expect(translations['tr'], 'Rahmeti her seyi kusatan');
+      expect(translations['en'], 'The Beneficent');
+      expect(translations['de'], 'Der Allerbarmer');
+    });
+
     test(
       'bundled fallback strips bundled audio urls to avoid false playback',
       () {

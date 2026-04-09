@@ -3534,3 +3534,40 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki cloud parser’ın çok dilli `translations` map’ini yalnızca `tr/en`’e düşürme sorunu düzeltilecek.
 - Ardından [A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/asma_ul_husna_page.dart) üzerindeki locale-agnostic search/filter yüzeyi yeniden değerlendirilecek.
+
+## 2026-04-09 TUR-90 — Preserve Asma Cloud Translation Maps
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içine `_readAsmaTranslations` eklendi; cloud row içindeki tüm dolu `translations` anahtarları normalize edilip korunmaya başlandı.
+- `normalizeAsmaUlHusnaRow` artık translation map’ini yalnızca `tr/en`e kırpmıyor; DB’den gelen çok dilli alanları koruyup `tr/en` referanslarını üstüne merge ediyor.
+- `resolveCloudAsmaUlHusnaRows` filtre mantığı yalnızca `tr/en` varlığına değil, herhangi bir dolu translation değerine göre çalışacak şekilde düzeltildi.
+- [A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/asma_ul_husna_data_test.dart) çok dilli translation preservation testiyle genişletildi.
+- [A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/library/asma_ul_husna_page_test.dart) locale-specific cloud translation görünümünü doğrulayan widget testi ile genişletildi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart#L1128](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart#L1128) sonrası parser’ın Supabase `translations` map’ini okuyup yine de [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart#L1154](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart#L1154) noktasında yalnızca `{'tr': ..., 'en': ...}` döndürdüğü görüldü.
+- Bu, veritabanında daha fazla dil hazır olsa bile runtime’da bunların sessizce kaybolmasına ve tüm diğer locale’lerin İngilizce fallback’e düşmesine neden oluyordu.
+- Sorun dini içerik zincirinde olduğundan, çeviri kapsamı genişletilmeden önce veri kaybı kökten kapatıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Asma cloud dataset’i artık veritabanında hazır olan locale-specific meaning alanlarını runtime’a tam olarak taşıyor.
+- `de` gibi `tr/en` dışı locale’ler cloud row üzerinde karşılığı varsa İngilizceye düşmeden kendi meaning’ini gösterebiliyor.
+- 180+ dil hedefi için data-layer tarafındaki sessiz truncation kökten kaldırıldı.
+
+### Test Sonucu
+- `flutter test test/asma_ul_husna_data_test.dart` → PASS (`7/7`)
+- `flutter test test/features/library/asma_ul_husna_page_test.dart` → PASS (`5/5`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`205/205`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Asma cloud parser dropping non-TR/EN locale content at runtime: `14/25 → 4/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/asma_ul_husna_page.dart) search/filter akışı `tr/en` ile sınırlı taramadan çıkarılacak.
+- Ardından Asma ekranında locale coverage ve residual English fallback yüzeyi yeniden taranacak.

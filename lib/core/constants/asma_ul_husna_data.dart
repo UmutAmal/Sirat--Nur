@@ -916,6 +916,35 @@ String _readAsmaTranslation(Map<String, dynamic> row, String lang) {
   });
 }
 
+Map<String, dynamic> _readAsmaTranslations(Map<String, dynamic> row) {
+  final normalized = <String, dynamic>{};
+  final rawTranslations = row['translations'];
+
+  if (rawTranslations is Map) {
+    for (final entry in rawTranslations.entries) {
+      final key = entry.key.toString().trim();
+      final value = entry.value;
+      if (key.isEmpty || value is! String) continue;
+
+      final trimmed = value.trim();
+      if (trimmed.isEmpty) continue;
+      normalized[key] = trimmed;
+    }
+  }
+
+  final turkish = _readAsmaTranslation(row, 'tr');
+  if (turkish.isNotEmpty) {
+    normalized['tr'] = turkish;
+  }
+
+  final english = _readAsmaTranslation(row, 'en');
+  if (english.isNotEmpty) {
+    normalized['en'] = english;
+  }
+
+  return normalized;
+}
+
 Map<String, dynamic> normalizeAsmaUlHusnaRow(Map<String, dynamic> row) {
   final id = row['id'];
   final transliteration = _readAsmaString(row, [
@@ -924,15 +953,14 @@ Map<String, dynamic> normalizeAsmaUlHusnaRow(Map<String, dynamic> row) {
     'title_tr',
   ]);
   final arabic = _readAsmaString(row, ['name_ar', 'arabic', 'title_ar']);
-  final turkish = _readAsmaTranslation(row, 'tr');
-  final english = _readAsmaTranslation(row, 'en');
+  final translations = _readAsmaTranslations(row);
   final audioUrl = _readAsmaString(row, ['audio_url', 'audioUrl', 'url']);
 
   return {
     'id': id ?? '',
     'arabic': arabic,
     'transliteration': transliteration,
-    'translations': {'tr': turkish, 'en': english},
+    'translations': translations,
     'audioUrl': audioUrl,
   };
 }
@@ -942,12 +970,13 @@ List<Map<String, dynamic>> resolveCloudAsmaUlHusnaRows(
 ) {
   final parsed = rows.map(normalizeAsmaUlHusnaRow).where((item) {
     final translations = item['translations'] as Map<String, dynamic>;
-    final turkish = (translations['tr'] ?? '').toString().trim();
-    final english = (translations['en'] ?? '').toString().trim();
+    final hasTranslation = translations.values.any(
+      (value) => value is String && value.trim().isNotEmpty,
+    );
 
     return (item['arabic'] ?? '').toString().trim().isNotEmpty &&
         (item['transliteration'] ?? '').toString().trim().isNotEmpty &&
-        (turkish.isNotEmpty || english.isNotEmpty);
+        hasTranslation;
   }).toList();
 
   return parsed.isEmpty ? buildBundledAsmaUlHusnaFallback() : parsed;
