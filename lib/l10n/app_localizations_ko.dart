@@ -847,15 +847,14 @@ class AppLocalizationsKo extends AppLocalizations {
   String get hadithCollections => '하디스 컬렉션';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => '확인된 소스 보류 중';
 
   @override
-  String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+  String get hadithUnavailableTitle => '검증된 hadith 컬렉션은 아직 사용할 수 없습니다.';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      '이 빌드는 여전히 확인되지 않은 외부 hadith 피드에 의존합니다. Hadith 검색은 소스 데이터 세트가 동기화될 때까지 비활성화된 상태로 유지됩니다.';
 
   @override
   String get paywallUnlockAll =>

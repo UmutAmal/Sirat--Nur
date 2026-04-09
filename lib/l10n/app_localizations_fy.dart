@@ -847,15 +847,15 @@ class AppLocalizationsFy extends AppLocalizations {
   String get hadithCollections => 'Hadith Samlingen';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Ferifiearre boarne yn ôfwachting';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Ferifiearre hadith-kolleksjes binne noch net beskikber';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Dizze build is noch ôfhinklik fan in net ferifiearre eksterne hadith feed. Hadith-blêdzjen bliuwt útskeakele oant in boarne dataset wurdt syngronisearre.';
 
   @override
   String get paywallUnlockAll =>

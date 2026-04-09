@@ -2765,3 +2765,33 @@
 ### Sonraki Adım
 - Sıradaki turda kalan `66` rare locale, güvenilir sibling-fallback uygulanabilecekler ve EN referansında kalması gerekenler olarak sınıflandırılacak.
 - Paralelde production’da kalan hadith network kodu doğrulanmış dataset gelene kadar daha da daraltılabilecek mi denetlenecek.
+
+## 2026-04-09 TUR-71 — Sync Generated Localization Outputs
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_en.dart) generated localization dosyaları, TUR-70’teki ARB değişikliklerinden sonra `flutter gen-l10n` çıktısıyla senkronize edildi.
+- `flutter analyze` ve tam `flutter test` turu senkronized generated dosyalarla tekrar çalıştırıldı.
+
+### Neden Yapıldı
+- TUR-70 commit’i sonrası çalışma ağacında sadece generated localization dosyaları dirty kaldı.
+- Kök sebep, ARB değişikliklerinden sonra üretilen `app_localizations_*.dart` dosyalarının commit kapsamına alınmamış olmasıydı.
+- Generated ve source ARB zincirinin ayrışması, temiz çalışma ağacı ve tekrar üretilebilir build kuralını ihlal ediyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Generated localization katmanı tekrar ARB kaynaklarıyla aynı seviyeye getirildi.
+- Repo yeniden temiz çalışma ağacına dönecek şekilde senkronize edildi.
+- Sonraki localization turları artık önceki üretilmiş çıktı farklarını taşımayacak.
+
+### Test Sonucu
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`178/178`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Generated localization outputs out of sync with committed ARB sources: `7/25 → 1/25`
+
+### Sonraki Adım
+- Sıradaki turda kalan `66` rare locale için sibling-fallback uygulanabilirlik matrisi çıkarılacak.
+- Ardından hadith network kodu doğrulanmış dataset gelene kadar daha da retire edilebiliyor mu denetlenecek.

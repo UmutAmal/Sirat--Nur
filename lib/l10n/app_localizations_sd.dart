@@ -847,15 +847,15 @@ class AppLocalizationsSd extends AppLocalizations {
   String get hadithCollections => 'حديث جو مجموعو';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'تصديق ٿيل ذريعو انتظار ۾';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'تصديق ٿيل حديثن جو مجموعو اڃا تائين دستياب ناهي';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'هي تعمير اڃا تائين اڻ تصديق ٿيل خارجي حديث فيڊ تي منحصر آهي. حديث برائوزنگ غير فعال رهي ٿي جيستائين هڪ sourced dataset کي هم وقت نه ڪيو وڃي.';
 
   @override
   String get paywallUnlockAll =>

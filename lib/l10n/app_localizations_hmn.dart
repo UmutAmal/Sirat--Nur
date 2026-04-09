@@ -849,15 +849,15 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get hadithCollections => 'Hadith Collections';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Txheeb xyuas qhov chaw tos';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Kev txheeb xyuas hadith collections tseem tsis tau muaj';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Qhov kev tsim no tseem nyob ntawm qhov tsis tau lees paub sab nraud hadith pub. Hadith browsing nyob twj ywm tsis ua hauj lwm kom txog rau thaum ib tug sourced dataset yog synced.';
 
   @override
   String get paywallUnlockAll =>

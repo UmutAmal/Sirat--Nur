@@ -848,15 +848,15 @@ class AppLocalizationsSt extends AppLocalizations {
   String get hadithCollections => 'Lipokello tsa Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Mohloli o netefalitsoeng o ntse o emetse';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Lipokello tsa hadith tse netefalitsoeng ha li so fumanehe';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Kaho ena e ntse e itšetlehile ka phepelo ea hadith e sa netefatsoang. Mokhoa oa ho bala oa Hadith o lula o koalehile ho fihlela dataset ea mohloli o hokahanngoa.';
 
   @override
   String get paywallUnlockAll =>

@@ -847,15 +847,15 @@ class AppLocalizationsVi extends AppLocalizations {
   String get hadithCollections => 'Bộ sưu tập Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Nguồn đã được xác minh đang chờ xử lý';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Bộ sưu tập hadith đã được xác minh chưa có sẵn';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Bản dựng này vẫn phụ thuộc vào nguồn cấp dữ liệu hadith bên ngoài chưa được xác minh. Trình duyệt Hadith vẫn bị vô hiệu hóa cho đến khi tập dữ liệu có nguồn gốc được đồng bộ hóa.';
 
   @override
   String get paywallUnlockAll =>

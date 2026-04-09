@@ -847,15 +847,15 @@ class AppLocalizationsTk extends AppLocalizations {
   String get hadithCollections => 'Hadys ýygyndylary';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Barlanylan çeşme garaşylýar';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Barlanylan hadys ýygyndylary entek elýeterli däl';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Bu gurluş henizem tassyklanmadyk daşarky hadys iýmitine baglydyr. Hadyslara göz aýlamak, maglumat bazasy sinhronlanýança ýapyk bolýar.';
 
   @override
   String get paywallUnlockAll =>

@@ -781,7 +781,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => '每日杜阿';
 
   @override
   String essentialDuas(String count) {
@@ -789,7 +789,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get duaUnavailableTitle => 'Verified duas are not available yet';
+  String get duaUnavailableTitle => '已验证的 dua 尚不可用';
 
   @override
   String get duaUnavailableBody =>
@@ -844,18 +844,17 @@ class AppLocalizationsZh extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => '圣训集';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => '来源待核实';
 
   @override
-  String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+  String get hadithUnavailableTitle => '尚未提供经过验证的圣训集';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      '此构建仍然依赖于未经验证的外部圣训提要。在源数据集同步之前，圣训浏览保持禁用状态。';
 
   @override
   String get paywallUnlockAll =>
@@ -1995,6 +1994,16 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get hadithCollections => '圣训集';
 
   @override
+  String get hadithSourcePending => '来源待核实';
+
+  @override
+  String get hadithUnavailableTitle => '尚未提供经过验证的圣训集';
+
+  @override
+  String get hadithUnavailableBody =>
+      '此构建仍然依赖于未经验证的外部圣训提要。在源数据集同步之前，圣训浏览保持禁用状态。';
+
+  @override
   String get paywallUnlockAll =>
       'Unlock all features for your spiritual journey';
 
@@ -3128,6 +3137,16 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get hadithCollections => '聖訓集';
+
+  @override
+  String get hadithSourcePending => '來源待核實';
+
+  @override
+  String get hadithUnavailableTitle => '尚未提供經過驗證的聖訓集';
+
+  @override
+  String get hadithUnavailableBody =>
+      '此構建仍然依賴未經驗證的外部聖訓提要。在來源資料集同步之前，聖訓瀏覽保持停用狀態。';
 
   @override
   String get paywallUnlockAll =>

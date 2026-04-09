@@ -847,15 +847,15 @@ class AppLocalizationsEo extends AppLocalizations {
   String get hadithCollections => 'Hadith-Kolektoj';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Atendata kontrolita fonto';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Kontrolitaj hadito-kolektoj ankoraŭ ne haveblas';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Ĉi tiu konstruo daŭre dependas de nekontrolita ekstera hadito-fluo. Hadith-retumado restas malŝaltita ĝis fontita datumaro estas sinkronigita.';
 
   @override
   String get paywallUnlockAll =>

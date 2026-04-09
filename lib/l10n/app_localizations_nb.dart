@@ -781,7 +781,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get analytics => 'Analytics';
 
   @override
-  String get dailyDuas => 'Daily Duas';
+  String get dailyDuas => 'Daglig Duas';
 
   @override
   String essentialDuas(String count) {
@@ -789,7 +789,8 @@ class AppLocalizationsNb extends AppLocalizations {
   }
 
   @override
-  String get duaUnavailableTitle => 'Verified duas are not available yet';
+  String get duaUnavailableTitle =>
+      'Verifiserte duas er ikke tilgjengelig ennå';
 
   @override
   String get duaUnavailableBody =>
@@ -844,18 +845,18 @@ class AppLocalizationsNb extends AppLocalizations {
   String get sukunAudioTitle => 'Sukun Soundscapes';
 
   @override
-  String get hadithCollections => 'Hadith Collections';
+  String get hadithCollections => 'Hadith-samlinger';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Verifisert kilde venter';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Verifiserte hadith-samlinger er ikke tilgjengelige ennå';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Denne konstruksjonen avhenger fortsatt av en ubekreftet ekstern hadith-feed. Hadith-surfing forblir deaktivert til et hentet datasett synkroniseres.';
 
   @override
   String get paywallUnlockAll =>

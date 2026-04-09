@@ -847,15 +847,15 @@ class AppLocalizationsAz extends AppLocalizations {
   String get hadithCollections => 'Hədis Topluları';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Təsdiqlənmiş mənbə gözlənilir';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Təsdiqlənmiş hədis topluları hələ mövcud deyil';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Bu quruluş hələ də təsdiqlənməmiş xarici hədis lentindən asılıdır. Hədislərə baxış qaynaqlanmış verilənlər bazası sinxronizasiya edilənə qədər qeyri-aktiv qalır.';
 
   @override
   String get paywallUnlockAll =>

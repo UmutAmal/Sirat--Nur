@@ -847,15 +847,15 @@ class AppLocalizationsYi extends AppLocalizations {
   String get hadithCollections => 'האַדיטה זאַמלונגען';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'וועראַפייד מקור פּענדינג';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'וועריפיעד האַדיטה זאַמלונגען זענען נישט בנימצא נאָך';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'דעם בויען דעפּענדס נאָך אויף אַן אַנוועראַפייד פונדרויסנדיק האַדיטה פיטער. Hadith בראַוזינג סטייז פאַרקריפּלט ביז אַ סאָורסעד דאַטאַסעט איז סינסעד.';
 
   @override
   String get paywallUnlockAll =>

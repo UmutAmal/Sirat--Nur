@@ -848,15 +848,15 @@ class AppLocalizationsUg extends AppLocalizations {
   String get hadithCollections => 'ھەدىس توپلىمى';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'دەلىللەنگەن مەنبە ساقلىنىۋاتىدۇ';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'دەلىللەنگەن ھەدىس توپلىمى تېخىچە تېپىلمىدى';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'بۇ قۇرۇلۇش يەنىلا دەلىللەنمىگەن تاشقى ھەدىس يەملىرىگە باغلىق. مەنبەلىك سانلىق مەلۇمات ماسقەدەملەنگۈچە ھەدىس كۆرۈش چەكلىنىدۇ.';
 
   @override
   String get paywallUnlockAll =>

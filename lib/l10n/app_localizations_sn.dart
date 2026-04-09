@@ -847,15 +847,15 @@ class AppLocalizationsSn extends AppLocalizations {
   String get hadithCollections => 'Vadivelu Comedy Hadith Collections';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Verified source yakamirira';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Verified hadith collections haisati yavapo';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Ichi chivakwa chichiri kutsamira pane isina kusimbiswa ekunze hadith feed. Kubhurawuza kweHadith kunoramba kwakavharwa kudzamara dataset yawanikwa yawiriraniswa.';
 
   @override
   String get paywallUnlockAll =>

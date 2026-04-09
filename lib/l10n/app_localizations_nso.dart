@@ -856,15 +856,15 @@ class AppLocalizationsNso extends AppLocalizations {
   String get hadithCollections => 'Dikgoboketšo tša Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Mohlodi o netefaditšwego o sa emetše';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Dikgoboketšo tša hadith tše di netefaditšwego ga se tša hwetšagala ga bjale';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Go aga mo go sa ithekgile ka phepo ya hadith ya ka ntle yeo e sa netefatšwago. Go phetla Hadith go dula go šitišitšwe go fihlela sete ya data yeo e hweditšwego e nyalantšhwa.';
 
   @override
   String get paywallUnlockAll =>

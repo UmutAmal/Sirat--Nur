@@ -848,15 +848,15 @@ class AppLocalizationsEu extends AppLocalizations {
   String get hadithCollections => 'Hadith Bildumak';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Egiaztatutako iturria zain dago';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Egiaztatutako hadith bildumak ez daude eskuragarri oraindik';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Eraikuntza hau egiaztatu gabeko kanpoko hadith jario baten menpe dago oraindik. Hadith arakatzea desgaituta egongo da jatorriko datu-multzo bat sinkronizatu arte.';
 
   @override
   String get paywallUnlockAll =>

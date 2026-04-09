@@ -849,15 +849,15 @@ class AppLocalizationsLus extends AppLocalizations {
   String get hadithCollections => 'Hadith khawlkhawm te';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Verified source a awm mek a ni';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Verified hadith collection hi a la awm lo';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'He build hi unverified external hadith feed ah a la innghat reng a ni. Sourced dataset sync a nih hma chuan Hadith browsing chu disabled a ni reng.';
 
   @override
   String get paywallUnlockAll =>

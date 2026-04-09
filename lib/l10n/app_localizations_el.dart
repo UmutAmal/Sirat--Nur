@@ -849,15 +849,15 @@ class AppLocalizationsEl extends AppLocalizations {
   String get hadithCollections => 'Συλλογές Χαντίθ';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Η επαληθευμένη πηγή εκκρεμεί';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Οι επαληθευμένες συλλογές χαντίθ δεν είναι ακόμη διαθέσιμες';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Αυτή η κατασκευή εξακολουθεί να εξαρτάται από μια μη επαληθευμένη εξωτερική ροή χαντίθ. Η περιήγηση στα Hadith παραμένει απενεργοποιημένη έως ότου συγχρονιστεί ένα σύνολο δεδομένων προέλευσης.';
 
   @override
   String get paywallUnlockAll =>

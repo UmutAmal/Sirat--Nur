@@ -847,15 +847,15 @@ class AppLocalizationsOm extends AppLocalizations {
   String get hadithCollections => 'Kuusaa Hadiisa';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Maddi mirkanaa\'e eegamaa jira';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Kuusaan hadiisa mirkanaa\'e hanga ammaatti hin argamu';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Ijaarsi kun ammallee nyaata hadiisa alaa hin mirkanoofne irratti hundaa’a. Daawwachuun Hadiisa hanga kuusaan deetaa madda walsimsiifamutti hojii irraa oolfamee hafa.';
 
   @override
   String get paywallUnlockAll =>

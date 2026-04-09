@@ -847,15 +847,15 @@ class AppLocalizationsSo extends AppLocalizations {
   String get hadithCollections => 'Ururinta Xadiiska';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Isha la xaqiijiyay';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Ururinta xadiisyada la xaqiijiyay wali lama hayo';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Dhismahani wuxuu weli ku xiran yahay quudinta xadiiska dibadda ah ee aan la xaqiijin. Baadhitaanka xadiisku waxa uu ahaanayaa mid naafo ah ilaa xogta laga soo xigtay la isku dhejiyo.';
 
   @override
   String get paywallUnlockAll =>

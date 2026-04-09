@@ -849,15 +849,15 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get hadithCollections => 'Mga Koleksyon sa Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Gi-verify nga tinubdan naghulat';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Ang napamatud-an nga mga koleksyon sa hadith wala pa magamit';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Kini nga pagtukod nagdepende gihapon sa usa ka wala mapamatud-an nga eksternal nga feed sa hadith. Ang pag-browse sa hadith magpabilin nga wala’y mahimo hangtod ang usa ka gigikanan nga dataset ma-sync.';
 
   @override
   String get paywallUnlockAll =>

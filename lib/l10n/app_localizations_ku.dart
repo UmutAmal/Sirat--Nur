@@ -847,15 +847,15 @@ class AppLocalizationsKu extends AppLocalizations {
   String get hadithCollections => 'Berhevokên Hedîsê';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Çavkaniya verastkirî li bendê ye';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Berhevokên hedîsên tesdîqkirî hê ne berdest in';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Ev avahî hîna jî bi pêvek hedîseke derveyî ya nerastkirî ve girêdayî ye. Gera hedîsê neçalak dimîne heya ku danegehek jêderkirî were senkronîze kirin.';
 
   @override
   String get paywallUnlockAll =>

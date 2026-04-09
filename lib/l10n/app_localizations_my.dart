@@ -848,15 +848,16 @@ class AppLocalizationsMy extends AppLocalizations {
   String get hadithCollections => 'Hadith စုဆောင်းမှုများ';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending =>
+      'အတည်ပြုပြီးသော အရင်းအမြစ်ကို ဆိုင်းငံ့ထားသည်။';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'အတည်ပြုထားသော hadith စုဆောင်းမှုများကို မရရှိနိုင်သေးပါ။';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'ဤတည်ဆောက်မှုသည် အတည်မပြုရသေးသော ပြင်ပဟဒီးသ်အဒ်အပေါ် မူတည်နေသေးသည်။ ရင်းမြစ်ဒေတာအစုံကို ထပ်တူပြုသည့်အချိန်အထိ Hadith ရှာဖွေခြင်းကို ပိတ်ထားသည်။';
 
   @override
   String get paywallUnlockAll =>

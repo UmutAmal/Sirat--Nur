@@ -847,15 +847,15 @@ class AppLocalizationsLo extends AppLocalizations {
   String get hadithCollections => 'ການເກັບກໍາ Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'ຢືນຢັນແຫຼ່ງທີ່ລໍຖ້າຢູ່';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'ຄໍເລັກຊັນ hadith ທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ທັນມີໃຫ້ເທື່ອ';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'ການກໍ່ສ້າງນີ້ຍັງຂຶ້ນກັບອາຫານ hadith ພາຍນອກທີ່ບໍ່ໄດ້ຮັບການຢືນຢັນ. ການ​ຊອກ​ຫາ Hadith ຈະ​ປິດ​ການ​ໃຊ້​ງານ​ຈົນ​ກ​່​ວາ​ຊຸດ​ຂໍ້​ມູນ​ທີ່​ມາ​ໄດ້​ຖືກ​ຊິງ​.';
 
   @override
   String get paywallUnlockAll =>

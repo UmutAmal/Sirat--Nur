@@ -848,15 +848,15 @@ class AppLocalizationsGa extends AppLocalizations {
   String get hadithCollections => 'Bailiúcháin de hadith saor in aisce,';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Foinse deimhnithe ar feitheamh';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Níl bailiúcháin hadith fíoraithe ar fáil go fóill';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Braitheann an tógáil seo fós ar bheathú hadith seachtrach neamhfhíoraithe. Fanann brabhsáil Hadith díchumasaithe go dtí go sioncronófar tacar sonraí foinseach.';
 
   @override
   String get paywallUnlockAll =>

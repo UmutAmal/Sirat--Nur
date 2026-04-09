@@ -848,15 +848,15 @@ class AppLocalizationsRo extends AppLocalizations {
   String get hadithCollections => 'Colecții de hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Sursă verificată în așteptare';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Colecțiile verificate de hadith nu sunt încă disponibile';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Această construcție depinde în continuare de un flux de hadith extern neverificat. Navigarea Hadith rămâne dezactivată până când un set de date sursă este sincronizat.';
 
   @override
   String get paywallUnlockAll =>

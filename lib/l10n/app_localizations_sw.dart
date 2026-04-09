@@ -847,15 +847,15 @@ class AppLocalizationsSw extends AppLocalizations {
   String get hadithCollections => 'Makusanyo ya Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Chanzo kilichothibitishwa kinasubiri';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Mkusanyiko wa Hadith zilizothibitishwa bado hazipatikani';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Muundo huu bado unategemea mlisho wa Hadith wa nje ambao haujathibitishwa. Uvinjari wa Hadith husalia kuzimwa hadi mkusanyiko wa data uliopatikana ulandanishwe.';
 
   @override
   String get paywallUnlockAll =>

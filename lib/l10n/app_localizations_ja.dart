@@ -847,15 +847,14 @@ class AppLocalizationsJa extends AppLocalizations {
   String get hadithCollections => 'ハディース コレクション';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => '検証済みのソースは保留中です';
 
   @override
-  String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+  String get hadithUnavailableTitle => '検証済みのハディース コレクションはまだ利用できません';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'このビルドはまだ未検証の外部ハディース フィードに依存しています。ハディース ブラウジングは、ソース データセットが同期されるまで無効のままです。';
 
   @override
   String get paywallUnlockAll =>

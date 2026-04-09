@@ -850,15 +850,15 @@ class AppLocalizationsGd extends AppLocalizations {
   String get hadithCollections => 'Cruinneachadh de hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Stòr dearbhte ri feitheamh';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Chan eil cruinneachaidhean hadith dearbhte rim faighinn fhathast';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Tha an togail seo fhathast an urra ri biadhadh hadith taobh a-muigh neo-dhearbhte. Bidh brobhsadh Hadith a’ fuireach ciorramach gus an tèid stòr-dàta a fhuaras a shioncronachadh.';
 
   @override
   String get paywallUnlockAll =>

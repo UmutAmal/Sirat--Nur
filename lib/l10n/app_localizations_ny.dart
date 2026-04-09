@@ -849,15 +849,15 @@ class AppLocalizationsNy extends AppLocalizations {
   String get hadithCollections => 'Zosonkhanitsa Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Gwero lotsimikizika likudikirira';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Zopereka zotsimikizika za hadith sizinapezekebe';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Kumanga uku kumadalirabe chakudya cha hadith chosatsimikizika. Kusakatula kwa Hadith kumakhala kozimitsidwa mpaka dataset yochokera kulumikizidwa.';
 
   @override
   String get paywallUnlockAll =>

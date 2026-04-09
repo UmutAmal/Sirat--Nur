@@ -847,15 +847,15 @@ class AppLocalizationsBn extends AppLocalizations {
   String get hadithCollections => 'হাদিস সংগ্রহ';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'যাচাইকৃত উৎস মুলতুবি আছে';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'যাচাইকৃত হাদীস সংগ্রহ এখনো পাওয়া যায় নি';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'এই বিল্ড এখনও একটি অযাচাই করা বহিরাগত হাদীস ফিড উপর নির্ভর করে. একটি উৎসকৃত ডেটাসেট সিঙ্ক না হওয়া পর্যন্ত হাদিস ব্রাউজিং নিষ্ক্রিয় থাকে৷';
 
   @override
   String get paywallUnlockAll =>

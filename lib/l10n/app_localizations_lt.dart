@@ -847,15 +847,15 @@ class AppLocalizationsLt extends AppLocalizations {
   String get hadithCollections => 'Hadith kolekcijos';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Laukiama patvirtinto šaltinio';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Patvirtintos haditų kolekcijos dar nepasiekiamos';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Ši konstrukcija vis dar priklauso nuo nepatvirtinto išorinio haditų sklaidos kanalo. Hadith naršymas lieka išjungtas, kol nebus sinchronizuojamas šaltinio duomenų rinkinys.';
 
   @override
   String get paywallUnlockAll =>

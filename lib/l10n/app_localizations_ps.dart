@@ -847,15 +847,15 @@ class AppLocalizationsPs extends AppLocalizations {
   String get hadithCollections => 'د حدیثو ټولګه';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'تایید شوې سرچینه پاتې ده';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'د حدیثو تصدیق شوي ټولګه لا تر اوسه شتون نلري';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'دا جوړښت لاهم په غیر تصدیق شوي بهرني حدیث فیډ پورې اړه لري. د حدیث لټون کول غیر فعال پاتې کیږي تر هغه چې سرچینه شوي ډیټاسیټ همغږي نشي.';
 
   @override
   String get paywallUnlockAll =>

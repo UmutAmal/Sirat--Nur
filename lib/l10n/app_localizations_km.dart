@@ -847,15 +847,15 @@ class AppLocalizationsKm extends AppLocalizations {
   String get hadithCollections => 'ការប្រមូល Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'រង់ចាំប្រភពដែលបានផ្ទៀងផ្ទាត់';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'ការប្រមូល hadith ដែលបានផ្ទៀងផ្ទាត់មិនទាន់មាននៅឡើយទេ';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'ការស្ថាបនានេះនៅតែពឹងផ្អែកលើមតិព័ត៌មាន hadith ខាងក្រៅដែលមិនបានបញ្ជាក់។ ការរុករក Hadith នៅតែបិទរហូតដល់សំណុំទិន្នន័យប្រភពត្រូវបានធ្វើសមកាលកម្ម។';
 
   @override
   String get paywallUnlockAll =>

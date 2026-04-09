@@ -848,15 +848,15 @@ class AppLocalizationsHa extends AppLocalizations {
   String get hadithCollections => 'Tarin Hadisai';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Tabbatar da tushe yana jiran';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Ba a samu ingantattun tarin hadisai ba tukuna';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Wannan ginin har yanzu ya dogara da ingantaccen abinci na hadisi na waje. Ana kashe binciken hadisi har sai an daidaita saitin bayanan da aka samo asali.';
 
   @override
   String get paywallUnlockAll =>

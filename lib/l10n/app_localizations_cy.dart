@@ -848,15 +848,15 @@ class AppLocalizationsCy extends AppLocalizations {
   String get hadithCollections => 'Casgliadau Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Ffynhonnell wedi\'i dilysu yn yr arfaeth';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Nid yw casgliadau hadith wedi\'u dilysu ar gael eto';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Mae\'r adeiladwaith hwn yn dal i ddibynnu ar borthiant hadith allanol heb ei wirio. Mae pori Hadith yn aros yn anabl nes bod set ddata o ffynhonnell wedi\'i chysoni.';
 
   @override
   String get paywallUnlockAll =>

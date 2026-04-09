@@ -848,15 +848,15 @@ class AppLocalizationsBho extends AppLocalizations {
   String get hadithCollections => 'हदीस संग्रह के बारे में बतावल गइल बा';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'सत्यापन स्रोत लंबित बा';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'सत्यापन कइल हदीस संग्रह अभी तक उपलब्ध नइखे';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'ई बिल्ड अबहियों एगो असत्यापित बाहरी हदीस फीड पर निर्भर बा. जबले कवनो सोर्स कइल डाटासेट सिंक ना हो जाला तबले हदीस ब्राउजिंग अक्षम रहेला.';
 
   @override
   String get paywallUnlockAll =>

@@ -847,7 +847,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get hadithCollections => 'Hadith Collections';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Verificatur fons pendente';
 
   @override
   String get hadithUnavailableTitle =>
@@ -855,7 +855,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Hoc constructum adhuc pendet ab absque verificatione externa hadith cibarium. Hadith pasco debilis manet donec fons dataset syncedtur.';
 
   @override
   String get paywallUnlockAll =>

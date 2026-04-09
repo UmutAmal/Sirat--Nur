@@ -847,15 +847,15 @@ class AppLocalizationsMg extends AppLocalizations {
   String get hadithCollections => 'Fanangonana Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Loharano voamarina miandry';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Tsy mbola misy ny fanangonana hadita voamarina';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Mbola miankina amin\'ny fahana hadita ivelany tsy voamarina io fananganana io. Mijanona ho kilemaina ny fitetezana Hadith mandra-pirindran\'ny angon-drakitra misy loharano iray.';
 
   @override
   String get paywallUnlockAll =>

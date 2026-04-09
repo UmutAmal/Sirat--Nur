@@ -848,15 +848,15 @@ class AppLocalizationsSq extends AppLocalizations {
   String get hadithCollections => 'Koleksionet e Haditheve';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Burimi i verifikuar në pritje';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Koleksionet e verifikuara të haditheve nuk janë ende të disponueshme';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Ky ndërtim ende varet nga një burim i jashtëm i hadithit të paverifikuar. Shfletimi i hadithit qëndron i çaktivizuar derisa të sinkronizohet një grup të dhënash me burim.';
 
   @override
   String get paywallUnlockAll =>

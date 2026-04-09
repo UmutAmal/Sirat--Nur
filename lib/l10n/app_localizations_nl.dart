@@ -849,15 +849,15 @@ class AppLocalizationsNl extends AppLocalizations {
   String get hadithCollections => 'Hadith-collecties';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Geverifieerde bron in behandeling';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Geverifieerde hadith-collecties zijn nog niet beschikbaar';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Deze build is nog steeds afhankelijk van een niet-geverifieerde externe hadith-feed. Het bladeren door Hadith blijft uitgeschakeld totdat een afkomstige dataset is gesynchroniseerd.';
 
   @override
   String get paywallUnlockAll =>

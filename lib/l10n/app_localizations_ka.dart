@@ -849,15 +849,15 @@ class AppLocalizationsKa extends AppLocalizations {
   String get hadithCollections => 'ჰადიდების კრებულები';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'დადასტურებული წყარო ელოდება';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'დადასტურებული ჰადისის კრებულები ჯერ არ არის ხელმისაწვდომი';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'ეს კონსტრუქცია ჯერ კიდევ დამოკიდებულია დაუმოწმებელ გარე ჰადისის არხზე. ჰადისების დათვალიერება გათიშული რჩება მანამ, სანამ არ მოხდება მონაცემთა ნაკრების სინქრონიზაცია.';
 
   @override
   String get paywallUnlockAll =>

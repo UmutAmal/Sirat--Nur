@@ -847,15 +847,15 @@ class AppLocalizationsQu extends AppLocalizations {
   String get hadithCollections => 'Hadith Huñusqakuna';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Chiqapchasqa pukyuta pendiente';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Chiqapchasqa hadith huñusqakunaqa manaraqmi kanchu';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Kay ruwayqa kunankamapas mana chiqapchasqa hawa hadith mikhuymantam hapipakun. Hadith maskayqa mana llamk\'achisqa qhipan huk pukyuta willay huñu tinkisqa kanankama.';
 
   @override
   String get paywallUnlockAll =>

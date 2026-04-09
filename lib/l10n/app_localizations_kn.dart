@@ -847,15 +847,15 @@ class AppLocalizationsKn extends AppLocalizations {
   String get hadithCollections => 'ಹದೀಸ್ ಸಂಗ್ರಹಗಳು';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'ಪರಿಶೀಲಿಸಲಾದ ಮೂಲ ಬಾಕಿ ಉಳಿದಿದೆ';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'ಪರಿಶೀಲಿಸಿದ ಹದೀಸ್ ಸಂಗ್ರಹಗಳು ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'ಈ ನಿರ್ಮಾಣವು ಇನ್ನೂ ಪರಿಶೀಲಿಸದ ಬಾಹ್ಯ ಹದೀಸ್ ಫೀಡ್ ಅನ್ನು ಅವಲಂಬಿಸಿರುತ್ತದೆ. ಮೂಲ ಡೇಟಾಸೆಟ್ ಸಿಂಕ್ ಆಗುವವರೆಗೆ ಹದೀಸ್ ಬ್ರೌಸಿಂಗ್ ನಿಷ್ಕ್ರಿಯವಾಗಿರುತ್ತದೆ.';
 
   @override
   String get paywallUnlockAll =>

@@ -847,15 +847,15 @@ class AppLocalizationsIg extends AppLocalizations {
   String get hadithCollections => 'Nchịkọta Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Ekwenyere na isi iyi na-echere';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Nchịkọta haddi ekwenyeghị ekwenye adịbeghị';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Nke a na-ewu ka na-adabere na unverified mpụga hadith ndepụta. A na-enwe nkwarụ chọgharịa haddith ruo mgbe emekọrịtara ntọala data ewepụtara.';
 
   @override
   String get paywallUnlockAll =>

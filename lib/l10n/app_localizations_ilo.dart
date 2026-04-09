@@ -852,15 +852,15 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get hadithCollections => 'Dagiti Koleksion ti Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Beripikado a gubuayan ti nakasagana';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Saan pay a magun-od dagiti naberipikado a koleksion ti hadith';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Daytoy a panagbangon ket agpannuray pay laeng iti saan a naberipikado nga akinruar a hadith feed. Ti panag-browse ti Hadith ket agtalinaed a nabalbaliwan aginggana ti maysa a nagtaudan a dataset ket mai-sync.';
 
   @override
   String get paywallUnlockAll =>

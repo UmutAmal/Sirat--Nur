@@ -848,15 +848,15 @@ class AppLocalizationsMi extends AppLocalizations {
   String get hadithCollections => 'Kohinga Hadith';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Kei te tarewa te puna manatoko';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Ko nga kohinga hadith kua whakamanahia kaore ano kia waatea';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Kei te whakawhirinaki tonu tenei hanga ki te whangai hadith o waho kaore i whakamanahia. Ka noho monohia te tirotiro Hadith tae noa ki te tukutahia he huinga raraunga puna.';
 
   @override
   String get paywallUnlockAll =>

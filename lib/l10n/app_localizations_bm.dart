@@ -848,15 +848,15 @@ class AppLocalizationsBm extends AppLocalizations {
   String get hadithCollections => 'Hadisiw lajɛlenw';
 
   @override
-  String get hadithSourcePending => 'Verified source pending';
+  String get hadithSourcePending => 'Soso sɛgɛsɛgɛlen bɛ sen na';
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Hadisi lajɛlen minnu sɛgɛsɛgɛra, olu ma sɔrɔ fɔlɔ';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'O jɔli in bɛ da hali bi kɛnɛma hadisi balo dɔ kan min ma sɛgɛsɛgɛ. Hadisiw ɲinini bɛ to ka baara kɛ fo ka se kunnafonisɛbɛn sɔrɔyɔrɔ dɔ ka ɲɔgɔn sɔrɔ.';
 
   @override
   String get paywallUnlockAll =>
