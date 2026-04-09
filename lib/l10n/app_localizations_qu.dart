@@ -212,6 +212,38 @@ class AppLocalizationsQu extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'wakintaq mañakunku: ‘Señorniyku, kay pachapipas, qhepa p’unchaypipas allinta qowayku, Nina ñak’ariymantataq amachawayku’, nispa.';
+
+  @override
+  String get duaMeaning2 =>
+      'Diosqa manan mayqen almatapas q’epichinchu aguantay atisqanmanta aswan askhawan: sapankankun ima allin ruwasqantapas ganan, mana allin ruwasqantapas ñak’arinmi- ‘ Señor, ama hap’iwaykuchu llank’anaman qonqaspa otaq pantaspaqa. Señor, ama q’epiykuchu imaynan ñawpaqniykupi kaqkunaman q’epicharqanki hinata. Wiraqocha, ama q\'epichiwayku kallpayoq kasqaykumantaqa. Pampachaykuwayku, pampachawayku, khuyapayawayku. Qanmi kanki Amachaqniyku, chaymi yanapawayku mana iñiqkunamanta’, nispa.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Señorniyku, ama sonqoykuta karunchawaykuchu pusawasqayku qhepaman. Khuyapayakuyniykita qowayku: Qanmi kanki Wiñaypaq Qoq.';
+
+  @override
+  String get duaMeaning4 =>
+      'Señor, qoykuway ñoqapas mirayniypas mañakuyta hinalla ruwananchispaq. Apunchik, mañakusqayta chaskikuy.';
+
+  @override
+  String get duaMeaning5 =>
+      'hinaspataq raphraykita uraykachiy k’umuykukuspa paykunaman sumaq sonqowan niy: ‘Señor, khuyapayay paykunata, imaynan huch’uyllaraq kashaqtiy cuidawarqanku hinata’, nispa.';
+
+  @override
+  String get duaMeaning6 =>
+      'hatunchasqa kachun Dios, cheqaqtapuni kamachikuq. [Profeta], ama apuraychu rimayta manaraq revelacion hunt’asqa kashaqtin aswanpas niy: ‘¡Señor, yachayniypi yapaykuway!’, nispa.';
+
+  @override
+  String get duaMeaning7 =>
+      '[Profeta] niy: ‘Señor, pampachay, khuyapayay, qanmi kanki llapanmanta aswan khuyapayakuq’, nispa.';
+
+  @override
+  String get duaMeaning8 =>
+      '‘Señorniyku, esposaykupi, mirayniykupipas kusichiwayku’, nispa mañakuqkuna. Allin ejemplokunata ruwawayku Qanmanta musyakuqkunapaq’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

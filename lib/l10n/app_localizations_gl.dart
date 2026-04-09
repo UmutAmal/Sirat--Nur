@@ -211,6 +211,38 @@ class AppLocalizationsGl extends AppLocalizations {
   String get dailyZikr => 'Zikr diario';
 
   @override
+  String get duaMeaning1 =>
+      'outros rezan: ‘Señor, dános o ben neste mundo e no Alén, e protéxenos do tormento do Lume’.';
+
+  @override
+  String get duaMeaning2 =>
+      'Deus non carga a ningunha alma con máis do que pode soportar: cada un gaña o ben que fixo, e sofre o seu mal- ‘Señor, non nos tome a tarefa se esquecemos ou cometemos erros. Señor, non nos cargues como ti cargaches ós que nos precederon. Señor, non nos cargues máis do que temos forza para soportar. Perdóanos, perdóanos e ten piedade de nós. Ti es o noso Protector, así que axúdanos contra os incrédulos.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Noso Señor, non deixes que os nosos corazóns se desvíen despois de que ti nos guiaras. Concédenos a túa misericordia: ti es o que sempre dá.';
+
+  @override
+  String get duaMeaning4 =>
+      'Señor, fai que eu e a miña descendencia sigamos a oración. Noso Señor, acepta a miña petición.';
+
+  @override
+  String get duaMeaning5 =>
+      'e baixa a túa á con humildade cara a eles con bondade e di: ‘Señor, ten piedade deles, como eles coidaron de min cando era pequeno’.';
+
+  @override
+  String get duaMeaning6 =>
+      'exaltado sexa Deus, o que ten verdadeiramente o control. [Profeta], non te apresures a recitar antes de que a revelación estea completamente completa, senón que di: \"Señor, aumentame en coñecemento!\"';
+
+  @override
+  String get duaMeaning7 =>
+      'Di [Profeta]: \"Señor, perdoa e ten piedade: ti es o máis misericordioso de todos\".';
+
+  @override
+  String get duaMeaning8 =>
+      'os que rezan: ‘Señor, danos alegría nos nosos esposos e descendencia. Fainos bos exemplos para os que te coñecen’.';
+
+  @override
   String get morningZikr => 'Zikr de mañá';
 
   @override

@@ -211,6 +211,38 @@ class AppLocalizationsTk extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'beýlekiler: \"Rebbimiz, bize bu dünýäde we ahyretde ýagşylyk bersin we bizi ot azabyndan gora\" diýýärler.';
+
+  @override
+  String get duaMeaning2 =>
+      'Hudaý hiç bir jany göterip biläýjekden köp ýüklemeýär: her kim eden ýagşylygyny gazanýar we erbetligine duçar bolýar - “Lorda Reb, ýatdan çykarsaň ýa-da ýalňyşsak, bize jogapkärçilik çekme. Lorda Reb, öňkülerimizi ýükleýşiň ýaly bize ýükleme. Lorda Reb, götermäge güýjümizden has köp ýükleme. Bagyşla, bagyşla we bize rehim et. Sen biziň goragçymyz, kapyrlara garşy bize kömek et \".';
+
+  @override
+  String get duaMeaning3 =>
+      '«Lorda Reb, bize ýol görkezeniňden soň ýüregimiziň sowmagyna ýol berme. Rehim-şepagatyňy ber: Sen hemişe berýärsiň.';
+
+  @override
+  String get duaMeaning4 =>
+      'Lorda Reb, meniň we nesillerimiň dogasyny dowam etdirmegine rugsat ber. Rebbimiz, haýyşymy kabul et.';
+
+  @override
+  String get duaMeaning5 =>
+      'olara hoşniýetlilik bilen ganatyňyzy aşak salyň we: Lord Lorda Reb, kiçijik wagtym maňa ideg edişleri ýaly, olara rehim et! “diýiň.';
+
+  @override
+  String get duaMeaning6 =>
+      'hakykatdanam gözegçilikde saklaýan Hudaý beýik bolsun. [Pygamber], wahy doly gutarmanka okamaga howlukma, ýöne: Lorda Reb, meni bilimde artdyr!';
+
+  @override
+  String get duaMeaning7 =>
+      '[Pygambere] aýdyň: «Lorda Reb, bagyşla we rehim et: Sen hemmelerden iň rehimdarsyň».';
+
+  @override
+  String get duaMeaning8 =>
+      '“Rebbimiz, är-aýallarymyzda we nesillerimizde bize şatlyk beriň. Seni tanaýanlara bize gowy görelde görkez ».';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

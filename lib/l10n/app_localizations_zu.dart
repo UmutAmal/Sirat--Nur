@@ -210,6 +210,38 @@ class AppLocalizationsZu extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'abanye bayakhuleka bethi, ‘Nkosi yethu, siphe okuhle emhlabeni nakwelizayo, futhi usivikele esijezisweni soMlilo.';
+
+  @override
+  String get duaMeaning2 =>
+      'UNkulunkulu akawuthwali umphefumulo ngokungaphezu kwalokho ongakuthwala: yilowo nalowo uzuza noma yikuphi okuhle akwenzile, futhi ubhekana nobubi bawo- ‘Nkosi, ungasithwesi icala uma sikhohlwa noma senza amaphutha. Nkosi, ungasithwali njengoba Wathwalisa ababephambi kwethu. Nkosi, ungasithwali ngokungaphezu kwamandla ethu. Sithethelele, sithethelele, futhi ube nomusa kithi. Wena unguMvikeli wethu, ngakho-ke sisize ngokumelene nabangakholwa.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Nkosi yethu, ungazivumeli izinhliziyo zethu zichezuke emva kokuthi Usiholile. Siphe umusa Wakho: UnguMuphi Waphakade.';
+
+  @override
+  String get duaMeaning4 =>
+      'Nkosi, ngiphe ukuba mina nenzalo yami sigcine umkhuleko. Nkosi yethu, yamukela isicelo sami.';
+
+  @override
+  String get duaMeaning5 =>
+      'bese wehlisela uphiko lwakho ngokuzithoba kubo ngomusa uthi, ‘Nkosi, bahawukele, njengoba nje babenginakekela ngisemncane.’';
+
+  @override
+  String get duaMeaning6 =>
+      'makaphakanyiswe uNkulunkulu, ophethe ngempela. [Mprofethi], ungajahi ukusho ngaphambi kokuba isambulo sipheleliswe kodwa uthi: ‘Nkosi, ngandise olwazini!';
+
+  @override
+  String get duaMeaning7 =>
+      'Yithi [uMprofethi]: ‘Nkosi, thethelela futhi ube nomusa: Wena unesihe kunazo zonke.’';
+
+  @override
+  String get duaMeaning8 =>
+      'labo abakhuleka bethi, ‘Nkosi yethu, siphe injabulo kwabashadile bethu nenzalo yethu. Senze sibe yizibonelo ezinhle kulabo abakwaziyo’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

@@ -212,6 +212,38 @@ class AppLocalizationsGn extends AppLocalizations {
   String get dailyZikr => 'Ára ha ára Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'ambue katu oñembo’e: ‘Ñande Ruvicha, eme’ẽ oréve mba’eporã ko yvy ape ári ha ára pahápe, ha oreñangareko Tata jehasa’asýgui’.';
+
+  @override
+  String get duaMeaning2 =>
+      'Ñandejára ndoipyhyi mba’eveichagua ánga hetave ikatúvagui oaguanta: peteĩteĩ ogana oimeraẽ mba’e porã ojapova’ekue, ha ohasa asy ivaíva- ‘ Ñandejára, ani oregueraha tembiaporãme ñanderesarái térã jajavýramo. Ñandejára, ani orembopy’a rasy rembohasa haguéicha umi ore mboyveguápe. Ñandejára, ani orembopy’a rasy hetave mba’e roguerekóvagui rogueropu’aka haĝua. Oreperdona, oreperdona ha oreporiahuvereko. Nde ningo ore Protector, upévare orepytyvõ umi ndogueroviáivape’.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Ore Ruvicha, ani reheja ore korasõ ojedesvia ore sãmbyhy rire. Eme’ẽ oréve Ne poriahuvereko: Nde ha’e pe Ome’ẽva Akóinte.';
+
+  @override
+  String get duaMeaning4 =>
+      'Ñandejára, eme’ẽ chéve che ha che ñemoñare tosegi pe ñembo’e. Ñande Ruvicha, eguerohory che mba’ejerure.';
+
+  @override
+  String get duaMeaning5 =>
+      'ha emboguejy nde pepo ñemomirĩme hesekuéra py’aporãme ha ere: ‘Ñandejára, eiporiahuvereko chupekuéra, ha’ekuéra oñangareko haguéicha cherehe che michĩrõ guare’.';
+
+  @override
+  String get duaMeaning6 =>
+      'toñemomba’eguasu Tupã, pe añetehápe oisãmbyhýva. [Profeta], ani pejejapura pe’recita pe revelación oñecompleta mboyve ha katu peje: ‘¡Señor, chembohetave mba’ekuaa!’.';
+
+  @override
+  String get duaMeaning7 =>
+      'Ere [Profeta]: ‘Ñandejára, eperdona ha eiporiahuvereko: Nde ningo pe poriahuverekovéva opa mba’égui’.';
+
+  @override
+  String get duaMeaning8 =>
+      'umi oñembo’éva, ‘Ñande Ruvicha, eme’ẽ ñandéve vy’a ñane ména térã ñane rembireko ha ñane ñemoñarekuérape. Ejapo oréve techapyrã porã umi nde consciente-pe’.';
+
+  @override
   String get morningZikr => 'Pyhareve Zikr';
 
   @override

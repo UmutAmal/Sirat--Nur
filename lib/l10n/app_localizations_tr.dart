@@ -210,6 +210,38 @@ class AppLocalizationsTr extends AppLocalizations {
   String get dailyZikr => 'Günlük Zikir';
 
   @override
+  String get duaMeaning1 =>
+      'Yine onlardan: \"Ey Rabbimiz! Bize dünyada bir güzellik ve ahirette de bir güzellik ver ve bizi ateş azabından koru!\" diyenler vardır.';
+
+  @override
+  String get duaMeaning2 =>
+      'Allah hiç kimseye gücünün yeteceğinden başka yük yüklemez. Herkesin kazandığı hayır kendisine, yaptığı kötülüğün zararı yine kendisinedir. Ey Rabbimiz, eğer unuttuk ya da yanıldıysak bizi tutup sorguya çekme! Ey Rabbimiz, bize bizden öncekilere yüklediğin gibi ağır yük yükleme! Ey Rabbimiz, bize gücümüzün yetmeyeceği yükü de yükleme! Bağışla bizi, mağfiret et bizi, rahmet et bize! Sensin bizim Mevlamız, kâfir kavimlere karşı yardım et bize.';
+
+  @override
+  String get duaMeaning3 =>
+      'Ey Rabbimiz! Bize ihsan ettiğin hidayetten sonra kalblerimizi haktan saptırma, bize kendi katından rahmet ihsan eyle! Şüphesiz ki, Sen bol ihsan sahibisin.';
+
+  @override
+  String get duaMeaning4 =>
+      '\"Ey Rabbim! Beni ve soyumdan gelecekleri namazını dosdoğru kılanlardan eyle! Ey Rabbimiz! duamı kabul et!';
+
+  @override
+  String get duaMeaning5 =>
+      'İkisine de acıyarak tevazu kanatlarını indir. Ve şöyle de: \"Ey Rabbim! Onların beni küçükten terbiye edip yetiştirdikleri gibi, sen de kendilerine merhamet et.\"';
+
+  @override
+  String get duaMeaning6 =>
+      'Hükmü her yerde geçerli gerçek hükümdar olan Allah yücedir. (Ey Muhammed!) Kur\'\'ân sana vahyedilirken, vahiy bitmeden önce (unutma korkusu ile) Kur\'\'ân\'\'ı okumada acele etme; \"Rabbim! benim ilmimi artır\" de.';
+
+  @override
+  String get duaMeaning7 =>
+      'Resulüm! De ki: \"Rabbim, bağışla ve merhamet et! Sen merhametlilerin en iyisisin.\"';
+
+  @override
+  String get duaMeaning8 =>
+      'Ve onlar ki: \"Ey Rabbimiz! Bize gözümüzü aydınlatacak eşler ve zürriyetler bağışla ve bizi takva sahiplerine önder kıl\" derler.';
+
+  @override
   String get morningZikr => 'Sabah Zikri';
 
   @override

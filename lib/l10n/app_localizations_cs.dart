@@ -210,6 +210,38 @@ class AppLocalizationsCs extends AppLocalizations {
   String get dailyZikr => 'Denní Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'jiní se modlí: ‚Pane náš, dej nám dobro v tomto světě i v onom světě a chraň nás před mukami ohně.‘';
+
+  @override
+  String get duaMeaning2 =>
+      'Bůh nezatěžuje žádnou duši víc, než může unést: každá získá všechno dobré, co vykonala, a trpí svým špatným – ‚Pane, neber nás do úkolu, pokud zapomeneme nebo uděláme chyby. Pane, nezatěžuj nás, jako jsi naložil ty před námi. Pane, nezatěžuj nás víc, než máme sílu unést. Odpusť nám, odpusť nám a smiluj se nad námi. Jsi náš ochránce, tak nám pomoz proti nevěřícím.‘';
+
+  @override
+  String get duaMeaning3 =>
+      '„Náš Pane, nedopusť, aby se naše srdce odchýlila poté, co jsi nás vedl. Uděl nám své milosrdenství: Ty jsi věčný dar.';
+
+  @override
+  String get duaMeaning4 =>
+      'Pane, dej, abych já a mé potomstvo pokračovali v modlitbě. Náš Pane, přijmi mou žádost.';
+
+  @override
+  String get duaMeaning5 =>
+      'a sklop své křídlo v pokoře vůči nim v laskavosti a řekni: ‚Pane, smiluj se nad nimi, stejně jako se o mě starali, když jsem byl malý.‘';
+
+  @override
+  String get duaMeaning6 =>
+      'buď vyvýšen Bůh, ten, kdo skutečně vládne. [Proroku], nespěchej s recitací, než bude zjevení zcela dokončeno, ale řekni: ‚Pane, rozmnož mě v poznání!‘';
+
+  @override
+  String get duaMeaning7 =>
+      'Řekněte [Prorokovi]: ‚Pane, odpusť a smiluj se: Ty jsi nejmilosrdnější ze všech.‘';
+
+  @override
+  String get duaMeaning8 =>
+      'ti, kdo se modlí: ‚Pane náš, dej nám radost z našich manželů a potomků. Dej nám dobrý příklad pro ty, kteří Tě znají.\"';
+
+  @override
   String get morningZikr => 'Ráno Zikr';
 
   @override

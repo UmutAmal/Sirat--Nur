@@ -213,6 +213,38 @@ class AppLocalizationsFr extends AppLocalizations {
   String get dailyZikr => 'Zikr quotidien';
 
   @override
+  String get duaMeaning1 =>
+      'd’autres prient : « Notre Seigneur, donne-nous du bien dans ce monde et dans l’au-delà, et protège-nous du tourment du Feu. »';
+
+  @override
+  String get duaMeaning2 =>
+      'Dieu ne charge aucune âme de plus qu\'elle ne peut supporter : chacune gagne le bien qu\'elle a fait et souffre son mal : « Seigneur, ne nous prends pas à partie si nous oublions ou faisons des erreurs. Seigneur, ne nous charge pas comme tu as imposé à ceux qui nous ont précédés. Seigneur, ne nous charge pas de plus que ce que nous avons la force de supporter. Pardonne-nous, pardonne-nous et aie pitié de nous. Tu es notre protecteur, alors aide-nous contre les mécréants.';
+
+  @override
+  String get duaMeaning3 =>
+      '« Notre Seigneur, ne laisse pas nos cœurs dévier après que Tu nous as guidés. Accorde-nous Ta miséricorde : Tu es Celui qui donne toujours.';
+
+  @override
+  String get duaMeaning4 =>
+      'Seigneur, accorde-moi et ma progéniture de poursuivre la prière. Notre Seigneur, accepte ma demande.';
+
+  @override
+  String get duaMeaning5 =>
+      'et abaisse ton aile avec humilité envers eux avec bonté et dis : « Seigneur, aie pitié d\'eux, comme ils ont pris soin de moi quand j\'étais petit. »';
+
+  @override
+  String get duaMeaning6 =>
+      'exalté soit Dieu, Celui qui contrôle vraiment. [Prophète], ne vous précipitez pas pour réciter avant que la révélation ne soit complètement complète, mais dites : « Seigneur, augmente-moi en connaissance !';
+
+  @override
+  String get duaMeaning7 =>
+      'Dis [Le Prophète] : « Seigneur, pardonne et aie pitié : Tu es le plus miséricordieux de tous. »';
+
+  @override
+  String get duaMeaning8 =>
+      'ceux qui prient : « Notre Seigneur, donne-nous de la joie dans nos conjoints et nos enfants ». Fais-nous de bons exemples pour ceux qui te connaissent.';
+
+  @override
   String get morningZikr => 'Zikr du matin';
 
   @override

@@ -210,6 +210,38 @@ class AppLocalizationsBi extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’';
+
+  @override
+  String get duaMeaning2 =>
+      'God does not burden any soul with more than it can bear: each gains whatever good it has done, and suffers its bad- ‘ Lord, do not take us to task if we forget or make mistakes. Lord, do not burden us as You burdened those before us. Lord, do not burden us with more than we have strength to bear. Pardon us, forgive us, and have mercy on us. You are our Protector, so help us against the disbelievers.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Our Lord, do not let our hearts deviate after You have guided us. Grant us Your mercy: You are the Ever Giving.';
+
+  @override
+  String get duaMeaning4 =>
+      'Lord, grant that I and my offspring may keep up the prayer. Our Lord, accept my request.';
+
+  @override
+  String get duaMeaning5 =>
+      'and lower your wing in humility towards them in kindness and say, ‘Lord, have mercy on them, just as they cared for me when I was little.’';
+
+  @override
+  String get duaMeaning6 =>
+      'exalted be God, the one who is truly in control. [Prophet], do not rush to recite before the revelation is fully complete but say, ‘Lord, increase me in knowledge!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Say [Prophet], ‘Lord, forgive and have mercy: You are the most merciful of all.’';
+
+  @override
+  String get duaMeaning8 =>
+      'those who pray, ‘Our Lord, give us joy in our spouses and offspring. Make us good examples to those who are aware of You’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

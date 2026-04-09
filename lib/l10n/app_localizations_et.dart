@@ -210,6 +210,38 @@ class AppLocalizationsEt extends AppLocalizations {
   String get dailyZikr => 'Igapäevane Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'teised palvetavad: \"Meie Issand, anna meile head selles maailmas ja teispoolsuses ning kaitse meid tulepiinade eest.\"';
+
+  @override
+  String get duaMeaning2 =>
+      'Jumal ei koorma ühtki hinge rohkemaga, kui ta suudab kanda: igaüks võidab kõike, mida ta on teinud, ja kannatab selle halba – „Issand, ära võta meid ülesandeks, kui me unustame või teeme vigu. Issand, ära koorma meid nii, nagu sa koormasid neid, kes olid enne meid. Issand, ära koorma meid rohkemaga, kui meil on jõudu kanda. Anna meile andeks, anna meile andeks ja halasta meie peale. Sa oled meie kaitsja, nii et aita meid uskmatute vastu.';
+
+  @override
+  String get duaMeaning3 =>
+      '„Meie Issand, ära lase meie südamel kõrvale kalduda pärast seda, kui oled meid juhatanud. Andke meile oma halastus: sina oled alati andev.';
+
+  @override
+  String get duaMeaning4 =>
+      'Issand, anna, et mina ja mu järglased võiksime palvet jätkata. Meie Issand, võta minu palve vastu.';
+
+  @override
+  String get duaMeaning5 =>
+      'ja langetage oma tiib alandlikkuses nende vastu helduses ja öelge: \"Issand, halasta nende peale, nii nagu nad hoolisid minust, kui ma olin väike.\"';
+
+  @override
+  String get duaMeaning6 =>
+      'ülendatud olgu Jumal, see, kes tõesti kontrollib. [Prohvet], ära torma lugema enne, kui ilmutus on täielikult lõpule jõudnud, vaid ütle: „Issand, suurenda mind teadmistes!”';
+
+  @override
+  String get duaMeaning7 =>
+      'Öelge [prohvet]: \"Issand, anna andeks ja halasta: sina oled kõige halastavam.\"';
+
+  @override
+  String get duaMeaning8 =>
+      'need, kes palvetavad: „Issand, anna meile rõõmu meie abikaasadest ja järglastest. Tee meid heaks eeskujuks neile, kes on sinust teadlikud.';
+
+  @override
   String get morningZikr => 'Hommik Zikr';
 
   @override

@@ -211,6 +211,38 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get dailyZikr => 'Inaldaw a Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'ikararag dagiti dadduma, ‘Apomi, ikkannakami iti naimbag iti daytoy a lubong ken iti Akin-awid, ket salaknibannakami manipud iti pannakatutuok ti Apoy.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Saan a padagsenan ti Dios ti asinoman a kararua iti ad-adu ngem ti kabaelanna: tunggal maysa ket makagun-od iti aniaman a naimbag nga inaramidna, ken agsagaba iti dakesna- ‘ Apo, dinakami ibaklay no malipatan wenno agkamalitayo. Apo, saannakami a padagsenan a kas iti panangpadagsenmo kadagiti immun-una kadakami. Apo, saannaka a padagsenan iti ad-adu ngem ti pigsatayo a mangibaklay. Pakawannakami, pakawanennakami, ken kaasiannakami. Sika ti Manangsalaknib kadakami, isu a tulongannakami a maibusor kadagiti di mamati.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Apomi, dimo ipalubos a sumiasi dagiti pusomi kalpasan nga inwanwannakami. Itedmo kadakami ti asimo: Sika ti Agnanayon a Manangted.';
+
+  @override
+  String get duaMeaning4 =>
+      'Apo, ipalubosmo nga itultuloyko ken dagiti kaputotak ti kararag. Apotayo, awatem ti kiddawko.';
+
+  @override
+  String get duaMeaning5 =>
+      'ket ibabam ti payakmo a sipapakumbaba kadakuada buyogen ti kinaimbag ket kunaem, ‘Apo, kaasiam ida, kas iti panangaywanda kaniak idi ubingak pay.’';
+
+  @override
+  String get duaMeaning6 =>
+      'maitan-ok koma ti Dios, daydiay pudpudno a mangkonkontrol. [Propeta], dika agdardaras nga agbasa sakbay a naan-anay a makompleto ti paltiing no di ket ibagam, ‘Apo, paaduennak iti pannakaammo!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Ibagam [Propeta], ‘Apo, pakawanem ken kaasiam: Sika ti kaasi kadagiti amin.’';
+
+  @override
+  String get duaMeaning8 =>
+      'dagidiay agkarkararag, ‘Apomi, ikkannakami iti rag-o kadagiti assawa ken kaputotanmi. Aramidennakami a nasayaat nga ehemplo kadagidiay makaammo Kenka’.';
+
+  @override
   String get morningZikr => 'Agsapa Zikr';
 
   @override

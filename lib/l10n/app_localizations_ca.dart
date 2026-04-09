@@ -212,6 +212,38 @@ class AppLocalizationsCa extends AppLocalizations {
   String get dailyZikr => 'Zikr diari';
 
   @override
+  String get duaMeaning1 =>
+      'd\'altres preguen: \"Senyor nostre, dóna\'ns el bé en aquest món i en el més enllà, i protegeix-nos del turment del foc\".';
+
+  @override
+  String get duaMeaning2 =>
+      'Déu no carrega cap ànima amb més del que pot suportar: cadascú guanya el bé que ha fet, i pateix el seu mal- «Senyor, no ens prenguis a la feina si oblidem o cometem errors. Senyor, no ens carregueu com vau carregar els que ens van avançar. Senyor, no ens carregueu amb més del que tenim força per suportar. Perdona\'ns, perdona\'ns i tingues pietat de nosaltres. Tu ets el nostre protector, així que ajuda\'ns contra els infidels.';
+
+  @override
+  String get duaMeaning3 =>
+      '\"Senyor nostre, no deixeu que el nostre cor es desviï després que ens hàgiu guiat. Concedeix-nos la teva misericòrdia: tu ets el que sempre dóna.';
+
+  @override
+  String get duaMeaning4 =>
+      'Senyor, fa que jo i la meva descendència seguim la pregària. Senyor, accepta la meva petició.';
+
+  @override
+  String get duaMeaning5 =>
+      'i abaixa la teva ala amb humilitat cap a ells amb bondat i digues: \"Senyor, tingues pietat d\'ells, tal com em van cuidar quan era petit\".';
+
+  @override
+  String get duaMeaning6 =>
+      'exaltat sigui Déu, aquell que realment té el control. [Profeta], no us precipiteu a recitar abans que la revelació estigui completament completa, sinó que digueu: \"Senyor, augmenta\'m en coneixement!\"';
+
+  @override
+  String get duaMeaning7 =>
+      'Digues [Profeta]: \"Senyor, perdona i tingues pietat: ets el més misericordiós de tots\".';
+
+  @override
+  String get duaMeaning8 =>
+      'els que preguen: \"Senyor nostre, alegra\'ns en els nostres esposos i descendència\". Fes-nos bons exemples per als que et coneixen”.';
+
+  @override
   String get morningZikr => 'Zikr al matí';
 
   @override

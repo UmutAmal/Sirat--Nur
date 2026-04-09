@@ -210,6 +210,38 @@ class AppLocalizationsIs extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'aðrir biðja: „Drottinn vor, gef oss gott í þessum heimi og í hinu síðara, og verndar oss fyrir kvölum Eldsins.';
+
+  @override
+  String get duaMeaning2 =>
+      'Guð íþyngir ekki neinni sál með meiru en hún getur borið: hver ávinningur af því góða sem hún hefur gert, og þjáist af því slæma- ‘Drottinn, ekki taka okkur til verks ef við gleymum eða gerum mistök. Drottinn, íþyngtu okkur ekki eins og þú lagðir byrðar á þá sem voru á undan okkur. Drottinn, íþyngdu okkur ekki meira en við höfum styrk til að bera. Fyrirgef oss, fyrirgef oss og miskunna þú oss. Þú ert verndari okkar, svo hjálpaðu okkur gegn hinum vantrúuðu.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '„Drottinn vor, láttu hjörtu okkar ekki víkja eftir að þú hefur leiðbeint okkur. Gefðu okkur miskunn þína: Þú ert alltaf að gefa.';
+
+  @override
+  String get duaMeaning4 =>
+      'Drottinn, gef að ég og afkvæmi mitt megum halda uppi bæninni. Drottinn vor, þiggðu beiðni mína.';
+
+  @override
+  String get duaMeaning5 =>
+      'og sæktu væng þinn í auðmýkt í garð þeirra í góðvild og segðu: \'Drottinn, miskunna þú þeim, eins og þeim þótti vænt um mig þegar ég var lítill.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'Upphafinn sé Guð, sá sem sannarlega ræður. [Spámaður], flýttu þér ekki að segja áður en opinberunin er að fullu lokið heldur segðu: ‚Herra, aukið mig að þekkingu!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Segðu [spámann], ‚Drottinn, fyrirgefðu og miskunnaðu þér: Þú ert miskunnsamastur allra.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'þeir sem biðja: ‚Drottinn vor, gef oss gleði yfir maka okkar og afkvæmi. Gerðu okkur gott fordæmi fyrir þá sem þekkja þig.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

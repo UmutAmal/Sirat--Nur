@@ -210,6 +210,38 @@ class AppLocalizationsLn extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'basusu basambelaka, ‘Nkolo na biso, pesa biso bolamu na mokili mpe na sima, mpe batela biso na minyoko ya Mɔtɔ.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Nzambe azali kopesa molimo moko te kilo koleka oyo ekoki komema: moto na moto azali kozwa bolamu nyonso oyo asali, mpe azali konyokwama mabe na yango- ‘ Nkolo, kozwa biso na mokumba te soki tobosani to tosali mabunga. Nkolo, kopesa biso kilo te ndenge opesaki ba oyo bazalaki liboso na biso. Nkolo, kopesa biso kilo te koleka oyo tozali na makasi ya komema. Limbisa biso, limbisa biso, mpe yokela biso mawa. Ozali Mobateli na biso, yango wana salisá biso na bato oyo bazangi kondima.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Nkolo na biso, kotika te mitema na biso epengwisa sima na Yo kotambwisa biso. Pesa biso ngolu na Yo: Ozali Mopesi Toujours.';
+
+  @override
+  String get duaMeaning4 =>
+      'Nkolo, pesa ngai ná bana na ngai tókoba losambo. Nkolo na biso, ndima bosenga na ngai.';
+
+  @override
+  String get duaMeaning5 =>
+      'mpe kitisá lipapu na yo na komikitisa epai na bango na boboto mpe lobá ete, ‘Nkolo, yokela bango mawa, kaka ndenge bazalaki kobatela ngai ntango nazalaki moke.’';
+
+  @override
+  String get duaMeaning6 =>
+      'atombwama Nzambe, ye oyo azali mpenza na bokonzi. [Mosakoli], kokende mbangumbangu te mpo na kotánga liboso ete emoniseli esila mpenza kasi loba ete, ‘Nkolo, bakisá ngai boyebi!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Loba [Mosakoli], ‘Nkolo, limbisa mpe yoka mawa: Ozali na mawa koleka nyonso.’';
+
+  @override
+  String get duaMeaning8 =>
+      'baoyo bazali kobondela, ‘Nkolo na biso, pesá biso esengo kati na balongani mpe bana na biso. Sala biso bandakisa malamu na baye bayebi Yo’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

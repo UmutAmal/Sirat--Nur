@@ -210,6 +210,38 @@ class AppLocalizationsUz extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'Boshqalar esa: «Ey Robbimiz, bizga dunyo va oxiratda yaxshilik ato et va bizni do\'zax azobidan saqla», deb duo qiladilar.';
+
+  @override
+  String get duaMeaning2 =>
+      'Alloh hech bir jonga toqatidan ortiq narsani yuklamaydi: har kim qilgan yaxshiligidan ortig‘ini oladi va o‘zining yomonligidan azob chekadi – “Ey Robbim, agar unutsak yoki xato qilsak, bizni jazolamagin. Parvardigorim, bizdan oldingilarga og‘ir yuklaganingdek, bizni ham yuklamagin. Parvardigorim, bizni kuchimizdan ortiq yuklamagin. Bizni kechir, kechir va bizga rahm qil. Sen bizning valiymizsan, kofirlarga qarshi bizga yordam ber», dedilar.';
+
+  @override
+  String get duaMeaning3 =>
+      '«Ey Robbimiz, bizlarni hidoyat qilganingdan keyin qalblarimizni og\'dirmagin. Bizga rahmatingni ato et, O\'zing berguvchisan.';
+
+  @override
+  String get duaMeaning4 =>
+      'Rabbim, menga va zurriyotimga namozni to\'g\'ri o\'qishni nasib et. Robbimiz, iltimosimni qabul qil.';
+
+  @override
+  String get duaMeaning5 =>
+      'Ularga mehribonlik ila tavakkal qilib qanotingizni pastga tushiring va: “Yo Parvardigorim, ular menga kichikligimda g‘amxo‘rlik qilganidek, ularga ham rahm qil”, deb ayt.';
+
+  @override
+  String get duaMeaning6 =>
+      'Haqiqatan ham hukmron bo\'lgan Alloh pokdir. [Payg‘ambar], vahiy to‘liq bo‘lmasdan turib, qiroat qilishga shoshilma, balki: “Robbim, ilmimni ziyoda qil!” deb ayt.';
+
+  @override
+  String get duaMeaning7 =>
+      '(Payg‘ambarga) ayt: “Robbim, mag‘firat qil va rahm qil, Sen eng mehribonsan”.';
+
+  @override
+  String get duaMeaning8 =>
+      '«Robbimiz, bizni juftlarimiz va zurriyotlarimizni xursand qilgin», deb duo qilganlar. Bizni O\'zingdan xabardor bo\'lganlarga yaxshi namuna qilgin», dedi.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

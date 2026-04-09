@@ -210,6 +210,38 @@ class AppLocalizationsSu extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'batur ngado\'a, \'Ya Tuhan kami, pasihan kami kahadéan di dunya sareng di ahérat, sareng lindungi kami tina siksa seuneu.\'';
+
+  @override
+  String get duaMeaning2 =>
+      'Gusti henteu ngabeungbeuratan jiwa mana waé kalayan langkung ti anu tiasa nanggung: masing-masing nampi kasaéan naon waé anu parantos dilakukeun, sareng sangsara kagoréngan - \'Gusti, ulah nyandak tugas upami urang hilap atanapi ngalakukeun kasalahan. Gusti, ulah ngabeungbeuratan kami sakumaha Anjeun ngabeuratkeun jalma-jalma sateuacan kami. Gusti, ulah ngabeungbeuratan kami kalayan langkung ti anu kami kuatkeun. Hampura kami, hampura kami, sarta rahmat ka kami. Anjeun téh Panjaga kami, jadi tulungan kami ngalawan jalma-jalma kafir.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '\'Ya Rabb kami, ulah ngantepkeun hate kami jadi menyimpang sanggeus anjeun maparin pituduh ka kami. Pasihan kami rahmat anjeun: Anjeun Anu Maha Pasih.';
+
+  @override
+  String get duaMeaning4 =>
+      'Gusti, pasihan abdi sareng turunan abdi tiasa nedunan solat. Nun Gusti, kabulkeun pamenta abdi.';
+
+  @override
+  String get duaMeaning5 =>
+      'Jeung handap jangjang Anjeun dina humility ka maranehna dina kahadean jeung ucapkeun, \'Gusti, hampura aranjeunna, sakumaha aranjeunna miara kuring nalika kuring leutik.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'Maha Suci Allah, anu bener-bener ngawasa. [Nabi], ulah buru-buru maca sateuacan wahyu lengkep lengkep, tapi ucapkeun, \'Gusti, tambahkeun pangaweruh kuring!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Ucapkeun [Nabi], \'Nun Gusti, hampura sareng welas asih: Anjeun anu paling welas asih.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'jalma-jalma anu ngadoa, \'Nun Gusti, pasihan abdi kabagjaan pikeun pasangan sareng turunan kami. Jadikeun kami conto anu hade pikeun jalma-jalma anu sadar kana Anjeun’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

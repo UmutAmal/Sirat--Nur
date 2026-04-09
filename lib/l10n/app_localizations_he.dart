@@ -210,6 +210,38 @@ class AppLocalizationsHe extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'אחרים מתפללים, \'אדוננו, תן לנו טוב בעולם הזה ובעולם הבא, והגן עלינו מייסורי האש\'.';
+
+  @override
+  String get duaMeaning2 =>
+      'אלוהים אינו מכביד על אף נשמה יותר ממה שהיא יכולה לשאת: כל אחד זוכה בכל הטוב שעשה, וסובל מהרע שלו- \'אדוני, אל תיקח אותנו למשימה אם אנחנו שוכחים או עושים טעויות. אדוני, אל תכביד עלינו כפי שהעמסת על אלו שלפנינו. אדוני, אל תעמיס עלינו יותר ממה שיש לנו כוח לשאת. סלח לנו, סלח לנו, ורחם עלינו. אתה המגן שלנו, אז עזור לנו נגד הכופרים\'.';
+
+  @override
+  String get duaMeaning3 =>
+      '\'אדוננו, אל תיתן ללבנו לסטות לאחר שהנחית אותנו. תן לנו את רחמיך: אתה הנותן תמיד.';
+
+  @override
+  String get duaMeaning4 =>
+      'אדוני, תן ​​שאני וצאצאיי נמשיך בתפילה. אדוננו, קבל את בקשתי.';
+
+  @override
+  String get duaMeaning5 =>
+      'והורד את כנך בענווה כלפיהם בחסד ואמרת \'אדוני, רחם עליהם, כשם שדאגו לי כשהייתי קטן\'.';
+
+  @override
+  String get duaMeaning6 =>
+      'יתעלה אלוהים, זה ששולט באמת. [נביא], אל תמהר לדקלם לפני שההתגלות תהיה שלמה במלואה אלא אמור \'אדוני, הגדל אותי לדעת!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'אמור [הנביא], \'אדוני, סלח ורחם: אתה הרחמן מכולם\'.';
+
+  @override
+  String get duaMeaning8 =>
+      'אלה המתפללים, \'אדוננו, תן לנו שמחה על בני זוגנו וצאצאינו. תן לנו דוגמאות טובות למי שמודע לך\'.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override
@@ -1367,7 +1399,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get asmaMeaning61 => 'לוקח החיים';
 
   @override
-  String get asmaMeaning62 => 'The Ever Living';
+  String get asmaMeaning62 => 'זה שיש לו חיי נצח והוא תמיד חי.';
 
   @override
   String get asmaMeaning63 => 'המקיים את עצמו';
@@ -1376,7 +1408,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get asmaMeaning64 => 'המאתר';
 
   @override
-  String get asmaMeaning65 => 'The Glorious';
+  String get asmaMeaning65 => 'זה עם כבוד ותפארת גדולים, נדיבות ונדיבות בשפע.';
 
   @override
   String get asmaMeaning66 => 'היחיד';

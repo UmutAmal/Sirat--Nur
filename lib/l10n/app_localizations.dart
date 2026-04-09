@@ -874,6 +874,54 @@ abstract class AppLocalizations {
   /// **'Daily Zikr'**
   String get dailyZikr;
 
+  /// No description provided for @duaMeaning1.
+  ///
+  /// In en, this message translates to:
+  /// **'others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’'**
+  String get duaMeaning1;
+
+  /// No description provided for @duaMeaning2.
+  ///
+  /// In en, this message translates to:
+  /// **'God does not burden any soul with more than it can bear: each gains whatever good it has done, and suffers its bad- ‘ Lord, do not take us to task if we forget or make mistakes. Lord, do not burden us as You burdened those before us. Lord, do not burden us with more than we have strength to bear. Pardon us, forgive us, and have mercy on us. You are our Protector, so help us against the disbelievers.’'**
+  String get duaMeaning2;
+
+  /// No description provided for @duaMeaning3.
+  ///
+  /// In en, this message translates to:
+  /// **'‘Our Lord, do not let our hearts deviate after You have guided us. Grant us Your mercy: You are the Ever Giving.'**
+  String get duaMeaning3;
+
+  /// No description provided for @duaMeaning4.
+  ///
+  /// In en, this message translates to:
+  /// **'Lord, grant that I and my offspring may keep up the prayer. Our Lord, accept my request.'**
+  String get duaMeaning4;
+
+  /// No description provided for @duaMeaning5.
+  ///
+  /// In en, this message translates to:
+  /// **'and lower your wing in humility towards them in kindness and say, ‘Lord, have mercy on them, just as they cared for me when I was little.’'**
+  String get duaMeaning5;
+
+  /// No description provided for @duaMeaning6.
+  ///
+  /// In en, this message translates to:
+  /// **'exalted be God, the one who is truly in control. [Prophet], do not rush to recite before the revelation is fully complete but say, ‘Lord, increase me in knowledge!’'**
+  String get duaMeaning6;
+
+  /// No description provided for @duaMeaning7.
+  ///
+  /// In en, this message translates to:
+  /// **'Say [Prophet], ‘Lord, forgive and have mercy: You are the most merciful of all.’'**
+  String get duaMeaning7;
+
+  /// No description provided for @duaMeaning8.
+  ///
+  /// In en, this message translates to:
+  /// **'those who pray, ‘Our Lord, give us joy in our spouses and offspring. Make us good examples to those who are aware of You’.'**
+  String get duaMeaning8;
+
   /// No description provided for @morningZikr.
   ///
   /// In en, this message translates to:

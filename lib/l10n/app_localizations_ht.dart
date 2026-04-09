@@ -210,6 +210,38 @@ class AppLocalizationsHt extends AppLocalizations {
   String get dailyZikr => 'Zikr chak jou';
 
   @override
+  String get duaMeaning1 =>
+      'lòt moun priye, ‘Senyè nou, ban nou sa ki byen nan monn sa a ak nan apre a, epi pwoteje nou kont touman dife a.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Bondye pa chaje okenn nanm ak plis pase sa li kapab pote: chak genyen kèlkeswa sa ki byen li te fè, epi soufri mal li yo- ‘ Granmèt, pa pran nou nan travay si nou bliye oswa fè erè. Senyè, pa chaje nou tankou ou te chaje moun ki te devan nou yo. Senyè, pa chaje nou plis pase fòs nou genyen pou nou sipòte. Padone nou, padone nou, gen pitye pou nou. Ou se Pwotektè nou, donk ede nou kont moun ki pa kwayan yo.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Seyè nou, pa kite kè nou devye apre ou fin gide nou. Fè nou mizèrikòd ou: se ou ki tout tan tout tan bay.';
+
+  @override
+  String get duaMeaning4 =>
+      'Senyè, fè pou mwen menm ak desandan mwen yo ka kontinye priyè a. Seyè nou an, aksepte demann mwen an.';
+
+  @override
+  String get duaMeaning5 =>
+      'epi bese zèl ou avèk imilite anvè yo ak jantiyès epi di: ‘Seyè, gen pitye pou yo, menm jan yo te pran swen m lè m te piti.';
+
+  @override
+  String get duaMeaning6 =>
+      'Egzalte se pou Bondye, sila a ki vrèman nan kontwòl. [Pwofèt], pa kouri resite anvan revelasyon an fini nèt, men di, ‘Seyè, ogmante konesans mwen!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Di [Pwofèt], ‘Seyè, padone epi gen mizèrikòd: Ou se pi mizèrikòd nan tout.’';
+
+  @override
+  String get duaMeaning8 =>
+      'moun ki priye, ‘Senyè nou, ban nou lajwa nan konjwen nou yo ak pitit pitit nou yo. Fè nou bon egzanp pou moun ki konnen w’.';
+
+  @override
   String get morningZikr => 'Maten Zikr';
 
   @override

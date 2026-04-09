@@ -210,6 +210,38 @@ class AppLocalizationsSt extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'ba bang ba re: ‘Mong’a rona, re fe tse molemo lefatšeng lena le ka ho sa Feleng, ’me u re sireletse kotlong ea mollo.';
+
+  @override
+  String get duaMeaning2 =>
+      'Allah ha A imetse moea ofe kapa ofe ka tse fetang tseo o ka li jarang: e mong le e mong o fumana molemo ofe kapa ofe oo o o entseng, \'me o hlaheloa ke bobe ba oona - \"Morena, u se ke ua re nka re lebetse kapa re etsa liphoso. Morena, u se ke ua re imetsa joalo ka ha u ne u imetsa ba neng ba le pele ho rona. Morena, u se ke ua re imetsa ka matla a fetang ao re nang le \'ona. U re tšoarele, u re tšoarele, u re hauhele. U Mosireletsi oa rona, kahoo re thuse khahlanong le ba sa lumeleng.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Mong’a rona, u se ke ua lumella lipelo tsa rona ho kheloha ka mor’a hore u re tataise. U re fe mohau oa Hao: U Ea fanang ka mehla.';
+
+  @override
+  String get duaMeaning4 =>
+      'Morena, etsa hore nna le bana ba ka re boloke thapelo. Morena oa rona, amohela kopo ea ka.';
+
+  @override
+  String get duaMeaning5 =>
+      'mme o theolele lepheo la hao ka boikokobetso ho bona ka mosa mme o re, ‘Morena, ba hauhele, jwalokaha ba ile ba ntlhokomela ha ke sa le monyenyane.’';
+
+  @override
+  String get duaMeaning6 =>
+      'ho phahamisoe Molimo, ea laolang ka ’nete. [Moprofeta], u se ke ua potlakela ho pheta-pheta pele tšenolo e phethahala ka botlalo empa u re, ‘Morena, nkekeletse tsebong!';
+
+  @override
+  String get duaMeaning7 =>
+      'E-re [Moprofeta], ‘Morena, tšoarela ’me u hauhele: U le mohau ho feta bohle.’';
+
+  @override
+  String get duaMeaning8 =>
+      'ba rapelang ba re: ‘Morena oa rona, re thabise ka har’a balekane ba rōna le bana ba rōna. Re etse mehlala e metle ho ba O tsebang’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

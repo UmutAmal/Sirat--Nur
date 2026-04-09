@@ -210,6 +210,38 @@ class AppLocalizationsEo extends AppLocalizations {
   String get dailyZikr => 'Ĉiutaga Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'aliaj preĝas: ‘Nia Sinjoro, donu al ni bonon en ĉi tiu mondo kaj en la Ĉi-poste, kaj protektu nin kontraŭ la turmento de la Fajro.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Dio ne ŝarĝas neniun animon per pli ol ĝi povas elporti: ĉiu gajnas kian bonon, kiun ĝi faris, kaj suferas sian malbonon- ‘Sinjoro, ne zorgu nin, se ni forgesas aŭ faras erarojn. Sinjoro, ne ŝarĝu nin kiel Vi ŝarĝis tiujn antaŭ ni. Sinjoro, ne ŝarĝu nin per pli ol ni havas forton por elporti. Pardonu nin, pardonu nin kaj kompatu nin. Vi estas nia Protektanto, do helpu nin kontraŭ la nekredantoj.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Nia Sinjoro, ne lasu niajn korojn deflankiĝi post kiam Vi gvidis nin. Donu al ni Vian kompaton: Vi estas la Ĉiam Donanta.';
+
+  @override
+  String get duaMeaning4 =>
+      'Sinjoro, donu, ke mi kaj mia idaro daŭrigu la preĝon. Nia Sinjoro, akceptu mian peton.';
+
+  @override
+  String get duaMeaning5 =>
+      'kaj malaltigu vian flugilon en humileco al ili en bonkoreco, kaj diru: \'Sinjoro, kompatu ilin, kiel ili zorgis pri mi kiam mi estis malgranda.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'altigita estu Dio, Tiu, kiu vere regas. [Profeto], ne rapidu deklami antaŭ ol la revelacio estas plene kompleta, sed diru: \'Sinjoro, pliigu min en scio!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Diru [Profeto]: \'Sinjoro, pardonu kaj kompatu: Vi estas la plej kompatema el ĉiuj.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'tiuj, kiuj preĝas, ‘Nia Sinjoro, donu al ni ĝojon pri niaj geedzoj kaj idaro. Faru al ni bonajn ekzemplojn al tiuj, kiuj konscias pri Vi’.';
+
+  @override
   String get morningZikr => 'Matene Zikr';
 
   @override

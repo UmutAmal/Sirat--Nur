@@ -210,6 +210,38 @@ class AppLocalizationsKu extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'yên din jî dua dikin: “Rebbê me, tu li dinya û axretê xêrê bide me û me ji ezabê agir biparêze.”';
+
+  @override
+  String get duaMeaning2 =>
+      'Xwedê ji barkirina tu canî zêdetir barê xwe bar nake: her kes çi qenciya ku kiriye bi dest dixe û xerabiya wî jî dikişîne- \"Ya Rebbî, heger em ji bîr bikin an xeletiyan bikin, me negire ser karê xwe.\" Ya Rebbî, çawa ku te li yên beriya me bar kir, li me bar neke. Ya Xudan, ji hêza me zêdetir barê me bar neke. Li me bibore, li me bibexşîne û li me were rehmê. Tu Parêzvanê me yî, vêca li hember kafiran alîkariya me bike.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '“Rebbê me, piştî ku te em rêberî kirin, dilê me nehêle. Rehma xwe bide me: Tu yî her û her î.';
+
+  @override
+  String get duaMeaning4 =>
+      'Ya Xudan, bihêle ku ez û zuriyeta min nimêjê bikin. Rebbê me, daxwaza min qebûl bike.';
+
+  @override
+  String get duaMeaning5 =>
+      'Û bi dilnizmî baskê xwe li hember wan bi dilovanî daxîne û bêje: \'Ya Rebbê, li wan were rehmê, çawa ku wan dema ku ez piçûk bûm, li min miqate bûn.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'Xwedayê ku bi rastî desthilatdar e, bilind be. [Pêxember], berî ku weht temam bibe, lezê nede xwendinê, lê bêje: \"Ya Rebbî, zanîna min zêde bike!\"';
+
+  @override
+  String get duaMeaning7 =>
+      'Ji [Pêxember] re bêje: ‘Ya Rebbî, bibexşîne û rehmê bike: Tu ji hemûyan rehmtir î.';
+
+  @override
+  String get duaMeaning8 =>
+      'yên ku dua dikin: \'Rebbê me, bi hevjîn û zarokên me şad bike. Ji wan ên ku haya wan ji te re heye, me bike nimûneyên baş.”';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

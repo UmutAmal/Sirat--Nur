@@ -210,6 +210,36 @@ class AppLocalizationsTi extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'ካልኦት ድማ ‘ጐይታና ኣብ ዓለምን ኣብ ኣኼራን ሰናይ ሃበና፡ ካብ ስቓይ ሓዊ ሓልወና’ ኢሎም ይጽልዩ።';
+
+  @override
+  String get duaMeaning2 =>
+      'እግዚኣብሄር ንዝኾነት ነፍሲ ካብቲ ክትጻወሮ እትኽእል ንላዕሊ ኣይጽዕናን እዩ: ነፍሲ ወከፍ ዝገበሮ ሰናይ ይረክብ: ሕማቕ ድማ ይሳቐ- ‘ ጎይታ እንተረሲዕና ወይ እንተተጋግና ኣብ ዕማም ኣይትውሰደና። ጎይታ ከምቲ ነቶም ቅድሜና ዝሰከምካዮም ኣይትጾረና። ጎይታ ካብቲ ክንስከሞ ዘለና ሓይሊ ንላዕሊ ኣይትጽዕነና። ይቕረ ግበረልና፡ ይቕረ ግበረልና፡ ምሕረት ግበረልና። ንስኻ ሓላዊና ኢኻ እሞ ኣንጻር ካፍር ሓግዘና።’ ኢሉ መለሰሉ።';
+
+  @override
+  String get duaMeaning3 =>
+      '‘ጐይታና ድሕሪ ምምራሕካ ልብና ከይትዘልል። ምሕረትካ ሃበና: ንስኻ ወትሩ ወሃቢ ኢኻ።';
+
+  @override
+  String get duaMeaning4 => 'ጎይታ ኣነን ዘርኣይን ጸሎት ክንቅጽል ፍቐደለይ። ጎይታና ንሕቶይ ተቐበል።';
+
+  @override
+  String get duaMeaning5 =>
+      'ብትሕትና ድማ ክንፍኻ ብሕያውነት ናብኦም ኣውሪድካ ‘ጐይታይ ከምቲ ንእሽቶይ ከለኹ ዝሓልዩኒ ምሓሮም’ በሎም።';
+
+  @override
+  String get duaMeaning6 =>
+      'እቲ ብሓቂ ዝቆጻጸር ኣምላኽ ልዕል ይበል። [ነቢይ]፣ እቲ ምግላጽ ምሉእ ብምሉእ ከይተዛዘመ ንምንባብ ኣይትሃወኽ እምበር ‘ጐይታይ ብፍልጠት ኣዕብየኒ!’ በል።';
+
+  @override
+  String get duaMeaning7 => '[ነቢይ] በል፡ ‘ጐይታይ ይቕረ በለን ምሓርን፡ ንስኻ ካብ ኩሉ መሓሪ ኢኻ።’';
+
+  @override
+  String get duaMeaning8 =>
+      'እቶም ‘ጐይታና ኣብ መጻምድትናን ዘርእናን ሓጐስ ሃበና። ነቶም ብዛዕባኻ ዝፈልጡ ጽቡቕ ኣብነት ግበረና’።';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

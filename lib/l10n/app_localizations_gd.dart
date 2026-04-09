@@ -211,6 +211,38 @@ class AppLocalizationsGd extends AppLocalizations {
   String get dailyZikr => 'Zikr làitheil';
 
   @override
+  String get duaMeaning1 =>
+      'tha cuid eile ag urnuigh, \'Ar Tighearna, dean maith dhuinn anns an t-saoghal so, agus anns an àm ri teachd, agus dìon sinn o chràdh an Teine.\'';
+
+  @override
+  String get duaMeaning2 =>
+      'Cha \'n \'eil Dia a\' cur uallach air anam air bith le tuiUeadh na \'s urrainn e ghiùlain : tha gach aon a\' cosnadh am maith a rinn e, agus a\' fulang a dhroch-dhleasdanais : \' A Thighearna, na gabh sinn gu obair ma dhi-chuimhnicheas sinn no ma ni sinn mearachd. A Thighearna, na cuir eallach oirnn mar a chuir thusa uallach orrasan a bha romhainn. A Thighearna, na cuir barrachd eallach oirnn na tha neart againn ri ghiùlan. Maitheanas dhuinn, maith dhuinn, agus dean trocair oirnn. Is tusa an Neach-dìon againn, mar sin cuidich sinn an aghaidh nan eas-chreidmheach.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Ar Tighearna, na leig le ar cridheachan a dhol air seacharan às deidh do threòrachadh. Deònaich dhuinn do thròcair : Is tusa an tì a bheir gu bràth.';
+
+  @override
+  String get duaMeaning4 =>
+      'A Thighearna, deònaich gum faod mise agus mo shliochd an ùrnaigh a chumail suas. A Thighearna, gabh ri m’ iarrtas.';
+
+  @override
+  String get duaMeaning5 =>
+      'agus lughdaich do sgiath ann an irioslachd d\' an ionnsuidh ann an caoimhneas, agus abair, \" A Thighearna, dean trocair orra, mar a bha curam aca dhiom an uair a bha mi beag.\"';
+
+  @override
+  String get duaMeaning6 =>
+      'àrdaichte gu robh Dia, an ti aig am bheil da rìreadh smachd. [Fhàidh], na dèan cabhag airson aithris mus bi am foillseachadh làn iomlan ach abair, ‘A Thighearna, meudaich mi ann an eòlas!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Abair [Fàidh], ‘A Thighearna, thoir maitheanas agus dèan tròcair: Is tusa an neach as tròcairiche dhiubh uile.’';
+
+  @override
+  String get duaMeaning8 =>
+      'iadsan a nì ùrnaigh, ‘Ar Tighearna, dèan gàirdeachas dhuinn nar cèile agus nar sliochd. Dèan eisimpleirean math dhuinn dhaibhsan a tha eòlach ort’.';
+
+  @override
   String get morningZikr => 'Madainn Zikr';
 
   @override

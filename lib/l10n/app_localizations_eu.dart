@@ -210,6 +210,38 @@ class AppLocalizationsEu extends AppLocalizations {
   String get dailyZikr => 'Eguneko Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'beste batzuk otoitz egiten dute: «Gure Jauna, eman iezaguzu ona mundu honetan eta hemendik aurrera, eta babes gaitzazu Suaren oinazeetatik».';
+
+  @override
+  String get duaMeaning2 =>
+      'Jainkoak ez du kargatzen arimarik jasan dezakeena baino gehiago: bakoitzak irabazten du egin duen edozein on, eta bere txarra jasaten du- ‘Jauna, ez gaitzazu ardurarik hartu ahazten edo huts egiten badugu. Jauna, ez gaitzazu zamatu gure aurrekoak zamatu dituzun bezala. Jauna, ez gaitzazu kargatu bear ditugun indarrak baino gehiago. Barkatu, barka iezaguzu, eta erruki gaitzazu. Gure Babeslea zara, beraz, lagundu iezaguzu sinesgabeen aurka».';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Gure Jauna, ez utzi gure bihotzak desbideratu Gu gidatu gaituzunean. Emaiguzu zure errukia: Zu zara beti ematen duena.';
+
+  @override
+  String get duaMeaning4 =>
+      'Jauna, eman ezazu nik eta nire ondorengoek otoitzarekin jarrai dezagun. Gure Jauna, onartu nire eskaria.';
+
+  @override
+  String get duaMeaning5 =>
+      'eta jaitsi zure hegala apaltasunez haienganako ontasunez, eta esan: «Jauna, erruki izan haietaz, txikia nintzenean zaindu ninduten bezala».';
+
+  @override
+  String get duaMeaning6 =>
+      'goratua izan bedi Jainkoa, egiazki menperatzen duena. [Profeta], ez zaitez presarik errezitatzera errebelazioa guztiz osatu baino lehen, baina esan: ‘Jauna, handitu nazazu ezagutzan!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Esan [Profeta]: «Jauna, barkatu eta erruki izan: Zu zara guz- tietan errukitsuena».';
+
+  @override
+  String get duaMeaning8 =>
+      'otoitz egiten dutenek: ‘Gure Jauna, eman iezaguzu poza gure ezkontide eta ondorengoengan. Egin iezaguzu adibide onak Zutaz jabetzen direnentzat’.';
+
+  @override
   String get morningZikr => 'Goizean Zikr';
 
   @override

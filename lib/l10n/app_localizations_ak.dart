@@ -210,6 +210,38 @@ class AppLocalizationsAk extends AppLocalizations {
   String get dailyZikr => 'Da biara da Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'afoforɔ nso bɔ mpaeɛ sɛ, ‘Yɛn Awurade, ma yɛn papa wɔ wiase yi mu ne Daankwamma mu, na bɔ yɛn ho ban firi Ogya ayayadeɛ ho.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Onyankopɔn mfa adesoa nhyɛ ɔkra biara so nsen nea obetumi asoa: obiara nya papa biara a wayɛ, na ohu ne bɔne- ‘ Awurade, sɛ yɛn werɛ fi anaasɛ yedi mfomso a, mfa yɛn nkɔ asɛnnibea. Awurade, mfa adesoa nto yɛn so sɛnea Wode adesoa guu wɔn a wodii yɛn anim kan no. Awurade, mma nnsoa yɛn so nsen nea yɛwɔ a yɛde bɛsoa. Fa yɛn bɔne kyɛ yɛn, fa kyɛ yɛn, na hu yɛn mmɔbɔ. Wone yɛn Banbɔfoɔ, enti boa yɛn tia atiafoɔ no.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Y’Awurade, mma yen akoma nnkyinkyin bere a Woakyere yen kwan akyi. Ma yɛn W’ahummɔbɔ: Wo ne Ɔma Daa.';
+
+  @override
+  String get duaMeaning4 =>
+      'Awurade, ma me ne m\'asefoɔ nkɔ so abɔ mpaeɛ. Y\'Awurade, gye m\'abisade no tom.';
+
+  @override
+  String get duaMeaning5 =>
+      'na fa wo ntaban si fam wɔ ahobrɛase mu kyerɛ wɔn wɔ ayamye mu na ka sɛ, ‘Awurade, hu wɔn mmɔbɔ, sɛnea wɔhwɛɛ me bere a na meyɛ abofra no.’';
+
+  @override
+  String get duaMeaning6 =>
+      'wɔmma Onyankopɔn, nea odi tumi ankasa no so. [Odiyifo], npere wo ho nkenkan ansa na adiyisɛm no awie koraa na mmom ka sɛ, ‘Awurade, ma me nnɔɔso wɔ nimdeɛ mu!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Ka [Odiyifo] se, ‘Awurade, fa kyɛ na hu mmɔbɔ: Wo ne mmɔborohunufo sen obiara.’';
+
+  @override
+  String get duaMeaning8 =>
+      'wɔn a wɔbɔ mpae sɛ, ‘Yɛn Awurade, ma yɛn anigye wɔ yɛn ahokafo ne yɛn mma mu. Yɛ yɛn nhwɛso pa mma wɔn a wonim Wo’.';
+
+  @override
   String get morningZikr => 'Anɔpa Zikr';
 
   @override

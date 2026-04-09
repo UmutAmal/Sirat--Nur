@@ -211,6 +211,38 @@ class AppLocalizationsCy extends AppLocalizations {
   String get dailyZikr => 'Zikr dyddiol';
 
   @override
+  String get duaMeaning1 =>
+      'gweddïa eraill, ‘Ein Harglwydd, dyro inni ddaioni yn y byd hwn ac yn y dyfodol, ac amddiffyn ni rhag poenedigaeth y Tân.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Nid yw Duw yn rhoi mwy o faich ar unrhyw enaid nag y gall ei ddwyn: y mae pob un yn ennill pa les bynnag y mae wedi’i wneud, ac yn dioddef ei ddrwg - ‘Arglwydd, paid â chymryd ni i orchwyl os anghofiwn neu os gwnawn gamgymeriadau. Arglwydd, paid â rhoi baich arnom fel y gwnaethost feichiau ar y rhai o\'n blaenau. Arglwydd, paid â rhoi mwy o faich arnom nag sydd gennym ni nerth i\'w ddwyn. Maddeu inni, maddau inni, a thrugarha wrthym. Ti yw ein Amddiffynnydd, felly helpa ni yn erbyn yr anghredinwyr.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Ein Harglwydd, paid â gadael i\'n calonnau wyro ar ôl i ti ein harwain. Caniatâ inni Dy drugaredd: Ti yw\'r Rhoddwr Tragwyddol.';
+
+  @override
+  String get duaMeaning4 =>
+      'Arglwydd, caniatâ i mi a\'m hiliogaeth gadw i fynu y weddi. Ein Harglwydd, derbyn fy nghais.';
+
+  @override
+  String get duaMeaning5 =>
+      'a gostwng dy adain mewn gostyngeiddrwydd tuag atynt mewn caredigrwydd, a dywed, ‘Arglwydd, trugarha wrthynt, fel yr oeddent yn gofalu amdanaf pan oeddwn yn fach’.';
+
+  @override
+  String get duaMeaning6 =>
+      'dyrchafedig fyddo Duw, yr hwn sydd yn rheoli yn wirioneddol. [Proffwyd], paid â rhuthro i adrodd cyn y bydd y datguddiad yn gyflawn, ond dywed, ‘Arglwydd, cynydd fi mewn gwybodaeth!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Dywedwch [Proffwyd], ‘Arglwydd, maddau a thrugarha: Ti yw’r mwyaf trugarog oll.’';
+
+  @override
+  String get duaMeaning8 =>
+      'y rhai sy’n gweddïo, ‘Ein Harglwydd, rho inni lawenydd yn ein priod a’n hiliogaeth. Gwna ni yn esiamplau da i’r rhai sy’n ymwybodol ohonot Ti’.';
+
+  @override
   String get morningZikr => 'Bore Zikr';
 
   @override

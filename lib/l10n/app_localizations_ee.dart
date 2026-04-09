@@ -210,6 +210,38 @@ class AppLocalizationsEe extends AppLocalizations {
   String get dailyZikr => 'Gbesiagbe Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'ame bubuwo doa gbe ɖa be, ‘Míaƒe Aƒetɔ, na nyui mí le xexe sia me kple le Agbenɔnɔ me, eye nàkpɔ mía ta tso Dzo ƒe fuwɔame me.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Mawu metsɔa agba wu luʋɔ aɖeke wu esi wòate ŋu atsɔ o: nu nyui ɖesiaɖe si wòwɔ la kpɔa viɖe, eye wòkpea fu le eƒe vɔ̃ me- ‘ Aƒetɔ, mègatsɔ mí ade dɔ me ne míeŋlɔ be alo wɔ vodada o. Aƒetɔ, mègado agba na mí abe alesi nèdo agba na amesiwo do ŋgɔ na mí ene o. Aƒetɔ, mègatsɔ agba geɖe wu ŋusẽ si le mía si be míatsɔ o. Tsɔe ke mí, tsɔe ke mí, eye nàkpɔ nublanui na mí. Wòe nye mía Takpɔla, eyata kpe ɖe mía ŋu míatsi tre ɖe dzimaxɔsetɔwo ŋu.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Míaƒe Aƒetɔ, mègana míaƒe dziwo natra ɖa le Wò mɔfiafia vɔ megbe o. Na Wò nublanuikpɔkpɔ mí: Wòe nye Nunala Mavɔ.';
+
+  @override
+  String get duaMeaning4 =>
+      'Aƒetɔ, na nye kple nye dzidzimeviwo míayi gbedodoɖa dzi. Mía Aƒetɔ, xɔ nye biabia la.';
+
+  @override
+  String get duaMeaning5 =>
+      'eye nàɖiɖi wò aʋala ɖe anyi le ɖokuibɔbɔ me ɖe wo ŋu le dɔmenyonyo me eye nàgblɔ be, ‘Aƒetɔ, kpɔ nublanui na wo, abe alesi wolé be nam esime menɔ sue ene.’';
+
+  @override
+  String get duaMeaning6 =>
+      'woado Mawu, amesi le ŋusẽ kpɔm ɖe dzi vavã. [Nyagblɔɖila], mègaƒu du axlẽe hafi ɖeɖefiaa nawu enu bliboe o ke boŋ gblɔ be, ‘Aƒetɔ, dzim ɖe edzi le sidzedze me!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Gblɔ [Nyagblɔɖila] be, ‘Aƒetɔ, tsɔe ke eye nàkpɔ nublanui: Wòe nye nublanuikpɔla wu wo katã.’';
+
+  @override
+  String get duaMeaning8 =>
+      'ame siwo doa gbe ɖa be, ‘Míaƒe Aƒetɔ, na dzidzɔ mí le mía srɔ̃wo kple míaƒe dzidzimeviwo me. Wɔ mí kpɔɖeŋu nyuiwo na amesiwo nya Wò’.';
+
+  @override
   String get morningZikr => 'Ŋdi Zikr';
 
   @override

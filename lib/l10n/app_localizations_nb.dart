@@ -210,6 +210,38 @@ class AppLocalizationsNb extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'andre ber: \'Vår Herre, gi oss det gode i denne verden og i det hinsidige, og beskytt oss mot Ildens pine.\'';
+
+  @override
+  String get duaMeaning2 =>
+      'Gud belaster ikke noen sjel med mer enn den kan tåle: hver og en får det gode den har gjort, og lider av dets onde- \'Herre, ikke ta oss til oppgaven hvis vi glemmer eller gjør feil. Herre, legg ikke byrder på oss slik du har belastet dem før oss. Herre, belastning oss ikke med mer enn vi har styrke til å bære. Tilgi oss, tilgi oss og forbarm deg over oss. Du er vår beskytter, så hjelp oss mot de vantro.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '\'Vår Herre, la ikke våre hjerter avvike etter at Du har ledet oss. Gi oss din nåde: Du er den som alltid gir.';
+
+  @override
+  String get duaMeaning4 =>
+      'Herre, gi at jeg og mitt avkom kan fortsette å be. Vår Herre, godta min forespørsel.';
+
+  @override
+  String get duaMeaning5 =>
+      'og senk din vinge i ydmykhet mot dem i vennlighet og si: \'Herre, forbarm deg over dem, akkurat som de brydde seg om meg da jeg var liten.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'Opphøyet være Gud, den som virkelig har kontroll. [Profet], ikke skynd deg å resitere før åpenbaringen er fullstendig fullstendig, men si: \'Herre, øk meg i kunnskap!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Si [profet], \'Herre, tilgi og ha barmhjertighet: Du er den mest barmhjertige av alle.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'de som ber: \'Vår Herre, gi oss glede i våre ektefeller og avkom. Gjør oss til gode eksempler for de som er klar over deg.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override
@@ -1189,7 +1221,8 @@ class AppLocalizationsNb extends AppLocalizations {
   String get islamicPlaceFallback => 'Islamsk sted';
 
   @override
-  String get asmaMeaning1 => 'The Beneficent';
+  String get asmaMeaning1 =>
+      'Den som har barmhjertighet, medlidenhet og barmhjertighet med alle skapninger i verden.';
 
   @override
   String get asmaMeaning2 => 'Den barmhjertige';
@@ -1207,7 +1240,8 @@ class AppLocalizationsNb extends AppLocalizations {
   String get asmaMeaning6 => 'Sikkerhetsgiveren';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'Dommeren og herskeren over universet som ser og våker over alt.';
 
   @override
   String get asmaMeaning8 => 'Den dyrebare / den mektigste';
@@ -1222,22 +1256,25 @@ class AppLocalizationsNb extends AppLocalizations {
   String get asmaMeaning11 => 'Skaperen';
 
   @override
-  String get asmaMeaning12 => 'The Maker of Order';
+  String get asmaMeaning12 => 'Den som skaper alt perfekt og harmonisk.';
 
   @override
-  String get asmaMeaning13 => 'The Shaper of Beauty';
+  String get asmaMeaning13 =>
+      'Som gir form til vesener og gjør dem forskjellige fra hverandre.';
 
   @override
   String get asmaMeaning14 => 'De tilgivende';
 
   @override
-  String get asmaMeaning15 => 'The Subduer';
+  String get asmaMeaning15 =>
+      'Den som dominerer alt og vinner, den ubeseirede absolutte seierherren.';
 
   @override
   String get asmaMeaning16 => 'Alles giver';
 
   @override
-  String get asmaMeaning17 => 'The Sustainer';
+  String get asmaMeaning17 =>
+      'Den som skaper og gir mat til kropper og sjeler.';
 
   @override
   String get asmaMeaning18 => 'Åpneren';
@@ -1246,7 +1283,8 @@ class AppLocalizationsNb extends AppLocalizations {
   String get asmaMeaning19 => 'Den som kjenner alle';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'Den som begrenser, klemmer, begrenser hvem han vil.';
 
   @override
   String get asmaMeaning21 => 'Relieveren';
@@ -1255,7 +1293,8 @@ class AppLocalizationsNb extends AppLocalizations {
   String get asmaMeaning22 => 'Abaseren';
 
   @override
-  String get asmaMeaning23 => 'The Exalter';
+  String get asmaMeaning23 =>
+      'Den som ærer og opphøyer, opphøyer hvem Han vil.';
 
   @override
   String get asmaMeaning24 => 'Æresoverdeleren';
@@ -1279,13 +1318,15 @@ class AppLocalizationsNb extends AppLocalizations {
   String get asmaMeaning30 => 'Den subtile';
 
   @override
-  String get asmaMeaning31 => 'The All Aware';
+  String get asmaMeaning31 =>
+      'Den som er klar over innsiden av alt som vil skje.';
 
   @override
   String get asmaMeaning32 => 'Forutsetningen';
 
   @override
-  String get asmaMeaning33 => 'The Magnificent';
+  String get asmaMeaning33 =>
+      'Han er så sublim, så opphøyd at naturen til hans person og egenskaper ikke kan forstås.';
 
   @override
   String get asmaMeaning34 => 'Den store tilgiveren';
@@ -1321,7 +1362,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get asmaMeaning44 => 'Reageren på bønn';
 
   @override
-  String get asmaMeaning45 => 'The All Comprehending';
+  String get asmaMeaning45 => 'Hans kunnskap og barmhjertighet omfatter alt.';
 
   @override
   String get asmaMeaning46 => 'De perfekt kloke';
@@ -1342,19 +1383,20 @@ class AppLocalizationsNb extends AppLocalizations {
   String get asmaMeaning51 => 'Sannheten';
 
   @override
-  String get asmaMeaning52 => 'The All-Sufficient Trustee';
+  String get asmaMeaning52 =>
+      'Den som bringer arbeidet til de som stoler på ham til utførelse.';
 
   @override
   String get asmaMeaning53 => 'Besitteren av all styrke';
 
   @override
-  String get asmaMeaning54 => 'The Forceful';
+  String get asmaMeaning54 => 'Kilde til styrke og kraft, veldig kraftig.';
 
   @override
   String get asmaMeaning55 => 'Beskytteren';
 
   @override
-  String get asmaMeaning56 => 'The Praised';
+  String get asmaMeaning56 => 'Den som er verdig all ros, ros og ros.';
 
   @override
   String get asmaMeaning57 => 'Takstmannen';
@@ -1372,7 +1414,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get asmaMeaning61 => 'Takeren av livet';
 
   @override
-  String get asmaMeaning62 => 'The Ever Living';
+  String get asmaMeaning62 => 'Den som har evig liv og alltid er i live.';
 
   @override
   String get asmaMeaning63 => 'Den selvbærende opprettholderen';
@@ -1381,7 +1423,8 @@ class AppLocalizationsNb extends AppLocalizations {
   String get asmaMeaning64 => 'Finderen';
 
   @override
-  String get asmaMeaning65 => 'The Glorious';
+  String get asmaMeaning65 =>
+      'Den med stor verdighet og ære, rikelig raushet og velvilje.';
 
   @override
   String get asmaMeaning66 => 'Den eneste ene';
@@ -1447,19 +1490,20 @@ class AppLocalizationsNb extends AppLocalizations {
   String get asmaMeaning86 => 'Den rettferdige';
 
   @override
-  String get asmaMeaning87 => 'The Gatherer';
+  String get asmaMeaning87 => 'Den som samler skapningene på dommedagen.';
 
   @override
   String get asmaMeaning88 => 'Den rike';
 
   @override
-  String get asmaMeaning89 => 'The Enricher';
+  String get asmaMeaning89 => 'Den som tilfredsstiller behov og gjør en rik.';
 
   @override
   String get asmaMeaning90 => 'Forhindren av skade';
 
   @override
-  String get asmaMeaning91 => 'The Bringer of Harm';
+  String get asmaMeaning91 =>
+      'Den som skaper smerte og skade og skader hvem han måtte ønske.';
 
   @override
   String get asmaMeaning92 => 'Fordeleren av fordeler';

@@ -210,6 +210,38 @@ class AppLocalizationsVi extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'những người khác cầu nguyện: ‘Lạy Chúa, xin ban cho chúng con những điều tốt lành ở đời này và Đời sau, và bảo vệ chúng con khỏi sự hành hạ của Lửa.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Thiên Chúa không tạo gánh nặng cho bất kỳ linh hồn nào nhiều hơn mức nó có thể chịu đựng: mỗi người đạt được bất cứ điều tốt nào họ đã làm và chịu đựng những điều tồi tệ của mình- ‘Lạy Chúa, đừng bắt chúng con phải làm việc nếu chúng con quên hoặc phạm sai lầm. Lạy Chúa, xin đừng tạo gánh nặng cho chúng con như Ngài đã gánh nặng cho những người đi trước chúng con. Lạy Chúa, xin đừng tạo gánh nặng cho chúng con nhiều hơn sức chúng con có thể chịu đựng được. Xin tha thứ cho chúng tôi, tha thứ cho chúng tôi và thương xót chúng tôi. Bạn là Người bảo vệ của chúng tôi, vì vậy hãy giúp chúng tôi chống lại những kẻ không tin tưởng.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Lạy Chúa, xin đừng để lòng chúng con chệch hướng sau khi Chúa hướng dẫn chúng con. Xin ban cho chúng con lòng thương xót của Chúa: Chúa là Đấng Hằng Cho.';
+
+  @override
+  String get duaMeaning4 =>
+      'Lạy Chúa, xin cho con và con cháu con có thể tiếp tục cầu nguyện. Lạy Chúa, xin chấp nhận lời cầu xin của con.';
+
+  @override
+  String get duaMeaning5 =>
+      'và khiêm nhường hạ cánh xuống họ với lòng nhân từ và nói: ‘Lạy Chúa, xin thương xót họ, như họ đã chăm sóc con khi con còn nhỏ.’';
+
+  @override
+  String get duaMeaning6 =>
+      'tôn cao thay Đức Chúa Trời, Đấng thực sự nắm quyền kiểm soát. [Tiên tri], đừng vội đọc thuộc lòng trước khi sự mặc khải hoàn toàn trọn vẹn mà hãy nói: ‘Lạy Chúa, xin gia tăng kiến ​​thức cho con!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Hãy nói [Tiên tri]: ‘Lạy Chúa, xin tha thứ và thương xót: Ngài là Đấng có lòng thương xót nhất.’';
+
+  @override
+  String get duaMeaning8 =>
+      'những người cầu nguyện: ‘Lạy Chúa, xin ban cho chúng con niềm vui nơi vợ chồng và con cái chúng con. Xin hãy làm cho chúng con trở thành những tấm gương tốt cho những ai biết đến Ngài’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override
@@ -1434,7 +1466,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get asmaMeaning82 => 'Người tha thứ';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 => 'Rất từ ​​bi, rất từ ​​bi.';
 
   @override
   String get asmaMeaning84 => 'Chủ sở hữu / Chủ quyền của tất cả';

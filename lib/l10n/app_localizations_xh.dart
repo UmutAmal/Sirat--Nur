@@ -210,6 +210,38 @@ class AppLocalizationsXh extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'abanye bayathandaza bathi, ‘Nkosi yethu, Siphe okulungileyo emhlabeni nakwelizayo, Usikhusele kwisohlwayo soMlilo.';
+
+  @override
+  String get duaMeaning2 =>
+      'UThixo akawuthwali mthwalo nawuphi na umphefumlo ngokungaphezu kwamandla awo: ngamnye uzuza nakuphi na okulungileyo okwenzileyo, aze abandezeleke ngenxa yobubi bawo— ‘Nkosi, musa ukusithwalisa ityala ukuba siyalibala okanye senza iimpazamo. Nkosi, musa ukusithwalisa ubunzima njengoko Wabathwalisa ubunzima abo bangaphambi kwethu. Nkosi, musa ukusithwalisa ubunzima obungaphezu kwamandla ethu. Sixolele, usixolele, ube nenceba kuthi. Wena unguMkhuseli wethu, ngoko ke sincede ngokuchasene nabangakholwayo.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Nkosi yethu, ungazivumeli iintliziyo zethu ziphambuke emva kokuba Usikhokele. Siphe inceba yaKho: UnguLowo uphayo.';
+
+  @override
+  String get duaMeaning4 =>
+      'Nkosi, ndiphe ukuba mna nenzala yam siwugcine umthandazo. Nkosi yethu, samkele isicelo sam.';
+
+  @override
+  String get duaMeaning5 =>
+      'uze uthobe iphiko lakho kubo ngobubele, uthi, ‘Nkosi, yiba nenceba kubo, njengoko babendinyamekele ndisemncinane.';
+
+  @override
+  String get duaMeaning6 =>
+      'Makabongwe uThixo, olawula ngenene. [Mprofeti], musa ukungxama ukucengceleza ngaphambi kokuba isityhilelo sizaliseke ngokupheleleyo kodwa yithi, ‘Nkosi, ndandise ngolwazi!';
+
+  @override
+  String get duaMeaning7 =>
+      'Yithi [uMprofeti], ‘Nkosi, xolela uze ube nenceba: Wena ungoyena unenceba kubo bonke.’';
+
+  @override
+  String get duaMeaning8 =>
+      'abo bathandazayo bathi, ‘Nkosi yethu, siphe uvuyo ngamaqabane ethu nenzala yethu. Senze imizekelo emihle kwabo bakuqondayo.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

@@ -210,6 +210,38 @@ class AppLocalizationsSm extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'o isi e tatalo, ‘Lo matou Alii e, ia e foa’i mai ia i matou le lelei i lenei lalolagi ma le olaga a sau, ma ia e puipuia i matou mai le puapuaga o le afi.';
+
+  @override
+  String get duaMeaning2 =>
+      'E le mamafa e le Atua se agaga i se mea e sili atu nai lo le mea e mafai ona ia gafatia: e maua e le tagata lava ia so o se mea lelei na ia faia, ma e mafatia i ona leaga-‘Le Alii e, aua e te faatiga ia i matou pe a galo pe faia mea sese. Le Ali‘i e, ‘aua ‘e te fa‘atigāina i matou e pei ‘ona e fa‘atigāina i ē na muamua ‘iā te i matou. Le Ali‘i e, ‘aua ‘e te fa‘atigāina i matou i mea e sili atu nai lo o le malosi ‘ua matou amoina. Ia e faamagalo mai ia i matou, ia e faamagalo mai ia i matou, ma ia e alofa mai ia i matou. O oe o lo matou Puipui, o lea ia fesoasoani mai ia i matou e tetee atu i e le talitonu.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Lo matou Ali‘i e, ‘aua ne‘i fa‘ate‘a‘eseina o matou loto pe a uma ‘ona e ta‘ita‘iina i matou. Foai mai ia i matou lou alofa mutimutivale: O oe o le Foa’i Mai.';
+
+  @override
+  String get duaMeaning4 =>
+      'Le Alii e, ia e foaʻi mai ia te aʻu ma laʻu fanau ona tausia le tatalo. Le Alii e, talia mai la’u talosaga.';
+
+  @override
+  String get duaMeaning5 =>
+      'ma tuu ifo lou apaau i le lotomaualalo ia i latou i le agalelei ma faapea atu, ‘Le Alii e, ia e alofa mai ia te i latou, e pei ona latou tausia a’u a o ou itiiti.';
+
+  @override
+  String get duaMeaning6 =>
+      'ia faaeaina le Atua, o lē e pule moni lava. [Perofeta], aua e te faanatinati e tauloto a o lei atoatoa le faaaliga ae ia faapea atu, ‘Le Alii e, ia faateleina lo’u malamalama!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Fai atu ia [Perofeta], ‘Le Alii e, ia e faamagalo ma alofa mai: o oe lava e sili ona alofa mutimutivale i mea uma.’';
+
+  @override
+  String get duaMeaning8 =>
+      'o ē tatalo, ‘Lo matou Ali‘i e, ia e foa‘i mai le ‘oli‘oli i o matou taitoalua ma a matou fānau. Ia fai i matou ma fa\'aa\'oa\'oga lelei ia i latou o lo\'o iloa oe\'.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

@@ -212,6 +212,38 @@ class AppLocalizationsAy extends AppLocalizations {
   String get dailyZikr => 'Sapa uru Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'yaqhipanakax akham sasaw mayipxi: ‘Tatitu, akapachan ukhamarak qhipa urunakan askinak churapxita, ukat Nina t’aqhisiñat jark’aqapxita’ sasa.';
+
+  @override
+  String get duaMeaning2 =>
+      'Diosax janiw khiti almarus juk’amp q’ipt’kiti: sapa mayniw kuna askinaktï lurawayki uk jikxati, ukat jan walinakaparuw t’aqhisi- ‘ Tatitu, armasxañäni jan ukax pantjasiñäni ukhax jan juchar irpkistati. Tatitu, jan q\'ipipxamti, kunjamtï nayra jaqinakarux q\'ipt\'apkta ukhama. Tatay, jan ch\'amanïñasat sipansa juk\'amp q\'ipt\'apxistati. Perdonapxita, pampachapxita, khuyapt\'ayapxita. Jumaw jiwasan Arxatirisätaxa, ukhamax jan iyawsirinakar saykatañ yanaptʼapxita’ sasa.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Tatitusa, jan chuymanakajajj mayjtʼaypanti, Jumajj irpapkista uka qhepatjja. Khuyapayasiñam churapxita: Jumaw Sapa kuti churirïtaxa.';
+
+  @override
+  String get duaMeaning4 =>
+      'Tatay, nayampi wawanakajampix mayiskakipxañajataki —sasa. Tatitusa, mayitax katuqapxam.';
+
+  @override
+  String get duaMeaning5 =>
+      'ukatsti altʼat chuymampiw chʼiwipar jiskʼachañama, ukat akham sañamawa: ‘Tatay, jupanakat khuyaptʼayasim, kunjamtï jiskʼäkayäta ukhajj nayar uñjapkitäna ukhama’ sasa.';
+
+  @override
+  String get duaMeaning6 =>
+      'Diosax jach\'añchatäpan, khititix chiqpachapuni apnaqki uka. [Profeta], janïr qhanañchäwix taqpach tukuykipanx janiw jank’ak arsuñamäkiti jan ukasti akham sañamawa: ‘¡Tata, yatiñan jilxattayata!’ sasa.';
+
+  @override
+  String get duaMeaning7 =>
+      '[Profeta] sañamawa: ‘Tata, pampacham ukat khuyapt’ayasim: Jumaw taqit sipansa juk’amp khuyapt’ayasiri’.';
+
+  @override
+  String get duaMeaning8 =>
+      '‘Tatitu, chachasa jan ukajj warmisampi, wawanakasampi kusisiyapjjeta’ sasin mayipki ukanaka. Khitinakatix Jumar uñt’apki ukanakatakix suma uñacht’äwinak lurapxita’.';
+
+  @override
   String get morningZikr => 'Alwajj Zikr satänwa';
 
   @override

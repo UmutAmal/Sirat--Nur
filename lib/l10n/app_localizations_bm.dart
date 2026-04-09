@@ -210,6 +210,38 @@ class AppLocalizationsBm extends AppLocalizations {
   String get dailyZikr => 'Don o don Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'dɔw fana bɛ delili kɛ ko ‘An Matigi, ɲumanya di an ma diɲɛ kɔnɔ ani sini na, k’an tanga Tasuma tɔɔrɔ ma.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Ala tɛ doni da ni si kan ka tɛmɛ a seko kan: u kelen-kelen bɛɛ bɛ ɲumanya fɛn o fɛn kɛ, a bɛ o sɔrɔ, ka a ka juguya tɔɔrɔ- ‘ Matigi, kana an ta baara la n’an ɲinɛna walima n’an ye filiw kɛ. Matigi, i kana doni da an kan i ko i ye doni da an ɲɛfɛ mɔgɔw kan cogo min na. Matigi, i kana doni da an kan ka tɛmɛ fanga kan ka tɛmɛ an kan. Yafa an ma, ka yafa an ma, ka makari an na. I ye an Lakanabaga ye, o la, an dɛmɛ kafiriw ma.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘An Matigi, i kana a to an dusukunw ka bɔ i la i kɛlen kɔ ka an bilasira. I ka makari di an ma: I ye Nilikɛla ye tuma bɛɛ.';
+
+  @override
+  String get duaMeaning4 =>
+      'Matigi, a to ne ni ne denw ka to ka delili kɛ. An Matigi, sɔn ne ka delili ma.';
+
+  @override
+  String get duaMeaning5 =>
+      'i ka i kaman jigin ni majigilenya ye u ɲɛ na ni ɲumanya ye k’a fɔ ko: ‘Matigi, makari u la, i n’a fɔ u tun b’u janto ne la cogo min na ne denmisɛnman.’';
+
+  @override
+  String get duaMeaning6 =>
+      'Ala ka kɔrɔta, min bɛ kuntigiya kɛ tiɲɛ na. [Kira], kana kɔrɔtɔ ka kalan kɛ sani jirali ka dafa nka a fɔ ko: ‘Matigi, dɔ fara ne kan dɔnniya la!’';
+
+  @override
+  String get duaMeaning7 =>
+      'A fɔ [kira] ko: ‘Matigi, i ka yafa ani ka makari i la: I ye hinɛbaga ye ka tɛmɛ bɛɛ kan.’';
+
+  @override
+  String get duaMeaning8 =>
+      'minnu bɛ delili kɛ ko ‘An Matigi, i ka nisɔndiya di an furuɲɔgɔnw ni an denw ma. I ka misali ɲumanw kɛ an ye mɔgɔ minnu bɛ I dɔn’.';
+
+  @override
   String get morningZikr => 'Sɔgɔmada Zikr';
 
   @override

@@ -210,6 +210,38 @@ class AppLocalizationsSn extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'vamwe vanonamata vachiti, ‘Ishe wedu, tipei zvakanaka munyika ino uye muHera, uye tidzivirirei kubva kumarwadzo emoto.';
+
+  @override
+  String get duaMeaning2 =>
+      'Allah haaremedzi chero mweya upi zvawo nezvaunokwanisa kutakura: mumwe nemumwe anowana chero chakanaka chaakaita, uye anotambura nekuipa kwawo- ‘Ishe, musatitorera mhosva kana tikakanganwa kana kukanganisa. Ishe musatiremedza sezvamakaremedza avo vaiva pamberi pedu. Ishe musatiremedza nesimba rinopfuura ratiinaro. Tiregererei, tiregererei, mutinzwirewo tsitsi. Ndimi Mudziviriri wedu, saka tibatsirei pane avo vasingatendi.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Tenzi vedu, musarega mwoyo yedu ichitsauka mushure mekunge matitungamirira. Tipeiwo ngoni dzenyu: Ndimi Munogara Achipa.';
+
+  @override
+  String get duaMeaning4 =>
+      'Ishe itai kuti ini nevana vangu tichengete munyengetero. Ishe wedu, gamuchirai chikumbiro changu.';
+
+  @override
+  String get duaMeaning5 =>
+      'uye udzikise bapiro rako mukuzvininipisa kwavari netsitsi uye uti, ‘Ishe, vanzwirei ngoni, sokundichengeta kwavakaita ndichiri muduku.';
+
+  @override
+  String get duaMeaning6 =>
+      'ngaakudzwe Mwari, iye anotonga zvirokwazvo. [Muporofita], usamhanyire kutaura zvakazarurwa zvisati zvakwana asi iti, ‘Ishe, ndiwedzerei muzivo!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Iti [Muporofita], ‘Ishe, kanganwirai uye muve netsitsi: Imi ndimi mune tsitsi huru kupfuura vose.';
+
+  @override
+  String get duaMeaning8 =>
+      'avo vanonamata vachiti, ‘Ishe wedu, tipei mufaro muwanano yedu uye muvana vedu. Tiitirei mienzaniso yakanaka kune avo vanokuzivai\'.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

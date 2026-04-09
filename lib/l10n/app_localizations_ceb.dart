@@ -210,6 +210,38 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get dailyZikr => 'Adlaw-adlaw nga Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'ang uban nag-ampo, ‘Among Ginoo, hatagi kami ug kaayohan dinhi sa kalibotan ug sa Kataposan, ug panalipdi kami gikan sa silot sa Kalayo.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Ang Dios wala magpabug-at sa bisan kinsa nga kalag sa labaw pa sa iyang maagwanta: ang matag usa makaangkon sa bisan unsa nga maayo nga iyang nahimo, ug mag-antus sa iyang pagkadautan- ‘Ginoo, ayaw kami paantusa kung kami makalimot o masayop. Ginoo, ayaw kami pabug-aa sama sa imong pagpas-an sa mga nauna kanamo. Ginoo, ayaw kami pabug-aa ug labaw pa sa among kusog sa pagpas-an. Pasayloa kami, pasayloa kami, ug kaloy-i kami. Ikaw ang among Tigpanalipod, busa tabangi kami batok sa mga dili magtutuo.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Among Ginoo, ayaw itugot nga ang among mga kasingkasing motipas human Mo kami giyahan. Ihatag kanamo ang Imong kaluoy: Ikaw ang Kanunayng Hatagan.';
+
+  @override
+  String get duaMeaning4 =>
+      'Ginoo, itugot nga ako ug ang akong kaliwat magpadayon sa pag-ampo. Ginoo namo, dawata ang akong hangyo.';
+
+  @override
+  String get duaMeaning5 =>
+      'ug ipaubos ang imong pako sa pagpaubos ngadto kanila sa pagkamabination ug pag-ingon, \'Ginoo, kaloy-i sila, ingon nga sila nag-atiman kanako sa gamay pa ako.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'bayawon ang Dios, ang usa nga tinuod nga nagmando. [Propeta], ayaw pagdalidali sa pag-recite sa dili pa makompleto ang pagpadayag apan ingna, ‘Ginoo, dugangi ako sa kahibalo!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Ingna [Propeta], ‘Ginoo, pasayloa ug kaloy-i: Ikaw ang labing maloloy-on sa tanan.’';
+
+  @override
+  String get duaMeaning8 =>
+      'kadtong nag-ampo, ‘Ginoo namo, hatagi kami ug kalipay sa among mga kapikas ug mga anak. Himoa kami nga maayong panig-ingnan sa mga nakaila Kanimo’.';
+
+  @override
   String get morningZikr => 'Buntag Zikr';
 
   @override

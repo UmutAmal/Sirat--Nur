@@ -8,6 +8,7 @@ import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
 import 'package:sirat_i_nur/features/library/hadith_collection_copy.dart';
+import 'package:sirat_i_nur/features/library/dua_meaning_localization.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 String buildLibraryErrorText(AppLocalizations l10n, Object error) {
@@ -64,9 +65,25 @@ String resolveDailyDuasLibrarySubtitle(
       : l10n.duaUnavailableTitle;
 }
 
-String resolveDuaMeaning(DuaData dua, Locale locale) {
-  if (locale.languageCode == 'tr' && dua.turkish.isNotEmpty) {
-    return dua.turkish;
+String resolveDuaMeaning(AppLocalizations l10n, DuaData dua, Locale locale) {
+  final translations = dua.resolvedTranslations;
+  final localeTag = locale.toLanguageTag();
+  final normalizedTag = localeTag.replaceAll('-', '_');
+
+  for (final candidate in {
+    localeTag,
+    normalizedTag,
+    locale.languageCode,
+  }) {
+    final value = translations[candidate];
+    if (value != null && value.trim().isNotEmpty) {
+      return value;
+    }
+  }
+
+  final bundledFallback = resolveBundledDuaMeaning(l10n, int.tryParse(dua.id));
+  if (bundledFallback.isNotEmpty) {
+    return bundledFallback;
   }
 
   if (dua.english.isNotEmpty) {
@@ -596,7 +613,7 @@ class _DuasView extends ConsumerWidget {
                         const SizedBox(height: 8),
                       ],
                       Text(
-                        resolveDuaMeaning(dua, locale),
+                        resolveDuaMeaning(l10n, dua, locale),
                         style: TextStyle(
                           fontSize: 13,
                           color: Theme.of(

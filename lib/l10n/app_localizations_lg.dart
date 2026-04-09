@@ -210,6 +210,38 @@ class AppLocalizationsLg extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'abalala basaba nti, ‘Mukama waffe, tuwe ebirungi mu nsi ne ku nkomerero, era otukuume okuva mu kubonyaabonyezebwa kw’omuliro.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Katonda tazitoowerera mwoyo gwonna okusinga bwe gusobola okugumira: buli omu afuna ekirungi kyonna ky’akoze, era n’abonyaabonyezebwa ebibi byakyo- ‘ Mukama, totutwala ku mulimu bwe twerabira oba nga tukola ensobi. Mukama, totuzitoowerera nga bwe wazitoowerera abo abatusooka. Mukama, totuzitoowerera nnyo okusinga bwe tulina amaanyi okwetikka. Tusonyiwe, tusonyiwe, era tusaasire. Ggwe Mukuumi waffe, kale tuyambe ku batakkiriza.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Mukama waffe, toleka mitima gyaffe kuva ku mulamwa ng’omaze okutulungamya. Tuwe okusaasira Kwo: Ggwe Agaba Bulijjo.';
+
+  @override
+  String get duaMeaning4 =>
+      'Mukama, mpa nze n’ezzadde lyange tugende mu maaso n’okusaba. Mukama waffe kkiriza okusaba kwange.';
+
+  @override
+  String get duaMeaning5 =>
+      'era wansi ekiwawaatiro kyo mu bwetoowaze gye bali mu kisa era ogambe nti, ‘Mukama waffe, basaasire, nga bwe banfaako nga nkyali muto.’';
+
+  @override
+  String get duaMeaning6 =>
+      'Katonda agulumizibwe, oyo afuga mu mazima. [Nnabbi], toyanguwa kusoma ng’okubikkulirwa tekunnaggwa mu bujjuvu wabula gamba nti, ‘Mukama, nnyongera okumanya!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Gamba [Nabbi] nti, ‘Mukama, sonyiwa era osaasire: Ggwe asinga bonna.’';
+
+  @override
+  String get duaMeaning8 =>
+      'abo abasaba nti, ‘Mukama waffe, tuwe essanyu mu bafumbo n’ezzadde lyaffe. Tufuule ebyokulabirako ebirungi eri abo abakumanyi’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

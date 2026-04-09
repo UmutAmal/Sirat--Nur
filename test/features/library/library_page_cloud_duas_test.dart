@@ -29,6 +29,7 @@ Future<void> pumpLibraryPage(
   required List<DuaData> duas,
   AudioSovereigntyService? audioService,
   Map<String, String>? cloudSources,
+  Locale locale = const Locale('en'),
 }) async {
   await tester.pumpWidget(
     ProviderScope(
@@ -44,11 +45,11 @@ Future<void> pumpLibraryPage(
           (ref) async => cloudSources ?? const {},
         ),
       ],
-      child: const MaterialApp(
-        locale: Locale('en'),
+      child: MaterialApp(
+        locale: locale,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        home: LibraryPage(),
+        home: const LibraryPage(),
       ),
     ),
   );
@@ -133,6 +134,33 @@ void main() {
       expect(find.text(en.duaCategoryQuranic), findsWidgets);
       expect(find.text('${en.quran} 2:201'), findsOneWidget);
       expect(find.text(en.duaUnavailableBody), findsNothing);
+    } finally {
+      await disposeLibraryPage(tester);
+    }
+  });
+
+  testWidgets('LibraryPage localizes bundled dua meanings for supported locales', (
+    tester,
+  ) async {
+    final de = lookupAppLocalizations(const Locale('de'));
+
+    try {
+      await pumpLibraryPage(
+        tester,
+        duas: resolveCloudDuas(const []),
+        locale: const Locale('de'),
+      );
+
+      await tester.tap(find.text(de.dailyDuas).first);
+      await tester.pumpAndSettle();
+
+      expect(find.text(de.duaMeaning1), findsOneWidget);
+      expect(
+        find.text(
+          'others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’',
+        ),
+        findsNothing,
+      );
     } finally {
       await disposeLibraryPage(tester);
     }

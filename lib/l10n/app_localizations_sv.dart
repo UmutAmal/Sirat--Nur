@@ -210,6 +210,38 @@ class AppLocalizationsSv extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'andra ber: \'Vår Herre, ge oss gott i denna värld och i Livet Efter detta, och skydda oss från Eldens plåga.\'';
+
+  @override
+  String get duaMeaning2 =>
+      'Gud belastar inte någon själ med mer än den kan bära: var och en vinner det goda den har gjort, och lider av sitt onda- ‘Herre, ta oss inte i uppgift om vi glömmer eller gör misstag. Herre, belasta oss inte som Du belastade dem före oss. Herre, belasta oss inte med mer än vi har kraft att bära. Förlåt oss, förlåt oss och förbarma dig över oss. Du är vår beskyddare, så hjälp oss mot de icke troende.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '\'Vår Herre, låt inte våra hjärtan avvika efter att Du har väglett oss. Ge oss din nåd: Du är den ständigt givande.';
+
+  @override
+  String get duaMeaning4 =>
+      'Herre, ge att jag och min avkomma får fortsätta bönen. Vår Herre, acceptera min begäran.';
+
+  @override
+  String get duaMeaning5 =>
+      'och sänk din ving i ödmjukhet mot dem i vänlighet och säg: \'Herre, förbarma dig över dem, precis som de brydde sig om mig när jag var liten.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'Upphöjd vare Gud, den som verkligen har kontroll. [Profet], skynda dig inte att recitera innan uppenbarelsen är helt fullständig utan säg: \'Herre, öka mig i kunskap!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Säg [profet], \'Herre, förlåt och förbarma dig: Du är den mest barmhärtige av alla.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'de som ber: \'Vår Herre, ge oss glädje i våra makar och avkommor. Gör oss till goda exempel för dem som är medvetna om dig.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

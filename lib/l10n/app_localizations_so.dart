@@ -210,6 +210,38 @@ class AppLocalizationsSo extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'Qaar kale waxay ku baryaayaan ‘Eebbow na sii wanaag adduun iyo aakhiraba, naga ilaali cadaabka naarta.';
+
+  @override
+  String get duaMeaning2 =>
+      'Eebbana kuma cusleeyo nafta wax ka badan oo ay qaadi karto: mid kastaa wuxuu kasbaday wixii wanaag ahaa ee uu falay, xumaantiisana wuu ku dhacaa- ‘Rabbiyow ha na qaban haddaynu hilmaanno ama aynu khaladno. Rabbiyow, ha nagu cuslayn sidii aad kuwii naga horreeyey noogu cuslaysay. Rabbiyow, ha nagu culaysin wax ka badan inta aan haysanno itaal aan ku qaadno. Na cafi, na cafi, oo noo naxariiso. adigaa gargaarahannaga ah ee naga gargaar gaalada.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Eebbow yuusan quluubtayada ka leexan markaad na hanuunisay ka dib. Na sii naxariistaada adaa wax bixiya.';
+
+  @override
+  String get duaMeaning4 =>
+      'Rabbiyow, ina siin aniga iyo farcankayga aan tukanno salaadda. Rabbiyow, baryadayda aqbal.';
+
+  @override
+  String get duaMeaning5 =>
+      'oo hoos u deji baalkaaga adigoo u khushuucsan xaggooda si naxariis leh, oo waxaad ku tidhaahdaa, Rabbiyow u naxariiso siday ii danayn jireen markaan yaraa.';
+
+  @override
+  String get duaMeaning6 =>
+      'Eebaa nasahane ee ah kan wax maamula. [Nabiyow], ha ku degdegin inaad wax akhrido ka hor intuusan waxyigu dhammayn ee waxaad dhahdaa, ‘Rabbiyow ii kordhi cilmiga!';
+
+  @override
+  String get duaMeaning7 =>
+      'Waxaad dhahdaa [Nabiga], ‘Eebow dambi dhaaf oo u naxariiso, adaa naxariis badane.';
+
+  @override
+  String get duaMeaning8 =>
+      'Kuwa tukanaya, ‘Eebbow, na sii farxadda xaasaskeenna iyo carruurteenna. Nooga yeel tusaale wanaagsan kuwa ku baraarugsan’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

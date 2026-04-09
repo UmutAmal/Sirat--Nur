@@ -210,6 +210,38 @@ class AppLocalizationsNy extends AppLocalizations {
   String get dailyZikr => 'Zikr tsiku lililonse';
 
   @override
+  String get duaMeaning1 =>
+      'ena amapemphera kuti: ‘Mbuye wathu, tipatseni zabwino padziko lapansi ndi tsiku lomaliza, ndipo titetezeni ku chilango cha moto.';
+
+  @override
+  String get duaMeaning2 =>
+      'Mulungu sausenzetsa mzimu uliwonse Kuposa umene ungapirire. Aliyense amapeza zabwino zimene wachita, ndipo amakumana ndi zoipa zake, “Ambuye, musatipondereze tikaiwala kapena kulakwa. Ambuye, Musatisenze mtolo monga mudawalemetsa omwe adalipo patsogolo pathu. Ambuye, musatisenzetse ife ndi mphamvu zoposa zimene tili nazo. Tikhululukireni, tikhululukireni, ndipo tichitireni chifundo. Inu ndinu Mtetezi wathu, choncho tithandizeni kwa osakhulupirira.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Mbuye wathu, musalole kuti mitima yathu Ipotoke pambuyo potitsogolera. Tipatseni chifundo Chanu: Inu ndinu Wopereka nthawi zonse.';
+
+  @override
+  String get duaMeaning4 =>
+      'Ambuye ndipatseni ine ndi ana anga kuti tisunge mapemphero. Ambuye wathu, landirani pempho langa.';
+
+  @override
+  String get duaMeaning5 =>
+      'ndipo tsitsani mapiko anu modzichepetsa kwa iwo mwachifundo ndi kunena, ‘Ambuye, achitireni chifundo monga momwe anandisamalira ine pamene ndinali wamng’ono.';
+
+  @override
+  String get duaMeaning6 =>
+      'watukuka Mulungu Yemwe ali wolamuliradi. [Mneneri], musamafulumire kunena chivumbulutso chisanakwaniritsidwe koma nenani, Ambuye, ndiwonjezereni kudziwa!';
+
+  @override
+  String get duaMeaning7 =>
+      'Nena [Mneneri]: “Ambuye, khululukani ndipo chitirani chifundo;';
+
+  @override
+  String get duaMeaning8 =>
+      'amene amapemphera kuti: ‘Mbuye wathu, tisangalatseni mwa akazi athu ndi ana athu. Tipangeni ife zitsanzo zabwino kwa iwo amene akukudziwani Inu”.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

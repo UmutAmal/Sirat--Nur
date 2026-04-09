@@ -211,6 +211,38 @@ class AppLocalizationsTs extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'van’wana va khongela va ku, ‘Hosi ya hina, hi nyike leswinene emisaveni leyi ni le ku nga heriki, u hi sirhelela eka ku xanisiwa ka Ndzilo.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Xikwembu a xi tiki moya-xiviri wihi na wihi hi swo tlula leswi wu nga swi tiyiselaka: un’wana ni un’wana u vuyeriwa hi leswinene leswi wu swi endleke, naswona u xaniseka hi vubihi bya wona- ‘ Hosi, u nga hi teki entirhweni loko hi rivala kumbe hi endla swihoxo. Hosi, u nga hi tiki hi ndzhwalo tani hi leswi u nga tikisela lava nga emahlweni ka hina. Hosi, u nga hi tiki hi ndzhwalo ku tlula leswi hi nga na matimba yo rhwala. Hi rivalele, hi rivalele, u hi twela vusiwana. U Musirheleri wa hina, kutani hi pfune ku lwisana ni lava nga pfumeriki.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Hosi ya hina, u nga pfumeleli timbilu ta hina ti hambuka endzhaku ka loko U hi kongomise. Hi nyike tintswalo ta Wena: Hi wena Munyiki wa Nkarhi hinkwawo.';
+
+  @override
+  String get duaMeaning4 =>
+      'Hosi, ndzi pfumelele leswaku mina ni vana va mina hi hambeta hi khongela. Hosi ya hina, amukela xikombelo xa mina.';
+
+  @override
+  String get duaMeaning5 =>
+      'u ehlisa ripapa ra wena hi ku titsongahata eka vona hi musa u ku, ‘Hosi, va twele vusiwana, hilaha va ndzi khathalelaka hakona loko ndza ha ri ntsongo.’';
+
+  @override
+  String get duaMeaning6 =>
+      'a ku tlakusiwe Xikwembu, lexi lawulaka hakunene. [Muprofeta], u nga hatliseli ku hlaya nhlavutelo yi nga si hetiseka hi ku helela kambe u ku, ‘Hosi, ndzi engetele vutivi!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Vula [Muprofeta], ‘Hosi, rivalela u tlhela u twela vusiwana: U ni tintswalo ku tlula hinkwavo.’';
+
+  @override
+  String get duaMeaning8 =>
+      'lava khongelaka va ku, ‘Hosi ya hina, hi nyike ntsako eka vanghana va hina va vukati ni vana va hina. Hi endle swikombiso leswinene eka lava va Ku tivaka’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

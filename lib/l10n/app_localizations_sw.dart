@@ -210,6 +210,38 @@ class AppLocalizationsSw extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'wengine huomba, ‘Mola wetu, tupe mema duniani na Akhera, na utulinde na adhabu ya Moto.';
+
+  @override
+  String get duaMeaning2 =>
+      'Mwenyezi Mungu haikalifishi nafsi yoyote zaidi ya inavyoweza kustahimili, kila mmoja anapata wema wowote alioufanya, na anapata ubaya wake, ‘Mola Mlezi, usituchukulie tukisahau au kukosea. Ewe Mola, usitutwishe kama ulivyowatwika waliokuwa kabla yetu. Bwana, usitulemee zaidi ya uwezo wetu wa kustahimili. Utusamehe, utusamehe, na utuhurumie. Wewe ndiye Mlinzi wetu, basi tusaidie dhidi ya makafiri.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Mola wetu, usizipotoe nyoyo zetu baada ya wewe kutuongoza. Utupe rehema Yako: Wewe ndiwe Mtoaji daima.';
+
+  @override
+  String get duaMeaning4 =>
+      'Mola wangu nijaalie mimi na dhuria wangu tushike Sala. Mola wetu, ukubali ombi langu.';
+
+  @override
+  String get duaMeaning5 =>
+      'na uwainamishie bawa lako kwa unyenyekevu na useme, ‘Mola, warehemu, kama walivyonijali nilipokuwa mdogo.';
+
+  @override
+  String get duaMeaning6 =>
+      'atukuzwe Mungu, ambaye kweli anatawala. [Mtume], usikimbilie kusoma kabla wahyi haujakamilika, bali sema, ‘Mola wangu, niongezee elimu!';
+
+  @override
+  String get duaMeaning7 =>
+      'Sema [Mtume]: ‘Mola wangu, samehe na urehemu: Wewe ni mwingi wa kurehemu.';
+
+  @override
+  String get duaMeaning8 =>
+      'wanaoomba: Mola wetu Mlezi, tupe furaha katika wake zetu na watoto wetu. Tufanyie mifano mizuri kwa wale wanaokufahamu wewe’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

@@ -212,6 +212,38 @@ class AppLocalizationsRo extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'alții se roagă: „Doamne, dă-ne bine în lumea aceasta și în cea de Apoi și ferește-ne de chinul Focului”.';
+
+  @override
+  String get duaMeaning2 =>
+      'Dumnezeu nu împovărează niciun suflet cu mai mult decât poate suporta: fiecare câștigă orice bine a făcut și suferă răul ei... „Doamne, nu ne lua la sarcină dacă uităm sau greșim. Doamne, nu ne împovăra cum i-ai împovărat pe cei dinaintea noastră. Doamne, nu ne împovăra cu mai mult decât avem putere să suportăm. Iartă-ne, iartă-ne și ai milă de noi. Tu ești Protectorul nostru, așa că ajută-ne împotriva necredincioșilor.”';
+
+  @override
+  String get duaMeaning3 =>
+      '„Doamne, nu lăsa inimile noastre să se abate după ce Tu ne-ai călăuzit. Dăruiește-ne mila Ta: Tu ești Cel Dăruitor.';
+
+  @override
+  String get duaMeaning4 =>
+      'Doamne, dă-mi voie ca eu și urmașii mei să ținem rugăciunea. Domnul nostru, acceptă cererea mea.';
+
+  @override
+  String get duaMeaning5 =>
+      'și coboară-ți aripa cu smerenie față de ei cu bunătate și spune: „Doamne, miluiește-i, așa cum au avut grijă de mine când eram mic”.';
+
+  @override
+  String get duaMeaning6 =>
+      'înălțat să fie Dumnezeu, cel care este cu adevărat în control. [Profet], nu te grăbi să reciti înainte ca revelația să fie pe deplin completă, ci spune: „Doamne, mărește-mă în cunoștință!”';
+
+  @override
+  String get duaMeaning7 =>
+      'Spune [Profet]: „Doamne, iartă și ai milă: Tu ești cel mai milostiv dintre toți.”';
+
+  @override
+  String get duaMeaning8 =>
+      'cei care se roagă: „Doamne, dă-ne bucurie în soții și în urmașii noștri. Fă-ne exemple bune pentru cei care te cunosc”.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

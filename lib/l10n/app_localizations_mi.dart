@@ -211,6 +211,38 @@ class AppLocalizationsMi extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'ko etahi e inoi ana, ‘E to matou Ariki, homai he pai ki a matou i tenei ao, a muri ake nei, tiakina matou i te mamae o te ahi.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Eita te Atua e faateimaha i te hoê varua hau atu i ta ’na e nehenehe e amo: e noaa i te taata tataitahi te maitai ta ’na i rave, e te mauiui i to ’na ino- ‘E te Fatu, eiaha e faahapa ia matou mai te peu e e mo‘ehia matou e e hape. E te Ariki, kaua e whakataimahatia matou e koe, me tau i whakataimaha ai ki o ratou mua. E te Ariki, kaua e whakauaua mai ki a matou i nga mea e taea ana e matou. Murua matou, murua matou, tohungia matou. Ko koe to matou Tiaki, no reira awhinatia matou ki te whawhai ki te hunga whakaponokore.';
+
+  @override
+  String get duaMeaning3 =>
+      '\'E to matou Ariki, kei kotiti ke o matou ngakau i muri i tau arahi i a matou. Tukua mai ki a matou tou atawhai: Ko koe te Kaiwhiwhi.';
+
+  @override
+  String get duaMeaning4 =>
+      'E te Ariki, tukua matou ko aku uri kia mau tonu te inoi. E to matou Ariki, whakaae mai ki taku inoi.';
+
+  @override
+  String get duaMeaning5 =>
+      'a ka whakaiti i tou parirau i runga i te ngakau mahaki ki a ratou i runga i te atawhai, ka mea, ‘E te Ariki, kia aroha ki a ratou, me ratou i tiaki i ahau i toku tamarikitanga.';
+
+  @override
+  String get duaMeaning6 =>
+      'kia whakanuia te Atua, ko ia nei te tino tikanga. [Peropheta], eiaha e ru i te tai‘o hou te heheuraa e hope roa a parau ai, ‘E te Fatu, faarahi i to ’u ite!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Mea atu [te Peropheta], ‘E te Fatu, e faaore mai i te hara e e aroha mai: o oe tei hau atu i te aroha i te mau mea atoa.’';
+
+  @override
+  String get duaMeaning8 =>
+      'te hunga e inoi ana, ‘E to matou Ariki, homai ki a matou te hari i roto i o matou hoa wahine me o matou uri. Meinga matou hei tauira pai ki te hunga e mohio ana ki a Koe’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

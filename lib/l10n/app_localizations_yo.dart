@@ -210,6 +210,38 @@ class AppLocalizationsYo extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'awọn miiran n gbadura pe, ‘Oluwa wa, fun wa ni oore ni aye ati ni ọla, ki o si daabo bo wa lọwọ iya ina.';
+
+  @override
+  String get duaMeaning2 =>
+      'Ọlọ́run kìí fi ohun tí ó pọ̀ ju ohun tí ó lè rù lọ: ọ̀kọ̀ọ̀kan ń jèrè ohun rere tí ó ṣe, ó sì ń jìyà búburú rẹ̀- ‘Olúwa, má ṣe mú wa lọ́wọ́ sí iṣẹ́ tí a bá gbàgbé tàbí àṣìṣe. Oluwa, mase di eru wa bi O ti di eru awon ti o wa niwaju wa. Oluwa, maṣe di ẹrù wa lara ju ti a ni agbara lati ru. Dariji wa, dariji wa, ki o si ṣãnu fun wa. Iwọ ni Oludaabobo wa, nitori naa ran wa lọwọ lori awọn alaigbagbọ.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Oluwa wa, ma je ki okan wa ya leyin ti O ti se amona wa. Fun wa l‘anu Re: Iwo l‘O nfun wa titi.';
+
+  @override
+  String get duaMeaning4 =>
+      'Oluwa, je ki emi ati awon omo mi le ma tesiwaju ninu adura naa. Oluwa wa, gba ebe mi.';
+
+  @override
+  String get duaMeaning5 =>
+      'kí o sì sọ ìyẹ́ apá rẹ rẹlẹ̀ ní ìrẹ̀lẹ̀ sí wọn ní inú rere, kí o sì wí pé, ‘Olúwa, ṣàánú wọn, gẹ́gẹ́ bí wọ́n ti ṣe ìtọ́jú mi nígbà tí mo wà ní kékeré.';
+
+  @override
+  String get duaMeaning6 =>
+      'gbega ni fun Ọlọhun, ẹni ti o ni iṣakoso nitootọ. [Anabi], maṣe yara lati ka ki iṣipaya naa to pe ni kikun ṣugbọn sọ pe, ‘Oluwa, fun mi ni imọ siwaju sii!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Sọ [Annabi] pe, ‘Oluwa, dariji ki o si ṣãnu: Iwọ ni alaanu ju gbogbo lọ.';
+
+  @override
+  String get duaMeaning8 =>
+      'àwọn tí ń gbàdúrà pé, ‘Olúwa wa, fún wa ní ayọ̀ nínú àwọn aya àti àwọn ọmọ wa. Ṣe apẹẹrẹ rere fun awọn ti o mọ Ọ’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

@@ -210,6 +210,38 @@ class AppLocalizationsAz extends AppLocalizations {
   String get dailyZikr => 'Gündəlik Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'Digərləri isə: “Ey Rəbbimiz, bizə dünyada da, axirətdə də yaxşılıq ver və bizi Cəhənnəm əzabından qoru!” deyə dua edirlər.';
+
+  @override
+  String get duaMeaning2 =>
+      'Allah heç bir kəsə gücündən artıq yük yükləməz: Hər kəs etdiyi yaxşılıqdan savayı qazanar, pisliyi isə ona çatar – “Pərvərdigara, unutsaq və ya xəta etsək, bizi cəzalandırma. Ya Rəbb, bizdən əvvəlkilərə yüklədiyin kimi, bizi də yükləmə! Ya Rəbb, bizə dözə biləcəyimizdən artıq yük yükləmə. Bizi bağışla, bizi bağışla və bizə rəhm et. Sən bizim himayəmizsən, kafirlərə qarşı bizə kömək et!”';
+
+  @override
+  String get duaMeaning3 =>
+      '“Ey Rəbbimiz, bizi doğru yola yönəltdikdən sonra qəlblərimizi azdırma. Bizə mərhəmətini nəsib et!';
+
+  @override
+  String get duaMeaning4 =>
+      'Ya Rəbb, mənə və nəslimə namaz qılmağı nəsib et. Ey Rəbbimiz, duamı qəbul et.';
+
+  @override
+  String get duaMeaning5 =>
+      'Onlara mehribanlıqla təvazökarlıqla qanadını aşağı sal və de: “Pərvərdigara!';
+
+  @override
+  String get duaMeaning6 =>
+      'Həqiqətən hakim olan Allah ucadır. [Peyğəmbər], vəhy tamam olmamışdan əvvəl oxumağa tələsmə və de: “Pərvərdigara, mənim elmimi artır!”';
+
+  @override
+  String get duaMeaning7 =>
+      '(Peyğəmbərə) de: “Pərvərdigara, bağışla və rəhm et, Sən ən mərhəmətlisən.';
+
+  @override
+  String get duaMeaning8 =>
+      'O kəslər ki: “Ey Rəbbimiz, zövcələrimizi və övladlarımızı sevindir. Bizi Səndən xəbərdar olanlara gözəl nümunə et!”';
+
+  @override
   String get morningZikr => 'Səhər Zikr';
 
   @override

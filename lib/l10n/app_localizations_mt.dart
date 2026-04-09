@@ -211,6 +211,38 @@ class AppLocalizationsMt extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'oħrajn jitolbu, ‘Mulej tagħna, agħtina l-ġid f’din id-dinja u f’hawn ta’ wara, u ħarisna mit-turment tan-Nar.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Alla ma jgħabbi l-ebda ruħ b’aktar minn dak li jiflaħ: kull wieħed jikseb kull ġid li jkun għamel, u jbati l-ħażin tiegħu- ‘Mulej, teħodnix f’xogħol jekk ninsew jew niżbaljaw. Mulej, tgħabbinix bħalma int għabbit lil dawk ta’ qabilna. Mulej, tgħabbinix b’aktar milli għandna s-saħħa x’niġorru. Aħfirna, aħfrilna, u ħniena minna. Int il-​Protettur tagħna, allura għinna kontra dawk li ma jemmnux.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Mulej tagħna, tħallix qalbna tiddevja wara li Inti tkun ggwidatna. Agħtina l-ħniena Tiegħek: Int Dak li Dejjem Tagħti.';
+
+  @override
+  String get duaMeaning4 =>
+      'Mulej, agħti li jien u nisli nżommu t-talb. Sidna, aċċetta t-talba tiegħi.';
+
+  @override
+  String get duaMeaning5 =>
+      'u baxxi ġwenħajk bl-umiltà lejhom bil-qalb tajba u għid, ‘Mulej, ħenn minnhom, bħalma kienu jieħdu ħsiebi meta kont żgħir.’';
+
+  @override
+  String get duaMeaning6 =>
+      'għola jkun Alla, dak li tassew għandu kontroll. [Profeta], tgħaġġlax biex tirreċita qabel ir-rivelazzjoni tkun kompluta għal kollox imma għid, ‘Mulej, ikabbarni fl-għarfien!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Għid [Profeta], ‘Mulej, aħfer u ħniena: Inti l-aktar ħanin minn kulħadd.’';
+
+  @override
+  String get duaMeaning8 =>
+      'dawk li jitolbu, ‘Mulej tagħna, agħtina l-ferħ fil-miżżewġin u n-nisel tagħna. Agħmilna eżempji tajbin għal dawk li huma konxji minnek’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

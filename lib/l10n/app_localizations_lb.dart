@@ -210,6 +210,38 @@ class AppLocalizationsLb extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'anerer bieden: \"Eisen Här, gëff eis gutt an dëser Welt an am Hierscht, a schützt eis virun der Péng vum Feier.\"';
+
+  @override
+  String get duaMeaning2 =>
+      'Gott belaascht keng Séil mat méi wéi se droen kann: jidderee kritt wat gutt et gemaach huet, a leid säi Schlecht - Här, huelt eis net op d\'Aufgab wa mir vergiessen oder Feeler maachen. Här, belaascht eis net wéi Dir déi virun eis belaascht hutt. Här, belaascht eis net mat méi wéi mir Kraaft hunn ze droen. Entschëllegt eis, verzeien eis, a Barmhäerzegkeet op eis. Dir sidd eise Protecteur, also hëllef eis géint déi Ongleeweg.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '\"Eisen Här, loosst eis Häerzer net ofwäichen nodeems Dir eis guidéiert hutt. Gëff eis Är Barmhäerzegkeet: Dir sidd deen ëmmer Gëff.';
+
+  @override
+  String get duaMeaning4 =>
+      'Här, gitt datt ech a meng Nofolger d\'Gebied weiderhalen. Eiser Här, akzeptéiert meng Demande.';
+
+  @override
+  String get duaMeaning5 =>
+      'an dréckt Äre Fligel an Demut a Frëndlechkeet vis-à-vis vun hinnen a seet: ‘Här, barmhäerzlech mat hinnen, sou wéi si fir mech gesuergt hunn, wéi ech kleng war.';
+
+  @override
+  String get duaMeaning6 =>
+      'Erhéicht sief Gott, deen, dee wierklech an der Kontroll ass. [Prophéit], presséiert net ze recitéieren ier d\'Offenbarung komplett fäerdeg ass, awer sot: \'Här, vergréissert mech a Wëssen!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Sot [Prophéit], \'Här, verzeien a Barmhäerzegkeet: Dir sidd de Barmhäerzlechste vun allem.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'déi biede: \'Eisen Här, gitt eis Freed an eise Ehepartner an Nofolger. Maacht eis gutt Beispiller fir déi, déi Iech bewosst sinn.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

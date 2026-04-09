@@ -3643,3 +3643,45 @@
 ### Sonraki Adım
 - Sıradaki turda tam proje taraması tekrar çalıştırılacak ve kalan en yüksek riskli residual hardcoded/localization veya boş implementasyon yüzeyi seçilecek.
 - Özellikle library/settings/chatbot/audio zincirlerinde yeni hardcoded string, false-success veya orphan servis kalıntıları yeniden taranacak.
+## 2026-04-09 TUR-93 — Localize Daily Dua Fallback Across Locales
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) `translations` map desteğiyle genişletildi; Supabase row içindeki `translations` alanı korunuyor ve `text_tr/text_en` ile merge ediliyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\dua_meaning_localization.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/dua_meaning_localization.dart) eklendi; verified bundled dua fallback için `duaMeaning1..duaMeaning8` getter çözümleyicisi kuruldu.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) artık locale-specific dua translation varsa onu, yoksa bundled l10n meaning’i, o da yoksa İngilizce/Türkçe fallback’i kullanıyor.
+- `app_en.arb` ve `app_tr.arb` içine 8 verified dua meaning anahtarı eklendi; ardından bunlar bütün `app_*.arb` setine yayıldı ve generated l10n dosyaları yenilendi.
+- [A:\Way of Allah\sirat_i_nur\test\library_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/library_page_test.dart), [A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/library/library_page_cloud_duas_test.dart) ve [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) yeni locale-aware fallback regresyonlarıyla genişletildi.
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/library_page.dart) içindeki `resolveDuaMeaning` tüm non-TR locale'lerde doğrudan İngilizceye düşüyordu.
+- [A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/duas_data.dart) bundled fallback’i yalnızca `turkish` ve `english` alanlarına sahipti; cloud row’larda daha geniş locale map’i olsa bile model bunu saklamıyordu.
+- Bu durum verified günlük dua içeriklerinin çevrimdışı kullanımda ve locale-aware cloud satırlarda gereksiz İngilizce fallback üretmesine neden oluyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\dua_meaning_localization.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Verified günlük dua fallback’i safe priority locale setinde artık İngilizceye zorunlu düşmüyor.
+- Cloud dua satırı locale-specific `translations` map taşıyorsa runtime bunu koruyup gösterebiliyor.
+- Bundled daily dua meaning zinciri Asma fallback ile aynı locale-aware modele getirildi.
+
+### Test Sonucu
+- `flutter test test/library_page_test.dart` → PASS (`13/13`)
+- `flutter test test/features/library/library_page_cloud_duas_test.dart` → PASS (`5/5`)
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`18/18`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`213/213`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Daily Dua fallback forcing English outside TR when cloud data is missing or locale-specific translation exists: `13/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda tam proje taraması tekrar çalıştırılacak ve dini içerik + localization zincirinde kalan en yüksek residual risk seçilecek.
+- Özellikle Library içindeki diğer verified content fallback’leri ve settings/chatbot/paywall residual hardcoded yüzeyleri yeniden taranacak.

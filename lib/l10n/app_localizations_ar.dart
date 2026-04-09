@@ -210,6 +210,36 @@ class AppLocalizationsAr extends AppLocalizations {
   String get dailyZikr => 'ذكر يومي';
 
   @override
+  String get duaMeaning1 =>
+      'وآخرون يدعون: ربنا آتنا في الدنيا حسنة وفي الآخرة حسنة وقنا عذاب النار.';
+
+  @override
+  String get duaMeaning2 =>
+      'لا يكلف الله نفسا إلا وسعها، كل يكسب ما عملت من خير ويصيب من شره، \"رب لا تؤاخذنا إن نسينا أو أخطأنا\". يارب لا تحملنا كما ثقلت على الذين من قبلنا. يا رب لا تحملنا ما لا طاقة لنا به. واعف عنا واغفر لنا وارحمنا. أنت مولانا فانصرنا على الكافرين.';
+
+  @override
+  String get duaMeaning3 =>
+      '\"ربنا لا تزغ قلوبنا بعد إذ هديتنا. امنحنا رحمتك: أنت المعطاء.';
+
+  @override
+  String get duaMeaning4 => 'رب أجعلني وذريتي مقيمين الصلاة. ربنا تقبل طلبي.';
+
+  @override
+  String get duaMeaning5 =>
+      'واخفض جناحك لهم ذلاً وقل رب ارحمهم كما ربيوني صغيرًا.';
+
+  @override
+  String get duaMeaning6 =>
+      'سبحان الله الذي هو المسيطر حقاً. [أيها النبي]، لا تعجل بالقراءة قبل أن يتم الوحي، وقل: رب زدني علما.';
+
+  @override
+  String get duaMeaning7 => 'قل [النبي]: رب اغفر وارحم وأنت أرحم الراحمين.';
+
+  @override
+  String get duaMeaning8 =>
+      'الذين يقولون: ربنا هب لنا في أزواجنا وذرياتنا. واجعل لنا قدوة حسنة للذين يتقون».';
+
+  @override
   String get morningZikr => 'ذكر الصباح';
 
   @override

@@ -210,6 +210,38 @@ class AppLocalizationsRw extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'abandi basenga bati: \'Mwami wacu, duhe ibyiza muri iyi si ndetse no mu mperuka, kandi uturinde ububabare bw\'umuriro.\'';
+
+  @override
+  String get duaMeaning2 =>
+      'Imana ntiremerera umuntu uwo ari we wese ibirenze ibyo ishobora kwihanganira: buri wese yunguka icyiza cyose yakoze, kandi akababara- \'Mwami, ntutujyane kumurimo niba twibagiwe cyangwa dukora amakosa. Mwami, ntuturemere nkuko waremereye abatubanjirije. Mwami, ntuturemere ibirenze ibyo dufite imbaraga zo kwihanganira. Utubabarire, utubabarire, kandi utugirire impuhwe. Uri Umurinzi, rero udufashe kurwanya abatizera. \'';
+
+  @override
+  String get duaMeaning3 =>
+      '\'Mwami wacu, ntukemere ko imitima yacu itandukira umaze kutuyobora. Duhe imbabazi zawe: Uritanga Iteka.';
+
+  @override
+  String get duaMeaning4 =>
+      'Nyagasani, mpa njye n\'abazabakomokaho gukomeza amasengesho. Mwami wacu, emera icyifuzo cyanjye.';
+
+  @override
+  String get duaMeaning5 =>
+      'manura ibaba ryawe wicishe bugufi ubagirire neza ubabwire uti: \'Mwami, ubagirire impuhwe, nk\'uko banyitayeho nkiri muto.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'Imana ikuzwe, niwe uyobora rwose. [Umuhanuzi], ntukihutire gusoma mbere yuko ihishurwa ryuzuye ariko vuga uti: \'Mwami, nyongerera ubumenyi!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Vuga [Umuhanuzi], \'Mwami, ubabarire kandi ugirire imbabazi: uri umunyembabazi muri bose.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'abasenga, \'Mwami wacu, duhe umunezero mu bashakanye no ku rubyaro rwacu. Utugire ingero nziza kubakuzi \'.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

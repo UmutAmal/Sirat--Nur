@@ -41,6 +41,7 @@ void main() {
     });
 
     test('dua meaning prefers Turkish text for the Turkish locale', () {
+      final tr = lookupAppLocalizations(const Locale('tr'));
       const dua = DuaData(
         id: '1',
         arabic: 'arabic',
@@ -51,10 +52,11 @@ void main() {
         category: 'category',
       );
 
-      expect(resolveDuaMeaning(dua, const Locale('tr')), 'Turkce anlam');
+      expect(resolveDuaMeaning(tr, dua, const Locale('tr')), 'Turkce anlam');
     });
 
-    test('dua meaning falls back to English for non-Turkish locales', () {
+    test('dua meaning uses localized bundled fallback for supported locales', () {
+      final de = lookupAppLocalizations(const Locale('de'));
       const dua = DuaData(
         id: '1',
         arabic: 'arabic',
@@ -65,7 +67,41 @@ void main() {
         category: 'category',
       );
 
-      expect(resolveDuaMeaning(dua, const Locale('de')), 'English meaning');
+      expect(resolveDuaMeaning(de, dua, const Locale('de')), de.duaMeaning1);
+    });
+
+    test('dua meaning uses locale-specific cloud translations when available', () {
+      final de = lookupAppLocalizations(const Locale('de'));
+      const dua = DuaData(
+        id: 'cloud-1',
+        arabic: 'arabic',
+        transliteration: 'transliteration',
+        turkish: 'Turkce anlam',
+        english: 'English meaning',
+        source: 'source',
+        category: 'category',
+        translations: {'de': 'Deutsche Bedeutung'},
+      );
+
+      expect(
+        resolveDuaMeaning(de, dua, const Locale('de')),
+        'Deutsche Bedeutung',
+      );
+    });
+
+    test('dua meaning falls back to English for non-bundled rows without locale data', () {
+      final de = lookupAppLocalizations(const Locale('de'));
+      const dua = DuaData(
+        id: 'cloud-1',
+        arabic: 'arabic',
+        transliteration: 'transliteration',
+        turkish: 'Turkce anlam',
+        english: 'English meaning',
+        source: 'source',
+        category: 'category',
+      );
+
+      expect(resolveDuaMeaning(de, dua, const Locale('de')), 'English meaning');
     });
 
     test('cloud duas fall back to verified bundled Quran duas when rows are empty', () {
@@ -100,6 +136,8 @@ void main() {
       expect(resolved.first.arabic, 'دعاء');
       expect(resolved.first.turkish, 'Turkce dua');
       expect(resolved.first.english, 'English dua');
+      expect(resolved.first.resolvedTranslations['tr'], 'Turkce dua');
+      expect(resolved.first.resolvedTranslations['en'], 'English dua');
       expect(resolved.first.source, 'Diyanet');
       expect(resolved.first.category, 'Sabah Akşam');
     });

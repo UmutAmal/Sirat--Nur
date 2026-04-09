@@ -212,6 +212,38 @@ class AppLocalizationsTl extends AppLocalizations {
   String get dailyZikr => 'Pang-araw-araw na Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'ang iba ay nagdarasal, ‘Panginoon namin, bigyan mo kami ng kabutihan sa mundong ito at sa Kabilang-Buhay, at iligtas mo kami sa pahirap ng Apoy.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Ang Diyos ay hindi nagpapabigat sa sinumang kaluluwa ng higit sa kanyang makakaya: bawat isa ay nakakamit ng anumang kabutihan na kanyang nagawa, at nagdurusa sa kanyang kasamaan- ‘Panginoon, huwag mo kaming bigyan ng gawain kung kami ay nakakalimutan o nagkakamali. Panginoon, huwag Mo kaming pabigatin gaya ng pagpapasan Mo sa mga nauna sa amin. Panginoon, huwag Mo kaming pabigatan ng higit pa sa aming lakas upang pasanin. Patawarin mo kami, patawarin mo kami, at maawa ka sa amin. Ikaw ang aming Tagapagtanggol, kaya tulungan mo kami laban sa mga hindi naniniwala.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Aming Panginoon, huwag mong hayaang lumihis ang aming mga puso pagkatapos Mo kaming gabayan. Ipagkaloob Mo sa amin ang Iyong awa: Ikaw ang Laging Nagbibigay.';
+
+  @override
+  String get duaMeaning4 =>
+      'Panginoon, ipagkaloob mo na ako at ang aking mga supling ay mapanatili ang panalangin. Panginoon, tanggapin mo ang aking kahilingan.';
+
+  @override
+  String get duaMeaning5 =>
+      'at ibaba ang iyong pakpak sa pagpapakumbaba sa kanila sa kagandahang-loob at sabihin, \'Panginoon, maawa ka sa kanila, tulad ng kanilang pag-aalaga sa akin noong ako ay maliit pa.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'dakilain ang Diyos, ang tunay na may kontrol. [Propeta], huwag magmadali sa pagbigkas bago ganap na ganap ang paghahayag ngunit sabihin, ‘Panginoon, dagdagan mo ako ng kaalaman!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Sabihin [Propeta], ‘Panginoon, magpatawad at maawa ka: Ikaw ang pinakamaawain sa lahat.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'ang mga nagdarasal, ‘Aming Panginoon, bigyan mo kami ng kagalakan sa aming mga asawa at mga supling. Gawin Mo kaming mabuting halimbawa sa mga nakakaalam sa Iyo’.';
+
+  @override
   String get morningZikr => 'Zikr sa umaga';
 
   @override

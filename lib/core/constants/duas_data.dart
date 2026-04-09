@@ -8,6 +8,7 @@ class DuaData {
   final String english;
   final String source;
   final String category;
+  final Map<String, String> translations;
 
   const DuaData({
     required this.id,
@@ -17,7 +18,19 @@ class DuaData {
     required this.english,
     required this.source,
     required this.category,
+    this.translations = const {},
   });
+
+  Map<String, String> get resolvedTranslations {
+    final merged = <String, String>{...translations};
+    if (turkish.trim().isNotEmpty) {
+      merged.putIfAbsent('tr', () => turkish);
+    }
+    if (english.trim().isNotEmpty) {
+      merged.putIfAbsent('en', () => english);
+    }
+    return merged;
+  }
 
   factory DuaData.fromSupabaseRow(Map<String, dynamic> row) {
     String readFirst(List<String> keys) {
@@ -30,6 +43,16 @@ class DuaData {
       return '';
     }
 
+    final turkish = readFirst(['text_tr', 'turkish', 'content_tr']);
+    final english = readFirst(['text_en', 'english', 'content_en']);
+    final translations = _readDuaTranslations(row['translations']);
+    if (turkish.isNotEmpty) {
+      translations.putIfAbsent('tr', () => turkish);
+    }
+    if (english.isNotEmpty) {
+      translations.putIfAbsent('en', () => english);
+    }
+
     return DuaData(
       id: '${row['id'] ?? ''}',
       arabic: readFirst(['text_ar', 'arabic', 'content_ar']),
@@ -38,12 +61,36 @@ class DuaData {
         'text_transliteration',
         'transliteration_en',
       ]),
-      turkish: readFirst(['text_tr', 'turkish', 'content_tr']),
-      english: readFirst(['text_en', 'english', 'content_en']),
+      turkish: turkish,
+      english: english,
       source: readFirst(['source', 'reference']),
       category: readFirst(['category', 'title_tr', 'title_en']),
+      translations: translations,
     );
   }
+}
+
+Map<String, String> _readDuaTranslations(dynamic rawTranslations) {
+  if (rawTranslations is! Map) {
+    return <String, String>{};
+  }
+
+  final parsed = <String, String>{};
+  rawTranslations.forEach((key, value) {
+    if (key is! String || value is! String) {
+      return;
+    }
+
+    final normalizedKey = key.trim();
+    final normalizedValue = value.trim();
+    if (normalizedKey.isEmpty || normalizedValue.isEmpty) {
+      return;
+    }
+
+    parsed[normalizedKey] = normalizedValue;
+  });
+
+  return parsed;
 }
 
 const bool hasVerifiedBundledDuas = true;

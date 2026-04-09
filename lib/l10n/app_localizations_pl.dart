@@ -210,6 +210,38 @@ class AppLocalizationsPl extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'inni modlą się: „Panie nasz, obdarz nas dobrem na tym świecie i w życiu ostatecznym i chroń nas od kary ognia”.';
+
+  @override
+  String get duaMeaning2 =>
+      'Bóg nie obciąża żadnej duszy więcej, niż jest w stanie udźwignąć: każda czyni dobro, jakie uczyniła, a zło znosi. „Panie, nie karz nas, jeśli zapomnimy lub popełnimy błąd”. Panie, nie obciążaj nas tak, jak obciążałeś tych, którzy byli przed nami. Panie, nie obciążaj nas więcej, niż jesteśmy w stanie unieść. Przebacz nam, przebacz nam i zmiłuj się nad nami. Ty jesteś naszym Obrońcą, więc pomóż nam w walce z niewiernymi.';
+
+  @override
+  String get duaMeaning3 =>
+      '„Panie nasz, nie pozwól, aby nasze serca zachwiały się po tym, jak nas prowadziłeś. Obdarz nas swoim miłosierdziem: Ty jesteś Zawsze Dawcą.';
+
+  @override
+  String get duaMeaning4 =>
+      'Panie, spraw, abym ja i moje potomstwo wytrwali w modlitwie. Panie nasz, przyjmij moją prośbę.';
+
+  @override
+  String get duaMeaning5 =>
+      'i w pokorze i dobroci opuść swe skrzydło ku nim i powiedz: «Panie, zmiłuj się nad nimi, tak jak oni troszczyli się o mnie, gdy byłem mały».';
+
+  @override
+  String get duaMeaning6 =>
+      'wywyższony niech będzie Bóg, Ten, który naprawdę panuje. [Proroku], nie spiesz się z recytacją, zanim objawienie będzie w pełni ukończone, ale powiedz: „Panie, pomnóż moją wiedzę!”';
+
+  @override
+  String get duaMeaning7 =>
+      'Powiedz [Prorok]: „Panie, przebacz i zmiłuj się. Ty jesteś najbardziej miłosierny ze wszystkich”.';
+
+  @override
+  String get duaMeaning8 =>
+      'ci, którzy się modlą: «Panie nasz, daj nam radość z naszych małżonków i potomstwa. Uczyń nas dobrymi przykładami dla tych, którzy Cię znają”.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

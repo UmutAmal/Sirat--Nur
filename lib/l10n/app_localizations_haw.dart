@@ -210,6 +210,38 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get dailyZikr => 'Zikr i kēlā me kēia lā';
 
   @override
+  String get duaMeaning1 =>
+      'pule kekahi, \'E ko makou Haku, e haawi mai ia makou i ka maikai ma keia ao a ma keia hope aku, a e hoomalu mai ia makou i ka eha o ke ahi.\'';
+
+  @override
+  String get duaMeaning2 =>
+      'ʻAʻole kaumaha ke Akua i kekahi ʻuhane ma mua o ka mea hiki iā ia ke hoʻomanawanui: loaʻa i kēlā me kēia mea ka maikaʻi āna i hana ai, a ʻeha hoʻi i kāna ʻino - \'E ka Haku, mai lawe ʻoe iā mākou i ka hana inā hoʻopoina mākou a hana hewa paha. E ka Haku, mai hookaumaha oe ia makou e like me kou hookaumaha ana i ka poe mamua o makou. E ka Haku, mai hookaumaha oe ia makou me ka oi aku mamua o ko makou ikaika e amo ai. E kala mai, e kala mai, a e aloha mai ia makou. ʻO ʻoe nō ko mākou Mālama, no laila e kōkua mai iā mākou i ka poʻe hoʻomaloka.';
+
+  @override
+  String get duaMeaning3 =>
+      'E ko makou Haku, mai hoohuli oe i ko makou naau mahope o kou alakai ana ia makou. E hāʻawi mai iā mākou i kou aloha: ʻO ʻoe ka mea hāʻawi mau.';
+
+  @override
+  String get duaMeaning4 =>
+      'E ka Haku, e haawi mai ia\'u a me ka\'u poe mamo e malama i ka pule. E ko makou Haku, e maliu mai oe i ka\'u noi.';
+
+  @override
+  String get duaMeaning5 =>
+      'a e hoʻohaʻahaʻa i kou ʻēheu iā lākou me ka lokomaikaʻi, a e ʻōlelo aku, \'E ka Haku, e aloha mai ʻoe iā lākou, e like me ko lākou mālama ʻana mai iaʻu i koʻu wā liʻiliʻi.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'e hookiekieia\'e ke Akua, ka mea nana e hoomalu. [Pula], mai wikiwiki e heluhelu ma mua o ka pau ʻana o ka hōʻike, akā e ʻōlelo aku, \'E ka Haku, hoʻonui iaʻu i ka ʻike!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'E ʻī aku [Pūlana], ‘E ka Haku, e kala mai a e aloha mai: ʻO ʻoe ke aloha nui loa i nā mea a pau.’';
+
+  @override
+  String get duaMeaning8 =>
+      'ka poe e pule ana, E ka Haku, e haawi mai ia makou i ka olioli iloko o na wahine a me na keiki a makou. E hoolilo mai oe ia makou i kumu hoohalike no ka poe ike ia oe.';
+
+  @override
   String get morningZikr => 'Kakahiaka Zikr';
 
   @override

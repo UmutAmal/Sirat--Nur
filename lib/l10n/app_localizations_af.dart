@@ -210,6 +210,38 @@ class AppLocalizationsAf extends AppLocalizations {
   String get dailyZikr => 'Daaglikse Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'ander bid: \'Ons Here, gee ons die goeie in hierdie wêreld en in die Hiernamaals, en beskerm ons teen die pyniging van die Vuur.\'';
+
+  @override
+  String get duaMeaning2 =>
+      'God belas geen siel met meer as wat dit kan verdra nie: elkeen kry die goeie wat hy gedoen het, en ly sy slegte- ‘Here, moenie ons op die been bring as ons vergeet of foute maak nie. Here, belas ons nie soos U diegene voor ons belas het nie. Here, belas ons nie met meer as wat ons krag het om te dra nie. Vergewe ons, vergewe ons en wees ons genadig. U is ons Beskermer, so help ons teen die ongelowiges.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Ons Here, moenie dat ons harte afwyk nadat U ons gelei het nie. Skenk ons ​​U genade: U is die Ewige Gee.';
+
+  @override
+  String get duaMeaning4 =>
+      'Here, gee dat ek en my nageslag die gebed mag volhou. Ons Here, aanvaar my versoek.';
+
+  @override
+  String get duaMeaning5 =>
+      'en laat sak jou vlerk in nederigheid teenoor hulle in vriendelikheid en sê: ‘Here, wees hulle genadig, net soos hulle vir my gesorg het toe ek klein was.’';
+
+  @override
+  String get duaMeaning6 =>
+      'verheerlik sy God, die een wat werklik in beheer is. [Profeet], moenie haastig wees om op te sê voordat die openbaring volledig voltooi is nie, maar sê: \'Here, vermeerder my in kennis!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Sê [Profeet], \'Here, vergewe en wees genadig: U is die barmhartigste van almal.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'diegene wat bid: ‘Ons Here, gee ons vreugde in ons huweliksmaats en nageslag. Maak vir ons goeie voorbeelde vir diegene wat van U bewus is’.';
+
+  @override
   String get morningZikr => 'Môre Zikr';
 
   @override

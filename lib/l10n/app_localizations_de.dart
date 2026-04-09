@@ -211,6 +211,38 @@ class AppLocalizationsDe extends AppLocalizations {
   String get dailyZikr => 'Tägliches Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'andere beten: „Unser Herr, gib uns Gutes in dieser Welt und im Jenseits und beschütze uns vor der Qual des Feuers.“';
+
+  @override
+  String get duaMeaning2 =>
+      'God does not burden any soul with more than it can bear: each gains whatever good it has done, and suffers its bad- ‘ Lord, do not take us to task if we forget or make mistakes. Herr, belaste uns nicht, wie Du denen vor uns eine Last auferlegt hast. Herr, belaste uns nicht mit mehr, als wir ertragen können. Vergib uns, vergib uns und erbarme dich unser. Du bist unser Beschützer, also hilf uns gegen die Ungläubigen.“';
+
+  @override
+  String get duaMeaning3 =>
+      '„Unser Herr, lass unsere Herzen nicht abweichen, nachdem Du uns geführt hast.“ Schenke uns Deine Barmherzigkeit: Du bist der Immer Gebende.';
+
+  @override
+  String get duaMeaning4 =>
+      'Herr, schenke mir und meinen Nachkommen, dass wir weiterhin beten. Unser Herr, nimm meine Bitte an.';
+
+  @override
+  String get duaMeaning5 =>
+      'und senke deinen Flügel in Demut und Güte zu ihnen und sprich: „Herr, erbarme dich ihrer, so wie sie sich um mich gekümmert haben, als ich klein war.“';
+
+  @override
+  String get duaMeaning6 =>
+      'Gepriesen sei Gott, derjenige, der wirklich die Kontrolle hat. [Prophet], beeilen Sie sich nicht mit der Rezitation, bevor die Offenbarung vollständig vollständig ist, sondern sagen Sie: „Herr, vermehre mein Wissen!“';
+
+  @override
+  String get duaMeaning7 =>
+      'Sag [Prophet]: „Herr, vergib und erbarme dich: Du bist der Barmherzigste von allen.“';
+
+  @override
+  String get duaMeaning8 =>
+      'diejenigen, die beten: „Unser Herr, schenke uns Freude an unseren Ehepartnern und Nachkommen.“ Gib uns ein gutes Beispiel für diejenigen, die Dich kennen.';
+
+  @override
   String get morningZikr => 'Morgen Zikr';
 
   @override
@@ -1258,7 +1290,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get asmaMeaning21 => 'Der Reliever';
 
   @override
-  String get asmaMeaning22 => 'The Abaser';
+  String get asmaMeaning22 => 'Erniedrigend, herabwürdigend.';
 
   @override
   String get asmaMeaning23 => 'Der Exalter';
@@ -1312,7 +1344,8 @@ class AppLocalizationsDe extends AppLocalizations {
   String get asmaMeaning39 => 'Der Nährer';
 
   @override
-  String get asmaMeaning40 => 'The Reckoner';
+  String get asmaMeaning40 =>
+      'Derjenige, der sich am besten um die Diener kümmert.';
 
   @override
   String get asmaMeaning41 => 'Der Majestätische';
@@ -1354,7 +1387,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get asmaMeaning53 => 'Der Besitzer aller Stärke';
 
   @override
-  String get asmaMeaning54 => 'The Forceful';
+  String get asmaMeaning54 => 'Quelle der Stärke und Kraft, sehr mächtig.';
 
   @override
   String get asmaMeaning55 => 'Der Beschützer';
@@ -1387,7 +1420,8 @@ class AppLocalizationsDe extends AppLocalizations {
   String get asmaMeaning64 => 'Der Finder';
 
   @override
-  String get asmaMeaning65 => 'The Glorious';
+  String get asmaMeaning65 =>
+      'Derjenige mit großer Würde und Herrlichkeit, reichlich Großzügigkeit und Wohlwollen.';
 
   @override
   String get asmaMeaning66 => 'Der Einzige';

@@ -210,6 +210,38 @@ class AppLocalizationsLt extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'kiti meldžia: „Mūsų Viešpatie, duok mums gero šiame pasaulyje ir anapusyje ir apsaugok mus nuo Ugnies kančių“.';
+
+  @override
+  String get duaMeaning2 =>
+      'Dievas neapkrauna nė vienos sielos daugiau, nei ji gali pakelti: kiekviena laimi tai, ką padarė gera, ir kenčia už blogį – „Viešpatie, neimk mūsų į darbą, jei pamirštame ar klystame. Viešpatie, neapkrauk mūsų taip, kaip apsunkei tuos, kurie buvo prieš mus. Viešpatie, neapkrauk mūsų daugiau, nei turime jėgų pakelti. Atleisk mums, atleisk mums ir pasigailėk mūsų. Tu esi mūsų gynėjas, tad padėk mums nuo netikinčiųjų.';
+
+  @override
+  String get duaMeaning3 =>
+      '„Mūsų Viešpatie, neleisk, kad mūsų širdys nukryptų po to, kai mus vedei. Suteik mums savo gailestingumą: Tu esi visad dovanojantis.';
+
+  @override
+  String get duaMeaning4 =>
+      'Viešpatie, duok, kad aš ir mano palikuonys tęstume maldą. Viešpatie, priimk mano prašymą.';
+
+  @override
+  String get duaMeaning5 =>
+      'Nuleiskite savo sparną nuolankiai prieš juos gerumu ir sakyk: \'Viešpatie, pasigailėk jų, kaip jie rūpinosi manimi, kai buvau mažas\'.';
+
+  @override
+  String get duaMeaning6 =>
+      'tebūna išaukštintas Dievas, tas, kuris tikrai valdo. [Pranaše], neskubėk deklamuoti, kol apreiškimas nėra visiškai baigtas, bet sakyk: \'Viešpatie, padidink mane pažinimu!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Pasakykite [Pranašas]: „Viešpatie, atleisk ir pasigailėk: tu esi gailestingiausias iš visų“.';
+
+  @override
+  String get duaMeaning8 =>
+      'tie, kurie meldžiasi: „Viešpatie, duok mums džiaugsmo mūsų sutuoktiniais ir palikuonimis“. Parodyk mus geru pavyzdžiu tiems, kurie Tave žino“.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

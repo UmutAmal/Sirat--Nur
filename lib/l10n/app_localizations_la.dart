@@ -210,6 +210,38 @@ class AppLocalizationsLa extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'alii orant, \'domine, da nobis bona in hoc saeculo et in futuro, et a tormento ignis nos defende.\'';
+
+  @override
+  String get duaMeaning2 =>
+      'Deus animam quamlibet non gravat plus quam ferre potest: quisque lucratur quidquid boni fecit et suum malum patitur: Dominus, si obliviscimur vel peccamus, non incumbere debemus. Domine, noli nos onerare, sicut ante nos gravasti. Domine, noli nos onerare plus quam nos sustinere. Ignosce nobis, dimitte nobis, et miserere nobis. Protector noster es tu, adiuva nos contra infideles.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '\'Domine, ne deviant corda nostra postquam tu duxisti nos\'. Da nobis misericordiam tuam.';
+
+  @override
+  String get duaMeaning4 =>
+      'presta domine ut ego et progenies mea servet orationem . Domine, suscipe deprecationem meam.';
+
+  @override
+  String get duaMeaning5 =>
+      'et cornu tuum humiliter in eis benigne depone et dic, \'Domine, miserere eorum, sicut me curabant cum essem parvulus.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'Deus excelsus, qui vere est in potestate. [Propheta], ante revelationem plene completam non ruere recitare sed dic, Domine, auge me in scientia!';
+
+  @override
+  String get duaMeaning7 =>
+      'Dic [Prophet], \'Domine, dimitte et miserere: Tu es omnium clementissimus.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'qui orant, \'Domine, in coniugibus et prole nostro da nobis laetitiam\'. Bona nobis exempla fac his qui Tui conscii sunt.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

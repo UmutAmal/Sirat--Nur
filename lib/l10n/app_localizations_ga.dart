@@ -210,6 +210,38 @@ class AppLocalizationsGa extends AppLocalizations {
   String get dailyZikr => 'Zikr laethúil';
 
   @override
+  String get duaMeaning1 =>
+      'guíonn daoine eile, ‘A Thiarna, tabhair dúinn maitheas sa saol seo agus sa saol ina dhiaidh seo, agus cosnaigh sinn ó phian na Tine.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Ní chuireann Dia ualach ar aon anam le níos mó ná mar is féidir leis a iompar: gnóthaíonn gach duine cibé maith a rinne sé, agus fulaingíonn sé a olc - ‘ A Thiarna, ná tabhair faoi chúram sinn má dhéanaimid dearmad nó botúin a dhéanamh. A Thiarna, ná bíodh an t-ualach orainn mar a chuir tú ualach orthu siúd atá os ár gcomhair. A Thiarna, ná bíodh an t-ualach ort níos mó ná an neart atá againn le hiompar. Maith dúinn, maith dúinn, agus déan trócaire orainn. Is tusa ár gCosantóirí, mar sin cuidigh linn i gcoinne na ndíchreidmhigh.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '‘A Thiarna, ná lig ár gcroíthe ar leataobh tar éis duit sinn a threorú. Deonaigh dúinn do thrócaire: Is tusa an té a thugann riamh.';
+
+  @override
+  String get duaMeaning4 =>
+      'A Thiarna, deonaigh go gcoimeádfaidh mise agus mo sliocht an urnaí. A Thiarna, glac le m’iarratas.';
+
+  @override
+  String get duaMeaning5 =>
+      'agus ísligh do sciathán go humhal leo i gcineáltas agus abair, ‘A Thiarna, déan trócaire orthu, mar a thug siad aire dom nuair a bhí mé beag.’';
+
+  @override
+  String get duaMeaning6 =>
+      'Ardaithe go raibh Dia, an té atá i gceannas go fírinneach. [Fáidh], ná déan deifir chun aithris a dhéanamh sula mbeidh an nochtadh iomlán iomlán ach abair, ‘A Thiarna, méadaigh in eolas mé!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Abair [Fáidh], ‘A Thiarna, maith agus déan trócaire: Is tú an té is trócaire ar fad’.';
+
+  @override
+  String get duaMeaning8 =>
+      'iad siúd a guí, ‘A Thiarna, déan áthas orainn inár gcéilí agus inár sliocht. Déan samplaí maithe dúinn dóibh siúd atá ar an eolas fút’.';
+
+  @override
   String get morningZikr => 'Maidin Zikr';
 
   @override

@@ -210,6 +210,38 @@ class AppLocalizationsId extends AppLocalizations {
   String get dailyZikr => 'Zikir Harian';
 
   @override
+  String get duaMeaning1 =>
+      'yang lain berdoa, \'Ya Tuhan kami, berilah kami kebaikan di dunia dan di akhirat, dan lindungi kami dari siksa Neraka.\'';
+
+  @override
+  String get duaMeaning2 =>
+      'Tuhan tidak membebani jiwa mana pun dengan lebih dari yang dapat ditanggungnya: masing-masing memperoleh kebaikan apa pun yang telah dilakukannya, dan menanggung keburukannya. \'Tuhan, jangan bebankan kami pada tugas jika kami lupa atau melakukan kesalahan. Tuhan, jangan bebani kami seperti Engkau membebani orang-orang sebelum kami. Tuhan, jangan membebani kami dengan beban melebihi kekuatan kami untuk menanggungnya. Maafkan kami, maafkan kami, dan kasihanilah kami. Engkaulah Pelindung kami, maka bantulah kami melawan orang-orang kafir.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Ya Tuhan kami, jangan biarkan hati kami menyimpang setelah Engkau memberi petunjuk kepada kami. Berilah kami rahmat-Mu: Engkaulah Yang Maha Memberi.';
+
+  @override
+  String get duaMeaning4 =>
+      'Tuhan, berilah aku dan anak cucuku dapat menjaga shalat. Tuhan kami, terimalah permintaanku.';
+
+  @override
+  String get duaMeaning5 =>
+      'dan turunkan sayapmu dalam kerendahan hati terhadap mereka dalam kebaikan dan katakan, \'Tuhan, kasihanilah mereka, sama seperti mereka merawatku ketika aku masih kecil.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'Maha Suci Allah, yang benar-benar memegang kendali. [Nabi], jangan terburu-buru membaca sebelum wahyu selesai sepenuhnya tetapi katakan, \'Tuhan, tambahlah ilmuku!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Katakanlah [Nabi], \'Tuhan, ampunilah dan kasihanilah: Engkaulah yang paling penyayang di antara semuanya.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'orang-orang yang berdoa, ‘Ya Tuhan kami, berilah kami kebahagiaan pada pasangan dan keturunan kami. Jadikanlah kami teladan yang baik bagi orang-orang yang sadar akan Engkau’.';
+
+  @override
   String get morningZikr => 'Zikir Pagi';
 
   @override

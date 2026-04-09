@@ -210,6 +210,38 @@ class AppLocalizationsJv extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'liyane padha ndedonga, \'Dhuh Pangeran kawula, mugi karsaa paring kabecikan ing donya lan ing akherat, lan pangayoman kawula saking siksa geni.\'';
+
+  @override
+  String get duaMeaning2 =>
+      'Gusti Allah ora mbebani jiwa sing luwih saka sing bisa ditanggung: saben wong entuk kabecikan apa wae sing wis ditindakake, lan nandhang ala - \'Dhuh Gusti, aja nganti aku lali utawa luput. Dhuh Yehuwah, mugi sampun ngantos paring beban dhateng kawula kadosdene Paduka mbebani dhateng tiyang-tiyang saderengipun kawula. Dhuh Yehuwah, mugi sampun ngantos paring beban dhateng kawula ingkang langkung saking kakuwatanipun. Nyuwun ngapunten, ngapunten, lan mberkahi. Paduka punika Pangreksa kawula, mila mugi karsaa tulung-tinulungi kawula tumrap tiyang-tiyang kafir”.';
+
+  @override
+  String get duaMeaning3 =>
+      '“Dhuh Gusti, mugi sampun ngantos miringaken manah kawula sasampunipun Paduka paring pituduh. Paduka mugi karsaa maringi sih-rahmat Paduka: Paduka ingkang tansah maringi.';
+
+  @override
+  String get duaMeaning4 =>
+      'Dhuh Gusti, mugi karsaa paring pandonga dhumateng kawula saha anak turun kawula. Dhuh Gusti, mugi karsaa nampi panyuwun kawula.';
+
+  @override
+  String get duaMeaning5 =>
+      'lan andhap asor marang wong-wong mau lan munjuk: \'Dhuh Gusti, mugi karsaa welas asih dhateng tiyang-tiyang wau, kadosdene anggenipun ngreksa kawula nalika kawula alit.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'Mahasuci Allah, kang bener-bener nguwasani. [Nabi], aja kesusu maca sadurunge wahyu rampung, nanging ngucap, \'Dhuh Gusti, tambahi kawruhku!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Dakkandhani [Nabi], \'Dhuh Gusti, mugi karsaa ngapura lan welas asih: Paduka punika ingkang paling welas asih.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'kang padha ndedonga, ‘Dhuh Pangeran kawula, mugi karsaa paring kabingahan tumraping pasangan lan anak-anak kawula. Paduka mugi karsaa dados tuladha ingkang sae tumrap tiyang-tiyang ingkang mangertos dhumateng Paduka’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

@@ -210,6 +210,37 @@ class AppLocalizationsAm extends AppLocalizations {
   String get dailyZikr => 'ዕለታዊ ዚክር';
 
   @override
+  String get duaMeaning1 =>
+      'ሌሎችም ‘ጌታችን ሆይ በቅርቢቱም ሆነ በመጨረሻይቱ ዓለም መልካምን ነገር ስጠን ከእሳትም ቅጣት ጠብቀን’ ብለው ይጸልያሉ።';
+
+  @override
+  String get duaMeaning2 =>
+      'እግዚአብሔር የትኛውንም ነፍስ ልትሸከመው ከምትችለው በላይ አይጭንበትም፤ እያንዳንዱ የሠራውን መልካም ነገር ያገኛል፤ በመጥፎዋም ይሠቃያል- ‘ጌታ ሆይ፣ ከረሳን ወይም ከተሳሳትን ወደ ሥራ አታግባን። ጌታ ሆይ ከኛ በፊት የነበሩትን እንደ ሸከምክ አትከብደን። ጌታ ሆይ ለመሸከም ካለን አቅም በላይ አትከብደን። ይቅር በለን ፣ ይቅር በለን ፣ ማረን ። አንተ ረዳታችን ነህና በከሓዲዎችንም እርዳን።';
+
+  @override
+  String get duaMeaning3 =>
+      '‹ጌታችን ሆይ ከመራኸን በኋላ ልቦቻችንን አታዘንብ። እዝነትህን ስጠን አንተ ሰጭ ነህ።';
+
+  @override
+  String get duaMeaning4 =>
+      'ጌታ ሆይ እኔና ዘሮቼ ጸሎታችንን እንድንሰግድ ስጠን። ጌታችን ሆይ ልመናዬን ተቀበል።';
+
+  @override
+  String get duaMeaning5 => 'በትሕትናም ክንፍህን ወደ እነርሱ በቸርነት ዝቅ አድርግና፡- ‘ጌታ ሆይ!';
+
+  @override
+  String get duaMeaning6 =>
+      'አላህ የጠራው እርሱ በእርግጥ ተቆጣጣሪው ነው። (ነብዩ) ራዕዩ ሳይፈጸም በፊት ለማንበብ አትቸኩል ነገር ግን ‘ጌታ ሆይ እውቀትን ጨምርልኝ!’ በል።';
+
+  @override
+  String get duaMeaning7 =>
+      '(ነብዩ)፡- ‘ጌታ ሆይ ይቅር በለን እዘንም አንተ ከምንም በላይ አዛኝ ነህ’ በላቸው።';
+
+  @override
+  String get duaMeaning8 =>
+      'የሚጸልዩት፡- ጌታችን ሆይ በትዳር አጋሮቻችንና በዘሮቻችን ደስታን ስጠን። አንተን ለሚያውቁ ጥሩ ምሳሌ አድርግልን።';
+
+  @override
   String get morningZikr => 'ጥዋት ዚክር';
 
   @override

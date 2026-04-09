@@ -211,6 +211,38 @@ class AppLocalizationsKri extends AppLocalizations {
   String get dailyZikr => 'Ɛvride Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'ɔda wan dɛn de pre se, ‘Wi Masta, gi wi gud na dis wɔl ɛn na di layf we de afta, ɛn protɛkt wi frɔm di sɔfa we di Faya de mek wi sɔfa.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Gɔd nɔ de lod ɛni sol wit mɔ pas wetin i ebul fɔ bia: ɛni wan de gɛt ɛni gud we i dɔn du, ɛn sɔfa in bad- ‘ Masta, nɔ tek wi fɔ wok if wi fɔgɛt ɔ mek mistek. Masta, nɔ lod wi lɛk aw Yu bin lod di wan dɛn we bin de bifo wi. Masta, nɔ lod wi pas wetin wi gɛt trɛnk fɔ bia. Fɔgiv wi, fɔgiv wi, ɛn sɔri fɔ wi. Yu na wi Protɛkta, so ɛp wi agens di wan dɛn we nɔ biliv.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Wi Masta, nɔ mek wi at kɔmɔt biɛn afta Yu dɔn gayd wi. Gi wi Yu sɔri-at: Yu na di wan we de gi ɔltɛm.';
+
+  @override
+  String get duaMeaning4 =>
+      'Masta, mek mi ɛn mi pikin dɛn kɔntinyu fɔ pre. Wi Masta, aksept mi ​​rikwest.';
+
+  @override
+  String get duaMeaning5 =>
+      'ɛn put yu wing dɔŋ wit ɔmbul to dɛn wit gudnɛs ɛn se, ‘Masta, sɔri fɔ dɛn, jɔs lɛk aw dɛn bin de kia fɔ mi we a bin smɔl.’';
+
+  @override
+  String get duaMeaning6 =>
+      'Gɔd fɔ ɔp, di wan we rili de kɔntrol. [Prɔfɛt], nɔ rɔsh fɔ rid bifo di rivyu dɔn ful-ɔp bɔt se, ‘Masta, mek a no mɔ!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Se [Prɔfɛt], ‘Masta, fɔgiv ɛn sɔri: Yu gɛt sɔri-at pas ɔlman.’';
+
+  @override
+  String get duaMeaning8 =>
+      'di wan dɛn we de pre se, ‘Wi Masta, gi wi gladi at pan wi man ɔ wɛf ɛn pikin dɛn. Mek wi gud ɛgzampul to di wan dɛn we no Yu’.';
+
+  @override
   String get morningZikr => 'Mɔnin Zikr';
 
   @override

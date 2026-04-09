@@ -211,6 +211,38 @@ class AppLocalizationsSq extends AppLocalizations {
   String get dailyZikr => 'Zikri ditor';
 
   @override
+  String get duaMeaning1 =>
+      'të tjerët luten: \"Zoti ynë, na jep të mira në këtë botë dhe në botën tjetër dhe na ruaj nga dënimi i zjarrit\".';
+
+  @override
+  String get duaMeaning2 =>
+      'Zoti nuk e ngarkon asnjë shpirt me më shumë sesa mund të përballojë: secili fiton çdo të mirë që ka bërë dhe vuan të këqijat e tij - \"Zot, mos na merr në detyrë nëse harrojmë ose gabojmë\". O Zot, mos na ngarko si i ngarkove ata që ishin para nesh. Zot, mos na ngarko me më shumë sesa kemi forcë për të përballuar. Na fal, na fal dhe na mëshiro. Ti je Mbrojtësi ynë, prandaj na ndihmo kundër mosbesimtarëve!”';
+
+  @override
+  String get duaMeaning3 =>
+      '“Zoti ynë, mos i lër zemrat tona të devijojnë pasi na ke udhëzuar. Na jep mëshirën Tënde: Ti je Gjithë Dhuruesi.';
+
+  @override
+  String get duaMeaning4 =>
+      'Zot, më dhëntë që unë dhe pasardhësit e mi ta mbajmë namazin. Zoti ynë, pranoje kërkesën time.';
+
+  @override
+  String get duaMeaning5 =>
+      'dhe uli krahun tënd me përulësi ndaj tyre në mirësi dhe thuaj: \"Zot, ki mëshirë për ta, ashtu siç u kujdesën për mua kur isha i vogël\".';
+
+  @override
+  String get duaMeaning6 =>
+      'i lartësuar qoftë Perëndia, ai që është me të vërtetë në kontroll. [Pejgamber], mos nxito të recitosh para se të përfundojë shpallja, por thuaj: \"Zot, më shto diturinë!\"';
+
+  @override
+  String get duaMeaning7 =>
+      'Thuaj [Profetit]: \"Zot, fal dhe mëshiro: Ti je më i mëshirshmi nga të gjithë\".';
+
+  @override
+  String get duaMeaning8 =>
+      'ata që luten: “Zoti ynë, na jep gëzim me bashkëshortet dhe pasardhësit tanë. Na bëj shembuj të mirë për ata që janë të vetëdijshëm për Ty”.';
+
+  @override
   String get morningZikr => 'Zikri i mëngjesit';
 
   @override

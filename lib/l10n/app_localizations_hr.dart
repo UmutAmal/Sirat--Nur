@@ -210,6 +210,38 @@ class AppLocalizationsHr extends AppLocalizations {
   String get dailyZikr => 'Dnevni zikr';
 
   @override
+  String get duaMeaning1 =>
+      'drugi mole: ‘Gospodaru naš, podari nam dobro i na ovom i na onom svijetu i sačuvaj nas patnje u ognju.’';
+
+  @override
+  String get duaMeaning2 =>
+      'Bog ne opterećuje nijednu dušu s više nego što ona može podnijeti: svaka dobiva dobro što je učinila, a trpi svoje zlo- ‘Gospodine, nemoj nas osuditi ako zaboravimo ili pogriješimo. Gospodaru, nemoj nas tovariti kao što si tovario one prije nas. Gospodine, ne opterećuj nas više nego što imamo snage podnijeti. Pomiluj nas, oprosti nam i smiluj nam se. Ti si naš zaštitnik, pa nas pomozi protiv nevjernika.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Gospodaru naš, ne dopusti srcima našim da skrenu nakon što si nas na pravi put uputio. Udijeli nam Svoju milost: Ti si Onaj koji uvijek daješ.';
+
+  @override
+  String get duaMeaning4 =>
+      'Gospodine, daj da ja i moje potomstvo nastavimo molitvu. Gospodaru naš, primi moju molbu.';
+
+  @override
+  String get duaMeaning5 =>
+      'i spusti svoje krilo u poniznosti prema njima u dobroti i reci: ‘Gospodine, smiluj im se, kao što su oni brinuli o meni kad sam bio mali.’';
+
+  @override
+  String get duaMeaning6 =>
+      'uzvišen neka je Bog, onaj koji uistinu ima kontrolu. [Poslaniče], nemoj žuriti s recitiranjem prije nego što je objava u potpunosti potpuna nego reci: ‘Gospodaru, povećaj mi znanje!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Reci [Poslanik]: ‘Gospodaru, oprosti i smiluj se: Ti si najmilostiviji od svih.’';
+
+  @override
+  String get duaMeaning8 =>
+      'oni koji mole: \'Gospodaru naš, podari nam radost u supružnicima i potomcima našim. Učini nas dobrim primjerom onima koji su Te svjesni.';
+
+  @override
   String get morningZikr => 'Jutarnji zikr';
 
   @override

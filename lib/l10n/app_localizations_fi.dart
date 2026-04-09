@@ -211,6 +211,38 @@ class AppLocalizationsFi extends AppLocalizations {
   String get dailyZikr => 'Päivittäinen Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'toiset rukoilevat: \"Herramme, anna meille hyvää tässä maailmassa ja tuonpuoleisessa ja varjele meitä tulen piinalta.\"';
+
+  @override
+  String get duaMeaning2 =>
+      'Jumala ei kuormita ketään sielua enempää kuin se jaksaa kantaa: jokainen voittaa tekemänsä hyvän ja kärsii sen pahan - \'Herra, älä ota meitä tehtävään, jos unohdamme tai teemme virheitä. Herra, älä kuormita meitä niin kuin kuormitat niitä, jotka ennen meitä. Herra, älä kuormita meitä enempää kuin meillä on voimaa kantaa. Anna meille anteeksi, anna meille anteeksi ja armahda meitä. Sinä olet suojelijamme, joten auta meitä epäuskoisia vastaan.';
+
+  @override
+  String get duaMeaning3 =>
+      '\"Herramme, älä anna sydämemme poiketa, kun olet opastanut meitä. Suo meille armosi: Sinä olet aina antava.';
+
+  @override
+  String get duaMeaning4 =>
+      'Herra, anna minun ja jälkeläiseni jatkaa rukousta. Herramme, hyväksy pyyntöni.';
+
+  @override
+  String get duaMeaning5 =>
+      'ja laske siipesi nöyrästi heitä kohtaan ystävällisyydessä ja sano: \'Herra, armahda heitä, niin kuin he pitivät minusta huolta, kun olin pieni.';
+
+  @override
+  String get duaMeaning6 =>
+      'ylistetty olkoon Jumala, joka todella hallitsee. [Profeetta], älä kiirehdi lausumaan ennen kuin ilmoitus on täysin valmis, vaan sano: \'Herra, lisää minua tiedossani!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Sano [profeetta]: \'Herra, anna anteeksi ja ole armollinen: Sinä olet armollisin kaikista.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'ne, jotka rukoilevat: \'Herra, anna meille iloa puolisoistamme ja jälkeläisistämme. Tee meistä hyviä esimerkkejä niille, jotka ovat tietoisia sinusta.';
+
+  @override
   String get morningZikr => 'Huomenta Zikr';
 
   @override

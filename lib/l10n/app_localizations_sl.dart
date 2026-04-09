@@ -210,6 +210,38 @@ class AppLocalizationsSl extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'drugi molijo: \'Naš Gospod, daj nam dobro na tem svetu in na onstranstvu in nas varuj pred mukami ognja.\'';
+
+  @override
+  String get duaMeaning2 =>
+      'Bog nobene duše ne obremenjuje z več, kot lahko prenese: vsaka pridobi vse, kar je dobrega storila, in trpi zaradi slabega – ‘Gospod, ne obremenjuj nas, če pozabljamo ali delamo napake. Gospod, ne obremenjuj nas, kakor si obremenjeval tiste pred nami. Gospod, ne obremenjuj nas z več, kot imamo moči nositi. Oprosti nam, odpusti nam in usmili se nas. Ti si naš zaščitnik, zato nam pomagaj proti nevernikom.«';
+
+  @override
+  String get duaMeaning3 =>
+      '\'Naš Gospod, ne dovoli, da naša srca skrenejo, potem ko si nas vodil. Podeli nam svoje usmiljenje: Ti si tisti, ki vedno daje.';
+
+  @override
+  String get duaMeaning4 =>
+      'Gospod, daj, da jaz in moje potomstvo nadaljujemo z molitvijo. Gospod naš, sprejmi mojo prošnjo.';
+
+  @override
+  String get duaMeaning5 =>
+      'in spusti svoje krilo v ponižnosti proti njim v prijaznosti in reci: \'Gospod, usmili se jih, tako kot so skrbeli zame, ko sem bil majhen.\'';
+
+  @override
+  String get duaMeaning6 =>
+      'vzvišen bodi Bog, tisti, ki resnično obvladuje. [Prerok], ne hiti recitirati, preden je razodetje popolnoma dokončano, ampak reci: \'Gospod, pomnoži me v spoznanju!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Reci [prerok]: \'Gospod, odpusti in usmili se: ti si najbolj usmiljen od vseh.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'tisti, ki molijo: \'Naš Gospod, daj nam veselje v naših zakoncih in potomcih. Naredi nas za dober zgled tistim, ki se Te zavedajo.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

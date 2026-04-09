@@ -210,6 +210,38 @@ class AppLocalizationsCo extends AppLocalizations {
   String get dailyZikr => 'Zikr ogni ghjornu';
 
   @override
+  String get duaMeaning1 =>
+      'altri pricanu: \"Nostru Signore, dà ci bè in stu mondu è in l\'altru, è pruteggeci da u turmentu di u focu\".';
+
+  @override
+  String get duaMeaning2 =>
+      'Diu ùn carica micca l\'ànima di più di ciò ch\'ella pò suppurtà: ognunu guadagna tuttu ciò chì hà fattu u bonu, è soffre u so male - \"Signore, ùn ci pigliate micca à u travagliu s\'ellu ci scurdemu o sbagliemu\". Signore, ùn ci impieghja micca cum\'è tù l\'avete caricatu quelli davanti à noi. Signore, ùn ci carica più di ciò chì avemu a forza di suppurtà. Pardonaci, perdonaci, è abbi pietà di noi. Siete u nostru Protettore, dunque aiutateci contr\'à i miscredenti.';
+
+  @override
+  String get duaMeaning3 =>
+      '\"Nostru Signore, ùn lasciate micca i nostri cori deviate dopu chì ci avete guidatu. Concedeci a vostra misericordia: Tu sì u sempre chì dà.';
+
+  @override
+  String get duaMeaning4 =>
+      'Signore, cuncede chì eiu è i mo figlioli pudemu cuntinuà a preghiera. Nostru Signore, accetta a mo dumanda.';
+
+  @override
+  String get duaMeaning5 =>
+      'è abbassate a vostra ala in umiltà versu elli in a gentilezza è dite: \"Signore, abbi pietà di elli, cum\'elli anu cura di mè quandu era chjucu\".';
+
+  @override
+  String get duaMeaning6 =>
+      'esaltatu sia Diu, quellu chì hè veramente in cuntrollu. [Profeta], ùn vi precipite micca à recità prima chì a rivelazione hè cumplettamente cumpleta, ma dite: \"Signore, aumentatemi in a cunniscenza!\"';
+
+  @override
+  String get duaMeaning7 =>
+      'Dite [Profeta]: \"Signore, perdona è abbi pietà: sì u più misericordioso di tutti\".';
+
+  @override
+  String get duaMeaning8 =>
+      'quelli chì pricanu, \"Nostru Signore, dà noi gioia in i nostri sposi è prole. Fateci boni esempii à quelli chì sò cuscenti di tè\'.';
+
+  @override
   String get morningZikr => 'Zikr matina';
 
   @override

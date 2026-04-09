@@ -210,6 +210,32 @@ class AppLocalizationsZh extends AppLocalizations {
   String get dailyZikr => '每日则克尔';
 
   @override
+  String get duaMeaning1 => '其他人则祈祷：“我们的主，请赐予我们今世和后世的美好，并保护我们免受火焰的折磨。”';
+
+  @override
+  String get duaMeaning2 =>
+      '上帝不会给任何灵魂带来超出其承受能力的负担：每个人都会获得其所做的一切善行，并承受其恶行——“主啊，如果我们忘记或犯了错误，请不要责怪我们。”主啊，不要像你给我们之前的人带来负担一样给我们带来负担。主啊，不要让我们承受超出我们承受能力的负担。饶恕我们，饶恕我们，怜悯我们。你是我们的保护者，所以请帮助我们对抗异教徒。”';
+
+  @override
+  String get duaMeaning3 => '‘我们的主啊，在您引导我们之后，不要让我们的心偏离。请赐予我们您的仁慈：您是永恒的给予者。';
+
+  @override
+  String get duaMeaning4 => '主啊，求你让我和我的后代能够继续祷告。我们的主啊，请接受我的请求。';
+
+  @override
+  String get duaMeaning5 => '并以谦卑和仁慈的态度向他们放下你的翅膀，说：“主啊，怜悯他们，就像我小时候他们照顾我一样。”';
+
+  @override
+  String get duaMeaning6 =>
+      '尊崇上帝，真正掌管一切的上帝。 [先知]，在启示完全完成之前，不要急于背诵，而要说：“主啊，请增加我的知识！”';
+
+  @override
+  String get duaMeaning7 => '说[先知]：“主啊，宽恕并怜悯：你是最仁慈的。”';
+
+  @override
+  String get duaMeaning8 => '那些祈祷的人：‘我们的主，求你使我们的配偶和子孙喜乐。让我们成为那些认识您的人的好榜样。”';
+
+  @override
   String get morningZikr => '早晨则克尔';
 
   @override
@@ -1678,6 +1704,32 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get dailyZikr => '每日则克尔';
 
   @override
+  String get duaMeaning1 => '其他人则祈祷：“我们的主，请赐予我们今世和后世的美好，并保护我们免受火焰的折磨。”';
+
+  @override
+  String get duaMeaning2 =>
+      '上帝不会给任何灵魂带来超出其承受能力的负担：每个人都会获得其所做的一切善行，并承受其恶行——“主啊，如果我们忘记或犯了错误，请不要责怪我们。”主啊，不要像你给我们之前的人带来负担一样给我们带来负担。主啊，不要让我们承受超出我们承受能力的负担。饶恕我们，饶恕我们，怜悯我们。你是我们的保护者，所以请帮助我们对抗异教徒。”';
+
+  @override
+  String get duaMeaning3 => '‘我们的主啊，在您引导我们之后，不要让我们的心偏离。请赐予我们您的仁慈：您是永恒的给予者。';
+
+  @override
+  String get duaMeaning4 => '主啊，求你让我和我的后代能够继续祷告。我们的主啊，请接受我的请求。';
+
+  @override
+  String get duaMeaning5 => '并以谦卑和仁慈的态度向他们放下你的翅膀，说：“主啊，怜悯他们，就像我小时候他们照顾我一样。”';
+
+  @override
+  String get duaMeaning6 =>
+      '尊崇上帝，真正掌管一切的上帝。 [先知]，在启示完全完成之前，不要急于背诵，而要说：“主啊，请增加我的知识！”';
+
+  @override
+  String get duaMeaning7 => '说[先知]：“主啊，宽恕并怜悯：你是最仁慈的。”';
+
+  @override
+  String get duaMeaning8 => '那些祈祷的人：‘我们的主，求你使我们的配偶和子孙喜乐。让我们成为那些认识您的人的好榜样。”';
+
+  @override
   String get morningZikr => '早晨则克尔';
 
   @override
@@ -3144,6 +3196,32 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get dailyZikr => '每日則克爾';
+
+  @override
+  String get duaMeaning1 => '其他人則祈禱：“我們的主，請賜予我們今世和後世的美好，並保護我們免受火焰的折磨。”';
+
+  @override
+  String get duaMeaning2 =>
+      '上帝不會給任何靈魂帶來超出其承受能力的負擔：每個人都會獲得其所做的一切善行，並承受其惡行——「主啊，如果我們忘記或犯了錯誤，請不要責怪我們。」主啊，不要像你給我們之前的人帶來負擔一樣給我們帶來負擔。主啊，不要讓我們承受超出我們承受能力的負擔。饶恕我们，饶恕我们，怜悯我们。你是我們的保護者，所以請幫助我們對抗異教徒。 」';
+
+  @override
+  String get duaMeaning3 => '‘我們的主啊，在祢引導我們之後，不要讓我們的心偏離。請賜給我們您的仁慈：您是永恆的給予者。';
+
+  @override
+  String get duaMeaning4 => '主啊，求祢讓我和我的後裔能夠繼續禱告。我們的主啊，請接受我的請求。';
+
+  @override
+  String get duaMeaning5 => '並以謙卑和仁慈的態度向他們放下你的翅膀，說：“主啊，憐憫他們，就像我小時候他們照顧我一樣。”';
+
+  @override
+  String get duaMeaning6 =>
+      '尊崇上帝，真正掌管一切的上帝。 [先知]，在啟示完全完成之前，不要急於背誦，而要說：“主啊，請增加我的知識！”';
+
+  @override
+  String get duaMeaning7 => '說[先知]：“主啊，寬恕並憐憫：你是最仁慈的。”';
+
+  @override
+  String get duaMeaning8 => '那些祈禱的人：『我們的主，求你使我們的配偶和子孫喜樂。讓我們成為那些認識您的人的好榜樣。 」';
 
   @override
   String get morningZikr => '早晨則克爾';

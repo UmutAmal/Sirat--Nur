@@ -212,6 +212,38 @@ class AppLocalizationsHu extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'mások így imádkoznak: „Uram, adj nekünk jót ezen a világon és a túlvilágon, és óvj meg minket a Tűz gyötrelmétől.”';
+
+  @override
+  String get duaMeaning2 =>
+      'Isten egyetlen lelket sem terhel többel, mint amennyit elbír: mindenki elnyeri azt a jót, amit tett, és elszenvedi a rosszat – „Uram, ne vígy minket a feladatra, ha elfelejtünk vagy hibázunk. Uram, ne terhelj minket úgy, ahogy az előttünk állókat. Uram, ne terhelj minket többel, mint amennyi erőnk van elviselni. Bocsáss meg nekünk, bocsáss meg nekünk, és könyörülj rajtunk. Te vagy a Védelmezőnk, úgyhogy segíts minket a hitetlenekkel szemben.';
+
+  @override
+  String get duaMeaning3 =>
+      '„Uram, ne hagyd, hogy szívünk elfajuljon, miután vezettél minket. Add meg nekünk irgalmadat: Te vagy az örökkévaló.';
+
+  @override
+  String get duaMeaning4 =>
+      'Uram, add, hogy én és utódaim folytathassuk az imát. Urunk, fogadd el kérésemet.';
+
+  @override
+  String get duaMeaning5 =>
+      'és engedd le szárnyadat alázattal feléjük, és mondd: „Uram, könyörülj rajtuk, ahogyan ők is törődtek velem, amikor kicsi voltam.”';
+
+  @override
+  String get duaMeaning6 =>
+      'magasztos legyen Isten, aki valóban irányít. [Próféta], ne rohanj szavalni, mielőtt a kinyilatkoztatás teljesen befejeződött, hanem mondd: „Uram, gyarapíts tudásomban!”';
+
+  @override
+  String get duaMeaning7 =>
+      'Mondd [Próféta]: „Uram, bocsáss meg és irgalmazz: Te vagy a legkönyörületesebb mindenek között.”';
+
+  @override
+  String get duaMeaning8 =>
+      'akik így imádkoznak: Urunk, adj nekünk örömet házastársunkban és utódainkban. Tégy jó példát azoknak, akik tisztában vannak veled.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

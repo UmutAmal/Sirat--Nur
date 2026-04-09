@@ -211,6 +211,38 @@ class AppLocalizationsOm extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'kaan immoo, ‘Yaa Gooftaa keenya adunyaa fi Aakhiratti toltuu nuuf kenni, azaaba ibiddaa irraa nu eegi’ jedhanii kadhatu.';
+
+  @override
+  String get duaMeaning2 =>
+      'Waaqayyo lubbuu kamiyyuu kan isheen baachuu dandeessu caalaa hin ba’u: tokkoon tokkoon isaanii waan gaarii hojjete hunda argatu, hamaa isaas ni rakkata- ‘ Gooftaa, yoo daganne ykn dogoggorre hojiitti nu hin fudhatin. Gooftaa akkuma warra nu duraa ba\'aa itti baate nutti hin ba\'iin. Gooftaa humna baachuu qabnu caalaa nutti hin ba\'iin. Dhiifama nuuf godhi, nuuf araarami. Ati Eegduu keenya waan taateef kaafiroota irraa nu gargaari’ jedheera.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Yaa Gooftaa keenya erga nu qajeelchitee booda qalbiin keenya hin maqin. Araarama Kee nuuf kenni: Ati yeroo hundumaa kan kennudha.';
+
+  @override
+  String get duaMeaning4 =>
+      'Gooftaa anaa fi sanyii koo kadhannaa akka itti fufnu naaf kenni. Yaa Gooftaa keenya gaaffii koo fudhadhu.';
+
+  @override
+  String get duaMeaning5 =>
+      'akkasumas gaarummaadhaan gara isaaniitti gad of deebisuudhaan baallee kee gadi qabdee, ‘Akkuma yeroon xiqqaa turetti naaf kunuunsan, isaaniif araarami’ jedhi.';
+
+  @override
+  String get duaMeaning6 =>
+      'Waaqayyo, inni dhuguma to’achaa jiru ol haa ta’u. [Raajii], utuu mul’anni guutummaatti hin xumuramin qara’uuf hin ariifatin, ‘Gooftaa beekumsa na dabali!’ jedhi malee!';
+
+  @override
+  String get duaMeaning7 =>
+      '[Nabiyyii] akkana jedhi, ‘Gooftaa, dhiifama godhi, araaramis: Ati hunda caalaa araaramaadha’.';
+
+  @override
+  String get duaMeaning8 =>
+      'warra kadhatan, ‘Yaa Gooftaa keenya haadha manaa fi sanyii keenyatti gammachuu nuuf kenni. Warra Si beekaniif fakkeenya gaarii nuuf taasisi’.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

@@ -210,6 +210,38 @@ class AppLocalizationsHa extends AppLocalizations {
   String get dailyZikr => 'Zikiri kullum';
 
   @override
+  String get duaMeaning1 =>
+      'wasu kuma suna cewa, ‘Ya Ubangijinmu, Ka bamu abu mai kyau a duniya da lahira, kuma ka kare mu daga azabar wuta.';
+
+  @override
+  String get duaMeaning2 =>
+      'Allah ba Ya kallafa wa wani rai fiye da abin da zai iya dauka: kowanne yana samun duk abin da ya aikata na alheri, kuma yana shan wahalarsa – ‘Ya Ubangiji, kada ka dauke mu a kan aiki idan muka manta ko muka yi kuskure. Ya Ubangiji kada ka dora mu kamar yadda Ka dora wa wadanda suka gabace mu nauyi. Ya Ubangiji, kada ka yi mana nauyi fiye da yadda muke da ƙarfin ɗauka. Ka gafarta mana, ka gafarta mana, kuma ka yi mana rahama. Kai ne Majiɓincinmu, sai ka taimake mu a kan kafirai.';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Ya Ubangijinmu kada ka karkatar da zukatanmu bayan ka shiryar da mu. Ka ba mu rahamarKa: Kai ne Mai bayarwa.';
+
+  @override
+  String get duaMeaning4 =>
+      'Ya Ubangiji ka ba ni da zuriyata mu tsai da sallah. Ubangijinmu, ka karɓi roƙota.';
+
+  @override
+  String get duaMeaning5 =>
+      'Kuma ka sassauta fikafikanka a kansu da kyautatawa, kuma ka ce: ‘Ya Ubangiji!';
+
+  @override
+  String get duaMeaning6 =>
+      'Tsarki ya tabbata ga Allah, Wanda ya kasance mai iko da gaskiya. (Annabi) kada ka yi gaggawar karantawa kafin wahayi ya cika, amma ka ce: ‘Ya Ubangiji ka kara mini ilimi!';
+
+  @override
+  String get duaMeaning7 =>
+      'Ka ce [Annabi], ‘Ya Ubangiji, Ka yi gafara kuma ka yi rahama, Kai ne Mafi rahamar kowa.';
+
+  @override
+  String get duaMeaning8 =>
+      'wadanda suke cewa: ‘Ya Ubangijinmu! Ka sanya mana misalai masu kyau ga waxanda suka san Ka’.';
+
+  @override
   String get morningZikr => 'Zikirin safe';
 
   @override

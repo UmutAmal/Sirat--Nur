@@ -529,6 +529,44 @@ void main() {
         }
       }
     });
+
+    test('safe priority locales do not fall back to English for bundled dua meanings', () {
+      const duaSafeLocales = [
+        'tr',
+        'de',
+        'fr',
+        'es',
+        'ar',
+        'da',
+        'he',
+        'ja',
+        'nb',
+        'nn',
+        'no',
+        'pt',
+        'ru',
+        'vi',
+        'zh',
+        'zh_CN',
+        'zh_TW',
+      ];
+      final localizedKeys = List<String>.generate(
+        8,
+        (index) => 'duaMeaning${index + 1}',
+      );
+
+      for (final locale in duaSafeLocales) {
+        final arb = _readArb('lib/l10n/app_$locale.arb');
+
+        for (final key in localizedKeys) {
+          expect(
+            arb[key],
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+        }
+      }
+    });
   });
 }
 

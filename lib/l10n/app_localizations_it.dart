@@ -212,6 +212,38 @@ class AppLocalizationsIt extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'altri pregano: “Nostro Signore, donaci il bene in questo mondo e nell’Aldilà, e proteggici dal tormento del Fuoco”.';
+
+  @override
+  String get duaMeaning2 =>
+      'Dio non carica un\'anima più di quanto possa sopportare: ciascuno guadagna tutto il bene che ha fatto, e soffre il male. \"Signore, non rimproverarci se dimentichiamo o commettiamo errori\". Signore, non gravarci come hai gravato su coloro che ci hanno preceduto. Signore, non caricarci di più di quanto abbiamo la forza di sopportare. Perdonaci, perdonaci e abbi pietà di noi. Tu sei il nostro protettore, quindi aiutaci contro i miscredenti.\'';
+
+  @override
+  String get duaMeaning3 =>
+      '“Nostro Signore, non lasciare che i nostri cuori si allontanino dopo che Tu ci hai guidato. Concedici la tua misericordia: tu sei il sempre donatore.';
+
+  @override
+  String get duaMeaning4 =>
+      'Signore, fa\' che io e la mia discendenza continuiamo a pregare. Nostro Signore, accetta la mia richiesta.';
+
+  @override
+  String get duaMeaning5 =>
+      'e abbassa la tua ala con umiltà verso di loro con gentilezza e dì: \"Signore, abbi pietà di loro, proprio come si presero cura di me quando ero piccolo\".';
+
+  @override
+  String get duaMeaning6 =>
+      'esaltato sia Dio, colui che ha veramente il controllo. [Profeta], non affrettarti a recitare prima che la rivelazione sia completamente completa, ma dì: “Signore, accrescimi in conoscenza!”';
+
+  @override
+  String get duaMeaning7 =>
+      'Di’ [al Profeta]: “Signore, perdona e abbi pietà: tu sei il più misericordioso di tutti”.';
+
+  @override
+  String get duaMeaning8 =>
+      'coloro che pregano: “Nostro Signore, donaci la gioia delle nostre spose e della nostra prole”. Facci buon esempio a coloro che ti conoscono”.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override

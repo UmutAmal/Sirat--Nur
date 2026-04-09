@@ -210,6 +210,38 @@ class AppLocalizationsFy extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'oaren bidde: ‘Us Hear, jou ús it goede yn dizze wrâld en yn it Hiernamaals, en beskerm ús tsjin de marteling fan it Fjoer.’';
+
+  @override
+  String get duaMeaning2 =>
+      'God belêstet gjin siel mei mear as se ferneare kin: elk wint wat goed er dien hat, en lijt syn kwea- ‘Hear, nim ús net oan as wy ferjitte of flaters meitsje. Hear, belêste ús net sa\'t Jo dy foar ús hawwe. Hear, belêste ús net mei mear as wy krêft hawwe om te dragen. Ferjou ús, ferjou ús, en hawwe genede oer ús. Do bist ús Beskermer, dus help ús tsjin de ûnleauwigen.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Us Hear, lit ús hert net ôfwike neidat Jo ús liede hawwe. Jou ús jo genede: Jo binne de ivich jaan.';
+
+  @override
+  String get duaMeaning4 =>
+      'Hear, jou dat ik en myn neiteam it gebed folhâlde meie. Us Hear, akseptearje myn fersyk.';
+
+  @override
+  String get duaMeaning5 =>
+      'en del dyn wjuk yn dimmenens tsjin harren yn goedernichheid del en sis: ‘Hear, haw genede oer harren, krekt sa’t se my fersoarge doe’t ik lyts wie’.';
+
+  @override
+  String get duaMeaning6 =>
+      'ferheven wêze God, dejinge dy\'t wier yn kontrôle is. [Profeet], haast net om te recitearjen foardat de iepenbiering folslein kompleet is, mar sis: \'Hear, fergrutsje my yn kennis!\'';
+
+  @override
+  String get duaMeaning7 =>
+      'Sis [profeet], \'Hear, ferjou en haw barmhertichheid: Jo binne de barmhertichste fan allegear.\'';
+
+  @override
+  String get duaMeaning8 =>
+      'dyjingen dy\'t bidde: \'Us Hear, jow ús freugde yn ús breidspearen en neiteam. Meitsje ús goede foarbylden foar dyjingen dy\'t jo bewust binne\'.';
+
+  @override
   String get morningZikr => 'Moarn Zikr';
 
   @override

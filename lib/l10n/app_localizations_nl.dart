@@ -210,6 +210,38 @@ class AppLocalizationsNl extends AppLocalizations {
   String get dailyZikr => 'Dagelijkse Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'Anderen bidden: ‘Onze Heer, geef ons het goede in deze wereld en in het Hiernamaals, en bescherm ons tegen de kwelling van het Vuur.’';
+
+  @override
+  String get duaMeaning2 =>
+      'God belast geen enkele ziel met meer dan zij kan dragen: ieder verkrijgt al het goede dat hij heeft gedaan, en lijdt onder zijn slechte daden. ‘Heer, reken ons niet aan als we vergeten of fouten maken. Heer, belast ons niet zoals U degenen vóór ons belastte. Heer, belast ons niet met meer dan we kracht hebben om te dragen. Vergeef ons, vergeef ons en heb medelijden met ons. Jij bent onze Beschermer, dus help ons tegen de ongelovigen.’';
+
+  @override
+  String get duaMeaning3 =>
+      '‘Onze Heer, laat ons hart niet afwijken nadat U ons heeft geleid. Schenk ons ​​Uw genade: U bent de Altijd Gevende.';
+
+  @override
+  String get duaMeaning4 =>
+      'Heer, geef dat ik en mijn nakomelingen het gebed mogen voortzetten. Onze Heer, accepteer mijn verzoek.';
+
+  @override
+  String get duaMeaning5 =>
+      'en laat uw vleugel in nederigheid en vriendelijkheid naar hen neerslaan en zeg: ‘Heer, heb medelijden met hen, net zoals zij voor mij zorgden toen ik klein was.’';
+
+  @override
+  String get duaMeaning6 =>
+      'Verheven zij God, degene die werkelijk de controle heeft. [Profeet], haast je niet om te reciteren voordat de openbaring volledig voltooid is, maar zeg: ‘Heer, vermeerder mij in kennis!’';
+
+  @override
+  String get duaMeaning7 =>
+      'Zeg [Profeet]: ‘Heer, vergeef en heb genade: U bent de meest barmhartige van allemaal.’';
+
+  @override
+  String get duaMeaning8 =>
+      'degenen die bidden: ‘Onze Heer, schenk ons ​​vreugde in onze echtgenoten en nakomelingen. Maak ons ​​goede voorbeelden voor degenen die zich van U bewust zijn’.';
+
+  @override
   String get morningZikr => 'Ochtend Zikr';
 
   @override

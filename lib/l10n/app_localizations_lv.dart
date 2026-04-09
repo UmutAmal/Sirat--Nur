@@ -211,6 +211,38 @@ class AppLocalizationsLv extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
+  String get duaMeaning1 =>
+      'citi lūdz: \"Mūsu Kungs, dāvā mums labu šajā pasaulē un nākotnē un pasargā mūs no uguns mokām.\"';
+
+  @override
+  String get duaMeaning2 =>
+      'Dievs nevienai dvēselei neapgrūtina vairāk, nekā tā spēj panest: katrs iegūst visu, ko labu ir darījis, un cieš no tā sliktā – “Kungs, neņem mūs pie darba, ja mēs aizmirstam vai pieļaujam kļūdas. Kungs, neapgrūtini mūs tā, kā Tu noslogoji tos, kas bija pirms mums. Kungs, neapgrūtini mūs ar vairāk, nekā mums ir spēks panest. Piedod mums, piedod mums un apžēlojies par mums. Tu esi mūsu Aizsargs, tāpēc palīdzi mums cīnīties pret neticīgajiem.';
+
+  @override
+  String get duaMeaning3 =>
+      '“Mūsu Kungs, neļauj mūsu sirdīm novirzīties pēc tam, kad Tu mūs esi vadījis. Sniedziet mums savu žēlastību: jūs vienmēr esat dāvātājs.';
+
+  @override
+  String get duaMeaning4 =>
+      'Kungs, dod, lai es un mani pēcnācēji turpinātu lūgšanu. Mūsu Kungs, pieņem manu lūgumu.';
+
+  @override
+  String get duaMeaning5 =>
+      'un nolaid savu spārnu pazemībā pret viņiem laipnībā un saki: \"Kungs, apžēlojies par viņiem, tāpat kā viņi rūpējās par mani, kad es biju mazs.\"';
+
+  @override
+  String get duaMeaning6 =>
+      'Paaugstināts lai ir Dievs, kas patiesi valda. [Pravietis], nesteidzies deklamēt, pirms atklāsme nav pilnībā pabeigta, bet saki: “Kungs, vairo mani zināšanās!”';
+
+  @override
+  String get duaMeaning7 =>
+      'Sakiet [Pravietis]: \"Kungs, piedod un apžēlojies: Tu esi žēlsirdīgākais no visiem.\"';
+
+  @override
+  String get duaMeaning8 =>
+      'tie, kas lūdz: \"Mūsu Kungs, dod mums prieku par mūsu laulātajiem un pēcnācējiem.\" Rādi mums labus piemērus tiem, kas Tevi zina.';
+
+  @override
   String get morningZikr => 'Morning Zikr';
 
   @override
