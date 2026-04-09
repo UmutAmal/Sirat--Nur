@@ -18,7 +18,7 @@
   "surahs": "Surahs",
   "ayahs": "Ayahs",
   "fajr": "Fajr",
-  "sunrise": "Sunrise",
+  "sunrise": "Soloppgang",
   "dhuhr": "Dhuhr",
   "asr": "Asr",
   "maghrib": "Maghrib",
@@ -74,9 +74,9 @@
   "ahkab": "Ahkam",
   "masaail": "Masa'il",
   "hadith": "Hadith",
-  "hadithCollection": "Hadith Collection",
-  "hadithBooks": "Hadith Books",
-  "searchHadith": "Search Hadith",
+  "hadithCollection": "Hadith samling",
+  "hadithBooks": "Hadith-bøker",
+  "searchHadith": "Søk etter Hadith",
   "asmaulHusna": "Asma-ul-Husna",
   "namesOfAllah": "Names of Allah",
   "liveTv": "Live TV",
@@ -298,7 +298,7 @@
   "library": "Library",
   "analytics": "Analytics",
   "dailyDuas": "Daglig Duas",
-  "essentialDuas": "{count} essential duas",
+  "essentialDuas": "{count} viktige duas",
   "@essentialDuas": {
     "placeholders": {
       "count": {
@@ -354,9 +354,9 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
-  "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
+  "chatbotOfflinePrompt": "Den bekreftede frakoblede islamske kunnskapsbasen blir fortsatt kurert. Du kan aktivere offline fallback nå, men det vil bare vise begrensede sikre meldinger inntil det hentede datasettet er klart.\n\nVil du aktivere frakoblet fallback?",
+  "chatbotOfflineSwitched": "Offline reserveback aktivert. Verifiserte lokale islamske svar er ikke klare ennå.",
+  "chatbotOfflineDownloadLabel": "Aktiver Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
@@ -449,7 +449,7 @@
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Offline Fallback",
   "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Enable Offline Fallback",
+  "chatbotDownloadLocalAi": "Aktiver Offline Fallback",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
     "placeholders": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Verifisert lokal islamsk veiledning er ikke tilgjengelig ennå. Bytt til Cloud AI for hentede svar.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Search this area",
@@ -492,7 +492,7 @@
   "placesNetworkError": "Network error. Please try again.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
-  "prayerNotificationTitle": "Time for {prayerName}",
+  "prayerNotificationTitle": "Tid for {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {
       "prayerName": {
@@ -500,7 +500,7 @@
       }
     }
   },
-  "prayerNotificationBody": "It is time to pray {prayerName}.",
+  "prayerNotificationBody": "Det er på tide å be {prayerName}.",
   "@prayerNotificationBody": {
     "placeholders": {
       "prayerName": {
@@ -509,16 +509,16 @@
     }
   },
   "duaUnavailableTitle": "Verifiserte duas er ikke tilgjengelig ennå",
-  "duaUnavailableBody": "Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.",
-  "duaCategoryQuranic": "Quranic dua",
-  "duaCategoryMorningEvening": "Morning & Evening",
+  "duaUnavailableBody": "Verifiserte daglige duas er ikke synkronisert til denne enheten ennå. Koble til skykilden for å laste inn hentede duas i stedet for en ubekreftet reserve.",
+  "duaCategoryQuranic": "Koranisk dua",
+  "duaCategoryMorningEvening": "Morgen og kveld",
   "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Protection",
-  "duaCategoryBeginning": "Beginnings",
-  "duaCategorySleep": "Sleep",
-  "duaCategoryFoodDrink": "Food & Drink",
-  "duaCategoryForgiveness": "Forgiveness",
-  "duaCategoryHome": "Home",
+  "duaCategoryProtection": "Beskyttelse",
+  "duaCategoryBeginning": "Begynnelser",
+  "duaCategorySleep": "Sove",
+  "duaCategoryFoodDrink": "Mat og drikke",
+  "duaCategoryForgiveness": "Tilgivelse",
+  "duaCategoryHome": "Hjem",
   "duaSourceBukhari": "Bukhari",
   "duaSourceMuslim": "Muslim",
   "duaSourceAbuDawud": "Abu Dawud",

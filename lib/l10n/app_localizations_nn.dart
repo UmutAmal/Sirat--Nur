@@ -63,7 +63,7 @@ class AppLocalizationsNn extends AppLocalizations {
   String get fajr => 'Fajr';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => 'Soloppgang';
 
   @override
   String get dhuhr => 'Dhuhr';
@@ -79,12 +79,12 @@ class AppLocalizationsNn extends AppLocalizations {
 
   @override
   String prayerNotificationTitle(String prayerName) {
-    return 'Time for $prayerName';
+    return 'Tid for $prayerName';
   }
 
   @override
   String prayerNotificationBody(String prayerName) {
-    return 'It is time to pray $prayerName.';
+    return 'Det er på tide å be $prayerName.';
   }
 
   @override
@@ -222,13 +222,13 @@ class AppLocalizationsNn extends AppLocalizations {
   String get hadith => 'Hadith';
 
   @override
-  String get hadithCollection => 'Hadith Collection';
+  String get hadithCollection => 'Hadith samling';
 
   @override
-  String get hadithBooks => 'Hadith Books';
+  String get hadithBooks => 'Hadith-bøker';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => 'Søk etter Hadith';
 
   @override
   String get asmaulHusna => 'Asma-ul-Husna';
@@ -785,7 +785,7 @@ class AppLocalizationsNn extends AppLocalizations {
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count viktige duas';
   }
 
   @override
@@ -794,34 +794,34 @@ class AppLocalizationsNn extends AppLocalizations {
 
   @override
   String get duaUnavailableBody =>
-      'Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.';
+      'Verifiserte daglige duas er ikke synkronisert til denne enheten ennå. Koble til skykilden for å laste inn hentede duas i stedet for en ubekreftet reserve.';
 
   @override
-  String get duaCategoryQuranic => 'Quranic dua';
+  String get duaCategoryQuranic => 'Koranisk dua';
 
   @override
-  String get duaCategoryMorningEvening => 'Morning & Evening';
+  String get duaCategoryMorningEvening => 'Morgen og kveld';
 
   @override
   String get duaCategoryTasbih => 'Tasbih';
 
   @override
-  String get duaCategoryProtection => 'Protection';
+  String get duaCategoryProtection => 'Beskyttelse';
 
   @override
-  String get duaCategoryBeginning => 'Beginnings';
+  String get duaCategoryBeginning => 'Begynnelser';
 
   @override
-  String get duaCategorySleep => 'Sleep';
+  String get duaCategorySleep => 'Sove';
 
   @override
-  String get duaCategoryFoodDrink => 'Food & Drink';
+  String get duaCategoryFoodDrink => 'Mat og drikke';
 
   @override
-  String get duaCategoryForgiveness => 'Forgiveness';
+  String get duaCategoryForgiveness => 'Tilgivelse';
 
   @override
-  String get duaCategoryHome => 'Home';
+  String get duaCategoryHome => 'Hjem';
 
   @override
   String get duaSourceBukhari => 'Bukhari';
@@ -971,14 +971,14 @@ class AppLocalizationsNn extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'Den bekreftede frakoblede islamske kunnskapsbasen blir fortsatt kurert. Du kan aktivere offline fallback nå, men det vil bare vise begrensede sikre meldinger inntil det hentede datasettet er klart.\n\nVil du aktivere frakoblet fallback?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Offline reserveback aktivert. Verifiserte lokale islamske svar er ikke klare ennå.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
+  String get chatbotOfflineDownloadLabel => 'Aktiver Offline Fallback';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1100,7 +1100,7 @@ class AppLocalizationsNn extends AppLocalizations {
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Enable Offline Fallback';
+  String get chatbotDownloadLocalAi => 'Aktiver Offline Fallback';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1113,7 +1113,7 @@ class AppLocalizationsNn extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[OFFLINE] Verifisert lokal islamsk veiledning er ikke tilgjengelig ennå. Bytt til Cloud AI for hentede svar.';
 
   @override
   String get mosques => 'Mosques';

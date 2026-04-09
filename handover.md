@@ -2861,3 +2861,49 @@
 ### Sonraki Adım
 - Sıradaki turda kalan `65` locale içinden resmî veya sibling kaynakla güvenilir biçimde eşlenebilenler ayıklanacak.
 - EN referansında kalması gereken belirsiz rare locale’ler için ayrı audit matrisi hazırlanacak.
+
+## 2026-04-09 TUR-74 — Sync Safe Variant Locale Files From Sibling Sources
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\sync_variant_arb_fallbacks.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/sync_variant_arb_fallbacks.dart) eklendi; güvenli varyant çiftlerinde İngilizce kalan ARB anahtarlarını sibling locale’den otomatik devralıyor.
+- Araç bu turda [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nb.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nb.arb) <= [A:\Way of Allah\sirat_i_nur\lib\l10n\app_no.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_no.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nn.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nn.arb) <= [A:\Way of Allah\sirat_i_nur\lib\l10n\app_no.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_no.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tw.arb) <= [A:\Way of Allah\sirat_i_nur\lib\l10n\app_ak.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_ak.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_zh.arb) <= [A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh_CN.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_zh_CN.arb) eşleşmelerini uyguladı.
+- Sonuçta `nb` ve `nn` için `21`, `tw` için `147`, `zh` için `157` İngilizce fallback anahtarı sibling dosyalardan dolduruldu.
+- [A:\Way of Allah\sirat_i_nur\test\arb_variant_fallback_sync_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_variant_fallback_sync_test.dart) eklendi; bu dört varyantta kaynak sibling dosya çevrilmişken hedefin İngilizce kalması engellendi.
+- Generated localization dosyaları da senkronlandı: [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_nb.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_nb.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_nn.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_nn.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_tw.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_tw.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_zh.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_zh.dart).
+
+### Neden Yapıldı
+- Önceki turlarda tek tek dini anahtar düzeltmeleri yapılmış olsa da bu varyant locale dosyalarının büyük bölümü hâlâ İngilizce UI metinleri taşıyordu.
+- Kök sebep, güvenli varyant diller için mevcut sibling locale çevirilerinin toplu olarak devralınmamasıydı.
+- Bu dört eşleşme için sibling kaynak repo içinde zaten vardı ve güven düzeyi yüksekti; tek tek anahtar kapatmak yerine sistematik sync daha yüksek etki sağladı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\sync_variant_arb_fallbacks.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_nb.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_nn.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_nb.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_nn.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_tw.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_zh.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_variant_fallback_sync_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `nb`, `nn`, `tw` ve `zh` locale’lerinde uygulamanın çok daha büyük bir yüzeyi artık İngilizce fallback göstermiyor.
+- Bu dört locale için sibling kaynak çevrilmişken hedef dosyanın tekrar İngilizce kalması testle engellendi.
+- Rare hadith unavailable fallback sayısı `65` olarak kaldı; fakat bu turda sadece dini üç anahtar değil, genel UI kapsaması da geniş ölçekte iyileştirildi.
+
+### Test Sonucu
+- `dart run tool/sync_variant_arb_fallbacks.dart` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_variant_fallback_sync_test.dart` → PASS (`1/1`)
+- `flutter test test/arb_religious_localization_test.dart` → PASS (`1/1`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`179/179`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Safe variant locales still showing large English UI surfaces despite trusted sibling translations: `13/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda kalan `65` rare locale içinden başka güvenli sibling veya makrodil eşleşmesi olanlar ayıklanacak.
+- Ardından sibling’i olmayan belirsiz locale kümesi için EN-reference audit matrisi çıkarılacak.

@@ -12,107 +12,107 @@ class AppLocalizationsZh extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
-  String get home => 'Home';
+  String get home => '家';
 
   @override
-  String get quran => 'Quran';
+  String get quran => '古兰经';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => '朝拜';
 
   @override
-  String get zikr => 'Zikr';
+  String get zikr => '则克尔';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => '日历';
 
   @override
-  String get settings => 'Settings';
+  String get settings => '设置';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => '下一个祷告';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => '祈祷时间';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => '继续阅读';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => '获取终身专业版';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => '解锁 Tajweed 和高级功能';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => '祷告计算';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => '计算方法';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => '晡礼法律方法';
 
   @override
-  String get surahs => 'Surahs';
+  String get surahs => '古兰经';
 
   @override
-  String get ayahs => 'Ayahs';
+  String get ayahs => '阿亚斯';
 
   @override
-  String get fajr => 'Fajr';
+  String get fajr => '晨曦';
 
   @override
-  String get sunrise => 'Sunrise';
+  String get sunrise => '日出';
 
   @override
-  String get dhuhr => 'Dhuhr';
+  String get dhuhr => '杜尔';
 
   @override
-  String get asr => 'Asr';
+  String get asr => '晡气';
 
   @override
-  String get maghrib => 'Maghrib';
+  String get maghrib => '昏礼';
 
   @override
-  String get isha => 'Isha';
+  String get isha => '伊莎';
 
   @override
   String prayerNotificationTitle(String prayerName) {
-    return 'Time for $prayerName';
+    return '$prayerName 时间到了';
   }
 
   @override
   String prayerNotificationBody(String prayerName) {
-    return 'It is time to pray $prayerName.';
+    return '是时候祈祷$prayerName了。';
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => '数据与存储';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => '清除缓存';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => '缓存清除成功';
 
   @override
-  String get location => 'Location';
+  String get location => '地点';
 
   @override
-  String get language => 'Language';
+  String get language => '语言';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => '选择语言';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '搜索 180 多种语言...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => '系统默认值';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => '当前位置（GPS）';
 
   @override
   String get locationServiceDisabled => 'Location service is disabled.';
@@ -126,250 +126,250 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => '搜索';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => '搜索...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => '没有找到结果';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => '加载中...';
 
   @override
-  String get error => 'Error';
+  String get error => '错误';
 
   @override
-  String get retry => 'Retry';
+  String get retry => '重试';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => '取消';
 
   @override
-  String get save => 'Save';
+  String get save => '节省';
 
   @override
-  String get delete => 'Delete';
+  String get delete => '删除';
 
   @override
-  String get edit => 'Edit';
+  String get edit => '编辑';
 
   @override
-  String get close => 'Close';
+  String get close => '关闭';
 
   @override
-  String get ok => 'OK';
+  String get ok => '好的';
 
   @override
-  String get yes => 'Yes';
+  String get yes => '是的';
 
   @override
-  String get no => 'No';
+  String get no => '不';
 
   @override
-  String get surah => 'Surah';
+  String get surah => '古兰经';
 
   @override
-  String get juz => 'Juz';
+  String get juz => '朱兹';
 
   @override
-  String get page => 'Page';
+  String get page => '页';
 
   @override
-  String get reading => 'Reading';
+  String get reading => '阅读';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => '背诵';
 
   @override
-  String get translation => 'Translation';
+  String get translation => '翻译';
 
   @override
-  String get tafsir => 'Tafsir';
+  String get tafsir => '塔夫西尔';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => '书签';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => '添加书签';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => '删除书签';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => '最后阅读';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => '每日则克尔';
 
   @override
-  String get morningZikr => 'Morning Zikr';
+  String get morningZikr => '早晨则克尔';
 
   @override
-  String get eveningZikr => 'Evening Zikr';
+  String get eveningZikr => '晚上则克尔';
 
   @override
-  String get tasbih => 'Tasbih';
+  String get tasbih => '塔斯比赫';
 
   @override
-  String get ahkab => 'Ahkam';
+  String get ahkab => '阿卡姆';
 
   @override
-  String get masaail => 'Masa\'il';
+  String get masaail => '马萨伊勒';
 
   @override
-  String get hadith => 'Hadith';
+  String get hadith => '圣训';
 
   @override
-  String get hadithCollection => 'Hadith Collection';
+  String get hadithCollection => '圣训集';
 
   @override
-  String get hadithBooks => 'Hadith Books';
+  String get hadithBooks => '圣训书籍';
 
   @override
-  String get searchHadith => 'Search Hadith';
+  String get searchHadith => '搜索圣训';
 
   @override
-  String get asmaulHusna => 'Asma-ul-Husna';
+  String get asmaulHusna => '阿斯玛乌斯纳';
 
   @override
-  String get namesOfAllah => 'Names of Allah';
+  String get namesOfAllah => '安拉的名字';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => '电视直播';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => '观看直播';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => '码流错误';
 
   @override
-  String get reload => 'Reload';
+  String get reload => '重新加载';
 
   @override
-  String get openInYoutube => 'Open in YouTube';
+  String get openInYoutube => '在 YouTube 中打开';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => '伊巴达追踪器';
 
   @override
-  String get fasting => 'Fasting';
+  String get fasting => '禁食';
 
   @override
-  String get quranReading => 'Quran Reading';
+  String get quranReading => '古兰经阅读';
 
   @override
-  String get prayers => 'Prayers';
+  String get prayers => '祈祷';
 
   @override
-  String get dhikrCount => 'Dhikr Count';
+  String get dhikrCount => '迪克尔伯爵';
 
   @override
-  String get weeklyProgress => 'Weekly Progress';
+  String get weeklyProgress => '每周进度';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => '每月进度';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => '统计数据';
 
   @override
-  String get hijriCalendar => 'Hijri Calendar';
+  String get hijriCalendar => '回历';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => '公历';
 
   @override
-  String get today => 'Today';
+  String get today => '今天';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => '明天';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => '昨天';
 
   @override
-  String get specialDays => 'Special Days';
+  String get specialDays => '特别的日子';
 
   @override
-  String get ramadan => 'Ramadan';
+  String get ramadan => '斋月';
 
   @override
-  String get eidAlFitr => 'Eid Al-Fitr';
+  String get eidAlFitr => '开斋节';
 
   @override
-  String get eidAlAdha => 'Eid Al-Adha';
+  String get eidAlAdha => '古尔邦节';
 
   @override
-  String get laylatAlQadr => 'Laylat Al-Qadr';
+  String get laylatAlQadr => '莱拉特·盖德尔';
 
   @override
-  String get qiblaDirection => 'Qibla Direction';
+  String get qiblaDirection => '朝拜方向';
 
   @override
-  String get compass => 'Compass';
+  String get compass => '罗盘';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => '度';
 
   @override
-  String get north => 'North';
+  String get north => '北';
 
   @override
-  String get qiblaFound => 'Qibla found!';
+  String get qiblaFound => '朝拜发现了！';
 
   @override
-  String get turnDevice => 'Turn your device to face the Qibla';
+  String get turnDevice => '将您的设备转向朝拜';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => '通知';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => '祷告通知';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => '启用通知';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => '通知时间';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => '祈祷前几分钟';
 
   @override
-  String get theme => 'Theme';
+  String get theme => '主题';
 
   @override
-  String get lightMode => 'Light Mode';
+  String get lightMode => '灯光模式';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => '深色模式';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => '系统主题';
 
   @override
-  String get about => 'About';
+  String get about => '关于';
 
   @override
-  String get version => 'Version';
+  String get version => '版本';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => '隐私政策';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => '服务条款';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => '联系我们';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => '评价应用程序';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => '分享应用程序';
 
   @override
   String shareAppMessage(String appName, String url) {
@@ -377,81 +377,79 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => '下载管理器';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => '下载';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => '正在下载...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => '下载完成';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => '下载失败';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => '离线模式';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => '无互联网连接';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => '请检查您的连接';
 
   @override
-  String get premium => 'Premium';
+  String get premium => '优质的';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => '升级到专业版';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => '专业功能';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => '删除广告';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => '解锁所有内容';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => '独家内容';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => '欢迎';
 
   @override
-  String get getStarted => 'Get Started';
+  String get getStarted => '开始使用';
 
   @override
-  String get skip => 'Skip';
+  String get skip => '跳过';
 
   @override
-  String get next => 'Next';
+  String get next => '下一个';
 
   @override
-  String get done => 'Done';
+  String get done => '完毕';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => '欢迎来到阿拉之道';
 
   @override
-  String get onboarding1Desc =>
-      'Your complete Islamic companion app for prayer times, Quran, and more';
+  String get onboarding1Desc => '您完整的伊斯兰伴侣应用程序，用于祈祷时间、古兰经等';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => '祈祷时间';
 
   @override
-  String get onboarding2Desc => 'Accurate prayer times based on your location';
+  String get onboarding2Desc => '根据您所在位置的准确祈祷时间';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => '古兰经及更多';
 
   @override
-  String get onboarding3Desc =>
-      'Read Quran, track your reading, and explore Islamic content';
+  String get onboarding3Desc => '阅读《古兰经》、跟踪您的阅读情况并探索伊斯兰内容';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -785,7 +783,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String essentialDuas(String count) {
-    return '$count essential duas';
+    return '$count 基本杜阿';
   }
 
   @override
@@ -793,34 +791,34 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get duaUnavailableBody =>
-      'Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.';
+      '已验证的每日 duas 尚未同步到此设备。连接到云源以加载来源的 dua，而不是未经验证的后备。';
 
   @override
-  String get duaCategoryQuranic => 'Quranic dua';
+  String get duaCategoryQuranic => '古兰经杜阿';
 
   @override
-  String get duaCategoryMorningEvening => 'Morning & Evening';
+  String get duaCategoryMorningEvening => '早上和晚上';
 
   @override
-  String get duaCategoryTasbih => 'Tasbih';
+  String get duaCategoryTasbih => '塔斯比赫';
 
   @override
-  String get duaCategoryProtection => 'Protection';
+  String get duaCategoryProtection => '保护';
 
   @override
-  String get duaCategoryBeginning => 'Beginnings';
+  String get duaCategoryBeginning => '开始';
 
   @override
-  String get duaCategorySleep => 'Sleep';
+  String get duaCategorySleep => '睡觉';
 
   @override
-  String get duaCategoryFoodDrink => 'Food & Drink';
+  String get duaCategoryFoodDrink => '食品和饮料';
 
   @override
-  String get duaCategoryForgiveness => 'Forgiveness';
+  String get duaCategoryForgiveness => '饶恕';
 
   @override
-  String get duaCategoryHome => 'Home';
+  String get duaCategoryHome => '家';
 
   @override
   String get duaSourceBukhari => 'Bukhari';
@@ -969,14 +967,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      '经过验证的离线伊斯兰知识库仍在整理中。您现在可以启用离线回退，但在源数据集准备就绪之前，它只会显示有限的安全消息。\n\n您想启用离线回退吗？';
 
   @override
-  String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+  String get chatbotOfflineSwitched => '启用离线回退。经过验证的本地伊斯兰答案尚未准备好。';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
+  String get chatbotOfflineDownloadLabel => '启用离线回退';
 
   @override
   String get downloadPreparing => 'Preparing download...';
@@ -1092,13 +1089,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Offline Fallback';
+  String get chatbotLocalAiLabel => '离线回退';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Enable Offline Fallback';
+  String get chatbotDownloadLocalAi => '启用离线回退';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -1110,8 +1107,7 @@ class AppLocalizationsZh extends AppLocalizations {
       'Cloud API not configured. Please switch to Local AI.';
 
   @override
-  String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+  String get chatbotLocalNoInfo => '[离线] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。';
 
   @override
   String get mosques => 'Mosques';
