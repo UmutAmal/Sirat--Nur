@@ -12,6 +12,9 @@ class AppLocalizationsKri extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nɔr';
 
   @override
+  String get splashTagline => 'Islamic Way of Light';
+
+  @override
   String get home => 'Na os';
 
   @override
@@ -151,6 +154,9 @@ class AppLocalizationsKri extends AppLocalizations {
   String get retry => 'Tray bak';
 
   @override
+  String get refreshAction => 'Refresh';
+
+  @override
   String get cancel => 'Kansel';
 
   @override
@@ -178,6 +184,11 @@ class AppLocalizationsKri extends AppLocalizations {
   String get surah => 'Surah we dɛn kɔl';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -194,6 +205,45 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir bin de du am';
+
+  @override
+  String get tafsirLoading => 'Loading tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir source';
+
+  @override
+  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'No tafsir found for ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+
+  @override
+  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir source returned an HTTP $statusCode error.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'The selected tafsir source returned no entries.';
 
   @override
   String get bookmarks => 'Bukmak dɛn';
@@ -301,6 +351,19 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get prayers => 'Prea dɛn we wi kin pre';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '-- .';
 
   @override
   String get dhikrCount => 'Dhikr Kɔnt';
@@ -445,7 +508,7 @@ class AppLocalizationsKri extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Daunlod Maneja';
+  String get downloadManager => 'Download Manager';
 
   @override
   String get downloads => 'Di tin dɛn we dɛn kin dawnlod';
@@ -636,7 +699,7 @@ class AppLocalizationsKri extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Ɔflayn Daunlod Maneja';
+  String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
   String get manageDatasets => 'Manej masɛf ɔflayn ɔdio & datasɛt pak dɛn.';
@@ -950,6 +1013,14 @@ class AppLocalizationsKri extends AppLocalizations {
   String get paywallUnlockAll => 'Unlock ɔl di ficha dɛn fɔ yu spiritual joyn';
 
   @override
+  String get premiumProductUnavailable =>
+      'Premium product is not available right now. Please try again later.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Purchase could not be completed. Please try again.';
+
+  @override
   String get paywallFeature1Title => 'Nyural Asisten Plɔs';
 
   @override
@@ -1059,11 +1130,11 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Di verified oflain Islamik no bies stil de curate. Yu kin ɛnabul ɔflayn fɔlbak naw, bɔt i go jɔs sho limited sef mɛsej dɛn te di sɔs datasɛt rɛdi.\n\nYu go lɛk fɔ ɛnabul ɔflayna fɔl bak?';
+      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Ɔflayn fɔlbak dɔn ɛnabul. Verified lokal Islamic ansa dem no redi yet.';
+      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Enable Ɔflayn Fɔlbak';
@@ -1116,6 +1187,16 @@ class AppLocalizationsKri extends AppLocalizations {
   @override
   String downloadFinishedForReciter(String reciter) {
     return 'Download completed for $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
   }
 
   @override
@@ -1198,11 +1279,11 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Klayd API nɔ kɔnfigyut. Duya, chenj to Lokal AI.';
+      'Cloud API not configured. Please switch to Local AI.';
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified lokal Islamik gayd nɔ de yet. Switch to Klayd AI fɔ sɔs ansa dɛn.';
+      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
 
   @override
   String get mosques => 'Moskɛt dɛn';
@@ -1236,6 +1317,20 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Netwok mistek. Duya tray bak.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Location required';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
 
   @override
   String get unknownPlaceName => 'Nem we wi nɔ no';

@@ -12,6 +12,9 @@ class AppLocalizationsSk extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Islamská cesta svetla';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -151,6 +154,9 @@ class AppLocalizationsSk extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Obnoviť';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -178,6 +184,11 @@ class AppLocalizationsSk extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -194,6 +205,45 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Načítava sa tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Zdroj Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Pre túto súru sa nenašiel žiadny tafsir.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Pre ayah $ayah sa nenašiel žiadny tafsir.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir sa nepodarilo načítať.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Pre tento ayah nie je žiadny text tafsir.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Sťahuje sa tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Načítava sa tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Zdroj Tafsir vrátil chybu HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Vybraný zdroj tafsir nevrátil žiadne záznamy.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -301,6 +351,19 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -445,7 +508,7 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Správca sťahovania';
 
   @override
   String get downloads => 'Downloads';
@@ -636,7 +699,7 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Správca sťahovania offline';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +884,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Cloudové tabuľky chýbajú v Supabase; záložný balík aktívny';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +893,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Chýbajú metadáta cloud juz; združená štrukturálna núdzová aktívna';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -951,6 +1014,14 @@ class AppLocalizationsSk extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Odomknite všetky funkcie pre svoju duchovnú cestu';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Prémiový produkt nie je momentálne dostupný. Skúste to znova neskôr.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Nákup nebolo možné dokončiť. Skúste to znova.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1099,25 +1170,35 @@ class AppLocalizationsSk extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Stiahnuť';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Obnoviť sťahovanie';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Odstrániť stiahnuté súbory';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Sťahovanie pre $reciter bolo zrušené.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Sťahovanie pre $reciter bolo dokončené.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Sťahovanie pre $reciter bolo dokončené s $failed neúspešnými súrami (stiahnuté sú $downloaded/$total).';
   }
 
   @override
@@ -1237,6 +1318,21 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Chyba siete. Skúste to znova.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Vyžaduje sa miesto';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Najprv nastavte polohu, aby ste mohli presne vyhľadať blízke mešity, halal jedlo a islamské školy.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Dlaždice mapy nie sú k dispozícii';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Overený zdroj dlaždíc mapy ešte nie je nakonfigurovaný pre túto zostavu. Miesta v okolí sa stále môžu načítať z vašej uloženej polohy.';
 
   @override
   String get unknownPlaceName => 'Neznáme meno';

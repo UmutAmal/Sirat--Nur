@@ -12,6 +12,9 @@ class AppLocalizationsTt extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Ислам яктылыгы юлы';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsTt extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Яңарту';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsTt extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ая $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsTt extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Тафсир йөкләү ...';
+
+  @override
+  String get tafsirSourceLabel => 'Тафсир чыганагы';
+
+  @override
+  String get tafsirNoSurahFound => 'Бу сүрә өчен тафсир табылмады.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Аях $ayah өчен тафсир табылмады.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Тафсирны йөкләп булмады.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Бу аять өчен тәфсир тексты юк.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Тафсир чыганагы HTTP $statusCode хата кайтарды.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Сайланган тафсир чыганагы бернинди язуны да кайтармады.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsTt extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '$minutesм';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '-';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsTt extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Йөкләү менеджеры';
 
   @override
   String get downloads => 'Downloads';
@@ -633,7 +696,7 @@ class AppLocalizationsTt extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Оффлайн йөкләү менеджеры';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -818,7 +881,7 @@ class AppLocalizationsTt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Супабазда болыт өстәлләре юк; тупланган кире кайту актив';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -827,7 +890,7 @@ class AppLocalizationsTt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Болыт джуз метадайыннары юкка чыга; тупланган структур артка актив';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -948,6 +1011,14 @@ class AppLocalizationsTt extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Рухи сәяхәтегез өчен барлык үзенчәлекләрне ачыгыз';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Премиум продукт хәзер мөмкин түгел. Зинһар, соңрак кабатлап карагыз.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Сатып алу тәмамланмады. Зинһар, кабатлап карагыз.';
 
   @override
   String get paywallFeature1Title => 'Нейр ярдәмчесе плюс';
@@ -1096,25 +1167,35 @@ class AppLocalizationsTt extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Йөкләү';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Йөкләү';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Йөкләнгән файлларны бетерегез';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Йөкләү $reciter өчен юкка чыгарылды.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Йөкләү $reciter өчен тәмамланды.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
   }
 
   @override
@@ -1234,6 +1315,20 @@ class AppLocalizationsTt extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Челтәр хата. Зинһар, кабатлап карагыз.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Урын кирәк';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Башта якын урнашкан мәчетләр, хәләл ризыклар, Ислам мәктәпләрен төгәл эзләп табу өчен урын билгеләгез.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Карта плиткалары юк';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Тикшерелгән карта плиткасы чыганагы бу төзелеш өчен конфигурацияләнмәгән. Якындагы урыннар сезнең сакланган урыныгыздан йөкләнә ала.';
 
   @override
   String get unknownPlaceName => 'Билгесез исем';

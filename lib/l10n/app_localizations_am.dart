@@ -12,6 +12,9 @@ class AppLocalizationsAm extends AppLocalizations {
   String get appTitle => 'የአላህ መንገድ';
 
   @override
+  String get splashTagline => 'ኢስላማዊ የብርሃን መንገድ';
+
+  @override
   String get home => 'ቤት';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsAm extends AppLocalizations {
   String get retry => 'እንደገና ይሞክሩ';
 
   @override
+  String get refreshAction => 'አድስ';
+
+  @override
   String get cancel => 'ሰርዝ';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsAm extends AppLocalizations {
   String get surah => 'ሱራ';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'አያ $ayah';
+  }
+
+  @override
   String get juz => 'ጁዝ';
 
   @override
@@ -193,6 +204,44 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get tafsir => 'ተፍሲር';
+
+  @override
+  String get tafsirLoading => 'ተፍሲርን በመጫን ላይ...';
+
+  @override
+  String get tafsirSourceLabel => 'የተፍሲር ምንጭ';
+
+  @override
+  String get tafsirNoSurahFound => 'ለዚህ ሱራ ምንም ተፍሲር አልተገኘም።';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'ለአያህ $ayah ምንም ተፍሲር አልተገኘም።';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'ተፍሲርን መጫን አልተቻለም።';
+
+  @override
+  String get tafsirNoTextForAyah => 'ለዚህ አያህ ምንም የተፍሲር ጽሑፍ የለም።';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'ተፍሲርን በማውረድ ላይ $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'ተፍሲርን በመጫን ላይ $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'የተፍሲር ምንጭ HTTP $statusCode ስህተት መልሷል።';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned => 'የተመረጠው የተፍሲር ምንጭ ምንም ግቤት አልተመለሰም።';
 
   @override
   String get bookmarks => 'ዕልባቶች';
@@ -299,6 +348,19 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get prayers => 'ጸሎቶች';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'ዚክር ቆጠራ';
@@ -632,7 +694,7 @@ class AppLocalizationsAm extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'ከመስመር ውጭ ማውረድ አስተዳዳሪ';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -816,7 +878,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'በ Supabase ውስጥ የደመና ጠረጴዛዎች ጠፍተዋል; የተጠቃለለ ውድቀት ንቁ';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -825,7 +887,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'የክላውድ ጁዝ ዲበ ውሂብ ይጎድላል; የተጠቀለለ መዋቅራዊ ውድቀት ንቁ';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -944,6 +1006,13 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => 'ለመንፈሳዊ ጉዞዎ ሁሉንም ባህሪያት ይክፈቱ';
+
+  @override
+  String get premiumProductUnavailable =>
+      'ፕሪሚየም ምርት አሁን አይገኝም። እባክዎ ቆይተው እንደገና ይሞክሩ።';
+
+  @override
+  String get premiumPurchaseFailed => 'ግዢ ሊጠናቀቅ አልቻለም። እባክህ እንደገና ሞክር።';
 
   @override
   String get paywallFeature1Title => 'የነርቭ ረዳት ፕላስ';
@@ -1091,25 +1160,35 @@ class AppLocalizationsAm extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'አውርድ';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'ማውረድ ከቆመበት ቀጥል';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'የወረዱ ፋይሎችን ሰርዝ';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'ለ$reciter ማውረድ ተሰርዟል።';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'ለ$reciter ማውረድ ተጠናቅቋል።';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'ለ $reciter ማውረዱ አልቋል $failed ያልተሳኩ ሱራዎች ($downloaded/$total ወርዷል)።';
   }
 
   @override
@@ -1229,6 +1308,20 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'የአውታረ መረብ ስህተት። እባክህ እንደገና ሞክር።';
+
+  @override
+  String get placesLocationRequiredTitle => 'ቦታ ያስፈልጋል';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'በአቅራቢያ ያሉ መስጊዶች፣ ሃላል ምግብ እና ኢስላሚክ ትምህርት ቤቶች በትክክል መፈለግ እንዲችሉ መጀመሪያ ቦታ ያዘጋጁ።';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'የካርታ ሰቆች አይገኙም።';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'የተረጋገጠ የካርታ ንጣፍ ምንጭ እስካሁን ለዚህ ግንባታ አልተዋቀረም። በአቅራቢያ ያሉ ቦታዎች አሁንም ከተቀመጠው ቦታዎ መጫን ይችላሉ።';
 
   @override
   String get unknownPlaceName => 'ያልታወቀ ስም';

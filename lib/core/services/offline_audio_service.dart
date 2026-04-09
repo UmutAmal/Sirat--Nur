@@ -9,6 +9,26 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 typedef SurahDownloadProgress =
     void Function(double progress, int surahNumber, int totalSurahs);
 
+class OfflineDownloadBatchResult {
+  const OfflineDownloadBatchResult({
+    required this.totalSurahs,
+    required this.succeededSurahs,
+    required this.failedSurahs,
+    required this.wasCanceled,
+  });
+
+  final int totalSurahs;
+  final int succeededSurahs;
+  final List<int> failedSurahs;
+  final bool wasCanceled;
+
+  int get failedCount => failedSurahs.length;
+
+  bool get hasFailures => failedSurahs.isNotEmpty;
+
+  bool get allSucceeded => !wasCanceled && succeededSurahs == totalSurahs;
+}
+
 String? resolvePlayableCloudAudioUrl(Map<String, dynamic> row) {
   final storagePath = row['storage_path']?.toString().trim();
   if (storagePath != null && storagePath.isNotEmpty) {
@@ -180,7 +200,7 @@ class OfflineAudioService {
     }
   }
 
-  static Future<void> downloadAllSurahs({
+  static Future<OfflineDownloadBatchResult> downloadAllSurahs({
     required String reciterId,
     required Map<int, String> surahUrls,
     SurahDownloadProgress? onProgress,
@@ -190,9 +210,18 @@ class OfflineAudioService {
     final sortedSurahs = surahUrls.keys.toList()..sort();
     final total = sortedSurahs.length;
     var completed = 0;
+    var succeeded = 0;
+    final failedSurahs = <int>[];
 
     for (final surahNumber in sortedSurahs) {
-      if (shouldCancel?.call() == true) return;
+      if (shouldCancel?.call() == true) {
+        return OfflineDownloadBatchResult(
+          totalSurahs: total,
+          succeededSurahs: succeeded,
+          failedSurahs: List<int>.unmodifiable(failedSurahs),
+          wasCanceled: true,
+        );
+      }
 
       final url = surahUrls[surahNumber]!;
       final success = await downloadSurahAudio(
@@ -206,9 +235,21 @@ class OfflineAudioService {
       );
 
       completed++;
+      if (success) {
+        succeeded++;
+      } else {
+        failedSurahs.add(surahNumber);
+      }
       onSurahComplete?.call(surahNumber, success);
       onProgress?.call(completed / total, surahNumber, total);
     }
+
+    return OfflineDownloadBatchResult(
+      totalSurahs: total,
+      succeededSurahs: succeeded,
+      failedSurahs: List<int>.unmodifiable(failedSurahs),
+      wasCanceled: false,
+    );
   }
 
   static Future<List<int>> getDownloadedSurahs(String reciterId) async {

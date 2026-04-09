@@ -12,6 +12,9 @@ class AppLocalizationsEo extends AppLocalizations {
   String get appTitle => 'Vojo de Alaho';
 
   @override
+  String get splashTagline => 'Islama Vojo de Lumo';
+
+  @override
   String get home => 'Hejmo';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsEo extends AppLocalizations {
   String get retry => 'Reprovi';
 
   @override
+  String get refreshAction => 'Refreŝigi';
+
+  @override
   String get cancel => 'Nuligi';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsEo extends AppLocalizations {
   String get surah => 'Surao';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Ŝarĝante tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir fonto';
+
+  @override
+  String get tafsirNoSurahFound => 'Neniu tafsir trovita por ĉi tiu surao.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Neniu tafsir trovita por aya $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir ne povis esti ŝargita.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Neniu tafsir-teksto por ĉi tiu ajah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Elŝutante tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Ŝarĝante tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir-fonto resendis HTTP $statusCode eraron.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'La elektita tafsir-fonto resendis neniujn enskribojn.';
 
   @override
   String get bookmarks => 'Legosignoj';
@@ -300,6 +350,19 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String get prayers => 'Preĝoj';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Grafo';
@@ -635,7 +698,7 @@ class AppLocalizationsEo extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Senkonekta Elŝuta Administranto';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Nubaj tabloj mankas en Supabase; pakigita falo aktiva';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Nubo juz metadatumoj mankas; pakigita struktura falo aktiva';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsEo extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Malŝlosu ĉiujn funkciojn por via spirita vojaĝo';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premium-produkto ne haveblas nun. Bonvolu provi denove poste.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Aĉeto ne povis esti finita. Bonvolu provi denove.';
 
   @override
   String get paywallFeature1Title => 'Neŭrala Asistanto Plus';
@@ -1098,25 +1169,35 @@ class AppLocalizationsEo extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Elŝutu';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Rekomencu Elŝuton';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Forigu elŝutitajn dosierojn';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Elŝuto nuligita por $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Elŝuto finiĝis por $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Elŝuto finiĝis por $reciter kun $failed malsukcesaj suraoj ($downloaded/$total elŝutita).';
   }
 
   @override
@@ -1236,6 +1317,20 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Reta eraro. Bonvolu provi denove.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Loko bezonata';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Unue starigu lokon, por ke proksimaj moskeoj, halala manĝaĵo kaj islamaj lernejoj estu precize serĉataj.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Mapo-kaheloj nedisponeblaj';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Kontrolita mapo-fonto ankoraŭ ne estas agordita por ĉi tiu konstruo. Proksimaj lokoj ankoraŭ povas ŝargi de via konservita loko.';
 
   @override
   String get unknownPlaceName => 'Nekonata Nomo';

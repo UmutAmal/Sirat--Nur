@@ -12,6 +12,9 @@ class AppLocalizationsEt extends AppLocalizations {
   String get appTitle => 'Allahi tee';
 
   @override
+  String get splashTagline => 'Islami valguse tee';
+
+  @override
   String get home => 'Kodu';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsEt extends AppLocalizations {
   String get retry => 'Proovi uuesti';
 
   @override
+  String get refreshAction => 'Värskenda';
+
+  @override
   String get cancel => 'Tühista';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsEt extends AppLocalizations {
   String get surah => 'Suura';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Tafsiiri laadimine...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsiri allikas';
+
+  @override
+  String get tafsirNoSurahFound => 'Selle suura jaoks tafsiiri ei leitud.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Ayah jaoks ei leitud tafsiiri $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsirit ei saanud laadida.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Selle ayah jaoks pole tafsir-teksti.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Tafsiiri allalaadimine $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Tafsiiri laadimine $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsiri allikas tagastas HTTP $statusCode vea.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Valitud tafsiiri allikas ei tagastanud ühtegi kirjet.';
 
   @override
   String get bookmarks => 'Järjehoidjad';
@@ -300,6 +350,19 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get prayers => 'Palved';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}min';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikri krahv';
@@ -635,7 +698,7 @@ class AppLocalizationsEt extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Võrguühenduseta allalaadimishaldur';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabases puuduvad pilvetabelid; komplekteeritud varu aktiivne';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud Juz metaandmed puuduvad; komplekteeritud struktuurne varu aktiivne';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsEt extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Avage oma vaimseks teekonnaks kõik funktsioonid';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premium toode pole praegu saadaval. Proovige hiljem uuesti.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Ostmist ei saanud lõpule viia. Palun proovi uuesti.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1099,25 +1170,35 @@ class AppLocalizationsEt extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Laadi alla';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Jätkake allalaadimist';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Kustuta allalaaditud failid';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Allalaadimine tühistati: $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter allalaadimine on lõpetatud.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciter jaoks on allalaadimine lõpetatud $failed ebaõnnestunud suuratega ($downloaded/$total on alla laaditud).';
   }
 
   @override
@@ -1237,6 +1318,20 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Võrgu viga. Palun proovi uuesti.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Vajalik asukoht';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Esmalt määrake asukoht, et läheduses olevaid mošeesid, halal-toitu ja islamikoole saaks täpselt otsida.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Kaardiplaadid pole saadaval';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Kinnitatud kaardipaani allikat pole selle järgu jaoks veel konfigureeritud. Läheduses olevaid kohti saab siiski laadida teie salvestatud asukohast.';
 
   @override
   String get unknownPlaceName => 'Tundmatu nimi';

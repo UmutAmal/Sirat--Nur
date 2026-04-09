@@ -12,6 +12,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => '이슬람의 빛의 길';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => '새로고침';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsKo extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return '아야 $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,44 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => '타프시르 로드 중...';
+
+  @override
+  String get tafsirSourceLabel => '타프시르 소스';
+
+  @override
+  String get tafsirNoSurahFound => '이 수라에 대한 tafsir를 찾을 수 없습니다.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'ayah $ayah에 대한 tafsir를 찾을 수 없습니다.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir를 로드할 수 없습니다.';
+
+  @override
+  String get tafsirNoTextForAyah => '이에 대한 tafsir 텍스트가 없습니다.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'tafsir $current/$total 다운로드 중';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return '타프시르 $current/$total 로드 중';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir 소스가 HTTP $statusCode 오류를 반환했습니다.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned => '선택한 tafsir 소스에서 반환된 항목이 없습니다.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -299,6 +348,19 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -443,7 +505,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => '다운로드 관리자';
 
   @override
   String get downloads => 'Downloads';
@@ -632,7 +694,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => '오프라인 다운로드 관리자';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -816,7 +878,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase에 클라우드 테이블이 없습니다. 번들 대체 활성';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -825,7 +887,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz 메타데이터가 누락되었습니다. 번들 구조적 대체 활성';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -944,6 +1006,13 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => '영적 여정을 위한 모든 기능을 잠금 해제하세요';
+
+  @override
+  String get premiumProductUnavailable =>
+      '프리미엄 제품은 현재 구매하실 수 없습니다. 나중에 다시 시도해 주세요.';
+
+  @override
+  String get premiumPurchaseFailed => '구매를 완료할 수 없습니다. 다시 시도해 주세요.';
 
   @override
   String get paywallFeature1Title => '신경 보조자 플러스';
@@ -1090,25 +1159,35 @@ class AppLocalizationsKo extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => '다운로드';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => '다운로드 재개';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => '다운로드한 파일 삭제';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter 다운로드가 취소되었습니다.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter 다운로드가 완료되었습니다.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciter에 대한 다운로드가 완료되었으며 $failed 수라가 실패했습니다($downloaded/$total 다운로드됨).';
   }
 
   @override
@@ -1228,6 +1307,20 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get placesNetworkError => '네트워크 오류입니다. 다시 시도해 주세요.';
+
+  @override
+  String get placesLocationRequiredTitle => '위치가 필요합니다.';
+
+  @override
+  String get placesLocationRequiredBody =>
+      '근처 모스크, 할랄음식, 이슬람 학교 등을 정확하게 검색할 수 있도록 위치를 먼저 설정하세요.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => '지도 타일을 사용할 수 없습니다.';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      '이 빌드에는 확인된 지도 타일 소스가 아직 구성되지 않았습니다. 저장된 위치에서 주변 장소를 계속 로드할 수 있습니다.';
 
   @override
   String get unknownPlaceName => '알 수 없는 이름';

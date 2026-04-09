@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "व्यवस्थापक डाउनलोड करा",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "ऑफलाइन डाउनलोड व्यवस्थापक",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "सुपाबेसमध्ये क्लाउड टेबल गायब; बंडल फॉलबॅक सक्रिय",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "क्लाउड juz मेटाडेटा गहाळ आहे; बंडल स्ट्रक्चरल फॉलबॅक सक्रिय",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "डाउनलोड करा",
+  "resumeDownload": "डाउनलोड पुन्हा सुरू करा",
+  "deleteDownloadedFiles": "डाउनलोड केलेल्या फाइल्स हटवा",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} साठी डाउनलोड रद्द केले.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter} साठी डाउनलोड पूर्ण झाले.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "१ शव्वाल",
   "specialDayDateEidAlAdha": "10 धुल हिज्जा",
   "specialDayDateIslamicNewYear": "१ मोहरम",
-  "specialDayDateMawlidAnNabi": "12 रबी अल-अव्वाल"
+  "specialDayDateMawlidAnNabi": "12 रबी अल-अव्वाल",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "रिफ्रेश करा",
+  "ayahLabel": "अय्या {ayah}",
+  "tafsirLoading": "ताफसीर लोड करत आहे...",
+  "tafsirSourceLabel": "तफसीर स्त्रोत",
+  "tafsirNoSurahFound": "या सूरासाठी कोणतीही तफसीर सापडली नाही.",
+  "tafsirNoAyahFound": "अया {ayah} साठी कोणतीही तफसीर आढळली नाही.",
+  "tafsirLoadFailed": "तफसीर लोड करता आले नाही.",
+  "tafsirNoTextForAyah": "या आयहासाठी कोणताही तफसीर मजकूर नाही.",
+  "tafsirDownloadingProgress": "तफसीर डाउनलोड करत आहे {current}/{total}",
+  "tafsirLoadingProgress": "तफसीर लोड करत आहे {current}/{total}",
+  "tafsirApiStatusError": "Tafsir स्त्रोताने HTTP {statusCode} त्रुटी परत केली.",
+  "tafsirNoEntriesReturned": "निवडलेल्या तफसीर स्त्रोताने कोणत्याही प्रविष्ट्या परत केल्या नाहीत.",
+  "premiumProductUnavailable": "प्रीमियम उत्पादन सध्या उपलब्ध नाही. कृपया नंतर पुन्हा प्रयत्न करा.",
+  "premiumPurchaseFailed": "खरेदी पूर्ण होऊ शकली नाही. कृपया पुन्हा प्रयत्न करा.",
+  "prayerRemainingHoursMinutes": "{hours}ता {minutes}m",
+  "prayerRemainingMinutes": "{minutes}मि",
+  "splashTagline": "इस्लामिक प्रकाशाचा मार्ग",
+  "downloadPartiallyFinishedForReciter": "{reciter} साठी {failed} अयशस्वी सूरांसह डाउनलोड पूर्ण झाले ({downloaded}/{total} डाउनलोड केले).",
+  "placesLocationRequiredTitle": "स्थान आवश्यक आहे",
+  "placesLocationRequiredBody": "प्रथम स्थान सेट करा जेणेकरून जवळपासच्या मशिदी, हलाल अन्न आणि इस्लामिक शाळा अचूकपणे शोधल्या जाऊ शकतात.",
+  "placesMapTilesUnavailableTitle": "नकाशा टाइल अनुपलब्ध",
+  "placesMapTilesUnavailableBody": "या बिल्डसाठी सत्यापित नकाशा टाइल स्रोत अद्याप कॉन्फिगर केलेला नाही. तुमच्या सेव्ह केलेल्या स्थानावरून जवळपासची ठिकाणे अजूनही लोड होऊ शकतात.",
+  "prayerRemainingUnavailable": "--"
 }

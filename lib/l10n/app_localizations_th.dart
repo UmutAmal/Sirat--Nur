@@ -12,6 +12,9 @@ class AppLocalizationsTh extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Islamic Way of Light';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsTh extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Refresh';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsTh extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Loading tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir source';
+
+  @override
+  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'No tafsir found for ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+
+  @override
+  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir source returned an HTTP $statusCode error.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'The selected tafsir source returned no entries.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -953,6 +1016,14 @@ class AppLocalizationsTh extends AppLocalizations {
       'ปลดล็อกคุณลักษณะทั้งหมดสำหรับการเดินทางทางจิตวิญญาณของคุณ';
 
   @override
+  String get premiumProductUnavailable =>
+      'Premium product is not available right now. Please try again later.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Purchase could not be completed. Please try again.';
+
+  @override
   String get paywallFeature1Title => 'ผู้ช่วยระบบประสาทพลัส';
 
   @override
@@ -1061,11 +1132,11 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'ฐานความรู้อิสลามแบบออฟไลน์ที่ได้รับการตรวจสอบแล้วยังคงได้รับการดูแลจัดการ คุณสามารถเปิดใช้งานทางเลือกแบบออฟไลน์ได้ในขณะนี้ แต่จะแสดงเฉพาะข้อความที่ปลอดภัยแบบจำกัดจนกว่าชุดข้อมูลที่มาจะพร้อม\n\nคุณต้องการเปิดใช้งานทางเลือกแบบออฟไลน์หรือไม่';
+      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'เปิดใช้งานทางเลือกแบบออฟไลน์แล้ว คำตอบของศาสนาอิสลามในท้องถิ่นที่ได้รับการยืนยันแล้วยังไม่พร้อม';
+      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'เปิดใช้งานทางเลือกสำรองแบบออฟไลน์';
@@ -1118,6 +1189,16 @@ class AppLocalizationsTh extends AppLocalizations {
   @override
   String downloadFinishedForReciter(String reciter) {
     return 'Download completed for $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
   }
 
   @override
@@ -1199,11 +1280,11 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'ไม่ได้กำหนดค่า Cloud API โปรดเปลี่ยนไปใช้ Local AI';
+      'Cloud API not configured. Please switch to Local AI.';
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ออฟไลน์] ยังไม่มีคำแนะนำอิสลามในท้องถิ่นที่ได้รับการยืนยัน เปลี่ยนไปใช้ Cloud AI เพื่อดูคำตอบที่มา';
+      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
 
   @override
   String get mosques => 'มัสยิด';
@@ -1237,6 +1318,20 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'ข้อผิดพลาดของเครือข่าย โปรดลองอีกครั้ง';
+
+  @override
+  String get placesLocationRequiredTitle => 'Location required';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
 
   @override
   String get unknownPlaceName => 'ชื่อที่ไม่รู้จัก';

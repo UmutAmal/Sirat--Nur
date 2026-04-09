@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "ಡೌನ್‌ಲೋಡ್ ಮ್ಯಾನೇಜರ್",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "ಆಫ್‌ಲೈನ್ ಡೌನ್‌ಲೋಡ್ ಮ್ಯಾನೇಜರ್",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "ಸುಪಾಬೇಸ್‌ನಲ್ಲಿ ಮೇಘ ಕೋಷ್ಟಕಗಳು ಕಾಣೆಯಾಗಿವೆ; ಕಟ್ಟುಗಳ ಫಾಲ್ಬ್ಯಾಕ್ ಸಕ್ರಿಯವಾಗಿದೆ",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "ಕ್ಲೌಡ್ ಜುಜ್ ಮೆಟಾಡೇಟಾ ಕಾಣೆಯಾಗಿದೆ; ಬಂಡಲ್ಡ್ ಸ್ಟ್ರಕ್ಚರಲ್ ಫಾಲ್ಬ್ಯಾಕ್ ಸಕ್ರಿಯವಾಗಿದೆ",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+  "resumeDownload": "ಡೌನ್‌ಲೋಡ್ ಅನ್ನು ಪುನರಾರಂಭಿಸಿ",
+  "deleteDownloadedFiles": "ಡೌನ್‌ಲೋಡ್ ಮಾಡಿದ ಫೈಲ್‌ಗಳನ್ನು ಅಳಿಸಿ",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} ಗಾಗಿ ಡೌನ್‌ಲೋಡ್ ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter} ಗಾಗಿ ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣಗೊಂಡಿದೆ.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 ಶವ್ವಾಲ್",
   "specialDayDateEidAlAdha": "10 ದುಲ್ ಹಿಜ್ಜಾ",
   "specialDayDateIslamicNewYear": "1 ಮೊಹರಂ",
-  "specialDayDateMawlidAnNabi": "12 ರಬಿ ಅಲ್-ಅವ್ವಲ್"
+  "specialDayDateMawlidAnNabi": "12 ರಬಿ ಅಲ್-ಅವ್ವಲ್",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "ರಿಫ್ರೆಶ್ ಮಾಡಿ",
+  "ayahLabel": "ಅಯಾ {ayah}",
+  "tafsirLoading": "ತಫ್ಸಿರ್ ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+  "tafsirSourceLabel": "ತಫ್ಸಿರ್ ಮೂಲ",
+  "tafsirNoSurahFound": "ಈ ಸೂರಾಕ್ಕೆ ಯಾವುದೇ ತಫ್ಸಿರ್ ಕಂಡುಬಂದಿಲ್ಲ.",
+  "tafsirNoAyahFound": "ಅಯಾಹ್ {ayah} ಗಾಗಿ ಯಾವುದೇ ತಫ್ಸಿರ್ ಕಂಡುಬಂದಿಲ್ಲ.",
+  "tafsirLoadFailed": "ತಫ್ಸಿರ್ ಅನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಲಿಲ್ಲ.",
+  "tafsirNoTextForAyah": "ಈ ಅಯಾಗೆ ತಫ್ಸಿರ್ ಪಠ್ಯವಿಲ್ಲ.",
+  "tafsirDownloadingProgress": "ತಫ್ಸಿರ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ {current}/{total}",
+  "tafsirLoadingProgress": "ತಫ್ಸಿರ್ ಲೋಡ್ ಆಗುತ್ತಿದೆ {current}/{total}",
+  "tafsirApiStatusError": "Tafsir ಮೂಲವು HTTP {statusCode} ದೋಷವನ್ನು ಹಿಂತಿರುಗಿಸಿದೆ.",
+  "tafsirNoEntriesReturned": "ಆಯ್ಕೆಮಾಡಿದ ತಫ್ಸಿರ್ ಮೂಲವು ಯಾವುದೇ ನಮೂದುಗಳನ್ನು ಹಿಂತಿರುಗಿಸಿಲ್ಲ.",
+  "premiumProductUnavailable": "ಪ್ರೀಮಿಯಂ ಉತ್ಪನ್ನವು ಇದೀಗ ಲಭ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+  "premiumPurchaseFailed": "ಖರೀದಿಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಲಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}ನಿ",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "ಇಸ್ಲಾಮಿಕ್ ವೇ ಆಫ್ ಲೈಟ್",
+  "downloadPartiallyFinishedForReciter": "{reciter} ಗಾಗಿ {failed} ವಿಫಲವಾದ ಸೂರಾಗಳೊಂದಿಗೆ ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣಗೊಂಡಿದೆ ({downloaded}/{total} ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗಿದೆ).",
+  "placesLocationRequiredTitle": "ಸ್ಥಳದ ಅಗತ್ಯವಿದೆ",
+  "placesLocationRequiredBody": "ಮೊದಲು ಸ್ಥಳವನ್ನು ಹೊಂದಿಸಿ ಇದರಿಂದ ಹತ್ತಿರದ ಮಸೀದಿಗಳು, ಹಲಾಲ್ ಆಹಾರ ಮತ್ತು ಇಸ್ಲಾಮಿಕ್ ಶಾಲೆಗಳನ್ನು ನಿಖರವಾಗಿ ಹುಡುಕಬಹುದು.",
+  "placesMapTilesUnavailableTitle": "ನಕ್ಷೆಯ ಅಂಚುಗಳು ಲಭ್ಯವಿಲ್ಲ",
+  "placesMapTilesUnavailableBody": "ಈ ನಿರ್ಮಾಣಕ್ಕಾಗಿ ಪರಿಶೀಲಿಸಿದ ನಕ್ಷೆಯ ಟೈಲ್ ಮೂಲವನ್ನು ಇನ್ನೂ ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ. ನೀವು ಉಳಿಸಿದ ಸ್ಥಳದಿಂದ ಸಮೀಪದ ಸ್ಥಳಗಳು ಇನ್ನೂ ಲೋಡ್ ಆಗಬಹುದು.",
+  "prayerRemainingUnavailable": "--"
 }

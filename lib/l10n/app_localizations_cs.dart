@@ -12,6 +12,9 @@ class AppLocalizationsCs extends AppLocalizations {
   String get appTitle => 'Cesta Alláha';
 
   @override
+  String get splashTagline => 'Islámská cesta světla';
+
+  @override
   String get home => 'Domov';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsCs extends AppLocalizations {
   String get retry => 'Zkuste to znovu';
 
   @override
+  String get refreshAction => 'Obnovit';
+
+  @override
   String get cancel => 'Zrušit';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsCs extends AppLocalizations {
   String get surah => 'súra';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Načítání tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Zdroj Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Pro tuto súru nebyl nalezen žádný tafsir.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Pro ayah $ayah nebyl nalezen žádný tafsir.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir se nepodařilo načíst.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Pro tento ayah není žádný text tafsir.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Stahování tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Načítání tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Zdroj Tafsir vrátil chybu HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Vybraný zdroj tafsir nevrátil žádné záznamy.';
 
   @override
   String get bookmarks => 'Záložky';
@@ -300,6 +350,19 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get prayers => 'Modlitby';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Hrabě Dhikr';
@@ -635,7 +698,7 @@ class AppLocalizationsCs extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Správce stahování offline';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'V Supabase chybí cloudové tabulky; sdružená záložní aktivní';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Metadata cloud juz chybí; sdružená strukturální záložní aktivní';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsCs extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Odemkněte všechny funkce pro svou duchovní cestu';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Prémiový produkt není momentálně dostupný. Zkuste to znovu později.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Nákup nebylo možné dokončit. Zkuste to prosím znovu.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1099,25 +1170,35 @@ class AppLocalizationsCs extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Stáhnout';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Obnovit stahování';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Smazat stažené soubory';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Stahování bylo zrušeno pro $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Stahování pro $reciter dokončeno.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Stahování pro $reciter bylo dokončeno s $failed neúspěšnými súrami (staženo $downloaded/$total).';
   }
 
   @override
@@ -1237,6 +1318,21 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Chyba sítě. Zkuste to prosím znovu.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Místo je povinné';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Nejprve nastavte místo, aby bylo možné přesně prohledat blízké mešity, halal jídlo a islámské školy.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Dlaždice mapy nejsou k dispozici';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Pro toto sestavení zatím není nakonfigurován ověřený zdroj mapových dlaždic. Místa v okolí se mohou stále načítat z vašeho uloženého místa.';
 
   @override
   String get unknownPlaceName => 'Neznámé jméno';

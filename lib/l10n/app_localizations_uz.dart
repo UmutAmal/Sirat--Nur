@@ -12,6 +12,9 @@ class AppLocalizationsUz extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Islom nur yo\'li';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsUz extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Yangilash';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsUz extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Oya $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Tafsir yuklanmoqda...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir manbasi';
+
+  @override
+  String get tafsirNoSurahFound => 'Bu sura uchun tafsir topilmadi.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return '$ayah oyati uchun tafsir topilmadi.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsirni yuklab bo‘lmadi.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Bu oyat uchun tafsir matni yo\'q.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return '$current/$total tafsiri yuklab olinmoqda';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Tafsir yuklanmoqda $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir manbasi HTTP $statusCode xatosini qaytardi.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Tanlangan tafsir manbasi hech qanday yozuvni qaytarmadi.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}soat ${minutes}daq';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsUz extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Yuklab olish menejeri';
 
   @override
   String get downloads => 'Downloads';
@@ -634,7 +697,7 @@ class AppLocalizationsUz extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Oflayn yuklab olish menejeri';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -819,7 +882,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase-da bulutli jadvallar yo\'q; to\'plangan qayta tiklash faol';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metama\'lumotlari etishmayapti; to\'plangan strukturaviy tiklanish faol';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -949,6 +1012,14 @@ class AppLocalizationsUz extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Ruhiy sayohatingiz uchun barcha xususiyatlarni oching';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premium mahsulot hozirda mavjud emas. Keyinroq qayta urinib ko‘ring.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Xaridni yakunlab bo‘lmadi. Iltimos, qayta urinib koʻring.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1097,25 +1168,35 @@ class AppLocalizationsUz extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Yuklab oling';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Yuklashni davom ettirish';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Yuklab olingan fayllarni o\'chirish';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter uchun yuklab olish bekor qilindi.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter uchun yuklab olindi.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciter uchun $failed muvaffaqiyatsiz suralarni yuklab olish tugadi ($downloaded/$total yuklab olindi).';
   }
 
   @override
@@ -1236,6 +1317,20 @@ class AppLocalizationsUz extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Tarmoq xatosi. Iltimos, qayta urinib koʻring.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Joylashuv talab qilinadi';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Yaqin atrofdagi masjidlar, halol taomlar va islomiy maktablarni aniq qidirish uchun birinchi navbatda joyni belgilang.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Xarita plitalari mavjud emas';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Tasdiqlangan xaritalar manbasi hali bu tuzilish uchun sozlanmagan. Yaqin-atrofdagi joylar hali ham saqlangan joylashuvingizdan yuklanishi mumkin.';
 
   @override
   String get unknownPlaceName => 'Noma\'lum ism';

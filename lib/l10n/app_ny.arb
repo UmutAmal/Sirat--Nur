@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Matebulo amtambo akusowa ku Supabase; m'mitolo fallback yogwira",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata ikusowa; m'mitolo structural fallback yogwira",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Tsitsani",
+  "resumeDownload": "Yambitsaninso Kutsitsa",
+  "deleteDownloadedFiles": "Chotsani Mafayilo Otsitsa",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Kutsitsa kwalephereka kwa {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Kutsitsa kwatha kwa {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Tsitsaninso",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "Tikutsegula tafsir...",
+  "tafsirSourceLabel": "Gwero la Tafsir",
+  "tafsirNoSurahFound": "Sura iyi sinapezeke tafsir.",
+  "tafsirNoAyahFound": "Palibe tafsir yomwe yapezeka ya ayah {ayah}.",
+  "tafsirLoadFailed": "Tafsir sinathe kuikidwa.",
+  "tafsirNoTextForAyah": "Palibe mawu a tafsir a ayah iyi.",
+  "tafsirDownloadingProgress": "Kutsitsa tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Kutsegula tafsir {current}/{total}",
+  "tafsirApiStatusError": "Gwero la Tafsir labweza cholakwika cha HTTP {statusCode}.",
+  "tafsirNoEntriesReturned": "Magwero osankhidwa a tafsir sanabweze chilichonse.",
+  "premiumProductUnavailable": "Chogulitsa chamtengo wapatali sichikupezeka pakali pano. Chonde yesaninso nthawi ina.",
+  "premiumPurchaseFailed": "Kugula sikunathe. Chonde yesaninso.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Njira Yachisilamu Yowala",
+  "downloadPartiallyFinishedForReciter": "Kutsitsa kwatha kwa {reciter} ndi {failed} ma surah omwe sanatheke ({downloaded}/{total} adatsitsidwa).",
+  "placesLocationRequiredTitle": "Malo ofunikira",
+  "placesLocationRequiredBody": "Khazikitsani malo kaye kuti mizikiti yapafupi, chakudya cha halal, ndi masukulu achisilamu azifufuzidwa molondola.",
+  "placesMapTilesUnavailableTitle": "Matailosi amapu sakupezeka",
+  "placesMapTilesUnavailableBody": "Malo otsimikizika a matailosi amapu sanakhazikitsidwebe kuti apangidwe pano. Malo apafupi atha kutsegulabe kuchokera komwe mwasungidwa.",
+  "prayerRemainingUnavailable": "--"
 }

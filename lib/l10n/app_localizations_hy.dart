@@ -12,6 +12,9 @@ class AppLocalizationsHy extends AppLocalizations {
   String get appTitle => 'Ալլահի ճանապարհը';
 
   @override
+  String get splashTagline => 'Լույսի իսլամական ճանապարհ';
+
+  @override
   String get home => 'Տուն';
 
   @override
@@ -152,6 +155,9 @@ class AppLocalizationsHy extends AppLocalizations {
   String get retry => 'Կրկին փորձեք';
 
   @override
+  String get refreshAction => 'Թարմացնել';
+
+  @override
   String get cancel => 'Չեղարկել';
 
   @override
@@ -179,6 +185,11 @@ class AppLocalizationsHy extends AppLocalizations {
   String get surah => 'Սուրա';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Այահ $ayah';
+  }
+
+  @override
   String get juz => 'Ջուզ';
 
   @override
@@ -195,6 +206,45 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get tafsir => 'Թաֆսիր';
+
+  @override
+  String get tafsirLoading => 'Թաֆսիրի բեռնում...';
+
+  @override
+  String get tafsirSourceLabel => 'Թաֆսիրի աղբյուրը';
+
+  @override
+  String get tafsirNoSurahFound => 'Այս սուրայի համար թաֆսիր չի գտնվել:';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Այա $ayah-ի համար թաֆսիր չի գտնվել:';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Թաֆսիրը չհաջողվեց բեռնել:';
+
+  @override
+  String get tafsirNoTextForAyah => 'Այս այայի համար թաֆսիր տեքստ չկա:';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Ներբեռնվում է $current/$total tafsir';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Բեռնվում է տեքստ $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir աղբյուրը վերադարձրեց HTTP $statusCode սխալ:';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Ընտրված թաֆսիրի աղբյուրը ոչ մի գրառում չի վերադարձրել:';
 
   @override
   String get bookmarks => 'Էջանիշեր';
@@ -302,6 +352,19 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get prayers => 'Աղոթքներ';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hoursժ $minutesր';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Դիքր կոմս';
@@ -638,7 +701,7 @@ class AppLocalizationsHy extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Անցանց ներբեռնման կառավարիչ';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -823,7 +886,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Ամպային աղյուսակները բացակայում են Supabase-ում; փաթեթավորված հետադարձ ակտիվ';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -832,7 +895,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz-ի մետատվյալները բացակայում են; միավորված կառուցվածքային հետադարձ ակտիվ';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -953,6 +1016,14 @@ class AppLocalizationsHy extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Բացեք բոլոր հնարավորությունները ձեր հոգևոր ճանապարհորդության համար';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Պրեմիում ապրանքն այս պահին հասանելի չէ: Խնդրում ենք փորձել ավելի ուշ:';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Գնումը չի կարող ավարտվել: Խնդրում ենք կրկին փորձել:';
 
   @override
   String get paywallFeature1Title => 'Նյարդային օգնական Plus';
@@ -1101,25 +1172,35 @@ class AppLocalizationsHy extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Բեռնել';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Ռեզյումեի ներբեռնում';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Ջնջել ներբեռնված ֆայլերը';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Ներբեռնումը չեղարկվել է $reciter-ի համար:';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Ներբեռնումն ավարտվեց $reciter-ի համար:';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Ներբեռնումն ավարտվեց $reciter-ի համար $failed ձախողված սուրաներով ($downloaded/$total ներբեռնված):';
   }
 
   @override
@@ -1239,6 +1320,21 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Ցանցի սխալ. Խնդրում ենք կրկին փորձել:';
+
+  @override
+  String get placesLocationRequiredTitle => 'Պահանջվում է գտնվելու վայրը';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Նախ տեղադրեք տեղ, որպեսզի մոտակա մզկիթները, հալալ սնունդը և իսլամական դպրոցները ճշգրիտ որոնվեն:';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Քարտեզի սալիկներն անհասանելի են';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Քարտեզի սալիկի հաստատված աղբյուրը դեռ կազմաձևված չէ այս կառուցման համար: Մոտակա վայրերը դեռ կարող են բեռնվել ձեր պահված վայրից:';
 
   @override
   String get unknownPlaceName => 'Անհայտ անուն';

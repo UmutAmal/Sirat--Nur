@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "অফলাইন ডাউনলোড ম্যানেজার",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "সুপাবেসে ক্লাউড টেবিল অনুপস্থিত; বান্ডিল ফলব্যাক সক্রিয়",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "ক্লাউড জুজ মেটাডেটা অনুপস্থিত; বান্ডিল কাঠামোগত ফলব্যাক সক্রিয়",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "ডাউনলোড করুন",
+  "resumeDownload": "ডাউনলোড পুনরায় শুরু করুন",
+  "deleteDownloadedFiles": "ডাউনলোড করা ফাইল মুছুন",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} এর জন্য ডাউনলোড বাতিল হয়েছে।",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter} এর জন্য ডাউনলোড সম্পূর্ণ হয়েছে।",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "১ শাওয়াল",
   "specialDayDateEidAlAdha": "10 যিলহজ্জ",
   "specialDayDateIslamicNewYear": "১ মহররম",
-  "specialDayDateMawlidAnNabi": "১২ রবিউল আউয়াল"
+  "specialDayDateMawlidAnNabi": "১২ রবিউল আউয়াল",
+  "refreshAction": "রিফ্রেশ",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoading": "তাফসির লোড হচ্ছে...",
+  "tafsirSourceLabel": "তাফসির সূত্র",
+  "tafsirNoSurahFound": "এই সূরার কোন তাফসীর পাওয়া যায়নি।",
+  "tafsirNoAyahFound": "আয়াত {ayah} এর জন্য কোনো তাফসির পাওয়া যায়নি।",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "তাফসির লোড করা যায়নি।",
+  "tafsirNoTextForAyah": "এই আয়াতের জন্য কোন তাফসির পাঠ্য নেই।",
+  "tafsirDownloadingProgress": "তাফসির ডাউনলোড করা হচ্ছে {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "তাফসির লোড হচ্ছে {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "তাফসির উৎস একটি HTTP {statusCode} ত্রুটি ফিরিয়ে দিয়েছে।",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "নির্বাচিত তাফসির উৎস কোনো এন্ট্রি ফেরত দেয়নি।",
+  "premiumProductUnavailable": "প্রিমিয়াম পণ্য এই মুহূর্তে উপলব্ধ নয়. পরে আবার চেষ্টা করুন.",
+  "premiumPurchaseFailed": "ক্রয় সম্পূর্ণ করা যায়নি. আবার চেষ্টা করুন.",
+  "prayerRemainingHoursMinutes": "{hours}ঘন্টা {minutes}মিনিট",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}মি",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "splashTagline": "ইসলামিক আলোর পথ",
+  "downloadPartiallyFinishedForReciter": "{reciter} এর জন্য {failed} ব্যর্থ সূরাগুলির ডাউনলোড শেষ হয়েছে ({downloaded}/{total} ডাউনলোড করা হয়েছে)।",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "placesLocationRequiredTitle": "অবস্থান প্রয়োজন",
+  "placesLocationRequiredBody": "প্রথমে একটি অবস্থান নির্ধারণ করুন যাতে কাছাকাছি মসজিদ, হালাল খাবার এবং ইসলামিক স্কুলগুলি সঠিকভাবে অনুসন্ধান করা যায়।",
+  "placesMapTilesUnavailableTitle": "মানচিত্র টাইলস অনুপলব্ধ",
+  "placesMapTilesUnavailableBody": "এই বিল্ডের জন্য একটি যাচাইকৃত মানচিত্র টাইল উত্স এখনও কনফিগার করা হয়নি৷ আশেপাশের জায়গাগুলি এখনও আপনার সংরক্ষিত অবস্থান থেকে লোড হতে পারে৷",
+  "prayerRemainingUnavailable": "--"
 }

@@ -12,6 +12,9 @@ class AppLocalizationsCa extends AppLocalizations {
   String get appTitle => 'Camí d\'Al·là';
 
   @override
+  String get splashTagline => 'Via Islàmica de la Llum';
+
+  @override
   String get home => 'a casa';
 
   @override
@@ -152,6 +155,9 @@ class AppLocalizationsCa extends AppLocalizations {
   String get retry => 'Torna-ho a provar';
 
   @override
+  String get refreshAction => 'Actualitzar';
+
+  @override
   String get cancel => 'Cancel·la';
 
   @override
@@ -179,6 +185,11 @@ class AppLocalizationsCa extends AppLocalizations {
   String get surah => 'Sura';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -195,6 +206,47 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'S\'està carregant tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Font Tafsir';
+
+  @override
+  String get tafsirNoSurahFound =>
+      'No s\'ha trobat cap tafsir per a aquesta sura.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'No s\'ha trobat cap tafsir per a ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir no s\'ha pogut carregar.';
+
+  @override
+  String get tafsirNoTextForAyah =>
+      'No hi ha cap text de tafsir per a aquest ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'S\'està baixant tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'S\'està carregant tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'La font Tafsir ha retornat un error HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'La font de tafsir seleccionada no ha retornat cap entrada.';
 
   @override
   String get bookmarks => 'Adreces d\'interès';
@@ -302,6 +354,19 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get prayers => 'Oracions';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Comte Dhikr';
@@ -638,7 +703,7 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Gestor de descàrregues fora de línia';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -823,7 +888,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Falten taules de núvol a Supabase; sistema de reserva agrupat actiu';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -832,7 +897,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Falten metadades de núvol; alternativa estructural agrupada activa';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -954,6 +1019,14 @@ class AppLocalizationsCa extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Desbloqueja totes les funcions per al teu viatge espiritual';
+
+  @override
+  String get premiumProductUnavailable =>
+      'El producte premium no està disponible ara mateix. Si us plau, torna-ho a provar més tard.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'No s\'ha pogut completar la compra. Si us plau, torna-ho a provar.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1104,25 +1177,35 @@ class AppLocalizationsCa extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Descarregar';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Descàrrega de currículum';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Suprimeix els fitxers descarregats';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'La baixada s\'ha cancel·lat per a $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'S\'ha completat la baixada de $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'S\'ha acabat la baixada de $reciter amb $failed sures fallides ($downloaded/$total baixada).';
   }
 
   @override
@@ -1244,6 +1327,21 @@ class AppLocalizationsCa extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Error de xarxa. Si us plau, torna-ho a provar.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Ubicació necessària';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Primer establiu una ubicació perquè es puguin cercar amb precisió les mesquites properes, el menjar halal i les escoles islàmiques.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Les fitxes del mapa no estan disponibles';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Encara no s\'ha configurat una font de mosaic de mapa verificada per a aquesta compilació. Els llocs propers encara es poden carregar des de la ubicació desada.';
 
   @override
   String get unknownPlaceName => 'Nom desconegut';

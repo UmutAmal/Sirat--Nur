@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Gerînendeyê Daxistinê",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Rêvebirê Daxistinê negirêdayî",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Li Supabase tabloyên ewran winda ne; bundled fallback çalak",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata wenda ye; paşvekêşana strukturel a hevgirtî ya çalak",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -393,9 +393,9 @@
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Download",
   "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "deleteDownloadedFiles": "Pelên dakêşandî jêbirin",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Daxistin ji bo {reciter} hat betalkirin.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Daxistin ji bo {reciter} qediya.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Şewal",
   "specialDayDateEidAlAdha": "10 Zul Hîce",
   "specialDayDateIslamicNewYear": "1 Muherrem",
-  "specialDayDateMawlidAnNabi": "12 Rebî El Ewel"
+  "specialDayDateMawlidAnNabi": "12 Rebî El Ewel",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Refresh",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "Tefsîr tê barkirin...",
+  "tafsirSourceLabel": "Çavkaniya Tefsîr",
+  "tafsirNoSurahFound": "Ji bo vê sûreyê tefsîr nehat dîtin.",
+  "tafsirNoAyahFound": "Ji bo ayah {ayah} tefsîr nehat dîtin.",
+  "tafsirLoadFailed": "Tefsîr nehat barkirin.",
+  "tafsirNoTextForAyah": "Ji bo vê ayetê nivîsek tefsîr tune.",
+  "tafsirDownloadingProgress": "Tefsîr tê daxistin {current}/{total}",
+  "tafsirLoadingProgress": "Tefsîr tê barkirin {current}/{total}",
+  "tafsirApiStatusError": "Çavkaniya Tefsîrê xeletiyek HTTP {statusCode} vegerand.",
+  "tafsirNoEntriesReturned": "Çavkaniya tefsîrê ya hilbijartî tu têketin venegeriya.",
+  "premiumProductUnavailable": "Hilbera premium naha peyda nabe. Ji kerema xwe paşê dîsa biceribîne.",
+  "premiumPurchaseFailed": "Kirîn nehat qedandin. Ji kerema xwe dîsa biceribîne.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Riya Îslamî ya Ronahî",
+  "downloadPartiallyFinishedForReciter": "Daxistin ji bo {reciter} bi {failed} sûretên têkçûyî qediya ({downloaded}/{total} daxistî).",
+  "placesLocationRequiredTitle": "Cihê pêwîst",
+  "placesLocationRequiredBody": "Pêşî cîhek destnîşan bikin da ku mizgeftên nêzîk, xwarina helal, û dibistanên îslamî rast werin lêgerîn.",
+  "placesMapTilesUnavailableTitle": "Perçeyên nexşeyê ne berdest in",
+  "placesMapTilesUnavailableBody": "Çavkaniyek nexşeya pejirandî ji bo vê çêkirinê hêj nehatiye mîheng kirin. Cihên nêzîk hîn jî dikarin ji cîhê weya tomarkirî bar bikin.",
+  "prayerRemainingUnavailable": "--"
 }

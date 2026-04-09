@@ -12,6 +12,9 @@ class AppLocalizationsLus extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur chuan a rawn ti a';
 
   @override
+  String get splashTagline => 'a ni.\nIslamic Way of Light tih hi a ni';
+
+  @override
   String get home => 'In lamah';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsLus extends AppLocalizations {
   String get retry => 'Ti leh rawh';
 
   @override
+  String get refreshAction => 'a ni.\nRefresh leh rawh';
+
+  @override
   String get cancel => 'Cancel rawh';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsLus extends AppLocalizations {
   String get surah => 'Surah chuan';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,47 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir a ni';
+
+  @override
+  String get tafsirLoading => 'a ni.\nLoading tafsir a ni...';
+
+  @override
+  String get tafsirSourceLabel => 'a ni.\nTafsir atanga lo chhuak a ni';
+
+  @override
+  String get tafsirNoSurahFound =>
+      'a ni.\nHe surah atan hian tafsir hmuh tur a awm lo.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'a ni.\nAyah $ayah tan tafsir hmuh tur a awm lo.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'a ni.\nTafsir chu a phur thei lo.';
+
+  @override
+  String get tafsirNoTextForAyah =>
+      'a ni.\nHe ayah atan hian tafsir text a awm lo.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'a ni.\nTafsir source chuan HTTP $statusCode error a rawn pe leh a.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'a ni.\nTafsir source thlan chuan entry a rawn pe lo.';
 
   @override
   String get bookmarks => 'Bookmarks te pawh a awm';
@@ -300,6 +352,19 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get prayers => 'Tawngtaina';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '-- .';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -636,7 +701,8 @@ class AppLocalizationsLus extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline a Download theihna tur a ni';
+  String get offlineDownloadManager =>
+      'a ni.\nOffline a Download theihna tur a ni';
 
   @override
   String get manageDatasets =>
@@ -824,7 +890,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'a ni.\nSupabase-a cloud table awm lo; bundled fallback active a ni';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -833,7 +899,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'a ni.\nCloud juz metadata a awm lo; bundled structural fallback a ni a, a chhuak leh ta a ni';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -956,6 +1022,14 @@ class AppLocalizationsLus extends AppLocalizations {
       'I thlarau lam zinkawng atan feature zawng zawng unlock rawh';
 
   @override
+  String get premiumProductUnavailable =>
+      'a ni.\nTunah hian Premium product a awm lo. Nakinah han lo en leh teh.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'a ni.\nPurchase pawh a zo thei lo. Khawngaihin han lo try leh teh.';
+
+  @override
   String get paywallFeature1Title => 'Neural Assistant Plus a ni bawk';
 
   @override
@@ -1066,11 +1140,11 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Offline Islamic knowledge base verified chu an la curate mek a ni. Tunah chuan offline fallback i enable thei tawh a, mahse sourced dataset a inpeih hma chuan safe message tlemte chauh a lantir ang.\n\nOffline fallback hi enable i duh em?';
+      'a ni.\nOffline Islamic knowledge base verified chu an la curate mek a ni. Tunah chuan offline fallback i enable thei tawh a, mahse sourced dataset a inpeih hma chuan safe message tlemte chauh a lantir ang.\n\nOffline fallback hi enable i duh em?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback tih theih a ni. Verified local Islamic chhanna chu a la inpeih lo.';
+      'a ni.\nOffline fallback tih theih a ni. Verified local Islamic chhanna chu a la inpeih lo.';
 
   @override
   String get chatbotOfflineDownloadLabel =>
@@ -1105,25 +1179,36 @@ class AppLocalizationsLus extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'a ni.\nDownload rawh';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'a ni.\nResume Download rawh';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles =>
+      'a ni.\nDownload tawh file te chu Delete rawh';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'a ni.\n$reciter tan download tihtawp a ni.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'a ni.\n$reciter tan download zawh tawh a ni.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'a ni.\n$reciter tan download zawh a ni a, $failed surah a hlawhchham ($downloaded/$total download a ni).';
   }
 
   @override
@@ -1205,11 +1290,11 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API configure a ni lo. Local AI ah hian inthlak rawh.';
+      'a ni.\nCloud API configure a ni lo. Local AI ah hian inthlak rawh.';
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance hi a la awm lo. Sourced chhanna tur chuan Cloud AI ah switch rawh.';
+      'a ni.\n[OFFLINE] Verified local Islamic guidance hi a la awm lo. Sourced chhanna tur chuan Cloud AI ah switch rawh.';
 
   @override
   String get mosques => 'Mosque hrang hrangah te';
@@ -1244,6 +1329,20 @@ class AppLocalizationsLus extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Network tihsual a awm. Khawngaihin han lo try leh teh.';
+
+  @override
+  String get placesLocationRequiredTitle => 'a ni.\nHmun a ngai a ni';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'a ni.\nMosque hnai tak tak, halal food, leh Islamic school te dik taka zawn theih nan hmun siam hmasa phawt ang che.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'a ni.\nMap tiles a awm lo';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'a ni.\nHe build atan hian verified map tile source hi configure a la ni lo. I saved location atang hian hmun hnai tak tak te chu a la load thei tho.';
 
   @override
   String get unknownPlaceName => 'Hming hriat loh';

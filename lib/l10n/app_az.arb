@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Supabase-də bulud cədvəlləri yoxdur; yığılmış geri qaytarma aktivdir",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata yoxdur; yığılmış struktur geriləmə aktivdir",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Yüklə",
+  "resumeDownload": "Yükləməni davam etdirin",
+  "deleteDownloadedFiles": "Yüklənmiş faylları silin",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} üçün endirmə ləğv edildi.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter} üçün endirmə tamamlandı.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Şəvval",
   "specialDayDateEidAlAdha": "10 Zilhiccə",
   "specialDayDateIslamicNewYear": "1 Məhərrəm",
-  "specialDayDateMawlidAnNabi": "12 Rəbiul-əvvəl"
+  "specialDayDateMawlidAnNabi": "12 Rəbiul-əvvəl",
+  "refreshAction": "Yeniləyin",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoading": "Təfsir yüklənir...",
+  "tafsirSourceLabel": "Təfsir mənbəyi",
+  "tafsirNoSurahFound": "Bu surə üçün heç bir təfsir tapılmadı.",
+  "tafsirNoAyahFound": "{ayah} ayəsi üçün heç bir təfsir tapılmadı.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Təfsiri yükləmək mümkün olmadı.",
+  "tafsirNoTextForAyah": "Bu ayə üçün təfsir mətni yoxdur.",
+  "tafsirDownloadingProgress": "{current}/{total} təfsiri endirilir",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Təfsir yüklənir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Təfsir mənbəyi HTTP {statusCode} xətası qaytardı.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Seçilmiş təfsir mənbəyi heç bir qeydi qaytarmadı.",
+  "premiumProductUnavailable": "Premium məhsul hazırda mövcud deyil. Daha sonra yenidən cəhd edin.",
+  "premiumPurchaseFailed": "Satınalma tamamlanmadı. Yenidən cəhd edin.",
+  "prayerRemainingHoursMinutes": "{hours}saat {minutes}dəq",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "splashTagline": "İslam İşıq Yolu",
+  "downloadPartiallyFinishedForReciter": "{failed} uğursuz surələrlə {reciter} üçün endirmə tamamlandı ({downloaded}/{total} endirildi).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "placesLocationRequiredTitle": "Məkan tələb olunur",
+  "placesLocationRequiredBody": "Əvvəlcə yer təyin edin ki, yaxınlıqdakı məscidlər, halal yeməklər və İslam məktəbləri dəqiq axtarılsın.",
+  "placesMapTilesUnavailableTitle": "Xəritə plitələri əlçatan deyil",
+  "placesMapTilesUnavailableBody": "Doğrulanmış xəritə mənbəsi hələ bu quruluş üçün konfiqurasiya edilməyib. Yaxınlıqdakı yerlər hələ də saxladığınız yerdən yükləyə bilər.",
+  "prayerRemainingUnavailable": "--"
 }

@@ -12,6 +12,9 @@ class AppLocalizationsIs extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Íslamskur leið ljóssins';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsIs extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Endurnýja';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsIs extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Hleður tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir heimild';
+
+  @override
+  String get tafsirNoSurahFound => 'Enginn tafsir fannst fyrir þessa surah.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Enginn tafsir fannst fyrir ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Ekki tókst að hlaða Tafsir.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Enginn tafsir texti fyrir þessa ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Sækir tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Hleður tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir uppspretta skilaði HTTP $statusCode villu.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Valin tafsir heimild skilaði engum færslum.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}klst ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsIs extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Niðurhalsstjóri';
 
   @override
   String get downloads => 'Downloads';
@@ -635,7 +698,7 @@ class AppLocalizationsIs extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Ótengdur niðurhalsstjóri';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Skýjatöflur vantar í Supabase; búnt fallback virkt';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz lýsigögn vantar; búnt burðarvirki fallback virk';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsIs extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Opnaðu alla eiginleika fyrir andlega ferð þína';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premium vara er ekki fáanleg eins og er. Vinsamlegast reyndu aftur síðar.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Ekki tókst að ganga frá kaupum. Vinsamlegast reyndu aftur.';
 
   @override
   String get paywallFeature1Title => 'Taugaaðstoðarmaður Plus';
@@ -1098,25 +1169,35 @@ class AppLocalizationsIs extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Sækja';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Halda niðurhal';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Eyða niðurhaluðum skrám';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Niðurhali hætt fyrir $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Niðurhali lokið fyrir $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Niðurhali lokið fyrir $reciter með $failed misheppnuðum súrum ($downloaded/$total niðurhalað).';
   }
 
   @override
@@ -1236,6 +1317,20 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Netvilla. Vinsamlegast reyndu aftur.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Staðsetning krafist';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Veldu staðsetningu fyrst svo hægt sé að leita nákvæmlega í moskum, halal-mat og íslömskum skólum í nágrenninu.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Kortaflísar ekki tiltækar';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Staðfestur kortaflisuppspretta er ekki stilltur fyrir þessa smíði ennþá. Nálægir staðir geta samt hlaðið inn frá vistaða staðsetningu þinni.';
 
   @override
   String get unknownPlaceName => 'Óþekkt nafn';

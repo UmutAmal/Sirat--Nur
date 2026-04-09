@@ -354,8 +354,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Ekkomo ku kubuuza buli lunaku lituuse. Upgrade ku Premium ku unlimited.",
   "chatbotErrorMsg": "Nnali sisobola kuleeta kuddamu. Nsaba oddemu ogezeeko.",
-  "chatbotOfflinePrompt": "Ekifo eky’okumanya kw’Obusiraamu ekikakasiddwa nga tekirina mutimbagano kikyakuumibwa. Osobola okusobozesa offline fallback kati, naye ejja kulaga obubaka obutono bwokka obutebenkevu okutuusa nga dataset evudde ensibuko yeetegese.\n\nWandyagadde okusobozesa okugwa ku mutimbagano?",
-  "chatbotOfflineSwitched": "Offline fallback esobozeseddwa. Eby'okuddamu by'Obusiraamu eby'omu kitundu ebikakasibwa tebinnaba kwetegekera.",
+  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
+  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "Ssobozesa Okugwa ku mutimbagano",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -458,8 +458,8 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API tetegekeddwa. Nsaba okyuse ku Local AI.",
-  "chatbotLocalNoInfo": "[OFFLINE] Obulagirizi bw'Obusiraamu obw'omu kitundu obukakasibwa tebunnabaawo. Switch to Cloud AI for sourced answers.",
+  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "Emizikiti",
   "halalFood": "Emmere ya Halal",
   "placesSearchArea": "Noonya ekitundu kino",
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal, omuwandiisi w’ebitabo",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal, omuwandiisi w’ebitabo"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal, omuwandiisi w’ebitabo",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Refresh",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "Loading tafsir...",
+  "tafsirSourceLabel": "Tafsir source",
+  "tafsirNoSurahFound": "No tafsir found for this surah.",
+  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoadFailed": "Tafsir could not be loaded.",
+  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "premiumProductUnavailable": "Premium product is not available right now. Please try again later.",
+  "premiumPurchaseFailed": "Purchase could not be completed. Please try again.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Islamic Way of Light",
+  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "placesLocationRequiredTitle": "Location required",
+  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
+  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "prayerRemainingUnavailable": "--"
 }

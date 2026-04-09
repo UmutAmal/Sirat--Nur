@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Manager di scaricamentu offline",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Tavule nuvola mancanti in Supabase; bundled fallback attivu",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata mancanti; bundled fallback strutturale attivu",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Scaricate",
+  "resumeDownload": "Curriculum Download",
+  "deleteDownloadedFiles": "Sguassà i schedari telecaricati",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Scaricamentu annullatu per {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Scaricamentu cumpletu per {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
+  "refreshAction": "Refresh",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoading": "Caricamentu di tafsir...",
+  "tafsirSourceLabel": "Fonte Tafsir",
+  "tafsirNoSurahFound": "Nisun tafsir trovu per sta sura.",
+  "tafsirNoAyahFound": "Nisun tafsir trovu per ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ùn pudia esse caricatu.",
+  "tafsirNoTextForAyah": "Nisun testu tafsir per questu ayah.",
+  "tafsirDownloadingProgress": "Scaricamentu di tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Caricamentu di tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "A fonte Tafsir hà restituutu un errore HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "A fonte di tafsir selezziunata ùn hà restituutu micca entrate.",
+  "premiumProductUnavailable": "U pruduttu premium ùn hè micca dispunibule avà. Per piacè pruvate di novu più tardi.",
+  "premiumPurchaseFailed": "A compra ùn pudia esse cumpletata. Per piacè pruvate di novu.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "splashTagline": "Via islamica di luce",
+  "downloadPartiallyFinishedForReciter": "Scaricamentu finitu per {reciter} cù {failed} surah falluti ({downloaded}/{total} scaricatu).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "placesLocationRequiredTitle": "U locu necessariu",
+  "placesLocationRequiredBody": "Fighjate prima un locu per chì e moschee vicine, l'alimentu halal è e scole islamiche ponu esse cercate accuratamente.",
+  "placesMapTilesUnavailableTitle": "Piastrelle di carte ùn sò micca dispunibili",
+  "placesMapTilesUnavailableBody": "Una fonte di tile di mappa verificata ùn hè ancu cunfigurata per questa custruzzione. Lochi vicini ponu sempre carica da u vostru locu salvatu.",
+  "prayerRemainingUnavailable": "--"
 }

@@ -12,6 +12,9 @@ class AppLocalizationsMi extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Te Ara Ihirama o te Marama';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -151,6 +154,9 @@ class AppLocalizationsMi extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Tāmata';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -178,6 +184,11 @@ class AppLocalizationsMi extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -194,6 +205,45 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Uta ana tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'puna Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Kaore i kitea he tafsir mo tenei surah.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'No tafsir found for ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Kaore i taea te utaina a Tafsir.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Karekau he tuhinga tafsir mo tenei papa.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'E tango ana i te tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'I whakahokia e te puna Tafsir he hapa HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Ko te puna tafsir i tohua kaore he whakaurunga.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -301,6 +351,19 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -445,7 +508,7 @@ class AppLocalizationsMi extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Kaiwhakahaere Tikiake';
 
   @override
   String get downloads => 'Downloads';
@@ -637,7 +700,7 @@ class AppLocalizationsMi extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Kaiwhakahaere Tikiake Tuimotu';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -822,7 +885,7 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Kei te ngaro nga tepu kapua i Supabase; takai whakamuri hohe';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -831,7 +894,7 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Kua ngaro te metadata Cloud juz; paihere hanganga takahuri kaha';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -953,6 +1016,13 @@ class AppLocalizationsMi extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Wewetehia nga ahuatanga katoa mo to haerenga wairua';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Ko te hua utu nui kaore i te waatea inaianei. Me ngana ano i muri mai.';
+
+  @override
+  String get premiumPurchaseFailed => 'Kāore i taea te hoko. Me ngana ano.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1102,25 +1172,35 @@ class AppLocalizationsMi extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Tikiake';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Tukuna ano';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Mukua nga Kōnae kua Tikiake';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Kua whakakorehia te tikiake mo $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Kua oti te tango mo $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Kua oti te tango mo $reciter me te $failed i rahua nga surah ($downloaded/$total kua tikiakehia).';
   }
 
   @override
@@ -1240,6 +1320,21 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Hapa whatunga. Me ngana ano.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Wāhi e hiahiatia ana';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Whakatakotoria he waahi i te tuatahi kia taea te rapu tika i nga whare karakia e tata ana, nga kai hara, me nga kura Ihirama.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Karekau nga taera mapi i te waatea';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Kaore ano kia whirihorahia he puna taera mapi mo tenei hanga. Ka taea tonu e nga waahi tata te uta mai i to waahi kua tiakina.';
 
   @override
   String get unknownPlaceName => 'Ingoa Kaore i mohiotia';

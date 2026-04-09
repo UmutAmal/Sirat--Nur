@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Менеҷери зеркашӣ",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Менеҷери зеркашии офлайн",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Ҷадвалҳои абрӣ дар Supabase нестанд; Бозгашти маҷмӯӣ фаъол",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz метамаълумотҳо нест; бозгашти сохтории маҷмӯи фаъол",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Зеркашӣ кунед",
+  "resumeDownload": "Боргириро идома диҳед",
+  "deleteDownloadedFiles": "Файлҳои зеркашидашударо нест кунед",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Зеркашӣ барои {reciter} бекор карда шуд.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Зеркашӣ барои {reciter} анҷом ёфт.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Шаввол",
   "specialDayDateEidAlAdha": "10 Зулҳиҷҷа",
   "specialDayDateIslamicNewYear": "1 Муҳаррам",
-  "specialDayDateMawlidAnNabi": "12 Рабиул-аввал"
+  "specialDayDateMawlidAnNabi": "12 Рабиул-аввал",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Навсозӣ",
+  "ayahLabel": "Оят {ayah}",
+  "tafsirLoading": "Loading тафсир...",
+  "tafsirSourceLabel": "Манбаи тафсир",
+  "tafsirNoSurahFound": "Барои ин сура тафсир ёфт нашуд.",
+  "tafsirNoAyahFound": "Барои оят {ayah} тафсир ёфт нашуд.",
+  "tafsirLoadFailed": "Тафсир бор карда нашуд.",
+  "tafsirNoTextForAyah": "Барои ин оят матни тафсир нест.",
+  "tafsirDownloadingProgress": "Зеркашии тафсири {current}/{total}",
+  "tafsirLoadingProgress": "Боркунии тафсири {current}/{total}",
+  "tafsirApiStatusError": "Манбаи тафсир хатои HTTP {statusCode} баргардонид.",
+  "tafsirNoEntriesReturned": "Сарчашмаи интихобшудаи тафсир ягон сабтро барнагардондааст.",
+  "premiumProductUnavailable": "Маҳсулоти Premium ҳоло дастрас нест. Лутфан баъдтар бори дигар кӯшиш кунед.",
+  "premiumPurchaseFailed": "Харид анҷом дода нашуд. Лутфан бори дигар кӯшиш кунед.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Роҳи нури исломӣ",
+  "downloadPartiallyFinishedForReciter": "Зеркашӣ барои {reciter} бо {failed} сураҳои ноком анҷом ёфт ({downloaded}/{total} бор карда шудааст).",
+  "placesLocationRequiredTitle": "Ҷойгиршавӣ талаб карда мешавад",
+  "placesLocationRequiredBody": "Аввалан як макон таъин кунед, то масҷидҳои наздик, ғизои ҳалол ва мактабҳои исломиро дақиқ ҷустуҷӯ кунанд.",
+  "placesMapTilesUnavailableTitle": "Плитаҳои харита дастрас нестанд",
+  "placesMapTilesUnavailableBody": "Манбаи сафҳаи тасдиқшудаи харита барои ин сохтмон ҳанӯз танзим нашудааст. Ҷойҳои ҳамсоя ҳоло ҳам метавонанд аз макони захирашудаи шумо бор кунанд.",
+  "prayerRemainingUnavailable": "--"
 }

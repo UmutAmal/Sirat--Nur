@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "ከመስመር ውጭ ማውረድ አስተዳዳሪ",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "በ Supabase ውስጥ የደመና ጠረጴዛዎች ጠፍተዋል; የተጠቃለለ ውድቀት ንቁ",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "የክላውድ ጁዝ ዲበ ውሂብ ይጎድላል; የተጠቀለለ መዋቅራዊ ውድቀት ንቁ",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "አውርድ",
+  "resumeDownload": "ማውረድ ከቆመበት ቀጥል",
+  "deleteDownloadedFiles": "የወረዱ ፋይሎችን ሰርዝ",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "ለ{reciter} ማውረድ ተሰርዟል።",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "ለ{reciter} ማውረድ ተጠናቅቋል።",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 ሻውል",
   "specialDayDateEidAlAdha": "10 ዙል ሂጃህ",
   "specialDayDateIslamicNewYear": "1 ሙሀረም",
-  "specialDayDateMawlidAnNabi": "12 ረቢ አል-አወል"
+  "specialDayDateMawlidAnNabi": "12 ረቢ አል-አወል",
+  "refreshAction": "አድስ",
+  "ayahLabel": "አያ {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoading": "ተፍሲርን በመጫን ላይ...",
+  "tafsirSourceLabel": "የተፍሲር ምንጭ",
+  "tafsirNoSurahFound": "ለዚህ ሱራ ምንም ተፍሲር አልተገኘም።",
+  "tafsirNoAyahFound": "ለአያህ {ayah} ምንም ተፍሲር አልተገኘም።",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "ተፍሲርን መጫን አልተቻለም።",
+  "tafsirNoTextForAyah": "ለዚህ አያህ ምንም የተፍሲር ጽሑፍ የለም።",
+  "tafsirDownloadingProgress": "ተፍሲርን በማውረድ ላይ {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "ተፍሲርን በመጫን ላይ {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "የተፍሲር ምንጭ HTTP {statusCode} ስህተት መልሷል።",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "የተመረጠው የተፍሲር ምንጭ ምንም ግቤት አልተመለሰም።",
+  "premiumProductUnavailable": "ፕሪሚየም ምርት አሁን አይገኝም። እባክዎ ቆይተው እንደገና ይሞክሩ።",
+  "premiumPurchaseFailed": "ግዢ ሊጠናቀቅ አልቻለም። እባክህ እንደገና ሞክር።",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "splashTagline": "ኢስላማዊ የብርሃን መንገድ",
+  "downloadPartiallyFinishedForReciter": "ለ {reciter} ማውረዱ አልቋል {failed} ያልተሳኩ ሱራዎች ({downloaded}/{total} ወርዷል)።",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "placesLocationRequiredTitle": "ቦታ ያስፈልጋል",
+  "placesLocationRequiredBody": "በአቅራቢያ ያሉ መስጊዶች፣ ሃላል ምግብ እና ኢስላሚክ ትምህርት ቤቶች በትክክል መፈለግ እንዲችሉ መጀመሪያ ቦታ ያዘጋጁ።",
+  "placesMapTilesUnavailableTitle": "የካርታ ሰቆች አይገኙም።",
+  "placesMapTilesUnavailableBody": "የተረጋገጠ የካርታ ንጣፍ ምንጭ እስካሁን ለዚህ ግንባታ አልተዋቀረም። በአቅራቢያ ያሉ ቦታዎች አሁንም ከተቀመጠው ቦታዎ መጫን ይችላሉ።",
+  "prayerRemainingUnavailable": "--"
 }

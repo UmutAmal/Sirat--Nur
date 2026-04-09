@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Administrador de descargas sin conexión",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Faltan tablas de nube en Supabase; respaldo incluido activo",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Faltan metadatos de Cloud Juz; respaldo estructural incluido activo",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Descargar",
+  "resumeDownload": "Reanudar descarga",
+  "deleteDownloadedFiles": "Eliminar archivos descargados",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Descarga cancelada para {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Descarga completada para {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 shawwal",
   "specialDayDateEidAlAdha": "10 Dhu al-Hijjah",
   "specialDayDateIslamicNewYear": "1 muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabí al-Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabí al-Awwal",
+  "refreshAction": "Actualizar",
+  "ayahLabel": "Versículo {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoading": "Cargando tafsir...",
+  "tafsirSourceLabel": "fuente tafsir",
+  "tafsirNoSurahFound": "No se encontró ningún tafsir para esta sura.",
+  "tafsirNoAyahFound": "No se encontró ningún tafsir para la ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "No se pudo cargar Tafsir.",
+  "tafsirNoTextForAyah": "No hay texto de tafsir para esta aleya.",
+  "tafsirDownloadingProgress": "Descargando tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Cargando tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "La fuente de Tafsir devolvió un error HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "La fuente de tafsir seleccionada no arrojó entradas.",
+  "premiumProductUnavailable": "El producto Premium no está disponible en este momento. Inténtelo de nuevo más tarde.",
+  "premiumPurchaseFailed": "No se pudo completar la compra. Por favor inténtalo de nuevo.",
+  "prayerRemainingHoursMinutes": "{hours} h {minutes} min",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes} min",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "splashTagline": "Camino Islámico de la Luz",
+  "downloadPartiallyFinishedForReciter": "Descarga finalizada para {reciter} con {failed} suras fallidas ({downloaded}/{total} descargadas).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "placesLocationRequiredTitle": "Ubicación requerida",
+  "placesLocationRequiredBody": "Primero, establezca una ubicación para que se puedan buscar con precisión mezquitas, comida halal y escuelas islámicas cercanas.",
+  "placesMapTilesUnavailableTitle": "Mosaicos de mapa no disponibles",
+  "placesMapTilesUnavailableBody": "Aún no se ha configurado una fuente de mosaicos de mapa verificada para esta compilación. Los lugares cercanos aún se pueden cargar desde tu ubicación guardada.",
+  "prayerRemainingUnavailable": "--"
 }

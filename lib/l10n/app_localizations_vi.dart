@@ -12,6 +12,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Con đường ánh sáng Hồi giáo';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Làm mới';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsVi extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ôi $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Đang tải tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'nguồn Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Không tìm thấy tafsir cho surah này.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Không tìm thấy tafsir cho ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Không thể tải Tafsir.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Không có văn bản tafsir cho ayah này.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Đang tải xuống tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Đang tải tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Nguồn Tafsir trả về lỗi HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Nguồn tafsir đã chọn không trả lại mục nào.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -302,6 +352,19 @@ class AppLocalizationsVi extends AppLocalizations {
   String get prayers => 'Prayers';
 
   @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hours giờ $minutes phút';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '$minutes phút';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
+
+  @override
   String get dhikrCount => 'Dhikr Count';
 
   @override
@@ -344,7 +407,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get islamicNewYear => 'Năm mới Hồi giáo';
 
   @override
-  String get mawlidAnNabi => 'Mawlid an-Nabi';
+  String get mawlidAnNabi => 'Mawlid Kandili';
 
   @override
   String get specialDayDateRamadanStart => '1 tháng Ramadan';
@@ -356,13 +419,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get specialDayDateEidAlFitr => '1 Shawwal';
 
   @override
-  String get specialDayDateEidAlAdha => '10 Dhul Hijjah';
+  String get specialDayDateEidAlAdha => '10 Dhu al-Hijjah';
 
   @override
   String get specialDayDateIslamicNewYear => '1 Muharram';
 
   @override
-  String get specialDayDateMawlidAnNabi => '12 Rabi al-Awwal';
+  String get specialDayDateMawlidAnNabi => '12 Rabiul Awwal';
 
   @override
   String get laylatAlQadr => 'Laylat Al-Qadr';
@@ -444,7 +507,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Trình quản lý tải xuống';
 
   @override
   String get downloads => 'Downloads';
@@ -635,7 +698,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Trình quản lý tải xuống ngoại tuyến';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Bảng đám mây bị thiếu trong Supabase; dự phòng theo gói đang hoạt động';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Thiếu siêu dữ liệu đám mây juz; dự phòng cấu trúc đi kèm đang hoạt động';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -952,6 +1015,14 @@ class AppLocalizationsVi extends AppLocalizations {
       'Mở khóa tất cả các tính năng cho hành trình tâm linh của bạn';
 
   @override
+  String get premiumProductUnavailable =>
+      'Sản phẩm cao cấp hiện không có sẵn. Vui lòng thử lại sau.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Không thể hoàn tất việc mua hàng. Vui lòng thử lại.';
+
+  @override
   String get paywallFeature1Title => 'Trợ lý thần kinh Plus';
 
   @override
@@ -1060,7 +1131,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Cơ sở kiến ​​thức Hồi giáo ngoại tuyến đã được xác minh vẫn đang được quản lý. Bạn có thể bật tính năng dự phòng ngoại tuyến ngay bây giờ nhưng tính năng này sẽ chỉ hiển thị các thông báo an toàn có giới hạn cho đến khi tập dữ liệu có nguồn sẵn sàng.\n\nBạn có muốn bật dự phòng ngoại tuyến không?';
+      'Cơ sở kiến thức Hồi giáo ngoại tuyến đã được xác minh vẫn đang được quản lý. Bạn có thể bật tính năng dự phòng ngoại tuyến ngay bây giờ nhưng tính năng này sẽ chỉ hiển thị các thông báo an toàn có giới hạn cho đến khi tập dữ liệu có nguồn sẵn sàng.\n\nBạn có muốn bật dự phòng ngoại tuyến không?';
 
   @override
   String get chatbotOfflineSwitched =>
@@ -1098,25 +1169,35 @@ class AppLocalizationsVi extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Tải xuống';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Tiếp tục tải xuống';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Xóa các tập tin đã tải xuống';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Đã hủy tải xuống cho $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Đã hoàn tất tải xuống cho $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Đã hoàn tất tải xuống cho $reciter với $failed surah không thành công ($downloaded/$total đã tải xuống).';
   }
 
   @override
@@ -1236,6 +1317,20 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Lỗi mạng. Vui lòng thử lại.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Yêu cầu vị trí';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Trước tiên hãy đặt vị trí để có thể tìm kiếm chính xác các nhà thờ Hồi giáo, đồ ăn halal và trường học Hồi giáo gần đó.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Ô bản đồ không có sẵn';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Nguồn ô bản đồ đã được xác minh chưa được định cấu hình cho bản dựng này. Các địa điểm lân cận vẫn có thể tải từ vị trí đã lưu của bạn.';
 
   @override
   String get unknownPlaceName => 'Tên không xác định';

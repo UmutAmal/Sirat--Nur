@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "ዳውንሎድ ማናጀር",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nካብ መስመር ወጻኢ ዳውንሎድ ማናጀር",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣብ ሱፓባሰ ዝጎደሉ ናይ ደበና ሰደቓታት፤ bundled fallback ንጡፍ እዩ።",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nክላውድ ጁዝ ሜታዳታ ዝጎደለ፤ bundled መዋቕራዊ ውድቀት ንጡፍ",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -354,8 +354,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "መዓልታዊ ገደብ ሕቶ በጺሑ። ንዘይተወሰነ ናብ ፕሪምየም ምዕባይ።",
   "chatbotErrorMsg": "መልሲ ከመንጩ ኣይከኣልኩን። በጃኹም ደጊምኩም ፈትኑ።",
-  "chatbotOfflinePrompt": "እቲ ዝተረጋገጸ ካብ መስመር ወጻኢ ዝኾነ እስላማዊ ፍልጠት መሰረት ገና ይሕሎ ኣሎ። ሕጂ ካብ መስመር ወጻኢ ምምላስ ከተኽእሎ ትኽእል ኢኻ፡ ግን እቲ ምንጪ ዳታሴት ድሉው ክሳብ ዝኸውን ውሱን ውሑስ መልእኽትታት ጥራይ እዩ ዘርኢ።\n\nካብ መስመር ወጻኢ ዝግበር ምምላስ (offline fallback) ከተኽእሉ ትደልዩ ዶ?",
-  "chatbotOfflineSwitched": "ካብ መስመር ወጻኢ ፋልባክ ተኸፊቱ። ዝተረጋገጹ ናይ ከባቢ እስላማዊ መልስታት ገና ድሉዋት ኣይኮኑን።",
+  "chatbotOfflinePrompt": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nእቲ ዝተረጋገጸ ካብ መስመር ወጻኢ ዝኾነ እስላማዊ ፍልጠት መሰረት ገና ይሕሎ ኣሎ። ሕጂ ካብ መስመር ወጻኢ ምምላስ ከተኽእሎ ትኽእል ኢኻ፡ ግን እቲ ምንጪ ዳታሴት ድሉው ክሳብ ዝኸውን ውሱን ውሑስ መልእኽትታት ጥራይ እዩ ዘርኢ።\n\nካብ መስመር ወጻኢ ዝግበር ምምላስ (offline fallback) ከተኽእሉ ትደልዩ ዶ?",
+  "chatbotOfflineSwitched": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nካብ መስመር ወጻኢ ፋልባክ ተኸፊቱ። ዝተረጋገጹ ናይ ከባቢ እስላማዊ መልስታት ገና ድሉዋት ኣይኮኑን።",
   "chatbotOfflineDownloadLabel": "ካብ መስመር ወጻኢ Fallback ኣንቅሕ",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nDownload",
+  "resumeDownload": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nሪዝዩም ዳውንሎድ ምግባር",
+  "deleteDownloadedFiles": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nዝወረዱ ፋይላት ምድምሳስ",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nን {reciter} ዳውንሎድ ተሰሪዙ።",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nን {reciter} ዳውንሎድ ተዛዚሙ።",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -458,8 +458,8 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "ክላውድ ኤፒኣይ ኣይተዋቕረን። በጃኹም ናብ Local AI ቀይሩ።",
-  "chatbotLocalNoInfo": "[OFFLINE] ዝተረጋገጸ ናይ ከባቢ እስላማዊ መምርሒ ገና ኣይተረኽበን። ምንጪ መልሲ ንምርካብ ናብ Cloud AI ቀይሩ።",
+  "chatbotCloudNotConfigured": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nክላውድ ኤፒኣይ ኣይተዋቕረን። በጃኹም ናብ Local AI ቀይሩ።",
+  "chatbotLocalNoInfo": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\n[OFFLINE] ዝተረጋገጸ ናይ ከባቢ እስላማዊ መምርሒ ገና ኣይተረኽበን። ምንጪ መልሲ ንምርካብ ናብ Cloud AI ቀይሩ።",
   "mosques": "መሳጊድ",
   "halalFood": "ሓላል መግቢ",
   "placesSearchArea": "ኣብዚ ከባቢ ድለዩ።",
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 ሻውዋል",
   "specialDayDateEidAlAdha": "10 ዙል ሂጃ",
   "specialDayDateIslamicNewYear": "1 ሙሓረም",
-  "specialDayDateMawlidAnNabi": "12 ረቢ ኣልኣውዋል"
+  "specialDayDateMawlidAnNabi": "12 ረቢ ኣልኣውዋል",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nምሕዳስ",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣብ ምጽዓን tafsir...",
+  "tafsirSourceLabel": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nታፍሲር ምንጪ",
+  "tafsirNoSurahFound": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nነዛ ሱራ ዝኸውን ተፍሲር ኣይተረኽበን።",
+  "tafsirNoAyahFound": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nንኣያ {ayah} ዝኾነ ታፍሲር ኣይተረኽበን።",
+  "tafsirLoadFailed": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nታፍሲር ክጽዓን ኣይከኣለን።",
+  "tafsirNoTextForAyah": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nነዚ ኣያሕ ዝኸውን ታፍሲር ጽሑፍ የለን።",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "tafsirApiStatusError": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nምንጪ ታፍሲር ናይ HTTP {statusCode} ጌጋ መሊሱ።",
+  "tafsirNoEntriesReturned": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nእቲ ዝተመርጸ ምንጪ ታፍሲር ዝኾነ ምእታው ኣይመለሰን።",
+  "premiumProductUnavailable": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nፕሪምየም ፍርያት ኣብዚ ሕጂ እዋን የለን። በጃኹም ድሒርኩም ደጊምኩም ፈትኑ።",
+  "premiumPurchaseFailed": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nዕድጊ ክዛዘም ኣይከኣለን። በጃኹም ደጊምኩም ፈትኑ።",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nእስላማዊ መንገዲ ብርሃን",
+  "downloadPartiallyFinishedForReciter": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nን {reciter} ምስ {failed} ዝፈሸላ ሱራታት ({downloaded}/{total} ዝወረደ) ምውራድ ተዛዚሙ።",
+  "placesLocationRequiredTitle": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nቦታ የድሊ",
+  "placesLocationRequiredBody": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣብ ቀረባ ዝርከቡ መሳጊድ፡ ሓላል መግቢ፡ ከምኡ’ውን ኣብያተ ትምህርቲ እስላም ብትኽክል ምእንቲ ክድለዩ መጀመርታ ቦታ ኣቐምጥ።",
+  "placesMapTilesUnavailableTitle": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nካርታ ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት",
+  "placesMapTilesUnavailableBody": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nዝተረጋገጸ ምንጪ ካርታ ታይል ነዚ ህንጸት ገና ኣይተዋቕረን። ኣብ ቀረባ ዝርከቡ ቦታታት ገና ካብቲ ዝተዓቀብካዮ ቦታ ክጽዕኑ ይኽእሉ እዮም።",
+  "prayerRemainingUnavailable": "--"
 }

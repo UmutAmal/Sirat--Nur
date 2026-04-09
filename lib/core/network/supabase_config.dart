@@ -28,6 +28,11 @@ class SupabaseConfig {
     defaultValue: 'quran-audio',
   );
 
+  static const String placesTileUrlTemplate = String.fromEnvironment(
+    'PLACES_TILE_URL_TEMPLATE',
+    defaultValue: '',
+  );
+
   static SupabaseClient get client => Supabase.instance.client;
 
   static Future<void> initialize() async {

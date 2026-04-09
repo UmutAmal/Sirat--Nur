@@ -12,6 +12,9 @@ class AppLocalizationsLt extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Islamo šviesos kelias';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsLt extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Atnaujinti';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsLt extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Įkeliama tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir šaltinis';
+
+  @override
+  String get tafsirNoSurahFound => 'Šiai surai tafsyro nerasta.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Ayah $ayah tafsir nerasta.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir nepavyko įkelti.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Nėra tafsir teksto šiai ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Atsisiunčiama tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Įkeliamas tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return '„Tafsir“ šaltinis pateikė HTTP $statusCode klaidą.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Pasirinktas tafsir šaltinis nepateikė jokių įrašų.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}min';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsLt extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Atsisiuntimų tvarkyklė';
 
   @override
   String get downloads => 'Downloads';
@@ -635,7 +698,7 @@ class AppLocalizationsLt extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Atsisiuntimų tvarkyklė neprisijungus';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase trūksta debesų lentelių; sugrupuotas atsarginis aktyvus';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Trūksta debesies juz metaduomenų; sujungtas struktūrinis atsarginis aktyvus';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsLt extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Atrakinkite visas dvasinės kelionės funkcijas';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Aukščiausios kokybės gaminio šiuo metu nėra. Bandykite dar kartą vėliau.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Pirkimo užbaigti nepavyko. Bandykite dar kartą.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1100,25 +1171,35 @@ class AppLocalizationsLt extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Atsisiųsti';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Tęsti atsisiuntimą';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Ištrinkite atsisiųstus failus';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter atsisiuntimas atšauktas.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter atsisiuntimas baigtas.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Atsisiuntimas baigtas $reciter su $failed nepavykusiomis suromis ($downloaded/$total atsisiųsta).';
   }
 
   @override
@@ -1239,6 +1320,21 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Tinklo klaida. Bandykite dar kartą.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Reikalinga vieta';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Pirmiausia nustatykite vietą, kad būtų galima tiksliai ieškoti netoliese esančių mečečių, halal maisto ir islamo mokyklų.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Žemėlapio plytelės nepasiekiamos';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Patvirtintas žemėlapio išklotinės šaltinis šiai versijai dar nesukonfigūruotas. Netoliese esančias vietas vis tiek galima įkelti iš jūsų išsaugotos vietos.';
 
   @override
   String get unknownPlaceName => 'Nežinomas vardas';

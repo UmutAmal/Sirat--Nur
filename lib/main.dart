@@ -20,6 +20,8 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+
     return Scaffold(
       backgroundColor: AppColors.darkBg,
       body: Center(
@@ -57,8 +59,8 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
-            const Text(
-              'Islamic Way of Light',
+            Text(
+              l10n?.splashTagline ?? '',
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white54,
@@ -205,6 +207,13 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: AppTheme.dark,
+        locale: configuredLocale,
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: supportedLocales,
+        localeResolutionCallback: (locale, _) {
+          final requested = configuredLocale ?? locale;
+          return resolveSupportedLocale(requested, supportedLocales);
+        },
         home: const SplashScreen(),
       );
     }

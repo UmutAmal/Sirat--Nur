@@ -12,6 +12,9 @@ class AppLocalizationsYo extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Islam Way of Light';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsYo extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Tuntun';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsYo extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsYo extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Nkojọpọ tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir orisun';
+
+  @override
+  String get tafsirNoSurahFound => 'A ko ri tafsiri fun surah yi.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Ko si tafsir ti a rii fun ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir ko le ṣe kojọpọ.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Ko si ọrọ tafsir fun ayah yii.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Gbigba tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Nkojọpọ tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Orisun Tafsir da aṣiṣe HTTP $statusCode pada.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Orisun tafsir ti a yan ko da awọn titẹ sii.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsYo extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -634,7 +697,7 @@ class AppLocalizationsYo extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Aisinipo Download Manager';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -819,7 +882,7 @@ class AppLocalizationsYo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Awọsanma tabili sonu ni Supabase; bundled fallback lọwọ';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsYo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Awọsanma juz metadata sonu; bundled igbekale fallback lọwọ';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -948,6 +1011,14 @@ class AppLocalizationsYo extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => 'Ṣii gbogbo awọn ẹya fun irin-ajo ti ẹmi rẹ';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Ọja Ere ko si ni bayi. Jọwọ gbiyanju lẹẹkansi nigbamii.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'A ko le pari rira. Jọwọ gbiyanju lẹẹkansi.';
 
   @override
   String get paywallFeature1Title => 'Oluranlọwọ nkankikan Plus';
@@ -1096,25 +1167,35 @@ class AppLocalizationsYo extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Gba lati ayelujara';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Bẹrẹ Gbigbasilẹ';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Pa awọn faili ti a gbasile';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Ti fagilee igbasilẹ fun $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Igbasilẹ ti pari fun $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Igbasilẹ ti pari fun $reciter pẹlu $failed surah ti o kuna ($downloaded/$total ti ṣe igbasilẹ).';
   }
 
   @override
@@ -1234,6 +1315,20 @@ class AppLocalizationsYo extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Aṣiṣe nẹtiwọki. Jọwọ gbiyanju lẹẹkansi.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Ibi ti a beere';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Ṣeto ipo akọkọ ki awọn mọṣalaṣi nitosi, ounjẹ halal, ati awọn ile-iwe Islam le ṣe wa ni pipe.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Awọn alẹmọ maapu ko si';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Orisun tile maapu ti a ti rii daju ko ni tunto fun kikọ yii sibẹsibẹ. Awọn aaye to wa nitosi tun le ṣajọpọ lati ipo ti o fipamọ.';
 
   @override
   String get unknownPlaceName => 'Orukọ Aimọ';

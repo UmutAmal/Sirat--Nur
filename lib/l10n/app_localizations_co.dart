@@ -12,6 +12,9 @@ class AppLocalizationsCo extends AppLocalizations {
   String get appTitle => 'Via di Allah';
 
   @override
+  String get splashTagline => 'Via islamica di luce';
+
+  @override
   String get home => 'A casa';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsCo extends AppLocalizations {
   String get retry => 'Riprova';
 
   @override
+  String get refreshAction => 'Refresh';
+
+  @override
   String get cancel => 'Cancella';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsCo extends AppLocalizations {
   String get surah => 'Sura';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Ghjus';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsCo extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Caricamentu di tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Fonte Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Nisun tafsir trovu per sta sura.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Nisun tafsir trovu per ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir ùn pudia esse caricatu.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Nisun testu tafsir per questu ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Scaricamentu di tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Caricamentu di tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'A fonte Tafsir hà restituutu un errore HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'A fonte di tafsir selezziunata ùn hà restituutu micca entrate.';
 
   @override
   String get bookmarks => 'Segnalibri';
@@ -300,6 +350,19 @@ class AppLocalizationsCo extends AppLocalizations {
 
   @override
   String get prayers => 'Preghiere';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Conte Dhikr';
@@ -636,7 +699,7 @@ class AppLocalizationsCo extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Manager di scaricamentu offline';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +884,7 @@ class AppLocalizationsCo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Tavule nuvola mancanti in Supabase; bundled fallback attivu';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +893,7 @@ class AppLocalizationsCo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata mancanti; bundled fallback strutturale attivu';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -951,6 +1014,14 @@ class AppLocalizationsCo extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Sblocca tutte e funzioni per u vostru viaghju spirituale';
+
+  @override
+  String get premiumProductUnavailable =>
+      'U pruduttu premium ùn hè micca dispunibule avà. Per piacè pruvate di novu più tardi.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'A compra ùn pudia esse cumpletata. Per piacè pruvate di novu.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1100,25 +1171,35 @@ class AppLocalizationsCo extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Scaricate';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Curriculum Download';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Sguassà i schedari telecaricati';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Scaricamentu annullatu per $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Scaricamentu cumpletu per $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Scaricamentu finitu per $reciter cù $failed surah falluti ($downloaded/$total scaricatu).';
   }
 
   @override
@@ -1238,6 +1319,21 @@ class AppLocalizationsCo extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Errore di rete. Per piacè pruvate di novu.';
+
+  @override
+  String get placesLocationRequiredTitle => 'U locu necessariu';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Fighjate prima un locu per chì e moschee vicine, l\'alimentu halal è e scole islamiche ponu esse cercate accuratamente.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Piastrelle di carte ùn sò micca dispunibili';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Una fonte di tile di mappa verificata ùn hè ancu cunfigurata per questa custruzzione. Lochi vicini ponu sempre carica da u vostru locu salvatu.';
 
   @override
   String get unknownPlaceName => 'Nome scunnisciutu';

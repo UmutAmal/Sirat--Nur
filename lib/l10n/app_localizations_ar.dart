@@ -12,6 +12,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get appTitle => 'طريقة الله';
 
   @override
+  String get splashTagline => 'طريق النور الاسلامي';
+
+  @override
   String get home => 'الرئيسية';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get retry => 'إعادة المحاولة';
 
   @override
+  String get refreshAction => 'تحديث';
+
+  @override
   String get cancel => 'إلغاء';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsAr extends AppLocalizations {
   String get surah => 'سورة';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'آية $ayah';
+  }
+
+  @override
   String get juz => 'جزء';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get tafsir => 'التفسير';
+
+  @override
+  String get tafsirLoading => 'جاري تحميل التفسير...';
+
+  @override
+  String get tafsirSourceLabel => 'المصدر تفسير';
+
+  @override
+  String get tafsirNoSurahFound => 'لم يتم العثور على تفسير لهذه السورة.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'لم يتم العثور على تفسير للآية $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'لا يمكن تحميل التفسير.';
+
+  @override
+  String get tafsirNoTextForAyah => 'لا يوجد نص تفسير لهذه الآية.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'تنزيل التفسير $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'جاري تحميل التفسير $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'أرجع مصدر التفسير خطأ HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'لم يُرجع مصدر التفسير المحدد أي إدخالات.';
 
   @override
   String get bookmarks => 'الإشارات المرجعية';
@@ -298,6 +348,19 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get prayers => 'الصلوات';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hours س $minutes د';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '$minutesم';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'عدد الأذكار';
@@ -442,7 +505,7 @@ class AppLocalizationsAr extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'مدير التنزيلات';
+  String get downloadManager => 'مدير التحميل';
 
   @override
   String get downloads => 'التنزيلات';
@@ -631,7 +694,7 @@ class AppLocalizationsAr extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'مدير التحميل دون اتصال';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -816,7 +879,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'الجداول السحابية مفقودة في Supabase؛ الاحتياطية المجمعة نشطة';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -825,7 +888,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'البيانات التعريفية لأجزاء السحابة مفقودة؛ الاحتياطي الهيكلي المجمع نشط';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -946,6 +1009,14 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => 'افتح جميع الميزات لرحلتك الروحية';
+
+  @override
+  String get premiumProductUnavailable =>
+      'المنتج المتميز غير متوفر حاليًا. يرجى المحاولة مرة أخرى في وقت لاحق.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'لا يمكن إكمال عملية الشراء. يرجى المحاولة مرة أخرى.';
 
   @override
   String get paywallFeature1Title => 'المساعد العصبي بلس';
@@ -1095,25 +1166,35 @@ class AppLocalizationsAr extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'تحميل';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'استئناف التنزيل';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'حذف الملفات التي تم تنزيلها';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'تم إلغاء التنزيل لـ $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'اكتمل التنزيل لـ $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'انتهى التنزيل لـ $reciter مع $failed السور الفاشلة (تم تنزيل $downloaded/$total).';
   }
 
   @override
@@ -1233,6 +1314,20 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'خطأ في الشبكة. يرجى المحاولة مرة أخرى.';
+
+  @override
+  String get placesLocationRequiredTitle => 'الموقع مطلوب';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'قم بتعيين موقع أولاً حتى يمكن البحث بدقة عن المساجد القريبة والطعام الحلال والمدارس الإسلامية.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'مربعات الخريطة غير متاحة';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'لم يتم تكوين مصدر تجانب الخريطة الذي تم التحقق منه لهذا الإصدار حتى الآن. لا يزال من الممكن تحميل الأماكن القريبة من موقعك المحفوظ.';
 
   @override
   String get unknownPlaceName => 'اسم غير معروف';

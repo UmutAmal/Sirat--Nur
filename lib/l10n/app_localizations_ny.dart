@@ -12,6 +12,9 @@ class AppLocalizationsNy extends AppLocalizations {
   String get appTitle => 'Njira Ya Allah';
 
   @override
+  String get splashTagline => 'Njira Yachisilamu Yowala';
+
+  @override
   String get home => 'Kunyumba';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsNy extends AppLocalizations {
   String get retry => 'Yesaninso';
 
   @override
+  String get refreshAction => 'Tsitsaninso';
+
+  @override
   String get cancel => 'Letsani';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsNy extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Tikutsegula tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Gwero la Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Sura iyi sinapezeke tafsir.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Palibe tafsir yomwe yapezeka ya ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir sinathe kuikidwa.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Palibe mawu a tafsir a ayah iyi.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Kutsitsa tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Kutsegula tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Gwero la Tafsir labweza cholakwika cha HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Magwero osankhidwa a tafsir sanabweze chilichonse.';
 
   @override
   String get bookmarks => 'Zosungira';
@@ -300,6 +350,19 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String get prayers => 'Mapemphero';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Mtengo wa Dhikr';
@@ -823,7 +886,7 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Matebulo amtambo akusowa ku Supabase; m\'mitolo fallback yogwira';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -832,7 +895,7 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata ikusowa; m\'mitolo structural fallback yogwira';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -952,6 +1015,13 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => 'Tsegulani mbali zonse za ulendo wanu wauzimu';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Chogulitsa chamtengo wapatali sichikupezeka pakali pano. Chonde yesaninso nthawi ina.';
+
+  @override
+  String get premiumPurchaseFailed => 'Kugula sikunathe. Chonde yesaninso.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1099,25 +1169,35 @@ class AppLocalizationsNy extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Tsitsani';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Yambitsaninso Kutsitsa';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Chotsani Mafayilo Otsitsa';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Kutsitsa kwalephereka kwa $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Kutsitsa kwatha kwa $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Kutsitsa kwatha kwa $reciter ndi $failed ma surah omwe sanatheke ($downloaded/$total adatsitsidwa).';
   }
 
   @override
@@ -1237,6 +1317,20 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Zolakwika pa netiweki. Chonde yesaninso.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Malo ofunikira';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Khazikitsani malo kaye kuti mizikiti yapafupi, chakudya cha halal, ndi masukulu achisilamu azifufuzidwa molondola.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Matailosi amapu sakupezeka';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Malo otsimikizika a matailosi amapu sanakhazikitsidwebe kuti apangidwe pano. Malo apafupi atha kutsegulabe kuchokera komwe mwasungidwa.';
 
   @override
   String get unknownPlaceName => 'Dzina Losadziwika';

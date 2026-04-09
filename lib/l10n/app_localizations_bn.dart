@@ -12,6 +12,9 @@ class AppLocalizationsBn extends AppLocalizations {
   String get appTitle => 'আল্লাহর পথ';
 
   @override
+  String get splashTagline => 'ইসলামিক আলোর পথ';
+
+  @override
   String get home => 'হোম';
 
   @override
@@ -151,6 +154,9 @@ class AppLocalizationsBn extends AppLocalizations {
   String get retry => 'আবার চেষ্টা করুন';
 
   @override
+  String get refreshAction => 'রিফ্রেশ';
+
+  @override
   String get cancel => 'বাতিল';
 
   @override
@@ -178,6 +184,11 @@ class AppLocalizationsBn extends AppLocalizations {
   String get surah => 'সূরা';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'জুয';
 
   @override
@@ -194,6 +205,45 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get tafsir => 'তাফসীর';
+
+  @override
+  String get tafsirLoading => 'তাফসির লোড হচ্ছে...';
+
+  @override
+  String get tafsirSourceLabel => 'তাফসির সূত্র';
+
+  @override
+  String get tafsirNoSurahFound => 'এই সূরার কোন তাফসীর পাওয়া যায়নি।';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'আয়াত $ayah এর জন্য কোনো তাফসির পাওয়া যায়নি।';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'তাফসির লোড করা যায়নি।';
+
+  @override
+  String get tafsirNoTextForAyah => 'এই আয়াতের জন্য কোন তাফসির পাঠ্য নেই।';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'তাফসির ডাউনলোড করা হচ্ছে $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'তাফসির লোড হচ্ছে $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'তাফসির উৎস একটি HTTP $statusCode ত্রুটি ফিরিয়ে দিয়েছে।';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'নির্বাচিত তাফসির উৎস কোনো এন্ট্রি ফেরত দেয়নি।';
 
   @override
   String get bookmarks => 'বুকমার্ক';
@@ -301,6 +351,19 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get prayers => 'নামাজ';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hoursঘন্টা $minutesমিনিট';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '$minutesমি';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'যিকির সংখ্যা';
@@ -635,7 +698,7 @@ class AppLocalizationsBn extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'অফলাইন ডাউনলোড ম্যানেজার';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'সুপাবেসে ক্লাউড টেবিল অনুপস্থিত; বান্ডিল ফলব্যাক সক্রিয়';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'ক্লাউড জুজ মেটাডেটা অনুপস্থিত; বান্ডিল কাঠামোগত ফলব্যাক সক্রিয়';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsBn extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'আপনার আধ্যাত্মিক যাত্রার জন্য সমস্ত বৈশিষ্ট্য আনলক করুন';
+
+  @override
+  String get premiumProductUnavailable =>
+      'প্রিমিয়াম পণ্য এই মুহূর্তে উপলব্ধ নয়. পরে আবার চেষ্টা করুন.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'ক্রয় সম্পূর্ণ করা যায়নি. আবার চেষ্টা করুন.';
 
   @override
   String get paywallFeature1Title => 'নিউরাল অ্যাসিস্ট্যান্ট প্লাস';
@@ -1098,25 +1169,35 @@ class AppLocalizationsBn extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'ডাউনলোড করুন';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'ডাউনলোড পুনরায় শুরু করুন';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'ডাউনলোড করা ফাইল মুছুন';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter এর জন্য ডাউনলোড বাতিল হয়েছে।';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter এর জন্য ডাউনলোড সম্পূর্ণ হয়েছে।';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciter এর জন্য $failed ব্যর্থ সূরাগুলির ডাউনলোড শেষ হয়েছে ($downloaded/$total ডাউনলোড করা হয়েছে)।';
   }
 
   @override
@@ -1236,6 +1317,20 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'নেটওয়ার্ক ত্রুটি। আবার চেষ্টা করুন.';
+
+  @override
+  String get placesLocationRequiredTitle => 'অবস্থান প্রয়োজন';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'প্রথমে একটি অবস্থান নির্ধারণ করুন যাতে কাছাকাছি মসজিদ, হালাল খাবার এবং ইসলামিক স্কুলগুলি সঠিকভাবে অনুসন্ধান করা যায়।';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'মানচিত্র টাইলস অনুপলব্ধ';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'এই বিল্ডের জন্য একটি যাচাইকৃত মানচিত্র টাইল উত্স এখনও কনফিগার করা হয়নি৷ আশেপাশের জায়গাগুলি এখনও আপনার সংরক্ষিত অবস্থান থেকে লোড হতে পারে৷';
 
   @override
   String get unknownPlaceName => 'অজানা নাম';

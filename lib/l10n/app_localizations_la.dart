@@ -12,6 +12,9 @@ class AppLocalizationsLa extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Via lux islamica';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsLa extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Renovare';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsLa extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Loading tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir fons';
+
+  @override
+  String get tafsirNoSurahFound => 'Nulla tafsir inventa est pro surah hoc.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Nulla tafsir inventa est pro ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir non oneratus.';
+
+  @override
+  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Download tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir fons errorem HTTP $statusCode reddidit.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Electus fons tafsir ingressus nullos reddidit.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsLa extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Download Procurator';
 
   @override
   String get downloads => 'Downloads';
@@ -820,7 +883,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Tabulae nubis desunt in Supabase; bundled fallback active';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Nubes juz metadata defuit; bundled fabrica activae fallback';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsLa extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Reserare omnia features pro spirituali itinere';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Magnum productum est non available nunc. Mox iterum conare.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Emptio perfici non potuit. Quaeso, iterum conare.';
 
   @override
   String get paywallFeature1Title => 'Neural Suffragium Plus';
@@ -1101,22 +1172,32 @@ class AppLocalizationsLa extends AppLocalizations {
   String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Proin Download';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Delere Downloaded Lima';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Download cancellatum pro $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Download completur pro $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Download finita est pro $reciter cum $failed surahs defecit ($downloaded/$total receptae sunt).';
   }
 
   @override
@@ -1236,6 +1317,20 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Retis error. Quaeso, iterum conare.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Locus requiratur';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Locum primum tam prope meschitis, cibus halal, et schola islamica accurate investigari possunt.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Fons tegularum chartarum certificatus non configuratur ad hoc adhuc constructum. Loca vicina adhuc onerare possunt ex loco servato tuo.';
 
   @override
   String get unknownPlaceName => 'Nomen ignotum';

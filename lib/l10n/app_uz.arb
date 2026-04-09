@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Yuklab olish menejeri",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Oflayn yuklab olish menejeri",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Supabase-da bulutli jadvallar yo'q; to'plangan qayta tiklash faol",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metama'lumotlari etishmayapti; to'plangan strukturaviy tiklanish faol",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Yuklab oling",
+  "resumeDownload": "Yuklashni davom ettirish",
+  "deleteDownloadedFiles": "Yuklab olingan fayllarni o'chirish",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} uchun yuklab olish bekor qilindi.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter} uchun yuklab olindi.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shavvol",
   "specialDayDateEidAlAdha": "10 Zulhijja",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabiul-avval"
+  "specialDayDateMawlidAnNabi": "12 Rabiul-avval",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Yangilash",
+  "ayahLabel": "Oya {ayah}",
+  "tafsirLoading": "Tafsir yuklanmoqda...",
+  "tafsirSourceLabel": "Tafsir manbasi",
+  "tafsirNoSurahFound": "Bu sura uchun tafsir topilmadi.",
+  "tafsirNoAyahFound": "{ayah} oyati uchun tafsir topilmadi.",
+  "tafsirLoadFailed": "Tafsirni yuklab bo‘lmadi.",
+  "tafsirNoTextForAyah": "Bu oyat uchun tafsir matni yo'q.",
+  "tafsirDownloadingProgress": "{current}/{total} tafsiri yuklab olinmoqda",
+  "tafsirLoadingProgress": "Tafsir yuklanmoqda {current}/{total}",
+  "tafsirApiStatusError": "Tafsir manbasi HTTP {statusCode} xatosini qaytardi.",
+  "tafsirNoEntriesReturned": "Tanlangan tafsir manbasi hech qanday yozuvni qaytarmadi.",
+  "premiumProductUnavailable": "Premium mahsulot hozirda mavjud emas. Keyinroq qayta urinib ko‘ring.",
+  "premiumPurchaseFailed": "Xaridni yakunlab bo‘lmadi. Iltimos, qayta urinib koʻring.",
+  "prayerRemainingHoursMinutes": "{hours}soat {minutes}daq",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Islom nur yo'li",
+  "downloadPartiallyFinishedForReciter": "{reciter} uchun {failed} muvaffaqiyatsiz suralarni yuklab olish tugadi ({downloaded}/{total} yuklab olindi).",
+  "placesLocationRequiredTitle": "Joylashuv talab qilinadi",
+  "placesLocationRequiredBody": "Yaqin atrofdagi masjidlar, halol taomlar va islomiy maktablarni aniq qidirish uchun birinchi navbatda joyni belgilang.",
+  "placesMapTilesUnavailableTitle": "Xarita plitalari mavjud emas",
+  "placesMapTilesUnavailableBody": "Tasdiqlangan xaritalar manbasi hali bu tuzilish uchun sozlanmagan. Yaqin-atrofdagi joylar hali ham saqlangan joylashuvingizdan yuklanishi mumkin.",
+  "prayerRemainingUnavailable": "--"
 }

@@ -12,6 +12,9 @@ class AppLocalizationsKk extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Исламдық нұр жолы';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsKk extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Жаңарту';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsKk extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ая $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Тафсир жүктелуде...';
+
+  @override
+  String get tafsirSourceLabel => 'Тафсир көзі';
+
+  @override
+  String get tafsirNoSurahFound => 'Бұл сүре үшін тәпсір табылмады.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return '$ayah аятына қатысты тафсир табылмады.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Тафсирді жүктеу мүмкін болмады.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Бұл аятқа арналған тәфсир мәтіні жоқ.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return '$current/$total тафсирін жүктеп алу';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return '$current/$total тафсирі жүктелуде';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Тафсир көзі HTTP $statusCode қатесін қайтарды.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Таңдалған тәфсир көзі ешбір жазбаны қайтармады.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hoursсағ $minutesмин';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsKk extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Жүктеу менеджері';
 
   @override
   String get downloads => 'Downloads';
@@ -634,7 +697,7 @@ class AppLocalizationsKk extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Офлайн жүктеу менеджері';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -819,7 +882,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase қолданбасында бұлтты кестелер жоқ; жинақталған қалпына келтіру белсенді';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz метадеректері жоқ; жинақталған құрылымдық қалпына келтіру белсенді';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -949,6 +1012,13 @@ class AppLocalizationsKk extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Рухани саяхатыңыздың барлық мүмкіндіктерін ашыңыз';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Премиум өнім дәл қазір қолжетімді емес. Тағы жасауды сәл кейінірек көріңізді өтінеміз.';
+
+  @override
+  String get premiumPurchaseFailed => 'Сатып алу аяқталмады. Қайталап көріңіз.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1096,25 +1166,35 @@ class AppLocalizationsKk extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Жүктеп алу';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Жүктеп алуды жалғастыру';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Жүктелген файлдарды жою';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter үшін жүктеп алу тоқтатылды.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter үшін жүктеп алу аяқталды.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciter үшін $failed орындалмаған сүрелермен жүктеп алу аяқталды ($downloaded/$total жүктеп алынды).';
   }
 
   @override
@@ -1234,6 +1314,21 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Желі қатесі. Қайталап көріңіз.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Орын қажет';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Маңайдағы мешіттерді, халал тағамдарды және ислам мектептерін дәл іздеу үшін алдымен орынды белгілеңіз.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Карта тақтайшалары қолжетімді емес';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Тексерілген карта тақтасының көзі бұл құрастыру үшін әлі конфигурацияланбаған. Маңайдағы орындар сақталған орыннан әлі де жүктей алады.';
 
   @override
   String get unknownPlaceName => 'Белгісіз аты';

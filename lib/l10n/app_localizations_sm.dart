@@ -12,6 +12,9 @@ class AppLocalizationsSm extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Ala faa-Islam o le Malamalama';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsSm extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Toe faafou';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsSm extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Tu\'u tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Punavai Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Leai se tafsir na maua mo lenei surah.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Leai se tafsir na maua mo ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Sa le mafai ona utaina Tafsir.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Leai se tusitusiga tafsir mo lenei papa.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Na toe fa\'afo\'i mai e le puna Tafsir se HTTP $statusCode sese.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'O le puna tafsir ua filifilia e leai ni fa\'amaumauga.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsSm extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Pule o le download';
 
   @override
   String get downloads => 'Downloads';
@@ -636,7 +699,7 @@ class AppLocalizationsSm extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Pule o le la\'uina i luga ole laiga';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +884,7 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'O laulau o ao e misi i Supabase; fa\'apipi\'i fa\'afo\'i fa\'agaoioi';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +893,7 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Ua misi metadata juz; fa\'apipi\'i fa\'avae fa\'afo\'i fa\'agaoioi';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => 'Tatala vaega uma mo lau malaga faaleagaga';
+
+  @override
+  String get premiumProductUnavailable =>
+      'O oloa fa\'apitoa e le\'o maua i le taimi nei. Faamolemole toe taumafai mulimuli ane.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Sa le mafai ona mae\'a le fa\'atau. Fa\'amolemole toe taumafai.';
 
   @override
   String get paywallFeature1Title => 'Fesoasoani Neural Plus';
@@ -1100,25 +1171,35 @@ class AppLocalizationsSm extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'La\'u mai';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Toe sii maia';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Aveese faila ua siiina mai';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Ua faaleaogaina le la\'uina mo $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Ua mae\'a le la\'uina mo $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Ua mae\'a le la\'uina mo $reciter ma $failed surah e le\'i manuia ($downloaded/$total na sii mai).';
   }
 
   @override
@@ -1239,6 +1320,20 @@ class AppLocalizationsSm extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Sese feso\'otaiga. Fa\'amolemole toe taumafai.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Manaomia nofoaga';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Fa\'atulaga muamua se nofoaga ina ia mafai ona su\'esu\'e sa\'o faletapuai lata ane, mea\'ai halal, ma a\'oga Isalama.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'E le o avanoa pepa fa\'afanua';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'E le\'i fa\'atulagaina se fa\'apogai o fa\'afanua fa\'amaonia mo lenei faufale. O nofoaga lata ane e mafai lava ona la\'u mai lou nofoaga sefe.';
 
   @override
   String get unknownPlaceName => 'Le Igoa';

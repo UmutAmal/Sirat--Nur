@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Daunlod Maneja",
+  "downloadManager": "Download Manager",
   "downloads": "Di tin dɛn we dɛn kin dawnlod",
   "downloading": "We yu de dawnlod...",
   "downloadComplete": "Daunlod Kɔmplit",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium we dɛn dɔn chɛk.",
   "premiumNotFound": "Premium nɔ fɛn.",
   "premiumRefreshError": "Nɔ ebul fɔ rifresh prɛmiɔm stetɔs: {error}",
-  "offlineDownloadManager": "Ɔflayn Daunlod Maneja",
+  "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "Manej masɛf ɔflayn ɔdio & datasɛt pak dɛn.",
   "freeStorage": "Fri op intanɛnt divays stɔrɔj.",
   "quranIntegrity": "Di Kɔran Intɛgriti",
@@ -354,8 +354,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Di limit fɔ di kwɛstyɔn dɛn we dɛn kin aks ɛvride dɔn rich. Upgrade to Premium fɔ we nɔ gɛt limit.",
   "chatbotErrorMsg": "A nɔ bin ebul fɔ jenarayz wan ansa. Duya tray bak.",
-  "chatbotOfflinePrompt": "Di verified oflain Islamik no bies stil de curate. Yu kin ɛnabul ɔflayn fɔlbak naw, bɔt i go jɔs sho limited sef mɛsej dɛn te di sɔs datasɛt rɛdi.\n\nYu go lɛk fɔ ɛnabul ɔflayna fɔl bak?",
-  "chatbotOfflineSwitched": "Ɔflayn fɔlbak dɔn ɛnabul. Verified lokal Islamic ansa dem no redi yet.",
+  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
+  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "Enable Ɔflayn Fɔlbak",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -458,8 +458,8 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Klayd API nɔ kɔnfigyut. Duya, chenj to Lokal AI.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified lokal Islamik gayd nɔ de yet. Switch to Klayd AI fɔ sɔs ansa dɛn.",
+  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "Moskɛt dɛn",
   "halalFood": "Halal Fɔd fɔ it",
   "placesSearchArea": "Sɔch dis eria",
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal, we de na di wɔl",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah we dɛn kɔl",
   "specialDayDateIslamicNewYear": "1 Muharram, we dɛn kɔl Muharram",
-  "specialDayDateMawlidAnNabi": "12 Na Rabi al-Awwal bin rayt am"
+  "specialDayDateMawlidAnNabi": "12 Na Rabi al-Awwal bin rayt am",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Refresh",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "Loading tafsir...",
+  "tafsirSourceLabel": "Tafsir source",
+  "tafsirNoSurahFound": "No tafsir found for this surah.",
+  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoadFailed": "Tafsir could not be loaded.",
+  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "premiumProductUnavailable": "Premium product is not available right now. Please try again later.",
+  "premiumPurchaseFailed": "Purchase could not be completed. Please try again.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Islamic Way of Light",
+  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "placesLocationRequiredTitle": "Location required",
+  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
+  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "prayerRemainingUnavailable": "-- ."
 }

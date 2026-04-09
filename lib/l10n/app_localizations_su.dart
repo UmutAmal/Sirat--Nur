@@ -12,6 +12,9 @@ class AppLocalizationsSu extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Jalan Islam Cahaya';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsSu extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Nyegerkeun';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsSu extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,46 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Ngamuat tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Sumber Tafsir';
+
+  @override
+  String get tafsirNoSurahFound =>
+      'Teu aya tafsir anu kapanggih pikeun surat ieu.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'No tafsir found for ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir teu bisa dimuat.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Henteu aya téks tafsir pikeun ayat ieu.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Sumber tafsir balik kasalahan HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Sumber tafsir anu dipilih teu aya deui entri.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +351,19 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +508,7 @@ class AppLocalizationsSu extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Unduh Manajer';
 
   @override
   String get downloads => 'Downloads';
@@ -635,7 +699,7 @@ class AppLocalizationsSu extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Manajer Unduh Offline';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +884,7 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Méja awan leungit di Supabase; dibuntel fallback aktip';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +893,7 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Awan juz metadata leungit; dibuntel fallback struktural aktip';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1014,14 @@ class AppLocalizationsSu extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Buka konci sadaya fitur pikeun perjalanan spiritual anjeun';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Produk premium henteu sayogi ayeuna. Mangga cobian deui engké.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Meuli teu bisa réngsé. Mangga cobian deui.';
 
   @override
   String get paywallFeature1Title => 'Neural Asisten Ditambah';
@@ -1098,25 +1170,35 @@ class AppLocalizationsSu extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Ngundeur';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Neruskeun Ngundeur';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Pupus Payil anu Diunduh';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Ngundeur dibatalkeun pikeun $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Ngundeur réngsé pikeun $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Unduh réngsé pikeun $reciter sareng $failed surah gagal ($downloaded/$total diunduh).';
   }
 
   @override
@@ -1236,6 +1318,20 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Kasalahan jaringan. Mangga cobian deui.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Lokasi diperlukeun';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Setel lokasi heula supados masjid caket dieu, kadaharan halal, sareng sakola Islam tiasa milarian sacara akurat.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Kotak peta teu sadia';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Sumber ubin peta anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Tempat-tempat caket dieu masih tiasa ngamuat tina lokasi anu anjeun simpen.';
 
   @override
   String get unknownPlaceName => 'Ngaran teu kanyahoan';

@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Менеджер загрузок",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Автономный менеджер загрузок",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "В Supabase отсутствуют облачные таблицы; включенный резервный вариант активен",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Метаданные Cloud Juz отсутствуют; включенный структурный резервный вариант активен",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Скачать",
+  "resumeDownload": "Возобновить загрузку",
+  "deleteDownloadedFiles": "Удалить загруженные файлы",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Загрузка отменена для {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Загрузка завершена для {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 шавваль",
   "specialDayDateEidAlAdha": "10 Зуль Хиджа",
   "specialDayDateIslamicNewYear": "1 Мухаррам",
-  "specialDayDateMawlidAnNabi": "12 Раби аль-Авваль"
+  "specialDayDateMawlidAnNabi": "12 Раби аль-Авваль",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Обновить",
+  "ayahLabel": "Ая {ayah}",
+  "tafsirLoading": "Загрузка тафсира...",
+  "tafsirSourceLabel": "Источник Тафсира",
+  "tafsirNoSurahFound": "Для этой суры не найден тафсир.",
+  "tafsirNoAyahFound": "Тафсир для аята {ayah} не найден.",
+  "tafsirLoadFailed": "Тафсир не удалось загрузить.",
+  "tafsirNoTextForAyah": "Текста тафсира для этого аята нет.",
+  "tafsirDownloadingProgress": "Загрузка тафсира {current}/{total}",
+  "tafsirLoadingProgress": "Загрузка тафсира {current}/{total}",
+  "tafsirApiStatusError": "Источник Tafsir вернул ошибку HTTP {statusCode}.",
+  "tafsirNoEntriesReturned": "Выбранный источник тафсира не дал записей.",
+  "premiumProductUnavailable": "Премиум-продукт сейчас недоступен. Пожалуйста, повторите попытку позже.",
+  "premiumPurchaseFailed": "Покупка не может быть завершена. Пожалуйста, попробуйте еще раз.",
+  "prayerRemainingHoursMinutes": "{hours}ч {minutes}м",
+  "prayerRemainingMinutes": "{minutes} мин.",
+  "splashTagline": "Исламский путь света",
+  "downloadPartiallyFinishedForReciter": "Загрузка завершена для {reciter}: {failed} сур не удалось (загружено {downloaded}/{total}).",
+  "placesLocationRequiredTitle": "Требуется местоположение",
+  "placesLocationRequiredBody": "Сначала укажите местоположение, чтобы можно было точно найти близлежащие мечети, халяльные рестораны и исламские школы.",
+  "placesMapTilesUnavailableTitle": "Фрагменты карты недоступны.",
+  "placesMapTilesUnavailableBody": "Подтвержденный источник фрагментов карты еще не настроен для этой сборки. Места поблизости по-прежнему могут загружаться из сохраненного вами местоположения.",
+  "prayerRemainingUnavailable": "--"
 }

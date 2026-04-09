@@ -12,6 +12,9 @@ class AppLocalizationsPl extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Islamska Droga Światła';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsPl extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Odśwież';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsPl extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Aja $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Ładowanie tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Źródło Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Nie znaleziono tafsir dla tej sury.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Nie znaleziono tafsira dla ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Nie można załadować Tafsira.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Brak tekstu tafsir dla tej ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Pobieranie tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Ładowanie tafsiru $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Źródło Tafsir zwróciło błąd HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Wybrane źródło tafsir nie zwróciło żadnych wpisów.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsPl extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Menedżer pobierania';
 
   @override
   String get downloads => 'Downloads';
@@ -635,7 +698,7 @@ class AppLocalizationsPl extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Menedżer pobierania offline';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Brak tabel chmurowych w Supabase; pakiet zastępczy aktywny';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Brak metadanych chmury już; aktywny pakiet rezerwowy strukturalny';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -951,6 +1014,14 @@ class AppLocalizationsPl extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Odblokuj wszystkie funkcje swojej duchowej podróży';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Produkt premium nie jest obecnie dostępny. Spróbuj ponownie później.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Nie udało się sfinalizować zakupu. Spróbuj ponownie.';
 
   @override
   String get paywallFeature1Title => 'Asystent neuronowy Plus';
@@ -1101,25 +1172,35 @@ class AppLocalizationsPl extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Pobierz';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Wznów pobieranie';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Usuń pobrane pliki';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Pobieranie anulowane dla $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Pobieranie zakończone dla $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Pobieranie zostało zakończone dla $reciter z $failed nieudanymi surami (pobrano $downloaded/$total).';
   }
 
   @override
@@ -1239,6 +1320,20 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Błąd sieci. Spróbuj ponownie.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Wymagana lokalizacja';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Najpierw ustal lokalizację, aby można było dokładnie przeszukać pobliskie meczety, żywność halal i szkoły islamskie.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Kafelki mapy niedostępne';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Zweryfikowane źródło kafelków mapy nie zostało jeszcze skonfigurowane dla tej kompilacji. Miejsca w pobliżu można nadal wczytywać z zapisanej lokalizacji.';
 
   @override
   String get unknownPlaceName => 'Nieznane imię';

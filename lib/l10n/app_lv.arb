@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Lejupielādes pārvaldnieks",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Bezsaistes lejupielādes pārvaldnieks",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Supabase trūkst mākoņa tabulas; kompleksā atkāpšanās aktīva",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Trūkst mākoņa juz metadatu; kompleksā strukturālā atkāpšanās aktīva",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Lejupielādēt",
+  "resumeDownload": "Atsākt lejupielādi",
+  "deleteDownloadedFiles": "Dzēst lejupielādētos failus",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Lejupielāde ir atcelta {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Lejupielāde pabeigta {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Šovals",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Atsvaidzināt",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "Notiek tafsira ielāde...",
+  "tafsirSourceLabel": "Tafsira avots",
+  "tafsirNoSurahFound": "Šai surai tafsīrs netika atrasts.",
+  "tafsirNoAyahFound": "Nav atrasts neviens tafsirs priekš ayah {ayah}.",
+  "tafsirLoadFailed": "Tafsiru nevarēja ielādēt.",
+  "tafsirNoTextForAyah": "Nav tafsir teksta šim ayah.",
+  "tafsirDownloadingProgress": "Notiek tafsir lejupielāde {current}/{total}",
+  "tafsirLoadingProgress": "Notiek tafsira ielāde {current}/{total}",
+  "tafsirApiStatusError": "Tafsir avots atgrieza HTTP {statusCode} kļūdu.",
+  "tafsirNoEntriesReturned": "Atlasītais tafsir avots neatgrieza nevienu ierakstu.",
+  "premiumProductUnavailable": "Premium produkts šobrīd nav pieejams. Lūdzu, vēlāk mēģiniet vēlreiz.",
+  "premiumPurchaseFailed": "Pirkumu nevarēja pabeigt. Lūdzu, mēģiniet vēlreiz.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}min",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Islāma gaismas ceļš",
+  "downloadPartiallyFinishedForReciter": "Lejupielāde ir pabeigta {reciter} ar {failed} neveiksmīgām surahām ({downloaded}/{total} ir lejupielādēta).",
+  "placesLocationRequiredTitle": "Nepieciešama atrašanās vieta",
+  "placesLocationRequiredBody": "Vispirms iestatiet atrašanās vietu, lai varētu precīzi meklēt tuvumā esošās mošejas, halal ēdienu un islāma skolas.",
+  "placesMapTilesUnavailableTitle": "Kartes flīzes nav pieejamas",
+  "placesMapTilesUnavailableBody": "Verificēts kartes elementu avots šai būvei vēl nav konfigurēts. Netālu esošās vietas joprojām var ielādēt no jūsu saglabātās atrašanās vietas.",
+  "prayerRemainingUnavailable": "--"
 }

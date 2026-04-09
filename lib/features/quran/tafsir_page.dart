@@ -1,8 +1,62 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/services/tafsir_local_service.dart';
-import 'package:sirat_i_nur/core/utils/l10n_utils.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
+
+String buildTafsirTitle(
+  AppLocalizations l10n,
+  String surahName,
+  int surahNumber,
+) {
+  final trimmedName = surahName.trim();
+  final titleName = trimmedName.isEmpty
+      ? '${l10n.surah} $surahNumber'
+      : trimmedName;
+  return '$titleName • ${l10n.tafsir}';
+}
+
+String buildTafsirMissingMessage(AppLocalizations l10n, {int? ayahNumber}) {
+  if (ayahNumber == null) {
+    return l10n.tafsirNoSurahFound;
+  }
+
+  return l10n.tafsirNoAyahFound(ayahNumber.toString());
+}
+
+String buildTafsirProgressMessage(
+  AppLocalizations l10n,
+  String rawMessage,
+  double progress,
+) {
+  if (rawMessage.isEmpty) {
+    return '${(progress * 100).toStringAsFixed(0)}%';
+  }
+
+  final segments = rawMessage.split(':');
+  if (segments.length == 3 && segments[0] == 'download') {
+    return l10n.tafsirDownloadingProgress(segments[1], segments[2]);
+  }
+
+  if (segments.length == 3 && segments[0] == 'load') {
+    return l10n.tafsirLoadingProgress(segments[1], segments[2]);
+  }
+
+  return rawMessage;
+}
+
+String localizeTafsirError(AppLocalizations l10n, Object error) {
+  if (error is TafsirException) {
+    switch (error.code) {
+      case 'api_status':
+        return l10n.tafsirApiStatusError(error.details ?? '?');
+      case 'no_entries':
+        return l10n.tafsirNoEntriesReturned;
+    }
+  }
+
+  return l10n.tafsirLoadFailed;
+}
 
 class TafsirPage extends ConsumerStatefulWidget {
   final int surahNumber;
@@ -35,6 +89,8 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
   }
 
   Future<void> _loadTafsir({bool forceRefresh = false}) async {
+    final l10n = AppLocalizations.of(context)!;
+
     setState(() {
       _isLoading = true;
       _error = null;
@@ -61,7 +117,9 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
 
       final filtered = widget.ayahNumber == null
           ? loaded
-          : loaded.where((row) => row['verse_number'] == widget.ayahNumber).toList();
+          : loaded
+                .where((row) => row['verse_number'] == widget.ayahNumber)
+                .toList();
 
       if (!mounted) return;
       setState(() {
@@ -71,26 +129,17 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
 
       if (_tafsirs.isEmpty) {
         setState(() {
-          _error = trEn(
-            context,
-            tr: widget.ayahNumber == null
-                ? 'Bu sure için tefsir bulunamadı.'
-                : '${widget.ayahNumber}. ayet için tefsir bulunamadı.',
-            en: widget.ayahNumber == null
-                ? 'No tafsir found for this surah.'
-                : 'No tafsir found for ayah ${widget.ayahNumber}.',
+          _error = buildTafsirMissingMessage(
+            l10n,
+            ayahNumber: widget.ayahNumber,
           );
         });
       }
-    } catch (e) {
+    } catch (error) {
       if (!mounted) return;
       setState(() {
         _isLoading = false;
-        _error = trEn(
-          context,
-          tr: 'Tefsir yüklenemedi: $e',
-          en: 'Failed to load tafsir: $e',
-        );
+        _error = localizeTafsirError(l10n, error);
       });
     }
   }
@@ -104,18 +153,17 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
 
   @override
   Widget build(BuildContext context) {
-    final isTr = Localizations.localeOf(context).languageCode == 'tr';
-    final titleName = widget.surahName.trim().isEmpty
-        ? (isTr ? 'Sure ${widget.surahNumber}' : 'Surah ${widget.surahNumber}')
-        : widget.surahName;
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('$titleName • ${isTr ? 'Tefsir' : 'Tafsir'}'),
+        title: Text(
+          buildTafsirTitle(l10n, widget.surahName, widget.surahNumber),
+        ),
         actions: [
           PopupMenuButton<String>(
             icon: const Icon(Icons.menu_book_rounded),
-            tooltip: isTr ? 'Tefsir kaynağı' : 'Tafsir source',
+            tooltip: l10n.tafsirSourceLabel,
             onSelected: (value) {
               if (_selectedTafsir == value) return;
               setState(() => _selectedTafsir = value);
@@ -133,7 +181,8 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
                             size: 18,
                             color: Theme.of(context).colorScheme.primary,
                           ),
-                        if (_selectedTafsir == source['id']) const SizedBox(width: 8),
+                        if (_selectedTafsir == source['id'])
+                          const SizedBox(width: 8),
                         Expanded(
                           child: Text(
                             source['name'] ?? source['id'] ?? '-',
@@ -149,15 +198,15 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
           IconButton(
             icon: const Icon(Icons.refresh_rounded),
             onPressed: () => _loadTafsir(forceRefresh: true),
-            tooltip: isTr ? 'Yenile' : 'Refresh',
+            tooltip: l10n.refreshAction,
           ),
         ],
       ),
-      body: _buildBody(isTr),
+      body: _buildBody(l10n),
     );
   }
 
-  Widget _buildBody(bool isTr) {
+  Widget _buildBody(AppLocalizations l10n) {
     if (_isLoading && _tafsirs.isEmpty) {
       return Center(
         child: Padding(
@@ -168,7 +217,7 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
               const CircularProgressIndicator(),
               const SizedBox(height: 14),
               Text(
-                isTr ? 'Tefsir yükleniyor...' : 'Loading tafsir...',
+                l10n.tafsirLoading,
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
               if (_progress > 0) ...[
@@ -179,9 +228,7 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  _progressMessage.isEmpty
-                      ? '${(_progress * 100).toStringAsFixed(0)}%'
-                      : _progressMessage,
+                  buildTafsirProgressMessage(l10n, _progressMessage, _progress),
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
@@ -206,7 +253,7 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
               ),
               const SizedBox(height: 14),
               Text(
-                isTr ? 'Bir sorun oluştu' : 'Something went wrong',
+                l10n.appErrorOccurred,
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 10),
@@ -219,7 +266,7 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
               ElevatedButton.icon(
                 onPressed: () => _loadTafsir(forceRefresh: true),
                 icon: const Icon(Icons.refresh_rounded),
-                label: Text(isTr ? 'Tekrar dene' : 'Try again'),
+                label: Text(l10n.retry),
               ),
             ],
           ),
@@ -245,13 +292,18 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
                 Row(
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 5,
+                      ),
                       decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+                        color: Theme.of(
+                          context,
+                        ).colorScheme.primary.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Text(
-                        isTr ? 'Ayet $verseNumber' : 'Ayah $verseNumber',
+                        l10n.ayahLabel(verseNumber),
                         style: TextStyle(
                           fontWeight: FontWeight.w800,
                           color: Theme.of(context).colorScheme.primary,
@@ -265,24 +317,19 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
                       style: TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.w700,
-                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
+                        color: Theme.of(
+                          context,
+                        ).colorScheme.onSurface.withValues(alpha: 0.6),
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 14),
                 SelectableText(
-                  tafsirText.isEmpty
-                      ? trEn(
-                          context,
-                          tr: 'Bu ayet için metin yok.',
-                          en: 'No tafsir text for this ayah.',
-                        )
-                      : tafsirText,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    height: 1.65,
-                    fontSize: 15,
-                  ),
+                  tafsirText.isEmpty ? l10n.tafsirNoTextForAyah : tafsirText,
+                  style: Theme.of(
+                    context,
+                  ).textTheme.bodyMedium?.copyWith(height: 1.65, fontSize: 15),
                 ),
               ],
             ),

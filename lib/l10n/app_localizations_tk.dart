@@ -12,6 +12,9 @@ class AppLocalizationsTk extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Yslamyň ýagtylyk ýoly';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -151,6 +154,9 @@ class AppLocalizationsTk extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Täzele';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -178,6 +184,11 @@ class AppLocalizationsTk extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Aýýa $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -194,6 +205,45 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Tafsir ýüklenýär ...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir çeşmesi';
+
+  @override
+  String get tafsirNoSurahFound => 'Bu süre üçin tafsir tapylmady.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Aýah $ayah üçin tafsir tapylmady.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir ýüklenip bilmedi.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Bu aýat üçin tafsir teksti ýok.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir çeşmesi, HTTP $statusCode säwligini yzyna gaýtardy.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Saýlanan tafsir çeşmesi hiç hili ýazgy yzyna gaýtarmady.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -301,6 +351,19 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '-';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -445,7 +508,7 @@ class AppLocalizationsTk extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Managerükleme dolandyryjysy';
 
   @override
   String get downloads => 'Downloads';
@@ -634,7 +697,7 @@ class AppLocalizationsTk extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Oflayn ýükleme dolandyryjysy';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -819,7 +882,7 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase-de ýok bulut tablisalary; birikdirilen yza gaýdyş işjeň';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Bulut juz metadata ýitdi; birikdirilen gurluş yza gaýdyş işjeň';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -949,6 +1012,14 @@ class AppLocalizationsTk extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Ruhy syýahatyňyz üçin ähli aýratynlyklary açyň';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premium önüm häzirki wagtda elýeterli däl. Soňrak synanyşyň.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Satyn alyp bolmady. Gaýtadan synanyşmagyňyzy haýyş edýäris.';
 
   @override
   String get paywallFeature1Title => 'Neýr kömekçisi plýus';
@@ -1098,25 +1169,35 @@ class AppLocalizationsTk extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Göçürip al';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Göçürip al';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Göçürilen faýllary poz';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter üçin göçürip almak ýatyryldy.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Üklemek $reciter üçin tamamlandy.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
   }
 
   @override
@@ -1237,6 +1318,20 @@ class AppLocalizationsTk extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Tor ýalňyşlygy. Gaýtadan synanyşmagyňyzy haýyş edýäris.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Locationerleşýän ýeri';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Ilki bilen golaýdaky metjitleri, halal naharlary we yslam mekdeplerini takyk gözläp tapmak üçin bir ýer belläň.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Karta plitalary elýeterli däl';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Barlanylan karta kafel çeşmesi entek bu gurluş üçin düzülenok. Byakyn ýerler henizem saklanan ýeriňizden ýükläp biler.';
 
   @override
   String get unknownPlaceName => 'Näbelli';

@@ -12,6 +12,9 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get appTitle => 'Dalan sa Allah';
 
   @override
+  String get splashTagline => 'Islamikong Dalan sa Kahayag';
+
+  @override
   String get home => 'Balay';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get retry => 'Sulayi pag-usab';
 
   @override
+  String get refreshAction => 'I-refresh';
+
+  @override
   String get cancel => 'Pagkanselar';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,47 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Nagkarga sa tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir tinubdan';
+
+  @override
+  String get tafsirNoSurahFound =>
+      'Walay tafsir nga nakit-an alang niini nga surah.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Walay tafsir nga nakit-an para sa ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Dili makarga ang Tafsir.';
+
+  @override
+  String get tafsirNoTextForAyah =>
+      'Walay teksto sa tafsir alang niini nga amahan.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Nag-download sa tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Nagkarga sa tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Ang tinubdan sa Tafsir mibalik og HTTP $statusCode error.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Ang gipili nga tinubdan sa tafsir walay gibalik nga mga entri.';
 
   @override
   String get bookmarks => 'Mga bookmark';
@@ -300,6 +352,19 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String get prayers => 'Mga pag-ampo';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Pag-ihap sa Dhikr';
@@ -636,7 +701,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Offline nga Download Manager';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +886,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Nawala ang mga cloud table sa Supabase; gihugpong nga fallback aktibo';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +895,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Nawala ang metadata sa cloud juz; gihugpong nga structural fallback aktibo';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -952,6 +1017,14 @@ class AppLocalizationsCeb extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'I-unlock ang tanang feature para sa imong espirituhanong panaw';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Ang premium nga produkto dili magamit karon. Palihug sulayi pag-usab unya.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Ang pagpalit dili makompleto. Palihug sulayi pag-usab.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1100,25 +1173,35 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Pag-download';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Ipadayon ang Pag-download';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'I-delete ang Na-download nga mga File';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Gikansela ang pag-download alang sa $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Nakompleto ang pag-download para sa $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Nahuman ang pag-download alang sa $reciter nga adunay $failed nga napakyas nga mga surah ($downloaded/$total na-download).';
   }
 
   @override
@@ -1238,6 +1321,21 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Sayop sa network. Palihug sulayi pag-usab.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Gikinahanglan ang lokasyon';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Pagbutang una og lokasyon aron ang duol nga mga mosque, halal nga pagkaon, ug Islamic nga mga eskwelahan mapangita sa tukma.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Dili magamit ang mga tile sa mapa';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Ang usa ka napamatud-an nga tinubdan sa tile sa mapa wala pa ma-configure alang niini nga pagtukod. Ang mga duol nga lugar mahimo gihapon nga magkarga gikan sa imong gitipig nga lokasyon.';
 
   @override
   String get unknownPlaceName => 'Wala mailhi nga Ngalan';

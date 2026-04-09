@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "डाउनलोड प्रबंधक के बा",
+  "downloadManager": "Download Manager",
   "downloads": "डाउनलोड हो गइल बा",
   "downloading": "डाउनलोड हो रहल बा...",
   "downloadComplete": "डाउनलोड पूरा हो गइल बा",
@@ -189,7 +189,7 @@
   "premiumVerified": "प्रीमियम के सत्यापन हो गइल.",
   "premiumNotFound": "प्रीमियम ना मिलल.",
   "premiumRefreshError": "प्रीमियम के स्थिति ताजा ना हो पावल: {error}",
-  "offlineDownloadManager": "ऑफलाइन डाउनलोड प्रबंधक के बा",
+  "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "भारी ऑफलाइन ऑडियो & डाटासेट पैक के प्रबंधन करीं।",
   "freeStorage": "आंतरिक डिवाइस भंडारण के मुक्त कर दीं।",
   "quranIntegrity": "कुरान के अखंडता के बारे में बतावल गइल बा",
@@ -354,8 +354,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "रोजाना क्वेरी के सीमा तक पहुंच गईल। असीमित खातिर प्रीमियम में अपग्रेड करीं।",
   "chatbotErrorMsg": "हम कवनो प्रतिक्रिया ना पैदा कर पवनी। कृपया दोबारा कोशिश करीं।",
-  "chatbotOfflinePrompt": "सत्यापन कइल ऑफलाइन इस्लामी ज्ञान के आधार के अबहीं ले क्यूरेट कइल जा रहल बा. अब रउआँ ऑफलाइन फॉलबैक सक्षम क सकत बानी, बाकी ई तबले सीमित सुरक्षित संदेश तब ले देखावे ला जब ले सोर्स कइल गइल डाटासेट तइयार ना हो जाई।\n\nका रउआँ ऑफलाइन फॉलबैक सक्षम कइल चाहत बानी?",
-  "chatbotOfflineSwitched": "ऑफलाइन फॉलबैक सक्षम हो गइल बा. सत्यापन स्थानीय इस्लामी जवाब अभी तक तैयार नईखे।",
+  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
+  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "ऑफलाइन फॉलबैक के सक्षम करीं",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -458,8 +458,8 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "क्लाउड एपीआई कॉन्फ़िगर नइखे भइल. कृपया लोकल एआई पर स्विच करीं।",
-  "chatbotLocalNoInfo": "[OFFLINE] सत्यापन स्थानीय इस्लामी मार्गदर्शन अभी तक उपलब्ध नइखे। स्रोत से मिलल जवाब खातिर क्लाउड एआई पर स्विच करीं।",
+  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "मस्जिद के बा",
   "halalFood": "हलाल फूड के बा",
   "placesSearchArea": "एह इलाका में खोज करीं",
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "१ शववाल के बा",
   "specialDayDateEidAlAdha": "10 धुल हिज्जा के बा",
   "specialDayDateIslamicNewYear": "१ मुहर्रम के बा",
-  "specialDayDateMawlidAnNabi": "12 रबी अल-अववाल के बा"
+  "specialDayDateMawlidAnNabi": "12 रबी अल-अववाल के बा",
+  "refreshAction": "Refresh",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoading": "Loading tafsir...",
+  "tafsirSourceLabel": "Tafsir source",
+  "tafsirNoSurahFound": "No tafsir found for this surah.",
+  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir could not be loaded.",
+  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "premiumProductUnavailable": "Premium product is not available right now. Please try again later.",
+  "premiumPurchaseFailed": "Purchase could not be completed. Please try again.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "splashTagline": "Islamic Way of Light",
+  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "placesLocationRequiredTitle": "Location required",
+  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
+  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "prayerRemainingUnavailable": "-- 1999 में भइल रहे।"
 }

@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Molntabeller saknas i Supabase; buntad reserv aktiv",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata saknas; buntad strukturell reserv är aktiv",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Ladda ner",
+  "resumeDownload": "Återuppta nedladdning",
+  "deleteDownloadedFiles": "Ta bort nedladdade filer",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Nedladdningen avbröts för {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Nedladdningen slutförd för {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Uppdatera",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "Laddar tafsir...",
+  "tafsirSourceLabel": "Tafsir källa",
+  "tafsirNoSurahFound": "Ingen tafsir hittades för denna sura.",
+  "tafsirNoAyahFound": "Ingen tafsir hittades för ayah {ayah}.",
+  "tafsirLoadFailed": "Tafsir kunde inte laddas.",
+  "tafsirNoTextForAyah": "Ingen tafsir-text för denna ayah.",
+  "tafsirDownloadingProgress": "Laddar ner tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Laddar tafsir {current}/{total}",
+  "tafsirApiStatusError": "Tafsir-källan returnerade ett HTTP {statusCode}-fel.",
+  "tafsirNoEntriesReturned": "Den valda tafsirkällan returnerade inga poster.",
+  "premiumProductUnavailable": "Premiumprodukten är inte tillgänglig just nu. Försök igen senare.",
+  "premiumPurchaseFailed": "Köpet kunde inte slutföras. Försök igen.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Islamisk väg av ljus",
+  "downloadPartiallyFinishedForReciter": "Nedladdningen avslutad för {reciter} med {failed} misslyckade surahs ({downloaded}/{total} nedladdade).",
+  "placesLocationRequiredTitle": "Plats krävs",
+  "placesLocationRequiredBody": "Ange en plats först så att närliggande moskéer, halalmat och islamiska skolor kan sökas exakt.",
+  "placesMapTilesUnavailableTitle": "Kartrutor är inte tillgängliga",
+  "placesMapTilesUnavailableBody": "En verifierad kartbrickakälla är inte konfigurerad för den här versionen ännu. Platser i närheten kan fortfarande laddas från din sparade plats.",
+  "prayerRemainingUnavailable": "--"
 }

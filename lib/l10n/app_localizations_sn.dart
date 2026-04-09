@@ -12,6 +12,9 @@ class AppLocalizationsSn extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Nzira yechiIslam yeChiedza';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsSn extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Refresh';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsSn extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Kurodha tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir source';
+
+  @override
+  String get tafsirNoSurahFound => 'Hapana tafsir yawanikwa yesurah iyi.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Hapana tafsir yawanikwa yeayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir yatadza kurodha.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Hapana mavara etafsir eiyi ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Kudhaunirodha tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Kurodha tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir kwakabva kwadzosa HTTP $statusCode kukanganisa.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Mabviro etafsir akasarudzwa haana kudzoka.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -634,7 +697,7 @@ class AppLocalizationsSn extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Offline Download Maneja';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -819,7 +882,7 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Cloud tables isipo muSupabase; bundled fallback inoshanda';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata isipo; bundled structural fallback inoshanda';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -948,6 +1011,14 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => 'Vhura zvese zverwendo rwako rwemweya';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premium chigadzirwa hachipo pari zvino. Ndapota edza zvakare gare gare.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Kutenga kwatadza kupedzwa. Ndapota edza zvakare.';
 
   @override
   String get paywallFeature1Title => 'Neural Mubatsiri Plus';
@@ -1109,12 +1180,22 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Kudhaunirodha kwakanzurwa ku$reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Kudhaunirodha kwe$reciter kwapera.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Kudhaunirodha kwapera nokuda kwe $reciter ne $failed ma surah akundikana ($downloaded/$total akadhaunirodwa).';
   }
 
   @override
@@ -1234,6 +1315,20 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Network kukanganisa. Ndapota edza zvakare.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Nzvimbo inodiwa';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Gadza nzvimbo kutanga kuitira kuti mamosque ari padyo, chikafu che halal, uye zvikoro zveIslam zvigone kutsvakwa nemazvo.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Mathairi emepu haasi kuwanikwa';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Matairi emepu akasimbiswa haasati agadzirirwa kuvaka uku. Nzvimbo dziri pedyo dzinogona kurodha kubva panzvimbo yako yakachengetedzwa.';
 
   @override
   String get unknownPlaceName => 'Zita risingazivikanwe';

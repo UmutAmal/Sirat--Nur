@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "ဒေါင်းလုဒ်မန်နေဂျာ",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "အော့ဖ်လိုင်းဒေါင်းလုဒ်မန်နေဂျာ",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Supabase တွင် တိမ်တိုက်ဇယားများ ပျောက်ဆုံးနေပါသည်။ အစုလိုက်အပြုံလိုက် တုံ့ပြန်မှု တက်ကြွနေသည်။",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz မက်တာဒေတာ ပျောက်ဆုံးနေခြင်း၊ အစုအပြုံလိုက်ဖွဲ့စည်းပုံဆိုင်ရာ ဆုတ်ယုတ်မှု တက်ကြွမှု",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "ဒေါင်းလုဒ်လုပ်ပါ။",
+  "resumeDownload": "ဒေါင်းလုဒ်ပြန်လုပ်ပါ။",
+  "deleteDownloadedFiles": "ဒေါင်းလုဒ်လုပ်ထားသောဖိုင်များကိုဖျက်ပါ။",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} အတွက် ဒေါင်းလုဒ်ကို ပယ်ဖျက်လိုက်ပါပြီ။",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter} အတွက် ဒေါင်းလုဒ် ပြီးသွားပါပြီ။",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "ပြန်လည်စတင်ပါ။",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "တက်ဖ်ဆာကို ဖွင့်နေသည်...",
+  "tafsirSourceLabel": "Tafsir အရင်းအမြစ်",
+  "tafsirNoSurahFound": "ဤစူရာဟ်အတွက် tafsir မတွေ့ပါ။",
+  "tafsirNoAyahFound": "ayah {ayah} အတွက် tafsir မတွေ့ပါ။",
+  "tafsirLoadFailed": "Tafsir ကို တင်၍မရပါ။",
+  "tafsirNoTextForAyah": "ဤအာယာအတွက် tafsir စာသားမရှိပါ။",
+  "tafsirDownloadingProgress": "tafsir {current}/{total} ကို ဒေါင်းလုဒ်လုပ်နေသည်",
+  "tafsirLoadingProgress": "တက်ဖ်ဆာ {current}/{total} ကို ဖွင့်နေသည်",
+  "tafsirApiStatusError": "Tafsir အရင်းအမြစ်သည် HTTP {statusCode} အမှားတစ်ခုကို ပြန်ပေးခဲ့သည်။",
+  "tafsirNoEntriesReturned": "ရွေးချယ်ထားသော tafsir ရင်းမြစ်သည် ထည့်သွင်းခြင်းမရှိပါ။",
+  "premiumProductUnavailable": "ပရီမီယံထုတ်ကုန်ကို ယခုမရနိုင်ပါ။ နောက်မှ ထပ်စမ်းကြည့်ပါ။",
+  "premiumPurchaseFailed": "ဝယ်ယူမှု မပြီးမြောက်နိုင်ခဲ့ပါ။ ထပ်စမ်းကြည့်ပါ။",
+  "prayerRemainingHoursMinutes": "{hours}နာရီ {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "အစ္စလာမ့်အလင်းလမ်း",
+  "downloadPartiallyFinishedForReciter": "{reciter} အတွက် {failed} မအောင်မြင်သော စူရာဟ်များဖြင့် {reciter} အတွက် ဒေါင်းလုဒ် ပြီးပါပြီ ({downloaded}/{total} ဒေါင်းလုဒ်လုပ်ထားသည်)။",
+  "placesLocationRequiredTitle": "တည်နေရာ လိုအပ်သည်။",
+  "placesLocationRequiredBody": "တည်နေရာကို ဦးစွာသတ်မှတ်ထားပါက အနီးနားရှိ ဗလီများ၊ ဟလာလ်အစားအစာများနှင့် အစ္စလာမ့်ကျောင်းများကို တိကျစွာရှာဖွေနိုင်ပါသည်။",
+  "placesMapTilesUnavailableTitle": "မြေပုံအကွက်များ မရနိုင်ပါ။",
+  "placesMapTilesUnavailableBody": "ဤတည်ဆောက်မှုအတွက် အတည်ပြုထားသော မြေပုံအကွက်အရင်းအမြစ်ကို မသတ်မှတ်ရသေးပါ။ အနီးတဝိုက်ရှိ နေရာများသည် သင်သိမ်းဆည်းထားသော တည်နေရာမှ စတင်နိုင်သေးသည်။",
+  "prayerRemainingUnavailable": "--"
 }

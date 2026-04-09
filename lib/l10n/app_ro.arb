@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Manager de descărcare",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Manager de descărcare offline",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Lipsesc tabele cloud în Supabase; bundled fallback activ",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Metadatele cloud juz lipsesc; bundled fallback structural activ",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Descărcați",
+  "resumeDownload": "Reluați descărcarea",
+  "deleteDownloadedFiles": "Ștergeți fișierele descărcate",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Descărcarea a fost anulată pentru {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Descărcarea finalizată pentru {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Reîmprospătați",
+  "ayahLabel": "Da {ayah}",
+  "tafsirLoading": "Se încarcă tafsir...",
+  "tafsirSourceLabel": "sursa Tafsir",
+  "tafsirNoSurahFound": "Nu s-a găsit niciun tafsir pentru această sură.",
+  "tafsirNoAyahFound": "Nu a fost găsit niciun tafsir pentru ayah {ayah}.",
+  "tafsirLoadFailed": "Tafsir nu a putut fi încărcat.",
+  "tafsirNoTextForAyah": "Fără text tafsir pentru această ayah.",
+  "tafsirDownloadingProgress": "Se descarcă tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Se încarcă tafsir {current}/{total}",
+  "tafsirApiStatusError": "Sursa Tafsir a returnat o eroare HTTP {statusCode}.",
+  "tafsirNoEntriesReturned": "Sursa tafsir selectată nu a returnat nicio intrare.",
+  "premiumProductUnavailable": "Produsul premium nu este disponibil momentan. Vă rugăm să încercați din nou mai târziu.",
+  "premiumPurchaseFailed": "Achiziția nu a putut fi finalizată. Vă rugăm să încercați din nou.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Calea Islamică a Luminii",
+  "downloadPartiallyFinishedForReciter": "Descărcarea s-a încheiat pentru {reciter} cu {failed} sure nereușite ({downloaded}/{total} descărcate).",
+  "placesLocationRequiredTitle": "Este necesară locația",
+  "placesLocationRequiredBody": "Setați mai întâi o locație, astfel încât moscheile din apropiere, mâncarea halal și școlile islamice să poată fi căutate cu precizie.",
+  "placesMapTilesUnavailableTitle": "Dale de hartă indisponibile",
+  "placesMapTilesUnavailableBody": "O sursă de dale de hartă verificată nu este încă configurată pentru această versiune. Locațiile din apropiere se pot încărca în continuare din locația dvs. salvată.",
+  "prayerRemainingUnavailable": "--"
 }

@@ -12,6 +12,9 @@ class AppLocalizationsSv extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Islamisk väg av ljus';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsSv extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Uppdatera';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsSv extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Laddar tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir källa';
+
+  @override
+  String get tafsirNoSurahFound => 'Ingen tafsir hittades för denna sura.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Ingen tafsir hittades för ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir kunde inte laddas.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Ingen tafsir-text för denna ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Laddar ner tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Laddar tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir-källan returnerade ett HTTP $statusCode-fel.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Den valda tafsirkällan returnerade inga poster.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -820,7 +883,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Molntabeller saknas i Supabase; buntad reserv aktiv';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata saknas; buntad strukturell reserv är aktiv';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => 'Lås upp alla funktioner för din andliga resa';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premiumprodukten är inte tillgänglig just nu. Försök igen senare.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Köpet kunde inte slutföras. Försök igen.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1098,25 +1169,35 @@ class AppLocalizationsSv extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Ladda ner';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Återuppta nedladdning';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Ta bort nedladdade filer';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Nedladdningen avbröts för $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Nedladdningen slutförd för $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Nedladdningen avslutad för $reciter med $failed misslyckade surahs ($downloaded/$total nedladdade).';
   }
 
   @override
@@ -1236,6 +1317,20 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Nätverksfel. Försök igen.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Plats krävs';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Ange en plats först så att närliggande moskéer, halalmat och islamiska skolor kan sökas exakt.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Kartrutor är inte tillgängliga';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'En verifierad kartbrickakälla är inte konfigurerad för den här versionen ännu. Platser i närheten kan fortfarande laddas från din sparade plats.';
 
   @override
   String get unknownPlaceName => 'Okänt namn';

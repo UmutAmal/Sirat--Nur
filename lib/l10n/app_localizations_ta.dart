@@ -12,6 +12,9 @@ class AppLocalizationsTa extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'இஸ்லாமிய ஒளி வழி';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsTa extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'புதுப்பிக்கவும்';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsTa extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'ஐயா $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,46 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'தஃப்சீரை ஏற்றுகிறது...';
+
+  @override
+  String get tafsirSourceLabel => 'தஃப்சீர் ஆதாரம்';
+
+  @override
+  String get tafsirNoSurahFound =>
+      'இந்த சூராவிற்கு தஃப்சீர் எதுவும் கிடைக்கவில்லை.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'அயா $ayahக்கான தஃப்சீர் எதுவும் இல்லை.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'தஃப்சீரை ஏற்ற முடியவில்லை.';
+
+  @override
+  String get tafsirNoTextForAyah => 'இந்த அயாவுக்கு தஃப்சீர் உரை இல்லை.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'டஃப்சீரைப் பதிவிறக்குகிறது $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'தஃப்சீரை ஏற்றுகிறது $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir ஆதாரம் HTTP $statusCode பிழையை வழங்கியது.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'தேர்ந்தெடுக்கப்பட்ட தஃப்சீர் மூலம் உள்ளீடுகள் எதுவும் இல்லை.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +351,19 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h $minutesநி';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +508,7 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'பதிவிறக்க மேலாளர்';
 
   @override
   String get downloads => 'Downloads';
@@ -637,7 +701,7 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'ஆஃப்லைன் பதிவிறக்க மேலாளர்';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -822,7 +886,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'சுபாபேஸில் கிளவுட் டேபிள்கள் இல்லை; தொகுக்கப்பட்ட வீழ்ச்சி செயலில்';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -831,7 +895,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz மெட்டாடேட்டா இல்லை; தொகுக்கப்பட்ட கட்டமைப்பு வீழ்ச்சி செயலில்';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -953,6 +1017,14 @@ class AppLocalizationsTa extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'உங்கள் ஆன்மீக பயணத்திற்கான அனைத்து அம்சங்களையும் திறக்கவும்';
+
+  @override
+  String get premiumProductUnavailable =>
+      'பிரீமியம் தயாரிப்பு இப்போது கிடைக்கவில்லை. பிறகு முயற்சிக்கவும்.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'வாங்குவதை முடிக்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.';
 
   @override
   String get paywallFeature1Title => 'நரம்பியல் உதவியாளர் பிளஸ்';
@@ -1101,25 +1173,36 @@ class AppLocalizationsTa extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'பதிவிறக்கவும்';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'பதிவிறக்கத்தை மீண்டும் தொடங்கவும்';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles =>
+      'பதிவிறக்கம் செய்யப்பட்ட கோப்புகளை நீக்கவும்';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciterக்கான பதிவிறக்கம் ரத்துசெய்யப்பட்டது.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciterக்கான பதிவிறக்கம் முடிந்தது.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciterக்கு $failed தோல்வி சூராக்களுடன் பதிவிறக்கம் முடிந்தது ($downloaded/$total பதிவிறக்கப்பட்டது).';
   }
 
   @override
@@ -1239,6 +1322,20 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'நெட்வொர்க் பிழை. மீண்டும் முயற்சிக்கவும்.';
+
+  @override
+  String get placesLocationRequiredTitle => 'இடம் தேவை';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'அருகிலுள்ள மசூதிகள், ஹலால் உணவுகள் மற்றும் இஸ்லாமியப் பள்ளிகள் ஆகியவற்றைத் துல்லியமாகத் தேடுவதற்கு முதலில் ஒரு இடத்தை அமைக்கவும்.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'வரைபட ஓடுகள் கிடைக்கவில்லை';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'சரிபார்க்கப்பட்ட வரைபட ஓடு மூலமானது இந்தக் கட்டமைப்பிற்கு இன்னும் உள்ளமைக்கப்படவில்லை. நீங்கள் சேமித்த இடத்திலிருந்து அருகிலுள்ள இடங்கள் இன்னும் ஏற்றப்படலாம்.';
 
   @override
   String get unknownPlaceName => 'தெரியாத பெயர்';

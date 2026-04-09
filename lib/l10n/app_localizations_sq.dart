@@ -12,6 +12,9 @@ class AppLocalizationsSq extends AppLocalizations {
   String get appTitle => 'Rruga e Allahut';
 
   @override
+  String get splashTagline => 'Rruga Islame e Dritës';
+
+  @override
   String get home => 'Shtëpi';
 
   @override
@@ -151,6 +154,9 @@ class AppLocalizationsSq extends AppLocalizations {
   String get retry => 'Provo sërish';
 
   @override
+  String get refreshAction => 'Rifresko';
+
+  @override
   String get cancel => 'Anulo';
 
   @override
@@ -178,6 +184,11 @@ class AppLocalizationsSq extends AppLocalizations {
   String get surah => 'Surja';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ajet $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -194,6 +205,45 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get tafsir => 'Tefsir';
+
+  @override
+  String get tafsirLoading => 'Po ngarkohet tefsiri...';
+
+  @override
+  String get tafsirSourceLabel => 'Burimi i tefsirit';
+
+  @override
+  String get tafsirNoSurahFound => 'Nuk u gjet asnjë tefsir për këtë sure.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Nuk u gjet asnjë tefsir për ajetin $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tefsir nuk mund të ngarkohej.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Nuk ka tekst tefsir për këtë ajet.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Po shkarkon tefsirin $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Po ngarkohet tefsiri $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Burimi Tafsir ktheu një gabim HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Burimi i zgjedhur i tefsirit nuk ktheu asnjë hyrje.';
 
   @override
   String get bookmarks => 'Faqerojtësit';
@@ -301,6 +351,19 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get prayers => 'lutjet';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}orë ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Kont Dhikri';
@@ -637,7 +700,7 @@ class AppLocalizationsSq extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Menaxheri i shkarkimit jashtë linje';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -822,7 +885,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Mungojnë tabelat e reve në Supabase; backback i paketuar aktiv';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -831,7 +894,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Mungojnë meta të dhënat e Cloud juz; kthim strukturor i paketuar aktiv';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -952,6 +1015,14 @@ class AppLocalizationsSq extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Zhbllokoni të gjitha veçoritë për udhëtimin tuaj shpirtëror';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Produkti premium nuk është i disponueshëm për momentin. Ju lutemi provoni përsëri më vonë.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Blerja nuk mund të përfundonte. Ju lutemi provoni përsëri.';
 
   @override
   String get paywallFeature1Title => 'Asistent Neural Plus';
@@ -1101,25 +1172,35 @@ class AppLocalizationsSq extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Shkarkoni';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Rifillimi i shkarkimit';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Fshi skedarët e shkarkuar';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Shkarkimi u anulua për $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Shkarkimi përfundoi për $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Shkarkimi përfundoi për $reciter me $failed sure të dështuara ($downloaded/$total të shkarkuara).';
   }
 
   @override
@@ -1239,6 +1320,20 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Gabim rrjeti. Ju lutemi provoni përsëri.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Kërkohet vendndodhja';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Vendosni fillimisht një vendndodhje në mënyrë që xhamitë e afërta, ushqimi hallall dhe shkollat islame të mund të kërkohen me saktësi.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Pllakat e hartës nuk ofrohen';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Një burim i verifikuar i pllakës së hartës nuk është konfiguruar ende për këtë ndërtim. Vendet në afërsi mund të ngarkohen ende nga vendndodhja jote e ruajtur.';
 
   @override
   String get unknownPlaceName => 'Emër i panjohur';

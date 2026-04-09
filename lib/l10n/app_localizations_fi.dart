@@ -12,6 +12,9 @@ class AppLocalizationsFi extends AppLocalizations {
   String get appTitle => 'Allahin tie';
 
   @override
+  String get splashTagline => 'Islamilainen valon tie';
+
+  @override
   String get home => 'Kotiin';
 
   @override
@@ -151,6 +154,9 @@ class AppLocalizationsFi extends AppLocalizations {
   String get retry => 'Yritä uudelleen';
 
   @override
+  String get refreshAction => 'Päivitä';
+
+  @override
   String get cancel => 'Peruuttaa';
 
   @override
@@ -178,6 +184,11 @@ class AppLocalizationsFi extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -194,6 +205,45 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Ladataan tafsiria...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsirin lähde';
+
+  @override
+  String get tafsirNoSurahFound => 'Tälle suuralle ei löytynyt tafsiria.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Tafsiria ei löytynyt kohteelle ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsiria ei voitu ladata.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Ei tafsir-tekstiä tälle ayahille.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Ladataan tafsiria $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Ladataan tafsiria $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir-lähde palautti HTTP $statusCode -virheen.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Valittu tafsir-lähde ei palauttanut merkintöjä.';
 
   @override
   String get bookmarks => 'Kirjanmerkit';
@@ -301,6 +351,19 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get prayers => 'Rukoukset';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}min';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}kk';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -636,7 +699,7 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Offline-latausten hallinta';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +884,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Pilvitaulukot puuttuvat Supabasesta; niputettu varatoiminto aktiivinen';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +893,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud Juz -metatiedot puuttuvat; niputettu rakennevaraus aktiivinen';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -952,6 +1015,14 @@ class AppLocalizationsFi extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Avaa kaikki ominaisuudet henkistä matkaasi varten';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premium-tuotetta ei ole saatavilla juuri nyt. Yritä myöhemmin uudelleen.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Ostoa ei voitu suorittaa loppuun. Yritä uudelleen.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1101,25 +1172,35 @@ class AppLocalizationsFi extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Lataa';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Jatka latausta';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Poista ladatut tiedostot';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Lataus peruttu kohteelle $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Lataus valmis kohteelle $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Lataus valmis kohteelle $reciter $failed epäonnistuneilla suurailla ($downloaded/$total ladattu).';
   }
 
   @override
@@ -1239,6 +1320,21 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Verkkovirhe. Yritä uudelleen.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Paikka vaaditaan';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Aseta ensin sijainti, jotta lähellä olevat moskeijat, halal-ruoat ja islamilaiset koulut voidaan etsiä tarkasti.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Karttaruutuja ei ole saatavilla';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Vahvistettua karttaruutulähdettä ei ole vielä määritetty tälle koontiversiolle. Läheiset paikat voivat silti ladata tallennetusta sijainnistasi.';
 
   @override
   String get unknownPlaceName => 'Tuntematon nimi';

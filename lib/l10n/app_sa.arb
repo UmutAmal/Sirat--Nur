@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "डाउनलोड प्रबन्धक",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "इति .\nअफलाइन डाउनलोड प्रबन्धक",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "इति .\nसुपाबेसे मेघसारणीः अनुपलब्धाः; bundled fallback सक्रियः",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "इति .\nमेघ juz मेटाडाटा अनुपलब्धः; bundled संरचनात्मक fallback सक्रिय",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -354,8 +354,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "दैनिकप्रश्नसीमा प्राप्ता। असीमितस्य कृते प्रीमियमं प्रति उन्नयनं कुर्वन्तु।",
   "chatbotErrorMsg": "अहं प्रतिक्रियां जनयितुं न शक्तवान्। कृपया पुनः प्रयासं कुर्वन्तु।",
-  "chatbotOfflinePrompt": "सत्यापितं अफलाइन इस्लामिकज्ञानकोशम् अद्यापि क्यूरेटिङ्ग् क्रियते। इदानीं भवान् offline fallback सक्षमं कर्तुं शक्नोति, परन्तु स्रोतः दत्तांशसमूहः सज्जः न भवति तावत् केवलं सीमितसुरक्षितसन्देशान् एव दर्शयिष्यति ।\n\nकिं भवान् अफलाइन-फॉलबैक् सक्षमं कर्तुम् इच्छति?",
-  "chatbotOfflineSwitched": "अफलाइन fallback सक्षमम्। सत्यापितस्थानीय इस्लामिक उत्तराणि अद्यापि सज्जाः न सन्ति।",
+  "chatbotOfflinePrompt": "इति .\nसत्यापितं अफलाइन इस्लामिकज्ञानकोशम् अद्यापि क्यूरेटिङ्ग् क्रियते। इदानीं भवान् offline fallback सक्षमं कर्तुं शक्नोति, परन्तु स्रोतः दत्तांशसमूहः सज्जः न भवति तावत् केवलं सीमितसुरक्षितसन्देशान् एव दर्शयिष्यति ।\n\nकिं भवान् अफलाइन-फॉलबैक् सक्षमं कर्तुम् इच्छति?",
+  "chatbotOfflineSwitched": "इति .\nअफलाइन fallback सक्षमम्। सत्यापितस्थानीय इस्लामिक उत्तराणि अद्यापि सज्जाः न सन्ति।",
   "chatbotOfflineDownloadLabel": "Offline Fallback सक्षमं कुर्वन्तु",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "इति .\nडाउनलोड करें",
+  "resumeDownload": "इति .\nResume Download",
+  "deleteDownloadedFiles": "इति .\nडाउनलोड् कृतानि सञ्चिकाः विलोपयन्तु",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "इति .\n{reciter} कृते डाउनलोड् रद्दम्।",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "इति .\n{reciter} कृते डाउनलोड् सम्पन्नम्।",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -458,8 +458,8 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "मेघ एपिआइ विन्यस्तं नास्ति। कृपया Local AI इत्यत्र स्विच कुर्वन्तु।",
-  "chatbotLocalNoInfo": "[OFFLINE] सत्यापितं स्थानीयं इस्लामिकमार्गदर्शनं अद्यापि उपलब्धं नास्ति। स्रोत-उत्तराणां कृते Cloud AI -इत्यत्र स्विच् कुर्वन्तु ।",
+  "chatbotCloudNotConfigured": "इति .\nमेघ एपिआइ विन्यस्तं नास्ति। कृपया Local AI इत्यत्र स्विच कुर्वन्तु।",
+  "chatbotLocalNoInfo": "इति .\n[OFFLINE] सत्यापितं स्थानीयं इस्लामिकमार्गदर्शनं अद्यापि उपलब्धं नास्ति। स्रोत-उत्तराणां कृते Cloud AI -इत्यत्र स्विच् कुर्वन्तु ।",
   "mosques": "मस्जिदाः",
   "halalFood": "हलाल भोजन",
   "placesSearchArea": "एतत् क्षेत्रं अन्वेष्टुम्",
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "१ शव्वालः",
   "specialDayDateEidAlAdha": "१० धुल हिज्जा",
   "specialDayDateIslamicNewYear": "१ मुहर्रम",
-  "specialDayDateMawlidAnNabi": "१२ रबी अल-अववाल"
+  "specialDayDateMawlidAnNabi": "१२ रबी अल-अववाल",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "इति .\nताजगी",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "इति .\nलोडिंग तफसिर...",
+  "tafsirSourceLabel": "इति .\nतफसीर स्रोतः",
+  "tafsirNoSurahFound": "इति .\nअस्य सूरस्य कृते न तफसीरः लब्धः।",
+  "tafsirNoAyahFound": "इति .\nअयम् {ayah} कृते कोऽपि तफसीरः न प्राप्तः।",
+  "tafsirLoadFailed": "इति .\nतफसीरं भारं कर्तुं न शक्तवान् ।",
+  "tafsirNoTextForAyah": "इति .\nअस्य अयस्य कृते न तफसीरग्रन्थः।",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "tafsirApiStatusError": "इति .\nतफ्सिर् स्रोतः HTTP {statusCode} त्रुटिं प्रत्यागच्छत् ।",
+  "tafsirNoEntriesReturned": "इति .\nचयनितः tafsir स्रोतः कोऽपि प्रविष्टिः न प्रत्यागच्छत् ।",
+  "premiumProductUnavailable": "इति .\nप्रीमियम उत्पादः अधुना उपलब्धः नास्ति। कृपया पश्चात् पुनः प्रयासं कुर्वन्तु।",
+  "premiumPurchaseFailed": "इति .\nक्रयणं सम्पन्नं कर्तुं न शक्यते स्म । कृपया पुनः प्रयासं कुर्वन्तु।",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "इति .\nइस्लामिक प्रकाश मार्ग",
+  "downloadPartiallyFinishedForReciter": "इति .\n{reciter} कृते {failed} विफलसूरहैः सह डाउनलोड् समाप्तम् ({downloaded}/{total} डाउनलोड् कृतम्)।",
+  "placesLocationRequiredTitle": "इति .\nस्थानं आवश्यकम्",
+  "placesLocationRequiredBody": "इति .\nप्रथमं स्थानं स्थापयन्तु येन समीपस्थाः मस्जिदाः, हलालभोजनं, इस्लामिकविद्यालयाः च समीचीनतया अन्वेष्टुं शक्यन्ते।",
+  "placesMapTilesUnavailableTitle": "नक्शा टाइल्स अनुपलब्ध",
+  "placesMapTilesUnavailableBody": "इति .\nअस्य निर्माणस्य कृते अद्यापि सत्यापितः मानचित्रटाइलस्रोतः विन्यस्तः नास्ति । समीपस्थानि स्थानानि अद्यापि भवतः रक्षितस्थानात् लोड् कर्तुं शक्नुवन्ति ।",
+  "prayerRemainingUnavailable": "-- ९."
 }

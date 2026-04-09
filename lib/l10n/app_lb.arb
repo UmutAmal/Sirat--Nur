@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Cloud Dëscher fehlen an Supabase; gebündelte Fallback aktiv",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz Metadaten feelen; gebündelte strukturelle Fallback aktiv",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -393,9 +393,9 @@
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Download",
   "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "deleteDownloadedFiles": "Läschen erofgeluede Dateien",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Download annuléiert fir {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Download fäerdeg fir {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Schauer",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Erfrëschen",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "Lueden tafsir ...",
+  "tafsirSourceLabel": "Tafsir Quell",
+  "tafsirNoSurahFound": "Keen Tafsir fonnt fir dës Surah.",
+  "tafsirNoAyahFound": "Keen Tafsir fonnt fir ayah {ayah}.",
+  "tafsirLoadFailed": "Tafsir konnt net gelueden ginn.",
+  "tafsirNoTextForAyah": "Keen Tafsir Text fir dës Ayah.",
+  "tafsirDownloadingProgress": "Eroflueden tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "tafsirApiStatusError": "Tafsir Quell huet en HTTP {statusCode} Feeler zréckginn.",
+  "tafsirNoEntriesReturned": "Der gewielter tafsir Quell huet keng Entréen zréck.",
+  "premiumProductUnavailable": "Premium Produkt ass elo net verfügbar. Probéiert w.e.g. méi spéit nach eng Kéier.",
+  "premiumPurchaseFailed": "Kaf konnt net ofgeschloss ginn. Probéiert w.e.g. nach eng Kéier.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Islamesche Wee vum Liicht",
+  "downloadPartiallyFinishedForReciter": "Download fäerdeg fir {reciter} mat {failed} gescheitert Surahs ({downloaded}/{total} erofgelueden).",
+  "placesLocationRequiredTitle": "Plaz néideg",
+  "placesLocationRequiredBody": "Setzt eng Plaz fir d'éischt sou datt Emgéigend Moscheeën, Halal Iessen, an islamesch Schoule präzis gesicht kënne ginn.",
+  "placesMapTilesUnavailableTitle": "Kaart Fliesen net verfügbar",
+  "placesMapTilesUnavailableBody": "Eng verifizéiert Kaartfliesquell ass nach net fir dëse Build konfiguréiert. Nopesch Plazen kënnen nach ëmmer vun Ärer gespäichert Plaz lueden.",
+  "prayerRemainingUnavailable": "--"
 }

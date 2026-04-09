@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Татаж авах менежер",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Офлайн татаж авах менежер",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Supabase-д үүлэн хүснэгт байхгүй; багцалсан буцаалт идэвхтэй",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz мета өгөгдөл дутуу байна; багцалсан бүтцийн нөхөн сэргэлт идэвхтэй",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Татаж авах",
+  "resumeDownload": "Татаж авахыг үргэлжлүүлнэ үү",
+  "deleteDownloadedFiles": "Татаж авсан файлуудыг устгах",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter}-д татахыг цуцалсан.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter}-г татаж авлаа.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Шаввал",
   "specialDayDateEidAlAdha": "10 Зул Хижжа",
   "specialDayDateIslamicNewYear": "1 Мухаррам",
-  "specialDayDateMawlidAnNabi": "12 Раби аль-Аввал"
+  "specialDayDateMawlidAnNabi": "12 Раби аль-Аввал",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Сэргээх",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "Тафсирыг ачаалж байна...",
+  "tafsirSourceLabel": "Тафсир эх сурвалж",
+  "tafsirNoSurahFound": "Энэ судрын тафсир олдсонгүй.",
+  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoadFailed": "Тафсирыг ачаалж чадсангүй.",
+  "tafsirNoTextForAyah": "Энэ шүлэгт тафсир текст байхгүй.",
+  "tafsirDownloadingProgress": "Тафсир татаж байна {current}/{total}",
+  "tafsirLoadingProgress": "Тафсирыг ачаалж байна {current}/{total}",
+  "tafsirApiStatusError": "Тафсир эх сурвалж HTTP {statusCode} алдаа буцаасан.",
+  "tafsirNoEntriesReturned": "Сонгогдсон тафсир эх сурвалж ямар ч оруулга ирүүлээгүй.",
+  "premiumProductUnavailable": "Дээд зэрэглэлийн бүтээгдэхүүн одоогоор байхгүй байна. Дараа дахин оролдоно уу.",
+  "premiumPurchaseFailed": "Худалдан авалтыг дуусгаж чадсангүй. Дахин оролдоно уу.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Исламын гэрлийн зам",
+  "downloadPartiallyFinishedForReciter": "{reciter}-д {failed} бүтэлгүйтсэн сурагуудыг татаж авч дууслаа ({downloaded}/{total} татагдсан).",
+  "placesLocationRequiredTitle": "Байршил шаардлагатай",
+  "placesLocationRequiredBody": "Ойролцоох лалын сүм, халал хоол, исламын сургуулийг үнэн зөв хайж олохын тулд эхлээд байршлыг тогтооно уу.",
+  "placesMapTilesUnavailableTitle": "Газрын зургийн хавтан ашиглах боломжгүй",
+  "placesMapTilesUnavailableBody": "Баталгаажсан газрын зургийн хавтангийн эх сурвалжийг энэ бүтээцэд хараахан тохируулаагүй байна. Ойролцоох газруудыг таны хадгалсан байршлаас ачаалах боломжтой хэвээр байна.",
+  "prayerRemainingUnavailable": "--"
 }

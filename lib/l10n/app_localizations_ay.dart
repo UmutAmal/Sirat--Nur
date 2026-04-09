@@ -12,6 +12,10 @@ class AppLocalizationsAy extends AppLocalizations {
   String get appTitle => 'Way Of Allah ukax mä jach’a thakhiwa';
 
   @override
+  String get splashTagline =>
+      'ukax mä juk’a pachanakanwa.\nIslámica Way of Light ukax mä jach’a thakhiwa';
+
+  @override
   String get home => 'Uta';
 
   @override
@@ -152,6 +156,9 @@ class AppLocalizationsAy extends AppLocalizations {
   String get retry => 'Wasitat yantʼañamawa';
 
   @override
+  String get refreshAction => 'ukax mä juk’a pachanakanwa.\nRefresco luraña';
+
+  @override
   String get cancel => 'Kansilaña';
 
   @override
@@ -179,6 +186,11 @@ class AppLocalizationsAy extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -195,6 +207,49 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir ukax mä juk’a pachanakanwa';
+
+  @override
+  String get tafsirLoading => 'ukax mä juk’a pachanakanwa.\nUkax tafsir...';
+
+  @override
+  String get tafsirSourceLabel =>
+      'ukax mä juk’a pachanakanwa.\nTafsir ukax mä jamuqawa';
+
+  @override
+  String get tafsirNoSurahFound =>
+      'ukax mä juk’a pachanakanwa.\nAka surah ukatakix janiw tafsir jikxataskiti.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'ukax mä juk’a pachanakanwa.\nJaniw tafsir ukax ayah $ayah ukatakix jikxataskiti.';
+  }
+
+  @override
+  String get tafsirLoadFailed =>
+      'ukax mä juk’a pachanakanwa.\nTafsir ukax janiw cargañjamäkänti.';
+
+  @override
+  String get tafsirNoTextForAyah =>
+      'ukax mä juk’a pachanakanwa.\nJaniw tafsir qillqatax aka ayah ukatakix utjkiti.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'ukax mä juk’a pachanakanwa.\nTafsir phuqhawix HTTP $statusCode pantjasiw kutt’ayawayi.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'ukax mä juk’a pachanakanwa.\nAjllit tafsir phunchhawix janiw kuna qillqt’atanakas kutt’ayawaykiti.';
 
   @override
   String get bookmarks => 'Markachirinaka';
@@ -302,6 +357,19 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get prayers => 'Oracionanaka';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '-- .';
 
   @override
   String get dhikrCount => 'Dhikr Jakhuwi';
@@ -645,7 +713,8 @@ class AppLocalizationsAy extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'ukax mä juk’a pachanakanwa.\nJan Internetan utjki uka Descarga apnaqiri';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -832,7 +901,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'ukax mä juk’a pachanakanwa.\nSupabase ukanx cloud tablas ukanakax chhaqhata; bundled fallback ukax activo ukhamawa';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -841,7 +910,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'ukax mä juk’a pachanakanwa.\nCloud juz metadatos ukax janiw utjkiti; bundled estructural fallback ukax activo ukhamawa';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -966,6 +1035,14 @@ class AppLocalizationsAy extends AppLocalizations {
       'Ajay tuqin saräwimatakix taqi lurawinakat jist’arañamawa';
 
   @override
+  String get premiumProductUnavailable =>
+      'ukax mä juk’a pachanakanwa.\nPremium ukax janiw jichhax utjkiti. Mä juk’a pachatxa mayampi yant’apxañani.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'ukax mä juk’a pachanakanwa.\nAlañax janiw tukuyañjamäkänti. Ukhamaraki, mayampi yant’apxañani.';
+
+  @override
   String get paywallFeature1Title => 'Yanapt’ir Neural ukax Plus';
 
   @override
@@ -1075,11 +1152,11 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Base de conocimiento islámico offline ukan chiqapar uñjatax wali curado ukhamawa. Jichhax jan internetan fallback ukar ch’amanchañax wakisispawa, ukampis ukax mä juk’a seguro yatiyawinakakiw uñacht’ayasini, kunawsatix fuente de datos ukax wakicht’atäñapkama.\n\n¿Jumax offline fallback ukar ch’amanchañ munasmati?';
+      'ukax mä juk’a pachanakanwa.\nBase de conocimiento islámico offline ukan chiqapar uñjatax wali curado ukhamawa. Jichhax jan internetan fallback ukar ch’amanchañax wakisispawa, ukampis ukax mä juk’a seguro yatiyawinakakiw uñacht’ayasini, kunawsatix fuente de datos ukax wakicht’atäñapkama.\n\n¿Jumax offline fallback ukar ch’amanchañ munasmati?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback ukax ch’amanchatawa. Islámico local ukan chiqanchata jaysäwinakapax janiw wakicht’atäkiti.';
+      'ukax mä juk’a pachanakanwa.\nOffline fallback ukax ch’amanchatawa. Islámico local ukan chiqanchata jaysäwinakapax janiw wakicht’atäkiti.';
 
   @override
   String get chatbotOfflineDownloadLabel =>
@@ -1114,25 +1191,37 @@ class AppLocalizationsAy extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction =>
+      'ukax mä juk’a pachanakanwa.\nUkax mä juk’a pachanakanwa';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload =>
+      'ukax mä juk’a pachanakanwa.\nResumo Descarga ukax mä juk’a pachanakanwa';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Uñstayata Archivonaka chhaqtayaña';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'ukax mä juk’a pachanakanwa.\nUñstayañax cancelatawa $reciter ukataki.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'ukax mä juk’a pachanakanwa.\n$reciter ukatakix apkatañ tukuyata.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'ukax mä juk’a pachanakanwa.\n$reciter ukatakix $failed jan walt’ayat surahs ukanakamp apkatañax tukuyatawa ($downloaded/$total apkatatawa).';
   }
 
   @override
@@ -1215,11 +1304,11 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API ukax janiw wakicht’atäkiti. Ukhamaraki, Local AI ukar mayjt’ayaña.';
+      'ukax mä juk’a pachanakanwa.\nCloud API ukax janiw wakicht’atäkiti. Ukhamaraki, Local AI ukar mayjt’ayaña.';
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verificado local islámico guia ukax janiw jichhakamax utjkiti. Cloud AI ukaruw mayjt’ayañama, ukax fuente ukan jaysäwinakapawa.';
+      'ukax mä juk’a pachanakanwa.\n[OFFLINE] Verificado local islámico guia ukax janiw jichhakamax utjkiti. Cloud AI ukaruw mayjt’ayañama, ukax fuente ukan jaysäwinakapawa.';
 
   @override
   String get mosques => 'Mezquitas ukanaka';
@@ -1254,6 +1343,22 @@ class AppLocalizationsAy extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Red ukan pantjasiwipa. Ukhamaraki, mayampi yant’apxañani.';
+
+  @override
+  String get placesLocationRequiredTitle =>
+      'ukax mä juk’a pachanakanwa.\nKawkhantix utjki ukax wakisiwa';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'ukax mä juk’a pachanakanwa.\nNayraqatax mä chiqawj utt’ayañama ukhamat jak’ankir mezquitas, halal manq’añanaka, ukat islámica yatiqañ utanakax chiqaparu thaqhatäñapataki.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'ukax mä juk’a pachanakanwa.\nMapa tejas ukax janiw utjkiti';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'ukax mä juk’a pachanakanwa.\nMä chiqanchata mapa azulejo phuqhawix janiw aka lurañatakix wakicht’atäkiti. Jak’a chiqanakax waliw qhispiyat chiqat apkatasispa.';
 
   @override
   String get unknownPlaceName => 'Jan uñt’at Suti';

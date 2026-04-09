@@ -8,6 +8,9 @@ import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 
 /// Product ID for the lifetime premium unlock (must match Play Console / App Store Connect).
 const String kPremiumProductId = 'sirat_nur_premium_lifetime';
+const String kPremiumPurchaseFailedErrorCode = 'premium_purchase_failed';
+const String kPremiumProductUnavailableErrorCode =
+    'premium_product_unavailable';
 
 /// Premium state: tracks whether the user has premium access.
 class PremiumState {
@@ -37,10 +40,8 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
   List<ProductDetails> _products = [];
 
   PremiumNotifier(this._prefs)
-      : _iap = InAppPurchase.instance,
-        super(PremiumState(
-          isPremium: _prefs.getBool('isPremium') ?? false,
-        )) {
+    : _iap = InAppPurchase.instance,
+      super(PremiumState(isPremium: _prefs.getBool('isPremium') ?? false)) {
     _init();
   }
 
@@ -84,7 +85,7 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
         case PurchaseStatus.error:
           state = state.copyWith(
             isLoading: false,
-            error: purchase.error?.message ?? 'Purchase failed',
+            error: purchase.error?.message ?? kPremiumPurchaseFailedErrorCode,
           );
           if (purchase.pendingCompletePurchase) {
             _iap.completePurchase(purchase);
@@ -121,7 +122,7 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
         state = PremiumState(isPremium: true);
         return;
       }
-      state = state.copyWith(error: 'Product not available. Please try again later.');
+      state = state.copyWith(error: kPremiumProductUnavailableErrorCode);
       return;
     }
 
@@ -161,8 +162,9 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
   }
 }
 
-final premiumProvider =
-    StateNotifierProvider<PremiumNotifier, PremiumState>((ref) {
+final premiumProvider = StateNotifierProvider<PremiumNotifier, PremiumState>((
+  ref,
+) {
   final prefs = ref.watch(sharedPreferencesProvider);
   return PremiumNotifier(prefs);
 });

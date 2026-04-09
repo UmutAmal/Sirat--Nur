@@ -12,6 +12,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Calea Islamică a Luminii';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -152,6 +155,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Reîmprospătați';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -179,6 +185,11 @@ class AppLocalizationsRo extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Da $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -195,6 +206,46 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Se încarcă tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'sursa Tafsir';
+
+  @override
+  String get tafsirNoSurahFound =>
+      'Nu s-a găsit niciun tafsir pentru această sură.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Nu a fost găsit niciun tafsir pentru ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir nu a putut fi încărcat.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Fără text tafsir pentru această ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Se descarcă tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Se încarcă tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Sursa Tafsir a returnat o eroare HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Sursa tafsir selectată nu a returnat nicio intrare.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -302,6 +353,19 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -446,7 +510,7 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Manager de descărcare';
 
   @override
   String get downloads => 'Downloads';
@@ -637,7 +701,7 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Manager de descărcare offline';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -822,7 +886,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Lipsesc tabele cloud în Supabase; bundled fallback activ';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -831,7 +895,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Metadatele cloud juz lipsesc; bundled fallback structural activ';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -953,6 +1017,14 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Deblocați toate funcțiile pentru călătoria voastră spirituală';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Produsul premium nu este disponibil momentan. Vă rugăm să încercați din nou mai târziu.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Achiziția nu a putut fi finalizată. Vă rugăm să încercați din nou.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1103,25 +1175,35 @@ class AppLocalizationsRo extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Descărcați';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Reluați descărcarea';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Ștergeți fișierele descărcate';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Descărcarea a fost anulată pentru $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Descărcarea finalizată pentru $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Descărcarea s-a încheiat pentru $reciter cu $failed sure nereușite ($downloaded/$total descărcate).';
   }
 
   @override
@@ -1242,6 +1324,20 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Eroare de rețea. Vă rugăm să încercați din nou.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Este necesară locația';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Setați mai întâi o locație, astfel încât moscheile din apropiere, mâncarea halal și școlile islamice să poată fi căutate cu precizie.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Dale de hartă indisponibile';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'O sursă de dale de hartă verificată nu este încă configurată pentru această versiune. Locațiile din apropiere se pot încărca în continuare din locația dvs. salvată.';
 
   @override
   String get unknownPlaceName => 'Nume necunoscut';

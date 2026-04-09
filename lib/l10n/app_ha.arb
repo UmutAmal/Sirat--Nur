@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Manajan Zazzagewa Ba layi",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Teburan girgije sun ɓace a cikin Supabase; bundled fallback yana aiki",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata ya ɓace; bundled structural fallback yana aiki",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Zazzagewa",
+  "resumeDownload": "Ci gaba da saukewa",
+  "deleteDownloadedFiles": "Share Fayilolin da Aka Sauke",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "An soke saukewa don {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "An gama saukewa don {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal",
   "specialDayDateEidAlAdha": "10 Zul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal",
+  "refreshAction": "Sake sabuntawa",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoading": "Ana loda tafsir...",
+  "tafsirSourceLabel": "tushen Tafsiri",
+  "tafsirNoSurahFound": "Ba a sami tafsirin wannan sura ba.",
+  "tafsirNoAyahFound": "Babu tafsirin da aka samu na ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "An kasa loda Tafsiri.",
+  "tafsirNoTextForAyah": "Babu rubutun tafsiri na wannan aya.",
+  "tafsirDownloadingProgress": "Ana sauke tafsiri {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Ana loda tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tushen Tafsir ya dawo da kuskuren HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Madogarar tafsirin da aka zaɓa ba ta dawo ba.",
+  "premiumProductUnavailable": "Babu samfura mai ƙima a yanzu. Da fatan za a sake gwadawa daga baya.",
+  "premiumPurchaseFailed": "An kasa kammala siyan. Da fatan za a sake gwadawa.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "splashTagline": "Hanyar Hasken Musulunci",
+  "downloadPartiallyFinishedForReciter": "An gama saukewa don {reciter} tare da {failed} surorin da suka kasa ({downloaded}/{total} zazzage).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "placesLocationRequiredTitle": "Wurin da ake buƙata",
+  "placesLocationRequiredBody": "Saita wuri da farko don a iya bincika masallatai da ke kusa, abinci na halal, da makarantun islamiyya daidai.",
+  "placesMapTilesUnavailableTitle": "Babu fale-falen taswira",
+  "placesMapTilesUnavailableBody": "Ba a saita ingantaccen tushen tayal taswira don wannan ginin ba tukuna. Wuraren da ke kusa za su iya ɗauka daga wurin da aka ajiye.",
+  "prayerRemainingUnavailable": "--"
 }

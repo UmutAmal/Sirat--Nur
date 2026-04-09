@@ -12,6 +12,9 @@ class AppLocalizationsZu extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Indlela YamaSulumane Yokukhanya';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsZu extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Vuselela';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsZu extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Ilayisha i-tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Umthombo we-Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Ayikho i-tafsir etholakele yale surah.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Ayikho i-tafsir etholakele ye-ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'I-Tafsir ayikwazanga ukulayishwa.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Awukho umbhalo we-tafsir wale ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Ilanda i-tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Ilayisha i-tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Umthombo we-Tafsir ubuyisele iphutha le-HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Umthombo we-tafsir okhethiwe awuzange ubuyise okufakiwe.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsZu extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Landa Umphathi';
 
   @override
   String get downloads => 'Downloads';
@@ -636,7 +699,8 @@ class AppLocalizationsZu extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Umphathi Wokulanda Okungaxhunyiwe ku-inthanethi';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +885,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Amatafula amafu alahlekile eSupabase; i-backback eyinqwaba iyasebenza';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +894,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Imethadatha ye-Cloud juz ayikho; Ukubuyela emuva kwesakhiwo okuhlanganisiwe kuyasebenza';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -951,6 +1015,14 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => 'Vula zonke izici zohambo lwakho lokomoya';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Umkhiqizo we-Premium awutholakali okwamanje. Sicela uzame futhi emuva kwesikhathi.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Ukuthenga akuqedwanga. Sicela uzame futhi.';
 
   @override
   String get paywallFeature1Title => 'I-Neural Assistant Plus';
@@ -1101,25 +1173,35 @@ class AppLocalizationsZu extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Landa';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Qalisa kabusha Ukulanda';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Susa Amafayela Alandiwe';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Ukulanda kukhanselwe i-$reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Ukulanda kuqediwe kwe-$reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Ukulanda kuqediwe kwe-$reciter nge-$failed ama-surah ahlulekile ($downloaded/$total alandiwe).';
   }
 
   @override
@@ -1239,6 +1321,20 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Iphutha lenethiwekhi. Sicela uzame futhi.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Indawo iyadingeka';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Setha indawo kuqala ukuze ama-mosque aseduze, ukudla kwe-halal, nezikole zamaSulumane ziseshwe ngokunembile.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Amathayela emephu awatholakali';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Umthombo wethayela lemephu oqinisekisiwe awulungiselelwe lesi sakhiwo okwamanje. Izindawo eziseduze zisengalayisha zisuka endaweni yakho elondoloziwe.';
 
   @override
   String get unknownPlaceName => 'Igama Elingaziwa';

@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "مدیر دانلود",
+  "downloadManager": "دانلود منیجر",
   "downloads": "دانلودها",
   "downloading": "در حال دانلود...",
   "downloadComplete": "دانلود کامل شد",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "مدیر دانلود آفلاین",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "جداول ابری در Supabase وجود ندارد. بازگشتی همراه فعال",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "ابرداده Cloud juz از دست رفته است. بازگشتی ساختاری همراه فعال",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "دانلود کنید",
+  "resumeDownload": "دانلود رزومه",
+  "deleteDownloadedFiles": "حذف فایل های دانلود شده",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "دانلود برای {reciter} لغو شد.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "دانلود برای {reciter} تکمیل شد.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 شوال",
   "specialDayDateEidAlAdha": "10 ذی الحجه",
   "specialDayDateIslamicNewYear": "1 محرم",
-  "specialDayDateMawlidAnNabi": "12 ربیع الاول"
+  "specialDayDateMawlidAnNabi": "12 ربیع الاول",
+  "refreshAction": "تازه کردن",
+  "ayahLabel": "آیه {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoading": "در حال بارگیری تفسیر...",
+  "tafsirSourceLabel": "منبع تفسیر",
+  "tafsirNoSurahFound": "هیچ تفسیری برای این سوره یافت نشد.",
+  "tafsirNoAyahFound": "هیچ تفسیری برای آیه {ayah} یافت نشد.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "تفسیر بارگیری نشد.",
+  "tafsirNoTextForAyah": "متن تفسیری برای این آیه وجود ندارد.",
+  "tafsirDownloadingProgress": "در حال دانلود تفسیر {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "در حال بارگیری تفسیر {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "منبع تفسیر یک خطای HTTP {statusCode} را برگرداند.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "منبع تفسیری انتخاب شده هیچ مدخلی برنگشت.",
+  "premiumProductUnavailable": "محصول پریمیوم در حال حاضر در دسترس نیست. لطفاً بعداً دوباره امتحان کنید.",
+  "premiumPurchaseFailed": "خرید تکمیل نشد. لطفا دوباره امتحان کنید.",
+  "prayerRemainingHoursMinutes": "{hours}ساعت {minutes}دقیقه",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "splashTagline": "راه اسلامي نور",
+  "downloadPartiallyFinishedForReciter": "دانلود برای {reciter} با سوره های ناموفق {failed} به پایان رسید ({downloaded}/{total} دانلود شد).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "placesLocationRequiredTitle": "مکان مورد نیاز است",
+  "placesLocationRequiredBody": "ابتدا مکانی را تعیین کنید تا مساجد، غذای حلال و مدارس اسلامی در نزدیکی شما به طور دقیق جستجو شوند.",
+  "placesMapTilesUnavailableTitle": "کاشی های نقشه در دسترس نیست",
+  "placesMapTilesUnavailableBody": "منبع کاشی نقشه تأیید شده هنوز برای این ساخت پیکربندی نشده است. مکان‌های اطراف همچنان می‌توانند از مکان ذخیره‌شده شما بارگیری شوند.",
+  "prayerRemainingUnavailable": "--"
 }

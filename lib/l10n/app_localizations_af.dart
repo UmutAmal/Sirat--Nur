@@ -12,6 +12,9 @@ class AppLocalizationsAf extends AppLocalizations {
   String get appTitle => 'Weg van Allah';
 
   @override
+  String get splashTagline => 'Islamitiese Weg van Lig';
+
+  @override
   String get home => 'Tuis';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsAf extends AppLocalizations {
   String get retry => 'Probeer weer';
 
   @override
+  String get refreshAction => 'Verfris';
+
+  @override
   String get cancel => 'Kanselleer';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsAf extends AppLocalizations {
   String get surah => 'Soera';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Laai tans tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir bron';
+
+  @override
+  String get tafsirNoSurahFound => 'Geen tafsir gevind vir hierdie surah nie.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Geen tafsir gevind vir ayah $ayah nie.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir kon nie gelaai word nie.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Geen tafsir-teks vir hierdie ayah nie.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Laai tans tafsir $current/$total af';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Laai tans $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir-bron het \'n HTTP $statusCode-fout teruggestuur.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Die geselekteerde tafsir-bron het geen inskrywings teruggegee nie.';
 
   @override
   String get bookmarks => 'Boekmerke';
@@ -300,6 +350,19 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get prayers => 'Gebede';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}u ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr telling';
@@ -635,7 +698,7 @@ class AppLocalizationsAf extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Vanlyn aflaaibestuurder';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Wolktabelle ontbreek in Supabase; gebundelde terugval aktief';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Wolk juz metadata ontbreek; gebundelde strukturele terugval aktief';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -951,6 +1014,14 @@ class AppLocalizationsAf extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Ontsluit alle kenmerke vir jou geestelike reis';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premium produk is nie tans beskikbaar nie. Probeer asseblief later weer.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Aankoop kon nie voltooi word nie. Probeer asseblief weer.';
 
   @override
   String get paywallFeature1Title => 'Neurale Assistent Plus';
@@ -1100,25 +1171,35 @@ class AppLocalizationsAf extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Laai af';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Hervat aflaai';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Vee afgelaaide lêers uit';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Aflaai is gekanselleer vir $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Aflaai voltooi vir $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Aflaai voltooi vir $reciter met $failed mislukte surahs ($downloaded/$total afgelaai).';
   }
 
   @override
@@ -1238,6 +1319,20 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Netwerkfout. Probeer asseblief weer.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Ligging word vereis';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Stel eers \'n ligging in sodat nabygeleë moskees, halal-kos en Islamitiese skole akkuraat deursoek kan word.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Kaartteëls nie beskikbaar nie';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      '\'n Geverifieerde kaartteëlbron is nog nie vir hierdie bou opgestel nie. Nabygeleë plekke kan steeds vanaf jou gestoorde ligging laai.';
 
   @override
   String get unknownPlaceName => 'Onbekende Naam';

@@ -12,6 +12,9 @@ class AppLocalizationsLv extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Islāma gaismas ceļš';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -151,6 +154,9 @@ class AppLocalizationsLv extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Atsvaidzināt';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -178,6 +184,11 @@ class AppLocalizationsLv extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -194,6 +205,45 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Notiek tafsira ielāde...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsira avots';
+
+  @override
+  String get tafsirNoSurahFound => 'Šai surai tafsīrs netika atrasts.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Nav atrasts neviens tafsirs priekš ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsiru nevarēja ielādēt.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Nav tafsir teksta šim ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Notiek tafsir lejupielāde $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Notiek tafsira ielāde $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir avots atgrieza HTTP $statusCode kļūdu.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Atlasītais tafsir avots neatgrieza nevienu ierakstu.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -301,6 +351,19 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}min';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -445,7 +508,7 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Lejupielādes pārvaldnieks';
 
   @override
   String get downloads => 'Downloads';
@@ -636,7 +699,7 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Bezsaistes lejupielādes pārvaldnieks';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +884,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase trūkst mākoņa tabulas; kompleksā atkāpšanās aktīva';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +893,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Trūkst mākoņa juz metadatu; kompleksā strukturālā atkāpšanās aktīva';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -951,6 +1014,14 @@ class AppLocalizationsLv extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Atbloķējiet visas funkcijas savam garīgajam ceļojumam';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premium produkts šobrīd nav pieejams. Lūdzu, vēlāk mēģiniet vēlreiz.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Pirkumu nevarēja pabeigt. Lūdzu, mēģiniet vēlreiz.';
 
   @override
   String get paywallFeature1Title => 'Neironu palīgs Plus';
@@ -1100,25 +1171,35 @@ class AppLocalizationsLv extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Lejupielādēt';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Atsākt lejupielādi';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Dzēst lejupielādētos failus';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Lejupielāde ir atcelta $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Lejupielāde pabeigta $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Lejupielāde ir pabeigta $reciter ar $failed neveiksmīgām surahām ($downloaded/$total ir lejupielādēta).';
   }
 
   @override
@@ -1238,6 +1319,20 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Tīkla kļūda. Lūdzu, mēģiniet vēlreiz.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Nepieciešama atrašanās vieta';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Vispirms iestatiet atrašanās vietu, lai varētu precīzi meklēt tuvumā esošās mošejas, halal ēdienu un islāma skolas.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Kartes flīzes nav pieejamas';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Verificēts kartes elementu avots šai būvei vēl nav konfigurēts. Netālu esošās vietas joprojām var ielādēt no jūsu saglabātās atrašanās vietas.';
 
   @override
   String get unknownPlaceName => 'Nezināms Vārds';

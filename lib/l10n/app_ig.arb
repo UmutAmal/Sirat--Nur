@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Onye njikwa nbudata",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Onye njikwa nbudata na-anọghị n'ịntanetị",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Tebụl igwe ojii na-efu na Supabase; ngwungwu ọdịda na-arụ ọrụ",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata efu; ngwugwu structural fallback na-arụ ọrụ",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -354,8 +354,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Eruola oke ajụjụ ọnụ kwa ụbọchị. Kwalite na Premium maka enweghị oke.",
   "chatbotErrorMsg": "Enweghị m ike iwepụta nzaghachi. Biko nwaa ọzọ.",
-  "chatbotOfflinePrompt": "A ka na-echekwa ntọala ihe ọmụma Islam na-anọghị n'ịntanetị. Ị nwere ike mee ka ọ daa azụ na-anọghị n'ịntanetị ugbu a, mana ọ ga-egosi naanị ozi nchekwa nwere oke ruo mgbe nhazi data ewepụtara dị njikere.\n\nWould you like to enable offline fallback?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Azịza ndị islam mpaghara akwadoro adịbeghị.",
+  "chatbotOfflinePrompt": "A ka na-echekwa ntọala ihe ọmụma Islam na-anọghị n'ịntanetị. Ị nwere ike mee ka ọ daa azụ na-anọghị n'ịntanetị ugbu a, mana ọ ga-egosi naanị ozi nchekwa nwere oke ruo mgbe nhazi data ewepụtara dị njikere.\n\nỌ ga-amasị gị ịgbalite ọdịda na-anọghị n'ịntanetị?",
+  "chatbotOfflineSwitched": "Agbanyere ọdịda na-anọghị n'ịntanetị. Azịza ndị islam mpaghara akwadoro adịbeghị.",
   "chatbotOfflineDownloadLabel": "Kwado ọdịda na-anọghị n'ịntanetị",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Budata",
+  "resumeDownload": "Malitegharịa nbudata",
+  "deleteDownloadedFiles": "Hichapụ faịlụ ebudatara",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Kagburu nbudata maka {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Nbudata emechara maka {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Weghachite ume",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "Na-ebu tafsir...",
+  "tafsirSourceLabel": "Isi mmalite Tafsir",
+  "tafsirNoSurahFound": "Enweghị tafsir ahụrụ maka surah a.",
+  "tafsirNoAyahFound": "Enweghị tafsir ahụrụ maka ayah {ayah}.",
+  "tafsirLoadFailed": "Enweghị ike ibunye Tafsir.",
+  "tafsirNoTextForAyah": "Enweghị ederede tafsir maka ayah a.",
+  "tafsirDownloadingProgress": "Na-ebudata tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Na-ebu tafsir {current}/{total}",
+  "tafsirApiStatusError": "Isi mmalite Tafsir weghachiri mperi HTTP {statusCode}.",
+  "tafsirNoEntriesReturned": "Isi mmalite tafsir ahọpụtara weghachighị ndenye ọ bụla.",
+  "premiumProductUnavailable": "Ngwaahịa adịchaghị adị ugbu a. Biko nwaa ọzọ ma emechaa.",
+  "premiumPurchaseFailed": "Enweghị ike ịzụta ya. Biko nwaa ọzọ.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Ụzọ Ìhè nke Islam",
+  "downloadPartiallyFinishedForReciter": "Nbudata emechara maka {reciter} nwere surah {failed} dara ada ({downloaded}/{total} ebudatara).",
+  "placesLocationRequiredTitle": "Ebe achọrọ",
+  "placesLocationRequiredBody": "Tọọ ebe mbụ ka e wee chọọ ụlọ alakụba dị nso, nri halal na ụlọ akwụkwọ islam nke ọma.",
+  "placesMapTilesUnavailableTitle": "Taịlị maapụ adịghị",
+  "placesMapTilesUnavailableBody": "Ahaziri isi iyi taịlị maapụ akwadoro maka nrụpụta a. Ebe ndị dị nso ka nwere ike ibunye na ebe echekwara gị.",
+  "prayerRemainingUnavailable": "--"
 }

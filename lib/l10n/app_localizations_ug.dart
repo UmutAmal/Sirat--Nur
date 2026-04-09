@@ -12,6 +12,9 @@ class AppLocalizationsUg extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'ئىسلام نۇر يولى';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsUg extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'يېڭىلاش';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsUg extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Tafsir نى يۈكلەۋاتىدۇ ...';
+
+  @override
+  String get tafsirSourceLabel => 'تەفسىر مەنبەسى';
+
+  @override
+  String get tafsirNoSurahFound => 'بۇ سۈرە ئۈچۈن ھېچقانداق تەپسىر تېپىلمىدى.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Ayah $ayah ئۈچۈن تافسىر تېپىلمىدى.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'تەفسىرنى يۈكلىگىلى بولمىدى.';
+
+  @override
+  String get tafsirNoTextForAyah => 'بۇ ئايەت ئۈچۈن تەفسىر تېكىستى يوق.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir مەنبەسى HTTP $statusCode خاتالىقىنى قايتۇردى.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'تاللانغان تەفسىر مەنبەسى ھېچقانداق جاۋاب قايتۇرمىدى.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '-';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsUg extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'چۈشۈرۈش باشقۇرغۇچى';
 
   @override
   String get downloads => 'Downloads';
@@ -634,7 +697,7 @@ class AppLocalizationsUg extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'تورسىز چۈشۈرۈش باشقۇرغۇچى';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -819,7 +882,7 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase دا يوقاپ كەتكەن بۇلۇت جەدۋىلى باغلانغان باغلاش ئاكتىپ';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata يوقاپ كەتتى; باغلانغان قۇرۇلما ئارقىغا چېكىنىش ئاكتىپ';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,13 @@ class AppLocalizationsUg extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'مەنىۋى سەپىرىڭىزنىڭ بارلىق ئىقتىدارلىرىنى ئېچىڭ';
+
+  @override
+  String get premiumProductUnavailable =>
+      'ئەلا مەھسۇلات ھازىر يوق. كېيىن قايتا سىناڭ.';
+
+  @override
+  String get premiumPurchaseFailed => 'سېتىۋېلىش تاماملانمىدى. قايتا سىناڭ.';
 
   @override
   String get paywallFeature1Title => 'نېرۋا ياردەمچىسى';
@@ -1098,25 +1168,35 @@ class AppLocalizationsUg extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'چۈشۈرۈش';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'چۈشۈرۈشنى ئەسلىگە كەلتۈرۈش';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'چۈشۈرۈلگەن ھۆججەتلەرنى ئۆچۈرۈڭ';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'چۈشۈرۈش $reciter ئۈچۈن ئەمەلدىن قالدۇرۇلدى.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'چۈشۈرۈش $reciter ئۈچۈن تاماملاندى.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
   }
 
   @override
@@ -1236,6 +1316,21 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'تور خاتالىقى. قايتا سىناڭ.';
+
+  @override
+  String get placesLocationRequiredTitle => 'ئورنى تەلەپ قىلىنىدۇ';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'ئالدى بىلەن ئورۇن بەلگىلەڭ ، شۇڭا يېقىن ئەتراپتىكى مەسچىتلەر ، ھالال يېمەكلىكلەر ۋە ئىسلام مەكتەپلىرىنى توغرا ئىزدىگىلى بولىدۇ.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'خەرىتە كاھىشلىرىنى ئىشلەتكىلى بولمايدۇ';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'بۇ قۇرۇلۇش ئۈچۈن دەلىللەنگەن خەرىتە كاھىش مەنبەسى تېخى سەپلەنمىگەن. يېقىن جايلار يەنىلا ساقلانغان ئورنىڭىزدىن يۈكلىيەلەيدۇ.';
 
   @override
   String get unknownPlaceName => 'نامەلۇم ئىسىم';

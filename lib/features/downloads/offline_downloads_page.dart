@@ -4,6 +4,27 @@ import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
+String resolveOfflineDownloadResultMessage(
+  AppLocalizations l10n,
+  String reciterName,
+  OfflineDownloadBatchResult result,
+) {
+  if (result.wasCanceled) {
+    return l10n.downloadCanceledForReciter(reciterName);
+  }
+
+  if (!result.hasFailures) {
+    return l10n.downloadFinishedForReciter(reciterName);
+  }
+
+  return l10n.downloadPartiallyFinishedForReciter(
+    reciterName,
+    result.succeededSurahs.toString(),
+    result.totalSurahs.toString(),
+    result.failedCount.toString(),
+  );
+}
+
 class OfflineDownloadsPage extends StatefulWidget {
   const OfflineDownloadsPage({super.key});
 
@@ -97,13 +118,15 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
       setState(() {
         _isDownloading[reciterId] = false;
         _downloadProgress.remove(reciterId);
+        _cancelRequested[reciterId] = false;
+        _downloadStatusText.remove(reciterId);
       });
       final l10n = AppLocalizations.of(context)!;
       _showSnack(l10n.downloadCompleted);
       return;
     }
 
-    await OfflineAudioService.downloadAllSurahs(
+    final result = await OfflineAudioService.downloadAllSurahs(
       reciterId: reciterId,
       surahUrls: remainingUrls,
       onProgress: (progress, surahNumber, totalSurahs) {
@@ -130,7 +153,6 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
       reciterId,
     );
     final updatedSize = await OfflineAudioService.getTotalDownloadedSize();
-    final canceled = _cancelRequested[reciterId] == true;
 
     setState(() {
       _downloadedCount[reciterId] = updatedDownloaded.length;
@@ -142,9 +164,11 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
     });
 
     _showSnack(
-      canceled
-          ? l10n.downloadCanceledForReciter(_reciterName(reciterId))
-          : l10n.downloadFinishedForReciter(_reciterName(reciterId)),
+      resolveOfflineDownloadResultMessage(
+        l10n,
+        _reciterName(reciterId),
+        result,
+      ),
     );
   }
 
@@ -187,7 +211,7 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(l10n.downloadManager),
+        title: Text(l10n.offlineDownloadManager),
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh_rounded),

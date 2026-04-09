@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Letöltéskezelő",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Offline letöltéskezelő",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Felhőtáblák hiányoznak a Supabase-ből; kötegelt tartalék aktív",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metaadatok hiányoznak; kötegelt szerkezeti tartalék aktív",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Letöltés",
+  "resumeDownload": "Letöltés folytatása",
+  "deleteDownloadedFiles": "Letöltött fájlok törlése",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "A {reciter} letöltése megszakítva.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "A {reciter} letöltése befejeződött.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Frissítés",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "Tafsir betöltése...",
+  "tafsirSourceLabel": "Tafsir forrás",
+  "tafsirNoSurahFound": "Ehhez a szúrához nem találtak tafsírt.",
+  "tafsirNoAyahFound": "Nem található tafsir ayah {ayah} számára.",
+  "tafsirLoadFailed": "A Tafsirt nem sikerült betölteni.",
+  "tafsirNoTextForAyah": "Nincs tafsir szöveg ehhez az ayahhoz.",
+  "tafsirDownloadingProgress": "Tafsir letöltése {current}/{total}",
+  "tafsirLoadingProgress": "Tafsir betöltése {current}/{total}",
+  "tafsirApiStatusError": "A Tafsir forrás HTTP {statusCode} hibát adott vissza.",
+  "tafsirNoEntriesReturned": "A kiválasztott tafsir-forrás nem adott vissza bejegyzést.",
+  "premiumProductUnavailable": "Prémium termék jelenleg nem elérhető. Kérjük, próbálja újra később.",
+  "premiumPurchaseFailed": "A vásárlást nem lehetett befejezni. Kérjük, próbálja újra.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}p",
+  "prayerRemainingMinutes": "{minutes}p",
+  "splashTagline": "Iszlám Fényút",
+  "downloadPartiallyFinishedForReciter": "A letöltés befejeződött {reciter} {failed} sikertelen szúrákkal ({downloaded}/{total} letöltve).",
+  "placesLocationRequiredTitle": "Helyszín szükséges",
+  "placesLocationRequiredBody": "Először állítson be egy helyet, hogy a közeli mecsetek, halal ételek és iszlám iskolák pontosan megkereshetők legyenek.",
+  "placesMapTilesUnavailableTitle": "A térképlapok nem érhetők el",
+  "placesMapTilesUnavailableBody": "Ellenőrzött térképmozaik forrás még nincs konfigurálva ehhez a buildhez. A közeli helyek továbbra is betölthetők az Ön mentett helyéről.",
+  "prayerRemainingUnavailable": "--"
 }

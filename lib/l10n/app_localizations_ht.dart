@@ -12,6 +12,9 @@ class AppLocalizationsHt extends AppLocalizations {
   String get appTitle => 'Chemen Allah';
 
   @override
+  String get splashTagline => 'Fason Limyè Islamik';
+
+  @override
   String get home => 'Lakay';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsHt extends AppLocalizations {
   String get retry => 'Eseye ankò';
 
   @override
+  String get refreshAction => 'Rafrechi';
+
+  @override
   String get cancel => 'Anile';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsHt extends AppLocalizations {
   String get surah => 'Sura';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Chaje tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir sous';
+
+  @override
+  String get tafsirNoSurahFound => 'Yo pa jwenn okenn tafsir pou soure sa a.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Yo pa jwenn okenn tafsir pou ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir pa t \'kapab chaje.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Pa gen tèks tafsir pou ayah sa a.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Telechaje tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Chaje tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Sous Tafsir te retounen yon erè HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Sous tafsir ki te chwazi a pa retounen okenn antre.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String get prayers => 'Lapriyè';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Konte';
@@ -819,7 +882,7 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Tab nwaj ki manke nan Supabase; pake repli aktif';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata ki manke; pake estriktirèl repli aktif';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -949,6 +1012,14 @@ class AppLocalizationsHt extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Debloke tout karakteristik pou vwayaj espirityèl ou';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Pwodwi Premium pa disponib kounye a. Tanpri eseye ankò pita.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Achte pa t \'kapab fini. Tanpri eseye ankò.';
 
   @override
   String get paywallFeature1Title => 'Neural Asistan Plus';
@@ -1097,25 +1168,35 @@ class AppLocalizationsHt extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Telechaje';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Rezime Telechaje';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Efase fichye telechaje yo';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Telechajman anile pou $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Téléchargement fini pou $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Téléchargement fini pou $reciter ak $failed sourate ki echwe ($downloaded/$total telechaje).';
   }
 
   @override
@@ -1235,6 +1316,20 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Erè rezo a. Tanpri eseye ankò.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Kote obligatwa';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Mete yon kote an premye pou moske ki tou pre, manje halal, ak lekòl Islamik yo ka fouye avèk presizyon.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Kat mozayik pa disponib';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Yon sous mozayik kat jeyografik verifye poko configuré pou konstriksyon sa a. Kote ki tou pre yo ka toujou chaje nan kote ou te sove yo.';
 
   @override
   String get unknownPlaceName => 'Non enkoni';

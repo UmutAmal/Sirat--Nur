@@ -12,6 +12,9 @@ class AppLocalizationsMs extends AppLocalizations {
   String get appTitle => 'Jalan Allah';
 
   @override
+  String get splashTagline => 'Cahaya Islam';
+
+  @override
   String get home => 'Laman Utama';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsMs extends AppLocalizations {
   String get retry => 'Cuba Lagi';
 
   @override
+  String get refreshAction => 'Segarkan semula';
+
+  @override
   String get cancel => 'Batal';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsMs extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juzuk';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Memuatkan tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Sumber Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Tiada tafsir ditemui untuk surah ini.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'No tafsir found for ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir tidak dapat dimuatkan.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Tiada teks tafsir untuk ayat ini.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Sumber tafsir mengembalikan ralat HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Sumber tafsir yang dipilih tidak mengembalikan sebarang entri.';
 
   @override
   String get bookmarks => 'Penanda';
@@ -300,6 +350,19 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get prayers => 'Solat';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Bilangan Zikir';
@@ -636,7 +699,7 @@ class AppLocalizationsMs extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Pengurus Muat Turun Luar Talian';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +884,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Jadual awan tiada dalam Supabase; sandaran dibundel aktif';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +893,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Metadata juz awan tiada; sandaran struktur dibundel aktif';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -951,6 +1014,14 @@ class AppLocalizationsMs extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Buka kunci semua ciri untuk perjalanan rohani anda';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Produk premium tidak tersedia sekarang. Sila cuba lagi kemudian.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Pembelian tidak dapat diselesaikan. Sila cuba lagi.';
 
   @override
   String get paywallFeature1Title => 'Pembantu Neural Plus';
@@ -1099,25 +1170,35 @@ class AppLocalizationsMs extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Muat turun';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Sambung Muat Turun';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Padam Fail yang Dimuat Turun';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Muat turun dibatalkan untuk $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Muat turun selesai untuk $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Muat turun selesai untuk $reciter dengan $failed surah yang gagal ($downloaded/$total dimuat turun).';
   }
 
   @override
@@ -1237,6 +1318,20 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Ralat rangkaian. Sila cuba lagi.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Lokasi diperlukan';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Tetapkan lokasi dahulu supaya masjid berdekatan, makanan halal dan sekolah Islam boleh dicari dengan tepat.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Jubin peta tidak tersedia';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Sumber jubin peta yang disahkan belum dikonfigurasikan untuk binaan ini lagi. Tempat berdekatan masih boleh dimuatkan dari lokasi anda yang disimpan.';
 
   @override
   String get unknownPlaceName => 'Nama Tidak Diketahui';

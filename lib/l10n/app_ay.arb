@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "ukax mä juk’a pachanakanwa.\nJan Internetan utjki uka Descarga apnaqiri",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "ukax mä juk’a pachanakanwa.\nSupabase ukanx cloud tablas ukanakax chhaqhata; bundled fallback ukax activo ukhamawa",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "ukax mä juk’a pachanakanwa.\nCloud juz metadatos ukax janiw utjkiti; bundled estructural fallback ukax activo ukhamawa",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -354,8 +354,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Sapa uru jiskt’awinaka límite ukaru puriñkama. Premium ukar machaqar tukuyañax jan limitado ukhamawa.",
   "chatbotErrorMsg": "Nayax janiw mä jaysäw uñstayirjamäkti. Ukhamaraki, mayampi yant’apxañani.",
-  "chatbotOfflinePrompt": "Base de conocimiento islámico offline ukan chiqapar uñjatax wali curado ukhamawa. Jichhax jan internetan fallback ukar ch’amanchañax wakisispawa, ukampis ukax mä juk’a seguro yatiyawinakakiw uñacht’ayasini, kunawsatix fuente de datos ukax wakicht’atäñapkama.\n\n¿Jumax offline fallback ukar ch’amanchañ munasmati?",
-  "chatbotOfflineSwitched": "Offline fallback ukax ch’amanchatawa. Islámico local ukan chiqanchata jaysäwinakapax janiw wakicht’atäkiti.",
+  "chatbotOfflinePrompt": "ukax mä juk’a pachanakanwa.\nBase de conocimiento islámico offline ukan chiqapar uñjatax wali curado ukhamawa. Jichhax jan internetan fallback ukar ch’amanchañax wakisispawa, ukampis ukax mä juk’a seguro yatiyawinakakiw uñacht’ayasini, kunawsatix fuente de datos ukax wakicht’atäñapkama.\n\n¿Jumax offline fallback ukar ch’amanchañ munasmati?",
+  "chatbotOfflineSwitched": "ukax mä juk’a pachanakanwa.\nOffline fallback ukax ch’amanchatawa. Islámico local ukan chiqanchata jaysäwinakapax janiw wakicht’atäkiti.",
   "chatbotOfflineDownloadLabel": "Offline Fallback ukar ch’amanchaña",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "ukax mä juk’a pachanakanwa.\nUkax mä juk’a pachanakanwa",
+  "resumeDownload": "ukax mä juk’a pachanakanwa.\nResumo Descarga ukax mä juk’a pachanakanwa",
+  "deleteDownloadedFiles": "Uñstayata Archivonaka chhaqtayaña",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "ukax mä juk’a pachanakanwa.\nUñstayañax cancelatawa {reciter} ukataki.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "ukax mä juk’a pachanakanwa.\n{reciter} ukatakix apkatañ tukuyata.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -458,8 +458,8 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API ukax janiw wakicht’atäkiti. Ukhamaraki, Local AI ukar mayjt’ayaña.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verificado local islámico guia ukax janiw jichhakamax utjkiti. Cloud AI ukaruw mayjt’ayañama, ukax fuente ukan jaysäwinakapawa.",
+  "chatbotCloudNotConfigured": "ukax mä juk’a pachanakanwa.\nCloud API ukax janiw wakicht’atäkiti. Ukhamaraki, Local AI ukar mayjt’ayaña.",
+  "chatbotLocalNoInfo": "ukax mä juk’a pachanakanwa.\n[OFFLINE] Verificado local islámico guia ukax janiw jichhakamax utjkiti. Cloud AI ukaruw mayjt’ayañama, ukax fuente ukan jaysäwinakapawa.",
   "mosques": "Mezquitas ukanaka",
   "halalFood": "Halal Manq’añanaka",
   "placesSearchArea": "Aka chiqanx thaqhapxam",
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal ukat juk’ampinaka",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah ukat juk’ampinaka",
   "specialDayDateIslamicNewYear": "1 Muharram ukat juk’ampinaka",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal sat chachan sarnaqäwipa"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal sat chachan sarnaqäwipa",
+  "refreshAction": "ukax mä juk’a pachanakanwa.\nRefresco luraña",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoading": "ukax mä juk’a pachanakanwa.\nUkax tafsir...",
+  "tafsirSourceLabel": "ukax mä juk’a pachanakanwa.\nTafsir ukax mä jamuqawa",
+  "tafsirNoSurahFound": "ukax mä juk’a pachanakanwa.\nAka surah ukatakix janiw tafsir jikxataskiti.",
+  "tafsirNoAyahFound": "ukax mä juk’a pachanakanwa.\nJaniw tafsir ukax ayah {ayah} ukatakix jikxataskiti.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "ukax mä juk’a pachanakanwa.\nTafsir ukax janiw cargañjamäkänti.",
+  "tafsirNoTextForAyah": "ukax mä juk’a pachanakanwa.\nJaniw tafsir qillqatax aka ayah ukatakix utjkiti.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "ukax mä juk’a pachanakanwa.\nTafsir phuqhawix HTTP {statusCode} pantjasiw kutt’ayawayi.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "ukax mä juk’a pachanakanwa.\nAjllit tafsir phunchhawix janiw kuna qillqt’atanakas kutt’ayawaykiti.",
+  "premiumProductUnavailable": "ukax mä juk’a pachanakanwa.\nPremium ukax janiw jichhax utjkiti. Mä juk’a pachatxa mayampi yant’apxañani.",
+  "premiumPurchaseFailed": "ukax mä juk’a pachanakanwa.\nAlañax janiw tukuyañjamäkänti. Ukhamaraki, mayampi yant’apxañani.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "splashTagline": "ukax mä juk’a pachanakanwa.\nIslámica Way of Light ukax mä jach’a thakhiwa",
+  "downloadPartiallyFinishedForReciter": "ukax mä juk’a pachanakanwa.\n{reciter} ukatakix {failed} jan walt’ayat surahs ukanakamp apkatañax tukuyatawa ({downloaded}/{total} apkatatawa).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "placesLocationRequiredTitle": "ukax mä juk’a pachanakanwa.\nKawkhantix utjki ukax wakisiwa",
+  "placesLocationRequiredBody": "ukax mä juk’a pachanakanwa.\nNayraqatax mä chiqawj utt’ayañama ukhamat jak’ankir mezquitas, halal manq’añanaka, ukat islámica yatiqañ utanakax chiqaparu thaqhatäñapataki.",
+  "placesMapTilesUnavailableTitle": "ukax mä juk’a pachanakanwa.\nMapa tejas ukax janiw utjkiti",
+  "placesMapTilesUnavailableBody": "ukax mä juk’a pachanakanwa.\nMä chiqanchata mapa azulejo phuqhawix janiw aka lurañatakix wakicht’atäkiti. Jak’a chiqanakax waliw qhispiyat chiqat apkatasispa.",
+  "prayerRemainingUnavailable": "-- ."
 }

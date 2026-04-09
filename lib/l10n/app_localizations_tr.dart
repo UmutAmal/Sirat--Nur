@@ -12,6 +12,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
+  String get splashTagline => 'İslami Işık Yolu';
+
+  @override
   String get home => 'Ana Sayfa';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get retry => 'Tekrar Dene';
 
   @override
+  String get refreshAction => 'Yenile';
+
+  @override
   String get cancel => 'İptal';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsTr extends AppLocalizations {
   String get surah => 'Sure';
 
   @override
+  String ayahLabel(String ayah) {
+    return '$ayah. Ayet';
+  }
+
+  @override
   String get juz => 'Cüz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get tafsir => 'Tefsir';
+
+  @override
+  String get tafsirLoading => 'Tefsir yükleniyor...';
+
+  @override
+  String get tafsirSourceLabel => 'Tefsir kaynağı';
+
+  @override
+  String get tafsirNoSurahFound => 'Bu sure için tefsir bulunamadı.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return '$ayah. ayet için tefsir bulunamadı.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tefsir yüklenemedi.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Bu ayet için tefsir metni bulunamadı.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Tefsir indiriliyor $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Tefsir yükleniyor $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tefsir kaynağı HTTP $statusCode hatası döndürdü.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Seçilen tefsir kaynağı hiç kayıt döndürmedi.';
 
   @override
   String get bookmarks => 'Yer İşaretleri';
@@ -300,6 +350,19 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get prayers => 'Namazlar';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}s ${minutes}d';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}d';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Zikir Sayısı';
@@ -953,6 +1016,14 @@ class AppLocalizationsTr extends AppLocalizations {
       'Ruhsal yolculuğunuz için tüm özellikleri açın';
 
   @override
+  String get premiumProductUnavailable =>
+      'Premium ürün şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Satın alma tamamlanamadı. Lütfen tekrar deneyin.';
+
+  @override
   String get paywallFeature1Title => 'Nöral Asistan Plus';
 
   @override
@@ -1122,6 +1193,16 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciter için indirme tamamlandı ancak $failed sure indirilemedi ($total sureden $downloaded indirildi).';
+  }
+
+  @override
   String deletedOfflineFilesForReciter(String reciter) {
     return '$reciter için çevrimdışı dosyalar silindi.';
   }
@@ -1238,6 +1319,21 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Ağ hatası. Lütfen tekrar deneyin.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Konum gerekli';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Yakındaki cami, helal gıda ve İslami eğitim noktalarını doğru arayabilmek için önce bir konum ayarlayın.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Harita katmanları kullanılamıyor';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Bu sürüm için doğrulanmış bir harita katman kaynağı henüz yapılandırılmadı. Yakındaki mekanlar yine de kayıtlı konumunuzdan yüklenebilir.';
 
   @override
   String get unknownPlaceName => 'Bilinmeyen Ad';

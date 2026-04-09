@@ -12,6 +12,9 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get appTitle => 'Sirat-i Nur';
 
   @override
+  String get splashTagline => 'Islamic Txoj Kev ntawm Lub Teeb';
+
+  @override
   String get home => 'Tsev';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get retry => 'Rov sim dua';
 
   @override
+  String get refreshAction => 'Hloov tshiab';
+
+  @override
   String get cancel => 'Tso tseg';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Loading tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir qhov chaw';
+
+  @override
+  String get tafsirNoSurahFound => 'Tsis muaj tafsir pom rau no surah.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Tsis pom tafsir rau ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir tsis tuaj yeem thauj khoom.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Tsis muaj tafsir ntawv rau no ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir qhov chaw xa rov qab HTTP $statusCode yuam kev.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Cov xaiv tafsir qhov chaw xa rov qab tsis muaj kev nkag.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String get prayers => 'Kev thov Vajtswv';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr suav';
@@ -822,7 +885,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Huab rooj ploj hauv Supabase; bundled fallback active';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -831,7 +894,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Huab juz metadata ploj lawm; bundled structural fallback active';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -953,6 +1016,14 @@ class AppLocalizationsHmn extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Xauv tag nrho cov yam ntxwv rau koj txoj kev mus rau sab ntsuj plig';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Cov khoom hwm zoo tsis muaj tam sim no. Thov rov sim dua tom qab.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Kev yuav khoom tsis tuaj yeem ua tiav. Thov rov sim dua.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1103,25 +1174,35 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Download tau';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Rov qab Download';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Rho tawm cov ntaub ntawv Downloaded';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Download tau muab tso tseg rau $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Download tau tiav rau $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Download tiav rau $reciter nrog $failed ua tsis tiav surahs ($downloaded/$total rub tawm).';
   }
 
   @override
@@ -1241,6 +1322,20 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Network yuam kev. Thov rov sim dua.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Qhov chaw xav tau';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Teem ib qhov chaw ua ntej kom cov mosques nyob ze, cov zaub mov halal, thiab cov tsev kawm Islamic tuaj yeem tshawb xyuas kom raug.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Daim ntawv qhia vuas tsis muaj';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Ib daim ntawv qhia cov pobzeb cov ntaub ntawv pov thawj tseem tsis tau teeb tsa rau qhov kev tsim no. Cov chaw nyob ze tseem tuaj yeem thauj khoom los ntawm koj qhov chaw khaws cia.';
 
   @override
   String get unknownPlaceName => 'Tsis paub lub npe';

@@ -12,6 +12,9 @@ class AppLocalizationsBe extends AppLocalizations {
   String get appTitle => 'Шлях Алаха';
 
   @override
+  String get splashTagline => 'Ісламскі шлях святла';
+
+  @override
   String get home => 'дадому';
 
   @override
@@ -152,6 +155,9 @@ class AppLocalizationsBe extends AppLocalizations {
   String get retry => 'Паўтарыць';
 
   @override
+  String get refreshAction => 'Абнавіць';
+
+  @override
   String get cancel => 'Адмяніць';
 
   @override
@@ -179,6 +185,11 @@ class AppLocalizationsBe extends AppLocalizations {
   String get surah => 'Сура';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Айя $ayah';
+  }
+
+  @override
   String get juz => 'жуз';
 
   @override
@@ -195,6 +206,45 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get tafsir => 'Тафсір';
+
+  @override
+  String get tafsirLoading => 'Загрузка тафсіра...';
+
+  @override
+  String get tafsirSourceLabel => 'Крыніца тафсір';
+
+  @override
+  String get tafsirNoSurahFound => 'Для гэтай суры тафсір не знойдзены.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Не знойдзены тафсір для аята $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Не ўдалося загрузіць Tafsir.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Няма тэксту тафсіра для гэтага аята.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Спампоўка тафсіра $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Загрузка тафсіра $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Крыніца Tafsir вярнула памылку HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Выбраная крыніца тафсіра не дала запісаў.';
 
   @override
   String get bookmarks => 'Закладкі';
@@ -302,6 +352,19 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get prayers => 'Малітвы';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hoursг $minutesхв';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '$minutesм';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Граф Зікр';
@@ -638,7 +701,7 @@ class AppLocalizationsBe extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Менеджэр пазасеткавых загрузак';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -823,7 +886,7 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Воблачныя табліцы адсутнічаюць у Supabase; у камплекце рэзервовы актыўны';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -832,7 +895,7 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Адсутнічаюць метаданыя Cloud Juz; у камплекце структурны запасны актыўны';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -953,6 +1016,14 @@ class AppLocalizationsBe extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Разблакіруйце ўсе функцыі для вашага духоўнага падарожжа';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Прэміяльны прадукт зараз недаступны. Паўтарыце спробу пазней.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Купля не можа быць завершана. Калі ласка, паспрабуйце яшчэ раз.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1103,25 +1174,35 @@ class AppLocalizationsBe extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Спампаваць';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Аднавіць загрузку';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Выдаліць спампаваныя файлы';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Спампоўка для $reciter скасавана.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Спампоўка для $reciter завершана.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Спампоўка завершана для $reciter з $failed няўдалымі сурамі ($downloaded/$total спампавана).';
   }
 
   @override
@@ -1242,6 +1323,20 @@ class AppLocalizationsBe extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Памылка сеткі. Калі ласка, паспрабуйце яшчэ раз.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Патрабуецца месцазнаходжанне';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Спачатку ўсталюйце месцазнаходжанне, каб можна было дакладна шукаць бліжэйшыя мячэці, халяльную ежу і ісламскія школы.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Пліткі карты недаступныя';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Правераная крыніца пліткі карты яшчэ не настроена для гэтай зборкі. Месцы паблізу могуць загружацца з вашага захаванага месцазнаходжання.';
 
   @override
   String get unknownPlaceName => 'Невядомае імя';

@@ -12,6 +12,9 @@ class AppLocalizationsEu extends AppLocalizations {
   String get appTitle => 'Ala Bidea';
 
   @override
+  String get splashTagline => 'Argiaren Bide Islamikoa';
+
+  @override
   String get home => 'Hasiera';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsEu extends AppLocalizations {
   String get retry => 'Saiatu berriro';
 
   @override
+  String get refreshAction => 'Freskatu';
+
+  @override
   String get cancel => 'Utzi';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsEu extends AppLocalizations {
   String get surah => 'Sura';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Aiah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'tafsir kargatzen...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir iturria';
+
+  @override
+  String get tafsirNoSurahFound => 'Ez da tafsir aurkitu sura honetarako.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Ez da tafsir aurkitu ayah ${ayah}rentzat.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir ezin izan da kargatu.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Ez dago tafsir testurik aiah honetarako.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'tafsir deskargatzen $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Tafsir $current/$total kargatzen';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir iturburuak HTTP $statusCode errore bat itzuli du.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Hautatutako tafsir iturburuak ez du sarrerarik itzuli.';
 
   @override
   String get bookmarks => 'Laster-markak';
@@ -300,6 +350,19 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get prayers => 'Otoitzak';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Kondea';
@@ -634,7 +697,7 @@ class AppLocalizationsEu extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Lineaz kanpoko deskarga kudeatzailea';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -819,7 +882,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabasen hodei-taulak falta dira; sorta-erresistentzia aktiboa';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadatuak falta dira; Egiturazko Fallback multzoa aktiboa';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsEu extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Desblokeatu eginbide guztiak zure bidaia espiritualerako';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premium produktua ez dago eskuragarri une honetan. Saiatu berriro geroago.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Ezin izan da erosketa burutu. Mesedez, saiatu berriro.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1099,25 +1170,35 @@ class AppLocalizationsEu extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Deskargatu';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Berekin deskargatu';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Ezabatu deskargatutako fitxategiak';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Deskarga bertan behera utzi da $reciter-rako.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Deskarga amaitu da $reciter-rako.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Deskarga amaitu da $reciter $failed huts egin duten surahekin ($downloaded/$total deskargatu da).';
   }
 
   @override
@@ -1237,6 +1318,21 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Sareko errorea. Mesedez, saiatu berriro.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Kokapena beharrezkoa';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Ezarri kokapen bat lehenik, inguruko meskitak, janari halal eta eskola islamiarrak zehatz-mehatz bilatu ahal izateko.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Maparen lauzak ez daude erabilgarri';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Egiaztatutako mapa-lauza-iturburua ez dago konfiguratuta oraindik konfigurazio honetarako. Inguruko tokiek gordetako kokapenetik karga daitezke oraindik.';
 
   @override
   String get unknownPlaceName => 'Izen ezezaguna';

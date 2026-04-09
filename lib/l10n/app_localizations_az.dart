@@ -12,6 +12,9 @@ class AppLocalizationsAz extends AppLocalizations {
   String get appTitle => 'Allahın yolu';
 
   @override
+  String get splashTagline => 'İslam İşıq Yolu';
+
+  @override
   String get home => 'Ev';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsAz extends AppLocalizations {
   String get retry => 'Yenidən cəhd edin';
 
   @override
+  String get refreshAction => 'Yeniləyin';
+
+  @override
   String get cancel => 'Ləğv et';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsAz extends AppLocalizations {
   String get surah => 'surə';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get tafsir => 'Təfsir';
+
+  @override
+  String get tafsirLoading => 'Təfsir yüklənir...';
+
+  @override
+  String get tafsirSourceLabel => 'Təfsir mənbəyi';
+
+  @override
+  String get tafsirNoSurahFound => 'Bu surə üçün heç bir təfsir tapılmadı.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return '$ayah ayəsi üçün heç bir təfsir tapılmadı.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Təfsiri yükləmək mümkün olmadı.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Bu ayə üçün təfsir mətni yoxdur.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return '$current/$total təfsiri endirilir';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Təfsir yüklənir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Təfsir mənbəyi HTTP $statusCode xətası qaytardı.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Seçilmiş təfsir mənbəyi heç bir qeydi qaytarmadı.';
 
   @override
   String get bookmarks => 'Əlfəcinlər';
@@ -300,6 +350,19 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get prayers => 'Dualar';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}saat ${minutes}dəq';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Zikr sayı';
@@ -819,7 +882,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase-də bulud cədvəlləri yoxdur; yığılmış geri qaytarma aktivdir';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata yoxdur; yığılmış struktur geriləmə aktivdir';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -949,6 +1012,14 @@ class AppLocalizationsAz extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Ruhani səyahətiniz üçün bütün xüsusiyyətləri açın';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premium məhsul hazırda mövcud deyil. Daha sonra yenidən cəhd edin.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Satınalma tamamlanmadı. Yenidən cəhd edin.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1097,25 +1168,35 @@ class AppLocalizationsAz extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Yüklə';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Yükləməni davam etdirin';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Yüklənmiş faylları silin';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter üçün endirmə ləğv edildi.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter üçün endirmə tamamlandı.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$failed uğursuz surələrlə $reciter üçün endirmə tamamlandı ($downloaded/$total endirildi).';
   }
 
   @override
@@ -1235,6 +1316,20 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Şəbəkə xətası. Yenidən cəhd edin.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Məkan tələb olunur';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Əvvəlcə yer təyin edin ki, yaxınlıqdakı məscidlər, halal yeməklər və İslam məktəbləri dəqiq axtarılsın.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Xəritə plitələri əlçatan deyil';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Doğrulanmış xəritə mənbəsi hələ bu quruluş üçün konfiqurasiya edilməyib. Yaxınlıqdakı yerlər hələ də saxladığınız yerdən yükləyə bilər.';
 
   @override
   String get unknownPlaceName => 'Naməlum Ad';

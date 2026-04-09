@@ -3724,3 +3724,72 @@
 ### Sonraki Adım
 - Sıradaki tarama turunda `main.dart` içindeki user-facing olmayan ama dağınık bootstrap log kopyası ve `offline_downloads_page.dart` hata yüzeyi yeniden değerlendirilecek.
 - Ardından library/settings/chatbot tarafında kalan residual hardcoded metinler için yeni evidence scan açılacak.
+## 2026-04-09 TUR-95 — Close 9 High-Risk Localization and Honesty Gaps
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/offline_audio_service.dart) içine `OfflineDownloadBatchResult` eklendi; toplu indirme artık toplam, başarılı, başarısız ve iptal durumunu aggregate olarak döndürüyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\downloads\offline_downloads_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/downloads/offline_downloads_page.dart) completion snackbar akışı honest-state’e taşındı; tam başarı, kısmi başarı ve iptal ayrı mesaj üretiyor.
+- Download/diagnostics/chatbot kümelerindeki yeni ve eksik anahtarlar tüm `app_*.arb` setine yayıldı; safe priority locale kalıntıları noktasal düzeltildi ve broad guard [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) ile genişletildi.
+- [A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/quran/tafsir_page.dart) TR/EN gömülü kopyadan çıkarıldı; tüm error/loading/empty-state yüzeyi l10n zincirine bağlandı.
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/tafsir_local_service.dart) English progress/error string üretmek yerine kodlu `TafsirException` dönmeye başladı; kullanıcıya görünen metin artık sayfada localize ediliyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/places/places_map_page.dart) kamusal OSM tile URL’inden çıkarıldı; tile kaynağı [A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/network/supabase_config.dart) üstünden çözülüyor ve yoksa map honest unavailable-state gösteriyor.
+- Aynı Places turunda sessiz İstanbul fallback kaldırıldı; gerçek kullanıcı konumu yoksa fetch başlatılmıyor ve dürüst konum gerekli ekranı gösteriliyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/premium/premium_provider.dart) store hata metinlerini kodlu hata sözleşmesine taşıdı; [A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/premium/paywall_page.dart) bu kodları localize ediyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/home/home_page.dart) kalan vakit formatını locale-aware helper ile `2h 5m` hardcoded biçiminden çıkardı.
+- [A:\Way of Allah\sirat_i_nur\lib\main.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/main.dart) splash ekranına gerçek localization delegelerini bağladı ve `splashTagline` hardcoded İngilizce metnini kaldırdı.
+- Yeni/ genişletilmiş regression testleri eklendi: [A:\Way of Allah\sirat_i_nur\test\features\downloads\offline_downloads_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/downloads/offline_downloads_test.dart), [A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/quran/tafsir_page_test.dart), [A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/places/places_map_page_test.dart), [A:\Way of Allah\sirat_i_nur\test\features\premium\paywall_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/premium/paywall_page_test.dart), [A:\Way of Allah\sirat_i_nur\test\features\common\splash_screen_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/common/splash_screen_test.dart), [A:\Way of Allah\sirat_i_nur\test\features\home\home_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/home/home_page_test.dart).
+
+### Neden Yapıldı
+- Offline indirme zinciri başarısız sureleri loglayıp kullanıcıya yine tam başarı snackbar’ı gösteriyordu; bu doğrudan false-success üretiyordu.
+- Tafsir, premium, splash, remaining-prayer ve places yüzeylerinde ya hardcoded İngilizce copy ya da localization dışı hata akışı vardı.
+- Harita akışındaki kamusal OSM tile bağı ve sessiz İstanbul fallback’i hem prod sürekliliği hem de yanlış ibadet/yer bağlamı riski taşıyordu.
+- Download/diagnostics/chatbot kümelerinde yüzlerce locale’de EN artıklar kaldığı için “her dil eşit kapsamda” kuralı ihlal ediliyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\downloads\offline_downloads_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\main.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\downloads\offline_downloads_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\home\home_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\premium\paywall_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\common\splash_screen_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kullanıcı artık başarısız kısmi indirmeyi tam başarı gibi görmüyor.
+- Tafsir, premium, splash, download, diagnostics, chatbot, prayer remaining ve places yüzeyleri localization zincirine daha tutarlı bağlandı.
+- Places ekranı yanlış şehir verisi göstermeyi bıraktı ve tile sağlayıcısı config yoksa dürüst unavailable-state’e geçti.
+- Priority locale setinde bu turdaki 9 risk kümesine bağlı İngilizce artıkları kapandı; broad guard testleriyle geri sızma engellendi.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/features/downloads/offline_downloads_test.dart test/features/home/home_page_test.dart test/features/premium/paywall_page_test.dart test/features/common/splash_screen_test.dart test/features/quran/tafsir_page_test.dart test/features/places/places_map_page_test.dart test/arb_ui_localization_test.dart` → PASS
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`226/226`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Offline downloads false-success completion flow: `16/25 → 3/25`
+- Download/diagnostics/chatbot residual EN cluster: `20/25 → 6/25`
+- TafsirPage embedded TR/EN user copy: `16/25 → 3/25`
+- Public OSM tile dependency: `16/25 → 4/25`
+- Silent Istanbul fallback in Places: `12/25 → 3/25`
+- Premium product unavailable hardcoded English: `12/25 → 3/25`
+- Chatbot offline verified-content English residue cluster: `12/25 → 5/25`
+- Home remaining-prayer non-localized duration: `10/25 → 2/25`
+- Splash hardcoded English tagline: `10/25 → 2/25`
+
+### Sonraki Adım
+- Yeni turda rare locale kalıntıları için evidence scan açılacak; özellikle download/diagnostics/chatbot kümelerinde safe sibling-fallback uygulanabilen locale’ler ile EN-reference’da dürüst bırakılması gerekenler ayrıştırılacak.
+- Ardından user-facing kalan en yüksek residual hardcoded metin veya false-success zinciri seçilip ayrı minimal patch döngüsüne alınacak.

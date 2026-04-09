@@ -12,6 +12,9 @@ class AppLocalizationsEl extends AppLocalizations {
   String get appTitle => 'Ο δρόμος του Αλλάχ';
 
   @override
+  String get splashTagline => 'Ισλαμικός Δρόμος του Φωτός';
+
+  @override
   String get home => 'Σπίτι';
 
   @override
@@ -151,6 +154,9 @@ class AppLocalizationsEl extends AppLocalizations {
   String get retry => 'Δοκιμάζω πάλι';
 
   @override
+  String get refreshAction => 'Ανανέωση';
+
+  @override
   String get cancel => 'Ματαίωση';
 
   @override
@@ -178,6 +184,11 @@ class AppLocalizationsEl extends AppLocalizations {
   String get surah => 'Σούρα';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -194,6 +205,46 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Φόρτωση tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Πηγή Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Δεν βρέθηκε tafsir για αυτήν τη σούρα.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Δεν βρέθηκε tafsir για το ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Δεν ήταν δυνατή η φόρτωση του Tafsir.';
+
+  @override
+  String get tafsirNoTextForAyah =>
+      'Δεν υπάρχει κείμενο tafsir για αυτό το ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Λήψη tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Φόρτωση tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Η πηγή Tafsir επέστρεψε ένα σφάλμα HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Η επιλεγμένη πηγή tafsir δεν επέστρεψε καταχωρήσεις.';
 
   @override
   String get bookmarks => 'Σελιδοδείκτες';
@@ -301,6 +352,19 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get prayers => 'Προσευχές';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h $minutesλ';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Ντικρ Κόμη';
@@ -638,7 +702,7 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Διαχειριστής λήψεων εκτός σύνδεσης';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -823,7 +887,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Λείπουν πίνακες σύννεφων στο Supabase. ομαδοποιημένη εναλλακτική ενεργή';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -832,7 +896,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Λείπουν μεταδεδομένα Cloud juz. ομαδοποιημένη δομική εναλλακτική ενεργή';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -954,6 +1018,14 @@ class AppLocalizationsEl extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Ξεκλειδώστε όλες τις δυνατότητες για το πνευματικό σας ταξίδι';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Το premium προϊόν δεν είναι διαθέσιμο αυτήν τη στιγμή. Δοκιμάστε ξανά αργότερα.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Δεν ήταν δυνατή η ολοκλήρωση της αγοράς. Δοκιμάστε ξανά.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1105,25 +1177,35 @@ class AppLocalizationsEl extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Λήψη';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Λήψη βιογραφικού';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Διαγραφή ληφθέντων αρχείων';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Η λήψη ακυρώθηκε για $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Η λήψη ολοκληρώθηκε για $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Η λήψη ολοκληρώθηκε για $reciter με $failed αποτυχημένες σούρες ($downloaded/$total κατέβηκε).';
   }
 
   @override
@@ -1244,6 +1326,21 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Σφάλμα δικτύου. Δοκιμάστε ξανά.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Απαιτείται τοποθεσία';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Ορίστε πρώτα μια τοποθεσία, ώστε τα κοντινά τζαμιά, το φαγητό χαλάλ και τα ισλαμικά σχολεία να μπορούν να αναζητηθούν με ακρίβεια.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Τα πλακίδια χάρτη δεν είναι διαθέσιμα';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Μια επαληθευμένη πηγή πλακιδίων χάρτη δεν έχει διαμορφωθεί ακόμα για αυτήν την έκδοση. Τα κοντινά μέρη μπορούν ακόμα να φορτώσουν από την αποθηκευμένη τοποθεσία σας.';
 
   @override
   String get unknownPlaceName => 'Άγνωστο Όνομα';

@@ -12,6 +12,9 @@ class AppLocalizationsSt extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Tsela ea Boislamo ea Leseli';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsSt extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Hlasimolla';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsSt extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,47 @@ class AppLocalizationsSt extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'E kenya tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Mohloli oa Tafsir';
+
+  @override
+  String get tafsirNoSurahFound =>
+      'Ha ho tafsir e fumanoeng bakeng sa surah ena.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Ha ho tafsir e fumanoeng ea ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir ha e khone ho kengoa.';
+
+  @override
+  String get tafsirNoTextForAyah =>
+      'Ha ho mongolo oa tafsir bakeng sa ayah ena.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'E khoasolla tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'E kenya tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Mohloli oa Tafsir o khutlisitse phoso ea HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Mohloli o khethiloeng oa tafsir ha oa khutlisa mangolo.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +352,19 @@ class AppLocalizationsSt extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -820,7 +885,7 @@ class AppLocalizationsSt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Litafole tsa maru tse sieo Supabase; bundled fallback e sebetsa';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +894,7 @@ class AppLocalizationsSt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata ha e eo; bundled structural fallback e sebetsang';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -951,6 +1016,14 @@ class AppLocalizationsSt extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Notlolla likarolo tsohle tsa leeto la hau la moea';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Sehlahisoa sa Premium ha se fumanehe hona joale. Ka kopo, leka hape hamorao.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Theko ha e ea phethoa. Ka kopo, leka hape.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1099,25 +1172,35 @@ class AppLocalizationsSt extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Khoasolla';
 
   @override
   String get resumeDownload => 'Resume Download';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Hlakola Lifaele tse Jarollotsoeng';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Khoasolla e hlakotsoe bakeng sa $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Ho phethela ho khoasolla $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'E felile bakeng sa $reciter ka $failed li-surah tse hlōlehileng ($downloaded/$total li jarollotsoe).';
   }
 
   @override
@@ -1203,7 +1286,7 @@ class AppLocalizationsSt extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Litaelo tse netefalitsoeng tsa Maislamo tsa lehae ha li so fumanehe. Fetohela ho Cloud AI ho fumana likarabo tse tsoang mohloling.';
+      '[OFFLINE] Litaelo tse netefalitsoeng tsa Maislamo tsa lehae ha li so fumanehe. Fetohela ho Cloud AI bakeng sa likarabo tse tsoang mohloling.';
 
   @override
   String get mosques => 'Mamosleme';
@@ -1237,6 +1320,21 @@ class AppLocalizationsSt extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Phoso ea marang-rang. Ka kopo, leka hape.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Ho hlokahala sebaka';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Beha sebaka pele e le hore li-mosque tse haufi, lijo tsa halal le likolo tsa Mamoseleme li ka batlisisoa ka nepo.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Lithaele tsa \'mapa ha li fumanehe';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Mohloli o netefalitsoeng oa lithaele ha o so lokisoe molemong oa moaho ona hajoale. Libaka tse haufi li ntse li ka bula ho tsoa sebakeng sa hau se bolokiloeng.';
 
   @override
   String get unknownPlaceName => 'Lebitso le sa Tsejweng';

@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "බාගත කළමණාකරු",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "නොබැඳි බාගැනීම් කළමනාකරු",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Supabase හි වලාකුළු වගු අතුරුදහන්; බණ්ඩල්ඩ් ෆෝල්බැක් ක්‍රියාකාරී",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz පාරදත්ත අතුරුදහන්; බණ්ඩල්ඩ් ව්‍යුහාත්මක පසුබැසීම සක්‍රීයයි",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "බාගන්න",
+  "resumeDownload": "බාගත කිරීම නැවත ආරම්භ කරන්න",
+  "deleteDownloadedFiles": "බාගත කළ ගොනු මකන්න",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} සඳහා බාගැනීම අවලංගු විය.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter} සඳහා බාගැනීම සම්පූර්ණයි.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 ෂව්වාල්",
   "specialDayDateEidAlAdha": "10 දුල් හිජ්ජා",
   "specialDayDateIslamicNewYear": "1 මුහර්රම්",
-  "specialDayDateMawlidAnNabi": "12 රබී අල්-අව්වල්"
+  "specialDayDateMawlidAnNabi": "12 රබී අල්-අව්වල්",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "නැවුම් කරන්න",
+  "ayahLabel": "අය්යා {ayah}",
+  "tafsirLoading": "tafsir පූරණය වෙමින්...",
+  "tafsirSourceLabel": "තෆ්සීර් මූලාශ්රය",
+  "tafsirNoSurahFound": "මෙම සූරතය සඳහා තෆ්සීර් හමු නොවීය.",
+  "tafsirNoAyahFound": "{ayah} සඳහා තෆ්සීර් හමු නොවීය.",
+  "tafsirLoadFailed": "තෆ්සීර් පූරණය කළ නොහැකි විය.",
+  "tafsirNoTextForAyah": "මෙම අයා සඳහා තෆ්සීර් පාඨ නැත.",
+  "tafsirDownloadingProgress": "tafsir බාගත කරමින් {current}/{total}",
+  "tafsirLoadingProgress": "tafsir පූරණය වෙමින් {current}/{total}",
+  "tafsirApiStatusError": "Tafsir මූලාශ්‍රය HTTP {statusCode} දෝෂයක් ලබා දුන්නේය.",
+  "tafsirNoEntriesReturned": "තෝරාගත් tafsir මූලාශ්‍රය කිසිදු ප්‍රවේශයක් ලබා දුන්නේ නැත.",
+  "premiumProductUnavailable": "වාරික නිෂ්පාදනය දැන් ලබා ගත නොහැක. කරුණාකර පසුව නැවත උත්සාහ කරන්න.",
+  "premiumPurchaseFailed": "මිලදී ගැනීම සම්පූර්ණ කළ නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "ඉස්ලාමීය ආලෝකයේ මාර්ගය",
+  "downloadPartiallyFinishedForReciter": "{reciter} සඳහා {failed} අසාර්ථක සූරත් සමඟ බාගැනීම අවසන් විය ({downloaded}/{total} බාගත කර ඇත).",
+  "placesLocationRequiredTitle": "ස්ථානය අවශ්‍යයි",
+  "placesLocationRequiredBody": "අවට ඇති මුස්ලිම් පල්ලි, හලාල් ආහාර සහ ඉස්ලාමීය පාසල් නිවැරදිව සෙවිය හැකි වන පරිදි පළමුව ස්ථානයක් සකසන්න.",
+  "placesMapTilesUnavailableTitle": "සිතියම් ටයිල් නොමැත",
+  "placesMapTilesUnavailableBody": "මෙම ගොඩනැගීම සඳහා සත්‍යාපිත සිතියම් ටයිල් මූලාශ්‍රයක් තවම වින්‍යාස කර නොමැත. අවට ස්ථාන තවමත් ඔබගේ සුරැකි ස්ථානයෙන් පූරණය කළ හැක.",
+  "prayerRemainingUnavailable": "--"
 }

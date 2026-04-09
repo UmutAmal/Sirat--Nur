@@ -12,6 +12,9 @@ class AppLocalizationsMt extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Mod Iżlamiku tad-Dawl';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -151,6 +154,9 @@ class AppLocalizationsMt extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Aġġorna';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -178,6 +184,11 @@ class AppLocalizationsMt extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -194,6 +205,45 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Tagħbija tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'sors Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'L-ebda tafsir ma nstab għal din is-surah.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'L-ebda tafsir ma nstab għal ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir ma setax jitgħabba.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Nru tafsir test għal dan ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Niżżel tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Tagħbija tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Is-sors Tafsir irritorna żball HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Is-sors ta\' tafsir magħżul ma rritorna l-ebda dħul.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -301,6 +351,19 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -445,7 +508,7 @@ class AppLocalizationsMt extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Niżżel il-Maniġer';
 
   @override
   String get downloads => 'Downloads';
@@ -822,7 +885,7 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Cloud tables nieqsa f\'Supabase; bundled fallback attiv';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -831,7 +894,7 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Metadata tal-juz tal-cloud nieqsa; bundled riżerva strutturali attiva';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -953,6 +1016,14 @@ class AppLocalizationsMt extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Nisfruttaw il-karatteristiċi kollha għall-vjaġġ spiritwali tiegħek';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Prodott premium mhuwiex disponibbli bħalissa. Jekk jogħġbok erġa\' pprova aktar tard.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Ix-xiri ma setax jitlesta. Jekk jogħġbok erġa\' pprova.';
 
   @override
   String get paywallFeature1Title => 'Assistent newrali Plus';
@@ -1101,25 +1172,35 @@ class AppLocalizationsMt extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Niżżel';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Kompli Niżżel';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Ħassar Fajls Mniżżla';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Niżżel ikkanċellat għal $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Niżżel tlesta għal $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'It-tniżżil lest għal $reciter bi $failed surahs falluti ($downloaded/$total imniżżla).';
   }
 
   @override
@@ -1240,6 +1321,21 @@ class AppLocalizationsMt extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Żball tan-netwerk. Jekk jogħġbok erġa\' pprova.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Post meħtieġ';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Issettja post l-ewwel sabiex moskej fil-qrib, ikel halal, u skejjel Iżlamiċi jkunu jistgħu jiġu mfittxija b\'mod preċiż.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Madum tal-mappa mhux disponibbli';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Sors tal-madum tal-mappa vverifikat għadu mhux ikkonfigurat għal din il-bini. Postijiet fil-qrib xorta jistgħu jgħabbu mill-lokalità salvata tiegħek.';
 
   @override
   String get unknownPlaceName => 'Isem Mhux Magħruf';

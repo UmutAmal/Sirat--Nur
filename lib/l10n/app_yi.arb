@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "דאַונלאָוד מאַנאַגער",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "אָפפלינע דאַונלאָוד מאַנאַגער",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "וואָלקן טישן פעלנדיק אין Supabase; באַנדאַלד פאַלבאַקק אַקטיוו",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "וואָלקן דזשוז מעטאַדאַטאַ פעלנדיק; באַנדאַלד סטראַקטשעראַל פאַלבאַק אַקטיוו",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "אראפקאפיע",
+  "resumeDownload": "נעמענ זיכ ווידער אראפקאפיע",
+  "deleteDownloadedFiles": "ויסמעקן דאַונלאָודיד טעקעס",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "אראפקאפיע קאַנסאַלד פֿאַר {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "די אראפקאפיע איז געענדיקט פֿאַר {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 שאָוואַל",
   "specialDayDateEidAlAdha": "10 דהל היג'א",
   "specialDayDateIslamicNewYear": "1 מוהארם",
-  "specialDayDateMawlidAnNabi": "12 רבי אל-אווואל"
+  "specialDayDateMawlidAnNabi": "12 רבי אל-אווואל",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "דערפרישן",
+  "ayahLabel": "יאָ {ayah}",
+  "tafsirLoading": "לאָודינג טאַפסיר ...",
+  "tafsirSourceLabel": "טפסיר מקור",
+  "tafsirNoSurahFound": "קיין טאַפסיר געפונען פֿאַר דעם סוראַה.",
+  "tafsirNoAyahFound": "קיין טאַפסיר געפונען פֿאַר ייַאַה {ayah}.",
+  "tafsirLoadFailed": "טאפסיר האט נישט געקאנט באלאדן.",
+  "tafsirNoTextForAyah": "קיין טאַפסיר טעקסט פֿאַר דעם ייַאַה.",
+  "tafsirDownloadingProgress": "דאַונלאָודינג טאַפסיר {current}/{total}",
+  "tafsirLoadingProgress": "לאָודינג טאַפסיר {current}/{total}",
+  "tafsirApiStatusError": "Tafsir מקור האָט אומגעקערט אַן HTTP {statusCode} טעות.",
+  "tafsirNoEntriesReturned": "דער אויסגעקליבטער טאַפסיר מקור האָט ניט אומגעקערט קיין איינסן.",
+  "premiumProductUnavailable": "פּרעמיום פּראָדוקט איז ניט בנימצא רעכט איצט. ביטע פּרובירן ווידער שפּעטער.",
+  "premiumPurchaseFailed": "קויפן קען נישט זיין געענדיקט. ביטע פּרוּווט ווידער.",
+  "prayerRemainingHoursMinutes": "{hours}ה {minutes}ם",
+  "prayerRemainingMinutes": "{minutes}מ",
+  "splashTagline": "יסלאַמיק וועג פון ליכט",
+  "downloadPartiallyFinishedForReciter": "די אראפקאפיע איז געענדיקט פֿאַר {reciter} מיט {failed} דורכפאַל סוראַהס ({downloaded}/{total} דאַונלאָודיד).",
+  "placesLocationRequiredTitle": "אָרט פארלאנגט",
+  "placesLocationRequiredBody": "שטעלן אַ אָרט ערשטער אַזוי נירביי מאָסקוועס, האַלאַל עסנוואַרג און יסלאַמיק שולן קענען זיין געזוכט אַקיעראַטלי.",
+  "placesMapTilesUnavailableTitle": "מאַפּע טיילז אַנאַוויילאַבאַל",
+  "placesMapTilesUnavailableBody": "א וועראַפייד מאַפּע קאַכל מקור איז נישט קאַנפיגיערד פֿאַר דעם בויען נאָך. נעאַרבי ערטער קענען נאָך לאָדן פֿון דיין געראטעוועט אָרט.",
+  "prayerRemainingUnavailable": "--"
 }

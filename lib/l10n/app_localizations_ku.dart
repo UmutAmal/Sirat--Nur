@@ -12,6 +12,9 @@ class AppLocalizationsKu extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Riya Îslamî ya Ronahî';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsKu extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Refresh';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsKu extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Tefsîr tê barkirin...';
+
+  @override
+  String get tafsirSourceLabel => 'Çavkaniya Tefsîr';
+
+  @override
+  String get tafsirNoSurahFound => 'Ji bo vê sûreyê tefsîr nehat dîtin.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Ji bo ayah $ayah tefsîr nehat dîtin.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tefsîr nehat barkirin.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Ji bo vê ayetê nivîsek tefsîr tune.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Tefsîr tê daxistin $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Tefsîr tê barkirin $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Çavkaniya Tefsîrê xeletiyek HTTP $statusCode vegerand.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Çavkaniya tefsîrê ya hilbijartî tu têketin venegeriya.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsKu extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Gerînendeyê Daxistinê';
 
   @override
   String get downloads => 'Downloads';
@@ -634,7 +697,7 @@ class AppLocalizationsKu extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Rêvebirê Daxistinê negirêdayî';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -819,7 +882,7 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Li Supabase tabloyên ewran winda ne; bundled fallback çalak';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata wenda ye; paşvekêşana strukturel a hevgirtî ya çalak';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -949,6 +1012,14 @@ class AppLocalizationsKu extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Ji bo rêwîtiya xweya giyanî hemî taybetmendiyan vekin';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Hilbera premium naha peyda nabe. Ji kerema xwe paşê dîsa biceribîne.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Kirîn nehat qedandin. Ji kerema xwe dîsa biceribîne.';
 
   @override
   String get paywallFeature1Title => 'Alîkarê Neural Plus';
@@ -1103,19 +1174,29 @@ class AppLocalizationsKu extends AppLocalizations {
   String get resumeDownload => 'Resume Download';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Pelên dakêşandî jêbirin';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Daxistin ji bo $reciter hat betalkirin.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Daxistin ji bo $reciter qediya.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Daxistin ji bo $reciter bi $failed sûretên têkçûyî qediya ($downloaded/$total daxistî).';
   }
 
   @override
@@ -1236,6 +1317,20 @@ class AppLocalizationsKu extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Çewtiya torê. Ji kerema xwe dîsa biceribîne.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Cihê pêwîst';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Pêşî cîhek destnîşan bikin da ku mizgeftên nêzîk, xwarina helal, û dibistanên îslamî rast werin lêgerîn.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Perçeyên nexşeyê ne berdest in';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Çavkaniyek nexşeya pejirandî ji bo vê çêkirinê hêj nehatiye mîheng kirin. Cihên nêzîk hîn jî dikarin ji cîhê weya tomarkirî bar bikin.';
 
   @override
   String get unknownPlaceName => 'Navê nenas';

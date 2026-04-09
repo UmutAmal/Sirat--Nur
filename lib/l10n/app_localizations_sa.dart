@@ -12,6 +12,9 @@ class AppLocalizationsSa extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'इति .\nइस्लामिक प्रकाश मार्ग';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsSa extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'इति .\nताजगी';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsSa extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'इति .\nलोडिंग तफसिर...';
+
+  @override
+  String get tafsirSourceLabel => 'इति .\nतफसीर स्रोतः';
+
+  @override
+  String get tafsirNoSurahFound => 'इति .\nअस्य सूरस्य कृते न तफसीरः लब्धः।';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'इति .\nअयम् $ayah कृते कोऽपि तफसीरः न प्राप्तः।';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'इति .\nतफसीरं भारं कर्तुं न शक्तवान् ।';
+
+  @override
+  String get tafsirNoTextForAyah => 'इति .\nअस्य अयस्य कृते न तफसीरग्रन्थः।';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'इति .\nतफ्सिर् स्रोतः HTTP $statusCode त्रुटिं प्रत्यागच्छत् ।';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'इति .\nचयनितः tafsir स्रोतः कोऽपि प्रविष्टिः न प्रत्यागच्छत् ।';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '-- ९.';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsSa extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'डाउनलोड प्रबन्धक';
 
   @override
   String get downloads => 'Downloads';
@@ -636,7 +699,7 @@ class AppLocalizationsSa extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'इति .\nअफलाइन डाउनलोड प्रबन्धक';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +884,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'इति .\nसुपाबेसे मेघसारणीः अनुपलब्धाः; bundled fallback सक्रियः';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +893,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'इति .\nमेघ juz मेटाडाटा अनुपलब्धः; bundled संरचनात्मक fallback सक्रिय';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -953,6 +1016,14 @@ class AppLocalizationsSa extends AppLocalizations {
       'भवतः आध्यात्मिकयात्रायाः सर्वाणि विशेषतानि अनलॉक कुर्वन्तु';
 
   @override
+  String get premiumProductUnavailable =>
+      'इति .\nप्रीमियम उत्पादः अधुना उपलब्धः नास्ति। कृपया पश्चात् पुनः प्रयासं कुर्वन्तु।';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'इति .\nक्रयणं सम्पन्नं कर्तुं न शक्यते स्म । कृपया पुनः प्रयासं कुर्वन्तु।';
+
+  @override
   String get paywallFeature1Title => 'तंत्रिका सहायक प्लस';
 
   @override
@@ -1061,11 +1132,11 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'सत्यापितं अफलाइन इस्लामिकज्ञानकोशम् अद्यापि क्यूरेटिङ्ग् क्रियते। इदानीं भवान् offline fallback सक्षमं कर्तुं शक्नोति, परन्तु स्रोतः दत्तांशसमूहः सज्जः न भवति तावत् केवलं सीमितसुरक्षितसन्देशान् एव दर्शयिष्यति ।\n\nकिं भवान् अफलाइन-फॉलबैक् सक्षमं कर्तुम् इच्छति?';
+      'इति .\nसत्यापितं अफलाइन इस्लामिकज्ञानकोशम् अद्यापि क्यूरेटिङ्ग् क्रियते। इदानीं भवान् offline fallback सक्षमं कर्तुं शक्नोति, परन्तु स्रोतः दत्तांशसमूहः सज्जः न भवति तावत् केवलं सीमितसुरक्षितसन्देशान् एव दर्शयिष्यति ।\n\nकिं भवान् अफलाइन-फॉलबैक् सक्षमं कर्तुम् इच्छति?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'अफलाइन fallback सक्षमम्। सत्यापितस्थानीय इस्लामिक उत्तराणि अद्यापि सज्जाः न सन्ति।';
+      'इति .\nअफलाइन fallback सक्षमम्। सत्यापितस्थानीय इस्लामिक उत्तराणि अद्यापि सज्जाः न सन्ति।';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Offline Fallback सक्षमं कुर्वन्तु';
@@ -1099,25 +1170,36 @@ class AppLocalizationsSa extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'इति .\nडाउनलोड करें';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'इति .\nResume Download';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles =>
+      'इति .\nडाउनलोड् कृतानि सञ्चिकाः विलोपयन्तु';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'इति .\n$reciter कृते डाउनलोड् रद्दम्।';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'इति .\n$reciter कृते डाउनलोड् सम्पन्नम्।';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'इति .\n$reciter कृते $failed विफलसूरहैः सह डाउनलोड् समाप्तम् ($downloaded/$total डाउनलोड् कृतम्)।';
   }
 
   @override
@@ -1199,11 +1281,11 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'मेघ एपिआइ विन्यस्तं नास्ति। कृपया Local AI इत्यत्र स्विच कुर्वन्तु।';
+      'इति .\nमेघ एपिआइ विन्यस्तं नास्ति। कृपया Local AI इत्यत्र स्विच कुर्वन्तु।';
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] सत्यापितं स्थानीयं इस्लामिकमार्गदर्शनं अद्यापि उपलब्धं नास्ति। स्रोत-उत्तराणां कृते Cloud AI -इत्यत्र स्विच् कुर्वन्तु ।';
+      'इति .\n[OFFLINE] सत्यापितं स्थानीयं इस्लामिकमार्गदर्शनं अद्यापि उपलब्धं नास्ति। स्रोत-उत्तराणां कृते Cloud AI -इत्यत्र स्विच् कुर्वन्तु ।';
 
   @override
   String get mosques => 'मस्जिदाः';
@@ -1237,6 +1319,20 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'संजालदोषः। कृपया पुनः प्रयासं कुर्वन्तु।';
+
+  @override
+  String get placesLocationRequiredTitle => 'इति .\nस्थानं आवश्यकम्';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'इति .\nप्रथमं स्थानं स्थापयन्तु येन समीपस्थाः मस्जिदाः, हलालभोजनं, इस्लामिकविद्यालयाः च समीचीनतया अन्वेष्टुं शक्यन्ते।';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'नक्शा टाइल्स अनुपलब्ध';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'इति .\nअस्य निर्माणस्य कृते अद्यापि सत्यापितः मानचित्रटाइलस्रोतः विन्यस्तः नास्ति । समीपस्थानि स्थानानि अद्यापि भवतः रक्षितस्थानात् लोड् कर्तुं शक्नुवन्ति ।';
 
   @override
   String get unknownPlaceName => 'अज्ञात नाम';

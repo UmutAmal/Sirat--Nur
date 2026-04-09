@@ -12,6 +12,9 @@ class AppLocalizationsMy extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'အစ္စလာမ့်အလင်းလမ်း';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -151,6 +154,9 @@ class AppLocalizationsMy extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'ပြန်လည်စတင်ပါ။';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -178,6 +184,11 @@ class AppLocalizationsMy extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -194,6 +205,45 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'တက်ဖ်ဆာကို ဖွင့်နေသည်...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir အရင်းအမြစ်';
+
+  @override
+  String get tafsirNoSurahFound => 'ဤစူရာဟ်အတွက် tafsir မတွေ့ပါ။';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'ayah $ayah အတွက် tafsir မတွေ့ပါ။';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir ကို တင်၍မရပါ။';
+
+  @override
+  String get tafsirNoTextForAyah => 'ဤအာယာအတွက် tafsir စာသားမရှိပါ။';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'tafsir $current/$total ကို ဒေါင်းလုဒ်လုပ်နေသည်';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'တက်ဖ်ဆာ $current/$total ကို ဖွင့်နေသည်';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir အရင်းအမြစ်သည် HTTP $statusCode အမှားတစ်ခုကို ပြန်ပေးခဲ့သည်။';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'ရွေးချယ်ထားသော tafsir ရင်းမြစ်သည် ထည့်သွင်းခြင်းမရှိပါ။';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -301,6 +351,19 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hoursနာရီ ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -445,7 +508,7 @@ class AppLocalizationsMy extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'ဒေါင်းလုဒ်မန်နေဂျာ';
 
   @override
   String get downloads => 'Downloads';
@@ -639,7 +702,7 @@ class AppLocalizationsMy extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'အော့ဖ်လိုင်းဒေါင်းလုဒ်မန်နေဂျာ';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -824,7 +887,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase တွင် တိမ်တိုက်ဇယားများ ပျောက်ဆုံးနေပါသည်။ အစုလိုက်အပြုံလိုက် တုံ့ပြန်မှု တက်ကြွနေသည်။';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -833,7 +896,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz မက်တာဒေတာ ပျောက်ဆုံးနေခြင်း၊ အစုအပြုံလိုက်ဖွဲ့စည်းပုံဆိုင်ရာ ဆုတ်ယုတ်မှု တက်ကြွမှု';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -956,6 +1019,14 @@ class AppLocalizationsMy extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'သင်၏ဝိညာဉ်ရေးခရီးအတွက် အင်္ဂါရပ်အားလုံးကို လော့ခ်ဖွင့်ပါ။';
+
+  @override
+  String get premiumProductUnavailable =>
+      'ပရီမီယံထုတ်ကုန်ကို ယခုမရနိုင်ပါ။ နောက်မှ ထပ်စမ်းကြည့်ပါ။';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'ဝယ်ယူမှု မပြီးမြောက်နိုင်ခဲ့ပါ။ ထပ်စမ်းကြည့်ပါ။';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1104,25 +1175,35 @@ class AppLocalizationsMy extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'ဒေါင်းလုဒ်လုပ်ပါ။';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'ဒေါင်းလုဒ်ပြန်လုပ်ပါ။';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'ဒေါင်းလုဒ်လုပ်ထားသောဖိုင်များကိုဖျက်ပါ။';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter အတွက် ဒေါင်းလုဒ်ကို ပယ်ဖျက်လိုက်ပါပြီ။';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter အတွက် ဒေါင်းလုဒ် ပြီးသွားပါပြီ။';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciter အတွက် $failed မအောင်မြင်သော စူရာဟ်များဖြင့် $reciter အတွက် ဒေါင်းလုဒ် ပြီးပါပြီ ($downloaded/$total ဒေါင်းလုဒ်လုပ်ထားသည်)။';
   }
 
   @override
@@ -1242,6 +1323,20 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'ကွန်ရက် အမှားအယွင်း ထပ်စမ်းကြည့်ပါ။';
+
+  @override
+  String get placesLocationRequiredTitle => 'တည်နေရာ လိုအပ်သည်။';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'တည်နေရာကို ဦးစွာသတ်မှတ်ထားပါက အနီးနားရှိ ဗလီများ၊ ဟလာလ်အစားအစာများနှင့် အစ္စလာမ့်ကျောင်းများကို တိကျစွာရှာဖွေနိုင်ပါသည်။';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'မြေပုံအကွက်များ မရနိုင်ပါ။';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'ဤတည်ဆောက်မှုအတွက် အတည်ပြုထားသော မြေပုံအကွက်အရင်းအမြစ်ကို မသတ်မှတ်ရသေးပါ။ အနီးတဝိုက်ရှိ နေရာများသည် သင်သိမ်းဆည်းထားသော တည်နေရာမှ စတင်နိုင်သေးသည်။';
 
   @override
   String get unknownPlaceName => 'အမည်မသိ';

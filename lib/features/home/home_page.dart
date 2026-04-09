@@ -8,6 +8,24 @@ import 'package:sirat_i_nur/features/tracker/tracker_page.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
+String formatPrayerRemainingText(AppLocalizations l10n, Duration? remaining) {
+  if (remaining == null) {
+    return l10n.prayerRemainingUnavailable;
+  }
+
+  final hours = remaining.inHours;
+  final minutes = remaining.inMinutes.remainder(60);
+
+  if (hours > 0) {
+    return l10n.prayerRemainingHoursMinutes(
+      hours.toString(),
+      minutes.toString(),
+    );
+  }
+
+  return l10n.prayerRemainingMinutes(minutes.toString());
+}
+
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
@@ -38,11 +56,16 @@ class HomePage extends ConsumerWidget {
             _buildPrayerBanner(context, prayerTimes, l10n),
             const SizedBox(height: 20),
             // Prayer times row
-            if (prayerTimes != null) _buildPrayerTimesRow(context, prayerTimes, l10n),
+            if (prayerTimes != null)
+              _buildPrayerTimesRow(context, prayerTimes, l10n),
             if (prayerTimes != null) const SizedBox(height: 20),
             // Quick Access
-            Text(l10n.quickAccess,
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900)),
+            Text(
+              l10n.quickAccess,
+              style: Theme.of(
+                context,
+              ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900),
+            ),
             const SizedBox(height: 16),
             _buildQuickAccess(context, l10n),
             const SizedBox(height: 24),
@@ -55,40 +78,80 @@ class HomePage extends ConsumerWidget {
                   children: [
                     Row(
                       children: [
-                        const Icon(Icons.auto_stories_rounded, color: AppColors.emerald, size: 20),
+                        const Icon(
+                          Icons.auto_stories_rounded,
+                          color: AppColors.emerald,
+                          size: 20,
+                        ),
                         const SizedBox(width: 8),
-                        Text(l10n.dailyVerse, style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
+                        Text(
+                          l10n.dailyVerse,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w900,
+                            color: AppColors.emerald,
+                          ),
+                        ),
                       ],
                     ),
                     const SizedBox(height: 12),
                     Text(
                       dailyAyat['content_ar'] ?? '',
-                      style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, height: 2.0, fontFamily: 'Amiri'),
+                      style: const TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w900,
+                        height: 2.0,
+                        fontFamily: 'Amiri',
+                      ),
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      isTurkish ? (dailyAyat['content_tr'] ?? '') : (dailyAyat['content_en'] ?? ''),
-                      style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, height: 1.6),
+                      isTurkish
+                          ? (dailyAyat['content_tr'] ?? '')
+                          : (dailyAyat['content_en'] ?? ''),
+                      style: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        height: 1.6,
+                      ),
                     ),
                     const SizedBox(height: 8),
-                    Text(dailyAyat['reference'] ?? '',
-                      style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700,
-                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+                    Text(
+                      dailyAyat['reference'] ?? '',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w700,
+                        color: Theme.of(
+                          context,
+                        ).colorScheme.onSurface.withValues(alpha: 0.5),
+                      ),
+                    ),
                   ],
                 ),
                 loading: () => const Padding(
                   padding: EdgeInsets.symmetric(vertical: 24),
-                  child: Center(child: CircularProgressIndicator(color: AppColors.emerald)),
+                  child: Center(
+                    child: CircularProgressIndicator(color: AppColors.emerald),
+                  ),
                 ),
                 error: (error, stack) => Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
                       children: [
-                        const Icon(Icons.auto_stories_rounded, color: AppColors.emerald, size: 20),
+                        const Icon(
+                          Icons.auto_stories_rounded,
+                          color: AppColors.emerald,
+                          size: 20,
+                        ),
                         const SizedBox(width: 8),
-                        Text(l10n.dailyVerse, style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
+                        Text(
+                          l10n.dailyVerse,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w900,
+                            color: AppColors.emerald,
+                          ),
+                        ),
                       ],
                     ),
                     const SizedBox(height: 12),
@@ -114,9 +177,19 @@ class HomePage extends ConsumerWidget {
                 children: [
                   Row(
                     children: [
-                      const Icon(Icons.check_circle_outline_rounded, color: AppColors.emerald, size: 20),
+                      const Icon(
+                        Icons.check_circle_outline_rounded,
+                        color: AppColors.emerald,
+                        size: 20,
+                      ),
                       const SizedBox(width: 8),
-                      Text(l10n.todaysIbadah, style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald)),
+                      Text(
+                        l10n.todaysIbadah,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w900,
+                          color: AppColors.emerald,
+                        ),
+                      ),
                     ],
                   ),
                   const SizedBox(height: 16),
@@ -136,26 +209,34 @@ class HomePage extends ConsumerWidget {
 
   String _getLocalizedPrayerName(String nextPrayer, AppLocalizations l10n) {
     switch (nextPrayer) {
-      case 'Fajr': return l10n.fajr;
-      case 'Sunrise': return l10n.sunrise;
-      case 'Dhuhr': return l10n.dhuhr;
-      case 'Asr': return l10n.asr;
-      case 'Maghrib': return l10n.maghrib;
-      case 'Isha': return l10n.isha;
-      default: return nextPrayer;
+      case 'Fajr':
+        return l10n.fajr;
+      case 'Sunrise':
+        return l10n.sunrise;
+      case 'Dhuhr':
+        return l10n.dhuhr;
+      case 'Asr':
+        return l10n.asr;
+      case 'Maghrib':
+        return l10n.maghrib;
+      case 'Isha':
+        return l10n.isha;
+      default:
+        return nextPrayer;
     }
   }
 
-  Widget _buildPrayerBanner(BuildContext context, PrayerTimesData? pt, AppLocalizations l10n) {
+  Widget _buildPrayerBanner(
+    BuildContext context,
+    PrayerTimesData? pt,
+    AppLocalizations l10n,
+  ) {
     final nextPrayer = pt?.nextPrayer ?? 'Dhuhr';
     final localizedNextPrayer = _getLocalizedPrayerName(nextPrayer, l10n);
     final nextTime = pt?.nextPrayerTime ?? '--:--';
     final remaining = pt?.timeRemaining;
-    
-    // Quick fallback duration format instead of using intl/localized strings for hours/minutes yet
-    final remainStr = remaining != null
-        ? '${remaining.inHours}h ${remaining.inMinutes.remainder(60)}m'
-        : '--';
+
+    final remainStr = formatPrayerRemainingText(l10n, remaining);
 
     return Container(
       width: double.infinity,
@@ -174,50 +255,107 @@ class HomePage extends ConsumerWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(l10n.nextPrayer,
-            style: const TextStyle(color: Colors.white70, fontSize: 14, fontWeight: FontWeight.w700)),
+          Text(
+            l10n.nextPrayer,
+            style: const TextStyle(
+              color: Colors.white70,
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
           const SizedBox(height: 8),
-          Text(localizedNextPrayer,
-            style: const TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.w900, letterSpacing: -0.5)),
+          Text(
+            localizedNextPrayer,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+              fontWeight: FontWeight.w900,
+              letterSpacing: -0.5,
+            ),
+          ),
           const SizedBox(height: 4),
-          Text('$nextTime • $remainStr',
-            style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 14, fontWeight: FontWeight.w600)),
+          Text(
+            '$nextTime • $remainStr',
+            style: TextStyle(
+              color: Colors.white.withValues(alpha: 0.8),
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
         ],
       ),
     );
   }
 
-  Widget _buildPrayerTimesRow(BuildContext context, PrayerTimesData pt, AppLocalizations l10n) {
+  Widget _buildPrayerTimesRow(
+    BuildContext context,
+    PrayerTimesData pt,
+    AppLocalizations l10n,
+  ) {
     return PremiumCard(
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           _prayerTimeItem(context, l10n.fajr, pt.fajr, pt.nextPrayer == 'Fajr'),
-          _prayerTimeItem(context, l10n.dhuhr, pt.dhuhr, pt.nextPrayer == 'Dhuhr'),
+          _prayerTimeItem(
+            context,
+            l10n.dhuhr,
+            pt.dhuhr,
+            pt.nextPrayer == 'Dhuhr',
+          ),
           _prayerTimeItem(context, l10n.asr, pt.asr, pt.nextPrayer == 'Asr'),
-          _prayerTimeItem(context, l10n.maghrib, pt.maghrib, pt.nextPrayer == 'Maghrib'),
+          _prayerTimeItem(
+            context,
+            l10n.maghrib,
+            pt.maghrib,
+            pt.nextPrayer == 'Maghrib',
+          ),
           _prayerTimeItem(context, l10n.isha, pt.isha, pt.nextPrayer == 'Isha'),
         ],
       ),
     );
   }
 
-  Widget _prayerTimeItem(BuildContext context, String name, String time, bool isNext) {
+  Widget _prayerTimeItem(
+    BuildContext context,
+    String name,
+    String time,
+    bool isNext,
+  ) {
     return Column(
       children: [
-        Text(name, style: TextStyle(
-          fontSize: 11, fontWeight: FontWeight.w800,
-          color: isNext ? AppColors.emerald : Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
-        const SizedBox(height: 4),
-        Text(time, style: TextStyle(
-          fontSize: 14, fontWeight: FontWeight.w900,
-          color: isNext ? AppColors.emerald : null)),
-        if (isNext) Container(
-          margin: const EdgeInsets.only(top: 4),
-          width: 6, height: 6,
-          decoration: const BoxDecoration(color: AppColors.emerald, shape: BoxShape.circle),
+        Text(
+          name,
+          style: TextStyle(
+            fontSize: 11,
+            fontWeight: FontWeight.w800,
+            color: isNext
+                ? AppColors.emerald
+                : Theme.of(
+                    context,
+                  ).colorScheme.onSurface.withValues(alpha: 0.5),
+          ),
         ),
+        const SizedBox(height: 4),
+        Text(
+          time,
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w900,
+            color: isNext ? AppColors.emerald : null,
+          ),
+        ),
+        if (isNext)
+          Container(
+            margin: const EdgeInsets.only(top: 4),
+            width: 6,
+            height: 6,
+            decoration: const BoxDecoration(
+              color: AppColors.emerald,
+              shape: BoxShape.circle,
+            ),
+          ),
       ],
     );
   }
@@ -259,9 +397,15 @@ class HomePage extends ConsumerWidget {
                 child: Icon(item.icon, color: AppColors.emerald, size: 24),
               ),
               const SizedBox(height: 6),
-              Text(item.label,
-                style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700),
-                textAlign: TextAlign.center, overflow: TextOverflow.ellipsis),
+              Text(
+                item.label,
+                style: const TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+              ),
             ],
           ),
         );
@@ -275,15 +419,20 @@ class HomePage extends ConsumerWidget {
       child: Row(
         children: [
           Icon(
-            done ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+            done
+                ? Icons.check_circle_rounded
+                : Icons.radio_button_unchecked_rounded,
             color: done ? AppColors.emerald : Colors.grey,
             size: 20,
           ),
           const SizedBox(width: 12),
-          Text(name, style: TextStyle(
-            fontWeight: FontWeight.w700,
-            decoration: done ? TextDecoration.lineThrough : null,
-          )),
+          Text(
+            name,
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              decoration: done ? TextDecoration.lineThrough : null,
+            ),
+          ),
         ],
       ),
     );

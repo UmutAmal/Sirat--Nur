@@ -1,6 +1,7 @@
 {
   "@@locale": "tr",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "İslami Işık Yolu",
   "home": "Ana Sayfa",
   "quran": "Kur'an-ı Kerim",
   "qibla": "Kıble",
@@ -66,6 +67,7 @@
   "appErrorOccurred": "Bir hata oluştu",
   "appUnknownError": "Bilinmeyen hata",
   "retry": "Tekrar Dene",
+  "refreshAction": "Yenile",
   "cancel": "İptal",
   "save": "Kaydet",
   "delete": "Sil",
@@ -75,12 +77,64 @@
   "yes": "Evet",
   "no": "Hayır",
   "surah": "Sure",
+  "ayahLabel": "{ayah}. Ayet",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Cüz",
   "page": "Sayfa",
   "reading": "Okuma",
   "recitation": "Tilavet",
   "translation": "Çeviri",
   "tafsir": "Tefsir",
+  "tafsirLoading": "Tefsir yükleniyor...",
+  "tafsirSourceLabel": "Tefsir kaynağı",
+  "tafsirNoSurahFound": "Bu sure için tefsir bulunamadı.",
+  "tafsirNoAyahFound": "{ayah}. ayet için tefsir bulunamadı.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tefsir yüklenemedi.",
+  "tafsirNoTextForAyah": "Bu ayet için tefsir metni bulunamadı.",
+  "tafsirDownloadingProgress": "Tefsir indiriliyor {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Tefsir yükleniyor {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tefsir kaynağı HTTP {statusCode} hatası döndürdü.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Seçilen tefsir kaynağı hiç kayıt döndürmedi.",
   "bookmarks": "Yer İşaretleri",
   "addBookmark": "Yer İşareti Ekle",
   "removeBookmark": "Yer İşaretini Kaldır",
@@ -114,6 +168,26 @@
   "fasting": "Oruç",
   "quranReading": "Kur'an Okuma",
   "prayers": "Namazlar",
+  "prayerRemainingHoursMinutes": "{hours}s {minutes}d",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}d",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Zikir Sayısı",
   "weeklyProgress": "Haftalık İlerleme",
   "monthlyProgress": "Aylık İlerleme",
@@ -378,6 +452,8 @@
   "hadithUnavailableTitle": "Doğrulanmış hadis koleksiyonları henüz hazır değil",
   "hadithUnavailableBody": "Bu sürüm hâlâ doğrulanmamış harici bir hadis akışına dayanıyor. Kaynaklandırılmış veri kümesi senkronlanana kadar hadis gezintisi kapalı tutuluyor.",
   "paywallUnlockAll": "Ruhsal yolculuğunuz için tüm özellikleri açın",
+  "premiumProductUnavailable": "Premium ürün şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.",
+  "premiumPurchaseFailed": "Satın alma tamamlanamadı. Lütfen tekrar deneyin.",
   "paywallFeature1Title": "Nöral Asistan Plus",
   "paywallFeature1Desc": "Sınırsız yapay zeka destekli soru-cevap",
   "paywallFeature2Title": "Sınırsız Çevrimdışı",
@@ -479,6 +555,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{reciter} için indirme tamamlandı ancak {failed} sure indirilemedi ({total} sureden {downloaded} indirildi).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "{reciter} için çevrimdışı dosyalar silindi.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -558,6 +651,10 @@
     }
   },
   "placesNetworkError": "Ağ hatası. Lütfen tekrar deneyin.",
+  "placesLocationRequiredTitle": "Konum gerekli",
+  "placesLocationRequiredBody": "Yakındaki cami, helal gıda ve İslami eğitim noktalarını doğru arayabilmek için önce bir konum ayarlayın.",
+  "placesMapTilesUnavailableTitle": "Harita katmanları kullanılamıyor",
+  "placesMapTilesUnavailableBody": "Bu sürüm için doğrulanmış bir harita katman kaynağı henüz yapılandırılmadı. Yakındaki mekanlar yine de kayıtlı konumunuzdan yüklenebilir.",
   "unknownPlaceName": "Bilinmeyen Ad",
   "islamicPlaceFallback": "İslami Mekan",
   "asmaMeaning1": "Dünyadaki bütün yaratılmışlara merhamet eden, acıyan, esirgeyen.",

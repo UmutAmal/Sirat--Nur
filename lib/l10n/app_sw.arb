@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Kidhibiti cha Upakuaji",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Kidhibiti cha Upakuaji Nje ya Mtandao",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Meza za wingu hazipo katika Supabase; vifurushi njia mbadala vinatumika",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "metadata ya Cloud juz haipo; mrejesho wa muundo uliounganishwa unawashwa",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -354,7 +354,7 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Kikomo cha hoja za kila siku kimefikiwa. Pata toleo jipya la Premium kwa ukomo.",
   "chatbotErrorMsg": "Sikuweza kutoa jibu. Tafadhali jaribu tena.",
-  "chatbotOfflinePrompt": "Msingi wa maarifa ya Kiislamu nje ya mtandao uliothibitishwa bado unaratibiwa. Unaweza kuwezesha urejeshaji mkondo sasa, lakini itaonyesha ujumbe salama tu hadi mkusanyiko wa data uliyotoka uwe tayari.\n\nJe, ungependa kuwezesha njia mbadala ya nje ya mtandao?",
+  "chatbotOfflinePrompt": "Msingi wa maarifa ya Kiislamu nje ya mtandao uliothibitishwa bado unaratibiwa. Unaweza kuwezesha urejeshaji mkondo sasa, lakini itaonyesha ujumbe salama tu hadi mkusanyiko wa data uliyotoka uwe tayari.\n\nJe, ungependa kuwezesha urejeshaji wa nje ya mtandao?",
   "chatbotOfflineSwitched": "Njia mbadala ya nje ya mtandao imewezeshwa. Majibu yaliyothibitishwa ya Kiislamu ya ndani bado hayako tayari.",
   "chatbotOfflineDownloadLabel": "Washa Fallback Nje ya Mtandao",
   "downloadPreparing": "Preparing download...",
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Pakua",
+  "resumeDownload": "Endelea Kupakua",
+  "deleteDownloadedFiles": "Futa Faili Zilizopakuliwa",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Upakuaji umeghairiwa kwa {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Upakuaji umekamilika kwa {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Onyesha upya",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "Inapakia tafsir...",
+  "tafsirSourceLabel": "Chanzo cha Tafsir",
+  "tafsirNoSurahFound": "Hakuna tafsir iliyopatikana kwa surah hii.",
+  "tafsirNoAyahFound": "Hakuna tafsir iliyopatikana ya ayah {ayah}.",
+  "tafsirLoadFailed": "Tafsir haikuweza kupakiwa.",
+  "tafsirNoTextForAyah": "Hakuna maandishi ya tafsir kwa aya hii.",
+  "tafsirDownloadingProgress": "Inapakua tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Inapakia tafsir {current}/{total}",
+  "tafsirApiStatusError": "Chanzo cha Tafsir kilileta hitilafu ya HTTP {statusCode}.",
+  "tafsirNoEntriesReturned": "Chanzo cha tafsir kilichochaguliwa hakikurejesha maingizo.",
+  "premiumProductUnavailable": "Bidhaa ya kulipia haipatikani kwa sasa. Tafadhali jaribu tena baadaye.",
+  "premiumPurchaseFailed": "Ununuzi haukuweza kukamilika. Tafadhali jaribu tena.",
+  "prayerRemainingHoursMinutes": "{hours}saa {minutes}dakika",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Njia ya Kiislamu ya Nuru",
+  "downloadPartiallyFinishedForReciter": "Upakuaji umekamilika kwa {reciter} na {failed} surah zilizoshindwa ({downloaded}/{total} zimepakuliwa).",
+  "placesLocationRequiredTitle": "Mahali panahitajika",
+  "placesLocationRequiredBody": "Weka eneo kwanza ili misikiti iliyo karibu, chakula cha halali na shule za Kiislamu zitafutwe kwa usahihi.",
+  "placesMapTilesUnavailableTitle": "Vigae vya ramani hazipatikani",
+  "placesMapTilesUnavailableBody": "Chanzo cha kigae cha ramani kilichothibitishwa bado hakijasanidiwa kwa muundo huu. Maeneo ya karibu bado yanaweza kupakia kutoka eneo lako lililohifadhiwa.",
+  "prayerRemainingUnavailable": "--"
 }

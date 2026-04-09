@@ -3,11 +3,13 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
 class TafsirException implements Exception {
-  final String message;
-  TafsirException(this.message);
-  
+  final String code;
+  final String? details;
+
+  TafsirException(this.code, {this.details});
+
   @override
-  String toString() => 'TafsirException: $message';
+  String toString() => details == null ? code : '$code:$details';
 }
 
 class TafsirLocalService {
@@ -111,13 +113,16 @@ class TafsirLocalService {
         .timeout(const Duration(minutes: 2));
 
     if (response.statusCode != 200) {
-      throw TafsirException('Tafsir API responded with ${response.statusCode}');
+      throw TafsirException(
+        'api_status',
+        details: response.statusCode?.toString(),
+      );
     }
 
     final data = response.data as Map<String, dynamic>;
     final tafsirs = (data['tafsirs'] as List<dynamic>? ?? const <dynamic>[]);
     if (tafsirs.isEmpty) {
-      throw TafsirException('No tafsir entries returned from API.');
+      throw TafsirException('no_entries');
     }
 
     await db.delete(
@@ -170,7 +175,7 @@ class TafsirLocalService {
         onProgress: (current, total) {
           final currentSurahProgress = current / total;
           final overall = (completed + currentSurahProgress) / totalSurahs;
-          onProgress?.call(overall, 'Downloading tafsir: $surah/$totalSurahs');
+          onProgress?.call(overall, 'download:$surah:$totalSurahs');
         },
       );
       completed++;
@@ -237,14 +242,18 @@ class TafsirLocalService {
   static Future<Map<String, int>> getCacheInfo() async {
     final db = await database;
     final totalVerses =
-        Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM $_tableName')) ?? 0;
+        Sqflite.firstIntValue(
+          await db.rawQuery('SELECT COUNT(*) FROM $_tableName'),
+        ) ??
+        0;
     final cachedSurahs =
-        Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(DISTINCT surah_number) FROM $_tableName')) ??
-            0;
-    return {
-      'total_verses': totalVerses,
-      'cached_surahs': cachedSurahs,
-    };
+        Sqflite.firstIntValue(
+          await db.rawQuery(
+            'SELECT COUNT(DISTINCT surah_number) FROM $_tableName',
+          ),
+        ) ??
+        0;
+    return {'total_verses': totalVerses, 'cached_surahs': cachedSurahs};
   }
 
   static Future<void> clearCache() async {
@@ -253,7 +262,11 @@ class TafsirLocalService {
   }
 
   static List<Map<String, String>> get availableTafsirs => const [
-    {'id': 'en.ibn_kathir', 'name': 'Ibn Kathir (Abridged)', 'language': 'English'},
+    {
+      'id': 'en.ibn_kathir',
+      'name': 'Ibn Kathir (Abridged)',
+      'language': 'English',
+    },
     {'id': 'en.maarif', 'name': "Ma'arif al-Qur'an", 'language': 'English'},
     {'id': 'en.tazkir', 'name': 'Tazkirul Quran', 'language': 'English'},
     {'id': 'ar.muyassar', 'name': 'Tafsir Muyassar', 'language': 'Arabic'},
@@ -266,10 +279,7 @@ class TafsirLoader {
   final int surahNumber;
   final String tafsirSource;
 
-  TafsirLoader({
-    required this.surahNumber,
-    required this.tafsirSource,
-  });
+  TafsirLoader({required this.surahNumber, required this.tafsirSource});
 
   Future<List<Map<String, dynamic>>> loadTafsir({
     bool forceRefresh = false,
@@ -289,7 +299,7 @@ class TafsirLoader {
       tafsirSource: tafsirSource,
       onProgress: (current, total) {
         final progress = total == 0 ? 0.0 : current / total;
-        onProgress?.call(progress, 'Loading tafsir: $current/$total');
+        onProgress?.call(progress, 'load:$current:$total');
       },
     );
 
@@ -299,4 +309,3 @@ class TafsirLoader {
     );
   }
 }
-

@@ -12,6 +12,9 @@ class AppLocalizationsSw extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Njia ya Kiislamu ya Nuru';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsSw extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Onyesha upya';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsSw extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Inapakia tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Chanzo cha Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Hakuna tafsir iliyopatikana kwa surah hii.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Hakuna tafsir iliyopatikana ya ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir haikuweza kupakiwa.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Hakuna maandishi ya tafsir kwa aya hii.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Inapakua tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Inapakia tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Chanzo cha Tafsir kilileta hitilafu ya HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Chanzo cha tafsir kilichochaguliwa hakikurejesha maingizo.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}saa ${minutes}dakika';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsSw extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Kidhibiti cha Upakuaji';
 
   @override
   String get downloads => 'Downloads';
@@ -636,7 +699,7 @@ class AppLocalizationsSw extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Kidhibiti cha Upakuaji Nje ya Mtandao';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +884,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Meza za wingu hazipo katika Supabase; vifurushi njia mbadala vinatumika';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +893,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'metadata ya Cloud juz haipo; mrejesho wa muundo uliounganishwa unawashwa';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -953,6 +1016,14 @@ class AppLocalizationsSw extends AppLocalizations {
       'Fungua vipengele vyote vya safari yako ya kiroho';
 
   @override
+  String get premiumProductUnavailable =>
+      'Bidhaa ya kulipia haipatikani kwa sasa. Tafadhali jaribu tena baadaye.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Ununuzi haukuweza kukamilika. Tafadhali jaribu tena.';
+
+  @override
   String get paywallFeature1Title => 'Msaidizi wa Neural Plus';
 
   @override
@@ -1061,7 +1132,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Msingi wa maarifa ya Kiislamu nje ya mtandao uliothibitishwa bado unaratibiwa. Unaweza kuwezesha urejeshaji mkondo sasa, lakini itaonyesha ujumbe salama tu hadi mkusanyiko wa data uliyotoka uwe tayari.\n\nJe, ungependa kuwezesha njia mbadala ya nje ya mtandao?';
+      'Msingi wa maarifa ya Kiislamu nje ya mtandao uliothibitishwa bado unaratibiwa. Unaweza kuwezesha urejeshaji mkondo sasa, lakini itaonyesha ujumbe salama tu hadi mkusanyiko wa data uliyotoka uwe tayari.\n\nJe, ungependa kuwezesha urejeshaji wa nje ya mtandao?';
 
   @override
   String get chatbotOfflineSwitched =>
@@ -1099,25 +1170,35 @@ class AppLocalizationsSw extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Pakua';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Endelea Kupakua';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Futa Faili Zilizopakuliwa';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Upakuaji umeghairiwa kwa $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Upakuaji umekamilika kwa $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Upakuaji umekamilika kwa $reciter na $failed surah zilizoshindwa ($downloaded/$total zimepakuliwa).';
   }
 
   @override
@@ -1238,6 +1319,20 @@ class AppLocalizationsSw extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Hitilafu ya mtandao. Tafadhali jaribu tena.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Mahali panahitajika';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Weka eneo kwanza ili misikiti iliyo karibu, chakula cha halali na shule za Kiislamu zitafutwe kwa usahihi.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Vigae vya ramani hazipatikani';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Chanzo cha kigae cha ramani kilichothibitishwa bado hakijasanidiwa kwa muundo huu. Maeneo ya karibu bado yanaweza kupakia kutoka eneo lako lililohifadhiwa.';
 
   @override
   String get unknownPlaceName => 'Jina lisilojulikana';

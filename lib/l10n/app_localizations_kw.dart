@@ -12,6 +12,9 @@ class AppLocalizationsKw extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Islamic Way of Light';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsKw extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Refresh';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsKw extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsKw extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Loading tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir source';
+
+  @override
+  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'No tafsir found for ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+
+  @override
+  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir source returned an HTTP $statusCode error.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'The selected tafsir source returned no entries.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsKw extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -951,6 +1014,14 @@ class AppLocalizationsKw extends AppLocalizations {
       'Unlock all features for your spiritual journey';
 
   @override
+  String get premiumProductUnavailable =>
+      'Premium product is not available right now. Please try again later.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Purchase could not be completed. Please try again.';
+
+  @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
@@ -1119,6 +1190,16 @@ class AppLocalizationsKw extends AppLocalizations {
   }
 
   @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+  }
+
+  @override
   String deletedOfflineFilesForReciter(String reciter) {
     return 'Deleted offline files for $reciter.';
   }
@@ -1235,6 +1316,20 @@ class AppLocalizationsKw extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Network error. Please try again.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Location required';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
 
   @override
   String get unknownPlaceName => 'Unknown Name';

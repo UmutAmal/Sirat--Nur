@@ -12,6 +12,9 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get appTitle => 'Ala o Allah';
 
   @override
+  String get splashTagline => 'Ala Islam o ka Malamalama';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get retry => 'E hoao hou';
 
   @override
+  String get refreshAction => 'Hōʻano hou';
+
+  @override
   String get cancel => 'Hoʻopau';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'ʻO Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Ke hoʻouka nei i ka tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Kumu Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'ʻAʻohe tafsir i loaʻa no kēia surah.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'ʻAʻohe tafsir i loaʻa no ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'ʻAʻole hiki ke hoʻouka ʻia ʻo Tafsir.';
+
+  @override
+  String get tafsirNoTextForAyah => 'ʻAʻohe kikokikona tafsir no kēia papa.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Hoʻoiho ʻia ka tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Ke hoʻouka nei i ka tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Ua hoʻihoʻi mai ke kumu Tafsir i kahi hewa HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'ʻAʻole i hoʻihoʻi mai ke kumu tafsir i koho ʻia.';
 
   @override
   String get bookmarks => 'Nā kaha puke';
@@ -300,6 +350,19 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String get prayers => 'Pule';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Helu Dhikr';
@@ -635,7 +698,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Luna Hoʻoiho Pahemo';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Nalo nā papa ʻaina ma Supabase; pūʻolo fallback hana';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Nalo ka metadata cloud juz; pūʻolo structural fallback active';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsHaw extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Wehe i nā hiʻohiʻona a pau no kāu huakaʻi uhane';
+
+  @override
+  String get premiumProductUnavailable =>
+      'ʻAʻole loaʻa ka huahana premium i kēia manawa. E ʻoluʻolu e hoʻāʻo hou ma hope.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'ʻAʻole hiki ke hoʻopau ʻia ke kūʻai. E ʻoluʻolu e hoʻāʻo hou.';
 
   @override
   String get paywallFeature1Title => 'Kokua Neural Plus';
@@ -1098,25 +1169,35 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Hoʻoiho';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Hoʻouka hou';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Holoi i nā faila i hoʻoiho ʻia';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Hoʻopau ʻia ka hoʻoiho ʻana no $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Hoʻopau ʻia no $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Hoʻopau ʻia ka hoʻoili ʻana no $reciter me $failed hāʻule nā kiʻi ($downloaded/$total i hoʻoiho ʻia).';
   }
 
   @override
@@ -1236,6 +1317,20 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Kuwaho pūnaewele. E ʻoluʻolu e hoʻāʻo hou.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Pono kahi wahi';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'E hoʻonohonoho mua i kahi i hiki ke ʻimi pololei ʻia nā hale pule kokoke, nā meaʻai halal, a me nā kula Islam.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'ʻAʻole loaʻa nā kile palapala';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'ʻAʻole i hoʻonohonoho ʻia kahi kumu kile palapala ʻāina i hoʻopaʻa ʻia no kēia kūkulu ʻana. Hiki ke hoʻouka ʻia nā wahi kokoke mai kou wahi i mālama ʻia.';
 
   @override
   String get unknownPlaceName => 'Inoa ʻike ʻole';

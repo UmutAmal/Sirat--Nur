@@ -12,6 +12,9 @@ class AppLocalizationsSd extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'اسلامي روشنيءَ جو رستو';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsSd extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'تازو ڪريو';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsSd extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'آيه $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'تفسير لوڊ ٿي رهيو آهي...';
+
+  @override
+  String get tafsirSourceLabel => 'تفسير جو ذريعو';
+
+  @override
+  String get tafsirNoSurahFound => 'هن سورت جي ڪا به تفسير نه ملي.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'آيت $ayah جي ڪا به تفسير نه ملي.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'تفسير لوڊ نه ٿي سگهي.';
+
+  @override
+  String get tafsirNoTextForAyah => 'هن آيت جي ڪا به تفسير نه آهي.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'ڊائون لوڊ ڪندي تفسير $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'لوڊ ڪندي تفسير $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'تفسير ماخذ هڪ HTTP $statusCode غلطي واپس ڪئي.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'منتخب ٿيل تفسير ماخذ ڪو به داخل نه ڪيو.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsSd extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'ڊائون لوڊ مئنيجر';
 
   @override
   String get downloads => 'Downloads';
@@ -634,7 +697,7 @@ class AppLocalizationsSd extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'آف لائن ڊائون لوڊ مئنيجر';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -819,7 +882,7 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'سپابيس ۾ Cloud ٽيبل غائب؛ بنڈل fallback فعال';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz ميٽاداٽا غائب؛ بنڈل structural fallback فعال';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -948,6 +1011,14 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => 'پنھنجي روحاني سفر لاءِ سڀ خصوصيتون کوليو';
+
+  @override
+  String get premiumProductUnavailable =>
+      'پريميئم پراڊڪٽ في الحال دستياب ناهي. مهرباني ڪري ڪجھہ دير رکي ٻيهر ڪوشش ڪندا.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'خريداري مڪمل نه ٿي سگهي. مهرباني ڪري ٻيهر ڪوشش ڪريو.';
 
   @override
   String get paywallFeature1Title => 'نيورل اسسٽنٽ پلس';
@@ -1096,25 +1167,35 @@ class AppLocalizationsSd extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'ڊائون لوڊ ڪريو';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'ٻيهر شروع ڪريو ڊائون لوڊ';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'ڊائون لوڊ ڪيل فائلن کي ختم ڪريو';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'ڊائون لوڊ منسوخ ڪيو ويو $reciter لاءِ.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'ڊائون لوڊ مڪمل ٿيو $reciter لاءِ.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'ڊائون لوڊ مڪمل ٿي ويو $reciter لاءِ $failed ناڪام سورتن سان ($downloaded/$total ڊائون لوڊ ٿيل).';
   }
 
   @override
@@ -1234,6 +1315,20 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'نيٽ ورڪ غلطي. مهرباني ڪري ٻيهر ڪوشش ڪريو.';
+
+  @override
+  String get placesLocationRequiredTitle => 'جڳھ گھربل';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'پهرين جڳھ مقرر ڪريو ته جيئن ويجھي مسجدون، حلال کاڌو، ۽ اسلامي اسڪول صحيح طريقي سان ڳولي سگھجن.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'نقشي جي ٽائلس دستياب ناهي';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'هڪ تصديق ٿيل نقشي جي ٽائل جو ماخذ اڃا تائين هن تعمير لاءِ ترتيب نه ڏنو ويو آهي. ويجھي جڳھون اڃا تائين توھان جي محفوظ ڪيل جڳھ تان لوڊ ڪري سگھن ٿيون.';
 
   @override
   String get unknownPlaceName => 'اڻڄاتل نالو';

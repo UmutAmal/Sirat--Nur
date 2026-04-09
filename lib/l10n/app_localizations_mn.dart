@@ -12,6 +12,9 @@ class AppLocalizationsMn extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Исламын гэрлийн зам';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsMn extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Сэргээх';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsMn extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Тафсирыг ачаалж байна...';
+
+  @override
+  String get tafsirSourceLabel => 'Тафсир эх сурвалж';
+
+  @override
+  String get tafsirNoSurahFound => 'Энэ судрын тафсир олдсонгүй.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'No tafsir found for ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Тафсирыг ачаалж чадсангүй.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Энэ шүлэгт тафсир текст байхгүй.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Тафсир татаж байна $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Тафсирыг ачаалж байна $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Тафсир эх сурвалж HTTP $statusCode алдаа буцаасан.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Сонгогдсон тафсир эх сурвалж ямар ч оруулга ирүүлээгүй.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsMn extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Татаж авах менежер';
 
   @override
   String get downloads => 'Downloads';
@@ -635,7 +698,7 @@ class AppLocalizationsMn extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Офлайн татаж авах менежер';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase-д үүлэн хүснэгт байхгүй; багцалсан буцаалт идэвхтэй';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz мета өгөгдөл дутуу байна; багцалсан бүтцийн нөхөн сэргэлт идэвхтэй';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -949,6 +1012,14 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => 'Сүнслэг аялалынхаа бүх функцийг нээ';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Дээд зэрэглэлийн бүтээгдэхүүн одоогоор байхгүй байна. Дараа дахин оролдоно уу.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Худалдан авалтыг дуусгаж чадсангүй. Дахин оролдоно уу.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1099,25 +1170,35 @@ class AppLocalizationsMn extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Татаж авах';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Татаж авахыг үргэлжлүүлнэ үү';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Татаж авсан файлуудыг устгах';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter-д татахыг цуцалсан.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter-г татаж авлаа.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciter-д $failed бүтэлгүйтсэн сурагуудыг татаж авч дууслаа ($downloaded/$total татагдсан).';
   }
 
   @override
@@ -1237,6 +1318,21 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Сүлжээний алдаа. Дахин оролдоно уу.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Байршил шаардлагатай';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Ойролцоох лалын сүм, халал хоол, исламын сургуулийг үнэн зөв хайж олохын тулд эхлээд байршлыг тогтооно уу.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Газрын зургийн хавтан ашиглах боломжгүй';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Баталгаажсан газрын зургийн хавтангийн эх сурвалжийг энэ бүтээцэд хараахан тохируулаагүй байна. Ойролцоох газруудыг таны хадгалсан байршлаас ачаалах боломжтой хэвээр байна.';
 
   @override
   String get unknownPlaceName => 'Үл мэдэгдэх нэр';

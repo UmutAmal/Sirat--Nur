@@ -12,6 +12,9 @@ class AppLocalizationsHa extends AppLocalizations {
   String get appTitle => 'Wayyo Allah';
 
   @override
+  String get splashTagline => 'Hanyar Hasken Musulunci';
+
+  @override
   String get home => 'Gida';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsHa extends AppLocalizations {
   String get retry => 'Sake gwadawa';
 
   @override
+  String get refreshAction => 'Sake sabuntawa';
+
+  @override
   String get cancel => 'Soke';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsHa extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsiri';
+
+  @override
+  String get tafsirLoading => 'Ana loda tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'tushen Tafsiri';
+
+  @override
+  String get tafsirNoSurahFound => 'Ba a sami tafsirin wannan sura ba.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Babu tafsirin da aka samu na ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'An kasa loda Tafsiri.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Babu rubutun tafsiri na wannan aya.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Ana sauke tafsiri $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Ana loda tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tushen Tafsir ya dawo da kuskuren HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Madogarar tafsirin da aka zaɓa ba ta dawo ba.';
 
   @override
   String get bookmarks => 'Alamomi';
@@ -300,6 +350,19 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get prayers => 'Addu\'a';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Æ˜ididdiga na Dhikr';
@@ -636,7 +699,7 @@ class AppLocalizationsHa extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Manajan Zazzagewa Ba layi';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +884,7 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Teburan girgije sun ɓace a cikin Supabase; bundled fallback yana aiki';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +893,7 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata ya ɓace; bundled structural fallback yana aiki';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => 'Buɗe duk fasalulluka don tafiya ta ruhaniya';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Babu samfura mai ƙima a yanzu. Da fatan za a sake gwadawa daga baya.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'An kasa kammala siyan. Da fatan za a sake gwadawa.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1098,25 +1169,35 @@ class AppLocalizationsHa extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Zazzagewa';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Ci gaba da saukewa';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Share Fayilolin da Aka Sauke';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'An soke saukewa don $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'An gama saukewa don $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'An gama saukewa don $reciter tare da $failed surorin da suka kasa ($downloaded/$total zazzage).';
   }
 
   @override
@@ -1237,6 +1318,20 @@ class AppLocalizationsHa extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Kuskuren hanyar sadarwa. Da fatan za a sake gwadawa.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Wurin da ake buƙata';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Saita wuri da farko don a iya bincika masallatai da ke kusa, abinci na halal, da makarantun islamiyya daidai.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Babu fale-falen taswira';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Ba a saita ingantaccen tushen tayal taswira don wannan ginin ba tukuna. Wuraren da ke kusa za su iya ɗauka daga wurin da aka ajiye.';
 
   @override
   String get unknownPlaceName => 'Sunan da ba a sani ba';

@@ -12,6 +12,9 @@ class AppLocalizationsKa extends AppLocalizations {
   String get appTitle => 'ალლაჰის გზა';
 
   @override
+  String get splashTagline => 'სინათლის ისლამური გზა';
+
+  @override
   String get home => 'მთავარი';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsKa extends AppLocalizations {
   String get retry => 'ხელახლა სცადეთ';
 
   @override
+  String get refreshAction => 'განაახლეთ';
+
+  @override
   String get cancel => 'გაუქმება';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsKa extends AppLocalizations {
   String get surah => 'სურა';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'აია $ayah';
+  }
+
+  @override
   String get juz => 'ჯუზი';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get tafsir => 'ტაფსირი';
+
+  @override
+  String get tafsirLoading => 'ტაფსირის ჩატვირთვა...';
+
+  @override
+  String get tafsirSourceLabel => 'ტაფსირის წყარო';
+
+  @override
+  String get tafsirNoSurahFound => 'ამ სურისთვის ტაფსირი ვერ მოიძებნა.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'აია $ayah-ისთვის ტაფსირი ვერ მოიძებნა.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir ვერ ჩაიტვირთა.';
+
+  @override
+  String get tafsirNoTextForAyah => 'ამ აიისთვის ტაფსირის ტექსტი არ არის.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'ტაფსირის ჩამოტვირთვა $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'იტვირთება tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir წყარომ დააბრუნა HTTP $statusCode შეცდომა.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'არჩეული tafsir წყარო არ დააბრუნა ჩანაწერები.';
 
   @override
   String get bookmarks => 'სანიშნეები';
@@ -300,6 +350,19 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get prayers => 'ლოცვები';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hoursსთ $minutesწთ';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '$minutesმ';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'დჰიქრის გრაფი';
@@ -636,7 +699,7 @@ class AppLocalizationsKa extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'ხაზგარეშე ჩამოტვირთვის მენეჯერი';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +884,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'ღრუბლოვანი ცხრილები აკლია Supabase-ში; შეფუთული სარეზერვო აქტიური';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +893,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz მეტამონაცემები აკლია; შეფუთული სტრუქტურული სარეზერვო აქტიური';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -952,6 +1015,14 @@ class AppLocalizationsKa extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'გახსენით ყველა ფუნქცია თქვენი სულიერი მოგზაურობისთვის';
+
+  @override
+  String get premiumProductUnavailable =>
+      'პრემიუმ პროდუქტი ამჟამად არ არის ხელმისაწვდომი. გთხოვთ, სცადოთ მოგვიანებით.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'შესყიდვა ვერ დასრულდა. გთხოვთ, სცადოთ ხელახლა.';
 
   @override
   String get paywallFeature1Title => 'ნერვული ასისტენტი პლუსი';
@@ -1101,25 +1172,35 @@ class AppLocalizationsKa extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'ჩამოტვირთვა';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'რეზიუმეს ჩამოტვირთვა';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'ჩამოტვირთული ფაილების წაშლა';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'ჩამოტვირთვა გაუქმდა $reciter-ისთვის.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'ჩამოტვირთვა დასრულდა $reciter-ისთვის.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'ჩამოტვირთვა დასრულდა $reciter-ისთვის $failed წარუმატებელი სურებით (ჩამოტვირთულია $downloaded/$total).';
   }
 
   @override
@@ -1239,6 +1320,20 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'ქსელის შეცდომა. გთხოვთ, სცადოთ ხელახლა.';
+
+  @override
+  String get placesLocationRequiredTitle => 'საჭიროა ადგილმდებარეობა';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'ჯერ დააყენეთ მდებარეობა, რათა ზუსტად მოძებნოთ ახლომდებარე მეჩეთები, ჰალალის საკვები და ისლამური სკოლები.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'რუკის ფილები მიუწვდომელია';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'დადასტურებული რუკის ფილა წყარო ჯერ არ არის კონფიგურირებული ამ კონსტრუქციისთვის. ახლომდებარე ადგილები კვლავ შეიძლება ჩაიტვირთოს თქვენი შენახული მდებარეობიდან.';
 
   @override
   String get unknownPlaceName => 'უცნობი სახელი';

@@ -12,6 +12,9 @@ class AppLocalizationsTg extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Роҳи нури исломӣ';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsTg extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Навсозӣ';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsTg extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Оят $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Loading тафсир...';
+
+  @override
+  String get tafsirSourceLabel => 'Манбаи тафсир';
+
+  @override
+  String get tafsirNoSurahFound => 'Барои ин сура тафсир ёфт нашуд.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Барои оят $ayah тафсир ёфт нашуд.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Тафсир бор карда нашуд.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Барои ин оят матни тафсир нест.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Зеркашии тафсири $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Боркунии тафсири $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Манбаи тафсир хатои HTTP $statusCode баргардонид.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Сарчашмаи интихобшудаи тафсир ягон сабтро барнагардондааст.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsTg extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Менеҷери зеркашӣ';
 
   @override
   String get downloads => 'Downloads';
@@ -634,7 +697,7 @@ class AppLocalizationsTg extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Менеҷери зеркашии офлайн';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -819,7 +882,7 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Ҷадвалҳои абрӣ дар Supabase нестанд; Бозгашти маҷмӯӣ фаъол';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz метамаълумотҳо нест; бозгашти сохтории маҷмӯи фаъол';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -949,6 +1012,14 @@ class AppLocalizationsTg extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Тамоми хусусиятҳоро барои сафари рӯҳонии худ кушоед';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Маҳсулоти Premium ҳоло дастрас нест. Лутфан баъдтар бори дигар кӯшиш кунед.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Харид анҷом дода нашуд. Лутфан бори дигар кӯшиш кунед.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1097,25 +1168,35 @@ class AppLocalizationsTg extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Зеркашӣ кунед';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Боргириро идома диҳед';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Файлҳои зеркашидашударо нест кунед';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Зеркашӣ барои $reciter бекор карда шуд.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Зеркашӣ барои $reciter анҷом ёфт.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Зеркашӣ барои $reciter бо $failed сураҳои ноком анҷом ёфт ($downloaded/$total бор карда шудааст).';
   }
 
   @override
@@ -1236,6 +1317,21 @@ class AppLocalizationsTg extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Хатогии шабака. Лутфан бори дигар кӯшиш кунед.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Ҷойгиршавӣ талаб карда мешавад';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Аввалан як макон таъин кунед, то масҷидҳои наздик, ғизои ҳалол ва мактабҳои исломиро дақиқ ҷустуҷӯ кунанд.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Плитаҳои харита дастрас нестанд';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Манбаи сафҳаи тасдиқшудаи харита барои ин сохтмон ҳанӯз танзим нашудааст. Ҷойҳои ҳамсоя ҳоло ҳам метавонанд аз макони захирашудаи шумо бор кунанд.';
 
   @override
   String get unknownPlaceName => 'Номи номаълум';

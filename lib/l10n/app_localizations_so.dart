@@ -12,6 +12,9 @@ class AppLocalizationsSo extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Habka Iftiinka Islaamka';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsSo extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Dib u cusboonaysii';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsSo extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,46 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Soodejinaya tafsiir...';
+
+  @override
+  String get tafsirSourceLabel => 'isha Tafsiir';
+
+  @override
+  String get tafsirNoSurahFound => 'Tafsiir looma helin suuraddan.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Wax tafsiir ah looma helin aayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsiir lama rari karo';
+
+  @override
+  String get tafsirNoTextForAyah =>
+      'Ma jiro qoraal tafsiir ah oo loogu talagalay aayaddan.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Soo dejinta tafsiir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Soodejinaya tafsiir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Isha Tafsiirka ayaa soo celisay khalad HTTP $statusCode';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Isha tafsiir ee la xushay ma soo celin wax gelinta';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +351,19 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -635,7 +699,7 @@ class AppLocalizationsSo extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Maamulaha soo dejinta khadka tooska ah';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +884,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Miisaska daruuraha ayaa ka maqan Supabase; dib u dhac isku xiran oo firfircoon';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +893,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Xogta badan ee Cloud juz ayaa maqan; dib-u-dhac dhismeed isku xidhan oo firfircoon';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -952,6 +1016,14 @@ class AppLocalizationsSo extends AppLocalizations {
       'Fur dhammaan sifooyinka safarkaaga ruuxiga ah';
 
   @override
+  String get premiumProductUnavailable =>
+      'Alaabta qaaliga ah lama heli karo hadda Fadlan isku day mar kale hadhow';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Iibka waa la dhammayn kari waayay Fadlan isku day mar kale';
+
+  @override
   String get paywallFeature1Title => 'Kaaliyaha Neural Plus';
 
   @override
@@ -1059,11 +1131,11 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'Saldhigga aqoonta islamka ee khadka tooska ah ee la xaqiijiyay ayaa wali la soo saarayaa. Waxaad awood u siin kartaa soo noqoshada khadka tooska ah hadda, laakiin waxay tusi doontaa oo kaliya fariimaha badbaadada xaddidan ilaa inta xog-ururinta laga keenay diyaar yahay.\n\nMa jeclaan lahayd inaad karti u yeelato dib u dhaca khadka tooska ah?';
+      'Saldhigga aqoonta Islaamka ee khadka tooska ah ee la xaqiijiyey ayaa weli la daabicinayaa. Waxaad awood u siin kartaa dib u dhaca khadka tooska ah hadda, laakiin waxay tusi doontaa oo kaliya fariimaha badbaadada xaddidan ilaa inta xog-ururinta laga keenay diyaar yahay.\n\nMa jeclaan lahayd inaad karti u geliso soo noqoshada khadka tooska ah?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Dib u dhaca khadka tooska ah waa la furay Jawaabaha islaamiga ah ee maxaliga ah ee la xaqiijiyay wali diyaar uma aha.';
+      'Dib u dhaca khadka tooska ah waa la furay Jawaabaha islaamiga ah ee deegaanka ee la xaqiijiyay wali diyaar uma aha.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Daar dib-u-dhaca khadka tooska ah';
@@ -1100,22 +1172,32 @@ class AppLocalizationsSo extends AppLocalizations {
   String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Dib u bilaw soo dejinta';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Tirtir faylalka la soo dejiyay';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Soo dejintu waa la joojiyay $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Soo dejintu waa dhammaatay $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Soodejintu way dhammaatay $reciter leh $failed suuradaha fashilmay ($downloaded/$total la soo dejiyay).';
   }
 
   @override
@@ -1201,7 +1283,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Hanuun Islaami ah oo la xaqiijiyay weli lama heli karo. U beddel Cloud AI jawaabaha laga soo xigtay.';
+      '[OFFLINE] Hanuun Islaami ah oo la xaqiijiyay weli lama hayo. U beddel Cloud AI jawaabaha laga soo xigtay';
 
   @override
   String get mosques => 'Masaajidada';
@@ -1235,6 +1317,21 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Cilada shabakada Fadlan isku day mar kale';
+
+  @override
+  String get placesLocationRequiredTitle => 'Goobta loo baahan yahay';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Marka hore deji meel u dhow masaajidda, cuntada xalaasha ah, iyo dugsiyada islaamiga ah si sax ah loogu baadho.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'Duubabka khariidadu lama heli karo';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Isha foornada khariidad ee la xaqiijiyay wali looma habeynin dhismahan. Meelaha u dhow weli way ka soo rari karaan goobtaada kaydsan.';
 
   @override
   String get unknownPlaceName => 'Magaca Aan La Aqoon';

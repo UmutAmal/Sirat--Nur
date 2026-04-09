@@ -12,6 +12,9 @@ class AppLocalizationsMg extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Lalam-pahazavana Islamika';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsMg extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Havaozina';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsMg extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,46 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Loading ny tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Loharanon\'ny Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Tsy nisy tafsir hita tamin\'ity surah ity.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'No tafsir found for ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tsy azo nalaina ny Tafsir.';
+
+  @override
+  String get tafsirNoTextForAyah =>
+      'Tsy misy soratra tafsir ho an\'ity andininy ity.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Ny loharanon\'ny Tafsir dia namerina hadisoana HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Ny loharanon\'ny tafsir nofantenana dia tsy naveriny.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +351,19 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -821,7 +885,7 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Tabilao rahona tsy hita ao Supabase; mitambatra fallback mavitrika';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +894,7 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata tsy hita; mitambatra structural fallback mavitrika';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -951,6 +1015,14 @@ class AppLocalizationsMg extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Sokafy ny endri-javatra rehetra ho an\'ny dianao ara-panahy';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Ny vokatra Premium dia tsy misy amin\'izao fotoana izao. Andramo indray rahatrizay.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Tsy vita ny fividianana. Andramo indray azafady.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1106,19 +1178,29 @@ class AppLocalizationsMg extends AppLocalizations {
   String get resumeDownload => 'Resume Download';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Fafao ny rakitra voasintona';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Nofoanana ny fampidinana noho ny $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Vita ny fampidinana ho an\'ny $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Vita ny fampidinana ho an\'ny $reciter miaraka amin\'ny $failed surah tsy nahomby ($downloaded/$total alaina).';
   }
 
   @override
@@ -1239,6 +1321,20 @@ class AppLocalizationsMg extends AppLocalizations {
   @override
   String get placesNetworkError =>
       'Fahadisoan\'ny tambajotra. Andramo indray azafady.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Toerana ilaina';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Mametraha toerana aloha mba ho azo karohina tsara ny moske manodidina, ny sakafo halal ary ny sekoly Islamika.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Tsy hita ny taila sari-tany';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Mbola tsy voarafitra ho an\'ity fananganana ity ny loharano misy sarintany voamarina. Mbola afaka misintona avy amin\'ny toerana voatahiry ny toerana akaiky anao.';
 
   @override
   String get unknownPlaceName => 'Anarana tsy fantatra';

@@ -12,6 +12,9 @@ class AppLocalizationsBs extends AppLocalizations {
   String get appTitle => 'Allahov put';
 
   @override
+  String get splashTagline => 'Islamski put svjetlosti';
+
+  @override
   String get home => 'Dom';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsBs extends AppLocalizations {
   String get retry => 'Pokušaj ponovo';
 
   @override
+  String get refreshAction => 'Osvježi';
+
+  @override
   String get cancel => 'Otkaži';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsBs extends AppLocalizations {
   String get surah => 'Sura';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Aja $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Učitavanje tafsira...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir izvor';
+
+  @override
+  String get tafsirNoSurahFound => 'Za ovu suru nije pronađen tefsir.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Nije pronađen tefsir za ajet $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Tafsir se nije mogao učitati.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Nema teksta tefsira za ovaj ajet.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Preuzimanje tefsira $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Učitavanje tefsira $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir izvor je vratio HTTP $statusCode grešku.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Odabrani izvor tafsira nije vratio nijedan unos.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get prayers => 'Molitve';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -820,7 +883,7 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Cloud tabele nedostaju u Supabase; aktivni rezervni paket';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Nedostaju juz metapodaci u oblaku; uključeni strukturalni rezervni aktivni';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsBs extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Otključajte sve funkcije za svoje duhovno putovanje';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Premium proizvod trenutno nije dostupan. Molimo pokušajte ponovo kasnije.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Kupovina nije mogla biti završena. Molimo pokušajte ponovo.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1098,25 +1169,35 @@ class AppLocalizationsBs extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Preuzmi';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Nastavi preuzimanje';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Izbrišite preuzete datoteke';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Preuzimanje je otkazano za $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Preuzimanje je završeno za $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Preuzimanje je završeno za $reciter sa $failed neuspjelim surama ($downloaded/$total preuzeto).';
   }
 
   @override
@@ -1236,6 +1317,20 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Mrežna greška. Molimo pokušajte ponovo.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Potrebna je lokacija';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Prvo postavite lokaciju kako bi se obližnje džamije, halal hrana i islamske škole mogle precizno pretraživati.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Pločice mape su nedostupne';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Provjereni izvor pločica karte još nije konfiguriran za ovu izgradnju. Mjesta u blizini se i dalje mogu učitavati s vaše sačuvane lokacije.';
 
   @override
   String get unknownPlaceName => 'Nepoznato ime';

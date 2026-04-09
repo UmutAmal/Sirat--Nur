@@ -12,6 +12,9 @@ class AppLocalizationsYi extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'יסלאַמיק וועג פון ליכט';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsYi extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'דערפרישן';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsYi extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'יאָ $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'לאָודינג טאַפסיר ...';
+
+  @override
+  String get tafsirSourceLabel => 'טפסיר מקור';
+
+  @override
+  String get tafsirNoSurahFound => 'קיין טאַפסיר געפונען פֿאַר דעם סוראַה.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'קיין טאַפסיר געפונען פֿאַר ייַאַה $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'טאפסיר האט נישט געקאנט באלאדן.';
+
+  @override
+  String get tafsirNoTextForAyah => 'קיין טאַפסיר טעקסט פֿאַר דעם ייַאַה.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'דאַונלאָודינג טאַפסיר $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'לאָודינג טאַפסיר $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir מקור האָט אומגעקערט אַן HTTP $statusCode טעות.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'דער אויסגעקליבטער טאַפסיר מקור האָט ניט אומגעקערט קיין איינסן.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hoursה $minutesם';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '$minutesמ';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsYi extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'דאַונלאָוד מאַנאַגער';
 
   @override
   String get downloads => 'Downloads';
@@ -635,7 +698,7 @@ class AppLocalizationsYi extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'אָפפלינע דאַונלאָוד מאַנאַגער';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'וואָלקן טישן פעלנדיק אין Supabase; באַנדאַלד פאַלבאַקק אַקטיוו';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'וואָלקן דזשוז מעטאַדאַטאַ פעלנדיק; באַנדאַלד סטראַקטשעראַל פאַלבאַק אַקטיוו';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsYi extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'ופשליסן אַלע פֿעיִקייטן פֿאַר דיין רוחניות נסיעה';
+
+  @override
+  String get premiumProductUnavailable =>
+      'פּרעמיום פּראָדוקט איז ניט בנימצא רעכט איצט. ביטע פּרובירן ווידער שפּעטער.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'קויפן קען נישט זיין געענדיקט. ביטע פּרוּווט ווידער.';
 
   @override
   String get paywallFeature1Title => 'נעוראַל אַססיסטאַנט פּלוס';
@@ -1098,25 +1169,35 @@ class AppLocalizationsYi extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'אראפקאפיע';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'נעמענ זיכ ווידער אראפקאפיע';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'ויסמעקן דאַונלאָודיד טעקעס';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'אראפקאפיע קאַנסאַלד פֿאַר $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'די אראפקאפיע איז געענדיקט פֿאַר $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'די אראפקאפיע איז געענדיקט פֿאַר $reciter מיט $failed דורכפאַל סוראַהס ($downloaded/$total דאַונלאָודיד).';
   }
 
   @override
@@ -1236,6 +1317,20 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'נעץ טעות. ביטע פּרוּווט ווידער.';
+
+  @override
+  String get placesLocationRequiredTitle => 'אָרט פארלאנגט';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'שטעלן אַ אָרט ערשטער אַזוי נירביי מאָסקוועס, האַלאַל עסנוואַרג און יסלאַמיק שולן קענען זיין געזוכט אַקיעראַטלי.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'מאַפּע טיילז אַנאַוויילאַבאַל';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'א וועראַפייד מאַפּע קאַכל מקור איז נישט קאַנפיגיערד פֿאַר דעם בויען נאָך. נעאַרבי ערטער קענען נאָך לאָדן פֿון דיין געראטעוועט אָרט.';
 
   @override
   String get unknownPlaceName => 'אומבאַקאַנט נאָמען';

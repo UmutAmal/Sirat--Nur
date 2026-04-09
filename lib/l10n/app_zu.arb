@@ -135,7 +135,7 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Landa Umphathi",
   "downloads": "Downloads",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
@@ -189,7 +189,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Umphathi Wokulanda Okungaxhunyiwe ku-inthanethi",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Amatafula amafu alahlekile eSupabase; i-backback eyinqwaba iyasebenza",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Imethadatha ye-Cloud juz ayikho; Ukubuyela emuva kwesakhiwo okuhlanganisiwe kuyasebenza",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Landa",
+  "resumeDownload": "Qalisa kabusha Ukulanda",
+  "deleteDownloadedFiles": "Susa Amafayela Alandiwe",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Ukulanda kukhanselwe i-{reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Ukulanda kuqediwe kwe-{reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -658,5 +658,102 @@
   "specialDayDateEidAlFitr": "1 Shawwal",
   "specialDayDateEidAlAdha": "10 Dhul Hijjah",
   "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshAction": "Vuselela",
+  "ayahLabel": "Ayah {ayah}",
+  "tafsirLoading": "Ilayisha i-tafsir...",
+  "tafsirSourceLabel": "Umthombo we-Tafsir",
+  "tafsirNoSurahFound": "Ayikho i-tafsir etholakele yale surah.",
+  "tafsirNoAyahFound": "Ayikho i-tafsir etholakele ye-ayah {ayah}.",
+  "tafsirLoadFailed": "I-Tafsir ayikwazanga ukulayishwa.",
+  "tafsirNoTextForAyah": "Awukho umbhalo we-tafsir wale ayah.",
+  "tafsirDownloadingProgress": "Ilanda i-tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Ilayisha i-tafsir {current}/{total}",
+  "tafsirApiStatusError": "Umthombo we-Tafsir ubuyisele iphutha le-HTTP {statusCode}.",
+  "tafsirNoEntriesReturned": "Umthombo we-tafsir okhethiwe awuzange ubuyise okufakiwe.",
+  "premiumProductUnavailable": "Umkhiqizo we-Premium awutholakali okwamanje. Sicela uzame futhi emuva kwesikhathi.",
+  "premiumPurchaseFailed": "Ukuthenga akuqedwanga. Sicela uzame futhi.",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingMinutes": "{minutes}m",
+  "splashTagline": "Indlela YamaSulumane Yokukhanya",
+  "downloadPartiallyFinishedForReciter": "Ukulanda kuqediwe kwe-{reciter} nge-{failed} ama-surah ahlulekile ({downloaded}/{total} alandiwe).",
+  "placesLocationRequiredTitle": "Indawo iyadingeka",
+  "placesLocationRequiredBody": "Setha indawo kuqala ukuze ama-mosque aseduze, ukudla kwe-halal, nezikole zamaSulumane ziseshwe ngokunembile.",
+  "placesMapTilesUnavailableTitle": "Amathayela emephu awatholakali",
+  "placesMapTilesUnavailableBody": "Umthombo wethayela lemephu oqinisekisiwe awulungiselelwe lesi sakhiwo okwamanje. Izindawo eziseduze zisengalayisha zisuka endaweni yakho elondoloziwe.",
+  "prayerRemainingUnavailable": "--"
 }

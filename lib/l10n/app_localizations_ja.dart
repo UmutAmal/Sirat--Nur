@@ -12,6 +12,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'イスラムの光の道';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'リフレッシュ';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsJa extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'アヤ $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,44 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'タフシルを読み込んでいます...';
+
+  @override
+  String get tafsirSourceLabel => 'タフシルの情報源';
+
+  @override
+  String get tafsirNoSurahFound => 'このスーラのタフシルは見つかりませんでした。';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'ayah $ayah のタフシルが見つかりませんでした。';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'タフシルをロードできませんでした。';
+
+  @override
+  String get tafsirNoTextForAyah => 'このアーヤにはタフシールのテキストはありません。';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'タフシル $current/$total をダウンロードしています';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'タフシル $current/$total を読み込み中';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir ソースが HTTP $statusCode エラーを返しました。';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned => '選択したタフシル ソースはエントリを返しませんでした。';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +349,19 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hours時間 $minutes分';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '$minutes分';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +506,7 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'ダウンロードマネージャー';
 
   @override
   String get downloads => 'Downloads';
@@ -633,7 +695,7 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'オフライン ダウンロード マネージャー';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -817,7 +879,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase にクラウド テーブルがありません。バンドルされたフォールバックがアクティブです';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -826,7 +888,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz メタデータがありません。バンドルされた構造フォールバックがアクティブです';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -945,6 +1007,12 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => 'スピリチュアルな旅のためにすべての機能をロック解除しましょう';
+
+  @override
+  String get premiumProductUnavailable => 'プレミアム製品は現在ご利用いただけません。後でもう一度試してください。';
+
+  @override
+  String get premiumPurchaseFailed => '購入を完了できませんでした。もう一度試してください。';
 
   @override
   String get paywallFeature1Title => 'ニューラルアシスタントプラス';
@@ -1091,25 +1159,35 @@ class AppLocalizationsJa extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'ダウンロード';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'ダウンロードを再開する';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'ダウンロードしたファイルを削除する';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter のダウンロードがキャンセルされました。';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter のダウンロードが完了しました。';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciter のダウンロードは完了しましたが、$failed は失敗しました ($downloaded/$total はダウンロードされました)。';
   }
 
   @override
@@ -1229,6 +1307,20 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'ネットワークエラー。もう一度試してください。';
+
+  @override
+  String get placesLocationRequiredTitle => '場所が必要です';
+
+  @override
+  String get placesLocationRequiredBody =>
+      '近くのモスク、ハラール食品、イスラム学校を正確に検索できるように、最初に場所を設定します。';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'マップタイルは使用できません';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      '検証済みのマップ タイル ソースは、このビルドに対してまだ構成されていません。近くの場所は、保存した場所から読み込むことができます。';
 
   @override
   String get unknownPlaceName => '不明な名前';

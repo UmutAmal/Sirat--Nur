@@ -490,6 +490,12 @@ abstract class AppLocalizations {
   /// **'Sirat-i Nur'**
   String get appTitle;
 
+  /// No description provided for @splashTagline.
+  ///
+  /// In en, this message translates to:
+  /// **'Islamic Way of Light'**
+  String get splashTagline;
+
   /// No description provided for @home.
   ///
   /// In en, this message translates to:
@@ -754,6 +760,12 @@ abstract class AppLocalizations {
   /// **'Retry'**
   String get retry;
 
+  /// No description provided for @refreshAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Refresh'**
+  String get refreshAction;
+
   /// No description provided for @cancel.
   ///
   /// In en, this message translates to:
@@ -808,6 +820,12 @@ abstract class AppLocalizations {
   /// **'Surah'**
   String get surah;
 
+  /// No description provided for @ayahLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Ayah {ayah}'**
+  String ayahLabel(String ayah);
+
   /// No description provided for @juz.
   ///
   /// In en, this message translates to:
@@ -843,6 +861,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Tafsir'**
   String get tafsir;
+
+  /// No description provided for @tafsirLoading.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading tafsir...'**
+  String get tafsirLoading;
+
+  /// No description provided for @tafsirSourceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Tafsir source'**
+  String get tafsirSourceLabel;
+
+  /// No description provided for @tafsirNoSurahFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No tafsir found for this surah.'**
+  String get tafsirNoSurahFound;
+
+  /// No description provided for @tafsirNoAyahFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No tafsir found for ayah {ayah}.'**
+  String tafsirNoAyahFound(String ayah);
+
+  /// No description provided for @tafsirLoadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Tafsir could not be loaded.'**
+  String get tafsirLoadFailed;
+
+  /// No description provided for @tafsirNoTextForAyah.
+  ///
+  /// In en, this message translates to:
+  /// **'No tafsir text for this ayah.'**
+  String get tafsirNoTextForAyah;
+
+  /// No description provided for @tafsirDownloadingProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Downloading tafsir {current}/{total}'**
+  String tafsirDownloadingProgress(String current, String total);
+
+  /// No description provided for @tafsirLoadingProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading tafsir {current}/{total}'**
+  String tafsirLoadingProgress(String current, String total);
+
+  /// No description provided for @tafsirApiStatusError.
+  ///
+  /// In en, this message translates to:
+  /// **'Tafsir source returned an HTTP {statusCode} error.'**
+  String tafsirApiStatusError(String statusCode);
+
+  /// No description provided for @tafsirNoEntriesReturned.
+  ///
+  /// In en, this message translates to:
+  /// **'The selected tafsir source returned no entries.'**
+  String get tafsirNoEntriesReturned;
 
   /// No description provided for @bookmarks.
   ///
@@ -1041,6 +1119,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Prayers'**
   String get prayers;
+
+  /// No description provided for @prayerRemainingHoursMinutes.
+  ///
+  /// In en, this message translates to:
+  /// **'{hours}h {minutes}m'**
+  String prayerRemainingHoursMinutes(String hours, String minutes);
+
+  /// No description provided for @prayerRemainingMinutes.
+  ///
+  /// In en, this message translates to:
+  /// **'{minutes}m'**
+  String prayerRemainingMinutes(String minutes);
+
+  /// No description provided for @prayerRemainingUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'--'**
+  String get prayerRemainingUnavailable;
 
   /// No description provided for @dhikrCount.
   ///
@@ -2230,6 +2326,18 @@ abstract class AppLocalizations {
   /// **'Unlock all features for your spiritual journey'**
   String get paywallUnlockAll;
 
+  /// No description provided for @premiumProductUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium product is not available right now. Please try again later.'**
+  String get premiumProductUnavailable;
+
+  /// No description provided for @premiumPurchaseFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Purchase could not be completed. Please try again.'**
+  String get premiumPurchaseFailed;
+
   /// No description provided for @paywallFeature1Title.
   ///
   /// In en, this message translates to:
@@ -2530,6 +2638,17 @@ abstract class AppLocalizations {
   /// **'Download completed for {reciter}.'**
   String downloadFinishedForReciter(String reciter);
 
+  /// No description provided for @downloadPartiallyFinishedForReciter.
+  ///
+  /// In en, this message translates to:
+  /// **'Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).'**
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  );
+
   /// No description provided for @deletedOfflineFilesForReciter.
   ///
   /// In en, this message translates to:
@@ -2733,6 +2852,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Network error. Please try again.'**
   String get placesNetworkError;
+
+  /// No description provided for @placesLocationRequiredTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Location required'**
+  String get placesLocationRequiredTitle;
+
+  /// No description provided for @placesLocationRequiredBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.'**
+  String get placesLocationRequiredBody;
+
+  /// No description provided for @placesMapTilesUnavailableTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Map tiles unavailable'**
+  String get placesMapTilesUnavailableTitle;
+
+  /// No description provided for @placesMapTilesUnavailableBody.
+  ///
+  /// In en, this message translates to:
+  /// **'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.'**
+  String get placesMapTilesUnavailableBody;
 
   /// No description provided for @unknownPlaceName.
   ///

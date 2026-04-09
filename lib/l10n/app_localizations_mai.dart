@@ -12,6 +12,9 @@ class AppLocalizationsMai extends AppLocalizations {
   String get appTitle => 'सिरात-ı नूर';
 
   @override
+  String get splashTagline => 'के लिये।\nइस्लामी प्रकाश के तरीका';
+
+  @override
   String get home => 'घर';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsMai extends AppLocalizations {
   String get retry => 'पुनः प्रयास करू';
 
   @override
+  String get refreshAction => 'के लिये।\nताज़ा करू';
+
+  @override
   String get cancel => 'रद्द करू';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsMai extends AppLocalizations {
   String get surah => 'सूरह';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'जुज';
 
   @override
@@ -193,6 +204,47 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get tafsir => 'तफसीर';
+
+  @override
+  String get tafsirLoading => 'के लिये।\nलोड हो रहल अछि tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'के लिये।\nतफसीर स्रोत';
+
+  @override
+  String get tafsirNoSurahFound =>
+      'के लिये।\nएहि सूरह लेल कोनो तफसीर नहि भेटल।';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'के लिये।\nआयत $ayah के लेल कोनो तफसीर नहि भेटल.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'के लिये।\nतफसीर लोड नहि भ सकल।';
+
+  @override
+  String get tafsirNoTextForAyah =>
+      'के लिये।\nएहि आयत के लेल कोनो तफसीर ग्रंथ नहि।';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Downloading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Loading tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'के लिये।\nतफसीर स्रोत एकटा HTTP $statusCode त्रुटि वापस केलक.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'के लिये।\nचयनित तफसीर स्रोत कोनो प्रविष्टि वापस नहि केलक.';
 
   @override
   String get bookmarks => 'बुकमार्क';
@@ -300,6 +352,19 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get prayers => 'प्रार्थना';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'धिक्र काउंट';
@@ -634,7 +699,7 @@ class AppLocalizationsMai extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'ऑफलाइन डाउनलोड प्रबंधक';
+  String get offlineDownloadManager => 'के लिये।\nऑफलाइन डाउनलोड प्रबंधक';
 
   @override
   String get manageDatasets =>
@@ -820,7 +885,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'के लिये।\nसुपाबेस मे क्लाउड टेबल गायब; बंडल फॉलबैक सक्रिय';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +894,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'के लिये।\nबादल juz मेटाडाटा गायब अछि; बंडल संरचनात्मक फॉलबैक सक्रिय';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -952,6 +1017,14 @@ class AppLocalizationsMai extends AppLocalizations {
       'अपन आध्यात्मिक यात्रा के लेल सब फीचर के अनलॉक करू';
 
   @override
+  String get premiumProductUnavailable =>
+      'के लिये।\nप्रीमियम प्रोडक्ट एखन उपलब्ध नहि अछि। कृपया बाद मे दोबारा प्रयास करू।';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'के लिये।\nखरीद पूरा नहि भ सकल। कृपया पुनः प्रयास करू।';
+
+  @override
   String get paywallFeature1Title => 'न्यूरल असिस्टेंट प्लस';
 
   @override
@@ -1060,11 +1133,11 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'सत्यापित ऑफलाइन इस्लामी ज्ञानकोश केरऽ क्यूरेटिंग अखनी भी करलऽ जाय रहलऽ छै । अहां अखन ऑफलाइन फॉलबैक कें सक्षम कयर सकय छी, मुदा इ केवल सीमित सुरक्षित संदेशक कें देखायत जखन तइक स्रोत डाटासेट तैयार नहि भ जायत.\n\nकी अहाँ ऑफलाइन फॉलबैक सक्षम करय चाहब?';
+      'के लिये।\nसत्यापित ऑफलाइन इस्लामी ज्ञानकोश केरऽ क्यूरेटिंग अखनी भी करलऽ जाय रहलऽ छै । अहां अखन ऑफलाइन फॉलबैक कें सक्षम कयर सकय छी, मुदा इ केवल सीमित सुरक्षित संदेशक कें देखायत जखन तइक स्रोत डाटासेट तैयार नहि भ जायत.\n\nकी अहाँ ऑफलाइन फॉलबैक सक्षम करय चाहब?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'ऑफलाइन फॉलबैक सक्षम। Verified local Islamic answers are not ready yet.';
+      'के लिये।\nऑफलाइन फॉलबैक सक्षम। सत्यापित स्थानीय इस्लामी जवाब एखन धरि तैयार नहि अछि।';
 
   @override
   String get chatbotOfflineDownloadLabel => 'ऑफलाइन फॉलबैक सक्षम करू';
@@ -1098,25 +1171,35 @@ class AppLocalizationsMai extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'के लिये।\nडाउनलोड करू';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'के लिये।\nरिज्यूमे डाउनलोड';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'के लिये।\nडाउनलोड फाइल मेटाउ';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'के लिये।\n$reciter क लेल डाउनलोड रद्द कएल गेल.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'के लिये।\n$reciter के लेल डाउनलोड पूरा भ गेल.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'के लिये।\n$reciter क लेल डाउनलोड समाप्त भ गेल $failed असफल सूरह ($downloaded/$total डाउनलोड कएल गेल) क संग।';
   }
 
   @override
@@ -1198,11 +1281,11 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'क्लाउड एपीआई कॉन्फ़िगर नहि कएल गेल अछि. कृपया स्थानीय एआई पर स्विच करू।';
+      'के लिये।\nक्लाउड एपीआई कॉन्फ़िगर नहि कएल गेल अछि. कृपया स्थानीय एआई पर स्विच करू।';
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] सत्यापित स्थानीय इस्लामी मार्गदर्शन एखन धरि उपलब्ध नै अछि। स्रोत उत्तरक लेल क्लाउड एआई पर स्विच करू.';
+      'के लिये।\n[OFFLINE] सत्यापित स्थानीय इस्लामी मार्गदर्शन एखन धरि उपलब्ध नै अछि। स्रोत उत्तरक लेल क्लाउड एआई पर स्विच करू.';
 
   @override
   String get mosques => 'मस्जिद';
@@ -1236,6 +1319,21 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'नेटवर्क त्रुटि। कृपया पुनः प्रयास करू।';
+
+  @override
+  String get placesLocationRequiredTitle => 'के लिये।\nस्थान आवश्यक';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'के लिये।\nपहिने कोनो स्थान निर्धारित करू जाहि सं नजदीकक मस्जिद, हलाल भोजन, आ इस्लामी स्कूलक सटीक खोज भ सकय.';
+
+  @override
+  String get placesMapTilesUnavailableTitle =>
+      'के लिये।\nनक्शा टाइल्स अनुपलब्ध';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'के लिये।\nएकटा सत्यापित मैप टाइल स्रोत एखन धरि एहि बिल्ड क लेल कॉन्फ़िगर नहि कएल गेल अछि. पास के जगह एखनो अहां के सेव कएल गेल लोकेशन सं लोड भ सकैत अछि.';
 
   @override
   String get unknownPlaceName => 'अज्ञात नाम';

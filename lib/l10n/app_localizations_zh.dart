@@ -12,6 +12,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => '伊斯兰之光之路';
+
+  @override
   String get home => '家';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get retry => '重试';
 
   @override
+  String get refreshAction => '刷新';
+
+  @override
   String get cancel => '取消';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsZh extends AppLocalizations {
   String get surah => '古兰经';
 
   @override
+  String ayahLabel(String ayah) {
+    return '阿亚 $ayah';
+  }
+
+  @override
   String get juz => '朱兹';
 
   @override
@@ -193,6 +204,44 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get tafsir => '塔夫西尔';
+
+  @override
+  String get tafsirLoading => '加载中...';
+
+  @override
+  String get tafsirSourceLabel => '塔夫西尔来源';
+
+  @override
+  String get tafsirNoSurahFound => '没有找到该章的塔夫西尔。';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return '没有找到 ayah $ayah 的塔夫西尔。';
+  }
+
+  @override
+  String get tafsirLoadFailed => '无法加载 Tafsir。';
+
+  @override
+  String get tafsirNoTextForAyah => '没有该阿耶的塔夫西尔文本。';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return '正在下载 tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return '正在加载 $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir 源返回了 HTTP $statusCode 错误。';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned => '所选的 tafsir 源未返回任何条目。';
 
   @override
   String get bookmarks => '书签';
@@ -294,6 +343,19 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get prayers => '祈祷';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hours小时 $minutes分钟';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '$minutes分钟';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => '迪克尔伯爵';
@@ -625,7 +687,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => '离线下载管理器';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -808,8 +870,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
 
   @override
-  String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+  String get diagnosticsQuranCloudTablesMissing => 'Supabase 中缺少云表；捆绑后备活动';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -817,8 +878,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+  String get diagnosticsQuranCloudJuzMissing => 'Cloud juz 元数据丢失；捆绑结构后备活动';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -937,6 +997,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get paywallUnlockAll => '解锁你的精神之旅的所有功能';
+
+  @override
+  String get premiumProductUnavailable => '高级产品目前不可用。请稍后重试。';
+
+  @override
+  String get premiumPurchaseFailed => '购买无法完成。请再试一次。';
 
   @override
   String get paywallFeature1Title => '神经助手增强版';
@@ -1082,25 +1148,35 @@ class AppLocalizationsZh extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => '下载';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => '简历下载';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => '删除下载的文件';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter 的下载已取消。';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter 的下载已完成。';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciter 的下载已完成，其中 $failed 章节失败（$downloaded/$total 已下载）。';
   }
 
   @override
@@ -1217,6 +1293,20 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get placesNetworkError => '网络错误。请再试一次。';
+
+  @override
+  String get placesLocationRequiredTitle => '需要位置';
+
+  @override
+  String get placesLocationRequiredBody =>
+      '先设定好位置，这样就可以准确搜索到附近的清真寺、清真食品、伊斯兰学校。';
+
+  @override
+  String get placesMapTilesUnavailableTitle => '地图图块不可用';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      '尚未为此构建配置经过验证的地图图块源。附近的地点仍然可以从您保存的位置加载。';
 
   @override
   String get unknownPlaceName => '未知名称';
@@ -1530,6 +1620,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get appTitle => '安拉之道';
 
   @override
+  String get splashTagline => '伊斯兰之光之路';
+
+  @override
   String get home => '家';
 
   @override
@@ -1668,6 +1761,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get retry => '重试';
 
   @override
+  String get refreshAction => '刷新';
+
+  @override
   String get cancel => '取消';
 
   @override
@@ -1695,6 +1791,11 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get surah => '古兰经';
 
   @override
+  String ayahLabel(String ayah) {
+    return '阿亚 $ayah';
+  }
+
+  @override
   String get juz => '朱兹';
 
   @override
@@ -1711,6 +1812,44 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get tafsir => '塔夫西尔';
+
+  @override
+  String get tafsirLoading => '加载中...';
+
+  @override
+  String get tafsirSourceLabel => '塔夫西尔来源';
+
+  @override
+  String get tafsirNoSurahFound => '没有找到该章的塔夫西尔。';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return '没有找到 ayah $ayah 的塔夫西尔。';
+  }
+
+  @override
+  String get tafsirLoadFailed => '无法加载 Tafsir。';
+
+  @override
+  String get tafsirNoTextForAyah => '没有该阿耶的塔夫西尔文本。';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return '正在下载 tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return '正在加载 $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir 源返回了 HTTP $statusCode 错误。';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned => '所选的 tafsir 源未返回任何条目。';
 
   @override
   String get bookmarks => '书签';
@@ -1812,6 +1951,19 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get prayers => '祈祷';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hours小时 $minutes分钟';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '$minutes分钟';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => '迪克尔伯爵';
@@ -2143,7 +2295,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => '离线下载管理器';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -2326,8 +2478,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
 
   @override
-  String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+  String get diagnosticsQuranCloudTablesMissing => 'Supabase 中缺少云表；捆绑后备活动';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -2335,8 +2486,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+  String get diagnosticsQuranCloudJuzMissing => 'Cloud juz 元数据丢失；捆绑结构后备活动';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -2455,6 +2605,12 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get paywallUnlockAll => '解锁你的精神之旅的所有功能';
+
+  @override
+  String get premiumProductUnavailable => '高级产品目前不可用。请稍后重试。';
+
+  @override
+  String get premiumPurchaseFailed => '购买无法完成。请再试一次。';
 
   @override
   String get paywallFeature1Title => '神经助手增强版';
@@ -2600,25 +2756,35 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => '下载';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => '简历下载';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => '删除下载的文件';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter 的下载已取消。';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter 的下载已完成。';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciter 的下载已完成，其中 $failed 章节失败（$downloaded/$total 已下载）。';
   }
 
   @override
@@ -2735,6 +2901,20 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get placesNetworkError => '网络错误。请再试一次。';
+
+  @override
+  String get placesLocationRequiredTitle => '需要位置';
+
+  @override
+  String get placesLocationRequiredBody =>
+      '先设定好位置，这样就可以准确搜索到附近的清真寺、清真食品、伊斯兰学校。';
+
+  @override
+  String get placesMapTilesUnavailableTitle => '地图图块不可用';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      '尚未为此构建配置经过验证的地图图块源。附近的地点仍然可以从您保存的位置加载。';
 
   @override
   String get unknownPlaceName => '未知名称';
@@ -3048,6 +3228,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get appTitle => '安拉之道';
 
   @override
+  String get splashTagline => '伊斯蘭教之光之路';
+
+  @override
   String get home => '家';
 
   @override
@@ -3186,6 +3369,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get retry => '重試';
 
   @override
+  String get refreshAction => '重新整理';
+
+  @override
   String get cancel => '取消';
 
   @override
@@ -3213,6 +3399,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get surah => '古蘭經';
 
   @override
+  String ayahLabel(String ayah) {
+    return '阿亞 $ayah';
+  }
+
+  @override
   String get juz => '茱茲';
 
   @override
@@ -3229,6 +3420,44 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get tafsir => '塔夫西爾';
+
+  @override
+  String get tafsirLoading => '加載中...';
+
+  @override
+  String get tafsirSourceLabel => '塔夫西爾來源';
+
+  @override
+  String get tafsirNoSurahFound => '沒有找到該章的塔夫西爾。';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return '沒有找到 ayah $ayah 的塔夫西爾。';
+  }
+
+  @override
+  String get tafsirLoadFailed => '無法加載 Tafsir。';
+
+  @override
+  String get tafsirNoTextForAyah => '沒有該阿耶的塔夫西爾文本。';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return '正在下載 tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return '正在載入 $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Tafsir 來源回傳了 HTTP $statusCode 錯誤。';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned => '所選的 tafsir 來源未傳回任何條目。';
 
   @override
   String get bookmarks => '書籤';
@@ -3330,6 +3559,19 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get prayers => '祈禱';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hours小時 $minutes分鐘';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '$minutes分鐘';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => '迪克爾伯爵';
@@ -3661,7 +3903,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => '離線下載管理器';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -3844,8 +4086,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
 
   @override
-  String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+  String get diagnosticsQuranCloudTablesMissing => 'Supabase 中缺少雲端表；捆綁後備活動';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -3853,8 +4094,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+  String get diagnosticsQuranCloudJuzMissing => 'Cloud juz 元資料遺失；捆綁結構後備活動';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -3973,6 +4213,12 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get paywallUnlockAll => '解鎖你的靈性之旅的所有功能';
+
+  @override
+  String get premiumProductUnavailable => '高級產品目前無法使用。請稍後重試。';
+
+  @override
+  String get premiumPurchaseFailed => '購買無法完成。請再試一次。';
 
   @override
   String get paywallFeature1Title => '神經助手增強版';
@@ -4118,25 +4364,35 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => '下載';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => '履歷下載';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => '刪除下載的文件';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter 的下載已取消。';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter 的下載已完成。';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return '$reciter 的下載已完成，其中 $failed 章節失敗（$downloaded/$total 已下載）。';
   }
 
   @override
@@ -4253,6 +4509,20 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get placesNetworkError => '網路錯誤。請再試一次。';
+
+  @override
+  String get placesLocationRequiredTitle => '需要位置';
+
+  @override
+  String get placesLocationRequiredBody =>
+      '先設定好位置，這樣就可以準確搜尋到附近的清真寺、清真食品、伊斯蘭學校。';
+
+  @override
+  String get placesMapTilesUnavailableTitle => '地圖圖塊不可用';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      '尚未為此建構配置經過驗證的地圖圖塊來源。附近的地點仍然可以從您儲存的位置載入。';
 
   @override
   String get unknownPlaceName => '未知名稱';

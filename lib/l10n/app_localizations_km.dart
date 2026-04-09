@@ -12,6 +12,9 @@ class AppLocalizationsKm extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'ផ្លូវអ៊ីស្លាមនៃពន្លឺ';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsKm extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'ធ្វើឱ្យស្រស់';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsKm extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'អាយ៉ា $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'កំពុងផ្ទុក tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'ប្រភព Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'រកមិនឃើញ tafsir សម្រាប់ Surah នេះទេ។';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'រកមិនឃើញ tafsir សម្រាប់ ayah $ayah ទេ។';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'មិនអាចផ្ទុក Tafsir បានទេ។';
+
+  @override
+  String get tafsirNoTextForAyah => 'មិនមានអត្ថបទ tafsir សម្រាប់ ayah នេះទេ។';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'កំពុងទាញយក tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'កំពុងផ្ទុក tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'ប្រភព Tafsir បានត្រឡប់កំហុស HTTP $statusCode ។';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'ប្រភព tafsir ដែលបានជ្រើសរើសបានត្រលប់មកវិញមិនមានធាតុទេ។';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hoursម៉ោង ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsKm extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'កម្មវិធីគ្រប់គ្រងការទាញយក';
 
   @override
   String get downloads => 'Downloads';
@@ -635,7 +698,7 @@ class AppLocalizationsKm extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'កម្មវិធីគ្រប់គ្រងការទាញយកក្រៅបណ្តាញ';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -820,7 +883,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'តារាងពពកបាត់នៅក្នុង Supabase; កញ្ចប់​ត្រឡប់​មកវិញ​សកម្ម';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -829,7 +892,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'បាត់ទិន្នន័យ Cloud juz; បណ្តុំរចនាសម្ព័ន្ធថយក្រោយសកម្ម';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1013,14 @@ class AppLocalizationsKm extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'ដោះសោលក្ខណៈពិសេសទាំងអស់សម្រាប់ការធ្វើដំណើរខាងវិញ្ញាណរបស់អ្នក។';
+
+  @override
+  String get premiumProductUnavailable =>
+      'ផលិតផលពិសេសមិនមានលក់នៅពេលនេះទេ។ សូមព្យាយាមម្តងទៀតនៅពេលក្រោយ។';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'ការទិញមិនអាចបញ្ចប់បានទេ។ សូមព្យាយាមម្តងទៀត។';
 
   @override
   String get paywallFeature1Title => 'ជំនួយសរសៃប្រសាទ បូក';
@@ -1100,25 +1171,35 @@ class AppLocalizationsKm extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'ទាញយក';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'បន្តការទាញយក';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'លុបឯកសារដែលបានទាញយក';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'ការទាញយកត្រូវបានលុបចោលសម្រាប់ $reciter ។';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'ការទាញយកបានបញ្ចប់សម្រាប់ $reciter ។';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'ការទាញយកបានបញ្ចប់សម្រាប់ $reciter ជាមួយ $failed បរាជ័យ Surah ($downloaded/$total បានទាញយក)។';
   }
 
   @override
@@ -1238,6 +1319,20 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'កំហុសបណ្តាញ។ សូមព្យាយាមម្តងទៀត។';
+
+  @override
+  String get placesLocationRequiredTitle => 'ទាមទារទីតាំង';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'កំណត់ទីតាំងជាមុនសិន ដើម្បីស្វែងរកវិហារអ៊ិស្លាម អាហារហាឡាល និងសាលាឥស្លាមនៅជិតៗនោះ។';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'មិន​មាន​ក្រឡា​ផែនទី​ទេ។';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'ប្រភព​ក្រឡា​ផែនទី​ដែល​បាន​ផ្ទៀងផ្ទាត់​មិន​ត្រូវ​បាន​កំណត់​រចនាសម្ព័ន្ធ​សម្រាប់​ការ​សាងសង់​នេះ​នៅ​ឡើយ​ទេ។ កន្លែងនៅក្បែរនោះនៅតែអាចផ្ទុកពីទីតាំងដែលអ្នកបានរក្សាទុក។';
 
   @override
   String get unknownPlaceName => 'មិនស្គាល់ឈ្មោះ';

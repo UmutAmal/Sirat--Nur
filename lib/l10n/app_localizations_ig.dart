@@ -12,6 +12,9 @@ class AppLocalizationsIg extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Ụzọ Ìhè nke Islam';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsIg extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Weghachite ume';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsIg extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsIg extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Na-ebu tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'Isi mmalite Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'Enweghị tafsir ahụrụ maka surah a.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Enweghị tafsir ahụrụ maka ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Enweghị ike ibunye Tafsir.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Enweghị ederede tafsir maka ayah a.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Na-ebudata tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Na-ebu tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Isi mmalite Tafsir weghachiri mperi HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Isi mmalite tafsir ahọpụtara weghachighị ndenye ọ bụla.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsIg extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}m';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsIg extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Onye njikwa nbudata';
 
   @override
   String get downloads => 'Downloads';
@@ -634,7 +697,8 @@ class AppLocalizationsIg extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Onye njikwa nbudata na-anọghị n\'ịntanetị';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -819,7 +883,7 @@ class AppLocalizationsIg extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Tebụl igwe ojii na-efu na Supabase; ngwungwu ọdịda na-arụ ọrụ';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +892,7 @@ class AppLocalizationsIg extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata efu; ngwugwu structural fallback na-arụ ọrụ';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -950,6 +1014,13 @@ class AppLocalizationsIg extends AppLocalizations {
   String get paywallUnlockAll => 'Mepee atụmatụ niile maka njem ime mmụọ gị';
 
   @override
+  String get premiumProductUnavailable =>
+      'Ngwaahịa adịchaghị adị ugbu a. Biko nwaa ọzọ ma emechaa.';
+
+  @override
+  String get premiumPurchaseFailed => 'Enweghị ike ịzụta ya. Biko nwaa ọzọ.';
+
+  @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
@@ -1058,11 +1129,11 @@ class AppLocalizationsIg extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'A ka na-echekwa ntọala ihe ọmụma Islam na-anọghị n\'ịntanetị. Ị nwere ike mee ka ọ daa azụ na-anọghị n\'ịntanetị ugbu a, mana ọ ga-egosi naanị ozi nchekwa nwere oke ruo mgbe nhazi data ewepụtara dị njikere.\n\nWould you like to enable offline fallback?';
+      'A ka na-echekwa ntọala ihe ọmụma Islam na-anọghị n\'ịntanetị. Ị nwere ike mee ka ọ daa azụ na-anọghị n\'ịntanetị ugbu a, mana ọ ga-egosi naanị ozi nchekwa nwere oke ruo mgbe nhazi data ewepụtara dị njikere.\n\nỌ ga-amasị gị ịgbalite ọdịda na-anọghị n\'ịntanetị?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Azịza ndị islam mpaghara akwadoro adịbeghị.';
+      'Agbanyere ọdịda na-anọghị n\'ịntanetị. Azịza ndị islam mpaghara akwadoro adịbeghị.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Kwado ọdịda na-anọghị n\'ịntanetị';
@@ -1096,25 +1167,35 @@ class AppLocalizationsIg extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Budata';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Malitegharịa nbudata';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Hichapụ faịlụ ebudatara';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Kagburu nbudata maka $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Nbudata emechara maka $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Nbudata emechara maka $reciter nwere surah $failed dara ada ($downloaded/$total ebudatara).';
   }
 
   @override
@@ -1234,6 +1315,20 @@ class AppLocalizationsIg extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Njehie netwọkụ. Biko nwaa ọzọ.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Ebe achọrọ';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Tọọ ebe mbụ ka e wee chọọ ụlọ alakụba dị nso, nri halal na ụlọ akwụkwọ islam nke ọma.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Taịlị maapụ adịghị';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Ahaziri isi iyi taịlị maapụ akwadoro maka nrụpụta a. Ebe ndị dị nso ka nwere ike ibunye na ebe echekwara gị.';
 
   @override
   String get unknownPlaceName => 'Aha amaghi ama';

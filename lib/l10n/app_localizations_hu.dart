@@ -12,6 +12,9 @@ class AppLocalizationsHu extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Iszlám Fényút';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -152,6 +155,9 @@ class AppLocalizationsHu extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Frissítés';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -179,6 +185,11 @@ class AppLocalizationsHu extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -195,6 +206,45 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Tafsir betöltése...';
+
+  @override
+  String get tafsirSourceLabel => 'Tafsir forrás';
+
+  @override
+  String get tafsirNoSurahFound => 'Ehhez a szúrához nem találtak tafsírt.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Nem található tafsir ayah $ayah számára.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'A Tafsirt nem sikerült betölteni.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Nincs tafsir szöveg ehhez az ayahhoz.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Tafsir letöltése $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Tafsir betöltése $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'A Tafsir forrás HTTP $statusCode hibát adott vissza.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'A kiválasztott tafsir-forrás nem adott vissza bejegyzést.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -302,6 +352,19 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '${hours}h ${minutes}p';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}p';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -446,7 +509,7 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Letöltéskezelő';
 
   @override
   String get downloads => 'Downloads';
@@ -636,7 +699,7 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Offline letöltéskezelő';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +884,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Felhőtáblák hiányoznak a Supabase-ből; kötegelt tartalék aktív';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +893,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metaadatok hiányoznak; kötegelt szerkezeti tartalék aktív';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -951,6 +1014,14 @@ class AppLocalizationsHu extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Oldja fel az összes funkciót spirituális utazásához';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Prémium termék jelenleg nem elérhető. Kérjük, próbálja újra később.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'A vásárlást nem lehetett befejezni. Kérjük, próbálja újra.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1099,25 +1170,35 @@ class AppLocalizationsHu extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Letöltés';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Letöltés folytatása';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Letöltött fájlok törlése';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'A $reciter letöltése megszakítva.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'A $reciter letöltése befejeződött.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'A letöltés befejeződött $reciter $failed sikertelen szúrákkal ($downloaded/$total letöltve).';
   }
 
   @override
@@ -1237,6 +1318,20 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Hálózati hiba. Kérjük, próbálja újra.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Helyszín szükséges';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Először állítson be egy helyet, hogy a közeli mecsetek, halal ételek és iszlám iskolák pontosan megkereshetők legyenek.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'A térképlapok nem érhetők el';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Ellenőrzött térképmozaik forrás még nincs konfigurálva ehhez a buildhez. A közeli helyek továbbra is betölthetők az Ön mentett helyéről.';
 
   @override
   String get unknownPlaceName => 'Ismeretlen név';

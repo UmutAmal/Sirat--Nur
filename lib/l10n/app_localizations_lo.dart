@@ -12,6 +12,9 @@ class AppLocalizationsLo extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'ວິ​ທີ​ການ​ອິດ​ສະ​ລາມ​ຂອງ​ແສງ​ສະ​ຫວ່າງ​';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -150,6 +153,9 @@ class AppLocalizationsLo extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'ໂຫຼດຂໍ້ມູນຄືນໃໝ່';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -177,6 +183,11 @@ class AppLocalizationsLo extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Ayah $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -193,6 +204,45 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'ກຳລັງໂຫລດ tafsir...';
+
+  @override
+  String get tafsirSourceLabel => 'ແຫຼ່ງ Tafsir';
+
+  @override
+  String get tafsirNoSurahFound => 'ບໍ່ພົບ tafsir ສໍາລັບ Surah ນີ້.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'ບໍ່ພົບ tafsir ສໍາລັບ ayah $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'ບໍ່ສາມາດໂຫຼດ Tafsir ໄດ້.';
+
+  @override
+  String get tafsirNoTextForAyah => 'ບໍ່ມີຂໍ້ຄວາມ tafsir ສໍາລັບ ayah ນີ້.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'ກຳລັງດາວໂຫລດ tafsir $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'ກຳລັງໂຫລດ tafsir $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'ແຫຼ່ງ Tafsir ຕອບ HTTP $statusCode ຂໍ້ຜິດພາດ.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'ແຫຼ່ງ tafsir ທີ່ເລືອກສົ່ງຄືນບໍ່ມີລາຍການ.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -300,6 +350,19 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hoursຊມ $minutesນທ';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '${minutes}m';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -444,7 +507,7 @@ class AppLocalizationsLo extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'ຜູ້ຈັດການດາວໂຫຼດ';
 
   @override
   String get downloads => 'Downloads';
@@ -819,7 +882,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'ຕາຕະລາງຄລາວຫາຍໄປໃນ Supabase; bundled fallback ເຮັດວຽກ';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -828,7 +891,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata ຫາຍໄປ; bundled fallback ໂຄງສ້າງມີການເຄື່ອນໄຫວ';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -949,6 +1012,14 @@ class AppLocalizationsLo extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'ປົດລັອກຄຸນສົມບັດທັງໝົດສຳລັບການເດີນທາງທາງວິນຍານຂອງທ່ານ';
+
+  @override
+  String get premiumProductUnavailable =>
+      'ສິນຄ້າພຣີມຽມບໍ່ມີໃຫ້ໃນຕອນນີ້. ກະລຸນາລອງໃໝ່ໃນພາຍຫຼັງ.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'ບໍ່ສາມາດສຳເລັດການຊື້ໄດ້. ກະລຸນາລອງອີກຄັ້ງ.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1097,25 +1168,35 @@ class AppLocalizationsLo extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'ດາວໂຫຼດ';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'ສືບຕໍ່ການດາວໂຫຼດ';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'ລຶບໄຟລ໌ທີ່ດາວໂຫລດມາ';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'ຍົກເລີກການດາວໂຫຼດສຳລັບ $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'ດາວໂຫຼດສຳເລັດແລ້ວສຳລັບ $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'ການດາວໂຫຼດສຳເລັດແລ້ວສຳລັບ $reciter ກັບ $failed ລົ້ມເຫລວ Surah ($downloaded/$total ດາວໂຫຼດແລ້ວ).';
   }
 
   @override
@@ -1235,6 +1316,20 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'ເຄືອຂ່າຍຜິດພາດ. ກະລຸນາລອງອີກຄັ້ງ.';
+
+  @override
+  String get placesLocationRequiredTitle => 'ຕ້ອງການສະຖານທີ່';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'ກຳນົດສະຖານທີ່ກ່ອນເພື່ອຄົ້ນຫາວັດວາອາຮາມ, ອາຫານຮາລາ ແລະໂຮງຮຽນອິດສະລາມທີ່ຢູ່ໃກ້ຄຽງ.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'ແຜ່ນແຜນທີ່ບໍ່ສາມາດໃຊ້ໄດ້';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'ແຫຼ່ງທີ່ມາຂອງກະເບື້ອງແຜນທີ່ທີ່ຢືນຢັນແລ້ວຍັງບໍ່ທັນໄດ້ກຳນົດຄ່າສຳລັບການສ້າງນີ້ເທື່ອ. ສະຖານທີ່ໃກ້ຄຽງຍັງສາມາດໂຫລດຈາກສະຖານທີ່ທີ່ທ່ານບັນທຶກໄວ້.';
 
   @override
   String get unknownPlaceName => 'ຊື່ທີ່ບໍ່ຮູ້ຈັກ';

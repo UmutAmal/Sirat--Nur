@@ -12,6 +12,9 @@ class AppLocalizationsUk extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
+  String get splashTagline => 'Ісламський шлях світла';
+
+  @override
   String get home => 'Home';
 
   @override
@@ -151,6 +154,9 @@ class AppLocalizationsUk extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
+  String get refreshAction => 'Оновити';
+
+  @override
   String get cancel => 'Cancel';
 
   @override
@@ -178,6 +184,11 @@ class AppLocalizationsUk extends AppLocalizations {
   String get surah => 'Surah';
 
   @override
+  String ayahLabel(String ayah) {
+    return 'Айя $ayah';
+  }
+
+  @override
   String get juz => 'Juz';
 
   @override
@@ -194,6 +205,45 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get tafsir => 'Tafsir';
+
+  @override
+  String get tafsirLoading => 'Завантаження тафсиру...';
+
+  @override
+  String get tafsirSourceLabel => 'Джерело тафсир';
+
+  @override
+  String get tafsirNoSurahFound => 'Для цієї сури не знайдено тафсиру.';
+
+  @override
+  String tafsirNoAyahFound(String ayah) {
+    return 'Не знайдено тафсиру для аяту $ayah.';
+  }
+
+  @override
+  String get tafsirLoadFailed => 'Не вдалося завантажити Tafsir.';
+
+  @override
+  String get tafsirNoTextForAyah => 'Немає тексту тафсиру для цього аяту.';
+
+  @override
+  String tafsirDownloadingProgress(String current, String total) {
+    return 'Завантаження тафсиру $current/$total';
+  }
+
+  @override
+  String tafsirLoadingProgress(String current, String total) {
+    return 'Завантаження тефсиру $current/$total';
+  }
+
+  @override
+  String tafsirApiStatusError(String statusCode) {
+    return 'Джерело Tafsir повернуло помилку HTTP $statusCode.';
+  }
+
+  @override
+  String get tafsirNoEntriesReturned =>
+      'Вибране джерело тафсіру не повернуло жодного запису.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -301,6 +351,19 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get prayers => 'Prayers';
+
+  @override
+  String prayerRemainingHoursMinutes(String hours, String minutes) {
+    return '$hoursгод $minutesхв';
+  }
+
+  @override
+  String prayerRemainingMinutes(String minutes) {
+    return '$minutesм';
+  }
+
+  @override
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';
@@ -445,7 +508,7 @@ class AppLocalizationsUk extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Менеджер завантажень';
 
   @override
   String get downloads => 'Downloads';
@@ -636,7 +699,7 @@ class AppLocalizationsUk extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Офлайн-менеджер завантажень';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -821,7 +884,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Хмарні таблиці відсутні в Supabase; пакетний запасний активний';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -830,7 +893,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Відсутні метадані Cloud Juz; пакетний структурний резервний активний';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -951,6 +1014,14 @@ class AppLocalizationsUk extends AppLocalizations {
   @override
   String get paywallUnlockAll =>
       'Розблокуйте всі функції для своєї духовної подорожі';
+
+  @override
+  String get premiumProductUnavailable =>
+      'Преміальний продукт зараз недоступний. Спробуйте пізніше.';
+
+  @override
+  String get premiumPurchaseFailed =>
+      'Не вдалося завершити покупку. Спробуйте ще раз.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1101,25 +1172,35 @@ class AppLocalizationsUk extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Завантажити';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Відновити завантаження';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Видалити завантажені файли';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Завантаження для $reciter скасовано.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Завантаження завершено для $reciter.';
+  }
+
+  @override
+  String downloadPartiallyFinishedForReciter(
+    String reciter,
+    String downloaded,
+    String total,
+    String failed,
+  ) {
+    return 'Завантаження завершено для $reciter з $failed невдалими сурами ($downloaded/$total завантажено).';
   }
 
   @override
@@ -1239,6 +1320,20 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get placesNetworkError => 'Помилка мережі. Спробуйте ще раз.';
+
+  @override
+  String get placesLocationRequiredTitle => 'Потрібне розташування';
+
+  @override
+  String get placesLocationRequiredBody =>
+      'Спочатку встановіть місце розташування, щоб можна було точно знайти мечеті, халяльну їжу та ісламські школи поблизу.';
+
+  @override
+  String get placesMapTilesUnavailableTitle => 'Плитки карти недоступні';
+
+  @override
+  String get placesMapTilesUnavailableBody =>
+      'Перевірене джерело плитки карти ще не налаштовано для цієї збірки. Місця поблизу можуть завантажуватися зі збереженого місцезнаходження.';
 
   @override
   String get unknownPlaceName => 'Невідоме ім\'я';

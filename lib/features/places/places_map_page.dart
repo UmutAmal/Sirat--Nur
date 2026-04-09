@@ -5,12 +5,40 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:http/http.dart' as http;
+import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 enum _PlaceCategory { mosque, halalFood, education }
+
+enum PlacesMapAvailability { ready, locationRequired, tileConfigRequired }
+
+LatLng? resolvePlacesAnchor(SettingsState settings) {
+  final latitude = settings.latitude;
+  final longitude = settings.longitude;
+  if (latitude == null || longitude == null) {
+    return null;
+  }
+
+  return LatLng(latitude, longitude);
+}
+
+PlacesMapAvailability resolvePlacesMapAvailability(
+  SettingsState settings, {
+  required String tileUrlTemplate,
+}) {
+  if (resolvePlacesAnchor(settings) == null) {
+    return PlacesMapAvailability.locationRequired;
+  }
+
+  if (tileUrlTemplate.trim().isEmpty) {
+    return PlacesMapAvailability.tileConfigRequired;
+  }
+
+  return PlacesMapAvailability.ready;
+}
 
 class PlacesMapPage extends ConsumerStatefulWidget {
   const PlacesMapPage({super.key});
@@ -30,6 +58,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
   List<_IslamicPlace> _places = [];
   bool _isLoading = false;
   String? _error;
+  bool _anchorSyncQueued = false;
 
   // Custom marker size and animation handling could be added here
 
@@ -38,17 +67,12 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final settings = ref.read(settingsProvider);
-      final initialAnchor = _currentAnchor(settings);
+      final initialAnchor = resolvePlacesAnchor(settings);
       setState(() => _currentCenter = initialAnchor);
-      _fetchPlaces(initialAnchor, _selectedCategory);
+      if (initialAnchor != null) {
+        _fetchPlaces(initialAnchor, _selectedCategory);
+      }
     });
-  }
-
-  LatLng _currentAnchor(SettingsState settings) {
-    if (settings.latitude != null && settings.longitude != null) {
-      return LatLng(settings.latitude!, settings.longitude!);
-    }
-    return const LatLng(41.0082, 28.9784); // Istanbul fallback
   }
 
   Future<void> _fetchPlaces(LatLng center, _PlaceCategory category) async {
@@ -56,6 +80,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
     setState(() {
       _isLoading = true;
       _error = null;
+      _lastFetchCenter = center;
     });
 
     try {
@@ -130,7 +155,6 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
 
         setState(() {
           _places = fetchedPlaces;
-          _lastFetchCenter = center;
         });
       } else {
         if (!mounted) return;
@@ -174,20 +198,109 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
     _mapController.move(p.place.position, 15.5);
   }
 
+  void _queueAnchorSync(LatLng? anchor) {
+    if (anchor == null || _isLoading || _anchorSyncQueued) {
+      return;
+    }
+
+    final needsFetch =
+        _lastFetchCenter == null ||
+        _distance.as(LengthUnit.Meter, _lastFetchCenter!, anchor) > 25;
+    if (!needsFetch) {
+      return;
+    }
+
+    _anchorSyncQueued = true;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _anchorSyncQueued = false;
+      if (!mounted) return;
+      setState(() => _currentCenter = anchor);
+      _fetchPlaces(anchor, _selectedCategory);
+    });
+  }
+
+  Widget _buildMapUnavailableState(
+    BuildContext context,
+    AppLocalizations l10n,
+    PlacesMapAvailability availability,
+  ) {
+    final (title, body, icon) = switch (availability) {
+      PlacesMapAvailability.locationRequired => (
+        l10n.placesLocationRequiredTitle,
+        l10n.placesLocationRequiredBody,
+        Icons.location_off_rounded,
+      ),
+      PlacesMapAvailability.tileConfigRequired => (
+        l10n.placesMapTilesUnavailableTitle,
+        l10n.placesMapTilesUnavailableBody,
+        Icons.map_rounded,
+      ),
+      PlacesMapAvailability.ready => ('', '', Icons.map_rounded),
+    };
+
+    return Container(
+      color: Theme.of(context).colorScheme.surfaceContainerHighest,
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 28),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                icon,
+                size: 56,
+                color: Theme.of(
+                  context,
+                ).colorScheme.onSurface.withValues(alpha: 0.5),
+              ),
+              const SizedBox(height: 16),
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                style: Theme.of(
+                  context,
+                ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                body,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: Theme.of(
+                    context,
+                  ).colorScheme.onSurface.withValues(alpha: 0.7),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final settings = ref.watch(settingsProvider);
-    final anchor = _currentAnchor(settings);
+    final anchor = resolvePlacesAnchor(settings);
+    final tileUrlTemplate = SupabaseConfig.placesTileUrlTemplate;
+    final mapAvailability = resolvePlacesMapAvailability(
+      settings,
+      tileUrlTemplate: tileUrlTemplate,
+    );
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
+    _queueAnchorSync(anchor);
+
     // Sort places by distance from current anchor (or last fetched center)
-    final mapCenter = _currentCenter ?? anchor;
+    final mapCenter = _currentCenter ?? anchor ?? _lastFetchCenter;
     final enrichedPlaces = _places
         .map(
           (p) => _PlaceWithDistance(
             p,
-            _distance.as(LengthUnit.Kilometer, mapCenter, p.position),
+            mapCenter == null
+                ? 0
+                : _distance.as(LengthUnit.Kilometer, mapCenter, p.position),
           ),
         )
         .toList();
@@ -195,6 +308,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
 
     // Determine if "Search Here" button should show
     final showSearchHere =
+        mapAvailability == PlacesMapAvailability.ready &&
         !_isLoading &&
         _lastFetchCenter != null &&
         _currentCenter != null &&
@@ -225,92 +339,92 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
       body: Stack(
         children: [
           // THE MAP
-          FlutterMap(
-            mapController: _mapController,
-            options: MapOptions(
-              initialCenter: anchor,
-              initialZoom: 13.5,
-              onPositionChanged: _onMapPositionChanged,
-            ),
-            children: [
-              TileLayer(
-                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                userAgentPackageName: 'com.umutamal.sirat_i_nur',
-                // Optional: add a dark mode tile filter here if using a custom package
+          if (mapAvailability == PlacesMapAvailability.ready && anchor != null)
+            FlutterMap(
+              mapController: _mapController,
+              options: MapOptions(
+                initialCenter: anchor,
+                initialZoom: 13.5,
+                onPositionChanged: _onMapPositionChanged,
               ),
-              MarkerLayer(
-                markers: [
-                  // User Center Marker
-                  Marker(
-                    point: anchor,
-                    width: 50,
-                    height: 50,
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Container(
-                          width: 48,
-                          height: 48,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: AppColors.emerald.withValues(alpha: 0.2),
+              children: [
+                TileLayer(
+                  urlTemplate: tileUrlTemplate,
+                  userAgentPackageName: 'com.umutamal.sirat_i_nur',
+                ),
+                MarkerLayer(
+                  markers: [
+                    Marker(
+                      point: anchor,
+                      width: 50,
+                      height: 50,
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Container(
+                            width: 48,
+                            height: 48,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: AppColors.emerald.withValues(alpha: 0.2),
+                            ),
                           ),
-                        ),
-                        Container(
-                          width: 20,
-                          height: 20,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: AppColors.emerald,
-                            border: Border.all(color: Colors.white, width: 3),
-                            boxShadow: [
-                              BoxShadow(
-                                color: AppColors.emeraldDeep.withValues(
-                                  alpha: 0.5,
+                          Container(
+                            width: 20,
+                            height: 20,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: AppColors.emerald,
+                              border: Border.all(color: Colors.white, width: 3),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: AppColors.emeraldDeep.withValues(
+                                    alpha: 0.5,
+                                  ),
+                                  blurRadius: 8,
+                                  spreadRadius: 2,
                                 ),
-                                blurRadius: 8,
-                                spreadRadius: 2,
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                  // Places Markers
-                  ...enrichedPlaces.map(
-                    (p) => Marker(
-                      point: p.place.position,
-                      width: 40,
-                      height: 40,
-                      child: GestureDetector(
-                        onTap: () => _focusPlace(p),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: p.place.color,
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.white, width: 2),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withValues(alpha: 0.2),
-                                blurRadius: 4,
-                                offset: const Offset(0, 2),
-                              ),
-                            ],
-                          ),
-                          child: Icon(
-                            p.place.icon,
-                            color: Colors.white,
-                            size: 20,
+                    ...enrichedPlaces.map(
+                      (p) => Marker(
+                        point: p.place.position,
+                        width: 40,
+                        height: 40,
+                        child: GestureDetector(
+                          onTap: () => _focusPlace(p),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: p.place.color,
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Colors.white, width: 2),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withValues(alpha: 0.2),
+                                  blurRadius: 4,
+                                  offset: const Offset(0, 2),
+                                ),
+                              ],
+                            ),
+                            child: Icon(
+                              p.place.icon,
+                              color: Colors.white,
+                              size: 20,
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+                  ],
+                ),
+              ],
+            )
+          else
+            _buildMapUnavailableState(context, l10n, mapAvailability),
 
           // TOP CATEGORY SCROLL
           Positioned(
@@ -502,18 +616,56 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(
-                                    Icons.location_off_rounded,
+                                    mapAvailability ==
+                                            PlacesMapAvailability
+                                                .locationRequired
+                                        ? Icons.location_off_rounded
+                                        : mapAvailability ==
+                                              PlacesMapAvailability
+                                                  .tileConfigRequired
+                                        ? Icons.map_rounded
+                                        : Icons.location_off_rounded,
                                     size: 48,
                                     color: Colors.grey.withValues(alpha: 0.5),
                                   ),
                                   const SizedBox(height: 16),
                                   Text(
-                                    l10n.noResults,
+                                    mapAvailability ==
+                                            PlacesMapAvailability
+                                                .locationRequired
+                                        ? l10n.placesLocationRequiredTitle
+                                        : mapAvailability ==
+                                              PlacesMapAvailability
+                                                  .tileConfigRequired
+                                        ? l10n.placesMapTilesUnavailableTitle
+                                        : l10n.noResults,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w700,
                                       color: Colors.grey,
                                     ),
                                   ),
+                                  if (mapAvailability !=
+                                      PlacesMapAvailability.ready) ...[
+                                    const SizedBox(height: 8),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 24,
+                                      ),
+                                      child: Text(
+                                        mapAvailability ==
+                                                PlacesMapAvailability
+                                                    .locationRequired
+                                            ? l10n.placesLocationRequiredBody
+                                            : l10n.placesMapTilesUnavailableBody,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Colors.grey.withValues(
+                                            alpha: 0.8,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ],
                               ),
                             )

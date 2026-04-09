@@ -33,18 +33,35 @@ Future<void> pumpHomePage(
 }
 
 void main() {
-  testWidgets('HomePage shows an honest connectivity message when daily ayat fails', (
-    tester,
-  ) async {
-    await pumpHomePage(
-      tester,
-      dailyAyatOverride: (ref) async => throw StateError('daily_ayat_unavailable'),
-    );
-    await tester.pumpAndSettle();
+  test('formatPrayerRemainingText localizes hour and minute output', () async {
+    final en = await AppLocalizations.delegate.load(const Locale('en'));
+    final tr = await AppLocalizations.delegate.load(const Locale('tr'));
 
-    expect(find.text('Daily Verse'), findsOneWidget);
-    expect(find.text('No Internet Connection'), findsOneWidget);
-    expect(find.text('Please check your connection'), findsOneWidget);
-    expect(find.textContaining('ٱللَّهِ'), findsNothing);
+    expect(
+      formatPrayerRemainingText(en, const Duration(hours: 2, minutes: 5)),
+      '2h 5m',
+    );
+    expect(
+      formatPrayerRemainingText(tr, const Duration(hours: 2, minutes: 5)),
+      '2s 5d',
+    );
+    expect(formatPrayerRemainingText(en, null), '--');
   });
+
+  testWidgets(
+    'HomePage shows an honest connectivity message when daily ayat fails',
+    (tester) async {
+      await pumpHomePage(
+        tester,
+        dailyAyatOverride: (ref) async =>
+            throw StateError('daily_ayat_unavailable'),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.text('Daily Verse'), findsOneWidget);
+      expect(find.text('No Internet Connection'), findsOneWidget);
+      expect(find.text('Please check your connection'), findsOneWidget);
+      expect(find.textContaining('ٱللَّهِ'), findsNothing);
+    },
+  );
 }
