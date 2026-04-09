@@ -2827,3 +2827,37 @@
 ### Sonraki Adım
 - Sıradaki turda kalan `66` rare locale sibling-fallback ve EN-reference kümelerine ayrılacak.
 - Ardından kalan dini UI çeviri yüzeyi için güvenilir şekilde ilerlenebilen locale’ler tek tek kapatılacak.
+
+## 2026-04-09 TUR-73 — Map Twi Religious Copy To Akan Fallback
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) içine `tw -> ak` alias eşlemesi eklendi.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tw.arb) içindeki dini UI için kritik kalan İngilizce fallback anahtarları ([A:\Way of Allah\sirat_i_nur\lib\l10n\app_ak.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_ak.arb) referansı ile) sibling fallback’e taşındı.
+- [A:\Way of Allah\sirat_i_nur\test\arb_religious_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_religious_localization_test.dart) `tw` locale’ini priority regressionset’e ekledi.
+
+### Neden Yapıldı
+- Rare locale audit’inde [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tw.arb) hadith ve dua güvenilirlik kopyasının tamamen İngilizce kaldığı doğrulandı.
+- Bu locale için repo içinde yüksek güvenli sibling kaynak zaten mevcuttu: [A:\Way of Allah\sirat_i_nur\lib\l10n\app_ak.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_ak.arb).
+- Library of Congress ISO 639-3 yönergesinde Twi’nin Akan makrodiline bağlı olduğu açıkça belirtiliyor; bu yüzden `tw -> ak` eşlemesi uydurma değil, kaynaklı fallback.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb`
+- `A:\Way of Allah\sirat_i_nur\test\arb_religious_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `tw` locale’i artık dini UI’de İngilizce fallback göstermiyor.
+- Çeviri aracı ileride aynı anahtarlar geldiğinde `tw` için tekrar İngilizceye düşmeyecek.
+- İngilizce hadith unavailable fallback kalan rare locale sayısı `66`dan `65`e indi.
+
+### Test Sonucu
+- `flutter test test/arb_religious_localization_test.dart` → PASS (`1/1`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`178/178`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Twi locale still falling back to English for core religious UI despite a safe sibling fallback: `7/25 → 1/25`
+
+### Sonraki Adım
+- Sıradaki turda kalan `65` locale içinden resmî veya sibling kaynakla güvenilir biçimde eşlenebilenler ayıklanacak.
+- EN referansında kalması gereken belirsiz rare locale’ler için ayrı audit matrisi hazırlanacak.

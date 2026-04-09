@@ -14,6 +14,7 @@ void main() {
       'hi',
       'nb',
       'nn',
+      'tw',
       'zh',
       'zh_CN',
       'zh_TW',

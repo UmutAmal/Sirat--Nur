@@ -297,7 +297,7 @@
   "places": "Places",
   "library": "Library",
   "analytics": "Analytics",
-  "dailyDuas": "Daily Duas",
+  "dailyDuas": "Da biara da Duas",
   "essentialDuas": "{count} essential duas",
   "@essentialDuas": {
     "placeholders": {
@@ -308,7 +308,7 @@
   },
   "islamicEducation": "Islamic Education",
   "sukunAudioTitle": "Sukun Soundscapes",
-  "hadithCollections": "Hadith Collections",
+  "hadithCollections": "Hadith Nneɛma a Wɔaboaboa Ano",
   "paywallUnlockAll": "Unlock all features for your spiritual journey",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Unlimited AI-powered Q&A",
@@ -508,7 +508,7 @@
       }
     }
   },
-  "duaUnavailableTitle": "Verified duas are not available yet",
+  "duaUnavailableTitle": "Verified duas no nnya mmae",
   "duaUnavailableBody": "Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.",
   "duaCategoryQuranic": "Quranic dua",
   "duaCategoryMorningEvening": "Morning & Evening",
@@ -524,7 +524,7 @@
   "duaSourceAbuDawud": "Abu Dawud",
   "duaSourceTirmidhi": "Tirmidhi",
   "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Verified source pending",
-  "hadithUnavailableTitle": "Verified hadith collections are not available yet",
-  "hadithUnavailableBody": "This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced."
+  "hadithSourcePending": "Verified source a ɛda so ara wɔ hɔ",
+  "hadithUnavailableTitle": "Hadith ahorow a wɔaboaboa ano a wɔagye atom no nnya mmae",
+  "hadithUnavailableBody": "Saa ɔdan yi da so ara gyina abɔnten hadith feed a wɔannye antom so. Hadith browsing kɔ so yɛ adwuma kosi sɛ wɔbɛma dataset a wɔanya fibea no ayɛ sync."
 }

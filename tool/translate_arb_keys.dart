@@ -167,6 +167,8 @@ String _toTranslatorLocale(String locale) {
     case 'nb':
     case 'nn':
       return 'no';
+    case 'tw':
+      return 'ak';
     case 'zh':
       return 'zh-cn';
     case 'zh_CN':
