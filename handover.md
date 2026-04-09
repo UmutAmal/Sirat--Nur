@@ -3571,3 +3571,36 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/asma_ul_husna_page.dart) search/filter akışı `tr/en` ile sınırlı taramadan çıkarılacak.
 - Ardından Asma ekranında locale coverage ve residual English fallback yüzeyi yeniden taranacak.
+
+## 2026-04-09 TUR-91 — Expand Asma Search Across All Locale Meanings
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/asma_ul_husna_page.dart) içine `matchesAsmaSearchQuery` yardımcı fonksiyonu eklendi.
+- Asma arama filtresi artık yalnızca transliteration + `tr/en` değil, Arabic metin ve `translations` map içindeki tüm locale değerleri üzerinden eşleşme yapıyor.
+- [A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/library/asma_ul_husna_page_test.dart) `de` locale meaning üzerinden arama regresyonu ile genişletildi.
+
+### Neden Yapıldı
+- Bir önceki turda parser çok dilli translation map’ini koruyacak hale geldi; fakat [A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart#L35](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/asma_ul_husna_page.dart#L35) sonrası filtre akışı hâlâ yalnızca transliteration + `tr/en` değerlerini taradığı için yeni locale verileri aramada görünmez kalıyordu.
+- Bu durum özellikle non-TR/EN locale kullanan kullanıcılar için Asma dataset’i kısmen çevrilmiş olsa bile bulunabilirliği bozan bir UX kırığıydı.
+- Aynı translation map kök sebebinin UI katmanındaki ikinci etkisi kapatıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Asma araması artık cloud dataset’te bulunan locale-specific meaning alanlarını da tarıyor.
+- Alman dili örneğinde `Der Liebevolle` gibi meaning üzerinden doğrudan arama yapılabiliyor.
+- Parser düzeltmesiyle gelen çok dilli veri artık UI aramasında da kullanılabilir hale geldi.
+
+### Test Sonucu
+- `flutter test test/features/library/asma_ul_husna_page_test.dart` → PASS (`6/6`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`206/206`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Asma search filtering only TR/EN strings while cloud rows contain more locales: `10/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda Asma bundled fallback’in yalnızca `tr/en` barındırması nedeniyle cloud yokken diğer locale’lerin İngilizceye düşme riski ele alınacak.
+- Ardından genel residual localization taraması yeniden çalıştırılacak.

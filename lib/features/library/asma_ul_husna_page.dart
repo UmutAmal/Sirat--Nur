@@ -17,6 +17,26 @@ bool hasPlayableAsmaAudio(Map<String, dynamic> item) {
   return audioUrl is String && audioUrl.trim().isNotEmpty;
 }
 
+bool matchesAsmaSearchQuery(Map<String, dynamic> item, String query) {
+  final normalizedQuery = query.trim().toLowerCase();
+  if (normalizedQuery.isEmpty) {
+    return true;
+  }
+
+  final transliteration = (item['transliteration'] ?? '').toString().toLowerCase();
+  final arabic = (item['arabic'] ?? '').toString().toLowerCase();
+  final translations = item['translations'];
+
+  final translationMatch = translations is Map &&
+      translations.values.any(
+        (value) => value is String && value.toLowerCase().contains(normalizedQuery),
+      );
+
+  return transliteration.contains(normalizedQuery) ||
+      arabic.contains(normalizedQuery) ||
+      translationMatch;
+}
+
 class AsmaUlHusnaPage extends ConsumerStatefulWidget {
   const AsmaUlHusnaPage({super.key});
 
@@ -36,13 +56,7 @@ class _AsmaUlHusnaPageState extends ConsumerState<AsmaUlHusnaPage> {
     final names = resolveAsmaUlHusnaItems(ref.watch(asmaUlHusnaProvider));
 
     final filteredNames = names.where((name) {
-      if (_searchQuery.isEmpty) return true;
-      final q = _searchQuery.toLowerCase();
-      final transliteration = (name['transliteration'] as String).toLowerCase();
-      final translations = name['translations'] as Map<String, dynamic>;
-      final tr = (translations['tr'] ?? '').toString().toLowerCase();
-      final en = (translations['en'] ?? '').toString().toLowerCase();
-      return transliteration.contains(q) || tr.contains(q) || en.contains(q);
+      return matchesAsmaSearchQuery(name, _searchQuery);
     }).toList();
 
     return Scaffold(

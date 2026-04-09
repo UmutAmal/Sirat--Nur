@@ -111,5 +111,46 @@ void main() {
       expect(find.text('Deutsche Bedeutung'), findsOneWidget);
       expect(find.text('Provider English Meaning'), findsNothing);
     });
+
+    testWidgets('Search matches locale-specific cloud translations', (
+      tester,
+    ) async {
+      await tester.pumpWidget(
+        createWidgetUnderTest(
+          locale: const Locale('de'),
+          asmaNames: [
+            {
+              'id': 101,
+              'arabic': 'الْوَدُودُ',
+              'transliteration': 'Al Wudood',
+              'translations': {
+                'en': 'The Loving One',
+                'tr': 'Cok seven',
+                'de': 'Der Liebevolle',
+              },
+              'audioUrl': '',
+            },
+            {
+              'id': 102,
+              'arabic': 'الْحَكِيمُ',
+              'transliteration': 'Al Hakeem',
+              'translations': {
+                'en': 'The Perfectly Wise',
+                'tr': 'Hikmet sahibi',
+                'de': 'Der Allweise',
+              },
+              'audioUrl': '',
+            },
+          ],
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      await tester.enterText(find.byType(TextField), 'liebevolle');
+      await tester.pumpAndSettle();
+
+      expect(find.text('Al Wudood'), findsOneWidget);
+      expect(find.text('Al Hakeem'), findsNothing);
+    });
   });
 }
