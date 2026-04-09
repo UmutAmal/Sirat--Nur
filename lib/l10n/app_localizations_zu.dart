@@ -859,38 +859,38 @@ class AppLocalizationsZu extends AppLocalizations {
       'Lokhu kwakhiwa kusancike kokuphakelayo kwe-hadith yangaphandle engaqinisekisiwe. Ukuphequlula kwe-Hadith kuhlala kuvaliwe kuze kube yilapho isethi yedatha etholakalayo ivunyelaniswa.';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => 'Vula zonke izici zohambo lwakho lokomoya';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'I-Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'I-Q&A ene-AI engenamkhawulo';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title =>
+      'Okungaxhunyiwe ku-inthanethi okungenamkhawulo';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Landa zonke izingcaphuno';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Imiklamo Ekhethekile';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Izingqikithi namafonti e-Premium';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Akunazikhangiso';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Azikho izikhangiso';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Thola Ukufinyelela Konke Kuphila — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Buyisela Okuthengiwe';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -963,11 +963,11 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Umkhawulo wombuzo wansuku zonke ufinyelelwe. Thuthukela ku-Premium ukuze uthole okungenamkhawulo.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Angikwazanga ukwenza impendulo. Sicela uzame futhi.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1104,12 +1104,12 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count osele';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'I-Cloud API ayilungiselelwe. Sicela ushintshele ku-Local AI.';
 
   @override
   String get chatbotLocalNoInfo =>

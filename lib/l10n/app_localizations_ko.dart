@@ -856,38 +856,37 @@ class AppLocalizationsKo extends AppLocalizations {
       '이 빌드는 여전히 확인되지 않은 외부 hadith 피드에 의존합니다. Hadith 검색은 소스 데이터 세트가 동기화될 때까지 비활성화된 상태로 유지됩니다.';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => '영적 여정을 위한 모든 기능을 잠금 해제하세요';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => '신경 보조자 플러스';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => '무제한 AI 기반 Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => '무제한 오프라인';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => '모든 암송 다운로드';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => '독점 디자인';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => '프리미엄 테마 및 글꼴';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => '광고 없음';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => '광고 없음';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => '평생 이용권 받기 — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => '구매 복원';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -959,12 +958,10 @@ class AppLocalizationsKo extends AppLocalizations {
       'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
 
   @override
-  String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+  String get chatbotLimitReached => '일일 쿼리 한도에 도달했습니다. 무제한으로 프리미엄으로 업그레이드하세요.';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => '응답을 생성할 수 없습니다. 다시 시도해 주세요.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1088,7 +1085,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get bestStreak => '최고의 연속';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => '클라우드 AI';
 
   @override
   String get chatbotLocalAiLabel => '오프라인 대체';
@@ -1101,12 +1098,12 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count 남음';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API가 구성되지 않았습니다. 로컬 AI로 전환해주세요.';
 
   @override
   String get chatbotLocalNoInfo =>

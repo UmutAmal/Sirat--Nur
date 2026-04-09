@@ -859,37 +859,37 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Otključajte sve funkcije za svoje duhovno putovanje';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Neograničena pitanja i odgovori sa AI-om';
 
   @override
   String get paywallFeature2Title => 'Unlimited Offline';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Preuzmite sve recitacije';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Ekskluzivni dizajni';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Premium teme i fontovi';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Bez oglasa';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Nula reklama';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Dobijte doživotni pristup — 1,00 USD';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Vratite kupovine';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,11 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Dostignuto je dnevno ograničenje upita. Nadogradite na Premium za neograničeno.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Nisam mogao generirati odgovor. Molimo pokušajte ponovo.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1103,12 +1103,12 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count lijevo';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API nije konfiguriran. Prebacite se na lokalni AI.';
 
   @override
   String get chatbotLocalNoInfo =>

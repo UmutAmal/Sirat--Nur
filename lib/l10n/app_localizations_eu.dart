@@ -860,37 +860,37 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Desblokeatu eginbide guztiak zure bidaia espiritualerako';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'AI bidezko galdera-erantzun mugagabeak';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Lineaz kanpo mugarik gabe';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Deskargatu errezitazio guztiak';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Diseinu esklusiboak';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Premium gaiak eta letra-tipoak';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Iragarkirik gabe';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Zero iragarkiak';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Lortu bizitza osorako sarbidea - \$ 1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Berreskuratu Erosketak';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -963,11 +963,11 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Eguneko kontsulten mugara iritsi da. Igotu Premium-era mugarik gabe.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Ezin izan dut erantzunik sortu. Mesedez, saiatu berriro.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1091,7 +1091,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get bestStreak => 'Boladarik onena';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Hodei AI';
 
   @override
   String get chatbotLocalAiLabel => 'Lineaz kanpoko Fallback';
@@ -1104,12 +1104,12 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count geratzen da';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Hodeiko APIa ez dago konfiguratuta. Mesedez, aldatu Tokiko AI-ra.';
 
   @override
   String get chatbotLocalNoInfo =>

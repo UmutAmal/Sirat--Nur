@@ -215,6 +215,75 @@ void main() {
         }
       }
     });
+
+    test('safe priority locales do not fall back to English for chatbot cloud copy', () {
+      const chatbotSafeLocales = [
+        'tr',
+        'de',
+        'fr',
+        'es',
+        'ar',
+        'da',
+        'he',
+        'ja',
+        'nb',
+        'nn',
+        'no',
+        'pt',
+        'ru',
+        'vi',
+        'zh',
+        'zh_CN',
+        'zh_TW',
+      ];
+      const localizedKeys = [
+        'chatbotCloudAiLabel',
+        'chatbotCloudNotConfigured',
+        'chatbotErrorMsg',
+        'chatbotLimitReached',
+        'chatbotQueriesLeft',
+      ];
+
+      for (final locale in chatbotSafeLocales) {
+        final arb = _readArb('lib/l10n/app_$locale.arb');
+
+        for (final key in localizedKeys) {
+          expect(
+            arb[key],
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+        }
+      }
+    });
+
+    test('priority locales do not fall back to English for paywall copy', () {
+      const localizedKeys = [
+        'paywallFeature1Title',
+        'paywallFeature1Desc',
+        'paywallFeature2Title',
+        'paywallFeature2Desc',
+        'paywallFeature3Title',
+        'paywallFeature3Desc',
+        'paywallFeature4Title',
+        'paywallFeature4Desc',
+        'paywallUnlockAll',
+        'paywallGetAccess',
+        'restorePurchases',
+      ];
+
+      for (final locale in priorityLocales) {
+        final arb = _readArb('lib/l10n/app_$locale.arb');
+
+        for (final key in localizedKeys) {
+          expect(
+            arb[key],
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+        }
+      }
+    });
   });
 }
 

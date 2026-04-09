@@ -861,37 +861,37 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Wewetehia nga ahuatanga katoa mo to haerenga wairua';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Uiuinga-a-AI mutunga kore';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Tuimotu mutunga kore';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Tangohia nga korero korero katoa';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Nga Hoahoa Motuhake';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Nga kaupapa me nga momotuhi';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Panui-Kore';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Kore nga panui';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Tikina te Uru Ora — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Whakahokia nga Hokonga';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -964,11 +964,11 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Kua tae ki te rohe uiui ia ra. Whakapai ake ki te Premium mo te mutunga kore.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Kaore i taea e au te whakaputa whakautu. Me ngana ano.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1092,7 +1092,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get bestStreak => 'Tino pai';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Kapua AI';
 
   @override
   String get chatbotLocalAiLabel => 'Whakamuri Tuimotu';
@@ -1105,12 +1105,12 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count i mahue';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Kapua API kaore i whirihora. Tena koa huri ki AI Paetata.';
 
   @override
   String get chatbotLocalNoInfo =>

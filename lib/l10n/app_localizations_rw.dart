@@ -859,37 +859,37 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Fungura ibintu byose byurugendo rwawe rwumwuka';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Umufasha wa Neural Wongeyeho';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Imipaka itagira imipaka ikoreshwa na Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Imipaka itagira imipaka';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Kuramo ibisomwa byose';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Ibishushanyo byihariye';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Insanganyamatsiko nziza & Imyandikire';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Kwamamaza-Ubuntu';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Amatangazo ya Zeru';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Kubona Ubuzima Bwose - \$ 1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Kugarura ibyaguzwe';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,11 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Umubare wibibazo bya buri munsi wageze. Kuzamura Premium kuri unlimited.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Ntabwo nashoboye gutanga igisubizo. Nyamuneka gerageza.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1090,7 +1090,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get bestStreak => 'Inzira nziza';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Igicu AI';
 
   @override
   String get chatbotLocalAiLabel => 'Gusubira inyuma';
@@ -1103,12 +1103,12 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count hasigaye';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Igicu API ntabwo cyashyizweho. Nyamuneka hindukira kuri AI yaho.';
 
   @override
   String get chatbotLocalNoInfo =>

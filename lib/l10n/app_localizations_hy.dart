@@ -862,37 +862,37 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Բացեք բոլոր հնարավորությունները ձեր հոգևոր ճանապարհորդության համար';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Նյարդային օգնական Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Անսահմանափակ AI-ով աշխատող Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Անսահմանափակ անցանց';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Ներբեռնեք բոլոր ասմունքները';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Բացառիկ դիզայն';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Պրեմիում թեմաներ և տառատեսակներ';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Առանց գովազդի';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Զրո գովազդ';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Ստացեք ցմահ մուտք՝ \$1,00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Վերականգնել գնումները';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -965,11 +965,11 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Հարցման ամենօրյա սահմանաչափը հասել է: Թարմացրեք Premium-ի անսահմանափակ:';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Ես չկարողացա արձագանք առաջացնել: Խնդրում ենք կրկին փորձել:';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1093,7 +1093,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get bestStreak => 'Լավագույն շարանը';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Ամպային AI';
 
   @override
   String get chatbotLocalAiLabel => 'Անցանց հետադարձ կապ';
@@ -1106,12 +1106,12 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return 'Մնաց $count';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API-ն կազմաձևված չէ: Խնդրում ենք անցնել Local AI-ի:';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -859,37 +859,37 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Рухани саяхатыңыздың барлық мүмкіндіктерін ашыңыз';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'AI-мен жұмыс істейтін шексіз сұрақ-жауап';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Шексіз офлайн';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Барлық оқуларды жүктеп алыңыз';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Эксклюзивті дизайн';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Премиум тақырыптар мен қаріптер';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Жарнамасыз';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Нөлдік жарнамалар';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Өмір бойы қолжетімділікті алыңыз — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Сатып алуларды қалпына келтіру';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,10 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Күнделікті сұрау шегіне жетті. Шексіз Premium нұсқасына жаңартыңыз.';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => 'Мен жауап бере алмадым. Қайталап көріңіз.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1090,7 +1089,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get bestStreak => 'Үздік серия';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Бұлтты AI';
 
   @override
   String get chatbotLocalAiLabel => 'Офлайн қалпына келтіру';
@@ -1103,12 +1102,12 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count қалды';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API конфигурацияланбаған. Жергілікті AI-ға ауысыңыз.';
 
   @override
   String get chatbotLocalNoInfo =>

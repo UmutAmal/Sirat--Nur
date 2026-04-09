@@ -861,37 +861,38 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Datgloi\'r holl nodweddion ar gyfer eich taith ysbrydol';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Cynorthwy-ydd Niwral Plws';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'Holi ac Ateb diderfyn wedi\'i bweru gan AI';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Unlimited All-lein';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Lawrlwythwch yr holl ddatganiadau';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Dyluniadau Unigryw';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Themâu a ffontiau premiwm';
 
   @override
   String get paywallFeature4Title => 'Ad-Free';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Hysbysebion sero';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Cael Mynediad Gydol Oes - \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Adfer Pryniannau';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -964,11 +965,10 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Cyrhaeddwyd terfyn ymholiad dyddiol. Uwchraddio i Premiwm ar gyfer diderfyn.';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => 'Ni allwn gynhyrchu ymateb. Ceisiwch eto.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1092,7 +1092,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get bestStreak => 'Rhediad gorau';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Cwmwl AI';
 
   @override
   String get chatbotLocalAiLabel => 'All-lein wrth gefn';
@@ -1105,12 +1105,12 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count chwith';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API heb ei ffurfweddu. Newidiwch i Local AI.';
 
   @override
   String get chatbotLocalNoInfo =>

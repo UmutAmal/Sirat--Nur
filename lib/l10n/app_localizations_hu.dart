@@ -861,37 +861,37 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Oldja fel az összes funkciót spirituális utazásához';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Korlátlan AI-alapú kérdések és válaszok';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Korlátlan offline';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Töltse le az összes szavalatot';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Exkluzív minták';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Prémium témák és betűtípusok';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Hirdetésmentes';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Nulla reklám';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Élettartamra szóló hozzáférés – 1,00 USD';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Vásárlások visszaállítása';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -964,11 +964,11 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Elérte a napi lekérdezési korlátot. Frissítsen Premiumra korlátlanul.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Nem tudtam választ generálni. Kérjük, próbálja újra.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1092,7 +1092,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get bestStreak => 'A legjobb sorozat';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Felhő AI';
 
   @override
   String get chatbotLocalAiLabel => 'Offline tartalék';
@@ -1105,12 +1105,12 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count maradt';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'A felhő API nincs konfigurálva. Kérjük, váltson helyi AI-ra.';
 
   @override
   String get chatbotLocalNoInfo =>

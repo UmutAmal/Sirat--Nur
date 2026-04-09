@@ -860,37 +860,38 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Atbloķējiet visas funkcijas savam garīgajam ceļojumam';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Neironu palīgs Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'Neierobežots ar AI darbināms jautājumu un atbilžu skaits';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Neierobežots bezsaistē';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Lejupielādēt visas deklamācijas';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Ekskluzīvi modeļi';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Premium motīvi un fonti';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Bez reklāmām';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Nulle sludinājumu';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Iegūstiet mūža piekļuvi — 1,00 USD';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Atjaunot pirkumus';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -963,11 +964,11 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Sasniegts ikdienas vaicājumu ierobežojums. Jauniniet uz Premium bez ierobežojumiem.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Es nevarēju radīt atbildi. Lūdzu, mēģiniet vēlreiz.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1091,7 +1092,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get bestStreak => 'Labākā sērija';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Mākoņu AI';
 
   @override
   String get chatbotLocalAiLabel => 'Atkāpšanās bezsaistē';
@@ -1104,12 +1105,12 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count palicis';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Mākoņa API nav konfigurēta. Lūdzu, pārejiet uz vietējo AI.';
 
   @override
   String get chatbotLocalNoInfo =>

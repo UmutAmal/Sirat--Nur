@@ -862,37 +862,37 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Edesblokea opa mba’e nde viaje espiritual-pe ĝuarã';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Asistente Neural Plus rehegua';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Q&A AI-pe oñemombaretéva ilimitado';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Ilimitado Offline-pe';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Emboguejy opaite recitación';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Diseños Exclusivos rehegua';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Temas & fuentes premium rehegua';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Ad-Free rehegua';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Cero umi anuncio';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Ojehupyty Jeike Tekove pukukue — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Oñemoĩjey umi mba’e ojejoguáva';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -965,11 +965,11 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Límite de consulta diaria oguahëva. Embopyahu Premium-pe ilimitado-pe g̃uarã.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Ndaikatúikuri agenera peteĩ respuesta. Eñeha’ã jey.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1094,7 +1094,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get bestStreak => 'Racha iporãvéva';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'AI arai rehegua';
 
   @override
   String get chatbotLocalAiLabel => 'Offline Fallback rehegua';
@@ -1112,7 +1112,7 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'API arai noñembohekopyrýi. Embohasa AI Local-pe.';
 
   @override
   String get chatbotLocalNoInfo =>

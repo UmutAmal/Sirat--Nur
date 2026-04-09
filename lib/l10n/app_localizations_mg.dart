@@ -859,37 +859,38 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Sokafy ny endri-javatra rehetra ho an\'ny dianao ara-panahy';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Q&A tsy misy fetran\'ny AI';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Tsy voafetra an-tserasera';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Ampidino ny recitations rehetra';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Designs Exclusive';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Lohahevitra sy endri-tsoratra Premium';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Tsy misy doka';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Dokam-barotra aotra';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess =>
+      'Mahazoa fidirana mandritra ny androm-piainana — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Avereno ny fividianana';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +963,11 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Tonga ny fetran\'ny fangatahana isan\'andro. Hanavao ny Premium ho tsy voafetra.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Tsy afaka namorona valiny aho. Andramo indray azafady.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1108,7 +1109,7 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API tsy voarindra. Miverena any amin\'ny AI eo an-toerana azafady.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -854,38 +854,37 @@ class AppLocalizationsZh extends AppLocalizations {
       '此构建仍然依赖于未经验证的外部圣训提要。在源数据集同步之前，圣训浏览保持禁用状态。';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => '解锁你的精神之旅的所有功能';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => '神经助手增强版';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => '无限的人工智能问答';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => '无限离线';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => '下载所有朗诵';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => '专属设计';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => '高级主题和字体';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => '无广告';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => '零广告';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => '获得终身访问权限 — 1.00 美元';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => '恢复购买';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -957,12 +956,10 @@ class AppLocalizationsZh extends AppLocalizations {
       'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
 
   @override
-  String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+  String get chatbotLimitReached => '已达到每日查询限制。升级至高级版无限制。';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => '我无法生成响应。请再试一次。';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1085,7 +1082,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get bestStreak => '最佳连胜纪录';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => '云端人工智能';
 
   @override
   String get chatbotLocalAiLabel => '离线回退';
@@ -1098,12 +1095,11 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count 左';
   }
 
   @override
-  String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+  String get chatbotCloudNotConfigured => '云 API 未配置。请切换至本地AI。';
 
   @override
   String get chatbotLocalNoInfo => '[离线] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。';
@@ -1998,38 +1994,37 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
       '此构建仍然依赖于未经验证的外部圣训提要。在源数据集同步之前，圣训浏览保持禁用状态。';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => '解锁你的精神之旅的所有功能';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => '神经助手增强版';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => '无限的人工智能问答';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => '无限离线';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => '下载所有朗诵';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => '独家设计';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => '高级主题和字体';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => '无广告';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => '零广告';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => '获得终身访问权限 — 1.00 美元';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => '恢复购买';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -2101,12 +2096,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
       'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
 
   @override
-  String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+  String get chatbotLimitReached => '已达到每日查询限制。升级至高级版无限制。';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => '我无法生成响应。请再试一次。';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -2229,7 +2222,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get bestStreak => '最佳连胜纪录';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => '云端人工智能';
 
   @override
   String get chatbotLocalAiLabel => '离线回退';
@@ -2242,12 +2235,11 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count 左';
   }
 
   @override
-  String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+  String get chatbotCloudNotConfigured => '云 API 未配置。请切换至本地AI。';
 
   @override
   String get chatbotLocalNoInfo => '[离线] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。';
@@ -3142,38 +3134,37 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
       '此構建仍然依賴未經驗證的外部聖訓提要。在來源資料集同步之前，聖訓瀏覽保持停用狀態。';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => '解鎖你的靈性之旅的所有功能';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => '神經助手增強版';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => '無限的人工智慧問答';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => '無限離線';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => '下載所有朗誦';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => '獨家設計';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => '高級主題和字體';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => '無廣告';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => '零廣告';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => '獲得終身存取權 — 1.00 美元';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => '恢復購買';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -3245,12 +3236,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
       'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
 
   @override
-  String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+  String get chatbotLimitReached => '已達到每日查詢限制。升級至高級版無限制。';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => '我無法產生響應。請再試一次。';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -3373,7 +3362,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get bestStreak => '最佳連勝紀錄';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => '雲端人工智慧';
 
   @override
   String get chatbotLocalAiLabel => '離線回退';
@@ -3386,12 +3375,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count 左';
   }
 
   @override
-  String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+  String get chatbotCloudNotConfigured => '雲端 API 未配置。請切換至本地AI。';
 
   @override
   String get chatbotLocalNoInfo => '[離線] 尚未提供經過驗證的當地伊斯蘭指南。切換到 Cloud AI 取得來源答案。';

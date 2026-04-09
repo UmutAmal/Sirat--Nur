@@ -858,38 +858,38 @@ class AppLocalizationsSm extends AppLocalizations {
       'O lenei fausiaina o loʻo faʻalagolago pea i luga o se fafaga hadith fafo e leʻi faʻamaonia. E tumau le fa\'aletonu o su\'esu\'ega o Hadith se\'ia o\'o ina fa\'amaopoopo se fa\'amaumauga.';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => 'Tatala vaega uma mo lau malaga faaleagaga';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Fesoasoani Neural Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'Q&A e leai se gataaga e fa\'amalosia ai le AI';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'E le gata i luga ole Initaneti';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'La\'u mai i lalo tusi faitau uma';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Fuafuaga Fa\'apitoa';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Autu sili & fonuka';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'E leai se fa\'asalalauga';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'leai ni fa\'asalalauga';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Maua Avanoa i le Ola Ola — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Toe Fa\'afo\'i Fa\'atauga';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,11 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Ua ausia le tapula\'a o fesili i aso taitasi. Fa\'afou ile Premium mo le fa\'atapula\'aina.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Sa le mafai ona ou faia se tali. Fa\'amolemole toe taumafai.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1090,7 +1090,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get bestStreak => 'Tulaga sili ona lelei';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Ao AI';
 
   @override
   String get chatbotLocalAiLabel => 'Tu\'u i tua i luga ole laiga';
@@ -1103,12 +1103,12 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count totoe';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API e le\'i fa\'atulagaina. Fa\'amolemole sui ile Local AI.';
 
   @override
   String get chatbotLocalNoInfo =>

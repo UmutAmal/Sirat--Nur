@@ -856,38 +856,37 @@ class AppLocalizationsTi extends AppLocalizations {
       'እዚ ህንጸት ሕጂ ውን ኣብ ዘይተረጋገጸ ናይ ደገ ሓዲስ መግቢ እዩ ዝምርኮስ። ሓዲስ ምድህሳስ ክሳብ ምንጪ ዳታሴት ዝመሳሰል ስንኩል ኮይኑ ይጸንሕ።';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => 'ንመንፈሳዊ ጉዕዞኻ ዝኸውን ኩሉ ባህርያት ክፈት';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'ኒውራል ኣሲስተንት ፕላስ';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'ደረት ኣልቦ ብAI ዝሰርሕ ሕቶን መልስን';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'ደረት ኣልቦ ካብ መስመር ወጻኢ';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'ኩሉ ቅብኣታት ኣውርድዎ።';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'ፍሉያት ዲዛይናት';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'ፕሪምየም ቴማታት & ቅርጺ ፊደላት';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'ካብ ኣድ-ነጻ';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'ዜሮ መወዓውዒታት';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'ናይ ዕድመ ምሉእ ምብጻሕ ረኸብ — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'ዕድጊታት ምምላስ';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -959,12 +958,10 @@ class AppLocalizationsTi extends AppLocalizations {
       'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
 
   @override
-  String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+  String get chatbotLimitReached => 'መዓልታዊ ገደብ ሕቶ በጺሑ። ንዘይተወሰነ ናብ ፕሪምየም ምዕባይ።';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => 'መልሲ ከመንጩ ኣይከኣልኩን። በጃኹም ደጊምኩም ፈትኑ።';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1088,7 +1085,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get bestStreak => 'ዝበለጸ መስርዕ';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'ክላውድ ኤ.ኣይ';
 
   @override
   String get chatbotLocalAiLabel => 'ካብ መስመር ወጻኢ Fallback';
@@ -1106,7 +1103,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'ክላውድ ኤፒኣይ ኣይተዋቕረን። በጃኹም ናብ Local AI ቀይሩ።';
 
   @override
   String get chatbotLocalNoInfo =>

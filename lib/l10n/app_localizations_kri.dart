@@ -857,38 +857,37 @@ class AppLocalizationsKri extends AppLocalizations {
       'Dis bild stil dipen pan wan unverified eksternal hadith fid. Hadith brawzin de disable te dɛn sink wan sɔs datasɛt.';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => 'Unlock ɔl di ficha dɛn fɔ yu spiritual joyn';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Nyural Asisten Plɔs';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Q&A we nɔ gɛt limit wit AI';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Nɔ gɛt limit Ɔflayn';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Daunlod ɔl di rɛsitɛshɔn dɛn';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Dizayn dɛn we Nɔ De Eksklusiv';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Premium tim & font dɛn';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Ad-Fri we nɔ gɛt ɛnitin fɔ du wit am';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Ziro advatayzmɛnt dɛn';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Get Layf Taym Akses — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Ristɔr di tin dɛn we yu bay';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -961,11 +960,11 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Di limit fɔ di kwɛstyɔn dɛn we dɛn kin aks ɛvride dɔn rich. Upgrade to Premium fɔ we nɔ gɛt limit.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'A nɔ bin ebul fɔ jenarayz wan ansa. Duya tray bak.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1089,7 +1088,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get bestStreak => 'Di bɛst streak';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Klaud AI';
 
   @override
   String get chatbotLocalAiLabel => 'Ɔflayn Falbak';
@@ -1102,12 +1101,12 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count lɛf';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Klayd API nɔ kɔnfigyut. Duya, chenj to Lokal AI.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -862,37 +862,37 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Fuasgail a h-uile feart airson do thuras spioradail';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Neach-taic Neural Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Q&A le cumhachd AI gun chrìoch';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Gun chrìoch far loidhne';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Luchdadh a-nuas a h-uile aithris';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Dealbhaidhean sònraichte';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Cuspairean & clòidean Premium';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Saor bho sanasachd';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Sanasan neoni';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Faigh Cothrom Fad-beatha - \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Thoir air ais ceannach';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -965,11 +965,11 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Ràinig crìoch ceist làitheil. Àrdaich gu Premium airson gun chrìoch.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Cha b’ urrainn dhomh freagairt a ghineadh. Feuch ris a-rithist.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1107,12 +1107,12 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return 'Dh’fhalbh $count';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API nach eil air a rèiteachadh. Feuch an atharraich thu gu AI ionadail.';
 
   @override
   String get chatbotLocalNoInfo =>

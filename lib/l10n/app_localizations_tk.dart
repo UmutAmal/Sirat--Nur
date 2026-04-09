@@ -860,37 +860,38 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Ruhy syýahatyňyz üçin ähli aýratynlyklary açyň';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Neýr kömekçisi plýus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'Çäklendirilmedik AI bilen işleýän sorag-jogap';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Çäklendirilmedik oflayn';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Allhli okalanlary göçürip alyň';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Aýratyn dizaýnlar';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Premium mowzuklar we şriftler';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Mahabatsyz';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Nol mahabat';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Ömürboýy giriş - \$ 1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Satyn almagy dikelt';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -963,11 +964,11 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Gündelik talap çäkleri ýetdi. Çäklendirilmedik Premium-a täzeläň.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Men jogap berip bilmedim. Gaýtadan synanyşmagyňyzy haýyş edýäris.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1091,7 +1092,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get bestStreak => 'Iň gowy setir';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Bulut AI';
 
   @override
   String get chatbotLocalAiLabel => 'Oflayn yza gaýtmak';
@@ -1104,12 +1105,12 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count galdy';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API düzülmedi. Localerli AI-e geçmegiňizi haýyş edýäris.';
 
   @override
   String get chatbotLocalNoInfo =>

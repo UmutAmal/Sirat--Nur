@@ -862,37 +862,38 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Разблакіруйце ўсе функцыі для вашага духоўнага падарожжа';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'Неабмежаваная колькасць пытанняў і адказаў на базе AI';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Неабмежаваны аўтаномны рэжым';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Спампаваць усе дэкламацыі';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Эксклюзіўны дызайн';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Прэміум тэмы і шрыфты';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Без рэкламы';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Нуль рэкламы';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Атрымайце пажыццёвы доступ — \$1,00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Аднавіць пакупкі';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -965,11 +966,11 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Дасягнуты дзённы ліміт запытаў. Перайдзіце на прэміум без абмежаванняў.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Я не змог стварыць адказ. Калі ласка, паспрабуйце яшчэ раз.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1094,7 +1095,7 @@ class AppLocalizationsBe extends AppLocalizations {
   String get bestStreak => 'Лепшая серыя';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Воблака AI';
 
   @override
   String get chatbotLocalAiLabel => 'Пазасеткавы рэзервовы варыянт';
@@ -1107,12 +1108,12 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count засталося';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API не наладжаны. Пераключыцеся на мясцовы штучны інтэлект.';
 
   @override
   String get chatbotLocalNoInfo =>

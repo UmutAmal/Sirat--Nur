@@ -859,22 +859,22 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Reserare omnia features pro spirituali itinere';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Neural Suffragium Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'IMMODERATUS AI-Lorem Q &';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Infinitus Offline';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Omnia recitationes';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Exclusiva consilia';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
@@ -883,13 +883,13 @@ class AppLocalizationsLa extends AppLocalizations {
   String get paywallFeature4Title => 'Ad-Free';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Nulla index';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Get Vita Access - \$ 1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Restitue emptionibus';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,11 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Cotidiana quaestionis modum perventum est. Phasellus ut Premium pro illimitata.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Responsum generare non potui. Quaeso, iterum conare.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1090,7 +1090,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get bestStreak => 'series optimus';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Nubes AI';
 
   @override
   String get chatbotLocalAiLabel => 'Offline Fallback';
@@ -1108,7 +1108,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Nubes API non felis. Quaeso switch ad LOCORUM AI.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -859,37 +859,37 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Тамоми хусусиятҳоро барои сафари рӯҳонии худ кушоед';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Саволҳо ва ҷавобҳои бемаҳдуд аз ҷониби AI';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Офлайн бемаҳдуд';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Ҳама қироатҳоро зеркашӣ кунед';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Тарҳҳои истисноӣ';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Мавзӯъҳо ва шрифтҳои олӣ';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Бе реклама';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Рекламаҳои сифр';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Дастрасии якумрӣ гиред - \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Барқарор кардани харидҳо';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,11 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Ба ҳадди ниҳоии дархости ҳаррӯза расид. Барои бемаҳдуд ба Premium навсозӣ кунед.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Ман ҷавоб тавлид карда натавонистам. Лутфан бори дигар кӯшиш кунед.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1090,7 +1090,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get bestStreak => 'Беҳтарин силсила';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Абри AI';
 
   @override
   String get chatbotLocalAiLabel => 'Бозгашти офлайнӣ';
@@ -1103,12 +1103,12 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count чап шуд';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'API Cloud танзим карда нашудааст. Лутфан ба АИ маҳаллӣ гузаред.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -3152,3 +3152,51 @@
 ### Sonraki Adım
 - Sıradaki turda code-referenced kalan yüksek yoğunluklu localization yüzeyleri olan chatbot cloud labels ve paywall feature başlıkları ele alınacak.
 - Rare locale ve loanword davranışı gösteren anahtarlar için sibling fallback ve güvenli EN-reference matrisi ayrı audit olarak sürdürülecek.
+
+## 2026-04-09 TUR-81 — Localize Chatbot Cloud Copy And Paywall Surface
+### Yapılan İşlem
+- Yarım kalan chatbot localization turu güvenli biçimde devralındı; [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force chatbotCloudAiLabel chatbotQueriesLeft paywallFeature1Title paywallFeature1Desc paywallFeature2Title paywallFeature2Desc paywallFeature3Title paywallFeature3Desc paywallFeature4Title paywallFeature4Desc paywallUnlockAll paywallGetAccess restorePurchases` ile çalıştırıldı.
+- Priority locale setinde İngilizce kalan residual yüzeyler elle kapatıldı; özellikle [A:\Way of Allah\sirat_i_nur\lib\l10n\app_da.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_da.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nb.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nb.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nn.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nn.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_no.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_no.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_fr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_fr.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_zh.arb) dosyalarında residual EN başlıklar düzeltildi.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) genişletildi; güvenli priority locale seti için chatbot cloud copy, priority locale seti için paywall copy EN fallback regresyonları kilitlendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart#L78](A:/Way%20of%20Allah/sirat_i_nur/lib/features/chatbot/chatbot_page.dart#L78), [A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart#L101](A:/Way%20of%20Allah/sirat_i_nur/lib/features/chatbot/chatbot_page.dart#L101), [A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart#L103](A:/Way%20of%20Allah/sirat_i_nur/lib/features/chatbot/chatbot_page.dart#L103), [A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart#L167](A:/Way%20of%20Allah/sirat_i_nur/lib/features/chatbot/chatbot_page.dart#L167), [A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart#L212](A:/Way%20of%20Allah/sirat_i_nur/lib/features/chatbot/chatbot_page.dart#L212) üzerindeki chatbot anahtarlarının ve [A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart#L57](A:/Way%20of%20Allah/sirat_i_nur/lib/features/premium/paywall_page.dart#L57), [A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart#L62](A:/Way%20of%20Allah/sirat_i_nur/lib/features/premium/paywall_page.dart#L62), [A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart#L63](A:/Way%20of%20Allah/sirat_i_nur/lib/features/premium/paywall_page.dart#L63), [A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart#L64](A:/Way%20of%20Allah/sirat_i_nur/lib/features/premium/paywall_page.dart#L64), [A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart#L65](A:/Way%20of%20Allah/sirat_i_nur/lib/features/premium/paywall_page.dart#L65), [A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart#L66](A:/Way%20of%20Allah/sirat_i_nur/lib/features/premium/paywall_page.dart#L66), [A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart#L102](A:/Way%20of%20Allah/sirat_i_nur/lib/features/premium/paywall_page.dart#L102), [A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart#L110](A:/Way%20of%20Allah/sirat_i_nur/lib/features/premium/paywall_page.dart#L110) üzerinden okunan paywall anahtarlarının çok sayıda locale’de İngilizce kaldığı doğrulandı.
+- Batch çeviri sonrası güvenli locale residual’ları izole edildi; `chatbotCloudAiLabel` için İskandinav varyantları ve paywall `feature1`/`feature3` başlıklarındaki residual EN yüzeyi ayrı patch ile kapatıldı.
+- `chatbotQueriesLeft` anahtarı için [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tw.arb) hâlâ güvenilir sibling veya resmi referans üretmediği için rare-locale EN-reference olarak bırakıldı; uydurma çeviri eklenmedi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` içindeki chatbot ve paywall anahtarları güncellenen dosyalar
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `chatbotCloudAiLabel` için İngilizce fallback sayısı `195`ten `100`e düştü.
+- `chatbotCloudNotConfigured` için `195`ten `64`e düştü.
+- `chatbotErrorMsg` için `195`ten `64`e düştü.
+- `chatbotLimitReached` için `195`ten `64`e düştü.
+- `chatbotQueriesLeft` için `195`ten `85`e düştü.
+- `paywallFeature1Title` için İngilizce fallback sayısı `196`dan `99`a düştü.
+- `paywallFeature1Desc` için `195`ten `67`ye düştü.
+- `paywallFeature2Title` için `195`ten `73`e düştü.
+- `paywallFeature2Desc` için `195`ten `64`e düştü.
+- `paywallFeature3Title` için `195`ten `65`e düştü.
+- `paywallFeature3Desc` için `195`ten `65`e düştü.
+- `paywallFeature4Title` için `195`ten `71`e düştü.
+- `paywallFeature4Desc` için `195`ten `64`e düştü.
+- `paywallUnlockAll` için `195`ten `64`e düştü.
+- `paywallGetAccess` için `195`ten `65`e düştü.
+- `restorePurchases` için `195`ten `64`e düştü.
+- Güvenli priority locale seti chatbot cloud copy’de, priority locale seti paywall yüzeyinde artık İngilizce fallback göstermiyor.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`9/9`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`189/189`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Chatbot cloud labels and paywall premium copy still falling back to English across the supported surface: `15/25 → 6/25`
+
+### Sonraki Adım
+- Sıradaki turda code-referenced yüksek yoğunluklu localization yüzeyleri içinden rare-locale kalıntıları ve kalan chatbot/paywall EN-reference kümeleri yeniden sınıflandırılacak.
+- Özellikle [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tw.arb) içindeki `chatbotQueriesLeft` ve diğer sibling kaynağı zayıf rare-locale satırları dürüst EN-reference / sibling-fallback matrisine göre ele alınacak.

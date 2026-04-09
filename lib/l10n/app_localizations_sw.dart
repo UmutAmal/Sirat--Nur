@@ -859,37 +859,38 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Fungua vipengele vyote vya safari yako ya kiroho';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Msaidizi wa Neural Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'Maswali na Majibu yanayoendeshwa na AI bila kikomo';
 
   @override
   String get paywallFeature2Title => 'Unlimited Offline';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Pakua vikariri vyote';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Miundo ya Kipekee';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Mandhari na fonti za hali ya juu';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Bila Matangazo';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Matangazo sifuri';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Pata Ufikiaji wa Maisha - \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Rejesha Ununuzi';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +963,10 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Kikomo cha hoja za kila siku kimefikiwa. Pata toleo jipya la Premium kwa ukomo.';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => 'Sikuweza kutoa jibu. Tafadhali jaribu tena.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1103,12 +1103,12 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count imesalia';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'API ya Wingu haijasanidiwa. Tafadhali badilisha hadi AI ya Ndani.';
 
   @override
   String get chatbotLocalNoInfo =>

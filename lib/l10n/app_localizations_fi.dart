@@ -861,37 +861,38 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Avaa kaikki ominaisuudet henkistä matkaasi varten';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Rajoittamaton AI-pohjainen Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Rajoittamaton offline-tila';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Lataa kaikki lausunnot';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Eksklusiiviset mallit';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Ensiluokkaiset teemat ja fontit';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Ilman mainoksia';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Nolla mainoksia';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess =>
+      'Hanki elinikäinen käyttöoikeus – 1,00 dollaria';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Palauta ostokset';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -964,11 +965,10 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Päivittäinen kyselyraja saavutettu. Päivitä Premiumiin rajattomasti.';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => 'En voinut luoda vastausta. Yritä uudelleen.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1092,7 +1092,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get bestStreak => 'Paras putki';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Pilvi AI';
 
   @override
   String get chatbotLocalAiLabel => 'Offline-varaus';
@@ -1105,12 +1105,12 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count lähti';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Pilvisovellusliittymää ei ole määritetty. Vaihda paikalliseen tekoälyyn.';
 
   @override
   String get chatbotLocalNoInfo =>

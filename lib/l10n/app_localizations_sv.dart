@@ -859,38 +859,37 @@ class AppLocalizationsSv extends AppLocalizations {
       'Denna konstruktion beror fortfarande på ett overifierat externt hadithflöde. Hadith-surfning förblir inaktiverad tills en källdatauppsättning synkroniseras.';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => 'Lås upp alla funktioner för din andliga resa';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Obegränsad AI-driven frågor och svar';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Obegränsad offline';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Ladda ner alla recitationer';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Exklusiv design';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Premium teman och typsnitt';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Annonsfri';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Noll reklam';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Få livstidsåtkomst – \$1,00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Återställ inköp';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -963,11 +962,11 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Daglig frågegräns nådd. Uppgradera till Premium för obegränsat.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Jag kunde inte generera ett svar. Försök igen.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1091,7 +1090,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get bestStreak => 'Bästa streak';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Moln AI';
 
   @override
   String get chatbotLocalAiLabel => 'Offline reserv';
@@ -1104,12 +1103,12 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count kvar';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API inte konfigurerat. Byt till lokal AI.';
 
   @override
   String get chatbotLocalNoInfo =>

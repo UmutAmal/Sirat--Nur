@@ -859,37 +859,37 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Mở khóa tất cả các tính năng cho hành trình tâm linh của bạn';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Trợ lý thần kinh Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Hỏi đáp được hỗ trợ bởi AI không giới hạn';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Ngoại tuyến không giới hạn';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Tải về tất cả các bài tụng';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Thiết kế độc quyền';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Chủ đề và phông chữ cao cấp';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Không có quảng cáo';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Không có quảng cáo';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Nhận quyền truy cập trọn đời - \$1,00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Khôi phục mua hàng';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,11 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Đã đạt đến giới hạn truy vấn hàng ngày. Nâng cấp lên Premium không giới hạn.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Tôi không thể tạo ra phản hồi. Vui lòng thử lại.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1090,7 +1090,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get bestStreak => 'Chuỗi tốt nhất';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Đám mây AI';
 
   @override
   String get chatbotLocalAiLabel => 'Dự phòng ngoại tuyến';
@@ -1103,12 +1103,12 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return 'Còn $count';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'API đám mây chưa được định cấu hình. Vui lòng chuyển sang AI cục bộ.';
 
   @override
   String get chatbotLocalNoInfo =>

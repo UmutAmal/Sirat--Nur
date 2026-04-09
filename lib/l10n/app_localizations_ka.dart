@@ -861,37 +861,37 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'გახსენით ყველა ფუნქცია თქვენი სულიერი მოგზაურობისთვის';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'ნერვული ასისტენტი პლუსი';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'ულიმიტო AI-ზე მომუშავე კითხვა-პასუხი';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'შეუზღუდავი ხაზგარეშე';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'ჩამოტვირთეთ ყველა გამოთქმა';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'ექსკლუზიური დიზაინები';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'პრემიუმ თემები და შრიფტები';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'რეკლამის გარეშე';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'ნულოვანი რეკლამა';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'მიიღეთ უვადო წვდომა - \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'შესყიდვების აღდგენა';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -964,11 +964,11 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'მიღწეულია მოთხოვნის ყოველდღიური ლიმიტი. განაახლეთ Premium-ზე შეუზღუდავად.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'პასუხის მოპოვება ვერ მოვახერხე. გთხოვთ, სცადოთ ხელახლა.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1105,12 +1105,12 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count დარჩა';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API არ არის კონფიგურირებული. გთხოვთ გადახვიდეთ ლოკალურ AI-ზე.';
 
   @override
   String get chatbotLocalNoInfo =>

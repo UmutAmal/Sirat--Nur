@@ -859,37 +859,37 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'ປົດລັອກຄຸນສົມບັດທັງໝົດສຳລັບການເດີນທາງທາງວິນຍານຂອງທ່ານ';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'ຖາມ-ຕອບແບບບໍ່ຈຳກັດ AI';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'ອອບໄລນ໌ບໍ່ຈຳກັດ';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'ດາວໂຫຼດການບັນຍາຍທັງໝົດ';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'ການອອກແບບສະເພາະ';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'ຮູບແບບສີສັນພຣີມຽມ ແລະຟອນ';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'ບໍ່ມີໂຄສະນາ';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'ສູນໂຄສະນາ';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'ໄດ້ຮັບການເຂົ້າເຖິງຕະຫຼອດຊີວິດ — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'ຟື້ນຟູການຊື້';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,10 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'ຮອດຂີດຈຳກັດການສອບຖາມປະຈຳວັນແລ້ວ. ອັບເກຣດເປັນ Premium ແບບບໍ່ຈຳກັດ.';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => 'ຂ້ອຍບໍ່ສາມາດສ້າງຄໍາຕອບໄດ້. ກະລຸນາລອງອີກຄັ້ງ.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1103,12 +1102,12 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count ຊ້າຍ';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API ບໍ່ໄດ້ຕັ້ງຄ່າ. ກະລຸນາປ່ຽນເປັນ AI ທ້ອງຖິ່ນ.';
 
   @override
   String get chatbotLocalNoInfo =>

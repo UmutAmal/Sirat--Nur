@@ -860,37 +860,39 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Imala hafuuraa keessaniif amaloota hunda banaa';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Gargaaraa Niwuroonii Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'Gaaffii fi Deebii AIn humna qabu daangaa hin qabne';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Daangaa Hin Qabne Toora Alaa';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Dubbii hunda buufadhaa';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Dizaayinoota Addaa';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc =>
+      'Mata dureewwanii fi qubeewwan gatii olaanaa qaban';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Beeksisa irraa bilisa ta\'e';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Beeksisa zeeroo';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Jireenya Guutuu Argachuu — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Bittaa Deebisuu';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -963,11 +965,11 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Daangaan gaaffii guyyaa guyyaa irra gahe. Daangaa hin qabneef gara Premium tti ol guddifadhaa.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Deebii maddisiisuu hin dandeenye. Mee irra deebi\'ii yaalaa.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1109,7 +1111,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'API duumessaa hin qindaa\'in. Mee gara Local AI tti jijjiiraa.';
 
   @override
   String get chatbotLocalNoInfo =>

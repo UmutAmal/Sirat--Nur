@@ -859,37 +859,37 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Avage oma vaimseks teekonnaks kõik funktsioonid';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Piiramatu AI-toega Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Piiramatu võrguühenduseta';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Laadige alla kõik ettekanded';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Eksklusiivsed kujundused';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Esmaklassilised teemad ja fondid';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Reklaamivaba';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Null reklaami';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Hankige eluaegne juurdepääs – 1,00 \$';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Taasta ostud';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,11 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Päevane päringu limiit on täis. Minge üle Premiumile piiramatult.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Ma ei saanud vastust luua. Palun proovi uuesti.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1090,7 +1090,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get bestStreak => 'Parim seeria';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Pilve AI';
 
   @override
   String get chatbotLocalAiLabel => 'Võrguühenduseta tagavara';
@@ -1103,12 +1103,12 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count lahkus';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API pole konfigureeritud. Lülituge kohalikule AI-le.';
 
   @override
   String get chatbotLocalNoInfo =>

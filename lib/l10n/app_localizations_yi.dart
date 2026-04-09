@@ -859,37 +859,37 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'ופשליסן אַלע פֿעיִקייטן פֿאַר דיין רוחניות נסיעה';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'נעוראַל אַססיסטאַנט פּלוס';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'אַנלימאַטאַד AI-Powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'אַנלימאַטאַד אָפפלינע';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'אָפּלאָדירן אַלע רעסיטאַטיאָנס';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'ויסשליסיק דיזיינז';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'פּרעמיום טעמעס און פאַנץ';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'אַד-פריי';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'נול אַדווערטייזמאַנץ';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'באַקומען לעבן אַקסעס - \$ 1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'ומקערן פּערטשאַסאַז';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,11 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'טעגלעך אָנפֿרעג לימיט ריטשט. אַפּגרייד צו פּרעמיום פֿאַר אַנלימאַטאַד.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'איך קען נישט געבן אַ ענטפער. ביטע פּרוּווט ווידער.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1090,7 +1090,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get bestStreak => 'Best streak';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'וואָלקן אַי';
 
   @override
   String get chatbotLocalAiLabel => 'אָפפלינע פאַלבאַקק';
@@ -1103,12 +1103,12 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count לינקס';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'וואָלקן אַפּי ניט קאַנפיגיערד. ביטע באַשטימען צו לאקאלע אַי.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -863,37 +863,37 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'I-unlock ang lahat ng feature para sa iyong espirituwal na paglalakbay';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Walang limitasyong AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Walang limitasyong Offline';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'I-download ang lahat ng recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Mga Eksklusibong Disenyo';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Mga premium na tema at font';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Walang Ad';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Zero advertisement';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Kumuha ng Panghabambuhay na Access — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Ibalik ang Mga Pagbili';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -966,11 +966,11 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Naabot na ang limitasyon sa pang-araw-araw na query. Mag-upgrade sa Premium para sa unlimited.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Hindi ako makabuo ng tugon. Pakisubukang muli.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1107,12 +1107,12 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count ang natitira';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Hindi na-configure ang Cloud API. Mangyaring lumipat sa Local AI.';
 
   @override
   String get chatbotLocalNoInfo =>

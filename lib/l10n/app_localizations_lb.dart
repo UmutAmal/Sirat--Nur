@@ -858,38 +858,37 @@ class AppLocalizationsLb extends AppLocalizations {
       'Dëse Bau hänkt nach vun engem onverifizéierten externen Hadith Feed of. Hadith Surfen bleift behënnert bis e sourced Dataset synchroniséiert ass.';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => 'Spär all Feature fir Är spirituell Rees';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Onlimitéiert AI-ugedriwwen Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Onlimitéiert Offline';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Download all Recitatiounen';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Exklusiv Designs';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Premium Themen & Schrëften';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Annonce-gratis';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Null Annoncen';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Kritt Liewensdauer Zougang - \$ 1,00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Restauréieren Akeef';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +961,11 @@ class AppLocalizationsLb extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Deeglech Ufro Limit erreecht. Upgrade op Premium fir onlimitéiert.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Ech konnt keng Äntwert generéieren. Probéiert w.e.g. nach eng Kéier.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1103,12 +1102,12 @@ class AppLocalizationsLb extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count lénks';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API net konfiguréiert. Schalt w.e.g. op Lokal AI.';
 
   @override
   String get chatbotLocalNoInfo =>

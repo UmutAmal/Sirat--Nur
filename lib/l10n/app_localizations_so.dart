@@ -859,37 +859,37 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Fur dhammaan sifooyinka safarkaaga ruuxiga ah';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Kaaliyaha Neural Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Q&A aan xadidnayn oo AI ku shaqeeya';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Aan xad lahayn';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Soo deji dhammaan akhrinta';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Naqshado Gaar ah';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Mowduucyada qiimaha leh & xarfaha';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Xayeysiis bilaasha';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'eber xayaysiis';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Helitaanka nolosha - \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Soo Celinta Iibka';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,10 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Xadka weydiinta maalinlaha ah ayaa la gaarey U cusboonaysii Premium si aan xadidnayn.';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => 'Jawaab ma dhalin. Fadlan isku day mar kale';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1108,7 +1107,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API ma habaysan Fadlan u beddel AI Local.';
 
   @override
   String get chatbotLocalNoInfo =>

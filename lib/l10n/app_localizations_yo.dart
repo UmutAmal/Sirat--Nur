@@ -858,38 +858,37 @@ class AppLocalizationsYo extends AppLocalizations {
       'Kọ yii tun da lori ifunni hadith ita ti a ko rii daju. Lilọ kiri ayelujara Hadith duro ni alaabo titi ti ipilẹ data ti o ti muṣiṣẹpọ.';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => 'Ṣii gbogbo awọn ẹya fun irin-ajo ti ẹmi rẹ';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Oluranlọwọ nkankikan Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Q&A ailopin AI-agbara';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Aisinipo ailopin';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Ṣe igbasilẹ gbogbo awọn kika';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Iyasoto Awọn aṣa';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Awọn akori Ere & awọn akọwe';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Ipolowo-ọfẹ';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Awọn ipolowo odo';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Gba Wiwọle Igba aye - \$ 1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Pada Awọn rira pada';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +961,11 @@ class AppLocalizationsYo extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Opin ibeere ojoojumọ ti de. Igbesoke si Ere fun ailopin.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Emi ko le ṣe ipilẹṣẹ esi. Jọwọ gbiyanju lẹẹkansi.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1090,7 +1089,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get bestStreak => 'Best streak';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Awọsanma AI';
 
   @override
   String get chatbotLocalAiLabel => 'Aisinipo Fallback';
@@ -1103,12 +1102,12 @@ class AppLocalizationsYo extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count osi';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'API awọsanma ko tunto. Jọwọ yipada si AI Agbegbe.';
 
   @override
   String get chatbotLocalNoInfo =>

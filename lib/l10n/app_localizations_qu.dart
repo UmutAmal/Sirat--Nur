@@ -861,37 +861,37 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Espiritual puriyniykipaq llapa ruwaykunata kichay';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Yanapakuq Neural Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Mana k\'itiyuq AI-wan kallpachasqa Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Mana k\'uchuyuq Mana tinkisqa';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Llapan recitacionkunata uraykachiy';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Diseños Exclusivos nisqakuna';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Temas & fuentes premium nisqa';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Mana Anuncioyuq';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Cero nisqa willakuykunata';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Kawsay pacha Yaykuna tariy — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Rantisqakunata kutichiy';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -964,11 +964,11 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Sapa punchaw tapukuypa limite nisqaman chayasqa. Premium kaqman yapay mana k\'uchuyuq kaqpaq.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Manam kutichiyta paqarichiyta atirqanichu. Ama hina kaspa, hukmanta kallpachakuy.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1093,7 +1093,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get bestStreak => 'Aswan allin racha';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Puyu AI';
 
   @override
   String get chatbotLocalAiLabel => 'Mana tinkisqa Fallback';
@@ -1111,7 +1111,7 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Puyu API mana wakichisqachu. Ama hina kaspa, Local AI nisqaman tikray.';
 
   @override
   String get chatbotLocalNoInfo =>

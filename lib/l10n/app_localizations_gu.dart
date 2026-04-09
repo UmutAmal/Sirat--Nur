@@ -858,37 +858,37 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'તમારી આધ્યાત્મિક યાત્રા માટે તમામ સુવિધાઓને અનલૉક કરો';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'ન્યુરલ આસિસ્ટન્ટ પ્લસ';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'અમર્યાદિત AI સંચાલિત Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'અમર્યાદિત ઑફલાઇન';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'તમામ પાઠો ડાઉનલોડ કરો';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'વિશિષ્ટ ડિઝાઇન્સ';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'પ્રીમિયમ થીમ્સ અને ફોન્ટ્સ';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'જાહેરાત-મુક્ત';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'શૂન્ય જાહેરાતો';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'આજીવન ઍક્સેસ મેળવો - \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'ખરીદીઓ પુનઃસ્થાપિત કરો';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -961,11 +961,11 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'દૈનિક ક્વેરી મર્યાદા પહોંચી. અમર્યાદિત માટે પ્રીમિયમ પર અપગ્રેડ કરો.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'હું પ્રતિભાવ જનરેટ કરી શક્યો નથી. કૃપા કરીને ફરી પ્રયાસ કરો.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1089,7 +1089,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get bestStreak => 'શ્રેષ્ઠ દોર';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'ક્લાઉડ AI';
 
   @override
   String get chatbotLocalAiLabel => 'ઑફલાઇન ફોલબેક';
@@ -1102,12 +1102,12 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count બાકી';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API ગોઠવેલ નથી. કૃપા કરીને સ્થાનિક AI પર સ્વિચ કરો.';
 
   @override
   String get chatbotLocalNoInfo =>

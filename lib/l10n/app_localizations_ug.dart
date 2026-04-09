@@ -860,37 +860,38 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'مەنىۋى سەپىرىڭىزنىڭ بارلىق ئىقتىدارلىرىنى ئېچىڭ';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'نېرۋا ياردەمچىسى';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'چەكلىمىسىز سۈنئىي ئەقىل ئارقىلىق سوئال-جاۋاب';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'چەكسىز تور';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'بارلىق قىرائەتلەرنى چۈشۈرۈڭ';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'ئالاھىدە لايىھە';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'ئەلا ئۇسلۇب ۋە خەت نۇسخىسى';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'ئېلانسىز';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'نۆل ئېلان';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'ئۆمۈرلۈك زىيارەتكە ئېرىشىش - 1.00 دوللار';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'سېتىۋېلىشنى ئەسلىگە كەلتۈرۈش';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -963,11 +964,10 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'كۈندىلىك سوئال چېكىگە يەتتى. چەكلىمىسىز Premium غا يېڭىلاش.';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => 'مەن جاۋاب بېرەلمىدىم. قايتا سىناڭ.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1104,12 +1104,12 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count قالدى';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API سەپلەنمىگەن. يەرلىك سۈنئىي ئەقىلگە ئالماشتۇرۇڭ.';
 
   @override
   String get chatbotLocalNoInfo =>

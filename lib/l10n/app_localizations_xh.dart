@@ -858,8 +858,7 @@ class AppLocalizationsXh extends AppLocalizations {
       'Olu lwakhiwo kusaxhomekeke kwi feed hadith engangqinisiswanga yangaphandle. Ukhangelo lweHadith luhlala luvaliwe de idataset efunyenweyo ingqanyaniswe.';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => 'Vula zonke iimpawu zohambo lwakho lokomoya';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -871,25 +870,25 @@ class AppLocalizationsXh extends AppLocalizations {
   String get paywallFeature2Title => 'Unlimited Offline';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Khuphela zonke izicengcelezo';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Uyilo oluKhethekileyo';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'imixholo Premium & iifonti';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'AyinaNtengiso';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Iintengiso zero';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Fumana Access Lifetime — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Buyisela Ukuthenga';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +961,11 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Imida yombuzo wemihla ngemihla ifikelelwe. Nyukela kwiNtlawulo yaNyanga le ungasikelwanga mda.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Andikwazanga ukwenza impendulo. Nceda zama kwakhona.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1105,12 +1104,12 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count umkile';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API ayimiselwanga. Nceda utshintshele kwi-AI yasekuhlaleni.';
 
   @override
   String get chatbotLocalNoInfo =>

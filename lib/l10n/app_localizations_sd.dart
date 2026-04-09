@@ -858,38 +858,37 @@ class AppLocalizationsSd extends AppLocalizations {
       'هي تعمير اڃا تائين اڻ تصديق ٿيل خارجي حديث فيڊ تي منحصر آهي. حديث برائوزنگ غير فعال رهي ٿي جيستائين هڪ sourced dataset کي هم وقت نه ڪيو وڃي.';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => 'پنھنجي روحاني سفر لاءِ سڀ خصوصيتون کوليو';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'نيورل اسسٽنٽ پلس';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'لامحدود AI-طاقتور سوال ۽ جواب';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'لامحدود آف لائن';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'سڀ تلاوت ڊائون لوڊ ڪريو';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'خاص ڊيزائن';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'پريميئم موضوع ۽ فونٽ';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'اشتهارن کان آزاد';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'صفر اشتهار';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'لائف ٽائيم رسائي حاصل ڪريو - \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'خريداري بحال ڪريو';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +961,11 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'روزاني سوال جي حد تائين پهچي ويو. لامحدود لاءِ پريميئم ۾ اپڊيٽ ڪريو.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'مان جواب نه ڏئي سگهيو آهيان. مهرباني ڪري ٻيهر ڪوشش ڪريو.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1103,12 +1102,12 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count ڇڏي ويو';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API ترتيب نه ڏني وئي. مھرباني ڪري مقامي AI ڏانھن وڃو.';
 
   @override
   String get chatbotLocalNoInfo =>

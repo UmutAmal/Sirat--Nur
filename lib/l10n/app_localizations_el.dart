@@ -862,37 +862,38 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Ξεκλειδώστε όλες τις δυνατότητες για το πνευματικό σας ταξίδι';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'Απεριόριστες ερωτήσεις και απαντήσεις με τεχνητή νοημοσύνη';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Απεριόριστα εκτός σύνδεσης';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Κατεβάστε όλες τις απαγγελίες';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Αποκλειστικά σχέδια';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Premium θέματα και γραμματοσειρές';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Χωρίς διαφημίσεις';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Μηδενικές διαφημίσεις';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Αποκτήστε Lifetime Access — 1,00 \$';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Επαναφορά αγορών';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -965,11 +966,11 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Συμπληρώθηκε το ημερήσιο όριο ερωτημάτων. Αναβάθμιση σε Premium για απεριόριστο αριθμό.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Δεν μπόρεσα να δημιουργήσω απάντηση. Δοκιμάστε ξανά.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1108,12 +1109,12 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return 'Απομένει $count';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Το Cloud API δεν έχει διαμορφωθεί. Μεταβείτε στο Τοπικό AI.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -858,38 +858,38 @@ class AppLocalizationsMn extends AppLocalizations {
       'Энэ бүтэц нь батлагдаагүй гадны хадис тэжээлээс хамааралтай хэвээр байна. Эх сурвалжийн өгөгдлийн багцыг синк хийх хүртэл Хадис үзэх нь идэвхгүй хэвээр байна.';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => 'Сүнслэг аялалынхаа бүх функцийг нээ';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'Хязгааргүй хиймэл оюун ухаанаар ажилладаг асуулт, хариулт';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Хязгааргүй офлайн';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Бүх уншлагыг татаж авах';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Онцгой загварууд';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Дээд зэрэглэлийн загвар ба фонтууд';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Зар сурталчилгаагүй';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Зар сурталчилгаа байхгүй';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Насан туршийн хандалт авах — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Худалдан авалтыг сэргээх';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,11 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Өдөр тутмын асуулгын хязгаарт хүрсэн. Хязгааргүй төлбөртэйгээр Premium руу шинэчилнэ үү.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Би хариулт үүсгэж чадсангүй. Дахин оролдоно уу.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1090,7 +1090,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get bestStreak => 'Шилдэг цуврал';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Үүлэн AI';
 
   @override
   String get chatbotLocalAiLabel => 'Offline Fallback';
@@ -1103,12 +1103,12 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count үлдсэн';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API-г тохируулаагүй байна. Орон нутгийн хиймэл оюун ухаан руу шилжинэ үү.';
 
   @override
   String get chatbotLocalNoInfo =>

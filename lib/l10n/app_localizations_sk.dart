@@ -860,37 +860,37 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Odomknite všetky funkcie pre svoju duchovnú cestu';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Neobmedzené otázky a odpovede poháňané AI';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Neobmedzený režim offline';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Stiahnite si všetky recitácie';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Exkluzívne vzory';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Prémiové motívy a písma';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Bez reklám';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Nulové reklamy';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Získajte doživotný prístup – 1,00 USD';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Obnoviť nákupy';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -963,11 +963,11 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Dosiahli ste denný limit dopytov. Inovujte na Premium neobmedzene.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Nepodarilo sa mi vygenerovať odpoveď. Skúste to znova.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1104,12 +1104,12 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return 'Zostáva $count';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API nie je nakonfigurované. Prepnite na lokálnu AI.';
 
   @override
   String get chatbotLocalNoInfo =>

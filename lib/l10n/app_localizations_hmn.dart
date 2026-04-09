@@ -861,7 +861,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Xauv tag nrho cov yam ntxwv rau koj txoj kev mus rau sab ntsuj plig';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -873,25 +873,26 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get paywallFeature2Title => 'Unlimited Offline';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Download tau tag nrho cov lus qhia';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Tshwj xeeb tsim';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Hwm ntxhais & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Ad-dawb';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Zero tshaj tawm';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess =>
+      'Tau Txais Kev Nkag Mus Rau Lub Neej - \$ 1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Rov qab kev yuav khoom';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -964,11 +965,11 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Cov lus nug txhua hnub mus txog qhov txwv. Hloov kho mus rau Premium tsis txwv.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Kuv tsis tuaj yeem tsim cov lus teb. Thov rov sim dua.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1092,7 +1093,7 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get bestStreak => 'Qhov zoo tshaj plaws streak';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Huab AI';
 
   @override
   String get chatbotLocalAiLabel => 'Offline Fallback';
@@ -1105,12 +1106,12 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count sab laug';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API tsis tau teeb tsa. Thov hloov mus rau Local AI.';
 
   @override
   String get chatbotLocalNoInfo =>

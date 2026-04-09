@@ -862,37 +862,38 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Deblocați toate funcțiile pentru călătoria voastră spirituală';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'Întrebări și răspunsuri nelimitate bazate pe inteligență artificială';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Offline nelimitat';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Descărcați toate recitațiile';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Designuri exclusive';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Teme și fonturi premium';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Fără reclame';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Zero reclame';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Obțineți acces pe viață - 1,00 USD';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Restabiliți achizițiile';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -965,11 +966,11 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Limita zilnică de interogări a fost atinsă. Faceți upgrade la Premium pentru nelimitat.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Nu am putut genera un răspuns. Vă rugăm să încercați din nou.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1107,12 +1108,12 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count a rămas';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API nu este configurat. Treceți la AI local.';
 
   @override
   String get chatbotLocalNoInfo =>

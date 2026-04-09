@@ -864,7 +864,7 @@ class AppLocalizationsTr extends AppLocalizations {
       'Ruhsal yolculuğunuz için tüm özellikleri açın';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Nöral Asistan Plus';
 
   @override
   String get paywallFeature1Desc => 'Sınırsız yapay zeka destekli soru-cevap';

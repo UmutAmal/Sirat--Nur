@@ -859,37 +859,37 @@ class AppLocalizationsJv extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Mbukak kunci kabeh fitur kanggo perjalanan spiritual sampeyan';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Asisten Neural Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Q&A sing didhukung AI tanpa wates';
 
   @override
   String get paywallFeature2Title => 'Unlimited Offline';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Download kabeh wacan';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Desain Eksklusif';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Tema & font premium';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Bebas Iklan';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Iklan nol';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'Entuk Akses Seumur Hidup — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Mulihake Tuku';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +962,10 @@ class AppLocalizationsJv extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Watesan pitakon saben dina tekan. Nganyarke menyang Premium tanpa watesan.';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => 'Aku ora bisa ngasilake respon. Coba maneh.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1090,7 +1089,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get bestStreak => 'streak paling apik';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Awan AI';
 
   @override
   String get chatbotLocalAiLabel => 'Offline Mundur';
@@ -1108,7 +1107,7 @@ class AppLocalizationsJv extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API ora dikonfigurasi. Mangga ngalih menyang AI Lokal.';
 
   @override
   String get chatbotLocalNoInfo =>

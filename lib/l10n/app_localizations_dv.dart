@@ -862,37 +862,39 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'ތިބާގެ ރޫޙާނީ ދަތުރަށް ހުރިހާ ފީޗާސްތަކެއް އަންލޮކް ކޮށްލާށެވެ';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'ނިއުރަލް އެސިސްޓެންޓް ޕްލަސް އެވެ';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'އަންލިމިޓެޑް އެއައި ޕަވަރޑް ކިއު އެންޑް އޭ';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'އަންލިމިޓެޑް އޮފްލައިން';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc =>
+      'ހުރިހާ ކިޔެވުމެއް ޑައުންލޯޑް ކޮށްލައްވާށެވެ';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'އެކްސްކްލޫސިވް ޑިޒައިންސް';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'ޕްރީމިއަމް ތީމްސް & ފޮންޓްސް';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'އެޑް-ފްރީ އެވެ';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'އިޝްތިހާރު ޒީރޯ';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'ލައިފްޓައިމް އެކްސެސް ހޯދުން — \$1.00';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'ޕަރޗޭސްސް ރިސްޓޯރ ކުރުން';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -965,11 +967,11 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'ދުވާލަކު ސުވާލު ކުރާ ލިމިޓަށް ވާސިލްވެއްޖެ. އަންލިމިޓެޑް އަށް ޕްރީމިއަމް އަށް އަޕްގްރޭޑް ކުރުން.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'އަހަންނަށް ޖަވާބެއް ޖެނެރޭޓް ނުކުރެވުނެވެ. އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1094,7 +1096,7 @@ class AppLocalizationsDv extends AppLocalizations {
   String get bestStreak => 'އެންމެ ރަނގަޅު ސްޓްރީކް';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'ކްލައުޑް އެއައި';
 
   @override
   String get chatbotLocalAiLabel => 'އޮފްލައިން ފޯލްބެކް';
@@ -1107,12 +1109,12 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count ދޫކޮށްލާށެވެ';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'ކްލައުޑް އެޕީއައި ކޮންފިގްރޭޓް ނުކުރެވެއެވެ. ލޯކަލް އެއައި އަށް ބަދަލުވުން އެދެމެވެ.';
 
   @override
   String get chatbotLocalNoInfo =>

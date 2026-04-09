@@ -859,37 +859,38 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+      'Atrakinkite visas dvasinės kelionės funkcijas';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc => 'Neribotas AI varomas klausimų ir atsakymų';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Neribotas neprisijungus';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'Parsisiųsti visas deklamacijas';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Išskirtiniai dizainai';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'Aukščiausios kokybės temos ir šriftai';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Be skelbimų';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'Nulis reklamos';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess =>
+      'Gaukite visą gyvenimą trunkančią prieigą – 1,00 USD';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'Atkurti pirkinius';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -962,11 +963,11 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'Pasiektas dienos užklausų limitas. Naujovinkite į „Premium“ ir neribokite.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'Negalėjau sugeneruoti atsakymo. Bandykite dar kartą.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1091,7 +1092,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get bestStreak => 'Geriausia serija';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'Debesis AI';
 
   @override
   String get chatbotLocalAiLabel => 'Atsarginis režimas neprisijungus';
@@ -1105,12 +1106,12 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count liko';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Cloud API nesukonfigūruota. Perjunkite į vietinį AI.';
 
   @override
   String get chatbotLocalNoInfo =>

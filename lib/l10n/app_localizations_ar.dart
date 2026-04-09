@@ -859,38 +859,38 @@ class AppLocalizationsAr extends AppLocalizations {
       'لا يزال هذا البناء يعتمد على خلاصة حديث خارجية لم يتم التحقق منها. يظل تصفح الحديث معطلاً حتى تتم مزامنة مجموعة البيانات المصدر.';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => 'افتح جميع الميزات لرحلتك الروحية';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'المساعد العصبي بلس';
 
   @override
-  String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
+  String get paywallFeature1Desc =>
+      'أسئلة وأجوبة غير محدودة مدعومة بالذكاء الاصطناعي';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'غير محدود غير متصل';
 
   @override
-  String get paywallFeature2Desc => 'Download all recitations';
+  String get paywallFeature2Desc => 'تحميل جميع التلاوات';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'تصاميم حصرية';
 
   @override
-  String get paywallFeature3Desc => 'Premium themes & fonts';
+  String get paywallFeature3Desc => 'السمات والخطوط المتميزة';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'خالية من الإعلانات';
 
   @override
-  String get paywallFeature4Desc => 'Zero advertisements';
+  String get paywallFeature4Desc => 'صفر إعلانات';
 
   @override
-  String get paywallGetAccess => 'Get Lifetime Access — \$1.00';
+  String get paywallGetAccess => 'احصل على وصول مدى الحياة - 1.00 دولار';
 
   @override
-  String get restorePurchases => 'Restore Purchases';
+  String get restorePurchases => 'استعادة المشتريات';
 
   @override
   String get zakatCalculator => 'Zakat Calculator';
@@ -963,11 +963,11 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+      'تم الوصول إلى حد الاستعلام اليومي. الترقية إلى Premium لعدد غير محدود.';
 
   @override
   String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+      'لم أتمكن من توليد الرد. يرجى المحاولة مرة أخرى.';
 
   @override
   String get chatbotOfflinePrompt =>
@@ -1091,7 +1091,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get bestStreak => 'أفضل خط';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'سحابة الذكاء الاصطناعي';
 
   @override
   String get chatbotLocalAiLabel => 'احتياطي دون اتصال';
@@ -1104,12 +1104,12 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String chatbotQueriesLeft(String count) {
-    return '$count left';
+    return '$count اليسار';
   }
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'لم يتم تكوين Cloud API. يرجى التبديل إلى الذكاء الاصطناعي المحلي.';
 
   @override
   String get chatbotLocalNoInfo =>
