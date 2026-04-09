@@ -1050,7 +1050,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get chatbotThinking => 'Thinking...';
 
   @override
-  String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
+  String get sukunMixerSubtitle => 'Natura & Qur\'an Mixer';
 
   @override
   String get audioPlayFailed => 'Audio playback failed';
@@ -1059,23 +1059,23 @@ class AppLocalizationsLa extends AppLocalizations {
   String get sukunNatureLabel => 'Sukun (Nature)';
 
   @override
-  String get sukunRainOfMercy => 'Rain of Mercy';
+  String get sukunRainOfMercy => 'Pluvia Misericordiae';
 
   @override
-  String get sukunGardenOfPeace => 'Garden of Peace';
+  String get sukunGardenOfPeace => 'Hortus pacis';
 
   @override
-  String get sukunMidnightCalm => 'Midnight Calm';
+  String get sukunMidnightCalm => 'Mediae Tranquillae';
 
   @override
-  String get sukunOceanTawheed => 'Ocean Tawheed';
+  String get sukunOceanTawheed => 'Oceanus Tawheed';
 
   @override
   String get sukunUnavailableTitle => 'Soundscapes unavailable';
 
   @override
   String get sukunUnavailableBody =>
-      'This build does not include the required Sukun soundscape assets yet.';
+      'Hoc constructum Sukun soundscape bona nondum requiritur.';
 
   @override
   String get prayerCompletion => 'Prayer Completion';

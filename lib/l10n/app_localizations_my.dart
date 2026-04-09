@@ -1053,32 +1053,32 @@ class AppLocalizationsMy extends AppLocalizations {
   String get chatbotThinking => 'Thinking...';
 
   @override
-  String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
+  String get sukunMixerSubtitle => 'သဘာဝနှင့် ကုရ်အာန် ရောသမမွှေပါ။';
 
   @override
   String get audioPlayFailed => 'Audio playback failed';
 
   @override
-  String get sukunNatureLabel => 'Sukun (Nature)';
+  String get sukunNatureLabel => 'Sukun (သဘာဝ)';
 
   @override
-  String get sukunRainOfMercy => 'Rain of Mercy';
+  String get sukunRainOfMercy => 'ကရုဏာမိုး';
 
   @override
-  String get sukunGardenOfPeace => 'Garden of Peace';
+  String get sukunGardenOfPeace => 'ငြိမ်းချမ်းရေးဥယျာဉ်';
 
   @override
-  String get sukunMidnightCalm => 'Midnight Calm';
+  String get sukunMidnightCalm => 'ညသန်းခေါင် အေးချမ်းပါစေ။';
 
   @override
-  String get sukunOceanTawheed => 'Ocean Tawheed';
+  String get sukunOceanTawheed => 'သမုဒ္ဒယာသောင်ဟီးဒ်';
 
   @override
-  String get sukunUnavailableTitle => 'Soundscapes unavailable';
+  String get sukunUnavailableTitle => 'အသံထွက်များ မရနိုင်ပါ။';
 
   @override
   String get sukunUnavailableBody =>
-      'This build does not include the required Sukun soundscape assets yet.';
+      'ဤတည်ဆောက်မှုတွင် လိုအပ်သော Sukun soundscape ပိုင်ဆိုင်မှုများ မပါဝင်သေးပါ။';
 
   @override
   String get prayerCompletion => 'Prayer Completion';

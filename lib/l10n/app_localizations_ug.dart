@@ -842,7 +842,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get islamicEducation => 'ئىسلام مائارىپى';
 
   @override
-  String get sukunAudioTitle => 'Sukun Soundscapes';
+  String get sukunAudioTitle => 'Sukun Soundscape';
 
   @override
   String get hadithCollections => 'ھەدىس توپلىمى';
@@ -1051,19 +1051,19 @@ class AppLocalizationsUg extends AppLocalizations {
   String get chatbotThinking => 'Thinking...';
 
   @override
-  String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
+  String get sukunMixerSubtitle => 'تەبىئەت ۋە قۇرئان ئارىلاشتۇرغۇچى';
 
   @override
   String get audioPlayFailed => 'Audio playback failed';
 
   @override
-  String get sukunNatureLabel => 'Sukun (Nature)';
+  String get sukunNatureLabel => 'سۇكۇن (تەبىئەت)';
 
   @override
-  String get sukunRainOfMercy => 'Rain of Mercy';
+  String get sukunRainOfMercy => 'رەھىم يامغۇر';
 
   @override
-  String get sukunGardenOfPeace => 'Garden of Peace';
+  String get sukunGardenOfPeace => 'تىنچلىق باغچىسى';
 
   @override
   String get sukunMidnightCalm => 'Midnight Calm';
@@ -1072,11 +1072,11 @@ class AppLocalizationsUg extends AppLocalizations {
   String get sukunOceanTawheed => 'Ocean Tawheed';
 
   @override
-  String get sukunUnavailableTitle => 'Soundscapes unavailable';
+  String get sukunUnavailableTitle => 'ئاۋازلىق كۆرۈنۈشنى ئىشلەتكىلى بولمايدۇ';
 
   @override
   String get sukunUnavailableBody =>
-      'This build does not include the required Sukun soundscape assets yet.';
+      'بۇ قۇرۇلۇش تېخى تەلەپ قىلىنغان سۇكۇن ئاۋازلىق كۆرۈنۈش مۈلۈكلىرىنى ئۆز ئىچىگە ئالمايدۇ.';
 
   @override
   String get prayerCompletion => 'Prayer Completion';

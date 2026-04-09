@@ -844,7 +844,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get islamicEducation => 'Tekombo’e Islámica rehegua';
 
   @override
-  String get sukunAudioTitle => 'Sukun Soundscapes';
+  String get sukunAudioTitle => 'Sukun Paisajes Sonidos rehegua';
 
   @override
   String get hadithCollections => 'Hadith Ñembyatykuéra';
@@ -1054,32 +1054,32 @@ class AppLocalizationsGn extends AppLocalizations {
   String get chatbotThinking => 'Thinking...';
 
   @override
-  String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
+  String get sukunMixerSubtitle => 'Naturaleza & Corán Mezclador rehegua';
 
   @override
   String get audioPlayFailed => 'Audio playback failed';
 
   @override
-  String get sukunNatureLabel => 'Sukun (Nature)';
+  String get sukunNatureLabel => 'Sukun (Tekoha) .';
 
   @override
-  String get sukunRainOfMercy => 'Rain of Mercy';
+  String get sukunRainOfMercy => 'Ama Misericordia rehegua';
 
   @override
-  String get sukunGardenOfPeace => 'Garden of Peace';
+  String get sukunGardenOfPeace => 'Yvotyty Py’aguapy rehegua';
 
   @override
-  String get sukunMidnightCalm => 'Midnight Calm';
+  String get sukunMidnightCalm => 'Pyharepyte Py’aguapy';
 
   @override
-  String get sukunOceanTawheed => 'Ocean Tawheed';
+  String get sukunOceanTawheed => 'Océano Tawheed rehegua';
 
   @override
-  String get sukunUnavailableTitle => 'Soundscapes unavailable';
+  String get sukunUnavailableTitle => 'Umi paisaje sonoro ndojeguerekói';
 
   @override
   String get sukunUnavailableBody =>
-      'This build does not include the required Sukun soundscape assets yet.';
+      'Ko construcción ndoikéiva gueteri umi activo paisaje sonoro Sukun oñeikotevëva.';
 
   @override
   String get prayerCompletion => 'Prayer Completion';

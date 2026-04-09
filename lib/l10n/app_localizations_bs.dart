@@ -1056,7 +1056,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get audioPlayFailed => 'Audio playback failed';
 
   @override
-  String get sukunNatureLabel => 'Sukun (Nature)';
+  String get sukunNatureLabel => 'sukun (priroda)';
 
   @override
   String get sukunRainOfMercy => 'Rain of Mercy';
@@ -1071,11 +1071,11 @@ class AppLocalizationsBs extends AppLocalizations {
   String get sukunOceanTawheed => 'Ocean Tawheed';
 
   @override
-  String get sukunUnavailableTitle => 'Soundscapes unavailable';
+  String get sukunUnavailableTitle => 'Zvučni pejzaži nisu dostupni';
 
   @override
   String get sukunUnavailableBody =>
-      'This build does not include the required Sukun soundscape assets yet.';
+      'Ova verzija još ne uključuje potrebna sredstva Sukun zvučne scene.';
 
   @override
   String get prayerCompletion => 'Prayer Completion';

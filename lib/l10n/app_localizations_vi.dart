@@ -841,7 +841,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get islamicEducation => 'Giáo dục Hồi giáo';
 
   @override
-  String get sukunAudioTitle => 'Sukun Soundscapes';
+  String get sukunAudioTitle => 'Âm thanh Sukun';
 
   @override
   String get hadithCollections => 'Bộ sưu tập Hadith';
@@ -1050,32 +1050,32 @@ class AppLocalizationsVi extends AppLocalizations {
   String get chatbotThinking => 'Thinking...';
 
   @override
-  String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
+  String get sukunMixerSubtitle => 'Máy trộn thiên nhiên & Qur\'an';
 
   @override
   String get audioPlayFailed => 'Audio playback failed';
 
   @override
-  String get sukunNatureLabel => 'Sukun (Nature)';
+  String get sukunNatureLabel => 'Sukun (Thiên nhiên)';
 
   @override
-  String get sukunRainOfMercy => 'Rain of Mercy';
+  String get sukunRainOfMercy => 'Cơn mưa nhân ái';
 
   @override
-  String get sukunGardenOfPeace => 'Garden of Peace';
+  String get sukunGardenOfPeace => 'Khu vườn hòa bình';
 
   @override
-  String get sukunMidnightCalm => 'Midnight Calm';
+  String get sukunMidnightCalm => 'Nửa đêm bình yên';
 
   @override
-  String get sukunOceanTawheed => 'Ocean Tawheed';
+  String get sukunOceanTawheed => 'đại dương Tawheed';
 
   @override
-  String get sukunUnavailableTitle => 'Soundscapes unavailable';
+  String get sukunUnavailableTitle => 'Không có âm thanh';
 
   @override
   String get sukunUnavailableBody =>
-      'This build does not include the required Sukun soundscape assets yet.';
+      'Bản dựng này chưa bao gồm nội dung cảnh quan âm thanh Sukun cần thiết.';
 
   @override
   String get prayerCompletion => 'Prayer Completion';

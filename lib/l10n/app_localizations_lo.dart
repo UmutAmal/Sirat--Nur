@@ -841,7 +841,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get islamicEducation => 'ການສຶກສາອິດສະລາມ';
 
   @override
-  String get sukunAudioTitle => 'Sukun Soundscapes';
+  String get sukunAudioTitle => 'ສຸກັນ ສຽງສະຫວັນ';
 
   @override
   String get hadithCollections => 'ການເກັບກໍາ Hadith';
@@ -1050,32 +1050,32 @@ class AppLocalizationsLo extends AppLocalizations {
   String get chatbotThinking => 'Thinking...';
 
   @override
-  String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
+  String get sukunMixerSubtitle => 'ທໍາມະຊາດ & Qur\'an Mixer';
 
   @override
   String get audioPlayFailed => 'Audio playback failed';
 
   @override
-  String get sukunNatureLabel => 'Sukun (Nature)';
+  String get sukunNatureLabel => 'ສຸກັນ (ທຳມະຊາດ)';
 
   @override
-  String get sukunRainOfMercy => 'Rain of Mercy';
+  String get sukunRainOfMercy => 'ຝົນແຫ່ງຄວາມເມດຕາ';
 
   @override
-  String get sukunGardenOfPeace => 'Garden of Peace';
+  String get sukunGardenOfPeace => 'ສວນແຫ່ງສັນຕິພາບ';
 
   @override
-  String get sukunMidnightCalm => 'Midnight Calm';
+  String get sukunMidnightCalm => 'ເວລາທ່ຽງຄືນສະຫງົບ';
 
   @override
-  String get sukunOceanTawheed => 'Ocean Tawheed';
+  String get sukunOceanTawheed => 'ມະຫາສະຫມຸດ Tawheed';
 
   @override
-  String get sukunUnavailableTitle => 'Soundscapes unavailable';
+  String get sukunUnavailableTitle => 'Soundscapes ບໍ່ສາມາດໃຊ້ໄດ້';
 
   @override
   String get sukunUnavailableBody =>
-      'This build does not include the required Sukun soundscape assets yet.';
+      'ການກໍ່ສ້າງນີ້ບໍ່ໄດ້ລວມເອົາຊັບສິນ Sukun soundscape ທີ່ຕ້ອງການເທື່ອ.';
 
   @override
   String get prayerCompletion => 'Prayer Completion';

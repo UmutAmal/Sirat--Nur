@@ -3297,3 +3297,45 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/sukun_audio_page.dart) üzerindeki `sukun` kümesi ele alınacak.
 - Ardından diagnostics/quran dataset ve download flow copy kümeleri yeniden sıralanacak.
+
+## 2026-04-09 TUR-84 — Localize Sukun Soundscape Surface
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force sukunAudioTitle sukunGardenOfPeace sukunMidnightCalm sukunMixerSubtitle sukunNatureLabel sukunOceanTawheed sukunRainOfMercy sukunUnavailableBody sukunUnavailableTitle` ile çalıştırıldı ve Sukun yüzeyi tüm locale setine yayıldı.
+- Batch sonrası güvenli priority locale setinde kalan residual İngilizce satırlar kapatıldı; [A:\Way of Allah\sirat_i_nur\lib\l10n\app_da.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_da.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_fr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_fr.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nb.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nb.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nn.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nn.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_no.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_no.arb) içinde `sukunAudioTitle`, `sukunNatureLabel`, `sukunOceanTawheed` sibling-uyumlu hale getirildi.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) genişletildi; güvenli priority locale seti için Sukun soundscape copy EN fallback regresyonu kilitlendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart#L60](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/sukun_audio_page.dart#L60), [A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart#L103](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/sukun_audio_page.dart#L103), [A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart#L160](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/sukun_audio_page.dart#L160), [A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart#L232](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/sukun_audio_page.dart#L232) üzerinden okunan `sukun*` anahtarlarının geniş locale setinde İngilizce kaldığı doğrulandı.
+- Bu yüzey başlık, unavailable-state ve ses adı etiketlerini içerdiği için kullanıcı etkisi yüksek ve Library deneyiminde doğrudan görünür bir localization borcuydu.
+- Rare-locale tarafında geniş EN-reference kalıntıları sürüyor; bu turda yalnızca güvenli priority locale seti kapatıldı, uydurma geniş yorum eklenmedi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` içindeki `sukun*` anahtarları güncellenen dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` generated dosyaları
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `sukunAudioTitle` için İngilizce fallback sayısı `195`ten `102`ye düştü.
+- `sukunGardenOfPeace` için `195`ten `64`e düştü.
+- `sukunMidnightCalm` için `195`ten `67`ye düştü.
+- `sukunMixerSubtitle` için `195`ten `68`e düştü.
+- `sukunNatureLabel` için `195`ten `72`ye düştü.
+- `sukunOceanTawheed` için `195`ten `96`ya düştü.
+- `sukunRainOfMercy` için `195`ten `65`e düştü.
+- `sukunUnavailableBody` için `195`ten `63`e düştü.
+- `sukunUnavailableTitle` için `195`ten `64`e düştü.
+- Güvenli priority locale seti Sukun soundscape yüzeyinde artık İngilizce fallback göstermiyor.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`12/12`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`192/192`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Sukun soundscape copy still falling back to English across the supported surface: `15/25 → 6/25`
+
+### Sonraki Adım
+- Sıradaki turda code-referenced kalan yoğun localization kümeleri içinden `downloads`, `offline quran audio` ve `diagnostics/quran dataset` yüzeyleri yeniden sıralanacak.
+- Rare-locale tarafında `sukun*` anahtarlarının EN-reference kalan satırları sibling veya EN-reference dürüstlük matrisiyle ayrıca ele alınacak.

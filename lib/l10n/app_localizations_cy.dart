@@ -843,7 +843,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get islamicEducation => 'Addysg Islamaidd';
 
   @override
-  String get sukunAudioTitle => 'Sukun Soundscapes';
+  String get sukunAudioTitle => 'Seinweddau Sukun';
 
   @override
   String get hadithCollections => 'Casgliadau Hadith';
@@ -1052,32 +1052,32 @@ class AppLocalizationsCy extends AppLocalizations {
   String get chatbotThinking => 'Thinking...';
 
   @override
-  String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
+  String get sukunMixerSubtitle => 'Cymysgydd Natur a Qur\'an';
 
   @override
   String get audioPlayFailed => 'Audio playback failed';
 
   @override
-  String get sukunNatureLabel => 'Sukun (Nature)';
+  String get sukunNatureLabel => 'Sukun (Natur)';
 
   @override
-  String get sukunRainOfMercy => 'Rain of Mercy';
+  String get sukunRainOfMercy => 'Glaw Trugaredd';
 
   @override
-  String get sukunGardenOfPeace => 'Garden of Peace';
+  String get sukunGardenOfPeace => 'Gardd Heddwch';
 
   @override
-  String get sukunMidnightCalm => 'Midnight Calm';
+  String get sukunMidnightCalm => 'Tawel hanner nos';
 
   @override
-  String get sukunOceanTawheed => 'Ocean Tawheed';
+  String get sukunOceanTawheed => 'Cefnfor Tawheed';
 
   @override
-  String get sukunUnavailableTitle => 'Soundscapes unavailable';
+  String get sukunUnavailableTitle => 'Nid yw seinweddau ar gael';
 
   @override
   String get sukunUnavailableBody =>
-      'This build does not include the required Sukun soundscape assets yet.';
+      'Nid yw\'r adeiladwaith hwn yn cynnwys yr asedau seinwedd Sukun gofynnol eto.';
 
   @override
   String get prayerCompletion => 'Prayer Completion';
