@@ -650,5 +650,13 @@
   "duaMeaning5": "och sänk din ving i ödmjukhet mot dem i vänlighet och säg: 'Herre, förbarma dig över dem, precis som de brydde sig om mig när jag var liten.'",
   "duaMeaning6": "Upphöjd vare Gud, den som verkligen har kontroll. [Profet], skynda dig inte att recitera innan uppenbarelsen är helt fullständig utan säg: 'Herre, öka mig i kunskap!'",
   "duaMeaning7": "Säg [profet], 'Herre, förlåt och förbarma dig: Du är den mest barmhärtige av alla.'",
-  "duaMeaning8": "de som ber: 'Vår Herre, ge oss glädje i våra makar och avkommor. Gör oss till goda exempel för dem som är medvetna om dig."
+  "duaMeaning8": "de som ber: 'Vår Herre, ge oss glädje i våra makar och avkommor. Gör oss till goda exempel för dem som är medvetna om dig.",
+  "islamicNewYear": "Islamiskt nyår",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

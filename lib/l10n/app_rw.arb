@@ -650,5 +650,13 @@
   "duaMeaning5": "manura ibaba ryawe wicishe bugufi ubagirire neza ubabwire uti: 'Mwami, ubagirire impuhwe, nk'uko banyitayeho nkiri muto.'",
   "duaMeaning6": "Imana ikuzwe, niwe uyobora rwose. [Umuhanuzi], ntukihutire gusoma mbere yuko ihishurwa ryuzuye ariko vuga uti: 'Mwami, nyongerera ubumenyi!'",
   "duaMeaning7": "Vuga [Umuhanuzi], 'Mwami, ubabarire kandi ugirire imbabazi: uri umunyembabazi muri bose.'",
-  "duaMeaning8": "abasenga, 'Mwami wacu, duhe umunezero mu bashakanye no ku rubyaro rwacu. Utugire ingero nziza kubakuzi '."
+  "duaMeaning8": "abasenga, 'Mwami wacu, duhe umunezero mu bashakanye no ku rubyaro rwacu. Utugire ingero nziza kubakuzi '.",
+  "islamicNewYear": "Umwaka mushya wa kisilamu",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramazani",
+  "specialDayDateLaylatAlQadr": "27 Ramazani",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

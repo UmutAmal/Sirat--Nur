@@ -1120,6 +1120,54 @@ abstract class AppLocalizations {
   /// **'Eid Al-Adha'**
   String get eidAlAdha;
 
+  /// No description provided for @islamicNewYear.
+  ///
+  /// In en, this message translates to:
+  /// **'Islamic New Year'**
+  String get islamicNewYear;
+
+  /// No description provided for @mawlidAnNabi.
+  ///
+  /// In en, this message translates to:
+  /// **'Mawlid an-Nabi'**
+  String get mawlidAnNabi;
+
+  /// No description provided for @specialDayDateRamadanStart.
+  ///
+  /// In en, this message translates to:
+  /// **'1 Ramadan'**
+  String get specialDayDateRamadanStart;
+
+  /// No description provided for @specialDayDateLaylatAlQadr.
+  ///
+  /// In en, this message translates to:
+  /// **'27 Ramadan'**
+  String get specialDayDateLaylatAlQadr;
+
+  /// No description provided for @specialDayDateEidAlFitr.
+  ///
+  /// In en, this message translates to:
+  /// **'1 Shawwal'**
+  String get specialDayDateEidAlFitr;
+
+  /// No description provided for @specialDayDateEidAlAdha.
+  ///
+  /// In en, this message translates to:
+  /// **'10 Dhul Hijjah'**
+  String get specialDayDateEidAlAdha;
+
+  /// No description provided for @specialDayDateIslamicNewYear.
+  ///
+  /// In en, this message translates to:
+  /// **'1 Muharram'**
+  String get specialDayDateIslamicNewYear;
+
+  /// No description provided for @specialDayDateMawlidAnNabi.
+  ///
+  /// In en, this message translates to:
+  /// **'12 Rabi al-Awwal'**
+  String get specialDayDateMawlidAnNabi;
+
   /// No description provided for @laylatAlQadr.
   ///
   /// In en, this message translates to:

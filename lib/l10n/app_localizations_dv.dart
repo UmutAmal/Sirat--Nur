@@ -343,6 +343,30 @@ class AppLocalizationsDv extends AppLocalizations {
   String get eidAlAdha => 'އަޟްޙާ ޢީދެވެ';
 
   @override
+  String get islamicNewYear => 'އިސްލާމީ އާއަހަރެވެ';
+
+  @override
+  String get mawlidAnNabi => 'މައުލިދު އަން-ނަބީ އެވެ';
+
+  @override
+  String get specialDayDateRamadanStart => '1 ރަމަޟާންމަހު';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '27 ރަމަޟާންމަހު';
+
+  @override
+  String get specialDayDateEidAlFitr => '1 ޝައްވާލު';
+
+  @override
+  String get specialDayDateEidAlAdha => '10 ޛުލްޙިއްޖާއެވެ';
+
+  @override
+  String get specialDayDateIslamicNewYear => '1 މުޙައްރަމް';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '12 ރަބީޢު އަލްއައްވަލް';
+
+  @override
   String get laylatAlQadr => 'ލައިލަތުލް ޤަދްރެވެ';
 
   @override

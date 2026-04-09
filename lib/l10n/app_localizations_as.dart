@@ -341,6 +341,30 @@ class AppLocalizationsAs extends AppLocalizations {
   String get eidAlAdha => 'ঈদ আল আধা';
 
   @override
+  String get islamicNewYear => 'ইছলামিক নৱবৰ্ষ';
+
+  @override
+  String get mawlidAnNabi => 'মৌলিদ আন-নবি';
+
+  @override
+  String get specialDayDateRamadanStart => '১ ৰমজান';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '২৭ ৰমজান';
+
+  @override
+  String get specialDayDateEidAlFitr => '১ শ্বাৱাল';
+
+  @override
+  String get specialDayDateEidAlAdha => '১০ ধুল হিজ্জা';
+
+  @override
+  String get specialDayDateIslamicNewYear => '১ মুহৰম';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '১২ ৰাবি আল-আৱাল';
+
+  @override
   String get laylatAlQadr => 'লাইলাত আল-কাদৰ';
 
   @override

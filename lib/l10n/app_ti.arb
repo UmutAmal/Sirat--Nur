@@ -650,5 +650,13 @@
   "duaMeaning5": "ብትሕትና ድማ ክንፍኻ ብሕያውነት ናብኦም ኣውሪድካ ‘ጐይታይ ከምቲ ንእሽቶይ ከለኹ ዝሓልዩኒ ምሓሮም’ በሎም።",
   "duaMeaning6": "እቲ ብሓቂ ዝቆጻጸር ኣምላኽ ልዕል ይበል። [ነቢይ]፣ እቲ ምግላጽ ምሉእ ብምሉእ ከይተዛዘመ ንምንባብ ኣይትሃወኽ እምበር ‘ጐይታይ ብፍልጠት ኣዕብየኒ!’ በል።",
   "duaMeaning7": "[ነቢይ] በል፡ ‘ጐይታይ ይቕረ በለን ምሓርን፡ ንስኻ ካብ ኩሉ መሓሪ ኢኻ።’",
-  "duaMeaning8": "እቶም ‘ጐይታና ኣብ መጻምድትናን ዘርእናን ሓጐስ ሃበና። ነቶም ብዛዕባኻ ዝፈልጡ ጽቡቕ ኣብነት ግበረና’።"
+  "duaMeaning8": "እቶም ‘ጐይታና ኣብ መጻምድትናን ዘርእናን ሓጐስ ሃበና። ነቶም ብዛዕባኻ ዝፈልጡ ጽቡቕ ኣብነት ግበረና’።",
+  "islamicNewYear": "እስላማዊ ሓድሽ ዓመት",
+  "mawlidAnNabi": "ማውሊድ ኣን-ናቢ",
+  "specialDayDateRamadanStart": "1 ሮሞዳን",
+  "specialDayDateLaylatAlQadr": "27 ሮሞዳን",
+  "specialDayDateEidAlFitr": "1 ሻውዋል",
+  "specialDayDateEidAlAdha": "10 ዙል ሂጃ",
+  "specialDayDateIslamicNewYear": "1 ሙሓረም",
+  "specialDayDateMawlidAnNabi": "12 ረቢ ኣልኣውዋል"
 }

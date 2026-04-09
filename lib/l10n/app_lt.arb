@@ -650,5 +650,13 @@
   "duaMeaning5": "Nuleiskite savo sparną nuolankiai prieš juos gerumu ir sakyk: 'Viešpatie, pasigailėk jų, kaip jie rūpinosi manimi, kai buvau mažas'.",
   "duaMeaning6": "tebūna išaukštintas Dievas, tas, kuris tikrai valdo. [Pranaše], neskubėk deklamuoti, kol apreiškimas nėra visiškai baigtas, bet sakyk: 'Viešpatie, padidink mane pažinimu!'",
   "duaMeaning7": "Pasakykite [Pranašas]: „Viešpatie, atleisk ir pasigailėk: tu esi gailestingiausias iš visų“.",
-  "duaMeaning8": "tie, kurie meldžiasi: „Viešpatie, duok mums džiaugsmo mūsų sutuoktiniais ir palikuonimis“. Parodyk mus geru pavyzdžiu tiems, kurie Tave žino“."
+  "duaMeaning8": "tie, kurie meldžiasi: „Viešpatie, duok mums džiaugsmo mūsų sutuoktiniais ir palikuonimis“. Parodyk mus geru pavyzdžiu tiems, kurie Tave žino“.",
+  "islamicNewYear": "Islamo Naujieji metai",
+  "mawlidAnNabi": "Mawlidas an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadanas",
+  "specialDayDateLaylatAlQadr": "27 Ramadanas",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharramas",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

@@ -650,5 +650,13 @@
   "duaMeaning5": "Ularga mehribonlik ila tavakkal qilib qanotingizni pastga tushiring va: “Yo Parvardigorim, ular menga kichikligimda g‘amxo‘rlik qilganidek, ularga ham rahm qil”, deb ayt.",
   "duaMeaning6": "Haqiqatan ham hukmron bo'lgan Alloh pokdir. [Payg‘ambar], vahiy to‘liq bo‘lmasdan turib, qiroat qilishga shoshilma, balki: “Robbim, ilmimni ziyoda qil!” deb ayt.",
   "duaMeaning7": "(Payg‘ambarga) ayt: “Robbim, mag‘firat qil va rahm qil, Sen eng mehribonsan”.",
-  "duaMeaning8": "«Robbimiz, bizni juftlarimiz va zurriyotlarimizni xursand qilgin», deb duo qilganlar. Bizni O'zingdan xabardor bo'lganlarga yaxshi namuna qilgin», dedi."
+  "duaMeaning8": "«Robbimiz, bizni juftlarimiz va zurriyotlarimizni xursand qilgin», deb duo qilganlar. Bizni O'zingdan xabardor bo'lganlarga yaxshi namuna qilgin», dedi.",
+  "islamicNewYear": "Islomiy Yangi yil",
+  "mawlidAnNabi": "Mavlid an-Nabiy",
+  "specialDayDateRamadanStart": "1 Ramazon",
+  "specialDayDateLaylatAlQadr": "27 Ramazon",
+  "specialDayDateEidAlFitr": "1 Shavvol",
+  "specialDayDateEidAlAdha": "10 Zulhijja",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabiul-avval"
 }

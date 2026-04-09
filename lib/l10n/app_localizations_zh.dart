@@ -335,6 +335,30 @@ class AppLocalizationsZh extends AppLocalizations {
   String get eidAlAdha => '古尔邦节';
 
   @override
+  String get islamicNewYear => '伊斯兰新年';
+
+  @override
+  String get mawlidAnNabi => '圣祭安纳比';
+
+  @override
+  String get specialDayDateRamadanStart => '1 斋月';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '27 斋月';
+
+  @override
+  String get specialDayDateEidAlFitr => '1 肖瓦尔';
+
+  @override
+  String get specialDayDateEidAlAdha => '10 杜尔希贾';
+
+  @override
+  String get specialDayDateIslamicNewYear => '穆哈兰月 1 日';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '12 拉比·阿瓦瓦尔';
+
+  @override
   String get laylatAlQadr => '莱拉特·盖德尔';
 
   @override
@@ -1829,6 +1853,30 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get eidAlAdha => '古尔邦节';
 
   @override
+  String get islamicNewYear => '伊斯兰新年';
+
+  @override
+  String get mawlidAnNabi => '圣祭安纳比';
+
+  @override
+  String get specialDayDateRamadanStart => '1 斋月';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '27 斋月';
+
+  @override
+  String get specialDayDateEidAlFitr => '1 肖瓦尔';
+
+  @override
+  String get specialDayDateEidAlAdha => '10 杜尔希贾';
+
+  @override
+  String get specialDayDateIslamicNewYear => '穆哈兰月 1 日';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '12 拉比·阿瓦瓦尔';
+
+  @override
   String get laylatAlQadr => '莱拉特·盖德尔';
 
   @override
@@ -3321,6 +3369,30 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get eidAlAdha => '古爾邦節';
+
+  @override
+  String get islamicNewYear => '伊斯蘭新年';
+
+  @override
+  String get mawlidAnNabi => '聖祭安納比';
+
+  @override
+  String get specialDayDateRamadanStart => '1 齋月';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '27 齋月';
+
+  @override
+  String get specialDayDateEidAlFitr => '1 肖瓦爾';
+
+  @override
+  String get specialDayDateEidAlAdha => '10 杜爾希賈';
+
+  @override
+  String get specialDayDateIslamicNewYear => '穆哈蘭月 1 日';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '12 拉比阿瓦瓦爾';
 
   @override
   String get laylatAlQadr => '萊拉特·蓋德爾';

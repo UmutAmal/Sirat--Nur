@@ -650,5 +650,13 @@
   "duaMeaning5": "hinaspataq raphraykita uraykachiy k’umuykukuspa paykunaman sumaq sonqowan niy: ‘Señor, khuyapayay paykunata, imaynan huch’uyllaraq kashaqtiy cuidawarqanku hinata’, nispa.",
   "duaMeaning6": "hatunchasqa kachun Dios, cheqaqtapuni kamachikuq. [Profeta], ama apuraychu rimayta manaraq revelacion hunt’asqa kashaqtin aswanpas niy: ‘¡Señor, yachayniypi yapaykuway!’, nispa.",
   "duaMeaning7": "[Profeta] niy: ‘Señor, pampachay, khuyapayay, qanmi kanki llapanmanta aswan khuyapayakuq’, nispa.",
-  "duaMeaning8": "‘Señorniyku, esposaykupi, mirayniykupipas kusichiwayku’, nispa mañakuqkuna. Allin ejemplokunata ruwawayku Qanmanta musyakuqkunapaq’."
+  "duaMeaning8": "‘Señorniyku, esposaykupi, mirayniykupipas kusichiwayku’, nispa mañakuqkuna. Allin ejemplokunata ruwawayku Qanmanta musyakuqkunapaq’.",
+  "islamicNewYear": "Islam musuq wata",
+  "mawlidAnNabi": "Mawlid an-Nabi sutiyuq runa",
+  "specialDayDateRamadanStart": "1 Ramadán killapi",
+  "specialDayDateLaylatAlQadr": "27 Ramadán killapi",
+  "specialDayDateEidAlFitr": "1 Shawwal sutiyuq runa",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah nisqa",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal sutiyuq runa"
 }

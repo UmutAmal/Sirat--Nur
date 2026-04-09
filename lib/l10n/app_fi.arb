@@ -650,5 +650,13 @@
   "duaMeaning5": "ja laske siipesi nöyrästi heitä kohtaan ystävällisyydessä ja sano: 'Herra, armahda heitä, niin kuin he pitivät minusta huolta, kun olin pieni.",
   "duaMeaning6": "ylistetty olkoon Jumala, joka todella hallitsee. [Profeetta], älä kiirehdi lausumaan ennen kuin ilmoitus on täysin valmis, vaan sano: 'Herra, lisää minua tiedossani!'",
   "duaMeaning7": "Sano [profeetta]: 'Herra, anna anteeksi ja ole armollinen: Sinä olet armollisin kaikista.'",
-  "duaMeaning8": "ne, jotka rukoilevat: 'Herra, anna meille iloa puolisoistamme ja jälkeläisistämme. Tee meistä hyviä esimerkkejä niille, jotka ovat tietoisia sinusta."
+  "duaMeaning8": "ne, jotka rukoilevat: 'Herra, anna meille iloa puolisoistamme ja jälkeläisistämme. Tee meistä hyviä esimerkkejä niille, jotka ovat tietoisia sinusta.",
+  "islamicNewYear": "Islamilainen uusivuosi",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

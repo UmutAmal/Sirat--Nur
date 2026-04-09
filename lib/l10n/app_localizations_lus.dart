@@ -341,6 +341,30 @@ class AppLocalizationsLus extends AppLocalizations {
   String get eidAlAdha => 'Eid Al-Adha neih a ni';
 
   @override
+  String get islamicNewYear => 'Islamic kum thar a ni';
+
+  @override
+  String get mawlidAnNabi => 'Mawlid an-Nabi';
+
+  @override
+  String get specialDayDateRamadanStart => '1 Ramadan a ni';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '27 Ramadan-ah a ni';
+
+  @override
+  String get specialDayDateEidAlFitr => '1 Shawwal a ni';
+
+  @override
+  String get specialDayDateEidAlAdha => '10 Dhul Hijjah a ni';
+
+  @override
+  String get specialDayDateIslamicNewYear => '1 Muharram a ni';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '12 Rabi al-Awwal-a chuan a ziak a';
+
+  @override
   String get laylatAlQadr => 'Laylat Al-Qadr chuan a rawn ti a';
 
   @override

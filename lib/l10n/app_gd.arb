@@ -650,5 +650,13 @@
   "duaMeaning5": "agus lughdaich do sgiath ann an irioslachd d' an ionnsuidh ann an caoimhneas, agus abair, \" A Thighearna, dean trocair orra, mar a bha curam aca dhiom an uair a bha mi beag.\"",
   "duaMeaning6": "àrdaichte gu robh Dia, an ti aig am bheil da rìreadh smachd. [Fhàidh], na dèan cabhag airson aithris mus bi am foillseachadh làn iomlan ach abair, ‘A Thighearna, meudaich mi ann an eòlas!’",
   "duaMeaning7": "Abair [Fàidh], ‘A Thighearna, thoir maitheanas agus dèan tròcair: Is tusa an neach as tròcairiche dhiubh uile.’",
-  "duaMeaning8": "iadsan a nì ùrnaigh, ‘Ar Tighearna, dèan gàirdeachas dhuinn nar cèile agus nar sliochd. Dèan eisimpleirean math dhuinn dhaibhsan a tha eòlach ort’."
+  "duaMeaning8": "iadsan a nì ùrnaigh, ‘Ar Tighearna, dèan gàirdeachas dhuinn nar cèile agus nar sliochd. Dèan eisimpleirean math dhuinn dhaibhsan a tha eòlach ort’.",
+  "islamicNewYear": "Bliadhna Ùr Ioslamach",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Saoghal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muirram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

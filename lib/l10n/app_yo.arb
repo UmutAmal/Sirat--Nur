@@ -650,5 +650,13 @@
   "duaMeaning5": "kí o sì sọ ìyẹ́ apá rẹ rẹlẹ̀ ní ìrẹ̀lẹ̀ sí wọn ní inú rere, kí o sì wí pé, ‘Olúwa, ṣàánú wọn, gẹ́gẹ́ bí wọ́n ti ṣe ìtọ́jú mi nígbà tí mo wà ní kékeré.",
   "duaMeaning6": "gbega ni fun Ọlọhun, ẹni ti o ni iṣakoso nitootọ. [Anabi], maṣe yara lati ka ki iṣipaya naa to pe ni kikun ṣugbọn sọ pe, ‘Oluwa, fun mi ni imọ siwaju sii!’",
   "duaMeaning7": "Sọ [Annabi] pe, ‘Oluwa, dariji ki o si ṣãnu: Iwọ ni alaanu ju gbogbo lọ.",
-  "duaMeaning8": "àwọn tí ń gbàdúrà pé, ‘Olúwa wa, fún wa ní ayọ̀ nínú àwọn aya àti àwọn ọmọ wa. Ṣe apẹẹrẹ rere fun awọn ti o mọ Ọ’."
+  "duaMeaning8": "àwọn tí ń gbàdúrà pé, ‘Olúwa wa, fún wa ní ayọ̀ nínú àwọn aya àti àwọn ọmọ wa. Ṣe apẹẹrẹ rere fun awọn ti o mọ Ọ’.",
+  "islamicNewYear": "Islam odun titun",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

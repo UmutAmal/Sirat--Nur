@@ -3685,3 +3685,42 @@
 ### Sonraki Adım
 - Sıradaki turda tam proje taraması tekrar çalıştırılacak ve dini içerik + localization zincirinde kalan en yüksek residual risk seçilecek.
 - Özellikle Library içindeki diğer verified content fallback’leri ve settings/chatbot/paywall residual hardcoded yüzeyleri yeniden taranacak.
+## 2026-04-09 TUR-94 — Localize Calendar Special Day Labels
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\calendar\calendar_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/calendar/calendar_page.dart) içindeki özel gün listesi `islamicNewYear`, `mawlidAnNabi` ve ilgili Hijri tarih anahtarları üzerinden l10n zincirine taşındı.
+- `1 Muharram` olayı artık yanlışlıkla `Hijri Calendar` etiketiyle değil, locale-aware `Islamic New Year / Hicri Yılbaşı` başlığıyla geliyor.
+- `Mawlid an-Nabi` hardcoded başlığı locale-aware `mawlidAnNabi` anahtarına taşındı.
+- Calendar özel gün snapshot’ı için [A:\Way of Allah\sirat_i_nur\lib\features\calendar\calendar_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/calendar/calendar_page.dart) içine `buildImportantDates` helper’ı eklendi ve test edilebilir hale getirildi.
+- [A:\Way of Allah\sirat_i_nur\test\features\calendar\calendar_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/calendar/calendar_page_test.dart) yeni title/date helper testleri ile eklendi.
+- Yeni takvim anahtarları tüm `app_*.arb` dosyalarına yayıldı, residual English safe-locale artıkları noktasal olarak düzeltildi ve broad guard [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) ile genişletildi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\calendar\calendar_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/calendar/calendar_page.dart) özel gün listesinin bir satırda `Hijri Calendar` metnini yanlış event label olarak kullandığı ve `Mawlid an-Nabi` başlığını hardcoded tuttuğu görüldü.
+- Bu, hem localization zincirini kırıyor hem de dini takvim semantiğinde yanlış başlık gösteriyordu.
+- Sorun user-facing takvim yüzeyinde olduğundan, başlık ve tarih etiketleri birlikte locale-aware hale getirildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\calendar\calendar_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\calendar\calendar_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Takvim özel gün listesi artık yanlış `Hijri Calendar` başlığı üretmiyor.
+- `Mawlid an-Nabi` ve `Islamic New Year` başlıkları locale-aware geldiği için priority locale setinde İngilizce artıkları kapandı.
+- Hijri ay adları gibi kanonik özel adlar broad guard’da zorla yeniden çevrilmedi; test kapsamı yalnızca gerçekten yerelleşmesi gereken başlık anahtarlarında tutuldu.
+
+### Test Sonucu
+- `flutter test test/features/calendar/calendar_page_test.dart` → PASS (`2/2`)
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`19/19`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`216/216`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Calendar special day list using incorrect and hardcoded English labels: `12/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki tarama turunda `main.dart` içindeki user-facing olmayan ama dağınık bootstrap log kopyası ve `offline_downloads_page.dart` hata yüzeyi yeniden değerlendirilecek.
+- Ardından library/settings/chatbot tarafında kalan residual hardcoded metinler için yeni evidence scan açılacak.

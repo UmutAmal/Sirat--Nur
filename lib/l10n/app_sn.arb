@@ -650,5 +650,13 @@
   "duaMeaning5": "uye udzikise bapiro rako mukuzvininipisa kwavari netsitsi uye uti, ‘Ishe, vanzwirei ngoni, sokundichengeta kwavakaita ndichiri muduku.",
   "duaMeaning6": "ngaakudzwe Mwari, iye anotonga zvirokwazvo. [Muporofita], usamhanyire kutaura zvakazarurwa zvisati zvakwana asi iti, ‘Ishe, ndiwedzerei muzivo!’",
   "duaMeaning7": "Iti [Muporofita], ‘Ishe, kanganwirai uye muve netsitsi: Imi ndimi mune tsitsi huru kupfuura vose.",
-  "duaMeaning8": "avo vanonamata vachiti, ‘Ishe wedu, tipei mufaro muwanano yedu uye muvana vedu. Tiitirei mienzaniso yakanaka kune avo vanokuzivai'."
+  "duaMeaning8": "avo vanonamata vachiti, ‘Ishe wedu, tipei mufaro muwanano yedu uye muvana vedu. Tiitirei mienzaniso yakanaka kune avo vanokuzivai'.",
+  "islamicNewYear": "Goredzva reIslam",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

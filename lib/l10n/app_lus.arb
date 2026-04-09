@@ -650,5 +650,13 @@
   "duaMeaning5": "tin, ngilnei takin an chungah inngaitlawm takin i thla kha han hniam la, ‘Lalpa, ka naupan laia min ngaihsak ang khan khawngaih rawh,’ ti rawh.",
   "duaMeaning6": "Pathian, thunun thei tak chu chawimawiin awm rawh se. [Zâwlnei], thupuan chu a famkim hmain chhiar hmanhmawh suh la, ‘Lalpa, hriatnaah min tipung rawh!’ ti zawk rawh.",
   "duaMeaning7": "[Zâwlnei], ‘Lalpa, ngaidam la, khawngaih rawh: Nang hi mi zawng zawng zînga khawngaihtu ber i ni,’ ti rawh.",
-  "duaMeaning8": "‘Kan Lalpa, kan nupui/pasal leh fate chungah lawmna min pe rawh’ tia tawngtai thinte. Nangmah hretute tan entawn tur tha tak min siam ang che’."
+  "duaMeaning8": "‘Kan Lalpa, kan nupui/pasal leh fate chungah lawmna min pe rawh’ tia tawngtai thinte. Nangmah hretute tan entawn tur tha tak min siam ang che’.",
+  "islamicNewYear": "Islamic kum thar a ni",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan a ni",
+  "specialDayDateLaylatAlQadr": "27 Ramadan-ah a ni",
+  "specialDayDateEidAlFitr": "1 Shawwal a ni",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah a ni",
+  "specialDayDateIslamicNewYear": "1 Muharram a ni",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal-a chuan a ziak a"
 }

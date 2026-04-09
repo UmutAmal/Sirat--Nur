@@ -567,6 +567,44 @@ void main() {
         }
       }
     });
+
+    test('safe priority locales do not fall back to English for calendar special day copy', () {
+      const calendarSafeLocales = [
+        'tr',
+        'de',
+        'fr',
+        'es',
+        'ar',
+        'da',
+        'he',
+        'ja',
+        'nb',
+        'nn',
+        'no',
+        'pt',
+        'ru',
+        'vi',
+        'zh',
+        'zh_CN',
+        'zh_TW',
+      ];
+      const localizedKeys = [
+        'islamicNewYear',
+        'mawlidAnNabi',
+      ];
+
+      for (final locale in calendarSafeLocales) {
+        final arb = _readArb('lib/l10n/app_$locale.arb');
+
+        for (final key in localizedKeys) {
+          expect(
+            arb[key],
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+        }
+      }
+    });
   });
 }
 

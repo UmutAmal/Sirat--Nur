@@ -342,6 +342,30 @@ class AppLocalizationsBho extends AppLocalizations {
   String get eidAlAdha => 'ईद अल अधा के बा';
 
   @override
+  String get islamicNewYear => 'इस्लामी नया साल के बा';
+
+  @override
+  String get mawlidAnNabi => 'मौलिद अन-नबी के बा';
+
+  @override
+  String get specialDayDateRamadanStart => '१ रमजान के बा';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '27 रमजान के भइल';
+
+  @override
+  String get specialDayDateEidAlFitr => '१ शववाल के बा';
+
+  @override
+  String get specialDayDateEidAlAdha => '10 धुल हिज्जा के बा';
+
+  @override
+  String get specialDayDateIslamicNewYear => '१ मुहर्रम के बा';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '12 रबी अल-अववाल के बा';
+
+  @override
   String get laylatAlQadr => 'लैलात अल-कदर के ह';
 
   @override

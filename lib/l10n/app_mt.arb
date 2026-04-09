@@ -650,5 +650,13 @@
   "duaMeaning5": "u baxxi ġwenħajk bl-umiltà lejhom bil-qalb tajba u għid, ‘Mulej, ħenn minnhom, bħalma kienu jieħdu ħsiebi meta kont żgħir.’",
   "duaMeaning6": "għola jkun Alla, dak li tassew għandu kontroll. [Profeta], tgħaġġlax biex tirreċita qabel ir-rivelazzjoni tkun kompluta għal kollox imma għid, ‘Mulej, ikabbarni fl-għarfien!’",
   "duaMeaning7": "Għid [Profeta], ‘Mulej, aħfer u ħniena: Inti l-aktar ħanin minn kulħadd.’",
-  "duaMeaning8": "dawk li jitolbu, ‘Mulej tagħna, agħtina l-ferħ fil-miżżewġin u n-nisel tagħna. Agħmilna eżempji tajbin għal dawk li huma konxji minnek’."
+  "duaMeaning8": "dawk li jitolbu, ‘Mulej tagħna, agħtina l-ferħ fil-miżżewġin u n-nisel tagħna. Agħmilna eżempji tajbin għal dawk li huma konxji minnek’.",
+  "islamicNewYear": "Is-Sena l-Ġdida Iżlamika",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

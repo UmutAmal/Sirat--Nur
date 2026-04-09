@@ -650,5 +650,13 @@
   "duaMeaning5": "ma tuu ifo lou apaau i le lotomaualalo ia i latou i le agalelei ma faapea atu, ‘Le Alii e, ia e alofa mai ia te i latou, e pei ona latou tausia a’u a o ou itiiti.",
   "duaMeaning6": "ia faaeaina le Atua, o lē e pule moni lava. [Perofeta], aua e te faanatinati e tauloto a o lei atoatoa le faaaliga ae ia faapea atu, ‘Le Alii e, ia faateleina lo’u malamalama!’",
   "duaMeaning7": "Fai atu ia [Perofeta], ‘Le Alii e, ia e faamagalo ma alofa mai: o oe lava e sili ona alofa mutimutivale i mea uma.’",
-  "duaMeaning8": "o ē tatalo, ‘Lo matou Ali‘i e, ia e foa‘i mai le ‘oli‘oli i o matou taitoalua ma a matou fānau. Ia fai i matou ma fa'aa'oa'oga lelei ia i latou o lo'o iloa oe'."
+  "duaMeaning8": "o ē tatalo, ‘Lo matou Ali‘i e, ia e foa‘i mai le ‘oli‘oli i o matou taitoalua ma a matou fānau. Ia fai i matou ma fa'aa'oa'oga lelei ia i latou o lo'o iloa oe'.",
+  "islamicNewYear": "Tausaga Fou Islama",
+  "mawlidAnNabi": "Maulid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Sāwalu",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muarama",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

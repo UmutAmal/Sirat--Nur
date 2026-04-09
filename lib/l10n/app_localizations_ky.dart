@@ -343,6 +343,30 @@ class AppLocalizationsKy extends AppLocalizations {
   String get eidAlAdha => 'Eid Al-Adha';
 
   @override
+  String get islamicNewYear => 'Ислам Жаңы жылы';
+
+  @override
+  String get mawlidAnNabi => 'Мавлид ан-Наби';
+
+  @override
+  String get specialDayDateRamadanStart => '1 Рамазан';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '27 Рамазан';
+
+  @override
+  String get specialDayDateEidAlFitr => '1 Шаввал';
+
+  @override
+  String get specialDayDateEidAlAdha => '10 Зуль Хижжа';
+
+  @override
+  String get specialDayDateIslamicNewYear => '1 Мухаррам';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '12 Рабиул-аввал';
+
+  @override
   String get laylatAlQadr => 'Laylat Al-Qadr';
 
   @override

@@ -650,5 +650,13 @@
   "duaMeaning5": "na fa wo ntaban si fam wɔ ahobrɛase mu kyerɛ wɔn wɔ ayamye mu na ka sɛ, ‘Awurade, hu wɔn mmɔbɔ, sɛnea wɔhwɛɛ me bere a na meyɛ abofra no.’",
   "duaMeaning6": "wɔmma Onyankopɔn, nea odi tumi ankasa no so. [Odiyifo], npere wo ho nkenkan ansa na adiyisɛm no awie koraa na mmom ka sɛ, ‘Awurade, ma me nnɔɔso wɔ nimdeɛ mu!’",
   "duaMeaning7": "Ka [Odiyifo] se, ‘Awurade, fa kyɛ na hu mmɔbɔ: Wo ne mmɔborohunufo sen obiara.’",
-  "duaMeaning8": "wɔn a wɔbɔ mpae sɛ, ‘Yɛn Awurade, ma yɛn anigye wɔ yɛn ahokafo ne yɛn mma mu. Yɛ yɛn nhwɛso pa mma wɔn a wonim Wo’."
+  "duaMeaning8": "wɔn a wɔbɔ mpae sɛ, ‘Yɛn Awurade, ma yɛn anigye wɔ yɛn ahokafo ne yɛn mma mu. Yɛ yɛn nhwɛso pa mma wɔn a wonim Wo’.",
+  "islamicNewYear": "Islamfoɔ Afe Foforo",
+  "mawlidAnNabi": "Mawlid ne Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan da no",
+  "specialDayDateLaylatAlQadr": "27 Ramadan da no",
+  "specialDayDateEidAlFitr": "1 Shawwal na ɔkyerɛwee",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram na ɔkyerɛwee",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal na ɔkyerɛwee"
 }

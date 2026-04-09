@@ -650,5 +650,13 @@
   "duaMeaning5": "Thiab txo koj lub tis kom txo hwj chim rau lawv hauv kev ua siab zoo thiab hais tias, 'Tus Tswv, thov koj khuv leej lawv, ib yam li lawv saib xyuas kuv thaum kuv tseem yau.'",
   "duaMeaning6": "ua Vajtswv tsaug, tus uas tswj tau tiag tiag. [Yehauvas], tsis txhob maj hais ua ntej qhov kev tshwm sim yuav tiav, tiam sis hais tias, 'Tus Tswv, thov kom kuv paub ntxiv!'",
   "duaMeaning7": "Hais [Yehauvas] hais tias, 'Tus Tswv, zam txim thiab muaj kev hlub tshua: Koj yog tus uas hlub tshua tshaj txhua tus.'",
-  "duaMeaning8": "cov uas thov Vajtswv hais tias, 'Peb tus Tswv, thov kom peb muaj kev xyiv fab ntawm peb cov txij nkawm thiab cov xeeb ntxwv. Ua rau peb ua piv txwv zoo rau cov uas paub txog koj'."
+  "duaMeaning8": "cov uas thov Vajtswv hais tias, 'Peb tus Tswv, thov kom peb muaj kev xyiv fab ntawm peb cov txij nkawm thiab cov xeeb ntxwv. Ua rau peb ua piv txwv zoo rau cov uas paub txog koj'.",
+  "islamicNewYear": "Islamic Xyoo Tshiab",
+  "mawlidAnNabi": "Mawlid thiab Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al Awwal"
 }

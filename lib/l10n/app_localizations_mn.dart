@@ -341,6 +341,30 @@ class AppLocalizationsMn extends AppLocalizations {
   String get eidAlAdha => 'Eid Al-Adha';
 
   @override
+  String get islamicNewYear => 'Исламын шинэ жил';
+
+  @override
+  String get mawlidAnNabi => 'Мавлид ан-Наби';
+
+  @override
+  String get specialDayDateRamadanStart => '1 Рамадан';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '27 Рамадан';
+
+  @override
+  String get specialDayDateEidAlFitr => '1 Шаввал';
+
+  @override
+  String get specialDayDateEidAlAdha => '10 Зул Хижжа';
+
+  @override
+  String get specialDayDateIslamicNewYear => '1 Мухаррам';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '12 Раби аль-Аввал';
+
+  @override
   String get laylatAlQadr => 'Laylat Al-Qadr';
 
   @override

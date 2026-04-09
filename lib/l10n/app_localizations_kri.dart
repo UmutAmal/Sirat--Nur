@@ -342,6 +342,30 @@ class AppLocalizationsKri extends AppLocalizations {
   String get eidAlAdha => 'Eid Al-Adha bin de go';
 
   @override
+  String get islamicNewYear => 'Islamik Nyu Ia';
+
+  @override
+  String get mawlidAnNabi => 'Mawlid wan-Nabi';
+
+  @override
+  String get specialDayDateRamadanStart => '1 Ramadan';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '27 Ramadan';
+
+  @override
+  String get specialDayDateEidAlFitr => '1 Shawwal, we de na di wɔl';
+
+  @override
+  String get specialDayDateEidAlAdha => '10 Dhul Hijjah we dɛn kɔl';
+
+  @override
+  String get specialDayDateIslamicNewYear => '1 Muharram, we dɛn kɔl Muharram';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '12 Na Rabi al-Awwal bin rayt am';
+
+  @override
   String get laylatAlQadr => 'Laylat Al-Qadr we de wok fɔ di kɔmni';
 
   @override

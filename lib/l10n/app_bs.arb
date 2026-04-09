@@ -650,5 +650,13 @@
   "duaMeaning5": "i spusti svoje krilo u poniznosti prema njima u dobroti i reci: ‘Gospodaru, smiluj im se, kao što su se i oni brinuli za mene kad sam bio mali.’",
   "duaMeaning6": "uzvišen neka je Bog, onaj koji zaista ima kontrolu. (Poslaniče), ne žuri da učiš prije nego što se objava u potpunosti završi, već reci: ‘Gospodaru, povećaj me u znanju!’",
   "duaMeaning7": "Reci [Poslaniku]: ‘Gospodaru, oprosti i smiluj se: Ti si najmilostiviji od svih.’",
-  "duaMeaning8": "oni koji mole: ‘Gospodaru naš, daj nam radost u našim supružnicima i potomstvu. Učini nas dobrim primjerom onima koji su svjesni Tebe."
+  "duaMeaning8": "oni koji mole: ‘Gospodaru naš, daj nam radost u našim supružnicima i potomstvu. Učini nas dobrim primjerom onima koji su svjesni Tebe.",
+  "islamicNewYear": "Islamska Nova godina",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramazan",
+  "specialDayDateLaylatAlQadr": "27 Ramazana",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Zul Hidža",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

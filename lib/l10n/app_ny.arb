@@ -650,5 +650,13 @@
   "duaMeaning5": "ndipo tsitsani mapiko anu modzichepetsa kwa iwo mwachifundo ndi kunena, ‘Ambuye, achitireni chifundo monga momwe anandisamalira ine pamene ndinali wamng’ono.",
   "duaMeaning6": "watukuka Mulungu Yemwe ali wolamuliradi. [Mneneri], musamafulumire kunena chivumbulutso chisanakwaniritsidwe koma nenani, Ambuye, ndiwonjezereni kudziwa!",
   "duaMeaning7": "Nena [Mneneri]: “Ambuye, khululukani ndipo chitirani chifundo;",
-  "duaMeaning8": "amene amapemphera kuti: ‘Mbuye wathu, tisangalatseni mwa akazi athu ndi ana athu. Tipangeni ife zitsanzo zabwino kwa iwo amene akukudziwani Inu”."
+  "duaMeaning8": "amene amapemphera kuti: ‘Mbuye wathu, tisangalatseni mwa akazi athu ndi ana athu. Tipangeni ife zitsanzo zabwino kwa iwo amene akukudziwani Inu”.",
+  "islamicNewYear": "Chaka Chatsopano cha Chisilamu",
+  "mawlidAnNabi": "Maulid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

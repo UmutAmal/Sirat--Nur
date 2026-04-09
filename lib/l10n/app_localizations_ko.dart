@@ -340,6 +340,30 @@ class AppLocalizationsKo extends AppLocalizations {
   String get eidAlAdha => 'Eid Al-Adha';
 
   @override
+  String get islamicNewYear => '이슬람 새해';
+
+  @override
+  String get mawlidAnNabi => '마울리드 안나비';
+
+  @override
+  String get specialDayDateRamadanStart => '1 라마단';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '라마단 27일';
+
+  @override
+  String get specialDayDateEidAlFitr => '1 샤왈';
+
+  @override
+  String get specialDayDateEidAlAdha => '10 둘 히자';
+
+  @override
+  String get specialDayDateIslamicNewYear => '1 무하람';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '12 라비 알 아왈';
+
+  @override
   String get laylatAlQadr => 'Laylat Al-Qadr';
 
   @override

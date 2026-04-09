@@ -650,5 +650,13 @@
   "duaMeaning5": "et cornu tuum humiliter in eis benigne depone et dic, 'Domine, miserere eorum, sicut me curabant cum essem parvulus.'",
   "duaMeaning6": "Deus excelsus, qui vere est in potestate. [Propheta], ante revelationem plene completam non ruere recitare sed dic, Domine, auge me in scientia!",
   "duaMeaning7": "Dic [Prophet], 'Domine, dimitte et miserere: Tu es omnium clementissimus.'",
-  "duaMeaning8": "qui orant, 'Domine, in coniugibus et prole nostro da nobis laetitiam'. Bona nobis exempla fac his qui Tui conscii sunt."
+  "duaMeaning8": "qui orant, 'Domine, in coniugibus et prole nostro da nobis laetitiam'. Bona nobis exempla fac his qui Tui conscii sunt.",
+  "islamicNewYear": "islamica New Year",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

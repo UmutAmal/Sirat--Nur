@@ -4,6 +4,17 @@ import 'package:intl/intl.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
+List<MapEntry<String, String>> buildImportantDates(AppLocalizations l10n) {
+  return [
+    MapEntry(l10n.ramadan, l10n.specialDayDateRamadanStart),
+    MapEntry(l10n.laylatAlQadr, l10n.specialDayDateLaylatAlQadr),
+    MapEntry(l10n.eidAlFitr, l10n.specialDayDateEidAlFitr),
+    MapEntry(l10n.eidAlAdha, l10n.specialDayDateEidAlAdha),
+    MapEntry(l10n.islamicNewYear, l10n.specialDayDateIslamicNewYear),
+    MapEntry(l10n.mawlidAnNabi, l10n.specialDayDateMawlidAnNabi),
+  ];
+}
+
 class CalendarPage extends StatefulWidget {
   const CalendarPage({super.key});
   @override
@@ -67,7 +78,9 @@ class _CalendarPageState extends State<CalendarPage> {
 
     final selectedHijri = HijriCalendar.fromDate(_selectedDate);
     final today = DateTime.now();
-    final importantDates = _importantDates(l10n);
+    final importantDates = buildImportantDates(
+      l10n,
+    ).map((event) => _IslamicDate(event.key, event.value, '')).toList();
     final weekdayLabels = _weekdayLabels(context);
 
     return Scaffold(
@@ -500,17 +513,6 @@ class _CalendarPageState extends State<CalendarPage> {
       (index) =>
           DateFormat.E(localeTag).format(monday.add(Duration(days: index))),
     );
-  }
-
-  List<_IslamicDate> _importantDates(AppLocalizations l10n) {
-    return [
-      _IslamicDate(l10n.ramadan, '1 Ramadan', ''),
-      _IslamicDate(l10n.laylatAlQadr, '27 Ramadan', ''),
-      _IslamicDate(l10n.eidAlFitr, '1 Shawwal', ''),
-      _IslamicDate(l10n.eidAlAdha, '10 Dhul Hijjah', ''),
-      _IslamicDate(l10n.hijriCalendar, '1 Muharram', ''),
-      _IslamicDate('Mawlid an-Nabi', '12 Rabi al-Awwal', ''),
-    ];
   }
 }
 

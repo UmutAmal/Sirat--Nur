@@ -650,5 +650,13 @@
   "duaMeaning5": "ary ampidino amin’ny fanetren-tena ny elatrao aminy amim-pitiavana, ka ataovy hoe: ‘Tompo ô, mamindrà fo aminy, tahaka ny nikarakarany ahy fony aho mbola kely.",
   "duaMeaning6": "asandratra anie Andriamanitra, Izay mahafehy tokoa. [Mpaminany], aza maika ny mitanisa alohan’ny fahafenoan’ny fanambarana fa lazao hoe: ‘Tompo ô, ampitomboy fahalalana aho!’",
   "duaMeaning7": "Lazao [ny Mpaminany] hoe: ‘Tompo ô, mamelà heloka sy mamindrà fo: Hianao no mamindra fo indrindra amin’izy rehetra.’",
-  "duaMeaning8": "ireo izay mivavaka hoe: ‘Ry Tomponay, omeo fifaliana izahay amin’ny vadinay sy ny taranakay. Ataovy ohatra tsara ho an’izay mahalala Anao izahay’."
+  "duaMeaning8": "ireo izay mivavaka hoe: ‘Ry Tomponay, omeo fifaliana izahay amin’ny vadinay sy ny taranakay. Ataovy ohatra tsara ho an’izay mahalala Anao izahay’.",
+  "islamicNewYear": "Taom-baovao Islamika",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadany",
+  "specialDayDateLaylatAlQadr": "27 Ramadany",
+  "specialDayDateEidAlFitr": "1 Syawal",
+  "specialDayDateEidAlAdha": "10 Dzulhijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal"
 }

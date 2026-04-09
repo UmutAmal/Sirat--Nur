@@ -342,6 +342,30 @@ class AppLocalizationsNso extends AppLocalizations {
   String get eidAlAdha => 'Eid Al-Adha ya go swana le yona';
 
   @override
+  String get islamicNewYear => 'Ngwaga o Mofsa wa Boiselamo';
+
+  @override
+  String get mawlidAnNabi => 'Mawlid an-Nabi';
+
+  @override
+  String get specialDayDateRamadanStart => '1 Ramadan ka la 1';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '27 Ramadan ka la 27';
+
+  @override
+  String get specialDayDateEidAlFitr => '1 Shawwal';
+
+  @override
+  String get specialDayDateEidAlAdha => '10 Dhul Hijjah ya go swana le yona';
+
+  @override
+  String get specialDayDateIslamicNewYear => '1 Muharram ka 1. Moharram';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '12 Rabi al-Awwal o ile a hlokomela';
+
+  @override
   String get laylatAlQadr => 'Laylat Al-Qadr, o ile a hlokomela';
 
   @override

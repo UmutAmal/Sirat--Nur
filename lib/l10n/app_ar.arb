@@ -650,5 +650,13 @@
   "duaMeaning5": "واخفض جناحك لهم ذلاً وقل رب ارحمهم كما ربيوني صغيرًا.",
   "duaMeaning6": "سبحان الله الذي هو المسيطر حقاً. [أيها النبي]، لا تعجل بالقراءة قبل أن يتم الوحي، وقل: رب زدني علما.",
   "duaMeaning7": "قل [النبي]: رب اغفر وارحم وأنت أرحم الراحمين.",
-  "duaMeaning8": "الذين يقولون: ربنا هب لنا في أزواجنا وذرياتنا. واجعل لنا قدوة حسنة للذين يتقون»."
+  "duaMeaning8": "الذين يقولون: ربنا هب لنا في أزواجنا وذرياتنا. واجعل لنا قدوة حسنة للذين يتقون».",
+  "islamicNewYear": "السنة الإسلامية الجديدة",
+  "mawlidAnNabi": "مولد النبي",
+  "specialDayDateRamadanStart": "1 رمضان",
+  "specialDayDateLaylatAlQadr": "27 رمضان",
+  "specialDayDateEidAlFitr": "1 شوال",
+  "specialDayDateEidAlAdha": "10 ذي الحجة",
+  "specialDayDateIslamicNewYear": "1 محرم",
+  "specialDayDateMawlidAnNabi": "12 ربيع الأول"
 }

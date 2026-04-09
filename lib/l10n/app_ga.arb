@@ -650,5 +650,13 @@
   "duaMeaning5": "agus ísligh do sciathán go humhal leo i gcineáltas agus abair, ‘A Thiarna, déan trócaire orthu, mar a thug siad aire dom nuair a bhí mé beag.’",
   "duaMeaning6": "Ardaithe go raibh Dia, an té atá i gceannas go fírinneach. [Fáidh], ná déan deifir chun aithris a dhéanamh sula mbeidh an nochtadh iomlán iomlán ach abair, ‘A Thiarna, méadaigh in eolas mé!’",
   "duaMeaning7": "Abair [Fáidh], ‘A Thiarna, maith agus déan trócaire: Is tú an té is trócaire ar fad’.",
-  "duaMeaning8": "iad siúd a guí, ‘A Thiarna, déan áthas orainn inár gcéilí agus inár sliocht. Déan samplaí maithe dúinn dóibh siúd atá ar an eolas fút’."
+  "duaMeaning8": "iad siúd a guí, ‘A Thiarna, déan áthas orainn inár gcéilí agus inár sliocht. Déan samplaí maithe dúinn dóibh siúd atá ar an eolas fút’.",
+  "islamicNewYear": "Athbhliain Ioslamach",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Seabhall",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muirram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

@@ -650,5 +650,13 @@
   "duaMeaning5": "a e hoʻohaʻahaʻa i kou ʻēheu iā lākou me ka lokomaikaʻi, a e ʻōlelo aku, 'E ka Haku, e aloha mai ʻoe iā lākou, e like me ko lākou mālama ʻana mai iaʻu i koʻu wā liʻiliʻi.'",
   "duaMeaning6": "e hookiekieia'e ke Akua, ka mea nana e hoomalu. [Pula], mai wikiwiki e heluhelu ma mua o ka pau ʻana o ka hōʻike, akā e ʻōlelo aku, 'E ka Haku, hoʻonui iaʻu i ka ʻike!'",
   "duaMeaning7": "E ʻī aku [Pūlana], ‘E ka Haku, e kala mai a e aloha mai: ʻO ʻoe ke aloha nui loa i nā mea a pau.’",
-  "duaMeaning8": "ka poe e pule ana, E ka Haku, e haawi mai ia makou i ka olioli iloko o na wahine a me na keiki a makou. E hoolilo mai oe ia makou i kumu hoohalike no ka poe ike ia oe."
+  "duaMeaning8": "ka poe e pule ana, E ka Haku, e haawi mai ia makou i ka olioli iloko o na wahine a me na keiki a makou. E hoolilo mai oe ia makou i kumu hoohalike no ka poe ike ia oe.",
+  "islamicNewYear": "Makahiki Hou Islam",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Sāwalu",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharama",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }

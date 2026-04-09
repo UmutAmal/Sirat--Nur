@@ -650,5 +650,13 @@
   "duaMeaning5": "ha emboguejy nde pepo ñemomirĩme hesekuéra py’aporãme ha ere: ‘Ñandejára, eiporiahuvereko chupekuéra, ha’ekuéra oñangareko haguéicha cherehe che michĩrõ guare’.",
   "duaMeaning6": "toñemomba’eguasu Tupã, pe añetehápe oisãmbyhýva. [Profeta], ani pejejapura pe’recita pe revelación oñecompleta mboyve ha katu peje: ‘¡Señor, chembohetave mba’ekuaa!’.",
   "duaMeaning7": "Ere [Profeta]: ‘Ñandejára, eperdona ha eiporiahuvereko: Nde ningo pe poriahuverekovéva opa mba’égui’.",
-  "duaMeaning8": "umi oñembo’éva, ‘Ñande Ruvicha, eme’ẽ ñandéve vy’a ñane ména térã ñane rembireko ha ñane ñemoñarekuérape. Ejapo oréve techapyrã porã umi nde consciente-pe’."
+  "duaMeaning8": "umi oñembo’éva, ‘Ñande Ruvicha, eme’ẽ ñandéve vy’a ñane ména térã ñane rembireko ha ñane ñemoñarekuérape. Ejapo oréve techapyrã porã umi nde consciente-pe’.",
+  "islamicNewYear": "Ary Pyahu Islámico rehegua",
+  "mawlidAnNabi": "Mawlid peteĩ-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadán-pe",
+  "specialDayDateLaylatAlQadr": "27 Ramadán-pe",
+  "specialDayDateEidAlFitr": "1 Shawwal rehegua",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah rehegua",
+  "specialDayDateIslamicNewYear": "1 Muharram rehegua",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal rehegua"
 }

@@ -341,6 +341,30 @@ class AppLocalizationsTw extends AppLocalizations {
   String get eidAlAdha => 'Eid Al-Adha a ɛyɛ fɛ';
 
   @override
+  String get islamicNewYear => 'Islamfoɔ Afe Foforo';
+
+  @override
+  String get mawlidAnNabi => 'Mawlid ne Nabi';
+
+  @override
+  String get specialDayDateRamadanStart => '1 Ramadan da no';
+
+  @override
+  String get specialDayDateLaylatAlQadr => '27 Ramadan da no';
+
+  @override
+  String get specialDayDateEidAlFitr => '1 Shawwal na ɔkyerɛwee';
+
+  @override
+  String get specialDayDateEidAlAdha => '10 Dhul Hijjah';
+
+  @override
+  String get specialDayDateIslamicNewYear => '1 Muharram na ɔkyerɛwee';
+
+  @override
+  String get specialDayDateMawlidAnNabi => '12 Rabi al-Awwal na ɔkyerɛwee';
+
+  @override
   String get laylatAlQadr => 'Laylat Al-Qadr na ɔkyerɛwee';
 
   @override

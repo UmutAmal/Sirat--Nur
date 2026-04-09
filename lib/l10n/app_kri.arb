@@ -650,5 +650,13 @@
   "duaMeaning5": "ɛn put yu wing dɔŋ wit ɔmbul to dɛn wit gudnɛs ɛn se, ‘Masta, sɔri fɔ dɛn, jɔs lɛk aw dɛn bin de kia fɔ mi we a bin smɔl.’",
   "duaMeaning6": "Gɔd fɔ ɔp, di wan we rili de kɔntrol. [Prɔfɛt], nɔ rɔsh fɔ rid bifo di rivyu dɔn ful-ɔp bɔt se, ‘Masta, mek a no mɔ!’",
   "duaMeaning7": "Se [Prɔfɛt], ‘Masta, fɔgiv ɛn sɔri: Yu gɛt sɔri-at pas ɔlman.’",
-  "duaMeaning8": "di wan dɛn we de pre se, ‘Wi Masta, gi wi gladi at pan wi man ɔ wɛf ɛn pikin dɛn. Mek wi gud ɛgzampul to di wan dɛn we no Yu’."
+  "duaMeaning8": "di wan dɛn we de pre se, ‘Wi Masta, gi wi gladi at pan wi man ɔ wɛf ɛn pikin dɛn. Mek wi gud ɛgzampul to di wan dɛn we no Yu’.",
+  "islamicNewYear": "Islamik Nyu Ia",
+  "mawlidAnNabi": "Mawlid wan-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal, we de na di wɔl",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah we dɛn kɔl",
+  "specialDayDateIslamicNewYear": "1 Muharram, we dɛn kɔl Muharram",
+  "specialDayDateMawlidAnNabi": "12 Na Rabi al-Awwal bin rayt am"
 }

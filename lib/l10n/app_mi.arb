@@ -650,5 +650,13 @@
   "duaMeaning5": "a ka whakaiti i tou parirau i runga i te ngakau mahaki ki a ratou i runga i te atawhai, ka mea, ‘E te Ariki, kia aroha ki a ratou, me ratou i tiaki i ahau i toku tamarikitanga.",
   "duaMeaning6": "kia whakanuia te Atua, ko ia nei te tino tikanga. [Peropheta], eiaha e ru i te tai‘o hou te heheuraa e hope roa a parau ai, ‘E te Fatu, faarahi i to ’u ite!’",
   "duaMeaning7": "Mea atu [te Peropheta], ‘E te Fatu, e faaore mai i te hara e e aroha mai: o oe tei hau atu i te aroha i te mau mea atoa.’",
-  "duaMeaning8": "te hunga e inoi ana, ‘E to matou Ariki, homai ki a matou te hari i roto i o matou hoa wahine me o matou uri. Meinga matou hei tauira pai ki te hunga e mohio ana ki a Koe’."
+  "duaMeaning8": "te hunga e inoi ana, ‘E to matou Ariki, homai ki a matou te hari i roto i o matou hoa wahine me o matou uri. Meinga matou hei tauira pai ki te hunga e mohio ana ki a Koe’.",
+  "islamicNewYear": "Tau Hou Islamic",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Hawwara",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharama",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal"
 }
