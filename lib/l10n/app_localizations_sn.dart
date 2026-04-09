@@ -928,7 +928,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get zakatTotal => 'Total';
 
   @override
-  String get calculateZakat => 'Calculate Zakat';
+  String get calculateZakat => 'Verenga Zakat';
 
   @override
   String get nisabNotReached => 'Nisab not reached. Zakat is not obligatory.';
@@ -1084,7 +1084,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get streaks => 'Streaks';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'Mutambo wezuva';
 
   @override
   String get bestStreak => 'Best streak';

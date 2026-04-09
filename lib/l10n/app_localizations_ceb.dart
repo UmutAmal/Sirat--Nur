@@ -930,7 +930,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get zakatTotal => 'Total';
 
   @override
-  String get calculateZakat => 'Calculate Zakat';
+  String get calculateZakat => 'Kalkulahin ang Zakat';
 
   @override
   String get nisabNotReached => 'Nisab not reached. Zakat is not obligatory.';
@@ -1089,7 +1089,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get dayStreak => 'Day streak';
 
   @override
-  String get bestStreak => 'Best streak';
+  String get bestStreak => 'Labing maayo nga streak';
 
   @override
   String get chatbotCloudAiLabel => 'Cloud AI';

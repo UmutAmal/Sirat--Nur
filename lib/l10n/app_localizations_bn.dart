@@ -929,7 +929,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get zakatTotal => 'Total';
 
   @override
-  String get calculateZakat => 'Calculate Zakat';
+  String get calculateZakat => 'যাকাত হিসাব করুন';
 
   @override
   String get nisabNotReached => 'Nisab not reached. Zakat is not obligatory.';
@@ -1085,10 +1085,10 @@ class AppLocalizationsBn extends AppLocalizations {
   String get streaks => 'Streaks';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'দিনের ধারা';
 
   @override
-  String get bestStreak => 'Best streak';
+  String get bestStreak => 'সেরা ধারা';
 
   @override
   String get chatbotCloudAiLabel => 'Cloud AI';

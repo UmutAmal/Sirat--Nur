@@ -3115,3 +3115,40 @@
 ### Sonraki Adım
 - Sıradaki turda code-referenced yüksek yoğunluklu kalan UI anahtarları olan `calculateZakat`, `dayStreak`, `bestStreak` kümesi lokalize edilecek.
 - Ardından chatbot ve paywall yüzeyindeki kalan loanword/EN-reference kümeleri ayrı audit turuna alınacak.
+
+## 2026-04-09 TUR-80 — Localize Analytics Streak And Zakat Labels
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force calculateZakat dayStreak bestStreak` ile başlatıldı; komut tüm locale setinde uzun sürdüğü için zaman aşımına girdi ama ARB dosyalarına kısmi yazım bıraktı.
+- Self-heal kuralıyla kısmi durum ölçüldü; güvenli priority locale setinde yalnızca [A:\Way of Allah\sirat_i_nur\lib\l10n\app_vi.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_vi.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_zh.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh_CN.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_zh_CN.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh_TW.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_zh_TW.arb) ve variant fallback tarafında [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tw.arb) eksik kaldığı doğrulandı.
+- Bu dar küme için locale-hedefli batch düzeltme uygulandı; `tw` varyantı da [A:\Way of Allah\sirat_i_nur\lib\l10n\app_ak.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_ak.arb) sibling fallback’ine hizalandı.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) genişletildi; priority locale seti için `calculateZakat`, `dayStreak`, `bestStreak` EN fallback regresyonu kilitlendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\analytics\analytics_page.dart#L104](A:/Way%20of%20Allah/sirat_i_nur/lib/features/analytics/analytics_page.dart#L104), [A:\Way of Allah\sirat_i_nur\lib\features\analytics\analytics_page.dart#L137](A:/Way%20of%20Allah/sirat_i_nur/lib/features/analytics/analytics_page.dart#L137) ve [A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart#L184](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/zakat_calculator_page.dart#L184) anahtarlarının neredeyse tüm locale setinde İngilizce kaldığı doğrulandı.
+- Bu metinler analytics ve zekat ekranında yüksek görünürlüklü kullanıcı yüzeyleri olduğu için sonraki öncelikli localization boşluğuydu.
+- Toplu komut zaman aşımına girince sadece eksik kalan locale setine odaklanılarak risk kapatıldı; global revert yapılmadı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` içindeki `calculateZakat`, `dayStreak`, `bestStreak` anahtarları güncellenen dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` generated dosyaları
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `calculateZakat` için İngilizce fallback sayısı `195`ten `78`e düştü.
+- `dayStreak` için `195`ten `79`a düştü.
+- `bestStreak` için `195`ten `79`a düştü.
+- Priority locale seti analytics streak ve zekat CTA yüzeyinde artık İngilizce fallback göstermiyor.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`7/7`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`187/187`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Analytics streak and zakat action labels still falling back to English across the supported surface: `14/25 → 6/25`
+
+### Sonraki Adım
+- Sıradaki turda code-referenced kalan yüksek yoğunluklu localization yüzeyleri olan chatbot cloud labels ve paywall feature başlıkları ele alınacak.
+- Rare locale ve loanword davranışı gösteren anahtarlar için sibling fallback ve güvenli EN-reference matrisi ayrı audit olarak sürdürülecek.

@@ -924,7 +924,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get zakatTotal => 'Total';
 
   @override
-  String get calculateZakat => 'Calculate Zakat';
+  String get calculateZakat => '计算天课';
 
   @override
   String get nisabNotReached => 'Nisab not reached. Zakat is not obligatory.';
@@ -1079,10 +1079,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get streaks => 'Streaks';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => '连续日数';
 
   @override
-  String get bestStreak => 'Best streak';
+  String get bestStreak => '最佳连胜纪录';
 
   @override
   String get chatbotCloudAiLabel => 'Cloud AI';
@@ -2068,7 +2068,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get zakatTotal => 'Total';
 
   @override
-  String get calculateZakat => 'Calculate Zakat';
+  String get calculateZakat => '计算天课';
 
   @override
   String get nisabNotReached => 'Nisab not reached. Zakat is not obligatory.';
@@ -2223,10 +2223,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get streaks => 'Streaks';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => '连续日数';
 
   @override
-  String get bestStreak => 'Best streak';
+  String get bestStreak => '最佳连胜纪录';
 
   @override
   String get chatbotCloudAiLabel => 'Cloud AI';
@@ -3212,7 +3212,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get zakatTotal => 'Total';
 
   @override
-  String get calculateZakat => 'Calculate Zakat';
+  String get calculateZakat => '計算天課';
 
   @override
   String get nisabNotReached => 'Nisab not reached. Zakat is not obligatory.';
@@ -3367,10 +3367,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get streaks => 'Streaks';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => '連續日數';
 
   @override
-  String get bestStreak => 'Best streak';
+  String get bestStreak => '最佳連勝紀錄';
 
   @override
   String get chatbotCloudAiLabel => 'Cloud AI';

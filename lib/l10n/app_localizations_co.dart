@@ -1085,10 +1085,10 @@ class AppLocalizationsCo extends AppLocalizations {
   String get streaks => 'Streaks';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'Scena di ghjornu';
 
   @override
-  String get bestStreak => 'Best streak';
+  String get bestStreak => 'A megliu striscia';
 
   @override
   String get chatbotCloudAiLabel => 'Cloud AI';
