@@ -1115,23 +1115,23 @@ class AppLocalizationsSu extends AppLocalizations {
       '[OFFLINE] Pitunjuk Islam lokal anu diverifikasi teu acan sayogi. Pindah ka Cloud AI pikeun jawaban sumber.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'masjid-masjid';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Dahareun Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Pilarian wewengkon ieu';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Deukeutna Masjid';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Sakola Islam';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count kapanggih';
   }
 
   @override
@@ -1141,15 +1141,15 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Kasalahan API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Kasalahan jaringan. Mangga cobian deui.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Ngaran teu kanyahoan';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Tempat Islami';
 }

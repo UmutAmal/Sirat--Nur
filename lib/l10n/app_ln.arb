@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "API ya lipata ebongisi te. Svp bo changer na AI ya Local.",
   "chatbotLocalNoInfo": "[OFFLINE] Bokambami ya Islam ya mboka oyo e vérifié ezali nanu te. Bobongola na Cloud AI mpo na biyano oyo euti na source.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "Ba Mosquées",
+  "halalFood": "Bilei ya Halal",
+  "placesSearchArea": "Luká esika oyo",
+  "nearbyMosques": "Ba Mosquées oyo ezali pene wana",
+  "islamicSchools": "Biteyelo ya Islam",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Libunga ya réseau. Svp meka lisusu.",
+  "unknownPlaceName": "Kombo eyebani te",
+  "islamicPlaceFallback": "Esika ya Islam",
   "prayerNotificationTitle": "Tango ya {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

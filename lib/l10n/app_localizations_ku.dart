@@ -1115,41 +1115,42 @@ class AppLocalizationsKu extends AppLocalizations {
       '[OFFLINE] Rêbernameya îslamî ya herêmî ya pejirandî hîna peyda nabe. Ji bo bersivên çavkaniyê veguherînin Cloud AI.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Mizgeftan';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Xwarina Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Li vê herêmê bigerin';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Mizgeftên Nêzîkî';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Dibistanên Îslamî';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count hat dîtin';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km dûr';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Çewtiya API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Çewtiya torê. Ji kerema xwe dîsa biceribîne.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Navê nenas';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Cihê Îslamî';
 }

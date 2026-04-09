@@ -1115,41 +1115,41 @@ class AppLocalizationsPs extends AppLocalizations {
       '[افلاین] تایید شوی محلي اسلامي لارښود لا تر اوسه شتون نلري. د سرچینې ځوابونو لپاره کلاوډ AI ته لاړشئ.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'جوماتونه';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'حلال خواړه';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'دا سیمه وپلټئ';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'نږدې جوماتونه';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'اسلامي ښوونځي';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count وموندل شو';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance کیلومتره لرې';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API تېروتنه: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'د شبکې تېروتنه. مهرباني وکړئ بیا هڅه وکړئ.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'نامعلوم نوم';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'اسلامي ځای';
 }

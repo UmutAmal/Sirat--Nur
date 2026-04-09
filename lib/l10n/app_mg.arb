@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "Cloud API tsy voarindra. Miverena any amin'ny AI eo an-toerana azafady.",
   "chatbotLocalNoInfo": "[OFFLINE] Tsy mbola misy ny fitarihana Islamika ao an-toerana voamarina. Miverena any amin'ny Cloud AI hahazoana valiny azo avy amin'ny loharano.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "moskea",
+  "halalFood": "Sakafo Halal",
+  "placesSearchArea": "Tadiavo ity faritra ity",
+  "nearbyMosques": "Moske akaiky",
+  "islamicSchools": "Sekoly Islamika",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Error API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Fahadisoan'ny tambajotra. Andramo indray azafady.",
+  "unknownPlaceName": "Anarana tsy fantatra",
+  "islamicPlaceFallback": "Toerana Islamika",
   "prayerNotificationTitle": "Fotoana hanaovana {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

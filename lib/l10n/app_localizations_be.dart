@@ -1120,41 +1120,42 @@ class AppLocalizationsBe extends AppLocalizations {
       '[ПА-ЗА ЛАЙНАМ] Правераныя мясцовыя ісламскія рэкамендацыі пакуль недаступныя. Пераключыцеся на Cloud AI, каб атрымаць адказы з крыніц.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Мячэці';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Халяльная ежа';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Пошук у гэтай вобласці';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Блізкія мячэці';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Ісламскія школы';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count знойдзены';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance км';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Памылка API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Памылка сеткі. Калі ласка, паспрабуйце яшчэ раз.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Невядомае імя';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Ісламскае месца';
 }

@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API কনফিগার করা হয়নি। অনুগ্রহ করে স্থানীয় AI-তে স্যুইচ করুন।",
   "chatbotLocalNoInfo": "[অফলাইন] যাচাইকৃত স্থানীয় ইসলামিক নির্দেশিকা এখনও উপলব্ধ নয়। সোর্স করা উত্তরের জন্য ক্লাউড এআই-তে স্যুইচ করুন।",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "মসজিদ",
+  "halalFood": "হালাল খাবার",
+  "placesSearchArea": "এই এলাকায় অনুসন্ধান করুন",
+  "nearbyMosques": "কাছাকাছি মসজিদ",
+  "islamicSchools": "ইসলামিক স্কুল",
+  "placesFoundCount": "{count} পাওয়া গেছে",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} কিমি দূরে",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API ত্রুটি: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "নেটওয়ার্ক ত্রুটি। আবার চেষ্টা করুন.",
+  "unknownPlaceName": "অজানা নাম",
+  "islamicPlaceFallback": "ইসলামিক স্থান",
   "prayerNotificationTitle": "{prayerName} এর জন্য সময়",
   "@prayerNotificationTitle": {
     "placeholders": {

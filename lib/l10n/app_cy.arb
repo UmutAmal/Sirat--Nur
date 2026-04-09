@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API heb ei ffurfweddu. Newidiwch i Local AI.",
   "chatbotLocalNoInfo": "[All-lein] Nid yw canllawiau Islamaidd lleol wedi'u dilysu ar gael eto. Newidiwch i Cloud AI i gael atebion o ffynonellau.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Mosgiau",
+  "halalFood": "Bwyd Halal",
+  "placesSearchArea": "Chwiliwch yr ardal hon",
+  "nearbyMosques": "Mosgiau cyfagos",
+  "islamicSchools": "Ysgolion Islamaidd",
+  "placesFoundCount": "{count} canfuwyd",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km i ffwrdd",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Gwall API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Gwall rhwydwaith. Ceisiwch eto.",
+  "unknownPlaceName": "Enw Anhysbys",
+  "islamicPlaceFallback": "Lle Islamaidd",
   "prayerNotificationTitle": "Amser ar gyfer {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

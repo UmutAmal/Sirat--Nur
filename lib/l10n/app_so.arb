@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API ma habaysan Fadlan u beddel AI Local.",
   "chatbotLocalNoInfo": "[OFFLINE] Hanuun Islaami ah oo la xaqiijiyay weli lama heli karo. U beddel Cloud AI jawaabaha laga soo xigtay.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Masaajidada",
+  "halalFood": "Cunto Xalaal ah",
+  "placesSearchArea": "Ka raadi aaggan",
+  "nearbyMosques": "Masaajidada u dhow",
+  "islamicSchools": "Dugsiyada Islaamiga ah",
+  "placesFoundCount": "{count} la helay",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Cilad API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Cilada shabakada Fadlan isku day mar kale",
+  "unknownPlaceName": "Magaca Aan La Aqoon",
+  "islamicPlaceFallback": "Goobta Islaamka",
   "prayerNotificationTitle": "Waqtiga {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

@@ -1119,19 +1119,19 @@ class AppLocalizationsGn extends AppLocalizations {
       '[OFFLINE] Ndojeguerekói gueteri orientación islámica local verificado. Embohasa Cloud AI-pe ñembohovái fuente-pe g̃uarã.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Mezquita-kuéra';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Tembi’u Halal rehegua';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Eheka ko área';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Mezquita-kuéra hi’aguĩva';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Mbo’ehao Islámico-kuéra';
 
   @override
   String placesFoundCount(String count) {
@@ -1145,15 +1145,15 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API jejavy: $statusCode .';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Red jejavy. Eñeha’ã jey.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Ndojekuaáiva Téra';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Lugar Islámico rehegua';
 }

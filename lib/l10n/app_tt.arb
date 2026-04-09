@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API конфигурацияләнмәгән. Зинһар, җирле ЯИга күчә.",
   "chatbotLocalNoInfo": "[ОФЛИН] Тикшерелгән җирле ислам җитәкчелеге әлегә юк. Каты җаваплар өчен Cloud AI'ка күчә.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Мәчетләр",
+  "halalFood": "Хәләл ризык",
+  "placesSearchArea": "Бу өлкәдә эзләгез",
+  "nearbyMosques": "Якындагы мәчетләр",
+  "islamicSchools": "Ислам мәктәпләре",
+  "placesFoundCount": "{count} табылды",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} км ераклыкта",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API хата: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Челтәр хата. Зинһар, кабатлап карагыз.",
+  "unknownPlaceName": "Билгесез исем",
+  "islamicPlaceFallback": "Ислам урыны",
   "prayerNotificationTitle": "{prayerName} өчен вакыт",
   "@prayerNotificationTitle": {
     "placeholders": {

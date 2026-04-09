@@ -1115,19 +1115,19 @@ class AppLocalizationsSr extends AppLocalizations {
       '[ОФФЛИНЕ] Верификоване локалне исламске смернице још увек нису доступне. Пређите на вештачку интелигенцију у облаку да бисте добили одговоре.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'џамије';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Халал Фоод';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Претражите ову област';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Оближње џамије';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Исламске школе';
 
   @override
   String placesFoundCount(String count) {
@@ -1145,11 +1145,11 @@ class AppLocalizationsSr extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Мрежна грешка. Покушајте поново.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Непознато име';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Исламиц Плаце';
 }

@@ -1116,41 +1116,41 @@ class AppLocalizationsTa extends AppLocalizations {
       '[ஆஃப்லைன்] சரிபார்க்கப்பட்ட உள்ளூர் இஸ்லாமிய வழிகாட்டுதல் இன்னும் கிடைக்கவில்லை. ஆதாரமான பதில்களுக்கு Cloud AIக்கு மாறவும்.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'மசூதிகள்';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'ஹலால் உணவு';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'இந்த பகுதியில் தேடவும்';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'அருகிலுள்ள மசூதிகள்';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'இஸ்லாமிய பள்ளிகள்';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count கிடைத்தது';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance கிமீ தொலைவில்';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API பிழை: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'நெட்வொர்க் பிழை. மீண்டும் முயற்சிக்கவும்.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'தெரியாத பெயர்';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'இஸ்லாமிய இடம்';
 }

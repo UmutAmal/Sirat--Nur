@@ -1127,19 +1127,19 @@ class AppLocalizationsAy extends AppLocalizations {
       '[OFFLINE] Verificado local islámico guia ukax janiw jichhakamax utjkiti. Cloud AI ukaruw mayjt’ayañama, ukax fuente ukan jaysäwinakapawa.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Mezquitas ukanaka';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal Manq’añanaka';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Aka chiqanx thaqhapxam';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Uka jak’an Mezquitas ukanaka';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Escuelas Islámicas ukanakan yatiqañ utanakapa';
 
   @override
   String placesFoundCount(String count) {
@@ -1153,15 +1153,17 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API Pantjasiwi: $statusCode Ukax mä jach’a uñacht’äwiwa.';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Red ukan pantjasiwipa. Ukhamaraki, mayampi yant’apxañani.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Jan uñt’at Suti';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback =>
+      'Lugar Islámico ukax mä jach’a uñacht’äwiwa';
 }

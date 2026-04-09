@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API වින්‍යාස කර නැත. කරුණාකර දේශීය AI වෙත මාරු වන්න.",
   "chatbotLocalNoInfo": "[OFFLINE] සත්‍යාපිත දේශීය ඉස්ලාමීය මගපෙන්වීම තවමත් නොමැත. මූලාශ්‍ර පිළිතුරු සඳහා Cloud AI වෙත මාරු වන්න.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "මුස්ලිම් පල්ලි",
+  "halalFood": "හලාල් ආහාර",
+  "placesSearchArea": "මෙම ප්රදේශය සොයන්න",
+  "nearbyMosques": "ආසන්න මුස්ලිම් පල්ලි",
+  "islamicSchools": "ඉස්ලාමීය පාසල්",
+  "placesFoundCount": "{count} හමු විය",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km දුරින්",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API දෝෂය: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "ජාල දෝෂයකි. කරුණාකර නැවත උත්සාහ කරන්න.",
+  "unknownPlaceName": "නොදන්නා නම",
+  "islamicPlaceFallback": "ඉස්ලාමීය ස්ථානය",
   "prayerNotificationTitle": "{prayerName} සඳහා වේලාව",
   "@prayerNotificationTitle": {
     "placeholders": {

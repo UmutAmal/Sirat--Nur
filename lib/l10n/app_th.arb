@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "ไม่ได้กำหนดค่า Cloud API โปรดเปลี่ยนไปใช้ Local AI",
   "chatbotLocalNoInfo": "[ออฟไลน์] ยังไม่มีคำแนะนำอิสลามในท้องถิ่นที่ได้รับการยืนยัน เปลี่ยนไปใช้ Cloud AI เพื่อดูคำตอบที่มา",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "มัสยิด",
+  "halalFood": "อาหารฮาลาล",
+  "placesSearchArea": "ค้นหาบริเวณนี้",
+  "nearbyMosques": "มัสยิดใกล้เคียง",
+  "islamicSchools": "โรงเรียนอิสลาม",
+  "placesFoundCount": "พบ {count} แล้ว",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} กม",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "ข้อผิดพลาดของ API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "ข้อผิดพลาดของเครือข่าย โปรดลองอีกครั้ง",
+  "unknownPlaceName": "ชื่อที่ไม่รู้จัก",
+  "islamicPlaceFallback": "สถานที่อิสลาม",
   "prayerNotificationTitle": "ถึงเวลาสำหรับ {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

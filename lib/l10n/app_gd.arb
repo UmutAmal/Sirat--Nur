@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API nach eil air a rèiteachadh. Feuch an atharraich thu gu AI ionadail.",
   "chatbotLocalNoInfo": "[OFFLINE] Chan eil stiùireadh Ioslamach ionadail dearbhte ri fhaighinn fhathast. Gluais gu Cloud AI airson freagairtean fhaighinn.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Mosg",
+  "halalFood": "Biadh Halal",
+  "placesSearchArea": "Rannsaich an raon seo",
+  "nearbyMosques": "Mosg faisg air làimh",
+  "islamicSchools": "Sgoiltean Ioslamach",
+  "placesFoundCount": "{count} air a lorg",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km air falbh",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Mearachd API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Mearachd lìonraidh. Feuch ris a-rithist.",
+  "unknownPlaceName": "Ainm Neo-aithnichte",
+  "islamicPlaceFallback": "Àite Ioslamach",
   "prayerNotificationTitle": "Uair airson {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

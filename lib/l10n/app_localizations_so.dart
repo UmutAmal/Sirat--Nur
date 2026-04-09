@@ -1114,23 +1114,23 @@ class AppLocalizationsSo extends AppLocalizations {
       '[OFFLINE] Hanuun Islaami ah oo la xaqiijiyay weli lama heli karo. U beddel Cloud AI jawaabaha laga soo xigtay.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Masaajidada';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Cunto Xalaal ah';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Ka raadi aaggan';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Masaajidada u dhow';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Dugsiyada Islaamiga ah';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count la helay';
   }
 
   @override
@@ -1140,15 +1140,15 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Cilad API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Cilada shabakada Fadlan isku day mar kale';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Magaca Aan La Aqoon';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Goobta Islaamka';
 }

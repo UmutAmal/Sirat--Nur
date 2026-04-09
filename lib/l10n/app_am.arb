@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API አልተዋቀረም። እባክዎ ወደ አካባቢያዊ AI ይቀይሩ።",
   "chatbotLocalNoInfo": "[ከመስመር ውጭ] የተረጋገጠ የአካባቢ እስላማዊ መመሪያ እስካሁን አይገኝም። ምንጭ ለሆኑ መልሶች ወደ Cloud AI ቀይር።",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "መስጊዶች",
+  "halalFood": "ሃላል ምግብ",
+  "placesSearchArea": "ይህንን አካባቢ ይፈልጉ",
+  "nearbyMosques": "በአቅራቢያ ያሉ መስጊዶች",
+  "islamicSchools": "ኢስላማዊ ትምህርት ቤቶች",
+  "placesFoundCount": "{count} ተገኝቷል",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} ኪሜ ርቀት ላይ",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "የኤፒአይ ስህተት፡ {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "የአውታረ መረብ ስህተት። እባክህ እንደገና ሞክር።",
+  "unknownPlaceName": "ያልታወቀ ስም",
+  "islamicPlaceFallback": "ኢስላማዊ ቦታ",
   "prayerNotificationTitle": "የ{prayerName} ጊዜ",
   "@prayerNotificationTitle": {
     "placeholders": {

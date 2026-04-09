@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API nuk është konfiguruar. Ju lutemi kaloni në Local AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Udhëzimi i verifikuar lokal islamik nuk ofrohet ende. Kalo te Cloud AI për përgjigjet me burim.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Xhamitë",
+  "halalFood": "Ushqim hallall",
+  "placesSearchArea": "Kërkoni këtë zonë",
+  "nearbyMosques": "Xhamitë aty pranë",
+  "islamicSchools": "Shkollat ​​Islame",
+  "placesFoundCount": "{count} u gjet",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km larg",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Gabim API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Gabim rrjeti. Ju lutemi provoni përsëri.",
+  "unknownPlaceName": "Emër i panjohur",
+  "islamicPlaceFallback": "Vendi Islamik",
   "prayerNotificationTitle": "Koha për {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

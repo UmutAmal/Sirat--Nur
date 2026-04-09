@@ -461,11 +461,11 @@
   "chatbotCloudNotConfigured": "Cloud API tsis tau teeb tsa. Thov hloov mus rau Local AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Txheeb xyuas cov lus qhia hauv zos Islamic tseem tsis tau muaj. Hloov mus rau Cloud AI rau cov lus teb tau txais.",
   "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "halalFood": "Khoom noj khoom haus Halal",
+  "placesSearchArea": "Tshawb xyuas thaj chaw no",
+  "nearbyMosques": "Nyob ze Mosques",
+  "islamicSchools": "Cov Tsev Kawm Ntawv Islamic",
+  "placesFoundCount": "{count} pom",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km deb",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API yuam kev: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Network yuam kev. Thov rov sim dua.",
+  "unknownPlaceName": "Tsis paub lub npe",
+  "islamicPlaceFallback": "Qhov chaw Islamic",
   "prayerNotificationTitle": "Sijhawm rau {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

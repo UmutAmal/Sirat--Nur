@@ -461,11 +461,11 @@
   "chatbotCloudNotConfigured": "ʻAʻole i hoʻonohonoho ʻia ʻo Cloud API. E ʻoluʻolu e hoʻololi iā Local AI.",
   "chatbotLocalNoInfo": "[OFFLINE] ʻAʻole i loaʻa i kēia manawa ke alakaʻi Islam kūloko. E hoʻololi i Cloud AI no nā pane kumu.",
   "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "halalFood": "Meaʻai Halal",
+  "placesSearchArea": "Huli i kēia wahi",
+  "nearbyMosques": "Nā Mosque kokoke",
+  "islamicSchools": "Na Kula Islam",
+  "placesFoundCount": "{count} loaʻa",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km ka mamao",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Hapa API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Kuwaho pūnaewele. E ʻoluʻolu e hoʻāʻo hou.",
+  "unknownPlaceName": "Inoa ʻike ʻole",
+  "islamicPlaceFallback": "Wahi Islama",
   "prayerNotificationTitle": "Ka manawa no {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

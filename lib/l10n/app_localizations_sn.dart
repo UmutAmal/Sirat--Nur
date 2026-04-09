@@ -1114,41 +1114,41 @@ class AppLocalizationsSn extends AppLocalizations {
       '[OFFLINE] Mazano echiIslam akavimbiswa emuno haasati avapo. Chinja kuCloud AI kune mhinduro dzakatorwa.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Misikiti';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal Chikafu';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Tsvaga nzvimbo ino';
 
   @override
   String get nearbyMosques => 'Nearby Mosques';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Zvikoro zveIslam';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count yawanikwa';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km kure';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API kukanganisa: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Network kukanganisa. Ndapota edza zvakare.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Zita risingazivikanwe';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Nzvimbo yeIslam';
 }

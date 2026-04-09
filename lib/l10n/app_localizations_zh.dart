@@ -1105,43 +1105,43 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatbotLocalNoInfo => '[离线] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => '清真寺';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => '清真食品';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => '搜索该区域';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => '附近的清真寺';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => '伊斯兰学校';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '找到 $count';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '距离 $distance 公里';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API 错误：$statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => '网络错误。请再试一次。';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => '未知名称';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => '伊斯兰广场';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -2245,43 +2245,43 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get chatbotLocalNoInfo => '[离线] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => '清真寺';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => '清真食品';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => '搜索该区域';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => '附近的清真寺';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => '伊斯兰学校';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '找到 $count';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '距离 $distance 公里';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API 错误：$statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => '网络错误。请再试一次。';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => '未知名称';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => '伊斯兰广场';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -3385,41 +3385,41 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get chatbotLocalNoInfo => '[離線] 尚未提供經過驗證的當地伊斯蘭指南。切換到 Cloud AI 取得來源答案。';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => '清真寺';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => '清真食品';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => '搜尋該區域';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => '附近的清真寺';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => '伊斯蘭學校';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '找到 $count';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '距離 $distance 公里';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API 錯誤：$statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => '網路錯誤。請再試一次。';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => '未知名稱';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => '伊斯蘭廣場';
 }

@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API конфигурацияланбаған. Жергілікті AI-ға ауысыңыз.",
   "chatbotLocalNoInfo": "[OFFLINE] Тексерілген жергілікті ислам нұсқауы әлі қолжетімді емес. Дереккөзден алынған жауаптар үшін Cloud AI жүйесіне ауысыңыз.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Мешіттер",
+  "halalFood": "Халал тағам",
+  "placesSearchArea": "Осы аймақты іздеңіз",
+  "nearbyMosques": "Маңайдағы мешіттер",
+  "islamicSchools": "Ислам мектептері",
+  "placesFoundCount": "{count} табылды",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} км қашықтықта",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API қатесі: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Желі қатесі. Қайталап көріңіз.",
+  "unknownPlaceName": "Белгісіз аты",
+  "islamicPlaceFallback": "Ислам орны",
   "prayerNotificationTitle": "{prayerName} уақыты",
   "@prayerNotificationTitle": {
     "placeholders": {

@@ -461,11 +461,11 @@
   "chatbotCloudNotConfigured": "Kapua API kaore i whirihora. Tena koa huri ki AI Paetata.",
   "chatbotLocalNoInfo": "[OFFLINE] Ko nga kaiarahi Ihirama o te rohe kaore ano kia waatea. Hurihia ki Cloud AI mo nga whakautu i puta mai.",
   "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "halalFood": "Kai Halal",
+  "placesSearchArea": "Rapua tenei waahi",
+  "nearbyMosques": "Nga Mosques Tata",
+  "islamicSchools": "Kura Islamic",
+  "placesFoundCount": "{count} kitea",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Hapa API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Hapa whatunga. Me ngana ano.",
+  "unknownPlaceName": "Ingoa Kaore i mohiotia",
+  "islamicPlaceFallback": "Wahi Ihirama",
   "prayerNotificationTitle": "Te wa mo {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

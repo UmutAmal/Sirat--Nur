@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API pa configuré. Tanpri chanje nan lokal AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Oryantasyon Islamik lokal verifye pa disponib ankò. Chanje nan Cloud AI pou jwenn repons yo.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Moske",
+  "halalFood": "Manje Halal",
+  "placesSearchArea": "Chèche zòn sa a",
+  "nearbyMosques": "Moske ki tou pre",
+  "islamicSchools": "Lekòl Islamik yo",
+  "placesFoundCount": "{count} jwenn",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km lwen",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Erè API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Erè rezo a. Tanpri eseye ankò.",
+  "unknownPlaceName": "Non enkoni",
+  "islamicPlaceFallback": "Kote Islamik",
   "prayerNotificationTitle": "Tan pou {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

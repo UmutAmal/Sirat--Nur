@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API gan a bheith cumraithe. Athraigh go Local AI.",
   "chatbotLocalNoInfo": "[AR LÍNE] Níl treoir Ioslamach áitiúil fíoraithe ar fáil fós. Athraigh go Cloud AI le haghaidh freagraí foinsithe.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Moscanna",
+  "halalFood": "Bia Halal",
+  "placesSearchArea": "Cuardaigh an réimse seo",
+  "nearbyMosques": "Moscanna in aice láimhe",
+  "islamicSchools": "Scoileanna Ioslamacha",
+  "placesFoundCount": "{count} aimsithe",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km uaidh",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Earráid líonra. Bain triail eile as.",
+  "unknownPlaceName": "Ainm Anaithnid",
+  "islamicPlaceFallback": "Áit Ioslamach",
   "prayerNotificationTitle": "Am le haghaidh {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

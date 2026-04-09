@@ -1120,19 +1120,19 @@ class AppLocalizationsTs extends AppLocalizations {
       '[OFFLINE] Nkongomiso wa laha kaya lowu tiyisisiweke wa Xiislam a wu si kumeka. Cinca eka Cloud AI ku kuma tinhlamulo leti humaka eka xihlovo.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Timosque';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Swakudya swa Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Lavisisa ndhawu leyi';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Timosque ta le kusuhi';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Swikolo swa Vuislem';
 
   @override
   String placesFoundCount(String count) {
@@ -1150,11 +1150,12 @@ class AppLocalizationsTs extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Xihoxo xa netiweke. Hi kombela u ringeta nakambe.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Vito leri nga tiviwiki';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Ndhawu ya Vuislem';
 }

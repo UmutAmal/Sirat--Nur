@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API nu este configurat. Treceți la AI local.",
   "chatbotLocalNoInfo": "[OFFLINE] Îndrumările islamice locale verificate nu sunt încă disponibile. Treceți la Cloud AI pentru răspunsuri din sursă.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Moschei",
+  "halalFood": "Mâncare Halal",
+  "placesSearchArea": "Cauta in aceasta zona",
+  "nearbyMosques": "Moscheile din apropiere",
+  "islamicSchools": "Școli islamice",
+  "placesFoundCount": "{count} găsit",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km distanță",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Eroare API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Eroare de rețea. Vă rugăm să încercați din nou.",
+  "unknownPlaceName": "Nume necunoscut",
+  "islamicPlaceFallback": "Locul Islamic",
   "prayerNotificationTitle": "Este timpul pentru {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

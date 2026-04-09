@@ -1122,41 +1122,41 @@ class AppLocalizationsEl extends AppLocalizations {
       '[OFFLINE] Η επαληθευμένη τοπική ισλαμική καθοδήγηση δεν είναι ακόμη διαθέσιμη. Μεταβείτε στο Cloud AI για απαντήσεις από πηγές.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Τζαμιά';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Φαγητό Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Αναζήτηση σε αυτήν την περιοχή';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Κοντινά τζαμιά';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Ισλαμικά Σχολεία';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count βρέθηκε';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance χλμ. μακριά';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Σφάλμα API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Σφάλμα δικτύου. Δοκιμάστε ξανά.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Άγνωστο Όνομα';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Ισλαμικός τόπος';
 }

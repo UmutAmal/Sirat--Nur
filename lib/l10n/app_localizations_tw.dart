@@ -1117,41 +1117,41 @@ class AppLocalizationsTw extends AppLocalizations {
       '[OFFLINE] Mpɔtam hɔ Islam akwankyerɛ a wɔagye atom no nnya mmaa. Dan kɔ Cloud AI so na woanya mmuae a wonya fi mu.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Asɔredan ahorow';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal Aduan a Wɔde Di Dwuma';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Hwehwɛ beae yi';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Asɔredan ahorow a ɛbɛn hɔ';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Islam Sukuu Ahorow';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return 'Wɔahu $count';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km akyirikyiri';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API mfomso: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Network mfomso. Yɛsrɛ sɛ sɔ hwɛ bio.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Edin a Wonnim';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islam Beaeɛ';
 }

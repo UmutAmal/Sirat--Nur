@@ -1115,41 +1115,41 @@ class AppLocalizationsHt extends AppLocalizations {
       '[OFFLINE] Oryantasyon Islamik lokal verifye pa disponib ankò. Chanje nan Cloud AI pou jwenn repons yo.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Moske';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Manje Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Chèche zòn sa a';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Moske ki tou pre';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Lekòl Islamik yo';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count jwenn';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km lwen';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Erè API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Erè rezo a. Tanpri eseye ankò.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Non enkoni';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Kote Islamik';
 }

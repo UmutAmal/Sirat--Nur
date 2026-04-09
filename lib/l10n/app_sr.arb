@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "Цлоуд АПИ није конфигурисан. Пређите на локални АИ.",
   "chatbotLocalNoInfo": "[ОФФЛИНЕ] Верификоване локалне исламске смернице још увек нису доступне. Пређите на вештачку интелигенцију у облаку да бисте добили одговоре.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "џамије",
+  "halalFood": "Халал Фоод",
+  "placesSearchArea": "Претражите ову област",
+  "nearbyMosques": "Оближње џамије",
+  "islamicSchools": "Исламске школе",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Мрежна грешка. Покушајте поново.",
+  "unknownPlaceName": "Непознато име",
+  "islamicPlaceFallback": "Исламиц Плаце",
   "prayerNotificationTitle": "Време је за {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

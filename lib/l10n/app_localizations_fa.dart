@@ -1115,41 +1115,41 @@ class AppLocalizationsFa extends AppLocalizations {
       '[آفلاین] راهنمایی اسلامی محلی تأیید شده هنوز در دسترس نیست. برای پاسخ‌های منبع، به Cloud AI بروید.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'مساجد';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'غذای حلال';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'این منطقه را جستجو کنید';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'مساجد مجاور';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'مدارس اسلامی';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count پیدا شد';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance کیلومتر دورتر';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'خطای API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'خطای شبکه لطفا دوباره امتحان کنید.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'نام نامعلوم';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'مکان اسلامی';
 }

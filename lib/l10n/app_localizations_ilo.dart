@@ -1122,41 +1122,42 @@ class AppLocalizationsIlo extends AppLocalizations {
       '[OFFLINE] Saan pay a magun-od ti naberipikado a lokal nga Islamiko a panangiwanwan. Agbalbaliw iti Cloud AI para kadagiti nagtaudan a sungbat.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Dagiti Moske';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Taraon ti Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Sukisoken daytoy a lugar';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Dagiti Asideg a Moske';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Dagiti Eskuelaan ti Islam';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count ti nasarakan';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km ti kaadayona';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Biddut ti API: $statusCode .';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Biddut ti network. Pangngaasiyo ta padasenyo manen.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Di Ammo a Nagan';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islamiko a Lugar';
 }

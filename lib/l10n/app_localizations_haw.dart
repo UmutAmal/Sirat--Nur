@@ -1119,38 +1119,38 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get mosques => 'Mosques';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Meaʻai Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Huli i kēia wahi';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Nā Mosque kokoke';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Na Kula Islam';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count loaʻa';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km ka mamao';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Hapa API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Kuwaho pūnaewele. E ʻoluʻolu e hoʻāʻo hou.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Inoa ʻike ʻole';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Wahi Islama';
 }

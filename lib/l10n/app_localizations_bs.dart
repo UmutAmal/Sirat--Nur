@@ -1115,40 +1115,40 @@ class AppLocalizationsBs extends AppLocalizations {
       '[OFFLINE] Provjereno lokalno islamsko vodstvo još nije dostupno. Prebacite se na Cloud AI za izvorne odgovore.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Džamije';
 
   @override
   String get halalFood => 'Halal Food';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Pretražite ovo područje';
 
   @override
   String get nearbyMosques => 'Nearby Mosques';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Islamske škole';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count pronađeno';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API greška: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Mrežna greška. Molimo pokušajte ponovo.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Nepoznato ime';
 
   @override
   String get islamicPlaceFallback => 'Islamic Place';

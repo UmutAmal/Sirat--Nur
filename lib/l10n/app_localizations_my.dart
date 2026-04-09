@@ -1118,41 +1118,41 @@ class AppLocalizationsMy extends AppLocalizations {
       '[OFFLINE] အတည်ပြုထားသော ဒေသန္တရအစ္စလာမ့်လမ်းညွှန်ချက်ကို မရရှိနိုင်သေးပါ။ ရင်းမြစ်အဖြေများအတွက် Cloud AI သို့ပြောင်းပါ။';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'ဗလီများ';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal အစားအစာ';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'ဤဧရိယာကိုရှာဖွေပါ။';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'အနီးနားရှိ ဗလီများ';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'အစ္စလာမ်ကျောင်းများ';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count တွေ့ရှိခဲ့သည်။';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance ကီလိုမီတာအကွာ';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API အမှား- $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'ကွန်ရက် အမှားအယွင်း ထပ်စမ်းကြည့်ပါ။';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'အမည်မသိ';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'အစ္စလာမ့်နေရာ';
 }

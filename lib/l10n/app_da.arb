@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API ikke konfigureret. Skift venligst til lokal AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Verificeret lokal islamisk vejledning er ikke tilgængelig endnu. Skift til Cloud AI for at få svar.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Moskeer",
+  "halalFood": "Halal mad",
+  "placesSearchArea": "Søg i dette område",
+  "nearbyMosques": "Nærliggende moskeer",
+  "islamicSchools": "islamiske skoler",
+  "placesFoundCount": "{count} fundet",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km væk",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API-fejl: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Netværksfejl. Prøv venligst igen.",
+  "unknownPlaceName": "Ukendt navn",
+  "islamicPlaceFallback": "Islamisk sted",
   "prayerNotificationTitle": "Tid til {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

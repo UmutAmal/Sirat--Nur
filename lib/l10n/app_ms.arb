@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "Cloud API tidak dikonfigurasikan. Sila tukar kepada AI Setempat.",
   "chatbotLocalNoInfo": "[LUAR TALIAN] Bimbingan Islam tempatan yang disahkan belum tersedia lagi. Tukar kepada Cloud AI untuk mendapatkan jawapan bersumber.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "Masjid-masjid",
+  "halalFood": "Makanan Halal",
+  "placesSearchArea": "Cari kawasan ini",
+  "nearbyMosques": "Masjid Berdekatan",
+  "islamicSchools": "Sekolah Islam",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Ralat API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Ralat rangkaian. Sila cuba lagi.",
+  "unknownPlaceName": "Nama Tidak Diketahui",
+  "islamicPlaceFallback": "Tempat Islam",
   "eidAdha": "Hari Raya Aidiladha",
   "prayerNotificationTitle": "Masa untuk {prayerName}",
   "@prayerNotificationTitle": {

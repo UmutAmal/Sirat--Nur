@@ -461,11 +461,11 @@
   "chatbotCloudNotConfigured": "Cloud API e le'i fa'atulagaina. Fa'amolemole sui ile Local AI.",
   "chatbotLocalNoInfo": "[OFFLINE] E le'i maua le ta'ita'iga fa'a-Isalama fa'apitonu'u. Su'e ile Cloud AI mo tali maua'a.",
   "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "halalFood": "Mea'ai Halal",
+  "placesSearchArea": "Su'e lenei vaega",
+  "nearbyMosques": "Mosque lata ane",
+  "islamicSchools": "A'oga Isalama",
+  "placesFoundCount": "{count} maua",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km le mamao",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Sese API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Sese feso'otaiga. Fa'amolemole toe taumafai.",
+  "unknownPlaceName": "Le Igoa",
+  "islamicPlaceFallback": "Nofoaga Isalama",
   "prayerNotificationTitle": "Taimi mo {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

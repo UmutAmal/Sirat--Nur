@@ -1118,41 +1118,41 @@ class AppLocalizationsSq extends AppLocalizations {
       '[OFFLINE] Udhëzimi i verifikuar lokal islamik nuk ofrohet ende. Kalo te Cloud AI për përgjigjet me burim.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Xhamitë';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Ushqim hallall';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Kërkoni këtë zonë';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Xhamitë aty pranë';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Shkollat ​​Islame';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count u gjet';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km larg';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Gabim API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Gabim rrjeti. Ju lutemi provoni përsëri.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Emër i panjohur';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Vendi Islamik';
 }

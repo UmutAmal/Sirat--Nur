@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API ekki stillt. Vinsamlegast skiptu yfir í Local AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Staðfestar staðbundnar íslamskar leiðbeiningar eru ekki tiltækar ennþá. Skiptu yfir í Cloud AI til að fá svör.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Moskur",
+  "halalFood": "Halal matur",
+  "placesSearchArea": "Leitaðu á þessu svæði",
+  "nearbyMosques": "Nálægt moskur",
+  "islamicSchools": "Íslamskir skólar",
+  "placesFoundCount": "{count} fannst",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km í burtu",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API villa: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Netvilla. Vinsamlegast reyndu aftur.",
+  "unknownPlaceName": "Óþekkt nafn",
+  "islamicPlaceFallback": "Íslamskur staður",
   "prayerNotificationTitle": "Tími fyrir {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

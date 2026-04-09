@@ -1115,41 +1115,42 @@ class AppLocalizationsLb extends AppLocalizations {
       '[OFFLINE] Verifizéiert lokal islamesch Leedung ass nach net verfügbar. Wiesselt op Cloud AI fir Quellen Äntwerten.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Moscheeën';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal Iessen';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Sich dëser Géigend';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Emgéigend Moscheeën';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Islamesch Schoulen';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count fonnt';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km ewech';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API Feeler: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Netzfehler. Probéiert w.e.g. nach eng Kéier.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Onbekannt Numm';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islamesch Plaz';
 }

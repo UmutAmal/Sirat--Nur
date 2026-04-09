@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "API ɗin Cloud ba a saita shi ba. Da fatan za a canza zuwa AI na gida.",
   "chatbotLocalNoInfo": "[OFFLINE] Ba a samu ingantattun jagorar Musulunci na gida ba tukuna. Canja zuwa Cloud AI don samun amsoshi masu tushe.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Masallatai",
+  "halalFood": "Abincin Halal",
+  "placesSearchArea": "Bincika wannan yanki",
+  "nearbyMosques": "Masallatan Kusa",
+  "islamicSchools": "Makarantun Islamiyya",
+  "placesFoundCount": "An samo {count}",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Kuskuren hanyar sadarwa. Da fatan za a sake gwadawa.",
+  "unknownPlaceName": "Sunan da ba a sani ba",
+  "islamicPlaceFallback": "Wurin Musulunci",
   "prayerNotificationTitle": "Lokacin {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

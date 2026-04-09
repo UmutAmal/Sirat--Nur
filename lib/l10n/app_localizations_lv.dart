@@ -1117,41 +1117,41 @@ class AppLocalizationsLv extends AppLocalizations {
       '[OFFLINE] Verificētas vietējās islāma vadlīnijas vēl nav pieejamas. Pārslēdzieties uz Cloud AI, lai saņemtu atbildes.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Mošejas';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal ēdiens';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Meklēt šajā apgabalā';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Tuvumā esošās mošejas';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Islāma skolas';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count atrasts';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km attālumā';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API kļūda: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Tīkla kļūda. Lūdzu, mēģiniet vēlreiz.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Nezināms Vārds';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islāma vieta';
 }

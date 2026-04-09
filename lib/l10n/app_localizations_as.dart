@@ -1116,41 +1116,42 @@ class AppLocalizationsAs extends AppLocalizations {
       '[OFFLINE] পৰীক্ষা কৰা স্থানীয় ইছলামিক নিৰ্দেশনা এতিয়াও উপলব্ধ নহয়। উৎস উত্তৰৰ বাবে ক্লাউড AI লৈ সলনি কৰক।';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'মছজিদ';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'হালাল খাদ্য';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'এই অঞ্চলত সন্ধান কৰক';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'ওচৰৰ মছজিদ';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'ইছলামিক স্কুল';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count পোৱা গৈছে';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance কিলোমিটাৰ দূৰত';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API ত্ৰুটি: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'নেটৱৰ্ক ত্ৰুটি। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'অজ্ঞাত নাম';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'ইছলামিক প্লেচ';
 }

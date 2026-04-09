@@ -1122,41 +1122,42 @@ class AppLocalizationsDv extends AppLocalizations {
       '[އޮފްލައިން] ވެރިފައިޑް ލޯކަލް އިސްލާމިކް ގައިޑްލައިން އަދި ނުލިބެއެވެ. ސޯސްޑް ޖަވާބުތަކަށް ކްލައުޑް އެއައި އަށް ބަދަލުވާށެވެ.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'މިސްކިތްތަކެވެ';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'ހަލާލް ފުޑް';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'މި ސަރަހައްދު ހޯދާށެވެ';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'ކައިރީގައި ހުންނަ މިސްކިތްތަކެވެ';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'އިސްލާމީ މަދަރުސާތަކެވެ';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count ހޯދިއްޖެއެވެ';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance ކިލޯމީޓަރު ދުރުގައެވެ';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'އެޕީއައި އެރަރ: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'ނެޓްވޯކް އެރަރ. އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'ނޭނގޭ ނަމެކެވެ';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'އިސްލާމީ ތަނެވެ';
 }

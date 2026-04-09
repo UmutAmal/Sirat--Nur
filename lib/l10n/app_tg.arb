@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "API Cloud танзим карда нашудааст. Лутфан ба АИ маҳаллӣ гузаред.",
   "chatbotLocalNoInfo": "[OFFLINE] Ҳидоятҳои маҳаллии исломии тасдиқшуда ҳанӯз дастрас нест. Барои ҷавобҳои манбаъ ба Cloud AI гузаред.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Масҷидҳо",
+  "halalFood": "Хӯроки ҳалол",
+  "placesSearchArea": "Ин минтақаро ҷустуҷӯ кунед",
+  "nearbyMosques": "Масҷидҳои наздик",
+  "islamicSchools": "Мактабҳои исломӣ",
+  "placesFoundCount": "{count} ёфт шуд",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} км дуртар",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Хатои API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Хатогии шабака. Лутфан бори дигар кӯшиш кунед.",
+  "unknownPlaceName": "Номи номаълум",
+  "islamicPlaceFallback": "Ҷойи исломӣ",
   "prayerNotificationTitle": "Вақти {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

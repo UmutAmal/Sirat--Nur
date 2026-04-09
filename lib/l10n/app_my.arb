@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API ကို ပြင်ဆင်မထားပါ။ Local AI သို့ပြောင်းပါ။",
   "chatbotLocalNoInfo": "[OFFLINE] အတည်ပြုထားသော ဒေသန္တရအစ္စလာမ့်လမ်းညွှန်ချက်ကို မရရှိနိုင်သေးပါ။ ရင်းမြစ်အဖြေများအတွက် Cloud AI သို့ပြောင်းပါ။",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "ဗလီများ",
+  "halalFood": "Halal အစားအစာ",
+  "placesSearchArea": "ဤဧရိယာကိုရှာဖွေပါ။",
+  "nearbyMosques": "အနီးနားရှိ ဗလီများ",
+  "islamicSchools": "အစ္စလာမ်ကျောင်းများ",
+  "placesFoundCount": "{count} တွေ့ရှိခဲ့သည်။",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} ကီလိုမီတာအကွာ",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API အမှား- {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "ကွန်ရက် အမှားအယွင်း ထပ်စမ်းကြည့်ပါ။",
+  "unknownPlaceName": "အမည်မသိ",
+  "islamicPlaceFallback": "အစ္စလာမ့်နေရာ",
   "prayerNotificationTitle": "{prayerName} အတွက် အချိန်",
   "@prayerNotificationTitle": {
     "placeholders": {

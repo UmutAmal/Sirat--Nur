@@ -1115,41 +1115,42 @@ class AppLocalizationsUz extends AppLocalizations {
       '[OFFLINE] Tasdiqlangan mahalliy islomiy koʻrsatmalar hali mavjud emas. Manbali javoblar uchun Cloud AI-ga o\'ting.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Masjidlar';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halol taom';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Ushbu hududni qidiring';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Yaqin masjidlar';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Islom maktablari';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count topildi';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km uzoqlikda';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API xatosi: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Tarmoq xatosi. Iltimos, qayta urinib koʻring.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Noma\'lum ism';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islomiy joy';
 }

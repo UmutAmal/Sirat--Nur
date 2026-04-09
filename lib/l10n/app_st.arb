@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API ha e ea hlophisoa. Ka kopo, fetohela ho Local AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Litaelo tse netefalitsoeng tsa Maislamo tsa lehae ha li so fumanehe. Fetohela ho Cloud AI ho fumana likarabo tse tsoang mohloling.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Mamosleme",
+  "halalFood": "Lijo tsa Halal",
+  "placesSearchArea": "Batla sebakeng sena",
+  "nearbyMosques": "Mesikiti e Haufi",
+  "islamicSchools": "Likolo tsa Boislamo",
+  "placesFoundCount": "{count} e fumanoe",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km hole",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Phoso ea API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Phoso ea marang-rang. Ka kopo, leka hape.",
+  "unknownPlaceName": "Lebitso le sa Tsejweng",
+  "islamicPlaceFallback": "Sebaka sa Maislamo",
   "prayerNotificationTitle": "Nako ea {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

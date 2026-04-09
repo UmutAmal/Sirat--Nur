@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "A felhő API nincs konfigurálva. Kérjük, váltson helyi AI-ra.",
   "chatbotLocalNoInfo": "[OFFLINE] Az ellenőrzött helyi iszlám útmutatás még nem érhető el. A forrásból származó válaszokért váltson a Cloud AI-re.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Mecsetek",
+  "halalFood": "Halal étel",
+  "placesSearchArea": "Keresés ezen a területen",
+  "nearbyMosques": "Közeli mecsetek",
+  "islamicSchools": "Iszlám iskolák",
+  "placesFoundCount": "{count} található",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km-re",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API-hiba: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Hálózati hiba. Kérjük, próbálja újra.",
+  "unknownPlaceName": "Ismeretlen név",
+  "islamicPlaceFallback": "Iszlám hely",
   "prayerNotificationTitle": "Ideje a {prayerName} számára",
   "@prayerNotificationTitle": {
     "placeholders": {

@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API-ն կազմաձևված չէ: Խնդրում ենք անցնել Local AI-ի:",
   "chatbotLocalNoInfo": "[ՕՖԼԱՅՆ] Ստուգված տեղական իսլամական ուղեցույցը դեռ հասանելի չէ: Անցեք Cloud AI-ին՝ աղբյուրի պատասխանների համար:",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Մզկիթներ",
+  "halalFood": "Հալալ սնունդ",
+  "placesSearchArea": "Որոնեք այս տարածքը",
+  "nearbyMosques": "Մոտակա մզկիթներ",
+  "islamicSchools": "Իսլամական դպրոցներ",
+  "placesFoundCount": "{count} գտնվել է",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} կմ հեռավորության վրա",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API-ի սխալ՝ {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Ցանցի սխալ. Խնդրում ենք կրկին փորձել:",
+  "unknownPlaceName": "Անհայտ անուն",
+  "islamicPlaceFallback": "Իսլամական վայր",
   "prayerNotificationTitle": "{prayerName}-ի ժամանակը",
   "@prayerNotificationTitle": {
     "placeholders": {

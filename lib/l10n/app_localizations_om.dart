@@ -1118,19 +1118,19 @@ class AppLocalizationsOm extends AppLocalizations {
       '[OFFLINE] Qajeelfamni Islaamaa naannoo mirkanaa\'e ammallee hin jiru. Deebii madda irraa argamuuf gara Cloud AI tti jijjiiraa.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Masjiidota';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Nyaata Halaal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Naannoo kana barbaadi';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Masjiidota dhiyoo jiran';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Manneen Barnootaa Islaamaa';
 
   @override
   String placesFoundCount(String count) {
@@ -1148,11 +1148,12 @@ class AppLocalizationsOm extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Dogoggora networkii. Mee irra deebi\'ii yaalaa.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Maqaa Hin Beekamne';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Bakka Islaamaa';
 }

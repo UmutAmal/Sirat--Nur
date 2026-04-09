@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API sinakonzedwe. Chonde sinthani ku Local AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Maupangiri otsimikizika achisilamu akumaloko sakupezeka pano. Sinthani ku Cloud AI kuti mupeze mayankho opezeka.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Misikiti",
+  "halalFood": "Chakudya cha Halal",
+  "placesSearchArea": "Sakani m'derali",
+  "nearbyMosques": "Misikiti Yapafupi",
+  "islamicSchools": "Sukulu za Chisilamu",
+  "placesFoundCount": "{count} zapezeka",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} makilomita",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Vuto la API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Zolakwika pa netiweki. Chonde yesaninso.",
+  "unknownPlaceName": "Dzina Losadziwika",
+  "islamicPlaceFallback": "Malo achisilamu",
   "prayerNotificationTitle": "Nthawi ya {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

@@ -1117,19 +1117,19 @@ class AppLocalizationsLg extends AppLocalizations {
       '[OFFLINE] Obulagirizi bw\'Obusiraamu obw\'omu kitundu obukakasibwa tebunnabaawo. Switch to Cloud AI for sourced answers.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Emizikiti';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Emmere ya Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Noonya ekitundu kino';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Emizikiti egiriraanyewo';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Amasomero g’Obusiraamu';
 
   @override
   String placesFoundCount(String count) {
@@ -1143,15 +1143,16 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Ensobi mu API: $statusCode .';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Ensobi mu mutimbagano. Nsaba oddemu ogezeeko.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Erinnya eritamanyiddwa';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Ekifo ky\'Obusiraamu';
 }

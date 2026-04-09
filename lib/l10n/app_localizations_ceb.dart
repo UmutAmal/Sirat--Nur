@@ -1117,41 +1117,41 @@ class AppLocalizationsCeb extends AppLocalizations {
       '[OFFLINE] Ang napamatud-an nga lokal nga giya sa Islam wala pa magamit. Pagbalhin sa Cloud AI alang sa gigikanan nga mga tubag.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Mga Mosque';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal nga Pagkaon';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Pangitaa kini nga lugar';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Duol nga mga Mosque';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Mga Eskwelahan sa Islam';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count nakit-an';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km ang gilay-on';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Sayop sa API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Sayop sa network. Palihug sulayi pag-usab.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Wala mailhi nga Ngalan';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islamic nga Dapit';
 }

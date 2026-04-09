@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API ni konfiguriran. Preklopite na lokalni AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Preverjene lokalne islamske smernice še niso na voljo. Preklopite na Cloud AI za pridobljene odgovore.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "mošeje",
+  "halalFood": "Halal hrana",
+  "placesSearchArea": "Preiščite to območje",
+  "nearbyMosques": "Bližnje mošeje",
+  "islamicSchools": "Islamske šole",
+  "placesFoundCount": "{count} najden",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km stran",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Napaka API-ja: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Omrežna napaka. prosim poskusite ponovno",
+  "unknownPlaceName": "Neznano ime",
+  "islamicPlaceFallback": "Islamsko mesto",
   "prayerNotificationTitle": "Čas za {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

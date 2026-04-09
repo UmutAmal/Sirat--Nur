@@ -1114,41 +1114,42 @@ class AppLocalizationsNe extends AppLocalizations {
       '[अफलाइन] प्रमाणित स्थानीय इस्लामिक मार्गदर्शन अझै उपलब्ध छैन। सोर्स गरिएका उत्तरहरूको लागि क्लाउड एआईमा स्विच गर्नुहोस्।';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'मस्जिदहरू';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'हलाल खाना';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'यो क्षेत्र खोज्नुहोस्';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'नजिकैको मस्जिदहरू';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'इस्लामिक विद्यालयहरू';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count भेटियो';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance किमी टाढा';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API त्रुटि: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'नेटवर्क त्रुटि। कृपया पुन: प्रयास गर्नुहोस्।';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'अज्ञात नाम';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'इस्लामिक स्थान';
 }

@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API pole konfigureeritud. Lülituge kohalikule AI-le.",
   "chatbotLocalNoInfo": "[OFFLINE] Kinnitatud kohalikud islamijuhised pole veel saadaval. Lähteallikate vastuste saamiseks lülituge Cloud AI-le.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Mošeed",
+  "halalFood": "Halal toit",
+  "placesSearchArea": "Otsi sellest piirkonnast",
+  "nearbyMosques": "Läheduses mošeed",
+  "islamicSchools": "Islami koolid",
+  "placesFoundCount": "{count} leitud",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km kaugusel",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API viga: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Võrgu viga. Palun proovi uuesti.",
+  "unknownPlaceName": "Tundmatu nimi",
+  "islamicPlaceFallback": "Islami koht",
   "prayerNotificationTitle": "Aeg {prayerName} jaoks",
   "@prayerNotificationTitle": {
     "placeholders": {

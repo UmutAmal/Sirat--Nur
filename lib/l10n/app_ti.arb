@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "ክላውድ ኤፒኣይ ኣይተዋቕረን። በጃኹም ናብ Local AI ቀይሩ።",
   "chatbotLocalNoInfo": "[OFFLINE] ዝተረጋገጸ ናይ ከባቢ እስላማዊ መምርሒ ገና ኣይተረኽበን። ምንጪ መልሲ ንምርካብ ናብ Cloud AI ቀይሩ።",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "መሳጊድ",
+  "halalFood": "ሓላል መግቢ",
+  "placesSearchArea": "ኣብዚ ከባቢ ድለዩ።",
+  "nearbyMosques": "ኣብ ቀረባ ዝርከቡ መሳጊድ",
+  "islamicSchools": "ኣብያተ ትምህርቲ እስላም",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "ናይ ኤፒኣይ ጌጋ: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "ናይ መርበብ ጌጋ። በጃኹም ደጊምኩም ፈትኑ።",
+  "unknownPlaceName": "ዘይፍለጥ ስም",
+  "islamicPlaceFallback": "እስላማዊ ቦታ",
   "prayerNotificationTitle": "ግዜ ን {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

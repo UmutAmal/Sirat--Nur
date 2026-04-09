@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Klayd API nɔ kɔnfigyut. Duya, chenj to Lokal AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Verified lokal Islamik gayd nɔ de yet. Switch to Klayd AI fɔ sɔs ansa dɛn.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Moskɛt dɛn",
+  "halalFood": "Halal Fɔd fɔ it",
+  "placesSearchArea": "Sɔch dis eria",
+  "nearbyMosques": "Moskit dɛn we de nia de",
+  "islamicSchools": "Islamik Skul dɛn",
+  "placesFoundCount": "{count} dɔn fɛn am",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Netwok mistek. Duya tray bak.",
+  "unknownPlaceName": "Nem we wi nɔ no",
+  "islamicPlaceFallback": "Islamik Ples we dɛn kɔl",
   "prayerNotificationTitle": "Taym fɔ {prayerName}.",
   "@prayerNotificationTitle": {
     "placeholders": {

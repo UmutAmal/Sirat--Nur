@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "ക്ലൗഡ് API കോൺഫിഗർ ചെയ്തിട്ടില്ല. പ്രാദേശിക AI-ലേക്ക് മാറുക.",
   "chatbotLocalNoInfo": "[ഓഫ്‌ലൈൻ] പരിശോധിച്ചുറപ്പിച്ച പ്രാദേശിക ഇസ്ലാമിക മാർഗ്ഗനിർദ്ദേശം ഇതുവരെ ലഭ്യമല്ല. ഉറവിട ഉത്തരങ്ങൾക്കായി ക്ലൗഡ് AI-ലേക്ക് മാറുക.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "മസ്ജിദുകൾ",
+  "halalFood": "ഹലാൽ ഭക്ഷണം",
+  "placesSearchArea": "ഈ പ്രദേശത്ത് തിരയുക",
+  "nearbyMosques": "അടുത്തുള്ള മസ്ജിദുകൾ",
+  "islamicSchools": "ഇസ്ലാമിക് സ്കൂളുകൾ",
+  "placesFoundCount": "{count} കണ്ടെത്തി",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} കിലോമീറ്റർ അകലെ",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API പിശക്: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "നെറ്റ്‌വർക്ക് പിശക്. ദയവായി വീണ്ടും ശ്രമിക്കുക.",
+  "unknownPlaceName": "അജ്ഞാത നാമം",
+  "islamicPlaceFallback": "ഇസ്ലാമിക സ്ഥലം",
   "prayerNotificationTitle": "{prayerName} എന്നതിനുള്ള സമയം",
   "@prayerNotificationTitle": {
     "placeholders": {

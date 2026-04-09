@@ -1115,41 +1115,42 @@ class AppLocalizationsSw extends AppLocalizations {
       '[OFFLINE] Mwongozo wa karibu wa Kiislamu uliothibitishwa bado haupatikani. Badili hadi Cloud AI kwa majibu ya chanzo.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Misikiti';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Chakula cha Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Tafuta eneo hili';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Misikiti iliyo karibu';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Shule za Kiislamu';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count imepatikana';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance kilomita';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Hitilafu ya API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Hitilafu ya mtandao. Tafadhali jaribu tena.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Jina lisilojulikana';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Mahali pa Kiislamu';
 }

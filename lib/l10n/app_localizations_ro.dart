@@ -1120,41 +1120,42 @@ class AppLocalizationsRo extends AppLocalizations {
       '[OFFLINE] Îndrumările islamice locale verificate nu sunt încă disponibile. Treceți la Cloud AI pentru răspunsuri din sursă.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Moschei';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Mâncare Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Cauta in aceasta zona';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Moscheile din apropiere';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Școli islamice';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count găsit';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km distanță';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Eroare API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Eroare de rețea. Vă rugăm să încercați din nou.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Nume necunoscut';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Locul Islamic';
 }

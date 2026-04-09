@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "クラウド API が設定されていません。ローカル AI に切り替えてください。",
   "chatbotLocalNoInfo": "[オフライン] 検証済みの現地のイスラム教ガイダンスはまだ利用できません。クラウド AI に切り替えて、情報源に基づいた回答を得ることができます。",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "モスク",
+  "halalFood": "ハラールフード",
+  "placesSearchArea": "このエリアを検索",
+  "nearbyMosques": "近くのモスク",
+  "islamicSchools": "イスラム学校",
+  "placesFoundCount": "{count} が見つかりました",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km離れたところ",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API エラー: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "ネットワークエラー。もう一度試してください。",
+  "unknownPlaceName": "不明な名前",
+  "islamicPlaceFallback": "イスラムの場所",
   "prayerNotificationTitle": "{prayerName}の時間です",
   "@prayerNotificationTitle": {
     "placeholders": {

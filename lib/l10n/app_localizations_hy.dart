@@ -1118,41 +1118,41 @@ class AppLocalizationsHy extends AppLocalizations {
       '[ՕՖԼԱՅՆ] Ստուգված տեղական իսլամական ուղեցույցը դեռ հասանելի չէ: Անցեք Cloud AI-ին՝ աղբյուրի պատասխանների համար:';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Մզկիթներ';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Հալալ սնունդ';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Որոնեք այս տարածքը';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Մոտակա մզկիթներ';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Իսլամական դպրոցներ';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count գտնվել է';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance կմ հեռավորության վրա';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API-ի սխալ՝ $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Ցանցի սխալ. Խնդրում ենք կրկին փորձել:';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Անհայտ անուն';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Իսլամական վայր';
 }

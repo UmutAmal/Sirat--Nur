@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "L'API del núvol no està configurada. Canvia a la IA local.",
   "chatbotLocalNoInfo": "[OFFLINE] L'orientació islàmica local verificada encara no està disponible. Canvia a Cloud AI per obtenir respostes d'origen.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Mesquites",
+  "halalFood": "Menjar Halal",
+  "placesSearchArea": "Cerca en aquesta zona",
+  "nearbyMosques": "Mesquites properes",
+  "islamicSchools": "Escoles islàmiques",
+  "placesFoundCount": "{count} trobat",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km de distància",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Error de l'API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Error de xarxa. Si us plau, torna-ho a provar.",
+  "unknownPlaceName": "Nom desconegut",
+  "islamicPlaceFallback": "Lloc islàmic",
   "prayerNotificationTitle": "Hora de {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

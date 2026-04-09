@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API nayê mîheng kirin. Ji kerema xwe veguherînin AI-ya Herêmî.",
   "chatbotLocalNoInfo": "[OFFLINE] Rêbernameya îslamî ya herêmî ya pejirandî hîna peyda nabe. Ji bo bersivên çavkaniyê veguherînin Cloud AI.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Mizgeftan",
+  "halalFood": "Xwarina Halal",
+  "placesSearchArea": "Li vê herêmê bigerin",
+  "nearbyMosques": "Mizgeftên Nêzîkî",
+  "islamicSchools": "Dibistanên Îslamî",
+  "placesFoundCount": "{count} hat dîtin",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km dûr",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Çewtiya API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Çewtiya torê. Ji kerema xwe dîsa biceribîne.",
+  "unknownPlaceName": "Navê nenas",
+  "islamicPlaceFallback": "Cihê Îslamî",
   "prayerNotificationTitle": "Dema {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

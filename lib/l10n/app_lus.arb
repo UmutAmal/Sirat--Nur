@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "Cloud API configure a ni lo. Local AI ah hian inthlak rawh.",
   "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance hi a la awm lo. Sourced chhanna tur chuan Cloud AI ah switch rawh.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "Mosque hrang hrangah te",
+  "halalFood": "Halal Chaw ei tur",
+  "placesSearchArea": "He hmunah hian zawng rawh",
+  "nearbyMosques": "A bul hnaia Mosque awmte",
+  "islamicSchools": "Islamic School hrang hrangah a awm a",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Network tihsual a awm. Khawngaihin han lo try leh teh.",
+  "unknownPlaceName": "Hming hriat loh",
+  "islamicPlaceFallback": "Islamic Hmun a ni",
   "prayerNotificationTitle": "{prayerName} hun hman a ni.",
   "@prayerNotificationTitle": {
     "placeholders": {

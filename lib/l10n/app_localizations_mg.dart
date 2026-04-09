@@ -1116,19 +1116,19 @@ class AppLocalizationsMg extends AppLocalizations {
       '[OFFLINE] Tsy mbola misy ny fitarihana Islamika ao an-toerana voamarina. Miverena any amin\'ny Cloud AI hahazoana valiny azo avy amin\'ny loharano.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'moskea';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Sakafo Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Tadiavo ity faritra ity';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Moske akaiky';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Sekoly Islamika';
 
   @override
   String placesFoundCount(String count) {
@@ -1142,15 +1142,16 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Error API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Fahadisoan\'ny tambajotra. Andramo indray azafady.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Anarana tsy fantatra';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Toerana Islamika';
 }

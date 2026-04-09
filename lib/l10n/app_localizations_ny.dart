@@ -1115,41 +1115,41 @@ class AppLocalizationsNy extends AppLocalizations {
       '[OFFLINE] Maupangiri otsimikizika achisilamu akumaloko sakupezeka pano. Sinthani ku Cloud AI kuti mupeze mayankho opezeka.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Misikiti';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Chakudya cha Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Sakani m\'derali';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Misikiti Yapafupi';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Sukulu za Chisilamu';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count zapezeka';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance makilomita';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Vuto la API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Zolakwika pa netiweki. Chonde yesaninso.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Dzina Losadziwika';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Malo achisilamu';
 }

@@ -1117,41 +1117,42 @@ class AppLocalizationsMt extends AppLocalizations {
       '[OFFLINE] Gwida Iżlamika lokali verifikata għadha mhix disponibbli. Aqleb għal Cloud AI għal tweġibiet misjuba.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Moskej';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Ikel Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Fittex din iż-żona';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Moskej fil-qrib';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Iskejjel Iżlamiċi';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count misjub';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km bogħod';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Żball API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Żball tan-netwerk. Jekk jogħġbok erġa\' pprova.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Isem Mhux Magħruf';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Post Iżlamiku';
 }

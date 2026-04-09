@@ -1119,41 +1119,41 @@ class AppLocalizationsPt extends AppLocalizations {
       '[OFFLINE] A orientação islâmica local verificada ainda não está disponível. Mude para Cloud AI para obter respostas de origem.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Mesquitas';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Comida Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Pesquisar esta área';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Mesquitas próximas';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Escolas Islâmicas';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count encontrado';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km de distância';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Erro de API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Erro de rede. Por favor, tente novamente.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Nome desconhecido';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Lugar Islâmico';
 }

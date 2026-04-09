@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Το Cloud API δεν έχει διαμορφωθεί. Μεταβείτε στο Τοπικό AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Η επαληθευμένη τοπική ισλαμική καθοδήγηση δεν είναι ακόμη διαθέσιμη. Μεταβείτε στο Cloud AI για απαντήσεις από πηγές.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Τζαμιά",
+  "halalFood": "Φαγητό Halal",
+  "placesSearchArea": "Αναζήτηση σε αυτήν την περιοχή",
+  "nearbyMosques": "Κοντινά τζαμιά",
+  "islamicSchools": "Ισλαμικά Σχολεία",
+  "placesFoundCount": "{count} βρέθηκε",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} χλμ. μακριά",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Σφάλμα API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Σφάλμα δικτύου. Δοκιμάστε ξανά.",
+  "unknownPlaceName": "Άγνωστο Όνομα",
+  "islamicPlaceFallback": "Ισλαμικός τόπος",
   "prayerNotificationTitle": "Ώρα για {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API не е конфигуриран. Моля, превключете към локален AI.",
   "chatbotLocalNoInfo": "[ОФЛАЙН] Все още не е налично проверено местно ислямско ръководство. Превключете към Cloud AI за отговори с източник.",
-  "mosques": "Mosques",
+  "mosques": "джамии",
   "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesSearchArea": "Търсете тази област",
+  "nearbyMosques": "Близки джамии",
+  "islamicSchools": "Ислямски училища",
+  "placesFoundCount": "{count} намерен",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} км",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Грешка в API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Мрежова грешка. Моля, опитайте отново.",
+  "unknownPlaceName": "Неизвестно име",
+  "islamicPlaceFallback": "Ислямско място",
   "prayerNotificationTitle": "Време за {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

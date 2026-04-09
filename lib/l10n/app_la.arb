@@ -462,10 +462,10 @@
   "chatbotLocalNoInfo": "[OFFLINE] Verificata moderatio localis islamica nondum praesto est. Vertas Cloud AI ad fontem responsa.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesSearchArea": "Hanc aream explora",
+  "nearbyMosques": "Prope Mosques",
+  "islamicSchools": "Scholae islamicae",
+  "placesFoundCount": "{count} inventus est",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Retis error. Quaeso, iterum conare.",
+  "unknownPlaceName": "Nomen ignotum",
+  "islamicPlaceFallback": "Macometi Place",
   "prayerNotificationTitle": "Tempus {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

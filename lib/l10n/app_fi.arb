@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Pilvisovellusliittymää ei ole määritetty. Vaihda paikalliseen tekoälyyn.",
   "chatbotLocalNoInfo": "[OFFLINE] Vahvistettu paikallinen islamilainen opastus ei ole vielä saatavilla. Vaihda Cloud AI -palveluun saadaksesi lähteitä vastauksia.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Moskeijat",
+  "halalFood": "Halal Ruokaa",
+  "placesSearchArea": "Hae tältä alueelta",
+  "nearbyMosques": "Läheiset moskeijat",
+  "islamicSchools": "Islamilaiset koulut",
+  "placesFoundCount": "{count} löydetty",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km päässä",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API-virhe: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Verkkovirhe. Yritä uudelleen.",
+  "unknownPlaceName": "Tuntematon nimi",
+  "islamicPlaceFallback": "Islamilainen paikka",
   "prayerNotificationTitle": "Aika {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

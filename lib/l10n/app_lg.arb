@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "Cloud API tetegekeddwa. Nsaba okyuse ku Local AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Obulagirizi bw'Obusiraamu obw'omu kitundu obukakasibwa tebunnabaawo. Switch to Cloud AI for sourced answers.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "Emizikiti",
+  "halalFood": "Emmere ya Halal",
+  "placesSearchArea": "Noonya ekitundu kino",
+  "nearbyMosques": "Emizikiti egiriraanyewo",
+  "islamicSchools": "Amasomero g’Obusiraamu",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Ensobi mu API: {statusCode} .",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Ensobi mu mutimbagano. Nsaba oddemu ogezeeko.",
+  "unknownPlaceName": "Erinnya eritamanyiddwa",
+  "islamicPlaceFallback": "Ekifo ky'Obusiraamu",
   "prayerNotificationTitle": "Ekiseera kya {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

@@ -1114,41 +1114,41 @@ class AppLocalizationsSd extends AppLocalizations {
       '[آف لائن] تصديق ٿيل مقامي اسلامي ھدايت اڃا موجود نه آھي. Cloud AI ڏانھن وڃو sourced جوابن لاءِ.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'مسجدون';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'حلال کاڌو';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'هن علائقي جي ڳولا ڪريو';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'ڀرسان مسجدون';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'اسلامي اسڪول';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count مليو';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance ڪلوميٽر پري';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API غلطي: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'نيٽ ورڪ غلطي. مهرباني ڪري ٻيهر ڪوشش ڪريو.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'اڻڄاتل نالو';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'اسلامي جڳھ';
 }

@@ -1115,41 +1115,41 @@ class AppLocalizationsVi extends AppLocalizations {
       '[OFFLINE] Hiện chưa có hướng dẫn Hồi giáo địa phương đã được xác minh. Chuyển sang Cloud AI để có câu trả lời có nguồn gốc.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Nhà thờ Hồi giáo';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Thực phẩm Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Tìm kiếm khu vực này';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Nhà thờ Hồi giáo lân cận';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Trường học Hồi giáo';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return 'Đã tìm thấy $count';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return 'Cách $distance km';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Lỗi API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Lỗi mạng. Vui lòng thử lại.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Tên không xác định';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Địa điểm Hồi giáo';
 }

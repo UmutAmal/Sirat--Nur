@@ -1116,41 +1116,41 @@ class AppLocalizationsSk extends AppLocalizations {
       '[OFFLINE] Overené miestne islamské poradenstvo zatiaľ nie je k dispozícii. Ak chcete získať odpovede zo zdrojov, prepnite na Cloud AI.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'mešity';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal jedlo';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Vyhľadajte túto oblasť';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Neďaleké mešity';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'islamské školy';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count nájdené';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km ďaleko';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Chyba rozhrania API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Chyba siete. Skúste to znova.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Neznáme meno';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islamské miesto';
 }

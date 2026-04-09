@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API سەپلەنمىگەن. يەرلىك سۈنئىي ئەقىلگە ئالماشتۇرۇڭ.",
   "chatbotLocalNoInfo": "[OFFLINE] تەكشۈرۈلگەن يەرلىك ئىسلام يېتەكچىلىكى تېخىچە يوق. مەنبەلىك جاۋاب ئۈچۈن Cloud AI غا ئالماشتۇرۇڭ.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "مەسچىتلەر",
+  "halalFood": "ھالال يېمەكلىك",
+  "placesSearchArea": "بۇ يەرنى ئىزدەڭ",
+  "nearbyMosques": "مەسچىتلەرگە يېقىن",
+  "islamicSchools": "ئىسلام مەكتەپلىرى",
+  "placesFoundCount": "{count} تېپىلدى",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API خاتالىقى: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "تور خاتالىقى. قايتا سىناڭ.",
+  "unknownPlaceName": "نامەلۇم ئىسىم",
+  "islamicPlaceFallback": "ئىسلام ئورنى",
   "prayerNotificationTitle": "{prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

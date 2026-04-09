@@ -3253,3 +3253,47 @@
 ### Sonraki Adım
 - Sıradaki turda code-referenced yüksek yoğunluklu localization yüzeyleri içinden `places` ve `sukun` kümeleri karşılaştırılıp en yüksek kullanıcı etkili olan seçilecek.
 - Rare-locale tarafında sibling referansı zayıf olan `tw` / `ak` EN-reference satırları ayrı dürüstlük matrisiyle ele alınacak.
+
+## 2026-04-09 TUR-83 — Localize Places Discovery Surface
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force placesSearchArea nearbyMosques islamicSchools halalFood mosques placesFoundCount distanceAwayKm placesApiError placesNetworkError islamicPlaceFallback unknownPlaceName` ile çalıştırıldı ve places keşif yüzeyi tüm locale setine yayıldı.
+- Batch sonrası yalnızca `tw` varyantında İngilizce kalan residual satırlar kapatıldı; [A:\Way of Allah\sirat_i_nur\lib\l10n\app_ak.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_ak.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tw.arb) içinde `placesFoundCount`, `distanceAwayKm`, `placesApiError` sibling uyumlu hale getirildi.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) genişletildi; priority locale seti için places discovery copy EN fallback regresyonu kilitlendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart#L83](A:/Way%20of%20Allah/sirat_i_nur/lib/features/places/places_map_page.dart#L83), [A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart#L107](A:/Way%20of%20Allah/sirat_i_nur/lib/features/places/places_map_page.dart#L107), [A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart#L122](A:/Way%20of%20Allah/sirat_i_nur/lib/features/places/places_map_page.dart#L122), [A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart#L171](A:/Way%20of%20Allah/sirat_i_nur/lib/features/places/places_map_page.dart#L171), [A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart#L330](A:/Way%20of%20Allah/sirat_i_nur/lib/features/places/places_map_page.dart#L330), [A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart#L386](A:/Way%20of%20Allah/sirat_i_nur/lib/features/places/places_map_page.dart#L386), [A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart#L468](A:/Way%20of%20Allah/sirat_i_nur/lib/features/places/places_map_page.dart#L468), [A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart#L479](A:/Way%20of%20Allah/sirat_i_nur/lib/features/places/places_map_page.dart#L479), [A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart#L590](A:/Way%20of%20Allah/sirat_i_nur/lib/features/places/places_map_page.dart#L590) üzerinden okunan places anahtarlarının neredeyse tüm locale setinde İngilizce kaldığı doğrulandı.
+- Bu yüzey arama, sonuç, hata ve kategori metinlerini içerdiği için kullanıcı etkisi yüksek ve code-referenced localization sıralamasında ilk kümelerden biriydi.
+- Rare-locale residual yalnızca `tw` varyantında kaldı; sibling locale ile eşleşen güvenli satırlar manuel kapatıldı, uydurma geniş yorum eklenmedi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` içindeki places anahtarları güncellenen dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` generated dosyaları
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `placesSearchArea` için İngilizce fallback sayısı `195`ten `64`e düştü.
+- `nearbyMosques` için `195`ten `66`ya düştü.
+- `islamicSchools` için `195`ten `64`e düştü.
+- `halalFood` için `195`ten `68`e düştü.
+- `mosques` için `195`ten `69`a düştü.
+- `placesFoundCount` için `195`ten `80`e düştü.
+- `distanceAwayKm` için `195`ten `85`e düştü.
+- `placesApiError` için `195`ten `78`e düştü.
+- `placesNetworkError` için `195`ten `64`e düştü.
+- `islamicPlaceFallback` için `195`ten `65`e düştü.
+- `unknownPlaceName` için `195`ten `64`e düştü.
+- Priority locale seti places discovery yüzeyinde artık İngilizce fallback göstermiyor.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`11/11`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`191/191`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Places discovery copy still falling back to English across the supported surface: `15/25 → 6/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/sukun_audio_page.dart) üzerindeki `sukun` kümesi ele alınacak.
+- Ardından diagnostics/quran dataset ve download flow copy kümeleri yeniden sıralanacak.

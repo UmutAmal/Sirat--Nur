@@ -1116,41 +1116,41 @@ class AppLocalizationsUg extends AppLocalizations {
       '[OFFLINE] تەكشۈرۈلگەن يەرلىك ئىسلام يېتەكچىلىكى تېخىچە يوق. مەنبەلىك جاۋاب ئۈچۈن Cloud AI غا ئالماشتۇرۇڭ.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'مەسچىتلەر';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'ھالال يېمەكلىك';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'بۇ يەرنى ئىزدەڭ';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'مەسچىتلەرگە يېقىن';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'ئىسلام مەكتەپلىرى';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count تېپىلدى';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API خاتالىقى: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'تور خاتالىقى. قايتا سىناڭ.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'نامەلۇم ئىسىم';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'ئىسلام ئورنى';
 }

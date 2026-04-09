@@ -1120,41 +1120,41 @@ class AppLocalizationsTl extends AppLocalizations {
       '[OFFLINE] Hindi pa available ang na-verify na lokal na gabay sa Islam. Lumipat sa Cloud AI para sa mga sourced na sagot.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Mga Mosque';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal na Pagkain';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Hanapin ang lugar na ito';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Mga Kalapit na Mosque';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Mga Paaralan ng Islam';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count ang natagpuan';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km ang layo';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Error sa API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Error sa network. Pakisubukang muli.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Hindi Kilalang Pangalan';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islamic Lugar';
 }

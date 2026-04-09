@@ -1110,41 +1110,41 @@ class AppLocalizationsKo extends AppLocalizations {
       '[오프라인] 검증된 현지 이슬람 지침은 아직 제공되지 않습니다. 소스 답변을 얻으려면 Cloud AI로 전환하세요.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => '모스크';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => '할랄 음식';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => '이 지역 검색';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => '인근 모스크';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => '이슬람 학교';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count을(를) 찾았습니다.';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '${distance}km 거리';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API 오류: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => '네트워크 오류입니다. 다시 시도해 주세요.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => '알 수 없는 이름';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => '이슬람 장소';
 }

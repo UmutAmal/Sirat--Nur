@@ -1117,41 +1117,42 @@ class AppLocalizationsXh extends AppLocalizations {
       '[OFFLINE] Izikhokelo eziqinisekisiweyo zasekhaya zamaSilamsi azikafumaneki. Tshintshela kwi-Cloud AI ukufumana iimpendulo ezifunyenweyo.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'IiMosque';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Ukutya kweHalal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Khangela le ndawo';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'IiMosque ezikufuphi';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Izikolo zamaSilamsi';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count ifunyenwe';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km kude';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Imposiso yeAPI: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Impazamo yenethiwekhi. Nceda zama kwakhona.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Igama elingaziwayo';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Indawo yamaSilamsi';
 }

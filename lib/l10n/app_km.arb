@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API មិនបានកំណត់រចនាសម្ព័ន្ធទេ។ សូមប្តូរទៅ Local AI។",
   "chatbotLocalNoInfo": "[ក្រៅបណ្តាញ] ការណែនាំឥស្លាមក្នុងស្រុកដែលបានផ្ទៀងផ្ទាត់មិនទាន់មាននៅឡើយទេ។ ប្តូរទៅ Cloud AI សម្រាប់ចម្លើយដែលមានប្រភព។",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "វិហារអ៊ីស្លាម",
+  "halalFood": "អាហារហាឡាល់",
+  "placesSearchArea": "ស្វែងរកតំបន់នេះ។",
+  "nearbyMosques": "វិហារអ៊ីស្លាមនៅជិត",
+  "islamicSchools": "សាលាអ៊ីស្លាម",
+  "placesFoundCount": "{count} បានរកឃើញ",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} គីឡូម៉ែត្រពីចម្ងាយ",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "កំហុស API៖ {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "កំហុសបណ្តាញ។ សូមព្យាយាមម្តងទៀត។",
+  "unknownPlaceName": "មិនស្គាល់ឈ្មោះ",
+  "islamicPlaceFallback": "កន្លែងអ៊ីស្លាម",
   "prayerNotificationTitle": "ពេលវេលាសម្រាប់ {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "لم يتم تكوين Cloud API. يرجى التبديل إلى الذكاء الاصطناعي المحلي.",
   "chatbotLocalNoInfo": "[غير متصل] التوجيه الإسلامي المحلي الذي تم التحقق منه غير متوفر بعد. قم بالتبديل إلى Cloud AI للحصول على إجابات من مصادر.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "المساجد",
+  "halalFood": "الطعام الحلال",
+  "placesSearchArea": "ابحث في هذه المنطقة",
+  "nearbyMosques": "المساجد القريبة",
+  "islamicSchools": "المدارس الإسلامية",
+  "placesFoundCount": "تم العثور على {count}",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} كم",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "خطأ في واجهة برمجة التطبيقات: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "خطأ في الشبكة. يرجى المحاولة مرة أخرى.",
+  "unknownPlaceName": "اسم غير معروف",
+  "islamicPlaceFallback": "المكان الاسلامي",
   "prayerNotificationTitle": "وقت صلاة {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

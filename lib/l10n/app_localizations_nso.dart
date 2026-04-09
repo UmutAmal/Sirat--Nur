@@ -1129,19 +1129,19 @@ class AppLocalizationsNso extends AppLocalizations {
       '[OFFLINE] Tlhahlo ya selegae ya Boiselamo ye e netefaditšwego ga e hwetšagale ga bjale. Fetogela go Cloud AI bakeng sa dikarabo tše di hweditšwego.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Dimoskete';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Dijo tša Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Nyaka lefelo le';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Mamosleme a Kgauswi';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Dikolo tša Boiselamo';
 
   @override
   String placesFoundCount(String count) {
@@ -1159,11 +1159,11 @@ class AppLocalizationsNso extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Phošo ya netweke. Hle leka gape.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Leina leo le sa Tsebjego';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Lefelo la Boiselamo';
 }

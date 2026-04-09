@@ -1117,41 +1117,41 @@ class AppLocalizationsKm extends AppLocalizations {
       '[ក្រៅបណ្តាញ] ការណែនាំឥស្លាមក្នុងស្រុកដែលបានផ្ទៀងផ្ទាត់មិនទាន់មាននៅឡើយទេ។ ប្តូរទៅ Cloud AI សម្រាប់ចម្លើយដែលមានប្រភព។';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'វិហារអ៊ីស្លាម';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'អាហារហាឡាល់';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'ស្វែងរកតំបន់នេះ។';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'វិហារអ៊ីស្លាមនៅជិត';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'សាលាអ៊ីស្លាម';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count បានរកឃើញ';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance គីឡូម៉ែត្រពីចម្ងាយ';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'កំហុស API៖ $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'កំហុសបណ្តាញ។ សូមព្យាយាមម្តងទៀត។';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'មិនស្គាល់ឈ្មោះ';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'កន្លែងអ៊ីស្លាម';
 }

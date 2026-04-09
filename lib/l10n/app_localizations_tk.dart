@@ -1117,41 +1117,42 @@ class AppLocalizationsTk extends AppLocalizations {
       '[OFFLINE] Barlanan ýerli yslam görkezmeleri entek elýeterli däl. Gysga jogaplar üçin “Cloud AI” -e geçiň.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Metjitler';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal iýmit';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Bu ýeri gözläň';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Golaýdaky metjitler';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Yslam mekdepleri';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count tapyldy';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km uzaklykda';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API ýalňyşlygy: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Tor ýalňyşlygy. Gaýtadan synanyşmagyňyzy haýyş edýäris.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Näbelli';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Yslam ýeri';
 }

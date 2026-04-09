@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "मेघ एपिआइ विन्यस्तं नास्ति। कृपया Local AI इत्यत्र स्विच कुर्वन्तु।",
   "chatbotLocalNoInfo": "[OFFLINE] सत्यापितं स्थानीयं इस्लामिकमार्गदर्शनं अद्यापि उपलब्धं नास्ति। स्रोत-उत्तराणां कृते Cloud AI -इत्यत्र स्विच् कुर्वन्तु ।",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "मस्जिदाः",
+  "halalFood": "हलाल भोजन",
+  "placesSearchArea": "एतत् क्षेत्रं अन्वेष्टुम्",
+  "nearbyMosques": "समीपस्थाः मस्जिदाः",
+  "islamicSchools": "इस्लामिक विद्यालय",
+  "placesFoundCount": "{count} प्राप्त",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} कि.मी दूरे",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "एपिआइ त्रुटिः {statusCode} .",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "संजालदोषः। कृपया पुनः प्रयासं कुर्वन्तु।",
+  "unknownPlaceName": "अज्ञात नाम",
+  "islamicPlaceFallback": "इस्लामिक स्थान",
   "prayerNotificationTitle": "{prayerName} कृते समयः ।",
   "@prayerNotificationTitle": {
     "placeholders": {

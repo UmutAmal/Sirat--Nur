@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API ترتيب نه ڏني وئي. مھرباني ڪري مقامي AI ڏانھن وڃو.",
   "chatbotLocalNoInfo": "[آف لائن] تصديق ٿيل مقامي اسلامي ھدايت اڃا موجود نه آھي. Cloud AI ڏانھن وڃو sourced جوابن لاءِ.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "مسجدون",
+  "halalFood": "حلال کاڌو",
+  "placesSearchArea": "هن علائقي جي ڳولا ڪريو",
+  "nearbyMosques": "ڀرسان مسجدون",
+  "islamicSchools": "اسلامي اسڪول",
+  "placesFoundCount": "{count} مليو",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} ڪلوميٽر پري",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API غلطي: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "نيٽ ورڪ غلطي. مهرباني ڪري ٻيهر ڪوشش ڪريو.",
+  "unknownPlaceName": "اڻڄاتل نالو",
+  "islamicPlaceFallback": "اسلامي جڳھ",
   "prayerNotificationTitle": "{prayerName} لاءِ وقت",
   "@prayerNotificationTitle": {
     "placeholders": {

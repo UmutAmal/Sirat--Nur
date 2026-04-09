@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "וואָלקן אַפּי ניט קאַנפיגיערד. ביטע באַשטימען צו לאקאלע אַי.",
   "chatbotLocalNoInfo": "[אָפפלינע] וועראַפייד היגע יסלאַמיק גיידאַנס איז נישט בנימצא נאָך. באַשטימען צו קלאָוד אַי פֿאַר מקור ענטפֿערס.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "מאָסקוועס",
+  "halalFood": "האַלל פוד",
+  "placesSearchArea": "זוכן דעם געגנט",
+  "nearbyMosques": "נירביי מאָסקוועס",
+  "islamicSchools": "יסלאַמיק שולן",
+  "placesFoundCount": "{count} געפונען",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} קילאמעטער אַוועק",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "אַפּי טעות: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "נעץ טעות. ביטע פּרוּווט ווידער.",
+  "unknownPlaceName": "אומבאַקאַנט נאָמען",
+  "islamicPlaceFallback": "יסלאַמיק אָרט",
   "prayerNotificationTitle": "צייט פֿאַר {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

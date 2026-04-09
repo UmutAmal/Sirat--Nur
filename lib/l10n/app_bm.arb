@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "Sankaba API ma labɛn. Aw ye aw jija ka wuli ka taa Local AI la.",
   "chatbotLocalNoInfo": "[OFFLINE] Sigida silamɛya bilasiralikan sɛgɛsɛgɛlen ma sɔrɔ fɔlɔ. Aw bɛ wuli ka taa Cloud AI la walasa ka jaabi sɔrɔlenw sɔrɔ.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "Misiriw",
+  "halalFood": "Dumuni Halal",
+  "placesSearchArea": "Aw ye nin yɔrɔ in ɲini",
+  "nearbyMosques": "Misiri minnu bɛ kɛrɛfɛ",
+  "islamicSchools": "Silamɛya Lakɔlisow",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Réseau fili ye. Aw ye aw jija ka segin a kan.",
+  "unknownPlaceName": "Tɔgɔ Dɔnbali",
+  "islamicPlaceFallback": "Silamɛya Yɔrɔ",
   "prayerNotificationTitle": "Waati min bɛ {prayerName} la.",
   "@prayerNotificationTitle": {
     "placeholders": {

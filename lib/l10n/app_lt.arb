@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API nesukonfigūruota. Perjunkite į vietinį AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Patvirtinti vietiniai islamo nurodymai dar nepasiekiami. Perjunkite į „Cloud AI“, kad gautumėte atsakymus iš šaltinio.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Mečetės",
+  "halalFood": "Halal maistas",
+  "placesSearchArea": "Ieškokite šioje srityje",
+  "nearbyMosques": "Netoliese esančios mečetės",
+  "islamicSchools": "Islamo mokyklos",
+  "placesFoundCount": "{count} rasta",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km atstumu",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API klaida: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Tinklo klaida. Bandykite dar kartą.",
+  "unknownPlaceName": "Nežinomas vardas",
+  "islamicPlaceFallback": "Islamo vieta",
   "prayerNotificationTitle": "Laikas {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

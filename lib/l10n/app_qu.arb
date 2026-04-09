@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "Puyu API mana wakichisqachu. Ama hina kaspa, Local AI nisqaman tikray.",
   "chatbotLocalNoInfo": "[OFFLINE] Chiqapchasqa llaqta islam pusayqa manaraqmi kanchu. Puyu AI kaqman tikray pukyuta kutichiykunapaq.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "Mezquitakuna",
+  "halalFood": "Halal Mikhuna",
+  "placesSearchArea": "Kay kitipi maskay",
+  "nearbyMosques": "Mezquitakuna qayllapi",
+  "islamicSchools": "Islam Yachay Wasikuna",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Llika pantasqa. Ama hina kaspa, hukmanta kallpachakuy.",
+  "unknownPlaceName": "Mana riqsisqa Suti",
+  "islamicPlaceFallback": "Islamic Lugar",
   "prayerNotificationTitle": "{prayerName} nisqapaq pacha.",
   "@prayerNotificationTitle": {
     "placeholders": {

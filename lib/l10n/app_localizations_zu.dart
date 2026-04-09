@@ -1117,41 +1117,41 @@ class AppLocalizationsZu extends AppLocalizations {
       '[OFFLINE] Isiqondiso sendawo samaSulumane esiqinisekisiwe asitholakali okwamanje. Shintshela ku-Cloud AI ukuze uthole izimpendulo ezitholakalayo.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Ama-mosque';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Ukudla kwe-Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Sesha le ndawo';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Ama-Mosque aseduze';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Izikole zamaSulumane';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count itholiwe';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km kude';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Iphutha le-API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Iphutha lenethiwekhi. Sicela uzame futhi.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Igama Elingaziwa';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Indawo yamaSulumane';
 }

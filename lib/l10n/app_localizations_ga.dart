@@ -1116,28 +1116,28 @@ class AppLocalizationsGa extends AppLocalizations {
       '[AR LÍNE] Níl treoir Ioslamach áitiúil fíoraithe ar fáil fós. Athraigh go Cloud AI le haghaidh freagraí foinsithe.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Moscanna';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Bia Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Cuardaigh an réimse seo';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Moscanna in aice láimhe';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Scoileanna Ioslamacha';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count aimsithe';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km uaidh';
   }
 
   @override
@@ -1146,11 +1146,11 @@ class AppLocalizationsGa extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Earráid líonra. Bain triail eile as.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Ainm Anaithnid';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Áit Ioslamach';
 }

@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "API ya Wingu haijasanidiwa. Tafadhali badilisha hadi AI ya Ndani.",
   "chatbotLocalNoInfo": "[OFFLINE] Mwongozo wa karibu wa Kiislamu uliothibitishwa bado haupatikani. Badili hadi Cloud AI kwa majibu ya chanzo.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Misikiti",
+  "halalFood": "Chakula cha Halal",
+  "placesSearchArea": "Tafuta eneo hili",
+  "nearbyMosques": "Misikiti iliyo karibu",
+  "islamicSchools": "Shule za Kiislamu",
+  "placesFoundCount": "{count} imepatikana",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} kilomita",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Hitilafu ya API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Hitilafu ya mtandao. Tafadhali jaribu tena.",
+  "unknownPlaceName": "Jina lisilojulikana",
+  "islamicPlaceFallback": "Mahali pa Kiislamu",
   "prayerNotificationTitle": "Muda wa {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

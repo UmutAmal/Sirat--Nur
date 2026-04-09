@@ -1115,41 +1115,41 @@ class AppLocalizationsAz extends AppLocalizations {
       '[OFFLINE] Təsdiqlənmiş yerli İslam bələdçisi hələ mövcud deyil. Mənbəli cavablar üçün Cloud AI-a keçin.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Məscidlər';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal Qida';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Bu ərazini axtarın';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Yaxınlıqda Məscidlər';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'İslam məktəbləri';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count tapıldı';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km məsafədə';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API xətası: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Şəbəkə xətası. Yenidən cəhd edin.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Naməlum Ad';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'İslam Məkanı';
 }

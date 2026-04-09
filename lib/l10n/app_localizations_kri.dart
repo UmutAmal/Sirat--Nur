@@ -1114,23 +1114,23 @@ class AppLocalizationsKri extends AppLocalizations {
       '[OFFLINE] Verified lokal Islamik gayd nɔ de yet. Switch to Klayd AI fɔ sɔs ansa dɛn.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Moskɛt dɛn';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal Fɔd fɔ it';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Sɔch dis eria';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Moskit dɛn we de nia de';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Islamik Skul dɛn';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count dɔn fɛn am';
   }
 
   @override
@@ -1144,11 +1144,11 @@ class AppLocalizationsKri extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Netwok mistek. Duya tray bak.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Nem we wi nɔ no';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islamik Ples we dɛn kɔl';
 }

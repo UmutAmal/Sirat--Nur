@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Облачный API не настроен. Пожалуйста, переключитесь на локальный ИИ.",
   "chatbotLocalNoInfo": "[OFFLINE] Проверенные местные исламские рекомендации пока недоступны. Переключитесь на Cloud AI для получения ответов.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Мечети",
+  "halalFood": "Халяльная еда",
+  "placesSearchArea": "Искать в этой области",
+  "nearbyMosques": "Близлежащие мечети",
+  "islamicSchools": "Исламские школы",
+  "placesFoundCount": "{count} найдено",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} км",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Ошибка API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Ошибка сети. Пожалуйста, попробуйте еще раз.",
+  "unknownPlaceName": "Неизвестное имя",
+  "islamicPlaceFallback": "Исламское место",
   "prayerNotificationTitle": "Время для {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

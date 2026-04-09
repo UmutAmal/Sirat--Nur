@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Ahazighị igwe ojii API. Biko gbanwee gaa na mpaghara AI.",
   "chatbotLocalNoInfo": "[OFFLINE] ntụzịaka islam mpaghara enyochabeghị ugbu a. Banye na Cloud AI maka azịza ewepụtara.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Ụlọ alakụba",
+  "halalFood": "Nri Halal",
+  "placesSearchArea": "Chọọ mpaghara a",
+  "nearbyMosques": "Ụlọ alakụba dị nso",
+  "islamicSchools": "Ụlọ akwụkwọ islam",
+  "placesFoundCount": "{count} hụrụ",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km pụọ",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Njehie netwọkụ. Biko nwaa ọzọ.",
+  "unknownPlaceName": "Aha amaghi ama",
+  "islamicPlaceFallback": "Ebe islam",
   "prayerNotificationTitle": "Oge maka {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

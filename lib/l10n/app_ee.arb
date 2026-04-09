@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "Womeɖo alilikpo API o. Taflatse trɔ ɖe Local AI ŋu.",
   "chatbotLocalNoInfo": "[OFFLINE] Islamtɔwo ƒe mɔfiame siwo ŋu woɖo kpee le nutoa me la meli haɖe o. Trɔ ɖe Cloud AI ŋu hena ŋuɖoɖo siwo tso teƒe aɖe.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "Mosquewo",
+  "halalFood": "Halal Nuɖuɖu",
+  "placesSearchArea": "Di nuto sia me",
+  "nearbyMosques": "Mosque siwo te ɖe afima ŋu",
+  "islamicSchools": "Islamtɔwo ƒe Sukuwo",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Network ƒe vodada. Taflatse gadze agbagba ake.",
+  "unknownPlaceName": "Ŋkɔ si Womenya o",
+  "islamicPlaceFallback": "Islamtɔwo ƒe Teƒe",
   "prayerNotificationTitle": "Ɣeyiɣi na {prayerName}.",
   "@prayerNotificationTitle": {
     "placeholders": {

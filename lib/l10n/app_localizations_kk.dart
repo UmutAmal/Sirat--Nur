@@ -1114,41 +1114,41 @@ class AppLocalizationsKk extends AppLocalizations {
       '[OFFLINE] Тексерілген жергілікті ислам нұсқауы әлі қолжетімді емес. Дереккөзден алынған жауаптар үшін Cloud AI жүйесіне ауысыңыз.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Мешіттер';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Халал тағам';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Осы аймақты іздеңіз';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Маңайдағы мешіттер';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Ислам мектептері';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count табылды';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance км қашықтықта';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API қатесі: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Желі қатесі. Қайталап көріңіз.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Белгісіз аты';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Ислам орны';
 }

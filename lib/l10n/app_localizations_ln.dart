@@ -1116,19 +1116,19 @@ class AppLocalizationsLn extends AppLocalizations {
       '[OFFLINE] Bokambami ya Islam ya mboka oyo e vérifié ezali nanu te. Bobongola na Cloud AI mpo na biyano oyo euti na source.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Ba Mosquées';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Bilei ya Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Luká esika oyo';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Ba Mosquées oyo ezali pene wana';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Biteyelo ya Islam';
 
   @override
   String placesFoundCount(String count) {
@@ -1146,11 +1146,11 @@ class AppLocalizationsLn extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Libunga ya réseau. Svp meka lisusu.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Kombo eyebani te';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Esika ya Islam';
 }

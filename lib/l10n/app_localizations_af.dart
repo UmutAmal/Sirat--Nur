@@ -1117,41 +1117,41 @@ class AppLocalizationsAf extends AppLocalizations {
       '[OFFLINE] Geverifieerde plaaslike Islamitiese leiding is nog nie beskikbaar nie. Skakel oor na Cloud AI vir verkrygde antwoorde.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Moskees';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal kos';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Soek hierdie area';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Nabygeleë moskees';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Islamitiese skole';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count gevind';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km weg';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API-fout: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Netwerkfout. Probeer asseblief weer.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Onbekende Naam';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islamitiese Plek';
 }

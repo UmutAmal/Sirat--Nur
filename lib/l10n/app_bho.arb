@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "क्लाउड एपीआई कॉन्फ़िगर नइखे भइल. कृपया लोकल एआई पर स्विच करीं।",
   "chatbotLocalNoInfo": "[OFFLINE] सत्यापन स्थानीय इस्लामी मार्गदर्शन अभी तक उपलब्ध नइखे। स्रोत से मिलल जवाब खातिर क्लाउड एआई पर स्विच करीं।",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "मस्जिद के बा",
+  "halalFood": "हलाल फूड के बा",
+  "placesSearchArea": "एह इलाका में खोज करीं",
+  "nearbyMosques": "पास के मस्जिद बाड़ी सऽ",
+  "islamicSchools": "इस्लामिक स्कूलन के बारे में बतावल गइल बा",
+  "placesFoundCount": "{count} मिलल बा",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} किमी दूर बा",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "एपीआई त्रुटि: {statusCode} बा।",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "नेटवर्क में त्रुटि हो गइल बा. कृपया दोबारा कोशिश करीं।",
+  "unknownPlaceName": "अज्ञात नाम के बा",
+  "islamicPlaceFallback": "इस्लामी जगह के बारे में बतावल गइल बा",
   "prayerNotificationTitle": "{prayerName} के समय।",
   "@prayerNotificationTitle": {
     "placeholders": {

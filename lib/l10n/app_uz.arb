@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API sozlanmagan. Mahalliy AIga oʻting.",
   "chatbotLocalNoInfo": "[OFFLINE] Tasdiqlangan mahalliy islomiy koʻrsatmalar hali mavjud emas. Manbali javoblar uchun Cloud AI-ga o'ting.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Masjidlar",
+  "halalFood": "Halol taom",
+  "placesSearchArea": "Ushbu hududni qidiring",
+  "nearbyMosques": "Yaqin masjidlar",
+  "islamicSchools": "Islom maktablari",
+  "placesFoundCount": "{count} topildi",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km uzoqlikda",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API xatosi: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Tarmoq xatosi. Iltimos, qayta urinib koʻring.",
+  "unknownPlaceName": "Noma'lum ism",
+  "islamicPlaceFallback": "Islomiy joy",
   "prayerNotificationTitle": "{prayerName} vaqti",
   "@prayerNotificationTitle": {
     "placeholders": {

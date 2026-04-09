@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API konfiqurasiya edilməyib. Lütfən, Yerli AI-a keçin.",
   "chatbotLocalNoInfo": "[OFFLINE] Təsdiqlənmiş yerli İslam bələdçisi hələ mövcud deyil. Mənbəli cavablar üçün Cloud AI-a keçin.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Məscidlər",
+  "halalFood": "Halal Qida",
+  "placesSearchArea": "Bu ərazini axtarın",
+  "nearbyMosques": "Yaxınlıqda Məscidlər",
+  "islamicSchools": "İslam məktəbləri",
+  "placesFoundCount": "{count} tapıldı",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km məsafədə",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API xətası: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Şəbəkə xətası. Yenidən cəhd edin.",
+  "unknownPlaceName": "Naməlum Ad",
+  "islamicPlaceFallback": "İslam Məkanı",
   "prayerNotificationTitle": "{prayerName} üçün vaxt",
   "@prayerNotificationTitle": {
     "placeholders": {

@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Hodeiko APIa ez dago konfiguratuta. Mesedez, aldatu Tokiko AI-ra.",
   "chatbotLocalNoInfo": "[OFFLINE] Egiaztatutako tokiko orientazio islamikoa ez dago oraindik erabilgarri. Aldatu Cloud AI-ra iturriko erantzunak lortzeko.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Meskitak",
+  "halalFood": "Halal Elikadura",
+  "placesSearchArea": "Bilatu eremu honetan",
+  "nearbyMosques": "Inguruko meskitak",
+  "islamicSchools": "Eskola Islamikoak",
+  "placesFoundCount": "{count} aurkitu da",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km-ra",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API errorea: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Sareko errorea. Mesedez, saiatu berriro.",
+  "unknownPlaceName": "Izen ezezaguna",
+  "islamicPlaceFallback": "Leku Islamikoa",
   "prayerNotificationTitle": "{prayerName} egiteko ordua",
   "@prayerNotificationTitle": {
     "placeholders": {

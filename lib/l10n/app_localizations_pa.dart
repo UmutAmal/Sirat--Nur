@@ -1115,41 +1115,42 @@ class AppLocalizationsPa extends AppLocalizations {
       '[ਆਫਲਾਈਨ] ਪ੍ਰਮਾਣਿਤ ਸਥਾਨਕ ਇਸਲਾਮੀ ਮਾਰਗਦਰਸ਼ਨ ਅਜੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਸਰੋਤ ਕੀਤੇ ਜਵਾਬਾਂ ਲਈ ਕਲਾਉਡ AI \'ਤੇ ਸਵਿਚ ਕਰੋ।';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'ਮਸਜਿਦਾਂ';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'ਹਲਾਲ ਭੋਜਨ';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'ਇਸ ਖੇਤਰ ਦੀ ਖੋਜ ਕਰੋ';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'ਨੇੜੇ ਦੀਆਂ ਮਸਜਿਦਾਂ';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'ਇਸਲਾਮੀ ਸਕੂਲ';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count ਮਿਲਿਆ';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance ਕਿਲੋਮੀਟਰ ਦੂਰ';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API ਗਲਤੀ: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'ਨੈੱਟਵਰਕ ਗੜਬੜ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'ਅਗਿਆਤ ਨਾਮ';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'ਇਸਲਾਮੀ ਸਥਾਨ';
 }

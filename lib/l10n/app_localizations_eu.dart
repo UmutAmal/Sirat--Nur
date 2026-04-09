@@ -1117,41 +1117,41 @@ class AppLocalizationsEu extends AppLocalizations {
       '[OFFLINE] Egiaztatutako tokiko orientazio islamikoa ez dago oraindik erabilgarri. Aldatu Cloud AI-ra iturriko erantzunak lortzeko.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Meskitak';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal Elikadura';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Bilatu eremu honetan';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Inguruko meskitak';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Eskola Islamikoak';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count aurkitu da';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km-ra';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API errorea: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Sareko errorea. Mesedez, saiatu berriro.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Izen ezezaguna';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Leku Islamikoa';
 }

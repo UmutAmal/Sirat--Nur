@@ -1117,41 +1117,41 @@ class AppLocalizationsKn extends AppLocalizations {
       '[ಆಫ್‌ಲೈನ್] ಪರಿಶೀಲಿಸಿದ ಸ್ಥಳೀಯ ಇಸ್ಲಾಮಿಕ್ ಮಾರ್ಗದರ್ಶನ ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ. ಮೂಲದ ಉತ್ತರಗಳಿಗಾಗಿ ಕ್ಲೌಡ್ AI ಗೆ ಬದಲಿಸಿ.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'ಮಸೀದಿಗಳು';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'ಹಲಾಲ್ ಆಹಾರ';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'ಈ ಪ್ರದೇಶವನ್ನು ಹುಡುಕಿ';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'ಹತ್ತಿರದ ಮಸೀದಿಗಳು';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'ಇಸ್ಲಾಮಿಕ್ ಶಾಲೆಗಳು';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count ಕಂಡುಬಂದಿದೆ';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance ಕಿಮೀ ದೂರ';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API ದೋಷ: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'ನೆಟ್‌ವರ್ಕ್ ದೋಷ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'ಅಪರಿಚಿತ ಹೆಸರು';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'ಇಸ್ಲಾಮಿಕ್ ಸ್ಥಳ';
 }

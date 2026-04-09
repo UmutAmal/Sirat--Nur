@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "API đám mây chưa được định cấu hình. Vui lòng chuyển sang AI cục bộ.",
   "chatbotLocalNoInfo": "[OFFLINE] Hiện chưa có hướng dẫn Hồi giáo địa phương đã được xác minh. Chuyển sang Cloud AI để có câu trả lời có nguồn gốc.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Nhà thờ Hồi giáo",
+  "halalFood": "Thực phẩm Halal",
+  "placesSearchArea": "Tìm kiếm khu vực này",
+  "nearbyMosques": "Nhà thờ Hồi giáo lân cận",
+  "islamicSchools": "Trường học Hồi giáo",
+  "placesFoundCount": "Đã tìm thấy {count}",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "Cách {distance} km",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Lỗi API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Lỗi mạng. Vui lòng thử lại.",
+  "unknownPlaceName": "Tên không xác định",
+  "islamicPlaceFallback": "Địa điểm Hồi giáo",
   "prayerNotificationTitle": "Đã đến lúc dành cho {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

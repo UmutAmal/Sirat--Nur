@@ -1115,23 +1115,23 @@ class AppLocalizationsHa extends AppLocalizations {
       '[OFFLINE] Ba a samu ingantattun jagorar Musulunci na gida ba tukuna. Canja zuwa Cloud AI don samun amsoshi masu tushe.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Masallatai';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Abincin Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Bincika wannan yanki';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Masallatan Kusa';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Makarantun Islamiyya';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return 'An samo $count';
   }
 
   @override
@@ -1145,11 +1145,12 @@ class AppLocalizationsHa extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Kuskuren hanyar sadarwa. Da fatan za a sake gwadawa.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Sunan da ba a sani ba';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Wurin Musulunci';
 }

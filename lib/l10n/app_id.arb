@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API tidak dikonfigurasi. Silakan beralih ke AI Lokal.",
   "chatbotLocalNoInfo": "[OFFLINE] Panduan Islam lokal yang terverifikasi belum tersedia. Beralih ke Cloud AI untuk mendapatkan jawaban bersumber.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Masjid",
+  "halalFood": "Makanan Halal",
+  "placesSearchArea": "Cari di area ini",
+  "nearbyMosques": "Masjid Terdekat",
+  "islamicSchools": "Sekolah Islam",
+  "placesFoundCount": "{count} ditemukan",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km jauhnya",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Kesalahan API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Kesalahan jaringan. Silakan coba lagi.",
+  "unknownPlaceName": "Nama Tidak Diketahui",
+  "islamicPlaceFallback": "Tempat Islami",
   "prayerNotificationTitle": "Waktunya untuk {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

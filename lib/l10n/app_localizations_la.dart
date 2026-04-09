@@ -1121,22 +1121,22 @@ class AppLocalizationsLa extends AppLocalizations {
   String get halalFood => 'Halal Food';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Hanc aream explora';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Prope Mosques';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Scholae islamicae';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count inventus est';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km';
   }
 
   @override
@@ -1145,11 +1145,11 @@ class AppLocalizationsLa extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Retis error. Quaeso, iterum conare.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Nomen ignotum';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Macometi Place';
 }

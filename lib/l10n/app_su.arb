@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API teu ngonpigurasi. Mangga pindah ka AI Lokal.",
   "chatbotLocalNoInfo": "[OFFLINE] Pitunjuk Islam lokal anu diverifikasi teu acan sayogi. Pindah ka Cloud AI pikeun jawaban sumber.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "masjid-masjid",
+  "halalFood": "Dahareun Halal",
+  "placesSearchArea": "Pilarian wewengkon ieu",
+  "nearbyMosques": "Deukeutna Masjid",
+  "islamicSchools": "Sakola Islam",
+  "placesFoundCount": "{count} kapanggih",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Kasalahan API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Kasalahan jaringan. Mangga cobian deui.",
+  "unknownPlaceName": "Ngaran teu kanyahoan",
+  "islamicPlaceFallback": "Tempat Islami",
   "prayerNotificationTitle": "Waktu keur {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

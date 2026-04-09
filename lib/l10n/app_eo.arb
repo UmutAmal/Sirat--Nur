@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Nuba API ne agordita. Bonvolu ŝanĝi al Loka AI.",
   "chatbotLocalNoInfo": "[SENLINE] Kontrolita loka islama gvidado ankoraŭ ne haveblas. Ŝanĝu al Cloud AI por fontaj respondoj.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Moskeoj",
+  "halalFood": "Halala Manĝaĵo",
+  "placesSearchArea": "Serĉu ĉi tiun areon",
+  "nearbyMosques": "Proksimaj Moskeoj",
+  "islamicSchools": "Islamaj Lernejoj",
+  "placesFoundCount": "{count} trovita",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km for",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API-eraro: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Reta eraro. Bonvolu provi denove.",
+  "unknownPlaceName": "Nekonata Nomo",
+  "islamicPlaceFallback": "Islama Loko",
   "prayerNotificationTitle": "Tempo por {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

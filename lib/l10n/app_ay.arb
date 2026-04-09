@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "Cloud API ukax janiw wakicht’atäkiti. Ukhamaraki, Local AI ukar mayjt’ayaña.",
   "chatbotLocalNoInfo": "[OFFLINE] Verificado local islámico guia ukax janiw jichhakamax utjkiti. Cloud AI ukaruw mayjt’ayañama, ukax fuente ukan jaysäwinakapawa.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "Mezquitas ukanaka",
+  "halalFood": "Halal Manq’añanaka",
+  "placesSearchArea": "Aka chiqanx thaqhapxam",
+  "nearbyMosques": "Uka jak’an Mezquitas ukanaka",
+  "islamicSchools": "Escuelas Islámicas ukanakan yatiqañ utanakapa",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API Pantjasiwi: {statusCode} Ukax mä jach’a uñacht’äwiwa.",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Red ukan pantjasiwipa. Ukhamaraki, mayampi yant’apxañani.",
+  "unknownPlaceName": "Jan uñt’at Suti",
+  "islamicPlaceFallback": "Lugar Islámico ukax mä jach’a uñacht’äwiwa",
   "prayerNotificationTitle": "{prayerName} ukan pachapa.",
   "@prayerNotificationTitle": {
     "placeholders": {

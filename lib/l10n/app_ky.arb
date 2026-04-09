@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API конфигурацияланган эмес. Жергиликтүү AI'га которулуңуз.",
   "chatbotLocalNoInfo": "[OFFLINE] Тастыкталган жергиликтүү исламдык жетекчилик азырынча жеткиликсиз. Булуттан алынган жооптор үчүн Cloud AIге которулуңуз.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Мечиттер",
+  "halalFood": "Халал тамак",
+  "placesSearchArea": "Бул аймакты издөө",
+  "nearbyMosques": "Жакынкы мечиттер",
+  "islamicSchools": "Ислам мектептери",
+  "placesFoundCount": "{count} табылды",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} км алыстыкта",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API катасы: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Тармак катасы. Сураныч, кайра аракет кылыңыз.",
+  "unknownPlaceName": "Белгисиз ысым",
+  "islamicPlaceFallback": "Ислам жери",
   "prayerNotificationTitle": "{prayerName} убактысы",
   "@prayerNotificationTitle": {
     "placeholders": {

@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API net konfiguréiert. Schalt w.e.g. op Lokal AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Verifizéiert lokal islamesch Leedung ass nach net verfügbar. Wiesselt op Cloud AI fir Quellen Äntwerten.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Moscheeën",
+  "halalFood": "Halal Iessen",
+  "placesSearchArea": "Sich dëser Géigend",
+  "nearbyMosques": "Emgéigend Moscheeën",
+  "islamicSchools": "Islamesch Schoulen",
+  "placesFoundCount": "{count} fonnt",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km ewech",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API Feeler: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Netzfehler. Probéiert w.e.g. nach eng Kéier.",
+  "unknownPlaceName": "Onbekannt Numm",
+  "islamicPlaceFallback": "Islamesch Plaz",
   "prayerNotificationTitle": "Zäit fir {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

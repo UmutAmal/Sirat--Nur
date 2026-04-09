@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Saan a naikonfigura ti Cloud API. Pangngaasiyo ta agsublikayo iti Local AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Saan pay a magun-od ti naberipikado a lokal nga Islamiko a panangiwanwan. Agbalbaliw iti Cloud AI para kadagiti nagtaudan a sungbat.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Dagiti Moske",
+  "halalFood": "Taraon ti Halal",
+  "placesSearchArea": "Sukisoken daytoy a lugar",
+  "nearbyMosques": "Dagiti Asideg a Moske",
+  "islamicSchools": "Dagiti Eskuelaan ti Islam",
+  "placesFoundCount": "{count} ti nasarakan",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km ti kaadayona",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Biddut ti API: {statusCode} .",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Biddut ti network. Pangngaasiyo ta padasenyo manen.",
+  "unknownPlaceName": "Di Ammo a Nagan",
+  "islamicPlaceFallback": "Islamiko a Lugar",
   "prayerNotificationTitle": "Oras para iti {prayerName}.",
   "@prayerNotificationTitle": {
     "placeholders": {

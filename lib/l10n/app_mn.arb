@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API-г тохируулаагүй байна. Орон нутгийн хиймэл оюун ухаан руу шилжинэ үү.",
   "chatbotLocalNoInfo": "[OFFLINE] Баталгаажсан орон нутгийн Исламын удирдамж хараахан боломжгүй байна. Эх сурвалжтай хариулт авахын тулд Cloud AI руу шилжинэ үү.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Лалын сүмүүд",
+  "halalFood": "Халал хоол",
+  "placesSearchArea": "Энэ бүсээс хай",
+  "nearbyMosques": "Ойролцоох сүм хийдүүд",
+  "islamicSchools": "Исламын сургуулиуд",
+  "placesFoundCount": "{count} олдлоо",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} км зайтай",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API алдаа: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Сүлжээний алдаа. Дахин оролдоно уу.",
+  "unknownPlaceName": "Үл мэдэгдэх нэр",
+  "islamicPlaceFallback": "Исламын газар",
   "prayerNotificationTitle": "{prayerName} цаг",
   "@prayerNotificationTitle": {
     "placeholders": {

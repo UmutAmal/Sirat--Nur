@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "క్లౌడ్ API కాన్ఫిగర్ చేయబడలేదు. దయచేసి స్థానిక AIకి మారండి.",
   "chatbotLocalNoInfo": "[OFFLINE] ధృవీకరించబడిన స్థానిక ఇస్లామిక్ మార్గదర్శకత్వం ఇంకా అందుబాటులో లేదు. మూలాధార సమాధానాల కోసం క్లౌడ్ AIకి మారండి.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "మసీదులు",
+  "halalFood": "హలాల్ ఆహారం",
+  "placesSearchArea": "ఈ ప్రాంతాన్ని శోధించండి",
+  "nearbyMosques": "సమీపంలోని మసీదులు",
+  "islamicSchools": "ఇస్లామిక్ పాఠశాలలు",
+  "placesFoundCount": "{count} కనుగొనబడింది",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} కి.మీ దూరంలో",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API లోపం: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "నెట్‌వర్క్ లోపం. దయచేసి మళ్లీ ప్రయత్నించండి.",
+  "unknownPlaceName": "తెలియని పేరు",
+  "islamicPlaceFallback": "ఇస్లామిక్ ప్లేస్",
   "prayerNotificationTitle": "{prayerName} కోసం సమయం",
   "@prayerNotificationTitle": {
     "placeholders": {

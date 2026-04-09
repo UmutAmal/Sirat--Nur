@@ -1117,41 +1117,41 @@ class AppLocalizationsCy extends AppLocalizations {
       '[All-lein] Nid yw canllawiau Islamaidd lleol wedi\'u dilysu ar gael eto. Newidiwch i Cloud AI i gael atebion o ffynonellau.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Mosgiau';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Bwyd Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Chwiliwch yr ardal hon';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Mosgiau cyfagos';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Ysgolion Islamaidd';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count canfuwyd';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km i ffwrdd';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Gwall API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Gwall rhwydwaith. Ceisiwch eto.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Enw Anhysbys';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Lle Islamaidd';
 }

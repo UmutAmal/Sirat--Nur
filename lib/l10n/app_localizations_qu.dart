@@ -1119,19 +1119,19 @@ class AppLocalizationsQu extends AppLocalizations {
       '[OFFLINE] Chiqapchasqa llaqta islam pusayqa manaraqmi kanchu. Puyu AI kaqman tikray pukyuta kutichiykunapaq.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Mezquitakuna';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal Mikhuna';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Kay kitipi maskay';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Mezquitakuna qayllapi';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Islam Yachay Wasikuna';
 
   @override
   String placesFoundCount(String count) {
@@ -1149,11 +1149,12 @@ class AppLocalizationsQu extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Llika pantasqa. Ama hina kaspa, hukmanta kallpachakuy.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Mana riqsisqa Suti';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islamic Lugar';
 }

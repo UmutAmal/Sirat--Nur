@@ -1121,19 +1121,19 @@ class AppLocalizationsLus extends AppLocalizations {
       '[OFFLINE] Verified local Islamic guidance hi a la awm lo. Sourced chhanna tur chuan Cloud AI ah switch rawh.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Mosque hrang hrangah te';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal Chaw ei tur';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'He hmunah hian zawng rawh';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'A bul hnaia Mosque awmte';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Islamic School hrang hrangah a awm a';
 
   @override
   String placesFoundCount(String count) {
@@ -1151,11 +1151,12 @@ class AppLocalizationsLus extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Network tihsual a awm. Khawngaihin han lo try leh teh.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Hming hriat loh';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islamic Hmun a ni';
 }

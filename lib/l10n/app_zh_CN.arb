@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "云 API 未配置。请切换至本地AI。",
   "chatbotLocalNoInfo": "[离线] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "清真寺",
+  "halalFood": "清真食品",
+  "placesSearchArea": "搜索该区域",
+  "nearbyMosques": "附近的清真寺",
+  "islamicSchools": "伊斯兰学校",
+  "placesFoundCount": "找到 {count}",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "距离 {distance} 公里",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API 错误：{statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "网络错误。请再试一次。",
+  "unknownPlaceName": "未知名称",
+  "islamicPlaceFallback": "伊斯兰广场",
   "prayerNotificationTitle": "{prayerName} 时间到了",
   "@prayerNotificationTitle": {
     "placeholders": {

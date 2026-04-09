@@ -1118,41 +1118,41 @@ class AppLocalizationsFi extends AppLocalizations {
       '[OFFLINE] Vahvistettu paikallinen islamilainen opastus ei ole vielä saatavilla. Vaihda Cloud AI -palveluun saadaksesi lähteitä vastauksia.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Moskeijat';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal Ruokaa';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Hae tältä alueelta';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Läheiset moskeijat';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Islamilaiset koulut';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count löydetty';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km päässä';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API-virhe: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Verkkovirhe. Yritä uudelleen.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Tuntematon nimi';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islamilainen paikka';
 }

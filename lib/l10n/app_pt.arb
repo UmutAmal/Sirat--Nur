@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "API de nuvem não configurada. Mude para IA local.",
   "chatbotLocalNoInfo": "[OFFLINE] A orientação islâmica local verificada ainda não está disponível. Mude para Cloud AI para obter respostas de origem.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Mesquitas",
+  "halalFood": "Comida Halal",
+  "placesSearchArea": "Pesquisar esta área",
+  "nearbyMosques": "Mesquitas próximas",
+  "islamicSchools": "Escolas Islâmicas",
+  "placesFoundCount": "{count} encontrado",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km de distância",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Erro de API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Erro de rede. Por favor, tente novamente.",
+  "unknownPlaceName": "Nome desconhecido",
+  "islamicPlaceFallback": "Lugar Islâmico",
   "prayerNotificationTitle": "Hora de {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

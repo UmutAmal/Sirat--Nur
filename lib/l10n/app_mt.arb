@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API mhux ikkonfigurat. Jekk jogħġbok aqleb għal AI Lokali.",
   "chatbotLocalNoInfo": "[OFFLINE] Gwida Iżlamika lokali verifikata għadha mhix disponibbli. Aqleb għal Cloud AI għal tweġibiet misjuba.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Moskej",
+  "halalFood": "Ikel Halal",
+  "placesSearchArea": "Fittex din iż-żona",
+  "nearbyMosques": "Moskej fil-qrib",
+  "islamicSchools": "Iskejjel Iżlamiċi",
+  "placesFoundCount": "{count} misjub",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km bogħod",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Żball API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Żball tan-netwerk. Jekk jogħġbok erġa' pprova.",
+  "unknownPlaceName": "Isem Mhux Magħruf",
+  "islamicPlaceFallback": "Post Iżlamiku",
   "prayerNotificationTitle": "Ħin għal {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "Cloud API a yi lulamisiwanga. Hi kombela u cincela eka Local AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Nkongomiso wa laha kaya lowu tiyisisiweke wa Xiislam a wu si kumeka. Cinca eka Cloud AI ku kuma tinhlamulo leti humaka eka xihlovo.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "Timosque",
+  "halalFood": "Swakudya swa Halal",
+  "placesSearchArea": "Lavisisa ndhawu leyi",
+  "nearbyMosques": "Timosque ta le kusuhi",
+  "islamicSchools": "Swikolo swa Vuislem",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Xihoxo xa netiweke. Hi kombela u ringeta nakambe.",
+  "unknownPlaceName": "Vito leri nga tiviwiki",
+  "islamicPlaceFallback": "Ndhawu ya Vuislem",
   "prayerNotificationTitle": "Nkarhi wa {prayerName}.",
   "@prayerNotificationTitle": {
     "placeholders": {

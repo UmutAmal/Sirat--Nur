@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API არ არის კონფიგურირებული. გთხოვთ გადახვიდეთ ლოკალურ AI-ზე.",
   "chatbotLocalNoInfo": "[ოფლაინ] დადასტურებული ადგილობრივი ისლამური სახელმძღვანელო ჯერ არ არის ხელმისაწვდომი. გადაერთეთ Cloud AI-ზე წყაროს პასუხებისთვის.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "მეჩეთები",
+  "halalFood": "ჰალალის საკვები",
+  "placesSearchArea": "მოძებნეთ ეს ტერიტორია",
+  "nearbyMosques": "ახლომდებარე მეჩეთები",
+  "islamicSchools": "ისლამური სკოლები",
+  "placesFoundCount": "{count} მოიძებნა",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} კმ დაშორებით",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API შეცდომა: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "ქსელის შეცდომა. გთხოვთ, სცადოთ ხელახლა.",
+  "unknownPlaceName": "უცნობი სახელი",
+  "islamicPlaceFallback": "ისლამური ადგილი",
   "prayerNotificationTitle": "დროა {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

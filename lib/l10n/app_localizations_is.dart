@@ -1115,41 +1115,41 @@ class AppLocalizationsIs extends AppLocalizations {
       '[OFFLINE] Staðfestar staðbundnar íslamskar leiðbeiningar eru ekki tiltækar ennþá. Skiptu yfir í Cloud AI til að fá svör.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Moskur';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal matur';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Leitaðu á þessu svæði';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Nálægt moskur';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Íslamskir skólar';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count fannst';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km í burtu';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API villa: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Netvilla. Vinsamlegast reyndu aftur.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Óþekkt nafn';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Íslamskur staður';
 }

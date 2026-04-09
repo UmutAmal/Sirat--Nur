@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API nie je nakonfigurované. Prepnite na lokálnu AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Overené miestne islamské poradenstvo zatiaľ nie je k dispozícii. Ak chcete získať odpovede zo zdrojov, prepnite na Cloud AI.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "mešity",
+  "halalFood": "Halal jedlo",
+  "placesSearchArea": "Vyhľadajte túto oblasť",
+  "nearbyMosques": "Neďaleké mešity",
+  "islamicSchools": "islamské školy",
+  "placesFoundCount": "{count} nájdené",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km ďaleko",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Chyba rozhrania API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Chyba siete. Skúste to znova.",
+  "unknownPlaceName": "Neznáme meno",
+  "islamicPlaceFallback": "Islamské miesto",
   "prayerNotificationTitle": "Čas na {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

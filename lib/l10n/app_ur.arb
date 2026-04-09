@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API کنفیگر نہیں ہے۔ براہ کرم مقامی AI پر سوئچ کریں۔",
   "chatbotLocalNoInfo": "[آف لائن] تصدیق شدہ مقامی اسلامی رہنمائی ابھی تک دستیاب نہیں ہے۔ حاصل کردہ جوابات کے لیے Cloud AI پر سوئچ کریں۔",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "مساجد",
+  "halalFood": "حلال خوراک",
+  "placesSearchArea": "اس علاقے کو تلاش کریں۔",
+  "nearbyMosques": "آس پاس کی مساجد",
+  "islamicSchools": "اسلامی مدارس",
+  "placesFoundCount": "{count} ملا",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} کلومیٹر دور",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API کی خرابی: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "نیٹ ورک کی خرابی۔ براہ کرم دوبارہ کوشش کریں۔",
+  "unknownPlaceName": "نامعلوم نام",
+  "islamicPlaceFallback": "اسلامی جگہ",
   "prayerNotificationTitle": "{prayerName} کا وقت",
   "@prayerNotificationTitle": {
     "placeholders": {

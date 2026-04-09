@@ -1116,41 +1116,41 @@ class AppLocalizationsDa extends AppLocalizations {
       '[OFFLINE] Verificeret lokal islamisk vejledning er ikke tilgængelig endnu. Skift til Cloud AI for at få svar.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Moskeer';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Halal mad';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Søg i dette område';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Nærliggende moskeer';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'islamiske skoler';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count fundet';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km væk';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API-fejl: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Netværksfejl. Prøv venligst igen.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Ukendt navn';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Islamisk sted';
 }

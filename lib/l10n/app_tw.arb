@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API no nnyɛ nhyehyɛɛ. Yɛsrɛ sɛ dan kɔ Local AI so.",
   "chatbotLocalNoInfo": "[OFFLINE] Mpɔtam hɔ Islam akwankyerɛ a wɔagye atom no nnya mmaa. Dan kɔ Cloud AI so na woanya mmuae a wonya fi mu.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Asɔredan ahorow",
+  "halalFood": "Halal Aduan a Wɔde Di Dwuma",
+  "placesSearchArea": "Hwehwɛ beae yi",
+  "nearbyMosques": "Asɔredan ahorow a ɛbɛn hɔ",
+  "islamicSchools": "Islam Sukuu Ahorow",
+  "placesFoundCount": "Wɔahu {count}",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km akyirikyiri",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API mfomso: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Network mfomso. Yɛsrɛ sɛ sɔ hwɛ bio.",
+  "unknownPlaceName": "Edin a Wonnim",
+  "islamicPlaceFallback": "Islam Beaeɛ",
   "prayerNotificationTitle": "Bere a wɔde yɛ {prayerName}.",
   "@prayerNotificationTitle": {
     "placeholders": {

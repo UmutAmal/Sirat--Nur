@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "ކްލައުޑް އެޕީއައި ކޮންފިގްރޭޓް ނުކުރެވެއެވެ. ލޯކަލް އެއައި އަށް ބަދަލުވުން އެދެމެވެ.",
   "chatbotLocalNoInfo": "[އޮފްލައިން] ވެރިފައިޑް ލޯކަލް އިސްލާމިކް ގައިޑްލައިން އަދި ނުލިބެއެވެ. ސޯސްޑް ޖަވާބުތަކަށް ކްލައުޑް އެއައި އަށް ބަދަލުވާށެވެ.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "މިސްކިތްތަކެވެ",
+  "halalFood": "ހަލާލް ފުޑް",
+  "placesSearchArea": "މި ސަރަހައްދު ހޯދާށެވެ",
+  "nearbyMosques": "ކައިރީގައި ހުންނަ މިސްކިތްތަކެވެ",
+  "islamicSchools": "އިސްލާމީ މަދަރުސާތަކެވެ",
+  "placesFoundCount": "{count} ހޯދިއްޖެއެވެ",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} ކިލޯމީޓަރު ދުރުގައެވެ",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "އެޕީއައި އެރަރ: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "ނެޓްވޯކް އެރަރ. އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ.",
+  "unknownPlaceName": "ނޭނގޭ ނަމެކެވެ",
+  "islamicPlaceFallback": "އިސްލާމީ ތަނެވެ",
   "prayerNotificationTitle": "{prayerName} އަށް ވަގުތު",
   "@prayerNotificationTitle": {
     "placeholders": {

@@ -1114,28 +1114,28 @@ class AppLocalizationsIg extends AppLocalizations {
       '[OFFLINE] ntụzịaka islam mpaghara enyochabeghị ugbu a. Banye na Cloud AI maka azịza ewepụtara.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Ụlọ alakụba';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Nri Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Chọọ mpaghara a';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Ụlọ alakụba dị nso';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Ụlọ akwụkwọ islam';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count hụrụ';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km pụọ';
   }
 
   @override
@@ -1144,11 +1144,11 @@ class AppLocalizationsIg extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Njehie netwọkụ. Biko nwaa ọzọ.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Aha amaghi ama';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Ebe islam';
 }

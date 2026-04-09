@@ -1113,41 +1113,41 @@ class AppLocalizationsHe extends AppLocalizations {
       '[OFFLINE] הדרכה אסלאמית מקומית מאומתת אינה זמינה עדיין. עבור ל-Cloud AI לקבלת תשובות מקוריות.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'מסגדים';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'אוכל חלאל';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'חפש באזור זה';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'מסגדים בקרבת מקום';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'בתי ספר איסלאמיים';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return 'נמצאו $count';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance ק\"מ משם';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'שגיאת API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'שגיאת רשת. אנא נסה שוב.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'שם לא ידוע';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'מקום איסלאמי';
 }

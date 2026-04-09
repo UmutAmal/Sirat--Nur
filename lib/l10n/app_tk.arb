@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API düzülmedi. Localerli AI-e geçmegiňizi haýyş edýäris.",
   "chatbotLocalNoInfo": "[OFFLINE] Barlanan ýerli yslam görkezmeleri entek elýeterli däl. Gysga jogaplar üçin “Cloud AI” -e geçiň.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Metjitler",
+  "halalFood": "Halal iýmit",
+  "placesSearchArea": "Bu ýeri gözläň",
+  "nearbyMosques": "Golaýdaky metjitler",
+  "islamicSchools": "Yslam mekdepleri",
+  "placesFoundCount": "{count} tapyldy",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km uzaklykda",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API ýalňyşlygy: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Tor ýalňyşlygy. Gaýtadan synanyşmagyňyzy haýyş edýäris.",
+  "unknownPlaceName": "Näbelli",
+  "islamicPlaceFallback": "Yslam ýeri",
   "prayerNotificationTitle": "{prayerName} wagty",
   "@prayerNotificationTitle": {
     "placeholders": {

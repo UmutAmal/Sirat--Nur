@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API가 구성되지 않았습니다. 로컬 AI로 전환해주세요.",
   "chatbotLocalNoInfo": "[오프라인] 검증된 현지 이슬람 지침은 아직 제공되지 않습니다. 소스 답변을 얻으려면 Cloud AI로 전환하세요.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "모스크",
+  "halalFood": "할랄 음식",
+  "placesSearchArea": "이 지역 검색",
+  "nearbyMosques": "인근 모스크",
+  "islamicSchools": "이슬람 학교",
+  "placesFoundCount": "{count}을(를) 찾았습니다.",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance}km 거리",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API 오류: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "네트워크 오류입니다. 다시 시도해 주세요.",
+  "unknownPlaceName": "알 수 없는 이름",
+  "islamicPlaceFallback": "이슬람 장소",
   "prayerNotificationTitle": "{prayerName} 시간입니다",
   "@prayerNotificationTitle": {
     "placeholders": {

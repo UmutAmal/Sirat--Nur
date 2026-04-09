@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "API ya leru ga se ya beakanywa. Hle fetogela go AI ya Selegae.",
   "chatbotLocalNoInfo": "[OFFLINE] Tlhahlo ya selegae ya Boiselamo ye e netefaditšwego ga e hwetšagale ga bjale. Fetogela go Cloud AI bakeng sa dikarabo tše di hweditšwego.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "Dimoskete",
+  "halalFood": "Dijo tša Halal",
+  "placesSearchArea": "Nyaka lefelo le",
+  "nearbyMosques": "Mamosleme a Kgauswi",
+  "islamicSchools": "Dikolo tša Boiselamo",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Phošo ya netweke. Hle leka gape.",
+  "unknownPlaceName": "Leina leo le sa Tsebjego",
+  "islamicPlaceFallback": "Lefelo la Boiselamo",
   "prayerNotificationTitle": "Nako ya {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

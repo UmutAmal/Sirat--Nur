@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud-API niet geconfigureerd. Schakel over naar lokale AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Geverifieerde lokale islamitische begeleiding is nog niet beschikbaar. Schakel over naar Cloud AI voor antwoorden uit eigen bron.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Moskeeën",
+  "halalFood": "Halal eten",
+  "placesSearchArea": "Zoek dit gebied",
+  "nearbyMosques": "Nabijgelegen moskeeën",
+  "islamicSchools": "Islamitische scholen",
+  "placesFoundCount": "{count} gevonden",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km afstand",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API-fout: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Netwerkfout. Probeer het opnieuw.",
+  "unknownPlaceName": "Onbekende naam",
+  "islamicPlaceFallback": "Islamitische plaats",
   "prayerNotificationTitle": "Tijd voor {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

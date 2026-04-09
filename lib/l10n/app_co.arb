@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "L'API Cloud ùn hè micca cunfigurata. Per piacè passà à l'AI Locale.",
   "chatbotLocalNoInfo": "[OFFLINE] A guida islamica lucale verificata ùn hè ancu dispunibule. Passa à Cloud AI per risposte di origine.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Moschee",
+  "halalFood": "Alimentazione Halal",
+  "placesSearchArea": "Cerca in questa zona",
+  "nearbyMosques": "Moschee vicinu",
+  "islamicSchools": "Scole islamiche",
+  "placesFoundCount": "{count} trovu",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km di distanza",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Errore API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Errore di rete. Per piacè pruvate di novu.",
+  "unknownPlaceName": "Nome scunnisciutu",
+  "islamicPlaceFallback": "Locu islamicu",
   "prayerNotificationTitle": "Tempu per {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

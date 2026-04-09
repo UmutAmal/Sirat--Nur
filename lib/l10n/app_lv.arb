@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Mākoņa API nav konfigurēta. Lūdzu, pārejiet uz vietējo AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Verificētas vietējās islāma vadlīnijas vēl nav pieejamas. Pārslēdzieties uz Cloud AI, lai saņemtu atbildes.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Mošejas",
+  "halalFood": "Halal ēdiens",
+  "placesSearchArea": "Meklēt šajā apgabalā",
+  "nearbyMosques": "Tuvumā esošās mošejas",
+  "islamicSchools": "Islāma skolas",
+  "placesFoundCount": "{count} atrasts",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km attālumā",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API kļūda: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Tīkla kļūda. Lūdzu, mēģiniet vēlreiz.",
+  "unknownPlaceName": "Nezināms Vārds",
+  "islamicPlaceFallback": "Islāma vieta",
   "prayerNotificationTitle": "Laiks {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

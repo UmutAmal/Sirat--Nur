@@ -1110,41 +1110,41 @@ class AppLocalizationsAm extends AppLocalizations {
       '[ከመስመር ውጭ] የተረጋገጠ የአካባቢ እስላማዊ መመሪያ እስካሁን አይገኝም። ምንጭ ለሆኑ መልሶች ወደ Cloud AI ቀይር።';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'መስጊዶች';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'ሃላል ምግብ';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'ይህንን አካባቢ ይፈልጉ';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'በአቅራቢያ ያሉ መስጊዶች';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'ኢስላማዊ ትምህርት ቤቶች';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count ተገኝቷል';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance ኪሜ ርቀት ላይ';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'የኤፒአይ ስህተት፡ $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'የአውታረ መረብ ስህተት። እባክህ እንደገና ሞክር።';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'ያልታወቀ ስም';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'ኢስላማዊ ቦታ';
 }

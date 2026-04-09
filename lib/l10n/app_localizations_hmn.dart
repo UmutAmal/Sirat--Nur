@@ -1122,38 +1122,38 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get mosques => 'Mosques';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Khoom noj khoom haus Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Tshawb xyuas thaj chaw no';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Nyob ze Mosques';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Cov Tsev Kawm Ntawv Islamic';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count pom';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km deb';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API yuam kev: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Network yuam kev. Thov rov sim dua.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Tsis paub lub npe';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Qhov chaw Islamic';
 }

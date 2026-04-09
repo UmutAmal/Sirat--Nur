@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API wala ma-configure. Palihug balhin sa Lokal nga AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Ang napamatud-an nga lokal nga giya sa Islam wala pa magamit. Pagbalhin sa Cloud AI alang sa gigikanan nga mga tubag.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Mga Mosque",
+  "halalFood": "Halal nga Pagkaon",
+  "placesSearchArea": "Pangitaa kini nga lugar",
+  "nearbyMosques": "Duol nga mga Mosque",
+  "islamicSchools": "Mga Eskwelahan sa Islam",
+  "placesFoundCount": "{count} nakit-an",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km ang gilay-on",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Sayop sa API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Sayop sa network. Palihug sulayi pag-usab.",
+  "unknownPlaceName": "Wala mailhi nga Ngalan",
+  "islamicPlaceFallback": "Islamic nga Dapit",
   "prayerNotificationTitle": "Oras para sa {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

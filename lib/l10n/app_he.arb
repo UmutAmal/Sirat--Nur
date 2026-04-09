@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API לא מוגדר. נא לעבור ל- AI מקומי.",
   "chatbotLocalNoInfo": "[OFFLINE] הדרכה אסלאמית מקומית מאומתת אינה זמינה עדיין. עבור ל-Cloud AI לקבלת תשובות מקוריות.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "מסגדים",
+  "halalFood": "אוכל חלאל",
+  "placesSearchArea": "חפש באזור זה",
+  "nearbyMosques": "מסגדים בקרבת מקום",
+  "islamicSchools": "בתי ספר איסלאמיים",
+  "placesFoundCount": "נמצאו {count}",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} ק\"מ משם",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "שגיאת API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "שגיאת רשת. אנא נסה שוב.",
+  "unknownPlaceName": "שם לא ידוע",
+  "islamicPlaceFallback": "מקום איסלאמי",
   "prayerNotificationTitle": "הגיע הזמן ל-{prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

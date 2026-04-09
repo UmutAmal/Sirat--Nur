@@ -1118,19 +1118,19 @@ class AppLocalizationsBm extends AppLocalizations {
       '[OFFLINE] Sigida silamɛya bilasiralikan sɛgɛsɛgɛlen ma sɔrɔ fɔlɔ. Aw bɛ wuli ka taa Cloud AI la walasa ka jaabi sɔrɔlenw sɔrɔ.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Misiriw';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Dumuni Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Aw ye nin yɔrɔ in ɲini';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Misiri minnu bɛ kɛrɛfɛ';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Silamɛya Lakɔlisow';
 
   @override
   String placesFoundCount(String count) {
@@ -1148,11 +1148,12 @@ class AppLocalizationsBm extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Réseau fili ye. Aw ye aw jija ka segin a kan.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Tɔgɔ Dɔnbali';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Silamɛya Yɔrɔ';
 }

@@ -1116,41 +1116,41 @@ class AppLocalizationsTh extends AppLocalizations {
       '[ออฟไลน์] ยังไม่มีคำแนะนำอิสลามในท้องถิ่นที่ได้รับการยืนยัน เปลี่ยนไปใช้ Cloud AI เพื่อดูคำตอบที่มา';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'มัสยิด';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'อาหารฮาลาล';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'ค้นหาบริเวณนี้';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'มัสยิดใกล้เคียง';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'โรงเรียนอิสลาม';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return 'พบ $count แล้ว';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance กม';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'ข้อผิดพลาดของ API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'ข้อผิดพลาดของเครือข่าย โปรดลองอีกครั้ง';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'ชื่อที่ไม่รู้จัก';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'สถานที่อิสลาม';
 }

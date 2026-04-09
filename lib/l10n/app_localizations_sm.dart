@@ -1119,38 +1119,39 @@ class AppLocalizationsSm extends AppLocalizations {
   String get mosques => 'Mosques';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Mea\'ai Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Su\'e lenei vaega';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Mosque lata ane';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'A\'oga Isalama';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count maua';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km le mamao';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Sese API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'Sese feso\'otaiga. Fa\'amolemole toe taumafai.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Le Igoa';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Nofoaga Isalama';
 }

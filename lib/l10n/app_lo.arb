@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API ບໍ່ໄດ້ຕັ້ງຄ່າ. ກະລຸນາປ່ຽນເປັນ AI ທ້ອງຖິ່ນ.",
   "chatbotLocalNoInfo": "[OFLINE] ການຊີ້ນໍາອິດສະລາມທ້ອງຖິ່ນທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ທັນມີໃຫ້ເທື່ອ. ສະຫຼັບໄປໃຊ້ Cloud AI ສໍາລັບຄໍາຕອບທີ່ມາຈາກ.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "ໂບດ",
+  "halalFood": "ອາຫານ Halal",
+  "placesSearchArea": "ຊອກຫາພື້ນທີ່ນີ້",
+  "nearbyMosques": "Mosques ໃກ້ຄຽງ",
+  "islamicSchools": "ໂຮງຮຽນອິດສະລາມ",
+  "placesFoundCount": "{count} ພົບ",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} ກິໂລແມັດ",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API ຜິດພາດ: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "ເຄືອຂ່າຍຜິດພາດ. ກະລຸນາລອງອີກຄັ້ງ.",
+  "unknownPlaceName": "ຊື່ທີ່ບໍ່ຮູ້ຈັກ",
+  "islamicPlaceFallback": "ສະຖານທີ່ອິດສະລາມ",
   "prayerNotificationTitle": "ເວລາສຳລັບ {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

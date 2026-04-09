@@ -460,11 +460,11 @@
   },
   "chatbotCloudNotConfigured": "API duumessaa hin qindaa'in. Mee gara Local AI tti jijjiiraa.",
   "chatbotLocalNoInfo": "[OFFLINE] Qajeelfamni Islaamaa naannoo mirkanaa'e ammallee hin jiru. Deebii madda irraa argamuuf gara Cloud AI tti jijjiiraa.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
+  "mosques": "Masjiidota",
+  "halalFood": "Nyaata Halaal",
+  "placesSearchArea": "Naannoo kana barbaadi",
+  "nearbyMosques": "Masjiidota dhiyoo jiran",
+  "islamicSchools": "Manneen Barnootaa Islaamaa",
   "placesFoundCount": "{count} found",
   "@placesFoundCount": {
     "placeholders": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Dogoggora networkii. Mee irra deebi'ii yaalaa.",
+  "unknownPlaceName": "Maqaa Hin Beekamne",
+  "islamicPlaceFallback": "Bakka Islaamaa",
   "prayerNotificationTitle": "Yeroo {prayerName}.",
   "@prayerNotificationTitle": {
     "placeholders": {

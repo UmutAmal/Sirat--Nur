@@ -1120,41 +1120,41 @@ class AppLocalizationsGd extends AppLocalizations {
       '[OFFLINE] Chan eil stiùireadh Ioslamach ionadail dearbhte ri fhaighinn fhathast. Gluais gu Cloud AI airson freagairtean fhaighinn.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Mosg';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Biadh Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Rannsaich an raon seo';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Mosg faisg air làimh';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Sgoiltean Ioslamach';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count air a lorg';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km air falbh';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Mearachd API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Mearachd lìonraidh. Feuch ris a-rithist.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Ainm Neo-aithnichte';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Àite Ioslamach';
 }

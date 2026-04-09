@@ -1110,19 +1110,19 @@ class AppLocalizationsTi extends AppLocalizations {
       '[OFFLINE] ዝተረጋገጸ ናይ ከባቢ እስላማዊ መምርሒ ገና ኣይተረኽበን። ምንጪ መልሲ ንምርካብ ናብ Cloud AI ቀይሩ።';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'መሳጊድ';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'ሓላል መግቢ';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'ኣብዚ ከባቢ ድለዩ።';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'ኣብ ቀረባ ዝርከቡ መሳጊድ';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'ኣብያተ ትምህርቲ እስላም';
 
   @override
   String placesFoundCount(String count) {
@@ -1136,15 +1136,15 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'ናይ ኤፒኣይ ጌጋ: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'ናይ መርበብ ጌጋ። በጃኹም ደጊምኩም ፈትኑ።';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'ዘይፍለጥ ስም';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'እስላማዊ ቦታ';
 }

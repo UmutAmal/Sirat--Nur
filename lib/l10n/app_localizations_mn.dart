@@ -1116,41 +1116,41 @@ class AppLocalizationsMn extends AppLocalizations {
       '[OFFLINE] Баталгаажсан орон нутгийн Исламын удирдамж хараахан боломжгүй байна. Эх сурвалжтай хариулт авахын тулд Cloud AI руу шилжинэ үү.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Лалын сүмүүд';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Халал хоол';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Энэ бүсээс хай';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Ойролцоох сүм хийдүүд';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Исламын сургуулиуд';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count олдлоо';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance км зайтай';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API алдаа: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Сүлжээний алдаа. Дахин оролдоно уу.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Үл мэдэгдэх нэр';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Исламын газар';
 }

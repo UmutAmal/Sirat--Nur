@@ -1117,41 +1117,42 @@ class AppLocalizationsOr extends AppLocalizations {
       '[OFFINE] ଯାଞ୍ଚ ହୋଇଥିବା ସ୍ଥାନୀୟ ଇସଲାମିକ ମାର୍ଗଦର୍ଶନ ଏପର୍ଯ୍ୟନ୍ତ ଉପଲବ୍ଧ ନାହିଁ | ସୋର୍ସଡ୍ ଉତ୍ତରଗୁଡିକ ପାଇଁ କ୍ଲାଉଡ୍ AI କୁ ସୁଇଚ୍ କରନ୍ତୁ |';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'ମସଜିଦ';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'ହାଲ୍ ଖାଦ୍ୟ |';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'ଏହି କ୍ଷେତ୍ର ଖୋଜ |';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'ମସଜିଦ ନିକଟରେ';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'ଇସଲାମିକ୍ ସ୍କୁଲ୍ |';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count ମିଳିଲା |';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance କିମି ଦୂରରେ |';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API ତ୍ରୁଟି: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'ନେଟୱର୍କ ତ୍ରୁଟି | ଦୟାକରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'ଅଜ୍ଞାତ ନାମ |';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'ଇସଲାମିକ୍ ସ୍ଥାନ |';
 }

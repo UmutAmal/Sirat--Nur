@@ -1116,41 +1116,41 @@ class AppLocalizationsSt extends AppLocalizations {
       '[OFFLINE] Litaelo tse netefalitsoeng tsa Maislamo tsa lehae ha li so fumanehe. Fetohela ho Cloud AI ho fumana likarabo tse tsoang mohloling.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'Mamosleme';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'Lijo tsa Halal';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Batla sebakeng sena';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Mesikiti e Haufi';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Likolo tsa Boislamo';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count e fumanoe';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km hole';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Phoso ea API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Phoso ea marang-rang. Ka kopo, leka hape.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Lebitso le sa Tsejweng';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Sebaka sa Maislamo';
 }

@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "I-Cloud API ayilungiselelwe. Sicela ushintshele ku-Local AI.",
   "chatbotLocalNoInfo": "[OFFLINE] Isiqondiso sendawo samaSulumane esiqinisekisiwe asitholakali okwamanje. Shintshela ku-Cloud AI ukuze uthole izimpendulo ezitholakalayo.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Ama-mosque",
+  "halalFood": "Ukudla kwe-Halal",
+  "placesSearchArea": "Sesha le ndawo",
+  "nearbyMosques": "Ama-Mosque aseduze",
+  "islamicSchools": "Izikole zamaSulumane",
+  "placesFoundCount": "{count} itholiwe",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km kude",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Iphutha le-API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Iphutha lenethiwekhi. Sicela uzame futhi.",
+  "unknownPlaceName": "Igama Elingaziwa",
+  "islamicPlaceFallback": "Indawo yamaSulumane",
   "prayerNotificationTitle": "Isikhathi se-{prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

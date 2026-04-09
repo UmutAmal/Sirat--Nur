@@ -1121,41 +1121,41 @@ class AppLocalizationsBg extends AppLocalizations {
       '[ОФЛАЙН] Все още не е налично проверено местно ислямско ръководство. Превключете към Cloud AI за отговори с източник.';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'джамии';
 
   @override
   String get halalFood => 'Halal Food';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Търсете тази област';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Близки джамии';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'Ислямски училища';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count намерен';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance км';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Грешка в API: $statusCode';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Мрежова грешка. Моля, опитайте отново.';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'Неизвестно име';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'Ислямско място';
 }

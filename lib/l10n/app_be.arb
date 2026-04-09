@@ -460,12 +460,12 @@
   },
   "chatbotCloudNotConfigured": "Cloud API не наладжаны. Пераключыцеся на мясцовы штучны інтэлект.",
   "chatbotLocalNoInfo": "[ПА-ЗА ЛАЙНАМ] Правераныя мясцовыя ісламскія рэкамендацыі пакуль недаступныя. Пераключыцеся на Cloud AI, каб атрымаць адказы з крыніц.",
-  "mosques": "Mosques",
-  "halalFood": "Halal Food",
-  "placesSearchArea": "Search this area",
-  "nearbyMosques": "Nearby Mosques",
-  "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "mosques": "Мячэці",
+  "halalFood": "Халяльная ежа",
+  "placesSearchArea": "Пошук у гэтай вобласці",
+  "nearbyMosques": "Блізкія мячэці",
+  "islamicSchools": "Ісламскія школы",
+  "placesFoundCount": "{count} знойдзены",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
@@ -473,7 +473,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} км",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
@@ -481,7 +481,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Памылка API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
@@ -489,9 +489,9 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
-  "unknownPlaceName": "Unknown Name",
-  "islamicPlaceFallback": "Islamic Place",
+  "placesNetworkError": "Памылка сеткі. Калі ласка, паспрабуйце яшчэ раз.",
+  "unknownPlaceName": "Невядомае імя",
+  "islamicPlaceFallback": "Ісламскае месца",
   "prayerNotificationTitle": "Час для {prayerName}",
   "@prayerNotificationTitle": {
     "placeholders": {

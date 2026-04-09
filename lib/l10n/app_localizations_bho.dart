@@ -1120,41 +1120,42 @@ class AppLocalizationsBho extends AppLocalizations {
       '[OFFLINE] सत्यापन स्थानीय इस्लामी मार्गदर्शन अभी तक उपलब्ध नइखे। स्रोत से मिलल जवाब खातिर क्लाउड एआई पर स्विच करीं।';
 
   @override
-  String get mosques => 'Mosques';
+  String get mosques => 'मस्जिद के बा';
 
   @override
-  String get halalFood => 'Halal Food';
+  String get halalFood => 'हलाल फूड के बा';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'एह इलाका में खोज करीं';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'पास के मस्जिद बाड़ी सऽ';
 
   @override
-  String get islamicSchools => 'Islamic Schools';
+  String get islamicSchools => 'इस्लामिक स्कूलन के बारे में बतावल गइल बा';
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count मिलल बा';
   }
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance किमी दूर बा';
   }
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'एपीआई त्रुटि: $statusCode बा।';
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'नेटवर्क में त्रुटि हो गइल बा. कृपया दोबारा कोशिश करीं।';
 
   @override
-  String get unknownPlaceName => 'Unknown Name';
+  String get unknownPlaceName => 'अज्ञात नाम के बा';
 
   @override
-  String get islamicPlaceFallback => 'Islamic Place';
+  String get islamicPlaceFallback => 'इस्लामी जगह के बारे में बतावल गइल बा';
 }
