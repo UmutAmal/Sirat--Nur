@@ -486,6 +486,9 @@ class AppLocalizationsTk extends AppLocalizations {
   String get tapToCount => 'Tap to count';
 
   @override
+  String get zikrCompletedMashAllah => 'Tamamlandy! MaşAllah';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

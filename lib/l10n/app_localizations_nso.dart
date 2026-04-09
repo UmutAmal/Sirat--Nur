@@ -487,6 +487,9 @@ class AppLocalizationsNso extends AppLocalizations {
   String get tapToCount => 'Tlanya go bala';
 
   @override
+  String get zikrCompletedMashAllah => 'E phethilwe! MashAllah ke yena';
+
+  @override
   String get dailyChecklist => 'Lenaneo la go Hlahloba la Letšatši le Letšatši';
 
   @override

@@ -9,6 +9,10 @@ final _zikrCountProvider = StateProvider<int>((ref) => 0);
 final _zikrTargetProvider = StateProvider<int>((ref) => 33);
 final _selectedZikrProvider = StateProvider<int>((ref) => 0);
 
+String resolveZikrCompletedText(AppLocalizations l10n) {
+  return l10n.zikrCompletedMashAllah;
+}
+
 class ZikrPage extends ConsumerWidget {
   const ZikrPage({super.key});
 
@@ -129,13 +133,19 @@ class ZikrPage extends ConsumerWidget {
             ),
             const SizedBox(height: 16),
             if (count >= target)
-              const AnimatedPremiumCard(
+              AnimatedPremiumCard(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.celebration_rounded, color: AppColors.gold),
-                    SizedBox(width: 8),
-                    Text('Completed! MashAllah', style: TextStyle(fontWeight: FontWeight.w900, color: AppColors.gold)),
+                    const Icon(Icons.celebration_rounded, color: AppColors.gold),
+                    const SizedBox(width: 8),
+                    Text(
+                      resolveZikrCompletedText(l10n),
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w900,
+                        color: AppColors.gold,
+                      ),
+                    ),
                   ],
                 ),
               ),

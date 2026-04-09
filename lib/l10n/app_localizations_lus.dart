@@ -485,6 +485,9 @@ class AppLocalizationsLus extends AppLocalizations {
   String get tapToCount => 'Tap la, chhiar rawh';
 
   @override
+  String get zikrCompletedMashAllah => 'A zo tawh! MashAllah chuan a rawn ti a';
+
+  @override
   String get dailyChecklist => 'Nitin Checklist';
 
   @override

@@ -485,6 +485,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tapToCount => 'Tap to count';
 
   @override
+  String get zikrCompletedMashAllah => '완전한! 마쉬알라';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

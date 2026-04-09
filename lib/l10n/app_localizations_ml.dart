@@ -485,6 +485,9 @@ class AppLocalizationsMl extends AppLocalizations {
   String get tapToCount => 'Tap to count';
 
   @override
+  String get zikrCompletedMashAllah => 'പൂർത്തിയായി! മാഷാ അല്ലാഹ്';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

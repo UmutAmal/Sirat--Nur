@@ -491,6 +491,10 @@ class AppLocalizationsAy extends AppLocalizations {
   String get tapToCount => 'Tap to count';
 
   @override
+  String get zikrCompletedMashAllah =>
+      '¡Tukuyatäxiwa! MashAllah ukax mä juk’a pachanakanwa';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

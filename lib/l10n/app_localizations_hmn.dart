@@ -486,6 +486,9 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get tapToCount => 'Coj mus rhaub suav';
 
   @override
+  String get zikrCompletedMashAllah => 'Ua tiav! MashAllah';
+
+  @override
   String get dailyChecklist => 'Daim ntawv txheeb xyuas txhua hnub';
 
   @override

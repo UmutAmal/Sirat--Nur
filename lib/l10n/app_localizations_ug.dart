@@ -485,6 +485,9 @@ class AppLocalizationsUg extends AppLocalizations {
   String get tapToCount => 'Tap to count';
 
   @override
+  String get zikrCompletedMashAllah => 'تامام! MashAllah';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

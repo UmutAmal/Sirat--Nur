@@ -483,6 +483,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tapToCount => 'Tap to count';
 
   @override
+  String get zikrCompletedMashAllah => '完全的！玛什真主';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override
@@ -1633,6 +1636,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get tapToCount => 'Tap to count';
 
   @override
+  String get zikrCompletedMashAllah => '完全的！玛什真主';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override
@@ -2781,6 +2787,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get tapToCount => 'Tap to count';
+
+  @override
+  String get zikrCompletedMashAllah => '完全的！瑪什真主';
 
   @override
   String get dailyChecklist => 'Daily Checklist';

@@ -486,6 +486,9 @@ class AppLocalizationsBho extends AppLocalizations {
   String get tapToCount => 'गिनती करे खातिर टैप करीं';
 
   @override
+  String get zikrCompletedMashAllah => 'पूरा हो गइल! मशअल्लाह के ह';
+
+  @override
   String get dailyChecklist => 'रोजाना के चेकलिस्ट बा';
 
   @override

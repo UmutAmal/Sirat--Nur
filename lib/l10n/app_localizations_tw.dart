@@ -331,7 +331,7 @@ class AppLocalizationsTw extends AppLocalizations {
 
   @override
   String qiblaCompassErrorDetails(String error) {
-    return 'Compass error: $error';
+    return 'Compass mfomso: $error';
   }
 
   @override
@@ -483,6 +483,9 @@ class AppLocalizationsTw extends AppLocalizations {
 
   @override
   String get tapToCount => 'Tap to count';
+
+  @override
+  String get zikrCompletedMashAllah => 'Wɔawie! MashAllah na ɔyɛ';
 
   @override
   String get dailyChecklist => 'Daily Checklist';

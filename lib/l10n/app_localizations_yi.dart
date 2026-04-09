@@ -485,6 +485,9 @@ class AppLocalizationsYi extends AppLocalizations {
   String get tapToCount => 'Tap to count';
 
   @override
+  String get zikrCompletedMashAllah => 'געענדיקט! מאַשאַלאַ';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

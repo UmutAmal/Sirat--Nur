@@ -485,6 +485,9 @@ class AppLocalizationsMai extends AppLocalizations {
   String get tapToCount => 'गिनती करबाक लेल टैप करू';
 
   @override
+  String get zikrCompletedMashAllah => 'पूरा भ गेल! मशअल्लाह';
+
+  @override
   String get dailyChecklist => 'दैनिक चेकलिस्ट';
 
   @override

@@ -485,6 +485,9 @@ class AppLocalizationsEo extends AppLocalizations {
   String get tapToCount => 'Tap to count';
 
   @override
+  String get zikrCompletedMashAllah => 'Kompletigita! Maŝalaho';
+
+  @override
   String get dailyChecklist => 'Daily Checklist';
 
   @override

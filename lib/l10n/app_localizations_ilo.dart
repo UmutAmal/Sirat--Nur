@@ -487,6 +487,9 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get tapToCount => 'I-tap tapno mabilang';
 
   @override
+  String get zikrCompletedMashAllah => 'Nalpasen! MashAllah nga ni';
+
+  @override
   String get dailyChecklist => 'Inaldaw a Listaan ti Panangsukimat';
 
   @override

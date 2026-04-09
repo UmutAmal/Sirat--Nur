@@ -486,6 +486,9 @@ class AppLocalizationsKri extends AppLocalizations {
   String get tapToCount => 'Tap fɔ kɔnt';
 
   @override
+  String get zikrCompletedMashAllah => 'Dɛn dɔn dɔn am! MashAllah na di pɔsin';
+
+  @override
   String get dailyChecklist => 'Chɛklist ɛvride';
 
   @override

@@ -3453,3 +3453,43 @@
 ### Sonraki Adım
 - Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/zikr/zikr_page.dart) içindeki `Completed! MashAllah` hardcoded başarı yüzeyi localization zincirine taşınacak.
 - Ardından low-surface residual taraması yeniden çalıştırılacak.
+
+## 2026-04-09 TUR-88 — Localize Zikr Completion Copy
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/zikr/zikr_page.dart) içine `resolveZikrCompletedText` yardımcı fonksiyonu eklendi ve hardcoded `Completed! MashAllah` başarı metni `zikrCompletedMashAllah` localization anahtarına taşındı.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) içine `zikrCompletedMashAllah` eklendi; ardından [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force zikrCompletedMashAllah` ile çalıştırılarak tüm locale setine yayıldı.
+- [A:\Way of Allah\sirat_i_nur\test\features\zikr\zikr_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/zikr/zikr_page_test.dart) eklendi ve Türkçe completion banner doğrulandı.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) broad priority-locale guard ile güncellendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart#L138](A:/Way%20of%20Allah/sirat_i_nur/lib/features/zikr/zikr_page.dart#L138) zikr hedefi tamamlandığında hâlâ İngilizce hardcoded başarı metni gösterdiğini ortaya koydu.
+- Bu yüzey kullanıcı tamamladığında doğrudan görüldüğü için düşük kapsamlı ama yüksek görünürlükte localization kırığıydı.
+- Yeni anahtar bütün locale setine aynı turda yayıldı; priority locale kümesinde İngilizce fallback bırakılmadı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\zikr\zikr_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Zikr completion banner artık bütün destekli dillerde localization zincirinden geliyor.
+- Priority locale seti `zikrCompletedMashAllah` için İngilizce fallback göstermiyor.
+- Başarı mesajı production UI’de hardcoded string kalmadan testle kilitlendi.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart --force zikrCompletedMashAllah` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/features/zikr/zikr_page_test.dart` → PASS (`1/1`)
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`15/15`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`201/201`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Zikr completion surface still exposing hardcoded English success copy: `8/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/zikr/zikr_page.dart) içindeki hardcoded zikr meaning gloss’ları doğrulanmış dini anlamlarla localization zincirine taşınacak.
+- Ardından kalan residual hardcoded taraması yeniden çalıştırılacak.

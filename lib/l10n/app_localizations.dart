@@ -1408,6 +1408,12 @@ abstract class AppLocalizations {
   /// **'Tap to count'**
   String get tapToCount;
 
+  /// No description provided for @zikrCompletedMashAllah.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed! MashAllah'**
+  String get zikrCompletedMashAllah;
+
   /// No description provided for @dailyChecklist.
   ///
   /// In en, this message translates to:
