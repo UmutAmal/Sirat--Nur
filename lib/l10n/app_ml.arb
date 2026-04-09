@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "ലൊക്കേഷൻ സേവനം പ്രവർത്തനരഹിതമാക്കി.",
+  "locationPermissionDenied": "ലൊക്കേഷൻ അനുമതി നിഷേധിച്ചു.",
+  "citiesCount": "{count} നഗരങ്ങൾ",
   "@citiesCount": {
     "placeholders": {
       "count": {

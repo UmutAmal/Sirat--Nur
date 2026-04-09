@@ -32,8 +32,8 @@
   "searchLanguage": "á¹¬awng 180+ zawng rawh...",
   "systemDefault": "System Default a ni",
   "currentLocation": "Tuna a awmna hmun (GPS) .",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "Location service chu tihtawp a ni.",
+  "locationPermissionDenied": "Hmun phalna pek a ni lo.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

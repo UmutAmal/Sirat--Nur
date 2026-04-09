@@ -32,9 +32,9 @@
   "searchLanguage": "Serĉu pli ol 180 lingvojn...",
   "systemDefault": "Sistemo Defaŭlto",
   "currentLocation": "Nuna Loko (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Loka servo estas malŝaltita.",
+  "locationPermissionDenied": "Lokpermeso malakceptita.",
+  "citiesCount": "{count} urboj",
   "@citiesCount": {
     "placeholders": {
       "count": {

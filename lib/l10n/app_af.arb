@@ -32,9 +32,9 @@
   "searchLanguage": "Soek 180+ tale...",
   "systemDefault": "Stelsel verstek",
   "currentLocation": "Huidige ligging (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Liggingdiens is gedeaktiveer.",
+  "locationPermissionDenied": "Liggingtoestemming geweier.",
+  "citiesCount": "{count} stede",
   "@citiesCount": {
     "placeholders": {
       "count": {

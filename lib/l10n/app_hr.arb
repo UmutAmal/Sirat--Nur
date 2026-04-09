@@ -32,9 +32,9 @@
   "searchLanguage": "Pretraži više od 180 jezika...",
   "systemDefault": "Zadane postavke sustava",
   "currentLocation": "Trenutna lokacija (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Usluga lokacije je onemogućena.",
+  "locationPermissionDenied": "Dopuštenje za lokaciju odbijeno.",
+  "citiesCount": "{count} gradova",
   "@citiesCount": {
     "placeholders": {
       "count": {

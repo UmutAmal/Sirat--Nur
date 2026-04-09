@@ -115,14 +115,15 @@ class AppLocalizationsFi extends AppLocalizations {
   String get currentLocation => 'Nykyinen sijainti (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'Sijaintipalvelu on poistettu käytöstä.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Sijaintilupa evätty.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count kaupungeissa';
   }
 
   @override

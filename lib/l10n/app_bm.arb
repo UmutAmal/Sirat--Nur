@@ -32,8 +32,8 @@
   "searchLanguage": "Kan 180+ ɲini...",
   "systemDefault": "Sisεmεti Dafalen",
   "currentLocation": "Yɔrɔ min bɛ yen sisan (GPS) .",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "Yɔrɔ baara bɛ bali.",
+  "locationPermissionDenied": "Yɔrɔ yamaruya banna.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

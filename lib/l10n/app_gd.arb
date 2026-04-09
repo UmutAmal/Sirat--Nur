@@ -32,9 +32,9 @@
   "searchLanguage": "Rannsaich 180+ cànan...",
   "systemDefault": "Default siostam",
   "currentLocation": "Àite an-dràsta (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Tha seirbheis àite à comas.",
+  "locationPermissionDenied": "Cead àite air a dhiùltadh.",
+  "citiesCount": "{count} bailtean mòra",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -32,9 +32,9 @@
   "searchLanguage": "Cuardaigh 180+ teanga...",
   "systemDefault": "Réamhshocrú Córais",
   "currentLocation": "Suíomh Reatha (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Tá an tseirbhís suímh díchumasaithe.",
+  "locationPermissionDenied": "Diúltaíodh cead suímh.",
+  "citiesCount": "{count} cathracha",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -115,14 +115,15 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get currentLocation => 'Agdama a Lugar (GPS) .';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Nabaldado ti serbisio ti lokasion.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied =>
+      'Napagkedkedan ti pammalubos ti lokasion.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count dagiti siudad';
   }
 
   @override

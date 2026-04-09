@@ -32,9 +32,9 @@
   "searchLanguage": "180+ ભાષાઓ શોધો...",
   "systemDefault": "સિસ્ટમ ડિફોલ્ટ",
   "currentLocation": "વર્તમાન સ્થાન (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "સ્થાન સેવા અક્ષમ છે.",
+  "locationPermissionDenied": "સ્થાનની પરવાનગી નકારી.",
+  "citiesCount": "{count} શહેરો",
   "@citiesCount": {
     "placeholders": {
       "count": {

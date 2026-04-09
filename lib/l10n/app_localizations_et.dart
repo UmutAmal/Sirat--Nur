@@ -115,14 +115,14 @@ class AppLocalizationsEt extends AppLocalizations {
   String get currentLocation => 'Praegune asukoht (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Asukohateenus on keelatud.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Asukoha luba keelatud.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count linna';
   }
 
   @override

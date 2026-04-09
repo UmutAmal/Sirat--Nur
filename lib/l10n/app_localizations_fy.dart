@@ -115,14 +115,14 @@ class AppLocalizationsFy extends AppLocalizations {
   String get currentLocation => 'Aktuele lokaasje (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Lokaasje tsjinst is útskeakele.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Lokaasje tastimming wegere.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count stêden';
   }
 
   @override

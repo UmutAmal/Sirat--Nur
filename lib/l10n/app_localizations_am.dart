@@ -115,10 +115,10 @@ class AppLocalizationsAm extends AppLocalizations {
   String get currentLocation => 'የአሁኑ አካባቢ (ጂፒኤስ)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'የአካባቢ አገልግሎት ተሰናክሏል።';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'የአካባቢ ፈቃድ ተከልክሏል።';
 
   @override
   String citiesCount(String count) {

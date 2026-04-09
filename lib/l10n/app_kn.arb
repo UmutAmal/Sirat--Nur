@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "ಸ್ಥಳ ಸೇವೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ.",
+  "locationPermissionDenied": "ಸ್ಥಳ ಅನುಮತಿಯನ್ನು ನಿರಾಕರಿಸಲಾಗಿದೆ.",
+  "citiesCount": "{count} ನಗರಗಳು",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Dịch vụ định vị bị vô hiệu hóa.",
+  "locationPermissionDenied": "Quyền vị trí bị từ chối.",
+  "citiesCount": "{count} thành phố",
   "@citiesCount": {
     "placeholders": {
       "count": {

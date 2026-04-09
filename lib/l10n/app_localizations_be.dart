@@ -115,14 +115,16 @@ class AppLocalizationsBe extends AppLocalizations {
   String get currentLocation => 'Бягучае месцазнаходжанне (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'Служба вызначэння месцазнаходжання адключана.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied =>
+      'У дазволе на вызначэнне месцазнаходжання адмоўлена.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count гарадоў';
   }
 
   @override

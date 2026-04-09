@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "សេវាកម្មទីតាំងត្រូវបានបិទ។",
+  "locationPermissionDenied": "ការអនុញ្ញាតទីតាំងត្រូវបានបដិសេធ។",
+  "citiesCount": "{count} ទីក្រុង",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -113,6 +113,45 @@ void main() {
         );
       }
     });
+
+    test('safe priority locales do not fall back to English for location copy', () {
+      const locationSafeLocales = [
+        'tr',
+        'de',
+        'fr',
+        'es',
+        'ar',
+        'da',
+        'he',
+        'ja',
+        'nb',
+        'nn',
+        'no',
+        'pt',
+        'ru',
+        'vi',
+        'zh',
+        'zh_CN',
+        'zh_TW',
+      ];
+      const localizedKeys = [
+        'locationServiceDisabled',
+        'locationPermissionDenied',
+        'citiesCount',
+      ];
+
+      for (final locale in locationSafeLocales) {
+        final arb = _readArb('lib/l10n/app_$locale.arb');
+
+        for (final key in localizedKeys) {
+          expect(
+            arb[key],
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+        }
+      }
+    });
   });
 }
 

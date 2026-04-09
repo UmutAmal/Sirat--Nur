@@ -32,9 +32,9 @@
   "searchLanguage": "Търсене на 180+ езика...",
   "systemDefault": "Системни настройки по подразбиране",
   "currentLocation": "Текущо местоположение (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Услугата за местоположение е деактивирана.",
+  "locationPermissionDenied": "Разрешението за местоположение е отказано.",
+  "citiesCount": "{count} града",
   "@citiesCount": {
     "placeholders": {
       "count": {

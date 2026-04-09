@@ -115,14 +115,14 @@ class AppLocalizationsNl extends AppLocalizations {
   String get currentLocation => 'Huidige locatie (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Locatieservice is uitgeschakeld.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Locatietoestemming geweigerd.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count steden';
   }
 
   @override

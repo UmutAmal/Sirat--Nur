@@ -115,14 +115,14 @@ class AppLocalizationsAz extends AppLocalizations {
   String get currentLocation => 'Cari Məkan (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Məkan xidməti deaktiv edilib.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Məkan icazəsi rədd edildi.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count şəhərlər';
   }
 
   @override

@@ -32,9 +32,9 @@
   "searchLanguage": "Որոնել 180+ լեզու...",
   "systemDefault": "Համակարգի լռելյայն",
   "currentLocation": "Ընթացիկ գտնվելու վայրը (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Տեղադրության ծառայությունն անջատված է:",
+  "locationPermissionDenied": "Տեղադրության թույլտվությունը մերժվել է:",
+  "citiesCount": "{count} քաղաքներ",
   "@citiesCount": {
     "placeholders": {
       "count": {

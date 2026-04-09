@@ -32,9 +32,9 @@
   "searchLanguage": "180+ भाषा के खोज करीं...",
   "systemDefault": "सिस्टम डिफ़ॉल्ट बा",
   "currentLocation": "वर्तमान स्थान (जीपीएस) के बा।",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "लोकेशन सेवा अक्षम बा।",
+  "locationPermissionDenied": "लोकेशन के अनुमति से इनकार कर दिहल गइल.",
+  "citiesCount": "{count} शहरन के बा",
   "@citiesCount": {
     "placeholders": {
       "count": {

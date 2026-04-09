@@ -115,14 +115,14 @@ class AppLocalizationsXh extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Inkonzo yendawo ivaliwe.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Imvume yendawo yaliwe.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count izixeko';
   }
 
   @override

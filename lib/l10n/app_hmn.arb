@@ -32,9 +32,9 @@
   "searchLanguage": "Tshawb nrhiav 180+ hom lus...",
   "systemDefault": "System Default",
   "currentLocation": "Qhov chaw tam sim no (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Qhov chaw pabcuam raug kaw.",
+  "locationPermissionDenied": "Qhov chaw tso cai tsis kam lees.",
+  "citiesCount": "{count} lub zos",
   "@citiesCount": {
     "placeholders": {
       "count": {

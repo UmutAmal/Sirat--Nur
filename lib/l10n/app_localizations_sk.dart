@@ -115,14 +115,15 @@ class AppLocalizationsSk extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Služba určovania polohy je zakázaná.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied =>
+      'Povolenie na umiestnenie bolo odmietnuté.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count miest';
   }
 
   @override

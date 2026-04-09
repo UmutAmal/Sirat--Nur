@@ -115,14 +115,14 @@ class AppLocalizationsNy extends AppLocalizations {
   String get currentLocation => 'Malo Apano (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Ntchito zamalo ndizozimitsidwa.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Chilolezo cha malo chaletsedwa.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count mizinda';
   }
 
   @override

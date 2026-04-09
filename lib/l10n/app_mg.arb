@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Tsy miasa ny serivisy toerana.",
+  "locationPermissionDenied": "Nolavina ny fahazoan-dàlana toerana.",
+  "citiesCount": "{count} tanàna",
   "@citiesCount": {
     "placeholders": {
       "count": {

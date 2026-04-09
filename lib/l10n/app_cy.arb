@@ -32,9 +32,9 @@
   "searchLanguage": "Chwilio 180+ o ieithoedd...",
   "systemDefault": "System ddiofyn",
   "currentLocation": "Lleoliad Presennol (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Mae'r gwasanaeth lleoliad wedi'i analluogi.",
+  "locationPermissionDenied": "Caniatâd lleoliad wedi'i wrthod.",
+  "citiesCount": "{count} dinasoedd",
   "@citiesCount": {
     "placeholders": {
       "count": {

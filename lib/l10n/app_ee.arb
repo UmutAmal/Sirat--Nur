@@ -32,8 +32,8 @@
   "searchLanguage": "Di gbegbɔgblɔ 180+...",
   "systemDefault": "System Default",
   "currentLocation": "Teƒe si Wole Fifia (GPS) .",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "Wotu teƒe ƒe subɔsubɔdɔa nuwɔametɔe.",
+  "locationPermissionDenied": "Wogbe mɔɖeɖe ɖe teƒea ŋu.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

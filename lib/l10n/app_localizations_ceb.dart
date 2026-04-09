@@ -115,14 +115,14 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get currentLocation => 'Kasamtangang Lokasyon (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Gi-disable ang serbisyo sa lokasyon.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Gidili ang pagtugot sa lokasyon.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count nga mga siyudad';
   }
 
   @override

@@ -115,14 +115,14 @@ class AppLocalizationsKa extends AppLocalizations {
   String get currentLocation => 'მიმდინარე მდებარეობა (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'მდებარეობის სერვისი გამორთულია.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'მდებარეობის ნებართვა უარყოფილია.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count ქალაქები';
   }
 
   @override

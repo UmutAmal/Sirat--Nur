@@ -32,8 +32,8 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "Maypi tarikuy servicioqa mana llamk'achisqa kachkan.",
+  "locationPermissionDenied": "Maypi kasqanmanta permisota mana chaskisqachu.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

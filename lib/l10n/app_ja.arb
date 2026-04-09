@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "位置情報サービスが無効になっています。",
+  "locationPermissionDenied": "位置情報の許可が拒否されました。",
+  "citiesCount": "{count} 都市",
   "@citiesCount": {
     "placeholders": {
       "count": {

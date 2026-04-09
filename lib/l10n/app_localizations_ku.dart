@@ -115,14 +115,14 @@ class AppLocalizationsKu extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Xizmeta cihan neçalak e.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Destûra cihan hat redkirin.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count bajar';
   }
 
   @override

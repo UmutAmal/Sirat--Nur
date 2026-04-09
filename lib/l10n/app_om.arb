@@ -32,8 +32,8 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "Tajaajilli bakka hojii ni hin hojjenne.",
+  "locationPermissionDenied": "Hayyamni iddoo dhorkame.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

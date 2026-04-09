@@ -116,14 +116,14 @@ class AppLocalizationsGd extends AppLocalizations {
   String get currentLocation => 'Àite an-dràsta (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Tha seirbheis àite à comas.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Cead àite air a dhiùltadh.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count bailtean mòra';
   }
 
   @override

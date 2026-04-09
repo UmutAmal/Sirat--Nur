@@ -115,14 +115,14 @@ class AppLocalizationsKm extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'សេវាកម្មទីតាំងត្រូវបានបិទ។';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'ការអនុញ្ញាតទីតាំងត្រូវបានបដិសេធ។';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count ទីក្រុង';
   }
 
   @override

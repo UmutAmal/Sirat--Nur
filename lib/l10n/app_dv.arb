@@ -32,9 +32,9 @@
   "searchLanguage": "180+ ބަސް ހޯދުން...",
   "systemDefault": "ސިސްޓަމް ޑިފޯލްޓް",
   "currentLocation": "މިހާރު ހުރި ތަން (ޖީޕީއެސް)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "ލޮކޭޝަން ސާވިސް ޑިސެބިލް ކޮށްފައިވެ އެވެ.",
+  "locationPermissionDenied": "ލޮކޭޝަން ހުއްދައަށް އިންކާރުކޮށްފި.",
+  "citiesCount": "{count} ސިޓީތަކެވެ",
   "@citiesCount": {
     "placeholders": {
       "count": {

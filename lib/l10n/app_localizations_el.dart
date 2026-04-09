@@ -115,14 +115,15 @@ class AppLocalizationsEl extends AppLocalizations {
   String get currentLocation => 'Τρέχουσα τοποθεσία (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'Η υπηρεσία τοποθεσίας είναι απενεργοποιημένη.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Η άδεια τοποθεσίας απορρίφθηκε.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count πόλεις';
   }
 
   @override

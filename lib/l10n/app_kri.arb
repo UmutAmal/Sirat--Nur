@@ -32,9 +32,9 @@
   "searchLanguage": "Sɔch 180+ langwej dɛn...",
   "systemDefault": "Sistem Difɔlt",
   "currentLocation": "Di say we yu de naw (GPS) .",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Di lokeshɔn savis nɔ de wok.",
+  "locationPermissionDenied": "Dɛn nɔ gri fɔ gi pɔsin rayt fɔ mek di ples.",
+  "citiesCount": "{count} siti dɛm",
   "@citiesCount": {
     "placeholders": {
       "count": {

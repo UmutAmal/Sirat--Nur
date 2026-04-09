@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Ua le atoatoa le auaunaga mo nofoaga.",
+  "locationPermissionDenied": "Te'ena le faatagaga mo nofoaga.",
+  "citiesCount": "{count} aai",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -115,10 +115,10 @@ class AppLocalizationsLus extends AppLocalizations {
   String get currentLocation => 'Tuna a awmna hmun (GPS) .';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Location service chu tihtawp a ni.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Hmun phalna pek a ni lo.';
 
   @override
   String citiesCount(String count) {

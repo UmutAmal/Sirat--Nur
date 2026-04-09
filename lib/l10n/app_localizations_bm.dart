@@ -115,10 +115,10 @@ class AppLocalizationsBm extends AppLocalizations {
   String get currentLocation => 'Yɔrɔ min bɛ yen sisan (GPS) .';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Yɔrɔ baara bɛ bali.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Yɔrɔ yamaruya banna.';
 
   @override
   String citiesCount(String count) {

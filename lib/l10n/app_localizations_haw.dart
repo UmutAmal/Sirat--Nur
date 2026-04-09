@@ -115,14 +115,14 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get currentLocation => 'Kahi o kēia manawa (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Ua pio ka lawelawe wahi.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Ua hōʻole ʻia ka ʻae wahi.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count kūlanakauhale';
   }
 
   @override

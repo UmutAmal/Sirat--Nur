@@ -32,9 +32,9 @@
   "searchLanguage": "ابحث في 180+ لغة...",
   "systemDefault": "افتراضي النظام",
   "currentLocation": "الموقع الحالي (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "تم تعطيل خدمة الموقع.",
+  "locationPermissionDenied": "تم رفض إذن تحديد الموقع.",
+  "citiesCount": "{count} المدن",
   "@citiesCount": {
     "placeholders": {
       "count": {

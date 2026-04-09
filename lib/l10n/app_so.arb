@@ -32,8 +32,8 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "Adeegga goobta waa naafo",
+  "locationPermissionDenied": "Ogolaanshiyaha goobta waa la diiday.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

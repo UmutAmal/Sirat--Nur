@@ -32,9 +32,9 @@
   "searchLanguage": "Hae yli 180 kielellä...",
   "systemDefault": "Järjestelmän oletusarvo",
   "currentLocation": "Nykyinen sijainti (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Sijaintipalvelu on poistettu käytöstä.",
+  "locationPermissionDenied": "Sijaintilupa evätty.",
+  "citiesCount": "{count} kaupungeissa",
   "@citiesCount": {
     "placeholders": {
       "count": {

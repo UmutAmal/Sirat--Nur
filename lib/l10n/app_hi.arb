@@ -32,9 +32,9 @@
   "searchLanguage": "180+ भाषाओं में खोजें...",
   "systemDefault": "सिस्टम डिफ़ॉल्ट",
   "currentLocation": "वर्तमान स्थान (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "स्थान सेवा अक्षम है.",
+  "locationPermissionDenied": "स्थान की अनुमति अस्वीकृत.",
+  "citiesCount": "{count} शहर",
   "@citiesCount": {
     "placeholders": {
       "count": {

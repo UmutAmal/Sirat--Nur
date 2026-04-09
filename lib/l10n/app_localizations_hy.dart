@@ -115,14 +115,16 @@ class AppLocalizationsHy extends AppLocalizations {
   String get currentLocation => 'Ընթացիկ գտնվելու վայրը (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'Տեղադրության ծառայությունն անջատված է:';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied =>
+      'Տեղադրության թույլտվությունը մերժվել է:';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count քաղաքներ';
   }
 
   @override

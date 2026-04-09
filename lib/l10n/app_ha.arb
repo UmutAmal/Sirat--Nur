@@ -32,8 +32,8 @@
   "searchLanguage": "Bincika harsuna 180+",
   "systemDefault": "Tsoffin tsarin",
   "currentLocation": "Wuri na Yanzu (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "An kashe sabis na wurin.",
+  "locationPermissionDenied": "An ƙi izinin wurin.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

@@ -32,9 +32,9 @@
   "searchLanguage": "Cerca més de 180 idiomes...",
   "systemDefault": "Sistema per defecte",
   "currentLocation": "Ubicació actual (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "El servei d'ubicació està desactivat.",
+  "locationPermissionDenied": "S'ha denegat el permís d'ubicació.",
+  "citiesCount": "{count} ciutats",
   "@citiesCount": {
     "placeholders": {
       "count": {

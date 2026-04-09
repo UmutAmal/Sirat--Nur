@@ -116,10 +116,11 @@ class AppLocalizationsGn extends AppLocalizations {
   String get currentLocation => 'Moõpa oĩ ko’áĝa (GPS) .';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Servicio de ubicación oñembogue.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied =>
+      'Oñembotove permiso ubicación rehegua.';
 
   @override
   String citiesCount(String count) {

@@ -115,14 +115,14 @@ class AppLocalizationsZh extends AppLocalizations {
   String get currentLocation => '当前位置（GPS）';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => '定位服务被禁用。';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => '位置权限被拒绝。';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count 个城市';
   }
 
   @override
@@ -1260,14 +1260,14 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get currentLocation => '当前位置（GPS）';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => '定位服务被禁用。';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => '位置权限被拒绝。';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count 个城市';
   }
 
   @override
@@ -2405,14 +2405,14 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get currentLocation => '目前位置（GPS）';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => '定位服務被禁用。';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => '位置權限被拒絕。';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count 個城市';
   }
 
   @override

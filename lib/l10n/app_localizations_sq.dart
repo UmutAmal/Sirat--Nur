@@ -115,14 +115,15 @@ class AppLocalizationsSq extends AppLocalizations {
   String get currentLocation => 'Vendndodhja aktuale (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'Shërbimi i vendndodhjes është i çaktivizuar.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Leja e vendndodhjes u refuzua.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count qytete';
   }
 
   @override

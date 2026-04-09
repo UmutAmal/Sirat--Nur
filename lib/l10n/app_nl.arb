@@ -32,9 +32,9 @@
   "searchLanguage": "Zoek in meer dan 180 talen...",
   "systemDefault": "Systeemstandaard",
   "currentLocation": "Huidige locatie (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Locatieservice is uitgeschakeld.",
+  "locationPermissionDenied": "Locatietoestemming geweigerd.",
+  "citiesCount": "{count} steden",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -32,9 +32,9 @@
   "searchLanguage": "Sakani zinenero 180+...",
   "systemDefault": "Zosasintha Zadongosolo",
   "currentLocation": "Malo Apano (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Ntchito zamalo ndizozimitsidwa.",
+  "locationPermissionDenied": "Chilolezo cha malo chaletsedwa.",
+  "citiesCount": "{count} mizinda",
   "@citiesCount": {
     "placeholders": {
       "count": {

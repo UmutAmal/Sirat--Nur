@@ -32,8 +32,8 @@
   "searchLanguage": "Hwehwɛ kasa ahorow 180+...",
   "systemDefault": "System Default a Wɔde Di Dwuma",
   "currentLocation": "Mprempren Beae (GPS) .",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "Wɔayɛ beaeɛ som adwuma no adwuma.",
+  "locationPermissionDenied": "Wɔapow beae ho kwan.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

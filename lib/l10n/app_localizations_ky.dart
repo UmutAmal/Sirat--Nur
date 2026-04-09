@@ -115,14 +115,16 @@ class AppLocalizationsKy extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'Жайгашкан жерди аныктоо кызматы өчүрүлгөн.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied =>
+      'Жайгашкан жерди аныктоо уруксаты четке кагылды.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count шаарлар';
   }
 
   @override

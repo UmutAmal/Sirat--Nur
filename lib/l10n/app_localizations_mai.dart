@@ -115,14 +115,14 @@ class AppLocalizationsMai extends AppLocalizations {
   String get currentLocation => 'वर्तमान स्थान (जीपीएस) २.';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'स्थान सेवा अक्षम अछि।';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'स्थान अनुमति अस्वीकृत।';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count शहर';
   }
 
   @override

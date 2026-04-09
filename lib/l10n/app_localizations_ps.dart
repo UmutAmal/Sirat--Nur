@@ -115,14 +115,14 @@ class AppLocalizationsPs extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'د ځای خدمت غیر فعال دی.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'د ځای اجازه رد شوه.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count ښارونه';
   }
 
   @override

@@ -115,10 +115,11 @@ class AppLocalizationsTs extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'Vukorhokeri bya ndhawu byi pfaleriwile.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Mpfumelelo wa ndhawu wu ariwile.';
 
   @override
   String citiesCount(String count) {

@@ -115,14 +115,14 @@ class AppLocalizationsHt extends AppLocalizations {
   String get currentLocation => 'Kote aktyèl (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Sèvis kote yo enfim.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Pèmisyon kote yo refize.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count vil yo';
   }
 
   @override

@@ -116,10 +116,10 @@ class AppLocalizationsNso extends AppLocalizations {
   String get currentLocation => 'Lefelo la Bjale (GPS) .';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Tirelo ya lefelo e šitišitšwe.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Tumelelo ya lefelo e gannwe.';
 
   @override
   String citiesCount(String count) {

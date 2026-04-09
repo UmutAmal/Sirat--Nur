@@ -116,14 +116,15 @@ class AppLocalizationsDv extends AppLocalizations {
   String get currentLocation => 'މިހާރު ހުރި ތަން (ޖީޕީއެސް)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'ލޮކޭޝަން ސާވިސް ޑިސެބިލް ކޮށްފައިވެ އެވެ.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'ލޮކޭޝަން ހުއްދައަށް އިންކާރުކޮށްފި.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count ސިޓީތަކެވެ';
   }
 
   @override

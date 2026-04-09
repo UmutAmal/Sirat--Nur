@@ -32,9 +32,9 @@
   "searchLanguage": "搜尋 180 多種語言...",
   "systemDefault": "系統預設值",
   "currentLocation": "目前位置（GPS）",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "定位服務被禁用。",
+  "locationPermissionDenied": "位置權限被拒絕。",
+  "citiesCount": "{count} 個城市",
   "@citiesCount": {
     "placeholders": {
       "count": {

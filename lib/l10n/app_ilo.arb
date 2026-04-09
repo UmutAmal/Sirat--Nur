@@ -32,9 +32,9 @@
   "searchLanguage": "Agbirok iti 180+ a pagsasao...",
   "systemDefault": "Default ti Sistema",
   "currentLocation": "Agdama a Lugar (GPS) .",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Nabaldado ti serbisio ti lokasion.",
+  "locationPermissionDenied": "Napagkedkedan ti pammalubos ti lokasion.",
+  "citiesCount": "{count} dagiti siudad",
   "@citiesCount": {
     "placeholders": {
       "count": {

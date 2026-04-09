@@ -115,14 +115,14 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get currentLocation => 'Qhov chaw tam sim no (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Qhov chaw pabcuam raug kaw.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Qhov chaw tso cai tsis kam lees.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count lub zos';
   }
 
   @override

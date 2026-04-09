@@ -115,10 +115,11 @@ class AppLocalizationsOm extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'Tajaajilli bakka hojii ni hin hojjenne.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Hayyamni iddoo dhorkame.';
 
   @override
   String citiesCount(String count) {

@@ -115,14 +115,15 @@ class AppLocalizationsKri extends AppLocalizations {
   String get currentLocation => 'Di say we yu de naw (GPS) .';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Di lokeshɔn savis nɔ de wok.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied =>
+      'Dɛn nɔ gri fɔ gi pɔsin rayt fɔ mek di ples.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count siti dɛm';
   }
 
   @override

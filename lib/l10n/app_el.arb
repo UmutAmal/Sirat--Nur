@@ -32,9 +32,9 @@
   "searchLanguage": "Αναζήτηση 180+ γλωσσών...",
   "systemDefault": "Προεπιλογή συστήματος",
   "currentLocation": "Τρέχουσα τοποθεσία (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Η υπηρεσία τοποθεσίας είναι απενεργοποιημένη.",
+  "locationPermissionDenied": "Η άδεια τοποθεσίας απορρίφθηκε.",
+  "citiesCount": "{count} πόλεις",
   "@citiesCount": {
     "placeholders": {
       "count": {

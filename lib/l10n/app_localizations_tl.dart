@@ -115,14 +115,16 @@ class AppLocalizationsTl extends AppLocalizations {
   String get currentLocation => 'Kasalukuyang Lokasyon (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'Naka-disable ang serbisyo sa lokasyon.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied =>
+      'Tinanggihan ang pahintulot sa lokasyon.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count lungsod';
   }
 
   @override

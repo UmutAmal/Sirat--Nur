@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "တည်နေရာဝန်ဆောင်မှုကို ပိတ်ထားသည်။",
+  "locationPermissionDenied": "တည်နေရာခွင့်ပြုချက်ကို ငြင်းဆိုထားသည်။",
+  "citiesCount": "{count} မြို့များ",
   "@citiesCount": {
     "placeholders": {
       "count": {

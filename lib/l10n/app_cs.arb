@@ -32,9 +32,9 @@
   "searchLanguage": "Hledejte ve více než 180 jazycích...",
   "systemDefault": "Výchozí nastavení systému",
   "currentLocation": "Aktuální poloha (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Služba určování polohy je zakázána.",
+  "locationPermissionDenied": "Povolení k poloze odepřeno.",
+  "citiesCount": "{count} měst",
   "@citiesCount": {
     "placeholders": {
       "count": {

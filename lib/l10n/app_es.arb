@@ -32,9 +32,9 @@
   "searchLanguage": "Buscar en más de 180 idiomas...",
   "systemDefault": "Valor predeterminado del sistema",
   "currentLocation": "Ubicación actual (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "El servicio de ubicación está deshabilitado.",
+  "locationPermissionDenied": "Permiso de ubicación denegado.",
+  "citiesCount": "{count} ciudades",
   "@citiesCount": {
     "placeholders": {
       "count": {

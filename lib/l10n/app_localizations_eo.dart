@@ -115,14 +115,14 @@ class AppLocalizationsEo extends AppLocalizations {
   String get currentLocation => 'Nuna Loko (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Loka servo estas malŝaltita.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Lokpermeso malakceptita.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count urboj';
   }
 
   @override

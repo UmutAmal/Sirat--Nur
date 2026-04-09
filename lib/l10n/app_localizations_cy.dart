@@ -115,14 +115,15 @@ class AppLocalizationsCy extends AppLocalizations {
   String get currentLocation => 'Lleoliad Presennol (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'Mae\'r gwasanaeth lleoliad wedi\'i analluogi.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Caniatâd lleoliad wedi\'i wrthod.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count dinasoedd';
   }
 
   @override

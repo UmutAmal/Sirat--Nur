@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Is-servizz tal-lokazzjoni huwa diżattivat.",
+  "locationPermissionDenied": "Permess għall-post miċħud.",
+  "citiesCount": "{count} bliet",
   "@citiesCount": {
     "placeholders": {
       "count": {

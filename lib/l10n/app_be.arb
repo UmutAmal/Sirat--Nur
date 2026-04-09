@@ -32,9 +32,9 @@
   "searchLanguage": "Пошук на 180+ мовах...",
   "systemDefault": "Сістэма па змаўчанні",
   "currentLocation": "Бягучае месцазнаходжанне (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Служба вызначэння месцазнаходжання адключана.",
+  "locationPermissionDenied": "У дазволе на вызначэнне месцазнаходжання адмоўлена.",
+  "citiesCount": "{count} гарадоў",
   "@citiesCount": {
     "placeholders": {
       "count": {

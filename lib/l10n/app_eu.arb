@@ -32,9 +32,9 @@
   "searchLanguage": "Bilatu 180 hizkuntza baino gehiago...",
   "systemDefault": "Sistema lehenetsia",
   "currentLocation": "Uneko kokapena (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Kokapen zerbitzua desgaituta dago.",
+  "locationPermissionDenied": "Kokapen-baimena ukatu da.",
+  "citiesCount": "{count} hiriak",
   "@citiesCount": {
     "placeholders": {
       "count": {

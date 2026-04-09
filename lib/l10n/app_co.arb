@@ -32,9 +32,9 @@
   "searchLanguage": "Cerca in più di 180 lingue...",
   "systemDefault": "Sistema Default",
   "currentLocation": "Situazione attuale (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "U serviziu di locu hè disattivatu.",
+  "locationPermissionDenied": "U permessu di locu denegatu.",
+  "citiesCount": "{count} cità",
   "@citiesCount": {
     "placeholders": {
       "count": {

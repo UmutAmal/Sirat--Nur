@@ -32,8 +32,8 @@
   "searchLanguage": "Eheka 180+ ñe'ẽ...",
   "systemDefault": "Sistema rehegua Por defecto",
   "currentLocation": "Moõpa oĩ ko’áĝa (GPS) .",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "Servicio de ubicación oñembogue.",
+  "locationPermissionDenied": "Oñembotove permiso ubicación rehegua.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

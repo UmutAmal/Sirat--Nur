@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "இருப்பிடச் சேவை முடக்கப்பட்டுள்ளது.",
+  "locationPermissionDenied": "இருப்பிட அனுமதி மறுக்கப்பட்டது.",
+  "citiesCount": "{count} நகரங்கள்",
   "@citiesCount": {
     "placeholders": {
       "count": {

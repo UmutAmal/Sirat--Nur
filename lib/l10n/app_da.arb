@@ -32,9 +32,9 @@
   "searchLanguage": "Søg i mere end 180 sprog...",
   "systemDefault": "Systemstandard",
   "currentLocation": "Nuværende placering (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Placeringstjenesten er deaktiveret.",
+  "locationPermissionDenied": "Placeringstilladelse nægtet.",
+  "citiesCount": "{count} byer",
   "@citiesCount": {
     "placeholders": {
       "count": {

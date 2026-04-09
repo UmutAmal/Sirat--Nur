@@ -115,14 +115,14 @@ class AppLocalizationsVi extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Dịch vụ định vị bị vô hiệu hóa.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Quyền vị trí bị từ chối.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count thành phố';
   }
 
   @override

@@ -32,8 +32,8 @@
   "searchLanguage": "Batla maleme a 180+...",
   "systemDefault": "Tshepedišo ya Tlwaelo",
   "currentLocation": "Lefelo la Bjale (GPS) .",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "Tirelo ya lefelo e šitišitšwe.",
+  "locationPermissionDenied": "Tumelelo ya lefelo e gannwe.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

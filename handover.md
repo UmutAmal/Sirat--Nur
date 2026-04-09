@@ -3034,3 +3034,42 @@
 ### Sonraki Adım
 - Sıradaki turda `locationServiceDisabled`, `locationPermissionDenied`, `citiesCount` ve kalan diagnostics/share rare-locale EN-reference kümesi ele alınacak.
 - `assistant` ve `analytics` için loanword kabul matrisi çıkarılıp hangi locale’lerde EN-formun meşru olduğu ayrı kayda alınacak.
+
+## 2026-04-09 TUR-78 — Localize Location Permission And Count Copy
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force locationServiceDisabled locationPermissionDenied citiesCount` ile tüm `app_*.arb` setinde çalıştırıldı.
+- Generated localization dosyaları `flutter gen-l10n` ile yenilendi; güncellenen örnekler arasında [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_tr.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_tr.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_de.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_de.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_zh.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_zh.dart) bulunuyor.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) genişletildi; güvenli priority locale seti için `locationServiceDisabled`, `locationPermissionDenied`, `citiesCount` anahtarlarında EN fallback regresyonu kilitlendi.
+- [A:\Way of Allah\sirat_i_nur\test\location_selection_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/location_selection_page_test.dart) yeniden çalıştırılarak mevcut filtreleme davranışının yeni locale güncellemesiyle bozulmadığı doğrulandı.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart#L81](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/location_selection_page.dart#L81), [A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart#L92](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/location_selection_page.dart#L92) ve [A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart#L278](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/location_selection_page.dart#L278) anahtarlarının geniş locale setinde İngilizce kaldığı doğrulandı.
+- Bu metinler konum izni, servis devre dışı ve şehir sayacı gibi doğrudan kullanıcı akışını etkileyen kritik ayar yüzeylerinde gösteriliyor.
+- `tw` için `citiesCount` güvenilir sibling çevirisi bulunamadı; AGENTS.md kuralına uygun olarak uydurma yapılmadı ve bu anahtar güvenli locale seti testinden dışarıda bırakıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` içindeki location anahtarları güncellenen dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` generated dosyaları
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `locationServiceDisabled` için İngilizce fallback sayısı `194`ten `64`e düştü.
+- `locationPermissionDenied` için `194`ten `64`e düştü.
+- `citiesCount` için `194`ten `84`e düştü.
+- Güvenli priority locale seti artık konum izin ve şehir sayacı yüzeyinde İngilizce fallback göstermiyor.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart --force locationServiceDisabled locationPermissionDenied citiesCount` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/location_selection_page_test.dart` → PASS (`4/4`)
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`5/5`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`185/185`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Location permission and count copy still falling back to English across the supported surface: `14/25 → 6/25`
+
+### Sonraki Adım
+- Sıradaki turda `assistant`, `analytics`, `location` ve `share/diagnostics` kümelerinde kalan rare-locale EN-reference alanları sınıflandırılacak.
+- Ardından code-referenced anahtarlar içinde en yüksek İngilizce fallback sayısına sahip sonraki UI kümesi lokalize edilecek.

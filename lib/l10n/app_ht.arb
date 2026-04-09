@@ -32,9 +32,9 @@
   "searchLanguage": "Chèche plis pase 180 lang...",
   "systemDefault": "Sistèm Default",
   "currentLocation": "Kote aktyèl (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Sèvis kote yo enfim.",
+  "locationPermissionDenied": "Pèmisyon kote yo refize.",
+  "citiesCount": "{count} vil yo",
   "@citiesCount": {
     "placeholders": {
       "count": {

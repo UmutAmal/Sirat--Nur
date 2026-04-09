@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Жайгашкан жерди аныктоо кызматы өчүрүлгөн.",
+  "locationPermissionDenied": "Жайгашкан жерди аныктоо уруксаты четке кагылды.",
+  "citiesCount": "{count} шаарлар",
   "@citiesCount": {
     "placeholders": {
       "count": {

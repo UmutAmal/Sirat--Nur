@@ -115,14 +115,14 @@ class AppLocalizationsEu extends AppLocalizations {
   String get currentLocation => 'Uneko kokapena (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Kokapen zerbitzua desgaituta dago.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Kokapen-baimena ukatu da.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count hiriak';
   }
 
   @override

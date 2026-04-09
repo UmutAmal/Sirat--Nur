@@ -115,14 +115,14 @@ class AppLocalizationsUz extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Joylashuv xizmati o‘chirilgan.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Joylashuv ruxsati rad etildi.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count shaharlar';
   }
 
   @override

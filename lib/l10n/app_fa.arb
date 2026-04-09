@@ -32,9 +32,9 @@
   "searchLanguage": "جستجو در 180+ زبان...",
   "systemDefault": "پیش‌فرض سیستم",
   "currentLocation": "مکان فعلی (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "سرویس مکان غیرفعال است.",
+  "locationPermissionDenied": "مجوز مکان رد شد.",
+  "citiesCount": "{count} شهرها",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -32,9 +32,9 @@
   "searchLanguage": "მოძებნეთ 180+ ენა...",
   "systemDefault": "სისტემის ნაგულისხმევი",
   "currentLocation": "მიმდინარე მდებარეობა (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "მდებარეობის სერვისი გამორთულია.",
+  "locationPermissionDenied": "მდებარეობის ნებართვა უარყოფილია.",
+  "citiesCount": "{count} ქალაქები",
   "@citiesCount": {
     "placeholders": {
       "count": {

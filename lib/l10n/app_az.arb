@@ -32,9 +32,9 @@
   "searchLanguage": "180+ dildə axtar...",
   "systemDefault": "Sistem Defolt",
   "currentLocation": "Cari Məkan (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Məkan xidməti deaktiv edilib.",
+  "locationPermissionDenied": "Məkan icazəsi rədd edildi.",
+  "citiesCount": "{count} şəhərlər",
   "@citiesCount": {
     "placeholders": {
       "count": {

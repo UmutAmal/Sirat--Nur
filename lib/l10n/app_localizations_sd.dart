@@ -115,14 +115,14 @@ class AppLocalizationsSd extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'جڳھ جي خدمت غير فعال آھي.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'جڳھ جي اجازت رد ڪئي وئي.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count شهر';
   }
 
   @override

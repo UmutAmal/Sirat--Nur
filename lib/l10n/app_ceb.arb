@@ -32,9 +32,9 @@
   "searchLanguage": "Pangitaa ang 180+ ka lengguwahe...",
   "systemDefault": "Default sa Sistema",
   "currentLocation": "Kasamtangang Lokasyon (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Gi-disable ang serbisyo sa lokasyon.",
+  "locationPermissionDenied": "Gidili ang pagtugot sa lokasyon.",
+  "citiesCount": "{count} nga mga siyudad",
   "@citiesCount": {
     "placeholders": {
       "count": {

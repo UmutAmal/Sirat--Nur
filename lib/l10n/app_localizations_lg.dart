@@ -115,10 +115,10 @@ class AppLocalizationsLg extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Empeereza y\'ekifo eremeddwa.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Olukusa lw\'ekifo lugaaniddwa.';
 
   @override
   String citiesCount(String count) {

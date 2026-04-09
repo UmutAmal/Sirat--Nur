@@ -32,9 +32,9 @@
   "searchLanguage": "Sykje 180+ talen...",
   "systemDefault": "Systeem Standert",
   "currentLocation": "Aktuele lokaasje (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Lokaasje tsjinst is útskeakele.",
+  "locationPermissionDenied": "Lokaasje tastimming wegere.",
+  "citiesCount": "{count} stêden",
   "@citiesCount": {
     "placeholders": {
       "count": {

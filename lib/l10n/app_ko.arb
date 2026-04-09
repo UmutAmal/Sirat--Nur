@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "위치 서비스가 비활성화되었습니다.",
+  "locationPermissionDenied": "위치 권한이 거부되었습니다.",
+  "citiesCount": "{count} 도시",
   "@citiesCount": {
     "placeholders": {
       "count": {

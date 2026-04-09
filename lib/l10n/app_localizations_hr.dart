@@ -115,14 +115,14 @@ class AppLocalizationsHr extends AppLocalizations {
   String get currentLocation => 'Trenutna lokacija (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Usluga lokacije je onemogućena.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Dopuštenje za lokaciju odbijeno.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count gradova';
   }
 
   @override

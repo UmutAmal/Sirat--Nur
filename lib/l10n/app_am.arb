@@ -32,8 +32,8 @@
   "searchLanguage": "ከ180 በላይ ቋንቋዎችን ፈልግ...",
   "systemDefault": "የስርዓት ነባሪ",
   "currentLocation": "የአሁኑ አካባቢ (ጂፒኤስ)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "የአካባቢ አገልግሎት ተሰናክሏል።",
+  "locationPermissionDenied": "የአካባቢ ፈቃድ ተከልክሏል።",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Atrašanās vietas pakalpojums ir atspējots.",
+  "locationPermissionDenied": "Atrašanās vietas atļauja liegta.",
+  "citiesCount": "{count} pilsētas",
   "@citiesCount": {
     "placeholders": {
       "count": {

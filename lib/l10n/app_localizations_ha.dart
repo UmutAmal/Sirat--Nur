@@ -115,10 +115,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get currentLocation => 'Wuri na Yanzu (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'An kashe sabis na wurin.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'An ƙi izinin wurin.';
 
   @override
   String citiesCount(String count) {

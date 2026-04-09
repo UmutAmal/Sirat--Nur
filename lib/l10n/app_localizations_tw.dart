@@ -115,10 +115,10 @@ class AppLocalizationsTw extends AppLocalizations {
   String get currentLocation => 'Mprempren Beae (GPS) .';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Wɔayɛ beaeɛ som adwuma no adwuma.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Wɔapow beae ho kwan.';
 
   @override
   String citiesCount(String count) {

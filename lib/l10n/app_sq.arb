@@ -32,9 +32,9 @@
   "searchLanguage": "Kërko mbi 180 gjuhë...",
   "systemDefault": "Parazgjedhja e sistemit",
   "currentLocation": "Vendndodhja aktuale (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Shërbimi i vendndodhjes është i çaktivizuar.",
+  "locationPermissionDenied": "Leja e vendndodhjes u refuzua.",
+  "citiesCount": "{count} qytete",
   "@citiesCount": {
     "placeholders": {
       "count": {

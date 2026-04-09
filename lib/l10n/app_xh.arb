@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Inkonzo yendawo ivaliwe.",
+  "locationPermissionDenied": "Imvume yendawo yaliwe.",
+  "citiesCount": "{count} izixeko",
   "@citiesCount": {
     "placeholders": {
       "count": {

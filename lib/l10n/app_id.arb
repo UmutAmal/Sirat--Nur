@@ -32,9 +32,9 @@
   "searchLanguage": "Cari 180+ bahasa...",
   "systemDefault": "Default Sistem",
   "currentLocation": "Lokasi Saat Ini (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Layanan lokasi dinonaktifkan.",
+  "locationPermissionDenied": "Izin lokasi ditolak.",
+  "citiesCount": "{count} kota",
   "@citiesCount": {
     "placeholders": {
       "count": {

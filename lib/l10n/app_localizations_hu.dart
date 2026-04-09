@@ -115,14 +115,16 @@ class AppLocalizationsHu extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'A helymeghatározási szolgáltatás le van tiltva.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied =>
+      'Helymeghatározási engedély megtagadva.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count város';
   }
 
   @override

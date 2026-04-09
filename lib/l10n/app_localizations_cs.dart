@@ -115,14 +115,14 @@ class AppLocalizationsCs extends AppLocalizations {
   String get currentLocation => 'Aktuální poloha (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Služba určování polohy je zakázána.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Povolení k poloze odepřeno.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count měst';
   }
 
   @override

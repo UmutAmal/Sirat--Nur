@@ -32,8 +32,8 @@
   "searchLanguage": "180+ arunaka thaqhaña...",
   "systemDefault": "Sistema Default ukax mä juk’a pachanakanwa",
   "currentLocation": "Jichha pachanx (GPS) .",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "Servicio de ubicación ukax jan ch’amanchatawa.",
+  "locationPermissionDenied": "Uka chiqanx permiso ukax janiw satawa.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

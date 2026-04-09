@@ -115,14 +115,14 @@ class AppLocalizationsTe extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'స్థాన సేవ నిలిపివేయబడింది.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'స్థాన అనుమతి నిరాకరించబడింది.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count నగరాలు';
   }
 
   @override

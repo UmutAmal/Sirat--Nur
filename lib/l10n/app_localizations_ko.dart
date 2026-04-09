@@ -115,14 +115,14 @@ class AppLocalizationsKo extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => '위치 서비스가 비활성화되었습니다.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => '위치 권한이 거부되었습니다.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count 도시';
   }
 
   @override

@@ -32,9 +32,9 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Služba určovania polohy je zakázaná.",
+  "locationPermissionDenied": "Povolenie na umiestnenie bolo odmietnuté.",
+  "citiesCount": "{count} miest",
   "@citiesCount": {
     "placeholders": {
       "count": {

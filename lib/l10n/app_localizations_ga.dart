@@ -115,14 +115,14 @@ class AppLocalizationsGa extends AppLocalizations {
   String get currentLocation => 'Suíomh Reatha (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'Tá an tseirbhís suímh díchumasaithe.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Diúltaíodh cead suímh.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count cathracha';
   }
 
   @override

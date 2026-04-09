@@ -32,8 +32,8 @@
   "searchLanguage": "Search 180+ languages...",
   "systemDefault": "System Default",
   "currentLocation": "Current Location (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
+  "locationServiceDisabled": "Service ya esika ezali désactivé.",
+  "locationPermissionDenied": "Ndingisa ya esika eboyamaki.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

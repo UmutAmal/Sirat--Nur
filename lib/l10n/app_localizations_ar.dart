@@ -115,14 +115,14 @@ class AppLocalizationsAr extends AppLocalizations {
   String get currentLocation => 'الموقع الحالي (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'تم تعطيل خدمة الموقع.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'تم رفض إذن تحديد الموقع.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count المدن';
   }
 
   @override

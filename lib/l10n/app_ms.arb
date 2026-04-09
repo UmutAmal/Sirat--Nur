@@ -32,9 +32,9 @@
   "searchLanguage": "Cari 180+ bahasa...",
   "systemDefault": "Lalai Sistem",
   "currentLocation": "Lokasi Semasa (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Perkhidmatan lokasi dilumpuhkan.",
+  "locationPermissionDenied": "Kebenaran lokasi ditolak.",
+  "citiesCount": "{count} bandar",
   "@citiesCount": {
     "placeholders": {
       "count": {

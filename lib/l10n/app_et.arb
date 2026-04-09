@@ -32,9 +32,9 @@
   "searchLanguage": "Otsige 180+ keelest...",
   "systemDefault": "Süsteemi vaikeseade",
   "currentLocation": "Praegune asukoht (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Asukohateenus on keelatud.",
+  "locationPermissionDenied": "Asukoha luba keelatud.",
+  "citiesCount": "{count} linna",
   "@citiesCount": {
     "placeholders": {
       "count": {

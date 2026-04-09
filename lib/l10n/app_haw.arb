@@ -32,9 +32,9 @@
   "searchLanguage": "Huli 180+ ʻōlelo...",
   "systemDefault": "Pūnaehana Default",
   "currentLocation": "Kahi o kēia manawa (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
-  "locationPermissionDenied": "Location permission denied.",
-  "citiesCount": "{count} cities",
+  "locationServiceDisabled": "Ua pio ka lawelawe wahi.",
+  "locationPermissionDenied": "Ua hōʻole ʻia ka ʻae wahi.",
+  "citiesCount": "{count} kūlanakauhale",
   "@citiesCount": {
     "placeholders": {
       "count": {
