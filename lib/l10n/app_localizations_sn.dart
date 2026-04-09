@@ -894,13 +894,13 @@ class AppLocalizationsSn extends AppLocalizations {
   String get zakatCalculator => 'Zakat Calculator';
 
   @override
-  String get zakatGold => 'Gold (Altın)';
+  String get zakatGold => 'Ndarama (Altın)';
 
   @override
-  String get zakatSilver => 'Silver (Gümüş)';
+  String get zakatSilver => 'Sirivha (Gümüş)';
 
   @override
-  String get zakatCashBank => 'Cash / Bank';
+  String get zakatCashBank => 'Mari / Bank';
 
   @override
   String get zakatBusiness => 'Business';
@@ -909,10 +909,10 @@ class AppLocalizationsSn extends AppLocalizations {
   String get zakatInvestments => 'Investments';
 
   @override
-  String get zakatWeightGrams => 'Weight (g)';
+  String get zakatWeightGrams => 'Huremu (g)';
 
   @override
-  String get zakatPricePerGram => 'Price/g';
+  String get zakatPricePerGram => 'Mutengo/g';
 
   @override
   String get zakatTotalAmount => 'Total Amount';
@@ -921,7 +921,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get zakatInventoryValue => 'Inventory Value';
 
   @override
-  String get zakatDebts => 'Debts';
+  String get zakatDebts => 'Zvikwereti';
 
   @override
   String get zakatTotal => 'Total';
@@ -930,14 +930,14 @@ class AppLocalizationsSn extends AppLocalizations {
   String get calculateZakat => 'Verenga Zakat';
 
   @override
-  String get nisabNotReached => 'Nisab not reached. Zakat is not obligatory.';
+  String get nisabNotReached => 'Nisab haina kusvika. Zakat haisungirwe.';
 
   @override
   String get totalZakat => 'Total Zakat';
 
   @override
   String nisabSummary(String nisab, String assets) {
-    return 'Nisab: $nisab • Assets: $assets';
+    return 'Nisab: $nisab • Asset: $assets';
   }
 
   @override

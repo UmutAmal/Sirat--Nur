@@ -893,69 +893,69 @@ class AppLocalizationsCs extends AppLocalizations {
   String get restorePurchases => 'Obnovit nákupy';
 
   @override
-  String get zakatCalculator => 'Zakat Calculator';
+  String get zakatCalculator => 'Kalkulačka Zakat';
 
   @override
-  String get zakatGold => 'Gold (Altın)';
+  String get zakatGold => 'zlato (Altın)';
 
   @override
-  String get zakatSilver => 'Silver (Gümüş)';
+  String get zakatSilver => 'Stříbro (Gümüş)';
 
   @override
-  String get zakatCashBank => 'Cash / Bank';
+  String get zakatCashBank => 'Hotovost / Banka';
 
   @override
-  String get zakatBusiness => 'Business';
+  String get zakatBusiness => 'podnikání';
 
   @override
-  String get zakatInvestments => 'Investments';
+  String get zakatInvestments => 'Investice';
 
   @override
-  String get zakatWeightGrams => 'Weight (g)';
+  String get zakatWeightGrams => 'Hmotnost (g)';
 
   @override
-  String get zakatPricePerGram => 'Price/g';
+  String get zakatPricePerGram => 'Cena/g';
 
   @override
-  String get zakatTotalAmount => 'Total Amount';
+  String get zakatTotalAmount => 'Celková částka';
 
   @override
-  String get zakatInventoryValue => 'Inventory Value';
+  String get zakatInventoryValue => 'Hodnota zásob';
 
   @override
-  String get zakatDebts => 'Debts';
+  String get zakatDebts => 'Dluhy';
 
   @override
-  String get zakatTotal => 'Total';
+  String get zakatTotal => 'Celkový';
 
   @override
   String get calculateZakat => 'Vypočítejte Zakat';
 
   @override
-  String get nisabNotReached => 'Nisab not reached. Zakat is not obligatory.';
+  String get nisabNotReached => 'Nisab není dosažen. Zakat není povinný.';
 
   @override
-  String get totalZakat => 'Total Zakat';
+  String get totalZakat => 'Totální zakát';
 
   @override
   String nisabSummary(String nisab, String assets) {
-    return 'Nisab: $nisab • Assets: $assets';
+    return 'Nisab: $nisab • Aktiva: $assets';
   }
 
   @override
-  String get zakatGoldZakat => 'Gold Zakat';
+  String get zakatGoldZakat => 'Zlatý zakát';
 
   @override
-  String get zakatSilverZakat => 'Silver Zakat';
+  String get zakatSilverZakat => 'Stříbrný zakát';
 
   @override
-  String get zakatCashZakat => 'Cash Zakat';
+  String get zakatCashZakat => 'Zakát v hotovosti';
 
   @override
-  String get zakatBusinessZakat => 'Business Zakat';
+  String get zakatBusinessZakat => 'Obchodní zakat';
 
   @override
-  String get zakatInvestmentZakat => 'Investment Zakat';
+  String get zakatInvestmentZakat => 'Investice Zakat';
 
   @override
   String get chatbotGreeting =>

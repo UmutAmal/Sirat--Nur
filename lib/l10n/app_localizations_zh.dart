@@ -887,69 +887,69 @@ class AppLocalizationsZh extends AppLocalizations {
   String get restorePurchases => '恢复购买';
 
   @override
-  String get zakatCalculator => 'Zakat Calculator';
+  String get zakatCalculator => '天课计算器';
 
   @override
-  String get zakatGold => 'Gold (Altın)';
+  String get zakatGold => '黄金（阿尔廷）';
 
   @override
-  String get zakatSilver => 'Silver (Gümüş)';
+  String get zakatSilver => '银牌 (Gümüş)';
 
   @override
-  String get zakatCashBank => 'Cash / Bank';
+  String get zakatCashBank => '现金/银行';
 
   @override
-  String get zakatBusiness => 'Business';
+  String get zakatBusiness => '商业';
 
   @override
-  String get zakatInvestments => 'Investments';
+  String get zakatInvestments => '投资';
 
   @override
-  String get zakatWeightGrams => 'Weight (g)';
+  String get zakatWeightGrams => '重量（克）';
 
   @override
-  String get zakatPricePerGram => 'Price/g';
+  String get zakatPricePerGram => '价格/克';
 
   @override
-  String get zakatTotalAmount => 'Total Amount';
+  String get zakatTotalAmount => '总金额';
 
   @override
-  String get zakatInventoryValue => 'Inventory Value';
+  String get zakatInventoryValue => '库存价值';
 
   @override
-  String get zakatDebts => 'Debts';
+  String get zakatDebts => '债务';
 
   @override
-  String get zakatTotal => 'Total';
+  String get zakatTotal => '全部的';
 
   @override
   String get calculateZakat => '计算天课';
 
   @override
-  String get nisabNotReached => 'Nisab not reached. Zakat is not obligatory.';
+  String get nisabNotReached => '未到达尼萨布。天课不是强制性的。';
 
   @override
-  String get totalZakat => 'Total Zakat';
+  String get totalZakat => '总天课';
 
   @override
   String nisabSummary(String nisab, String assets) {
-    return 'Nisab: $nisab • Assets: $assets';
+    return '尼萨布：$nisab • 资产：$assets';
   }
 
   @override
-  String get zakatGoldZakat => 'Gold Zakat';
+  String get zakatGoldZakat => '黄金天课';
 
   @override
-  String get zakatSilverZakat => 'Silver Zakat';
+  String get zakatSilverZakat => '银天课';
 
   @override
-  String get zakatCashZakat => 'Cash Zakat';
+  String get zakatCashZakat => '现金天课';
 
   @override
-  String get zakatBusinessZakat => 'Business Zakat';
+  String get zakatBusinessZakat => '商业天课';
 
   @override
-  String get zakatInvestmentZakat => 'Investment Zakat';
+  String get zakatInvestmentZakat => '投资天课';
 
   @override
   String get chatbotGreeting =>
@@ -2027,69 +2027,69 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get restorePurchases => '恢复购买';
 
   @override
-  String get zakatCalculator => 'Zakat Calculator';
+  String get zakatCalculator => '天课计算器';
 
   @override
-  String get zakatGold => 'Gold (Altın)';
+  String get zakatGold => '黄金（阿尔廷）';
 
   @override
-  String get zakatSilver => 'Silver (Gümüş)';
+  String get zakatSilver => '银牌 (Gümüş)';
 
   @override
-  String get zakatCashBank => 'Cash / Bank';
+  String get zakatCashBank => '现金/银行';
 
   @override
-  String get zakatBusiness => 'Business';
+  String get zakatBusiness => '商业';
 
   @override
-  String get zakatInvestments => 'Investments';
+  String get zakatInvestments => '投资';
 
   @override
-  String get zakatWeightGrams => 'Weight (g)';
+  String get zakatWeightGrams => '重量（克）';
 
   @override
-  String get zakatPricePerGram => 'Price/g';
+  String get zakatPricePerGram => '价格/克';
 
   @override
-  String get zakatTotalAmount => 'Total Amount';
+  String get zakatTotalAmount => '总金额';
 
   @override
-  String get zakatInventoryValue => 'Inventory Value';
+  String get zakatInventoryValue => '库存价值';
 
   @override
-  String get zakatDebts => 'Debts';
+  String get zakatDebts => '债务';
 
   @override
-  String get zakatTotal => 'Total';
+  String get zakatTotal => '全部的';
 
   @override
   String get calculateZakat => '计算天课';
 
   @override
-  String get nisabNotReached => 'Nisab not reached. Zakat is not obligatory.';
+  String get nisabNotReached => '未到达尼萨布。天课不是强制性的。';
 
   @override
-  String get totalZakat => 'Total Zakat';
+  String get totalZakat => '总天课';
 
   @override
   String nisabSummary(String nisab, String assets) {
-    return 'Nisab: $nisab • Assets: $assets';
+    return '尼萨布：$nisab • 资产：$assets';
   }
 
   @override
-  String get zakatGoldZakat => 'Gold Zakat';
+  String get zakatGoldZakat => '黄金天课';
 
   @override
-  String get zakatSilverZakat => 'Silver Zakat';
+  String get zakatSilverZakat => '银天课';
 
   @override
-  String get zakatCashZakat => 'Cash Zakat';
+  String get zakatCashZakat => '现金天课';
 
   @override
-  String get zakatBusinessZakat => 'Business Zakat';
+  String get zakatBusinessZakat => '商业天课';
 
   @override
-  String get zakatInvestmentZakat => 'Investment Zakat';
+  String get zakatInvestmentZakat => '投资天课';
 
   @override
   String get chatbotGreeting =>
@@ -3167,69 +3167,69 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get restorePurchases => '恢復購買';
 
   @override
-  String get zakatCalculator => 'Zakat Calculator';
+  String get zakatCalculator => '天課計算器';
 
   @override
-  String get zakatGold => 'Gold (Altın)';
+  String get zakatGold => '黃金（阿爾廷）';
 
   @override
-  String get zakatSilver => 'Silver (Gümüş)';
+  String get zakatSilver => '銀牌 (Gümüş)';
 
   @override
-  String get zakatCashBank => 'Cash / Bank';
+  String get zakatCashBank => '現金/銀行';
 
   @override
-  String get zakatBusiness => 'Business';
+  String get zakatBusiness => '商業';
 
   @override
-  String get zakatInvestments => 'Investments';
+  String get zakatInvestments => '投資';
 
   @override
-  String get zakatWeightGrams => 'Weight (g)';
+  String get zakatWeightGrams => '重量（克）';
 
   @override
-  String get zakatPricePerGram => 'Price/g';
+  String get zakatPricePerGram => '價格/克';
 
   @override
-  String get zakatTotalAmount => 'Total Amount';
+  String get zakatTotalAmount => '總金額';
 
   @override
-  String get zakatInventoryValue => 'Inventory Value';
+  String get zakatInventoryValue => '庫存價值';
 
   @override
-  String get zakatDebts => 'Debts';
+  String get zakatDebts => '債務';
 
   @override
-  String get zakatTotal => 'Total';
+  String get zakatTotal => '全部的';
 
   @override
   String get calculateZakat => '計算天課';
 
   @override
-  String get nisabNotReached => 'Nisab not reached. Zakat is not obligatory.';
+  String get nisabNotReached => '未到達尼薩布。天課不是強制性的。';
 
   @override
-  String get totalZakat => 'Total Zakat';
+  String get totalZakat => '總天課';
 
   @override
   String nisabSummary(String nisab, String assets) {
-    return 'Nisab: $nisab • Assets: $assets';
+    return '尼薩布：$nisab • 資產：$assets';
   }
 
   @override
-  String get zakatGoldZakat => 'Gold Zakat';
+  String get zakatGoldZakat => '黃金天課';
 
   @override
-  String get zakatSilverZakat => 'Silver Zakat';
+  String get zakatSilverZakat => '銀天課';
 
   @override
-  String get zakatCashZakat => 'Cash Zakat';
+  String get zakatCashZakat => '現金天課';
 
   @override
-  String get zakatBusinessZakat => 'Business Zakat';
+  String get zakatBusinessZakat => '商業天課';
 
   @override
-  String get zakatInvestmentZakat => 'Investment Zakat';
+  String get zakatInvestmentZakat => '投資天課';
 
   @override
   String get chatbotGreeting =>

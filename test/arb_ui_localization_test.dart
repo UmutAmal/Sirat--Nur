@@ -284,6 +284,62 @@ void main() {
         }
       }
     });
+
+    test('safe priority locales do not fall back to English for zakat calculator copy', () {
+      const zakatSafeLocales = [
+        'tr',
+        'de',
+        'fr',
+        'es',
+        'ar',
+        'da',
+        'he',
+        'ja',
+        'nb',
+        'nn',
+        'no',
+        'pt',
+        'ru',
+        'vi',
+        'zh',
+        'zh_CN',
+        'zh_TW',
+      ];
+      const localizedKeys = [
+        'zakatCalculator',
+        'zakatGold',
+        'zakatSilver',
+        'zakatCashBank',
+        'zakatBusiness',
+        'zakatInvestments',
+        'zakatDebts',
+        'zakatPricePerGram',
+        'zakatWeightGrams',
+        'zakatInventoryValue',
+        'zakatTotalAmount',
+        'nisabSummary',
+        'nisabNotReached',
+        'totalZakat',
+        'zakatGoldZakat',
+        'zakatSilverZakat',
+        'zakatCashZakat',
+        'zakatBusinessZakat',
+        'zakatInvestmentZakat',
+        'zakatTotal',
+      ];
+
+      for (final locale in zakatSafeLocales) {
+        final arb = _readArb('lib/l10n/app_$locale.arb');
+
+        for (final key in localizedKeys) {
+          expect(
+            arb[key],
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+        }
+      }
+    });
   });
 }
 

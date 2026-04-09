@@ -3200,3 +3200,56 @@
 ### Sonraki Adım
 - Sıradaki turda code-referenced yüksek yoğunluklu localization yüzeyleri içinden rare-locale kalıntıları ve kalan chatbot/paywall EN-reference kümeleri yeniden sınıflandırılacak.
 - Özellikle [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tw.arb) içindeki `chatbotQueriesLeft` ve diğer sibling kaynağı zayıf rare-locale satırları dürüst EN-reference / sibling-fallback matrisine göre ele alınacak.
+
+## 2026-04-09 TUR-82 — Localize Zakat Calculator Surface
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force zakatCalculator zakatGold zakatSilver zakatCashBank zakatBusiness zakatInvestments zakatDebts zakatPricePerGram zakatWeightGrams zakatInventoryValue zakatTotalAmount nisabSummary nisabNotReached totalZakat zakatGoldZakat zakatSilverZakat zakatCashZakat zakatBusinessZakat zakatInvestmentZakat zakatTotal` ile çalıştırıldı ve zekat ekranının tam metin kümesi tüm locale setinde çevrildi.
+- Batch sonrası priority locale residual’ları elle kapatıldı; özellikle [A:\Way of Allah\sirat_i_nur\lib\l10n\app_da.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_da.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_de.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_de.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_es.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_es.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_fr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_fr.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nb.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nb.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nn.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nn.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_no.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_no.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_pt.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_pt.arb) içinde residual EN etiketler düzeltildi.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) genişletildi; güvenli priority locale seti için zekat hesaplayıcı yüzeyinin EN fallback regresyonu kilitlendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart#L80](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/zakat_calculator_page.dart#L80), [A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart#L124](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/zakat_calculator_page.dart#L124), [A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart#L145](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/zakat_calculator_page.dart#L145), [A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart#L154](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/zakat_calculator_page.dart#L154), [A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart#L161](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/zakat_calculator_page.dart#L161), [A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart#L186](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/zakat_calculator_page.dart#L186), [A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart#L204](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/zakat_calculator_page.dart#L204), [A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart#L212](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/zakat_calculator_page.dart#L212) üzerinden okunan zekat anahtarlarının neredeyse tüm locale setinde İngilizce kaldığı doğrulandı.
+- Bu ekran finansal ve dini hüküm bağlamı taşıdığı için yanlış veya İngilizce kalan copy’nin kullanıcı etkisi yüksekti; code-referenced localization sıralamasında en yüksek kümelerden biri olarak seçildi.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tw.arb) içindeki `nisabSummary` alanı, güvenilir sibling referansı hâlâ İngilizce `Assets` taşıdığı için rare-locale EN-reference olarak bırakıldı; uydurma çeviri eklenmedi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` içindeki zekat anahtarları güncellenen dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` generated dosyaları
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `zakatCalculator` için İngilizce fallback sayısı `195`ten `69`a düştü.
+- `zakatGold` için `195`ten `64`e düştü.
+- `zakatSilver` için `195`ten `69`a düştü.
+- `zakatCashBank` için `195`ten `67`ye düştü.
+- `zakatBusiness` için `195`ten `66`ya düştü.
+- `zakatInvestments` için `195`ten `68`e düştü.
+- `zakatDebts` için `195`ten `65`e düştü.
+- `zakatPricePerGram` için `195`ten `64`e düştü.
+- `zakatWeightGrams` için `195`ten `64`e düştü.
+- `zakatInventoryValue` için `195`ten `67`ye düştü.
+- `zakatTotalAmount` için `195`ten `66`ya düştü.
+- `nisabSummary` için `195`ten `95`e düştü.
+- `nisabNotReached` için `195`ten `64`e düştü.
+- `totalZakat` için `195`ten `73`e düştü.
+- `zakatGoldZakat` için `195`ten `70`e düştü.
+- `zakatSilverZakat` için `195`ten `70`e düştü.
+- `zakatCashZakat` için `195`ten `83`e düştü.
+- `zakatBusinessZakat` için `195`ten `72`ye düştü.
+- `zakatInvestmentZakat` için `195`ten `71`e düştü.
+- `zakatTotal` için `195`ten `75`e düştü.
+- Güvenli priority locale seti zekat hesaplayıcı yüzeyinde artık İngilizce fallback göstermiyor.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`10/10`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`190/190`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Zakat calculator copy still falling back to English across the supported surface: `15/25 → 6/25`
+
+### Sonraki Adım
+- Sıradaki turda code-referenced yüksek yoğunluklu localization yüzeyleri içinden `places` ve `sukun` kümeleri karşılaştırılıp en yüksek kullanıcı etkili olan seçilecek.
+- Rare-locale tarafında sibling referansı zayıf olan `tw` / `ak` EN-reference satırları ayrı dürüstlük matrisiyle ele alınacak.
