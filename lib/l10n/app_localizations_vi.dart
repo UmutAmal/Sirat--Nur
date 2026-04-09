@@ -1186,4 +1186,301 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Địa điểm Hồi giáo';
+
+  @override
+  String get asmaMeaning1 => 'Người có lợi';
+
+  @override
+  String get asmaMeaning2 => 'Người nhân hậu';
+
+  @override
+  String get asmaMeaning3 => 'Vua / Chúa vĩnh cửu';
+
+  @override
+  String get asmaMeaning4 => 'Thần thánh nhất';
+
+  @override
+  String get asmaMeaning5 => 'Nguồn bình yên';
+
+  @override
+  String get asmaMeaning6 => 'Người cung cấp bảo mật';
+
+  @override
+  String get asmaMeaning7 => 'Người giám hộ';
+
+  @override
+  String get asmaMeaning8 => 'Người quý giá / Người hùng mạnh nhất';
+
+  @override
+  String get asmaMeaning9 => 'Người bán hàng';
+
+  @override
+  String get asmaMeaning10 => 'Tuyệt vời nhất';
+
+  @override
+  String get asmaMeaning11 => 'Người sáng tạo';
+
+  @override
+  String get asmaMeaning12 => 'Người tạo đơn hàng';
+
+  @override
+  String get asmaMeaning13 => 'Người định hình vẻ đẹp';
+
+  @override
+  String get asmaMeaning14 => 'Sự tha thứ';
+
+  @override
+  String get asmaMeaning15 => 'Kẻ chinh phục';
+
+  @override
+  String get asmaMeaning16 => 'Người cho đi tất cả';
+
+  @override
+  String get asmaMeaning17 => 'Người duy trì';
+
+  @override
+  String get asmaMeaning18 => 'Bàn mở tỷ số';
+
+  @override
+  String get asmaMeaning19 => 'Người biết tất cả';
+
+  @override
+  String get asmaMeaning20 => 'Bộ hạn chế';
+
+  @override
+  String get asmaMeaning21 => 'Thuốc giảm đau';
+
+  @override
+  String get asmaMeaning22 => 'Kẻ phản bội';
+
+  @override
+  String get asmaMeaning23 => 'Người tôn vinh';
+
+  @override
+  String get asmaMeaning24 => 'Phần thưởng danh dự';
+
+  @override
+  String get asmaMeaning25 => 'Kẻ làm nhục';
+
+  @override
+  String get asmaMeaning26 => 'Người lắng nghe tất cả';
+
+  @override
+  String get asmaMeaning27 => 'Người tiên tri tất cả';
+
+  @override
+  String get asmaMeaning28 => 'Thẩm phán';
+
+  @override
+  String get asmaMeaning29 => 'Chính nghĩa';
+
+  @override
+  String get asmaMeaning30 => 'Người tinh tế';
+
+  @override
+  String get asmaMeaning31 => 'Tất cả đều nhận thức được';
+
+  @override
+  String get asmaMeaning32 => 'Sự nhẫn nại';
+
+  @override
+  String get asmaMeaning33 => 'Tuyệt vời';
+
+  @override
+  String get asmaMeaning34 => 'Người tha thứ vĩ đại';
+
+  @override
+  String get asmaMeaning35 => 'Người tưởng thưởng cho lòng biết ơn';
+
+  @override
+  String get asmaMeaning36 => 'Cao nhất';
+
+  @override
+  String get asmaMeaning37 => 'Tuyệt vời nhất';
+
+  @override
+  String get asmaMeaning38 => 'Người bảo quản';
+
+  @override
+  String get asmaMeaning39 => 'Chất nuôi dưỡng';
+
+  @override
+  String get asmaMeaning40 => 'Người tính toán';
+
+  @override
+  String get asmaMeaning41 => 'Sự hùng vĩ';
+
+  @override
+  String get asmaMeaning42 => 'Người hào phóng';
+
+  @override
+  String get asmaMeaning43 => 'Người cảnh giác';
+
+  @override
+  String get asmaMeaning44 => 'Người đáp lại lời cầu nguyện';
+
+  @override
+  String get asmaMeaning45 => 'Toàn diện';
+
+  @override
+  String get asmaMeaning46 => 'Người khôn ngoan hoàn hảo';
+
+  @override
+  String get asmaMeaning47 => 'Người yêu thương';
+
+  @override
+  String get asmaMeaning48 => 'Người vinh quang nhất';
+
+  @override
+  String get asmaMeaning49 => 'Người Phục Sinh';
+
+  @override
+  String get asmaMeaning50 => 'Nhân chứng';
+
+  @override
+  String get asmaMeaning51 => 'Sự thật';
+
+  @override
+  String get asmaMeaning52 => 'Người được ủy thác đầy đủ';
+
+  @override
+  String get asmaMeaning53 => 'Người sở hữu mọi sức mạnh';
+
+  @override
+  String get asmaMeaning54 => 'Mạnh mẽ';
+
+  @override
+  String get asmaMeaning55 => 'Người bảo vệ';
+
+  @override
+  String get asmaMeaning56 => 'Người được khen ngợi';
+
+  @override
+  String get asmaMeaning57 => 'Người đánh giá';
+
+  @override
+  String get asmaMeaning58 => 'Người khởi tạo';
+
+  @override
+  String get asmaMeaning59 => 'Trình khôi phục';
+
+  @override
+  String get asmaMeaning60 => 'Người ban sự sống';
+
+  @override
+  String get asmaMeaning61 => 'Kẻ cướp đi cuộc sống';
+
+  @override
+  String get asmaMeaning62 => 'Sự sống mãi mãi';
+
+  @override
+  String get asmaMeaning63 => 'Người duy trì khả năng tự tồn tại';
+
+  @override
+  String get asmaMeaning64 => 'Trình tìm kiếm';
+
+  @override
+  String get asmaMeaning65 => 'Sự vinh quang';
+
+  @override
+  String get asmaMeaning66 => 'Người duy nhất';
+
+  @override
+  String get asmaMeaning67 => 'Một';
+
+  @override
+  String get asmaMeaning68 => 'Người được mọi người tìm kiếm';
+
+  @override
+  String get asmaMeaning69 => 'Mạnh mẽ';
+
+  @override
+  String get asmaMeaning70 => 'Người tạo ra mọi sức mạnh';
+
+  @override
+  String get asmaMeaning71 => 'Máy xúc tiến';
+
+  @override
+  String get asmaMeaning72 => 'Người trì hoãn';
+
+  @override
+  String get asmaMeaning73 => 'Đầu tiên';
+
+  @override
+  String get asmaMeaning74 => 'Cuối cùng';
+
+  @override
+  String get asmaMeaning75 => 'Bản kê khai';
+
+  @override
+  String get asmaMeaning76 => 'Ẩn';
+
+  @override
+  String get asmaMeaning77 => 'Thống đốc';
+
+  @override
+  String get asmaMeaning78 => 'Đấng tối cao';
+
+  @override
+  String get asmaMeaning79 => 'Người làm điều tốt';
+
+  @override
+  String get asmaMeaning80 => 'Hướng dẫn sám hối';
+
+  @override
+  String get asmaMeaning81 => 'Kẻ báo thù';
+
+  @override
+  String get asmaMeaning82 => 'Người tha thứ';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Chủ sở hữu / Chủ quyền của tất cả';
+
+  @override
+  String get asmaMeaning85 => 'Người sở hữu uy quyền và tiền thưởng';
+
+  @override
+  String get asmaMeaning86 => 'Người công bằng';
+
+  @override
+  String get asmaMeaning87 => 'Người thu thập';
+
+  @override
+  String get asmaMeaning88 => 'Người giàu';
+
+  @override
+  String get asmaMeaning89 => 'Bộ làm giàu';
+
+  @override
+  String get asmaMeaning90 => 'Người ngăn chặn tác hại';
+
+  @override
+  String get asmaMeaning91 => 'Kẻ gây hại';
+
+  @override
+  String get asmaMeaning92 => 'Người ban tặng lợi ích';
+
+  @override
+  String get asmaMeaning93 => 'Ánh sáng';
+
+  @override
+  String get asmaMeaning94 => 'Người hướng dẫn';
+
+  @override
+  String get asmaMeaning95 => 'Người khởi tạo';
+
+  @override
+  String get asmaMeaning96 => 'Người vĩnh cửu';
+
+  @override
+  String get asmaMeaning97 => 'Người thừa kế';
+
+  @override
+  String get asmaMeaning98 => 'Hướng dẫn chính đáng nhất';
+
+  @override
+  String get asmaMeaning99 => 'Bệnh nhân Một';
 }

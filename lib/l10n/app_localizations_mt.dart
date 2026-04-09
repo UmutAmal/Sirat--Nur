@@ -1190,4 +1190,301 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Post Iżlamiku';
+
+  @override
+  String get asmaMeaning1 => 'Il-Benefiċjenti';
+
+  @override
+  String get asmaMeaning2 => 'Il-Ħniena';
+
+  @override
+  String get asmaMeaning3 => 'The King / Eternal Lord';
+
+  @override
+  String get asmaMeaning4 => 'L-Iktar Qaddis';
+
+  @override
+  String get asmaMeaning5 => 'Is-Sors tal-Paċi';
+
+  @override
+  String get asmaMeaning6 => 'Il-Donatur tas-Sigurtà';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'The Precious / The Most Mighty';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'L-Akbar';
+
+  @override
+  String get asmaMeaning11 => 'Il-Ħallieq';
+
+  @override
+  String get asmaMeaning12 => 'The Maker of Order';
+
+  @override
+  String get asmaMeaning13 => 'The Shaper of Beauty';
+
+  @override
+  String get asmaMeaning14 => 'The Forgiving';
+
+  @override
+  String get asmaMeaning15 => 'Is-Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Il-Donatur ta\' Kulħadd';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'The Opener';
+
+  @override
+  String get asmaMeaning19 => 'L-Għarfien ta\' Kulħadd';
+
+  @override
+  String get asmaMeaning20 => 'Il-Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'The Reliever';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'The Bestower of Honor';
+
+  @override
+  String get asmaMeaning25 => 'L-Umiljatur';
+
+  @override
+  String get asmaMeaning26 => 'Is-Semmiegħ ta\' Kulħadd';
+
+  @override
+  String get asmaMeaning27 => 'Is-Seer ta\' Kulħadd';
+
+  @override
+  String get asmaMeaning28 => 'L-Imħallef';
+
+  @override
+  String get asmaMeaning29 => 'Il-Ġust';
+
+  @override
+  String get asmaMeaning30 => 'Il-Wieħed Sottili';
+
+  @override
+  String get asmaMeaning31 => 'The Kollha Konxju';
+
+  @override
+  String get asmaMeaning32 => 'The Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'The Great Forgiver';
+
+  @override
+  String get asmaMeaning35 => 'Il-Premjatur tar-Ringrazzjament';
+
+  @override
+  String get asmaMeaning36 => 'L-Ogħla';
+
+  @override
+  String get asmaMeaning37 => 'L-Akbar';
+
+  @override
+  String get asmaMeaning38 => 'Il-Preservatur';
+
+  @override
+  String get asmaMeaning39 => 'The Nourisher';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Il-Ġeneruż';
+
+  @override
+  String get asmaMeaning43 => 'L-Għassa';
+
+  @override
+  String get asmaMeaning44 => 'It-Twieġeb għat-Talb';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehending';
+
+  @override
+  String get asmaMeaning46 => 'The Perfectly Wise';
+
+  @override
+  String get asmaMeaning47 => 'The Loving One';
+
+  @override
+  String get asmaMeaning48 => 'L-Aktar Glorjuz';
+
+  @override
+  String get asmaMeaning49 => 'The Resurrector';
+
+  @override
+  String get asmaMeaning50 => 'Ix-Xhud';
+
+  @override
+  String get asmaMeaning51 => 'Il-Verità';
+
+  @override
+  String get asmaMeaning52 => 'It-Trustee Kollox Suffiċjenti';
+
+  @override
+  String get asmaMeaning53 => 'Il-Possessur ta\' Kollha Qawwa';
+
+  @override
+  String get asmaMeaning54 => 'Il-Forza';
+
+  @override
+  String get asmaMeaning55 => 'Il-Protettur';
+
+  @override
+  String get asmaMeaning56 => 'L-Imfaħħar';
+
+  @override
+  String get asmaMeaning57 => 'L-Appraiser';
+
+  @override
+  String get asmaMeaning58 => 'L-Oriġinatur';
+
+  @override
+  String get asmaMeaning59 => 'Ir-Restorer';
+
+  @override
+  String get asmaMeaning60 => 'Dak li Jagħti l-Ħajja';
+
+  @override
+  String get asmaMeaning61 => 'The Taker of Life';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Is-Sustenitur Awto-Sussistent';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'Il-Glorjuż';
+
+  @override
+  String get asmaMeaning66 => 'L-Uniku Wieħed';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'Dak Imfittex minn Kulħadd';
+
+  @override
+  String get asmaMeaning69 => 'Il-Qawwija';
+
+  @override
+  String get asmaMeaning70 => 'Il-Ħallieq tas-setgħa kollha';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'The Delayer';
+
+  @override
+  String get asmaMeaning73 => 'L-Ewwel';
+
+  @override
+  String get asmaMeaning74 => 'L-Ahhar';
+
+  @override
+  String get asmaMeaning75 => 'Il-Manifest';
+
+  @override
+  String get asmaMeaning76 => 'The Hidden';
+
+  @override
+  String get asmaMeaning77 => 'Il-Gvernatur';
+
+  @override
+  String get asmaMeaning78 => 'Il-Wieħed Suprem';
+
+  @override
+  String get asmaMeaning79 => 'The Doer of Good';
+
+  @override
+  String get asmaMeaning80 => 'Il-Gwida għall-Indiema';
+
+  @override
+  String get asmaMeaning81 => 'The Avenger';
+
+  @override
+  String get asmaMeaning82 => 'The Forgiver';
+
+  @override
+  String get asmaMeaning83 => 'Il-Klement';
+
+  @override
+  String get asmaMeaning84 => 'Is-Sid / Sovran ta\' Kulħadd';
+
+  @override
+  String get asmaMeaning85 => 'Il-Possessur tal-Maestà u Bounty';
+
+  @override
+  String get asmaMeaning86 => 'The Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'The Gatherer';
+
+  @override
+  String get asmaMeaning88 => 'The Rich One';
+
+  @override
+  String get asmaMeaning89 => 'The Enricher';
+
+  @override
+  String get asmaMeaning90 => 'Il-Preventur tal-Ħsara';
+
+  @override
+  String get asmaMeaning91 => 'The Bringer of Harm';
+
+  @override
+  String get asmaMeaning92 => 'L-Offerenti tal-Benefiċċji';
+
+  @override
+  String get asmaMeaning93 => 'Id-Dawl';
+
+  @override
+  String get asmaMeaning94 => 'The Guider';
+
+  @override
+  String get asmaMeaning95 => 'L-Oriġinatur';
+
+  @override
+  String get asmaMeaning96 => 'The Everlasting One';
+
+  @override
+  String get asmaMeaning97 => 'Il-Werriet';
+
+  @override
+  String get asmaMeaning98 => 'L-Aktar Gwida Ġust';
+
+  @override
+  String get asmaMeaning99 => 'Il-Pazjent Wieħed';
 }

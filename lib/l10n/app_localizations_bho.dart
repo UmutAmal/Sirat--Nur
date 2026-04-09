@@ -1191,4 +1191,301 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'इस्लामी जगह के बारे में बतावल गइल बा';
+
+  @override
+  String get asmaMeaning1 => 'द बेनिफिसेंट के ह';
+
+  @override
+  String get asmaMeaning2 => 'दयालु लोग के';
+
+  @override
+  String get asmaMeaning3 => 'राजा / शाश्वत प्रभु के ह';
+
+  @override
+  String get asmaMeaning4 => 'परम पवित्र के कहल जाला';
+
+  @override
+  String get asmaMeaning5 => 'शांति के स्रोत के बारे में बतावल गइल बा';
+
+  @override
+  String get asmaMeaning6 => 'सुरक्षा के दाता के ह';
+
+  @override
+  String get asmaMeaning7 => 'गार्जियन के ह';
+
+  @override
+  String get asmaMeaning8 => 'अनमोल / सबसे ताकतवर';
+
+  @override
+  String get asmaMeaning9 => 'द कम्पेलर के ह';
+
+  @override
+  String get asmaMeaning10 => 'सबसे बड़का के बा';
+
+  @override
+  String get asmaMeaning11 => 'सृष्टिकर्ता के ह';
+
+  @override
+  String get asmaMeaning12 => 'क्रम के निर्माता के ह';
+
+  @override
+  String get asmaMeaning13 => 'सुंदरता के आकार देवे वाला';
+
+  @override
+  String get asmaMeaning14 => 'माफ करे वाला लोग';
+
+  @override
+  String get asmaMeaning15 => 'द वश में करे वाला के';
+
+  @override
+  String get asmaMeaning16 => 'सबके दाता के ह';
+
+  @override
+  String get asmaMeaning17 => 'द सस्टेनर के ह';
+
+  @override
+  String get asmaMeaning18 => 'ओपनर के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning19 => 'सब के जानकार के ह';
+
+  @override
+  String get asmaMeaning20 => 'कंस्ट्रिक्टर के कहल जाला';
+
+  @override
+  String get asmaMeaning21 => 'द रिलीवर के ह';
+
+  @override
+  String get asmaMeaning22 => 'अबासर के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning23 => 'द एक्साल्टर के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning24 => 'सम्मान के दाता के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning25 => 'अपमानजनक के कहल जाला';
+
+  @override
+  String get asmaMeaning26 => 'सब के सुननिहार';
+
+  @override
+  String get asmaMeaning27 => 'सबके द्रष्टा के ह';
+
+  @override
+  String get asmaMeaning28 => 'जज साहब के कहना बा';
+
+  @override
+  String get asmaMeaning29 => 'द जस्ट के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning30 => 'सूक्ष्म वाला के';
+
+  @override
+  String get asmaMeaning31 => 'द ऑल अवेयर के ह';
+
+  @override
+  String get asmaMeaning32 => 'द फोरबेयरिंग के बा';
+
+  @override
+  String get asmaMeaning33 => 'द मैग्निफिसेंट के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning34 => 'महान माफ करे वाला के';
+
+  @override
+  String get asmaMeaning35 => 'धन्यवाद के इनाम देवे वाला';
+
+  @override
+  String get asmaMeaning36 => 'सबसे उच्चतम के बा';
+
+  @override
+  String get asmaMeaning37 => 'सबसे बड़का के बा';
+
+  @override
+  String get asmaMeaning38 => 'द प्रिजरवर के ह';
+
+  @override
+  String get asmaMeaning39 => 'द नॉरिशर के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning40 => 'हिसाब-किताब करे वाला के';
+
+  @override
+  String get asmaMeaning41 => 'द मैजेस्टिक के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning42 => 'उदार लोग के बा';
+
+  @override
+  String get asmaMeaning43 => 'चौकस वाला के';
+
+  @override
+  String get asmaMeaning44 => 'प्रार्थना के जवाब देवे वाला';
+
+  @override
+  String get asmaMeaning45 => 'द ऑल कम्प्रीहेंडिंग के ह';
+
+  @override
+  String get asmaMeaning46 => 'द परफेक्टली वाइज के ह';
+
+  @override
+  String get asmaMeaning47 => 'प्यार करे वाला के';
+
+  @override
+  String get asmaMeaning48 => 'सबसे गौरवशाली आदमी के बा';
+
+  @override
+  String get asmaMeaning49 => 'पुनरुत्थान करे वाला के';
+
+  @override
+  String get asmaMeaning50 => 'गवाह के कहनाम बा';
+
+  @override
+  String get asmaMeaning51 => 'सच्चाई के बात बा';
+
+  @override
+  String get asmaMeaning52 => 'सर्वाधिक ट्रस्टी के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning53 => 'सब ताकत के मालिक';
+
+  @override
+  String get asmaMeaning54 => 'द फोर्सफुल के ह';
+
+  @override
+  String get asmaMeaning55 => 'रक्षक के कहल जाला';
+
+  @override
+  String get asmaMeaning56 => 'प्रशंसित लोग के कहल जाला';
+
+  @override
+  String get asmaMeaning57 => 'मूल्यांकनकर्ता के ह';
+
+  @override
+  String get asmaMeaning58 => 'द ओरिजिनेटर के ह';
+
+  @override
+  String get asmaMeaning59 => 'बहाली करे वाला के ह';
+
+  @override
+  String get asmaMeaning60 => 'जीवन के दाता के ह';
+
+  @override
+  String get asmaMeaning61 => 'जीवन के लेवे वाला के';
+
+  @override
+  String get asmaMeaning62 => 'द एवर लिविंग के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning63 => 'स्व-निर्वाह करे वाला सस्टेनर के';
+
+  @override
+  String get asmaMeaning64 => 'द फाइंडर के ह';
+
+  @override
+  String get asmaMeaning65 => 'द ग्लोरियस के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning66 => 'द ओनली वन के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning67 => 'द वन के बा';
+
+  @override
+  String get asmaMeaning68 => 'सबके खोजल जाए वाला के';
+
+  @override
+  String get asmaMeaning69 => 'द पावरफुल के बा';
+
+  @override
+  String get asmaMeaning70 => 'सब शक्ति के रचयिता';
+
+  @override
+  String get asmaMeaning71 => 'द एक्सपीडिटर के ह';
+
+  @override
+  String get asmaMeaning72 => 'देरी करे वाला के कहल जाला';
+
+  @override
+  String get asmaMeaning73 => 'पहिला के बा';
+
+  @override
+  String get asmaMeaning74 => 'द लास्ट के बा';
+
+  @override
+  String get asmaMeaning75 => 'द मैनिफेस्ट के बा';
+
+  @override
+  String get asmaMeaning76 => 'द हिडन के बा';
+
+  @override
+  String get asmaMeaning77 => 'राज्यपाल के कहनाम बा';
+
+  @override
+  String get asmaMeaning78 => 'परमात्मा के ह';
+
+  @override
+  String get asmaMeaning79 => 'भलाई के करे वाला';
+
+  @override
+  String get asmaMeaning80 => 'पश्चाताप के मार्गदर्शक के बारे में बतावल गइल बा';
+
+  @override
+  String get asmaMeaning81 => 'द एवेंजर के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning82 => 'माफ करे वाला के';
+
+  @override
+  String get asmaMeaning83 => 'क्लेमेंट के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning84 => 'सब के मालिक / सार्वभौम';
+
+  @override
+  String get asmaMeaning85 => 'महामहिम आ इनाम के मालिक';
+
+  @override
+  String get asmaMeaning86 => 'द इक्विटेबल वन के बा';
+
+  @override
+  String get asmaMeaning87 => 'द गदरर के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning88 => 'अमीर वाला के कहल जाला';
+
+  @override
+  String get asmaMeaning89 => 'द एनरिचर के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning90 => 'नुकसान के रोके वाला के कहल जाला';
+
+  @override
+  String get asmaMeaning91 => 'नुकसान के ले आवे वाला';
+
+  @override
+  String get asmaMeaning92 => 'लाभ के दाता के ह';
+
+  @override
+  String get asmaMeaning93 => 'द लाइट के बारे में बतावल गइल बा';
+
+  @override
+  String get asmaMeaning94 => 'गाइडर के लिखल बा';
+
+  @override
+  String get asmaMeaning95 => 'द ओरिजिनेटर के ह';
+
+  @override
+  String get asmaMeaning96 => 'सनातन वाला के कहल जाला';
+
+  @override
+  String get asmaMeaning97 => 'वारिस के नाम से जानल जाला';
+
+  @override
+  String get asmaMeaning98 => 'सबसे धर्मी गाइड के बारे में बतावल गइल बा';
+
+  @override
+  String get asmaMeaning99 => 'मरीज वाला के';
 }

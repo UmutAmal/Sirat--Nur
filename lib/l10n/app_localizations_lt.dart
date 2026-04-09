@@ -1189,4 +1189,301 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islamo vieta';
+
+  @override
+  String get asmaMeaning1 => 'Geras';
+
+  @override
+  String get asmaMeaning2 => 'Gailestingasis';
+
+  @override
+  String get asmaMeaning3 => 'Karalius / Amžinasis Viešpats';
+
+  @override
+  String get asmaMeaning4 => 'Švenčiausiasis';
+
+  @override
+  String get asmaMeaning5 => 'Taikos šaltinis';
+
+  @override
+  String get asmaMeaning6 => 'Saugumo teikėjas';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Brangiausias / Galingiausias';
+
+  @override
+  String get asmaMeaning9 => 'Kompeller';
+
+  @override
+  String get asmaMeaning10 => 'Didžiausias';
+
+  @override
+  String get asmaMeaning11 => 'Kūrėjas';
+
+  @override
+  String get asmaMeaning12 => 'Tvarkos kūrėjas';
+
+  @override
+  String get asmaMeaning13 => 'Grožio formuotojas';
+
+  @override
+  String get asmaMeaning14 => 'Atleidimas';
+
+  @override
+  String get asmaMeaning15 => 'Pavaldytojas';
+
+  @override
+  String get asmaMeaning16 => 'Viso davėjas';
+
+  @override
+  String get asmaMeaning17 => 'Pasainer';
+
+  @override
+  String get asmaMeaning18 => 'Atidariklis';
+
+  @override
+  String get asmaMeaning19 => 'Visų žinovas';
+
+  @override
+  String get asmaMeaning20 => 'Konstriktorius';
+
+  @override
+  String get asmaMeaning21 => 'Atleidėjas';
+
+  @override
+  String get asmaMeaning22 => 'Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'Garbės davėjas';
+
+  @override
+  String get asmaMeaning25 => 'Pažemintuvas';
+
+  @override
+  String get asmaMeaning26 => 'Visų girdintysis';
+
+  @override
+  String get asmaMeaning27 => 'Visų matytojas';
+
+  @override
+  String get asmaMeaning28 => 'Teisėjas';
+
+  @override
+  String get asmaMeaning29 => 'Teisingas';
+
+  @override
+  String get asmaMeaning30 => 'Subtilus';
+
+  @override
+  String get asmaMeaning31 => 'Visi žino';
+
+  @override
+  String get asmaMeaning32 => 'Pirmiausia';
+
+  @override
+  String get asmaMeaning33 => 'Puikus';
+
+  @override
+  String get asmaMeaning34 => 'Didysis atleidėjas';
+
+  @override
+  String get asmaMeaning35 => 'Padėkos apdovanotasis';
+
+  @override
+  String get asmaMeaning36 => 'Aukščiausias';
+
+  @override
+  String get asmaMeaning37 => 'Didžiausias';
+
+  @override
+  String get asmaMeaning38 => 'Konservatorius';
+
+  @override
+  String get asmaMeaning39 => 'Maitiklis';
+
+  @override
+  String get asmaMeaning40 => 'Skaičiavimo priemonė';
+
+  @override
+  String get asmaMeaning41 => 'Didenybė';
+
+  @override
+  String get asmaMeaning42 => 'Dosnūs';
+
+  @override
+  String get asmaMeaning43 => 'Burusis';
+
+  @override
+  String get asmaMeaning44 => 'Atsakytojas į maldą';
+
+  @override
+  String get asmaMeaning45 => 'Visa suprantama';
+
+  @override
+  String get asmaMeaning46 => 'Tobulai išmintingieji';
+
+  @override
+  String get asmaMeaning47 => 'Mylimas žmogus';
+
+  @override
+  String get asmaMeaning48 => 'Pats šlovingiausias';
+
+  @override
+  String get asmaMeaning49 => 'Prisikėlėjas';
+
+  @override
+  String get asmaMeaning50 => 'Liudytojas';
+
+  @override
+  String get asmaMeaning51 => 'Tiesa';
+
+  @override
+  String get asmaMeaning52 => 'Visų pakanka patikėtinio';
+
+  @override
+  String get asmaMeaning53 => 'Visų jėgų turėtojas';
+
+  @override
+  String get asmaMeaning54 => 'Galingas';
+
+  @override
+  String get asmaMeaning55 => 'Apsaugininkas';
+
+  @override
+  String get asmaMeaning56 => 'Pagirti';
+
+  @override
+  String get asmaMeaning57 => 'Vertintojas';
+
+  @override
+  String get asmaMeaning58 => 'Kūrėjas';
+
+  @override
+  String get asmaMeaning59 => 'Restauratorius';
+
+  @override
+  String get asmaMeaning60 => 'Gyvybės davėjas';
+
+  @override
+  String get asmaMeaning61 => 'Gyvybės atėmėjas';
+
+  @override
+  String get asmaMeaning62 => 'Visalaikis gyvenimas';
+
+  @override
+  String get asmaMeaning63 => 'Savarankiškas maitintojas';
+
+  @override
+  String get asmaMeaning64 => 'Finder';
+
+  @override
+  String get asmaMeaning65 => 'Šlovingasis';
+
+  @override
+  String get asmaMeaning66 => 'Vienintelis';
+
+  @override
+  String get asmaMeaning67 => 'Vienas';
+
+  @override
+  String get asmaMeaning68 => 'Tas, kurio ieško visi';
+
+  @override
+  String get asmaMeaning69 => 'Galingasis';
+
+  @override
+  String get asmaMeaning70 => 'Visos jėgos Kūrėjas';
+
+  @override
+  String get asmaMeaning71 => 'Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Atidėtojas';
+
+  @override
+  String get asmaMeaning73 => 'Pirmasis';
+
+  @override
+  String get asmaMeaning74 => 'Paskutinis';
+
+  @override
+  String get asmaMeaning75 => 'Manifestas';
+
+  @override
+  String get asmaMeaning76 => 'Paslėptas';
+
+  @override
+  String get asmaMeaning77 => 'Gubernatorius';
+
+  @override
+  String get asmaMeaning78 => 'Aukščiausiasis';
+
+  @override
+  String get asmaMeaning79 => 'Gero darytojas';
+
+  @override
+  String get asmaMeaning80 => 'Atgailos vadovas';
+
+  @override
+  String get asmaMeaning81 => 'Keršytojas';
+
+  @override
+  String get asmaMeaning82 => 'Atleidėjas';
+
+  @override
+  String get asmaMeaning83 => 'Klementas';
+
+  @override
+  String get asmaMeaning84 => 'Savininkas / visų valdovas';
+
+  @override
+  String get asmaMeaning85 => 'Didenybės ir dosnumo turėtojas';
+
+  @override
+  String get asmaMeaning86 => 'Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'Rinkėjas';
+
+  @override
+  String get asmaMeaning88 => 'Turtingasis';
+
+  @override
+  String get asmaMeaning89 => 'Sodriklis';
+
+  @override
+  String get asmaMeaning90 => 'Žalos prevencijos priemonė';
+
+  @override
+  String get asmaMeaning91 => 'Žalos nešėjas';
+
+  @override
+  String get asmaMeaning92 => 'Privalumų davėjas';
+
+  @override
+  String get asmaMeaning93 => 'Šviesa';
+
+  @override
+  String get asmaMeaning94 => 'Vadovas';
+
+  @override
+  String get asmaMeaning95 => 'Kūrėjas';
+
+  @override
+  String get asmaMeaning96 => 'Amžinasis';
+
+  @override
+  String get asmaMeaning97 => 'Paveldėtojas';
+
+  @override
+  String get asmaMeaning98 => 'Teisiausias vadovas';
+
+  @override
+  String get asmaMeaning99 => 'Pacientas vienas';
 }

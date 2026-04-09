@@ -1187,4 +1187,301 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Malo achisilamu';
+
+  @override
+  String get asmaMeaning1 => 'Wopindula';
+
+  @override
+  String get asmaMeaning2 => 'Wachifundo';
+
+  @override
+  String get asmaMeaning3 => 'Mfumu / Ambuye Wamuyaya';
+
+  @override
+  String get asmaMeaning4 => 'Opatulikitsa';
+
+  @override
+  String get asmaMeaning5 => 'Magwero a Mtendere';
+
+  @override
+  String get asmaMeaning6 => 'Wopereka Chitetezo';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Wamtengo wapatali / Wamphamvu Kwambiri';
+
+  @override
+  String get asmaMeaning9 => 'Wokakamiza';
+
+  @override
+  String get asmaMeaning10 => 'Chachikulu Kwambiri';
+
+  @override
+  String get asmaMeaning11 => 'Mlengi';
+
+  @override
+  String get asmaMeaning12 => 'Wopanga Dongosolo';
+
+  @override
+  String get asmaMeaning13 => 'Wojambula Wokongola';
+
+  @override
+  String get asmaMeaning14 => 'Wokhululuka';
+
+  @override
+  String get asmaMeaning15 => 'Wogonjera';
+
+  @override
+  String get asmaMeaning16 => 'Wopereka Zonse';
+
+  @override
+  String get asmaMeaning17 => 'Wothandizira';
+
+  @override
+  String get asmaMeaning18 => 'Chotsegulira';
+
+  @override
+  String get asmaMeaning19 => 'Wodziwa Zonse';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Wopulumutsa';
+
+  @override
+  String get asmaMeaning22 => 'Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Wokweza';
+
+  @override
+  String get asmaMeaning24 => 'Wopereka Ulemu';
+
+  @override
+  String get asmaMeaning25 => 'Wonyozeka';
+
+  @override
+  String get asmaMeaning26 => 'Wakumva Zonse';
+
+  @override
+  String get asmaMeaning27 => 'Wowona Zonse';
+
+  @override
+  String get asmaMeaning28 => 'Woweruza';
+
+  @override
+  String get asmaMeaning29 => 'Olungama';
+
+  @override
+  String get asmaMeaning30 => 'Wochenjera';
+
+  @override
+  String get asmaMeaning31 => 'Onse Akudziwa';
+
+  @override
+  String get asmaMeaning32 => 'Wotsogolera';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'Wokhululukira Wamkulu';
+
+  @override
+  String get asmaMeaning35 => 'Wopereka mphoto Yachiyamiko';
+
+  @override
+  String get asmaMeaning36 => 'Chapamwamba';
+
+  @override
+  String get asmaMeaning37 => 'Chachikulu Kwambiri';
+
+  @override
+  String get asmaMeaning38 => 'Wosungira';
+
+  @override
+  String get asmaMeaning39 => 'Wopatsa';
+
+  @override
+  String get asmaMeaning40 => 'Wowerengera';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Wowolowa manja';
+
+  @override
+  String get asmaMeaning43 => 'Woyang\'anira';
+
+  @override
+  String get asmaMeaning44 => 'Kuyankha Pemphero';
+
+  @override
+  String get asmaMeaning45 => 'Kumvetsetsa Zonse';
+
+  @override
+  String get asmaMeaning46 => 'Wanzeru Kwambiri';
+
+  @override
+  String get asmaMeaning47 => 'Wokondedwa';
+
+  @override
+  String get asmaMeaning48 => 'Wolemekezeka Kwambiri';
+
+  @override
+  String get asmaMeaning49 => 'Woukitsa';
+
+  @override
+  String get asmaMeaning50 => 'Mboni';
+
+  @override
+  String get asmaMeaning51 => 'Choonadi';
+
+  @override
+  String get asmaMeaning52 => 'Trasti Wokwanira Zonse';
+
+  @override
+  String get asmaMeaning53 => 'Mwini Mphamvu Zonse';
+
+  @override
+  String get asmaMeaning54 => 'Wamphamvu';
+
+  @override
+  String get asmaMeaning55 => 'Mtetezi';
+
+  @override
+  String get asmaMeaning56 => 'Oyamika';
+
+  @override
+  String get asmaMeaning57 => 'Woyesa';
+
+  @override
+  String get asmaMeaning58 => 'Woyambitsa';
+
+  @override
+  String get asmaMeaning59 => 'Wobwezeretsa';
+
+  @override
+  String get asmaMeaning60 => 'Wopereka Moyo';
+
+  @override
+  String get asmaMeaning61 => 'Wotenga Moyo';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Wodzisamalira Wekha';
+
+  @override
+  String get asmaMeaning64 => 'Wopeza';
+
+  @override
+  String get asmaMeaning65 => 'Wolemekezeka';
+
+  @override
+  String get asmaMeaning66 => 'Mmodzi Yekhayo';
+
+  @override
+  String get asmaMeaning67 => 'Mmodziyo';
+
+  @override
+  String get asmaMeaning68 => 'Yofunidwa Ndi Onse';
+
+  @override
+  String get asmaMeaning69 => 'Wamphamvu';
+
+  @override
+  String get asmaMeaning70 => 'Mlengi wa mphamvu zonse';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Wochedwa';
+
+  @override
+  String get asmaMeaning73 => 'Choyamba';
+
+  @override
+  String get asmaMeaning74 => 'Otsiriza';
+
+  @override
+  String get asmaMeaning75 => 'Chiwonetsero';
+
+  @override
+  String get asmaMeaning76 => 'Zobisika';
+
+  @override
+  String get asmaMeaning77 => 'Bwanamkubwa';
+
+  @override
+  String get asmaMeaning78 => 'Wam\'mwambamwamba';
+
+  @override
+  String get asmaMeaning79 => 'Wochita Zabwino';
+
+  @override
+  String get asmaMeaning80 => 'Buku la Kulapa';
+
+  @override
+  String get asmaMeaning81 => 'Wobwezera';
+
+  @override
+  String get asmaMeaning82 => 'Wokhululuka';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Mwini / Wolamulira wa Zonse';
+
+  @override
+  String get asmaMeaning85 => 'Mwini Ukulu ndi Ubwino';
+
+  @override
+  String get asmaMeaning86 => 'Wofanana';
+
+  @override
+  String get asmaMeaning87 => 'Wosonkhanitsa';
+
+  @override
+  String get asmaMeaning88 => 'Wolemera';
+
+  @override
+  String get asmaMeaning89 => 'Wolemeretsa';
+
+  @override
+  String get asmaMeaning90 => 'Woteteza Zowopsa';
+
+  @override
+  String get asmaMeaning91 => 'Wobweretsa Zowopsa';
+
+  @override
+  String get asmaMeaning92 => 'Wopereka Zopindulitsa';
+
+  @override
+  String get asmaMeaning93 => 'Kuwala';
+
+  @override
+  String get asmaMeaning94 => 'Wotsogolera';
+
+  @override
+  String get asmaMeaning95 => 'Woyambitsa';
+
+  @override
+  String get asmaMeaning96 => 'Wosatha';
+
+  @override
+  String get asmaMeaning97 => 'Wolowa';
+
+  @override
+  String get asmaMeaning98 => 'Kalozera Wachilungamo';
+
+  @override
+  String get asmaMeaning99 => 'Wodwala';
 }

@@ -1187,4 +1187,301 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Wurin Musulunci';
+
+  @override
+  String get asmaMeaning1 => 'Mai Amfani';
+
+  @override
+  String get asmaMeaning2 => 'Mai rahama';
+
+  @override
+  String get asmaMeaning3 => 'Sarki /Ubangiji Madawwami';
+
+  @override
+  String get asmaMeaning4 => 'Mafi Tsarki';
+
+  @override
+  String get asmaMeaning5 => 'Tsohon Aminci';
+
+  @override
+  String get asmaMeaning6 => 'Mai Bada Tsaro';
+
+  @override
+  String get asmaMeaning7 => 'Mai gadi';
+
+  @override
+  String get asmaMeaning8 => 'Mai daraja/Mafi Girma';
+
+  @override
+  String get asmaMeaning9 => 'Mai Taimakawa';
+
+  @override
+  String get asmaMeaning10 => 'Mafi Girma';
+
+  @override
+  String get asmaMeaning11 => 'Mahalicci';
+
+  @override
+  String get asmaMeaning12 => 'Mai yin oda';
+
+  @override
+  String get asmaMeaning13 => 'Mai Siffar Kyau';
+
+  @override
+  String get asmaMeaning14 => 'Gafara';
+
+  @override
+  String get asmaMeaning15 => 'Mai Tausayi';
+
+  @override
+  String get asmaMeaning16 => 'Mai Bada Duka';
+
+  @override
+  String get asmaMeaning17 => 'Mai Dorewa';
+
+  @override
+  String get asmaMeaning18 => 'Mabudin';
+
+  @override
+  String get asmaMeaning19 => 'Masanin Kowa';
+
+  @override
+  String get asmaMeaning20 => 'Mai Taimakawa';
+
+  @override
+  String get asmaMeaning21 => 'Mai Taimako';
+
+  @override
+  String get asmaMeaning22 => 'Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Maxaukakin Sarki';
+
+  @override
+  String get asmaMeaning24 => 'Mai Girmamawa';
+
+  @override
+  String get asmaMeaning25 => 'Mai wulakanci';
+
+  @override
+  String get asmaMeaning26 => 'Mai Ji Duka';
+
+  @override
+  String get asmaMeaning27 => 'Mai Gani Duka';
+
+  @override
+  String get asmaMeaning28 => 'Alkali';
+
+  @override
+  String get asmaMeaning29 => 'Adalci';
+
+  @override
+  String get asmaMeaning30 => 'Mai Tausayi';
+
+  @override
+  String get asmaMeaning31 => 'Dukkan Sani';
+
+  @override
+  String get asmaMeaning32 => 'Mai Gabatarwa';
+
+  @override
+  String get asmaMeaning33 => 'Mai Girma';
+
+  @override
+  String get asmaMeaning34 => 'Babban Gafara';
+
+  @override
+  String get asmaMeaning35 => 'Mai Ladan Godiya';
+
+  @override
+  String get asmaMeaning36 => 'Mafi Girma';
+
+  @override
+  String get asmaMeaning37 => 'Mafi Girma';
+
+  @override
+  String get asmaMeaning38 => 'Mai kiyayewa';
+
+  @override
+  String get asmaMeaning39 => 'Mai ciyarwa';
+
+  @override
+  String get asmaMeaning40 => 'Mai hisabi';
+
+  @override
+  String get asmaMeaning41 => 'Mai Girma';
+
+  @override
+  String get asmaMeaning42 => 'Mai Karimci';
+
+  @override
+  String get asmaMeaning43 => 'Mai Kallon';
+
+  @override
+  String get asmaMeaning44 => 'Mai Amsa Addu\'a';
+
+  @override
+  String get asmaMeaning45 => 'Dukkan Fahimta';
+
+  @override
+  String get asmaMeaning46 => 'Mai Hikima';
+
+  @override
+  String get asmaMeaning47 => 'Mai Soyayya';
+
+  @override
+  String get asmaMeaning48 => 'Mafi daukaka';
+
+  @override
+  String get asmaMeaning49 => 'Mai Tashi';
+
+  @override
+  String get asmaMeaning50 => 'Shaidan';
+
+  @override
+  String get asmaMeaning51 => 'Gaskiya';
+
+  @override
+  String get asmaMeaning52 => 'Mai wadatar amintattu';
+
+  @override
+  String get asmaMeaning53 => 'Ma\'abucin Qarfi';
+
+  @override
+  String get asmaMeaning54 => 'Mai Karfi';
+
+  @override
+  String get asmaMeaning55 => 'Mai tsaro';
+
+  @override
+  String get asmaMeaning56 => 'Abin Yabo';
+
+  @override
+  String get asmaMeaning57 => 'Mai tantancewa';
+
+  @override
+  String get asmaMeaning58 => 'Mafari';
+
+  @override
+  String get asmaMeaning59 => 'Mai Maidawa';
+
+  @override
+  String get asmaMeaning60 => 'Mai Rayuwa';
+
+  @override
+  String get asmaMeaning61 => 'Mai daukar Rayuwa';
+
+  @override
+  String get asmaMeaning62 => 'Mai Rayuwa';
+
+  @override
+  String get asmaMeaning63 => 'Mai Dogara da Kai';
+
+  @override
+  String get asmaMeaning64 => 'Mai Neman';
+
+  @override
+  String get asmaMeaning65 => 'Mai daukaka';
+
+  @override
+  String get asmaMeaning66 => 'Daya Kadai';
+
+  @override
+  String get asmaMeaning67 => 'Daya';
+
+  @override
+  String get asmaMeaning68 => 'Wanda Kowa Yake Nemansa';
+
+  @override
+  String get asmaMeaning69 => 'Mai karfi';
+
+  @override
+  String get asmaMeaning70 => 'Mai halicci dukkan iko';
+
+  @override
+  String get asmaMeaning71 => 'Mai Bugawa';
+
+  @override
+  String get asmaMeaning72 => 'Mai jinkirtawa';
+
+  @override
+  String get asmaMeaning73 => 'Na Farko';
+
+  @override
+  String get asmaMeaning74 => 'Na Karshe';
+
+  @override
+  String get asmaMeaning75 => 'Bayanai';
+
+  @override
+  String get asmaMeaning76 => 'Mai Boye';
+
+  @override
+  String get asmaMeaning77 => 'Gwamnan';
+
+  @override
+  String get asmaMeaning78 => 'Mafi Girma';
+
+  @override
+  String get asmaMeaning79 => 'Mai aikata Alheri';
+
+  @override
+  String get asmaMeaning80 => 'Jagorar Tuba';
+
+  @override
+  String get asmaMeaning81 => 'Mai daukar fansa';
+
+  @override
+  String get asmaMeaning82 => 'Mai Gafara';
+
+  @override
+  String get asmaMeaning83 => 'Clement';
+
+  @override
+  String get asmaMeaning84 => 'Mallakin/Mallakin Duka';
+
+  @override
+  String get asmaMeaning85 => 'Ma\'abucin girma da falala';
+
+  @override
+  String get asmaMeaning86 => 'Mai Adalci';
+
+  @override
+  String get asmaMeaning87 => 'Mai Taruwa';
+
+  @override
+  String get asmaMeaning88 => 'Mawadaci';
+
+  @override
+  String get asmaMeaning89 => 'Mai wadatar';
+
+  @override
+  String get asmaMeaning90 => 'Mai Rigakafin cutarwa';
+
+  @override
+  String get asmaMeaning91 => 'Mai Kawowa';
+
+  @override
+  String get asmaMeaning92 => 'Mai Bayar da Amfani';
+
+  @override
+  String get asmaMeaning93 => 'Haske';
+
+  @override
+  String get asmaMeaning94 => 'Mai Jagora';
+
+  @override
+  String get asmaMeaning95 => 'Mafari';
+
+  @override
+  String get asmaMeaning96 => 'Mai Dawwama';
+
+  @override
+  String get asmaMeaning97 => 'Magado';
+
+  @override
+  String get asmaMeaning98 => 'Mafi Adalci Jagora';
+
+  @override
+  String get asmaMeaning99 => 'Mai haƙuri';
 }

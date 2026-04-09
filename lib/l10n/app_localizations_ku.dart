@@ -1186,4 +1186,301 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Cihê Îslamî';
+
+  @override
+  String get asmaMeaning1 => 'Beneficent';
+
+  @override
+  String get asmaMeaning2 => 'Mihrîvan';
+
+  @override
+  String get asmaMeaning3 => 'Padîşah / Xudanê Herheyî';
+
+  @override
+  String get asmaMeaning4 => 'Pîroz';
+
+  @override
+  String get asmaMeaning5 => 'Çavkaniya Aştiyê';
+
+  @override
+  String get asmaMeaning6 => 'Derkerê Ewlekariyê';
+
+  @override
+  String get asmaMeaning7 => 'Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Yê Bihagiran / Ya Herî Bihêz';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Ya herî mezin';
+
+  @override
+  String get asmaMeaning11 => 'Afirînerê';
+
+  @override
+  String get asmaMeaning12 => 'Çêkerê Order';
+
+  @override
+  String get asmaMeaning13 => 'The Shaper of Beauty';
+
+  @override
+  String get asmaMeaning14 => 'The Forgiving';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Derdarê Hemûyan';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'Vekirî';
+
+  @override
+  String get asmaMeaning19 => 'Azanê Hemî';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'The Reliever';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'Berdestê Rûmetê';
+
+  @override
+  String get asmaMeaning25 => 'Hemlîator';
+
+  @override
+  String get asmaMeaning26 => 'Guhdêrê Hemûyan';
+
+  @override
+  String get asmaMeaning27 => 'Dînêrê Hemî';
+
+  @override
+  String get asmaMeaning28 => 'Dadwer';
+
+  @override
+  String get asmaMeaning29 => 'The Just';
+
+  @override
+  String get asmaMeaning30 => 'Yê Nazik';
+
+  @override
+  String get asmaMeaning31 => 'Hemû Aware';
+
+  @override
+  String get asmaMeaning32 => 'Pêşî';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'Bexşandina Mezin';
+
+  @override
+  String get asmaMeaning35 => 'Xelatdarê Spasdariyê';
+
+  @override
+  String get asmaMeaning36 => 'Ya herî bilind';
+
+  @override
+  String get asmaMeaning37 => 'Ya herî mezin';
+
+  @override
+  String get asmaMeaning38 => 'Parastin';
+
+  @override
+  String get asmaMeaning39 => 'The Nourisher';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'The Generous';
+
+  @override
+  String get asmaMeaning43 => 'The Watchful One';
+
+  @override
+  String get asmaMeaning44 => 'Bersiva Duayê';
+
+  @override
+  String get asmaMeaning45 => 'Hemû Têgihîştinê';
+
+  @override
+  String get asmaMeaning46 => 'The Perfectly Wise';
+
+  @override
+  String get asmaMeaning47 => 'Yê Evîndar';
+
+  @override
+  String get asmaMeaning48 => 'Yê Herî Birûmet';
+
+  @override
+  String get asmaMeaning49 => 'Resurrector';
+
+  @override
+  String get asmaMeaning50 => 'Şahid';
+
+  @override
+  String get asmaMeaning51 => 'Rastî';
+
+  @override
+  String get asmaMeaning52 => 'Bawermendê Tev-Berê';
+
+  @override
+  String get asmaMeaning53 => 'Xwedanê Hemî Hêzê';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'Parêzkar';
+
+  @override
+  String get asmaMeaning56 => 'Pirsandin';
+
+  @override
+  String get asmaMeaning57 => 'Nirxker';
+
+  @override
+  String get asmaMeaning58 => 'Destpêker';
+
+  @override
+  String get asmaMeaning59 => 'Restorer';
+
+  @override
+  String get asmaMeaning60 => 'Benda Jiyanê';
+
+  @override
+  String get asmaMeaning61 => 'Karkerê Jiyanê';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Pêşkêşê Xweserî';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'Yek tenê';
+
+  @override
+  String get asmaMeaning67 => 'Yek';
+
+  @override
+  String get asmaMeaning68 => 'Yê ku Ji Hemî Digere';
+
+  @override
+  String get asmaMeaning69 => 'Hêzdar';
+
+  @override
+  String get asmaMeaning70 => 'Afirînerê hemû hêzê';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Dereng';
+
+  @override
+  String get asmaMeaning73 => 'Ya yekem';
+
+  @override
+  String get asmaMeaning74 => 'Dawî';
+
+  @override
+  String get asmaMeaning75 => 'Manifest';
+
+  @override
+  String get asmaMeaning76 => 'The Veşartî';
+
+  @override
+  String get asmaMeaning77 => 'Parêzger';
+
+  @override
+  String get asmaMeaning78 => 'Yê Bilind';
+
+  @override
+  String get asmaMeaning79 => 'Karê qenciyê';
+
+  @override
+  String get asmaMeaning80 => 'Rêberê Tobekirinê';
+
+  @override
+  String get asmaMeaning81 => 'Avenger';
+
+  @override
+  String get asmaMeaning82 => 'Bexişandin';
+
+  @override
+  String get asmaMeaning83 => 'Clement';
+
+  @override
+  String get asmaMeaning84 => 'Xwedî / Serwerê Hemî';
+
+  @override
+  String get asmaMeaning85 => 'Xwedîyê Mezinahî û Xêrxwaziyê';
+
+  @override
+  String get asmaMeaning86 => 'Yek Equitable';
+
+  @override
+  String get asmaMeaning87 => 'The Gatherer';
+
+  @override
+  String get asmaMeaning88 => 'Yê Dewlemend';
+
+  @override
+  String get asmaMeaning89 => 'Dewlemendker';
+
+  @override
+  String get asmaMeaning90 => 'Pêşgiriya zirarê';
+
+  @override
+  String get asmaMeaning91 => 'The Bringer of Harm';
+
+  @override
+  String get asmaMeaning92 => 'Benda Feydeyan';
+
+  @override
+  String get asmaMeaning93 => 'Ronahî';
+
+  @override
+  String get asmaMeaning94 => 'Rêber';
+
+  @override
+  String get asmaMeaning95 => 'Destpêker';
+
+  @override
+  String get asmaMeaning96 => 'Yê Herheyî';
+
+  @override
+  String get asmaMeaning97 => 'Miras';
+
+  @override
+  String get asmaMeaning98 => 'Rêberê Herî Rast';
+
+  @override
+  String get asmaMeaning99 => 'Nexweş Yek';
 }

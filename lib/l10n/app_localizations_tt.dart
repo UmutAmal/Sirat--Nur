@@ -1184,4 +1184,301 @@ class AppLocalizationsTt extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Ислам урыны';
+
+  @override
+  String get asmaMeaning1 => 'Хәйрияче';
+
+  @override
+  String get asmaMeaning2 => 'Шәфкатьле';
+
+  @override
+  String get asmaMeaning3 => 'Король / Мәңге Хуҗа';
+
+  @override
+  String get asmaMeaning4 => 'Иң изге';
+
+  @override
+  String get asmaMeaning5 => 'Тынычлык чыганагы';
+
+  @override
+  String get asmaMeaning6 => 'Куркынычсызлык бирүче';
+
+  @override
+  String get asmaMeaning7 => 'Саклаучы';
+
+  @override
+  String get asmaMeaning8 => 'Кыйммәтле / Иң көчле';
+
+  @override
+  String get asmaMeaning9 => 'Сатучы';
+
+  @override
+  String get asmaMeaning10 => 'Иң бөек';
+
+  @override
+  String get asmaMeaning11 => 'Барлыкка Китерүче';
+
+  @override
+  String get asmaMeaning12 => 'Заказ ясаучы';
+
+  @override
+  String get asmaMeaning13 => 'Матурлык';
+
+  @override
+  String get asmaMeaning14 => 'Кичерү';
+
+  @override
+  String get asmaMeaning15 => 'Субдер';
+
+  @override
+  String get asmaMeaning16 => 'Барысын да бирүче';
+
+  @override
+  String get asmaMeaning17 => 'Туктаучы';
+
+  @override
+  String get asmaMeaning18 => 'Ачучы';
+
+  @override
+  String get asmaMeaning19 => 'Барысын да белүче';
+
+  @override
+  String get asmaMeaning20 => 'Конструктор';
+
+  @override
+  String get asmaMeaning21 => 'Коткаручы';
+
+  @override
+  String get asmaMeaning22 => 'Абасер';
+
+  @override
+  String get asmaMeaning23 => 'Күчерүче';
+
+  @override
+  String get asmaMeaning24 => 'Хөрмәт бирүче';
+
+  @override
+  String get asmaMeaning25 => 'Хурлаучы';
+
+  @override
+  String get asmaMeaning26 => 'Барысын да ишетүче';
+
+  @override
+  String get asmaMeaning27 => 'Барысын да күрүче';
+
+  @override
+  String get asmaMeaning28 => 'Судья';
+
+  @override
+  String get asmaMeaning29 => 'Гаделләр';
+
+  @override
+  String get asmaMeaning30 => 'Нечкә';
+
+  @override
+  String get asmaMeaning31 => 'Барысы да беләләр';
+
+  @override
+  String get asmaMeaning32 => '.Әр сүзнең';
+
+  @override
+  String get asmaMeaning33 => 'Магнит';
+
+  @override
+  String get asmaMeaning34 => 'Бөек Кичерүче';
+
+  @override
+  String get asmaMeaning35 => 'Рәхмәт бүләкләүчесе';
+
+  @override
+  String get asmaMeaning36 => 'Иң югары';
+
+  @override
+  String get asmaMeaning37 => 'Иң бөек';
+
+  @override
+  String get asmaMeaning38 => 'Саклаучы';
+
+  @override
+  String get asmaMeaning39 => 'Тукландыручы';
+
+  @override
+  String get asmaMeaning40 => 'Хисапчы';
+
+  @override
+  String get asmaMeaning41 => 'Магистр';
+
+  @override
+  String get asmaMeaning42 => 'Erousмарт';
+
+  @override
+  String get asmaMeaning43 => 'Уяу';
+
+  @override
+  String get asmaMeaning44 => 'Догага җавап бирүче';
+
+  @override
+  String get asmaMeaning45 => 'Барысы да аңлау';
+
+  @override
+  String get asmaMeaning46 => 'Зирәк зирәк';
+
+  @override
+  String get asmaMeaning47 => 'Яратучы';
+
+  @override
+  String get asmaMeaning48 => 'Иң данлы';
+
+  @override
+  String get asmaMeaning49 => 'Терелтүче';
+
+  @override
+  String get asmaMeaning50 => 'Шаһит';
+
+  @override
+  String get asmaMeaning51 => 'Хакыйкать';
+
+  @override
+  String get asmaMeaning52 => 'Ышанычлы попечитель';
+
+  @override
+  String get asmaMeaning53 => 'Барлык көчкә ия';
+
+  @override
+  String get asmaMeaning54 => 'Көчле';
+
+  @override
+  String get asmaMeaning55 => 'Саклаучы';
+
+  @override
+  String get asmaMeaning56 => 'Мактау';
+
+  @override
+  String get asmaMeaning57 => 'Бәяләүче';
+
+  @override
+  String get asmaMeaning58 => 'Башлангыч';
+
+  @override
+  String get asmaMeaning59 => 'Реставрацияләүче';
+
+  @override
+  String get asmaMeaning60 => 'Тормыш бирүче';
+
+  @override
+  String get asmaMeaning61 => 'Тормыш';
+
+  @override
+  String get asmaMeaning62 => 'Мәңге яшәү';
+
+  @override
+  String get asmaMeaning63 => 'Selfз-үзен тәэмин итүче';
+
+  @override
+  String get asmaMeaning64 => 'Табучы';
+
+  @override
+  String get asmaMeaning65 => 'Данлы';
+
+  @override
+  String get asmaMeaning66 => 'Бердәнбер';
+
+  @override
+  String get asmaMeaning67 => 'Бер';
+
+  @override
+  String get asmaMeaning68 => 'Барысы да эзләргә тиеш';
+
+  @override
+  String get asmaMeaning69 => 'Көчле';
+
+  @override
+  String get asmaMeaning70 => 'Барлык көчне Барлыкка Китерүче';
+
+  @override
+  String get asmaMeaning71 => 'Экспедиция';
+
+  @override
+  String get asmaMeaning72 => 'Соңга калу';
+
+  @override
+  String get asmaMeaning73 => 'Беренче';
+
+  @override
+  String get asmaMeaning74 => 'Соңгы';
+
+  @override
+  String get asmaMeaning75 => 'Манифест';
+
+  @override
+  String get asmaMeaning76 => 'Яшерен';
+
+  @override
+  String get asmaMeaning77 => 'Губернатор';
+
+  @override
+  String get asmaMeaning78 => 'Аллаһы Тәгалә';
+
+  @override
+  String get asmaMeaning79 => 'Яхшылык эшләүче';
+
+  @override
+  String get asmaMeaning80 => 'Тәүбә итү өчен кулланма';
+
+  @override
+  String get asmaMeaning81 => 'Venч алучы';
+
+  @override
+  String get asmaMeaning82 => 'Кичерүче';
+
+  @override
+  String get asmaMeaning83 => 'Клемент';
+
+  @override
+  String get asmaMeaning84 => 'Барысы да хуҗасы / суверены';
+
+  @override
+  String get asmaMeaning85 => 'Бөеклек һәм юмартлык иясе';
+
+  @override
+  String get asmaMeaning86 => 'Тигез';
+
+  @override
+  String get asmaMeaning87 => '.Ыючы';
+
+  @override
+  String get asmaMeaning88 => 'Бай';
+
+  @override
+  String get asmaMeaning89 => 'Байлаучы';
+
+  @override
+  String get asmaMeaning90 => 'Зыянны кисәтүче';
+
+  @override
+  String get asmaMeaning91 => 'Зыян китерүче';
+
+  @override
+  String get asmaMeaning92 => 'Файда бирүче';
+
+  @override
+  String get asmaMeaning93 => 'Яктылык';
+
+  @override
+  String get asmaMeaning94 => 'Гид';
+
+  @override
+  String get asmaMeaning95 => 'Башлангыч';
+
+  @override
+  String get asmaMeaning96 => 'Мәңгелек';
+
+  @override
+  String get asmaMeaning97 => 'Мирас';
+
+  @override
+  String get asmaMeaning98 => 'Иң гадел юл күрсәтүче';
+
+  @override
+  String get asmaMeaning99 => 'Пациент';
 }

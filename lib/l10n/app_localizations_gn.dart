@@ -1189,4 +1189,301 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Lugar Islámico rehegua';
+
+  @override
+  String get asmaMeaning1 => 'Pe Beneficioso';
+
+  @override
+  String get asmaMeaning2 => 'Pe Poriahuverekoha';
+
+  @override
+  String get asmaMeaning3 => 'Mburuvicha guasu / Ñandejára opave’ỹva';
+
+  @override
+  String get asmaMeaning4 => 'Pe Imarangatuvéva';
+
+  @override
+  String get asmaMeaning5 => 'Py’aguapy Fuente';
+
+  @override
+  String get asmaMeaning6 => 'Pe Ome’ẽva Seguridad';
+
+  @override
+  String get asmaMeaning7 => 'Pe Guardian-pe';
+
+  @override
+  String get asmaMeaning8 => 'Pe Iprecioso / Pe Ipu’akavéva';
+
+  @override
+  String get asmaMeaning9 => 'Pe Compulsor';
+
+  @override
+  String get asmaMeaning10 => 'Pe Tuichavéva';
+
+  @override
+  String get asmaMeaning11 => 'Pe Apohare';
+
+  @override
+  String get asmaMeaning12 => 'Pe Orden apoha';
+
+  @override
+  String get asmaMeaning13 => 'Pe Mba’eporã Mohendaha';
+
+  @override
+  String get asmaMeaning14 => 'Pe Operdonáva';
+
+  @override
+  String get asmaMeaning15 => 'Pe Poguýpe';
+
+  @override
+  String get asmaMeaning16 => 'Opa mba’e ome’ẽva';
+
+  @override
+  String get asmaMeaning17 => 'Pe Sostenedor';
+
+  @override
+  String get asmaMeaning18 => 'Pe Abridor';
+
+  @override
+  String get asmaMeaning19 => 'Opa mba’e Oikuaáva';
+
+  @override
+  String get asmaMeaning20 => 'Pe Constrictor rehegua';
+
+  @override
+  String get asmaMeaning21 => 'Pe Relevador';
+
+  @override
+  String get asmaMeaning22 => 'Pe Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Pe Exaltor';
+
+  @override
+  String get asmaMeaning24 => 'Pe Ome’ẽva Honor';
+
+  @override
+  String get asmaMeaning25 => 'Pe Momirĩha';
+
+  @override
+  String get asmaMeaning26 => 'Opavave ohendúva';
+
+  @override
+  String get asmaMeaning27 => 'Opa mba’e Ohecháva';
+
+  @override
+  String get asmaMeaning28 => 'Pe Juez';
+
+  @override
+  String get asmaMeaning29 => 'Pe Hekojojáva';
+
+  @override
+  String get asmaMeaning30 => 'Pe Sutil';
+
+  @override
+  String get asmaMeaning31 => 'Umi Opavave Oikuaáva';
+
+  @override
+  String get asmaMeaning32 => 'Pe Tenondegua';
+
+  @override
+  String get asmaMeaning33 => 'Pe Magnífico';
+
+  @override
+  String get asmaMeaning34 => 'Pe Perdonador Guasu';
+
+  @override
+  String get asmaMeaning35 => 'Pe Aguyje Recompensa rehegua';
+
+  @override
+  String get asmaMeaning36 => 'Pe Ijyvatevéva';
+
+  @override
+  String get asmaMeaning37 => 'Pe Tuichavéva';
+
+  @override
+  String get asmaMeaning38 => 'Pe Ñeñongatuha';
+
+  @override
+  String get asmaMeaning39 => 'Pe Alimentador';
+
+  @override
+  String get asmaMeaning40 => 'Pe Contador rehegua';
+
+  @override
+  String get asmaMeaning41 => 'Pe Majestuoso';
+
+  @override
+  String get asmaMeaning42 => 'Umi ipy’aporãva';
+
+  @override
+  String get asmaMeaning43 => 'Pe Oñangarekóva';
+
+  @override
+  String get asmaMeaning44 => 'Pe Ombohováiva Ñembo’e';
+
+  @override
+  String get asmaMeaning45 => 'Pe Opa mba’e Oikuaáva';
+
+  @override
+  String get asmaMeaning46 => 'Umi Iñarandúva Perfectamente';
+
+  @override
+  String get asmaMeaning47 => 'Pe Ohayhúva';
+
+  @override
+  String get asmaMeaning48 => 'Pe Igloriosavéva';
+
+  @override
+  String get asmaMeaning49 => 'Pe Resurrector';
+
+  @override
+  String get asmaMeaning50 => 'Pe Testígo';
+
+  @override
+  String get asmaMeaning51 => 'Pe Añetegua';
+
+  @override
+  String get asmaMeaning52 => 'Pe Fideicomisario Opa mba’e Suficiente';
+
+  @override
+  String get asmaMeaning53 => 'Opaite Mbarete Jára';
+
+  @override
+  String get asmaMeaning54 => 'Umi Mbarete';
+
+  @override
+  String get asmaMeaning55 => 'Pe Ñangarekoha';
+
+  @override
+  String get asmaMeaning56 => 'Umi Ojeguerohorýva';
+
+  @override
+  String get asmaMeaning57 => 'Pe Tasador';
+
+  @override
+  String get asmaMeaning58 => 'Pe Moñepyrũhára';
+
+  @override
+  String get asmaMeaning59 => 'Pe Restaurador';
+
+  @override
+  String get asmaMeaning60 => 'Tekove ome’ẽva';
+
+  @override
+  String get asmaMeaning61 => 'Pe Tekove Oguenohẽva';
+
+  @override
+  String get asmaMeaning62 => 'Umi Oikovéva Siempre';
+
+  @override
+  String get asmaMeaning63 => 'Pe Sostenedor ijeheguiete';
+
+  @override
+  String get asmaMeaning64 => 'Pe Ojuhúva';
+
+  @override
+  String get asmaMeaning65 => 'Umi Glorioso';
+
+  @override
+  String get asmaMeaning66 => 'Pe Peteĩnte';
+
+  @override
+  String get asmaMeaning67 => 'Pe Peteĩva';
+
+  @override
+  String get asmaMeaning68 => 'Pe Ohekáva Opavave';
+
+  @override
+  String get asmaMeaning69 => 'Umi Ipu’akapáva';
+
+  @override
+  String get asmaMeaning70 => 'Opa mba’e pu’aka Apohare';
+
+  @override
+  String get asmaMeaning71 => 'Pe Expedidor rehegua';
+
+  @override
+  String get asmaMeaning72 => 'Pe Retrasador';
+
+  @override
+  String get asmaMeaning73 => 'Pe Primero';
+
+  @override
+  String get asmaMeaning74 => 'Pe Ipahaitéva';
+
+  @override
+  String get asmaMeaning75 => 'Pe Manifiesto rehegua';
+
+  @override
+  String get asmaMeaning76 => 'Pe Okañýva';
+
+  @override
+  String get asmaMeaning77 => 'Mburuvicha Guasu';
+
+  @override
+  String get asmaMeaning78 => 'Pe Ijyvatevéva';
+
+  @override
+  String get asmaMeaning79 => 'Mba’eporã Apoha';
+
+  @override
+  String get asmaMeaning80 => 'Pe Guía arrepentimiento rehegua';
+
+  @override
+  String get asmaMeaning81 => 'Pe Vengador';
+
+  @override
+  String get asmaMeaning82 => 'Pe Operdonáva';
+
+  @override
+  String get asmaMeaning83 => 'Pe Clemente';
+
+  @override
+  String get asmaMeaning84 => 'Opavave Jára / Mburuvicha Guasu';
+
+  @override
+  String get asmaMeaning85 => 'Pe Posesor de Majestad ha Recompensa rehegua';
+
+  @override
+  String get asmaMeaning86 => 'Pe Ijojaha’ỹva';
+
+  @override
+  String get asmaMeaning87 => 'Pe Mbyatyha';
+
+  @override
+  String get asmaMeaning88 => 'Pe Ipirapire hetáva';
+
+  @override
+  String get asmaMeaning89 => 'Pe Enriquecedor';
+
+  @override
+  String get asmaMeaning90 => 'Pe Preventor de Perjuicio rehegua';
+
+  @override
+  String get asmaMeaning91 => 'Pe Ogueruva’ekue Mba’evai';
+
+  @override
+  String get asmaMeaning92 => 'Pe omeʼẽva umi mbaʼe porã';
+
+  @override
+  String get asmaMeaning93 => 'Pe Tesape';
+
+  @override
+  String get asmaMeaning94 => 'Pe Guía';
+
+  @override
+  String get asmaMeaning95 => 'Pe Moñepyrũhára';
+
+  @override
+  String get asmaMeaning96 => 'Pe Ipaveʼỹva';
+
+  @override
+  String get asmaMeaning97 => 'Pe Heredero';
+
+  @override
+  String get asmaMeaning98 => 'Pe Guía Hekojojavéva';
+
+  @override
+  String get asmaMeaning99 => 'Pe Paciente Peteĩva';
 }

@@ -1186,4 +1186,301 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Íslamskur staður';
+
+  @override
+  String get asmaMeaning1 => 'The Beneficent';
+
+  @override
+  String get asmaMeaning2 => 'Hinn miskunnsami';
+
+  @override
+  String get asmaMeaning3 => 'Konungurinn / Eilífi Drottinn';
+
+  @override
+  String get asmaMeaning4 => 'Hið allra heilaga';
+
+  @override
+  String get asmaMeaning5 => 'Uppspretta friðar';
+
+  @override
+  String get asmaMeaning6 => 'Sjávarinn um öryggi';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Hið dýrmæta / hið voldugasta';
+
+  @override
+  String get asmaMeaning9 => 'Þvingarinn';
+
+  @override
+  String get asmaMeaning10 => 'The Greatest';
+
+  @override
+  String get asmaMeaning11 => 'Skaparinn';
+
+  @override
+  String get asmaMeaning12 => 'The Maker of Order';
+
+  @override
+  String get asmaMeaning13 => 'The Shaper of Beauty';
+
+  @override
+  String get asmaMeaning14 => 'Fyrirgefandi';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Gefi allra';
+
+  @override
+  String get asmaMeaning17 => 'Byrgjandinn';
+
+  @override
+  String get asmaMeaning18 => 'Opnarinn';
+
+  @override
+  String get asmaMeaning19 => 'Þekkjandi allra';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'The Reliever';
+
+  @override
+  String get asmaMeaning22 => 'Abaserinn';
+
+  @override
+  String get asmaMeaning23 => 'Exalter';
+
+  @override
+  String get asmaMeaning24 => 'Heiðursgjafinn';
+
+  @override
+  String get asmaMeaning25 => 'Niðurlæginginn';
+
+  @override
+  String get asmaMeaning26 => 'Heyrandi allra';
+
+  @override
+  String get asmaMeaning27 => 'Sjáandi allra';
+
+  @override
+  String get asmaMeaning28 => 'Dómarinn';
+
+  @override
+  String get asmaMeaning29 => 'Hið réttláta';
+
+  @override
+  String get asmaMeaning30 => 'Hinn fíngerði';
+
+  @override
+  String get asmaMeaning31 => 'The All Aware';
+
+  @override
+  String get asmaMeaning32 => 'Fyrirbærinn';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'Hinn mikli fyrirgefandi';
+
+  @override
+  String get asmaMeaning35 => 'Verðlaunamaður þakklætis';
+
+  @override
+  String get asmaMeaning36 => 'Hið hæsta';
+
+  @override
+  String get asmaMeaning37 => 'The Greatest';
+
+  @override
+  String get asmaMeaning38 => 'Varðveitan';
+
+  @override
+  String get asmaMeaning39 => 'Næringin';
+
+  @override
+  String get asmaMeaning40 => 'Reiknarinn';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Hinir örlátu';
+
+  @override
+  String get asmaMeaning43 => 'Hinn vakandi';
+
+  @override
+  String get asmaMeaning44 => 'Bænasvarinn';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehending';
+
+  @override
+  String get asmaMeaning46 => 'Hin fullkomlega vitri';
+
+  @override
+  String get asmaMeaning47 => 'Hinn elskandi';
+
+  @override
+  String get asmaMeaning48 => 'Hið glæsilegasta';
+
+  @override
+  String get asmaMeaning49 => 'Upprisinn';
+
+  @override
+  String get asmaMeaning50 => 'Vitnið';
+
+  @override
+  String get asmaMeaning51 => 'Sannleikurinn';
+
+  @override
+  String get asmaMeaning52 => 'Hinn fullnægjandi fjárvörsluaðili';
+
+  @override
+  String get asmaMeaning53 => 'Eigandi alls styrks';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'Verndarinn';
+
+  @override
+  String get asmaMeaning56 => 'The Praised';
+
+  @override
+  String get asmaMeaning57 => 'Matsmaður';
+
+  @override
+  String get asmaMeaning58 => 'Upphafsmaðurinn';
+
+  @override
+  String get asmaMeaning59 => 'Restorerinn';
+
+  @override
+  String get asmaMeaning60 => 'Lífsgjafi';
+
+  @override
+  String get asmaMeaning61 => 'Takandi lífsins';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Hinn sjálfbæri sjálfbæri';
+
+  @override
+  String get asmaMeaning64 => 'Finnandi';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'Hinn eini';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'Sá sem allir leita að';
+
+  @override
+  String get asmaMeaning69 => 'The öflugur';
+
+  @override
+  String get asmaMeaning70 => 'Skapari alls valds';
+
+  @override
+  String get asmaMeaning71 => 'Framkvæmdastjórinn';
+
+  @override
+  String get asmaMeaning72 => 'Tafurinn';
+
+  @override
+  String get asmaMeaning73 => 'Hið fyrsta';
+
+  @override
+  String get asmaMeaning74 => 'Síðasta';
+
+  @override
+  String get asmaMeaning75 => 'The Manifest';
+
+  @override
+  String get asmaMeaning76 => 'The Hidden';
+
+  @override
+  String get asmaMeaning77 => 'Seðlabankastjóri';
+
+  @override
+  String get asmaMeaning78 => 'Hinn æðsti';
+
+  @override
+  String get asmaMeaning79 => 'Gerandi hins góða';
+
+  @override
+  String get asmaMeaning80 => 'Leiðbeiningar um iðrun';
+
+  @override
+  String get asmaMeaning81 => 'Hefnandinn';
+
+  @override
+  String get asmaMeaning82 => 'Fyrirgjafinn';
+
+  @override
+  String get asmaMeaning83 => 'Klemens';
+
+  @override
+  String get asmaMeaning84 => 'Eigandi / fullveldi allra';
+
+  @override
+  String get asmaMeaning85 => 'Eigandi hátignar og góðvildar';
+
+  @override
+  String get asmaMeaning86 => 'Hinn réttláti';
+
+  @override
+  String get asmaMeaning87 => 'The Gatherer';
+
+  @override
+  String get asmaMeaning88 => 'Ríki';
+
+  @override
+  String get asmaMeaning89 => 'Auðgarinn';
+
+  @override
+  String get asmaMeaning90 => 'Vinnur skaða';
+
+  @override
+  String get asmaMeaning91 => 'The Bringer of Harm';
+
+  @override
+  String get asmaMeaning92 => 'The Gether of Benefits';
+
+  @override
+  String get asmaMeaning93 => 'Ljósið';
+
+  @override
+  String get asmaMeaning94 => 'Leiðsögumaðurinn';
+
+  @override
+  String get asmaMeaning95 => 'Upphafsmaðurinn';
+
+  @override
+  String get asmaMeaning96 => 'Hinn eilífi';
+
+  @override
+  String get asmaMeaning97 => 'Erfinginn';
+
+  @override
+  String get asmaMeaning98 => 'Réttlátasti leiðarvísirinn';
+
+  @override
+  String get asmaMeaning99 => 'The Patient One';
 }

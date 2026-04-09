@@ -112,6 +112,19 @@ void main() {
       expect(find.text('Provider English Meaning'), findsNothing);
     });
 
+    testWidgets('Uses localized bundled fallback meaning when cloud data is absent', (
+      tester,
+    ) async {
+      await tester.pumpWidget(createWidgetUnderTest(locale: const Locale('de')));
+      await tester.pumpAndSettle();
+
+      final context = tester.element(find.byType(AsmaUlHusnaPage));
+      final l10n = AppLocalizations.of(context)!;
+
+      expect(find.text(l10n.asmaMeaning1), findsWidgets);
+      expect(find.text('The Beneficent'), findsNothing);
+    });
+
     testWidgets('Search matches locale-specific cloud translations', (
       tester,
     ) async {
@@ -151,6 +164,22 @@ void main() {
 
       expect(find.text('Al Wudood'), findsOneWidget);
       expect(find.text('Al Hakeem'), findsNothing);
+    });
+
+    testWidgets('Search matches localized bundled fallback meanings', (
+      tester,
+    ) async {
+      await tester.pumpWidget(createWidgetUnderTest(locale: const Locale('de')));
+      await tester.pumpAndSettle();
+
+      final context = tester.element(find.byType(AsmaUlHusnaPage));
+      final l10n = AppLocalizations.of(context)!;
+
+      await tester.enterText(find.byType(TextField), l10n.asmaMeaning1);
+      await tester.pumpAndSettle();
+
+      expect(find.textContaining('Ar Rahmaan', skipOffstage: false), findsWidgets);
+      expect(find.textContaining('Al Malik', skipOffstage: false), findsNothing);
     });
   });
 }

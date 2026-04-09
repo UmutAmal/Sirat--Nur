@@ -1186,4 +1186,301 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Tempat Islami';
+
+  @override
+  String get asmaMeaning1 => 'Nu Maha Welas Asih';
+
+  @override
+  String get asmaMeaning2 => 'Nu Maha Welas Asih';
+
+  @override
+  String get asmaMeaning3 => 'Raja / Gusti nu Langgeng';
+
+  @override
+  String get asmaMeaning4 => 'Nu Maha Suci';
+
+  @override
+  String get asmaMeaning5 => 'Sumber Damai';
+
+  @override
+  String get asmaMeaning6 => 'Nu Maparin Kaamanan';
+
+  @override
+  String get asmaMeaning7 => 'Nu Wali';
+
+  @override
+  String get asmaMeaning8 => 'Nu Maha Asih / Nu Maha Kawasa';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Nu Maha Agung';
+
+  @override
+  String get asmaMeaning11 => 'Nu Nyipta';
+
+  @override
+  String get asmaMeaning12 => 'Nu Ngadamel Tatanan';
+
+  @override
+  String get asmaMeaning13 => 'The Shaper of Beauty';
+
+  @override
+  String get asmaMeaning14 => 'Nu Maha Ngahampura';
+
+  @override
+  String get asmaMeaning15 => 'Nu Nunduk';
+
+  @override
+  String get asmaMeaning16 => 'Nu Maha Kawasa';
+
+  @override
+  String get asmaMeaning17 => 'Nu Ngarojong';
+
+  @override
+  String get asmaMeaning18 => 'The Opener';
+
+  @override
+  String get asmaMeaning19 => 'Nu Maha Uninga';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'The Relief';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Nu Maha Agung';
+
+  @override
+  String get asmaMeaning24 => 'Nu Maha Kawasa';
+
+  @override
+  String get asmaMeaning25 => 'Nu Ngahinakeun';
+
+  @override
+  String get asmaMeaning26 => 'Nu Ngadangukeun Sadayana';
+
+  @override
+  String get asmaMeaning27 => 'Nu Ningali Sadayana';
+
+  @override
+  String get asmaMeaning28 => 'Hakim';
+
+  @override
+  String get asmaMeaning29 => 'Nu Adil';
+
+  @override
+  String get asmaMeaning30 => 'Nu Halus';
+
+  @override
+  String get asmaMeaning31 => 'Nu Sadayana Sadar';
+
+  @override
+  String get asmaMeaning32 => 'Nu Mayunan';
+
+  @override
+  String get asmaMeaning33 => 'Nu Maha Agung';
+
+  @override
+  String get asmaMeaning34 => 'Nu Agung Panghampura';
+
+  @override
+  String get asmaMeaning35 => 'Nu ngabales Syukur';
+
+  @override
+  String get asmaMeaning36 => 'Nu Pangluhurna';
+
+  @override
+  String get asmaMeaning37 => 'Nu Maha Agung';
+
+  @override
+  String get asmaMeaning38 => 'Nu Ngajaga';
+
+  @override
+  String get asmaMeaning39 => 'Nu Ngasuh';
+
+  @override
+  String get asmaMeaning40 => 'Nu ngitung';
+
+  @override
+  String get asmaMeaning41 => 'Nu Maha Agung';
+
+  @override
+  String get asmaMeaning42 => 'Nu Berehan';
+
+  @override
+  String get asmaMeaning43 => 'Nu Waspada';
+
+  @override
+  String get asmaMeaning44 => 'Nu Ngawaler Doa';
+
+  @override
+  String get asmaMeaning45 => 'Nu Maha Ngarti';
+
+  @override
+  String get asmaMeaning46 => 'Nu Sampurna Bijaksana';
+
+  @override
+  String get asmaMeaning47 => 'Nu Maha Asih';
+
+  @override
+  String get asmaMeaning48 => 'Nu Maha Suci';
+
+  @override
+  String get asmaMeaning49 => 'Nu Ngahudangkeun deui';
+
+  @override
+  String get asmaMeaning50 => 'Saksi';
+
+  @override
+  String get asmaMeaning51 => 'Kaleresan';
+
+  @override
+  String get asmaMeaning52 => 'Nu Maha Kawasa';
+
+  @override
+  String get asmaMeaning53 => 'Nu Mimiliki Sadaya Kakuatan';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'Nu ngajaga';
+
+  @override
+  String get asmaMeaning56 => 'Nu Dipuji';
+
+  @override
+  String get asmaMeaning57 => 'The Appraiser';
+
+  @override
+  String get asmaMeaning58 => 'The Originator';
+
+  @override
+  String get asmaMeaning59 => 'Nu Pamulihan';
+
+  @override
+  String get asmaMeaning60 => 'Nu Maha Kawasa';
+
+  @override
+  String get asmaMeaning61 => 'Nu Nyebut Hirup';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Nu Mandiri Nu Mandiri';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'Nu Maha Agung';
+
+  @override
+  String get asmaMeaning66 => 'Nu Tunggal';
+
+  @override
+  String get asmaMeaning67 => 'Nu Hiji';
+
+  @override
+  String get asmaMeaning68 => 'Nu Dipilarian ku Sadayana';
+
+  @override
+  String get asmaMeaning69 => 'Nu Kawasa';
+
+  @override
+  String get asmaMeaning70 => 'Nu Nyiptakeun sagala kakawasaan';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Nu Nunda';
+
+  @override
+  String get asmaMeaning73 => 'Kahiji';
+
+  @override
+  String get asmaMeaning74 => 'The Last';
+
+  @override
+  String get asmaMeaning75 => 'The Manifest';
+
+  @override
+  String get asmaMeaning76 => 'Nu Nyumput';
+
+  @override
+  String get asmaMeaning77 => 'Gubernur';
+
+  @override
+  String get asmaMeaning78 => 'Nu Maha Agung';
+
+  @override
+  String get asmaMeaning79 => 'Nu Ngalakukeun Kasaean';
+
+  @override
+  String get asmaMeaning80 => 'Tuntunan Tobat';
+
+  @override
+  String get asmaMeaning81 => 'The Avenger';
+
+  @override
+  String get asmaMeaning82 => 'Nu Maha Ngahampura';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Nu boga / Ngadaulat Sadaya';
+
+  @override
+  String get asmaMeaning85 => 'Nu boga kaagungan jeung karunia';
+
+  @override
+  String get asmaMeaning86 => 'Nu Adil';
+
+  @override
+  String get asmaMeaning87 => 'Nu Ngumpulkeun';
+
+  @override
+  String get asmaMeaning88 => 'Nu Beunghar';
+
+  @override
+  String get asmaMeaning89 => 'Nu Enricher';
+
+  @override
+  String get asmaMeaning90 => 'Nu Nyegah Cilaka';
+
+  @override
+  String get asmaMeaning91 => 'Nu Mawa Cilaka';
+
+  @override
+  String get asmaMeaning92 => 'Maha Nu Maha Kawasa';
+
+  @override
+  String get asmaMeaning93 => 'Nu Caang';
+
+  @override
+  String get asmaMeaning94 => 'The Guider';
+
+  @override
+  String get asmaMeaning95 => 'The Originator';
+
+  @override
+  String get asmaMeaning96 => 'Nu Langgeng';
+
+  @override
+  String get asmaMeaning97 => 'Nu Ngawaris';
+
+  @override
+  String get asmaMeaning98 => 'Nu Maha Adil';
+
+  @override
+  String get asmaMeaning99 => 'Nu Sabar';
 }

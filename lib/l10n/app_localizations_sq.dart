@@ -1189,4 +1189,301 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Vendi Islamik';
+
+  @override
+  String get asmaMeaning1 => 'Beneficenti';
+
+  @override
+  String get asmaMeaning2 => 'I Mëshirshmi';
+
+  @override
+  String get asmaMeaning3 => 'Mbreti / Zoti i Përjetshëm';
+
+  @override
+  String get asmaMeaning4 => 'Më i Shenjti';
+
+  @override
+  String get asmaMeaning5 => 'Burimi i Paqes';
+
+  @override
+  String get asmaMeaning6 => 'Dhuruesi i Sigurisë';
+
+  @override
+  String get asmaMeaning7 => 'Guardian';
+
+  @override
+  String get asmaMeaning8 => 'I Çmuari / Më i Fuqishmi';
+
+  @override
+  String get asmaMeaning9 => 'Detyruesi';
+
+  @override
+  String get asmaMeaning10 => 'Më i madhi';
+
+  @override
+  String get asmaMeaning11 => 'Krijuesi';
+
+  @override
+  String get asmaMeaning12 => 'Bënësi i Rendit';
+
+  @override
+  String get asmaMeaning13 => 'Formuesi i Bukurisë';
+
+  @override
+  String get asmaMeaning14 => 'Falja';
+
+  @override
+  String get asmaMeaning15 => 'Nënshtruesi';
+
+  @override
+  String get asmaMeaning16 => 'Dhuruesi i gjithçkaje';
+
+  @override
+  String get asmaMeaning17 => 'Mbështetësi';
+
+  @override
+  String get asmaMeaning18 => 'Hapësi';
+
+  @override
+  String get asmaMeaning19 => 'Njohësi i të gjithëve';
+
+  @override
+  String get asmaMeaning20 => 'Konstruktori';
+
+  @override
+  String get asmaMeaning21 => 'Lehtësuesi';
+
+  @override
+  String get asmaMeaning22 => 'Abaseri';
+
+  @override
+  String get asmaMeaning23 => 'Eksalteri';
+
+  @override
+  String get asmaMeaning24 => 'Dhuruesi i Nderit';
+
+  @override
+  String get asmaMeaning25 => 'Poshtëruesi';
+
+  @override
+  String get asmaMeaning26 => 'Dëgjuesi i të Gjithëve';
+
+  @override
+  String get asmaMeaning27 => 'Shikuesi i të Gjithëve';
+
+  @override
+  String get asmaMeaning28 => 'Gjyqtari';
+
+  @override
+  String get asmaMeaning29 => 'I drejti';
+
+  @override
+  String get asmaMeaning30 => 'I hollë';
+
+  @override
+  String get asmaMeaning31 => 'Të gjithë të vetëdijshëm';
+
+  @override
+  String get asmaMeaning32 => 'Paraardhësi';
+
+  @override
+  String get asmaMeaning33 => 'I Madhërishmi';
+
+  @override
+  String get asmaMeaning34 => 'Falësi i Madh';
+
+  @override
+  String get asmaMeaning35 => 'Shpërbluesi i Falënderimit';
+
+  @override
+  String get asmaMeaning36 => 'Më i larti';
+
+  @override
+  String get asmaMeaning37 => 'Më i madhi';
+
+  @override
+  String get asmaMeaning38 => 'Rojtari';
+
+  @override
+  String get asmaMeaning39 => 'Ushquesi';
+
+  @override
+  String get asmaMeaning40 => 'Llogaritësi';
+
+  @override
+  String get asmaMeaning41 => 'Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Bujari';
+
+  @override
+  String get asmaMeaning43 => 'Një vigjilent';
+
+  @override
+  String get asmaMeaning44 => 'Përgjigjësi ndaj lutjes';
+
+  @override
+  String get asmaMeaning45 => 'Gjithçka Kuptimi';
+
+  @override
+  String get asmaMeaning46 => 'I mençuri i përkryer';
+
+  @override
+  String get asmaMeaning47 => 'I dashuruari';
+
+  @override
+  String get asmaMeaning48 => 'Më i Lavdishmi';
+
+  @override
+  String get asmaMeaning49 => 'Ringjalltari';
+
+  @override
+  String get asmaMeaning50 => 'Dëshmitari';
+
+  @override
+  String get asmaMeaning51 => 'E vërteta';
+
+  @override
+  String get asmaMeaning52 => 'Administratori i Besuar i Mjaftueshëm';
+
+  @override
+  String get asmaMeaning53 => 'Poseduesi i të gjithë fuqisë';
+
+  @override
+  String get asmaMeaning54 => 'I Forcuari';
+
+  @override
+  String get asmaMeaning55 => 'Mbrojtësi';
+
+  @override
+  String get asmaMeaning56 => 'Të lavdëruarit';
+
+  @override
+  String get asmaMeaning57 => 'Vlerësuesi';
+
+  @override
+  String get asmaMeaning58 => 'Origjinatori';
+
+  @override
+  String get asmaMeaning59 => 'Restauruesi';
+
+  @override
+  String get asmaMeaning60 => 'Dhuruesi i Jetës';
+
+  @override
+  String get asmaMeaning61 => 'Marrësi i jetës';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Mbështetësi i Vetëqëndrueshëm';
+
+  @override
+  String get asmaMeaning64 => 'Gjetësi';
+
+  @override
+  String get asmaMeaning65 => 'I Lavdishmi';
+
+  @override
+  String get asmaMeaning66 => 'I vetmi';
+
+  @override
+  String get asmaMeaning67 => 'I One';
+
+  @override
+  String get asmaMeaning68 => 'Ai që kërkohet nga të gjithë';
+
+  @override
+  String get asmaMeaning69 => 'Të Fuqishmit';
+
+  @override
+  String get asmaMeaning70 => 'Krijuesi i gjithë fuqisë';
+
+  @override
+  String get asmaMeaning71 => 'Përshpejtuesi';
+
+  @override
+  String get asmaMeaning72 => 'Vonesat';
+
+  @override
+  String get asmaMeaning73 => 'I pari';
+
+  @override
+  String get asmaMeaning74 => 'I fundit';
+
+  @override
+  String get asmaMeaning75 => 'Manifesti';
+
+  @override
+  String get asmaMeaning76 => 'E fshehura';
+
+  @override
+  String get asmaMeaning77 => 'Guvernatori';
+
+  @override
+  String get asmaMeaning78 => 'I Lartësuari';
+
+  @override
+  String get asmaMeaning79 => 'Bërësi i së mirës';
+
+  @override
+  String get asmaMeaning80 => 'Udhëzuesi për Pendimin';
+
+  @override
+  String get asmaMeaning81 => 'Avenger';
+
+  @override
+  String get asmaMeaning82 => 'Falësi';
+
+  @override
+  String get asmaMeaning83 => 'Klementi';
+
+  @override
+  String get asmaMeaning84 => 'Pronari / Sovrani i të Gjithëve';
+
+  @override
+  String get asmaMeaning85 => 'Poseduesi i Madhështisë dhe Bujarisë';
+
+  @override
+  String get asmaMeaning86 => 'Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'Mbledhësi';
+
+  @override
+  String get asmaMeaning88 => 'I Pasuri';
+
+  @override
+  String get asmaMeaning89 => 'Pasuruesi';
+
+  @override
+  String get asmaMeaning90 => 'Parandaluesi i dëmtimit';
+
+  @override
+  String get asmaMeaning91 => 'Sjellësi i dëmit';
+
+  @override
+  String get asmaMeaning92 => 'Dhuruesi i përfitimeve';
+
+  @override
+  String get asmaMeaning93 => 'Drita';
+
+  @override
+  String get asmaMeaning94 => 'Udhëzuesi';
+
+  @override
+  String get asmaMeaning95 => 'Origjinatori';
+
+  @override
+  String get asmaMeaning96 => 'I Përjetshmi';
+
+  @override
+  String get asmaMeaning97 => 'Trashëgimtari';
+
+  @override
+  String get asmaMeaning98 => 'Udhëzuesi më i drejtë';
+
+  @override
+  String get asmaMeaning99 => 'Pacienti Një';
 }

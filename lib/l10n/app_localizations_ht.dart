@@ -1185,4 +1185,301 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Kote Islamik';
+
+  @override
+  String get asmaMeaning1 => 'Benefisyan yo';
+
+  @override
+  String get asmaMeaning2 => 'Mizèrikòd la';
+
+  @override
+  String get asmaMeaning3 => 'Wa a / Seyè ki p\'ap janm fini an';
+
+  @override
+  String get asmaMeaning4 => 'Très Sen an';
+
+  @override
+  String get asmaMeaning5 => 'Sous Lapè a';
+
+  @override
+  String get asmaMeaning6 => 'Ki bay sekirite a';
+
+  @override
+  String get asmaMeaning7 => 'Gadyen an';
+
+  @override
+  String get asmaMeaning8 => 'The Precious / The Most Mighty';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Pi gran an';
+
+  @override
+  String get asmaMeaning11 => 'Kreyatè a';
+
+  @override
+  String get asmaMeaning12 => 'Fè Lòd la';
+
+  @override
+  String get asmaMeaning13 => 'Formatè Bote a';
+
+  @override
+  String get asmaMeaning14 => 'The Forgiving';
+
+  @override
+  String get asmaMeaning15 => 'Subduer la';
+
+  @override
+  String get asmaMeaning16 => 'Donateur tout moun';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'Ouvèti a';
+
+  @override
+  String get asmaMeaning19 => 'Konesans Tout moun';
+
+  @override
+  String get asmaMeaning20 => 'Konstriktè a';
+
+  @override
+  String get asmaMeaning21 => 'Sekou a';
+
+  @override
+  String get asmaMeaning22 => 'Abaser la';
+
+  @override
+  String get asmaMeaning23 => 'Exalter la';
+
+  @override
+  String get asmaMeaning24 => 'Donè onè a';
+
+  @override
+  String get asmaMeaning25 => 'Imilyatè a';
+
+  @override
+  String get asmaMeaning26 => 'Ouitè a tout moun';
+
+  @override
+  String get asmaMeaning27 => 'Vyan tout moun';
+
+  @override
+  String get asmaMeaning28 => 'Jij la';
+
+  @override
+  String get asmaMeaning29 => 'Jis la';
+
+  @override
+  String get asmaMeaning30 => 'Yon sibtil la';
+
+  @override
+  String get asmaMeaning31 => 'Tout Konsyan yo';
+
+  @override
+  String get asmaMeaning32 => 'Forebearing la';
+
+  @override
+  String get asmaMeaning33 => 'Mayifik la';
+
+  @override
+  String get asmaMeaning34 => 'Gwo Padon an';
+
+  @override
+  String get asmaMeaning35 => 'Rekonpansè Remèsiman an';
+
+  @override
+  String get asmaMeaning36 => 'Pi wo a';
+
+  @override
+  String get asmaMeaning37 => 'Pi gran an';
+
+  @override
+  String get asmaMeaning38 => 'The Preserver';
+
+  @override
+  String get asmaMeaning39 => 'Nourisè a';
+
+  @override
+  String get asmaMeaning40 => 'Rekonè a';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'The Generous';
+
+  @override
+  String get asmaMeaning43 => 'Veye a';
+
+  @override
+  String get asmaMeaning44 => 'Repons lapriyè a';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehending';
+
+  @override
+  String get asmaMeaning46 => 'The Perfectly Wise';
+
+  @override
+  String get asmaMeaning47 => 'Moun ki renmen an';
+
+  @override
+  String get asmaMeaning48 => 'Moun ki pi glwa';
+
+  @override
+  String get asmaMeaning49 => 'Rezirèksyon an';
+
+  @override
+  String get asmaMeaning50 => 'Temwen an';
+
+  @override
+  String get asmaMeaning51 => 'Verite a';
+
+  @override
+  String get asmaMeaning52 => 'Tout-Suffisan Trustee a';
+
+  @override
+  String get asmaMeaning53 => 'Posede tout fòs';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'Protektè a';
+
+  @override
+  String get asmaMeaning56 => 'Lwanj lan';
+
+  @override
+  String get asmaMeaning57 => 'Evalyatè a';
+
+  @override
+  String get asmaMeaning58 => 'Korijinè a';
+
+  @override
+  String get asmaMeaning59 => 'Restauratè a';
+
+  @override
+  String get asmaMeaning60 => 'Ki bay lavi a';
+
+  @override
+  String get asmaMeaning61 => 'Taker of Life';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Sustainer oto-subsiste';
+
+  @override
+  String get asmaMeaning64 => 'Chèche a';
+
+  @override
+  String get asmaMeaning65 => 'Glorye a';
+
+  @override
+  String get asmaMeaning66 => 'Sèl la';
+
+  @override
+  String get asmaMeaning67 => 'Youn nan';
+
+  @override
+  String get asmaMeaning68 => 'Sa tout moun t\'ap chache a';
+
+  @override
+  String get asmaMeaning69 => 'Pwisan yo';
+
+  @override
+  String get asmaMeaning70 => 'Kreyatè tout pouvwa a';
+
+  @override
+  String get asmaMeaning71 => 'Expediter la';
+
+  @override
+  String get asmaMeaning72 => 'Reta a';
+
+  @override
+  String get asmaMeaning73 => 'Premye a';
+
+  @override
+  String get asmaMeaning74 => 'Dènye a';
+
+  @override
+  String get asmaMeaning75 => 'Manifè a';
+
+  @override
+  String get asmaMeaning76 => 'The Hidden';
+
+  @override
+  String get asmaMeaning77 => 'Gouvènè a';
+
+  @override
+  String get asmaMeaning78 => 'Siprèm nan';
+
+  @override
+  String get asmaMeaning79 => 'Afè bon an';
+
+  @override
+  String get asmaMeaning80 => 'Gid pou Repantans';
+
+  @override
+  String get asmaMeaning81 => 'Vanjè a';
+
+  @override
+  String get asmaMeaning82 => 'The Forgiver';
+
+  @override
+  String get asmaMeaning83 => 'Clement la';
+
+  @override
+  String get asmaMeaning84 => 'Mèt la / Souvren tout moun';
+
+  @override
+  String get asmaMeaning85 => 'Posedetè Monwa ak Bounty';
+
+  @override
+  String get asmaMeaning86 => 'The Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'Rasanbleman an';
+
+  @override
+  String get asmaMeaning88 => 'Rich la';
+
+  @override
+  String get asmaMeaning89 => 'Anrichisè a';
+
+  @override
+  String get asmaMeaning90 => 'Preventer Mal';
+
+  @override
+  String get asmaMeaning91 => 'Pote Mal';
+
+  @override
+  String get asmaMeaning92 => 'Banfè Benefis yo';
+
+  @override
+  String get asmaMeaning93 => 'Limyè a';
+
+  @override
+  String get asmaMeaning94 => 'Gidyan an';
+
+  @override
+  String get asmaMeaning95 => 'Korijinè a';
+
+  @override
+  String get asmaMeaning96 => 'Eternel la';
+
+  @override
+  String get asmaMeaning97 => 'Eritye a';
+
+  @override
+  String get asmaMeaning98 => 'Gid ki pi jis';
+
+  @override
+  String get asmaMeaning99 => 'Pasyan Youn nan';
 }

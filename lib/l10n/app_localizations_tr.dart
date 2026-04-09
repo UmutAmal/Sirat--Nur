@@ -1188,4 +1188,339 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'İslami Mekan';
+
+  @override
+  String get asmaMeaning1 =>
+      'Dünyadaki bütün yaratılmışlara merhamet eden, acıyan, esirgeyen.';
+
+  @override
+  String get asmaMeaning2 =>
+      'Ahirette müminlere sonsuz ihsanda, lütufta ve ikramda bulunan.';
+
+  @override
+  String get asmaMeaning3 =>
+      'Kainatın sahibi, mülk ve saltanatı sürekli olan, hakimiyetin mutlak sahibi.';
+
+  @override
+  String get asmaMeaning4 =>
+      'Her türlü eksiklikten uzak olan, her türlü noksanlıktan münezzeh.';
+
+  @override
+  String get asmaMeaning5 => 'Her tehlikeden selamete çıkaran, esenlik veren.';
+
+  @override
+  String get asmaMeaning6 =>
+      'Güven veren, emin kılan, koruyan, vaadine güvenilen.';
+
+  @override
+  String get asmaMeaning7 =>
+      'Her şeyi görüp gözeten, denetleyen, kâinatın hâkim ve yöneticisi.';
+
+  @override
+  String get asmaMeaning8 =>
+      'İzzet sahibi, her şeye galip olan, mutlak güç sahibi.';
+
+  @override
+  String get asmaMeaning9 =>
+      'Azamet ve kudret sahibi, dilediğini yapan ve yaptıran.';
+
+  @override
+  String get asmaMeaning10 =>
+      'Büyüklükte eşi, benzeri olmayan, azametini gösteren.';
+
+  @override
+  String get asmaMeaning11 =>
+      'Yaratan, yoktan var eden, varlıkların hallerini takdir eden.';
+
+  @override
+  String get asmaMeaning12 => 'Her şeyi kusursuz ve uyumlu yaratan.';
+
+  @override
+  String get asmaMeaning13 =>
+      'Varlıklara şekil veren ve onları birbirinden farklı kılan.';
+
+  @override
+  String get asmaMeaning14 =>
+      'Çok mağfiret eden, daima affeden, günahları bağışlayan.';
+
+  @override
+  String get asmaMeaning15 =>
+      'Her şeye hakim ve galip, yenilmeyen mutlak galip.';
+
+  @override
+  String get asmaMeaning16 => 'Karşılık beklemeden bol bol lütfeden ve veren.';
+
+  @override
+  String get asmaMeaning17 => 'Bedenlerin ve ruhların gıdasını yaratıp veren.';
+
+  @override
+  String get asmaMeaning18 => 'İyilik kapılarını açan, hakemlik yapan.';
+
+  @override
+  String get asmaMeaning19 => 'Her şeyi hakkıyla bilen, her şeyi en iyi bilen.';
+
+  @override
+  String get asmaMeaning20 => 'Dilediğine darlık veren, sıkan, daraltan.';
+
+  @override
+  String get asmaMeaning21 => 'Dilediğine bolluk veren, açan, genişleten.';
+
+  @override
+  String get asmaMeaning22 => 'Alçaltan, aşağı indiren.';
+
+  @override
+  String get asmaMeaning23 => 'Şeref verip yükselten, dilediğini yücelten.';
+
+  @override
+  String get asmaMeaning24 => 'Dilediğini aziz eden, izzet ve şeref veren.';
+
+  @override
+  String get asmaMeaning25 => 'Dilediğini zillete düşüren, alçaltan.';
+
+  @override
+  String get asmaMeaning26 => 'Her şeyi en iyi işiten.';
+
+  @override
+  String get asmaMeaning27 => 'Gizli açık, her şeyi en iyi gören.';
+
+  @override
+  String get asmaMeaning28 =>
+      'Mutlak hakim, hakkı batıldan ayıran, son hükmü veren.';
+
+  @override
+  String get asmaMeaning29 => 'Mutlak adil, çok adaletli, yerli yerinde yapan.';
+
+  @override
+  String get asmaMeaning30 => 'Lütuf ve ihsan sahibi, bütün incelikleri bilen.';
+
+  @override
+  String get asmaMeaning31 =>
+      'Olmuş olacak her şeyin iç yüzünden haberdar olan.';
+
+  @override
+  String get asmaMeaning32 =>
+      'Cezada acele etmeyen, yumuşak davranan, hilm sahibi.';
+
+  @override
+  String get asmaMeaning33 =>
+      'Pek yüce, zat ve sıfatlarının mahiyeti anlaşılamayacak kadar yüce.';
+
+  @override
+  String get asmaMeaning34 =>
+      'Affı, mağfireti bol, bütün günahları bağışlayan.';
+
+  @override
+  String get asmaMeaning35 =>
+      'Az amele, çok sevap veren, şükürleri kabul eden.';
+
+  @override
+  String get asmaMeaning36 => 'Yüceler yücesi, çok yüce.';
+
+  @override
+  String get asmaMeaning37 => 'Büyüklükte benzeri olmayan, pek büyük.';
+
+  @override
+  String get asmaMeaning38 => 'Her şeyi koruyucu olan, koruyup gözeten.';
+
+  @override
+  String get asmaMeaning39 =>
+      'Her yaratılmışın rızkını, gıdasını veren ve tayin eden.';
+
+  @override
+  String get asmaMeaning40 => 'Kulların hesabını en iyi gören.';
+
+  @override
+  String get asmaMeaning41 => 'Celal ve azamet sahibi olan.';
+
+  @override
+  String get asmaMeaning42 => 'Keremi, lütuf ve ihsanı bol, çok ikram eden.';
+
+  @override
+  String get asmaMeaning43 =>
+      'Her varlığı her an görüp gözeten, kontrolü altında tutan.';
+
+  @override
+  String get asmaMeaning44 => 'Duaları, istekleri kabul eden.';
+
+  @override
+  String get asmaMeaning45 => 'İlmi ve rahmeti her şeyi kuşatan.';
+
+  @override
+  String get asmaMeaning46 => 'Her işi hikmetli, her şeyi hikmetle yaratan.';
+
+  @override
+  String get asmaMeaning47 =>
+      'Kullarını en fazla seven, sevilmeye en layık olan.';
+
+  @override
+  String get asmaMeaning48 => 'Her türlü övgüye layık, kadri ve şânı büyük.';
+
+  @override
+  String get asmaMeaning49 => 'Ölüleri dirilten, peygamber gönderen.';
+
+  @override
+  String get asmaMeaning50 => 'Her zaman her yerde hazır ve nazır olan.';
+
+  @override
+  String get asmaMeaning51 =>
+      'Varlığı hiç değişmeden duran, var olan, hakkı ortaya çıkaran.';
+
+  @override
+  String get asmaMeaning52 =>
+      'Kendisine tevekkül edenlerin işlerini en iyi sonuçlandıran.';
+
+  @override
+  String get asmaMeaning53 => 'Kudreti en üstün ve hiç azalmaz olan.';
+
+  @override
+  String get asmaMeaning54 => 'Kuvvet ve kudret kaynağı, pek güçlü.';
+
+  @override
+  String get asmaMeaning55 => 'Dost ve yardımcı olan.';
+
+  @override
+  String get asmaMeaning56 => 'Her türlü övgüye, hamd ve senaya layık olan.';
+
+  @override
+  String get asmaMeaning57 =>
+      'Her şeyin sayısını bilen, her şeyi tek tek sayan.';
+
+  @override
+  String get asmaMeaning58 =>
+      'Yarattıklarını maddesiz ve modelsiz olarak ilk baştan yaratan.';
+
+  @override
+  String get asmaMeaning59 =>
+      'Yarattıklarını yok edip, sonra tekrar diriltecek olan.';
+
+  @override
+  String get asmaMeaning60 => 'İhya eden, dirilten, can veren.';
+
+  @override
+  String get asmaMeaning61 => 'Her canlıya ölümü tattıran.';
+
+  @override
+  String get asmaMeaning62 => 'Ezeli ve ebedi hayat sahibi, daima diri olan.';
+
+  @override
+  String get asmaMeaning63 => 'Varlıkları diri tutan, zatı ile kaim olan.';
+
+  @override
+  String get asmaMeaning64 =>
+      'İstediğini, istediği vakit bulan, hiçbir şeye muhtaç olmayan.';
+
+  @override
+  String get asmaMeaning65 => 'Kadri ve şanı büyük, keremi, ihsanı bol olan.';
+
+  @override
+  String get asmaMeaning66 =>
+      'Zat, sıfat ve fiillerinde ortağı olmayan, tek olan.';
+
+  @override
+  String get asmaMeaning67 => 'Zatında tek olan (Vahidin pekiştirilmiş hali).';
+
+  @override
+  String get asmaMeaning68 =>
+      'Hiçbir şeye ihtiyacı olmayan, herkesin muhtaç olduğu merci.';
+
+  @override
+  String get asmaMeaning69 =>
+      'Dilediğini dilediği gibi yaratmaya muktedir olan.';
+
+  @override
+  String get asmaMeaning70 =>
+      'Dilediği gibi tasarruf eden, her şeye gücü yeten.';
+
+  @override
+  String get asmaMeaning71 => 'Dilediğini öne alan, yükselten.';
+
+  @override
+  String get asmaMeaning72 =>
+      'Dilediğini sona alan, erteleyen, geriye bırakan.';
+
+  @override
+  String get asmaMeaning73 => 'Ezeli olan, varlığının başlangıcı olmayan.';
+
+  @override
+  String get asmaMeaning74 => 'Ebedi olan, varlığının sonu olmayan.';
+
+  @override
+  String get asmaMeaning75 =>
+      'Varlığı açık, aşikar olan, kesin delillerle bilinen.';
+
+  @override
+  String get asmaMeaning76 =>
+      'Akılların idrak edemeyeceği yüceliği gizli olan.';
+
+  @override
+  String get asmaMeaning77 => 'Bütün kainatı idare eden.';
+
+  @override
+  String get asmaMeaning78 => 'Son derece yüce olan.';
+
+  @override
+  String get asmaMeaning79 => 'İyilik ve ihsanı bol, iyilik kaynağı.';
+
+  @override
+  String get asmaMeaning80 => 'Tevbeleri kabul edip, günahları bağışlayan.';
+
+  @override
+  String get asmaMeaning81 => 'Zalimlerin cezasını veren, intikam alan.';
+
+  @override
+  String get asmaMeaning82 => 'Affı çok olan, günahları silen.';
+
+  @override
+  String get asmaMeaning83 => 'Çok merhametli, pek şefkatli.';
+
+  @override
+  String get asmaMeaning84 => 'Mülkün, her varlığın asıl sahibi.';
+
+  @override
+  String get asmaMeaning85 => 'Celal, azamet ve pek büyük ikram sahibi.';
+
+  @override
+  String get asmaMeaning86 =>
+      'Her işi birbirine uygun yapan, adaletle hükmeden.';
+
+  @override
+  String get asmaMeaning87 => 'Mahşerde mahlükatı bir araya toplayan.';
+
+  @override
+  String get asmaMeaning88 => 'İhtiyaçsız, hiç kimseye muhtaç olmayan.';
+
+  @override
+  String get asmaMeaning89 => 'İhtiyaç gideren, zengin eden.';
+
+  @override
+  String get asmaMeaning90 => 'Dilemediği şeye mani olan, engelleyen.';
+
+  @override
+  String get asmaMeaning91 =>
+      'Elem ve zarar verenleri yaratan, dilediğine zarar veren.';
+
+  @override
+  String get asmaMeaning92 =>
+      'Fayda veren şeyleri yaratan, dilediğine fayda veren.';
+
+  @override
+  String get asmaMeaning93 => 'Âlemleri nurlandıran, dilediğine nur veren.';
+
+  @override
+  String get asmaMeaning94 => 'Hidayet veren, doğru yola ileten.';
+
+  @override
+  String get asmaMeaning95 => 'Örneksiz, hayret verici harikalar yaratan.';
+
+  @override
+  String get asmaMeaning96 => 'Varlığının sonu olmayan, ebedi olan.';
+
+  @override
+  String get asmaMeaning97 => 'Her şeyin asıl sahibi ve varisi olan.';
+
+  @override
+  String get asmaMeaning98 => 'Doğru yolu gösteren, irşad eden.';
+
+  @override
+  String get asmaMeaning99 => 'Cezada acele etmeyen, sabırlı olan.';
 }

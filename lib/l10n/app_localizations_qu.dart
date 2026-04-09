@@ -1191,4 +1191,301 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islamic Lugar';
+
+  @override
+  String get asmaMeaning1 => 'Allin sunquyuq';
+
+  @override
+  String get asmaMeaning2 => 'Khuyapayakuq';
+
+  @override
+  String get asmaMeaning3 => 'Rey / Wiñay Wiñay Apu';
+
+  @override
+  String get asmaMeaning4 => 'Ancha Ch\'uya';
+
+  @override
+  String get asmaMeaning5 => 'Hawka Kawsaypa Pukyu';
+
+  @override
+  String get asmaMeaning6 => 'Seguridad nisqa qoq';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian nisqa qelqa';
+
+  @override
+  String get asmaMeaning8 => 'El Valor / Aswan atiyniyuq';
+
+  @override
+  String get asmaMeaning9 => 'Chay Tantachiq';
+
+  @override
+  String get asmaMeaning10 => 'Aswan Hatun';
+
+  @override
+  String get asmaMeaning11 => 'Kamaq';
+
+  @override
+  String get asmaMeaning12 => 'Orden Ruraq';
+
+  @override
+  String get asmaMeaning13 => 'Sumaq kay Ruwaq';
+
+  @override
+  String get asmaMeaning14 => 'Pampachaq';
+
+  @override
+  String get asmaMeaning15 => 'Chay Subdominante nisqa';
+
+  @override
+  String get asmaMeaning16 => 'Tukuypa Quq';
+
+  @override
+  String get asmaMeaning17 => 'El Sostenedor';
+
+  @override
+  String get asmaMeaning18 => 'Kichariq';
+
+  @override
+  String get asmaMeaning19 => 'Tukuy Yachaq';
+
+  @override
+  String get asmaMeaning20 => 'Chay Constrictor nisqa';
+
+  @override
+  String get asmaMeaning21 => 'Chay Relevador nisqa';
+
+  @override
+  String get asmaMeaning22 => 'Chay Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Hatun Kamachiq';
+
+  @override
+  String get asmaMeaning24 => 'Honor qoq runa';
+
+  @override
+  String get asmaMeaning25 => 'Humilador nisqa';
+
+  @override
+  String get asmaMeaning26 => 'Tukuypa Uyariq';
+
+  @override
+  String get asmaMeaning27 => 'Tukuy Rikuq';
+
+  @override
+  String get asmaMeaning28 => 'Juez';
+
+  @override
+  String get asmaMeaning29 => 'El Justo';
+
+  @override
+  String get asmaMeaning30 => 'El Subtil';
+
+  @override
+  String get asmaMeaning31 => 'Tukuy Yachaq';
+
+  @override
+  String get asmaMeaning32 => 'Ñawpa tayta-mamayoq';
+
+  @override
+  String get asmaMeaning33 => 'El Magnífico';
+
+  @override
+  String get asmaMeaning34 => 'Hatun Pampachaq';
+
+  @override
+  String get asmaMeaning35 => 'Agradecekuymanta Premiador';
+
+  @override
+  String get asmaMeaning36 => 'Aswan Alto kaq';
+
+  @override
+  String get asmaMeaning37 => 'Aswan Hatun';
+
+  @override
+  String get asmaMeaning38 => 'Chay Waqaychaq';
+
+  @override
+  String get asmaMeaning39 => 'El Nutridor';
+
+  @override
+  String get asmaMeaning40 => 'Chay Contador nisqa';
+
+  @override
+  String get asmaMeaning41 => 'El Majestuoso nisqa';
+
+  @override
+  String get asmaMeaning42 => 'Chay Qukuykuq';
+
+  @override
+  String get asmaMeaning43 => 'Rikch’akuq runa';
+
+  @override
+  String get asmaMeaning44 => 'Mañakuyman kutichiq';
+
+  @override
+  String get asmaMeaning45 => 'Tukuy Hamut’aq';
+
+  @override
+  String get asmaMeaning46 => 'Perfectamente Yachaysapakuna';
+
+  @override
+  String get asmaMeaning47 => 'Munakuq';
+
+  @override
+  String get asmaMeaning48 => 'Aswan Gloria kaq';
+
+  @override
+  String get asmaMeaning49 => 'Kawsarimpuq';
+
+  @override
+  String get asmaMeaning50 => 'Chay Testigo';
+
+  @override
+  String get asmaMeaning51 => 'Chiqap kaq';
+
+  @override
+  String get asmaMeaning52 => 'Tukuy imayuq Fideicomisario';
+
+  @override
+  String get asmaMeaning53 => 'Tukuy Kallpayuq';
+
+  @override
+  String get asmaMeaning54 => 'Chay kallpasapa';
+
+  @override
+  String get asmaMeaning55 => 'Chay Amachaq';
+
+  @override
+  String get asmaMeaning56 => 'Alabasqa';
+
+  @override
+  String get asmaMeaning57 => 'Chay Tasaq';
+
+  @override
+  String get asmaMeaning58 => 'Qallariy';
+
+  @override
+  String get asmaMeaning59 => 'Chay Restaurador nisqa';
+
+  @override
+  String get asmaMeaning60 => 'Kawsay Quq';
+
+  @override
+  String get asmaMeaning61 => 'Kawsay Hap’iq';
+
+  @override
+  String get asmaMeaning62 => 'Wiñay Kawsaq';
+
+  @override
+  String get asmaMeaning63 => 'Kikinmanta kawsaq Sustentador';
+
+  @override
+  String get asmaMeaning64 => 'Tariq';
+
+  @override
+  String get asmaMeaning65 => 'Chay Glorioso';
+
+  @override
+  String get asmaMeaning66 => 'Sapallanmi';
+
+  @override
+  String get asmaMeaning67 => 'Chay Huk';
+
+  @override
+  String get asmaMeaning68 => 'Llapallanpa maskasqan';
+
+  @override
+  String get asmaMeaning69 => 'Atiyniyuq';
+
+  @override
+  String get asmaMeaning70 => 'Tukuy atiy Kamaq';
+
+  @override
+  String get asmaMeaning71 => 'Chay Expedidor nisqa';
+
+  @override
+  String get asmaMeaning72 => 'Chay Tardaq';
+
+  @override
+  String get asmaMeaning73 => 'Ñawpaq kaq';
+
+  @override
+  String get asmaMeaning74 => 'Qhipa kaq';
+
+  @override
+  String get asmaMeaning75 => 'Chay Manifiesto nisqa';
+
+  @override
+  String get asmaMeaning76 => 'Pakasqa';
+
+  @override
+  String get asmaMeaning77 => 'Kamachiq';
+
+  @override
+  String get asmaMeaning78 => 'Ancha Hatun kaq';
+
+  @override
+  String get asmaMeaning79 => 'Allin Ruwaq';
+
+  @override
+  String get asmaMeaning80 => 'Arrepentikunapaq pusaq';
+
+  @override
+  String get asmaMeaning81 => 'El Vengador';
+
+  @override
+  String get asmaMeaning82 => 'Pampachaq';
+
+  @override
+  String get asmaMeaning83 => 'Clemente sutiyuq runa';
+
+  @override
+  String get asmaMeaning84 => 'Tukuypa Dueñon / Soberano';
+
+  @override
+  String get asmaMeaning85 => 'Majestad y Recompensa nisqapa Dueñon';
+
+  @override
+  String get asmaMeaning86 => 'El Equitable nisqa';
+
+  @override
+  String get asmaMeaning87 => 'Huñuq';
+
+  @override
+  String get asmaMeaning88 => 'Qhapaq';
+
+  @override
+  String get asmaMeaning89 => 'Qhapaqyachiq';
+
+  @override
+  String get asmaMeaning90 => 'Daños nisqamanta hark’aq';
+
+  @override
+  String get asmaMeaning91 => 'Dañota apamuq';
+
+  @override
+  String get asmaMeaning92 => 'Beneficiokunata qoq';
+
+  @override
+  String get asmaMeaning93 => 'Chay K’anchay';
+
+  @override
+  String get asmaMeaning94 => 'Chay Pusaq';
+
+  @override
+  String get asmaMeaning95 => 'Qallariy';
+
+  @override
+  String get asmaMeaning96 => 'Wiñaypaq kaq';
+
+  @override
+  String get asmaMeaning97 => 'Heredero nisqa';
+
+  @override
+  String get asmaMeaning98 => 'Aswan chanin pusaq';
+
+  @override
+  String get asmaMeaning99 => 'Paciente kaq';
 }

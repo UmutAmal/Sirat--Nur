@@ -1192,4 +1192,301 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'အစ္စလာမ့်နေရာ';
+
+  @override
+  String get asmaMeaning1 => 'အကျိုးပြုသူ';
+
+  @override
+  String get asmaMeaning2 => 'ကရုဏာတော်ရှင်';
+
+  @override
+  String get asmaMeaning3 => 'ဘုရင်/ထာဝရသခင်';
+
+  @override
+  String get asmaMeaning4 => 'အသန့်ရှင်းဆုံး';
+
+  @override
+  String get asmaMeaning5 => 'ငြိမ်းချမ်းရေးအရင်းအမြစ်';
+
+  @override
+  String get asmaMeaning6 => 'လုံခြုံရေးပေးဆောင်သူ';
+
+  @override
+  String get asmaMeaning7 => 'အုပ်ထိန်းသူ';
+
+  @override
+  String get asmaMeaning8 => 'အဖိုးတန်/ တန်ခိုးအကြီးဆုံး';
+
+  @override
+  String get asmaMeaning9 => 'တောင်းဆိုသူ';
+
+  @override
+  String get asmaMeaning10 => 'အကြီးမြတ်ဆုံး';
+
+  @override
+  String get asmaMeaning11 => 'ဖန်ဆင်းရှင်';
+
+  @override
+  String get asmaMeaning12 => 'အမှာစာပြုလုပ်သူ';
+
+  @override
+  String get asmaMeaning13 => 'အလှဖန်တီးရှင်';
+
+  @override
+  String get asmaMeaning14 => 'ခွင့်လွှတ်ခြင်း';
+
+  @override
+  String get asmaMeaning15 => 'Subduer';
+
+  @override
+  String get asmaMeaning16 => 'အားလုံး၏ပေးဆောင်သူ';
+
+  @override
+  String get asmaMeaning17 => 'ပံ့ပိုးပေးသူ';
+
+  @override
+  String get asmaMeaning18 => 'ဖွင့်ပေးသူ';
+
+  @override
+  String get asmaMeaning19 => 'အားလုံး၏ သိသူ';
+
+  @override
+  String get asmaMeaning20 => 'ကွန်ထရစ်ရှင်';
+
+  @override
+  String get asmaMeaning21 => 'လွတ်မြောက်သူ';
+
+  @override
+  String get asmaMeaning22 => 'အာဘေဆာ';
+
+  @override
+  String get asmaMeaning23 => 'မြင့်မြတ်သူ';
+
+  @override
+  String get asmaMeaning24 => 'ဂုဏ်ထူးဆောင်ဘွဲ့';
+
+  @override
+  String get asmaMeaning25 => 'အရှက်ခွဲသူ';
+
+  @override
+  String get asmaMeaning26 => 'အားလုံး၏ နားထောင်သူ';
+
+  @override
+  String get asmaMeaning27 => 'အားလုံး၏ အကဲဖြတ်သူ';
+
+  @override
+  String get asmaMeaning28 => 'တရားသူကြီး';
+
+  @override
+  String get asmaMeaning29 => 'တရားမျှတခြင်း။';
+
+  @override
+  String get asmaMeaning30 => 'သိမ်မွေ့သော';
+
+  @override
+  String get asmaMeaning31 => 'အားလုံးသတိထားပါ။';
+
+  @override
+  String get asmaMeaning32 => 'အခံရှိခြင်း';
+
+  @override
+  String get asmaMeaning33 => 'ခမ်းနားသော';
+
+  @override
+  String get asmaMeaning34 => 'ကြီးမားသောခွင့်လွှတ်သူ';
+
+  @override
+  String get asmaMeaning35 => 'ကျေးဇူးသိတတ်ခြင်းဆုချသူ';
+
+  @override
+  String get asmaMeaning36 => 'အမြင့်ဆုံး';
+
+  @override
+  String get asmaMeaning37 => 'အကြီးမြတ်ဆုံး';
+
+  @override
+  String get asmaMeaning38 => 'ထိန်းသိမ်းသူ';
+
+  @override
+  String get asmaMeaning39 => 'အာဟာရပေးသူ';
+
+  @override
+  String get asmaMeaning40 => 'စာရင်းသွင်းသူ';
+
+  @override
+  String get asmaMeaning41 => 'ခမ်းနားသော';
+
+  @override
+  String get asmaMeaning42 => 'ရက်ရောသော';
+
+  @override
+  String get asmaMeaning43 => 'သတိထားစရာ';
+
+  @override
+  String get asmaMeaning44 => 'ဆုတောင်းချက်ကို တုံ့ပြန်ခြင်း။';
+
+  @override
+  String get asmaMeaning45 => 'အားလုံးနားလည်နိုင်သော';
+
+  @override
+  String get asmaMeaning46 => 'ပြီးပြည့်စုံသော ပညာရှိ';
+
+  @override
+  String get asmaMeaning47 => 'မေတ္တာရှင်';
+
+  @override
+  String get asmaMeaning48 => 'ဘုန်းအသရေအရှိဆုံး';
+
+  @override
+  String get asmaMeaning49 => 'ရှင်ပြန်ထမြောက်သူ';
+
+  @override
+  String get asmaMeaning50 => 'သက်သေခံ';
+
+  @override
+  String get asmaMeaning51 => 'အမှန်တရား';
+
+  @override
+  String get asmaMeaning52 => 'ဖူလုံသော ယုံကြည်သူ';
+
+  @override
+  String get asmaMeaning53 => 'ခွန်အားအားလုံးကို ပိုင်ဆိုင်သူ';
+
+  @override
+  String get asmaMeaning54 => 'အင်အားပြင်းထန်သော';
+
+  @override
+  String get asmaMeaning55 => 'ကာကွယ်သူ';
+
+  @override
+  String get asmaMeaning56 => 'ချီးကျူးသည်။';
+
+  @override
+  String get asmaMeaning57 => 'အကဲဖြတ်သူ';
+
+  @override
+  String get asmaMeaning58 => 'အစပြုသူ';
+
+  @override
+  String get asmaMeaning59 => 'ပြန်လည်ထူထောင်သူ';
+
+  @override
+  String get asmaMeaning60 => 'အသက်ပေးလှူသူ';
+
+  @override
+  String get asmaMeaning61 => 'အသက်ရှင်သူ';
+
+  @override
+  String get asmaMeaning62 => 'အစဉ်အမြဲ အသက်ရှင်ခြင်း။';
+
+  @override
+  String get asmaMeaning63 => 'မိမိကိုယ်ကို ရပ်တည်ပေးသူ';
+
+  @override
+  String get asmaMeaning64 => 'ရှာဖွေသူ';
+
+  @override
+  String get asmaMeaning65 => 'ဘုန်းကြီးသည်။';
+
+  @override
+  String get asmaMeaning66 => 'တစ်ခုတည်းသော';
+
+  @override
+  String get asmaMeaning67 => 'တစ်ခု';
+
+  @override
+  String get asmaMeaning68 => 'အားလုံးရှာဖွေထားသောသူ';
+
+  @override
+  String get asmaMeaning69 => 'အားကောင်းသော';
+
+  @override
+  String get asmaMeaning70 => 'တန်ခိုးရှိသမျှ ဖန်ဆင်းရှင်';
+
+  @override
+  String get asmaMeaning71 => 'Expediter';
+
+  @override
+  String get asmaMeaning72 => 'နှောင့်နှေးမှု';
+
+  @override
+  String get asmaMeaning73 => 'ပထမ';
+
+  @override
+  String get asmaMeaning74 => 'နောက်ဆုံး';
+
+  @override
+  String get asmaMeaning75 => 'မန်နီးဖက်စ်';
+
+  @override
+  String get asmaMeaning76 => 'ဝှက်ထားသည်။';
+
+  @override
+  String get asmaMeaning77 => 'အုပ်ချုပ်ရေးမှူး';
+
+  @override
+  String get asmaMeaning78 => 'အဓိပတိ';
+
+  @override
+  String get asmaMeaning79 => 'ကောင်းမှုပြုသူ';
+
+  @override
+  String get asmaMeaning80 => '_နောင်တအတွက် လမ်းညွှန်';
+
+  @override
+  String get asmaMeaning81 => 'Avenger';
+
+  @override
+  String get asmaMeaning82 => 'ခွင့်လွှတ်သူ';
+
+  @override
+  String get asmaMeaning83 => 'ကလီးမန့်';
+
+  @override
+  String get asmaMeaning84 => 'ပိုင်ရှင် / အားလုံး၏ အချုပ်အခြာအာဏာ';
+
+  @override
+  String get asmaMeaning85 => 'ဘုရင်မင်းမြတ်နှင့် ကျေးဇူးရှင်';
+
+  @override
+  String get asmaMeaning86 => 'သာတူညီမျှမှု';
+
+  @override
+  String get asmaMeaning87 => 'စုဆောင်းသူ';
+
+  @override
+  String get asmaMeaning88 => 'ချမ်းသာသူ';
+
+  @override
+  String get asmaMeaning89 => 'တိုးတက်ကောင်းမွန်သူ';
+
+  @override
+  String get asmaMeaning90 => 'အန္တရာယ်ကို ကာကွယ်သူ';
+
+  @override
+  String get asmaMeaning91 => 'ဒုက္ခပေးသူ';
+
+  @override
+  String get asmaMeaning92 => 'အကျိုးခံစားခွင့်များ ပေးအပ်သည်။';
+
+  @override
+  String get asmaMeaning93 => 'အလင်း';
+
+  @override
+  String get asmaMeaning94 => 'လမ်းညွှန်သူ';
+
+  @override
+  String get asmaMeaning95 => 'အစပြုသူ';
+
+  @override
+  String get asmaMeaning96 => 'ထာဝရဘုရား';
+
+  @override
+  String get asmaMeaning97 => 'အမွေဆက်ခံသူ';
+
+  @override
+  String get asmaMeaning98 => 'အဖြောင့်မတ်ဆုံးလမ်းညွှန်';
+
+  @override
+  String get asmaMeaning99 => 'လူနာတစ်ဦး';
 }

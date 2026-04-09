@@ -1189,4 +1189,301 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Toerana Islamika';
+
+  @override
+  String get asmaMeaning1 => 'Ilay Mahasoa';
+
+  @override
+  String get asmaMeaning2 => 'Ilay Mamindra fo';
+
+  @override
+  String get asmaMeaning3 => 'Ny Mpanjaka / Tompo mandrakizay';
+
+  @override
+  String get asmaMeaning4 => 'Ny Masina Indrindra';
+
+  @override
+  String get asmaMeaning5 => 'Ny Loharanon\'ny Fiadanana';
+
+  @override
+  String get asmaMeaning6 => 'Ilay Mpanome Fiarovana';
+
+  @override
+  String get asmaMeaning7 => 'Ilay Mpiambina';
+
+  @override
+  String get asmaMeaning8 => 'Ilay Sarobidy / Ilay Mahery Indrindra';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Ny lehibe indrindra';
+
+  @override
+  String get asmaMeaning11 => 'Ny Mpahary';
+
+  @override
+  String get asmaMeaning12 => 'Ilay Mpamorona ny filaminana';
+
+  @override
+  String get asmaMeaning13 => 'Ilay Mpamorona ny hatsaran-tarehy';
+
+  @override
+  String get asmaMeaning14 => 'Ilay Mamela heloka';
+
+  @override
+  String get asmaMeaning15 => 'Ilay Mpandresy';
+
+  @override
+  String get asmaMeaning16 => 'Ilay Mpanome ny Rehetra';
+
+  @override
+  String get asmaMeaning17 => 'Ilay Mpiandry';
+
+  @override
+  String get asmaMeaning18 => 'Ny fanokafana';
+
+  @override
+  String get asmaMeaning19 => 'Ilay Mahalala ny Rehetra';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Ilay Mpanamaivana';
+
+  @override
+  String get asmaMeaning22 => 'Ny Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Ilay Mpanandratra';
+
+  @override
+  String get asmaMeaning24 => 'Ilay Mpanome voninahitra';
+
+  @override
+  String get asmaMeaning25 => 'Ilay mpametraka';
+
+  @override
+  String get asmaMeaning26 => 'Mpihaino ny Rehetra';
+
+  @override
+  String get asmaMeaning27 => 'Ilay Mpahita ny Rehetra';
+
+  @override
+  String get asmaMeaning28 => 'Ny Mpitsara';
+
+  @override
+  String get asmaMeaning29 => 'Ny Marina';
+
+  @override
+  String get asmaMeaning30 => 'Ilay Matsilo';
+
+  @override
+  String get asmaMeaning31 => 'Ny Mahafantatra Rehetra';
+
+  @override
+  String get asmaMeaning32 => 'Ny Fitondrana';
+
+  @override
+  String get asmaMeaning33 => 'Ilay Lehibe';
+
+  @override
+  String get asmaMeaning34 => 'Ilay Mpamela heloka lehibe';
+
+  @override
+  String get asmaMeaning35 => 'Ilay Mpamaly soa ny Fisaorana';
+
+  @override
+  String get asmaMeaning36 => 'Ny Avo indrindra';
+
+  @override
+  String get asmaMeaning37 => 'Ny lehibe indrindra';
+
+  @override
+  String get asmaMeaning38 => 'Ilay Mpiaro';
+
+  @override
+  String get asmaMeaning39 => 'Ilay Mpiandry';
+
+  @override
+  String get asmaMeaning40 => 'Ny Mpisaisa';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Ilay malala-tanana';
+
+  @override
+  String get asmaMeaning43 => 'Ilay Miambena';
+
+  @override
+  String get asmaMeaning44 => 'Ilay Mpamaly vavaka';
+
+  @override
+  String get asmaMeaning45 => 'Ny Mahatakatra ny Rehetra';
+
+  @override
+  String get asmaMeaning46 => 'Ilay Hendry Lavorary';
+
+  @override
+  String get asmaMeaning47 => 'Ilay be Fitiavana';
+
+  @override
+  String get asmaMeaning48 => 'Ilay be voninahitra indrindra';
+
+  @override
+  String get asmaMeaning49 => 'Ilay Mpanangana';
+
+  @override
+  String get asmaMeaning50 => 'Ny Vavolombelona';
+
+  @override
+  String get asmaMeaning51 => 'Ny Fahamarinana';
+
+  @override
+  String get asmaMeaning52 => 'Ilay Mpandraharaha Ampy';
+
+  @override
+  String get asmaMeaning53 => 'Ilay manana ny hery rehetra';
+
+  @override
+  String get asmaMeaning54 => 'Ny Hery';
+
+  @override
+  String get asmaMeaning55 => 'Ilay Mpiaro';
+
+  @override
+  String get asmaMeaning56 => 'Ilay Noderaina';
+
+  @override
+  String get asmaMeaning57 => 'Ny mpandinika';
+
+  @override
+  String get asmaMeaning58 => 'Ilay Mpamorona';
+
+  @override
+  String get asmaMeaning59 => 'Ilay Mpampody';
+
+  @override
+  String get asmaMeaning60 => 'Ilay Mpanome Aina';
+
+  @override
+  String get asmaMeaning61 => 'Ilay Mpanala Aina';
+
+  @override
+  String get asmaMeaning62 => 'Ilay Velona Mandrakizay';
+
+  @override
+  String get asmaMeaning63 => 'Ilay Mpiandry tena';
+
+  @override
+  String get asmaMeaning64 => 'Ilay Mpitady';
+
+  @override
+  String get asmaMeaning65 => 'Ilay Be voninahitra';
+
+  @override
+  String get asmaMeaning66 => 'Ilay Tokana';
+
+  @override
+  String get asmaMeaning67 => 'Ilay iray';
+
+  @override
+  String get asmaMeaning68 => 'Ilay tadiavin\'ny rehetra';
+
+  @override
+  String get asmaMeaning69 => 'Ilay Mahery';
+
+  @override
+  String get asmaMeaning70 => 'Ilay Mpahary ny hery rehetra';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Ny fanemorana';
+
+  @override
+  String get asmaMeaning73 => 'Ny Voalohany';
+
+  @override
+  String get asmaMeaning74 => 'Ny Farany';
+
+  @override
+  String get asmaMeaning75 => 'Ny fisehoana';
+
+  @override
+  String get asmaMeaning76 => 'Ny miafina';
+
+  @override
+  String get asmaMeaning77 => 'Ny Governora';
+
+  @override
+  String get asmaMeaning78 => 'Ilay Avo Indrindra';
+
+  @override
+  String get asmaMeaning79 => 'Ilay Mpanao ny Tsara';
+
+  @override
+  String get asmaMeaning80 => 'Ny Torolalana ho an\'ny Fibebahana';
+
+  @override
+  String get asmaMeaning81 => 'Ilay mpamaly faty';
+
+  @override
+  String get asmaMeaning82 => 'Ilay Mpamela heloka';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Ny Tompo / Tompon\'ny Rehetra';
+
+  @override
+  String get asmaMeaning85 => 'Ilay manana ny voninahitra sy ny hasoavana';
+
+  @override
+  String get asmaMeaning86 => 'Ilay Mitovy';
+
+  @override
+  String get asmaMeaning87 => 'Ilay Mpamory';
+
+  @override
+  String get asmaMeaning88 => 'Ilay mpanankarena';
+
+  @override
+  String get asmaMeaning89 => 'Ilay Mpankarena';
+
+  @override
+  String get asmaMeaning90 => 'Ilay Misoroka ny loza';
+
+  @override
+  String get asmaMeaning91 => 'Ilay Mpitondra Loza';
+
+  @override
+  String get asmaMeaning92 => 'Ilay Mpanome Tombontsoa';
+
+  @override
+  String get asmaMeaning93 => 'Ny Fahazavana';
+
+  @override
+  String get asmaMeaning94 => 'Ilay Mpitarika';
+
+  @override
+  String get asmaMeaning95 => 'Ilay Mpahary';
+
+  @override
+  String get asmaMeaning96 => 'Ilay Mandrakizay';
+
+  @override
+  String get asmaMeaning97 => 'Ny mpandova';
+
+  @override
+  String get asmaMeaning98 => 'Ilay Mpitarika Marina indrindra';
+
+  @override
+  String get asmaMeaning99 => 'Ilay marary';
 }

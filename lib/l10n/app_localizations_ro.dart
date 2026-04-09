@@ -1192,4 +1192,301 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Locul Islamic';
+
+  @override
+  String get asmaMeaning1 => 'Beneficienții';
+
+  @override
+  String get asmaMeaning2 => 'Milostivul';
+
+  @override
+  String get asmaMeaning3 => 'Regele / Domnul etern';
+
+  @override
+  String get asmaMeaning4 => 'Preasfânta';
+
+  @override
+  String get asmaMeaning5 => 'Sursa păcii';
+
+  @override
+  String get asmaMeaning6 => 'Dătătorul de securitate';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Cel Prețios / Cel Mai Puternic';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Cel mai mare';
+
+  @override
+  String get asmaMeaning11 => 'Creatorul';
+
+  @override
+  String get asmaMeaning12 => 'The Maker of Order';
+
+  @override
+  String get asmaMeaning13 => 'Conformatorul frumuseții';
+
+  @override
+  String get asmaMeaning14 => 'The Forgiving';
+
+  @override
+  String get asmaMeaning15 => 'Supusul';
+
+  @override
+  String get asmaMeaning16 => 'Dătătorul tuturor';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'Deschizătorul';
+
+  @override
+  String get asmaMeaning19 => 'Cunoscătorul tuturor';
+
+  @override
+  String get asmaMeaning20 => 'Constrictorul';
+
+  @override
+  String get asmaMeaning21 => 'Alinatorul';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Exalterul';
+
+  @override
+  String get asmaMeaning24 => 'Dăruitor de onoare';
+
+  @override
+  String get asmaMeaning25 => 'Umilitorul';
+
+  @override
+  String get asmaMeaning26 => 'Ascultătorul tuturor';
+
+  @override
+  String get asmaMeaning27 => 'Văzătorul tuturor';
+
+  @override
+  String get asmaMeaning28 => 'Judecătorul';
+
+  @override
+  String get asmaMeaning29 => 'The Just';
+
+  @override
+  String get asmaMeaning30 => 'Cel Subtil';
+
+  @override
+  String get asmaMeaning31 => 'The All Aware';
+
+  @override
+  String get asmaMeaning32 => 'Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificul';
+
+  @override
+  String get asmaMeaning34 => 'Marele Iertător';
+
+  @override
+  String get asmaMeaning35 => 'Răsplătitorul mulțumirii';
+
+  @override
+  String get asmaMeaning36 => 'Cel mai înalt';
+
+  @override
+  String get asmaMeaning37 => 'Cel mai mare';
+
+  @override
+  String get asmaMeaning38 => 'The Preserver';
+
+  @override
+  String get asmaMeaning39 => 'Hrănitorul';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Generosul';
+
+  @override
+  String get asmaMeaning43 => 'Cel Vegheant';
+
+  @override
+  String get asmaMeaning44 => 'Răspunsul la rugăciune';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehending';
+
+  @override
+  String get asmaMeaning46 => 'Cel perfect înțelept';
+
+  @override
+  String get asmaMeaning47 => 'Cel Iubitor';
+
+  @override
+  String get asmaMeaning48 => 'Cel mai glorios';
+
+  @override
+  String get asmaMeaning49 => 'Învietul';
+
+  @override
+  String get asmaMeaning50 => 'Martorul';
+
+  @override
+  String get asmaMeaning51 => 'Adevărul';
+
+  @override
+  String get asmaMeaning52 => 'Atot-suficientul fiduciar';
+
+  @override
+  String get asmaMeaning53 => 'Deținătorul tuturor puterilor';
+
+  @override
+  String get asmaMeaning54 => 'Fortul';
+
+  @override
+  String get asmaMeaning55 => 'The Protector';
+
+  @override
+  String get asmaMeaning56 => 'Lăudatul';
+
+  @override
+  String get asmaMeaning57 => 'Evaluatorul';
+
+  @override
+  String get asmaMeaning58 => 'Inițiatorul';
+
+  @override
+  String get asmaMeaning59 => 'Restauratorul';
+
+  @override
+  String get asmaMeaning60 => 'Dătătorul de viață';
+
+  @override
+  String get asmaMeaning61 => 'Taker of Life';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Susținătorul auto-subsist';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'Singurul';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'Cel căutat de toți';
+
+  @override
+  String get asmaMeaning69 => 'Cel Puternic';
+
+  @override
+  String get asmaMeaning70 => 'Creatorul întregii puteri';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'The Delayer';
+
+  @override
+  String get asmaMeaning73 => 'Primul';
+
+  @override
+  String get asmaMeaning74 => 'Ultimul';
+
+  @override
+  String get asmaMeaning75 => 'Manifestul';
+
+  @override
+  String get asmaMeaning76 => 'The Hidden';
+
+  @override
+  String get asmaMeaning77 => 'Guvernatorul';
+
+  @override
+  String get asmaMeaning78 => 'Cel Suprem';
+
+  @override
+  String get asmaMeaning79 => 'Făcătorul binelui';
+
+  @override
+  String get asmaMeaning80 => 'Ghidul pentru pocăință';
+
+  @override
+  String get asmaMeaning81 => 'Răzbunătorul';
+
+  @override
+  String get asmaMeaning82 => 'The Forgiver';
+
+  @override
+  String get asmaMeaning83 => 'Clementul';
+
+  @override
+  String get asmaMeaning84 => 'Proprietarul / Suveranul tuturor';
+
+  @override
+  String get asmaMeaning85 => 'Posesorul Majestății și Bounty';
+
+  @override
+  String get asmaMeaning86 => 'Cel Echitabil';
+
+  @override
+  String get asmaMeaning87 => 'Adunatorul';
+
+  @override
+  String get asmaMeaning88 => 'Bogatul';
+
+  @override
+  String get asmaMeaning89 => 'Îmbogățitorul';
+
+  @override
+  String get asmaMeaning90 => 'The Preventer of Harm';
+
+  @override
+  String get asmaMeaning91 => 'Aducătorul de rău';
+
+  @override
+  String get asmaMeaning92 => 'Dăruitor de beneficii';
+
+  @override
+  String get asmaMeaning93 => 'Lumina';
+
+  @override
+  String get asmaMeaning94 => 'Ghidul';
+
+  @override
+  String get asmaMeaning95 => 'Inițiatorul';
+
+  @override
+  String get asmaMeaning96 => 'Cel Veșnic';
+
+  @override
+  String get asmaMeaning97 => 'Moștenitorul';
+
+  @override
+  String get asmaMeaning98 => 'Cel mai drept ghid';
+
+  @override
+  String get asmaMeaning99 => 'Pacientul Cel';
 }

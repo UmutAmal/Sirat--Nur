@@ -1200,4 +1200,301 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Lefelo la Boiselamo';
+
+  @override
+  String get asmaMeaning1 => 'Motho yo a Holago';
+
+  @override
+  String get asmaMeaning2 => 'Mogau';
+
+  @override
+  String get asmaMeaning3 => 'Kgoši / Morena wa ka mo go sa felego';
+
+  @override
+  String get asmaMeaning4 => 'Mokgethwa Kudu';
+
+  @override
+  String get asmaMeaning5 => 'Mothopo wa Khutšo';
+
+  @override
+  String get asmaMeaning6 => 'Monei wa Tšhireletšo';
+
+  @override
+  String get asmaMeaning7 => 'Mohlokomedi wa ditaba';
+
+  @override
+  String get asmaMeaning8 => 'Ba Bohlokwa / Ba Matla Kudu';
+
+  @override
+  String get asmaMeaning9 => 'Mogapeletši';
+
+  @override
+  String get asmaMeaning10 => 'E Kgolo Kudu';
+
+  @override
+  String get asmaMeaning11 => 'Mmopi';
+
+  @override
+  String get asmaMeaning12 => 'Modiri wa Thulaganyo';
+
+  @override
+  String get asmaMeaning13 => 'Mobopi wa Botse';
+
+  @override
+  String get asmaMeaning14 => 'Ba Lebalelago';
+
+  @override
+  String get asmaMeaning15 => 'Mofetoledi';
+
+  @override
+  String get asmaMeaning16 => 'Monei wa Bohle';
+
+  @override
+  String get asmaMeaning17 => 'Motšweletši';
+
+  @override
+  String get asmaMeaning18 => 'Mobulela';
+
+  @override
+  String get asmaMeaning19 => 'Tseba ya Bohle';
+
+  @override
+  String get asmaMeaning20 => 'Mokgoboketši wa Dikgokagano';
+
+  @override
+  String get asmaMeaning21 => 'Mophološi';
+
+  @override
+  String get asmaMeaning22 => 'Mo-Abaser wa Baser';
+
+  @override
+  String get asmaMeaning23 => 'Mophagamiši';
+
+  @override
+  String get asmaMeaning24 => 'Moabi wa Tlhompho';
+
+  @override
+  String get asmaMeaning25 => 'Mohlokiši';
+
+  @override
+  String get asmaMeaning26 => 'Mokwi wa Bohle';
+
+  @override
+  String get asmaMeaning27 => 'Mmoni wa Bohle';
+
+  @override
+  String get asmaMeaning28 => 'Moahlodi';
+
+  @override
+  String get asmaMeaning29 => 'Ba Toka';
+
+  @override
+  String get asmaMeaning30 => 'Yo a sa lemogegego';
+
+  @override
+  String get asmaMeaning31 => 'The All Aware';
+
+  @override
+  String get asmaMeaning32 => 'Go Kgotlelela Bogologolo';
+
+  @override
+  String get asmaMeaning33 => 'Se se Kgahlišago';
+
+  @override
+  String get asmaMeaning34 => 'Molebaleledi yo Mogolo';
+
+  @override
+  String get asmaMeaning35 => 'Moputsi wa Tebogo';
+
+  @override
+  String get asmaMeaning36 => 'Ya Godimodimo';
+
+  @override
+  String get asmaMeaning37 => 'E Kgolo Kudu';
+
+  @override
+  String get asmaMeaning38 => 'Mošireletši wa Mošireletši';
+
+  @override
+  String get asmaMeaning39 => 'Mofepi wa Phepo';
+
+  @override
+  String get asmaMeaning40 => 'Mohlapetši wa Ditšhelete';
+
+  @override
+  String get asmaMeaning41 => 'Mohlomphegi';
+
+  @override
+  String get asmaMeaning42 => 'Ba ba Fago';
+
+  @override
+  String get asmaMeaning43 => 'Yo a Phakgamego';
+
+  @override
+  String get asmaMeaning44 => 'Mo arabelago Thapelo';
+
+  @override
+  String get asmaMeaning45 => 'Bao ba Kwešišago ka Moka';
+
+  @override
+  String get asmaMeaning46 => 'Ba Bohlale ka mo go Phethagetšego';
+
+  @override
+  String get asmaMeaning47 => 'Motho yo a nago le Lerato';
+
+  @override
+  String get asmaMeaning48 => 'Yo a Kgalago Kudu';
+
+  @override
+  String get asmaMeaning49 => 'Motsotsi wa Bahu';
+
+  @override
+  String get asmaMeaning50 => 'Hlatse';
+
+  @override
+  String get asmaMeaning51 => 'Therešo ya Nnete';
+
+  @override
+  String get asmaMeaning52 => 'Mohlokomedi yo a Lekanago ka Moka';
+
+  @override
+  String get asmaMeaning53 => 'Mong wa Matla ka Moka';
+
+  @override
+  String get asmaMeaning54 => 'Ba Matla';
+
+  @override
+  String get asmaMeaning55 => 'Mošireletši wa Mošireletši';
+
+  @override
+  String get asmaMeaning56 => 'Ba Rorišwago';
+
+  @override
+  String get asmaMeaning57 => 'Mohlahlobi';
+
+  @override
+  String get asmaMeaning58 => 'Mothomi wa Mothopo';
+
+  @override
+  String get asmaMeaning59 => 'Motsošološi';
+
+  @override
+  String get asmaMeaning60 => 'Monei wa Bophelo';
+
+  @override
+  String get asmaMeaning61 => 'Motšea Bophelo';
+
+  @override
+  String get asmaMeaning62 => 'Ba ba Phelago ka Mehla';
+
+  @override
+  String get asmaMeaning63 => 'Motšweletši yo a Itlhokomelago';
+
+  @override
+  String get asmaMeaning64 => 'Motho yo a Hwetšago';
+
+  @override
+  String get asmaMeaning65 => 'Ba Kgalago';
+
+  @override
+  String get asmaMeaning66 => 'Yo a nnoši';
+
+  @override
+  String get asmaMeaning67 => 'Yo A Yona';
+
+  @override
+  String get asmaMeaning68 => 'Yo A Nyakwago ke Bohle';
+
+  @override
+  String get asmaMeaning69 => 'Ba Matla';
+
+  @override
+  String get asmaMeaning70 => 'Mmopi wa maatla ka moka';
+
+  @override
+  String get asmaMeaning71 => 'Motho wa go Akgofiša';
+
+  @override
+  String get asmaMeaning72 => 'Modiragatši';
+
+  @override
+  String get asmaMeaning73 => 'Ya Pele';
+
+  @override
+  String get asmaMeaning74 => 'Ya Mafelelo';
+
+  @override
+  String get asmaMeaning75 => 'Se se Bonago';
+
+  @override
+  String get asmaMeaning76 => 'Se se Patilwego';
+
+  @override
+  String get asmaMeaning77 => 'Mmušiši wa gagwe';
+
+  @override
+  String get asmaMeaning78 => 'Yo a Phagamego';
+
+  @override
+  String get asmaMeaning79 => 'Modiri wa Botse';
+
+  @override
+  String get asmaMeaning80 => 'Tlhahlo ya go Sokologa';
+
+  @override
+  String get asmaMeaning81 => 'Mophetetši';
+
+  @override
+  String get asmaMeaning82 => 'Motshwareledi';
+
+  @override
+  String get asmaMeaning83 => 'Motho wa Clement';
+
+  @override
+  String get asmaMeaning84 => 'Mong / Mmuši wa Bohle';
+
+  @override
+  String get asmaMeaning85 => 'Mong wa Bogoši le Bounty';
+
+  @override
+  String get asmaMeaning86 => 'Yo a Lekanago';
+
+  @override
+  String get asmaMeaning87 => 'Mokgoboketši';
+
+  @override
+  String get asmaMeaning88 => 'Mohumi wa Mohumi';
+
+  @override
+  String get asmaMeaning89 => 'Mohumiši';
+
+  @override
+  String get asmaMeaning90 => 'Mothibela-Kotsi';
+
+  @override
+  String get asmaMeaning91 => 'Motho yo a Tlišago Kotsi';
+
+  @override
+  String get asmaMeaning92 => 'Moabi wa Mehola';
+
+  @override
+  String get asmaMeaning93 => 'Lesedi';
+
+  @override
+  String get asmaMeaning94 => 'Mohlahli wa Mohlahli';
+
+  @override
+  String get asmaMeaning95 => 'Mothomi wa Mothopo';
+
+  @override
+  String get asmaMeaning96 => 'Yo a sa Felego';
+
+  @override
+  String get asmaMeaning97 => 'Mojalefa';
+
+  @override
+  String get asmaMeaning98 => 'Tlhahlo e Lokilego Kudu';
+
+  @override
+  String get asmaMeaning99 => 'Ya Molwetši';
 }

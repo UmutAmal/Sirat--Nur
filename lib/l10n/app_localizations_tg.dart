@@ -1186,4 +1186,301 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Ҷойи исломӣ';
+
+  @override
+  String get asmaMeaning1 => 'Раҳмон';
+
+  @override
+  String get asmaMeaning2 => 'Раҳмон';
+
+  @override
+  String get asmaMeaning3 => 'Подшоҳ / Худованди абадӣ';
+
+  @override
+  String get asmaMeaning4 => 'Муқаддастарин';
+
+  @override
+  String get asmaMeaning5 => 'Манбаи сулҳ';
+
+  @override
+  String get asmaMeaning6 => 'Офарандаи амният';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Қиматбаҳо / Бузургтарин';
+
+  @override
+  String get asmaMeaning9 => 'Маҷбуркунанда';
+
+  @override
+  String get asmaMeaning10 => 'Беҳтарин';
+
+  @override
+  String get asmaMeaning11 => 'Офаридгор';
+
+  @override
+  String get asmaMeaning12 => 'Офарандаи фармоиш';
+
+  @override
+  String get asmaMeaning13 => 'Шаклдиҳандаи Зебоӣ';
+
+  @override
+  String get asmaMeaning14 => 'бахшанда';
+
+  @override
+  String get asmaMeaning15 => 'Муттасир';
+
+  @override
+  String get asmaMeaning16 => 'Офарандаи ҳама';
+
+  @override
+  String get asmaMeaning17 => 'Парводор';
+
+  @override
+  String get asmaMeaning18 => 'Кушодкунанда';
+
+  @override
+  String get asmaMeaning19 => 'Донои ҳама';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Раоҳдиҳанда';
+
+  @override
+  String get asmaMeaning22 => 'Абазер';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'Шараф';
+
+  @override
+  String get asmaMeaning25 => 'Хуркунанда';
+
+  @override
+  String get asmaMeaning26 => 'Шунавои ҳама';
+
+  @override
+  String get asmaMeaning27 => 'Дидани ҳама';
+
+  @override
+  String get asmaMeaning28 => 'Довар';
+
+  @override
+  String get asmaMeaning29 => 'Адолат';
+
+  @override
+  String get asmaMeaning30 => 'Нозук';
+
+  @override
+  String get asmaMeaning31 => 'Ҳама огоҳ';
+
+  @override
+  String get asmaMeaning32 => 'Пешбарӣ';
+
+  @override
+  String get asmaMeaning33 => 'Бозидор';
+
+  @override
+  String get asmaMeaning34 => 'Бузургандаи бахшанда';
+
+  @override
+  String get asmaMeaning35 => 'Мукофоти шукрона';
+
+  @override
+  String get asmaMeaning36 => 'Бтарин';
+
+  @override
+  String get asmaMeaning37 => 'Беҳтарин';
+
+  @override
+  String get asmaMeaning38 => 'Ҳифзкунанда';
+
+  @override
+  String get asmaMeaning39 => 'Низодиҳанда';
+
+  @override
+  String get asmaMeaning40 => 'Ҳисобкунанда';
+
+  @override
+  String get asmaMeaning41 => 'Аълоҳазрат';
+
+  @override
+  String get asmaMeaning42 => 'Саховатманд';
+
+  @override
+  String get asmaMeaning43 => 'Бедор';
+
+  @override
+  String get asmaMeaning44 => 'Иҷобаткунандаи дуо';
+
+  @override
+  String get asmaMeaning45 => 'Ҳама фаҳмо';
+
+  @override
+  String get asmaMeaning46 => 'Хакими комил';
+
+  @override
+  String get asmaMeaning47 => 'Дӯстдошта';
+
+  @override
+  String get asmaMeaning48 => 'Шаъну шараф';
+
+  @override
+  String get asmaMeaning49 => 'Эҳё';
+
+  @override
+  String get asmaMeaning50 => 'Шоҳид';
+
+  @override
+  String get asmaMeaning51 => 'Ҳақиқат';
+
+  @override
+  String get asmaMeaning52 => 'Мусоиди ҳама кофӣ';
+
+  @override
+  String get asmaMeaning53 => 'Соҳиби ҳама нерӯ';
+
+  @override
+  String get asmaMeaning54 => 'Қудратманд';
+
+  @override
+  String get asmaMeaning55 => 'Ҳимоятгар';
+
+  @override
+  String get asmaMeaning56 => 'Ситоишшуда';
+
+  @override
+  String get asmaMeaning57 => 'Баҳогузор';
+
+  @override
+  String get asmaMeaning58 => 'Оригинатор';
+
+  @override
+  String get asmaMeaning59 => 'Барқароркунанда';
+
+  @override
+  String get asmaMeaning60 => 'Ҳаётбахш';
+
+  @override
+  String get asmaMeaning61 => 'Ҳаётгиранда';
+
+  @override
+  String get asmaMeaning62 => 'Зиндагӣ';
+
+  @override
+  String get asmaMeaning63 => 'Барои худтаъминкунанда';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'Шариф';
+
+  @override
+  String get asmaMeaning66 => 'Ягона';
+
+  @override
+  String get asmaMeaning67 => 'Як';
+
+  @override
+  String get asmaMeaning68 => 'Оне, ки ҳама ҷустуҷӯ мекунанд';
+
+  @override
+  String get asmaMeaning69 => 'Қудратманд';
+
+  @override
+  String get asmaMeaning70 => 'Офаридгори тамоми қудрат';
+
+  @override
+  String get asmaMeaning71 => 'Экспедитер';
+
+  @override
+  String get asmaMeaning72 => 'Таъхиркунанда';
+
+  @override
+  String get asmaMeaning73 => 'Аввал';
+
+  @override
+  String get asmaMeaning74 => 'Охирин';
+
+  @override
+  String get asmaMeaning75 => 'Манифест';
+
+  @override
+  String get asmaMeaning76 => 'Пинҳон';
+
+  @override
+  String get asmaMeaning77 => 'Губернатор';
+
+  @override
+  String get asmaMeaning78 => 'Оли Олӣ';
+
+  @override
+  String get asmaMeaning79 => 'Неккор';
+
+  @override
+  String get asmaMeaning80 => 'Роҳнамои тавба';
+
+  @override
+  String get asmaMeaning81 => 'Интиқомгир';
+
+  @override
+  String get asmaMeaning82 => 'бахшанда';
+
+  @override
+  String get asmaMeaning83 => 'Клемент';
+
+  @override
+  String get asmaMeaning84 => 'Соҳиб / Ҳокими Ҳама';
+
+  @override
+  String get asmaMeaning85 => 'Соҳиби ҷалол ва файз';
+
+  @override
+  String get asmaMeaning86 => 'Одил';
+
+  @override
+  String get asmaMeaning87 => 'Ҷамъоваранда';
+
+  @override
+  String get asmaMeaning88 => 'Бой';
+
+  @override
+  String get asmaMeaning89 => 'Бойкунанда';
+
+  @override
+  String get asmaMeaning90 => 'Пешгирикунандаи зарар';
+
+  @override
+  String get asmaMeaning91 => 'Барандаи зарар';
+
+  @override
+  String get asmaMeaning92 => 'Беҳтарин неъматҳо';
+
+  @override
+  String get asmaMeaning93 => 'Нур';
+
+  @override
+  String get asmaMeaning94 => 'Роҳнамо';
+
+  @override
+  String get asmaMeaning95 => 'Оригинатор';
+
+  @override
+  String get asmaMeaning96 => 'Ҷовидон';
+
+  @override
+  String get asmaMeaning97 => 'Ворис';
+
+  @override
+  String get asmaMeaning98 => 'Роҳнамои одилтарин';
+
+  @override
+  String get asmaMeaning99 => 'Сабр';
 }

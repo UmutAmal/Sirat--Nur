@@ -1192,4 +1192,301 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Ndhawu ya Vuislem';
+
+  @override
+  String get asmaMeaning1 => 'La Vuyerisaka';
+
+  @override
+  String get asmaMeaning2 => 'Loyi a nga ni Tintswalo';
+
+  @override
+  String get asmaMeaning3 => 'Hosi / Hosi leyi nga heriki';
+
+  @override
+  String get asmaMeaning4 => 'Lexi Kwetsima Ngopfu';
+
+  @override
+  String get asmaMeaning5 => 'Xihlovo Xa Ku Rhula';
+
+  @override
+  String get asmaMeaning6 => 'Munyiki wa Vuhlayiseki';
+
+  @override
+  String get asmaMeaning7 => 'Xiphephana xa Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Wa Risima / Wa Matimba Ngopfu';
+
+  @override
+  String get asmaMeaning9 => 'Muhlohloteri';
+
+  @override
+  String get asmaMeaning10 => 'Lexikulu';
+
+  @override
+  String get asmaMeaning11 => 'Muvumbi';
+
+  @override
+  String get asmaMeaning12 => 'Muendli wa Nhleleko';
+
+  @override
+  String get asmaMeaning13 => 'Muvumbi wa Vuxongi';
+
+  @override
+  String get asmaMeaning14 => 'Lava Rivalelaka';
+
+  @override
+  String get asmaMeaning15 => 'Mutsonga';
+
+  @override
+  String get asmaMeaning16 => 'Munyiki wa Hinkwaswo';
+
+  @override
+  String get asmaMeaning17 => 'Muhlayisi wa swilo';
+
+  @override
+  String get asmaMeaning18 => 'Muvulavuleri';
+
+  @override
+  String get asmaMeaning19 => 'Mutivi wa Hinkwaswo';
+
+  @override
+  String get asmaMeaning20 => 'Muendli wa Swikontiri';
+
+  @override
+  String get asmaMeaning21 => 'Mupfuni';
+
+  @override
+  String get asmaMeaning22 => 'Va-Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Mutlakusi';
+
+  @override
+  String get asmaMeaning24 => 'Munyiki wa Xichavo';
+
+  @override
+  String get asmaMeaning25 => 'Mutsongahati';
+
+  @override
+  String get asmaMeaning26 => 'Mutwi wa Hinkwaswo';
+
+  @override
+  String get asmaMeaning27 => 'Muvoni wa Hinkwaswo';
+
+  @override
+  String get asmaMeaning28 => 'Muavanyisi';
+
+  @override
+  String get asmaMeaning29 => 'Valulami';
+
+  @override
+  String get asmaMeaning30 => 'Loyi A Nga Tumbeleke';
+
+  @override
+  String get asmaMeaning31 => 'Lava Va Lemukaka Hinkwaswo';
+
+  @override
+  String get asmaMeaning32 => 'Ku Tiyisela';
+
+  @override
+  String get asmaMeaning33 => 'Lexi Hlamarisaka';
+
+  @override
+  String get asmaMeaning34 => 'Muvarivari Lonkulu';
+
+  @override
+  String get asmaMeaning35 => 'Muhakeri wa ku Nkhensa';
+
+  @override
+  String get asmaMeaning36 => 'Loyi a Tlakukeke';
+
+  @override
+  String get asmaMeaning37 => 'Lexikulu';
+
+  @override
+  String get asmaMeaning38 => 'Muhlayisi wa swilo';
+
+  @override
+  String get asmaMeaning39 => 'Mudyi wa swakudya';
+
+  @override
+  String get asmaMeaning40 => 'Muhlayi wa Xibalo';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Lava Va Hanana';
+
+  @override
+  String get asmaMeaning43 => 'Loyi A Rindzaka';
+
+  @override
+  String get asmaMeaning44 => 'Muhlamuri wa Xikhongelo';
+
+  @override
+  String get asmaMeaning45 => 'Ku Twisisa Hinkwaswo';
+
+  @override
+  String get asmaMeaning46 => 'Lava Nga Ni Vutlhari Hi Ku Hetiseka';
+
+  @override
+  String get asmaMeaning47 => 'Loyi a nga ni Rirhandzu';
+
+  @override
+  String get asmaMeaning48 => 'Loyi A Dzunisiwaka Ngopfu';
+
+  @override
+  String get asmaMeaning49 => 'Mupfukeri wa Vafi';
+
+  @override
+  String get asmaMeaning50 => 'Mbhoni';
+
+  @override
+  String get asmaMeaning51 => 'Ntiyiso';
+
+  @override
+  String get asmaMeaning52 => 'Muhlayisi wa Tilasi la eneleke Hinkwaswo';
+
+  @override
+  String get asmaMeaning53 => 'Mufumi wa Matimba Hinkwawo';
+
+  @override
+  String get asmaMeaning54 => 'Lava Nga Ni Matimba';
+
+  @override
+  String get asmaMeaning55 => 'Musirheleri';
+
+  @override
+  String get asmaMeaning56 => 'Lava Dzunisiwaka';
+
+  @override
+  String get asmaMeaning57 => 'Mukamberi wa Swibalo';
+
+  @override
+  String get asmaMeaning58 => 'Musunguri wa Masungulo';
+
+  @override
+  String get asmaMeaning59 => 'Muvuyeleri wa swilo';
+
+  @override
+  String get asmaMeaning60 => 'Munyiki wa Vutomi';
+
+  @override
+  String get asmaMeaning61 => 'Muteki wa Vutomi';
+
+  @override
+  String get asmaMeaning62 => 'Lava Va Hanyaka Nkarhi Hinkwawo';
+
+  @override
+  String get asmaMeaning63 => 'Muhlayisi la Tiyimelaka';
+
+  @override
+  String get asmaMeaning64 => 'Mukumi';
+
+  @override
+  String get asmaMeaning65 => 'Lava Vangamisaka';
+
+  @override
+  String get asmaMeaning66 => 'Loyi A Nga Yexe';
+
+  @override
+  String get asmaMeaning67 => 'Loyi Loyi';
+
+  @override
+  String get asmaMeaning68 => 'Loyi A Laviwaka Hi Hinkwavo';
+
+  @override
+  String get asmaMeaning69 => 'Lava nga ni Matimba';
+
+  @override
+  String get asmaMeaning70 => 'Muvumbi wa matimba hinkwawo';
+
+  @override
+  String get asmaMeaning71 => 'Mufambisi wa Xihatla';
+
+  @override
+  String get asmaMeaning72 => 'Muhluri';
+
+  @override
+  String get asmaMeaning73 => 'Xo Sungula';
+
+  @override
+  String get asmaMeaning74 => 'Lava Xo Hetelela';
+
+  @override
+  String get asmaMeaning75 => 'Swilo Leswi Vonakaka';
+
+  @override
+  String get asmaMeaning76 => 'Leswi Fihliweke';
+
+  @override
+  String get asmaMeaning77 => 'Holobye-nkulu';
+
+  @override
+  String get asmaMeaning78 => 'Loyi a Tlakukeke';
+
+  @override
+  String get asmaMeaning79 => 'Muendli wa Leswinene';
+
+  @override
+  String get asmaMeaning80 => 'Nkongomiso wa ku Hundzuka';
+
+  @override
+  String get asmaMeaning81 => 'Murihiseri';
+
+  @override
+  String get asmaMeaning82 => 'Mu rivaleli';
+
+  @override
+  String get asmaMeaning83 => 'Va ka Clement';
+
+  @override
+  String get asmaMeaning84 => 'N’wini / Hosi ya Hinkwaswo';
+
+  @override
+  String get asmaMeaning85 => 'Mufumi wa Vuhosi na Vukulu';
+
+  @override
+  String get asmaMeaning86 => 'Loyi A Ringana';
+
+  @override
+  String get asmaMeaning87 => 'Muhlengeleti';
+
+  @override
+  String get asmaMeaning88 => 'Loyi A Fuweke';
+
+  @override
+  String get asmaMeaning89 => 'Mufuwisi';
+
+  @override
+  String get asmaMeaning90 => 'Musivela-ku-vabyi';
+
+  @override
+  String get asmaMeaning91 => 'Mutisi wa Khombo';
+
+  @override
+  String get asmaMeaning92 => 'Munyiki wa Mimbuyelo';
+
+  @override
+  String get asmaMeaning93 => 'Ku Vonakala';
+
+  @override
+  String get asmaMeaning94 => 'Mukongomisi wa Mukongomisi';
+
+  @override
+  String get asmaMeaning95 => 'Musunguri wa Masungulo';
+
+  @override
+  String get asmaMeaning96 => 'Loyi A Nga Heriki';
+
+  @override
+  String get asmaMeaning97 => 'Mudyandzhaka';
+
+  @override
+  String get asmaMeaning98 => 'Nkongomiso Lowu Lulama Ngopfu';
+
+  @override
+  String get asmaMeaning99 => 'Loyi Muvabyi';
 }

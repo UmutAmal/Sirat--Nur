@@ -1194,4 +1194,301 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Lloc islàmic';
+
+  @override
+  String get asmaMeaning1 => 'El beneficiós';
+
+  @override
+  String get asmaMeaning2 => 'El Misericordiós';
+
+  @override
+  String get asmaMeaning3 => 'El Rei / Senyor Etern';
+
+  @override
+  String get asmaMeaning4 => 'El Santíssim';
+
+  @override
+  String get asmaMeaning5 => 'La font de la pau';
+
+  @override
+  String get asmaMeaning6 => 'El donant de seguretat';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'El Preciós / El més poderós';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'El més gran';
+
+  @override
+  String get asmaMeaning11 => 'El creador';
+
+  @override
+  String get asmaMeaning12 => 'El creador de l\'ordre';
+
+  @override
+  String get asmaMeaning13 => 'El modelador de la bellesa';
+
+  @override
+  String get asmaMeaning14 => 'El perdó';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'El Donador de Tot';
+
+  @override
+  String get asmaMeaning17 => 'El sustentador';
+
+  @override
+  String get asmaMeaning18 => 'L\'Obridor';
+
+  @override
+  String get asmaMeaning19 => 'El coneixedor de tot';
+
+  @override
+  String get asmaMeaning20 => 'El constrictor';
+
+  @override
+  String get asmaMeaning21 => 'El alleujador';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'El donador d\'honor';
+
+  @override
+  String get asmaMeaning25 => 'El humiliador';
+
+  @override
+  String get asmaMeaning26 => 'L\'oient de tots';
+
+  @override
+  String get asmaMeaning27 => 'El vident de tot';
+
+  @override
+  String get asmaMeaning28 => 'El jutge';
+
+  @override
+  String get asmaMeaning29 => 'El Just';
+
+  @override
+  String get asmaMeaning30 => 'El Subtil';
+
+  @override
+  String get asmaMeaning31 => 'Tot Conscient';
+
+  @override
+  String get asmaMeaning32 => 'The Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'El Magnífic';
+
+  @override
+  String get asmaMeaning34 => 'El gran perdonador';
+
+  @override
+  String get asmaMeaning35 => 'El premiador de l\'agraïment';
+
+  @override
+  String get asmaMeaning36 => 'El més alt';
+
+  @override
+  String get asmaMeaning37 => 'El més gran';
+
+  @override
+  String get asmaMeaning38 => 'The Preserver';
+
+  @override
+  String get asmaMeaning39 => 'The Nourisher';
+
+  @override
+  String get asmaMeaning40 => 'El comptador';
+
+  @override
+  String get asmaMeaning41 => 'El Majestuós';
+
+  @override
+  String get asmaMeaning42 => 'El Generós';
+
+  @override
+  String get asmaMeaning43 => 'El vigilant';
+
+  @override
+  String get asmaMeaning44 => 'El responent a l\'oració';
+
+  @override
+  String get asmaMeaning45 => 'La comprensió total';
+
+  @override
+  String get asmaMeaning46 => 'El perfectament savi';
+
+  @override
+  String get asmaMeaning47 => 'L\'Enamorat';
+
+  @override
+  String get asmaMeaning48 => 'El més gloriós';
+
+  @override
+  String get asmaMeaning49 => 'El Resurrector';
+
+  @override
+  String get asmaMeaning50 => 'El testimoni';
+
+  @override
+  String get asmaMeaning51 => 'La veritat';
+
+  @override
+  String get asmaMeaning52 => 'El síndic total';
+
+  @override
+  String get asmaMeaning53 => 'El posseïdor de tota la força';
+
+  @override
+  String get asmaMeaning54 => 'El Forçat';
+
+  @override
+  String get asmaMeaning55 => 'El protector';
+
+  @override
+  String get asmaMeaning56 => 'El lloat';
+
+  @override
+  String get asmaMeaning57 => 'L\'avaluador';
+
+  @override
+  String get asmaMeaning58 => 'El creador';
+
+  @override
+  String get asmaMeaning59 => 'El restaurador';
+
+  @override
+  String get asmaMeaning60 => 'El Donador de Vida';
+
+  @override
+  String get asmaMeaning61 => 'El prenedor de la vida';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'El sostenidor autosubsistent';
+
+  @override
+  String get asmaMeaning64 => 'El cercador';
+
+  @override
+  String get asmaMeaning65 => 'El Gloriós';
+
+  @override
+  String get asmaMeaning66 => 'L\'Únic';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'El buscat per tots';
+
+  @override
+  String get asmaMeaning69 => 'El poderós';
+
+  @override
+  String get asmaMeaning70 => 'El creador de tot poder';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'El retardador';
+
+  @override
+  String get asmaMeaning73 => 'El Primer';
+
+  @override
+  String get asmaMeaning74 => 'L\'últim';
+
+  @override
+  String get asmaMeaning75 => 'El manifest';
+
+  @override
+  String get asmaMeaning76 => 'L\'ocult';
+
+  @override
+  String get asmaMeaning77 => 'El governador';
+
+  @override
+  String get asmaMeaning78 => 'El Suprem';
+
+  @override
+  String get asmaMeaning79 => 'The Doer of Good';
+
+  @override
+  String get asmaMeaning80 => 'La guia del penediment';
+
+  @override
+  String get asmaMeaning81 => 'El venjador';
+
+  @override
+  String get asmaMeaning82 => 'El perdonador';
+
+  @override
+  String get asmaMeaning83 => 'El Climent';
+
+  @override
+  String get asmaMeaning84 => 'El propietari / sobirà de tots';
+
+  @override
+  String get asmaMeaning85 => 'El posseïdor de la majestat i la recompensa';
+
+  @override
+  String get asmaMeaning86 => 'L\'Equitat';
+
+  @override
+  String get asmaMeaning87 => 'El Recollidor';
+
+  @override
+  String get asmaMeaning88 => 'El ric';
+
+  @override
+  String get asmaMeaning89 => 'L\'enriquidor';
+
+  @override
+  String get asmaMeaning90 => 'El prevendor de danys';
+
+  @override
+  String get asmaMeaning91 => 'El portador del dany';
+
+  @override
+  String get asmaMeaning92 => 'El donador de beneficis';
+
+  @override
+  String get asmaMeaning93 => 'La Llum';
+
+  @override
+  String get asmaMeaning94 => 'El guia';
+
+  @override
+  String get asmaMeaning95 => 'El creador';
+
+  @override
+  String get asmaMeaning96 => 'L\'Etern';
+
+  @override
+  String get asmaMeaning97 => 'L\'hereu';
+
+  @override
+  String get asmaMeaning98 => 'La guia més justa';
+
+  @override
+  String get asmaMeaning99 => 'El pacient';
 }

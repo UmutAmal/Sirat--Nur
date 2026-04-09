@@ -1189,4 +1189,301 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Nofoaga Isalama';
+
+  @override
+  String get asmaMeaning1 => 'Le Alofa';
+
+  @override
+  String get asmaMeaning2 => 'Le Alofa Mutimutivale';
+
+  @override
+  String get asmaMeaning3 => 'Le Tupu / Alii Faavavau';
+
+  @override
+  String get asmaMeaning4 => 'Le Paia e Sili ona Paia';
+
+  @override
+  String get asmaMeaning5 => 'O le Puna o le Filemu';
+
+  @override
+  String get asmaMeaning6 => 'Le Foai o le Puipuiga';
+
+  @override
+  String get asmaMeaning7 => 'Le Leoleo';
+
+  @override
+  String get asmaMeaning8 => 'Le pele / Le Silisiliese';
+
+  @override
+  String get asmaMeaning9 => 'O le Fa\'atonu';
+
+  @override
+  String get asmaMeaning10 => 'Le Sili';
+
+  @override
+  String get asmaMeaning11 => 'Le Foafoa';
+
+  @override
+  String get asmaMeaning12 => 'O Le na faia le Poloaiga';
+
+  @override
+  String get asmaMeaning13 => 'O Le Faafoliga o le Lalelei';
+
+  @override
+  String get asmaMeaning14 => 'O Le Faamagalo';
+
+  @override
+  String get asmaMeaning15 => 'Le Pule';
+
+  @override
+  String get asmaMeaning16 => 'O Le Foai o Tagata Uma';
+
+  @override
+  String get asmaMeaning17 => 'O Le Pule';
+
+  @override
+  String get asmaMeaning18 => 'O le Tatala';
+
+  @override
+  String get asmaMeaning19 => 'Le na te silafia mea uma';
+
+  @override
+  String get asmaMeaning20 => 'O le Fa\'amau';
+
+  @override
+  String get asmaMeaning21 => 'O le Fesoasoani';
+
+  @override
+  String get asmaMeaning22 => 'O le Abaser';
+
+  @override
+  String get asmaMeaning23 => 'O le Silisili Ese';
+
+  @override
+  String get asmaMeaning24 => 'O Le na te tuuina atu le mamalu';
+
+  @override
+  String get asmaMeaning25 => 'O Le Faalumaina';
+
+  @override
+  String get asmaMeaning26 => 'O Le Faafofoga i Tagata Uma';
+
+  @override
+  String get asmaMeaning27 => 'O le Tagata Vaai o Tagata Uma';
+
+  @override
+  String get asmaMeaning28 => 'O le Faamasino';
+
+  @override
+  String get asmaMeaning29 => 'O Le Amiotonu';
+
+  @override
+  String get asmaMeaning30 => 'O Le Agalelei';
+
+  @override
+  String get asmaMeaning31 => 'O Le Silafia Uma';
+
+  @override
+  String get asmaMeaning32 => 'O le Tupuaga';
+
+  @override
+  String get asmaMeaning33 => 'O Le Silisiliese';
+
+  @override
+  String get asmaMeaning34 => 'O Le Faamagalo Sili';
+
+  @override
+  String get asmaMeaning35 => 'O le Tauia o le Faafetai';
+
+  @override
+  String get asmaMeaning36 => 'Le Silisili';
+
+  @override
+  String get asmaMeaning37 => 'Le Silisili';
+
+  @override
+  String get asmaMeaning38 => 'O Le Fa\'asao';
+
+  @override
+  String get asmaMeaning39 => 'O le Tausiga';
+
+  @override
+  String get asmaMeaning40 => 'O le Tusi Faitau';
+
+  @override
+  String get asmaMeaning41 => 'O le Silisili Ese';
+
+  @override
+  String get asmaMeaning42 => 'O Le Afoa\'i';
+
+  @override
+  String get asmaMeaning43 => 'O Le Mataala';
+
+  @override
+  String get asmaMeaning44 => 'O Le Tali i le Tatalo';
+
+  @override
+  String get asmaMeaning45 => 'O Le Malamalama Uma';
+
+  @override
+  String get asmaMeaning46 => 'O Le Atotonu Poto';
+
+  @override
+  String get asmaMeaning47 => 'O Le Alofa';
+
+  @override
+  String get asmaMeaning48 => 'Le Silisili Ese';
+
+  @override
+  String get asmaMeaning49 => 'O Le Toetu';
+
+  @override
+  String get asmaMeaning50 => 'O le Molimau';
+
+  @override
+  String get asmaMeaning51 => 'O le Upu Moni';
+
+  @override
+  String get asmaMeaning52 => 'O Le Tausi Mavaega Uma';
+
+  @override
+  String get asmaMeaning53 => 'O Le e ona le Malosi Uma';
+
+  @override
+  String get asmaMeaning54 => 'O Le Malosi';
+
+  @override
+  String get asmaMeaning55 => 'O Le Puipui';
+
+  @override
+  String get asmaMeaning56 => 'O Le Viia';
+
+  @override
+  String get asmaMeaning57 => 'O le Fa\'atonu';
+
+  @override
+  String get asmaMeaning58 => 'O Le na amataina';
+
+  @override
+  String get asmaMeaning59 => 'Le Toefuata\'i';
+
+  @override
+  String get asmaMeaning60 => 'Le Foai o le Ola';
+
+  @override
+  String get asmaMeaning61 => 'O Le na te aveeseina le ola';
+
+  @override
+  String get asmaMeaning62 => 'O Le Ola Faavavau';
+
+  @override
+  String get asmaMeaning63 => 'O Le Fa\'alagolago ia te ia lava';
+
+  @override
+  String get asmaMeaning64 => 'Le Saili';
+
+  @override
+  String get asmaMeaning65 => 'Le Mamalu';
+
+  @override
+  String get asmaMeaning66 => 'O Le Toatasi';
+
+  @override
+  String get asmaMeaning67 => 'O Le Toatasi';
+
+  @override
+  String get asmaMeaning68 => 'O Le Na Saili e Tagata Uma';
+
+  @override
+  String get asmaMeaning69 => 'Le Malosi';
+
+  @override
+  String get asmaMeaning70 => 'Le Foafoa o mana uma';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'O Le Fa\'atuai';
+
+  @override
+  String get asmaMeaning73 => 'O le Muamua';
+
+  @override
+  String get asmaMeaning74 => 'O Le Mulimuli';
+
+  @override
+  String get asmaMeaning75 => 'O le Fa\'aaliga';
+
+  @override
+  String get asmaMeaning76 => 'O Le Natia';
+
+  @override
+  String get asmaMeaning77 => 'O le Kovana';
+
+  @override
+  String get asmaMeaning78 => 'Le Silisili Ese';
+
+  @override
+  String get asmaMeaning79 => 'O Le Fai Mea Lelei';
+
+  @override
+  String get asmaMeaning80 => 'O Le Taiala i le Salamo';
+
+  @override
+  String get asmaMeaning81 => 'O le Fai taui ma sui';
+
+  @override
+  String get asmaMeaning82 => 'O le Faamagalo';
+
+  @override
+  String get asmaMeaning83 => 'O Kelemene';
+
+  @override
+  String get asmaMeaning84 => 'Le Pule / Pule Silisili Ese';
+
+  @override
+  String get asmaMeaning85 => 'O le e ona le mamalu ma le foa\'i';
+
+  @override
+  String get asmaMeaning86 => 'O Le Tutusa';
+
+  @override
+  String get asmaMeaning87 => 'O Le Fa\'apotopoto';
+
+  @override
+  String get asmaMeaning88 => 'O Le Mauoa';
+
+  @override
+  String get asmaMeaning89 => 'Le Fa\'atamaoaigaina';
+
+  @override
+  String get asmaMeaning90 => 'O Le Puipuia o le Faaleagaina';
+
+  @override
+  String get asmaMeaning91 => 'O le na te aumaia le malaia';
+
+  @override
+  String get asmaMeaning92 => 'O Le na te foa\'iina atu manuia';
+
+  @override
+  String get asmaMeaning93 => 'O le Malamalama';
+
+  @override
+  String get asmaMeaning94 => 'O le Ta\'ita\'i';
+
+  @override
+  String get asmaMeaning95 => 'O Le na amataina';
+
+  @override
+  String get asmaMeaning96 => 'O Le Faavavau';
+
+  @override
+  String get asmaMeaning97 => 'O le Suli';
+
+  @override
+  String get asmaMeaning98 => 'Le Ta\'ita\'i Sili Amiotonu';
+
+  @override
+  String get asmaMeaning99 => 'O Le Onosa\'i';
 }

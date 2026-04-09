@@ -1184,4 +1184,301 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Ислам орны';
+
+  @override
+  String get asmaMeaning1 => 'Қайырымды';
+
+  @override
+  String get asmaMeaning2 => 'Рақымды';
+
+  @override
+  String get asmaMeaning3 => 'Патша / Мәңгілік Иеміз';
+
+  @override
+  String get asmaMeaning4 => 'Ең қасиетті';
+
+  @override
+  String get asmaMeaning5 => 'Бейбітшілік көзі';
+
+  @override
+  String get asmaMeaning6 => 'Қауіпсіздікті беруші';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Қымбатты / Ең Құдіретті';
+
+  @override
+  String get asmaMeaning9 => 'Компеллер';
+
+  @override
+  String get asmaMeaning10 => 'Ең керемет';
+
+  @override
+  String get asmaMeaning11 => 'Жасаушы';
+
+  @override
+  String get asmaMeaning12 => 'Тапсырысты жасаушы';
+
+  @override
+  String get asmaMeaning13 => 'Сұлулықты қалыптастырушы';
+
+  @override
+  String get asmaMeaning14 => 'Кешірімді';
+
+  @override
+  String get asmaMeaning15 => 'Бағындырушы';
+
+  @override
+  String get asmaMeaning16 => 'Бәрін беруші';
+
+  @override
+  String get asmaMeaning17 => 'Қолдаушы';
+
+  @override
+  String get asmaMeaning18 => 'Ашушы';
+
+  @override
+  String get asmaMeaning19 => 'Барлығын Білуші';
+
+  @override
+  String get asmaMeaning20 => 'Құрылғы';
+
+  @override
+  String get asmaMeaning21 => 'Жеңілдеткіш';
+
+  @override
+  String get asmaMeaning22 => 'Абазер';
+
+  @override
+  String get asmaMeaning23 => 'Exalter';
+
+  @override
+  String get asmaMeaning24 => 'Құрмет беруші';
+
+  @override
+  String get asmaMeaning25 => 'Қорлаушы';
+
+  @override
+  String get asmaMeaning26 => 'Барлығын естуші';
+
+  @override
+  String get asmaMeaning27 => 'Бәрін көруші';
+
+  @override
+  String get asmaMeaning28 => 'Судья';
+
+  @override
+  String get asmaMeaning29 => 'Әділ';
+
+  @override
+  String get asmaMeaning30 => 'Нәзік';
+
+  @override
+  String get asmaMeaning31 => 'Бәрінен хабардар';
+
+  @override
+  String get asmaMeaning32 => 'The Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'Керемет';
+
+  @override
+  String get asmaMeaning34 => 'Ұлы Кешіруші';
+
+  @override
+  String get asmaMeaning35 => 'Ризашылықты марапаттаушысы';
+
+  @override
+  String get asmaMeaning36 => 'Ең жоғары';
+
+  @override
+  String get asmaMeaning37 => 'Ең керемет';
+
+  @override
+  String get asmaMeaning38 => 'Қорғаушы';
+
+  @override
+  String get asmaMeaning39 => 'Нәрлендіргіш';
+
+  @override
+  String get asmaMeaning40 => 'Есепші';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Жомарт';
+
+  @override
+  String get asmaMeaning43 => 'Қараушы';
+
+  @override
+  String get asmaMeaning44 => 'Дұғаға жауап беруші';
+
+  @override
+  String get asmaMeaning45 => 'Бәрін түсіну';
+
+  @override
+  String get asmaMeaning46 => 'Керемет Дана';
+
+  @override
+  String get asmaMeaning47 => 'Сүйікті адам';
+
+  @override
+  String get asmaMeaning48 => 'Ең Даңқты';
+
+  @override
+  String get asmaMeaning49 => 'Тірілуші';
+
+  @override
+  String get asmaMeaning50 => 'Куәгер';
+
+  @override
+  String get asmaMeaning51 => 'Шындық';
+
+  @override
+  String get asmaMeaning52 => 'Барлығы жеткілікті сенімді тұлға';
+
+  @override
+  String get asmaMeaning53 => 'Барлық Күштің Иесі';
+
+  @override
+  String get asmaMeaning54 => 'Күшті';
+
+  @override
+  String get asmaMeaning55 => 'Қорғаушы';
+
+  @override
+  String get asmaMeaning56 => 'Мақтаулы';
+
+  @override
+  String get asmaMeaning57 => 'Бағалаушы';
+
+  @override
+  String get asmaMeaning58 => 'Бастаушы';
+
+  @override
+  String get asmaMeaning59 => 'Қалпына келтіруші';
+
+  @override
+  String get asmaMeaning60 => 'Өмір Беруші';
+
+  @override
+  String get asmaMeaning61 => 'Өмірді алушы';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Өзін-өзі қамтамасыз етуші';
+
+  @override
+  String get asmaMeaning64 => 'Табу';
+
+  @override
+  String get asmaMeaning65 => 'Даңқты';
+
+  @override
+  String get asmaMeaning66 => 'Жалғыз';
+
+  @override
+  String get asmaMeaning67 => 'Бір';
+
+  @override
+  String get asmaMeaning68 => 'Барлық іздеген адам';
+
+  @override
+  String get asmaMeaning69 => 'Күшті';
+
+  @override
+  String get asmaMeaning70 => 'Барлық құдіреттің Жаратушысы';
+
+  @override
+  String get asmaMeaning71 => 'Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Кешіктіруші';
+
+  @override
+  String get asmaMeaning73 => 'Бірінші';
+
+  @override
+  String get asmaMeaning74 => 'Соңғы';
+
+  @override
+  String get asmaMeaning75 => 'Манифест';
+
+  @override
+  String get asmaMeaning76 => 'Жасырын';
+
+  @override
+  String get asmaMeaning77 => 'Губернатор';
+
+  @override
+  String get asmaMeaning78 => 'Жоғары';
+
+  @override
+  String get asmaMeaning79 => 'Жақсылық жасаушы';
+
+  @override
+  String get asmaMeaning80 => 'Тәубе ету нұсқаулығы';
+
+  @override
+  String get asmaMeaning81 => 'Кек алушы';
+
+  @override
+  String get asmaMeaning82 => 'Кешіруші';
+
+  @override
+  String get asmaMeaning83 => 'Клемент';
+
+  @override
+  String get asmaMeaning84 => 'Барлығының Иесі/Егемені';
+
+  @override
+  String get asmaMeaning85 => 'Ұлылық пен жомарттық иесі';
+
+  @override
+  String get asmaMeaning86 => 'Әділ';
+
+  @override
+  String get asmaMeaning87 => 'Жинаушы';
+
+  @override
+  String get asmaMeaning88 => 'Бай';
+
+  @override
+  String get asmaMeaning89 => 'Байытқыш';
+
+  @override
+  String get asmaMeaning90 => 'Зиянның алдын алу';
+
+  @override
+  String get asmaMeaning91 => 'Зиян келтіруші';
+
+  @override
+  String get asmaMeaning92 => 'Игіліктер беруші';
+
+  @override
+  String get asmaMeaning93 => 'Жарық';
+
+  @override
+  String get asmaMeaning94 => 'Басшы';
+
+  @override
+  String get asmaMeaning95 => 'Бастаушы';
+
+  @override
+  String get asmaMeaning96 => 'Мәңгілік';
+
+  @override
+  String get asmaMeaning97 => 'Мұрагер';
+
+  @override
+  String get asmaMeaning98 => 'Ең әділ жетекші';
+
+  @override
+  String get asmaMeaning99 => 'Науқас';
 }

@@ -1187,4 +1187,301 @@ class AppLocalizationsAk extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islam Beaeɛ';
+
+  @override
+  String get asmaMeaning1 => 'Nea Ɔyɛ Mfaso';
+
+  @override
+  String get asmaMeaning2 => 'Mmɔborohunufoɔ';
+
+  @override
+  String get asmaMeaning3 => 'Ɔhene / Daa Awurade';
+
+  @override
+  String get asmaMeaning4 => 'Kronkron Panyin';
+
+  @override
+  String get asmaMeaning5 => 'Asomdwoeɛ Fibea';
+
+  @override
+  String get asmaMeaning6 => 'Nea Ɔma Ahobammɔ';
+
+  @override
+  String get asmaMeaning7 => 'Ɔwɛmfo no';
+
+  @override
+  String get asmaMeaning8 => 'Nea Ɔsom Bo / Nea Ɔyɛ Tumi sen biara';
+
+  @override
+  String get asmaMeaning9 => 'Ɔhyɛfoɔ';
+
+  @override
+  String get asmaMeaning10 => 'Nea Ɔkɛseɛ';
+
+  @override
+  String get asmaMeaning11 => 'Ɔbɔadeɛ no';
+
+  @override
+  String get asmaMeaning12 => 'Nea Ɔyɛ Nhyehyɛe';
+
+  @override
+  String get asmaMeaning13 => 'Nea Ɔyɛ Ahoɔfɛ';
+
+  @override
+  String get asmaMeaning14 => 'Nea Ɔde Bɔne Fafiri';
+
+  @override
+  String get asmaMeaning15 => 'Nea Ɔbrɛ ne ho ase';
+
+  @override
+  String get asmaMeaning16 => 'Nea Ɔde Nyinaa Ma';
+
+  @override
+  String get asmaMeaning17 => 'Nea ɔhwɛ so';
+
+  @override
+  String get asmaMeaning18 => 'Nea Ɔbue';
+
+  @override
+  String get asmaMeaning19 => 'Nea Onim Ne nyinaa';
+
+  @override
+  String get asmaMeaning20 => 'Ɔkwan a wɔfa so yɛ adwuma';
+
+  @override
+  String get asmaMeaning21 => 'Ɔhotefoɔ';
+
+  @override
+  String get asmaMeaning22 => 'Abasfoɔ no';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'Nea Ɔde Nidi Ma';
+
+  @override
+  String get asmaMeaning25 => 'Ahobrɛasefoɔ';
+
+  @override
+  String get asmaMeaning26 => 'Nnibiara Tiefoɔ';
+
+  @override
+  String get asmaMeaning27 => 'Nea Ɔhwɛ Nyinaa';
+
+  @override
+  String get asmaMeaning28 => 'Ɔtemmufoɔ no';
+
+  @override
+  String get asmaMeaning29 => 'Ateneneefoɔ';
+
+  @override
+  String get asmaMeaning30 => 'Nea Ɔyɛ Anifere';
+
+  @override
+  String get asmaMeaning31 => 'Wɔn a Wɔnim Nyinaa';
+
+  @override
+  String get asmaMeaning32 => 'Agyanom';
+
+  @override
+  String get asmaMeaning33 => 'Nea Ɛyɛ nwonwa';
+
+  @override
+  String get asmaMeaning34 => 'Fafiri Kɛseɛ no';
+
+  @override
+  String get asmaMeaning35 => 'Aseda ho Akatuafoɔ';
+
+  @override
+  String get asmaMeaning36 => 'Nea Ɔkorɔn sen biara';
+
+  @override
+  String get asmaMeaning37 => 'Nea Ɔkɛseɛ';
+
+  @override
+  String get asmaMeaning38 => 'Akoraeɛ no';
+
+  @override
+  String get asmaMeaning39 => 'Nnuanmafoɔ';
+
+  @override
+  String get asmaMeaning40 => 'Akontaabufoɔ';
+
+  @override
+  String get asmaMeaning41 => 'Ɔkɛseɛ no';
+
+  @override
+  String get asmaMeaning42 => 'Ayamyefoɔ';
+
+  @override
+  String get asmaMeaning43 => 'Nea Ɔwɛn';
+
+  @override
+  String get asmaMeaning44 => 'Mpaebɔ ho mmuaemafoɔ';
+
+  @override
+  String get asmaMeaning45 => 'Ne Nyinaa Nteaseɛ';
+
+  @override
+  String get asmaMeaning46 => 'Onyansafoɔ a Ɔdi Pɛ';
+
+  @override
+  String get asmaMeaning47 => 'Ɔdɔfoɔ';
+
+  @override
+  String get asmaMeaning48 => 'Nea Ɔwɔ Animuonyam Paara';
+
+  @override
+  String get asmaMeaning49 => 'Owusɔreɛ no';
+
+  @override
+  String get asmaMeaning50 => 'Ɔdansefoɔ no';
+
+  @override
+  String get asmaMeaning51 => 'Nokware no';
+
+  @override
+  String get asmaMeaning52 => 'Ɔhwɛfoɔ a Ɔyɛ Ne Nyinaa';
+
+  @override
+  String get asmaMeaning53 => 'Nea Ɔwɔ Ahoɔden Nyinaa';
+
+  @override
+  String get asmaMeaning54 => 'Ahoɔdenfoɔ';
+
+  @override
+  String get asmaMeaning55 => 'Ahobanbɔfoɔ no';
+
+  @override
+  String get asmaMeaning56 => 'Wɔakamfo no';
+
+  @override
+  String get asmaMeaning57 => 'Nea Ɔyɛ Nhwehwɛmu';
+
+  @override
+  String get asmaMeaning58 => 'Nea Ɔhyehyɛɛ no';
+
+  @override
+  String get asmaMeaning59 => 'Ɔkwan a ɔsan de ba';
+
+  @override
+  String get asmaMeaning60 => 'Nkwa Ma';
+
+  @override
+  String get asmaMeaning61 => 'Nkwagyefoɔ';
+
+  @override
+  String get asmaMeaning62 => 'Nea Ɔte Ase Daa';
+
+  @override
+  String get asmaMeaning63 => 'Nea Ɔma Ne Ho Nteaseɛ';
+
+  @override
+  String get asmaMeaning64 => 'Ɔhwehwɛfoɔ';
+
+  @override
+  String get asmaMeaning65 => 'Anuonyamfoɔ';
+
+  @override
+  String get asmaMeaning66 => 'Nea Ɔno nko ara';
+
+  @override
+  String get asmaMeaning67 => 'Nea no';
+
+  @override
+  String get asmaMeaning68 => 'Nea Nnipa Nyinaa Hwehwɛ';
+
+  @override
+  String get asmaMeaning69 => 'Wɔde Tumi';
+
+  @override
+  String get asmaMeaning70 => 'Tumi nyinaa Bɔfo';
+
+  @override
+  String get asmaMeaning71 => 'Ɔkwan a ɔyɛ ntɛm';
+
+  @override
+  String get asmaMeaning72 => 'Nea Ɔkyɛ';
+
+  @override
+  String get asmaMeaning73 => 'Nea Edi Kan';
+
+  @override
+  String get asmaMeaning74 => 'Nea Etwa To';
+
+  @override
+  String get asmaMeaning75 => 'Nea Ɛda Adi';
+
+  @override
+  String get asmaMeaning76 => 'Nea Wɔde Ahintaw';
+
+  @override
+  String get asmaMeaning77 => 'Amrado no';
+
+  @override
+  String get asmaMeaning78 => 'Nea Ɔkorɔn';
+
+  @override
+  String get asmaMeaning79 => 'Nea Ɔyɛ papa';
+
+  @override
+  String get asmaMeaning80 => 'Akwankyerɛ a ɛfa Adwensakra ho';
+
+  @override
+  String get asmaMeaning81 => 'Aweredifoɔ';
+
+  @override
+  String get asmaMeaning82 => 'Ɔdefakyɛfoɔ';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Owura / Otumfoɔ a ɔhwɛ obiara so';
+
+  @override
+  String get asmaMeaning85 => 'Nea Ɔwɔ Anuonyam ne Akyɛde';
+
+  @override
+  String get asmaMeaning86 => 'Nea Ɔyɛ Pɛ';
+
+  @override
+  String get asmaMeaning87 => 'Ɔboaboafoɔ';
+
+  @override
+  String get asmaMeaning88 => 'Ɔdefoɔ no';
+
+  @override
+  String get asmaMeaning89 => 'Nea Ɔma Ahonyade';
+
+  @override
+  String get asmaMeaning90 => 'Nea Ɔsiw Ɔhaw Ano';
+
+  @override
+  String get asmaMeaning91 => 'Nea Ɔde Ɔhaw ba';
+
+  @override
+  String get asmaMeaning92 => 'Ɔde Mfaso Ma';
+
+  @override
+  String get asmaMeaning93 => 'Han no';
+
+  @override
+  String get asmaMeaning94 => 'Kwankyerɛfoɔ no';
+
+  @override
+  String get asmaMeaning95 => 'Nea Ɔhyehyɛɛ no';
+
+  @override
+  String get asmaMeaning96 => 'Nea Ɔte hɔ Daa';
+
+  @override
+  String get asmaMeaning97 => 'Adedifoɔ no';
+
+  @override
+  String get asmaMeaning98 => 'Akwankyerɛ a ɛtene sen biara';
+
+  @override
+  String get asmaMeaning99 => 'Ɔyarefoɔ no';
 }

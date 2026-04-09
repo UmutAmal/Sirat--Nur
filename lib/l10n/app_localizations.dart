@@ -2649,6 +2649,600 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Islamic Place'**
   String get islamicPlaceFallback;
+
+  /// No description provided for @asmaMeaning1.
+  ///
+  /// In en, this message translates to:
+  /// **'The Beneficent'**
+  String get asmaMeaning1;
+
+  /// No description provided for @asmaMeaning2.
+  ///
+  /// In en, this message translates to:
+  /// **'The Merciful'**
+  String get asmaMeaning2;
+
+  /// No description provided for @asmaMeaning3.
+  ///
+  /// In en, this message translates to:
+  /// **'The King / Eternal Lord'**
+  String get asmaMeaning3;
+
+  /// No description provided for @asmaMeaning4.
+  ///
+  /// In en, this message translates to:
+  /// **'The Most Holy'**
+  String get asmaMeaning4;
+
+  /// No description provided for @asmaMeaning5.
+  ///
+  /// In en, this message translates to:
+  /// **'The Source of Peace'**
+  String get asmaMeaning5;
+
+  /// No description provided for @asmaMeaning6.
+  ///
+  /// In en, this message translates to:
+  /// **'The Giver of Security'**
+  String get asmaMeaning6;
+
+  /// No description provided for @asmaMeaning7.
+  ///
+  /// In en, this message translates to:
+  /// **'The Guardian'**
+  String get asmaMeaning7;
+
+  /// No description provided for @asmaMeaning8.
+  ///
+  /// In en, this message translates to:
+  /// **'The Precious / The Most Mighty'**
+  String get asmaMeaning8;
+
+  /// No description provided for @asmaMeaning9.
+  ///
+  /// In en, this message translates to:
+  /// **'The Compeller'**
+  String get asmaMeaning9;
+
+  /// No description provided for @asmaMeaning10.
+  ///
+  /// In en, this message translates to:
+  /// **'The Greatest'**
+  String get asmaMeaning10;
+
+  /// No description provided for @asmaMeaning11.
+  ///
+  /// In en, this message translates to:
+  /// **'The Creator'**
+  String get asmaMeaning11;
+
+  /// No description provided for @asmaMeaning12.
+  ///
+  /// In en, this message translates to:
+  /// **'The Maker of Order'**
+  String get asmaMeaning12;
+
+  /// No description provided for @asmaMeaning13.
+  ///
+  /// In en, this message translates to:
+  /// **'The Shaper of Beauty'**
+  String get asmaMeaning13;
+
+  /// No description provided for @asmaMeaning14.
+  ///
+  /// In en, this message translates to:
+  /// **'The Forgiving'**
+  String get asmaMeaning14;
+
+  /// No description provided for @asmaMeaning15.
+  ///
+  /// In en, this message translates to:
+  /// **'The Subduer'**
+  String get asmaMeaning15;
+
+  /// No description provided for @asmaMeaning16.
+  ///
+  /// In en, this message translates to:
+  /// **'The Giver of All'**
+  String get asmaMeaning16;
+
+  /// No description provided for @asmaMeaning17.
+  ///
+  /// In en, this message translates to:
+  /// **'The Sustainer'**
+  String get asmaMeaning17;
+
+  /// No description provided for @asmaMeaning18.
+  ///
+  /// In en, this message translates to:
+  /// **'The Opener'**
+  String get asmaMeaning18;
+
+  /// No description provided for @asmaMeaning19.
+  ///
+  /// In en, this message translates to:
+  /// **'The Knower of All'**
+  String get asmaMeaning19;
+
+  /// No description provided for @asmaMeaning20.
+  ///
+  /// In en, this message translates to:
+  /// **'The Constrictor'**
+  String get asmaMeaning20;
+
+  /// No description provided for @asmaMeaning21.
+  ///
+  /// In en, this message translates to:
+  /// **'The Reliever'**
+  String get asmaMeaning21;
+
+  /// No description provided for @asmaMeaning22.
+  ///
+  /// In en, this message translates to:
+  /// **'The Abaser'**
+  String get asmaMeaning22;
+
+  /// No description provided for @asmaMeaning23.
+  ///
+  /// In en, this message translates to:
+  /// **'The Exalter'**
+  String get asmaMeaning23;
+
+  /// No description provided for @asmaMeaning24.
+  ///
+  /// In en, this message translates to:
+  /// **'The Bestower of Honour'**
+  String get asmaMeaning24;
+
+  /// No description provided for @asmaMeaning25.
+  ///
+  /// In en, this message translates to:
+  /// **'The Humiliator'**
+  String get asmaMeaning25;
+
+  /// No description provided for @asmaMeaning26.
+  ///
+  /// In en, this message translates to:
+  /// **'The Hearer of All'**
+  String get asmaMeaning26;
+
+  /// No description provided for @asmaMeaning27.
+  ///
+  /// In en, this message translates to:
+  /// **'The Seer of All'**
+  String get asmaMeaning27;
+
+  /// No description provided for @asmaMeaning28.
+  ///
+  /// In en, this message translates to:
+  /// **'The Judge'**
+  String get asmaMeaning28;
+
+  /// No description provided for @asmaMeaning29.
+  ///
+  /// In en, this message translates to:
+  /// **'The Just'**
+  String get asmaMeaning29;
+
+  /// No description provided for @asmaMeaning30.
+  ///
+  /// In en, this message translates to:
+  /// **'The Subtle One'**
+  String get asmaMeaning30;
+
+  /// No description provided for @asmaMeaning31.
+  ///
+  /// In en, this message translates to:
+  /// **'The All Aware'**
+  String get asmaMeaning31;
+
+  /// No description provided for @asmaMeaning32.
+  ///
+  /// In en, this message translates to:
+  /// **'The Forebearing'**
+  String get asmaMeaning32;
+
+  /// No description provided for @asmaMeaning33.
+  ///
+  /// In en, this message translates to:
+  /// **'The Magnificent'**
+  String get asmaMeaning33;
+
+  /// No description provided for @asmaMeaning34.
+  ///
+  /// In en, this message translates to:
+  /// **'The Great Forgiver'**
+  String get asmaMeaning34;
+
+  /// No description provided for @asmaMeaning35.
+  ///
+  /// In en, this message translates to:
+  /// **'The Rewarder of Thankfulness'**
+  String get asmaMeaning35;
+
+  /// No description provided for @asmaMeaning36.
+  ///
+  /// In en, this message translates to:
+  /// **'The Highest'**
+  String get asmaMeaning36;
+
+  /// No description provided for @asmaMeaning37.
+  ///
+  /// In en, this message translates to:
+  /// **'The Greatest'**
+  String get asmaMeaning37;
+
+  /// No description provided for @asmaMeaning38.
+  ///
+  /// In en, this message translates to:
+  /// **'The Preserver'**
+  String get asmaMeaning38;
+
+  /// No description provided for @asmaMeaning39.
+  ///
+  /// In en, this message translates to:
+  /// **'The Nourisher'**
+  String get asmaMeaning39;
+
+  /// No description provided for @asmaMeaning40.
+  ///
+  /// In en, this message translates to:
+  /// **'The Reckoner'**
+  String get asmaMeaning40;
+
+  /// No description provided for @asmaMeaning41.
+  ///
+  /// In en, this message translates to:
+  /// **'The Majestic'**
+  String get asmaMeaning41;
+
+  /// No description provided for @asmaMeaning42.
+  ///
+  /// In en, this message translates to:
+  /// **'The Generous'**
+  String get asmaMeaning42;
+
+  /// No description provided for @asmaMeaning43.
+  ///
+  /// In en, this message translates to:
+  /// **'The Watchful One'**
+  String get asmaMeaning43;
+
+  /// No description provided for @asmaMeaning44.
+  ///
+  /// In en, this message translates to:
+  /// **'The Responder to Prayer'**
+  String get asmaMeaning44;
+
+  /// No description provided for @asmaMeaning45.
+  ///
+  /// In en, this message translates to:
+  /// **'The All Comprehending'**
+  String get asmaMeaning45;
+
+  /// No description provided for @asmaMeaning46.
+  ///
+  /// In en, this message translates to:
+  /// **'The Perfectly Wise'**
+  String get asmaMeaning46;
+
+  /// No description provided for @asmaMeaning47.
+  ///
+  /// In en, this message translates to:
+  /// **'The Loving One'**
+  String get asmaMeaning47;
+
+  /// No description provided for @asmaMeaning48.
+  ///
+  /// In en, this message translates to:
+  /// **'The Most Glorious One'**
+  String get asmaMeaning48;
+
+  /// No description provided for @asmaMeaning49.
+  ///
+  /// In en, this message translates to:
+  /// **'The Resurrector'**
+  String get asmaMeaning49;
+
+  /// No description provided for @asmaMeaning50.
+  ///
+  /// In en, this message translates to:
+  /// **'The Witness'**
+  String get asmaMeaning50;
+
+  /// No description provided for @asmaMeaning51.
+  ///
+  /// In en, this message translates to:
+  /// **'The Truth'**
+  String get asmaMeaning51;
+
+  /// No description provided for @asmaMeaning52.
+  ///
+  /// In en, this message translates to:
+  /// **'The All-Sufficient Trustee'**
+  String get asmaMeaning52;
+
+  /// No description provided for @asmaMeaning53.
+  ///
+  /// In en, this message translates to:
+  /// **'The Possessor of All Strength'**
+  String get asmaMeaning53;
+
+  /// No description provided for @asmaMeaning54.
+  ///
+  /// In en, this message translates to:
+  /// **'The Forceful'**
+  String get asmaMeaning54;
+
+  /// No description provided for @asmaMeaning55.
+  ///
+  /// In en, this message translates to:
+  /// **'The Protector'**
+  String get asmaMeaning55;
+
+  /// No description provided for @asmaMeaning56.
+  ///
+  /// In en, this message translates to:
+  /// **'The Praised'**
+  String get asmaMeaning56;
+
+  /// No description provided for @asmaMeaning57.
+  ///
+  /// In en, this message translates to:
+  /// **'The Appraiser'**
+  String get asmaMeaning57;
+
+  /// No description provided for @asmaMeaning58.
+  ///
+  /// In en, this message translates to:
+  /// **'The Originator'**
+  String get asmaMeaning58;
+
+  /// No description provided for @asmaMeaning59.
+  ///
+  /// In en, this message translates to:
+  /// **'The Restorer'**
+  String get asmaMeaning59;
+
+  /// No description provided for @asmaMeaning60.
+  ///
+  /// In en, this message translates to:
+  /// **'The Giver of Life'**
+  String get asmaMeaning60;
+
+  /// No description provided for @asmaMeaning61.
+  ///
+  /// In en, this message translates to:
+  /// **'The Taker of Life'**
+  String get asmaMeaning61;
+
+  /// No description provided for @asmaMeaning62.
+  ///
+  /// In en, this message translates to:
+  /// **'The Ever Living'**
+  String get asmaMeaning62;
+
+  /// No description provided for @asmaMeaning63.
+  ///
+  /// In en, this message translates to:
+  /// **'The Self-Subsisting Sustainer'**
+  String get asmaMeaning63;
+
+  /// No description provided for @asmaMeaning64.
+  ///
+  /// In en, this message translates to:
+  /// **'The Finder'**
+  String get asmaMeaning64;
+
+  /// No description provided for @asmaMeaning65.
+  ///
+  /// In en, this message translates to:
+  /// **'The Glorious'**
+  String get asmaMeaning65;
+
+  /// No description provided for @asmaMeaning66.
+  ///
+  /// In en, this message translates to:
+  /// **'The Only One'**
+  String get asmaMeaning66;
+
+  /// No description provided for @asmaMeaning67.
+  ///
+  /// In en, this message translates to:
+  /// **'The One'**
+  String get asmaMeaning67;
+
+  /// No description provided for @asmaMeaning68.
+  ///
+  /// In en, this message translates to:
+  /// **'The One Sought by All'**
+  String get asmaMeaning68;
+
+  /// No description provided for @asmaMeaning69.
+  ///
+  /// In en, this message translates to:
+  /// **'The Powerful'**
+  String get asmaMeaning69;
+
+  /// No description provided for @asmaMeaning70.
+  ///
+  /// In en, this message translates to:
+  /// **'The Creator of all power'**
+  String get asmaMeaning70;
+
+  /// No description provided for @asmaMeaning71.
+  ///
+  /// In en, this message translates to:
+  /// **'The Expediter'**
+  String get asmaMeaning71;
+
+  /// No description provided for @asmaMeaning72.
+  ///
+  /// In en, this message translates to:
+  /// **'The Delayer'**
+  String get asmaMeaning72;
+
+  /// No description provided for @asmaMeaning73.
+  ///
+  /// In en, this message translates to:
+  /// **'The First'**
+  String get asmaMeaning73;
+
+  /// No description provided for @asmaMeaning74.
+  ///
+  /// In en, this message translates to:
+  /// **'The Last'**
+  String get asmaMeaning74;
+
+  /// No description provided for @asmaMeaning75.
+  ///
+  /// In en, this message translates to:
+  /// **'The Manifest'**
+  String get asmaMeaning75;
+
+  /// No description provided for @asmaMeaning76.
+  ///
+  /// In en, this message translates to:
+  /// **'The Hidden'**
+  String get asmaMeaning76;
+
+  /// No description provided for @asmaMeaning77.
+  ///
+  /// In en, this message translates to:
+  /// **'The Governor'**
+  String get asmaMeaning77;
+
+  /// No description provided for @asmaMeaning78.
+  ///
+  /// In en, this message translates to:
+  /// **'The Supreme One'**
+  String get asmaMeaning78;
+
+  /// No description provided for @asmaMeaning79.
+  ///
+  /// In en, this message translates to:
+  /// **'The Doer of Good'**
+  String get asmaMeaning79;
+
+  /// No description provided for @asmaMeaning80.
+  ///
+  /// In en, this message translates to:
+  /// **'The Guide to Repentance'**
+  String get asmaMeaning80;
+
+  /// No description provided for @asmaMeaning81.
+  ///
+  /// In en, this message translates to:
+  /// **'The Avenger'**
+  String get asmaMeaning81;
+
+  /// No description provided for @asmaMeaning82.
+  ///
+  /// In en, this message translates to:
+  /// **'The Forgiver'**
+  String get asmaMeaning82;
+
+  /// No description provided for @asmaMeaning83.
+  ///
+  /// In en, this message translates to:
+  /// **'The Clement'**
+  String get asmaMeaning83;
+
+  /// No description provided for @asmaMeaning84.
+  ///
+  /// In en, this message translates to:
+  /// **'The Owner / Sovereign of All'**
+  String get asmaMeaning84;
+
+  /// No description provided for @asmaMeaning85.
+  ///
+  /// In en, this message translates to:
+  /// **'The Possessor of Majesty and Bounty'**
+  String get asmaMeaning85;
+
+  /// No description provided for @asmaMeaning86.
+  ///
+  /// In en, this message translates to:
+  /// **'The Equitable One'**
+  String get asmaMeaning86;
+
+  /// No description provided for @asmaMeaning87.
+  ///
+  /// In en, this message translates to:
+  /// **'The Gatherer'**
+  String get asmaMeaning87;
+
+  /// No description provided for @asmaMeaning88.
+  ///
+  /// In en, this message translates to:
+  /// **'The Rich One'**
+  String get asmaMeaning88;
+
+  /// No description provided for @asmaMeaning89.
+  ///
+  /// In en, this message translates to:
+  /// **'The Enricher'**
+  String get asmaMeaning89;
+
+  /// No description provided for @asmaMeaning90.
+  ///
+  /// In en, this message translates to:
+  /// **'The Preventer of Harm'**
+  String get asmaMeaning90;
+
+  /// No description provided for @asmaMeaning91.
+  ///
+  /// In en, this message translates to:
+  /// **'The Bringer of Harm'**
+  String get asmaMeaning91;
+
+  /// No description provided for @asmaMeaning92.
+  ///
+  /// In en, this message translates to:
+  /// **'The Bestower of Benefits'**
+  String get asmaMeaning92;
+
+  /// No description provided for @asmaMeaning93.
+  ///
+  /// In en, this message translates to:
+  /// **'The Light'**
+  String get asmaMeaning93;
+
+  /// No description provided for @asmaMeaning94.
+  ///
+  /// In en, this message translates to:
+  /// **'The Guider'**
+  String get asmaMeaning94;
+
+  /// No description provided for @asmaMeaning95.
+  ///
+  /// In en, this message translates to:
+  /// **'The Originator'**
+  String get asmaMeaning95;
+
+  /// No description provided for @asmaMeaning96.
+  ///
+  /// In en, this message translates to:
+  /// **'The Everlasting One'**
+  String get asmaMeaning96;
+
+  /// No description provided for @asmaMeaning97.
+  ///
+  /// In en, this message translates to:
+  /// **'The Inheritor'**
+  String get asmaMeaning97;
+
+  /// No description provided for @asmaMeaning98.
+  ///
+  /// In en, this message translates to:
+  /// **'The Most Righteous Guide'**
+  String get asmaMeaning98;
+
+  /// No description provided for @asmaMeaning99.
+  ///
+  /// In en, this message translates to:
+  /// **'The Patient One'**
+  String get asmaMeaning99;
 }
 
 class _AppLocalizationsDelegate

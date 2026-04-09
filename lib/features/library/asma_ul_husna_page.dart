@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/constants/asma_ul_husna_data.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
+import 'package:sirat_i_nur/features/library/asma_meaning_localization.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 import 'package:sirat_i_nur/core/services/audio_player_service.dart';
 
@@ -17,7 +18,57 @@ bool hasPlayableAsmaAudio(Map<String, dynamic> item) {
   return audioUrl is String && audioUrl.trim().isNotEmpty;
 }
 
-bool matchesAsmaSearchQuery(Map<String, dynamic> item, String query) {
+String resolveAsmaMeaning(
+  AppLocalizations l10n,
+  Locale locale,
+  Map<String, dynamic> item,
+) {
+  final translations = item['translations'];
+  if (translations is Map) {
+    final localeTag = locale.toLanguageTag();
+    final normalizedTag = localeTag.replaceAll('-', '_');
+    final candidates = <String>{
+      localeTag,
+      normalizedTag,
+      localeTag.replaceAll('_', '-'),
+      locale.languageCode,
+      'en',
+    };
+
+    for (final candidate in candidates) {
+      final value = translations[candidate];
+      if (value is String && value.trim().isNotEmpty) {
+        if (candidate == 'en') {
+          break;
+        }
+        return value;
+      }
+    }
+  }
+
+  final id = item['id'];
+  if (id is int) {
+    final localizedBundledMeaning = resolveBundledAsmaMeaning(l10n, id);
+    if (localizedBundledMeaning.isNotEmpty) {
+      return localizedBundledMeaning;
+    }
+  }
+
+  if (translations is Map) {
+    final englishFallback = translations['en'];
+    if (englishFallback is String) {
+      return englishFallback;
+    }
+  }
+
+  return '';
+}
+
+bool matchesAsmaSearchQuery(
+  Map<String, dynamic> item,
+  String query, {
+  String? localizedMeaning,
+}) {
   final normalizedQuery = query.trim().toLowerCase();
   if (normalizedQuery.isEmpty) {
     return true;
@@ -31,10 +82,14 @@ bool matchesAsmaSearchQuery(Map<String, dynamic> item, String query) {
       translations.values.any(
         (value) => value is String && value.toLowerCase().contains(normalizedQuery),
       );
+  final localizedMeaningMatch =
+      localizedMeaning != null &&
+      localizedMeaning.toLowerCase().contains(normalizedQuery);
 
   return transliteration.contains(normalizedQuery) ||
       arabic.contains(normalizedQuery) ||
-      translationMatch;
+      translationMatch ||
+      localizedMeaningMatch;
 }
 
 class AsmaUlHusnaPage extends ConsumerStatefulWidget {
@@ -56,7 +111,11 @@ class _AsmaUlHusnaPageState extends ConsumerState<AsmaUlHusnaPage> {
     final names = resolveAsmaUlHusnaItems(ref.watch(asmaUlHusnaProvider));
 
     final filteredNames = names.where((name) {
-      return matchesAsmaSearchQuery(name, _searchQuery);
+      return matchesAsmaSearchQuery(
+        name,
+        _searchQuery,
+        localizedMeaning: resolveAsmaMeaning(l10n, locale, name),
+      );
     }).toList();
 
     return Scaffold(
@@ -94,9 +153,7 @@ class _AsmaUlHusnaPageState extends ConsumerState<AsmaUlHusnaPage> {
         itemCount: filteredNames.length,
         itemBuilder: (context, index) {
           final item = filteredNames[index];
-          final translations = item['translations'] as Map<String, dynamic>;
-          final meaning =
-              translations[locale.languageCode] ?? translations['en'] ?? '';
+          final meaning = resolveAsmaMeaning(l10n, locale, item);
           final hasAudio = hasPlayableAsmaAudio(item);
 
           return Hero(

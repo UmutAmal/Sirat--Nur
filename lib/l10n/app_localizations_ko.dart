@@ -1179,4 +1179,301 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => '이슬람 장소';
+
+  @override
+  String get asmaMeaning1 => '은혜로운 자';
+
+  @override
+  String get asmaMeaning2 => '자비로우신 분';
+
+  @override
+  String get asmaMeaning3 => '왕/영원한 군주';
+
+  @override
+  String get asmaMeaning4 => '지성소';
+
+  @override
+  String get asmaMeaning5 => '평화의 근원';
+
+  @override
+  String get asmaMeaning6 => '담보 제공자';
+
+  @override
+  String get asmaMeaning7 => '가디언';
+
+  @override
+  String get asmaMeaning8 => '귀중한/가장 강력한';
+
+  @override
+  String get asmaMeaning9 => '컴펠러';
+
+  @override
+  String get asmaMeaning10 => '최고';
+
+  @override
+  String get asmaMeaning11 => '창조자';
+
+  @override
+  String get asmaMeaning12 => '질서를 만드는 사람';
+
+  @override
+  String get asmaMeaning13 => '아름다움의 셰이퍼';
+
+  @override
+  String get asmaMeaning14 => '용서하시는 분';
+
+  @override
+  String get asmaMeaning15 => '진압자';
+
+  @override
+  String get asmaMeaning16 => '모든 것을 주시는 분';
+
+  @override
+  String get asmaMeaning17 => '지속자';
+
+  @override
+  String get asmaMeaning18 => '오프너';
+
+  @override
+  String get asmaMeaning19 => '모든 것을 아시는 분';
+
+  @override
+  String get asmaMeaning20 => '압축기';
+
+  @override
+  String get asmaMeaning21 => '구원자';
+
+  @override
+  String get asmaMeaning22 => '저격자';
+
+  @override
+  String get asmaMeaning23 => '숭배자';
+
+  @override
+  String get asmaMeaning24 => '명예를 주시는 분';
+
+  @override
+  String get asmaMeaning25 => '굴욕자';
+
+  @override
+  String get asmaMeaning26 => '모든 사람의 말을 듣는 분';
+
+  @override
+  String get asmaMeaning27 => '모든 것을 보는 자';
+
+  @override
+  String get asmaMeaning28 => '판사';
+
+  @override
+  String get asmaMeaning29 => '그냥';
+
+  @override
+  String get asmaMeaning30 => '미묘한 것';
+
+  @override
+  String get asmaMeaning31 => '올 어웨어(All Aware)';
+
+  @override
+  String get asmaMeaning32 => '선배';
+
+  @override
+  String get asmaMeaning33 => '웅장함';
+
+  @override
+  String get asmaMeaning34 => '위대하신 용서자';
+
+  @override
+  String get asmaMeaning35 => '감사의 보상자';
+
+  @override
+  String get asmaMeaning36 => '최고';
+
+  @override
+  String get asmaMeaning37 => '최고';
+
+  @override
+  String get asmaMeaning38 => '보호자';
+
+  @override
+  String get asmaMeaning39 => '너리셔';
+
+  @override
+  String get asmaMeaning40 => '계산기';
+
+  @override
+  String get asmaMeaning41 => '더 마제스틱';
+
+  @override
+  String get asmaMeaning42 => '관대한';
+
+  @override
+  String get asmaMeaning43 => '살펴보는 분';
+
+  @override
+  String get asmaMeaning44 => '기도에 대한 응답자';
+
+  @override
+  String get asmaMeaning45 => '모든 것을 포괄하는 것';
+
+  @override
+  String get asmaMeaning46 => '완전히 현명한 사람';
+
+  @override
+  String get asmaMeaning47 => '사랑하는 사람';
+
+  @override
+  String get asmaMeaning48 => '가장 영광스러운 분';
+
+  @override
+  String get asmaMeaning49 => '부활자';
+
+  @override
+  String get asmaMeaning50 => '증인';
+
+  @override
+  String get asmaMeaning51 => '진실';
+
+  @override
+  String get asmaMeaning52 => '모든 것을 갖춘 신탁 관리인';
+
+  @override
+  String get asmaMeaning53 => '모든 힘의 소유자';
+
+  @override
+  String get asmaMeaning54 => '강력한';
+
+  @override
+  String get asmaMeaning55 => '보호자';
+
+  @override
+  String get asmaMeaning56 => '칭찬받은 자';
+
+  @override
+  String get asmaMeaning57 => '평가자';
+
+  @override
+  String get asmaMeaning58 => '작성자';
+
+  @override
+  String get asmaMeaning59 => '복원자';
+
+  @override
+  String get asmaMeaning60 => '생명을 주시는 분';
+
+  @override
+  String get asmaMeaning61 => '생명을 빼앗는 자';
+
+  @override
+  String get asmaMeaning62 => '에버 리빙';
+
+  @override
+  String get asmaMeaning63 => '자립적 부양자';
+
+  @override
+  String get asmaMeaning64 => '파인더';
+
+  @override
+  String get asmaMeaning65 => '영광스러운';
+
+  @override
+  String get asmaMeaning66 => '유일한 것';
+
+  @override
+  String get asmaMeaning67 => '더 원';
+
+  @override
+  String get asmaMeaning68 => '모두가 찾는 것';
+
+  @override
+  String get asmaMeaning69 => '강력한';
+
+  @override
+  String get asmaMeaning70 => '모든 권력의 창조자';
+
+  @override
+  String get asmaMeaning71 => '익스피디터';
+
+  @override
+  String get asmaMeaning72 => '지연자';
+
+  @override
+  String get asmaMeaning73 => '첫 번째';
+
+  @override
+  String get asmaMeaning74 => '마지막';
+
+  @override
+  String get asmaMeaning75 => '매니페스트';
+
+  @override
+  String get asmaMeaning76 => '숨겨진 것';
+
+  @override
+  String get asmaMeaning77 => '지사';
+
+  @override
+  String get asmaMeaning78 => '최고의 존재';
+
+  @override
+  String get asmaMeaning79 => '선을 행하는 사람';
+
+  @override
+  String get asmaMeaning80 => '회개에 대한 안내';
+
+  @override
+  String get asmaMeaning81 => '어벤저';
+
+  @override
+  String get asmaMeaning82 => '용서하시는 분';
+
+  @override
+  String get asmaMeaning83 => '클레멘트';
+
+  @override
+  String get asmaMeaning84 => '모든 것의 소유자/주권자';
+
+  @override
+  String get asmaMeaning85 => '위엄과 풍요의 소유자';
+
+  @override
+  String get asmaMeaning86 => '공평한 것';
+
+  @override
+  String get asmaMeaning87 => '개더러';
+
+  @override
+  String get asmaMeaning88 => '부자';
+
+  @override
+  String get asmaMeaning89 => '인리처';
+
+  @override
+  String get asmaMeaning90 => '위험 예방자';
+
+  @override
+  String get asmaMeaning91 => '해를 끼치는 자';
+
+  @override
+  String get asmaMeaning92 => '혜택 제공자';
+
+  @override
+  String get asmaMeaning93 => '빛';
+
+  @override
+  String get asmaMeaning94 => '가이더';
+
+  @override
+  String get asmaMeaning95 => '작성자';
+
+  @override
+  String get asmaMeaning96 => '영원하신 분';
+
+  @override
+  String get asmaMeaning97 => '상속자';
+
+  @override
+  String get asmaMeaning98 => '가장 의로운 인도자';
+
+  @override
+  String get asmaMeaning99 => '환자 1호';
 }

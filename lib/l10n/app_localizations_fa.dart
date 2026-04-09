@@ -1185,4 +1185,301 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'مکان اسلامی';
+
+  @override
+  String get asmaMeaning1 => 'خیرخواه';
+
+  @override
+  String get asmaMeaning2 => 'مهربان';
+
+  @override
+  String get asmaMeaning3 => 'پادشاه / پروردگار ابدی';
+
+  @override
+  String get asmaMeaning4 => 'مقدس ترین';
+
+  @override
+  String get asmaMeaning5 => 'منبع صلح';
+
+  @override
+  String get asmaMeaning6 => 'ارائه دهنده امنیت';
+
+  @override
+  String get asmaMeaning7 => 'نگهبان';
+
+  @override
+  String get asmaMeaning8 => 'گرانبها / تواناترین';
+
+  @override
+  String get asmaMeaning9 => 'اجبار';
+
+  @override
+  String get asmaMeaning10 => 'بزرگترین';
+
+  @override
+  String get asmaMeaning11 => 'خالق';
+
+  @override
+  String get asmaMeaning12 => 'سازنده سفارش';
+
+  @override
+  String get asmaMeaning13 => 'شکل دهنده زیبایی';
+
+  @override
+  String get asmaMeaning14 => 'بخشنده';
+
+  @override
+  String get asmaMeaning15 => 'Suduer';
+
+  @override
+  String get asmaMeaning16 => 'بخشنده همه';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'بازکن';
+
+  @override
+  String get asmaMeaning19 => 'دانای همه';
+
+  @override
+  String get asmaMeaning20 => 'Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'تسکین دهنده';
+
+  @override
+  String get asmaMeaning22 => 'اباصر';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'اعطا کننده افتخار';
+
+  @override
+  String get asmaMeaning25 => 'حقیرکننده';
+
+  @override
+  String get asmaMeaning26 => 'شنونده همه';
+
+  @override
+  String get asmaMeaning27 => 'بینای همه';
+
+  @override
+  String get asmaMeaning28 => 'قاضی';
+
+  @override
+  String get asmaMeaning29 => 'عادل';
+
+  @override
+  String get asmaMeaning30 => 'The Subtle One';
+
+  @override
+  String get asmaMeaning31 => 'همه آگاه';
+
+  @override
+  String get asmaMeaning32 => 'مهندس';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'بخشنده بزرگ';
+
+  @override
+  String get asmaMeaning35 => 'پاداش دهنده شکرگزاری';
+
+  @override
+  String get asmaMeaning36 => 'بالاترین';
+
+  @override
+  String get asmaMeaning37 => 'بزرگترین';
+
+  @override
+  String get asmaMeaning38 => 'حافظ';
+
+  @override
+  String get asmaMeaning39 => 'The Nourisher';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'سخاوتمندان';
+
+  @override
+  String get asmaMeaning43 => 'The Watchful One';
+
+  @override
+  String get asmaMeaning44 => 'مستجاب دعا';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehending';
+
+  @override
+  String get asmaMeaning46 => 'کاملا حکیم';
+
+  @override
+  String get asmaMeaning47 => 'The Loving One';
+
+  @override
+  String get asmaMeaning48 => 'شکوهمندترین';
+
+  @override
+  String get asmaMeaning49 => 'Resurrector';
+
+  @override
+  String get asmaMeaning50 => 'شاهد';
+
+  @override
+  String get asmaMeaning51 => 'حقیقت';
+
+  @override
+  String get asmaMeaning52 => 'متولی همه جانبه';
+
+  @override
+  String get asmaMeaning53 => 'دارنده تمام نیرو';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'محافظ';
+
+  @override
+  String get asmaMeaning56 => 'تحسین شدگان';
+
+  @override
+  String get asmaMeaning57 => 'ارزیابی کننده';
+
+  @override
+  String get asmaMeaning58 => 'The Originator';
+
+  @override
+  String get asmaMeaning59 => 'Restorer';
+
+  @override
+  String get asmaMeaning60 => 'بخشنده زندگی';
+
+  @override
+  String get asmaMeaning61 => 'گیرنده زندگی';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Self-sussisting Sustainer';
+
+  @override
+  String get asmaMeaning64 => 'یاب';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'تنها';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'کسی که همه به دنبال آن هستند';
+
+  @override
+  String get asmaMeaning69 => 'قدرتمند';
+
+  @override
+  String get asmaMeaning70 => 'خالق تمام قدرت';
+
+  @override
+  String get asmaMeaning71 => 'تسریع کننده';
+
+  @override
+  String get asmaMeaning72 => 'تاخیرکننده';
+
+  @override
+  String get asmaMeaning73 => 'اولین';
+
+  @override
+  String get asmaMeaning74 => 'آخرین';
+
+  @override
+  String get asmaMeaning75 => 'مانیفست';
+
+  @override
+  String get asmaMeaning76 => 'The Hidden';
+
+  @override
+  String get asmaMeaning77 => 'فرماندار';
+
+  @override
+  String get asmaMeaning78 => 'اعلی';
+
+  @override
+  String get asmaMeaning79 => 'فاعل خیر';
+
+  @override
+  String get asmaMeaning80 => 'راهنمای توبه';
+
+  @override
+  String get asmaMeaning81 => 'Avenger';
+
+  @override
+  String get asmaMeaning82 => 'بخشنده';
+
+  @override
+  String get asmaMeaning83 => 'کلمنت';
+
+  @override
+  String get asmaMeaning84 => 'مالک / حاکم بر همه';
+
+  @override
+  String get asmaMeaning85 => 'صاحب عظمت و فضل';
+
+  @override
+  String get asmaMeaning86 => 'Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'گردآورنده';
+
+  @override
+  String get asmaMeaning88 => 'The Rich One';
+
+  @override
+  String get asmaMeaning89 => 'غنی‌کننده';
+
+  @override
+  String get asmaMeaning90 => 'جلوگیری از آسیب';
+
+  @override
+  String get asmaMeaning91 => 'آزار دهنده';
+
+  @override
+  String get asmaMeaning92 => 'اعطا کننده مزایا';
+
+  @override
+  String get asmaMeaning93 => 'نور';
+
+  @override
+  String get asmaMeaning94 => 'راهنما';
+
+  @override
+  String get asmaMeaning95 => 'Originator';
+
+  @override
+  String get asmaMeaning96 => 'آدم ابدی';
+
+  @override
+  String get asmaMeaning97 => 'وارث';
+
+  @override
+  String get asmaMeaning98 => 'راست ترین راهنمای';
+
+  @override
+  String get asmaMeaning99 => 'بیمار یک';
 }

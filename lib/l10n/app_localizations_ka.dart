@@ -1189,4 +1189,301 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'ისლამური ადგილი';
+
+  @override
+  String get asmaMeaning1 => 'კეთილმსახური';
+
+  @override
+  String get asmaMeaning2 => 'მოწყალე';
+
+  @override
+  String get asmaMeaning3 => 'მეფე / მარადიული უფალი';
+
+  @override
+  String get asmaMeaning4 => 'წმინდა';
+
+  @override
+  String get asmaMeaning5 => 'მშვიდობის წყარო';
+
+  @override
+  String get asmaMeaning6 => 'უსაფრთხოების გამცემი';
+
+  @override
+  String get asmaMeaning7 => 'Guardian';
+
+  @override
+  String get asmaMeaning8 => 'ძვირფასი / ყველაზე ძლევამოსილი';
+
+  @override
+  String get asmaMeaning9 => 'კომპლექტერი';
+
+  @override
+  String get asmaMeaning10 => 'ყველაზე დიდი';
+
+  @override
+  String get asmaMeaning11 => 'შემოქმედი';
+
+  @override
+  String get asmaMeaning12 => 'შეკვეთის შემქმნელი';
+
+  @override
+  String get asmaMeaning13 => 'სილამაზის შემქმნელი';
+
+  @override
+  String get asmaMeaning14 => 'მიმტევებელი';
+
+  @override
+  String get asmaMeaning15 => 'დამორჩილებული';
+
+  @override
+  String get asmaMeaning16 => 'ყველას გამცემი';
+
+  @override
+  String get asmaMeaning17 => 'Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'გამხსნელი';
+
+  @override
+  String get asmaMeaning19 => 'ყველას მცოდნე';
+
+  @override
+  String get asmaMeaning20 => 'კონსტრიქტორი';
+
+  @override
+  String get asmaMeaning21 => 'განმშვიდებელი';
+
+  @override
+  String get asmaMeaning22 => 'აბაზერი';
+
+  @override
+  String get asmaMeaning23 => 'ეგზალტერი';
+
+  @override
+  String get asmaMeaning24 => 'ღირსების მიმნიჭებელი';
+
+  @override
+  String get asmaMeaning25 => 'დამამცირებელი';
+
+  @override
+  String get asmaMeaning26 => 'ყველას მსმენელი';
+
+  @override
+  String get asmaMeaning27 => 'ყველას მხილველი';
+
+  @override
+  String get asmaMeaning28 => 'მოსამართლე';
+
+  @override
+  String get asmaMeaning29 => 'სამართლიანი';
+
+  @override
+  String get asmaMeaning30 => 'დახვეწილი';
+
+  @override
+  String get asmaMeaning31 => 'ყველამ იცის';
+
+  @override
+  String get asmaMeaning32 => 'წინამძღვარი';
+
+  @override
+  String get asmaMeaning33 => 'დიდებული';
+
+  @override
+  String get asmaMeaning34 => 'დიდი მიმტევებელი';
+
+  @override
+  String get asmaMeaning35 => 'მადლობის ჯილდო';
+
+  @override
+  String get asmaMeaning36 => 'უმაღლესი';
+
+  @override
+  String get asmaMeaning37 => 'ყველაზე დიდი';
+
+  @override
+  String get asmaMeaning38 => 'დამცავი';
+
+  @override
+  String get asmaMeaning39 => 'მკვებავი';
+
+  @override
+  String get asmaMeaning40 => 'გამომრიცხველი';
+
+  @override
+  String get asmaMeaning41 => 'დიდი';
+
+  @override
+  String get asmaMeaning42 => 'კეთილშობილი';
+
+  @override
+  String get asmaMeaning43 => 'ფხიზლად';
+
+  @override
+  String get asmaMeaning44 => 'ლოცვის პასუხი';
+
+  @override
+  String get asmaMeaning45 => 'ყველაფრის გაგება';
+
+  @override
+  String get asmaMeaning46 => 'სრულყოფილად ბრძენი';
+
+  @override
+  String get asmaMeaning47 => 'მოყვარული';
+
+  @override
+  String get asmaMeaning48 => 'ყველაზე დიდებული';
+
+  @override
+  String get asmaMeaning49 => 'აღმდგარი';
+
+  @override
+  String get asmaMeaning50 => 'მოწმე';
+
+  @override
+  String get asmaMeaning51 => 'ჭეშმარიტება';
+
+  @override
+  String get asmaMeaning52 => 'ყოვლისმომცველი რწმუნებული';
+
+  @override
+  String get asmaMeaning53 => 'ყოველი ძალის მფლობელი';
+
+  @override
+  String get asmaMeaning54 => 'ძალა';
+
+  @override
+  String get asmaMeaning55 => 'მფარველი';
+
+  @override
+  String get asmaMeaning56 => 'დიდება';
+
+  @override
+  String get asmaMeaning57 => 'შემფასებელი';
+
+  @override
+  String get asmaMeaning58 => 'ორიგინატორი';
+
+  @override
+  String get asmaMeaning59 => 'აღმდგენი';
+
+  @override
+  String get asmaMeaning60 => 'სიცოცხლის მომცემი';
+
+  @override
+  String get asmaMeaning61 => 'სიცოცხლის მიმღები';
+
+  @override
+  String get asmaMeaning62 => 'მარად ცოცხალი';
+
+  @override
+  String get asmaMeaning63 => 'თვითარსებული მხარდამჭერი';
+
+  @override
+  String get asmaMeaning64 => 'მპოვნელი';
+
+  @override
+  String get asmaMeaning65 => 'დიდებული';
+
+  @override
+  String get asmaMeaning66 => 'ერთადერთი';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'ერთი, რომელსაც ყველა ეძებს';
+
+  @override
+  String get asmaMeaning69 => 'ძლიერი';
+
+  @override
+  String get asmaMeaning70 => 'ყოველი ძალაუფლების შემოქმედი';
+
+  @override
+  String get asmaMeaning71 => 'ექსპედიტორი';
+
+  @override
+  String get asmaMeaning72 => 'დაგვიანებული';
+
+  @override
+  String get asmaMeaning73 => 'პირველი';
+
+  @override
+  String get asmaMeaning74 => 'უკანასკნელი';
+
+  @override
+  String get asmaMeaning75 => 'მანიფესტი';
+
+  @override
+  String get asmaMeaning76 => 'დამალული';
+
+  @override
+  String get asmaMeaning77 => 'გუბერნატორი';
+
+  @override
+  String get asmaMeaning78 => 'უზენაესი';
+
+  @override
+  String get asmaMeaning79 => 'სიკეთის შემსრულებელი';
+
+  @override
+  String get asmaMeaning80 => 'მონანიების გზამკვლევი';
+
+  @override
+  String get asmaMeaning81 => 'შურისმაძიებელი';
+
+  @override
+  String get asmaMeaning82 => 'მიმტევებელი';
+
+  @override
+  String get asmaMeaning83 => 'კლიმენტი';
+
+  @override
+  String get asmaMeaning84 => 'მფლობელი / ყველას სუვერენი';
+
+  @override
+  String get asmaMeaning85 => 'დიდებულებისა და სიკეთის მფლობელი';
+
+  @override
+  String get asmaMeaning86 => 'Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'შემკრები';
+
+  @override
+  String get asmaMeaning88 => 'მდიდარი';
+
+  @override
+  String get asmaMeaning89 => 'გამდიდებელი';
+
+  @override
+  String get asmaMeaning90 => 'ზიანის პრევენცია';
+
+  @override
+  String get asmaMeaning91 => 'ზიანის მომტანი';
+
+  @override
+  String get asmaMeaning92 => 'ბენეფიტების გამცემი';
+
+  @override
+  String get asmaMeaning93 => 'სინათლე';
+
+  @override
+  String get asmaMeaning94 => 'მეგზური';
+
+  @override
+  String get asmaMeaning95 => 'ორიგინატორი';
+
+  @override
+  String get asmaMeaning96 => 'მარადიული';
+
+  @override
+  String get asmaMeaning97 => 'მემკვიდრე';
+
+  @override
+  String get asmaMeaning98 => 'ყველაზე მართალი მეგზური';
+
+  @override
+  String get asmaMeaning99 => 'პაციენტი ერთი';
 }

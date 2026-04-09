@@ -1185,4 +1185,301 @@ class AppLocalizationsPs extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'اسلامي ځای';
+
+  @override
+  String get asmaMeaning1 => 'رحم کوونکی';
+
+  @override
+  String get asmaMeaning2 => 'رحم کوونکی';
+
+  @override
+  String get asmaMeaning3 => 'پاچا / ابدي رب';
+
+  @override
+  String get asmaMeaning4 => 'ترټولو مقدس';
+
+  @override
+  String get asmaMeaning5 => 'د سولې سرچینه';
+
+  @override
+  String get asmaMeaning6 => 'د امنیت ورکوونکی';
+
+  @override
+  String get asmaMeaning7 => 'سرپرست';
+
+  @override
+  String get asmaMeaning8 => 'قیمتي / خورا غالب';
+
+  @override
+  String get asmaMeaning9 => 'مجبور';
+
+  @override
+  String get asmaMeaning10 => 'ترټولو لوی';
+
+  @override
+  String get asmaMeaning11 => 'خالق';
+
+  @override
+  String get asmaMeaning12 => 'د نظم جوړونکی';
+
+  @override
+  String get asmaMeaning13 => 'د ښکلا شکل';
+
+  @override
+  String get asmaMeaning14 => 'بښونکی';
+
+  @override
+  String get asmaMeaning15 => 'فرعي';
+
+  @override
+  String get asmaMeaning16 => 'د ټولو ورکوونکی';
+
+  @override
+  String get asmaMeaning17 => 'ساتونکی';
+
+  @override
+  String get asmaMeaning18 => 'اوپنر';
+
+  @override
+  String get asmaMeaning19 => 'په هر څه پوه دی';
+
+  @override
+  String get asmaMeaning20 => 'Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'د راحت ورکوونکی';
+
+  @override
+  String get asmaMeaning22 => 'د اباسر';
+
+  @override
+  String get asmaMeaning23 => 'Exalter';
+
+  @override
+  String get asmaMeaning24 => 'د درناوي وړ';
+
+  @override
+  String get asmaMeaning25 => 'ذلت کوونکی';
+
+  @override
+  String get asmaMeaning26 => 'د ټولو اورېدونکی';
+
+  @override
+  String get asmaMeaning27 => 'د ټولو لیدونکی';
+
+  @override
+  String get asmaMeaning28 => 'قاضي';
+
+  @override
+  String get asmaMeaning29 => 'بس';
+
+  @override
+  String get asmaMeaning30 => 'فرعي یو';
+
+  @override
+  String get asmaMeaning31 => 'ټول خبر دي';
+
+  @override
+  String get asmaMeaning32 => 'مخکینی';
+
+  @override
+  String get asmaMeaning33 => 'په زړه پورې';
+
+  @override
+  String get asmaMeaning34 => 'لوی بخښونکی';
+
+  @override
+  String get asmaMeaning35 => 'د شکر ادا کوونکی';
+
+  @override
+  String get asmaMeaning36 => 'تر ټولو لوړ';
+
+  @override
+  String get asmaMeaning37 => 'ترټولو لوی';
+
+  @override
+  String get asmaMeaning38 => 'د ساتونکی';
+
+  @override
+  String get asmaMeaning39 => 'د تغذیه کوونکی';
+
+  @override
+  String get asmaMeaning40 => 'د حساب ورکوونکی';
+
+  @override
+  String get asmaMeaning41 => 'مجلس';
+
+  @override
+  String get asmaMeaning42 => 'سخاوتمند';
+
+  @override
+  String get asmaMeaning43 => 'څار کوونکی';
+
+  @override
+  String get asmaMeaning44 => 'د لمانځه ځواب ورکوونکی';
+
+  @override
+  String get asmaMeaning45 => 'ټول درک کول';
+
+  @override
+  String get asmaMeaning46 => 'په کامل ډول هوښيار';
+
+  @override
+  String get asmaMeaning47 => 'هغه مینه وال';
+
+  @override
+  String get asmaMeaning48 => 'تر ټولو غوره';
+
+  @override
+  String get asmaMeaning49 => 'قیامت کوونکی';
+
+  @override
+  String get asmaMeaning50 => 'شاهد';
+
+  @override
+  String get asmaMeaning51 => 'حقیقت';
+
+  @override
+  String get asmaMeaning52 => 'ټول کافي امانت دار';
+
+  @override
+  String get asmaMeaning53 => 'د ټول ځواک خاوند';
+
+  @override
+  String get asmaMeaning54 => 'ځواکمن';
+
+  @override
+  String get asmaMeaning55 => 'ساتونکی';
+
+  @override
+  String get asmaMeaning56 => 'د ستاینې وړ';
+
+  @override
+  String get asmaMeaning57 => 'ارزوونکی';
+
+  @override
+  String get asmaMeaning58 => 'پیدا کوونکی';
+
+  @override
+  String get asmaMeaning59 => 'بیارغونکی';
+
+  @override
+  String get asmaMeaning60 => 'د ژوند ورکوونکی';
+
+  @override
+  String get asmaMeaning61 => 'د ژوند اخیستونکی';
+
+  @override
+  String get asmaMeaning62 => 'تل ژوندی';
+
+  @override
+  String get asmaMeaning63 => 'د ځان ساتونکي ساتونکی';
+
+  @override
+  String get asmaMeaning64 => 'موندونکی';
+
+  @override
+  String get asmaMeaning65 => 'په زړه پوری';
+
+  @override
+  String get asmaMeaning66 => 'یوازې یو';
+
+  @override
+  String get asmaMeaning67 => 'هغه یو';
+
+  @override
+  String get asmaMeaning68 => 'هغه څوک چې د ټولو په لټه کې دی';
+
+  @override
+  String get asmaMeaning69 => 'ځواکمن';
+
+  @override
+  String get asmaMeaning70 => 'د ټولو قدرتونو خالق';
+
+  @override
+  String get asmaMeaning71 => 'Expediter';
+
+  @override
+  String get asmaMeaning72 => 'ځنډونکی';
+
+  @override
+  String get asmaMeaning73 => 'لومړی';
+
+  @override
+  String get asmaMeaning74 => 'وروستی';
+
+  @override
+  String get asmaMeaning75 => 'د منشور';
+
+  @override
+  String get asmaMeaning76 => 'پټ';
+
+  @override
+  String get asmaMeaning77 => 'والي';
+
+  @override
+  String get asmaMeaning78 => 'ستر ذات';
+
+  @override
+  String get asmaMeaning79 => 'د ښه کار کوونکی';
+
+  @override
+  String get asmaMeaning80 => 'د توبې لارښود';
+
+  @override
+  String get asmaMeaning81 => 'د انتقام اخیستونکی';
+
+  @override
+  String get asmaMeaning82 => 'بښونکی';
+
+  @override
+  String get asmaMeaning83 => 'کلیمینټ';
+
+  @override
+  String get asmaMeaning84 => 'مالک / د ټولو حاکم';
+
+  @override
+  String get asmaMeaning85 => 'د عظمت او فضل خاوند';
+
+  @override
+  String get asmaMeaning86 => 'مساوي یو';
+
+  @override
+  String get asmaMeaning87 => 'راټولوونکی';
+
+  @override
+  String get asmaMeaning88 => 'بډایه سړی';
+
+  @override
+  String get asmaMeaning89 => 'بډایه کونکی';
+
+  @override
+  String get asmaMeaning90 => 'د ضرر مخنیوی کوونکی';
+
+  @override
+  String get asmaMeaning91 => 'د ضرر راوړونکی';
+
+  @override
+  String get asmaMeaning92 => 'د ګټو ورکوونکی';
+
+  @override
+  String get asmaMeaning93 => 'رڼا';
+
+  @override
+  String get asmaMeaning94 => 'لارښود';
+
+  @override
+  String get asmaMeaning95 => 'پیدا کوونکی';
+
+  @override
+  String get asmaMeaning96 => 'تلپاتې';
+
+  @override
+  String get asmaMeaning97 => 'د وارثانو';
+
+  @override
+  String get asmaMeaning98 => 'ترټولو غوره لارښود';
+
+  @override
+  String get asmaMeaning99 => 'مریض یو';
 }

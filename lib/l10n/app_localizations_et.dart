@@ -1187,4 +1187,301 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islami koht';
+
+  @override
+  String get asmaMeaning1 => 'Kasulik';
+
+  @override
+  String get asmaMeaning2 => 'Armuline';
+
+  @override
+  String get asmaMeaning3 => 'Kuningas / Igavene Issand';
+
+  @override
+  String get asmaMeaning4 => 'Kõige püha';
+
+  @override
+  String get asmaMeaning5 => 'Rahu allikas';
+
+  @override
+  String get asmaMeaning6 => 'Turvalisuse andja';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Kallis / Kõige võimsam';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Suurim';
+
+  @override
+  String get asmaMeaning11 => 'Looja';
+
+  @override
+  String get asmaMeaning12 => 'Tellija';
+
+  @override
+  String get asmaMeaning13 => 'Ilu kujundaja';
+
+  @override
+  String get asmaMeaning14 => 'Andestav';
+
+  @override
+  String get asmaMeaning15 => 'Alistaja';
+
+  @override
+  String get asmaMeaning16 => 'Kõike andja';
+
+  @override
+  String get asmaMeaning17 => 'Säästaja';
+
+  @override
+  String get asmaMeaning18 => 'Avaja';
+
+  @override
+  String get asmaMeaning19 => 'Kõigi teadja';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Leevendus';
+
+  @override
+  String get asmaMeaning22 => 'Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Ülitaja';
+
+  @override
+  String get asmaMeaning24 => 'Auandja';
+
+  @override
+  String get asmaMeaning25 => 'Alandaja';
+
+  @override
+  String get asmaMeaning26 => 'Kõigi kuulaja';
+
+  @override
+  String get asmaMeaning27 => 'Kõigi nägija';
+
+  @override
+  String get asmaMeaning28 => 'Kohtunik';
+
+  @override
+  String get asmaMeaning29 => 'Õiglane';
+
+  @override
+  String get asmaMeaning30 => 'peen';
+
+  @override
+  String get asmaMeaning31 => 'Kõik teadlikud';
+
+  @override
+  String get asmaMeaning32 => 'Eesilm';
+
+  @override
+  String get asmaMeaning33 => 'Suurepärane';
+
+  @override
+  String get asmaMeaning34 => 'Suur andestaja';
+
+  @override
+  String get asmaMeaning35 => 'Tänulikkuse tasuja';
+
+  @override
+  String get asmaMeaning36 => 'Kõrgeim';
+
+  @override
+  String get asmaMeaning37 => 'Suurim';
+
+  @override
+  String get asmaMeaning38 => 'Säilitaja';
+
+  @override
+  String get asmaMeaning39 => 'Toitja';
+
+  @override
+  String get asmaMeaning40 => 'Arvestus';
+
+  @override
+  String get asmaMeaning41 => 'Majesteet';
+
+  @override
+  String get asmaMeaning42 => 'Helde';
+
+  @override
+  String get asmaMeaning43 => 'Valvav';
+
+  @override
+  String get asmaMeaning44 => 'Palvevastaja';
+
+  @override
+  String get asmaMeaning45 => 'Kõik arusaadav';
+
+  @override
+  String get asmaMeaning46 => 'Täiuslikult tark';
+
+  @override
+  String get asmaMeaning47 => 'Armastaja';
+
+  @override
+  String get asmaMeaning48 => 'Kõige kuulsusrikkam';
+
+  @override
+  String get asmaMeaning49 => 'Ülestõusja';
+
+  @override
+  String get asmaMeaning50 => 'Tunnistaja';
+
+  @override
+  String get asmaMeaning51 => 'Tõde';
+
+  @override
+  String get asmaMeaning52 => 'Kõik piisav usaldusisik';
+
+  @override
+  String get asmaMeaning53 => 'Kõige jõu valdaja';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'Kaitsja';
+
+  @override
+  String get asmaMeaning56 => 'Kiidetud';
+
+  @override
+  String get asmaMeaning57 => 'Hindaja';
+
+  @override
+  String get asmaMeaning58 => 'Alustaja';
+
+  @override
+  String get asmaMeaning59 => 'Taastaja';
+
+  @override
+  String get asmaMeaning60 => 'Eluandja';
+
+  @override
+  String get asmaMeaning61 => 'Elu äravõtja';
+
+  @override
+  String get asmaMeaning62 => 'Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Isemajandav ülalpidaja';
+
+  @override
+  String get asmaMeaning64 => 'Leidja';
+
+  @override
+  String get asmaMeaning65 => 'Kuulsusrikas';
+
+  @override
+  String get asmaMeaning66 => 'Ainus';
+
+  @override
+  String get asmaMeaning67 => 'Üks';
+
+  @override
+  String get asmaMeaning68 => 'See, mida kõik otsivad';
+
+  @override
+  String get asmaMeaning69 => 'Võimas';
+
+  @override
+  String get asmaMeaning70 => 'Kõigi jõu looja';
+
+  @override
+  String get asmaMeaning71 => 'Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Viitaja';
+
+  @override
+  String get asmaMeaning73 => 'Esimene';
+
+  @override
+  String get asmaMeaning74 => 'Viimane';
+
+  @override
+  String get asmaMeaning75 => 'Manifest';
+
+  @override
+  String get asmaMeaning76 => 'Varjatud';
+
+  @override
+  String get asmaMeaning77 => 'Kuberner';
+
+  @override
+  String get asmaMeaning78 => 'Kõige kõrgem';
+
+  @override
+  String get asmaMeaning79 => 'Hea tegija';
+
+  @override
+  String get asmaMeaning80 => 'Juhend meeleparanduseks';
+
+  @override
+  String get asmaMeaning81 => 'Tasuja';
+
+  @override
+  String get asmaMeaning82 => 'Andestaja';
+
+  @override
+  String get asmaMeaning83 => 'Klement';
+
+  @override
+  String get asmaMeaning84 => 'Kõigi omanik / suverään';
+
+  @override
+  String get asmaMeaning85 => 'Majesteedi ja halastuse valdaja';
+
+  @override
+  String get asmaMeaning86 => 'Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'Koguja';
+
+  @override
+  String get asmaMeaning88 => 'Rikas';
+
+  @override
+  String get asmaMeaning89 => 'rikastaja';
+
+  @override
+  String get asmaMeaning90 => 'Kahjude ennetaja';
+
+  @override
+  String get asmaMeaning91 => 'Kahju põhjustaja';
+
+  @override
+  String get asmaMeaning92 => 'Kasu kinkija';
+
+  @override
+  String get asmaMeaning93 => 'Valgus';
+
+  @override
+  String get asmaMeaning94 => 'Juhend';
+
+  @override
+  String get asmaMeaning95 => 'Alustaja';
+
+  @override
+  String get asmaMeaning96 => 'Igavene';
+
+  @override
+  String get asmaMeaning97 => 'Pärija';
+
+  @override
+  String get asmaMeaning98 => 'Kõige õigem teejuht';
+
+  @override
+  String get asmaMeaning99 => 'Patient One';
 }

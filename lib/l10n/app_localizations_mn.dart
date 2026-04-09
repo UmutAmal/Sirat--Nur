@@ -1187,4 +1187,301 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Исламын газар';
+
+  @override
+  String get asmaMeaning1 => 'The Beneficent';
+
+  @override
+  String get asmaMeaning2 => 'Энэрэнгүй';
+
+  @override
+  String get asmaMeaning3 => 'Хаан / Мөнхийн Эзэн';
+
+  @override
+  String get asmaMeaning4 => 'Хамгийн ариун';
+
+  @override
+  String get asmaMeaning5 => 'Энх тайвны эх сурвалж';
+
+  @override
+  String get asmaMeaning6 => 'Аюулгүй байдлыг хангагч';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Эрдэнэт / Хамгийн Хүчирхэг';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Хамгийн агуу';
+
+  @override
+  String get asmaMeaning11 => 'Бүтээгч';
+
+  @override
+  String get asmaMeaning12 => 'Захиалга бүтээгч';
+
+  @override
+  String get asmaMeaning13 => 'Гоо сайхныг хэлбэржүүлэгч';
+
+  @override
+  String get asmaMeaning14 => 'Өршөөгч';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Бүхнийг өгөгч';
+
+  @override
+  String get asmaMeaning17 => 'Тэжээгч';
+
+  @override
+  String get asmaMeaning18 => 'Нээгч';
+
+  @override
+  String get asmaMeaning19 => 'Бүхнийг мэдэгч';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Амраагч';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Өргөгч';
+
+  @override
+  String get asmaMeaning24 => 'Хүндэт өргөмжлөл';
+
+  @override
+  String get asmaMeaning25 => 'Доромжлогч';
+
+  @override
+  String get asmaMeaning26 => 'Бүгдийг сонсогч';
+
+  @override
+  String get asmaMeaning27 => 'Бүхнийг Үзэгч';
+
+  @override
+  String get asmaMeaning28 => 'Шүүгч';
+
+  @override
+  String get asmaMeaning29 => 'The Just';
+
+  @override
+  String get asmaMeaning30 => 'Нарийхан Нэгэн';
+
+  @override
+  String get asmaMeaning31 => 'Бүхнийг мэддэг';
+
+  @override
+  String get asmaMeaning32 => 'The Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'Гайхамшигт';
+
+  @override
+  String get asmaMeaning34 => 'Агуу Өршөөгч';
+
+  @override
+  String get asmaMeaning35 => 'Талархлын шагнагч';
+
+  @override
+  String get asmaMeaning36 => 'Хамгийн өндөр';
+
+  @override
+  String get asmaMeaning37 => 'Хамгийн агуу';
+
+  @override
+  String get asmaMeaning38 => 'Хамгаалагч';
+
+  @override
+  String get asmaMeaning39 => 'Тэжээгч';
+
+  @override
+  String get asmaMeaning40 => 'Тооцогч';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Өгөөмөр';
+
+  @override
+  String get asmaMeaning43 => 'Соргог хүн';
+
+  @override
+  String get asmaMeaning44 => 'Залбиралд хариулагч';
+
+  @override
+  String get asmaMeaning45 => 'Бүх зүйлийг ойлгох';
+
+  @override
+  String get asmaMeaning46 => 'Төгс Мэргэн';
+
+  @override
+  String get asmaMeaning47 => 'Хайртай Нэгэн';
+
+  @override
+  String get asmaMeaning48 => 'Хамгийн алдартан';
+
+  @override
+  String get asmaMeaning49 => 'Амилагч';
+
+  @override
+  String get asmaMeaning50 => 'Гэрч';
+
+  @override
+  String get asmaMeaning51 => 'Үнэн';
+
+  @override
+  String get asmaMeaning52 => 'Бүх хангалттай итгэмжлэгдсэн төлөөлөгч';
+
+  @override
+  String get asmaMeaning53 => 'Бүх хүчийг Эзэмшигч';
+
+  @override
+  String get asmaMeaning54 => 'Хүчтэй';
+
+  @override
+  String get asmaMeaning55 => 'Хамгаалагч';
+
+  @override
+  String get asmaMeaning56 => 'Магтсан';
+
+  @override
+  String get asmaMeaning57 => 'Үнэлгээчин';
+
+  @override
+  String get asmaMeaning58 => 'Үйлдвэрлэгч';
+
+  @override
+  String get asmaMeaning59 => 'Сэргээгч';
+
+  @override
+  String get asmaMeaning60 => 'Амьдрал бэлэглэгч';
+
+  @override
+  String get asmaMeaning61 => 'Амьдралыг авагч';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Өөрийгөө тэтгэгч';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'Цорын ганц';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'Бүх нийтээр эрэлхийлдэг нэгэн';
+
+  @override
+  String get asmaMeaning69 => 'Хүчирхэг';
+
+  @override
+  String get asmaMeaning70 => 'Бүх хүчийг бүтээгч';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Хойшлуулагч';
+
+  @override
+  String get asmaMeaning73 => 'Анхны';
+
+  @override
+  String get asmaMeaning74 => 'Сүүлчийн';
+
+  @override
+  String get asmaMeaning75 => 'Манифест';
+
+  @override
+  String get asmaMeaning76 => 'Нуугдсан';
+
+  @override
+  String get asmaMeaning77 => 'Засаг дарга';
+
+  @override
+  String get asmaMeaning78 => 'Дээд Нэгэн';
+
+  @override
+  String get asmaMeaning79 => 'Сайн үйлдэгч';
+
+  @override
+  String get asmaMeaning80 => 'Наманчлалын гарын авлага';
+
+  @override
+  String get asmaMeaning81 => 'Өшөө авагч';
+
+  @override
+  String get asmaMeaning82 => 'Уучлагч';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Бүхний Эзэмшигч/Бүрэн эрхт';
+
+  @override
+  String get asmaMeaning85 => 'Сүр жавхлан ба нигүүлслийн эзэн';
+
+  @override
+  String get asmaMeaning86 => 'Төв тэгш нэгэн';
+
+  @override
+  String get asmaMeaning87 => 'Цуглагч';
+
+  @override
+  String get asmaMeaning88 => 'Баян';
+
+  @override
+  String get asmaMeaning89 => 'The Enricher';
+
+  @override
+  String get asmaMeaning90 => 'Хохиролоос урьдчилан сэргийлэгч';
+
+  @override
+  String get asmaMeaning91 => 'Хохирол авчирагч';
+
+  @override
+  String get asmaMeaning92 => 'Ашиг тусын эзэн';
+
+  @override
+  String get asmaMeaning93 => 'Гэрэл';
+
+  @override
+  String get asmaMeaning94 => 'Хөтөч';
+
+  @override
+  String get asmaMeaning95 => 'Үйлдвэрлэгч';
+
+  @override
+  String get asmaMeaning96 => 'Мөнхийн Нэгэн';
+
+  @override
+  String get asmaMeaning97 => 'Өв залгамжлагч';
+
+  @override
+  String get asmaMeaning98 => 'Хамгийн зөвт хөтөч';
+
+  @override
+  String get asmaMeaning99 => 'The Patent One';
 }

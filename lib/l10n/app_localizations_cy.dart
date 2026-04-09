@@ -1188,4 +1188,301 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Lle Islamaidd';
+
+  @override
+  String get asmaMeaning1 => 'Y Buddiolwr';
+
+  @override
+  String get asmaMeaning2 => 'Y Trugarog';
+
+  @override
+  String get asmaMeaning3 => 'Y Brenin / Arglwydd Tragwyddol';
+
+  @override
+  String get asmaMeaning4 => 'Y Sanctaidd';
+
+  @override
+  String get asmaMeaning5 => 'Ffynhonnell Tangnefedd';
+
+  @override
+  String get asmaMeaning6 => 'Y Rhoddwr Diogelwch';
+
+  @override
+  String get asmaMeaning7 => 'Y Gwarcheidwad';
+
+  @override
+  String get asmaMeaning8 => 'Y Gwerthfawr / Y Mwyaf Galluog';
+
+  @override
+  String get asmaMeaning9 => 'Y Cydymaith';
+
+  @override
+  String get asmaMeaning10 => 'Y Mwyaf';
+
+  @override
+  String get asmaMeaning11 => 'Y Creawdwr';
+
+  @override
+  String get asmaMeaning12 => 'Gwneuthurwr Trefn';
+
+  @override
+  String get asmaMeaning13 => 'Y Lluniwr Prydferthwch';
+
+  @override
+  String get asmaMeaning14 => 'Y Maddeuant';
+
+  @override
+  String get asmaMeaning15 => 'Y Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Rhoddwr Pawb';
+
+  @override
+  String get asmaMeaning17 => 'Y Cynhaliwr';
+
+  @override
+  String get asmaMeaning18 => 'Yr Agorwr';
+
+  @override
+  String get asmaMeaning19 => 'Gwybodaeth Pawb';
+
+  @override
+  String get asmaMeaning20 => 'Y Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Y Gwaredwr';
+
+  @override
+  String get asmaMeaning22 => 'Yr Abas';
+
+  @override
+  String get asmaMeaning23 => 'Y Goruchaf';
+
+  @override
+  String get asmaMeaning24 => 'Y Rhoddwr Anrhydeddus';
+
+  @override
+  String get asmaMeaning25 => 'Y Gwaredwr';
+
+  @override
+  String get asmaMeaning26 => 'Gwrandawr Pawb';
+
+  @override
+  String get asmaMeaning27 => 'Gweledydd Pawb';
+
+  @override
+  String get asmaMeaning28 => 'Y Barnwr';
+
+  @override
+  String get asmaMeaning29 => 'Y Cyfiawn';
+
+  @override
+  String get asmaMeaning30 => 'Yr Un Cynnil';
+
+  @override
+  String get asmaMeaning31 => 'Yr Holl Ymwybodol';
+
+  @override
+  String get asmaMeaning32 => 'Y Rhagflaenydd';
+
+  @override
+  String get asmaMeaning33 => 'Y Gwych';
+
+  @override
+  String get asmaMeaning34 => 'Y Maddeuwr Mawr';
+
+  @override
+  String get asmaMeaning35 => 'Gwobrwr Diolchgarwch';
+
+  @override
+  String get asmaMeaning36 => 'Yr Uchaf';
+
+  @override
+  String get asmaMeaning37 => 'Y Mwyaf';
+
+  @override
+  String get asmaMeaning38 => 'Y Pregethwr';
+
+  @override
+  String get asmaMeaning39 => 'Y Maethwr';
+
+  @override
+  String get asmaMeaning40 => 'Y Cyfrifydd';
+
+  @override
+  String get asmaMeaning41 => 'Y Mawreddog';
+
+  @override
+  String get asmaMeaning42 => 'Yr Hael';
+
+  @override
+  String get asmaMeaning43 => 'Yr Un Gwyliwr';
+
+  @override
+  String get asmaMeaning44 => 'Yr Atebydd i Weddi';
+
+  @override
+  String get asmaMeaning45 => 'Yr Holl Amgyffred';
+
+  @override
+  String get asmaMeaning46 => 'Y Perffaith Ddoeth';
+
+  @override
+  String get asmaMeaning47 => 'Yr Un Cariadus';
+
+  @override
+  String get asmaMeaning48 => 'Yr Un Mwyaf Gogoneddus';
+
+  @override
+  String get asmaMeaning49 => 'Yr Atgyfodwr';
+
+  @override
+  String get asmaMeaning50 => 'Y Tyst';
+
+  @override
+  String get asmaMeaning51 => 'Y Gwir';
+
+  @override
+  String get asmaMeaning52 => 'Yr Ymddiriedolwr Holl Ddigonol';
+
+  @override
+  String get asmaMeaning53 => 'Meddiannu Pob Nerth';
+
+  @override
+  String get asmaMeaning54 => 'Y Grymus';
+
+  @override
+  String get asmaMeaning55 => 'Yr Amddiffynnydd';
+
+  @override
+  String get asmaMeaning56 => 'Y Clod';
+
+  @override
+  String get asmaMeaning57 => 'Y Gwerthuswr';
+
+  @override
+  String get asmaMeaning58 => 'Y Cychwynnwr';
+
+  @override
+  String get asmaMeaning59 => 'Yr Adferwr';
+
+  @override
+  String get asmaMeaning60 => 'Rhoddwr Bywyd';
+
+  @override
+  String get asmaMeaning61 => 'Cymerwr Bywyd';
+
+  @override
+  String get asmaMeaning62 => 'Y Byw Bythol';
+
+  @override
+  String get asmaMeaning63 => 'Y Cynhaliwr Hunangynhaliol';
+
+  @override
+  String get asmaMeaning64 => 'Y Darganfyddwr';
+
+  @override
+  String get asmaMeaning65 => 'Y Gogoneddus';
+
+  @override
+  String get asmaMeaning66 => 'Yr Unig Un';
+
+  @override
+  String get asmaMeaning67 => 'Yr Un';
+
+  @override
+  String get asmaMeaning68 => 'Yr Un a Geisir gan Bawb';
+
+  @override
+  String get asmaMeaning69 => 'Y Pwerus';
+
+  @override
+  String get asmaMeaning70 => 'Crëwr pob pŵer';
+
+  @override
+  String get asmaMeaning71 => 'Yr Alltudiwr';
+
+  @override
+  String get asmaMeaning72 => 'Y Gostyngwr';
+
+  @override
+  String get asmaMeaning73 => 'Y Cyntaf';
+
+  @override
+  String get asmaMeaning74 => 'Yr Olaf';
+
+  @override
+  String get asmaMeaning75 => 'Y Maniffest';
+
+  @override
+  String get asmaMeaning76 => 'Y Cudd';
+
+  @override
+  String get asmaMeaning77 => 'Y Llywodraethwr';
+
+  @override
+  String get asmaMeaning78 => 'Y Goruchaf Un';
+
+  @override
+  String get asmaMeaning79 => 'Gwneuthurwr Da';
+
+  @override
+  String get asmaMeaning80 => 'Y Canllaw i Edifeirwch';
+
+  @override
+  String get asmaMeaning81 => 'Y Dialydd';
+
+  @override
+  String get asmaMeaning82 => 'Y Maddeuwr';
+
+  @override
+  String get asmaMeaning83 => 'Y Clement';
+
+  @override
+  String get asmaMeaning84 => 'Perchennog / Sofran Pawb';
+
+  @override
+  String get asmaMeaning85 => 'Meddiannu Mawredd a Bounty';
+
+  @override
+  String get asmaMeaning86 => 'Yr Un Teg';
+
+  @override
+  String get asmaMeaning87 => 'Y Casglwr';
+
+  @override
+  String get asmaMeaning88 => 'Yr Un Cyfoethog';
+
+  @override
+  String get asmaMeaning89 => 'Y Cyfoethogwr';
+
+  @override
+  String get asmaMeaning90 => 'Yr Ataliwr Niwed';
+
+  @override
+  String get asmaMeaning91 => 'Y Dod â Niwed';
+
+  @override
+  String get asmaMeaning92 => 'Y Rhoddwr Buddion';
+
+  @override
+  String get asmaMeaning93 => 'Y Goleuni';
+
+  @override
+  String get asmaMeaning94 => 'Y Tywysydd';
+
+  @override
+  String get asmaMeaning95 => 'Y Cychwynnwr';
+
+  @override
+  String get asmaMeaning96 => 'Yr Un Tragwyddol';
+
+  @override
+  String get asmaMeaning97 => 'Yr Etifeddwr';
+
+  @override
+  String get asmaMeaning98 => 'Y Canllaw Mwyaf Cyfiawn';
+
+  @override
+  String get asmaMeaning99 => 'Y Claf Un';
 }

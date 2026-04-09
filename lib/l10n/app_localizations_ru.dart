@@ -1192,4 +1192,301 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Исламское место';
+
+  @override
+  String get asmaMeaning1 => 'Благотворительный';
+
+  @override
+  String get asmaMeaning2 => 'Милосердный';
+
+  @override
+  String get asmaMeaning3 => 'Король/Вечный Лорд';
+
+  @override
+  String get asmaMeaning4 => 'Святейшее';
+
+  @override
+  String get asmaMeaning5 => 'Источник мира';
+
+  @override
+  String get asmaMeaning6 => 'Гарант безопасности';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Драгоценный / Самый Могущественный';
+
+  @override
+  String get asmaMeaning9 => 'Компеллер';
+
+  @override
+  String get asmaMeaning10 => 'Величайший';
+
+  @override
+  String get asmaMeaning11 => 'Создатель';
+
+  @override
+  String get asmaMeaning12 => 'Творец порядка';
+
+  @override
+  String get asmaMeaning13 => 'Творец красоты';
+
+  @override
+  String get asmaMeaning14 => 'Прощающий';
+
+  @override
+  String get asmaMeaning15 => 'Покоритель';
+
+  @override
+  String get asmaMeaning16 => 'Дающий всё';
+
+  @override
+  String get asmaMeaning17 => 'Поддерживающий';
+
+  @override
+  String get asmaMeaning18 => 'Открытие';
+
+  @override
+  String get asmaMeaning19 => 'Знающий всё';
+
+  @override
+  String get asmaMeaning20 => 'Констриктор';
+
+  @override
+  String get asmaMeaning21 => 'Облегчитель';
+
+  @override
+  String get asmaMeaning22 => 'Абасер';
+
+  @override
+  String get asmaMeaning23 => 'Возвышающий';
+
+  @override
+  String get asmaMeaning24 => 'Почетный даритель';
+
+  @override
+  String get asmaMeaning25 => 'Унизитель';
+
+  @override
+  String get asmaMeaning26 => 'Всеслышащий';
+
+  @override
+  String get asmaMeaning27 => 'Провидец всего';
+
+  @override
+  String get asmaMeaning28 => 'Судья';
+
+  @override
+  String get asmaMeaning29 => 'Справедливый';
+
+  @override
+  String get asmaMeaning30 => 'Тонкий';
+
+  @override
+  String get asmaMeaning31 => 'Все знают';
+
+  @override
+  String get asmaMeaning32 => 'Выносливый';
+
+  @override
+  String get asmaMeaning33 => 'Великолепный';
+
+  @override
+  String get asmaMeaning34 => 'Великий прощающий';
+
+  @override
+  String get asmaMeaning35 => 'Награда за благодарность';
+
+  @override
+  String get asmaMeaning36 => 'Самый высокий';
+
+  @override
+  String get asmaMeaning37 => 'Величайший';
+
+  @override
+  String get asmaMeaning38 => 'Хранитель';
+
+  @override
+  String get asmaMeaning39 => 'Питатель';
+
+  @override
+  String get asmaMeaning40 => 'Счетчик';
+
+  @override
+  String get asmaMeaning41 => 'Величественный';
+
+  @override
+  String get asmaMeaning42 => 'Щедрый';
+
+  @override
+  String get asmaMeaning43 => 'Бдительный';
+
+  @override
+  String get asmaMeaning44 => 'Ответ на молитву';
+
+  @override
+  String get asmaMeaning45 => 'Всепонимающий';
+
+  @override
+  String get asmaMeaning46 => 'Совершенно мудрый';
+
+  @override
+  String get asmaMeaning47 => 'Любящий';
+
+  @override
+  String get asmaMeaning48 => 'Самый славный';
+
+  @override
+  String get asmaMeaning49 => 'Воскреситель';
+
+  @override
+  String get asmaMeaning50 => 'Свидетель';
+
+  @override
+  String get asmaMeaning51 => 'Правда';
+
+  @override
+  String get asmaMeaning52 => 'Вседостаточный попечитель';
+
+  @override
+  String get asmaMeaning53 => 'Обладатель всей силы';
+
+  @override
+  String get asmaMeaning54 => 'Сильный';
+
+  @override
+  String get asmaMeaning55 => 'Защитник';
+
+  @override
+  String get asmaMeaning56 => 'Похвальный';
+
+  @override
+  String get asmaMeaning57 => 'Оценщик';
+
+  @override
+  String get asmaMeaning58 => 'Создатель';
+
+  @override
+  String get asmaMeaning59 => 'Реставратор';
+
+  @override
+  String get asmaMeaning60 => 'Податель жизни';
+
+  @override
+  String get asmaMeaning61 => 'Похититель жизни';
+
+  @override
+  String get asmaMeaning62 => 'Вечно живой';
+
+  @override
+  String get asmaMeaning63 => 'Самоподдерживающийся источник существования';
+
+  @override
+  String get asmaMeaning64 => 'Искатель';
+
+  @override
+  String get asmaMeaning65 => 'Славный';
+
+  @override
+  String get asmaMeaning66 => 'Единственный';
+
+  @override
+  String get asmaMeaning67 => 'Единственный';
+
+  @override
+  String get asmaMeaning68 => 'Тот, кого ищут все';
+
+  @override
+  String get asmaMeaning69 => 'Мощный';
+
+  @override
+  String get asmaMeaning70 => 'Творец всей силы';
+
+  @override
+  String get asmaMeaning71 => 'Экспедитор';
+
+  @override
+  String get asmaMeaning72 => 'Замедлитель';
+
+  @override
+  String get asmaMeaning73 => 'Первый';
+
+  @override
+  String get asmaMeaning74 => 'Последний';
+
+  @override
+  String get asmaMeaning75 => 'Манифест';
+
+  @override
+  String get asmaMeaning76 => 'Скрытый';
+
+  @override
+  String get asmaMeaning77 => 'Губернатор';
+
+  @override
+  String get asmaMeaning78 => 'Высший';
+
+  @override
+  String get asmaMeaning79 => 'Добрый делатель';
+
+  @override
+  String get asmaMeaning80 => 'Руководство к покаянию';
+
+  @override
+  String get asmaMeaning81 => 'Мститель';
+
+  @override
+  String get asmaMeaning82 => 'Прощающий';
+
+  @override
+  String get asmaMeaning83 => 'Климент';
+
+  @override
+  String get asmaMeaning84 => 'Владелец/Повелитель всего';
+
+  @override
+  String get asmaMeaning85 => 'Обладатель величия и щедрости';
+
+  @override
+  String get asmaMeaning86 => 'Справедливый';
+
+  @override
+  String get asmaMeaning87 => 'Собиратель';
+
+  @override
+  String get asmaMeaning88 => 'Богатый';
+
+  @override
+  String get asmaMeaning89 => 'Обогатитель';
+
+  @override
+  String get asmaMeaning90 => 'Предотвращение вреда';
+
+  @override
+  String get asmaMeaning91 => 'Приносящий вред';
+
+  @override
+  String get asmaMeaning92 => 'Даритель благ';
+
+  @override
+  String get asmaMeaning93 => 'Свет';
+
+  @override
+  String get asmaMeaning94 => 'Путеводитель';
+
+  @override
+  String get asmaMeaning95 => 'Создатель';
+
+  @override
+  String get asmaMeaning96 => 'Вечный';
+
+  @override
+  String get asmaMeaning97 => 'Наследник';
+
+  @override
+  String get asmaMeaning98 => 'Самый праведный проводник';
+
+  @override
+  String get asmaMeaning99 => 'Терпеливый';
 }

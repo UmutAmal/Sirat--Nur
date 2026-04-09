@@ -1184,4 +1184,301 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Nzvimbo yeIslam';
+
+  @override
+  String get asmaMeaning1 => 'Iye Ane Beneficent';
+
+  @override
+  String get asmaMeaning2 => 'Vane Tsitsi';
+
+  @override
+  String get asmaMeaning3 => 'Mambo / Ishe Asingagumi';
+
+  @override
+  String get asmaMeaning4 => 'Nzvimbo Tsvenetsvene';
+
+  @override
+  String get asmaMeaning5 => 'Tsime Rorugare';
+
+  @override
+  String get asmaMeaning6 => 'Mupi weChengetedzo';
+
+  @override
+  String get asmaMeaning7 => 'Muchengeti';
+
+  @override
+  String get asmaMeaning8 => 'Iye Anokosha / Ane Simba Mazhinji';
+
+  @override
+  String get asmaMeaning9 => 'Mumanikidzi';
+
+  @override
+  String get asmaMeaning10 => 'Chikuru';
+
+  @override
+  String get asmaMeaning11 => 'Musiki';
+
+  @override
+  String get asmaMeaning12 => 'Mugadziri Wehurongwa';
+
+  @override
+  String get asmaMeaning13 => 'Muumbi Werunako';
+
+  @override
+  String get asmaMeaning14 => 'Kuregerera';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Mupi Wezvose';
+
+  @override
+  String get asmaMeaning17 => 'Mutsigiri';
+
+  @override
+  String get asmaMeaning18 => 'Muvhura';
+
+  @override
+  String get asmaMeaning19 => 'Iye Anoziva Zvese';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Musununguri';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Mukwidziri';
+
+  @override
+  String get asmaMeaning24 => 'Mupi weKukudza';
+
+  @override
+  String get asmaMeaning25 => 'Munyadzi';
+
+  @override
+  String get asmaMeaning26 => 'Munzwi Wezvose';
+
+  @override
+  String get asmaMeaning27 => 'Muoni Wevose';
+
+  @override
+  String get asmaMeaning28 => 'Mutongi';
+
+  @override
+  String get asmaMeaning29 => 'Vakarurama';
+
+  @override
+  String get asmaMeaning30 => 'Iye Akangwara';
+
+  @override
+  String get asmaMeaning31 => 'Vose Vanoziva';
+
+  @override
+  String get asmaMeaning32 => 'The Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'Muregereri Mukuru';
+
+  @override
+  String get asmaMeaning35 => 'Mubairo wekutenda';
+
+  @override
+  String get asmaMeaning36 => 'Yepamusoro';
+
+  @override
+  String get asmaMeaning37 => 'Chikuru';
+
+  @override
+  String get asmaMeaning38 => 'The Preserver';
+
+  @override
+  String get asmaMeaning39 => 'Muriritiri';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'The Generous';
+
+  @override
+  String get asmaMeaning43 => 'Iye Akatarisa';
+
+  @override
+  String get asmaMeaning44 => 'Iye Anopindura Munamato';
+
+  @override
+  String get asmaMeaning45 => 'Kunzwisisa Kwese';
+
+  @override
+  String get asmaMeaning46 => 'Iye Akachenjera Zvakakwana';
+
+  @override
+  String get asmaMeaning47 => 'Iye Anoda';
+
+  @override
+  String get asmaMeaning48 => 'Iye Ane Mbiri Yakanyanya';
+
+  @override
+  String get asmaMeaning49 => 'Iye Resurrector';
+
+  @override
+  String get asmaMeaning50 => 'Chapupu';
+
+  @override
+  String get asmaMeaning51 => 'Chokwadi';
+
+  @override
+  String get asmaMeaning52 => 'Mutariri Akakwana';
+
+  @override
+  String get asmaMeaning53 => 'Muridzi WeSimba Rose';
+
+  @override
+  String get asmaMeaning54 => 'Vane Simba';
+
+  @override
+  String get asmaMeaning55 => 'Mudziviriri';
+
+  @override
+  String get asmaMeaning56 => 'Vakarumbidzwa';
+
+  @override
+  String get asmaMeaning57 => 'Muongorori';
+
+  @override
+  String get asmaMeaning58 => 'Muvambi';
+
+  @override
+  String get asmaMeaning59 => 'Mudzoreri';
+
+  @override
+  String get asmaMeaning60 => 'Mupi Wehupenyu';
+
+  @override
+  String get asmaMeaning61 => 'Mutore Wehupenyu';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Iye Anozviraramisa';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'Iye Anobwinya';
+
+  @override
+  String get asmaMeaning66 => 'Iye Chete';
+
+  @override
+  String get asmaMeaning67 => 'Iye Mumwe';
+
+  @override
+  String get asmaMeaning68 => 'Iyo Inotsvakwa Nevose';
+
+  @override
+  String get asmaMeaning69 => 'Iye Ane Simba';
+
+  @override
+  String get asmaMeaning70 => 'Musiki wesimba rose';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'The Delayer';
+
+  @override
+  String get asmaMeaning73 => 'Yekutanga';
+
+  @override
+  String get asmaMeaning74 => 'Yekupedzisira';
+
+  @override
+  String get asmaMeaning75 => 'Manifest';
+
+  @override
+  String get asmaMeaning76 => 'Zvakavanzika';
+
+  @override
+  String get asmaMeaning77 => 'Gavhuna';
+
+  @override
+  String get asmaMeaning78 => 'Iye Mukurusa';
+
+  @override
+  String get asmaMeaning79 => 'Muiti Wezvakanaka';
+
+  @override
+  String get asmaMeaning80 => 'Nhungamiro yeKupfidza';
+
+  @override
+  String get asmaMeaning81 => 'Mutsivi';
+
+  @override
+  String get asmaMeaning82 => 'Muregereri';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Muridzi / Changamire Wezvose';
+
+  @override
+  String get asmaMeaning85 => 'Muridzi weHukuru neBounty';
+
+  @override
+  String get asmaMeaning86 => 'Iye Yakaenzana';
+
+  @override
+  String get asmaMeaning87 => 'Muunganidzi';
+
+  @override
+  String get asmaMeaning88 => 'Iye Mupfumi';
+
+  @override
+  String get asmaMeaning89 => 'The Enricher';
+
+  @override
+  String get asmaMeaning90 => 'Mudziviriri weKukuvadza';
+
+  @override
+  String get asmaMeaning91 => 'Muunzi Wekukuvadza';
+
+  @override
+  String get asmaMeaning92 => 'Iye anopa mabhenefiti';
+
+  @override
+  String get asmaMeaning93 => 'Chiedza';
+
+  @override
+  String get asmaMeaning94 => 'Mutungamiri';
+
+  @override
+  String get asmaMeaning95 => 'Muvambi';
+
+  @override
+  String get asmaMeaning96 => 'Iye Anogara Nokusingaperi';
+
+  @override
+  String get asmaMeaning97 => 'Mudyi Wenhaka';
+
+  @override
+  String get asmaMeaning98 => 'Mutungamiriri Akarurama';
+
+  @override
+  String get asmaMeaning99 => 'Iye Murwere';
 }

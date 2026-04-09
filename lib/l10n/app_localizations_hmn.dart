@@ -1191,4 +1191,301 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Qhov chaw Islamic';
+
+  @override
+  String get asmaMeaning1 => 'The Beneficent';
+
+  @override
+  String get asmaMeaning2 => 'The Merciful';
+
+  @override
+  String get asmaMeaning3 => 'Tus Vajntxwv / Tus Tswv Nyob Mus Ib Txhis';
+
+  @override
+  String get asmaMeaning4 => 'Tus Dawb Huv';
+
+  @override
+  String get asmaMeaning5 => 'Txoj Kev Thaj Yeeb';
+
+  @override
+  String get asmaMeaning6 => 'Tus Muab Kev Ruaj Ntseg';
+
+  @override
+  String get asmaMeaning7 => 'Tus Saib Xyuas';
+
+  @override
+  String get asmaMeaning8 => 'Qhov Muaj Nqis / Muaj Hwjchim Loj Kawg Nkaus';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'The Greatest';
+
+  @override
+  String get asmaMeaning11 => 'Tus Tsim';
+
+  @override
+  String get asmaMeaning12 => 'Tus tsim kev txiav txim';
+
+  @override
+  String get asmaMeaning13 => 'Lub Shaper of Beauty';
+
+  @override
+  String get asmaMeaning14 => 'Kev zam txim';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Tus Muab Txhua Tus';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'The Opener';
+
+  @override
+  String get asmaMeaning19 => 'Tus Paub Txhua Tus';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'The Reliever';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'Tus Tswv ntawm Honour';
+
+  @override
+  String get asmaMeaning25 => 'The Humiliator';
+
+  @override
+  String get asmaMeaning26 => 'Tus Mloog Txhua Tus';
+
+  @override
+  String get asmaMeaning27 => 'Tus Saib Xyuas Txhua Tus';
+
+  @override
+  String get asmaMeaning28 => 'The Judge';
+
+  @override
+  String get asmaMeaning29 => 'The Just';
+
+  @override
+  String get asmaMeaning30 => 'The Subtle One';
+
+  @override
+  String get asmaMeaning31 => 'The All Aware';
+
+  @override
+  String get asmaMeaning32 => 'The Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'Tus Tswv zam txim';
+
+  @override
+  String get asmaMeaning35 => 'Tus nqi zog ntawm kev ua tsaug';
+
+  @override
+  String get asmaMeaning36 => 'Qhov siab tshaj';
+
+  @override
+  String get asmaMeaning37 => 'The Greatest';
+
+  @override
+  String get asmaMeaning38 => 'The Preserver';
+
+  @override
+  String get asmaMeaning39 => 'The Nourisher';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'The Generous';
+
+  @override
+  String get asmaMeaning43 => 'Tus Saib Xyuas';
+
+  @override
+  String get asmaMeaning44 => 'Lub Teb rau Kev Thov Vajtswv';
+
+  @override
+  String get asmaMeaning45 => 'Txhua qhov kev nkag siab';
+
+  @override
+  String get asmaMeaning46 => 'Txoj Kev Txawj Ntse';
+
+  @override
+  String get asmaMeaning47 => 'Tus Hlub';
+
+  @override
+  String get asmaMeaning48 => 'Tus Muaj Hwjchim Loj Kawg Nkaus';
+
+  @override
+  String get asmaMeaning49 => 'The Resurrector';
+
+  @override
+  String get asmaMeaning50 => 'Cov Timkhawv';
+
+  @override
+  String get asmaMeaning51 => 'Qhov Tseeb';
+
+  @override
+  String get asmaMeaning52 => 'Txhua Tus Trustee txaus';
+
+  @override
+  String get asmaMeaning53 => 'Tus Muaj Peev Xwm Txhua Lub Zog';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'Tus tiv thaiv';
+
+  @override
+  String get asmaMeaning56 => 'The Praised';
+
+  @override
+  String get asmaMeaning57 => 'The Appraiser';
+
+  @override
+  String get asmaMeaning58 => 'The Originator';
+
+  @override
+  String get asmaMeaning59 => 'The Restorer';
+
+  @override
+  String get asmaMeaning60 => 'Tus Muab Txojsia';
+
+  @override
+  String get asmaMeaning61 => 'Tus Neeg Lub Neej';
+
+  @override
+  String get asmaMeaning62 => 'Lub Neej Nyob';
+
+  @override
+  String get asmaMeaning63 => 'Kev Pab Txhawb Tus Kheej';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'The only one';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'Tus Neeg Nrhiav Txhua Tus';
+
+  @override
+  String get asmaMeaning69 => 'The Powerful';
+
+  @override
+  String get asmaMeaning70 => 'Tus tsim ntawm txhua lub hwj chim';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'The Delayer';
+
+  @override
+  String get asmaMeaning73 => 'The First';
+
+  @override
+  String get asmaMeaning74 => 'Lub Xeem';
+
+  @override
+  String get asmaMeaning75 => 'The Manifest';
+
+  @override
+  String get asmaMeaning76 => 'The Hidden';
+
+  @override
+  String get asmaMeaning77 => 'Tus tswv xeev';
+
+  @override
+  String get asmaMeaning78 => 'The Supreme One';
+
+  @override
+  String get asmaMeaning79 => 'Tus Ua Zoo';
+
+  @override
+  String get asmaMeaning80 => 'Phau Ntawv Qhia Txog Kev Hloov Siab';
+
+  @override
+  String get asmaMeaning81 => 'The Avenger';
+
+  @override
+  String get asmaMeaning82 => 'Tus zam txim';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Tus tswv / Sovereign of All';
+
+  @override
+  String get asmaMeaning85 => 'Tus Muaj Peev Xwm ntawm Majesty thiab Nyiaj Pov';
+
+  @override
+  String get asmaMeaning86 => 'The Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'The Gatherer';
+
+  @override
+  String get asmaMeaning88 => 'The Rich One';
+
+  @override
+  String get asmaMeaning89 => 'The Enricher';
+
+  @override
+  String get asmaMeaning90 => 'Tus Tiv Thaiv Kev Ua Phem';
+
+  @override
+  String get asmaMeaning91 => 'Tus coj kev puas tsuaj';
+
+  @override
+  String get asmaMeaning92 => 'Cov Kev Pab Zoo Tshaj Plaws';
+
+  @override
+  String get asmaMeaning93 => 'Lub Teeb';
+
+  @override
+  String get asmaMeaning94 => 'The Guider';
+
+  @override
+  String get asmaMeaning95 => 'The Originator';
+
+  @override
+  String get asmaMeaning96 => 'Txoj Kev Mus Ib Txhis';
+
+  @override
+  String get asmaMeaning97 => 'The Inheritor';
+
+  @override
+  String get asmaMeaning98 => 'Cov Lus Qhia Ncaj Ncees';
+
+  @override
+  String get asmaMeaning99 => 'Tus Neeg Mob Ib';
 }

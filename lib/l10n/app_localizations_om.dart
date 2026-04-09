@@ -1191,4 +1191,301 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Bakka Islaamaa';
+
+  @override
+  String get asmaMeaning1 => 'Faayidaa';
+
+  @override
+  String get asmaMeaning2 => 'Rahmaan';
+
+  @override
+  String get asmaMeaning3 => 'Mootii / Gooftaa Bara Baraa';
+
+  @override
+  String get asmaMeaning4 => 'Irra Qulqullaa\'aa';
+
+  @override
+  String get asmaMeaning5 => 'Madda Nagaa';
+
+  @override
+  String get asmaMeaning6 => 'Kennaan Nageenyaa';
+
+  @override
+  String get asmaMeaning7 => 'Gaazexaa Gaardiyaan';
+
+  @override
+  String get asmaMeaning8 => 'Kan Qaalii / Kan Hundumaa';
+
+  @override
+  String get asmaMeaning9 => 'Dirqisiisaa';
+
+  @override
+  String get asmaMeaning10 => 'Irra Guddaa';
+
+  @override
+  String get asmaMeaning11 => 'Uumaan';
+
+  @override
+  String get asmaMeaning12 => 'Kan Sirna Uume';
+
+  @override
+  String get asmaMeaning13 => 'Boca Bareedinaa';
+
+  @override
+  String get asmaMeaning14 => 'Warra Dhiifama';
+
+  @override
+  String get asmaMeaning15 => 'Kan Gad qabate';
+
+  @override
+  String get asmaMeaning16 => 'Kennaan Hundaa';
+
+  @override
+  String get asmaMeaning17 => 'Kan itti fufsiisu';
+
+  @override
+  String get asmaMeaning18 => 'Kan Banaa';
+
+  @override
+  String get asmaMeaning19 => 'Beekaa Hundaa';
+
+  @override
+  String get asmaMeaning20 => 'Konstiraaktarichi';
+
+  @override
+  String get asmaMeaning21 => 'The Reliever';
+
+  @override
+  String get asmaMeaning22 => 'Warra Abasaa';
+
+  @override
+  String get asmaMeaning23 => 'Kan Ol-kaasu';
+
+  @override
+  String get asmaMeaning24 => 'Kabaja Kennuu';
+
+  @override
+  String get asmaMeaning25 => 'Salphisaa';
+
+  @override
+  String get asmaMeaning26 => 'Dhaga\'aa Hundaa';
+
+  @override
+  String get asmaMeaning27 => 'Arguun Hundumaa';
+
+  @override
+  String get asmaMeaning28 => 'Abbaan Murtii';
+
+  @override
+  String get asmaMeaning29 => 'Warra Haqaa';
+
+  @override
+  String get asmaMeaning30 => 'Kan Haxxee';
+
+  @override
+  String get asmaMeaning31 => 'Warra Hundi Quba Qabu';
+
+  @override
+  String get asmaMeaning32 => 'Kan Araa';
+
+  @override
+  String get asmaMeaning33 => 'Kan Ajaa\'ibaa';
+
+  @override
+  String get asmaMeaning34 => 'Dhiifama Guddaa';
+
+  @override
+  String get asmaMeaning35 => 'Badhaasaa Galata';
+
+  @override
+  String get asmaMeaning36 => 'Kan Ol Aanaa';
+
+  @override
+  String get asmaMeaning37 => 'Irra Guddaa';
+
+  @override
+  String get asmaMeaning38 => 'Kan Kunuunsu';
+
+  @override
+  String get asmaMeaning39 => 'Soorata kan kennu';
+
+  @override
+  String get asmaMeaning40 => 'Herregaa';
+
+  @override
+  String get asmaMeaning41 => 'Kan Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Warra Arjaa';
+
+  @override
+  String get asmaMeaning43 => 'Kan Dammaqaa';
+
+  @override
+  String get asmaMeaning44 => 'Deebii Kadhannaa';
+
+  @override
+  String get asmaMeaning45 => 'Kan Hundaa Hundaa\'u';
+
+  @override
+  String get asmaMeaning46 => 'Ogeessa Guutuu';
+
+  @override
+  String get asmaMeaning47 => 'Kan Jaalalaa';
+
+  @override
+  String get asmaMeaning48 => 'Kan Ulfina Qabu';
+
+  @override
+  String get asmaMeaning49 => 'Du\'aa ka\'aa';
+
+  @override
+  String get asmaMeaning50 => 'Dhugaa Baatuun';
+
+  @override
+  String get asmaMeaning51 => 'Dhugaa';
+
+  @override
+  String get asmaMeaning52 => 'Abbaa Imaanaa Hundumaa Ga’aa ta’e';
+
+  @override
+  String get asmaMeaning53 => 'Qabeenya Humna Hundaa';
+
+  @override
+  String get asmaMeaning54 => 'Warra Humna';
+
+  @override
+  String get asmaMeaning55 => 'Eegduun';
+
+  @override
+  String get asmaMeaning56 => 'Kan Faarfamu';
+
+  @override
+  String get asmaMeaning57 => 'Madaallii';
+
+  @override
+  String get asmaMeaning58 => 'Ka\'umsa';
+
+  @override
+  String get asmaMeaning59 => 'Deebisee kan deebisu';
+
+  @override
+  String get asmaMeaning60 => 'Kennaan Jireenyaa';
+
+  @override
+  String get asmaMeaning61 => 'Kan Jireenya Fudhatu';
+
+  @override
+  String get asmaMeaning62 => 'Warra Yoomiyyuu Jiraatan';
+
+  @override
+  String get asmaMeaning63 => 'Kan Of Jireenyaa Jiraachisu';
+
+  @override
+  String get asmaMeaning64 => 'Kan Barbaadaa';
+
+  @override
+  String get asmaMeaning65 => 'Warra Ulfinaa';
+
+  @override
+  String get asmaMeaning66 => 'Tokkicha';
+
+  @override
+  String get asmaMeaning67 => 'Tokkicha';
+
+  @override
+  String get asmaMeaning68 => 'Kan Hundumtuu Barbaadu';
+
+  @override
+  String get asmaMeaning69 => 'Warra Humna Qaban';
+
+  @override
+  String get asmaMeaning70 => 'Uumaa humna hundaa';
+
+  @override
+  String get asmaMeaning71 => 'Saffisaa (Expediter) jedhamu';
+
+  @override
+  String get asmaMeaning72 => 'Kan Harkifate';
+
+  @override
+  String get asmaMeaning73 => 'Kan Tokkoffaa';
+
+  @override
+  String get asmaMeaning74 => 'Kan Dhumaa';
+
+  @override
+  String get asmaMeaning75 => 'Kan Mul’ataa jiru';
+
+  @override
+  String get asmaMeaning76 => 'Kan Dhokataa';
+
+  @override
+  String get asmaMeaning77 => 'Bulchaan';
+
+  @override
+  String get asmaMeaning78 => 'Kan Ol Aanaa';
+
+  @override
+  String get asmaMeaning79 => 'Hojjataa Gaarii';
+
+  @override
+  String get asmaMeaning80 => 'Qajeelfama Gaabbii';
+
+  @override
+  String get asmaMeaning81 => 'Haaloo ba\'aa';
+
+  @override
+  String get asmaMeaning82 => 'Dhiifama kan godhu';
+
+  @override
+  String get asmaMeaning83 => 'Kileemanti';
+
+  @override
+  String get asmaMeaning84 => 'Abbaa Qabeenyaa / Abbaan Biyya Hundaa';
+
+  @override
+  String get asmaMeaning85 => 'Qabeenya Ulfinaa fi Badhaasa';
+
+  @override
+  String get asmaMeaning86 => 'Kan Walqixaa';
+
+  @override
+  String get asmaMeaning87 => 'Walitti qabaa';
+
+  @override
+  String get asmaMeaning88 => 'Kan Sooressaa';
+
+  @override
+  String get asmaMeaning89 => 'Kan Badhaadhina';
+
+  @override
+  String get asmaMeaning90 => 'Ittisaa Miidhaa';
+
+  @override
+  String get asmaMeaning91 => 'Miidhaa fide';
+
+  @override
+  String get asmaMeaning92 => 'Faayidaa Kennuu';
+
+  @override
+  String get asmaMeaning93 => 'Ifa';
+
+  @override
+  String get asmaMeaning94 => 'Qajeelchituu';
+
+  @override
+  String get asmaMeaning95 => 'Ka\'umsa';
+
+  @override
+  String get asmaMeaning96 => 'Kan Bara Baraa';
+
+  @override
+  String get asmaMeaning97 => 'Dhaaltuu';
+
+  @override
+  String get asmaMeaning98 => 'Qajeelfama hunda caalaa qajeelaa';
+
+  @override
+  String get asmaMeaning99 => 'Kan Dhukkubsataa';
 }

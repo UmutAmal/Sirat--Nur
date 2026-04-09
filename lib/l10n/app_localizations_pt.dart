@@ -1190,4 +1190,301 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Lugar Islâmico';
+
+  @override
+  String get asmaMeaning1 => 'O Beneficente';
+
+  @override
+  String get asmaMeaning2 => 'O Misericordioso';
+
+  @override
+  String get asmaMeaning3 => 'O Rei / Senhor Eterno';
+
+  @override
+  String get asmaMeaning4 => 'O Santíssimo';
+
+  @override
+  String get asmaMeaning5 => 'A Fonte da Paz';
+
+  @override
+  String get asmaMeaning6 => 'O Doador de Segurança';
+
+  @override
+  String get asmaMeaning7 => 'O Guardião';
+
+  @override
+  String get asmaMeaning8 => 'O Precioso / O Mais Poderoso';
+
+  @override
+  String get asmaMeaning9 => 'O Compeller';
+
+  @override
+  String get asmaMeaning10 => 'O melhor';
+
+  @override
+  String get asmaMeaning11 => 'O Criador';
+
+  @override
+  String get asmaMeaning12 => 'O Criador do Pedido';
+
+  @override
+  String get asmaMeaning13 => 'O Moldador da Beleza';
+
+  @override
+  String get asmaMeaning14 => 'O Perdoador';
+
+  @override
+  String get asmaMeaning15 => 'O Subjugador';
+
+  @override
+  String get asmaMeaning16 => 'O Doador de Tudo';
+
+  @override
+  String get asmaMeaning17 => 'O Sustentador';
+
+  @override
+  String get asmaMeaning18 => 'O abridor';
+
+  @override
+  String get asmaMeaning19 => 'O Conhecedor de Tudo';
+
+  @override
+  String get asmaMeaning20 => 'O Constritor';
+
+  @override
+  String get asmaMeaning21 => 'O Apaziguador';
+
+  @override
+  String get asmaMeaning22 => 'O Humilde';
+
+  @override
+  String get asmaMeaning23 => 'O Exaltador';
+
+  @override
+  String get asmaMeaning24 => 'O Outorgador de Honra';
+
+  @override
+  String get asmaMeaning25 => 'O Humilhador';
+
+  @override
+  String get asmaMeaning26 => 'O Ouvinte de Todos';
+
+  @override
+  String get asmaMeaning27 => 'O Vidente de Tudo';
+
+  @override
+  String get asmaMeaning28 => 'O Juiz';
+
+  @override
+  String get asmaMeaning29 => 'O Justo';
+
+  @override
+  String get asmaMeaning30 => 'O Sutil';
+
+  @override
+  String get asmaMeaning31 => 'Todos Conscientes';
+
+  @override
+  String get asmaMeaning32 => 'O Antecedente';
+
+  @override
+  String get asmaMeaning33 => 'O Magnífico';
+
+  @override
+  String get asmaMeaning34 => 'O Grande Perdoador';
+
+  @override
+  String get asmaMeaning35 => 'O recompensador da gratidão';
+
+  @override
+  String get asmaMeaning36 => 'O mais alto';
+
+  @override
+  String get asmaMeaning37 => 'O melhor';
+
+  @override
+  String get asmaMeaning38 => 'O Preservador';
+
+  @override
+  String get asmaMeaning39 => 'O Nutridor';
+
+  @override
+  String get asmaMeaning40 => 'O Contador';
+
+  @override
+  String get asmaMeaning41 => 'O Majestoso';
+
+  @override
+  String get asmaMeaning42 => 'O Generoso';
+
+  @override
+  String get asmaMeaning43 => 'O Vigilante';
+
+  @override
+  String get asmaMeaning44 => 'O Respondente à Oração';
+
+  @override
+  String get asmaMeaning45 => 'A compreensão total';
+
+  @override
+  String get asmaMeaning46 => 'O Perfeitamente Sábio';
+
+  @override
+  String get asmaMeaning47 => 'O Amado';
+
+  @override
+  String get asmaMeaning48 => 'O Mais Glorioso';
+
+  @override
+  String get asmaMeaning49 => 'O Ressurreitor';
+
+  @override
+  String get asmaMeaning50 => 'A Testemunha';
+
+  @override
+  String get asmaMeaning51 => 'A verdade';
+
+  @override
+  String get asmaMeaning52 => 'O Administrador Totalmente Suficiente';
+
+  @override
+  String get asmaMeaning53 => 'O Possuidor de Toda Força';
+
+  @override
+  String get asmaMeaning54 => 'O Forte';
+
+  @override
+  String get asmaMeaning55 => 'O Protetor';
+
+  @override
+  String get asmaMeaning56 => 'Os Elogiados';
+
+  @override
+  String get asmaMeaning57 => 'O Avaliador';
+
+  @override
+  String get asmaMeaning58 => 'O Originador';
+
+  @override
+  String get asmaMeaning59 => 'O Restaurador';
+
+  @override
+  String get asmaMeaning60 => 'O Doador da Vida';
+
+  @override
+  String get asmaMeaning61 => 'O tirador de vidas';
+
+  @override
+  String get asmaMeaning62 => 'O Sempre Vivo';
+
+  @override
+  String get asmaMeaning63 => 'O Sustentador Autossustentável';
+
+  @override
+  String get asmaMeaning64 => 'O Localizador';
+
+  @override
+  String get asmaMeaning65 => 'O Glorioso';
+
+  @override
+  String get asmaMeaning66 => 'O Único';
+
+  @override
+  String get asmaMeaning67 => 'O Único';
+
+  @override
+  String get asmaMeaning68 => 'O Procurado por Todos';
+
+  @override
+  String get asmaMeaning69 => 'O Poderoso';
+
+  @override
+  String get asmaMeaning70 => 'O Criador de todo poder';
+
+  @override
+  String get asmaMeaning71 => 'O Expedidor';
+
+  @override
+  String get asmaMeaning72 => 'O retardador';
+
+  @override
+  String get asmaMeaning73 => 'O Primeiro';
+
+  @override
+  String get asmaMeaning74 => 'O último';
+
+  @override
+  String get asmaMeaning75 => 'O Manifesto';
+
+  @override
+  String get asmaMeaning76 => 'O Oculto';
+
+  @override
+  String get asmaMeaning77 => 'O Governador';
+
+  @override
+  String get asmaMeaning78 => 'O Supremo';
+
+  @override
+  String get asmaMeaning79 => 'O Fazedor do Bem';
+
+  @override
+  String get asmaMeaning80 => 'O Guia para o Arrependimento';
+
+  @override
+  String get asmaMeaning81 => 'O Vingador';
+
+  @override
+  String get asmaMeaning82 => 'O Perdoador';
+
+  @override
+  String get asmaMeaning83 => 'O Clemente';
+
+  @override
+  String get asmaMeaning84 => 'O Proprietário/Soberano de Todos';
+
+  @override
+  String get asmaMeaning85 => 'O Possuidor de Majestade e Recompensa';
+
+  @override
+  String get asmaMeaning86 => 'O Equitativo';
+
+  @override
+  String get asmaMeaning87 => 'O Coletor';
+
+  @override
+  String get asmaMeaning88 => 'O Rico';
+
+  @override
+  String get asmaMeaning89 => 'O Enriquecedor';
+
+  @override
+  String get asmaMeaning90 => 'O Preventor de Danos';
+
+  @override
+  String get asmaMeaning91 => 'O Portador do Dano';
+
+  @override
+  String get asmaMeaning92 => 'O Concedente de Benefícios';
+
+  @override
+  String get asmaMeaning93 => 'A Luz';
+
+  @override
+  String get asmaMeaning94 => 'O Guia';
+
+  @override
+  String get asmaMeaning95 => 'O Originador';
+
+  @override
+  String get asmaMeaning96 => 'O Eterno';
+
+  @override
+  String get asmaMeaning97 => 'O Herdeiro';
+
+  @override
+  String get asmaMeaning98 => 'O Guia Mais Justo';
+
+  @override
+  String get asmaMeaning99 => 'O Paciente';
 }

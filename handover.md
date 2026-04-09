@@ -3604,3 +3604,42 @@
 ### Sonraki Adım
 - Sıradaki turda Asma bundled fallback’in yalnızca `tr/en` barındırması nedeniyle cloud yokken diğer locale’lerin İngilizceye düşme riski ele alınacak.
 - Ardından genel residual localization taraması yeniden çalıştırılacak.
+## 2026-04-09 TUR-92 — Localize Bundled Asma Fallback Across Locales
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\asma_meaning_localization.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/asma_meaning_localization.dart) eklendi; bundled Asma fallback için `asmaMeaning1..asmaMeaning99` getter zinciri oluşturuldu.
+- [A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/asma_ul_husna_page.dart) artık locale-specific cloud translation yoksa bundled l10n meaning’e düşüyor; arama filtresi de bu localized fallback metnini tarıyor.
+- `app_en.arb` ve `app_tr.arb` referanslarına 99 Asma meaning anahtarı üretildi; ardından tüm `app_*.arb` dosyalarına aynı anahtar seti yayıldı ve generated l10n dosyaları yenilendi.
+- [A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/library/asma_ul_husna_page_test.dart) bundled localized fallback görünümü ve buna göre arama senaryosu ile genişletildi.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) safe priority locale setinde `asmaMeaning1..asmaMeaning99` için English fallback guard ile genişletildi.
+
+### Neden Yapıldı
+- Bir önceki turda cloud translation map kaybı kapatıldı, ancak [A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/constants/asma_ul_husna_data.dart) içindeki bundled fallback hâlâ yalnızca `tr/en` taşıdığı için cloud yokken `de`, `fr`, `ru` gibi locale'ler İngilizce meaning'e düşüyordu.
+- Bu durum çevrimdışı kullanımda Asma ekranının çok dilli vaat ile uyumsuz davranmasına ve locale-specific aramanın cloud yoksa kısmen bozulmasına yol açıyordu.
+- Risk dini içerik + localization zincirinin kesişiminde olduğu için bundled fallback de cloud kadar locale-aware hale getirildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_meaning_localization.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Asma ekranı cloud veri yokken de priority locale setinde İngilizceye düşmeden localized bundled meaning gösterebiliyor.
+- Bundled fallback araması artık locale-specific meaning metni üzerinden de çalışıyor.
+- `asmaMeaning1..asmaMeaning99` anahtarları tüm locale setinde mevcut olduğu için offline Asma meaning zinciri generated l10n ile kilitlendi.
+
+### Test Sonucu
+- `flutter test test/features/library/asma_ul_husna_page_test.dart` → PASS (`8/8`)
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`17/17`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`209/209`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Bundled Asma fallback dropping to English outside TR/EN when cloud data is absent: `13/25 → 3/25`
+
+### Sonraki Adım
+- Sıradaki turda tam proje taraması tekrar çalıştırılacak ve kalan en yüksek riskli residual hardcoded/localization veya boş implementasyon yüzeyi seçilecek.
+- Özellikle library/settings/chatbot/audio zincirlerinde yeni hardcoded string, false-success veya orphan servis kalıntıları yeniden taranacak.

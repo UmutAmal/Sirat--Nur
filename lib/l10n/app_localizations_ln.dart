@@ -1187,4 +1187,301 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Esika ya Islam';
+
+  @override
+  String get asmaMeaning1 => 'Moto oyo azali na litomba';
+
+  @override
+  String get asmaMeaning2 => 'Moto ya mawa';
+
+  @override
+  String get asmaMeaning3 => 'Mokonzi / Nkolo ya seko';
+
+  @override
+  String get asmaMeaning4 => 'Eleki Mosantu';
+
+  @override
+  String get asmaMeaning5 => 'Liziba ya Kimya';
+
+  @override
+  String get asmaMeaning6 => 'Mopesi ya Bobateli';
+
+  @override
+  String get asmaMeaning7 => 'Mobateli ya mobateli';
+
+  @override
+  String get asmaMeaning8 => 'Ba Taux / Ba Puissance koleka';
+
+  @override
+  String get asmaMeaning9 => 'Mosali ya makasi';
+
+  @override
+  String get asmaMeaning10 => 'Monene';
+
+  @override
+  String get asmaMeaning11 => 'Mozalisi';
+
+  @override
+  String get asmaMeaning12 => 'Mosali ya Ordre';
+
+  @override
+  String get asmaMeaning13 => 'Mobongisi ya Kitoko';
+
+  @override
+  String get asmaMeaning14 => 'Ba bolimbisi';
+
+  @override
+  String get asmaMeaning15 => 'Moto oyo azali kokitanya';
+
+  @override
+  String get asmaMeaning16 => 'Mopesi ya Nyonso';
+
+  @override
+  String get asmaMeaning17 => 'Moto oyo azali kobatela';
+
+  @override
+  String get asmaMeaning18 => 'Mofungoli';
+
+  @override
+  String get asmaMeaning19 => 'Moyebi ya Nyonso';
+
+  @override
+  String get asmaMeaning20 => 'Mopekisami';
+
+  @override
+  String get asmaMeaning21 => 'Mosungi';
+
+  @override
+  String get asmaMeaning22 => 'Bato ya Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Motomboli';
+
+  @override
+  String get asmaMeaning24 => 'Mopesi ya lokumu';
+
+  @override
+  String get asmaMeaning25 => 'Moto ya kokitisa';
+
+  @override
+  String get asmaMeaning26 => 'Moyoki ya Nyonso';
+
+  @override
+  String get asmaMeaning27 => 'Momoni ya Nyonso';
+
+  @override
+  String get asmaMeaning28 => 'Mosambisi';
+
+  @override
+  String get asmaMeaning29 => 'Ba Sembo';
+
+  @override
+  String get asmaMeaning30 => 'Oyo ya Subtil';
+
+  @override
+  String get asmaMeaning31 => 'Bato nionso bayebi';
+
+  @override
+  String get asmaMeaning32 => 'Ba kobota';
+
+  @override
+  String get asmaMeaning33 => 'Ba Magnifiques';
+
+  @override
+  String get asmaMeaning34 => 'Molimbisi Monene';
+
+  @override
+  String get asmaMeaning35 => 'Mopesi mbano ya botondi';
+
+  @override
+  String get asmaMeaning36 => 'Oyo ya likolo koleka';
+
+  @override
+  String get asmaMeaning37 => 'Monene';
+
+  @override
+  String get asmaMeaning38 => 'Mobateli ya biloko';
+
+  @override
+  String get asmaMeaning39 => 'Mopesi bilei';
+
+  @override
+  String get asmaMeaning40 => 'Mosali ya mosolo';
+
+  @override
+  String get asmaMeaning41 => 'Ba Majestique';
+
+  @override
+  String get asmaMeaning42 => 'Bato ya motema malamu';
+
+  @override
+  String get asmaMeaning43 => 'Moto oyo azali kokengela';
+
+  @override
+  String get asmaMeaning44 => 'Moyano na losambo';
+
+  @override
+  String get asmaMeaning45 => 'Ba Kososola Nyonso';
+
+  @override
+  String get asmaMeaning46 => 'Ba mayele ya kokoka';
+
+  @override
+  String get asmaMeaning47 => 'Moto ya Bolingo';
+
+  @override
+  String get asmaMeaning48 => 'Moto ya Nkembo koleka';
+
+  @override
+  String get asmaMeaning49 => 'Mosekwi ya bato';
+
+  @override
+  String get asmaMeaning50 => 'Motatoli';
+
+  @override
+  String get asmaMeaning51 => 'Bosolo';
+
+  @override
+  String get asmaMeaning52 => 'Mobateli ya makambo nyonso oyo ekoki';
+
+  @override
+  String get asmaMeaning53 => 'Mozwi ya Bokasi Nyonso';
+
+  @override
+  String get asmaMeaning54 => 'Bato ya makasi';
+
+  @override
+  String get asmaMeaning55 => 'Mobateli oyo';
+
+  @override
+  String get asmaMeaning56 => 'Ba Kumisami';
+
+  @override
+  String get asmaMeaning57 => 'Motangi ya motuya';
+
+  @override
+  String get asmaMeaning58 => 'Mobandisi';
+
+  @override
+  String get asmaMeaning59 => 'Mozongisaka';
+
+  @override
+  String get asmaMeaning60 => 'Mopesi ya Bomoi';
+
+  @override
+  String get asmaMeaning61 => 'Mozwi ya bomoi';
+
+  @override
+  String get asmaMeaning62 => 'Ba oyo bazali na bomoi ya seko';
+
+  @override
+  String get asmaMeaning63 => 'Moto oyo azali ko se soutenir yango moko';
+
+  @override
+  String get asmaMeaning64 => 'Moluki';
+
+  @override
+  String get asmaMeaning65 => 'Bato ya Nkembo';
+
+  @override
+  String get asmaMeaning66 => 'Mozali Se moko';
+
+  @override
+  String get asmaMeaning67 => 'Moto oyo';
+
+  @override
+  String get asmaMeaning68 => 'Moto Oyo Nyonso Balukaka';
+
+  @override
+  String get asmaMeaning69 => 'Bato ya nguya';
+
+  @override
+  String get asmaMeaning70 => 'Mozalisi ya nguya nionso';
+
+  @override
+  String get asmaMeaning71 => 'Mosali ya mbangu';
+
+  @override
+  String get asmaMeaning72 => 'Motangi ya retard';
+
+  @override
+  String get asmaMeaning73 => 'Oyo ya liboso';
+
+  @override
+  String get asmaMeaning74 => 'Oyo ya suka';
+
+  @override
+  String get asmaMeaning75 => 'Ba Manifeste';
+
+  @override
+  String get asmaMeaning76 => 'Ba Bombami';
+
+  @override
+  String get asmaMeaning77 => 'Mokonzi ya mboka';
+
+  @override
+  String get asmaMeaning78 => 'Moto ya likolo';
+
+  @override
+  String get asmaMeaning79 => 'Mosali ya Malamu';
+
+  @override
+  String get asmaMeaning80 => 'Motambwisi ya boyamboli';
+
+  @override
+  String get asmaMeaning81 => 'Mozongisi mabe';
+
+  @override
+  String get asmaMeaning82 => 'Molimbisi';
+
+  @override
+  String get asmaMeaning83 => 'Ba Clément';
+
+  @override
+  String get asmaMeaning84 => 'Nkolo / Mokonzi ya Nyonso';
+
+  @override
+  String get asmaMeaning85 => 'Mozwi ya Majesty na Bounty';
+
+  @override
+  String get asmaMeaning86 => 'Oyo ya Equitable';
+
+  @override
+  String get asmaMeaning87 => 'Mosangisi';
+
+  @override
+  String get asmaMeaning88 => 'Moto ya Mozwi';
+
+  @override
+  String get asmaMeaning89 => 'Moto oyo azali ko enrichir';
+
+  @override
+  String get asmaMeaning90 => 'Mopekisi ya Mabe';
+
+  @override
+  String get asmaMeaning91 => 'Momemi ya Mabe';
+
+  @override
+  String get asmaMeaning92 => 'Mopesi ya Matomba';
+
+  @override
+  String get asmaMeaning93 => 'Mwinda';
+
+  @override
+  String get asmaMeaning94 => 'Motambwisi';
+
+  @override
+  String get asmaMeaning95 => 'Mobandisi';
+
+  @override
+  String get asmaMeaning96 => 'Moto ya seko';
+
+  @override
+  String get asmaMeaning97 => 'Mosangoli ya libula';
+
+  @override
+  String get asmaMeaning98 => 'Motambwisi oyo eleki sembo';
+
+  @override
+  String get asmaMeaning99 => 'Mobɛli oyo';
 }

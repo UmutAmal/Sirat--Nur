@@ -1188,4 +1188,301 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'កន្លែងអ៊ីស្លាម';
+
+  @override
+  String get asmaMeaning1 => 'អ្នកទទួលផល';
+
+  @override
+  String get asmaMeaning2 => 'ព្រះមេត្ដា';
+
+  @override
+  String get asmaMeaning3 => 'ស្តេច / ព្រះអម្ចាស់ដ៏អស់កល្ប';
+
+  @override
+  String get asmaMeaning4 => 'បរិសុទ្ធបំផុត។';
+
+  @override
+  String get asmaMeaning5 => 'ប្រភពនៃសន្តិភាព';
+
+  @override
+  String get asmaMeaning6 => 'អ្នកផ្តល់សុវត្ថិភាព';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'វត្ថុមានតម្លៃ / ខ្លាំងបំផុត។';
+
+  @override
+  String get asmaMeaning9 => 'អ្នកចងក្រង';
+
+  @override
+  String get asmaMeaning10 => 'អស្ចារ្យបំផុត។';
+
+  @override
+  String get asmaMeaning11 => 'អ្នកបង្កើត';
+
+  @override
+  String get asmaMeaning12 => 'អ្នកបង្កើតការបញ្ជាទិញ';
+
+  @override
+  String get asmaMeaning13 => 'រូបរាងនៃភាពស្រស់ស្អាត';
+
+  @override
+  String get asmaMeaning14 => 'ការអភ័យទោស';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'អ្នកផ្តល់ឱ្យទាំងអស់។';
+
+  @override
+  String get asmaMeaning17 => 'អ្នកទ្រទ្រង់';
+
+  @override
+  String get asmaMeaning18 => 'អ្នកបើក';
+
+  @override
+  String get asmaMeaning19 => 'អ្នកស្គាល់ទាំងអស់។';
+
+  @override
+  String get asmaMeaning20 => 'អ្នកបង្ខាំង';
+
+  @override
+  String get asmaMeaning21 => 'អ្នកសង្គ្រោះ';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'ការប្រគល់កិត្តិយស';
+
+  @override
+  String get asmaMeaning25 => 'អ្នកបំបាក់មុខ';
+
+  @override
+  String get asmaMeaning26 => 'អ្នកស្តាប់ទាំងអស់គ្នា';
+
+  @override
+  String get asmaMeaning27 => 'អ្នកមើលទាំងអស់';
+
+  @override
+  String get asmaMeaning28 => 'ចៅក្រម';
+
+  @override
+  String get asmaMeaning29 => 'គ្រាន់តែ';
+
+  @override
+  String get asmaMeaning30 => 'ភាពទន់ភ្លន់';
+
+  @override
+  String get asmaMeaning31 => 'ការដឹងទាំងអស់';
+
+  @override
+  String get asmaMeaning32 => 'ការគិតទុកជាមុន';
+
+  @override
+  String get asmaMeaning33 => 'អស្ចារ្យ';
+
+  @override
+  String get asmaMeaning34 => 'អ្នកអភ័យទោសដ៏អស្ចារ្យ';
+
+  @override
+  String get asmaMeaning35 => 'អ្នកផ្តល់រង្វាន់នៃការដឹងគុណ';
+
+  @override
+  String get asmaMeaning36 => 'ខ្ពស់បំផុត';
+
+  @override
+  String get asmaMeaning37 => 'អស្ចារ្យបំផុត។';
+
+  @override
+  String get asmaMeaning38 => 'អ្នកអភិរក្ស';
+
+  @override
+  String get asmaMeaning39 => 'អ្នកចិញ្ចឹម';
+
+  @override
+  String get asmaMeaning40 => 'អ្នកគិតលេខ';
+
+  @override
+  String get asmaMeaning41 => 'មហាអស្ចារ្យ';
+
+  @override
+  String get asmaMeaning42 => 'សប្បុរស';
+
+  @override
+  String get asmaMeaning43 => 'អ្នកចាំទី';
+
+  @override
+  String get asmaMeaning44 => 'ការ​ឆ្លើយ​តប​នឹង​ការ​អធិស្ឋាន';
+
+  @override
+  String get asmaMeaning45 => 'ការយល់ឃើញទាំងអស់។';
+
+  @override
+  String get asmaMeaning46 => 'ប្រាជ្ញាល្អឥតខ្ចោះ';
+
+  @override
+  String get asmaMeaning47 => 'មនុស្សជាទីស្រឡាញ់';
+
+  @override
+  String get asmaMeaning48 => 'ដ៏រុងរឿងបំផុត។';
+
+  @override
+  String get asmaMeaning49 => 'អ្នករស់ឡើងវិញ';
+
+  @override
+  String get asmaMeaning50 => 'សាក្សី';
+
+  @override
+  String get asmaMeaning51 => 'ការពិត';
+
+  @override
+  String get asmaMeaning52 => 'អ្នកធានាគ្រប់ចំនួនគ្រប់គ្រាន់';
+
+  @override
+  String get asmaMeaning53 => 'ម្ចាស់នៃកម្លាំងទាំងអស់។';
+
+  @override
+  String get asmaMeaning54 => 'ការបង្ខំ';
+
+  @override
+  String get asmaMeaning55 => 'អ្នកការពារ';
+
+  @override
+  String get asmaMeaning56 => 'ការសរសើរ';
+
+  @override
+  String get asmaMeaning57 => 'អ្នកវាយតម្លៃ';
+
+  @override
+  String get asmaMeaning58 => 'អ្នកបង្កើត';
+
+  @override
+  String get asmaMeaning59 => 'អ្នកស្តារ';
+
+  @override
+  String get asmaMeaning60 => 'អ្នកផ្តល់ជីវិត';
+
+  @override
+  String get asmaMeaning61 => 'អ្នកទទួលជីវិត';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'អ្នកទ្រទ្រង់ខ្លួនឯង';
+
+  @override
+  String get asmaMeaning64 => 'អ្នកស្វែងរក';
+
+  @override
+  String get asmaMeaning65 => 'រុងរឿង';
+
+  @override
+  String get asmaMeaning66 => 'តែមួយគត់';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'អ្នកដែលគ្រប់គ្នាស្វែងរក';
+
+  @override
+  String get asmaMeaning69 => 'មានថាមពល';
+
+  @override
+  String get asmaMeaning70 => 'អ្នកបង្កើតអំណាចទាំងអស់។';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'ការពន្យាពេល';
+
+  @override
+  String get asmaMeaning73 => 'ទីមួយ';
+
+  @override
+  String get asmaMeaning74 => 'ចុងក្រោយ';
+
+  @override
+  String get asmaMeaning75 => 'ការសម្ដែង';
+
+  @override
+  String get asmaMeaning76 => 'ការលាក់';
+
+  @override
+  String get asmaMeaning77 => 'អភិបាលខេត្ត';
+
+  @override
+  String get asmaMeaning78 => 'កំពូលម្នាក់';
+
+  @override
+  String get asmaMeaning79 => 'អ្នកធ្វើអំពើល្អ។';
+
+  @override
+  String get asmaMeaning80 => 'មគ្គុទ្ទេសក៍ទៅកាន់ការប្រែចិត្ត';
+
+  @override
+  String get asmaMeaning81 => 'The Avenger';
+
+  @override
+  String get asmaMeaning82 => 'អ្នកអភ័យទោស';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'ម្ចាស់/អធិបតេយ្យភាពនៃទាំងអស់។';
+
+  @override
+  String get asmaMeaning85 => 'ម្ចាស់ក្សត្រី និងអំណោយ';
+
+  @override
+  String get asmaMeaning86 => 'សមធម៌';
+
+  @override
+  String get asmaMeaning87 => 'អ្នកប្រមូលផ្តុំ';
+
+  @override
+  String get asmaMeaning88 => 'អ្នកមាន';
+
+  @override
+  String get asmaMeaning89 => 'The Enricher';
+
+  @override
+  String get asmaMeaning90 => 'អ្នកការពារគ្រោះថ្នាក់';
+
+  @override
+  String get asmaMeaning91 => 'អ្នកនាំមកនូវគ្រោះថ្នាក់';
+
+  @override
+  String get asmaMeaning92 => 'អ្នកផ្តល់អត្ថប្រយោជន៍';
+
+  @override
+  String get asmaMeaning93 => 'ពន្លឺ';
+
+  @override
+  String get asmaMeaning94 => 'អ្នកណែនាំ';
+
+  @override
+  String get asmaMeaning95 => 'អ្នកបង្កើត';
+
+  @override
+  String get asmaMeaning96 => 'ព្រះដ៏អស់កល្ប';
+
+  @override
+  String get asmaMeaning97 => 'អ្នកទទួលមរតក';
+
+  @override
+  String get asmaMeaning98 => 'ការណែនាំដ៏ត្រឹមត្រូវបំផុត។';
+
+  @override
+  String get asmaMeaning99 => 'អ្នកជំងឺម្នាក់';
 }

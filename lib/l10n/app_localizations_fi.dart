@@ -1189,4 +1189,301 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islamilainen paikka';
+
+  @override
+  String get asmaMeaning1 => 'Hyväntekijä';
+
+  @override
+  String get asmaMeaning2 => 'Armollinen';
+
+  @override
+  String get asmaMeaning3 => 'Kuningas / Ikuinen Herra';
+
+  @override
+  String get asmaMeaning4 => 'Pyhin';
+
+  @override
+  String get asmaMeaning5 => 'Rauhan lähde';
+
+  @override
+  String get asmaMeaning6 => 'Turvan antaja';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Kallein / mahtavin';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Suurin';
+
+  @override
+  String get asmaMeaning11 => 'Luoja';
+
+  @override
+  String get asmaMeaning12 => 'Tilauksen tekijä';
+
+  @override
+  String get asmaMeaning13 => 'The Shaper of Beauty';
+
+  @override
+  String get asmaMeaning14 => 'Anteeksiantava';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Kaiken antaja';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'Avaaja';
+
+  @override
+  String get asmaMeaning19 => 'Kaiken tietäjä';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Kehittäjä';
+
+  @override
+  String get asmaMeaning22 => 'Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'Kunnialahjoittaja';
+
+  @override
+  String get asmaMeaning25 => 'Nöyryyttäjä';
+
+  @override
+  String get asmaMeaning26 => 'Kaikkien kuulija';
+
+  @override
+  String get asmaMeaning27 => 'Kaikkien näkijä';
+
+  @override
+  String get asmaMeaning28 => 'Tuomari';
+
+  @override
+  String get asmaMeaning29 => 'Oikeudenmukainen';
+
+  @override
+  String get asmaMeaning30 => 'Hieno';
+
+  @override
+  String get asmaMeaning31 => 'Aware';
+
+  @override
+  String get asmaMeaning32 => 'Etukäteen';
+
+  @override
+  String get asmaMeaning33 => 'Upea';
+
+  @override
+  String get asmaMeaning34 => 'Suuri anteeksiantaja';
+
+  @override
+  String get asmaMeaning35 => 'Kiitollisuuden palkitseja';
+
+  @override
+  String get asmaMeaning36 => 'Korkein';
+
+  @override
+  String get asmaMeaning37 => 'Suurin';
+
+  @override
+  String get asmaMeaning38 => 'Säilyttäjä';
+
+  @override
+  String get asmaMeaning39 => 'Ravitseja';
+
+  @override
+  String get asmaMeaning40 => 'Rekonner';
+
+  @override
+  String get asmaMeaning41 => 'Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Antelias';
+
+  @override
+  String get asmaMeaning43 => 'Valvoja';
+
+  @override
+  String get asmaMeaning44 => 'Rukousvastaaja';
+
+  @override
+  String get asmaMeaning45 => 'Kaikkia ymmärtävä';
+
+  @override
+  String get asmaMeaning46 => 'Täydellisen viisas';
+
+  @override
+  String get asmaMeaning47 => 'Rakastava';
+
+  @override
+  String get asmaMeaning48 => 'Loistavin';
+
+  @override
+  String get asmaMeaning49 => 'The Resurrector';
+
+  @override
+  String get asmaMeaning50 => 'Todistaja';
+
+  @override
+  String get asmaMeaning51 => 'Totuus';
+
+  @override
+  String get asmaMeaning52 => 'Kaikki riittävä toimitsijamies';
+
+  @override
+  String get asmaMeaning53 => 'Kaiken voiman haltija';
+
+  @override
+  String get asmaMeaning54 => 'voimakas';
+
+  @override
+  String get asmaMeaning55 => 'Suojelija';
+
+  @override
+  String get asmaMeaning56 => 'Kiitetty';
+
+  @override
+  String get asmaMeaning57 => 'Arvioija';
+
+  @override
+  String get asmaMeaning58 => 'Alkuperäinen';
+
+  @override
+  String get asmaMeaning59 => 'Restorer';
+
+  @override
+  String get asmaMeaning60 => 'Elämänantaja';
+
+  @override
+  String get asmaMeaning61 => 'Elämän ottaja';
+
+  @override
+  String get asmaMeaning62 => 'Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Oma toimeentulon ylläpitäjä';
+
+  @override
+  String get asmaMeaning64 => 'Finder';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'Ainoa';
+
+  @override
+  String get asmaMeaning67 => 'Yksi';
+
+  @override
+  String get asmaMeaning68 => 'Kaikkien etsimä';
+
+  @override
+  String get asmaMeaning69 => 'Tehokas';
+
+  @override
+  String get asmaMeaning70 => 'Kaiken voiman Luoja';
+
+  @override
+  String get asmaMeaning71 => 'Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Viive';
+
+  @override
+  String get asmaMeaning73 => 'Ensimmäinen';
+
+  @override
+  String get asmaMeaning74 => 'Viimeinen';
+
+  @override
+  String get asmaMeaning75 => 'Manifesti';
+
+  @override
+  String get asmaMeaning76 => 'Piilotettu';
+
+  @override
+  String get asmaMeaning77 => 'Kuvernööri';
+
+  @override
+  String get asmaMeaning78 => 'Korkein';
+
+  @override
+  String get asmaMeaning79 => 'Hyvän tekijä';
+
+  @override
+  String get asmaMeaning80 => 'Parannuksen opas';
+
+  @override
+  String get asmaMeaning81 => 'Kostaja';
+
+  @override
+  String get asmaMeaning82 => 'Anteeksiantaja';
+
+  @override
+  String get asmaMeaning83 => 'Klementti';
+
+  @override
+  String get asmaMeaning84 => 'Kaikkien Omistaja / Suvereeni';
+
+  @override
+  String get asmaMeaning85 => 'Majesteetin ja Bountyn haltija';
+
+  @override
+  String get asmaMeaning86 => 'Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'Kerääjä';
+
+  @override
+  String get asmaMeaning88 => 'Rikas';
+
+  @override
+  String get asmaMeaning89 => 'rikastaja';
+
+  @override
+  String get asmaMeaning90 => 'Haittojen ehkäisy';
+
+  @override
+  String get asmaMeaning91 => 'Haittojen tuoja';
+
+  @override
+  String get asmaMeaning92 => 'Etujen lahjoittaja';
+
+  @override
+  String get asmaMeaning93 => 'Valo';
+
+  @override
+  String get asmaMeaning94 => 'Opas';
+
+  @override
+  String get asmaMeaning95 => 'Alkuperäinen';
+
+  @override
+  String get asmaMeaning96 => 'Ikuinen';
+
+  @override
+  String get asmaMeaning97 => 'Perijä';
+
+  @override
+  String get asmaMeaning98 => 'Oikein opas';
+
+  @override
+  String get asmaMeaning99 => 'Potilas yksi';
 }

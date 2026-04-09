@@ -1173,6 +1173,303 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => '伊斯兰广场';
+
+  @override
+  String get asmaMeaning1 => '仁慈者';
+
+  @override
+  String get asmaMeaning2 => '仁慈者';
+
+  @override
+  String get asmaMeaning3 => '国王/永恒之主';
+
+  @override
+  String get asmaMeaning4 => '至圣';
+
+  @override
+  String get asmaMeaning5 => '和平之源';
+
+  @override
+  String get asmaMeaning6 => '安全的给予者';
+
+  @override
+  String get asmaMeaning7 => '卫报';
+
+  @override
+  String get asmaMeaning8 => '最珍贵/最强大';
+
+  @override
+  String get asmaMeaning9 => '强制器';
+
+  @override
+  String get asmaMeaning10 => '最伟大的';
+
+  @override
+  String get asmaMeaning11 => '创造者';
+
+  @override
+  String get asmaMeaning12 => '秩序的缔造者';
+
+  @override
+  String get asmaMeaning13 => '美丽的塑造者';
+
+  @override
+  String get asmaMeaning14 => '宽容';
+
+  @override
+  String get asmaMeaning15 => '征服者';
+
+  @override
+  String get asmaMeaning16 => '一切的给予者';
+
+  @override
+  String get asmaMeaning17 => '维持者';
+
+  @override
+  String get asmaMeaning18 => '揭幕战';
+
+  @override
+  String get asmaMeaning19 => '万物之知者';
+
+  @override
+  String get asmaMeaning20 => '大蟒蛇';
+
+  @override
+  String get asmaMeaning21 => '救援者';
+
+  @override
+  String get asmaMeaning22 => '阿巴塞人';
+
+  @override
+  String get asmaMeaning23 => '尊崇者';
+
+  @override
+  String get asmaMeaning24 => '荣誉的授予者';
+
+  @override
+  String get asmaMeaning25 => '羞辱者';
+
+  @override
+  String get asmaMeaning26 => '所有人的聆听者';
+
+  @override
+  String get asmaMeaning27 => '万物之先知';
+
+  @override
+  String get asmaMeaning28 => '法官';
+
+  @override
+  String get asmaMeaning29 => '公正';
+
+  @override
+  String get asmaMeaning30 => '微妙的一个';
+
+  @override
+  String get asmaMeaning31 => '所有人都知道';
+
+  @override
+  String get asmaMeaning32 => '忍耐';
+
+  @override
+  String get asmaMeaning33 => '宏伟';
+
+  @override
+  String get asmaMeaning34 => '伟大的宽恕者';
+
+  @override
+  String get asmaMeaning35 => '感恩的奖赏者';
+
+  @override
+  String get asmaMeaning36 => '最高';
+
+  @override
+  String get asmaMeaning37 => '最伟大的';
+
+  @override
+  String get asmaMeaning38 => '保护者';
+
+  @override
+  String get asmaMeaning39 => '滋养者';
+
+  @override
+  String get asmaMeaning40 => '清算者';
+
+  @override
+  String get asmaMeaning41 => '雄伟号';
+
+  @override
+  String get asmaMeaning42 => '慷慨';
+
+  @override
+  String get asmaMeaning43 => '警惕的人';
+
+  @override
+  String get asmaMeaning44 => '祈祷的回应者';
+
+  @override
+  String get asmaMeaning45 => '万物皆知';
+
+  @override
+  String get asmaMeaning46 => '完全智者';
+
+  @override
+  String get asmaMeaning47 => '爱人';
+
+  @override
+  String get asmaMeaning48 => '最荣耀的一个';
+
+  @override
+  String get asmaMeaning49 => '复活者';
+
+  @override
+  String get asmaMeaning50 => '见证人';
+
+  @override
+  String get asmaMeaning51 => '真相';
+
+  @override
+  String get asmaMeaning52 => '充足的受托人';
+
+  @override
+  String get asmaMeaning53 => '所有力量的拥有者';
+
+  @override
+  String get asmaMeaning54 => '强力';
+
+  @override
+  String get asmaMeaning55 => '保护者';
+
+  @override
+  String get asmaMeaning56 => '受到赞扬';
+
+  @override
+  String get asmaMeaning57 => '评估师';
+
+  @override
+  String get asmaMeaning58 => '发起者';
+
+  @override
+  String get asmaMeaning59 => '恢复者';
+
+  @override
+  String get asmaMeaning60 => '生命的给予者';
+
+  @override
+  String get asmaMeaning61 => '生命的夺取者';
+
+  @override
+  String get asmaMeaning62 => '永生者';
+
+  @override
+  String get asmaMeaning63 => '自给自足的维持者';
+
+  @override
+  String get asmaMeaning64 => '查找器';
+
+  @override
+  String get asmaMeaning65 => '光荣者';
+
+  @override
+  String get asmaMeaning66 => '唯一的一个';
+
+  @override
+  String get asmaMeaning67 => '那一个';
+
+  @override
+  String get asmaMeaning68 => '所有人都在寻找的人';
+
+  @override
+  String get asmaMeaning69 => '强大的';
+
+  @override
+  String get asmaMeaning70 => '一切力量的创造者';
+
+  @override
+  String get asmaMeaning71 => '加急者';
+
+  @override
+  String get asmaMeaning72 => '延迟者';
+
+  @override
+  String get asmaMeaning73 => '第一个';
+
+  @override
+  String get asmaMeaning74 => '最后一个';
+
+  @override
+  String get asmaMeaning75 => '清单';
+
+  @override
+  String get asmaMeaning76 => '隐藏的';
+
+  @override
+  String get asmaMeaning77 => '总督';
+
+  @override
+  String get asmaMeaning78 => '至尊者';
+
+  @override
+  String get asmaMeaning79 => '行善者';
+
+  @override
+  String get asmaMeaning80 => '悔改指南';
+
+  @override
+  String get asmaMeaning81 => '复仇者';
+
+  @override
+  String get asmaMeaning82 => '宽恕者';
+
+  @override
+  String get asmaMeaning83 => '克莱门特';
+
+  @override
+  String get asmaMeaning84 => '所有人的所有者/主权者';
+
+  @override
+  String get asmaMeaning85 => '威严与赏金的拥有者';
+
+  @override
+  String get asmaMeaning86 => '公平的一个';
+
+  @override
+  String get asmaMeaning87 => '采集者';
+
+  @override
+  String get asmaMeaning88 => '富人';
+
+  @override
+  String get asmaMeaning89 => '丰富者';
+
+  @override
+  String get asmaMeaning90 => '伤害预防者';
+
+  @override
+  String get asmaMeaning91 => '伤害使者';
+
+  @override
+  String get asmaMeaning92 => '利益的授予';
+
+  @override
+  String get asmaMeaning93 => '光';
+
+  @override
+  String get asmaMeaning94 => '引导者';
+
+  @override
+  String get asmaMeaning95 => '发起者';
+
+  @override
+  String get asmaMeaning96 => '永恒的人';
+
+  @override
+  String get asmaMeaning97 => '继承者';
+
+  @override
+  String get asmaMeaning98 => '最正向导';
+
+  @override
+  String get asmaMeaning99 => '一号病人';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -2344,6 +2641,303 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get islamicPlaceFallback => '伊斯兰广场';
+
+  @override
+  String get asmaMeaning1 => '仁慈者';
+
+  @override
+  String get asmaMeaning2 => '仁慈者';
+
+  @override
+  String get asmaMeaning3 => '国王/永恒之主';
+
+  @override
+  String get asmaMeaning4 => '至圣';
+
+  @override
+  String get asmaMeaning5 => '和平之源';
+
+  @override
+  String get asmaMeaning6 => '安全的给予者';
+
+  @override
+  String get asmaMeaning7 => '卫报';
+
+  @override
+  String get asmaMeaning8 => '最珍贵/最强大';
+
+  @override
+  String get asmaMeaning9 => '强制器';
+
+  @override
+  String get asmaMeaning10 => '最伟大的';
+
+  @override
+  String get asmaMeaning11 => '创造者';
+
+  @override
+  String get asmaMeaning12 => '秩序的缔造者';
+
+  @override
+  String get asmaMeaning13 => '美丽的塑造者';
+
+  @override
+  String get asmaMeaning14 => '宽容';
+
+  @override
+  String get asmaMeaning15 => '征服者';
+
+  @override
+  String get asmaMeaning16 => '一切的给予者';
+
+  @override
+  String get asmaMeaning17 => '维持者';
+
+  @override
+  String get asmaMeaning18 => '揭幕战';
+
+  @override
+  String get asmaMeaning19 => '万物之知者';
+
+  @override
+  String get asmaMeaning20 => '大蟒蛇';
+
+  @override
+  String get asmaMeaning21 => '救援者';
+
+  @override
+  String get asmaMeaning22 => '阿巴塞人';
+
+  @override
+  String get asmaMeaning23 => '尊崇者';
+
+  @override
+  String get asmaMeaning24 => '荣誉的授予者';
+
+  @override
+  String get asmaMeaning25 => '羞辱者';
+
+  @override
+  String get asmaMeaning26 => '所有人的聆听者';
+
+  @override
+  String get asmaMeaning27 => '万物之先知';
+
+  @override
+  String get asmaMeaning28 => '法官';
+
+  @override
+  String get asmaMeaning29 => '公正';
+
+  @override
+  String get asmaMeaning30 => '微妙的一个';
+
+  @override
+  String get asmaMeaning31 => '所有人都知道';
+
+  @override
+  String get asmaMeaning32 => '忍耐';
+
+  @override
+  String get asmaMeaning33 => '宏伟';
+
+  @override
+  String get asmaMeaning34 => '伟大的宽恕者';
+
+  @override
+  String get asmaMeaning35 => '感恩的奖赏者';
+
+  @override
+  String get asmaMeaning36 => '最高';
+
+  @override
+  String get asmaMeaning37 => '最伟大的';
+
+  @override
+  String get asmaMeaning38 => '保护者';
+
+  @override
+  String get asmaMeaning39 => '滋养者';
+
+  @override
+  String get asmaMeaning40 => '清算者';
+
+  @override
+  String get asmaMeaning41 => '雄伟号';
+
+  @override
+  String get asmaMeaning42 => '慷慨';
+
+  @override
+  String get asmaMeaning43 => '警惕的人';
+
+  @override
+  String get asmaMeaning44 => '祈祷的回应者';
+
+  @override
+  String get asmaMeaning45 => '万物皆知';
+
+  @override
+  String get asmaMeaning46 => '完全智者';
+
+  @override
+  String get asmaMeaning47 => '爱人';
+
+  @override
+  String get asmaMeaning48 => '最荣耀的一个';
+
+  @override
+  String get asmaMeaning49 => '复活者';
+
+  @override
+  String get asmaMeaning50 => '见证人';
+
+  @override
+  String get asmaMeaning51 => '真相';
+
+  @override
+  String get asmaMeaning52 => '充足的受托人';
+
+  @override
+  String get asmaMeaning53 => '所有力量的拥有者';
+
+  @override
+  String get asmaMeaning54 => '强力';
+
+  @override
+  String get asmaMeaning55 => '保护者';
+
+  @override
+  String get asmaMeaning56 => '受到赞扬';
+
+  @override
+  String get asmaMeaning57 => '评估师';
+
+  @override
+  String get asmaMeaning58 => '发起者';
+
+  @override
+  String get asmaMeaning59 => '恢复者';
+
+  @override
+  String get asmaMeaning60 => '生命的给予者';
+
+  @override
+  String get asmaMeaning61 => '生命的夺取者';
+
+  @override
+  String get asmaMeaning62 => '永生者';
+
+  @override
+  String get asmaMeaning63 => '自给自足的维持者';
+
+  @override
+  String get asmaMeaning64 => '查找器';
+
+  @override
+  String get asmaMeaning65 => '光荣者';
+
+  @override
+  String get asmaMeaning66 => '唯一的一个';
+
+  @override
+  String get asmaMeaning67 => '那一个';
+
+  @override
+  String get asmaMeaning68 => '所有人都在寻找的人';
+
+  @override
+  String get asmaMeaning69 => '强大的';
+
+  @override
+  String get asmaMeaning70 => '一切力量的创造者';
+
+  @override
+  String get asmaMeaning71 => '加急者';
+
+  @override
+  String get asmaMeaning72 => '延迟者';
+
+  @override
+  String get asmaMeaning73 => '第一个';
+
+  @override
+  String get asmaMeaning74 => '最后一个';
+
+  @override
+  String get asmaMeaning75 => '清单';
+
+  @override
+  String get asmaMeaning76 => '隐藏的';
+
+  @override
+  String get asmaMeaning77 => '总督';
+
+  @override
+  String get asmaMeaning78 => '至尊者';
+
+  @override
+  String get asmaMeaning79 => '行善者';
+
+  @override
+  String get asmaMeaning80 => '悔改指南';
+
+  @override
+  String get asmaMeaning81 => '复仇者';
+
+  @override
+  String get asmaMeaning82 => '宽恕者';
+
+  @override
+  String get asmaMeaning83 => '克莱门特';
+
+  @override
+  String get asmaMeaning84 => '所有人的所有者/主权者';
+
+  @override
+  String get asmaMeaning85 => '威严与赏金的拥有者';
+
+  @override
+  String get asmaMeaning86 => '公平的一个';
+
+  @override
+  String get asmaMeaning87 => '采集者';
+
+  @override
+  String get asmaMeaning88 => '富人';
+
+  @override
+  String get asmaMeaning89 => '丰富者';
+
+  @override
+  String get asmaMeaning90 => '伤害预防者';
+
+  @override
+  String get asmaMeaning91 => '伤害使者';
+
+  @override
+  String get asmaMeaning92 => '利益的授予';
+
+  @override
+  String get asmaMeaning93 => '光';
+
+  @override
+  String get asmaMeaning94 => '引导者';
+
+  @override
+  String get asmaMeaning95 => '发起者';
+
+  @override
+  String get asmaMeaning96 => '永恒的人';
+
+  @override
+  String get asmaMeaning97 => '继承者';
+
+  @override
+  String get asmaMeaning98 => '最正向导';
+
+  @override
+  String get asmaMeaning99 => '一号病人';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -3515,4 +4109,301 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get islamicPlaceFallback => '伊斯蘭廣場';
+
+  @override
+  String get asmaMeaning1 => '仁慈者';
+
+  @override
+  String get asmaMeaning2 => '仁慈者';
+
+  @override
+  String get asmaMeaning3 => '國王/永恆之主';
+
+  @override
+  String get asmaMeaning4 => '至聖';
+
+  @override
+  String get asmaMeaning5 => '和平之源';
+
+  @override
+  String get asmaMeaning6 => '安全的給予者';
+
+  @override
+  String get asmaMeaning7 => '衛報';
+
+  @override
+  String get asmaMeaning8 => '最珍貴/最強大';
+
+  @override
+  String get asmaMeaning9 => '強制器';
+
+  @override
+  String get asmaMeaning10 => '最棒的';
+
+  @override
+  String get asmaMeaning11 => '創造者';
+
+  @override
+  String get asmaMeaning12 => '秩序的締造者';
+
+  @override
+  String get asmaMeaning13 => '美麗的塑造者';
+
+  @override
+  String get asmaMeaning14 => '寬容';
+
+  @override
+  String get asmaMeaning15 => '征服者';
+
+  @override
+  String get asmaMeaning16 => '一切的給予者';
+
+  @override
+  String get asmaMeaning17 => '維持者';
+
+  @override
+  String get asmaMeaning18 => '揭幕戰';
+
+  @override
+  String get asmaMeaning19 => '萬物之知者';
+
+  @override
+  String get asmaMeaning20 => '大蟒蛇';
+
+  @override
+  String get asmaMeaning21 => '救援者';
+
+  @override
+  String get asmaMeaning22 => '阿巴塞人';
+
+  @override
+  String get asmaMeaning23 => '尊崇者';
+
+  @override
+  String get asmaMeaning24 => '榮譽的授予者';
+
+  @override
+  String get asmaMeaning25 => '羞辱者';
+
+  @override
+  String get asmaMeaning26 => '所有人的聆聽者';
+
+  @override
+  String get asmaMeaning27 => '萬物之先知';
+
+  @override
+  String get asmaMeaning28 => '法官';
+
+  @override
+  String get asmaMeaning29 => '公正';
+
+  @override
+  String get asmaMeaning30 => '微妙的一個';
+
+  @override
+  String get asmaMeaning31 => '所有人都知道';
+
+  @override
+  String get asmaMeaning32 => '忍耐';
+
+  @override
+  String get asmaMeaning33 => '宏偉';
+
+  @override
+  String get asmaMeaning34 => '偉大的寬恕者';
+
+  @override
+  String get asmaMeaning35 => '感恩的獎賞者';
+
+  @override
+  String get asmaMeaning36 => '最高';
+
+  @override
+  String get asmaMeaning37 => '最棒的';
+
+  @override
+  String get asmaMeaning38 => '保護者';
+
+  @override
+  String get asmaMeaning39 => '滋養者';
+
+  @override
+  String get asmaMeaning40 => '清算者';
+
+  @override
+  String get asmaMeaning41 => '雄偉號';
+
+  @override
+  String get asmaMeaning42 => '慷慨';
+
+  @override
+  String get asmaMeaning43 => '警覺的人';
+
+  @override
+  String get asmaMeaning44 => '祈禱的回應者';
+
+  @override
+  String get asmaMeaning45 => '萬物皆知';
+
+  @override
+  String get asmaMeaning46 => '完全智者';
+
+  @override
+  String get asmaMeaning47 => '愛人';
+
+  @override
+  String get asmaMeaning48 => '最榮耀的一個';
+
+  @override
+  String get asmaMeaning49 => '復活者';
+
+  @override
+  String get asmaMeaning50 => '見證人';
+
+  @override
+  String get asmaMeaning51 => '真相';
+
+  @override
+  String get asmaMeaning52 => '充足的受託人';
+
+  @override
+  String get asmaMeaning53 => '所有力量的擁有者';
+
+  @override
+  String get asmaMeaning54 => '強力';
+
+  @override
+  String get asmaMeaning55 => '保護者';
+
+  @override
+  String get asmaMeaning56 => '受到讚揚';
+
+  @override
+  String get asmaMeaning57 => '評估師';
+
+  @override
+  String get asmaMeaning58 => '發起者';
+
+  @override
+  String get asmaMeaning59 => '恢復者';
+
+  @override
+  String get asmaMeaning60 => '生命的給予者';
+
+  @override
+  String get asmaMeaning61 => '生命的奪取者';
+
+  @override
+  String get asmaMeaning62 => '永生者';
+
+  @override
+  String get asmaMeaning63 => '自給自足的維持者';
+
+  @override
+  String get asmaMeaning64 => '查找器';
+
+  @override
+  String get asmaMeaning65 => '光榮者';
+
+  @override
+  String get asmaMeaning66 => '唯一的一個';
+
+  @override
+  String get asmaMeaning67 => '那一個';
+
+  @override
+  String get asmaMeaning68 => '所有人都在尋找的人';
+
+  @override
+  String get asmaMeaning69 => '強大的';
+
+  @override
+  String get asmaMeaning70 => '一切力量的創造者';
+
+  @override
+  String get asmaMeaning71 => '加急者';
+
+  @override
+  String get asmaMeaning72 => '延遲者';
+
+  @override
+  String get asmaMeaning73 => '第一個';
+
+  @override
+  String get asmaMeaning74 => '最後一個';
+
+  @override
+  String get asmaMeaning75 => '清單';
+
+  @override
+  String get asmaMeaning76 => '隱藏的';
+
+  @override
+  String get asmaMeaning77 => '總督';
+
+  @override
+  String get asmaMeaning78 => '至尊者';
+
+  @override
+  String get asmaMeaning79 => '行善者';
+
+  @override
+  String get asmaMeaning80 => '悔改指南';
+
+  @override
+  String get asmaMeaning81 => '復仇者';
+
+  @override
+  String get asmaMeaning82 => '寬恕者';
+
+  @override
+  String get asmaMeaning83 => '克萊門特';
+
+  @override
+  String get asmaMeaning84 => '所有人的所有者/主權者';
+
+  @override
+  String get asmaMeaning85 => '威嚴與賞金的擁有者';
+
+  @override
+  String get asmaMeaning86 => '公平的一個';
+
+  @override
+  String get asmaMeaning87 => '採集者';
+
+  @override
+  String get asmaMeaning88 => '富人';
+
+  @override
+  String get asmaMeaning89 => '豐富者';
+
+  @override
+  String get asmaMeaning90 => '傷害預防者';
+
+  @override
+  String get asmaMeaning91 => '傷害使者';
+
+  @override
+  String get asmaMeaning92 => '利益的授予';
+
+  @override
+  String get asmaMeaning93 => '光';
+
+  @override
+  String get asmaMeaning94 => '引導者';
+
+  @override
+  String get asmaMeaning95 => '發起者';
+
+  @override
+  String get asmaMeaning96 => '永恆的人';
+
+  @override
+  String get asmaMeaning97 => '繼承者';
+
+  @override
+  String get asmaMeaning98 => '最正向導';
+
+  @override
+  String get asmaMeaning99 => '一號病人';
 }

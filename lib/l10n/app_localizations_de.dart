@@ -1193,4 +1193,301 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islamischer Ort';
+
+  @override
+  String get asmaMeaning1 => 'Der Wohltätige';
+
+  @override
+  String get asmaMeaning2 => 'Der Barmherzige';
+
+  @override
+  String get asmaMeaning3 => 'Der König / Ewiger Herr';
+
+  @override
+  String get asmaMeaning4 => 'Das Allerheiligste';
+
+  @override
+  String get asmaMeaning5 => 'Die Quelle des Friedens';
+
+  @override
+  String get asmaMeaning6 => 'Der Geber von Sicherheit';
+
+  @override
+  String get asmaMeaning7 => 'Der Wächter';
+
+  @override
+  String get asmaMeaning8 => 'Der Kostbare / Der Mächtigste';
+
+  @override
+  String get asmaMeaning9 => 'Der Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Der Größte';
+
+  @override
+  String get asmaMeaning11 => 'Der Schöpfer';
+
+  @override
+  String get asmaMeaning12 => 'Der Ordnungsstifter';
+
+  @override
+  String get asmaMeaning13 => 'Der Schöpfer der Schönheit';
+
+  @override
+  String get asmaMeaning14 => 'Die Vergebung';
+
+  @override
+  String get asmaMeaning15 => 'Der Unterwerfer';
+
+  @override
+  String get asmaMeaning16 => 'Der Geber von allem';
+
+  @override
+  String get asmaMeaning17 => 'Der Erhalter';
+
+  @override
+  String get asmaMeaning18 => 'Der Auftakt';
+
+  @override
+  String get asmaMeaning19 => 'Der Allwissende';
+
+  @override
+  String get asmaMeaning20 => 'Der Würger';
+
+  @override
+  String get asmaMeaning21 => 'Der Reliever';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Der Exalter';
+
+  @override
+  String get asmaMeaning24 => 'Der Ehrengeber';
+
+  @override
+  String get asmaMeaning25 => 'Der Demütiger';
+
+  @override
+  String get asmaMeaning26 => 'Der Hörer von allem';
+
+  @override
+  String get asmaMeaning27 => 'Der Seher von allem';
+
+  @override
+  String get asmaMeaning28 => 'Der Richter';
+
+  @override
+  String get asmaMeaning29 => 'Der Gerechte';
+
+  @override
+  String get asmaMeaning30 => 'Der Subtile';
+
+  @override
+  String get asmaMeaning31 => 'Der Allbewusste';
+
+  @override
+  String get asmaMeaning32 => 'Die Voraussicht';
+
+  @override
+  String get asmaMeaning33 => 'Der Prächtige';
+
+  @override
+  String get asmaMeaning34 => 'Der große Vergebende';
+
+  @override
+  String get asmaMeaning35 => 'Der Belohner der Dankbarkeit';
+
+  @override
+  String get asmaMeaning36 => 'Das Höchste';
+
+  @override
+  String get asmaMeaning37 => 'Der Größte';
+
+  @override
+  String get asmaMeaning38 => 'Der Bewahrer';
+
+  @override
+  String get asmaMeaning39 => 'Der Nährer';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'Der Majestätische';
+
+  @override
+  String get asmaMeaning42 => 'Der Großzügige';
+
+  @override
+  String get asmaMeaning43 => 'Der Wachsame';
+
+  @override
+  String get asmaMeaning44 => 'Der Antworter auf Gebete';
+
+  @override
+  String get asmaMeaning45 => 'Das Allumfassende';
+
+  @override
+  String get asmaMeaning46 => 'Die vollkommen Weisen';
+
+  @override
+  String get asmaMeaning47 => 'Der Liebende';
+
+  @override
+  String get asmaMeaning48 => 'Der Herrlichste';
+
+  @override
+  String get asmaMeaning49 => 'Der Aufersteher';
+
+  @override
+  String get asmaMeaning50 => 'Der Zeuge';
+
+  @override
+  String get asmaMeaning51 => 'Die Wahrheit';
+
+  @override
+  String get asmaMeaning52 => 'Der allgenügsame Treuhänder';
+
+  @override
+  String get asmaMeaning53 => 'Der Besitzer aller Stärke';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'Der Beschützer';
+
+  @override
+  String get asmaMeaning56 => 'Der Gelobte';
+
+  @override
+  String get asmaMeaning57 => 'Der Gutachter';
+
+  @override
+  String get asmaMeaning58 => 'Der Urheber';
+
+  @override
+  String get asmaMeaning59 => 'Der Restaurator';
+
+  @override
+  String get asmaMeaning60 => 'Der Lebensspender';
+
+  @override
+  String get asmaMeaning61 => 'Der Lebensvernichter';
+
+  @override
+  String get asmaMeaning62 => 'Das ewige Leben';
+
+  @override
+  String get asmaMeaning63 => 'Der autarke Erhalter';
+
+  @override
+  String get asmaMeaning64 => 'Der Finder';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'Der Einzige';
+
+  @override
+  String get asmaMeaning67 => 'Der Eine';
+
+  @override
+  String get asmaMeaning68 => 'Der von allen Gesuchte';
+
+  @override
+  String get asmaMeaning69 => 'Die Mächtigen';
+
+  @override
+  String get asmaMeaning70 => 'Der Schöpfer aller Macht';
+
+  @override
+  String get asmaMeaning71 => 'Der Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Der Verzögerer';
+
+  @override
+  String get asmaMeaning73 => 'Der Erste';
+
+  @override
+  String get asmaMeaning74 => 'Der Letzte';
+
+  @override
+  String get asmaMeaning75 => 'Das Manifest';
+
+  @override
+  String get asmaMeaning76 => 'Das Verborgene';
+
+  @override
+  String get asmaMeaning77 => 'Der Gouverneur';
+
+  @override
+  String get asmaMeaning78 => 'Der Höchste';
+
+  @override
+  String get asmaMeaning79 => 'Der Gute tun';
+
+  @override
+  String get asmaMeaning80 => 'Der Leitfaden zur Buße';
+
+  @override
+  String get asmaMeaning81 => 'Der Rächer';
+
+  @override
+  String get asmaMeaning82 => 'Der Vergebende';
+
+  @override
+  String get asmaMeaning83 => 'Der Clemens';
+
+  @override
+  String get asmaMeaning84 => 'Der Besitzer/Souverän von allem';
+
+  @override
+  String get asmaMeaning85 => 'Der Besitzer von Majestät und Großzügigkeit';
+
+  @override
+  String get asmaMeaning86 => 'Der Gerechte';
+
+  @override
+  String get asmaMeaning87 => 'Der Sammler';
+
+  @override
+  String get asmaMeaning88 => 'Der Reiche';
+
+  @override
+  String get asmaMeaning89 => 'Der Bereicherer';
+
+  @override
+  String get asmaMeaning90 => 'Der Verhinderer von Schaden';
+
+  @override
+  String get asmaMeaning91 => 'Der Schadensbringer';
+
+  @override
+  String get asmaMeaning92 => 'Der Wohltäter';
+
+  @override
+  String get asmaMeaning93 => 'Das Licht';
+
+  @override
+  String get asmaMeaning94 => 'Der Führer';
+
+  @override
+  String get asmaMeaning95 => 'Der Urheber';
+
+  @override
+  String get asmaMeaning96 => 'Der Ewige';
+
+  @override
+  String get asmaMeaning97 => 'Der Erbe';
+
+  @override
+  String get asmaMeaning98 => 'Der rechtschaffenste Führer';
+
+  @override
+  String get asmaMeaning99 => 'Der Geduldige';
 }

@@ -1186,4 +1186,301 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islamik Ples we dɛn kɔl';
+
+  @override
+  String get asmaMeaning1 => 'Di Wan we de bɛnifit';
+
+  @override
+  String get asmaMeaning2 => 'Di Wan we gɛt sɔri-at';
+
+  @override
+  String get asmaMeaning3 => 'Di Kiŋ / Masta we de sote go';
+
+  @override
+  String get asmaMeaning4 => 'Di Wan we Oli Pas Ɔl';
+
+  @override
+  String get asmaMeaning5 => 'Di Sɔs fɔ Pis';
+
+  @override
+  String get asmaMeaning6 => 'Di Giva fɔ Sikyuriti';
+
+  @override
+  String get asmaMeaning7 => 'Di Gadian';
+
+  @override
+  String get asmaMeaning8 => 'Di Precious / Di Most Mayti';
+
+  @override
+  String get asmaMeaning9 => 'Di Kɔmpila';
+
+  @override
+  String get asmaMeaning10 => 'Di wan we pas ɔl';
+
+  @override
+  String get asmaMeaning11 => 'Di Wan we mek ɔltin';
+
+  @override
+  String get asmaMeaning12 => 'Di Wan we Mek Ɔda';
+
+  @override
+  String get asmaMeaning13 => 'Di Shepa fɔ Biuti';
+
+  @override
+  String get asmaMeaning14 => 'Di Fɔgiv';
+
+  @override
+  String get asmaMeaning15 => 'Di pɔsin we de ɔnda';
+
+  @override
+  String get asmaMeaning16 => 'Di Wan we Gi Ɔlman';
+
+  @override
+  String get asmaMeaning17 => 'Di Sɔstayn';
+
+  @override
+  String get asmaMeaning18 => 'Di Opin';
+
+  @override
+  String get asmaMeaning19 => 'Di Wan we No Ɔlman';
+
+  @override
+  String get asmaMeaning20 => 'Di Kɔnstriktɔ';
+
+  @override
+  String get asmaMeaning21 => 'Di Riliva';
+
+  @override
+  String get asmaMeaning22 => 'Di Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Di Ɛksalta';
+
+  @override
+  String get asmaMeaning24 => 'Di Wan we de gi ɔna';
+
+  @override
+  String get asmaMeaning25 => 'Di Wan we de mek pɔsin shem';
+
+  @override
+  String get asmaMeaning26 => 'Di Wan we de yɛri ɔlman';
+
+  @override
+  String get asmaMeaning27 => 'Di Sia fɔ Ɔlman';
+
+  @override
+  String get asmaMeaning28 => 'Di Jɔj';
+
+  @override
+  String get asmaMeaning29 => 'Di Jɔs';
+
+  @override
+  String get asmaMeaning30 => 'Di Subtil Wan';
+
+  @override
+  String get asmaMeaning31 => 'Di Ɔl Aware';
+
+  @override
+  String get asmaMeaning32 => 'Di Fɔs';
+
+  @override
+  String get asmaMeaning33 => 'Di Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'Di Gret Fɔgiva';
+
+  @override
+  String get asmaMeaning35 => 'Di Riwɔd fɔ Tɛnki';
+
+  @override
+  String get asmaMeaning36 => 'Di Wan we Ay pas ɔl';
+
+  @override
+  String get asmaMeaning37 => 'Di wan we pas ɔl';
+
+  @override
+  String get asmaMeaning38 => 'Di Prɛzɛvɛr';
+
+  @override
+  String get asmaMeaning39 => 'Di Nɔrisha';
+
+  @override
+  String get asmaMeaning40 => 'Di Rikɔna';
+
+  @override
+  String get asmaMeaning41 => 'Di Majestik';
+
+  @override
+  String get asmaMeaning42 => 'Di wan dɛn we gɛt Jɛnɛral';
+
+  @override
+  String get asmaMeaning43 => 'Di Wan we De Wach';
+
+  @override
+  String get asmaMeaning44 => 'Di Rispɔnda fɔ Prea';
+
+  @override
+  String get asmaMeaning45 => 'Di Ɔl Kɔmprɛhɛnd';
+
+  @override
+  String get asmaMeaning46 => 'Di Pafɛkt Waiz';
+
+  @override
+  String get asmaMeaning47 => 'Di Wan we gɛt lɔv';
+
+  @override
+  String get asmaMeaning48 => 'Di Wan we gɛt glori pas ɔlman';
+
+  @override
+  String get asmaMeaning49 => 'Di Risayz';
+
+  @override
+  String get asmaMeaning50 => 'Di Witnɛs';
+
+  @override
+  String get asmaMeaning51 => 'Di Trut';
+
+  @override
+  String get asmaMeaning52 => 'Di Ɔl-Sufayf Trɔsti';
+
+  @override
+  String get asmaMeaning53 => 'Di Pɔsin we gɛt Ɔl di Strɔng';
+
+  @override
+  String get asmaMeaning54 => 'Di Fosful wan';
+
+  @override
+  String get asmaMeaning55 => 'Di Protɛkta';
+
+  @override
+  String get asmaMeaning56 => 'Di wan dɛn we dɛn prez';
+
+  @override
+  String get asmaMeaning57 => 'Di Apraiz';
+
+  @override
+  String get asmaMeaning58 => 'Di Wan we mek am';
+
+  @override
+  String get asmaMeaning59 => 'Di Ristɔra';
+
+  @override
+  String get asmaMeaning60 => 'Di Wan we Gi Layf';
+
+  @override
+  String get asmaMeaning61 => 'Di Wan we De Tek Layf';
+
+  @override
+  String get asmaMeaning62 => 'Di Eva Liv';
+
+  @override
+  String get asmaMeaning63 => 'Di Self-Sɔbsistin Sastayn';
+
+  @override
+  String get asmaMeaning64 => 'Di Faynda';
+
+  @override
+  String get asmaMeaning65 => 'Di wan dɛn we gɛt glori';
+
+  @override
+  String get asmaMeaning66 => 'Di Wan Wan';
+
+  @override
+  String get asmaMeaning67 => 'Di Wan';
+
+  @override
+  String get asmaMeaning68 => 'Di Wan we Ɔlman de luk fɔ';
+
+  @override
+  String get asmaMeaning69 => 'Di Pawaful wan';
+
+  @override
+  String get asmaMeaning70 => 'Di Wan we mek ɔl di pawa';
+
+  @override
+  String get asmaMeaning71 => 'Di Ekspɛditɔ';
+
+  @override
+  String get asmaMeaning72 => 'Di Dilɛya';
+
+  @override
+  String get asmaMeaning73 => 'Di Fɔs wan';
+
+  @override
+  String get asmaMeaning74 => 'Di Las wan';
+
+  @override
+  String get asmaMeaning75 => 'Di Manifest';
+
+  @override
+  String get asmaMeaning76 => 'Di Ayd';
+
+  @override
+  String get asmaMeaning77 => 'Di Gɔvnɔ';
+
+  @override
+  String get asmaMeaning78 => 'Di Wan we pas ɔlman';
+
+  @override
+  String get asmaMeaning79 => 'Di Wan we De Du Gud';
+
+  @override
+  String get asmaMeaning80 => 'Di Gayd fɔ Ripɛnt';
+
+  @override
+  String get asmaMeaning81 => 'Di Avɛnjɔ';
+
+  @override
+  String get asmaMeaning82 => 'Di Fɔgiva';
+
+  @override
+  String get asmaMeaning83 => 'Di Klɛmɛnt';
+
+  @override
+  String get asmaMeaning84 => 'Di Ɔna / Sɔvɛrin fɔ Ɔlman';
+
+  @override
+  String get asmaMeaning85 => 'Di Possessor of Majesty ɛn Baunti';
+
+  @override
+  String get asmaMeaning86 => 'Di Ikwayt Wan';
+
+  @override
+  String get asmaMeaning87 => 'Di wan we de gɛda';
+
+  @override
+  String get asmaMeaning88 => 'Di Rich Wan';
+
+  @override
+  String get asmaMeaning89 => 'Di Enricha';
+
+  @override
+  String get asmaMeaning90 => 'Di Prɛventa fɔ Harm';
+
+  @override
+  String get asmaMeaning91 => 'Di Wan we de briŋ bad tin';
+
+  @override
+  String get asmaMeaning92 => 'Di Wan we De Gi Bɛnifit';
+
+  @override
+  String get asmaMeaning93 => 'Di Layt';
+
+  @override
+  String get asmaMeaning94 => 'Di Gaydman';
+
+  @override
+  String get asmaMeaning95 => 'Di Ɔrijineta';
+
+  @override
+  String get asmaMeaning96 => 'Di Wan we De Sote Go';
+
+  @override
+  String get asmaMeaning97 => 'Di Inhɛritɔ';
+
+  @override
+  String get asmaMeaning98 => 'Di Mɔs Rayt Gayd';
+
+  @override
+  String get asmaMeaning99 => 'Di Patient Wan';
 }

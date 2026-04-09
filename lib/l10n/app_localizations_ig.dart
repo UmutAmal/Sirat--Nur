@@ -1184,4 +1184,301 @@ class AppLocalizationsIg extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Ebe islam';
+
+  @override
+  String get asmaMeaning1 => 'Onye bara uru';
+
+  @override
+  String get asmaMeaning2 => 'Onye Ebere';
+
+  @override
+  String get asmaMeaning3 => 'Eze / Dinwenu ebighi ebi';
+
+  @override
+  String get asmaMeaning4 => 'Kasị Nsọ';
+
+  @override
+  String get asmaMeaning5 => 'Isi Udo';
+
+  @override
+  String get asmaMeaning6 => 'Onye na-enye nchekwa';
+
+  @override
+  String get asmaMeaning7 => 'Onye nche';
+
+  @override
+  String get asmaMeaning8 => 'Onye Dị oke ọnụ ahịa / Kasị Dike';
+
+  @override
+  String get asmaMeaning9 => 'Onye na-eme ihe ike';
+
+  @override
+  String get asmaMeaning10 => 'Kachasị ukwuu';
+
+  @override
+  String get asmaMeaning11 => 'Onye Okike';
+
+  @override
+  String get asmaMeaning12 => 'Onye mebere iwu';
+
+  @override
+  String get asmaMeaning13 => 'Onye Nhazi Mma';
+
+  @override
+  String get asmaMeaning14 => 'Mgbaghara';
+
+  @override
+  String get asmaMeaning15 => 'Onye na-achị';
+
+  @override
+  String get asmaMeaning16 => 'Onye nyere mmadụ niile';
+
+  @override
+  String get asmaMeaning17 => 'Onye nkwado';
+
+  @override
+  String get asmaMeaning18 => 'Onye mmeghe';
+
+  @override
+  String get asmaMeaning19 => 'Onye maara ihe niile';
+
+  @override
+  String get asmaMeaning20 => 'Onye na-eme ihe';
+
+  @override
+  String get asmaMeaning21 => 'Onye enyemaka';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Onye Elu';
+
+  @override
+  String get asmaMeaning24 => 'Onye na-enye nsọpụrụ';
+
+  @override
+  String get asmaMeaning25 => 'Onye mmechuihu';
+
+  @override
+  String get asmaMeaning26 => 'Onye na-anụ ihe niile';
+
+  @override
+  String get asmaMeaning27 => 'Onye na-ahụ ihe niile';
+
+  @override
+  String get asmaMeaning28 => 'Onyeikpe';
+
+  @override
+  String get asmaMeaning29 => 'Onye ezi omume';
+
+  @override
+  String get asmaMeaning30 => 'Nke dị aghụghọ';
+
+  @override
+  String get asmaMeaning31 => 'Ndị niile maara';
+
+  @override
+  String get asmaMeaning32 => 'Onye na-ebu ụzọ';
+
+  @override
+  String get asmaMeaning33 => 'Ebube';
+
+  @override
+  String get asmaMeaning34 => 'Onye Ngbaghara';
+
+  @override
+  String get asmaMeaning35 => 'Onye na-enye ekele ekele';
+
+  @override
+  String get asmaMeaning36 => 'Nke Kachasị Elu';
+
+  @override
+  String get asmaMeaning37 => 'Kachasị ukwuu';
+
+  @override
+  String get asmaMeaning38 => 'Ihe nchekwa';
+
+  @override
+  String get asmaMeaning39 => 'Onye Nhazi';
+
+  @override
+  String get asmaMeaning40 => 'Onye na-agụta';
+
+  @override
+  String get asmaMeaning41 => 'Onye ebube';
+
+  @override
+  String get asmaMeaning42 => 'Onye mmesapụ aka';
+
+  @override
+  String get asmaMeaning43 => 'Onye Na-eche nche';
+
+  @override
+  String get asmaMeaning44 => 'Onye na-aza ekpere';
+
+  @override
+  String get asmaMeaning45 => 'Nghọta niile';
+
+  @override
+  String get asmaMeaning46 => 'Onye maara ihe nke ọma';
+
+  @override
+  String get asmaMeaning47 => 'Onye hụrụ n\'anya';
+
+  @override
+  String get asmaMeaning48 => 'Onye Kacha Ebube';
+
+  @override
+  String get asmaMeaning49 => 'Onye Nbilite';
+
+  @override
+  String get asmaMeaning50 => 'Onye akaebe';
+
+  @override
+  String get asmaMeaning51 => 'Eziokwu';
+
+  @override
+  String get asmaMeaning52 => 'Onye nlekọta zuru oke';
+
+  @override
+  String get asmaMeaning53 => 'Onye nwe ike niile';
+
+  @override
+  String get asmaMeaning54 => 'Onye ike';
+
+  @override
+  String get asmaMeaning55 => 'Onye nchekwa';
+
+  @override
+  String get asmaMeaning56 => 'Ndị Ekele';
+
+  @override
+  String get asmaMeaning57 => 'Onye Ntụle';
+
+  @override
+  String get asmaMeaning58 => 'Onye malitere';
+
+  @override
+  String get asmaMeaning59 => 'Onye na-eweghachi';
+
+  @override
+  String get asmaMeaning60 => 'Onye Na-enye Ndụ';
+
+  @override
+  String get asmaMeaning61 => 'Onye were ndụ';
+
+  @override
+  String get asmaMeaning62 => 'Onye Dị Ndụ';
+
+  @override
+  String get asmaMeaning63 => 'Onye na-akwado onwe ya';
+
+  @override
+  String get asmaMeaning64 => 'Onye Nchọta';
+
+  @override
+  String get asmaMeaning65 => 'Ebube';
+
+  @override
+  String get asmaMeaning66 => 'Naanị Otu';
+
+  @override
+  String get asmaMeaning67 => 'Onye';
+
+  @override
+  String get asmaMeaning68 => 'Onye Niile Na-achọ';
+
+  @override
+  String get asmaMeaning69 => 'Onye Ike';
+
+  @override
+  String get asmaMeaning70 => 'Onye kere ike niile';
+
+  @override
+  String get asmaMeaning71 => 'Onye na-eme njem';
+
+  @override
+  String get asmaMeaning72 => 'Onye na-egbu oge';
+
+  @override
+  String get asmaMeaning73 => 'Nke mbụ';
+
+  @override
+  String get asmaMeaning74 => 'Nke Ikpeazụ';
+
+  @override
+  String get asmaMeaning75 => 'Ihe ngosi';
+
+  @override
+  String get asmaMeaning76 => 'Ihe zoro ezo';
+
+  @override
+  String get asmaMeaning77 => 'Onye Gọvanọ';
+
+  @override
+  String get asmaMeaning78 => 'Onye Kasị Elu';
+
+  @override
+  String get asmaMeaning79 => 'Onye na-eme ihe ọma';
+
+  @override
+  String get asmaMeaning80 => 'Nduzi maka nchegharị';
+
+  @override
+  String get asmaMeaning81 => 'Onye ọbọ';
+
+  @override
+  String get asmaMeaning82 => 'Onye Mgbaghara';
+
+  @override
+  String get asmaMeaning83 => 'Clement';
+
+  @override
+  String get asmaMeaning84 => 'Onye nwe / Eze nke All';
+
+  @override
+  String get asmaMeaning85 => 'Onye nwe ebube na amara';
+
+  @override
+  String get asmaMeaning86 => 'Onye Kwesịrị Ekwesị';
+
+  @override
+  String get asmaMeaning87 => 'Onye nchịkọta';
+
+  @override
+  String get asmaMeaning88 => 'Onye Ogaranya';
+
+  @override
+  String get asmaMeaning89 => 'Onye na-emeju ihe';
+
+  @override
+  String get asmaMeaning90 => 'Onye na-egbochi mmerụ ahụ';
+
+  @override
+  String get asmaMeaning91 => 'Onye Na-eweta Nsogbu';
+
+  @override
+  String get asmaMeaning92 => 'Onye nyere uru';
+
+  @override
+  String get asmaMeaning93 => 'Ìhè';
+
+  @override
+  String get asmaMeaning94 => 'Onye Nduzi';
+
+  @override
+  String get asmaMeaning95 => 'Onye malitere';
+
+  @override
+  String get asmaMeaning96 => 'Onye Ebighị Ebi';
+
+  @override
+  String get asmaMeaning97 => 'Onye nketa';
+
+  @override
+  String get asmaMeaning98 => 'Nduzi kachasi ezi omume';
+
+  @override
+  String get asmaMeaning99 => 'Onye Nri';
 }

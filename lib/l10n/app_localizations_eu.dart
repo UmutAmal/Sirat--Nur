@@ -1187,4 +1187,301 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Leku Islamikoa';
+
+  @override
+  String get asmaMeaning1 => 'Onuragarria';
+
+  @override
+  String get asmaMeaning2 => 'Errukialduna';
+
+  @override
+  String get asmaMeaning3 => 'Erregea / Eternal Lord';
+
+  @override
+  String get asmaMeaning4 => 'Santandua';
+
+  @override
+  String get asmaMeaning5 => 'Bakearen iturria';
+
+  @override
+  String get asmaMeaning6 => 'Segurtasunaren Ematea';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Preziosa / Ahaltsuena';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Handena';
+
+  @override
+  String get asmaMeaning11 => 'Sortzailea';
+
+  @override
+  String get asmaMeaning12 => 'Ordenaren sortzailea';
+
+  @override
+  String get asmaMeaning13 => 'Edertasunaren itxuratzailea';
+
+  @override
+  String get asmaMeaning14 => 'Barkamena';
+
+  @override
+  String get asmaMeaning15 => 'Superatzailea';
+
+  @override
+  String get asmaMeaning16 => 'Guztien Ematea';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'Irekitzailea';
+
+  @override
+  String get asmaMeaning19 => 'Guztiak ezagutzen';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'The Reliever';
+
+  @override
+  String get asmaMeaning22 => 'Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Gorratzailea';
+
+  @override
+  String get asmaMeaning24 => 'Ohorezko Ematea';
+
+  @override
+  String get asmaMeaning25 => 'Umiliatzailea';
+
+  @override
+  String get asmaMeaning26 => 'Guztien entzulea';
+
+  @override
+  String get asmaMeaning27 => 'Guztien ikuslea';
+
+  @override
+  String get asmaMeaning28 => 'Epailea';
+
+  @override
+  String get asmaMeaning29 => 'Justoa';
+
+  @override
+  String get asmaMeaning30 => 'Sotil bat';
+
+  @override
+  String get asmaMeaning31 => 'Denak jakitun';
+
+  @override
+  String get asmaMeaning32 => 'The Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'The Magnifico';
+
+  @override
+  String get asmaMeaning34 => 'Barkatzaile handia';
+
+  @override
+  String get asmaMeaning35 => 'Eskertasunaren saritzailea';
+
+  @override
+  String get asmaMeaning36 => 'Gorena';
+
+  @override
+  String get asmaMeaning37 => 'Handiena';
+
+  @override
+  String get asmaMeaning38 => 'The Preserver';
+
+  @override
+  String get asmaMeaning39 => 'Elikatzailea';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'Maestuosoa';
+
+  @override
+  String get asmaMeaning42 => 'Eszabala';
+
+  @override
+  String get asmaMeaning43 => 'Begiratzailea';
+
+  @override
+  String get asmaMeaning44 => 'Otoitzaren erantzuna';
+
+  @override
+  String get asmaMeaning45 => 'Ulermena guztia';
+
+  @override
+  String get asmaMeaning46 => 'Perfektu jakintsua';
+
+  @override
+  String get asmaMeaning47 => 'Maitagarria';
+
+  @override
+  String get asmaMeaning48 => 'Loriatsuena';
+
+  @override
+  String get asmaMeaning49 => 'Berpizkundea';
+
+  @override
+  String get asmaMeaning50 => 'Lekukoa';
+
+  @override
+  String get asmaMeaning51 => 'Egia';
+
+  @override
+  String get asmaMeaning52 => 'Guztiz nahikoa fidatzailea';
+
+  @override
+  String get asmaMeaning53 => 'Indar guztien jabea';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'The Protector';
+
+  @override
+  String get asmaMeaning56 => 'Laudatua';
+
+  @override
+  String get asmaMeaning57 => 'Tasatzailea';
+
+  @override
+  String get asmaMeaning58 => 'Jatorria';
+
+  @override
+  String get asmaMeaning59 => 'Berreskuratzailea';
+
+  @override
+  String get asmaMeaning60 => 'Bizi-emailea';
+
+  @override
+  String get asmaMeaning61 => 'Bizitzaren Hartzailea';
+
+  @override
+  String get asmaMeaning62 => 'Betiko Biziduna';
+
+  @override
+  String get asmaMeaning63 => 'Norberak iraun duen sustatzailea';
+
+  @override
+  String get asmaMeaning64 => 'Bilatzailea';
+
+  @override
+  String get asmaMeaning65 => 'Loriatsua';
+
+  @override
+  String get asmaMeaning66 => 'Bakarrik';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'Guztiek Bilatutakoa';
+
+  @override
+  String get asmaMeaning69 => 'Indartsua';
+
+  @override
+  String get asmaMeaning70 => 'Botere guztien sortzailea';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Atzerapena';
+
+  @override
+  String get asmaMeaning73 => 'Lehena';
+
+  @override
+  String get asmaMeaning74 => 'Azkena';
+
+  @override
+  String get asmaMeaning75 => 'Manifestua';
+
+  @override
+  String get asmaMeaning76 => 'Ezkutukoa';
+
+  @override
+  String get asmaMeaning77 => 'Gobernadoreak';
+
+  @override
+  String get asmaMeaning78 => 'Gorena';
+
+  @override
+  String get asmaMeaning79 => 'Onaren Egilea';
+
+  @override
+  String get asmaMeaning80 => 'Damuaren gida';
+
+  @override
+  String get asmaMeaning81 => 'The Avenger';
+
+  @override
+  String get asmaMeaning82 => 'Barkatzailea';
+
+  @override
+  String get asmaMeaning83 => 'Klementoa';
+
+  @override
+  String get asmaMeaning84 => 'Guztion jabea / subiranoa';
+
+  @override
+  String get asmaMeaning85 => 'Majestatearen eta Errekonoziaren jabea';
+
+  @override
+  String get asmaMeaning86 => 'Ekitatiboa';
+
+  @override
+  String get asmaMeaning87 => 'The Gatherer';
+
+  @override
+  String get asmaMeaning88 => 'Aberatsa';
+
+  @override
+  String get asmaMeaning89 => 'Aberastzailea';
+
+  @override
+  String get asmaMeaning90 => 'Kalteen prebentzioa';
+
+  @override
+  String get asmaMeaning91 => 'The Bringer of Harm';
+
+  @override
+  String get asmaMeaning92 => 'Abantailen emailea';
+
+  @override
+  String get asmaMeaning93 => 'Argia';
+
+  @override
+  String get asmaMeaning94 => 'Gidaria';
+
+  @override
+  String get asmaMeaning95 => 'Jatorria';
+
+  @override
+  String get asmaMeaning96 => 'Betikoa';
+
+  @override
+  String get asmaMeaning97 => 'Oinordekoa';
+
+  @override
+  String get asmaMeaning98 => 'Gidarik zintzoena';
+
+  @override
+  String get asmaMeaning99 => 'Pazientea';
 }

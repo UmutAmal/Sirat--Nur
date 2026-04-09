@@ -1187,4 +1187,301 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islamské miesto';
+
+  @override
+  String get asmaMeaning1 => 'The Beneficent';
+
+  @override
+  String get asmaMeaning2 => 'Milosrdný';
+
+  @override
+  String get asmaMeaning3 => 'Kráľ / Večný Pán';
+
+  @override
+  String get asmaMeaning4 => 'Najsvätejšia';
+
+  @override
+  String get asmaMeaning5 => 'Zdroj pokoja';
+
+  @override
+  String get asmaMeaning6 => 'Dávateľ bezpečnosti';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'The Precious / The Most Mighty';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Najväčší';
+
+  @override
+  String get asmaMeaning11 => 'Tvorca';
+
+  @override
+  String get asmaMeaning12 => 'Tvorca objednávky';
+
+  @override
+  String get asmaMeaning13 => 'Tvarca krásy';
+
+  @override
+  String get asmaMeaning14 => 'Odpustenie';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Darca všetkého';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'Otvárač';
+
+  @override
+  String get asmaMeaning19 => 'Poznajúci všetko';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Uvoľňovač';
+
+  @override
+  String get asmaMeaning22 => 'Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'The Bestower of Honor';
+
+  @override
+  String get asmaMeaning25 => 'Ponižujúci';
+
+  @override
+  String get asmaMeaning26 => 'Poslucháč všetkých';
+
+  @override
+  String get asmaMeaning27 => 'The Seeer of All';
+
+  @override
+  String get asmaMeaning28 => 'Sudca';
+
+  @override
+  String get asmaMeaning29 => 'The Just';
+
+  @override
+  String get asmaMeaning30 => 'Jemný';
+
+  @override
+  String get asmaMeaning31 => 'The All Aware';
+
+  @override
+  String get asmaMeaning32 => 'Prednos';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'Veľký odpúšťač';
+
+  @override
+  String get asmaMeaning35 => 'Odmenou za vďačnosť';
+
+  @override
+  String get asmaMeaning36 => 'Najvyšší';
+
+  @override
+  String get asmaMeaning37 => 'Najväčší';
+
+  @override
+  String get asmaMeaning38 => 'The Preserver';
+
+  @override
+  String get asmaMeaning39 => 'The Nurisher';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Štedrý';
+
+  @override
+  String get asmaMeaning43 => 'Bezpečný';
+
+  @override
+  String get asmaMeaning44 => 'Respondent na modlitbu';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehending';
+
+  @override
+  String get asmaMeaning46 => 'Dokonale múdry';
+
+  @override
+  String get asmaMeaning47 => 'The Loving One';
+
+  @override
+  String get asmaMeaning48 => 'Najslávnejší';
+
+  @override
+  String get asmaMeaning49 => 'The Resurrector';
+
+  @override
+  String get asmaMeaning50 => 'Svedok';
+
+  @override
+  String get asmaMeaning51 => 'Pravda';
+
+  @override
+  String get asmaMeaning52 => 'All-Safficient Trustee';
+
+  @override
+  String get asmaMeaning53 => 'Vlastník všetkej sily';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'Ochranca';
+
+  @override
+  String get asmaMeaning56 => 'Pochválený';
+
+  @override
+  String get asmaMeaning57 => 'Hodnotiteľ';
+
+  @override
+  String get asmaMeaning58 => 'Pôvodca';
+
+  @override
+  String get asmaMeaning59 => 'The Restorer';
+
+  @override
+  String get asmaMeaning60 => 'Darca života';
+
+  @override
+  String get asmaMeaning61 => 'Prevzatie života';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'Samostatný živiteľ';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'The Only One';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'Ten, ktorý všetci hľadajú';
+
+  @override
+  String get asmaMeaning69 => 'Výkonný';
+
+  @override
+  String get asmaMeaning70 => 'Tvorca všetkej moci';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'The Delayer';
+
+  @override
+  String get asmaMeaning73 => 'Prvý';
+
+  @override
+  String get asmaMeaning74 => 'Posledný';
+
+  @override
+  String get asmaMeaning75 => 'Manifest';
+
+  @override
+  String get asmaMeaning76 => 'The Hidden';
+
+  @override
+  String get asmaMeaning77 => 'Guvernér';
+
+  @override
+  String get asmaMeaning78 => 'Najvyšší';
+
+  @override
+  String get asmaMeaning79 => 'Konateľ dobra';
+
+  @override
+  String get asmaMeaning80 => 'Sprievodca k pokániu';
+
+  @override
+  String get asmaMeaning81 => 'The Avenger';
+
+  @override
+  String get asmaMeaning82 => 'The Forgiver';
+
+  @override
+  String get asmaMeaning83 => 'Klement';
+
+  @override
+  String get asmaMeaning84 => 'Vlastník / Vládca všetkých';
+
+  @override
+  String get asmaMeaning85 => 'Vlastník veličenstva a štedrosti';
+
+  @override
+  String get asmaMeaning86 => 'The Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'The Gatherer';
+
+  @override
+  String get asmaMeaning88 => 'Bohatý';
+
+  @override
+  String get asmaMeaning89 => 'The Enricher';
+
+  @override
+  String get asmaMeaning90 => 'Prevencia poškodenia';
+
+  @override
+  String get asmaMeaning91 => 'Nositeľ škody';
+
+  @override
+  String get asmaMeaning92 => 'The Bestower of Benefits';
+
+  @override
+  String get asmaMeaning93 => 'Svetlo';
+
+  @override
+  String get asmaMeaning94 => 'Sprievodca';
+
+  @override
+  String get asmaMeaning95 => 'Pôvodca';
+
+  @override
+  String get asmaMeaning96 => 'Večný';
+
+  @override
+  String get asmaMeaning97 => 'Dedič';
+
+  @override
+  String get asmaMeaning98 => 'Najspravodlivejší sprievodca';
+
+  @override
+  String get asmaMeaning99 => 'Pacient One';
 }

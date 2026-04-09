@@ -1180,4 +1180,301 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'ኢስላማዊ ቦታ';
+
+  @override
+  String get asmaMeaning1 => 'በጎ አድራጊው';
+
+  @override
+  String get asmaMeaning2 => 'አዛኙ';
+
+  @override
+  String get asmaMeaning3 => 'ንጉሱ / ዘላለማዊው ጌታ';
+
+  @override
+  String get asmaMeaning4 => 'እጅግ ቅዱስ';
+
+  @override
+  String get asmaMeaning5 => 'የሰላም ምንጭ';
+
+  @override
+  String get asmaMeaning6 => 'ደህንነት ሰጪው';
+
+  @override
+  String get asmaMeaning7 => 'ጠባቂው';
+
+  @override
+  String get asmaMeaning8 => 'ውዱ / ኃያል';
+
+  @override
+  String get asmaMeaning9 => 'አስገዳጅው';
+
+  @override
+  String get asmaMeaning10 => 'ትልቁ';
+
+  @override
+  String get asmaMeaning11 => 'ፈጣሪ';
+
+  @override
+  String get asmaMeaning12 => 'ትዕዛዝ ሰሪ';
+
+  @override
+  String get asmaMeaning13 => 'የውበት ቅርጽ ሰጪ';
+
+  @override
+  String get asmaMeaning14 => 'ይቅር ባይ';
+
+  @override
+  String get asmaMeaning15 => 'ገዥው';
+
+  @override
+  String get asmaMeaning16 => 'የሁሉ ሰጭ';
+
+  @override
+  String get asmaMeaning17 => 'ተንከባካቢው';
+
+  @override
+  String get asmaMeaning18 => 'መክፈቻው';
+
+  @override
+  String get asmaMeaning19 => 'ሁሉን ዐዋቂ ነው።';
+
+  @override
+  String get asmaMeaning20 => 'Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'ማስታገሻ';
+
+  @override
+  String get asmaMeaning22 => 'አበስር';
+
+  @override
+  String get asmaMeaning23 => 'ከፍ ከፍ ያለው';
+
+  @override
+  String get asmaMeaning24 => 'የክብር ባለቤት';
+
+  @override
+  String get asmaMeaning25 => 'አዋራጅ';
+
+  @override
+  String get asmaMeaning26 => 'ሁሉን ሰሚው';
+
+  @override
+  String get asmaMeaning27 => 'የሁሉም ተመልካች';
+
+  @override
+  String get asmaMeaning28 => 'ዳኛው';
+
+  @override
+  String get asmaMeaning29 => 'ፍትሃዊው';
+
+  @override
+  String get asmaMeaning30 => 'ስውር የሆነው';
+
+  @override
+  String get asmaMeaning31 => 'ሁሉም የሚያውቀው';
+
+  @override
+  String get asmaMeaning32 => 'ቀዳሚው';
+
+  @override
+  String get asmaMeaning33 => 'ግርማ ሞገስ ያለው';
+
+  @override
+  String get asmaMeaning34 => 'ታላቁ ይቅር ባይ';
+
+  @override
+  String get asmaMeaning35 => 'የምስጋና ተሸላሚ';
+
+  @override
+  String get asmaMeaning36 => 'ከፍተኛው';
+
+  @override
+  String get asmaMeaning37 => 'ትልቁ';
+
+  @override
+  String get asmaMeaning38 => 'ጠባቂው';
+
+  @override
+  String get asmaMeaning39 => 'ኑሪሸር';
+
+  @override
+  String get asmaMeaning40 => 'ቆጣቢው';
+
+  @override
+  String get asmaMeaning41 => 'ግርማ ሞገስ ያለው';
+
+  @override
+  String get asmaMeaning42 => 'ለጋሱ';
+
+  @override
+  String get asmaMeaning43 => 'ተጠባባቂው';
+
+  @override
+  String get asmaMeaning44 => 'ለጸሎት ምላሽ ሰጪ';
+
+  @override
+  String get asmaMeaning45 => 'ሁሉም የመረዳት ችሎታ';
+
+  @override
+  String get asmaMeaning46 => 'ፍፁም ጥበበኛ';
+
+  @override
+  String get asmaMeaning47 => 'አፍቃሪው';
+
+  @override
+  String get asmaMeaning48 => 'እጅግ የከበረ';
+
+  @override
+  String get asmaMeaning49 => 'ትንሳኤ';
+
+  @override
+  String get asmaMeaning50 => 'ምስክሩ';
+
+  @override
+  String get asmaMeaning51 => 'እውነት';
+
+  @override
+  String get asmaMeaning52 => 'ሁሉን የሚበቃው ባለአደራ';
+
+  @override
+  String get asmaMeaning53 => 'የጥንካሬ ሁሉ ባለቤት';
+
+  @override
+  String get asmaMeaning54 => 'ኃይለኛው';
+
+  @override
+  String get asmaMeaning55 => 'ተከላካይ';
+
+  @override
+  String get asmaMeaning56 => 'የተመሰገነው።';
+
+  @override
+  String get asmaMeaning57 => 'ገምጋሚው';
+
+  @override
+  String get asmaMeaning58 => 'መነሻው';
+
+  @override
+  String get asmaMeaning59 => 'መልሶ ሰጪው';
+
+  @override
+  String get asmaMeaning60 => 'ሕይወት ሰጪ';
+
+  @override
+  String get asmaMeaning61 => 'ሕይወት ሰጪ';
+
+  @override
+  String get asmaMeaning62 => 'የዘላለም ህይወት ያለው';
+
+  @override
+  String get asmaMeaning63 => 'እራስን የሚተዳደር ደጋፊ';
+
+  @override
+  String get asmaMeaning64 => 'አግኚው';
+
+  @override
+  String get asmaMeaning65 => 'ግርማ ሞገስ ያለው';
+
+  @override
+  String get asmaMeaning66 => 'ብቸኛው';
+
+  @override
+  String get asmaMeaning67 => 'አንዱ';
+
+  @override
+  String get asmaMeaning68 => 'በሁሉም የሚፈለገው';
+
+  @override
+  String get asmaMeaning69 => 'ኃያሉ';
+
+  @override
+  String get asmaMeaning70 => 'የኃይል ሁሉ ፈጣሪ';
+
+  @override
+  String get asmaMeaning71 => 'ኤክስፔዲተር';
+
+  @override
+  String get asmaMeaning72 => 'መዘግየቱ';
+
+  @override
+  String get asmaMeaning73 => 'የመጀመሪያው';
+
+  @override
+  String get asmaMeaning74 => 'የመጨረሻው';
+
+  @override
+  String get asmaMeaning75 => 'አንጸባራቂው';
+
+  @override
+  String get asmaMeaning76 => 'የተደበቀው';
+
+  @override
+  String get asmaMeaning77 => 'ገዥው';
+
+  @override
+  String get asmaMeaning78 => 'የበላይ የሆነው';
+
+  @override
+  String get asmaMeaning79 => 'በጎ አድራጊ';
+
+  @override
+  String get asmaMeaning80 => 'የንስሐ መመሪያ';
+
+  @override
+  String get asmaMeaning81 => 'ተበቃዩ';
+
+  @override
+  String get asmaMeaning82 => 'ይቅር ባይ';
+
+  @override
+  String get asmaMeaning83 => 'ክሌመንት';
+
+  @override
+  String get asmaMeaning84 => 'የሁሉም ባለቤት/ገዢ';
+
+  @override
+  String get asmaMeaning85 => 'የግርማዊነት እና ችሮታ ባለቤት';
+
+  @override
+  String get asmaMeaning86 => 'ፍትሃዊው';
+
+  @override
+  String get asmaMeaning87 => 'ሰብሳቢው።';
+
+  @override
+  String get asmaMeaning88 => 'ሀብታሙ';
+
+  @override
+  String get asmaMeaning89 => 'ማበልጸጊያው';
+
+  @override
+  String get asmaMeaning90 => 'ጉዳት ተከላካይ';
+
+  @override
+  String get asmaMeaning91 => 'የጉዳት አድራጊ';
+
+  @override
+  String get asmaMeaning92 => 'የጥቅማ ጥቅሞች ሰጪው';
+
+  @override
+  String get asmaMeaning93 => 'ብርሃኑ';
+
+  @override
+  String get asmaMeaning94 => 'መሪው';
+
+  @override
+  String get asmaMeaning95 => 'መነሻው';
+
+  @override
+  String get asmaMeaning96 => 'ዘላለማዊው';
+
+  @override
+  String get asmaMeaning97 => 'ወራሹ';
+
+  @override
+  String get asmaMeaning98 => 'በጣም ትክክለኛ መመሪያ';
+
+  @override
+  String get asmaMeaning99 => 'በሽተኛው';
 }

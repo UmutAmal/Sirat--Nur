@@ -1189,4 +1189,301 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Miejsce Islamskie';
+
+  @override
+  String get asmaMeaning1 => 'Dobroczynny';
+
+  @override
+  String get asmaMeaning2 => 'Miłosierny';
+
+  @override
+  String get asmaMeaning3 => 'Król / Wieczny Pan';
+
+  @override
+  String get asmaMeaning4 => 'Najświętsze';
+
+  @override
+  String get asmaMeaning5 => 'Źródło pokoju';
+
+  @override
+  String get asmaMeaning6 => 'Dawca bezpieczeństwa';
+
+  @override
+  String get asmaMeaning7 => 'Strażnik';
+
+  @override
+  String get asmaMeaning8 => 'Drogocenny / Najpotężniejszy';
+
+  @override
+  String get asmaMeaning9 => 'Komulator';
+
+  @override
+  String get asmaMeaning10 => 'Największy';
+
+  @override
+  String get asmaMeaning11 => 'Stwórca';
+
+  @override
+  String get asmaMeaning12 => 'Twórca porządku';
+
+  @override
+  String get asmaMeaning13 => 'Kształtownik piękna';
+
+  @override
+  String get asmaMeaning14 => 'Przebaczający';
+
+  @override
+  String get asmaMeaning15 => 'Pogromca';
+
+  @override
+  String get asmaMeaning16 => 'Dawca wszystkiego';
+
+  @override
+  String get asmaMeaning17 => 'Podtrzymujący';
+
+  @override
+  String get asmaMeaning18 => 'Rozpoczęcie';
+
+  @override
+  String get asmaMeaning19 => 'Wiedzący o wszystkim';
+
+  @override
+  String get asmaMeaning20 => 'dusiciel';
+
+  @override
+  String get asmaMeaning21 => 'Uwolnienie';
+
+  @override
+  String get asmaMeaning22 => 'Poniżacz';
+
+  @override
+  String get asmaMeaning23 => 'Wychwalający';
+
+  @override
+  String get asmaMeaning24 => 'Dawca honoru';
+
+  @override
+  String get asmaMeaning25 => 'Poniżacz';
+
+  @override
+  String get asmaMeaning26 => 'Słyszący wszystko';
+
+  @override
+  String get asmaMeaning27 => 'Widzący wszystko';
+
+  @override
+  String get asmaMeaning28 => 'Sędzia';
+
+  @override
+  String get asmaMeaning29 => 'Sprawiedliwy';
+
+  @override
+  String get asmaMeaning30 => 'Subtelny';
+
+  @override
+  String get asmaMeaning31 => 'Wszyscy Świadomi';
+
+  @override
+  String get asmaMeaning32 => 'Wytrwałość';
+
+  @override
+  String get asmaMeaning33 => 'Wspaniały';
+
+  @override
+  String get asmaMeaning34 => 'Wielki Przebaczający';
+
+  @override
+  String get asmaMeaning35 => 'Nagradzający wdzięczność';
+
+  @override
+  String get asmaMeaning36 => 'Najwyższy';
+
+  @override
+  String get asmaMeaning37 => 'Największy';
+
+  @override
+  String get asmaMeaning38 => 'Obrońca';
+
+  @override
+  String get asmaMeaning39 => 'Odżywka';
+
+  @override
+  String get asmaMeaning40 => 'Liczący';
+
+  @override
+  String get asmaMeaning41 => 'Majestatyczny';
+
+  @override
+  String get asmaMeaning42 => 'Hojny';
+
+  @override
+  String get asmaMeaning43 => 'Czujnik';
+
+  @override
+  String get asmaMeaning44 => 'Odpowiadający na modlitwę';
+
+  @override
+  String get asmaMeaning45 => 'Wszechrozumienie';
+
+  @override
+  String get asmaMeaning46 => 'Doskonale Mądry';
+
+  @override
+  String get asmaMeaning47 => 'Kochający';
+
+  @override
+  String get asmaMeaning48 => 'Najwspanialszy';
+
+  @override
+  String get asmaMeaning49 => 'Wskrzesiciel';
+
+  @override
+  String get asmaMeaning50 => 'Świadek';
+
+  @override
+  String get asmaMeaning51 => 'Prawda';
+
+  @override
+  String get asmaMeaning52 => 'Wszechwystarczający Powiernik';
+
+  @override
+  String get asmaMeaning53 => 'Posiadacz wszelkiej siły';
+
+  @override
+  String get asmaMeaning54 => 'Silny';
+
+  @override
+  String get asmaMeaning55 => 'Obrońca';
+
+  @override
+  String get asmaMeaning56 => 'Pochwaleni';
+
+  @override
+  String get asmaMeaning57 => 'Rzeczywista';
+
+  @override
+  String get asmaMeaning58 => 'Pomysłodawca';
+
+  @override
+  String get asmaMeaning59 => 'Odnowiciel';
+
+  @override
+  String get asmaMeaning60 => 'Dawca życia';
+
+  @override
+  String get asmaMeaning61 => 'Pogromca życia';
+
+  @override
+  String get asmaMeaning62 => 'Wiecznie żyjący';
+
+  @override
+  String get asmaMeaning63 => 'Samoistny element podtrzymujący';
+
+  @override
+  String get asmaMeaning64 => 'Wyszukiwacz';
+
+  @override
+  String get asmaMeaning65 => 'Wspaniały';
+
+  @override
+  String get asmaMeaning66 => 'Jedyny';
+
+  @override
+  String get asmaMeaning67 => 'Ten jedyny';
+
+  @override
+  String get asmaMeaning68 => 'Ten, którego wszyscy szukają';
+
+  @override
+  String get asmaMeaning69 => 'Potężny';
+
+  @override
+  String get asmaMeaning70 => 'Stwórca wszelkiej mocy';
+
+  @override
+  String get asmaMeaning71 => 'Ekspedytor';
+
+  @override
+  String get asmaMeaning72 => 'Opóźniacz';
+
+  @override
+  String get asmaMeaning73 => 'Pierwszy';
+
+  @override
+  String get asmaMeaning74 => 'Ostatni';
+
+  @override
+  String get asmaMeaning75 => 'Manifest';
+
+  @override
+  String get asmaMeaning76 => 'Ukryte';
+
+  @override
+  String get asmaMeaning77 => 'Gubernator';
+
+  @override
+  String get asmaMeaning78 => 'Najwyższy';
+
+  @override
+  String get asmaMeaning79 => 'Czyniciel dobra';
+
+  @override
+  String get asmaMeaning80 => 'Przewodnik pokuty';
+
+  @override
+  String get asmaMeaning81 => 'Mściciel';
+
+  @override
+  String get asmaMeaning82 => 'Przebaczający';
+
+  @override
+  String get asmaMeaning83 => 'Klement';
+
+  @override
+  String get asmaMeaning84 => 'Właściciel/władca wszystkiego';
+
+  @override
+  String get asmaMeaning85 => 'Posiadacz majestatu i bogactwa';
+
+  @override
+  String get asmaMeaning86 => 'Sprawiedliwy';
+
+  @override
+  String get asmaMeaning87 => 'Zbieracz';
+
+  @override
+  String get asmaMeaning88 => 'Bogaty';
+
+  @override
+  String get asmaMeaning89 => 'Wzbogacacz';
+
+  @override
+  String get asmaMeaning90 => 'Zapobiegający szkodom';
+
+  @override
+  String get asmaMeaning91 => 'Przynoszący krzywdę';
+
+  @override
+  String get asmaMeaning92 => 'Dawca korzyści';
+
+  @override
+  String get asmaMeaning93 => 'Światło';
+
+  @override
+  String get asmaMeaning94 => 'Przewodnik';
+
+  @override
+  String get asmaMeaning95 => 'Pomysłodawca';
+
+  @override
+  String get asmaMeaning96 => 'Odwieczny';
+
+  @override
+  String get asmaMeaning97 => 'Spadkobierca';
+
+  @override
+  String get asmaMeaning98 => 'Najsprawiedliwszy przewodnik';
+
+  @override
+  String get asmaMeaning99 => 'Pacjent Jeden';
 }

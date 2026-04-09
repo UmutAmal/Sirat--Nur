@@ -1185,4 +1185,301 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Goobta Islaamka';
+
+  @override
+  String get asmaMeaning1 => 'Ka Faa\'iidayso';
+
+  @override
+  String get asmaMeaning2 => 'Raxmaana';
+
+  @override
+  String get asmaMeaning3 => 'Boqorka / Rabbi daa\'imka ah';
+
+  @override
+  String get asmaMeaning4 => 'Kan ugu quduusan';
+
+  @override
+  String get asmaMeaning5 => 'Isha Nabadda';
+
+  @override
+  String get asmaMeaning6 => 'Bixiyaha Amniga';
+
+  @override
+  String get asmaMeaning7 => 'Ilaaliyaha';
+
+  @override
+  String get asmaMeaning8 => 'Qaaliga ah / kan ugu awoodda badan';
+
+  @override
+  String get asmaMeaning9 => 'Qasab';
+
+  @override
+  String get asmaMeaning10 => 'Kan ugu weyn';
+
+  @override
+  String get asmaMeaning11 => 'Abuuraha';
+
+  @override
+  String get asmaMeaning12 => 'Sameeyaha Amarka';
+
+  @override
+  String get asmaMeaning13 => 'Qaabka Quruxda';
+
+  @override
+  String get asmaMeaning14 => 'Cafiska';
+
+  @override
+  String get asmaMeaning15 => 'Subduer-ka';
+
+  @override
+  String get asmaMeaning16 => 'Bixiyaha oo dhan';
+
+  @override
+  String get asmaMeaning17 => 'Waaryaha';
+
+  @override
+  String get asmaMeaning18 => 'Furaha';
+
+  @override
+  String get asmaMeaning19 => 'Wax walba og';
+
+  @override
+  String get asmaMeaning20 => 'Constrictor The';
+
+  @override
+  String get asmaMeaning21 => 'Gargaarka';
+
+  @override
+  String get asmaMeaning22 => 'Cabaas';
+
+  @override
+  String get asmaMeaning23 => 'Sarreeye';
+
+  @override
+  String get asmaMeaning24 => 'Maamuuskii';
+
+  @override
+  String get asmaMeaning25 => 'Dulmiga';
+
+  @override
+  String get asmaMeaning26 => 'Maqalka Dhammaan';
+
+  @override
+  String get asmaMeaning27 => 'Wax arka Dhammaan';
+
+  @override
+  String get asmaMeaning28 => 'Garsooraha';
+
+  @override
+  String get asmaMeaning29 => 'Cadaalada';
+
+  @override
+  String get asmaMeaning30 => 'Midka Dahsoon';
+
+  @override
+  String get asmaMeaning31 => 'The All Aware';
+
+  @override
+  String get asmaMeaning32 => 'Hordhac';
+
+  @override
+  String get asmaMeaning33 => 'Cajiibka';
+
+  @override
+  String get asmaMeaning34 => 'Dambi dhaafka weyn';
+
+  @override
+  String get asmaMeaning35 => 'Abaal marinta Mahadnaqa';
+
+  @override
+  String get asmaMeaning36 => 'Kan ugu sarreeya';
+
+  @override
+  String get asmaMeaning37 => 'Kan ugu weyn';
+
+  @override
+  String get asmaMeaning38 => 'Ilaaliyaha';
+
+  @override
+  String get asmaMeaning39 => 'Nafaqeeyaha';
+
+  @override
+  String get asmaMeaning40 => 'Xisaabiyaha';
+
+  @override
+  String get asmaMeaning41 => 'Sharafta leh';
+
+  @override
+  String get asmaMeaning42 => 'Deeqsinimada';
+
+  @override
+  String get asmaMeaning43 => 'Midka Fiican';
+
+  @override
+  String get asmaMeaning44 => 'Ajiibiyaha Ducada';
+
+  @override
+  String get asmaMeaning45 => 'Fahamka oo dhan';
+
+  @override
+  String get asmaMeaning46 => 'Caqliga qumman';
+
+  @override
+  String get asmaMeaning47 => 'Midka Jecel';
+
+  @override
+  String get asmaMeaning48 => 'Midka ugu sharafta badan';
+
+  @override
+  String get asmaMeaning49 => 'Soobixiye';
+
+  @override
+  String get asmaMeaning50 => 'Markhaatigii';
+
+  @override
+  String get asmaMeaning51 => 'Xaqiiqda';
+
+  @override
+  String get asmaMeaning52 => 'Masuulka ugu Filan';
+
+  @override
+  String get asmaMeaning53 => 'Lahaanshaha Awood oo dhan';
+
+  @override
+  String get asmaMeaning54 => 'Qasabka ah';
+
+  @override
+  String get asmaMeaning55 => 'Ilaaliyaha';
+
+  @override
+  String get asmaMeaning56 => 'Mahadsanid';
+
+  @override
+  String get asmaMeaning57 => 'Qiimeeyaha';
+
+  @override
+  String get asmaMeaning58 => 'Asalkiilaha';
+
+  @override
+  String get asmaMeaning59 => 'Soo-celinta';
+
+  @override
+  String get asmaMeaning60 => 'Bixiyaha Nolosha';
+
+  @override
+  String get asmaMeaning61 => 'Kan Nolosha Qaatay';
+
+  @override
+  String get asmaMeaning62 => 'Waliga Nool';
+
+  @override
+  String get asmaMeaning63 => 'Kaaliyaha Is-xilqaanka ah';
+
+  @override
+  String get asmaMeaning64 => 'Raadiyaha';
+
+  @override
+  String get asmaMeaning65 => 'Sharafta leh';
+
+  @override
+  String get asmaMeaning66 => 'Ka Keliya';
+
+  @override
+  String get asmaMeaning67 => 'Midka';
+
+  @override
+  String get asmaMeaning68 => 'Midka La Doonayo Dhammaan';
+
+  @override
+  String get asmaMeaning69 => 'Kuwa Awooda leh';
+
+  @override
+  String get asmaMeaning70 => 'Abuuraha awoodda oo dhan';
+
+  @override
+  String get asmaMeaning71 => 'Expediter-ka';
+
+  @override
+  String get asmaMeaning72 => 'Dib u dhaca';
+
+  @override
+  String get asmaMeaning73 => 'Ugu Horayn';
+
+  @override
+  String get asmaMeaning74 => 'Ugu Dambeyntii';
+
+  @override
+  String get asmaMeaning75 => 'Muujinta';
+
+  @override
+  String get asmaMeaning76 => 'Qarsoon';
+
+  @override
+  String get asmaMeaning77 => 'Gudoomiyaha';
+
+  @override
+  String get asmaMeaning78 => 'Kan ugu sarreeya';
+
+  @override
+  String get asmaMeaning79 => 'Wanaag fala';
+
+  @override
+  String get asmaMeaning80 => 'Tusaha Towbada';
+
+  @override
+  String get asmaMeaning81 => 'Aargoosiga';
+
+  @override
+  String get asmaMeaning82 => 'Cafiskii';
+
+  @override
+  String get asmaMeaning83 => 'Clement';
+
+  @override
+  String get asmaMeaning84 => 'Mulkiilaha / Boqorka Dhammaan';
+
+  @override
+  String get asmaMeaning85 => 'Lahaanshaha sharafta iyo fadliga';
+
+  @override
+  String get asmaMeaning86 => 'Midka loo siman yahay';
+
+  @override
+  String get asmaMeaning87 => 'Soo ururiyaha';
+
+  @override
+  String get asmaMeaning88 => 'Taajirkii';
+
+  @override
+  String get asmaMeaning89 => 'Enricher The';
+
+  @override
+  String get asmaMeaning90 => 'Ka Hortagga Waxyeelada';
+
+  @override
+  String get asmaMeaning91 => 'Dhibka Keenay';
+
+  @override
+  String get asmaMeaning92 => 'Bixiyaha Faa\'iidooyinka';
+
+  @override
+  String get asmaMeaning93 => 'Iftiinka';
+
+  @override
+  String get asmaMeaning94 => 'Hagaha';
+
+  @override
+  String get asmaMeaning95 => 'Asalkiilaha';
+
+  @override
+  String get asmaMeaning96 => 'Midka Aakhiro';
+
+  @override
+  String get asmaMeaning97 => 'Dhaxalka';
+
+  @override
+  String get asmaMeaning98 => 'Tusaha ugu Xaqsan';
+
+  @override
+  String get asmaMeaning99 => 'Kan Bukaanka ah';
 }

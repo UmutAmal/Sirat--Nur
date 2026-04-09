@@ -1204,4 +1204,301 @@ class AppLocalizationsAy extends AppLocalizations {
   @override
   String get islamicPlaceFallback =>
       'Lugar Islámico ukax mä jach’a uñacht’äwiwa';
+
+  @override
+  String get asmaMeaning1 => 'Uka suma jaqejja';
+
+  @override
+  String get asmaMeaning2 => 'Khuyapayasir jaqixa';
+
+  @override
+  String get asmaMeaning3 => 'Rey / Wiñay Tatitu';
+
+  @override
+  String get asmaMeaning4 => 'Qullanäki uka';
+
+  @override
+  String get asmaMeaning5 => 'Sumankañ utjañan phunchhawipa';
+
+  @override
+  String get asmaMeaning6 => 'Seguridad uka churirixa';
+
+  @override
+  String get asmaMeaning7 => 'Uka Guardian sat revistanjja';
+
+  @override
+  String get asmaMeaning8 => 'Wali valorani / Wali ch’amani';
+
+  @override
+  String get asmaMeaning9 => 'Uka Compledor ukaxa';
+
+  @override
+  String get asmaMeaning10 => 'Jach’a Jach’a';
+
+  @override
+  String get asmaMeaning11 => 'Luriri';
+
+  @override
+  String get asmaMeaning12 => 'Uka Orden lurayiri';
+
+  @override
+  String get asmaMeaning13 => 'Suma uñnaqt’anïñ uñstayiri';
+
+  @override
+  String get asmaMeaning14 => 'Perdonirinaka';
+
+  @override
+  String get asmaMeaning15 => 'Ukax Subduer satawa';
+
+  @override
+  String get asmaMeaning16 => 'Taqi kun churiri';
+
+  @override
+  String get asmaMeaning17 => 'Ukax Sustentadora satawa';
+
+  @override
+  String get asmaMeaning18 => 'Uka Jist’araña';
+
+  @override
+  String get asmaMeaning19 => 'Taqinir Uñt’iri';
+
+  @override
+  String get asmaMeaning20 => 'Uka Constrictor ukaxa';
+
+  @override
+  String get asmaMeaning21 => 'Ukax Reliever satawa';
+
+  @override
+  String get asmaMeaning22 => 'Uka Abaser sat jaqixa';
+
+  @override
+  String get asmaMeaning23 => 'Uka jach’a jach’a tukuri';
+
+  @override
+  String get asmaMeaning24 => 'Uka jach’añchäwi churiri';
+
+  @override
+  String get asmaMeaning25 => 'Uka jisk’achaña';
+
+  @override
+  String get asmaMeaning26 => 'Taqiniru ist’iri';
+
+  @override
+  String get asmaMeaning27 => 'Taqi kun uñjiri';
+
+  @override
+  String get asmaMeaning28 => 'Juezajj ukham luräna';
+
+  @override
+  String get asmaMeaning29 => 'Uka Justa';
+
+  @override
+  String get asmaMeaning30 => 'Uka sutil uñt’ata';
+
+  @override
+  String get asmaMeaning31 => 'Taqi kunat yatxatirinaka';
+
+  @override
+  String get asmaMeaning32 => 'Uka nayra awkinaka';
+
+  @override
+  String get asmaMeaning33 => 'Uka Jach’a Jaqi';
+
+  @override
+  String get asmaMeaning34 => 'Jach’a pampachiri';
+
+  @override
+  String get asmaMeaning35 => 'Yuspagarañ tuqit Premio churiri';
+
+  @override
+  String get asmaMeaning36 => 'Uka Jach’a Jaqi';
+
+  @override
+  String get asmaMeaning37 => 'Jach’a Jach’a';
+
+  @override
+  String get asmaMeaning38 => 'Uka Jach’a Jaqi';
+
+  @override
+  String get asmaMeaning39 => 'Uka Manq’ayiri';
+
+  @override
+  String get asmaMeaning40 => 'Uka Jachʼa Yatiqañ Uta';
+
+  @override
+  String get asmaMeaning41 => 'Uka Majestuoso';
+
+  @override
+  String get asmaMeaning42 => 'Uka Generoso jaqenakajja';
+
+  @override
+  String get asmaMeaning43 => 'Uñtʼasir jaqejja';
+
+  @override
+  String get asmaMeaning44 => 'Oracionar jaysiri';
+
+  @override
+  String get asmaMeaning45 => 'Taqi kunat amuyt’irinaka';
+
+  @override
+  String get asmaMeaning46 => 'Perfectamente Yatiñani jaqinaka';
+
+  @override
+  String get asmaMeaning47 => 'Munasir Diosawa';
+
+  @override
+  String get asmaMeaning48 => 'Wali Jachʼa Jachʼa Jaqi';
+
+  @override
+  String get asmaMeaning49 => 'Uka Jaktayiri';
+
+  @override
+  String get asmaMeaning50 => 'Uka Testigojja';
+
+  @override
+  String get asmaMeaning51 => 'Chiqa yatichäwi';
+
+  @override
+  String get asmaMeaning52 => 'Taqi kunasa wakisiriwa Fideicomisario';
+
+  @override
+  String get asmaMeaning53 => 'Taqi Ch’amani jaqi';
+
+  @override
+  String get asmaMeaning54 => 'Uka Ch’amani';
+
+  @override
+  String get asmaMeaning55 => 'Uka Jark’aqirixa';
+
+  @override
+  String get asmaMeaning56 => 'Uka Jachʼañchatanaka';
+
+  @override
+  String get asmaMeaning57 => 'Uka Tasirinakaxa';
+
+  @override
+  String get asmaMeaning58 => 'Ukax Uñstayatapawa';
+
+  @override
+  String get asmaMeaning59 => 'Uka Restaurador ukax';
+
+  @override
+  String get asmaMeaning60 => 'Jakañ churiri';
+
+  @override
+  String get asmaMeaning61 => 'Jakañ Apt’iri';
+
+  @override
+  String get asmaMeaning62 => 'Sapa kuti Jakirinaka';
+
+  @override
+  String get asmaMeaning63 => 'Uka Jupa pachpa Sustentadora';
+
+  @override
+  String get asmaMeaning64 => 'Uka thaqhiri';
+
+  @override
+  String get asmaMeaning65 => 'Uka jach’a jach’a tukuri';
+
+  @override
+  String get asmaMeaning66 => 'Uka sapaki';
+
+  @override
+  String get asmaMeaning67 => 'Uka Maynixa';
+
+  @override
+  String get asmaMeaning68 => 'Taqini thaqhatäki uka';
+
+  @override
+  String get asmaMeaning69 => 'Ch’amani jaqinaka';
+
+  @override
+  String get asmaMeaning70 => 'Taqi ch’ama Luriri';
+
+  @override
+  String get asmaMeaning71 => 'Uka Expedidor ukax mä jach’a uñacht’äwiwa';
+
+  @override
+  String get asmaMeaning72 => 'Uka Qhiphart’ayir jaqixa';
+
+  @override
+  String get asmaMeaning73 => 'Nayrïri';
+
+  @override
+  String get asmaMeaning74 => 'Uka Qhipa';
+
+  @override
+  String get asmaMeaning75 => 'Uka Manifest';
+
+  @override
+  String get asmaMeaning76 => 'Ukax Imantatawa';
+
+  @override
+  String get asmaMeaning77 => 'Uka Gobernadoraxa';
+
+  @override
+  String get asmaMeaning78 => 'Jachʼa Jachʼa Diosawa';
+
+  @override
+  String get asmaMeaning79 => 'Suma Luriri';
+
+  @override
+  String get asmaMeaning80 => 'Arrepentisiñatak guia';
+
+  @override
+  String get asmaMeaning81 => 'Uka Vengador sat jaqixa';
+
+  @override
+  String get asmaMeaning82 => 'Uka pampachirixa';
+
+  @override
+  String get asmaMeaning83 => 'Uka Clemente sat chachajja';
+
+  @override
+  String get asmaMeaning84 => 'Taqiniruw Dueño / Soberano';
+
+  @override
+  String get asmaMeaning85 => 'Majestad ukat Recompensa ukanakan Posesorapa';
+
+  @override
+  String get asmaMeaning86 => 'Uka Equitable Ukax';
+
+  @override
+  String get asmaMeaning87 => 'Uka Apthapiri';
+
+  @override
+  String get asmaMeaning88 => 'Qamir jaqejja';
+
+  @override
+  String get asmaMeaning89 => 'Uka qamiriptayaña';
+
+  @override
+  String get asmaMeaning90 => 'Jan walt’awinak jark’aqiri';
+
+  @override
+  String get asmaMeaning91 => 'Jan walinak apaniri';
+
+  @override
+  String get asmaMeaning92 => 'Beneficionak churir jaqejja';
+
+  @override
+  String get asmaMeaning93 => 'Uka Qhana';
+
+  @override
+  String get asmaMeaning94 => 'Uka Irpirix';
+
+  @override
+  String get asmaMeaning95 => 'Ukax Uñstayatapawa';
+
+  @override
+  String get asmaMeaning96 => 'Wiñay Jaqi';
+
+  @override
+  String get asmaMeaning97 => 'Uka Herencia katuqirixa';
+
+  @override
+  String get asmaMeaning98 => 'Taqi kunat sipansa chiqapar uñjir guia';
+
+  @override
+  String get asmaMeaning99 => 'Uka Pacientejj';
 }

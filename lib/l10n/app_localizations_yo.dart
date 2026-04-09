@@ -1184,4 +1184,301 @@ class AppLocalizationsYo extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Ibi Islam';
+
+  @override
+  String get asmaMeaning1 => 'Alanfani';
+
+  @override
+  String get asmaMeaning2 => 'Alaanu';
+
+  @override
+  String get asmaMeaning3 => 'Oba / Oluwa ayeraye';
+
+  @override
+  String get asmaMeaning4 => 'Mimọ Julọ';
+
+  @override
+  String get asmaMeaning5 => 'Orisun Alafia';
+
+  @override
+  String get asmaMeaning6 => 'Olufunni Aabo';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Iyebiye / Alagbara julo';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Ti o tobi julọ';
+
+  @override
+  String get asmaMeaning11 => 'Eleda';
+
+  @override
+  String get asmaMeaning12 => 'Ẹlẹda ti Bere fun';
+
+  @override
+  String get asmaMeaning13 => 'Awọn apẹrẹ ti Beauty';
+
+  @override
+  String get asmaMeaning14 => 'Ìdáríjì';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Olufunni Gbogbo';
+
+  @override
+  String get asmaMeaning17 => 'Olugbero naa';
+
+  @override
+  String get asmaMeaning18 => 'The Opener';
+
+  @override
+  String get asmaMeaning19 => 'Olumo Gbogbo';
+
+  @override
+  String get asmaMeaning20 => 'Awọn Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Olugbala';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Alagbara';
+
+  @override
+  String get asmaMeaning24 => 'Olufunni Ola';
+
+  @override
+  String get asmaMeaning25 => 'The Humiliator';
+
+  @override
+  String get asmaMeaning26 => 'Olugbo Gbogbo';
+
+  @override
+  String get asmaMeaning27 => 'Aríran Gbogbo';
+
+  @override
+  String get asmaMeaning28 => 'Onidajo naa';
+
+  @override
+  String get asmaMeaning29 => 'Olododo';
+
+  @override
+  String get asmaMeaning30 => 'The arekereke Ọkan';
+
+  @override
+  String get asmaMeaning31 => 'The Gbogbo Aware';
+
+  @override
+  String get asmaMeaning32 => 'The Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'Awọn nkanigbega';
+
+  @override
+  String get asmaMeaning34 => 'Oludariji Nla';
+
+  @override
+  String get asmaMeaning35 => 'Olusan Adupe';
+
+  @override
+  String get asmaMeaning36 => 'Ti o ga julọ';
+
+  @override
+  String get asmaMeaning37 => 'Ti o tobi julọ';
+
+  @override
+  String get asmaMeaning38 => 'Olutọju naa';
+
+  @override
+  String get asmaMeaning39 => 'Olutọju naa';
+
+  @override
+  String get asmaMeaning40 => 'Oniṣiro naa';
+
+  @override
+  String get asmaMeaning41 => 'Kabiyesi';
+
+  @override
+  String get asmaMeaning42 => 'Awọn Oninurere';
+
+  @override
+  String get asmaMeaning43 => 'Olusona';
+
+  @override
+  String get asmaMeaning44 => 'Oludahun si Adura';
+
+  @override
+  String get asmaMeaning45 => 'The Gbogbo oye';
+
+  @override
+  String get asmaMeaning46 => 'Ọlọgbọn Ni pipe';
+
+  @override
+  String get asmaMeaning47 => 'Ololufe';
+
+  @override
+  String get asmaMeaning48 => 'Ologo julo';
+
+  @override
+  String get asmaMeaning49 => 'Ajinde';
+
+  @override
+  String get asmaMeaning50 => 'Ẹlẹ́rìí náà';
+
+  @override
+  String get asmaMeaning51 => 'Ooto';
+
+  @override
+  String get asmaMeaning52 => 'Alagbase To To Gbogbo';
+
+  @override
+  String get asmaMeaning53 => 'Olugba Gbogbo Agbara';
+
+  @override
+  String get asmaMeaning54 => 'Agbara';
+
+  @override
+  String get asmaMeaning55 => 'Olugbeja';
+
+  @override
+  String get asmaMeaning56 => 'Awọn Oluyin';
+
+  @override
+  String get asmaMeaning57 => 'The Appraiser';
+
+  @override
+  String get asmaMeaning58 => 'Olupilẹṣẹ';
+
+  @override
+  String get asmaMeaning59 => 'The Restorer';
+
+  @override
+  String get asmaMeaning60 => 'Olufunni l’aye';
+
+  @override
+  String get asmaMeaning61 => 'Olugba aye';
+
+  @override
+  String get asmaMeaning62 => 'The Lailai Living';
+
+  @override
+  String get asmaMeaning63 => 'Olugbero ti ara-ẹni';
+
+  @override
+  String get asmaMeaning64 => 'Oluwari';
+
+  @override
+  String get asmaMeaning65 => 'Ologo';
+
+  @override
+  String get asmaMeaning66 => 'Nikan Ọkan';
+
+  @override
+  String get asmaMeaning67 => 'Ọkan naa';
+
+  @override
+  String get asmaMeaning68 => 'Eni Ti Gbogbo Eniyan Nfe';
+
+  @override
+  String get asmaMeaning69 => 'Alagbara';
+
+  @override
+  String get asmaMeaning70 => 'Eleda gbogbo agbara';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Awọn Idaduro';
+
+  @override
+  String get asmaMeaning73 => 'Akọkọ';
+
+  @override
+  String get asmaMeaning74 => 'Ikẹhin';
+
+  @override
+  String get asmaMeaning75 => 'Ifihan naa';
+
+  @override
+  String get asmaMeaning76 => 'Awọn farasin';
+
+  @override
+  String get asmaMeaning77 => 'Gomina';
+
+  @override
+  String get asmaMeaning78 => 'Eledumare';
+
+  @override
+  String get asmaMeaning79 => 'Oluse Rere';
+
+  @override
+  String get asmaMeaning80 => 'Itọsọna si Ironupiwada';
+
+  @override
+  String get asmaMeaning81 => 'Olugbẹsan naa';
+
+  @override
+  String get asmaMeaning82 => 'Oludariji';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Olohun / Oba Gbogbo';
+
+  @override
+  String get asmaMeaning85 => 'Eni to ni Kabiyesi ati Ere';
+
+  @override
+  String get asmaMeaning86 => 'The Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'Olukojo';
+
+  @override
+  String get asmaMeaning88 => 'Ọlọrọ';
+
+  @override
+  String get asmaMeaning89 => 'The Enricher';
+
+  @override
+  String get asmaMeaning90 => 'Oludena Ipalara';
+
+  @override
+  String get asmaMeaning91 => 'Awọn Mu ti Ipalara';
+
+  @override
+  String get asmaMeaning92 => 'Olufun ti Awọn anfani';
+
+  @override
+  String get asmaMeaning93 => 'Imọlẹ naa';
+
+  @override
+  String get asmaMeaning94 => 'Oludari';
+
+  @override
+  String get asmaMeaning95 => 'Olupilẹṣẹ';
+
+  @override
+  String get asmaMeaning96 => 'Ẹni Ayérayé';
+
+  @override
+  String get asmaMeaning97 => 'Ajogún';
+
+  @override
+  String get asmaMeaning98 => 'Itọsọna Olododo Julọ';
+
+  @override
+  String get asmaMeaning99 => 'Alaisan naa';
 }

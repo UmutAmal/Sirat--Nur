@@ -1186,4 +1186,301 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'ئىسلام ئورنى';
+
+  @override
+  String get asmaMeaning1 => 'مەنپەئەتدار';
+
+  @override
+  String get asmaMeaning2 => 'رەھىمدىل';
+
+  @override
+  String get asmaMeaning3 => 'پادىشاھ / مەڭگۈلۈك رەببى';
+
+  @override
+  String get asmaMeaning4 => 'ئەڭ مۇقەددەس';
+
+  @override
+  String get asmaMeaning5 => 'تىنچلىقنىڭ مەنبەسى';
+
+  @override
+  String get asmaMeaning6 => 'بىخەتەرلىك بەرگۈچى';
+
+  @override
+  String get asmaMeaning7 => 'قوغدىغۇچى';
+
+  @override
+  String get asmaMeaning8 => 'ئەڭ قىممەتلىك / ئەڭ كۈچلۈك';
+
+  @override
+  String get asmaMeaning9 => 'ساتقۇچى';
+
+  @override
+  String get asmaMeaning10 => 'ئەڭ ئۇلۇغ';
+
+  @override
+  String get asmaMeaning11 => 'ياراتقۇچى';
+
+  @override
+  String get asmaMeaning12 => 'زاكاز قىلغۇچى';
+
+  @override
+  String get asmaMeaning13 => 'گۈزەللىكنىڭ شەكلى';
+
+  @override
+  String get asmaMeaning14 => 'كەچۈرۈم قىلىش';
+
+  @override
+  String get asmaMeaning15 => 'بويسۇندۇرغۇچى';
+
+  @override
+  String get asmaMeaning16 => 'ھەممىنى بەرگۈچى';
+
+  @override
+  String get asmaMeaning17 => 'ساقلىغۇچى';
+
+  @override
+  String get asmaMeaning18 => 'ئاچقۇچى';
+
+  @override
+  String get asmaMeaning19 => 'ھەممىنى بىلگۈچى';
+
+  @override
+  String get asmaMeaning20 => 'چەكلىگۈچى';
+
+  @override
+  String get asmaMeaning21 => 'ياردەمچى';
+
+  @override
+  String get asmaMeaning22 => 'Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Exalter';
+
+  @override
+  String get asmaMeaning24 => 'شەرەپ ئىگىسى';
+
+  @override
+  String get asmaMeaning25 => 'ھاقارەتلىگۈچى';
+
+  @override
+  String get asmaMeaning26 => 'ھەممىنى ئاڭلىغۇچى';
+
+  @override
+  String get asmaMeaning27 => 'ھەممىنى كۆرگۈچى';
+
+  @override
+  String get asmaMeaning28 => 'سوتچى';
+
+  @override
+  String get asmaMeaning29 => 'ئادىل';
+
+  @override
+  String get asmaMeaning30 => 'ئىنچىكە';
+
+  @override
+  String get asmaMeaning31 => 'ھەممە خەۋەردار';
+
+  @override
+  String get asmaMeaning32 => 'ئالدىنئالا';
+
+  @override
+  String get asmaMeaning33 => 'ھەيۋەتلىك';
+
+  @override
+  String get asmaMeaning34 => 'ئۇلۇغ كەچۈرۈم قىلغۇچى';
+
+  @override
+  String get asmaMeaning35 => 'مىننەتدارلىق مۇكاپاتى';
+
+  @override
+  String get asmaMeaning36 => 'ئەڭ يۇقىرى';
+
+  @override
+  String get asmaMeaning37 => 'ئەڭ ئۇلۇغ';
+
+  @override
+  String get asmaMeaning38 => 'ساقلىغۇچى';
+
+  @override
+  String get asmaMeaning39 => 'ئوزۇقلاندۇرغۇچى';
+
+  @override
+  String get asmaMeaning40 => 'ھېساباتچى';
+
+  @override
+  String get asmaMeaning41 => 'مەلىكە';
+
+  @override
+  String get asmaMeaning42 => 'كەڭ قورساق';
+
+  @override
+  String get asmaMeaning43 => 'كۆزەتكۈچى';
+
+  @override
+  String get asmaMeaning44 => 'دۇئاغا جاۋاب بەرگۈچى';
+
+  @override
+  String get asmaMeaning45 => 'ھەممىنى چۈشىنىش';
+
+  @override
+  String get asmaMeaning46 => 'مۇكەممەل ئەقىللىق';
+
+  @override
+  String get asmaMeaning47 => 'سۆيۈملۈك';
+
+  @override
+  String get asmaMeaning48 => 'ئەڭ شەرەپلىك';
+
+  @override
+  String get asmaMeaning49 => 'تىرىلدۈرگۈچى';
+
+  @override
+  String get asmaMeaning50 => 'گۇۋاھچى';
+
+  @override
+  String get asmaMeaning51 => 'ھەقىقەت';
+
+  @override
+  String get asmaMeaning52 => 'بارلىق ئىشەنچلىك ۋاكالەتچى';
+
+  @override
+  String get asmaMeaning53 => 'بارلىق كۈچنىڭ ئىگىسى';
+
+  @override
+  String get asmaMeaning54 => 'كۈچلۈك';
+
+  @override
+  String get asmaMeaning55 => 'قوغدىغۇچى';
+
+  @override
+  String get asmaMeaning56 => 'مەدھىيە';
+
+  @override
+  String get asmaMeaning57 => 'باھالىغۇچى';
+
+  @override
+  String get asmaMeaning58 => 'ئىجاد قىلغۇچى';
+
+  @override
+  String get asmaMeaning59 => 'ئەسلىگە كەلتۈرگۈچى';
+
+  @override
+  String get asmaMeaning60 => 'ھاياتلىق بەرگۈچى';
+
+  @override
+  String get asmaMeaning61 => 'ھاياتلىق ئىگىسى';
+
+  @override
+  String get asmaMeaning62 => 'مەڭگۈ ياشايدۇ';
+
+  @override
+  String get asmaMeaning63 => 'ئۆز-ئۆزىگە تايىنىدىغان ياردەمچى';
+
+  @override
+  String get asmaMeaning64 => 'تاپقۇچى';
+
+  @override
+  String get asmaMeaning65 => 'شەرەپلىك';
+
+  @override
+  String get asmaMeaning66 => 'بىردىنبىر';
+
+  @override
+  String get asmaMeaning67 => 'بىر';
+
+  @override
+  String get asmaMeaning68 => 'ھەممەيلەن تەلەپ قىلغان';
+
+  @override
+  String get asmaMeaning69 => 'كۈچلۈك';
+
+  @override
+  String get asmaMeaning70 => 'بارلىق كۈچنىڭ ياراتقۇچىسى';
+
+  @override
+  String get asmaMeaning71 => 'تېزلەتكۈچى';
+
+  @override
+  String get asmaMeaning72 => 'كېچىكىش';
+
+  @override
+  String get asmaMeaning73 => 'بىرىنچى';
+
+  @override
+  String get asmaMeaning74 => 'ئەڭ ئاخىرقى';
+
+  @override
+  String get asmaMeaning75 => 'كۆرۈنۈش';
+
+  @override
+  String get asmaMeaning76 => 'يوشۇرۇن';
+
+  @override
+  String get asmaMeaning77 => 'ۋالىي';
+
+  @override
+  String get asmaMeaning78 => 'ئەڭ ئالىي';
+
+  @override
+  String get asmaMeaning79 => 'ياخشىلىق قىلغۇچى';
+
+  @override
+  String get asmaMeaning80 => 'تەۋبە يېتەكچىسى';
+
+  @override
+  String get asmaMeaning81 => 'قىساسكار';
+
+  @override
+  String get asmaMeaning82 => 'كەچۈرۈم قىلغۇچى';
+
+  @override
+  String get asmaMeaning83 => 'كلېمېنت';
+
+  @override
+  String get asmaMeaning84 => 'ھەممەيلەننىڭ ئىگىسى / ھۆكۈمرانى';
+
+  @override
+  String get asmaMeaning85 => 'ئۇلۇغلۇق ۋە مۇكاپاتنىڭ ئىگىسى';
+
+  @override
+  String get asmaMeaning86 => 'باراۋەر';
+
+  @override
+  String get asmaMeaning87 => 'توپلىغۇچى';
+
+  @override
+  String get asmaMeaning88 => 'باي';
+
+  @override
+  String get asmaMeaning89 => 'بېيىش';
+
+  @override
+  String get asmaMeaning90 => 'زىياننىڭ ئالدىنى ئالغۇچى';
+
+  @override
+  String get asmaMeaning91 => 'زىيان تارتقۇچى';
+
+  @override
+  String get asmaMeaning92 => 'مەنپەئەت بەرگۈچى';
+
+  @override
+  String get asmaMeaning93 => 'نۇر';
+
+  @override
+  String get asmaMeaning94 => 'يېتەكچى';
+
+  @override
+  String get asmaMeaning95 => 'ئىجاد قىلغۇچى';
+
+  @override
+  String get asmaMeaning96 => 'مەڭگۈلۈك';
+
+  @override
+  String get asmaMeaning97 => 'ۋارىس';
+
+  @override
+  String get asmaMeaning98 => 'ئەڭ ھەققانىي يېتەكچى';
+
+  @override
+  String get asmaMeaning99 => 'بىمار';
 }

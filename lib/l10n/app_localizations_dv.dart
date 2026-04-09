@@ -1195,4 +1195,301 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'އިސްލާމީ ތަނެވެ';
+
+  @override
+  String get asmaMeaning1 => 'ދަ ބެނެފިސެންޓް އެވެ';
+
+  @override
+  String get asmaMeaning2 => 'ރަޙްމަތްތެރިޔާއެވެ';
+
+  @override
+  String get asmaMeaning3 => 'ރަސްގެފާނު / ދާއިމީ ރަސްކަލާނގެ';
+
+  @override
+  String get asmaMeaning4 => 'އެންމެ މާތް ރަސްކަލާނގެއެވެ';
+
+  @override
+  String get asmaMeaning5 => 'ސުލްހައިގެ މަސްދަރެވެ';
+
+  @override
+  String get asmaMeaning6 => 'ރައްކާތެރިކަން ދެއްވާ ފަރާތެވެ';
+
+  @override
+  String get asmaMeaning7 => 'ދަ ގާޑިއަން...';
+
+  @override
+  String get asmaMeaning8 => 'އަގުހުރި / އެންމެ ބާރުގަދަ';
+
+  @override
+  String get asmaMeaning9 => 'ދަ ކޮމްޕެލަރ އެވެ';
+
+  @override
+  String get asmaMeaning10 => 'އެންމެ ބޮޑު...';
+
+  @override
+  String get asmaMeaning11 => 'ހެއްދެވި ފަރާތެވެ';
+
+  @override
+  String get asmaMeaning12 => 'ދަ މެކަރ އޮފް އޯޑަރ އެވެ';
+
+  @override
+  String get asmaMeaning13 => 'ދަ ޝޭޕަރ އޮފް ބިއުޓީ';
+
+  @override
+  String get asmaMeaning14 => 'ދަ ފޯގިވިންގ އެވެ';
+
+  @override
+  String get asmaMeaning15 => 'ދަ ސަބްޑަޔަރ އެވެ';
+
+  @override
+  String get asmaMeaning16 => 'ހުރިހާ އެންމެންގެ ދެއްވާ ފަރާތެވެ';
+
+  @override
+  String get asmaMeaning17 => 'ދަ ސަސްޓެއިނަރ އެވެ';
+
+  @override
+  String get asmaMeaning18 => 'ދަ އޯޕަނަރ';
+
+  @override
+  String get asmaMeaning19 => 'އެންމެންގެ ޢިލްމުވެރިޔާއެވެ';
+
+  @override
+  String get asmaMeaning20 => 'ކޮންސްޓްރިކްޓަރ...';
+
+  @override
+  String get asmaMeaning21 => 'ދަ ރިލީވަރ އެވެ';
+
+  @override
+  String get asmaMeaning22 => 'ދަ އަބަސަރ އެވެ';
+
+  @override
+  String get asmaMeaning23 => 'ދަ އެކްސްސަލްޓަރ އެވެ';
+
+  @override
+  String get asmaMeaning24 => 'ދަ ބެސްޓަވަރ އޮފް އޮނަރ އެވެ';
+
+  @override
+  String get asmaMeaning25 => 'ދަ ހޫމިލިއޭޓަރ އެވެ';
+
+  @override
+  String get asmaMeaning26 => 'ހުރިހާ އެންމެންގެ އަޑުއަހާ މީހާއެވެ';
+
+  @override
+  String get asmaMeaning27 => 'ހުރިހާ އެންމެންގެ ދެކެވަޑައިގަންނަވާ ފަރާތެވެ';
+
+  @override
+  String get asmaMeaning28 => 'ފަނޑިޔާރު ޑރ';
+
+  @override
+  String get asmaMeaning29 => 'ދަ ޖަސްޓް...';
+
+  @override
+  String get asmaMeaning30 => 'ދަ ސަބްޓިލް ވަން އެވެ';
+
+  @override
+  String get asmaMeaning31 => 'ދަ އޮލް އެވޭއާ އެވެ';
+
+  @override
+  String get asmaMeaning32 => 'ދަ ފޯބީރިންގ އެވެ';
+
+  @override
+  String get asmaMeaning33 => 'ދަ މެގްނިފިޝަންޓް އެވެ';
+
+  @override
+  String get asmaMeaning34 => 'ބޮޑު މާފުކުރާ މީހާއެވެ';
+
+  @override
+  String get asmaMeaning35 => 'ޝުކުރުވެރިކަމުގެ އިނާމު ދޭ މީހާއެވެ';
+
+  @override
+  String get asmaMeaning36 => 'އެންމެ މަތީ ދަރަޖައިގެ…';
+
+  @override
+  String get asmaMeaning37 => 'އެންމެ ބޮޑު...';
+
+  @override
+  String get asmaMeaning38 => 'ދަ ޕްރިޒަރވަރ އެވެ';
+
+  @override
+  String get asmaMeaning39 => 'ދަ ނޮރިޝަރ އެވެ';
+
+  @override
+  String get asmaMeaning40 => 'ދަ ރެކޮނަރ އެވެ';
+
+  @override
+  String get asmaMeaning41 => 'ދަ މެޖެސްޓިކް';
+
+  @override
+  String get asmaMeaning42 => 'ދީލަތި...';
+
+  @override
+  String get asmaMeaning43 => 'ދަ ވޮޗްފުލް ވަން އެވެ';
+
+  @override
+  String get asmaMeaning44 => 'ނަމާދަށް އިޖާބަދޭ މީހާއެވެ';
+
+  @override
+  String get asmaMeaning45 => 'ދަ އޮލް ކޮމްޕްރެހެންޑިންގ އެވެ';
+
+  @override
+  String get asmaMeaning46 => 'ދަ ޕާފެކްޓްލީ ވައިސް އެވެ';
+
+  @override
+  String get asmaMeaning47 => 'ލޯބިވާ މީހާއެވެ';
+
+  @override
+  String get asmaMeaning48 => 'އެންމެ ޝަރަފުވެރި ރަސްކަލާނގެއެވެ';
+
+  @override
+  String get asmaMeaning49 => 'ދިރުއްވާ ރަސްކަލާނގެއެވެ';
+
+  @override
+  String get asmaMeaning50 => 'ހެކިވެރިޔާ އެވެ';
+
+  @override
+  String get asmaMeaning51 => 'ހަގީގަތެވެ';
+
+  @override
+  String get asmaMeaning52 => 'އޮލް-ސުފިޝަންޓް ޓްރަސްޓީ އެވެ';
+
+  @override
+  String get asmaMeaning53 => 'ހުރިހާ ބާރެއްގެ ވެރިފަރާތެވެ';
+
+  @override
+  String get asmaMeaning54 => 'ދަ ފޯސްފުލް އެވެ';
+
+  @override
+  String get asmaMeaning55 => 'ދަ ޕްރޮޓެކްޓަރ އެވެ';
+
+  @override
+  String get asmaMeaning56 => 'ދަ ޕްރެއިސްޑް';
+
+  @override
+  String get asmaMeaning57 => 'އެޕްރައިޒަރެވެ';
+
+  @override
+  String get asmaMeaning58 => 'ދަ އޮރިޖިނޭޓަރ އެވެ';
+
+  @override
+  String get asmaMeaning59 => 'ދަ ރިސްޓޯރަރ އެވެ';
+
+  @override
+  String get asmaMeaning60 => 'ދިރިއުޅުން ދެއްވާ ފަރާތެވެ';
+
+  @override
+  String get asmaMeaning61 => 'ދަ ޓޭކަރ އޮފް ލައިފް އެވެ';
+
+  @override
+  String get asmaMeaning62 => 'ދަ އެވަރ ލިވިންގް އެވެ';
+
+  @override
+  String get asmaMeaning63 => 'އަމިއްލައަށް ދިރިއުޅެވޭ ސަސްޓެއިނަރ އެވެ';
+
+  @override
+  String get asmaMeaning64 => 'ދަ ފައިންޑަރ އެވެ';
+
+  @override
+  String get asmaMeaning65 => 'ދަ ގްލޯރިއަސް އެވެ';
+
+  @override
+  String get asmaMeaning66 => 'ދަ އޮންލީ ވަން އެވެ';
+
+  @override
+  String get asmaMeaning67 => 'ދަ ވަން';
+
+  @override
+  String get asmaMeaning68 => 'އެންމެން ހޯދަމުންދާ ފަރާތެވެ';
+
+  @override
+  String get asmaMeaning69 => 'ދަ ޕަވަރފޫލް އެވެ';
+
+  @override
+  String get asmaMeaning70 => 'ހުރިހާ ބާރެއް ހެއްދެވި ފަރާތެވެ';
+
+  @override
+  String get asmaMeaning71 => 'ދަ އެކްސްޕެޑިޓަރ އެވެ';
+
+  @override
+  String get asmaMeaning72 => 'ދަ ޑިލޭޔަރ އެވެ';
+
+  @override
+  String get asmaMeaning73 => 'ފުރަތަމަ...';
+
+  @override
+  String get asmaMeaning74 => 'ދަ ލަސްޓް';
+
+  @override
+  String get asmaMeaning75 => 'ދަ މެނިފެސްޓް';
+
+  @override
+  String get asmaMeaning76 => 'ދަ ހިޑެން';
+
+  @override
+  String get asmaMeaning77 => 'ގަވަރުނަރު ޑރ';
+
+  @override
+  String get asmaMeaning78 => 'އެންމެ މަތީ ފަރާތެވެ';
+
+  @override
+  String get asmaMeaning79 => 'ހެޔޮކަންތައްތައް ކުރާ މީހާއެވެ';
+
+  @override
+  String get asmaMeaning80 => 'ތައުބާވުމުގެ ގައިޑް';
+
+  @override
+  String get asmaMeaning81 => 'ދަ އެވޭންޖަރ އެވެ';
+
+  @override
+  String get asmaMeaning82 => 'މާފުކުރާ މީހާއެވެ';
+
+  @override
+  String get asmaMeaning83 => 'ދަ ކްލެމެންޓް އެވެ';
+
+  @override
+  String get asmaMeaning84 => 'ހުރިހާ އެންމެންގެ ވެރިފަރާތް / ސޮވަރިން';
+
+  @override
+  String get asmaMeaning85 => 'ދަ ޕޮސެސަރ އޮފް މެޖެސްޓީ އެންޑް ބައުންޓީ';
+
+  @override
+  String get asmaMeaning86 => 'ދަ އިކުއިޓެބަލް ވަން އެވެ';
+
+  @override
+  String get asmaMeaning87 => 'ދަ ގެދަރ އެވެ';
+
+  @override
+  String get asmaMeaning88 => 'މުއްސަނދި މީހާ އެވެ';
+
+  @override
+  String get asmaMeaning89 => 'ދަ އެންރިޗަރ އެވެ';
+
+  @override
+  String get asmaMeaning90 => 'ދަ ޕްރިވެންޓަރ އޮފް ހާމް';
+
+  @override
+  String get asmaMeaning91 => 'ދަ ބްރިންގަރ އޮފް ހާމް އެވެ';
+
+  @override
+  String get asmaMeaning92 => 'ދަ ބެސްޓަވަރ އޮފް ބެނެފިޓްސް';
+
+  @override
+  String get asmaMeaning93 => 'ދަ ލައިޓް އެވެ';
+
+  @override
+  String get asmaMeaning94 => 'ދަ ގައިޑަރ އެވެ';
+
+  @override
+  String get asmaMeaning95 => 'ދަ އޮރިޖިނޭޓަރ އެވެ';
+
+  @override
+  String get asmaMeaning96 => 'ދަ އެވަރލަސްޓިންގ ވަން އެވެ';
+
+  @override
+  String get asmaMeaning97 => 'ވާރުތަވެރިޔާ އެވެ';
+
+  @override
+  String get asmaMeaning98 => 'އެންމެ ޞާލިޙު ގައިޑް';
+
+  @override
+  String get asmaMeaning99 => 'ދަ ޕޭޝަންޓް ވަން އެވެ';
 }

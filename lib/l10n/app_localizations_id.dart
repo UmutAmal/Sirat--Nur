@@ -1186,4 +1186,301 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Tempat Islami';
+
+  @override
+  String get asmaMeaning1 => 'Yang Maha Pemurah';
+
+  @override
+  String get asmaMeaning2 => 'Maha Penyayang';
+
+  @override
+  String get asmaMeaning3 => 'Raja / Tuan Yang Abadi';
+
+  @override
+  String get asmaMeaning4 => 'Yang Mahakudus';
+
+  @override
+  String get asmaMeaning5 => 'Sumber Kedamaian';
+
+  @override
+  String get asmaMeaning6 => 'Pemberi Keamanan';
+
+  @override
+  String get asmaMeaning7 => 'Penjaga';
+
+  @override
+  String get asmaMeaning8 => 'Maha Berharga/Maha Perkasa';
+
+  @override
+  String get asmaMeaning9 => 'Pembanding';
+
+  @override
+  String get asmaMeaning10 => 'Yang Terhebat';
+
+  @override
+  String get asmaMeaning11 => 'Sang Pencipta';
+
+  @override
+  String get asmaMeaning12 => 'Pembuat Pesanan';
+
+  @override
+  String get asmaMeaning13 => 'Pembentuk Kecantikan';
+
+  @override
+  String get asmaMeaning14 => 'Maha Pemaaf';
+
+  @override
+  String get asmaMeaning15 => 'Penakluk';
+
+  @override
+  String get asmaMeaning16 => 'Pemberi Segalanya';
+
+  @override
+  String get asmaMeaning17 => 'Sang Pemelihara';
+
+  @override
+  String get asmaMeaning18 => 'Pembuka';
+
+  @override
+  String get asmaMeaning19 => 'Yang Maha Mengetahui Segalanya';
+
+  @override
+  String get asmaMeaning20 => 'Pembatas';
+
+  @override
+  String get asmaMeaning21 => 'Pereda';
+
+  @override
+  String get asmaMeaning22 => 'Si Penghina';
+
+  @override
+  String get asmaMeaning23 => 'Yang Mulia';
+
+  @override
+  String get asmaMeaning24 => 'Pemberi Kehormatan';
+
+  @override
+  String get asmaMeaning25 => 'Penghina';
+
+  @override
+  String get asmaMeaning26 => 'Pendengar Semua Orang';
+
+  @override
+  String get asmaMeaning27 => 'Yang Melihat Segalanya';
+
+  @override
+  String get asmaMeaning28 => 'Hakim';
+
+  @override
+  String get asmaMeaning29 => 'Yang Adil';
+
+  @override
+  String get asmaMeaning30 => 'Yang Halus';
+
+  @override
+  String get asmaMeaning31 => 'Yang Maha Sadar';
+
+  @override
+  String get asmaMeaning32 => 'Sabar';
+
+  @override
+  String get asmaMeaning33 => 'Yang Luar Biasa';
+
+  @override
+  String get asmaMeaning34 => 'Maha Pemaaf';
+
+  @override
+  String get asmaMeaning35 => 'Pemberi Pahala Rasa Syukur';
+
+  @override
+  String get asmaMeaning36 => 'Yang Tertinggi';
+
+  @override
+  String get asmaMeaning37 => 'Yang Terhebat';
+
+  @override
+  String get asmaMeaning38 => 'Pemelihara';
+
+  @override
+  String get asmaMeaning39 => 'Pemberi Nutrisi';
+
+  @override
+  String get asmaMeaning40 => 'Penghitung';
+
+  @override
+  String get asmaMeaning41 => 'Yang Agung';
+
+  @override
+  String get asmaMeaning42 => 'Yang Dermawan';
+
+  @override
+  String get asmaMeaning43 => 'Yang Waspada';
+
+  @override
+  String get asmaMeaning44 => 'Penjawab Doa';
+
+  @override
+  String get asmaMeaning45 => 'Semuanya Memahami';
+
+  @override
+  String get asmaMeaning46 => 'Yang Sangat Bijaksana';
+
+  @override
+  String get asmaMeaning47 => 'Yang Penuh Kasih';
+
+  @override
+  String get asmaMeaning48 => 'Yang Maha Mulia';
+
+  @override
+  String get asmaMeaning49 => 'Sang Kebangkitan';
+
+  @override
+  String get asmaMeaning50 => 'Saksi';
+
+  @override
+  String get asmaMeaning51 => 'Kebenaran';
+
+  @override
+  String get asmaMeaning52 => 'Wali Yang Maha Cukup';
+
+  @override
+  String get asmaMeaning53 => 'Pemilik Segala Kekuatan';
+
+  @override
+  String get asmaMeaning54 => 'Yang Kuat';
+
+  @override
+  String get asmaMeaning55 => 'Pelindung';
+
+  @override
+  String get asmaMeaning56 => 'Yang Terpuji';
+
+  @override
+  String get asmaMeaning57 => 'Penilai';
+
+  @override
+  String get asmaMeaning58 => 'Pembuat Asal';
+
+  @override
+  String get asmaMeaning59 => 'Pemulih';
+
+  @override
+  String get asmaMeaning60 => 'Pemberi Kehidupan';
+
+  @override
+  String get asmaMeaning61 => 'Pengambil Kehidupan';
+
+  @override
+  String get asmaMeaning62 => 'Yang Selalu Hidup';
+
+  @override
+  String get asmaMeaning63 => 'Pemelihara Mandiri';
+
+  @override
+  String get asmaMeaning64 => 'Penemu';
+
+  @override
+  String get asmaMeaning65 => 'Yang Mulia';
+
+  @override
+  String get asmaMeaning66 => 'Satu-Satunya';
+
+  @override
+  String get asmaMeaning67 => 'Yang Satu';
+
+  @override
+  String get asmaMeaning68 => 'Yang Dicari Semua Orang';
+
+  @override
+  String get asmaMeaning69 => 'Yang Maha Kuasa';
+
+  @override
+  String get asmaMeaning70 => 'Pencipta segala kekuatan';
+
+  @override
+  String get asmaMeaning71 => 'Ekspedisi';
+
+  @override
+  String get asmaMeaning72 => 'Penunda';
+
+  @override
+  String get asmaMeaning73 => 'Yang Pertama';
+
+  @override
+  String get asmaMeaning74 => 'Yang Terakhir';
+
+  @override
+  String get asmaMeaning75 => 'Manifes';
+
+  @override
+  String get asmaMeaning76 => 'Yang Tersembunyi';
+
+  @override
+  String get asmaMeaning77 => 'Gubernur';
+
+  @override
+  String get asmaMeaning78 => 'Yang Maha Agung';
+
+  @override
+  String get asmaMeaning79 => 'Pelaku Kebaikan';
+
+  @override
+  String get asmaMeaning80 => 'Panduan Pertobatan';
+
+  @override
+  String get asmaMeaning81 => 'Pembalas dendam';
+
+  @override
+  String get asmaMeaning82 => 'Yang Maha Pemaaf';
+
+  @override
+  String get asmaMeaning83 => 'Klemens';
+
+  @override
+  String get asmaMeaning84 => 'Pemilik / Penguasa Segalanya';
+
+  @override
+  String get asmaMeaning85 => 'Pemilik Keagungan dan Karunia';
+
+  @override
+  String get asmaMeaning86 => 'Yang Adil';
+
+  @override
+  String get asmaMeaning87 => 'Pengumpul';
+
+  @override
+  String get asmaMeaning88 => 'Yang Kaya';
+
+  @override
+  String get asmaMeaning89 => 'Yang Memperkaya';
+
+  @override
+  String get asmaMeaning90 => 'Pencegah Bahaya';
+
+  @override
+  String get asmaMeaning91 => 'Pembawa Bahaya';
+
+  @override
+  String get asmaMeaning92 => 'Pemberi Manfaat';
+
+  @override
+  String get asmaMeaning93 => 'Cahaya';
+
+  @override
+  String get asmaMeaning94 => 'Pemandu';
+
+  @override
+  String get asmaMeaning95 => 'Pembuatnya';
+
+  @override
+  String get asmaMeaning96 => 'Yang Abadi';
+
+  @override
+  String get asmaMeaning97 => 'Pewaris';
+
+  @override
+  String get asmaMeaning98 => 'Pedoman Yang Paling Adil';
+
+  @override
+  String get asmaMeaning99 => 'Yang Sabar';
 }

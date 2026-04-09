@@ -1186,4 +1186,301 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Wahi Islama';
+
+  @override
+  String get asmaMeaning1 => 'Ka Mea Aloha';
+
+  @override
+  String get asmaMeaning2 => 'Ka Mea Aloha';
+
+  @override
+  String get asmaMeaning3 => 'Ka Moi / Haku mau loa';
+
+  @override
+  String get asmaMeaning4 => 'Ka Mea Hoano Loa';
+
+  @override
+  String get asmaMeaning5 => 'Ke Kumu o ka Maluhia';
+
+  @override
+  String get asmaMeaning6 => 'Ka Mea Hāʻawi i ka Maluhia';
+
+  @override
+  String get asmaMeaning7 => 'Ke kiai';
+
+  @override
+  String get asmaMeaning8 => 'Ka Makamae / Ka Mea Mana Loa';
+
+  @override
+  String get asmaMeaning9 => 'Ka Mea Koi';
+
+  @override
+  String get asmaMeaning10 => 'Ka Mea Nui';
+
+  @override
+  String get asmaMeaning11 => 'Ka Mea Hana';
+
+  @override
+  String get asmaMeaning12 => 'Ka mea nana i kauoha';
+
+  @override
+  String get asmaMeaning13 => 'Ka Nani o ka Nani';
+
+  @override
+  String get asmaMeaning14 => 'Ka Mea kala';
+
+  @override
+  String get asmaMeaning15 => 'Ka Mea Nalo';
+
+  @override
+  String get asmaMeaning16 => 'Ka Mea Hāʻawi i nā mea a pau';
+
+  @override
+  String get asmaMeaning17 => 'Ka Mea Mālama';
+
+  @override
+  String get asmaMeaning18 => 'Ka Wehewehe';
+
+  @override
+  String get asmaMeaning19 => 'Ka mea ike i na mea a pau';
+
+  @override
+  String get asmaMeaning20 => 'Ka Mea Hoʻopaʻa';
+
+  @override
+  String get asmaMeaning21 => 'Ka Mea Hoʻomaha';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Ka Mea Hoʻokiʻekiʻe';
+
+  @override
+  String get asmaMeaning24 => 'Ka Mea Hanohano';
+
+  @override
+  String get asmaMeaning25 => 'Ka Mea Hoʻohaʻahaʻa';
+
+  @override
+  String get asmaMeaning26 => 'Ka Lohe o na mea a pau';
+
+  @override
+  String get asmaMeaning27 => 'Ka Makaula o na mea a pau';
+
+  @override
+  String get asmaMeaning28 => 'Ka Lunakanawai';
+
+  @override
+  String get asmaMeaning29 => 'Ka Pono';
+
+  @override
+  String get asmaMeaning30 => 'Ka Mea Maalea';
+
+  @override
+  String get asmaMeaning31 => 'Ka mea a pau i ike';
+
+  @override
+  String get asmaMeaning32 => 'Ka Kaumua';
+
+  @override
+  String get asmaMeaning33 => 'Ka Mea Hanohano';
+
+  @override
+  String get asmaMeaning34 => 'Ka Mea kala nui';
+
+  @override
+  String get asmaMeaning35 => 'Ka Mea Hoʻomaikaʻi';
+
+  @override
+  String get asmaMeaning36 => 'Ka Mea Kiʻekiʻe';
+
+  @override
+  String get asmaMeaning37 => 'Ka Mea Nui';
+
+  @override
+  String get asmaMeaning38 => 'Ka Mea Mālama';
+
+  @override
+  String get asmaMeaning39 => 'Ka Mea Hanai';
+
+  @override
+  String get asmaMeaning40 => 'Ka Heluhelu';
+
+  @override
+  String get asmaMeaning41 => 'Ka Mea Kiekie';
+
+  @override
+  String get asmaMeaning42 => 'Ka Mea Manawa';
+
+  @override
+  String get asmaMeaning43 => 'Ka Mea Kiaʻi';
+
+  @override
+  String get asmaMeaning44 => 'Ka mea pane i ka pule';
+
+  @override
+  String get asmaMeaning45 => 'Ka Hoʻomaopopo a pau';
+
+  @override
+  String get asmaMeaning46 => 'Ka Naauao Loa';
+
+  @override
+  String get asmaMeaning47 => 'Ka Mea Aloha';
+
+  @override
+  String get asmaMeaning48 => 'Ka Mea Hanohano Loa';
+
+  @override
+  String get asmaMeaning49 => 'Ke Alahouana';
+
+  @override
+  String get asmaMeaning50 => 'Ka Hoike';
+
+  @override
+  String get asmaMeaning51 => 'Ka Oiaio';
+
+  @override
+  String get asmaMeaning52 => 'ʻO ka Puʻukū Pono Loa';
+
+  @override
+  String get asmaMeaning53 => 'Ka mea nona ka ikaika a pau';
+
+  @override
+  String get asmaMeaning54 => 'Ka Mea Paʻa';
+
+  @override
+  String get asmaMeaning55 => 'Ka mea pale';
+
+  @override
+  String get asmaMeaning56 => 'Ka Mea Mahaloia';
+
+  @override
+  String get asmaMeaning57 => 'Ka Loiloi';
+
+  @override
+  String get asmaMeaning58 => 'Ka Mea Hoʻokumu';
+
+  @override
+  String get asmaMeaning59 => 'Ka Mea Hoʻihoʻi';
+
+  @override
+  String get asmaMeaning60 => 'Ka Mea Hāʻawi i ke Ola';
+
+  @override
+  String get asmaMeaning61 => 'Ka Mea Lawe Ola';
+
+  @override
+  String get asmaMeaning62 => 'Ke ola mau loa';
+
+  @override
+  String get asmaMeaning63 => 'Ka Mea Kupa Ponoi';
+
+  @override
+  String get asmaMeaning64 => 'Ka Mea Loaʻa';
+
+  @override
+  String get asmaMeaning65 => 'Ka Mea Hanohano';
+
+  @override
+  String get asmaMeaning66 => 'Ka Mea Hoʻokahi';
+
+  @override
+  String get asmaMeaning67 => 'Kekahi';
+
+  @override
+  String get asmaMeaning68 => 'Ka mea i ʻimi ʻia e nā mea a pau';
+
+  @override
+  String get asmaMeaning69 => 'Ka Mea Mana';
+
+  @override
+  String get asmaMeaning70 => 'Ka mea nana i hana i ka mana a pau';
+
+  @override
+  String get asmaMeaning71 => 'Ka mea holo wikiwiki';
+
+  @override
+  String get asmaMeaning72 => 'Ka mea lohi';
+
+  @override
+  String get asmaMeaning73 => 'Ka Mua';
+
+  @override
+  String get asmaMeaning74 => 'Ka Hope';
+
+  @override
+  String get asmaMeaning75 => 'Ka Hōʻike';
+
+  @override
+  String get asmaMeaning76 => 'Ka Huna';
+
+  @override
+  String get asmaMeaning77 => 'Ke Kiaaina';
+
+  @override
+  String get asmaMeaning78 => 'Ka Mea Kiʻekiʻe';
+
+  @override
+  String get asmaMeaning79 => 'Ka Mea Hana Maikai';
+
+  @override
+  String get asmaMeaning80 => 'Ke alakaʻi i ka mihi';
+
+  @override
+  String get asmaMeaning81 => 'Ka Mea Hoʻopaʻi';
+
+  @override
+  String get asmaMeaning82 => 'Ka Mea kala';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Ka mea nona / Alii o na mea a pau';
+
+  @override
+  String get asmaMeaning85 => 'Ka mea nona ka hanohano a me ka makana';
+
+  @override
+  String get asmaMeaning86 => 'Ka Mea Kaulike';
+
+  @override
+  String get asmaMeaning87 => 'Ka Mea Houluulu';
+
+  @override
+  String get asmaMeaning88 => 'Ka Mea Waiwai';
+
+  @override
+  String get asmaMeaning89 => 'Ka Mea Hoʻonaʻauao';
+
+  @override
+  String get asmaMeaning90 => 'Ka mea e pale aku i ka poino';
+
+  @override
+  String get asmaMeaning91 => 'Ka mea lawe mai i ka poino';
+
+  @override
+  String get asmaMeaning92 => 'Ka Mea Hāʻawi i nā Pōmaikaʻi';
+
+  @override
+  String get asmaMeaning93 => 'Ka Malamalama';
+
+  @override
+  String get asmaMeaning94 => 'Ke alakaʻi';
+
+  @override
+  String get asmaMeaning95 => 'Ka Mea Hoʻokumu';
+
+  @override
+  String get asmaMeaning96 => 'Ka Mea Mau loa';
+
+  @override
+  String get asmaMeaning97 => 'Ka Hooilina';
+
+  @override
+  String get asmaMeaning98 => 'Ke Alakai Pono Loa';
+
+  @override
+  String get asmaMeaning99 => 'Ka Mea Hoomanawanui';
 }

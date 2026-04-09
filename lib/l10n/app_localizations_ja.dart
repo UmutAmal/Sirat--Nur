@@ -1179,4 +1179,301 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'イスラムの場所';
+
+  @override
+  String get asmaMeaning1 => '慈善者';
+
+  @override
+  String get asmaMeaning2 => '慈悲深い者';
+
+  @override
+  String get asmaMeaning3 => '王 / 永遠の主';
+
+  @override
+  String get asmaMeaning4 => '最も神聖なもの';
+
+  @override
+  String get asmaMeaning5 => '平和の源';
+
+  @override
+  String get asmaMeaning6 => 'セキュリティの提供者';
+
+  @override
+  String get asmaMeaning7 => 'ガーディアン';
+
+  @override
+  String get asmaMeaning8 => '貴重なもの / 最も強力なもの';
+
+  @override
+  String get asmaMeaning9 => 'コンペラー';
+
+  @override
+  String get asmaMeaning10 => '最高のもの';
+
+  @override
+  String get asmaMeaning11 => 'クリエイター';
+
+  @override
+  String get asmaMeaning12 => '注文のメーカー';
+
+  @override
+  String get asmaMeaning13 => '美を形作る者';
+
+  @override
+  String get asmaMeaning14 => '寛容';
+
+  @override
+  String get asmaMeaning15 => '征服者';
+
+  @override
+  String get asmaMeaning16 => 'すべてを与える者';
+
+  @override
+  String get asmaMeaning17 => 'サステナー';
+
+  @override
+  String get asmaMeaning18 => 'オープナー';
+
+  @override
+  String get asmaMeaning19 => 'すべてを知る者';
+
+  @override
+  String get asmaMeaning20 => 'コンストリクター';
+
+  @override
+  String get asmaMeaning21 => '救済者';
+
+  @override
+  String get asmaMeaning22 => 'アバサー';
+
+  @override
+  String get asmaMeaning23 => 'エグザルター';
+
+  @override
+  String get asmaMeaning24 => '名誉の授与者';
+
+  @override
+  String get asmaMeaning25 => '屈辱者';
+
+  @override
+  String get asmaMeaning26 => 'すべての声を聞く者';
+
+  @override
+  String get asmaMeaning27 => 'すべてを予見する者';
+
+  @override
+  String get asmaMeaning28 => '裁判官';
+
+  @override
+  String get asmaMeaning29 => '正義';
+
+  @override
+  String get asmaMeaning30 => '微妙なもの';
+
+  @override
+  String get asmaMeaning31 => 'すべてを認識している';
+
+  @override
+  String get asmaMeaning32 => '先駆者';
+
+  @override
+  String get asmaMeaning33 => '壮大な';
+
+  @override
+  String get asmaMeaning34 => '偉大な許し者';
+
+  @override
+  String get asmaMeaning35 => '感謝の報酬';
+
+  @override
+  String get asmaMeaning36 => '最高';
+
+  @override
+  String get asmaMeaning37 => '最高のもの';
+
+  @override
+  String get asmaMeaning38 => 'プリザーバー';
+
+  @override
+  String get asmaMeaning39 => '栄養者';
+
+  @override
+  String get asmaMeaning40 => '清算者';
+
+  @override
+  String get asmaMeaning41 => 'マジェスティック';
+
+  @override
+  String get asmaMeaning42 => '寛大な';
+
+  @override
+  String get asmaMeaning43 => '用心深い人';
+
+  @override
+  String get asmaMeaning44 => '祈りに応える者';
+
+  @override
+  String get asmaMeaning45 => 'すべてを理解する';
+
+  @override
+  String get asmaMeaning46 => '完璧な賢者';
+
+  @override
+  String get asmaMeaning47 => '愛する人';
+
+  @override
+  String get asmaMeaning48 => '最も輝かしいもの';
+
+  @override
+  String get asmaMeaning49 => 'リザレクター';
+
+  @override
+  String get asmaMeaning50 => '証人';
+
+  @override
+  String get asmaMeaning51 => '真実';
+
+  @override
+  String get asmaMeaning52 => '完全な受託者';
+
+  @override
+  String get asmaMeaning53 => 'あらゆる力の持ち主';
+
+  @override
+  String get asmaMeaning54 => '力強い';
+
+  @override
+  String get asmaMeaning55 => 'プロテクター';
+
+  @override
+  String get asmaMeaning56 => '賞賛されるもの';
+
+  @override
+  String get asmaMeaning57 => '鑑定士';
+
+  @override
+  String get asmaMeaning58 => '創始者';
+
+  @override
+  String get asmaMeaning59 => '修復者';
+
+  @override
+  String get asmaMeaning60 => '命の贈り主';
+
+  @override
+  String get asmaMeaning61 => '命を奪う者';
+
+  @override
+  String get asmaMeaning62 => '永遠に生きる';
+
+  @override
+  String get asmaMeaning63 => '自立した持続者';
+
+  @override
+  String get asmaMeaning64 => 'ファインダー';
+
+  @override
+  String get asmaMeaning65 => '輝かしい';
+
+  @override
+  String get asmaMeaning66 => '唯一のもの';
+
+  @override
+  String get asmaMeaning67 => 'ザ・ワン';
+
+  @override
+  String get asmaMeaning68 => 'すべての人が求めているもの';
+
+  @override
+  String get asmaMeaning69 => 'パワフル';
+
+  @override
+  String get asmaMeaning70 => 'あらゆる力の創造者';
+
+  @override
+  String get asmaMeaning71 => 'エクスペディター';
+
+  @override
+  String get asmaMeaning72 => '遅延者';
+
+  @override
+  String get asmaMeaning73 => '最初の';
+
+  @override
+  String get asmaMeaning74 => '最後';
+
+  @override
+  String get asmaMeaning75 => 'マニフェスト';
+
+  @override
+  String get asmaMeaning76 => '隠されたもの';
+
+  @override
+  String get asmaMeaning77 => '知事';
+
+  @override
+  String get asmaMeaning78 => '至高のもの';
+
+  @override
+  String get asmaMeaning79 => '善を行う者';
+
+  @override
+  String get asmaMeaning80 => '悔い改めへのガイド';
+
+  @override
+  String get asmaMeaning81 => '復讐者';
+
+  @override
+  String get asmaMeaning82 => '許す者';
+
+  @override
+  String get asmaMeaning83 => 'クレメント';
+
+  @override
+  String get asmaMeaning84 => 'すべての所有者/主権者';
+
+  @override
+  String get asmaMeaning85 => '威厳と恩恵の持ち主';
+
+  @override
+  String get asmaMeaning86 => '公平なもの';
+
+  @override
+  String get asmaMeaning87 => 'ギャザラー';
+
+  @override
+  String get asmaMeaning88 => '金持ち';
+
+  @override
+  String get asmaMeaning89 => 'エンリッチャー';
+
+  @override
+  String get asmaMeaning90 => '危害の防止者';
+
+  @override
+  String get asmaMeaning91 => '害をもたらす者';
+
+  @override
+  String get asmaMeaning92 => '恩恵の授与者';
+
+  @override
+  String get asmaMeaning93 => '光';
+
+  @override
+  String get asmaMeaning94 => 'ザ・ガイダー';
+
+  @override
+  String get asmaMeaning95 => '創始者';
+
+  @override
+  String get asmaMeaning96 => '永遠のもの';
+
+  @override
+  String get asmaMeaning97 => '継承者';
+
+  @override
+  String get asmaMeaning98 => '最も正義のガイド';
+
+  @override
+  String get asmaMeaning99 => '患者 1';
 }

@@ -1186,4 +1186,301 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islamisk plats';
+
+  @override
+  String get asmaMeaning1 => 'The Beneficent';
+
+  @override
+  String get asmaMeaning2 => 'Den barmhärtige';
+
+  @override
+  String get asmaMeaning3 => 'Kungen / Evige Herre';
+
+  @override
+  String get asmaMeaning4 => 'Det allra heligaste';
+
+  @override
+  String get asmaMeaning5 => 'Källan till fred';
+
+  @override
+  String get asmaMeaning6 => 'Säkerhetsgivaren';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Den dyrbara / den mäktigaste';
+
+  @override
+  String get asmaMeaning9 => 'Tvingaren';
+
+  @override
+  String get asmaMeaning10 => 'Den största';
+
+  @override
+  String get asmaMeaning11 => 'Skaparen';
+
+  @override
+  String get asmaMeaning12 => 'The Maker of Order';
+
+  @override
+  String get asmaMeaning13 => 'The Shaper of Beauty';
+
+  @override
+  String get asmaMeaning14 => 'Den förlåtande';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Allts givare';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'Öppnaren';
+
+  @override
+  String get asmaMeaning19 => 'Allans vetande';
+
+  @override
+  String get asmaMeaning20 => 'Konstriktorn';
+
+  @override
+  String get asmaMeaning21 => 'Reliever';
+
+  @override
+  String get asmaMeaning22 => 'Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Exaltern';
+
+  @override
+  String get asmaMeaning24 => 'Hedersutdelaren';
+
+  @override
+  String get asmaMeaning25 => 'Förödmjukaren';
+
+  @override
+  String get asmaMeaning26 => 'Allas Hörare';
+
+  @override
+  String get asmaMeaning27 => 'Allas seare';
+
+  @override
+  String get asmaMeaning28 => 'Domaren';
+
+  @override
+  String get asmaMeaning29 => 'The Just';
+
+  @override
+  String get asmaMeaning30 => 'Den subtila';
+
+  @override
+  String get asmaMeaning31 => 'The All Aware';
+
+  @override
+  String get asmaMeaning32 => 'Förutsättningen';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'Den store förlåtaren';
+
+  @override
+  String get asmaMeaning35 => 'Tacksamhetens belönare';
+
+  @override
+  String get asmaMeaning36 => 'Det högsta';
+
+  @override
+  String get asmaMeaning37 => 'Den största';
+
+  @override
+  String get asmaMeaning38 => 'Bevararen';
+
+  @override
+  String get asmaMeaning39 => 'The Nourisher';
+
+  @override
+  String get asmaMeaning40 => 'Regnaren';
+
+  @override
+  String get asmaMeaning41 => 'Den majestätiska';
+
+  @override
+  String get asmaMeaning42 => 'De generösa';
+
+  @override
+  String get asmaMeaning43 => 'Den vakande';
+
+  @override
+  String get asmaMeaning44 => 'Bönsvararen';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehending';
+
+  @override
+  String get asmaMeaning46 => 'De perfekt kloka';
+
+  @override
+  String get asmaMeaning47 => 'Den älskande';
+
+  @override
+  String get asmaMeaning48 => 'Den mest härliga';
+
+  @override
+  String get asmaMeaning49 => 'Återuppståndaren';
+
+  @override
+  String get asmaMeaning50 => 'Vittnet';
+
+  @override
+  String get asmaMeaning51 => 'Sanningen';
+
+  @override
+  String get asmaMeaning52 => 'The All-Sufficient Trustee';
+
+  @override
+  String get asmaMeaning53 => 'Besittaren av all styrka';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'Protektorn';
+
+  @override
+  String get asmaMeaning56 => 'The Praised';
+
+  @override
+  String get asmaMeaning57 => 'Bedömaren';
+
+  @override
+  String get asmaMeaning58 => 'Upphovsmannen';
+
+  @override
+  String get asmaMeaning59 => 'Återställaren';
+
+  @override
+  String get asmaMeaning60 => 'Livets givare';
+
+  @override
+  String get asmaMeaning61 => 'Livstagaren';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'The Self-Subsisting Sustainer';
+
+  @override
+  String get asmaMeaning64 => 'Finnaren';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'Den enda';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'Den som alla sökte';
+
+  @override
+  String get asmaMeaning69 => 'Den kraftfulla';
+
+  @override
+  String get asmaMeaning70 => 'Skaparen av all makt';
+
+  @override
+  String get asmaMeaning71 => 'Expeditören';
+
+  @override
+  String get asmaMeaning72 => 'Fördröjaren';
+
+  @override
+  String get asmaMeaning73 => 'Den första';
+
+  @override
+  String get asmaMeaning74 => 'Den sista';
+
+  @override
+  String get asmaMeaning75 => 'Manifestet';
+
+  @override
+  String get asmaMeaning76 => 'The Hidden';
+
+  @override
+  String get asmaMeaning77 => 'Guvernören';
+
+  @override
+  String get asmaMeaning78 => 'Den Supreme One';
+
+  @override
+  String get asmaMeaning79 => 'Det goda som gör det';
+
+  @override
+  String get asmaMeaning80 => 'Guiden till omvändelse';
+
+  @override
+  String get asmaMeaning81 => 'Hämnaren';
+
+  @override
+  String get asmaMeaning82 => 'Förlåtaren';
+
+  @override
+  String get asmaMeaning83 => 'Klementen';
+
+  @override
+  String get asmaMeaning84 => 'Allas ägare/suverän';
+
+  @override
+  String get asmaMeaning85 => 'Besittaren av Majestät och Bounty';
+
+  @override
+  String get asmaMeaning86 => 'The Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'The Gatherer';
+
+  @override
+  String get asmaMeaning88 => 'Den rika';
+
+  @override
+  String get asmaMeaning89 => 'Berikaren';
+
+  @override
+  String get asmaMeaning90 => 'Förhindraren av skada';
+
+  @override
+  String get asmaMeaning91 => 'The Bringer of Harm';
+
+  @override
+  String get asmaMeaning92 => 'Förmånernas skänker';
+
+  @override
+  String get asmaMeaning93 => 'Ljuset';
+
+  @override
+  String get asmaMeaning94 => 'Guidaren';
+
+  @override
+  String get asmaMeaning95 => 'Upphovsmannen';
+
+  @override
+  String get asmaMeaning96 => 'Den eviga';
+
+  @override
+  String get asmaMeaning97 => 'Arvtagaren';
+
+  @override
+  String get asmaMeaning98 => 'Den mest rättfärdiga guiden';
+
+  @override
+  String get asmaMeaning99 => 'Den patienten';
 }

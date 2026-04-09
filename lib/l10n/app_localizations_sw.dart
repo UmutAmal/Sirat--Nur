@@ -1188,4 +1188,301 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Mahali pa Kiislamu';
+
+  @override
+  String get asmaMeaning1 => 'Mwingi wa Rehema';
+
+  @override
+  String get asmaMeaning2 => 'Mwenye Rehema';
+
+  @override
+  String get asmaMeaning3 => 'Mfalme / Bwana wa Milele';
+
+  @override
+  String get asmaMeaning4 => 'Mtakatifu Zaidi';
+
+  @override
+  String get asmaMeaning5 => 'Chanzo cha Amani';
+
+  @override
+  String get asmaMeaning6 => 'Mtoa Usalama';
+
+  @override
+  String get asmaMeaning7 => 'Mlezi';
+
+  @override
+  String get asmaMeaning8 => 'Mwenye Thamani / Mwenye Nguvu Zaidi';
+
+  @override
+  String get asmaMeaning9 => 'Mwenye Kulazimisha';
+
+  @override
+  String get asmaMeaning10 => 'Mkuu';
+
+  @override
+  String get asmaMeaning11 => 'Muumba';
+
+  @override
+  String get asmaMeaning12 => 'Mtengenezaji wa Utaratibu';
+
+  @override
+  String get asmaMeaning13 => 'Mtengenezaji wa Urembo';
+
+  @override
+  String get asmaMeaning14 => 'Mwenye Kusamehe';
+
+  @override
+  String get asmaMeaning15 => 'Mtawala';
+
+  @override
+  String get asmaMeaning16 => 'Mpaji wa Vyote';
+
+  @override
+  String get asmaMeaning17 => 'Mfadhili';
+
+  @override
+  String get asmaMeaning18 => 'Kifunguaji';
+
+  @override
+  String get asmaMeaning19 => 'Mjuzi wa Yote';
+
+  @override
+  String get asmaMeaning20 => 'Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Mkombozi';
+
+  @override
+  String get asmaMeaning22 => 'Mwenye Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Mnyanyuzi';
+
+  @override
+  String get asmaMeaning24 => 'Mtoaji wa Heshima';
+
+  @override
+  String get asmaMeaning25 => 'Mdhalilishaji';
+
+  @override
+  String get asmaMeaning26 => 'Msikiaji wa Yote';
+
+  @override
+  String get asmaMeaning27 => 'Mwonaji wa Wote';
+
+  @override
+  String get asmaMeaning28 => 'Hakimu';
+
+  @override
+  String get asmaMeaning29 => 'Mwenye Haki';
+
+  @override
+  String get asmaMeaning30 => 'Yule Mpole';
+
+  @override
+  String get asmaMeaning31 => 'Wenye Ufahamu Wote';
+
+  @override
+  String get asmaMeaning32 => 'Mtangulizi';
+
+  @override
+  String get asmaMeaning33 => 'Mtukufu';
+
+  @override
+  String get asmaMeaning34 => 'Msamehevu Mkuu';
+
+  @override
+  String get asmaMeaning35 => 'Mthawabishaji wa Shukrani';
+
+  @override
+  String get asmaMeaning36 => 'Aliye Juu Zaidi';
+
+  @override
+  String get asmaMeaning37 => 'Mkuu';
+
+  @override
+  String get asmaMeaning38 => 'Mhifadhi';
+
+  @override
+  String get asmaMeaning39 => 'Mlezi';
+
+  @override
+  String get asmaMeaning40 => 'Mwenye kuhisabu';
+
+  @override
+  String get asmaMeaning41 => 'Mkuu';
+
+  @override
+  String get asmaMeaning42 => 'Mwenye Ukarimu';
+
+  @override
+  String get asmaMeaning43 => 'Mwenye Kukesha';
+
+  @override
+  String get asmaMeaning44 => 'Mwitikio wa Swala';
+
+  @override
+  String get asmaMeaning45 => 'Ufahamu Wote';
+
+  @override
+  String get asmaMeaning46 => 'Mwenye Hekima Kamili';
+
+  @override
+  String get asmaMeaning47 => 'Yule Mpendwa';
+
+  @override
+  String get asmaMeaning48 => 'Aliyetukuka zaidi';
+
+  @override
+  String get asmaMeaning49 => 'Mfufuaji';
+
+  @override
+  String get asmaMeaning50 => 'Shahidi huyo';
+
+  @override
+  String get asmaMeaning51 => 'Ukweli';
+
+  @override
+  String get asmaMeaning52 => 'Mdhamini wa Kutosha Yote';
+
+  @override
+  String get asmaMeaning53 => 'Mmiliki wa Nguvu Zote';
+
+  @override
+  String get asmaMeaning54 => 'Mwenye Nguvu';
+
+  @override
+  String get asmaMeaning55 => 'Mlinzi';
+
+  @override
+  String get asmaMeaning56 => 'Waliosifiwa';
+
+  @override
+  String get asmaMeaning57 => 'Mthamini';
+
+  @override
+  String get asmaMeaning58 => 'Mwanzilishi';
+
+  @override
+  String get asmaMeaning59 => 'Mrejeshaji';
+
+  @override
+  String get asmaMeaning60 => 'Mpaji wa Uzima';
+
+  @override
+  String get asmaMeaning61 => 'Mtoa Uhai';
+
+  @override
+  String get asmaMeaning62 => 'Mwenye Kuishi';
+
+  @override
+  String get asmaMeaning63 => 'Mwenye Kujiruzuku';
+
+  @override
+  String get asmaMeaning64 => 'Mpataji';
+
+  @override
+  String get asmaMeaning65 => 'Mtukufu';
+
+  @override
+  String get asmaMeaning66 => 'Mmoja Pekee';
+
+  @override
+  String get asmaMeaning67 => 'Yule Mmoja';
+
+  @override
+  String get asmaMeaning68 => 'Anayetafutwa na Wote';
+
+  @override
+  String get asmaMeaning69 => 'Mwenye Nguvu';
+
+  @override
+  String get asmaMeaning70 => 'Muumba wa nguvu zote';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Mcheleweshaji';
+
+  @override
+  String get asmaMeaning73 => 'Ya Kwanza';
+
+  @override
+  String get asmaMeaning74 => 'Wa Mwisho';
+
+  @override
+  String get asmaMeaning75 => 'Dhihirisho';
+
+  @override
+  String get asmaMeaning76 => 'Iliyofichwa';
+
+  @override
+  String get asmaMeaning77 => 'Mkuu wa Mkoa';
+
+  @override
+  String get asmaMeaning78 => 'Aliye Juu';
+
+  @override
+  String get asmaMeaning79 => 'Mwenye kufanya wema';
+
+  @override
+  String get asmaMeaning80 => 'Mwongozo wa Toba';
+
+  @override
+  String get asmaMeaning81 => 'Mlipiza kisasi';
+
+  @override
+  String get asmaMeaning82 => 'Mwenye kusamehe';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Mmiliki / Mfalme wa Wote';
+
+  @override
+  String get asmaMeaning85 => 'Mwenye Ukuu na Fadhila';
+
+  @override
+  String get asmaMeaning86 => 'Mwenye Haki';
+
+  @override
+  String get asmaMeaning87 => 'Mkusanyaji';
+
+  @override
+  String get asmaMeaning88 => 'Tajiri';
+
+  @override
+  String get asmaMeaning89 => 'Mtajirisha';
+
+  @override
+  String get asmaMeaning90 => 'Kizuia Madhara';
+
+  @override
+  String get asmaMeaning91 => 'Mleta Madhara';
+
+  @override
+  String get asmaMeaning92 => 'Mtoaji wa Faida';
+
+  @override
+  String get asmaMeaning93 => 'Nuru';
+
+  @override
+  String get asmaMeaning94 => 'Mwongozi';
+
+  @override
+  String get asmaMeaning95 => 'Mwanzilishi';
+
+  @override
+  String get asmaMeaning96 => 'Yule wa Milele';
+
+  @override
+  String get asmaMeaning97 => 'Mrithi';
+
+  @override
+  String get asmaMeaning98 => 'Mwongozo Muadilifu';
+
+  @override
+  String get asmaMeaning99 => 'Yule Mgonjwa';
 }

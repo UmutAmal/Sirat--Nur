@@ -1189,4 +1189,301 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Ekifo ky\'Obusiraamu';
+
+  @override
+  String get asmaMeaning1 => 'Omuganyulo';
+
+  @override
+  String get asmaMeaning2 => 'Omusaasizi';
+
+  @override
+  String get asmaMeaning3 => 'Kabaka / Mukama ow\'olubeerera';
+
+  @override
+  String get asmaMeaning4 => 'Omutukuvu Ennyo';
+
+  @override
+  String get asmaMeaning5 => 'Ensibuko y’Emirembe';
+
+  @override
+  String get asmaMeaning6 => 'Omuwa Obukuumi';
+
+  @override
+  String get asmaMeaning7 => 'Olupapula lwa Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Ow\'omuwendo / Ow\'amaanyi';
+
+  @override
+  String get asmaMeaning9 => 'Omuwaliriza';
+
+  @override
+  String get asmaMeaning10 => 'Ekisinga Obukulu';
+
+  @override
+  String get asmaMeaning11 => 'Omutonzi';
+
+  @override
+  String get asmaMeaning12 => 'Omukozi w’Entegeka';
+
+  @override
+  String get asmaMeaning13 => 'Omubumba w’Obulungi';
+
+  @override
+  String get asmaMeaning14 => 'Abasonyiwa';
+
+  @override
+  String get asmaMeaning15 => 'Omuwanguzi';
+
+  @override
+  String get asmaMeaning16 => 'Omugabi wa Byonna';
+
+  @override
+  String get asmaMeaning17 => 'Omuyimirizaawo';
+
+  @override
+  String get asmaMeaning18 => 'Omuggulawo';
+
+  @override
+  String get asmaMeaning19 => 'Omumanyi wa Bonna';
+
+  @override
+  String get asmaMeaning20 => 'Omuzimbi';
+
+  @override
+  String get asmaMeaning21 => 'Omuwummuza';
+
+  @override
+  String get asmaMeaning22 => 'Omubaser';
+
+  @override
+  String get asmaMeaning23 => 'Omugulumivu';
+
+  @override
+  String get asmaMeaning24 => 'Omugabi w’Ekitiibwa';
+
+  @override
+  String get asmaMeaning25 => 'Omuswaza';
+
+  @override
+  String get asmaMeaning26 => 'Omuwulizi wa Byonna';
+
+  @override
+  String get asmaMeaning27 => 'Omulabi wa Bonna';
+
+  @override
+  String get asmaMeaning28 => 'Omulamuzi';
+
+  @override
+  String get asmaMeaning29 => 'Abatuukirivu';
+
+  @override
+  String get asmaMeaning30 => 'Oyo Omutegeevu';
+
+  @override
+  String get asmaMeaning31 => 'Abamanyi Bonna';
+
+  @override
+  String get asmaMeaning32 => 'Omuzadde';
+
+  @override
+  String get asmaMeaning33 => 'Eky’Ekitalo';
+
+  @override
+  String get asmaMeaning34 => 'Omusonyiwa Omukulu';
+
+  @override
+  String get asmaMeaning35 => 'Omuwa empeera y’okwebaza';
+
+  @override
+  String get asmaMeaning36 => 'Oyo Asinga Waggulu';
+
+  @override
+  String get asmaMeaning37 => 'Ekisinga Obukulu';
+
+  @override
+  String get asmaMeaning38 => 'Omukuumi w’ebintu';
+
+  @override
+  String get asmaMeaning39 => 'Omuliisa';
+
+  @override
+  String get asmaMeaning40 => 'Omubalirizi w’ebitabo';
+
+  @override
+  String get asmaMeaning41 => 'Omukulu';
+
+  @override
+  String get asmaMeaning42 => 'Abagabi';
+
+  @override
+  String get asmaMeaning43 => 'Oyo Atunula';
+
+  @override
+  String get asmaMeaning44 => 'Omuddamu essaala';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehending';
+
+  @override
+  String get asmaMeaning46 => 'Omugezi Atuukiridde';
+
+  @override
+  String get asmaMeaning47 => 'Okwagala';
+
+  @override
+  String get asmaMeaning48 => 'Oyo Asinga Ekitiibwa';
+
+  @override
+  String get asmaMeaning49 => 'Omuzuukiza';
+
+  @override
+  String get asmaMeaning50 => 'Omujulirwa';
+
+  @override
+  String get asmaMeaning51 => 'Amazima';
+
+  @override
+  String get asmaMeaning52 => 'Omuwanika Amala Byonna';
+
+  @override
+  String get asmaMeaning53 => 'Omulina Amaanyi Gonna';
+
+  @override
+  String get asmaMeaning54 => 'Abalina Amaanyi';
+
+  @override
+  String get asmaMeaning55 => 'Omukuumi';
+
+  @override
+  String get asmaMeaning56 => 'Abatenderezebwa';
+
+  @override
+  String get asmaMeaning57 => 'Omubalirizi w’ebitabo';
+
+  @override
+  String get asmaMeaning58 => 'Omutandisi';
+
+  @override
+  String get asmaMeaning59 => 'Omuzzaawo';
+
+  @override
+  String get asmaMeaning60 => 'Omugabi w’Obulamu';
+
+  @override
+  String get asmaMeaning61 => 'Omutwalizi w’Obulamu';
+
+  @override
+  String get asmaMeaning62 => 'Abalamu Bulijjo';
+
+  @override
+  String get asmaMeaning63 => 'Omuyimirizaawo Yeeyimirizaawo';
+
+  @override
+  String get asmaMeaning64 => 'Omuzuula';
+
+  @override
+  String get asmaMeaning65 => 'Aba Ekitiibwa';
+
+  @override
+  String get asmaMeaning66 => 'Oyo Yekka';
+
+  @override
+  String get asmaMeaning67 => 'Oyo';
+
+  @override
+  String get asmaMeaning68 => 'Oyo Anoonyezebwa Bonna';
+
+  @override
+  String get asmaMeaning69 => 'Abalina Amaanyi';
+
+  @override
+  String get asmaMeaning70 => 'Omutonzi w’amaanyi gonna';
+
+  @override
+  String get asmaMeaning71 => 'Omuwandiisi w’Ensimbi';
+
+  @override
+  String get asmaMeaning72 => 'Omulwawo';
+
+  @override
+  String get asmaMeaning73 => 'Ekisooka';
+
+  @override
+  String get asmaMeaning74 => 'Ekisembayo';
+
+  @override
+  String get asmaMeaning75 => 'Ekyeyoleka';
+
+  @override
+  String get asmaMeaning76 => 'Ebikwekeddwa';
+
+  @override
+  String get asmaMeaning77 => 'Gavana';
+
+  @override
+  String get asmaMeaning78 => 'Oyo ow’oku ntikko';
+
+  @override
+  String get asmaMeaning79 => 'Omukozi w’Ebirungi';
+
+  @override
+  String get asmaMeaning80 => 'Obulagirizi bw’Okwenenya';
+
+  @override
+  String get asmaMeaning81 => 'Omusasuzi w’eggwanga';
+
+  @override
+  String get asmaMeaning82 => 'Omusonyiwa';
+
+  @override
+  String get asmaMeaning83 => 'Omusajja Clement';
+
+  @override
+  String get asmaMeaning84 => 'Nnannyini / Omufuzi wa Bonna';
+
+  @override
+  String get asmaMeaning85 => 'Omulina Obwa Majesty ne Bounty';
+
+  @override
+  String get asmaMeaning86 => 'Oyo ow’obwenkanya';
+
+  @override
+  String get asmaMeaning87 => 'Omukung’aanya';
+
+  @override
+  String get asmaMeaning88 => 'Omugagga';
+
+  @override
+  String get asmaMeaning89 => 'Omugagga';
+
+  @override
+  String get asmaMeaning90 => 'Omuziyiza Obulabe';
+
+  @override
+  String get asmaMeaning91 => 'Omuleeta Obubi';
+
+  @override
+  String get asmaMeaning92 => 'Omugabi w’Emigaso';
+
+  @override
+  String get asmaMeaning93 => 'Ekitangaala';
+
+  @override
+  String get asmaMeaning94 => 'Omulungamya';
+
+  @override
+  String get asmaMeaning95 => 'Omutandisi';
+
+  @override
+  String get asmaMeaning96 => 'Oyo Ataggwaawo';
+
+  @override
+  String get asmaMeaning97 => 'Omusika';
+
+  @override
+  String get asmaMeaning98 => 'Omulagirizi Asinga Obutuukirivu';
+
+  @override
+  String get asmaMeaning99 => 'Oyo Omulwadde';
 }

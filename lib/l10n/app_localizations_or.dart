@@ -1190,4 +1190,301 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'ଇସଲାମିକ୍ ସ୍ଥାନ |';
+
+  @override
+  String get asmaMeaning1 => 'ଉପକାରକାରୀ |';
+
+  @override
+  String get asmaMeaning2 => 'ଦୟାଳୁ |';
+
+  @override
+  String get asmaMeaning3 => 'ରାଜା / ଅନନ୍ତ ପ୍ରଭୁ |';
+
+  @override
+  String get asmaMeaning4 => 'ସବୁଠାରୁ ପବିତ୍ର |';
+
+  @override
+  String get asmaMeaning5 => 'ଶାନ୍ତିର ଉତ୍ସ |';
+
+  @override
+  String get asmaMeaning6 => 'ସୁରକ୍ଷା ପ୍ରଦାନକାରୀ |';
+
+  @override
+  String get asmaMeaning7 => 'ରାକ୍ଷୀ |';
+
+  @override
+  String get asmaMeaning8 => 'ମୂଲ୍ୟବାନ / ସବୁଠାରୁ ଶକ୍ତିଶାଳୀ |';
+
+  @override
+  String get asmaMeaning9 => 'କମ୍ପେଲର୍ |';
+
+  @override
+  String get asmaMeaning10 => 'ସର୍ବଶ୍ରେଷ୍ଠ |';
+
+  @override
+  String get asmaMeaning11 => 'ସୃଷ୍ଟିକର୍ତ୍ତା |';
+
+  @override
+  String get asmaMeaning12 => 'ନିର୍ମାତା ଅର୍ଡର |';
+
+  @override
+  String get asmaMeaning13 => 'ସ Beauty ନ୍ଦର୍ଯ୍ୟର ଆକୃତି |';
+
+  @override
+  String get asmaMeaning14 => 'କ୍ଷମା |';
+
+  @override
+  String get asmaMeaning15 => 'ସବଡର୍ |';
+
+  @override
+  String get asmaMeaning16 => 'ସମସ୍ତଙ୍କର ଦାତା |';
+
+  @override
+  String get asmaMeaning17 => 'ସଷ୍ଟେନର୍ |';
+
+  @override
+  String get asmaMeaning18 => 'ଓପନର୍ |';
+
+  @override
+  String get asmaMeaning19 => 'ସମସ୍ତଙ୍କର ଜାଣନ୍ତି |';
+
+  @override
+  String get asmaMeaning20 => 'ନିର୍ମାଣକାରୀ |';
+
+  @override
+  String get asmaMeaning21 => 'ରିଲିଭର୍ |';
+
+  @override
+  String get asmaMeaning22 => 'ଅବସର୍ |';
+
+  @override
+  String get asmaMeaning23 => 'Exalter';
+
+  @override
+  String get asmaMeaning24 => 'ସମ୍ମାନ ପ୍ରଦାନକାରୀ |';
+
+  @override
+  String get asmaMeaning25 => 'ଅପମାନକାରୀ |';
+
+  @override
+  String get asmaMeaning26 => 'ସମସ୍ତଙ୍କର ଶ୍ରୋତା |';
+
+  @override
+  String get asmaMeaning27 => 'ସମସ୍ତଙ୍କର ଦର୍ଶକ |';
+
+  @override
+  String get asmaMeaning28 => 'ବିଚାରପତି |';
+
+  @override
+  String get asmaMeaning29 => 'ଠିକ୍ |';
+
+  @override
+  String get asmaMeaning30 => 'ସୂକ୍ଷ୍ମ ଏକ |';
+
+  @override
+  String get asmaMeaning31 => 'ସମସ୍ତ ସଚେତନ |';
+
+  @override
+  String get asmaMeaning32 => 'ଅଗ୍ରଗାମୀ |';
+
+  @override
+  String get asmaMeaning33 => 'ଚମତ୍କାର |';
+
+  @override
+  String get asmaMeaning34 => 'ମହାନ କ୍ଷମାକାରୀ |';
+
+  @override
+  String get asmaMeaning35 => 'କୃତଜ୍ଞତାର ପୁରସ୍କାର |';
+
+  @override
+  String get asmaMeaning36 => 'ସର୍ବୋଚ୍ଚ |';
+
+  @override
+  String get asmaMeaning37 => 'ସର୍ବଶ୍ରେଷ୍ଠ |';
+
+  @override
+  String get asmaMeaning38 => 'ସଂରକ୍ଷଣକାରୀ |';
+
+  @override
+  String get asmaMeaning39 => 'ପୁଷ୍ଟିକର |';
+
+  @override
+  String get asmaMeaning40 => 'ଗଣନାକାରୀ |';
+
+  @override
+  String get asmaMeaning41 => 'ମହଜୁଦ |';
+
+  @override
+  String get asmaMeaning42 => 'ଉଦାର |';
+
+  @override
+  String get asmaMeaning43 => 'ଜାଗ୍ରତ |';
+
+  @override
+  String get asmaMeaning44 => 'ପ୍ରାର୍ଥନା ପାଇଁ ଉତ୍ତରଦାତା |';
+
+  @override
+  String get asmaMeaning45 => 'ସମସ୍ତ ବୁ re ିବା |';
+
+  @override
+  String get asmaMeaning46 => 'ସଂପୂର୍ଣ୍ଣ ଜ୍ଞାନୀ |';
+
+  @override
+  String get asmaMeaning47 => 'ପ୍ରେମୀ ଜଣକ |';
+
+  @override
+  String get asmaMeaning48 => 'ସବୁଠାରୁ ଗ or ରବମୟ |';
+
+  @override
+  String get asmaMeaning49 => 'ପୁନରୁତ୍ଥାନକାରୀ |';
+
+  @override
+  String get asmaMeaning50 => 'ସାକ୍ଷୀ |';
+
+  @override
+  String get asmaMeaning51 => 'ସତ୍ୟ |';
+
+  @override
+  String get asmaMeaning52 => 'ସର୍ବ-ପର୍ଯ୍ୟାପ୍ତ ଟ୍ରଷ୍ଟି |';
+
+  @override
+  String get asmaMeaning53 => 'ସମସ୍ତ ଶକ୍ତିର ମାଲିକ |';
+
+  @override
+  String get asmaMeaning54 => 'ବଳବାନ |';
+
+  @override
+  String get asmaMeaning55 => 'ରକ୍ଷକ |';
+
+  @override
+  String get asmaMeaning56 => 'ପ୍ରଶଂସା |';
+
+  @override
+  String get asmaMeaning57 => 'ମୂଲ୍ୟାଙ୍କନକାରୀ |';
+
+  @override
+  String get asmaMeaning58 => 'ଉତ୍ପାଦକ |';
+
+  @override
+  String get asmaMeaning59 => 'ପୁନରୁଦ୍ଧାରକାରୀ |';
+
+  @override
+  String get asmaMeaning60 => 'ଜୀବନ ପ୍ରଦାନକାରୀ |';
+
+  @override
+  String get asmaMeaning61 => 'ଜୀବନର ଟେକର୍ |';
+
+  @override
+  String get asmaMeaning62 => 'ସର୍ବଦା ଜୀବନ୍ତ |';
+
+  @override
+  String get asmaMeaning63 => 'ଆତ୍ମନିର୍ଭରଶୀଳ ସଷ୍ଟେନର୍ |';
+
+  @override
+  String get asmaMeaning64 => 'ସନ୍ଧାନକାରୀ |';
+
+  @override
+  String get asmaMeaning65 => 'ଗ or ରବମୟ |';
+
+  @override
+  String get asmaMeaning66 => 'କେବଳ ଗୋଟିଏ |';
+
+  @override
+  String get asmaMeaning67 => 'ଗୋଟିଏ |';
+
+  @override
+  String get asmaMeaning68 => 'ସମସ୍ତଙ୍କ ଦ୍ୱାରା ଗୋଟିଏ |';
+
+  @override
+  String get asmaMeaning69 => 'ଶକ୍ତିଶାଳୀ |';
+
+  @override
+  String get asmaMeaning70 => 'ସମସ୍ତ ଶକ୍ତିର ସୃଷ୍ଟିକର୍ତ୍ତା |';
+
+  @override
+  String get asmaMeaning71 => 'ଏକ୍ସପେଡିଟର୍ |';
+
+  @override
+  String get asmaMeaning72 => 'ବିଳମ୍ବ';
+
+  @override
+  String get asmaMeaning73 => 'ପ୍ରଥମ |';
+
+  @override
+  String get asmaMeaning74 => 'ଶେଷ';
+
+  @override
+  String get asmaMeaning75 => 'ମନିଫେଷ୍ଟ୍ |';
+
+  @override
+  String get asmaMeaning76 => 'ଲୁକ୍କାୟିତ |';
+
+  @override
+  String get asmaMeaning77 => 'ରାଜ୍ୟପାଳ |';
+
+  @override
+  String get asmaMeaning78 => 'ସର୍ବୋଚ୍ଚ |';
+
+  @override
+  String get asmaMeaning79 => 'ଭଲ କାମ କରୁଥିବା ବ୍ୟକ୍ତି |';
+
+  @override
+  String get asmaMeaning80 => 'ଅନୁତାପ ପାଇଁ ଗାଇଡ୍ |';
+
+  @override
+  String get asmaMeaning81 => 'ପ୍ରତିଶୋଧକାରୀ |';
+
+  @override
+  String get asmaMeaning82 => 'କ୍ଷମାକାରୀ |';
+
+  @override
+  String get asmaMeaning83 => 'କ୍ଲେମେଣ୍ଟ |';
+
+  @override
+  String get asmaMeaning84 => 'ସମସ୍ତଙ୍କର ମାଲିକ / ସାର୍ବଭ .ମ |';
+
+  @override
+  String get asmaMeaning85 => 'ମହିମା ଏବଂ ଅନୁଗ୍ରହର ମାଲିକ |';
+
+  @override
+  String get asmaMeaning86 => 'ସମାନତା |';
+
+  @override
+  String get asmaMeaning87 => 'ସଂଗ୍ରହକାରୀ |';
+
+  @override
+  String get asmaMeaning88 => 'ଧନୀ |';
+
+  @override
+  String get asmaMeaning89 => 'ସମୃଦ୍ଧ |';
+
+  @override
+  String get asmaMeaning90 => 'କ୍ଷତିର ପ୍ରତିରୋଧକ |';
+
+  @override
+  String get asmaMeaning91 => 'କ୍ଷତିକାରକ |';
+
+  @override
+  String get asmaMeaning92 => 'ଉପକାରକାରୀ |';
+
+  @override
+  String get asmaMeaning93 => 'ଆଲୋକ |';
+
+  @override
+  String get asmaMeaning94 => 'ଗାଇଡ୍ |';
+
+  @override
+  String get asmaMeaning95 => 'ଉତ୍ପାଦକ |';
+
+  @override
+  String get asmaMeaning96 => 'ଅନନ୍ତ |';
+
+  @override
+  String get asmaMeaning97 => 'ଉତ୍ତରାଧିକାରୀ |';
+
+  @override
+  String get asmaMeaning98 => 'ସବୁଠାରୁ ଧାର୍ମିକ ଗାଇଡ୍ |';
+
+  @override
+  String get asmaMeaning99 => 'ରୋଗୀ';
 }

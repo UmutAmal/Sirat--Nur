@@ -1187,4 +1187,301 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Iszlám hely';
+
+  @override
+  String get asmaMeaning1 => 'A jótékony';
+
+  @override
+  String get asmaMeaning2 => 'A kegyes';
+
+  @override
+  String get asmaMeaning3 => 'A király / Örökkévaló Úr';
+
+  @override
+  String get asmaMeaning4 => 'A legszentebb';
+
+  @override
+  String get asmaMeaning5 => 'A béke forrása';
+
+  @override
+  String get asmaMeaning6 => 'A biztonságot nyújtó';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'A drága / A leghatalmasabb';
+
+  @override
+  String get asmaMeaning9 => 'A kényszerítő';
+
+  @override
+  String get asmaMeaning10 => 'A legnagyobb';
+
+  @override
+  String get asmaMeaning11 => 'A Teremtő';
+
+  @override
+  String get asmaMeaning12 => 'A rend készítője';
+
+  @override
+  String get asmaMeaning13 => 'A szépség formálója';
+
+  @override
+  String get asmaMeaning14 => 'A megbocsátás';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'A Mindent Adó';
+
+  @override
+  String get asmaMeaning17 => 'A fenntartó';
+
+  @override
+  String get asmaMeaning18 => 'A nyitó';
+
+  @override
+  String get asmaMeaning19 => 'A Mindenek Tudója';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'A tehermentesítő';
+
+  @override
+  String get asmaMeaning22 => 'Az Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'A becsület adományozója';
+
+  @override
+  String get asmaMeaning25 => 'A megalázó';
+
+  @override
+  String get asmaMeaning26 => 'A mindenek hallója';
+
+  @override
+  String get asmaMeaning27 => 'A mindenek látója';
+
+  @override
+  String get asmaMeaning28 => 'A bíró';
+
+  @override
+  String get asmaMeaning29 => 'Az igazságos';
+
+  @override
+  String get asmaMeaning30 => 'A finom';
+
+  @override
+  String get asmaMeaning31 => 'Minden tudatában';
+
+  @override
+  String get asmaMeaning32 => 'Az elődök';
+
+  @override
+  String get asmaMeaning33 => 'A csodálatos';
+
+  @override
+  String get asmaMeaning34 => 'A nagy megbocsátó';
+
+  @override
+  String get asmaMeaning35 => 'A hála jutalma';
+
+  @override
+  String get asmaMeaning36 => 'A legmagasabb';
+
+  @override
+  String get asmaMeaning37 => 'A legnagyobb';
+
+  @override
+  String get asmaMeaning38 => 'A megőrző';
+
+  @override
+  String get asmaMeaning39 => 'A tápláló';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'A nagylelkű';
+
+  @override
+  String get asmaMeaning43 => 'Az éber';
+
+  @override
+  String get asmaMeaning44 => 'Az imára válaszoló';
+
+  @override
+  String get asmaMeaning45 => 'A mindent megértő';
+
+  @override
+  String get asmaMeaning46 => 'A tökéletesen bölcs';
+
+  @override
+  String get asmaMeaning47 => 'A szerető';
+
+  @override
+  String get asmaMeaning48 => 'A legdicsőségesebb';
+
+  @override
+  String get asmaMeaning49 => 'A feltámasztó';
+
+  @override
+  String get asmaMeaning50 => 'A Tanú';
+
+  @override
+  String get asmaMeaning51 => 'Az igazság';
+
+  @override
+  String get asmaMeaning52 => 'A mindenre elegendő megbízott';
+
+  @override
+  String get asmaMeaning53 => 'A minden erő birtokosa';
+
+  @override
+  String get asmaMeaning54 => 'Az Erőteljes';
+
+  @override
+  String get asmaMeaning55 => 'A Védő';
+
+  @override
+  String get asmaMeaning56 => 'A dicsértek';
+
+  @override
+  String get asmaMeaning57 => 'Az értékbecslő';
+
+  @override
+  String get asmaMeaning58 => 'A kezdeményező';
+
+  @override
+  String get asmaMeaning59 => 'A helyreállító';
+
+  @override
+  String get asmaMeaning60 => 'Az életadó';
+
+  @override
+  String get asmaMeaning61 => 'Az élet elvevője';
+
+  @override
+  String get asmaMeaning62 => 'Az örökké élő';
+
+  @override
+  String get asmaMeaning63 => 'Az önfenntartó fenntartó';
+
+  @override
+  String get asmaMeaning64 => 'A kereső';
+
+  @override
+  String get asmaMeaning65 => 'A dicsőséges';
+
+  @override
+  String get asmaMeaning66 => 'Az egyetlen';
+
+  @override
+  String get asmaMeaning67 => 'Az Egy';
+
+  @override
+  String get asmaMeaning68 => 'A mindenki által keresett';
+
+  @override
+  String get asmaMeaning69 => 'Az Erőteljes';
+
+  @override
+  String get asmaMeaning70 => 'Minden hatalom Teremtője';
+
+  @override
+  String get asmaMeaning71 => 'Az Expediter';
+
+  @override
+  String get asmaMeaning72 => 'A késleltetés';
+
+  @override
+  String get asmaMeaning73 => 'Az első';
+
+  @override
+  String get asmaMeaning74 => 'Az utolsó';
+
+  @override
+  String get asmaMeaning75 => 'A Manifest';
+
+  @override
+  String get asmaMeaning76 => 'A rejtett';
+
+  @override
+  String get asmaMeaning77 => 'A kormányzó';
+
+  @override
+  String get asmaMeaning78 => 'A Legfelsőbb';
+
+  @override
+  String get asmaMeaning79 => 'A jó cselekvője';
+
+  @override
+  String get asmaMeaning80 => 'Útmutató a bűnbánathoz';
+
+  @override
+  String get asmaMeaning81 => 'A Bosszúálló';
+
+  @override
+  String get asmaMeaning82 => 'A megbocsátó';
+
+  @override
+  String get asmaMeaning83 => 'A Kelemen';
+
+  @override
+  String get asmaMeaning84 => 'Mindenek tulajdonosa / uralkodója';
+
+  @override
+  String get asmaMeaning85 => 'A Majesty and Bounty birtokosa';
+
+  @override
+  String get asmaMeaning86 => 'Az Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'The Gatherer';
+
+  @override
+  String get asmaMeaning88 => 'A gazdag';
+
+  @override
+  String get asmaMeaning89 => 'A gazdagító';
+
+  @override
+  String get asmaMeaning90 => 'A károk megelőzője';
+
+  @override
+  String get asmaMeaning91 => 'A kárhozó';
+
+  @override
+  String get asmaMeaning92 => 'Az előnyök adományozója';
+
+  @override
+  String get asmaMeaning93 => 'A fény';
+
+  @override
+  String get asmaMeaning94 => 'Az útmutató';
+
+  @override
+  String get asmaMeaning95 => 'A kezdeményező';
+
+  @override
+  String get asmaMeaning96 => 'Az örökkévaló';
+
+  @override
+  String get asmaMeaning97 => 'Az örökös';
+
+  @override
+  String get asmaMeaning98 => 'A legigazságosabb útmutató';
+
+  @override
+  String get asmaMeaning99 => 'A beteg';
 }

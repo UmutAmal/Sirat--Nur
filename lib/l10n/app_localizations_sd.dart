@@ -1184,4 +1184,301 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'اسلامي جڳھ';
+
+  @override
+  String get asmaMeaning1 => 'رحم ڪندڙ';
+
+  @override
+  String get asmaMeaning2 => 'رحم ڪندڙ';
+
+  @override
+  String get asmaMeaning3 => 'بادشاهه / ابدي رب';
+
+  @override
+  String get asmaMeaning4 => 'پاڪ ترين';
+
+  @override
+  String get asmaMeaning5 => 'امن جو ذريعو';
+
+  @override
+  String get asmaMeaning6 => 'حفاظت ڏيڻ وارو';
+
+  @override
+  String get asmaMeaning7 => 'دي گارجين';
+
+  @override
+  String get asmaMeaning8 => 'قيمتي / سڀ کان وڌيڪ طاقتور';
+
+  @override
+  String get asmaMeaning9 => 'مجبور ڪندڙ';
+
+  @override
+  String get asmaMeaning10 => 'عظيم ترين';
+
+  @override
+  String get asmaMeaning11 => 'خالق';
+
+  @override
+  String get asmaMeaning12 => 'The Maker of Order';
+
+  @override
+  String get asmaMeaning13 => 'The Shaper of Beauty';
+
+  @override
+  String get asmaMeaning14 => 'بخشڻ وارو';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'سڀني جو ڏيڻ وارو';
+
+  @override
+  String get asmaMeaning17 => 'سنڀاليندڙ';
+
+  @override
+  String get asmaMeaning18 => 'اوپنر';
+
+  @override
+  String get asmaMeaning19 => 'سڀني کي ڄاڻندڙ';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'ريليور';
+
+  @override
+  String get asmaMeaning22 => 'The Abser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'عزّت ڏيڻ وارو';
+
+  @override
+  String get asmaMeaning25 => 'ذلت ڪندڙ';
+
+  @override
+  String get asmaMeaning26 => 'سڀني جو ٻڌندڙ';
+
+  @override
+  String get asmaMeaning27 => 'سڀني جو ڏسندڙ';
+
+  @override
+  String get asmaMeaning28 => 'جج';
+
+  @override
+  String get asmaMeaning29 => 'The Just';
+
+  @override
+  String get asmaMeaning30 => 'The subtle One';
+
+  @override
+  String get asmaMeaning31 => 'سڀ خبر';
+
+  @override
+  String get asmaMeaning32 => 'The prebearing';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'عظيم بخشيندڙ';
+
+  @override
+  String get asmaMeaning35 => 'شڪر جو اجر ڏيندڙ';
+
+  @override
+  String get asmaMeaning36 => 'عالي';
+
+  @override
+  String get asmaMeaning37 => 'عظيم ترين';
+
+  @override
+  String get asmaMeaning38 => 'محفوظ ڪندڙ';
+
+  @override
+  String get asmaMeaning39 => 'The Nourisher';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'سخي';
+
+  @override
+  String get asmaMeaning43 => 'The watchful One';
+
+  @override
+  String get asmaMeaning44 => 'نماز جو جواب ڏيڻ وارو';
+
+  @override
+  String get asmaMeaning45 => 'سڀ سمجھڻ وارو';
+
+  @override
+  String get asmaMeaning46 => 'بلڪل حڪمت وارو';
+
+  @override
+  String get asmaMeaning47 => 'محبت ڪندڙ';
+
+  @override
+  String get asmaMeaning48 => 'سڀ کان وڌيڪ شان وارو';
+
+  @override
+  String get asmaMeaning49 => 'جيئرو ڪندڙ';
+
+  @override
+  String get asmaMeaning50 => 'شاھد';
+
+  @override
+  String get asmaMeaning51 => 'حقيقت';
+
+  @override
+  String get asmaMeaning52 => 'تمام ڪافي معتبر';
+
+  @override
+  String get asmaMeaning53 => 'سڀ طاقت جو مالڪ';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'محافظ';
+
+  @override
+  String get asmaMeaning56 => 'جي ساراهه ڪئي وئي';
+
+  @override
+  String get asmaMeaning57 => 'The appraiser';
+
+  @override
+  String get asmaMeaning58 => 'بنائيندڙ';
+
+  @override
+  String get asmaMeaning59 => 'بحال ڪندڙ';
+
+  @override
+  String get asmaMeaning60 => 'زندگي ڏيندڙ';
+
+  @override
+  String get asmaMeaning61 => 'زندگي وٺندڙ';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Live';
+
+  @override
+  String get asmaMeaning63 => 'خود سنڀاليندڙ';
+
+  @override
+  String get asmaMeaning64 => 'ڳوليندڙ';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'The only one';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'جيڪو سڀني جي ڳولا ۾ آهي';
+
+  @override
+  String get asmaMeaning69 => 'طاقتور';
+
+  @override
+  String get asmaMeaning70 => 'سڀ طاقت جو خالق';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'دير ڪندڙ';
+
+  @override
+  String get asmaMeaning73 => 'پهريون';
+
+  @override
+  String get asmaMeaning74 => 'آخري';
+
+  @override
+  String get asmaMeaning75 => 'The Manifest';
+
+  @override
+  String get asmaMeaning76 => 'The لڪايل';
+
+  @override
+  String get asmaMeaning77 => 'گورنر';
+
+  @override
+  String get asmaMeaning78 => 'Supreme One';
+
+  @override
+  String get asmaMeaning79 => 'نيڪي ڪرڻ وارو';
+
+  @override
+  String get asmaMeaning80 => 'توبه جي ھدايت';
+
+  @override
+  String get asmaMeaning81 => 'The Avenger';
+
+  @override
+  String get asmaMeaning82 => 'بخشيندڙ';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'سڀني جو مالڪ / حاڪم';
+
+  @override
+  String get asmaMeaning85 => 'مال ۽ فضل جو مالڪ';
+
+  @override
+  String get asmaMeaning86 => 'The Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'گڏيندڙ';
+
+  @override
+  String get asmaMeaning88 => 'The Rich One';
+
+  @override
+  String get asmaMeaning89 => 'The enricher';
+
+  @override
+  String get asmaMeaning90 => 'نقصان کي روڪڻ وارو';
+
+  @override
+  String get asmaMeaning91 => 'The Bringer of Harm';
+
+  @override
+  String get asmaMeaning92 => 'فائدي ڏيڻ وارو';
+
+  @override
+  String get asmaMeaning93 => 'The روشني';
+
+  @override
+  String get asmaMeaning94 => 'هدايت ڪندڙ';
+
+  @override
+  String get asmaMeaning95 => 'بنائيندڙ';
+
+  @override
+  String get asmaMeaning96 => 'هميشه وارو';
+
+  @override
+  String get asmaMeaning97 => 'وارث';
+
+  @override
+  String get asmaMeaning98 => 'سڀ کان وڌيڪ صحيح ھدايت ڪندڙ';
+
+  @override
+  String get asmaMeaning99 => 'مريض ھڪڙو';
 }

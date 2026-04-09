@@ -1186,4 +1186,301 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islamityske plak';
+
+  @override
+  String get asmaMeaning1 => 'De Beneficent';
+
+  @override
+  String get asmaMeaning2 => 'De Barmhertige';
+
+  @override
+  String get asmaMeaning3 => 'De kening / ivige Hear';
+
+  @override
+  String get asmaMeaning4 => 'It Allerhillichste';
+
+  @override
+  String get asmaMeaning5 => 'De boarne fan frede';
+
+  @override
+  String get asmaMeaning6 => 'De Giver fan Feiligens';
+
+  @override
+  String get asmaMeaning7 => 'De Guardian';
+
+  @override
+  String get asmaMeaning8 => 'De kostberste / de machtichste';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'De Grutste';
+
+  @override
+  String get asmaMeaning11 => 'De Skepper';
+
+  @override
+  String get asmaMeaning12 => 'The Maker of Order';
+
+  @override
+  String get asmaMeaning13 => 'The Shaper of Beauty';
+
+  @override
+  String get asmaMeaning14 => 'De ferjouwing';
+
+  @override
+  String get asmaMeaning15 => 'De Subduer';
+
+  @override
+  String get asmaMeaning16 => 'De Giver fan alles';
+
+  @override
+  String get asmaMeaning17 => 'De Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'De iepener';
+
+  @override
+  String get asmaMeaning19 => 'De kenner fan alles';
+
+  @override
+  String get asmaMeaning20 => 'De Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'De Reliever';
+
+  @override
+  String get asmaMeaning22 => 'De Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'The Bestower of Honor';
+
+  @override
+  String get asmaMeaning25 => 'De fernedering';
+
+  @override
+  String get asmaMeaning26 => 'De hearer fan alles';
+
+  @override
+  String get asmaMeaning27 => 'De sjenner fan alles';
+
+  @override
+  String get asmaMeaning28 => 'De rjochter';
+
+  @override
+  String get asmaMeaning29 => 'De juste';
+
+  @override
+  String get asmaMeaning30 => 'De subtile';
+
+  @override
+  String get asmaMeaning31 => 'The All Aware';
+
+  @override
+  String get asmaMeaning32 => 'De Forearing';
+
+  @override
+  String get asmaMeaning33 => 'De Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'De Grutte Forgiver';
+
+  @override
+  String get asmaMeaning35 => 'De beleanning fan tankberens';
+
+  @override
+  String get asmaMeaning36 => 'De Heechste';
+
+  @override
+  String get asmaMeaning37 => 'De Grutste';
+
+  @override
+  String get asmaMeaning38 => 'De behâlder';
+
+  @override
+  String get asmaMeaning39 => 'The Nourisher';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'De Majestic';
+
+  @override
+  String get asmaMeaning42 => 'De genereuze';
+
+  @override
+  String get asmaMeaning43 => 'De Wakende';
+
+  @override
+  String get asmaMeaning44 => 'It antwurd op gebed';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehending';
+
+  @override
+  String get asmaMeaning46 => 'De Perfectly Wise';
+
+  @override
+  String get asmaMeaning47 => 'De leafdefolle';
+
+  @override
+  String get asmaMeaning48 => 'De hearlikste';
+
+  @override
+  String get asmaMeaning49 => 'De opstanner';
+
+  @override
+  String get asmaMeaning50 => 'De tsjûge';
+
+  @override
+  String get asmaMeaning51 => 'De wierheid';
+
+  @override
+  String get asmaMeaning52 => 'De All-Sufficient Trustee';
+
+  @override
+  String get asmaMeaning53 => 'De besitter fan alle sterkte';
+
+  @override
+  String get asmaMeaning54 => 'De krêftige';
+
+  @override
+  String get asmaMeaning55 => 'De beskermer';
+
+  @override
+  String get asmaMeaning56 => 'De priizge';
+
+  @override
+  String get asmaMeaning57 => 'De taksator';
+
+  @override
+  String get asmaMeaning58 => 'De oarsprong';
+
+  @override
+  String get asmaMeaning59 => 'De restaurateur';
+
+  @override
+  String get asmaMeaning60 => 'De Giver fan it libben';
+
+  @override
+  String get asmaMeaning61 => 'De libbensnimmer';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'The Self-Subsisting Sustainer';
+
+  @override
+  String get asmaMeaning64 => 'De Finder';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'De ienige';
+
+  @override
+  String get asmaMeaning67 => 'De iene';
+
+  @override
+  String get asmaMeaning68 => 'De iene socht troch allegear';
+
+  @override
+  String get asmaMeaning69 => 'De machtige';
+
+  @override
+  String get asmaMeaning70 => 'De Skepper fan alle macht';
+
+  @override
+  String get asmaMeaning71 => 'De Expediter';
+
+  @override
+  String get asmaMeaning72 => 'De fertrager';
+
+  @override
+  String get asmaMeaning73 => 'De earste';
+
+  @override
+  String get asmaMeaning74 => 'De lêste';
+
+  @override
+  String get asmaMeaning75 => 'It Manifest';
+
+  @override
+  String get asmaMeaning76 => 'De ferburgen';
+
+  @override
+  String get asmaMeaning77 => 'De gûverneur';
+
+  @override
+  String get asmaMeaning78 => 'De Supreme One';
+
+  @override
+  String get asmaMeaning79 => 'De Doer fan Goed';
+
+  @override
+  String get asmaMeaning80 => 'De gids foar bekearing';
+
+  @override
+  String get asmaMeaning81 => 'De Avenger';
+
+  @override
+  String get asmaMeaning82 => 'De Forgiver';
+
+  @override
+  String get asmaMeaning83 => 'De Klemens';
+
+  @override
+  String get asmaMeaning84 => 'De eigner / soeverein fan alles';
+
+  @override
+  String get asmaMeaning85 => 'De besitter fan Majesteit en Bounty';
+
+  @override
+  String get asmaMeaning86 => 'The Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'The Gatherer';
+
+  @override
+  String get asmaMeaning88 => 'De rike';
+
+  @override
+  String get asmaMeaning89 => 'De ferriker';
+
+  @override
+  String get asmaMeaning90 => 'De Preventer fan Harm';
+
+  @override
+  String get asmaMeaning91 => 'De bringer fan skea';
+
+  @override
+  String get asmaMeaning92 => 'The bestower of Benefits';
+
+  @override
+  String get asmaMeaning93 => 'It ljocht';
+
+  @override
+  String get asmaMeaning94 => 'De gids';
+
+  @override
+  String get asmaMeaning95 => 'De Originator';
+
+  @override
+  String get asmaMeaning96 => 'De ivige';
+
+  @override
+  String get asmaMeaning97 => 'De erfgenamt';
+
+  @override
+  String get asmaMeaning98 => 'De meast rjochtfeardige gids';
+
+  @override
+  String get asmaMeaning99 => 'De pasjint ien';
 }

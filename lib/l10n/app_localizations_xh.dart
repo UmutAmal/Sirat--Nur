@@ -1190,4 +1190,301 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Indawo yamaSilamsi';
+
+  @override
+  String get asmaMeaning1 => 'Lowo Unenceba';
+
+  @override
+  String get asmaMeaning2 => 'Unenceba';
+
+  @override
+  String get asmaMeaning3 => 'UKumkani / iNkosi engunaphakade';
+
+  @override
+  String get asmaMeaning4 => 'EYona Ngcwele';
+
+  @override
+  String get asmaMeaning5 => 'UMthombo Woxolo';
+
+  @override
+  String get asmaMeaning6 => 'UMniki woKhuseleko';
+
+  @override
+  String get asmaMeaning7 => 'UMlondolozi';
+
+  @override
+  String get asmaMeaning8 => 'Oxabisekileyo / Oyena Unamandla';
+
+  @override
+  String get asmaMeaning9 => 'UMnyanzeli';
+
+  @override
+  String get asmaMeaning10 => 'Oyena mkhulu';
+
+  @override
+  String get asmaMeaning11 => 'UMdali';
+
+  @override
+  String get asmaMeaning12 => 'UMenzi Wocwangco';
+
+  @override
+  String get asmaMeaning13 => 'UMyili Wobuhle';
+
+  @override
+  String get asmaMeaning14 => 'Abaxolelayo';
+
+  @override
+  String get asmaMeaning15 => 'UMthobisi';
+
+  @override
+  String get asmaMeaning16 => 'UMniki Wako Konke';
+
+  @override
+  String get asmaMeaning17 => 'UMlondolozi';
+
+  @override
+  String get asmaMeaning18 => 'Isivuli';
+
+  @override
+  String get asmaMeaning19 => 'UMazi Wako Konke';
+
+  @override
+  String get asmaMeaning20 => 'IConstrictor';
+
+  @override
+  String get asmaMeaning21 => 'UMhlanguli';
+
+  @override
+  String get asmaMeaning22 => 'I-Abaser';
+
+  @override
+  String get asmaMeaning23 => 'UMphakamisi';
+
+  @override
+  String get asmaMeaning24 => 'UMniki Wembeko';
+
+  @override
+  String get asmaMeaning25 => 'Umthobisi';
+
+  @override
+  String get asmaMeaning26 => 'UMphulaphuli Wabo Bonke';
+
+  @override
+  String get asmaMeaning27 => 'Imboni Yabo Bonke';
+
+  @override
+  String get asmaMeaning28 => 'UMgwebi';
+
+  @override
+  String get asmaMeaning29 => 'Ubulungisa';
+
+  @override
+  String get asmaMeaning30 => 'Lowo Ufihlakeleyo';
+
+  @override
+  String get asmaMeaning31 => 'Bonke bayazi';
+
+  @override
+  String get asmaMeaning32 => 'AbaPhambili';
+
+  @override
+  String get asmaMeaning33 => 'Obalaseleyo';
+
+  @override
+  String get asmaMeaning34 => 'UMthetheleli Omkhulu';
+
+  @override
+  String get asmaMeaning35 => 'UMvuzi Wombulelo';
+
+  @override
+  String get asmaMeaning36 => 'Oyena Uphakamileyo';
+
+  @override
+  String get asmaMeaning37 => 'Oyena mkhulu';
+
+  @override
+  String get asmaMeaning38 => 'UMlondolozi';
+
+  @override
+  String get asmaMeaning39 => 'Umondli';
+
+  @override
+  String get asmaMeaning40 => 'UMbali';
+
+  @override
+  String get asmaMeaning41 => 'Ubungangamsha';
+
+  @override
+  String get asmaMeaning42 => 'Unesisa';
+
+  @override
+  String get asmaMeaning43 => 'Lowo Uphaphileyo';
+
+  @override
+  String get asmaMeaning44 => 'Ukuphendula Umthandazo';
+
+  @override
+  String get asmaMeaning45 => 'Ukuqonda Konke';
+
+  @override
+  String get asmaMeaning46 => 'ISilumko Ngokugqibeleleyo';
+
+  @override
+  String get asmaMeaning47 => 'Lowo Unothando';
+
+  @override
+  String get asmaMeaning48 => 'Oyena Uzukileyo';
+
+  @override
+  String get asmaMeaning49 => 'uMvusi';
+
+  @override
+  String get asmaMeaning50 => 'INgqina';
+
+  @override
+  String get asmaMeaning51 => 'Inyani';
+
+  @override
+  String get asmaMeaning52 => 'ITrasti eyaneleyo';
+
+  @override
+  String get asmaMeaning53 => 'UMnini Wamandla Onke';
+
+  @override
+  String get asmaMeaning54 => 'Onamandla';
+
+  @override
+  String get asmaMeaning55 => 'UMkhuseli';
+
+  @override
+  String get asmaMeaning56 => 'Abadunyiswayo';
+
+  @override
+  String get asmaMeaning57 => 'Umxabisi';
+
+  @override
+  String get asmaMeaning58 => 'UMsunguli';
+
+  @override
+  String get asmaMeaning59 => 'UMbuyiseli';
+
+  @override
+  String get asmaMeaning60 => 'UMniki woBomi';
+
+  @override
+  String get asmaMeaning61 => 'UMthobi woBomi';
+
+  @override
+  String get asmaMeaning62 => 'Ophilayo Ongunaphakade';
+
+  @override
+  String get asmaMeaning63 => 'UMxhasi Ozixhasayo';
+
+  @override
+  String get asmaMeaning64 => 'Umfumani';
+
+  @override
+  String get asmaMeaning65 => 'Ozukileyo';
+
+  @override
+  String get asmaMeaning66 => 'Omnye kuphela';
+
+  @override
+  String get asmaMeaning67 => 'Eyona';
+
+  @override
+  String get asmaMeaning68 => 'Lowo Ufunwa Ngabo Bonke';
+
+  @override
+  String get asmaMeaning69 => 'Onamandla';
+
+  @override
+  String get asmaMeaning70 => 'UMdali wawo onke amandla';
+
+  @override
+  String get asmaMeaning71 => 'I-Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Umlibazi';
+
+  @override
+  String get asmaMeaning73 => 'Eyokuqala';
+
+  @override
+  String get asmaMeaning74 => 'Okokugqibela';
+
+  @override
+  String get asmaMeaning75 => 'Imbonakalo';
+
+  @override
+  String get asmaMeaning76 => 'EZifihliweyo';
+
+  @override
+  String get asmaMeaning77 => 'Irhuluneli';
+
+  @override
+  String get asmaMeaning78 => 'Lowo uPhakamileyo';
+
+  @override
+  String get asmaMeaning79 => 'UMenzi wokulungileyo';
+
+  @override
+  String get asmaMeaning80 => 'Isikhokelo senguquko';
+
+  @override
+  String get asmaMeaning81 => 'Umphindezeli';
+
+  @override
+  String get asmaMeaning82 => 'UMxoleli';
+
+  @override
+  String get asmaMeaning83 => 'UClement';
+
+  @override
+  String get asmaMeaning84 => 'UMnini/uMongami wazo zonke';
+
+  @override
+  String get asmaMeaning85 => 'UMnini woBungangamsha kunye neFayile';
+
+  @override
+  String get asmaMeaning86 => 'Onobulungisa';
+
+  @override
+  String get asmaMeaning87 => 'UMqokeleli';
+
+  @override
+  String get asmaMeaning88 => 'Osisityebi';
+
+  @override
+  String get asmaMeaning89 => 'UMtyebisi';
+
+  @override
+  String get asmaMeaning90 => 'UMthinteli Wobungozi';
+
+  @override
+  String get asmaMeaning91 => 'UMzisi Wengozi';
+
+  @override
+  String get asmaMeaning92 => 'UMniki weZibonelelo';
+
+  @override
+  String get asmaMeaning93 => 'UkuKhanya';
+
+  @override
+  String get asmaMeaning94 => 'UMkhokeli';
+
+  @override
+  String get asmaMeaning95 => 'UMsunguli';
+
+  @override
+  String get asmaMeaning96 => 'Lowo Ungunaphakade';
+
+  @override
+  String get asmaMeaning97 => 'Indlalifa';
+
+  @override
+  String get asmaMeaning98 => 'Oyena Mkhokheli olungileyo';
+
+  @override
+  String get asmaMeaning99 => 'Lowo Unomonde';
 }

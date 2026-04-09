@@ -1189,4 +1189,301 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'இஸ்லாமிய இடம்';
+
+  @override
+  String get asmaMeaning1 => 'பயன்படுத்துபவர்';
+
+  @override
+  String get asmaMeaning2 => 'இரக்கமுள்ளவர்';
+
+  @override
+  String get asmaMeaning3 => 'ராஜா / நித்திய இறைவன்';
+
+  @override
+  String get asmaMeaning4 => 'மிகப் புனிதமானது';
+
+  @override
+  String get asmaMeaning5 => 'அமைதியின் ஆதாரம்';
+
+  @override
+  String get asmaMeaning6 => 'பாதுகாப்பைக் கொடுப்பவர்';
+
+  @override
+  String get asmaMeaning7 => 'தி கார்டியன்';
+
+  @override
+  String get asmaMeaning8 => 'மதிப்புமிக்க / மிகவும் வல்லமை வாய்ந்தது';
+
+  @override
+  String get asmaMeaning9 => 'நிபந்தனை';
+
+  @override
+  String get asmaMeaning10 => 'மிகப்பெரியது';
+
+  @override
+  String get asmaMeaning11 => 'படைப்பாளர்';
+
+  @override
+  String get asmaMeaning12 => 'தி மேக்கர் ஆஃப் ஆர்டர்';
+
+  @override
+  String get asmaMeaning13 => 'அழகின் வடிவம்';
+
+  @override
+  String get asmaMeaning14 => 'மன்னிப்பவர்';
+
+  @override
+  String get asmaMeaning15 => 'சப்டுயர்';
+
+  @override
+  String get asmaMeaning16 => 'அனைத்தையும் கொடுப்பவர்';
+
+  @override
+  String get asmaMeaning17 => 'தி சஸ்டெய்னர்';
+
+  @override
+  String get asmaMeaning18 => 'திறப்பாளர்';
+
+  @override
+  String get asmaMeaning19 => 'அனைத்தையும் அறிந்தவர்';
+
+  @override
+  String get asmaMeaning20 => 'தி கன்ஸ்டிரிக்டர்';
+
+  @override
+  String get asmaMeaning21 => 'நிவாரணி';
+
+  @override
+  String get asmaMeaning22 => 'தி அபேசர்';
+
+  @override
+  String get asmaMeaning23 => 'எக்ஸால்டர்';
+
+  @override
+  String get asmaMeaning24 => 'கௌரவத்தை வழங்குபவர்';
+
+  @override
+  String get asmaMeaning25 => 'அவமானம்';
+
+  @override
+  String get asmaMeaning26 => 'அனைத்தையும் கேட்பவர்';
+
+  @override
+  String get asmaMeaning27 => 'அனைத்தையும் பார்ப்பவர்';
+
+  @override
+  String get asmaMeaning28 => 'நீதிபதி';
+
+  @override
+  String get asmaMeaning29 => 'தி ஜஸ்ட்';
+
+  @override
+  String get asmaMeaning30 => 'நுட்பமான ஒன்று';
+
+  @override
+  String get asmaMeaning31 => 'அனைவருக்கும் தெரியும்';
+
+  @override
+  String get asmaMeaning32 => 'முன்னோக்கி';
+
+  @override
+  String get asmaMeaning33 => 'அற்புதம்';
+
+  @override
+  String get asmaMeaning34 => 'பெரும் மன்னிப்பவர்';
+
+  @override
+  String get asmaMeaning35 => 'நன்றியின் வெகுமதி';
+
+  @override
+  String get asmaMeaning36 => 'மிக உயர்ந்தது';
+
+  @override
+  String get asmaMeaning37 => 'The Greatest';
+
+  @override
+  String get asmaMeaning38 => 'பாதுகாப்பவர்';
+
+  @override
+  String get asmaMeaning39 => 'ஊட்டமளிப்பவர்';
+
+  @override
+  String get asmaMeaning40 => 'தி ரெக்கனர்';
+
+  @override
+  String get asmaMeaning41 => 'தி மெஜஸ்டிக்';
+
+  @override
+  String get asmaMeaning42 => 'தாராளமானவர்';
+
+  @override
+  String get asmaMeaning43 => 'கவனிக்கப்பட்டவர்';
+
+  @override
+  String get asmaMeaning44 => 'பிரார்த்தனைக்கு பதிலளிப்பவர்';
+
+  @override
+  String get asmaMeaning45 => 'அனைத்தும் புரிந்துகொள்ளுதல்';
+
+  @override
+  String get asmaMeaning46 => 'சரியான புத்திசாலி';
+
+  @override
+  String get asmaMeaning47 => 'அன்பானவர்';
+
+  @override
+  String get asmaMeaning48 => 'மிகப் புகழ்பெற்ற ஒன்று';
+
+  @override
+  String get asmaMeaning49 => 'உயிர்த்தெழுப்புபவர்';
+
+  @override
+  String get asmaMeaning50 => 'சாட்சி';
+
+  @override
+  String get asmaMeaning51 => 'உண்மை';
+
+  @override
+  String get asmaMeaning52 => 'அனைத்தும் போதுமான அறங்காவலர்';
+
+  @override
+  String get asmaMeaning53 => 'எல்லா வலிமையையும் உடையவர்';
+
+  @override
+  String get asmaMeaning54 => 'தி ஃபோர்ஸ்ஃபுல்';
+
+  @override
+  String get asmaMeaning55 => 'பாதுகாவலர்';
+
+  @override
+  String get asmaMeaning56 => 'பாராட்டப்பட்டது';
+
+  @override
+  String get asmaMeaning57 => 'மதிப்பீட்டாளர்';
+
+  @override
+  String get asmaMeaning58 => 'The Originator';
+
+  @override
+  String get asmaMeaning59 => 'The Restorer';
+
+  @override
+  String get asmaMeaning60 => 'உயிர் கொடுப்பவர்';
+
+  @override
+  String get asmaMeaning61 => 'உயிரைப் பெறுபவர்';
+
+  @override
+  String get asmaMeaning62 => 'எவர் லிவிங்';
+
+  @override
+  String get asmaMeaning63 => 'சுய வாழ்வாதாரம்';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'தி க்ளோரியஸ்';
+
+  @override
+  String get asmaMeaning66 => 'ஒரே ஒன்று';
+
+  @override
+  String get asmaMeaning67 => 'தி ஒன்';
+
+  @override
+  String get asmaMeaning68 => 'அனைவராலும் தேடப்பட்ட ஒன்று';
+
+  @override
+  String get asmaMeaning69 => 'சக்தி வாய்ந்தது';
+
+  @override
+  String get asmaMeaning70 => 'அனைத்து சக்தியையும் படைத்தவர்';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'தாமதம்';
+
+  @override
+  String get asmaMeaning73 => 'முதல்';
+
+  @override
+  String get asmaMeaning74 => 'தி லாஸ்ட்';
+
+  @override
+  String get asmaMeaning75 => 'தி மேனிஃபெஸ்ட்';
+
+  @override
+  String get asmaMeaning76 => 'The Hidden';
+
+  @override
+  String get asmaMeaning77 => 'ஆளுநர்';
+
+  @override
+  String get asmaMeaning78 => 'உயர்ந்த ஒன்று';
+
+  @override
+  String get asmaMeaning79 => 'நன்மை செய்பவர்';
+
+  @override
+  String get asmaMeaning80 => 'மனந்திரும்புதலுக்கான வழிகாட்டி';
+
+  @override
+  String get asmaMeaning81 => 'தி அவெஞ்சர்';
+
+  @override
+  String get asmaMeaning82 => 'மன்னிப்பவர்';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'அனைத்தின் உரிமையாளர் / இறையாண்மை';
+
+  @override
+  String get asmaMeaning85 => 'மாட்சிமை மற்றும் வரம் பெற்றவர்';
+
+  @override
+  String get asmaMeaning86 => 'சமமான ஒன்று';
+
+  @override
+  String get asmaMeaning87 => 'The Gatherer';
+
+  @override
+  String get asmaMeaning88 => 'பணக்காரன்';
+
+  @override
+  String get asmaMeaning89 => 'தி என்ரிச்சர்';
+
+  @override
+  String get asmaMeaning90 => 'தீங்குகளைத் தடுப்பவர்';
+
+  @override
+  String get asmaMeaning91 => 'தீங்கைக் கொண்டுவருபவர்';
+
+  @override
+  String get asmaMeaning92 => 'நன்மைகளை வழங்குபவர்';
+
+  @override
+  String get asmaMeaning93 => 'ஒளி';
+
+  @override
+  String get asmaMeaning94 => 'வழிகாட்டி';
+
+  @override
+  String get asmaMeaning95 => 'The Originator';
+
+  @override
+  String get asmaMeaning96 => 'நித்தியமான ஒன்று';
+
+  @override
+  String get asmaMeaning97 => 'த மரபுரிமையாளர்';
+
+  @override
+  String get asmaMeaning98 => 'மிகவும் நேர்மையான வழிகாட்டி';
+
+  @override
+  String get asmaMeaning99 => 'நோயாளி';
 }

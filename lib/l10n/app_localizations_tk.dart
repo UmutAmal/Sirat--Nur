@@ -1187,4 +1187,301 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Yslam ýeri';
+
+  @override
+  String get asmaMeaning1 => 'Peýdaly';
+
+  @override
+  String get asmaMeaning2 => 'Rehimdar';
+
+  @override
+  String get asmaMeaning3 => 'Patyşa / Baky Reb';
+
+  @override
+  String get asmaMeaning4 => 'Iň mukaddes';
+
+  @override
+  String get asmaMeaning5 => 'Parahatçylygyň çeşmesi';
+
+  @override
+  String get asmaMeaning6 => 'Howpsuzlyk beriji';
+
+  @override
+  String get asmaMeaning7 => 'Goragçy';
+
+  @override
+  String get asmaMeaning8 => 'Iň gymmatly / iň güýçli';
+
+  @override
+  String get asmaMeaning9 => 'Satyjy';
+
+  @override
+  String get asmaMeaning10 => 'Iň beýik';
+
+  @override
+  String get asmaMeaning11 => 'Creatoraradyjy';
+
+  @override
+  String get asmaMeaning12 => 'Sargyt ýasaýjy';
+
+  @override
+  String get asmaMeaning13 => 'Gözelligiň şekili';
+
+  @override
+  String get asmaMeaning14 => 'Bagyşlaýjy';
+
+  @override
+  String get asmaMeaning15 => 'Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Hemmesini beriji';
+
+  @override
+  String get asmaMeaning17 => 'Düzediji';
+
+  @override
+  String get asmaMeaning18 => 'Açyk';
+
+  @override
+  String get asmaMeaning19 => 'Hemmesini bilýän';
+
+  @override
+  String get asmaMeaning20 => 'Gurluşykçy';
+
+  @override
+  String get asmaMeaning21 => 'Kömekçi';
+
+  @override
+  String get asmaMeaning22 => 'Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Exalter';
+
+  @override
+  String get asmaMeaning24 => 'Hormat gowşuryjy';
+
+  @override
+  String get asmaMeaning25 => 'Masgaralaýjy';
+
+  @override
+  String get asmaMeaning26 => 'Hemmesini diňleýji';
+
+  @override
+  String get asmaMeaning27 => 'Hemmesini görýän';
+
+  @override
+  String get asmaMeaning28 => 'Kazy';
+
+  @override
+  String get asmaMeaning29 => 'Adalat';
+
+  @override
+  String get asmaMeaning30 => 'Inçe';
+
+  @override
+  String get asmaMeaning31 => 'Hemmesi habarly';
+
+  @override
+  String get asmaMeaning32 => 'Öňünden gelýänler';
+
+  @override
+  String get asmaMeaning33 => 'Ajaýyp';
+
+  @override
+  String get asmaMeaning34 => 'Beýik Bagyşlaýjy';
+
+  @override
+  String get asmaMeaning35 => 'Şükür sylagy';
+
+  @override
+  String get asmaMeaning36 => 'Iň ýokary';
+
+  @override
+  String get asmaMeaning37 => 'Iň beýik';
+
+  @override
+  String get asmaMeaning38 => 'Saklaýjy';
+
+  @override
+  String get asmaMeaning39 => 'Iýmitlendiriji';
+
+  @override
+  String get asmaMeaning40 => 'Hasapçy';
+
+  @override
+  String get asmaMeaning41 => 'Ajaýyp';
+
+  @override
+  String get asmaMeaning42 => 'Sahy';
+
+  @override
+  String get asmaMeaning43 => 'Gözegçi';
+
+  @override
+  String get asmaMeaning44 => 'Namazyň jogaby';
+
+  @override
+  String get asmaMeaning45 => 'Hemmesi düşünýär';
+
+  @override
+  String get asmaMeaning46 => 'Iň oňat paýhas';
+
+  @override
+  String get asmaMeaning47 => 'Söýgüli';
+
+  @override
+  String get asmaMeaning48 => 'Iň şöhratly';
+
+  @override
+  String get asmaMeaning49 => 'Direliji';
+
+  @override
+  String get asmaMeaning50 => 'Şaýat';
+
+  @override
+  String get asmaMeaning51 => 'Hakykat';
+
+  @override
+  String get asmaMeaning52 => '-hli ýeterlik howandar';
+
+  @override
+  String get asmaMeaning53 => 'Allhli güýjüň eýesi';
+
+  @override
+  String get asmaMeaning54 => 'Güýçli';
+
+  @override
+  String get asmaMeaning55 => 'Goragçy';
+
+  @override
+  String get asmaMeaning56 => 'öwgüli sözler';
+
+  @override
+  String get asmaMeaning57 => 'Bahalandyryjy';
+
+  @override
+  String get asmaMeaning58 => 'Dörediji';
+
+  @override
+  String get asmaMeaning59 => 'Dikeldiji';
+
+  @override
+  String get asmaMeaning60 => 'Durmuş beriji';
+
+  @override
+  String get asmaMeaning61 => 'Durmuşyň alyjysy';
+
+  @override
+  String get asmaMeaning62 => 'Hemişe ýaşaýyş';
+
+  @override
+  String get asmaMeaning63 => 'Öz-özüni üpjün ediji';
+
+  @override
+  String get asmaMeaning64 => 'Gözleýji';
+
+  @override
+  String get asmaMeaning65 => 'Şöhratly';
+
+  @override
+  String get asmaMeaning66 => 'Diňe ýekeje';
+
+  @override
+  String get asmaMeaning67 => 'Bir';
+
+  @override
+  String get asmaMeaning68 => 'Hemmeler tarapyndan gözlenmeli';
+
+  @override
+  String get asmaMeaning69 => 'Güýçli';
+
+  @override
+  String get asmaMeaning70 => 'powerhli güýjüň ýaradyjysy';
+
+  @override
+  String get asmaMeaning71 => 'Ekspeditor';
+
+  @override
+  String get asmaMeaning72 => 'Gijä goýujy';
+
+  @override
+  String get asmaMeaning73 => 'Birinjisi';
+
+  @override
+  String get asmaMeaning74 => 'Iň soňky';
+
+  @override
+  String get asmaMeaning75 => 'Görkeziş';
+
+  @override
+  String get asmaMeaning76 => 'Gizlin';
+
+  @override
+  String get asmaMeaning77 => 'Häkim';
+
+  @override
+  String get asmaMeaning78 => 'Beýik';
+
+  @override
+  String get asmaMeaning79 => 'Gowy iş';
+
+  @override
+  String get asmaMeaning80 => 'Toba üçin gollanma';
+
+  @override
+  String get asmaMeaning81 => 'Öwez';
+
+  @override
+  String get asmaMeaning82 => 'Bagyşlaýjy';
+
+  @override
+  String get asmaMeaning83 => 'Klement';
+
+  @override
+  String get asmaMeaning84 => 'Hemmesiniň eýesi / hökümdary';
+
+  @override
+  String get asmaMeaning85 => 'Alyhezretiň we merhemetiň eýesi';
+
+  @override
+  String get asmaMeaning86 => 'Deňdir';
+
+  @override
+  String get asmaMeaning87 => 'erygnaýjy';
+
+  @override
+  String get asmaMeaning88 => 'Baý';
+
+  @override
+  String get asmaMeaning89 => 'Baýlaşdyryjy';
+
+  @override
+  String get asmaMeaning90 => 'Zyýanyň öňüni alyjy';
+
+  @override
+  String get asmaMeaning91 => 'Zyýan beriji';
+
+  @override
+  String get asmaMeaning92 => 'Peýdalary beriji';
+
+  @override
+  String get asmaMeaning93 => 'Lightagtylyk';
+
+  @override
+  String get asmaMeaning94 => 'Gollanma';
+
+  @override
+  String get asmaMeaning95 => 'Dörediji';
+
+  @override
+  String get asmaMeaning96 => 'Baky';
+
+  @override
+  String get asmaMeaning97 => 'Mirasçy';
+
+  @override
+  String get asmaMeaning98 => 'Iň dogry gollanma';
+
+  @override
+  String get asmaMeaning99 => 'Sabyrly';
 }

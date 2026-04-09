@@ -1191,4 +1191,301 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Àite Ioslamach';
+
+  @override
+  String get asmaMeaning1 => 'Am Fear-tairbheach';
+
+  @override
+  String get asmaMeaning2 => 'An Tròcair';
+
+  @override
+  String get asmaMeaning3 => 'An Rìgh/Tighearna sìorraidh';
+
+  @override
+  String get asmaMeaning4 => 'An Tì as Naomh';
+
+  @override
+  String get asmaMeaning5 => 'Stòr na Sìth';
+
+  @override
+  String get asmaMeaning6 => 'An Tabhartas Tèarainteachd';
+
+  @override
+  String get asmaMeaning7 => 'An Neach-gleidhidh';
+
+  @override
+  String get asmaMeaning8 => 'An Luachmhoir / An Tì as Cumhachdach';
+
+  @override
+  String get asmaMeaning9 => 'An Coinneach';
+
+  @override
+  String get asmaMeaning10 => 'Am fear as motha';
+
+  @override
+  String get asmaMeaning11 => 'An Cruthadair';
+
+  @override
+  String get asmaMeaning12 => 'An Neach-dèanaidh Òrdugh';
+
+  @override
+  String get asmaMeaning13 => 'An Cruthadair Bòidhchead';
+
+  @override
+  String get asmaMeaning14 => 'Am maitheanas';
+
+  @override
+  String get asmaMeaning15 => 'Am Fo-cheannard';
+
+  @override
+  String get asmaMeaning16 => 'Tabhair nan Uile';
+
+  @override
+  String get asmaMeaning17 => 'An Neach-gleidhidh';
+
+  @override
+  String get asmaMeaning18 => 'Am Fosgladair';
+
+  @override
+  String get asmaMeaning19 => 'Neach-eòlais nan Uile';
+
+  @override
+  String get asmaMeaning20 => 'An Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Am Fear-saoraidh';
+
+  @override
+  String get asmaMeaning22 => 'An t-Abas';
+
+  @override
+  String get asmaMeaning23 => 'An t-Ard-fhear';
+
+  @override
+  String get asmaMeaning24 => 'Am Fear Buidheachais';
+
+  @override
+  String get asmaMeaning25 => 'An Irioslachd';
+
+  @override
+  String get asmaMeaning26 => 'Neach-èisdeachd nan Uile';
+
+  @override
+  String get asmaMeaning27 => 'Am Fiosaiche nan Uile';
+
+  @override
+  String get asmaMeaning28 => 'Am Breitheamh';
+
+  @override
+  String get asmaMeaning29 => 'Na Fìreantachd';
+
+  @override
+  String get asmaMeaning30 => 'Am fear subtle';
+
+  @override
+  String get asmaMeaning31 => 'Na h-uile mothachail';
+
+  @override
+  String get asmaMeaning32 => 'An Sean-ghiùlan';
+
+  @override
+  String get asmaMeaning33 => 'An Sgothach';
+
+  @override
+  String get asmaMeaning34 => 'Am Machaire Mòr';
+
+  @override
+  String get asmaMeaning35 => 'An Neach-duaisbeanaidh Taingealachd';
+
+  @override
+  String get asmaMeaning36 => 'An ìre as àirde';
+
+  @override
+  String get asmaMeaning37 => 'Am fear as motha';
+
+  @override
+  String get asmaMeaning38 => 'An Neach-gleidhidh';
+
+  @override
+  String get asmaMeaning39 => 'Am Fear-beathachaidh';
+
+  @override
+  String get asmaMeaning40 => 'An Neach-cunntais';
+
+  @override
+  String get asmaMeaning41 => 'Am Mòrachd';
+
+  @override
+  String get asmaMeaning42 => 'An Fialaidh';
+
+  @override
+  String get asmaMeaning43 => 'Am Fear Faire';
+
+  @override
+  String get asmaMeaning44 => 'Am Fear-freagairt Ùrnaigh';
+
+  @override
+  String get asmaMeaning45 => 'An Uile-thuigse';
+
+  @override
+  String get asmaMeaning46 => 'Am Fìor Ghlic';
+
+  @override
+  String get asmaMeaning47 => 'Am Fear Gràdhach';
+
+  @override
+  String get asmaMeaning48 => 'Am fear as glòrmhoire';
+
+  @override
+  String get asmaMeaning49 => 'An t-Aiseirigh';
+
+  @override
+  String get asmaMeaning50 => 'Am Fianais';
+
+  @override
+  String get asmaMeaning51 => 'An Fhìrinn';
+
+  @override
+  String get asmaMeaning52 => 'An t-Urrasair Uile gu leòr';
+
+  @override
+  String get asmaMeaning53 => 'Sealbhaiche a h-uile Neart';
+
+  @override
+  String get asmaMeaning54 => 'Na Feachd';
+
+  @override
+  String get asmaMeaning55 => 'An Dìonadair';
+
+  @override
+  String get asmaMeaning56 => 'Am Moladh';
+
+  @override
+  String get asmaMeaning57 => 'Am Measadair';
+
+  @override
+  String get asmaMeaning58 => 'An Tùsanach';
+
+  @override
+  String get asmaMeaning59 => 'An t-Urr';
+
+  @override
+  String get asmaMeaning60 => 'Tabhair na Beatha';
+
+  @override
+  String get asmaMeaning61 => 'Glacadair na Beatha';
+
+  @override
+  String get asmaMeaning62 => 'Am bith beò';
+
+  @override
+  String get asmaMeaning63 => 'An Neach-gleidhidh fèin-sheasmhach';
+
+  @override
+  String get asmaMeaning64 => 'An Lorgar';
+
+  @override
+  String get asmaMeaning65 => 'An Glòireach';
+
+  @override
+  String get asmaMeaning66 => 'An t-aon fhear';
+
+  @override
+  String get asmaMeaning67 => 'Am fear';
+
+  @override
+  String get asmaMeaning68 => 'Am fear a bhios na h-uile a’ sireadh';
+
+  @override
+  String get asmaMeaning69 => 'An Cumhachdach';
+
+  @override
+  String get asmaMeaning70 => 'Cruthaiche a h-uile cumhachd';
+
+  @override
+  String get asmaMeaning71 => 'An t-Easpag';
+
+  @override
+  String get asmaMeaning72 => 'An Moill';
+
+  @override
+  String get asmaMeaning73 => 'A’ Chiad';
+
+  @override
+  String get asmaMeaning74 => 'An tè mu dheireadh';
+
+  @override
+  String get asmaMeaning75 => 'Am Manifest';
+
+  @override
+  String get asmaMeaning76 => 'Am Falaichte';
+
+  @override
+  String get asmaMeaning77 => 'An Riaghladair';
+
+  @override
+  String get asmaMeaning78 => 'An t-Àrd-neach';
+
+  @override
+  String get asmaMeaning79 => 'Doer of Good';
+
+  @override
+  String get asmaMeaning80 => 'Stiùireadh an Aithreachais';
+
+  @override
+  String get asmaMeaning81 => 'An Dìoghaltas';
+
+  @override
+  String get asmaMeaning82 => 'Am Machaire';
+
+  @override
+  String get asmaMeaning83 => 'An Clement';
+
+  @override
+  String get asmaMeaning84 => 'An Sealbhadair/Uachdaran nan Uile';
+
+  @override
+  String get asmaMeaning85 => 'Sealbhaiche na Mòrachd agus na Bounty';
+
+  @override
+  String get asmaMeaning86 => 'Am Fear Cothromach';
+
+  @override
+  String get asmaMeaning87 => 'An Neach-cruinneachaidh';
+
+  @override
+  String get asmaMeaning88 => 'Am Fear Saibhir';
+
+  @override
+  String get asmaMeaning89 => 'An Saibhreasaiche';
+
+  @override
+  String get asmaMeaning90 => 'An Neach-Bacadh Dochair';
+
+  @override
+  String get asmaMeaning91 => 'Buireadair a’ chron';
+
+  @override
+  String get asmaMeaning92 => 'Am Fear-buannachd as Fheàrr';
+
+  @override
+  String get asmaMeaning93 => 'An Solas';
+
+  @override
+  String get asmaMeaning94 => 'An Treòir';
+
+  @override
+  String get asmaMeaning95 => 'An Tùsanach';
+
+  @override
+  String get asmaMeaning96 => 'Am Fear Siorruidh';
+
+  @override
+  String get asmaMeaning97 => 'An t-Oighreiche';
+
+  @override
+  String get asmaMeaning98 => 'An Leabhar-iùil as Ceartaiche';
+
+  @override
+  String get asmaMeaning99 => 'An t-euslainteach';
 }

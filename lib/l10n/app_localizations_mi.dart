@@ -1190,4 +1190,301 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Wahi Ihirama';
+
+  @override
+  String get asmaMeaning1 => 'Te Manaakitanga';
+
+  @override
+  String get asmaMeaning2 => 'Te Aroha';
+
+  @override
+  String get asmaMeaning3 => 'Ko te Kingi / Ariki Mutungare';
+
+  @override
+  String get asmaMeaning4 => 'Te Tino Tapu';
+
+  @override
+  String get asmaMeaning5 => 'The Source of Peace';
+
+  @override
+  String get asmaMeaning6 => 'Ko te Kaituku Haumarutanga';
+
+  @override
+  String get asmaMeaning7 => 'Te Kaitiaki';
+
+  @override
+  String get asmaMeaning8 => 'The Precious / Te Kaha Rawa';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Te Nui Rawa';
+
+  @override
+  String get asmaMeaning11 => 'Te Kaihanga';
+
+  @override
+  String get asmaMeaning12 => 'Ko te Kaihanga Ota';
+
+  @override
+  String get asmaMeaning13 => 'The Shaper of Ataahua';
+
+  @override
+  String get asmaMeaning14 => 'Ko te muru hara';
+
+  @override
+  String get asmaMeaning15 => 'Te Kaihautu';
+
+  @override
+  String get asmaMeaning16 => 'Te Kai homai o te Katoa';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'The Opener';
+
+  @override
+  String get asmaMeaning19 => 'Te Moohio o te Katoa';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Te Kaiawhina';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Te Whakanuia';
+
+  @override
+  String get asmaMeaning24 => 'Te Kaiwhiwhi Whakahonore';
+
+  @override
+  String get asmaMeaning25 => 'The Humiliator';
+
+  @override
+  String get asmaMeaning26 => 'Te Kai-whakarongo o te Katoa';
+
+  @override
+  String get asmaMeaning27 => 'Te Matakite o te Katoa';
+
+  @override
+  String get asmaMeaning28 => 'Te Tiati';
+
+  @override
+  String get asmaMeaning29 => 'Te Tika';
+
+  @override
+  String get asmaMeaning30 => 'Ko te Maamaa';
+
+  @override
+  String get asmaMeaning31 => 'The All Aware';
+
+  @override
+  String get asmaMeaning32 => 'The Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'Te Whakanuia';
+
+  @override
+  String get asmaMeaning34 => 'Te Nui muru hara';
+
+  @override
+  String get asmaMeaning35 => 'Te Kaihoko Whakawhetai';
+
+  @override
+  String get asmaMeaning36 => 'Te Runga Rawa';
+
+  @override
+  String get asmaMeaning37 => 'Te Nui Rawa';
+
+  @override
+  String get asmaMeaning38 => 'The Preserver';
+
+  @override
+  String get asmaMeaning39 => 'The Nourisher';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'Te Nui';
+
+  @override
+  String get asmaMeaning42 => 'Te Manawanui';
+
+  @override
+  String get asmaMeaning43 => 'Te Mataara';
+
+  @override
+  String get asmaMeaning44 => 'Te Kai-whakahoki i te Inoi';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehend';
+
+  @override
+  String get asmaMeaning46 => 'The Perfectly Wise';
+
+  @override
+  String get asmaMeaning47 => 'Te Aroha';
+
+  @override
+  String get asmaMeaning48 => 'Te Tino Kororia';
+
+  @override
+  String get asmaMeaning49 => 'Te Aranga';
+
+  @override
+  String get asmaMeaning50 => 'Te Kaititiro';
+
+  @override
+  String get asmaMeaning51 => 'Te Pono';
+
+  @override
+  String get asmaMeaning52 => 'Te Kaitiaki Katoa';
+
+  @override
+  String get asmaMeaning53 => 'Ko te rangatira o te kaha katoa';
+
+  @override
+  String get asmaMeaning54 => 'Te Kaha';
+
+  @override
+  String get asmaMeaning55 => 'Te Kaitiaki';
+
+  @override
+  String get asmaMeaning56 => 'Te Whakamoemiti';
+
+  @override
+  String get asmaMeaning57 => 'The Appraiser';
+
+  @override
+  String get asmaMeaning58 => 'The Originator';
+
+  @override
+  String get asmaMeaning59 => 'Te Kaiwhakaora';
+
+  @override
+  String get asmaMeaning60 => 'Ko te Kai tuku ora';
+
+  @override
+  String get asmaMeaning61 => 'Te Kaihoko ora';
+
+  @override
+  String get asmaMeaning62 => 'Te ora tonu';
+
+  @override
+  String get asmaMeaning63 => 'The Self-Subsisting Sustainer';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'Te Kororia';
+
+  @override
+  String get asmaMeaning66 => 'Kotahi anake';
+
+  @override
+  String get asmaMeaning67 => 'Ko Tetahi';
+
+  @override
+  String get asmaMeaning68 => 'Ko te mea i rapua e te katoa';
+
+  @override
+  String get asmaMeaning69 => 'Te Kaha';
+
+  @override
+  String get asmaMeaning70 => 'Ko te Kaihanga o nga mana katoa';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Te Taarua';
+
+  @override
+  String get asmaMeaning73 => 'Ko te Tuatahi';
+
+  @override
+  String get asmaMeaning74 => 'Te Whakamutunga';
+
+  @override
+  String get asmaMeaning75 => 'Te Whakaaturanga';
+
+  @override
+  String get asmaMeaning76 => 'Te Huna';
+
+  @override
+  String get asmaMeaning77 => 'Te Kawana';
+
+  @override
+  String get asmaMeaning78 => 'Te Runga Rawa';
+
+  @override
+  String get asmaMeaning79 => 'Te Kaimahi i te pai';
+
+  @override
+  String get asmaMeaning80 => 'Te Aratohu mo te Ripeneta';
+
+  @override
+  String get asmaMeaning81 => 'Te Kaitakitaki';
+
+  @override
+  String get asmaMeaning82 => 'Ko te muru hara';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'The Owner / Sovereign of All';
+
+  @override
+  String get asmaMeaning85 => 'Ko te Kaipupuri o te Rangatiratanga me te Tohu';
+
+  @override
+  String get asmaMeaning86 => 'Ko te Tika';
+
+  @override
+  String get asmaMeaning87 => 'Te Kaikohikohi';
+
+  @override
+  String get asmaMeaning88 => 'The Rich One';
+
+  @override
+  String get asmaMeaning89 => 'The Enricher';
+
+  @override
+  String get asmaMeaning90 => 'Ko te Kaipupuri o te kino';
+
+  @override
+  String get asmaMeaning91 => 'Te Kaikawe o te kino';
+
+  @override
+  String get asmaMeaning92 => 'Te Kaiwhiwhi Painga';
+
+  @override
+  String get asmaMeaning93 => 'Te Maama';
+
+  @override
+  String get asmaMeaning94 => 'Te Kaitohutohu';
+
+  @override
+  String get asmaMeaning95 => 'The Originator';
+
+  @override
+  String get asmaMeaning96 => 'Ko te Mea Tuturu';
+
+  @override
+  String get asmaMeaning97 => 'Te Kaiwhiwhi';
+
+  @override
+  String get asmaMeaning98 => 'Te Arataki Tino Tika';
+
+  @override
+  String get asmaMeaning99 => 'Te Manawanui';
 }

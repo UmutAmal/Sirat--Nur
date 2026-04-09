@@ -1194,4 +1194,301 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islamic Hmun a ni';
+
+  @override
+  String get asmaMeaning1 => 'Thil hlawkthlak tak';
+
+  @override
+  String get asmaMeaning2 => 'Khawngaihtu';
+
+  @override
+  String get asmaMeaning3 => 'Lal / Chatuan Lalpa';
+
+  @override
+  String get asmaMeaning4 => 'Thianghlim ber';
+
+  @override
+  String get asmaMeaning5 => 'Remna Hmun';
+
+  @override
+  String get asmaMeaning6 => 'Hriselna petu';
+
+  @override
+  String get asmaMeaning7 => 'A Guardian chuan a rawn ti a';
+
+  @override
+  String get asmaMeaning8 => 'A Hlu / Thiltithei Ber';
+
+  @override
+  String get asmaMeaning9 => 'A Compeller chu a ni';
+
+  @override
+  String get asmaMeaning10 => 'A ropui ber';
+
+  @override
+  String get asmaMeaning11 => 'Siamtu';
+
+  @override
+  String get asmaMeaning12 => 'Order siamtu';
+
+  @override
+  String get asmaMeaning13 => 'Mawina siamtu';
+
+  @override
+  String get asmaMeaning14 => 'Ngaidamtu';
+
+  @override
+  String get asmaMeaning15 => 'A thununtu';
+
+  @override
+  String get asmaMeaning16 => 'Mi zawng zawng petu';
+
+  @override
+  String get asmaMeaning17 => 'A chhawmdawltu';
+
+  @override
+  String get asmaMeaning18 => 'A hawnna tur';
+
+  @override
+  String get asmaMeaning19 => 'Mi zawng zawng hretu';
+
+  @override
+  String get asmaMeaning20 => 'A Constrictor chu a ni';
+
+  @override
+  String get asmaMeaning21 => 'Chhawmdawltu chu';
+
+  @override
+  String get asmaMeaning22 => 'A Abaser te chu';
+
+  @override
+  String get asmaMeaning23 => 'Chutiangtu chu';
+
+  @override
+  String get asmaMeaning24 => 'Chawimawina petu';
+
+  @override
+  String get asmaMeaning25 => 'A Mualphotu';
+
+  @override
+  String get asmaMeaning26 => 'Mi zawng zawng ngaithlatu';
+
+  @override
+  String get asmaMeaning27 => 'Mi zawng zawng hmutu';
+
+  @override
+  String get asmaMeaning28 => 'Roreltu chuan';
+
+  @override
+  String get asmaMeaning29 => 'Mi dik tak';
+
+  @override
+  String get asmaMeaning30 => 'A Fiah lo';
+
+  @override
+  String get asmaMeaning31 => 'Mi zawng zawng hrechiangtu';
+
+  @override
+  String get asmaMeaning32 => 'A Hmasawnna';
+
+  @override
+  String get asmaMeaning33 => 'A ropui tak';
+
+  @override
+  String get asmaMeaning34 => 'Ngaidamtu Ropui';
+
+  @override
+  String get asmaMeaning35 => 'The Rewarder of Thankfulness';
+
+  @override
+  String get asmaMeaning36 => 'A sang ber';
+
+  @override
+  String get asmaMeaning37 => 'A ropui ber';
+
+  @override
+  String get asmaMeaning38 => 'A vawnhimtu';
+
+  @override
+  String get asmaMeaning39 => 'Ei chawmtu';
+
+  @override
+  String get asmaMeaning40 => 'Reckoner chu a ni';
+
+  @override
+  String get asmaMeaning41 => 'A ropui ber';
+
+  @override
+  String get asmaMeaning42 => 'Mi thilphal tak takte';
+
+  @override
+  String get asmaMeaning43 => 'A En rengtu';
+
+  @override
+  String get asmaMeaning44 => 'Tawngtaina chhangtu';
+
+  @override
+  String get asmaMeaning45 => 'The Engkim Hriatthiamna';
+
+  @override
+  String get asmaMeaning46 => 'Mi fing famkim';
+
+  @override
+  String get asmaMeaning47 => 'Hmangaihtu';
+
+  @override
+  String get asmaMeaning48 => 'Ropui ber';
+
+  @override
+  String get asmaMeaning49 => 'Thawhlehtu';
+
+  @override
+  String get asmaMeaning50 => 'Hriatpuitu';
+
+  @override
+  String get asmaMeaning51 => 'Thudik chu';
+
+  @override
+  String get asmaMeaning52 => 'Thil zawng zawng enkawltu';
+
+  @override
+  String get asmaMeaning53 => 'Chakna zawng zawng neitu';
+
+  @override
+  String get asmaMeaning54 => 'A tharum thawhna';
+
+  @override
+  String get asmaMeaning55 => 'A humhimtu chu';
+
+  @override
+  String get asmaMeaning56 => 'Mi fakte chu';
+
+  @override
+  String get asmaMeaning57 => 'A Appraiser chu a ni';
+
+  @override
+  String get asmaMeaning58 => 'A bul tantu';
+
+  @override
+  String get asmaMeaning59 => 'A siamthatna tur';
+
+  @override
+  String get asmaMeaning60 => 'Nunna petu';
+
+  @override
+  String get asmaMeaning61 => 'Nunna latu';
+
+  @override
+  String get asmaMeaning62 => 'Mi nung reng';
+
+  @override
+  String get asmaMeaning63 => 'Mahni Inrintawkna Sustainer';
+
+  @override
+  String get asmaMeaning64 => 'A zawngtu';
+
+  @override
+  String get asmaMeaning65 => 'Ropuite chu';
+
+  @override
+  String get asmaMeaning66 => 'A Pakhat chauh';
+
+  @override
+  String get asmaMeaning67 => 'A Pakhat chu';
+
+  @override
+  String get asmaMeaning68 => 'Mi zawng zawngin an zawn chu';
+
+  @override
+  String get asmaMeaning69 => 'Thiltihthei tak takte';
+
+  @override
+  String get asmaMeaning70 => 'Thiltihtheihna zawng zawng siamtu';
+
+  @override
+  String get asmaMeaning71 => 'A Expediter chu a ni';
+
+  @override
+  String get asmaMeaning72 => 'A Delayer chu';
+
+  @override
+  String get asmaMeaning73 => 'A hmasa ber';
+
+  @override
+  String get asmaMeaning74 => 'A hnuhnung ber';
+
+  @override
+  String get asmaMeaning75 => 'A Manifest';
+
+  @override
+  String get asmaMeaning76 => 'A Thup';
+
+  @override
+  String get asmaMeaning77 => 'Bawrhsap chuan';
+
+  @override
+  String get asmaMeaning78 => 'A chungnung ber';
+
+  @override
+  String get asmaMeaning79 => 'Thil tha titu';
+
+  @override
+  String get asmaMeaning80 => 'Simna kaihruaitu';
+
+  @override
+  String get asmaMeaning81 => 'Phuba la latu';
+
+  @override
+  String get asmaMeaning82 => 'Ngaidamtu';
+
+  @override
+  String get asmaMeaning83 => 'Clement-a chuan a rawn ti a';
+
+  @override
+  String get asmaMeaning84 => 'Mi zawng zawng neitu / Lalber';
+
+  @override
+  String get asmaMeaning85 => 'Majesty leh Bounty neitu';
+
+  @override
+  String get asmaMeaning86 => 'A Inthlauhna';
+
+  @override
+  String get asmaMeaning87 => 'A khawlkhawmtu';
+
+  @override
+  String get asmaMeaning88 => 'Mi Hausa';
+
+  @override
+  String get asmaMeaning89 => 'A hausatu';
+
+  @override
+  String get asmaMeaning90 => 'Hriselna laka invenna';
+
+  @override
+  String get asmaMeaning91 => 'Hriselna thlentu';
+
+  @override
+  String get asmaMeaning92 => 'Hamthatna petu';
+
+  @override
+  String get asmaMeaning93 => 'Eng chu';
+
+  @override
+  String get asmaMeaning94 => 'Kaihruaitu chu';
+
+  @override
+  String get asmaMeaning95 => 'A bul tantu';
+
+  @override
+  String get asmaMeaning96 => 'Chatuan mi';
+
+  @override
+  String get asmaMeaning97 => 'Ro luahtu chu';
+
+  @override
+  String get asmaMeaning98 => 'Kaihhruaina Dik Ber';
+
+  @override
+  String get asmaMeaning99 => 'Damlo pakhat';
 }

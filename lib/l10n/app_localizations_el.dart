@@ -1194,4 +1194,301 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Ισλαμικός τόπος';
+
+  @override
+  String get asmaMeaning1 => 'Ο Ευεργέτης';
+
+  @override
+  String get asmaMeaning2 => 'Ο Ελεήμων';
+
+  @override
+  String get asmaMeaning3 => 'Ο Βασιλιάς / Αιώνιος Κύριος';
+
+  @override
+  String get asmaMeaning4 => 'Τα Άγια';
+
+  @override
+  String get asmaMeaning5 => 'Η Πηγή της Ειρήνης';
+
+  @override
+  String get asmaMeaning6 => 'Ο Δωρητής της Ασφάλειας';
+
+  @override
+  String get asmaMeaning7 => 'The Guardian';
+
+  @override
+  String get asmaMeaning8 => 'The Precious / The Most Mighty';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'The Greatest';
+
+  @override
+  String get asmaMeaning11 => 'Ο Δημιουργός';
+
+  @override
+  String get asmaMeaning12 => 'The Maker of Order';
+
+  @override
+  String get asmaMeaning13 => 'The Shaper of Beauty';
+
+  @override
+  String get asmaMeaning14 => 'The Forgiving';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Ο Δωρητής των Όλων';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'The Opener';
+
+  @override
+  String get asmaMeaning19 => 'Ο γνώστης όλων';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'The Reliever';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'Ο Δωρητής της Τιμής';
+
+  @override
+  String get asmaMeaning25 => 'Ο Ταπεινωτής';
+
+  @override
+  String get asmaMeaning26 => 'Ο Ακούγοντας των Όλων';
+
+  @override
+  String get asmaMeaning27 => 'The Seer of All';
+
+  @override
+  String get asmaMeaning28 => 'Ο δικαστής';
+
+  @override
+  String get asmaMeaning29 => 'Ο Δίκαιος';
+
+  @override
+  String get asmaMeaning30 => 'The Subtle One';
+
+  @override
+  String get asmaMeaning31 => 'The All Aware';
+
+  @override
+  String get asmaMeaning32 => 'The Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'Ο Μεγάλος Συγχωρητής';
+
+  @override
+  String get asmaMeaning35 => 'The Rewarder of Thankfulness';
+
+  @override
+  String get asmaMeaning36 => 'Το υψηλότερο';
+
+  @override
+  String get asmaMeaning37 => 'The Greatest';
+
+  @override
+  String get asmaMeaning38 => 'Ο Συντηρητής';
+
+  @override
+  String get asmaMeaning39 => 'The Nourisher';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'Ο γενναιόδωρος';
+
+  @override
+  String get asmaMeaning43 => 'The Watchful One';
+
+  @override
+  String get asmaMeaning44 => 'Η απάντηση στην προσευχή';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehending';
+
+  @override
+  String get asmaMeaning46 => 'The Perfectly Wise';
+
+  @override
+  String get asmaMeaning47 => 'The Loving One';
+
+  @override
+  String get asmaMeaning48 => 'Ο πιο ένδοξος';
+
+  @override
+  String get asmaMeaning49 => 'The Resurrector';
+
+  @override
+  String get asmaMeaning50 => 'Ο Μάρτυρας';
+
+  @override
+  String get asmaMeaning51 => 'Η αλήθεια';
+
+  @override
+  String get asmaMeaning52 => 'The All-Sufficient Trustee';
+
+  @override
+  String get asmaMeaning53 => 'Ο Κάτοχος Όλης Δύναμης';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'Ο Προστάτης';
+
+  @override
+  String get asmaMeaning56 => 'Οι Επαινούμενοι';
+
+  @override
+  String get asmaMeaning57 => 'Ο Εκτιμητής';
+
+  @override
+  String get asmaMeaning58 => 'Ο Δημιουργός';
+
+  @override
+  String get asmaMeaning59 => 'The Restorer';
+
+  @override
+  String get asmaMeaning60 => 'Ο Δωρητής της Ζωής';
+
+  @override
+  String get asmaMeaning61 => 'The Taker of Life';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'The Self-Subsisting Sustainer';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'Ο μόνος';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'Το ένα που αναζητείται από όλους';
+
+  @override
+  String get asmaMeaning69 => 'Οι Ισχυροί';
+
+  @override
+  String get asmaMeaning70 => 'Ο Δημιουργός κάθε δύναμης';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Η καθυστέρηση';
+
+  @override
+  String get asmaMeaning73 => 'Το πρώτο';
+
+  @override
+  String get asmaMeaning74 => 'The Last';
+
+  @override
+  String get asmaMeaning75 => 'The Manifest';
+
+  @override
+  String get asmaMeaning76 => 'Το κρυμμένο';
+
+  @override
+  String get asmaMeaning77 => 'Ο Κυβερνήτης';
+
+  @override
+  String get asmaMeaning78 => 'Ο Υπέρτατος';
+
+  @override
+  String get asmaMeaning79 => 'The Doer of Good';
+
+  @override
+  String get asmaMeaning80 => 'Ο Οδηγός της Μετάνοιας';
+
+  @override
+  String get asmaMeaning81 => 'Ο Εκδικητής';
+
+  @override
+  String get asmaMeaning82 => 'Ο Συγχωρητής';
+
+  @override
+  String get asmaMeaning83 => 'Ο Κλήμης';
+
+  @override
+  String get asmaMeaning84 => 'Ο Ιδιοκτήτης / Κυρίαρχος όλων';
+
+  @override
+  String get asmaMeaning85 => 'The Possessor of Majesty and Bounty';
+
+  @override
+  String get asmaMeaning86 => 'The Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'The Gatherer';
+
+  @override
+  String get asmaMeaning88 => 'Ο πλούσιος';
+
+  @override
+  String get asmaMeaning89 => 'The Enricher';
+
+  @override
+  String get asmaMeaning90 => 'The Preventer of Harm';
+
+  @override
+  String get asmaMeaning91 => 'The Bringer of Harm';
+
+  @override
+  String get asmaMeaning92 => 'Ο Παροχέας των Παροχών';
+
+  @override
+  String get asmaMeaning93 => 'Το Φως';
+
+  @override
+  String get asmaMeaning94 => 'Ο Οδηγός';
+
+  @override
+  String get asmaMeaning95 => 'Ο Δημιουργός';
+
+  @override
+  String get asmaMeaning96 => 'Ο Αιώνιος';
+
+  @override
+  String get asmaMeaning97 => 'Ο κληρονόμος';
+
+  @override
+  String get asmaMeaning98 => 'Ο πιο δίκαιος οδηγός';
+
+  @override
+  String get asmaMeaning99 => 'The Patient One';
 }

@@ -1186,4 +1186,301 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islama Loko';
+
+  @override
+  String get asmaMeaning1 => 'La Bonfaranto';
+
+  @override
+  String get asmaMeaning2 => 'La Kompatema';
+
+  @override
+  String get asmaMeaning3 => 'La Reĝo / Eterna Sinjoro';
+
+  @override
+  String get asmaMeaning4 => 'La Plejsankta';
+
+  @override
+  String get asmaMeaning5 => 'La Fonto de Paco';
+
+  @override
+  String get asmaMeaning6 => 'La Donanto de Sekureco';
+
+  @override
+  String get asmaMeaning7 => 'La Gardisto';
+
+  @override
+  String get asmaMeaning8 => 'La Altvalora / La Plej Potenca';
+
+  @override
+  String get asmaMeaning9 => 'La Deviganto';
+
+  @override
+  String get asmaMeaning10 => 'La Plej Granda';
+
+  @override
+  String get asmaMeaning11 => 'La Kreinto';
+
+  @override
+  String get asmaMeaning12 => 'La Farinto de Ordo';
+
+  @override
+  String get asmaMeaning13 => 'La Formulo de Beleco';
+
+  @override
+  String get asmaMeaning14 => 'La Pardono';
+
+  @override
+  String get asmaMeaning15 => 'La Subulo';
+
+  @override
+  String get asmaMeaning16 => 'La Donanto de Ĉio';
+
+  @override
+  String get asmaMeaning17 => 'La Subtenanto';
+
+  @override
+  String get asmaMeaning18 => 'La Malfermilo';
+
+  @override
+  String get asmaMeaning19 => 'La Konanto de Ĉio';
+
+  @override
+  String get asmaMeaning20 => 'La Konstriktanto';
+
+  @override
+  String get asmaMeaning21 => 'La Reliever';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'La Exalter';
+
+  @override
+  String get asmaMeaning24 => 'La Donanto de Honoro';
+
+  @override
+  String get asmaMeaning25 => 'La Humilisto';
+
+  @override
+  String get asmaMeaning26 => 'La Aŭskultanto de Ĉio';
+
+  @override
+  String get asmaMeaning27 => 'La Vidinto de Ĉio';
+
+  @override
+  String get asmaMeaning28 => 'La Juĝisto';
+
+  @override
+  String get asmaMeaning29 => 'La Justulo';
+
+  @override
+  String get asmaMeaning30 => 'La Subtila';
+
+  @override
+  String get asmaMeaning31 => 'La Ĉia Konscia';
+
+  @override
+  String get asmaMeaning32 => 'La Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'La Grandioza';
+
+  @override
+  String get asmaMeaning34 => 'La Granda Pardonanto';
+
+  @override
+  String get asmaMeaning35 => 'La Rekompencisto de Dankemo';
+
+  @override
+  String get asmaMeaning36 => 'La Plej Alta';
+
+  @override
+  String get asmaMeaning37 => 'La Plej Granda';
+
+  @override
+  String get asmaMeaning38 => 'La Konservisto';
+
+  @override
+  String get asmaMeaning39 => 'La Nutranto';
+
+  @override
+  String get asmaMeaning40 => 'La kalkulisto';
+
+  @override
+  String get asmaMeaning41 => 'La Majesta';
+
+  @override
+  String get asmaMeaning42 => 'La Malavara';
+
+  @override
+  String get asmaMeaning43 => 'La Gardisto';
+
+  @override
+  String get asmaMeaning44 => 'La Respondanto al Preĝo';
+
+  @override
+  String get asmaMeaning45 => 'La Ĉia Komprenado';
+
+  @override
+  String get asmaMeaning46 => 'La Perfekte Saĝa';
+
+  @override
+  String get asmaMeaning47 => 'La Amatino';
+
+  @override
+  String get asmaMeaning48 => 'La Plej Glora';
+
+  @override
+  String get asmaMeaning49 => 'La Revivanto';
+
+  @override
+  String get asmaMeaning50 => 'La Atestanto';
+
+  @override
+  String get asmaMeaning51 => 'La Vero';
+
+  @override
+  String get asmaMeaning52 => 'La Tute Sufiĉa Kuratoro';
+
+  @override
+  String get asmaMeaning53 => 'La Posedanto de Ĉia Forto';
+
+  @override
+  String get asmaMeaning54 => 'La Forta';
+
+  @override
+  String get asmaMeaning55 => 'La Protektanto';
+
+  @override
+  String get asmaMeaning56 => 'La Laŭdata';
+
+  @override
+  String get asmaMeaning57 => 'La Taksisto';
+
+  @override
+  String get asmaMeaning58 => 'La Kreinto';
+
+  @override
+  String get asmaMeaning59 => 'La Restariganto';
+
+  @override
+  String get asmaMeaning60 => 'La Donanto de Vivo';
+
+  @override
+  String get asmaMeaning61 => 'La Prenanto de Vivo';
+
+  @override
+  String get asmaMeaning62 => 'La Ĉiam Vivanta';
+
+  @override
+  String get asmaMeaning63 => 'La Mem-Subsista Subtenanto';
+
+  @override
+  String get asmaMeaning64 => 'La Serĉilo';
+
+  @override
+  String get asmaMeaning65 => 'La Glora';
+
+  @override
+  String get asmaMeaning66 => 'La Sola';
+
+  @override
+  String get asmaMeaning67 => 'La Unu';
+
+  @override
+  String get asmaMeaning68 => 'La Serĉata de Ĉiuj';
+
+  @override
+  String get asmaMeaning69 => 'La Potenca';
+
+  @override
+  String get asmaMeaning70 => 'La Kreinto de ĉia potenco';
+
+  @override
+  String get asmaMeaning71 => 'La Expediter';
+
+  @override
+  String get asmaMeaning72 => 'La Prokrasto';
+
+  @override
+  String get asmaMeaning73 => 'La Unua';
+
+  @override
+  String get asmaMeaning74 => 'La Lasta';
+
+  @override
+  String get asmaMeaning75 => 'La Manifesto';
+
+  @override
+  String get asmaMeaning76 => 'La Kaŝita';
+
+  @override
+  String get asmaMeaning77 => 'La Guberniestro';
+
+  @override
+  String get asmaMeaning78 => 'La Supera';
+
+  @override
+  String get asmaMeaning79 => 'La Faranto de Bono';
+
+  @override
+  String get asmaMeaning80 => 'La Gvidilo al Pento';
+
+  @override
+  String get asmaMeaning81 => 'La Venĝanto';
+
+  @override
+  String get asmaMeaning82 => 'La Pardonanto';
+
+  @override
+  String get asmaMeaning83 => 'La Klemento';
+
+  @override
+  String get asmaMeaning84 => 'La Posedanto / Suvereno de Ĉiuj';
+
+  @override
+  String get asmaMeaning85 => 'La Posedanto de Moŝto kaj Premio';
+
+  @override
+  String get asmaMeaning86 => 'La Justulo';
+
+  @override
+  String get asmaMeaning87 => 'La Kolektanto';
+
+  @override
+  String get asmaMeaning88 => 'La Riĉa';
+
+  @override
+  String get asmaMeaning89 => 'La Riĉiganto';
+
+  @override
+  String get asmaMeaning90 => 'La Malhelpanto de Malutilo';
+
+  @override
+  String get asmaMeaning91 => 'La Alportanto de Malutilo';
+
+  @override
+  String get asmaMeaning92 => 'La Donanto de Profitoj';
+
+  @override
+  String get asmaMeaning93 => 'La Lumo';
+
+  @override
+  String get asmaMeaning94 => 'La Gvidisto';
+
+  @override
+  String get asmaMeaning95 => 'La Kreinto';
+
+  @override
+  String get asmaMeaning96 => 'La Eterna Unu';
+
+  @override
+  String get asmaMeaning97 => 'La Heredanto';
+
+  @override
+  String get asmaMeaning98 => 'La Plej Justa Gvidilo';
+
+  @override
+  String get asmaMeaning99 => 'La Paciento Unu';
 }

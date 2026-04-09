@@ -1179,4 +1179,301 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'እስላማዊ ቦታ';
+
+  @override
+  String get asmaMeaning1 => 'እቲ ገባሪ ሰናይ';
+
+  @override
+  String get asmaMeaning2 => 'መሓሪ';
+
+  @override
+  String get asmaMeaning3 => 'ንጉስ / ዘለኣለማዊ ጎይታ';
+
+  @override
+  String get asmaMeaning4 => 'ቅዱስ ቅዱስ';
+
+  @override
+  String get asmaMeaning5 => 'ምንጪ ሰላም';
+
+  @override
+  String get asmaMeaning6 => 'ወሃቢ ውሕስነት';
+
+  @override
+  String get asmaMeaning7 => 'ዘ ጋርድያን...';
+
+  @override
+  String get asmaMeaning8 => 'እቲ ክቡር / እቲ ዝለዓለ ሓያል';
+
+  @override
+  String get asmaMeaning9 => 'እቲ ኣገዳዲ';
+
+  @override
+  String get asmaMeaning10 => 'እቲ ዝዓበየ';
+
+  @override
+  String get asmaMeaning11 => 'ፈጣሪ';
+
+  @override
+  String get asmaMeaning12 => 'ሰራሕ ስርዓት';
+
+  @override
+  String get asmaMeaning13 => 'ቅርጺ ዝህብ ጽባቐ';
+
+  @override
+  String get asmaMeaning14 => 'ይቕረ ዝብሉ';
+
+  @override
+  String get asmaMeaning15 => 'እቲ ተገዛኢ';
+
+  @override
+  String get asmaMeaning16 => 'ወሃቢ ኩሉ';
+
+  @override
+  String get asmaMeaning17 => 'እቲ ዘላቒ';
+
+  @override
+  String get asmaMeaning18 => 'እቲ መኽፈቲ';
+
+  @override
+  String get asmaMeaning19 => 'ፈላጢ ኩሉ';
+
+  @override
+  String get asmaMeaning20 => 'እቲ ኮንስትሪክተር';
+
+  @override
+  String get asmaMeaning21 => 'እቲ ረሊቨር';
+
+  @override
+  String get asmaMeaning22 => 'እቲ ኣባሰር';
+
+  @override
+  String get asmaMeaning23 => 'እቲ ልዕል ዝበለ';
+
+  @override
+  String get asmaMeaning24 => 'ወሃቢ ክብሪ';
+
+  @override
+  String get asmaMeaning25 => 'እቲ ዘዋርድ';
+
+  @override
+  String get asmaMeaning26 => 'ሰማዒ ኩሉ';
+
+  @override
+  String get asmaMeaning27 => 'ረኣዪ ኩሉ';
+
+  @override
+  String get asmaMeaning28 => 'ዳኛ';
+
+  @override
+  String get asmaMeaning29 => 'እቲ ፍትሓዊ';
+
+  @override
+  String get asmaMeaning30 => 'እቲ ረቂቕ';
+
+  @override
+  String get asmaMeaning31 => 'እቶም ኩሎም ዝፈልጡ';
+
+  @override
+  String get asmaMeaning32 => 'እቲ ትዕግስቲ';
+
+  @override
+  String get asmaMeaning33 => 'እቲ መስተንክር';
+
+  @override
+  String get asmaMeaning34 => 'እቲ ዓቢይ ይቕረ ዝብል';
+
+  @override
+  String get asmaMeaning35 => 'ዓስቢ ምስጋና እዩ።';
+
+  @override
+  String get asmaMeaning36 => 'እቲ ዝለዓለ';
+
+  @override
+  String get asmaMeaning37 => 'እቲ ዝዓበየ';
+
+  @override
+  String get asmaMeaning38 => 'እቲ ዓቃቢ';
+
+  @override
+  String get asmaMeaning39 => 'እቲ መመገቢ ዝህብ';
+
+  @override
+  String get asmaMeaning40 => 'እቲ ረኮነር';
+
+  @override
+  String get asmaMeaning41 => 'እቲ ግርማዊ';
+
+  @override
+  String get asmaMeaning42 => 'እቶም ለጋሳት';
+
+  @override
+  String get asmaMeaning43 => 'እቲ ንቑሕ';
+
+  @override
+  String get asmaMeaning44 => 'ንጸሎት ምላሽ ዝህብ';
+
+  @override
+  String get asmaMeaning45 => 'እቲ ኩሉ ዝፈልጥ';
+
+  @override
+  String get asmaMeaning46 => 'እቲ ፍጹም ለባም';
+
+  @override
+  String get asmaMeaning47 => 'እቲ ፈቃር';
+
+  @override
+  String get asmaMeaning48 => 'እቲ ዝኸበረ';
+
+  @override
+  String get asmaMeaning49 => 'እቲ ትንሳኤ';
+
+  @override
+  String get asmaMeaning50 => 'እቲ ምስክር';
+
+  @override
+  String get asmaMeaning51 => 'እቲ ሓቂ';
+
+  @override
+  String get asmaMeaning52 => 'እቲ ኩሉ እኹል ኣማሓዳሪ';
+
+  @override
+  String get asmaMeaning53 => 'ወናኒ ኩሉ ሓይሊ';
+
+  @override
+  String get asmaMeaning54 => 'እቲ ሓያል';
+
+  @override
+  String get asmaMeaning55 => 'እቲ ሓላዊ';
+
+  @override
+  String get asmaMeaning56 => 'እቶም ዝተመስገኑ';
+
+  @override
+  String get asmaMeaning57 => 'እቲ ገምጋሚ';
+
+  @override
+  String get asmaMeaning58 => 'እቲ መበገሲ';
+
+  @override
+  String get asmaMeaning59 => 'እቲ ዳግመ-ምምላስ ዝገብር';
+
+  @override
+  String get asmaMeaning60 => 'ወሃቢ ህይወት';
+
+  @override
+  String get asmaMeaning61 => 'እቲ ዝወስድ ህይወት';
+
+  @override
+  String get asmaMeaning62 => 'እቲ ኩሉ ግዜ ዝነብር';
+
+  @override
+  String get asmaMeaning63 => 'እቲ ባዕሉ ዝነብር ዘላቒ';
+
+  @override
+  String get asmaMeaning64 => 'እቲ ፋይንደር';
+
+  @override
+  String get asmaMeaning65 => 'እቶም ክቡራት';
+
+  @override
+  String get asmaMeaning66 => 'እቲ እንኮ';
+
+  @override
+  String get asmaMeaning67 => 'እቲ ሓደ';
+
+  @override
+  String get asmaMeaning68 => 'እቲ ብኹሉ ዝድለ';
+
+  @override
+  String get asmaMeaning69 => 'እቶም ሓያላት';
+
+  @override
+  String get asmaMeaning70 => 'ፈጣሪ ኩሉ ሓይሊ';
+
+  @override
+  String get asmaMeaning71 => 'እቲ ኤክስፔዲተር';
+
+  @override
+  String get asmaMeaning72 => 'እቲ ደንጉዩ።';
+
+  @override
+  String get asmaMeaning73 => 'እቲ ቀዳማይ';
+
+  @override
+  String get asmaMeaning74 => 'እቲ ናይ መወዳእታ';
+
+  @override
+  String get asmaMeaning75 => 'እቲ ማኒፌስት';
+
+  @override
+  String get asmaMeaning76 => 'እቲ ሕቡእ';
+
+  @override
+  String get asmaMeaning77 => 'እቲ ኣመሓዳሪ';
+
+  @override
+  String get asmaMeaning78 => 'እቲ ልዑል';
+
+  @override
+  String get asmaMeaning79 => 'ገባሪ ሰናይ';
+
+  @override
+  String get asmaMeaning80 => 'መምርሒ ንስሓ';
+
+  @override
+  String get asmaMeaning81 => 'ዘ ኣቨንጀር';
+
+  @override
+  String get asmaMeaning82 => 'እቲ ይቕረ ዝብል';
+
+  @override
+  String get asmaMeaning83 => 'እቲ ቀሌምንጦስ';
+
+  @override
+  String get asmaMeaning84 => 'ዋና / ልኡላዊ ናይ ኩሉ';
+
+  @override
+  String get asmaMeaning85 => 'ወናኒ ግርማን ሽልማትን እዩ።';
+
+  @override
+  String get asmaMeaning86 => 'እቲ ፍትሓዊ ዝኾነ';
+
+  @override
+  String get asmaMeaning87 => 'እቲ ኣከባቢ';
+
+  @override
+  String get asmaMeaning88 => 'እቲ ሃብታም';
+
+  @override
+  String get asmaMeaning89 => 'እቲ ዘሀብተመ';
+
+  @override
+  String get asmaMeaning90 => 'መከላኸሊ ጉድኣት';
+
+  @override
+  String get asmaMeaning91 => 'ዘምጽእ ጉድኣት';
+
+  @override
+  String get asmaMeaning92 => 'ወሃቢ ጥቕምታት';
+
+  @override
+  String get asmaMeaning93 => 'እቲ ብርሃን';
+
+  @override
+  String get asmaMeaning94 => 'እቲ መራሒ';
+
+  @override
+  String get asmaMeaning95 => 'እቲ መበገሲ';
+
+  @override
+  String get asmaMeaning96 => 'እቲ ዘለኣለማዊ';
+
+  @override
+  String get asmaMeaning97 => 'እቲ ወራሲ';
+
+  @override
+  String get asmaMeaning98 => 'እቲ ኣዝዩ ጻድቕ መምርሒ';
+
+  @override
+  String get asmaMeaning99 => 'እቲ ሕሙም ዝኾነ';
 }

@@ -1186,4 +1186,301 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'יסלאַמיק אָרט';
+
+  @override
+  String get asmaMeaning1 => 'די וווילטויק';
+
+  @override
+  String get asmaMeaning2 => 'דער רחמנותדיקער';
+
+  @override
+  String get asmaMeaning3 => 'דער מלך / אייביק האר';
+
+  @override
+  String get asmaMeaning4 => 'די מערסט הייליק';
+
+  @override
+  String get asmaMeaning5 => 'דער מקור פון שלום';
+
+  @override
+  String get asmaMeaning6 => 'דער גיטער פון זיכערהייט';
+
+  @override
+  String get asmaMeaning7 => 'דער גאַרדיאַן';
+
+  @override
+  String get asmaMeaning8 => 'די טייַער / די מערסט גוואַלדיק';
+
+  @override
+  String get asmaMeaning9 => 'דער קאָמפּעלער';
+
+  @override
+  String get asmaMeaning10 => 'די גרעסטע';
+
+  @override
+  String get asmaMeaning11 => 'דער באשעפער';
+
+  @override
+  String get asmaMeaning12 => 'דער פאַבריקאַנט פון סדר';
+
+  @override
+  String get asmaMeaning13 => 'די שייפּער פון שיינקייט';
+
+  @override
+  String get asmaMeaning14 => 'די מוחל';
+
+  @override
+  String get asmaMeaning15 => 'דער סובדוער';
+
+  @override
+  String get asmaMeaning16 => 'דער געבן פון אַלע';
+
+  @override
+  String get asmaMeaning17 => 'דער סוסטאַינער';
+
+  @override
+  String get asmaMeaning18 => 'דער אָפּענער';
+
+  @override
+  String get asmaMeaning19 => 'דער קענער פון אלע';
+
+  @override
+  String get asmaMeaning20 => 'דער קאָנסטריקטאָר';
+
+  @override
+  String get asmaMeaning21 => 'דער ריליווער';
+
+  @override
+  String get asmaMeaning22 => 'דער אַבאַסער';
+
+  @override
+  String get asmaMeaning23 => 'דער עקסאַלטער';
+
+  @override
+  String get asmaMeaning24 => 'דער בעל הכבוד';
+
+  @override
+  String get asmaMeaning25 => 'דער כיומיליייטער';
+
+  @override
+  String get asmaMeaning26 => 'דער צוהערער פון אַלע';
+
+  @override
+  String get asmaMeaning27 => 'דער זעער פֿון אַלע';
+
+  @override
+  String get asmaMeaning28 => 'דער ריכטער';
+
+  @override
+  String get asmaMeaning29 => 'דער גערעכט';
+
+  @override
+  String get asmaMeaning30 => 'די סאַטאַל איינער';
+
+  @override
+  String get asmaMeaning31 => 'די אַלע אַווער';
+
+  @override
+  String get asmaMeaning32 => 'די פאָרעבערינג';
+
+  @override
+  String get asmaMeaning33 => 'די גלענצנדיק';
+
+  @override
+  String get asmaMeaning34 => 'דער גרויסער פארגיער';
+
+  @override
+  String get asmaMeaning35 => 'דער ריוואָרדער פון טהאַנקפולנעסס';
+
+  @override
+  String get asmaMeaning36 => 'דער העכסטן';
+
+  @override
+  String get asmaMeaning37 => 'דער גרעסטער';
+
+  @override
+  String get asmaMeaning38 => 'דער פּרעסערווער';
+
+  @override
+  String get asmaMeaning39 => 'דער נערישער';
+
+  @override
+  String get asmaMeaning40 => 'דער רעקאנער';
+
+  @override
+  String get asmaMeaning41 => 'די מייַעסטעטיש';
+
+  @override
+  String get asmaMeaning42 => 'די ברייטהאַרציקייט';
+
+  @override
+  String get asmaMeaning43 => 'דער וואך';
+
+  @override
+  String get asmaMeaning44 => 'דער ענטפער צו תפילה';
+
+  @override
+  String get asmaMeaning45 => 'די אַלע קאַמפּריכענשאַן';
+
+  @override
+  String get asmaMeaning46 => 'די פּערפעקטלי קלוג';
+
+  @override
+  String get asmaMeaning47 => 'די לאַווינג איינער';
+
+  @override
+  String get asmaMeaning48 => 'די מערסט גלאָריאַס איינער';
+
+  @override
+  String get asmaMeaning49 => 'דער רעסוררעקטאָר';
+
+  @override
+  String get asmaMeaning50 => 'דער עדות';
+
+  @override
+  String get asmaMeaning51 => 'דער אמת';
+
+  @override
+  String get asmaMeaning52 => 'די אַלע-גענוג טראַסטי';
+
+  @override
+  String get asmaMeaning53 => 'דער בעל פון אַלע שטאַרקייט';
+
+  @override
+  String get asmaMeaning54 => 'די פאָרספול';
+
+  @override
+  String get asmaMeaning55 => 'דער פּראָטעקטאָר';
+
+  @override
+  String get asmaMeaning56 => 'די געלויבט';
+
+  @override
+  String get asmaMeaning57 => 'דער אַפּפּראַיסער';
+
+  @override
+  String get asmaMeaning58 => 'דער אָריגינאַטאָר';
+
+  @override
+  String get asmaMeaning59 => 'די רעסטאָרער';
+
+  @override
+  String get asmaMeaning60 => 'דער גיטער פון לעבן';
+
+  @override
+  String get asmaMeaning61 => 'דער נעמען פון לעבן';
+
+  @override
+  String get asmaMeaning62 => 'די אלץ לעבעדיקע';
+
+  @override
+  String get asmaMeaning63 => 'די זעלבסט-סאַבסיסטינג סוסטאַינער';
+
+  @override
+  String get asmaMeaning64 => 'דער פינדער';
+
+  @override
+  String get asmaMeaning65 => 'די גלאָריאַס';
+
+  @override
+  String get asmaMeaning66 => 'דער בלויז איינער';
+
+  @override
+  String get asmaMeaning67 => 'דער איינער';
+
+  @override
+  String get asmaMeaning68 => 'דער איינער געזוכט דורך אַלע';
+
+  @override
+  String get asmaMeaning69 => 'די שטאַרק';
+
+  @override
+  String get asmaMeaning70 => 'דער באשעפער פון אַלע מאַכט';
+
+  @override
+  String get asmaMeaning71 => 'דער עקספּעדיטער';
+
+  @override
+  String get asmaMeaning72 => 'די פאַרהאַלטן';
+
+  @override
+  String get asmaMeaning73 => 'דער ערשטער';
+
+  @override
+  String get asmaMeaning74 => 'די לעצטע';
+
+  @override
+  String get asmaMeaning75 => 'דער מאַניפעסט';
+
+  @override
+  String get asmaMeaning76 => 'די פאַרבאָרגן';
+
+  @override
+  String get asmaMeaning77 => 'דער גאווערנאר';
+
+  @override
+  String get asmaMeaning78 => 'דער העכסטער';
+
+  @override
+  String get asmaMeaning79 => 'דער טוער פון גוטן';
+
+  @override
+  String get asmaMeaning80 => 'דער גייד צו תשובה';
+
+  @override
+  String get asmaMeaning81 => 'דער אַווענגער';
+
+  @override
+  String get asmaMeaning82 => 'דער פארגיער';
+
+  @override
+  String get asmaMeaning83 => 'דער קלעמענט';
+
+  @override
+  String get asmaMeaning84 => 'דער באַזיצער / הערשער פון אַלע';
+
+  @override
+  String get asmaMeaning85 => 'דער בעל פון מאַדזשעסטי און ברייטהאַרציקייט';
+
+  @override
+  String get asmaMeaning86 => 'די יוישער';
+
+  @override
+  String get asmaMeaning87 => 'דער גאַדערער';
+
+  @override
+  String get asmaMeaning88 => 'דער רייך';
+
+  @override
+  String get asmaMeaning89 => 'דער ענריטשער';
+
+  @override
+  String get asmaMeaning90 => 'דער פאַרהיטער פון שאָדן';
+
+  @override
+  String get asmaMeaning91 => 'דער ברענגען פון שאָדן';
+
+  @override
+  String get asmaMeaning92 => 'דער באשעפער פון בענעפיטן';
+
+  @override
+  String get asmaMeaning93 => 'די ליכט';
+
+  @override
+  String get asmaMeaning94 => 'דער פירער';
+
+  @override
+  String get asmaMeaning95 => 'דער אָריגינאַטאָר';
+
+  @override
+  String get asmaMeaning96 => 'די ייביק';
+
+  @override
+  String get asmaMeaning97 => 'דער ינכעריטאָר';
+
+  @override
+  String get asmaMeaning98 => 'דער מערסט צדיקים גייד';
+
+  @override
+  String get asmaMeaning99 => 'דער פאציענט איינער';
 }

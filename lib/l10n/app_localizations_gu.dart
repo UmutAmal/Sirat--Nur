@@ -1184,4 +1184,301 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'ઇસ્લામિક સ્થળ';
+
+  @override
+  String get asmaMeaning1 => 'The Beneficient';
+
+  @override
+  String get asmaMeaning2 => 'દયાળુ';
+
+  @override
+  String get asmaMeaning3 => 'રાજા / શાશ્વત ભગવાન';
+
+  @override
+  String get asmaMeaning4 => 'સૌથી પવિત્ર';
+
+  @override
+  String get asmaMeaning5 => 'શાંતિનો સ્ત્રોત';
+
+  @override
+  String get asmaMeaning6 => 'સુરક્ષા આપનાર';
+
+  @override
+  String get asmaMeaning7 => 'ધ ગાર્ડિયન';
+
+  @override
+  String get asmaMeaning8 => 'મૂલ્યવાન / સૌથી શકિતશાળી';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'The Greatest';
+
+  @override
+  String get asmaMeaning11 => 'સર્જક';
+
+  @override
+  String get asmaMeaning12 => 'The Maker of Order';
+
+  @override
+  String get asmaMeaning13 => 'The Shaper of Beauty';
+
+  @override
+  String get asmaMeaning14 => 'ધી ક્ષમાશીલ';
+
+  @override
+  String get asmaMeaning15 => 'ધ સબડ્યુઅર';
+
+  @override
+  String get asmaMeaning16 => 'બધાને આપનાર';
+
+  @override
+  String get asmaMeaning17 => 'ધ સસ્ટેનર';
+
+  @override
+  String get asmaMeaning18 => 'ધ ઓપનર';
+
+  @override
+  String get asmaMeaning19 => 'સૌના જાણકાર';
+
+  @override
+  String get asmaMeaning20 => 'ધ કન્સ્ટ્રક્ટર';
+
+  @override
+  String get asmaMeaning21 => 'આ રાહત આપનાર';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'The bestower of Honor';
+
+  @override
+  String get asmaMeaning25 => 'The Humiliator';
+
+  @override
+  String get asmaMeaning26 => 'The Hearer of All';
+
+  @override
+  String get asmaMeaning27 => 'બધાનો દ્રષ્ટા';
+
+  @override
+  String get asmaMeaning28 => 'જજ';
+
+  @override
+  String get asmaMeaning29 => 'The Just';
+
+  @override
+  String get asmaMeaning30 => 'The Subtle One';
+
+  @override
+  String get asmaMeaning31 => 'The All Aware';
+
+  @override
+  String get asmaMeaning32 => 'ધ ફોરબેરિંગ';
+
+  @override
+  String get asmaMeaning33 => 'The Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'The Great Forgiver';
+
+  @override
+  String get asmaMeaning35 => 'આભાર આપનાર';
+
+  @override
+  String get asmaMeaning36 => 'ઉચ્ચતમ';
+
+  @override
+  String get asmaMeaning37 => 'The Greatest';
+
+  @override
+  String get asmaMeaning38 => 'ધ સાચવનાર';
+
+  @override
+  String get asmaMeaning39 => 'ધ પોષક';
+
+  @override
+  String get asmaMeaning40 => 'ધ રેકનર';
+
+  @override
+  String get asmaMeaning41 => 'The Majestic';
+
+  @override
+  String get asmaMeaning42 => 'The Generous';
+
+  @override
+  String get asmaMeaning43 => 'ધ સાવધાન';
+
+  @override
+  String get asmaMeaning44 => 'પ્રાર્થનાનો પ્રતિસાદ આપનાર';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehending';
+
+  @override
+  String get asmaMeaning46 => 'The Perfectly Wise';
+
+  @override
+  String get asmaMeaning47 => 'The Loveing One';
+
+  @override
+  String get asmaMeaning48 => 'સૌથી મહિમાવાન';
+
+  @override
+  String get asmaMeaning49 => 'પુનરુત્થાન કરનાર';
+
+  @override
+  String get asmaMeaning50 => 'ધી વિટનેસ';
+
+  @override
+  String get asmaMeaning51 => 'The Truth';
+
+  @override
+  String get asmaMeaning52 => 'સર્વ-પર્યાપ્ત ટ્રસ્ટી';
+
+  @override
+  String get asmaMeaning53 => 'સમગ્ર શક્તિનો માલિક';
+
+  @override
+  String get asmaMeaning54 => 'The Forceful';
+
+  @override
+  String get asmaMeaning55 => 'ધ પ્રોટેક્ટર';
+
+  @override
+  String get asmaMeaning56 => 'પ્રશંસનીય';
+
+  @override
+  String get asmaMeaning57 => 'મૂલ્યાંકનકાર';
+
+  @override
+  String get asmaMeaning58 => 'The Originator';
+
+  @override
+  String get asmaMeaning59 => 'The Restorer';
+
+  @override
+  String get asmaMeaning60 => 'જીવન આપનાર';
+
+  @override
+  String get asmaMeaning61 => 'જીવન લેનાર';
+
+  @override
+  String get asmaMeaning62 => 'ધ એવર લિવિંગ';
+
+  @override
+  String get asmaMeaning63 => 'Self-Subsisting Sustainer';
+
+  @override
+  String get asmaMeaning64 => 'The Finder';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'The Only One';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'The One Sought by All';
+
+  @override
+  String get asmaMeaning69 => 'The Powerful';
+
+  @override
+  String get asmaMeaning70 => 'સર્વ શક્તિનો સર્જક';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'The વિલંબ';
+
+  @override
+  String get asmaMeaning73 => 'પ્રથમ';
+
+  @override
+  String get asmaMeaning74 => 'છેલ્લું';
+
+  @override
+  String get asmaMeaning75 => 'The મેનિફેસ્ટ';
+
+  @override
+  String get asmaMeaning76 => 'The હિડન';
+
+  @override
+  String get asmaMeaning77 => 'રાજ્યપાલ';
+
+  @override
+  String get asmaMeaning78 => 'The સર્વોચ્ચ એક';
+
+  @override
+  String get asmaMeaning79 => 'The Doer of Good';
+
+  @override
+  String get asmaMeaning80 => 'પસ્તાવો માટેની માર્ગદર્શિકા';
+
+  @override
+  String get asmaMeaning81 => 'ધ એવેન્જર';
+
+  @override
+  String get asmaMeaning82 => 'ક્ષમા કરનાર';
+
+  @override
+  String get asmaMeaning83 => 'ધ ક્લેમેન્ટ';
+
+  @override
+  String get asmaMeaning84 => 'સર્વના માલિક / સાર્વભૌમ';
+
+  @override
+  String get asmaMeaning85 => 'મહિમા અને બક્ષિસનો માલિક';
+
+  @override
+  String get asmaMeaning86 => 'The Equitable One';
+
+  @override
+  String get asmaMeaning87 => 'ધ ગેધરર';
+
+  @override
+  String get asmaMeaning88 => 'The Rich One';
+
+  @override
+  String get asmaMeaning89 => 'The enricher';
+
+  @override
+  String get asmaMeaning90 => 'ધ પ્રિવેન્ટર ઓફ હાર્મ';
+
+  @override
+  String get asmaMeaning91 => 'ધ બ્રિન્જર ઓફ હાર્મ';
+
+  @override
+  String get asmaMeaning92 => 'લાભ આપનાર';
+
+  @override
+  String get asmaMeaning93 => 'ધ લાઇટ';
+
+  @override
+  String get asmaMeaning94 => 'માર્ગદર્શક';
+
+  @override
+  String get asmaMeaning95 => 'The Originator';
+
+  @override
+  String get asmaMeaning96 => 'The Everlasting One';
+
+  @override
+  String get asmaMeaning97 => 'ધ ઇનહેરિટર';
+
+  @override
+  String get asmaMeaning98 => 'સૌથી ન્યાયી માર્ગદર્શિકા';
+
+  @override
+  String get asmaMeaning99 => 'પેશન્ટ વન';
 }

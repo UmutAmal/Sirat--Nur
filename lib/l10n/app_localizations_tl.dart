@@ -1192,4 +1192,301 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islamic Lugar';
+
+  @override
+  String get asmaMeaning1 => 'The Beneficent';
+
+  @override
+  String get asmaMeaning2 => 'Ang Maawain';
+
+  @override
+  String get asmaMeaning3 => 'Ang Hari / Walang Hanggang Panginoon';
+
+  @override
+  String get asmaMeaning4 => 'Ang Kabanal-banalan';
+
+  @override
+  String get asmaMeaning5 => 'Ang Pinagmumulan ng Kapayapaan';
+
+  @override
+  String get asmaMeaning6 => 'Ang Tagapagbigay ng Seguridad';
+
+  @override
+  String get asmaMeaning7 => 'Ang Tagapangalaga';
+
+  @override
+  String get asmaMeaning8 => 'Ang Mahalaga / Ang Pinakamakapangyarihan';
+
+  @override
+  String get asmaMeaning9 => 'The Compeller';
+
+  @override
+  String get asmaMeaning10 => 'Ang Pinakadakila';
+
+  @override
+  String get asmaMeaning11 => 'Ang Lumikha';
+
+  @override
+  String get asmaMeaning12 => 'Ang Gumawa ng Order';
+
+  @override
+  String get asmaMeaning13 => 'Ang Hugis ng Kagandahan';
+
+  @override
+  String get asmaMeaning14 => 'Ang Mapagpatawad';
+
+  @override
+  String get asmaMeaning15 => 'The Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Ang Tagapagbigay ng Lahat';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'Ang Pagbubukas';
+
+  @override
+  String get asmaMeaning19 => 'Ang Nakakaalam ng Lahat';
+
+  @override
+  String get asmaMeaning20 => 'The Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'Ang Reliever';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Ang Dakila';
+
+  @override
+  String get asmaMeaning24 => 'Ang Tagapagbigay ng karangalan';
+
+  @override
+  String get asmaMeaning25 => 'The Humiliator';
+
+  @override
+  String get asmaMeaning26 => 'Ang Nakaririnig ng Lahat';
+
+  @override
+  String get asmaMeaning27 => 'Ang Tagakita ng Lahat';
+
+  @override
+  String get asmaMeaning28 => 'Ang Hukom';
+
+  @override
+  String get asmaMeaning29 => 'Ang Makatarungan';
+
+  @override
+  String get asmaMeaning30 => 'Ang Tunay';
+
+  @override
+  String get asmaMeaning31 => 'The All Aware';
+
+  @override
+  String get asmaMeaning32 => 'Ang Forebearing';
+
+  @override
+  String get asmaMeaning33 => 'Ang Kahanga-hanga';
+
+  @override
+  String get asmaMeaning34 => 'Ang Dakilang Tagapagpatawad';
+
+  @override
+  String get asmaMeaning35 => 'Ang Gantimpala ng Pasasalamat';
+
+  @override
+  String get asmaMeaning36 => 'Ang Pinakamataas';
+
+  @override
+  String get asmaMeaning37 => 'Ang Pinakadakila';
+
+  @override
+  String get asmaMeaning38 => 'The Preserver';
+
+  @override
+  String get asmaMeaning39 => 'The Nourisher';
+
+  @override
+  String get asmaMeaning40 => 'The Reckoner';
+
+  @override
+  String get asmaMeaning41 => 'Ang Maharlika';
+
+  @override
+  String get asmaMeaning42 => 'Ang Mapagbigay';
+
+  @override
+  String get asmaMeaning43 => 'The Watchful One';
+
+  @override
+  String get asmaMeaning44 => 'Ang Tumutugon sa Panalangin';
+
+  @override
+  String get asmaMeaning45 => 'The All Comprehending';
+
+  @override
+  String get asmaMeaning46 => 'Ang Ganap na Matalino';
+
+  @override
+  String get asmaMeaning47 => 'Ang Nagmamahal';
+
+  @override
+  String get asmaMeaning48 => 'Ang Pinakamaluwalhati';
+
+  @override
+  String get asmaMeaning49 => 'Ang Muling Nabuhay';
+
+  @override
+  String get asmaMeaning50 => 'Ang Saksi';
+
+  @override
+  String get asmaMeaning51 => 'Ang Katotohanan';
+
+  @override
+  String get asmaMeaning52 => 'The All-Sufficient Trustee';
+
+  @override
+  String get asmaMeaning53 => 'Ang Nagmamay-ari ng Lahat ng Lakas';
+
+  @override
+  String get asmaMeaning54 => 'Ang Mapilit';
+
+  @override
+  String get asmaMeaning55 => 'Ang Tagapagtanggol';
+
+  @override
+  String get asmaMeaning56 => 'Ang Pinupuri';
+
+  @override
+  String get asmaMeaning57 => 'The Appraiser';
+
+  @override
+  String get asmaMeaning58 => 'Ang Nagsimula';
+
+  @override
+  String get asmaMeaning59 => 'The Restorer';
+
+  @override
+  String get asmaMeaning60 => 'Ang Tagapagbigay ng Buhay';
+
+  @override
+  String get asmaMeaning61 => 'Ang Buhay';
+
+  @override
+  String get asmaMeaning62 => 'Ang Kailanman Nabubuhay';
+
+  @override
+  String get asmaMeaning63 => 'The Self-Subsisting Sustainer';
+
+  @override
+  String get asmaMeaning64 => 'Ang Tagahanap';
+
+  @override
+  String get asmaMeaning65 => 'Ang Maluwalhati';
+
+  @override
+  String get asmaMeaning66 => 'The Only One';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'Ang Hinahangad ng Lahat';
+
+  @override
+  String get asmaMeaning69 => 'Ang Makapangyarihan';
+
+  @override
+  String get asmaMeaning70 => 'Ang Lumikha ng lahat ng kapangyarihan';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'Ang Delayer';
+
+  @override
+  String get asmaMeaning73 => 'Ang Una';
+
+  @override
+  String get asmaMeaning74 => 'Ang Huli';
+
+  @override
+  String get asmaMeaning75 => 'The Manifest';
+
+  @override
+  String get asmaMeaning76 => 'Ang Nakatago';
+
+  @override
+  String get asmaMeaning77 => 'Ang Gobernador';
+
+  @override
+  String get asmaMeaning78 => 'Ang Kataas-taasan';
+
+  @override
+  String get asmaMeaning79 => 'The Doer of Good';
+
+  @override
+  String get asmaMeaning80 => 'Ang Patnubay sa Pagsisisi';
+
+  @override
+  String get asmaMeaning81 => 'Ang Tagapaghiganti';
+
+  @override
+  String get asmaMeaning82 => 'Ang Mapagpatawad';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Ang May-ari / Soberano ng Lahat';
+
+  @override
+  String get asmaMeaning85 => 'Ang Nagmamay-ari ng Kamahalan at Bounty';
+
+  @override
+  String get asmaMeaning86 => 'Ang Pantay';
+
+  @override
+  String get asmaMeaning87 => 'Ang Nagtitipon';
+
+  @override
+  String get asmaMeaning88 => 'Ang Mayaman';
+
+  @override
+  String get asmaMeaning89 => 'The Enricher';
+
+  @override
+  String get asmaMeaning90 => 'Ang Tagapagpigil sa Kapinsalaan';
+
+  @override
+  String get asmaMeaning91 => 'Ang Naghahatid ng Kapinsalaan';
+
+  @override
+  String get asmaMeaning92 => 'Ang Tagapagbigay ng Mga Benepisyo';
+
+  @override
+  String get asmaMeaning93 => 'Ang Liwanag';
+
+  @override
+  String get asmaMeaning94 => 'Ang Tagapatnubay';
+
+  @override
+  String get asmaMeaning95 => 'Ang Nagsimula';
+
+  @override
+  String get asmaMeaning96 => 'Ang Walang Hanggan';
+
+  @override
+  String get asmaMeaning97 => 'The Inheritor';
+
+  @override
+  String get asmaMeaning98 => 'Ang Pinaka Matuwid na Patnubay';
+
+  @override
+  String get asmaMeaning99 => 'The Patient One';
 }

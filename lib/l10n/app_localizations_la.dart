@@ -1186,4 +1186,301 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Macometi Place';
+
+  @override
+  String get asmaMeaning1 => 'Beneficent';
+
+  @override
+  String get asmaMeaning2 => 'Misericors';
+
+  @override
+  String get asmaMeaning3 => 'Rex / Dominus aeterne';
+
+  @override
+  String get asmaMeaning4 => 'De Sanctissimo';
+
+  @override
+  String get asmaMeaning5 => 'Fons pacis';
+
+  @override
+  String get asmaMeaning6 => 'Dator Securitatis';
+
+  @override
+  String get asmaMeaning7 => 'Custos';
+
+  @override
+  String get asmaMeaning8 => 'Pretiosissimi / Fortissimi';
+
+  @override
+  String get asmaMeaning9 => 'Coegi';
+
+  @override
+  String get asmaMeaning10 => 'Maximi';
+
+  @override
+  String get asmaMeaning11 => 'Creator';
+
+  @override
+  String get asmaMeaning12 => 'Auctor Ordinis';
+
+  @override
+  String get asmaMeaning13 => 'Figura pulchritudinis';
+
+  @override
+  String get asmaMeaning14 => 'Remissio';
+
+  @override
+  String get asmaMeaning15 => 'Subduer';
+
+  @override
+  String get asmaMeaning16 => 'Dator omnium';
+
+  @override
+  String get asmaMeaning17 => 'The Sustainer';
+
+  @override
+  String get asmaMeaning18 => 'Apertor';
+
+  @override
+  String get asmaMeaning19 => 'Cognitor omnium';
+
+  @override
+  String get asmaMeaning20 => 'Constrictor';
+
+  @override
+  String get asmaMeaning21 => 'The Reliever';
+
+  @override
+  String get asmaMeaning22 => 'The Abaser';
+
+  @override
+  String get asmaMeaning23 => 'The Exalter';
+
+  @override
+  String get asmaMeaning24 => 'Largitor Honoris';
+
+  @override
+  String get asmaMeaning25 => 'Humiliator';
+
+  @override
+  String get asmaMeaning26 => 'Auditor omnium';
+
+  @override
+  String get asmaMeaning27 => 'Videtor omnium';
+
+  @override
+  String get asmaMeaning28 => 'Iudex';
+
+  @override
+  String get asmaMeaning29 => 'The Just';
+
+  @override
+  String get asmaMeaning30 => 'Subtilis';
+
+  @override
+  String get asmaMeaning31 => 'The Omnes Conscii';
+
+  @override
+  String get asmaMeaning32 => 'Providentiae';
+
+  @override
+  String get asmaMeaning33 => 'Magnificent';
+
+  @override
+  String get asmaMeaning34 => 'The Great Remission';
+
+  @override
+  String get asmaMeaning35 => 'Praemium gratitudinis';
+
+  @override
+  String get asmaMeaning36 => 'Altissimus';
+
+  @override
+  String get asmaMeaning37 => 'Maximi';
+
+  @override
+  String get asmaMeaning38 => 'Conservator';
+
+  @override
+  String get asmaMeaning39 => 'Nutritor';
+
+  @override
+  String get asmaMeaning40 => 'Computator';
+
+  @override
+  String get asmaMeaning41 => 'The Magnificat';
+
+  @override
+  String get asmaMeaning42 => 'Liberalis';
+
+  @override
+  String get asmaMeaning43 => 'Vigilans';
+
+  @override
+  String get asmaMeaning44 => 'Respondetor ad Orationem';
+
+  @override
+  String get asmaMeaning45 => 'The Omnes comprehendentes';
+
+  @override
+  String get asmaMeaning46 => 'Perfecte Sapientes';
+
+  @override
+  String get asmaMeaning47 => 'The Amandi';
+
+  @override
+  String get asmaMeaning48 => 'Gloriosissimo';
+
+  @override
+  String get asmaMeaning49 => 'The Resurrector';
+
+  @override
+  String get asmaMeaning50 => 'Testis';
+
+  @override
+  String get asmaMeaning51 => 'Veritas';
+
+  @override
+  String get asmaMeaning52 => 'Sufficiens commissarium';
+
+  @override
+  String get asmaMeaning53 => 'Possessor omnis fortitudinis';
+
+  @override
+  String get asmaMeaning54 => 'Fortis';
+
+  @override
+  String get asmaMeaning55 => 'Protectoris';
+
+  @override
+  String get asmaMeaning56 => 'De Laudibus';
+
+  @override
+  String get asmaMeaning57 => 'The EXISTIMATOR';
+
+  @override
+  String get asmaMeaning58 => 'Auctorem';
+
+  @override
+  String get asmaMeaning59 => 'Reparator';
+
+  @override
+  String get asmaMeaning60 => 'Dator Vitae';
+
+  @override
+  String get asmaMeaning61 => 'Susceptor vitae';
+
+  @override
+  String get asmaMeaning62 => 'In aeternum';
+
+  @override
+  String get asmaMeaning63 => 'Per se subsistens';
+
+  @override
+  String get asmaMeaning64 => 'Inventor';
+
+  @override
+  String get asmaMeaning65 => 'The Gloriosus';
+
+  @override
+  String get asmaMeaning66 => 'Solum unum';
+
+  @override
+  String get asmaMeaning67 => 'The One';
+
+  @override
+  String get asmaMeaning68 => 'The quaesitus ab omnibus';
+
+  @override
+  String get asmaMeaning69 => 'Validus';
+
+  @override
+  String get asmaMeaning70 => 'Creator omnis potentiae';
+
+  @override
+  String get asmaMeaning71 => 'The Expediter';
+
+  @override
+  String get asmaMeaning72 => 'De mora';
+
+  @override
+  String get asmaMeaning73 => 'The First';
+
+  @override
+  String get asmaMeaning74 => 'Ultimum';
+
+  @override
+  String get asmaMeaning75 => 'Manifestum est';
+
+  @override
+  String get asmaMeaning76 => 'The Occultum';
+
+  @override
+  String get asmaMeaning77 => 'Praefectus';
+
+  @override
+  String get asmaMeaning78 => 'The Summi';
+
+  @override
+  String get asmaMeaning79 => 'Faciens boni';
+
+  @override
+  String get asmaMeaning80 => 'Dux ad Paenitentiam';
+
+  @override
+  String get asmaMeaning81 => 'Ultor';
+
+  @override
+  String get asmaMeaning82 => 'Remissio';
+
+  @override
+  String get asmaMeaning83 => 'The Clement';
+
+  @override
+  String get asmaMeaning84 => 'Dominus omnium Dominus /';
+
+  @override
+  String get asmaMeaning85 => 'Possessor Maiestatis ac Numinis';
+
+  @override
+  String get asmaMeaning86 => 'The Aequabilis';
+
+  @override
+  String get asmaMeaning87 => 'Collector';
+
+  @override
+  String get asmaMeaning88 => 'The Rich One';
+
+  @override
+  String get asmaMeaning89 => 'The Enricher';
+
+  @override
+  String get asmaMeaning90 => 'Praeventor nocendi';
+
+  @override
+  String get asmaMeaning91 => 'auctor noxae';
+
+  @override
+  String get asmaMeaning92 => 'Contributor beneficiorum';
+
+  @override
+  String get asmaMeaning93 => 'The Light';
+
+  @override
+  String get asmaMeaning94 => 'Praefectus est';
+
+  @override
+  String get asmaMeaning95 => 'Auctorem';
+
+  @override
+  String get asmaMeaning96 => 'In aeternum';
+
+  @override
+  String get asmaMeaning97 => 'Hereditarius';
+
+  @override
+  String get asmaMeaning98 => 'The justissime Guide';
+
+  @override
+  String get asmaMeaning99 => 'The Patient One';
 }

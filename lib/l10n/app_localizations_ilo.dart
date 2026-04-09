@@ -1195,4 +1195,301 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'Islamiko a Lugar';
+
+  @override
+  String get asmaMeaning1 => 'Ti Makagunggona';
+
+  @override
+  String get asmaMeaning2 => 'Ti Manangngaasi';
+
+  @override
+  String get asmaMeaning3 => 'Ti Ari / Agnanayon nga Apo';
+
+  @override
+  String get asmaMeaning4 => 'Ti Kasasantuan';
+
+  @override
+  String get asmaMeaning5 => 'Ti Gubuayan ti Kappia';
+
+  @override
+  String get asmaMeaning6 => 'Ti Mangted ti Seguridad';
+
+  @override
+  String get asmaMeaning7 => 'Ti Guardian';
+
+  @override
+  String get asmaMeaning8 => 'Ti Napateg / Dagiti Kabilgan';
+
+  @override
+  String get asmaMeaning9 => 'Ti Mangipilit';
+
+  @override
+  String get asmaMeaning10 => 'Ti Kadakkelan';
+
+  @override
+  String get asmaMeaning11 => 'Ti Namarsua';
+
+  @override
+  String get asmaMeaning12 => 'Ti Nangaramid ti Urnos';
+
+  @override
+  String get asmaMeaning13 => 'Ti Mangporma iti Kinapintas';
+
+  @override
+  String get asmaMeaning14 => 'Ti Manangpakawan';
+
+  @override
+  String get asmaMeaning15 => 'Ti Naparmek';
+
+  @override
+  String get asmaMeaning16 => 'Ti Manangted ti Amin';
+
+  @override
+  String get asmaMeaning17 => 'Ti Mangsustiner';
+
+  @override
+  String get asmaMeaning18 => 'Ti Manglukat';
+
+  @override
+  String get asmaMeaning19 => 'Ti Ammo ti Amin';
+
+  @override
+  String get asmaMeaning20 => 'Ti Konstriktor';
+
+  @override
+  String get asmaMeaning21 => 'Ti Mangbang-ar';
+
+  @override
+  String get asmaMeaning22 => 'Ti Abaser';
+
+  @override
+  String get asmaMeaning23 => 'Ti Natan-ok';
+
+  @override
+  String get asmaMeaning24 => 'Ti Manangted ti Pammadayaw';
+
+  @override
+  String get asmaMeaning25 => 'Ti Manangibabain';
+
+  @override
+  String get asmaMeaning26 => 'Ti Dumdumngeg iti Amin';
+
+  @override
+  String get asmaMeaning27 => 'Ti Makita ti Amin';
+
+  @override
+  String get asmaMeaning28 => 'Ti Ukom';
+
+  @override
+  String get asmaMeaning29 => 'Ti Nalinteg';
+
+  @override
+  String get asmaMeaning30 => 'Ti Nasipnget';
+
+  @override
+  String get asmaMeaning31 => 'Ti Ammo ti Amin';
+
+  @override
+  String get asmaMeaning32 => 'Ti Panagpasingked';
+
+  @override
+  String get asmaMeaning33 => 'Ti Natan-ok';
+
+  @override
+  String get asmaMeaning34 => 'Ti Naindaklan a Manangpakawan';
+
+  @override
+  String get asmaMeaning35 => 'Ti Gunggona ti Panagyaman';
+
+  @override
+  String get asmaMeaning36 => 'Ti Kangatuan';
+
+  @override
+  String get asmaMeaning37 => 'Ti Kadakkelan';
+
+  @override
+  String get asmaMeaning38 => 'Ti Mangpreserba';
+
+  @override
+  String get asmaMeaning39 => 'Ti Mangtaraon';
+
+  @override
+  String get asmaMeaning40 => 'Ti Agkuenta';
+
+  @override
+  String get asmaMeaning41 => 'Ti Natan-ok';
+
+  @override
+  String get asmaMeaning42 => 'Ti Naparabur';
+
+  @override
+  String get asmaMeaning43 => 'Ti Nabantayan';
+
+  @override
+  String get asmaMeaning44 => 'Ti Mangsungbat iti Kararag';
+
+  @override
+  String get asmaMeaning45 => 'Ti Amin a Makaawat';
+
+  @override
+  String get asmaMeaning46 => 'Ti Naan-anay a Masirib';
+
+  @override
+  String get asmaMeaning47 => 'Ti Naayat';
+
+  @override
+  String get asmaMeaning48 => 'Ti Nadayag unay';
+
+  @override
+  String get asmaMeaning49 => 'Ti Nagungar';
+
+  @override
+  String get asmaMeaning50 => 'Ti Saksi';
+
+  @override
+  String get asmaMeaning51 => 'Ti Kinapudno';
+
+  @override
+  String get asmaMeaning52 => 'Ti Umdasen Amin a Trustee';
+
+  @override
+  String get asmaMeaning53 => 'Ti Agtagikua iti Amin a Pigsa';
+
+  @override
+  String get asmaMeaning54 => 'Ti Napilit';
+
+  @override
+  String get asmaMeaning55 => 'Ti Manangsalaknib';
+
+  @override
+  String get asmaMeaning56 => 'Ti Nadayaw';
+
+  @override
+  String get asmaMeaning57 => 'Ti Ag-appraiser';
+
+  @override
+  String get asmaMeaning58 => 'Ti Nangrugi';
+
+  @override
+  String get asmaMeaning59 => 'Ti Mangisubli';
+
+  @override
+  String get asmaMeaning60 => 'Ti Mangted ti Biag';
+
+  @override
+  String get asmaMeaning61 => 'Ti Mangala iti Biag';
+
+  @override
+  String get asmaMeaning62 => 'Ti Agnanayon nga Agbibiag';
+
+  @override
+  String get asmaMeaning63 => 'Ti Bukod a Mangsustiner';
+
+  @override
+  String get asmaMeaning64 => 'Ti Mangbirok';
+
+  @override
+  String get asmaMeaning65 => 'Ti Nadayag';
+
+  @override
+  String get asmaMeaning66 => 'Ti Laeng';
+
+  @override
+  String get asmaMeaning67 => 'Ti Maysa';
+
+  @override
+  String get asmaMeaning68 => 'Ti Maysa a Sapsapulen ti Amin';
+
+  @override
+  String get asmaMeaning69 => 'Ti Nabileg';
+
+  @override
+  String get asmaMeaning70 => 'Ti Namarsua iti amin a pannakabalin';
+
+  @override
+  String get asmaMeaning71 => 'Ti Agpadaras';
+
+  @override
+  String get asmaMeaning72 => 'Ti Mangtaktak';
+
+  @override
+  String get asmaMeaning73 => 'Ti Umuna';
+
+  @override
+  String get asmaMeaning74 => 'Ti Maudi';
+
+  @override
+  String get asmaMeaning75 => 'Ti Naiparangarang';
+
+  @override
+  String get asmaMeaning76 => 'Ti Nalimed';
+
+  @override
+  String get asmaMeaning77 => 'Ti Gobernador';
+
+  @override
+  String get asmaMeaning78 => 'Ti Katan-okan';
+
+  @override
+  String get asmaMeaning79 => 'Ti Agar-aramid iti Naimbag';
+
+  @override
+  String get asmaMeaning80 => 'Ti Giya iti Panagbabawi';
+
+  @override
+  String get asmaMeaning81 => 'Ti Manangibales';
+
+  @override
+  String get asmaMeaning82 => 'Ti Manangpakawan';
+
+  @override
+  String get asmaMeaning83 => 'Ti Clemente';
+
+  @override
+  String get asmaMeaning84 => 'Ti Agtagikua / Soberano ti Amin';
+
+  @override
+  String get asmaMeaning85 => 'Ti Agtagikua iti Kinadayag ken Kinadayaw';
+
+  @override
+  String get asmaMeaning86 => 'Ti Napatas';
+
+  @override
+  String get asmaMeaning87 => 'Ti Managtitipon';
+
+  @override
+  String get asmaMeaning88 => 'Ti Nabaknang';
+
+  @override
+  String get asmaMeaning89 => 'Ti Mangpabaknang';
+
+  @override
+  String get asmaMeaning90 => 'Ti Manglapped iti Pannakadangran';
+
+  @override
+  String get asmaMeaning91 => 'Ti Mangyeg iti Pannakadangran';
+
+  @override
+  String get asmaMeaning92 => 'Ti Mangted ti Benepisio';
+
+  @override
+  String get asmaMeaning93 => 'Ti Lawag';
+
+  @override
+  String get asmaMeaning94 => 'Ti Giya';
+
+  @override
+  String get asmaMeaning95 => 'Ti Nangrugi';
+
+  @override
+  String get asmaMeaning96 => 'Ti Agnanayon';
+
+  @override
+  String get asmaMeaning97 => 'Ti Agtawid';
+
+  @override
+  String get asmaMeaning98 => 'Ti Kalintegan a Giya';
+
+  @override
+  String get asmaMeaning99 => 'Ti Pasiente';
 }

@@ -1182,4 +1182,301 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get islamicPlaceFallback => 'מקום איסלאמי';
+
+  @override
+  String get asmaMeaning1 => 'המיטיב';
+
+  @override
+  String get asmaMeaning2 => 'הרחמן';
+
+  @override
+  String get asmaMeaning3 => 'המלך / האדון הנצחי';
+
+  @override
+  String get asmaMeaning4 => 'הקדוש ביותר';
+
+  @override
+  String get asmaMeaning5 => 'מקור השלום';
+
+  @override
+  String get asmaMeaning6 => 'נותן הביטחון';
+
+  @override
+  String get asmaMeaning7 => 'השומר';
+
+  @override
+  String get asmaMeaning8 => 'היקר / האדיר ביותר';
+
+  @override
+  String get asmaMeaning9 => 'הקומפלר';
+
+  @override
+  String get asmaMeaning10 => 'הגדולים ביותר';
+
+  @override
+  String get asmaMeaning11 => 'הבורא';
+
+  @override
+  String get asmaMeaning12 => 'יוצר הסדר';
+
+  @override
+  String get asmaMeaning13 => 'מעצב היופי';
+
+  @override
+  String get asmaMeaning14 => 'הסולח';
+
+  @override
+  String get asmaMeaning15 => 'המשכנע';
+
+  @override
+  String get asmaMeaning16 => 'הנותן של הכל';
+
+  @override
+  String get asmaMeaning17 => 'המקיים';
+
+  @override
+  String get asmaMeaning18 => 'הפותחן';
+
+  @override
+  String get asmaMeaning19 => 'היודע מכולם';
+
+  @override
+  String get asmaMeaning20 => 'המכווץ';
+
+  @override
+  String get asmaMeaning21 => 'המשחרר';
+
+  @override
+  String get asmaMeaning22 => 'האבאסר';
+
+  @override
+  String get asmaMeaning23 => 'המעלה';
+
+  @override
+  String get asmaMeaning24 => 'מעניק הכבוד';
+
+  @override
+  String get asmaMeaning25 => 'המשפיל';
+
+  @override
+  String get asmaMeaning26 => 'השומע של כולם';
+
+  @override
+  String get asmaMeaning27 => 'הרואה מכולם';
+
+  @override
+  String get asmaMeaning28 => 'השופט';
+
+  @override
+  String get asmaMeaning29 => 'הצודק';
+
+  @override
+  String get asmaMeaning30 => 'העדין';
+
+  @override
+  String get asmaMeaning31 => 'הכל מודע';
+
+  @override
+  String get asmaMeaning32 => 'הקדמה';
+
+  @override
+  String get asmaMeaning33 => 'המפואר';
+
+  @override
+  String get asmaMeaning34 => 'הסולח הגדול';
+
+  @override
+  String get asmaMeaning35 => 'מתגמל הכרת התודה';
+
+  @override
+  String get asmaMeaning36 => 'הגבוה ביותר';
+
+  @override
+  String get asmaMeaning37 => 'הגדולים ביותר';
+
+  @override
+  String get asmaMeaning38 => 'השומר';
+
+  @override
+  String get asmaMeaning39 => 'המזון';
+
+  @override
+  String get asmaMeaning40 => 'החשבון';
+
+  @override
+  String get asmaMeaning41 => 'המג\'סטיק';
+
+  @override
+  String get asmaMeaning42 => 'הנדיבים';
+
+  @override
+  String get asmaMeaning43 => 'המשמר';
+
+  @override
+  String get asmaMeaning44 => 'המשיב לתפילה';
+
+  @override
+  String get asmaMeaning45 => 'הכל';
+
+  @override
+  String get asmaMeaning46 => 'החכמים המושלם';
+
+  @override
+  String get asmaMeaning47 => 'האוהב';
+
+  @override
+  String get asmaMeaning48 => 'המפואר ביותר';
+
+  @override
+  String get asmaMeaning49 => 'המתים';
+
+  @override
+  String get asmaMeaning50 => 'העד';
+
+  @override
+  String get asmaMeaning51 => 'האמת';
+
+  @override
+  String get asmaMeaning52 => 'הנאמן המספיק';
+
+  @override
+  String get asmaMeaning53 => 'בעל כל הכוח';
+
+  @override
+  String get asmaMeaning54 => 'הכוחני';
+
+  @override
+  String get asmaMeaning55 => 'המגן';
+
+  @override
+  String get asmaMeaning56 => 'השבחים';
+
+  @override
+  String get asmaMeaning57 => 'השמאי';
+
+  @override
+  String get asmaMeaning58 => 'היוצר';
+
+  @override
+  String get asmaMeaning59 => 'המשחזר';
+
+  @override
+  String get asmaMeaning60 => 'נותן החיים';
+
+  @override
+  String get asmaMeaning61 => 'לוקח החיים';
+
+  @override
+  String get asmaMeaning62 => 'The Ever Living';
+
+  @override
+  String get asmaMeaning63 => 'המקיים את עצמו';
+
+  @override
+  String get asmaMeaning64 => 'המאתר';
+
+  @override
+  String get asmaMeaning65 => 'The Glorious';
+
+  @override
+  String get asmaMeaning66 => 'היחיד';
+
+  @override
+  String get asmaMeaning67 => 'האחד';
+
+  @override
+  String get asmaMeaning68 => 'המבוקש על ידי כולם';
+
+  @override
+  String get asmaMeaning69 => 'העוצמה';
+
+  @override
+  String get asmaMeaning70 => 'בורא כל הכוח';
+
+  @override
+  String get asmaMeaning71 => 'המזרז';
+
+  @override
+  String get asmaMeaning72 => 'המעכב';
+
+  @override
+  String get asmaMeaning73 => 'הראשון';
+
+  @override
+  String get asmaMeaning74 => 'האחרון';
+
+  @override
+  String get asmaMeaning75 => 'המניפסט';
+
+  @override
+  String get asmaMeaning76 => 'הנסתר';
+
+  @override
+  String get asmaMeaning77 => 'המושל';
+
+  @override
+  String get asmaMeaning78 => 'העליון';
+
+  @override
+  String get asmaMeaning79 => 'עושה הטוב';
+
+  @override
+  String get asmaMeaning80 => 'המדריך לתשובה';
+
+  @override
+  String get asmaMeaning81 => 'הנוקם';
+
+  @override
+  String get asmaMeaning82 => 'הסולח';
+
+  @override
+  String get asmaMeaning83 => 'הקלמנט';
+
+  @override
+  String get asmaMeaning84 => 'הבעלים / הריבון של כולם';
+
+  @override
+  String get asmaMeaning85 => 'בעל הוד והוד';
+
+  @override
+  String get asmaMeaning86 => 'השוויון';
+
+  @override
+  String get asmaMeaning87 => 'המלקט';
+
+  @override
+  String get asmaMeaning88 => 'העשירה';
+
+  @override
+  String get asmaMeaning89 => 'המעשיר';
+
+  @override
+  String get asmaMeaning90 => 'המונע נזק';
+
+  @override
+  String get asmaMeaning91 => 'מביא הפגיעה';
+
+  @override
+  String get asmaMeaning92 => 'מעניק ההטבות';
+
+  @override
+  String get asmaMeaning93 => 'האור';
+
+  @override
+  String get asmaMeaning94 => 'המדריך';
+
+  @override
+  String get asmaMeaning95 => 'היוצר';
+
+  @override
+  String get asmaMeaning96 => 'הנצח';
+
+  @override
+  String get asmaMeaning97 => 'היורש';
+
+  @override
+  String get asmaMeaning98 => 'המדריך הכי צדיק';
+
+  @override
+  String get asmaMeaning99 => 'המטופל';
 }
