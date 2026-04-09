@@ -12,6 +12,9 @@ void main() {
       'es',
       'ar',
       'hi',
+      'nb',
+      'nn',
+      'zh',
       'zh_CN',
       'zh_TW',
       'ru',
@@ -23,6 +26,7 @@ void main() {
       'hadithCollections',
       'hadithSourcePending',
       'hadithUnavailableTitle',
+      'hadithUnavailableBody',
       'duaUnavailableTitle',
     ];
 

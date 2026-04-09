@@ -2728,3 +2728,40 @@
 ### Sonraki Adım
 - Sıradaki turda rare-locale hadith unavailable kopyasında İngilizce fallback kalan locale’ler translation pipeline açısından sınıflandırılacak.
 - Ardından doğrulanmış hadith dataset gelene kadar production’da kalan hadith network kodu tamamen retire edilebiliyor mu denetlenecek.
+
+## 2026-04-09 TUR-70 — Fix High-Confidence Variant Locale Religious Copy
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `nb`, `nn` ve `zh` locale’lerini sırasıyla `no` ve `zh-cn` çeviri hedeflerine eşleyecek alias desteğiyle güncellendi.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nb.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nb.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nn.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nn.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_zh.arb) içinde dini UI için kritik kalan İngilizce fallback kopyaları (`dailyDuas`, `hadithCollections`, `hadithSourcePending`, `hadithUnavailableTitle`, `hadithUnavailableBody`, `duaUnavailableTitle`) güvenilir sibling locale kopyasıyla dolduruldu.
+- [A:\Way of Allah\sirat_i_nur\test\arb_religious_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_religious_localization_test.dart) `nb`, `nn` ve `zh` varyantlarını kapsayacak şekilde genişletildi; ayrıca `hadithUnavailableBody` de regressionset’e dahil edildi.
+
+### Neden Yapıldı
+- Rare locale audit’i, hadith güvenilirlik uyarılarında İngilizce fallback kalan `69` locale olduğunu gösterdi.
+- Bu kümenin tamamı aynı güven düzeyinde değildi; `nb`, `nn` ve `zh` için repo içinde zaten güvenilir sibling kaynaklar ([A:\Way of Allah\sirat_i_nur\lib\l10n\app_no.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_no.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh_CN.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_zh_CN.arb)) bulunuyordu.
+- Kök sebep, çeviri aracının bu varyant locale’leri doğru hedef dil koduna eşlememesi ve generic `zh`/Norwegian varyantlarının İngilizce referansta kalmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_nb.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_nn.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh.arb`
+- `A:\Way of Allah\sirat_i_nur\test\arb_religious_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `nb`, `nn` ve generic `zh` artık dini içerik UI’sinde İngilizce fallback göstermiyor.
+- Çeviri aracı gelecekte aynı anahtarlar eklendiğinde bu üç varyant için tekrar İngilizceye düşmeyecek.
+- Hadith unavailable uyarılarında İngilizce fallback kalan rare locale sayısı `69`dan `66`ya indi; kalan küme artık daha belirsiz ve ayrı audit/translation turu gerektiriyor.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_religious_localization_test.dart` → PASS (`1/1`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`178/178`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- High-confidence variant locales still falling back to English for core religious UI: `8/25 → 2/25`
+
+### Sonraki Adım
+- Sıradaki turda kalan `66` rare locale, güvenilir sibling-fallback uygulanabilecekler ve EN referansında kalması gerekenler olarak sınıflandırılacak.
+- Paralelde production’da kalan hadith network kodu doğrulanmış dataset gelene kadar daha da daraltılabilecek mi denetlenecek.

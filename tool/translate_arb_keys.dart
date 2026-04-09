@@ -164,6 +164,11 @@ String _restorePlaceholders(
 
 String _toTranslatorLocale(String locale) {
   switch (locale) {
+    case 'nb':
+    case 'nn':
+      return 'no';
+    case 'zh':
+      return 'zh-cn';
     case 'zh_CN':
       return 'zh-cn';
     case 'zh_TW':
