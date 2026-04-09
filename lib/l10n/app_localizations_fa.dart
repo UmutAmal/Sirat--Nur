@@ -141,6 +141,12 @@ class AppLocalizationsFa extends AppLocalizations {
   String get error => 'خطا';
 
   @override
+  String get appErrorOccurred => 'خطایی رخ داد';
+
+  @override
+  String get appUnknownError => 'خطای ناشناخته';
+
+  @override
   String get retry => 'تلاش مجدد';
 
   @override

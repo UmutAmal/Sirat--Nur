@@ -143,6 +143,12 @@ class AppLocalizationsHy extends AppLocalizations {
   String get error => 'Սխալ';
 
   @override
+  String get appErrorOccurred => 'Սխալ է տեղի ունեցել';
+
+  @override
+  String get appUnknownError => 'Անհայտ սխալ';
+
+  @override
   String get retry => 'Կրկին փորձեք';
 
   @override

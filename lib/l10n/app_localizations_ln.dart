@@ -141,6 +141,12 @@ class AppLocalizationsLn extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Libunga moko esalemaki';
+
+  @override
+  String get appUnknownError => 'Libunga eyebani te';
+
+  @override
   String get retry => 'Retry';
 
   @override

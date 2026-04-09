@@ -142,6 +142,12 @@ class AppLocalizationsNso extends AppLocalizations {
   String get error => 'Phošo';
 
   @override
+  String get appErrorOccurred => 'Go ile gwa direga phošo';
+
+  @override
+  String get appUnknownError => 'Phošo yeo e sa tsebjego';
+
+  @override
   String get retry => 'Leka gape';
 
   @override

@@ -141,6 +141,12 @@ class AppLocalizationsTi extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'ጌጋ ኣጋጢሙ';
+
+  @override
+  String get appUnknownError => 'ዘይፍለጥ ጌጋ';
+
+  @override
   String get retry => 'Retry';
 
   @override

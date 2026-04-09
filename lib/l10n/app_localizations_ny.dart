@@ -141,6 +141,12 @@ class AppLocalizationsNy extends AppLocalizations {
   String get error => 'Cholakwika';
 
   @override
+  String get appErrorOccurred => 'Zalakwika';
+
+  @override
+  String get appUnknownError => 'Cholakwika chosadziwika';
+
+  @override
   String get retry => 'Yesaninso';
 
   @override

@@ -141,6 +141,12 @@ class AppLocalizationsUg extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'خاتالىق كۆرۈلدى';
+
+  @override
+  String get appUnknownError => 'نامەلۇم خاتالىق';
+
+  @override
   String get retry => 'Retry';
 
   @override

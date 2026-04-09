@@ -143,6 +143,12 @@ class AppLocalizationsDv extends AppLocalizations {
   String get error => 'ކުށް';
 
   @override
+  String get appErrorOccurred => 'ގޯހެއް ދިމާވިއެވެ';
+
+  @override
+  String get appUnknownError => 'ނޭނގޭ ގޯހެއް';
+
+  @override
   String get retry => 'އަލުން މަސައްކަތް ކުރާށެވެ';
 
   @override

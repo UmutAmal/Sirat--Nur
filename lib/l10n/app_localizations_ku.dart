@@ -141,6 +141,12 @@ class AppLocalizationsKu extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Çewtiyek derket';
+
+  @override
+  String get appUnknownError => 'Çewtiya nenas';
+
+  @override
   String get retry => 'Retry';
 
   @override

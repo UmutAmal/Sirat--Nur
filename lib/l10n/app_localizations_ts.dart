@@ -142,6 +142,12 @@ class AppLocalizationsTs extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Ku humelerile xihoxo';
+
+  @override
+  String get appUnknownError => 'Xihoxo lexi nga tiviwiki';
+
+  @override
   String get retry => 'Retry';
 
   @override

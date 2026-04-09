@@ -141,6 +141,12 @@ class AppLocalizationsXh extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Impazamo yenzekile';
+
+  @override
+  String get appUnknownError => 'Imposiso engaziwayo';
+
+  @override
   String get retry => 'Retry';
 
   @override

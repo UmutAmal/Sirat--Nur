@@ -142,6 +142,12 @@ class AppLocalizationsGd extends AppLocalizations {
   String get error => 'Mearachd';
 
   @override
+  String get appErrorOccurred => 'Thachair mearachd';
+
+  @override
+  String get appUnknownError => 'Mearachd neo-aithnichte';
+
+  @override
   String get retry => 'Feuch a-rithist';
 
   @override

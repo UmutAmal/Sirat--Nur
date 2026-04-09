@@ -141,6 +141,12 @@ class AppLocalizationsId extends AppLocalizations {
   String get error => 'Kesalahan';
 
   @override
+  String get appErrorOccurred => 'Terjadi kesalahan';
+
+  @override
+  String get appUnknownError => 'Kesalahan tidak diketahui';
+
+  @override
   String get retry => 'Coba Lagi';
 
   @override

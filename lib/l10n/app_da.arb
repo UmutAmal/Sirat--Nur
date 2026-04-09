@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Bekræftet kilde afventer",
   "hadithUnavailableTitle": "Verificerede hadith-samlinger er ikke tilgængelige endnu",
-  "hadithUnavailableBody": "Denne build afhænger stadig af et ikke-verificeret eksternt hadith-feed. Hadith-browsing forbliver deaktiveret, indtil et kildedatasæt synkroniseres."
+  "hadithUnavailableBody": "Denne build afhænger stadig af et ikke-verificeret eksternt hadith-feed. Hadith-browsing forbliver deaktiveret, indtil et kildedatasæt synkroniseres.",
+  "appErrorOccurred": "Der opstod en fejl",
+  "appUnknownError": "Ukendt fejl"
 }

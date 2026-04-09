@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Sumber terverifikasi tertunda",
   "hadithUnavailableTitle": "Koleksi hadis yang terverifikasi belum tersedia",
-  "hadithUnavailableBody": "Pembuatan ini masih bergantung pada feed hadis eksternal yang belum diverifikasi. Penjelajahan hadis tetap dinonaktifkan hingga kumpulan data yang bersumber disinkronkan."
+  "hadithUnavailableBody": "Pembuatan ini masih bergantung pada feed hadis eksternal yang belum diverifikasi. Penjelajahan hadis tetap dinonaktifkan hingga kumpulan data yang bersumber disinkronkan.",
+  "appErrorOccurred": "Terjadi kesalahan",
+  "appUnknownError": "Kesalahan tidak diketahui"
 }

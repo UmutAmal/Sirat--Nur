@@ -143,6 +143,12 @@ class AppLocalizationsBe extends AppLocalizations {
   String get error => 'Памылка';
 
   @override
+  String get appErrorOccurred => 'Адбылася памылка';
+
+  @override
+  String get appUnknownError => 'Невядомая памылка';
+
+  @override
   String get retry => 'Паўтарыць';
 
   @override

@@ -141,6 +141,12 @@ class AppLocalizationsSt extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Phoso e etsahetse';
+
+  @override
+  String get appUnknownError => 'Phoso e sa tsejoeng';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -141,6 +141,12 @@ class AppLocalizationsLus extends AppLocalizations {
   String get error => 'Thil tihsual a awm';
 
   @override
+  String get appErrorOccurred => 'Error a awm a';
+
+  @override
+  String get appUnknownError => 'Thil tihsual hriat loh';
+
+  @override
   String get retry => 'Ti leh rawh';
 
   @override

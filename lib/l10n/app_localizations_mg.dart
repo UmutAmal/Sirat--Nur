@@ -141,6 +141,12 @@ class AppLocalizationsMg extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Nisy hadisoana nitranga';
+
+  @override
+  String get appUnknownError => 'Error tsy fantatra';
+
+  @override
   String get retry => 'Retry';
 
   @override

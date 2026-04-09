@@ -141,6 +141,12 @@ class AppLocalizationsSi extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'දෝෂයක් සිදු විය';
+
+  @override
+  String get appUnknownError => 'නොදන්නා දෝෂයකි';
+
+  @override
   String get retry => 'Retry';
 
   @override

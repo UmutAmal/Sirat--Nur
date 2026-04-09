@@ -141,6 +141,12 @@ class AppLocalizationsKa extends AppLocalizations {
   String get error => 'შეცდომა';
 
   @override
+  String get appErrorOccurred => 'მოხდა შეცდომა';
+
+  @override
+  String get appUnknownError => 'უცნობი შეცდომა';
+
+  @override
   String get retry => 'ხელახლა სცადეთ';
 
   @override

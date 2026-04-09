@@ -141,6 +141,12 @@ class AppLocalizationsIg extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Enwere mperi';
+
+  @override
+  String get appUnknownError => 'Njehie amaghị';
+
+  @override
   String get retry => 'Retry';
 
   @override

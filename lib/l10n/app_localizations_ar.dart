@@ -141,6 +141,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get error => 'خطأ';
 
   @override
+  String get appErrorOccurred => 'حدث خطأ';
+
+  @override
+  String get appUnknownError => 'خطأ غير معروف';
+
+  @override
   String get retry => 'إعادة المحاولة';
 
   @override

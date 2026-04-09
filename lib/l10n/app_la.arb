@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Verificatur fons pendente",
   "hadithUnavailableTitle": "Verified hadith collections are not available yet",
-  "hadithUnavailableBody": "Hoc constructum adhuc pendet ab absque verificatione externa hadith cibarium. Hadith pasco debilis manet donec fons dataset syncedtur."
+  "hadithUnavailableBody": "Hoc constructum adhuc pendet ab absque verificatione externa hadith cibarium. Hadith pasco debilis manet donec fons dataset syncedtur.",
+  "appErrorOccurred": "Error occurrit",
+  "appUnknownError": "Error ignotus"
 }

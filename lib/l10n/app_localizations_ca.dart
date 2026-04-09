@@ -143,6 +143,12 @@ class AppLocalizationsCa extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'S\'ha produït un error';
+
+  @override
+  String get appUnknownError => 'Error desconegut';
+
+  @override
   String get retry => 'Torna-ho a provar';
 
   @override

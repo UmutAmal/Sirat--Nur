@@ -141,6 +141,12 @@ class AppLocalizationsLb extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'E Feeler ass geschitt';
+
+  @override
+  String get appUnknownError => 'Onbekannt Feeler';
+
+  @override
   String get retry => 'Retry';
 
   @override

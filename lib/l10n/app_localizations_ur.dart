@@ -141,6 +141,12 @@ class AppLocalizationsUr extends AppLocalizations {
   String get error => 'خرابی';
 
   @override
+  String get appErrorOccurred => 'ایک خرابی پیش آ گئی۔';
+
+  @override
+  String get appUnknownError => 'نامعلوم خرابی۔';
+
+  @override
   String get retry => 'دوبارہ کوشش کریں';
 
   @override

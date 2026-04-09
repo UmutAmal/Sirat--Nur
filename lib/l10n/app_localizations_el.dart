@@ -142,6 +142,12 @@ class AppLocalizationsEl extends AppLocalizations {
   String get error => 'Σφάλμα';
 
   @override
+  String get appErrorOccurred => 'Παρουσιάστηκε σφάλμα';
+
+  @override
+  String get appUnknownError => 'Άγνωστο σφάλμα';
+
+  @override
   String get retry => 'Δοκιμάζω πάλι';
 
   @override

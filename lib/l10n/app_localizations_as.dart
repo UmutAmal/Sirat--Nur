@@ -141,6 +141,12 @@ class AppLocalizationsAs extends AppLocalizations {
   String get error => 'আঁসোৱাহ';
 
   @override
+  String get appErrorOccurred => 'এটা ভুল হ’ল';
+
+  @override
+  String get appUnknownError => 'অজ্ঞাত ভুল';
+
+  @override
   String get retry => 'পুনৰ চেষ্টা কৰক';
 
   @override

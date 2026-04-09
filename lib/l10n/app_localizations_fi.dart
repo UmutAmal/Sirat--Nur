@@ -142,6 +142,12 @@ class AppLocalizationsFi extends AppLocalizations {
   String get error => 'Virhe';
 
   @override
+  String get appErrorOccurred => 'Tapahtui virhe';
+
+  @override
+  String get appUnknownError => 'Tuntematon virhe';
+
+  @override
   String get retry => 'Yritä uudelleen';
 
   @override

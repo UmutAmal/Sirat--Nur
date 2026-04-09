@@ -142,6 +142,12 @@ class AppLocalizationsKri extends AppLocalizations {
   String get error => 'Mistek we dɛn mek';
 
   @override
+  String get appErrorOccurred => 'Wan mistek bin apin';
+
+  @override
+  String get appUnknownError => 'Mistek we dɛn nɔ no';
+
+  @override
   String get retry => 'Tray bak';
 
   @override

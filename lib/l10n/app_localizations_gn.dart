@@ -143,6 +143,12 @@ class AppLocalizationsGn extends AppLocalizations {
   String get error => 'Jejavy';
 
   @override
+  String get appErrorOccurred => 'Oiko peteĩ jejavy';
+
+  @override
+  String get appUnknownError => 'Ojejavy ndojekuaáiva';
+
+  @override
   String get retry => 'Eñeha’ã jey';
 
   @override

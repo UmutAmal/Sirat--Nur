@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Apstiprināts avots gaida",
   "hadithUnavailableTitle": "Verificētās hadītu kolekcijas vēl nav pieejamas",
-  "hadithUnavailableBody": "Šī versija joprojām ir atkarīga no nepārbaudītas ārējās hadīsu plūsmas. Hadith pārlūkošana paliek atspējota, līdz tiek sinhronizēta iegūtā datu kopa."
+  "hadithUnavailableBody": "Šī versija joprojām ir atkarīga no nepārbaudītas ārējās hadīsu plūsmas. Hadith pārlūkošana paliek atspējota, līdz tiek sinhronizēta iegūtā datu kopa.",
+  "appErrorOccurred": "Radās kļūda",
+  "appUnknownError": "Nezināma kļūda"
 }

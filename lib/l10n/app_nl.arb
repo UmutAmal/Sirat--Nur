@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Geverifieerde bron in behandeling",
   "hadithUnavailableTitle": "Geverifieerde hadith-collecties zijn nog niet beschikbaar",
-  "hadithUnavailableBody": "Deze build is nog steeds afhankelijk van een niet-geverifieerde externe hadith-feed. Het bladeren door Hadith blijft uitgeschakeld totdat een afkomstige dataset is gesynchroniseerd."
+  "hadithUnavailableBody": "Deze build is nog steeds afhankelijk van een niet-geverifieerde externe hadith-feed. Het bladeren door Hadith blijft uitgeschakeld totdat een afkomstige dataset is gesynchroniseerd.",
+  "appErrorOccurred": "Er is een fout opgetreden",
+  "appUnknownError": "Onbekende fout"
 }

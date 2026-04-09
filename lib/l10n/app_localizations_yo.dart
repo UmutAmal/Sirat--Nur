@@ -141,6 +141,12 @@ class AppLocalizationsYo extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Aṣiṣe kan ṣẹlẹ';
+
+  @override
+  String get appUnknownError => 'Aṣiṣe aimọ';
+
+  @override
   String get retry => 'Retry';
 
   @override

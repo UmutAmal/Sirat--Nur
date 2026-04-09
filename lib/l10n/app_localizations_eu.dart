@@ -141,6 +141,12 @@ class AppLocalizationsEu extends AppLocalizations {
   String get error => 'Errorea';
 
   @override
+  String get appErrorOccurred => 'Errore bat gertatu da';
+
+  @override
+  String get appUnknownError => 'Errore ezezaguna';
+
+  @override
   String get retry => 'Saiatu berriro';
 
   @override

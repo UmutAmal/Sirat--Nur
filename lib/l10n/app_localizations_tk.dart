@@ -142,6 +142,12 @@ class AppLocalizationsTk extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Erroralňyşlyk ýüze çykdy';
+
+  @override
+  String get appUnknownError => 'Näbelli ýalňyşlyk';
+
+  @override
   String get retry => 'Retry';
 
   @override

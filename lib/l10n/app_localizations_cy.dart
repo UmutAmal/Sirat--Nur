@@ -142,6 +142,12 @@ class AppLocalizationsCy extends AppLocalizations {
   String get error => 'Gwall';
 
   @override
+  String get appErrorOccurred => 'Digwyddodd gwall';
+
+  @override
+  String get appUnknownError => 'Gwall anhysbys';
+
+  @override
   String get retry => 'Ceisiwch eto';
 
   @override

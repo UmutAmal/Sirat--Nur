@@ -141,6 +141,12 @@ class AppLocalizationsMs extends AppLocalizations {
   String get error => 'Ralat';
 
   @override
+  String get appErrorOccurred => 'Ralat berlaku';
+
+  @override
+  String get appUnknownError => 'Ralat tidak diketahui';
+
+  @override
   String get retry => 'Cuba Lagi';
 
   @override

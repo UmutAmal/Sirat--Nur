@@ -141,6 +141,12 @@ class AppLocalizationsCs extends AppLocalizations {
   String get error => 'Chyba';
 
   @override
+  String get appErrorOccurred => 'Došlo k chybě';
+
+  @override
+  String get appUnknownError => 'Neznámá chyba';
+
+  @override
   String get retry => 'Zkuste to znovu';
 
   @override

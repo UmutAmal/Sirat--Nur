@@ -142,6 +142,12 @@ class AppLocalizationsSq extends AppLocalizations {
   String get error => 'Gabim';
 
   @override
+  String get appErrorOccurred => 'Ndodhi një gabim';
+
+  @override
+  String get appUnknownError => 'Gabim i panjohur';
+
+  @override
   String get retry => 'Provo sërish';
 
   @override

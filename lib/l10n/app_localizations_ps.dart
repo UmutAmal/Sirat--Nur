@@ -141,6 +141,12 @@ class AppLocalizationsPs extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'یوه تېروتنه رامنځته شوه';
+
+  @override
+  String get appUnknownError => 'نامعلومه تېروتنه';
+
+  @override
   String get retry => 'Retry';
 
   @override

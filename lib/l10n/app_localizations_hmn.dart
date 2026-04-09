@@ -141,6 +141,12 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get error => 'yuam kev';
 
   @override
+  String get appErrorOccurred => 'Ib qho yuam kev tshwm sim';
+
+  @override
+  String get appUnknownError => 'Unknown yuam kev';
+
+  @override
   String get retry => 'Rov sim dua';
 
   @override

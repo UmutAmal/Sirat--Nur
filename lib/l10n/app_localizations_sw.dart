@@ -141,6 +141,12 @@ class AppLocalizationsSw extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Hitilafu imetokea';
+
+  @override
+  String get appUnknownError => 'Hitilafu isiyojulikana';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "የተረጋገጠ ምንጭ በመጠባበቅ ላይ",
   "hadithUnavailableTitle": "የተረጋገጡ የሀዲስ ስብስቦች እስካሁን አይገኙም።",
-  "hadithUnavailableBody": "ይህ ግንባታ አሁንም ባልተረጋገጠ የውጪ የሀዲስ ምግብ ላይ የተመሰረተ ነው። የተገኘ የውሂብ ስብስብ እስኪሰምር ድረስ የሃዲስ አሰሳ እንደተሰናከለ ይቆያል።"
+  "hadithUnavailableBody": "ይህ ግንባታ አሁንም ባልተረጋገጠ የውጪ የሀዲስ ምግብ ላይ የተመሰረተ ነው። የተገኘ የውሂብ ስብስብ እስኪሰምር ድረስ የሃዲስ አሰሳ እንደተሰናከለ ይቆያል።",
+  "appErrorOccurred": "ስህተት ተከስቷል።",
+  "appUnknownError": "ያልታወቀ ስህተት"
 }

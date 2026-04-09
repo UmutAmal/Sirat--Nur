@@ -141,6 +141,12 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get error => 'Sayop';
 
   @override
+  String get appErrorOccurred => 'Usa ka sayup ang nahitabo';
+
+  @override
+  String get appUnknownError => 'Wala mailhi nga sayup';
+
+  @override
   String get retry => 'Sulayi pag-usab';
 
   @override

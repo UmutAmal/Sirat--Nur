@@ -142,6 +142,12 @@ class AppLocalizationsPt extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Ocorreu um erro';
+
+  @override
+  String get appUnknownError => 'Erro desconhecido';
+
+  @override
   String get retry => 'Retry';
 
   @override

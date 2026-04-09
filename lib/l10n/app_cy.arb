@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Ffynhonnell wedi'i dilysu yn yr arfaeth",
   "hadithUnavailableTitle": "Nid yw casgliadau hadith wedi'u dilysu ar gael eto",
-  "hadithUnavailableBody": "Mae'r adeiladwaith hwn yn dal i ddibynnu ar borthiant hadith allanol heb ei wirio. Mae pori Hadith yn aros yn anabl nes bod set ddata o ffynhonnell wedi'i chysoni."
+  "hadithUnavailableBody": "Mae'r adeiladwaith hwn yn dal i ddibynnu ar borthiant hadith allanol heb ei wirio. Mae pori Hadith yn aros yn anabl nes bod set ddata o ffynhonnell wedi'i chysoni.",
+  "appErrorOccurred": "Digwyddodd gwall",
+  "appUnknownError": "Gwall anhysbys"
 }

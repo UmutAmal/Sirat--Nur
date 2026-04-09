@@ -141,6 +141,12 @@ class AppLocalizationsDa extends AppLocalizations {
   String get error => 'Fejl';
 
   @override
+  String get appErrorOccurred => 'Der opstod en fejl';
+
+  @override
+  String get appUnknownError => 'Ukendt fejl';
+
+  @override
   String get retry => 'Prøv igen';
 
   @override

@@ -142,6 +142,12 @@ class AppLocalizationsUk extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Сталася помилка';
+
+  @override
+  String get appUnknownError => 'Невідома помилка';
+
+  @override
   String get retry => 'Retry';
 
   @override

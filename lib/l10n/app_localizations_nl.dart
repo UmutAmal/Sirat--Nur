@@ -141,6 +141,12 @@ class AppLocalizationsNl extends AppLocalizations {
   String get error => 'Fout';
 
   @override
+  String get appErrorOccurred => 'Er is een fout opgetreden';
+
+  @override
+  String get appUnknownError => 'Onbekende fout';
+
+  @override
   String get retry => 'Opnieuw proberen';
 
   @override

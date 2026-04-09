@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "O lo'o fa'atali le puna fa'amaonia",
   "hadithUnavailableTitle": "E le'i maua ni fa'aputuga o hadith fa'amaonia",
-  "hadithUnavailableBody": "O lenei fausiaina o loʻo faʻalagolago pea i luga o se fafaga hadith fafo e leʻi faʻamaonia. E tumau le fa'aletonu o su'esu'ega o Hadith se'ia o'o ina fa'amaopoopo se fa'amaumauga."
+  "hadithUnavailableBody": "O lenei fausiaina o loʻo faʻalagolago pea i luga o se fafaga hadith fafo e leʻi faʻamaonia. E tumau le fa'aletonu o su'esu'ega o Hadith se'ia o'o ina fa'amaopoopo se fa'amaumauga.",
+  "appErrorOccurred": "Ua tupu se mea sese",
+  "appUnknownError": "Sese le iloa"
 }

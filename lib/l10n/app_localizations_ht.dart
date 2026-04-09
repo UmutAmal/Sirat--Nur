@@ -141,6 +141,12 @@ class AppLocalizationsHt extends AppLocalizations {
   String get error => 'Erè';
 
   @override
+  String get appErrorOccurred => 'Yon erè te fèt';
+
+  @override
+  String get appUnknownError => 'Erè enkoni';
+
+  @override
   String get retry => 'Eseye ankò';
 
   @override

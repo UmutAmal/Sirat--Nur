@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Nakabinbin ang na-verify na pinagmulan",
   "hadithUnavailableTitle": "Hindi pa available ang mga na-verify na koleksyon ng hadith",
-  "hadithUnavailableBody": "Nakadepende pa rin ang build na ito sa isang hindi na-verify na external na feed ng hadith. Mananatiling naka-disable ang pag-browse sa Hadith hanggang sa ma-sync ang isang sourced dataset."
+  "hadithUnavailableBody": "Nakadepende pa rin ang build na ito sa isang hindi na-verify na external na feed ng hadith. Mananatiling naka-disable ang pag-browse sa Hadith hanggang sa ma-sync ang isang sourced dataset.",
+  "appErrorOccurred": "May naganap na error",
+  "appUnknownError": "Hindi kilalang error"
 }

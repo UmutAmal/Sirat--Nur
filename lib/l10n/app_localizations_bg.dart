@@ -143,6 +143,12 @@ class AppLocalizationsBg extends AppLocalizations {
   String get error => 'Грешка';
 
   @override
+  String get appErrorOccurred => 'Възникна грешка';
+
+  @override
+  String get appUnknownError => 'Неизвестна грешка';
+
+  @override
   String get retry => 'Опитайте отново';
 
   @override

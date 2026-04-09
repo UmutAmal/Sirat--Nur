@@ -143,6 +143,12 @@ class AppLocalizationsRo extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'A apărut o eroare';
+
+  @override
+  String get appUnknownError => 'Eroare necunoscută';
+
+  @override
   String get retry => 'Retry';
 
   @override

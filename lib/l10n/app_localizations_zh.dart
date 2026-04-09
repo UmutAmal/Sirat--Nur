@@ -141,6 +141,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get error => '错误';
 
   @override
+  String get appErrorOccurred => '发生错误';
+
+  @override
+  String get appUnknownError => '未知错误';
+
+  @override
   String get retry => '重试';
 
   @override
@@ -1280,6 +1286,12 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get error => '错误';
 
   @override
+  String get appErrorOccurred => '发生错误';
+
+  @override
+  String get appUnknownError => '未知错误';
+
+  @override
   String get retry => '重试';
 
   @override
@@ -2417,6 +2429,12 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get error => '錯誤';
+
+  @override
+  String get appErrorOccurred => '發生錯誤';
+
+  @override
+  String get appUnknownError => '未知錯誤';
 
   @override
   String get retry => '重試';

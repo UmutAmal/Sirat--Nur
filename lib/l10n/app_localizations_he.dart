@@ -141,6 +141,12 @@ class AppLocalizationsHe extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'אירעה שגיאה';
+
+  @override
+  String get appUnknownError => 'שגיאה לא ידועה';
+
+  @override
   String get retry => 'Retry';
 
   @override

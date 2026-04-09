@@ -141,6 +141,12 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get error => 'Kuhihewa';
 
   @override
+  String get appErrorOccurred => 'Ua hewa';
+
+  @override
+  String get appUnknownError => 'Kupa ʻike ʻole ʻia';
+
+  @override
   String get retry => 'E hoao hou';
 
   @override

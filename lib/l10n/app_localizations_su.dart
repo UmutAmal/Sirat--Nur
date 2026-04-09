@@ -141,6 +141,12 @@ class AppLocalizationsSu extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Aya kasalahan';
+
+  @override
+  String get appUnknownError => 'Kasalahan teu dipikanyaho';
+
+  @override
   String get retry => 'Retry';
 
   @override

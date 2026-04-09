@@ -141,6 +141,12 @@ class AppLocalizationsEo extends AppLocalizations {
   String get error => 'Eraro';
 
   @override
+  String get appErrorOccurred => 'Eraro okazis';
+
+  @override
+  String get appUnknownError => 'Nekonata eraro';
+
+  @override
   String get retry => 'Reprovi';
 
   @override

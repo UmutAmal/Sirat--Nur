@@ -141,6 +141,12 @@ class AppLocalizationsFy extends AppLocalizations {
   String get error => 'Fersin';
 
   @override
+  String get appErrorOccurred => 'Der barde in flater';
+
+  @override
+  String get appUnknownError => 'Unbekende flater';
+
+  @override
   String get retry => 'Opnij besykje';
 
   @override

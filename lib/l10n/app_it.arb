@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Fonte verificata in attesa",
   "hadithUnavailableTitle": "Le raccolte di hadith verificate non sono ancora disponibili",
-  "hadithUnavailableBody": "Questa build dipende ancora da un feed hadith esterno non verificato. La navigazione degli Hadith rimane disabilitata finché un set di dati di origine non viene sincronizzato."
+  "hadithUnavailableBody": "Questa build dipende ancora da un feed hadith esterno non verificato. La navigazione degli Hadith rimane disabilitata finché un set di dati di origine non viene sincronizzato.",
+  "appErrorOccurred": "Si è verificato un errore",
+  "appUnknownError": "Errore sconosciuto"
 }

@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Inkomoko yemejwe itegereje",
   "hadithUnavailableTitle": "Ibyegeranyo bya Hadithi byemejwe ntibiraboneka",
-  "hadithUnavailableBody": "Iyi nyubako iracyaterwa nigaburo rya Hadithi yo hanze itagenzuwe. Gushakisha Hadith bigumaho kugeza igihe dataset ikomoka."
+  "hadithUnavailableBody": "Iyi nyubako iracyaterwa nigaburo rya Hadithi yo hanze itagenzuwe. Gushakisha Hadith bigumaho kugeza igihe dataset ikomoka.",
+  "appErrorOccurred": "Habayeho ikosa",
+  "appUnknownError": "Ikosa ritazwi"
 }

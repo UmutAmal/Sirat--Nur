@@ -141,6 +141,12 @@ class AppLocalizationsGa extends AppLocalizations {
   String get error => 'Earráid';
 
   @override
+  String get appErrorOccurred => 'Tharla earráid';
+
+  @override
+  String get appUnknownError => 'Earráid anaithnid';
+
+  @override
   String get retry => 'Bain triail eile as';
 
   @override

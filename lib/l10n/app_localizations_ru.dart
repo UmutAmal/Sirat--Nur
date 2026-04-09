@@ -143,6 +143,12 @@ class AppLocalizationsRu extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Произошла ошибка';
+
+  @override
+  String get appUnknownError => 'Неизвестная ошибка';
+
+  @override
   String get retry => 'Retry';
 
   @override

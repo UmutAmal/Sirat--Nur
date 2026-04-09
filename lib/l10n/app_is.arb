@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Staðfest heimild í bið",
   "hadithUnavailableTitle": "Staðfest hadith söfn eru ekki tiltæk ennþá",
-  "hadithUnavailableBody": "Þessi smíði er enn háð óstaðfestu utanaðkomandi hadith straumi. Hadith vafra er óvirkt þar til gagnasett er samstillt."
+  "hadithUnavailableBody": "Þessi smíði er enn háð óstaðfestu utanaðkomandi hadith straumi. Hadith vafra er óvirkt þar til gagnasett er samstillt.",
+  "appErrorOccurred": "Villa kom upp",
+  "appUnknownError": "Óþekkt villa"
 }

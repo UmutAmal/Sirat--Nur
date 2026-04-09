@@ -143,6 +143,12 @@ class AppLocalizationsQu extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Huk pantaymi rikurirqa';
+
+  @override
+  String get appUnknownError => 'Mana riqsisqa pantay';
+
+  @override
   String get retry => 'Retry';
 
   @override

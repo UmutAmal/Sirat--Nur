@@ -143,6 +143,12 @@ class AppLocalizationsAy extends AppLocalizations {
   String get error => 'Pantja';
 
   @override
+  String get appErrorOccurred => 'Mä pantjasiwiw utjawayi';
+
+  @override
+  String get appUnknownError => 'Jan uñt’at pantjasiwi';
+
+  @override
   String get retry => 'Wasitat yantʼañamawa';
 
   @override

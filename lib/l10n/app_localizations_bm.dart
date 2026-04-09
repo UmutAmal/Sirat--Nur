@@ -141,6 +141,12 @@ class AppLocalizationsBm extends AppLocalizations {
   String get error => 'Filijuru';
 
   @override
+  String get appErrorOccurred => 'Misali dɔ kɛra';
+
+  @override
+  String get appUnknownError => 'Misali dɔnbali';
+
+  @override
   String get retry => 'Aw ye a lajɛ kokura';
 
   @override

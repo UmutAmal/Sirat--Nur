@@ -141,6 +141,12 @@ class AppLocalizationsLo extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'ເກີດຄວາມຜິດພາດຂຶ້ນ';
+
+  @override
+  String get appUnknownError => 'ຄວາມຜິດພາດທີ່ບໍ່ຮູ້ຈັກ';
+
+  @override
   String get retry => 'Retry';
 
   @override

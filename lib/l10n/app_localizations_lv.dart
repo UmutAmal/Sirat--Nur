@@ -142,6 +142,12 @@ class AppLocalizationsLv extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Radās kļūda';
+
+  @override
+  String get appUnknownError => 'Nezināma kļūda';
+
+  @override
   String get retry => 'Retry';
 
   @override

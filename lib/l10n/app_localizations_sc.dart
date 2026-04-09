@@ -141,6 +141,12 @@ class AppLocalizationsSc extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'An error occurred';
+
+  @override
+  String get appUnknownError => 'Unknown error';
+
+  @override
   String get retry => 'Retry';
 
   @override

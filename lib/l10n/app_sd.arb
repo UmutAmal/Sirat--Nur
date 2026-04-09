@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "تصديق ٿيل ذريعو انتظار ۾",
   "hadithUnavailableTitle": "تصديق ٿيل حديثن جو مجموعو اڃا تائين دستياب ناهي",
-  "hadithUnavailableBody": "هي تعمير اڃا تائين اڻ تصديق ٿيل خارجي حديث فيڊ تي منحصر آهي. حديث برائوزنگ غير فعال رهي ٿي جيستائين هڪ sourced dataset کي هم وقت نه ڪيو وڃي."
+  "hadithUnavailableBody": "هي تعمير اڃا تائين اڻ تصديق ٿيل خارجي حديث فيڊ تي منحصر آهي. حديث برائوزنگ غير فعال رهي ٿي جيستائين هڪ sourced dataset کي هم وقت نه ڪيو وڃي.",
+  "appErrorOccurred": "هڪ غلطي ٿي وئي",
+  "appUnknownError": "اڻڄاتل غلطي"
 }

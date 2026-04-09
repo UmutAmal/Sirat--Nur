@@ -141,6 +141,12 @@ class AppLocalizationsKk extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Қате орын алды';
+
+  @override
+  String get appUnknownError => 'Белгісіз қате';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -141,6 +141,12 @@ class AppLocalizationsTr extends AppLocalizations {
   String get error => 'Hata';
 
   @override
+  String get appErrorOccurred => 'Bir hata oluştu';
+
+  @override
+  String get appUnknownError => 'Bilinmeyen hata';
+
+  @override
   String get retry => 'Tekrar Dene';
 
   @override

@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Verifizierte Quelle steht noch aus",
   "hadithUnavailableTitle": "Verifizierte Hadith-Sammlungen sind noch nicht verfügbar",
-  "hadithUnavailableBody": "Dieser Build hängt immer noch von einem ungeprüften externen Hadith-Feed ab. Das Durchsuchen von Hadithen bleibt deaktiviert, bis ein Quelldatensatz synchronisiert wird."
+  "hadithUnavailableBody": "Dieser Build hängt immer noch von einem ungeprüften externen Hadith-Feed ab. Das Durchsuchen von Hadithen bleibt deaktiviert, bis ein Quelldatensatz synchronisiert wird.",
+  "appErrorOccurred": "Es ist ein Fehler aufgetreten",
+  "appUnknownError": "Unbekannter Fehler"
 }

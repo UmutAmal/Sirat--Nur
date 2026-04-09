@@ -141,6 +141,12 @@ class AppLocalizationsEe extends AppLocalizations {
   String get error => 'Vodada';
 
   @override
+  String get appErrorOccurred => 'Vodada aɖe dzɔ';
+
+  @override
+  String get appUnknownError => 'Vodada si womenya o';
+
+  @override
   String get retry => 'Gadze agbagba ake';
 
   @override

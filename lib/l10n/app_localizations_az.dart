@@ -141,6 +141,12 @@ class AppLocalizationsAz extends AppLocalizations {
   String get error => 'Xəta';
 
   @override
+  String get appErrorOccurred => 'Xəta baş verdi';
+
+  @override
+  String get appUnknownError => 'Naməlum xəta';
+
+  @override
   String get retry => 'Yenidən cəhd edin';
 
   @override

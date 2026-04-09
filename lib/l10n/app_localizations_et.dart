@@ -141,6 +141,12 @@ class AppLocalizationsEt extends AppLocalizations {
   String get error => 'Viga';
 
   @override
+  String get appErrorOccurred => 'Ilmnes viga';
+
+  @override
+  String get appUnknownError => 'Tundmatu viga';
+
+  @override
   String get retry => 'Proovi uuesti';
 
   @override

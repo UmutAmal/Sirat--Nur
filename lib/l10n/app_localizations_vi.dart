@@ -141,6 +141,12 @@ class AppLocalizationsVi extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Đã xảy ra lỗi';
+
+  @override
+  String get appUnknownError => 'Lỗi không xác định';
+
+  @override
   String get retry => 'Retry';
 
   @override

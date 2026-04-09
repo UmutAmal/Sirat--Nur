@@ -141,6 +141,12 @@ class AppLocalizationsRw extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Habayeho ikosa';
+
+  @override
+  String get appUnknownError => 'Ikosa ritazwi';
+
+  @override
   String get retry => 'Retry';
 
   @override

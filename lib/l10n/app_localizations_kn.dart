@@ -141,6 +141,12 @@ class AppLocalizationsKn extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'ದೋಷ ಸಂಭವಿಸಿದೆ';
+
+  @override
+  String get appUnknownError => 'ಅಜ್ಞಾತ ದೋಷ';
+
+  @override
   String get retry => 'Retry';
 
   @override

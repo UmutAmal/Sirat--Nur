@@ -141,6 +141,12 @@ class AppLocalizationsTa extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'பிழை ஏற்பட்டது';
+
+  @override
+  String get appUnknownError => 'அறியப்படாத பிழை';
+
+  @override
   String get retry => 'Retry';
 
   @override

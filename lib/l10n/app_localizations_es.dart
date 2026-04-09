@@ -142,6 +142,12 @@ class AppLocalizationsEs extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Se produjo un error';
+
+  @override
+  String get appUnknownError => 'Error desconocido';
+
+  @override
   String get retry => 'Rever';
 
   @override

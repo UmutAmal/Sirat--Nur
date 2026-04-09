@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Beripikado a gubuayan ti nakasagana",
   "hadithUnavailableTitle": "Saan pay a magun-od dagiti naberipikado a koleksion ti hadith",
-  "hadithUnavailableBody": "Daytoy a panagbangon ket agpannuray pay laeng iti saan a naberipikado nga akinruar a hadith feed. Ti panag-browse ti Hadith ket agtalinaed a nabalbaliwan aginggana ti maysa a nagtaudan a dataset ket mai-sync."
+  "hadithUnavailableBody": "Daytoy a panagbangon ket agpannuray pay laeng iti saan a naberipikado nga akinruar a hadith feed. Ti panag-browse ti Hadith ket agtalinaed a nabalbaliwan aginggana ti maysa a nagtaudan a dataset ket mai-sync.",
+  "appErrorOccurred": "Napasamak ti biddut",
+  "appUnknownError": "Di ammo a biddut"
 }

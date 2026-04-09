@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Burimi i verifikuar në pritje",
   "hadithUnavailableTitle": "Koleksionet e verifikuara të haditheve nuk janë ende të disponueshme",
-  "hadithUnavailableBody": "Ky ndërtim ende varet nga një burim i jashtëm i hadithit të paverifikuar. Shfletimi i hadithit qëndron i çaktivizuar derisa të sinkronizohet një grup të dhënash me burim."
+  "hadithUnavailableBody": "Ky ndërtim ende varet nga një burim i jashtëm i hadithit të paverifikuar. Shfletimi i hadithit qëndron i çaktivizuar derisa të sinkronizohet një grup të dhënash me burim.",
+  "appErrorOccurred": "Ndodhi një gabim",
+  "appUnknownError": "Gabim i panjohur"
 }

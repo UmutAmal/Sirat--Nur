@@ -141,6 +141,12 @@ class AppLocalizationsSl extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Prišlo je do napake';
+
+  @override
+  String get appUnknownError => 'Neznana napaka';
+
+  @override
   String get retry => 'Retry';
 
   @override

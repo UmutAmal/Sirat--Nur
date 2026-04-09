@@ -141,6 +141,12 @@ class AppLocalizationsYi extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'א טעות איז פארגעקומען';
+
+  @override
+  String get appUnknownError => 'אומבאַקאַנט טעות';
+
+  @override
   String get retry => 'Retry';
 
   @override

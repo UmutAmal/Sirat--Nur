@@ -142,6 +142,12 @@ class AppLocalizationsMt extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Sar żball';
+
+  @override
+  String get appUnknownError => 'Żball mhux magħruf';
+
+  @override
   String get retry => 'Retry';
 
   @override

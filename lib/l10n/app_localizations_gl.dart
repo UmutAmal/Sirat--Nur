@@ -142,6 +142,12 @@ class AppLocalizationsGl extends AppLocalizations {
   String get error => 'Erro';
 
   @override
+  String get appErrorOccurred => 'Produciuse un erro';
+
+  @override
+  String get appUnknownError => 'Erro descoñecido';
+
+  @override
   String get retry => 'Volve tentar';
 
   @override

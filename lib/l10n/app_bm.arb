@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Soso sɛgɛsɛgɛlen bɛ sen na",
   "hadithUnavailableTitle": "Hadisi lajɛlen minnu sɛgɛsɛgɛra, olu ma sɔrɔ fɔlɔ",
-  "hadithUnavailableBody": "O jɔli in bɛ da hali bi kɛnɛma hadisi balo dɔ kan min ma sɛgɛsɛgɛ. Hadisiw ɲinini bɛ to ka baara kɛ fo ka se kunnafonisɛbɛn sɔrɔyɔrɔ dɔ ka ɲɔgɔn sɔrɔ."
+  "hadithUnavailableBody": "O jɔli in bɛ da hali bi kɛnɛma hadisi balo dɔ kan min ma sɛgɛsɛgɛ. Hadisiw ɲinini bɛ to ka baara kɛ fo ka se kunnafonisɛbɛn sɔrɔyɔrɔ dɔ ka ɲɔgɔn sɔrɔ.",
+  "appErrorOccurred": "Misali dɔ kɛra",
+  "appUnknownError": "Misali dɔnbali"
 }

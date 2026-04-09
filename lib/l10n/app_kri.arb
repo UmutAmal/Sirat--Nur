@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Verified source pending",
   "hadithUnavailableTitle": "Verified hadith collections nɔ de yet",
-  "hadithUnavailableBody": "Dis bild stil dipen pan wan unverified eksternal hadith fid. Hadith brawzin de disable te dɛn sink wan sɔs datasɛt."
+  "hadithUnavailableBody": "Dis bild stil dipen pan wan unverified eksternal hadith fid. Hadith brawzin de disable te dɛn sink wan sɔs datasɛt.",
+  "appErrorOccurred": "Wan mistek bin apin",
+  "appUnknownError": "Mistek we dɛn nɔ no"
 }

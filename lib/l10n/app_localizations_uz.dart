@@ -141,6 +141,12 @@ class AppLocalizationsUz extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Xatolik yuz berdi';
+
+  @override
+  String get appUnknownError => 'Noma\'lum xato';
+
+  @override
   String get retry => 'Retry';
 
   @override

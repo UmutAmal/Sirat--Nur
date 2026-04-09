@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Xihlovo lexi tiyisisiweke xi yimerile",
   "hadithUnavailableTitle": "Nhlengeleto wa hadith lowu tiyisisiweke a wu si kumeka",
-  "hadithUnavailableBody": "Ku aka loku ka ha titshege hi ku phameriwa ka hadith ya le handle leyi nga tiyisisiwangiki. Ku pfula ka Hadith ku tshama ku nga tirhi ku kondza dataset leyi nga na xihlovo yi fambisana."
+  "hadithUnavailableBody": "Ku aka loku ka ha titshege hi ku phameriwa ka hadith ya le handle leyi nga tiyisisiwangiki. Ku pfula ka Hadith ku tshama ku nga tirhi ku kondza dataset leyi nga na xihlovo yi fambisana.",
+  "appErrorOccurred": "Ku humelerile xihoxo",
+  "appUnknownError": "Xihoxo lexi nga tiviwiki"
 }

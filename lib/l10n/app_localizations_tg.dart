@@ -141,6 +141,12 @@ class AppLocalizationsTg extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Хатогӣ рӯй дод';
+
+  @override
+  String get appUnknownError => 'Хатогии номаълум';
+
+  @override
   String get retry => 'Retry';
 
   @override

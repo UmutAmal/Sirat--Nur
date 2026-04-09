@@ -141,6 +141,12 @@ class AppLocalizationsMl extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'ഒരു പിശക് സംഭവിച്ചു';
+
+  @override
+  String get appUnknownError => 'അജ്ഞാത പിശക്';
+
+  @override
   String get retry => 'Retry';
 
   @override

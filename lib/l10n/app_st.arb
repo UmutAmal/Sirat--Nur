@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Mohloli o netefalitsoeng o ntse o emetse",
   "hadithUnavailableTitle": "Lipokello tsa hadith tse netefalitsoeng ha li so fumanehe",
-  "hadithUnavailableBody": "Kaho ena e ntse e itšetlehile ka phepelo ea hadith e sa netefatsoang. Mokhoa oa ho bala oa Hadith o lula o koalehile ho fihlela dataset ea mohloli o hokahanngoa."
+  "hadithUnavailableBody": "Kaho ena e ntse e itšetlehile ka phepelo ea hadith e sa netefatsoang. Mokhoa oa ho bala oa Hadith o lula o koalehile ho fihlela dataset ea mohloli o hokahanngoa.",
+  "appErrorOccurred": "Phoso e etsahetse",
+  "appUnknownError": "Phoso e sa tsejoeng"
 }

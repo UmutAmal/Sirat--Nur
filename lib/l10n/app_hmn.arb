@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Txheeb xyuas qhov chaw tos",
   "hadithUnavailableTitle": "Kev txheeb xyuas hadith collections tseem tsis tau muaj",
-  "hadithUnavailableBody": "Qhov kev tsim no tseem nyob ntawm qhov tsis tau lees paub sab nraud hadith pub. Hadith browsing nyob twj ywm tsis ua hauj lwm kom txog rau thaum ib tug sourced dataset yog synced."
+  "hadithUnavailableBody": "Qhov kev tsim no tseem nyob ntawm qhov tsis tau lees paub sab nraud hadith pub. Hadith browsing nyob twj ywm tsis ua hauj lwm kom txog rau thaum ib tug sourced dataset yog synced.",
+  "appErrorOccurred": "Ib qho yuam kev tshwm sim",
+  "appUnknownError": "Unknown yuam kev"
 }

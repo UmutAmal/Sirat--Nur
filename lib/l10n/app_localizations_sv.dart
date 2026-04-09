@@ -141,6 +141,12 @@ class AppLocalizationsSv extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Ett fel uppstod';
+
+  @override
+  String get appUnknownError => 'Okänt fel';
+
+  @override
   String get retry => 'Retry';
 
   @override

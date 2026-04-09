@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Verified source yakamirira",
   "hadithUnavailableTitle": "Verified hadith collections haisati yavapo",
-  "hadithUnavailableBody": "Ichi chivakwa chichiri kutsamira pane isina kusimbiswa ekunze hadith feed. Kubhurawuza kweHadith kunoramba kwakavharwa kudzamara dataset yawanikwa yawiriraniswa."
+  "hadithUnavailableBody": "Ichi chivakwa chichiri kutsamira pane isina kusimbiswa ekunze hadith feed. Kubhurawuza kweHadith kunoramba kwakavharwa kudzamara dataset yawanikwa yawiriraniswa.",
+  "appErrorOccurred": "Paitika chikanganiso",
+  "appUnknownError": "Kukanganisa kusingazivikanwe"
 }

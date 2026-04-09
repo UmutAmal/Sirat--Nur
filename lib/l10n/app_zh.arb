@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "来源待核实",
   "hadithUnavailableTitle": "尚未提供经过验证的圣训集",
-  "hadithUnavailableBody": "此构建仍然依赖于未经验证的外部圣训提要。在源数据集同步之前，圣训浏览保持禁用状态。"
+  "hadithUnavailableBody": "此构建仍然依赖于未经验证的外部圣训提要。在源数据集同步之前，圣训浏览保持禁用状态。",
+  "appErrorOccurred": "发生错误",
+  "appUnknownError": "未知错误"
 }

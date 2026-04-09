@@ -142,6 +142,12 @@ class AppLocalizationsMy extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'အမှားအယွင်းတစ်ခု ဖြစ်ပွားခဲ့သည်။';
+
+  @override
+  String get appUnknownError => 'အမည်မသိ အမှား';
+
+  @override
   String get retry => 'Retry';
 
   @override

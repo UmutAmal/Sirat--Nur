@@ -141,6 +141,12 @@ class AppLocalizationsGu extends AppLocalizations {
   String get error => 'ભૂલ';
 
   @override
+  String get appErrorOccurred => 'એક ભૂલ આવી';
+
+  @override
+  String get appUnknownError => 'અજાણી ભૂલ';
+
+  @override
   String get retry => 'ફરી પ્રયાસ કરો';
 
   @override

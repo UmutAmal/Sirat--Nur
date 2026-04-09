@@ -141,6 +141,12 @@ class AppLocalizationsSd extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'هڪ غلطي ٿي وئي';
+
+  @override
+  String get appUnknownError => 'اڻڄاتل غلطي';
+
+  @override
   String get retry => 'Retry';
 
   @override

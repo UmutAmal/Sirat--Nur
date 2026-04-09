@@ -63,6 +63,8 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "An error occurred",
+  "appUnknownError": "Unknown error",
   "retry": "Retry",
   "cancel": "Cancel",
   "save": "Save",

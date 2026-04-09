@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Təsdiqlənmiş mənbə gözlənilir",
   "hadithUnavailableTitle": "Təsdiqlənmiş hədis topluları hələ mövcud deyil",
-  "hadithUnavailableBody": "Bu quruluş hələ də təsdiqlənməmiş xarici hədis lentindən asılıdır. Hədislərə baxış qaynaqlanmış verilənlər bazası sinxronizasiya edilənə qədər qeyri-aktiv qalır."
+  "hadithUnavailableBody": "Bu quruluş hələ də təsdiqlənməmiş xarici hədis lentindən asılıdır. Hədislərə baxış qaynaqlanmış verilənlər bazası sinxronizasiya edilənə qədər qeyri-aktiv qalır.",
+  "appErrorOccurred": "Xəta baş verdi",
+  "appUnknownError": "Naməlum xəta"
 }

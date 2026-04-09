@@ -141,6 +141,12 @@ class AppLocalizationsMai extends AppLocalizations {
   String get error => 'त्रुटि';
 
   @override
+  String get appErrorOccurred => 'एकटा त्रुटि भेल';
+
+  @override
+  String get appUnknownError => 'अज्ञात त्रुटि';
+
+  @override
   String get retry => 'पुनः प्रयास करू';
 
   @override

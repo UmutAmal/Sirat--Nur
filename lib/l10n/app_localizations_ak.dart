@@ -141,6 +141,12 @@ class AppLocalizationsAk extends AppLocalizations {
   String get error => 'Mfomsoɔ';
 
   @override
+  String get appErrorOccurred => 'Mfomso bi sii';
+
+  @override
+  String get appUnknownError => 'Mfomso a wonnim';
+
+  @override
   String get retry => 'San bɔ mmɔden bio';
 
   @override

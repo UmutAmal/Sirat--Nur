@@ -141,6 +141,12 @@ class AppLocalizationsMn extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Алдаа гарлаа';
+
+  @override
+  String get appUnknownError => 'Үл мэдэгдэх алдаа';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Tasdiqlangan manba kutilmoqda",
   "hadithUnavailableTitle": "Tasdiqlangan hadis to‘plamlari hozircha mavjud emas",
-  "hadithUnavailableBody": "Bu tuzilish hali ham tasdiqlanmagan tashqi hadis tasmasiga bog'liq. Hadislarni koʻrib chiqish manba maʼlumotlar toʻplami sinxronlanmaguncha oʻchirib qoʻyiladi."
+  "hadithUnavailableBody": "Bu tuzilish hali ham tasdiqlanmagan tashqi hadis tasmasiga bog'liq. Hadislarni koʻrib chiqish manba maʼlumotlar toʻplami sinxronlanmaguncha oʻchirib qoʻyiladi.",
+  "appErrorOccurred": "Xatolik yuz berdi",
+  "appUnknownError": "Noma'lum xato"
 }

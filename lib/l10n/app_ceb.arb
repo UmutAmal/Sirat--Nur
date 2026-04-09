@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Gi-verify nga tinubdan naghulat",
   "hadithUnavailableTitle": "Ang napamatud-an nga mga koleksyon sa hadith wala pa magamit",
-  "hadithUnavailableBody": "Kini nga pagtukod nagdepende gihapon sa usa ka wala mapamatud-an nga eksternal nga feed sa hadith. Ang pag-browse sa hadith magpabilin nga wala’y mahimo hangtod ang usa ka gigikanan nga dataset ma-sync."
+  "hadithUnavailableBody": "Kini nga pagtukod nagdepende gihapon sa usa ka wala mapamatud-an nga eksternal nga feed sa hadith. Ang pag-browse sa hadith magpabilin nga wala’y mahimo hangtod ang usa ka gigikanan nga dataset ma-sync.",
+  "appErrorOccurred": "Usa ka sayup ang nahitabo",
+  "appUnknownError": "Wala mailhi nga sayup"
 }

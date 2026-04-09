@@ -142,6 +142,12 @@ class AppLocalizationsSk extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Vyskytla sa chyba';
+
+  @override
+  String get appUnknownError => 'Neznáma chyba';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -736,6 +736,18 @@ abstract class AppLocalizations {
   /// **'Error'**
   String get error;
 
+  /// No description provided for @appErrorOccurred.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred'**
+  String get appErrorOccurred;
+
+  /// No description provided for @appUnknownError.
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown error'**
+  String get appUnknownError;
+
   /// No description provided for @retry.
   ///
   /// In en, this message translates to:

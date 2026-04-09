@@ -141,6 +141,12 @@ class AppLocalizationsMr extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'एक त्रुटी आली';
+
+  @override
+  String get appUnknownError => 'अज्ञात त्रुटी';
+
+  @override
   String get retry => 'Retry';
 
   @override

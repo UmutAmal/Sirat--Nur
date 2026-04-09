@@ -141,6 +141,12 @@ class AppLocalizationsTh extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'เกิดข้อผิดพลาด';
+
+  @override
+  String get appUnknownError => 'ข้อผิดพลาดที่ไม่รู้จัก';
+
+  @override
   String get retry => 'Retry';
 
   @override

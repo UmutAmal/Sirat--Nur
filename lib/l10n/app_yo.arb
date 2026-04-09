@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Wadi orisun ni isunmọtosi ni",
   "hadithUnavailableTitle": "Awọn akojọpọ hadith ti o ni idaniloju ko si sibẹsibẹ",
-  "hadithUnavailableBody": "Kọ yii tun da lori ifunni hadith ita ti a ko rii daju. Lilọ kiri ayelujara Hadith duro ni alaabo titi ti ipilẹ data ti o ti muṣiṣẹpọ."
+  "hadithUnavailableBody": "Kọ yii tun da lori ifunni hadith ita ti a ko rii daju. Lilọ kiri ayelujara Hadith duro ni alaabo titi ti ipilẹ data ti o ti muṣiṣẹpọ.",
+  "appErrorOccurred": "Aṣiṣe kan ṣẹlẹ",
+  "appUnknownError": "Aṣiṣe aimọ"
 }

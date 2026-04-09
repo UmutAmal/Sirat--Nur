@@ -63,6 +63,8 @@
   "noResults": "Sonuç bulunamadı",
   "loading": "Yükleniyor...",
   "error": "Hata",
+  "appErrorOccurred": "Bir hata oluştu",
+  "appUnknownError": "Bilinmeyen hata",
   "retry": "Tekrar Dene",
   "cancel": "İptal",
   "save": "Kaydet",

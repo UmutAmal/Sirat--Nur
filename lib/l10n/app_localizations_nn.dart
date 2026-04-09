@@ -141,6 +141,12 @@ class AppLocalizationsNn extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Det oppsto en feil';
+
+  @override
+  String get appUnknownError => 'Ukjent feil';
+
+  @override
   String get retry => 'Retry';
 
   @override

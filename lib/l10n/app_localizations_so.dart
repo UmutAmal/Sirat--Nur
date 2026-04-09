@@ -141,6 +141,12 @@ class AppLocalizationsSo extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Khalad ayaa dhacay';
+
+  @override
+  String get appUnknownError => 'Khalad aan la garanayn';
+
+  @override
   String get retry => 'Retry';
 
   @override

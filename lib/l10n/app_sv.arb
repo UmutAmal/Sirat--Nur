@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Verifierad källa väntar",
   "hadithUnavailableTitle": "Verifierade hadith-samlingar är inte tillgängliga ännu",
-  "hadithUnavailableBody": "Denna konstruktion beror fortfarande på ett overifierat externt hadithflöde. Hadith-surfning förblir inaktiverad tills en källdatauppsättning synkroniseras."
+  "hadithUnavailableBody": "Denna konstruktion beror fortfarande på ett overifierat externt hadithflöde. Hadith-surfning förblir inaktiverad tills en källdatauppsättning synkroniseras.",
+  "appErrorOccurred": "Ett fel uppstod",
+  "appUnknownError": "Okänt fel"
 }

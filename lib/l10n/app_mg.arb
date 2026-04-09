@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Loharano voamarina miandry",
   "hadithUnavailableTitle": "Tsy mbola misy ny fanangonana hadita voamarina",
-  "hadithUnavailableBody": "Mbola miankina amin'ny fahana hadita ivelany tsy voamarina io fananganana io. Mijanona ho kilemaina ny fitetezana Hadith mandra-pirindran'ny angon-drakitra misy loharano iray."
+  "hadithUnavailableBody": "Mbola miankina amin'ny fahana hadita ivelany tsy voamarina io fananganana io. Mijanona ho kilemaina ny fitetezana Hadith mandra-pirindran'ny angon-drakitra misy loharano iray.",
+  "appErrorOccurred": "Nisy hadisoana nitranga",
+  "appUnknownError": "Error tsy fantatra"
 }

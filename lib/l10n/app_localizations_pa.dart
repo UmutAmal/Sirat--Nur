@@ -141,6 +141,12 @@ class AppLocalizationsPa extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'ਇੱਕ ਤਰੁੱਟੀ ਉਤਪੰਨ ਹੋਈ';
+
+  @override
+  String get appUnknownError => 'ਅਗਿਆਤ ਤਰੁੱਟੀ';
+
+  @override
   String get retry => 'Retry';
 
   @override

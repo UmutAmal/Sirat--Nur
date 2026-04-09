@@ -141,6 +141,12 @@ class AppLocalizationsKm extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'កំហុសមួយបានកើតឡើង';
+
+  @override
+  String get appUnknownError => 'កំហុសមិនស្គាល់';
+
+  @override
   String get retry => 'Retry';
 
   @override

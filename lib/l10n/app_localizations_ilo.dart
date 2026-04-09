@@ -142,6 +142,12 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get error => 'Biddut nga';
 
   @override
+  String get appErrorOccurred => 'Napasamak ti biddut';
+
+  @override
+  String get appUnknownError => 'Di ammo a biddut';
+
+  @override
   String get retry => 'Padasem manen';
 
   @override

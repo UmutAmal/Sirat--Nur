@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Sumber diverifikasi ngantosan",
   "hadithUnavailableTitle": "Koléksi hadits anu diverifikasi henteu acan sayogi",
-  "hadithUnavailableBody": "Ieu ngawangun masih gumantung kana feed hadits éksternal unverified. Ngotéktak Hadits tetep ditumpurkeun dugi ka set data sumber disingkronkeun."
+  "hadithUnavailableBody": "Ieu ngawangun masih gumantung kana feed hadits éksternal unverified. Ngotéktak Hadits tetep ditumpurkeun dugi ka set data sumber disingkronkeun.",
+  "appErrorOccurred": "Aya kasalahan",
+  "appUnknownError": "Kasalahan teu dipikanyaho"
 }

@@ -141,6 +141,12 @@ class AppLocalizationsOr extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'ଏକ ତ୍ରୁଟି ଘଟିଲା |';
+
+  @override
+  String get appUnknownError => 'ଅଜ୍ଞାତ ତ୍ରୁଟି |';
+
+  @override
   String get retry => 'Retry';
 
   @override

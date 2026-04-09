@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Fuente verificada pendiente",
   "hadithUnavailableTitle": "Las colecciones de hadices verificadas aún no están disponibles",
-  "hadithUnavailableBody": "Esta construcción todavía depende de una fuente de hadices externa no verificada. La navegación de Hadith permanece deshabilitada hasta que se sincroniza un conjunto de datos de origen."
+  "hadithUnavailableBody": "Esta construcción todavía depende de una fuente de hadices externa no verificada. La navegación de Hadith permanece deshabilitada hasta que se sincroniza un conjunto de datos de origen.",
+  "appErrorOccurred": "Se produjo un error",
+  "appUnknownError": "Error desconocido"
 }

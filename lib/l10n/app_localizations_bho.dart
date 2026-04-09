@@ -142,6 +142,12 @@ class AppLocalizationsBho extends AppLocalizations {
   String get error => 'त्रुटि हो गइल बा';
 
   @override
+  String get appErrorOccurred => 'एगो त्रुटि हो गइल';
+
+  @override
+  String get appUnknownError => 'अज्ञात त्रुटि हो गइल बा';
+
+  @override
   String get retry => 'दोबारा कोशिश करीं';
 
   @override

@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "ዝተረጋገጸ ምንጪ ኣብ ምጽባይ ይርከብ።",
   "hadithUnavailableTitle": "ዝተረጋገጹ እኩባት ሓዲስ ገና ኣይተረኽበን።",
-  "hadithUnavailableBody": "እዚ ህንጸት ሕጂ ውን ኣብ ዘይተረጋገጸ ናይ ደገ ሓዲስ መግቢ እዩ ዝምርኮስ። ሓዲስ ምድህሳስ ክሳብ ምንጪ ዳታሴት ዝመሳሰል ስንኩል ኮይኑ ይጸንሕ።"
+  "hadithUnavailableBody": "እዚ ህንጸት ሕጂ ውን ኣብ ዘይተረጋገጸ ናይ ደገ ሓዲስ መግቢ እዩ ዝምርኮስ። ሓዲስ ምድህሳስ ክሳብ ምንጪ ዳታሴት ዝመሳሰል ስንኩል ኮይኑ ይጸንሕ።",
+  "appErrorOccurred": "ጌጋ ኣጋጢሙ",
+  "appUnknownError": "ዘይፍለጥ ጌጋ"
 }

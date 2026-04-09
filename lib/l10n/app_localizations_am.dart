@@ -141,6 +141,12 @@ class AppLocalizationsAm extends AppLocalizations {
   String get error => 'ስህተት';
 
   @override
+  String get appErrorOccurred => 'ስህተት ተከስቷል።';
+
+  @override
+  String get appUnknownError => 'ያልታወቀ ስህተት';
+
+  @override
   String get retry => 'እንደገና ይሞክሩ';
 
   @override

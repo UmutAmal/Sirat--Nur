@@ -141,6 +141,12 @@ class AppLocalizationsCo extends AppLocalizations {
   String get error => 'Errore';
 
   @override
+  String get appErrorOccurred => 'Un errore hè accadutu';
+
+  @override
+  String get appUnknownError => 'Errore scunnisciutu';
+
+  @override
   String get retry => 'Riprova';
 
   @override

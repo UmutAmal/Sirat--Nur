@@ -142,6 +142,12 @@ class AppLocalizationsMi extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'I puta he hapa';
+
+  @override
+  String get appUnknownError => 'Hapa kore mohio';
+
+  @override
   String get retry => 'Retry';
 
   @override

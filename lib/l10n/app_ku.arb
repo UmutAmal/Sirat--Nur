@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Çavkaniya verastkirî li bendê ye",
   "hadithUnavailableTitle": "Berhevokên hedîsên tesdîqkirî hê ne berdest in",
-  "hadithUnavailableBody": "Ev avahî hîna jî bi pêvek hedîseke derveyî ya nerastkirî ve girêdayî ye. Gera hedîsê neçalak dimîne heya ku danegehek jêderkirî were senkronîze kirin."
+  "hadithUnavailableBody": "Ev avahî hîna jî bi pêvek hedîseke derveyî ya nerastkirî ve girêdayî ye. Gera hedîsê neçalak dimîne heya ku danegehek jêderkirî were senkronîze kirin.",
+  "appErrorOccurred": "Çewtiyek derket",
+  "appUnknownError": "Çewtiya nenas"
 }

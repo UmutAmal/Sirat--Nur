@@ -141,6 +141,12 @@ class AppLocalizationsHa extends AppLocalizations {
   String get error => 'Kuskure';
 
   @override
+  String get appErrorOccurred => 'An sami kuskure';
+
+  @override
+  String get appUnknownError => 'Kuskuren da ba a sani ba';
+
+  @override
   String get retry => 'Sake gwadawa';
 
   @override

@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Kinnitatud allikas on ootel",
   "hadithUnavailableTitle": "Kontrollitud hadithide kollektsioonid pole veel saadaval",
-  "hadithUnavailableBody": "See ehitamine sõltub endiselt kontrollimata välisest hadithivoost. Hadith-sirvimine jääb keelatuks, kuni lähteandmestik sünkroonitakse."
+  "hadithUnavailableBody": "See ehitamine sõltub endiselt kontrollimata välisest hadithivoost. Hadith-sirvimine jääb keelatuks, kuni lähteandmestik sünkroonitakse.",
+  "appErrorOccurred": "Ilmnes viga",
+  "appUnknownError": "Tundmatu viga"
 }

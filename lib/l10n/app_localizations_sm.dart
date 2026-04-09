@@ -141,6 +141,12 @@ class AppLocalizationsSm extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Ua tupu se mea sese';
+
+  @override
+  String get appUnknownError => 'Sese le iloa';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -143,6 +143,12 @@ class AppLocalizationsKy extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Ката кетти';
+
+  @override
+  String get appUnknownError => 'Белгисиз ката';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -141,6 +141,12 @@ class AppLocalizationsJv extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Ana kesalahan';
+
+  @override
+  String get appUnknownError => 'Kesalahan sing ora dingerteni';
+
+  @override
   String get retry => 'Retry';
 
   @override

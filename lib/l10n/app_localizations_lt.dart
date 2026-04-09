@@ -141,6 +141,12 @@ class AppLocalizationsLt extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Įvyko klaida';
+
+  @override
+  String get appUnknownError => 'Nežinoma klaida';
+
+  @override
   String get retry => 'Retry';
 
   @override

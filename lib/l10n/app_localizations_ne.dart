@@ -141,6 +141,12 @@ class AppLocalizationsNe extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'एउटा त्रुटि भयो';
+
+  @override
+  String get appUnknownError => 'अज्ञात त्रुटि';
+
+  @override
   String get retry => 'Retry';
 
   @override

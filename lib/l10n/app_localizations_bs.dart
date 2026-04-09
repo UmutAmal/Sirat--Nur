@@ -141,6 +141,12 @@ class AppLocalizationsBs extends AppLocalizations {
   String get error => 'Greška';
 
   @override
+  String get appErrorOccurred => 'Došlo je do greške';
+
+  @override
+  String get appUnknownError => 'Nepoznata greška';
+
+  @override
   String get retry => 'Pokušaj ponovo';
 
   @override

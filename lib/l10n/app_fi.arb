@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Vahvistettu lähde odottaa",
   "hadithUnavailableTitle": "Vahvistetut hadith-kokoelmat eivät ole vielä saatavilla",
-  "hadithUnavailableBody": "Tämä versio riippuu edelleen vahvistamattomasta ulkoisesta hadith-syötteestä. Hadith-selaus pysyy poissa käytöstä, kunnes lähdetietojoukko synkronoidaan."
+  "hadithUnavailableBody": "Tämä versio riippuu edelleen vahvistamattomasta ulkoisesta hadith-syötteestä. Hadith-selaus pysyy poissa käytöstä, kunnes lähdetietojoukko synkronoidaan.",
+  "appErrorOccurred": "Tapahtui virhe",
+  "appUnknownError": "Tuntematon virhe"
 }

@@ -141,6 +141,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => '오류가 발생했습니다';
+
+  @override
+  String get appUnknownError => '알 수 없는 오류';
+
+  @override
   String get retry => 'Retry';
 
   @override

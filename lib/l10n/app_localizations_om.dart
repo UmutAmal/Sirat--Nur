@@ -142,6 +142,12 @@ class AppLocalizationsOm extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Dogoggorri uumame';
+
+  @override
+  String get appUnknownError => 'Dogoggora hin beekamne';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -526,5 +526,7 @@
   "duaSourceAhmad": "Ahmad",
   "hadithSourcePending": "Sumber sing diverifikasi ditundha",
   "hadithUnavailableTitle": "Koleksi hadits sing wis diverifikasi durung kasedhiya",
-  "hadithUnavailableBody": "Iki mbangun isih gumantung ing feed hadits external durung diverifikasi. Browsing hadits tetep dipateni nganti dataset sumber diselarasake."
+  "hadithUnavailableBody": "Iki mbangun isih gumantung ing feed hadits external durung diverifikasi. Browsing hadits tetep dipateni nganti dataset sumber diselarasake.",
+  "appErrorOccurred": "Ana kesalahan",
+  "appUnknownError": "Kesalahan sing ora dingerteni"
 }

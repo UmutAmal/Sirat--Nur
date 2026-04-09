@@ -3339,3 +3339,44 @@
 ### Sonraki Adım
 - Sıradaki turda code-referenced kalan yoğun localization kümeleri içinden `downloads`, `offline quran audio` ve `diagnostics/quran dataset` yüzeyleri yeniden sıralanacak.
 - Rare-locale tarafında `sukun*` anahtarlarının EN-reference kalan satırları sibling veya EN-reference dürüstlük matrisiyle ayrıca ele alınacak.
+
+## 2026-04-09 TUR-85 — Localize Global App Error Surface
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\common\app_error_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/common/app_error_page.dart) hardcoded başlık ve fallback hata metninden çıkarılıp `AppLocalizations` zincirine bağlandı.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) içine `appErrorOccurred` ve `appUnknownError` anahtarları eklendi.
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force appErrorOccurred appUnknownError` ile çalıştırıldı ve anahtarlar tüm `app_*.arb` setine yayıldı.
+- [A:\Way of Allah\sirat_i_nur\test\features\common\app_error_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/common/app_error_page_test.dart) eklendi; [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) genişletildi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\common\app_error_page.dart#L19](A:/Way%20of%20Allah/sirat_i_nur/lib/features/common/app_error_page.dart#L19) ve [A:\Way of Allah\sirat_i_nur\lib\features\common\app_error_page.dart#L22](A:/Way%20of%20Allah/sirat_i_nur/lib/features/common/app_error_page.dart#L22) genel hata ekranının hâlâ İngilizce hardcoded başlık ve fallback mesajı kullandığını gösterdi.
+- Bu yüzey hata durumunda uygulama geneline yayılabilecek ortak bir ekran olduğu için kullanıcı etkisi yüksek ve localization borcu doğrudan görünürdü.
+- Çözüm, mevcut `error` anahtarıyla anlamsal kayıp yaşamamak için ayrı başlık ve fallback body anahtarları eklenerek yapıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\common\app_error_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\common\app_error_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `appErrorOccurred` için İngilizce fallback sayısı `195`ten `63`e düştü.
+- `appUnknownError` için İngilizce fallback sayısı `195`ten `63`e düştü.
+- Priority locale seti genel hata ekranında artık İngilizce fallback göstermiyor.
+- Sağlanan exception mesajı varsa ekran bunu koruyor; fallback metin yalnızca gerçekten bilinmeyen hata durumunda kullanılıyor.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart --force appErrorOccurred appUnknownError` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/features/common/app_error_page_test.dart` → PASS (`2/2`)
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`13/13`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`195/195`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Global app error surface still using hardcoded English fallback: `14/25 → 4/25`
+
+### Sonraki Adım
+- Sıradaki turda [A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/qibla/qibla_page.dart) üzerindeki `Compass Error` hardcoded hata yüzeyi ele alınacak.
+- Ardından [A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/library/hadith_list_page.dart) ve kalan low-surface hardcoded metinler yeniden sıralanacak.

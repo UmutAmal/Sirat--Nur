@@ -143,6 +143,12 @@ class AppLocalizationsTl extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'May naganap na error';
+
+  @override
+  String get appUnknownError => 'Hindi kilalang error';
+
+  @override
   String get retry => 'Subukan muli';
 
   @override

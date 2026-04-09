@@ -141,6 +141,12 @@ class AppLocalizationsSn extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Paitika chikanganiso';
+
+  @override
+  String get appUnknownError => 'Kukanganisa kusingazivikanwe';
+
+  @override
   String get retry => 'Retry';
 
   @override

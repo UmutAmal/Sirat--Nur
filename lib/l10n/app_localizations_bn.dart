@@ -142,6 +142,12 @@ class AppLocalizationsBn extends AppLocalizations {
   String get error => 'ত্রুটি';
 
   @override
+  String get appErrorOccurred => 'একটি ত্রুটি ঘটেছে';
+
+  @override
+  String get appUnknownError => 'অজানা ত্রুটি';
+
+  @override
   String get retry => 'আবার চেষ্টা করুন';
 
   @override

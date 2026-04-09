@@ -143,6 +143,12 @@ class AppLocalizationsHu extends AppLocalizations {
   String get error => 'Error';
 
   @override
+  String get appErrorOccurred => 'Hiba történt';
+
+  @override
+  String get appUnknownError => 'Ismeretlen hiba';
+
+  @override
   String get retry => 'Retry';
 
   @override
