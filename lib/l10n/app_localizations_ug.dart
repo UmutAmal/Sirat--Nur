@@ -373,7 +373,7 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return '$appName نى تەكشۈرۈپ بېقىڭ: ئەڭ ئاخىرقى ئىسلام تۇرمۇش ئۇسۇلى! $url';
   }
 
   @override
@@ -666,13 +666,13 @@ class AppLocalizationsUg extends AppLocalizations {
   String get diagnostics => 'Diagnostics';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => 'تەڭشەلمىدى';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'دۇئا ئارخىپى';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'دۇئا ئورگىنى';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {

@@ -124,7 +124,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Rate App",
   "shareApp": "Share App",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "{appName} карап көрүңүз: Исламдык жашоо образынын эң сонун колдонмосу! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {
@@ -222,9 +222,9 @@
   "resetOnboarding": "Reset Onboarding",
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
-  "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsNotSet": "коюлган эмес",
+  "diagnosticsPrayerProfile": "Намаз профили",
+  "diagnosticsPrayerSource": "Намаз органы",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
@@ -238,7 +238,7 @@
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
   "diagnosticsQuranAudioAssets": "Quran Audio Assets",
-  "diagnosticsAudioAssets": "Audio Assets",
+  "diagnosticsAudioAssets": "Аудио активдери",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
     "placeholders": {

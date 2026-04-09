@@ -373,7 +373,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Nézze meg a $appName: A tökéletes iszlám életmód alkalmazást! $url';
   }
 
   @override
@@ -666,13 +666,13 @@ class AppLocalizationsHu extends AppLocalizations {
   String get diagnostics => 'Diagnostics';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => 'Nincs beállítva';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Ima profil';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Ima Hatóság';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -684,7 +684,7 @@ class AppLocalizationsHu extends AppLocalizations {
       'Manual custom angles (no institutional source)';
 
   @override
-  String get diagnosticsCloudDriven => 'Cloud Driven';
+  String get diagnosticsCloudDriven => 'Felhővezérelt';
 
   @override
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
@@ -696,7 +696,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
 
   @override
-  String get diagnosticsAudioAssets => 'Audio Assets';
+  String get diagnosticsAudioAssets => 'Audioeszközök';
 
   @override
   String diagnosticsFilesCount(String count) {

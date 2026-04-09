@@ -91,4 +91,25 @@ void main() {
       'Sirat-ı Nur uygulamasına göz atın: En kapsamlı İslami yaşam uygulaması! https://siratinur.com',
     );
   });
+
+  testWidgets('SettingsPage builds localized share text in French', (
+    tester,
+  ) async {
+    await pumpSettingsPage(
+      tester,
+      prefsValues: const {
+        'calculationMethod': diyanetPrayerMethod,
+        'madhab': hanafiMadhab,
+      },
+      locale: const Locale('fr'),
+    );
+
+    final context = tester.element(find.byType(SettingsPage));
+    final l10n = AppLocalizations.of(context)!;
+
+    expect(
+      buildSettingsShareText(l10n),
+      "Découvrez Voie d'Allah : l'application ultime pour le mode de vie islamique ! https://siratinur.com",
+    );
+  });
 }

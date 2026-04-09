@@ -124,7 +124,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Rate App",
   "shareApp": "Share App",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "{appName} പരിശോധിക്കുക: പരമമായ ഇസ്ലാമിക ജീവിതശൈലി ആപ്പ്! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {
@@ -222,9 +222,9 @@
   "resetOnboarding": "Reset Onboarding",
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
-  "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsNotSet": "സജ്ജമാക്കിയിട്ടില്ല",
+  "diagnosticsPrayerProfile": "പ്രാർത്ഥന പ്രൊഫൈൽ",
+  "diagnosticsPrayerSource": "പ്രാർത്ഥന അതോറിറ്റി",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
@@ -234,11 +234,11 @@
     }
   },
   "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
-  "diagnosticsCloudDriven": "Cloud Driven",
+  "diagnosticsCloudDriven": "ക്ലൗഡ് ഡ്രൈവൺ",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
   "diagnosticsQuranAudioAssets": "Quran Audio Assets",
-  "diagnosticsAudioAssets": "Audio Assets",
+  "diagnosticsAudioAssets": "ഓഡിയോ അസറ്റുകൾ",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
     "placeholders": {

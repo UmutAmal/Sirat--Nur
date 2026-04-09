@@ -124,7 +124,7 @@
   "contactUs": "Kontaktieren Sie uns",
   "rateApp": "App bewerten",
   "shareApp": "App teilen",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Schauen Sie sich {appName} an: Die ultimative islamische Lifestyle-App! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {
@@ -222,9 +222,9 @@
   "resetOnboarding": "Reset Onboarding",
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
-  "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsNotSet": "Nicht festgelegt",
+  "diagnosticsPrayerProfile": "Gebetsprofil",
+  "diagnosticsPrayerSource": "Gebetsautorität",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
@@ -234,11 +234,11 @@
     }
   },
   "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
-  "diagnosticsCloudDriven": "Cloud Driven",
+  "diagnosticsCloudDriven": "Cloud-gesteuert",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
   "diagnosticsQuranAudioAssets": "Quran Audio Assets",
-  "diagnosticsAudioAssets": "Audio Assets",
+  "diagnosticsAudioAssets": "Audio-Assets",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
     "placeholders": {

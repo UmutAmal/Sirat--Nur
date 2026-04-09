@@ -667,13 +667,13 @@ class AppLocalizationsEe extends AppLocalizations {
   String get diagnostics => 'Diagnostics';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => 'Menye ɖe woɖoe o';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Gbedodoɖa Ŋuti Nyatakaka';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Gbedodoɖa ƒe Dɔwɔƒe';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -685,7 +685,7 @@ class AppLocalizationsEe extends AppLocalizations {
       'Manual custom angles (no institutional source)';
 
   @override
-  String get diagnosticsCloudDriven => 'Cloud Driven';
+  String get diagnosticsCloudDriven => 'Alilikpo Ʋuʋu';
 
   @override
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
@@ -697,7 +697,7 @@ class AppLocalizationsEe extends AppLocalizations {
   String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
 
   @override
-  String get diagnosticsAudioAssets => 'Audio Assets';
+  String get diagnosticsAudioAssets => 'Odio ƒe Nuwo';
 
   @override
   String diagnosticsFilesCount(String count) {

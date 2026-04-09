@@ -222,9 +222,9 @@
   "resetOnboarding": "Riset Ɔnbɔdin",
   "rerunSetup": "Ri-rɔn di fɔs sɛtup prɔses.",
   "diagnostics": "Diagnostik dɛn we dɛn kin du",
-  "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsNotSet": "Nɔto we dɛn dɔn sɛt",
+  "diagnosticsPrayerProfile": "Prea Profayl",
+  "diagnosticsPrayerSource": "Di Atɔriti fɔ Prea",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
@@ -234,11 +234,11 @@
     }
   },
   "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
-  "diagnosticsCloudDriven": "Cloud Driven",
+  "diagnosticsCloudDriven": "Klaud Drayv",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
   "diagnosticsQuranAudioAssets": "Quran Audio Assets",
-  "diagnosticsAudioAssets": "Audio Assets",
+  "diagnosticsAudioAssets": "Ɔdio Asɛt dɛn",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
     "placeholders": {

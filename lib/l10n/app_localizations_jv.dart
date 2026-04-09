@@ -666,13 +666,13 @@ class AppLocalizationsJv extends AppLocalizations {
   String get diagnostics => 'Diagnostics';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => 'Ora disetel';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Profil Pandonga';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Panguwasa Sholat';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -696,7 +696,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
 
   @override
-  String get diagnosticsAudioAssets => 'Audio Assets';
+  String get diagnosticsAudioAssets => 'Aset Audio';
 
   @override
   String diagnosticsFilesCount(String count) {

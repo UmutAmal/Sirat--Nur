@@ -124,7 +124,7 @@
   "contactUs": "Makipag-ugnayan sa Amin",
   "rateApp": "I-rate ang App",
   "shareApp": "Ibahagi ang App",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Tingnan ang {appName}: Ang ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {
@@ -222,9 +222,9 @@
   "resetOnboarding": "Reset Onboarding",
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
-  "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsNotSet": "Hindi nakatakda",
+  "diagnosticsPrayerProfile": "Profile ng Panalangin",
+  "diagnosticsPrayerSource": "Awtoridad sa Panalangin",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
@@ -238,7 +238,7 @@
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
   "diagnosticsQuranAudioAssets": "Quran Audio Assets",
-  "diagnosticsAudioAssets": "Audio Assets",
+  "diagnosticsAudioAssets": "Mga Audio Asset",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
     "placeholders": {

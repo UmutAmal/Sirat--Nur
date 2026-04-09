@@ -673,13 +673,13 @@ class AppLocalizationsNso extends AppLocalizations {
   String get diagnostics => 'Diteko tša go hlahloba bolwetši';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => 'Ga se ya bewa';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Profaele ya Thapelo';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Bolaodi bja Thapelo';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -691,7 +691,7 @@ class AppLocalizationsNso extends AppLocalizations {
       'Manual custom angles (no institutional source)';
 
   @override
-  String get diagnosticsCloudDriven => 'Cloud Driven';
+  String get diagnosticsCloudDriven => 'Leru le Kgannwago';
 
   @override
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
@@ -703,7 +703,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
 
   @override
-  String get diagnosticsAudioAssets => 'Audio Assets';
+  String get diagnosticsAudioAssets => 'Matlotlo a Modumo';
 
   @override
   String diagnosticsFilesCount(String count) {

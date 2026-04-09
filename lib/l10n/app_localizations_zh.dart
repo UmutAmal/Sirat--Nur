@@ -373,7 +373,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return '查看$appName：终极伊斯兰生活方式应用程序！ $url';
   }
 
   @override
@@ -664,13 +664,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get diagnostics => 'Diagnostics';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => '未设置';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => '祷告简介';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => '祷告权柄';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -682,7 +682,7 @@ class AppLocalizationsZh extends AppLocalizations {
       'Manual custom angles (no institutional source)';
 
   @override
-  String get diagnosticsCloudDriven => 'Cloud Driven';
+  String get diagnosticsCloudDriven => '云驱动';
 
   @override
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
@@ -694,7 +694,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
 
   @override
-  String get diagnosticsAudioAssets => 'Audio Assets';
+  String get diagnosticsAudioAssets => '音频资源';
 
   @override
   String diagnosticsFilesCount(String count) {
@@ -1518,7 +1518,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return '查看$appName：终极伊斯兰生活方式应用程序！ $url';
   }
 
   @override
@@ -1809,13 +1809,13 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get diagnostics => 'Diagnostics';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => '未设置';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => '祷告简介';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => '祷告权柄';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -1827,7 +1827,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
       'Manual custom angles (no institutional source)';
 
   @override
-  String get diagnosticsCloudDriven => 'Cloud Driven';
+  String get diagnosticsCloudDriven => '云驱动';
 
   @override
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
@@ -1839,7 +1839,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
 
   @override
-  String get diagnosticsAudioAssets => 'Audio Assets';
+  String get diagnosticsAudioAssets => '音频资源';
 
   @override
   String diagnosticsFilesCount(String count) {
@@ -2663,7 +2663,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return '請參閱$appName：終極伊斯蘭生活方式應用程式！ $url';
   }
 
   @override
@@ -2954,13 +2954,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get diagnostics => 'Diagnostics';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => '未設定';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => '禱告簡介';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => '禱告權柄';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -2972,7 +2972,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
       'Manual custom angles (no institutional source)';
 
   @override
-  String get diagnosticsCloudDriven => 'Cloud Driven';
+  String get diagnosticsCloudDriven => '雲端驅動';
 
   @override
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
@@ -2984,7 +2984,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
 
   @override
-  String get diagnosticsAudioAssets => 'Audio Assets';
+  String get diagnosticsAudioAssets => '音訊資源';
 
   @override
   String diagnosticsFilesCount(String count) {

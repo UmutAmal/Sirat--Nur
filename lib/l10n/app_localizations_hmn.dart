@@ -373,7 +373,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Mus saib $appName: Qhov kawg Islamic lub neej app! $url';
   }
 
   @override
@@ -667,13 +667,13 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get diagnostics => 'Kev kuaj mob';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => 'Tsis teem';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Thov Vajtswv Profile';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Txoj Cai Thov Vajtswv';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -685,7 +685,7 @@ class AppLocalizationsHmn extends AppLocalizations {
       'Manual custom angles (no institutional source)';
 
   @override
-  String get diagnosticsCloudDriven => 'Cloud Driven';
+  String get diagnosticsCloudDriven => 'Huab Tsav';
 
   @override
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';

@@ -670,13 +670,13 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get diagnostics => 'Dagiti panagdayagnos';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => 'Saan a naikeddeng';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Profile ti Kararag';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Autoridad ti Kararag';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -700,7 +700,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
 
   @override
-  String get diagnosticsAudioAssets => 'Audio Assets';
+  String get diagnosticsAudioAssets => 'Dagiti Asset ti Audio';
 
   @override
   String diagnosticsFilesCount(String count) {

@@ -373,7 +373,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Reprehendo sicco $appName: Ultimus vivendi ratio islamica app! $url';
   }
 
   @override
@@ -666,13 +666,13 @@ class AppLocalizationsLa extends AppLocalizations {
   String get diagnostics => 'Diagnostics';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => 'Non posuit';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Oratio Profile';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Orationis auctoritati';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {

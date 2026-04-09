@@ -124,7 +124,7 @@
   "contactUs": "Kontaktirajte nas",
   "rateApp": "Rate App",
   "shareApp": "Dijeli aplikaciju",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Pogledajte {appName}: vrhunsku aplikaciju za islamski stil života! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {
@@ -222,8 +222,8 @@
   "resetOnboarding": "Reset Onboarding",
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
-  "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
+  "diagnosticsNotSet": "Nije postavljeno",
+  "diagnosticsPrayerProfile": "Molitveni profil",
   "diagnosticsPrayerSource": "Prayer Authority",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
@@ -238,7 +238,7 @@
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
   "diagnosticsQuranAudioAssets": "Quran Audio Assets",
-  "diagnosticsAudioAssets": "Audio Assets",
+  "diagnosticsAudioAssets": "Audio sredstva",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
     "placeholders": {

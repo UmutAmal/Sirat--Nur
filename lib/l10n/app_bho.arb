@@ -222,9 +222,9 @@
   "resetOnboarding": "ऑनबोर्डिंग के रीसेट करीं",
   "rerunSetup": "शुरुआती सेटअप प्रक्रिया के दोबारा चलाईं।",
   "diagnostics": "निदान के काम कइल जाला",
-  "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsNotSet": "सेट नइखे भइल",
+  "diagnosticsPrayerProfile": "प्रार्थना के प्रोफाइल बा",
+  "diagnosticsPrayerSource": "प्रार्थना प्राधिकरण के ह",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
@@ -234,11 +234,11 @@
     }
   },
   "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
-  "diagnosticsCloudDriven": "Cloud Driven",
+  "diagnosticsCloudDriven": "बादल संचालित बा",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
   "diagnosticsQuranAudioAssets": "Quran Audio Assets",
-  "diagnosticsAudioAssets": "Audio Assets",
+  "diagnosticsAudioAssets": "ऑडियो एसेट्स के बारे में बतावल गइल बा",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
     "placeholders": {

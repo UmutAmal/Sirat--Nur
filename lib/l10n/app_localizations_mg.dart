@@ -666,13 +666,13 @@ class AppLocalizationsMg extends AppLocalizations {
   String get diagnostics => 'Diagnostics';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => 'Tsy napetraka';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'mombamomba ny vavaka';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Fahefana Vavaka';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {

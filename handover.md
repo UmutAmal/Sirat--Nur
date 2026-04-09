@@ -2987,3 +2987,50 @@
 ### Sonraki Adım
 - Sıradaki turda `diagnostics*` ve `shareAppMessage` gibi `194` locale’de İngilizce kalan geniş UI anahtarları ele alınacak.
 - Paralel audit olarak `analytics` ve `assistant` gibi loanword davranışı gösteren anahtarlar için locale bazlı kabul matrisi çıkarılacak.
+
+## 2026-04-09 TUR-77 — Localize Settings Share And Diagnostics Copy
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) `--force shareAppMessage diagnosticsNotSet diagnosticsPrayerProfile diagnosticsPrayerSource diagnosticsCloudDriven diagnosticsAudioAssets` ile tüm `app_*.arb` setinde çalıştırıldı.
+- Güvenli ama araç tarafından İngilizce bırakılan iki priority locale manuel düzeltildi:
+  - [A:\Way of Allah\sirat_i_nur\lib\l10n\app_fr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_fr.arb) `shareAppMessage`
+  - [A:\Way of Allah\sirat_i_nur\lib\l10n\app_es.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_es.arb) `shareAppMessage`
+- Generated localization dosyaları yenilendi; örnek olarak [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_fr.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_fr.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_es.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_es.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_da.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_da.dart), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_he.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_localizations_he.dart) güncellendi.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) genişletildi; diagnostics etiketleri ve güvenli share locale seti için EN fallback regresyonu kilitlendi.
+- [A:\Way of Allah\sirat_i_nur\test\features\settings\settings_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/settings/settings_page_test.dart) içine Fransızca share helper testi eklendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart#L595](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_page.dart#L595) `shareAppMessage` ve [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart#L281](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart#L281), [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart#L285](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart#L285), [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart#L295](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart#L295), [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart#L304](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart#L304), [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart#L429](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart#L429) anahtarlarının neredeyse tüm locale setinde İngilizce kaldığı doğrulandı.
+- Bu metinler settings ve diagnostics gibi geniş görünür yüzeylerde doğrudan kullanıcıya çıkıyor.
+- `tw` için `shareAppMessage` hâlâ belirsiz kaldı; AGENTS.md kuralına uygun olarak uydurma yapılmadı ve EN-reference audit listesinde bırakıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` içindeki share/diagnostics anahtarları güncellenen dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` generated dosyaları
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\settings_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `shareAppMessage` için İngilizce fallback sayısı `194`ten `109`a düştü.
+- `diagnosticsNotSet` için `194`ten `65`e düştü.
+- `diagnosticsPrayerProfile` için `194`ten `64`e düştü.
+- `diagnosticsPrayerSource` için `194`ten `64`e düştü.
+- `diagnosticsCloudDriven` için `194`ten `89`a düştü.
+- `diagnosticsAudioAssets` için `194`ten `70`e düştü.
+- Priority locale seti diagnostics yüzeyinde artık İngilizce fallback göstermiyor; güvenli priority locale seti share kopyasında da İngilizce taşımıyor.
+
+### Test Sonucu
+- `dart run tool/translate_arb_keys.dart --force shareAppMessage diagnosticsNotSet diagnosticsPrayerProfile diagnosticsPrayerSource diagnosticsCloudDriven diagnosticsAudioAssets` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`4/4`)
+- `flutter test test/features/settings/settings_page_test.dart` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`184/184`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Settings share and diagnostics copy still falling back to English across the supported surface: `15/25 → 6/25`
+
+### Sonraki Adım
+- Sıradaki turda `locationServiceDisabled`, `locationPermissionDenied`, `citiesCount` ve kalan diagnostics/share rare-locale EN-reference kümesi ele alınacak.
+- `assistant` ve `analytics` için loanword kabul matrisi çıkarılıp hangi locale’lerde EN-formun meşru olduğu ayrı kayda alınacak.

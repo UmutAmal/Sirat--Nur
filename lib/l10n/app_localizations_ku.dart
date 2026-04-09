@@ -373,7 +373,7 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Binihêrin $appName: Serlêdana herî dawî ya şêwaza jiyanê ya Îslamî! $url';
   }
 
   @override
@@ -669,10 +669,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Profîla Nimêjê';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Desthilatiya Nimêjê';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -696,7 +696,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
 
   @override
-  String get diagnosticsAudioAssets => 'Audio Assets';
+  String get diagnosticsAudioAssets => 'Amûrên Audio';
 
   @override
   String diagnosticsFilesCount(String count) {

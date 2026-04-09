@@ -375,7 +375,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Schauen Sie sich $appName an: Die ultimative islamische Lifestyle-App! $url';
   }
 
   @override
@@ -669,13 +669,13 @@ class AppLocalizationsDe extends AppLocalizations {
   String get diagnostics => 'Diagnostics';
 
   @override
-  String get diagnosticsNotSet => 'Not set';
+  String get diagnosticsNotSet => 'Nicht festgelegt';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Gebetsprofil';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Gebetsautorität';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -687,7 +687,7 @@ class AppLocalizationsDe extends AppLocalizations {
       'Manual custom angles (no institutional source)';
 
   @override
-  String get diagnosticsCloudDriven => 'Cloud Driven';
+  String get diagnosticsCloudDriven => 'Cloud-gesteuert';
 
   @override
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
@@ -699,7 +699,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
 
   @override
-  String get diagnosticsAudioAssets => 'Audio Assets';
+  String get diagnosticsAudioAssets => 'Audio-Assets';
 
   @override
   String diagnosticsFilesCount(String count) {

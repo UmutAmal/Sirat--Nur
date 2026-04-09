@@ -124,7 +124,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Rate App",
   "shareApp": "Share App",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Reprehendo sicco {appName}: Ultimus vivendi ratio islamica app! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {
@@ -222,9 +222,9 @@
   "resetOnboarding": "Reset Onboarding",
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
-  "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsNotSet": "Non posuit",
+  "diagnosticsPrayerProfile": "Oratio Profile",
+  "diagnosticsPrayerSource": "Orationis auctoritati",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {

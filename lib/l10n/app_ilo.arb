@@ -222,9 +222,9 @@
   "resetOnboarding": "I-reset ti Onboarding",
   "rerunSetup": "Ipataray manen ti umuna a proseso ti panagisaad.",
   "diagnostics": "Dagiti panagdayagnos",
-  "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsNotSet": "Saan a naikeddeng",
+  "diagnosticsPrayerProfile": "Profile ti Kararag",
+  "diagnosticsPrayerSource": "Autoridad ti Kararag",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
@@ -238,7 +238,7 @@
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
   "diagnosticsQuranAudioAssets": "Quran Audio Assets",
-  "diagnosticsAudioAssets": "Audio Assets",
+  "diagnosticsAudioAssets": "Dagiti Asset ti Audio",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
     "placeholders": {
