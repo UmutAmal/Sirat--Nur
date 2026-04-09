@@ -676,40 +676,40 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Tùy chỉnh / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Góc tùy chỉnh thủ công (không có nguồn tổ chức)';
 
   @override
   String get diagnosticsCloudDriven => 'Điều khiển bằng đám mây';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Nội dung âm thanh Adhan';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Tài sản âm thanh Kinh Qur\'an';
 
   @override
   String get diagnosticsAudioAssets => 'Nội dung âm thanh';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count tệp';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Đọc tệp kê khai không thành công: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Địa phương hóa';
 
   @override
   String diagnosticsSupportedCount(String count) {

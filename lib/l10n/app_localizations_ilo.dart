@@ -686,35 +686,35 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Dagiti manual a kostumbre nga anggulo (awan ti institusional a gubuayan) .';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Dagiti Asset ti Audio ti Adhan';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Dagiti Asset ti Audio ti Quran';
 
   @override
   String get diagnosticsAudioAssets => 'Dagiti Asset ti Audio';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count dagiti file';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Napaay ti panagbasa ti manipesto: $error .';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Dagiti Lokal ti Lokalisasion';
 
   @override
   String diagnosticsSupportedCount(String count) {

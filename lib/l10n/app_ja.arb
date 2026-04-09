@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "未設定",
   "diagnosticsPrayerProfile": "祈りのプロフィール",
   "diagnosticsPrayerSource": "祈りの権威",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "カスタム / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "手動カスタム角度 (機関的な情報源なし)",
   "diagnosticsCloudDriven": "クラウドドリブン",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "アザーンオーディオアセット",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "コーランオーディオアセット",
   "diagnosticsAudioAssets": "オーディオアセット",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ファイル",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "マニフェストの読み取りに失敗しました: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "ローカリゼーションロケール",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "సెట్ కాలేదు",
   "diagnosticsPrayerProfile": "ప్రార్థన ప్రొఫైల్",
   "diagnosticsPrayerSource": "ప్రార్థన అధికారం",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "అనుకూలం / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "మాన్యువల్ అనుకూల కోణాలు (సంస్థాగత మూలం లేదు)",
   "diagnosticsCloudDriven": "క్లౌడ్ నడిచేది",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "అధాన్ ఆడియో ఆస్తులు",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "ఖురాన్ ఆడియో ఆస్తులు",
   "diagnosticsAudioAssets": "ఆడియో ఆస్తులు",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ఫైల్‌లు",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "మానిఫెస్ట్ చదవడం విఫలమైంది: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "స్థానికీకరణ లొకేల్స్",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

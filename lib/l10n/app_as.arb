@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "মেনুৱেল কাষ্টম এংগেল (কোনো প্ৰতিষ্ঠানিক উৎস নাই)",
   "diagnosticsCloudDriven": "ক্লাউড চালিত",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "অধন অডিঅ' সম্পত্তি",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "কোৰআন অডিঅ' সম্পত্তি",
   "diagnosticsAudioAssets": "অডিঅ' সম্পত্তি",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ফাইলসমূহ",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "মেনিফেষ্ট পঢ়া ব্যৰ্থ: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "স্থানীয়কৰণ স্থানীয়কৰণসমূহ",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

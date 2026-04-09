@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Bellenmedi",
   "diagnosticsPrayerProfile": "Namazyň tertibi",
   "diagnosticsPrayerSource": "Namaz okamagy",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Omörite / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "El bilen ýasalan burçlar (institusional çeşme ýok)",
   "diagnosticsCloudDriven": "Bulut sürülýär",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan ses baýlyklary",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Kuran ses baýlyklary",
   "diagnosticsAudioAssets": "Ses aktiwleri",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} faýllary",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Görkezilen şowsuzlyk: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Lokalizasiýa",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

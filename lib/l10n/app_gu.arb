@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "મેન્યુઅલ કસ્ટમ એંગલ (કોઈ સંસ્થાકીય સ્ત્રોત નથી)",
   "diagnosticsCloudDriven": "મેઘ સંચાલિત",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "અધાન ઑડિયો અસ્કયામતો",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "કુરાન ઓડિયો અસ્કયામતો",
   "diagnosticsAudioAssets": "ઑડિયો અસ્કયામતો",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ફાઇલો",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "મેનિફેસ્ટ વાંચન નિષ્ફળ થયું: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "સ્થાનિકીકરણ લોકેલ",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

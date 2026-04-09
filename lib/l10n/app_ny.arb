@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Osayikidwa",
   "diagnosticsPrayerProfile": "Mbiri ya Pemphero",
   "diagnosticsPrayerSource": "Ulamuliro wa Pemphero",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Mwamakonda / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Ma angles okhazikika pamanja (palibe gwero)",
   "diagnosticsCloudDriven": "Cloud Drived",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Korani Audio Assets",
   "diagnosticsAudioAssets": "Zida Zomvera",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} mafayilo",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Manifest sanawerengedwe: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Malo Okhazikika",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

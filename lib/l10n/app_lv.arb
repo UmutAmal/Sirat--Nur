@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Nav iestatīts",
   "diagnosticsPrayerProfile": "Lūgšanu profils",
   "diagnosticsPrayerSource": "Lūgšanu autoritāte",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Pielāgots / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Manuāli pielāgoti leņķi (nav institucionāla avota)",
   "diagnosticsCloudDriven": "Mākoņu vadīts",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan audio līdzekļi",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Korāna audio līdzekļi",
   "diagnosticsAudioAssets": "Audio līdzekļi",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} faili",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Manifesta lasīšana neizdevās: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Lokalizācijas lokalizācijas",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

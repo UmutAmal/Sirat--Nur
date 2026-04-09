@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Manuel custom angles (sɔrɔyɔrɔ tɛ sigida la) .",
   "diagnosticsCloudDriven": "Sankaba bɛ boli",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan Audio nafolomafɛnw",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Kuranɛ Audio Nafolo",
   "diagnosticsAudioAssets": "Lamɛnni nafolomafɛnw",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} filenw",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Sigidaw sigiyɔrɔw",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

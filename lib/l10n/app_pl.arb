@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Nie ustawiono",
   "diagnosticsPrayerProfile": "Profil modlitwy",
   "diagnosticsPrayerSource": "Autorytet modlitwy",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Niestandardowe / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Ręczne niestandardowe kąty (brak źródła instytucjonalnego)",
   "diagnosticsCloudDriven": "Napędzany chmurą",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Zasoby audio Adhan",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Zasoby audio Koranu",
   "diagnosticsAudioAssets": "Zasoby audio",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} plików",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Odczyt manifestu nie powiódł się: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Lokalizacje lokalizacji",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

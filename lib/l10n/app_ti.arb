@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "ማንዋል ብሕታዊ ኩርናዓት (ትካላዊ ምንጪ የለን)",
   "diagnosticsCloudDriven": "ደበና ዝመርሖ",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "ኣድሃን ድምጺ ንብረት",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "ቁርኣን ድምጺ ንብረት",
   "diagnosticsAudioAssets": "ናይ ድምጺ ንብረት",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ፋይላት",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "ማኒፌስት ንባብ ኣይተዓወተን: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "ሎካላይዜሽን ሎካላት",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

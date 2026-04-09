@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Орнатылмаған",
   "diagnosticsPrayerProfile": "Намаз профилі",
   "diagnosticsPrayerSource": "Намаз органы",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Арнаулы / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Қолмен реттелетін бұрыштар (институционалдық дереккөз жоқ)",
   "diagnosticsCloudDriven": "Бұлтқа негізделген",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Азан аудио активтері",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Құран аудио активтері",
   "diagnosticsAudioAssets": "Аудио активтері",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} файлдар",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Манифест оқылмады: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Localization Locals",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

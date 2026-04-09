@@ -682,35 +682,35 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Angoli manwali tad-dwana (l-ebda sors istituzzjonali)';
 
   @override
   String get diagnosticsCloudDriven => 'Sħab Immexxi';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Assi Awdjo Adhan';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Assi Awdjo Quran';
 
   @override
   String get diagnosticsAudioAssets => 'Assi Awdjo';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count fajls';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Il-qari tal-manifest falla: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Lokalizzazzjoni Lokali';
 
   @override
   String diagnosticsSupportedCount(String count) {

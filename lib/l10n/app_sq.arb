@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Nuk është vendosur",
   "diagnosticsPrayerProfile": "Profili i lutjes",
   "diagnosticsPrayerSource": "Autoriteti i Lutjes",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Me porosi / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Kënde të personalizuara manuale (pa burim institucional)",
   "diagnosticsCloudDriven": "Drejtuar nga rea",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Asetet audio të Ezanit",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Asetet audio të Kuranit",
   "diagnosticsAudioAssets": "Asetet audio",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} skedarë",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Leximi i manifestit dështoi: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Lokalizimi Locales",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "לא מוגדר",
   "diagnosticsPrayerProfile": "פרופיל תפילה",
   "diagnosticsPrayerSource": "רשות התפילה",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "מותאם אישית / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "זוויות מותאמות אישית ידניות (ללא מקור מוסדי)",
   "diagnosticsCloudDriven": "מונע בענן",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "קובצי שמע של אדהאן",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "נכסי אודיו של הקוראן",
   "diagnosticsAudioAssets": "נכסי אודיו",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} קבצים",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "קריאת המניפסט נכשלה: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "מקומות לוקליזציה",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

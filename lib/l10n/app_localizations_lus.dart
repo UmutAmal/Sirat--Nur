@@ -683,35 +683,36 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Manual custom angle (institutional source a awm lo) .';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven a ni';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhan Audio a thil neih te';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Quran Audio a thil neih te';
 
   @override
   String get diagnosticsAudioAssets => 'Audio Assets te pawh a awm';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count files te chu a awm a';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Manifest chhiar a hlawhchham: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales =>
+      'Localization Local hrang hrang te';
 
   @override
   String diagnosticsSupportedCount(String count) {

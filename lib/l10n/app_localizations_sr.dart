@@ -681,19 +681,19 @@ class AppLocalizationsSr extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Ручни прилагођени углови (без институционалног извора)';
 
   @override
   String get diagnosticsCloudDriven => 'Цлоуд Дривен';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Адхан Аудио Средства';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Аудио средства Курана';
 
   @override
   String get diagnosticsAudioAssets => 'Аудио средства';
@@ -709,7 +709,7 @@ class AppLocalizationsSr extends AppLocalizations {
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Локали за локализацију';
 
   @override
   String diagnosticsSupportedCount(String count) {

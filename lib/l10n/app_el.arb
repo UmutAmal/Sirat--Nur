@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Δεν έχει οριστεί",
   "diagnosticsPrayerProfile": "Προφίλ προσευχής",
   "diagnosticsPrayerSource": "Αρχή Προσευχής",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Προσαρμοσμένο / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Μη αυτόματες προσαρμοσμένες γωνίες (χωρίς θεσμική πηγή)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Στοιχεία ήχου Κορανίου",
   "diagnosticsAudioAssets": "Στοιχεία ήχου",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} αρχεία",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Η ανάγνωση της δήλωσης απέτυχε: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {

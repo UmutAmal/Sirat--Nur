@@ -676,12 +676,12 @@ class AppLocalizationsSt extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Tloaelo / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Li-angles tsa tloaelo (ha ho mohloli oa setsi)';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
@@ -693,23 +693,23 @@ class AppLocalizationsSt extends AppLocalizations {
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Thepa ea Audio ea Quran';
 
   @override
   String get diagnosticsAudioAssets => 'Lisebelisoa tsa Audio';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count lifaele';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Ho hloleha ho bala: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Libaka tsa Sebaka';
 
   @override
   String diagnosticsSupportedCount(String count) {

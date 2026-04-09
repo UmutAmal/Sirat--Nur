@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Ba angles personnalisés manuels (source institutionnelle te) .",
   "diagnosticsCloudDriven": "Lipata Etambwisami",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan Biloko ya koyoka",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Biloko ya Audio ya Coran",
   "diagnosticsAudioAssets": "Biloko ya koyoka",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ba fichiers",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Ba Localisation ya Localisation",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

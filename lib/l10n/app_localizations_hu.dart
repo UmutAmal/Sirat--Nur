@@ -678,12 +678,12 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Egyéni / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Kézi egyéni szögek (nincs intézményi forrás)';
 
   @override
   String get diagnosticsCloudDriven => 'Felhővezérelt';
@@ -695,23 +695,23 @@ class AppLocalizationsHu extends AppLocalizations {
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Korán audioeszközök';
 
   @override
   String get diagnosticsAudioAssets => 'Audioeszközök';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count fájlokat';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'A jegyzék olvasása sikertelen: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Lokalizációs területek';
 
   @override
   String diagnosticsSupportedCount(String count) {

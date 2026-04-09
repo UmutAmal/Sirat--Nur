@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "E le'i setiina",
   "diagnosticsPrayerProfile": "Faamatalaga Tatalo",
   "diagnosticsPrayerSource": "Pule Tatalo",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Aganu'u / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Su'ega fa'ale-aganu'u tusi (leai se puna fa'alapotopotoga)",
   "diagnosticsCloudDriven": "Ao Uia",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
   "diagnosticsQuranAudioAssets": "Quran Audio Assets",
   "diagnosticsAudioAssets": "Aseta leo",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} faila",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Ua le mafai ona faitau fa'aaliga: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {

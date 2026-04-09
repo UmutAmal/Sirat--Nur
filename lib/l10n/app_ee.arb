@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Dzogoe siwo wowɔ ɖe ɖoɖo nu kple asi (habɔbɔ ƒe dzɔtsoƒe aɖeke meli o) .",
   "diagnosticsCloudDriven": "Alilikpo Ʋuʋu",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan Odio ƒe Nunɔamesiwo",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Quran ƒe Odio ƒe Nunɔamesiwo",
   "diagnosticsAudioAssets": "Odio ƒe Nuwo",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ƒe faɛlwo",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Nutoa me ƒe Teƒewo",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

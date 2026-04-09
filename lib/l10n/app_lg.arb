@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Enkoona z’ennono ez’omu ngalo (tewali nsibuko ya kitongole) .",
   "diagnosticsCloudDriven": "Ekire Ekivugibwa",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan Eby'obugagga by'amaloboozi",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Eby'obugagga by'amaloboozi ga Quran",
   "diagnosticsAudioAssets": "Eby’obugagga by’amaloboozi",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} fayiro za fayiro",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Okusoma kwa manifesiti kulemereddwa: {error} .",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Ebitundu by’Ekitundu",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

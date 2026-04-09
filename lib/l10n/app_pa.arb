@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "ਮੈਨੁਅਲ ਕਸਟਮ ਐਂਗਲ (ਕੋਈ ਸੰਸਥਾਗਤ ਸਰੋਤ ਨਹੀਂ)",
   "diagnosticsCloudDriven": "ਕਲਾਊਡ ਡਰਾਈਵ",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "ਅਧਾਨ ਆਡੀਓ ਸੰਪਤੀਆਂ",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "ਕੁਰਾਨ ਆਡੀਓ ਸੰਪਤੀਆਂ",
   "diagnosticsAudioAssets": "ਆਡੀਓ ਸੰਪਤੀਆਂ",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ਫਾਈਲਾਂ",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "ਮੈਨੀਫੈਸਟ ਪੜ੍ਹਨਾ ਅਸਫਲ ਰਿਹਾ: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "ਸਥਾਨੀਕਰਨ ਸਥਾਨ",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

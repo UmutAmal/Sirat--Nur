@@ -677,12 +677,12 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Kev cai / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Manual custom angles (tsis muaj qhov chaw ua haujlwm)';
 
   @override
   String get diagnosticsCloudDriven => 'Huab Tsav';
@@ -701,16 +701,16 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count cov ntaub ntawv';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Manifest nyeem tsis tau: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Localization Qhov chaw';
 
   @override
   String diagnosticsSupportedCount(String count) {

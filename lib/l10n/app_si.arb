@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "සකසා නැත",
   "diagnosticsPrayerProfile": "යාච්ඤා පැතිකඩ",
   "diagnosticsPrayerSource": "යාච්ඤා අධිකාරිය",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "අභිරුචි / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "අතින් අභිරුචි කෝණ (ආයතනික මූලාශ්‍ර නැත)",
   "diagnosticsCloudDriven": "Cloud Driven",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "අදාන් ශ්‍රව්‍ය වත්කම්",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "කුර්ආන් ශ්‍රව්‍ය වත්කම්",
   "diagnosticsAudioAssets": "ශ්‍රව්‍ය වත්කම්",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ගොනු",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "මැනිෆෙස්ට් කියවීම අසාර්ථක විය: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "ප්රාදේශීයකරණය ස්ථාන",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Net gesat",
   "diagnosticsPrayerProfile": "Gebiedsprofil",
   "diagnosticsPrayerSource": "Gebied Autoritéit",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Benotzerdefinéiert / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Manuell personaliséiert Wénkel (keng institutionell Quell)",
   "diagnosticsCloudDriven": "Cloud gefuer",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Koran Audio Assets",
   "diagnosticsAudioAssets": "Audio Verméigen",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} Dateien",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Manifest liesen gescheitert: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Lokalisatioun Locales",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

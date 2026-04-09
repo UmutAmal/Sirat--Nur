@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "ไม่ได้ตั้งค่า",
   "diagnosticsPrayerProfile": "รายละเอียดการสวดมนต์",
   "diagnosticsPrayerSource": "อำนาจอธิษฐาน",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "กำหนดเอง / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "มุมที่กำหนดเองแบบแมนนวล (ไม่มีแหล่งที่มาของสถาบัน)",
   "diagnosticsCloudDriven": "ขับเคลื่อนด้วยคลาวด์",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "สินทรัพย์เสียง Adhan",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "สินทรัพย์เสียงอัลกุรอาน",
   "diagnosticsAudioAssets": "สินทรัพย์เสียง",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ไฟล์",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "การอ่านไฟล์ Manifest ล้มเหลว: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "การแปลเป็นภาษาท้องถิ่น",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

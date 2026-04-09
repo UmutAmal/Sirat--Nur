@@ -233,11 +233,11 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Ручни прилагођени углови (без институционалног извора)",
   "diagnosticsCloudDriven": "Цлоуд Дривен",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Адхан Аудио Средства",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Аудио средства Курана",
   "diagnosticsAudioAssets": "Аудио средства",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Локали за локализацију",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

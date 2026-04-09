@@ -676,12 +676,12 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Tsika / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Manual tsika angles (hapana masangano sosi)';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
@@ -700,16 +700,16 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count mafaira';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Manifest yakaverengwa yakundikana: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Localization Nzvimbo';
 
   @override
   String diagnosticsSupportedCount(String count) {

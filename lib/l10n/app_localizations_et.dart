@@ -676,40 +676,40 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Kohandatud / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Käsitsi kohandatud nurgad (puudub institutsiooniline allikas)';
 
   @override
   String get diagnosticsCloudDriven => 'Pilvepõhine';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhani helivarad';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Koraani helivarad';
 
   @override
   String get diagnosticsAudioAssets => 'Helivarad';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count faili';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Manifesti lugemine ebaõnnestus: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Lokaliseerimiskohad';
 
   @override
   String diagnosticsSupportedCount(String count) {

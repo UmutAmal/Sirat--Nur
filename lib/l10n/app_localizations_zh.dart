@@ -674,40 +674,39 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return '自定义/$madhab';
   }
 
   @override
-  String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+  String get diagnosticsPrayerCustomSource => '手动自定义角度（无机构来源）';
 
   @override
   String get diagnosticsCloudDriven => '云驱动';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhan 音频资产';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => '古兰经音频资产';
 
   @override
   String get diagnosticsAudioAssets => '音频资源';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count 文件';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return '清单读取失败：$error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => '本地化区域设置';
 
   @override
   String diagnosticsSupportedCount(String count) {
@@ -1819,40 +1818,39 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return '自定义/$madhab';
   }
 
   @override
-  String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+  String get diagnosticsPrayerCustomSource => '手动自定义角度（无机构来源）';
 
   @override
   String get diagnosticsCloudDriven => '云驱动';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhan 音频资产';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => '古兰经音频资产';
 
   @override
   String get diagnosticsAudioAssets => '音频资源';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count 文件';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return '清单读取失败：$error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => '本地化区域设置';
 
   @override
   String diagnosticsSupportedCount(String count) {
@@ -2964,40 +2962,39 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return '自訂/$madhab';
   }
 
   @override
-  String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+  String get diagnosticsPrayerCustomSource => '手動自訂角度（無機構來源）';
 
   @override
   String get diagnosticsCloudDriven => '雲端驅動';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhan 音訊資產';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => '古蘭經音頻資產';
 
   @override
   String get diagnosticsAudioAssets => '音訊資源';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count 文件';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return '清單讀取失敗：$error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => '本地化區域設置';
 
   @override
   String diagnosticsSupportedCount(String count) {

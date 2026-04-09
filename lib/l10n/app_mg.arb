@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Zoro fanao amin'ny tanana (tsy misy loharano andrim-panjakana)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Korana Audio Assets",
   "diagnosticsAudioAssets": "Audio Assets",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} rakitra",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Tsy nahomby ny famakiana ny endrika: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {

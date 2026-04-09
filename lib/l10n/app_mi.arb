@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Kaore i whakaritea",
   "diagnosticsPrayerProfile": "Prayer Profile",
   "diagnosticsPrayerSource": "Mana Inoi",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Ritenga / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Koki ritenga a-ringa (kaore he puna whakahaere)",
   "diagnosticsCloudDriven": "Kapua Peia",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan Ororongo Rawa",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Nga Rawa Ororongo Quran",
   "diagnosticsAudioAssets": "Rawa Ororongo",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} kōnae",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "I rahua te panui whakaaturanga: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Rohe Rohe",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

@@ -678,40 +678,40 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Ыңгайлаштырылган / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Кол менен ыңгайлаштырылган бурчтар (институционалдык булак жок)';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Азан аудио активдери';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Куран аудио активдери';
 
   @override
   String get diagnosticsAudioAssets => 'Аудио активдери';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count файлдары';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Манифест окулбай калды: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Localization Localles';
 
   @override
   String diagnosticsSupportedCount(String count) {

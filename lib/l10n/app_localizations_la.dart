@@ -676,12 +676,12 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Consuetudo / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Mores manuales anguli (no fonte institutionali)';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
@@ -700,16 +700,16 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count imaginum';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Manifestum legere defecit: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Localisation Locales';
 
   @override
   String diagnosticsSupportedCount(String count) {

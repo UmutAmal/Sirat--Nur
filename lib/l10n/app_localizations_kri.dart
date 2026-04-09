@@ -681,35 +681,35 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Manual kɔstɔm angul dɛn (nɔ institiushɔnal sɔs) .';
 
   @override
   String get diagnosticsCloudDriven => 'Klaud Drayv';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhan Odio Asɛt dɛn';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Quran Odio Asɛt dɛn';
 
   @override
   String get diagnosticsAudioAssets => 'Ɔdio Asɛt dɛn';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count fayl dɛn';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Manifest rid nɔ wok: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Lokalayzeshɔn Lokal dɛn';
 
   @override
   String diagnosticsSupportedCount(String count) {

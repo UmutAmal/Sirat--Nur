@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Ezarrita",
   "diagnosticsPrayerProfile": "Otoitzaren profila",
   "diagnosticsPrayerSource": "Otoitz Agintaritza",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Pertsonalizatua / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Eskuzko angelu pertsonalizatuak (iturri instituzionala ez)",
   "diagnosticsCloudDriven": "Hodeian bultzatuta",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan Audio Aktiboak",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Quran Audio Aktiboak",
   "diagnosticsAudioAssets": "Audio-aktiboak",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} fitxategiak",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Manifestuaren irakurketa huts egin du: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Lokalizazio lokalak",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

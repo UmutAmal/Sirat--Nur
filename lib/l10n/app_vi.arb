@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Chưa đặt",
   "diagnosticsPrayerProfile": "Hồ sơ cầu nguyện",
   "diagnosticsPrayerSource": "Cơ quan cầu nguyện",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Tùy chỉnh / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Góc tùy chỉnh thủ công (không có nguồn tổ chức)",
   "diagnosticsCloudDriven": "Điều khiển bằng đám mây",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Nội dung âm thanh Adhan",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Tài sản âm thanh Kinh Qur'an",
   "diagnosticsAudioAssets": "Nội dung âm thanh",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} tệp",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Đọc tệp kê khai không thành công: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Địa phương hóa",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

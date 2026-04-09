@@ -681,7 +681,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Xaglaha gaarka ah ee gacanta (malaha il hay\'ad)';
 
   @override
   String get diagnosticsCloudDriven => 'Daruuruhu wadey';
@@ -693,23 +693,23 @@ class AppLocalizationsSo extends AppLocalizations {
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Hantida Maqalka Quraanka';
 
   @override
   String get diagnosticsAudioAssets => 'Hantida Maqalka';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count faylasha';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Muujinta akhrinta waa guuldareystay: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Deegaanaynta';
 
   @override
   String diagnosticsSupportedCount(String count) {

@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Gan socraithe",
   "diagnosticsPrayerProfile": "Próifíl Urnaí",
   "diagnosticsPrayerSource": "Údarás Urnaí",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Saincheaptha / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Uillinneacha saincheaptha láimhe (gan aon fhoinse institiúideach)",
   "diagnosticsCloudDriven": "Scamall Tiomáinte",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Sócmhainní Fuaime Adhan",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Sócmhainní fuaime Quran",
   "diagnosticsAudioAssets": "Sócmhainní Fuaime",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} comhad",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Theip ar léamh an manifest: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Logánú Logánú",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

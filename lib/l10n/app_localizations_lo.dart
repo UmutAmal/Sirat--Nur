@@ -676,40 +676,40 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'ກຳນົດເອງ / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'ມຸມທີ່ກໍາຫນົດເອງດ້ວຍມື (ບໍ່ມີແຫຼ່ງສະຖາບັນ)';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'ຊັບສິນສຽງ Adhan';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'ຊັບສິນສຽງ Quran';
 
   @override
   String get diagnosticsAudioAssets => 'ຊັບສິນສຽງ';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count ໄຟລ໌';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'ອ່ານ Manifest ບໍ່ສຳເລັດ: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Localization ທ້ອງຖິ່ນ';
 
   @override
   String diagnosticsSupportedCount(String count) {

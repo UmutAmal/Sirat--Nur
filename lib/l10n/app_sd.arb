@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "مقرر نه ٿيو",
   "diagnosticsPrayerProfile": "نماز جي پروفائيل",
   "diagnosticsPrayerSource": "نماز جو اختيار",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "حسب ضرورت / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "دستي حسب ضرورت زاويه (ڪو به ادارو ذريعو نه آهي)",
   "diagnosticsCloudDriven": "Cloud Driven",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "اذان آڊيو اثاثن",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "قرآن آڊيو اثاثو",
   "diagnosticsAudioAssets": "آڊيو اثاثو",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} فائلون",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "منشور پڙهڻ ناڪام ٿيو: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {

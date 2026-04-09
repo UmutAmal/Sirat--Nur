@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "സജ്ജമാക്കിയിട്ടില്ല",
   "diagnosticsPrayerProfile": "പ്രാർത്ഥന പ്രൊഫൈൽ",
   "diagnosticsPrayerSource": "പ്രാർത്ഥന അതോറിറ്റി",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "ഇഷ്ടാനുസൃതം / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "മാനുവൽ ഇഷ്‌ടാനുസൃത ആംഗിളുകൾ (ഇൻസ്റ്റിറ്റ്യൂഷണൽ ഉറവിടങ്ങളില്ല)",
   "diagnosticsCloudDriven": "ക്ലൗഡ് ഡ്രൈവൺ",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "അധാൻ ഓഡിയോ അസറ്റുകൾ",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "ഖുർആൻ ഓഡിയോ അസറ്റുകൾ",
   "diagnosticsAudioAssets": "ഓഡിയോ അസറ്റുകൾ",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ഫയലുകൾ",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "മാനിഫെസ്റ്റ് വായന പരാജയപ്പെട്ടു: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "പ്രാദേശികവൽക്കരണം ലോക്കലുകൾ",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

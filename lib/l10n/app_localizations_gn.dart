@@ -684,35 +684,35 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Ángulo personalizado manual (ndaipóri fuente institucional) .';
 
   @override
   String get diagnosticsCloudDriven => 'Arai Ñemboguata';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhan Audio rehegua mba’ekuaarã';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Corán Audio Activos rehegua';
 
   @override
   String get diagnosticsAudioAssets => 'Umi mba’ekuaarã Audio rehegua';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count rembiapokue';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Manifesto moñe\'ẽrã ndoikói: $error .';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Localización Locales rehegua';
 
   @override
   String diagnosticsSupportedCount(String count) {

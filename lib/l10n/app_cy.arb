@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Onglau personol â llaw (dim ffynhonnell sefydliadol)",
   "diagnosticsCloudDriven": "Gyrrwr Cwmwl",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan Asedau Sain",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Asedau Sain Quran",
   "diagnosticsAudioAssets": "Asedau Sain",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ffeil",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Methodd darlleniad y maniffest: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {

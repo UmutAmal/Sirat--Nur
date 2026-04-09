@@ -676,40 +676,40 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'தனிப்பயன் / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'கைமுறை தனிப்பயன் கோணங்கள் (நிறுவன மூலங்கள் இல்லை)';
 
   @override
   String get diagnosticsCloudDriven => 'மேகம் இயக்கப்பட்டது';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'அதான் ஆடியோ சொத்துக்கள்';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'குர்ஆன் ஆடியோ சொத்துக்கள்';
 
   @override
   String get diagnosticsAudioAssets => 'ஆடியோ சொத்துக்கள்';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count கோப்புகள்';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'மேனிஃபெஸ்ட் படிக்க முடியவில்லை: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'உள்ளூர்மயமாக்கல் உள்ளூர்';
 
   @override
   String diagnosticsSupportedCount(String count) {

@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Ei asetettu",
   "diagnosticsPrayerProfile": "Rukousprofiili",
   "diagnosticsPrayerSource": "Rukousviranomainen",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Mukautettu / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Manuaaliset mukautetut kulmat (ei institutionaalista lähdettä)",
   "diagnosticsCloudDriven": "Pilvivetoinen",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Koraanin ääniomaisuus",
   "diagnosticsAudioAssets": "Ääniresurssit",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} tiedostot",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Luettelon luku epäonnistui: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Lokalisointipaikat",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

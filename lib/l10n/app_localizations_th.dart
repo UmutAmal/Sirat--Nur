@@ -676,40 +676,40 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'กำหนดเอง / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'มุมที่กำหนดเองแบบแมนนวล (ไม่มีแหล่งที่มาของสถาบัน)';
 
   @override
   String get diagnosticsCloudDriven => 'ขับเคลื่อนด้วยคลาวด์';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'สินทรัพย์เสียง Adhan';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'สินทรัพย์เสียงอัลกุรอาน';
 
   @override
   String get diagnosticsAudioAssets => 'สินทรัพย์เสียง';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count ไฟล์';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'การอ่านไฟล์ Manifest ล้มเหลว: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'การแปลเป็นภาษาท้องถิ่น';
 
   @override
   String diagnosticsSupportedCount(String count) {

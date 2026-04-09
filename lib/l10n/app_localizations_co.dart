@@ -682,7 +682,7 @@ class AppLocalizationsCo extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Angoli persunalizati manuali (senza fonte istituzionale)';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
@@ -694,23 +694,23 @@ class AppLocalizationsCo extends AppLocalizations {
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Assets audio Coran';
 
   @override
   String get diagnosticsAudioAssets => 'Assets audio';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count schedarii';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'A lettura di u manifestu hà fiascatu: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Localisation Locales';
 
   @override
   String diagnosticsSupportedCount(String count) {

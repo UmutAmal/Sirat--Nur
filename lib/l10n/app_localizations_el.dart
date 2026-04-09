@@ -678,12 +678,12 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Προσαρμοσμένο / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Μη αυτόματες προσαρμοσμένες γωνίες (χωρίς θεσμική πηγή)';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
@@ -695,19 +695,19 @@ class AppLocalizationsEl extends AppLocalizations {
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Στοιχεία ήχου Κορανίου';
 
   @override
   String get diagnosticsAudioAssets => 'Στοιχεία ήχου';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count αρχεία';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Η ανάγνωση της δήλωσης απέτυχε: $error';
   }
 
   @override

@@ -681,35 +681,35 @@ class AppLocalizationsPs extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'د لاسي دودیز زاویې (هیڅ اداري سرچینه نشته)';
 
   @override
   String get diagnosticsCloudDriven => 'بادل چلول';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'د اذان آډیو شتمنۍ';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'د قرآن آډیو شتمنۍ';
 
   @override
   String get diagnosticsAudioAssets => 'آډیو شتمنۍ';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count دوتنې';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'ښکاره لوستل ناکام شول: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'سیمه ایز کول سیمه ایز کول';
 
   @override
   String diagnosticsSupportedCount(String count) {

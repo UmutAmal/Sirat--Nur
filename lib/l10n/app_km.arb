@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "មិនបានកំណត់",
   "diagnosticsPrayerProfile": "ទម្រង់ការអធិស្ឋាន",
   "diagnosticsPrayerSource": "អាជ្ញាធរការអធិស្ឋាន",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "ផ្ទាល់ខ្លួន / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "មុំផ្ទាល់ខ្លួនដោយដៃ (គ្មានប្រភពស្ថាប័ន)",
   "diagnosticsCloudDriven": "ដំណើរការលើពពក",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "ទ្រព្យសម្បត្តិសំឡេងគម្ពីគូរ៉ា",
   "diagnosticsAudioAssets": "ទ្រព្យសម្បត្តិអូឌីយ៉ូ",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "ឯកសារ {count}",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "ការអាន Manifest បានបរាជ័យ៖ {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "ការធ្វើមូលដ្ឋានីយកម្ម មូលដ្ឋាន",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

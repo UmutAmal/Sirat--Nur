@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "அமைக்கப்படவில்லை",
   "diagnosticsPrayerProfile": "பிரார்த்தனை விவரக்குறிப்பு",
   "diagnosticsPrayerSource": "பிரார்த்தனை அதிகாரம்",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "தனிப்பயன் / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "கைமுறை தனிப்பயன் கோணங்கள் (நிறுவன மூலங்கள் இல்லை)",
   "diagnosticsCloudDriven": "மேகம் இயக்கப்பட்டது",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "அதான் ஆடியோ சொத்துக்கள்",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "குர்ஆன் ஆடியோ சொத்துக்கள்",
   "diagnosticsAudioAssets": "ஆடியோ சொத்துக்கள்",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} கோப்புகள்",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "மேனிஃபெஸ்ட் படிக்க முடியவில்லை: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "உள்ளூர்மயமாக்கல் உள்ளூர்",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

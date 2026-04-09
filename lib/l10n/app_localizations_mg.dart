@@ -681,7 +681,7 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Zoro fanao amin\'ny tanana (tsy misy loharano andrim-panjakana)';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
@@ -693,19 +693,19 @@ class AppLocalizationsMg extends AppLocalizations {
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Korana Audio Assets';
 
   @override
   String get diagnosticsAudioAssets => 'Audio Assets';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count rakitra';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Tsy nahomby ny famakiana ny endrika: $error';
   }
 
   @override

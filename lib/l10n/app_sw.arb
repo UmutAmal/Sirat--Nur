@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Haijawekwa",
   "diagnosticsPrayerProfile": "Wasifu wa Maombi",
   "diagnosticsPrayerSource": "Mamlaka ya Maombi",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Maalum / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Pembe maalum za mwongozo (hakuna chanzo cha kitaasisi)",
   "diagnosticsCloudDriven": "Inaendeshwa na Wingu",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Mali ya Sauti ya Adhan",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Mali za Sauti za Quran",
   "diagnosticsAudioAssets": "Vipengee vya Sauti",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} faili",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Usomaji wa maelezo haujafaulu: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Maeneo ya Ujanibishaji",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "မသတ်မှတ်ထားဘူး။",
   "diagnosticsPrayerProfile": "ဆုတောင်းပရိုဖိုင်",
   "diagnosticsPrayerSource": "ဆုတောင်းပိုင်ခွင့်",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "စိတ်ကြိုက် / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "ကိုယ်တိုင်စိတ်ကြိုက်ထောင့်များ (အဖွဲ့အစည်းဆိုင်ရာ အရင်းအမြစ်မရှိပါ)",
   "diagnosticsCloudDriven": "Cloud Driven",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan အသံပိုင်ဆိုင်မှုများ",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "ကုရ်အာန် အသံပိုင်ဆိုင်မှုများ",
   "diagnosticsAudioAssets": "အသံပိုင်ဆိုင်မှုများ",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ဖိုင်များ",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Manifest ကိုဖတ်၍မရပါ- {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Localization ဒေသများ",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

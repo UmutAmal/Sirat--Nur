@@ -677,40 +677,40 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'စိတ်ကြိုက် / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'ကိုယ်တိုင်စိတ်ကြိုက်ထောင့်များ (အဖွဲ့အစည်းဆိုင်ရာ အရင်းအမြစ်မရှိပါ)';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhan အသံပိုင်ဆိုင်မှုများ';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'ကုရ်အာန် အသံပိုင်ဆိုင်မှုများ';
 
   @override
   String get diagnosticsAudioAssets => 'အသံပိုင်ဆိုင်မှုများ';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count ဖိုင်များ';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Manifest ကိုဖတ်၍မရပါ- $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Localization ဒေသများ';
 
   @override
   String diagnosticsSupportedCount(String count) {

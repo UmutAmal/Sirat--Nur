@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "मैनुअल कस्टम कोण (कोई संस्थागत स्रोत ना)",
   "diagnosticsCloudDriven": "बादल संचालित बा",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "अधान ऑडियो एसेट्स के बा",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "कुरान के ऑडियो संपत्ति बा",
   "diagnosticsAudioAssets": "ऑडियो एसेट्स के बारे में बतावल गइल बा",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} फाइल के बा",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "मेनिफेस्ट रीड फेल हो गइल: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "स्थानीयकरण लोकेल के बारे में बतावल गइल बा",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

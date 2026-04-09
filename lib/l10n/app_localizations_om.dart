@@ -682,19 +682,19 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Kofoota amala harkaan hojjetaman (madda dhaabbataa hin qabu) .';
 
   @override
   String get diagnosticsCloudDriven => 'Duumeessa Kan Oofamu';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Qabeenya Sagalee Adhan';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Qabeenya Sagalee Qur\'aana';
 
   @override
   String get diagnosticsAudioAssets => 'Qabeenya Sagalee';
@@ -710,7 +710,7 @@ class AppLocalizationsOm extends AppLocalizations {
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Naannoolee Naannoo';
 
   @override
   String diagnosticsSupportedCount(String count) {

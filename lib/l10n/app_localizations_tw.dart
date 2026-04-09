@@ -681,35 +681,37 @@ class AppLocalizationsTw extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Manual custom angles (asoɛe biara nni hɔ fibea) .';
 
   @override
   String get diagnosticsCloudDriven => 'Mununkum a Wɔde Di Dwuma';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets =>
+      'Adhan Audio Nneɛma a Wɔde Yɛ Adwuma';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets =>
+      'Quran Audio Nneɛma a Wɔde Yɛ Adwuma';
 
   @override
   String get diagnosticsAudioAssets => 'Nneɛma a Wɔde Tie';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count fael ahorow no';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Manifest akenkan no antumi anyɛ yiye: $error .';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Mpɔtam a Wɔyɛ Mpɔtam Hɔ';
 
   @override
   String diagnosticsSupportedCount(String count) {

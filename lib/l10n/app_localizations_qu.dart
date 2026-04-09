@@ -683,35 +683,35 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Manual costumbre ángulos (mana institucional fuenteyuq) .';
 
   @override
   String get diagnosticsCloudDriven => 'Puyu purichisqa';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Kaqniyuq';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Quran Audio Kaqniyuq';
 
   @override
   String get diagnosticsAudioAssets => 'Uyarinapaq kaqniyuq';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count willañiqikuna';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Manifesto ñawiriyqa mana atisqachu: $error .';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Localización Locales nisqakuna';
 
   @override
   String diagnosticsSupportedCount(String count) {

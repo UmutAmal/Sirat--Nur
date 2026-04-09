@@ -676,40 +676,40 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Фармоишгар / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Кунҷҳои фармоишии дастӣ (манбаи институтсионалӣ нест)';
 
   @override
   String get diagnosticsCloudDriven => 'Абри рондашуда';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Дороиҳои аудио азон';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Воситаҳои аудиоии Қуръон';
 
   @override
   String get diagnosticsAudioAssets => 'Дороиҳои аудио';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count файлҳо';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Хониши манифест ноком шуд: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Маҳалликунонии маҳаллӣ';
 
   @override
   String diagnosticsSupportedCount(String count) {

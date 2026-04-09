@@ -3073,3 +3073,45 @@
 ### Sonraki Adım
 - Sıradaki turda `assistant`, `analytics`, `location` ve `share/diagnostics` kümelerinde kalan rare-locale EN-reference alanları sınıflandırılacak.
 - Ardından code-referenced anahtarlar içinde en yüksek İngilizce fallback sayısına sahip sonraki UI kümesi lokalize edilecek.
+
+## 2026-04-09 TUR-79 — Harden Diagnostics Asset And Custom Copy Localization
+### Yapılan İşlem
+- Yarım kalan localization turu güvenli biçimde devralındı; [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) ile daha önce başlatılmış `diagnosticsAdhanAudioAssets`, `diagnosticsQuranAudioAssets`, `diagnosticsFilesCount`, `diagnosticsManifestReadFailed`, `diagnosticsLocalizationLocales`, `diagnosticsPrayerCustomProfile`, `diagnosticsPrayerCustomSource` kümesinin kısmi etkisi ölçüldü.
+- Priority locale setinde İngilizce kalan yüzey için kontrollü locale-hedefli batch düzeltme uygulandı; özellikle [A:\Way of Allah\sirat_i_nur\lib\l10n\app_da.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_da.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_he.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_he.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nb.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nb.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_nn.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_nn.arb), [A:\Way of Allah\sirat_i_nur\lib\l10n\app_no.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_no.arb) içinde `diagnosticsAdhanAudioAssets` elle düzeltildi.
+- Variant fallback zinciri de düzeltildi; [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tw.arb) ilgili diagnostics anahtarlarında [A:\Way of Allah\sirat_i_nur\lib\l10n\app_ak.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_ak.arb) ile hizalandı.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) genişletildi; güvenli priority locale seti için diagnostics asset/custom copy EN fallback regresyonu kilitlendi.
+
+### Neden Yapıldı
+- Tarama turunda [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart#L288](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart#L288), [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart#L298](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart#L298), [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart#L385](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart#L385), [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart#L394](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart#L394), [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart#L412](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart#L412), [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart#L430](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart#L430), [A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart#L438](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/diagnostics_page.dart#L438) anahtarlarının çok sayıda locale’de İngilizce kaldığı doğrulandı.
+- İlk toplu çeviri komutu kullanıcı kesmesiyle yarıda kaldı; self-heal kuralıyla kısmi durum ölçülüp yalnızca eksik kalan locale/anahtar yüzeyine odaklanıldı.
+- Tam test turu, [A:\Way of Allah\sirat_i_nur\test\arb_variant_fallback_sync_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_variant_fallback_sync_test.dart) içinde `tw` varyant fallback regresyonu buldu; bu yalnızca ilgili locale üzerinde düzeltilip tekrar doğrulandı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` içindeki diagnostics asset/custom anahtarları güncellenen dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` generated dosyaları
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `diagnosticsAdhanAudioAssets` için İngilizce fallback sayısı `195`ten `101`e düştü.
+- `diagnosticsQuranAudioAssets` için `195`ten `79`a düştü.
+- `diagnosticsFilesCount` için `195`ten `77`ye düştü.
+- `diagnosticsManifestReadFailed` için `195`ten `80`e düştü.
+- `diagnosticsLocalizationLocales` için `195`ten `81`e düştü.
+- `diagnosticsPrayerCustomProfile` için `195`ten `112`ye düştü.
+- `diagnosticsPrayerCustomSource` için `195`ten `74`e düştü.
+- Güvenli priority locale seti diagnostics asset/custom yüzeyinde artık İngilizce fallback göstermiyor.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`6/6`)
+- `flutter test test/arb_variant_fallback_sync_test.dart` → PASS (`1/1`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`186/186`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Diagnostics asset and custom-profile copy still falling back to English across the supported surface: `15/25 → 6/25`
+
+### Sonraki Adım
+- Sıradaki turda code-referenced yüksek yoğunluklu kalan UI anahtarları olan `calculateZakat`, `dayStreak`, `bestStreak` kümesi lokalize edilecek.
+- Ardından chatbot ve paywall yüzeyindeki kalan loanword/EN-reference kümeleri ayrı audit turuna alınacak.

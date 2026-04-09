@@ -683,31 +683,31 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Onglau personol â llaw (dim ffynhonnell sefydliadol)';
 
   @override
   String get diagnosticsCloudDriven => 'Gyrrwr Cwmwl';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhan Asedau Sain';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Asedau Sain Quran';
 
   @override
   String get diagnosticsAudioAssets => 'Asedau Sain';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count ffeil';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Methodd darlleniad y maniffest: $error';
   }
 
   @override

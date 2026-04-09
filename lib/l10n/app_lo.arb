@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "ບໍ່ໄດ້ຕັ້ງ",
   "diagnosticsPrayerProfile": "ຂໍ້ມູນການອະທິຖານ",
   "diagnosticsPrayerSource": "ອຳນາດການອະທິຖານ",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "ກຳນົດເອງ / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "ມຸມທີ່ກໍາຫນົດເອງດ້ວຍມື (ບໍ່ມີແຫຼ່ງສະຖາບັນ)",
   "diagnosticsCloudDriven": "Cloud Driven",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "ຊັບສິນສຽງ Adhan",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "ຊັບສິນສຽງ Quran",
   "diagnosticsAudioAssets": "ຊັບສິນສຽງ",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ໄຟລ໌",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "ອ່ານ Manifest ບໍ່ສຳເລັດ: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Localization ທ້ອງຖິ່ນ",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

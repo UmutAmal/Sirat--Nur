@@ -681,26 +681,26 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Ba angles personnalisés manuels (source institutionnelle te) .';
 
   @override
   String get diagnosticsCloudDriven => 'Lipata Etambwisami';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhan Biloko ya koyoka';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Biloko ya Audio ya Coran';
 
   @override
   String get diagnosticsAudioAssets => 'Biloko ya koyoka';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count ba fichiers';
   }
 
   @override
@@ -709,7 +709,8 @@ class AppLocalizationsLn extends AppLocalizations {
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales =>
+      'Ba Localisation ya Localisation';
 
   @override
   String diagnosticsSupportedCount(String count) {

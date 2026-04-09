@@ -676,40 +676,40 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Pertsonalizatua / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Eskuzko angelu pertsonalizatuak (iturri instituzionala ez)';
 
   @override
   String get diagnosticsCloudDriven => 'Hodeian bultzatuta';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Aktiboak';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Quran Audio Aktiboak';
 
   @override
   String get diagnosticsAudioAssets => 'Audio-aktiboak';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count fitxategiak';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Manifestuaren irakurketa huts egin du: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Lokalizazio lokalak';
 
   @override
   String diagnosticsSupportedCount(String count) {

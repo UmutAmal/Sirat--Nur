@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "ସେଟ୍ ହୋଇନାହିଁ |",
   "diagnosticsPrayerProfile": "ପ୍ରାର୍ଥନା ପ୍ରୋଫାଇଲ୍ |",
   "diagnosticsPrayerSource": "ପ୍ରାର୍ଥନା ପ୍ରାଧିକରଣ |",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "କଷ୍ଟମ୍ / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "ମାନୁଆଲ୍ କଷ୍ଟମ୍ କୋଣ (କ institution ଣସି ଅନୁଷ୍ଠାନିକ ଉତ୍ସ ନାହିଁ)",
   "diagnosticsCloudDriven": "କ୍ଲାଉଡ୍ ଚାଳିତ |",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "ଆଦନ ଅଡିଓ ଆସେଟସ୍ |",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "କୁରାନ ଅଡିଓ ସମ୍ପତ୍ତି |",
   "diagnosticsAudioAssets": "ଅଡିଓ ଆସେଟସ୍ |",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ଫାଇଲଗୁଡିକ |",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "ମନିଫେଷ୍ଟ୍ ପ read ିବା ବିଫଳ ହେଲା: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "ଲୋକାଲାଇଜେସନ୍ ଲୋକାଲ୍ |",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

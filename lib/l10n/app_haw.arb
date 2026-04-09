@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "ʻAʻole hoʻonohonoho",
   "diagnosticsPrayerProfile": "Palapala Pule",
   "diagnosticsPrayerSource": "Mana Pule",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Kuʻia / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Nā kihi maʻamau maʻamau (ʻaʻohe kumu kumu)",
   "diagnosticsCloudDriven": "Kapua Kapua",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan Audio waiwai",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Na waiwai leo Quran",
   "diagnosticsAudioAssets": "Na waiwai leo",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} waihona",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "ʻAʻole i heluhelu ʻia ka hōʻike hōʻike: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Nā Kūlana Kūlana",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

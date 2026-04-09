@@ -676,12 +676,12 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Vlastní / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Manuální uživatelské úhly (žádný institucionální zdroj)';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
@@ -693,23 +693,23 @@ class AppLocalizationsCs extends AppLocalizations {
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Zvuková aktiva Koránu';
 
   @override
   String get diagnosticsAudioAssets => 'Zvuková aktiva';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count souborů';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Přečtení manifestu se nezdařilo: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Lokalizace Lokalizace';
 
   @override
   String diagnosticsSupportedCount(String count) {

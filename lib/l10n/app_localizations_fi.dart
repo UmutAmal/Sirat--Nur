@@ -677,12 +677,12 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Mukautettu / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Manuaaliset mukautetut kulmat (ei institutionaalista lähdettä)';
 
   @override
   String get diagnosticsCloudDriven => 'Pilvivetoinen';
@@ -694,23 +694,23 @@ class AppLocalizationsFi extends AppLocalizations {
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Koraanin ääniomaisuus';
 
   @override
   String get diagnosticsAudioAssets => 'Ääniresurssit';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count tiedostot';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Luettelon luku epäonnistui: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Lokalisointipaikat';
 
   @override
   String diagnosticsSupportedCount(String count) {

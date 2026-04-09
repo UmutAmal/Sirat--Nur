@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "لم يتم ضبطه",
   "diagnosticsPrayerProfile": "الملف الشخصي للصلاة",
   "diagnosticsPrayerSource": "هيئة الصلاة",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "مخصص / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "الزوايا المخصصة اليدوية (لا يوجد مصدر مؤسسي)",
   "diagnosticsCloudDriven": "سحابة مدفوعة",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "أصول الصوت الأذان",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "أصول القرآن الصوتية",
   "diagnosticsAudioAssets": "الأصول الصوتية",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} الملفات",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "فشلت قراءة البيان: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "التوطين المحلي",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

@@ -682,7 +682,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Manual custom nga mga anggulo (walay institusyonal nga tinubdan)';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
@@ -701,16 +701,16 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count file';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Napakyas ang pagbasa sa manifest: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Mga Lokal nga Lokalisasyon';
 
   @override
   String diagnosticsSupportedCount(String count) {

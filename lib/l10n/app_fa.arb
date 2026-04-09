@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "تنظیم نشده است",
   "diagnosticsPrayerProfile": "نمایه دعا",
   "diagnosticsPrayerSource": "مرجع نماز",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "سفارشی / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "زوایای سفارشی دستی (بدون منبع سازمانی)",
   "diagnosticsCloudDriven": "ابر رانده",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "دارایی های صوتی اذان",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "دارایی های صوتی قرآن",
   "diagnosticsAudioAssets": "دارایی های صوتی",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "فایل {count}",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "مانیفست خوانده نشد: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "محل های محلی سازی",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

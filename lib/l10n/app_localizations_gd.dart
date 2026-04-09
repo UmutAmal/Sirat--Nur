@@ -683,35 +683,35 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Ceàrnan gnàthaichte làimhe (gun stòr institiùideach)';
 
   @override
   String get diagnosticsCloudDriven => 'Cloud air a stiùireadh';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Maoin Fuaim Adhan';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Stòr-dàta Quran fuaim';
 
   @override
   String get diagnosticsAudioAssets => 'Maoin Fuaim';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count faidhlichean';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Dh’fhàillig leughadh am follais: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Ionadan ionadail';
 
   @override
   String diagnosticsSupportedCount(String count) {

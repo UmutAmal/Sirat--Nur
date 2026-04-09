@@ -233,11 +233,11 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Kofoota amala harkaan hojjetaman (madda dhaabbataa hin qabu) .",
   "diagnosticsCloudDriven": "Duumeessa Kan Oofamu",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Qabeenya Sagalee Adhan",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Qabeenya Sagalee Qur'aana",
   "diagnosticsAudioAssets": "Qabeenya Sagalee",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Naannoolee Naannoo",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

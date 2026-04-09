@@ -233,11 +233,11 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Dikhutlo tša tlwaelo tša seatla (ga go na mohlodi wa setheo) .",
   "diagnosticsCloudDriven": "Leru le Kgannwago",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan Matlotlo a Modumo",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Matlotlo a Mamelwang a Quran",
   "diagnosticsAudioAssets": "Matlotlo a Modumo",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Mafelo a go Beakanya Selegae",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

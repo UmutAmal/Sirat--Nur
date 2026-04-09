@@ -688,19 +688,19 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Dikhutlo tša tlwaelo tša seatla (ga go na mohlodi wa setheo) .';
 
   @override
   String get diagnosticsCloudDriven => 'Leru le Kgannwago';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'Adhan Matlotlo a Modumo';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Matlotlo a Mamelwang a Quran';
 
   @override
   String get diagnosticsAudioAssets => 'Matlotlo a Modumo';
@@ -716,7 +716,7 @@ class AppLocalizationsNso extends AppLocalizations {
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Mafelo a go Beakanya Selegae';
 
   @override
   String diagnosticsSupportedCount(String count) {

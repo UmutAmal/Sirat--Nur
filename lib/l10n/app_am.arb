@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "አልተዘጋጀም።",
   "diagnosticsPrayerProfile": "የጸሎት መገለጫ",
   "diagnosticsPrayerSource": "የጸሎት ባለስልጣን",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "ብጁ / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "በእጅ ብጁ ማዕዘኖች (ተቋማዊ ምንጭ የለም)",
   "diagnosticsCloudDriven": "በደመና የሚነዳ",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "አድሃን ኦዲዮ ንብረቶች",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "የቁርዓን ኦዲዮ ንብረቶች",
   "diagnosticsAudioAssets": "የድምጽ ንብረቶች",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} ፋይሎች",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "የተነበበ መግለጫ አልተሳካም፦ {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "አካባቢያዊነት አከባቢዎች",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

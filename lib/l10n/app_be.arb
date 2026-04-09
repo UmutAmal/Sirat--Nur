@@ -225,7 +225,7 @@
   "diagnosticsNotSet": "Не ўстаноўлена",
   "diagnosticsPrayerProfile": "Малітоўны профіль",
   "diagnosticsPrayerSource": "Аўтарытэт малітвы",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Індывідуальны / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Карыстальніцкія куты ўручную (няма інстытуцыйнай крыніцы)",
   "diagnosticsCloudDriven": "Кіраваны воблакам",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Аўдыярэсурсы Adhan",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Аўдыярэсурсы Карана",
   "diagnosticsAudioAssets": "Аўдыярэсурсы",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} файлы",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Памылка прачытання маніфеста: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Лакалізацыя Лакалі",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {

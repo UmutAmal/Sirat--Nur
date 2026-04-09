@@ -676,12 +676,12 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Aganu\'u / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Su\'ega fa\'ale-aganu\'u tusi (leai se puna fa\'alapotopotoga)';
 
   @override
   String get diagnosticsCloudDriven => 'Ao Uia';
@@ -700,12 +700,12 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count faila';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Ua le mafai ona faitau fa\'aaliga: $error';
   }
 
   @override

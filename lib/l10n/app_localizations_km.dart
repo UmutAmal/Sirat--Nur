@@ -676,12 +676,12 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'ផ្ទាល់ខ្លួន / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'មុំផ្ទាល់ខ្លួនដោយដៃ (គ្មានប្រភពស្ថាប័ន)';
 
   @override
   String get diagnosticsCloudDriven => 'ដំណើរការលើពពក';
@@ -693,23 +693,23 @@ class AppLocalizationsKm extends AppLocalizations {
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'ទ្រព្យសម្បត្តិសំឡេងគម្ពីគូរ៉ា';
 
   @override
   String get diagnosticsAudioAssets => 'ទ្រព្យសម្បត្តិអូឌីយ៉ូ';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return 'ឯកសារ $count';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'ការអាន Manifest បានបរាជ័យ៖ $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'ការធ្វើមូលដ្ឋានីយកម្ម មូលដ្ឋាន';
 
   @override
   String diagnosticsSupportedCount(String count) {

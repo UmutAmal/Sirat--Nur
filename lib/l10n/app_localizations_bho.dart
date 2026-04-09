@@ -682,35 +682,36 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'मैनुअल कस्टम कोण (कोई संस्थागत स्रोत ना)';
 
   @override
   String get diagnosticsCloudDriven => 'बादल संचालित बा';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
+  String get diagnosticsAdhanAudioAssets => 'अधान ऑडियो एसेट्स के बा';
 
   @override
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'कुरान के ऑडियो संपत्ति बा';
 
   @override
   String get diagnosticsAudioAssets => 'ऑडियो एसेट्स के बारे में बतावल गइल बा';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return '$count फाइल के बा';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'मेनिफेस्ट रीड फेल हो गइल: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales =>
+      'स्थानीयकरण लोकेल के बारे में बतावल गइल बा';
 
   @override
   String diagnosticsSupportedCount(String count) {

@@ -676,12 +676,12 @@ class AppLocalizationsIg extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Omenala / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Akuku omenala ejiri aka (enweghị isi mmalite)';
 
   @override
   String get diagnosticsCloudDriven => 'Igwe ojii chụpụrụ';
@@ -693,23 +693,23 @@ class AppLocalizationsIg extends AppLocalizations {
   String get diagnosticsUiAudioAssets => 'UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Akụrụngwa ọdịyo nke Quran';
 
   @override
   String get diagnosticsAudioAssets => 'Akụrụngwa ọdịyo';
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count files';
+    return 'faịlụ $count';
   }
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Gosipụta agụghị: $error';
   }
 
   @override
-  String get diagnosticsLocalizationLocales => 'Localization Locales';
+  String get diagnosticsLocalizationLocales => 'Mpaghara Mpaghara';
 
   @override
   String diagnosticsSupportedCount(String count) {

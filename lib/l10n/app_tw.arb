@@ -233,13 +233,13 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Manual custom angles (asoɛe biara nni hɔ fibea) .",
   "diagnosticsCloudDriven": "Mununkum a Wɔde Di Dwuma",
-  "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
+  "diagnosticsAdhanAudioAssets": "Adhan Audio Nneɛma a Wɔde Yɛ Adwuma",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsQuranAudioAssets": "Quran Audio Nneɛma a Wɔde Yɛ Adwuma",
   "diagnosticsAudioAssets": "Nneɛma a Wɔde Tie",
-  "diagnosticsFilesCount": "{count} files",
+  "diagnosticsFilesCount": "{count} fael ahorow no",
   "@diagnosticsFilesCount": {
     "placeholders": {
       "count": {
@@ -247,7 +247,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Manifest akenkan no antumi anyɛ yiye: {error} .",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {
@@ -255,7 +255,7 @@
       }
     }
   },
-  "diagnosticsLocalizationLocales": "Localization Locales",
+  "diagnosticsLocalizationLocales": "Mpɔtam a Wɔyɛ Mpɔtam Hɔ",
   "diagnosticsSupportedCount": "{count} supported",
   "@diagnosticsSupportedCount": {
     "placeholders": {
