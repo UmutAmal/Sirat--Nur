@@ -151,10 +151,14 @@ Future<Map<String, String>> _translateValues(
 
     return {
       for (var index = 0; index < tokenizedEntries.length; index++)
-        tokenizedEntries[index].key: _restorePlaceholders(
-          parts[index].trim(),
-          tokenizedEntries[index].value.replacements,
-          tokenizedEntries[index].value.originalSource,
+        tokenizedEntries[index].key: _postProcessTranslation(
+          key: tokenizedEntries[index].key,
+          translated: _restorePlaceholders(
+            parts[index].trim(),
+            tokenizedEntries[index].value.replacements,
+            tokenizedEntries[index].value.originalSource,
+          ),
+          source: tokenizedEntries[index].value.originalSource,
         ),
     };
   } catch (_) {
@@ -213,6 +217,30 @@ class _TokenizedValue {
   final String originalSource;
   final String tokenizedSource;
   final List<MapEntry<String, String>> replacements;
+}
+
+String _postProcessTranslation({
+  required String key,
+  required String translated,
+  required String source,
+}) {
+  final normalizedTranslated = _normalizeProperNames(translated);
+  final normalizedSource = _normalizeProperNames(source);
+
+  if (key.startsWith('audioVoice') &&
+      (normalizedTranslated.contains('\n') ||
+          normalizedTranslated.contains('\r'))) {
+    return normalizedSource;
+  }
+
+  return normalizedTranslated;
+}
+
+String _normalizeProperNames(String value) {
+  return value.replaceAll('AbdulBaset', 'Abdul Basit').replaceAll(
+    'Abdul Baset',
+    'Abdul Basit',
+  );
 }
 
 String _toTranslatorLocale(String locale) {

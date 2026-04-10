@@ -782,7 +782,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Kāne (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Kāne (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Kāne (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Kāne (Sudais)';

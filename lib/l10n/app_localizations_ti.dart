@@ -778,14 +778,13 @@ class AppLocalizationsTi extends AppLocalizations {
   String get audioVoice => 'ድምጺ ድምጺ';
 
   @override
-  String get audioVoiceMisharyAlafasy =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nተባዕታይ (ሚሻሪ ኣላፋሲ)';
+  String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nተባዕታይ (ዓብዱልባሰት)';
+  String get audioVoiceAbdulBaset => 'Male (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nተባዕታይ (ሱዳይ)';
+  String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

@@ -782,7 +782,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Masklo (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Masklo (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Masklo (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Masklo (Sudais)';

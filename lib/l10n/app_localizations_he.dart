@@ -779,7 +779,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'זכר (מישרי אלאפסי)';
 
   @override
-  String get audioVoiceAbdulBaset => 'זכר (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'זכר (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'זכר (סודאים)';

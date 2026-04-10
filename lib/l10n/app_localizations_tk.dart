@@ -781,7 +781,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Erkek (Mişary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Erkek (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Erkek (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Erkek (Sudais)';

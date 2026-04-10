@@ -158,10 +158,15 @@ void main() {
     test('updateAudioVoice persists canonical ids instead of display labels', () async {
       final notifier = SettingsNotifier(prefs);
 
-      await notifier.updateAudioVoice('Male (AbdulBaset)');
+      await notifier.updateAudioVoice('Male (Abdul Basit)');
 
       expect(notifier.state.audioVoice, abdulBasetVoice);
       expect(prefs.getString('audioVoice'), abdulBasetVoice);
+    });
+
+    test('normalizeAudioVoice still accepts legacy typo labels', () {
+      expect(normalizeAudioVoice('Male (AbdulBaset)'), abdulBasetVoice);
+      expect(normalizeAudioVoice('Male (Abdul Basit)'), abdulBasetVoice);
     });
   });
 }

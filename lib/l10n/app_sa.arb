@@ -756,7 +756,7 @@
   "placesMapTilesUnavailableTitle": "नक्शा टाइल्स अनुपलब्ध",
   "placesMapTilesUnavailableBody": "इति .\nअस्य निर्माणस्य कृते अद्यापि सत्यापितः मानचित्रटाइलस्रोतः विन्यस्तः नास्ति । समीपस्थानि स्थानानि अद्यापि भवतः रक्षितस्थानात् लोड् कर्तुं शक्नुवन्ति ।",
   "prayerRemainingUnavailable": "-- ९.",
-  "audioVoiceMisharyAlafasy": "इति .\nपुरुषः (मिशरी अलाफासी) २.",
-  "audioVoiceAbdulBaset": "इति .\nपुरुष (अब्दुलबासेत) ९.",
-  "audioVoiceSudais": "इति .\nपुरुषः (सुदैस्) २."
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)"
 }

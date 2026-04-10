@@ -785,7 +785,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Мъжки (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Мъжки (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Мъжки (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Мъжки (Sudais)';

@@ -783,7 +783,7 @@ class AppLocalizationsCo extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Masculinu (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Maschile (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Maschile (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Maschile (Sudais)';

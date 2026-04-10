@@ -781,7 +781,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Okunrin (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Okunrin (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Okunrin (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Okunrin (Sudais)';

@@ -784,7 +784,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Indoda (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Indoda (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Indoda (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Indoda (Sudais)';

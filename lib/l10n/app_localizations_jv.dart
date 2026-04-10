@@ -782,7 +782,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Lanang (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Lanang (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Lanang (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Lanang (Sudais)';

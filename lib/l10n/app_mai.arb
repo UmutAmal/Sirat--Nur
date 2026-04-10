@@ -756,7 +756,7 @@
   "placesMapTilesUnavailableTitle": "के लिये।\nनक्शा टाइल्स अनुपलब्ध",
   "placesMapTilesUnavailableBody": "के लिये।\nएकटा सत्यापित मैप टाइल स्रोत एखन धरि एहि बिल्ड क लेल कॉन्फ़िगर नहि कएल गेल अछि. पास के जगह एखनो अहां के सेव कएल गेल लोकेशन सं लोड भ सकैत अछि.",
   "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "के लिये।\nपुरुष (मिशरी अलाफासी) २.",
-  "audioVoiceAbdulBaset": "के लिये।\nपुरुष (अब्दुलबेसेट) २.",
-  "audioVoiceSudais": "के लिये।\nपुरुष (सुदैस) २."
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)"
 }

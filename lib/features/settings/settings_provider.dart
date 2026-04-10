@@ -26,8 +26,10 @@ String normalizeAudioVoice(String voice) {
       return misharyAlafasyVoice;
     case abdulBasetVoice:
     case 'male (abdulbaset)':
+    case 'male (abdul basit)':
     case 'abdulbaset':
     case 'abdul baset':
+    case 'abdul basit':
       return abdulBasetVoice;
     case sudaisVoice:
     case 'male (sudais)':

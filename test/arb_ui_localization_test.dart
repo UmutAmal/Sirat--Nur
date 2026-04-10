@@ -821,6 +821,49 @@ void main() {
       },
     );
 
+    test('audio voice labels keep canonical names and avoid multiline corruption', () {
+      final arbFiles =
+          Directory('lib/l10n')
+              .listSync()
+              .whereType<File>()
+              .where((file) => file.path.endsWith('.arb'))
+              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+              .toList()
+            ..sort((a, b) => a.path.compareTo(b.path));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+        final mishary = arb['audioVoiceMisharyAlafasy'] as String;
+        final abdulBaset = arb['audioVoiceAbdulBaset'] as String;
+        final sudais = arb['audioVoiceSudais'] as String;
+
+        expect(
+          mishary.contains('\n'),
+          isFalse,
+          reason:
+              '${file.uri.pathSegments.last} keeps multiline corruption in audioVoiceMisharyAlafasy',
+        );
+        expect(
+          abdulBaset.contains('\n'),
+          isFalse,
+          reason:
+              '${file.uri.pathSegments.last} keeps multiline corruption in audioVoiceAbdulBaset',
+        );
+        expect(
+          sudais.contains('\n'),
+          isFalse,
+          reason:
+              '${file.uri.pathSegments.last} keeps multiline corruption in audioVoiceSudais',
+        );
+        expect(
+          abdulBaset.contains('AbdulBaset'),
+          isFalse,
+          reason:
+              '${file.uri.pathSegments.last} still keeps the unspaced AbdulBaset typo',
+        );
+      }
+    });
+
     test(
       'safe priority locales do not fall back to English for tafsir and places honest-state copy',
       () {

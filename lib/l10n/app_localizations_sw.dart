@@ -783,7 +783,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Mwanaume (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Mwanaume (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Mwanaume (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Mwanaume (Sudais)';

@@ -781,13 +781,13 @@ class AppLocalizationsMai extends AppLocalizations {
   String get audioVoice => 'ऑडियो आवाज';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'के लिये।\nपुरुष (मिशरी अलाफासी) २.';
+  String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'के लिये।\nपुरुष (अब्दुलबेसेट) २.';
+  String get audioVoiceAbdulBaset => 'Male (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'के लिये।\nपुरुष (सुदैस) २.';
+  String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
   String get fajrAngle => 'फजर कोण';

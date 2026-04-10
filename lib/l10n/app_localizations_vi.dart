@@ -782,7 +782,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Nam (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Nam (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Nam (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Nam (Sudais)';

@@ -785,7 +785,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Lalaki (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Lalaki (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Lalaki (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Lalaki (Sudais)';

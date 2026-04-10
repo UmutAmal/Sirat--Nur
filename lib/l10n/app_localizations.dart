@@ -1915,7 +1915,7 @@ abstract class AppLocalizations {
   /// No description provided for @audioVoiceAbdulBaset.
   ///
   /// In en, this message translates to:
-  /// **'Male (AbdulBaset)'**
+  /// **'Male (Abdul Basit)'**
   String get audioVoiceAbdulBaset;
 
   /// No description provided for @audioVoiceSudais.

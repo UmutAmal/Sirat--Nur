@@ -756,7 +756,7 @@
   "placesMapTilesUnavailableTitle": "a ni.\nMap tiles a awm lo",
   "placesMapTilesUnavailableBody": "a ni.\nHe build atan hian verified map tile source hi configure a la ni lo. I saved location atang hian hmun hnai tak tak te chu a la load thei tho.",
   "prayerRemainingUnavailable": "-- .",
-  "audioVoiceMisharyAlafasy": "a ni.\nMipa (Mishary Alafasy) chuan a rawn ti a.",
-  "audioVoiceAbdulBaset": "a ni.\nMipa (AbdulBaset) a ni.",
-  "audioVoiceSudais": "a ni.\nMipa (Sudais) ."
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)"
 }

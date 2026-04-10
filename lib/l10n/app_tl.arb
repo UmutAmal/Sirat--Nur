@@ -757,6 +757,6 @@
   "placesMapTilesUnavailableBody": "Ang isang na-verify na pinagmulan ng tile ng mapa ay hindi pa naka-configure para sa build na ito. Maaari pa ring mag-load ang mga kalapit na lugar mula sa iyong naka-save na lokasyon.",
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Lalaki (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Lalaki (AbdulBaset)",
+  "audioVoiceAbdulBaset": "Lalaki (Abdul Basit)",
   "audioVoiceSudais": "Lalaki (Sudais)"
 }

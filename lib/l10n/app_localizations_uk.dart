@@ -783,7 +783,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Самець (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Чоловік (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Чоловік (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Чоловік (Sudais)';

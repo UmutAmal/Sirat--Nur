@@ -787,7 +787,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Home (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Home (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Home (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Mascle (Sudais)';

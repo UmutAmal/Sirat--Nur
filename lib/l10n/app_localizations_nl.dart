@@ -783,7 +783,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Man (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Man (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Man (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Man (Sudais)';

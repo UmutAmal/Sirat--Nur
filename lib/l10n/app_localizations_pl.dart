@@ -782,7 +782,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Mężczyzna (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Mężczyzna (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Mężczyzna (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Mężczyzna (Sudais)';

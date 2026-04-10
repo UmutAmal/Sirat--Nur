@@ -784,7 +784,7 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Txiv neej (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Txiv neej (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Txiv neej (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Txiv neej (Sudais)';

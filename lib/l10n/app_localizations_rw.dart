@@ -781,7 +781,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Umugabo (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Umugabo (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Umugabo (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Umugabo (Sudais)';

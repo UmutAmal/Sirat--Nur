@@ -782,7 +782,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Mand (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Mand (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Mand (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Mand (sudais)';

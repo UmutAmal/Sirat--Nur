@@ -781,7 +781,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Gizonezkoa (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Gizonezkoa (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Gizonezkoa (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Gizonezkoa (Sudaia)';

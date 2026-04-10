@@ -784,7 +784,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Mashkull (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Mashkull (AbdulBaset)';
+  String get audioVoiceAbdulBaset => 'Mashkull (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Mashkull (Sudais)';

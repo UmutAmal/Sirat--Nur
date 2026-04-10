@@ -3837,3 +3837,45 @@
 ### Sonraki Adım
 - Rare base locale kümelerinde kalan EN-reference anahtarlar için kanıta dayalı sınıflandırma sürdürülecek; güvenilir fallback kaynağı olmayanlar dürüst EN-reference olarak işaretlenecek, güvenli mapping bulunanlar batch düzeltmeye alınacak.
 - Paralel yeni taramada ayarlar, tracker ve diagnostics yüzeylerinde kalan user-facing hardcoded metinler yeniden sayısallaştırılacak.
+
+## 2026-04-10 TUR-97 — Sanitize Corrupted Audio Voice Localization
+
+### Ne Yapıldı
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) içine `audioVoice*` anahtarları için post-process katmanı eklendi; artık çok satırlı/bozuk çeviri çıkarsa dürüst source değere düşüyor ve `AbdulBaset` yazımı kanonik `Abdul Basit` biçimine normalize ediliyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_provider.dart) legacy `Male (AbdulBaset)` ve yeni `Male (Abdul Basit)` etiketlerinin ikisini de aynı canonical `abdul_baset` kimliğine normalize edecek şekilde genişletildi.
+- Tüm [A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) setinde audio voice alanları sanitize edildi; newline içeren bozuk satırlar temizlendi, tüm `AbdulBaset` etiketleri `Abdul Basit` olarak düzeltildi.
+- Guard testi genişletildi: [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) artık tüm ARB setinde audio voice label’larının çok satırlı çöp taşımadığını ve `AbdulBaset` tipografik hatasını geri almadığını doğruluyor.
+
+### Neden Yapıldı
+- Yeni taramada [A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_ay.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_ti.arb) gibi dosyalarda audio voice etiketlerine anlamsız satır ön ekleri sızdığı görüldü; bu kullanıcıya doğrudan bozuk metin gösteriyordu.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) tarafında `AbdulBaset` etiketi bitişik yazıldığı için proper-name kalitesi de düşüktü.
+- Bu iki sorun aynı kökten, yani translator batch sonrası sanitize eksikliğinden geliyordu; çözüm kaynağa eklendi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Audio voice etiketleri artık kullanıcıya satır içi çöp veya kırık proper-name göstermiyor.
+- Legacy saklanmış değerler kırılmadan okunmaya devam ediyor.
+- Çeviri batch’i ileride yeniden çalışsa bile aynı bozukluk tekrar üretilirse tool katmanı onu sanitize edecek.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/settings_provider_test.dart` → PASS (`11/11`)
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`25/25`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`231/231`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Audio voice locale labels contain machine-translated garbage/newline corruption: `12/25 → 2/25`
+- Audio voice proper-name typo (`AbdulBaset`) across locale set: `10/25 → 2/25`
+
+### Sonraki Adım
+- Rare locale EN-reference kümeleri içinde hangi anahtarların dürüst bırakılacağı, hangilerinin güvenli sibling/source fallback ile kapatılabileceği sınıflandırılacak.
+- Kod tarafında orphan [A:\Way of Allah\sirat_i_nur\lib\core\utils\l10n_utils.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/utils/l10n_utils.dart) artık kullanım dışı; bir sonraki düşük diff turunda kaldırılacak.

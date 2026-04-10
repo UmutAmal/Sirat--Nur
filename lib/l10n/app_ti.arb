@@ -756,7 +756,7 @@
   "placesMapTilesUnavailableTitle": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nካርታ ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት",
   "placesMapTilesUnavailableBody": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nዝተረጋገጸ ምንጪ ካርታ ታይል ነዚ ህንጸት ገና ኣይተዋቕረን። ኣብ ቀረባ ዝርከቡ ቦታታት ገና ካብቲ ዝተዓቀብካዮ ቦታ ክጽዕኑ ይኽእሉ እዮም።",
   "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nተባዕታይ (ሚሻሪ ኣላፋሲ)",
-  "audioVoiceAbdulBaset": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nተባዕታይ (ዓብዱልባሰት)",
-  "audioVoiceSudais": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nተባዕታይ (ሱዳይ)"
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)"
 }
