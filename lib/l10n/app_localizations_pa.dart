@@ -135,13 +135,13 @@ class AppLocalizationsPa extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'ਕੋਈ ਨਤੀਜੇ ਨਹੀਂ ਮਿਲੇ';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...';
 
   @override
-  String get error => 'Error';
+  String get error => 'ਗਲਤੀ';
 
   @override
   String get appErrorOccurred => 'ਇੱਕ ਤਰੁੱਟੀ ਉਤਪੰਨ ਹੋਈ';
@@ -162,7 +162,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ਮਿਟਾਓ';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsPa extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'ਡਾਊਨਲੋਡ ਪੂਰਾ ਹੋਇਆ';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'ਡਾਊਨਲੋਡ ਅਸਫਲ ਰਿਹਾ';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'ਕੋਈ ਇੰਟਰਨੈਟ ਕਨੈਕਸ਼ਨ ਨਹੀਂ';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1275,7 +1275,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get chatbotLocalAiLabel => 'ਔਫਲਾਈਨ ਫਾਲਬੈਕ';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'ਕਲਾਊਡ AI (Gemini) ਦੀ ਵਰਤੋਂ ਕਰੋ';
 
   @override
   String get chatbotDownloadLocalAi => 'ਔਫਲਾਈਨ ਫਾਲਬੈਕ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ';

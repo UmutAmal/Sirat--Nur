@@ -1279,7 +1279,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Անցանց հետադարձ կապ';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Օգտագործեք Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Միացնել անցանց հետադարձ կապը';

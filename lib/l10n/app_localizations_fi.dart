@@ -163,7 +163,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get save => 'Tallentaa';
 
   @override
-  String get delete => 'Poistaa';
+  String get delete => 'Poista';
 
   @override
   String get edit => 'Muokata';
@@ -1279,7 +1279,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline-varaus';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Käytä Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Ota offline-varaus käyttöön';

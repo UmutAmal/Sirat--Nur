@@ -1277,7 +1277,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Võrguühenduseta tagavara';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Kasutage Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Luba võrguühenduseta tagavara';

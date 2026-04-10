@@ -136,13 +136,13 @@ class AppLocalizationsNso extends AppLocalizations {
   String get searchHint => 'Batla...';
 
   @override
-  String get noResults => 'Ga go na dipoelo tše di hweditšwego';
+  String get noResults => 'No results found';
 
   @override
   String get loading => 'Loading...';
 
   @override
-  String get error => 'Phošo';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'Go ile gwa direga phošo';
@@ -163,7 +163,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get save => 'Boloka';
 
   @override
-  String get delete => 'Phimola';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'Edita';
@@ -517,16 +517,16 @@ class AppLocalizationsNso extends AppLocalizations {
   String get downloading => 'Go taonelouta...';
 
   @override
-  String get downloadComplete => 'Download Feletseng';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'Download e paletšwe';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'Mokgwa wa ka ntle ga Inthanete';
 
   @override
-  String get noInternet => 'Ga go na Kgokagano ya Inthanete';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'Hle hlahloba kgokagano ya gago';

@@ -135,13 +135,13 @@ class AppLocalizationsSa extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'इति .\nन परिणामः प्राप्तः';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'इति .\nलोडिंग...';
 
   @override
-  String get error => 'Error';
+  String get error => 'इति .\nत्रुटिः';
 
   @override
   String get appErrorOccurred => 'एकः दोषः अभवत्';
@@ -162,7 +162,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'इति .\nविलोपयतु';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsSa extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'इति .\nडाउनलोड सम्पूर्ण';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'इति .\nडाउनलोड् विफलम्';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'इति .\nअन्तर्जालसम्पर्कः नास्ति';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1278,7 +1278,8 @@ class AppLocalizationsSa extends AppLocalizations {
   String get chatbotLocalAiLabel => 'अफलाइन Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi =>
+      'Cloud AI (Gemini) इत्यस्य उपयोगं कुर्वन्तु ।';
 
   @override
   String get chatbotDownloadLocalAi => 'Offline Fallback सक्षमं कुर्वन्तु';

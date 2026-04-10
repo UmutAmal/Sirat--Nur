@@ -1278,7 +1278,7 @@ class AppLocalizationsAf extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Vanlyn terugval';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Gebruik Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Aktiveer vanlyn terugval';

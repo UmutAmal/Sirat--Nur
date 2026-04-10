@@ -136,13 +136,13 @@ class AppLocalizationsMi extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Karekau he hua i kitea';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Uta ana...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Hapa';
 
   @override
   String get appErrorOccurred => 'I puta he hapa';
@@ -163,7 +163,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Mukua';
 
   @override
   String get edit => 'Edit';
@@ -517,16 +517,16 @@ class AppLocalizationsMi extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Kua oti te tango';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'I Rahua te Tikiake';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Kaore he Hononga Ipurangi';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1279,7 +1279,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Whakamuri Tuimotu';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Whakamahia Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Whakahohehia te Whakamuri Tuimotu';

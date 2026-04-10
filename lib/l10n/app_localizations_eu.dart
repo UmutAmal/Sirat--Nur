@@ -1277,7 +1277,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Lineaz kanpoko Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Erabili Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Gaitu Lineaz kanpoko Fallback';

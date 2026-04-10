@@ -135,13 +135,13 @@ class AppLocalizationsKm extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'រកមិនឃើញលទ្ធផលទេ។';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'កំពុង​ផ្ទុក...';
 
   @override
-  String get error => 'Error';
+  String get error => 'កំហុស';
 
   @override
   String get appErrorOccurred => 'កំហុសមួយបានកើតឡើង';
@@ -162,7 +162,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'លុប';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsKm extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'ការទាញយកពេញលេញ';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'ការទាញយកបរាជ័យ';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'គ្មានការភ្ជាប់អ៊ីនធឺណិត';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1278,7 +1278,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'ប្រើ Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'បើកដំណើរការ Offline Fallback';

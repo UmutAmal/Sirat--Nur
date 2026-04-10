@@ -135,13 +135,13 @@ class AppLocalizationsTw extends AppLocalizations {
   String get searchHint => 'Hwehwɛ...';
 
   @override
-  String get noResults => 'Wonhuu nea efii mu bae biara';
+  String get noResults => 'No results found';
 
   @override
   String get loading => 'Loading...';
 
   @override
-  String get error => 'Mfomsoɔ';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'Mfomso bi sii';
@@ -162,7 +162,7 @@ class AppLocalizationsTw extends AppLocalizations {
   String get save => 'Kora';
 
   @override
-  String get delete => 'Pepa';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'Sa mu';
@@ -516,7 +516,7 @@ class AppLocalizationsTw extends AppLocalizations {
   String get downloading => 'Woretwe...';
 
   @override
-  String get downloadComplete => 'Twe Awie';
+  String get downloadComplete => 'Download Complete';
 
   @override
   String get downloadFailed => 'Download Failed';
@@ -525,7 +525,7 @@ class AppLocalizationsTw extends AppLocalizations {
   String get offlineMode => 'Offline Mode a Wɔde Di Dwuma';
 
   @override
-  String get noInternet => 'Intanɛt Nkitahodi Biara Nni Hɔ';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'Yɛsrɛ sɛ hwɛ wo nkitahodi no';

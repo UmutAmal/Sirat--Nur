@@ -135,13 +135,13 @@ class AppLocalizationsKk extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Нәтиже табылмады';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Жүктелуде...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Қате';
 
   @override
   String get appErrorOccurred => 'Қате орын алды';
@@ -162,7 +162,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Жою';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsKk extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Жүктеп алу аяқталды';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Жүктеп алу сәтсіз аяқталды';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Интернет қосылымы жоқ';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1273,7 +1273,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Офлайн қалпына келтіру';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI пайдалану (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Офлайн қалпына келтіруді қосыңыз';

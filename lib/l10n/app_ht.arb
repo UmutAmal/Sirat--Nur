@@ -448,7 +448,7 @@
   "bestStreak": "Pi bon tras",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Offline Fallback",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Sèvi ak Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Pèmèt Offline Fallback",
   "chatbotQueriesLeft": "{count} kite",
   "@chatbotQueriesLeft": {

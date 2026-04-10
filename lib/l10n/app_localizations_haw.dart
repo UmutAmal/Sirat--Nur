@@ -1276,7 +1276,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Hāʻule hoʻopahemo';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'E hoʻohana iā Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'E ho\'ā i ka hāʻule hoʻopahemo';

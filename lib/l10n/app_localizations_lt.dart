@@ -135,13 +135,13 @@ class AppLocalizationsLt extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Rezultatų nerasta';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Įkeliama...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Klaida';
 
   @override
   String get appErrorOccurred => 'Įvyko klaida';
@@ -162,7 +162,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Ištrinti';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsLt extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Atsisiuntimas baigtas';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Atsisiųsti nepavyko';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Nėra interneto ryšio';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1278,7 +1278,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Atsarginis režimas neprisijungus';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Naudokite debesies AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi =>

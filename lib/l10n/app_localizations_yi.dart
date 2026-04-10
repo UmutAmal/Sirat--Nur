@@ -135,13 +135,13 @@ class AppLocalizationsYi extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'קיין רעזולטאטן געפונען';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'לאָדן...';
 
   @override
-  String get error => 'Error';
+  String get error => 'טעות';
 
   @override
   String get appErrorOccurred => 'א טעות איז פארגעקומען';
@@ -162,7 +162,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ויסמעקן';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsYi extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'אראפקאפיע גאַנץ';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'אראפקאפיע ניט אַנדערש';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'קיין אינטערנעט פֿאַרבינדונג';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1276,7 +1276,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get chatbotLocalAiLabel => 'אָפפלינע פאַלבאַקק';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'ניצן קלאָוד אַי (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'געבן אָפפלינע פאַלבאַקק';

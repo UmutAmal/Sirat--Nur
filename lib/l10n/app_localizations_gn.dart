@@ -137,13 +137,13 @@ class AppLocalizationsGn extends AppLocalizations {
   String get searchHint => 'Jeheka...';
 
   @override
-  String get noResults => 'Ndojejuhúi resultado';
+  String get noResults => 'No results found';
 
   @override
-  String get loading => 'Ojekarga hína...';
+  String get loading => 'Loading...';
 
   @override
-  String get error => 'Jejavy';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'Oiko peteĩ jejavy';
@@ -164,7 +164,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get save => 'Pysyrõ';
 
   @override
-  String get delete => 'Mboje\'oha';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'Moambue';
@@ -518,16 +518,16 @@ class AppLocalizationsGn extends AppLocalizations {
   String get downloading => 'Ojegueru jave...';
 
   @override
-  String get downloadComplete => 'Descargar Completo';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'Ojegueru ndoikói';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'Modo Offline rehegua';
 
   @override
-  String get noInternet => 'Ndaipóri Conexión Internet-pe';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'Ehecháke ne joaju';

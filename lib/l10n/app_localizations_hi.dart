@@ -162,7 +162,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get save => 'सहेजें';
 
   @override
-  String get delete => 'हटाएं';
+  String get delete => 'हटाएँ';
 
   @override
   String get edit => 'संपादित करें';
@@ -516,7 +516,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get downloading => 'डाउनलोड हो रहा है...';
 
   @override
-  String get downloadComplete => 'डाउनलोड पूरा हुआ';
+  String get downloadComplete => 'पूर्ण डाउनलोड करें';
 
   @override
   String get downloadFailed => 'डाउनलोड विफल';
@@ -525,7 +525,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get offlineMode => 'ऑफ़लाइन मोड';
 
   @override
-  String get noInternet => 'इंटरनेट कनेक्शन नहीं है';
+  String get noInternet => 'कोई इंटरनेट कनेक्शन नहीं';
 
   @override
   String get checkConnection => 'कृपया अपना कनेक्शन जांचें';
@@ -1275,7 +1275,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get chatbotLocalAiLabel => 'ऑफ़लाइन फ़ॉलबैक';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'क्लाउड AI का उपयोग करें (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'ऑफ़लाइन फ़ॉलबैक सक्षम करें';

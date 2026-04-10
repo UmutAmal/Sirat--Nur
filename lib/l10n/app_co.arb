@@ -448,7 +448,7 @@
   "bestStreak": "A megliu striscia",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Fallback offline",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Utilizà Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Abilita u Fallback Offline",
   "chatbotQueriesLeft": "{count} manca",
   "@chatbotQueriesLeft": {

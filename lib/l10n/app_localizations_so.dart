@@ -135,13 +135,13 @@ class AppLocalizationsSo extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Wax natiijooyin ah lama helin';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Soodejinaya...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Khalad';
 
   @override
   String get appErrorOccurred => 'Khalad ayaa dhacay';
@@ -162,7 +162,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Tirtir';
 
   @override
   String get edit => 'Edit';
@@ -517,16 +517,16 @@ class AppLocalizationsSo extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Download Dhamaystiran';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Soo dajisku wuu fashilmay';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Xiriir internet ma jiro';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1276,7 +1276,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Dib-u-dhaca Khadka Tooska ah';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Isticmaal Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Daar dib-u-dhaca khadka tooska ah';

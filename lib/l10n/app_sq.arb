@@ -448,7 +448,7 @@
   "bestStreak": "Rrjedha më e mirë",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Rikthim jashtë linje",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Përdor Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Aktivizo kthimin jashtë linje",
   "chatbotQueriesLeft": "{count} u largua",
   "@chatbotQueriesLeft": {

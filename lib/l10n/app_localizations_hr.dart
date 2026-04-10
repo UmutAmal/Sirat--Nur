@@ -135,13 +135,13 @@ class AppLocalizationsHr extends AppLocalizations {
   String get searchHint => 'Pretraživanje...';
 
   @override
-  String get noResults => 'Nema rezultata';
+  String get noResults => 'No results found';
 
   @override
-  String get loading => 'Učitavanje...';
+  String get loading => 'Loading...';
 
   @override
-  String get error => 'Greška';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'Došlo je do pogreške';
@@ -162,7 +162,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get save => 'Uštedjeti';
 
   @override
-  String get delete => 'Izbrisati';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'Uredi';
@@ -516,16 +516,16 @@ class AppLocalizationsHr extends AppLocalizations {
   String get downloading => 'Preuzimanje...';
 
   @override
-  String get downloadComplete => 'Preuzimanje dovršeno';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'Preuzimanje nije uspjelo';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'Izvanmrežni način rada';
 
   @override
-  String get noInternet => 'Nema internetske veze';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'Provjerite vezu';

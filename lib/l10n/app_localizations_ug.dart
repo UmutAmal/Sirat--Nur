@@ -135,13 +135,13 @@ class AppLocalizationsUg extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'ھېچقانداق نەتىجە تېپىلمىدى';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Loading ...';
 
   @override
-  String get error => 'Error';
+  String get error => 'خاتالىق';
 
   @override
   String get appErrorOccurred => 'خاتالىق كۆرۈلدى';
@@ -162,7 +162,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ئۆچۈرۈش';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsUg extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'چۈشۈرۈش تامام';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'چۈشۈرۈش مەغلۇب بولدى';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'تور ئۇلىنىشى يوق';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1275,7 +1275,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini) نى ئىشلىتىڭ';
 
   @override
   String get chatbotDownloadLocalAi => 'تورسىز چۈشۈشنى قوزغىتىڭ';

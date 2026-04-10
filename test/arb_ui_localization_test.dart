@@ -257,6 +257,7 @@ void main() {
         ];
         const localizedKeys = [
           'chatbotCloudAiLabel',
+          'chatbotUseCloudAi',
           'chatbotCloudNotConfigured',
           'chatbotErrorMsg',
           'chatbotLimitReached',
@@ -692,6 +693,52 @@ void main() {
     );
 
     test(
+      'safe priority locales do not fall back to English for basic status copy',
+      () {
+        const safeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'da',
+          'he',
+          'ja',
+          'nb',
+          'nn',
+          'no',
+          'pt',
+          'ru',
+          'vi',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const localizedKeys = [
+          'noResults',
+          'loading',
+          'error',
+          'delete',
+          'downloadComplete',
+          'downloadFailed',
+          'noInternet',
+        ];
+
+        for (final locale in safeLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
+    test(
       'safe priority locales do not fall back to English for chatbot offline copy',
       () {
         const safeLocales = [
@@ -733,6 +780,29 @@ void main() {
         }
       },
     );
+
+    test('chatbotUseCloudAi preserves Gemini as a proper noun across locales', () {
+      final arbFiles =
+          Directory('lib/l10n')
+              .listSync()
+              .whereType<File>()
+              .where((file) => file.path.endsWith('.arb'))
+              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+              .toList()
+            ..sort((a, b) => a.path.compareTo(b.path));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+        final value = arb['chatbotUseCloudAi'] as String;
+
+        expect(
+          value.contains('Gemini'),
+          isTrue,
+          reason:
+              '${file.uri.pathSegments.last} translated or dropped the Gemini proper noun',
+        );
+      }
+    });
 
     test(
       'safe priority locales do not fall back to English for premium, splash, and prayer remaining copy',

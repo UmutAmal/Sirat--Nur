@@ -135,13 +135,13 @@ class AppLocalizationsMn extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Үр дүн олдсонгүй';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ачааж байна...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Алдаа';
 
   @override
   String get appErrorOccurred => 'Алдаа гарлаа';
@@ -162,7 +162,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Устгах';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsMn extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Татаж дууссан';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Татаж чадсангүй';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Интернет холболт байхгүй';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1277,7 +1277,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini) ашиглах';
 
   @override
   String get chatbotDownloadLocalAi => 'Офлайн буцаалтыг идэвхжүүлэх';

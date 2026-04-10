@@ -1280,7 +1280,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline terugval';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Gebruik Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Schakel offline terugval in';

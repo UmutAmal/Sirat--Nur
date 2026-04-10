@@ -135,13 +135,13 @@ class AppLocalizationsZu extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Ayikho imiphumela etholiwe';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Iyalayisha...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Iphutha';
 
   @override
   String get appErrorOccurred => 'Kwenzeke iphutha';
@@ -162,7 +162,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Susa';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsZu extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Ukulanda Kuqediwe';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Ukulanda Kwehlulekile';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Alukho Uxhumo Lwe-inthanethi';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1280,7 +1280,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get chatbotLocalAiLabel => 'I-Fallback engaxhunyiwe ku-inthanethi';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Sebenzisa i-Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Nika amandla i-Offline Fallback';

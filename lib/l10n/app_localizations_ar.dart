@@ -138,7 +138,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get noResults => 'لم يتم العثور على نتائج';
 
   @override
-  String get loading => 'جاري التحميل...';
+  String get loading => 'جار التحميل...';
 
   @override
   String get error => 'خطأ';
@@ -1273,7 +1273,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get chatbotLocalAiLabel => 'احتياطي دون اتصال';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'استخدم Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'تمكين الرجوع دون اتصال';

@@ -135,13 +135,13 @@ class AppLocalizationsIg extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Ọnweghị nsonaazụ ahụrụ';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Na-ebu...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Njehie';
 
   @override
   String get appErrorOccurred => 'Enwere mperi';
@@ -162,7 +162,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Hichapụ';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsIg extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Budata zuru ezu';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Nbudata agaghị';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Enweghị njikọ ịntanetị';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1274,7 +1274,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Ndaghachi na-anọghị n\'ịntanetị';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Jiri igwe ojii AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Kwado ọdịda na-anọghị n\'ịntanetị';

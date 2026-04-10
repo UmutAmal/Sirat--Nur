@@ -136,13 +136,13 @@ class AppLocalizationsCy extends AppLocalizations {
   String get searchHint => 'Chwilio...';
 
   @override
-  String get noResults => 'Heb ganfod canlyniadau';
+  String get noResults => 'No results found';
 
   @override
-  String get loading => 'Wrthi\'n llwytho...';
+  String get loading => 'Loading...';
 
   @override
-  String get error => 'Gwall';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'Digwyddodd gwall';
@@ -163,7 +163,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get save => 'Arbed';
 
   @override
-  String get delete => 'Dileu';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'Golygu';
@@ -517,16 +517,16 @@ class AppLocalizationsCy extends AppLocalizations {
   String get downloading => 'Wrthi\'n llwytho i lawr...';
 
   @override
-  String get downloadComplete => 'Lawrlwytho Cyflawn';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'Wedi methu llwytho i lawr';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'Modd All-lein';
 
   @override
-  String get noInternet => 'Dim Cysylltiad Rhyngrwyd';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'Gwiriwch eich cysylltiad';

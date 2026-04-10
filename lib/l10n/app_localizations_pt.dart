@@ -136,13 +136,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Nenhum resultado encontrado';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Carregando...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Erro';
 
   @override
   String get appErrorOccurred => 'Ocorreu um erro';
@@ -163,7 +163,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Excluir';
 
   @override
   String get edit => 'Edit';
@@ -517,16 +517,16 @@ class AppLocalizationsPt extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Download completo';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Falha no download';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Sem conexão com a Internet';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1280,7 +1280,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Reserva off-line';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Usar IA na nuvem (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Ativar substituto off-line';

@@ -135,10 +135,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Encam nehat dîtin';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Barkirin...';
 
   @override
   String get error => 'Error';
@@ -162,7 +162,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Jêbirin';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsKu extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Daxistin Temam';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Daxistin Biserneket';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Têkiliya Înternetê tune';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1275,7 +1275,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini) bikar bînin';
 
   @override
   String get chatbotDownloadLocalAi => 'Vegera negirêdayî çalak bike';

@@ -1279,7 +1279,7 @@ class AppLocalizationsKa extends AppLocalizations {
   String get chatbotLocalAiLabel => 'ხაზგარეშე გამობრუნება';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'გამოიყენეთ Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'ჩართეთ ოფლაინ სარეზერვო საშუალება';

@@ -136,13 +136,13 @@ class AppLocalizationsKri extends AppLocalizations {
   String get searchHint => 'Sɔch...';
 
   @override
-  String get noResults => 'No rizulyt nɔ de';
+  String get noResults => 'No results found';
 
   @override
-  String get loading => 'We yu de lod...';
+  String get loading => 'Loading...';
 
   @override
-  String get error => 'Mistek we dɛn mek';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'Wan mistek bin apin';
@@ -163,7 +163,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get save => 'Sev am';
 
   @override
-  String get delete => 'Dilit fɔ dilit';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'Ɛdit';
@@ -517,16 +517,16 @@ class AppLocalizationsKri extends AppLocalizations {
   String get downloading => 'We yu de dawnlod...';
 
   @override
-  String get downloadComplete => 'Daunlod Kɔmplit';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'Daunlod nɔ bin wok';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'Ɔflayn Mɔd';
 
   @override
-  String get noInternet => 'Nɔ Intanɛt Kɔnɛkshɔn nɔ de';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'Duya chɛk yu kɔnɛkshɔn';

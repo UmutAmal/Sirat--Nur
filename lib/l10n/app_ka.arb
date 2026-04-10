@@ -448,7 +448,7 @@
   "bestStreak": "საუკეთესო სერია",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "ხაზგარეშე გამობრუნება",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "გამოიყენეთ Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "ჩართეთ ოფლაინ სარეზერვო საშუალება",
   "chatbotQueriesLeft": "{count} დარჩა",
   "@chatbotQueriesLeft": {

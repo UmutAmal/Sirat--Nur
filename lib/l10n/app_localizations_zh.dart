@@ -138,7 +138,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get noResults => '没有找到结果';
 
   @override
-  String get loading => '加载中...';
+  String get loading => '正在加载...';
 
   @override
   String get error => '错误';
@@ -1254,7 +1254,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatbotLocalAiLabel => '离线回退';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => '使用云人工智能（Gemini）';
 
   @override
   String get chatbotDownloadLocalAi => '启用离线回退';
@@ -1755,7 +1755,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get noResults => '没有找到结果';
 
   @override
-  String get loading => '加载中...';
+  String get loading => '正在加载...';
 
   @override
   String get error => '错误';
@@ -2871,7 +2871,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get chatbotLocalAiLabel => '离线回退';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => '使用云人工智能（Gemini）';
 
   @override
   String get chatbotDownloadLocalAi => '启用离线回退';
@@ -3372,7 +3372,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get noResults => '沒有找到結果';
 
   @override
-  String get loading => '載入中...';
+  String get loading => '正在加載...';
 
   @override
   String get error => '錯誤';
@@ -4488,7 +4488,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get chatbotLocalAiLabel => '離線回退';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => '使用雲端人工智慧（Gemini）';
 
   @override
   String get chatbotDownloadLocalAi => '啟用離線回退';

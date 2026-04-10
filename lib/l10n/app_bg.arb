@@ -448,7 +448,7 @@
   "bestStreak": "Най-добра серия",
   "chatbotCloudAiLabel": "Облачен AI",
   "chatbotLocalAiLabel": "Офлайн резервен вариант",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Използвайте Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Активиране на резервен офлайн режим",
   "chatbotQueriesLeft": "{count} остава",
   "@chatbotQueriesLeft": {

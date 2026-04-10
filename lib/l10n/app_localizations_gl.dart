@@ -1282,7 +1282,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Fallback sen conexión';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Usa Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Activar a alternativa sen conexión';

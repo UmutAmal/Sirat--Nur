@@ -135,13 +135,13 @@ class AppLocalizationsKn extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'ಯಾವುದೇ ಫಲಿತಾಂಶಗಳು ಕಂಡುಬಂದಿಲ್ಲ';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'ಲೋಡ್ ಆಗುತ್ತಿದೆ...';
 
   @override
-  String get error => 'Error';
+  String get error => 'ದೋಷ';
 
   @override
   String get appErrorOccurred => 'ದೋಷ ಸಂಭವಿಸಿದೆ';
@@ -162,7 +162,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ಅಳಿಸಿ';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsKn extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣಗೊಂಡಿದೆ';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'ಡೌನ್‌ಲೋಡ್ ವಿಫಲವಾಗಿದೆ';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವಿಲ್ಲ';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1277,7 +1277,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get chatbotLocalAiLabel => 'ಆಫ್‌ಲೈನ್ ಫಾಲ್‌ಬ್ಯಾಕ್';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'ಕ್ಲೌಡ್ AI (Gemini) ಬಳಸಿ';
 
   @override
   String get chatbotDownloadLocalAi =>

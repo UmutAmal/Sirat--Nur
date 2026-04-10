@@ -448,7 +448,7 @@
   "bestStreak": "Meilleure séquence",
   "chatbotCloudAiLabel": "IA cloud",
   "chatbotLocalAiLabel": "Repli hors ligne",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Utiliser Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Activer le repli hors ligne",
   "chatbotQueriesLeft": "{count} restant",
   "@chatbotQueriesLeft": {

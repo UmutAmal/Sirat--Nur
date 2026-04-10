@@ -1276,7 +1276,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Senkonekta Refalo';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Uzu Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Ebligu Senkonektan Refalon';

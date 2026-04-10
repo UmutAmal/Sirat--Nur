@@ -135,13 +135,13 @@ class AppLocalizationsPs extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'هیڅ پایله ونه موندل شوه';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'بار کول...';
 
   @override
-  String get error => 'Error';
+  String get error => 'تېروتنه';
 
   @override
   String get appErrorOccurred => 'یوه تېروتنه رامنځته شوه';
@@ -162,7 +162,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ړنګول';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsPs extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'ډاونلوډ بشپړ شو';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'ډاونلوډ ناکام شو';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'د انټرنیټ اتصال نشته';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1275,7 +1275,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get chatbotLocalAiLabel => 'آف لائن Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'د کلاوډ AI (Gemini) وکاروئ';
 
   @override
   String get chatbotDownloadLocalAi => 'آف لائن فال بیک فعال کړئ';

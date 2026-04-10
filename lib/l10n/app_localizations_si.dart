@@ -135,13 +135,13 @@ class AppLocalizationsSi extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'ප්‍රතිඵල හමු නොවිණි';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'පූරණය වෙමින්...';
 
   @override
-  String get error => 'Error';
+  String get error => 'දෝෂයකි';
 
   @override
   String get appErrorOccurred => 'දෝෂයක් සිදු විය';
@@ -162,7 +162,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'මකන්න';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsSi extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'බාගත කිරීම සම්පූර්ණයි';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'බාගැනීම අසාර්ථකයි';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'අන්තර්ජාල සම්බන්ධතාවයක් නොමැත';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1275,7 +1275,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get chatbotLocalAiLabel => 'නොබැඳි පසුබැසීම';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini) භාවිතා කරන්න';
 
   @override
   String get chatbotDownloadLocalAi => 'Offline Fallback සබල කරන්න';

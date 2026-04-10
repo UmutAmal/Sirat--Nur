@@ -135,7 +135,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get searchHint => 'جستجو...';
 
   @override
-  String get noResults => 'نتیجه‌ای یافت نشد';
+  String get noResults => 'هیچ نتیجه ای یافت نشد';
 
   @override
   String get loading => 'در حال بارگیری...';
@@ -162,7 +162,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get save => 'ذخیره';
 
   @override
-  String get delete => 'حذف';
+  String get delete => 'حذف کنید';
 
   @override
   String get edit => 'ویرایش';
@@ -519,13 +519,13 @@ class AppLocalizationsFa extends AppLocalizations {
   String get downloadComplete => 'دانلود کامل شد';
 
   @override
-  String get downloadFailed => 'دانلود ناموفق';
+  String get downloadFailed => 'دانلود انجام نشد';
 
   @override
   String get offlineMode => 'حالت آفلاین';
 
   @override
-  String get noInternet => 'اتصال اینترنت وجود ندارد';
+  String get noInternet => 'بدون اتصال به اینترنت';
 
   @override
   String get checkConnection => 'لطفاً اتصال خود را بررسی کنید';
@@ -1275,7 +1275,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get chatbotLocalAiLabel => 'بازگشت به حالت آفلاین';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'استفاده از Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'بازگشت به حالت آفلاین را فعال کنید';

@@ -448,7 +448,7 @@
   "bestStreak": "Kupambana Kwambiri",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Offline Fallback",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Gwiritsani ntchito Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Yambitsani Offline Fallback",
   "chatbotQueriesLeft": "{count} atsala",
   "@chatbotQueriesLeft": {

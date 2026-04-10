@@ -448,7 +448,7 @@
   "bestStreak": "ʻO ke kaha ʻoi loa",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Hāʻule hoʻopahemo",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "E hoʻohana iā Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "E ho'ā i ka hāʻule hoʻopahemo",
   "chatbotQueriesLeft": "{count} koe",
   "@chatbotQueriesLeft": {

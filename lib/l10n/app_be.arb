@@ -448,7 +448,7 @@
   "bestStreak": "Лепшая серыя",
   "chatbotCloudAiLabel": "Воблака AI",
   "chatbotLocalAiLabel": "Пазасеткавы рэзервовы варыянт",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Выкарыстоўвайце Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Уключыць аўтаномны рэзервовы рэжым",
   "chatbotQueriesLeft": "{count} засталося",
   "@chatbotQueriesLeft": {

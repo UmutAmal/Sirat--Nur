@@ -135,13 +135,13 @@ class AppLocalizationsMr extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'कोणतेही परिणाम आढळले नाहीत';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'लोड करत आहे...';
 
   @override
-  String get error => 'Error';
+  String get error => 'त्रुटी';
 
   @override
   String get appErrorOccurred => 'एक त्रुटी आली';
@@ -162,7 +162,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'हटवा';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsMr extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'डाउनलोड पूर्ण';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'डाउनलोड अयशस्वी';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'इंटरनेट कनेक्शन नाही';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1275,7 +1275,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get chatbotLocalAiLabel => 'ऑफलाइन फॉलबॅक';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'क्लाउड एआय (Gemini) वापरा';
 
   @override
   String get chatbotDownloadLocalAi => 'ऑफलाइन फॉलबॅक सक्षम करा';

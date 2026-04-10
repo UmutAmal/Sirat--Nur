@@ -1267,7 +1267,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get chatbotLocalAiLabel => 'ከመስመር ውጭ መውደቅ';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'ክላውድ AI (Gemini) ተጠቀም';
 
   @override
   String get chatbotDownloadLocalAi => 'ከመስመር ውጭ መመለስን አንቃ';

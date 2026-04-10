@@ -135,13 +135,13 @@ class AppLocalizationsTi extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nዝኾነ ውጽኢት ኣይተረኽበን።';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣብ ምጽዓን...';
 
   @override
-  String get error => 'Error';
+  String get error => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nጌጋ';
 
   @override
   String get appErrorOccurred => 'ጌጋ ኣጋጢሙ';
@@ -162,7 +162,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nምድምሳስ';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsTi extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nDownload ምሉእ ብምሉእ';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nምውራድ ኣይተዓወተን';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nምትእስሳር ኢንተርነት የለን';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1270,7 +1270,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get chatbotLocalAiLabel => 'ካብ መስመር ወጻኢ Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'ክላውድ ኤኣይ (Gemini) ተጠቐም';
 
   @override
   String get chatbotDownloadLocalAi => 'ካብ መስመር ወጻኢ Fallback ኣንቅሕ';

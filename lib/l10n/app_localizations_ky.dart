@@ -137,13 +137,13 @@ class AppLocalizationsKy extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Эч натыйжа табылган жок';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Жүктөлүүдө...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Ката';
 
   @override
   String get appErrorOccurred => 'Ката кетти';
@@ -164,7 +164,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Жок кылуу';
 
   @override
   String get edit => 'Edit';
@@ -519,16 +519,16 @@ class AppLocalizationsKy extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Жүктөлүп бүттү';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Жүктөп алуу ишке ашкан жок';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Интернет байланышы жок';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1279,7 +1279,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI колдонуу (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Offline Fallback иштетүү';

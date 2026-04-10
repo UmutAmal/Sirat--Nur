@@ -448,7 +448,7 @@
   "bestStreak": "Millor ratxa",
   "chatbotCloudAiLabel": "IA al núvol",
   "chatbotLocalAiLabel": "Fallback fora de línia",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Utilitza Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Activa la funció alternativa fora de línia",
   "chatbotQueriesLeft": "{count} queda",
   "@chatbotQueriesLeft": {

@@ -448,7 +448,7 @@
   "bestStreak": "Beste reeks",
   "chatbotCloudAiLabel": "Cloud-AI",
   "chatbotLocalAiLabel": "Offline terugval",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Gebruik Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Schakel offline terugval in",
   "chatbotQueriesLeft": "{count} over",
   "@chatbotQueriesLeft": {

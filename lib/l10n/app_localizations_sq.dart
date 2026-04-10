@@ -1279,7 +1279,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Rikthim jashtë linje';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Përdor Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Aktivizo kthimin jashtë linje';

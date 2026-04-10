@@ -45,7 +45,7 @@
   "search": "搜索",
   "searchHint": "搜索...",
   "noResults": "没有找到结果",
-  "loading": "加载中...",
+  "loading": "正在加载...",
   "error": "错误",
   "retry": "重试",
   "cancel": "取消",
@@ -448,7 +448,7 @@
   "bestStreak": "最佳连胜纪录",
   "chatbotCloudAiLabel": "云端人工智能",
   "chatbotLocalAiLabel": "离线回退",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "使用云人工智能（Gemini）",
   "chatbotDownloadLocalAi": "启用离线回退",
   "chatbotQueriesLeft": "{count} 左",
   "@chatbotQueriesLeft": {

@@ -136,13 +136,13 @@ class AppLocalizationsMy extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'ရလဒ်များမတွေ့ပါ။';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'ဖွင့်နေသည်...';
 
   @override
-  String get error => 'Error';
+  String get error => 'အမှား';
 
   @override
   String get appErrorOccurred => 'အမှားအယွင်းတစ်ခု ဖြစ်ပွားခဲ့သည်။';
@@ -163,7 +163,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ဖျက်ပါ။';
 
   @override
   String get edit => 'Edit';
@@ -517,16 +517,16 @@ class AppLocalizationsMy extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'ဒေါင်းလုဒ် ပြီးအောင်လုပ်ပါ။';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'ဒေါင်းလုဒ် မအောင်မြင်ပါ။';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'အင်တာနက်ချိတ်ဆက်မှု မရှိပါ။';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1282,7 +1282,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get chatbotLocalAiLabel => 'အော့ဖ်လိုင်း Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini) ကိုသုံးပါ';
 
   @override
   String get chatbotDownloadLocalAi => 'အော့ဖ်လိုင်း Fallback ကို ဖွင့်ပါ။';

@@ -135,13 +135,13 @@ class AppLocalizationsAs extends AppLocalizations {
   String get searchHint => 'সন্ধান...';
 
   @override
-  String get noResults => 'কোনো ফলাফল পোৱা নগ’ল';
+  String get noResults => 'No results found';
 
   @override
-  String get loading => 'লোড হচ্ছে...';
+  String get loading => 'Loading...';
 
   @override
-  String get error => 'আঁসোৱাহ';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'এটা ভুল হ’ল';
@@ -162,7 +162,7 @@ class AppLocalizationsAs extends AppLocalizations {
   String get save => 'সঞ্চয় কৰা';
 
   @override
-  String get delete => 'বিলোপ';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'সম্পাদনা কৰক';
@@ -516,16 +516,16 @@ class AppLocalizationsAs extends AppLocalizations {
   String get downloading => 'ডাউনলোড...';
 
   @override
-  String get downloadComplete => 'ডাউনলোড সম্পূৰ্ণ';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'ডাউনলোড বিফল';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'অফলাইন মোড';
 
   @override
-  String get noInternet => 'কোনো ইণ্টাৰনেট সংযোগ নাই';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'অনুগ্ৰহ কৰি আপোনাৰ সংযোগ পৰীক্ষা কৰক';

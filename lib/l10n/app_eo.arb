@@ -448,7 +448,7 @@
   "bestStreak": "Plej bona sinsekvo",
   "chatbotCloudAiLabel": "Nubo AI",
   "chatbotLocalAiLabel": "Senkonekta Refalo",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Uzu Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Ebligu Senkonektan Refalon",
   "chatbotQueriesLeft": "{count} foriris",
   "@chatbotQueriesLeft": {

@@ -142,7 +142,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get loading => 'Cargando...';
 
   @override
-  String get error => 'Error';
+  String get error => 'error';
 
   @override
   String get appErrorOccurred => 'Se produjo un error';
@@ -163,7 +163,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get save => 'Ahorrar';
 
   @override
-  String get delete => 'Borrar';
+  String get delete => 'Eliminar';
 
   @override
   String get edit => 'Editar';
@@ -1282,7 +1282,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Reserva sin conexión';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Utilice la IA en la nube (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Habilitar respaldo sin conexión';

@@ -135,13 +135,13 @@ class AppLocalizationsMl extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'ഫലങ്ങളൊന്നും കണ്ടെത്തിയില്ല';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'ലോഡ് ചെയ്യുന്നു...';
 
   @override
-  String get error => 'Error';
+  String get error => 'പിശക്';
 
   @override
   String get appErrorOccurred => 'ഒരു പിശക് സംഭവിച്ചു';
@@ -162,7 +162,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ഇല്ലാതാക്കുക';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsMl extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'ഡൗൺലോഡ് പൂർത്തിയായി';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'ഡൗൺലോഡ് പരാജയപ്പെട്ടു';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'ഇൻ്റർനെറ്റ് കണക്ഷനില്ല';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1278,7 +1278,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get chatbotLocalAiLabel => 'ഓഫ്‌ലൈൻ ഫോൾബാക്ക്';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'ക്ലൗഡ് AI (Gemini) ഉപയോഗിക്കുക';
 
   @override
   String get chatbotDownloadLocalAi => 'ഓഫ്‌ലൈൻ ഫോൾബാക്ക് പ്രവർത്തനക്ഷമമാക്കുക';

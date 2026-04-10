@@ -135,7 +135,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Hapana zvawanikwa';
 
   @override
   String get loading => 'Loading...';
@@ -519,13 +519,13 @@ class AppLocalizationsSn extends AppLocalizations {
   String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Kudhaunirodha Kwakundikana';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Hapana Indaneti';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1274,7 +1274,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Shandisa Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Bvisa Offline Fallback';

@@ -448,7 +448,7 @@
   "bestStreak": "Beste Serie",
   "chatbotCloudAiLabel": "Cloud-KI",
   "chatbotLocalAiLabel": "Offline-Fallback",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Verwenden Sie Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Offline-Fallback aktivieren",
   "chatbotQueriesLeft": "{count} übrig",
   "@chatbotQueriesLeft": {

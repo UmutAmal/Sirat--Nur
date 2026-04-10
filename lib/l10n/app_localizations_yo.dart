@@ -135,13 +135,13 @@ class AppLocalizationsYo extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Ko si esi ri';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Nkojọpọ...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Asise';
 
   @override
   String get appErrorOccurred => 'Aṣiṣe kan ṣẹlẹ';
@@ -162,7 +162,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Paarẹ';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsYo extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Gbigbasilẹ Pari';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Gbigba lati ayelujara kuna';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Ko si Asopọ Ayelujara';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1274,7 +1274,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Aisinipo Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Lo Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Mu Ipadabọ Aisinipo ṣiṣẹ';

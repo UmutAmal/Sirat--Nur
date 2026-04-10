@@ -135,13 +135,13 @@ class AppLocalizationsLb extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Keng Resultater fonnt';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Lueden...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Feeler';
 
   @override
   String get appErrorOccurred => 'E Feeler ass geschitt';
@@ -162,7 +162,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Läschen';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsLb extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Download Komplett';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Download Ausgefall';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Keng Internetverbindung';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1277,7 +1277,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Benotzt Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Offline Fallback aktivéieren';

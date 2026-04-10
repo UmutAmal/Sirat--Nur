@@ -448,7 +448,7 @@
   "bestStreak": "Najbolji niz",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Offline Fallback",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Koristite Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Omogući zamjenu van mreže",
   "chatbotQueriesLeft": "{count} lijevo",
   "@chatbotQueriesLeft": {

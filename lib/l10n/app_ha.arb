@@ -141,7 +141,7 @@
   "downloadComplete": "Sauke Kammala",
   "downloadFailed": "An kasa saukewa",
   "offlineMode": "Yanayin Wuta",
-  "noInternet": "Babu HaÉ—in Intanet",
+  "noInternet": "Babu Haɗin Intanet",
   "checkConnection": "Da fatan za a duba haÉ—in ku",
   "premium": "Premium",
   "upgradeToPro": "HaÉ“aka zuwa Pro",
@@ -448,7 +448,7 @@
   "bestStreak": "Mafi kyawu",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Faɗuwar Wajen Layi",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Yi amfani da Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Kunna Faɗuwar Wajen Layi",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {

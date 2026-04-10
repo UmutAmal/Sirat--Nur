@@ -227,6 +227,10 @@ String _postProcessTranslation({
   final normalizedTranslated = _normalizeProperNames(translated);
   final normalizedSource = _normalizeProperNames(source);
 
+  if (key == 'chatbotUseCloudAi') {
+    return _normalizeGeminiLabel(normalizedTranslated, normalizedSource);
+  }
+
   if (key.startsWith('audioVoice') &&
       (normalizedTranslated.contains('\n') ||
           normalizedTranslated.contains('\r'))) {
@@ -241,6 +245,15 @@ String _normalizeProperNames(String value) {
     'Abdul Baset',
     'Abdul Basit',
   );
+}
+
+String _normalizeGeminiLabel(String translated, String source) {
+  final hasGemini = translated.contains('Gemini');
+  if (!hasGemini) {
+    return source;
+  }
+
+  return translated.replaceAllMapped(RegExp(r'\([^)]*\)'), (_) => '(Gemini)');
 }
 
 String _toTranslatorLocale(String locale) {

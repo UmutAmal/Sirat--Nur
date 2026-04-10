@@ -50,7 +50,7 @@
   "retry": "Zkuste to znovu",
   "cancel": "Zrušit",
   "save": "Uložit",
-  "delete": "Vymazat",
+  "delete": "Smazat",
   "edit": "Upravit",
   "close": "Blízko",
   "ok": "OK",
@@ -448,7 +448,7 @@
   "bestStreak": "Nejlepší série",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Záložní režim offline",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Používejte Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Povolit záložní režim offline",
   "chatbotQueriesLeft": "Zbývá {count}",
   "@chatbotQueriesLeft": {

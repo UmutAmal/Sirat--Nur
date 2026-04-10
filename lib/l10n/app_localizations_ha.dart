@@ -525,7 +525,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get offlineMode => 'Yanayin Wuta';
 
   @override
-  String get noInternet => 'Babu HaÉ—in Intanet';
+  String get noInternet => 'Babu Haɗin Intanet';
 
   @override
   String get checkConnection => 'Da fatan za a duba haÉ—in ku';
@@ -1276,7 +1276,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Faɗuwar Wajen Layi';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Yi amfani da Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Kunna Faɗuwar Wajen Layi';

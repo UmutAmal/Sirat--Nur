@@ -162,7 +162,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get save => 'محفوظ کریں';
 
   @override
-  String get delete => 'حذف کریں';
+  String get delete => 'حذف کریں۔';
 
   @override
   String get edit => 'ترمیم کریں';
@@ -516,16 +516,16 @@ class AppLocalizationsUr extends AppLocalizations {
   String get downloading => 'ڈاؤنلوڈ ہو رہا ہے...';
 
   @override
-  String get downloadComplete => 'ڈاؤنلوڈ مکمل';
+  String get downloadComplete => 'ڈاؤن لوڈ مکمل';
 
   @override
-  String get downloadFailed => 'ڈاؤنلوڈ ناکام';
+  String get downloadFailed => 'ڈاؤن لوڈ ناکام ہو گیا۔';
 
   @override
   String get offlineMode => 'آف لائن موڈ';
 
   @override
-  String get noInternet => 'انٹرنیٹ کنکشن نہیں';
+  String get noInternet => 'انٹرنیٹ کنکشن نہیں ہے۔';
 
   @override
   String get checkConnection => 'براہ کرم اپنا کنکشن چیک کریں';
@@ -1275,7 +1275,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get chatbotLocalAiLabel => 'آف لائن فال بیک';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'کلاؤڈ AI (Gemini) استعمال کریں';
 
   @override
   String get chatbotDownloadLocalAi => 'آف لائن فال بیک کو فعال کریں۔';

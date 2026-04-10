@@ -136,7 +136,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get searchHint => 'খুঁজুন...';
 
   @override
-  String get noResults => 'কোনো ফলাফল পাওয়া যায়নি';
+  String get noResults => 'কোন ফলাফল পাওয়া যায়নি';
 
   @override
   String get loading => 'লোড হচ্ছে...';
@@ -517,10 +517,10 @@ class AppLocalizationsBn extends AppLocalizations {
   String get downloading => 'ডাউনলোড হচ্ছে...';
 
   @override
-  String get downloadComplete => 'ডাউনলোড সম্পন্ন';
+  String get downloadComplete => 'ডাউনলোড সম্পূর্ণ';
 
   @override
-  String get downloadFailed => 'ডাউনলোড ব্যর্থ';
+  String get downloadFailed => 'ডাউনলোড ব্যর্থ হয়েছে৷';
 
   @override
   String get offlineMode => 'অফলাইন মোড';
@@ -1276,7 +1276,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get chatbotLocalAiLabel => 'অফলাইন ফলব্যাক';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'ক্লাউড এআই (Gemini) ব্যবহার করুন';
 
   @override
   String get chatbotDownloadLocalAi => 'অফলাইন ফলব্যাক সক্ষম করুন৷';

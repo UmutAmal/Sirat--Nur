@@ -136,13 +136,13 @@ class AppLocalizationsSk extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Nenašli sa žiadne výsledky';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Načítava sa...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Chyba';
 
   @override
   String get appErrorOccurred => 'Vyskytla sa chyba';
@@ -163,7 +163,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Odstrániť';
 
   @override
   String get edit => 'Edit';
@@ -517,16 +517,16 @@ class AppLocalizationsSk extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Sťahovanie dokončené';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Sťahovanie zlyhalo';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Žiadne internetové pripojenie';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1277,7 +1277,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Záložný režim offline';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Používanie cloudovej AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Povoliť záložný režim offline';

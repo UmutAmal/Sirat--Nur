@@ -1286,7 +1286,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Repli hors ligne';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Utiliser Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Activer le repli hors ligne';

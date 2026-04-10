@@ -141,7 +141,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get loading => 'Loading...';
 
   @override
-  String get error => 'Fersin';
+  String get error => 'Flater';
 
   @override
   String get appErrorOccurred => 'Der barde in flater';
@@ -1276,7 +1276,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Brûk Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Offline Fallback ynskeakelje';

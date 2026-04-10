@@ -135,13 +135,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Không tìm thấy kết quả nào';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Đang tải...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Lỗi';
 
   @override
   String get appErrorOccurred => 'Đã xảy ra lỗi';
@@ -162,7 +162,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Xóa';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsVi extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Tải xuống hoàn tất';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Tải xuống không thành công';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Không có kết nối Internet';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1276,7 +1276,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Dự phòng ngoại tuyến';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Sử dụng Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Bật dự phòng ngoại tuyến';

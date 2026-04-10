@@ -448,7 +448,7 @@
   "bestStreak": "Bedste streak",
   "chatbotCloudAiLabel": "Skybaseret AI",
   "chatbotLocalAiLabel": "Offline Fallback",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Brug Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Aktiver Offline Fallback",
   "chatbotQueriesLeft": "{count} tilbage",
   "@chatbotQueriesLeft": {

@@ -135,13 +135,13 @@ class AppLocalizationsTa extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'முடிவுகள் எதுவும் கிடைக்கவில்லை';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'ஏற்றுகிறது...';
 
   @override
-  String get error => 'Error';
+  String get error => 'பிழை';
 
   @override
   String get appErrorOccurred => 'பிழை ஏற்பட்டது';
@@ -162,7 +162,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'நீக்கு';
 
   @override
   String get edit => 'Edit';
@@ -517,16 +517,16 @@ class AppLocalizationsTa extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'பதிவிறக்கம் முடிந்தது';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'பதிவிறக்கம் தோல்வியடைந்தது';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'இணைய இணைப்பு இல்லை';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1281,7 +1281,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get chatbotLocalAiLabel => 'ஆஃப்லைன் ஃபால்பேக்';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'கிளவுட் ஏஐ (Gemini) பயன்படுத்தவும்';
 
   @override
   String get chatbotDownloadLocalAi => 'ஆஃப்லைன் ஃபால்பேக்கை இயக்கு';

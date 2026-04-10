@@ -448,7 +448,7 @@
   "bestStreak": "ምርጥ ሩጫ",
   "chatbotCloudAiLabel": "ደመና AI",
   "chatbotLocalAiLabel": "ከመስመር ውጭ መውደቅ",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "ክላውድ AI (Gemini) ተጠቀም",
   "chatbotDownloadLocalAi": "ከመስመር ውጭ መመለስን አንቃ",
   "chatbotQueriesLeft": "{count} ቀርቷል።",
   "@chatbotQueriesLeft": {

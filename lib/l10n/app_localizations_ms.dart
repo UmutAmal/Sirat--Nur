@@ -135,13 +135,13 @@ class AppLocalizationsMs extends AppLocalizations {
   String get searchHint => 'Cari...';
 
   @override
-  String get noResults => 'Tiada hasil';
+  String get noResults => 'Tiada hasil ditemui';
 
   @override
-  String get loading => 'Memuat...';
+  String get loading => 'Memuatkan...';
 
   @override
-  String get error => 'Ralat';
+  String get error => 'ralat';
 
   @override
   String get appErrorOccurred => 'Ralat berlaku';
@@ -519,7 +519,7 @@ class AppLocalizationsMs extends AppLocalizations {
   String get downloadComplete => 'Muat Turun Selesai';
 
   @override
-  String get downloadFailed => 'Muat Turun Gagal';
+  String get downloadFailed => 'Muat turun Gagal';
 
   @override
   String get offlineMode => 'Mod Luar Talian';
@@ -1277,7 +1277,7 @@ class AppLocalizationsMs extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Saling Balik Luar Talian';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Gunakan Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Dayakan Saling Balik Luar Talian';

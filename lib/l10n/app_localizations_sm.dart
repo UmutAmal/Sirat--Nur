@@ -135,13 +135,13 @@ class AppLocalizationsSm extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Leai se fa\'ai\'uga na maua';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'utaina...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Sese';
 
   @override
   String get appErrorOccurred => 'Ua tupu se mea sese';
@@ -162,7 +162,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Aveese';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsSm extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Fa\'auma uma';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Le manuia le la\'uina';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Leai se Feso\'ota\'iga Initaneti';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1278,7 +1278,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Tu\'u i tua i luga ole laiga';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Fa\'aaogā le Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Fa\'aola le Fa\'asolo i tua';

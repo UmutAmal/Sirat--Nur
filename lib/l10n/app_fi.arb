@@ -50,7 +50,7 @@
   "retry": "Yritä uudelleen",
   "cancel": "Peruuttaa",
   "save": "Tallentaa",
-  "delete": "Poistaa",
+  "delete": "Poista",
   "edit": "Muokata",
   "close": "Lähellä",
   "ok": "OK",
@@ -448,7 +448,7 @@
   "bestStreak": "Paras putki",
   "chatbotCloudAiLabel": "Pilvi AI",
   "chatbotLocalAiLabel": "Offline-varaus",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Käytä Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Ota offline-varaus käyttöön",
   "chatbotQueriesLeft": "{count} lähti",
   "@chatbotQueriesLeft": {

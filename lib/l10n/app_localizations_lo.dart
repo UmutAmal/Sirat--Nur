@@ -135,13 +135,13 @@ class AppLocalizationsLo extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'ບໍ່ພົບຜົນການຊອກຫາ';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'ກຳລັງໂຫລດ...';
 
   @override
-  String get error => 'Error';
+  String get error => 'ຜິດພາດ';
 
   @override
   String get appErrorOccurred => 'ເກີດຄວາມຜິດພາດຂຶ້ນ';
@@ -162,7 +162,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ລຶບ';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsLo extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'ດາວໂຫຼດສຳເລັດ';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'ການດາວໂຫຼດລົ້ມເຫລວ';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'ບໍ່ມີການເຊື່ອມຕໍ່ອິນເຕີເນັດ';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1275,7 +1275,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'ໃຊ້ Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'ເປີດໃຊ້ Offline Fallback';

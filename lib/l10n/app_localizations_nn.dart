@@ -135,13 +135,13 @@ class AppLocalizationsNn extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Ingen resultater funnet';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Laster inn...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Feil';
 
   @override
   String get appErrorOccurred => 'Det oppsto en feil';
@@ -162,7 +162,7 @@ class AppLocalizationsNn extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Slett';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsNn extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Nedlasting fullført';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Nedlasting mislyktes';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Ingen Internett-tilkobling';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1277,7 +1277,7 @@ class AppLocalizationsNn extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Bruk Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Aktiver Offline Fallback';

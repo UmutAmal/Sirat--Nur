@@ -448,7 +448,7 @@
   "bestStreak": "શ્રેષ્ઠ દોર",
   "chatbotCloudAiLabel": "ક્લાઉડ AI",
   "chatbotLocalAiLabel": "ઑફલાઇન ફોલબેક",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "ક્લાઉડ AI (Gemini) નો ઉપયોગ કરો",
   "chatbotDownloadLocalAi": "ઑફલાઇન ફૉલબૅક સક્ષમ કરો",
   "chatbotQueriesLeft": "{count} બાકી",
   "@chatbotQueriesLeft": {

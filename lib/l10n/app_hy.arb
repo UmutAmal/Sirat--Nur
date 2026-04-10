@@ -448,7 +448,7 @@
   "bestStreak": "Լավագույն շարանը",
   "chatbotCloudAiLabel": "Ամպային AI",
   "chatbotLocalAiLabel": "Անցանց հետադարձ կապ",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Օգտագործեք Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Միացնել անցանց հետադարձ կապը",
   "chatbotQueriesLeft": "Մնաց {count}",
   "@chatbotQueriesLeft": {

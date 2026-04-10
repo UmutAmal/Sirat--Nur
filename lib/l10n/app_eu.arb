@@ -448,7 +448,7 @@
   "bestStreak": "Boladarik onena",
   "chatbotCloudAiLabel": "Hodei AI",
   "chatbotLocalAiLabel": "Lineaz kanpoko Fallback",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Erabili Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Gaitu Lineaz kanpoko Fallback",
   "chatbotQueriesLeft": "{count} geratzen da",
   "@chatbotQueriesLeft": {

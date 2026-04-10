@@ -448,7 +448,7 @@
   "bestStreak": "Parim seeria",
   "chatbotCloudAiLabel": "Pilve AI",
   "chatbotLocalAiLabel": "Võrguühenduseta tagavara",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Kasutage Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Luba võrguühenduseta tagavara",
   "chatbotQueriesLeft": "{count} lahkus",
   "@chatbotQueriesLeft": {

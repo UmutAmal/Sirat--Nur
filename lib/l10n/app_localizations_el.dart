@@ -163,7 +163,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get save => 'Εκτός';
 
   @override
-  String get delete => 'Διαγράφω';
+  String get delete => 'Διαγραφή';
 
   @override
   String get edit => 'Εκδίδω';
@@ -1284,7 +1284,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Επιστροφή εκτός σύνδεσης';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Χρήση Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi =>

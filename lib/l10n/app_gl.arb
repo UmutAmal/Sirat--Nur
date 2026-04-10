@@ -448,7 +448,7 @@
   "bestStreak": "Mellor racha",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Fallback sen conexión",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Usa Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Activar a alternativa sen conexión",
   "chatbotQueriesLeft": "Quedan {count}",
   "@chatbotQueriesLeft": {

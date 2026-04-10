@@ -448,7 +448,7 @@
   "bestStreak": "Labing maayo nga streak",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Offline nga Fallback",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Gamita ang Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "I-enable ang Offline Fallback",
   "chatbotQueriesLeft": "{count} ang nahabilin",
   "@chatbotQueriesLeft": {

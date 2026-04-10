@@ -137,13 +137,13 @@ class AppLocalizationsDv extends AppLocalizations {
   String get searchHint => 'ހޯދުން...';
 
   @override
-  String get noResults => 'އެއްވެސް ނަތީޖާއެއް ނުފެނެއެވެ';
+  String get noResults => 'No results found';
 
   @override
-  String get loading => 'ލޯޑިންގ...';
+  String get loading => 'Loading...';
 
   @override
-  String get error => 'ކުށް';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'ގޯހެއް ދިމާވިއެވެ';
@@ -164,7 +164,7 @@ class AppLocalizationsDv extends AppLocalizations {
   String get save => 'ރައްކާކުރުން';
 
   @override
-  String get delete => 'ޑިލީޓް';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'ބަދަލު ގެނައުން';
@@ -518,16 +518,16 @@ class AppLocalizationsDv extends AppLocalizations {
   String get downloading => 'ޑައުންލޯޑް ކުރަމުން...';
 
   @override
-  String get downloadComplete => 'ޑައުންލޯޑް ފުރިހަމަ';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'ޑައުންލޯޑް ފެއިލްވެއްޖެ';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'އޮފްލައިން މޯޑް';
 
   @override
-  String get noInternet => 'އިންޓަނެޓް ކަނެކްޝަން ނެތެވެ';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'ކަނެކްޝަން ޗެކް ކުރައްވާށެވެ';

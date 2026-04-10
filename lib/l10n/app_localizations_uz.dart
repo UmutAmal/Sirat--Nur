@@ -135,13 +135,13 @@ class AppLocalizationsUz extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Hech qanday natija topilmadi';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Yuklanmoqda...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Xato';
 
   @override
   String get appErrorOccurred => 'Xatolik yuz berdi';
@@ -162,7 +162,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Oʻchirish';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsUz extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Yuklab olish tugallandi';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Yuklab olinmadi';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Internetga ulanmagan';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1275,7 +1275,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Oflayn qayta tiklash';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini) dan foydalaning';
 
   @override
   String get chatbotDownloadLocalAi => 'Oflayn qayta tiklashni yoqish';

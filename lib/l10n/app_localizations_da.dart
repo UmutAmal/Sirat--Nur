@@ -1277,7 +1277,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Brug Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Aktiver Offline Fallback';

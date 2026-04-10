@@ -448,7 +448,7 @@
   "bestStreak": "Ən yaxşı zolaq",
   "chatbotCloudAiLabel": "Bulud AI",
   "chatbotLocalAiLabel": "Offline Fallback",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Cloud AI istifadə edin (Gemini)",
   "chatbotDownloadLocalAi": "Offline Fallback-i aktivləşdirin",
   "chatbotQueriesLeft": "{count} qaldı",
   "@chatbotQueriesLeft": {

@@ -135,13 +135,13 @@ class AppLocalizationsIs extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Engar niðurstöður fundust';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Hleður...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Villa';
 
   @override
   String get appErrorOccurred => 'Villa kom upp';
@@ -162,7 +162,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Eyða';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsIs extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Niðurhali lokið';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Niðurhal mistókst';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Engin nettenging';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1276,7 +1276,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Notaðu Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Virkja afturfall án nettengingar';

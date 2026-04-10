@@ -448,7 +448,7 @@
   "bestStreak": "Beste streep",
   "chatbotCloudAiLabel": "Wolk AI",
   "chatbotLocalAiLabel": "Vanlyn terugval",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Gebruik Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Aktiveer vanlyn terugval",
   "chatbotQueriesLeft": "{count} oor",
   "@chatbotQueriesLeft": {

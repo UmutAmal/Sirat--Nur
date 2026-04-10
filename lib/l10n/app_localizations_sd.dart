@@ -135,13 +135,13 @@ class AppLocalizationsSd extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'ڪي به نتيجا نه مليا';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'لوڊ ٿي رهيو آهي...';
 
   @override
-  String get error => 'Error';
+  String get error => 'نقص';
 
   @override
   String get appErrorOccurred => 'هڪ غلطي ٿي وئي';
@@ -162,7 +162,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'حذف ڪريو';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsSd extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'ڊائون لوڊ مڪمل';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'ڊائون لوڊ ناڪام';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'انٽرنيٽ ڪنيڪشن ناهي';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1274,7 +1274,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get chatbotLocalAiLabel => 'آف لائن Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'استعمال ڪريو Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'آف لائن Fallback کي فعال ڪريو';

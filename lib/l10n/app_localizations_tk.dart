@@ -136,13 +136,13 @@ class AppLocalizationsTk extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Netije tapylmady';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Adingüklenýär ...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Roralňyşlyk';
 
   @override
   String get appErrorOccurred => 'Erroralňyşlyk ýüze çykdy';
@@ -163,7 +163,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Öçür';
 
   @override
   String get edit => 'Edit';
@@ -517,16 +517,16 @@ class AppLocalizationsTk extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Doly göçürip al';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Downloadüklemek şowsuz';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Internet birikmesi ýok';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1276,7 +1276,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Oflayn yza gaýtmak';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini) ulanyň';
 
   @override
   String get chatbotDownloadLocalAi => 'Oflayn yza gaýtmagy işjeňleşdiriň';

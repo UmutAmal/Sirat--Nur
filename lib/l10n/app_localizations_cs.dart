@@ -162,7 +162,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get save => 'Uložit';
 
   @override
-  String get delete => 'Vymazat';
+  String get delete => 'Smazat';
 
   @override
   String get edit => 'Upravit';
@@ -1277,7 +1277,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Záložní režim offline';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Používejte Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Povolit záložní režim offline';

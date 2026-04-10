@@ -135,7 +135,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get searchHint => 'Cari...';
 
   @override
-  String get noResults => 'Tidak ada hasil';
+  String get noResults => 'Tidak ada hasil yang ditemukan';
 
   @override
   String get loading => 'Memuat...';
@@ -516,10 +516,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get downloading => 'Mengunduh...';
 
   @override
-  String get downloadComplete => 'Unduhan Selesai';
+  String get downloadComplete => 'Unduh Selesai';
 
   @override
-  String get downloadFailed => 'Unduhan Gagal';
+  String get downloadFailed => 'Pengunduhan Gagal';
 
   @override
   String get offlineMode => 'Mode Offline';
@@ -1276,7 +1276,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Penggantian Offline';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Gunakan Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Aktifkan Penggantian Offline';

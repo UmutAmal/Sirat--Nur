@@ -136,13 +136,13 @@ class AppLocalizationsGd extends AppLocalizations {
   String get searchHint => 'Lorg...';
 
   @override
-  String get noResults => 'Cha deach toradh a lorg';
+  String get noResults => 'No results found';
 
   @override
-  String get loading => 'A\' luchdachadh...';
+  String get loading => 'Loading...';
 
   @override
-  String get error => 'Mearachd';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'Thachair mearachd';
@@ -163,7 +163,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get save => 'Sàbhail';
 
   @override
-  String get delete => 'Sguab às';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'Deasaich';
@@ -518,16 +518,16 @@ class AppLocalizationsGd extends AppLocalizations {
   String get downloading => 'A\' luchdachadh sìos...';
 
   @override
-  String get downloadComplete => 'Luchdaich sìos Complete';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'Dh\'fhàillig an luchdachadh sìos';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'Modh far loidhne';
 
   @override
-  String get noInternet => 'Gun cheangal eadar-lìn';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'Feuch an toir thu sùil air a’ cheangal agad';

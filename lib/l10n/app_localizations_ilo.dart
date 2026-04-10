@@ -136,13 +136,13 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get searchHint => 'Agbirok iti...';
 
   @override
-  String get noResults => 'Awan ti nasarakan a resulta';
+  String get noResults => 'No results found';
 
   @override
-  String get loading => 'Karga ti...';
+  String get loading => 'Loading...';
 
   @override
-  String get error => 'Biddut nga';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'Napasamak ti biddut';
@@ -163,7 +163,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get save => 'Idulin';
 
   @override
-  String get delete => 'Buraken';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'Urnosen ti';
@@ -517,16 +517,16 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get downloading => 'Pag-download ti...';
 
   @override
-  String get downloadComplete => 'I-download nga Kompleto';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'Napaay ti panag-download';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'Offline nga Modo';
 
   @override
-  String get noInternet => 'Awan ti Koneksyon iti Internet';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'Pangngaasiyo ta kitaenyo ti koneksionyo';

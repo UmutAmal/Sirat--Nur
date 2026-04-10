@@ -135,7 +135,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Eventus inventus';
 
   @override
   String get loading => 'Loading...';
@@ -162,7 +162,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Delere';
 
   @override
   String get edit => 'Edit';
@@ -519,13 +519,13 @@ class AppLocalizationsLa extends AppLocalizations {
   String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Download Deficio';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Non Internet Connection';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1276,7 +1276,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Admitte Offline Fallback';

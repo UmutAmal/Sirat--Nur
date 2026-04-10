@@ -1280,7 +1280,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline nga Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Gamita ang Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'I-enable ang Offline Fallback';

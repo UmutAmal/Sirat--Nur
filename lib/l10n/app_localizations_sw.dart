@@ -135,13 +135,13 @@ class AppLocalizationsSw extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Hakuna matokeo yaliyopatikana';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Inapakia...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Hitilafu';
 
   @override
   String get appErrorOccurred => 'Hitilafu imetokea';
@@ -162,7 +162,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Futa';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsSw extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Upakuaji umekamilika';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Imeshindwa Kupakua';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Hakuna Muunganisho wa Mtandao';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1277,7 +1277,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Njia ya Kurudi Nje ya Mtandao';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Tumia Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Washa Fallback Nje ya Mtandao';

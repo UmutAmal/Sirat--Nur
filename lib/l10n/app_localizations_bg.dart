@@ -1282,7 +1282,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Офлайн резервен вариант';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Използвайте Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Активиране на резервен офлайн режим';

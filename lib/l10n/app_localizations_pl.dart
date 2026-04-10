@@ -135,13 +135,13 @@ class AppLocalizationsPl extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Nie znaleziono żadnych wyników';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ładowanie...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Błąd';
 
   @override
   String get appErrorOccurred => 'Wystąpił błąd';
@@ -162,7 +162,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Usuń';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsPl extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Pobierz ukończono';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Pobieranie nie powiodło się';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Brak połączenia z Internetem';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1279,7 +1279,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Powrót offline';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Użyj Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Włącz tryb awaryjny offline';

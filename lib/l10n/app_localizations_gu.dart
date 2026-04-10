@@ -1274,7 +1274,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get chatbotLocalAiLabel => 'ઑફલાઇન ફોલબેક';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'ક્લાઉડ AI (Gemini) નો ઉપયોગ કરો';
 
   @override
   String get chatbotDownloadLocalAi => 'ઑફલાઇન ફૉલબૅક સક્ષમ કરો';

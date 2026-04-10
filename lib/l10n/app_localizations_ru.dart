@@ -137,13 +137,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Результаты не найдены';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Загрузка...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Ошибка';
 
   @override
   String get appErrorOccurred => 'Произошла ошибка';
@@ -164,7 +164,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Удалить';
 
   @override
   String get edit => 'Edit';
@@ -518,16 +518,16 @@ class AppLocalizationsRu extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Загрузка завершена';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Загрузка не удалась';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Нет подключения к Интернету';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1281,7 +1281,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Автономный резерв';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi =>
+      'Используйте облачный искусственный интеллект (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Включить автономный резервный режим';

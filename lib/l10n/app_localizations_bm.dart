@@ -135,13 +135,13 @@ class AppLocalizationsBm extends AppLocalizations {
   String get searchHint => 'Ɲini...';
 
   @override
-  String get noResults => 'O jaabi si ma Sɔrɔ';
+  String get noResults => 'No results found';
 
   @override
   String get loading => 'Loading...';
 
   @override
-  String get error => 'Filijuru';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'Misali dɔ kɛra';
@@ -162,7 +162,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get save => 'Ka mara';
 
   @override
-  String get delete => 'Ka jɔsi';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'Ka korize';
@@ -516,16 +516,16 @@ class AppLocalizationsBm extends AppLocalizations {
   String get downloading => 'Téléchargement...';
 
   @override
-  String get downloadComplete => 'Télécharger Complete';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'Téléchargement Failed';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'Mode (Mode) min tɛ Intɛrinɛti kan';
 
   @override
-  String get noInternet => 'Ɛntɛrinɛti Jɛɲɔgɔnya tɛ yen';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'Aw ye aw ka jɛgɛnsira lajɛ';

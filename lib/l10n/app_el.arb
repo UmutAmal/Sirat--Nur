@@ -50,7 +50,7 @@
   "retry": "Δοκιμάζω πάλι",
   "cancel": "Ματαίωση",
   "save": "Εκτός",
-  "delete": "Διαγράφω",
+  "delete": "Διαγραφή",
   "edit": "Εκδίδω",
   "close": "Κοντά",
   "ok": "ΕΝΤΑΞΕΙ",
@@ -448,7 +448,7 @@
   "bestStreak": "Καλύτερο σερί",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Επιστροφή εκτός σύνδεσης",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Χρήση Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Ενεργοποιήστε την εναλλακτική λύση εκτός σύνδεσης",
   "chatbotQueriesLeft": "Απομένει {count}",
   "@chatbotQueriesLeft": {

@@ -138,13 +138,14 @@ class AppLocalizationsAy extends AppLocalizations {
   String get searchHint => 'Thaqhata...';
 
   @override
-  String get noResults => 'Janiw kuna askis jikxataskiti';
+  String get noResults =>
+      'ukax mä juk’a pachanakanwa.\nJaniw kuna askis jikxataskiti';
 
   @override
-  String get loading => 'Ukax mä...';
+  String get loading => 'ukax mä juk’a pachanakanwa.\nUkax mä...';
 
   @override
-  String get error => 'Pantja';
+  String get error => 'ukax mä juk’a pachanakanwa.\nPantjasiwi';
 
   @override
   String get appErrorOccurred => 'Mä pantjasiwiw utjawayi';
@@ -165,7 +166,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get save => 'Imaña';
 
   @override
-  String get delete => 'Phiskhsuña';
+  String get delete => 'ukax mä juk’a pachanakanwa.\nChhaqtayaña';
 
   @override
   String get edit => 'Luraña';
@@ -526,16 +527,18 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get downloadComplete =>
-      'Descargar Completo ukax mä juk’a pachanakanwa';
+      'ukax mä juk’a pachanakanwa.\nDescargar Completo ukax mä juk’a pachanakanwa';
 
   @override
-  String get downloadFailed => 'Uñstayañax janiw phuqhaskiti';
+  String get downloadFailed =>
+      'ukax mä juk’a pachanakanwa.\nUñstayañax janiw phuqhaskiti';
 
   @override
   String get offlineMode => 'Modo Offline ukax mä juk’a pachanakanwa';
 
   @override
-  String get noInternet => 'Janiw Internet ukax utjkiti';
+  String get noInternet =>
+      'ukax mä juk’a pachanakanwa.\nJaniw Internet ukax utjkiti';
 
   @override
   String get checkConnection => 'Ukhamaraki, uka conexión uñakipt’añamawa';
@@ -1301,7 +1304,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Jan uñt’at Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini) uka apnaqaña .';
 
   @override
   String get chatbotDownloadLocalAi => 'Offline Fallback ukar ch’amanchaña';

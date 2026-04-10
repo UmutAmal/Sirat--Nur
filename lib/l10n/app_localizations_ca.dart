@@ -1284,7 +1284,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Fallback fora de línia';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Utilitza Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi =>

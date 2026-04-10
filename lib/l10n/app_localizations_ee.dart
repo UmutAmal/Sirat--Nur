@@ -135,13 +135,13 @@ class AppLocalizationsEe extends AppLocalizations {
   String get searchHint => 'Di...';
 
   @override
-  String get noResults => 'Womekpɔ emetsonu aɖeke o';
+  String get noResults => 'No results found';
 
   @override
-  String get loading => 'Wole agba tsɔm...';
+  String get loading => 'Loading...';
 
   @override
-  String get error => 'Vodada';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'Vodada aɖe dzɔ';
@@ -162,7 +162,7 @@ class AppLocalizationsEe extends AppLocalizations {
   String get save => 'Dzrae ɖo';
 
   @override
-  String get delete => 'Ɖe ɖa';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'Wɔ tɔtrɔ';
@@ -516,16 +516,16 @@ class AppLocalizationsEe extends AppLocalizations {
   String get downloading => 'Wole eƒe kɔpi wɔm...';
 
   @override
-  String get downloadComplete => 'Download Wòwu enu';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'Download Do kpo nu';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'Offline ƒe Nɔnɔme';
 
   @override
-  String get noInternet => 'Internet Kadodo aɖeke Meli O';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'Taflatse lé ŋku ɖe wò kadodoa ŋu';

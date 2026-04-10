@@ -135,13 +135,13 @@ class AppLocalizationsGa extends AppLocalizations {
   String get searchHint => 'Cuardach...';
 
   @override
-  String get noResults => 'Níor aimsíodh aon torthaí';
+  String get noResults => 'No results found';
 
   @override
-  String get loading => 'Á lódáil...';
+  String get loading => 'Loading...';
 
   @override
-  String get error => 'Earráid';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'Tharla earráid';
@@ -162,7 +162,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get save => 'Sábháil';
 
   @override
-  String get delete => 'Scrios';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'Cuir in eagar';
@@ -517,16 +517,16 @@ class AppLocalizationsGa extends AppLocalizations {
   String get downloading => 'Ag íosluchtú...';
 
   @override
-  String get downloadComplete => 'Íosluchtaigh Críochnaithe';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'Theip ar íoslódáil';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'Mód As Líne';
 
   @override
-  String get noInternet => 'Gan nasc Idirlín';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'Seiceáil do cheangal';

@@ -46,7 +46,7 @@
   "searchHint": "Sykje...",
   "noResults": "Gjin resultaten fûn",
   "loading": "Loading...",
-  "error": "Fersin",
+  "error": "Flater",
   "retry": "Opnij besykje",
   "cancel": "Ofbrekke",
   "save": "Rêde",
@@ -448,7 +448,7 @@
   "bestStreak": "Beste streak",
   "chatbotCloudAiLabel": "Wolk AI",
   "chatbotLocalAiLabel": "Offline Fallback",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Brûk Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Offline Fallback ynskeakelje",
   "chatbotQueriesLeft": "{count} oer",
   "@chatbotQueriesLeft": {

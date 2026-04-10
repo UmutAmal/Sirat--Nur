@@ -135,13 +135,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => '검색결과가 없습니다';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => '로드 중...';
 
   @override
-  String get error => 'Error';
+  String get error => '오류';
 
   @override
   String get appErrorOccurred => '오류가 발생했습니다';
@@ -162,7 +162,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => '삭제';
 
   @override
   String get edit => 'Edit';
@@ -514,16 +514,16 @@ class AppLocalizationsKo extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => '다운로드 완료';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => '다운로드 실패';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => '인터넷에 연결되어 있지 않음';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1266,7 +1266,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get chatbotLocalAiLabel => '오프라인 대체';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => '클라우드 AI(Gemini) 사용';
 
   @override
   String get chatbotDownloadLocalAi => '오프라인 대체 활성화';

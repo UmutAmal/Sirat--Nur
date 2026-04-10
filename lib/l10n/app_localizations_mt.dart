@@ -136,13 +136,13 @@ class AppLocalizationsMt extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Ma nstab l-ebda riżultat';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Tagħbija...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Żball';
 
   @override
   String get appErrorOccurred => 'Sar żball';
@@ -163,7 +163,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Ħassar';
 
   @override
   String get edit => 'Edit';
@@ -517,16 +517,16 @@ class AppLocalizationsMt extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Niżżel Tlesti';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Download Falliet';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Ebda Konnessjoni tal-Internet';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1279,7 +1279,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Fallback offline';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Uża Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Ippermetti Fallback Offline';

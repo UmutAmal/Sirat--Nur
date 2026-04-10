@@ -135,13 +135,13 @@ class AppLocalizationsRw extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Nta bisubizo byabonetse';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Kuremera ...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Ikosa';
 
   @override
   String get appErrorOccurred => 'Habayeho ikosa';
@@ -162,7 +162,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Siba';
 
   @override
   String get edit => 'Edit';
@@ -516,16 +516,16 @@ class AppLocalizationsRw extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Kuramo Byuzuye';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Gukuramo birananirana';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'No Internet Connection';
+  String get noInternet => 'Nta murongo wa interineti';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -1275,7 +1275,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Gusubira inyuma';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Koresha Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Gushoboza Gusubira inyuma';

@@ -136,13 +136,13 @@ class AppLocalizationsBho extends AppLocalizations {
   String get searchHint => 'खोज करीं...';
 
   @override
-  String get noResults => 'कवनो रिजल्ट ना मिलल';
+  String get noResults => 'No results found';
 
   @override
-  String get loading => 'लोड हो रहल बा...';
+  String get loading => 'Loading...';
 
   @override
-  String get error => 'त्रुटि हो गइल बा';
+  String get error => 'Error';
 
   @override
   String get appErrorOccurred => 'एगो त्रुटि हो गइल';
@@ -163,7 +163,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get save => 'बचावे के बा';
 
   @override
-  String get delete => 'हटा दिहल गइल बा';
+  String get delete => 'Delete';
 
   @override
   String get edit => 'संपादन कइल जाला';
@@ -517,16 +517,16 @@ class AppLocalizationsBho extends AppLocalizations {
   String get downloading => 'डाउनलोड हो रहल बा...';
 
   @override
-  String get downloadComplete => 'डाउनलोड पूरा हो गइल बा';
+  String get downloadComplete => 'Download Complete';
 
   @override
-  String get downloadFailed => 'डाउनलोड फेल हो गइल';
+  String get downloadFailed => 'Download Failed';
 
   @override
   String get offlineMode => 'ऑफलाइन मोड के बा';
 
   @override
-  String get noInternet => 'इंटरनेट कनेक्शन ना होखे';
+  String get noInternet => 'No Internet Connection';
 
   @override
   String get checkConnection => 'कृपया आपन कनेक्शन के जांच करीं';

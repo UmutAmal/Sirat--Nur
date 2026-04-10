@@ -1281,7 +1281,7 @@ class AppLocalizationsBe extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Пазасеткавы рэзервовы варыянт';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Выкарыстоўвайце Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Уключыць аўтаномны рэзервовы рэжым';

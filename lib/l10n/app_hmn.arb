@@ -448,7 +448,7 @@
   "bestStreak": "Qhov zoo tshaj plaws streak",
   "chatbotCloudAiLabel": "Huab AI",
   "chatbotLocalAiLabel": "Offline Fallback",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Siv Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Qhib Offline Fallback",
   "chatbotQueriesLeft": "{count} sab laug",
   "@chatbotQueriesLeft": {

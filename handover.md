@@ -3879,3 +3879,41 @@
 ### Sonraki Adım
 - Rare locale EN-reference kümeleri içinde hangi anahtarların dürüst bırakılacağı, hangilerinin güvenli sibling/source fallback ile kapatılabileceği sınıflandırılacak.
 - Kod tarafında orphan [A:\Way of Allah\sirat_i_nur\lib\core\utils\l10n_utils.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/utils/l10n_utils.dart) artık kullanım dışı; bir sonraki düşük diff turunda kaldırılacak.
+
+## 2026-04-10 TUR-98 — Localize Safe Locale Chatbot and Status Copy
+
+### Ne Yapıldı
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) içine `chatbotUseCloudAi` için proper-name koruma katmanı eklendi; çeviri sonrası `Gemini` parantez içi marka adı zorunlu olarak korunuyor.
+- Tüm [A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) setinde `chatbotUseCloudAi`, `noResults`, `loading`, `error`, `delete`, `downloadComplete`, `downloadFailed`, `noInternet` anahtarları tekrar batch çevrilip sanitize edildi.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) genişletildi; güvenli öncelikli locale setinde bu anahtarların İngilizce fallback vermediği ve `Gemini` markasını bozmadığı regression ile kilitlendi.
+
+### Neden Yapıldı
+- Tarama sonucunda güvenli öncelikli locale setinde `chatbotUseCloudAi` ile temel durum kopyalarının İngilizce kaldığı görüldü; bu küme kullanıcıya lokalize edildi sanılan ama fiilen çevrilmemiş temel UI akışı gösteriyordu.
+- Aynı batch sırasında bazı locale’lerde `Gemini` marka adı yerelleştirilerek bozuldu; bu da proper noun kalitesini düşürdü ve geri döndürülmesi gereken ayrı bir kök sebep doğurdu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Güvenli öncelikli locale seti artık temel durum kopyalarında İngilizceye düşmüyor.
+- Chatbot cloud aksiyon etiketinde `Gemini` marka adı tüm locale setinde bozulmadan korunuyor.
+- Translation batch tekrarlansa bile tool katmanı proper-name regressions üretmeyecek.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`27/27`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`233/233`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Safe priority locales still fall back to English for chatbot cloud action: `12/25 → 3/25`
+- Safe priority locales still fall back to English for basic status copy: `14/25 → 3/25`
+- Translator batch may corrupt `Gemini` proper noun: `10/25 → 2/25`
+
+### Sonraki Adım
+- Orphan [A:\Way of Allah\sirat_i_nur\lib\core\utils\l10n_utils.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/utils/l10n_utils.dart) kaldırılacak veya tekrar bağlanacak; şu an kullanım dışı.
+- Rare locale kalan EN-reference anahtarları sibling/source matrisiyle sınıflandırılmaya devam edecek.

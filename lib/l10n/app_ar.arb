@@ -45,7 +45,7 @@
   "search": "بحث",
   "searchHint": "بحث...",
   "noResults": "لم يتم العثور على نتائج",
-  "loading": "جاري التحميل...",
+  "loading": "جار التحميل...",
   "error": "خطأ",
   "retry": "إعادة المحاولة",
   "cancel": "إلغاء",
@@ -448,7 +448,7 @@
   "bestStreak": "أفضل خط",
   "chatbotCloudAiLabel": "سحابة الذكاء الاصطناعي",
   "chatbotLocalAiLabel": "احتياطي دون اتصال",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "استخدم Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "تمكين الرجوع دون اتصال",
   "chatbotQueriesLeft": "{count} اليسار",
   "@chatbotQueriesLeft": {

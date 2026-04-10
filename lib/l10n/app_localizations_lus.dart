@@ -135,13 +135,13 @@ class AppLocalizationsLus extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'Results hmuh tur a awm lo';
+  String get noResults => 'a ni.\nResults hmuh tur a awm lo';
 
   @override
-  String get loading => 'Loading mek a ni...';
+  String get loading => 'a ni.\nLoading mek a ni...';
 
   @override
-  String get error => 'Thil tihsual a awm';
+  String get error => 'a ni.\nThil tihsual a awm';
 
   @override
   String get appErrorOccurred => 'Error a awm a';
@@ -162,7 +162,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get save => 'Save rawh';
 
   @override
-  String get delete => 'Delete rawh';
+  String get delete => 'a ni.\nDelete rawh';
 
   @override
   String get edit => 'Edit rawh';
@@ -518,16 +518,16 @@ class AppLocalizationsLus extends AppLocalizations {
   String get downloading => 'Download mek a ni...';
 
   @override
-  String get downloadComplete => 'Download zawh tawh';
+  String get downloadComplete => 'a ni.\nDownload zawh tawh';
 
   @override
-  String get downloadFailed => 'Download a hlawhchham';
+  String get downloadFailed => 'a ni.\nDownload a hlawhchham';
 
   @override
   String get offlineMode => 'Offline Mode ah a awm';
 
   @override
-  String get noInternet => 'Internet Connection a awm lo';
+  String get noInternet => 'a ni.\nInternet Connection a awm lo';
 
   @override
   String get checkConnection => 'Khawngaihin i connection kha lo en ve teh';
@@ -1287,7 +1287,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline a Fallback a ni';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini) hmang rawh .';
 
   @override
   String get chatbotDownloadLocalAi => 'Offline Fallback tih kha enable rawh';
