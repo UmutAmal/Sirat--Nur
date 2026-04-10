@@ -3948,3 +3948,34 @@
 ### Sonraki Adım
 - Orphan [A:\Way of Allah\sirat_i_nur\lib\core\utils\l10n_utils.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/utils/l10n_utils.dart) kaldırılacak; tarama şu an yalnızca tanımını buluyor.
 - Ardından core yüzeylerde kalan kullanıcıya dönük hardcoded string avına devam edilecek.
+
+## 2026-04-10 TUR-100 — Remove Legacy l10n Utility Orphan
+
+### Ne Yapıldı
+- Kullanımı kalmayan [A:\Way of Allah\sirat_i_nur\lib\core\utils\l10n_utils.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/utils/l10n_utils.dart) dosyası silindi.
+- [A:\Way of Allah\sirat_i_nur\test\l10n_utils_guard_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/l10n_utils_guard_test.dart) eklendi; hem dosyanın geri dönmediğini hem de production `lib/` altında `trEn(` veya `l10n_utils.dart` importlarının yeniden sızmadığını doğruluyor.
+
+### Neden Yapıldı
+- Tam taramada `rg -n "trEn\\(|l10n_utils" lib test` yalnızca [A:\Way of Allah\sirat_i_nur\lib\core\utils\l10n_utils.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/utils/l10n_utils.dart) tanımını döndürdü; helper artık yaşayan call chain’de yoktu.
+- Kullanılmayan localization utility’leri repo içinde bırakmak yanlış tekrar kullanım ve eski TR/EN ikili fallback kalıbının geri sızması riskini taşıyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\l10n_utils.dart`
+- `A:\Way of Allah\sirat_i_nur\test\l10n_utils_guard_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Eski ikili `trEn` helper’ı üretim akışından tamamen çıktı.
+- Localization zinciri tek doğru kaynak olarak generated `AppLocalizations` etrafında daha net kaldı.
+- Bu helper’ın geri sızması test seviyesinde yakalanacak.
+
+### Test Sonucu
+- `flutter test test/l10n_utils_guard_test.dart` → PASS (`1/1`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`236/236`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Legacy `trEn` / `l10n_utils` orphan helper may be reused by mistake: `8/25 → 1/25`
+
+### Sonraki Adım
+- Taramada kalan kullanıcıya dönük hardcoded copy yüzeyleri yeniden sınıflandırılacak; özellikle [A:\Way of Allah\sirat_i_nur\lib\features\common\main_skeleton.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/common/main_skeleton.dart) sonrası core yüzeylerde başka sabit UI string kalıp kalmadığı yeniden taranacak.
