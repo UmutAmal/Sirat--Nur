@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class MainSkeleton extends StatelessWidget {
   final Widget child;
@@ -17,6 +18,7 @@ class MainSkeleton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final location = GoRouterState.of(context).matchedLocation;
     final currentIndex = _calculateIndex(location);
 
@@ -43,31 +45,31 @@ class MainSkeleton extends StatelessWidget {
               case 4: context.go('/calendar');
             }
           },
-          destinations: const [
+          destinations: [
             NavigationDestination(
               icon: Icon(Icons.home_outlined),
               selectedIcon: Icon(Icons.home_rounded, color: AppColors.emerald),
-              label: 'Home',
+              label: l10n.home,
             ),
             NavigationDestination(
               icon: Icon(Icons.menu_book_outlined),
               selectedIcon: Icon(Icons.menu_book_rounded, color: AppColors.emerald),
-              label: 'Quran',
+              label: l10n.quran,
             ),
             NavigationDestination(
               icon: Icon(Icons.explore_outlined),
               selectedIcon: Icon(Icons.explore_rounded, color: AppColors.emerald),
-              label: 'Qibla',
+              label: l10n.qibla,
             ),
             NavigationDestination(
               icon: Icon(Icons.touch_app_outlined),
               selectedIcon: Icon(Icons.touch_app_rounded, color: AppColors.emerald),
-              label: 'Zikr',
+              label: l10n.zikr,
             ),
             NavigationDestination(
               icon: Icon(Icons.calendar_month_outlined),
               selectedIcon: Icon(Icons.calendar_month_rounded, color: AppColors.emerald),
-              label: 'Calendar',
+              label: l10n.calendar,
             ),
           ],
         ),

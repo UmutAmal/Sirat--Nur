@@ -3917,3 +3917,34 @@
 ### Sonraki Adım
 - Orphan [A:\Way of Allah\sirat_i_nur\lib\core\utils\l10n_utils.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/utils/l10n_utils.dart) kaldırılacak veya tekrar bağlanacak; şu an kullanım dışı.
 - Rare locale kalan EN-reference anahtarları sibling/source matrisiyle sınıflandırılmaya devam edecek.
+
+## 2026-04-10 TUR-99 — Localize Core Navigation Labels
+
+### Ne Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\features\common\main_skeleton.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/common/main_skeleton.dart) artık alt navigasyon etiketlerini hardcoded İngilizce string’lerden değil mevcut localization anahtarlarından (`home`, `quran`, `qibla`, `zikr`, `calendar`) okuyor.
+- [A:\Way of Allah\sirat_i_nur\test\features\common\main_skeleton_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/common/main_skeleton_test.dart) eklendi; Türkçe ve İngilizce navigasyon etiketleri regression ile doğrulanıyor.
+
+### Neden Yapıldı
+- Tam proje taramasında [A:\Way of Allah\sirat_i_nur\lib\features\common\main_skeleton.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/common/main_skeleton.dart) alt navigasyonun en görünür kullanıcı yüzeylerinden biri olmasına rağmen `Home`, `Quran`, `Qibla`, `Zikr`, `Calendar` etiketlerini sabit İngilizce tuttuğu görüldü.
+- Aynı anlamları taşıyan localization anahtarları zaten hazırdı; kök sebep UI katmanının l10n zincirine hiç bağlanmamış olmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\common\main_skeleton.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\common\main_skeleton_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Alt navigasyon artık uygulama diliyle hizalı görünüyor; en temel gezinme yüzeyi İngilizceye zorunlu düşmüyor.
+- Bu yüzey için widget regression eklendiği için hardcoded label geri sızması testte yakalanacak.
+
+### Test Sonucu
+- `flutter test test/features/common/main_skeleton_test.dart` → PASS (`2/2`)
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`235/235`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Core bottom navigation still exposes hardcoded English labels: `15/25 → 2/25`
+
+### Sonraki Adım
+- Orphan [A:\Way of Allah\sirat_i_nur\lib\core\utils\l10n_utils.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/utils/l10n_utils.dart) kaldırılacak; tarama şu an yalnızca tanımını buluyor.
+- Ardından core yüzeylerde kalan kullanıcıya dönük hardcoded string avına devam edilecek.
