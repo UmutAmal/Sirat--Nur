@@ -765,7 +765,16 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => '音频 语音';
+
+  @override
+  String get audioVoiceMisharyAlafasy => '男（米沙里·阿拉法西）';
+
+  @override
+  String get audioVoiceAbdulBaset => '男（阿卜杜勒·巴塞特）';
+
+  @override
+  String get audioVoiceSudais => '男性（苏代斯）';
 
   @override
   String get fajrAngle => 'Fajr Angle';
@@ -2373,7 +2382,16 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => '音频 语音';
+
+  @override
+  String get audioVoiceMisharyAlafasy => '男（米沙里·阿拉法西）';
+
+  @override
+  String get audioVoiceAbdulBaset => '男（阿卜杜勒·巴塞特）';
+
+  @override
+  String get audioVoiceSudais => '男性（苏代斯）';
 
   @override
   String get fajrAngle => 'Fajr Angle';
@@ -3981,7 +3999,16 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => '音訊 語音';
+
+  @override
+  String get audioVoiceMisharyAlafasy => '男（米沙裡·阿拉法西）';
+
+  @override
+  String get audioVoiceAbdulBaset => '男（阿卜杜勒·巴塞特）';
+
+  @override
+  String get audioVoiceSudais => '男性（蘇代斯）';
 
   @override
   String get fajrAngle => 'Fajr Angle';

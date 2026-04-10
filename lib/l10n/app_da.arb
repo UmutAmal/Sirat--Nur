@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Lydstemme",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Angiv først en placering, så nærliggende moskeer, halal-mad og islamiske skoler kan søges nøjagtigt.",
   "placesMapTilesUnavailableTitle": "Kortfelter er ikke tilgængelige",
   "placesMapTilesUnavailableBody": "En bekræftet kortfeltkilde er ikke konfigureret til denne build endnu. Steder i nærheden kan stadig indlæses fra din gemte placering.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Mand (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Mand (AbdulBaset)",
+  "audioVoiceSudais": "Mand (sudais)"
 }

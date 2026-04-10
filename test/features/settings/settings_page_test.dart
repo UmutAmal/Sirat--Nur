@@ -112,4 +112,19 @@ void main() {
       "Découvrez Voie d'Allah : l'application ultime pour le mode de vie islamique ! https://siratinur.com",
     );
   });
+
+  testWidgets('SettingsPage localizes audio voice labels from canonical state', (
+    tester,
+  ) async {
+    await pumpSettingsPage(
+      tester,
+      prefsValues: const {
+        'audioVoice': sudaisVoice,
+      },
+      locale: const Locale('tr'),
+    );
+
+    expect(find.text('Ses Seçimi'), findsOneWidget);
+    expect(find.text('Erkek (Sudais)'), findsOneWidget);
+  });
 }

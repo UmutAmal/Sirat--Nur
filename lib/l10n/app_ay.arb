@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Audio Voz ukax mä juk’a pachanakanwa",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "ukax mä juk’a pachanakanwa.\nNayraqatax mä chiqawj utt’ayañama ukhamat jak’ankir mezquitas, halal manq’añanaka, ukat islámica yatiqañ utanakax chiqaparu thaqhatäñapataki.",
   "placesMapTilesUnavailableTitle": "ukax mä juk’a pachanakanwa.\nMapa tejas ukax janiw utjkiti",
   "placesMapTilesUnavailableBody": "ukax mä juk’a pachanakanwa.\nMä chiqanchata mapa azulejo phuqhawix janiw aka lurañatakix wakicht’atäkiti. Jak’a chiqanakax waliw qhispiyat chiqat apkatasispa.",
-  "prayerRemainingUnavailable": "-- ."
+  "prayerRemainingUnavailable": "-- .",
+  "audioVoiceMisharyAlafasy": "ukax mä juk’a pachanakanwa.\nChacha (Mishary Alafasy) ukat juk’ampinaka.",
+  "audioVoiceAbdulBaset": "ukax mä juk’a pachanakanwa.\nChacha (AbdulBaset) ukat juk’ampinaka.",
+  "audioVoiceSudais": "ukax mä juk’a pachanakanwa.\nChacha (Sudais) ukat juk’ampinaka."
 }

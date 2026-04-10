@@ -778,6 +778,15 @@ class AppLocalizationsUg extends AppLocalizations {
   String get audioVoice => 'Audio Voice';
 
   @override
+  String get audioVoiceMisharyAlafasy => 'ئەر (مىشارى ئالافاسى)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'ئەر (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'ئەر (سۇدايس)';
+
+  @override
   String get fajrAngle => 'Fajr Angle';
 
   @override

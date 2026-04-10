@@ -779,7 +779,16 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Voce audio';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Bărbat (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Bărbat (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Masculin (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

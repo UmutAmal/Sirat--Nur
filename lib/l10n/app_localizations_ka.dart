@@ -777,7 +777,16 @@ class AppLocalizationsKa extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'აუდიო ხმა';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'მამაკაცი (მიშარი ალაფასი)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'მამაკაცი (აბდულბასეტი)';
+
+  @override
+  String get audioVoiceSudais => 'მამაკაცი (სუდაისი)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

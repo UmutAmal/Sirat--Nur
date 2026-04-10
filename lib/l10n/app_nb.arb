@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Lydstemme",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Angi et sted først, slik at nærliggende moskeer, halalmat og islamske skoler kan søkes nøyaktig.",
   "placesMapTilesUnavailableTitle": "Kartfliser er ikke tilgjengelige",
   "placesMapTilesUnavailableBody": "En bekreftet kartbrikkekilde er ikke konfigurert for denne versjonen ennå. Steder i nærheten kan fortsatt lastes inn fra det lagrede stedet.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Mann (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Mann (AbdulBaset)",
+  "audioVoiceSudais": "Mann (Sudais)"
 }

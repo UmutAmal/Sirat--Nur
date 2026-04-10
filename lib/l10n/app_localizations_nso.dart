@@ -782,7 +782,16 @@ class AppLocalizationsNso extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Lentšu la Mamelwang';
+  String get audioVoice => 'Audio Voice';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Male (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
   String get fajrAngle => 'Khutlo ya Fajr';

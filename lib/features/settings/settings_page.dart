@@ -12,6 +12,18 @@ import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+String displayAudioVoiceLabel(AppLocalizations l10n, String voice) {
+  switch (normalizeAudioVoice(voice)) {
+    case abdulBasetVoice:
+      return l10n.audioVoiceAbdulBaset;
+    case sudaisVoice:
+      return l10n.audioVoiceSudais;
+    case misharyAlafasyVoice:
+    default:
+      return l10n.audioVoiceMisharyAlafasy;
+  }
+}
+
 class SettingsPage extends ConsumerWidget {
   const SettingsPage({super.key});
 
@@ -106,7 +118,7 @@ class SettingsPage extends ConsumerWidget {
                     context,
                     icon: Icons.music_note_rounded,
                     title: l10n.audioVoice,
-                    value: settings.audioVoice,
+                    value: displayAudioVoiceLabel(l10n, settings.audioVoice),
                     onTap: () => _showAudioVoicePicker(context, ref),
                   ),
                 ],
@@ -390,20 +402,16 @@ class SettingsPage extends ConsumerWidget {
   }
 
   void _showAudioVoicePicker(BuildContext context, WidgetRef ref) {
-    const voices = [
-      'Male (Mishary Alafasy)',
-      'Male (AbdulBaset)',
-      'Male (Sudais)',
-    ];
+    final l10n = AppLocalizations.of(context)!;
     showModalBottomSheet(
       context: context,
       builder: (sheetContext) => ListView(
         shrinkWrap: true,
-        children: voices
+        children: selectableAudioVoices
             .map(
               (voice) => ListTile(
                 title: Text(
-                  voice,
+                  displayAudioVoiceLabel(l10n, voice),
                   style: const TextStyle(fontWeight: FontWeight.w700),
                 ),
                 onTap: () {

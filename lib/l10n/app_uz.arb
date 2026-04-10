@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Audio ovoz",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Yaqin atrofdagi masjidlar, halol taomlar va islomiy maktablarni aniq qidirish uchun birinchi navbatda joyni belgilang.",
   "placesMapTilesUnavailableTitle": "Xarita plitalari mavjud emas",
   "placesMapTilesUnavailableBody": "Tasdiqlangan xaritalar manbasi hali bu tuzilish uchun sozlanmagan. Yaqin-atrofdagi joylar hali ham saqlangan joylashuvingizdan yuklanishi mumkin.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Erkak (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Erkak (AbdulBaset)",
+  "audioVoiceSudais": "Erkak (Sudais)"
 }

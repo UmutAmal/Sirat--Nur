@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Leħen Awdjo",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Issettja post l-ewwel sabiex moskej fil-qrib, ikel halal, u skejjel Iżlamiċi jkunu jistgħu jiġu mfittxija b'mod preċiż.",
   "placesMapTilesUnavailableTitle": "Madum tal-mappa mhux disponibbli",
   "placesMapTilesUnavailableBody": "Sors tal-madum tal-mappa vverifikat għadu mhux ikkonfigurat għal din il-bini. Postijiet fil-qrib xorta jistgħu jgħabbu mill-lokalità salvata tiegħek.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Raġel (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Raġel (AbdulBaset)",
+  "audioVoiceSudais": "Raġel (Sudais)"
 }

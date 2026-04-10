@@ -777,7 +777,16 @@ class AppLocalizationsSa extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'श्रव्य स्वर';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'इति .\nपुरुषः (मिशरी अलाफासी) २.';
+
+  @override
+  String get audioVoiceAbdulBaset => 'इति .\nपुरुष (अब्दुलबासेत) ९.';
+
+  @override
+  String get audioVoiceSudais => 'इति .\nपुरुषः (सुदैस्) २.';
 
   @override
   String get fajrAngle => 'Fajr Angle';

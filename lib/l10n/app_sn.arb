@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Gadza nzvimbo kutanga kuitira kuti mamosque ari padyo, chikafu che halal, uye zvikoro zveIslam zvigone kutsvakwa nemazvo.",
   "placesMapTilesUnavailableTitle": "Mathairi emepu haasi kuwanikwa",
   "placesMapTilesUnavailableBody": "Matairi emepu akasimbiswa haasati agadzirirwa kuvaka uku. Nzvimbo dziri pedyo dzinogona kurodha kubva panzvimbo yako yakachengetedzwa.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Murume (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Murume (AbdulBaset)",
+  "audioVoiceSudais": "Murume (Sudais)"
 }

@@ -775,7 +775,16 @@ class AppLocalizationsKu extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Dengê Deng';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Mêr (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Mêr (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'nêr (Sûdaîs)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

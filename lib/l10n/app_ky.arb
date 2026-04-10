@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Аудио үн",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Адегенде жакын жерде жайгашкан мечиттерди, адал тамактарды жана ислам мектептерин так издөө үчүн жерди коюңуз.",
   "placesMapTilesUnavailableTitle": "Карта плиткалары жеткиликсиз",
   "placesMapTilesUnavailableBody": "Текшерилген карта плиткасынын булагы бул куруу үчүн азырынча конфигурациялана элек. Жакын жердеги жерлер сакталган жериңизден дагы эле жүктөй берет.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Эркек (Мишари Алафаси)",
+  "audioVoiceAbdulBaset": "Эркек (АбдулБасет)",
+  "audioVoiceSudais": "Эркек (Судайлар)"
 }

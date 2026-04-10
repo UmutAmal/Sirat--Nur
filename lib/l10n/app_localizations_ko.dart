@@ -772,7 +772,16 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => '오디오 음성';
+
+  @override
+  String get audioVoiceMisharyAlafasy => '남성(미샤리 알라파시)';
+
+  @override
+  String get audioVoiceAbdulBaset => '남성(압둘바셋)';
+
+  @override
+  String get audioVoiceSudais => '말레(수다이스)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

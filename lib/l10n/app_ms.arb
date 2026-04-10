@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Suara Audio",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -756,5 +756,8 @@
   "placesLocationRequiredBody": "Tetapkan lokasi dahulu supaya masjid berdekatan, makanan halal dan sekolah Islam boleh dicari dengan tepat.",
   "placesMapTilesUnavailableTitle": "Jubin peta tidak tersedia",
   "placesMapTilesUnavailableBody": "Sumber jubin peta yang disahkan belum dikonfigurasikan untuk binaan ini lagi. Tempat berdekatan masih boleh dimuatkan dari lokasi anda yang disimpan.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Lelaki (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Lelaki (AbdulBaset)",
+  "audioVoiceSudais": "Lelaki (Sudais)"
 }

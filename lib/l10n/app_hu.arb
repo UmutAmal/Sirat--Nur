@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Először állítson be egy helyet, hogy a közeli mecsetek, halal ételek és iszlám iskolák pontosan megkereshetők legyenek.",
   "placesMapTilesUnavailableTitle": "A térképlapok nem érhetők el",
   "placesMapTilesUnavailableBody": "Ellenőrzött térképmozaik forrás még nincs konfigurálva ehhez a buildhez. A közeli helyek továbbra is betölthetők az Ön mentett helyéről.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Férfi (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Férfi (AbdulBaset)",
+  "audioVoiceSudais": "férfi (szudai)"
 }

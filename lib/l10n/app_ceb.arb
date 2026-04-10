@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Tingog sa Audio",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Pagbutang una og lokasyon aron ang duol nga mga mosque, halal nga pagkaon, ug Islamic nga mga eskwelahan mapangita sa tukma.",
   "placesMapTilesUnavailableTitle": "Dili magamit ang mga tile sa mapa",
   "placesMapTilesUnavailableBody": "Ang usa ka napamatud-an nga tinubdan sa tile sa mapa wala pa ma-configure alang niini nga pagtukod. Ang mga duol nga lugar mahimo gihapon nga magkarga gikan sa imong gitipig nga lokasyon.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Lalaki (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Lalaki (AbdulBaset)",
+  "audioVoiceSudais": "Lalaki (Sudais)"
 }

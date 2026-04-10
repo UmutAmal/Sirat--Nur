@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "ድምጺ ድምጺ",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣብ ቀረባ ዝርከቡ መሳጊድ፡ ሓላል መግቢ፡ ከምኡ’ውን ኣብያተ ትምህርቲ እስላም ብትኽክል ምእንቲ ክድለዩ መጀመርታ ቦታ ኣቐምጥ።",
   "placesMapTilesUnavailableTitle": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nካርታ ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት",
   "placesMapTilesUnavailableBody": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nዝተረጋገጸ ምንጪ ካርታ ታይል ነዚ ህንጸት ገና ኣይተዋቕረን። ኣብ ቀረባ ዝርከቡ ቦታታት ገና ካብቲ ዝተዓቀብካዮ ቦታ ክጽዕኑ ይኽእሉ እዮም።",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nተባዕታይ (ሚሻሪ ኣላፋሲ)",
+  "audioVoiceAbdulBaset": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nተባዕታይ (ዓብዱልባሰት)",
+  "audioVoiceSudais": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nተባዕታይ (ሱዳይ)"
 }

@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Voz de audio",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Establece primeiro unha localización para que se poidan buscar con precisión nas mesquitas próximas, a comida halal e as escolas islámicas.",
   "placesMapTilesUnavailableTitle": "Os mosaicos do mapa non están dispoñibles",
   "placesMapTilesUnavailableBody": "Unha fonte de mosaico de mapa verificada aínda non está configurada para esta compilación. Os lugares próximos aínda poden cargar desde a túa localización gardada.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Masculino (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Masculino (AbdulBaset)",
+  "audioVoiceSudais": "Masculino (Sudais)"
 }

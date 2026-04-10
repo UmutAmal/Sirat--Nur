@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Głos audio",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Najpierw ustal lokalizację, aby można było dokładnie przeszukać pobliskie meczety, żywność halal i szkoły islamskie.",
   "placesMapTilesUnavailableTitle": "Kafelki mapy niedostępne",
   "placesMapTilesUnavailableBody": "Zweryfikowane źródło kafelków mapy nie zostało jeszcze skonfigurowane dla tej kompilacji. Miejsca w pobliżu można nadal wczytywać z zapisanej lokalizacji.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Mężczyzna (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Mężczyzna (AbdulBaset)",
+  "audioVoiceSudais": "Mężczyzna (Sudais)"
 }

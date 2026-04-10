@@ -776,7 +776,16 @@ class AppLocalizationsKn extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'ಆಡಿಯೋ ವಾಯ್ಸ್';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'ಪುರುಷ (ಮಿಶರಿ ಅಲಾಫಾಸಿ)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'ಪುರುಷ (ಅಬ್ದುಲ್‌ಬಾಸೆಟ್)';
+
+  @override
+  String get audioVoiceSudais => 'ಪುರುಷ (ಸುಡೈಸ್)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

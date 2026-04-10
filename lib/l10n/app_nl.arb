@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Audio-stem",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Stel eerst een locatie in, zodat nabijgelegen moskeeën, halal voedsel en islamitische scholen nauwkeurig kunnen worden doorzocht.",
   "placesMapTilesUnavailableTitle": "Kaarttegels niet beschikbaar",
   "placesMapTilesUnavailableBody": "Er is nog geen geverifieerde kaarttegelbron geconfigureerd voor deze build. Plaatsen in de buurt kunnen nog steeds worden geladen vanaf uw opgeslagen locatie.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Man (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Man (AbdulBaset)",
+  "audioVoiceSudais": "Man (Sudais)"
 }

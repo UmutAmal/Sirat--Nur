@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Giọng nói âm thanh",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Trước tiên hãy đặt vị trí để có thể tìm kiếm chính xác các nhà thờ Hồi giáo, đồ ăn halal và trường học Hồi giáo gần đó.",
   "placesMapTilesUnavailableTitle": "Ô bản đồ không có sẵn",
   "placesMapTilesUnavailableBody": "Nguồn ô bản đồ đã được xác minh chưa được định cấu hình cho bản dựng này. Các địa điểm lân cận vẫn có thể tải từ vị trí đã lưu của bạn.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Nam (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Nam (AbdulBaset)",
+  "audioVoiceSudais": "Nam (Sudais)"
 }

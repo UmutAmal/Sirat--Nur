@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Audio balss",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Vispirms iestatiet atrašanās vietu, lai varētu precīzi meklēt tuvumā esošās mošejas, halal ēdienu un islāma skolas.",
   "placesMapTilesUnavailableTitle": "Kartes flīzes nav pieejamas",
   "placesMapTilesUnavailableBody": "Verificēts kartes elementu avots šai būvei vēl nav konfigurēts. Netālu esošās vietas joprojām var ielādēt no jūsu saglabātās atrašanās vietas.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Vīrietis (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Vīrietis (AbdulBaset)",
+  "audioVoiceSudais": "Vīrietis (Sudais)"
 }

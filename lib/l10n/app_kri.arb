@@ -209,7 +209,7 @@
   "dbVersion": "DB Vɛshɔn: {version}",
   "dbPath": "Path: {path}.",
   "quranCheckFailed": "Quran chɛk nɔ wok: {error}.",
-  "audioVoice": "Odio Voys",
+  "audioVoice": "Audio Voice",
   "fajrAngle": "Fajr Angle we yu de du",
   "ishaAngle": "Isha Angle we de na di wɔl",
   "qiblaCalibration": "Qibla Kalibreshɔn fɔ di wok",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "Map tiles unavailable",
   "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
-  "prayerRemainingUnavailable": "-- ."
+  "prayerRemainingUnavailable": "-- .",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (AbdulBaset)",
+  "audioVoiceSudais": "Male (Sudais)"
 }

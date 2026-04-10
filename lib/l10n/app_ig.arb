@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Olu olu",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Tọọ ebe mbụ ka e wee chọọ ụlọ alakụba dị nso, nri halal na ụlọ akwụkwọ islam nke ọma.",
   "placesMapTilesUnavailableTitle": "Taịlị maapụ adịghị",
   "placesMapTilesUnavailableBody": "Ahaziri isi iyi taịlị maapụ akwadoro maka nrụpụta a. Ebe ndị dị nso ka nwere ike ibunye na ebe echekwara gị.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Nwoke (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Nwoke (AbdulBaset)",
+  "audioVoiceSudais": "Nwoke (Sudais)"
 }

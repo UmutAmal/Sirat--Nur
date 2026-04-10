@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Lentsoe la Audio",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Beha sebaka pele e le hore li-mosque tse haufi, lijo tsa halal le likolo tsa Mamoseleme li ka batlisisoa ka nepo.",
   "placesMapTilesUnavailableTitle": "Lithaele tsa 'mapa ha li fumanehe",
   "placesMapTilesUnavailableBody": "Mohloli o netefalitsoeng oa lithaele ha o so lokisoe molemong oa moaho ona hajoale. Libaka tse haufi li ntse li ka bula ho tsoa sebakeng sa hau se bolokiloeng.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Monna (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Monna (AbdulBaset)",
+  "audioVoiceSudais": "Monna (Sudais)"
 }

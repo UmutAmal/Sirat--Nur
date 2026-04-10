@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "ಆಡಿಯೋ ವಾಯ್ಸ್",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "ಮೊದಲು ಸ್ಥಳವನ್ನು ಹೊಂದಿಸಿ ಇದರಿಂದ ಹತ್ತಿರದ ಮಸೀದಿಗಳು, ಹಲಾಲ್ ಆಹಾರ ಮತ್ತು ಇಸ್ಲಾಮಿಕ್ ಶಾಲೆಗಳನ್ನು ನಿಖರವಾಗಿ ಹುಡುಕಬಹುದು.",
   "placesMapTilesUnavailableTitle": "ನಕ್ಷೆಯ ಅಂಚುಗಳು ಲಭ್ಯವಿಲ್ಲ",
   "placesMapTilesUnavailableBody": "ಈ ನಿರ್ಮಾಣಕ್ಕಾಗಿ ಪರಿಶೀಲಿಸಿದ ನಕ್ಷೆಯ ಟೈಲ್ ಮೂಲವನ್ನು ಇನ್ನೂ ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ. ನೀವು ಉಳಿಸಿದ ಸ್ಥಳದಿಂದ ಸಮೀಪದ ಸ್ಥಳಗಳು ಇನ್ನೂ ಲೋಡ್ ಆಗಬಹುದು.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "ಪುರುಷ (ಮಿಶರಿ ಅಲಾಫಾಸಿ)",
+  "audioVoiceAbdulBaset": "ಪುರುಷ (ಅಬ್ದುಲ್‌ಬಾಸೆಟ್)",
+  "audioVoiceSudais": "ಪುರುಷ (ಸುಡೈಸ್)"
 }

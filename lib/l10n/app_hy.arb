@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Աուդիո Ձայն",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Նախ տեղադրեք տեղ, որպեսզի մոտակա մզկիթները, հալալ սնունդը և իսլամական դպրոցները ճշգրիտ որոնվեն:",
   "placesMapTilesUnavailableTitle": "Քարտեզի սալիկներն անհասանելի են",
   "placesMapTilesUnavailableBody": "Քարտեզի սալիկի հաստատված աղբյուրը դեռ կազմաձևված չէ այս կառուցման համար: Մոտակա վայրերը դեռ կարող են բեռնվել ձեր պահված վայրից:",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Արական (Միշարի Ալաֆասի)",
+  "audioVoiceAbdulBaset": "Արական (ԱբդուլԲասեթ)",
+  "audioVoiceSudais": "Արական (Սուդայ)"
 }

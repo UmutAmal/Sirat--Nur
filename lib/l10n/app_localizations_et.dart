@@ -776,7 +776,16 @@ class AppLocalizationsEt extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Heli hääl';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Mees (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Mees (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Mees (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

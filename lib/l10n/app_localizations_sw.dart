@@ -777,7 +777,16 @@ class AppLocalizationsSw extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Sauti ya Sauti';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Mwanaume (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Mwanaume (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Mwanaume (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

@@ -776,7 +776,16 @@ class AppLocalizationsMn extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Аудио дуу хоолой';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Эрэгтэй (Мишари Алафаси)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Эрэгтэй (АбдулБасет)';
+
+  @override
+  String get audioVoiceSudais => 'Эрэгтэй (Судайчууд)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Reo Ororongo",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Whakatakotoria he waahi i te tuatahi kia taea te rapu tika i nga whare karakia e tata ana, nga kai hara, me nga kura Ihirama.",
   "placesMapTilesUnavailableTitle": "Karekau nga taera mapi i te waatea",
   "placesMapTilesUnavailableBody": "Kaore ano kia whirihorahia he puna taera mapi mo tenei hanga. Ka taea tonu e nga waahi tata te uta mai i to waahi kua tiakina.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Tane (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Tane (AbdulBaset)",
+  "audioVoiceSudais": "Tane (Sudais)"
 }

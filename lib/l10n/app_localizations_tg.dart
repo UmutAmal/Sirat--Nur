@@ -775,7 +775,16 @@ class AppLocalizationsTg extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Овози аудио';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Мард (Мишари Алафаси)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Мард (АбдулБасет)';
+
+  @override
+  String get audioVoiceSudais => 'Мард (Судайс)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

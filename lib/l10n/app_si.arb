@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "ශ්රව්ය හඬ",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "අවට ඇති මුස්ලිම් පල්ලි, හලාල් ආහාර සහ ඉස්ලාමීය පාසල් නිවැරදිව සෙවිය හැකි වන පරිදි පළමුව ස්ථානයක් සකසන්න.",
   "placesMapTilesUnavailableTitle": "සිතියම් ටයිල් නොමැත",
   "placesMapTilesUnavailableBody": "මෙම ගොඩනැගීම සඳහා සත්‍යාපිත සිතියම් ටයිල් මූලාශ්‍රයක් තවම වින්‍යාස කර නොමැත. අවට ස්ථාන තවමත් ඔබගේ සුරැකි ස්ථානයෙන් පූරණය කළ හැක.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "පිරිමි (මිෂාරි ඇලෆාසි)",
+  "audioVoiceAbdulBaset": "පිරිමි (අබ්දුල්බසෙට්)",
+  "audioVoiceSudais": "පිරිමි (සුදායිස්)"
 }

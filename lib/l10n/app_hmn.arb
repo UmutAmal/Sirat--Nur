@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Teem ib qhov chaw ua ntej kom cov mosques nyob ze, cov zaub mov halal, thiab cov tsev kawm Islamic tuaj yeem tshawb xyuas kom raug.",
   "placesMapTilesUnavailableTitle": "Daim ntawv qhia vuas tsis muaj",
   "placesMapTilesUnavailableBody": "Ib daim ntawv qhia cov pobzeb cov ntaub ntawv pov thawj tseem tsis tau teeb tsa rau qhov kev tsim no. Cov chaw nyob ze tseem tuaj yeem thauj khoom los ntawm koj qhov chaw khaws cia.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Txiv neej (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Txiv neej (AbdulBaset)",
+  "audioVoiceSudais": "Txiv neej (Sudais)"
 }

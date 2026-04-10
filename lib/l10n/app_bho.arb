@@ -209,7 +209,7 @@
   "dbVersion": "डीबी संस्करण: {version} के बा।",
   "dbPath": "पथ: {path} के बा।",
   "quranCheckFailed": "कुरान जांच फेल हो गइल: {error}",
-  "audioVoice": "ऑडियो आवाज बा",
+  "audioVoice": "Audio Voice",
   "fajrAngle": "फजर एंगल के बा",
   "ishaAngle": "ईशा एंगल के ह",
   "qiblaCalibration": "किबला कैलिब्रेशन के बा",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "Map tiles unavailable",
   "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
-  "prayerRemainingUnavailable": "-- 1999 में भइल रहे।"
+  "prayerRemainingUnavailable": "-- 1999 में भइल रहे।",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (AbdulBaset)",
+  "audioVoiceSudais": "Male (Sudais)"
 }

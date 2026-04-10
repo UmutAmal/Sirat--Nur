@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "অডিও ভয়েস",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "প্রথমে একটি অবস্থান নির্ধারণ করুন যাতে কাছাকাছি মসজিদ, হালাল খাবার এবং ইসলামিক স্কুলগুলি সঠিকভাবে অনুসন্ধান করা যায়।",
   "placesMapTilesUnavailableTitle": "মানচিত্র টাইলস অনুপলব্ধ",
   "placesMapTilesUnavailableBody": "এই বিল্ডের জন্য একটি যাচাইকৃত মানচিত্র টাইল উত্স এখনও কনফিগার করা হয়নি৷ আশেপাশের জায়গাগুলি এখনও আপনার সংরক্ষিত অবস্থান থেকে লোড হতে পারে৷",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "পুরুষ (মিশারি আলাফাসি)",
+  "audioVoiceAbdulBaset": "পুরুষ (আব্দুল বাসেত)",
+  "audioVoiceSudais": "পুরুষ (সুদাইস)"
 }

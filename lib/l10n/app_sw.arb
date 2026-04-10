@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Sauti ya Sauti",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Weka eneo kwanza ili misikiti iliyo karibu, chakula cha halali na shule za Kiislamu zitafutwe kwa usahihi.",
   "placesMapTilesUnavailableTitle": "Vigae vya ramani hazipatikani",
   "placesMapTilesUnavailableBody": "Chanzo cha kigae cha ramani kilichothibitishwa bado hakijasanidiwa kwa muundo huu. Maeneo ya karibu bado yanaweza kupakia kutoka eneo lako lililohifadhiwa.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Mwanaume (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Mwanaume (AbdulBaset)",
+  "audioVoiceSudais": "Mwanaume (Sudais)"
 }

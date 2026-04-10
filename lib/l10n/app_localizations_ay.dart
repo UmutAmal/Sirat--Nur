@@ -792,7 +792,19 @@ class AppLocalizationsAy extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Audio Voz ukax mä juk’a pachanakanwa';
+
+  @override
+  String get audioVoiceMisharyAlafasy =>
+      'ukax mä juk’a pachanakanwa.\nChacha (Mishary Alafasy) ukat juk’ampinaka.';
+
+  @override
+  String get audioVoiceAbdulBaset =>
+      'ukax mä juk’a pachanakanwa.\nChacha (AbdulBaset) ukat juk’ampinaka.';
+
+  @override
+  String get audioVoiceSudais =>
+      'ukax mä juk’a pachanakanwa.\nChacha (Sudais) ukat juk’ampinaka.';
 
   @override
   String get fajrAngle => 'Fajr Angle';

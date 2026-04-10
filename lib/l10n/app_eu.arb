@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Audio Ahotsa",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Ezarri kokapen bat lehenik, inguruko meskitak, janari halal eta eskola islamiarrak zehatz-mehatz bilatu ahal izateko.",
   "placesMapTilesUnavailableTitle": "Maparen lauzak ez daude erabilgarri",
   "placesMapTilesUnavailableBody": "Egiaztatutako mapa-lauza-iturburua ez dago konfiguratuta oraindik konfigurazio honetarako. Inguruko tokiek gordetako kokapenetik karga daitezke oraindik.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Gizonezkoa (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Gizonezkoa (AbdulBaset)",
+  "audioVoiceSudais": "Gizonezkoa (Sudaia)"
 }

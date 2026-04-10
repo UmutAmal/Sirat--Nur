@@ -776,7 +776,16 @@ class AppLocalizationsKm extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'សំឡេងអូឌីយ៉ូ';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'ប្រុស (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'ប្រុស (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'ប្រុស (ស៊ុយអែត)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

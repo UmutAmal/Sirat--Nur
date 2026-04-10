@@ -780,6 +780,15 @@ class AppLocalizationsHu extends AppLocalizations {
   String get audioVoice => 'Audio Voice';
 
   @override
+  String get audioVoiceMisharyAlafasy => 'Férfi (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Férfi (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'férfi (szudai)';
+
+  @override
   String get fajrAngle => 'Fajr Angle';
 
   @override

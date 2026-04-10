@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "အသံအသံ",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "တည်နေရာကို ဦးစွာသတ်မှတ်ထားပါက အနီးနားရှိ ဗလီများ၊ ဟလာလ်အစားအစာများနှင့် အစ္စလာမ့်ကျောင်းများကို တိကျစွာရှာဖွေနိုင်ပါသည်။",
   "placesMapTilesUnavailableTitle": "မြေပုံအကွက်များ မရနိုင်ပါ။",
   "placesMapTilesUnavailableBody": "ဤတည်ဆောက်မှုအတွက် အတည်ပြုထားသော မြေပုံအကွက်အရင်းအမြစ်ကို မသတ်မှတ်ရသေးပါ။ အနီးတဝိုက်ရှိ နေရာများသည် သင်သိမ်းဆည်းထားသော တည်နေရာမှ စတင်နိုင်သေးသည်။",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "ယောကျာ်းလေး (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "ယောကျာ်းလေး (AbdulBaset)",
+  "audioVoiceSudais": "ယောကျာ်းလေး (Sudais)"
 }

@@ -785,6 +785,15 @@ class AppLocalizationsTl extends AppLocalizations {
   String get audioVoice => 'Audio Voice';
 
   @override
+  String get audioVoiceMisharyAlafasy => 'Lalaki (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Lalaki (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Lalaki (Sudais)';
+
+  @override
   String get fajrAngle => 'Fajr Angle';
 
   @override

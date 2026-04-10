@@ -775,7 +775,16 @@ class AppLocalizationsSd extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'آڊيو آواز';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'مرد (مشري الافسي)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'مرد (عبدالباسط)';
+
+  @override
+  String get audioVoiceSudais => 'مرد (سوديس)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

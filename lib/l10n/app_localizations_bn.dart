@@ -776,7 +776,16 @@ class AppLocalizationsBn extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'অডিও ভয়েস';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'পুরুষ (মিশারি আলাফাসি)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'পুরুষ (আব্দুল বাসেত)';
+
+  @override
+  String get audioVoiceSudais => 'পুরুষ (সুদাইস)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

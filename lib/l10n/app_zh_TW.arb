@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "音訊 語音",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "先設定好位置，這樣就可以準確搜尋到附近的清真寺、清真食品、伊斯蘭學校。",
   "placesMapTilesUnavailableTitle": "地圖圖塊不可用",
   "placesMapTilesUnavailableBody": "尚未為此建構配置經過驗證的地圖圖塊來源。附近的地點仍然可以從您儲存的位置載入。",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "男（米沙裡·阿拉法西）",
+  "audioVoiceAbdulBaset": "男（阿卜杜勒·巴塞特）",
+  "audioVoiceSudais": "男性（蘇代斯）"
 }

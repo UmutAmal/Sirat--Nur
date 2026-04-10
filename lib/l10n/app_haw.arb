@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Leo Leo",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "E hoʻonohonoho mua i kahi i hiki ke ʻimi pololei ʻia nā hale pule kokoke, nā meaʻai halal, a me nā kula Islam.",
   "placesMapTilesUnavailableTitle": "ʻAʻole loaʻa nā kile palapala",
   "placesMapTilesUnavailableBody": "ʻAʻole i hoʻonohonoho ʻia kahi kumu kile palapala ʻāina i hoʻopaʻa ʻia no kēia kūkulu ʻana. Hiki ke hoʻouka ʻia nā wahi kokoke mai kou wahi i mālama ʻia.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Kāne (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Kāne (AbdulBaset)",
+  "audioVoiceSudais": "Kāne (Sudais)"
 }

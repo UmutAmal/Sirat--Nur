@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "오디오 음성",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "근처 모스크, 할랄음식, 이슬람 학교 등을 정확하게 검색할 수 있도록 위치를 먼저 설정하세요.",
   "placesMapTilesUnavailableTitle": "지도 타일을 사용할 수 없습니다.",
   "placesMapTilesUnavailableBody": "이 빌드에는 확인된 지도 타일 소스가 아직 구성되지 않았습니다. 저장된 위치에서 주변 장소를 계속 로드할 수 있습니다.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "남성(미샤리 알라파시)",
+  "audioVoiceAbdulBaset": "남성(압둘바셋)",
+  "audioVoiceSudais": "말레(수다이스)"
 }

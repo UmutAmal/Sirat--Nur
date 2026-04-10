@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Zvuk Hlas",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Nejprve nastavte místo, aby bylo možné přesně prohledat blízké mešity, halal jídlo a islámské školy.",
   "placesMapTilesUnavailableTitle": "Dlaždice mapy nejsou k dispozici",
   "placesMapTilesUnavailableBody": "Pro toto sestavení zatím není nakonfigurován ověřený zdroj mapových dlaždic. Místa v okolí se mohou stále načítat z vašeho uloženého místa.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Muž (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Muž (AbdulBaset)",
+  "audioVoiceSudais": "muž (Sudais)"
 }

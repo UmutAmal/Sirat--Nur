@@ -778,7 +778,16 @@ class AppLocalizationsXh extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Ilizwi elivakalayo';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Indoda (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Indoda (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Indoda (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

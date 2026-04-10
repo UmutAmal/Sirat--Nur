@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Magtakda muna ng lokasyon para tumpak na mahanap ang mga kalapit na mosque, halal na pagkain, at Islamic school.",
   "placesMapTilesUnavailableTitle": "Hindi available ang mga tile ng mapa",
   "placesMapTilesUnavailableBody": "Ang isang na-verify na pinagmulan ng tile ng mapa ay hindi pa naka-configure para sa build na ito. Maaari pa ring mag-load ang mga kalapit na lugar mula sa iyong naka-save na lokasyon.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Lalaki (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Lalaki (AbdulBaset)",
+  "audioVoiceSudais": "Lalaki (Sudais)"
 }

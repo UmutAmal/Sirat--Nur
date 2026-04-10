@@ -779,7 +779,16 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'ஆடியோ குரல்';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'ஆண் (மிஷரி அலஃபாஸி)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'ஆண் (அப்துல்பாசெட்)';
+
+  @override
+  String get audioVoiceSudais => 'ஆண் (சுதைஸ்)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

@@ -6,6 +6,37 @@ final sharedPreferencesProvider = Provider<SharedPreferences>((ref) {
   throw UnimplementedError('sharedPreferencesProvider must be overridden');
 });
 
+const misharyAlafasyVoice = 'mishary_alafasy';
+const abdulBasetVoice = 'abdul_baset';
+const sudaisVoice = 'sudais';
+
+const selectableAudioVoices = [
+  misharyAlafasyVoice,
+  abdulBasetVoice,
+  sudaisVoice,
+];
+
+String normalizeAudioVoice(String voice) {
+  final normalized = voice.trim().toLowerCase();
+  switch (normalized) {
+    case misharyAlafasyVoice:
+    case 'male (mishary alafasy)':
+    case 'mishary alafasy':
+    case 'mishary rashid alafasy':
+      return misharyAlafasyVoice;
+    case abdulBasetVoice:
+    case 'male (abdulbaset)':
+    case 'abdulbaset':
+    case 'abdul baset':
+      return abdulBasetVoice;
+    case sudaisVoice:
+    case 'male (sudais)':
+      return sudaisVoice;
+    default:
+      return misharyAlafasyVoice;
+  }
+}
+
 class SettingsState {
   final String calculationMethod;
   final String madhab;
@@ -24,7 +55,7 @@ class SettingsState {
   SettingsState({
     this.calculationMethod = diyanetPrayerMethod,
     this.madhab = hanafiMadhab,
-    this.audioVoice = 'Male (Mishary Alafasy)',
+    this.audioVoice = misharyAlafasyVoice,
     this.qiblaOffset = 0.0,
     this.qiblaSmoothingEnabled = true,
     this.fajrAngle = 18.0,
@@ -99,23 +130,24 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
           return SettingsState(
             calculationMethod: storedMethod,
             madhab: storedMadhab,
-          audioVoice:
-              _prefs.getString('audioVoice') ?? 'Male (Mishary Alafasy)',
-          qiblaOffset: _prefs.getDouble('qiblaOffset') ?? 0.0,
-          qiblaSmoothingEnabled:
-              _prefs.getBool('qiblaSmoothingEnabled') ?? true,
+            audioVoice: normalizeAudioVoice(
+              _prefs.getString('audioVoice') ?? misharyAlafasyVoice,
+            ),
+            qiblaOffset: _prefs.getDouble('qiblaOffset') ?? 0.0,
+            qiblaSmoothingEnabled:
+                _prefs.getBool('qiblaSmoothingEnabled') ?? true,
             fajrAngle: storedMethod == customPrayerMethod
                 ? _prefs.getDouble('fajrAngle') ?? 18.0
                 : defaultFajrAngle,
             ishaAngle: storedMethod == customPrayerMethod
                 ? _prefs.getDouble('ishaAngle') ?? 17.0
                 : defaultIshaAngle,
-          languageCode: _prefs.getString('languageCode'),
-          latitude: _prefs.getDouble('latitude'),
-          longitude: _prefs.getDouble('longitude'),
-          locationName: _prefs.getString('locationName'),
-          timezone: _prefs.getString('timezone'),
-          isDarkMode: _prefs.getBool('isDarkMode') ?? true,
+            languageCode: _prefs.getString('languageCode'),
+            latitude: _prefs.getDouble('latitude'),
+            longitude: _prefs.getDouble('longitude'),
+            locationName: _prefs.getString('locationName'),
+            timezone: _prefs.getString('timezone'),
+            isDarkMode: _prefs.getBool('isDarkMode') ?? true,
           );
         })(),
       );
@@ -140,8 +172,9 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
   }
 
   Future<void> updateAudioVoice(String voice) async {
-    await _prefs.setString('audioVoice', voice);
-    state = state.copyWith(audioVoice: voice);
+    final normalizedVoice = normalizeAudioVoice(voice);
+    await _prefs.setString('audioVoice', normalizedVoice);
+    state = state.copyWith(audioVoice: normalizedVoice);
   }
 
   Future<void> updateQiblaOffset(double offset) async {

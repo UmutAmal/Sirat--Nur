@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Zëri audio",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Vendosni fillimisht një vendndodhje në mënyrë që xhamitë e afërta, ushqimi hallall dhe shkollat islame të mund të kërkohen me saktësi.",
   "placesMapTilesUnavailableTitle": "Pllakat e hartës nuk ofrohen",
   "placesMapTilesUnavailableBody": "Një burim i verifikuar i pllakës së hartës nuk është konfiguruar ende për këtë ndërtim. Vendet në afërsi mund të ngarkohen ende nga vendndodhja jote e ruajtur.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Mashkull (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Mashkull (AbdulBaset)",
+  "audioVoiceSudais": "Mashkull (Sudais)"
 }

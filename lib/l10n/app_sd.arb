@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "آڊيو آواز",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "پهرين جڳھ مقرر ڪريو ته جيئن ويجھي مسجدون، حلال کاڌو، ۽ اسلامي اسڪول صحيح طريقي سان ڳولي سگھجن.",
   "placesMapTilesUnavailableTitle": "نقشي جي ٽائلس دستياب ناهي",
   "placesMapTilesUnavailableBody": "هڪ تصديق ٿيل نقشي جي ٽائل جو ماخذ اڃا تائين هن تعمير لاءِ ترتيب نه ڏنو ويو آهي. ويجھي جڳھون اڃا تائين توھان جي محفوظ ڪيل جڳھ تان لوڊ ڪري سگھن ٿيون.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "مرد (مشري الافسي)",
+  "audioVoiceAbdulBaset": "مرد (عبدالباسط)",
+  "audioVoiceSudais": "مرد (سوديس)"
 }

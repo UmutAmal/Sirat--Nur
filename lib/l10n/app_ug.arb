@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "ئالدى بىلەن ئورۇن بەلگىلەڭ ، شۇڭا يېقىن ئەتراپتىكى مەسچىتلەر ، ھالال يېمەكلىكلەر ۋە ئىسلام مەكتەپلىرىنى توغرا ئىزدىگىلى بولىدۇ.",
   "placesMapTilesUnavailableTitle": "خەرىتە كاھىشلىرىنى ئىشلەتكىلى بولمايدۇ",
   "placesMapTilesUnavailableBody": "بۇ قۇرۇلۇش ئۈچۈن دەلىللەنگەن خەرىتە كاھىش مەنبەسى تېخى سەپلەنمىگەن. يېقىن جايلار يەنىلا ساقلانغان ئورنىڭىزدىن يۈكلىيەلەيدۇ.",
-  "prayerRemainingUnavailable": "-"
+  "prayerRemainingUnavailable": "-",
+  "audioVoiceMisharyAlafasy": "ئەر (مىشارى ئالافاسى)",
+  "audioVoiceAbdulBaset": "ئەر (AbdulBaset)",
+  "audioVoiceSudais": "ئەر (سۇدايس)"
 }

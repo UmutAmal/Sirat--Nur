@@ -777,7 +777,16 @@ class AppLocalizationsKri extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Odio Voys';
+  String get audioVoice => 'Audio Voice';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Male (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle we yu de du';

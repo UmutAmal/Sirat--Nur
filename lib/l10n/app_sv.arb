@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Audio Röst",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Ange en plats först så att närliggande moskéer, halalmat och islamiska skolor kan sökas exakt.",
   "placesMapTilesUnavailableTitle": "Kartrutor är inte tillgängliga",
   "placesMapTilesUnavailableBody": "En verifierad kartbrickakälla är inte konfigurerad för den här versionen ännu. Platser i närheten kan fortfarande laddas från din sparade plats.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Man (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Man (AbdulBaset)",
+  "audioVoiceSudais": "Man (sudais)"
 }

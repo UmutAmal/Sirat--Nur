@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Hljóðrödd",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Veldu staðsetningu fyrst svo hægt sé að leita nákvæmlega í moskum, halal-mat og íslömskum skólum í nágrenninu.",
   "placesMapTilesUnavailableTitle": "Kortaflísar ekki tiltækar",
   "placesMapTilesUnavailableBody": "Staðfestur kortaflisuppspretta er ekki stilltur fyrir þessa smíði ennþá. Nálægir staðir geta samt hlaðið inn frá vistaða staðsetningu þinni.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Karlkyns (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Karlkyns (AbdulBaset)",
+  "audioVoiceSudais": "Karlkyns (Sudais)"
 }

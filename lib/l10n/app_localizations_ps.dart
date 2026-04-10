@@ -775,7 +775,16 @@ class AppLocalizationsPs extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'د غږ غږ';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'نارینه (مشیری الفاسی)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'نارینه (عبدالباسط)';
+
+  @override
+  String get audioVoiceSudais => 'نارینه (سدیس)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

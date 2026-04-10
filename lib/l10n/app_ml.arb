@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "ഓഡിയോ വോയ്സ്",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "അടുത്തുള്ള മസ്ജിദുകൾ, ഹലാൽ ഭക്ഷണം, ഇസ്ലാമിക് സ്കൂളുകൾ എന്നിവ കൃത്യമായി തിരയാൻ കഴിയുന്ന തരത്തിൽ ആദ്യം ഒരു സ്ഥലം സജ്ജമാക്കുക.",
   "placesMapTilesUnavailableTitle": "മാപ്പ് ടൈലുകൾ ലഭ്യമല്ല",
   "placesMapTilesUnavailableBody": "ഈ ബിൽഡിനായി പരിശോധിച്ച മാപ്പ് ടൈൽ ഉറവിടം ഇതുവരെ കോൺഫിഗർ ചെയ്‌തിട്ടില്ല. നിങ്ങളുടെ സംരക്ഷിച്ച ലൊക്കേഷനിൽ നിന്ന് സമീപ സ്ഥലങ്ങൾക്ക് തുടർന്നും ലോഡ് ചെയ്യാൻ കഴിയും.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "പുരുഷൻ (മിഷാരി അലഫാസി)",
+  "audioVoiceAbdulBaset": "പുരുഷൻ (അബ്ദുൾബാസെറ്റ്)",
+  "audioVoiceSudais": "പുരുഷൻ (സുദൈസ്)"
 }

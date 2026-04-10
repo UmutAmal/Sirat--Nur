@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Аудио глас",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Първо задайте местоположение, така че близките джамии, халал храна и ислямски училища да могат да се търсят точно.",
   "placesMapTilesUnavailableTitle": "Не са налични плочки на картата",
   "placesMapTilesUnavailableBody": "Все още не е конфигуриран потвърден източник на плочки за тази компилация. Местата наблизо все още могат да се зареждат от запазеното ви местоположение.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Мъжки (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Мъжки (AbdulBaset)",
+  "audioVoiceSudais": "Мъжки (Sudais)"
 }

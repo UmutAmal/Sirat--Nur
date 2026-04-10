@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Locum primum tam prope meschitis, cibus halal, et schola islamica accurate investigari possunt.",
   "placesMapTilesUnavailableTitle": "Map tiles unavailable",
   "placesMapTilesUnavailableBody": "Fons tegularum chartarum certificatus non configuratur ad hoc adhuc constructum. Loca vicina adhuc onerare possunt ex loco servato tuo.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (AbdulBaset)",
+  "audioVoiceSudais": "Masculus (Sudais)"
 }

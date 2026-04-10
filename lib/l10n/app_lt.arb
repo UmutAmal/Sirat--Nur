@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Garso balsas",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Pirmiausia nustatykite vietą, kad būtų galima tiksliai ieškoti netoliese esančių mečečių, halal maisto ir islamo mokyklų.",
   "placesMapTilesUnavailableTitle": "Žemėlapio plytelės nepasiekiamos",
   "placesMapTilesUnavailableBody": "Patvirtintas žemėlapio išklotinės šaltinis šiai versijai dar nesukonfigūruotas. Netoliese esančias vietas vis tiek galima įkelti iš jūsų išsaugotos vietos.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Vyras (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Vyras (AbdulBaset)",
+  "audioVoiceSudais": "Vyras (Sudais)"
 }

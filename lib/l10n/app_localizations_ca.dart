@@ -781,7 +781,16 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Veu d\'àudio';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Home (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Home (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Mascle (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

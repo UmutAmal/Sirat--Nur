@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "ఆడియో వాయిస్",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "ముందుగా లొకేషన్‌ను సెట్ చేయండి, తద్వారా సమీపంలోని మసీదులు, హలాల్ ఫుడ్ మరియు ఇస్లామిక్ పాఠశాలలను ఖచ్చితంగా శోధించవచ్చు.",
   "placesMapTilesUnavailableTitle": "మ్యాప్ టైల్స్ అందుబాటులో లేవు",
   "placesMapTilesUnavailableBody": "ఈ బిల్డ్ కోసం ధృవీకరించబడిన మ్యాప్ టైల్ మూలం ఇంకా కాన్ఫిగర్ చేయబడలేదు. మీరు సేవ్ చేసిన స్థానం నుండి సమీప స్థలాలు ఇప్పటికీ లోడ్ అవుతాయి.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "పురుషుడు (మిషరీ అలఫాసీ)",
+  "audioVoiceAbdulBaset": "మగ (అబ్దుల్ బాసెట్)",
+  "audioVoiceSudais": "మగ (సుడైస్)"
 }

@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Audio Glas",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Prvo postavite lokaciju kako bi se obližnje džamije, halal hrana i islamske škole mogle precizno pretraživati.",
   "placesMapTilesUnavailableTitle": "Pločice mape su nedostupne",
   "placesMapTilesUnavailableBody": "Provjereni izvor pločica karte još nije konfiguriran za ovu izgradnju. Mjesta u blizini se i dalje mogu učitavati s vaše sačuvane lokacije.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "muškarac (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "muško (AbdulBaset)",
+  "audioVoiceSudais": "muško (Sudais)"
 }

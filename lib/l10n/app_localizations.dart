@@ -1906,6 +1906,24 @@ abstract class AppLocalizations {
   /// **'Audio Voice'**
   String get audioVoice;
 
+  /// No description provided for @audioVoiceMisharyAlafasy.
+  ///
+  /// In en, this message translates to:
+  /// **'Male (Mishary Alafasy)'**
+  String get audioVoiceMisharyAlafasy;
+
+  /// No description provided for @audioVoiceAbdulBaset.
+  ///
+  /// In en, this message translates to:
+  /// **'Male (AbdulBaset)'**
+  String get audioVoiceAbdulBaset;
+
+  /// No description provided for @audioVoiceSudais.
+  ///
+  /// In en, this message translates to:
+  /// **'Male (Sudais)'**
+  String get audioVoiceSudais;
+
   /// No description provided for @fajrAngle.
   ///
   /// In en, this message translates to:

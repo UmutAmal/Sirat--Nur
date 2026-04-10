@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Аудио дуу хоолой",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Ойролцоох лалын сүм, халал хоол, исламын сургуулийг үнэн зөв хайж олохын тулд эхлээд байршлыг тогтооно уу.",
   "placesMapTilesUnavailableTitle": "Газрын зургийн хавтан ашиглах боломжгүй",
   "placesMapTilesUnavailableBody": "Баталгаажсан газрын зургийн хавтангийн эх сурвалжийг энэ бүтээцэд хараахан тохируулаагүй байна. Ойролцоох газруудыг таны хадгалсан байршлаас ачаалах боломжтой хэвээр байна.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Эрэгтэй (Мишари Алафаси)",
+  "audioVoiceAbdulBaset": "Эрэгтэй (АбдулБасет)",
+  "audioVoiceSudais": "Эрэгтэй (Судайчууд)"
 }

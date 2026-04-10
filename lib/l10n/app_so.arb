@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Codka Maqalka",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Marka hore deji meel u dhow masaajidda, cuntada xalaasha ah, iyo dugsiyada islaamiga ah si sax ah loogu baadho.",
   "placesMapTilesUnavailableTitle": "Duubabka khariidadu lama heli karo",
   "placesMapTilesUnavailableBody": "Isha foornada khariidad ee la xaqiijiyay wali looma habeynin dhismahan. Meelaha u dhow weli way ka soo rari karaan goobtaada kaydsan.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Lab (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Lab (AbdulBaset)",
+  "audioVoiceSudais": "Lab (Sudais)"
 }

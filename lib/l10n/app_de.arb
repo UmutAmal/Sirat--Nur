@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Audiostimme",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Legen Sie zunächst einen Standort fest, damit in der Nähe befindliche Moscheen, Halal-Essen und islamische Schulen genau gesucht werden können.",
   "placesMapTilesUnavailableTitle": "Kartenkacheln nicht verfügbar",
   "placesMapTilesUnavailableBody": "Für diesen Build ist noch keine verifizierte Kartenkachelquelle konfiguriert. Orte in der Nähe können weiterhin von Ihrem gespeicherten Standort geladen werden.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Männlich (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Männlich (AbdulBaset)",
+  "audioVoiceSudais": "Männlich (Sudais)"
 }

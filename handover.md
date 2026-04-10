@@ -3793,3 +3793,47 @@
 ### Sonraki Adım
 - Yeni turda rare locale kalıntıları için evidence scan açılacak; özellikle download/diagnostics/chatbot kümelerinde safe sibling-fallback uygulanabilen locale’ler ile EN-reference’da dürüst bırakılması gerekenler ayrıştırılacak.
 - Ardından user-facing kalan en yüksek residual hardcoded metin veya false-success zinciri seçilip ayrı minimal patch döngüsüne alınacak.
+## 2026-04-10 TUR-96 — Canonicalize and Localize Audio Voice Labels
+### Yapılan İşlem
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_provider.dart) içine canonical voice id sabitleri (`mishary_alafasy`, `abdul_baset`, `sudais`), `selectableAudioVoices` listesi ve `normalizeAudioVoice` helper’ı eklendi.
+- Aynı dosyada `SettingsState.audioVoice` artık user-facing etiket yerine canonical id saklıyor; legacy değerler (`Male (Mishary Alafasy)`, `Sudais`, `Male (AbdulBaset)`) yüklenirken normalize ediliyor.
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_page.dart) içine `displayAudioVoiceLabel` helper’ı eklendi; ayarlar ekranı ve voice picker artık locale-aware l10n anahtarlarını kullanıyor.
+- `audioVoiceMisharyAlafasy`, `audioVoiceAbdulBaset`, `audioVoiceSudais` anahtarları [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) içine eklendi; ardından `audioVoice` ile birlikte tüm `app_*.arb` setine force batch yayılımı çalıştırıldı ve generated l10n dosyaları yenilendi.
+- Regression genişletildi: [A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/settings_provider_test.dart), [A:\Way of Allah\sirat_i_nur\test\features\settings\settings_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/settings/settings_page_test.dart), [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart).
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_page.dart) voice picker içinde `Male (Mishary Alafasy)` gibi hardcoded İngilizce etiketler kullanıyordu.
+- [A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/settings/settings_provider.dart) aynı etiketleri persistence değeri olarak sakladığı için UI ve storage katmanı birbirine karışıyordu; bu da locale değişince etiket drift’i üretiyordu.
+- Yeni risk taramasında `audioVoice` anahtarının geniş locale setinde İngilizce kaldığı görüldü; safe priority locale seti için bu yüzey kapatıldı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\settings_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Audio voice tercihi artık dil bağımsız canonical kimlik ile saklanıyor; locale değişince aynı kayıt doğru biçimde yeni etiketle gösteriliyor.
+- Safe priority locale setinde `audioVoice` ve üç voice label anahtarı İngilizce fallback vermemeye başladı.
+- Rare base locale setinde `92` dosya hâlâ EN-reference taşıyor; sibling fallback kaynağı olmadığı ve güvenilir otomatik çeviri aynı EN değeri döndürdüğü için bu alanlarda uydurma yapılmadı.
+
+### Test Sonucu
+- `flutter gen-l10n` → PASS
+- `flutter test test/settings_provider_test.dart` → PASS (`10/10`)
+- `flutter test test/features/settings/settings_page_test.dart` → PASS (`5/5`)
+- `flutter test test/arb_ui_localization_test.dart` → PASS (`24/24`)
+- Hedefli testler ilk paralel denemede Windows Flutter tool `NativeAssetsManifest.json` kopyalama çakışmasıyla çöktü; seri tekrar çalıştırmada kod hatası olmadığı doğrulandı.
+- `flutter analyze` → PASS
+- `flutter test` → PASS (`229/229`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Settings audio voice labels stored and rendered as hardcoded English display strings: `13/25 → 3/25`
+- Safe priority locale audio voice English fallback cluster: `14/25 → 4/25`
+
+### Sonraki Adım
+- Rare base locale kümelerinde kalan EN-reference anahtarlar için kanıta dayalı sınıflandırma sürdürülecek; güvenilir fallback kaynağı olmayanlar dürüst EN-reference olarak işaretlenecek, güvenli mapping bulunanlar batch düzeltmeye alınacak.
+- Paralel yeni taramada ayarlar, tracker ve diagnostics yüzeylerinde kalan user-facing hardcoded metinler yeniden sayısallaştırılacak.

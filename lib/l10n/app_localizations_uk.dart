@@ -777,7 +777,16 @@ class AppLocalizationsUk extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Аудіо голос';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Самець (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Чоловік (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Чоловік (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

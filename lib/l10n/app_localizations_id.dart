@@ -776,7 +776,16 @@ class AppLocalizationsId extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Suara Audio';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Laki-laki (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Laki-laki (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Laki-laki (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

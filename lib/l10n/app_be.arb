@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Аўдыё голас",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Спачатку ўсталюйце месцазнаходжанне, каб можна было дакладна шукаць бліжэйшыя мячэці, халяльную ежу і ісламскія школы.",
   "placesMapTilesUnavailableTitle": "Пліткі карты недаступныя",
   "placesMapTilesUnavailableBody": "Правераная крыніца пліткі карты яшчэ не настроена для гэтай зборкі. Месцы паблізу могуць загружацца з вашага захаванага месцазнаходжання.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Самец (Мішары Алафасы)",
+  "audioVoiceAbdulBaset": "Мужчына (AbdulBaset)",
+  "audioVoiceSudais": "Мужчына (Sudais)"
 }

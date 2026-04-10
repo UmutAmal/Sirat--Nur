@@ -776,7 +776,16 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'ఆడియో వాయిస్';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'పురుషుడు (మిషరీ అలఫాసీ)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'మగ (అబ్దుల్ బాసెట్)';
+
+  @override
+  String get audioVoiceSudais => 'మగ (సుడైస్)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

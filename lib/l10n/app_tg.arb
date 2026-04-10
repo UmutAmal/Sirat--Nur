@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Овози аудио",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Аввалан як макон таъин кунед, то масҷидҳои наздик, ғизои ҳалол ва мактабҳои исломиро дақиқ ҷустуҷӯ кунанд.",
   "placesMapTilesUnavailableTitle": "Плитаҳои харита дастрас нестанд",
   "placesMapTilesUnavailableBody": "Манбаи сафҳаи тасдиқшудаи харита барои ин сохтмон ҳанӯз танзим нашудааст. Ҷойҳои ҳамсоя ҳоло ҳам метавонанд аз макони захирашудаи шумо бор кунанд.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Мард (Мишари Алафаси)",
+  "audioVoiceAbdulBaset": "Мард (АбдулБасет)",
+  "audioVoiceSudais": "Мард (Судайс)"
 }

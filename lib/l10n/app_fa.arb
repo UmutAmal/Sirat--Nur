@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "صدای صوتی",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "ابتدا مکانی را تعیین کنید تا مساجد، غذای حلال و مدارس اسلامی در نزدیکی شما به طور دقیق جستجو شوند.",
   "placesMapTilesUnavailableTitle": "کاشی های نقشه در دسترس نیست",
   "placesMapTilesUnavailableBody": "منبع کاشی نقشه تأیید شده هنوز برای این ساخت پیکربندی نشده است. مکان‌های اطراف همچنان می‌توانند از مکان ذخیره‌شده شما بارگیری شوند.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "مرد (میشاری آلفاسی)",
+  "audioVoiceAbdulBaset": "مرد (عبدالبسط)",
+  "audioVoiceSudais": "نر (Sudais)"
 }

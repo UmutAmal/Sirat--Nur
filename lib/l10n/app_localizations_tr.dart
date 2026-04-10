@@ -779,6 +779,15 @@ class AppLocalizationsTr extends AppLocalizations {
   String get audioVoice => 'Ses Seçimi';
 
   @override
+  String get audioVoiceMisharyAlafasy => 'Erkek (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Erkek (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Erkek (Sudais)';
+
+  @override
   String get fajrAngle => 'İmsak Açısı';
 
   @override

@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Voce audio",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Fighjate prima un locu per chì e moschee vicine, l'alimentu halal è e scole islamiche ponu esse cercate accuratamente.",
   "placesMapTilesUnavailableTitle": "Piastrelle di carte ùn sò micca dispunibili",
   "placesMapTilesUnavailableBody": "Una fonte di tile di mappa verificata ùn hè ancu cunfigurata per questa custruzzione. Lochi vicini ponu sempre carica da u vostru locu salvatu.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Masculinu (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Maschile (AbdulBaset)",
+  "audioVoiceSudais": "Maschile (Sudais)"
 }

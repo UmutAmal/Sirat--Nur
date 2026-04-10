@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Ääni Ääni",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Aseta ensin sijainti, jotta lähellä olevat moskeijat, halal-ruoat ja islamilaiset koulut voidaan etsiä tarkasti.",
   "placesMapTilesUnavailableTitle": "Karttaruutuja ei ole saatavilla",
   "placesMapTilesUnavailableBody": "Vahvistettua karttaruutulähdettä ei ole vielä määritetty tälle koontiversiolle. Läheiset paikat voivat silti ladata tallennetusta sijainnistasi.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Mies (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Mies (AbdulBaset)",
+  "audioVoiceSudais": "mies (Sudais)"
 }

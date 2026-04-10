@@ -785,6 +785,16 @@ class AppLocalizationsLus extends AppLocalizations {
   String get audioVoice => 'Audio Voice hmanga tih a ni';
 
   @override
+  String get audioVoiceMisharyAlafasy =>
+      'a ni.\nMipa (Mishary Alafasy) chuan a rawn ti a.';
+
+  @override
+  String get audioVoiceAbdulBaset => 'a ni.\nMipa (AbdulBaset) a ni.';
+
+  @override
+  String get audioVoiceSudais => 'a ni.\nMipa (Sudais) .';
+
+  @override
   String get fajrAngle => 'Fajr Angle a ni';
 
   @override

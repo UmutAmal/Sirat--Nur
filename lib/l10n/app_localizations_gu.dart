@@ -775,7 +775,16 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'ઑડિયો વૉઇસ';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'પુરૂષ (મિશરી અલાફસી)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'પુરૂષ (અબ્દુલબેસેટ)';
+
+  @override
+  String get audioVoiceSudais => 'પુરુષ (સુદાઈ)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

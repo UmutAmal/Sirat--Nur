@@ -779,6 +779,49 @@ void main() {
     );
 
     test(
+      'safe priority locales do not fall back to English for audio voice labels',
+      () {
+        const audioVoiceSafeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'da',
+          'he',
+          'ja',
+          'nb',
+          'nn',
+          'no',
+          'pt',
+          'ru',
+          'vi',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const localizedKeys = [
+          'audioVoice',
+          'audioVoiceMisharyAlafasy',
+          'audioVoiceAbdulBaset',
+          'audioVoiceSudais',
+        ];
+
+        for (final locale in audioVoiceSafeLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
+    test(
       'safe priority locales do not fall back to English for tafsir and places honest-state copy',
       () {
         const safeLocales = [

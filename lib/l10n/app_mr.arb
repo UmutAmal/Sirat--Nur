@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "ऑडिओ आवाज",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "प्रथम स्थान सेट करा जेणेकरून जवळपासच्या मशिदी, हलाल अन्न आणि इस्लामिक शाळा अचूकपणे शोधल्या जाऊ शकतात.",
   "placesMapTilesUnavailableTitle": "नकाशा टाइल अनुपलब्ध",
   "placesMapTilesUnavailableBody": "या बिल्डसाठी सत्यापित नकाशा टाइल स्रोत अद्याप कॉन्फिगर केलेला नाही. तुमच्या सेव्ह केलेल्या स्थानावरून जवळपासची ठिकाणे अजूनही लोड होऊ शकतात.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "पुरुष (मिशारी अलाफसी)",
+  "audioVoiceAbdulBaset": "पुरुष (अब्दुलबसेट)",
+  "audioVoiceSudais": "पुरुष (सुदाई)"
 }

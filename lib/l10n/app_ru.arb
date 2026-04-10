@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Аудио Голос",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Сначала укажите местоположение, чтобы можно было точно найти близлежащие мечети, халяльные рестораны и исламские школы.",
   "placesMapTilesUnavailableTitle": "Фрагменты карты недоступны.",
   "placesMapTilesUnavailableBody": "Подтвержденный источник фрагментов карты еще не настроен для этой сборки. Места поблизости по-прежнему могут загружаться из сохраненного вами местоположения.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Мужской (Мишарий Алафаси)",
+  "audioVoiceAbdulBaset": "Мале (АбдулБасет)",
+  "audioVoiceSudais": "Мале (Судаис)"
 }

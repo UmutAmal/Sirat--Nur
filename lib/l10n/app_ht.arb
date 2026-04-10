@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Odyo Vwa",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Mete yon kote an premye pou moske ki tou pre, manje halal, ak lekòl Islamik yo ka fouye avèk presizyon.",
   "placesMapTilesUnavailableTitle": "Kat mozayik pa disponib",
   "placesMapTilesUnavailableBody": "Yon sous mozayik kat jeyografik verifye poko configuré pou konstriksyon sa a. Kote ki tou pre yo ka toujou chaje nan kote ou te sove yo.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Gason (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Gason (AbdulBaset)",
+  "audioVoiceSudais": "Gason (Sudais)"
 }

@@ -777,7 +777,16 @@ class AppLocalizationsLb extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Audio Stëmm';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Mann (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Männlech (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Männlech (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

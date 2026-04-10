@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Heli hääl",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Esmalt määrake asukoht, et läheduses olevaid mošeesid, halal-toitu ja islamikoole saaks täpselt otsida.",
   "placesMapTilesUnavailableTitle": "Kaardiplaadid pole saadaval",
   "placesMapTilesUnavailableBody": "Kinnitatud kaardipaani allikat pole selle järgu jaoks veel konfigureeritud. Läheduses olevaid kohti saab siiski laadida teie salvestatud asukohast.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Mees (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Mees (AbdulBaset)",
+  "audioVoiceSudais": "Mees (Sudais)"
 }

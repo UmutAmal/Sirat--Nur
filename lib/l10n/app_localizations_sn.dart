@@ -778,6 +778,15 @@ class AppLocalizationsSn extends AppLocalizations {
   String get audioVoice => 'Audio Voice';
 
   @override
+  String get audioVoiceMisharyAlafasy => 'Murume (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Murume (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Murume (Sudais)';
+
+  @override
   String get fajrAngle => 'Fajr Angle';
 
   @override

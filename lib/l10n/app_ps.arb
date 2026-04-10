@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "د غږ غږ",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "لومړی ځای وټاکئ ترڅو نږدې جوماتونه، حلال خواړه، او اسلامي ښوونځي په سمه توګه وپلټل شي.",
   "placesMapTilesUnavailableTitle": "د نقشې ټایلونه شتون نلري",
   "placesMapTilesUnavailableBody": "د دې جوړونې لپاره د تایید شوي نقشې ټایل سرچینه لا نه ده ترتیب شوې. نږدې ځایونه لاهم ستاسو له خوندي شوي ځای څخه بار کولی شي.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "نارینه (مشیری الفاسی)",
+  "audioVoiceAbdulBaset": "نارینه (عبدالباسط)",
+  "audioVoiceSudais": "نارینه (سدیس)"
 }

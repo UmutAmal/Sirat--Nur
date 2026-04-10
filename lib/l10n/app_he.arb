@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "קול אודיו",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "תחילה הגדר מיקום כך שניתן יהיה לחפש במדויק מסגדים, אוכל חלאל ובתי ספר איסלאמיים בקרבת מקום.",
   "placesMapTilesUnavailableTitle": "אריחי מפה אינם זמינים",
   "placesMapTilesUnavailableBody": "מקור אריחי מפה מאומת עדיין לא מוגדר עבור המבנה הזה. מקומות קרובים עדיין יכולים להיטען מהמיקום השמור שלך.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "זכר (מישרי אלאפסי)",
+  "audioVoiceAbdulBaset": "זכר (AbdulBaset)",
+  "audioVoiceSudais": "זכר (סודאים)"
 }

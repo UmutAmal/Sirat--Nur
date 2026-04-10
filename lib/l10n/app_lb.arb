@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Audio Stëmm",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Setzt eng Plaz fir d'éischt sou datt Emgéigend Moscheeën, Halal Iessen, an islamesch Schoule präzis gesicht kënne ginn.",
   "placesMapTilesUnavailableTitle": "Kaart Fliesen net verfügbar",
   "placesMapTilesUnavailableBody": "Eng verifizéiert Kaartfliesquell ass nach net fir dëse Build konfiguréiert. Nopesch Plazen kënnen nach ëmmer vun Ärer gespäichert Plaz lueden.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Mann (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Männlech (AbdulBaset)",
+  "audioVoiceSudais": "Männlech (Sudais)"
 }

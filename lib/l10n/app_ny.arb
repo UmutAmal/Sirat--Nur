@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Khazikitsani malo kaye kuti mizikiti yapafupi, chakudya cha halal, ndi masukulu achisilamu azifufuzidwa molondola.",
   "placesMapTilesUnavailableTitle": "Matailosi amapu sakupezeka",
   "placesMapTilesUnavailableBody": "Malo otsimikizika a matailosi amapu sanakhazikitsidwebe kuti apangidwe pano. Malo apafupi atha kutsegulabe kuchokera komwe mwasungidwa.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (AbdulBaset)",
+  "audioVoiceSudais": "Mwamuna (Sudais)"
 }

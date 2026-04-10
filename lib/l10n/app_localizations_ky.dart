@@ -778,7 +778,16 @@ class AppLocalizationsKy extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Аудио үн';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Эркек (Мишари Алафаси)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Эркек (АбдулБасет)';
+
+  @override
+  String get audioVoiceSudais => 'Эркек (Судайлар)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

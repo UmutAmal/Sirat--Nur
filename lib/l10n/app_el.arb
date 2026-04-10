@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Φωνή ήχου",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Ορίστε πρώτα μια τοποθεσία, ώστε τα κοντινά τζαμιά, το φαγητό χαλάλ και τα ισλαμικά σχολεία να μπορούν να αναζητηθούν με ακρίβεια.",
   "placesMapTilesUnavailableTitle": "Τα πλακίδια χάρτη δεν είναι διαθέσιμα",
   "placesMapTilesUnavailableBody": "Μια επαληθευμένη πηγή πλακιδίων χάρτη δεν έχει διαμορφωθεί ακόμα για αυτήν την έκδοση. Τα κοντινά μέρη μπορούν ακόμα να φορτώσουν από την αποθηκευμένη τοποθεσία σας.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Άντρας (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Άντρας (AbdulBaset)",
+  "audioVoiceSudais": "Αρσενικό (Sudais)"
 }

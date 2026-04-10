@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Sora Audio",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Setel lokasi heula supados masjid caket dieu, kadaharan halal, sareng sakola Islam tiasa milarian sacara akurat.",
   "placesMapTilesUnavailableTitle": "Kotak peta teu sadia",
   "placesMapTilesUnavailableBody": "Sumber ubin peta anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Tempat-tempat caket dieu masih tiasa ngamuat tina lokasi anu anjeun simpen.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Lalaki (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Lalaki (AbdulBaset)",
+  "audioVoiceSudais": "Lalaki (Sudais)"
 }

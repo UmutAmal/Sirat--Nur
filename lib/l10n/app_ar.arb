@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "صوت الصوت",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "قم بتعيين موقع أولاً حتى يمكن البحث بدقة عن المساجد القريبة والطعام الحلال والمدارس الإسلامية.",
   "placesMapTilesUnavailableTitle": "مربعات الخريطة غير متاحة",
   "placesMapTilesUnavailableBody": "لم يتم تكوين مصدر تجانب الخريطة الذي تم التحقق منه لهذا الإصدار حتى الآن. لا يزال من الممكن تحميل الأماكن القريبة من موقعك المحفوظ.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "ذكر (مشاري العفاسي)",
+  "audioVoiceAbdulBaset": "ذكر (عبد الباسط)",
+  "audioVoiceSudais": "ذكر (السديس)"
 }

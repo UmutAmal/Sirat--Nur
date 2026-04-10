@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "აუდიო ხმა",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "ჯერ დააყენეთ მდებარეობა, რათა ზუსტად მოძებნოთ ახლომდებარე მეჩეთები, ჰალალის საკვები და ისლამური სკოლები.",
   "placesMapTilesUnavailableTitle": "რუკის ფილები მიუწვდომელია",
   "placesMapTilesUnavailableBody": "დადასტურებული რუკის ფილა წყარო ჯერ არ არის კონფიგურირებული ამ კონსტრუქციისთვის. ახლომდებარე ადგილები კვლავ შეიძლება ჩაიტვირთოს თქვენი შენახული მდებარეობიდან.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "მამაკაცი (მიშარი ალაფასი)",
+  "audioVoiceAbdulBaset": "მამაკაცი (აბდულბასეტი)",
+  "audioVoiceSudais": "მამაკაცი (სუდაისი)"
 }

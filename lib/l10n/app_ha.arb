@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Muryar Sauti",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Saita wuri da farko don a iya bincika masallatai da ke kusa, abinci na halal, da makarantun islamiyya daidai.",
   "placesMapTilesUnavailableTitle": "Babu fale-falen taswira",
   "placesMapTilesUnavailableBody": "Ba a saita ingantaccen tushen tayal taswira don wannan ginin ba tukuna. Wuraren da ke kusa za su iya ɗauka daga wurin da aka ajiye.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Namiji (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Namiji (AbdulBaset)",
+  "audioVoiceSudais": "Namiji (Sudais)"
 }

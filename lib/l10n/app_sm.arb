@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Leo Leo",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Fa'atulaga muamua se nofoaga ina ia mafai ona su'esu'e sa'o faletapuai lata ane, mea'ai halal, ma a'oga Isalama.",
   "placesMapTilesUnavailableTitle": "E le o avanoa pepa fa'afanua",
   "placesMapTilesUnavailableBody": "E le'i fa'atulagaina se fa'apogai o fa'afanua fa'amaonia mo lenei faufale. O nofoaga lata ane e mafai lava ona la'u mai lou nofoaga sefe.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (AbdulBaset)",
+  "audioVoiceSudais": "Male (Sudais)"
 }

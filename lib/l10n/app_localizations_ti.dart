@@ -775,7 +775,17 @@ class AppLocalizationsTi extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'ድምጺ ድምጺ';
+
+  @override
+  String get audioVoiceMisharyAlafasy =>
+      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nተባዕታይ (ሚሻሪ ኣላፋሲ)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nተባዕታይ (ዓብዱልባሰት)';
+
+  @override
+  String get audioVoiceSudais => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nተባዕታይ (ሱዳይ)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

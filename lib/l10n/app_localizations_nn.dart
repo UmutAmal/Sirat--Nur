@@ -776,7 +776,16 @@ class AppLocalizationsNn extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Lydstemme';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Mann (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Mann (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Mann (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Ilizwi elivakalayo",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Beka indawo kuqala ukuze ii-mosque ezikufutshane, ukutya kwe-halal, kunye nezikolo zamaSilamsi zikhangelwe ngokuchanekileyo.",
   "placesMapTilesUnavailableTitle": "Iithayile zemephu azifumaneki",
   "placesMapTilesUnavailableBody": "Umthombo wethayile wemephu oqinisekisiweyo awukalungiselelwanga olu lwakhiwo okwangoku. Iindawo ezikufuphi zisengalayisha kwindawo yakho egciniweyo.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Indoda (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Indoda (AbdulBaset)",
+  "audioVoiceSudais": "Indoda (Sudais)"
 }

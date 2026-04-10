@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "के लिये।\nपहिने कोनो स्थान निर्धारित करू जाहि सं नजदीकक मस्जिद, हलाल भोजन, आ इस्लामी स्कूलक सटीक खोज भ सकय.",
   "placesMapTilesUnavailableTitle": "के लिये।\nनक्शा टाइल्स अनुपलब्ध",
   "placesMapTilesUnavailableBody": "के लिये।\nएकटा सत्यापित मैप टाइल स्रोत एखन धरि एहि बिल्ड क लेल कॉन्फ़िगर नहि कएल गेल अछि. पास के जगह एखनो अहां के सेव कएल गेल लोकेशन सं लोड भ सकैत अछि.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "के लिये।\nपुरुष (मिशरी अलाफासी) २.",
+  "audioVoiceAbdulBaset": "के लिये।\nपुरुष (अब्दुलबेसेट) २.",
+  "audioVoiceSudais": "के लिये।\nपुरुष (सुदैस) २."
 }

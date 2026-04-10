@@ -775,7 +775,16 @@ class AppLocalizationsNe extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'अडियो आवाज';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'पुरुष (मिशारी अलाफासी)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'पुरुष (अब्दुलबासेट)';
+
+  @override
+  String get audioVoiceSudais => 'पुरुष (सुडाई)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

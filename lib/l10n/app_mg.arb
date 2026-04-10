@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Feo Audio",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Mametraha toerana aloha mba ho azo karohina tsara ny moske manodidina, ny sakafo halal ary ny sekoly Islamika.",
   "placesMapTilesUnavailableTitle": "Tsy hita ny taila sari-tany",
   "placesMapTilesUnavailableBody": "Mbola tsy voarafitra ho an'ity fananganana ity ny loharano misy sarintany voamarina. Mbola afaka misintona avy amin'ny toerana voatahiry ny toerana akaiky anao.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Lahy (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Lehilahy (AbdulBaset)",
+  "audioVoiceSudais": "Lahy (Sudais)"
 }

@@ -12,7 +12,7 @@ void main() {
       expect(state.fajrAngle, 18.0);
       expect(state.ishaAngle, 17.0);
       expect(state.isDarkMode, true);
-      expect(state.audioVoice, 'Male (Mishary Alafasy)');
+      expect(state.audioVoice, misharyAlafasyVoice);
       expect(state.languageCode, isNull);
       expect(state.latitude, isNull);
       expect(state.longitude, isNull);
@@ -33,7 +33,7 @@ void main() {
       // Unchanged values remain
       expect(updated.ishaAngle, 17.0);
       expect(updated.isDarkMode, true);
-      expect(updated.audioVoice, 'Male (Mishary Alafasy)');
+      expect(updated.audioVoice, misharyAlafasyVoice);
     });
 
     test('copyWith with no arguments returns equivalent state', () {
@@ -80,7 +80,7 @@ void main() {
       expect(notifier.state.fajrAngle, 18.0);
       expect(notifier.state.ishaAngle, 17.0);
       expect(notifier.state.isDarkMode, false);
-      expect(notifier.state.audioVoice, 'Sudais');
+      expect(notifier.state.audioVoice, sudaisVoice);
       expect(notifier.state.languageCode, 'tr');
       expect(notifier.state.latitude, 41.0);
       expect(notifier.state.longitude, 29.0);
@@ -153,6 +153,15 @@ void main() {
       expect(notifier.state.locationName, isNull);
       expect(notifier.state.timezone, isNull);
       expect(prefs.containsKey('timezone'), isFalse);
+    });
+
+    test('updateAudioVoice persists canonical ids instead of display labels', () async {
+      final notifier = SettingsNotifier(prefs);
+
+      await notifier.updateAudioVoice('Male (AbdulBaset)');
+
+      expect(notifier.state.audioVoice, abdulBasetVoice);
+      expect(prefs.getString('audioVoice'), abdulBasetVoice);
     });
   });
 }

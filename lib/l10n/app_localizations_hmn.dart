@@ -781,6 +781,15 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get audioVoice => 'Lub Suab';
 
   @override
+  String get audioVoiceMisharyAlafasy => 'Txiv neej (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Txiv neej (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Txiv neej (Sudais)';
+
+  @override
   String get fajrAngle => 'Fajr Angle';
 
   @override

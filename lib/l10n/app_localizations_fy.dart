@@ -776,7 +776,16 @@ class AppLocalizationsFy extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Audio Stim';
+
+  @override
+  String get audioVoiceMisharyAlafasy => 'Man (Mishary Alafasy)';
+
+  @override
+  String get audioVoiceAbdulBaset => 'Man (AbdulBaset)';
+
+  @override
+  String get audioVoiceSudais => 'Man (Sûdais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

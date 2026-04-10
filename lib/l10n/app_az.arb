@@ -209,7 +209,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Audio Səs",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -755,5 +755,8 @@
   "placesLocationRequiredBody": "Əvvəlcə yer təyin edin ki, yaxınlıqdakı məscidlər, halal yeməklər və İslam məktəbləri dəqiq axtarılsın.",
   "placesMapTilesUnavailableTitle": "Xəritə plitələri əlçatan deyil",
   "placesMapTilesUnavailableBody": "Doğrulanmış xəritə mənbəsi hələ bu quruluş üçün konfiqurasiya edilməyib. Yaxınlıqdakı yerlər hələ də saxladığınız yerdən yükləyə bilər.",
-  "prayerRemainingUnavailable": "--"
+  "prayerRemainingUnavailable": "--",
+  "audioVoiceMisharyAlafasy": "Kişi (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Kişi (AbdulBaset)",
+  "audioVoiceSudais": "Kişi (Sudais)"
 }
