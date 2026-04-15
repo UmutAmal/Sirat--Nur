@@ -14,6 +14,14 @@ final supabaseClientProvider = Provider<SupabaseClient>((ref) {
   return Supabase.instance.client;
 });
 
+SupabaseClient? readOptionalSupabaseClient(Ref ref) {
+  try {
+    return ref.read(supabaseClientProvider);
+  } catch (_) {
+    return null;
+  }
+}
+
 const Duration dailyAyatCacheTtl = Duration(hours: 24);
 const String _dailyAyatCacheValueKey = 'daily_ayat_cache_value';
 const String _dailyAyatCacheStoredAtKey = 'daily_ayat_cache_stored_at';
@@ -129,11 +137,8 @@ Future<Map<String, dynamic>> resolveDailyAyat({
 final dailyAyatProvider = FutureProvider<Map<String, dynamic>>((ref) async {
   final prefs = ref.read(sharedPreferencesProvider);
   final formattedDate = DateTime.now().toIso8601String().split('T')[0];
-  late final SupabaseClient supabase;
-
-  try {
-    supabase = ref.read(supabaseClientProvider);
-  } catch (_) {
+  final supabase = readOptionalSupabaseClient(ref);
+  if (supabase == null) {
     final cachedAyat = readCachedDailyAyat(prefs);
     if (cachedAyat != null) {
       return cachedAyat;
@@ -217,7 +222,10 @@ Map<String, String> resolveCloudSukunSources(List<Map<String, dynamic>> rows) {
 final sukunAudioSourcesProvider = FutureProvider<Map<String, String>>((
   ref,
 ) async {
-  final supabase = ref.read(supabaseClientProvider);
+  final supabase = readOptionalSupabaseClient(ref);
+  if (supabase == null) {
+    return const {};
+  }
 
   try {
     final res = await supabase.from('audio_files').select().order('id');
@@ -253,7 +261,10 @@ final educationTopicsProvider =
     });
 
 final dailyDuasProvider = FutureProvider<List<DuaData>>((ref) async {
-  final supabase = ref.read(supabaseClientProvider);
+  final supabase = readOptionalSupabaseClient(ref);
+  if (supabase == null) {
+    return bundledDailyDuaFallback();
+  }
 
   try {
     final res = await supabase
@@ -269,7 +280,10 @@ final dailyDuasProvider = FutureProvider<List<DuaData>>((ref) async {
 final asmaUlHusnaProvider = FutureProvider<List<Map<String, dynamic>>>((
   ref,
 ) async {
-  final supabase = ref.read(supabaseClientProvider);
+  final supabase = readOptionalSupabaseClient(ref);
+  if (supabase == null) {
+    return buildBundledAsmaUlHusnaFallback();
+  }
 
   try {
     final res = await supabase

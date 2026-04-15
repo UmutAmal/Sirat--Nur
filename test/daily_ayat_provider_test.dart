@@ -131,4 +131,30 @@ void main() {
       );
     },
   );
+
+  test(
+    'fallback-backed cloud providers do not bypass local fallback when Supabase is unavailable',
+    () async {
+      final prefs = await SharedPreferences.getInstance();
+      final container = ProviderContainer(
+        overrides: [
+          sharedPreferencesProvider.overrideWithValue(prefs),
+          supabaseClientProvider.overrideWith(
+            (_) => throw StateError('supabase_unavailable'),
+          ),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      final sukunSources = await container.read(
+        sukunAudioSourcesProvider.future,
+      );
+      final duas = await container.read(dailyDuasProvider.future);
+      final asmaNames = await container.read(asmaUlHusnaProvider.future);
+
+      expect(sukunSources, isEmpty);
+      expect(duas, isNotEmpty);
+      expect(asmaNames, hasLength(99));
+    },
+  );
 }

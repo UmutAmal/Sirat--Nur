@@ -6183,3 +6183,39 @@
 
 ### Sonraki Adım
 - Sonraki döngüde Supabase client edinme hatasının benzer şekilde cache/fallback zincirini bypass ettiği diğer provider'lar taranacak; özellikle `sukunAudioSourcesProvider`, `dailyDuasProvider`, `asmaUlHusnaProvider` ve Quran/audio provider zincirleri kontrol edilecek.
+
+## 2026-04-15 TUR-160 — Preserve Fallback Providers When Supabase Client Is Missing
+
+### Yapılan İşlem
+- `readOptionalSupabaseClient` helper'ı eklendi; Supabase client henüz yoksa veya init başarısızsa exception yerine `null` döndürüyor.
+- `dailyAyatProvider` bu helper'a taşındı; önceki cache fallback davranışı korunup tekrar kullanıldı.
+- `sukunAudioSourcesProvider`, Supabase client yoksa boş güvenli kaynak haritası döndürerek mevcut honest unavailable state'in çalışmasına izin veriyor.
+- `dailyDuasProvider`, Supabase client yoksa doğrulanmış bundled dua fallback'ine dönüyor.
+- `asmaUlHusnaProvider`, Supabase client yoksa bundled Esma fallback'ini döndürüyor.
+- `daily_ayat_provider_test.dart` içine fallback-backed cloud provider'ların Supabase unavailable durumunda local fallback'i bypass etmediğini doğrulayan test eklendi.
+
+### Neden Yapıldı
+- `sukunAudioSourcesProvider`, `dailyDuasProvider` ve `asmaUlHusnaProvider` sorgu hatalarını yakalıyordu; ancak `ref.read(supabaseClientProvider)` çağrısı try/catch dışında olduğu için Supabase init/client hatasında fallback zinciri devreye girmeden provider kırılabilirdi.
+- Kök sebep, cloud client edinme adımının fallback kontrolünden ayrı tutulmasıydı.
+- Bu, özellikle offline/ilk açılış/konfigürasyon hatası senaryolarında kullanıcıya boş ekran veya provider error gösterebilirdi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart`
+- `A:\Way of Allah\sirat_i_nur\test\daily_ayat_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Fallback'i olan cloud provider'lar Supabase client erişilemezken de güvenli, doğrulanmış yerel alternatife düşer.
+- Sukun tarafı sahte ses üretmez; boş kaynak döndürür ve UI honest unavailable state'i gösterir.
+- Dua ve Esma tarafı mevcut doğrulanmış bundled fallback zincirini korur.
+
+### Test Sonucu
+- `flutter test test\daily_ayat_provider_test.dart --reporter compact` PASS (`6/6`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`328/328`)
+
+### Risk Değişimi
+- Supabase client edinme hatasının fallback-backed provider'larda local fallback'i bypass etme riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki döngüde cloud-only provider'lar (`liveTvProvider`, `educationCategoriesProvider`, `educationTopicsProvider`) kullanıcıya dürüst hata/empty state veriyor mu ve client-unavailable halinde raw crash üretmeden yönetiliyor mu kontrol edilecek.
