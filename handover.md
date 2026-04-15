@@ -4650,3 +4650,39 @@
 
 ### Sonraki Adım
 - Yeni döngüde Kur'an indeks, jüz ve sure yükleme loglarında kalan raw hata desenleri kapatılacak.
+
+## 2026-04-15 TUR-119 — Sanitize Quran Load Failure Logs
+
+### Yapılan İşlem
+- `lib/features/quran/quran_page.dart`, `lib/features/quran/juz_reading_page.dart` ve `lib/features/quran/surah_reading_page.dart` yükleme catch blokları raw exception metni loglamayacak şekilde güncellendi.
+- Kullanıcıya gösterilen `l10n.quranLoadFailed` hata state'i aynen korundu.
+- `test/features/quran/quran_error_copy_test.dart` Kur'an indeks, jüz ve sure yükleme loglarında eski `$error/$e` desenlerinin geri dönmesini yakalayacak şekilde genişletildi.
+
+### Neden Yapıldı
+- `lib/features/quran/quran_page.dart:57`, `lib/features/quran/juz_reading_page.dart:73` ve `lib/features/quran/surah_reading_page.dart:99` önce raw yükleme exception metnini logluyordu.
+- Kur'an içerik yükleme akışı core dini içerik yüzeyi olduğu için kullanıcıya veya loglara ham altyapı hata ayrıntısı taşımamalı.
+- UI tarafında zaten localized, güvenli ve dürüst hata mesajı kullanılıyor.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\quran_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\juz_reading_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\quran_error_copy_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kur'an indeks, jüz ve sure yükleme başarısızlıklarında raw exception loglanmaz.
+- Kullanıcı hâlâ localized `quranLoadFailed` mesajını görür.
+- Regresyon testi eski raw log desenlerinin geri dönmesini engeller.
+
+### Test Sonucu
+- `flutter test test\features\quran\quran_error_copy_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`255/255`)
+- `git diff --check` PASS (sadece CRLF uyarıları)
+
+### Risk Değişimi
+- Kur'an yükleme raw exception loglama riski: `9/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde kalan `debugPrint` noktaları tekrar taranacak; raw hata kalmadıysa hardcoded/localization veya false-success risklerine geri dönülecek.

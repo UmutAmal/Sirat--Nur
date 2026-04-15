@@ -69,8 +69,8 @@ class _JuzReadingPageState extends ConsumerState<JuzReadingPage> {
         _entries = entries;
         _isLoading = false;
       });
-    } catch (error) {
-      debugPrint('Quran juz load failed: $error');
+    } catch (_) {
+      debugPrint('Quran juz load failed');
       if (!mounted) return;
       final l10n = AppLocalizations.of(context)!;
       setState(() {

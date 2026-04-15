@@ -53,8 +53,8 @@ class _QuranPageState extends ConsumerState<QuranPage>
         _surahs = parseBundledSurahDisplayInfoList(data);
         _isLoading = false;
       });
-    } catch (error) {
-      debugPrint('Quran index load failed: $error');
+    } catch (_) {
+      debugPrint('Quran index load failed');
       if (!mounted) return;
       final l10n = AppLocalizations.of(context)!;
       setState(() {

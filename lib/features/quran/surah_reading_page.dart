@@ -95,8 +95,8 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
         _error = surahData == null ? l10n.noResults : null;
         _isLoading = false;
       });
-    } catch (e) {
-      debugPrint('Error loading quran json: $e');
+    } catch (_) {
+      debugPrint('Quran surah load failed');
       if (mounted) {
         final l10n = AppLocalizations.of(context)!;
         setState(() {

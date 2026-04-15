@@ -41,6 +41,21 @@ void main() {
       );
       expect(
         source,
+        isNot(contains(r'Quran index load failed: $error')),
+        reason: '${file.path} logs raw Quran index load errors',
+      );
+      expect(
+        source,
+        isNot(contains(r'Quran juz load failed: $error')),
+        reason: '${file.path} logs raw Quran juz load errors',
+      );
+      expect(
+        source,
+        isNot(contains(r'Error loading quran json: $e')),
+        reason: '${file.path} logs raw Quran surah load errors',
+      );
+      expect(
+        source,
         contains('quranLoadFailed'),
         reason: '${file.path} must use localized Quran load failure copy',
       );
