@@ -32,7 +32,8 @@ void main() {
       await pumpChatbotPage(tester, const Locale('en'));
 
       expect(find.text('Assistant'), findsOneWidget);
-      expect(find.text('Cloud AI'), findsOneWidget);
+      expect(find.text('Offline Fallback'), findsOneWidget);
+      expect(find.text('Cloud AI'), findsNothing);
       expect(find.text('20 left'), findsOneWidget);
 
       await tester.tap(find.byIcon(Icons.tune_rounded));
@@ -40,22 +41,10 @@ void main() {
 
       expect(find.text('Use Cloud AI (Gemini)'), findsOneWidget);
       expect(find.text('Enable Offline Fallback'), findsOneWidget);
-      await tester.tap(find.text('Use Cloud AI (Gemini)'));
-      await tester.pumpAndSettle();
-
-      await tester.ensureVisible(find.byType(TextField));
-      await tester.enterText(find.byType(TextField), 'help');
-      await tester.tap(find.byIcon(Icons.send_rounded));
-      await tester.pump();
-      await tester.pump(const Duration(milliseconds: 500));
-      await tester.pumpAndSettle();
-
-      expect(
-        find.text(
-          'Cloud API is not configured. Verified offline Islamic guidance is not available yet.',
-        ),
-        findsOneWidget,
+      final cloudItem = tester.widget<PopupMenuItem<String>>(
+        find.widgetWithText(PopupMenuItem<String>, 'Use Cloud AI (Gemini)'),
       );
+      expect(cloudItem.enabled, isFalse);
     } finally {
       await disposeChatbotPage(tester);
     }
@@ -68,7 +57,8 @@ void main() {
       await pumpChatbotPage(tester, const Locale('tr'));
 
       expect(find.text('Asistan'), findsOneWidget);
-      expect(find.text('Bulut AI'), findsOneWidget);
+      expect(find.text('Çevrimdışı Fallback'), findsOneWidget);
+      expect(find.text('Bulut AI'), findsNothing);
       expect(find.text('20 kaldı'), findsOneWidget);
 
       await tester.tap(find.byIcon(Icons.tune_rounded));
@@ -76,22 +66,10 @@ void main() {
 
       expect(find.text('Bulut AI Kullan (Gemini)'), findsOneWidget);
       expect(find.text("Çevrimdışı Fallback'i Etkinleştir"), findsOneWidget);
-      await tester.tap(find.text('Bulut AI Kullan (Gemini)'));
-      await tester.pumpAndSettle();
-
-      await tester.ensureVisible(find.byType(TextField));
-      await tester.enterText(find.byType(TextField), 'yardim');
-      await tester.tap(find.byIcon(Icons.send_rounded));
-      await tester.pump();
-      await tester.pump(const Duration(milliseconds: 500));
-      await tester.pumpAndSettle();
-
-      expect(
-        find.text(
-          'Bulut API ayarlanmadı. Doğrulanmış çevrimdışı İslami rehberlik henüz hazır değil.',
-        ),
-        findsOneWidget,
+      final cloudItem = tester.widget<PopupMenuItem<String>>(
+        find.widgetWithText(PopupMenuItem<String>, 'Bulut AI Kullan (Gemini)'),
       );
+      expect(cloudItem.enabled, isFalse);
     } finally {
       await disposeChatbotPage(tester);
     }

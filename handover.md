@@ -6910,3 +6910,39 @@
 
 ### Sonraki Adım
 - Sonraki dongude kalan secret/config taramasi `API_KEY`, `SECRET`, `TOKEN`, `YOUR_`, `example.com`, `localhost` ve platform manifest dosyalari uzerinden surdurulecek; ardindan en yuksek production riskli bulguya minimal patch uygulanacak.
+
+## 2026-04-16 TUR-179 — Make Chatbot Cloud Status Honest When Gemini Is Missing
+
+### Yapılan İşlem
+- Chatbot artik `GEMINI_API_KEY` yokken baslangicta `Offline Fallback` modunda aciliyor.
+- Gemini chat session olusmadiysa Cloud AI popup menu item'i disabled hale getirildi.
+- Savunmali olarak cloud secimi chat session yokken tetiklenirse localized `chatbotCloudNotConfigured` snackbar'i gosteriliyor ve cloud moduna gecilmiyor.
+- EN/TR widget testleri key yokken Cloud rozetinin gorunmemesini, Offline Fallback rozetinin gorunmesini ve Cloud menu item'inin disabled kalmasini dogrulayacak sekilde guncellendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart:45` `_isOfflineMode=false` basliyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart:53` `GEMINI_API_KEY` bosken `_chat` null kaliyor ama UI satir 167-169 araliginda hala `chatbotCloudAiLabel` gosteriyordu.
+- Bu, cloud servis hazir degilken kullaniciya Cloud AI hazir sinyali verdigi icin false-ready riskidir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\chatbot\chatbot_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Gemini key enjekte edilmemis build'lerde chatbot kendini cloud hazir gibi gostermiyor.
+- Kullanici cloud moduna gecemez; bunun yerine dogrulanmis local dataset hazir olana kadar sinirli ve durust offline fallback akisinda kalir.
+- Gemini key build-time verildiginde `_initGemini()` chat session'i olusturur ve Cloud AI modu normal calismaya devam eder.
+
+### Test Sonucu
+- `flutter test test\features\chatbot\chatbot_page_test.dart` PASS (`5/5`)
+- `flutter test test\chatbot_system_instruction_test.dart` PASS (`2/2`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`356/356`)
+
+### Risk Değişimi
+- Gemini key yokken chatbotun Cloud AI hazir gibi gorunmesi riski: `12/25 -> 1/25`
+- Kullanici cloud secimini gercek chat session olmadan etkinlestirebilme riski: `10/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude chatbot offline/local dataset tarafinda gercek veri yokken kalan copy ve mode akislarinin tamamı taranacak; ardindan `example.com`/`tiles.example.com` dokumantasyon placeholder'lari ve production manifest ayarlari tekrar ayrilacak.

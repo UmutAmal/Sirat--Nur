@@ -42,7 +42,7 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
   final _scrollController = ScrollController();
   GenerativeModel? _model;
   ChatSession? _chat;
-  bool _isOfflineMode = false;
+  bool _isOfflineMode = _geminiApiKey.isEmpty;
 
   @override
   void initState() {
@@ -51,14 +51,17 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
   }
 
   void _initGemini() {
-    if (_geminiApiKey.isNotEmpty) {
-      _model = GenerativeModel(
-        model: 'gemini-2.0-flash',
-        apiKey: _geminiApiKey,
-        systemInstruction: Content.system(islamicChatbotSystemInstruction),
-      );
-      _chat = _model!.startChat();
+    if (_geminiApiKey.isEmpty) {
+      return;
     }
+
+    _model = GenerativeModel(
+      model: 'gemini-2.0-flash',
+      apiKey: _geminiApiKey,
+      systemInstruction: Content.system(islamicChatbotSystemInstruction),
+    );
+    _chat = _model!.startChat();
+    _isOfflineMode = false;
   }
 
   @override
@@ -180,12 +183,21 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
           PopupMenuButton<String>(
             icon: const Icon(Icons.tune_rounded),
             onSelected: (val) {
-              if (val == 'cloud') setState(() => _isOfflineMode = false);
+              if (val == 'cloud') {
+                if (_chat == null) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text(l10n.chatbotCloudNotConfigured)),
+                  );
+                  return;
+                }
+                setState(() => _isOfflineMode = false);
+              }
               if (val == 'local') _showLocalAiDownloadDialog();
             },
             itemBuilder: (ctx) => [
               PopupMenuItem(
                 value: 'cloud',
+                enabled: _chat != null,
                 child: Text(l10n.chatbotUseCloudAi),
               ),
               PopupMenuItem(
