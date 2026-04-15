@@ -5759,3 +5759,43 @@
 
 ### Sonraki Adım
 - Yeni döngüde global taramadaki raw debug/error yüzeyleri ve dependency freshness çıktısı skorlanacak; ilk olarak kullanıcıya açık hata mesajı veya üretim davranışı etkileyen yüzeyler kapatılacak.
+
+## 2026-04-15 TUR-149 — Remove Stale Android Maps and Ads Placeholders
+
+### Yapılan İşlem
+- `AndroidManifest.xml` içindeki kullanılmayan `com.google.android.geo.API_KEY` metadata'sı ve `YOUR_GOOGLE_MAPS_API_KEY` placeholder'ı kaldırıldı.
+- Manifestte duran AdMob test application id metadata'sı kaldırıldı.
+- Dart kodunda hiç kullanılmayan `google_mobile_ads` dependency'si `pubspec.yaml` ve `pubspec.lock` içinden çıkarıldı.
+- `android/app/build.gradle.kts` içindeki default Flutter scaffold `TODO` yorumları temizlendi; application id zaten gerçek paket id olduğu için korunup testlendi.
+- `android_config_test.dart` eklendi; Maps/AdMob placeholder metadata'sı, AdMob test id'si, kullanılmayan ads dependency'si ve Gradle TODO'ları geri gelirse test fail edecek.
+
+### Neden Yapıldı
+- Global platform taramasında `android/app/src/main/AndroidManifest.xml:43-47` aralığında Google Maps placeholder key'i ve AdMob test id'si bulundu.
+- `rg` taraması `google_mobile_ads`, `MobileAds`, `BannerAd` veya AdRequest kullanımının Dart tarafında hiç olmadığını gösterdi; dependency ve manifest metadata'sı fiili feature'a bağlı değildi.
+- Bu sahte metadata üretim APK'sına taşınırsa "placeholder yok, sahte yok" kuralını ihlal eder ve mağaza/SDK davranışında yanlış sinyal üretir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\AndroidManifest.xml`
+- `A:\Way of Allah\sirat_i_nur\android\app\build.gradle.kts`
+- `A:\Way of Allah\sirat_i_nur\pubspec.yaml`
+- `A:\Way of Allah\sirat_i_nur\pubspec.lock`
+- `A:\Way of Allah\sirat_i_nur\test\android_config_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Android APK artık kullanılmayan Google Maps ve AdMob placeholder/test metadata'sı taşımıyor.
+- Kullanılmayan ads dependency'si kaldırıldığı için bağımlılık yüzeyi küçüldü.
+- Android platform config regresyonu testle korunuyor.
+
+### Test Sonucu
+- `flutter pub get` PASS
+- `flutter test test\android_config_test.dart --reporter compact` PASS (`2/2`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`304/304`)
+- `flutter build apk --release` PASS (`build\app\outputs\flutter-apk\app-release.apk`, 85.5 MB)
+
+### Risk Değişimi
+- Android üretim paketinde stale Google Maps/AdMob placeholder metadata ship edilmesi riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde dependency freshness tablosundaki güvenli patch/minor güncellemeler ile raw error/debug yüzeyleri yeniden skorlanacak; yüksek etkili olan önce kapatılacak.
