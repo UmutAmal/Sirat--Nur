@@ -12,7 +12,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur chuan a rawn ti a';
 
   @override
-  String get splashTagline => 'a ni.\nIslamic Way of Light tih hi a ni';
+  String get splashTagline => 'Islamic Way of Light tih hi a ni';
 
   @override
   String get home => 'In lamah';
@@ -139,13 +139,13 @@ class AppLocalizationsLus extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'a ni.\nResults hmuh tur a awm lo';
+  String get noResults => 'Results hmuh tur a awm lo';
 
   @override
-  String get loading => 'a ni.\nLoading mek a ni...';
+  String get loading => 'Loading mek a ni...';
 
   @override
-  String get error => 'a ni.\nThil tihsual a awm';
+  String get error => 'Thil tihsual a awm';
 
   @override
   String get appErrorOccurred => 'Error a awm a';
@@ -161,7 +161,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get retry => 'Ti leh rawh';
 
   @override
-  String get refreshAction => 'a ni.\nRefresh leh rawh';
+  String get refreshAction => 'Refresh leh rawh';
 
   @override
   String get cancel => 'Cancel rawh';
@@ -170,7 +170,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get save => 'Save rawh';
 
   @override
-  String get delete => 'a ni.\nDelete rawh';
+  String get delete => 'Delete rawh';
 
   @override
   String get edit => 'Edit rawh';
@@ -214,26 +214,25 @@ class AppLocalizationsLus extends AppLocalizations {
   String get tafsir => 'Tafsir a ni';
 
   @override
-  String get tafsirLoading => 'a ni.\nLoading tafsir a ni...';
+  String get tafsirLoading => 'Loading tafsir a ni...';
 
   @override
-  String get tafsirSourceLabel => 'a ni.\nTafsir atanga lo chhuak a ni';
+  String get tafsirSourceLabel => 'Tafsir atanga lo chhuak a ni';
 
   @override
   String get tafsirNoSurahFound =>
-      'a ni.\nHe surah atan hian tafsir hmuh tur a awm lo.';
+      'He surah atan hian tafsir hmuh tur a awm lo.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'a ni.\nAyah $ayah tan tafsir hmuh tur a awm lo.';
+    return 'Ayah $ayah tan tafsir hmuh tur a awm lo.';
   }
 
   @override
-  String get tafsirLoadFailed => 'a ni.\nTafsir chu a phur thei lo.';
+  String get tafsirLoadFailed => 'Tafsir chu a phur thei lo.';
 
   @override
-  String get tafsirNoTextForAyah =>
-      'a ni.\nHe ayah atan hian tafsir text a awm lo.';
+  String get tafsirNoTextForAyah => 'He ayah atan hian tafsir text a awm lo.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -247,12 +246,12 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'a ni.\nTafsir source chuan HTTP $statusCode error a rawn pe leh a.';
+    return 'Tafsir source chuan HTTP $statusCode error a rawn pe leh a.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'a ni.\nTafsir source thlan chuan entry a rawn pe lo.';
+      'Tafsir source thlan chuan entry a rawn pe lo.';
 
   @override
   String get bookmarks => 'Bookmarks te pawh a awm';
@@ -544,16 +543,16 @@ class AppLocalizationsLus extends AppLocalizations {
   String get downloading => 'Download mek a ni...';
 
   @override
-  String get downloadComplete => 'a ni.\nDownload zawh tawh';
+  String get downloadComplete => 'Download zawh tawh';
 
   @override
-  String get downloadFailed => 'a ni.\nDownload a hlawhchham';
+  String get downloadFailed => 'Download a hlawhchham';
 
   @override
   String get offlineMode => 'Offline Mode ah a awm';
 
   @override
-  String get noInternet => 'a ni.\nInternet Connection a awm lo';
+  String get noInternet => 'Internet Connection a awm lo';
 
   @override
   String get checkConnection => 'Khawngaihin i connection kha lo en ve teh';
@@ -727,8 +726,7 @@ class AppLocalizationsLus extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager =>
-      'a ni.\nOffline a Download theihna tur a ni';
+  String get offlineDownloadManager => 'Offline a Download theihna tur a ni';
 
   @override
   String get manageDatasets =>
@@ -1058,11 +1056,11 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'a ni.\nTunah hian Premium product a awm lo. Nakinah han lo en leh teh.';
+      'Tunah hian Premium product a awm lo. Nakinah han lo en leh teh.';
 
   @override
   String get premiumPurchaseFailed =>
-      'a ni.\nPurchase pawh a zo thei lo. Khawngaihin han lo try leh teh.';
+      'Purchase pawh a zo thei lo. Khawngaihin han lo try leh teh.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus a ni bawk';
@@ -1175,7 +1173,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'a ni.\nOffline Islamic knowledge base verified chu an la curate mek a ni. Tunah chuan offline fallback i enable thei tawh a, mahse sourced dataset a inpeih hma chuan safe message tlemte chauh a lantir ang.\n\nOffline fallback hi enable i duh em?';
+      'Offline Islamic knowledge base verified chu an la curate mek a ni. Tunah chuan offline fallback i enable thei tawh a, mahse sourced dataset a inpeih hma chuan safe message tlemte chauh a lantir ang.\n\nOffline fallback hi enable i duh em?';
 
   @override
   String get chatbotOfflineSwitched =>
@@ -1365,18 +1363,18 @@ class AppLocalizationsLus extends AppLocalizations {
       'Network tihsual a awm. Khawngaihin han lo try leh teh.';
 
   @override
-  String get placesLocationRequiredTitle => 'a ni.\nHmun a ngai a ni';
+  String get placesLocationRequiredTitle => 'Hmun a ngai a ni';
 
   @override
   String get placesLocationRequiredBody =>
-      'a ni.\nMosque hnai tak tak, halal food, leh Islamic school te dik taka zawn theih nan hmun siam hmasa phawt ang che.';
+      'Mosque hnai tak tak, halal food, leh Islamic school te dik taka zawn theih nan hmun siam hmasa phawt ang che.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'a ni.\nMap tiles a awm lo';
+  String get placesMapTilesUnavailableTitle => 'Map tiles a awm lo';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'a ni.\nHe build atan hian verified map tile source hi configure a la ni lo. I saved location atang hian hmun hnai tak tak te chu a la load thei tho.';
+      'He build atan hian verified map tile source hi configure a la ni lo. I saved location atang hian hmun hnai tak tak te chu a la load thei tho.';
 
   @override
   String get unknownPlaceName => 'Hming hriat loh';

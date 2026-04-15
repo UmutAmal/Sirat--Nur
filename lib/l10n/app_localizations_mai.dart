@@ -12,7 +12,7 @@ class AppLocalizationsMai extends AppLocalizations {
   String get appTitle => 'सिरात-ı नूर';
 
   @override
-  String get splashTagline => 'के लिये।\nइस्लामी प्रकाश के तरीका';
+  String get splashTagline => 'इस्लामी प्रकाश के तरीका';
 
   @override
   String get home => 'घर';
@@ -139,13 +139,13 @@ class AppLocalizationsMai extends AppLocalizations {
   String get searchHint => 'खोज...';
 
   @override
-  String get noResults => 'के लिये।\nकोनो परिणाम नहि भेटल';
+  String get noResults => 'कोनो परिणाम नहि भेटल';
 
   @override
-  String get loading => 'के लिये।\nलोड भ रहल अछि...';
+  String get loading => 'लोड भ रहल अछि...';
 
   @override
-  String get error => 'के लिये।\nत्रुटि';
+  String get error => 'त्रुटि';
 
   @override
   String get appErrorOccurred => 'एकटा त्रुटि भेल';
@@ -161,7 +161,7 @@ class AppLocalizationsMai extends AppLocalizations {
   String get retry => 'पुनः प्रयास करू';
 
   @override
-  String get refreshAction => 'के लिये।\nताज़ा करू';
+  String get refreshAction => 'ताज़ा करू';
 
   @override
   String get cancel => 'रद्द करू';
@@ -170,7 +170,7 @@ class AppLocalizationsMai extends AppLocalizations {
   String get save => 'बचाउ';
 
   @override
-  String get delete => 'के लिये।\nमेटाउ';
+  String get delete => 'मेटाउ';
 
   @override
   String get edit => 'संपादन करू';
@@ -214,26 +214,24 @@ class AppLocalizationsMai extends AppLocalizations {
   String get tafsir => 'तफसीर';
 
   @override
-  String get tafsirLoading => 'के लिये।\nलोड हो रहल अछि tafsir...';
+  String get tafsirLoading => 'लोड हो रहल अछि tafsir...';
 
   @override
-  String get tafsirSourceLabel => 'के लिये।\nतफसीर स्रोत';
+  String get tafsirSourceLabel => 'तफसीर स्रोत';
 
   @override
-  String get tafsirNoSurahFound =>
-      'के लिये।\nएहि सूरह लेल कोनो तफसीर नहि भेटल।';
+  String get tafsirNoSurahFound => 'एहि सूरह लेल कोनो तफसीर नहि भेटल।';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'के लिये।\nआयत $ayah के लेल कोनो तफसीर नहि भेटल.';
+    return 'आयत $ayah के लेल कोनो तफसीर नहि भेटल.';
   }
 
   @override
-  String get tafsirLoadFailed => 'के लिये।\nतफसीर लोड नहि भ सकल।';
+  String get tafsirLoadFailed => 'तफसीर लोड नहि भ सकल।';
 
   @override
-  String get tafsirNoTextForAyah =>
-      'के लिये।\nएहि आयत के लेल कोनो तफसीर ग्रंथ नहि।';
+  String get tafsirNoTextForAyah => 'एहि आयत के लेल कोनो तफसीर ग्रंथ नहि।';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -247,12 +245,12 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'के लिये।\nतफसीर स्रोत एकटा HTTP $statusCode त्रुटि वापस केलक.';
+    return 'तफसीर स्रोत एकटा HTTP $statusCode त्रुटि वापस केलक.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'के लिये।\nचयनित तफसीर स्रोत कोनो प्रविष्टि वापस नहि केलक.';
+      'चयनित तफसीर स्रोत कोनो प्रविष्टि वापस नहि केलक.';
 
   @override
   String get bookmarks => 'बुकमार्क';
@@ -544,16 +542,16 @@ class AppLocalizationsMai extends AppLocalizations {
   String get downloading => 'डाउनलोड क रहल छी...';
 
   @override
-  String get downloadComplete => 'के लिये।\nडाउनलोड सम्पूर्ण';
+  String get downloadComplete => 'डाउनलोड सम्पूर्ण';
 
   @override
-  String get downloadFailed => 'के लिये।\nडाउनलोड असफल';
+  String get downloadFailed => 'डाउनलोड असफल';
 
   @override
   String get offlineMode => 'ऑफलाइन मोड';
 
   @override
-  String get noInternet => 'के लिये।\nइंटरनेट कनेक्शन नहि';
+  String get noInternet => 'इंटरनेट कनेक्शन नहि';
 
   @override
   String get checkConnection => 'कृपया अपन कनेक्शन देखू';
@@ -725,7 +723,7 @@ class AppLocalizationsMai extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'के लिये।\nऑफलाइन डाउनलोड प्रबंधक';
+  String get offlineDownloadManager => 'ऑफलाइन डाउनलोड प्रबंधक';
 
   @override
   String get manageDatasets =>
@@ -1053,11 +1051,11 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'के लिये।\nप्रीमियम प्रोडक्ट एखन उपलब्ध नहि अछि। कृपया बाद मे दोबारा प्रयास करू।';
+      'प्रीमियम प्रोडक्ट एखन उपलब्ध नहि अछि। कृपया बाद मे दोबारा प्रयास करू।';
 
   @override
   String get premiumPurchaseFailed =>
-      'के लिये।\nखरीद पूरा नहि भ सकल। कृपया पुनः प्रयास करू।';
+      'खरीद पूरा नहि भ सकल। कृपया पुनः प्रयास करू।';
 
   @override
   String get paywallFeature1Title => 'न्यूरल असिस्टेंट प्लस';
@@ -1168,7 +1166,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'के लिये।\nसत्यापित ऑफलाइन इस्लामी ज्ञानकोश केरऽ क्यूरेटिंग अखनी भी करलऽ जाय रहलऽ छै । अहां अखन ऑफलाइन फॉलबैक कें सक्षम कयर सकय छी, मुदा इ केवल सीमित सुरक्षित संदेशक कें देखायत जखन तइक स्रोत डाटासेट तैयार नहि भ जायत.\n\nकी अहाँ ऑफलाइन फॉलबैक सक्षम करय चाहब?';
+      'सत्यापित ऑफलाइन इस्लामी ज्ञानकोश केरऽ क्यूरेटिंग अखनी भी करलऽ जाय रहलऽ छै । अहां अखन ऑफलाइन फॉलबैक कें सक्षम कयर सकय छी, मुदा इ केवल सीमित सुरक्षित संदेशक कें देखायत जखन तइक स्रोत डाटासेट तैयार नहि भ जायत.\n\nकी अहाँ ऑफलाइन फॉलबैक सक्षम करय चाहब?';
 
   @override
   String get chatbotOfflineSwitched =>
@@ -1356,19 +1354,18 @@ class AppLocalizationsMai extends AppLocalizations {
   String get placesNetworkError => 'नेटवर्क त्रुटि। कृपया पुनः प्रयास करू।';
 
   @override
-  String get placesLocationRequiredTitle => 'के लिये।\nस्थान आवश्यक';
+  String get placesLocationRequiredTitle => 'स्थान आवश्यक';
 
   @override
   String get placesLocationRequiredBody =>
-      'के लिये।\nपहिने कोनो स्थान निर्धारित करू जाहि सं नजदीकक मस्जिद, हलाल भोजन, आ इस्लामी स्कूलक सटीक खोज भ सकय.';
+      'पहिने कोनो स्थान निर्धारित करू जाहि सं नजदीकक मस्जिद, हलाल भोजन, आ इस्लामी स्कूलक सटीक खोज भ सकय.';
 
   @override
-  String get placesMapTilesUnavailableTitle =>
-      'के लिये।\nनक्शा टाइल्स अनुपलब्ध';
+  String get placesMapTilesUnavailableTitle => 'नक्शा टाइल्स अनुपलब्ध';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'के लिये।\nएकटा सत्यापित मैप टाइल स्रोत एखन धरि एहि बिल्ड क लेल कॉन्फ़िगर नहि कएल गेल अछि. पास के जगह एखनो अहां के सेव कएल गेल लोकेशन सं लोड भ सकैत अछि.';
+      'एकटा सत्यापित मैप टाइल स्रोत एखन धरि एहि बिल्ड क लेल कॉन्फ़िगर नहि कएल गेल अछि. पास के जगह एखनो अहां के सेव कएल गेल लोकेशन सं लोड भ सकैत अछि.';
 
   @override
   String get unknownPlaceName => 'अज्ञात नाम';

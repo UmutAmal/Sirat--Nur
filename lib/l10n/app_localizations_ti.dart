@@ -12,7 +12,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
-  String get splashTagline => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nእስላማዊ መንገዲ ብርሃን';
+  String get splashTagline => 'እስላማዊ መንገዲ ብርሃን';
 
   @override
   String get home => 'Home';
@@ -139,13 +139,13 @@ class AppLocalizationsTi extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nዝኾነ ውጽኢት ኣይተረኽበን።';
+  String get noResults => 'ዝኾነ ውጽኢት ኣይተረኽበን።';
 
   @override
-  String get loading => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣብ ምጽዓን...';
+  String get loading => 'ኣብ ምጽዓን...';
 
   @override
-  String get error => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nጌጋ';
+  String get error => 'ጌጋ';
 
   @override
   String get appErrorOccurred => 'ጌጋ ኣጋጢሙ';
@@ -160,7 +160,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
-  String get refreshAction => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nምሕዳስ';
+  String get refreshAction => 'ምሕዳስ';
 
   @override
   String get cancel => 'Cancel';
@@ -169,7 +169,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nምድምሳስ';
+  String get delete => 'ምድምሳስ';
 
   @override
   String get edit => 'Edit';
@@ -213,26 +213,24 @@ class AppLocalizationsTi extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣብ ምጽዓን tafsir...';
+  String get tafsirLoading => 'ኣብ ምጽዓን tafsir...';
 
   @override
-  String get tafsirSourceLabel => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nታፍሲር ምንጪ';
+  String get tafsirSourceLabel => 'ታፍሲር ምንጪ';
 
   @override
-  String get tafsirNoSurahFound =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nነዛ ሱራ ዝኸውን ተፍሲር ኣይተረኽበን።';
+  String get tafsirNoSurahFound => 'ነዛ ሱራ ዝኸውን ተፍሲር ኣይተረኽበን።';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nንኣያ $ayah ዝኾነ ታፍሲር ኣይተረኽበን።';
+    return 'ንኣያ $ayah ዝኾነ ታፍሲር ኣይተረኽበን።';
   }
 
   @override
-  String get tafsirLoadFailed => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nታፍሲር ክጽዓን ኣይከኣለን።';
+  String get tafsirLoadFailed => 'ታፍሲር ክጽዓን ኣይከኣለን።';
 
   @override
-  String get tafsirNoTextForAyah =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nነዚ ኣያሕ ዝኸውን ታፍሲር ጽሑፍ የለን።';
+  String get tafsirNoTextForAyah => 'ነዚ ኣያሕ ዝኸውን ታፍሲር ጽሑፍ የለን።';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -246,12 +244,11 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nምንጪ ታፍሲር ናይ HTTP $statusCode ጌጋ መሊሱ።';
+    return 'ምንጪ ታፍሲር ናይ HTTP $statusCode ጌጋ መሊሱ።';
   }
 
   @override
-  String get tafsirNoEntriesReturned =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nእቲ ዝተመርጸ ምንጪ ታፍሲር ዝኾነ ምእታው ኣይመለሰን።';
+  String get tafsirNoEntriesReturned => 'እቲ ዝተመርጸ ምንጪ ታፍሲር ዝኾነ ምእታው ኣይመለሰን።';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -540,16 +537,16 @@ class AppLocalizationsTi extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nDownload ምሉእ ብምሉእ';
+  String get downloadComplete => 'Download ምሉእ ብምሉእ';
 
   @override
-  String get downloadFailed => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nምውራድ ኣይተዓወተን';
+  String get downloadFailed => 'ምውራድ ኣይተዓወተን';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nምትእስሳር ኢንተርነት የለን';
+  String get noInternet => 'ምትእስሳር ኢንተርነት የለን';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -720,8 +717,7 @@ class AppLocalizationsTi extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nካብ መስመር ወጻኢ ዳውንሎድ ማናጀር';
+  String get offlineDownloadManager => 'ካብ መስመር ወጻኢ ዳውንሎድ ማናጀር';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1045,11 +1041,10 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nፕሪምየም ፍርያት ኣብዚ ሕጂ እዋን የለን። በጃኹም ድሒርኩም ደጊምኩም ፈትኑ።';
+      'ፕሪምየም ፍርያት ኣብዚ ሕጂ እዋን የለን። በጃኹም ድሒርኩም ደጊምኩም ፈትኑ።';
 
   @override
-  String get premiumPurchaseFailed =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nዕድጊ ክዛዘም ኣይከኣለን። በጃኹም ደጊምኩም ፈትኑ።';
+  String get premiumPurchaseFailed => 'ዕድጊ ክዛዘም ኣይከኣለን። በጃኹም ደጊምኩም ፈትኑ።';
 
   @override
   String get paywallFeature1Title => 'ኒውራል ኣሲስተንት ፕላስ';
@@ -1158,7 +1153,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nእቲ ዝተረጋገጸ ካብ መስመር ወጻኢ ዝኾነ እስላማዊ ፍልጠት መሰረት ገና ይሕሎ ኣሎ። ሕጂ ካብ መስመር ወጻኢ ምምላስ ከተኽእሎ ትኽእል ኢኻ፡ ግን እቲ ምንጪ ዳታሴት ድሉው ክሳብ ዝኸውን ውሱን ውሑስ መልእኽትታት ጥራይ እዩ ዘርኢ።\n\nካብ መስመር ወጻኢ ዝግበር ምምላስ (offline fallback) ከተኽእሉ ትደልዩ ዶ?';
+      'እቲ ዝተረጋገጸ ካብ መስመር ወጻኢ ዝኾነ እስላማዊ ፍልጠት መሰረት ገና ይሕሎ ኣሎ። ሕጂ ካብ መስመር ወጻኢ ምምላስ ከተኽእሎ ትኽእል ኢኻ፡ ግን እቲ ምንጪ ዳታሴት ድሉው ክሳብ ዝኸውን ውሱን ውሑስ መልእኽትታት ጥራይ እዩ ዘርኢ።\n\nካብ መስመር ወጻኢ ዝግበር ምምላስ (offline fallback) ከተኽእሉ ትደልዩ ዶ?';
 
   @override
   String get chatbotOfflineSwitched =>
@@ -1345,19 +1340,18 @@ class AppLocalizationsTi extends AppLocalizations {
   String get placesNetworkError => 'ናይ መርበብ ጌጋ። በጃኹም ደጊምኩም ፈትኑ።';
 
   @override
-  String get placesLocationRequiredTitle => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nቦታ የድሊ';
+  String get placesLocationRequiredTitle => 'ቦታ የድሊ';
 
   @override
   String get placesLocationRequiredBody =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣብ ቀረባ ዝርከቡ መሳጊድ፡ ሓላል መግቢ፡ ከምኡ’ውን ኣብያተ ትምህርቲ እስላም ብትኽክል ምእንቲ ክድለዩ መጀመርታ ቦታ ኣቐምጥ።';
+      'ኣብ ቀረባ ዝርከቡ መሳጊድ፡ ሓላል መግቢ፡ ከምኡ’ውን ኣብያተ ትምህርቲ እስላም ብትኽክል ምእንቲ ክድለዩ መጀመርታ ቦታ ኣቐምጥ።';
 
   @override
-  String get placesMapTilesUnavailableTitle =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nካርታ ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት';
+  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nዝተረጋገጸ ምንጪ ካርታ ታይል ነዚ ህንጸት ገና ኣይተዋቕረን። ኣብ ቀረባ ዝርከቡ ቦታታት ገና ካብቲ ዝተዓቀብካዮ ቦታ ክጽዕኑ ይኽእሉ እዮም።';
+      'ዝተረጋገጸ ምንጪ ካርታ ታይል ነዚ ህንጸት ገና ኣይተዋቕረን። ኣብ ቀረባ ዝርከቡ ቦታታት ገና ካብቲ ዝተዓቀብካዮ ቦታ ክጽዕኑ ይኽእሉ እዮም።';
 
   @override
   String get unknownPlaceName => 'ዘይፍለጥ ስም';

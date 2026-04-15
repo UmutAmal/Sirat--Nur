@@ -58,9 +58,93 @@ void main() {
         }
       },
     );
+
+    test('arb message values do not contain batch debris', () {
+      final arbFiles = Directory('lib/l10n')
+          .listSync()
+          .whereType<File>()
+          .where((file) => file.path.endsWith('.arb'))
+          .where((file) => file.uri.pathSegments.last.startsWith('app_'));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+
+        for (final entry in arb.entries) {
+          final key = entry.key;
+          final value = entry.value;
+          if (key.startsWith('@') || value is! String) continue;
+
+          final normalized = value.replaceAll('\r\n', '\n');
+          final hasUnexpectedLineBreak =
+              normalized.contains('\n') &&
+              !_allowedMultilineMessageKeys.contains(key);
+
+          expect(
+            hasUnexpectedLineBreak,
+            isFalse,
+            reason:
+                '${file.path} contains an unexpected line break in "$key": '
+                '$normalized',
+          );
+
+          for (final debris in _translationBatchDebris) {
+            expect(
+              normalized.startsWith(debris),
+              isFalse,
+              reason:
+                  '${file.path} contains translation batch debris in "$key": '
+                  '$normalized',
+            );
+          }
+
+          expect(
+            _hasRepeatedWordRun(normalized),
+            isFalse,
+            reason:
+                '${file.path} contains a repeated-word run in "$key": '
+                '$normalized',
+          );
+        }
+      }
+    });
   });
 }
 
 Map<String, dynamic> _readArb(String path) {
   return jsonDecode(File(path).readAsStringSync()) as Map<String, dynamic>;
+}
+
+const _allowedMultilineMessageKeys = {'chatbotOfflinePrompt'};
+
+const _translationBatchDebris = {
+  'ukax mä juk’a pachanakanwa.\n',
+  'a ni.\n',
+  'के लिये।\n',
+  'इति .\n',
+  'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\n',
+};
+
+bool _hasRepeatedWordRun(String value) {
+  final words = value
+      .split(RegExp(r'\s+'))
+      .where((word) => word.trim().isNotEmpty)
+      .map((word) => word.trim())
+      .toList(growable: false);
+
+  var previous = '';
+  var runLength = 0;
+  for (final word in words) {
+    if (word == previous) {
+      runLength += 1;
+    } else {
+      previous = word;
+      runLength = 1;
+    }
+
+    if (runLength >= 6) {
+      return true;
+    }
+  }
+
+  return false;
 }

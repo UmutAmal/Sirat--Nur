@@ -6397,3 +6397,47 @@
 
 ### Sonraki Adım
 - Sonraki dongude kalan `Uri.parse` / `launchUrl` yuzeyleri taranacak; test veya kontrollu helper disinda kalan dis link akisi varsa ayni merkezi sinira alinacak, yoksa ARB kalite/regresyon ve premium hata metni risklerine gecilecek.
+
+## 2026-04-15 TUR-166 — Clean ARB Translation Batch Debris
+
+### Yapılan İşlem
+- `app_ay.arb`, `app_lus.arb`, `app_mai.arb`, `app_sa.arb` ve `app_ti.arb` icindeki onceki ceviri batch'inden kalan satir basi/cop prefix'ler temizlendi.
+- `chatbotOfflinePrompt` bilincli cok paragraflı mesaj olarak korundu; yalnizca basindaki batch debris satiri kaldirildi.
+- `app_ti.arb` icindeki `placesMapTilesUnavailableTitle` degeri dogrulanabilir olmayan tekrarli Tigrinya cop metni tasidigi icin uydurma ceviri uretilmeden guvenli EN fallback'e indirildi.
+- `flutter gen-l10n` calistirilarak generated `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- `arb_coverage_test.dart` icine izinli anahtarlar disinda newline, bilinen batch debris prefix'i ve 6+ kez tekrar eden kelime run'i yakalayan regresyon testi eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb:47`, `app_lus.arb:47`, `app_mai.arb:47`, `app_sa.arb:47` ve `app_ti.arb:47` gibi ortak UI anahtarlarinda kullaniciya gorunen metin basinda ceviri cop parcalari bulunuyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb:756` onceki akista tek satir baslik yerine uzun tekrarli "ስርሓት" dizisi tasiyordu.
+- Kök sebep, ARB coverage testlerinin anahtar/metadata varligini kontrol etmesine ragmen mesaj degerlerinde batch debris, beklenmeyen newline ve tekrarli kelime bozulmasini yakalamamasiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lus.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mai.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ay.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_lus.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_mai.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_sa.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ti.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_coverage_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- 5 locale'deki no-results, loading, premium hata, tafsir hata ve places honest-state kopyalari artik kullaniciya cop prefix ile gorunmez.
+- Tekrarlayan bozuk metin, ozellikle Places map tile unavailable basligi icin UI'da anlamsiz uzun blok olusturmaz.
+- Yeni ARB kalite testi ayni bozulma sinifinin ileride tekrar sessizce generated dosyalara tasinmasini engeller.
+
+### Test Sonucu
+- `flutter test test\arb_coverage_test.dart` PASS (`3/3`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`340/340`)
+
+### Risk Değişimi
+- ARB batch debris / beklenmeyen newline / tekrarli kelime bozulmasinin kullaniciya gorunme riski: `16/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki dongude kalan dogrudan Live TV external launch akisi ortak URL helper'a alinacak mi kontrol edilecek; ardindan `prayerRemainingUnavailable`, `missingEnglish` ve genis locale fallback kalintilari icin sahte ceviri uretmeden kalite guard'lari genisletilecek.

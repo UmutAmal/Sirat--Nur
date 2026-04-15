@@ -12,7 +12,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get appTitle => 'Way Of Allah';
 
   @override
-  String get splashTagline => 'इति .\nइस्लामिक प्रकाश मार्ग';
+  String get splashTagline => 'इस्लामिक प्रकाश मार्ग';
 
   @override
   String get home => 'Home';
@@ -139,13 +139,13 @@ class AppLocalizationsSa extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'इति .\nन परिणामः प्राप्तः';
+  String get noResults => 'न परिणामः प्राप्तः';
 
   @override
-  String get loading => 'इति .\nलोडिंग...';
+  String get loading => 'लोडिंग...';
 
   @override
-  String get error => 'इति .\nत्रुटिः';
+  String get error => 'त्रुटिः';
 
   @override
   String get appErrorOccurred => 'एकः दोषः अभवत्';
@@ -161,7 +161,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get retry => 'Retry';
 
   @override
-  String get refreshAction => 'इति .\nताजगी';
+  String get refreshAction => 'ताजगी';
 
   @override
   String get cancel => 'Cancel';
@@ -170,7 +170,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get delete => 'इति .\nविलोपयतु';
+  String get delete => 'विलोपयतु';
 
   @override
   String get edit => 'Edit';
@@ -214,24 +214,24 @@ class AppLocalizationsSa extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'इति .\nलोडिंग तफसिर...';
+  String get tafsirLoading => 'लोडिंग तफसिर...';
 
   @override
-  String get tafsirSourceLabel => 'इति .\nतफसीर स्रोतः';
+  String get tafsirSourceLabel => 'तफसीर स्रोतः';
 
   @override
-  String get tafsirNoSurahFound => 'इति .\nअस्य सूरस्य कृते न तफसीरः लब्धः।';
+  String get tafsirNoSurahFound => 'अस्य सूरस्य कृते न तफसीरः लब्धः।';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'इति .\nअयम् $ayah कृते कोऽपि तफसीरः न प्राप्तः।';
+    return 'अयम् $ayah कृते कोऽपि तफसीरः न प्राप्तः।';
   }
 
   @override
-  String get tafsirLoadFailed => 'इति .\nतफसीरं भारं कर्तुं न शक्तवान् ।';
+  String get tafsirLoadFailed => 'तफसीरं भारं कर्तुं न शक्तवान् ।';
 
   @override
-  String get tafsirNoTextForAyah => 'इति .\nअस्य अयस्य कृते न तफसीरग्रन्थः।';
+  String get tafsirNoTextForAyah => 'अस्य अयस्य कृते न तफसीरग्रन्थः।';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,12 +245,12 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'इति .\nतफ्सिर् स्रोतः HTTP $statusCode त्रुटिं प्रत्यागच्छत् ।';
+    return 'तफ्सिर् स्रोतः HTTP $statusCode त्रुटिं प्रत्यागच्छत् ।';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'इति .\nचयनितः tafsir स्रोतः कोऽपि प्रविष्टिः न प्रत्यागच्छत् ।';
+      'चयनितः tafsir स्रोतः कोऽपि प्रविष्टिः न प्रत्यागच्छत् ।';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -542,16 +542,16 @@ class AppLocalizationsSa extends AppLocalizations {
   String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete => 'इति .\nडाउनलोड सम्पूर्ण';
+  String get downloadComplete => 'डाउनलोड सम्पूर्ण';
 
   @override
-  String get downloadFailed => 'इति .\nडाउनलोड् विफलम्';
+  String get downloadFailed => 'डाउनलोड् विफलम्';
 
   @override
   String get offlineMode => 'Offline Mode';
 
   @override
-  String get noInternet => 'इति .\nअन्तर्जालसम्पर्कः नास्ति';
+  String get noInternet => 'अन्तर्जालसम्पर्कः नास्ति';
 
   @override
   String get checkConnection => 'Please check your connection';
@@ -725,7 +725,7 @@ class AppLocalizationsSa extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'इति .\nअफलाइन डाउनलोड प्रबन्धक';
+  String get offlineDownloadManager => 'अफलाइन डाउनलोड प्रबन्धक';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1052,11 +1052,11 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'इति .\nप्रीमियम उत्पादः अधुना उपलब्धः नास्ति। कृपया पश्चात् पुनः प्रयासं कुर्वन्तु।';
+      'प्रीमियम उत्पादः अधुना उपलब्धः नास्ति। कृपया पश्चात् पुनः प्रयासं कुर्वन्तु।';
 
   @override
   String get premiumPurchaseFailed =>
-      'इति .\nक्रयणं सम्पन्नं कर्तुं न शक्यते स्म । कृपया पुनः प्रयासं कुर्वन्तु।';
+      'क्रयणं सम्पन्नं कर्तुं न शक्यते स्म । कृपया पुनः प्रयासं कुर्वन्तु।';
 
   @override
   String get paywallFeature1Title => 'तंत्रिका सहायक प्लस';
@@ -1167,7 +1167,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'इति .\nसत्यापितं अफलाइन इस्लामिकज्ञानकोशम् अद्यापि क्यूरेटिङ्ग् क्रियते। इदानीं भवान् offline fallback सक्षमं कर्तुं शक्नोति, परन्तु स्रोतः दत्तांशसमूहः सज्जः न भवति तावत् केवलं सीमितसुरक्षितसन्देशान् एव दर्शयिष्यति ।\n\nकिं भवान् अफलाइन-फॉलबैक् सक्षमं कर्तुम् इच्छति?';
+      'सत्यापितं अफलाइन इस्लामिकज्ञानकोशम् अद्यापि क्यूरेटिङ्ग् क्रियते। इदानीं भवान् offline fallback सक्षमं कर्तुं शक्नोति, परन्तु स्रोतः दत्तांशसमूहः सज्जः न भवति तावत् केवलं सीमितसुरक्षितसन्देशान् एव दर्शयिष्यति ।\n\nकिं भवान् अफलाइन-फॉलबैक् सक्षमं कर्तुम् इच्छति?';
 
   @override
   String get chatbotOfflineSwitched =>
@@ -1356,18 +1356,18 @@ class AppLocalizationsSa extends AppLocalizations {
   String get placesNetworkError => 'संजालदोषः। कृपया पुनः प्रयासं कुर्वन्तु।';
 
   @override
-  String get placesLocationRequiredTitle => 'इति .\nस्थानं आवश्यकम्';
+  String get placesLocationRequiredTitle => 'स्थानं आवश्यकम्';
 
   @override
   String get placesLocationRequiredBody =>
-      'इति .\nप्रथमं स्थानं स्थापयन्तु येन समीपस्थाः मस्जिदाः, हलालभोजनं, इस्लामिकविद्यालयाः च समीचीनतया अन्वेष्टुं शक्यन्ते।';
+      'प्रथमं स्थानं स्थापयन्तु येन समीपस्थाः मस्जिदाः, हलालभोजनं, इस्लामिकविद्यालयाः च समीचीनतया अन्वेष्टुं शक्यन्ते।';
 
   @override
   String get placesMapTilesUnavailableTitle => 'नक्शा टाइल्स अनुपलब्ध';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'इति .\nअस्य निर्माणस्य कृते अद्यापि सत्यापितः मानचित्रटाइलस्रोतः विन्यस्तः नास्ति । समीपस्थानि स्थानानि अद्यापि भवतः रक्षितस्थानात् लोड् कर्तुं शक्नुवन्ति ।';
+      'अस्य निर्माणस्य कृते अद्यापि सत्यापितः मानचित्रटाइलस्रोतः विन्यस्तः नास्ति । समीपस्थानि स्थानानि अद्यापि भवतः रक्षितस्थानात् लोड् कर्तुं शक्नुवन्ति ।';
 
   @override
   String get unknownPlaceName => 'अज्ञात नाम';
