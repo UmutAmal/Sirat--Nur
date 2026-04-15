@@ -150,6 +150,10 @@ class AppLocalizationsKa extends AppLocalizations {
   String get appUnknownError => 'უცნობი შეცდომა';
 
   @override
+  String get quranLoadFailed =>
+      'ყურანის შინაარსი ვერ ჩაიტვირთა. გთხოვთ, სცადოთ ხელახლა.';
+
+  @override
   String get retry => 'ხელახლა სცადეთ';
 
   @override

@@ -150,6 +150,10 @@ class AppLocalizationsGa extends AppLocalizations {
   String get appUnknownError => 'Earráid anaithnid';
 
   @override
+  String get quranLoadFailed =>
+      'Níorbh fhéidir ábhar an Quran a lódáil. Bain triail eile as.';
+
+  @override
   String get retry => 'Bain triail eile as';
 
   @override

@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Owesilisa (Sudais)",
   "qiblaSensorUnavailable": "Inzwa yekhampasi ayitholakali kule divayisi.",
   "adhanNotificationChannelName": "Izaziso ze-Adhan",
-  "adhanNotificationChannelDescription": "Izaziso zesikhathi somkhuleko ezinomsindo we-adhan."
+  "adhanNotificationChannelDescription": "Izaziso zesikhathi somkhuleko ezinomsindo we-adhan.",
+  "quranLoadFailed": "Okuqukethwe kwe-Quran akukwazanga ukulayishwa. Sicela uzame futhi."
 }

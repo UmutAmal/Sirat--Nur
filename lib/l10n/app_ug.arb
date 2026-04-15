@@ -761,5 +761,6 @@
   "audioVoiceSudais": "ئەر (سۇدايس)",
   "qiblaSensorUnavailable": "بۇ ئۈسكۈنىدە كومپاس سېنزور ئىشلەتكىلى بولمايدۇ.",
   "adhanNotificationChannelName": "Adhan ئۇقتۇرۇشى",
-  "adhanNotificationChannelDescription": "ناماز ئاۋازى بىلەن ناماز ۋاقتى ئاگاھلاندۇرۇلىدۇ."
+  "adhanNotificationChannelDescription": "ناماز ئاۋازى بىلەن ناماز ۋاقتى ئاگاھلاندۇرۇلىدۇ.",
+  "quranLoadFailed": "قۇرئان مەزمۇنىنى يۈكلەشكە بولمىدى. قايتا سىناڭ."
 }

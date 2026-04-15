@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Mascle (Sudais)",
   "qiblaSensorUnavailable": "El sensor de la brúixola no està disponible en aquest dispositiu.",
   "adhanNotificationChannelName": "Notificacions Adhan",
-  "adhanNotificationChannelDescription": "Alertes de temps de pregària amb so adhan."
+  "adhanNotificationChannelDescription": "Alertes de temps de pregària amb so adhan.",
+  "quranLoadFailed": "No s'ha pogut carregar el contingut de l'Alcorà. Si us plau, torna-ho a provar."
 }

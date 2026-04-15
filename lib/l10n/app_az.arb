@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Kişi (Sudais)",
   "qiblaSensorUnavailable": "Bu cihazda kompas sensoru mövcud deyil.",
   "adhanNotificationChannelName": "Azan bildirişləri",
-  "adhanNotificationChannelDescription": "Azan səsi ilə namaz vaxtı xəbərdarlığı."
+  "adhanNotificationChannelDescription": "Azan səsi ilə namaz vaxtı xəbərdarlığı.",
+  "quranLoadFailed": "Quran məzmununu yükləmək mümkün olmadı. Yenidən cəhd edin."
 }

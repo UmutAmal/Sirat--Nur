@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "Sensulo ya kkampasi tesangibwa ku kyuma kino.",
   "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "quranLoadFailed": "Ebirimu ku Quran tebyasobodde kutikkibwa. Nsaba oddemu ogezeeko."
 }

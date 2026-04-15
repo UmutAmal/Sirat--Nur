@@ -761,5 +761,6 @@
   "audioVoiceSudais": "男性（スーダイス）",
   "qiblaSensorUnavailable": "このデバイスではコンパス センサーを利用できません。",
   "adhanNotificationChannelName": "アザーン通知",
-  "adhanNotificationChannelDescription": "礼拝時間はアザーン音でお知らせします。"
+  "adhanNotificationChannelDescription": "礼拝時間はアザーン音でお知らせします。",
+  "quranLoadFailed": "コーランのコンテンツをロードできませんでした。もう一度試してください。"
 }

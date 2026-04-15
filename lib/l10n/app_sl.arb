@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Moški (Sudais)",
   "qiblaSensorUnavailable": "Senzor kompasa ni na voljo v tej napravi.",
   "adhanNotificationChannelName": "Adhan obvestila",
-  "adhanNotificationChannelDescription": "Opozorila o času molitve z zvokom ezana."
+  "adhanNotificationChannelDescription": "Opozorila o času molitve z zvokom ezana.",
+  "quranLoadFailed": "Vsebine Korana ni bilo mogoče naložiti. prosim poskusite ponovno"
 }

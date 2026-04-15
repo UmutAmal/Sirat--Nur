@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "এই ডিভাইচত কম্পাছ চেন্সৰ উপলব্ধ নহয়।",
   "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "quranLoadFailed": "কোৰআনৰ বিষয়বস্তু লোড কৰিব পৰা নগ'ল। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।"
 }

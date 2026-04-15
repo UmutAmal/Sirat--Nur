@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Mwanaume (Sudais)",
   "qiblaSensorUnavailable": "Kihisi cha dira hakipatikani kwenye kifaa hiki.",
   "adhanNotificationChannelName": "Arifa za Adhana",
-  "adhanNotificationChannelDescription": "Tahadhari za wakati wa maombi na sauti ya adhana."
+  "adhanNotificationChannelDescription": "Tahadhari za wakati wa maombi na sauti ya adhana.",
+  "quranLoadFailed": "Maudhui ya Quran hayakuweza kupakiwa. Tafadhali jaribu tena."
 }

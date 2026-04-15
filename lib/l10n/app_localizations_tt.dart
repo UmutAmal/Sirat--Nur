@@ -150,6 +150,10 @@ class AppLocalizationsTt extends AppLocalizations {
   String get appUnknownError => 'Билгесез хата';
 
   @override
+  String get quranLoadFailed =>
+      'Коръән эчтәлеген йөкләп булмады. Зинһар, кабатлап карагыз.';
+
+  @override
   String get retry => 'Retry';
 
   @override

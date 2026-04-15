@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "Сензор компаса није доступан на овом уређају.",
   "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "quranLoadFailed": "Није могуће учитати садржај Курана. Покушајте поново."
 }

@@ -150,6 +150,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get appUnknownError => 'Óþekkt villa';
 
   @override
+  String get quranLoadFailed =>
+      'Ekki var hægt að hlaða efni Kóransins. Vinsamlegast reyndu aftur.';
+
+  @override
   String get retry => 'Retry';
 
   @override

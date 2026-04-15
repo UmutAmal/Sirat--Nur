@@ -150,6 +150,10 @@ class AppLocalizationsMr extends AppLocalizations {
   String get appUnknownError => 'अज्ञात त्रुटी';
 
   @override
+  String get quranLoadFailed =>
+      'कुराण सामग्री लोड करणे शक्य नाही. कृपया पुन्हा प्रयत्न करा.';
+
+  @override
   String get retry => 'Retry';
 
   @override

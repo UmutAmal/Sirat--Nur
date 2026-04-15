@@ -150,6 +150,10 @@ class AppLocalizationsAk extends AppLocalizations {
   String get appUnknownError => 'Mfomso a wonnim';
 
   @override
+  String get quranLoadFailed =>
+      'Wɔantumi amfa Quran mu nsɛm anhyɛ mu. Yɛsrɛ sɛ sɔ hwɛ bio.';
+
+  @override
   String get retry => 'San bɔ mmɔden bio';
 
   @override

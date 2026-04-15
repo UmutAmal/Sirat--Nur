@@ -761,5 +761,6 @@
   "audioVoiceSudais": "男性（苏代斯）",
   "qiblaSensorUnavailable": "指南针传感器在此设备上不可用。",
   "adhanNotificationChannelName": "宣礼通知",
-  "adhanNotificationChannelDescription": "祈祷时间以宣礼声提醒。"
+  "adhanNotificationChannelDescription": "祈祷时间以宣礼声提醒。",
+  "quranLoadFailed": "无法加载《古兰经》内容。请再试一次。"
 }

@@ -151,6 +151,10 @@ class AppLocalizationsMy extends AppLocalizations {
   String get appUnknownError => 'အမည်မသိ အမှား';
 
   @override
+  String get quranLoadFailed =>
+      'ကုရ်အာန်အကြောင်းအရာကို တင်၍မရပါ။ ထပ်စမ်းကြည့်ပါ။';
+
+  @override
   String get retry => 'Retry';
 
   @override

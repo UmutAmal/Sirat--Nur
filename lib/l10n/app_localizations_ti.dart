@@ -150,6 +150,9 @@ class AppLocalizationsTi extends AppLocalizations {
   String get appUnknownError => 'ዘይፍለጥ ጌጋ';
 
   @override
+  String get quranLoadFailed => 'ትሕዝቶ ቁርኣን ክጽዓን ኣይከኣለን። በጃኹም ደጊምኩም ፈትኑ።';
+
+  @override
   String get retry => 'Retry';
 
   @override

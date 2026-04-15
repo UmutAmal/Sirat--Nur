@@ -152,6 +152,10 @@ class AppLocalizationsTl extends AppLocalizations {
   String get appUnknownError => 'Hindi kilalang error';
 
   @override
+  String get quranLoadFailed =>
+      'Hindi ma-load ang nilalaman ng Quran. Pakisubukang muli.';
+
+  @override
   String get retry => 'Subukan muli';
 
   @override

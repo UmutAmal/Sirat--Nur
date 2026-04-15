@@ -761,5 +761,6 @@
   "audioVoiceSudais": "مرد (سدیس)",
   "qiblaSensorUnavailable": "کمپاس سینسر اس ڈیوائس پر دستیاب نہیں ہے۔",
   "adhanNotificationChannelName": "اذان کی اطلاع",
-  "adhanNotificationChannelDescription": "اذان کی آواز کے ساتھ نماز کے وقت کے انتباہات۔"
+  "adhanNotificationChannelDescription": "اذان کی آواز کے ساتھ نماز کے وقت کے انتباہات۔",
+  "quranLoadFailed": "قرآنی مواد لوڈ نہیں ہو سکا۔ براہ کرم دوبارہ کوشش کریں۔"
 }

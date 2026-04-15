@@ -150,6 +150,10 @@ class AppLocalizationsCo extends AppLocalizations {
   String get appUnknownError => 'Errore scunnisciutu';
 
   @override
+  String get quranLoadFailed =>
+      'U cuntenutu di u Quran ùn pò micca esse caricatu. Per piacè pruvate di novu.';
+
+  @override
   String get retry => 'Riprova';
 
   @override

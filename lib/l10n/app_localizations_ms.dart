@@ -150,6 +150,10 @@ class AppLocalizationsMs extends AppLocalizations {
   String get appUnknownError => 'Ralat tidak diketahui';
 
   @override
+  String get quranLoadFailed =>
+      'Kandungan al-Quran tidak dapat dimuatkan. Sila cuba lagi.';
+
+  @override
   String get retry => 'Cuba Lagi';
 
   @override

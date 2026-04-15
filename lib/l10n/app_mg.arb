@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Lahy (Sudais)",
   "qiblaSensorUnavailable": "Tsy misy sensor compass amin'ity fitaovana ity.",
   "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Fampandrenesana ny fotoam-bavaka miaraka amin'ny feon'ny adhan."
+  "adhanNotificationChannelDescription": "Fampandrenesana ny fotoam-bavaka miaraka amin'ny feon'ny adhan.",
+  "quranLoadFailed": "Tsy azo nalaina ny votoatin'ny CORAN. Andramo indray azafady."
 }

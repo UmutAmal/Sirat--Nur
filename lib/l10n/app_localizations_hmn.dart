@@ -150,6 +150,10 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get appUnknownError => 'Unknown yuam kev';
 
   @override
+  String get quranLoadFailed =>
+      'Cov ntsiab lus Quran tsis tuaj yeem thauj khoom. Thov rov sim dua.';
+
+  @override
   String get retry => 'Rov sim dua';
 
   @override

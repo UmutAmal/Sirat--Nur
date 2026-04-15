@@ -150,6 +150,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get appUnknownError => 'Lỗi không xác định';
 
   @override
+  String get quranLoadFailed =>
+      'Không thể tải nội dung Kinh Qur\'an. Vui lòng thử lại.';
+
+  @override
   String get retry => 'Retry';
 
   @override

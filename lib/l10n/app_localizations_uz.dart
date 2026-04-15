@@ -150,6 +150,10 @@ class AppLocalizationsUz extends AppLocalizations {
   String get appUnknownError => 'Noma\'lum xato';
 
   @override
+  String get quranLoadFailed =>
+      'Qur\'on mazmunini yuklab bo\'lmadi. Iltimos, qayta urinib koʻring.';
+
+  @override
   String get retry => 'Retry';
 
   @override

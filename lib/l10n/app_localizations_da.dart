@@ -150,6 +150,10 @@ class AppLocalizationsDa extends AppLocalizations {
   String get appUnknownError => 'Ukendt fejl';
 
   @override
+  String get quranLoadFailed =>
+      'Koranindhold kunne ikke indlæses. Prøv venligst igen.';
+
+  @override
   String get retry => 'Prøv igen';
 
   @override

@@ -152,6 +152,10 @@ class AppLocalizationsHu extends AppLocalizations {
   String get appUnknownError => 'Ismeretlen hiba';
 
   @override
+  String get quranLoadFailed =>
+      'A Korán tartalmat nem sikerült betölteni. Kérjük, próbálja újra.';
+
+  @override
   String get retry => 'Retry';
 
   @override

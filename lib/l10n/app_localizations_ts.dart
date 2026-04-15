@@ -151,6 +151,10 @@ class AppLocalizationsTs extends AppLocalizations {
   String get appUnknownError => 'Xihoxo lexi nga tiviwiki';
 
   @override
+  String get quranLoadFailed =>
+      'Swilo leswi nga endzeni ka Quran a swi nga ta layichiwa. Hi kombela u ringeta nakambe.';
+
+  @override
   String get retry => 'Retry';
 
   @override

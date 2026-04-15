@@ -150,6 +150,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get appUnknownError => '알 수 없는 오류';
 
   @override
+  String get quranLoadFailed => '꾸란 콘텐츠를 로드할 수 없습니다. 다시 시도해 주세요.';
+
+  @override
   String get retry => 'Retry';
 
   @override

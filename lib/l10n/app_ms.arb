@@ -762,5 +762,6 @@
   "audioVoiceSudais": "Lelaki (Sudais)",
   "qiblaSensorUnavailable": "Penderia kompas tidak tersedia pada peranti ini.",
   "adhanNotificationChannelName": "Pemberitahuan Adzan",
-  "adhanNotificationChannelDescription": "Makluman waktu solat dengan bunyi azan."
+  "adhanNotificationChannelDescription": "Makluman waktu solat dengan bunyi azan.",
+  "quranLoadFailed": "Kandungan al-Quran tidak dapat dimuatkan. Sila cuba lagi."
 }

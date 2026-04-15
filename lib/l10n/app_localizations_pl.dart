@@ -150,6 +150,10 @@ class AppLocalizationsPl extends AppLocalizations {
   String get appUnknownError => 'Nieznany błąd';
 
   @override
+  String get quranLoadFailed =>
+      'Nie można załadować treści Koranu. Spróbuj ponownie.';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -66,6 +66,7 @@
   "error": "Hata",
   "appErrorOccurred": "Bir hata oluştu",
   "appUnknownError": "Bilinmeyen hata",
+  "quranLoadFailed": "Kur'an içeriği yüklenemedi. Lütfen tekrar deneyin.",
   "retry": "Tekrar Dene",
   "refreshAction": "Yenile",
   "cancel": "İptal",

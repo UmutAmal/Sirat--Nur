@@ -150,6 +150,10 @@ class AppLocalizationsNy extends AppLocalizations {
   String get appUnknownError => 'Cholakwika chosadziwika';
 
   @override
+  String get quranLoadFailed =>
+      'Zomwe zili mu Quran sizinathe kuyikidwa. Chonde yesaninso.';
+
+  @override
   String get retry => 'Yesaninso';
 
   @override

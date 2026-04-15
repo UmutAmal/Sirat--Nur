@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "अस्मिन् यन्त्रे कम्पाससंवेदकः अनुपलब्धः अस्ति ।",
   "adhanNotificationChannelName": "अधान अधिसूचना",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "quranLoadFailed": "कुरान सामग्री लोड् कर्तुं न शक्यते स्म। कृपया पुनः प्रयासं कुर्वन्तु।"
 }

@@ -150,6 +150,10 @@ class AppLocalizationsLb extends AppLocalizations {
   String get appUnknownError => 'Onbekannt Feeler';
 
   @override
+  String get quranLoadFailed =>
+      'Koran Inhalt konnt net gelueden ginn. Probéiert w.e.g. nach eng Kéier.';
+
+  @override
   String get retry => 'Retry';
 
   @override

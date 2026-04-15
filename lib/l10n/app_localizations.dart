@@ -754,6 +754,12 @@ abstract class AppLocalizations {
   /// **'Unknown error'**
   String get appUnknownError;
 
+  /// No description provided for @quranLoadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Quran content could not be loaded. Please try again.'**
+  String get quranLoadFailed;
+
   /// No description provided for @retry.
   ///
   /// In en, this message translates to:

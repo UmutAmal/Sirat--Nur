@@ -150,6 +150,10 @@ class AppLocalizationsLg extends AppLocalizations {
   String get appUnknownError => 'Ensobi etamanyiddwa';
 
   @override
+  String get quranLoadFailed =>
+      'Ebirimu ku Quran tebyasobodde kutikkibwa. Nsaba oddemu ogezeeko.';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -150,6 +150,10 @@ class AppLocalizationsGu extends AppLocalizations {
   String get appUnknownError => 'અજાણી ભૂલ';
 
   @override
+  String get quranLoadFailed =>
+      'કુરાન સામગ્રી લોડ કરી શકાઈ નથી. કૃપા કરીને ફરી પ્રયાસ કરો.';
+
+  @override
   String get retry => 'ફરી પ્રયાસ કરો';
 
   @override

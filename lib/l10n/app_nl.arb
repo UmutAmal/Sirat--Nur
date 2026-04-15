@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Man (Sudais)",
   "qiblaSensorUnavailable": "Kompassensor is niet beschikbaar op dit apparaat.",
   "adhanNotificationChannelName": "Adhan-meldingen",
-  "adhanNotificationChannelDescription": "Gebedstijdwaarschuwingen met adhan-geluid."
+  "adhanNotificationChannelDescription": "Gebedstijdwaarschuwingen met adhan-geluid.",
+  "quranLoadFailed": "Koraninhoud kon niet worden geladen. Probeer het opnieuw."
 }

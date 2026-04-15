@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "Meeshaa kana irratti sensariin koompaasii hin argamu.",
   "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "quranLoadFailed": "Qabiyyeen Qur'aanaa fe'amuu hin dandeenye. Mee irra deebi'ii yaalaa."
 }

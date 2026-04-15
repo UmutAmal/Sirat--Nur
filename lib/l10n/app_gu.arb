@@ -761,5 +761,6 @@
   "audioVoiceSudais": "પુરુષ (સુદાઈ)",
   "qiblaSensorUnavailable": "આ ઉપકરણ પર કંપાસ સેન્સર અનુપલબ્ધ છે.",
   "adhanNotificationChannelName": "અધાન સૂચનાઓ",
-  "adhanNotificationChannelDescription": "અદન અવાજ સાથે પ્રાર્થના સમય ચેતવણીઓ."
+  "adhanNotificationChannelDescription": "અદન અવાજ સાથે પ્રાર્થના સમય ચેતવણીઓ.",
+  "quranLoadFailed": "કુરાન સામગ્રી લોડ કરી શકાઈ નથી. કૃપા કરીને ફરી પ્રયાસ કરો."
 }

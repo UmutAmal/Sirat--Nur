@@ -150,6 +150,9 @@ class AppLocalizationsJv extends AppLocalizations {
   String get appUnknownError => 'Kesalahan sing ora dingerteni';
 
   @override
+  String get quranLoadFailed => 'Isi Quran ora bisa dimuat. Coba maneh.';
+
+  @override
   String get retry => 'Retry';
 
   @override

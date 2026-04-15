@@ -151,6 +151,10 @@ class AppLocalizationsCy extends AppLocalizations {
   String get appUnknownError => 'Gwall anhysbys';
 
   @override
+  String get quranLoadFailed =>
+      'Nid oedd modd llwytho cynnwys y Quran. Ceisiwch eto.';
+
+  @override
   String get retry => 'Ceisiwch eto';
 
   @override

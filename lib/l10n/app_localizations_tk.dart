@@ -151,6 +151,10 @@ class AppLocalizationsTk extends AppLocalizations {
   String get appUnknownError => 'Näbelli ýalňyşlyk';
 
   @override
+  String get quranLoadFailed =>
+      'Gurhanyň mazmuny ýüklenip bilinmedi. Gaýtadan synanyşmagyňyzy haýyş edýäris.';
+
+  @override
   String get retry => 'Retry';
 
   @override

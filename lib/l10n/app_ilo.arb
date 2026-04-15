@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "Saan a magun-odan ti compass sensor iti daytoy nga alikamen.",
   "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "quranLoadFailed": "Saan a mabalin a maikarga ti linaon ti Quran. Pangngaasiyo ta padasenyo manen."
 }

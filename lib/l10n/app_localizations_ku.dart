@@ -150,6 +150,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get appUnknownError => 'Çewtiya nenas';
 
   @override
+  String get quranLoadFailed =>
+      'Naveroka Quranê nehat barkirin. Ji kerema xwe dîsa biceribîne.';
+
+  @override
   String get retry => 'Retry';
 
   @override

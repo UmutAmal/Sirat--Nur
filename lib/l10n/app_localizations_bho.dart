@@ -151,6 +151,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get appUnknownError => 'अज्ञात त्रुटि हो गइल बा';
 
   @override
+  String get quranLoadFailed =>
+      'कुरान के सामग्री लोड ना हो सकल। कृपया दोबारा कोशिश करीं।';
+
+  @override
   String get retry => 'दोबारा कोशिश करीं';
 
   @override

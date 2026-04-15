@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Ер (Судайс)",
   "qiblaSensorUnavailable": "Бұл құрылғыда компас сенсоры жоқ.",
   "adhanNotificationChannelName": "Азан хабарландырулары",
-  "adhanNotificationChannelDescription": "Азан дыбысымен намаз уақыты туралы ескертулер."
+  "adhanNotificationChannelDescription": "Азан дыбысымен намаз уақыты туралы ескертулер.",
+  "quranLoadFailed": "Құран мазмұнын жүктеу мүмкін емес. Қайталап көріңіз."
 }

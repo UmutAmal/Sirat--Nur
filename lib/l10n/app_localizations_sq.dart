@@ -151,6 +151,10 @@ class AppLocalizationsSq extends AppLocalizations {
   String get appUnknownError => 'Gabim i panjohur';
 
   @override
+  String get quranLoadFailed =>
+      'Përmbajtja e Kuranit nuk mund të ngarkohej. Ju lutemi provoni përsëri.';
+
+  @override
   String get retry => 'Provo sërish';
 
   @override

@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Masklo (Sudais)",
   "qiblaSensorUnavailable": "Kompasa sensilo ne disponeblas en ĉi tiu aparato.",
   "adhanNotificationChannelName": "Adhan Sciigoj",
-  "adhanNotificationChannelDescription": "Atentigoj de preĝa tempo per adhan sono."
+  "adhanNotificationChannelDescription": "Atentigoj de preĝa tempo per adhan sono.",
+  "quranLoadFailed": "Korano-enhavo ne povis esti ŝargita. Bonvolu provi denove."
 }

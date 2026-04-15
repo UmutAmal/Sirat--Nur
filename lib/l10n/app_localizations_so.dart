@@ -150,6 +150,10 @@ class AppLocalizationsSo extends AppLocalizations {
   String get appUnknownError => 'Khalad aan la garanayn';
 
   @override
+  String get quranLoadFailed =>
+      'Waxa ku jira Quraanka lama rari karo Fadlan isku day mar kale';
+
+  @override
   String get retry => 'Retry';
 
   @override

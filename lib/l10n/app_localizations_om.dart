@@ -151,6 +151,10 @@ class AppLocalizationsOm extends AppLocalizations {
   String get appUnknownError => 'Dogoggora hin beekamne';
 
   @override
+  String get quranLoadFailed =>
+      'Qabiyyeen Qur\'aanaa fe\'amuu hin dandeenye. Mee irra deebi\'ii yaalaa.';
+
+  @override
   String get retry => 'Retry';
 
   @override

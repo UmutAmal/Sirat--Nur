@@ -150,6 +150,10 @@ class AppLocalizationsUg extends AppLocalizations {
   String get appUnknownError => 'نامەلۇم خاتالىق';
 
   @override
+  String get quranLoadFailed =>
+      'قۇرئان مەزمۇنىنى يۈكلەشكە بولمىدى. قايتا سىناڭ.';
+
+  @override
   String get retry => 'Retry';
 
   @override

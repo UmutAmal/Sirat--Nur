@@ -761,5 +761,6 @@
   "audioVoiceSudais": "ਮਰਦ (ਸੁਦਾਈ)",
   "qiblaSensorUnavailable": "ਕੰਪਾਸ ਸੈਂਸਰ ਇਸ ਡਿਵਾਈਸ 'ਤੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
   "adhanNotificationChannelName": "ਅਧਾਨ ਸੂਚਨਾਵਾਂ",
-  "adhanNotificationChannelDescription": "ਅਜ਼ਾਨ ਆਵਾਜ਼ ਦੇ ਨਾਲ ਪ੍ਰਾਰਥਨਾ ਦਾ ਸਮਾਂ ਚੇਤਾਵਨੀਆਂ."
+  "adhanNotificationChannelDescription": "ਅਜ਼ਾਨ ਆਵਾਜ਼ ਦੇ ਨਾਲ ਪ੍ਰਾਰਥਨਾ ਦਾ ਸਮਾਂ ਚੇਤਾਵਨੀਆਂ.",
+  "quranLoadFailed": "ਕੁਰਾਨ ਸਮੱਗਰੀ ਨੂੰ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 }

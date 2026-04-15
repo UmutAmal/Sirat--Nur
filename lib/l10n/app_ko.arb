@@ -761,5 +761,6 @@
   "audioVoiceSudais": "말레(수다이스)",
   "qiblaSensorUnavailable": "이 기기에서는 나침반 센서를 사용할 수 없습니다.",
   "adhanNotificationChannelName": "아단 알림",
-  "adhanNotificationChannelDescription": "아단 소리로 기도 시간 알림."
+  "adhanNotificationChannelDescription": "아단 소리로 기도 시간 알림.",
+  "quranLoadFailed": "꾸란 콘텐츠를 로드할 수 없습니다. 다시 시도해 주세요."
 }

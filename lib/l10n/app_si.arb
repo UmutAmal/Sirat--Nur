@@ -761,5 +761,6 @@
   "audioVoiceSudais": "පිරිමි (සුදායිස්)",
   "qiblaSensorUnavailable": "මෙම උපාංගයේ මාලිමා සංවේදකය නොමැත.",
   "adhanNotificationChannelName": "අදාන් දැනුම්දීම්",
-  "adhanNotificationChannelDescription": "අදාන් ශබ්දය සමඟ යාච්ඤාවේ වේලාව අනතුරු ඇඟවීම්."
+  "adhanNotificationChannelDescription": "අදාන් ශබ්දය සමඟ යාච්ඤාවේ වේලාව අනතුරු ඇඟවීම්.",
+  "quranLoadFailed": "කුර්ආන් අන්තර්ගතය පූරණය කළ නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න."
 }

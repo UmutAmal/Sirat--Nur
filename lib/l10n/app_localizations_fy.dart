@@ -150,6 +150,10 @@ class AppLocalizationsFy extends AppLocalizations {
   String get appUnknownError => 'Unbekende flater';
 
   @override
+  String get quranLoadFailed =>
+      'Koranynhâld koe net laden wurde. Besykje it nochris.';
+
+  @override
   String get retry => 'Opnij besykje';
 
   @override

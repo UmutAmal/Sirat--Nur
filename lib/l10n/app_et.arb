@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Mees (Sudais)",
   "qiblaSensorUnavailable": "Kompassi andur pole selles seadmes saadaval.",
   "adhanNotificationChannelName": "Adhani teatised",
-  "adhanNotificationChannelDescription": "Palveaja hoiatused adhani heliga."
+  "adhanNotificationChannelDescription": "Palveaja hoiatused adhani heliga.",
+  "quranLoadFailed": "Koraani sisu ei saanud laadida. Palun proovi uuesti."
 }

@@ -4129,3 +4129,44 @@
 
 ### Sonraki Adım
 - UI'a görünen diğer ham hata yolları taranacak. İlk adaylar: `lib/features/quran/quran_page.dart`, `lib/features/quran/juz_reading_page.dart`, `lib/features/settings/location_selection_page.dart`, `lib/features/common/app_error_page.dart`, `lib/features/library/library_page.dart`, `lib/features/library/hadith_list_page.dart`, `lib/features/settings/diagnostics_page.dart`.
+## 2026-04-15 TUR-105 — Localize Quran Reader Load Failures
+
+### Yapılan İşlem
+- `lib/features/quran/quran_page.dart`, `lib/features/quran/juz_reading_page.dart` ve `lib/features/quran/surah_reading_page.dart` yükleme catch yollarında ham `error.toString()` / `e.toString()` UI sızıntısı kaldırıldı.
+- Hata ayrıntısı sadece `debugPrint` içinde tutuldu; kullanıcı gövdesi `l10n.quranLoadFailed` ile güvenli ve lokalize mesaja bağlandı.
+- `quranLoadFailed` anahtarı `lib/l10n/app_*.arb` dosyalarının tamamına eklendi ve `flutter gen-l10n` ile generated localization dosyaları güncellendi.
+- `test/features/quran/quran_error_copy_test.dart` eklendi; TR/EN copy ve üç Kur’an okuyucu ekranında ham exception sızıntısı guard edildi.
+- `test/arb_ui_localization_test.dart` güvenli öncelikli dillerde `quranLoadFailed` İngilizce fallback’e düşmesin diye genişletildi.
+
+### Neden Yapıldı
+- `quran_page.dart:60`, `juz_reading_page.dart:76`, `surah_reading_page.dart:103` hata metnini `_error` alanına ham exception olarak yazıyordu.
+- Aynı ekranların `_buildErrorState` metinleri `_error` alanını doğrudan `Text(...)` ile gösterdiği için Supabase/asset/format hataları kullanıcıya teknik ve İngilizce çıkabiliyordu.
+- Kök çözüm exception detayını log’da bırakıp UI metnini localization zincirine taşımaktı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\quran_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\juz_reading_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\quran_error_copy_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kur’an index, sure okuma ve cüz okuma yükleme hatalarında kullanıcı artık teknik exception/store/asset metni görmez.
+- Hata mesajı tüm l10n zincirinden gelir; TR ve EN referans metinleri sabittir, öncelikli dillerde fallback guard vardır.
+
+### Test Sonucu
+- `flutter test test/features/quran/quran_error_copy_test.dart test/arb_ui_localization_test.dart --reporter compact` PASS
+- İlk `flutter analyze` bir scope hatası yakaladı; `surah_reading_page.dart` catch bloğunda lokal `l10n` alınarak düzeltildi.
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`244/244`)
+- `git diff --check` PASS
+
+### Risk Değişimi
+- Kur’an okuyucu ekranlarında ham exception metni gösterme riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- Kalan UI hata metni adayları sırayla taranacak: `lib/features/common/app_error_page.dart`, `lib/features/settings/location_selection_page.dart`, `lib/features/library/library_page.dart`, `lib/features/library/hadith_list_page.dart`, `lib/features/settings/diagnostics_page.dart`.

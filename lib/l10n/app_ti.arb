@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "ኣብዚ መሳርሒ ኮምፓስ ሴንሰር የለን።",
   "adhanNotificationChannelName": "ኣድሃን መፍለጢታት",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "quranLoadFailed": "ትሕዝቶ ቁርኣን ክጽዓን ኣይከኣለን። በጃኹም ደጊምኩም ፈትኑ።"
 }

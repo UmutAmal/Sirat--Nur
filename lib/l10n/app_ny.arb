@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Mwamuna (Sudais)",
   "qiblaSensorUnavailable": "Sensa ya Compass sichikupezeka pachidachi.",
   "adhanNotificationChannelName": "Zidziwitso za Adhan",
-  "adhanNotificationChannelDescription": "Zidziwitso za nthawi ya mapemphero ndi mawu a adhan."
+  "adhanNotificationChannelDescription": "Zidziwitso za nthawi ya mapemphero ndi mawu a adhan.",
+  "quranLoadFailed": "Zomwe zili mu Quran sizinathe kuyikidwa. Chonde yesaninso."
 }

@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Мужчына (Sudais)",
   "qiblaSensorUnavailable": "Датчык компаса недаступны на гэтай прыладзе.",
   "adhanNotificationChannelName": "Апавяшчэнні аб азане",
-  "adhanNotificationChannelDescription": "Абвесткі пра час малітвы з гукам азана."
+  "adhanNotificationChannelDescription": "Абвесткі пра час малітвы з гукам азана.",
+  "quranLoadFailed": "Не ўдалося загрузіць змест Карана. Калі ласка, паспрабуйце яшчэ раз."
 }

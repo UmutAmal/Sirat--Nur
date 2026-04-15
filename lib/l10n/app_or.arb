@@ -761,5 +761,6 @@
   "audioVoiceSudais": "ପୁରୁଷ (ସୁଦାଇସ୍)",
   "qiblaSensorUnavailable": "ଏହି ଡିଭାଇସରେ କମ୍ପାସ୍ ସେନ୍ସର ଉପଲବ୍ଧ ନାହିଁ |",
   "adhanNotificationChannelName": "ଆଡନ୍ ବିଜ୍ଞପ୍ତିଗୁଡିକ |",
-  "adhanNotificationChannelDescription": "ଆଦନ ଧ୍ୱନି ସହିତ ପ୍ରାର୍ଥନା ସମୟ ଆଲର୍ଟ |"
+  "adhanNotificationChannelDescription": "ଆଦନ ଧ୍ୱନି ସହିତ ପ୍ରାର୍ଥନା ସମୟ ଆଲର୍ଟ |",
+  "quranLoadFailed": "କୁରାନ ବିଷୟବସ୍ତୁ ଲୋଡ୍ ହୋଇପାରିଲା ନାହିଁ | ଦୟାକରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |"
 }

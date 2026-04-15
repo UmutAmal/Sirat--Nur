@@ -150,6 +150,10 @@ class AppLocalizationsTg extends AppLocalizations {
   String get appUnknownError => 'Хатогии номаълум';
 
   @override
+  String get quranLoadFailed =>
+      'Мундариҷаи Қуръон бор карда нашуд. Лутфан бори дигар кӯшиш кунед.';
+
+  @override
   String get retry => 'Retry';
 
   @override

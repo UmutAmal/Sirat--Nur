@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Mężczyzna (Sudais)",
   "qiblaSensorUnavailable": "Czujnik kompasu jest niedostępny na tym urządzeniu.",
   "adhanNotificationChannelName": "Powiadomienia Adhana",
-  "adhanNotificationChannelDescription": "Alerty czasu modlitwy z dźwiękiem Adhan."
+  "adhanNotificationChannelDescription": "Alerty czasu modlitwy z dźwiękiem Adhan.",
+  "quranLoadFailed": "Nie można załadować treści Koranu. Spróbuj ponownie."
 }

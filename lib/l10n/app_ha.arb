@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Namiji (Sudais)",
   "qiblaSensorUnavailable": "Babu firikwensin Compass akan wannan na'urar.",
   "adhanNotificationChannelName": "Sanarwar Adhan",
-  "adhanNotificationChannelDescription": "Ana faɗakar da lokacin sallah tare da sautin adhan."
+  "adhanNotificationChannelDescription": "Ana faɗakar da lokacin sallah tare da sautin adhan.",
+  "quranLoadFailed": "An kasa loda abun cikin Al-Qur'ani. Da fatan za a sake gwadawa."
 }

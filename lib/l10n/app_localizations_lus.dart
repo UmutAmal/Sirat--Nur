@@ -150,6 +150,10 @@ class AppLocalizationsLus extends AppLocalizations {
   String get appUnknownError => 'Thil tihsual hriat loh';
 
   @override
+  String get quranLoadFailed =>
+      'Quran content a load thei lo. Khawngaihin han lo try leh teh.';
+
+  @override
   String get retry => 'Ti leh rawh';
 
   @override

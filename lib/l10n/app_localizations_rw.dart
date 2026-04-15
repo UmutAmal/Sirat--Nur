@@ -150,6 +150,10 @@ class AppLocalizationsRw extends AppLocalizations {
   String get appUnknownError => 'Ikosa ritazwi';
 
   @override
+  String get quranLoadFailed =>
+      'Ibirimo Qor\'ani ntibishobora kuremerwa. Nyamuneka gerageza.';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -761,5 +761,6 @@
   "audioVoiceSudais": "പുരുഷൻ (സുദൈസ്)",
   "qiblaSensorUnavailable": "ഈ ഉപകരണത്തിൽ കോമ്പസ് സെൻസർ ലഭ്യമല്ല.",
   "adhanNotificationChannelName": "അധാൻ അറിയിപ്പുകൾ",
-  "adhanNotificationChannelDescription": "അദാൻ ശബ്ദത്തോടുകൂടിയ പ്രാർത്ഥന സമയ അലേർട്ടുകൾ."
+  "adhanNotificationChannelDescription": "അദാൻ ശബ്ദത്തോടുകൂടിയ പ്രാർത്ഥന സമയ അലേർട്ടുകൾ.",
+  "quranLoadFailed": "ഖുറാൻ ഉള്ളടക്കം ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക."
 }

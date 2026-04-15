@@ -150,6 +150,10 @@ class AppLocalizationsTr extends AppLocalizations {
   String get appUnknownError => 'Bilinmeyen hata';
 
   @override
+  String get quranLoadFailed =>
+      'Kur\'an içeriği yüklenemedi. Lütfen tekrar deneyin.';
+
+  @override
   String get retry => 'Tekrar Dene';
 
   @override

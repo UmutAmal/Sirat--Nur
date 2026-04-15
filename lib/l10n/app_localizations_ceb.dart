@@ -150,6 +150,10 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get appUnknownError => 'Wala mailhi nga sayup';
 
   @override
+  String get quranLoadFailed =>
+      'Ang sulod sa Quran dili makarga. Palihug sulayi pag-usab.';
+
+  @override
   String get retry => 'Sulayi pag-usab';
 
   @override

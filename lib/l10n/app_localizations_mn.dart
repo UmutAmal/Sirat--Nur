@@ -150,6 +150,10 @@ class AppLocalizationsMn extends AppLocalizations {
   String get appUnknownError => 'Үл мэдэгдэх алдаа';
 
   @override
+  String get quranLoadFailed =>
+      'Коран судрын агуулгыг ачаалж чадсангүй. Дахин оролдоно уу.';
+
+  @override
   String get retry => 'Retry';
 
   @override

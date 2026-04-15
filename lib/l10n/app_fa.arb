@@ -761,5 +761,6 @@
   "audioVoiceSudais": "نر (Sudais)",
   "qiblaSensorUnavailable": "سنسور قطب نما در این دستگاه در دسترس نیست.",
   "adhanNotificationChannelName": "اعلان های اذان",
-  "adhanNotificationChannelDescription": "هشدار زمان نماز با صدای اذان."
+  "adhanNotificationChannelDescription": "هشدار زمان نماز با صدای اذان.",
+  "quranLoadFailed": "محتوای قرآن بارگیری نشد. لطفا دوباره امتحان کنید."
 }

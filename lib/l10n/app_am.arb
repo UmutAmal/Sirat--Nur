@@ -761,5 +761,6 @@
   "audioVoiceSudais": "ወንድ (ሱዳይስ)",
   "qiblaSensorUnavailable": "የኮምፓስ ዳሳሽ በዚህ መሳሪያ ላይ የለም።",
   "adhanNotificationChannelName": "አድሃን ማሳወቂያዎች",
-  "adhanNotificationChannelDescription": "የጸሎት ጊዜ ማንቂያዎች ከአድሃን ድምፅ ጋር።"
+  "adhanNotificationChannelDescription": "የጸሎት ጊዜ ማንቂያዎች ከአድሃን ድምፅ ጋር።",
+  "quranLoadFailed": "የቁርኣን ይዘት ሊጫን አልቻለም። እባክህ እንደገና ሞክር።"
 }

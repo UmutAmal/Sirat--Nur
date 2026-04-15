@@ -152,6 +152,10 @@ class AppLocalizationsQu extends AppLocalizations {
   String get appUnknownError => 'Mana riqsisqa pantay';
 
   @override
+  String get quranLoadFailed =>
+      'Quranpa contenidonqa manam cargayta atirqakuchu. Ama hina kaspa, hukmanta kallpachakuy.';
+
+  @override
   String get retry => 'Retry';
 
   @override

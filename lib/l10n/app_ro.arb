@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Masculin (Sudais)",
   "qiblaSensorUnavailable": "Senzorul busolă nu este disponibil pe acest dispozitiv.",
   "adhanNotificationChannelName": "Notificări Adhan",
-  "adhanNotificationChannelDescription": "Alerte de timp de rugăciune cu sunet adhan."
+  "adhanNotificationChannelDescription": "Alerte de timp de rugăciune cu sunet adhan.",
+  "quranLoadFailed": "Conținutul Coranului nu a putut fi încărcat. Vă rugăm să încercați din nou."
 }

@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Lalaki (Sudais)",
   "qiblaSensorUnavailable": "Ang sensor sa kompas dili magamit sa kini nga aparato.",
   "adhanNotificationChannelName": "Mga Abiso sa Adhan",
-  "adhanNotificationChannelDescription": "Mga alerto sa oras sa pag-ampo nga adunay tunog sa adhan."
+  "adhanNotificationChannelDescription": "Mga alerto sa oras sa pag-ampo nga adunay tunog sa adhan.",
+  "quranLoadFailed": "Ang sulod sa Quran dili makarga. Palihug sulayi pag-usab."
 }

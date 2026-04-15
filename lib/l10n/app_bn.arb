@@ -761,5 +761,6 @@
   "audioVoiceSudais": "পুরুষ (সুদাইস)",
   "qiblaSensorUnavailable": "এই ডিভাইসে কম্পাস সেন্সর অনুপলব্ধ৷",
   "adhanNotificationChannelName": "আযান বিজ্ঞপ্তি",
-  "adhanNotificationChannelDescription": "আযান ধ্বনির সাথে নামাজের সময় সতর্কতা।"
+  "adhanNotificationChannelDescription": "আযান ধ্বনির সাথে নামাজের সময় সতর্কতা।",
+  "quranLoadFailed": "কুরআন বিষয়বস্তু লোড করা যাবে না. আবার চেষ্টা করুন."
 }

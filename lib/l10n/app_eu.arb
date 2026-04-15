@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Gizonezkoa (Sudaia)",
   "qiblaSensorUnavailable": "Iparrorratza sentsorea ez dago erabilgarri gailu honetan.",
   "adhanNotificationChannelName": "Adhan jakinarazpenak",
-  "adhanNotificationChannelDescription": "Otoitz denbora alertak adhan soinuarekin."
+  "adhanNotificationChannelDescription": "Otoitz denbora alertak adhan soinuarekin.",
+  "quranLoadFailed": "Ezin izan da Koranaren edukia kargatu. Mesedez, saiatu berriro."
 }

@@ -152,6 +152,10 @@ class AppLocalizationsDv extends AppLocalizations {
   String get appUnknownError => 'ނޭނގޭ ގޯހެއް';
 
   @override
+  String get quranLoadFailed =>
+      'ޤުރުއާން ކޮންޓެންޓް ލޯޑް ކުރެވޭ ގޮތެއް ނުވިއެވެ. އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ.';
+
+  @override
   String get retry => 'އަލުން މަސައްކަތް ކުރާށެވެ';
 
   @override

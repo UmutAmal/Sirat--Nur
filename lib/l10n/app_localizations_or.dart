@@ -150,6 +150,10 @@ class AppLocalizationsOr extends AppLocalizations {
   String get appUnknownError => 'ଅଜ୍ଞାତ ତ୍ରୁଟି |';
 
   @override
+  String get quranLoadFailed =>
+      'କୁରାନ ବିଷୟବସ୍ତୁ ଲୋଡ୍ ହୋଇପାରିଲା ନାହିଁ | ଦୟାକରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -761,5 +761,6 @@
   "audioVoiceSudais": "זכר (סודאים)",
   "qiblaSensorUnavailable": "חיישן מצפן אינו זמין במכשיר זה.",
   "adhanNotificationChannelName": "התראות אדהאן",
-  "adhanNotificationChannelDescription": "התראות על זמן תפילה עם צליל אדהן."
+  "adhanNotificationChannelDescription": "התראות על זמן תפילה עם צליל אדהן.",
+  "quranLoadFailed": "לא ניתן היה לטעון את תוכן הקוראן. אנא נסה שוב."
 }

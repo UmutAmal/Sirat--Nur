@@ -150,6 +150,10 @@ class AppLocalizationsEu extends AppLocalizations {
   String get appUnknownError => 'Errore ezezaguna';
 
   @override
+  String get quranLoadFailed =>
+      'Ezin izan da Koranaren edukia kargatu. Mesedez, saiatu berriro.';
+
+  @override
   String get retry => 'Saiatu berriro';
 
   @override

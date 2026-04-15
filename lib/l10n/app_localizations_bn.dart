@@ -151,6 +151,10 @@ class AppLocalizationsBn extends AppLocalizations {
   String get appUnknownError => 'অজানা ত্রুটি';
 
   @override
+  String get quranLoadFailed =>
+      'কুরআন বিষয়বস্তু লোড করা যাবে না. আবার চেষ্টা করুন.';
+
+  @override
   String get retry => 'আবার চেষ্টা করুন';
 
   @override

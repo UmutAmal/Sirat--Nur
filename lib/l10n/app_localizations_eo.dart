@@ -150,6 +150,10 @@ class AppLocalizationsEo extends AppLocalizations {
   String get appUnknownError => 'Nekonata eraro';
 
   @override
+  String get quranLoadFailed =>
+      'Korano-enhavo ne povis esti ŝargita. Bonvolu provi denove.';
+
+  @override
   String get retry => 'Reprovi';
 
   @override

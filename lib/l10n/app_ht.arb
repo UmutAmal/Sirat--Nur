@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Gason (Sudais)",
   "qiblaSensorUnavailable": "Capteur konpa pa disponib sou aparèy sa a.",
   "adhanNotificationChannelName": "Adhan Notifikasyon",
-  "adhanNotificationChannelDescription": "Alèt tan lapriyè ak son adhan."
+  "adhanNotificationChannelDescription": "Alèt tan lapriyè ak son adhan.",
+  "quranLoadFailed": "Kontni koran pa t 'kapab chaje. Tanpri eseye ankò."
 }

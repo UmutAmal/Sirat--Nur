@@ -761,5 +761,6 @@
   "audioVoiceSudais": "पुरुष (सुदाई)",
   "qiblaSensorUnavailable": "या डिव्हाइसवर कंपास सेन्सर अनुपलब्ध आहे.",
   "adhanNotificationChannelName": "अधान सूचना",
-  "adhanNotificationChannelDescription": "अजान आवाजासह प्रार्थनेची वेळ अलर्ट."
+  "adhanNotificationChannelDescription": "अजान आवाजासह प्रार्थनेची वेळ अलर्ट.",
+  "quranLoadFailed": "कुराण सामग्री लोड करणे शक्य नाही. कृपया पुन्हा प्रयत्न करा."
 }

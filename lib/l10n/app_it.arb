@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Maschio (Sudais)",
   "qiblaSensorUnavailable": "Il sensore della bussola non è disponibile su questo dispositivo.",
   "adhanNotificationChannelName": "Notifiche di Adhan",
-  "adhanNotificationChannelDescription": "Avvisi sul tempo di preghiera con il suono adhan."
+  "adhanNotificationChannelDescription": "Avvisi sul tempo di preghiera con il suono adhan.",
+  "quranLoadFailed": "Impossibile caricare il contenuto del Corano. Per favore riprova."
 }

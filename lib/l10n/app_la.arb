@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Masculus (Sudais)",
   "qiblaSensorUnavailable": "Sensorem Compass est in hac fabrica unavailable.",
   "adhanNotificationChannelName": "Adhan Suspendisse",
-  "adhanNotificationChannelDescription": "Orationis tempus summis cum adhan sono."
+  "adhanNotificationChannelDescription": "Orationis tempus summis cum adhan sono.",
+  "quranLoadFailed": "Quran contentus non oneratus. Quaeso, iterum conare."
 }

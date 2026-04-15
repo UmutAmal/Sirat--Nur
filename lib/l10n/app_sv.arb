@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Man (sudais)",
   "qiblaSensorUnavailable": "Kompasssensor är inte tillgänglig på den här enheten.",
   "adhanNotificationChannelName": "Adhan-meddelanden",
-  "adhanNotificationChannelDescription": "Bönetidslarm med adhan-ljud."
+  "adhanNotificationChannelDescription": "Bönetidslarm med adhan-ljud.",
+  "quranLoadFailed": "Koraninnehåll kunde inte laddas. Försök igen."
 }

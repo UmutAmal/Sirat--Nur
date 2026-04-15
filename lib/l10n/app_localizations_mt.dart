@@ -151,6 +151,10 @@ class AppLocalizationsMt extends AppLocalizations {
   String get appUnknownError => 'Żball mhux magħruf';
 
   @override
+  String get quranLoadFailed =>
+      'Il-kontenut tal-Quran ma setax jitgħabba. Jekk jogħġbok erġa\' pprova.';
+
+  @override
   String get retry => 'Retry';
 
   @override

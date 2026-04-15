@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Männlech (Sudais)",
   "qiblaSensorUnavailable": "Kompasssensor ass op dësem Apparat net verfügbar.",
   "adhanNotificationChannelName": "Adhan Notifikatiounen",
-  "adhanNotificationChannelDescription": "Gebiedszäit Alarmer mat Adhan Sound."
+  "adhanNotificationChannelDescription": "Gebiedszäit Alarmer mat Adhan Sound.",
+  "quranLoadFailed": "Koran Inhalt konnt net gelueden ginn. Probéiert w.e.g. nach eng Kéier."
 }

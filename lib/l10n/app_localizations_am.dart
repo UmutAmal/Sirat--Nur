@@ -150,6 +150,9 @@ class AppLocalizationsAm extends AppLocalizations {
   String get appUnknownError => 'ያልታወቀ ስህተት';
 
   @override
+  String get quranLoadFailed => 'የቁርኣን ይዘት ሊጫን አልቻለም። እባክህ እንደገና ሞክር።';
+
+  @override
   String get retry => 'እንደገና ይሞክሩ';
 
   @override

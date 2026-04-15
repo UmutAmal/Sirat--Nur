@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Erkek (Sudais)",
   "qiblaSensorUnavailable": "Kompass datçigi bu enjamda elýeterli däl.",
   "adhanNotificationChannelName": "Adhan habarnamalary",
-  "adhanNotificationChannelDescription": "Adhan sesi bilen doga wagty duýduryşlary."
+  "adhanNotificationChannelDescription": "Adhan sesi bilen doga wagty duýduryşlary.",
+  "quranLoadFailed": "Gurhanyň mazmuny ýüklenip bilinmedi. Gaýtadan synanyşmagyňyzy haýyş edýäris."
 }

@@ -66,6 +66,7 @@
   "error": "Error",
   "appErrorOccurred": "An error occurred",
   "appUnknownError": "Unknown error",
+  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
   "retry": "Retry",
   "refreshAction": "Refresh",
   "cancel": "Cancel",

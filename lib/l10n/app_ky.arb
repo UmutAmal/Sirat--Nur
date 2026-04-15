@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Эркек (Судайлар)",
   "qiblaSensorUnavailable": "Компас сенсору бул түзмөктө жеткиликсиз.",
   "adhanNotificationChannelName": "Азан эскертмелери",
-  "adhanNotificationChannelDescription": "Намаз убактысы азан үнү менен эскертет."
+  "adhanNotificationChannelDescription": "Намаз убактысы азан үнү менен эскертет.",
+  "quranLoadFailed": "Куран мазмунун жүктөө мүмкүн эмес. Сураныч, кайра аракет кылыңыз."
 }

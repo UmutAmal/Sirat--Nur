@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Чоловік (Sudais)",
   "qiblaSensorUnavailable": "Датчик компаса недоступний на цьому пристрої.",
   "adhanNotificationChannelName": "Сповіщення азану",
-  "adhanNotificationChannelDescription": "Сповіщення про час молитви зі звуком азану."
+  "adhanNotificationChannelDescription": "Сповіщення про час молитви зі звуком азану.",
+  "quranLoadFailed": "Не вдалося завантажити вміст Корану. Спробуйте ще раз."
 }

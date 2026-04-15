@@ -150,6 +150,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get appUnknownError => 'خطأ غير معروف';
 
   @override
+  String get quranLoadFailed =>
+      'لا يمكن تحميل محتوى القرآن. يرجى المحاولة مرة أخرى.';
+
+  @override
   String get retry => 'إعادة المحاولة';
 
   @override

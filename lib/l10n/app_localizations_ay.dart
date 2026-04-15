@@ -154,6 +154,10 @@ class AppLocalizationsAy extends AppLocalizations {
   String get appUnknownError => 'Jan uñt’at pantjasiwi';
 
   @override
+  String get quranLoadFailed =>
+      'Quran ukax janiw cargañjamäkänti. Ukhamaraki, mayampi yant’apxañani.';
+
+  @override
   String get retry => 'Wasitat yantʼañamawa';
 
   @override

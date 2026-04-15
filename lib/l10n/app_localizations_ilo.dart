@@ -151,6 +151,10 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get appUnknownError => 'Di ammo a biddut';
 
   @override
+  String get quranLoadFailed =>
+      'Saan a mabalin a maikarga ti linaon ti Quran. Pangngaasiyo ta padasenyo manen.';
+
+  @override
   String get retry => 'Padasem manen';
 
   @override

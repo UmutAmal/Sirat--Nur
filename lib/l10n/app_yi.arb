@@ -761,5 +761,6 @@
   "audioVoiceSudais": "זכר (סודאַיס)",
   "qiblaSensorUnavailable": "קאָמפּאַס סענסער איז ניט בנימצא אויף דעם מיטל.",
   "adhanNotificationChannelName": "אַדהאַן נאָוטאַפאַקיישאַנז",
-  "adhanNotificationChannelDescription": "תפילה צייט אַלערץ מיט אַדהאַן געזונט."
+  "adhanNotificationChannelDescription": "תפילה צייט אַלערץ מיט אַדהאַן געזונט.",
+  "quranLoadFailed": "קווראַן אינהאַלט קען נישט זיין לאָודיד. ביטע פּרוּווט ווידער."
 }

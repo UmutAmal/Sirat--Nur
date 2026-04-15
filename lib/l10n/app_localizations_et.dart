@@ -150,6 +150,10 @@ class AppLocalizationsEt extends AppLocalizations {
   String get appUnknownError => 'Tundmatu viga';
 
   @override
+  String get quranLoadFailed =>
+      'Koraani sisu ei saanud laadida. Palun proovi uuesti.';
+
+  @override
   String get retry => 'Proovi uuesti';
 
   @override

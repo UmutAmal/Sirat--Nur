@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Erkak (Sudais)",
   "qiblaSensorUnavailable": "Kompas sensori bu qurilmada ishlamaydi.",
   "adhanNotificationChannelName": "Azon bildirishnomalari",
-  "adhanNotificationChannelDescription": "Namoz vaqti azon ovozi bilan ogohlantiriladi."
+  "adhanNotificationChannelDescription": "Namoz vaqti azon ovozi bilan ogohlantiriladi.",
+  "quranLoadFailed": "Qur'on mazmunini yuklab bo'lmadi. Iltimos, qayta urinib koʻring."
 }

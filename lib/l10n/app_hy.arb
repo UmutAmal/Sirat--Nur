@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Արական (Սուդայ)",
   "qiblaSensorUnavailable": "Կողմնացույցի սենսորն անհասանելի է այս սարքում:",
   "adhanNotificationChannelName": "Ադանի ծանուցումներ",
-  "adhanNotificationChannelDescription": "Աղոթքի ժամանակի ահազանգերը ադանի ձայնով:"
+  "adhanNotificationChannelDescription": "Աղոթքի ժամանակի ահազանգերը ադանի ձայնով:",
+  "quranLoadFailed": "Ղուրանի բովանդակությունը չհաջողվեց բեռնել: Խնդրում ենք կրկին փորձել:"
 }

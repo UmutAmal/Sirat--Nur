@@ -151,6 +151,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get appUnknownError => 'Neznáma chyba';
 
   @override
+  String get quranLoadFailed =>
+      'Obsah Koránu sa nepodarilo načítať. Skúste to znova.';
+
+  @override
   String get retry => 'Retry';
 
   @override

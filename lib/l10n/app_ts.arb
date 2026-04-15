@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "Compass sensor a yi kumeki eka xitirhisiwa lexi.",
   "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "quranLoadFailed": "Swilo leswi nga endzeni ka Quran a swi nga ta layichiwa. Hi kombela u ringeta nakambe."
 }

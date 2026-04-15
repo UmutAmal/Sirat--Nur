@@ -150,6 +150,10 @@ class AppLocalizationsUr extends AppLocalizations {
   String get appUnknownError => 'نامعلوم خرابی۔';
 
   @override
+  String get quranLoadFailed =>
+      'قرآنی مواد لوڈ نہیں ہو سکا۔ براہ کرم دوبارہ کوشش کریں۔';
+
+  @override
   String get retry => 'دوبارہ کوشش کریں';
 
   @override

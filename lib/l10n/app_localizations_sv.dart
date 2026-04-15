@@ -150,6 +150,9 @@ class AppLocalizationsSv extends AppLocalizations {
   String get appUnknownError => 'Okänt fel';
 
   @override
+  String get quranLoadFailed => 'Koraninnehåll kunde inte laddas. Försök igen.';
+
+  @override
   String get retry => 'Retry';
 
   @override

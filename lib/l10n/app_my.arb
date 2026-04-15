@@ -761,5 +761,6 @@
   "audioVoiceSudais": "ယောကျာ်းလေး (Sudais)",
   "qiblaSensorUnavailable": "သံလိုက်အိမ်မြှောင်အာရုံခံကိရိယာကို ဤစက်ပစ္စည်းတွင် မရရှိနိုင်ပါ။",
   "adhanNotificationChannelName": "Adhan အသိပေးချက်များ",
-  "adhanNotificationChannelDescription": "အဒ်ဟန်အသံဖြင့် ဆုတောင်းချိန်သတိပေးချက်။"
+  "adhanNotificationChannelDescription": "အဒ်ဟန်အသံဖြင့် ဆုတောင်းချိန်သတိပေးချက်။",
+  "quranLoadFailed": "ကုရ်အာန်အကြောင်းအရာကို တင်၍မရပါ။ ထပ်စမ်းကြည့်ပါ။"
 }

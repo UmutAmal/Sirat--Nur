@@ -150,6 +150,10 @@ class AppLocalizationsIg extends AppLocalizations {
   String get appUnknownError => 'Njehie amaghị';
 
   @override
+  String get quranLoadFailed =>
+      'Enweghị ike ibunye ọdịnaya Quran. Biko nwaa ọzọ.';
+
+  @override
   String get retry => 'Retry';
 
   @override

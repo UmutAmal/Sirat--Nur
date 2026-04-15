@@ -761,5 +761,6 @@
   "audioVoiceSudais": "మగ (సుడైస్)",
   "qiblaSensorUnavailable": "ఈ పరికరంలో కంపాస్ సెన్సార్ అందుబాటులో లేదు.",
   "adhanNotificationChannelName": "అధాన్ నోటిఫికేషన్‌లు",
-  "adhanNotificationChannelDescription": "అధాన్ ధ్వనితో ప్రార్థన సమయ హెచ్చరికలు."
+  "adhanNotificationChannelDescription": "అధాన్ ధ్వనితో ప్రార్థన సమయ హెచ్చరికలు.",
+  "quranLoadFailed": "ఖురాన్ కంటెంట్ లోడ్ చేయబడలేదు. దయచేసి మళ్లీ ప్రయత్నించండి."
 }

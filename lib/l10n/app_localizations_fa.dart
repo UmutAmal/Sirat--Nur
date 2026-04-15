@@ -150,6 +150,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get appUnknownError => 'خطای ناشناخته';
 
   @override
+  String get quranLoadFailed =>
+      'محتوای قرآن بارگیری نشد. لطفا دوباره امتحان کنید.';
+
+  @override
   String get retry => 'تلاش مجدد';
 
   @override

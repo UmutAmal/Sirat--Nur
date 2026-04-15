@@ -151,6 +151,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get appUnknownError => 'Mearachd neo-aithnichte';
 
   @override
+  String get quranLoadFailed =>
+      'Cha b’ urrainn dhuinn susbaint Quran a luchdachadh. Feuch ris a-rithist.';
+
+  @override
   String get retry => 'Feuch a-rithist';
 
   @override

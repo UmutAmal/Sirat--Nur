@@ -761,5 +761,6 @@
   "audioVoiceSudais": "ذكر (السديس)",
   "qiblaSensorUnavailable": "مستشعر البوصلة غير متوفر على هذا الجهاز.",
   "adhanNotificationChannelName": "إشعارات الأذان",
-  "adhanNotificationChannelDescription": "تنبيهات لأوقات الصلاة مع صوت الأذان."
+  "adhanNotificationChannelDescription": "تنبيهات لأوقات الصلاة مع صوت الأذان.",
+  "quranLoadFailed": "لا يمكن تحميل محتوى القرآن. يرجى المحاولة مرة أخرى."
 }

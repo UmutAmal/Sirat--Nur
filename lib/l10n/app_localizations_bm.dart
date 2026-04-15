@@ -150,6 +150,10 @@ class AppLocalizationsBm extends AppLocalizations {
   String get appUnknownError => 'Misali dɔnbali';
 
   @override
+  String get quranLoadFailed =>
+      'Kuranɛ kɔnɔkow ma se ka doni. Aw ye aw jija ka segin a kan.';
+
+  @override
   String get retry => 'Aw ye a lajɛ kokura';
 
   @override

@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Laki-laki (Sudais)",
   "qiblaSensorUnavailable": "Sensor kompas tidak tersedia di perangkat ini.",
   "adhanNotificationChannelName": "Pemberitahuan Adzan",
-  "adhanNotificationChannelDescription": "Peringatan waktu sholat dengan suara adzan."
+  "adhanNotificationChannelDescription": "Peringatan waktu sholat dengan suara adzan.",
+  "quranLoadFailed": "Konten Al-Quran tidak dapat dimuat. Silakan coba lagi."
 }

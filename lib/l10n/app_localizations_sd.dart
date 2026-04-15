@@ -150,6 +150,10 @@ class AppLocalizationsSd extends AppLocalizations {
   String get appUnknownError => 'اڻڄاتل غلطي';
 
   @override
+  String get quranLoadFailed =>
+      'قرآن جو مواد لوڊ نه ٿي سگهيو. مهرباني ڪري ٻيهر ڪوشش ڪريو.';
+
+  @override
   String get retry => 'Retry';
 
   @override

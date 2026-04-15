@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Эрэгтэй (Судайчууд)",
   "qiblaSensorUnavailable": "Энэ төхөөрөмж дээр луужин мэдрэгч боломжгүй байна.",
   "adhanNotificationChannelName": "Азаны мэдэгдлүүд",
-  "adhanNotificationChannelDescription": "Залбирлын цагийг азаны дуугаар дохио өгдөг."
+  "adhanNotificationChannelDescription": "Залбирлын цагийг азаны дуугаар дохио өгдөг.",
+  "quranLoadFailed": "Коран судрын агуулгыг ачаалж чадсангүй. Дахин оролдоно уу."
 }

@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "E le o maua le masini tapasa i lenei masini.",
   "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Talosaga taimi tatalo ma le leo azan."
+  "adhanNotificationChannelDescription": "Talosaga taimi tatalo ma le leo azan.",
+  "quranLoadFailed": "E le mafai ona utaina mataupu o le Quran. Fa'amolemole toe taumafai."
 }

@@ -150,6 +150,10 @@ class AppLocalizationsKn extends AppLocalizations {
   String get appUnknownError => 'ಅಜ್ಞಾತ ದೋಷ';
 
   @override
+  String get quranLoadFailed =>
+      'ಕುರಾನ್ ವಿಷಯವನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -54,10 +54,12 @@ class _QuranPageState extends ConsumerState<QuranPage>
         _isLoading = false;
       });
     } catch (error) {
+      debugPrint('Quran index load failed: $error');
       if (!mounted) return;
+      final l10n = AppLocalizations.of(context)!;
       setState(() {
         _isLoading = false;
-        _error = error.toString();
+        _error = l10n.quranLoadFailed;
       });
     }
   }
@@ -106,9 +108,7 @@ class _QuranPageState extends ConsumerState<QuranPage>
               ),
             ),
           ),
-          Expanded(
-            child: _buildBody(context, filteredSurahs),
-          ),
+          Expanded(child: _buildBody(context, filteredSurahs)),
         ],
       ),
     );

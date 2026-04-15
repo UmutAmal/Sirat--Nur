@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Vyras (Sudais)",
   "qiblaSensorUnavailable": "Šiame įrenginyje kompaso jutiklis nepasiekiamas.",
   "adhanNotificationChannelName": "Adhan pranešimai",
-  "adhanNotificationChannelDescription": "Maldos laikas perspėja su adhano garsu."
+  "adhanNotificationChannelDescription": "Maldos laikas perspėja su adhano garsu.",
+  "quranLoadFailed": "Nepavyko įkelti Korano turinio. Bandykite dar kartą."
 }

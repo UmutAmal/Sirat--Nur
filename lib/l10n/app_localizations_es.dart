@@ -151,6 +151,10 @@ class AppLocalizationsEs extends AppLocalizations {
   String get appUnknownError => 'Error desconocido';
 
   @override
+  String get quranLoadFailed =>
+      'No se pudo cargar el contenido del Corán. Por favor inténtalo de nuevo.';
+
+  @override
   String get retry => 'Rever';
 
   @override

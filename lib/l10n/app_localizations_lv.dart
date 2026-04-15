@@ -151,6 +151,10 @@ class AppLocalizationsLv extends AppLocalizations {
   String get appUnknownError => 'Nezināma kļūda';
 
   @override
+  String get quranLoadFailed =>
+      'Korāna saturu nevarēja ielādēt. Lūdzu, mēģiniet vēlreiz.';
+
+  @override
   String get retry => 'Retry';
 
   @override

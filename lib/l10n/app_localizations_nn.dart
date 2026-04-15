@@ -150,6 +150,10 @@ class AppLocalizationsNn extends AppLocalizations {
   String get appUnknownError => 'Ukjent feil';
 
   @override
+  String get quranLoadFailed =>
+      'Koraninnhold kunne ikke lastes. Vennligst prøv igjen.';
+
+  @override
   String get retry => 'Retry';
 
   @override

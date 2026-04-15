@@ -150,6 +150,10 @@ class AppLocalizationsKi extends AppLocalizations {
   String get appUnknownError => 'Unknown error';
 
   @override
+  String get quranLoadFailed =>
+      'Quran content could not be loaded. Please try again.';
+
+  @override
   String get retry => 'Retry';
 
   @override

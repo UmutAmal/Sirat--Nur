@@ -761,5 +761,6 @@
   "audioVoiceSudais": "მამაკაცი (სუდაისი)",
   "qiblaSensorUnavailable": "კომპასის სენსორი მიუწვდომელია ამ მოწყობილობაზე.",
   "adhanNotificationChannelName": "ადანის შეტყობინებები",
-  "adhanNotificationChannelDescription": "ლოცვის დრო აფრთხილებს ადანის ხმით."
+  "adhanNotificationChannelDescription": "ლოცვის დრო აფრთხილებს ადანის ხმით.",
+  "quranLoadFailed": "ყურანის შინაარსი ვერ ჩაიტვირთა. გთხოვთ, სცადოთ ხელახლა."
 }

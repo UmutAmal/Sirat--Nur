@@ -150,6 +150,10 @@ class AppLocalizationsSm extends AppLocalizations {
   String get appUnknownError => 'Sese le iloa';
 
   @override
+  String get quranLoadFailed =>
+      'E le mafai ona utaina mataupu o le Quran. Fa\'amolemole toe taumafai.';
+
+  @override
   String get retry => 'Retry';
 
   @override

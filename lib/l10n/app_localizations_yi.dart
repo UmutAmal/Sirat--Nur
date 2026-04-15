@@ -150,6 +150,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get appUnknownError => 'אומבאַקאַנט טעות';
 
   @override
+  String get quranLoadFailed =>
+      'קווראַן אינהאַלט קען נישט זיין לאָודיד. ביטע פּרוּווט ווידער.';
+
+  @override
   String get retry => 'Retry';
 
   @override

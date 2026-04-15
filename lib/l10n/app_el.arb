@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Αρσενικό (Sudais)",
   "qiblaSensorUnavailable": "Ο αισθητήρας πυξίδας δεν είναι διαθέσιμος σε αυτήν τη συσκευή.",
   "adhanNotificationChannelName": "Ειδοποιήσεις Adhan",
-  "adhanNotificationChannelDescription": "Ειδοποιήσεις ώρας προσευχής με ήχο αντάν."
+  "adhanNotificationChannelDescription": "Ειδοποιήσεις ώρας προσευχής με ήχο αντάν.",
+  "quranLoadFailed": "Δεν ήταν δυνατή η φόρτωση του περιεχομένου του Κορανίου. Δοκιμάστε ξανά."
 }

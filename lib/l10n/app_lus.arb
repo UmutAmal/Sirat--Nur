@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "He device ah hian Compass sensor a awm lo.",
   "adhanNotificationChannelName": "Adhan Hriattirna",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "quranLoadFailed": "Quran content a load thei lo. Khawngaihin han lo try leh teh."
 }

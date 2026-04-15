@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Mashkull (Sudais)",
   "qiblaSensorUnavailable": "Sensori i busullës nuk ofrohet në këtë pajisje.",
   "adhanNotificationChannelName": "Njoftimet e ezanit",
-  "adhanNotificationChannelDescription": "Alarmet për kohën e namazit me tingullin e ezanit."
+  "adhanNotificationChannelDescription": "Alarmet për kohën e namazit me tingullin e ezanit.",
+  "quranLoadFailed": "Përmbajtja e Kuranit nuk mund të ngarkohej. Ju lutemi provoni përsëri."
 }

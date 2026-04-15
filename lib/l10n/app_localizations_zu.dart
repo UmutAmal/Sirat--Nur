@@ -150,6 +150,10 @@ class AppLocalizationsZu extends AppLocalizations {
   String get appUnknownError => 'Iphutha elingaziwa';
 
   @override
+  String get quranLoadFailed =>
+      'Okuqukethwe kwe-Quran akukwazanga ukulayishwa. Sicela uzame futhi.';
+
+  @override
   String get retry => 'Retry';
 
   @override

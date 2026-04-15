@@ -150,6 +150,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get appUnknownError => '不明なエラー';
 
   @override
+  String get quranLoadFailed => 'コーランのコンテンツをロードできませんでした。もう一度試してください。';
+
+  @override
   String get retry => 'Retry';
 
   @override

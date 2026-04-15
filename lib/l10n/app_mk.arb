@@ -761,5 +761,6 @@
   "audioVoiceSudais": "машки (Судаис)",
   "qiblaSensorUnavailable": "Сензорот за компас е недостапен на овој уред.",
   "adhanNotificationChannelName": "Известувања за Азан",
-  "adhanNotificationChannelDescription": "Предупредува за време на молитвата со звук на азан."
+  "adhanNotificationChannelDescription": "Предупредува за време на молитвата со звук на азан.",
+  "quranLoadFailed": "Содржината на Куранот не можеше да се вчита. Ве молиме обидете се повторно."
 }

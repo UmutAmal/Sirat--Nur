@@ -761,5 +761,6 @@
   "audioVoiceSudais": "nêr (Sûdaîs)",
   "qiblaSensorUnavailable": "Sensor Compass li ser vê cîhazê ne berdest e.",
   "adhanNotificationChannelName": "Azan Notifications",
-  "adhanNotificationChannelDescription": "Dema nimêjê bi dengê azanê hişyar dike."
+  "adhanNotificationChannelDescription": "Dema nimêjê bi dengê azanê hişyar dike.",
+  "quranLoadFailed": "Naveroka Quranê nehat barkirin. Ji kerema xwe dîsa biceribîne."
 }

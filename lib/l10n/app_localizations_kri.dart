@@ -151,6 +151,10 @@ class AppLocalizationsKri extends AppLocalizations {
   String get appUnknownError => 'Mistek we dɛn nɔ no';
 
   @override
+  String get quranLoadFailed =>
+      'Di tin dɛn we de insay di Kɔran nɔ bin ebul fɔ lod. Duya tray bak.';
+
+  @override
   String get retry => 'Tray bak';
 
   @override

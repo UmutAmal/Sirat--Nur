@@ -150,6 +150,10 @@ class AppLocalizationsLa extends AppLocalizations {
   String get appUnknownError => 'Error ignotus';
 
   @override
+  String get quranLoadFailed =>
+      'Quran contentus non oneratus. Quaeso, iterum conare.';
+
+  @override
   String get retry => 'Retry';
 
   @override

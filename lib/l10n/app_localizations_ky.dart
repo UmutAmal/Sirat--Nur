@@ -152,6 +152,10 @@ class AppLocalizationsKy extends AppLocalizations {
   String get appUnknownError => 'Белгисиз ката';
 
   @override
+  String get quranLoadFailed =>
+      'Куран мазмунун жүктөө мүмкүн эмес. Сураныч, кайра аракет кылыңыз.';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -152,6 +152,10 @@ class AppLocalizationsGn extends AppLocalizations {
   String get appUnknownError => 'Ojejavy ndojekuaáiva';
 
   @override
+  String get quranLoadFailed =>
+      'Ndaikatúi ojekarga contenido Corán rehegua. Eñeha’ã jey.';
+
+  @override
   String get retry => 'Eñeha’ã jey';
 
   @override

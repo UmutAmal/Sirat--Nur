@@ -150,6 +150,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get appUnknownError => 'Kuskuren da ba a sani ba';
 
   @override
+  String get quranLoadFailed =>
+      'An kasa loda abun cikin Al-Qur\'ani. Da fatan za a sake gwadawa.';
+
+  @override
   String get retry => 'Sake gwadawa';
 
   @override

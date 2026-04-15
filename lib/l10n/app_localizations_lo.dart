@@ -150,6 +150,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get appUnknownError => 'ຄວາມຜິດພາດທີ່ບໍ່ຮູ້ຈັກ';
 
   @override
+  String get quranLoadFailed =>
+      'ເນື້ອຫາ Quran ບໍ່ສາມາດໂຫລດໄດ້. ກະລຸນາລອງອີກຄັ້ງ.';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -150,6 +150,9 @@ class AppLocalizationsSn extends AppLocalizations {
   String get appUnknownError => 'Kukanganisa kusingazivikanwe';
 
   @override
+  String get quranLoadFailed => 'Korani yatadza kurodha. Ndapota edza zvakare.';
+
+  @override
   String get retry => 'Retry';
 
   @override

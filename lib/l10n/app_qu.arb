@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "Kay aparatopiqa mana brújula sensor nisqa kanchu.",
   "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "quranLoadFailed": "Quranpa contenidonqa manam cargayta atirqakuchu. Ama hina kaspa, hukmanta kallpachakuy."
 }

@@ -150,6 +150,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get appUnknownError => '未知错误';
 
   @override
+  String get quranLoadFailed => '无法加载《古兰经》内容。请再试一次。';
+
+  @override
   String get retry => '重试';
 
   @override
@@ -1776,6 +1779,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get appUnknownError => '未知错误';
 
   @override
+  String get quranLoadFailed => '无法加载《古兰经》内容。请再试一次。';
+
+  @override
   String get retry => '重试';
 
   @override
@@ -3400,6 +3406,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get appUnknownError => '未知錯誤';
+
+  @override
+  String get quranLoadFailed => '无法加载《古兰经》内容。請再試一次。';
 
   @override
   String get retry => '重試';

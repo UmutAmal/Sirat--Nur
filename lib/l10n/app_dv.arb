@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "މި ޑިވައިސްގައި ކޮމްޕަސް ސެންސަރެއް ނެތެވެ.",
   "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "quranLoadFailed": "ޤުރުއާން ކޮންޓެންޓް ލޯޑް ކުރެވޭ ގޮތެއް ނުވިއެވެ. އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ."
 }

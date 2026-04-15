@@ -150,6 +150,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get appUnknownError => 'שגיאה לא ידועה';
 
   @override
+  String get quranLoadFailed =>
+      'לא ניתן היה לטעון את תוכן הקוראן. אנא נסה שוב.';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -150,6 +150,10 @@ class AppLocalizationsAz extends AppLocalizations {
   String get appUnknownError => 'Naməlum xəta';
 
   @override
+  String get quranLoadFailed =>
+      'Quran məzmununu yükləmək mümkün olmadı. Yenidən cəhd edin.';
+
+  @override
   String get retry => 'Yenidən cəhd edin';
 
   @override

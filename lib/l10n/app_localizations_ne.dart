@@ -150,6 +150,10 @@ class AppLocalizationsNe extends AppLocalizations {
   String get appUnknownError => 'अज्ञात त्रुटि';
 
   @override
+  String get quranLoadFailed =>
+      'कुरान सामग्री लोड गर्न सकिएन। कृपया पुन: प्रयास गर्नुहोस्।';
+
+  @override
   String get retry => 'Retry';
 
   @override

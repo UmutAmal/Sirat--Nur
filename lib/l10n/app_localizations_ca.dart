@@ -152,6 +152,10 @@ class AppLocalizationsCa extends AppLocalizations {
   String get appUnknownError => 'Error desconegut';
 
   @override
+  String get quranLoadFailed =>
+      'No s\'ha pogut carregar el contingut de l\'Alcorà. Si us plau, torna-ho a provar.';
+
+  @override
   String get retry => 'Torna-ho a provar';
 
   @override

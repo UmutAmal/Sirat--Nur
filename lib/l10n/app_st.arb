@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Monna (Sudais)",
   "qiblaSensorUnavailable": "Compass sensor ha e fumanehe sesebelisoa sena.",
   "adhanNotificationChannelName": "Litsebiso tsa Adhan",
-  "adhanNotificationChannelDescription": "Litemoso tsa nako ea thapelo ka molumo oa adhan."
+  "adhanNotificationChannelDescription": "Litemoso tsa nako ea thapelo ka molumo oa adhan.",
+  "quranLoadFailed": "Likahare tsa Quran ha lia khona ho kenngoa. Ka kopo, leka hape."
 }

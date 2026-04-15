@@ -150,6 +150,10 @@ class AppLocalizationsAf extends AppLocalizations {
   String get appUnknownError => 'Onbekende fout';
 
   @override
+  String get quranLoadFailed =>
+      'Koran-inhoud kon nie gelaai word nie. Probeer asseblief weer.';
+
+  @override
   String get retry => 'Probeer weer';
 
   @override

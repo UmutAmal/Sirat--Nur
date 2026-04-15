@@ -152,6 +152,10 @@ class AppLocalizationsRo extends AppLocalizations {
   String get appUnknownError => 'Eroare necunoscută';
 
   @override
+  String get quranLoadFailed =>
+      'Conținutul Coranului nu a putut fi încărcat. Vă rugăm să încercați din nou.';
+
+  @override
   String get retry => 'Retry';
 
   @override

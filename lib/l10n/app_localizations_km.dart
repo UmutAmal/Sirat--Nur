@@ -150,6 +150,10 @@ class AppLocalizationsKm extends AppLocalizations {
   String get appUnknownError => 'កំហុសមិនស្គាល់';
 
   @override
+  String get quranLoadFailed =>
+      'មាតិកាគម្ពីគូរ៉ាមិនអាចផ្ទុកបានទេ។ សូមព្យាយាមម្តងទៀត។';
+
+  @override
   String get retry => 'Retry';
 
   @override

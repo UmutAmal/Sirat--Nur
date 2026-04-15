@@ -150,6 +150,10 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get appUnknownError => 'Kupa ʻike ʻole ʻia';
 
   @override
+  String get quranLoadFailed =>
+      'ʻAʻole hiki ke hoʻouka ʻia ka ʻike Quran. E ʻoluʻolu e hoʻāʻo hou.';
+
+  @override
   String get retry => 'E hoao hou';
 
   @override

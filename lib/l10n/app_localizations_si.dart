@@ -150,6 +150,10 @@ class AppLocalizationsSi extends AppLocalizations {
   String get appUnknownError => 'නොදන්නා දෝෂයකි';
 
   @override
+  String get quranLoadFailed =>
+      'කුර්ආන් අන්තර්ගතය පූරණය කළ නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න.';
+
+  @override
   String get retry => 'Retry';
 
   @override

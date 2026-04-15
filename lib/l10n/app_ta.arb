@@ -761,5 +761,6 @@
   "audioVoiceSudais": "ஆண் (சுதைஸ்)",
   "qiblaSensorUnavailable": "இந்தச் சாதனத்தில் திசைகாட்டி சென்சார் இல்லை.",
   "adhanNotificationChannelName": "அதான் அறிவிப்புகள்",
-  "adhanNotificationChannelDescription": "அதான் ஒலியுடன் பிரார்த்தனை நேர எச்சரிக்கைகள்."
+  "adhanNotificationChannelDescription": "அதான் ஒலியுடன் பிரார்த்தனை நேர எச்சரிக்கைகள்.",
+  "quranLoadFailed": "குர்ஆன் உள்ளடக்கத்தை ஏற்ற முடியவில்லை. மீண்டும் முயற்சிக்கவும்."
 }

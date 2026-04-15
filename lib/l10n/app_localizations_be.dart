@@ -152,6 +152,10 @@ class AppLocalizationsBe extends AppLocalizations {
   String get appUnknownError => 'Невядомая памылка';
 
   @override
+  String get quranLoadFailed =>
+      'Не ўдалося загрузіць змест Карана. Калі ласка, паспрабуйце яшчэ раз.';
+
+  @override
   String get retry => 'Паўтарыць';
 
   @override

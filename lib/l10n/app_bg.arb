@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Мъжки (Sudais)",
   "qiblaSensorUnavailable": "Сензорът за компас не е наличен на това устройство.",
   "adhanNotificationChannelName": "Езан известия",
-  "adhanNotificationChannelDescription": "Сигнали за време за молитва със звук на езан."
+  "adhanNotificationChannelDescription": "Сигнали за време за молитва със звук на езан.",
+  "quranLoadFailed": "Съдържанието на Корана не можа да бъде заредено. Моля, опитайте отново."
 }

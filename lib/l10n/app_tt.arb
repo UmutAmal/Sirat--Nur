@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Ир-ат (Судайлар)",
   "qiblaSensorUnavailable": "Компас сенсоры бу җайланмада мөмкин түгел.",
   "adhanNotificationChannelName": "Азан хәбәрләре",
-  "adhanNotificationChannelDescription": "Азан тавышы белән дога вакыты."
+  "adhanNotificationChannelDescription": "Азан тавышы белән дога вакыты.",
+  "quranLoadFailed": "Коръән эчтәлеген йөкләп булмады. Зинһар, кабатлап карагыз."
 }

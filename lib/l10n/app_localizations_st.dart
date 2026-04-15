@@ -150,6 +150,10 @@ class AppLocalizationsSt extends AppLocalizations {
   String get appUnknownError => 'Phoso e sa tsejoeng';
 
   @override
+  String get quranLoadFailed =>
+      'Likahare tsa Quran ha lia khona ho kenngoa. Ka kopo, leka hape.';
+
+  @override
   String get retry => 'Retry';
 
   @override

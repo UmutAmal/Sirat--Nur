@@ -151,6 +151,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get appUnknownError => 'Tuntematon virhe';
 
   @override
+  String get quranLoadFailed =>
+      'Koraanin sisältöä ei voitu ladata. Yritä uudelleen.';
+
+  @override
   String get retry => 'Yritä uudelleen';
 
   @override

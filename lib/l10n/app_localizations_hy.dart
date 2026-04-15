@@ -152,6 +152,10 @@ class AppLocalizationsHy extends AppLocalizations {
   String get appUnknownError => 'Անհայտ սխալ';
 
   @override
+  String get quranLoadFailed =>
+      'Ղուրանի բովանդակությունը չհաջողվեց բեռնել: Խնդրում ենք կրկին փորձել:';
+
+  @override
   String get retry => 'Կրկին փորձեք';
 
   @override

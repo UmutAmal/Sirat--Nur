@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Nwoke (Sudais)",
   "qiblaSensorUnavailable": "Ihe mmetụta kompas adịghị na ngwaọrụ a.",
   "adhanNotificationChannelName": "Ọkwa Adhan",
-  "adhanNotificationChannelDescription": "Ekpere oge alerts na adhan ụda."
+  "adhanNotificationChannelDescription": "Ekpere oge alerts na adhan ụda.",
+  "quranLoadFailed": "Enweghị ike ibunye ọdịnaya Quran. Biko nwaa ọzọ."
 }

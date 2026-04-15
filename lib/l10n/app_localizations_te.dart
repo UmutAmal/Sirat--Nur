@@ -150,6 +150,10 @@ class AppLocalizationsTe extends AppLocalizations {
   String get appUnknownError => 'తెలియని లోపం';
 
   @override
+  String get quranLoadFailed =>
+      'ఖురాన్ కంటెంట్ లోడ్ చేయబడలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.';
+
+  @override
   String get retry => 'Retry';
 
   @override

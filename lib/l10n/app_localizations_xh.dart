@@ -150,6 +150,10 @@ class AppLocalizationsXh extends AppLocalizations {
   String get appUnknownError => 'Imposiso engaziwayo';
 
   @override
+  String get quranLoadFailed =>
+      'Umxholo weQuran awukwazanga kulayishwa. Nceda zama kwakhona.';
+
+  @override
   String get retry => 'Retry';
 
   @override

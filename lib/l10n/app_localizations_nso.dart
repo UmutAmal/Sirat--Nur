@@ -151,6 +151,10 @@ class AppLocalizationsNso extends AppLocalizations {
   String get appUnknownError => 'Phošo yeo e sa tsebjego';
 
   @override
+  String get quranLoadFailed =>
+      'Diteng tša Quran di be di sa kgone go laetšwa. Hle leka gape.';
+
+  @override
   String get retry => 'Leka gape';
 
   @override

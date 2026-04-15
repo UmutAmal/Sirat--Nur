@@ -150,6 +150,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get appUnknownError => 'Kesalahan tidak diketahui';
 
   @override
+  String get quranLoadFailed =>
+      'Konten Al-Quran tidak dapat dimuat. Silakan coba lagi.';
+
+  @override
   String get retry => 'Coba Lagi';
 
   @override

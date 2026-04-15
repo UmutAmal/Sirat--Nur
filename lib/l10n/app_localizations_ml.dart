@@ -150,6 +150,10 @@ class AppLocalizationsMl extends AppLocalizations {
   String get appUnknownError => 'അജ്ഞാത പിശക്';
 
   @override
+  String get quranLoadFailed =>
+      'ഖുറാൻ ഉള്ളടക്കം ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക.';
+
+  @override
   String get retry => 'Retry';
 
   @override

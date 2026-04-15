@@ -761,5 +761,6 @@
   "audioVoiceSudais": "muž (Sudais)",
   "qiblaSensorUnavailable": "Snímač kompasu není na tomto zařízení k dispozici.",
   "adhanNotificationChannelName": "Oznámení Adhan",
-  "adhanNotificationChannelDescription": "Upozornění na čas modlitby se zvukem adhan."
+  "adhanNotificationChannelDescription": "Upozornění na čas modlitby se zvukem adhan.",
+  "quranLoadFailed": "Obsah Koránu se nepodařilo načíst. Zkuste to prosím znovu."
 }

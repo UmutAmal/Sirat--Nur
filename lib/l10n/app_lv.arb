@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Vīrietis (Sudais)",
   "qiblaSensorUnavailable": "Kompasa sensors šajā ierīcē nav pieejams.",
   "adhanNotificationChannelName": "Adhan paziņojumi",
-  "adhanNotificationChannelDescription": "Lūgšanu laika brīdinājumi ar Adhan skaņu."
+  "adhanNotificationChannelDescription": "Lūgšanu laika brīdinājumi ar Adhan skaņu.",
+  "quranLoadFailed": "Korāna saturu nevarēja ielādēt. Lūdzu, mēģiniet vēlreiz."
 }

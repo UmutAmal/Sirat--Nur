@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Kāne (Sudais)",
   "qiblaSensorUnavailable": "ʻAʻole loaʻa ka mea ʻike panana panana ma kēia hāmeʻa.",
   "adhanNotificationChannelName": "Hoolaha Adhan",
-  "adhanNotificationChannelDescription": "ʻO nā mākaʻikaʻi manawa pule me ke kani adhan."
+  "adhanNotificationChannelDescription": "ʻO nā mākaʻikaʻi manawa pule me ke kani adhan.",
+  "quranLoadFailed": "ʻAʻole hiki ke hoʻouka ʻia ka ʻike Quran. E ʻoluʻolu e hoʻāʻo hou."
 }

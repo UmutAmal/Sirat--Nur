@@ -150,6 +150,10 @@ class AppLocalizationsHt extends AppLocalizations {
   String get appUnknownError => 'Erè enkoni';
 
   @override
+  String get quranLoadFailed =>
+      'Kontni koran pa t \'kapab chaje. Tanpri eseye ankò.';
+
+  @override
   String get retry => 'Eseye ankò';
 
   @override

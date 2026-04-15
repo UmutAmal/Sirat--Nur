@@ -150,6 +150,10 @@ class AppLocalizationsMg extends AppLocalizations {
   String get appUnknownError => 'Error tsy fantatra';
 
   @override
+  String get quranLoadFailed =>
+      'Tsy azo nalaina ny votoatin\'ny CORAN. Andramo indray azafady.';
+
+  @override
   String get retry => 'Retry';
 
   @override

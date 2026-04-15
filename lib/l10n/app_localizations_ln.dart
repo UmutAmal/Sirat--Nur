@@ -150,6 +150,10 @@ class AppLocalizationsLn extends AppLocalizations {
   String get appUnknownError => 'Libunga eyebani te';
 
   @override
+  String get quranLoadFailed =>
+      'Contenu ya Coran ekokaki kozala chargé te. Svp meka lisusu.';
+
+  @override
   String get retry => 'Retry';
 
   @override

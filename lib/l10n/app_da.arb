@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Mand (sudais)",
   "qiblaSensorUnavailable": "Kompassensor er ikke tilgængelig på denne enhed.",
   "adhanNotificationChannelName": "Adhan-meddelelser",
-  "adhanNotificationChannelDescription": "Bønnetidsalarmer med adhan-lyd."
+  "adhanNotificationChannelDescription": "Bønnetidsalarmer med adhan-lyd.",
+  "quranLoadFailed": "Koranindhold kunne ikke indlæses. Prøv venligst igen."
 }

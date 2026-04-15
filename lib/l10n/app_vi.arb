@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Nam (Sudais)",
   "qiblaSensorUnavailable": "Cảm biến la bàn không khả dụng trên thiết bị này.",
   "adhanNotificationChannelName": "Thông báo Adhan",
-  "adhanNotificationChannelDescription": "Cảnh báo thời gian cầu nguyện với âm thanh adhan."
+  "adhanNotificationChannelDescription": "Cảnh báo thời gian cầu nguyện với âm thanh adhan.",
+  "quranLoadFailed": "Không thể tải nội dung Kinh Qur'an. Vui lòng thử lại."
 }

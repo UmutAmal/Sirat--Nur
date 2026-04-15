@@ -150,6 +150,10 @@ class AppLocalizationsAs extends AppLocalizations {
   String get appUnknownError => 'অজ্ঞাত ভুল';
 
   @override
+  String get quranLoadFailed =>
+      'কোৰআনৰ বিষয়বস্তু লোড কৰিব পৰা নগ\'ল। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।';
+
+  @override
   String get retry => 'পুনৰ চেষ্টা কৰক';
 
   @override

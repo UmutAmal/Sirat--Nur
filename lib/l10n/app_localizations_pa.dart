@@ -150,6 +150,10 @@ class AppLocalizationsPa extends AppLocalizations {
   String get appUnknownError => 'ਅਗਿਆਤ ਤਰੁੱਟੀ';
 
   @override
+  String get quranLoadFailed =>
+      'ਕੁਰਾਨ ਸਮੱਗਰੀ ਨੂੰ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
+
+  @override
   String get retry => 'Retry';
 
   @override

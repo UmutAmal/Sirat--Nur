@@ -151,6 +151,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get appUnknownError => 'Erro desconhecido';
 
   @override
+  String get quranLoadFailed =>
+      'O conteúdo do Alcorão não pôde ser carregado. Por favor, tente novamente.';
+
+  @override
   String get retry => 'Retry';
 
   @override

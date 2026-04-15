@@ -151,6 +151,10 @@ class AppLocalizationsEl extends AppLocalizations {
   String get appUnknownError => 'Άγνωστο σφάλμα';
 
   @override
+  String get quranLoadFailed =>
+      'Δεν ήταν δυνατή η φόρτωση του περιεχομένου του Κορανίου. Δοκιμάστε ξανά.';
+
+  @override
   String get retry => 'Δοκιμάζω πάλι';
 
   @override

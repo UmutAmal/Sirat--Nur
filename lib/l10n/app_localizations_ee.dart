@@ -150,6 +150,10 @@ class AppLocalizationsEe extends AppLocalizations {
   String get appUnknownError => 'Vodada si womenya o';
 
   @override
+  String get quranLoadFailed =>
+      'Womete ŋu tsɔ Quran me nyawo de eme o. Taflatse gadze agbagba ake.';
+
+  @override
   String get retry => 'Gadze agbagba ake';
 
   @override

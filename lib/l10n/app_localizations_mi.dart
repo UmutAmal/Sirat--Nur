@@ -151,6 +151,10 @@ class AppLocalizationsMi extends AppLocalizations {
   String get appUnknownError => 'Hapa kore mohio';
 
   @override
+  String get quranLoadFailed =>
+      'Kaore i taea te utaina nga ihirangi Quran. Me ngana ano.';
+
+  @override
   String get retry => 'Retry';
 
   @override

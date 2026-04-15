@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Murume (Sudais)",
   "qiblaSensorUnavailable": "Compass sensor haisi kuwanikwa pamudziyo uyu.",
   "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Nyevero yenguva yemunamato ine adhan ruzha."
+  "adhanNotificationChannelDescription": "Nyevero yenguva yemunamato ine adhan ruzha.",
+  "quranLoadFailed": "Korani yatadza kurodha. Ndapota edza zvakare."
 }

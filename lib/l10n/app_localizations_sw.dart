@@ -150,6 +150,10 @@ class AppLocalizationsSw extends AppLocalizations {
   String get appUnknownError => 'Hitilafu isiyojulikana';
 
   @override
+  String get quranLoadFailed =>
+      'Maudhui ya Quran hayakuweza kupakiwa. Tafadhali jaribu tena.';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -150,6 +150,10 @@ class AppLocalizationsSr extends AppLocalizations {
   String get appUnknownError => 'Непозната грешка';
 
   @override
+  String get quranLoadFailed =>
+      'Није могуће учитати садржај Курана. Покушајте поново.';
+
+  @override
   String get retry => 'Retry';
 
   @override

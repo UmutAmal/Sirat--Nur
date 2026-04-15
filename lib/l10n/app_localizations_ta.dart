@@ -150,6 +150,10 @@ class AppLocalizationsTa extends AppLocalizations {
   String get appUnknownError => 'அறியப்படாத பிழை';
 
   @override
+  String get quranLoadFailed =>
+      'குர்ஆன் உள்ளடக்கத்தை ஏற்ற முடியவில்லை. மீண்டும் முயற்சிக்கவும்.';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Hombre (Sudais)",
   "qiblaSensorUnavailable": "El sensor de brújula no está disponible en este dispositivo.",
   "adhanNotificationChannelName": "Notificaciones Adhan",
-  "adhanNotificationChannelDescription": "Alertas de tiempo de oración con sonido adhan."
+  "adhanNotificationChannelDescription": "Alertas de tiempo de oración con sonido adhan.",
+  "quranLoadFailed": "No se pudo cargar el contenido del Corán. Por favor inténtalo de nuevo."
 }

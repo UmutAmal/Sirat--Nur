@@ -150,6 +150,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get appUnknownError => 'ข้อผิดพลาดที่ไม่รู้จัก';
 
   @override
+  String get quranLoadFailed =>
+      'ไม่สามารถโหลดเนื้อหาอัลกุรอานได้ โปรดลองอีกครั้ง';
+
+  @override
   String get retry => 'Retry';
 
   @override

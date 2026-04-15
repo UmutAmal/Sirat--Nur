@@ -240,6 +240,7 @@ String _postProcessTranslation({
 
 bool _mustStaySingleLine(String key) {
   return key.startsWith('audioVoice') ||
+      key == 'quranLoadFailed' ||
       key == 'adhanNotificationChannelName' ||
       key == 'adhanNotificationChannelDescription';
 }

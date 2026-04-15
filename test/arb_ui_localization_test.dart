@@ -1038,6 +1038,7 @@ void main() {
           'tafsirNoAyahFound',
           'tafsirLoadFailed',
           'tafsirNoTextForAyah',
+          'quranLoadFailed',
           'placesLocationRequiredTitle',
           'placesLocationRequiredBody',
           'placesMapTilesUnavailableTitle',

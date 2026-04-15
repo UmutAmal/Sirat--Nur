@@ -761,5 +761,6 @@
   "audioVoiceSudais": "ಪುರುಷ (ಸುಡೈಸ್)",
   "qiblaSensorUnavailable": "ಈ ಸಾಧನದಲ್ಲಿ ದಿಕ್ಸೂಚಿ ಸಂವೇದಕ ಲಭ್ಯವಿಲ್ಲ.",
   "adhanNotificationChannelName": "ಅಧಾನ್ ಅಧಿಸೂಚನೆಗಳು",
-  "adhanNotificationChannelDescription": "ಅಧಾನ್ ಧ್ವನಿಯೊಂದಿಗೆ ಪ್ರಾರ್ಥನೆ ಸಮಯದ ಎಚ್ಚರಿಕೆಗಳು."
+  "adhanNotificationChannelDescription": "ಅಧಾನ್ ಧ್ವನಿಯೊಂದಿಗೆ ಪ್ರಾರ್ಥನೆ ಸಮಯದ ಎಚ್ಚರಿಕೆಗಳು.",
+  "quranLoadFailed": "ಕುರಾನ್ ವಿಷಯವನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
 }

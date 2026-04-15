@@ -150,6 +150,10 @@ class AppLocalizationsSu extends AppLocalizations {
   String get appUnknownError => 'Kasalahan teu dipikanyaho';
 
   @override
+  String get quranLoadFailed =>
+      'eusi Quran teu bisa dimuat. Mangga cobian deui.';
+
+  @override
   String get retry => 'Retry';
 
   @override

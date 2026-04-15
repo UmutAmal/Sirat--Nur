@@ -150,6 +150,10 @@ class AppLocalizationsPs extends AppLocalizations {
   String get appUnknownError => 'نامعلومه تېروتنه';
 
   @override
+  String get quranLoadFailed =>
+      'د قرآن محتوا نشي پورته کولی. مهرباني وکړئ بیا هڅه وکړئ.';
+
+  @override
   String get retry => 'Retry';
 
   @override

@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Мард (Судайс)",
   "qiblaSensorUnavailable": "Дар ин дастгоҳ сенсори қутбнамо мавҷуд нест.",
   "adhanNotificationChannelName": "Огоҳиҳои азон",
-  "adhanNotificationChannelDescription": "Огоҳии вақти намоз бо садои азон."
+  "adhanNotificationChannelDescription": "Огоҳии вақти намоз бо садои азон.",
+  "quranLoadFailed": "Мундариҷаи Қуръон бор карда нашуд. Лутфан бори дигар кӯшиш кунед."
 }

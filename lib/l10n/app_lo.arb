@@ -761,5 +761,6 @@
   "audioVoiceSudais": "ຊາຍ (ຊູໄດ)",
   "qiblaSensorUnavailable": "ເຊັນເຊີເຂັມທິດບໍ່ສາມາດໃຊ້ໄດ້ໃນອຸປະກອນນີ້.",
   "adhanNotificationChannelName": "ການແຈ້ງເຕືອນ Adhan",
-  "adhanNotificationChannelDescription": "ແຈ້ງເຕືອນເວລາອະທິຖານດ້ວຍສຽງ adhan."
+  "adhanNotificationChannelDescription": "ແຈ້ງເຕືອນເວລາອະທິຖານດ້ວຍສຽງ adhan.",
+  "quranLoadFailed": "ເນື້ອຫາ Quran ບໍ່ສາມາດໂຫລດໄດ້. ກະລຸນາລອງອີກຄັ້ງ."
 }

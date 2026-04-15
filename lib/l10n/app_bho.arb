@@ -761,5 +761,6 @@
   "audioVoiceSudais": "Male (Sudais)",
   "qiblaSensorUnavailable": "एह डिवाइस पर कम्पास सेंसर उपलब्ध नइखे.",
   "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "quranLoadFailed": "कुरान के सामग्री लोड ना हो सकल। कृपया दोबारा कोशिश करीं।"
 }
