@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API tidak dikonfigurasi. Silakan beralih ke AI Lokal.",
+  "chatbotCloudNotConfigured": "Cloud API tidak dikonfigurasi. Panduan Islam offline yang terverifikasi belum tersedia.",
   "chatbotLocalNoInfo": "[OFFLINE] Panduan Islam lokal yang terverifikasi belum tersedia. Beralih ke Cloud AI untuk mendapatkan jawaban bersumber.",
   "mosques": "Masjid",
   "halalFood": "Makanan Halal",

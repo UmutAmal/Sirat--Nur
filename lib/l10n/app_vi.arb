@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "API đám mây chưa được định cấu hình. Vui lòng chuyển sang AI cục bộ.",
+  "chatbotCloudNotConfigured": "API đám mây không được định cấu hình. Chưa có hướng dẫn Hồi giáo ngoại tuyến đã được xác minh.",
   "chatbotLocalNoInfo": "[OFFLINE] Hiện chưa có hướng dẫn Hồi giáo địa phương đã được xác minh. Chuyển sang Cloud AI để có câu trả lời có nguồn gốc.",
   "mosques": "Nhà thờ Hồi giáo",
   "halalFood": "Thực phẩm Halal",

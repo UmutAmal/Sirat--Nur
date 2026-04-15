@@ -1318,7 +1318,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'APIn duumessaa hin qindaa\'u. Verified offline Qajeelfamni Islaamaa hanga ammaatti hin argamne.';
 
   @override
   String get chatbotLocalNoInfo =>

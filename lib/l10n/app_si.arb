@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API වින්‍යාස කර නැත. කරුණාකර දේශීය AI වෙත මාරු වන්න.",
+  "chatbotCloudNotConfigured": "Cloud API වින්‍යාස කර නැත. සත්‍යාපිත නොබැඳි ඉස්ලාමීය මගපෙන්වීම තවමත් නොමැත.",
   "chatbotLocalNoInfo": "[OFFLINE] සත්‍යාපිත දේශීය ඉස්ලාමීය මගපෙන්වීම තවමත් නොමැත. මූලාශ්‍ර පිළිතුරු සඳහා Cloud AI වෙත මාරු වන්න.",
   "mosques": "මුස්ලිම් පල්ලි",
   "halalFood": "හලාල් ආහාර",

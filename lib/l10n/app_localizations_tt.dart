@@ -1311,7 +1311,7 @@ class AppLocalizationsTt extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API конфигурацияләнмәгән. Зинһар, җирле ЯИга күчә.';
+      'Cloud API конфигурацияләнмәгән. Тикшерелгән оффлайн ислам җитәкчелеге әлегә юк.';
 
   @override
   String get chatbotLocalNoInfo =>

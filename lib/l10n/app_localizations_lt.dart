@@ -1317,7 +1317,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API nesukonfigūruota. Perjunkite į vietinį AI.';
+      'Cloud API nesukonfigūruota. Patvirtintos neprisijungus pasiekiamos islamo gairės dar nepasiekiamos.';
 
   @override
   String get chatbotLocalNoInfo =>

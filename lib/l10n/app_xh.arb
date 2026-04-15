@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API ayimiselwanga. Nceda utshintshele kwi-AI yasekuhlaleni.",
+  "chatbotCloudNotConfigured": "Cloud API ayimiselwanga. Izikhokelo zamaSilamsi eziqinisekisiweyo ngaphandle kweintanethi azikafumaneki.",
   "chatbotLocalNoInfo": "[OFFLINE] Izikhokelo eziqinisekisiweyo zasekhaya zamaSilamsi azikafumaneki. Tshintshela kwi-Cloud AI ukufumana iimpendulo ezifunyenweyo.",
   "mosques": "IiMosque",
   "halalFood": "Ukutya kweHalal",

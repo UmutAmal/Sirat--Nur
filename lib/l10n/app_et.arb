@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API pole konfigureeritud. Lülituge kohalikule AI-le.",
+  "chatbotCloudNotConfigured": "Cloud API pole konfigureeritud. Kinnitatud võrguühenduseta islami juhised pole veel saadaval.",
   "chatbotLocalNoInfo": "[OFFLINE] Kinnitatud kohalikud islamijuhised pole veel saadaval. Lähteallikate vastuste saamiseks lülituge Cloud AI-le.",
   "mosques": "Mošeed",
   "halalFood": "Halal toit",

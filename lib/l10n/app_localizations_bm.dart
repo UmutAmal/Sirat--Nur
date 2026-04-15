@@ -1316,7 +1316,7 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Sankaba API ma labɛn. Silamɛya bilasiralikan sɛgɛsɛgɛlen tɛ ɛntɛrinɛti kan fɔlɔ.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -51,7 +51,9 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(
-        find.text('Cloud API not configured. Please switch to Local AI.'),
+        find.text(
+          'Cloud API is not configured. Verified offline Islamic guidance is not available yet.',
+        ),
         findsOneWidget,
       );
     } finally {
@@ -85,7 +87,9 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(
-        find.text('Bulut API ayarlanmadı. Lütfen Yerel AI moduna geçin.'),
+        find.text(
+          'Bulut API ayarlanmadı. Doğrulanmış çevrimdışı İslami rehberlik henüz hazır değil.',
+        ),
         findsOneWidget,
       );
     } finally {

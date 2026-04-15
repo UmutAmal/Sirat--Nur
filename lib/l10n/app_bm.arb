@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotCloudNotConfigured": "Sankaba API ma labɛn. Silamɛya bilasiralikan sɛgɛsɛgɛlen tɛ ɛntɛrinɛti kan fɔlɔ.",
   "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "Misiriw",
   "halalFood": "Dumuni Halal",

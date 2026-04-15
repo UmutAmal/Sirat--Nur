@@ -1314,7 +1314,7 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'וואָלקן אַפּי ניט קאַנפיגיערד. ביטע באַשטימען צו לאקאלע אַי.';
+      'קלאָוד אַפּי איז נישט קאַנפיגיערד. Verified offline Islamic guidance is not available yet.';
 
   @override
   String get chatbotLocalNoInfo =>

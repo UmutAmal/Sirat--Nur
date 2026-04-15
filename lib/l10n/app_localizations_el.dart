@@ -1323,7 +1323,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Το Cloud API δεν έχει διαμορφωθεί. Μεταβείτε στο Τοπικό AI.';
+      'Το Cloud API δεν έχει ρυθμιστεί. Η επαληθευμένη ισλαμική καθοδήγηση εκτός σύνδεσης δεν είναι ακόμη διαθέσιμη.';
 
   @override
   String get chatbotLocalNoInfo =>

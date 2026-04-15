@@ -1311,7 +1311,7 @@ class AppLocalizationsYo extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'API awọsanma ko tunto. Jọwọ yipada si AI Agbegbe.';
+      'API awọsanma ko ni tunto. Itọnisọna Islam ti a ṣe idaniloju aisinipo ko si sibẹsibẹ.';
 
   @override
   String get chatbotLocalNoInfo =>

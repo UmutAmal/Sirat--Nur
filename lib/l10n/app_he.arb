@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API לא מוגדר. נא לעבור ל- AI מקומי.",
+  "chatbotCloudNotConfigured": "Cloud API אינו מוגדר. הדרכה אסלאמית מאומתת לא זמינה עדיין.",
   "chatbotLocalNoInfo": "[OFFLINE] הדרכה אסלאמית מקומית מאומתת אינה זמינה עדיין. עבור ל-Cloud AI לקבלת תשובות מקוריות.",
   "mosques": "מסגדים",
   "halalFood": "אוכל חלאל",

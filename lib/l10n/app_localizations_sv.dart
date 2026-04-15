@@ -1313,7 +1313,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API inte konfigurerat. Byt till lokal AI.';
+      'Cloud API är inte konfigurerat. Verifierad offline islamisk vägledning är inte tillgänglig ännu.';
 
   @override
   String get chatbotLocalNoInfo =>

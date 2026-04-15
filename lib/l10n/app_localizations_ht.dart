@@ -1313,7 +1313,7 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API pa configuré. Tanpri chanje nan lokal AI.';
+      'Cloud API pa configuré. Verifye pedagojik Islamik offline pa disponib ankò.';
 
   @override
   String get chatbotLocalNoInfo =>

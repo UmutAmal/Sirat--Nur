@@ -1313,7 +1313,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API پیکربندی نشده است. لطفاً به هوش مصنوعی محلی بروید.';
+      'Cloud API پیکربندی نشده است. هدایت اسلامی آفلاین تأیید شده هنوز در دسترس نیست.';
 
   @override
   String get chatbotLocalNoInfo =>

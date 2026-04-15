@@ -1314,7 +1314,7 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API sinakonzedwe. Chonde sinthani ku Local AI.';
+      'Cloud API sinakonzedwe. Chitsogozo chachisilamu chotsimikizika pa intaneti sichinapezekebe.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -1316,7 +1316,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Mākoņa API nav konfigurēta. Lūdzu, pārejiet uz vietējo AI.';
+      'Mākoņa API nav konfigurēts. Verificētas bezsaistes islāma vadlīnijas vēl nav pieejamas.';
 
   @override
   String get chatbotLocalNoInfo =>

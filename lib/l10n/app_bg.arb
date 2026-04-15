@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API не е конфигуриран. Моля, превключете към локален AI.",
+  "chatbotCloudNotConfigured": "Cloud API не е конфигуриран. Все още не е налично потвърдено офлайн ислямско ръководство.",
   "chatbotLocalNoInfo": "[ОФЛАЙН] Все още не е налично проверено местно ислямско ръководство. Превключете към Cloud AI за отговори с източник.",
   "mosques": "джамии",
   "halalFood": "Halal Food",

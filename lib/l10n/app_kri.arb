@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotCloudNotConfigured": "Klayd API nɔ kɔnfigyut. Verified offline Islamik gayd nɔ de yet.",
   "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "Moskɛt dɛn",
   "halalFood": "Halal Fɔd fɔ it",

@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API konfiqurasiya edilməyib. Lütfən, Yerli AI-a keçin.",
+  "chatbotCloudNotConfigured": "Cloud API konfiqurasiya edilməyib. Təsdiqlənmiş oflayn İslami təlimat hələ mövcud deyil.",
   "chatbotLocalNoInfo": "[OFFLINE] Təsdiqlənmiş yerli İslam bələdçisi hələ mövcud deyil. Mənbəli cavablar üçün Cloud AI-a keçin.",
   "mosques": "Məscidlər",
   "halalFood": "Halal Qida",

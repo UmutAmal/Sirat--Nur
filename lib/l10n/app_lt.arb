@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API nesukonfigūruota. Perjunkite į vietinį AI.",
+  "chatbotCloudNotConfigured": "Cloud API nesukonfigūruota. Patvirtintos neprisijungus pasiekiamos islamo gairės dar nepasiekiamos.",
   "chatbotLocalNoInfo": "[OFFLINE] Patvirtinti vietiniai islamo nurodymai dar nepasiekiami. Perjunkite į „Cloud AI“, kad gautumėte atsakymus iš šaltinio.",
   "mosques": "Mečetės",
   "halalFood": "Halal maistas",

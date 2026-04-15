@@ -1311,7 +1311,7 @@ class AppLocalizationsJv extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API ora dikonfigurasi. Mangga ngalih menyang AI Lokal.';
+      'Cloud API ora dikonfigurasi. Panuntun Islam offline sing diverifikasi durung kasedhiya.';
 
   @override
   String get chatbotLocalNoInfo =>

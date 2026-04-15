@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "I-Cloud API ayilungiselelwe. Sicela ushintshele ku-Local AI.",
+  "chatbotCloudNotConfigured": "I-Cloud API ayilungiselelwe. Isiqondiso samaSulumane esiqinisekisiwe ngokungaxhunyiwe ku-inthanethi asitholakali okwamanje.",
   "chatbotLocalNoInfo": "[OFFLINE] Isiqondiso sendawo samaSulumane esiqinisekisiwe asitholakali okwamanje. Shintshela ku-Cloud AI ukuze uthole izimpendulo ezitholakalayo.",
   "mosques": "Ama-mosque",
   "halalFood": "Ukudla kwe-Halal",

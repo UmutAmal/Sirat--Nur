@@ -1312,7 +1312,7 @@ class AppLocalizationsIg extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Ahazighị igwe ojii API. Biko gbanwee gaa na mpaghara AI.';
+      'Ahazighị igwe ojii API. Ntuziaka islam akwadoro na adịghị n\'ịntanetị adịghị ugbu a.';
 
   @override
   String get chatbotLocalNoInfo =>

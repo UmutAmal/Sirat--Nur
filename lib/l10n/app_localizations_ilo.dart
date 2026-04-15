@@ -1322,7 +1322,7 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Saan a naikonfigura ti Cloud API. Saan pay a magun-od ti naberipikado nga offline nga Islamiko a panangiwanwan.';
 
   @override
   String get chatbotLocalNoInfo =>

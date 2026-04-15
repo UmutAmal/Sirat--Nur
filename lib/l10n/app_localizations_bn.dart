@@ -1313,7 +1313,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API কনফিগার করা হয়নি। অনুগ্রহ করে স্থানীয় AI-তে স্যুইচ করুন।';
+      'Cloud API কনফিগার করা নেই। যাচাইকৃত অফলাইন ইসলামিক নির্দেশিকা এখনও উপলব্ধ নয়।';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -1313,7 +1313,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API sozlanmagan. Mahalliy AIga oʻting.';
+      'Cloud API sozlanmagan. Tasdiqlangan oflayn islomiy koʻrsatmalar hali mavjud emas.';
 
   @override
   String get chatbotLocalNoInfo =>

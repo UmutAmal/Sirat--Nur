@@ -1284,7 +1284,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get chatbotCloudNotConfigured => '云 API 未配置。请切换至本地AI。';
+  String get chatbotCloudNotConfigured => '未配置云API。经验证的离线伊斯兰指南尚不可用。';
 
   @override
   String get chatbotLocalNoInfo => '[离线] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。';
@@ -2920,7 +2920,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get chatbotCloudNotConfigured => '云 API 未配置。请切换至本地AI。';
+  String get chatbotCloudNotConfigured => '未配置云API。经验证的离线伊斯兰指南尚不可用。';
 
   @override
   String get chatbotLocalNoInfo => '[离线] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。';
@@ -4556,7 +4556,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get chatbotCloudNotConfigured => '雲端 API 未配置。請切換至本地AI。';
+  String get chatbotCloudNotConfigured => '未配置雲API。經驗證的離線伊斯蘭指南尚不可用。';
 
   @override
   String get chatbotLocalNoInfo => '[離線] 尚未提供經過驗證的當地伊斯蘭指南。切換到 Cloud AI 取得來源答案。';

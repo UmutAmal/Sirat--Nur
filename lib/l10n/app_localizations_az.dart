@@ -1313,7 +1313,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API konfiqurasiya edilməyib. Lütfən, Yerli AI-a keçin.';
+      'Cloud API konfiqurasiya edilməyib. Təsdiqlənmiş oflayn İslami təlimat hələ mövcud deyil.';
 
   @override
   String get chatbotLocalNoInfo =>

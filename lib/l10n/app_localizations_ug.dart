@@ -1313,7 +1313,7 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API سەپلەنمىگەن. يەرلىك سۈنئىي ئەقىلگە ئالماشتۇرۇڭ.';
+      'Cloud API سەپلەنمىگەن. دەلىللەنگەن تورسىز ئىسلام يېتەكچىلىكى تېخىچە يوق.';
 
   @override
   String get chatbotLocalNoInfo =>

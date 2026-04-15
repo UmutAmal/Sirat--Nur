@@ -1319,7 +1319,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'କ୍ଲାଉଡ୍ API ବିନ୍ୟାସ ହୋଇନାହିଁ | ଦୟାକରି ସ୍ଥାନୀୟ AI କୁ ସୁଇଚ୍ କରନ୍ତୁ |';
+      'କ୍ଲାଉଡ୍ API ବିନ୍ୟାସ ହୋଇନାହିଁ | ଯାଞ୍ଚ କରାଯାଇଥିବା ଅଫଲାଇନ୍ ଇସଲାମିକ୍ ମାର୍ଗଦର୍ଶନ ଏପର୍ଯ୍ୟନ୍ତ ଉପଲବ୍ଧ ନାହିଁ |';
 
   @override
   String get chatbotLocalNoInfo =>

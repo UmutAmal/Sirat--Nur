@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "a ni.\nCloud API configure a ni lo. Local AI ah hian inthlak rawh.",
+  "chatbotCloudNotConfigured": "Cloud API hi configure a ni lo. Verified offline Islamic guidance hi a la awm lo.",
   "chatbotLocalNoInfo": "a ni.\n[OFFLINE] Verified local Islamic guidance hi a la awm lo. Sourced chhanna tur chuan Cloud AI ah switch rawh.",
   "mosques": "Mosque hrang hrangah te",
   "halalFood": "Halal Chaw ei tur",

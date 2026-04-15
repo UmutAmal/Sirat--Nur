@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotCloudNotConfigured": "ކްލައުޑް އެޕީއައި ކޮންފިގްރޭޓް ކުރެވިފައެއް ނުވެއެވެ. ވެރިފައިޑް އޮފްލައިން އިސްލާމީ އިރުޝާދު އަދި ނުލިބެއެވެ.",
   "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "މިސްކިތްތަކެވެ",
   "halalFood": "ހަލާލް ފުޑް",

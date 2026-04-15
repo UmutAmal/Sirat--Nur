@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "ʻAʻole i hoʻonohonoho ʻia ʻo Cloud API. E ʻoluʻolu e hoʻololi iā Local AI.",
+  "chatbotCloudNotConfigured": "ʻAʻole hoʻonohonoho ʻia ʻo Cloud API. ʻAʻole i loaʻa i kēia manawa ke alakaʻi Islam offline.",
   "chatbotLocalNoInfo": "[OFFLINE] ʻAʻole i loaʻa i kēia manawa ke alakaʻi Islam kūloko. E hoʻololi i Cloud AI no nā pane kumu.",
   "mosques": "Mosques",
   "halalFood": "Meaʻai Halal",

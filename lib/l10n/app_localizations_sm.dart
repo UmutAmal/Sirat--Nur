@@ -1316,7 +1316,7 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API e le\'i fa\'atulagaina. Fa\'amolemole sui ile Local AI.';
+      'E le o fa\'atulagaina le Cloud API. E le\'i maua le ta\'ita\'iga fa\'a-Isalama fa\'amaonia tuimotu.';
 
   @override
   String get chatbotLocalNoInfo =>

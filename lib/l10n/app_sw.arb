@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "API ya Wingu haijasanidiwa. Tafadhali badilisha hadi AI ya Ndani.",
+  "chatbotCloudNotConfigured": "API ya Wingu haijasanidiwa. Mwongozo wa Kiislamu uliothibitishwa nje ya mtandao haupatikani bado.",
   "chatbotLocalNoInfo": "[OFFLINE] Mwongozo wa karibu wa Kiislamu uliothibitishwa bado haupatikani. Badili hadi Cloud AI kwa majibu ya chanzo.",
   "mosques": "Misikiti",
   "halalFood": "Chakula cha Halal",

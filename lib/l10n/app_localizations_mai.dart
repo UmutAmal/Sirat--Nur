@@ -1316,7 +1316,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'के लिये।\nक्लाउड एपीआई कॉन्फ़िगर नहि कएल गेल अछि. कृपया स्थानीय एआई पर स्विच करू।';
+      'क्लाउड एपीआई कॉन्फ़िगर नहि कएल गेल अछि. सत्यापित ऑफलाइन इस्लामी मार्गदर्शन एखन धरि उपलब्ध नहि अछि।';
 
   @override
   String get chatbotLocalNoInfo =>

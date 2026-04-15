@@ -1320,7 +1320,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API nu este configurat. Treceți la AI local.';
+      'Cloud API nu este configurat. Îndrumările islamice verificate offline nu sunt încă disponibile.';
 
   @override
   String get chatbotLocalNoInfo =>

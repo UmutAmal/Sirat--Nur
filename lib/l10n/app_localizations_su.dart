@@ -1315,7 +1315,7 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API teu ngonpigurasi. Mangga pindah ka AI Lokal.';
+      'Cloud API teu ngonpigurasi. Pitunjuk Islam offline anu diverifikasi teu acan sayogi.';
 
   @override
   String get chatbotLocalNoInfo =>

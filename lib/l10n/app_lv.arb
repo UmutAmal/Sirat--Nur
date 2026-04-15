@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Mākoņa API nav konfigurēta. Lūdzu, pārejiet uz vietējo AI.",
+  "chatbotCloudNotConfigured": "Mākoņa API nav konfigurēts. Verificētas bezsaistes islāma vadlīnijas vēl nav pieejamas.",
   "chatbotLocalNoInfo": "[OFFLINE] Verificētas vietējās islāma vadlīnijas vēl nav pieejamas. Pārslēdzieties uz Cloud AI, lai saņemtu atbildes.",
   "mosques": "Mošejas",
   "halalFood": "Halal ēdiens",

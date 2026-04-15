@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Nie skonfigurowano interfejsu Cloud API. Przejdź na lokalną sztuczną inteligencję.",
+  "chatbotCloudNotConfigured": "Cloud API nie jest skonfigurowane. Zweryfikowane wytyczne islamskie offline nie są jeszcze dostępne.",
   "chatbotLocalNoInfo": "[OFFLINE] Zweryfikowane lokalne wytyczne islamskie nie są jeszcze dostępne. Przełącz się na Cloud AI, aby uzyskać odpowiedzi na podstawie źródeł.",
   "mosques": "Meczety",
   "halalFood": "Jedzenie halalowe",

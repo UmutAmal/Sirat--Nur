@@ -1319,7 +1319,7 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Chan eil Cloud API air a rèiteachadh. Chan eil stiùireadh Ioslamach dearbhte far-loidhne ri fhaighinn fhathast.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -1327,7 +1327,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'API ya leru ga se ya beakanywa. Tlhahlo ya Boiselamo yeo e netefaditšwego ya ka ntle ga inthanete ga e hwetšagale ga bjale.';
 
   @override
   String get chatbotLocalNoInfo =>

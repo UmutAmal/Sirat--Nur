@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API sozlanmagan. Mahalliy AIga oʻting.",
+  "chatbotCloudNotConfigured": "Cloud API sozlanmagan. Tasdiqlangan oflayn islomiy koʻrsatmalar hali mavjud emas.",
   "chatbotLocalNoInfo": "[OFFLINE] Tasdiqlangan mahalliy islomiy koʻrsatmalar hali mavjud emas. Manbali javoblar uchun Cloud AI-ga o'ting.",
   "mosques": "Masjidlar",
   "halalFood": "Halol taom",

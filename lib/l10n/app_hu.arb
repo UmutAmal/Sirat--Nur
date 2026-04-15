@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "A felhő API nincs konfigurálva. Kérjük, váltson helyi AI-ra.",
+  "chatbotCloudNotConfigured": "A Cloud API nincs konfigurálva. Ellenőrzött offline iszlám útmutatás még nem érhető el.",
   "chatbotLocalNoInfo": "[OFFLINE] Az ellenőrzött helyi iszlám útmutatás még nem érhető el. A forrásból származó válaszokért váltson a Cloud AI-re.",
   "mosques": "Mecsetek",
   "halalFood": "Halal étel",

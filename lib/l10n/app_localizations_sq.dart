@@ -1317,7 +1317,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API nuk është konfiguruar. Ju lutemi kaloni në Local AI.';
+      'Cloud API nuk është konfiguruar. Udhëzimi islamik i verifikuar jashtë linje nuk është ende i disponueshëm.';
 
   @override
   String get chatbotLocalNoInfo =>

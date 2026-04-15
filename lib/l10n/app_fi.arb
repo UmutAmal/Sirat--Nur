@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Pilvisovellusliittymää ei ole määritetty. Vaihda paikalliseen tekoälyyn.",
+  "chatbotCloudNotConfigured": "Pilvisovellusliittymää ei ole määritetty. Vahvistettu offline-islamilainen opastus ei ole vielä saatavilla.",
   "chatbotLocalNoInfo": "[OFFLINE] Vahvistettu paikallinen islamilainen opastus ei ole vielä saatavilla. Vaihda Cloud AI -palveluun saadaksesi lähteitä vastauksia.",
   "mosques": "Moskeijat",
   "halalFood": "Halal Ruokaa",

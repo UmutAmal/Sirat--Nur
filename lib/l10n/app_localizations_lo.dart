@@ -1312,7 +1312,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API ບໍ່ໄດ້ຕັ້ງຄ່າ. ກະລຸນາປ່ຽນເປັນ AI ທ້ອງຖິ່ນ.';
+      'Cloud API ບໍ່ໄດ້ຖືກຕັ້ງຄ່າ. ການແນະນຳອິດສະລາມແບບອອບໄລນ໌ທີ່ຢືນຢັນແລ້ວຍັງບໍ່ທັນມີໃຫ້ເທື່ອ.';
 
   @override
   String get chatbotLocalNoInfo =>

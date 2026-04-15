@@ -1317,7 +1317,7 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API ayimiselwanga. Nceda utshintshele kwi-AI yasekuhlaleni.';
+      'Cloud API ayimiselwanga. Izikhokelo zamaSilamsi eziqinisekisiweyo ngaphandle kweintanethi azikafumaneki.';
 
   @override
   String get chatbotLocalNoInfo =>

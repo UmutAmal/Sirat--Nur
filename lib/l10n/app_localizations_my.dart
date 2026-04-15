@@ -1320,7 +1320,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API ကို ပြင်ဆင်မထားပါ။ Local AI သို့ပြောင်းပါ။';
+      'Cloud API ကို စီစဉ်မထားပါ။ အတည်ပြုထားသော အော့ဖ်လိုင်းအစ္စလာမ့်လမ်းညွှန်ချက်ကို မရရှိနိုင်သေးပါ။';
 
   @override
   String get chatbotLocalNoInfo =>

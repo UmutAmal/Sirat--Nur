@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API ekki stillt. Vinsamlegast skiptu yfir í Local AI.",
+  "chatbotCloudNotConfigured": "Cloud API er ekki stillt. Staðfest íslömsk leiðsögn án nettengingar er ekki enn tiltæk.",
   "chatbotLocalNoInfo": "[OFFLINE] Staðfestar staðbundnar íslamskar leiðbeiningar eru ekki tiltækar ennþá. Skiptu yfir í Cloud AI til að fá svör.",
   "mosques": "Moskur",
   "halalFood": "Halal matur",

@@ -1312,7 +1312,7 @@ class AppLocalizationsPs extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'کلاوډ API نه دی ترتیب شوی. مهرباني وکړئ ځایی AI ته لاړشئ.';
+      'کلاوډ API نه دی ترتیب شوی. تصدیق شوی آف لائن اسلامی لارښود لا تر اوسه شتون نلري.';
 
   @override
   String get chatbotLocalNoInfo =>

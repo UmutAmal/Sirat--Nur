@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Kapua API kaore i whirihora. Tena koa huri ki AI Paetata.",
+  "chatbotCloudNotConfigured": "Kaore i te whirihorahia te Cloud API. Ko te arataki Ihirama tuimotu kua whakamanahia kaore ano kia waatea.",
   "chatbotLocalNoInfo": "[OFFLINE] Ko nga kaiarahi Ihirama o te rohe kaore ano kia waatea. Hurihia ki Cloud AI mo nga whakautu i puta mai.",
   "mosques": "Mosques",
   "halalFood": "Kai Halal",

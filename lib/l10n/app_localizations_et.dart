@@ -1315,7 +1315,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API pole konfigureeritud. Lülituge kohalikule AI-le.';
+      'Cloud API pole konfigureeritud. Kinnitatud võrguühenduseta islami juhised pole veel saadaval.';
 
   @override
   String get chatbotLocalNoInfo =>

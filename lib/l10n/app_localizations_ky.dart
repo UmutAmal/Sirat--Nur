@@ -1318,7 +1318,7 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API конфигурацияланган эмес. Жергиликтүү AI\'га которулуңуз.';
+      'Cloud API конфигурацияланган эмес. Текшерилген оффлайн исламдык жетекчилик азырынча жеткиликтүү эмес.';
 
   @override
   String get chatbotLocalNoInfo =>

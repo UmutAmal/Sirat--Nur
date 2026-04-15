@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API nu este configurat. Treceți la AI local.",
+  "chatbotCloudNotConfigured": "Cloud API nu este configurat. Îndrumările islamice verificate offline nu sunt încă disponibile.",
   "chatbotLocalNoInfo": "[OFFLINE] Îndrumările islamice locale verificate nu sunt încă disponibile. Treceți la Cloud AI pentru răspunsuri din sursă.",
   "mosques": "Moschei",
   "halalFood": "Mâncare Halal",

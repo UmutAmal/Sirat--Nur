@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Hodeiko APIa ez dago konfiguratuta. Mesedez, aldatu Tokiko AI-ra.",
+  "chatbotCloudNotConfigured": "Cloud API ez dago konfiguratuta. Lineaz kanpo egiaztatutako gida islamiarra ez dago oraindik erabilgarri.",
   "chatbotLocalNoInfo": "[OFFLINE] Egiaztatutako tokiko orientazio islamikoa ez dago oraindik erabilgarri. Aldatu Cloud AI-ra iturriko erantzunak lortzeko.",
   "mosques": "Meskitak",
   "halalFood": "Halal Elikadura",

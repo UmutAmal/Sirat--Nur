@@ -1314,7 +1314,7 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Nuba API ne agordita. Bonvolu ŝanĝi al Loka AI.';
+      'Cloud API ne estas agordita. Kontrolita eksterreta islama gvidado ankoraŭ ne haveblas.';
 
   @override
   String get chatbotLocalNoInfo =>

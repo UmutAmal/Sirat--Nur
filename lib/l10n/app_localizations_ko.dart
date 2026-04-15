@@ -1299,7 +1299,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API가 구성되지 않았습니다. 로컬 AI로 전환해주세요.';
+      'Cloud API가 구성되지 않았습니다. 검증된 오프라인 이슬람 지침은 아직 제공되지 않습니다.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API конфигурацияләнмәгән. Зинһар, җирле ЯИга күчә.",
+  "chatbotCloudNotConfigured": "Cloud API конфигурацияләнмәгән. Тикшерелгән оффлайн ислам җитәкчелеге әлегә юк.",
   "chatbotLocalNoInfo": "[ОФЛИН] Тикшерелгән җирле ислам җитәкчелеге әлегә юк. Каты җаваплар өчен Cloud AI'ка күчә.",
   "mosques": "Мәчетләр",
   "halalFood": "Хәләл ризык",

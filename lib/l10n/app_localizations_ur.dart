@@ -1313,7 +1313,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API کنفیگر نہیں ہے۔ براہ کرم مقامی AI پر سوئچ کریں۔';
+      'Cloud API کنفیگر نہیں ہے۔ تصدیق شدہ آف لائن اسلامی رہنمائی ابھی تک دستیاب نہیں ہے۔';
 
   @override
   String get chatbotLocalNoInfo =>

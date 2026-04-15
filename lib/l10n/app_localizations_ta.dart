@@ -1319,7 +1319,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API உள்ளமைக்கப்படவில்லை. உள்ளூர் AIக்கு மாறவும்.';
+      'Cloud API உள்ளமைக்கப்படவில்லை. சரிபார்க்கப்பட்ட ஆஃப்லைன் இஸ்லாமிய வழிகாட்டுதல் இன்னும் கிடைக்கவில்லை.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API nije konfiguriran. Prebacite se na lokalni AI.",
+  "chatbotCloudNotConfigured": "Cloud API nije konfiguriran. Provjereno vanmrežno islamsko vodstvo još nije dostupno.",
   "chatbotLocalNoInfo": "[OFFLINE] Provjereno lokalno islamsko vodstvo još nije dostupno. Prebacite se na Cloud AI za izvorne odgovore.",
   "mosques": "Džamije",
   "halalFood": "Halal Food",

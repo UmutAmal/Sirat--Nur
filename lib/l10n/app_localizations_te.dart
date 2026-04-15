@@ -1315,7 +1315,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'క్లౌడ్ API కాన్ఫిగర్ చేయబడలేదు. దయచేసి స్థానిక AIకి మారండి.';
+      'క్లౌడ్ API కాన్ఫిగర్ చేయబడలేదు. ధృవీకరించబడిన ఆఫ్‌లైన్ ఇస్లామిక్ మార్గదర్శకత్వం ఇంకా అందుబాటులో లేదు.';
 
   @override
   String get chatbotLocalNoInfo =>

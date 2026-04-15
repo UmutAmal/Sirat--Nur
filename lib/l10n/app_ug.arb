@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API سەپلەنمىگەن. يەرلىك سۈنئىي ئەقىلگە ئالماشتۇرۇڭ.",
+  "chatbotCloudNotConfigured": "Cloud API سەپلەنمىگەن. دەلىللەنگەن تورسىز ئىسلام يېتەكچىلىكى تېخىچە يوق.",
   "chatbotLocalNoInfo": "[OFFLINE] تەكشۈرۈلگەن يەرلىك ئىسلام يېتەكچىلىكى تېخىچە يوق. مەنبەلىك جاۋاب ئۈچۈن Cloud AI غا ئالماشتۇرۇڭ.",
   "mosques": "مەسچىتلەر",
   "halalFood": "ھالال يېمەكلىك",

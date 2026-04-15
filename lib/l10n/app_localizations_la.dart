@@ -1314,7 +1314,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Nubes API non felis. Quaeso switch ad LOCORUM AI.';
+      'Nubes API non configuratur. Verificatur offline islamica gubernatio nondum in promptu est.';
 
   @override
   String get chatbotLocalNoInfo =>

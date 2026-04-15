@@ -1322,7 +1322,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'ކްލައުޑް އެޕީއައި ކޮންފިގްރޭޓް ކުރެވިފައެއް ނުވެއެވެ. ވެރިފައިޑް އޮފްލައިން އިސްލާމީ އިރުޝާދު އަދި ނުލިބެއެވެ.';
 
   @override
   String get chatbotLocalNoInfo =>

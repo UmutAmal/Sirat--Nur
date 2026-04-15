@@ -1325,7 +1325,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'a ni.\nCloud API configure a ni lo. Local AI ah hian inthlak rawh.';
+      'Cloud API hi configure a ni lo. Verified offline Islamic guidance hi a la awm lo.';
 
   @override
   String get chatbotLocalNoInfo =>

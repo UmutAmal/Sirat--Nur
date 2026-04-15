@@ -1320,7 +1320,7 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API не наладжаны. Пераключыцеся на мясцовы штучны інтэлект.';
+      'Cloud API не наладжаны. Праверанае ісламскае кіраўніцтва ў аўтаномным рэжыме пакуль недаступнае.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -1317,7 +1317,7 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API mhux ikkonfigurat. Jekk jogħġbok aqleb għal AI Lokali.';
+      'Cloud API mhix ikkonfigurata. Gwida Iżlamika offline verifikata għadha mhix disponibbli.';
 
   @override
   String get chatbotLocalNoInfo =>

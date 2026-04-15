@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API پیکربندی نشده است. لطفاً به هوش مصنوعی محلی بروید.",
+  "chatbotCloudNotConfigured": "Cloud API پیکربندی نشده است. هدایت اسلامی آفلاین تأیید شده هنوز در دسترس نیست.",
   "chatbotLocalNoInfo": "[آفلاین] راهنمایی اسلامی محلی تأیید شده هنوز در دسترس نیست. برای پاسخ‌های منبع، به Cloud AI بروید.",
   "mosques": "مساجد",
   "halalFood": "غذای حلال",

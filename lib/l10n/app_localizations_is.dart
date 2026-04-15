@@ -1314,7 +1314,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API ekki stillt. Vinsamlegast skiptu yfir í Local AI.';
+      'Cloud API er ekki stillt. Staðfest íslömsk leiðsögn án nettengingar er ekki enn tiltæk.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -1312,7 +1312,7 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API වින්‍යාස කර නැත. කරුණාකර දේශීය AI වෙත මාරු වන්න.';
+      'Cloud API වින්‍යාස කර නැත. සත්‍යාපිත නොබැඳි ඉස්ලාමීය මගපෙන්වීම තවමත් නොමැත.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -1313,7 +1313,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'ਕਲਾਊਡ API ਕੌਂਫਿਗਰ ਨਹੀਂ ਕੀਤਾ ਗਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਸਥਾਨਕ AI \'ਤੇ ਸਵਿਚ ਕਰੋ।';
+      'ਕਲਾਊਡ API ਕੌਂਫਿਗਰ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ। ਪ੍ਰਮਾਣਿਤ ਔਫਲਾਈਨ ਇਸਲਾਮੀ ਮਾਰਗਦਰਸ਼ਨ ਅਜੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।';
 
   @override
   String get chatbotLocalNoInfo =>

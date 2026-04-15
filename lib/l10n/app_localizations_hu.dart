@@ -1315,7 +1315,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'A felhő API nincs konfigurálva. Kérjük, váltson helyi AI-ra.';
+      'A Cloud API nincs konfigurálva. Ellenőrzött offline iszlám útmutatás még nem érhető el.';
 
   @override
   String get chatbotLocalNoInfo =>

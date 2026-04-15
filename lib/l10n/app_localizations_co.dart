@@ -1316,7 +1316,7 @@ class AppLocalizationsCo extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'L\'API Cloud ùn hè micca cunfigurata. Per piacè passà à l\'AI Locale.';
+      'L\'API Cloud ùn hè micca cunfigurata. A guida islamica offline verificata ùn hè ancu dispunibule.';
 
   @override
   String get chatbotLocalNoInfo =>

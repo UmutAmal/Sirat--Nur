@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotCloudNotConfigured": "Cloud API tetegekeddwa. Verified offline Obulagirizi bw'Obusiraamu tebunnafunibwa.",
   "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "Emizikiti",
   "halalFood": "Emmere ya Halal",

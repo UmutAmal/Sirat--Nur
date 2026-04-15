@@ -1305,7 +1305,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nክላውድ ኤፒኣይ ኣይተዋቕረን። በጃኹም ናብ Local AI ቀይሩ።';
+      'ክላውድ ኤፒኣይ ኣይተዋቕረን። ካብ መስመር ወጻኢ ዝተረጋገጸ እስላማዊ መምርሒ ገና ኣይተረኽበን።';
 
   @override
   String get chatbotLocalNoInfo =>

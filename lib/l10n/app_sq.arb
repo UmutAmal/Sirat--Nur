@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API nuk është konfiguruar. Ju lutemi kaloni në Local AI.",
+  "chatbotCloudNotConfigured": "Cloud API nuk është konfiguruar. Udhëzimi islamik i verifikuar jashtë linje nuk është ende i disponueshëm.",
   "chatbotLocalNoInfo": "[OFFLINE] Udhëzimi i verifikuar lokal islamik nuk ofrohet ende. Kalo te Cloud AI për përgjigjet me burim.",
   "mosques": "Xhamitë",
   "halalFood": "Ushqim hallall",

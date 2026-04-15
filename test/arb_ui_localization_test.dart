@@ -859,6 +859,39 @@ void main() {
       },
     );
 
+    test('chatbot cloud fallback copy does not point to retired Local AI', () {
+      const staleFragments = [
+        'Please switch to Local AI',
+        'Download Local AI',
+        '[LOCAL AI]',
+        'Lütfen Yerel AI',
+        "Yerel AI'yi İndir",
+        '[YEREL AI]',
+      ];
+      final arbFiles =
+          Directory('lib/l10n')
+              .listSync()
+              .whereType<File>()
+              .where((file) => file.path.endsWith('.arb'))
+              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+              .toList()
+            ..sort((a, b) => a.path.compareTo(b.path));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+        final value = arb['chatbotCloudNotConfigured'] as String;
+
+        for (final fragment in staleFragments) {
+          expect(
+            value.contains(fragment),
+            isFalse,
+            reason:
+                '${file.uri.pathSegments.last} still points chatbotCloudNotConfigured to retired Local AI copy',
+          );
+        }
+      }
+    });
+
     test(
       'chatbotUseCloudAi preserves Gemini as a proper noun across locales',
       () {

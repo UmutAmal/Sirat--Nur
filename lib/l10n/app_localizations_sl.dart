@@ -1317,7 +1317,7 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API ni konfiguriran. Preklopite na lokalni AI.';
+      'Cloud API ni konfiguriran. Preverjeno islamsko vodenje brez povezave še ni na voljo.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API teu ngonpigurasi. Mangga pindah ka AI Lokal.",
+  "chatbotCloudNotConfigured": "Cloud API teu ngonpigurasi. Pitunjuk Islam offline anu diverifikasi teu acan sayogi.",
   "chatbotLocalNoInfo": "[OFFLINE] Pitunjuk Islam lokal anu diverifikasi teu acan sayogi. Pindah ka Cloud AI pikeun jawaban sumber.",
   "mosques": "masjid-masjid",
   "halalFood": "Dahareun Halal",

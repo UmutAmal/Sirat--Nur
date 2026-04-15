@@ -1311,7 +1311,7 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API haina kugadzirwa. Ndokumbira uchinje ku Local AI.';
+      'Cloud API haina kugadzirwa. Hwaidzo hwechiIslam yakasimbiswa pasina Indaneti haisati yavapo.';
 
   @override
   String get chatbotLocalNoInfo =>

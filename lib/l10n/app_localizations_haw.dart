@@ -1314,7 +1314,7 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'ʻAʻole i hoʻonohonoho ʻia ʻo Cloud API. E ʻoluʻolu e hoʻololi iā Local AI.';
+      'ʻAʻole hoʻonohonoho ʻia ʻo Cloud API. ʻAʻole i loaʻa i kēia manawa ke alakaʻi Islam offline.';
 
   @override
   String get chatbotLocalNoInfo =>

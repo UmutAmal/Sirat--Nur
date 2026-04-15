@@ -1311,7 +1311,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API ગોઠવેલ નથી. કૃપા કરીને સ્થાનિક AI પર સ્વિચ કરો.';
+      'Cloud API ગોઠવેલ નથી. ચકાસાયેલ ઑફલાઇન ઇસ્લામિક માર્ગદર્શન હજી ઉપલબ્ધ નથી.';
 
   @override
   String get chatbotLocalNoInfo =>

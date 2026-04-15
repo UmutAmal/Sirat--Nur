@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotCloudNotConfigured": "APIn duumessaa hin qindaa'u. Verified offline Qajeelfamni Islaamaa hanga ammaatti hin argamne.",
   "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "Masjiidota",
   "halalFood": "Nyaata Halaal",

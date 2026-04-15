@@ -1319,7 +1319,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Облачный API не настроен. Пожалуйста, переключитесь на локальный ИИ.';
+      'Cloud API не настроен. Проверенное автономное исламское руководство пока недоступно.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -1343,7 +1343,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'ukax mä juk’a pachanakanwa.\nCloud API ukax janiw wakicht’atäkiti. Ukhamaraki, Local AI ukar mayjt’ayaña.';
+      'Cloud API ukax janiw wakicht’atäkiti. Verificado offline islámico guia ukax janiw jichhakamax utjkiti.';
 
   @override
   String get chatbotLocalNoInfo =>

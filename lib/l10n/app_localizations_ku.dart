@@ -1313,7 +1313,7 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API nayê mîheng kirin. Ji kerema xwe veguherînin AI-ya Herêmî.';
+      'Cloud API nehatiye mîheng kirin. Rêbernameya îslamî ya negirêdayî ya verastkirî hîna peyda nabe.';
 
   @override
   String get chatbotLocalNoInfo =>

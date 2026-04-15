@@ -1315,7 +1315,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'API ya Wingu haijasanidiwa. Tafadhali badilisha hadi AI ya Ndani.';
+      'API ya Wingu haijasanidiwa. Mwongozo wa Kiislamu uliothibitishwa nje ya mtandao haupatikani bado.';
 
   @override
   String get chatbotLocalNoInfo =>

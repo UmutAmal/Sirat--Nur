@@ -1323,7 +1323,7 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Hindi na-configure ang Cloud API. Mangyaring lumipat sa Local AI.';
+      'Hindi naka-configure ang Cloud API. Hindi pa available ang na-verify na offline na gabay sa Islam.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -1317,7 +1317,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'इति .\nमेघ एपिआइ विन्यस्तं नास्ति। कृपया Local AI इत्यत्र स्विच कुर्वन्तु।';
+      'मेघ एपिआइ विन्यस्तं नास्ति । सत्यापितं अफलाइन इस्लामिकमार्गदर्शनं अद्यापि उपलब्धं नास्ति।';
 
   @override
   String get chatbotLocalNoInfo =>

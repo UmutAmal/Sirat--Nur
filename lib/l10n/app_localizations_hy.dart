@@ -1318,7 +1318,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API-ն կազմաձևված չէ: Խնդրում ենք անցնել Local AI-ի:';
+      'Cloud API-ն կազմաձևված չէ: Ստուգված անցանց իսլամական ուղեցույցը դեռ հասանելի չէ:';
 
   @override
   String get chatbotLocalNoInfo =>

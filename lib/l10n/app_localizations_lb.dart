@@ -1315,7 +1315,7 @@ class AppLocalizationsLb extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API net konfiguréiert. Schalt w.e.g. op Lokal AI.';
+      'Cloud API ass net konfiguréiert. Verifizéiert offline islamesch Leedung ass nach net verfügbar.';
 
   @override
   String get chatbotLocalNoInfo =>

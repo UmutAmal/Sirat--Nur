@@ -8,9 +8,9 @@ void main() {
     "dayStreak": "Day streak",
     "bestStreak": "Best streak",
     "chatbotCloudAiLabel": "Cloud AI",
-    "chatbotLocalAiLabel": "Local AI",
+    "chatbotLocalAiLabel": "Offline Fallback",
     "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
-    "chatbotDownloadLocalAi": "Download Local AI (1.5 GB)",
+    "chatbotDownloadLocalAi": "Enable Offline Fallback",
     "chatbotQueriesLeft": "{count} left",
     "@chatbotQueriesLeft": {
       "placeholders": {
@@ -18,9 +18,9 @@ void main() {
       },
     },
     "chatbotCloudNotConfigured":
-        "Cloud API not configured. Please switch to Local AI.",
+        "Cloud API is not configured. Verified offline Islamic guidance is not available yet.",
     "chatbotLocalNoInfo":
-        "[LOCAL AI] I don't have information on this topic yet. You can ask about prayer, fasting, zakat, hajj, faith, or ethics.",
+        "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
     "mosques": "Mosques",
     "halalFood": "Halal Food",
     "placesSearchArea": "Search this area",
@@ -55,9 +55,9 @@ void main() {
     "dayStreak": "Gün serisi",
     "bestStreak": "En iyi seri",
     "chatbotCloudAiLabel": "Bulut AI",
-    "chatbotLocalAiLabel": "Yerel AI",
+    "chatbotLocalAiLabel": "Çevrimdışı Fallback",
     "chatbotUseCloudAi": "Bulut AI Kullan (Gemini)",
-    "chatbotDownloadLocalAi": "Yerel AI'yi İndir (1.5 GB)",
+    "chatbotDownloadLocalAi": "Çevrimdışı Fallback'i Etkinleştir",
     "chatbotQueriesLeft": "{count} kaldı",
     "@chatbotQueriesLeft": {
       "placeholders": {
@@ -65,9 +65,9 @@ void main() {
       },
     },
     "chatbotCloudNotConfigured":
-        "Bulut API ayarlanmadı. Lütfen Yerel AI moduna geçin.",
+        "Bulut API ayarlanmadı. Doğrulanmış çevrimdışı İslami rehberlik henüz hazır değil.",
     "chatbotLocalNoInfo":
-        "[YEREL AI] Bu konuda henüz bilgim yok. Namaz, oruç, zekat, hac, iman veya ahlak hakkında soru sorabilirsiniz.",
+        "[ÇEVRİMDIŞI] Doğrulanmış yerel İslami rehberlik henüz hazır değil. Kaynaklı cevaplar için Bulut AI moduna geçin.",
     "mosques": "Camiler",
     "halalFood": "Helal Gıda",
     "placesSearchArea": "Bu alanı ara",

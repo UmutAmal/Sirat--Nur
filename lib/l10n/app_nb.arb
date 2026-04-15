@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API ikke konfigurert. Vennligst bytt til lokal AI.",
+  "chatbotCloudNotConfigured": "Cloud API er ikke konfigurert. Verifisert offline islamsk veiledning er ikke tilgjengelig ennå.",
   "chatbotLocalNoInfo": "[OFFLINE] Verifisert lokal islamsk veiledning er ikke tilgjengelig ennå. Bytt til Cloud AI for hentede svar.",
   "mosques": "Moskeer",
   "halalFood": "Halal mat",

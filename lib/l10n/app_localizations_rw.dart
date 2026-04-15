@@ -1312,7 +1312,7 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Igicu API ntabwo cyashyizweho. Nyamuneka hindukira kuri AI yaho.';
+      'Igicu API ntabwo cyashyizweho. Ubuyobozi bwa kisilamu bwagenzuwe neza ntiburaboneka.';
 
   @override
   String get chatbotLocalNoInfo =>

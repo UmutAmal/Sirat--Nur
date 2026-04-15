@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotCloudNotConfigured": "क्लाउड एपीआई कॉन्फ़िगर नइखे भइल. सत्यापन ऑफलाइन इस्लामी मार्गदर्शन अभी तक उपलब्ध नइखे।",
   "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "मस्जिद के बा",
   "halalFood": "हलाल फूड के बा",

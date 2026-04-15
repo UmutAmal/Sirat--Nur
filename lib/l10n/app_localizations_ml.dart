@@ -1315,7 +1315,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'ക്ലൗഡ് API കോൺഫിഗർ ചെയ്തിട്ടില്ല. പ്രാദേശിക AI-ലേക്ക് മാറുക.';
+      'ക്ലൗഡ് API കോൺഫിഗർ ചെയ്തിട്ടില്ല. പരിശോധിച്ച ഓഫ്‌ലൈൻ ഇസ്ലാമിക മാർഗ്ഗനിർദ്ദേശം ഇതുവരെ ലഭ്യമല്ല.';
 
   @override
   String get chatbotLocalNoInfo =>

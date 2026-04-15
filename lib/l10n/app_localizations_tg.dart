@@ -1313,7 +1313,7 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'API Cloud танзим карда нашудааст. Лутфан ба АИ маҳаллӣ гузаред.';
+      'API Cloud танзим карда нашудааст. Ҳидоятҳои офлайнии тасдиқшудаи исломӣ ҳанӯз дастрас нестанд.';
 
   @override
   String get chatbotLocalNoInfo =>

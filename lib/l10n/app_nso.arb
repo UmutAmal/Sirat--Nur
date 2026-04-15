@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotCloudNotConfigured": "API ya leru ga se ya beakanywa. Tlhahlo ya Boiselamo yeo e netefaditšwego ya ka ntle ga inthanete ga e hwetšagale ga bjale.",
   "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "Dimoskete",
   "halalFood": "Dijo tša Halal",

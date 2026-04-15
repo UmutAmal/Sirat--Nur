@@ -1318,7 +1318,7 @@ class AppLocalizationsSt extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API ha e ea hlophisoa. Ka kopo, fetohela ho Local AI.';
+      'Cloud API ha e ea hlophisoa. Tataiso e netefalitsoeng ea Maislamo ntle le Marang-rang ha e so fumanehe.';
 
   @override
   String get chatbotLocalNoInfo =>

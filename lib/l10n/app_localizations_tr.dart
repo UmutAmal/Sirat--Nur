@@ -1316,7 +1316,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Bulut API ayarlanmadı. Lütfen Yerel AI moduna geçin.';
+      'Bulut API ayarlanmadı. Doğrulanmış çevrimdışı İslami rehberlik henüz hazır değil.';
 
   @override
   String get chatbotLocalNoInfo =>

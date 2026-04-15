@@ -1317,7 +1317,7 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API tsy voarindra. Miverena any amin\'ny AI eo an-toerana azafady.';
+      'Cloud API dia tsy voarindra. Tsy mbola misy ny fitarihana Islamika an-tserasera voamarina.';
 
   @override
   String get chatbotLocalNoInfo =>

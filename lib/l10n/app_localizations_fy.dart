@@ -1313,7 +1313,7 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API net ynsteld. Skeakelje asjebleaft nei Local AI.';
+      'Cloud API is net ynsteld. Ferifiearre offline islamityske begelieding is noch net beskikber.';
 
   @override
   String get chatbotLocalNoInfo =>

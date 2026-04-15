@@ -1316,7 +1316,7 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Wolk API nie opgestel nie. Skakel asseblief oor na Plaaslike KI.';
+      'Wolk API is nie opgestel nie. Geverifieerde vanlyn Islamitiese leiding is nog nie beskikbaar nie.';
 
   @override
   String get chatbotLocalNoInfo =>

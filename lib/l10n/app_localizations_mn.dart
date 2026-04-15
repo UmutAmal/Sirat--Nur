@@ -1316,7 +1316,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API-г тохируулаагүй байна. Орон нутгийн хиймэл оюун ухаан руу шилжинэ үү.';
+      'Cloud API-г тохируулаагүй байна. Баталгаажсан офлайн Исламын удирдамж хараахан боломжгүй байна.';
 
   @override
   String get chatbotLocalNoInfo =>

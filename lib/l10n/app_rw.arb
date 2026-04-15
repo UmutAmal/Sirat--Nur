@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Igicu API ntabwo cyashyizweho. Nyamuneka hindukira kuri AI yaho.",
+  "chatbotCloudNotConfigured": "Igicu API ntabwo cyashyizweho. Ubuyobozi bwa kisilamu bwagenzuwe neza ntiburaboneka.",
   "chatbotLocalNoInfo": "[OFFLINE] Kugenzura ubuyobozi bwa kisilamu bwaho ntiburaboneka. Hindura kuri Cloud AI kubisubizo byatanzwe.",
   "mosques": "Imisigiti",
   "halalFood": "Ibiryo bya Halal",

@@ -1319,7 +1319,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API wala ma-configure. Palihug balhin sa Lokal nga AI.';
+      'Ang Cloud API wala ma-configure. Ang gi-verify nga offline nga giya sa Islam wala pa magamit.';
 
   @override
   String get chatbotLocalNoInfo =>

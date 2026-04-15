@@ -1319,7 +1319,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API tsis tau teeb tsa. Thov hloov mus rau Local AI.';
+      'Cloud API tsis tau teeb tsa. Kev txheeb xyuas offline Islamic kev taw qhia tseem tsis tau muaj.';
 
   @override
   String get chatbotLocalNoInfo =>

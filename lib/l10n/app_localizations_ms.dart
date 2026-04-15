@@ -1315,7 +1315,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API tidak dikonfigurasikan. Sila tukar kepada AI Setempat.';
+      'Cloud API tidak dikonfigurasikan. Panduan Islam luar talian yang disahkan belum tersedia lagi.';
 
   @override
   String get chatbotLocalNoInfo =>

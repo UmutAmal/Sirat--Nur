@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API wala ma-configure. Palihug balhin sa Lokal nga AI.",
+  "chatbotCloudNotConfigured": "Ang Cloud API wala ma-configure. Ang gi-verify nga offline nga giya sa Islam wala pa magamit.",
   "chatbotLocalNoInfo": "[OFFLINE] Ang napamatud-an nga lokal nga giya sa Islam wala pa magamit. Pagbalhin sa Cloud AI alang sa gigikanan nga mga tubag.",
   "mosques": "Mga Mosque",
   "halalFood": "Halal nga Pagkaon",

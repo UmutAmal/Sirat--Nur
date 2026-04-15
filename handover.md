@@ -4989,3 +4989,43 @@
 
 ### Sonraki Adım
 - Yeni döngüde offline chatbot veri seti (`islamic_chatbot_data.dart`) taranacak; yerel cevaplarda kaynak/uydurma/mezhep hassasiyeti ve test boşlukları kontrol edilecek.
+
+## 2026-04-15 TUR-129 — Clarify Chatbot Offline Fallback Status
+
+### Yapılan İşlem
+- `chatbotCloudNotConfigured` metni tüm `lib/l10n/app_*.arb` dosyalarında "Local AI'ye geç" yönlendirmesinden dürüst "doğrulanmış offline İslami rehberlik henüz hazır değil" durumuna taşındı.
+- `flutter gen-l10n` çalıştırılarak generated localization sınıfları güncellendi.
+- `tool/add_keys.dart` varsayılanları eski Local AI kopyasını tekrar üretmeyecek şekilde güncellendi.
+- Chatbot widget testi, ARB localization testi ve add-key guard testi yeni dürüst kopyayı ve eski Local AI metninin geri dönmemesini doğrulayacak şekilde genişletildi.
+
+### Neden Yapıldı
+- `lib/core/constants/islamic_chatbot_data.dart` verified offline dataset'i bilinçli olarak kapalı tutuyor; buna rağmen eski copy kullanıcıyı "Local AI" moduna geçmeye yönlendiriyordu.
+- Bu, özellikle dinî rehberlikte false-success/false-availability riski oluşturuyordu: kullanıcı mevcut olmayan doğrulanmış yerel içeriğe yönlendirilmiş oluyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\add_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\chatbot\chatbot_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\islamic_chatbot_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Cloud API ayarlı değilken uygulama artık olmayan Local AI/verified offline rehberlik akışını vaat etmiyor.
+- 180+ locale aynı anahtarda eş kapsamlı güncellendi; generated l10n zinciri uygulama tarafıyla senkron kaldı.
+- Eski "Please switch to Local AI", "Download Local AI" ve TR karşılıklarının l10n/tool zincirine geri girmesi testle engellendi.
+
+### Test Sonucu
+- `flutter test test\features\chatbot\chatbot_page_test.dart test\islamic_chatbot_data_test.dart test\arb_ui_localization_test.dart --reporter compact` PASS
+- `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS (`30/30`)
+- `flutter test test\islamic_chatbot_data_test.dart --reporter compact` PASS (`3/3`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`272/272`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Chatbot cloud-offline fallback kopyasının doğrulanmamış/olmayan Local AI akışını vaat etme riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde dini içerik veri yüzeyleri taranacak; önce dua/asr/asma içeriklerinde kaynak, uydurma metin ve Supabase'e taşınmamış hardcoded içerik riski kontrol edilecek.

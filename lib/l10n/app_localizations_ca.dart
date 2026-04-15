@@ -1323,7 +1323,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'L\'API del núvol no està configurada. Canvia a la IA local.';
+      'L\'API del núvol no està configurada. La guia islàmica fora de línia verificada encara no està disponible.';
 
   @override
   String get chatbotLocalNoInfo =>

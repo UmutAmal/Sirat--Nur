@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Nuba API ne agordita. Bonvolu ŝanĝi al Loka AI.",
+  "chatbotCloudNotConfigured": "Cloud API ne estas agordita. Kontrolita eksterreta islama gvidado ankoraŭ ne haveblas.",
   "chatbotLocalNoInfo": "[SENLINE] Kontrolita loka islama gvidado ankoraŭ ne haveblas. Ŝanĝu al Cloud AI por fontaj respondoj.",
   "mosques": "Moskeoj",
   "halalFood": "Halala Manĝaĵo",

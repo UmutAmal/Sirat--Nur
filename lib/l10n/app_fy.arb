@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API net ynsteld. Skeakelje asjebleaft nei Local AI.",
+  "chatbotCloudNotConfigured": "Cloud API is net ynsteld. Ferifiearre offline islamityske begelieding is noch net beskikber.",
   "chatbotLocalNoInfo": "[OFFLINE] Ferifiearre lokale islamityske begelieding is noch net beskikber. Wikselje nei Cloud AI foar boarne antwurden.",
   "mosques": "Moskeeën",
   "halalFood": "Halal Food",

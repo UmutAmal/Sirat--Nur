@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "API cloud non configurata. Passa all'IA locale.",
+  "chatbotCloudNotConfigured": "L'API cloud non è configurata. La guida islamica offline verificata non è ancora disponibile.",
   "chatbotLocalNoInfo": "[OFFLINE] La guida islamica locale verificata non è ancora disponibile. Passa all'AI cloud per ottenere risposte provenienti dall'origine.",
   "mosques": "Moschee",
   "halalFood": "Cibo halal",

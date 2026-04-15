@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API haina kugadzirwa. Ndokumbira uchinje ku Local AI.",
+  "chatbotCloudNotConfigured": "Cloud API haina kugadzirwa. Hwaidzo hwechiIslam yakasimbiswa pasina Indaneti haisati yavapo.",
   "chatbotLocalNoInfo": "[OFFLINE] Mazano echiIslam akavimbiswa emuno haasati avapo. Chinja kuCloud AI kune mhinduro dzakatorwa.",
   "mosques": "Misikiti",
   "halalFood": "Halal Chikafu",

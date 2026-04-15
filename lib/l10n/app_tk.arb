@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API düzülmedi. Localerli AI-e geçmegiňizi haýyş edýäris.",
+  "chatbotCloudNotConfigured": "Cloud API düzülmedi. Barlanylan oflayn yslam görkezmesi entek elýeterli däl.",
   "chatbotLocalNoInfo": "[OFFLINE] Barlanan ýerli yslam görkezmeleri entek elýeterli däl. Gysga jogaplar üçin “Cloud AI” -e geçiň.",
   "mosques": "Metjitler",
   "halalFood": "Halal iýmit",

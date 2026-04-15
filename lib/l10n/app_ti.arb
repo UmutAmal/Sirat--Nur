@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nክላውድ ኤፒኣይ ኣይተዋቕረን። በጃኹም ናብ Local AI ቀይሩ።",
+  "chatbotCloudNotConfigured": "ክላውድ ኤፒኣይ ኣይተዋቕረን። ካብ መስመር ወጻኢ ዝተረጋገጸ እስላማዊ መምርሒ ገና ኣይተረኽበን።",
   "chatbotLocalNoInfo": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\n[OFFLINE] ዝተረጋገጸ ናይ ከባቢ እስላማዊ መምርሒ ገና ኣይተረኽበን። ምንጪ መልሲ ንምርካብ ናብ Cloud AI ቀይሩ።",
   "mosques": "መሳጊድ",
   "halalFood": "ሓላል መግቢ",

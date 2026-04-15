@@ -1314,7 +1314,7 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'API ɗin Cloud ba a saita shi ba. Da fatan za a canza zuwa AI na gida.';
+      'API ɗin Cloud ba a saita shi ba. Tabbataccen jagorar Musulunci ta layi ba ta samuwa tukuna.';
 
   @override
   String get chatbotLocalNoInfo =>

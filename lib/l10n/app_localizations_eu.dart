@@ -1315,7 +1315,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Hodeiko APIa ez dago konfiguratuta. Mesedez, aldatu Tokiko AI-ra.';
+      'Cloud API ez dago konfiguratuta. Lineaz kanpo egiaztatutako gida islamiarra ez dago oraindik erabilgarri.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -1314,7 +1314,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API ma habaysan Fadlan u beddel AI Local.';
+      'Cloud API ma habaysan Hanuuninta Islaamka ee khadka tooska ah ee la xaqiijiyay weli lama heli karo.';
 
   @override
   String get chatbotLocalNoInfo =>

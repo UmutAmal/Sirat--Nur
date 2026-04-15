@@ -1314,7 +1314,7 @@ class AppLocalizationsEe extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Womeɖo alilikpo API o. Islamtɔwo ƒe mɔfiame siwo ŋu woɖo kpee le internet dzi la meli haɖe o.';
 
   @override
   String get chatbotLocalNoInfo =>

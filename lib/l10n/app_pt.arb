@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "API de nuvem não configurada. Mude para IA local.",
+  "chatbotCloudNotConfigured": "A API da nuvem não está configurada. A orientação islâmica off-line verificada ainda não está disponível.",
   "chatbotLocalNoInfo": "[OFFLINE] A orientação islâmica local verificada ainda não está disponível. Mude para Cloud AI para obter respostas de origem.",
   "mosques": "Mesquitas",
   "halalFood": "Comida Halal",

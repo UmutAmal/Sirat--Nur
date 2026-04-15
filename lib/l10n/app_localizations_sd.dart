@@ -1311,7 +1311,7 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API ترتيب نه ڏني وئي. مھرباني ڪري مقامي AI ڏانھن وڃو.';
+      'Cloud API ترتيب نه ڏني وئي آهي. تصديق ٿيل آف لائن اسلامي ھدايت اڃا موجود نه آھي.';
 
   @override
   String get chatbotLocalNoInfo =>

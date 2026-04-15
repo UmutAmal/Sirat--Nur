@@ -1316,7 +1316,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API не налаштовано. Будь ласка, перейдіть на локальний ШІ.';
+      'Cloud API не налаштовано. Перевірене офлайн-ісламське керівництво поки що недоступне.';
 
   @override
   String get chatbotLocalNoInfo =>

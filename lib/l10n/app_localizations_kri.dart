@@ -1313,7 +1313,7 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Klayd API nɔ kɔnfigyut. Verified offline Islamik gayd nɔ de yet.';
 
   @override
   String get chatbotLocalNoInfo =>

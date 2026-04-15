@@ -1320,7 +1320,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'A API de nube non está configurada. Cambia á IA local.';
+      'A API de nube non está configurada. A orientación islámica sen conexión verificada aínda non está dispoñible.';
 
   @override
   String get chatbotLocalNoInfo =>

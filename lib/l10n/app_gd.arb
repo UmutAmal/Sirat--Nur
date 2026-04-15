@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotCloudNotConfigured": "Chan eil Cloud API air a rèiteachadh. Chan eil stiùireadh Ioslamach dearbhte far-loidhne ri fhaighinn fhathast.",
   "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "Mosg",
   "halalFood": "Biadh Halal",

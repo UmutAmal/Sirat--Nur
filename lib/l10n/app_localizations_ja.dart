@@ -1299,7 +1299,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'クラウド API が設定されていません。ローカル AI に切り替えてください。';
+      'クラウド API が設定されていません。検証済みのオフライン イスラム教ガイダンスはまだ利用できません。';
 
   @override
   String get chatbotLocalNoInfo =>

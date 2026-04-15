@@ -1310,7 +1310,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'لم يتم تكوين Cloud API. يرجى التبديل إلى الذكاء الاصطناعي المحلي.';
+      'لم يتم تكوين Cloud API. الإرشادات الإسلامية التي تم التحقق منها دون اتصال بالإنترنت غير متوفرة بعد.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API mhux ikkonfigurat. Jekk jogħġbok aqleb għal AI Lokali.",
+  "chatbotCloudNotConfigured": "Cloud API mhix ikkonfigurata. Gwida Iżlamika offline verifikata għadha mhix disponibbli.",
   "chatbotLocalNoInfo": "[OFFLINE] Gwida Iżlamika lokali verifikata għadha mhix disponibbli. Aqleb għal Cloud AI għal tweġibiet misjuba.",
   "mosques": "Moskej",
   "halalFood": "Ikel Halal",

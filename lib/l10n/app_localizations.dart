@@ -2850,7 +2850,7 @@ abstract class AppLocalizations {
   /// No description provided for @chatbotCloudNotConfigured.
   ///
   /// In en, this message translates to:
-  /// **'Cloud API not configured. Please switch to Local AI.'**
+  /// **'Cloud API is not configured. Verified offline Islamic guidance is not available yet.'**
   String get chatbotCloudNotConfigured;
 
   /// No description provided for @chatbotLocalNoInfo.

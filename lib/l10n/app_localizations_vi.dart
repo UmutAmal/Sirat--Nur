@@ -1314,7 +1314,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'API đám mây chưa được định cấu hình. Vui lòng chuyển sang AI cục bộ.';
+      'API đám mây không được định cấu hình. Chưa có hướng dẫn Hồi giáo ngoại tuyến đã được xác minh.';
 
   @override
   String get chatbotLocalNoInfo =>

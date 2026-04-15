@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API sinakonzedwe. Chonde sinthani ku Local AI.",
+  "chatbotCloudNotConfigured": "Cloud API sinakonzedwe. Chitsogozo chachisilamu chotsimikizika pa intaneti sichinapezekebe.",
   "chatbotLocalNoInfo": "[OFFLINE] Maupangiri otsimikizika achisilamu akumaloko sakupezeka pano. Sinthani ku Cloud AI kuti mupeze mayankho opezeka.",
   "mosques": "Misikiti",
   "halalFood": "Chakudya cha Halal",

@@ -1316,7 +1316,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API not configured. Please switch to Local AI.';
+      'Nid yw Cloud API wedi\'i ffurfweddu. Nid yw canllawiau Islamaidd all-lein wedi\'u dilysu ar gael eto.';
 
   @override
   String get chatbotLocalNoInfo =>

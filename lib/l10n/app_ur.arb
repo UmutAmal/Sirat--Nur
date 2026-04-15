@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API کنفیگر نہیں ہے۔ براہ کرم مقامی AI پر سوئچ کریں۔",
+  "chatbotCloudNotConfigured": "Cloud API کنفیگر نہیں ہے۔ تصدیق شدہ آف لائن اسلامی رہنمائی ابھی تک دستیاب نہیں ہے۔",
   "chatbotLocalNoInfo": "[آف لائن] تصدیق شدہ مقامی اسلامی رہنمائی ابھی تک دستیاب نہیں ہے۔ حاصل کردہ جوابات کے لیے Cloud AI پر سوئچ کریں۔",
   "mosques": "مساجد",
   "halalFood": "حلال خوراک",

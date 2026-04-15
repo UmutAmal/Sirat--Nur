@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API not configured. Please switch to Local AI.",
+  "chatbotCloudNotConfigured": "ไม่ได้กำหนดค่า Cloud API ยังไม่มีคำแนะนำอิสลามแบบออฟไลน์ที่ได้รับการยืนยัน",
   "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "มัสยิด",
   "halalFood": "อาหารฮาลาล",

@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API nie je nakonfigurované. Prepnite na lokálnu AI.",
+  "chatbotCloudNotConfigured": "Cloud API nie je nakonfigurované. Overené offline islamské poradenstvo zatiaľ nie je k dispozícii.",
   "chatbotLocalNoInfo": "[OFFLINE] Overené miestne islamské poradenstvo zatiaľ nie je k dispozícii. Ak chcete získať odpovede zo zdrojov, prepnite na Cloud AI.",
   "mosques": "mešity",
   "halalFood": "Halal jedlo",

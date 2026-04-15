@@ -1314,7 +1314,7 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API düzülmedi. Localerli AI-e geçmegiňizi haýyş edýäris.';
+      'Cloud API düzülmedi. Barlanylan oflayn yslam görkezmesi entek elýeterli däl.';
 
   @override
   String get chatbotLocalNoInfo =>

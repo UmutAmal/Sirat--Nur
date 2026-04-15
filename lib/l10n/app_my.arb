@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API ကို ပြင်ဆင်မထားပါ။ Local AI သို့ပြောင်းပါ။",
+  "chatbotCloudNotConfigured": "Cloud API ကို စီစဉ်မထားပါ။ အတည်ပြုထားသော အော့ဖ်လိုင်းအစ္စလာမ့်လမ်းညွှန်ချက်ကို မရရှိနိုင်သေးပါ။",
   "chatbotLocalNoInfo": "[OFFLINE] အတည်ပြုထားသော ဒေသန္တရအစ္စလာမ့်လမ်းညွှန်ချက်ကို မရရှိနိုင်သေးပါ။ ရင်းမြစ်အဖြေများအတွက် Cloud AI သို့ပြောင်းပါ။",
   "mosques": "ဗလီများ",
   "halalFood": "Halal အစားအစာ",

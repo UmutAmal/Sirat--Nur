@@ -1318,7 +1318,7 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Kapua API kaore i whirihora. Tena koa huri ki AI Paetata.';
+      'Kaore i te whirihorahia te Cloud API. Ko te arataki Ihirama tuimotu kua whakamanahia kaore ano kia waatea.';
 
   @override
   String get chatbotLocalNoInfo =>

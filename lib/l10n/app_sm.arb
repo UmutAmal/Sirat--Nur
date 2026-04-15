@@ -458,7 +458,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API e le'i fa'atulagaina. Fa'amolemole sui ile Local AI.",
+  "chatbotCloudNotConfigured": "E le o fa'atulagaina le Cloud API. E le'i maua le ta'ita'iga fa'a-Isalama fa'amaonia tuimotu.",
   "chatbotLocalNoInfo": "[OFFLINE] E le'i maua le ta'ita'iga fa'a-Isalama fa'apitonu'u. Su'e ile Cloud AI mo tali maua'a.",
   "mosques": "Mosques",
   "halalFood": "Mea'ai Halal",

@@ -1316,7 +1316,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Pilvisovellusliittymää ei ole määritetty. Vaihda paikalliseen tekoälyyn.';
+      'Pilvisovellusliittymää ei ole määritetty. Vahvistettu offline-islamilainen opastus ei ole vielä saatavilla.';
 
   @override
   String get chatbotLocalNoInfo =>
