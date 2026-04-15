@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
@@ -19,30 +20,30 @@
             android:id="@+id/tv_next_prayer_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NEXT PRAYER"
             android:textColor="#B3FFFFFF"
             android:textSize="10sp"
             android:letterSpacing="0.1"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="NEXT PRAYER" />
 
         <TextView
             android:id="@+id/tv_next_prayer_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="MAGHRIB"
             android:textColor="#FFFFFF"
             android:textSize="26sp"
-            android:fontFamily="sans-serif-black" />
+            android:fontFamily="sans-serif-black"
+            tools:text="MAGHRIB" />
 
         <TextView
             android:id="@+id/tv_next_prayer_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="18:45"
             android:textColor="#6EE7B7"
             android:textSize="20sp"
-            android:fontFamily="sans-serif-medium" />
+            android:fontFamily="sans-serif-medium"
+            tools:text="18:45" />
 
     </LinearLayout>
 

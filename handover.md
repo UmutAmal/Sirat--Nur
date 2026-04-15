@@ -6106,3 +6106,45 @@
 
 ### Sonraki Adım
 - Sonraki döngüde Android widget XML preview/default metinlerinin kullanıcıya stale veya hardcoded içerik göstermediği ve widget servis sözleşmesinin tüm native kaynaklarla birebir eşleştiği tekrar taranacak.
+
+## 2026-04-15 TUR-158 — Remove Android Widget Runtime Preview Copy
+
+### Yapılan İşlem
+- `widget_prayer.xml`, `widget_all_prayers.xml`, `widget_qibla.xml` ve `widget_ayah.xml` içindeki runtime `android:text` örnek metinleri kaldırıldı.
+- Aynı örnekler yalnızca Android Studio/design preview amacıyla `tools:text` değerlerine taşındı.
+- `PrayerWidgetProvider.java`, `AllPrayersWidgetProvider.java`, `QiblaWidgetProvider.java` ve `AyahWidgetProvider.java` fallback değerleri İngilizce/Türkçe label yerine boş veya dil-bağımsız placeholder olacak şekilde güncellendi.
+- `android_widget_localization_test.dart` genişletildi; widget layout'larında runtime `android:text="..."` kalırsa veya Java provider'lar hardcoded İngilizce fallback'e dönerse test fail ediyor.
+
+### Neden Yapıldı
+- Android widget layout'larında `NEXT PRAYER`, `DAILY PRAYER TIMES`, `Kıble / Qibla`, `Günün Ayeti / Ayah of the Day` ve örnek ayet/metin değerleri runtime attribute olarak duruyordu.
+- Native provider fallback'leri de `Next Prayer`, `Prayer Times`, `Fajr`, `Daily Verse` gibi İngilizce metinlere düşüyordu.
+- Kök sebep, Flutter ARB/l10n zinciri kurulmuş olmasına rağmen native widget ilk render/default state katmanında kullanıcıya görünebilecek gömülü metin bırakılmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\java\com\umutamal\sirat_i_nur\PrayerWidgetProvider.java`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\java\com\umutamal\sirat_i_nur\AllPrayersWidgetProvider.java`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\java\com\umutamal\sirat_i_nur\QiblaWidgetProvider.java`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\java\com\umutamal\sirat_i_nur\AyahWidgetProvider.java`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\res\layout\widget_prayer.xml`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\res\layout\widget_all_prayers.xml`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\res\layout\widget_qibla.xml`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\res\layout\widget_ayah.xml`
+- `A:\Way of Allah\sirat_i_nur\test\android_widget_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Android widget runtime yüzeyinde Flutter l10n/HomeWidget verisi gelmeden yanlış dilde veya stale dini metin gösterilmez.
+- Design-time preview görünümü korunur; kullanıcıya görünen veri ise Flutter tarafındaki doğrulanmış/lokalize widget servis sözleşmesine bağlı kalır.
+- Yeni testler, native widget layout veya provider katmanına tekrar runtime hardcoded metin eklenmesini yakalar.
+
+### Test Sonucu
+- `flutter test test\android_widget_localization_test.dart --reporter compact` PASS (`7/7`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`325/325`)
+- `flutter build apk --debug` PASS (`build\app\outputs\flutter-apk\app-debug.apk`)
+
+### Risk Değişimi
+- Android widget native runtime/default state katmanında hardcoded veya yanlış dilde metin gösterme riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- Sonraki döngüde ARB dosyalarında kalan İngilizce-identical değerler taranacak; önce `chatbotUseCloudAi`, `nearbyMosques`, `distanceAwayKm`, `splashTagline` gibi hâlâ nadir locale'lerde İngilizce kalan kullanıcı metinleri ele alınacak.

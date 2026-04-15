@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
@@ -18,28 +19,28 @@
             android:id="@+id/tv_qibla_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kıble / Qibla"
             android:textColor="#4CAF50"
             android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="Kıble / Qibla" />
 
         <TextView
             android:id="@+id/tv_qibla_direction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="135°"
             android:textColor="#FFFFFF"
             android:textSize="28sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="135°" />
 
         <TextView
             android:id="@+id/tv_qibla_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Doğu / East"
             android:textColor="#A0A0A0"
-            android:textSize="11sp" />
+            android:textSize="11sp"
+            tools:text="Doğu / East" />
 
     </LinearLayout>
 

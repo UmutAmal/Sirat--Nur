@@ -90,6 +90,72 @@ void main() {
       }
     });
 
+    test('native widget layouts keep sample copy as preview-only text', () {
+      final layouts = [
+        File('android/app/src/main/res/layout/widget_prayer.xml'),
+        File('android/app/src/main/res/layout/widget_all_prayers.xml'),
+        File('android/app/src/main/res/layout/widget_qibla.xml'),
+        File('android/app/src/main/res/layout/widget_ayah.xml'),
+      ];
+
+      for (final layoutFile in layouts) {
+        final layout = layoutFile.readAsStringSync();
+
+        expect(
+          layout,
+          isNot(contains('android:text="')),
+          reason:
+              '${layoutFile.path} must not ship runtime hardcoded widget text',
+        );
+        expect(
+          layout,
+          contains('tools:text='),
+          reason:
+              '${layoutFile.path} should keep design-time preview copy only',
+        );
+      }
+    });
+
+    test('native providers do not fall back to hardcoded English copy', () {
+      final providerSources = [
+        File(
+          'android/app/src/main/java/com/umutamal/sirat_i_nur/PrayerWidgetProvider.java',
+        ).readAsStringSync(),
+        File(
+          'android/app/src/main/java/com/umutamal/sirat_i_nur/AllPrayersWidgetProvider.java',
+        ).readAsStringSync(),
+        File(
+          'android/app/src/main/java/com/umutamal/sirat_i_nur/QiblaWidgetProvider.java',
+        ).readAsStringSync(),
+        File(
+          'android/app/src/main/java/com/umutamal/sirat_i_nur/AyahWidgetProvider.java',
+        ).readAsStringSync(),
+      ];
+      const staleFallbacks = [
+        '"Next Prayer"',
+        '"Prayer Times"',
+        '"Daily Prayer Times"',
+        '"Fajr"',
+        '"Dhuhr"',
+        '"Asr"',
+        '"Maghrib"',
+        '"Isha"',
+        '"Qibla"',
+        '"Daily Verse"',
+        '"00:00"',
+      ];
+
+      for (final source in providerSources) {
+        for (final fallback in staleFallbacks) {
+          expect(
+            source,
+            isNot(contains(fallback)),
+            reason: 'Native provider still contains stale fallback $fallback',
+          );
+        }
+      }
+    });
+
     test('manifest registers every HomeWidget provider used by Flutter', () {
       final manifest = File(
         'android/app/src/main/AndroidManifest.xml',

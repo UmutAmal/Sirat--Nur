@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
@@ -18,12 +19,12 @@
             android:id="@+id/tv_all_prayers_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DAILY PRAYER TIMES"
             android:textColor="#B3FFFFFF"
             android:textSize="11sp"
             android:textAlignment="center"
             android:letterSpacing="0.1"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="DAILY PRAYER TIMES" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,8 +39,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
-                <TextView android:id="@+id/tv_fajr_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fajr" android:textColor="#A0A0A0" android:textSize="12sp" />
-                <TextView android:id="@+id/tv_fajr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="05:15" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tv_fajr_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#A0A0A0" android:textSize="12sp" tools:text="Fajr" />
+                <TextView android:id="@+id/tv_fajr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" tools:text="05:15" />
             </LinearLayout>
 
             <LinearLayout
@@ -48,8 +49,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
-                <TextView android:id="@+id/tv_dhuhr_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dhuhr" android:textColor="#A0A0A0" android:textSize="12sp" />
-                <TextView android:id="@+id/tv_dhuhr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12:30" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tv_dhuhr_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#A0A0A0" android:textSize="12sp" tools:text="Dhuhr" />
+                <TextView android:id="@+id/tv_dhuhr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" tools:text="12:30" />
             </LinearLayout>
 
             <LinearLayout
@@ -58,8 +59,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
-                <TextView android:id="@+id/tv_asr_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Asr" android:textColor="#A0A0A0" android:textSize="12sp" />
-                <TextView android:id="@+id/tv_asr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15:45" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tv_asr_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#A0A0A0" android:textSize="12sp" tools:text="Asr" />
+                <TextView android:id="@+id/tv_asr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" tools:text="15:45" />
             </LinearLayout>
 
             <LinearLayout
@@ -68,8 +69,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
-                <TextView android:id="@+id/tv_maghrib_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Maghrib" android:textColor="#A0A0A0" android:textSize="12sp" />
-                <TextView android:id="@+id/tv_maghrib" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="18:30" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tv_maghrib_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#A0A0A0" android:textSize="12sp" tools:text="Maghrib" />
+                <TextView android:id="@+id/tv_maghrib" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" tools:text="18:30" />
             </LinearLayout>
 
             <LinearLayout
@@ -78,8 +79,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
-                <TextView android:id="@+id/tv_isha_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Isha" android:textColor="#A0A0A0" android:textSize="12sp" />
-                <TextView android:id="@+id/tv_isha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20:00" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tv_isha_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#A0A0A0" android:textSize="12sp" tools:text="Isha" />
+                <TextView android:id="@+id/tv_isha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" tools:text="20:00" />
             </LinearLayout>
 
         </LinearLayout>

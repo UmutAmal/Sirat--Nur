@@ -13,7 +13,7 @@ public class AyahWidgetProvider extends HomeWidgetProvider {
         for (int appWidgetId : appWidgetIds) {
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_ayah);
 
-            String header = widgetData.getString("ayah_header", "Daily Verse");
+            String header = widgetData.getString("ayah_header", "");
             String arabic = widgetData.getString("ayah_arabic", "");
             String translation = widgetData.getString("ayah_translation", "");
             String reference = widgetData.getString("ayah_reference", "");

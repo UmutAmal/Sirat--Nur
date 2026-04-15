@@ -13,7 +13,7 @@ public class QiblaWidgetProvider extends HomeWidgetProvider {
         for (int appWidgetId : appWidgetIds) {
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_qibla);
 
-            String header = widgetData.getString("qibla_header", "Qibla");
+            String header = widgetData.getString("qibla_header", "");
             String direction = widgetData.getString("qibla_direction", "--°");
             String status = widgetData.getString("qibla_status", "");
 
