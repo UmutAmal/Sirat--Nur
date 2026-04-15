@@ -57,6 +57,28 @@ void main() {
       },
     );
 
+    test('flags missing provenance even when table counts look healthy', () {
+      final rows = buildQuranDiagnosticRows(
+        strings: _strings,
+        surahCount: 114,
+        ayahCount: 6236,
+        verifiedSurahCount: 113,
+        verifiedAyahCount: 6235,
+        ayahsWithJuzCount: 6236,
+      );
+
+      expect(rows, hasLength(3));
+      expect(rows[0].label, 'Quran Surahs');
+      expect(rows[0].value, '113 / 114');
+      expect(rows[0].isHealthy, isFalse);
+      expect(rows[1].label, 'Quran Ayahs');
+      expect(rows[1].value, '6235 / 6236');
+      expect(rows[1].isHealthy, isFalse);
+      expect(rows[2].label, 'Quran Juz Metadata');
+      expect(rows[2].value, '6236 / 6236');
+      expect(rows[2].isHealthy, isTrue);
+    });
+
     test('surfaces missing juz column as structural fallback warning', () {
       final rows = buildQuranDiagnosticRows(
         strings: _strings,

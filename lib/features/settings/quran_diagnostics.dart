@@ -37,6 +37,8 @@ List<QuranDiagnosticRowData> buildQuranDiagnosticRows({
   required QuranDiagnosticStrings strings,
   int? surahCount,
   int? ayahCount,
+  int? verifiedSurahCount,
+  int? verifiedAyahCount,
   int? ayahsWithJuzCount,
   Object? error,
   Object? structuralError,
@@ -53,18 +55,29 @@ List<QuranDiagnosticRowData> buildQuranDiagnosticRows({
 
   final normalizedSurahCount = surahCount ?? 0;
   final normalizedAyahCount = ayahCount ?? 0;
+  final normalizedVerifiedSurahCount =
+      verifiedSurahCount ?? normalizedSurahCount;
+  final normalizedVerifiedAyahCount = verifiedAyahCount ?? normalizedAyahCount;
+  final completeVerifiedSurahCount = _lowestCount(
+    normalizedSurahCount,
+    normalizedVerifiedSurahCount,
+  );
+  final completeVerifiedAyahCount = _lowestCount(
+    normalizedAyahCount,
+    normalizedVerifiedAyahCount,
+  );
   final normalizedAyahsWithJuzCount = ayahsWithJuzCount ?? 0;
 
   return [
     QuranDiagnosticRowData(
       strings.surahsLabel,
-      '$normalizedSurahCount / 114',
-      normalizedSurahCount == 114,
+      '$completeVerifiedSurahCount / 114',
+      completeVerifiedSurahCount == 114,
     ),
     QuranDiagnosticRowData(
       strings.ayahsLabel,
-      '$normalizedAyahCount / 6236',
-      normalizedAyahCount == 6236,
+      '$completeVerifiedAyahCount / 6236',
+      completeVerifiedAyahCount == 6236,
     ),
     QuranDiagnosticRowData(
       strings.juzMetadataLabel,
@@ -75,6 +88,8 @@ List<QuranDiagnosticRowData> buildQuranDiagnosticRows({
     ),
   ];
 }
+
+int _lowestCount(int first, int second) => first < second ? first : second;
 
 String summarizeQuranCloudError(Object error, QuranDiagnosticStrings strings) {
   // Fingerprint only; raw exception text must never be displayed in UI.

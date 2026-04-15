@@ -5209,3 +5209,41 @@
 
 ### Sonraki Adım
 - Yeni döngüde `quran_diagnostics.dart` tarafı taranacak; diagnostics sadece sayım/juz yapısını değil, `quran_surahs` ve `quran_ayahs` provenance eksiklerini de kullanıcıya dürüst fallback uyarısı olarak gösteriyor mu doğrulanacak.
+
+## 2026-04-15 TUR-135 — Diagnose Quran Provenance Gaps
+
+### Yapılan İşlem
+- `DiagnosticsPage` artık `quran_surahs` ve `quran_ayahs` için raw tablo sayımına ek olarak `source` dolu ve `verified_at` dolu kayıt sayımı çekiyor.
+- `buildQuranDiagnosticRows` sure ve ayet satırlarının sağlığını raw sayı ile verified sayı kesişimine göre hesaplıyor.
+- Raw tablo sayıları `114/6236` tamam görünse bile provenance eksikse diagnostics satırları artık `113 / 114` veya `6235 / 6236` gibi sağlıksız sonuç gösteriyor.
+- `quran_diagnostics_test.dart` raw sayılar tamken provenance sayısı eksik olan regresyonu ekledi.
+- `diagnostics_page_test.dart` canlı diagnostics sorgularının `source` ve `verified_at` filtrelerini taşıdığını koruyan guard test kazandı.
+
+### Neden Yapıldı
+- TUR-134 loader seviyesinde doğrulanmamış canlı Kur'an metnini reddetti; ancak diagnostics ekranı hâlâ yalnızca tablo sayısı ve cüz metadata sayısı ile dataset'i sağlıklı gösterebilirdi.
+- Bu, kaynak bilgisi eksik bir Supabase dataset'inin operatöre "sağlıklı" görünmesine yol açan dürüstlük açığıydı.
+- Kök sebep, `diagnostics_page.dart` içinde `quran_surahs` ve `quran_ayahs` için provenance filtreli ayrı sayım yapılmamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\quran_diagnostics.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\quran_diagnostics_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Diagnostics ekranı artık canlı Kur'an dataset'i için sadece miktarı değil, kaynak doğrulama alanlarının varlığını da sağlık sinyaline dahil ediyor.
+- Doğrulanmış source/verified_at eksikliği varsa kullanıcı/operatör false-healthy durum görmüyor.
+- Yeni l10n anahtarı eklenmedi; mevcut lokalize "Kur'an Sureleri" ve "Kur'an Ayetleri" satırları korunarak global çeviri kapsamı büyütülmedi.
+
+### Test Sonucu
+- `flutter test test\quran_diagnostics_test.dart test\features\settings\diagnostics_page_test.dart --reporter compact` PASS (`19/19`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`282/282`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Diagnostics ekranının source/verified_at eksik Kur'an dataset'ini sağlıklı göstermesi riski: `16/25 -> 4/25`
+
+### Sonraki Adım
+- Yeni döngüde canlı Supabase dini içerik akışlarında kalan provenance veya false-success boşlukları taranacak; öncelik `quran_integrity`/offline indirme ve kullanıcıya başarı mesajı gösteren akışlar olacak.

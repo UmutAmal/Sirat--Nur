@@ -312,6 +312,18 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
       final supabase = ref.read(supabaseClientProvider);
       final surahCount = await supabase.from('quran_surahs').count();
       final ayahCount = await supabase.from('quran_ayahs').count();
+      final verifiedSurahCount = await supabase
+          .from('quran_surahs')
+          .count()
+          .not('source', 'is', null)
+          .not('source', 'eq', '')
+          .not('verified_at', 'is', null);
+      final verifiedAyahCount = await supabase
+          .from('quran_ayahs')
+          .count()
+          .not('source', 'is', null)
+          .not('source', 'eq', '')
+          .not('verified_at', 'is', null);
       int? ayahsWithJuzCount;
       Object? structuralError;
 
@@ -342,6 +354,8 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
           ),
           surahCount: surahCount,
           ayahCount: ayahCount,
+          verifiedSurahCount: verifiedSurahCount,
+          verifiedAyahCount: verifiedAyahCount,
           ayahsWithJuzCount: ayahsWithJuzCount,
           structuralError: structuralError,
         ).map((row) => _DiagnosticRow(row.label, row.value, row.isHealthy)),

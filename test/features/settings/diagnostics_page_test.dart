@@ -204,6 +204,20 @@ void main() {
     expect(source, contains('Diagnostics asset manifest read failed'));
   });
 
+  test('Quran diagnostics queries require provenance columns', () {
+    final source = File(
+      'lib/features/settings/diagnostics_page.dart',
+    ).readAsStringSync();
+
+    expect(source, contains(".from('quran_surahs')"));
+    expect(source, contains(".from('quran_ayahs')"));
+    expect(source, contains(".not('source', 'is', null)"));
+    expect(source, contains(".not('source', 'eq', '')"));
+    expect(source, contains(".not('verified_at', 'is', null)"));
+    expect(source, contains('verifiedSurahCount: verifiedSurahCount'));
+    expect(source, contains('verifiedAyahCount: verifiedAyahCount'));
+  });
+
   test(
     'buildAudioDiagnosticsSnapshot measures required audio coverage honestly',
     () {
