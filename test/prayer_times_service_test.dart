@@ -1,7 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/services/prayer_calendar_service.dart';
+import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_times_service.dart';
+import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'package:timezone/data/latest.dart' as tzdata;
+import 'package:timezone/timezone.dart' as tz;
 
 // The helper functions in prayer_times_service.dart are top-level so we can
 // unit-test them by importing the file.  We re-export them via a helper if
@@ -9,6 +14,9 @@ import 'package:sirat_i_nur/core/services/prayer_times_service.dart';
 // on the helpers.
 
 void main() {
+  tzdata.initializeTimeZones();
+  tz.setLocalLocation(tz.getLocation('Etc/UTC'));
+
   group('PrayerTimesData', () {
     test('constructor stores all fields', () {
       final data = PrayerTimesData(
@@ -51,22 +59,66 @@ void main() {
 
     test('provider applies automatic high latitude rule', () {
       final source = File(
-        'lib/core/services/prayer_times_service.dart',
-      ).readAsStringSync();
-
-      expect(source, contains('applyAutomaticHighLatitudeRule(params, lat)'));
-    });
-
-    test('provider computes remaining time in the selected timezone', () {
-      final source = File(
-        'lib/core/services/prayer_times_service.dart',
+        'lib/core/services/prayer_calendar_service.dart',
       ).readAsStringSync();
 
       expect(
         source,
-        contains('TimezoneUtils.differenceInTimezone(\n    nextTime,'),
+        contains('applyAutomaticHighLatitudeRule(params, latitude)'),
       );
-      expect(source, isNot(contains('nextTime.difference(now)')));
+    });
+
+    test(
+      'provider delegates calculations to the central prayer calendar service',
+      () {
+        final source = File(
+          'lib/core/services/prayer_times_service.dart',
+        ).readAsStringSync();
+
+        expect(source, contains('PrayerCalendarService.calculatePrayerTimes('));
+        expect(source, isNot(contains('DateComponents.from(')));
+        expect(source, isNot(contains('PrayerTimes(coordinates')));
+      },
+    );
+
+    test('buildPrayerTimesData returns null until a real location is set', () {
+      expect(buildPrayerTimesData(SettingsState()), isNull);
+    });
+
+    test('buildPrayerTimesData mirrors centralized tomorrow-fajr logic', () {
+      const latitude = 41.0082;
+      const longitude = 28.9784;
+      final currentTime = DateTime(2026, 4, 8, 23, 30);
+      final settings = SettingsState(
+        calculationMethod: diyanetPrayerMethod,
+        madhab: hanafiMadhab,
+        latitude: latitude,
+        longitude: longitude,
+      );
+
+      final data = buildPrayerTimesData(settings, currentTime: currentTime)!;
+      final centralized = PrayerCalendarService.calculatePrayerTimes(
+        latitude: latitude,
+        longitude: longitude,
+        date: currentTime,
+        method: diyanetPrayerMethod,
+        madhab: hanafiMadhab,
+        currentTime: currentTime,
+      );
+
+      expect(data.nextPrayer, centralized.nextPrayerName);
+      expect(data.nextPrayer, 'Fajr');
+      expect(
+        data.nextPrayerTime,
+        _formatExpectedTime(centralized.nextPrayerTime),
+      );
+      expect(data.timeRemaining, greaterThan(Duration.zero));
     });
   });
+}
+
+String _formatExpectedTime(DateTime dt) {
+  final hour = dt.hour.toString().padLeft(2, '0');
+  final minute = dt.minute.toString().padLeft(2, '0');
+  return '$hour:$minute';
 }

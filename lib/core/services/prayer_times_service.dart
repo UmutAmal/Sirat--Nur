@@ -1,8 +1,7 @@
-import 'package:adhan/adhan.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
-import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'package:sirat_i_nur/core/services/prayer_calendar_service.dart';
 import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
+import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 
 class PrayerTimesData {
   final String fajr, sunrise, dhuhr, asr, maghrib, isha;
@@ -29,79 +28,48 @@ String _formatTime(DateTime dt) {
   return '$h:$m';
 }
 
-final prayerTimesProvider = Provider<PrayerTimesData?>((ref) {
-  final settings = ref.watch(settingsProvider);
+PrayerTimesData? buildPrayerTimesData(
+  SettingsState settings, {
+  DateTime? currentTime,
+}) {
   final lat = settings.latitude;
   final lng = settings.longitude;
 
   if (lat == null || lng == null) return null;
 
-  final coordinates = Coordinates(lat, lng);
-  final params = buildCalculationParameters(
-    settings.calculationMethod,
+  final referenceTime =
+      currentTime ?? TimezoneUtils.nowForTimezone(settings.timezone);
+  final prayerTimes = PrayerCalendarService.calculatePrayerTimes(
+    latitude: lat,
+    longitude: lng,
+    date: referenceTime,
+    method: settings.calculationMethod,
+    madhab: settings.madhab,
+    timezone: settings.timezone,
     fajrAngle: settings.fajrAngle,
     ishaAngle: settings.ishaAngle,
+    currentTime: referenceTime,
   );
-  applyAutomaticHighLatitudeRule(params, lat);
-  params.madhab = resolveAdhanMadhab(settings.madhab);
-
-  final now = TimezoneUtils.nowForTimezone(settings.timezone);
-  final date = DateComponents.from(now);
-  final prayerTimes = PrayerTimes(coordinates, date, params);
-  DateTime adjust(DateTime dt) =>
-      TimezoneUtils.adjustCalculationTime(dt, settings.timezone);
-  final fajr = adjust(prayerTimes.fajr);
-  final sunrise = adjust(prayerTimes.sunrise);
-  final dhuhr = adjust(prayerTimes.dhuhr);
-  final asr = adjust(prayerTimes.asr);
-  final maghrib = adjust(prayerTimes.maghrib);
-  final isha = adjust(prayerTimes.isha);
-
-  // Determine next prayer
-  String nextPrayer;
-  DateTime nextTime;
-  if (now.isBefore(fajr)) {
-    nextPrayer = 'Fajr';
-    nextTime = fajr;
-  } else if (now.isBefore(sunrise)) {
-    nextPrayer = 'Sunrise';
-    nextTime = sunrise;
-  } else if (now.isBefore(dhuhr)) {
-    nextPrayer = 'Dhuhr';
-    nextTime = dhuhr;
-  } else if (now.isBefore(asr)) {
-    nextPrayer = 'Asr';
-    nextTime = asr;
-  } else if (now.isBefore(maghrib)) {
-    nextPrayer = 'Maghrib';
-    nextTime = maghrib;
-  } else if (now.isBefore(isha)) {
-    nextPrayer = 'Isha';
-    nextTime = isha;
-  } else {
-    nextPrayer = 'Fajr';
-    // Tomorrow's fajr
-    final tomorrow = now.add(const Duration(days: 1));
-    final tomorrowDate = DateComponents.from(tomorrow);
-    final tomorrowPrayers = PrayerTimes(coordinates, tomorrowDate, params);
-    nextTime = adjust(tomorrowPrayers.fajr);
-  }
-
   final remaining = TimezoneUtils.differenceInTimezone(
-    nextTime,
-    now,
+    prayerTimes.nextPrayerTime,
+    referenceTime,
     settings.timezone,
   );
 
   return PrayerTimesData(
-    fajr: _formatTime(fajr),
-    sunrise: _formatTime(sunrise),
-    dhuhr: _formatTime(dhuhr),
-    asr: _formatTime(asr),
-    maghrib: _formatTime(maghrib),
-    isha: _formatTime(isha),
-    nextPrayer: nextPrayer,
-    nextPrayerTime: _formatTime(nextTime),
+    fajr: _formatTime(prayerTimes.fajr),
+    sunrise: _formatTime(prayerTimes.sunrise),
+    dhuhr: _formatTime(prayerTimes.dhuhr),
+    asr: _formatTime(prayerTimes.asr),
+    maghrib: _formatTime(prayerTimes.maghrib),
+    isha: _formatTime(prayerTimes.isha),
+    nextPrayer: prayerTimes.nextPrayerName,
+    nextPrayerTime: _formatTime(prayerTimes.nextPrayerTime),
     timeRemaining: remaining,
   );
+}
+
+final prayerTimesProvider = Provider<PrayerTimesData?>((ref) {
+  final settings = ref.watch(settingsProvider);
+  return buildPrayerTimesData(settings);
 });

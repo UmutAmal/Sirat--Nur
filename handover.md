@@ -5873,3 +5873,35 @@
 
 ### Sonraki Adım
 - Yeni döngüde download/diagnostics fallback kalan locale'leri güvenli batch stratejisiyle ele alınacak; her batch sonrası English-identical sayımı, placeholder doğrulaması ve l10n testleri çalıştırılacak.
+
+## 2026-04-15 TUR-152 — Centralize Home Prayer Time Calculation Pipeline
+
+### Yapılan İşlem
+- `prayer_times_service.dart` içindeki ana ekran namaz vakti hesaplaması, duplicate `PrayerTimes` kurulumundan çıkarılıp merkezi `PrayerCalendarService.calculatePrayerTimes` sözleşmesine bağlandı.
+- `buildPrayerTimesData` helper'ı eklendi; provider artık aynı helper üzerinden veri üretiyor.
+- Ana ekran hesaplaması resmi profil, mezhep, yüksek enlem, DST ve yarınki Fajr mantığını takvim servisiyle aynı kaynaktan alıyor.
+- `prayer_times_service_test.dart` genişletildi; ana ekran hattının merkezi servis kullanması, konum yokken null dönmesi ve Isha sonrası yarınki Fajr mantığını merkezi servisle aynı üretmesi testleniyor.
+
+### Neden Yapıldı
+- Prayer pipeline taramasında ana ekran ve takvim/cache servisi aynı namaz vakti algoritmasını ayrı ayrı kuruyordu.
+- Bu tekrar, ileride ülke/resmi kurum profili, mezhep, yüksek enlem veya DST düzeltmesi tek hatta uygulanıp diğer hatta unutulursa kullanıcıya farklı vakitler gösterme riski doğururdu.
+- Kök sebep, `prayer_times_service.dart` provider'ının merkezi hesaplama servisini çağırmak yerine `PrayerTimes` nesnesini kendi içinde yeniden kurmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_times_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_times_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Ana ekrandaki namaz vakti ve kalan süre hesabı merkezi, testli ve resmi profil-aware pipeline'a bağlandı.
+- Yarınki Fajr, DST ve mezhep/profile davranışı iki ayrı yerde drift edemez.
+- UI için formatlama aynı kaldı; hesaplama kaynağı tekleştirildi.
+
+### Test Sonucu
+- `flutter test test\prayer_times_service_test.dart test\prayer_calendar_service_test.dart test\prayer_profile_service_test.dart --reporter compact` PASS (`19/19`)
+
+### Risk Değişimi
+- Ana ekran ile takvim/notification namaz vakti hesaplarının zamanla ayrışma riski: `16/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde prayer profile coverage genişletilecek; ülke/timezone fallback haritasında resmi veya kabul gören profile eşleşmesi olmayan bölgeler skorlanacak.
