@@ -5838,3 +5838,38 @@
 
 ### Sonraki Adım
 - Yeni döngüde major dependency upgrades ayrı ayrı skorlanacak; uygulama davranışını etkileyebilecek major migration'lar resmi changelog/pub.dev kanıtı ve tam regression suite ile parça parça ele alınacak.
+
+## 2026-04-15 TUR-151 — Guard ARB Translation Tool Against English Fallback Regressions
+
+### Yapılan İşlem
+- `translate_arb_keys.dart` çeviri seçim mantığı sertleştirildi.
+- Çeviri servisi İngilizce fallback, boş değer, bozuk placeholder veya tek satır kuralını bozan çıktı döndürürse mevcut geçerli lokalize değer korunacak şekilde `resolveTranslatedArbValue` eklendi.
+- Placeholder doğrulaması sıra bağımlı olmaktan çıkarıldı; çeviriler doğal dil gereği `{failed}` ve `{reciter}` gibi placeholder'ları farklı sırada kullanabiliyorsa artık geçerli sayılıyor.
+- `translate_arb_keys_test.dart` eklendi; İngilizce fallback regressions, geçerli yeni çeviri, bozuk placeholder ve yeniden sıralanmış placeholder senaryoları testle korunuyor.
+- `--force` ile yapılan deneme batch'i kalite kontrolünde bazı mevcut iyi çevirileri İngilizceye düşürdüğü için ARB içerik değişiklikleri commit edilmedi; yalnızca tool guard'ı ve test commit'e hazırlanıyor.
+
+### Neden Yapıldı
+- Download/diagnostics localization taramasında birçok nadir locale için İngilizce fallback bulundu.
+- Mevcut tool, başarısız çeviri sonucunu İngilizce kaynakla değiştirerek bazı doğru çevirileri geriye götürebiliyordu.
+- Kök sebep, tool'un çeviri adayını mevcut değerle kıyaslamadan kabul etmesi ve placeholder sırasını gereksiz şekilde katı kontrol etmesiydi.
+- Dini ve hassas ürün bağlamında doğrulanmamış/kalitesiz makine çevirisini commit etmek doğru olmadığı için önce çeviri pipeline'ı regresyon yapamaz hale getirildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Çeviri batch'leri artık mevcut iyi lokalizasyonları İngilizce fallback ile ezemez.
+- Placeholder sırası farklı olan ama semantik olarak doğru çeviriler korunur.
+- Kalan İngilizce fallback'ler için sonraki batch'ler daha güvenli çalıştırılabilir; doğrulanmayan output uygulamaya alınmaz.
+
+### Test Sonucu
+- `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart --reporter compact` PASS (`37/37`)
+
+### Risk Değişimi
+- Çeviri tooling'in iyi lokalizasyonları İngilizce fallback ile bozma riski: `16/25 -> 3/25`
+- Kalan download/diagnostics locale fallback temizliği: aktif risk olarak sonraki tura taşındı; doğrulanmamış makine çıktısı commit edilmedi.
+
+### Sonraki Adım
+- Yeni döngüde download/diagnostics fallback kalan locale'leri güvenli batch stratejisiyle ele alınacak; her batch sonrası English-identical sayımı, placeholder doğrulaması ve l10n testleri çalıştırılacak.

@@ -68,6 +68,7 @@ Future<void> main(List<String> arguments) async {
       final translatedValues = await _translateValues(
         translator,
         pendingTranslations,
+        current,
         _toTranslatorLocale(locale),
       );
       updated.addAll(translatedValues);
@@ -110,13 +111,8 @@ bool _hasMatchingPlaceholders(String currentValue, String englishValue) {
     return false;
   }
 
-  for (var index = 0; index < currentPlaceholders.length; index++) {
-    if (currentPlaceholders[index] != englishPlaceholders[index]) {
-      return false;
-    }
-  }
-
-  return true;
+  return _placeholderCounts(currentPlaceholders).toString() ==
+      _placeholderCounts(englishPlaceholders).toString();
 }
 
 List<String> _extractPlaceholders(String value) {
@@ -125,9 +121,20 @@ List<String> _extractPlaceholders(String value) {
   ).allMatches(value).map((match) => match.group(0)!).toList();
 }
 
+Map<String, int> _placeholderCounts(List<String> placeholders) {
+  final counts = <String, int>{};
+  for (final placeholder in placeholders) {
+    counts[placeholder] = (counts[placeholder] ?? 0) + 1;
+  }
+  return Map.fromEntries(
+    counts.entries.toList()..sort((a, b) => a.key.compareTo(b.key)),
+  );
+}
+
 Future<Map<String, String>> _translateValues(
   GoogleTranslator translator,
   Map<String, String> sources,
+  Map<String, dynamic> currentValues,
   String locale,
 ) async {
   final tokenizedEntries = <MapEntry<String, _TokenizedValue>>[
@@ -149,26 +156,37 @@ Future<Map<String, String>> _translateValues(
     if (parts.length != tokenizedEntries.length) {
       return {
         for (final entry in tokenizedEntries)
-          entry.key: entry.value.originalSource,
+          entry.key: resolveTranslatedArbValue(
+            key: entry.key,
+            source: entry.value.originalSource,
+            currentValue: currentValues[entry.key],
+            candidate: entry.value.originalSource,
+          ),
       };
     }
 
     return {
       for (var index = 0; index < tokenizedEntries.length; index++)
-        tokenizedEntries[index].key: _postProcessTranslation(
+        tokenizedEntries[index].key: resolveTranslatedArbValue(
           key: tokenizedEntries[index].key,
-          translated: _restorePlaceholders(
+          source: tokenizedEntries[index].value.originalSource,
+          currentValue: currentValues[tokenizedEntries[index].key],
+          candidate: _restorePlaceholders(
             parts[index].trim(),
             tokenizedEntries[index].value.replacements,
             tokenizedEntries[index].value.originalSource,
           ),
-          source: tokenizedEntries[index].value.originalSource,
         ),
     };
   } catch (_) {
     return {
       for (final entry in tokenizedEntries)
-        entry.key: entry.value.originalSource,
+        entry.key: resolveTranslatedArbValue(
+          key: entry.key,
+          source: entry.value.originalSource,
+          currentValue: currentValues[entry.key],
+          candidate: entry.value.originalSource,
+        ),
     };
   }
 }
@@ -221,6 +239,55 @@ class _TokenizedValue {
   final String originalSource;
   final String tokenizedSource;
   final List<MapEntry<String, String>> replacements;
+}
+
+String resolveTranslatedArbValue({
+  required String key,
+  required String source,
+  required Object? currentValue,
+  required String candidate,
+}) {
+  final processedCandidate = _postProcessTranslation(
+    key: key,
+    translated: candidate,
+    source: source,
+  );
+
+  if (_isUsableTranslationCandidate(key, source, processedCandidate)) {
+    if (processedCandidate != _normalizeProperNames(source)) {
+      return processedCandidate;
+    }
+  }
+
+  final existingValue = currentValue;
+  if (existingValue is String &&
+      _isUsableTranslationCandidate(key, source, existingValue) &&
+      existingValue != _normalizeProperNames(source)) {
+    return existingValue;
+  }
+
+  return _normalizeProperNames(source);
+}
+
+bool _isUsableTranslationCandidate(
+  String key,
+  String source,
+  String candidate,
+) {
+  final trimmed = candidate.trim();
+  if (trimmed.isEmpty) {
+    return false;
+  }
+
+  if (!_hasMatchingPlaceholders(trimmed, source)) {
+    return false;
+  }
+
+  if (_mustStaySingleLine(key) && _hasLineBreak(trimmed)) {
+    return false;
+  }
+
+  return true;
 }
 
 String _postProcessTranslation({
