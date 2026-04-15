@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Ny surah rehetra dia efa alaina ho an'ity reciter ity.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Loharanom-peo Quran voamarina dia tsy misy amin'izao fotoana izao.",
+  "quranAudioSourcesIncomplete": "Ny fonosan-peo Quran voamarina dia tsy feno ({available}/{total}). Havaozy ny voa rahona ary andramo indray.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

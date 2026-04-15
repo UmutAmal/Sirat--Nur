@@ -1158,8 +1158,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+  String get downloadCompleted => '已为该背诵者下载所有古兰经。';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
@@ -1215,12 +1214,11 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+  String get quranAudioSourcesUnavailable => '经过验证的《古兰经》音频源目前不可用。';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return '已验证的《古兰经》音频包不完整 ($available/$total)。刷新云种子并重试。';
   }
 
   @override
@@ -2796,8 +2794,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+  String get downloadCompleted => '已为该背诵者下载所有古兰经。';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
@@ -2853,12 +2850,11 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+  String get quranAudioSourcesUnavailable => '经过验证的《古兰经》音频源目前不可用。';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return '已验证的《古兰经》音频包不完整 ($available/$total)。刷新云种子并重试。';
   }
 
   @override
@@ -4434,8 +4430,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+  String get downloadCompleted => '已為該背誦者下載所有古蘭經。';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
@@ -4491,12 +4486,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+  String get quranAudioSourcesUnavailable => '經過驗證的《古蘭經》音訊來源目前無法使用。';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return '已驗證的《古蘭經》音訊包不完整 ($available/$total)。刷新雲種子並重試。';
   }
 
   @override

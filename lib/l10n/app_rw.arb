@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Sura zose zimaze gukururwa kuriyi soma.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,7 +419,7 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
+  "quranAudioSourcesUnavailable": "Inkomoko y'amajwi ya Koran ntishoboka kuboneka nonaha.",
   "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {

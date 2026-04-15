@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Tag nrho cov surahs twb downloaded rau no reciter.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Txheeb xyuas Quran cov ntaub ntawv suab tsis muaj tam sim no.",
+  "quranAudioSourcesIncomplete": "Txheeb xyuas Quran lub pob tsis tiav ({available}/{total}). Refresh huab noob thiab sim dua.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

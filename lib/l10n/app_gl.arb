@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Xa se descargaron todas as suras para este recitador.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "As fontes de audio verificadas do Corán non están dispoñibles neste momento.",
+  "quranAudioSourcesIncomplete": "O paquete de audio do Corán verificado está incompleto ({available}/{total}). Actualiza a semente da nube e téntao de novo.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

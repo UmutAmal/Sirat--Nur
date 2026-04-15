@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Όλες οι σούρες έχουν ήδη κατέβει για αυτόν τον απαγγέλλοντα.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Οι επαληθευμένες πηγές ήχου του Κορανίου δεν είναι διαθέσιμες αυτήν τη στιγμή.",
+  "quranAudioSourcesIncomplete": "Το επαληθευμένο πακέτο ήχου Κορανίου δεν είναι πλήρες ({available}/{total}). Ανανεώστε το cloud seed και δοκιμάστε ξανά.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

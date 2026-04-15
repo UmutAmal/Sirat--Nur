@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "ყველა სურა უკვე გადმოწერილია ამ მკითხავისთვის.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "დადასტურებული ყურანის აუდიო წყაროები ამჟამად მიუწვდომელია.",
+  "quranAudioSourcesIncomplete": "დადასტურებული ყურანის აუდიო პაკეტი არასრულია ({available}/{total}). განაახლეთ ღრუბლის თესლი და სცადეთ ხელახლა.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

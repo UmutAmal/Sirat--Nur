@@ -1176,8 +1176,7 @@ class AppLocalizationsTi extends AppLocalizations {
   }
 
   @override
-  String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+  String get downloadCompleted => 'ኩለን ሱራታት ድሮ ነዚ ቀባኢ ዝወረዳ።';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';

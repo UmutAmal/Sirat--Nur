@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "An riga an saukar da dukkan surori don wannan mai karatun.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,7 +419,7 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
+  "quranAudioSourcesUnavailable": "Ba a samun ingantattun hanyoyin sauti na Alqur'ani a yanzu.",
   "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {

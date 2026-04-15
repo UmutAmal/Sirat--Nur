@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Tutte e surah digià scaricate per questu reciter.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "E fonti audio verificate di u Coran ùn sò micca dispunibili avà.",
+  "quranAudioSourcesIncomplete": "U pacchettu audio Coran verificatu hè incompletu ({available}/{total}). Refresh seed cloud è pruvate di novu.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

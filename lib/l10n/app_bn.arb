@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "এই তেলাওয়াতকারীর জন্য ইতিমধ্যেই সমস্ত সূরা ডাউনলোড করা হয়েছে।",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "যাচাইকৃত কুরআন অডিও উত্স এই মুহূর্তে অনুপলব্ধ.",
+  "quranAudioSourcesIncomplete": "যাচাইকৃত কুরআন অডিও প্যাক অসম্পূর্ণ ({available}/{total})। মেঘের বীজ রিফ্রেশ করুন এবং আবার চেষ্টা করুন।",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

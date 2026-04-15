@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "اس تلاوت کرنے والے کے لیے تمام سورتیں پہلے ہی ڈاؤن لوڈ ہو چکی ہیں۔",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "تصدیق شدہ قرآن کے آڈیو ذرائع ابھی دستیاب نہیں ہیں۔",
+  "quranAudioSourcesIncomplete": "تصدیق شدہ قرآن آڈیو پیک نامکمل ہے ({available}/{total})۔ بادل کے بیج کو ریفریش کریں اور دوبارہ کوشش کریں۔",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

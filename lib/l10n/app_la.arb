@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Omnes surahs iam receptae sunt pro hoc recitatore.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Verified Quran audio fontes perpendat nunc.",
+  "quranAudioSourcesIncomplete": "Verificata Quran auditio sarcina incompleta est ({available}/{total}). refice nube semen, et iterum tenta.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

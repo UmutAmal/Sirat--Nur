@@ -1193,7 +1193,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Totes les sures ja s\'han descarregat per a aquest recitador.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
@@ -1250,11 +1250,11 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+      'Les fonts d\'àudio verificades de l\'Alcorà no estan disponibles en aquest moment.';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return 'El paquet d\'àudio de l\'Alcorà verificat està incomplet ($available/$total). Actualitza la llavor del núvol i torna-ho a provar.';
   }
 
   @override

@@ -4440,3 +4440,40 @@
 
 ### Sonraki Adım
 - Yeni tarama döngüsünde `main.dart`, `audio_player_service.dart`, `prayer_notification_coordinator.dart`, `quran_page.dart` ve `juz_reading_page.dart` debug loglarında raw hata detaylarının azaltılması değerlendirilecek; kullanıcı UI'ına sızan aday varsa önce o kapatılacak.
+
+## 2026-04-15 TUR-113 — Localize Quran Audio Download Status Copy
+
+### Yapılan İşlem
+- `lib/l10n/app_*.arb` içindeki `downloadCompleted`, `quranAudioSourcesUnavailable` ve `quranAudioSourcesIncomplete` anahtarları tüm locale batch'inde güncellendi.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations*.dart` generated çıktıları yenilendi.
+- `tool/translate_arb_keys.dart` içinde bu üç indirme/ses durumu anahtarı tek satır korunacak anahtarlar listesine eklendi.
+- `test/arb_ui_localization_test.dart` öncelikli locale'lerde bu kullanıcıya görünen indirme/ses durumu metinlerinin İngilizce fallback'e düşmesini yakalayacak şekilde genişletildi.
+
+### Neden Yapıldı
+- `lib/features/downloads/offline_downloads_page.dart` kullanıcıya indirme tamamlandı, doğrulanmış ses kaynakları yok veya paket eksik mesajlarını doğrudan l10n üzerinden gösteriyor.
+- Önceki taramada `app_ar.arb`, `app_de.arb`, `app_fr.arb` ve benzeri priority locale'lerde bu anahtarların İngilizce kaldığı görüldü.
+- Offline Kur'an sesi gibi çekirdek bir akışta kullanıcıya görünen copy'nin tüm l10n zincirinde yerel dile düşmesi gerekiyor.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Offline indirme ve Kur'an ses kaynağı durum mesajlarında priority locale İngilizce fallback riski düşürüldü.
+- Aynı anahtarların ileride yanlışlıkla çok satırlı veya İngilizce fallback kalması regresyon testine bağlandı.
+- Generated l10n dosyaları ARB kaynaklarıyla senkron kaldı.
+
+### Test Sonucu
+- `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`252/252`)
+- `git diff --check` PASS (sadece CRLF uyarıları)
+
+### Risk Değişimi
+- Offline Kur'an sesi indirme/durum copy'sinde İngilizce fallback riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde kullanıcıya görünen veya loglarda gereksiz ham hata ayrıntısı taşıyan `debugPrint` adayları taranacak; UI'a sızma ihtimali en yüksek olan akış önce kapatılacak.

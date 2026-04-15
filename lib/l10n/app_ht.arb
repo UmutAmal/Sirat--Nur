@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Tout sourate deja telechaje pou resite sa a.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Sous odyo koran verifye yo pa disponib kounye a.",
+  "quranAudioSourcesIncomplete": "Pake odyo koran verifye pa konplè ({available}/{total}). Rafrechi grenn nwaj epi eseye ankò.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

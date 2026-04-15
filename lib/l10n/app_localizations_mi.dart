@@ -1189,7 +1189,7 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Ko nga surah katoa kua oti te tango ake mo tenei kaikorero.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
@@ -1246,11 +1246,11 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+      'Ko nga puna ororongo Quran kua whakamanahia kaore i te waatea inaianei.';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return 'Ko te kete ororongo Quran kua whakamanahia kaore i oti ($available/$total). Tāmatahia te kākano kapua ka ngana anō.';
   }
 
   @override

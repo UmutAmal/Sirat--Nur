@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "همه سوره ها قبلا برای این قاری دانلود شده است.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "منابع صوتی قرآن تأیید شده در حال حاضر در دسترس نیستند.",
+  "quranAudioSourcesIncomplete": "بسته صوتی قرآن تأیید شده ناقص است ({available}/{total}). دانه ابر را تازه کنید و دوباره امتحان کنید.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

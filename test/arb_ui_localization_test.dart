@@ -678,8 +678,11 @@ void main() {
           'downloadAction',
           'resumeDownload',
           'deleteDownloadedFiles',
+          'downloadCompleted',
           'downloadCanceledForReciter',
           'downloadFinishedForReciter',
+          'quranAudioSourcesUnavailable',
+          'quranAudioSourcesIncomplete',
           'diagnosticsQuranCloudTablesMissing',
           'diagnosticsQuranCloudJuzMissing',
         ];

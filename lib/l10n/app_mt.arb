@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Is-surahs kollha diġà mniżżla għal dan ir-reċiter.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Sorsi awdjo vverifikati tal-Quran mhumiex disponibbli bħalissa.",
+  "quranAudioSourcesIncomplete": "Il-pakkett tal-awdjo tal-Quran ivverifikat mhuwiex komplut ({available}/{total}). Aġġorna ż-żerriegħa tas-sħab u erġa' pprova.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

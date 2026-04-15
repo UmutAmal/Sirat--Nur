@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Visas šim deklamētājam jau lejupielādētās suras.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Verificētie Korāna audio avoti pašlaik nav pieejami.",
+  "quranAudioSourcesIncomplete": "Verificētā Korāna audio pakotne ir nepilnīga ({available}/{total}). Atsvaidziniet mākoņa sēklu un mēģiniet vēlreiz.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

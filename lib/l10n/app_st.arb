@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Li-surah tsohle li se li ntse li jarollotsoe bakeng sa sebali sena.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Mehloli ea molumo e netefalitsoeng ea Quran ha e fumanehe hajoale.",
+  "quranAudioSourcesIncomplete": "Sephutheloana sa molumo oa Quran se netefalitsoeng ha se ea fella ({available}/{total}). Hlahisa peo ea leru 'me u leke hape.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

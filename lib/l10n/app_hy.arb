@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Բոլոր սուրաներն արդեն ներբեռնված են այս ասմունքողի համար:",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Ղուրանի ստուգված աուդիո աղբյուրներն այս պահին անհասանելի են:",
+  "quranAudioSourcesIncomplete": "Ստուգված Ղուրանի աուդիո փաթեթը թերի է ({available}/{total}): Թարմացրեք ամպի սերմերը և նորից փորձեք:",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

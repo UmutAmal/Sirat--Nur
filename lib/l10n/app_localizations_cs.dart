@@ -1186,7 +1186,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Všechny súry jsou již staženy pro tohoto recitátora.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
@@ -1243,11 +1243,11 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+      'Ověřené zdroje zvuku z Koránu jsou momentálně nedostupné.';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return 'Ověřený zvukový balíček Koránu je neúplný ($available/$total). Obnovte zdroj cloudu a zkuste to znovu.';
   }
 
   @override

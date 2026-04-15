@@ -1186,7 +1186,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Semua surah sudah dimuat turun untuk qari ini.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
@@ -1243,7 +1243,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+      'Sumber audio Al-Quran yang disahkan tidak tersedia sekarang.';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {

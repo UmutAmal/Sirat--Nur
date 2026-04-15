@@ -1211,7 +1211,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Taqi surahanakax nayraqatw aka recitador ukatakix apkatata.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';

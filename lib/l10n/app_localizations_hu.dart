@@ -1186,7 +1186,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Ehhez a szavalóhoz már letöltött összes szúra.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
@@ -1243,11 +1243,11 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+      'Az ellenőrzött Korán hangforrások jelenleg nem érhetők el.';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return 'Az ellenőrzött Korán hangcsomag hiányos ($available/$total). Frissítse a felhőmagot, és próbálkozzon újra.';
   }
 
   @override

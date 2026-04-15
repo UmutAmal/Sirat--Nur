@@ -244,6 +244,9 @@ bool _mustStaySingleLine(String key) {
       key == 'locationDetectionFailed' ||
       key == 'qiblaLocationRequiredTitle' ||
       key == 'qiblaLocationRequiredBody' ||
+      key == 'downloadCompleted' ||
+      key == 'quranAudioSourcesUnavailable' ||
+      key == 'quranAudioSourcesIncomplete' ||
       key == 'adhanNotificationChannelName' ||
       key == 'adhanNotificationChannelDescription';
 }

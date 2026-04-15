@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "已为该背诵者下载所有古兰经。",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "经过验证的《古兰经》音频源目前不可用。",
+  "quranAudioSourcesIncomplete": "已验证的《古兰经》音频包不完整 ({available}/{total})。刷新云种子并重试。",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

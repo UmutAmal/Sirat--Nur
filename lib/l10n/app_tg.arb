@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Ҳама сураҳо барои ин қироат аллакай бор карда шудаанд.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Манбаъҳои аудиоии тасдиқшудаи Қуръон ҳоло дастрас нестанд.",
+  "quranAudioSourcesIncomplete": "Бастаи аудиоии тасдиқшудаи Қуръон нопурра аст ({available}/{total}). Насли абрро нав кунед ва бори дигар кӯшиш кунед.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

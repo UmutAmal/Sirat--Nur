@@ -1187,7 +1187,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Visos jau atsisiųstos šio deklamuotojo suros.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
@@ -1244,11 +1244,11 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+      'Patvirtinti Korano garso šaltiniai šiuo metu nepasiekiami.';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return 'Patvirtintas Korano garso paketas yra neužbaigtas ($available/$total). Atnaujinkite debesies sėklą ir bandykite dar kartą.';
   }
 
   @override

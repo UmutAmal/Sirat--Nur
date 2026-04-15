@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Surah ទាំងអស់ត្រូវបានទាញយករួចហើយសម្រាប់អ្នកសូត្រនេះ។",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "ប្រភពសំឡេងគម្ពីគូរ៉ាដែលបានផ្ទៀងផ្ទាត់គឺមិនមានទេឥឡូវនេះ។",
+  "quranAudioSourcesIncomplete": "កញ្ចប់សំឡេងគម្ពីគូរ៉ាដែលបានផ្ទៀងផ្ទាត់គឺមិនពេញលេញទេ ({available}/{total})។ ផ្ទុកគ្រាប់ពូជពពកឡើងវិញ ហើយព្យាយាមម្តងទៀត។",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

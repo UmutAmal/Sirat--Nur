@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Masurah ese akatodhawunirodha kune ino reciter.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Verified Quran audio sources haasi kuwanikwa pari zvino.",
+  "quranAudioSourcesIncomplete": "Everified Quran audio pack haina kukwana ({available}/{total}). Zorora mbeu yegore uye edza zvakare.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

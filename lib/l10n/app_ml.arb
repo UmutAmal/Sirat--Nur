@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "ഈ പാരായണക്കാരനായി എല്ലാ സൂറകളും ഇതിനകം ഡൗൺലോഡ് ചെയ്തിട്ടുണ്ട്.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "പരിശോധിച്ചുറപ്പിച്ച ഖുർആൻ ഓഡിയോ ഉറവിടങ്ങൾ ഇപ്പോൾ ലഭ്യമല്ല.",
+  "quranAudioSourcesIncomplete": "പരിശോധിച്ച ഖുറാൻ ഓഡിയോ പായ്ക്ക് അപൂർണ്ണമാണ് ({available}/{total}). ക്ലൗഡ് സീഡ് പുതുക്കി വീണ്ടും ശ്രമിക്കുക.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

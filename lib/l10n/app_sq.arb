@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Të gjitha suret janë shkarkuar tashmë për këtë recitues.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Burimet audio të verifikuara të Kuranit nuk janë të disponueshme për momentin.",
+  "quranAudioSourcesIncomplete": "Paketa audio e verifikuar e Kuranit është e paplotë ({available}/{total}). Rifresko farën e resë dhe provo sërish.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

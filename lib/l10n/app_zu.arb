@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Wonke ama-surah asevele alandiwe kulo mlandeli.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Imithombo yomsindo ye-Quran eqinisekisiwe ayitholakali okwamanje.",
+  "quranAudioSourcesIncomplete": "Iphekhi yomsindo ye-Quran eqinisekisiwe ayiphelele ({available}/{total}). Vuselela imbewu yefu bese uzama futhi.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

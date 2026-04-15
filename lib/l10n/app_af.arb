@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Alle surahs is reeds vir hierdie voorleser afgelaai.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Geverifieerde Koran-oudiobronne is nie tans beskikbaar nie.",
+  "quranAudioSourcesIncomplete": "Geverifieerde Koran-oudiopak is onvolledig ({available}/{total}). Verfris wolksaad en probeer weer.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

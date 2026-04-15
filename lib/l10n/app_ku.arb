@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Hemî sûre ji bo vî xwîner berê hatine daxistin.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Çavkaniyên dengî yên Quranê yên rast niha ne berdest in.",
+  "quranAudioSourcesIncomplete": "Pakêta dengî ya Quranê ya verastkirî ne temam e ({available}/{total}). Tovê ewr nûve bikin û dîsa biceribînin.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

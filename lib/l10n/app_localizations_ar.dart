@@ -1181,8 +1181,7 @@ class AppLocalizationsAr extends AppLocalizations {
   }
 
   @override
-  String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+  String get downloadCompleted => 'جميع السور تم تنزيلها بالفعل لهذا القارئ.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
@@ -1239,11 +1238,11 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+      'المصادر الصوتية للقرآن الكريم التي تم التحقق منها غير متوفرة في الوقت الحالي.';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return 'حزمة القرآن الصوتية التي تم التحقق منها غير مكتملة ($available/$total). قم بتحديث بذور السحابة وحاول مرة أخرى.';
   }
 
   @override

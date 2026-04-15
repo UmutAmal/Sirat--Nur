@@ -1195,7 +1195,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'He reciter tan hian surah download vek tawh zawng zawng.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';

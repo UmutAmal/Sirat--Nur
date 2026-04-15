@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "ဤရွတ်ဆိုသူအတွက် စူရဟ်များအားလုံးကို ဒေါင်းလုဒ်လုပ်ထားပြီးဖြစ်သည်။",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "အတည်ပြုထားသော ကုရ်အာန်အသံအရင်းအမြစ်များကို ယခုမရနိုင်ပါ။",
+  "quranAudioSourcesIncomplete": "အတည်ပြုထားသော ကုရ်အာန် အသံအထုပ်သည် မပြည့်စုံပါ ({available}/{total})။ Cloud Seed ကို ပြန်လည်ဆန်းသစ်ပြီး ထပ်စမ်းကြည့်ပါ။",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

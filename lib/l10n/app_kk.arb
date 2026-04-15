@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Бұл қари үшін барлық сүрелер жүктеліп қойған.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -420,7 +420,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesIncomplete": "Құранның расталған аудио жинағы толық емес ({available}/{total}). Бұлт тұқымын жаңартып, әрекетті қайталаңыз.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

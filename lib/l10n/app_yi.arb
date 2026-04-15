@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "אַלע סוראַהס שוין דאַונלאָודיד פֿאַר דעם רעסיטער.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "וועראַפייד קאָראַן אַודיאָ קוואלן זענען אַנאַוויילאַבאַל רעכט איצט.",
+  "quranAudioSourcesIncomplete": "וועראַפייד קווראַן אַודיאָ פּאַק איז דערענדיקט ({available}/{total}). דערפרישן וואָלקן זוימען און פּרוּווט ווידער.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Ang tanan nga mga surah na-download na para sa kini nga reciter.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Ang gipamatud-an nga mga tinubdan sa audio sa Quran dili magamit karon.",
+  "quranAudioSourcesIncomplete": "Ang napamatud-an nga Quran audio pack dili kompleto ({available}/{total}). I-refresh ang cloud seed ug sulayi pag-usab.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

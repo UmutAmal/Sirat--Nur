@@ -369,7 +369,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Sve sure su već preuzete za ovog recitatora.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -419,8 +419,8 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesUnavailable": "Provjereni izvori zvuka Kur'ana trenutno nisu dostupni.",
+  "quranAudioSourcesIncomplete": "Verificirani audio paket Kur'ana je nepotpun ({available}/{total}). Osvježite sjeme oblaka i pokušajte ponovo.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {
