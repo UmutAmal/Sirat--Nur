@@ -777,11 +777,6 @@ class AppLocalizationsMai extends AppLocalizations {
   }
 
   @override
-  String missingEnglish(Object count) {
-    return 'गायब अंग्रेजी: $count';
-  }
-
-  @override
   String missingTurkish(Object count) {
     return 'लापता तुर्की: $count';
   }

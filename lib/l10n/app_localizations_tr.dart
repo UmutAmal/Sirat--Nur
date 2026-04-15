@@ -777,11 +777,6 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String missingEnglish(Object count) {
-    return 'Eksik İngilizce: $count';
-  }
-
-  @override
   String missingTurkish(Object count) {
     return 'Eksik Türkçe: $count';
   }

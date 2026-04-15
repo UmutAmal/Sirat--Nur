@@ -107,6 +107,50 @@ void main() {
         }
       }
     });
+
+    test('legacy missingEnglish diagnostic key stays removed', () {
+      final arbFiles = Directory('lib/l10n')
+          .listSync()
+          .whereType<File>()
+          .where((file) => file.path.endsWith('.arb'))
+          .where((file) => file.uri.pathSegments.last.startsWith('app_'));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+
+        expect(
+          arb.containsKey('missingEnglish'),
+          isFalse,
+          reason:
+              '${file.path} still contains the unused missingEnglish message',
+        );
+        expect(
+          arb.containsKey('@missingEnglish'),
+          isFalse,
+          reason: '${file.path} still contains unused missingEnglish metadata',
+        );
+      }
+
+      final generatedFiles = Directory('lib/l10n')
+          .listSync()
+          .whereType<File>()
+          .where((file) => file.path.endsWith('.dart'))
+          .where(
+            (file) =>
+                file.uri.pathSegments.last.startsWith('app_localizations'),
+          );
+
+      for (final file in generatedFiles) {
+        final contents = file.readAsStringSync();
+
+        expect(
+          contents.contains('missingEnglish'),
+          isFalse,
+          reason:
+              '${file.path} still exposes the unused missingEnglish API member',
+        );
+      }
+    });
   });
 }
 

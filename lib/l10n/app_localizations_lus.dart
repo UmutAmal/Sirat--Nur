@@ -781,11 +781,6 @@ class AppLocalizationsLus extends AppLocalizations {
   }
 
   @override
-  String missingEnglish(Object count) {
-    return 'Mizo tawng bo: $count';
-  }
-
-  @override
   String missingTurkish(Object count) {
     return 'Turkey tawng bo: $count';
   }

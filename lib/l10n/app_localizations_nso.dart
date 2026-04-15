@@ -783,11 +783,6 @@ class AppLocalizationsNso extends AppLocalizations {
   }
 
   @override
-  String missingEnglish(Object count) {
-    return 'Seisemane se hlaeletseng: $count';
-  }
-
-  @override
   String missingTurkish(Object count) {
     return 'Seturkey se se timetšego: $count .';
   }

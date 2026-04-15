@@ -204,7 +204,6 @@
   "surahsCount": "Surahs: {count} (114 beisei a ni) .",
   "ayahsCount": "Ayahs: {count} (6236 beisei a ni)",
   "missingArabic": "Arabic tawng bo: {count}",
-  "missingEnglish": "Mizo tawng bo: {count}",
   "missingTurkish": "Turkey tawng bo: {count}",
   "dbVersion": "DB Version: {version} tih a ni.",
   "dbPath": "Kawng: {path}.",

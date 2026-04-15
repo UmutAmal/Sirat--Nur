@@ -204,7 +204,6 @@
   "surahsCount": "Surahs: {count} (we dɛn de ɛkspɛkt 114)",
   "ayahsCount": "Ayahs: {count} (dɛn de ɛkspɛkt 6236)",
   "missingArabic": "Arabik we nɔ de: {count}",
-  "missingEnglish": "Inglish we nɔ de: {count}",
   "missingTurkish": "Turkish we nɔ de: {count}",
   "dbVersion": "DB Vɛshɔn: {version}",
   "dbPath": "Path: {path}.",

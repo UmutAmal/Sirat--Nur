@@ -334,7 +334,6 @@
   "surahsCount": "Sureler: {count} (beklenen 114)",
   "ayahsCount": "Ayetler: {count} (beklenen 6236)",
   "missingArabic": "Eksik Arapça: {count}",
-  "missingEnglish": "Eksik İngilizce: {count}",
   "missingTurkish": "Eksik Türkçe: {count}",
   "dbVersion": "Veritabanı Sürümü: {version}",
   "dbPath": "Yol: {path}",

@@ -204,7 +204,6 @@
   "surahsCount": "सूरह : {count} (अपेक्षित ११४) २.",
   "ayahsCount": "अयहस: {count} (अपेक्षित ६२३६) २.",
   "missingArabic": "लापता अरबी: {count}",
-  "missingEnglish": "गायब अंग्रेजी: {count}",
   "missingTurkish": "लापता तुर्की: {count}",
   "dbVersion": "डीबी संस्करण: {version}",
   "dbPath": "पथ: {path}।",

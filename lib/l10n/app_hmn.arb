@@ -204,7 +204,6 @@
   "surahsCount": "Surahs: {count} (xav txog 114)",
   "ayahsCount": "Ayahs: {count} (xav tias 6236)",
   "missingArabic": "Tsis muaj Arabic: {count}",
-  "missingEnglish": "Lus Askiv uas ploj lawm: {count}",
   "missingTurkish": "Tsis muaj Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Txoj kev: {path}",

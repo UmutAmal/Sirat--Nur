@@ -204,7 +204,6 @@
   "surahsCount": "Surahs: {count} (manamnama a 114) .",
   "ayahsCount": "Ayahs: {count} (manamnama a 6236) .",
   "missingArabic": "Nakurang nga Arabiko: {count} .",
-  "missingEnglish": "Kurang nga Ingles: {count}",
   "missingTurkish": "Napukaw a Turko: {count} .",
   "dbVersion": "Bersion ti DB: {version}",
   "dbPath": "Dalan: {path}.",

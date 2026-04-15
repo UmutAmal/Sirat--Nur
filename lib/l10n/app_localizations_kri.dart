@@ -777,11 +777,6 @@ class AppLocalizationsKri extends AppLocalizations {
   }
 
   @override
-  String missingEnglish(Object count) {
-    return 'Inglish we nɔ de: $count';
-  }
-
-  @override
   String missingTurkish(Object count) {
     return 'Turkish we nɔ de: $count';
   }

@@ -781,11 +781,6 @@ class AppLocalizationsCeb extends AppLocalizations {
   }
 
   @override
-  String missingEnglish(Object count) {
-    return 'Missing English: $count';
-  }
-
-  @override
   String missingTurkish(Object count) {
     return 'Missing Turkish: $count';
   }

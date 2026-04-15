@@ -1912,12 +1912,6 @@ abstract class AppLocalizations {
   /// **'Missing Arabic: {count}'**
   String missingArabic(Object count);
 
-  /// No description provided for @missingEnglish.
-  ///
-  /// In en, this message translates to:
-  /// **'Missing English: {count}'**
-  String missingEnglish(Object count);
-
   /// No description provided for @missingTurkish.
   ///
   /// In en, this message translates to:

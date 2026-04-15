@@ -777,11 +777,6 @@ class AppLocalizationsBho extends AppLocalizations {
   }
 
   @override
-  String missingEnglish(Object count) {
-    return 'अंग्रेजी गायब बा: $count';
-  }
-
-  @override
   String missingTurkish(Object count) {
     return 'लापता तुर्की: $count के बा।';
   }

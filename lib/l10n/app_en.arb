@@ -334,7 +334,6 @@
   "surahsCount": "Surahs: {count} (expected 114)",
   "ayahsCount": "Ayahs: {count} (expected 6236)",
   "missingArabic": "Missing Arabic: {count}",
-  "missingEnglish": "Missing English: {count}",
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",

@@ -779,11 +779,6 @@ class AppLocalizationsHmn extends AppLocalizations {
   }
 
   @override
-  String missingEnglish(Object count) {
-    return 'Lus Askiv uas ploj lawm: $count';
-  }
-
-  @override
   String missingTurkish(Object count) {
     return 'Tsis muaj Turkish: $count';
   }

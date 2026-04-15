@@ -761,11 +761,6 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String missingEnglish(Object count) {
-    return 'Missing English: $count';
-  }
-
-  @override
   String missingTurkish(Object count) {
     return 'Missing Turkish: $count';
   }
@@ -2397,11 +2392,6 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String missingEnglish(Object count) {
-    return 'Missing English: $count';
-  }
-
-  @override
   String missingTurkish(Object count) {
     return 'Missing Turkish: $count';
   }
@@ -4030,11 +4020,6 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   @override
   String missingArabic(Object count) {
     return 'Missing Arabic: $count';
-  }
-
-  @override
-  String missingEnglish(Object count) {
-    return 'Missing English: $count';
   }
 
   @override

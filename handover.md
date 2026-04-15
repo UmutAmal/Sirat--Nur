@@ -6528,3 +6528,37 @@
 
 ### Sonraki Adım
 - Sonraki dongude `missingEnglish` ve diagnostics/localization durum metinleri icin kullaniciya gorunen yuzeyler incelenecek; once priority locale'lerde dogrulanabilir ceviri ve test guard, sonra nadir diller icin sahte olmayan fallback stratejisi uygulanacak.
+
+## 2026-04-15 TUR-169 — Remove Legacy Unused missingEnglish L10n Key
+
+### Yapılan İşlem
+- `missingEnglish` ve `@missingEnglish` anahtarlari 196 ARB dosyasindan kaldirildi.
+- `flutter gen-l10n` calistirilarak abstract `AppLocalizations.missingEnglish` API'si ve tum generated locale override'lari temizlendi.
+- `arb_coverage_test.dart` icine bu legacy anahtarin ARB kaynaklarina veya generated l10n API'sine geri donmesini engelleyen guard eklendi.
+
+### Neden Yapıldı
+- `rg -n "missingEnglish\\(" lib test` taramasinda anahtarin uretim kodunda hicbir cagrisi olmadigi, yalnizca generated localization dosyalarinda yasadigi goruldu.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb:337` ve diger 195 ARB dosyasi kullanilmayan diagnostic metni tasiyordu.
+- Kök sebep, daha once diagnostics/localization sayimlari icin tasarlanmis legacy anahtarin UI akisi sadeleştikten sonra ARB ve generated API'de orphan kalmasiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_coverage_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kullanilmayan ve 188 locale'de English fallback kalan bir l10n API uyesi kaldirildi; sahte/otomatik ceviri uretmeden borc temizlendi.
+- Generated localization yuzeyi kuculdu ve ileride bu legacy anahtara yanlislikla yeni ceviri batch'i uygulanmasi engellendi.
+- Yeni guard, ARB kaynaklari ve generated Dart dosyalari birlikte kontrol ettigi icin anahtarin sessizce geri gelmesini yakalar.
+
+### Test Sonucu
+- `flutter test test\arb_coverage_test.dart --plain-name "ARB coverage legacy missingEnglish diagnostic key stays removed"` PASS (`1/1`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`342/342`)
+
+### Risk Değişimi
+- Kullanilmayan `missingEnglish` anahtarinin English fallback/ceviri borcu olarak kalmasi riski: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude kalan l10n fallback taramasinda yalnizca uretim yuzeyinde gorunen aktif anahtarlar ele alinacak; unused anahtarlar remove, aktif anahtarlar ise dogrulanabilir priority locale ceviri + test guard seklinde islenecek.

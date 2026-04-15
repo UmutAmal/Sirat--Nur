@@ -783,11 +783,6 @@ class AppLocalizationsIlo extends AppLocalizations {
   }
 
   @override
-  String missingEnglish(Object count) {
-    return 'Kurang nga Ingles: $count';
-  }
-
-  @override
   String missingTurkish(Object count) {
     return 'Napukaw a Turko: $count .';
   }
