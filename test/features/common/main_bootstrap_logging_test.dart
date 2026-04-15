@@ -16,6 +16,7 @@ void main() {
       r'Prayer widget update failed (non-blocking): $e',
       r'Qibla widget update failed (non-blocking): $e',
       r'Ayah widget update failed (non-blocking): $e',
+      'debugPrintStack',
     ];
 
     for (final snippet in forbiddenSnippets) {

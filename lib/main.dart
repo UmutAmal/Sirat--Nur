@@ -123,9 +123,8 @@ void main() async {
         ),
       );
     },
-    (_, stack) {
+    (_, _) {
       debugPrint('Uncaught error');
-      debugPrintStack(stackTrace: stack);
     },
   );
 }
@@ -208,9 +207,8 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
               unawaited(_updateAyahWidget(dailyAyat));
             });
           }, fireImmediately: true);
-    } catch (_, stackTrace) {
+    } catch (_) {
       debugPrint('Prayer notification bootstrap failed');
-      debugPrintStack(stackTrace: stackTrace);
     }
   }
 

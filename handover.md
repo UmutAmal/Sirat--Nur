@@ -6768,3 +6768,36 @@
 
 ### Sonraki Adım
 - Sonraki dongude kalan `TODO`/`placeholder`/stale README ve test fixture bulgulari daraltip gercek production risklerinden baslanacak; ozellikle debug log sanitization ve raw error copy guard'lari yeniden taranacak.
+
+## 2026-04-16 TUR-175 — Sanitize Bootstrap Stack Logging
+
+### Yapılan İşlem
+- Global `runZonedGuarded` hata handler'i raw stack trace basmayacak sekilde sadeleştirildi.
+- Prayer notification bootstrap catch blogu `debugPrintStack` kullanmayacak hale getirildi.
+- `main_bootstrap_logging_test` icine `debugPrintStack` guard'i eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\main.dart:126` global uncaught error handler'i sembolik mesajdan sonra stack trace basiyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\main.dart:211` prayer notification bootstrap hata yolunda da stack trace basiliyordu.
+- Onceki guard raw exception objelerini engelliyordu ama stack trace sızıntısını yakalamıyordu; stack trace cihaz yolu, plugin detayi ve ortam bilgisi tasiyabilir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\main.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\common\main_bootstrap_logging_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Bootstrap/global hata loglari artik raw stack trace yaymadan sembolik, sanitize mesajlar verir.
+- Android widget sync ve prayer bootstrap davranisi degismedi; sadece log ayrintisi daraltildi.
+- Test guard'i `debugPrintStack` geri gelirse yakalar.
+
+### Test Sonucu
+- `flutter test test\features\common\main_bootstrap_logging_test.dart` PASS (`2/2`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`351/351`)
+
+### Risk Değişimi
+- Bootstrap/global hata loglarinda stack trace ve ortam detayi sızması riski: `10/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude `sharedPreferencesProvider` UnimplementedError bulgusunun production'da override ile guvenli kaldigi testle kanitlanacak veya gerekiyorsa daha guvenli bootstrapping guard'i eklenecek; ardindan remaining hardcoded UI string taramasi surdurulecek.
