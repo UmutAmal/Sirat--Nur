@@ -29,4 +29,79 @@ void main() {
       expect(buildLiveTvEmptyStateText(tr), 'Sonuç bulunamadı');
     });
   });
+
+  group('Live TV cloud row sanitizers', () {
+    test('external URL resolver accepts only launch-safe web URLs', () {
+      expect(
+        resolveLiveTvExternalUri({
+          'external_url': ' https://www.youtube.com/watch?v=abc ',
+        })?.toString(),
+        'https://www.youtube.com/watch?v=abc',
+      );
+      expect(
+        resolveLiveTvExternalUri({
+          'external_url': 'http://example.com/live',
+        })?.toString(),
+        'http://example.com/live',
+      );
+
+      expect(resolveLiveTvExternalUri({}), isNull);
+      expect(resolveLiveTvExternalUri({'external_url': ''}), isNull);
+      expect(resolveLiveTvExternalUri({'external_url': 42}), isNull);
+      expect(resolveLiveTvExternalUri({'external_url': 'not a url'}), isNull);
+      expect(
+        resolveLiveTvExternalUri({'external_url': 'javascript:alert(1)'}),
+        isNull,
+      );
+      expect(
+        resolveLiveTvExternalUri({'external_url': 'youtube://watch?v=abc'}),
+        isNull,
+      );
+    });
+
+    test(
+      'candidate resolver normalizes valid streams and rejects unsafe rows',
+      () {
+        final candidates = resolveLiveTvCandidateUrls({
+          'embed_url': 'https://www.youtube.com/embed/live',
+          'fallback_embed_url': 'https://www.youtube.com/embed/live',
+          'external_url': 'https://www.youtube.com/results?search_query=adhan',
+          'muted_by_default': true,
+        });
+
+        expect(candidates, hasLength(1));
+
+        final candidateUri = Uri.parse(candidates.single);
+        expect(candidateUri.scheme, 'https');
+        expect(candidateUri.host, 'www.youtube.com');
+        expect(candidateUri.path, '/embed/live');
+        expect(candidateUri.queryParameters['autoplay'], '1');
+        expect(candidateUri.queryParameters['playsinline'], '1');
+        expect(candidateUri.queryParameters['mute'], '1');
+      },
+    );
+
+    test(
+      'candidate resolver falls back to external web URL when embeds fail',
+      () {
+        final candidates = resolveLiveTvCandidateUrls({
+          'embed_url': 'javascript:alert(1)',
+          'fallback_embed_url': 7,
+          'external_url': 'https://example.com/live',
+        });
+
+        expect(candidates, ['https://example.com/live']);
+      },
+    );
+
+    test('display text resolver does not trust non-string cloud values', () {
+      expect(
+        resolveLiveTvDisplayText({'title': '  Makkah Live  '}, 'title'),
+        'Makkah Live',
+      );
+      expect(resolveLiveTvDisplayText({'title': 99}, 'title'), '');
+      expect(resolveLiveTvDisplayText({'title': '   '}, 'title'), '');
+      expect(resolveLiveTvDisplayText({}, 'title'), '');
+    });
+  });
 }

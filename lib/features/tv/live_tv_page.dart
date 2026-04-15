@@ -14,6 +14,84 @@ String buildLiveTvEmptyStateText(AppLocalizations l10n) {
   return l10n.noResults;
 }
 
+String? _readLiveTvString(Object? value) {
+  if (value is! String) return null;
+
+  final trimmed = value.trim();
+  return trimmed.isEmpty ? null : trimmed;
+}
+
+bool _isAllowedLiveTvUrl(Uri uri) {
+  return uri.isScheme('https') || uri.isScheme('http');
+}
+
+bool _isLiveTvSearchResultUrl(Uri uri) {
+  return uri.host.contains('youtube') && uri.path.contains('/results');
+}
+
+String _normalizeLiveTvCandidateUrl(Uri uri, {required bool mutedByDefault}) {
+  if (!uri.host.contains('youtube')) {
+    return uri.toString();
+  }
+  final queryParams = <String, String>{
+    ...uri.queryParameters,
+    'autoplay': uri.queryParameters['autoplay'] ?? '1',
+    'playsinline': uri.queryParameters['playsinline'] ?? '1',
+    'mute': mutedByDefault ? '1' : '0',
+  };
+  return uri.replace(queryParameters: queryParams).toString();
+}
+
+List<String> resolveLiveTvCandidateUrls(Map<String, dynamic> stream) {
+  final urls = <String>[];
+  final mutedByDefault = stream['muted_by_default'] == true;
+
+  void addUrl(Object? rawUrl) {
+    final trimmed = _readLiveTvString(rawUrl);
+    if (trimmed == null) return;
+
+    final uri = Uri.tryParse(trimmed);
+    if (uri == null ||
+        !_isAllowedLiveTvUrl(uri) ||
+        _isLiveTvSearchResultUrl(uri)) {
+      return;
+    }
+
+    final normalized = _normalizeLiveTvCandidateUrl(
+      uri,
+      mutedByDefault: mutedByDefault,
+    );
+
+    if (!urls.contains(normalized)) {
+      urls.add(normalized);
+    }
+  }
+
+  addUrl(stream['embed_url']);
+  addUrl(stream['fallback_embed_url']);
+  if (urls.isEmpty) {
+    addUrl(stream['external_url']);
+  }
+
+  return List.unmodifiable(urls);
+}
+
+Uri? resolveLiveTvExternalUri(Map<String, dynamic> stream) {
+  final trimmed = _readLiveTvString(stream['external_url']);
+  if (trimmed == null) return null;
+
+  final uri = Uri.tryParse(trimmed);
+  if (uri == null || !_isAllowedLiveTvUrl(uri)) {
+    return null;
+  }
+
+  return uri;
+}
+
+String resolveLiveTvDisplayText(Map<String, dynamic> stream, String key) {
+  return _readLiveTvString(stream[key]) ?? '';
+}
+
 class LiveTvPage extends ConsumerStatefulWidget {
   const LiveTvPage({super.key});
 
@@ -34,50 +112,7 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
   List<String> get _currentCandidates {
     if (_streams.isEmpty || _selectedIndex >= _streams.length) return [];
 
-    final stream = _streams[_selectedIndex];
-    final urls = <String>[];
-
-    void addUrl(String? rawUrl) {
-      final trimmed = rawUrl?.trim();
-      if (trimmed == null || trimmed.isEmpty) return;
-
-      final uri = Uri.tryParse(trimmed);
-      if (uri == null || !uri.hasScheme || _isSearchResultUrl(uri)) return;
-
-      final normalized = _normalizeCandidateUrl(
-        uri,
-        mutedByDefault: stream['muted_by_default'] == true,
-      );
-
-      if (!urls.contains(normalized)) {
-        urls.add(normalized);
-      }
-    }
-
-    addUrl(stream['embed_url']);
-    addUrl(stream['fallback_embed_url']);
-    if (urls.isEmpty) {
-      addUrl(stream['external_url']);
-    }
-
-    return urls;
-  }
-
-  bool _isSearchResultUrl(Uri uri) {
-    return uri.host.contains('youtube') && uri.path.contains('/results');
-  }
-
-  String _normalizeCandidateUrl(Uri uri, {required bool mutedByDefault}) {
-    if (!uri.host.contains('youtube')) {
-      return uri.toString();
-    }
-    final queryParams = <String, String>{
-      ...uri.queryParameters,
-      'autoplay': uri.queryParameters['autoplay'] ?? '1',
-      'playsinline': uri.queryParameters['playsinline'] ?? '1',
-      'mute': mutedByDefault ? '1' : '0',
-    };
-    return uri.replace(queryParameters: queryParams).toString();
+    return resolveLiveTvCandidateUrls(_streams[_selectedIndex]);
   }
 
   @override
@@ -166,6 +201,7 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
   }
 
   void _changeStream(int index) {
+    if (index < 0 || index >= _streams.length) return;
     if (_selectedIndex == index) return;
     setState(() {
       _selectedIndex = index;
@@ -177,11 +213,11 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
   }
 
   Future<void> _openExternal() async {
-    if (_streams.isEmpty) return;
+    if (_streams.isEmpty || _selectedIndex >= _streams.length) return;
     final stream = _streams[_selectedIndex];
-    final uri = Uri.parse(stream['external_url'] ?? '');
+    final uri = resolveLiveTvExternalUri(stream);
 
-    if (!await canLaunchUrl(uri)) {
+    if (uri == null || !await canLaunchUrl(uri)) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(AppLocalizations.of(context)!.streamError)),
@@ -243,6 +279,10 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
             });
           } else {
             _streams = fetchedStreams;
+          }
+          if (_selectedIndex >= _streams.length) {
+            _selectedIndex = 0;
+            _candidateIndex = 0;
           }
 
           final stream = _streams[_selectedIndex];
@@ -333,7 +373,7 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        stream['title'] ?? '',
+                        resolveLiveTvDisplayText(stream, 'title'),
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 12,
@@ -392,14 +432,14 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
                           ),
                         ),
                         title: Text(
-                          item['title'] ?? '',
+                          resolveLiveTvDisplayText(item, 'title'),
                           style: TextStyle(
                             fontWeight: FontWeight.w900,
                             color: isSelected ? AppColors.emerald : null,
                           ),
                         ),
                         subtitle: Text(
-                          item['subtitle'] ?? '',
+                          resolveLiveTvDisplayText(item, 'subtitle'),
                           style: TextStyle(
                             fontSize: 12,
                             color: Theme.of(

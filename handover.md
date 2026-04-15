@@ -6219,3 +6219,40 @@
 
 ### Sonraki Adım
 - Sonraki döngüde cloud-only provider'lar (`liveTvProvider`, `educationCategoriesProvider`, `educationTopicsProvider`) kullanıcıya dürüst hata/empty state veriyor mu ve client-unavailable halinde raw crash üretmeden yönetiliyor mu kontrol edilecek.
+
+## 2026-04-15 TUR-161 — Harden Live TV Cloud Row Consumption
+
+### Yapılan İşlem
+- `LiveTvPage` icin cloud row URL tuketimi merkezi helper'lara tasindi: `resolveLiveTvCandidateUrls`, `resolveLiveTvExternalUri`, `resolveLiveTvDisplayText`.
+- Embed/fallback/external stream URL'leri artik yalnizca `http` ve `https` scheme'leriyle kabul ediliyor; bos, relative, non-string, `javascript:` ve `youtube://` gibi launch/webview guvenli olmayan degerler reddediliyor.
+- YouTube arama sonucu URL'leri stream adayi olarak kabul edilmiyor; embed URL'ler yinelenirse tekilleştiriliyor ve autoplay/playsinline/mute parametreleri kontrollu ekleniyor.
+- `_openExternal` artik `Uri.parse` ile exception uretmiyor; gecersiz external URL'de lokalize `streamError` snackbar'i gosteriyor.
+- Refresh/cloud data degisiminden sonra secili kanal index'i yeni liste uzunlugunun disina cikarsa 0'a cekiliyor.
+- Title/subtitle alanlari non-string veya bos cloud degerlerinde `Text` widget'ina dynamic tip gecirmeden guvenli bos metne dusuyor.
+- `live_tv_page_test.dart` icine URL sanitizer, external launcher URL, fallback candidate ve display text edge-case testleri eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart:218` onceki akista `Uri.parse(stream['external_url'] ?? '')` kullaniyordu; Supabase satirinda bos, bozuk veya non-string URL gelirse kullanici "YouTube'da ac" aksiyonunda crash uretebilirdi.
+- `_currentCandidates` akisi da dynamic cloud degerlerini URL adayi olarak daraltmadan okuyordu; non-string veya guvenli olmayan scheme'ler ileride WebView/launcher tarafinda ayni sinif hatayi tekrar uretme riski tasiyordu.
+- Liste refresh oldugunda `_selectedIndex` yeni liste uzunlugunun disinda kalabilirdi; bu da `final stream = _streams[_selectedIndex]` satirinda range hatasina acikti.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\live_tv_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Live TV cloud verisi bozuk veya beklenmeyen tipte gelse bile ekran crash yerine mevcut lokalize hata/empty-state davranisini korur.
+- Guvenilmeyen URL scheme'leri WebView veya external launcher'a tasinmaz.
+- Testler ayni riskin sadece `Uri.parse` satirinda degil, aday URL ve display text tuketiminde de tekrar acilmasini engeller.
+
+### Test Sonucu
+- `flutter test test\live_tv_page_test.dart` PASS (`6/6`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`332/332`)
+
+### Risk Değişimi
+- Live TV cloud satirlarindan bozuk URL/tip veya refresh sonrasi index tasmasiyla crash uretme riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki dongude `educationCategoriesProvider` ve `educationTopicsProvider` ile `LibraryPage` cloud-only egitim icerigi tuketimi ayni veri-hijyeni perspektifiyle taranacak; non-string title/content, bos kategori ve Supabase client unavailable hallerinin kullaniciya raw crash yerine durust lokalize state verip vermedigi dogrulanacak.
