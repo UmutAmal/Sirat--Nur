@@ -14,12 +14,24 @@ public class AllPrayersWidgetProvider extends HomeWidgetProvider {
             
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_all_prayers);
 
+            String header = widgetData.getString("all_prayers_header", "Prayer Times");
+            String fajrLabel = widgetData.getString("fajr_label", "Fajr");
+            String dhuhrLabel = widgetData.getString("dhuhr_label", "Dhuhr");
+            String asrLabel = widgetData.getString("asr_label", "Asr");
+            String maghribLabel = widgetData.getString("maghrib_label", "Maghrib");
+            String ishaLabel = widgetData.getString("isha_label", "Isha");
             String fajrTime = widgetData.getString("fajr", "--:--");
             String dhuhrTime = widgetData.getString("dhuhr", "--:--");
             String asrTime = widgetData.getString("asr", "--:--");
             String maghribTime = widgetData.getString("maghrib", "--:--");
             String ishaTime = widgetData.getString("isha", "--:--");
 
+            views.setTextViewText(R.id.tv_all_prayers_header, header);
+            views.setTextViewText(R.id.tv_fajr_label, fajrLabel);
+            views.setTextViewText(R.id.tv_dhuhr_label, dhuhrLabel);
+            views.setTextViewText(R.id.tv_asr_label, asrLabel);
+            views.setTextViewText(R.id.tv_maghrib_label, maghribLabel);
+            views.setTextViewText(R.id.tv_isha_label, ishaLabel);
             views.setTextViewText(R.id.tv_fajr, fajrTime);
             views.setTextViewText(R.id.tv_dhuhr, dhuhrTime);
             views.setTextViewText(R.id.tv_asr, asrTime);

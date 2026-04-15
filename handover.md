@@ -5942,3 +5942,47 @@
 
 ### Sonraki Adım
 - Sonraki döngüde prayer notification/widget/cache hattında aynı resmi profil zincirinin tüm yüzeylerde drift etmediği yeniden taranacak.
+
+## 2026-04-15 TUR-154 — Localize Android Prayer Widget Runtime Labels
+
+### Yapılan İşlem
+- `PrayerLocalizer` widget başlıkları için ARB kaynaklı `nextPrayerLabel` ve `prayerTimesLabel` helper'larıyla genişletildi.
+- `WidgetService.updatePrayerWidget` artık `next_prayer_header` ve lokalize `next_prayer_name` değerlerini HomeWidget preferences içine yazıyor.
+- `WidgetService.updateAllPrayersWidget` artık `all_prayers_header` ile `fajr_label`, `dhuhr_label`, `asr_label`, `maghrib_label`, `isha_label` anahtarlarını ARB/l10n zincirinden üretip native widget'a aktarıyor.
+- `PrayerWidgetProvider.java` ve `AllPrayersWidgetProvider.java` hardcoded/preview etiketlere güvenmek yerine Flutter'ın yazdığı lokalize label key'lerini okuyor.
+- Android widget layout'larına runtime güncellenebilir label `TextView` ID'leri eklendi.
+- `android_widget_localization_test.dart` eklendi; Flutter-to-native label köprüsü, Java provider okumaları ve XML ID'leri regresyon guard altına alındı.
+
+### Neden Yapıldı
+- Android native widget yüzeyi Flutter ARB zincirinden kopuktu; layout içinde `NEXT PRAYER`, `DAILY PRAYER TIMES`, `Fajr`, `Dhuhr`, `Asr`, `Maghrib`, `Isha` preview metinleri runtime label olarak kalabiliyordu.
+- Kullanıcı uygulama dilini Türkçe, Arapça veya başka bir locale seçse bile widget başlıkları native tarafta İngilizce görünebilirdi.
+- Kök sebep, native provider'ların sadece vakit değerlerini okuması; başlık/namaz adlarını Flutter l10n'den alıp widget preferences'a taşımamasıydı.
+- Native tarafta ayrı çeviri tablosu üretmek yerine tek doğru kaynak olan Flutter ARB/l10n zinciri kullanılacak şekilde düzeltildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\prayer_name_localization.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\widget_service.dart`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\java\com\umutamal\sirat_i_nur\PrayerWidgetProvider.java`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\java\com\umutamal\sirat_i_nur\AllPrayersWidgetProvider.java`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\res\layout\widget_prayer.xml`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\res\layout\widget_all_prayers.xml`
+- `A:\Way of Allah\sirat_i_nur\test\android_widget_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_name_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Android prayer widgets artık runtime'da uygulama locale'ine göre lokalize başlık ve namaz adları gösterir.
+- Java tarafındaki `toUpperCase()` kaldırıldı; Türkçe gibi locale hassas harf dönüşümlerinde namaz adları bozulmaz.
+- Widget localization köprüsü testli olduğu için native yüzeyin ARB zincirinden tekrar kopması yakalanır.
+
+### Test Sonucu
+- `flutter test test\android_widget_localization_test.dart test\prayer_name_localization_test.dart test\prayer_widget_sync_service_test.dart --reporter compact` PASS (`11/11`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`320/320`)
+- `flutter build apk --debug` PASS (`build\app\outputs\flutter-apk\app-debug.apk`)
+
+### Risk Değişimi
+- Android prayer widget başlıklarının/labellarının İngilizce hardcoded kalma riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki döngüde Android widget provider kapsamı devam edecek: Qibla/Ayah widget native yüzeyleri, manifest receiver kayıtları ve widget info XML dosyaları lokalizasyon/eksik provider açısından taranacak.

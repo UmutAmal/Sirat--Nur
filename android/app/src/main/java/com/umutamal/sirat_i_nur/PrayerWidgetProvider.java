@@ -16,11 +16,13 @@ public class PrayerWidgetProvider extends HomeWidgetProvider {
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_prayer);
 
             // Read the data sent from Flutter (WidgetService)
+            String nextPrayerHeader = widgetData.getString("next_prayer_header", "Next Prayer");
             String nextPrayerName = widgetData.getString("next_prayer_name", "Fajr");
             String nextPrayerTime = widgetData.getString("next_prayer_time", "00:00");
 
             // Update the UI
-            views.setTextViewText(R.id.tv_next_prayer_name, nextPrayerName.toUpperCase());
+            views.setTextViewText(R.id.tv_next_prayer_header, nextPrayerHeader);
+            views.setTextViewText(R.id.tv_next_prayer_name, nextPrayerName);
             views.setTextViewText(R.id.tv_next_prayer_time, nextPrayerTime);
 
             // Instruct the widget manager to update the widget

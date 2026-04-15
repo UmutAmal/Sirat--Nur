@@ -40,6 +40,14 @@ class PrayerLocalizer {
     return _lookup(languageCode).adhanNotificationChannelDescription;
   }
 
+  static String nextPrayerLabel(String languageCode) {
+    return _lookup(languageCode).nextPrayer;
+  }
+
+  static String prayerTimesLabel(String languageCode) {
+    return _lookup(languageCode).prayerTimes;
+  }
+
   static AppLocalizations _lookup(String languageCode) {
     try {
       return lookupAppLocalizations(_parseLocale(languageCode));

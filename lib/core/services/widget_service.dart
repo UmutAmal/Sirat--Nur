@@ -15,11 +15,11 @@ class WidgetService {
 
   // App Group ID required for iOS
   static const String appGroupId = 'group.com.modernislamicapp.widget';
-  
+
   // Widget identifiers mapping to Android/iOS native sides
   static const String androidWidgetName = 'PrayerWidgetProvider';
   static const String iOSWidgetName = 'PrayerWidget';
-  
+
   // Additional widget names
   static const String androidAllPrayersWidgetName = 'AllPrayersWidgetProvider';
   static const String androidQiblaWidgetName = 'QiblaWidgetProvider';
@@ -34,20 +34,47 @@ class WidgetService {
     PrayerTimesEntity prayerTimes, {
     Locale? locale,
   }) async {
-    final resolvedLocale = locale ?? WidgetsBinding.instance.platformDispatcher.locale;
+    final resolvedLocale =
+        locale ?? WidgetsBinding.instance.platformDispatcher.locale;
+    final languageCode = resolvedLocale.toString();
     final timeFormat = DateFormat.Hm(resolvedLocale.toString());
-    final nextPrayerName = PrayerLocalizer.localize(prayerTimes.nextPrayerName, resolvedLocale.languageCode);
-    
+    final nextPrayerName = PrayerLocalizer.localize(
+      prayerTimes.nextPrayerName,
+      languageCode,
+    );
+
     // Save data to HomeWidget preferences
+    await HomeWidget.saveWidgetData<String>(
+      'next_prayer_header',
+      PrayerLocalizer.nextPrayerLabel(languageCode),
+    );
     await HomeWidget.saveWidgetData<String>('next_prayer_name', nextPrayerName);
-    await HomeWidget.saveWidgetData<String>('next_prayer_time', timeFormat.format(prayerTimes.nextPrayerTime));
-    
+    await HomeWidget.saveWidgetData<String>(
+      'next_prayer_time',
+      timeFormat.format(prayerTimes.nextPrayerTime),
+    );
+
     // Also save today's full schedule for more complex widgets
-    await HomeWidget.saveWidgetData<String>('fajr_time', timeFormat.format(prayerTimes.fajr));
-    await HomeWidget.saveWidgetData<String>('dhuhr_time', timeFormat.format(prayerTimes.dhuhr));
-    await HomeWidget.saveWidgetData<String>('asr_time', timeFormat.format(prayerTimes.asr));
-    await HomeWidget.saveWidgetData<String>('maghrib_time', timeFormat.format(prayerTimes.maghrib));
-    await HomeWidget.saveWidgetData<String>('isha_time', timeFormat.format(prayerTimes.isha));
+    await HomeWidget.saveWidgetData<String>(
+      'fajr_time',
+      timeFormat.format(prayerTimes.fajr),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'dhuhr_time',
+      timeFormat.format(prayerTimes.dhuhr),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'asr_time',
+      timeFormat.format(prayerTimes.asr),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'maghrib_time',
+      timeFormat.format(prayerTimes.maghrib),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'isha_time',
+      timeFormat.format(prayerTimes.isha),
+    );
 
     // Tell the OS to update the widgets
     await HomeWidget.updateWidget(
@@ -61,20 +88,59 @@ class WidgetService {
     PrayerTimesEntity prayerTimes, {
     Locale? locale,
   }) async {
-    final resolvedLocale = locale ?? WidgetsBinding.instance.platformDispatcher.locale;
+    final resolvedLocale =
+        locale ?? WidgetsBinding.instance.platformDispatcher.locale;
+    final languageCode = resolvedLocale.toString();
     final timeFormat = DateFormat.Hm(resolvedLocale.toString());
-    
+
     // Save data for all prayers widget
-    await HomeWidget.saveWidgetData<String>('fajr', timeFormat.format(prayerTimes.fajr));
-    await HomeWidget.saveWidgetData<String>('dhuhr', timeFormat.format(prayerTimes.dhuhr));
-    await HomeWidget.saveWidgetData<String>('asr', timeFormat.format(prayerTimes.asr));
-    await HomeWidget.saveWidgetData<String>('maghrib', timeFormat.format(prayerTimes.maghrib));
-    await HomeWidget.saveWidgetData<String>('isha', timeFormat.format(prayerTimes.isha));
+    await HomeWidget.saveWidgetData<String>(
+      'all_prayers_header',
+      PrayerLocalizer.prayerTimesLabel(languageCode),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'fajr_label',
+      PrayerLocalizer.localize('Fajr', languageCode),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'dhuhr_label',
+      PrayerLocalizer.localize('Dhuhr', languageCode),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'asr_label',
+      PrayerLocalizer.localize('Asr', languageCode),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'maghrib_label',
+      PrayerLocalizer.localize('Maghrib', languageCode),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'isha_label',
+      PrayerLocalizer.localize('Isha', languageCode),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'fajr',
+      timeFormat.format(prayerTimes.fajr),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'dhuhr',
+      timeFormat.format(prayerTimes.dhuhr),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'asr',
+      timeFormat.format(prayerTimes.asr),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'maghrib',
+      timeFormat.format(prayerTimes.maghrib),
+    );
+    await HomeWidget.saveWidgetData<String>(
+      'isha',
+      timeFormat.format(prayerTimes.isha),
+    );
 
     // Update the all prayers widget
-    await HomeWidget.updateWidget(
-      name: androidAllPrayersWidgetName,
-    );
+    await HomeWidget.updateWidget(name: androidAllPrayersWidgetName);
   }
 
   /// Update Qibla direction widget
@@ -82,13 +148,14 @@ class WidgetService {
     required double direction,
     required String directionText,
   }) async {
-    await HomeWidget.saveWidgetData<String>('qibla_direction', '${direction.toStringAsFixed(0)}°');
+    await HomeWidget.saveWidgetData<String>(
+      'qibla_direction',
+      '${direction.toStringAsFixed(0)}°',
+    );
     await HomeWidget.saveWidgetData<String>('qibla_status', directionText);
 
     // Update the Qibla widget
-    await HomeWidget.updateWidget(
-      name: androidQiblaWidgetName,
-    );
+    await HomeWidget.updateWidget(name: androidQiblaWidgetName);
   }
 
   /// Update Ayah of the day widget
@@ -102,9 +169,7 @@ class WidgetService {
     await HomeWidget.saveWidgetData<String>('ayah_reference', reference);
 
     // Update the Ayah widget
-    await HomeWidget.updateWidget(
-      name: androidAyahWidgetName,
-    );
+    await HomeWidget.updateWidget(name: androidAyahWidgetName);
   }
 
   /// Update all widgets at once
@@ -119,10 +184,10 @@ class WidgetService {
   }) async {
     // Update main prayer widget
     await updatePrayerWidget(prayerTimes, locale: locale);
-    
+
     // Update all prayers widget
     await updateAllPrayersWidget(prayerTimes, locale: locale);
-    
+
     // Update Qibla widget if direction is provided
     if (qiblaDirection != null && qiblaText != null) {
       await updateQiblaWidget(
@@ -130,9 +195,11 @@ class WidgetService {
         directionText: qiblaText,
       );
     }
-    
+
     // Update Ayah widget if data is provided
-    if (ayahArabic != null && ayahTranslation != null && ayahReference != null) {
+    if (ayahArabic != null &&
+        ayahTranslation != null &&
+        ayahReference != null) {
       await updateAyahWidget(
         arabic: ayahArabic,
         translation: ayahTranslation,
