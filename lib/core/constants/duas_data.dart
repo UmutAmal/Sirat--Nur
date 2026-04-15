@@ -1,4 +1,5 @@
 // Verified Quranic dua fallback collection derived from the bundled Quran seed.
+import 'package:sirat_i_nur/core/network/supabase_config.dart';
 
 class DuaData {
   final String id;
@@ -9,6 +10,7 @@ class DuaData {
   final String source;
   final String category;
   final String verifiedAt;
+  final String audioUrl;
   final Map<String, String> translations;
 
   const DuaData({
@@ -20,6 +22,7 @@ class DuaData {
     required this.source,
     required this.category,
     this.verifiedAt = '',
+    this.audioUrl = '',
     this.translations = const {},
   });
 
@@ -68,9 +71,57 @@ class DuaData {
       source: readFirst(['source', 'reference']),
       category: readFirst(['category', 'title_tr', 'title_en']),
       verifiedAt: readFirst(['verified_at', 'verifiedAt']),
+      audioUrl: _resolveCloudDuaAudioUrl(row),
       translations: translations,
     );
   }
+}
+
+String _resolveCloudDuaAudioUrl(Map<String, dynamic> row) {
+  final storagePath = _readDuaString(row, const [
+    'storage_path',
+    'storagePath',
+  ]);
+  if (storagePath.isNotEmpty) {
+    return _buildSupabaseStoragePublicUrl(
+      storagePath,
+      bucketName: SupabaseConfig.duaAudioBucket,
+    );
+  }
+
+  return _readDuaString(row, const ['audio_url', 'audioUrl', 'url']);
+}
+
+String _readDuaString(Map<String, dynamic> row, List<String> keys) {
+  for (final key in keys) {
+    final value = row[key]?.toString().trim();
+    if (value != null && value.isNotEmpty) {
+      return value;
+    }
+  }
+
+  return '';
+}
+
+String _buildSupabaseStoragePublicUrl(
+  String storagePath, {
+  required String bucketName,
+}) {
+  final normalized = storagePath
+      .trim()
+      .replaceAll('\\', '/')
+      .replaceFirst(RegExp(r'^/+'), '');
+  final bucketPrefix = '$bucketName/';
+  final objectPath = normalized.startsWith(bucketPrefix)
+      ? normalized.substring(bucketPrefix.length)
+      : normalized;
+  final encodedSegments = objectPath
+      .split('/')
+      .where((segment) => segment.isNotEmpty)
+      .map(Uri.encodeComponent)
+      .join('/');
+
+  return '${SupabaseConfig.url}/storage/v1/object/public/$bucketName/$encodedSegments';
 }
 
 Map<String, String> _readDuaTranslations(dynamic rawTranslations) {

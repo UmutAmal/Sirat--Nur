@@ -5602,3 +5602,43 @@
 
 ### Sonraki Adım
 - Yeni döngüde adhan ve dua audio bucket/storage_path desteği taranacak; özellikle `duas.audio_url` ve adhan asset/static fallback hattının Supabase Storage sahipli kopyalara bağlanma durumu skorlanacak.
+
+## 2026-04-15 TUR-145 — Add Storage Contract for Dua and Adhan Audio
+
+### Yapılan İşlem
+- `SupabaseConfig` içine `SUPABASE_DUA_AUDIO_BUCKET` ve `SUPABASE_ADHAN_AUDIO_BUCKET` dart-define destekleri eklendi; varsayılanlar `audio-dua` ve `audio-adhan`.
+- `content_schema.sql` içinde `duas.storage_path` kolonu migration-safe şekilde eklendi.
+- `content_schema.sql` `audio-dua` ve `audio-adhan` storage bucket bootstrap satırları ve public read RLS policy'leriyle genişletildi.
+- `DuaData` modeli `audioUrl` alanı kazandı.
+- `DuaData.fromSupabaseRow` cloud dua satırlarında `storage_path` varsa `audio-dua` Supabase Storage public URL'ini üretip dış `audio_url` alanına tercih edecek şekilde değiştirildi.
+- `duas_data_test.dart`, `library_page_test.dart` ve `content_schema_test.dart` storage-backed dua audio ve bucket/schema sözleşmesini koruyacak şekilde genişletildi.
+
+### Neden Yapıldı
+- Sukun audio TUR-144 ile storage-backed hale geldi; ancak dua tarafında tablo yalnız `audio_url` taşıyor, model ise audio bilgisini hiç taşımıyordu.
+- Bu durum ileride dua sesleri eklendiğinde external link bağımlılığını tekrar üretme riski oluşturuyordu.
+- Adhan notification sesleri Android raw resource kısıtı nedeniyle runtime'da hâlâ local asset gerektirse de, verified adhan dosyalarının Supabase Storage'da tutulabilmesi için bucket contract'ı schema'ya eklendi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart`
+- `A:\Way of Allah\sirat_i_nur\content_schema.sql`
+- `A:\Way of Allah\sirat_i_nur\test\duas_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Verified cloud dua satırları artık `storage_path` ile bizim `audio-dua` bucket'ımızdan çözülebilir.
+- External `audio_url` sadece storage path yoksa fallback olarak kalır.
+- Supabase bootstrap, dua ve adhan audio dosyaları için sahipli bucket/RLS zeminini hazırlar.
+
+### Test Sonucu
+- `flutter test test\duas_data_test.dart test\library_page_test.dart test\content_schema_test.dart --reporter compact` PASS (`22/22`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`296/296`)
+
+### Risk Değişimi
+- Dua audio için external URL bağımlılığına geri düşme ve schema'da owned bucket eksikliği riski: `12/25 -> 4/25`
+
+### Sonraki Adım
+- Yeni döngüde Asma-ul-Husna audio mapping hattı aynı storage_path/owned-bucket kuralına göre taranacak; dış audio URL'leri varsa `audio-asma` veya mevcut audio bucket stratejisine bağlanma durumu skorlanacak.

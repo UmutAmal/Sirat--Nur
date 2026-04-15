@@ -33,6 +33,16 @@ class SupabaseConfig {
     defaultValue: 'audio-sukun',
   );
 
+  static const String duaAudioBucket = String.fromEnvironment(
+    'SUPABASE_DUA_AUDIO_BUCKET',
+    defaultValue: 'audio-dua',
+  );
+
+  static const String adhanAudioBucket = String.fromEnvironment(
+    'SUPABASE_ADHAN_AUDIO_BUCKET',
+    defaultValue: 'audio-adhan',
+  );
+
   static const String placesTileUrlTemplate = String.fromEnvironment(
     'PLACES_TILE_URL_TEMPLATE',
     defaultValue: '',

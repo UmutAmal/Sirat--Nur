@@ -165,6 +165,7 @@ void main() {
       expect(resolved.first.source, 'Diyanet');
       expect(resolved.first.verifiedAt, '2026-04-15T00:00:00Z');
       expect(resolved.first.category, 'Sabah Akşam');
+      expect(resolved.first.audioUrl, isEmpty);
     });
 
     test('daily dua library subtitle switches to unavailable copy', () {

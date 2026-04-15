@@ -30,6 +30,12 @@ void main() {
           contains('create table if not exists public.audio_files'),
         );
         expect(schema, contains('storage_path text'));
+        expect(
+          schema,
+          contains(
+            'alter table public.duas\nadd column if not exists storage_path text;',
+          ),
+        );
         expect(schema, contains('surah_number smallint'));
         expect(schema, contains('juz_number smallint'));
         expect(
@@ -42,6 +48,18 @@ void main() {
           schema,
           contains(
             "insert into storage.buckets (id, name, public)\nvalues ('audio-sukun', 'audio-sukun', true)",
+          ),
+        );
+        expect(
+          schema,
+          contains(
+            "insert into storage.buckets (id, name, public)\nvalues ('audio-dua', 'audio-dua', true)",
+          ),
+        );
+        expect(
+          schema,
+          contains(
+            "insert into storage.buckets (id, name, public)\nvalues ('audio-adhan', 'audio-adhan', true)",
           ),
         );
         expect(
@@ -92,6 +110,13 @@ void main() {
         contains('create policy "Public read sukun audio bucket"'),
       );
       expect(schema, contains("using (bucket_id = 'audio-sukun');"));
+      expect(schema, contains('create policy "Public read dua audio bucket"'));
+      expect(schema, contains("using (bucket_id = 'audio-dua');"));
+      expect(
+        schema,
+        contains('create policy "Public read adhan audio bucket"'),
+      );
+      expect(schema, contains("using (bucket_id = 'audio-adhan');"));
     });
   });
 }

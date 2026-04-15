@@ -12,11 +12,15 @@ create table if not exists public.duas (
   text_tr text,
   text_en text,
   audio_url text,
+  storage_path text,
   category text not null,
   source text not null,
   verified_at timestamptz not null,
   created_at timestamptz not null default timezone('utc', now())
 );
+
+alter table public.duas
+add column if not exists storage_path text;
 
 create index if not exists duas_category_idx on public.duas (category);
 
@@ -144,6 +148,16 @@ values ('audio-sukun', 'audio-sukun', true)
 on conflict (id) do update
 set public = excluded.public;
 
+insert into storage.buckets (id, name, public)
+values ('audio-dua', 'audio-dua', true)
+on conflict (id) do update
+set public = excluded.public;
+
+insert into storage.buckets (id, name, public)
+values ('audio-adhan', 'audio-adhan', true)
+on conflict (id) do update
+set public = excluded.public;
+
 drop policy if exists "Public read quran audio bucket" on storage.objects;
 create policy "Public read quran audio bucket"
 on storage.objects
@@ -155,3 +169,15 @@ create policy "Public read sukun audio bucket"
 on storage.objects
 for select
 using (bucket_id = 'audio-sukun');
+
+drop policy if exists "Public read dua audio bucket" on storage.objects;
+create policy "Public read dua audio bucket"
+on storage.objects
+for select
+using (bucket_id = 'audio-dua');
+
+drop policy if exists "Public read adhan audio bucket" on storage.objects;
+create policy "Public read adhan audio bucket"
+on storage.objects
+for select
+using (bucket_id = 'audio-adhan');
