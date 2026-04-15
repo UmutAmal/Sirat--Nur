@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -57,15 +58,45 @@ void main() {
       expect(sql, isNot(contains('download.quranicaudio.com')));
     });
 
-    test('smoke manifest can be converted into storage-backed SQL', () {
-      final manifestFile = File(
-        'build/verified_quran_audio_smoke/manifest.json',
+    test('smoke-shaped manifest can be converted into storage-backed SQL', () {
+      final tempDir = Directory.systemTemp.createTempSync(
+        'sirat_quran_audio_smoke_',
       );
-      if (!manifestFile.existsSync()) {
-        fail(
-          'Smoke manifest missing. Run the verified audio mirror smoke step first.',
-        );
-      }
+      addTearDown(() {
+        if (tempDir.existsSync()) {
+          tempDir.deleteSync(recursive: true);
+        }
+      });
+
+      final reciterDir = Directory(
+        '${tempDir.path}${Platform.pathSeparator}alafasy',
+      )..createSync(recursive: true);
+      final audioFile = File(
+        '${reciterDir.path}${Platform.pathSeparator}001.mp3',
+      )..writeAsBytesSync(<int>[0, 1, 2, 3]);
+      final manifestFile =
+          File('${tempDir.path}${Platform.pathSeparator}manifest.json')
+            ..writeAsStringSync(
+              const JsonEncoder.withIndent('  ').convert({
+                'generated_at': '2026-04-08T19:00:42.228933Z',
+                'requested': 1,
+                'downloaded': 1,
+                'skipped': 0,
+                'failed': <String>[],
+                'files': [
+                  {
+                    'surah_number': 1,
+                    'reciter': 'alafasy',
+                    'audio_url':
+                        'https://download.quranicaudio.com/qdc/alafasy/1.mp3',
+                    'source':
+                        'https://api.quran.com/api/v4/chapter_recitations/7',
+                    'verified_at': '2026-04-08T19:00:42.228933Z',
+                    'local_path': audioFile.path,
+                  },
+                ],
+              }),
+            );
 
       final files = parseMirroredAudioManifest(manifestFile.readAsStringSync());
       final sql = buildQuranAudioStorageSeedSql(files);

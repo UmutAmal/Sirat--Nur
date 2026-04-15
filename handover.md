@@ -4021,3 +4021,36 @@
 ### Sonraki Adım
 - [A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/generate_quran_audio_storage_seed_test.dart) temiz checkout'ta ignored `build/verified_quran_audio_smoke/manifest.json` dosyasına bağımlı; bu test bir sonraki döngüde self-contained fixture veya deterministic setup ile kalıcı hale getirilecek.
 - Core servislerde kalan kullanıcıya dönük hardcoded string taraması sürdürülecek; özellikle notification/audio/prayer pipeline kullanıcı mesajları yeniden sınıflandırılacak.
+
+## 2026-04-15 TUR-102 — Make Quran Audio Storage Seed Test Deterministic
+
+### Ne Yapıldı
+- [A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/generate_quran_audio_storage_seed_test.dart) içindeki smoke manifest testi ignored `build/verified_quran_audio_smoke/manifest.json` dosyasına bağımlı olmaktan çıkarıldı.
+- Test artık `Directory.systemTemp` altında gerçek mirror manifest şemasına sahip geçici `manifest.json` ve `alafasy/001.mp3` dosyası üretip aynı parse + storage-backed SQL dönüşümünü doğruluyor.
+- Test sonunda geçici dizin `addTearDown` ile temizleniyor; repo build artefact'ine, network'e veya önceki manuel smoke koşusuna bağımlılık kalmadı.
+
+### Neden Yapıldı
+- Full test temiz artefact ortamında `Smoke manifest missing. Run the verified audio mirror smoke step first.` hatasıyla kırılabiliyordu.
+- Kök sebep, testin git tarafından ignore edilen `build/` çıktısını zorunlu kabul etmesiydi; bu durum clean checkout, CI veya `flutter clean` sonrası false-negative test başarısızlığı üretirdi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Full test artık Quran audio storage seed guard'ı için önce manuel smoke download yapılmasını gerektirmiyor.
+- Storage-backed SQL dönüşümü aynı gerçek manifest alanlarıyla doğrulanmaya devam ediyor.
+- Ses mirror doğrulama akışı ayrı tool ve smoke komutu olarak korunuyor; unit test deterministic hale getirildi.
+
+### Test Sonucu
+- `dart format test/generate_quran_audio_storage_seed_test.dart` → PASS
+- `flutter test test/generate_quran_audio_storage_seed_test.dart --reporter compact` → PASS (`4/4`)
+- `flutter analyze` → PASS
+- `flutter test --reporter compact` → PASS (`237/237`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Full test depends on ignored Quran audio smoke build artefact: `12/25 → 1/25`
+
+### Sonraki Adım
+- Core servislerde kalan kullanıcıya dönük hardcoded string taraması sürdürülecek; ilk adaylar notification channel copy ve prayer/audio pipeline mesajlarıdır.
+- Rare locale EN-reference kalan anahtarlar güvenli sibling/source fallback matrisiyle sınıflandırılmaya devam edecek.
