@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan-meddelelser",
   "adhanNotificationChannelDescription": "Bønnetidsalarmer med adhan-lyd.",
   "quranLoadFailed": "Koranindhold kunne ikke indlæses. Prøv venligst igen.",
-  "locationDetectionFailed": "Kunne ikke finde din placering. Vælg venligst en by manuelt, eller prøv igen."
+  "locationDetectionFailed": "Kunne ikke finde din placering. Vælg venligst en by manuelt, eller prøv igen.",
+  "qiblaLocationRequiredTitle": "Placering påkrævet for Qibla",
+  "qiblaLocationRequiredBody": "Indstil din faktiske placering, før du bruger Qibla-kompasset, så retningen kan beregnes nøjagtigt."
 }

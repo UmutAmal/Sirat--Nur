@@ -466,6 +466,13 @@ class AppLocalizationsAf extends AppLocalizations {
       'Kompassensor is nie op hierdie toestel beskikbaar nie.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Ligging benodig vir Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Stel jou werklike ligging voor jy die Qibla-kompas gebruik sodat die rigting akkuraat bereken kan word.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Kennisgewings';
 
   @override

@@ -465,6 +465,13 @@ class AppLocalizationsKn extends AppLocalizations {
   String get qiblaSensorUnavailable => 'ಈ ಸಾಧನದಲ್ಲಿ ದಿಕ್ಸೂಚಿ ಸಂವೇದಕ ಲಭ್ಯವಿಲ್ಲ.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'ಕಿಬ್ಲಾಗೆ ಅಗತ್ಯವಿರುವ ಸ್ಥಳ';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'ಕಿಬ್ಲಾ ದಿಕ್ಸೂಚಿಯನ್ನು ಬಳಸುವ ಮೊದಲು ನಿಮ್ಮ ನಿಜವಾದ ಸ್ಥಳವನ್ನು ಹೊಂದಿಸಿ ಇದರಿಂದ ದಿಕ್ಕನ್ನು ನಿಖರವಾಗಿ ಲೆಕ್ಕಹಾಕಬಹುದು.';
+
+  @override
   String get adhanNotificationChannelName => 'ಅಧಾನ್ ಅಧಿಸೂಚನೆಗಳು';
 
   @override

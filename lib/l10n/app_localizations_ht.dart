@@ -466,6 +466,13 @@ class AppLocalizationsHt extends AppLocalizations {
       'Capteur konpa pa disponib sou aparèy sa a.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Kote obligatwa pou Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Mete pozisyon aktyèl ou anvan ou sèvi ak konpa Qibla pou direksyon an ka kalkile avèk presizyon.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Notifikasyon';
 
   @override

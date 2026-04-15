@@ -466,6 +466,13 @@ class AppLocalizationsEo extends AppLocalizations {
       'Kompasa sensilo ne disponeblas en ĉi tiu aparato.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Loko necesa por Ĉiblo';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Agordu vian realan lokon antaŭ ol uzi la Qibla kompason, por ke la direkto estu precize kalkulita.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Sciigoj';
 
   @override

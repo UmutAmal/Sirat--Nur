@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan-meddelanden",
   "adhanNotificationChannelDescription": "Bönetidslarm med adhan-ljud.",
   "quranLoadFailed": "Koraninnehåll kunde inte laddas. Försök igen.",
-  "locationDetectionFailed": "Kunde inte identifiera din plats. Välj en stad manuellt eller försök igen."
+  "locationDetectionFailed": "Kunde inte identifiera din plats. Välj en stad manuellt eller försök igen.",
+  "qiblaLocationRequiredTitle": "Plats krävs för Qibla",
+  "qiblaLocationRequiredBody": "Ställ in din faktiska plats innan du använder Qibla-kompassen så att riktningen kan beräknas korrekt."
 }

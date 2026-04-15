@@ -466,6 +466,13 @@ class AppLocalizationsLb extends AppLocalizations {
       'Kompasssensor ass op dësem Apparat net verfügbar.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Plaz néideg fir Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Setzt Är aktuell Positioun ier Dir de Qibla Kompass benotzt, sou datt d\'Richtung genau berechent ka ginn.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Notifikatiounen';
 
   @override

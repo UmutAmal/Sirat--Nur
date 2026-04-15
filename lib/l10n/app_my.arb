@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan အသိပေးချက်များ",
   "adhanNotificationChannelDescription": "အဒ်ဟန်အသံဖြင့် ဆုတောင်းချိန်သတိပေးချက်။",
   "quranLoadFailed": "ကုရ်အာန်အကြောင်းအရာကို တင်၍မရပါ။ ထပ်စမ်းကြည့်ပါ။",
-  "locationDetectionFailed": "သင့်တည်နေရာကို ရှာမတွေ့ပါ။ မြို့ကို ကိုယ်တိုင်ရွေးချယ်ပါ သို့မဟုတ် ထပ်စမ်းကြည့်ပါ။"
+  "locationDetectionFailed": "သင့်တည်နေရာကို ရှာမတွေ့ပါ။ မြို့ကို ကိုယ်တိုင်ရွေးချယ်ပါ သို့မဟုတ် ထပ်စမ်းကြည့်ပါ။",
+  "qiblaLocationRequiredTitle": "Qibla အတွက် တည်နေရာ လိုအပ်သည်။",
+  "qiblaLocationRequiredBody": "Qibla သံလိုက်အိမ်မြှောင်ကို အသုံးမပြုမီ သင်၏အမှန်တကယ်တည်နေရာကို သတ်မှတ်၍ ဦးတည်ချက်ကို တိကျစွာ တွက်ချက်နိုင်သည်။"
 }

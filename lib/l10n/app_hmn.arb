@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Cov Lus Qhia",
   "adhanNotificationChannelDescription": "Lub sij hawm thov Vajtswv ceeb toom nrog adhan suab.",
   "quranLoadFailed": "Cov ntsiab lus Quran tsis tuaj yeem thauj khoom. Thov rov sim dua.",
-  "locationDetectionFailed": "Nrhiav tsis tau koj qhov chaw nyob. Thov xaiv lub nroog manually lossis sim dua."
+  "locationDetectionFailed": "Nrhiav tsis tau koj qhov chaw nyob. Thov xaiv lub nroog manually lossis sim dua.",
+  "qiblaLocationRequiredTitle": "Qhov chaw xav tau rau Qibla",
+  "qiblaLocationRequiredBody": "Teem koj qhov chaw tiag tiag ua ntej siv Qibla compass kom cov kev taw qhia tuaj yeem suav tau raug."
 }

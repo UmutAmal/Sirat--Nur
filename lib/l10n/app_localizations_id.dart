@@ -466,6 +466,13 @@ class AppLocalizationsId extends AppLocalizations {
       'Sensor kompas tidak tersedia di perangkat ini.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Lokasi diperlukan untuk Kiblat';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Atur lokasi sebenarnya Anda sebelum menggunakan kompas kiblat agar arahnya dapat dihitung secara akurat.';
+
+  @override
   String get adhanNotificationChannelName => 'Pemberitahuan Adzan';
 
   @override

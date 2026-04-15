@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifikasyon",
   "adhanNotificationChannelDescription": "Alèt tan lapriyè ak son adhan.",
   "quranLoadFailed": "Kontni koran pa t 'kapab chaje. Tanpri eseye ankò.",
-  "locationDetectionFailed": "Pa t 'kapab detekte kote ou ye a. Tanpri chwazi yon vil manyèlman oswa eseye ankò."
+  "locationDetectionFailed": "Pa t 'kapab detekte kote ou ye a. Tanpri chwazi yon vil manyèlman oswa eseye ankò.",
+  "qiblaLocationRequiredTitle": "Kote obligatwa pou Qibla",
+  "qiblaLocationRequiredBody": "Mete pozisyon aktyèl ou anvan ou sèvi ak konpa Qibla pou direksyon an ka kalkile avèk presizyon."
 }

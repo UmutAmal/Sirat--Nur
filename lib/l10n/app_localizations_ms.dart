@@ -466,6 +466,13 @@ class AppLocalizationsMs extends AppLocalizations {
       'Penderia kompas tidak tersedia pada peranti ini.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Lokasi diperlukan untuk kiblat';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Tetapkan lokasi sebenar anda sebelum menggunakan kompas kiblat supaya arah boleh dikira dengan tepat.';
+
+  @override
   String get adhanNotificationChannelName => 'Pemberitahuan Adzan';
 
   @override

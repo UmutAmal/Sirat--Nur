@@ -469,6 +469,13 @@ class AppLocalizationsRo extends AppLocalizations {
       'Senzorul busolă nu este disponibil pe acest dispozitiv.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Locația necesară pentru Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Setați-vă locația reală înainte de a utiliza busola Qibla, astfel încât direcția să poată fi calculată cu precizie.';
+
+  @override
   String get adhanNotificationChannelName => 'Notificări Adhan';
 
   @override

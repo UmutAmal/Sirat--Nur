@@ -466,6 +466,13 @@ class AppLocalizationsMr extends AppLocalizations {
       'या डिव्हाइसवर कंपास सेन्सर अनुपलब्ध आहे.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'किबला साठी आवश्यक स्थान';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'किब्ला होकायंत्र वापरण्यापूर्वी तुमचे खरे स्थान सेट करा जेणेकरून दिशा अचूकपणे मोजता येईल.';
+
+  @override
   String get adhanNotificationChannelName => 'अधान सूचना';
 
   @override

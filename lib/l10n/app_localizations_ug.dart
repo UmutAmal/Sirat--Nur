@@ -466,6 +466,13 @@ class AppLocalizationsUg extends AppLocalizations {
       'بۇ ئۈسكۈنىدە كومپاس سېنزور ئىشلەتكىلى بولمايدۇ.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan ئۇقتۇرۇشى';
 
   @override

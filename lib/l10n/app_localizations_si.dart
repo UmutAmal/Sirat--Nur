@@ -465,6 +465,13 @@ class AppLocalizationsSi extends AppLocalizations {
   String get qiblaSensorUnavailable => 'මෙම උපාංගයේ මාලිමා සංවේදකය නොමැත.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'කිබ්ලා සඳහා අවශ්‍ය ස්ථානය';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'කිබ්ලා මාලිමා යන්ත්‍රය භාවිතා කිරීමට පෙර ඔබේ සැබෑ ස්ථානය සකසන්න එවිට දිශාව නිවැරදිව ගණනය කළ හැක.';
+
+  @override
   String get adhanNotificationChannelName => 'අදාන් දැනුම්දීම්';
 
   @override

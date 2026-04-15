@@ -462,6 +462,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get qiblaSensorUnavailable => '이 기기에서는 나침반 센서를 사용할 수 없습니다.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Qibla에 필요한 위치';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      '방향을 정확하게 계산할 수 있도록 Qibla 나침반을 사용하기 전에 실제 위치를 설정하십시오.';
+
+  @override
   String get adhanNotificationChannelName => '아단 알림';
 
   @override

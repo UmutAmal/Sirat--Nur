@@ -1330,6 +1330,18 @@ abstract class AppLocalizations {
   /// **'Compass sensor is unavailable on this device.'**
   String get qiblaSensorUnavailable;
 
+  /// No description provided for @qiblaLocationRequiredTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Location required for Qibla'**
+  String get qiblaLocationRequiredTitle;
+
+  /// No description provided for @qiblaLocationRequiredBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Set your actual location before using the Qibla compass so the direction can be calculated accurately.'**
+  String get qiblaLocationRequiredBody;
+
   /// No description provided for @adhanNotificationChannelName.
   ///
   /// In en, this message translates to:

@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "إشعارات الأذان",
   "adhanNotificationChannelDescription": "تنبيهات لأوقات الصلاة مع صوت الأذان.",
   "quranLoadFailed": "لا يمكن تحميل محتوى القرآن. يرجى المحاولة مرة أخرى.",
-  "locationDetectionFailed": "لا يمكن الكشف عن موقعك. يرجى اختيار المدينة يدويًا أو حاول مرة أخرى."
+  "locationDetectionFailed": "لا يمكن الكشف عن موقعك. يرجى اختيار المدينة يدويًا أو حاول مرة أخرى.",
+  "qiblaLocationRequiredTitle": "الموقع المطلوب للقبلة",
+  "qiblaLocationRequiredBody": "قم بتعيين موقعك الفعلي قبل استخدام بوصلة القبلة حتى يمكن حساب الاتجاه بدقة."
 }

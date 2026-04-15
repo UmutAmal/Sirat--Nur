@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "اذان کی اطلاع",
   "adhanNotificationChannelDescription": "اذان کی آواز کے ساتھ نماز کے وقت کے انتباہات۔",
   "quranLoadFailed": "قرآنی مواد لوڈ نہیں ہو سکا۔ براہ کرم دوبارہ کوشش کریں۔",
-  "locationDetectionFailed": "آپ کے مقام کا پتہ نہیں چل سکا۔ براہ کرم دستی طور پر شہر کا انتخاب کریں یا دوبارہ کوشش کریں۔"
+  "locationDetectionFailed": "آپ کے مقام کا پتہ نہیں چل سکا۔ براہ کرم دستی طور پر شہر کا انتخاب کریں یا دوبارہ کوشش کریں۔",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "قبلہ کمپاس استعمال کرنے سے پہلے اپنی اصل جگہ کا تعین کریں تاکہ سمت کا درست اندازہ لگایا جا سکے۔"
 }

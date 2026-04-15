@@ -466,6 +466,13 @@ class AppLocalizationsLo extends AppLocalizations {
       'ເຊັນເຊີເຂັມທິດບໍ່ສາມາດໃຊ້ໄດ້ໃນອຸປະກອນນີ້.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'ສະຖານທີ່ຕ້ອງການສໍາລັບ Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'ຕັ້ງຄ່າສະຖານທີ່ຕົວຈິງຂອງເຈົ້າກ່ອນທີ່ຈະໃຊ້ເຂັມທິດ Qibla ເພື່ອໃຫ້ທິດທາງສາມາດຄິດໄລ່ໄດ້ຢ່າງຖືກຕ້ອງ.';
+
+  @override
   String get adhanNotificationChannelName => 'ການແຈ້ງເຕືອນ Adhan';
 
   @override

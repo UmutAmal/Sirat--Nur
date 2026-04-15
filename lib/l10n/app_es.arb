@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Notificaciones Adhan",
   "adhanNotificationChannelDescription": "Alertas de tiempo de oración con sonido adhan.",
   "quranLoadFailed": "No se pudo cargar el contenido del Corán. Por favor inténtalo de nuevo.",
-  "locationDetectionFailed": "No se pudo detectar tu ubicación. Elija una ciudad manualmente o inténtelo nuevamente."
+  "locationDetectionFailed": "No se pudo detectar tu ubicación. Elija una ciudad manualmente o inténtelo nuevamente.",
+  "qiblaLocationRequiredTitle": "Ubicación requerida para Qibla",
+  "qiblaLocationRequiredBody": "Establezca su ubicación real antes de usar la brújula Qibla para que la dirección se pueda calcular con precisión."
 }

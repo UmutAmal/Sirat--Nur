@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "quranLoadFailed": "Saan a mabalin a maikarga ti linaon ti Quran. Pangngaasiyo ta padasenyo manen.",
-  "locationDetectionFailed": "Saan a naduktalan ti lokasionmo. Pangngaasi a mangpili iti siudad a manual wenno padasen manen."
+  "locationDetectionFailed": "Saan a naduktalan ti lokasionmo. Pangngaasi a mangpili iti siudad a manual wenno padasen manen.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
 }

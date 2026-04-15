@@ -467,6 +467,13 @@ class AppLocalizationsMt extends AppLocalizations {
       'Is-sensor tal-boxxla mhux disponibbli fuq dan l-apparat.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Post meħtieġ għall-Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Issettja l-post attwali tiegħek qabel tuża l-boxxla Qibla sabiex id-direzzjoni tkun tista \'tiġi kkalkulata b\'mod preċiż.';
+
+  @override
   String get adhanNotificationChannelName => 'Notifiki Adhan';
 
   @override

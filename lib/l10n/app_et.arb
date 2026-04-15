@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhani teatised",
   "adhanNotificationChannelDescription": "Palveaja hoiatused adhani heliga.",
   "quranLoadFailed": "Koraani sisu ei saanud laadida. Palun proovi uuesti.",
-  "locationDetectionFailed": "Teie asukohta ei õnnestunud tuvastada. Valige linn käsitsi või proovige uuesti."
+  "locationDetectionFailed": "Teie asukohta ei õnnestunud tuvastada. Valige linn käsitsi või proovige uuesti.",
+  "qiblaLocationRequiredTitle": "Qibla jaoks vajalik asukoht",
+  "qiblaLocationRequiredBody": "Enne Qibla kompassi kasutamist määrake oma tegelik asukoht, et suunda saaks täpselt arvutada."
 }

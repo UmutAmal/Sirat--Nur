@@ -466,6 +466,13 @@ class AppLocalizationsUz extends AppLocalizations {
       'Kompas sensori bu qurilmada ishlamaydi.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Qibla uchun joy kerak';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Qibla kompasidan foydalanishdan oldin oʻzingizning haqiqiy joylashuvingizni oʻrnating, shunda yoʻnalish aniq hisoblab chiqiladi.';
+
+  @override
   String get adhanNotificationChannelName => 'Azon bildirishnomalari';
 
   @override

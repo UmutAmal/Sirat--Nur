@@ -465,6 +465,13 @@ class AppLocalizationsAk extends AppLocalizations {
   String get qiblaSensorUnavailable => 'Compass sensor nni saa afiri yi so.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Beae ho hia ma Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Hyehye wo beae ankasa ansa na wode Qibla kompas no adi dwuma, sɛnea wɔbɛtumi abu kwan no pɛpɛɛpɛ.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
 
   @override

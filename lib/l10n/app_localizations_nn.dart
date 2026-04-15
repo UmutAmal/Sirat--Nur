@@ -466,6 +466,13 @@ class AppLocalizationsNn extends AppLocalizations {
       'Kompasssensor er utilgjengelig på denne enheten.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Plassering kreves for Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Still inn din faktiske posisjon før du bruker Qibla-kompasset slik at retningen kan beregnes nøyaktig.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan-varsler';
 
   @override

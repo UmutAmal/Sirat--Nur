@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "宣礼通知",
   "adhanNotificationChannelDescription": "祈祷时间以宣礼声提醒。",
   "quranLoadFailed": "无法加载《古兰经》内容。请再试一次。",
-  "locationDetectionFailed": "无法检测到您的位置。请手动选择城市或重试。"
+  "locationDetectionFailed": "无法检测到您的位置。请手动选择城市或重试。",
+  "qiblaLocationRequiredTitle": "朝拜所需地点",
+  "qiblaLocationRequiredBody": "在使用朝拜指南针之前设置您的实际位置，以便可以准确计算方向。"
 }

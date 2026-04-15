@@ -466,6 +466,13 @@ class AppLocalizationsTe extends AppLocalizations {
       'ఈ పరికరంలో కంపాస్ సెన్సార్ అందుబాటులో లేదు.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'ఖిబ్లా కోసం అవసరమైన స్థానం';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Qibla దిక్సూచిని ఉపయోగించే ముందు మీ వాస్తవ స్థానాన్ని సెట్ చేయండి, తద్వారా దిశను ఖచ్చితంగా లెక్కించవచ్చు.';
+
+  @override
   String get adhanNotificationChannelName => 'అధాన్ నోటిఫికేషన్‌లు';
 
   @override

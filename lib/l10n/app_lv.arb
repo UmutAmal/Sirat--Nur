@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan paziņojumi",
   "adhanNotificationChannelDescription": "Lūgšanu laika brīdinājumi ar Adhan skaņu.",
   "quranLoadFailed": "Korāna saturu nevarēja ielādēt. Lūdzu, mēģiniet vēlreiz.",
-  "locationDetectionFailed": "Nevarēja noteikt jūsu atrašanās vietu. Lūdzu, izvēlieties pilsētu manuāli vai mēģiniet vēlreiz."
+  "locationDetectionFailed": "Nevarēja noteikt jūsu atrašanās vietu. Lūdzu, izvēlieties pilsētu manuāli vai mēģiniet vēlreiz.",
+  "qiblaLocationRequiredTitle": "Nepieciešama vieta Qiblai",
+  "qiblaLocationRequiredBody": "Pirms Qibla kompasa lietošanas iestatiet savu faktisko atrašanās vietu, lai varētu precīzi aprēķināt virzienu."
 }

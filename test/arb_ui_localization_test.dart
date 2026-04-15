@@ -467,6 +467,8 @@ void main() {
         const localizedKeys = [
           'qiblaCompassErrorDetails',
           'qiblaSensorUnavailable',
+          'qiblaLocationRequiredTitle',
+          'qiblaLocationRequiredBody',
         ];
 
         for (final locale in priorityLocales) {

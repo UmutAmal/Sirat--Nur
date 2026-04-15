@@ -465,6 +465,13 @@ class AppLocalizationsSn extends AppLocalizations {
       'Compass sensor haisi kuwanikwa pamudziyo uyu.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Nzvimbo inodiwa kuQibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Seta nzvimbo yako chaiyo usati washandisa kambasi yeQibla kuti gwara rigone kuverengerwa nemazvo.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
 
   @override

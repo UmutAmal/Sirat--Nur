@@ -468,6 +468,14 @@ class AppLocalizationsBe extends AppLocalizations {
       'Датчык компаса недаступны на гэтай прыладзе.';
 
   @override
+  String get qiblaLocationRequiredTitle =>
+      'Для Qibla патрабуецца месцазнаходжанне';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Усталюйце сваё фактычнае месцазнаходжанне перад выкарыстаннем компаса Qibla, каб можна было дакладна вылічыць кірунак.';
+
+  @override
   String get adhanNotificationChannelName => 'Апавяшчэнні аб азане';
 
   @override

@@ -467,6 +467,13 @@ class AppLocalizationsMg extends AppLocalizations {
       'Tsy misy sensor compass amin\'ity fitaovana ity.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Toerana ilaina amin\'ny Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Apetraho ny toerana misy anao alohan\'ny hampiasana ny kompas Qibla mba ho azo kajy tsara ny lalana.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
 
   @override

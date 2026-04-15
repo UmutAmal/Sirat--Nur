@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan-ilmoitukset",
   "adhanNotificationChannelDescription": "Rukousajan hälytykset adhan-äänellä.",
   "quranLoadFailed": "Koraanin sisältöä ei voitu ladata. Yritä uudelleen.",
-  "locationDetectionFailed": "Sijaintiasi ei voitu havaita. Valitse kaupunki manuaalisesti tai yritä uudelleen."
+  "locationDetectionFailed": "Sijaintiasi ei voitu havaita. Valitse kaupunki manuaalisesti tai yritä uudelleen.",
+  "qiblaLocationRequiredTitle": "Qiblalle vaaditaan sijainti",
+  "qiblaLocationRequiredBody": "Aseta todellinen sijaintisi ennen Qibla-kompassin käyttöä, jotta suunta voidaan laskea tarkasti."
 }

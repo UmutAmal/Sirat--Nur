@@ -466,6 +466,13 @@ class AppLocalizationsPl extends AppLocalizations {
       'Czujnik kompasu jest niedostępny na tym urządzeniu.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Wymagana lokalizacja dla Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Przed użyciem kompasu Qibla ustaw swoją rzeczywistą lokalizację, aby móc dokładnie obliczyć kierunek.';
+
+  @override
   String get adhanNotificationChannelName => 'Powiadomienia Adhana';
 
   @override

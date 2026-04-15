@@ -466,6 +466,13 @@ class AppLocalizationsLt extends AppLocalizations {
       'Šiame įrenginyje kompaso jutiklis nepasiekiamas.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Reikalinga vieta Qiblai';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Prieš naudodami Qibla kompasą, nustatykite savo tikrąją vietą, kad būtų galima tiksliai apskaičiuoti kryptį.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan pranešimai';
 
   @override

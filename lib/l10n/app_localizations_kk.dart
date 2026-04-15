@@ -465,6 +465,13 @@ class AppLocalizationsKk extends AppLocalizations {
   String get qiblaSensorUnavailable => 'Бұл құрылғыда компас сенсоры жоқ.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Қибла үшін орын қажет';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Қибла компасын қолданбас бұрын, бағытты дәл есептеу үшін нақты орналасқан жеріңізді орнатыңыз.';
+
+  @override
   String get adhanNotificationChannelName => 'Азан хабарландырулары';
 
   @override

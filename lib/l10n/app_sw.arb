@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Arifa za Adhana",
   "adhanNotificationChannelDescription": "Tahadhari za wakati wa maombi na sauti ya adhana.",
   "quranLoadFailed": "Maudhui ya Quran hayakuweza kupakiwa. Tafadhali jaribu tena.",
-  "locationDetectionFailed": "Haikuweza kutambua eneo lako. Tafadhali chagua jiji wewe mwenyewe au ujaribu tena."
+  "locationDetectionFailed": "Haikuweza kutambua eneo lako. Tafadhali chagua jiji wewe mwenyewe au ujaribu tena.",
+  "qiblaLocationRequiredTitle": "Mahali panahitajika kwa Qibla",
+  "qiblaLocationRequiredBody": "Weka eneo lako halisi kabla ya kutumia dira ya Qibla ili mwelekeo uweze kuhesabiwa kwa usahihi."
 }

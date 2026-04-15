@@ -470,6 +470,14 @@ class AppLocalizationsTl extends AppLocalizations {
       'Hindi available ang compass sensor sa device na ito.';
 
   @override
+  String get qiblaLocationRequiredTitle =>
+      'Kinakailangan ang lokasyon para sa Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Itakda ang iyong aktwal na lokasyon bago gamitin ang Qibla compass para tumpak na makalkula ang direksyon.';
+
+  @override
   String get adhanNotificationChannelName => 'Mga Notification ng Adhan';
 
   @override

@@ -466,6 +466,13 @@ class AppLocalizationsCs extends AppLocalizations {
       'Snímač kompasu není na tomto zařízení k dispozici.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Místo požadované pro Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Před použitím kompasu Qibla nastavte svou skutečnou polohu, aby bylo možné přesně vypočítat směr.';
+
+  @override
   String get adhanNotificationChannelName => 'Oznámení Adhan';
 
   @override

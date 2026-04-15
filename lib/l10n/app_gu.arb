@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "અધાન સૂચનાઓ",
   "adhanNotificationChannelDescription": "અદન અવાજ સાથે પ્રાર્થના સમય ચેતવણીઓ.",
   "quranLoadFailed": "કુરાન સામગ્રી લોડ કરી શકાઈ નથી. કૃપા કરીને ફરી પ્રયાસ કરો.",
-  "locationDetectionFailed": "તમારું સ્થાન શોધી શકાયું નથી. કૃપા કરીને મેન્યુઅલી શહેર પસંદ કરો અથવા ફરી પ્રયાસ કરો."
+  "locationDetectionFailed": "તમારું સ્થાન શોધી શકાયું નથી. કૃપા કરીને મેન્યુઅલી શહેર પસંદ કરો અથવા ફરી પ્રયાસ કરો.",
+  "qiblaLocationRequiredTitle": "કિબલા માટે જરૂરી સ્થાન",
+  "qiblaLocationRequiredBody": "કિબલા હોકાયંત્રનો ઉપયોગ કરતા પહેલા તમારું વાસ્તવિક સ્થાન સેટ કરો જેથી દિશાની ચોક્કસ ગણતરી કરી શકાય."
 }

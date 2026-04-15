@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Bewara Adzan",
   "adhanNotificationChannelDescription": "Waktos solat ngageter ku sora adzan.",
   "quranLoadFailed": "eusi Quran teu bisa dimuat. Mangga cobian deui.",
-  "locationDetectionFailed": "Teu bisa ngadeteksi lokasi anjeun. Mangga pilih kota sacara manual atawa cobian deui."
+  "locationDetectionFailed": "Teu bisa ngadeteksi lokasi anjeun. Mangga pilih kota sacara manual atawa cobian deui.",
+  "qiblaLocationRequiredTitle": "Lokasi diperlukeun pikeun Kiblat",
+  "qiblaLocationRequiredBody": "Setel lokasi saleresna anjeun sateuacan nganggo kompas kiblat supados arahna tiasa diitung sacara akurat."
 }

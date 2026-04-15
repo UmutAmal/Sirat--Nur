@@ -467,6 +467,13 @@ class AppLocalizationsMy extends AppLocalizations {
       'သံလိုက်အိမ်မြှောင်အာရုံခံကိရိယာကို ဤစက်ပစ္စည်းတွင် မရရှိနိုင်ပါ။';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Qibla အတွက် တည်နေရာ လိုအပ်သည်။';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Qibla သံလိုက်အိမ်မြှောင်ကို အသုံးမပြုမီ သင်၏အမှန်တကယ်တည်နေရာကို သတ်မှတ်၍ ဦးတည်ချက်ကို တိကျစွာ တွက်ချက်နိုင်သည်။';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan အသိပေးချက်များ';
 
   @override

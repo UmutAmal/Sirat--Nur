@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifikatiounen",
   "adhanNotificationChannelDescription": "Gebiedszäit Alarmer mat Adhan Sound.",
   "quranLoadFailed": "Koran Inhalt konnt net gelueden ginn. Probéiert w.e.g. nach eng Kéier.",
-  "locationDetectionFailed": "Konnt Är Positioun net entdecken. Wielt w.e.g. eng Stad manuell oder probéiert nach eng Kéier."
+  "locationDetectionFailed": "Konnt Är Positioun net entdecken. Wielt w.e.g. eng Stad manuell oder probéiert nach eng Kéier.",
+  "qiblaLocationRequiredTitle": "Plaz néideg fir Qibla",
+  "qiblaLocationRequiredBody": "Setzt Är aktuell Positioun ier Dir de Qibla Kompass benotzt, sou datt d'Richtung genau berechent ka ginn."
 }

@@ -466,6 +466,13 @@ class AppLocalizationsHa extends AppLocalizations {
       'Babu firikwensin Compass akan wannan na\'urar.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Wurin da ake buƙata don alƙibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Saita ainihin wurinka kafin amfani da kamfas ɗin alƙibla domin a iya ƙididdige alkibla daidai.';
+
+  @override
   String get adhanNotificationChannelName => 'Sanarwar Adhan';
 
   @override

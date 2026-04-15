@@ -466,6 +466,13 @@ class AppLocalizationsZu extends AppLocalizations {
       'Inzwa yekhampasi ayitholakali kule divayisi.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Indawo iyadingeka ku-Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+
+  @override
   String get adhanNotificationChannelName => 'Izaziso ze-Adhan';
 
   @override

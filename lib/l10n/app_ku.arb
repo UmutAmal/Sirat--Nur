@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Azan Notifications",
   "adhanNotificationChannelDescription": "Dema nimêjê bi dengê azanê hişyar dike.",
   "quranLoadFailed": "Naveroka Quranê nehat barkirin. Ji kerema xwe dîsa biceribîne.",
-  "locationDetectionFailed": "Cihê we nehat tespîtkirin. Ji kerema xwe bajarek bi destan hilbijêrin an dîsa biceribînin."
+  "locationDetectionFailed": "Cihê we nehat tespîtkirin. Ji kerema xwe bajarek bi destan hilbijêrin an dîsa biceribînin.",
+  "qiblaLocationRequiredTitle": "Cihê ji bo Qibla hewce ye",
+  "qiblaLocationRequiredBody": "Berî ku hûn qursa Qibla bikar bînin cîhê xweya rastîn bicîh bikin da ku rêgez rast were hesibandin."
 }

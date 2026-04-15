@@ -468,6 +468,14 @@ class AppLocalizationsHy extends AppLocalizations {
       'Կողմնացույցի սենսորն անհասանելի է այս սարքում:';
 
   @override
+  String get qiblaLocationRequiredTitle =>
+      'Քիբլայի համար անհրաժեշտ գտնվելու վայրը';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Նախքան Qibla կողմնացույցն օգտագործելը սահմանեք ձեր իրական գտնվելու վայրը, որպեսզի ուղղությունը ճշգրիտ հաշվարկվի:';
+
+  @override
   String get adhanNotificationChannelName => 'Ադանի ծանուցումներ';
 
   @override

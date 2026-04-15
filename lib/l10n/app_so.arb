@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Ogeysiinta Adhan",
   "adhanNotificationChannelDescription": "Waqtiga salaadda wuxuu ku baraarujinayaa dhawaaqa adhan.",
   "quranLoadFailed": "Waxa ku jira Quraanka lama rari karo Fadlan isku day mar kale",
-  "locationDetectionFailed": "Lama ogaan karo goobtaada Fadlan gacanta ku dooro magaalo ama isku day mar kale."
+  "locationDetectionFailed": "Lama ogaan karo goobtaada Fadlan gacanta ku dooro magaalo ama isku day mar kale.",
+  "qiblaLocationRequiredTitle": "Meesha loo baahan yahay Qibla",
+  "qiblaLocationRequiredBody": "Deji goobtaada dhabta ah ka hor intaadan isticmaalin kombuyuutarka Qibla si jihada loo xisaabiyo si sax ah."
 }

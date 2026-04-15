@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "ការជូនដំណឹង Adhan",
   "adhanNotificationChannelDescription": "ការដាស់តឿនពេលវេលាអធិស្ឋានជាមួយនឹងសំឡេង adhan ។",
   "quranLoadFailed": "មាតិកាគម្ពីគូរ៉ាមិនអាចផ្ទុកបានទេ។ សូមព្យាយាមម្តងទៀត។",
-  "locationDetectionFailed": "មិនអាចរកឃើញទីតាំងរបស់អ្នកបានទេ។ សូមជ្រើសរើសទីក្រុងមួយដោយដៃ ឬព្យាយាមម្តងទៀត។"
+  "locationDetectionFailed": "មិនអាចរកឃើញទីតាំងរបស់អ្នកបានទេ។ សូមជ្រើសរើសទីក្រុងមួយដោយដៃ ឬព្យាយាមម្តងទៀត។",
+  "qiblaLocationRequiredTitle": "ទីតាំងដែលត្រូវការសម្រាប់ Qibla",
+  "qiblaLocationRequiredBody": "កំណត់ទីតាំងពិតប្រាកដរបស់អ្នក មុនពេលប្រើត្រីវិស័យ Qibla ដូច្នេះទិសដៅអាចត្រូវបានគណនាយ៉ាងត្រឹមត្រូវ។"
 }

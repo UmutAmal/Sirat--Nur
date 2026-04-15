@@ -463,6 +463,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get qiblaSensorUnavailable => 'このデバイスではコンパス センサーを利用できません。';
 
   @override
+  String get qiblaLocationRequiredTitle => 'キブラに必要な場所';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      '方向を正確に計算できるように、キブラ コンパスを使用する前に実際の位置を設定してください。';
+
+  @override
   String get adhanNotificationChannelName => 'アザーン通知';
 
   @override

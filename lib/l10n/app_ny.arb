@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Zidziwitso za Adhan",
   "adhanNotificationChannelDescription": "Zidziwitso za nthawi ya mapemphero ndi mawu a adhan.",
   "quranLoadFailed": "Zomwe zili mu Quran sizinathe kuyikidwa. Chonde yesaninso.",
-  "locationDetectionFailed": "Sitinathe kuzindikira komwe muli. Chonde sankhani mzinda pamanja kapena yesaninso."
+  "locationDetectionFailed": "Sitinathe kuzindikira komwe muli. Chonde sankhani mzinda pamanja kapena yesaninso.",
+  "qiblaLocationRequiredTitle": "Malo ofunikira ku Qibla",
+  "qiblaLocationRequiredBody": "Khazikitsani malo anu enieni musanagwiritse ntchito kampasi ya Qibla kuti kolowera kuwerengedwe molondola."
 }

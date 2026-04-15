@@ -476,6 +476,14 @@ class AppLocalizationsAy extends AppLocalizations {
       'Sensor de brújula ukax janiw aka dispositivo ukanx utjkiti.';
 
   @override
+  String get qiblaLocationRequiredTitle =>
+      'Qibla markatakix kawkhantix utjki ukax wakisiwa';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Yatiyawinaka';
 
   @override

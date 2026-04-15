@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "quranLoadFailed": "Wɔantumi amfa Quran mu nsɛm anhyɛ mu. Yɛsrɛ sɛ sɔ hwɛ bio.",
-  "locationDetectionFailed": "Antumi anhu baabi a wowɔ. Yɛsrɛ sɛ fa nsa paw kurow bi anaa sɔ hwɛ bio."
+  "locationDetectionFailed": "Antumi anhu baabi a wowɔ. Yɛsrɛ sɛ fa nsa paw kurow bi anaa sɔ hwɛ bio.",
+  "qiblaLocationRequiredTitle": "Beae ho hia ma Qibla",
+  "qiblaLocationRequiredBody": "Hyehye wo beae ankasa ansa na wode Qibla kompas no adi dwuma, sɛnea wɔbɛtumi abu kwan no pɛpɛɛpɛ."
 }

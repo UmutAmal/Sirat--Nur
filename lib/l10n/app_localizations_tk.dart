@@ -467,6 +467,13 @@ class AppLocalizationsTk extends AppLocalizations {
       'Kompass datçigi bu enjamda elýeterli däl.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      '“Qibla” kompasyny ulanmazdan ozal hakyky ýeriňizi kesgitläň, ugry takyk hasaplap bolar.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan habarnamalary';
 
   @override

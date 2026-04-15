@@ -466,6 +466,13 @@ class AppLocalizationsFa extends AppLocalizations {
       'سنسور قطب نما در این دستگاه در دسترس نیست.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'مکان مورد نیاز برای قبله';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'مکان واقعی خود را قبل از استفاده از قطب نما قبله تنظیم کنید تا جهت را بتوان به طور دقیق محاسبه کرد.';
+
+  @override
   String get adhanNotificationChannelName => 'اعلان های اذان';
 
   @override

@@ -464,6 +464,13 @@ class AppLocalizationsTi extends AppLocalizations {
   String get qiblaSensorUnavailable => 'ኣብዚ መሳርሒ ኮምፓስ ሴንሰር የለን።';
 
   @override
+  String get qiblaLocationRequiredTitle => 'ንቂብላ ዘድሊ ቦታ';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+
+  @override
   String get adhanNotificationChannelName => 'ኣድሃን መፍለጢታት';
 
   @override

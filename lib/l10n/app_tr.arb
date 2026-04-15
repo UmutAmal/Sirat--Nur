@@ -227,6 +227,8 @@
     }
   },
   "qiblaSensorUnavailable": "Bu cihazda pusula sensörü kullanılamıyor.",
+  "qiblaLocationRequiredTitle": "Kıble için konum gerekli",
+  "qiblaLocationRequiredBody": "Kıble yönünün doğru hesaplanabilmesi için pusulayı kullanmadan önce gerçek konumunuzu ayarlayın.",
   "adhanNotificationChannelName": "Ezan Bildirimleri",
   "adhanNotificationChannelDescription": "Ezan sesiyle namaz vakti uyarıları.",
   "notifications": "Bildirimler",

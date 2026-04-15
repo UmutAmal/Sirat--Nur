@@ -466,6 +466,13 @@ class AppLocalizationsIs extends AppLocalizations {
       'Áttavitaskynjari er ekki tiltækur á þessu tæki.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Staðsetning krafist fyrir Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Stilltu raunverulega staðsetningu þína áður en þú notar Qibla áttavitann svo hægt sé að reikna stefnuna nákvæmlega.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan tilkynningar';
 
   @override

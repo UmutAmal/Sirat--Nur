@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Ọkwa Adhan",
   "adhanNotificationChannelDescription": "Ekpere oge alerts na adhan ụda.",
   "quranLoadFailed": "Enweghị ike ibunye ọdịnaya Quran. Biko nwaa ọzọ.",
-  "locationDetectionFailed": "Enweghị ike ịchọpụta ọnọdụ gị. Biko jiri aka họrọ obodo ma ọ bụ nwaa ọzọ."
+  "locationDetectionFailed": "Enweghị ike ịchọpụta ọnọdụ gị. Biko jiri aka họrọ obodo ma ọ bụ nwaa ọzọ.",
+  "qiblaLocationRequiredTitle": "Ebe achọrọ maka Qibla",
+  "qiblaLocationRequiredBody": "Tọọ ọnọdụ gị n'ezie tupu i jiri kompas Qibla ka e nwee ike gbakọọ ntụzịaka nke ọma."
 }

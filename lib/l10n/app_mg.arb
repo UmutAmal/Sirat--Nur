@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Fampandrenesana ny fotoam-bavaka miaraka amin'ny feon'ny adhan.",
   "quranLoadFailed": "Tsy azo nalaina ny votoatin'ny CORAN. Andramo indray azafady.",
-  "locationDetectionFailed": "Tsy hita ny toerana misy anao. Misafidiana tanàna iray azafady na andramo indray."
+  "locationDetectionFailed": "Tsy hita ny toerana misy anao. Misafidiana tanàna iray azafady na andramo indray.",
+  "qiblaLocationRequiredTitle": "Toerana ilaina amin'ny Qibla",
+  "qiblaLocationRequiredBody": "Apetraho ny toerana misy anao alohan'ny hampiasana ny kompas Qibla mba ho azo kajy tsara ny lalana."
 }

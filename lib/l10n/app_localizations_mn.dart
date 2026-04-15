@@ -466,6 +466,14 @@ class AppLocalizationsMn extends AppLocalizations {
       'Энэ төхөөрөмж дээр луужин мэдрэгч боломжгүй байна.';
 
   @override
+  String get qiblaLocationRequiredTitle =>
+      'Киблагийн хувьд байршил шаардлагатай';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Чиблагийн луужин ашиглахын өмнө өөрийн бодит байршлыг тохируулснаар чиглэлийг үнэн зөв тооцоолох боломжтой болно.';
+
+  @override
   String get adhanNotificationChannelName => 'Азаны мэдэгдлүүд';
 
   @override

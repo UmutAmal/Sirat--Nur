@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Talosaga taimi tatalo ma le leo azan.",
   "quranLoadFailed": "E le mafai ona utaina mataupu o le Quran. Fa'amolemole toe taumafai.",
-  "locationDetectionFailed": "Le mafai ona iloa lou nofoaga. Faamolemole filifili ma le lima se aai pe toe taumafai."
+  "locationDetectionFailed": "Le mafai ona iloa lou nofoaga. Faamolemole filifili ma le lima se aai pe toe taumafai.",
+  "qiblaLocationRequiredTitle": "Manaomia nofoaga mo Qibla",
+  "qiblaLocationRequiredBody": "Seti lou nofoaga sa'o a'o le'i fa'aogaina le tapasa Qibla ina ia mafai ona fa'atatau tonu le itu."
 }

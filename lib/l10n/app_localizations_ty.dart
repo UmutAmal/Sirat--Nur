@@ -466,6 +466,13 @@ class AppLocalizationsTy extends AppLocalizations {
       'Compass sensor is unavailable on this device.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
 
   @override

@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "ການແຈ້ງເຕືອນ Adhan",
   "adhanNotificationChannelDescription": "ແຈ້ງເຕືອນເວລາອະທິຖານດ້ວຍສຽງ adhan.",
   "quranLoadFailed": "ເນື້ອຫາ Quran ບໍ່ສາມາດໂຫລດໄດ້. ກະລຸນາລອງອີກຄັ້ງ.",
-  "locationDetectionFailed": "ບໍ່ສາມາດກວດພົບສະຖານທີ່ຂອງທ່ານໄດ້. ກະລຸນາເລືອກເມືອງດ້ວຍຕົນເອງ ຫຼືລອງໃໝ່ອີກ."
+  "locationDetectionFailed": "ບໍ່ສາມາດກວດພົບສະຖານທີ່ຂອງທ່ານໄດ້. ກະລຸນາເລືອກເມືອງດ້ວຍຕົນເອງ ຫຼືລອງໃໝ່ອີກ.",
+  "qiblaLocationRequiredTitle": "ສະຖານທີ່ຕ້ອງການສໍາລັບ Qibla",
+  "qiblaLocationRequiredBody": "ຕັ້ງຄ່າສະຖານທີ່ຕົວຈິງຂອງເຈົ້າກ່ອນທີ່ຈະໃຊ້ເຂັມທິດ Qibla ເພື່ອໃຫ້ທິດທາງສາມາດຄິດໄລ່ໄດ້ຢ່າງຖືກຕ້ອງ."
 }

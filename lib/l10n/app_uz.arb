@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Azon bildirishnomalari",
   "adhanNotificationChannelDescription": "Namoz vaqti azon ovozi bilan ogohlantiriladi.",
   "quranLoadFailed": "Qur'on mazmunini yuklab bo'lmadi. Iltimos, qayta urinib koʻring.",
-  "locationDetectionFailed": "Joylashuvingiz aniqlanmadi. Shaharni qoʻlda tanlang yoki qayta urinib koʻring."
+  "locationDetectionFailed": "Joylashuvingiz aniqlanmadi. Shaharni qoʻlda tanlang yoki qayta urinib koʻring.",
+  "qiblaLocationRequiredTitle": "Qibla uchun joy kerak",
+  "qiblaLocationRequiredBody": "Qibla kompasidan foydalanishdan oldin oʻzingizning haqiqiy joylashuvingizni oʻrnating, shunda yoʻnalish aniq hisoblab chiqiladi."
 }

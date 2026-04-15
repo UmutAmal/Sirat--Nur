@@ -466,6 +466,13 @@ class AppLocalizationsEu extends AppLocalizations {
       'Iparrorratza sentsorea ez dago erabilgarri gailu honetan.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Qiblarako beharrezkoa den kokapena';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Ezarri zure benetako kokapena Qibla iparrorratza erabili aurretik, norabidea zehaztasunez kalkulatu ahal izateko.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan jakinarazpenak';
 
   @override

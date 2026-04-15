@@ -466,6 +466,13 @@ class AppLocalizationsUr extends AppLocalizations {
       'کمپاس سینسر اس ڈیوائس پر دستیاب نہیں ہے۔';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'قبلہ کمپاس استعمال کرنے سے پہلے اپنی اصل جگہ کا تعین کریں تاکہ سمت کا درست اندازہ لگایا جا سکے۔';
+
+  @override
   String get adhanNotificationChannelName => 'اذان کی اطلاع';
 
   @override

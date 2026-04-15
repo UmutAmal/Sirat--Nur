@@ -466,6 +466,13 @@ class AppLocalizationsTg extends AppLocalizations {
       'Дар ин дастгоҳ сенсори қутбнамо мавҷуд нест.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Ҷой барои қибла лозим аст';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Пеш аз истифодаи қутбнамо аз қибла макони воқеии худро таъин кунед, то самт дуруст ҳисоб карда шавад.';
+
+  @override
   String get adhanNotificationChannelName => 'Огоҳиҳои азон';
 
   @override

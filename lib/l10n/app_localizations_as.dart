@@ -465,6 +465,13 @@ class AppLocalizationsAs extends AppLocalizations {
   String get qiblaSensorUnavailable => 'এই ডিভাইচত কম্পাছ চেন্সৰ উপলব্ধ নহয়।';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
 
   @override

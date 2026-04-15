@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Notifiche Adhan",
   "adhanNotificationChannelDescription": "Alerte di tempu di preghiera cù sonu adhan.",
   "quranLoadFailed": "U cuntenutu di u Quran ùn pò micca esse caricatu. Per piacè pruvate di novu.",
-  "locationDetectionFailed": "Ùn pudia micca detectà a vostra situazione. Per piacè sceglite una cità manualmente o pruvate di novu."
+  "locationDetectionFailed": "Ùn pudia micca detectà a vostra situazione. Per piacè sceglite una cità manualmente o pruvate di novu.",
+  "qiblaLocationRequiredTitle": "U locu necessariu per a Qibla",
+  "qiblaLocationRequiredBody": "Definite u vostru locu attuale prima di utilizà a bussola Qibla per chì a direzzione pò esse calculata accuratamente."
 }

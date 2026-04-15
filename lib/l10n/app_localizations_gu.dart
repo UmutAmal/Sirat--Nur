@@ -465,6 +465,13 @@ class AppLocalizationsGu extends AppLocalizations {
   String get qiblaSensorUnavailable => 'આ ઉપકરણ પર કંપાસ સેન્સર અનુપલબ્ધ છે.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'કિબલા માટે જરૂરી સ્થાન';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'કિબલા હોકાયંત્રનો ઉપયોગ કરતા પહેલા તમારું વાસ્તવિક સ્થાન સેટ કરો જેથી દિશાની ચોક્કસ ગણતરી કરી શકાય.';
+
+  @override
   String get adhanNotificationChannelName => 'અધાન સૂચનાઓ';
 
   @override

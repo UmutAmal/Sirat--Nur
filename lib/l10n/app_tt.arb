@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Азан хәбәрләре",
   "adhanNotificationChannelDescription": "Азан тавышы белән дога вакыты.",
   "quranLoadFailed": "Коръән эчтәлеген йөкләп булмады. Зинһар, кабатлап карагыз.",
-  "locationDetectionFailed": "Сезнең урыныгызны таба алмадым. Зинһар, кул белән шәһәрне сайлагыз яки кабатлап карагыз."
+  "locationDetectionFailed": "Сезнең урыныгызны таба алмадым. Зинһар, кул белән шәһәрне сайлагыз яки кабатлап карагыз.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
 }

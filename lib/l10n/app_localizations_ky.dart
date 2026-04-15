@@ -469,6 +469,14 @@ class AppLocalizationsKy extends AppLocalizations {
       'Компас сенсору бул түзмөктө жеткиликсиз.';
 
   @override
+  String get qiblaLocationRequiredTitle =>
+      'Кыбыла үчүн жайгашкан жер талап кылынат';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Багыт так эсептелиши үчүн кыбла компасын колдонуудан мурун чыныгы жайгашкан жериңизди коюңуз.';
+
+  @override
   String get adhanNotificationChannelName => 'Азан эскертмелери';
 
   @override

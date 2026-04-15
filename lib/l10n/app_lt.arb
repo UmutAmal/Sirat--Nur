@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan pranešimai",
   "adhanNotificationChannelDescription": "Maldos laikas perspėja su adhano garsu.",
   "quranLoadFailed": "Nepavyko įkelti Korano turinio. Bandykite dar kartą.",
-  "locationDetectionFailed": "Nepavyko aptikti jūsų vietos. Pasirinkite miestą rankiniu būdu arba bandykite dar kartą."
+  "locationDetectionFailed": "Nepavyko aptikti jūsų vietos. Pasirinkite miestą rankiniu būdu arba bandykite dar kartą.",
+  "qiblaLocationRequiredTitle": "Reikalinga vieta Qiblai",
+  "qiblaLocationRequiredBody": "Prieš naudodami Qibla kompasą, nustatykite savo tikrąją vietą, kad būtų galima tiksliai apskaičiuoti kryptį."
 }

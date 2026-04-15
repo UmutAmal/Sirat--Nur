@@ -467,6 +467,13 @@ class AppLocalizationsTa extends AppLocalizations {
       'இந்தச் சாதனத்தில் திசைகாட்டி சென்சார் இல்லை.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'கிப்லாவிற்கு தேவையான இடம்';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'கிப்லா திசைகாட்டியைப் பயன்படுத்துவதற்கு முன் உங்கள் உண்மையான இருப்பிடத்தை அமைக்கவும், இதன் மூலம் திசையை துல்லியமாக கணக்கிட முடியும்.';
+
+  @override
   String get adhanNotificationChannelName => 'அதான் அறிவிப்புகள்';
 
   @override

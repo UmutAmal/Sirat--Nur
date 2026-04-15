@@ -465,6 +465,13 @@ class AppLocalizationsPs extends AppLocalizations {
   String get qiblaSensorUnavailable => 'په دې وسیله د کمپاس سینسر شتون نلري.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'د قبلې لپاره ځای اړین دی';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'د قبلې کمپاس کارولو دمخه خپل اصلي ځای وټاکئ ترڅو سمت په دقیق ډول محاسبه شي.';
+
+  @override
   String get adhanNotificationChannelName => 'د اذان خبرتیاوې';
 
   @override

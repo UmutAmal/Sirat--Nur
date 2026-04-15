@@ -466,6 +466,13 @@ class AppLocalizationsLa extends AppLocalizations {
       'Sensorem Compass est in hac fabrica unavailable.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Locus requisiti Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Pone actualem locum tuum antequam Qibla circumdabit utens directio accurate computari potest.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Suspendisse';
 
   @override

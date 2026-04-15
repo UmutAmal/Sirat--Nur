@@ -466,6 +466,13 @@ class AppLocalizationsPa extends AppLocalizations {
       'ਕੰਪਾਸ ਸੈਂਸਰ ਇਸ ਡਿਵਾਈਸ \'ਤੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।';
 
   @override
+  String get qiblaLocationRequiredTitle => 'ਕਿਬਲਾ ਲਈ ਟਿਕਾਣਾ ਲੋੜੀਂਦਾ ਹੈ';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'ਕਿਬਲਾ ਕੰਪਾਸ ਦੀ ਵਰਤੋਂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਆਪਣਾ ਅਸਲ ਟਿਕਾਣਾ ਸੈੱਟ ਕਰੋ ਤਾਂ ਕਿ ਦਿਸ਼ਾ ਦੀ ਸਹੀ ਗਣਨਾ ਕੀਤੀ ਜਾ ਸਕੇ।';
+
+  @override
   String get adhanNotificationChannelName => 'ਅਧਾਨ ਸੂਚਨਾਵਾਂ';
 
   @override

@@ -468,6 +468,14 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Ang sensor sa kompas dili magamit sa kini nga aparato.';
 
   @override
+  String get qiblaLocationRequiredTitle =>
+      'Lokasyon gikinahanglan para sa Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Ibutang ang imong aktuwal nga lokasyon sa dili pa gamiton ang Qibla compass aron ang direksyon makalkula sa tukma.';
+
+  @override
   String get adhanNotificationChannelName => 'Mga Abiso sa Adhan';
 
   @override

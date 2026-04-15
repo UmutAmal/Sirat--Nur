@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "ადანის შეტყობინებები",
   "adhanNotificationChannelDescription": "ლოცვის დრო აფრთხილებს ადანის ხმით.",
   "quranLoadFailed": "ყურანის შინაარსი ვერ ჩაიტვირთა. გთხოვთ, სცადოთ ხელახლა.",
-  "locationDetectionFailed": "თქვენი მდებარეობის აღმოჩენა ვერ მოხერხდა. გთხოვთ, აირჩიოთ ქალაქი ხელით ან სცადოთ ხელახლა."
+  "locationDetectionFailed": "თქვენი მდებარეობის აღმოჩენა ვერ მოხერხდა. გთხოვთ, აირჩიოთ ქალაქი ხელით ან სცადოთ ხელახლა.",
+  "qiblaLocationRequiredTitle": "მდებარეობა საჭიროა Qibla-სთვის",
+  "qiblaLocationRequiredBody": "დააყენეთ თქვენი რეალური მდებარეობა Qibla კომპასის გამოყენებამდე, რათა მიმართულება ზუსტად გამოითვალოს."
 }

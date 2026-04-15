@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Mga Abiso sa Adhan",
   "adhanNotificationChannelDescription": "Mga alerto sa oras sa pag-ampo nga adunay tunog sa adhan.",
   "quranLoadFailed": "Ang sulod sa Quran dili makarga. Palihug sulayi pag-usab.",
-  "locationDetectionFailed": "Dili makit-an ang imong lokasyon. Palihug pagpili ug siyudad sa mano-mano o sulayi pag-usab."
+  "locationDetectionFailed": "Dili makit-an ang imong lokasyon. Palihug pagpili ug siyudad sa mano-mano o sulayi pag-usab.",
+  "qiblaLocationRequiredTitle": "Lokasyon gikinahanglan para sa Qibla",
+  "qiblaLocationRequiredBody": "Ibutang ang imong aktuwal nga lokasyon sa dili pa gamiton ang Qibla compass aron ang direksyon makalkula sa tukma."
 }

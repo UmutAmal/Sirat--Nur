@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan obvestila",
   "adhanNotificationChannelDescription": "Opozorila o času molitve z zvokom ezana.",
   "quranLoadFailed": "Vsebine Korana ni bilo mogoče naložiti. prosim poskusite ponovno",
-  "locationDetectionFailed": "Vaše lokacije ni bilo mogoče zaznati. Izberite mesto ročno ali poskusite znova."
+  "locationDetectionFailed": "Vaše lokacije ni bilo mogoče zaznati. Izberite mesto ročno ali poskusite znova.",
+  "qiblaLocationRequiredTitle": "Zahtevana lokacija za Qiblo",
+  "qiblaLocationRequiredBody": "Pred uporabo kompasa Qibla nastavite svojo dejansko lokacijo, da lahko smer natančno izračunate."
 }

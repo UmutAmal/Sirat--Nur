@@ -466,6 +466,13 @@ class AppLocalizationsHmn extends AppLocalizations {
       'Compass sensor tsis muaj nyob rau ntawm lub cuab yeej no.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Qhov chaw xav tau rau Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Teem koj qhov chaw tiag tiag ua ntej siv Qibla compass kom cov kev taw qhia tuaj yeem suav tau raug.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Cov Lus Qhia';
 
   @override

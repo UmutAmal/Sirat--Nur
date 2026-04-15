@@ -466,6 +466,13 @@ class AppLocalizationsRw extends AppLocalizations {
       'Rukuruzi ya Compass ntishobora kuboneka kuri iki gikoresho.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Ahantu hakenewe Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Shiraho aho uherereye mbere yo gukoresha Qibla compas kugirango icyerekezo kibare neza.';
+
+  @override
   String get adhanNotificationChannelName => 'Amatangazo ya Adhan';
 
   @override

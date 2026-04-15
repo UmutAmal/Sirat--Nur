@@ -466,6 +466,13 @@ class AppLocalizationsMk extends AppLocalizations {
       'Сензорот за компас е недостапен на овој уред.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Потребна е локација за Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Поставете ја вашата вистинска локација пред да го користите компасот Qibla за да може точно да се пресмета насоката.';
+
+  @override
   String get adhanNotificationChannelName => 'Известувања за Азан';
 
   @override

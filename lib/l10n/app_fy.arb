@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifikaasjes",
   "adhanNotificationChannelDescription": "Gebedstiidalarms mei adhan-lûd.",
   "quranLoadFailed": "Koranynhâld koe net laden wurde. Besykje it nochris.",
-  "locationDetectionFailed": "Koe jo lokaasje net ûntdekke. Kies in stêd mei de hân of besykje it nochris."
+  "locationDetectionFailed": "Koe jo lokaasje net ûntdekke. Kies in stêd mei de hân of besykje it nochris.",
+  "qiblaLocationRequiredTitle": "Lokaasje nedich foar Qibla",
+  "qiblaLocationRequiredBody": "Stel jo werklike lokaasje yn foardat jo it Qibla-kompas brûke, sadat de rjochting krekt kin wurde berekkene."
 }

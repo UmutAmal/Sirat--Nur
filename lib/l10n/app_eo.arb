@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Sciigoj",
   "adhanNotificationChannelDescription": "Atentigoj de preĝa tempo per adhan sono.",
   "quranLoadFailed": "Korano-enhavo ne povis esti ŝargita. Bonvolu provi denove.",
-  "locationDetectionFailed": "Ne eblis detekti vian lokon. Bonvolu elekti urbon permane aŭ provi denove."
+  "locationDetectionFailed": "Ne eblis detekti vian lokon. Bonvolu elekti urbon permane aŭ provi denove.",
+  "qiblaLocationRequiredTitle": "Loko necesa por Ĉiblo",
+  "qiblaLocationRequiredBody": "Agordu vian realan lokon antaŭ ol uzi la Qibla kompason, por ke la direkto estu precize kalkulita."
 }

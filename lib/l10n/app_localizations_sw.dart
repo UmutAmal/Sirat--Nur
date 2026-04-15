@@ -466,6 +466,13 @@ class AppLocalizationsSw extends AppLocalizations {
       'Kihisi cha dira hakipatikani kwenye kifaa hiki.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Mahali panahitajika kwa Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Weka eneo lako halisi kabla ya kutumia dira ya Qibla ili mwelekeo uweze kuhesabiwa kwa usahihi.';
+
+  @override
   String get adhanNotificationChannelName => 'Arifa za Adhana';
 
   @override

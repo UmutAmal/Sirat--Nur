@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Awọn iwifunni Adhan",
   "adhanNotificationChannelDescription": "Awọn itaniji akoko adura pẹlu ohun adhan.",
   "quranLoadFailed": "Akoonu Al-Qur’an ko le ṣe kojọpọ. Jọwọ gbiyanju lẹẹkansi.",
-  "locationDetectionFailed": "Ko le ri ipo rẹ. Jọwọ yan ilu kan pẹlu ọwọ tabi gbiyanju lẹẹkansi."
+  "locationDetectionFailed": "Ko le ri ipo rẹ. Jọwọ yan ilu kan pẹlu ọwọ tabi gbiyanju lẹẹkansi.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
 }

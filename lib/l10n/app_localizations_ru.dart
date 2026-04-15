@@ -468,6 +468,13 @@ class AppLocalizationsRu extends AppLocalizations {
       'Датчик компаса недоступен на этом устройстве.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Требуется местоположение для Киблы';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Прежде чем использовать компас Киблы, установите свое фактическое местоположение, чтобы можно было точно рассчитать направление.';
+
+  @override
   String get adhanNotificationChannelName => 'Уведомления об Азане';
 
   @override

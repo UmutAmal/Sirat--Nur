@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Hriattirna",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "quranLoadFailed": "Quran content a load thei lo. Khawngaihin han lo try leh teh.",
-  "locationDetectionFailed": "I awmna hmun a detect thei lo. Khawpui pakhat chu manual-in thlang la, a nih loh leh han tum leh rawh."
+  "locationDetectionFailed": "I awmna hmun a detect thei lo. Khawpui pakhat chu manual-in thlang la, a nih loh leh han tum leh rawh.",
+  "qiblaLocationRequiredTitle": "Qibla tan hmun mamawh a ni",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
 }

@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan-meldingen",
   "adhanNotificationChannelDescription": "Gebedstijdwaarschuwingen met adhan-geluid.",
   "quranLoadFailed": "Koraninhoud kon niet worden geladen. Probeer het opnieuw.",
-  "locationDetectionFailed": "Kan uw locatie niet detecteren. Kies handmatig een stad of probeer het opnieuw."
+  "locationDetectionFailed": "Kan uw locatie niet detecteren. Kies handmatig een stad of probeer het opnieuw.",
+  "qiblaLocationRequiredTitle": "Locatie vereist voor Qibla",
+  "qiblaLocationRequiredBody": "Stel uw werkelijke locatie in voordat u het Qibla-kompas gebruikt, zodat de richting nauwkeurig kan worden berekend."
 }

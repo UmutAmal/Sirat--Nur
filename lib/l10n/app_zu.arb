@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Izaziso ze-Adhan",
   "adhanNotificationChannelDescription": "Izaziso zesikhathi somkhuleko ezinomsindo we-adhan.",
   "quranLoadFailed": "Okuqukethwe kwe-Quran akukwazanga ukulayishwa. Sicela uzame futhi.",
-  "locationDetectionFailed": "Ayikwazanga ukubona indawo yakho. Sicela ukhethe idolobha mathupha noma uzame futhi."
+  "locationDetectionFailed": "Ayikwazanga ukubona indawo yakho. Sicela ukhethe idolobha mathupha noma uzame futhi.",
+  "qiblaLocationRequiredTitle": "Indawo iyadingeka ku-Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
 }

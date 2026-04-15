@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan habarnamalary",
   "adhanNotificationChannelDescription": "Adhan sesi bilen doga wagty duýduryşlary.",
   "quranLoadFailed": "Gurhanyň mazmuny ýüklenip bilinmedi. Gaýtadan synanyşmagyňyzy haýyş edýäris.",
-  "locationDetectionFailed": "Locationeriňizi anyklap bilmedim El bilen şäheri saýlaň ýa-da gaýtadan synanyşyň."
+  "locationDetectionFailed": "Locationeriňizi anyklap bilmedim El bilen şäheri saýlaň ýa-da gaýtadan synanyşyň.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "“Qibla” kompasyny ulanmazdan ozal hakyky ýeriňizi kesgitläň, ugry takyk hasaplap bolar."
 }

@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Notificări Adhan",
   "adhanNotificationChannelDescription": "Alerte de timp de rugăciune cu sunet adhan.",
   "quranLoadFailed": "Conținutul Coranului nu a putut fi încărcat. Vă rugăm să încercați din nou.",
-  "locationDetectionFailed": "Nu s-a putut detecta locația dvs. Alegeți manual un oraș sau încercați din nou."
+  "locationDetectionFailed": "Nu s-a putut detecta locația dvs. Alegeți manual un oraș sau încercați din nou.",
+  "qiblaLocationRequiredTitle": "Locația necesară pentru Qibla",
+  "qiblaLocationRequiredBody": "Setați-vă locația reală înainte de a utiliza busola Qibla, astfel încât direcția să poată fi calculată cu precizie."
 }

@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "quranLoadFailed": "Di tin dɛn we de insay di Kɔran nɔ bin ebul fɔ lod. Duya tray bak.",
-  "locationDetectionFailed": "Nɔ bin ebul fɔ no usay yu de. Duya pik wan siti wit yu an ɔ tray bak."
+  "locationDetectionFailed": "Nɔ bin ebul fɔ no usay yu de. Duya pik wan siti wit yu an ɔ tray bak.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
 }

@@ -466,6 +466,13 @@ class AppLocalizationsSa extends AppLocalizations {
       'अस्मिन् यन्त्रे कम्पाससंवेदकः अनुपलब्धः अस्ति ।';
 
   @override
+  String get qiblaLocationRequiredTitle => 'किब्ला कृते स्थानं आवश्यकम्';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+
+  @override
   String get adhanNotificationChannelName => 'अधान अधिसूचना';
 
   @override

@@ -469,6 +469,13 @@ class AppLocalizationsFr extends AppLocalizations {
       'Le capteur de boussole n\'est pas disponible sur cet appareil.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Emplacement requis pour la Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Définissez votre position réelle avant d\'utiliser la boussole Qibla afin que la direction puisse être calculée avec précision.';
+
+  @override
   String get adhanNotificationChannelName => 'Notifications Adhan';
 
   @override

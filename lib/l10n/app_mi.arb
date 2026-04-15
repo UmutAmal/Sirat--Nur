@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Matohi wa inoi me te tangi azan.",
   "quranLoadFailed": "Kaore i taea te utaina nga ihirangi Quran. Me ngana ano.",
-  "locationDetectionFailed": "Kaore i kitea to waahi. Kōwhiria ā-ringatia tētahi tāone ka ngana anō rānei."
+  "locationDetectionFailed": "Kaore i kitea to waahi. Kōwhiria ā-ringatia tētahi tāone ka ngana anō rānei.",
+  "qiblaLocationRequiredTitle": "Ko te waahi e hiahiatia ana mo Qibla",
+  "qiblaLocationRequiredBody": "Tautuhia to waahi tuturu i mua i te whakamahi i te kapehu Qibla kia tika ai te tatau i te ahunga."
 }

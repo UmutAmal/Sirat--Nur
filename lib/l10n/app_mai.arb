@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "अधान अधिसूचना",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "quranLoadFailed": "कुरान सामग्री लोड नहि भ सकल। कृपया पुनः प्रयास करू।",
-  "locationDetectionFailed": "अहाँक स्थानक पता नहि लगा सकल। कृपया कोनो शहर मैन्युअल रूप सँ चुनू अथवा फेर सँ प्रयास करू."
+  "locationDetectionFailed": "अहाँक स्थानक पता नहि लगा सकल। कृपया कोनो शहर मैन्युअल रूप सँ चुनू अथवा फेर सँ प्रयास करू.",
+  "qiblaLocationRequiredTitle": "किबला के लिये स्थान आवश्यक",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
 }

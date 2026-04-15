@@ -466,6 +466,13 @@ class AppLocalizationsSr extends AppLocalizations {
       'Сензор компаса није доступан на овом уређају.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
 
   @override

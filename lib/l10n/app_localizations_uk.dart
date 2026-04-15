@@ -467,6 +467,13 @@ class AppLocalizationsUk extends AppLocalizations {
       'Датчик компаса недоступний на цьому пристрої.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Потрібне розташування для Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Перед використанням компаса Qibla встановіть своє фактичне місцезнаходження, щоб можна було точно розрахувати напрямок.';
+
+  @override
   String get adhanNotificationChannelName => 'Сповіщення азану';
 
   @override

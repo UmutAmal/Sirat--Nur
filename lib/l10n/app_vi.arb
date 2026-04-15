@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Thông báo Adhan",
   "adhanNotificationChannelDescription": "Cảnh báo thời gian cầu nguyện với âm thanh adhan.",
   "quranLoadFailed": "Không thể tải nội dung Kinh Qur'an. Vui lòng thử lại.",
-  "locationDetectionFailed": "Không thể phát hiện vị trí của bạn. Vui lòng chọn thành phố theo cách thủ công hoặc thử lại."
+  "locationDetectionFailed": "Không thể phát hiện vị trí của bạn. Vui lòng chọn thành phố theo cách thủ công hoặc thử lại.",
+  "qiblaLocationRequiredTitle": "Vị trí cần thiết cho Qibla",
+  "qiblaLocationRequiredBody": "Đặt vị trí thực tế của bạn trước khi sử dụng la bàn Qibla để có thể tính toán hướng chính xác."
 }

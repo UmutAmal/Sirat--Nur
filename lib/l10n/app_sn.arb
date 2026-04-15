@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Nyevero yenguva yemunamato ine adhan ruzha.",
   "quranLoadFailed": "Korani yatadza kurodha. Ndapota edza zvakare.",
-  "locationDetectionFailed": "Hatina kukwanisa kuona nzvimbo yako. Ndapota sarudza guta nemaoko kana edza zvakare."
+  "locationDetectionFailed": "Hatina kukwanisa kuona nzvimbo yako. Ndapota sarudza guta nemaoko kana edza zvakare.",
+  "qiblaLocationRequiredTitle": "Nzvimbo inodiwa kuQibla",
+  "qiblaLocationRequiredBody": "Seta nzvimbo yako chaiyo usati washandisa kambasi yeQibla kuti gwara rigone kuverengerwa nemazvo."
 }

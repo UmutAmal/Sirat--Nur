@@ -466,6 +466,13 @@ class AppLocalizationsYi extends AppLocalizations {
       'קאָמפּאַס סענסער איז ניט בנימצא אויף דעם מיטל.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'אָרט פארלאנגט פֿאַר קיבלאַ';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'שטעלן דיין פאַקטיש אָרט איידער ניצן די Qibla קאָמפּאַס אַזוי די ריכטונג קענען זיין קאַלקיאַלייטיד אַקיעראַטלי.';
+
+  @override
   String get adhanNotificationChannelName => 'אַדהאַן נאָוטאַפאַקיישאַנז';
 
   @override

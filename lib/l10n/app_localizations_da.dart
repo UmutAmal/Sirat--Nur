@@ -466,6 +466,13 @@ class AppLocalizationsDa extends AppLocalizations {
       'Kompassensor er ikke tilgængelig på denne enhed.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Placering påkrævet for Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Indstil din faktiske placering, før du bruger Qibla-kompasset, så retningen kan beregnes nøjagtigt.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan-meddelelser';
 
   @override

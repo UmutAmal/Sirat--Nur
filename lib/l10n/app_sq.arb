@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Njoftimet e ezanit",
   "adhanNotificationChannelDescription": "Alarmet për kohën e namazit me tingullin e ezanit.",
   "quranLoadFailed": "Përmbajtja e Kuranit nuk mund të ngarkohej. Ju lutemi provoni përsëri.",
-  "locationDetectionFailed": "Vendndodhja juaj nuk mund të zbulohej. Ju lutemi zgjidhni një qytet manualisht ose provoni përsëri."
+  "locationDetectionFailed": "Vendndodhja juaj nuk mund të zbulohej. Ju lutemi zgjidhni një qytet manualisht ose provoni përsëri.",
+  "qiblaLocationRequiredTitle": "Vendndodhja e kërkuar për Kibla",
+  "qiblaLocationRequiredBody": "Vendosni vendndodhjen tuaj aktuale përpara se të përdorni busullën e Kiblës në mënyrë që drejtimi të mund të llogaritet me saktësi."
 }

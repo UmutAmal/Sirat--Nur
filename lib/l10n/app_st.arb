@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Litsebiso tsa Adhan",
   "adhanNotificationChannelDescription": "Litemoso tsa nako ea thapelo ka molumo oa adhan.",
   "quranLoadFailed": "Likahare tsa Quran ha lia khona ho kenngoa. Ka kopo, leka hape.",
-  "locationDetectionFailed": "Ha e khone ho bona sebaka sa hau. Ka kopo, khetha toropo ka bouena kapa u leke hape."
+  "locationDetectionFailed": "Ha e khone ho bona sebaka sa hau. Ka kopo, khetha toropo ka bouena kapa u leke hape.",
+  "qiblaLocationRequiredTitle": "Sebaka se hlokahalang bakeng sa Qibla",
+  "qiblaLocationRequiredBody": "Beha sebaka sa hau sa 'nete pele u sebelisa sesupa-tsela sa Qibla e le hore tataiso e ka baloa ka nepo."
 }

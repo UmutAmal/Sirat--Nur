@@ -467,6 +467,13 @@ class AppLocalizationsFi extends AppLocalizations {
       'Kompassin tunnistin ei ole käytettävissä tässä laitteessa.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Qiblalle vaaditaan sijainti';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Aseta todellinen sijaintisi ennen Qibla-kompassin käyttöä, jotta suunta voidaan laskea tarkasti.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan-ilmoitukset';
 
   @override

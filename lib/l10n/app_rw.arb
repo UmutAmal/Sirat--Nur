@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Amatangazo ya Adhan",
   "adhanNotificationChannelDescription": "Igihe cyamasengesho kiburira hamwe nijwi rya adhan.",
   "quranLoadFailed": "Ibirimo Qor'ani ntibishobora kuremerwa. Nyamuneka gerageza.",
-  "locationDetectionFailed": "Could not detect your location. Please choose a city manually or try again."
+  "locationDetectionFailed": "Could not detect your location. Please choose a city manually or try again.",
+  "qiblaLocationRequiredTitle": "Ahantu hakenewe Qibla",
+  "qiblaLocationRequiredBody": "Shiraho aho uherereye mbere yo gukoresha Qibla compas kugirango icyerekezo kibare neza."
 }

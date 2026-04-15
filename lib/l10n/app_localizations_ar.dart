@@ -464,6 +464,13 @@ class AppLocalizationsAr extends AppLocalizations {
       'مستشعر البوصلة غير متوفر على هذا الجهاز.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'الموقع المطلوب للقبلة';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'قم بتعيين موقعك الفعلي قبل استخدام بوصلة القبلة حتى يمكن حساب الاتجاه بدقة.';
+
+  @override
   String get adhanNotificationChannelName => 'إشعارات الأذان';
 
   @override

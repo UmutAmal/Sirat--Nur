@@ -466,6 +466,13 @@ class AppLocalizationsIg extends AppLocalizations {
       'Ihe mmetụta kompas adịghị na ngwaọrụ a.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Ebe achọrọ maka Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Tọọ ọnọdụ gị n\'ezie tupu i jiri kompas Qibla ka e nwee ike gbakọọ ntụzịaka nke ọma.';
+
+  @override
   String get adhanNotificationChannelName => 'Ọkwa Adhan';
 
   @override

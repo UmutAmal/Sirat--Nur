@@ -466,6 +466,13 @@ class AppLocalizationsCo extends AppLocalizations {
       'U sensoru di bussola ùn hè micca dispunibule nantu à stu dispusitivu.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'U locu necessariu per a Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Definite u vostru locu attuale prima di utilizà a bussola Qibla per chì a direzzione pò esse calculata accuratamente.';
+
+  @override
   String get adhanNotificationChannelName => 'Notifiche Adhan';
 
   @override

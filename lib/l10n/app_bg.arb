@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Езан известия",
   "adhanNotificationChannelDescription": "Сигнали за време за молитва със звук на езан.",
   "quranLoadFailed": "Съдържанието на Корана не можа да бъде заредено. Моля, опитайте отново.",
-  "locationDetectionFailed": "Could not detect your location. Моля, изберете град ръчно или опитайте отново."
+  "locationDetectionFailed": "Could not detect your location. Моля, изберете град ръчно или опитайте отново.",
+  "qiblaLocationRequiredTitle": "Необходимо е местоположение за Qibla",
+  "qiblaLocationRequiredBody": "Задайте действителното си местоположение, преди да използвате компаса Qibla, така че посоката да може да се изчисли точно."
 }

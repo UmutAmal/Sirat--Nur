@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Pemberitahuan Adzan",
   "adhanNotificationChannelDescription": "Peringatan waktu sholat dengan suara adzan.",
   "quranLoadFailed": "Konten Al-Quran tidak dapat dimuat. Silakan coba lagi.",
-  "locationDetectionFailed": "Tidak dapat mendeteksi lokasi Anda. Silakan pilih kota secara manual atau coba lagi."
+  "locationDetectionFailed": "Tidak dapat mendeteksi lokasi Anda. Silakan pilih kota secara manual atau coba lagi.",
+  "qiblaLocationRequiredTitle": "Lokasi diperlukan untuk Kiblat",
+  "qiblaLocationRequiredBody": "Atur lokasi sebenarnya Anda sebelum menggunakan kompas kiblat agar arahnya dapat dihitung secara akurat."
 }

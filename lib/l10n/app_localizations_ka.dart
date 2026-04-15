@@ -466,6 +466,13 @@ class AppLocalizationsKa extends AppLocalizations {
       'კომპასის სენსორი მიუწვდომელია ამ მოწყობილობაზე.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'მდებარეობა საჭიროა Qibla-სთვის';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'დააყენეთ თქვენი რეალური მდებარეობა Qibla კომპასის გამოყენებამდე, რათა მიმართულება ზუსტად გამოითვალოს.';
+
+  @override
   String get adhanNotificationChannelName => 'ადანის შეტყობინებები';
 
   @override

@@ -468,6 +468,13 @@ class AppLocalizationsMai extends AppLocalizations {
       'एहि डिवाइस पर कम्पास सेंसर अनुपलब्ध अछि ।';
 
   @override
+  String get qiblaLocationRequiredTitle => 'किबला के लिये स्थान आवश्यक';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+
+  @override
   String get adhanNotificationChannelName => 'अधान अधिसूचना';
 
   @override

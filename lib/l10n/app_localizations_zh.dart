@@ -456,6 +456,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get qiblaSensorUnavailable => '指南针传感器在此设备上不可用。';
 
   @override
+  String get qiblaLocationRequiredTitle => '朝拜所需地点';
+
+  @override
+  String get qiblaLocationRequiredBody => '在使用朝拜指南针之前设置您的实际位置，以便可以准确计算方向。';
+
+  @override
   String get adhanNotificationChannelName => '宣礼通知';
 
   @override
@@ -2088,6 +2094,12 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get qiblaSensorUnavailable => '指南针传感器在此设备上不可用。';
 
   @override
+  String get qiblaLocationRequiredTitle => '朝拜所需地点';
+
+  @override
+  String get qiblaLocationRequiredBody => '在使用朝拜指南针之前设置您的实际位置，以便可以准确计算方向。';
+
+  @override
   String get adhanNotificationChannelName => '宣礼通知';
 
   @override
@@ -3718,6 +3730,12 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get qiblaSensorUnavailable => '指南針感測器在此裝置上不可用。';
+
+  @override
+  String get qiblaLocationRequiredTitle => '朝拜所需地點';
+
+  @override
+  String get qiblaLocationRequiredBody => '在使用朝拜指南針之前設定您的實際位置，以便可以準確計算方向。';
 
   @override
   String get adhanNotificationChannelName => '宣禮通知';

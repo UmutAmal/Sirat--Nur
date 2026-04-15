@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "quranLoadFailed": "ޤުރުއާން ކޮންޓެންޓް ލޯޑް ކުރެވޭ ގޮތެއް ނުވިއެވެ. އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ.",
-  "locationDetectionFailed": "ތިޔަ ލޮކޭޝަން ފާހަގަ ނުކުރެވުނެވެ. މެނުއަލްކޮށް ސިޓީއެއް ހޮއްވަވާ ނުވަތަ އަލުން މަސައްކަތް ކުރައްވާށެވެ."
+  "locationDetectionFailed": "ތިޔަ ލޮކޭޝަން ފާހަގަ ނުކުރެވުނެވެ. މެނުއަލްކޮށް ސިޓީއެއް ހޮއްވަވާ ނުވަތަ އަލުން މަސައްކަތް ކުރައްވާށެވެ.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
 }

@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan jakinarazpenak",
   "adhanNotificationChannelDescription": "Otoitz denbora alertak adhan soinuarekin.",
   "quranLoadFailed": "Ezin izan da Koranaren edukia kargatu. Mesedez, saiatu berriro.",
-  "locationDetectionFailed": "Ezin izan da zure kokapena hauteman. Aukeratu hiri bat eskuz edo saiatu berriro."
+  "locationDetectionFailed": "Ezin izan da zure kokapena hauteman. Aukeratu hiri bat eskuz edo saiatu berriro.",
+  "qiblaLocationRequiredTitle": "Qiblarako beharrezkoa den kokapena",
+  "qiblaLocationRequiredBody": "Ezarri zure benetako kokapena Qibla iparrorratza erabili aurretik, norabidea zehaztasunez kalkulatu ahal izateko."
 }

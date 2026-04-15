@@ -465,6 +465,13 @@ class AppLocalizationsNe extends AppLocalizations {
   String get qiblaSensorUnavailable => 'यस यन्त्रमा कम्पास सेन्सर उपलब्ध छैन।';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Qibla को लागि स्थान आवश्यक छ';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Qibla कम्पास प्रयोग गर्नु अघि आफ्नो वास्तविक स्थान सेट गर्नुहोस् ताकि दिशा सही रूपमा गणना गर्न सकिन्छ।';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan सूचनाहरू';
 
   @override

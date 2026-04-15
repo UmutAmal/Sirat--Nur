@@ -466,6 +466,13 @@ class AppLocalizationsVi extends AppLocalizations {
       'Cảm biến la bàn không khả dụng trên thiết bị này.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Vị trí cần thiết cho Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Đặt vị trí thực tế của bạn trước khi sử dụng la bàn Qibla để có thể tính toán hướng chính xác.';
+
+  @override
   String get adhanNotificationChannelName => 'Thông báo Adhan';
 
   @override

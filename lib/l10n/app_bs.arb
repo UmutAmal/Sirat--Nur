@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Upozorenje o vremenu molitve sa zvukom ezana.",
   "quranLoadFailed": "Sadržaj Kur'ana nije mogao biti učitan. Molimo pokušajte ponovo.",
-  "locationDetectionFailed": "Nije moguće otkriti vašu lokaciju. Molimo odaberite grad ručno ili pokušajte ponovo."
+  "locationDetectionFailed": "Nije moguće otkriti vašu lokaciju. Molimo odaberite grad ručno ili pokušajte ponovo.",
+  "qiblaLocationRequiredTitle": "Lokacija je potrebna za Qibla",
+  "qiblaLocationRequiredBody": "Postavite svoju stvarnu lokaciju prije korištenja Qibla kompasa kako bi se smjer mogao točno izračunati."
 }

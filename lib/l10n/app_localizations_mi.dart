@@ -467,6 +467,14 @@ class AppLocalizationsMi extends AppLocalizations {
       'Karekau te pūoko kāpehu i te wātea ki tēnei pūrere.';
 
   @override
+  String get qiblaLocationRequiredTitle =>
+      'Ko te waahi e hiahiatia ana mo Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Tautuhia to waahi tuturu i mua i te whakamahi i te kapehu Qibla kia tika ai te tatau i te ahunga.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
 
   @override

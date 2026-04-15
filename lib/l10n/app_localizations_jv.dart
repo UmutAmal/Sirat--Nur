@@ -466,6 +466,13 @@ class AppLocalizationsJv extends AppLocalizations {
       'Sensor kompas ora kasedhiya ing piranti iki.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Lokasi dibutuhake kanggo Kiblat';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Setel lokasi asline sadurunge nggunakake kompas kiblat supaya arah bisa diitung kanthi akurat.';
+
+  @override
   String get adhanNotificationChannelName => 'Notifikasi Adzan';
 
   @override

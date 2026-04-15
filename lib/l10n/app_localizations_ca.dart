@@ -470,6 +470,13 @@ class AppLocalizationsCa extends AppLocalizations {
       'El sensor de la brúixola no està disponible en aquest dispositiu.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Ubicació necessària per a la Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Establiu la vostra ubicació real abans d\'utilitzar la brúixola Qibla perquè la direcció es pugui calcular amb precisió.';
+
+  @override
   String get adhanNotificationChannelName => 'Notificacions Adhan';
 
   @override

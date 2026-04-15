@@ -462,6 +462,13 @@ class AppLocalizationsAm extends AppLocalizations {
   String get qiblaSensorUnavailable => 'የኮምፓስ ዳሳሽ በዚህ መሳሪያ ላይ የለም።';
 
   @override
+  String get qiblaLocationRequiredTitle => 'ለቂብላ ቦታ ያስፈልጋል';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'የቂብላ ኮምፓስን ከመጠቀምዎ በፊት ትክክለኛ ቦታዎን ያዘጋጁ አቅጣጫው በትክክል እንዲሰላ ያድርጉ።';
+
+  @override
   String get adhanNotificationChannelName => 'አድሃን ማሳወቂያዎች';
 
   @override

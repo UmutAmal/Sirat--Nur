@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Upozornenia Adhan",
   "adhanNotificationChannelDescription": "Upozorňuje na čas modlitby zvukom adhan.",
   "quranLoadFailed": "Obsah Koránu sa nepodarilo načítať. Skúste to znova.",
-  "locationDetectionFailed": "Nepodarilo sa zistiť vašu polohu. Vyberte mesto ručne alebo to skúste znova."
+  "locationDetectionFailed": "Nepodarilo sa zistiť vašu polohu. Vyberte mesto ručne alebo to skúste znova.",
+  "qiblaLocationRequiredTitle": "Miesto požadované pre Qibla",
+  "qiblaLocationRequiredBody": "Pred použitím kompasu Qibla nastavte svoju skutočnú polohu, aby bolo možné presne vypočítať smer."
 }

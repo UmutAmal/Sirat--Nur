@@ -466,6 +466,13 @@ class AppLocalizationsKu extends AppLocalizations {
       'Sensor Compass li ser vê cîhazê ne berdest e.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Cihê ji bo Qibla hewce ye';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Berî ku hûn qursa Qibla bikar bînin cîhê xweya rastîn bicîh bikin da ku rêgez rast were hesibandin.';
+
+  @override
   String get adhanNotificationChannelName => 'Azan Notifications';
 
   @override

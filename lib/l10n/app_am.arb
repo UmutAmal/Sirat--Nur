@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "አድሃን ማሳወቂያዎች",
   "adhanNotificationChannelDescription": "የጸሎት ጊዜ ማንቂያዎች ከአድሃን ድምፅ ጋር።",
   "quranLoadFailed": "የቁርኣን ይዘት ሊጫን አልቻለም። እባክህ እንደገና ሞክር።",
-  "locationDetectionFailed": "አካባቢህን ማወቅ አልተቻለም። እባክዎ ከተማን እራስዎ ይምረጡ ወይም እንደገና ይሞክሩ።"
+  "locationDetectionFailed": "አካባቢህን ማወቅ አልተቻለም። እባክዎ ከተማን እራስዎ ይምረጡ ወይም እንደገና ይሞክሩ።",
+  "qiblaLocationRequiredTitle": "ለቂብላ ቦታ ያስፈልጋል",
+  "qiblaLocationRequiredBody": "የቂብላ ኮምፓስን ከመጠቀምዎ በፊት ትክክለኛ ቦታዎን ያዘጋጁ አቅጣጫው በትክክል እንዲሰላ ያድርጉ።"
 }

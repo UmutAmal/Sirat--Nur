@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Hoolaha Adhan",
   "adhanNotificationChannelDescription": "ʻO nā mākaʻikaʻi manawa pule me ke kani adhan.",
   "quranLoadFailed": "ʻAʻole hiki ke hoʻouka ʻia ka ʻike Quran. E ʻoluʻolu e hoʻāʻo hou.",
-  "locationDetectionFailed": "ʻAʻole hiki ke ʻike i kou wahi. E ʻoluʻolu e koho lima i ke kūlanakauhale a i ʻole e hoʻāʻo hou."
+  "locationDetectionFailed": "ʻAʻole hiki ke ʻike i kou wahi. E ʻoluʻolu e koho lima i ke kūlanakauhale a i ʻole e hoʻāʻo hou.",
+  "qiblaLocationRequiredTitle": "Pono kahi wahi no Qibla",
+  "qiblaLocationRequiredBody": "E hoʻonoho i kou wahi maoli ma mua o ka hoʻohana ʻana i ka panana Qibla i hiki ke helu pololei ʻia ke kuhikuhi."
 }

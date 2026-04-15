@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Mga Notification ng Adhan",
   "adhanNotificationChannelDescription": "Mga alerto sa oras ng panalangin na may tunog ng adhan.",
   "quranLoadFailed": "Hindi ma-load ang nilalaman ng Quran. Pakisubukang muli.",
-  "locationDetectionFailed": "Hindi matukoy ang iyong lokasyon. Mangyaring pumili ng lungsod nang manu-mano o subukang muli."
+  "locationDetectionFailed": "Hindi matukoy ang iyong lokasyon. Mangyaring pumili ng lungsod nang manu-mano o subukang muli.",
+  "qiblaLocationRequiredTitle": "Kinakailangan ang lokasyon para sa Qibla",
+  "qiblaLocationRequiredBody": "Itakda ang iyong aktwal na lokasyon bago gamitin ang Qibla compass para tumpak na makalkula ang direksyon."
 }

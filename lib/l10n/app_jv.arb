@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Notifikasi Adzan",
   "adhanNotificationChannelDescription": "Tandha wektu shalat kanthi swara adzan.",
   "quranLoadFailed": "Isi Quran ora bisa dimuat. Coba maneh.",
-  "locationDetectionFailed": "Ora bisa ndeteksi lokasi sampeyan. Pilih kutha kanthi manual utawa coba maneh."
+  "locationDetectionFailed": "Ora bisa ndeteksi lokasi sampeyan. Pilih kutha kanthi manual utawa coba maneh.",
+  "qiblaLocationRequiredTitle": "Lokasi dibutuhake kanggo Kiblat",
+  "qiblaLocationRequiredBody": "Setel lokasi asline sadurunge nggunakake kompas kiblat supaya arah bisa diitung kanthi akurat."
 }

@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan tilkynningar",
   "adhanNotificationChannelDescription": "Bænatímaviðvaranir með adhan hljóði.",
   "quranLoadFailed": "Ekki var hægt að hlaða efni Kóransins. Vinsamlegast reyndu aftur.",
-  "locationDetectionFailed": "Gat ekki greint staðsetningu þína. Vinsamlegast veldu borg handvirkt eða reyndu aftur."
+  "locationDetectionFailed": "Gat ekki greint staðsetningu þína. Vinsamlegast veldu borg handvirkt eða reyndu aftur.",
+  "qiblaLocationRequiredTitle": "Staðsetning krafist fyrir Qibla",
+  "qiblaLocationRequiredBody": "Stilltu raunverulega staðsetningu þína áður en þú notar Qibla áttavitann svo hægt sé að reikna stefnuna nákvæmlega."
 }

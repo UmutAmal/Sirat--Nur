@@ -465,6 +465,13 @@ class AppLocalizationsSd extends AppLocalizations {
   String get qiblaSensorUnavailable => 'کمپاس سينسر هن ڊوائيس تي دستياب ناهي.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'قبله لاءِ گهربل مقام';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'قبله کمپاس استعمال ڪرڻ کان اڳ پنھنجي اصل جڳھ کي سيٽ ڪريو ته جيئن ھدايت جي صحيح حساب ڪري سگھجي.';
+
+  @override
   String get adhanNotificationChannelName => 'اذان جا اطلاع';
 
   @override

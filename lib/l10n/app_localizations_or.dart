@@ -467,6 +467,13 @@ class AppLocalizationsOr extends AppLocalizations {
       'ଏହି ଡିଭାଇସରେ କମ୍ପାସ୍ ସେନ୍ସର ଉପଲବ୍ଧ ନାହିଁ |';
 
   @override
+  String get qiblaLocationRequiredTitle => 'କିବଲା ପାଇଁ ସ୍ଥାନ ଆବଶ୍ୟକ |';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'କିବଲା କମ୍ପାସ୍ ବ୍ୟବହାର କରିବା ପୂର୍ବରୁ ଆପଣଙ୍କର ପ୍ରକୃତ ଅବସ୍ଥାନ ସେଟ୍ କରନ୍ତୁ ଯାହା ଦ୍ direction ାରା ଦିଗଟି ସଠିକ୍ ଭାବରେ ଗଣନା କରାଯାଇପାରିବ |';
+
+  @override
   String get adhanNotificationChannelName => 'ଆଡନ୍ ବିଜ୍ଞପ୍ତିଗୁଡିକ |';
 
   @override

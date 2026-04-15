@@ -467,6 +467,13 @@ class AppLocalizationsLv extends AppLocalizations {
       'Kompasa sensors šajā ierīcē nav pieejams.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Nepieciešama vieta Qiblai';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Pirms Qibla kompasa lietošanas iestatiet savu faktisko atrašanās vietu, lai varētu precīzi aprēķināt virzienu.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan paziņojumi';
 
   @override

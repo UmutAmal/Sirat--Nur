@@ -467,6 +467,13 @@ class AppLocalizationsSq extends AppLocalizations {
       'Sensori i busullës nuk ofrohet në këtë pajisje.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Vendndodhja e kërkuar për Kibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Vendosni vendndodhjen tuaj aktuale përpara se të përdorni busullën e Kiblës në mënyrë që drejtimi të mund të llogaritet me saktësi.';
+
+  @override
   String get adhanNotificationChannelName => 'Njoftimet e ezanit';
 
   @override

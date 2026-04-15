@@ -466,6 +466,13 @@ class AppLocalizationsSm extends AppLocalizations {
       'E le o maua le masini tapasa i lenei masini.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Manaomia nofoaga mo Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Seti lou nofoaga sa\'o a\'o le\'i fa\'aogaina le tapasa Qibla ina ia mafai ona fa\'atatau tonu le itu.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
 
   @override

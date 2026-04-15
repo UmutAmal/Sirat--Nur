@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Notifiki Adhan",
   "adhanNotificationChannelDescription": "Twissijiet tal-ħin tat-talb b'ħoss adhan.",
   "quranLoadFailed": "Il-kontenut tal-Quran ma setax jitgħabba. Jekk jogħġbok erġa' pprova.",
-  "locationDetectionFailed": "Ma setgħetx tiskopri l-lokalità tiegħek. Jekk jogħġbok agħżel belt manwalment jew erġa' pprova."
+  "locationDetectionFailed": "Ma setgħetx tiskopri l-lokalità tiegħek. Jekk jogħġbok agħżel belt manwalment jew erġa' pprova.",
+  "qiblaLocationRequiredTitle": "Post meħtieġ għall-Qibla",
+  "qiblaLocationRequiredBody": "Issettja l-post attwali tiegħek qabel tuża l-boxxla Qibla sabiex id-direzzjoni tkun tista 'tiġi kkalkulata b'mod preċiż."
 }

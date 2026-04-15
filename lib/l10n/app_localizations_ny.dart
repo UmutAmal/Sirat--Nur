@@ -467,6 +467,13 @@ class AppLocalizationsNy extends AppLocalizations {
       'Sensa ya Compass sichikupezeka pachidachi.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Malo ofunikira ku Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Khazikitsani malo anu enieni musanagwiritse ntchito kampasi ya Qibla kuti kolowera kuwerengedwe molondola.';
+
+  @override
   String get adhanNotificationChannelName => 'Zidziwitso za Adhan';
 
   @override

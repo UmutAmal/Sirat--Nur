@@ -468,6 +468,13 @@ class AppLocalizationsEl extends AppLocalizations {
       'Ο αισθητήρας πυξίδας δεν είναι διαθέσιμος σε αυτήν τη συσκευή.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Απαιτείται τοποθεσία για Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Ορίστε την πραγματική θέση σας πριν χρησιμοποιήσετε την πυξίδα Qibla, ώστε η κατεύθυνση να μπορεί να υπολογιστεί με ακρίβεια.';
+
+  @override
   String get adhanNotificationChannelName => 'Ειδοποιήσεις Adhan';
 
   @override

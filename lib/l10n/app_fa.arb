@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "اعلان های اذان",
   "adhanNotificationChannelDescription": "هشدار زمان نماز با صدای اذان.",
   "quranLoadFailed": "محتوای قرآن بارگیری نشد. لطفا دوباره امتحان کنید.",
-  "locationDetectionFailed": "موقعیت مکانی شما شناسایی نشد. لطفاً یک شهر را به صورت دستی انتخاب کنید یا دوباره امتحان کنید."
+  "locationDetectionFailed": "موقعیت مکانی شما شناسایی نشد. لطفاً یک شهر را به صورت دستی انتخاب کنید یا دوباره امتحان کنید.",
+  "qiblaLocationRequiredTitle": "مکان مورد نیاز برای قبله",
+  "qiblaLocationRequiredBody": "مکان واقعی خود را قبل از استفاده از قطب نما قبله تنظیم کنید تا جهت را بتوان به طور دقیق محاسبه کرد."
 }

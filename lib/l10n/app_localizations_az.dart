@@ -466,6 +466,13 @@ class AppLocalizationsAz extends AppLocalizations {
       'Bu cihazda kompas sensoru mövcud deyil.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Qiblə üçün yer tələb olunur';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Qiblə kompasından istifadə etməzdən əvvəl faktiki yerinizi təyin edin ki, istiqamət dəqiq hesablana bilsin.';
+
+  @override
   String get adhanNotificationChannelName => 'Azan bildirişləri';
 
   @override

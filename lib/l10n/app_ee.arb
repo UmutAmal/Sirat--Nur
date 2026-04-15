@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "quranLoadFailed": "Womete ŋu tsɔ Quran me nyawo de eme o. Taflatse gadze agbagba ake.",
-  "locationDetectionFailed": "Mete ŋu de dzesi afi si nèle o. Taflatse tia du aɖe kple asi alo nàgadze agbagba ake."
+  "locationDetectionFailed": "Mete ŋu de dzesi afi si nèle o. Taflatse tia du aɖe kple asi alo nàgadze agbagba ake.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
 }

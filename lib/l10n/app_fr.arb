@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Notifications Adhan",
   "adhanNotificationChannelDescription": "Alertes d'heure de prière avec le son adhan.",
   "quranLoadFailed": "Le contenu du Coran n'a pas pu être chargé. Veuillez réessayer.",
-  "locationDetectionFailed": "Impossible de détecter votre position. Veuillez choisir une ville manuellement ou réessayer."
+  "locationDetectionFailed": "Impossible de détecter votre position. Veuillez choisir une ville manuellement ou réessayer.",
+  "qiblaLocationRequiredTitle": "Emplacement requis pour la Qibla",
+  "qiblaLocationRequiredBody": "Définissez votre position réelle avant d'utiliser la boussole Qibla afin que la direction puisse être calculée avec précision."
 }

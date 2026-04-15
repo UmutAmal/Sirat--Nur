@@ -467,6 +467,13 @@ class AppLocalizationsSk extends AppLocalizations {
       'Snímač kompasu nie je v tomto zariadení k dispozícii.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Miesto požadované pre Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Pred použitím kompasu Qibla nastavte svoju skutočnú polohu, aby bolo možné presne vypočítať smer.';
+
+  @override
   String get adhanNotificationChannelName => 'Upozornenia Adhan';
 
   @override

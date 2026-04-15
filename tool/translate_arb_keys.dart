@@ -242,6 +242,8 @@ bool _mustStaySingleLine(String key) {
   return key.startsWith('audioVoice') ||
       key == 'quranLoadFailed' ||
       key == 'locationDetectionFailed' ||
+      key == 'qiblaLocationRequiredTitle' ||
+      key == 'qiblaLocationRequiredBody' ||
       key == 'adhanNotificationChannelName' ||
       key == 'adhanNotificationChannelDescription';
 }

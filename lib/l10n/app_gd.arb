@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "quranLoadFailed": "Cha b’ urrainn dhuinn susbaint Quran a luchdachadh. Feuch ris a-rithist.",
-  "locationDetectionFailed": "Cha b' urrainn dhuinn d' ionad a lorg. Tagh baile-mòr le làimh no feuch ris a-rithist."
+  "locationDetectionFailed": "Cha b' urrainn dhuinn d' ionad a lorg. Tagh baile-mòr le làimh no feuch ris a-rithist.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
 }

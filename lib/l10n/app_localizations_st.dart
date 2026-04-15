@@ -468,6 +468,14 @@ class AppLocalizationsSt extends AppLocalizations {
       'Compass sensor ha e fumanehe sesebelisoa sena.';
 
   @override
+  String get qiblaLocationRequiredTitle =>
+      'Sebaka se hlokahalang bakeng sa Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Beha sebaka sa hau sa \'nete pele u sebelisa sesupa-tsela sa Qibla e le hore tataiso e ka baloa ka nepo.';
+
+  @override
   String get adhanNotificationChannelName => 'Litsebiso tsa Adhan';
 
   @override

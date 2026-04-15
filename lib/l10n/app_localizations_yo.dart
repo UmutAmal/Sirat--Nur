@@ -465,6 +465,13 @@ class AppLocalizationsYo extends AppLocalizations {
   String get qiblaSensorUnavailable => 'Kompasi sensọ ko si lori ẹrọ yi.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+
+  @override
   String get adhanNotificationChannelName => 'Awọn iwifunni Adhan';
 
   @override

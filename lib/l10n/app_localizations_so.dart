@@ -467,6 +467,13 @@ class AppLocalizationsSo extends AppLocalizations {
       'Dareemaha Compass lagama heli karo qalabkan.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Meesha loo baahan yahay Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Deji goobtaada dhabta ah ka hor intaadan isticmaalin kombuyuutarka Qibla si jihada loo xisaabiyo si sax ah.';
+
+  @override
   String get adhanNotificationChannelName => 'Ogeysiinta Adhan';
 
   @override

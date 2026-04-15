@@ -468,6 +468,13 @@ class AppLocalizationsGl extends AppLocalizations {
       'O sensor do compás non está dispoñible neste dispositivo.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Localización necesaria para Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Establece a túa localización real antes de usar o compás Qibla para que se poida calcular a dirección con precisión.';
+
+  @override
   String get adhanNotificationChannelName => 'Notificacións de Adhan';
 
   @override

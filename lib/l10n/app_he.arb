@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "התראות אדהאן",
   "adhanNotificationChannelDescription": "התראות על זמן תפילה עם צליל אדהן.",
   "quranLoadFailed": "לא ניתן היה לטעון את תוכן הקוראן. אנא נסה שוב.",
-  "locationDetectionFailed": "לא ניתן היה לזהות את המיקום שלך. אנא בחר עיר באופן ידני או נסה שוב."
+  "locationDetectionFailed": "לא ניתן היה לזהות את המיקום שלך. אנא בחר עיר באופן ידני או נסה שוב.",
+  "qiblaLocationRequiredTitle": "נדרש מיקום עבור Qibla",
+  "qiblaLocationRequiredBody": "הגדר את המיקום האמיתי שלך לפני השימוש במצפן Qibla כך שניתן יהיה לחשב את הכיוון במדויק."
 }

@@ -466,6 +466,13 @@ class AppLocalizationsBn extends AppLocalizations {
   String get qiblaSensorUnavailable => 'এই ডিভাইসে কম্পাস সেন্সর অনুপলব্ধ৷';
 
   @override
+  String get qiblaLocationRequiredTitle => 'কিবলার জন্য প্রয়োজনীয় অবস্থান';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'কিবলা কম্পাস ব্যবহার করার আগে আপনার প্রকৃত অবস্থান সেট করুন যাতে দিকটি সঠিকভাবে গণনা করা যায়।';
+
+  @override
   String get adhanNotificationChannelName => 'আযান বিজ্ঞপ্তি';
 
   @override

@@ -468,6 +468,13 @@ class AppLocalizationsHu extends AppLocalizations {
       'Az iránytűérzékelő nem érhető el ezen az eszközön.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Hely szükséges a Qibla számára';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'A Qibla iránytű használata előtt állítsa be a tényleges tartózkodási helyét, hogy az irányt pontosan ki lehessen számítani.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan értesítések';
 
   @override

@@ -469,6 +469,13 @@ class AppLocalizationsDe extends AppLocalizations {
       'Der Kompasssensor ist auf diesem Gerät nicht verfügbar.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Standort für Qibla erforderlich';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Stellen Sie Ihren tatsächlichen Standort ein, bevor Sie den Qibla-Kompass verwenden, damit die Richtung genau berechnet werden kann.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhan-Benachrichtigungen';
 
   @override

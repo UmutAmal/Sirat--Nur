@@ -466,6 +466,13 @@ class AppLocalizationsHaw extends AppLocalizations {
       'ʻAʻole loaʻa ka mea ʻike panana panana ma kēia hāmeʻa.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Pono kahi wahi no Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'E hoʻonoho i kou wahi maoli ma mua o ka hoʻohana ʻana i ka panana Qibla i hiki ke helu pololei ʻia ke kuhikuhi.';
+
+  @override
   String get adhanNotificationChannelName => 'Hoolaha Adhan';
 
   @override

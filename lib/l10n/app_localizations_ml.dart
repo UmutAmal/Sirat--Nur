@@ -465,6 +465,13 @@ class AppLocalizationsMl extends AppLocalizations {
   String get qiblaSensorUnavailable => 'ഈ ഉപകരണത്തിൽ കോമ്പസ് സെൻസർ ലഭ്യമല്ല.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'ഖിബ്ലയ്ക്ക് ആവശ്യമായ സ്ഥലം';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'ഖിബ്ല കോമ്പസ് ഉപയോഗിക്കുന്നതിന് മുമ്പ് നിങ്ങളുടെ യഥാർത്ഥ സ്ഥാനം സജ്ജമാക്കുക, അങ്ങനെ ദിശ കൃത്യമായി കണക്കാക്കാം.';
+
+  @override
   String get adhanNotificationChannelName => 'അധാൻ അറിയിപ്പുകൾ';
 
   @override

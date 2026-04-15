@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "د اذان خبرتیاوې",
   "adhanNotificationChannelDescription": "د اذان په غږ سره د لمانځه وخت خبرتیا.",
   "quranLoadFailed": "د قرآن محتوا نشي پورته کولی. مهرباني وکړئ بیا هڅه وکړئ.",
-  "locationDetectionFailed": "ستاسو ځای نشی معلومولی. مهرباني وکړئ په لاسي ډول یو ښار وټاکئ یا بیا هڅه وکړئ."
+  "locationDetectionFailed": "ستاسو ځای نشی معلومولی. مهرباني وکړئ په لاسي ډول یو ښار وټاکئ یا بیا هڅه وکړئ.",
+  "qiblaLocationRequiredTitle": "د قبلې لپاره ځای اړین دی",
+  "qiblaLocationRequiredBody": "د قبلې کمپاس کارولو دمخه خپل اصلي ځای وټاکئ ترڅو سمت په دقیق ډول محاسبه شي."
 }

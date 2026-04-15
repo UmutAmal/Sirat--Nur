@@ -466,6 +466,13 @@ class AppLocalizationsTr extends AppLocalizations {
       'Bu cihazda pusula sensörü kullanılamıyor.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Kıble için konum gerekli';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Kıble yönünün doğru hesaplanabilmesi için pusulayı kullanmadan önce gerçek konumunuzu ayarlayın.';
+
+  @override
   String get adhanNotificationChannelName => 'Ezan Bildirimleri';
 
   @override

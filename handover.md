@@ -4358,3 +4358,49 @@
 
 ### Sonraki Adım
 - Ham hata sızıntısı taramasına devam edilecek; sıradaki adaylar `main.dart` global bootstrap logları, qibla placeholder hata ayrıntıları ve premium refresh placeholder zincirinin kullanıcıya açık olup olmadığıdır.
+
+## 2026-04-15 TUR-111 — Require Real Location For Qibla
+
+### Yapılan İşlem
+- `lib/features/qibla/qibla_page.dart` konum yokken İstanbul koordinatlarına sessiz fallback yapmayı bıraktı.
+- Qibla sensör stream'i yalnızca `settings.latitude` ve `settings.longitude` birlikte varsa izleniyor.
+- Konum eksikse kullanıcıya `qiblaLocationRequiredTitle` ve `qiblaLocationRequiredBody` üzerinden lokalize, dürüst empty-state gösteriliyor.
+- Yeni Qibla konum copy'si `app_en.arb` ve `app_tr.arb` şablonlarına eklendi; `tool/translate_arb_keys.dart --force` ile tüm `app_*.arb` dosyalarına yayıldı.
+- `flutter gen-l10n` ile tüm generated `AppLocalizations` sınıfları yenilendi.
+- `test/features/qibla/qibla_page_test.dart` konum yokken sensörün izlenmediğini, fallback koordinatlarının kaynakta kalmadığını ve iki koordinatın da zorunlu olduğunu doğrulayan regresyon testleri kazandı.
+- `test/arb_ui_localization_test.dart` öncelikli locale'lerde yeni Qibla konum copy'sinin İngilizce fallback'e düşmediğini kontrol ediyor.
+
+### Neden Yapıldı
+- `lib/features/qibla/qibla_page.dart` önce `settings.latitude ?? 41.0082` ve `settings.longitude ?? 28.9784` ile konum yokken İstanbul üzerinden Qibla açısı hesaplıyordu.
+- Bu davranış ilk kurulumda veya kullanıcı konumu temizlediğinde yanlış şehir üzerinden ibadet yönlendirmesi üretme riski taşıyordu.
+- Qibla gibi dini hassasiyet taşıyan akışlarda sessiz coğrafi tahmin yerine gerçek kullanıcı konumu veya dürüst blokaj gerekir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\qibla\qibla_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Konum eksikken Qibla yönü artık yanlış varsayımla hesaplanmaz.
+- Kullanıcı gerçek konum ayarlamadan pusula yönlendirmesi görmez.
+- Qibla konum eksikliği 180+ locale zincirinde localized copy ile açıklanır.
+- Regresyon testleri fallback koordinatlarının geri dönmesini yakalar.
+
+### Test Sonucu
+- Başlangıç `flutter analyze` PASS
+- Başlangıç `flutter test --reporter compact` PASS (`248/248`)
+- İlk hedef test koşusu `app_tw.arb` yeni Qibla başlığını İngilizce bıraktığı için FAIL verdi; `app_tw.arb` ve sibling `app_ak.arb` Twi/Akan copy'si düzeltilip `flutter gen-l10n` yeniden çalıştırıldı.
+- `flutter test test/features/qibla/qibla_page_test.dart test/arb_ui_localization_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`251/251`)
+- `git diff --check` PASS
+
+### Risk Değişimi
+- Qibla ekranında konum yokken yanlış şehir üzerinden yön hesaplama riski: `16/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde Qibla hata sınıflandırmasındaki `error.toString()` kullanımı ve `main.dart` bootstrap loglarında raw hata ayrıntılarının kullanıcıya veya loglara fazla taşınıp taşınmadığı taranacak.

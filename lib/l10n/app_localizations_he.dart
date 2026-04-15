@@ -464,6 +464,13 @@ class AppLocalizationsHe extends AppLocalizations {
   String get qiblaSensorUnavailable => 'חיישן מצפן אינו זמין במכשיר זה.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'נדרש מיקום עבור Qibla';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'הגדר את המיקום האמיתי שלך לפני השימוש במצפן Qibla כך שניתן יהיה לחשב את הכיוון במדויק.';
+
+  @override
   String get adhanNotificationChannelName => 'התראות אדהאן';
 
   @override

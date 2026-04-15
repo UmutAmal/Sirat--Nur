@@ -466,6 +466,13 @@ class AppLocalizationsEt extends AppLocalizations {
       'Kompassi andur pole selles seadmes saadaval.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Qibla jaoks vajalik asukoht';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Enne Qibla kompassi kasutamist määrake oma tegelik asukoht, et suunda saaks täpselt arvutada.';
+
+  @override
   String get adhanNotificationChannelName => 'Adhani teatised';
 
   @override

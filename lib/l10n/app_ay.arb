@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Adhan Yatiyawinaka",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "quranLoadFailed": "Quran ukax janiw cargañjamäkänti. Ukhamaraki, mayampi yant’apxañani.",
-  "locationDetectionFailed": "Janiw kawkhans jikxataskta uk uñt’ayañjamäkänti. Please choose a city manually or try again."
+  "locationDetectionFailed": "Janiw kawkhans jikxataskta uk uñt’ayañjamäkänti. Please choose a city manually or try again.",
+  "qiblaLocationRequiredTitle": "Qibla markatakix kawkhantix utjki ukax wakisiwa",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
 }

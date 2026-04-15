@@ -763,5 +763,7 @@
   "adhanNotificationChannelName": "Sanarwar Adhan",
   "adhanNotificationChannelDescription": "Ana faɗakar da lokacin sallah tare da sautin adhan.",
   "quranLoadFailed": "An kasa loda abun cikin Al-Qur'ani. Da fatan za a sake gwadawa.",
-  "locationDetectionFailed": "An kasa gano wurin ku. Da fatan za a zaɓi birni da hannu ko a sake gwadawa."
+  "locationDetectionFailed": "An kasa gano wurin ku. Da fatan za a zaɓi birni da hannu ko a sake gwadawa.",
+  "qiblaLocationRequiredTitle": "Wurin da ake buƙata don alƙibla",
+  "qiblaLocationRequiredBody": "Saita ainihin wurinka kafin amfani da kamfas ɗin alƙibla domin a iya ƙididdige alkibla daidai."
 }

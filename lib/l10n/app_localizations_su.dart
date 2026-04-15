@@ -467,6 +467,13 @@ class AppLocalizationsSu extends AppLocalizations {
       'Sénsor kompas henteu sayogi dina alat ieu.';
 
   @override
+  String get qiblaLocationRequiredTitle => 'Lokasi diperlukeun pikeun Kiblat';
+
+  @override
+  String get qiblaLocationRequiredBody =>
+      'Setel lokasi saleresna anjeun sateuacan nganggo kompas kiblat supados arahna tiasa diitung sacara akurat.';
+
+  @override
   String get adhanNotificationChannelName => 'Bewara Adzan';
 
   @override
