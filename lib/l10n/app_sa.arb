@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "इति .\nसुपाबेसे मेघसारणीः अनुपलब्धाः; bundled fallback सक्रियः",
+  "diagnosticsQuranCloudTablesMissing": "सुपाबेस् इत्यत्र मेघसारणीः अनुपलब्धाः; bundled fallback सक्रियः",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "इति .\nमेघ juz मेटाडाटा अनुपलब्धः; bundled संरचनात्मक fallback सक्रिय",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -355,7 +355,7 @@
   "chatbotLimitReached": "दैनिकप्रश्नसीमा प्राप्ता। असीमितस्य कृते प्रीमियमं प्रति उन्नयनं कुर्वन्तु।",
   "chatbotErrorMsg": "अहं प्रतिक्रियां जनयितुं न शक्तवान्। कृपया पुनः प्रयासं कुर्वन्तु।",
   "chatbotOfflinePrompt": "इति .\nसत्यापितं अफलाइन इस्लामिकज्ञानकोशम् अद्यापि क्यूरेटिङ्ग् क्रियते। इदानीं भवान् offline fallback सक्षमं कर्तुं शक्नोति, परन्तु स्रोतः दत्तांशसमूहः सज्जः न भवति तावत् केवलं सीमितसुरक्षितसन्देशान् एव दर्शयिष्यति ।\n\nकिं भवान् अफलाइन-फॉलबैक् सक्षमं कर्तुम् इच्छति?",
-  "chatbotOfflineSwitched": "इति .\nअफलाइन fallback सक्षमम्। सत्यापितस्थानीय इस्लामिक उत्तराणि अद्यापि सज्जाः न सन्ति।",
+  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "Offline Fallback सक्षमं कुर्वन्तु",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "इति .\nडाउनलोड करें",
-  "resumeDownload": "इति .\nResume Download",
-  "deleteDownloadedFiles": "इति .\nडाउनलोड् कृतानि सञ्चिकाः विलोपयन्तु",
+  "downloadAction": "Download",
+  "resumeDownload": "Resume Download",
+  "deleteDownloadedFiles": "Delete Downloaded Files",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "इति .\n{reciter} कृते डाउनलोड् रद्दम्।",
+  "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "इति .\n{reciter} कृते डाउनलोड् सम्पन्नम्।",
+  "downloadFinishedForReciter": "Download completed for {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "मेघ एपिआइ विन्यस्तं नास्ति । सत्यापितं अफलाइन इस्लामिकमार्गदर्शनं अद्यापि उपलब्धं नास्ति।",
-  "chatbotLocalNoInfo": "इति .\n[OFFLINE] सत्यापितं स्थानीयं इस्लामिकमार्गदर्शनं अद्यापि उपलब्धं नास्ति। स्रोत-उत्तराणां कृते Cloud AI -इत्यत्र स्विच् कुर्वन्तु ।",
+  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "मस्जिदाः",
   "halalFood": "हलाल भोजन",
   "placesSearchArea": "एतत् क्षेत्रं अन्वेष्टुम्",
@@ -750,7 +750,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "इति .\nइस्लामिक प्रकाश मार्ग",
-  "downloadPartiallyFinishedForReciter": "इति .\n{reciter} कृते {failed} विफलसूरहैः सह डाउनलोड् समाप्तम् ({downloaded}/{total} डाउनलोड् कृतम्)।",
+  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
   "placesLocationRequiredTitle": "इति .\nस्थानं आवश्यकम्",
   "placesLocationRequiredBody": "इति .\nप्रथमं स्थानं स्थापयन्तु येन समीपस्थाः मस्जिदाः, हलालभोजनं, इस्लामिकविद्यालयाः च समीचीनतया अन्वेष्टुं शक्यन्ते।",
   "placesMapTilesUnavailableTitle": "नक्शा टाइल्स अनुपलब्ध",

@@ -5519,3 +5519,46 @@
 
 ### Sonraki Adım
 - Yeni döngüde kalan l10n fallback sayıları aynı ölçümle tekrar skorlanacak; öncelik chatbot offline ve diagnostics/download sonuç mesajlarında güvenli otomatik çeviriyle azaltılabilecek sonraki batch olacak.
+
+## 2026-04-15 TUR-143 — Guard Single-Line L10n Status Copy
+
+### Yapılan İşlem
+- `tool/translate_arb_keys.dart` içinde tek satır kalması gereken status/action anahtarları genişletildi: `downloadAction`, `resumeDownload`, `deleteDownloadedFiles`, `downloadCanceledForReciter`, `downloadFinishedForReciter`, `downloadPartiallyFinishedForReciter`, `diagnosticsQuranCloudTablesMissing`, `diagnosticsQuranCloudJuzMissing`, `chatbotOfflineSwitched`, `chatbotLocalNoInfo`.
+- Aynı araç artık mevcut bir çeviri tek satır sözleşmesine rağmen newline içeriyorsa onu güvenli çeviri saymıyor ve yeniden üretime sokuyor.
+- `dart run tool\translate_arb_keys.dart diagnosticsQuranCloudTablesMissing diagnosticsQuranCloudJuzMissing downloadAction resumeDownload deleteDownloadedFiles downloadCanceledForReciter downloadFinishedForReciter downloadPartiallyFinishedForReciter chatbotOfflineSwitched chatbotLocalNoInfo` çalıştırıldı.
+- `flutter gen-l10n` ile generated localization dosyaları ARB onarımlarıyla senkronlandı.
+- `arb_ui_localization_test.dart` içindeki tek satır regresyon testi bu status/action anahtarlarını da kapsayacak şekilde genişletildi.
+
+### Neden Yapıldı
+- L10n taramasında 5 locale'de (`ay`, `lus`, `mai`, `sa`, `ti`) kullanıcıya görünen diagnostics/download/chatbot durum metinlerinde newline ve bozuk çeviri artefaktı kaldığı görüldü.
+- Kök sebep, bu anahtarların önceki çeviri guard'ında tek satır sözleşmesine dahil edilmemesi ve `_shouldPreserve` mantığının newline içeren mevcut çeviriyi korunabilir saymasıydı.
+- Dini/teknik içerikte uydurma veya bozuk metin göstermek yerine güvenli İngilizce referansa fallback etmek tercih edildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lus.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mai.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Hedef 10 anahtarda newline artefaktı tüm ARB dosyalarında `0` olarak doğrulandı.
+- `ay/lus/mai/sa/ti` locale'lerinde bozuk satır kırılmış status metinleri temizlendi.
+- Bazı nadir locale'lerde İngilizce fallback sayısı arttı; bu, belirsiz veya bozuk çeviriyi kullanıcıya göstermekten daha güvenli bir durumdur.
+
+### Test Sonucu
+- `flutter test test\arb_ui_localization_test.dart test\arb_coverage_test.dart --reporter compact` PASS (`34/34`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`293/293`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Diagnostics/download/chatbot status copy içinde bozuk multiline çeviri gösterme riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde l10n fallback sayıları yeniden ölçülecek; çeviri aracıyla güvenli azaltılabilecek kalan kullanıcı-facing İngilizce fallback kümeleri seçilecek.
+- Dini içerik/audio Supabase hattında ise storage-backed Quran audio dışında kalan dua/sukun/adhan içeriklerinin kaynak ve storage bağı yeniden skorlanacak.

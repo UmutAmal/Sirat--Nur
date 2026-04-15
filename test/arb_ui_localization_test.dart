@@ -847,6 +847,16 @@ void main() {
         'downloadedSurahProgress',
         'redownloadMissingRepair',
         'downloadCancelling',
+        'downloadAction',
+        'resumeDownload',
+        'deleteDownloadedFiles',
+        'downloadCanceledForReciter',
+        'downloadFinishedForReciter',
+        'downloadPartiallyFinishedForReciter',
+        'diagnosticsQuranCloudTablesMissing',
+        'diagnosticsQuranCloudJuzMissing',
+        'chatbotOfflineSwitched',
+        'chatbotLocalNoInfo',
       ];
       final arbFiles =
           Directory('lib/l10n')

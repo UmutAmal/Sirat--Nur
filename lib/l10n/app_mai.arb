@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "के लिये।\nसुपाबेस मे क्लाउड टेबल गायब; बंडल फॉलबैक सक्रिय",
+  "diagnosticsQuranCloudTablesMissing": "सुपाबेस मे क्लाउड टेबल गायब; बंडल फॉलबैक सक्रिय",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "के लिये।\nबादल juz मेटाडाटा गायब अछि; बंडल संरचनात्मक फॉलबैक सक्रिय",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -355,7 +355,7 @@
   "chatbotLimitReached": "दैनिक क्वेरी सीमा पहुँचि गेल। असीमित के लेल प्रीमियम मे अपग्रेड करू।",
   "chatbotErrorMsg": "हम कोनो प्रतिक्रिया नहि उत्पन्न क सकलहुं। कृपया पुनः प्रयास करू।",
   "chatbotOfflinePrompt": "के लिये।\nसत्यापित ऑफलाइन इस्लामी ज्ञानकोश केरऽ क्यूरेटिंग अखनी भी करलऽ जाय रहलऽ छै । अहां अखन ऑफलाइन फॉलबैक कें सक्षम कयर सकय छी, मुदा इ केवल सीमित सुरक्षित संदेशक कें देखायत जखन तइक स्रोत डाटासेट तैयार नहि भ जायत.\n\nकी अहाँ ऑफलाइन फॉलबैक सक्षम करय चाहब?",
-  "chatbotOfflineSwitched": "के लिये।\nऑफलाइन फॉलबैक सक्षम। सत्यापित स्थानीय इस्लामी जवाब एखन धरि तैयार नहि अछि।",
+  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "ऑफलाइन फॉलबैक सक्षम करू",
   "downloadPreparing": "डाउनलोड के तैयारी में...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "के लिये।\nडाउनलोड करू",
-  "resumeDownload": "के लिये।\nरिज्यूमे डाउनलोड",
-  "deleteDownloadedFiles": "के लिये।\nडाउनलोड फाइल मेटाउ",
+  "downloadAction": "Download",
+  "resumeDownload": "Resume Download",
+  "deleteDownloadedFiles": "Delete Downloaded Files",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "के लिये।\n{reciter} क लेल डाउनलोड रद्द कएल गेल.",
+  "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "के लिये।\n{reciter} के लेल डाउनलोड पूरा भ गेल.",
+  "downloadFinishedForReciter": "Download completed for {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "क्लाउड एपीआई कॉन्फ़िगर नहि कएल गेल अछि. सत्यापित ऑफलाइन इस्लामी मार्गदर्शन एखन धरि उपलब्ध नहि अछि।",
-  "chatbotLocalNoInfo": "के लिये।\n[OFFLINE] सत्यापित स्थानीय इस्लामी मार्गदर्शन एखन धरि उपलब्ध नै अछि। स्रोत उत्तरक लेल क्लाउड एआई पर स्विच करू.",
+  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "मस्जिद",
   "halalFood": "हलाल भोजन",
   "placesSearchArea": "एहि क्षेत्र मे खोज करू",
@@ -750,7 +750,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "के लिये।\nइस्लामी प्रकाश के तरीका",
-  "downloadPartiallyFinishedForReciter": "के लिये।\n{reciter} क लेल डाउनलोड समाप्त भ गेल {failed} असफल सूरह ({downloaded}/{total} डाउनलोड कएल गेल) क संग।",
+  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
   "placesLocationRequiredTitle": "के लिये।\nस्थान आवश्यक",
   "placesLocationRequiredBody": "के लिये।\nपहिने कोनो स्थान निर्धारित करू जाहि सं नजदीकक मस्जिद, हलाल भोजन, आ इस्लामी स्कूलक सटीक खोज भ सकय.",
   "placesMapTilesUnavailableTitle": "के लिये।\nनक्शा टाइल्स अनुपलब्ध",

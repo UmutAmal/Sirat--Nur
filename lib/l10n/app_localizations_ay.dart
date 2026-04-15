@@ -940,7 +940,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'ukax mä juk’a pachanakanwa.\nSupabase ukanx cloud tablas ukanakax chhaqhata; bundled fallback ukax activo ukhamawa';
+      'Supabase ukanx cloud tablas ukanakax chhaqhata; bundled fallback ukax activo ukhamawa';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -949,7 +949,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'ukax mä juk’a pachanakanwa.\nCloud juz metadatos ukax janiw utjkiti; bundled estructural fallback ukax activo ukhamawa';
+      'Cloud juz metadata missing; bundled structural fallback active';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1195,7 +1195,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get chatbotOfflineSwitched =>
-      'ukax mä juk’a pachanakanwa.\nOffline fallback ukax ch’amanchatawa. Islámico local ukan chiqanchata jaysäwinakapax janiw wakicht’atäkiti.';
+      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
 
   @override
   String get chatbotOfflineDownloadLabel =>
@@ -1230,12 +1230,10 @@ class AppLocalizationsAy extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction =>
-      'ukax mä juk’a pachanakanwa.\nUkax mä juk’a pachanakanwa';
+  String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload =>
-      'ukax mä juk’a pachanakanwa.\nResumo Descarga ukax mä juk’a pachanakanwa';
+  String get resumeDownload => 'Resume Download';
 
   @override
   String get deleteDownloadedFiles => 'Uñstayata Archivonaka chhaqtayaña';
@@ -1245,12 +1243,12 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'ukax mä juk’a pachanakanwa.\nUñstayañax cancelatawa $reciter ukataki.';
+    return 'Download canceled for $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'ukax mä juk’a pachanakanwa.\n$reciter ukatakix apkatañ tukuyata.';
+    return 'Download completed for $reciter.';
   }
 
   @override
@@ -1260,7 +1258,7 @@ class AppLocalizationsAy extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'ukax mä juk’a pachanakanwa.\n$reciter ukatakix $failed jan walt’ayat surahs ukanakamp apkatañax tukuyatawa ($downloaded/$total apkatatawa).';
+    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
   }
 
   @override
@@ -1347,7 +1345,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      'ukax mä juk’a pachanakanwa.\n[OFFLINE] Verificado local islámico guia ukax janiw jichhakamax utjkiti. Cloud AI ukaruw mayjt’ayañama, ukax fuente ukan jaysäwinakapawa.';
+      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
 
   @override
   String get mosques => 'Mezquitas ukanaka';

@@ -925,7 +925,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'a ni.\nSupabase-a cloud table awm lo; bundled fallback active a ni';
+      'Supabase-a cloud table awm lo; bundled fallback active a ni';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -934,7 +934,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'a ni.\nCloud juz metadata a awm lo; bundled structural fallback a ni a, a chhuak leh ta a ni';
+      'Cloud juz metadata missing; bundled structural fallback active';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1179,7 +1179,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get chatbotOfflineSwitched =>
-      'a ni.\nOffline fallback tih theih a ni. Verified local Islamic chhanna chu a la inpeih lo.';
+      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
 
   @override
   String get chatbotOfflineDownloadLabel =>
@@ -1214,26 +1214,25 @@ class AppLocalizationsLus extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'a ni.\nDownload rawh';
+  String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload => 'a ni.\nResume Download rawh';
+  String get resumeDownload => 'Resume Download';
 
   @override
-  String get deleteDownloadedFiles =>
-      'a ni.\nDownload tawh file te chu Delete rawh';
+  String get deleteDownloadedFiles => 'Delete Downloaded Files';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'a ni.\n$reciter tan download tihtawp a ni.';
+    return 'Download canceled for $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'a ni.\n$reciter tan download zawh tawh a ni.';
+    return 'Download completed for $reciter.';
   }
 
   @override
@@ -1243,7 +1242,7 @@ class AppLocalizationsLus extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'a ni.\n$reciter tan download zawh a ni a, $failed surah a hlawhchham ($downloaded/$total download a ni).';
+    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
   }
 
   @override
@@ -1329,7 +1328,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      'a ni.\n[OFFLINE] Verified local Islamic guidance hi a la awm lo. Sourced chhanna tur chuan Cloud AI ah switch rawh.';
+      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
 
   @override
   String get mosques => 'Mosque hrang hrangah te';

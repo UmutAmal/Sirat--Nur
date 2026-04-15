@@ -914,7 +914,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣብ ሱፓባሰ ዝጎደሉ ናይ ደበና ሰደቓታት፤ bundled fallback ንጡፍ እዩ።';
+      'ኣብ ሱፓባሰ ዝጎደሉ ናይ ደበና ሰደቓታት፤ bundled fallback ንጡፍ እዩ።';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -923,7 +923,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nክላውድ ጁዝ ሜታዳታ ዝጎደለ፤ bundled መዋቕራዊ ውድቀት ንጡፍ';
+      'Cloud juz metadata missing; bundled structural fallback active';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1162,7 +1162,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get chatbotOfflineSwitched =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nካብ መስመር ወጻኢ ፋልባክ ተኸፊቱ። ዝተረጋገጹ ናይ ከባቢ እስላማዊ መልስታት ገና ድሉዋት ኣይኮኑን።';
+      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'ካብ መስመር ወጻኢ Fallback ኣንቅሕ';
@@ -1195,25 +1195,25 @@ class AppLocalizationsTi extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nDownload';
+  String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nሪዝዩም ዳውንሎድ ምግባር';
+  String get resumeDownload => 'Resume Download';
 
   @override
-  String get deleteDownloadedFiles => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nዝወረዱ ፋይላት ምድምሳስ';
+  String get deleteDownloadedFiles => 'Delete Downloaded Files';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nን $reciter ዳውንሎድ ተሰሪዙ።';
+    return 'Download canceled for $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nን $reciter ዳውንሎድ ተዛዚሙ።';
+    return 'Download completed for $reciter.';
   }
 
   @override
@@ -1223,7 +1223,7 @@ class AppLocalizationsTi extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nን $reciter ምስ $failed ዝፈሸላ ሱራታት ($downloaded/$total ዝወረደ) ምውራድ ተዛዚሙ።';
+    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
   }
 
   @override
@@ -1309,7 +1309,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\n[OFFLINE] ዝተረጋገጸ ናይ ከባቢ እስላማዊ መምርሒ ገና ኣይተረኽበን። ምንጪ መልሲ ንምርካብ ናብ Cloud AI ቀይሩ።';
+      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
 
   @override
   String get mosques => 'መሳጊድ';

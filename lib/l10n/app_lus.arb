@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "a ni.\nSupabase-a cloud table awm lo; bundled fallback active a ni",
+  "diagnosticsQuranCloudTablesMissing": "Supabase-a cloud table awm lo; bundled fallback active a ni",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "a ni.\nCloud juz metadata a awm lo; bundled structural fallback a ni a, a chhuak leh ta a ni",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -355,7 +355,7 @@
   "chatbotLimitReached": "Nitin zawhna neih theihna tur limit a thleng. Unlimited atan Premium ah upgrade rawh.",
   "chatbotErrorMsg": "Response ka generate thei lo. Khawngaihin han lo try leh teh.",
   "chatbotOfflinePrompt": "a ni.\nOffline Islamic knowledge base verified chu an la curate mek a ni. Tunah chuan offline fallback i enable thei tawh a, mahse sourced dataset a inpeih hma chuan safe message tlemte chauh a lantir ang.\n\nOffline fallback hi enable i duh em?",
-  "chatbotOfflineSwitched": "a ni.\nOffline fallback tih theih a ni. Verified local Islamic chhanna chu a la inpeih lo.",
+  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "Offline Fallback tih kha enable rawh",
   "downloadPreparing": "Download buatsaih mek...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "a ni.\nDownload rawh",
-  "resumeDownload": "a ni.\nResume Download rawh",
-  "deleteDownloadedFiles": "a ni.\nDownload tawh file te chu Delete rawh",
+  "downloadAction": "Download",
+  "resumeDownload": "Resume Download",
+  "deleteDownloadedFiles": "Delete Downloaded Files",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "a ni.\n{reciter} tan download tihtawp a ni.",
+  "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "a ni.\n{reciter} tan download zawh tawh a ni.",
+  "downloadFinishedForReciter": "Download completed for {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API hi configure a ni lo. Verified offline Islamic guidance hi a la awm lo.",
-  "chatbotLocalNoInfo": "a ni.\n[OFFLINE] Verified local Islamic guidance hi a la awm lo. Sourced chhanna tur chuan Cloud AI ah switch rawh.",
+  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "Mosque hrang hrangah te",
   "halalFood": "Halal Chaw ei tur",
   "placesSearchArea": "He hmunah hian zawng rawh",
@@ -750,7 +750,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "a ni.\nIslamic Way of Light tih hi a ni",
-  "downloadPartiallyFinishedForReciter": "a ni.\n{reciter} tan download zawh a ni a, {failed} surah a hlawhchham ({downloaded}/{total} download a ni).",
+  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
   "placesLocationRequiredTitle": "a ni.\nHmun a ngai a ni",
   "placesLocationRequiredBody": "a ni.\nMosque hnai tak tak, halal food, leh Islamic school te dik taka zawn theih nan hmun siam hmasa phawt ang che.",
   "placesMapTilesUnavailableTitle": "a ni.\nMap tiles a awm lo",

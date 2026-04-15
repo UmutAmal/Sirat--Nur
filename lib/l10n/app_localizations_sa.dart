@@ -919,7 +919,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'इति .\nसुपाबेसे मेघसारणीः अनुपलब्धाः; bundled fallback सक्रियः';
+      'सुपाबेस् इत्यत्र मेघसारणीः अनुपलब्धाः; bundled fallback सक्रियः';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -928,7 +928,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'इति .\nमेघ juz मेटाडाटा अनुपलब्धः; bundled संरचनात्मक fallback सक्रिय';
+      'Cloud juz metadata missing; bundled structural fallback active';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1171,7 +1171,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get chatbotOfflineSwitched =>
-      'इति .\nअफलाइन fallback सक्षमम्। सत्यापितस्थानीय इस्लामिक उत्तराणि अद्यापि सज्जाः न सन्ति।';
+      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Offline Fallback सक्षमं कुर्वन्तु';
@@ -1205,26 +1205,25 @@ class AppLocalizationsSa extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'इति .\nडाउनलोड करें';
+  String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload => 'इति .\nResume Download';
+  String get resumeDownload => 'Resume Download';
 
   @override
-  String get deleteDownloadedFiles =>
-      'इति .\nडाउनलोड् कृतानि सञ्चिकाः विलोपयन्तु';
+  String get deleteDownloadedFiles => 'Delete Downloaded Files';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'इति .\n$reciter कृते डाउनलोड् रद्दम्।';
+    return 'Download canceled for $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'इति .\n$reciter कृते डाउनलोड् सम्पन्नम्।';
+    return 'Download completed for $reciter.';
   }
 
   @override
@@ -1234,7 +1233,7 @@ class AppLocalizationsSa extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'इति .\n$reciter कृते $failed विफलसूरहैः सह डाउनलोड् समाप्तम् ($downloaded/$total डाउनलोड् कृतम्)।';
+    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
   }
 
   @override
@@ -1321,7 +1320,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      'इति .\n[OFFLINE] सत्यापितं स्थानीयं इस्लामिकमार्गदर्शनं अद्यापि उपलब्धं नास्ति। स्रोत-उत्तराणां कृते Cloud AI -इत्यत्र स्विच् कुर्वन्तु ।';
+      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
 
   @override
   String get mosques => 'मस्जिदाः';

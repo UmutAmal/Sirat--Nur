@@ -268,7 +268,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣብ ሱፓባሰ ዝጎደሉ ናይ ደበና ሰደቓታት፤ bundled fallback ንጡፍ እዩ።",
+  "diagnosticsQuranCloudTablesMissing": "ኣብ ሱፓባሰ ዝጎደሉ ናይ ደበና ሰደቓታት፤ bundled fallback ንጡፍ እዩ።",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -277,7 +277,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nክላውድ ጁዝ ሜታዳታ ዝጎደለ፤ bundled መዋቕራዊ ውድቀት ንጡፍ",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -355,7 +355,7 @@
   "chatbotLimitReached": "መዓልታዊ ገደብ ሕቶ በጺሑ። ንዘይተወሰነ ናብ ፕሪምየም ምዕባይ።",
   "chatbotErrorMsg": "መልሲ ከመንጩ ኣይከኣልኩን። በጃኹም ደጊምኩም ፈትኑ።",
   "chatbotOfflinePrompt": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nእቲ ዝተረጋገጸ ካብ መስመር ወጻኢ ዝኾነ እስላማዊ ፍልጠት መሰረት ገና ይሕሎ ኣሎ። ሕጂ ካብ መስመር ወጻኢ ምምላስ ከተኽእሎ ትኽእል ኢኻ፡ ግን እቲ ምንጪ ዳታሴት ድሉው ክሳብ ዝኸውን ውሱን ውሑስ መልእኽትታት ጥራይ እዩ ዘርኢ።\n\nካብ መስመር ወጻኢ ዝግበር ምምላስ (offline fallback) ከተኽእሉ ትደልዩ ዶ?",
-  "chatbotOfflineSwitched": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nካብ መስመር ወጻኢ ፋልባክ ተኸፊቱ። ዝተረጋገጹ ናይ ከባቢ እስላማዊ መልስታት ገና ድሉዋት ኣይኮኑን።",
+  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "ካብ መስመር ወጻኢ Fallback ኣንቅሕ",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -391,11 +391,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nDownload",
-  "resumeDownload": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nሪዝዩም ዳውንሎድ ምግባር",
-  "deleteDownloadedFiles": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nዝወረዱ ፋይላት ምድምሳስ",
+  "downloadAction": "Download",
+  "resumeDownload": "Resume Download",
+  "deleteDownloadedFiles": "Delete Downloaded Files",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nን {reciter} ዳውንሎድ ተሰሪዙ።",
+  "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -403,7 +403,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nን {reciter} ዳውንሎድ ተዛዚሙ።",
+  "downloadFinishedForReciter": "Download completed for {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -459,7 +459,7 @@
     }
   },
   "chatbotCloudNotConfigured": "ክላውድ ኤፒኣይ ኣይተዋቕረን። ካብ መስመር ወጻኢ ዝተረጋገጸ እስላማዊ መምርሒ ገና ኣይተረኽበን።",
-  "chatbotLocalNoInfo": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\n[OFFLINE] ዝተረጋገጸ ናይ ከባቢ እስላማዊ መምርሒ ገና ኣይተረኽበን። ምንጪ መልሲ ንምርካብ ናብ Cloud AI ቀይሩ።",
+  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "መሳጊድ",
   "halalFood": "ሓላል መግቢ",
   "placesSearchArea": "ኣብዚ ከባቢ ድለዩ።",
@@ -750,7 +750,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nእስላማዊ መንገዲ ብርሃን",
-  "downloadPartiallyFinishedForReciter": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nን {reciter} ምስ {failed} ዝፈሸላ ሱራታት ({downloaded}/{total} ዝወረደ) ምውራድ ተዛዚሙ።",
+  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
   "placesLocationRequiredTitle": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nቦታ የድሊ",
   "placesLocationRequiredBody": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣብ ቀረባ ዝርከቡ መሳጊድ፡ ሓላል መግቢ፡ ከምኡ’ውን ኣብያተ ትምህርቲ እስላም ብትኽክል ምእንቲ ክድለዩ መጀመርታ ቦታ ኣቐምጥ።",
   "placesMapTilesUnavailableTitle": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nካርታ ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት ስርሓት",

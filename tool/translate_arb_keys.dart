@@ -51,7 +51,7 @@ Future<void> main(List<String> arguments) async {
         updated[key] = englishValue;
       } else if (locale == 'tr') {
         updated[key] = turkish[key] ?? englishValue;
-      } else if (!force && _shouldPreserve(current[key], englishValue)) {
+      } else if (!force && _shouldPreserve(key, current[key], englishValue)) {
         updated[key] = current[key];
       } else if (englishValue is String) {
         pendingTranslations[key] = englishValue;
@@ -83,13 +83,17 @@ Map<String, dynamic> _readArb(String path) {
   return jsonDecode(File(path).readAsStringSync()) as Map<String, dynamic>;
 }
 
-bool _shouldPreserve(dynamic currentValue, dynamic englishValue) {
+bool _shouldPreserve(String key, dynamic currentValue, dynamic englishValue) {
   if (currentValue is! String || currentValue.trim().isEmpty) {
     return false;
   }
 
   if (englishValue is! String) {
     return true;
+  }
+
+  if (_mustStaySingleLine(key) && _hasLineBreak(currentValue)) {
+    return false;
   }
 
   if (!_hasMatchingPlaceholders(currentValue, englishValue)) {
@@ -254,7 +258,17 @@ bool _mustStaySingleLine(String key) {
       key == 'downloadingSurah' ||
       key == 'downloadedSurahProgress' ||
       key == 'redownloadMissingRepair' ||
-      key == 'downloadCancelling';
+      key == 'downloadCancelling' ||
+      key == 'downloadAction' ||
+      key == 'resumeDownload' ||
+      key == 'deleteDownloadedFiles' ||
+      key == 'downloadCanceledForReciter' ||
+      key == 'downloadFinishedForReciter' ||
+      key == 'downloadPartiallyFinishedForReciter' ||
+      key == 'diagnosticsQuranCloudTablesMissing' ||
+      key == 'diagnosticsQuranCloudJuzMissing' ||
+      key == 'chatbotOfflineSwitched' ||
+      key == 'chatbotLocalNoInfo';
 }
 
 bool _hasLineBreak(String value) {
