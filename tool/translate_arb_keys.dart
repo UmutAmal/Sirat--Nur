@@ -231,20 +231,27 @@ String _postProcessTranslation({
     return _normalizeGeminiLabel(normalizedTranslated, normalizedSource);
   }
 
-  if (key.startsWith('audioVoice') &&
-      (normalizedTranslated.contains('\n') ||
-          normalizedTranslated.contains('\r'))) {
+  if (_mustStaySingleLine(key) && _hasLineBreak(normalizedTranslated)) {
     return normalizedSource;
   }
 
   return normalizedTranslated;
 }
 
+bool _mustStaySingleLine(String key) {
+  return key.startsWith('audioVoice') ||
+      key == 'adhanNotificationChannelName' ||
+      key == 'adhanNotificationChannelDescription';
+}
+
+bool _hasLineBreak(String value) {
+  return value.contains('\n') || value.contains('\r');
+}
+
 String _normalizeProperNames(String value) {
-  return value.replaceAll('AbdulBaset', 'Abdul Basit').replaceAll(
-    'Abdul Baset',
-    'Abdul Basit',
-  );
+  return value
+      .replaceAll('AbdulBaset', 'Abdul Basit')
+      .replaceAll('Abdul Baset', 'Abdul Basit');
 }
 
 String _normalizeGeminiLabel(String translated, String source) {

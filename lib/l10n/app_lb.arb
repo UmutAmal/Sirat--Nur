@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Mann (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Männlech (Abdul Basit)",
   "audioVoiceSudais": "Männlech (Sudais)",
-  "qiblaSensorUnavailable": "Kompasssensor ass op dësem Apparat net verfügbar."
+  "qiblaSensorUnavailable": "Kompasssensor ass op dësem Apparat net verfügbar.",
+  "adhanNotificationChannelName": "Adhan Notifikatiounen",
+  "adhanNotificationChannelDescription": "Gebiedszäit Alarmer mat Adhan Sound."
 }

@@ -457,6 +457,13 @@ class AppLocalizationsYo extends AppLocalizations {
   String get qiblaSensorUnavailable => 'Kompasi sensọ ko si lori ẹrọ yi.';
 
   @override
+  String get adhanNotificationChannelName => 'Awọn iwifunni Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Awọn itaniji akoko adura pẹlu ohun adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

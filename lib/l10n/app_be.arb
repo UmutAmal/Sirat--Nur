@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Самец (Мішары Алафасы)",
   "audioVoiceAbdulBaset": "Мужчына (Abdul Basit)",
   "audioVoiceSudais": "Мужчына (Sudais)",
-  "qiblaSensorUnavailable": "Датчык компаса недаступны на гэтай прыладзе."
+  "qiblaSensorUnavailable": "Датчык компаса недаступны на гэтай прыладзе.",
+  "adhanNotificationChannelName": "Апавяшчэнні аб азане",
+  "adhanNotificationChannelDescription": "Абвесткі пра час малітвы з гукам азана."
 }

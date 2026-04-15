@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "مرد (میشاری آلفاسی)",
   "audioVoiceAbdulBaset": "مرد (عبدالبسط)",
   "audioVoiceSudais": "نر (Sudais)",
-  "qiblaSensorUnavailable": "سنسور قطب نما در این دستگاه در دسترس نیست."
+  "qiblaSensorUnavailable": "سنسور قطب نما در این دستگاه در دسترس نیست.",
+  "adhanNotificationChannelName": "اعلان های اذان",
+  "adhanNotificationChannelDescription": "هشدار زمان نماز با صدای اذان."
 }

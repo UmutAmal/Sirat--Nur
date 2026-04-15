@@ -460,6 +460,13 @@ class AppLocalizationsBg extends AppLocalizations {
       'Сензорът за компас не е наличен на това устройство.';
 
   @override
+  String get adhanNotificationChannelName => 'Езан известия';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Сигнали за време за молитва със звук на езан.';
+
+  @override
   String get notifications => 'Известия';
 
   @override

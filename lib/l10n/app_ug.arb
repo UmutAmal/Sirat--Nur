@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "ئەر (مىشارى ئالافاسى)",
   "audioVoiceAbdulBaset": "ئەر (Abdul Basit)",
   "audioVoiceSudais": "ئەر (سۇدايس)",
-  "qiblaSensorUnavailable": "بۇ ئۈسكۈنىدە كومپاس سېنزور ئىشلەتكىلى بولمايدۇ."
+  "qiblaSensorUnavailable": "بۇ ئۈسكۈنىدە كومپاس سېنزور ئىشلەتكىلى بولمايدۇ.",
+  "adhanNotificationChannelName": "Adhan ئۇقتۇرۇشى",
+  "adhanNotificationChannelDescription": "ناماز ئاۋازى بىلەن ناماز ۋاقتى ئاگاھلاندۇرۇلىدۇ."
 }

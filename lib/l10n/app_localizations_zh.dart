@@ -450,6 +450,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get qiblaSensorUnavailable => '指南针传感器在此设备上不可用。';
 
   @override
+  String get adhanNotificationChannelName => '宣礼通知';
+
+  @override
+  String get adhanNotificationChannelDescription => '祈祷时间以宣礼声提醒。';
+
+  @override
   String get notifications => '通知';
 
   @override
@@ -2070,6 +2076,12 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get qiblaSensorUnavailable => '指南针传感器在此设备上不可用。';
 
   @override
+  String get adhanNotificationChannelName => '宣礼通知';
+
+  @override
+  String get adhanNotificationChannelDescription => '祈祷时间以宣礼声提醒。';
+
+  @override
   String get notifications => '通知';
 
   @override
@@ -3688,6 +3700,12 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get qiblaSensorUnavailable => '指南針感測器在此裝置上不可用。';
+
+  @override
+  String get adhanNotificationChannelName => '宣禮通知';
+
+  @override
+  String get adhanNotificationChannelDescription => '祈禱時間以宣禮聲提醒。';
 
   @override
   String get notifications => '通知';

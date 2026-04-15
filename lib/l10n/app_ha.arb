@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Namiji (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Namiji (Abdul Basit)",
   "audioVoiceSudais": "Namiji (Sudais)",
-  "qiblaSensorUnavailable": "Babu firikwensin Compass akan wannan na'urar."
+  "qiblaSensorUnavailable": "Babu firikwensin Compass akan wannan na'urar.",
+  "adhanNotificationChannelName": "Sanarwar Adhan",
+  "adhanNotificationChannelDescription": "Ana faɗakar da lokacin sallah tare da sautin adhan."
 }

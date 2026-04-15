@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Nwoke (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Nwoke (Abdul Basit)",
   "audioVoiceSudais": "Nwoke (Sudais)",
-  "qiblaSensorUnavailable": "Ihe mmetụta kompas adịghị na ngwaọrụ a."
+  "qiblaSensorUnavailable": "Ihe mmetụta kompas adịghị na ngwaọrụ a.",
+  "adhanNotificationChannelName": "Ọkwa Adhan",
+  "adhanNotificationChannelDescription": "Ekpere oge alerts na adhan ụda."
 }

@@ -458,6 +458,13 @@ class AppLocalizationsEo extends AppLocalizations {
       'Kompasa sensilo ne disponeblas en ĉi tiu aparato.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Sciigoj';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Atentigoj de preĝa tempo per adhan sono.';
+
+  @override
   String get notifications => 'Sciigoj';
 
   @override

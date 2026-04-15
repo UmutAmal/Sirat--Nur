@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "पुरुष (मिश्री अलाफसी)",
   "audioVoiceAbdulBaset": "पुरुष (अब्दुलबासेट)",
   "audioVoiceSudais": "पुरुष (सुदैस)",
-  "qiblaSensorUnavailable": "इस डिवाइस पर कंपास सेंसर उपलब्ध नहीं है।"
+  "qiblaSensorUnavailable": "इस डिवाइस पर कंपास सेंसर उपलब्ध नहीं है।",
+  "adhanNotificationChannelName": "अज़ान अधिसूचनाएँ",
+  "adhanNotificationChannelDescription": "अज़ान ध्वनि के साथ प्रार्थना का समय अलर्ट।"
 }

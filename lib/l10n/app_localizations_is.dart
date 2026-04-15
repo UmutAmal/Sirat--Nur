@@ -458,6 +458,13 @@ class AppLocalizationsIs extends AppLocalizations {
       'Áttavitaskynjari er ekki tiltækur á þessu tæki.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan tilkynningar';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Bænatímaviðvaranir með adhan hljóði.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

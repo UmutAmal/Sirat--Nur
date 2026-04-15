@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Moški (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "moški (Abdul Basit)",
   "audioVoiceSudais": "Moški (Sudais)",
-  "qiblaSensorUnavailable": "Senzor kompasa ni na voljo v tej napravi."
+  "qiblaSensorUnavailable": "Senzor kompasa ni na voljo v tej napravi.",
+  "adhanNotificationChannelName": "Adhan obvestila",
+  "adhanNotificationChannelDescription": "Opozorila o času molitve z zvokom ezana."
 }

@@ -459,6 +459,13 @@ class AppLocalizationsFi extends AppLocalizations {
       'Kompassin tunnistin ei ole käytettävissä tässä laitteessa.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan-ilmoitukset';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Rukousajan hälytykset adhan-äänellä.';
+
+  @override
   String get notifications => 'Ilmoitukset';
 
   @override

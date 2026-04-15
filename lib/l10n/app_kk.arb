@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Ер (Мишари Алафаси)",
   "audioVoiceAbdulBaset": "Ер (Abdul Basit)",
   "audioVoiceSudais": "Ер (Судайс)",
-  "qiblaSensorUnavailable": "Бұл құрылғыда компас сенсоры жоқ."
+  "qiblaSensorUnavailable": "Бұл құрылғыда компас сенсоры жоқ.",
+  "adhanNotificationChannelName": "Азан хабарландырулары",
+  "adhanNotificationChannelDescription": "Азан дыбысымен намаз уақыты туралы ескертулер."
 }

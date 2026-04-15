@@ -458,6 +458,13 @@ class AppLocalizationsDa extends AppLocalizations {
       'Kompassensor er ikke tilgængelig på denne enhed.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan-meddelelser';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Bønnetidsalarmer med adhan-lyd.';
+
+  @override
   String get notifications => 'Meddelelser';
 
   @override

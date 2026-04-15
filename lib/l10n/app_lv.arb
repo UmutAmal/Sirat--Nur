@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Vīrietis (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Vīrietis (Abdul Basit)",
   "audioVoiceSudais": "Vīrietis (Sudais)",
-  "qiblaSensorUnavailable": "Kompasa sensors šajā ierīcē nav pieejams."
+  "qiblaSensorUnavailable": "Kompasa sensors šajā ierīcē nav pieejams.",
+  "adhanNotificationChannelName": "Adhan paziņojumi",
+  "adhanNotificationChannelDescription": "Lūgšanu laika brīdinājumi ar Adhan skaņu."
 }

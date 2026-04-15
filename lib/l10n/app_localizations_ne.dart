@@ -457,6 +457,13 @@ class AppLocalizationsNe extends AppLocalizations {
   String get qiblaSensorUnavailable => 'यस यन्त्रमा कम्पास सेन्सर उपलब्ध छैन।';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan सूचनाहरू';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'प्रार्थना समय अधान ध्वनि संग अलर्ट।';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

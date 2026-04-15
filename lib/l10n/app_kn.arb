@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "ಪುರುಷ (ಮಿಶರಿ ಅಲಾಫಾಸಿ)",
   "audioVoiceAbdulBaset": "ಪುರುಷ (ಅಬ್ದುಲ್‌ಬಾಸೆಟ್)",
   "audioVoiceSudais": "ಪುರುಷ (ಸುಡೈಸ್)",
-  "qiblaSensorUnavailable": "ಈ ಸಾಧನದಲ್ಲಿ ದಿಕ್ಸೂಚಿ ಸಂವೇದಕ ಲಭ್ಯವಿಲ್ಲ."
+  "qiblaSensorUnavailable": "ಈ ಸಾಧನದಲ್ಲಿ ದಿಕ್ಸೂಚಿ ಸಂವೇದಕ ಲಭ್ಯವಿಲ್ಲ.",
+  "adhanNotificationChannelName": "ಅಧಾನ್ ಅಧಿಸೂಚನೆಗಳು",
+  "adhanNotificationChannelDescription": "ಅಧಾನ್ ಧ್ವನಿಯೊಂದಿಗೆ ಪ್ರಾರ್ಥನೆ ಸಮಯದ ಎಚ್ಚರಿಕೆಗಳು."
 }

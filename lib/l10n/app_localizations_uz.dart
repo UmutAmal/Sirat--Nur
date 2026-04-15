@@ -458,6 +458,13 @@ class AppLocalizationsUz extends AppLocalizations {
       'Kompas sensori bu qurilmada ishlamaydi.';
 
   @override
+  String get adhanNotificationChannelName => 'Azon bildirishnomalari';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Namoz vaqti azon ovozi bilan ogohlantiriladi.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

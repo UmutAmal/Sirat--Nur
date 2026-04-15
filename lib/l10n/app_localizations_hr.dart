@@ -458,6 +458,13 @@ class AppLocalizationsHr extends AppLocalizations {
       'Senzor kompasa nije dostupan na ovom uređaju.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'Obavijesti';
 
   @override

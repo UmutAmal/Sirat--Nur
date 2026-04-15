@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Kay aparatopiqa mana brújula sensor nisqa kanchu."
+  "qiblaSensorUnavailable": "Kay aparatopiqa mana brújula sensor nisqa kanchu.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
 }

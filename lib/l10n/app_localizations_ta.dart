@@ -459,6 +459,13 @@ class AppLocalizationsTa extends AppLocalizations {
       'இந்தச் சாதனத்தில் திசைகாட்டி சென்சார் இல்லை.';
 
   @override
+  String get adhanNotificationChannelName => 'அதான் அறிவிப்புகள்';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'அதான் ஒலியுடன் பிரார்த்தனை நேர எச்சரிக்கைகள்.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

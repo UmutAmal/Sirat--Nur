@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Mashkull (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mashkull (Abdul Basit)",
   "audioVoiceSudais": "Mashkull (Sudais)",
-  "qiblaSensorUnavailable": "Sensori i busullës nuk ofrohet në këtë pajisje."
+  "qiblaSensorUnavailable": "Sensori i busullës nuk ofrohet në këtë pajisje.",
+  "adhanNotificationChannelName": "Njoftimet e ezanit",
+  "adhanNotificationChannelDescription": "Alarmet për kohën e namazit me tingullin e ezanit."
 }

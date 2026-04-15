@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Sensor de brújula ukax janiw aka dispositivo ukanx utjkiti."
+  "qiblaSensorUnavailable": "Sensor de brújula ukax janiw aka dispositivo ukanx utjkiti.",
+  "adhanNotificationChannelName": "Adhan Yatiyawinaka",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
 }

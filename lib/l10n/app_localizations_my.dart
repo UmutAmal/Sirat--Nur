@@ -459,6 +459,13 @@ class AppLocalizationsMy extends AppLocalizations {
       'သံလိုက်အိမ်မြှောင်အာရုံခံကိရိယာကို ဤစက်ပစ္စည်းတွင် မရရှိနိုင်ပါ။';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan အသိပေးချက်များ';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'အဒ်ဟန်အသံဖြင့် ဆုတောင်းချိန်သတိပေးချက်။';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

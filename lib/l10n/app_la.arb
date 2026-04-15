@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Masculus (Sudais)",
-  "qiblaSensorUnavailable": "Sensorem Compass est in hac fabrica unavailable."
+  "qiblaSensorUnavailable": "Sensorem Compass est in hac fabrica unavailable.",
+  "adhanNotificationChannelName": "Adhan Suspendisse",
+  "adhanNotificationChannelDescription": "Orationis tempus summis cum adhan sono."
 }

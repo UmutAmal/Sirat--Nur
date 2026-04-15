@@ -459,6 +459,13 @@ class AppLocalizationsSq extends AppLocalizations {
       'Sensori i busullës nuk ofrohet në këtë pajisje.';
 
   @override
+  String get adhanNotificationChannelName => 'Njoftimet e ezanit';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Alarmet për kohën e namazit me tingullin e ezanit.';
+
+  @override
   String get notifications => 'Njoftimet';
 
   @override

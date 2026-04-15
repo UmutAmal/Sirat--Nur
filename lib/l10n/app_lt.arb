@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Vyras (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Vyras (Abdul Basit)",
   "audioVoiceSudais": "Vyras (Sudais)",
-  "qiblaSensorUnavailable": "Šiame įrenginyje kompaso jutiklis nepasiekiamas."
+  "qiblaSensorUnavailable": "Šiame įrenginyje kompaso jutiklis nepasiekiamas.",
+  "adhanNotificationChannelName": "Adhan pranešimai",
+  "adhanNotificationChannelDescription": "Maldos laikas perspėja su adhano garsu."
 }

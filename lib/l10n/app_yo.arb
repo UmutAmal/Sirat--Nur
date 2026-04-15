@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Okunrin (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Okunrin (Abdul Basit)",
   "audioVoiceSudais": "Okunrin (Sudais)",
-  "qiblaSensorUnavailable": "Kompasi sensọ ko si lori ẹrọ yi."
+  "qiblaSensorUnavailable": "Kompasi sensọ ko si lori ẹrọ yi.",
+  "adhanNotificationChannelName": "Awọn iwifunni Adhan",
+  "adhanNotificationChannelDescription": "Awọn itaniji akoko adura pẹlu ohun adhan."
 }

@@ -459,6 +459,13 @@ class AppLocalizationsLv extends AppLocalizations {
       'Kompasa sensors šajā ierīcē nav pieejams.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan paziņojumi';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Lūgšanu laika brīdinājumi ar Adhan skaņu.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

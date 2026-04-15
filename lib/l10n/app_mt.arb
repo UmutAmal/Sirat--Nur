@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Raġel (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Raġel (Abdul Basit)",
   "audioVoiceSudais": "Raġel (Sudais)",
-  "qiblaSensorUnavailable": "Is-sensor tal-boxxla mhux disponibbli fuq dan l-apparat."
+  "qiblaSensorUnavailable": "Is-sensor tal-boxxla mhux disponibbli fuq dan l-apparat.",
+  "adhanNotificationChannelName": "Notifiki Adhan",
+  "adhanNotificationChannelDescription": "Twissijiet tal-ħin tat-talb b'ħoss adhan."
 }

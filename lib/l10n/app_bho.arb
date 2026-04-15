@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "एह डिवाइस पर कम्पास सेंसर उपलब्ध नइखे."
+  "qiblaSensorUnavailable": "एह डिवाइस पर कम्पास सेंसर उपलब्ध नइखे.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
 }

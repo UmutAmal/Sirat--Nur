@@ -458,6 +458,13 @@ class AppLocalizationsRw extends AppLocalizations {
       'Rukuruzi ya Compass ntishobora kuboneka kuri iki gikoresho.';
 
   @override
+  String get adhanNotificationChannelName => 'Amatangazo ya Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Igihe cyamasengesho kiburira hamwe nijwi rya adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

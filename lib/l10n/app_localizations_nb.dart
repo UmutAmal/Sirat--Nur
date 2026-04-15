@@ -458,6 +458,13 @@ class AppLocalizationsNb extends AppLocalizations {
       'Kompasssensor er utilgjengelig på denne enheten.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan-varsler';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Bønnetidsvarsler med adhan-lyd.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

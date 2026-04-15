@@ -459,6 +459,13 @@ class AppLocalizationsPt extends AppLocalizations {
       'O sensor da bússola não está disponível neste dispositivo.';
 
   @override
+  String get adhanNotificationChannelName => 'Notificações Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Alertas de tempo de oração com som adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

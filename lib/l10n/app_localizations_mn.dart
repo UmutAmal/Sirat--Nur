@@ -458,6 +458,13 @@ class AppLocalizationsMn extends AppLocalizations {
       'Энэ төхөөрөмж дээр луужин мэдрэгч боломжгүй байна.';
 
   @override
+  String get adhanNotificationChannelName => 'Азаны мэдэгдлүүд';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Залбирлын цагийг азаны дуугаар дохио өгдөг.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

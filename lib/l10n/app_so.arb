@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Lab (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Lab (Abdul Basit)",
   "audioVoiceSudais": "Lab (Sudais)",
-  "qiblaSensorUnavailable": "Dareemaha Compass lagama heli karo qalabkan."
+  "qiblaSensorUnavailable": "Dareemaha Compass lagama heli karo qalabkan.",
+  "adhanNotificationChannelName": "Ogeysiinta Adhan",
+  "adhanNotificationChannelDescription": "Waqtiga salaadda wuxuu ku baraarujinayaa dhawaaqa adhan."
 }

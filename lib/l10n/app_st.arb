@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Monna (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Monna (Abdul Basit)",
   "audioVoiceSudais": "Monna (Sudais)",
-  "qiblaSensorUnavailable": "Compass sensor ha e fumanehe sesebelisoa sena."
+  "qiblaSensorUnavailable": "Compass sensor ha e fumanehe sesebelisoa sena.",
+  "adhanNotificationChannelName": "Litsebiso tsa Adhan",
+  "adhanNotificationChannelDescription": "Litemoso tsa nako ea thapelo ka molumo oa adhan."
 }

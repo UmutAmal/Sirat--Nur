@@ -458,6 +458,13 @@ class AppLocalizationsTe extends AppLocalizations {
       'ఈ పరికరంలో కంపాస్ సెన్సార్ అందుబాటులో లేదు.';
 
   @override
+  String get adhanNotificationChannelName => 'అధాన్ నోటిఫికేషన్‌లు';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'అధాన్ ధ్వనితో ప్రార్థన సమయ హెచ్చరికలు.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

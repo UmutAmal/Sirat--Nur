@@ -458,6 +458,13 @@ class AppLocalizationsFa extends AppLocalizations {
       'سنسور قطب نما در این دستگاه در دسترس نیست.';
 
   @override
+  String get adhanNotificationChannelName => 'اعلان های اذان';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'هشدار زمان نماز با صدای اذان.';
+
+  @override
   String get notifications => 'اعلان‌ها';
 
   @override

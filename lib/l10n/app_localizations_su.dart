@@ -459,6 +459,13 @@ class AppLocalizationsSu extends AppLocalizations {
       'Sénsor kompas henteu sayogi dina alat ieu.';
 
   @override
+  String get adhanNotificationChannelName => 'Bewara Adzan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Waktos solat ngageter ku sora adzan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -458,6 +458,13 @@ class AppLocalizationsId extends AppLocalizations {
       'Sensor kompas tidak tersedia di perangkat ini.';
 
   @override
+  String get adhanNotificationChannelName => 'Pemberitahuan Adzan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Peringatan waktu sholat dengan suara adzan.';
+
+  @override
   String get notifications => 'Notifikasi';
 
   @override

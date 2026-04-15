@@ -458,6 +458,13 @@ class AppLocalizationsIg extends AppLocalizations {
       'Ihe mmetụta kompas adịghị na ngwaọrụ a.';
 
   @override
+  String get adhanNotificationChannelName => 'Ọkwa Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Ekpere oge alerts na adhan ụda.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

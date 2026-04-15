@@ -458,6 +458,13 @@ class AppLocalizationsKri extends AppLocalizations {
   String get qiblaSensorUnavailable => 'Kɔmpas sɛns nɔ de na dis divays.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'Notis dɛn we dɛn kin gi';
 
   @override

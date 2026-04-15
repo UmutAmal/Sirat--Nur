@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Tane (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Tane (Abdul Basit)",
   "audioVoiceSudais": "Tane (Sudais)",
-  "qiblaSensorUnavailable": "Karekau te pūoko kāpehu i te wātea ki tēnei pūrere."
+  "qiblaSensorUnavailable": "Karekau te pūoko kāpehu i te wātea ki tēnei pūrere.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Matohi wa inoi me te tangi azan."
 }

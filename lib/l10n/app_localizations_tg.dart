@@ -458,6 +458,13 @@ class AppLocalizationsTg extends AppLocalizations {
       'Дар ин дастгоҳ сенсори қутбнамо мавҷуд нест.';
 
   @override
+  String get adhanNotificationChannelName => 'Огоҳиҳои азон';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Огоҳии вақти намоз бо садои азон.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

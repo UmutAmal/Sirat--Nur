@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Muž (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Muž (Abdul Basit)",
   "audioVoiceSudais": "muž (Sudais)",
-  "qiblaSensorUnavailable": "Snímač kompasu není na tomto zařízení k dispozici."
+  "qiblaSensorUnavailable": "Snímač kompasu není na tomto zařízení k dispozici.",
+  "adhanNotificationChannelName": "Oznámení Adhan",
+  "adhanNotificationChannelDescription": "Upozornění na čas modlitby se zvukem adhan."
 }

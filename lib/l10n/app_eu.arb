@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Gizonezkoa (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Gizonezkoa (Abdul Basit)",
   "audioVoiceSudais": "Gizonezkoa (Sudaia)",
-  "qiblaSensorUnavailable": "Iparrorratza sentsorea ez dago erabilgarri gailu honetan."
+  "qiblaSensorUnavailable": "Iparrorratza sentsorea ez dago erabilgarri gailu honetan.",
+  "adhanNotificationChannelName": "Adhan jakinarazpenak",
+  "adhanNotificationChannelDescription": "Otoitz denbora alertak adhan soinuarekin."
 }

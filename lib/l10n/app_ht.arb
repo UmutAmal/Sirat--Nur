@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Gason (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Gason (Abdul Basit)",
   "audioVoiceSudais": "Gason (Sudais)",
-  "qiblaSensorUnavailable": "Capteur konpa pa disponib sou aparèy sa a."
+  "qiblaSensorUnavailable": "Capteur konpa pa disponib sou aparèy sa a.",
+  "adhanNotificationChannelName": "Adhan Notifikasyon",
+  "adhanNotificationChannelDescription": "Alèt tan lapriyè ak son adhan."
 }

@@ -459,6 +459,13 @@ class AppLocalizationsOr extends AppLocalizations {
       'ଏହି ଡିଭାଇସରେ କମ୍ପାସ୍ ସେନ୍ସର ଉପଲବ୍ଧ ନାହିଁ |';
 
   @override
+  String get adhanNotificationChannelName => 'ଆଡନ୍ ବିଜ୍ଞପ୍ତିଗୁଡିକ |';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'ଆଦନ ଧ୍ୱନି ସହିତ ପ୍ରାର୍ଥନା ସମୟ ଆଲର୍ଟ |';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

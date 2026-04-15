@@ -458,6 +458,13 @@ class AppLocalizationsHt extends AppLocalizations {
       'Capteur konpa pa disponib sou aparèy sa a.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifikasyon';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Alèt tan lapriyè ak son adhan.';
+
+  @override
   String get notifications => 'Notifikasyon';
 
   @override

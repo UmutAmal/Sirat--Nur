@@ -225,6 +225,8 @@
     }
   },
   "qiblaSensorUnavailable": "Compass sensor is unavailable on this device.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",

@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Männlich (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Männlich (Abdul Basit)",
   "audioVoiceSudais": "Männlich (Sudais)",
-  "qiblaSensorUnavailable": "Der Kompasssensor ist auf diesem Gerät nicht verfügbar."
+  "qiblaSensorUnavailable": "Der Kompasssensor ist auf diesem Gerät nicht verfügbar.",
+  "adhanNotificationChannelName": "Adhan-Benachrichtigungen",
+  "adhanNotificationChannelDescription": "Gebetszeitwarnungen mit Adhan-Sound."
 }

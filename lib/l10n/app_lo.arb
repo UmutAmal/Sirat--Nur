@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "ຜູ້ຊາຍ (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "ຜູ້ຊາຍ (Abdul Basit)",
   "audioVoiceSudais": "ຊາຍ (ຊູໄດ)",
-  "qiblaSensorUnavailable": "ເຊັນເຊີເຂັມທິດບໍ່ສາມາດໃຊ້ໄດ້ໃນອຸປະກອນນີ້."
+  "qiblaSensorUnavailable": "ເຊັນເຊີເຂັມທິດບໍ່ສາມາດໃຊ້ໄດ້ໃນອຸປະກອນນີ້.",
+  "adhanNotificationChannelName": "ການແຈ້ງເຕືອນ Adhan",
+  "adhanNotificationChannelDescription": "ແຈ້ງເຕືອນເວລາອະທິຖານດ້ວຍສຽງ adhan."
 }

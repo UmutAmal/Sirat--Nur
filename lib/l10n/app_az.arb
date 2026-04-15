@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Kişi (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Kişi (Abdul Basit)",
   "audioVoiceSudais": "Kişi (Sudais)",
-  "qiblaSensorUnavailable": "Bu cihazda kompas sensoru mövcud deyil."
+  "qiblaSensorUnavailable": "Bu cihazda kompas sensoru mövcud deyil.",
+  "adhanNotificationChannelName": "Azan bildirişləri",
+  "adhanNotificationChannelDescription": "Azan səsi ilə namaz vaxtı xəbərdarlığı."
 }

@@ -460,6 +460,13 @@ class AppLocalizationsSt extends AppLocalizations {
       'Compass sensor ha e fumanehe sesebelisoa sena.';
 
   @override
+  String get adhanNotificationChannelName => 'Litsebiso tsa Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Litemoso tsa nako ea thapelo ka molumo oa adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

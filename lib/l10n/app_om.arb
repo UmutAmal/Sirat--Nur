@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Meeshaa kana irratti sensariin koompaasii hin argamu."
+  "qiblaSensorUnavailable": "Meeshaa kana irratti sensariin koompaasii hin argamu.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
 }

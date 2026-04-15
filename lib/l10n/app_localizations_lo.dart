@@ -458,6 +458,13 @@ class AppLocalizationsLo extends AppLocalizations {
       'ເຊັນເຊີເຂັມທິດບໍ່ສາມາດໃຊ້ໄດ້ໃນອຸປະກອນນີ້.';
 
   @override
+  String get adhanNotificationChannelName => 'ການແຈ້ງເຕືອນ Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'ແຈ້ງເຕືອນເວລາອະທິຖານດ້ວຍສຽງ adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

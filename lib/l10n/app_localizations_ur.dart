@@ -458,6 +458,13 @@ class AppLocalizationsUr extends AppLocalizations {
       'کمپاس سینسر اس ڈیوائس پر دستیاب نہیں ہے۔';
 
   @override
+  String get adhanNotificationChannelName => 'اذان کی اطلاع';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'اذان کی آواز کے ساتھ نماز کے وقت کے انتباہات۔';
+
+  @override
   String get notifications => 'اطلاعات';
 
   @override

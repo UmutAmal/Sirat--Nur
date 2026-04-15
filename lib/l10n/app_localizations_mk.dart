@@ -458,6 +458,13 @@ class AppLocalizationsMk extends AppLocalizations {
       'Сензорот за компас е недостапен на овој уред.';
 
   @override
+  String get adhanNotificationChannelName => 'Известувања за Азан';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Предупредува за време на молитвата со звук на азан.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

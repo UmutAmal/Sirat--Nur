@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Mees (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mees (Abdul Basit)",
   "audioVoiceSudais": "Mees (Sudais)",
-  "qiblaSensorUnavailable": "Kompassi andur pole selles seadmes saadaval."
+  "qiblaSensorUnavailable": "Kompassi andur pole selles seadmes saadaval.",
+  "adhanNotificationChannelName": "Adhani teatised",
+  "adhanNotificationChannelDescription": "Palveaja hoiatused adhani heliga."
 }

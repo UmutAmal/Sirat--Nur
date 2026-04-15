@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Эрэгтэй (Мишари Алафаси)",
   "audioVoiceAbdulBaset": "Эрэгтэй (АбдулБасет)",
   "audioVoiceSudais": "Эрэгтэй (Судайчууд)",
-  "qiblaSensorUnavailable": "Энэ төхөөрөмж дээр луужин мэдрэгч боломжгүй байна."
+  "qiblaSensorUnavailable": "Энэ төхөөрөмж дээр луужин мэдрэгч боломжгүй байна.",
+  "adhanNotificationChannelName": "Азаны мэдэгдлүүд",
+  "adhanNotificationChannelDescription": "Залбирлын цагийг азаны дуугаар дохио өгдөг."
 }

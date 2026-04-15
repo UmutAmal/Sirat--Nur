@@ -461,6 +461,13 @@ class AppLocalizationsRo extends AppLocalizations {
       'Senzorul busolă nu este disponibil pe acest dispozitiv.';
 
   @override
+  String get adhanNotificationChannelName => 'Notificări Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Alerte de timp de rugăciune cu sunet adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

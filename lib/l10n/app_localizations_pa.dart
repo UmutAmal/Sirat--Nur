@@ -458,6 +458,13 @@ class AppLocalizationsPa extends AppLocalizations {
       'ਕੰਪਾਸ ਸੈਂਸਰ ਇਸ ਡਿਵਾਈਸ \'ਤੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।';
 
   @override
+  String get adhanNotificationChannelName => 'ਅਧਾਨ ਸੂਚਨਾਵਾਂ';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'ਅਜ਼ਾਨ ਆਵਾਜ਼ ਦੇ ਨਾਲ ਪ੍ਰਾਰਥਨਾ ਦਾ ਸਮਾਂ ਚੇਤਾਵਨੀਆਂ.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

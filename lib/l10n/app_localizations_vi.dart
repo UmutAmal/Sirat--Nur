@@ -458,6 +458,13 @@ class AppLocalizationsVi extends AppLocalizations {
       'Cảm biến la bàn không khả dụng trên thiết bị này.';
 
   @override
+  String get adhanNotificationChannelName => 'Thông báo Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Cảnh báo thời gian cầu nguyện với âm thanh adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -459,6 +459,13 @@ class AppLocalizationsNso extends AppLocalizations {
       'Senthara ya khamphase ga e hwetšagale go sedirišwa se.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'Ditsebišo';
 
   @override

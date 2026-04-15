@@ -458,6 +458,13 @@ class AppLocalizationsMr extends AppLocalizations {
       'या डिव्हाइसवर कंपास सेन्सर अनुपलब्ध आहे.';
 
   @override
+  String get adhanNotificationChannelName => 'अधान सूचना';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'अजान आवाजासह प्रार्थनेची वेळ अलर्ट.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

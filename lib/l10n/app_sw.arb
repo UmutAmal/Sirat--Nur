@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Mwanaume (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mwanaume (Abdul Basit)",
   "audioVoiceSudais": "Mwanaume (Sudais)",
-  "qiblaSensorUnavailable": "Kihisi cha dira hakipatikani kwenye kifaa hiki."
+  "qiblaSensorUnavailable": "Kihisi cha dira hakipatikani kwenye kifaa hiki.",
+  "adhanNotificationChannelName": "Arifa za Adhana",
+  "adhanNotificationChannelDescription": "Tahadhari za wakati wa maombi na sauti ya adhana."
 }

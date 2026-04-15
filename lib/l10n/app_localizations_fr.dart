@@ -461,6 +461,13 @@ class AppLocalizationsFr extends AppLocalizations {
       'Le capteur de boussole n\'est pas disponible sur cet appareil.';
 
   @override
+  String get adhanNotificationChannelName => 'Notifications Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Alertes d\'heure de prière avec le son adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

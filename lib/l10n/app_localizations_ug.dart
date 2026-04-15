@@ -458,6 +458,13 @@ class AppLocalizationsUg extends AppLocalizations {
       'بۇ ئۈسكۈنىدە كومپاس سېنزور ئىشلەتكىلى بولمايدۇ.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan ئۇقتۇرۇشى';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'ناماز ئاۋازى بىلەن ناماز ۋاقتى ئاگاھلاندۇرۇلىدۇ.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "ஆண் (மிஷரி அலஃபாஸி)",
   "audioVoiceAbdulBaset": "ஆண் (அப்துல்பாசெட்)",
   "audioVoiceSudais": "ஆண் (சுதைஸ்)",
-  "qiblaSensorUnavailable": "இந்தச் சாதனத்தில் திசைகாட்டி சென்சார் இல்லை."
+  "qiblaSensorUnavailable": "இந்தச் சாதனத்தில் திசைகாட்டி சென்சார் இல்லை.",
+  "adhanNotificationChannelName": "அதான் அறிவிப்புகள்",
+  "adhanNotificationChannelDescription": "அதான் ஒலியுடன் பிரார்த்தனை நேர எச்சரிக்கைகள்."
 }

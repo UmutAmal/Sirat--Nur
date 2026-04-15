@@ -460,6 +460,13 @@ class AppLocalizationsGl extends AppLocalizations {
       'O sensor do compás non está dispoñible neste dispositivo.';
 
   @override
+  String get adhanNotificationChannelName => 'Notificacións de Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Alertas de tempo de oración con son adhan.';
+
+  @override
   String get notifications => 'Notificacións';
 
   @override

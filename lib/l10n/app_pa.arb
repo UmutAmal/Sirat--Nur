@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "ਮਰਦ (ਮਿਸ਼ਰੀ ਅਲਫਾਸੀ)",
   "audioVoiceAbdulBaset": "ਮਰਦ (ਅਬਦੁਲ ਬਸੇਤ)",
   "audioVoiceSudais": "ਮਰਦ (ਸੁਦਾਈ)",
-  "qiblaSensorUnavailable": "ਕੰਪਾਸ ਸੈਂਸਰ ਇਸ ਡਿਵਾਈਸ 'ਤੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
+  "qiblaSensorUnavailable": "ਕੰਪਾਸ ਸੈਂਸਰ ਇਸ ਡਿਵਾਈਸ 'ਤੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+  "adhanNotificationChannelName": "ਅਧਾਨ ਸੂਚਨਾਵਾਂ",
+  "adhanNotificationChannelDescription": "ਅਜ਼ਾਨ ਆਵਾਜ਼ ਦੇ ਨਾਲ ਪ੍ਰਾਰਥਨਾ ਦਾ ਸਮਾਂ ਚੇਤਾਵਨੀਆਂ."
 }

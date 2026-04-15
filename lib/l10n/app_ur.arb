@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "مرد (مشیری الفاسی)",
   "audioVoiceAbdulBaset": "مرد (عبدالباسط)",
   "audioVoiceSudais": "مرد (سدیس)",
-  "qiblaSensorUnavailable": "کمپاس سینسر اس ڈیوائس پر دستیاب نہیں ہے۔"
+  "qiblaSensorUnavailable": "کمپاس سینسر اس ڈیوائس پر دستیاب نہیں ہے۔",
+  "adhanNotificationChannelName": "اذان کی اطلاع",
+  "adhanNotificationChannelDescription": "اذان کی آواز کے ساتھ نماز کے وقت کے انتباہات۔"
 }

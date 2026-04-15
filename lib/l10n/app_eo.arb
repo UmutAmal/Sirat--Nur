@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Masklo (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Masklo (Abdul Basit)",
   "audioVoiceSudais": "Masklo (Sudais)",
-  "qiblaSensorUnavailable": "Kompasa sensilo ne disponeblas en ĉi tiu aparato."
+  "qiblaSensorUnavailable": "Kompasa sensilo ne disponeblas en ĉi tiu aparato.",
+  "adhanNotificationChannelName": "Adhan Sciigoj",
+  "adhanNotificationChannelDescription": "Atentigoj de preĝa tempo per adhan sono."
 }

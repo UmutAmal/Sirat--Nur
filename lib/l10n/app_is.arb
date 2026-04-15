@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Karlkyns (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Karlkyns (Abdul Basit)",
   "audioVoiceSudais": "Karlkyns (Sudais)",
-  "qiblaSensorUnavailable": "Áttavitaskynjari er ekki tiltækur á þessu tæki."
+  "qiblaSensorUnavailable": "Áttavitaskynjari er ekki tiltækur á þessu tæki.",
+  "adhanNotificationChannelName": "Adhan tilkynningar",
+  "adhanNotificationChannelDescription": "Bænatímaviðvaranir með adhan hljóði."
 }

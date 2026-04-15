@@ -458,6 +458,13 @@ class AppLocalizationsZu extends AppLocalizations {
       'Inzwa yekhampasi ayitholakali kule divayisi.';
 
   @override
+  String get adhanNotificationChannelName => 'Izaziso ze-Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Izaziso zesikhathi somkhuleko ezinomsindo we-adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

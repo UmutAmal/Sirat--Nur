@@ -458,6 +458,13 @@ class AppLocalizationsSa extends AppLocalizations {
       'अस्मिन् यन्त्रे कम्पाससंवेदकः अनुपलब्धः अस्ति ।';
 
   @override
+  String get adhanNotificationChannelName => 'अधान अधिसूचना';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -457,6 +457,13 @@ class AppLocalizationsTw extends AppLocalizations {
   String get qiblaSensorUnavailable => 'Compass sensor nni saa afiri yi so.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'Amanneɛbɔ ahorow';
 
   @override

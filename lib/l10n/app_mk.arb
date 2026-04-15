@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Машко (Мишари Алафаси)",
   "audioVoiceAbdulBaset": "Машко (АбдулБасет)",
   "audioVoiceSudais": "машки (Судаис)",
-  "qiblaSensorUnavailable": "Сензорот за компас е недостапен на овој уред."
+  "qiblaSensorUnavailable": "Сензорот за компас е недостапен на овој уред.",
+  "adhanNotificationChannelName": "Известувања за Азан",
+  "adhanNotificationChannelDescription": "Предупредува за време на молитвата со звук на азан."
 }

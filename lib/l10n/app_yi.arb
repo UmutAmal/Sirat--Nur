@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "זכר (מישאַרי אַלאַפאַסי)",
   "audioVoiceAbdulBaset": "זכר (אַבדולבאַסעט)",
   "audioVoiceSudais": "זכר (סודאַיס)",
-  "qiblaSensorUnavailable": "קאָמפּאַס סענסער איז ניט בנימצא אויף דעם מיטל."
+  "qiblaSensorUnavailable": "קאָמפּאַס סענסער איז ניט בנימצא אויף דעם מיטל.",
+  "adhanNotificationChannelName": "אַדהאַן נאָוטאַפאַקיישאַנז",
+  "adhanNotificationChannelDescription": "תפילה צייט אַלערץ מיט אַדהאַן געזונט."
 }

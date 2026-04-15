@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Мъжки (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Мъжки (Abdul Basit)",
   "audioVoiceSudais": "Мъжки (Sudais)",
-  "qiblaSensorUnavailable": "Сензорът за компас не е наличен на това устройство."
+  "qiblaSensorUnavailable": "Сензорът за компас не е наличен на това устройство.",
+  "adhanNotificationChannelName": "Езан известия",
+  "adhanNotificationChannelDescription": "Сигнали за време за молитва със звук на езан."
 }

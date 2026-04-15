@@ -461,6 +461,13 @@ class AppLocalizationsKy extends AppLocalizations {
       'Компас сенсору бул түзмөктө жеткиликсиз.';
 
   @override
+  String get adhanNotificationChannelName => 'Азан эскертмелери';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Намаз убактысы азан үнү менен эскертет.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

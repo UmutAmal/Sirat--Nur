@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Umugabo (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Umugabo (Abdul Basit)",
   "audioVoiceSudais": "Umugabo (Sudais)",
-  "qiblaSensorUnavailable": "Rukuruzi ya Compass ntishobora kuboneka kuri iki gikoresho."
+  "qiblaSensorUnavailable": "Rukuruzi ya Compass ntishobora kuboneka kuri iki gikoresho.",
+  "adhanNotificationChannelName": "Amatangazo ya Adhan",
+  "adhanNotificationChannelDescription": "Igihe cyamasengesho kiburira hamwe nijwi rya adhan."
 }

@@ -458,6 +458,13 @@ class AppLocalizationsHmn extends AppLocalizations {
       'Compass sensor tsis muaj nyob rau ntawm lub cuab yeej no.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Cov Lus Qhia';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Lub sij hawm thov Vajtswv ceeb toom nrog adhan suab.';
+
+  @override
   String get notifications => 'Kev ceeb toom';
 
   @override

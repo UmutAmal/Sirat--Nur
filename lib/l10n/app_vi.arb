@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Nam (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Nam (Abdul Basit)",
   "audioVoiceSudais": "Nam (Sudais)",
-  "qiblaSensorUnavailable": "Cảm biến la bàn không khả dụng trên thiết bị này."
+  "qiblaSensorUnavailable": "Cảm biến la bàn không khả dụng trên thiết bị này.",
+  "adhanNotificationChannelName": "Thông báo Adhan",
+  "adhanNotificationChannelDescription": "Cảnh báo thời gian cầu nguyện với âm thanh adhan."
 }

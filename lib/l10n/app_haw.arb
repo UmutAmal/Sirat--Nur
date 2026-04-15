@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Kāne (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Kāne (Abdul Basit)",
   "audioVoiceSudais": "Kāne (Sudais)",
-  "qiblaSensorUnavailable": "ʻAʻole loaʻa ka mea ʻike panana panana ma kēia hāmeʻa."
+  "qiblaSensorUnavailable": "ʻAʻole loaʻa ka mea ʻike panana panana ma kēia hāmeʻa.",
+  "adhanNotificationChannelName": "Hoolaha Adhan",
+  "adhanNotificationChannelDescription": "ʻO nā mākaʻikaʻi manawa pule me ke kani adhan."
 }

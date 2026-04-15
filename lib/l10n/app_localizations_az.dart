@@ -458,6 +458,13 @@ class AppLocalizationsAz extends AppLocalizations {
       'Bu cihazda kompas sensoru mövcud deyil.';
 
   @override
+  String get adhanNotificationChannelName => 'Azan bildirişləri';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Azan səsi ilə namaz vaxtı xəbərdarlığı.';
+
+  @override
   String get notifications => 'Bildirişlər';
 
   @override

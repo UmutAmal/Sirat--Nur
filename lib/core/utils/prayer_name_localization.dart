@@ -32,6 +32,14 @@ class PrayerLocalizer {
     return l10n.prayerNotificationBody(localize(prayerName, languageCode));
   }
 
+  static String notificationChannelName(String languageCode) {
+    return _lookup(languageCode).adhanNotificationChannelName;
+  }
+
+  static String notificationChannelDescription(String languageCode) {
+    return _lookup(languageCode).adhanNotificationChannelDescription;
+  }
+
   static AppLocalizations _lookup(String languageCode) {
     try {
       return lookupAppLocalizations(_parseLocale(languageCode));

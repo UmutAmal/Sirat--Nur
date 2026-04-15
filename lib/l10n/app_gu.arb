@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "પુરૂષ (મિશરી અલાફસી)",
   "audioVoiceAbdulBaset": "પુરૂષ (અબ્દુલબેસેટ)",
   "audioVoiceSudais": "પુરુષ (સુદાઈ)",
-  "qiblaSensorUnavailable": "આ ઉપકરણ પર કંપાસ સેન્સર અનુપલબ્ધ છે."
+  "qiblaSensorUnavailable": "આ ઉપકરણ પર કંપાસ સેન્સર અનુપલબ્ધ છે.",
+  "adhanNotificationChannelName": "અધાન સૂચનાઓ",
+  "adhanNotificationChannelDescription": "અદન અવાજ સાથે પ્રાર્થના સમય ચેતવણીઓ."
 }

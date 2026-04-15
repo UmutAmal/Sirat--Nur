@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "E le o maua le masini tapasa i lenei masini."
+  "qiblaSensorUnavailable": "E le o maua le masini tapasa i lenei masini.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Talosaga taimi tatalo ma le leo azan."
 }

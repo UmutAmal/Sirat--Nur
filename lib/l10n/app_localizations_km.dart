@@ -458,6 +458,13 @@ class AppLocalizationsKm extends AppLocalizations {
       'ឧបករណ៍ចាប់សញ្ញាត្រីវិស័យមិនមាននៅលើឧបករណ៍នេះទេ។';
 
   @override
+  String get adhanNotificationChannelName => 'ការជូនដំណឹង Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'ការដាស់តឿនពេលវេលាអធិស្ឋានជាមួយនឹងសំឡេង adhan ។';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

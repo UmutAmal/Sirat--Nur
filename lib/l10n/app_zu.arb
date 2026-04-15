@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Owesilisa (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Owesilisa (Abdul Basit)",
   "audioVoiceSudais": "Owesilisa (Sudais)",
-  "qiblaSensorUnavailable": "Inzwa yekhampasi ayitholakali kule divayisi."
+  "qiblaSensorUnavailable": "Inzwa yekhampasi ayitholakali kule divayisi.",
+  "adhanNotificationChannelName": "Izaziso ze-Adhan",
+  "adhanNotificationChannelDescription": "Izaziso zesikhathi somkhuleko ezinomsindo we-adhan."
 }

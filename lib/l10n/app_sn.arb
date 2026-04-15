@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Murume (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Murume (Abdul Basit)",
   "audioVoiceSudais": "Murume (Sudais)",
-  "qiblaSensorUnavailable": "Compass sensor haisi kuwanikwa pamudziyo uyu."
+  "qiblaSensorUnavailable": "Compass sensor haisi kuwanikwa pamudziyo uyu.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Nyevero yenguva yemunamato ine adhan ruzha."
 }

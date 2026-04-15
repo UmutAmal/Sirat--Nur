@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "పురుషుడు (మిషరీ అలఫాసీ)",
   "audioVoiceAbdulBaset": "మగ (అబ్దుల్ బాసెట్)",
   "audioVoiceSudais": "మగ (సుడైస్)",
-  "qiblaSensorUnavailable": "ఈ పరికరంలో కంపాస్ సెన్సార్ అందుబాటులో లేదు."
+  "qiblaSensorUnavailable": "ఈ పరికరంలో కంపాస్ సెన్సార్ అందుబాటులో లేదు.",
+  "adhanNotificationChannelName": "అధాన్ నోటిఫికేషన్‌లు",
+  "adhanNotificationChannelDescription": "అధాన్ ధ్వనితో ప్రార్థన సమయ హెచ్చరికలు."
 }

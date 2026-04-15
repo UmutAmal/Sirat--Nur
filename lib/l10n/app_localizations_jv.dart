@@ -459,6 +459,13 @@ class AppLocalizationsJv extends AppLocalizations {
       'Sensor kompas ora kasedhiya ing piranti iki.';
 
   @override
+  String get adhanNotificationChannelName => 'Notifikasi Adzan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Tandha wektu shalat kanthi swara adzan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

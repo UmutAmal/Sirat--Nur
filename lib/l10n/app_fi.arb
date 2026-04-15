@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Mies (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mies (Abdul Basit)",
   "audioVoiceSudais": "mies (Sudais)",
-  "qiblaSensorUnavailable": "Kompassin tunnistin ei ole käytettävissä tässä laitteessa."
+  "qiblaSensorUnavailable": "Kompassin tunnistin ei ole käytettävissä tässä laitteessa.",
+  "adhanNotificationChannelName": "Adhan-ilmoitukset",
+  "adhanNotificationChannelDescription": "Rukousajan hälytykset adhan-äänellä."
 }

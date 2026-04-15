@@ -457,6 +457,13 @@ class AppLocalizationsGu extends AppLocalizations {
   String get qiblaSensorUnavailable => 'આ ઉપકરણ પર કંપાસ સેન્સર અનુપલબ્ધ છે.';
 
   @override
+  String get adhanNotificationChannelName => 'અધાન સૂચનાઓ';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'અદન અવાજ સાથે પ્રાર્થના સમય ચેતવણીઓ.';
+
+  @override
   String get notifications => 'સૂચનાઓ';
 
   @override

@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Masculinu (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Maschile (Abdul Basit)",
   "audioVoiceSudais": "Maschile (Sudais)",
-  "qiblaSensorUnavailable": "U sensoru di bussola ùn hè micca dispunibule nantu à stu dispusitivu."
+  "qiblaSensorUnavailable": "U sensoru di bussola ùn hè micca dispunibule nantu à stu dispusitivu.",
+  "adhanNotificationChannelName": "Notifiche Adhan",
+  "adhanNotificationChannelDescription": "Alerte di tempu di preghiera cù sonu adhan."
 }

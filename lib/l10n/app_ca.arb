@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Home (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Home (Abdul Basit)",
   "audioVoiceSudais": "Mascle (Sudais)",
-  "qiblaSensorUnavailable": "El sensor de la brúixola no està disponible en aquest dispositiu."
+  "qiblaSensorUnavailable": "El sensor de la brúixola no està disponible en aquest dispositiu.",
+  "adhanNotificationChannelName": "Notificacions Adhan",
+  "adhanNotificationChannelDescription": "Alertes de temps de pregària amb so adhan."
 }

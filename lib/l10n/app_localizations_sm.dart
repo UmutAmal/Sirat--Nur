@@ -458,6 +458,13 @@ class AppLocalizationsSm extends AppLocalizations {
       'E le o maua le masini tapasa i lenei masini.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Talosaga taimi tatalo ma le leo azan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

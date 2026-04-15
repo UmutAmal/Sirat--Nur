@@ -458,6 +458,13 @@ class AppLocalizationsXh extends AppLocalizations {
       'Isivamvo seCompass asifumaneki kwesi sixhobo.';
 
   @override
+  String get adhanNotificationChannelName => 'Izaziso ze-Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Izilumkiso zexesha lomthandazo kunye nesandi se-adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

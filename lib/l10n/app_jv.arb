@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Lanang (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Lanang (Abdul Basit)",
   "audioVoiceSudais": "Lanang (Sudais)",
-  "qiblaSensorUnavailable": "Sensor kompas ora kasedhiya ing piranti iki."
+  "qiblaSensorUnavailable": "Sensor kompas ora kasedhiya ing piranti iki.",
+  "adhanNotificationChannelName": "Notifikasi Adzan",
+  "adhanNotificationChannelDescription": "Tandha wektu shalat kanthi swara adzan."
 }

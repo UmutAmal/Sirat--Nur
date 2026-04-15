@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Man (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Man (Abdul Basit)",
   "audioVoiceSudais": "Man (sudais)",
-  "qiblaSensorUnavailable": "Kompasssensor är inte tillgänglig på den här enheten."
+  "qiblaSensorUnavailable": "Kompasssensor är inte tillgänglig på den här enheten.",
+  "adhanNotificationChannelName": "Adhan-meddelanden",
+  "adhanNotificationChannelDescription": "Bönetidslarm med adhan-ljud."
 }

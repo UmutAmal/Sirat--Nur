@@ -458,6 +458,13 @@ class AppLocalizationsLt extends AppLocalizations {
       'Šiame įrenginyje kompaso jutiklis nepasiekiamas.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan pranešimai';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Maldos laikas perspėja su adhano garsu.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

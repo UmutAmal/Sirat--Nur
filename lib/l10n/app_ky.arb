@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Эркек (Мишари Алафаси)",
   "audioVoiceAbdulBaset": "Эркек (АбдулБасет)",
   "audioVoiceSudais": "Эркек (Судайлар)",
-  "qiblaSensorUnavailable": "Компас сенсору бул түзмөктө жеткиликсиз."
+  "qiblaSensorUnavailable": "Компас сенсору бул түзмөктө жеткиликсиз.",
+  "adhanNotificationChannelName": "Азан эскертмелери",
+  "adhanNotificationChannelDescription": "Намаз убактысы азан үнү менен эскертет."
 }

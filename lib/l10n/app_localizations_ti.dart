@@ -457,6 +457,13 @@ class AppLocalizationsTi extends AppLocalizations {
   String get qiblaSensorUnavailable => 'ኣብዚ መሳርሒ ኮምፓስ ሴንሰር የለን።';
 
   @override
+  String get adhanNotificationChannelName => 'ኣድሃን መፍለጢታት';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

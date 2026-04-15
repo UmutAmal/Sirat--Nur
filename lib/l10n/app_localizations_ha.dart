@@ -458,6 +458,13 @@ class AppLocalizationsHa extends AppLocalizations {
       'Babu firikwensin Compass akan wannan na\'urar.';
 
   @override
+  String get adhanNotificationChannelName => 'Sanarwar Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Ana faɗakar da lokacin sallah tare da sautin adhan.';
+
+  @override
   String get notifications => 'Sanarwa';
 
   @override

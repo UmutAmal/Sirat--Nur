@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "نارینه (مشیری الفاسی)",
   "audioVoiceAbdulBaset": "نارینه (عبدالباسط)",
   "audioVoiceSudais": "نارینه (سدیس)",
-  "qiblaSensorUnavailable": "په دې وسیله د کمپاس سینسر شتون نلري."
+  "qiblaSensorUnavailable": "په دې وسیله د کمپاس سینسر شتون نلري.",
+  "adhanNotificationChannelName": "د اذان خبرتیاوې",
+  "adhanNotificationChannelDescription": "د اذان په غږ سره د لمانځه وخت خبرتیا."
 }

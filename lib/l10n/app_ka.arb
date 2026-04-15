@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "მამაკაცი (მიშარი ალაფასი)",
   "audioVoiceAbdulBaset": "მამაკაცი (აბდულბასეტი)",
   "audioVoiceSudais": "მამაკაცი (სუდაისი)",
-  "qiblaSensorUnavailable": "კომპასის სენსორი მიუწვდომელია ამ მოწყობილობაზე."
+  "qiblaSensorUnavailable": "კომპასის სენსორი მიუწვდომელია ამ მოწყობილობაზე.",
+  "adhanNotificationChannelName": "ადანის შეტყობინებები",
+  "adhanNotificationChannelDescription": "ლოცვის დრო აფრთხილებს ადანის ხმით."
 }

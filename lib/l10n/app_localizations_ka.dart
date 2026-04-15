@@ -458,6 +458,13 @@ class AppLocalizationsKa extends AppLocalizations {
       'კომპასის სენსორი მიუწვდომელია ამ მოწყობილობაზე.';
 
   @override
+  String get adhanNotificationChannelName => 'ადანის შეტყობინებები';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'ლოცვის დრო აფრთხილებს ადანის ხმით.';
+
+  @override
   String get notifications => 'შეტყობინებები';
 
   @override

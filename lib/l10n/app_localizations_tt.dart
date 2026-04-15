@@ -458,6 +458,13 @@ class AppLocalizationsTt extends AppLocalizations {
       'Компас сенсоры бу җайланмада мөмкин түгел.';
 
   @override
+  String get adhanNotificationChannelName => 'Азан хәбәрләре';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Азан тавышы белән дога вакыты.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

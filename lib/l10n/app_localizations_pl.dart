@@ -458,6 +458,13 @@ class AppLocalizationsPl extends AppLocalizations {
       'Czujnik kompasu jest niedostępny na tym urządzeniu.';
 
   @override
+  String get adhanNotificationChannelName => 'Powiadomienia Adhana';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Alerty czasu modlitwy z dźwiękiem Adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

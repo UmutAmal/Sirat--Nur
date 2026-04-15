@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "ኣብዚ መሳርሒ ኮምፓስ ሴንሰር የለን።"
+  "qiblaSensorUnavailable": "ኣብዚ መሳርሒ ኮምፓስ ሴንሰር የለን።",
+  "adhanNotificationChannelName": "ኣድሃን መፍለጢታት",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
 }

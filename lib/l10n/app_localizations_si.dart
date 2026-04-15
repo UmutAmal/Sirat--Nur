@@ -457,6 +457,13 @@ class AppLocalizationsSi extends AppLocalizations {
   String get qiblaSensorUnavailable => 'මෙම උපාංගයේ මාලිමා සංවේදකය නොමැත.';
 
   @override
+  String get adhanNotificationChannelName => 'අදාන් දැනුම්දීම්';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'අදාන් ශබ්දය සමඟ යාච්ඤාවේ වේලාව අනතුරු ඇඟවීම්.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

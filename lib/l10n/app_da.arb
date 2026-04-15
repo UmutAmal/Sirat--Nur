@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Mand (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mand (Abdul Basit)",
   "audioVoiceSudais": "Mand (sudais)",
-  "qiblaSensorUnavailable": "Kompassensor er ikke tilgængelig på denne enhed."
+  "qiblaSensorUnavailable": "Kompassensor er ikke tilgængelig på denne enhed.",
+  "adhanNotificationChannelName": "Adhan-meddelelser",
+  "adhanNotificationChannelDescription": "Bønnetidsalarmer med adhan-lyd."
 }

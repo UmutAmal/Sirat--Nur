@@ -458,6 +458,13 @@ class AppLocalizationsBn extends AppLocalizations {
   String get qiblaSensorUnavailable => 'এই ডিভাইসে কম্পাস সেন্সর অনুপলব্ধ৷';
 
   @override
+  String get adhanNotificationChannelName => 'আযান বিজ্ঞপ্তি';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'আযান ধ্বনির সাথে নামাজের সময় সতর্কতা।';
+
+  @override
   String get notifications => 'নোটিফিকেশন';
 
   @override

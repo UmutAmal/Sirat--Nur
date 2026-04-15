@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "ذكر (مشاري العفاسي)",
   "audioVoiceAbdulBaset": "ذكر (عبد الباسط)",
   "audioVoiceSudais": "ذكر (السديس)",
-  "qiblaSensorUnavailable": "مستشعر البوصلة غير متوفر على هذا الجهاز."
+  "qiblaSensorUnavailable": "مستشعر البوصلة غير متوفر على هذا الجهاز.",
+  "adhanNotificationChannelName": "إشعارات الأذان",
+  "adhanNotificationChannelDescription": "تنبيهات لأوقات الصلاة مع صوت الأذان."
 }

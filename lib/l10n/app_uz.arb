@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Erkak (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Erkak (Abdul Basit)",
   "audioVoiceSudais": "Erkak (Sudais)",
-  "qiblaSensorUnavailable": "Kompas sensori bu qurilmada ishlamaydi."
+  "qiblaSensorUnavailable": "Kompas sensori bu qurilmada ishlamaydi.",
+  "adhanNotificationChannelName": "Azon bildirishnomalari",
+  "adhanNotificationChannelDescription": "Namoz vaqti azon ovozi bilan ogohlantiriladi."
 }

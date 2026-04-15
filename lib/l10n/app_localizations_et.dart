@@ -458,6 +458,13 @@ class AppLocalizationsEt extends AppLocalizations {
       'Kompassi andur pole selles seadmes saadaval.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhani teatised';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Palveaja hoiatused adhani heliga.';
+
+  @override
   String get notifications => 'Märguanded';
 
   @override

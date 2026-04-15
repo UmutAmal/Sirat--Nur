@@ -459,6 +459,13 @@ class AppLocalizationsMt extends AppLocalizations {
       'Is-sensor tal-boxxla mhux disponibbli fuq dan l-apparat.';
 
   @override
+  String get adhanNotificationChannelName => 'Notifiki Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Twissijiet tal-ħin tat-talb b\'ħoss adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

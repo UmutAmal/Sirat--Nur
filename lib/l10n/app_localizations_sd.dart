@@ -457,6 +457,13 @@ class AppLocalizationsSd extends AppLocalizations {
   String get qiblaSensorUnavailable => 'کمپاس سينسر هن ڊوائيس تي دستياب ناهي.';
 
   @override
+  String get adhanNotificationChannelName => 'اذان جا اطلاع';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'اذان جي آواز سان نماز جو وقت خبردار ڪري ٿو.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

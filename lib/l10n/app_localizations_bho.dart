@@ -458,6 +458,13 @@ class AppLocalizationsBho extends AppLocalizations {
   String get qiblaSensorUnavailable => 'एह डिवाइस पर कम्पास सेंसर उपलब्ध नइखे.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'सूचना दिहल गइल बा';
 
   @override

@@ -459,6 +459,13 @@ class AppLocalizationsIlo extends AppLocalizations {
       'Saan a magun-odan ti compass sensor iti daytoy nga alikamen.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'Dagiti Pakaammo';
 
   @override

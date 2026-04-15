@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Արական (Միշարի Ալաֆասի)",
   "audioVoiceAbdulBaset": "Արական (ԱբդուլԲասեթ)",
   "audioVoiceSudais": "Արական (Սուդայ)",
-  "qiblaSensorUnavailable": "Կողմնացույցի սենսորն անհասանելի է այս սարքում:"
+  "qiblaSensorUnavailable": "Կողմնացույցի սենսորն անհասանելի է այս սարքում:",
+  "adhanNotificationChannelName": "Ադանի ծանուցումներ",
+  "adhanNotificationChannelDescription": "Աղոթքի ժամանակի ահազանգերը ադանի ձայնով:"
 }

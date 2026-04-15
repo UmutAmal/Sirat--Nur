@@ -460,6 +460,13 @@ class AppLocalizationsEs extends AppLocalizations {
       'El sensor de brújula no está disponible en este dispositivo.';
 
   @override
+  String get adhanNotificationChannelName => 'Notificaciones Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Alertas de tiempo de oración con sonido adhan.';
+
+  @override
   String get notifications => 'Notificaciones';
 
   @override

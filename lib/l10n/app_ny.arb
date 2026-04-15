@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Mwamuna (Sudais)",
-  "qiblaSensorUnavailable": "Sensa ya Compass sichikupezeka pachidachi."
+  "qiblaSensorUnavailable": "Sensa ya Compass sichikupezeka pachidachi.",
+  "adhanNotificationChannelName": "Zidziwitso za Adhan",
+  "adhanNotificationChannelDescription": "Zidziwitso za nthawi ya mapemphero ndi mawu a adhan."
 }

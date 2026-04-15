@@ -456,6 +456,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get qiblaSensorUnavailable => 'このデバイスではコンパス センサーを利用できません。';
 
   @override
+  String get adhanNotificationChannelName => 'アザーン通知';
+
+  @override
+  String get adhanNotificationChannelDescription => '礼拝時間はアザーン音でお知らせします。';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

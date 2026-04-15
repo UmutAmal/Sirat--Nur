@@ -457,6 +457,13 @@ class AppLocalizationsKn extends AppLocalizations {
   String get qiblaSensorUnavailable => 'ಈ ಸಾಧನದಲ್ಲಿ ದಿಕ್ಸೂಚಿ ಸಂವೇದಕ ಲಭ್ಯವಿಲ್ಲ.';
 
   @override
+  String get adhanNotificationChannelName => 'ಅಧಾನ್ ಅಧಿಸೂಚನೆಗಳು';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'ಅಧಾನ್ ಧ್ವನಿಯೊಂದಿಗೆ ಪ್ರಾರ್ಥನೆ ಸಮಯದ ಎಚ್ಚರಿಕೆಗಳು.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -4054,3 +4054,49 @@
 ### Sonraki Adım
 - Core servislerde kalan kullanıcıya dönük hardcoded string taraması sürdürülecek; ilk adaylar notification channel copy ve prayer/audio pipeline mesajlarıdır.
 - Rare locale EN-reference kalan anahtarlar güvenli sibling/source fallback matrisiyle sınıflandırılmaya devam edecek.
+
+## 2026-04-15 TUR-103 — Localize Adhan Notification Channel Copy
+
+### Ne Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/adhan_scheduler_service.dart) içindeki Android notification channel adı ve açıklaması hardcoded İngilizce olmaktan çıkarıldı.
+- [A:\Way of Allah\sirat_i_nur\lib\core\utils\prayer_name_localization.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/utils/prayer_name_localization.dart) içine `notificationChannelName` ve `notificationChannelDescription` helper'ları eklendi; servis artık channel copy'yi settings dilinden generated l10n üzerinden çözüyor.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) referanslarına `adhanNotificationChannelName` ve `adhanNotificationChannelDescription` eklendi; tüm ARB/generated l10n seti güncellendi.
+- [A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart](A:/Way%20of%20Allah/sirat_i_nur/tool/translate_arb_keys.dart) tek satır kalması gereken channel/audio voice anahtarları için newline/rubbish split çıktısını EN referansa düşürecek şekilde sertleştirildi.
+- [A:\Way of Allah\sirat_i_nur\test\prayer_name_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/prayer_name_localization_test.dart) Türkçe channel copy ve servis dosyasında raw İngilizce channel string kalmadığını doğruluyor.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) güvenli öncelikli locale setinde channel copy'nin İngilizce fallback vermediğini ve tüm locale'lerde tek satır kaldığını kilitliyor.
+
+### Neden Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/adhan_scheduler_service.dart) Android channel için `Adhan Notifications` ve `High precision Islamic prayer alerts` metinlerini sabit tutuyordu.
+- Android notification channel adı/açıklaması kullanıcıya sistem bildirim ayarlarında görünen kalıcı bir yüzeydir; uygulama Türkçe veya başka dildeyken İngilizce kalması tam localization hedefini bozuyordu.
+- İlk batch çeviri denemesinde bazı nadir locale'lerde channel açıklamasına satır sonu karışabildiği görüldü; bu yüzden tool katmanında da kök sebep koruması eklendi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\prayer_name_localization.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_name_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Adhan bildirim kanalı artık kullanıcı diline göre adlandırılıyor ve açıklanıyor.
+- Notification channel copy tek satır kalma garantisi test ve translation-tool post-process ile korunuyor.
+- Raw İngilizce channel metinlerinin servis dosyasına geri sızması testte yakalanacak.
+
+### Test Sonucu
+- `dart format tool/translate_arb_keys.dart test/arb_ui_localization_test.dart` → PASS
+- `dart run tool/translate_arb_keys.dart --force adhanNotificationChannelName adhanNotificationChannelDescription` → PASS
+- `flutter gen-l10n` → PASS
+- `flutter test test/prayer_name_localization_test.dart test/arb_ui_localization_test.dart --reporter compact` → PASS (`34/34`)
+- `flutter analyze` → PASS
+- `flutter test --reporter compact` → PASS (`241/241`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Android adhan notification channel exposes hardcoded English system copy: `12/25 → 2/25`
+- Translation batch can create multiline garbage for single-line system labels: `10/25 → 2/25`
+
+### Sonraki Adım
+- Prayer/audio pipeline içinde kalan kullanıcıya dönük hardcoded error/debug copy taranacak; özellikle exception mesajı UI'a taşınan akışlar önceliklendirilecek.
+- Rare locale EN-reference kalan anahtarlar için güvenli fallback ve doğrulanabilir çeviri matrisi genişletilmeye devam edecek.

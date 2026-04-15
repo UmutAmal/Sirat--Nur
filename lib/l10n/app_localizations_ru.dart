@@ -460,6 +460,13 @@ class AppLocalizationsRu extends AppLocalizations {
       'Датчик компаса недоступен на этом устройстве.';
 
   @override
+  String get adhanNotificationChannelName => 'Уведомления об Азане';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Оповещения о времени молитвы со звуком азана.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

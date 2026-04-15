@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "He device ah hian Compass sensor a awm lo."
+  "qiblaSensorUnavailable": "He device ah hian Compass sensor a awm lo.",
+  "adhanNotificationChannelName": "Adhan Hriattirna",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
 }

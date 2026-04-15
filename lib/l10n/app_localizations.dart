@@ -1318,6 +1318,18 @@ abstract class AppLocalizations {
   /// **'Compass sensor is unavailable on this device.'**
   String get qiblaSensorUnavailable;
 
+  /// No description provided for @adhanNotificationChannelName.
+  ///
+  /// In en, this message translates to:
+  /// **'Adhan Notifications'**
+  String get adhanNotificationChannelName;
+
+  /// No description provided for @adhanNotificationChannelDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Prayer time alerts with adhan sound.'**
+  String get adhanNotificationChannelDescription;
+
   /// No description provided for @notifications.
   ///
   /// In en, this message translates to:

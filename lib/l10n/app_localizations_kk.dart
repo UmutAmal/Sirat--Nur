@@ -457,6 +457,13 @@ class AppLocalizationsKk extends AppLocalizations {
   String get qiblaSensorUnavailable => 'Бұл құрылғыда компас сенсоры жоқ.';
 
   @override
+  String get adhanNotificationChannelName => 'Азан хабарландырулары';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Азан дыбысымен намаз уақыты туралы ескертулер.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -458,6 +458,13 @@ class AppLocalizationsLb extends AppLocalizations {
       'Kompasssensor ass op dësem Apparat net verfügbar.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifikatiounen';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Gebiedszäit Alarmer mat Adhan Sound.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

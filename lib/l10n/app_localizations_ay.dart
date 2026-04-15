@@ -468,6 +468,13 @@ class AppLocalizationsAy extends AppLocalizations {
       'Sensor de brújula ukax janiw aka dispositivo ukanx utjkiti.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Yatiyawinaka';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'Yatiyawinaka';
 
   @override

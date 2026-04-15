@@ -459,6 +459,13 @@ class AppLocalizationsSo extends AppLocalizations {
       'Dareemaha Compass lagama heli karo qalabkan.';
 
   @override
+  String get adhanNotificationChannelName => 'Ogeysiinta Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Waqtiga salaadda wuxuu ku baraarujinayaa dhawaaqa adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

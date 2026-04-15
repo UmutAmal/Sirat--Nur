@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "މި ޑިވައިސްގައި ކޮމްޕަސް ސެންސަރެއް ނެތެވެ."
+  "qiblaSensorUnavailable": "މި ޑިވައިސްގައި ކޮމްޕަސް ސެންސަރެއް ނެތެވެ.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound."
 }

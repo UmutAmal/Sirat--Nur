@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "পুরুষ (মিশারি আলাফাসি)",
   "audioVoiceAbdulBaset": "পুরুষ (আব্দুল বাসেত)",
   "audioVoiceSudais": "পুরুষ (সুদাইস)",
-  "qiblaSensorUnavailable": "এই ডিভাইসে কম্পাস সেন্সর অনুপলব্ধ৷"
+  "qiblaSensorUnavailable": "এই ডিভাইসে কম্পাস সেন্সর অনুপলব্ধ৷",
+  "adhanNotificationChannelName": "আযান বিজ্ঞপ্তি",
+  "adhanNotificationChannelDescription": "আযান ধ্বনির সাথে নামাজের সময় সতর্কতা।"
 }

@@ -458,6 +458,13 @@ class AppLocalizationsMs extends AppLocalizations {
       'Penderia kompas tidak tersedia pada peranti ini.';
 
   @override
+  String get adhanNotificationChannelName => 'Pemberitahuan Adzan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Makluman waktu solat dengan bunyi azan.';
+
+  @override
   String get notifications => 'Pemberitahuan';
 
   @override

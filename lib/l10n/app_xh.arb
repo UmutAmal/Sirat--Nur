@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Indoda (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Indoda (Abdul Basit)",
   "audioVoiceSudais": "Indoda (Sudais)",
-  "qiblaSensorUnavailable": "Isivamvo seCompass asifumaneki kwesi sixhobo."
+  "qiblaSensorUnavailable": "Isivamvo seCompass asifumaneki kwesi sixhobo.",
+  "adhanNotificationChannelName": "Izaziso ze-Adhan",
+  "adhanNotificationChannelDescription": "Izilumkiso zexesha lomthandazo kunye nesandi se-adhan."
 }

@@ -459,6 +459,13 @@ class AppLocalizationsTk extends AppLocalizations {
       'Kompass datçigi bu enjamda elýeterli däl.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan habarnamalary';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Adhan sesi bilen doga wagty duýduryşlary.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

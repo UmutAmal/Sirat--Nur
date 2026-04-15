@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Mâle (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Homme (Abdul Basit)",
   "audioVoiceSudais": "Mâle (Sudais)",
-  "qiblaSensorUnavailable": "Le capteur de boussole n'est pas disponible sur cet appareil."
+  "qiblaSensorUnavailable": "Le capteur de boussole n'est pas disponible sur cet appareil.",
+  "adhanNotificationChannelName": "Notifications Adhan",
+  "adhanNotificationChannelDescription": "Alertes d'heure de prière avec le son adhan."
 }

@@ -742,6 +742,75 @@ void main() {
     );
 
     test(
+      'safe priority locales do not fall back to English for adhan notification channel copy',
+      () {
+        const safeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'da',
+          'he',
+          'ja',
+          'nb',
+          'nn',
+          'no',
+          'pt',
+          'ru',
+          'vi',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const localizedKeys = [
+          'adhanNotificationChannelName',
+          'adhanNotificationChannelDescription',
+        ];
+
+        for (final locale in safeLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
+    test('adhan notification channel copy stays single-line in all locales', () {
+      const localizedKeys = [
+        'adhanNotificationChannelName',
+        'adhanNotificationChannelDescription',
+      ];
+      final arbFiles =
+          Directory('lib/l10n')
+              .listSync()
+              .whereType<File>()
+              .where((file) => file.path.endsWith('.arb'))
+              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+              .toList()
+            ..sort((a, b) => a.path.compareTo(b.path));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+        for (final key in localizedKeys) {
+          final value = arb[key] as String;
+          expect(
+            value.contains('\n') || value.contains('\r'),
+            isFalse,
+            reason:
+                '${file.uri.pathSegments.last} has multiline channel copy for $key',
+          );
+        }
+      }
+    });
+
+    test(
       'safe priority locales do not fall back to English for chatbot offline copy',
       () {
         const safeLocales = [
@@ -784,28 +853,31 @@ void main() {
       },
     );
 
-    test('chatbotUseCloudAi preserves Gemini as a proper noun across locales', () {
-      final arbFiles =
-          Directory('lib/l10n')
-              .listSync()
-              .whereType<File>()
-              .where((file) => file.path.endsWith('.arb'))
-              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
-              .toList()
-            ..sort((a, b) => a.path.compareTo(b.path));
+    test(
+      'chatbotUseCloudAi preserves Gemini as a proper noun across locales',
+      () {
+        final arbFiles =
+            Directory('lib/l10n')
+                .listSync()
+                .whereType<File>()
+                .where((file) => file.path.endsWith('.arb'))
+                .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+                .toList()
+              ..sort((a, b) => a.path.compareTo(b.path));
 
-      for (final file in arbFiles) {
-        final arb = _readArb(file.path);
-        final value = arb['chatbotUseCloudAi'] as String;
+        for (final file in arbFiles) {
+          final arb = _readArb(file.path);
+          final value = arb['chatbotUseCloudAi'] as String;
 
-        expect(
-          value.contains('Gemini'),
-          isTrue,
-          reason:
-              '${file.uri.pathSegments.last} translated or dropped the Gemini proper noun',
-        );
-      }
-    });
+          expect(
+            value.contains('Gemini'),
+            isTrue,
+            reason:
+                '${file.uri.pathSegments.last} translated or dropped the Gemini proper noun',
+          );
+        }
+      },
+    );
 
     test(
       'safe priority locales do not fall back to English for premium, splash, and prayer remaining copy',

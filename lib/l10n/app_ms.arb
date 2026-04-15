@@ -760,5 +760,7 @@
   "audioVoiceMisharyAlafasy": "Lelaki (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Lelaki (Abdul Basit)",
   "audioVoiceSudais": "Lelaki (Sudais)",
-  "qiblaSensorUnavailable": "Penderia kompas tidak tersedia pada peranti ini."
+  "qiblaSensorUnavailable": "Penderia kompas tidak tersedia pada peranti ini.",
+  "adhanNotificationChannelName": "Pemberitahuan Adzan",
+  "adhanNotificationChannelDescription": "Makluman waktu solat dengan bunyi azan."
 }

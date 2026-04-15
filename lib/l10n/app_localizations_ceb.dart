@@ -460,6 +460,13 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Ang sensor sa kompas dili magamit sa kini nga aparato.';
 
   @override
+  String get adhanNotificationChannelName => 'Mga Abiso sa Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Mga alerto sa oras sa pag-ampo nga adunay tunog sa adhan.';
+
+  @override
   String get notifications => 'Mga pahibalo';
 
   @override

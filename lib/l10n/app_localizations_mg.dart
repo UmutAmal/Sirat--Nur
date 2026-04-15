@@ -459,6 +459,13 @@ class AppLocalizationsMg extends AppLocalizations {
       'Tsy misy sensor compass amin\'ity fitaovana ity.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Fampandrenesana ny fotoam-bavaka miaraka amin\'ny feon\'ny adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -115,11 +115,13 @@ class AdhanSchedulerService {
         title: title,
         body: body,
         scheduledDate: TimezoneUtils.toTZDateTime(entry.value, timezoneName),
-        notificationDetails: const NotificationDetails(
+        notificationDetails: NotificationDetails(
           android: AndroidNotificationDetails(
             'adhan_channel_high_precision',
-            'Adhan Notifications',
-            channelDescription: 'High precision Islamic prayer alerts',
+            PrayerLocalizer.notificationChannelName(normalizedLanguageCode),
+            channelDescription: PrayerLocalizer.notificationChannelDescription(
+              normalizedLanguageCode,
+            ),
             importance: Importance.max,
             priority: Priority.high,
             sound: RawResourceAndroidNotificationSound('adhan'),

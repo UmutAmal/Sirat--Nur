@@ -458,6 +458,13 @@ class AppLocalizationsEu extends AppLocalizations {
       'Iparrorratza sentsorea ez dago erabilgarri gailu honetan.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan jakinarazpenak';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Otoitz denbora alertak adhan soinuarekin.';
+
+  @override
   String get notifications => 'Jakinarazpenak';
 
   @override

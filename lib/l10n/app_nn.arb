@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Mann (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mann (Abdul Basit)",
   "audioVoiceSudais": "Mann (Sudais)",
-  "qiblaSensorUnavailable": "Kompasssensor er utilgjengelig på denne enheten."
+  "qiblaSensorUnavailable": "Kompasssensor er utilgjengelig på denne enheten.",
+  "adhanNotificationChannelName": "Adhan-varsler",
+  "adhanNotificationChannelDescription": "Bønnetidsvarsler med adhan-lyd."
 }

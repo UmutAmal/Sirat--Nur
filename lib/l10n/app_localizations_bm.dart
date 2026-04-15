@@ -458,6 +458,13 @@ class AppLocalizationsBm extends AppLocalizations {
       'Boussole sensor tɛ sɔrɔ nin minɛn in kan.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'Ladɔnniyaliw';
 
   @override

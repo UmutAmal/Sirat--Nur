@@ -458,6 +458,13 @@ class AppLocalizationsYi extends AppLocalizations {
       'קאָמפּאַס סענסער איז ניט בנימצא אויף דעם מיטל.';
 
   @override
+  String get adhanNotificationChannelName => 'אַדהאַן נאָוטאַפאַקיישאַנז';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'תפילה צייט אַלערץ מיט אַדהאַן געזונט.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

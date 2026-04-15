@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Erkek (Mişary Alafasy)",
   "audioVoiceAbdulBaset": "Erkek (Abdul Basit)",
   "audioVoiceSudais": "Erkek (Sudais)",
-  "qiblaSensorUnavailable": "Kompass datçigi bu enjamda elýeterli däl."
+  "qiblaSensorUnavailable": "Kompass datçigi bu enjamda elýeterli däl.",
+  "adhanNotificationChannelName": "Adhan habarnamalary",
+  "adhanNotificationChannelDescription": "Adhan sesi bilen doga wagty duýduryşlary."
 }

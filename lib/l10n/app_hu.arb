@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Férfi (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Férfi (Abdul Basit)",
   "audioVoiceSudais": "férfi (szudai)",
-  "qiblaSensorUnavailable": "Az iránytűérzékelő nem érhető el ezen az eszközön."
+  "qiblaSensorUnavailable": "Az iránytűérzékelő nem érhető el ezen az eszközön.",
+  "adhanNotificationChannelName": "Adhan értesítések",
+  "adhanNotificationChannelDescription": "Az imaidő figyelmeztetések adhan hanggal."
 }

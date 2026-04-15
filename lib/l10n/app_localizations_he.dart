@@ -456,6 +456,13 @@ class AppLocalizationsHe extends AppLocalizations {
   String get qiblaSensorUnavailable => 'חיישן מצפן אינו זמין במכשיר זה.';
 
   @override
+  String get adhanNotificationChannelName => 'התראות אדהאן';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'התראות על זמן תפילה עם צליל אדהן.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

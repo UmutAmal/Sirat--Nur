@@ -458,6 +458,13 @@ class AppLocalizationsLa extends AppLocalizations {
       'Sensorem Compass est in hac fabrica unavailable.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Suspendisse';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Orationis tempus summis cum adhan sono.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

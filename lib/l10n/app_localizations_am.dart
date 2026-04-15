@@ -455,6 +455,13 @@ class AppLocalizationsAm extends AppLocalizations {
   String get qiblaSensorUnavailable => 'የኮምፓስ ዳሳሽ በዚህ መሳሪያ ላይ የለም።';
 
   @override
+  String get adhanNotificationChannelName => 'አድሃን ማሳወቂያዎች';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'የጸሎት ጊዜ ማንቂያዎች ከአድሃን ድምፅ ጋር።';
+
+  @override
   String get notifications => 'ማሳወቂያዎች';
 
   @override

@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "ପୁରୁଷ (ମିଶରୀ ଆଲାଫାସୀ)",
   "audioVoiceAbdulBaset": "ପୁରୁଷ (ଅବଦୁଲବେସେଟ୍)",
   "audioVoiceSudais": "ପୁରୁଷ (ସୁଦାଇସ୍)",
-  "qiblaSensorUnavailable": "ଏହି ଡିଭାଇସରେ କମ୍ପାସ୍ ସେନ୍ସର ଉପଲବ୍ଧ ନାହିଁ |"
+  "qiblaSensorUnavailable": "ଏହି ଡିଭାଇସରେ କମ୍ପାସ୍ ସେନ୍ସର ଉପଲବ୍ଧ ନାହିଁ |",
+  "adhanNotificationChannelName": "ଆଡନ୍ ବିଜ୍ଞପ୍ତିଗୁଡିକ |",
+  "adhanNotificationChannelDescription": "ଆଦନ ଧ୍ୱନି ସହିତ ପ୍ରାର୍ଥନା ସମୟ ଆଲର୍ଟ |"
 }

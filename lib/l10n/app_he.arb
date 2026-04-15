@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "זכר (מישרי אלאפסי)",
   "audioVoiceAbdulBaset": "זכר (Abdul Basit)",
   "audioVoiceSudais": "זכר (סודאים)",
-  "qiblaSensorUnavailable": "חיישן מצפן אינו זמין במכשיר זה."
+  "qiblaSensorUnavailable": "חיישן מצפן אינו זמין במכשיר זה.",
+  "adhanNotificationChannelName": "התראות אדהאן",
+  "adhanNotificationChannelDescription": "התראות על זמן תפילה עם צליל אדהן."
 }

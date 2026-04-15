@@ -460,6 +460,13 @@ class AppLocalizationsBe extends AppLocalizations {
       'Датчык компаса недаступны на гэтай прыладзе.';
 
   @override
+  String get adhanNotificationChannelName => 'Апавяшчэнні аб азане';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Абвесткі пра час малітвы з гукам азана.';
+
+  @override
   String get notifications => 'Апавяшчэнні';
 
   @override

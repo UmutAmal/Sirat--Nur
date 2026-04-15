@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Άντρας (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Άντρας (Abdul Basit)",
   "audioVoiceSudais": "Αρσενικό (Sudais)",
-  "qiblaSensorUnavailable": "Ο αισθητήρας πυξίδας δεν είναι διαθέσιμος σε αυτήν τη συσκευή."
+  "qiblaSensorUnavailable": "Ο αισθητήρας πυξίδας δεν είναι διαθέσιμος σε αυτήν τη συσκευή.",
+  "adhanNotificationChannelName": "Ειδοποιήσεις Adhan",
+  "adhanNotificationChannelDescription": "Ειδοποιήσεις ώρας προσευχής με ήχο αντάν."
 }

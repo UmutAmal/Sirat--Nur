@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Mężczyzna (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mężczyzna (Abdul Basit)",
   "audioVoiceSudais": "Mężczyzna (Sudais)",
-  "qiblaSensorUnavailable": "Czujnik kompasu jest niedostępny na tym urządzeniu."
+  "qiblaSensorUnavailable": "Czujnik kompasu jest niedostępny na tym urządzeniu.",
+  "adhanNotificationChannelName": "Powiadomienia Adhana",
+  "adhanNotificationChannelDescription": "Alerty czasu modlitwy z dźwiękiem Adhan."
 }

@@ -462,6 +462,13 @@ class AppLocalizationsTl extends AppLocalizations {
       'Hindi available ang compass sensor sa device na ito.';
 
   @override
+  String get adhanNotificationChannelName => 'Mga Notification ng Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Mga alerto sa oras ng panalangin na may tunog ng adhan.';
+
+  @override
   String get notifications => 'Mga abiso';
 
   @override

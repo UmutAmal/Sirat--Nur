@@ -459,6 +459,13 @@ class AppLocalizationsMi extends AppLocalizations {
       'Karekau te pūoko kāpehu i te wātea ki tēnei pūrere.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Matohi wa inoi me te tangi azan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

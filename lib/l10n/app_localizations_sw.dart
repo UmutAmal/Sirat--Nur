@@ -458,6 +458,13 @@ class AppLocalizationsSw extends AppLocalizations {
       'Kihisi cha dira hakipatikani kwenye kifaa hiki.';
 
   @override
+  String get adhanNotificationChannelName => 'Arifa za Adhana';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Tahadhari za wakati wa maombi na sauti ya adhana.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

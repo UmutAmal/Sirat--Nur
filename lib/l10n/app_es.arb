@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Hombre (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Hombre (Abdul Basit)",
   "audioVoiceSudais": "Hombre (Sudais)",
-  "qiblaSensorUnavailable": "El sensor de brújula no está disponible en este dispositivo."
+  "qiblaSensorUnavailable": "El sensor de brújula no está disponible en este dispositivo.",
+  "adhanNotificationChannelName": "Notificaciones Adhan",
+  "adhanNotificationChannelDescription": "Alertas de tiempo de oración con sonido adhan."
 }

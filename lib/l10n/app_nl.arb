@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Man (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Man (Abdul Basit)",
   "audioVoiceSudais": "Man (Sudais)",
-  "qiblaSensorUnavailable": "Kompassensor is niet beschikbaar op dit apparaat."
+  "qiblaSensorUnavailable": "Kompassensor is niet beschikbaar op dit apparaat.",
+  "adhanNotificationChannelName": "Adhan-meldingen",
+  "adhanNotificationChannelDescription": "Gebedstijdwaarschuwingen met adhan-geluid."
 }

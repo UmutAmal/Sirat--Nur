@@ -460,6 +460,13 @@ class AppLocalizationsLus extends AppLocalizations {
       'He device ah hian Compass sensor a awm lo.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Hriattirna';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'Hriattirna te';
 
   @override

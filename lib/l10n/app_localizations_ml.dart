@@ -457,6 +457,13 @@ class AppLocalizationsMl extends AppLocalizations {
   String get qiblaSensorUnavailable => 'ഈ ഉപകരണത്തിൽ കോമ്പസ് സെൻസർ ലഭ്യമല്ല.';
 
   @override
+  String get adhanNotificationChannelName => 'അധാൻ അറിയിപ്പുകൾ';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'അദാൻ ശബ്ദത്തോടുകൂടിയ പ്രാർത്ഥന സമയ അലേർട്ടുകൾ.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

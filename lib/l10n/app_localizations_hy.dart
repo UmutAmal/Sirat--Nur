@@ -460,6 +460,13 @@ class AppLocalizationsHy extends AppLocalizations {
       'Կողմնացույցի սենսորն անհասանելի է այս սարքում:';
 
   @override
+  String get adhanNotificationChannelName => 'Ադանի ծանուցումներ';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Աղոթքի ժամանակի ահազանգերը ադանի ձայնով:';
+
+  @override
   String get notifications => 'Ծանուցումներ';
 
   @override

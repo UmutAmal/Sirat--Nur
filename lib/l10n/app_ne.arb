@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "पुरुष (मिशारी अलाफासी)",
   "audioVoiceAbdulBaset": "पुरुष (अब्दुलबासेट)",
   "audioVoiceSudais": "पुरुष (सुडाई)",
-  "qiblaSensorUnavailable": "यस यन्त्रमा कम्पास सेन्सर उपलब्ध छैन।"
+  "qiblaSensorUnavailable": "यस यन्त्रमा कम्पास सेन्सर उपलब्ध छैन।",
+  "adhanNotificationChannelName": "Adhan सूचनाहरू",
+  "adhanNotificationChannelDescription": "प्रार्थना समय अधान ध्वनि संग अलर्ट।"
 }

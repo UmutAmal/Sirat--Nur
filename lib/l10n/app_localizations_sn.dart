@@ -458,6 +458,13 @@ class AppLocalizationsSn extends AppLocalizations {
       'Compass sensor haisi kuwanikwa pamudziyo uyu.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Nyevero yenguva yemunamato ine adhan ruzha.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

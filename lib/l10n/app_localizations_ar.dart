@@ -456,6 +456,13 @@ class AppLocalizationsAr extends AppLocalizations {
       'مستشعر البوصلة غير متوفر على هذا الجهاز.';
 
   @override
+  String get adhanNotificationChannelName => 'إشعارات الأذان';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'تنبيهات لأوقات الصلاة مع صوت الأذان.';
+
+  @override
   String get notifications => 'الإشعارات';
 
   @override

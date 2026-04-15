@@ -458,6 +458,13 @@ class AppLocalizationsFy extends AppLocalizations {
       'Kompassensor is net beskikber op dit apparaat.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifikaasjes';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Gebedstiidalarms mei adhan-lûd.';
+
+  @override
   String get notifications => 'Notifikaasjes';
 
   @override

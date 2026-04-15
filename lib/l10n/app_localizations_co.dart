@@ -458,6 +458,13 @@ class AppLocalizationsCo extends AppLocalizations {
       'U sensoru di bussola ùn hè micca dispunibule nantu à stu dispusitivu.';
 
   @override
+  String get adhanNotificationChannelName => 'Notifiche Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Alerte di tempu di preghiera cù sonu adhan.';
+
+  @override
   String get notifications => 'Notificazioni';
 
   @override

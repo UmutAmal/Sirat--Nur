@@ -458,6 +458,13 @@ class AppLocalizationsTr extends AppLocalizations {
       'Bu cihazda pusula sensörü kullanılamıyor.';
 
   @override
+  String get adhanNotificationChannelName => 'Ezan Bildirimleri';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Ezan sesiyle namaz vakti uyarıları.';
+
+  @override
   String get notifications => 'Bildirimler';
 
   @override

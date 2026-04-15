@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Laki-laki (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Laki-laki (Abdul Basit)",
   "audioVoiceSudais": "Laki-laki (Sudais)",
-  "qiblaSensorUnavailable": "Sensor kompas tidak tersedia di perangkat ini."
+  "qiblaSensorUnavailable": "Sensor kompas tidak tersedia di perangkat ini.",
+  "adhanNotificationChannelName": "Pemberitahuan Adzan",
+  "adhanNotificationChannelDescription": "Peringatan waktu sholat dengan suara adzan."
 }

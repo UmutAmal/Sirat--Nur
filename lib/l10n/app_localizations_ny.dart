@@ -459,6 +459,13 @@ class AppLocalizationsNy extends AppLocalizations {
       'Sensa ya Compass sichikupezeka pachidachi.';
 
   @override
+  String get adhanNotificationChannelName => 'Zidziwitso za Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Zidziwitso za nthawi ya mapemphero ndi mawu a adhan.';
+
+  @override
   String get notifications => 'Zidziwitso';
 
   @override

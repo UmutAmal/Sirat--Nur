@@ -459,6 +459,13 @@ class AppLocalizationsSk extends AppLocalizations {
       'Snímač kompasu nie je v tomto zariadení k dispozícii.';
 
   @override
+  String get adhanNotificationChannelName => 'Upozornenia Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Upozorňuje na čas modlitby zvukom adhan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

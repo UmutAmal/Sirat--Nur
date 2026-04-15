@@ -460,6 +460,13 @@ class AppLocalizationsQu extends AppLocalizations {
       'Kay aparatopiqa mana brújula sensor nisqa kanchu.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

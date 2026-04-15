@@ -460,6 +460,13 @@ class AppLocalizationsHu extends AppLocalizations {
       'Az iránytűérzékelő nem érhető el ezen az eszközön.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan értesítések';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Az imaidő figyelmeztetések adhan hanggal.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

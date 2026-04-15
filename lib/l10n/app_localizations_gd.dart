@@ -460,6 +460,13 @@ class AppLocalizationsGd extends AppLocalizations {
       'Chan eil sensor Compass ri fhaighinn air an inneal seo.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'Brathan';
 
   @override

@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Masculino (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Masculino (Abdul Basit)",
   "audioVoiceSudais": "Masculino (Sudais)",
-  "qiblaSensorUnavailable": "O sensor do compás non está dispoñible neste dispositivo."
+  "qiblaSensorUnavailable": "O sensor do compás non está dispoñible neste dispositivo.",
+  "adhanNotificationChannelName": "Notificacións de Adhan",
+  "adhanNotificationChannelDescription": "Alertas de tempo de oración con son adhan."
 }

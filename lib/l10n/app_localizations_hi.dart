@@ -458,6 +458,13 @@ class AppLocalizationsHi extends AppLocalizations {
       'इस डिवाइस पर कंपास सेंसर उपलब्ध नहीं है।';
 
   @override
+  String get adhanNotificationChannelName => 'अज़ान अधिसूचनाएँ';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'अज़ान ध्वनि के साथ प्रार्थना का समय अलर्ट।';
+
+  @override
   String get notifications => 'सूचनाएं';
 
   @override

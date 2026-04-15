@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Мужской (Мишарий Алафаси)",
   "audioVoiceAbdulBaset": "Мале (АбдулБасет)",
   "audioVoiceSudais": "Мале (Судаис)",
-  "qiblaSensorUnavailable": "Датчик компаса недоступен на этом устройстве."
+  "qiblaSensorUnavailable": "Датчик компаса недоступен на этом устройстве.",
+  "adhanNotificationChannelName": "Уведомления об Азане",
+  "adhanNotificationChannelDescription": "Оповещения о времени молитвы со звуком азана."
 }

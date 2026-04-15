@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "ወንድ (ሚሻሪ አላፋሲ)",
   "audioVoiceAbdulBaset": "ወንድ (አብዱልባሴት)",
   "audioVoiceSudais": "ወንድ (ሱዳይስ)",
-  "qiblaSensorUnavailable": "የኮምፓስ ዳሳሽ በዚህ መሳሪያ ላይ የለም።"
+  "qiblaSensorUnavailable": "የኮምፓስ ዳሳሽ በዚህ መሳሪያ ላይ የለም።",
+  "adhanNotificationChannelName": "አድሃን ማሳወቂያዎች",
+  "adhanNotificationChannelDescription": "የጸሎት ጊዜ ማንቂያዎች ከአድሃን ድምፅ ጋር።"
 }

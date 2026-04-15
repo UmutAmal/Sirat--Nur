@@ -460,6 +460,13 @@ class AppLocalizationsMai extends AppLocalizations {
       'एहि डिवाइस पर कम्पास सेंसर अनुपलब्ध अछि ।';
 
   @override
+  String get adhanNotificationChannelName => 'अधान अधिसूचना';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Prayer time alerts with adhan sound.';
+
+  @override
   String get notifications => 'अधिसूचना';
 
   @override

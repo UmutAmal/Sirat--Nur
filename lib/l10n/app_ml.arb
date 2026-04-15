@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "പുരുഷൻ (മിഷാരി അലഫാസി)",
   "audioVoiceAbdulBaset": "പുരുഷൻ (അബ്ദുൾബാസെറ്റ്)",
   "audioVoiceSudais": "പുരുഷൻ (സുദൈസ്)",
-  "qiblaSensorUnavailable": "ഈ ഉപകരണത്തിൽ കോമ്പസ് സെൻസർ ലഭ്യമല്ല."
+  "qiblaSensorUnavailable": "ഈ ഉപകരണത്തിൽ കോമ്പസ് സെൻസർ ലഭ്യമല്ല.",
+  "adhanNotificationChannelName": "അധാൻ അറിയിപ്പുകൾ",
+  "adhanNotificationChannelDescription": "അദാൻ ശബ്ദത്തോടുകൂടിയ പ്രാർത്ഥന സമയ അലേർട്ടുകൾ."
 }

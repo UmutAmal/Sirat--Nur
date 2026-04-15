@@ -759,5 +759,7 @@
   "audioVoiceMisharyAlafasy": "Мард (Мишари Алафаси)",
   "audioVoiceAbdulBaset": "Мард (АбдулБасет)",
   "audioVoiceSudais": "Мард (Судайс)",
-  "qiblaSensorUnavailable": "Дар ин дастгоҳ сенсори қутбнамо мавҷуд нест."
+  "qiblaSensorUnavailable": "Дар ин дастгоҳ сенсори қутбнамо мавҷуд нест.",
+  "adhanNotificationChannelName": "Огоҳиҳои азон",
+  "adhanNotificationChannelDescription": "Огоҳии вақти намоз бо садои азон."
 }

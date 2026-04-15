@@ -458,6 +458,13 @@ class AppLocalizationsKu extends AppLocalizations {
       'Sensor Compass li ser vê cîhazê ne berdest e.';
 
   @override
+  String get adhanNotificationChannelName => 'Azan Notifications';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Dema nimêjê bi dengê azanê hişyar dike.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -460,6 +460,13 @@ class AppLocalizationsEl extends AppLocalizations {
       'Ο αισθητήρας πυξίδας δεν είναι διαθέσιμος σε αυτήν τη συσκευή.';
 
   @override
+  String get adhanNotificationChannelName => 'Ειδοποιήσεις Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Ειδοποιήσεις ώρας προσευχής με ήχο αντάν.';
+
+  @override
   String get notifications => 'Ειδοποιήσεις';
 
   @override

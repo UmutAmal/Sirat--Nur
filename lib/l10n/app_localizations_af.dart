@@ -458,6 +458,13 @@ class AppLocalizationsAf extends AppLocalizations {
       'Kompassensor is nie op hierdie toestel beskikbaar nie.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan Kennisgewings';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Gebedstydwaarskuwings met adhan-klank.';
+
+  @override
   String get notifications => 'Kennisgewings';
 
   @override

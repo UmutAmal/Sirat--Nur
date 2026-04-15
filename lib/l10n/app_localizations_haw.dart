@@ -458,6 +458,13 @@ class AppLocalizationsHaw extends AppLocalizations {
       'ʻAʻole loaʻa ka mea ʻike panana panana ma kēia hāmeʻa.';
 
   @override
+  String get adhanNotificationChannelName => 'Hoolaha Adhan';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'ʻO nā mākaʻikaʻi manawa pule me ke kani adhan.';
+
+  @override
   String get notifications => 'Hoolaha';
 
   @override

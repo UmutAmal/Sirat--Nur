@@ -461,6 +461,13 @@ class AppLocalizationsDe extends AppLocalizations {
       'Der Kompasssensor ist auf diesem Gerät nicht verfügbar.';
 
   @override
+  String get adhanNotificationChannelName => 'Adhan-Benachrichtigungen';
+
+  @override
+  String get adhanNotificationChannelDescription =>
+      'Gebetszeitwarnungen mit Adhan-Sound.';
+
+  @override
   String get notifications => 'Benachrichtigungen';
 
   @override

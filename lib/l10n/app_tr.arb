@@ -225,6 +225,8 @@
     }
   },
   "qiblaSensorUnavailable": "Bu cihazda pusula sensörü kullanılamıyor.",
+  "adhanNotificationChannelName": "Ezan Bildirimleri",
+  "adhanNotificationChannelDescription": "Ezan sesiyle namaz vakti uyarıları.",
   "notifications": "Bildirimler",
   "prayerNotifications": "Namaz Bildirimleri",
   "enableNotifications": "Bildirimleri Etkinleştir",
