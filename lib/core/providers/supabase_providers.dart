@@ -127,9 +127,20 @@ Future<Map<String, dynamic>> resolveDailyAyat({
 }
 
 final dailyAyatProvider = FutureProvider<Map<String, dynamic>>((ref) async {
-  final supabase = ref.read(supabaseClientProvider);
   final prefs = ref.read(sharedPreferencesProvider);
   final formattedDate = DateTime.now().toIso8601String().split('T')[0];
+  late final SupabaseClient supabase;
+
+  try {
+    supabase = ref.read(supabaseClientProvider);
+  } catch (_) {
+    final cachedAyat = readCachedDailyAyat(prefs);
+    if (cachedAyat != null) {
+      return cachedAyat;
+    }
+
+    throw StateError('daily_ayat_unavailable');
+  }
 
   return resolveDailyAyat(
     prefs: prefs,

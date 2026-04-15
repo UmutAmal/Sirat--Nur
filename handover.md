@@ -6148,3 +6148,38 @@
 
 ### Sonraki Adım
 - Sonraki döngüde ARB dosyalarında kalan İngilizce-identical değerler taranacak; önce `chatbotUseCloudAi`, `nearbyMosques`, `distanceAwayKm`, `splashTagline` gibi hâlâ nadir locale'lerde İngilizce kalan kullanıcı metinleri ele alınacak.
+
+## 2026-04-15 TUR-159 — Harden Daily Ayah Cache Fallback
+
+### Yapılan İşlem
+- `dailyAyatProvider` Supabase client okunamadığında doğrudan hata vermek yerine önce `readCachedDailyAyat` ile taze cache'i deneyecek şekilde güncellendi.
+- Taze cache varsa günlük ayet ana ekran ve Android Ayah widget akışına cache üzerinden veriliyor.
+- Supabase client yok ve taze cache de yoksa provider yine dürüst biçimde `daily_ayat_unavailable` hatası veriyor; sahte veya gömülü ayet üretmiyor.
+- `daily_ayat_provider_test.dart` içine Supabase client unavailable + fresh cache ve Supabase client unavailable + missing cache edge-case testleri eklendi.
+- Aynı döngüde geniş ARB auto-translation batch denendi; araç desteklenmeyen locale'lerde güvenilir çıktı üretmediği ve `sa` için şüpheli dil çıktısı verdiği için değişiklik commit edilmeden geri alındı.
+
+### Neden Yapıldı
+- `dailyAyatProvider`, `resolveDailyAyat` içindeki cache fallback'e ulaşmadan önce `ref.read(supabaseClientProvider)` çağırıyordu.
+- Supabase init/client erişimi üretimde başarısız olursa taze cache mevcut olsa bile ana ekran günlük ayet kartı ve Android Ayah widget senkronizasyonu veri alamayabilirdi.
+- Kök sebep, cloud client edinme hatasının veri çözümleme fallback zincirinin dışında olmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart`
+- `A:\Way of Allah\sirat_i_nur\test\daily_ayat_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Günlük ayet akışı Supabase client başlangıç hatasında bile doğrulanmış taze cache'i kullanır.
+- Offline/cache davranışı provider seviyesinde testli hale geldi.
+- Dini içerik için sahte fallback üretilmedi; cache yoksa hata açıkça korunuyor.
+
+### Test Sonucu
+- `flutter test test\daily_ayat_provider_test.dart --reporter compact` PASS (`5/5`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`327/327`)
+
+### Risk Değişimi
+- Supabase client yokken taze günlük ayet cache'inin bypass edilmesi riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki döngüde Supabase client edinme hatasının benzer şekilde cache/fallback zincirini bypass ettiği diğer provider'lar taranacak; özellikle `sukunAudioSourcesProvider`, `dailyDuasProvider`, `asmaUlHusnaProvider` ve Quran/audio provider zincirleri kontrol edilecek.
