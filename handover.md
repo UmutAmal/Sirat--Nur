@@ -6801,3 +6801,35 @@
 
 ### Sonraki Adım
 - Sonraki dongude `sharedPreferencesProvider` UnimplementedError bulgusunun production'da override ile guvenli kaldigi testle kanitlanacak veya gerekiyorsa daha guvenli bootstrapping guard'i eklenecek; ardindan remaining hardcoded UI string taramasi surdurulecek.
+
+## 2026-04-16 TUR-176 — Replace SharedPreferences Stub Error
+
+### Yapılan İşlem
+- `sharedPreferencesProvider` artik `UnimplementedError` yerine sabit kodlu `StateError` donduruyor.
+- `kSharedPreferencesProviderNotBootstrappedErrorCode` eklendi.
+- Test, provider override edilmeden okunursa kontrollu hata kodu verdigini ve kaynak dosyada `UnimplementedError` kalmadigini dogruluyor.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart:5` AGENTS taramasinda placeholder/stub benzeri `UnimplementedError` olarak yakalandi.
+- Production bootstrapping `A:\Way of Allah\sirat_i_nur\lib\main.dart:121` uzerinde `sharedPreferencesProvider.overrideWithValue(prefs)` ile dogru calisiyor; yine de override unutulursa hata kontrollu ve aranabilir bir kodla cikmali.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Provider artik "implement later" izlenimi veren hata tipi kullanmiyor.
+- Bootstrapping hatasi olursa stable hata kodu ile yakalanabilir; production override akisi degismedi.
+- Test suite bu guard'i iceriyor ve toplam test sayisi 352'ye cikti.
+
+### Test Sonucu
+- `flutter test test\settings_provider_test.dart` PASS (`13/13`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`352/352`)
+
+### Risk Değişimi
+- SharedPreferences provider'in stub/placeholder hata gibi gorunmesi ve override unutulmasinda belirsiz crash vermesi riski: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude hardcoded UI metin taramasi daha dar AST/grep kombinasyonuyla surdurulecek; currency/proper noun gibi bilerek sabit kalanlar ayrilip gercek lokalizasyon eksikleri kapatilacak.

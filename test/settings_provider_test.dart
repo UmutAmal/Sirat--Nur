@@ -1,9 +1,35 @@
+import 'dart:io';
+
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 
 void main() {
+  test(
+    'sharedPreferencesProvider reports a controlled bootstrap error when not overridden',
+    () {
+      final container = ProviderContainer();
+      addTearDown(container.dispose);
+
+      expect(
+        () => container.read(sharedPreferencesProvider),
+        throwsA(
+          isA<StateError>().having(
+            (error) => error.message,
+            'message',
+            kSharedPreferencesProviderNotBootstrappedErrorCode,
+          ),
+        ),
+      );
+      expect(
+        File('lib/features/settings/settings_provider.dart').readAsStringSync(),
+        isNot(contains('UnimplementedError')),
+      );
+    },
+  );
+
   group('SettingsState', () {
     test('default values are correct', () {
       final state = SettingsState();

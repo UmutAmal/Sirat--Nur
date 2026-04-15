@@ -2,8 +2,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 
+const String kSharedPreferencesProviderNotBootstrappedErrorCode =
+    'shared_preferences_provider_not_bootstrapped';
+
 final sharedPreferencesProvider = Provider<SharedPreferences>((ref) {
-  throw UnimplementedError('sharedPreferencesProvider must be overridden');
+  throw StateError(kSharedPreferencesProviderNotBootstrappedErrorCode);
 });
 
 const misharyAlafasyVoice = 'mishary_alafasy';
@@ -106,7 +109,9 @@ class SettingsState {
       locationName: identical(locationName, _unset)
           ? this.locationName
           : locationName as String?,
-      timezone: identical(timezone, _unset) ? this.timezone : timezone as String?,
+      timezone: identical(timezone, _unset)
+          ? this.timezone
+          : timezone as String?,
       isDarkMode: isDarkMode ?? this.isDarkMode,
     );
   }
@@ -126,8 +131,9 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
           final storedMadhab = normalizeMadhab(
             _prefs.getString('madhab') ?? hanafiMadhab,
           );
-          final (defaultFajrAngle, defaultIshaAngle) =
-              _defaultAnglesForMethod(storedMethod);
+          final (defaultFajrAngle, defaultIshaAngle) = _defaultAnglesForMethod(
+            storedMethod,
+          );
 
           return SettingsState(
             calculationMethod: storedMethod,
