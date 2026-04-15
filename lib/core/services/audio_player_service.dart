@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart' as just_audio;
+import 'package:sirat_i_nur/core/network/supabase_storage_url.dart';
 
 /// Local audio asset paths — all sounds stored in assets/audio/
 class LocalAudio {
@@ -58,9 +59,15 @@ class AudioPlayerService {
 
   /// Play from remote URL
   Future<bool> playUrl(String url) async {
+    final normalized = url.trim();
+    if (!isSupabaseStoragePublicUrl(normalized)) {
+      debugPrint('Remote audio playback blocked: non-storage URL');
+      return false;
+    }
+
     try {
       await _player.stop();
-      await _player.setUrl(url);
+      await _player.setUrl(normalized);
       await _player.play();
       debugPrint('Remote audio playback started');
       return true;

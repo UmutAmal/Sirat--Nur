@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
+import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/features/library/library_page.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
@@ -202,17 +203,38 @@ void main() {
       },
     );
 
-    test('cloud sukun sources mark library entry as available', () {
-      final audio = AudioSovereigntyService(engine: _NoopAudioEngine());
+    test(
+      'Storage-backed cloud sukun sources mark library entry as available',
+      () {
+        final audio = AudioSovereigntyService(engine: _NoopAudioEngine());
 
-      expect(
-        resolveSukunAvailability(
-          audio,
-          cloudSources: const {'rain': 'https://cdn.example.com/rain.mp3'},
-        ),
-        isTrue,
-      );
-    });
+        expect(
+          resolveSukunAvailability(
+            audio,
+            cloudSources: const {
+              'rain':
+                  '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3',
+            },
+          ),
+          isTrue,
+        );
+      },
+    );
+
+    test(
+      'external cloud sukun sources do not mark library entry as available',
+      () {
+        final audio = AudioSovereigntyService(engine: _NoopAudioEngine());
+
+        expect(
+          resolveSukunAvailability(
+            audio,
+            cloudSources: const {'rain': 'https://cdn.example.com/rain.mp3'},
+          ),
+          isFalse,
+        );
+      },
+    );
 
     test('sukun subtitle switches to unavailable copy when audio is empty', () {
       final en = lookupAppLocalizations(const Locale('en'));

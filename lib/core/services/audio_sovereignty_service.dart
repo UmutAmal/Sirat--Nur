@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sirat_i_nur/core/network/supabase_storage_url.dart';
 import 'package:sirat_i_nur/core/services/audio_player_service.dart';
 
 const Set<String> expectedSukunSoundTypes = {
@@ -17,6 +18,10 @@ bool isRemoteAudioSource(String source) {
   }
 
   return uri.isScheme('http') || uri.isScheme('https');
+}
+
+bool isPlayableRemoteAudioSource(String source) {
+  return isRemoteAudioSource(source) && isSupabaseStoragePublicUrl(source);
 }
 
 String? resolveSukunSoundType(String candidate) {
@@ -108,7 +113,9 @@ class AudioSovereigntyService {
     }
 
     final cloudSource = cloudSources[normalized]?.trim();
-    if (cloudSource != null && cloudSource.isNotEmpty) {
+    if (cloudSource != null &&
+        cloudSource.isNotEmpty &&
+        isPlayableRemoteAudioSource(cloudSource)) {
       return cloudSource;
     }
 
@@ -123,10 +130,18 @@ class AudioSovereigntyService {
     }
 
     final played = isRemoteAudioSource(normalized)
-        ? await _engine.playUrl(normalized)
+        ? await _playRemoteSource(normalized)
         : await _engine.playAsset(normalized);
     _isPlaying = played;
     return played;
+  }
+
+  Future<bool> _playRemoteSource(String source) async {
+    if (!isPlayableRemoteAudioSource(source)) {
+      return false;
+    }
+
+    return _engine.playUrl(source);
   }
 
   Future<bool> playQuran(String assetPath) async {

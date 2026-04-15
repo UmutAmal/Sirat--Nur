@@ -195,7 +195,7 @@ AudioDiagnosticsSnapshot buildAudioDiagnosticsSnapshot({
       return false;
     }
 
-    return isRemoteAudioSource(source) || assetSet.contains(source);
+    return isPlayableRemoteAudioSource(source) || assetSet.contains(source);
   }).length;
 
   return AudioDiagnosticsSnapshot(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/features/library/sukun_audio_page.dart';
@@ -127,7 +128,8 @@ void main() {
           audioSovereigntyServiceProvider.overrideWithValue(service),
           sukunAudioSourcesProvider.overrideWith(
             (ref) async => const {
-              'rain': 'https://cdn.example.com/audio/rain.mp3',
+              'rain':
+                  '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3',
             },
           ),
         ],
@@ -150,7 +152,37 @@ void main() {
     expect(service.requestedType, 'rain');
     expect(
       service.requestedCloudSources['rain'],
-      'https://cdn.example.com/audio/rain.mp3',
+      '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3',
     );
+  });
+
+  testWidgets('hides external-only cloud sukun sources', (tester) async {
+    await tester.binding.setSurfaceSize(const Size(800, 1200));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          audioSovereigntyServiceProvider.overrideWithValue(
+            FakePageAudioService(true),
+          ),
+          sukunAudioSourcesProvider.overrideWith(
+            (ref) async => const {
+              'rain': 'https://cdn.example.com/audio/rain.mp3',
+            },
+          ),
+        ],
+        child: MaterialApp(
+          locale: const Locale('en'),
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: const SukunAudioPage(),
+        ),
+      ),
+    );
+    await tester.pump();
+
+    expect(find.text('Soundscapes unavailable'), findsOneWidget);
+    expect(find.text('Rain of Mercy'), findsNothing);
   });
 }

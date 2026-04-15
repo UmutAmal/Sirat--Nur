@@ -6682,3 +6682,51 @@
 
 ### Sonraki Adım
 - Sonraki dongude `AudioSovereigntyService.playSource` ve dogrudan cloudSources enjekte edilen test/ekran yuzeyleri incelenecek; Supabase Storage disi remote URL'lerin UI veya servis katmaninda yanlislikla oynatilabilir kabul edilip edilmedigi kanitla ayrilacak.
+
+## 2026-04-16 TUR-173 — Block Non-Storage Remote Audio Playback
+
+### Yapılan İşlem
+- `isSupabaseStoragePublicUrl` guard'i eklendi; sadece configured Supabase public audio bucket URL'leri playable remote audio kabul ediliyor.
+- `AudioPlayerService.playUrl` non-storage remote URL'leri just_audio'ya ulasmadan false dondurecek sekilde sertlestirildi.
+- `AudioSovereigntyService` cloud sukun kaynaklarini ve `playSource` remote kararini ayni Storage guard'i uzerinden gecirecek hale getirildi.
+- Library, Sukun audio page ve diagnostics hazirlik sayaclari remote kaynaklari artik "her http/https hazir" olarak degil, sadece Storage-backed ise hazir sayiyor.
+- Widget/unit testleri Storage-backed sukun URL'lerinin calistigini, external-only sukun URL'lerinin gizlendigini ve engine'e ulasmadigini dogrulayacak sekilde guncellendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\audio_sovereignty_service.dart:14` generic `isRemoteAudioSource` ile her HTTP(S) URL'yi remote audio kabul ediyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\audio_sovereignty_service.dart:115` cloudSources injection icindeki URL'nin bizim Storage hattimizdan gelip gelmedigini kontrol etmiyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\audio_player_service.dart:60` direct `playUrl` cagrilarinda external remote URL'leri oynatmaya acikti.
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart:38`, `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart:26` ve `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart:190` UI/diagnostics seviyesinde external cloud kaynaklari hazir sayabiliyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\audio_player_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\audio_sovereignty_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\audio_sovereignty_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\sukun_audio_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Runtime audio artik external CDN veya ucuncu taraf MP3 kapanmalarina sessizce baglanmiyor; sadece bizim configured Supabase Storage public audio bucket'larimiz playable remote kabul ediliyor.
+- Sukun UI, library entry ve diagnostics ayni guvenlik/egemenlik kuralini paylasiyor; false-ready ve false-success riski azaldi.
+- Asma gibi direct `AudioPlayerService.playUrl` yuzeyleri de central guard sayesinde Storage disi remote URL'yi oynatmaya calismiyor.
+- `rg -n "cdn\.example|https://[^'\"]+\.mp3" lib test` temiz dondu; test fixture'larinda bile external playable MP3 ornegi kalmadi.
+
+### Test Sonucu
+- `flutter test test\supabase_storage_url_test.dart test\audio_sovereignty_service_test.dart test\library_page_test.dart test\sukun_audio_page_test.dart test\features\library\library_page_cloud_duas_test.dart test\features\settings\diagnostics_page_test.dart` PASS (`50/50`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`350/350`)
+
+### Risk Değişimi
+- `AudioSovereigntyService` veya direct `playUrl` uzerinden Storage disi remote audio oynatilmasi riski: `16/25 -> 1/25`
+- UI/diagnostics'in external sukun URL'lerini hazir saymasi riski: `12/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude content/schema/seed tarafinda `audio_files.url` alaninin mirror/provenance disinda runtime anlam tasimadigi README ve tooling guard'lariyla tamamen kanitlanacak; ardindan kalan TODO/placeholder ve hardcoded string taramasina donulecek.

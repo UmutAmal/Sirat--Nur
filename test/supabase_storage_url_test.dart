@@ -27,5 +27,30 @@ void main() {
         'https://example.supabase.co/storage/v1/object/public/audio-dua/morning%20dua/001%20file.mp3',
       );
     });
+
+    test('recognizes only configured public audio storage URLs', () {
+      expect(
+        isSupabaseStoragePublicUrl(
+          '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3',
+        ),
+        isTrue,
+      );
+      expect(
+        isSupabaseStoragePublicUrl('https://cdn.example.com/rain.mp3'),
+        isFalse,
+      );
+      expect(
+        isSupabaseStoragePublicUrl(
+          '${SupabaseConfig.url}/storage/v1/object/public/random-bucket/rain.mp3',
+        ),
+        isFalse,
+      );
+      expect(
+        isSupabaseStoragePublicUrl(
+          '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/',
+        ),
+        isFalse,
+      );
+    });
   });
 }

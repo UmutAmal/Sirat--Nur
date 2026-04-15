@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
+import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/features/library/library_page.dart';
@@ -228,7 +229,10 @@ void main() {
       await pumpLibraryPage(
         tester,
         duas: const [],
-        cloudSources: const {'rain': 'https://cdn.example.com/rain.mp3'},
+        cloudSources: const {
+          'rain':
+              '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3',
+        },
       );
 
       expect(find.text(en.sukunMixerSubtitle), findsOneWidget);

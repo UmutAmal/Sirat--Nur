@@ -37,7 +37,13 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
     );
     final availableSoundTypes = {
       ...localSoundTypes,
-      ...cloudSources.keys.where(expectedSukunSoundTypes.contains),
+      ...cloudSources.entries
+          .where(
+            (entry) =>
+                expectedSukunSoundTypes.contains(entry.key) &&
+                isPlayableRemoteAudioSource(entry.value),
+          )
+          .map((entry) => entry.key),
     };
     final isResolvingCloudSources =
         localSoundTypes.isEmpty && cloudSourcesAsync.isLoading;

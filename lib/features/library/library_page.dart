@@ -24,7 +24,11 @@ bool isSukunAudioAvailable(AudioSovereigntyService audio) {
 }
 
 bool hasCloudSukunAudio(Map<String, String> cloudSources) {
-  return cloudSources.keys.any(expectedSukunSoundTypes.contains);
+  return cloudSources.entries.any(
+    (entry) =>
+        expectedSukunSoundTypes.contains(entry.key) &&
+        isPlayableRemoteAudioSource(entry.value),
+  );
 }
 
 bool resolveSukunAvailability(

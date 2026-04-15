@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/features/settings/diagnostics_page.dart';
@@ -263,8 +264,10 @@ void main() {
       ],
       audioService: AudioSovereigntyService(engine: _NoopAudioEngine()),
       cloudSukunSources: const {
-        'rain': 'https://cdn.example.com/audio/rain.mp3',
-        'forest': 'https://cdn.example.com/audio/forest.mp3',
+        'rain':
+            '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3',
+        'forest':
+            '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/forest.mp3',
       },
     );
 

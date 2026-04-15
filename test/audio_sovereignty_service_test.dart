@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 
 class FakeSovereignAudioEngine implements SovereignAudioEngine {
@@ -93,7 +94,27 @@ void main() {
       expect(service.resolveSukunAssetPath('forest'), isNull);
     });
 
-    test('plays cloud sukun urls through the injected engine', () async {
+    test(
+      'plays Storage-backed cloud sukun urls through the injected engine',
+      () async {
+        final engine = FakeSovereignAudioEngine();
+        final service = AudioSovereigntyService(engine: engine);
+        const source =
+            '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3';
+
+        final played = await service.playSukun(
+          'rain',
+          cloudSources: const {'rain': source},
+        );
+
+        expect(played, isTrue);
+        expect(service.isPlaying, isTrue);
+        expect(engine.lastUrl, source);
+        expect(engine.lastAssetPath, isNull);
+      },
+    );
+
+    test('rejects external sukun urls before they reach the engine', () async {
       final engine = FakeSovereignAudioEngine();
       final service = AudioSovereigntyService(engine: engine);
 
@@ -102,9 +123,9 @@ void main() {
         cloudSources: const {'rain': 'https://cdn.example.com/rain.mp3'},
       );
 
-      expect(played, isTrue);
-      expect(service.isPlaying, isTrue);
-      expect(engine.lastUrl, 'https://cdn.example.com/rain.mp3');
+      expect(played, isFalse);
+      expect(service.isPlaying, isFalse);
+      expect(engine.lastUrl, isNull);
       expect(engine.lastAssetPath, isNull);
     });
 
@@ -117,9 +138,12 @@ void main() {
       expect(
         service.resolveSukunSource(
           'rain',
-          cloudSources: const {'rain': 'https://cdn.example.com/rain.mp3'},
+          cloudSources: const {
+            'rain':
+                '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3',
+          },
         ),
-        'https://cdn.example.com/rain.mp3',
+        '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3',
       );
     });
 
