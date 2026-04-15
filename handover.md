@@ -4100,3 +4100,32 @@
 ### Sonraki Adım
 - Prayer/audio pipeline içinde kalan kullanıcıya dönük hardcoded error/debug copy taranacak; özellikle exception mesajı UI'a taşınan akışlar önceliklendirilecek.
 - Rare locale EN-reference kalan anahtarlar için güvenli fallback ve doğrulanabilir çeviri matrisi genişletilmeye devam edecek.
+## 2026-04-15 TUR-104 — Hide Raw Premium Store Errors
+
+### Ne Yapıldı
+- `lib/features/premium/premium_provider.dart` içindeki IAP stream, purchase ve restore hata yolları artık kullanıcıya ham exception/store metni taşımıyor; stable `kPremiumPurchaseFailedErrorCode` yazıyor.
+- `lib/features/premium/paywall_page.dart` içindeki `localizePremiumError` bilinmeyen premium hata kodlarını localized `premiumPurchaseFailed` metnine düşürüyor.
+- `test/features/premium/paywall_page_test.dart` TR/EN hata lokalizasyonunu ve ham `error.toString()`, `e.toString()`, `purchase.error?.message`, `return error;` sızıntılarının geri gelmemesini doğruluyor.
+
+### Neden Yapıldı
+- `premium_provider.dart` hata durumunda `error.toString()`, `purchase.error?.message` ve `e.toString()` kullanabiliyordu.
+- `paywall_page.dart` default branch ile bilinmeyen hatayı doğrudan UI'a döndürüyordu.
+- Mevcut localization zincirinde `premiumProductUnavailable` ve `premiumPurchaseFailed` anahtarları zaten vardı; kök çözüm ham store metnini stable hata koduna indirmekti.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\premium\paywall_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- `dart format lib/features/premium/premium_provider.dart lib/features/premium/paywall_page.dart test/features/premium/paywall_page_test.dart` PASS
+- `flutter test test/features/premium/paywall_page_test.dart test/premium_provider_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`242/242`)
+
+### Risk Değişimi
+- Premium purchase/restore hatalarının localized paywall UI'a ham teknik/store metni sızdırma riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- UI'a görünen diğer ham hata yolları taranacak. İlk adaylar: `lib/features/quran/quran_page.dart`, `lib/features/quran/juz_reading_page.dart`, `lib/features/settings/location_selection_page.dart`, `lib/features/common/app_error_page.dart`, `lib/features/library/library_page.dart`, `lib/features/library/hadith_list_page.dart`, `lib/features/settings/diagnostics_page.dart`.

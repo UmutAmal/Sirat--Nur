@@ -12,7 +12,7 @@ String localizePremiumError(AppLocalizations l10n, String error) {
     case kPremiumPurchaseFailedErrorCode:
       return l10n.premiumPurchaseFailed;
     default:
-      return error;
+      return l10n.premiumPurchaseFailed;
   }
 }
 

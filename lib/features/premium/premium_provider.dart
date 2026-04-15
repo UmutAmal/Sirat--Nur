@@ -57,7 +57,10 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
       _onPurchaseUpdate,
       onError: (error) {
         debugPrint('IAP stream error: $error');
-        state = state.copyWith(isLoading: false, error: error.toString());
+        state = state.copyWith(
+          isLoading: false,
+          error: kPremiumPurchaseFailedErrorCode,
+        );
       },
     );
 
@@ -85,7 +88,7 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
         case PurchaseStatus.error:
           state = state.copyWith(
             isLoading: false,
-            error: purchase.error?.message ?? kPremiumPurchaseFailedErrorCode,
+            error: kPremiumPurchaseFailedErrorCode,
           );
           if (purchase.pendingCompletePurchase) {
             _iap.completePurchase(purchase);
@@ -134,7 +137,11 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
     try {
       await _iap.buyNonConsumable(purchaseParam: purchaseParam);
     } catch (e) {
-      state = state.copyWith(isLoading: false, error: e.toString());
+      debugPrint('Premium purchase failed: $e');
+      state = state.copyWith(
+        isLoading: false,
+        error: kPremiumPurchaseFailedErrorCode,
+      );
     }
   }
 
@@ -151,7 +158,11 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
         }
       });
     } catch (e) {
-      state = state.copyWith(isLoading: false, error: e.toString());
+      debugPrint('Premium restore failed: $e');
+      state = state.copyWith(
+        isLoading: false,
+        error: kPremiumPurchaseFailedErrorCode,
+      );
     }
   }
 
