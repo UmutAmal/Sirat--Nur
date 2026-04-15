@@ -4956,3 +4956,36 @@
 
 ### Sonraki Adım
 - Yeni döngüde dini içerik metinleri tarafına geri dönülecek; önce chatbot system prompt ve dua/asr içeriklerinde hardcoded/uydurma içerik riski taranacak.
+
+## 2026-04-15 TUR-128 — Harden Islamic Chatbot Authority Boundaries
+
+### Yapılan İşlem
+- `lib/features/chatbot/chatbot_page.dart` içindeki Gemini system instruction inline metinden test edilebilir `islamicChatbotSystemInstruction` sabitine taşındı.
+- Prompt artık modelin kendini müftü/âlim yerine koymamasını, kaynak uydurmamasını, karmaşık gerçek hayat vakalarında kesin fetva vermemesini ve yerel ehil âlim/resmi dini otoriteye yönlendirmesini söylüyor.
+- `test/chatbot_system_instruction_test.dart` eklendi; prompt'un scholar authority iddiası taşımamasını, kaynak uydurmayı yasaklamasını, mezhep/scholarly-difference ihtiyatını ve aynı dilde cevap ilkesini doğruluyor.
+
+### Neden Yapıldı
+- `lib/features/chatbot/chatbot_page.dart:48` önce modeli "strictly orthodox Islamic scholar" olarak tanımlıyordu.
+- Bu ifade kullanıcıda dinî otorite/fetva beklentisi oluşturabilir ve AI'nin kesin hüküm vermesi riskini artırır.
+- Kullanıcının "günaha sokma bizi" uyarısı doğrultusunda AI cevap üretimi sınırları açık ve testli olmalı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\chatbot_system_instruction_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Cloud AI dini sorularda daha ihtiyatlı, kaynak uydurmayan ve kendi otorite sınırını açıklayan bir sistem talimatıyla çalışır.
+- Non-Islamic sorular hâlâ reddedilir, ancak dini cevaplarda "emin değilse söyle" ve "kaynak doğrula" kuralı güçlendi.
+- Regresyon testi eski "strictly orthodox Islamic scholar" tarzı otorite iddiasının geri dönmesini engeller.
+
+### Test Sonucu
+- `flutter test test\chatbot_system_instruction_test.dart --reporter compact` PASS (`2/2`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`270/270`)
+
+### Risk Değişimi
+- Chatbot'un dinî otorite iddiasıyla kesin/uydurma kaynaklı cevap üretme riski: `16/25 -> 5/25`
+
+### Sonraki Adım
+- Yeni döngüde offline chatbot veri seti (`islamic_chatbot_data.dart`) taranacak; yerel cevaplarda kaynak/uydurma/mezhep hassasiyeti ve test boşlukları kontrol edilecek.
