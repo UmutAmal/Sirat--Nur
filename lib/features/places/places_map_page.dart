@@ -43,8 +43,10 @@ PlacesMapAvailability resolvePlacesMapAvailability(
 Uri resolvePlacesOverpassEndpoint(String rawEndpoint) {
   final endpoint = rawEndpoint.trim();
   final uri = Uri.tryParse(endpoint);
-  if (uri == null || !uri.hasScheme || uri.host.isEmpty) {
-    throw const FormatException('Places Overpass endpoint must be an URL.');
+  if (uri == null || !isExternalHttpUri(uri)) {
+    throw const FormatException(
+      'Places Overpass endpoint must be an HTTP(S) URL.',
+    );
   }
 
   return uri;

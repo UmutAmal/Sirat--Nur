@@ -6562,3 +6562,36 @@
 
 ### Sonraki Adım
 - Sonraki dongude kalan l10n fallback taramasinda yalnizca uretim yuzeyinde gorunen aktif anahtarlar ele alinacak; unused anahtarlar remove, aktif anahtarlar ise dogrulanabilir priority locale ceviri + test guard seklinde islenecek.
+
+## 2026-04-15 TUR-170 — Harden Places Overpass Endpoint Boundary
+
+### Yapılan İşlem
+- `resolvePlacesOverpassEndpoint` fonksiyonu merkezi `isExternalHttpUri` kuralina baglandi.
+- Overpass endpoint konfigurasyonu artik yalnizca host'u olan `http` veya `https` URI kabul ediyor.
+- Places helper testine `ftp://overpass.example/api` ve `https:///missing-host` regresyon vakalari eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:43` endpoint cozumleyici sadece `hasScheme` ve `host.isEmpty` kontrolu yapiyordu.
+- Bu kontrol `ftp://overpass.example/api` gibi HTTP disi ama host'lu URI'leri kabul edebiliyordu; hata ancak `http.post` katmaninda gec yakalanirdi.
+- Ayni projede dis linkler icin `A:\Way of Allah\sirat_i_nur\lib\core\utils\external_url.dart:5` merkezi HTTP(S) kuralina gecildigi icin Places ag endpoint'i de ayni sinira baglanmaliydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Yanlis Overpass konfigurasyonlari ag istegine inmeden deterministik `FormatException` ile durdurulur.
+- Places harita akisi public tile fallback veya Istanbul fallback kullanmadan, sadece acik konfigurasyonla calismaya devam eder.
+- Yeni test guard'i, ileride endpoint validation'in HTTP(S) disi scheme'lere genislemesini engeller.
+
+### Test Sonucu
+- `flutter test test\features\places\places_map_page_test.dart test\external_url_test.dart` PASS (`7/7`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`342/342`)
+
+### Risk Değişimi
+- Places Overpass endpoint'inin gecersiz scheme/host konfigurasyonlarini gec kabul etmesi riski: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude public/external servis bagimliliklari taramasi devam edecek; ozellikle Overpass varsayilan endpoint'in operasyonel sureklilik riski ve Supabase proxy/edge-function gereksinimi kanitla ayrilacak.

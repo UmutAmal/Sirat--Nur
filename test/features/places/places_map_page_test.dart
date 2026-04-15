@@ -104,6 +104,14 @@ void main() {
       () => resolvePlacesOverpassEndpoint('not an endpoint'),
       throwsFormatException,
     );
+    expect(
+      () => resolvePlacesOverpassEndpoint('ftp://overpass.example/api'),
+      throwsFormatException,
+    );
+    expect(
+      () => resolvePlacesOverpassEndpoint('https:///missing-host'),
+      throwsFormatException,
+    );
     expect(SupabaseConfig.placesOverpassApiUrl, isNotEmpty);
 
     final mosqueQuery = buildOverpassPlacesQuery(
