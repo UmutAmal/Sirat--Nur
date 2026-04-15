@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Mbebasake panyimpenan piranti internal.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,7 +357,7 @@
   "chatbotOfflinePrompt": "Basis pengetahuan Islam offline sing wis diverifikasi isih dikurasi. Sampeyan bisa ngaktifake mundur offline saiki, nanging mung bakal nuduhake pesen aman sing winates nganti set data sing sumbere wis siyap.\n\nApa sampeyan pengin ngaktifake mundur offline?",
   "chatbotOfflineSwitched": "Offline fallback diaktifake. Jawaban Islam lokal sing diverifikasi durung siap.",
   "chatbotOfflineDownloadLabel": "Aktifake Offline Fallback",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Nyiapake download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Repair / Download Ilang",
   "downloadAction": "Ngundhuh",
   "resumeDownload": "Resume Download",
   "deleteDownloadedFiles": "Busak File sing Diundhuh",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Batal...",
   "downloadCanceledForReciter": "Download dibatalake kanggo {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

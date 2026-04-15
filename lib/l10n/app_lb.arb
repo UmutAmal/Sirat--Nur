@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Befreit intern Gerätspäicherung.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Déi verifizéiert offline islamesch Wëssensbasis gëtt nach ëmmer curéiert. Dir kënnt den Offline Fallback elo aktivéieren, awer et wäert nëmme limitéiert sécher Messagen weisen bis de sourced Dataset fäerdeg ass.\n\nWëllt Dir offline Fallback aktivéieren?",
   "chatbotOfflineSwitched": "Offline Fallback aktivéiert. Verifizéiert lokal islamesch Äntwerten sinn nach net fäerdeg.",
   "chatbotOfflineDownloadLabel": "Offline Fallback aktivéieren",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Den Download preparéieren ...",
+  "downloadingSurah": "Download Surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surahs erofgelueden",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Reparatur / Download vermësst",
   "downloadAction": "Download",
   "resumeDownload": "Resume Download",
   "deleteDownloadedFiles": "Läschen erofgeluede Dateien",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Annuléiert ...",
   "downloadCanceledForReciter": "Download annuléiert fir {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

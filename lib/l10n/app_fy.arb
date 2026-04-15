@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline downloadbehearder",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Befrijje ynterne apparaat opslach.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "De ferifiearre offline islamityske kennisbasis wurdt noch gearstald. Jo kinne offline fallback no ynskeakelje, mar it sil allinich beheinde feilige berjochten sjen litte oant de boarne dataset klear is.\n\nWolle jo offline fallback ynskeakelje?",
   "chatbotOfflineSwitched": "Offline fallback ynskeakele. Ferifiearre lokale islamityske antwurden binne noch net klear.",
   "chatbotOfflineDownloadLabel": "Offline Fallback ynskeakelje",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Download klearmakke...",
+  "downloadingSurah": "It downloaden fan surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surahs ynladen",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Reparaasje / Download Missing",
   "downloadAction": "Download",
   "resumeDownload": "Ferfetsje Download",
   "deleteDownloadedFiles": "Wiskje ynladen triemmen",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Annulearje...",
   "downloadCanceledForReciter": "Download annulearre foar {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

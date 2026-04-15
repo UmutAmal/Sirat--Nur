@@ -685,6 +685,12 @@ void main() {
           'quranAudioSourcesIncomplete',
           'diagnosticsQuranCloudTablesMissing',
           'diagnosticsQuranCloudJuzMissing',
+          'freeStorage',
+          'downloadPreparing',
+          'downloadingSurah',
+          'downloadedSurahProgress',
+          'redownloadMissingRepair',
+          'downloadCancelling',
         ];
 
         for (final locale in safeLocales) {
@@ -828,6 +834,38 @@ void main() {
             isFalse,
             reason:
                 '${file.uri.pathSegments.last} has multiline channel copy for $key',
+          );
+        }
+      }
+    });
+
+    test('download progress copy stays single-line in all locales', () {
+      const localizedKeys = [
+        'freeStorage',
+        'downloadPreparing',
+        'downloadingSurah',
+        'downloadedSurahProgress',
+        'redownloadMissingRepair',
+        'downloadCancelling',
+      ];
+      final arbFiles =
+          Directory('lib/l10n')
+              .listSync()
+              .whereType<File>()
+              .where((file) => file.path.endsWith('.arb'))
+              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+              .toList()
+            ..sort((a, b) => a.path.compareTo(b.path));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+        for (final key in localizedKeys) {
+          final value = arb[key] as String;
+          expect(
+            value.contains('\n') || value.contains('\r'),
+            isFalse,
+            reason:
+                '${file.uri.pathSegments.last} has multiline download progress copy for $key',
           );
         }
       }

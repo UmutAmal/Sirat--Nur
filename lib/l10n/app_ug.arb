@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "تورسىز چۈشۈرۈش باشقۇرغۇچى",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "ئىچكى ئۈسكۈنىلەرنى ساقلاشنى ھەقسىز قىلىڭ.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "دەلىللەنگەن تورسىز ئىسلام بىلىملىرى بازىسى ھازىرمۇ تۈزۈلىۋاتىدۇ. سىز ھازىر تورسىز چېكىنىشنى قوزغىتالايسىز ، ئەمما ئۇ سانلىق مەلۇمات سانلىق مەلۇماتلىرى تەييار بولغۇچە پەقەت چەكلىك بىخەتەر ئۇچۇرلارنى كۆرسىتىدۇ.\n\nتورسىز چېكىنىشنى قوزغىتىشنى خالامسىز؟",
   "chatbotOfflineSwitched": "تورسىز چېكىنىش قوزغىتىلدى. تەكشۈرۈلگەن يەرلىك ئىسلام جاۋابلىرى تېخى تەييار ئەمەس.",
   "chatbotOfflineDownloadLabel": "تورسىز چۈشۈشنى قوزغىتىڭ",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "چۈشۈرۈشكە تەييارلىق قىلىۋاتىدۇ ...",
+  "downloadingSurah": "سۈرىنى چۈشۈرۈش {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} سۈرىسى چۈشۈرۈلدى",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "رېمونت قىلىش / چۈشۈرۈش يوقاپ كەتتى",
   "downloadAction": "چۈشۈرۈش",
   "resumeDownload": "چۈشۈرۈشنى ئەسلىگە كەلتۈرۈش",
   "deleteDownloadedFiles": "چۈشۈرۈلگەن ھۆججەتلەرنى ئۆچۈرۈڭ",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "بىكار قىلىش ...",
   "downloadCanceledForReciter": "چۈشۈرۈش {reciter} ئۈچۈن ئەمەلدىن قالدۇرۇلدى.",
   "@downloadCanceledForReciter": {
     "placeholders": {

@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "オフライン ダウンロード マネージャー",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "内部デバイスのストレージを解放します。",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "検証済みのオフラインのイスラム知識ベースはまだキュレーション中です。ここでオフライン フォールバックを有効にできますが、ソース データセットの準備ができるまでは、限られた安全なメッセージのみが表示されます。\n\nオフライン フォールバックを有効にしますか?",
   "chatbotOfflineSwitched": "オフライン フォールバックが有効になっています。検証済みの地元のイスラム教の回答はまだ準備ができていません。",
   "chatbotOfflineDownloadLabel": "オフラインフォールバックを有効にする",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "ダウンロードを準備しています...",
+  "downloadingSurah": "{surah} / {total} をダウンロード中",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} 件がダウンロードされました",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "修復/ダウンロードがありません",
   "downloadAction": "ダウンロード",
   "resumeDownload": "ダウンロードを再開する",
   "deleteDownloadedFiles": "ダウンロードしたファイルを削除する",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "キャンセル中...",
   "downloadCanceledForReciter": "{reciter} のダウンロードがキャンセルされました。",
   "@downloadCanceledForReciter": {
     "placeholders": {

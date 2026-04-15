@@ -731,7 +731,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Futa hifadhi ya ndani ya kifaa.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1177,11 +1177,11 @@ class AppLocalizationsSw extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Washa Fallback Nje ya Mtandao';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Inatayarisha upakuaji...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Inapakua surah $surah / $total';
   }
 
   @override
@@ -1198,11 +1198,11 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surah zimepakuliwa';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Urekebishaji / Upakuaji Haipo';
 
   @override
   String get downloadAction => 'Pakua';
@@ -1214,7 +1214,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get deleteDownloadedFiles => 'Futa Faili Zilizopakuliwa';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Inaghairi...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

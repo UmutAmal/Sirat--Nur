@@ -731,7 +731,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Atbrīvojiet ierīces iekšējo krātuvi.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1178,11 +1178,11 @@ class AppLocalizationsLv extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Iespējot bezsaistes atkāpšanos';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Notiek lejupielādes sagatavošana...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Notiek surah lejupielāde $surah / $total';
   }
 
   @override
@@ -1199,11 +1199,11 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surahs lejupielādētas';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Trūkst remonta/lejupielādes';
 
   @override
   String get downloadAction => 'Lejupielādēt';
@@ -1215,7 +1215,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get deleteDownloadedFiles => 'Dzēst lejupielādētos failus';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Notiek atcelšana...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

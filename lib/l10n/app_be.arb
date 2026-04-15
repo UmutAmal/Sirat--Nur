@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Менеджэр пазасеткавых загрузак",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Вызваліце ​​ўнутранае сховішча прылады.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Правераная афлайн-база ісламскіх ведаў усё яшчэ знаходзіцца ў стадыі куратара. Вы можаце ўключыць аўтаномны рэзервовы рэжым зараз, але ён будзе паказваць толькі абмежаваныя бяспечныя паведамленні, пакуль крыніца даных не будзе гатовая.\n\nВы жадаеце ўключыць рэзервовы аўтаномны рэжым?",
   "chatbotOfflineSwitched": "Пазасеткавы рэзервовы рэжым уключаны. Правераныя мясцовыя ісламскія адказы яшчэ не гатовыя.",
   "chatbotOfflineDownloadLabel": "Уключыць аўтаномны рэзервовы рэжым",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Падрыхтоўка спампоўкі...",
+  "downloadingSurah": "Спампоўка суры {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "Спампавана {downloaded} / {total} сур",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Адрамантаваць / спампаваць Адсутнічае",
   "downloadAction": "Спампаваць",
   "resumeDownload": "Аднавіць загрузку",
   "deleteDownloadedFiles": "Выдаліць спампаваныя файлы",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Адмена...",
   "downloadCanceledForReciter": "Спампоўка для {reciter} скасавана.",
   "@downloadCanceledForReciter": {
     "placeholders": {

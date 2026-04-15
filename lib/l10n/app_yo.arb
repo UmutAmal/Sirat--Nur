@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Aisinipo Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Ṣe igbasilẹ ibi ipamọ ẹrọ inu.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Ipilẹ imọ Islam ti aisinipo ti a fọwọsi ti wa ni ṣiṣatunṣe. O le mu ipadasẹhin aisinipo ṣiṣẹ ni bayi, ṣugbọn yoo ṣafihan awọn ifiranṣẹ ailewu lopin nikan titi di igba ti data orisun orisun ti ṣetan.\n\nṢe iwọ yoo fẹ lati mu ipadasẹhin offline ṣiṣẹ?",
   "chatbotOfflineSwitched": "Ipadabọ aisinipo ṣiṣẹ. Awọn idahun Islam ti o rii daju ko ti ṣetan sibẹsibẹ.",
   "chatbotOfflineDownloadLabel": "Mu Ipadabọ Aisinipo ṣiṣẹ",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Ngbaradi igbasilẹ...",
+  "downloadingSurah": "Gbigba surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} gbasile awon surah",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Titunṣe / Download Sonu",
   "downloadAction": "Gba lati ayelujara",
   "resumeDownload": "Bẹrẹ Gbigbasilẹ",
   "deleteDownloadedFiles": "Pa awọn faili ti a gbasile",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "N fagilee...",
   "downloadCanceledForReciter": "Ti fagilee igbasilẹ fun {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

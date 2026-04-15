@@ -731,7 +731,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Maak interne apparaatopslag vrij.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1179,11 +1179,11 @@ class AppLocalizationsNl extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Schakel offline terugval in';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Downloaden voorbereiden...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Soera $surah / $total downloaden';
   }
 
   @override
@@ -1200,11 +1200,11 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total soera\'s gedownload';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Reparatie/download ontbreekt';
 
   @override
   String get downloadAction => 'Downloaden';
@@ -1216,7 +1216,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get deleteDownloadedFiles => 'Verwijder gedownloade bestanden';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Annuleren...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

@@ -1178,7 +1178,7 @@ class AppLocalizationsMai extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'ऑफलाइन फॉलबैक सक्षम करू';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'डाउनलोड के तैयारी में...';
 
   @override
   String downloadingSurah(String surah, String total) {

@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "آف لائن ڊائون لوڊ مئنيجر",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "اندروني ڊوائيس اسٽوريج کي خالي ڪريو.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "تصديق ٿيل آف لائن اسلامي علم جو بنياد اڃا تائين ڪيو پيو وڃي. توھان ھاڻي چالو ڪري سگھو ٿا آف لائن فال بيڪ کي، پر اھو صرف محدود محفوظ پيغام ڏيکاريندو جيستائين sourced dataset تيار نه ٿئي.\n\nڇا توھان چاھيو ٿا آف لائن فال بيڪ کي فعال ڪرڻ؟",
   "chatbotOfflineSwitched": "آف لائن فال بيڪ فعال ٿيو. تصديق ٿيل مقامي اسلامي جواب اڃا تائين تيار نه آهن.",
   "chatbotOfflineDownloadLabel": "آف لائن Fallback کي فعال ڪريو",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "ڊائون لوڊ تيار ٿي رهيو آهي...",
+  "downloadingSurah": "ڊائون لوڊ ڪندي سورت {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} سورتون ڊائون لوڊ ڪيون ويون",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "مرمت / ڊائون لوڊ غائب",
   "downloadAction": "ڊائون لوڊ ڪريو",
   "resumeDownload": "ٻيهر شروع ڪريو ڊائون لوڊ",
   "deleteDownloadedFiles": "ڊائون لوڊ ڪيل فائلن کي ختم ڪريو",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "منسوخ ٿي رهيو آهي...",
   "downloadCanceledForReciter": "ڊائون لوڊ منسوخ ڪيو ويو {reciter} لاءِ.",
   "@downloadCanceledForReciter": {
     "placeholders": {

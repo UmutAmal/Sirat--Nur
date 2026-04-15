@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Daxili cihaz yaddaşını boşaltın.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Təsdiqlənmiş oflayn İslam bilik bazası hələ də kurasiya olunur. Siz indi oflayn bərpa prosesini aktiv edə bilərsiniz, lakin mənbəli verilənlər bazası hazır olana qədər o, yalnız məhdud təhlükəsiz mesajları göstərəcək.\n\nOflayn geri dönüşü aktiv etmək istərdinizmi?",
   "chatbotOfflineSwitched": "Oflayn bərpa aktivləşdirildi. Təsdiqlənmiş yerli İslam cavabları hələ hazır deyil.",
   "chatbotOfflineDownloadLabel": "Offline Fallback-i aktivləşdirin",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Endirmə hazırlanır...",
+  "downloadingSurah": "{surah} / {total} surəsi endirilir",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surələr endirildi",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Təmir / Yükləmə yoxdur",
   "downloadAction": "Yüklə",
   "resumeDownload": "Yükləməni davam etdirin",
   "deleteDownloadedFiles": "Yüklənmiş faylları silin",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Ləğv edilir...",
   "downloadCanceledForReciter": "{reciter} üçün endirmə ləğv edildi.",
   "@downloadCanceledForReciter": {
     "placeholders": {

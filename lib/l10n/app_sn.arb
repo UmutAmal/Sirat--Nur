@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline Download Maneja",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Sunungura chengetedzo yemukati memudziyo.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Iyo yakasimbiswa isina Indaneti ruzivo rwechiIslam ichiri kuchengetedzwa. Iwe unogona kugonesa offline fallback izvozvi, asi inongoratidza mashoma akachengeteka mameseji kusvika sourced dataset yagadzirira.\n\nUnoda kugonesa kudzoreredza pasina indaneti here?",
   "chatbotOfflineSwitched": "Offline fallback yakabatidzwa. Mhinduro dzechiIslam dzemuno dzakasimbiswa hadzisati dzagadzirira.",
   "chatbotOfflineDownloadLabel": "Bvisa Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Kugadzirira kudhaunirodha...",
+  "downloadingSurah": "Kudhaunirodha surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ma surah akadhaunirodwa",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Kugadzirisa / Dhaunirodha Isipo",
   "downloadAction": "Download",
   "resumeDownload": "Resume Download",
   "deleteDownloadedFiles": "Delete Downloaded Files",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Kukanzura...",
   "downloadCanceledForReciter": "Kudhaunirodha kwakanzurwa ku{reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

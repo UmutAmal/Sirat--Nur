@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "ከመስመር ውጭ ማውረድ አስተዳዳሪ",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "የውስጥ መሣሪያ ማከማቻ ያስለቅቁ።",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "የተረጋገጠው ከመስመር ውጭ የሆነ ኢስላማዊ እውቀት መሰረት አሁንም እየተዘጋጀ ነው። ከመስመር ውጭ መመለስን አሁን ማንቃት ይችላሉ፣ ነገር ግን የተመደበው የውሂብ ስብስብ ዝግጁ እስኪሆን ድረስ የተገደቡ አስተማማኝ መልዕክቶችን ብቻ ያሳያል።\n\nከመስመር ውጭ መመለስን ማንቃት ይፈልጋሉ?",
   "chatbotOfflineSwitched": "ከመስመር ውጭ መመለስ ነቅቷል። የተረጋገጡ የአካባቢ እስላማዊ መልሶች እስካሁን ዝግጁ አይደሉም።",
   "chatbotOfflineDownloadLabel": "ከመስመር ውጭ መመለስን አንቃ",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "ማውረድን በማዘጋጀት ላይ...",
+  "downloadingSurah": "ሱራ {surah} / {total} በማውረድ ላይ",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ሱራዎች ወርደዋል",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "መጠገን/ አውርድ ጠፍቷል",
   "downloadAction": "አውርድ",
   "resumeDownload": "ማውረድ ከቆመበት ቀጥል",
   "deleteDownloadedFiles": "የወረዱ ፋይሎችን ሰርዝ",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "በመሰረዝ ላይ...",
   "downloadCanceledForReciter": "ለ{reciter} ማውረድ ተሰርዟል።",
   "@downloadCanceledForReciter": {
     "placeholders": {

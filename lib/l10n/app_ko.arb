@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "오프라인 다운로드 관리자",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "내부 장치 저장 공간을 확보하세요.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "검증된 오프라인 이슬람 지식 베이스는 아직 큐레이팅 중입니다. 지금 오프라인 대체를 활성화할 수 있지만 소스 데이터 세트가 준비될 때까지 제한된 안전 메시지만 표시됩니다.\n\n오프라인 대체를 활성화하시겠습니까?",
   "chatbotOfflineSwitched": "오프라인 대체가 활성화되었습니다. 검증된 현지 이슬람 답변이 아직 준비되지 않았습니다.",
   "chatbotOfflineDownloadLabel": "오프라인 대체 활성화",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "다운로드 준비 중...",
+  "downloadingSurah": "수라 다운로드 중 {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} 수라 다운로드됨",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "수리/다운로드 누락",
   "downloadAction": "다운로드",
   "resumeDownload": "다운로드 재개",
   "deleteDownloadedFiles": "다운로드한 파일 삭제",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "취소 중...",
   "downloadCanceledForReciter": "{reciter} 다운로드가 취소되었습니다.",
   "@downloadCanceledForReciter": {
     "placeholders": {

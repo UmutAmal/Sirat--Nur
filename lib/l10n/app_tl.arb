@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline na Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Magbakante ng panloob na storage ng device.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Kinu-curate pa rin ang na-verify na offline na Islamic knowledge base. Maaari mong paganahin ang offline na fallback ngayon, ngunit magpapakita lamang ito ng mga limitadong ligtas na mensahe hanggang sa handa na ang pinagkunan na dataset.\n\nGusto mo bang paganahin ang offline na fallback?",
   "chatbotOfflineSwitched": "Naka-enable ang offline na fallback. Ang mga na-verify na lokal na sagot sa Islam ay hindi pa handa.",
   "chatbotOfflineDownloadLabel": "Paganahin ang Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Inihahanda ang pag-download...",
+  "downloadingSurah": "Dina-download ang surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah ang na-download",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Ayusin / Nawawala ang Download",
   "downloadAction": "I-download",
   "resumeDownload": "Ipagpatuloy ang Pag-download",
   "deleteDownloadedFiles": "Tanggalin ang mga Na-download na File",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Kinakansela...",
   "downloadCanceledForReciter": "Kinansela ang pag-download para sa {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline-latausten hallinta",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Vapauta laitteen sisäistä tallennustilaa.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Vahvistettua offline-islamilaista tietopohjaa kuratoidaan edelleen. Voit ottaa offline-varan nyt käyttöön, mutta se näyttää vain rajoitettuja turvaviestejä, kunnes lähdetietojoukko on valmis.\n\nHaluatko ottaa offline-varan käyttöön?",
   "chatbotOfflineSwitched": "Offline-varavaraus käytössä. Vahvistetut paikalliset islamilaiset vastaukset eivät ole vielä valmiita.",
   "chatbotOfflineDownloadLabel": "Ota offline-varaus käyttöön",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Valmistellaan latausta...",
+  "downloadingSurah": "Ladataan suuraa {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} suuraa ladattu",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Korjaus/lataus puuttuu",
   "downloadAction": "Lataa",
   "resumeDownload": "Jatka latausta",
   "deleteDownloadedFiles": "Poista ladatut tiedostot",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Peruutetaan...",
   "downloadCanceledForReciter": "Lataus peruttu kohteelle {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Gestore di download offline",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Libera spazio di archiviazione interno sul dispositivo.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "La base di conoscenza islamica offline verificata è ancora in fase di cura. Puoi abilitare il fallback offline ora, ma mostrerà solo messaggi sicuri limitati finché il set di dati di origine non sarà pronto.\n\nDesideri abilitare il fallback offline?",
   "chatbotOfflineSwitched": "Fallback offline abilitato. Le risposte islamiche locali verificate non sono ancora pronte.",
   "chatbotOfflineDownloadLabel": "Abilita il fallback offline",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Preparazione download...",
+  "downloadingSurah": "Download della sura {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} Sura scaricate",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Ripara/Scarica mancante",
   "downloadAction": "Scarica",
   "resumeDownload": "Riprendi il download",
   "deleteDownloadedFiles": "Elimina i file scaricati",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Annullamento...",
   "downloadCanceledForReciter": "Download annullato per {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

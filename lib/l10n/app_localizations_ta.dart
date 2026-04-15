@@ -733,7 +733,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'உள் சாதனச் சேமிப்பிடத்தைக் காலியாக்கவும்.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1180,11 +1180,11 @@ class AppLocalizationsTa extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'ஆஃப்லைன் ஃபால்பேக்கை இயக்கு';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'பதிவிறக்கம் தயாராகிறது...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'சூராவைப் பதிவிறக்குகிறது $surah / $total';
   }
 
   @override
@@ -1201,11 +1201,11 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total சூராக்கள் பதிவிறக்கப்பட்டன';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'பழுதுபார்த்தல் / பதிவிறக்கம் இல்லை';
 
   @override
   String get downloadAction => 'பதிவிறக்கவும்';
@@ -1218,7 +1218,7 @@ class AppLocalizationsTa extends AppLocalizations {
       'பதிவிறக்கம் செய்யப்பட்ட கோப்புகளை நீக்கவும்';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'ரத்துசெய்கிறது...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

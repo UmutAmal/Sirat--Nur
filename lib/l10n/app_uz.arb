@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Oflayn yuklab olish menejeri",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Qurilmaning ichki xotirasidan joy boʻshating.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Tasdiqlangan oflayn islomiy bilimlar bazasi hali ham tuzatilmoqda. Siz hozir oflayn qayta tiklashni yoqishingiz mumkin, ammo manba maʼlumotlar toʻplami tayyor boʻlgunga qadar u faqat cheklangan xavfsiz xabarlarni koʻrsatadi.\n\nOflayn qayta tiklashni yoqmoqchimisiz?",
   "chatbotOfflineSwitched": "Oflayn qayta tiklash yoqilgan. Tasdiqlangan mahalliy islomiy javoblar hali tayyor emas.",
   "chatbotOfflineDownloadLabel": "Oflayn qayta tiklashni yoqish",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Yuklash tayyorlanmoqda...",
+  "downloadingSurah": "{surah} / {total} surasi yuklab olinmoqda",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} suralar yuklab olindi",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Ta'mirlash / Yuklab olish yo'qolgan",
   "downloadAction": "Yuklab oling",
   "resumeDownload": "Yuklashni davom ettirish",
   "deleteDownloadedFiles": "Yuklab olingan fayllarni o'chirish",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Bekor qilinmoqda...",
   "downloadCanceledForReciter": "{reciter} uchun yuklab olish bekor qilindi.",
   "@downloadCanceledForReciter": {
     "placeholders": {

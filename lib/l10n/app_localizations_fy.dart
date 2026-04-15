@@ -730,7 +730,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Befrijje ynterne apparaat opslach.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1176,11 +1176,11 @@ class AppLocalizationsFy extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Offline Fallback ynskeakelje';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Download klearmakke...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'It downloaden fan surah $surah / $total';
   }
 
   @override
@@ -1196,11 +1196,11 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surahs ynladen';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Reparaasje / Download Missing';
 
   @override
   String get downloadAction => 'Download';
@@ -1212,7 +1212,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get deleteDownloadedFiles => 'Wiskje ynladen triemmen';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Annulearje...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

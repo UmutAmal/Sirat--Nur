@@ -724,7 +724,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => '内部デバイスのストレージを解放します。';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1163,11 +1163,11 @@ class AppLocalizationsJa extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'オフラインフォールバックを有効にする';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'ダウンロードを準備しています...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return '$surah / $total をダウンロード中';
   }
 
   @override
@@ -1183,11 +1183,11 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total 件がダウンロードされました';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => '修復/ダウンロードがありません';
 
   @override
   String get downloadAction => 'ダウンロード';
@@ -1199,7 +1199,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get deleteDownloadedFiles => 'ダウンロードしたファイルを削除する';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'キャンセル中...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

@@ -733,7 +733,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Eliberați stocarea internă a dispozitivului.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1182,11 +1182,11 @@ class AppLocalizationsRo extends AppLocalizations {
       'Activați funcția de rezervă offline';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Se pregătește descărcarea...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Se descarcă sura $surah / $total';
   }
 
   @override
@@ -1203,11 +1203,11 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total sure descărcate';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Reparare/Descărcare lipsă';
 
   @override
   String get downloadAction => 'Descărcați';
@@ -1219,7 +1219,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get deleteDownloadedFiles => 'Ștergeți fișierele descărcate';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Se anulează...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

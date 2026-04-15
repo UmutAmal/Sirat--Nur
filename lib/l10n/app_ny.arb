@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Tsegulani zosungira mkati mwa chipangizo.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Chidziwitso chachisilamu chotsimikizika pa intaneti chomwe chimatsimikiziridwa chikusungidwabe. Mutha kuloleza kubweza kwapaintaneti tsopano, koma zizingowonetsa mauthenga otetezeka ochepa mpaka dataset yopezeka itakonzeka.\n\nKodi mungakonde kuyatsa kubweza kopanda intaneti?",
   "chatbotOfflineSwitched": "Kubweza kopanda intaneti ndikoyatsa. Mayankho otsimikizika achisilamu akumaloko sanakonzekerebe.",
   "chatbotOfflineDownloadLabel": "Yambitsani Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Kukonzekera kutsitsa...",
+  "downloadingSurah": "Kutsitsa surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ma surah adatsitsidwa",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Kukonza / Kutsitsa Kukusowa",
   "downloadAction": "Tsitsani",
   "resumeDownload": "Yambitsaninso Kutsitsa",
   "deleteDownloadedFiles": "Chotsani Mafayilo Otsitsa",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Ikuletsa...",
   "downloadCanceledForReciter": "Kutsitsa kwalephereka kwa {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

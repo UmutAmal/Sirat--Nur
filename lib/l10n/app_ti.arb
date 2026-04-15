@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nካብ መስመር ወጻኢ ዳውንሎድ ማናጀር",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "ውሽጣዊ መኽዘን መሳርሒ ነጻ ምግባር።",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",

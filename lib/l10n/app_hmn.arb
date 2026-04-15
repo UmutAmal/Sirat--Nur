@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Lub hauv paus kev paub txog kev paub txog kev txheeb xyuas offline Islamic tseem raug kho. Koj tuaj yeem qhib offline fallback tam sim no, tab sis nws tsuas yog qhia cov lus tsis muaj kev nyab xeeb kom txog thaum cov ntaub ntawv tau npaj txhij.\n\nKoj puas xav qhib offline fallback?",
   "chatbotOfflineSwitched": "Offline fallback enabled. Txheeb xyuas cov lus teb hauv zos Islamic tseem tsis tau npaj.",
   "chatbotOfflineDownloadLabel": "Qhib Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Kev npaj download...",
+  "downloadingSurah": "Downloading Surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} rub tawm surahs",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Kho / Download Ntxim Hlub",
   "downloadAction": "Download tau",
   "resumeDownload": "Rov qab Download",
   "deleteDownloadedFiles": "Rho tawm cov ntaub ntawv Downloaded",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Ncua tseg...",
   "downloadCanceledForReciter": "Download tau muab tso tseg rau {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

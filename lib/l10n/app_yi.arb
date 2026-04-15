@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "אָפפלינע דאַונלאָוד מאַנאַגער",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "פריי ינערלעך מיטל סטאָרידזש.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "די וועראַפייד אָפפלינע יסלאַמיק וויסן באַזע איז נאָך קערייטיד. איר קענט איצט געבן אָפפלינע פאַלבאַק, אָבער עס וועט בלויז ווייַזן לימיטעד זיכער אַרטיקלען ביז די סאָורסעד דאַטאַסעט איז גרייט.\n\nוואָלט איר ווי צו געבן אָפפלינע פאַלבאַק?",
   "chatbotOfflineSwitched": "אָפפלינע פאַלבאַק ענייבאַלד. וועראַפייד היגע יסלאַמיק ענטפֿערס זענען נישט גרייט נאָך.",
   "chatbotOfflineDownloadLabel": "געבן אָפפלינע פאַלבאַקק",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "פּריפּערינג אראפקאפיע ...",
+  "downloadingSurah": "דאַונלאָודינג סוראַה {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} סורה דאַונלאָודיד",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "פאַרריכטן / אראפקאפיע פעלנדיק",
   "downloadAction": "אראפקאפיע",
   "resumeDownload": "נעמענ זיכ ווידער אראפקאפיע",
   "deleteDownloadedFiles": "ויסמעקן דאַונלאָודיד טעקעס",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "קאַנסאַלד ...",
   "downloadCanceledForReciter": "אראפקאפיע קאַנסאַלד פֿאַר {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

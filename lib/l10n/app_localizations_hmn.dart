@@ -1181,11 +1181,11 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Qhib Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Kev npaj download...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Downloading Surah $surah / $total';
   }
 
   @override
@@ -1202,11 +1202,11 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total rub tawm surahs';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Kho / Download Ntxim Hlub';
 
   @override
   String get downloadAction => 'Download tau';
@@ -1218,7 +1218,7 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get deleteDownloadedFiles => 'Rho tawm cov ntaub ntawv Downloaded';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Ncua tseg...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

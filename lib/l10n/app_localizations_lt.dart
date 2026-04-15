@@ -730,7 +730,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Atlaisvinkite vidinę įrenginio saugyklą.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1178,11 +1178,11 @@ class AppLocalizationsLt extends AppLocalizations {
       'Įgalinti atsarginį režimą neprisijungus';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Ruošiamasi atsisiuntimui...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Atsisiunčiama sura $surah / $total';
   }
 
   @override
@@ -1199,11 +1199,11 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return 'Atsisiųsta $downloaded / $total surah';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Trūksta remonto / atsisiuntimo';
 
   @override
   String get downloadAction => 'Atsisiųsti';
@@ -1215,7 +1215,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get deleteDownloadedFiles => 'Ištrinkite atsisiųstus failus';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Atšaukiama...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "ສ້າງພື້ນທີ່ຈັດເກັບຂໍ້ມູນພາຍໃນອຸປະກອນ.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "ພື້ນຖານຄວາມຮູ້ອິດສະລາມແບບອອບໄລນ໌ທີ່ຢັ້ງຢືນແລ້ວແມ່ນຍັງຖືກຈັດຫາຢູ່. ທ່ານ​ສາ​ມາດ​ເປີດ​ໃຊ້​ງານ offline offline ໃນ​ປັດ​ຈຸ​ບັນ​, ແຕ່​ວ່າ​ມັນ​ຈະ​ສະ​ແດງ​ໃຫ້​ເຫັນ​ພຽງ​ແຕ່​ຂໍ້​ຄວາມ​ປອດ​ໄພ​ຈໍາ​ກັດ​ຈົນ​ກ​່​ວາ​ຊຸດ​ຂໍ້​ມູນ​ທີ່​ມາ​ຈະ​ພ້ອມ​.\n\nທ່ານຕ້ອງການເປີດໃຊ້ທາງເລືອກ offline ບໍ?",
   "chatbotOfflineSwitched": "ເປີດໃຊ້ທາງເລືອກ Offline ແລ້ວ. ຄໍາຕອບຂອງຊາວອິດສະລາມທ້ອງຖິ່ນທີ່ຢືນຢັນແລ້ວຍັງບໍ່ພ້ອມເທື່ອ.",
   "chatbotOfflineDownloadLabel": "ເປີດໃຊ້ Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "ກຳລັງກະກຽມການດາວໂຫຼດ...",
+  "downloadingSurah": "ກຳລັງດາວໂຫຼດ surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ດາວໂຫຼດແລ້ວ",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "ການສ້ອມແປງ / ດາວໂຫລດຫາຍໄປ",
   "downloadAction": "ດາວໂຫຼດ",
   "resumeDownload": "ສືບຕໍ່ການດາວໂຫຼດ",
   "deleteDownloadedFiles": "ລຶບໄຟລ໌ທີ່ດາວໂຫລດມາ",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "ກຳລັງຍົກເລີກ...",
   "downloadCanceledForReciter": "ຍົກເລີກການດາວໂຫຼດສຳລັບ {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

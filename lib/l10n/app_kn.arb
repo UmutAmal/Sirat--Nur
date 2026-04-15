@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "ಆಫ್‌ಲೈನ್ ಡೌನ್‌ಲೋಡ್ ಮ್ಯಾನೇಜರ್",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "ಆಂತರಿಕ ಸಾಧನ ಸಂಗ್ರಹಣೆಯನ್ನು ಮುಕ್ತಗೊಳಿಸಿ.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "ಪರಿಶೀಲಿಸಿದ ಆಫ್‌ಲೈನ್ ಇಸ್ಲಾಮಿಕ್ ಜ್ಞಾನ ಮೂಲವನ್ನು ಇನ್ನೂ ಕ್ಯುರೇಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ. ನೀವು ಇದೀಗ ಆಫ್‌ಲೈನ್ ಫಾಲ್‌ಬ್ಯಾಕ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಬಹುದು, ಆದರೆ ಮೂಲದ ಡೇಟಾಸೆಟ್ ಸಿದ್ಧವಾಗುವವರೆಗೆ ಇದು ಸೀಮಿತ ಸುರಕ್ಷಿತ ಸಂದೇಶಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸುತ್ತದೆ.\n\nನೀವು ಆಫ್‌ಲೈನ್ ಫಾಲ್‌ಬ್ಯಾಕ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಬಯಸುವಿರಾ?",
   "chatbotOfflineSwitched": "ಆಫ್‌ಲೈನ್ ಫಾಲ್‌ಬ್ಯಾಕ್ ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ. ಪರಿಶೀಲಿಸಿದ ಸ್ಥಳೀಯ ಇಸ್ಲಾಮಿಕ್ ಉತ್ತರಗಳು ಇನ್ನೂ ಸಿದ್ಧವಾಗಿಲ್ಲ.",
   "chatbotOfflineDownloadLabel": "ಆಫ್‌ಲೈನ್ ಫಾಲ್‌ಬ್ಯಾಕ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "ಡೌನ್‌ಲೋಡ್ ಅನ್ನು ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ...",
+  "downloadingSurah": "ಸೂರಾವನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ಸೂರಾಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗಿದೆ",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "ದುರಸ್ತಿ / ಡೌನ್‌ಲೋಡ್ ಕಾಣೆಯಾಗಿದೆ",
   "downloadAction": "ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
   "resumeDownload": "ಡೌನ್‌ಲೋಡ್ ಅನ್ನು ಪುನರಾರಂಭಿಸಿ",
   "deleteDownloadedFiles": "ಡೌನ್‌ಲೋಡ್ ಮಾಡಿದ ಫೈಲ್‌ಗಳನ್ನು ಅಳಿಸಿ",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "ರದ್ದುಗೊಳಿಸಲಾಗುತ್ತಿದೆ...",
   "downloadCanceledForReciter": "{reciter} ಗಾಗಿ ಡೌನ್‌ಲೋಡ್ ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ.",
   "@downloadCanceledForReciter": {
     "placeholders": {

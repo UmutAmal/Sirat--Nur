@@ -735,7 +735,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Allibera l\'emmagatzematge intern del dispositiu.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1184,11 +1184,11 @@ class AppLocalizationsCa extends AppLocalizations {
       'Activa la funció alternativa fora de línia';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'S\'està preparant la baixada...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'S\'està baixant la sura $surah / $total';
   }
 
   @override
@@ -1205,11 +1205,11 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total sures baixades';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Falta reparació/descàrrega';
 
   @override
   String get downloadAction => 'Descarregar';
@@ -1221,7 +1221,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get deleteDownloadedFiles => 'Suprimeix els fitxers descarregats';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'S\'està cancel·lant...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

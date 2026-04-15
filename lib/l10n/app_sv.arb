@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Frigör intern enhetslagring.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Den verifierade offline islamiska kunskapsbasen håller fortfarande på att kureras. Du kan aktivera offline reserv nu, men det kommer bara att visa begränsade säkra meddelanden tills den hämtade datamängden är klar.\n\nVill du aktivera offline reserv?",
   "chatbotOfflineSwitched": "Offline reserv aktiverad. Verifierade lokala islamiska svar är inte klara ännu.",
   "chatbotOfflineDownloadLabel": "Aktivera Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Förbereder nedladdning...",
+  "downloadingSurah": "Laddar ner surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surahs nedladdade",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Reparation/nedladdning saknas",
   "downloadAction": "Ladda ner",
   "resumeDownload": "Återuppta nedladdning",
   "deleteDownloadedFiles": "Ta bort nedladdade filer",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Avbryter...",
   "downloadCanceledForReciter": "Nedladdningen avbröts för {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

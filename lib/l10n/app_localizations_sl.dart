@@ -731,7 +731,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Sprostite notranji pomnilnik naprave.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1179,11 +1179,11 @@ class AppLocalizationsSl extends AppLocalizations {
       'Omogoči nadomestni način brez povezave';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Priprava prenosa ...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Prenašanje sure $surah / $total';
   }
 
   @override
@@ -1200,11 +1200,11 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surah prenesenih';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Manjka popravilo/prenos';
 
   @override
   String get downloadAction => 'Prenos';
@@ -1216,7 +1216,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get deleteDownloadedFiles => 'Izbriši prenesene datoteke';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Preklic ...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

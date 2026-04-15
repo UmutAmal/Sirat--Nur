@@ -731,7 +731,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'आन्तरिकयन्त्रभण्डारणं मुक्तं कुर्वन्तु।';
 
   @override
   String get quranIntegrity => 'Quran Integrity';

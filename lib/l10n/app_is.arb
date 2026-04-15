@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Ótengdur niðurhalsstjóri",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Losaðu um geymslurými tækisins.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Enn er verið að sjá um staðfesta íslamska þekkingargrunninn án nettengingar. Þú getur virkjað afturköllun án nettengingar núna, en það mun aðeins sýna takmörkuð örugg skilaboð þar til gagnasettið er tilbúið.\n\nViltu virkja ónettengdan fallback?",
   "chatbotOfflineSwitched": "Ótengdur varabúnaður virkur. Staðfest staðbundin íslömsk svör eru ekki tilbúin ennþá.",
   "chatbotOfflineDownloadLabel": "Virkja afturfall án nettengingar",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Undirbýr niðurhal...",
+  "downloadingSurah": "Sækir surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} súrur sóttar",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Viðgerð / niðurhal vantar",
   "downloadAction": "Sækja",
   "resumeDownload": "Halda niðurhal",
   "deleteDownloadedFiles": "Eyða niðurhaluðum skrám",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Hættir við...",
   "downloadCanceledForReciter": "Niðurhali hætt fyrir {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

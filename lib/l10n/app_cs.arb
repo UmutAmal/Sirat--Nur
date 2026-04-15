@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Správce stahování offline",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Uvolněte vnitřní úložiště zařízení.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Ověřená offline islámská znalostní báze se stále zpracovává. Záložní režim offline můžete povolit nyní, ale bude zobrazovat pouze omezené bezpečné zprávy, dokud nebude zdrojová datová sada připravena.\n\nChcete povolit záložní režim offline?",
   "chatbotOfflineSwitched": "Záložní režim offline povolen. Ověřené místní islámské odpovědi ještě nejsou připraveny.",
   "chatbotOfflineDownloadLabel": "Povolit záložní režim offline",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Příprava stahování...",
+  "downloadingSurah": "Stahování súry {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} súry staženy",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Chybí oprava / stažení",
   "downloadAction": "Stáhnout",
   "resumeDownload": "Obnovit stahování",
   "deleteDownloadedFiles": "Smazat stažené soubory",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Rušení...",
   "downloadCanceledForReciter": "Stahování bylo zrušeno pro {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

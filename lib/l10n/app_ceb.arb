@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline nga Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Libre ang pagtipig sa internal nga aparato.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Ang napamatud-an nga offline nga base sa kahibalo sa Islam gi-curate pa. Mahimo nimong i-enable ang offline fallback karon, apan magpakita lang kini og limitado nga luwas nga mga mensahe hangtod andam na ang sourced dataset.\n\nGusto ba nimong i-enable ang offline fallback?",
   "chatbotOfflineSwitched": "Nahimo ang offline fallback. Ang napamatud-an nga lokal nga Islamic nga mga tubag dili pa andam.",
   "chatbotOfflineDownloadLabel": "I-enable ang Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Nangandam sa pag-download...",
+  "downloadingSurah": "Pag-download sa surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah na-download",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Pag-ayo / Pag-download Nawala",
   "downloadAction": "Pag-download",
   "resumeDownload": "Ipadayon ang Pag-download",
   "deleteDownloadedFiles": "I-delete ang Na-download nga mga File",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Nagkanselar...",
   "downloadCanceledForReciter": "Gikansela ang pag-download alang sa {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

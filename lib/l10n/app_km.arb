@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "កម្មវិធីគ្រប់គ្រងការទាញយកក្រៅបណ្តាញ",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "បង្កើនទំហំផ្ទុកឧបករណ៍ខាងក្នុង។",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "មូលដ្ឋានចំណេះដឹងអ៊ិស្លាមក្រៅបណ្តាញដែលត្រូវបានផ្ទៀងផ្ទាត់នៅតែត្រូវបានរៀបចំ។ អ្នក​អាច​បើក​ការ​ត្រឡប់​ក្រោយ​ក្រៅ​បណ្ដាញ​ឥឡូវ​នេះ ប៉ុន្តែ​វា​នឹង​បង្ហាញ​តែ​សារ​សុវត្ថិភាព​មាន​កម្រិត​រហូត​ដល់​សំណុំ​ទិន្នន័យ​ប្រភព​រួចរាល់។\n\nតើ​អ្នក​ចង់​បើក​ការ​ត្រឡប់​ក្រោយ​ក្រៅ​បណ្ដាញ​ដែរ​ឬ​ទេ?",
   "chatbotOfflineSwitched": "បានបើកការត្រលប់ក្រោយក្រៅបណ្តាញ។ ចម្លើយអ៊ីស្លាមក្នុងស្រុកដែលបានផ្ទៀងផ្ទាត់មិនទាន់រួចរាល់នៅឡើយទេ។",
   "chatbotOfflineDownloadLabel": "បើកដំណើរការ Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "កំពុងរៀបចំការទាញយក...",
+  "downloadingSurah": "កំពុងទាញយក Surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "បានទាញយក {downloaded} / {total} Surah",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "ជួសជុល / ទាញយកបាត់",
   "downloadAction": "ទាញយក",
   "resumeDownload": "បន្តការទាញយក",
   "deleteDownloadedFiles": "លុបឯកសារដែលបានទាញយក",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "កំពុងលុបចោល...",
   "downloadCanceledForReciter": "ការទាញយកត្រូវបានលុបចោលសម្រាប់ {reciter} ។",
   "@downloadCanceledForReciter": {
     "placeholders": {

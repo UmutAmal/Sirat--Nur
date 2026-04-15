@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "مدير التحميل دون اتصال",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "تحرير مساحة التخزين الداخلية للجهاز.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "لا تزال قاعدة المعرفة الإسلامية غير المتصلة بالإنترنت قيد التنظيم. يمكنك تمكين التراجع دون اتصال الآن، ولكنه لن يعرض سوى رسائل آمنة محدودة حتى تصبح مجموعة البيانات المصدر جاهزة.\n\nهل ترغب في تمكين الرجوع دون اتصال؟",
   "chatbotOfflineSwitched": "تم تمكين الرجوع دون اتصال بالإنترنت. الإجابات الإسلامية المحلية التي تم التحقق منها ليست جاهزة بعد.",
   "chatbotOfflineDownloadLabel": "تمكين الرجوع دون اتصال",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "جاري التحضير للتحميل...",
+  "downloadingSurah": "تحميل سورة {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} تم تنزيل السور",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "إصلاح / تنزيل مفقود",
   "downloadAction": "تحميل",
   "resumeDownload": "استئناف التنزيل",
   "deleteDownloadedFiles": "حذف الملفات التي تم تنزيلها",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "جارٍ الإلغاء...",
   "downloadCanceledForReciter": "تم إلغاء التنزيل لـ {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

@@ -734,7 +734,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Освободете вътрешната памет на устройството.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1183,11 +1183,11 @@ class AppLocalizationsBg extends AppLocalizations {
       'Активиране на резервен офлайн режим';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Изтеглянето се подготвя...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Изтегля се сура $surah / $total';
   }
 
   @override
@@ -1204,11 +1204,11 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total изтеглени сури';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Липсва поправка/изтегляне';
 
   @override
   String get downloadAction => 'Изтегляне';
@@ -1220,7 +1220,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get deleteDownloadedFiles => 'Изтриване на изтеглените файлове';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Отменя се...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Lokolla polokelo ea sesebelisoa sa kahare.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Setsi se netefalitsoeng sa Maislamo kantle ho Marang-rang se ntse se lokisetsoa. O ka lumella ho khutlisa ha kantle ho Marang-rang hona joale, empa e tla bonts'a melaetsa e fokolang e bolokehileng ho fihlela dataset e fumanoeng e se e lokile.\n\nA na u ka rata ho bulela mokhoa oa ho khutlisa kantle ho marang-rang?",
   "chatbotOfflineSwitched": "Ts'ebetso ea offline e lumelletsoe. Likarabo tse netefalitsoeng tsa Maislamo tsa lehae ha li so lokisoe.",
   "chatbotOfflineDownloadLabel": "Lumella Fallback Offline",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "E lokisetsa ho khoasolla...",
+  "downloadingSurah": "E khoasolla surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} litšoantšo tse jarollotsoeng",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Lokisa / Khoasolla Ha e eo",
   "downloadAction": "Khoasolla",
   "resumeDownload": "Resume Download",
   "deleteDownloadedFiles": "Hlakola Lifaele tse Jarollotsoeng",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "E ea hlakola...",
   "downloadCanceledForReciter": "Khoasolla e hlakotsoe bakeng sa {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

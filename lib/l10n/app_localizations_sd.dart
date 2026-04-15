@@ -728,7 +728,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'اندروني ڊوائيس اسٽوريج کي خالي ڪريو.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1173,11 +1173,11 @@ class AppLocalizationsSd extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'آف لائن Fallback کي فعال ڪريو';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'ڊائون لوڊ تيار ٿي رهيو آهي...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'ڊائون لوڊ ڪندي سورت $surah / $total';
   }
 
   @override
@@ -1194,11 +1194,11 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total سورتون ڊائون لوڊ ڪيون ويون';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'مرمت / ڊائون لوڊ غائب';
 
   @override
   String get downloadAction => 'ڊائون لوڊ ڪريو';
@@ -1210,7 +1210,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get deleteDownloadedFiles => 'ڊائون لوڊ ڪيل فائلن کي ختم ڪريو';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'منسوخ ٿي رهيو آهي...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

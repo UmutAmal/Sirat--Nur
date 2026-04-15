@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Manajer Unduh Offline",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Ngosongkeun panyimpenan alat internal.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,7 +357,7 @@
   "chatbotOfflinePrompt": "Basis pangaweruh Islam offline anu diverifikasi masih dikurasi. Anjeun tiasa ngaktipkeun fallback offline ayeuna, tapi éta ngan bakal nembongkeun pesen aman kawates dugi dataset sourced geus siap.\n\nNaha anjeun badé ngaktipkeun fallback offline?",
   "chatbotOfflineSwitched": "Offline fallback diaktipkeun. Jawaban Islam lokal anu diverifikasi henteu acan siap.",
   "chatbotOfflineDownloadLabel": "Aktipkeun Offline Fallback",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Nyiapkeun undeuran...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Ngalereskeun / Ngundeur Leungit",
   "downloadAction": "Ngundeur",
   "resumeDownload": "Neruskeun Ngundeur",
   "deleteDownloadedFiles": "Pupus Payil anu Diunduh",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Ngabolaykeun...",
   "downloadCanceledForReciter": "Ngundeur dibatalkeun pikeun {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

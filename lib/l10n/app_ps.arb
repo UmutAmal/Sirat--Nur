@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "د آفلاین ډاونلوډ مدیر",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "د داخلي وسیلو ذخیره خالي کړئ.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "د تصدیق شوي آفلاین اسلامي پوهه اساس لاهم تنظیمیږي. تاسو اوس کولی شئ آفلاین فال بیک فعال کړئ، مګر دا به یوازې محدود خوندي پیغامونه وښيي تر هغه چې سرچینه شوي ډیټاسیټ چمتو نه وي.\n\nایا تاسو غواړئ آفلاین فال بیک فعال کړئ؟",
   "chatbotOfflineSwitched": "آف لائن فال بیک فعال شوی. تصدیق شوي محلي اسلامي ځوابونه لاهم چمتو ندي.",
   "chatbotOfflineDownloadLabel": "آف لائن فال بیک فعال کړئ",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "د ډاونلوډ چمتو کول...",
+  "downloadingSurah": "د سورت ډاونلوډ کول {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} سورتونه ډاونلوډ شوي",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "ترمیم / ډاونلوډ ورک شوی",
   "downloadAction": "ډاونلوډ کړئ",
   "resumeDownload": "ډاونلوډ بیا پیل کړئ",
   "deleteDownloadedFiles": "ډاونلوډ شوي فایلونه حذف کړئ",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "لغوه کول...",
   "downloadCanceledForReciter": "ډاونلوډ د {reciter} لپاره لغوه شو.",
   "@downloadCanceledForReciter": {
     "placeholders": {

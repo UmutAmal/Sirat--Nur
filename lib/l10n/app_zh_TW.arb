@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "離線下載管理器",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "釋放內部設備儲存空間。",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "經過驗證的離線伊斯蘭知識庫仍在整理中。現在您可以啟用離線回退，但在來源資料集準備就緒之前，它只會顯示有限的安全訊息。\n\n您想啟用離線回退嗎？",
   "chatbotOfflineSwitched": "啟用離線回退。經過驗證的本地伊斯蘭答案尚未準備好。",
   "chatbotOfflineDownloadLabel": "啟用離線回退",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "正在準備下載...",
+  "downloadingSurah": "下載古蘭經 {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "下載 {downloaded} / {total} 古蘭經",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "修復/下載遺失",
   "downloadAction": "下載",
   "resumeDownload": "履歷下載",
   "deleteDownloadedFiles": "刪除下載的文件",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "正在取消...",
   "downloadCanceledForReciter": "{reciter} 的下載已取消。",
   "@downloadCanceledForReciter": {
     "placeholders": {

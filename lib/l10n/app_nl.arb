@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline downloadbeheer",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Maak interne apparaatopslag vrij.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "De geverifieerde offline islamitische kennisbank wordt nog steeds samengesteld. U kunt nu offline fallback inschakelen, maar er worden slechts beperkte veilige berichten weergegeven totdat de afkomstige dataset gereed is.\n\nWilt u offline fallback inschakelen?",
   "chatbotOfflineSwitched": "Offline fallback ingeschakeld. Geverifieerde lokale islamitische antwoorden zijn nog niet klaar.",
   "chatbotOfflineDownloadLabel": "Schakel offline terugval in",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Downloaden voorbereiden...",
+  "downloadingSurah": "Soera {surah} / {total} downloaden",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} soera's gedownload",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Reparatie/download ontbreekt",
   "downloadAction": "Downloaden",
   "resumeDownload": "Hervatten downloaden",
   "deleteDownloadedFiles": "Verwijder gedownloade bestanden",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Annuleren...",
   "downloadCanceledForReciter": "Download geannuleerd voor {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

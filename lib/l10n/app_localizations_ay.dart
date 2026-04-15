@@ -750,7 +750,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Dispositivo manqhankir imañanak qhispiyaña.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';

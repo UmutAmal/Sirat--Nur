@@ -732,7 +732,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Khulula ugcino lwesixhobo sangaphakathi.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1179,11 +1179,11 @@ class AppLocalizationsXh extends AppLocalizations {
       'Yenza i-Fallback ngaphandle kwe-intanethi';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Ilungiselela ukukhuphela...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Ikhuphela isurah $surah / $total';
   }
 
   @override
@@ -1199,11 +1199,11 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total iisurahs zikhutshelwe';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Ukulungisa / Ukhuphelo Olulahlekileyo';
 
   @override
   String get downloadAction => 'Khuphela';
@@ -1215,7 +1215,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get deleteDownloadedFiles => 'Cima Iifayile Ezithotyiweyo';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Iyarhoxisa...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

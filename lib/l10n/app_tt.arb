@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Оффлайн йөкләү менеджеры",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Эчке җайланма саклауны бушатыгыз.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Тикшерелгән оффлайн ислам белем базасы әле дә куратор. Сез хәзер оффлайн кире кайтуны эшли аласыз, ләкин ул чикләнгән куркынычсыз хәбәрләрне күрсәтелгән мәгълүматлар базасы әзер булганчы гына күрсәтәчәк.\n\nОффлайн кире кайтуны телисезме?",
   "chatbotOfflineSwitched": "Оффлайн кире кайту мөмкинлеге бар. Тикшерелгән җирле ислам җаваплары әле әзер түгел.",
   "chatbotOfflineDownloadLabel": "Оффлайн кире кайтуны куш",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Йөкләүгә әзерләнә ...",
+  "downloadingSurah": "{surah} сүрәсен йөкләү / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} сүрәләре йөкләнде",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Ремонт / Йөкләү",
   "downloadAction": "Йөкләү",
   "resumeDownload": "Йөкләү",
   "deleteDownloadedFiles": "Йөкләнгән файлларны бетерегез",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Баш тарту ...",
   "downloadCanceledForReciter": "Йөкләү {reciter} өчен юкка чыгарылды.",
   "@downloadCanceledForReciter": {
     "placeholders": {

@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Umphathi wokukhuphela ngaphandle kweintanethi",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Khulula ugcino lwesixhobo sangaphakathi.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Isiseko solwazi lwamaSilamsi ngaphandle kweintanethi siqinisekisiweyo sisagcinwa. Unokwenza ukubuyisela umva ngaphandle kweintanethi ngoku, kodwa iya kubonisa kuphela imiyalezo ekhuselekileyo elinganiselweyo de idatabase efunyenweyo ilungile.\n\nNgaba ungathanda ukwenza ukubuyisela umva ngaphandle kweintanethi?",
   "chatbotOfflineSwitched": "Ukubuyisela umva ngaphandle kweintanethi kuvuliwe. Iimpendulo eziqinisekisiweyo zasekhaya zamaSilamsi azikalungi.",
   "chatbotOfflineDownloadLabel": "Yenza i-Fallback ngaphandle kwe-intanethi",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Ilungiselela ukukhuphela...",
+  "downloadingSurah": "Ikhuphela isurah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} iisurahs zikhutshelwe",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Ukulungisa / Ukhuphelo Olulahlekileyo",
   "downloadAction": "Khuphela",
   "resumeDownload": "Qalisa kwakhona Ukukhuphela",
   "deleteDownloadedFiles": "Cima Iifayile Ezithotyiweyo",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Iyarhoxisa...",
   "downloadCanceledForReciter": "Ukukhuphela kurhoxisiwe kwe- {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

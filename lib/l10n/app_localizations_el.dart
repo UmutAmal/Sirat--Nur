@@ -734,7 +734,8 @@ class AppLocalizationsEl extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage =>
+      'Ελευθερώστε τον εσωτερικό χώρο αποθήκευσης της συσκευής.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1184,11 +1185,11 @@ class AppLocalizationsEl extends AppLocalizations {
       'Ενεργοποιήστε την εναλλακτική λύση εκτός σύνδεσης';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Προετοιμασία λήψης...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Λήψη της σούρας $surah / $total';
   }
 
   @override
@@ -1205,11 +1206,11 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return 'Λήφθηκαν $downloaded / $total σούρες';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Επισκευή / Λήψη Λείπει';
 
   @override
   String get downloadAction => 'Λήψη';
@@ -1221,7 +1222,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get deleteDownloadedFiles => 'Διαγραφή ληφθέντων αρχείων';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Ακύρωση...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

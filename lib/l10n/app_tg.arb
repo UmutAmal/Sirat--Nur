@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Менеҷери зеркашии офлайн",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Захираи дохилии дастгоҳро холӣ кунед.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,7 +357,7 @@
   "chatbotOfflinePrompt": "Пойгоҳи донишҳои исломии тасдиқшудаи офлайнӣ ҳоло ҳам такмил дода мешавад. Шумо ҳоло метавонед бозгашти офлайнро фаъол созед, аммо он танҳо паёмҳои маҳдуди бехатарро то омода шудани маҷмӯи додаҳои сарчашма нишон медиҳад.\n\nОё шумо мехоҳед бозгашти офлайнро фаъол созед?",
   "chatbotOfflineSwitched": "Бозгашти офлайнӣ фаъол аст. Ҷавобҳои тасдиқшудаи исломии маҳаллӣ ҳанӯз омода нестанд.",
   "chatbotOfflineDownloadLabel": "Бозгашти офлайнро фаъол созед",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Зеркашӣ омода мешавад...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} сураҳо зеркашӣ карда шуданд",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Таъмир / Зеркашӣ гумшуда",
   "downloadAction": "Зеркашӣ кунед",
   "resumeDownload": "Боргириро идома диҳед",
   "deleteDownloadedFiles": "Файлҳои зеркашидашударо нест кунед",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Бекор карда мешавад...",
   "downloadCanceledForReciter": "Зеркашӣ барои {reciter} бекор карда шуд.",
   "@downloadCanceledForReciter": {
     "placeholders": {

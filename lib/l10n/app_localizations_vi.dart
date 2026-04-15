@@ -730,7 +730,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Giải phóng bộ nhớ trong của thiết bị.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1176,11 +1176,11 @@ class AppLocalizationsVi extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Bật dự phòng ngoại tuyến';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Đang chuẩn bị tải xuống...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Đang tải xuống surah $surah / $total';
   }
 
   @override
@@ -1197,11 +1197,11 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surah đã tải xuống';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Sửa chữa/Tải xuống bị thiếu';
 
   @override
   String get downloadAction => 'Tải xuống';
@@ -1213,7 +1213,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get deleteDownloadedFiles => 'Xóa các tập tin đã tải xuống';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Đang hủy...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

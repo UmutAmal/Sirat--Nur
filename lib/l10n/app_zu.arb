@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Umphathi Wokulanda Okungaxhunyiwe ku-inthanethi",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Khulula isitoreji sedivayisi yangaphakathi.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Isisekelo solwazi lwamaSulumane olungaxhunyiwe ku-inthanethi esiqinisekisiwe sisalungiswa. Ungakwazi ukunika amandla ukubuyela emuva ungaxhunyiwe ku-inthanethi manje, kodwa kuzobonisa kuphela imilayezo ephephile elinganiselwe kuze kube yilapho isethi yedatha etholiwe isilungile.\n\nUngathanda ukunika amandla ukubuyela emuva ungaxhunyiwe ku-inthanethi?",
   "chatbotOfflineSwitched": "Ukubuyela emuva kokungaxhunyiwe ku-inthanethi kunikwe amandla. Izimpendulo zasendaweni zamaSulumane eziqinisekisiwe azikakalungi.",
   "chatbotOfflineDownloadLabel": "Nika amandla i-Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Ilungiselela ukulanda...",
+  "downloadingSurah": "Ilanda i-surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ama-surah alandiwe",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Ukulungisa / Ukulanda Akukho",
   "downloadAction": "Landa",
   "resumeDownload": "Qalisa kabusha Ukulanda",
   "deleteDownloadedFiles": "Susa Amafayela Alandiwe",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Iyakhansela...",
   "downloadCanceledForReciter": "Ukulanda kukhanselwe i-{reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

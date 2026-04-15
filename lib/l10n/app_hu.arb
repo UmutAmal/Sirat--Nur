@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline letöltéskezelő",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Szabadítson fel belső eszköztárhelyet.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Az ellenőrzött offline iszlám tudásbázis gondozása még folyamatban van. Most engedélyezheti az offline tartalékot, de csak korlátozott számú biztonságos üzenetet jelenít meg, amíg a forrásból származó adatkészlet el nem készül.\n\nSzeretné engedélyezni az offline tartalékot?",
   "chatbotOfflineSwitched": "Offline tartalék engedélyezve. Az ellenőrzött helyi iszlám válaszok még nem állnak készen.",
   "chatbotOfflineDownloadLabel": "Offline tartalék engedélyezése",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Letöltés előkészítése...",
+  "downloadingSurah": "Szúra letöltése {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} szúrák letöltve",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Javítás/letöltés hiányzik",
   "downloadAction": "Letöltés",
   "resumeDownload": "Letöltés folytatása",
   "deleteDownloadedFiles": "Letöltött fájlok törlése",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Lemondás...",
   "downloadCanceledForReciter": "A {reciter} letöltése megszakítva.",
   "@downloadCanceledForReciter": {
     "placeholders": {

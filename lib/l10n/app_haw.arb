@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Luna Hoʻoiho Pahemo",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "E hoʻokuʻu i ka waihona o loko.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Ke mālama ʻia nei ka waihona ʻike Islam offline i hōʻoia ʻia. Hiki iā ʻoe ke ʻae i ka hāʻule hoʻihoʻi waho i kēia manawa, akā e hōʻike wale ia i nā memo palekana a hiki i ka mākaukau ʻana o ka waihona kumu.\n\nMakemake ʻoe e hoʻā i ka hāʻule hoʻopahemo?",
   "chatbotOfflineSwitched": "Hoʻohana ʻia ka hāʻule hoʻopahemo. ʻAʻole mākaukau nā pane Islamic kūloko i kēia manawa.",
   "chatbotOfflineDownloadLabel": "E ho'ā i ka hāʻule hoʻopahemo",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Ke hoʻomākaukau nei i ka hoʻoili ʻana...",
+  "downloadingSurah": "Hoʻoiho ʻia ka palapala {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} kiʻi ʻia",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Hoʻoponopono / Hoʻoiho Nalo",
   "downloadAction": "Hoʻoiho",
   "resumeDownload": "Hoʻouka hou",
   "deleteDownloadedFiles": "Holoi i nā faila i hoʻoiho ʻia",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Ke kāpae nei...",
   "downloadCanceledForReciter": "Hoʻopau ʻia ka hoʻoiho ʻana no {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

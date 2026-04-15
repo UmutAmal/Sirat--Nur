@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "ఆఫ్‌లైన్ డౌన్‌లోడ్ మేనేజర్",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "అంతర్గత పరికర నిల్వను ఖాళీ చేయండి.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "ధృవీకరించబడిన ఆఫ్‌లైన్ ఇస్లామిక్ నాలెడ్జ్ బేస్ ఇప్పటికీ క్యూరేట్ చేయబడుతోంది. మీరు ఇప్పుడు ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ను ప్రారంభించవచ్చు, కానీ మూలాధార డేటాసెట్ సిద్ధమయ్యే వరకు ఇది పరిమిత సురక్షిత సందేశాలను మాత్రమే చూపుతుంది.\n\nమీరు ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ని ప్రారంభించాలనుకుంటున్నారా?",
   "chatbotOfflineSwitched": "ఆఫ్‌లైన్ ఫాల్‌బ్యాక్ ప్రారంభించబడింది. ధృవీకరించబడిన స్థానిక ఇస్లామిక్ సమాధానాలు ఇంకా సిద్ధంగా లేవు.",
   "chatbotOfflineDownloadLabel": "ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ని ప్రారంభించండి",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "డౌన్‌లోడ్‌ను సిద్ధం చేస్తోంది...",
+  "downloadingSurah": "సూరా {surah} / {total}ని డౌన్‌లోడ్ చేస్తోంది",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} సూరాలు డౌన్‌లోడ్ చేయబడ్డాయి",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "మరమ్మతు / డౌన్‌లోడ్ లేదు",
   "downloadAction": "డౌన్‌లోడ్ చేయండి",
   "resumeDownload": "డౌన్‌లోడ్ పునఃప్రారంభించండి",
   "deleteDownloadedFiles": "డౌన్‌లోడ్ చేసిన ఫైల్‌లను తొలగించండి",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "రద్దు చేస్తోంది...",
   "downloadCanceledForReciter": "{reciter}కి డౌన్‌లోడ్ రద్దు చేయబడింది.",
   "@downloadCanceledForReciter": {
     "placeholders": {

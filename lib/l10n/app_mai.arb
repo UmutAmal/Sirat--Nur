@@ -357,7 +357,7 @@
   "chatbotOfflinePrompt": "के लिये।\nसत्यापित ऑफलाइन इस्लामी ज्ञानकोश केरऽ क्यूरेटिंग अखनी भी करलऽ जाय रहलऽ छै । अहां अखन ऑफलाइन फॉलबैक कें सक्षम कयर सकय छी, मुदा इ केवल सीमित सुरक्षित संदेशक कें देखायत जखन तइक स्रोत डाटासेट तैयार नहि भ जायत.\n\nकी अहाँ ऑफलाइन फॉलबैक सक्षम करय चाहब?",
   "chatbotOfflineSwitched": "के लिये।\nऑफलाइन फॉलबैक सक्षम। सत्यापित स्थानीय इस्लामी जवाब एखन धरि तैयार नहि अछि।",
   "chatbotOfflineDownloadLabel": "ऑफलाइन फॉलबैक सक्षम करू",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "डाउनलोड के तैयारी में...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {

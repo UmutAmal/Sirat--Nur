@@ -731,7 +731,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Soo deji kaydinta qalabka gudaha';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1176,11 +1176,11 @@ class AppLocalizationsSo extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Daar dib-u-dhaca khadka tooska ah';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Diyaarinta soo dejinta...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Soodejinaya suuradda $surah / $total';
   }
 
   @override
@@ -1201,7 +1201,7 @@ class AppLocalizationsSo extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Dayactirka / soo dejinta maqan';
 
   @override
   String get downloadAction => 'Download';
@@ -1213,7 +1213,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get deleteDownloadedFiles => 'Tirtir faylalka la soo dejiyay';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'burinaya...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

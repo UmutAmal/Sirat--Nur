@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Офлайн татаж авах менежер",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Төхөөрөмжийн дотоод санах ойг суллах.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,7 +357,7 @@
   "chatbotOfflinePrompt": "Баталгаажсан офлайн Исламын мэдлэгийн баазыг боловсруулсаар байна. Та одоо офлайн нөхөн сэргээх ажиллагааг идэвхжүүлж болно, гэхдээ эх сурвалжийн өгөгдлийн багц бэлэн болтол энэ нь зөвхөн хязгаарлагдмал аюулгүй мессежийг харуулах болно.\n\nТа офлайн нөөцийг идэвхжүүлэхийг хүсэж байна уу?",
   "chatbotOfflineSwitched": "Офлайн буцаалтыг идэвхжүүлсэн. Баталгаажсан орон нутгийн Исламын хариулт хараахан бэлэн болоогүй байна.",
   "chatbotOfflineDownloadLabel": "Офлайн буцаалтыг идэвхжүүлэх",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Татаж авахад бэлтгэж байна...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} судруудыг татаж авсан",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Засвар / Татаж авахгүй",
   "downloadAction": "Татаж авах",
   "resumeDownload": "Татаж авахыг үргэлжлүүлнэ үү",
   "deleteDownloadedFiles": "Татаж авсан файлуудыг устгах",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Цуцалж байна...",
   "downloadCanceledForReciter": "{reciter}-д татахыг цуцалсан.",
   "@downloadCanceledForReciter": {
     "placeholders": {

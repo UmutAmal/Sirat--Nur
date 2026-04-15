@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "آف لائن ڈاؤن لوڈ مینیجر",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "اندرونی ڈیوائس اسٹوریج کو خالی کریں۔",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "تصدیق شدہ آف لائن اسلامی نالج بیس کو ابھی بھی تیار کیا جا رہا ہے۔ آپ ابھی آف لائن فال بیک کو فعال کر سکتے ہیں، لیکن یہ صرف اس وقت تک محدود محفوظ پیغامات دکھائے گا جب تک کہ ماخذ کردہ ڈیٹا سیٹ تیار نہ ہو۔\n\nکیا آپ آف لائن فال بیک کو فعال کرنا چاہیں گے؟",
   "chatbotOfflineSwitched": "آف لائن فال بیک فعال ہے۔ تصدیق شدہ مقامی اسلامی جوابات ابھی تیار نہیں ہیں۔",
   "chatbotOfflineDownloadLabel": "آف لائن فال بیک کو فعال کریں۔",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "ڈاؤن لوڈ کی تیاری کر رہا ہے...",
+  "downloadingSurah": "سورہ ڈاؤن لوڈ ہو رہی ہے {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} سورتیں ڈاؤن لوڈ کی گئیں",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "مرمت / ڈاؤن لوڈ غائب",
   "downloadAction": "ڈاؤن لوڈ کریں۔",
   "resumeDownload": "ڈاؤن لوڈ دوبارہ شروع کریں۔",
   "deleteDownloadedFiles": "ڈاؤن لوڈ کردہ فائلوں کو حذف کریں۔",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "منسوخ ہو رہا ہے...",
   "downloadCanceledForReciter": "{reciter} کے لیے ڈاؤن لوڈ منسوخ کر دیا گیا۔",
   "@downloadCanceledForReciter": {
     "placeholders": {

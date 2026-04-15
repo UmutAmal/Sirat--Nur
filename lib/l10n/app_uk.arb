@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Офлайн-менеджер завантажень",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Звільніть внутрішню пам’ять пристрою.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Перевірена офлайн-база ісламських знань все ще курується. Ви можете ввімкнути автономний резервний режим зараз, але він показуватиме лише обмежені безпечні повідомлення, доки вихідний набір даних не буде готовий.\n\nБажаєте ввімкнути автономний резервний режим?",
   "chatbotOfflineSwitched": "Увімкнено автономний резервний режим. Перевірені місцеві ісламські відповіді ще не готові.",
   "chatbotOfflineDownloadLabel": "Увімкнути автономний резервний режим",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Підготовка завантаження...",
+  "downloadingSurah": "Завантаження сури {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} сур завантажено",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Відновлення/завантаження відсутні",
   "downloadAction": "Завантажити",
   "resumeDownload": "Відновити завантаження",
   "deleteDownloadedFiles": "Видалити завантажені файли",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Скасування...",
   "downloadCanceledForReciter": "Завантаження для {reciter} скасовано.",
   "@downloadCanceledForReciter": {
     "placeholders": {

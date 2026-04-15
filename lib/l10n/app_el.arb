@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Διαχειριστής λήψεων εκτός σύνδεσης",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Ελευθερώστε τον εσωτερικό χώρο αποθήκευσης της συσκευής.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Η επαληθευμένη βάση ισλαμικών γνώσεων εκτός σύνδεσης βρίσκεται ακόμη υπό επιμέλεια. Μπορείτε να ενεργοποιήσετε την εναλλακτική λύση εκτός σύνδεσης τώρα, αλλά θα εμφανίζει μόνο περιορισμένα ασφαλή μηνύματα μέχρι να είναι έτοιμο το σύνολο δεδομένων προέλευσης.\n\nΘέλετε να ενεργοποιήσετε την εναλλακτική λύση εκτός σύνδεσης;",
   "chatbotOfflineSwitched": "Ενεργοποιήθηκε η εναλλακτική λύση εκτός σύνδεσης. Οι επαληθευμένες τοπικές ισλαμικές απαντήσεις δεν είναι ακόμη έτοιμες.",
   "chatbotOfflineDownloadLabel": "Ενεργοποιήστε την εναλλακτική λύση εκτός σύνδεσης",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Προετοιμασία λήψης...",
+  "downloadingSurah": "Λήψη της σούρας {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "Λήφθηκαν {downloaded} / {total} σούρες",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Επισκευή / Λήψη Λείπει",
   "downloadAction": "Λήψη",
   "resumeDownload": "Λήψη βιογραφικού",
   "deleteDownloadedFiles": "Διαγραφή ληφθέντων αρχείων",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Ακύρωση...",
   "downloadCanceledForReciter": "Η λήψη ακυρώθηκε για {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

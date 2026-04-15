@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Senkonekta Elŝuta Administranto",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Liberigu internan aparaton-stokadon.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "La kontrolita eksterreta islama sciobazo daŭre estas prizorgita. Vi povas ebligi senkonektan rezervejon nun, sed ĝi nur montros limigitajn sekurajn mesaĝojn ĝis la fonta datumaro estos preta.\n\nĈu vi ŝatus ebligi senkonektan falon?",
   "chatbotOfflineSwitched": "Senkonekta falo ebligita. Kontrolitaj lokaj islamaj respondoj ankoraŭ ne estas pretaj.",
   "chatbotOfflineDownloadLabel": "Ebligu Senkonektan Refalon",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Preparante elŝuton...",
+  "downloadingSurah": "Elŝutante suraon {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} suraoj elŝutitaj",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Riparo / Elŝuto Mankas",
   "downloadAction": "Elŝutu",
   "resumeDownload": "Rekomencu Elŝuton",
   "deleteDownloadedFiles": "Forigu elŝutitajn dosierojn",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Nuligo...",
   "downloadCanceledForReciter": "Elŝuto nuligita por {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Kaiwhakahaere Tikiake Tuimotu",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Whakakorea te rokiroki taputapu o roto.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Ko te turanga matauranga Ihirama tuimotu kua whakamanahia kei te whakahaerehia tonutia. Ka taea e koe te whakahoaho tuimotu inaianei, engari ka whakaatu noa i nga karere haumaru kia reri ra ano te huinga raraunga.\n\nKei te pirangi koe ki te whakahohe tuimotu takahuri?",
   "chatbotOfflineSwitched": "Whakahoki tuimotu kua whakahohea. Ko nga whakautu Ihirama o te rohe kaore ano kia rite.",
   "chatbotOfflineDownloadLabel": "Whakahohehia te Whakamuri Tuimotu",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Kei te whakarite tikiake...",
+  "downloadingSurah": "Tikiake ana i te pukapuka {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah i tangohia",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Whakatikaina / Tikiake Ngaro",
   "downloadAction": "Tikiake",
   "resumeDownload": "Tukuna ano",
   "deleteDownloadedFiles": "Mukua nga Kōnae kua Tikiake",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Whakakore...",
   "downloadCanceledForReciter": "Kua whakakorehia te tikiake mo {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

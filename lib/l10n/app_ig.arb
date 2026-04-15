@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Onye njikwa nbudata na-anọghị n'ịntanetị",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Hapụ ebe nchekwa ngwaọrụ dị n'ime.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "A ka na-echekwa ntọala ihe ọmụma Islam na-anọghị n'ịntanetị. Ị nwere ike mee ka ọ daa azụ na-anọghị n'ịntanetị ugbu a, mana ọ ga-egosi naanị ozi nchekwa nwere oke ruo mgbe nhazi data ewepụtara dị njikere.\n\nỌ ga-amasị gị ịgbalite ọdịda na-anọghị n'ịntanetị?",
   "chatbotOfflineSwitched": "Agbanyere ọdịda na-anọghị n'ịntanetị. Azịza ndị islam mpaghara akwadoro adịbeghị.",
   "chatbotOfflineDownloadLabel": "Kwado ọdịda na-anọghị n'ịntanetị",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Na-akwado nbudata...",
+  "downloadingSurah": "Na-ebudata surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ebudatara surah.",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Mmezi / nbudata efu",
   "downloadAction": "Budata",
   "resumeDownload": "Malitegharịa nbudata",
   "deleteDownloadedFiles": "Hichapụ faịlụ ebudatara",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Na-akagbu...",
   "downloadCanceledForReciter": "Kagburu nbudata maka {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

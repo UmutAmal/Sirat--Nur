@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Afaho ny fitahirizana fitaovana anatiny.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,7 +357,7 @@
   "chatbotOfflinePrompt": "Mbola karakaraina ny toby fahalalana Islamika ivelan'ny aterineto voamarina. Azonao atao ny mamela ny fiverenana an-tserasera amin'izao fotoana izao, fa ireo hafatra azo antoka voafetra ihany no hanehoana azy mandra-pahavitan'ny angon-drakitra nalaina.\n\nTe-hanalefa ny fiverenana an-tserasera ve ianao?",
   "chatbotOfflineSwitched": "Nalefa ny fiverenana an-tserasera. Tsy mbola vonona ny valinteny islamika voamarina ao an-toerana.",
   "chatbotOfflineDownloadLabel": "Alefaso ny Fallback an-tserasera",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Manomana fampidinana...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Repair / Download Tsy hita",
   "downloadAction": "Download",
   "resumeDownload": "Resume Download",
   "deleteDownloadedFiles": "Fafao ny rakitra voasintona",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Manafoana...",
   "downloadCanceledForReciter": "Nofoanana ny fampidinana noho ny {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

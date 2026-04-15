@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Gestionnaire de téléchargement hors ligne",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Libérez le stockage interne de l’appareil.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "La base de connaissances islamiques hors ligne vérifiée est toujours en cours de conservation. Vous pouvez activer le secours hors ligne maintenant, mais il n'affichera qu'un nombre limité de messages sécurisés jusqu'à ce que l'ensemble de données source soit prêt.\n\nSouhaitez-vous activer le remplacement hors ligne ?",
   "chatbotOfflineSwitched": "Repli hors ligne activé. Les réponses islamiques locales vérifiées ne sont pas encore prêtes.",
   "chatbotOfflineDownloadLabel": "Activer le repli hors ligne",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Préparation du téléchargement...",
+  "downloadingSurah": "Téléchargement de la sourate {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} sourates téléchargées",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Réparation / Téléchargement manquant",
   "downloadAction": "Télécharger",
   "resumeDownload": "Reprendre le téléchargement",
   "deleteDownloadedFiles": "Supprimer les fichiers téléchargés",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Annulation...",
   "downloadCanceledForReciter": "Téléchargement annulé pour {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

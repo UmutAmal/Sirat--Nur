@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Pengurus Muat Turun Luar Talian",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Kosongkan storan peranti dalaman.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,7 +357,7 @@
   "chatbotOfflinePrompt": "Pangkalan pengetahuan Islam luar talian yang disahkan masih dipilih susun. Anda boleh mendayakan sandaran luar talian sekarang, tetapi ia hanya akan menunjukkan mesej selamat terhad sehingga set data bersumber sedia.\n\nAdakah anda ingin mendayakan sandaran luar talian?",
   "chatbotOfflineSwitched": "Sandaran luar talian didayakan. Jawapan Islam tempatan yang disahkan masih belum bersedia.",
   "chatbotOfflineDownloadLabel": "Dayakan Saling Balik Luar Talian",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Menyediakan muat turun...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Pembaikan / Muat Turun Hilang",
   "downloadAction": "Muat turun",
   "resumeDownload": "Sambung Muat Turun",
   "deleteDownloadedFiles": "Padam Fail yang Dimuat Turun",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Membatalkan...",
   "downloadCanceledForReciter": "Muat turun dibatalkan untuk {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

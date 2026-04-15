@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Pengelola Unduhan Offline",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Kosongkan penyimpanan perangkat internal.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Basis pengetahuan Islam offline yang terverifikasi masih dalam proses kurasi. Anda dapat mengaktifkan penggantian offline sekarang, namun ini hanya akan menampilkan pesan aman terbatas hingga kumpulan data yang bersumber siap.\n\nApakah Anda ingin mengaktifkan penggantian offline?",
   "chatbotOfflineSwitched": "Penggantian offline diaktifkan. Jawaban Islami lokal yang terverifikasi belum siap.",
   "chatbotOfflineDownloadLabel": "Aktifkan Penggantian Offline",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Mempersiapkan pengunduhan...",
+  "downloadingSurah": "Mengunduh surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah diunduh",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Perbaiki / Unduh Hilang",
   "downloadAction": "Unduh",
   "resumeDownload": "Lanjutkan Unduhan",
   "deleteDownloadedFiles": "Hapus File yang Diunduh",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Membatalkan...",
   "downloadCanceledForReciter": "Pengunduhan dibatalkan untuk {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

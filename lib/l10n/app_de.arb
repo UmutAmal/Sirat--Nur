@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline-Download-Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Geben Sie internen Gerätespeicher frei.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Die verifizierte Offline-Islam-Wissensdatenbank wird noch kuratiert. Sie können jetzt den Offline-Fallback aktivieren, es werden jedoch nur begrenzte sichere Meldungen angezeigt, bis der Quelldatensatz bereit ist.\n\nMöchten Sie den Offline-Fallback aktivieren?",
   "chatbotOfflineSwitched": "Offline-Fallback aktiviert. Verifizierte lokale islamische Antworten sind noch nicht fertig.",
   "chatbotOfflineDownloadLabel": "Offline-Fallback aktivieren",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Download wird vorbereitet...",
+  "downloadingSurah": "Sure {surah} / {total} wird heruntergeladen",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} Suren heruntergeladen",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Reparatur/Download fehlt",
   "downloadAction": "Herunterladen",
   "resumeDownload": "Download fortsetzen",
   "deleteDownloadedFiles": "Heruntergeladene Dateien löschen",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Stornierung...",
   "downloadCanceledForReciter": "Download für {reciter} abgebrochen.",
   "@downloadCanceledForReciter": {
     "placeholders": {

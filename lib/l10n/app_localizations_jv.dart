@@ -729,7 +729,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Mbebasake panyimpenan piranti internal.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1173,7 +1173,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Aktifake Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Nyiapake download...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1198,7 +1198,7 @@ class AppLocalizationsJv extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Repair / Download Ilang';
 
   @override
   String get downloadAction => 'Ngundhuh';
@@ -1210,7 +1210,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get deleteDownloadedFiles => 'Busak File sing Diundhuh';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Batal...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

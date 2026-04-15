@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Libere depo aparèy entèn yo.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Verifye baz konesans Islamik offline la toujou ap òganize. Ou ka aktive replik offline kounye a, men li pral sèlman montre mesaj ki an sekirite limite jiskaske seri done sous la pare.\n\nÈske ou ta renmen aktive offline repli?",
   "chatbotOfflineSwitched": "Offline selèb pèmèt. Repons Islamik lokal verifye yo poko pare.",
   "chatbotOfflineDownloadLabel": "Pèmèt Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Prepare download...",
+  "downloadingSurah": "Telechaje soure {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} soure telechaje",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Reparasyon / Telechaje ki manke",
   "downloadAction": "Telechaje",
   "resumeDownload": "Rezime Telechaje",
   "deleteDownloadedFiles": "Efase fichye telechaje yo",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Anile...",
   "downloadCanceledForReciter": "Telechajman anile pou {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

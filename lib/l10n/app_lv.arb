@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Bezsaistes lejupielādes pārvaldnieks",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Atbrīvojiet ierīces iekšējo krātuvi.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Pārbaudītā bezsaistes islāma zināšanu bāze joprojām tiek apkopota. Varat iespējot bezsaistes atkāpšanos tūlīt, taču tajā tiks rādīti tikai ierobežoti droši ziņojumi, līdz būs gatava iegūtā datu kopa.\n\nVai vēlaties iespējot bezsaistes atkāpšanos?",
   "chatbotOfflineSwitched": "Bezsaistes atkāpšanās iespējota. Pārbaudītas vietējās islāma atbildes vēl nav gatavas.",
   "chatbotOfflineDownloadLabel": "Iespējot bezsaistes atkāpšanos",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Notiek lejupielādes sagatavošana...",
+  "downloadingSurah": "Notiek surah lejupielāde {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surahs lejupielādētas",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Trūkst remonta/lejupielādes",
   "downloadAction": "Lejupielādēt",
   "resumeDownload": "Atsākt lejupielādi",
   "deleteDownloadedFiles": "Dzēst lejupielādētos failus",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Notiek atcelšana...",
   "downloadCanceledForReciter": "Lejupielāde ir atcelta {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

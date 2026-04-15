@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Maamulaha soo dejinta khadka tooska ah",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Soo deji kaydinta qalabka gudaha",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Saldhigga aqoonta Islaamka ee khadka tooska ah ee la xaqiijiyey ayaa weli la daabicinayaa. Waxaad awood u siin kartaa dib u dhaca khadka tooska ah hadda, laakiin waxay tusi doontaa oo kaliya fariimaha badbaadada xaddidan ilaa inta xog-ururinta laga keenay diyaar yahay.\n\nMa jeclaan lahayd inaad karti u geliso soo noqoshada khadka tooska ah?",
   "chatbotOfflineSwitched": "Dib u dhaca khadka tooska ah waa la furay Jawaabaha islaamiga ah ee deegaanka ee la xaqiijiyay wali diyaar uma aha.",
   "chatbotOfflineDownloadLabel": "Daar dib-u-dhaca khadka tooska ah",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Diyaarinta soo dejinta...",
+  "downloadingSurah": "Soodejinaya suuradda {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Dayactirka / soo dejinta maqan",
   "downloadAction": "Download",
   "resumeDownload": "Dib u bilaw soo dejinta",
   "deleteDownloadedFiles": "Tirtir faylalka la soo dejiyay",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "burinaya...",
   "downloadCanceledForReciter": "Soo dejintu waa la joojiyay {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

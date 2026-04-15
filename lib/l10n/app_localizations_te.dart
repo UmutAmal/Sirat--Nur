@@ -730,7 +730,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'అంతర్గత పరికర నిల్వను ఖాళీ చేయండి.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1177,11 +1177,11 @@ class AppLocalizationsTe extends AppLocalizations {
       'ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ని ప్రారంభించండి';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'డౌన్‌లోడ్‌ను సిద్ధం చేస్తోంది...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'సూరా $surah / $totalని డౌన్‌లోడ్ చేస్తోంది';
   }
 
   @override
@@ -1198,11 +1198,11 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total సూరాలు డౌన్‌లోడ్ చేయబడ్డాయి';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'మరమ్మతు / డౌన్‌లోడ్ లేదు';
 
   @override
   String get downloadAction => 'డౌన్‌లోడ్ చేయండి';
@@ -1214,7 +1214,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get deleteDownloadedFiles => 'డౌన్‌లోడ్ చేసిన ఫైల్‌లను తొలగించండి';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'రద్దు చేస్తోంది...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

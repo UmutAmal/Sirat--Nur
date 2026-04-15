@@ -732,7 +732,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Illibera l-ħażna interna tal-apparat.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1179,11 +1179,11 @@ class AppLocalizationsMt extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Ippermetti Fallback Offline';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Nipprepara t-tniżżil...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Niżżel is-surah $surah / $total';
   }
 
   @override
@@ -1200,11 +1200,11 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surah imniżżla';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Tiswija / Niżżel Nieqsa';
 
   @override
   String get downloadAction => 'Niżżel';
@@ -1216,7 +1216,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get deleteDownloadedFiles => 'Ħassar Fajls Mniżżla';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Tħassir...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

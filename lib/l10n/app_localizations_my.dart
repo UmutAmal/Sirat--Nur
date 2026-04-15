@@ -734,7 +734,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'စက်တွင်း သိုလှောင်ခန်းကို အခမဲ့လုပ်ပါ။';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1182,11 +1182,11 @@ class AppLocalizationsMy extends AppLocalizations {
       'အော့ဖ်လိုင်း Fallback ကို ဖွင့်ပါ။';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'ဒေါင်းလုဒ်ကို ပြင်ဆင်နေသည်...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'စူရဟ် $surah / $total ဒေါင်းလုဒ်လုပ်နေသည်';
   }
 
   @override
@@ -1203,11 +1203,11 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total စူရာဟ်များ ဒေါင်းလုဒ်လုပ်ထားသည်';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'ပြုပြင်/ဒေါင်းလုဒ် ပျောက်ဆုံးနေပါသည်။';
 
   @override
   String get downloadAction => 'ဒေါင်းလုဒ်လုပ်ပါ။';
@@ -1219,7 +1219,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get deleteDownloadedFiles => 'ဒေါင်းလုဒ်လုပ်ထားသောဖိုင်များကိုဖျက်ပါ။';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'ပယ်ဖျက်နေသည်...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

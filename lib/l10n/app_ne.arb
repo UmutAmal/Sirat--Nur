@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "अफलाइन डाउनलोड प्रबन्धक",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "आन्तरिक यन्त्र भण्डारण खाली गर्नुहोस्।",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "प्रमाणित अफलाइन इस्लामिक ज्ञान आधार अझै पनि क्युरेट गरिएको छ। तपाईंले अहिले अफलाइन फलब्याक सक्षम गर्न सक्नुहुन्छ, तर स्रोत डेटासेट तयार नभएसम्म यसले सीमित सुरक्षित सन्देशहरू मात्र देखाउनेछ।\n\nके तपाइँ अफलाइन फलब्याक सक्षम गर्न चाहनुहुन्छ?",
   "chatbotOfflineSwitched": "अफलाइन फलब्याक सक्षम गरियो। प्रमाणित स्थानीय इस्लामिक जवाफहरू अझै तयार छैनन्।",
   "chatbotOfflineDownloadLabel": "अफलाइन फलब्याक सक्षम गर्नुहोस्",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "डाउनलोडको तयारी गर्दै...",
+  "downloadingSurah": "सुरा डाउनलोड गर्दै {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} सुराहरू डाउनलोड गरियो",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "मर्मत / डाउनलोड छुटेको छ",
   "downloadAction": "डाउनलोड गर्नुहोस्",
   "resumeDownload": "डाउनलोड पुन: सुरु गर्नुहोस्",
   "deleteDownloadedFiles": "डाउनलोड गरिएका फाइलहरू मेटाउनुहोस्",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "रद्द गर्दै...",
   "downloadCanceledForReciter": "{reciter} को लागि डाउनलोड रद्द गरियो।",
   "@downloadCanceledForReciter": {
     "placeholders": {

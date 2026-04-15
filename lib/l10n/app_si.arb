@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "නොබැඳි බාගැනීම් කළමනාකරු",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "අභ්‍යන්තර උපාංග ආචයනය නිදහස් කරන්න.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "සත්‍යාපිත නොබැඳි ඉස්ලාමීය දැනුම පදනම තවමත් පාලනය වෙමින් පවතී. ඔබට දැන් නොබැඳි පසුබැසීම සබල කළ හැක, නමුත් එය මූලාශ්‍ර දත්ත කට්ටලය සූදානම් වන තෙක් සීමිත ආරක්ෂිත පණිවිඩ පමණක් පෙන්වයි.\n\nඔබ නොබැඳි පසුබැසීම සබල කිරීමට කැමතිද?",
   "chatbotOfflineSwitched": "නොබැඳි පසුබැසීම සබල කර ඇත. තහවුරු කළ දේශීය ඉස්ලාමීය පිළිතුරු තවමත් සූදානම් නැත.",
   "chatbotOfflineDownloadLabel": "Offline Fallback සබල කරන්න",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "බාගැනීම සූදානම් කරමින්...",
+  "downloadingSurah": "සූරා බාගනිමින් {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} සූරත බාගන්නා ලදී",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "අලුත්වැඩියා කිරීම / බාගත කිරීම අතුරුදහන්",
   "downloadAction": "බාගන්න",
   "resumeDownload": "බාගත කිරීම නැවත ආරම්භ කරන්න",
   "deleteDownloadedFiles": "බාගත කළ ගොනු මකන්න",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "අවලංගු කරමින්...",
   "downloadCanceledForReciter": "{reciter} සඳහා බාගැනීම අවලංගු විය.",
   "@downloadCanceledForReciter": {
     "placeholders": {

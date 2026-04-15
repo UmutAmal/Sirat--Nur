@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Menaxheri i shkarkimit jashtë linje",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Lironi hapësirën e brendshme të pajisjes.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Baza e verifikuar e njohurive islame jashtë linje është ende duke u kuruar. Mund të aktivizosh kthimin jashtë linje tani, por do të shfaqë vetëm mesazhe të kufizuara të sigurta derisa grupi i të dhënave me burim të jetë gati.\n\nDëshironi të aktivizoni kthimin jashtë linje?",
   "chatbotOfflineSwitched": "Rikthimi jashtë linje është aktivizuar. Përgjigjet e verifikuara lokale islame nuk janë ende gati.",
   "chatbotOfflineDownloadLabel": "Aktivizo kthimin jashtë linje",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Po përgatit shkarkimin...",
+  "downloadingSurah": "Po shkarkon suren {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} sure të shkarkuara",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Riparimi / Shkarkimi mungon",
   "downloadAction": "Shkarkoni",
   "resumeDownload": "Rifillimi i shkarkimit",
   "deleteDownloadedFiles": "Fshi skedarët e shkarkuar",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Po anulohet...",
   "downloadCanceledForReciter": "Shkarkimi u anulua për {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

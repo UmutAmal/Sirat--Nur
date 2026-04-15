@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Офлайн мениджър за изтегляне",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Освободете вътрешната памет на устройството.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Проверената офлайн ислямска база знания все още се подготвя. Можете да активирате офлайн резервен режим сега, но той ще показва само ограничени безопасни съобщения, докато наборът от данни не бъде готов.\n\nИскате ли да активирате резервно офлайн?",
   "chatbotOfflineSwitched": "Активиран резервен офлайн режим. Проверените местни ислямски отговори все още не са готови.",
   "chatbotOfflineDownloadLabel": "Активиране на резервен офлайн режим",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Изтеглянето се подготвя...",
+  "downloadingSurah": "Изтегля се сура {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} изтеглени сури",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Липсва поправка/изтегляне",
   "downloadAction": "Изтегляне",
   "resumeDownload": "Възобновете изтеглянето",
   "deleteDownloadedFiles": "Изтриване на изтеглените файлове",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Отменя се...",
   "downloadCanceledForReciter": "Изтеглянето е анулирано за {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

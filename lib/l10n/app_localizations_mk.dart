@@ -729,7 +729,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Ослободете ја внатрешната меморија на уредот.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1176,11 +1176,11 @@ class AppLocalizationsMk extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Овозможете офлајн резервни';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Се подготвува преземање...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Се презема сурата $surah / $total';
   }
 
   @override
@@ -1197,11 +1197,11 @@ class AppLocalizationsMk extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total сураи преземени';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Поправка / Недостасува преземање';
 
   @override
   String get downloadAction => 'Преземи';
@@ -1213,7 +1213,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get deleteDownloadedFiles => 'Избришете ги преземените датотеки';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Се откажува...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

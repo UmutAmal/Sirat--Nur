@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Офлайн жүктеу менеджері",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Құрылғының ішкі жадын босатыңыз.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Тексерілген офлайн исламдық білім базасы әлі де құрылып жатыр. Офлайн қалпына келтіруді қазір қосуға болады, бірақ ол бастапқы деректер жинағы дайын болғанша шектеулі қауіпсіз хабарларды ғана көрсетеді.\n\nОфлайн қалпына келтіруді қосқыңыз келе ме?",
   "chatbotOfflineSwitched": "Офлайн қалпына келтіру қосылды. Тексерілген жергілікті исламдық жауаптар әлі дайын емес.",
   "chatbotOfflineDownloadLabel": "Офлайн қалпына келтіруді қосыңыз",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Жүктеп алу дайындалуда...",
+  "downloadingSurah": "{surah} / {total} сүресі жүктелуде",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} сүрелер жүктелді",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Жөндеу / Жүктеу жоқ",
   "downloadAction": "Жүктеп алу",
   "resumeDownload": "Жүктеп алуды жалғастыру",
   "deleteDownloadedFiles": "Жүктелген файлдарды жою",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Бас тартуда...",
   "downloadCanceledForReciter": "{reciter} үшін жүктеп алу тоқтатылды.",
   "@downloadCanceledForReciter": {
     "placeholders": {

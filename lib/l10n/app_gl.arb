@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Xestor de descargas sen conexión",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Libera almacenamento interno do dispositivo.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "A base de coñecemento islámico fóra de liña verificada aínda está a ser seleccionada. Agora podes activar a alternativa sen conexión, pero só mostrará mensaxes seguras limitadas ata que o conxunto de datos de orixe estea listo.\n\nQueres activar a alternativa sen conexión?",
   "chatbotOfflineSwitched": "Activouse a alternativa sen conexión. As respostas islámicas locais verificadas aínda non están listas.",
   "chatbotOfflineDownloadLabel": "Activar a alternativa sen conexión",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Preparando a descarga...",
+  "downloadingSurah": "Descargando a sura {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} suras descargadas",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Reparar/Descargar",
   "downloadAction": "Descargar",
   "resumeDownload": "Descargar curriculum vitae",
   "deleteDownloadedFiles": "Eliminar ficheiros descargados",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Cancelando...",
   "downloadCanceledForReciter": "Descarga cancelada para {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

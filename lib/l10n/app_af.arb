@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Vanlyn aflaaibestuurder",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Maak interne toestelberging vry.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Die geverifieerde vanlyn Islamitiese kennisbasis word steeds saamgestel. Jy kan nou vanlyn terugval aktiveer, maar dit sal slegs beperkte veilige boodskappe wys totdat die verkrygde datastel gereed is.\n\nWil jy vanlyn terugval aktiveer?",
   "chatbotOfflineSwitched": "Vanlyn terugval geaktiveer. Geverifieerde plaaslike Islamitiese antwoorde is nog nie gereed nie.",
   "chatbotOfflineDownloadLabel": "Aktiveer vanlyn terugval",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Berei tans aflaai voor...",
+  "downloadingSurah": "Laai tans surah {surah} / {total} af",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surahs afgelaai",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Herstel / Aflaai ontbreek",
   "downloadAction": "Laai af",
   "resumeDownload": "Hervat aflaai",
   "deleteDownloadedFiles": "Vee afgelaaide lêers uit",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Kanselleer tans …",
   "downloadCanceledForReciter": "Aflaai is gekanselleer vir {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

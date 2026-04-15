@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Liberate autem internum fabrica repono.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Basis cognitionis islamicae verificatur offline adhuc curatur. Nunc fallback offline efficere potes, sed tantum epistulas tutas limitatas ostendes donec dataset fons paratus est.\n\nVelisne fallback efficiendi online?",
   "chatbotOfflineSwitched": "Offline fallback enabled. Verificata responsa localia islamica nondum parata sunt.",
   "chatbotOfflineDownloadLabel": "Admitte Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Praeparans download...",
+  "downloadingSurah": "Download surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Reparare / Download Absentis",
   "downloadAction": "Download",
   "resumeDownload": "Proin Download",
   "deleteDownloadedFiles": "Delere Downloaded Lima",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Revocatio...",
   "downloadCanceledForReciter": "Download cancellatum pro {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

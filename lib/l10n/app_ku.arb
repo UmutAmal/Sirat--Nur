@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Rêvebirê Daxistinê negirêdayî",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Depoya cîhaza navxweyî azad bikin.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Bingeha zanîna îslamî ya negirêdayî ya pejirandî hîn jî tê rêve kirin. Naha hûn dikarin paşvekêşana offline çalak bikin, lê ew ê tenê peyamên ewledar ên sînordar nîşan bide heya ku daneya jêder amade be.\n\nMa hûn dixwazin paşvekêşana offline çalak bikin?",
   "chatbotOfflineSwitched": "Pêşveçûna negirêdayî çalak bû. Bersivên îslamî yên herêmî yên verastkirî hîn ne amade ne.",
   "chatbotOfflineDownloadLabel": "Vegera negirêdayî çalak bike",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Amadekirina daxistinê...",
+  "downloadingSurah": "Sûreya {surah} / {total} tê daxistin",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} sûre hatin daxistin",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Tamîrkirin / Daxistin winda ye",
   "downloadAction": "Download",
   "resumeDownload": "Resume Download",
   "deleteDownloadedFiles": "Pelên dakêşandî jêbirin",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Betalkirin...",
   "downloadCanceledForReciter": "Daxistin ji bo {reciter} hat betalkirin.",
   "@downloadCanceledForReciter": {
     "placeholders": {

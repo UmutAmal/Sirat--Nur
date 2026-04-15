@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "מנהל הורדות לא מקוון",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "פנה אחסון פנימי במכשיר.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "בסיס הידע האיסלאמי הלא מקוון המאומת עדיין מאוצר. אתה יכול להפעיל חילוץ לא מקוון עכשיו, אבל זה יציג רק הודעות בטוחות מוגבלות עד שמערך הנתונים של המקור יהיה מוכן.\n\nהאם ברצונך להפעיל חילוץ לא מקוון?",
   "chatbotOfflineSwitched": "החזרה במצב לא מקוון מופעלת. תשובות אסלאמיות מקומיות מאומתות עדיין אינן מוכנות.",
   "chatbotOfflineDownloadLabel": "אפשר סתירה לא מקוונת",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "מכין הורדה...",
+  "downloadingSurah": "מוריד את הסורה {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "הורדו {downloaded} / {total} סורות",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "תיקון / הורדה חסר",
   "downloadAction": "הורד",
   "resumeDownload": "המשך הורדה",
   "deleteDownloadedFiles": "מחק קבצים שהורדת",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "מבטל...",
   "downloadCanceledForReciter": "ההורדה בוטלה עבור {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

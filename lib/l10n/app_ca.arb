@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Gestor de descàrregues fora de línia",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Allibera l'emmagatzematge intern del dispositiu.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "La base de coneixement islàmica fora de línia verificada encara s'està curant. Ara podeu activar la alternativa fora de línia, però només mostrarà missatges segurs limitats fins que el conjunt de dades d'origen estigui llest.\n\nVoleu activar la alternativa fora de línia?",
   "chatbotOfflineSwitched": "La alternativa fora de línia està activada. Les respostes islàmiques locals verificades encara no estan preparades.",
   "chatbotOfflineDownloadLabel": "Activa la funció alternativa fora de línia",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "S'està preparant la baixada...",
+  "downloadingSurah": "S'està baixant la sura {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} sures baixades",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Falta reparació/descàrrega",
   "downloadAction": "Descarregar",
   "resumeDownload": "Descàrrega de currículum",
   "deleteDownloadedFiles": "Suprimeix els fitxers descarregats",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "S'està cancel·lant...",
   "downloadCanceledForReciter": "La baixada s'ha cancel·lat per a {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

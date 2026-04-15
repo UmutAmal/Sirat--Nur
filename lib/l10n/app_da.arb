@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline-downloadadministrator",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Frigør intern lagerplads.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Den verificerede offline islamiske videnbase bliver stadig kureret. Du kan aktivere offline fallback nu, men det vil kun vise begrænsede sikre meddelelser, indtil det kildedatasæt er klar.\n\nVil du aktivere offline fallback?",
   "chatbotOfflineSwitched": "Offline fallback aktiveret. Verificerede lokale islamiske svar er ikke klar endnu.",
   "chatbotOfflineDownloadLabel": "Aktiver Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Forbereder download...",
+  "downloadingSurah": "Downloader surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} suraer downloadet",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Reparation/download mangler",
   "downloadAction": "Hent",
   "resumeDownload": "Genoptag download",
   "deleteDownloadedFiles": "Slet downloadede filer",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Annullerer...",
   "downloadCanceledForReciter": "Download annulleret for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

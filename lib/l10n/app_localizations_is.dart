@@ -730,7 +730,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Losaðu um geymslurými tækisins.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1176,11 +1176,11 @@ class AppLocalizationsIs extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Virkja afturfall án nettengingar';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Undirbýr niðurhal...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Sækir surah $surah / $total';
   }
 
   @override
@@ -1197,11 +1197,11 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total súrur sóttar';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Viðgerð / niðurhal vantar';
 
   @override
   String get downloadAction => 'Sækja';
@@ -1213,7 +1213,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get deleteDownloadedFiles => 'Eyða niðurhaluðum skrám';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Hættir við...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

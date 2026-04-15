@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Offline Download Manager",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Illibera l-ħażna interna tal-apparat.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Il-bażi ta' għarfien Iżlamiku offline verifikata għadha qed tiġi kkurata. Tista' tattiva r-riżerva offline issa, iżda se turi biss messaġġi siguri limitati sakemm is-sett tad-dejta misjub ikun lest.\n\nTixtieq tattiva l-fallback offline?",
   "chatbotOfflineSwitched": "Il-fallback offline attivat. It-tweġibiet Iżlamiċi lokali verifikati għadhom mhumiex lesti.",
   "chatbotOfflineDownloadLabel": "Ippermetti Fallback Offline",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Nipprepara t-tniżżil...",
+  "downloadingSurah": "Niżżel is-surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah imniżżla",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Tiswija / Niżżel Nieqsa",
   "downloadAction": "Niżżel",
   "resumeDownload": "Kompli Niżżel",
   "deleteDownloadedFiles": "Ħassar Fajls Mniżżla",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Tħassir...",
   "downloadCanceledForReciter": "Niżżel ikkanċellat għal {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

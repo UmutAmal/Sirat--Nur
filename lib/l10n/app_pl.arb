@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Menedżer pobierania offline",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Zwolnij pamięć wewnętrzną urządzenia.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Zweryfikowana baza wiedzy islamskiej offline jest nadal w fazie tworzenia. Możesz teraz włączyć funkcję zastępczą w trybie offline, ale będzie ona wyświetlać tylko ograniczoną liczbę bezpiecznych komunikatów, dopóki źródłowy zbiór danych nie będzie gotowy.\n\nCzy chcesz włączyć funkcję zastępczą offline?",
   "chatbotOfflineSwitched": "Włączono opcję zastępczego trybu offline. Zweryfikowane lokalne odpowiedzi islamskie nie są jeszcze gotowe.",
   "chatbotOfflineDownloadLabel": "Włącz tryb awaryjny offline",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Przygotowuję pobieranie...",
+  "downloadingSurah": "Pobieranie sury {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} pobrane sura",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Napraw/pobierz brakujące",
   "downloadAction": "Pobierz",
   "resumeDownload": "Wznów pobieranie",
   "deleteDownloadedFiles": "Usuń pobrane pliki",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Anulowanie...",
   "downloadCanceledForReciter": "Pobieranie anulowane dla {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

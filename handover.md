@@ -5481,3 +5481,41 @@
 
 ### Sonraki Adım
 - Yeni döngüde kalan l10n fallback ölçümü veya dini içerik provenance boşlukları tekrar skorlanacak; özellikle kullanıcıya hâlâ İngilizce kalan download/diagnostics/chatbot metinleri için güvenli otomatik ölçüm raporu eklenecek.
+
+## 2026-04-15 TUR-142 — Localize Download Progress Copy Batch
+
+### Yapılan İşlem
+- `tool/translate_arb_keys.dart` tek satır koruma listesine download-progress anahtarları eklendi: `freeStorage`, `downloadPreparing`, `downloadingSurah`, `downloadedSurahProgress`, `redownloadMissingRepair`, `downloadCancelling`.
+- `dart run tool\translate_arb_keys.dart freeStorage downloadPreparing downloadingSurah downloadedSurahProgress redownloadMissingRepair downloadCancelling` çalıştırıldı.
+- `flutter gen-l10n` ile generated localization Dart dosyaları ARB değişiklikleriyle senkronlandı.
+- `arb_ui_localization_test.dart` safe priority locale setinde bu yeni download-progress anahtarlarının İngilizce fallback'e dönmemesini ve tüm locale'lerde tek satır kalmasını koruyacak şekilde genişletildi.
+- Ölçüm sonucu İngilizce fallback sayıları şu şekilde azaldı: `freeStorage 187 -> 81`, `downloadPreparing 194 -> 88`, `downloadingSurah 194 -> 98`, `downloadedSurahProgress 194 -> 97`, `redownloadMissingRepair 194 -> 90`, `downloadCancelling 194 -> 90`.
+
+### Neden Yapıldı
+- L10n taramasında download-progress/repair copy kümesinin neredeyse tüm locale'lerde İngilizce kaldığı görüldü.
+- Bu metinler offline Quran audio indirme akışında doğrudan kullanıcıya görünüyor; tam yerelleştirme hedefiyle uyumsuzdu.
+- Kök sebep, önceki download/diagnostics l10n batch'lerinin ana eylem ve sonuç mesajlarını kapsaması ama progress/repair yardımcı metinlerini kapsam dışında bırakmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Öncelikli ve çeviri aracı tarafından güvenli sonuç üreten locale'lerde offline download progress metinleri İngilizce fallback yerine hedef dilde gösterilir.
+- Placeholder'lı metinlerde `{surah}`, `{downloaded}`, `{total}` metadata korundu; ARB coverage testleri bunu doğruluyor.
+- Nadir veya araç tarafından güvenli çevrilemeyen locale'lerde İngilizce fallback kaldı; AGENTS kuralı gereği belirsiz dilde uydurma çeviri yapılmadı.
+
+### Test Sonucu
+- `flutter test test\arb_ui_localization_test.dart test\arb_coverage_test.dart --reporter compact` PASS (`34/34`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`293/293`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Offline download progress/repair copy için geniş İngilizce fallback riski: `18/25 -> 12/25`
+
+### Sonraki Adım
+- Yeni döngüde kalan l10n fallback sayıları aynı ölçümle tekrar skorlanacak; öncelik chatbot offline ve diagnostics/download sonuç mesajlarında güvenli otomatik çeviriyle azaltılabilecek sonraki batch olacak.

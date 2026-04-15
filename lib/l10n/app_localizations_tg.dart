@@ -729,7 +729,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Захираи дохилии дастгоҳро холӣ кунед.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1175,7 +1175,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Бозгашти офлайнро фаъол созед';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Зеркашӣ омода мешавад...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1196,11 +1196,11 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total сураҳо зеркашӣ карда шуданд';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Таъмир / Зеркашӣ гумшуда';
 
   @override
   String get downloadAction => 'Зеркашӣ кунед';
@@ -1212,7 +1212,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get deleteDownloadedFiles => 'Файлҳои зеркашидашударо нест кунед';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Бекор карда мешавад...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

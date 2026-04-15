@@ -731,7 +731,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Haɓaka ma\'ajin na\'urar ciki.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1176,7 +1176,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Kunna Faɗuwar Wajen Layi';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Ana shirin zazzagewa...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1201,7 +1201,7 @@ class AppLocalizationsHa extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Gyara / Zazzagewa Ba a Bace';
 
   @override
   String get downloadAction => 'Zazzagewa';
@@ -1213,7 +1213,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get deleteDownloadedFiles => 'Share Fayilolin da Aka Sauke';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Ana sokewa...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

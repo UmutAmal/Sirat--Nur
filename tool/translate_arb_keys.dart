@@ -248,7 +248,13 @@ bool _mustStaySingleLine(String key) {
       key == 'quranAudioSourcesUnavailable' ||
       key == 'quranAudioSourcesIncomplete' ||
       key == 'adhanNotificationChannelName' ||
-      key == 'adhanNotificationChannelDescription';
+      key == 'adhanNotificationChannelDescription' ||
+      key == 'freeStorage' ||
+      key == 'downloadPreparing' ||
+      key == 'downloadingSurah' ||
+      key == 'downloadedSurahProgress' ||
+      key == 'redownloadMissingRepair' ||
+      key == 'downloadCancelling';
 }
 
 bool _hasLineBreak(String value) {

@@ -714,7 +714,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => '释放内部设备存储空间。';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1150,11 +1150,11 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => '启用离线回退';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => '正在准备下载...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return '下载古兰经 $surah / $total';
   }
 
   @override
@@ -1170,11 +1170,11 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '下载 $downloaded / $total 古兰经';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => '修复/下载丢失';
 
   @override
   String get downloadAction => '下载';
@@ -1186,7 +1186,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get deleteDownloadedFiles => '删除下载的文件';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => '正在取消...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
@@ -2350,7 +2350,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => '释放内部设备存储空间。';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -2786,11 +2786,11 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get chatbotOfflineDownloadLabel => '启用离线回退';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => '正在准备下载...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return '下载古兰经 $surah / $total';
   }
 
   @override
@@ -2806,11 +2806,11 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '下载 $downloaded / $total 古兰经';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => '修复/下载丢失';
 
   @override
   String get downloadAction => '下载';
@@ -2822,7 +2822,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get deleteDownloadedFiles => '删除下载的文件';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => '正在取消...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
@@ -3986,7 +3986,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => '釋放內部設備儲存空間。';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -4422,11 +4422,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get chatbotOfflineDownloadLabel => '啟用離線回退';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => '正在準備下載...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return '下載古蘭經 $surah / $total';
   }
 
   @override
@@ -4442,11 +4442,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '下載 $downloaded / $total 古蘭經';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => '修復/下載遺失';
 
   @override
   String get downloadAction => '下載';
@@ -4458,7 +4458,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get deleteDownloadedFiles => '刪除下載的文件';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => '正在取消...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

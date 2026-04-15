@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "ხაზგარეშე ჩამოტვირთვის მენეჯერი",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "გაათავისუფლეთ მოწყობილობის შიდა მეხსიერება.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "დამოწმებული ოფლაინ ისლამური ცოდნის ბაზა ჯერ კიდევ მიმდინარეობს. შეგიძლიათ ახლავე ჩართოთ ხაზგარეშე სარეზერვო საშუალება, მაგრამ ის აჩვენებს მხოლოდ შეზღუდულ უსაფრთხო შეტყობინებებს, სანამ წყაროს მონაცემთა ნაკრები მზად იქნება.\n\nგსურთ ჩართოთ ოფლაინ სარეზერვო?",
   "chatbotOfflineSwitched": "ხაზგარეშე სარეზერვო საშუალება ჩართულია. დამოწმებული ადგილობრივი ისლამური პასუხები ჯერ მზად არ არის.",
   "chatbotOfflineDownloadLabel": "ჩართეთ ოფლაინ სარეზერვო საშუალება",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "მიმდინარეობს ჩამოტვირთვის მომზადება...",
+  "downloadingSurah": "მიმდინარეობს სურა {surah} / {total} ჩამოტვირთვა",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "ჩამოტვირთულია {downloaded} / {total} სურა",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "შეკეთება / ჩამოტვირთვა აკლია",
   "downloadAction": "ჩამოტვირთვა",
   "resumeDownload": "რეზიუმეს ჩამოტვირთვა",
   "deleteDownloadedFiles": "ჩამოტვირთული ფაილების წაშლა",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "გაუქმება...",
   "downloadCanceledForReciter": "ჩამოტვირთვა გაუქმდა {reciter}-ისთვის.",
   "@downloadCanceledForReciter": {
     "placeholders": {

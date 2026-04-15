@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Upravitelj prenosov brez povezave",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Sprostite notranji pomnilnik naprave.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Preverjena baza islamskega znanja brez povezave je še vedno v pripravi. Nadomestni način brez povezave lahko omogočite zdaj, vendar bo prikazoval samo omejena varna sporočila, dokler izvorni nabor podatkov ne bo pripravljen.\n\nAli želite omogočiti nadomestni način brez povezave?",
   "chatbotOfflineSwitched": "Nadomestni način brez povezave je omogočen. Preverjeni lokalni islamski odgovori še niso pripravljeni.",
   "chatbotOfflineDownloadLabel": "Omogoči nadomestni način brez povezave",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Priprava prenosa ...",
+  "downloadingSurah": "Prenašanje sure {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah prenesenih",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Manjka popravilo/prenos",
   "downloadAction": "Prenos",
   "resumeDownload": "Nadaljujte s prenosom",
   "deleteDownloadedFiles": "Izbriši prenesene datoteke",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Preklic ...",
   "downloadCanceledForReciter": "Prenos za {reciter} preklican.",
   "@downloadCanceledForReciter": {
     "placeholders": {

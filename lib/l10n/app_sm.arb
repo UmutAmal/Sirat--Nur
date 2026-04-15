@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Pule o le la'uina i luga ole laiga",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Fa'asa'oloto le teuina o masini i totonu.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "O lo'o fa'atumauina pea le fa'amaumauga tu'ufa'atasia fa'a-Islam. E mafai ona e fa'agaoioia le fa'afo'i tui i tua i le taimi nei, ae na'o le fa'aalia o fe'au saogalemu fa'atapula'a se'ia o'o ina saunia le fa'amaumauga.\n\nE te mana'o e fa'aagaoioi le fa'afo'i fa'afoma'i?",
   "chatbotOfflineSwitched": "Ua mafai ona toe fa'afo'i le initaneti. E le'i saunia tali fa'a-Isalama fa'apitonu'u.",
   "chatbotOfflineDownloadLabel": "Fa'aola le Fa'asolo i tua",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Saunia le la'uina...",
+  "downloadingSurah": "La'uina le surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah na sii mai",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Toe Fa'alelei / La'uina ua misi",
   "downloadAction": "La'u mai",
   "resumeDownload": "Toe sii maia",
   "deleteDownloadedFiles": "Aveese faila ua siiina mai",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Fa'aleaogaina...",
   "downloadCanceledForReciter": "Ua faaleaogaina le la'uina mo {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

@@ -1186,7 +1186,7 @@ class AppLocalizationsLus extends AppLocalizations {
       'Offline Fallback tih kha enable rawh';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Download buatsaih mek...';
 
   @override
   String downloadingSurah(String surah, String total) {

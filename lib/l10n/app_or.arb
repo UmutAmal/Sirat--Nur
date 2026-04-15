@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "ଅଫଲାଇନ୍ ଡାଉନଲୋଡ୍ ମ୍ୟାନେଜର୍ |",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "ଆଭ୍ୟନ୍ତରୀଣ ଉପକରଣ ସଂରକ୍ଷଣକୁ ମୁକ୍ତ କରନ୍ତୁ |",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "ଯାଞ୍ଚ ହୋଇଥିବା ଅଫଲାଇନ୍ ଇସଲାମିକ୍ ଜ୍ଞାନ ଆଧାରକୁ ବର୍ତ୍ତମାନ ମଧ୍ୟ କ୍ୟୁରେଟ୍ କରାଯାଉଛି | ଆପଣ ବର୍ତ୍ତମାନ ଅଫଲାଇନ୍ ଫଲବ୍ୟାକ୍ ସକ୍ଷମ କରିପାରିବେ, କିନ୍ତୁ ସୋର୍ସଡ୍ ଡାଟାସେଟ୍ ପ୍ରସ୍ତୁତ ନହେବା ପର୍ଯ୍ୟନ୍ତ ଏହା କେବଳ ସୀମିତ ସୁରକ୍ଷିତ ବାର୍ତ୍ତା ଦେଖାଇବ |\n\nଆପଣ ଅଫଲାଇନ୍ ଫଲବ୍ୟାକ୍ ସକ୍ଷମ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
   "chatbotOfflineSwitched": "ଅଫଲାଇନ୍ ଫଲବ୍ୟାକ୍ ସକ୍ଷମ ହୋଇଛି | ଯାଞ୍ଚ ହୋଇଥିବା ସ୍ଥାନୀୟ ଇସଲାମିକ ଉତ୍ତରଗୁଡିକ ଏପର୍ଯ୍ୟନ୍ତ ପ୍ରସ୍ତୁତ ନୁହେଁ |",
   "chatbotOfflineDownloadLabel": "ଅଫଲାଇନ୍ ଫଲବ୍ୟାକ୍ ସକ୍ଷମ କରନ୍ତୁ |",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "ଡାଉନଲୋଡ୍ ପ୍ରସ୍ତୁତ କରୁଛି ...",
+  "downloadingSurah": "ସୁରା ଡାଉନଲୋଡ୍ {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ସୁରା ଡାଉନଲୋଡ୍ ହୋଇଛି |",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "ମରାମତି / ଡାଉନଲୋଡ୍ ନିଖୋଜ |",
   "downloadAction": "ଡାଉନଲୋଡ୍ କରନ୍ତୁ |",
   "resumeDownload": "ଡାଉନଲୋଡ୍ ଆରମ୍ଭ କରନ୍ତୁ |",
   "deleteDownloadedFiles": "ଡାଉନଲୋଡ୍ ହୋଇଥିବା ଫାଇଲଗୁଡିକ ବିଲୋପ କରନ୍ତୁ |",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "ବାତିଲ୍ ...",
   "downloadCanceledForReciter": "{reciter} ପାଇଁ ଡାଉନଲୋଡ୍ ବାତିଲ୍ |",
   "@downloadCanceledForReciter": {
     "placeholders": {

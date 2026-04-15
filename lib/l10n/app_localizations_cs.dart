@@ -730,7 +730,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Uvolněte vnitřní úložiště zařízení.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1177,11 +1177,11 @@ class AppLocalizationsCs extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Povolit záložní režim offline';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Příprava stahování...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Stahování súry $surah / $total';
   }
 
   @override
@@ -1198,11 +1198,11 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total súry staženy';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Chybí oprava / stažení';
 
   @override
   String get downloadAction => 'Stáhnout';
@@ -1214,7 +1214,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get deleteDownloadedFiles => 'Smazat stažené soubory';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Rušení...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

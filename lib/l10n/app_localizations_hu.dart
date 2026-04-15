@@ -731,7 +731,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Szabadítson fel belső eszköztárhelyet.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -1177,11 +1177,11 @@ class AppLocalizationsHu extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Offline tartalék engedélyezése';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Letöltés előkészítése...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Szúra letöltése $surah / $total';
   }
 
   @override
@@ -1198,11 +1198,11 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total szúrák letöltve';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Javítás/letöltés hiányzik';
 
   @override
   String get downloadAction => 'Letöltés';
@@ -1214,7 +1214,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get deleteDownloadedFiles => 'Letöltött fájlok törlése';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Lemondás...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

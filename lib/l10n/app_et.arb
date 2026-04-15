@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Võrguühenduseta allalaadimishaldur",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Vabastage seadme sisemälu.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Kinnitatud võrguühenduseta islami teadmistebaasi kureerimine on endiselt pooleli. Saate nüüd lubada võrguühenduseta varuvariandi, kuid see kuvab ainult piiratud ohutuid sõnumeid, kuni lähteandmekogum on valmis.\n\nKas soovite lubada võrguühenduseta varuvariandi?",
   "chatbotOfflineSwitched": "Võrguühenduseta varuvaru on lubatud. Kontrollitud kohalikud islami vastused pole veel valmis.",
   "chatbotOfflineDownloadLabel": "Luba võrguühenduseta tagavara",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Allalaadimise ettevalmistamine...",
+  "downloadingSurah": "Suura allalaadimine {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} suura on alla laaditud",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Remont/allalaadimine puudub",
   "downloadAction": "Laadi alla",
   "resumeDownload": "Jätkake allalaadimist",
   "deleteDownloadedFiles": "Kustuta allalaaditud failid",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Tühistamine...",
   "downloadCanceledForReciter": "Allalaadimine tühistati: {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

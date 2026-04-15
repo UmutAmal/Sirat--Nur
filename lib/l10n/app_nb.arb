@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Frakoblet nedlastingsbehandling",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Frigjør intern enhetslagring.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Den bekreftede frakoblede islamske kunnskapsbasen blir fortsatt kurert. Du kan aktivere offline fallback nå, men det vil bare vise begrensede sikre meldinger inntil det hentede datasettet er klart.\n\nVil du aktivere frakoblet fallback?",
   "chatbotOfflineSwitched": "Offline reserveback aktivert. Verifiserte lokale islamske svar er ikke klare ennå.",
   "chatbotOfflineDownloadLabel": "Aktiver Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Forbereder nedlasting...",
+  "downloadingSurah": "Laster ned surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} suraher lastet ned",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Reparasjon / nedlasting mangler",
   "downloadAction": "Last ned",
   "resumeDownload": "Fortsett nedlasting",
   "deleteDownloadedFiles": "Slett nedlastede filer",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Avbryter …",
   "downloadCanceledForReciter": "Nedlastingen avbrutt for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

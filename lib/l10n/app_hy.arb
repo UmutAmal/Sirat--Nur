@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Անցանց ներբեռնման կառավարիչ",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Ազատեք սարքի ներքին հիշողությունը:",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Ստուգված օֆլայն իսլամական գիտելիքի բազան դեռ մշակվում է: Այժմ կարող եք միացնել անցանց հետադարձ կապը, բայց այն ցույց կտա միայն սահմանափակ անվտանգ հաղորդագրություններ, քանի դեռ աղբյուրի տվյալների բազան պատրաստ չէ:\n\nՑանկանու՞մ եք միացնել անցանց հետընտրական տարբերակը:",
   "chatbotOfflineSwitched": "Անցանց հետընտրական տարբերակը միացված է: Ստուգված տեղական իսլամական պատասխանները դեռ պատրաստ չեն:",
   "chatbotOfflineDownloadLabel": "Միացնել անցանց հետադարձ կապը",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Ներբեռնման նախապատրաստում...",
+  "downloadingSurah": "Սուրայի ներբեռնում {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "Ներբեռնված են {downloaded} / {total} սուրաներ",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Վերանորոգում / Ներբեռնում բացակայում է",
   "downloadAction": "Բեռնել",
   "resumeDownload": "Ռեզյումեի ներբեռնում",
   "deleteDownloadedFiles": "Ջնջել ներբեռնված ֆայլերը",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Չեղարկում...",
   "downloadCanceledForReciter": "Ներբեռնումը չեղարկվել է {reciter}-ի համար:",
   "@downloadCanceledForReciter": {
     "placeholders": {

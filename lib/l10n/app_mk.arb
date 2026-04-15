@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "Офлајн менаџер за преземање",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "Ослободете ја внатрешната меморија на уредот.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "Потврдената офлајн база на исламско знаење сè уште се чува. Може да овозможите офлајн резервна копија сега, но ќе прикажува само ограничени безбедни пораки додека не се подготви изворната база на податоци.\n\nДали сакате да овозможите офлајн резервна копија?",
   "chatbotOfflineSwitched": "Резервната офлајн е овозможена. Потврдените локални исламски одговори сè уште не се подготвени.",
   "chatbotOfflineDownloadLabel": "Овозможете офлајн резервни",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Се подготвува преземање...",
+  "downloadingSurah": "Се презема сурата {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} сураи преземени",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Поправка / Недостасува преземање",
   "downloadAction": "Преземи",
   "resumeDownload": "Продолжи со преземање",
   "deleteDownloadedFiles": "Избришете ги преземените датотеки",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Се откажува...",
   "downloadCanceledForReciter": "Преземањето е откажано за {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

@@ -191,7 +191,7 @@
   "premiumRefreshError": "Could not refresh premium status: {error}",
   "offlineDownloadManager": "အော့ဖ်လိုင်းဒေါင်းလုဒ်မန်နေဂျာ",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
-  "freeStorage": "Free up internal device storage.",
+  "freeStorage": "စက်တွင်း သိုလှောင်ခန်းကို အခမဲ့လုပ်ပါ။",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",
   "verifyQuranContent": "Verify 114 surahs and 6236 ayahs.",
@@ -357,8 +357,8 @@
   "chatbotOfflinePrompt": "စိစစ်ပြီး အော့ဖ်လိုင်းအစ္စလာမ့်အသိပညာအခြေခံကို စုစည်းထားဆဲဖြစ်သည်။ အော့ဖ်လိုင်းအလှည့်ကျကို ယခုဖွင့်နိုင်သော်လည်း မူရင်းဒေတာအတွဲအဆင်သင့်မဖြစ်မီအထိ ကန့်သတ်ဘေးကင်းသောစာတိုများကိုသာ ပြသပါမည်။\n\nအော့ဖ်လိုင်း လှည့်စားမှုကို ဖွင့်လိုပါသလား။",
   "chatbotOfflineSwitched": "အော့ဖ်လိုင်း လှည့်ကွက်ကို ဖွင့်ထားသည်။ အတည်ပြုထားသော ပြည်တွင်းအစ္စလာမ့်အဖြေများ အဆင်သင့်မဖြစ်သေးပါ။",
   "chatbotOfflineDownloadLabel": "အော့ဖ်လိုင်း Fallback ကို ဖွင့်ပါ။",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "ဒေါင်းလုဒ်ကို ပြင်ဆင်နေသည်...",
+  "downloadingSurah": "စူရဟ် {surah} / {total} ဒေါင်းလုဒ်လုပ်နေသည်",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -379,7 +379,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} စူရာဟ်များ ဒေါင်းလုဒ်လုပ်ထားသည်",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -390,11 +390,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "ပြုပြင်/ဒေါင်းလုဒ် ပျောက်ဆုံးနေပါသည်။",
   "downloadAction": "ဒေါင်းလုဒ်လုပ်ပါ။",
   "resumeDownload": "ဒေါင်းလုဒ်ပြန်လုပ်ပါ။",
   "deleteDownloadedFiles": "ဒေါင်းလုဒ်လုပ်ထားသောဖိုင်များကိုဖျက်ပါ။",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "ပယ်ဖျက်နေသည်...",
   "downloadCanceledForReciter": "{reciter} အတွက် ဒေါင်းလုဒ်ကို ပယ်ဖျက်လိုက်ပါပြီ။",
   "@downloadCanceledForReciter": {
     "placeholders": {
