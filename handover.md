@@ -6872,3 +6872,41 @@
 
 ### Sonraki Adım
 - Sonraki dongude premium receipt/server validation notlari ve kalan stale/fake davranis taramasi ayrilacak; ardindan production false-success yuzeyleri icin offline download, purchase restore timeout ve map fallback akislari tekrar taranacak.
+
+## 2026-04-16 TUR-178 — Remove Supabase Anon Key Fallback
+
+### Yapılan İşlem
+- `SupabaseConfig.anonKey` icindeki commit edilmis `sb_publishable_...` default fallback kaldirildi.
+- `SupabaseConfig.hasRuntimeCredentials()` ve `SupabaseConfig.isConfigured` eklendi.
+- `SupabaseConfig.initialize()` artik URL + anon key birlikte yoksa kontrollu `supabase_credentials_missing` hata koduyla cikiyor; `main.dart` bunu zaten non-blocking yakaliyor.
+- README, Supabase'in build-time config ile aktif oldugunu ve anon key'in default olarak bos kalmasi gerektigini anlatacak sekilde duzeltildi.
+- `supabase_config_test.dart` eklendi; kaynakta anon key fallback'i geri gelirse ve credential helper gevserse test fail edecek.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart:21` anon key'i `String.fromEnvironment` defaultValue olarak koda gomuyordu.
+- AGENTS.md Section 13 API key'lerin `.env` veya build-time config ile yonetilmesini, koda gomulmemesini zorunlu kiliyor.
+- Anon/publishable key secret-grade olmasa bile production config'i repo icine sabitlemek yanlis proje baglantisi, veri egemenligi karisikligi ve anahtar rotasyonu riski dogurur.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart`
+- `A:\Way of Allah\sirat_i_nur\README.md`
+- `A:\Way of Allah\sirat_i_nur\test\supabase_config_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Repo artik Supabase anon key fallback'i tasimiyor; production/cloud calismasi `--dart-define=SUPABASE_ANON_KEY=...` ile bilincli olarak acilacak.
+- Local/test calismada Supabase init eksik credential nedeniyle kontrollu ve non-blocking sekilde devre disi kaliyor; mevcut bundled/cache fallback testleri aynen geciyor.
+- Public Storage URL uretimi icin proje URL default'u korunuyor; API key disari tasindi.
+- `rg -n "sb_publishable|SUPABASE_ANON_KEY.*defaultValue|defaultValue: 'sb_" . --glob '!build/**' --glob '!**/.dart_tool/**'` sifir eslesme dondurdu.
+
+### Test Sonucu
+- `flutter test test\supabase_config_test.dart test\readme_operational_docs_test.dart` PASS (`5/5`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`356/356`)
+
+### Risk Değişimi
+- Supabase anon key'in repoda default fallback olarak ship edilmesi riski: `16/25 -> 1/25`
+- Eksik Supabase credential durumunda belirsiz init davranisi riski: `8/25 -> 2/25`
+
+### Sonraki Adım
+- Sonraki dongude kalan secret/config taramasi `API_KEY`, `SECRET`, `TOKEN`, `YOUR_`, `example.com`, `localhost` ve platform manifest dosyalari uzerinden surdurulecek; ardindan en yuksek production riskli bulguya minimal patch uygulanacak.

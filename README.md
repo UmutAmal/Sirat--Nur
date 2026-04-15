@@ -21,7 +21,7 @@ The guiding philosophy of this rewrite was: **"100% Functionality, Zero Placehol
 - **Networking/Audio**: `just_audio`, `audio_session`, `webview_flutter`
 - **Location/Math**: `adhan` (Prayer calculation), `flutter_compass`, `geolocator`, `flutter_map`
 - **Persistence**: `shared_preferences`
-- **BaaS**: Supabase (Initialized and ready, though the app operates completely offline-first)
+- **BaaS**: Supabase (build-time configured; bundled/cache fallbacks keep the app offline-first when credentials are absent)
 
 ## Folder Structure
 ```
@@ -48,7 +48,7 @@ No hidden keys are required for normal local development.
 1. `flutter pub get`
 2. `flutter run` -> Instantly functional with bundled/offline-first data.
 
-Production builds should inject Supabase values explicitly when needed:
+Production builds must inject Supabase values explicitly when cloud content, Storage audio, or diagnostics should be live. The anon key is intentionally empty by default and must not be committed as a fallback value:
 ```bash
 flutter build apk \
   --dart-define=SUPABASE_URL=https://... \
