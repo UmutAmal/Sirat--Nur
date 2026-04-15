@@ -4514,3 +4514,37 @@
 
 ### Sonraki Adım
 - Yeni döngüde `main.dart`, `prayer_notification_coordinator.dart`, `premium_provider.dart`, `quran_page.dart`, `juz_reading_page.dart` ve `location_selection_page.dart` içindeki kalan raw debug log desenleri sınıflandırılacak; kullanıcıya veya hassas veriye yakın olanlar önce sanitize edilecek.
+
+## 2026-04-15 TUR-115 — Sanitize App Bootstrap Raw Error Logs
+
+### Yapılan İşlem
+- `lib/main.dart` içindeki Supabase, timezone, global uncaught error, WidgetService, prayer notification bootstrap ve widget update logları raw exception nesnesi basmayacak şekilde güncellendi.
+- Stack trace gereken global/bootstrap hata yollarında `debugPrintStack` korunurken exception mesajı log metninden çıkarıldı.
+- `test/features/common/main_bootstrap_logging_test.dart` eklendi; `main.dart` içinde `$e` ve `$error` ile ham bootstrap hata ayrıntısı loglayan eski desenlerin geri dönmesini engelliyor.
+
+### Neden Yapıldı
+- `lib/main.dart:105`, `lib/main.dart:111`, `lib/main.dart:124`, `lib/main.dart:161`, `lib/main.dart:177` ve `lib/main.dart:189` önce raw exception değerlerini log mesajlarına ekliyordu.
+- App bootstrap ve global uncaught error handler bütün uygulama yüzeyine yakın olduğu için burada ham hata ayrıntısı taşımak geniş kapsamlı sızıntı ve bakım riski oluşturur.
+- Kullanıcı davranışı değişmeden güvenli, genel log mesajları yeterlidir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\main.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\common\main_bootstrap_logging_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- App açılışı, global hata yakalama ve widget/prayer bootstrap logları artık ham exception içeriği içermez.
+- Tanılama için stack trace korundu; exception mesajının doğrudan loglanması kaldırıldı.
+- Regresyon testi eski `$e/$error` log desenlerinin geri dönmesini yakalar.
+
+### Test Sonucu
+- `flutter test test\features\common\main_bootstrap_logging_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`254/254`)
+- `git diff --check` PASS
+
+### Risk Değişimi
+- App bootstrap/global error handler raw exception loglama riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde kalan `prayer_notification_coordinator.dart`, `premium_provider.dart`, `quran_page.dart`, `juz_reading_page.dart` ve `location_selection_page.dart` raw debug logları aynı minimal yaklaşım ile sınıflandırılıp kapatılacak.

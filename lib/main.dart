@@ -101,14 +101,14 @@ void main() async {
       // Initialize Supabase
       try {
         await SupabaseConfig.initialize();
-      } catch (e) {
-        debugPrint('Supabase init failed (non-blocking): $e');
+      } catch (_) {
+        debugPrint('Supabase init failed (non-blocking)');
       }
 
       try {
         tz.initializeTimeZones();
-      } catch (e) {
-        debugPrint('Timezone init failed (non-blocking): $e');
+      } catch (_) {
+        debugPrint('Timezone init failed (non-blocking)');
       }
 
       final prefs = await SharedPreferences.getInstance();
@@ -120,8 +120,8 @@ void main() async {
         ),
       );
     },
-    (error, stack) {
-      debugPrint('Uncaught error: $error');
+    (_, stack) {
+      debugPrint('Uncaught error');
       debugPrintStack(stackTrace: stack);
     },
   );
@@ -157,8 +157,8 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
       await _prayerNotificationCoordinator.init();
       try {
         await WidgetService().init();
-      } catch (e) {
-        debugPrint('WidgetService init failed (non-blocking): $e');
+      } catch (_) {
+        debugPrint('WidgetService init failed (non-blocking)');
       }
       if (!mounted) return;
 
@@ -173,8 +173,8 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
         },
         fireImmediately: true,
       );
-    } catch (error, stackTrace) {
-      debugPrint('Prayer notification bootstrap failed: $error');
+    } catch (_, stackTrace) {
+      debugPrint('Prayer notification bootstrap failed');
       debugPrintStack(stackTrace: stackTrace);
     }
   }
@@ -185,8 +185,8 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
       if (entity == null) return;
       await WidgetService().updatePrayerWidget(entity);
       await WidgetService().updateAllPrayersWidget(entity);
-    } catch (e) {
-      debugPrint('Widget update failed (non-blocking): $e');
+    } catch (_) {
+      debugPrint('Widget update failed (non-blocking)');
     }
   }
 
