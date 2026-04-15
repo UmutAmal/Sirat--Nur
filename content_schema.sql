@@ -39,10 +39,14 @@ create table if not exists public.asma_ul_husna (
   meaning_tr text,
   meaning_en text,
   audio_url text,
+  storage_path text,
   source text not null,
   verified_at timestamptz not null,
   created_at timestamptz not null default timezone('utc', now())
 );
+
+alter table public.asma_ul_husna
+add column if not exists storage_path text;
 
 alter table public.asma_ul_husna enable row level security;
 
@@ -158,6 +162,11 @@ values ('audio-adhan', 'audio-adhan', true)
 on conflict (id) do update
 set public = excluded.public;
 
+insert into storage.buckets (id, name, public)
+values ('audio-asma', 'audio-asma', true)
+on conflict (id) do update
+set public = excluded.public;
+
 drop policy if exists "Public read quran audio bucket" on storage.objects;
 create policy "Public read quran audio bucket"
 on storage.objects
@@ -181,3 +190,9 @@ create policy "Public read adhan audio bucket"
 on storage.objects
 for select
 using (bucket_id = 'audio-adhan');
+
+drop policy if exists "Public read asma audio bucket" on storage.objects;
+create policy "Public read asma audio bucket"
+on storage.objects
+for select
+using (bucket_id = 'audio-asma');

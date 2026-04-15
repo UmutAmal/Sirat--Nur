@@ -1,3 +1,5 @@
+import 'package:sirat_i_nur/core/network/supabase_config.dart';
+
 class AsmaUlHusnaData {
   static const List<Map<String, dynamic>> names = [
     {
@@ -945,6 +947,39 @@ Map<String, dynamic> _readAsmaTranslations(Map<String, dynamic> row) {
   return normalized;
 }
 
+String _resolveCloudAsmaAudioUrl(Map<String, dynamic> row) {
+  final storagePath = _readAsmaString(row, ['storage_path', 'storagePath']);
+  if (storagePath.isNotEmpty) {
+    return _buildSupabaseStoragePublicUrl(
+      storagePath,
+      bucketName: SupabaseConfig.asmaAudioBucket,
+    );
+  }
+
+  return _readAsmaString(row, ['audio_url', 'audioUrl', 'url']);
+}
+
+String _buildSupabaseStoragePublicUrl(
+  String storagePath, {
+  required String bucketName,
+}) {
+  final normalized = storagePath
+      .trim()
+      .replaceAll('\\', '/')
+      .replaceFirst(RegExp(r'^/+'), '');
+  final bucketPrefix = '$bucketName/';
+  final objectPath = normalized.startsWith(bucketPrefix)
+      ? normalized.substring(bucketPrefix.length)
+      : normalized;
+  final encodedSegments = objectPath
+      .split('/')
+      .where((segment) => segment.isNotEmpty)
+      .map(Uri.encodeComponent)
+      .join('/');
+
+  return '${SupabaseConfig.url}/storage/v1/object/public/$bucketName/$encodedSegments';
+}
+
 Map<String, dynamic> normalizeAsmaUlHusnaRow(Map<String, dynamic> row) {
   final id = row['id'];
   final transliteration = _readAsmaString(row, [
@@ -954,7 +989,7 @@ Map<String, dynamic> normalizeAsmaUlHusnaRow(Map<String, dynamic> row) {
   ]);
   final arabic = _readAsmaString(row, ['name_ar', 'arabic', 'title_ar']);
   final translations = _readAsmaTranslations(row);
-  final audioUrl = _readAsmaString(row, ['audio_url', 'audioUrl', 'url']);
+  final audioUrl = _resolveCloudAsmaAudioUrl(row);
   final source = _readAsmaString(row, ['source', 'reference']);
   final verifiedAt = _readAsmaString(row, ['verified_at', 'verifiedAt']);
 

@@ -43,6 +43,27 @@ void main() {
       expect(resolved.first['verifiedAt'], '2026-04-15T00:00:00Z');
     });
 
+    test('cloud rows prefer Supabase Storage-backed audio when available', () {
+      final resolved = resolveCloudAsmaUlHusnaRows([
+        {
+          'id': '1',
+          'name_ar': 'الرَّحْمَنُ',
+          'transliteration': 'Ar Rahmaan',
+          'meaning_tr': 'Merhameti her seyi kusatan',
+          'meaning_en': 'The Beneficent',
+          'storage_path': 'audio-asma/001.mp3',
+          'audio_url': 'https://example.com/001.mp3',
+          'source': 'TDV Islam Ansiklopedisi',
+          'verified_at': '2026-04-15T00:00:00Z',
+        },
+      ]);
+
+      expect(
+        resolved.first['audioUrl'],
+        'https://amevotnudldbbwogtrtw.supabase.co/storage/v1/object/public/audio-asma/001.mp3',
+      );
+    });
+
     test('cloud rows preserve locale-specific translation maps', () {
       final resolved = resolveCloudAsmaUlHusnaRows([
         {

@@ -43,6 +43,11 @@ class SupabaseConfig {
     defaultValue: 'audio-adhan',
   );
 
+  static const String asmaAudioBucket = String.fromEnvironment(
+    'SUPABASE_ASMA_AUDIO_BUCKET',
+    defaultValue: 'audio-asma',
+  );
+
   static const String placesTileUrlTemplate = String.fromEnvironment(
     'PLACES_TILE_URL_TEMPLATE',
     defaultValue: '',

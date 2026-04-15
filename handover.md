@@ -5642,3 +5642,43 @@
 
 ### Sonraki Adım
 - Yeni döngüde Asma-ul-Husna audio mapping hattı aynı storage_path/owned-bucket kuralına göre taranacak; dış audio URL'leri varsa `audio-asma` veya mevcut audio bucket stratejisine bağlanma durumu skorlanacak.
+
+## 2026-04-15 TUR-146 — Prefer Supabase Storage for Asma Audio
+
+### Yapılan İşlem
+- `SupabaseConfig` içine `SUPABASE_ASMA_AUDIO_BUCKET` dart-define desteği eklendi; varsayılan bucket `audio-asma`.
+- `content_schema.sql` içinde `asma_ul_husna.storage_path` kolonu migration-safe şekilde eklendi.
+- `content_schema.sql` `audio-asma` storage bucket bootstrap satırı ve public read RLS policy'siyle genişletildi.
+- `normalizeAsmaUlHusnaRow` cloud Asma satırlarında `storage_path` varsa `audio-asma` Supabase Storage public URL'ini üretip dış `audio_url` alanına tercih edecek şekilde değiştirildi.
+- `asma_ul_husna_data_test.dart` storage-backed Asma satırının external URL yerine Supabase Storage URL'ine çözüldüğünü doğruluyor.
+- `content_schema_test.dart` `asma_ul_husna.storage_path`, `audio-asma` bucket ve policy sözleşmesini sabitliyor.
+
+### Neden Yapıldı
+- TUR-144 ve TUR-145 ile Quran, sukun ve dua seslerinde owned storage önceliği güçlendirildi; Asma-ul-Husna audio mapping hattı ise hâlâ doğrudan dış `audio_url`/`url` alanına bağlıydı.
+- Bu, external link kapanırsa Asma-ul-Husna seslerinin Supabase Storage'daki sahipli kopya varken bile dış linke bağımlı kalması riskini doğuruyordu.
+- Kök sebep, Asma cloud row normalizer'ın `storage_path` alanını playable URL çözümüne hiç sokmamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\content_schema.sql`
+- `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Verified cloud Asma satırları artık `storage_path` ile bizim `audio-asma` bucket'ımızdan çözülebilir.
+- External `audio_url`/`url` alanı sadece storage path yoksa fallback olarak kalır.
+- Supabase bootstrap, Asma ses dosyaları için sahipli bucket/RLS zeminini hazırlar.
+
+### Test Sonucu
+- `flutter test test\asma_ul_husna_data_test.dart test\features\library\asma_ul_husna_page_test.dart --reporter compact` PASS (`19/19`)
+- `flutter test test\content_schema_test.dart --reporter compact` PASS (`2/2`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`297/297`)
+
+### Risk Değişimi
+- Asma-ul-Husna audio'nun external URL kapanınca Supabase Storage kopyasını tercih etmemesi riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde audio storage URL üretiminin birden fazla dosyada kopyalanması taranacak; risk anlamlıysa minimal shared helper ile drift/encoding hatası azaltılacak.
