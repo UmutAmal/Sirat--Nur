@@ -432,10 +432,8 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
           snapshot.sukunAssetsReady == expectedSukunSoundTypes.length,
         ),
       );
-    } catch (error) {
-      debugPrint(
-        'Diagnostics asset manifest read failed: ${Error.safeToString(error)}',
-      );
+    } catch (_) {
+      debugPrint('Diagnostics asset manifest read failed');
       rows.add(
         _DiagnosticRow(
           l10n.diagnosticsAudioAssets,

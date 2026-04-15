@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -191,6 +192,16 @@ void main() {
       isNot(contains('PostgrestException')),
     );
     expect(buildDiagnosticsErrorText(tr), isNot(contains('schema cache')));
+  });
+
+  test('asset manifest diagnostics log hides raw exceptions', () {
+    final source = File(
+      'lib/features/settings/diagnostics_page.dart',
+    ).readAsStringSync();
+
+    expect(source, isNot(contains('Diagnostics asset manifest read failed:')));
+    expect(source, isNot(contains('Error.safeToString(error)')));
+    expect(source, contains('Diagnostics asset manifest read failed'));
   });
 
   test(

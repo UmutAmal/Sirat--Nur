@@ -4686,3 +4686,37 @@
 
 ### Sonraki Adım
 - Yeni döngüde kalan `debugPrint` noktaları tekrar taranacak; raw hata kalmadıysa hardcoded/localization veya false-success risklerine geri dönülecek.
+
+## 2026-04-15 TUR-120 — Sanitize Diagnostics Manifest Error Log
+
+### Yapılan İşlem
+- `lib/features/settings/diagnostics_page.dart` asset manifest okuma catch bloğunda `Error.safeToString(error)` ile raw exception loglanması kaldırıldı.
+- Kullanıcıya gösterilen `diagnosticsManifestReadFailed(l10n.appUnknownError)` davranışı aynen korundu.
+- `test/features/settings/diagnostics_page_test.dart` eski raw manifest log deseninin geri dönmesini yakalayan kaynak guard testi kazandı.
+
+### Neden Yapıldı
+- `lib/features/settings/diagnostics_page.dart:437` önce manifest okuma hatasında raw exception metnini logluyordu.
+- Diagnostics ekranı üretim destek yüzeyi olduğu için kullanıcıya güvenli metin gösterse bile logda ham exception ayrıntısı taşımamalı.
+- Manifest okuma başarısızlığında genel log mesajı ve UI'da localized bilinmeyen hata yeterlidir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Diagnostics asset manifest hataları artık raw exception içeriğini loglamaz.
+- UI'daki localized diagnostics hata metni korunur.
+- Regresyon testi eski `Error.safeToString(error)` log deseninin geri dönmesini engeller.
+
+### Test Sonucu
+- `flutter test test\features\settings\diagnostics_page_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`256/256`)
+- `git diff --check` PASS (sadece CRLF uyarıları)
+
+### Risk Değişimi
+- Diagnostics manifest raw exception loglama riski: `8/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde raw log taraması temizse hardcoded chatbot system prompt, offline download logging ve l10n coverage kalanları risk sırasına göre incelenecek.
