@@ -76,8 +76,8 @@ class PrayerNotificationCoordinator {
           );
         }
         _lastFingerprint = fingerprint;
-      } catch (error, stackTrace) {
-        debugPrint('Prayer notification sync failed: $error');
+      } catch (_, stackTrace) {
+        debugPrint('Prayer notification sync failed');
         debugPrintStack(stackTrace: stackTrace);
       }
     }

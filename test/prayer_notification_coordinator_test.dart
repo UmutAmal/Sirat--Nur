@@ -1,9 +1,11 @@
+import 'dart:io';
+import 'dart:async';
+import 'dart:collection';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/services/adhan_scheduler_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_notification_coordinator.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
-import 'dart:async';
-import 'dart:collection';
 
 class FakeAdhanSchedulerService extends AdhanSchedulerService {
   int initCalls = 0;
@@ -302,5 +304,18 @@ void main() {
         ]);
       },
     );
+
+    test('sync failure log does not include raw scheduler exceptions', () {
+      final source = File(
+        'lib/core/services/prayer_notification_coordinator.dart',
+      ).readAsStringSync();
+
+      expect(
+        source,
+        isNot(contains(r'Prayer notification sync failed: $error')),
+      );
+      expect(source, contains('Prayer notification sync failed'));
+      expect(source, contains('debugPrintStack'));
+    });
   });
 }

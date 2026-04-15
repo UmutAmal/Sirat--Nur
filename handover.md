@@ -4616,3 +4616,37 @@
 
 ### Sonraki Adım
 - Yeni döngüde namaz bildirim senkronu ve Kur'an indeks/jüz yükleme loglarındaki kalan raw hata desenleri kapatılacak.
+
+## 2026-04-15 TUR-118 — Sanitize Prayer Notification Sync Logs
+
+### Yapılan İşlem
+- `lib/core/services/prayer_notification_coordinator.dart` içindeki scheduler sync catch bloğu raw `error` metni loglamayacak şekilde güncellendi.
+- Stack trace tanılama için korunurken exception mesajı log satırından çıkarıldı.
+- `test/prayer_notification_coordinator_test.dart` mevcut queue/schedule testlerine ek olarak eski `Prayer notification sync failed: $error` deseninin geri dönmesini yakalayan kaynak guard testi kazandı.
+
+### Neden Yapıldı
+- `lib/core/services/prayer_notification_coordinator.dart:80` önce namaz bildirimi senkron başarısızlığında raw scheduler exception metnini logluyordu.
+- Bu akış konum, mezhep, hesaplama yöntemi, timezone ve ezan planlama zincirine bağlı olduğu için ham altyapı hata ayrıntısı gereksiz risk oluşturur.
+- Dini bildirim davranışı değişmeden güvenli log seviyesi yeterlidir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_notification_coordinator_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Namaz bildirimi senkron başarısızlıklarında raw exception mesajı loglanmaz.
+- Stack trace korunur; schedule/clear/queue davranışı aynı kalır.
+- Regresyon testi eski raw log deseninin geri dönmesini engeller.
+
+### Test Sonucu
+- `flutter test test\prayer_notification_coordinator_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`255/255`)
+- `git diff --check` PASS (sadece CRLF uyarıları)
+
+### Risk Değişimi
+- Namaz bildirimi sync raw scheduler exception loglama riski: `9/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde Kur'an indeks, jüz ve sure yükleme loglarında kalan raw hata desenleri kapatılacak.
