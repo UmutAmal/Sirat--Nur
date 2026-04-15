@@ -107,6 +107,12 @@ void main() {
       expect(sql, contains("NULL, 'alafasy/001.mp3', 1"));
       expect(
         sql,
+        contains(
+          'Apply only after all matching MP3 files are uploaded to the target Supabase Storage bucket.',
+        ),
+      );
+      expect(
+        sql,
         contains('ON CONFLICT (type, reciter, surah_number) DO UPDATE SET'),
       );
       expect(sql, isNot(contains('download.quranicaudio.com')));

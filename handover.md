@@ -4890,3 +4890,36 @@
 
 ### Sonraki Adım
 - Yeni döngüde gerçek content seed / storage seed testleri taranacak; README sırası dışında otomatik guard eksikliği kalıp kalmadığı kontrol edilecek.
+
+## 2026-04-15 TUR-126 — Embed Storage Seed Apply-Order Warning
+
+### Yapılan İşlem
+- `tool/generate_quran_audio_storage_seed.dart` tarafından üretilen SQL başlığına uygulama sırası uyarısı eklendi.
+- Başlık artık storage seed'in yalnızca eşleşen MP3 dosyaları Supabase Storage bucket'ına yüklendikten sonra uygulanacağını söylüyor.
+- `test/generate_quran_audio_storage_seed_test.dart` bu uyarının SQL çıktısından silinmesini engelleyen regresyon beklentisi kazandı.
+
+### Neden Yapıldı
+- README artık doğru import sırasını anlatıyor; fakat generated SQL dosyası tek başına paylaşılabilir veya uygulanabilir.
+- `tool/generate_quran_audio_storage_seed.dart:148` önce yalnızca auto-generated ve target bucket bilgisini yazıyordu.
+- Storage dosyaları yüklenmeden DB seed uygulamak runtime 404 riski oluşturur; uyarı seed artefact'ının içinde de taşınmalı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Generated `content_seed_quran_audio_storage.sql` kendi içinde yanlış sıra uyarısı taşır.
+- README'e ulaşmadan SQL'i gören operatör de "önce upload, sonra seed" kuralını görür.
+- Regresyon testi uyarının tekrar düşmesini engeller.
+
+### Test Sonucu
+- `flutter test test\generate_quran_audio_storage_seed_test.dart --reporter compact` PASS (`6/6`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`266/266`)
+
+### Risk Değişimi
+- Storage-backed Quran audio seed artefact'ının upload öncesi uygulanma riski: `8/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde upload tool path güvenliği taranacak; manifestteki reciter/local_path değerleriyle bucket dışı veya beklenmeyen object path üretme riski kontrol edilecek.
