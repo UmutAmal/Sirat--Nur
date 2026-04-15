@@ -87,7 +87,11 @@ final prayerTimesProvider = Provider<PrayerTimesData?>((ref) {
     nextTime = adjust(tomorrowPrayers.fajr);
   }
 
-  final remaining = nextTime.difference(now);
+  final remaining = TimezoneUtils.differenceInTimezone(
+    nextTime,
+    now,
+    settings.timezone,
+  );
 
   return PrayerTimesData(
     fajr: _formatTime(fajr),

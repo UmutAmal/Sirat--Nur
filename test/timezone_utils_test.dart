@@ -20,4 +20,23 @@ void main() {
       );
     },
   );
+
+  test('differenceInTimezone uses real elapsed time across DST jumps', () {
+    const timezone = 'Europe/Berlin';
+    final beforeSpringForward = DateTime(2026, 3, 29, 1, 30);
+    final afterSpringForward = DateTime(2026, 3, 29, 3, 30);
+
+    expect(
+      afterSpringForward.difference(beforeSpringForward),
+      const Duration(hours: 2),
+    );
+    expect(
+      TimezoneUtils.differenceInTimezone(
+        afterSpringForward,
+        beforeSpringForward,
+        timezone,
+      ),
+      const Duration(hours: 1),
+    );
+  });
 }

@@ -56,5 +56,17 @@ void main() {
 
       expect(source, contains('applyAutomaticHighLatitudeRule(params, lat)'));
     });
+
+    test('provider computes remaining time in the selected timezone', () {
+      final source = File(
+        'lib/core/services/prayer_times_service.dart',
+      ).readAsStringSync();
+
+      expect(
+        source,
+        contains('TimezoneUtils.differenceInTimezone(\n    nextTime,'),
+      );
+      expect(source, isNot(contains('nextTime.difference(now)')));
+    });
   });
 }

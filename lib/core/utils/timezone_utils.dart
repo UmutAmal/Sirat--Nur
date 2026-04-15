@@ -78,4 +78,44 @@ class TimezoneUtils {
       return Duration.zero;
     }
   }
+
+  static Duration differenceInTimezone(
+    DateTime later,
+    DateTime earlier,
+    String? timezoneName,
+  ) {
+    if (timezoneName == null || timezoneName.trim().isEmpty) {
+      return later.difference(earlier);
+    }
+
+    try {
+      final location = tz.getLocation(timezoneName);
+      final laterTz = tz.TZDateTime(
+        location,
+        later.year,
+        later.month,
+        later.day,
+        later.hour,
+        later.minute,
+        later.second,
+        later.millisecond,
+        later.microsecond,
+      );
+      final earlierTz = tz.TZDateTime(
+        location,
+        earlier.year,
+        earlier.month,
+        earlier.day,
+        earlier.hour,
+        earlier.minute,
+        earlier.second,
+        earlier.millisecond,
+        earlier.microsecond,
+      );
+
+      return laterTz.difference(earlierTz);
+    } catch (_) {
+      return later.difference(earlier);
+    }
+  }
 }

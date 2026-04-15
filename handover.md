@@ -5370,3 +5370,40 @@
 
 ### Sonraki Adım
 - Yeni döngüde prayer pipeline'da kalan zaman/hesaplama edge-case'leri taranacak; özellikle canlı provider'ın `now` bağımlılığı test edilebilir hale getirilip yarınki Fajr/DST senaryosu kaynak guard yerine davranış testiyle korunacak.
+
+## 2026-04-15 TUR-139 — Make Prayer Countdown DST-Aware
+
+### Yapılan İşlem
+- `TimezoneUtils.differenceInTimezone` helper'ı eklendi; iki wall-clock zamanı seçili IANA timezone içinde gerçek elapsed time olarak karşılaştırıyor.
+- `prayerTimesProvider` içindeki `timeRemaining` hesabı düz `nextTime.difference(now)` yerine `TimezoneUtils.differenceInTimezone(nextTime, now, settings.timezone)` kullanacak şekilde değiştirildi.
+- `timezone_utils_test.dart` Berlin 2026 ilkbahar DST sıçramasında 01:30 -> 03:30 wall-clock farkının gerçek 1 saat olduğunu doğrulayan regresyon testi kazandı.
+- `prayer_times_service_test.dart` provider'ın eski naive `DateTime.difference` yoluna dönmemesini koruyan guard test kazandı.
+
+### Neden Yapıldı
+- Canlı namaz vakti provider'ı, kalan süreyi hedef bölgenin DST geçişlerini hesaba katmadan naive `DateTime.difference` ile hesaplıyordu.
+- Saat ileri/geri alınan gecelerde özellikle yarınki Fajr geri sayımı kullanıcıya bir saat fazla veya eksik görünebilirdi.
+- Kök sebep, provider'ın namaz saatlerini timezone'a göre wall-clock olarak düzeltmesine rağmen süre farkını aynı timezone içinde instant farkına çevirmemesiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\timezone_utils.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_times_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\timezone_utils_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_times_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Ana ekranın kalan vakit göstergesi DST geçişlerinde seçili şehir/bölge timezone'una göre gerçek süreyi gösterir.
+- Namaz vakti saat metinleri ve resmi hesap profilleri değiştirilmedi; sadece kalan süre farkı daha doğru hesaplanıyor.
+- Geçersiz veya boş timezone varsa eski naive fark davranışına güvenli fallback devam ediyor.
+
+### Test Sonucu
+- `flutter test test\timezone_utils_test.dart test\prayer_times_service_test.dart test\prayer_calendar_service_test.dart --reporter compact` PASS (`9/9`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`289/289`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- DST geçiş gecelerinde canlı namaz vakti geri sayımının bir saat şaşması riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde canlı provider hesaplama çekirdeği daha test edilebilir hale getirilecek veya dini içerik/audio provenance tarafındaki kalan yüksek riskli boşluklar yeniden taranacak; öncelik kullanıcıya yanlış dini zaman/içerik gösterme ihtimali en yüksek olan akışta olacak.
