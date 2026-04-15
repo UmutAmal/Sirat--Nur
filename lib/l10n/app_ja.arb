@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "このデバイスではコンパス センサーを利用できません。",
   "adhanNotificationChannelName": "アザーン通知",
   "adhanNotificationChannelDescription": "礼拝時間はアザーン音でお知らせします。",
-  "quranLoadFailed": "コーランのコンテンツをロードできませんでした。もう一度試してください。"
+  "quranLoadFailed": "コーランのコンテンツをロードできませんでした。もう一度試してください。",
+  "locationDetectionFailed": "現在地を検出できませんでした。都市を手動で選択するか、もう一度試してください。"
 }

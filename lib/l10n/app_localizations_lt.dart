@@ -124,6 +124,10 @@ class AppLocalizationsLt extends AppLocalizations {
   String get locationPermissionDenied => 'Vietos leidimas atmestas.';
 
   @override
+  String get locationDetectionFailed =>
+      'Nepavyko aptikti jūsų vietos. Pasirinkite miestą rankiniu būdu arba bandykite dar kartą.';
+
+  @override
   String citiesCount(String count) {
     return '$count miestuose';
   }

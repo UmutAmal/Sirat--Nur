@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Sensor kompas ora kasedhiya ing piranti iki.",
   "adhanNotificationChannelName": "Notifikasi Adzan",
   "adhanNotificationChannelDescription": "Tandha wektu shalat kanthi swara adzan.",
-  "quranLoadFailed": "Isi Quran ora bisa dimuat. Coba maneh."
+  "quranLoadFailed": "Isi Quran ora bisa dimuat. Coba maneh.",
+  "locationDetectionFailed": "Ora bisa ndeteksi lokasi sampeyan. Pilih kutha kanthi manual utawa coba maneh."
 }

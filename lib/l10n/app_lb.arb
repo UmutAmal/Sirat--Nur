@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kompasssensor ass op dësem Apparat net verfügbar.",
   "adhanNotificationChannelName": "Adhan Notifikatiounen",
   "adhanNotificationChannelDescription": "Gebiedszäit Alarmer mat Adhan Sound.",
-  "quranLoadFailed": "Koran Inhalt konnt net gelueden ginn. Probéiert w.e.g. nach eng Kéier."
+  "quranLoadFailed": "Koran Inhalt konnt net gelueden ginn. Probéiert w.e.g. nach eng Kéier.",
+  "locationDetectionFailed": "Konnt Är Positioun net entdecken. Wielt w.e.g. eng Stad manuell oder probéiert nach eng Kéier."
 }

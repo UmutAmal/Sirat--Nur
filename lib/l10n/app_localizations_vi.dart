@@ -124,6 +124,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get locationPermissionDenied => 'Quyền vị trí bị từ chối.';
 
   @override
+  String get locationDetectionFailed =>
+      'Không thể phát hiện vị trí của bạn. Vui lòng chọn thành phố theo cách thủ công hoặc thử lại.';
+
+  @override
   String citiesCount(String count) {
     return '$count thành phố';
   }

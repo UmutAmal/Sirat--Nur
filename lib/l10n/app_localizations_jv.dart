@@ -124,6 +124,10 @@ class AppLocalizationsJv extends AppLocalizations {
   String get locationPermissionDenied => 'Ijin lokasi ditolak.';
 
   @override
+  String get locationDetectionFailed =>
+      'Ora bisa ndeteksi lokasi sampeyan. Pilih kutha kanthi manual utawa coba maneh.';
+
+  @override
   String citiesCount(String count) {
     return '$count kutha';
   }

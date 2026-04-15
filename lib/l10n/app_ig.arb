@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Ihe mmetụta kompas adịghị na ngwaọrụ a.",
   "adhanNotificationChannelName": "Ọkwa Adhan",
   "adhanNotificationChannelDescription": "Ekpere oge alerts na adhan ụda.",
-  "quranLoadFailed": "Enweghị ike ibunye ọdịnaya Quran. Biko nwaa ọzọ."
+  "quranLoadFailed": "Enweghị ike ibunye ọdịnaya Quran. Biko nwaa ọzọ.",
+  "locationDetectionFailed": "Enweghị ike ịchọpụta ọnọdụ gị. Biko jiri aka họrọ obodo ma ọ bụ nwaa ọzọ."
 }

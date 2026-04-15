@@ -124,6 +124,10 @@ class AppLocalizationsCo extends AppLocalizations {
   String get locationPermissionDenied => 'U permessu di locu denegatu.';
 
   @override
+  String get locationDetectionFailed =>
+      'Ùn pudia micca detectà a vostra situazione. Per piacè sceglite una cità manualmente o pruvate di novu.';
+
+  @override
   String citiesCount(String count) {
     return '$count cità';
   }

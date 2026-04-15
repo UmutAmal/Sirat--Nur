@@ -126,6 +126,10 @@ class AppLocalizationsIt extends AppLocalizations {
       'Autorizzazione alla posizione negata.';
 
   @override
+  String get locationDetectionFailed =>
+      'Impossibile rilevare la tua posizione. Scegli una città manualmente o riprova.';
+
+  @override
   String citiesCount(String count) {
     return '$count città';
   }

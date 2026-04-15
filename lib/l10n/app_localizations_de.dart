@@ -125,6 +125,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get locationPermissionDenied => 'Standortberechtigung verweigert.';
 
   @override
+  String get locationDetectionFailed =>
+      'Ihr Standort konnte nicht ermittelt werden. Bitte wählen Sie manuell eine Stadt aus oder versuchen Sie es erneut.';
+
+  @override
   String citiesCount(String count) {
     return '$count Städte';
   }

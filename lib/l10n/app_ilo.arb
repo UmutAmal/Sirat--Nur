@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Saan a magun-odan ti compass sensor iti daytoy nga alikamen.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Saan a mabalin a maikarga ti linaon ti Quran. Pangngaasiyo ta padasenyo manen."
+  "quranLoadFailed": "Saan a mabalin a maikarga ti linaon ti Quran. Pangngaasiyo ta padasenyo manen.",
+  "locationDetectionFailed": "Saan a naduktalan ti lokasionmo. Pangngaasi a mangpili iti siudad a manual wenno padasen manen."
 }

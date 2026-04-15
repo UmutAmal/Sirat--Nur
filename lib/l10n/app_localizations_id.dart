@@ -124,6 +124,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get locationPermissionDenied => 'Izin lokasi ditolak.';
 
   @override
+  String get locationDetectionFailed =>
+      'Tidak dapat mendeteksi lokasi Anda. Silakan pilih kota secara manual atau coba lagi.';
+
+  @override
   String citiesCount(String count) {
     return '$count kota';
   }

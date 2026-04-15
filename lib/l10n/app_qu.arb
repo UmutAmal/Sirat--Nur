@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kay aparatopiqa mana brújula sensor nisqa kanchu.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Quranpa contenidonqa manam cargayta atirqakuchu. Ama hina kaspa, hukmanta kallpachakuy."
+  "quranLoadFailed": "Quranpa contenidonqa manam cargayta atirqakuchu. Ama hina kaspa, hukmanta kallpachakuy.",
+  "locationDetectionFailed": "Mana maypi kasqaykita riqsiyta atirqanchu. Ama hina kaspa, makiwan huk llaqtata akllay icha musuqmanta kallpachakuy."
 }

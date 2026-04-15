@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "एह डिवाइस पर कम्पास सेंसर उपलब्ध नइखे.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "कुरान के सामग्री लोड ना हो सकल। कृपया दोबारा कोशिश करीं।"
+  "quranLoadFailed": "कुरान के सामग्री लोड ना हो सकल। कृपया दोबारा कोशिश करीं।",
+  "locationDetectionFailed": "राउर लोकेशन के पता ना चल पावल. कृपया कवनो शहर के मैन्युअल रूप से चुनीं या फिर से कोशिश करीं।"
 }

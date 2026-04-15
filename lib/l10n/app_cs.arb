@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Snímač kompasu není na tomto zařízení k dispozici.",
   "adhanNotificationChannelName": "Oznámení Adhan",
   "adhanNotificationChannelDescription": "Upozornění na čas modlitby se zvukem adhan.",
-  "quranLoadFailed": "Obsah Koránu se nepodařilo načíst. Zkuste to prosím znovu."
+  "quranLoadFailed": "Obsah Koránu se nepodařilo načíst. Zkuste to prosím znovu.",
+  "locationDetectionFailed": "Nepodařilo se zjistit vaši polohu. Vyberte město ručně nebo to zkuste znovu."
 }

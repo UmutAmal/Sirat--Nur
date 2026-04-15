@@ -125,6 +125,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get locationPermissionDenied => 'Permissão de localização negada.';
 
   @override
+  String get locationDetectionFailed =>
+      'Não foi possível detectar sua localização. Escolha uma cidade manualmente ou tente novamente.';
+
+  @override
   String citiesCount(String count) {
     return '$count cidades';
   }

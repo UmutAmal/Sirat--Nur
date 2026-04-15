@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Dareemaha Compass lagama heli karo qalabkan.",
   "adhanNotificationChannelName": "Ogeysiinta Adhan",
   "adhanNotificationChannelDescription": "Waqtiga salaadda wuxuu ku baraarujinayaa dhawaaqa adhan.",
-  "quranLoadFailed": "Waxa ku jira Quraanka lama rari karo Fadlan isku day mar kale"
+  "quranLoadFailed": "Waxa ku jira Quraanka lama rari karo Fadlan isku day mar kale",
+  "locationDetectionFailed": "Lama ogaan karo goobtaada Fadlan gacanta ku dooro magaalo ama isku day mar kale."
 }

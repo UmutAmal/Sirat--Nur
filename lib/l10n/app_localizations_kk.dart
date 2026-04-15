@@ -124,6 +124,10 @@ class AppLocalizationsKk extends AppLocalizations {
   String get locationPermissionDenied => 'Орынды анықтау рұқсаты қабылданбады.';
 
   @override
+  String get locationDetectionFailed =>
+      'Орналасқан жеріңізді анықтау мүмкін болмады. Қаланы қолмен таңдаңыз немесе әрекетті қайталаңыз.';
+
+  @override
   String citiesCount(String count) {
     return '$count қалалар';
   }

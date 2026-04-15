@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Capteur konpa pa disponib sou aparèy sa a.",
   "adhanNotificationChannelName": "Adhan Notifikasyon",
   "adhanNotificationChannelDescription": "Alèt tan lapriyè ak son adhan.",
-  "quranLoadFailed": "Kontni koran pa t 'kapab chaje. Tanpri eseye ankò."
+  "quranLoadFailed": "Kontni koran pa t 'kapab chaje. Tanpri eseye ankò.",
+  "locationDetectionFailed": "Pa t 'kapab detekte kote ou ye a. Tanpri chwazi yon vil manyèlman oswa eseye ankò."
 }

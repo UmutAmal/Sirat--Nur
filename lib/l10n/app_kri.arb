@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kɔmpas sɛns nɔ de na dis divays.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Di tin dɛn we de insay di Kɔran nɔ bin ebul fɔ lod. Duya tray bak."
+  "quranLoadFailed": "Di tin dɛn we de insay di Kɔran nɔ bin ebul fɔ lod. Duya tray bak.",
+  "locationDetectionFailed": "Nɔ bin ebul fɔ no usay yu de. Duya pik wan siti wit yu an ɔ tray bak."
 }

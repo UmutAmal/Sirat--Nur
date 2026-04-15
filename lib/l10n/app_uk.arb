@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Датчик компаса недоступний на цьому пристрої.",
   "adhanNotificationChannelName": "Сповіщення азану",
   "adhanNotificationChannelDescription": "Сповіщення про час молитви зі звуком азану.",
-  "quranLoadFailed": "Не вдалося завантажити вміст Корану. Спробуйте ще раз."
+  "quranLoadFailed": "Не вдалося завантажити вміст Корану. Спробуйте ще раз.",
+  "locationDetectionFailed": "Не вдалося визначити ваше місцезнаходження. Виберіть місто вручну або повторіть спробу."
 }

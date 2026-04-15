@@ -124,6 +124,10 @@ class AppLocalizationsLus extends AppLocalizations {
   String get locationPermissionDenied => 'Hmun phalna pek a ni lo.';
 
   @override
+  String get locationDetectionFailed =>
+      'I awmna hmun a detect thei lo. Khawpui pakhat chu manual-in thlang la, a nih loh leh han tum leh rawh.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

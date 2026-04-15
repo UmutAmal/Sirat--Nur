@@ -124,6 +124,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get locationPermissionDenied => 'مجوز مکان رد شد.';
 
   @override
+  String get locationDetectionFailed =>
+      'موقعیت مکانی شما شناسایی نشد. لطفاً یک شهر را به صورت دستی انتخاب کنید یا دوباره امتحان کنید.';
+
+  @override
   String citiesCount(String count) {
     return '$count شهرها';
   }

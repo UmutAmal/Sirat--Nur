@@ -124,6 +124,10 @@ class AppLocalizationsKn extends AppLocalizations {
   String get locationPermissionDenied => 'ಸ್ಥಳ ಅನುಮತಿಯನ್ನು ನಿರಾಕರಿಸಲಾಗಿದೆ.';
 
   @override
+  String get locationDetectionFailed =>
+      'ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಪತ್ತೆಹಚ್ಚಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ನಗರವನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಆಯ್ಕೆಮಾಡಿ ಅಥವಾ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.';
+
+  @override
   String citiesCount(String count) {
     return '$count ನಗರಗಳು';
   }

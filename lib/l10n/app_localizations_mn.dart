@@ -124,6 +124,10 @@ class AppLocalizationsMn extends AppLocalizations {
   String get locationPermissionDenied => 'Байршлын зөвшөөрлийг үгүйсгэв.';
 
   @override
+  String get locationDetectionFailed =>
+      'Таны байршлыг илрүүлж чадсангүй. Гараар хот сонгох эсвэл дахин оролдоно уу.';
+
+  @override
   String citiesCount(String count) {
     return '$count хотууд';
   }

@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "په دې وسیله د کمپاس سینسر شتون نلري.",
   "adhanNotificationChannelName": "د اذان خبرتیاوې",
   "adhanNotificationChannelDescription": "د اذان په غږ سره د لمانځه وخت خبرتیا.",
-  "quranLoadFailed": "د قرآن محتوا نشي پورته کولی. مهرباني وکړئ بیا هڅه وکړئ."
+  "quranLoadFailed": "د قرآن محتوا نشي پورته کولی. مهرباني وکړئ بیا هڅه وکړئ.",
+  "locationDetectionFailed": "ستاسو ځای نشی معلومولی. مهرباني وکړئ په لاسي ډول یو ښار وټاکئ یا بیا هڅه وکړئ."
 }

@@ -124,6 +124,10 @@ class AppLocalizationsNl extends AppLocalizations {
   String get locationPermissionDenied => 'Locatietoestemming geweigerd.';
 
   @override
+  String get locationDetectionFailed =>
+      'Kan uw locatie niet detecteren. Kies handmatig een stad of probeer het opnieuw.';
+
+  @override
   String citiesCount(String count) {
     return '$count steden';
   }

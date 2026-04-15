@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "የኮምፓስ ዳሳሽ በዚህ መሳሪያ ላይ የለም።",
   "adhanNotificationChannelName": "አድሃን ማሳወቂያዎች",
   "adhanNotificationChannelDescription": "የጸሎት ጊዜ ማንቂያዎች ከአድሃን ድምፅ ጋር።",
-  "quranLoadFailed": "የቁርኣን ይዘት ሊጫን አልቻለም። እባክህ እንደገና ሞክር።"
+  "quranLoadFailed": "የቁርኣን ይዘት ሊጫን አልቻለም። እባክህ እንደገና ሞክር።",
+  "locationDetectionFailed": "አካባቢህን ማወቅ አልተቻለም። እባክዎ ከተማን እራስዎ ይምረጡ ወይም እንደገና ይሞክሩ።"
 }

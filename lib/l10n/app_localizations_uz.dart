@@ -124,6 +124,10 @@ class AppLocalizationsUz extends AppLocalizations {
   String get locationPermissionDenied => 'Joylashuv ruxsati rad etildi.';
 
   @override
+  String get locationDetectionFailed =>
+      'Joylashuvingiz aniqlanmadi. Shaharni qoʻlda tanlang yoki qayta urinib koʻring.';
+
+  @override
   String citiesCount(String count) {
     return '$count shaharlar';
   }

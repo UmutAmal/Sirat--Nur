@@ -126,6 +126,10 @@ class AppLocalizationsCa extends AppLocalizations {
   String get locationPermissionDenied => 'S\'ha denegat el permís d\'ubicació.';
 
   @override
+  String get locationDetectionFailed =>
+      'No s\'ha pogut detectar la teva ubicació. Trieu una ciutat manualment o torneu-ho a provar.';
+
+  @override
   String citiesCount(String count) {
     return '$count ciutats';
   }

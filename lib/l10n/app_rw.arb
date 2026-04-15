@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Rukuruzi ya Compass ntishobora kuboneka kuri iki gikoresho.",
   "adhanNotificationChannelName": "Amatangazo ya Adhan",
   "adhanNotificationChannelDescription": "Igihe cyamasengesho kiburira hamwe nijwi rya adhan.",
-  "quranLoadFailed": "Ibirimo Qor'ani ntibishobora kuremerwa. Nyamuneka gerageza."
+  "quranLoadFailed": "Ibirimo Qor'ani ntibishobora kuremerwa. Nyamuneka gerageza.",
+  "locationDetectionFailed": "Could not detect your location. Please choose a city manually or try again."
 }

@@ -124,6 +124,10 @@ class AppLocalizationsLg extends AppLocalizations {
   String get locationPermissionDenied => 'Olukusa lw\'ekifo lugaaniddwa.';
 
   @override
+  String get locationDetectionFailed =>
+      'Teyasobodde kuzuula kifo kyo. Nsaba olonde ekibuga mu ngalo oba ddamu ogezeeko.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

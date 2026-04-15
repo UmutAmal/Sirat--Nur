@@ -125,6 +125,10 @@ class AppLocalizationsUk extends AppLocalizations {
       'Дозвіл на місцезнаходження відмовлено.';
 
   @override
+  String get locationDetectionFailed =>
+      'Не вдалося визначити ваше місцезнаходження. Виберіть місто вручну або повторіть спробу.';
+
+  @override
   String citiesCount(String count) {
     return '$count міст';
   }

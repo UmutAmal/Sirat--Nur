@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Boussole sensor tɛ sɔrɔ nin minɛn in kan.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Kuranɛ kɔnɔkow ma se ka doni. Aw ye aw jija ka segin a kan."
+  "quranLoadFailed": "Kuranɛ kɔnɔkow ma se ka doni. Aw ye aw jija ka segin a kan.",
+  "locationDetectionFailed": "A ma se k’i sigiyɔrɔ dɔn. Aw ye dugu dɔ sugandi aw bolo fɛ walima aw k’a lajɛ kokura."
 }

@@ -763,5 +763,6 @@
   "qiblaSensorUnavailable": "Penderia kompas tidak tersedia pada peranti ini.",
   "adhanNotificationChannelName": "Pemberitahuan Adzan",
   "adhanNotificationChannelDescription": "Makluman waktu solat dengan bunyi azan.",
-  "quranLoadFailed": "Kandungan al-Quran tidak dapat dimuatkan. Sila cuba lagi."
+  "quranLoadFailed": "Kandungan al-Quran tidak dapat dimuatkan. Sila cuba lagi.",
+  "locationDetectionFailed": "Tidak dapat mengesan lokasi anda. Sila pilih bandar secara manual atau cuba lagi."
 }

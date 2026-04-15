@@ -706,6 +706,12 @@ abstract class AppLocalizations {
   /// **'Location permission denied.'**
   String get locationPermissionDenied;
 
+  /// No description provided for @locationDetectionFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not detect your location. Please choose a city manually or try again.'**
+  String get locationDetectionFailed;
+
   /// No description provided for @citiesCount.
   ///
   /// In en, this message translates to:

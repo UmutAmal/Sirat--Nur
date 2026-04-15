@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Senzor kompasa ni na voljo v tej napravi.",
   "adhanNotificationChannelName": "Adhan obvestila",
   "adhanNotificationChannelDescription": "Opozorila o času molitve z zvokom ezana.",
-  "quranLoadFailed": "Vsebine Korana ni bilo mogoče naložiti. prosim poskusite ponovno"
+  "quranLoadFailed": "Vsebine Korana ni bilo mogoče naložiti. prosim poskusite ponovno",
+  "locationDetectionFailed": "Vaše lokacije ni bilo mogoče zaznati. Izberite mesto ročno ali poskusite znova."
 }

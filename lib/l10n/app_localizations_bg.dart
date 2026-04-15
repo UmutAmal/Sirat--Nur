@@ -126,6 +126,10 @@ class AppLocalizationsBg extends AppLocalizations {
       'Разрешението за местоположение е отказано.';
 
   @override
+  String get locationDetectionFailed =>
+      'Could not detect your location. Моля, изберете град ръчно или опитайте отново.';
+
+  @override
   String citiesCount(String count) {
     return '$count града';
   }

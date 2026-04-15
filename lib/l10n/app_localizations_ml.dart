@@ -124,6 +124,10 @@ class AppLocalizationsMl extends AppLocalizations {
   String get locationPermissionDenied => 'ലൊക്കേഷൻ അനുമതി നിഷേധിച്ചു.';
 
   @override
+  String get locationDetectionFailed =>
+      'നിങ്ങളുടെ സ്ഥാനം കണ്ടെത്താനായില്ല. ഒരു നഗരം നേരിട്ട് തിരഞ്ഞെടുക്കുക അല്ലെങ്കിൽ വീണ്ടും ശ്രമിക്കുക.';
+
+  @override
   String citiesCount(String count) {
     return '$count നഗരങ്ങൾ';
   }

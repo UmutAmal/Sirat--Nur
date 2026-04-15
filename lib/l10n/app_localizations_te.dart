@@ -124,6 +124,10 @@ class AppLocalizationsTe extends AppLocalizations {
   String get locationPermissionDenied => 'స్థాన అనుమతి నిరాకరించబడింది.';
 
   @override
+  String get locationDetectionFailed =>
+      'మీ స్థానాన్ని గుర్తించడం సాధ్యపడలేదు. దయచేసి నగరాన్ని మాన్యువల్‌గా ఎంచుకోండి లేదా మళ్లీ ప్రయత్నించండి.';
+
+  @override
   String citiesCount(String count) {
     return '$count నగరాలు';
   }

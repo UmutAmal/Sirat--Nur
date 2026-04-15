@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kompas sensori bu qurilmada ishlamaydi.",
   "adhanNotificationChannelName": "Azon bildirishnomalari",
   "adhanNotificationChannelDescription": "Namoz vaqti azon ovozi bilan ogohlantiriladi.",
-  "quranLoadFailed": "Qur'on mazmunini yuklab bo'lmadi. Iltimos, qayta urinib koʻring."
+  "quranLoadFailed": "Qur'on mazmunini yuklab bo'lmadi. Iltimos, qayta urinib koʻring.",
+  "locationDetectionFailed": "Joylashuvingiz aniqlanmadi. Shaharni qoʻlda tanlang yoki qayta urinib koʻring."
 }

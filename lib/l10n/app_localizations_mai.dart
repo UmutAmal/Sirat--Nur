@@ -124,6 +124,10 @@ class AppLocalizationsMai extends AppLocalizations {
   String get locationPermissionDenied => 'स्थान अनुमति अस्वीकृत।';
 
   @override
+  String get locationDetectionFailed =>
+      'अहाँक स्थानक पता नहि लगा सकल। कृपया कोनो शहर मैन्युअल रूप सँ चुनू अथवा फेर सँ प्रयास करू.';
+
+  @override
   String citiesCount(String count) {
     return '$count शहर';
   }

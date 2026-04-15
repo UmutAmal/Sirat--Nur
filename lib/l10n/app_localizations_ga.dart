@@ -124,6 +124,10 @@ class AppLocalizationsGa extends AppLocalizations {
   String get locationPermissionDenied => 'Diúltaíodh cead suímh.';
 
   @override
+  String get locationDetectionFailed =>
+      'Níorbh fhéidir do shuíomh a bhrath. Roghnaigh cathair de láimh nó bain triail eile as.';
+
+  @override
   String citiesCount(String count) {
     return '$count cathracha';
   }

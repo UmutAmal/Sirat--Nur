@@ -124,6 +124,10 @@ class AppLocalizationsTa extends AppLocalizations {
   String get locationPermissionDenied => 'இருப்பிட அனுமதி மறுக்கப்பட்டது.';
 
   @override
+  String get locationDetectionFailed =>
+      'உங்கள் இருப்பிடத்தைக் கண்டறிய முடியவில்லை. ஒரு நகரத்தை கைமுறையாக தேர்வு செய்யவும் அல்லது மீண்டும் முயற்சிக்கவும்.';
+
+  @override
   String citiesCount(String count) {
     return '$count நகரங்கள்';
   }

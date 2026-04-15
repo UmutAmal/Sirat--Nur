@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Compass sensor nni saa afiri yi so.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Wɔantumi amfa Quran mu nsɛm anhyɛ mu. Yɛsrɛ sɛ sɔ hwɛ bio."
+  "quranLoadFailed": "Wɔantumi amfa Quran mu nsɛm anhyɛ mu. Yɛsrɛ sɛ sɔ hwɛ bio.",
+  "locationDetectionFailed": "Antumi anhu baabi a wowɔ. Yɛsrɛ sɛ fa nsa paw kurow bi anaa sɔ hwɛ bio."
 }

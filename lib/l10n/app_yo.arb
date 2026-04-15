@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kompasi sensọ ko si lori ẹrọ yi.",
   "adhanNotificationChannelName": "Awọn iwifunni Adhan",
   "adhanNotificationChannelDescription": "Awọn itaniji akoko adura pẹlu ohun adhan.",
-  "quranLoadFailed": "Akoonu Al-Qur’an ko le ṣe kojọpọ. Jọwọ gbiyanju lẹẹkansi."
+  "quranLoadFailed": "Akoonu Al-Qur’an ko le ṣe kojọpọ. Jọwọ gbiyanju lẹẹkansi.",
+  "locationDetectionFailed": "Ko le ri ipo rẹ. Jọwọ yan ilu kan pẹlu ọwọ tabi gbiyanju lẹẹkansi."
 }

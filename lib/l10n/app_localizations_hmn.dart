@@ -124,6 +124,10 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get locationPermissionDenied => 'Qhov chaw tso cai tsis kam lees.';
 
   @override
+  String get locationDetectionFailed =>
+      'Nrhiav tsis tau koj qhov chaw nyob. Thov xaiv lub nroog manually lossis sim dua.';
+
+  @override
   String citiesCount(String count) {
     return '$count lub zos';
   }

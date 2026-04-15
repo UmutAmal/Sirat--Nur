@@ -124,6 +124,10 @@ class AppLocalizationsTg extends AppLocalizations {
   String get locationPermissionDenied => 'Иҷозати ҷойгиршавӣ рад карда шуд.';
 
   @override
+  String get locationDetectionFailed =>
+      'Ҷойгиршавии шуморо муайян карда натавонист. Лутфан шаҳрро дастӣ интихоб кунед ё дубора кӯшиш кунед.';
+
+  @override
   String citiesCount(String count) {
     return '$count шаҳрҳо';
   }

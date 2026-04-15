@@ -126,6 +126,10 @@ class AppLocalizationsQu extends AppLocalizations {
       'Maypi kasqanmanta permisota mana chaskisqachu.';
 
   @override
+  String get locationDetectionFailed =>
+      'Mana maypi kasqaykita riqsiyta atirqanchu. Ama hina kaspa, makiwan huk llaqtata akllay icha musuqmanta kallpachakuy.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

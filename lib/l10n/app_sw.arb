@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kihisi cha dira hakipatikani kwenye kifaa hiki.",
   "adhanNotificationChannelName": "Arifa za Adhana",
   "adhanNotificationChannelDescription": "Tahadhari za wakati wa maombi na sauti ya adhana.",
-  "quranLoadFailed": "Maudhui ya Quran hayakuweza kupakiwa. Tafadhali jaribu tena."
+  "quranLoadFailed": "Maudhui ya Quran hayakuweza kupakiwa. Tafadhali jaribu tena.",
+  "locationDetectionFailed": "Haikuweza kutambua eneo lako. Tafadhali chagua jiji wewe mwenyewe au ujaribu tena."
 }

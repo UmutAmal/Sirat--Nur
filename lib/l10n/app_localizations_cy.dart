@@ -125,6 +125,10 @@ class AppLocalizationsCy extends AppLocalizations {
   String get locationPermissionDenied => 'Caniatâd lleoliad wedi\'i wrthod.';
 
   @override
+  String get locationDetectionFailed =>
+      'Methu canfod eich lleoliad. Dewiswch ddinas â llaw neu ceisiwch eto.';
+
+  @override
   String citiesCount(String count) {
     return '$count dinasoedd';
   }

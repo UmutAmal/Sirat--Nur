@@ -126,6 +126,10 @@ class AppLocalizationsRu extends AppLocalizations {
       'Разрешение на определение местоположения отклонено.';
 
   @override
+  String get locationDetectionFailed =>
+      'Не удалось определить ваше местоположение. Пожалуйста, выберите город вручную или повторите попытку.';
+
+  @override
   String citiesCount(String count) {
     return '$count городов';
   }

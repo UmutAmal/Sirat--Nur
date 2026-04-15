@@ -124,6 +124,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get locationPermissionDenied => '位置权限被拒绝。';
 
   @override
+  String get locationDetectionFailed => '无法检测到您的位置。请手动选择城市或重试。';
+
+  @override
   String citiesCount(String count) {
     return '$count 个城市';
   }
@@ -1753,6 +1756,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get locationPermissionDenied => '位置权限被拒绝。';
 
   @override
+  String get locationDetectionFailed => '无法检测到您的位置。请手动选择城市或重试。';
+
+  @override
   String citiesCount(String count) {
     return '$count 个城市';
   }
@@ -3380,6 +3386,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get locationPermissionDenied => '位置權限被拒絕。';
+
+  @override
+  String get locationDetectionFailed => '無法偵測到您的位置。請手動選擇城市或重試。';
 
   @override
   String citiesCount(String count) {

@@ -124,6 +124,10 @@ class AppLocalizationsEt extends AppLocalizations {
   String get locationPermissionDenied => 'Asukoha luba keelatud.';
 
   @override
+  String get locationDetectionFailed =>
+      'Teie asukohta ei õnnestunud tuvastada. Valige linn käsitsi või proovige uuesti.';
+
+  @override
   String citiesCount(String count) {
     return '$count linna';
   }

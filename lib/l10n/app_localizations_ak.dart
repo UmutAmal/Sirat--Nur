@@ -124,6 +124,10 @@ class AppLocalizationsAk extends AppLocalizations {
   String get locationPermissionDenied => 'Wɔapow beae ho kwan.';
 
   @override
+  String get locationDetectionFailed =>
+      'Antumi anhu baabi a wowɔ. Yɛsrɛ sɛ fa nsa paw kurow bi anaa sɔ hwɛ bio.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

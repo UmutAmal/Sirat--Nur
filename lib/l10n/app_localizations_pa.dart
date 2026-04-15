@@ -124,6 +124,10 @@ class AppLocalizationsPa extends AppLocalizations {
   String get locationPermissionDenied => 'ਟਿਕਾਣਾ ਇਜਾਜ਼ਤ ਅਸਵੀਕਾਰ ਕੀਤੀ ਗਈ।';
 
   @override
+  String get locationDetectionFailed =>
+      'ਤੁਹਾਡੇ ਟਿਕਾਣੇ ਦਾ ਪਤਾ ਨਹੀਂ ਲਗਾਇਆ ਜਾ ਸਕਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਹੱਥੀਂ ਇੱਕ ਸ਼ਹਿਰ ਚੁਣੋ ਜਾਂ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
+
+  @override
   String citiesCount(String count) {
     return '$count ਸ਼ਹਿਰ';
   }

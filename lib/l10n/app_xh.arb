@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Isivamvo seCompass asifumaneki kwesi sixhobo.",
   "adhanNotificationChannelName": "Izaziso ze-Adhan",
   "adhanNotificationChannelDescription": "Izilumkiso zexesha lomthandazo kunye nesandi se-adhan.",
-  "quranLoadFailed": "Umxholo weQuran awukwazanga kulayishwa. Nceda zama kwakhona."
+  "quranLoadFailed": "Umxholo weQuran awukwazanga kulayishwa. Nceda zama kwakhona.",
+  "locationDetectionFailed": "Ayikwazanga ukubona indawo yakho. Nceda ukhethe isixeko ngesandla okanye uzame kwakhona."
 }

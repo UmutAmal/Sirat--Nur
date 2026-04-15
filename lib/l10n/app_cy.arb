@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Nid yw synhwyrydd cwmpawd ar gael ar y ddyfais hon.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Nid oedd modd llwytho cynnwys y Quran. Ceisiwch eto."
+  "quranLoadFailed": "Nid oedd modd llwytho cynnwys y Quran. Ceisiwch eto.",
+  "locationDetectionFailed": "Methu canfod eich lleoliad. Dewiswch ddinas â llaw neu ceisiwch eto."
 }

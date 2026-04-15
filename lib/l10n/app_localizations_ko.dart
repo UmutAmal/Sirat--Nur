@@ -124,6 +124,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get locationPermissionDenied => '위치 권한이 거부되었습니다.';
 
   @override
+  String get locationDetectionFailed =>
+      '위치를 감지할 수 없습니다. 도시를 수동으로 선택하거나 다시 시도하세요.';
+
+  @override
   String citiesCount(String count) {
     return '$count 도시';
   }

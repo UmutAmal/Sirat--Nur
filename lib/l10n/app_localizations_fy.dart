@@ -124,6 +124,10 @@ class AppLocalizationsFy extends AppLocalizations {
   String get locationPermissionDenied => 'Lokaasje tastimming wegere.';
 
   @override
+  String get locationDetectionFailed =>
+      'Koe jo lokaasje net ûntdekke. Kies in stêd mei de hân of besykje it nochris.';
+
+  @override
   String citiesCount(String count) {
     return '$count stêden';
   }

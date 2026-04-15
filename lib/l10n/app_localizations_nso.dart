@@ -125,6 +125,10 @@ class AppLocalizationsNso extends AppLocalizations {
   String get locationPermissionDenied => 'Tumelelo ya lefelo e gannwe.';
 
   @override
+  String get locationDetectionFailed =>
+      'Ga se ya kgona go lemoga lefelo la gago. Hle kgetha motse ka seatla goba o leke gape.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

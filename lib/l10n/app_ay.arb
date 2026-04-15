@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Sensor de brújula ukax janiw aka dispositivo ukanx utjkiti.",
   "adhanNotificationChannelName": "Adhan Yatiyawinaka",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Quran ukax janiw cargañjamäkänti. Ukhamaraki, mayampi yant’apxañani."
+  "quranLoadFailed": "Quran ukax janiw cargañjamäkänti. Ukhamaraki, mayampi yant’apxañani.",
+  "locationDetectionFailed": "Janiw kawkhans jikxataskta uk uñt’ayañjamäkänti. Please choose a city manually or try again."
 }

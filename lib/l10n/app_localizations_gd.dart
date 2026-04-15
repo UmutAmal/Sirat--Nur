@@ -125,6 +125,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get locationPermissionDenied => 'Cead àite air a dhiùltadh.';
 
   @override
+  String get locationDetectionFailed =>
+      'Cha b\' urrainn dhuinn d\' ionad a lorg. Tagh baile-mòr le làimh no feuch ris a-rithist.';
+
+  @override
   String citiesCount(String count) {
     return '$count bailtean mòra';
   }

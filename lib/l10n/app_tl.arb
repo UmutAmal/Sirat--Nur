@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Hindi available ang compass sensor sa device na ito.",
   "adhanNotificationChannelName": "Mga Notification ng Adhan",
   "adhanNotificationChannelDescription": "Mga alerto sa oras ng panalangin na may tunog ng adhan.",
-  "quranLoadFailed": "Hindi ma-load ang nilalaman ng Quran. Pakisubukang muli."
+  "quranLoadFailed": "Hindi ma-load ang nilalaman ng Quran. Pakisubukang muli.",
+  "locationDetectionFailed": "Hindi matukoy ang iyong lokasyon. Mangyaring pumili ng lungsod nang manu-mano o subukang muli."
 }

@@ -124,6 +124,10 @@ class AppLocalizationsAs extends AppLocalizations {
   String get locationPermissionDenied => 'স্থানৰ অনুমতি অস্বীকাৰ কৰা হৈছে।';
 
   @override
+  String get locationDetectionFailed =>
+      'আপোনাৰ অৱস্থান ধৰা পেলাব পৰা নগ\'ল। অনুগ্ৰহ কৰি এখন চহৰ হস্তচালিতভাৱে বাছক বা পুনৰ চেষ্টা কৰক।';
+
+  @override
   String citiesCount(String count) {
     return '$count চহৰসমূহ';
   }

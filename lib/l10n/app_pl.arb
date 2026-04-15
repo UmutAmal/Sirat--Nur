@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Czujnik kompasu jest niedostępny na tym urządzeniu.",
   "adhanNotificationChannelName": "Powiadomienia Adhana",
   "adhanNotificationChannelDescription": "Alerty czasu modlitwy z dźwiękiem Adhan.",
-  "quranLoadFailed": "Nie można załadować treści Koranu. Spróbuj ponownie."
+  "quranLoadFailed": "Nie można załadować treści Koranu. Spróbuj ponownie.",
+  "locationDetectionFailed": "Nie udało się wykryć Twojej lokalizacji. Wybierz miasto ręcznie lub spróbuj ponownie."
 }

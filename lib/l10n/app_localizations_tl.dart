@@ -126,6 +126,10 @@ class AppLocalizationsTl extends AppLocalizations {
       'Tinanggihan ang pahintulot sa lokasyon.';
 
   @override
+  String get locationDetectionFailed =>
+      'Hindi matukoy ang iyong lokasyon. Mangyaring pumili ng lungsod nang manu-mano o subukang muli.';
+
+  @override
   String citiesCount(String count) {
     return '$count lungsod';
   }

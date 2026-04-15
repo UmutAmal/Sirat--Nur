@@ -127,6 +127,10 @@ class AppLocalizationsAy extends AppLocalizations {
       'Uka chiqanx permiso ukax janiw satawa.';
 
   @override
+  String get locationDetectionFailed =>
+      'Janiw kawkhans jikxataskta uk uñt’ayañjamäkänti. Please choose a city manually or try again.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

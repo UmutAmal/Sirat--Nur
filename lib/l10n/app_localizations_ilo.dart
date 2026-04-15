@@ -125,6 +125,10 @@ class AppLocalizationsIlo extends AppLocalizations {
       'Napagkedkedan ti pammalubos ti lokasion.';
 
   @override
+  String get locationDetectionFailed =>
+      'Saan a naduktalan ti lokasionmo. Pangngaasi a mangpili iti siudad a manual wenno padasen manen.';
+
+  @override
   String citiesCount(String count) {
     return '$count dagiti siudad';
   }

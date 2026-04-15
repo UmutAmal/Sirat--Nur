@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "El sensor de la brúixola no està disponible en aquest dispositiu.",
   "adhanNotificationChannelName": "Notificacions Adhan",
   "adhanNotificationChannelDescription": "Alertes de temps de pregària amb so adhan.",
-  "quranLoadFailed": "No s'ha pogut carregar el contingut de l'Alcorà. Si us plau, torna-ho a provar."
+  "quranLoadFailed": "No s'ha pogut carregar el contingut de l'Alcorà. Si us plau, torna-ho a provar.",
+  "locationDetectionFailed": "No s'ha pogut detectar la teva ubicació. Trieu una ciutat manualment o torneu-ho a provar."
 }

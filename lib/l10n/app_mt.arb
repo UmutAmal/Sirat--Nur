@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Is-sensor tal-boxxla mhux disponibbli fuq dan l-apparat.",
   "adhanNotificationChannelName": "Notifiki Adhan",
   "adhanNotificationChannelDescription": "Twissijiet tal-ħin tat-talb b'ħoss adhan.",
-  "quranLoadFailed": "Il-kontenut tal-Quran ma setax jitgħabba. Jekk jogħġbok erġa' pprova."
+  "quranLoadFailed": "Il-kontenut tal-Quran ma setax jitgħabba. Jekk jogħġbok erġa' pprova.",
+  "locationDetectionFailed": "Ma setgħetx tiskopri l-lokalità tiegħek. Jekk jogħġbok agħżel belt manwalment jew erġa' pprova."
 }

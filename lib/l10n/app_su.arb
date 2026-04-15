@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Sénsor kompas henteu sayogi dina alat ieu.",
   "adhanNotificationChannelName": "Bewara Adzan",
   "adhanNotificationChannelDescription": "Waktos solat ngageter ku sora adzan.",
-  "quranLoadFailed": "eusi Quran teu bisa dimuat. Mangga cobian deui."
+  "quranLoadFailed": "eusi Quran teu bisa dimuat. Mangga cobian deui.",
+  "locationDetectionFailed": "Teu bisa ngadeteksi lokasi anjeun. Mangga pilih kota sacara manual atawa cobian deui."
 }

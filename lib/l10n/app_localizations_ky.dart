@@ -126,6 +126,10 @@ class AppLocalizationsKy extends AppLocalizations {
       'Жайгашкан жерди аныктоо уруксаты четке кагылды.';
 
   @override
+  String get locationDetectionFailed =>
+      'Жайгашкан жериңиз аныкталган жок. Шаарды кол менен тандаңыз же кайра аракет кылыңыз.';
+
+  @override
   String citiesCount(String count) {
     return '$count шаарлар';
   }

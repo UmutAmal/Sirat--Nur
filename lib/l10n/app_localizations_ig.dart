@@ -124,6 +124,10 @@ class AppLocalizationsIg extends AppLocalizations {
   String get locationPermissionDenied => 'Ajụrụ ikike ebe.';
 
   @override
+  String get locationDetectionFailed =>
+      'Enweghị ike ịchọpụta ọnọdụ gị. Biko jiri aka họrọ obodo ma ọ bụ nwaa ọzọ.';
+
+  @override
   String citiesCount(String count) {
     return 'Obodo $count';
   }

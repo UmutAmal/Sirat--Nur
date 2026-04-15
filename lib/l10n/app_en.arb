@@ -51,6 +51,7 @@
   "currentLocation": "Current Location (GPS)",
   "locationServiceDisabled": "Location service is disabled.",
   "locationPermissionDenied": "Location permission denied.",
+  "locationDetectionFailed": "Could not detect your location. Please choose a city manually or try again.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

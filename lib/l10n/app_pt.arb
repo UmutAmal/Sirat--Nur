@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "O sensor da bússola não está disponível neste dispositivo.",
   "adhanNotificationChannelName": "Notificações Adhan",
   "adhanNotificationChannelDescription": "Alertas de tempo de oração com som adhan.",
-  "quranLoadFailed": "O conteúdo do Alcorão não pôde ser carregado. Por favor, tente novamente."
+  "quranLoadFailed": "O conteúdo do Alcorão não pôde ser carregado. Por favor, tente novamente.",
+  "locationDetectionFailed": "Não foi possível detectar sua localização. Escolha uma cidade manualmente ou tente novamente."
 }

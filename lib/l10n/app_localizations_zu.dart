@@ -124,6 +124,10 @@ class AppLocalizationsZu extends AppLocalizations {
   String get locationPermissionDenied => 'Imvume yendawo inqatshiwe.';
 
   @override
+  String get locationDetectionFailed =>
+      'Ayikwazanga ukubona indawo yakho. Sicela ukhethe idolobha mathupha noma uzame futhi.';
+
+  @override
   String citiesCount(String count) {
     return '$count amadolobha';
   }

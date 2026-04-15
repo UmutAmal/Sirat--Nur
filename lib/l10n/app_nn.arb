@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kompasssensor er utilgjengelig på denne enheten.",
   "adhanNotificationChannelName": "Adhan-varsler",
   "adhanNotificationChannelDescription": "Bønnetidsvarsler med adhan-lyd.",
-  "quranLoadFailed": "Koraninnhold kunne ikke lastes. Vennligst prøv igjen."
+  "quranLoadFailed": "Koraninnhold kunne ikke lastes. Vennligst prøv igjen.",
+  "locationDetectionFailed": "Kunne ikke finne posisjonen din. Velg en by manuelt eller prøv på nytt."
 }

@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Meeshaa kana irratti sensariin koompaasii hin argamu.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Qabiyyeen Qur'aanaa fe'amuu hin dandeenye. Mee irra deebi'ii yaalaa."
+  "quranLoadFailed": "Qabiyyeen Qur'aanaa fe'amuu hin dandeenye. Mee irra deebi'ii yaalaa.",
+  "locationDetectionFailed": "Bakka jirtu adda baasuu hin dandeenye. Maaloo magaalaa harkaan filadhu ykn irra deebi'ii yaali."
 }

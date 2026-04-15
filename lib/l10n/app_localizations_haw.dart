@@ -124,6 +124,10 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get locationPermissionDenied => 'Ua hōʻole ʻia ka ʻae wahi.';
 
   @override
+  String get locationDetectionFailed =>
+      'ʻAʻole hiki ke ʻike i kou wahi. E ʻoluʻolu e koho lima i ke kūlanakauhale a i ʻole e hoʻāʻo hou.';
+
+  @override
   String citiesCount(String count) {
     return '$count kūlanakauhale';
   }

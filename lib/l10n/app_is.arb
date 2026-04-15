@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Áttavitaskynjari er ekki tiltækur á þessu tæki.",
   "adhanNotificationChannelName": "Adhan tilkynningar",
   "adhanNotificationChannelDescription": "Bænatímaviðvaranir með adhan hljóði.",
-  "quranLoadFailed": "Ekki var hægt að hlaða efni Kóransins. Vinsamlegast reyndu aftur."
+  "quranLoadFailed": "Ekki var hægt að hlaða efni Kóransins. Vinsamlegast reyndu aftur.",
+  "locationDetectionFailed": "Gat ekki greint staðsetningu þína. Vinsamlegast veldu borg handvirkt eða reyndu aftur."
 }

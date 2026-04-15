@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "کمپاس سینسر اس ڈیوائس پر دستیاب نہیں ہے۔",
   "adhanNotificationChannelName": "اذان کی اطلاع",
   "adhanNotificationChannelDescription": "اذان کی آواز کے ساتھ نماز کے وقت کے انتباہات۔",
-  "quranLoadFailed": "قرآنی مواد لوڈ نہیں ہو سکا۔ براہ کرم دوبارہ کوشش کریں۔"
+  "quranLoadFailed": "قرآنی مواد لوڈ نہیں ہو سکا۔ براہ کرم دوبارہ کوشش کریں۔",
+  "locationDetectionFailed": "آپ کے مقام کا پتہ نہیں چل سکا۔ براہ کرم دستی طور پر شہر کا انتخاب کریں یا دوبارہ کوشش کریں۔"
 }

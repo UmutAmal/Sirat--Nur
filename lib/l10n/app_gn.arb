@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Sensor brújula rehegua ndojeguerekói ko tembipuru’ípe.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Ndaikatúi ojekarga contenido Corán rehegua. Eñeha’ã jey."
+  "quranLoadFailed": "Ndaikatúi ojekarga contenido Corán rehegua. Eñeha’ã jey.",
+  "locationDetectionFailed": "Ndaikatúi ohechakuaa moõpa reime. Eiporavo peteĩ táva nde po rupive térã eñeha’ã jey."
 }

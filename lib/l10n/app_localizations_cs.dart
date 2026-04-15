@@ -124,6 +124,10 @@ class AppLocalizationsCs extends AppLocalizations {
   String get locationPermissionDenied => 'Povolení k poloze odepřeno.';
 
   @override
+  String get locationDetectionFailed =>
+      'Nepodařilo se zjistit vaši polohu. Vyberte město ručně nebo to zkuste znovu.';
+
+  @override
   String citiesCount(String count) {
     return '$count měst';
   }

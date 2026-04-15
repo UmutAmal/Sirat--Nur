@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "کمپاس سينسر هن ڊوائيس تي دستياب ناهي.",
   "adhanNotificationChannelName": "اذان جا اطلاع",
   "adhanNotificationChannelDescription": "اذان جي آواز سان نماز جو وقت خبردار ڪري ٿو.",
-  "quranLoadFailed": "قرآن جو مواد لوڊ نه ٿي سگهيو. مهرباني ڪري ٻيهر ڪوشش ڪريو."
+  "quranLoadFailed": "قرآن جو مواد لوڊ نه ٿي سگهيو. مهرباني ڪري ٻيهر ڪوشش ڪريو.",
+  "locationDetectionFailed": "توھان جي جڳھ جي سڃاڻپ نه ٿي سگھي. مھرباني ڪري دستي طور شھر چونڊيو يا وري ڪوشش ڪريو."
 }

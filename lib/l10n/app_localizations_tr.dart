@@ -124,6 +124,10 @@ class AppLocalizationsTr extends AppLocalizations {
   String get locationPermissionDenied => 'Konum izni reddedildi.';
 
   @override
+  String get locationDetectionFailed =>
+      'Konumunuz algılanamadı. Lütfen bir şehri elle seçin veya tekrar deneyin.';
+
+  @override
   String citiesCount(String count) {
     return '$count şehir';
   }

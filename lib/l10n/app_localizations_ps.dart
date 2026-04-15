@@ -124,6 +124,10 @@ class AppLocalizationsPs extends AppLocalizations {
   String get locationPermissionDenied => 'د ځای اجازه رد شوه.';
 
   @override
+  String get locationDetectionFailed =>
+      'ستاسو ځای نشی معلومولی. مهرباني وکړئ په لاسي ډول یو ښار وټاکئ یا بیا هڅه وکړئ.';
+
+  @override
   String citiesCount(String count) {
     return '$count ښارونه';
   }

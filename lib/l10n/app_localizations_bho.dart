@@ -125,6 +125,10 @@ class AppLocalizationsBho extends AppLocalizations {
       'लोकेशन के अनुमति से इनकार कर दिहल गइल.';
 
   @override
+  String get locationDetectionFailed =>
+      'राउर लोकेशन के पता ना चल पावल. कृपया कवनो शहर के मैन्युअल रूप से चुनीं या फिर से कोशिश करीं।';
+
+  @override
   String citiesCount(String count) {
     return '$count शहरन के बा';
   }

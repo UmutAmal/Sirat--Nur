@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kompassensor is net beskikber op dit apparaat.",
   "adhanNotificationChannelName": "Adhan Notifikaasjes",
   "adhanNotificationChannelDescription": "Gebedstiidalarms mei adhan-lûd.",
-  "quranLoadFailed": "Koranynhâld koe net laden wurde. Besykje it nochris."
+  "quranLoadFailed": "Koranynhâld koe net laden wurde. Besykje it nochris.",
+  "locationDetectionFailed": "Koe jo lokaasje net ûntdekke. Kies in stêd mei de hân of besykje it nochris."
 }

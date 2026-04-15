@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kompassin tunnistin ei ole käytettävissä tässä laitteessa.",
   "adhanNotificationChannelName": "Adhan-ilmoitukset",
   "adhanNotificationChannelDescription": "Rukousajan hälytykset adhan-äänellä.",
-  "quranLoadFailed": "Koraanin sisältöä ei voitu ladata. Yritä uudelleen."
+  "quranLoadFailed": "Koraanin sisältöä ei voitu ladata. Yritä uudelleen.",
+  "locationDetectionFailed": "Sijaintiasi ei voitu havaita. Valitse kaupunki manuaalisesti tai yritä uudelleen."
 }

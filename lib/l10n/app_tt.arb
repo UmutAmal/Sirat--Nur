@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Компас сенсоры бу җайланмада мөмкин түгел.",
   "adhanNotificationChannelName": "Азан хәбәрләре",
   "adhanNotificationChannelDescription": "Азан тавышы белән дога вакыты.",
-  "quranLoadFailed": "Коръән эчтәлеген йөкләп булмады. Зинһар, кабатлап карагыз."
+  "quranLoadFailed": "Коръән эчтәлеген йөкләп булмады. Зинһар, кабатлап карагыз.",
+  "locationDetectionFailed": "Сезнең урыныгызны таба алмадым. Зинһар, кул белән шәһәрне сайлагыз яки кабатлап карагыз."
 }

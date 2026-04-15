@@ -125,6 +125,10 @@ class AppLocalizationsTk extends AppLocalizations {
       'Locationerleşmek üçin rugsat berilmedi';
 
   @override
+  String get locationDetectionFailed =>
+      'Locationeriňizi anyklap bilmedim El bilen şäheri saýlaň ýa-da gaýtadan synanyşyň.';
+
+  @override
   String citiesCount(String count) {
     return '$count şäherler';
   }

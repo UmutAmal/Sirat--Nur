@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "חיישן מצפן אינו זמין במכשיר זה.",
   "adhanNotificationChannelName": "התראות אדהאן",
   "adhanNotificationChannelDescription": "התראות על זמן תפילה עם צליל אדהן.",
-  "quranLoadFailed": "לא ניתן היה לטעון את תוכן הקוראן. אנא נסה שוב."
+  "quranLoadFailed": "לא ניתן היה לטעון את תוכן הקוראן. אנא נסה שוב.",
+  "locationDetectionFailed": "לא ניתן היה לזהות את המיקום שלך. אנא בחר עיר באופן ידני או נסה שוב."
 }

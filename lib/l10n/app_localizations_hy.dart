@@ -126,6 +126,10 @@ class AppLocalizationsHy extends AppLocalizations {
       'Տեղադրության թույլտվությունը մերժվել է:';
 
   @override
+  String get locationDetectionFailed =>
+      'Չհաջողվեց հայտնաբերել ձեր գտնվելու վայրը: Ընտրեք քաղաքը ձեռքով կամ նորից փորձեք:';
+
+  @override
   String citiesCount(String count) {
     return '$count քաղաքներ';
   }

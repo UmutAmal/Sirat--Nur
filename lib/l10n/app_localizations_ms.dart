@@ -124,6 +124,10 @@ class AppLocalizationsMs extends AppLocalizations {
   String get locationPermissionDenied => 'Kebenaran lokasi ditolak.';
 
   @override
+  String get locationDetectionFailed =>
+      'Tidak dapat mengesan lokasi anda. Sila pilih bandar secara manual atau cuba lagi.';
+
+  @override
   String citiesCount(String count) {
     return '$count bandar';
   }

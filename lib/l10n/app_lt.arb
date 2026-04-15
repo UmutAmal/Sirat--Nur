@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Šiame įrenginyje kompaso jutiklis nepasiekiamas.",
   "adhanNotificationChannelName": "Adhan pranešimai",
   "adhanNotificationChannelDescription": "Maldos laikas perspėja su adhano garsu.",
-  "quranLoadFailed": "Nepavyko įkelti Korano turinio. Bandykite dar kartą."
+  "quranLoadFailed": "Nepavyko įkelti Korano turinio. Bandykite dar kartą.",
+  "locationDetectionFailed": "Nepavyko aptikti jūsų vietos. Pasirinkite miestą rankiniu būdu arba bandykite dar kartą."
 }

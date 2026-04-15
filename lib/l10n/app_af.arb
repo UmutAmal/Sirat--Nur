@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kompassensor is nie op hierdie toestel beskikbaar nie.",
   "adhanNotificationChannelName": "Adhan Kennisgewings",
   "adhanNotificationChannelDescription": "Gebedstydwaarskuwings met adhan-klank.",
-  "quranLoadFailed": "Koran-inhoud kon nie gelaai word nie. Probeer asseblief weer."
+  "quranLoadFailed": "Koran-inhoud kon nie gelaai word nie. Probeer asseblief weer.",
+  "locationDetectionFailed": "Kon nie jou ligging bespeur nie. Kies asseblief 'n stad met die hand of probeer weer."
 }

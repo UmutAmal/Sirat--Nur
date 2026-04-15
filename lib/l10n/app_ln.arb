@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Capteur ya boussole ezali te na appareil oyo.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Contenu ya Coran ekokaki kozala chargé te. Svp meka lisusu."
+  "quranLoadFailed": "Contenu ya Coran ekokaki kozala chargé te. Svp meka lisusu.",
+  "locationDetectionFailed": "Ekokaki te ko détecter esika ozali. Svp pona engumba moko na maboko to meka lisusu."
 }

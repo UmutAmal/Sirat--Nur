@@ -124,6 +124,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get locationPermissionDenied => 'הרשאת המיקום נדחתה.';
 
   @override
+  String get locationDetectionFailed =>
+      'לא ניתן היה לזהות את המיקום שלך. אנא בחר עיר באופן ידני או נסה שוב.';
+
+  @override
   String citiesCount(String count) {
     return '$count ערים';
   }

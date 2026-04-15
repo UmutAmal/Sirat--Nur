@@ -125,6 +125,10 @@ class AppLocalizationsMy extends AppLocalizations {
       'တည်နေရာခွင့်ပြုချက်ကို ငြင်းဆိုထားသည်။';
 
   @override
+  String get locationDetectionFailed =>
+      'သင့်တည်နေရာကို ရှာမတွေ့ပါ။ မြို့ကို ကိုယ်တိုင်ရွေးချယ်ပါ သို့မဟုတ် ထပ်စမ်းကြည့်ပါ။';
+
+  @override
   String citiesCount(String count) {
     return '$count မြို့များ';
   }

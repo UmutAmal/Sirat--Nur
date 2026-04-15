@@ -124,6 +124,10 @@ class AppLocalizationsUr extends AppLocalizations {
   String get locationPermissionDenied => 'مقام کی اجازت مسترد کر دی گئی۔';
 
   @override
+  String get locationDetectionFailed =>
+      'آپ کے مقام کا پتہ نہیں چل سکا۔ براہ کرم دستی طور پر شہر کا انتخاب کریں یا دوبارہ کوشش کریں۔';
+
+  @override
   String citiesCount(String count) {
     return '$count شہر';
   }

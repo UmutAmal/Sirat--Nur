@@ -124,6 +124,10 @@ class AppLocalizationsMk extends AppLocalizations {
   String get locationPermissionDenied => 'Дозволата за локација е одбиена.';
 
   @override
+  String get locationDetectionFailed =>
+      'Не може да се открие вашата локација. Изберете град рачно или обидете се повторно.';
+
+  @override
   String citiesCount(String count) {
     return '$count градови';
   }

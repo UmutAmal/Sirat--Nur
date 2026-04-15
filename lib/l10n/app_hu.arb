@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Az iránytűérzékelő nem érhető el ezen az eszközön.",
   "adhanNotificationChannelName": "Adhan értesítések",
   "adhanNotificationChannelDescription": "Az imaidő figyelmeztetések adhan hanggal.",
-  "quranLoadFailed": "A Korán tartalmat nem sikerült betölteni. Kérjük, próbálja újra."
+  "quranLoadFailed": "A Korán tartalmat nem sikerült betölteni. Kérjük, próbálja újra.",
+  "locationDetectionFailed": "Nem sikerült észlelni a tartózkodási helyét. Válasszon várost manuálisan, vagy próbálja újra."
 }

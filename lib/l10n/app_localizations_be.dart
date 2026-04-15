@@ -126,6 +126,10 @@ class AppLocalizationsBe extends AppLocalizations {
       'У дазволе на вызначэнне месцазнаходжання адмоўлена.';
 
   @override
+  String get locationDetectionFailed =>
+      'Не ўдалося вызначыць ваша месцазнаходжанне. Выберыце горад уручную або паўтарыце спробу.';
+
+  @override
   String citiesCount(String count) {
     return '$count гарадоў';
   }

@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "މި ޑިވައިސްގައި ކޮމްޕަސް ސެންސަރެއް ނެތެވެ.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "ޤުރުއާން ކޮންޓެންޓް ލޯޑް ކުރެވޭ ގޮތެއް ނުވިއެވެ. އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ."
+  "quranLoadFailed": "ޤުރުއާން ކޮންޓެންޓް ލޯޑް ކުރެވޭ ގޮތެއް ނުވިއެވެ. އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ.",
+  "locationDetectionFailed": "ތިޔަ ލޮކޭޝަން ފާހަގަ ނުކުރެވުނެވެ. މެނުއަލްކޮށް ސިޓީއެއް ހޮއްވަވާ ނުވަތަ އަލުން މަސައްކަތް ކުރައްވާށެވެ."
 }

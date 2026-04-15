@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "เซ็นเซอร์เข็มทิศไม่พร้อมใช้งานบนอุปกรณ์นี้",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "ไม่สามารถโหลดเนื้อหาอัลกุรอานได้ โปรดลองอีกครั้ง"
+  "quranLoadFailed": "ไม่สามารถโหลดเนื้อหาอัลกุรอานได้ โปรดลองอีกครั้ง",
+  "locationDetectionFailed": "ตรวจไม่พบตำแหน่งของคุณ โปรดเลือกเมืองด้วยตนเองหรือลองอีกครั้ง"
 }

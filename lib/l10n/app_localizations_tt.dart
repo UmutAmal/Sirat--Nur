@@ -124,6 +124,10 @@ class AppLocalizationsTt extends AppLocalizations {
   String get locationPermissionDenied => 'Урын рөхсәте кире кагылды.';
 
   @override
+  String get locationDetectionFailed =>
+      'Сезнең урыныгызны таба алмадым. Зинһар, кул белән шәһәрне сайлагыз яки кабатлап карагыз.';
+
+  @override
   String citiesCount(String count) {
     return '$count шәһәрләр';
   }

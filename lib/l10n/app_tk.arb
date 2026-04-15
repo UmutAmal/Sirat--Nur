@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kompass datçigi bu enjamda elýeterli däl.",
   "adhanNotificationChannelName": "Adhan habarnamalary",
   "adhanNotificationChannelDescription": "Adhan sesi bilen doga wagty duýduryşlary.",
-  "quranLoadFailed": "Gurhanyň mazmuny ýüklenip bilinmedi. Gaýtadan synanyşmagyňyzy haýyş edýäris."
+  "quranLoadFailed": "Gurhanyň mazmuny ýüklenip bilinmedi. Gaýtadan synanyşmagyňyzy haýyş edýäris.",
+  "locationDetectionFailed": "Locationeriňizi anyklap bilmedim El bilen şäheri saýlaň ýa-da gaýtadan synanyşyň."
 }

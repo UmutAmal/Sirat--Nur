@@ -124,6 +124,10 @@ class AppLocalizationsSi extends AppLocalizations {
   String get locationPermissionDenied => 'ස්ථාන අවසරය ප්‍රතික්ෂේප විය.';
 
   @override
+  String get locationDetectionFailed =>
+      'ඔබගේ ස්ථානය හඳුනා ගැනීමට නොහැකි විය. කරුණාකර නගරයක් හස්තීයව තෝරන්න හෝ නැවත උත්සාහ කරන්න.';
+
+  @override
   String citiesCount(String count) {
     return '$count නගර';
   }

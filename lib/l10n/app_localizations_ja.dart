@@ -124,6 +124,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get locationPermissionDenied => '位置情報の許可が拒否されました。';
 
   @override
+  String get locationDetectionFailed =>
+      '現在地を検出できませんでした。都市を手動で選択するか、もう一度試してください。';
+
+  @override
   String citiesCount(String count) {
     return '$count 都市';
   }

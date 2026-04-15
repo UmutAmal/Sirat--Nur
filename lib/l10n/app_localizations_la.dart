@@ -124,6 +124,10 @@ class AppLocalizationsLa extends AppLocalizations {
   String get locationPermissionDenied => 'Locus permissu negavit.';
 
   @override
+  String get locationDetectionFailed =>
+      'Non locum tuum deprehendere. Elige civitatem tincidunt vel rursum.';
+
+  @override
   String citiesCount(String count) {
     return '$count urbes';
   }

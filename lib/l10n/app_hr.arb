@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Senzor kompasa nije dostupan na ovom uređaju.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Sadržaj Kur'ana nije se mogao učitati. Molimo pokušajte ponovo."
+  "quranLoadFailed": "Sadržaj Kur'ana nije se mogao učitati. Molimo pokušajte ponovo.",
+  "locationDetectionFailed": "Nije moguće otkriti vašu lokaciju. Please choose a city manually or try again."
 }

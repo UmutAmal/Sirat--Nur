@@ -124,6 +124,10 @@ class AppLocalizationsHt extends AppLocalizations {
   String get locationPermissionDenied => 'Pèmisyon kote yo refize.';
 
   @override
+  String get locationDetectionFailed =>
+      'Pa t \'kapab detekte kote ou ye a. Tanpri chwazi yon vil manyèlman oswa eseye ankò.';
+
+  @override
   String citiesCount(String count) {
     return '$count vil yo';
   }

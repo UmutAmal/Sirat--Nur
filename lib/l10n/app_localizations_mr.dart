@@ -124,6 +124,10 @@ class AppLocalizationsMr extends AppLocalizations {
   String get locationPermissionDenied => 'स्थान परवानगी नाकारली.';
 
   @override
+  String get locationDetectionFailed =>
+      'तुमचे स्थान शोधू शकलो नाही. कृपया व्यक्तिचलितपणे शहर निवडा किंवा पुन्हा प्रयत्न करा.';
+
+  @override
   String citiesCount(String count) {
     return '$count शहरे';
   }

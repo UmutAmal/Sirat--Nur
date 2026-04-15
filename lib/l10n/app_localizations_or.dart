@@ -124,6 +124,10 @@ class AppLocalizationsOr extends AppLocalizations {
   String get locationPermissionDenied => 'ଅବସ୍ଥାନ ଅନୁମତି ପ୍ରତ୍ୟାଖ୍ୟାନ |';
 
   @override
+  String get locationDetectionFailed =>
+      'ତୁମର ଅବସ୍ଥାନ ଚିହ୍ନଟ କରିପାରିଲା ନାହିଁ | ଦୟାକରି ମାନୁଆଲୀ ସହର ବାଛନ୍ତୁ କିମ୍ବା ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |';
+
+  @override
   String citiesCount(String count) {
     return '$count ସହରଗୁଡିକ |';
   }

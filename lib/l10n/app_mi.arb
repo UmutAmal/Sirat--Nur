@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Karekau te pūoko kāpehu i te wātea ki tēnei pūrere.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Matohi wa inoi me te tangi azan.",
-  "quranLoadFailed": "Kaore i taea te utaina nga ihirangi Quran. Me ngana ano."
+  "quranLoadFailed": "Kaore i taea te utaina nga ihirangi Quran. Me ngana ano.",
+  "locationDetectionFailed": "Kaore i kitea to waahi. Kōwhiria ā-ringatia tētahi tāone ka ngana anō rānei."
 }

@@ -124,6 +124,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get locationPermissionDenied => 'การอนุญาตตำแหน่งถูกปฏิเสธ';
 
   @override
+  String get locationDetectionFailed =>
+      'ตรวจไม่พบตำแหน่งของคุณ โปรดเลือกเมืองด้วยตนเองหรือลองอีกครั้ง';
+
+  @override
   String citiesCount(String count) {
     return '$count เมือง';
   }

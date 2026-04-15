@@ -124,6 +124,10 @@ class AppLocalizationsAm extends AppLocalizations {
   String get locationPermissionDenied => 'የአካባቢ ፈቃድ ተከልክሏል።';
 
   @override
+  String get locationDetectionFailed =>
+      'አካባቢህን ማወቅ አልተቻለም። እባክዎ ከተማን እራስዎ ይምረጡ ወይም እንደገና ይሞክሩ።';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

@@ -124,6 +124,10 @@ class AppLocalizationsSd extends AppLocalizations {
   String get locationPermissionDenied => 'جڳھ جي اجازت رد ڪئي وئي.';
 
   @override
+  String get locationDetectionFailed =>
+      'توھان جي جڳھ جي سڃاڻپ نه ٿي سگھي. مھرباني ڪري دستي طور شھر چونڊيو يا وري ڪوشش ڪريو.';
+
+  @override
   String citiesCount(String count) {
     return '$count شهر';
   }

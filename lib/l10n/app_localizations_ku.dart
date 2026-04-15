@@ -124,6 +124,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get locationPermissionDenied => 'Destûra cihan hat redkirin.';
 
   @override
+  String get locationDetectionFailed =>
+      'Cihê we nehat tespîtkirin. Ji kerema xwe bajarek bi destan hilbijêrin an dîsa biceribînin.';
+
+  @override
   String citiesCount(String count) {
     return '$count bajar';
   }

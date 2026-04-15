@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "مستشعر البوصلة غير متوفر على هذا الجهاز.",
   "adhanNotificationChannelName": "إشعارات الأذان",
   "adhanNotificationChannelDescription": "تنبيهات لأوقات الصلاة مع صوت الأذان.",
-  "quranLoadFailed": "لا يمكن تحميل محتوى القرآن. يرجى المحاولة مرة أخرى."
+  "quranLoadFailed": "لا يمكن تحميل محتوى القرآن. يرجى المحاولة مرة أخرى.",
+  "locationDetectionFailed": "لا يمكن الكشف عن موقعك. يرجى اختيار المدينة يدويًا أو حاول مرة أخرى."
 }

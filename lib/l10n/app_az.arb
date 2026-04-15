@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Bu cihazda kompas sensoru mövcud deyil.",
   "adhanNotificationChannelName": "Azan bildirişləri",
   "adhanNotificationChannelDescription": "Azan səsi ilə namaz vaxtı xəbərdarlığı.",
-  "quranLoadFailed": "Quran məzmununu yükləmək mümkün olmadı. Yenidən cəhd edin."
+  "quranLoadFailed": "Quran məzmununu yükləmək mümkün olmadı. Yenidən cəhd edin.",
+  "locationDetectionFailed": "Məkanınızı aşkar etmək mümkün olmadı. Lütfən, şəhəri əl ilə seçin və ya yenidən cəhd edin."
 }

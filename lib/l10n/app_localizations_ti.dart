@@ -124,6 +124,10 @@ class AppLocalizationsTi extends AppLocalizations {
   String get locationPermissionDenied => 'ናይ ቦታ ፍቓድ ተኸልኪሉ።';
 
   @override
+  String get locationDetectionFailed =>
+      'ኣቀማምጣኻ ክፈልጥ ኣይከኣለን። በጃኹም ብኢድኩም ከተማ ምረጹ ወይ ድማ እንደገና ፈትኑ።';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

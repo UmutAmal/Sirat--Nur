@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Sensor Compass li ser vê cîhazê ne berdest e.",
   "adhanNotificationChannelName": "Azan Notifications",
   "adhanNotificationChannelDescription": "Dema nimêjê bi dengê azanê hişyar dike.",
-  "quranLoadFailed": "Naveroka Quranê nehat barkirin. Ji kerema xwe dîsa biceribîne."
+  "quranLoadFailed": "Naveroka Quranê nehat barkirin. Ji kerema xwe dîsa biceribîne.",
+  "locationDetectionFailed": "Cihê we nehat tespîtkirin. Ji kerema xwe bajarek bi destan hilbijêrin an dîsa biceribînin."
 }

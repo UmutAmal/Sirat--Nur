@@ -151,6 +151,7 @@ void main() {
         const localizedKeys = [
           'locationServiceDisabled',
           'locationPermissionDenied',
+          'locationDetectionFailed',
           'citiesCount',
         ];
 

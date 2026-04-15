@@ -124,6 +124,10 @@ class AppLocalizationsSl extends AppLocalizations {
   String get locationPermissionDenied => 'Dovoljenje za lokacijo zavrnjeno.';
 
   @override
+  String get locationDetectionFailed =>
+      'Vaše lokacije ni bilo mogoče zaznati. Izberite mesto ročno ali poskusite znova.';
+
+  @override
   String citiesCount(String count) {
     return '$count mest';
   }

@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Níl braiteoir compáis ar fáil ar an ngléas seo.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Níorbh fhéidir ábhar an Quran a lódáil. Bain triail eile as."
+  "quranLoadFailed": "Níorbh fhéidir ábhar an Quran a lódáil. Bain triail eile as.",
+  "locationDetectionFailed": "Níorbh fhéidir do shuíomh a bhrath. Roghnaigh cathair de láimh nó bain triail eile as."
 }

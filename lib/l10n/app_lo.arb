@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "ເຊັນເຊີເຂັມທິດບໍ່ສາມາດໃຊ້ໄດ້ໃນອຸປະກອນນີ້.",
   "adhanNotificationChannelName": "ການແຈ້ງເຕືອນ Adhan",
   "adhanNotificationChannelDescription": "ແຈ້ງເຕືອນເວລາອະທິຖານດ້ວຍສຽງ adhan.",
-  "quranLoadFailed": "ເນື້ອຫາ Quran ບໍ່ສາມາດໂຫລດໄດ້. ກະລຸນາລອງອີກຄັ້ງ."
+  "quranLoadFailed": "ເນື້ອຫາ Quran ບໍ່ສາມາດໂຫລດໄດ້. ກະລຸນາລອງອີກຄັ້ງ.",
+  "locationDetectionFailed": "ບໍ່ສາມາດກວດພົບສະຖານທີ່ຂອງທ່ານໄດ້. ກະລຸນາເລືອກເມືອງດ້ວຍຕົນເອງ ຫຼືລອງໃໝ່ອີກ."
 }

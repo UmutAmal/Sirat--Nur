@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Sensorem Compass est in hac fabrica unavailable.",
   "adhanNotificationChannelName": "Adhan Suspendisse",
   "adhanNotificationChannelDescription": "Orationis tempus summis cum adhan sono.",
-  "quranLoadFailed": "Quran contentus non oneratus. Quaeso, iterum conare."
+  "quranLoadFailed": "Quran contentus non oneratus. Quaeso, iterum conare.",
+  "locationDetectionFailed": "Non locum tuum deprehendere. Elige civitatem tincidunt vel rursum."
 }

@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kompassensor er ikke tilgængelig på denne enhed.",
   "adhanNotificationChannelName": "Adhan-meddelelser",
   "adhanNotificationChannelDescription": "Bønnetidsalarmer med adhan-lyd.",
-  "quranLoadFailed": "Koranindhold kunne ikke indlæses. Prøv venligst igen."
+  "quranLoadFailed": "Koranindhold kunne ikke indlæses. Prøv venligst igen.",
+  "locationDetectionFailed": "Kunne ikke finde din placering. Vælg venligst en by manuelt, eller prøv igen."
 }

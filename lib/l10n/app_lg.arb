@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Sensulo ya kkampasi tesangibwa ku kyuma kino.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Ebirimu ku Quran tebyasobodde kutikkibwa. Nsaba oddemu ogezeeko."
+  "quranLoadFailed": "Ebirimu ku Quran tebyasobodde kutikkibwa. Nsaba oddemu ogezeeko.",
+  "locationDetectionFailed": "Teyasobodde kuzuula kifo kyo. Nsaba olonde ekibuga mu ngalo oba ddamu ogezeeko."
 }

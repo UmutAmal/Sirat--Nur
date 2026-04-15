@@ -124,6 +124,10 @@ class AppLocalizationsSn extends AppLocalizations {
   String get locationPermissionDenied => 'Mvumo yenzvimbo yarambwa.';
 
   @override
+  String get locationDetectionFailed =>
+      'Hatina kukwanisa kuona nzvimbo yako. Ndapota sarudza guta nemaoko kana edza zvakare.';
+
+  @override
   String citiesCount(String count) {
     return '$count maguta';
   }

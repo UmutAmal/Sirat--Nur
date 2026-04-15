@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "He device ah hian Compass sensor a awm lo.",
   "adhanNotificationChannelName": "Adhan Hriattirna",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Quran content a load thei lo. Khawngaihin han lo try leh teh."
+  "quranLoadFailed": "Quran content a load thei lo. Khawngaihin han lo try leh teh.",
+  "locationDetectionFailed": "I awmna hmun a detect thei lo. Khawpui pakhat chu manual-in thlang la, a nih loh leh han tum leh rawh."
 }

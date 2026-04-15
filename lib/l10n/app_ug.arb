@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "بۇ ئۈسكۈنىدە كومپاس سېنزور ئىشلەتكىلى بولمايدۇ.",
   "adhanNotificationChannelName": "Adhan ئۇقتۇرۇشى",
   "adhanNotificationChannelDescription": "ناماز ئاۋازى بىلەن ناماز ۋاقتى ئاگاھلاندۇرۇلىدۇ.",
-  "quranLoadFailed": "قۇرئان مەزمۇنىنى يۈكلەشكە بولمىدى. قايتا سىناڭ."
+  "quranLoadFailed": "قۇرئان مەزمۇنىنى يۈكلەشكە بولمىدى. قايتا سىناڭ.",
+  "locationDetectionFailed": "ئورنىڭىزنى بايقىيالمىدى. قولدا شەھەر تاللاڭ ياكى قايتا سىناڭ."
 }

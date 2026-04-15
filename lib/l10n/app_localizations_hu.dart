@@ -126,6 +126,10 @@ class AppLocalizationsHu extends AppLocalizations {
       'Helymeghatározási engedély megtagadva.';
 
   @override
+  String get locationDetectionFailed =>
+      'Nem sikerült észlelni a tartózkodási helyét. Válasszon várost manuálisan, vagy próbálja újra.';
+
+  @override
   String citiesCount(String count) {
     return '$count város';
   }

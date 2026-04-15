@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "سنسور قطب نما در این دستگاه در دسترس نیست.",
   "adhanNotificationChannelName": "اعلان های اذان",
   "adhanNotificationChannelDescription": "هشدار زمان نماز با صدای اذان.",
-  "quranLoadFailed": "محتوای قرآن بارگیری نشد. لطفا دوباره امتحان کنید."
+  "quranLoadFailed": "محتوای قرآن بارگیری نشد. لطفا دوباره امتحان کنید.",
+  "locationDetectionFailed": "موقعیت مکانی شما شناسایی نشد. لطفاً یک شهر را به صورت دستی انتخاب کنید یا دوباره امتحان کنید."
 }

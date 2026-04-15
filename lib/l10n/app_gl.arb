@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "O sensor do compás non está dispoñible neste dispositivo.",
   "adhanNotificationChannelName": "Notificacións de Adhan",
   "adhanNotificationChannelDescription": "Alertas de tempo de oración con son adhan.",
-  "quranLoadFailed": "Non se puido cargar o contido do Corán. Téntao de novo."
+  "quranLoadFailed": "Non se puido cargar o contido do Corán. Téntao de novo.",
+  "locationDetectionFailed": "Non se puido detectar a túa localización. Escolle unha cidade manualmente ou téntao de novo."
 }

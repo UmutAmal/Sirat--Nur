@@ -125,6 +125,10 @@ class AppLocalizationsMt extends AppLocalizations {
   String get locationPermissionDenied => 'Permess għall-post miċħud.';
 
   @override
+  String get locationDetectionFailed =>
+      'Ma setgħetx tiskopri l-lokalità tiegħek. Jekk jogħġbok agħżel belt manwalment jew erġa\' pprova.';
+
+  @override
   String citiesCount(String count) {
     return '$count bliet';
   }

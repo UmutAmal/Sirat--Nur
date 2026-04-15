@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Der Kompasssensor ist auf diesem Gerät nicht verfügbar.",
   "adhanNotificationChannelName": "Adhan-Benachrichtigungen",
   "adhanNotificationChannelDescription": "Gebetszeitwarnungen mit Adhan-Sound.",
-  "quranLoadFailed": "Koraninhalte konnten nicht geladen werden. Bitte versuchen Sie es erneut."
+  "quranLoadFailed": "Koraninhalte konnten nicht geladen werden. Bitte versuchen Sie es erneut.",
+  "locationDetectionFailed": "Ihr Standort konnte nicht ermittelt werden. Bitte wählen Sie manuell eine Stadt aus oder versuchen Sie es erneut."
 }

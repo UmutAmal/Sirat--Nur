@@ -125,6 +125,10 @@ class AppLocalizationsTs extends AppLocalizations {
   String get locationPermissionDenied => 'Mpfumelelo wa ndhawu wu ariwile.';
 
   @override
+  String get locationDetectionFailed =>
+      'A swi swi kotanga ku vona ndhawu ya wena. Hi kombela u hlawula doroba hi voko kutani u ringeta nakambe.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

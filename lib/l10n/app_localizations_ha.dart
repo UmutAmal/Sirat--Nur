@@ -124,6 +124,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get locationPermissionDenied => 'An ƙi izinin wurin.';
 
   @override
+  String get locationDetectionFailed =>
+      'An kasa gano wurin ku. Da fatan za a zaɓi birni da hannu ko a sake gwadawa.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

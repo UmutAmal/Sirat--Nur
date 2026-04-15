@@ -125,6 +125,10 @@ class AppLocalizationsOm extends AppLocalizations {
   String get locationPermissionDenied => 'Hayyamni iddoo dhorkame.';
 
   @override
+  String get locationDetectionFailed =>
+      'Bakka jirtu adda baasuu hin dandeenye. Maaloo magaalaa harkaan filadhu ykn irra deebi\'ii yaali.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

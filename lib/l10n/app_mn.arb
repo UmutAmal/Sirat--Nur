@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Энэ төхөөрөмж дээр луужин мэдрэгч боломжгүй байна.",
   "adhanNotificationChannelName": "Азаны мэдэгдлүүд",
   "adhanNotificationChannelDescription": "Залбирлын цагийг азаны дуугаар дохио өгдөг.",
-  "quranLoadFailed": "Коран судрын агуулгыг ачаалж чадсангүй. Дахин оролдоно уу."
+  "quranLoadFailed": "Коран судрын агуулгыг ачаалж чадсангүй. Дахин оролдоно уу.",
+  "locationDetectionFailed": "Таны байршлыг илрүүлж чадсангүй. Гараар хот сонгох эсвэл дахин оролдоно уу."
 }

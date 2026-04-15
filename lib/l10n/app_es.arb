@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "El sensor de brújula no está disponible en este dispositivo.",
   "adhanNotificationChannelName": "Notificaciones Adhan",
   "adhanNotificationChannelDescription": "Alertas de tiempo de oración con sonido adhan.",
-  "quranLoadFailed": "No se pudo cargar el contenido del Corán. Por favor inténtalo de nuevo."
+  "quranLoadFailed": "No se pudo cargar el contenido del Corán. Por favor inténtalo de nuevo.",
+  "locationDetectionFailed": "No se pudo detectar tu ubicación. Elija una ciudad manualmente o inténtelo nuevamente."
 }

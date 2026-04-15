@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Compass sensor a yi kumeki eka xitirhisiwa lexi.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Swilo leswi nga endzeni ka Quran a swi nga ta layichiwa. Hi kombela u ringeta nakambe."
+  "quranLoadFailed": "Swilo leswi nga endzeni ka Quran a swi nga ta layichiwa. Hi kombela u ringeta nakambe.",
+  "locationDetectionFailed": "A swi swi kotanga ku vona ndhawu ya wena. Hi kombela u hlawula doroba hi voko kutani u ringeta nakambe."
 }

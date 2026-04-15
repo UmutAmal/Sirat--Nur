@@ -124,6 +124,10 @@ class AppLocalizationsXh extends AppLocalizations {
   String get locationPermissionDenied => 'Imvume yendawo yaliwe.';
 
   @override
+  String get locationDetectionFailed =>
+      'Ayikwazanga ukubona indawo yakho. Nceda ukhethe isixeko ngesandla okanye uzame kwakhona.';
+
+  @override
   String citiesCount(String count) {
     return '$count izixeko';
   }

@@ -124,6 +124,10 @@ class AppLocalizationsKa extends AppLocalizations {
   String get locationPermissionDenied => 'მდებარეობის ნებართვა უარყოფილია.';
 
   @override
+  String get locationDetectionFailed =>
+      'თქვენი მდებარეობის აღმოჩენა ვერ მოხერხდა. გთხოვთ, აირჩიოთ ქალაქი ხელით ან სცადოთ ხელახლა.';
+
+  @override
   String citiesCount(String count) {
     return '$count ქალაქები';
   }

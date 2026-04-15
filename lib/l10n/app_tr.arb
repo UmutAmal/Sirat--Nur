@@ -51,6 +51,7 @@
   "currentLocation": "Mevcut Konum (GPS)",
   "locationServiceDisabled": "Konum servisleri kapalı.",
   "locationPermissionDenied": "Konum izni reddedildi.",
+  "locationDetectionFailed": "Konumunuz algılanamadı. Lütfen bir şehri elle seçin veya tekrar deneyin.",
   "citiesCount": "{count} şehir",
   "@citiesCount": {
     "placeholders": {

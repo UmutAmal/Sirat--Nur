@@ -125,6 +125,10 @@ class AppLocalizationsMi extends AppLocalizations {
       'I whakakorehia te whakaaetanga waahi.';
 
   @override
+  String get locationDetectionFailed =>
+      'Kaore i kitea to waahi. Kōwhiria ā-ringatia tētahi tāone ka ngana anō rānei.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

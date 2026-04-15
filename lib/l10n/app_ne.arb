@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "यस यन्त्रमा कम्पास सेन्सर उपलब्ध छैन।",
   "adhanNotificationChannelName": "Adhan सूचनाहरू",
   "adhanNotificationChannelDescription": "प्रार्थना समय अधान ध्वनि संग अलर्ट।",
-  "quranLoadFailed": "कुरान सामग्री लोड गर्न सकिएन। कृपया पुन: प्रयास गर्नुहोस्।"
+  "quranLoadFailed": "कुरान सामग्री लोड गर्न सकिएन। कृपया पुन: प्रयास गर्नुहोस्।",
+  "locationDetectionFailed": "तपाईंको स्थान पत्ता लगाउन सकेन। कृपया म्यानुअल रूपमा सहर छान्नुहोस् वा पुन: प्रयास गर्नुहोस्।"
 }

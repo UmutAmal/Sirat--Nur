@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Compass sensor tsis muaj nyob rau ntawm lub cuab yeej no.",
   "adhanNotificationChannelName": "Adhan Cov Lus Qhia",
   "adhanNotificationChannelDescription": "Lub sij hawm thov Vajtswv ceeb toom nrog adhan suab.",
-  "quranLoadFailed": "Cov ntsiab lus Quran tsis tuaj yeem thauj khoom. Thov rov sim dua."
+  "quranLoadFailed": "Cov ntsiab lus Quran tsis tuaj yeem thauj khoom. Thov rov sim dua.",
+  "locationDetectionFailed": "Nrhiav tsis tau koj qhov chaw nyob. Thov xaiv lub nroog manually lossis sim dua."
 }

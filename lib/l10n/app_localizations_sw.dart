@@ -124,6 +124,10 @@ class AppLocalizationsSw extends AppLocalizations {
   String get locationPermissionDenied => 'Ruhusa ya eneo imekataliwa.';
 
   @override
+  String get locationDetectionFailed =>
+      'Haikuweza kutambua eneo lako. Tafadhali chagua jiji wewe mwenyewe au ujaribu tena.';
+
+  @override
   String citiesCount(String count) {
     return '$count miji';
   }

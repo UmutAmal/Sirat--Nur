@@ -124,6 +124,10 @@ class AppLocalizationsSu extends AppLocalizations {
   String get locationPermissionDenied => 'Idin lokasi ditolak.';
 
   @override
+  String get locationDetectionFailed =>
+      'Teu bisa ngadeteksi lokasi anjeun. Mangga pilih kota sacara manual atawa cobian deui.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

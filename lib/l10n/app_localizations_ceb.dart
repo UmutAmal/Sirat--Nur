@@ -124,6 +124,10 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get locationPermissionDenied => 'Gidili ang pagtugot sa lokasyon.';
 
   @override
+  String get locationDetectionFailed =>
+      'Dili makit-an ang imong lokasyon. Palihug pagpili ug siyudad sa mano-mano o sulayi pag-usab.';
+
+  @override
   String citiesCount(String count) {
     return '$count nga mga siyudad';
   }

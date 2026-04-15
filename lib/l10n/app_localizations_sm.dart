@@ -124,6 +124,10 @@ class AppLocalizationsSm extends AppLocalizations {
   String get locationPermissionDenied => 'Te\'ena le faatagaga mo nofoaga.';
 
   @override
+  String get locationDetectionFailed =>
+      'Le mafai ona iloa lou nofoaga. Faamolemole filifili ma le lima se aai pe toe taumafai.';
+
+  @override
   String citiesCount(String count) {
     return '$count aai';
   }

@@ -126,6 +126,10 @@ class AppLocalizationsDv extends AppLocalizations {
   String get locationPermissionDenied => 'ލޮކޭޝަން ހުއްދައަށް އިންކާރުކޮށްފި.';
 
   @override
+  String get locationDetectionFailed =>
+      'ތިޔަ ލޮކޭޝަން ފާހަގަ ނުކުރެވުނެވެ. މެނުއަލްކޮށް ސިޓީއެއް ހޮއްވަވާ ނުވަތަ އަލުން މަސައްކަތް ކުރައްވާށެވެ.';
+
+  @override
   String citiesCount(String count) {
     return '$count ސިޓީތަކެވެ';
   }

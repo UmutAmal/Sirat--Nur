@@ -125,6 +125,10 @@ class AppLocalizationsBn extends AppLocalizations {
       'অবস্থানের অনুমতি অস্বীকার করা হয়েছে৷';
 
   @override
+  String get locationDetectionFailed =>
+      'আপনার অবস্থান সনাক্ত করা যায়নি. দয়া করে ম্যানুয়ালি একটি শহর বেছে নিন বা আবার চেষ্টা করুন।';
+
+  @override
   String citiesCount(String count) {
     return '$count শহর';
   }

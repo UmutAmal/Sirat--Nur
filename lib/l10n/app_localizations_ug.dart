@@ -124,6 +124,10 @@ class AppLocalizationsUg extends AppLocalizations {
   String get locationPermissionDenied => 'ئورۇن ئىجازىتى رەت قىلىندى.';
 
   @override
+  String get locationDetectionFailed =>
+      'ئورنىڭىزنى بايقىيالمىدى. قولدا شەھەر تاللاڭ ياكى قايتا سىناڭ.';
+
+  @override
   String citiesCount(String count) {
     return '$count شەھەرلەر';
   }

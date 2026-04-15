@@ -124,6 +124,10 @@ class AppLocalizationsKm extends AppLocalizations {
   String get locationPermissionDenied => 'ការអនុញ្ញាតទីតាំងត្រូវបានបដិសេធ។';
 
   @override
+  String get locationDetectionFailed =>
+      'មិនអាចរកឃើញទីតាំងរបស់អ្នកបានទេ។ សូមជ្រើសរើសទីក្រុងមួយដោយដៃ ឬព្យាយាមម្តងទៀត។';
+
+  @override
   String citiesCount(String count) {
     return '$count ទីក្រុង';
   }

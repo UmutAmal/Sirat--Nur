@@ -124,6 +124,10 @@ class AppLocalizationsMg extends AppLocalizations {
   String get locationPermissionDenied => 'Nolavina ny fahazoan-dàlana toerana.';
 
   @override
+  String get locationDetectionFailed =>
+      'Tsy hita ny toerana misy anao. Misafidiana tanàna iray azafady na andramo indray.';
+
+  @override
   String citiesCount(String count) {
     return '$count tanàna';
   }

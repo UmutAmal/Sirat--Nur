@@ -124,6 +124,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get locationPermissionDenied => 'تم رفض إذن تحديد الموقع.';
 
   @override
+  String get locationDetectionFailed =>
+      'لا يمكن الكشف عن موقعك. يرجى اختيار المدينة يدويًا أو حاول مرة أخرى.';
+
+  @override
   String citiesCount(String count) {
     return '$count المدن';
   }

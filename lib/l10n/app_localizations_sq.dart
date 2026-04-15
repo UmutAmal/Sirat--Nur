@@ -125,6 +125,10 @@ class AppLocalizationsSq extends AppLocalizations {
   String get locationPermissionDenied => 'Leja e vendndodhjes u refuzua.';
 
   @override
+  String get locationDetectionFailed =>
+      'Vendndodhja juaj nuk mund të zbulohej. Ju lutemi zgjidhni një qytet manualisht ose provoni përsëri.';
+
+  @override
   String citiesCount(String count) {
     return '$count qytete';
   }

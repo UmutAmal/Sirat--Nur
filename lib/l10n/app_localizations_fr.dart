@@ -127,6 +127,10 @@ class AppLocalizationsFr extends AppLocalizations {
       'Autorisation de localisation refusée.';
 
   @override
+  String get locationDetectionFailed =>
+      'Impossible de détecter votre position. Veuillez choisir une ville manuellement ou réessayer.';
+
+  @override
   String citiesCount(String count) {
     return '$count villes';
   }

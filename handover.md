@@ -4202,3 +4202,44 @@
 
 ### Sonraki Adım
 - UI'a görünen ham hata metni adaylarında sıradaki dosya `lib/features/settings/location_selection_page.dart`; `_showMessage('${l10n.error}: $error')` akışı incelenip güvenli localized mesaja çevrilecek.
+
+## 2026-04-15 TUR-107 — Localize Location Detection Failures
+
+### Yapılan İşlem
+- `lib/features/settings/location_selection_page.dart` GPS/konum algılama catch yolunda `${l10n.error}: $error` snackbar sızıntısı kaldırıldı.
+- Ham exception yalnızca `debugPrint('Location detection failed: $error')` içinde kaldı; kullanıcıya `l10n.locationDetectionFailed` gösteriliyor.
+- `locationDetectionFailed` anahtarı tüm `lib/l10n/app_*.arb` dosyalarına eklendi ve `flutter gen-l10n` ile generated dosyalar güncellendi.
+- `tool/translate_arb_keys.dart` bu kısa snackbar metnini single-line korumasına aldı.
+- `test/location_selection_page_test.dart` TR/EN metin doğrulaması ve ham `$error` snackbar source guard ile güçlendirildi.
+- `test/arb_ui_localization_test.dart` priority locale fallback guardına `locationDetectionFailed` eklendi.
+
+### Neden Yapıldı
+- `location_selection_page.dart:147` doğrudan `_showMessage('${l10n.error}: $error')` kullanıyordu.
+- Geolocator/platform/storage hataları kullanıcıya teknik veya İngilizce exception metni olarak çıkabiliyordu.
+- Servis kapalı ve izin reddi yolları zaten özel metne sahipti; genel detect/update failure için ayrı localized copy gerekiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\location_selection_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Konum algılama başarısız olduğunda kullanıcı artık ham platform/geocoder/storage exception metni görmez.
+- Mesaj tüm localization zincirinde var ve priority locale guard ile korunuyor.
+
+### Test Sonucu
+- `flutter test test/location_selection_page_test.dart test/arb_ui_localization_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`245/245`)
+- `git diff --check` PASS
+- `flutter doctor -v` Android için PASS; Chrome ve Visual Studio eksikleri Android release/test akışını durdurmayan non-critical ortam maddeleri olarak kaldı.
+
+### Risk Değişimi
+- Konum algılama snackbar'ında ham exception gösterme riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- Kalan ham hata adayları sırayla taranacak: `lib/features/library/library_page.dart`, `lib/features/library/hadith_list_page.dart`, `lib/features/settings/diagnostics_page.dart`, `lib/features/settings/quran_diagnostics.dart`.

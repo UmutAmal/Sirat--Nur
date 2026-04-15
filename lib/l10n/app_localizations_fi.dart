@@ -125,6 +125,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get locationPermissionDenied => 'Sijaintilupa evätty.';
 
   @override
+  String get locationDetectionFailed =>
+      'Sijaintiasi ei voitu havaita. Valitse kaupunki manuaalisesti tai yritä uudelleen.';
+
+  @override
   String citiesCount(String count) {
     return '$count kaupungeissa';
   }

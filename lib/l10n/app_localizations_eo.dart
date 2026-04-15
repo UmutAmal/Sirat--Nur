@@ -124,6 +124,10 @@ class AppLocalizationsEo extends AppLocalizations {
   String get locationPermissionDenied => 'Lokpermeso malakceptita.';
 
   @override
+  String get locationDetectionFailed =>
+      'Ne eblis detekti vian lokon. Bonvolu elekti urbon permane aŭ provi denove.';
+
+  @override
   String citiesCount(String count) {
     return '$count urboj';
   }

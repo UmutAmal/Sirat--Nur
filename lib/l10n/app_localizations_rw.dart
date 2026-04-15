@@ -124,6 +124,10 @@ class AppLocalizationsRw extends AppLocalizations {
   String get locationPermissionDenied => 'Uruhushya rwaho rwanze.';
 
   @override
+  String get locationDetectionFailed =>
+      'Could not detect your location. Please choose a city manually or try again.';
+
+  @override
   String citiesCount(String count) {
     return '$count imigi';
   }

@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Le capteur de boussole n'est pas disponible sur cet appareil.",
   "adhanNotificationChannelName": "Notifications Adhan",
   "adhanNotificationChannelDescription": "Alertes d'heure de prière avec le son adhan.",
-  "quranLoadFailed": "Le contenu du Coran n'a pas pu être chargé. Veuillez réessayer."
+  "quranLoadFailed": "Le contenu du Coran n'a pas pu être chargé. Veuillez réessayer.",
+  "locationDetectionFailed": "Impossible de détecter votre position. Veuillez choisir une ville manuellement ou réessayer."
 }

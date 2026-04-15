@@ -124,6 +124,10 @@ class AppLocalizationsLb extends AppLocalizations {
   String get locationPermissionDenied => 'Location Erlaabnis refuséiert.';
 
   @override
+  String get locationDetectionFailed =>
+      'Konnt Är Positioun net entdecken. Wielt w.e.g. eng Stad manuell oder probéiert nach eng Kéier.';
+
+  @override
   String citiesCount(String count) {
     return '$count Stied';
   }

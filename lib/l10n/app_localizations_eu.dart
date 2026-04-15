@@ -124,6 +124,10 @@ class AppLocalizationsEu extends AppLocalizations {
   String get locationPermissionDenied => 'Kokapen-baimena ukatu da.';
 
   @override
+  String get locationDetectionFailed =>
+      'Ezin izan da zure kokapena hauteman. Aukeratu hiri bat eskuz edo saiatu berriro.';
+
+  @override
   String citiesCount(String count) {
     return '$count hiriak';
   }

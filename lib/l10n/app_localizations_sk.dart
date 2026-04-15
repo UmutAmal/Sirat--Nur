@@ -125,6 +125,10 @@ class AppLocalizationsSk extends AppLocalizations {
       'Povolenie na umiestnenie bolo odmietnuté.';
 
   @override
+  String get locationDetectionFailed =>
+      'Nepodarilo sa zistiť vašu polohu. Vyberte mesto ručne alebo to skúste znova.';
+
+  @override
   String citiesCount(String count) {
     return '$count miest';
   }

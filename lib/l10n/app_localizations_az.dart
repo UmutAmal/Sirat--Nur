@@ -124,6 +124,10 @@ class AppLocalizationsAz extends AppLocalizations {
   String get locationPermissionDenied => 'Məkan icazəsi rədd edildi.';
 
   @override
+  String get locationDetectionFailed =>
+      'Məkanınızı aşkar etmək mümkün olmadı. Lütfən, şəhəri əl ilə seçin və ya yenidən cəhd edin.';
+
+  @override
   String citiesCount(String count) {
     return '$count şəhərlər';
   }

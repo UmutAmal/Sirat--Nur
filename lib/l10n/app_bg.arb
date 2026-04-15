@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Сензорът за компас не е наличен на това устройство.",
   "adhanNotificationChannelName": "Езан известия",
   "adhanNotificationChannelDescription": "Сигнали за време за молитва със звук на езан.",
-  "quranLoadFailed": "Съдържанието на Корана не можа да бъде заредено. Моля, опитайте отново."
+  "quranLoadFailed": "Съдържанието на Корана не можа да бъде заредено. Моля, опитайте отново.",
+  "locationDetectionFailed": "Could not detect your location. Моля, изберете град ръчно или опитайте отново."
 }

@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Inzwa yekhampasi ayitholakali kule divayisi.",
   "adhanNotificationChannelName": "Izaziso ze-Adhan",
   "adhanNotificationChannelDescription": "Izaziso zesikhathi somkhuleko ezinomsindo we-adhan.",
-  "quranLoadFailed": "Okuqukethwe kwe-Quran akukwazanga ukulayishwa. Sicela uzame futhi."
+  "quranLoadFailed": "Okuqukethwe kwe-Quran akukwazanga ukulayishwa. Sicela uzame futhi.",
+  "locationDetectionFailed": "Ayikwazanga ukubona indawo yakho. Sicela ukhethe idolobha mathupha noma uzame futhi."
 }

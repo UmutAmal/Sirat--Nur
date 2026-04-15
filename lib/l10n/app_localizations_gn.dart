@@ -126,6 +126,10 @@ class AppLocalizationsGn extends AppLocalizations {
       'Oñembotove permiso ubicación rehegua.';
 
   @override
+  String get locationDetectionFailed =>
+      'Ndaikatúi ohechakuaa moõpa reime. Eiporavo peteĩ táva nde po rupive térã eñeha’ã jey.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

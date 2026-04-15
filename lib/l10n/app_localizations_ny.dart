@@ -124,6 +124,10 @@ class AppLocalizationsNy extends AppLocalizations {
   String get locationPermissionDenied => 'Chilolezo cha malo chaletsedwa.';
 
   @override
+  String get locationDetectionFailed =>
+      'Sitinathe kuzindikira komwe muli. Chonde sankhani mzinda pamanja kapena yesaninso.';
+
+  @override
   String citiesCount(String count) {
     return '$count mizinda';
   }

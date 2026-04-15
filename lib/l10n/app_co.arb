@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "U sensoru di bussola ùn hè micca dispunibule nantu à stu dispusitivu.",
   "adhanNotificationChannelName": "Notifiche Adhan",
   "adhanNotificationChannelDescription": "Alerte di tempu di preghiera cù sonu adhan.",
-  "quranLoadFailed": "U cuntenutu di u Quran ùn pò micca esse caricatu. Per piacè pruvate di novu."
+  "quranLoadFailed": "U cuntenutu di u Quran ùn pò micca esse caricatu. Per piacè pruvate di novu.",
+  "locationDetectionFailed": "Ùn pudia micca detectà a vostra situazione. Per piacè sceglite una cità manualmente o pruvate di novu."
 }

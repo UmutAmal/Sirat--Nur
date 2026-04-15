@@ -52,7 +52,6 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
   String? _selectedCountry;
   bool _isDetecting = false;
 
-
   @override
   void dispose() {
     _searchController.dispose();
@@ -128,8 +127,6 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
         // Keep generic label when reverse geocoding fails.
       }
 
-
-
       await ref
           .read(settingsProvider.notifier)
           .updateLocation(
@@ -144,7 +141,8 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
       _showMessage('${l10n.location}: $locationName');
       context.pop();
     } catch (error) {
-      _showMessage('${l10n.error}: $error');
+      debugPrint('Location detection failed: $error');
+      _showMessage(l10n.locationDetectionFailed);
     } finally {
       if (mounted) {
         setState(() => _isDetecting = false);
@@ -261,8 +259,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
                     selected: isSelected,
                     selectedColor: AppColors.emerald,
                     onSelected: (_) => setState(
-                      () =>
-                          _selectedCountry = isSelected ? null : country,
+                      () => _selectedCountry = isSelected ? null : country,
                     ),
                   ),
                 );

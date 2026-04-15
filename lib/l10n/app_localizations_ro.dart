@@ -126,6 +126,10 @@ class AppLocalizationsRo extends AppLocalizations {
       'Permisiunea pentru locație a fost refuzată.';
 
   @override
+  String get locationDetectionFailed =>
+      'Nu s-a putut detecta locația dvs. Alegeți manual un oraș sau încercați din nou.';
+
+  @override
   String citiesCount(String count) {
     return '$count orașe';
   }

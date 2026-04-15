@@ -124,6 +124,10 @@ class AppLocalizationsLn extends AppLocalizations {
   String get locationPermissionDenied => 'Ndingisa ya esika eboyamaki.';
 
   @override
+  String get locationDetectionFailed =>
+      'Ekokaki te ko détecter esika ozali. Svp pona engumba moko na maboko to meka lisusu.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

@@ -124,6 +124,10 @@ class AppLocalizationsSo extends AppLocalizations {
   String get locationPermissionDenied => 'Ogolaanshiyaha goobta waa la diiday.';
 
   @override
+  String get locationDetectionFailed =>
+      'Lama ogaan karo goobtaada Fadlan gacanta ku dooro magaalo ama isku day mar kale.';
+
+  @override
   String citiesCount(String count) {
     return '$count cities';
   }

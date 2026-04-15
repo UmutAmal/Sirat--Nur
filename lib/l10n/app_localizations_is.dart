@@ -124,6 +124,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get locationPermissionDenied => 'Staðsetningarheimild hafnað.';
 
   @override
+  String get locationDetectionFailed =>
+      'Gat ekki greint staðsetningu þína. Vinsamlegast veldu borg handvirkt eða reyndu aftur.';
+
+  @override
   String citiesCount(String count) {
     return '$count borgir';
   }

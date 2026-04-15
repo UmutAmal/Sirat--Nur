@@ -125,6 +125,10 @@ class AppLocalizationsEl extends AppLocalizations {
   String get locationPermissionDenied => 'Η άδεια τοποθεσίας απορρίφθηκε.';
 
   @override
+  String get locationDetectionFailed =>
+      'Δεν ήταν δυνατός ο εντοπισμός της τοποθεσίας σας. Επιλέξτε μια πόλη με μη αυτόματο τρόπο ή δοκιμάστε ξανά.';
+
+  @override
   String citiesCount(String count) {
     return '$count πόλεις';
   }

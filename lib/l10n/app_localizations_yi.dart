@@ -124,6 +124,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get locationPermissionDenied => 'אָרט דערלויבעניש געלייקנט.';
 
   @override
+  String get locationDetectionFailed =>
+      'קען נישט דעטעקט דיין אָרט. ביטע קלייַבן אַ שטאָט מאַניואַלי אָדער פּרובירן ווידער.';
+
+  @override
   String citiesCount(String count) {
     return '$count שטעט';
   }

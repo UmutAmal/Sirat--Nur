@@ -124,6 +124,10 @@ class AppLocalizationsNo extends AppLocalizations {
   String get locationPermissionDenied => 'Plasseringstillatelse nektet.';
 
   @override
+  String get locationDetectionFailed =>
+      'Kunne ikke finne posisjonen din. Velg en by manuelt eller prøv på nytt.';
+
+  @override
   String citiesCount(String count) {
     return '$count byer';
   }

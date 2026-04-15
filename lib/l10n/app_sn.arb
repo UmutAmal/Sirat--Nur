@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Compass sensor haisi kuwanikwa pamudziyo uyu.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Nyevero yenguva yemunamato ine adhan ruzha.",
-  "quranLoadFailed": "Korani yatadza kurodha. Ndapota edza zvakare."
+  "quranLoadFailed": "Korani yatadza kurodha. Ndapota edza zvakare.",
+  "locationDetectionFailed": "Hatina kukwanisa kuona nzvimbo yako. Ndapota sarudza guta nemaoko kana edza zvakare."
 }

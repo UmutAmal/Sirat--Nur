@@ -125,6 +125,10 @@ class AppLocalizationsLv extends AppLocalizations {
   String get locationPermissionDenied => 'Atrašanās vietas atļauja liegta.';
 
   @override
+  String get locationDetectionFailed =>
+      'Nevarēja noteikt jūsu atrašanās vietu. Lūdzu, izvēlieties pilsētu manuāli vai mēģiniet vēlreiz.';
+
+  @override
   String citiesCount(String count) {
     return '$count pilsētas';
   }

@@ -124,6 +124,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get locationPermissionDenied => 'ການອະນຸຍາດສະຖານທີ່ຖືກປະຕິເສດ.';
 
   @override
+  String get locationDetectionFailed =>
+      'ບໍ່ສາມາດກວດພົບສະຖານທີ່ຂອງທ່ານໄດ້. ກະລຸນາເລືອກເມືອງດ້ວຍຕົນເອງ ຫຼືລອງໃໝ່ອີກ.';
+
+  @override
   String citiesCount(String count) {
     return '$count ເມືອງ';
   }

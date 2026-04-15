@@ -125,6 +125,10 @@ class AppLocalizationsKri extends AppLocalizations {
       'Dɛn nɔ gri fɔ gi pɔsin rayt fɔ mek di ples.';
 
   @override
+  String get locationDetectionFailed =>
+      'Nɔ bin ebul fɔ no usay yu de. Duya pik wan siti wit yu an ɔ tray bak.';
+
+  @override
   String citiesCount(String count) {
     return '$count siti dɛm';
   }

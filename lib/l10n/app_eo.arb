@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Kompasa sensilo ne disponeblas en ĉi tiu aparato.",
   "adhanNotificationChannelName": "Adhan Sciigoj",
   "adhanNotificationChannelDescription": "Atentigoj de preĝa tempo per adhan sono.",
-  "quranLoadFailed": "Korano-enhavo ne povis esti ŝargita. Bonvolu provi denove."
+  "quranLoadFailed": "Korano-enhavo ne povis esti ŝargita. Bonvolu provi denove.",
+  "locationDetectionFailed": "Ne eblis detekti vian lokon. Bonvolu elekti urbon permane aŭ provi denove."
 }

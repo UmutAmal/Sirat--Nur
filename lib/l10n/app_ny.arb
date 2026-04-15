@@ -762,5 +762,6 @@
   "qiblaSensorUnavailable": "Sensa ya Compass sichikupezeka pachidachi.",
   "adhanNotificationChannelName": "Zidziwitso za Adhan",
   "adhanNotificationChannelDescription": "Zidziwitso za nthawi ya mapemphero ndi mawu a adhan.",
-  "quranLoadFailed": "Zomwe zili mu Quran sizinathe kuyikidwa. Chonde yesaninso."
+  "quranLoadFailed": "Zomwe zili mu Quran sizinathe kuyikidwa. Chonde yesaninso.",
+  "locationDetectionFailed": "Sitinathe kuzindikira komwe muli. Chonde sankhani mzinda pamanja kapena yesaninso."
 }

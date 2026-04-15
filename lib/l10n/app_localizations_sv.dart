@@ -124,6 +124,10 @@ class AppLocalizationsSv extends AppLocalizations {
   String get locationPermissionDenied => 'Platstillstånd nekad.';
 
   @override
+  String get locationDetectionFailed =>
+      'Kunde inte identifiera din plats. Välj en stad manuellt eller försök igen.';
+
+  @override
   String citiesCount(String count) {
     return '$count städer';
   }
