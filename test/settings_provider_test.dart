@@ -61,30 +61,33 @@ void main() {
       expect(notifier.state.madhab, hanafiMadhab);
     });
 
-    test('loads saved preferences correctly and normalizes legacy values', () async {
-      SharedPreferences.setMockInitialValues({
-        'calculationMethod': 'Turkey',
-        'madhab': "Shafi'i",
-        'fajrAngle': 15.0,
-        'ishaAngle': 14.0,
-        'isDarkMode': false,
-        'audioVoice': 'Sudais',
-        'languageCode': 'tr',
-        'latitude': 41.0,
-        'longitude': 29.0,
-      });
-      prefs = await SharedPreferences.getInstance();
-      final notifier = SettingsNotifier(prefs);
-      expect(notifier.state.calculationMethod, diyanetPrayerMethod);
-      expect(notifier.state.madhab, shafiiMadhab);
-      expect(notifier.state.fajrAngle, 18.0);
-      expect(notifier.state.ishaAngle, 17.0);
-      expect(notifier.state.isDarkMode, false);
-      expect(notifier.state.audioVoice, sudaisVoice);
-      expect(notifier.state.languageCode, 'tr');
-      expect(notifier.state.latitude, 41.0);
-      expect(notifier.state.longitude, 29.0);
-    });
+    test(
+      'loads saved preferences correctly and normalizes legacy values',
+      () async {
+        SharedPreferences.setMockInitialValues({
+          'calculationMethod': 'Turkey',
+          'madhab': "Shafi'i",
+          'fajrAngle': 15.0,
+          'ishaAngle': 14.0,
+          'isDarkMode': false,
+          'audioVoice': 'Sudais',
+          'languageCode': 'tr',
+          'latitude': 41.0,
+          'longitude': 29.0,
+        });
+        prefs = await SharedPreferences.getInstance();
+        final notifier = SettingsNotifier(prefs);
+        expect(notifier.state.calculationMethod, diyanetPrayerMethod);
+        expect(notifier.state.madhab, shafiiMadhab);
+        expect(notifier.state.fajrAngle, 18.0);
+        expect(notifier.state.ishaAngle, 17.0);
+        expect(notifier.state.isDarkMode, false);
+        expect(notifier.state.audioVoice, sudaisVoice);
+        expect(notifier.state.languageCode, 'tr');
+        expect(notifier.state.latitude, 41.0);
+        expect(notifier.state.longitude, 29.0);
+      },
+    );
 
     test('updateLocation persists timezone in state and storage', () async {
       final notifier = SettingsNotifier(prefs);
@@ -104,65 +107,98 @@ void main() {
       expect(prefs.getString('timezone'), 'Europe/Istanbul');
     });
 
-    test('updateLocation applies official profile defaults for country code', () async {
-      final notifier = SettingsNotifier(prefs);
+    test(
+      'updateLocation applies official profile defaults for country code',
+      () async {
+        final notifier = SettingsNotifier(prefs);
 
-      await notifier.updateLocation(
-        3.1390,
-        101.6869,
-        'Kuala Lumpur, Malaysia',
-        timezone: 'Asia/Kuala_Lumpur',
-        countryCode: 'MY',
-      );
+        await notifier.updateLocation(
+          3.1390,
+          101.6869,
+          'Kuala Lumpur, Malaysia',
+          timezone: 'Asia/Kuala_Lumpur',
+          countryCode: 'MY',
+        );
 
-      expect(notifier.state.calculationMethod, jakimPrayerMethod);
-      expect(notifier.state.madhab, shafiiMadhab);
-      expect(notifier.state.fajrAngle, 20.0);
-      expect(notifier.state.ishaAngle, 18.0);
-      expect(prefs.getString('calculationMethod'), jakimPrayerMethod);
-      expect(prefs.getString('madhab'), shafiiMadhab);
-    });
+        expect(notifier.state.calculationMethod, jakimPrayerMethod);
+        expect(notifier.state.madhab, shafiiMadhab);
+        expect(notifier.state.fajrAngle, 20.0);
+        expect(notifier.state.ishaAngle, 18.0);
+        expect(prefs.getString('calculationMethod'), jakimPrayerMethod);
+        expect(prefs.getString('madhab'), shafiiMadhab);
+      },
+    );
 
-    test('updateCalculationMethod resets angles to the selected official profile', () async {
-      final notifier = SettingsNotifier(prefs);
-      await notifier.updateCustomAngles(14.5, 13.5);
+    test(
+      'updateLocation applies regional timezone profile when country code is missing',
+      () async {
+        final notifier = SettingsNotifier(prefs);
 
-      await notifier.updateCalculationMethod(ummAlQuraPrayerMethod);
+        await notifier.updateLocation(
+          25.2048,
+          55.2708,
+          'Dubai, United Arab Emirates',
+          timezone: 'Asia/Dubai',
+        );
 
-      expect(notifier.state.calculationMethod, ummAlQuraPrayerMethod);
-      expect(notifier.state.fajrAngle, 18.5);
-      expect(notifier.state.ishaAngle, 0.0);
-      expect(prefs.getDouble('fajrAngle'), 18.5);
-      expect(prefs.getDouble('ishaAngle'), 0.0);
-    });
+        expect(notifier.state.calculationMethod, dubaiPrayerMethod);
+        expect(notifier.state.madhab, hanbaliMadhab);
+        expect(notifier.state.fajrAngle, 18.2);
+        expect(notifier.state.ishaAngle, 18.2);
+        expect(prefs.getString('calculationMethod'), dubaiPrayerMethod);
+        expect(prefs.getString('madhab'), hanbaliMadhab);
+      },
+    );
 
-    test('clearManualLocation removes timezone from state and storage', () async {
-      SharedPreferences.setMockInitialValues({
-        'latitude': 21.3891,
-        'longitude': 39.8579,
-        'locationName': 'Makkah, Saudi Arabia',
-        'timezone': 'Asia/Riyadh',
-      });
-      prefs = await SharedPreferences.getInstance();
-      final notifier = SettingsNotifier(prefs);
+    test(
+      'updateCalculationMethod resets angles to the selected official profile',
+      () async {
+        final notifier = SettingsNotifier(prefs);
+        await notifier.updateCustomAngles(14.5, 13.5);
 
-      await notifier.clearManualLocation();
+        await notifier.updateCalculationMethod(ummAlQuraPrayerMethod);
 
-      expect(notifier.state.latitude, isNull);
-      expect(notifier.state.longitude, isNull);
-      expect(notifier.state.locationName, isNull);
-      expect(notifier.state.timezone, isNull);
-      expect(prefs.containsKey('timezone'), isFalse);
-    });
+        expect(notifier.state.calculationMethod, ummAlQuraPrayerMethod);
+        expect(notifier.state.fajrAngle, 18.5);
+        expect(notifier.state.ishaAngle, 0.0);
+        expect(prefs.getDouble('fajrAngle'), 18.5);
+        expect(prefs.getDouble('ishaAngle'), 0.0);
+      },
+    );
 
-    test('updateAudioVoice persists canonical ids instead of display labels', () async {
-      final notifier = SettingsNotifier(prefs);
+    test(
+      'clearManualLocation removes timezone from state and storage',
+      () async {
+        SharedPreferences.setMockInitialValues({
+          'latitude': 21.3891,
+          'longitude': 39.8579,
+          'locationName': 'Makkah, Saudi Arabia',
+          'timezone': 'Asia/Riyadh',
+        });
+        prefs = await SharedPreferences.getInstance();
+        final notifier = SettingsNotifier(prefs);
 
-      await notifier.updateAudioVoice('Male (Abdul Basit)');
+        await notifier.clearManualLocation();
 
-      expect(notifier.state.audioVoice, abdulBasetVoice);
-      expect(prefs.getString('audioVoice'), abdulBasetVoice);
-    });
+        expect(notifier.state.latitude, isNull);
+        expect(notifier.state.longitude, isNull);
+        expect(notifier.state.locationName, isNull);
+        expect(notifier.state.timezone, isNull);
+        expect(prefs.containsKey('timezone'), isFalse);
+      },
+    );
+
+    test(
+      'updateAudioVoice persists canonical ids instead of display labels',
+      () async {
+        final notifier = SettingsNotifier(prefs);
+
+        await notifier.updateAudioVoice('Male (Abdul Basit)');
+
+        expect(notifier.state.audioVoice, abdulBasetVoice);
+        expect(prefs.getString('audioVoice'), abdulBasetVoice);
+      },
+    );
 
     test('normalizeAudioVoice still accepts legacy typo labels', () {
       expect(normalizeAudioVoice('Male (AbdulBaset)'), abdulBasetVoice);

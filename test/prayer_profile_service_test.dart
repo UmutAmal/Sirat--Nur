@@ -45,6 +45,59 @@ void main() {
       expect(profile.calculationMethod, mwlPrayerMethod);
       expect(profile.madhab, shafiiMadhab);
     });
+
+    test('maps Gulf timezones when country code is unavailable', () {
+      final cases = <String, String>{
+        'Asia/Riyadh': ummAlQuraPrayerMethod,
+        'Asia/Dubai': dubaiPrayerMethod,
+        'Asia/Kuwait': kuwaitPrayerMethod,
+        'Asia/Qatar': qatarPrayerMethod,
+        'Asia/Bahrain': ummAlQuraPrayerMethod,
+        'Asia/Muscat': ummAlQuraPrayerMethod,
+      };
+
+      for (final entry in cases.entries) {
+        final profile = resolvePrayerProfile(timezone: entry.key);
+
+        expect(
+          profile.calculationMethod,
+          entry.value,
+          reason: '${entry.key} must not fall through to generic MWL',
+        );
+      }
+    });
+
+    test('maps regional Indonesia and Malaysia timezones', () {
+      final cases = <String, String>{
+        'Asia/Jakarta': kemenagPrayerMethod,
+        'Asia/Makassar': kemenagPrayerMethod,
+        'Asia/Jayapura': kemenagPrayerMethod,
+        'Asia/Pontianak': kemenagPrayerMethod,
+        'Asia/Kuala_Lumpur': jakimPrayerMethod,
+        'Asia/Kuching': jakimPrayerMethod,
+      };
+
+      for (final entry in cases.entries) {
+        final profile = resolvePrayerProfile(timezone: entry.key);
+
+        expect(profile.calculationMethod, entry.value);
+      }
+    });
+
+    test('limits ISNA timezone fallback to US and Canada zones', () {
+      expect(
+        resolvePrayerProfile(timezone: 'America/New_York').calculationMethod,
+        isnaPrayerMethod,
+      );
+      expect(
+        resolvePrayerProfile(timezone: 'America/Toronto').calculationMethod,
+        isnaPrayerMethod,
+      );
+      expect(
+        resolvePrayerProfile(timezone: 'America/Sao_Paulo').calculationMethod,
+        mwlPrayerMethod,
+      );
+    });
   });
 
   group('Prayer parameter builder', () {

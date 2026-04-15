@@ -173,6 +173,87 @@ const PrayerCalculationProfile _customProfile = PrayerCalculationProfile(
   sourceUrl: '',
 );
 
+const Map<String, PrayerCalculationProfile> _timezoneProfileFallbacks =
+    <String, PrayerCalculationProfile>{
+      'Africa/Algiers': _moroccoProfile,
+      'Africa/Cairo': _egyptianProfile,
+      'Africa/Casablanca': _moroccoProfile,
+      'Africa/Tunis': _moroccoProfile,
+      'America/Adak': _isnaProfile,
+      'America/Anchorage': _isnaProfile,
+      'America/Atikokan': _isnaProfile,
+      'America/Blanc-Sablon': _isnaProfile,
+      'America/Boise': _isnaProfile,
+      'America/Cambridge_Bay': _isnaProfile,
+      'America/Chicago': _isnaProfile,
+      'America/Coral_Harbour': _isnaProfile,
+      'America/Creston': _isnaProfile,
+      'America/Dawson': _isnaProfile,
+      'America/Dawson_Creek': _isnaProfile,
+      'America/Denver': _isnaProfile,
+      'America/Detroit': _isnaProfile,
+      'America/Edmonton': _isnaProfile,
+      'America/Fort_Nelson': _isnaProfile,
+      'America/Glace_Bay': _isnaProfile,
+      'America/Goose_Bay': _isnaProfile,
+      'America/Halifax': _isnaProfile,
+      'America/Indiana/Indianapolis': _isnaProfile,
+      'America/Indiana/Knox': _isnaProfile,
+      'America/Indiana/Marengo': _isnaProfile,
+      'America/Indiana/Petersburg': _isnaProfile,
+      'America/Indiana/Tell_City': _isnaProfile,
+      'America/Indiana/Vevay': _isnaProfile,
+      'America/Indiana/Vincennes': _isnaProfile,
+      'America/Indiana/Winamac': _isnaProfile,
+      'America/Inuvik': _isnaProfile,
+      'America/Iqaluit': _isnaProfile,
+      'America/Juneau': _isnaProfile,
+      'America/Kentucky/Louisville': _isnaProfile,
+      'America/Kentucky/Monticello': _isnaProfile,
+      'America/Los_Angeles': _isnaProfile,
+      'America/Menominee': _isnaProfile,
+      'America/Metlakatla': _isnaProfile,
+      'America/Moncton': _isnaProfile,
+      'America/New_York': _isnaProfile,
+      'America/Nome': _isnaProfile,
+      'America/North_Dakota/Beulah': _isnaProfile,
+      'America/North_Dakota/Center': _isnaProfile,
+      'America/North_Dakota/New_Salem': _isnaProfile,
+      'America/Phoenix': _isnaProfile,
+      'America/Puerto_Rico': _isnaProfile,
+      'America/Rankin_Inlet': _isnaProfile,
+      'America/Regina': _isnaProfile,
+      'America/Resolute': _isnaProfile,
+      'America/Sitka': _isnaProfile,
+      'America/St_Johns': _isnaProfile,
+      'America/Swift_Current': _isnaProfile,
+      'America/Toronto': _isnaProfile,
+      'America/Vancouver': _isnaProfile,
+      'America/Whitehorse': _isnaProfile,
+      'America/Winnipeg': _isnaProfile,
+      'America/Yakutat': _isnaProfile,
+      'America/Yellowknife': _isnaProfile,
+      'Asia/Bahrain': _ummAlQuraProfile,
+      'Asia/Dhaka': _karachiProfile,
+      'Asia/Dubai': _dubaiProfile,
+      'Asia/Jakarta': _kemenagProfile,
+      'Asia/Jayapura': _kemenagProfile,
+      'Asia/Kabul': _karachiProfile,
+      'Asia/Karachi': _karachiProfile,
+      'Asia/Kuala_Lumpur': _jakimProfile,
+      'Asia/Kuching': _jakimProfile,
+      'Asia/Kuwait': _kuwaitProfile,
+      'Asia/Makassar': _kemenagProfile,
+      'Asia/Muscat': _ummAlQuraProfile,
+      'Asia/Pontianak': _kemenagProfile,
+      'Asia/Qatar': _qatarProfile,
+      'Asia/Riyadh': _ummAlQuraProfile,
+      'Asia/Singapore': _muisProfile,
+      'Asia/Tehran': _tehranProfile,
+      'Europe/Istanbul': _diyanetProfile,
+      'Pacific/Honolulu': _isnaProfile,
+    };
+
 String normalizeCalculationMethod(String method) {
   final normalized = method.trim();
   switch (normalized) {
@@ -388,47 +469,7 @@ PrayerCalculationProfile resolvePrayerProfile({
     return _mwlShafiiProfile;
   }
 
-  if (normalizedTimezone.startsWith('America/')) {
-    return _isnaProfile;
-  }
-
-  if (normalizedTimezone == 'Asia/Tehran') {
-    return _tehranProfile;
-  }
-
-  if (normalizedTimezone == 'Asia/Karachi' ||
-      normalizedTimezone == 'Asia/Dhaka' ||
-      normalizedTimezone == 'Asia/Kabul') {
-    return _karachiProfile;
-  }
-
-  if (normalizedTimezone == 'Asia/Jakarta') {
-    return _kemenagProfile;
-  }
-
-  if (normalizedTimezone == 'Asia/Kuala_Lumpur') {
-    return _jakimProfile;
-  }
-
-  if (normalizedTimezone == 'Asia/Singapore') {
-    return _muisProfile;
-  }
-
-  if (normalizedTimezone == 'Europe/Istanbul') {
-    return _diyanetProfile;
-  }
-
-  if (normalizedTimezone == 'Africa/Cairo') {
-    return _egyptianProfile;
-  }
-
-  if (normalizedTimezone == 'Africa/Casablanca' ||
-      normalizedTimezone == 'Africa/Tunis' ||
-      normalizedTimezone == 'Africa/Algiers') {
-    return _moroccoProfile;
-  }
-
-  return _mwlShafiiProfile;
+  return _timezoneProfileFallbacks[normalizedTimezone] ?? _mwlShafiiProfile;
 }
 
 CalculationParameters buildCalculationParameters(

@@ -5905,3 +5905,40 @@
 
 ### Sonraki Adım
 - Yeni döngüde prayer profile coverage genişletilecek; ülke/timezone fallback haritasında resmi veya kabul gören profile eşleşmesi olmayan bölgeler skorlanacak.
+
+## 2026-04-15 TUR-153 — Harden Regional Prayer Profile Timezone Fallbacks
+
+### Yapılan İşlem
+- `resolvePrayerProfile` içindeki timezone fallback mantığı merkezi `_timezoneProfileFallbacks` tablosuna taşındı.
+- `America/*` genellemesi kaldırıldı; ISNA fallback'i yalnızca açıkça listelenmiş US/Canada timezone'larında kullanılacak şekilde sınırlandı.
+- Körfez timezone'ları ülke kodu gelmediğinde de mevcut kurum profilleriyle aynı profile bağlandı: `Asia/Riyadh`, `Asia/Bahrain`, `Asia/Muscat` -> Umm al-Qura; `Asia/Dubai` -> Dubai; `Asia/Kuwait` -> Kuwait; `Asia/Qatar` -> Qatar.
+- Endonezya ve Malezya için başkent dışı timezone'lar eklendi: `Asia/Makassar`, `Asia/Jayapura`, `Asia/Pontianak` -> KEMENAG; `Asia/Kuching` -> JAKIM.
+- `prayer_profile_service_test.dart` ve `settings_provider_test.dart` yeni regresyon matrisiyle genişletildi.
+
+### Neden Yapıldı
+- Ülke kodu her cihaz/geocoder akışında garanti değil; `updateLocation` ülke kodu yokken sadece timezone ile profil çözebiliyor.
+- Önceki resolver `America/*` ile tüm Amerika kıtasını ISNA'ya bağlıyordu; `America/Sao_Paulo` gibi Güney Amerika timezone'ları yanlış profile düşebiliyordu.
+- Körfez bölgelerinde ülke kodu yoksa `Asia/Dubai`, `Asia/Kuwait`, `Asia/Qatar`, `Asia/Riyadh` gibi timezone'lar generic MWL/Shafii fallback'e düşebiliyordu.
+- Kök sebep, timezone fallback'in açık kurum profili matrisi yerine geniş ve eksik `if` zinciri kullanmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Ülke kodu eksik olsa bile desteklenen Körfez/Güneydoğu Asya bölgeleri generic metoda düşmez.
+- Güney Amerika gibi açıkça ISNA kapsamı olarak modellenmemiş timezone'lar yanlışlıkla North America profili almaz.
+- Settings persistence hattı da bu davranışı testle doğruluyor; profile, madhab ve açı değerleri birlikte korunuyor.
+
+### Test Sonucu
+- `flutter test test\prayer_profile_service_test.dart test\settings_provider_test.dart --reporter compact` PASS (`25/25`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`316/316`)
+
+### Risk Değişimi
+- Ülke kodu eksikken yanlış namaz vakti kurum profiline düşme riski: `16/25 -> 4/25`
+
+### Sonraki Adım
+- Sonraki döngüde prayer notification/widget/cache hattında aynı resmi profil zincirinin tüm yüzeylerde drift etmediği yeniden taranacak.
