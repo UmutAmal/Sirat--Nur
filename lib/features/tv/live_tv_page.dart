@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:sirat_i_nur/core/utils/external_url.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 String buildLiveTvProviderErrorText(AppLocalizations l10n) {
@@ -22,7 +22,7 @@ String? _readLiveTvString(Object? value) {
 }
 
 bool _isAllowedLiveTvUrl(Uri uri) {
-  return uri.isScheme('https') || uri.isScheme('http');
+  return isExternalHttpUri(uri);
 }
 
 bool _isLiveTvSearchResultUrl(Uri uri) {
@@ -217,14 +217,15 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
     final stream = _streams[_selectedIndex];
     final uri = resolveLiveTvExternalUri(stream);
 
-    if (uri == null || !await canLaunchUrl(uri)) {
+    if (uri == null) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(AppLocalizations.of(context)!.streamError)),
       );
       return;
     }
-    await launchUrl(uri, mode: LaunchMode.externalApplication);
+
+    await launchExternalUri(context, uri);
   }
 
   @override

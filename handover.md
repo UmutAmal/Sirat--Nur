@@ -6441,3 +6441,36 @@
 
 ### Sonraki Adım
 - Sonraki dongude kalan dogrudan Live TV external launch akisi ortak URL helper'a alinacak mi kontrol edilecek; ardindan `prayerRemainingUnavailable`, `missingEnglish` ve genis locale fallback kalintilari icin sahte ceviri uretmeden kalite guard'lari genisletilecek.
+
+## 2026-04-15 TUR-167 — Harden Live TV External URL Boundary
+
+### Yapılan İşlem
+- Live TV URL sanitizer'i `isExternalHttpUri` ortak helper'ina baglandi; artik sadece host iceren `http`/`https` URI'leri kabul ediliyor.
+- `_openExternal`, `canLaunchUrl` + `launchUrl` akisi yerine merkezi `launchExternalUri` helper'ini kullanacak sekilde guncellendi.
+- Live TV testlerine host'suz `https:///missing-host` external URL ve embed candidate regresyonlari eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart:25` onceki akista yalnizca semayi kontrol ediyor, host'u zorunlu tutmuyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart:228` onceki akista Live TV external launch kendi ad-hoc `canLaunchUrl`/`launchUrl` sinirini kullaniyor, ortak failure guard'ini bypass ediyordu.
+- Kök sebep, Live TV'nin TUR-165'te eklenen merkezi dis URL sinirindan ayri kalmasiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\live_tv_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Host'suz veya malformed HTTP(S) Live TV URL'leri WebView candidate zincirine ya da external launch'a ilerleyemez.
+- Live TV external launch basarisizligi merkezi helper tarafindan kontrollu ve lokalize hata yoluna girer.
+- External URL hardening tek helper sinirinda toplandigi icin ayni hata sinifi daha zor tekrar eder.
+
+### Test Sonucu
+- `flutter test test\live_tv_page_test.dart test\external_url_test.dart` PASS (`8/8`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`340/340`)
+
+### Risk Değişimi
+- Live TV host'suz/malformed URL'nin WebView veya external launch'a sizma riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- Sonraki dongude l10n kalite taramasinda `prayerRemainingUnavailable`, `missingEnglish` ve fallback-English kalintilarinin hangi locale/test kapsami disinda kaldigi kanitlanacak; dogrulanabilir olanlar duzeltilecek, dogrulanamayanlar icin sahte ceviri yerine guard/rapor stratejisi uygulanacak.

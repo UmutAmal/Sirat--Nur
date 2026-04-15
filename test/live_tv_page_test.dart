@@ -50,6 +50,10 @@ void main() {
       expect(resolveLiveTvExternalUri({'external_url': 42}), isNull);
       expect(resolveLiveTvExternalUri({'external_url': 'not a url'}), isNull);
       expect(
+        resolveLiveTvExternalUri({'external_url': 'https:///missing-host'}),
+        isNull,
+      );
+      expect(
         resolveLiveTvExternalUri({'external_url': 'javascript:alert(1)'}),
         isNull,
       );
@@ -85,7 +89,7 @@ void main() {
       'candidate resolver falls back to external web URL when embeds fail',
       () {
         final candidates = resolveLiveTvCandidateUrls({
-          'embed_url': 'javascript:alert(1)',
+          'embed_url': 'https:///missing-host',
           'fallback_embed_url': 7,
           'external_url': 'https://example.com/live',
         });
