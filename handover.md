@@ -4281,3 +4281,44 @@
 
 ### Sonraki Adım
 - Kalan ham/teknik hata adaylarında `lib/features/settings/diagnostics_page.dart` ve `lib/features/settings/quran_diagnostics.dart` incelenecek; diagnostics yüzeyinde kullanıcıya güvenli özet, geliştiriciye yeterli ayrıntı dengesi korunacak.
+
+## 2026-04-15 TUR-109 — Sanitize Diagnostics Error Output
+
+### Yapılan İşlem
+- `lib/features/settings/diagnostics_page.dart` FutureBuilder hata ekranında `${snapshot.error}` gösterimi kaldırıldı.
+- Diagnostics genel hata metni `buildDiagnosticsErrorText(l10n)` helper'ına taşındı ve mevcut localized `l10n.error` + `l10n.checkConnection` metniyle güvenli hale getirildi.
+- Quran cloud diagnostic callback zinciri artık raw `Object error` taşımaz; bilinmeyen cloud/structural hatalar `l10n.appUnknownError` ile lokalize özetlenir.
+- `lib/features/settings/quran_diagnostics.dart` bilinen Supabase eksik tablo/kolon hatalarını tanımaya devam eder, ama raw exception callback'e ve UI'a aktarılmaz.
+- Asset manifest okuma hatasında raw detail UI'a basılmıyor; yalnızca debug log için `Error.safeToString` ile teknik kayıt tutuluyor.
+- `test/quran_diagnostics_test.dart` bilinmeyen Supabase/structural hata metinlerinin redakte edildiğini doğrulayan iki regresyon testi kazandı.
+- `test/features/settings/diagnostics_page_test.dart` genel diagnostics hata metninin TR/EN lokalize ve raw exception'dan arındırılmış olduğunu doğruluyor.
+
+### Neden Yapıldı
+- `diagnostics_page.dart:483` doğrudan `${l10n.error}: ${snapshot.error}` gösteriyordu.
+- `diagnostics_page.dart:332`, `diagnostics_page.dart:334` ve `diagnostics_page.dart:430` raw `error.toString()` değerini localization placeholder'ına geçiriyordu.
+- `quran_diagnostics.dart:78` ve `quran_diagnostics.dart:95` exception metnini hem sınıflandırma hem callback yolu için kullanıyordu; bu zincir bilinmeyen provider/Supabase ayrıntılarını kullanıcıya sızdırabiliyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\quran_diagnostics.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\quran_diagnostics_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Diagnostics ekranı kullanıcıya artık raw Supabase/provider/manifest exception metni göstermez.
+- Eksik Quran cloud tablo/kolon durumları için dürüst ve özel fallback mesajları korunur.
+- Bilinmeyen hata ayrıntıları UI yerine yalnızca debug log/diagnostic fingerprint seviyesinde kalır.
+
+### Test Sonucu
+- İlk hedef test koşusu `Error.safeToString` fingerprint'i fazla maskelediği için iki sınıflandırma testinde FAIL verdi; root cause izole edilip fingerprint `StringBuffer.write(error)` ile UI sızıntısı açmadan düzeltildi.
+- `flutter test test/quran_diagnostics_test.dart test/features/settings/diagnostics_page_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`248/248`)
+- `git diff --check` PASS
+
+### Risk Değişimi
+- Diagnostics ekranında raw teknik hata sızıntısı riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni tarama döngüsünde kalan kullanıcıya görünen raw hata/placeholder/TODO yüzeyleri tekrar aranacak; öncelik `lib/features/**` UI akışları ve audio/download false-success zinciri olacak.

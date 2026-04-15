@@ -5,6 +5,7 @@ import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/features/settings/diagnostics_page.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class _NoopAudioEngine implements SovereignAudioEngine {
   @override
@@ -171,6 +172,25 @@ void main() {
       'Kurumsal kaynak yok',
     );
     expect(isOfficialPrayerProfile(profile), isFalse);
+  });
+
+  test('buildDiagnosticsErrorText is localized and hides raw exceptions', () {
+    final en = lookupAppLocalizations(const Locale('en'));
+    final tr = lookupAppLocalizations(const Locale('tr'));
+
+    expect(
+      buildDiagnosticsErrorText(en),
+      'Error\nPlease check your connection',
+    );
+    expect(
+      buildDiagnosticsErrorText(tr),
+      'Hata\nLütfen bağlantınızı kontrol edin',
+    );
+    expect(
+      buildDiagnosticsErrorText(en),
+      isNot(contains('PostgrestException')),
+    );
+    expect(buildDiagnosticsErrorText(tr), isNot(contains('schema cache')));
   });
 
   test(

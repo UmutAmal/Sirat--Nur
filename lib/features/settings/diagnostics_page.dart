@@ -127,6 +127,11 @@ String resolvePrayerSourceValue(
 }
 
 @visibleForTesting
+String buildDiagnosticsErrorText(AppLocalizations l10n) {
+  return '${l10n.error}\n${l10n.checkConnection}';
+}
+
+@visibleForTesting
 class AudioDiagnosticsSnapshot {
   final int adhanAssetsPresent;
   final int uiAssetsPresent;
@@ -328,10 +333,12 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
             juzMetadataLabel: l10n.diagnosticsQuranJuzMetadata,
             cloudTablesMissing: l10n.diagnosticsQuranCloudTablesMissing,
             cloudJuzMissing: l10n.diagnosticsQuranCloudJuzMissing,
-            cloudCheckFailed: (error) =>
-                l10n.diagnosticsQuranCloudCheckFailed(error.toString()),
-            cloudStructuralCheckFailed: (error) => l10n
-                .diagnosticsQuranCloudStructuralCheckFailed(error.toString()),
+            cloudCheckFailed: () =>
+                l10n.diagnosticsQuranCloudCheckFailed(l10n.appUnknownError),
+            cloudStructuralCheckFailed: () =>
+                l10n.diagnosticsQuranCloudStructuralCheckFailed(
+                  l10n.appUnknownError,
+                ),
           ),
           surahCount: surahCount,
           ayahCount: ayahCount,
@@ -349,10 +356,12 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
             juzMetadataLabel: l10n.diagnosticsQuranJuzMetadata,
             cloudTablesMissing: l10n.diagnosticsQuranCloudTablesMissing,
             cloudJuzMissing: l10n.diagnosticsQuranCloudJuzMissing,
-            cloudCheckFailed: (err) =>
-                l10n.diagnosticsQuranCloudCheckFailed(err.toString()),
-            cloudStructuralCheckFailed: (err) =>
-                l10n.diagnosticsQuranCloudStructuralCheckFailed(err.toString()),
+            cloudCheckFailed: () =>
+                l10n.diagnosticsQuranCloudCheckFailed(l10n.appUnknownError),
+            cloudStructuralCheckFailed: () =>
+                l10n.diagnosticsQuranCloudStructuralCheckFailed(
+                  l10n.appUnknownError,
+                ),
           ),
           error: error,
         ).map((row) => _DiagnosticRow(row.label, row.value, row.isHealthy)),
@@ -424,10 +433,13 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
         ),
       );
     } catch (error) {
+      debugPrint(
+        'Diagnostics asset manifest read failed: ${Error.safeToString(error)}',
+      );
       rows.add(
         _DiagnosticRow(
           l10n.diagnosticsAudioAssets,
-          l10n.diagnosticsManifestReadFailed(error.toString()),
+          l10n.diagnosticsManifestReadFailed(l10n.appUnknownError),
           false,
         ),
       );
@@ -480,7 +492,7 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
               child: Padding(
                 padding: const EdgeInsets.all(24),
                 child: Text(
-                  '${l10n.error}: ${snapshot.error}',
+                  buildDiagnosticsErrorText(l10n),
                   textAlign: TextAlign.center,
                 ),
               ),

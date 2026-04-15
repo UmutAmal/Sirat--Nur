@@ -13,8 +13,8 @@ class QuranDiagnosticStrings {
   final String juzMetadataLabel;
   final String cloudTablesMissing;
   final String cloudJuzMissing;
-  final String Function(Object error) cloudCheckFailed;
-  final String Function(Object error) cloudStructuralCheckFailed;
+  final String Function() cloudCheckFailed;
+  final String Function() cloudStructuralCheckFailed;
 
   const QuranDiagnosticStrings({
     required this.datasetLabel,
@@ -26,6 +26,11 @@ class QuranDiagnosticStrings {
     required this.cloudCheckFailed,
     required this.cloudStructuralCheckFailed,
   });
+}
+
+String _diagnosticErrorFingerprint(Object error) {
+  final buffer = StringBuffer()..write(error);
+  return buffer.toString().toLowerCase();
 }
 
 List<QuranDiagnosticRowData> buildQuranDiagnosticRows({
@@ -71,13 +76,11 @@ List<QuranDiagnosticRowData> buildQuranDiagnosticRows({
   ];
 }
 
-String summarizeQuranCloudError(
-  Object error,
-  QuranDiagnosticStrings strings,
-) {
-  final message = error.toString();
-  final normalized = message.toLowerCase();
-  final isMissingTable = normalized.contains('pgrst205') ||
+String summarizeQuranCloudError(Object error, QuranDiagnosticStrings strings) {
+  // Fingerprint only; raw exception text must never be displayed in UI.
+  final normalized = _diagnosticErrorFingerprint(error);
+  final isMissingTable =
+      normalized.contains('pgrst205') ||
       normalized.contains('could not find the table') ||
       normalized.contains('schema cache');
 
@@ -85,16 +88,17 @@ String summarizeQuranCloudError(
     return strings.cloudTablesMissing;
   }
 
-  return strings.cloudCheckFailed(error);
+  return strings.cloudCheckFailed();
 }
 
 String summarizeQuranStructuralError(
   Object error,
   QuranDiagnosticStrings strings,
 ) {
-  final message = error.toString();
-  final normalized = message.toLowerCase();
-  final isMissingColumn = normalized.contains('juz_number') &&
+  // Fingerprint only; raw exception text must never be displayed in UI.
+  final normalized = _diagnosticErrorFingerprint(error);
+  final isMissingColumn =
+      normalized.contains('juz_number') &&
       (normalized.contains('column') ||
           normalized.contains('schema cache') ||
           normalized.contains('pgrst'));
@@ -103,5 +107,5 @@ String summarizeQuranStructuralError(
     return strings.cloudJuzMissing;
   }
 
-  return strings.cloudStructuralCheckFailed(error);
+  return strings.cloudStructuralCheckFailed();
 }
