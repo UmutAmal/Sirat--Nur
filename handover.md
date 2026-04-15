@@ -5682,3 +5682,40 @@
 
 ### Sonraki Adım
 - Yeni döngüde audio storage URL üretiminin birden fazla dosyada kopyalanması taranacak; risk anlamlıysa minimal shared helper ile drift/encoding hatası azaltılacak.
+
+## 2026-04-15 TUR-147 — Consolidate Supabase Storage URL Helpers
+
+### Yapılan İşlem
+- `lib/core/network/supabase_storage_url.dart` eklendi; Supabase Storage object path normalizasyonu ve public URL üretimi tek hafif helper'a toplandı.
+- `offline_audio_service.dart` mevcut public `normalizeStorageObjectPath` ve `buildSupabaseStoragePublicUrl` API'lerini wrapper olarak korudu; dış import sözleşmesi bozulmadı.
+- `duas_data.dart` ve `asma_ul_husna_data.dart` içindeki private duplicate storage URL builder'lar kaldırıldı.
+- `generate_quran_audio_storage_seed.dart` kendi duplicate object path normalizer'ı yerine ortak helper'ı kullanacak şekilde değiştirildi.
+- `supabase_storage_url_test.dart` bucket prefix temizleme, leading slash temizleme, Windows path separator ve URL encoding davranışlarını sabitledi.
+
+### Neden Yapıldı
+- TUR-144, TUR-145 ve TUR-146 sonrası Quran, sukun, dua, adhan ve Asma audio zincirleri owned Supabase Storage'a bağlandı; ancak URL üretme mantığı `offline_audio_service.dart`, `duas_data.dart`, `asma_ul_husna_data.dart` ve tool içinde kopyalanmıştı.
+- Bu tekrar, bucket prefix kuralı veya URL encoding davranışı ileride bir dosyada güncellenip diğerlerinde kalırsa storage-backed seslerin bir bölümünde sessiz 404/drift riski doğuruyordu.
+- Kök sebep, storage URL sözleşmesinin network/config katmanında tek kaynak yerine feature ve tool dosyalarına dağılmış olmasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran/sukun, dua, Asma ve storage seed üretimi aynı path normalizasyon + URL encoding kuralını kullanıyor.
+- Eski testlerin import ettiği `offline_audio_service.dart` public helper isimleri çalışmaya devam ediyor.
+- Storage bucket prefix'i path içinde verilse de verilmese de aynı object URL'i üretiliyor.
+
+### Test Sonucu
+- `flutter test test\supabase_storage_url_test.dart test\offline_audio_service_test.dart test\duas_data_test.dart test\asma_ul_husna_data_test.dart test\generate_quran_audio_storage_seed_test.dart --reporter compact` PASS (`33/33`)
+
+### Risk Değişimi
+- Supabase Storage public URL üretim mantığının feature/tool dosyaları arasında drift etme riski: `9/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde Places/Overpass parsing ve map data hata yüzeyi taranacak; özellikle beklenmeyen JSON tiplerinin kullanıcıya yanlış veya ham hata olarak yansıma ihtimali skorlanacak.

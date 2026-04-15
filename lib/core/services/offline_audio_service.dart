@@ -4,6 +4,8 @@ import 'package:dio/dio.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
+import 'package:sirat_i_nur/core/network/supabase_storage_url.dart'
+    as storage_url;
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 typedef SurahDownloadProgress =
@@ -35,7 +37,10 @@ String? resolvePlayableCloudAudioUrl(
 }) {
   final storagePath = row['storage_path']?.toString().trim();
   if (storagePath != null && storagePath.isNotEmpty) {
-    return buildSupabaseStoragePublicUrl(storagePath, bucketName: bucketName);
+    return storage_url.buildSupabaseStoragePublicUrl(
+      storagePath,
+      bucketName: bucketName,
+    );
   }
 
   for (final key in const ['url']) {
@@ -71,18 +76,10 @@ String normalizeStorageObjectPath(
   String storagePath, {
   String bucketName = SupabaseConfig.quranAudioBucket,
 }) {
-  final normalized = storagePath.trim().replaceAll('\\', '/');
-  if (normalized.isEmpty) {
-    return normalized;
-  }
-
-  final withoutLeadingSlash = normalized.replaceFirst(RegExp(r'^/+'), '');
-  final bucketPrefix = '$bucketName/';
-  if (withoutLeadingSlash.startsWith(bucketPrefix)) {
-    return withoutLeadingSlash.substring(bucketPrefix.length);
-  }
-
-  return withoutLeadingSlash;
+  return storage_url.normalizeSupabaseStorageObjectPath(
+    storagePath,
+    bucketName: bucketName,
+  );
 }
 
 String buildSupabaseStoragePublicUrl(
@@ -90,17 +87,11 @@ String buildSupabaseStoragePublicUrl(
   String supabaseUrl = SupabaseConfig.url,
   String bucketName = SupabaseConfig.quranAudioBucket,
 }) {
-  final normalizedPath = normalizeStorageObjectPath(
+  return storage_url.buildSupabaseStoragePublicUrl(
     storagePath,
+    supabaseUrl: supabaseUrl,
     bucketName: bucketName,
   );
-  final encodedSegments = normalizedPath
-      .split('/')
-      .where((segment) => segment.isNotEmpty)
-      .map(Uri.encodeComponent)
-      .join('/');
-
-  return '$supabaseUrl/storage/v1/object/public/$bucketName/$encodedSegments';
 }
 
 Map<int, String> resolveCloudQuranSurahUrls(

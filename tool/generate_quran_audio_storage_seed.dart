@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:path/path.dart' as p;
+import 'package:sirat_i_nur/core/network/supabase_storage_url.dart';
 
 const String _defaultManifestPath = 'build/verified_quran_audio/manifest.json';
 const String _defaultOutputPath = 'content_seed_quran_audio_storage.sql';
@@ -36,24 +37,6 @@ class MirroredAudioFile {
     final fileName = p.basename(localPath);
     return '$bucketName/$reciterId/$fileName';
   }
-}
-
-String _normalizeStorageObjectPath(
-  String storagePath, {
-  required String bucketName,
-}) {
-  final normalized = storagePath.trim().replaceAll('\\', '/');
-  if (normalized.isEmpty) {
-    return normalized;
-  }
-
-  final withoutLeadingSlash = normalized.replaceFirst(RegExp(r'^/+'), '');
-  final bucketPrefix = '$bucketName/';
-  if (withoutLeadingSlash.startsWith(bucketPrefix)) {
-    return withoutLeadingSlash.substring(bucketPrefix.length);
-  }
-
-  return withoutLeadingSlash;
 }
 
 List<MirroredAudioFile> parseMirroredAudioManifest(
@@ -224,7 +207,7 @@ String buildQuranAudioStorageSeedSql(
     ..writeln();
 
   for (final file in rows) {
-    final storagePath = _normalizeStorageObjectPath(
+    final storagePath = normalizeSupabaseStorageObjectPath(
       file.storagePath(bucketName: bucketName),
       bucketName: bucketName,
     );

@@ -1,5 +1,6 @@
 // Verified Quranic dua fallback collection derived from the bundled Quran seed.
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
+import 'package:sirat_i_nur/core/network/supabase_storage_url.dart';
 
 class DuaData {
   final String id;
@@ -83,7 +84,7 @@ String _resolveCloudDuaAudioUrl(Map<String, dynamic> row) {
     'storagePath',
   ]);
   if (storagePath.isNotEmpty) {
-    return _buildSupabaseStoragePublicUrl(
+    return buildSupabaseStoragePublicUrl(
       storagePath,
       bucketName: SupabaseConfig.duaAudioBucket,
     );
@@ -101,27 +102,6 @@ String _readDuaString(Map<String, dynamic> row, List<String> keys) {
   }
 
   return '';
-}
-
-String _buildSupabaseStoragePublicUrl(
-  String storagePath, {
-  required String bucketName,
-}) {
-  final normalized = storagePath
-      .trim()
-      .replaceAll('\\', '/')
-      .replaceFirst(RegExp(r'^/+'), '');
-  final bucketPrefix = '$bucketName/';
-  final objectPath = normalized.startsWith(bucketPrefix)
-      ? normalized.substring(bucketPrefix.length)
-      : normalized;
-  final encodedSegments = objectPath
-      .split('/')
-      .where((segment) => segment.isNotEmpty)
-      .map(Uri.encodeComponent)
-      .join('/');
-
-  return '${SupabaseConfig.url}/storage/v1/object/public/$bucketName/$encodedSegments';
 }
 
 Map<String, String> _readDuaTranslations(dynamic rawTranslations) {
