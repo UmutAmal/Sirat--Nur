@@ -955,6 +955,8 @@ Map<String, dynamic> normalizeAsmaUlHusnaRow(Map<String, dynamic> row) {
   final arabic = _readAsmaString(row, ['name_ar', 'arabic', 'title_ar']);
   final translations = _readAsmaTranslations(row);
   final audioUrl = _readAsmaString(row, ['audio_url', 'audioUrl', 'url']);
+  final source = _readAsmaString(row, ['source', 'reference']);
+  final verifiedAt = _readAsmaString(row, ['verified_at', 'verifiedAt']);
 
   return {
     'id': id ?? '',
@@ -962,6 +964,8 @@ Map<String, dynamic> normalizeAsmaUlHusnaRow(Map<String, dynamic> row) {
     'transliteration': transliteration,
     'translations': translations,
     'audioUrl': audioUrl,
+    'source': source,
+    'verifiedAt': verifiedAt,
   };
 }
 
@@ -976,7 +980,9 @@ List<Map<String, dynamic>> resolveCloudAsmaUlHusnaRows(
 
     return (item['arabic'] ?? '').toString().trim().isNotEmpty &&
         (item['transliteration'] ?? '').toString().trim().isNotEmpty &&
-        hasTranslation;
+        hasTranslation &&
+        (item['source'] ?? '').toString().trim().isNotEmpty &&
+        (item['verifiedAt'] ?? '').toString().trim().isNotEmpty;
   }).toList();
 
   return parsed.isEmpty ? buildBundledAsmaUlHusnaFallback() : parsed;

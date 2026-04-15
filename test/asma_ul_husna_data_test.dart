@@ -21,6 +21,8 @@ void main() {
           'meaning_tr': 'Merhameti her seyi kusatan',
           'meaning_en': 'The Beneficent',
           'audio_url': 'https://example.com/001.mp3',
+          'source': 'TDV Islam Ansiklopedisi',
+          'verified_at': '2026-04-15T00:00:00Z',
         },
       ]);
 
@@ -37,6 +39,8 @@ void main() {
         'The Beneficent',
       );
       expect(resolved.first['audioUrl'], 'https://example.com/001.mp3');
+      expect(resolved.first['source'], 'TDV Islam Ansiklopedisi');
+      expect(resolved.first['verifiedAt'], '2026-04-15T00:00:00Z');
     });
 
     test('cloud rows preserve locale-specific translation maps', () {
@@ -50,14 +54,45 @@ void main() {
             'tr': 'Rahmeti her seyi kusatan',
             'de': 'Der Allerbarmer',
           },
+          'source': 'TDV Islam Ansiklopedisi',
+          'verified_at': '2026-04-15T00:00:00Z',
         },
       ]);
 
-      final translations = resolved.first['translations'] as Map<String, dynamic>;
+      final translations =
+          resolved.first['translations'] as Map<String, dynamic>;
       expect(translations['tr'], 'Rahmeti her seyi kusatan');
       expect(translations['en'], 'The Beneficent');
       expect(translations['de'], 'Der Allerbarmer');
     });
+
+    test(
+      'cloud rows without source and verified_at fall back to bundled names',
+      () {
+        final resolved = resolveCloudAsmaUlHusnaRows([
+          {
+            'id': '1',
+            'name_ar': 'الرَّحْمَنُ',
+            'transliteration': 'Ar Rahmaan',
+            'meaning_tr': 'Merhameti her seyi kusatan',
+            'meaning_en': 'The Beneficent',
+            'verified_at': '2026-04-15T00:00:00Z',
+          },
+          {
+            'id': '2',
+            'name_ar': 'الرَّحِيمُ',
+            'transliteration': 'Ar Raheem',
+            'meaning_tr': 'Merhamet eden',
+            'meaning_en': 'The Merciful',
+            'source': 'TDV Islam Ansiklopedisi',
+          },
+        ]);
+
+        expect(resolved, hasLength(AsmaUlHusnaData.names.length));
+        expect(resolved.first['audioUrl'], isEmpty);
+        expect(resolved.first['arabic'], AsmaUlHusnaData.names.first['arabic']);
+      },
+    );
 
     test(
       'bundled fallback strips bundled audio urls to avoid false playback',
@@ -73,49 +108,53 @@ void main() {
       },
     );
 
-    test('bundled source no longer embeds legacy audio urls or authoring notes', () {
-      final source = File(
-        'lib/core/constants/asma_ul_husna_data.dart',
-      ).readAsStringSync();
+    test(
+      'bundled source no longer embeds legacy audio urls or authoring notes',
+      () {
+        final source = File(
+          'lib/core/constants/asma_ul_husna_data.dart',
+        ).readAsStringSync();
 
-      expect(source.contains('https://download.quranicaudio.com'), isFalse);
-      expect(source.contains('https://server7.mp3quran.net'), isFalse);
-      expect(source.contains('Simplified for brevity'), isFalse);
-      expect(source.contains('high precision CDN'), isFalse);
-    });
+        expect(source.contains('https://download.quranicaudio.com'), isFalse);
+        expect(source.contains('https://server7.mp3quran.net'), isFalse);
+        expect(source.contains('Simplified for brevity'), isFalse);
+        expect(source.contains('high precision CDN'), isFalse);
+      },
+    );
 
-    test('bundled source keeps corrected asma spellings and transliterations', () {
-      final byId = {
-        for (final item in AsmaUlHusnaData.names) item['id']: item,
-      };
+    test(
+      'bundled source keeps corrected asma spellings and transliterations',
+      () {
+        final byId = {
+          for (final item in AsmaUlHusnaData.names) item['id']: item,
+        };
 
-      expect(byId[44]!['transliteration'], 'Al Mujeeb');
-      expect(byId[80]!['transliteration'], 'At Tawwaab');
-      expect(byId[89]!['transliteration'], 'Al Mughni');
-      expect(byId[91]!['transliteration'], 'Ad Darr');
+        expect(byId[44]!['transliteration'], 'Al Mujeeb');
+        expect(byId[80]!['transliteration'], 'At Tawwaab');
+        expect(byId[89]!['transliteration'], 'Al Mughni');
+        expect(byId[91]!['transliteration'], 'Ad Darr');
 
-      expect(
-        (byId[80]!['translations'] as Map<String, dynamic>)['en'],
-        'The Guide to Repentance',
-      );
-      expect(
-        (byId[84]!['translations'] as Map<String, dynamic>)['en'],
-        'The Owner / Sovereign of All',
-      );
-      expect(
-        (byId[85]!['translations'] as Map<String, dynamic>)['en'],
-        'The Possessor of Majesty and Bounty',
-      );
-      expect(
-        (byId[97]!['translations'] as Map<String, dynamic>)['en'],
-        'The Inheritor',
-      );
-    });
+        expect(
+          (byId[80]!['translations'] as Map<String, dynamic>)['en'],
+          'The Guide to Repentance',
+        );
+        expect(
+          (byId[84]!['translations'] as Map<String, dynamic>)['en'],
+          'The Owner / Sovereign of All',
+        );
+        expect(
+          (byId[85]!['translations'] as Map<String, dynamic>)['en'],
+          'The Possessor of Majesty and Bounty',
+        );
+        expect(
+          (byId[97]!['translations'] as Map<String, dynamic>)['en'],
+          'The Inheritor',
+        );
+      },
+    );
 
     test('bundled source keeps TDV-aligned meanings for high-risk names', () {
-      final byId = {
-        for (final item in AsmaUlHusnaData.names) item['id']: item,
-      };
+      final byId = {for (final item in AsmaUlHusnaData.names) item['id']: item};
 
       expect(
         (byId[4]!['translations'] as Map<String, dynamic>)['en'],

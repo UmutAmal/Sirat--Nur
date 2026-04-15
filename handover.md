@@ -5067,3 +5067,38 @@
 
 ### Sonraki Adım
 - Yeni döngüde Asma-ul-Husna cloud satırları aynı provenance kuralıyla taranacak; `source` ve `verified_at` eksik canlı satırların bundled verified fallback'i gölgeleme riski kontrol edilecek.
+
+## 2026-04-15 TUR-131 — Require Verified Asma Provenance
+
+### Yapılan İşlem
+- `normalizeAsmaUlHusnaRow` Supabase satırlarından `source` ve `verified_at` bilgisini normalize ederek `source` ve `verifiedAt` alanlarıyla taşıyacak hale getirildi.
+- `resolveCloudAsmaUlHusnaRows` artık canlı Asma satırını yalnızca Arapça ad, transliterasyon, en az bir anlam, `source` ve `verified_at` birlikte doluysa kabul ediyor.
+- `test/asma_ul_husna_data_test.dart` cloud row mapping ve çok dilli translation testlerini provenance alanlarıyla güncelledi.
+- Eksik `source` veya `verified_at` taşıyan cloud Asma satırlarının bundled fallback'e döndüğünü doğrulayan regresyon testi eklendi.
+
+### Neden Yapıldı
+- `content_schema.sql` içindeki `public.asma_ul_husna` tablosu `source text not null` ve `verified_at timestamptz not null` şartı taşıyor.
+- Ancak Flutter parser tarafı bu iki provenance alanını okumuyor ve zorlamıyordu; yanlış/manuel bir canlı satır, doğrulanmış bundled Asma fallback'i gölgeleyebilirdi.
+- Dinî içerikte canlı veri, kaynak ve doğrulama zamanı olmadan UI'a çıkmamalı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Asma-ul-Husna canlı içerik zinciri schema kuralıyla uygulama parser'ında da tutarlı hale geldi.
+- Eksik provenance taşıyan cloud satırlar artık kullanıcıya gösterilmez; güvenli bundled fallback korunur.
+- Çok dilli translation map koruması devam ederken kaynak/doğrulama şartı regresyon testine bağlandı.
+
+### Test Sonucu
+- `flutter test test\asma_ul_husna_data_test.dart test\features\library\asma_ul_husna_page_test.dart --reporter compact` PASS (`16/16`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`276/276`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Cloud Asma satırlarında doğrulanmamış/eksik kaynaklı dinî içerik gösterme riski: `16/25 -> 4/25`
+
+### Sonraki Adım
+- Yeni döngüde `audio_files` tablosundan gelen sukun/nature audio satırlarında `source` ve `verified_at` zorlanıp zorlanmadığı kontrol edilecek; ses içeriğinde doğrulanmamış URL gösterimi riski kapatılacak.
