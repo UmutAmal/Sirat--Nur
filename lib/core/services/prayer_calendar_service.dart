@@ -33,10 +33,7 @@ class PrayerCalendarService {
     if (highLatitudeRule != null) {
       params.highLatitudeRule = highLatitudeRule;
     } else {
-      // Automatic selection for high latitudes
-      if (latitude.abs() > 48.0) {
-        params.highLatitudeRule = HighLatitudeRule.twilight_angle;
-      }
+      applyAutomaticHighLatitudeRule(params, latitude);
     }
 
     // Set madhab

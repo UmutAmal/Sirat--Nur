@@ -42,6 +42,7 @@ final prayerTimesProvider = Provider<PrayerTimesData?>((ref) {
     fajrAngle: settings.fajrAngle,
     ishaAngle: settings.ishaAngle,
   );
+  applyAutomaticHighLatitudeRule(params, lat);
   params.madhab = resolveAdhanMadhab(settings.madhab);
 
   final now = TimezoneUtils.nowForTimezone(settings.timezone);

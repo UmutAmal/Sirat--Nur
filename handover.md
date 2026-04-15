@@ -5296,3 +5296,41 @@
 
 ### Sonraki Adım
 - Yeni döngüde l10n fallback sayısını otomatik ölçen kalıcı rapor/test eklenecek veya desteklenen locale grupları için bir sonraki güvenli anahtar batch'i çevrilecek; zorla uydurma çeviri yapılmayacak.
+
+## 2026-04-15 TUR-137 — Unify High Latitude Prayer Rule
+
+### Yapılan İşlem
+- `prayer_profile_service.dart` içine ortak `applyAutomaticHighLatitudeRule` helper'ı eklendi.
+- `prayerTimesProvider` canlı namaz vakti hesabında `lat.abs() > 48.0` için twilight-angle yüksek enlem kuralını artık aynı helper üzerinden uyguluyor.
+- `PrayerCalendarService` mevcut explicit `highLatitudeRule` parametresini koruyarak otomatik fallback'i aynı helper'a taşıdı.
+- `prayer_profile_service_test.dart` yüksek enlem helper davranışını, `prayer_times_service_test.dart` canlı provider call-chain guard'ını kapsayacak şekilde genişletildi.
+
+### Neden Yapıldı
+- Takvim/offline namaz vakti hesabı yüksek enlem bölgelerinde twilight-angle kuralı uygularken canlı provider aynı kuralı uygulamıyordu.
+- Bu ayrışma Oslo, Berlin, Londra gibi yüksek enlem şehirlerinde ana ekran/canlı provider ile takvim servisi arasında farklı vakitler üretebilecek dini güvenilirlik riski oluşturuyordu.
+- Kök sebep, yüksek enlem kuralının sadece `PrayerCalendarService.calculatePrayerTimes` içinde inline bulunması ve provider call-chain'inde ortak profile helper'a bağlı olmamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_times_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_times_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Canlı provider ve takvim servisi yüksek enlem fallback davranışında aynı kuralı kullanıyor.
+- Ülke/bölgeye göre seçilen calculation profile ve mezhep ayarı korunuyor; bu patch yalnızca daha önce takvim servisinde zaten var olan yüksek enlem fallback'ini canlı provider'a da taşıdı.
+- Explicit `highLatitudeRule` verilen takvim hesapları ezilmiyor, bu yüzden daha özel dini/kurumsal kural parametresi varsa önceliği devam ediyor.
+
+### Test Sonucu
+- `flutter test test\prayer_profile_service_test.dart test\prayer_calendar_service_test.dart test\prayer_times_service_test.dart --reporter compact` PASS (`16/16`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`286/286`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Yüksek enlem bölgelerinde canlı provider ile takvim/offline namaz vakti hesabının ayrışması riski: `12/25 -> 4/25`
+
+### Sonraki Adım
+- Yeni döngüde prayer/notification pipeline derin taramasına devam edilecek; öncelik DST/yarınki Fajr ve notification scheduling zincirinde `cancelAll`/yeniden planlama çakışması olup olmadığını kanıtla doğrulamak olacak.

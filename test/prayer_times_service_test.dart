@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/services/prayer_times_service.dart';
 
@@ -45,6 +47,14 @@ void main() {
       );
       expect(data.fajr, isA<String>());
       expect(data.timeRemaining, isA<Duration>());
+    });
+
+    test('provider applies automatic high latitude rule', () {
+      final source = File(
+        'lib/core/services/prayer_times_service.dart',
+      ).readAsStringSync();
+
+      expect(source, contains('applyAutomaticHighLatitudeRule(params, lat)'));
     });
   });
 }

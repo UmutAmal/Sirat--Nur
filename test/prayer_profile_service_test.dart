@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:adhan/adhan.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 
 void main() {
@@ -74,6 +75,23 @@ void main() {
         expect(params.madhab.name, 'shafi');
       },
     );
+
+    test('applies twilight-angle high latitude rule above 48 degrees', () {
+      final params = buildCalculationParameters(mwlPrayerMethod);
+
+      applyAutomaticHighLatitudeRule(params, 52.52);
+
+      expect(params.highLatitudeRule, HighLatitudeRule.twilight_angle);
+    });
+
+    test('keeps existing explicit high latitude rule below threshold', () {
+      final params = buildCalculationParameters(mwlPrayerMethod)
+        ..highLatitudeRule = HighLatitudeRule.seventh_of_the_night;
+
+      applyAutomaticHighLatitudeRule(params, 41.0082);
+
+      expect(params.highLatitudeRule, HighLatitudeRule.seventh_of_the_night);
+    });
 
     test('marks only institution-backed profiles as official authorities', () {
       expect(

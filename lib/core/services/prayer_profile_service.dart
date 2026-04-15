@@ -473,6 +473,15 @@ CalculationParameters buildCalculationParameters(
   }
 }
 
+void applyAutomaticHighLatitudeRule(
+  CalculationParameters params,
+  double latitude,
+) {
+  if (latitude.abs() > 48.0) {
+    params.highLatitudeRule = HighLatitudeRule.twilight_angle;
+  }
+}
+
 Madhab resolveAdhanMadhab(String madhab) {
   switch (normalizeMadhab(madhab)) {
     case hanafiMadhab:
