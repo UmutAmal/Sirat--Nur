@@ -755,7 +755,7 @@
   "placesLocationRequiredBody": "Ilki bilen golaýdaky metjitleri, halal naharlary we yslam mekdeplerini takyk gözläp tapmak üçin bir ýer belläň.",
   "placesMapTilesUnavailableTitle": "Karta plitalary elýeterli däl",
   "placesMapTilesUnavailableBody": "Barlanylan karta kafel çeşmesi entek bu gurluş üçin düzülenok. Byakyn ýerler henizem saklanan ýeriňizden ýükläp biler.",
-  "prayerRemainingUnavailable": "-",
+  "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Erkek (Mişary Alafasy)",
   "audioVoiceAbdulBaset": "Erkek (Abdul Basit)",
   "audioVoiceSudais": "Erkek (Sudais)",

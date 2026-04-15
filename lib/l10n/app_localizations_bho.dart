@@ -371,7 +371,7 @@ class AppLocalizationsBho extends AppLocalizations {
   }
 
   @override
-  String get prayerRemainingUnavailable => '-- 1999 में भइल रहे।';
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'ढिकर गिनती के बा';

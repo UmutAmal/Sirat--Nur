@@ -1028,6 +1028,28 @@ void main() {
     );
 
     test(
+      'prayer remaining unavailable placeholder stays symbolic in every locale',
+      () {
+        final arbFiles = Directory('lib/l10n')
+            .listSync()
+            .whereType<File>()
+            .where((file) => file.path.endsWith('.arb'))
+            .where((file) => file.uri.pathSegments.last.startsWith('app_'));
+
+        for (final file in arbFiles) {
+          final arb = _readArb(file.path);
+
+          expect(
+            arb['prayerRemainingUnavailable'],
+            '--',
+            reason:
+                '${file.path} must keep prayerRemainingUnavailable as a neutral placeholder',
+          );
+        }
+      },
+    );
+
+    test(
       'safe priority locales do not fall back to English for audio voice labels',
       () {
         const audioVoiceSafeLocales = [

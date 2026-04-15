@@ -6474,3 +6474,57 @@
 
 ### Sonraki Adım
 - Sonraki dongude l10n kalite taramasinda `prayerRemainingUnavailable`, `missingEnglish` ve fallback-English kalintilarinin hangi locale/test kapsami disinda kaldigi kanitlanacak; dogrulanabilir olanlar duzeltilecek, dogrulanamayanlar icin sahte ceviri yerine guard/rapor stratejisi uygulanacak.
+
+## 2026-04-15 TUR-168 — Normalize Prayer Remaining Placeholder Across Locales
+
+### Yapılan İşlem
+- `prayerRemainingUnavailable` degeri 21 locale'de dogrulanmis sembolik placeholder olan `--` degerine normalize edildi.
+- `flutter gen-l10n` calistirilarak ilgili generated `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- `arb_ui_localization_test.dart` icine tum locale dosyalarinda `prayerRemainingUnavailable == "--"` invariant'ini zorunlu kılan test eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart:13` kalan vakit hesaplanamadiginda bu anahtari dogrudan ana ekranda gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bho.arb:758` onceki akista `-- 1999 में भइल रहे।`, `app_sa.arb:758` ise `-- ९.` gibi bozulmus metin tasiyordu.
+- Bu anahtar dilsel cumle degil, UI placeholder oldugu icin her locale'de ayni sembolik deger olmali; farkli/uzatilmis degerler ana ekranda anlamsiz metin gosterebilir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ak.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bho.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bm.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ee.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_gn.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ilo.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_kri.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ln.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lus.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_nso.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_om.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_or.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_qu.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_rw.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tk.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ts.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tt.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ug.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` ilgili 21 locale dosyasi
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Ana ekranda kalan vakit hesaplanamadiginda hicbir locale bozuk sayi/cumle parcasi gostermeyecek.
+- Placeholder artik ceviri pipeline'i tarafindan yanlislikla cumlelestirilemez; yeni test tum locale dosyalarinda bunu yakalar.
+- `missingEnglish` gibi gercek ceviri isteyen genis kapsamli anahtarlar bu turda uydurulmadan bir sonraki analiz turuna birakildi.
+
+### Test Sonucu
+- `flutter test test\arb_ui_localization_test.dart --plain-name "general ARB localization coverage prayer remaining unavailable placeholder stays symbolic in every locale"` PASS (`1/1`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`341/341`)
+
+### Risk Değişimi
+- Home kalan vakit placeholder'inin bozuk locale metni gostermesi riski: `10/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude `missingEnglish` ve diagnostics/localization durum metinleri icin kullaniciya gorunen yuzeyler incelenecek; once priority locale'lerde dogrulanabilir ceviri ve test guard, sonra nadir diller icin sahte olmayan fallback stratejisi uygulanacak.

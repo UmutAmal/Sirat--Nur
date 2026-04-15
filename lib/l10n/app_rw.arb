@@ -755,7 +755,7 @@
   "placesLocationRequiredBody": "Shiraho ahantu mbere kugirango imisigiti iri hafi, ibiryo bya halale, n'amashuri ya kisilamu birashobora gushakishwa neza.",
   "placesMapTilesUnavailableTitle": "Ikarita yerekana ikarita",
   "placesMapTilesUnavailableBody": "Ikarita yagenzuwe neza ntabwo yashyizweho kugirango yubake. Ahantu hegereye harashobora gutwarwa aho wabitswe.",
-  "prayerRemainingUnavailable": "-",
+  "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Umugabo (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Umugabo (Abdul Basit)",
   "audioVoiceSudais": "Umugabo (Sudais)",

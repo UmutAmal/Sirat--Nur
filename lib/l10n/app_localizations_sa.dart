@@ -370,7 +370,7 @@ class AppLocalizationsSa extends AppLocalizations {
   }
 
   @override
-  String get prayerRemainingUnavailable => '-- ९.';
+  String get prayerRemainingUnavailable => '--';
 
   @override
   String get dhikrCount => 'Dhikr Count';

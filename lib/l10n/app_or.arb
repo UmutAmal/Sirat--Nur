@@ -755,7 +755,7 @@
   "placesLocationRequiredBody": "ପ୍ରଥମେ ଏକ ଅବସ୍ଥାନ ସ୍ଥିର କରନ୍ତୁ ତେଣୁ ନିକଟସ୍ଥ ମସଜିଦ, ହାଲ୍ ଖାଦ୍ୟ, ଏବଂ ଇସଲାମିକ୍ ବିଦ୍ୟାଳୟଗୁଡିକ ସଠିକ୍ ଭାବରେ ସନ୍ଧାନ କରାଯାଇପାରିବ |",
   "placesMapTilesUnavailableTitle": "ମାନଚିତ୍ର ଟାଇଲ୍ ଉପଲବ୍ଧ ନାହିଁ |",
   "placesMapTilesUnavailableBody": "ଏହି ବିଲ୍ଡ ପାଇଁ ଏକ ଯାଞ୍ଚ ହୋଇଥିବା ମାନଚିତ୍ର ଟାଇଲ୍ ଉତ୍ସ ଏପର୍ଯ୍ୟନ୍ତ ବିନ୍ୟାସ ହୋଇନାହିଁ | ନିକଟସ୍ଥ ସ୍ଥାନଗୁଡିକ ତଥାପି ଆପଣଙ୍କର ସଞ୍ଚିତ ସ୍ଥାନରୁ ଲୋଡ୍ ହୋଇପାରେ |",
-  "prayerRemainingUnavailable": "-",
+  "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "ପୁରୁଷ (ମିଶରୀ ଆଲାଫାସୀ)",
   "audioVoiceAbdulBaset": "ପୁରୁଷ (ଅବଦୁଲବେସେଟ୍)",
   "audioVoiceSudais": "ପୁରୁଷ (ସୁଦାଇସ୍)",

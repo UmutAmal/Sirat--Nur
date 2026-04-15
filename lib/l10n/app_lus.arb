@@ -755,7 +755,7 @@
   "placesLocationRequiredBody": "Mosque hnai tak tak, halal food, leh Islamic school te dik taka zawn theih nan hmun siam hmasa phawt ang che.",
   "placesMapTilesUnavailableTitle": "Map tiles a awm lo",
   "placesMapTilesUnavailableBody": "He build atan hian verified map tile source hi configure a la ni lo. I saved location atang hian hmun hnai tak tak te chu a la load thei tho.",
-  "prayerRemainingUnavailable": "-- .",
+  "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",

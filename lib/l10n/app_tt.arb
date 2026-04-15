@@ -755,7 +755,7 @@
   "placesLocationRequiredBody": "Башта якын урнашкан мәчетләр, хәләл ризыклар, Ислам мәктәпләрен төгәл эзләп табу өчен урын билгеләгез.",
   "placesMapTilesUnavailableTitle": "Карта плиткалары юк",
   "placesMapTilesUnavailableBody": "Тикшерелгән карта плиткасы чыганагы бу төзелеш өчен конфигурацияләнмәгән. Якындагы урыннар сезнең сакланган урыныгыздан йөкләнә ала.",
-  "prayerRemainingUnavailable": "-",
+  "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Ир-ат (Мишари Алафаси)",
   "audioVoiceAbdulBaset": "Ир-ат (АбдулБасет)",
   "audioVoiceSudais": "Ир-ат (Судайлар)",
