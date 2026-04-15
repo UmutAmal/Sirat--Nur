@@ -48,6 +48,14 @@ class PrayerLocalizer {
     return _lookup(languageCode).prayerTimes;
   }
 
+  static String qiblaLabel(String languageCode) {
+    return _lookup(languageCode).qibla;
+  }
+
+  static String dailyVerseLabel(String languageCode) {
+    return _lookup(languageCode).dailyVerse;
+  }
+
   static AppLocalizations _lookup(String languageCode) {
     try {
       return lookupAppLocalizations(_parseLocale(languageCode));

@@ -13,6 +13,10 @@ void main() {
       expect(source, contains('PrayerLocalizer.nextPrayerLabel'));
       expect(source, contains("'all_prayers_header'"));
       expect(source, contains('PrayerLocalizer.prayerTimesLabel'));
+      expect(source, contains("'qibla_header'"));
+      expect(source, contains('PrayerLocalizer.qiblaLabel'));
+      expect(source, contains("'ayah_header'"));
+      expect(source, contains('PrayerLocalizer.dailyVerseLabel'));
       for (final key in <String>[
         'fajr_label',
         'dhuhr_label',
@@ -31,11 +35,21 @@ void main() {
       final allPrayersProvider = File(
         'android/app/src/main/java/com/umutamal/sirat_i_nur/AllPrayersWidgetProvider.java',
       ).readAsStringSync();
+      final qiblaProvider = File(
+        'android/app/src/main/java/com/umutamal/sirat_i_nur/QiblaWidgetProvider.java',
+      ).readAsStringSync();
+      final ayahProvider = File(
+        'android/app/src/main/java/com/umutamal/sirat_i_nur/AyahWidgetProvider.java',
+      ).readAsStringSync();
 
       expect(nextPrayerProvider, contains('"next_prayer_header"'));
       expect(nextPrayerProvider, contains('R.id.tv_next_prayer_header'));
       expect(nextPrayerProvider, isNot(contains('.toUpperCase()')));
       expect(allPrayersProvider, contains('"all_prayers_header"'));
+      expect(qiblaProvider, contains('"qibla_header"'));
+      expect(qiblaProvider, contains('R.id.tv_qibla_header'));
+      expect(ayahProvider, contains('"ayah_header"'));
+      expect(ayahProvider, contains('R.id.tv_ayah_header'));
       for (final id in <String>[
         'tv_fajr_label',
         'tv_dhuhr_label',
@@ -54,9 +68,17 @@ void main() {
       final allPrayersLayout = File(
         'android/app/src/main/res/layout/widget_all_prayers.xml',
       ).readAsStringSync();
+      final qiblaLayout = File(
+        'android/app/src/main/res/layout/widget_qibla.xml',
+      ).readAsStringSync();
+      final ayahLayout = File(
+        'android/app/src/main/res/layout/widget_ayah.xml',
+      ).readAsStringSync();
 
       expect(nextPrayerLayout, contains('@+id/tv_next_prayer_header'));
       expect(allPrayersLayout, contains('@+id/tv_all_prayers_header'));
+      expect(qiblaLayout, contains('@+id/tv_qibla_header'));
+      expect(ayahLayout, contains('@+id/tv_ayah_header'));
       for (final id in <String>[
         'tv_fajr_label',
         'tv_dhuhr_label',
@@ -66,6 +88,27 @@ void main() {
       ]) {
         expect(allPrayersLayout, contains('@+id/$id'));
       }
+    });
+
+    test('manifest registers every HomeWidget provider used by Flutter', () {
+      final manifest = File(
+        'android/app/src/main/AndroidManifest.xml',
+      ).readAsStringSync();
+      final widgetService = File(
+        'lib/core/services/widget_service.dart',
+      ).readAsStringSync();
+
+      for (final provider in <String>[
+        'PrayerWidgetProvider',
+        'AllPrayersWidgetProvider',
+        'QiblaWidgetProvider',
+        'AyahWidgetProvider',
+      ]) {
+        expect(widgetService, contains(provider));
+        expect(manifest, contains('.$provider'));
+      }
+      expect(manifest, contains('@xml/widget_info_qibla'));
+      expect(manifest, contains('@xml/widget_info_ayah'));
     });
   });
 }

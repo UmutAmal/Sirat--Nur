@@ -147,7 +147,16 @@ class WidgetService {
   Future<void> updateQiblaWidget({
     required double direction,
     required String directionText,
+    Locale? locale,
   }) async {
+    final resolvedLocale =
+        locale ?? WidgetsBinding.instance.platformDispatcher.locale;
+    final languageCode = resolvedLocale.toString();
+
+    await HomeWidget.saveWidgetData<String>(
+      'qibla_header',
+      PrayerLocalizer.qiblaLabel(languageCode),
+    );
     await HomeWidget.saveWidgetData<String>(
       'qibla_direction',
       '${direction.toStringAsFixed(0)}°',
@@ -163,7 +172,16 @@ class WidgetService {
     required String arabic,
     required String translation,
     required String reference,
+    Locale? locale,
   }) async {
+    final resolvedLocale =
+        locale ?? WidgetsBinding.instance.platformDispatcher.locale;
+    final languageCode = resolvedLocale.toString();
+
+    await HomeWidget.saveWidgetData<String>(
+      'ayah_header',
+      PrayerLocalizer.dailyVerseLabel(languageCode),
+    );
     await HomeWidget.saveWidgetData<String>('ayah_arabic', arabic);
     await HomeWidget.saveWidgetData<String>('ayah_translation', translation);
     await HomeWidget.saveWidgetData<String>('ayah_reference', reference);
@@ -193,6 +211,7 @@ class WidgetService {
       await updateQiblaWidget(
         direction: qiblaDirection,
         directionText: qiblaText,
+        locale: locale,
       );
     }
 
@@ -204,6 +223,7 @@ class WidgetService {
         arabic: ayahArabic,
         translation: ayahTranslation,
         reference: ayahReference,
+        locale: locale,
       );
     }
   }

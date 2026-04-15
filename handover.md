@@ -5986,3 +5986,48 @@
 
 ### Sonraki Adım
 - Sonraki döngüde Android widget provider kapsamı devam edecek: Qibla/Ayah widget native yüzeyleri, manifest receiver kayıtları ve widget info XML dosyaları lokalizasyon/eksik provider açısından taranacak.
+
+## 2026-04-15 TUR-155 — Complete Qibla and Ayah Android Widget Providers
+
+### Yapılan İşlem
+- `QiblaWidgetProvider.java` eklendi; `qibla_header`, `qibla_direction`, `qibla_status` HomeWidget verilerini native layout'a yazıyor.
+- `AyahWidgetProvider.java` eklendi; `ayah_header`, `ayah_arabic`, `ayah_translation`, `ayah_reference` HomeWidget verilerini native layout'a yazıyor.
+- `AndroidManifest.xml` içine `.QiblaWidgetProvider` ve `.AyahWidgetProvider` receiver kayıtları eklendi; mevcut `@xml/widget_info_qibla` ve `@xml/widget_info_ayah` provider tanımları artık gerçekten erişilebilir.
+- `widget_qibla.xml` ve `widget_ayah.xml` başlık TextView'lerine runtime güncelleme ID'leri eklendi.
+- `WidgetService.updateQiblaWidget` ve `WidgetService.updateAyahWidget` locale-aware başlıkları ARB/l10n zincirinden HomeWidget preferences'a yazacak şekilde genişletildi.
+- `android_widget_localization_test.dart` manifestte Flutter'ın kullandığı her Android widget provider adının kayıtlı olmasını zorunlu kılacak şekilde genişletildi.
+
+### Neden Yapıldı
+- `WidgetService` içinde `QiblaWidgetProvider` ve `AyahWidgetProvider` adları vardı, `res/xml` içinde de ilgili widget info dosyaları bulunuyordu.
+- Buna rağmen `AndroidManifest.xml` yalnızca `PrayerWidgetProvider` ve `AllPrayersWidgetProvider` receiver'larını kaydediyordu; Java klasöründe Qibla/Ayah provider sınıfları yoktu.
+- Kök sebep, widget servis sözleşmesinin Android native provider/manifest katmanında yarım bırakılmasıydı.
+- Bu durumda Qibla/Ayah widget güncelleme çağrıları native tarafta gerçek provider bulamayabilir veya kullanıcı widget listesinden bu yüzeyleri alamazdı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\AndroidManifest.xml`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\java\com\umutamal\sirat_i_nur\QiblaWidgetProvider.java`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\java\com\umutamal\sirat_i_nur\AyahWidgetProvider.java`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\res\layout\widget_qibla.xml`
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\res\layout\widget_ayah.xml`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\widget_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\prayer_name_localization.dart`
+- `A:\Way of Allah\sirat_i_nur\test\android_widget_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_name_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Flutter tarafındaki Qibla/Ayah widget güncelleme API'leri artık Android manifest/provider/layout zincirinde gerçek karşılığa sahip.
+- Qibla ve Günün Ayeti widget başlıkları da runtime'da ARB/l10n kaynaklı locale-aware metinle güncellenir.
+- Yeni test, Flutter'da kullanılan provider adının manifestten düşmesi halinde regresyonu yakalar.
+
+### Test Sonucu
+- `flutter test test\android_widget_localization_test.dart test\prayer_name_localization_test.dart --reporter compact` PASS (`10/10`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`321/321`)
+- `flutter build apk --debug` PASS (`build\app\outputs\flutter-apk\app-debug.apk`)
+
+### Risk Değişimi
+- Qibla/Ayah Android widget yüzeylerinin yarım provider/manifest zinciriyle kırık kalma riski: `16/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki döngüde Android widget XML dosyalarındaki kullanılmayan/duplicate provider info kayıtları ve native widget preview metinlerinin test kapsamı taranacak.

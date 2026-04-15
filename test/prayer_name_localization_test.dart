@@ -32,6 +32,8 @@ void main() {
     test('builds localized widget heading copy in Turkish', () {
       expect(PrayerLocalizer.nextPrayerLabel('tr'), 'Sıradaki Namaz');
       expect(PrayerLocalizer.prayerTimesLabel('tr'), 'Namaz Vakitleri');
+      expect(PrayerLocalizer.qiblaLabel('tr'), 'Kıble');
+      expect(PrayerLocalizer.dailyVerseLabel('tr'), 'Günün Ayeti');
     });
 
     test('falls back to English for unsupported locales', () {
