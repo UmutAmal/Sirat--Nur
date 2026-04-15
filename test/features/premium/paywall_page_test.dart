@@ -42,6 +42,9 @@ void main() {
     expect(providerSource, isNot(contains('error: error.toString()')));
     expect(providerSource, isNot(contains('error: e.toString()')));
     expect(providerSource, isNot(contains('purchase.error?.message')));
+    expect(providerSource, isNot(contains(r'IAP stream error: $error')));
+    expect(providerSource, isNot(contains(r'Premium purchase failed: $e')));
+    expect(providerSource, isNot(contains(r'Premium restore failed: $e')));
     expect(paywallSource, isNot(contains('return error;')));
   });
 }

@@ -4548,3 +4548,37 @@
 
 ### Sonraki Adım
 - Yeni döngüde kalan `prayer_notification_coordinator.dart`, `premium_provider.dart`, `quran_page.dart`, `juz_reading_page.dart` ve `location_selection_page.dart` raw debug logları aynı minimal yaklaşım ile sınıflandırılıp kapatılacak.
+
+## 2026-04-15 TUR-116 — Sanitize Premium Store Error Logs
+
+### Yapılan İşlem
+- `lib/features/premium/premium_provider.dart` içindeki IAP stream, purchase ve restore logları raw store exception nesnesi basmayacak şekilde güncellendi.
+- Premium state/error davranışı değiştirilmedi; kullanıcıya hâlâ `kPremiumPurchaseFailedErrorCode` üzerinden lokalize paywall mesajı gidiyor.
+- `test/features/premium/paywall_page_test.dart` premium provider içinde `$error` ve `$e` ile ham store hata ayrıntısı loglayan eski desenleri yakalayacak şekilde genişletildi.
+
+### Neden Yapıldı
+- `lib/features/premium/premium_provider.dart:59`, `lib/features/premium/premium_provider.dart:140` ve `lib/features/premium/premium_provider.dart:161` önce raw IAP/store exception metnini logluyordu.
+- Premium satın alma/restore akışı ödeme ve mağaza SDK durumlarına yakın olduğu için ham hata ayrıntısı gereksiz ve hassas olabilir.
+- Kullanıcıya gösterilen hata zaten güvenli localization zincirinden geldiği için log tarafı da aynı güvenli seviyeye çekildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\premium\paywall_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Premium IAP stream/purchase/restore başarısızlıkları artık ham store exception içeriğini loglamaz.
+- Kullanıcıya görünen premium hata copy'si ve state akışı değişmedi.
+- Regresyon testi eski raw store log desenlerinin geri dönmesini yakalar.
+
+### Test Sonucu
+- `flutter test test\features\premium\paywall_page_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`254/254`)
+- `git diff --check` PASS (sadece CRLF uyarıları)
+
+### Risk Değişimi
+- Premium/IAP raw store exception loglama riski: `9/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde konum algılama, namaz bildirim senkronu ve Kur'an indeks/jüz yükleme loglarındaki kalan raw hata desenleri kapatılacak.
