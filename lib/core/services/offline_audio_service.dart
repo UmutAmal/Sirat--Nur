@@ -43,13 +43,6 @@ String? resolvePlayableCloudAudioUrl(
     );
   }
 
-  for (final key in const ['url']) {
-    final value = row[key]?.toString().trim();
-    if (value != null && value.isNotEmpty) {
-      return value;
-    }
-  }
-
   return null;
 }
 

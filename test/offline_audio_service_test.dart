@@ -5,12 +5,13 @@ import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 
 void main() {
   group('OfflineReciters helpers', () {
-    test('maps verified cloud quran rows into a surah url index', () {
+    test('maps storage-backed cloud quran rows into a surah url index', () {
       final urls = resolveCloudQuranSurahUrls(const [
         {
           'type': 'quran_surah',
           'reciter': 'alafasy',
           'surah_number': 1,
+          'storage_path': 'quran-audio/alafasy/001.mp3',
           'url': 'https://cdn.example.com/001.mp3',
           'source': 'QuranFoundation',
           'verified_at': '2026-04-15T00:00:00Z',
@@ -19,6 +20,7 @@ void main() {
           'type': 'quran_surah',
           'reciter': 'alafasy',
           'surah_number': 2,
+          'storage_path': 'quran-audio/alafasy/002.mp3',
           'url': 'https://cdn.example.com/002.mp3',
           'source': 'QuranFoundation',
           'verified_at': '2026-04-15T00:00:00Z',
@@ -26,8 +28,8 @@ void main() {
       ], reciterId: 'alafasy');
 
       expect(urls, const {
-        1: 'https://cdn.example.com/001.mp3',
-        2: 'https://cdn.example.com/002.mp3',
+        1: 'https://amevotnudldbbwogtrtw.supabase.co/storage/v1/object/public/quran-audio/alafasy/001.mp3',
+        2: 'https://amevotnudldbbwogtrtw.supabase.co/storage/v1/object/public/quran-audio/alafasy/002.mp3',
       });
     });
 
@@ -37,6 +39,7 @@ void main() {
           'type': 'quran_surah',
           'reciter': 'alafasy',
           'surah_number': 1,
+          'storage_path': 'quran-audio/alafasy/001.mp3',
           'url': 'https://cdn.example.com/001.mp3',
           'source': 'QuranFoundation',
           'verified_at': '2026-04-15T00:00:00Z',
@@ -75,9 +78,26 @@ void main() {
         },
       ], reciterId: 'alafasy');
 
-      expect(urls, const {1: 'https://cdn.example.com/001.mp3'});
+      expect(urls, const {
+        1: 'https://amevotnudldbbwogtrtw.supabase.co/storage/v1/object/public/quran-audio/alafasy/001.mp3',
+      });
       expect(missingQuranSurahAudioSources(urls), containsAll(<int>[2, 114]));
       expect(missingQuranSurahAudioSources(urls), hasLength(113));
+    });
+
+    test('rejects external-only quran rows even with provenance', () {
+      final urls = resolveCloudQuranSurahUrls(const [
+        {
+          'type': 'quran_surah',
+          'reciter': 'alafasy',
+          'surah_number': 1,
+          'url': 'https://cdn.example.com/001.mp3',
+          'source': 'QuranFoundation',
+          'verified_at': '2026-04-15T00:00:00Z',
+        },
+      ], reciterId: 'alafasy');
+
+      expect(urls, isEmpty);
     });
 
     test(
@@ -110,6 +130,7 @@ void main() {
           'type': 'quran_surah',
           'reciter': 'alafasy',
           'surah_number': 1,
+          'storage_path': 'quran-audio/alafasy/001.mp3',
           'url': 'https://cdn.example.com/alafasy/001.mp3',
           'source': 'QuranFoundation',
           'verified_at': '2026-04-15T00:00:00Z',
@@ -118,6 +139,7 @@ void main() {
           'type': 'quran_surah',
           'reciter': 'alafasy',
           'surah_number': 2,
+          'storage_path': 'quran-audio/alafasy/002.mp3',
           'url': 'https://cdn.example.com/alafasy/002.mp3',
           'source': 'QuranFoundation',
           'verified_at': '2026-04-15T00:00:00Z',
@@ -126,6 +148,7 @@ void main() {
           'type': 'quran_surah',
           'reciter': 'husary',
           'surah_number': 1,
+          'storage_path': 'quran-audio/husary/001.mp3',
           'url': 'https://cdn.example.com/husary/001.mp3',
           'source': 'QuranFoundation',
           'verified_at': '2026-04-15T00:00:00Z',
@@ -140,16 +163,16 @@ void main() {
       ]);
 
       expect(catalog['alafasy'], const {
-        1: 'https://cdn.example.com/alafasy/001.mp3',
-        2: 'https://cdn.example.com/alafasy/002.mp3',
+        1: 'https://amevotnudldbbwogtrtw.supabase.co/storage/v1/object/public/quran-audio/alafasy/001.mp3',
+        2: 'https://amevotnudldbbwogtrtw.supabase.co/storage/v1/object/public/quran-audio/alafasy/002.mp3',
       });
       expect(catalog['husary'], const {
-        1: 'https://cdn.example.com/husary/001.mp3',
+        1: 'https://amevotnudldbbwogtrtw.supabase.co/storage/v1/object/public/quran-audio/husary/001.mp3',
       });
       expect(catalog.containsKey('sudais'), isFalse);
     });
 
-    test('prefers Supabase storage-backed rows when storage_path is present', () {
+    test('uses Supabase storage-backed rows when storage_path is present', () {
       final url = resolvePlayableCloudAudioUrl(const {
         'type': 'quran_surah',
         'reciter': 'alafasy',
@@ -165,6 +188,19 @@ void main() {
         url,
         'https://amevotnudldbbwogtrtw.supabase.co/storage/v1/object/public/quran-audio/alafasy/001.mp3',
       );
+    });
+
+    test('does not expose external urls as playable cloud audio', () {
+      final url = resolvePlayableCloudAudioUrl(const {
+        'type': 'quran_surah',
+        'reciter': 'alafasy',
+        'surah_number': 1,
+        'url': 'https://cdn.example.com/alafasy/001.mp3',
+        'source': 'QuranFoundation',
+        'verified_at': '2026-04-15T00:00:00Z',
+      });
+
+      expect(url, isNull);
     });
 
     test('live quran audio queries include storage_path for owned audio', () {

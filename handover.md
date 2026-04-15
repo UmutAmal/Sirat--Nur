@@ -6639,3 +6639,46 @@
 
 ### Sonraki Adım
 - Sonraki dongude kalan dis URL ve cloud data provenance riskleri taranacak; ozellikle Supabase seed/storage ses kaynaklarinda external URL kaldiysa runtime'in Storage-backed kaynagi zorunlu tutup tutmadigi tekrar kanitlanacak.
+
+## 2026-04-16 TUR-172 — Require Storage-Backed Runtime Audio
+
+### Yapılan İşlem
+- Quran offline audio resolver'i `storage_path` yoksa external `url` degerini playable kaynak olarak dondurmemeye cekildi.
+- Dua ve Asma cloud resolver'lari `storage_path` yoksa `audio_url` / `url` fallback'i vermeyecek sekilde sertlestirildi.
+- Sukun cloud source testleri storage-backed satirlari bekleyecek ve external-only satirlari reddedecek hale getirildi.
+- README ses egemenligi bolumu "runtime requires Supabase Storage-backed `storage_path` rows" politikasina guncellendi.
+- Test guard'lari external URL'lerin sadece mirror/provenance girdisi olarak kalmasini, runtime playback fallback olmamasini dogrulayacak sekilde yenilendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:31` once `storage_path` yoksa `url` alanini playable audio kabul ediyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart:79` ve `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart:948` ayni sekilde storage yoksa external audio URL'ye dusuyordu.
+- Kullanici hedefi seslerin bizim storage/database hattimizdan gelmesi; external linkler sadece dogrulanmis mirror araclari icin kaynak olarak kalmali, uygulama runtime'inda false playback garantisi vermemeli.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\README.md`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\sukun_audio_sources_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\duas_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\readme_operational_docs_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran, Dua, Asma ve Sukun runtime audio yuzeyleri external URL kapanmasindan etkilenmeyecek sekilde Storage-backed kaynagi zorunlu tutar.
+- External audio URL'ler artik sadece mirror/upload tooling icin dogrulanmis kaynak verisi olarak kalir; uygulama tarafinda oynatilabilir fallback sayilmaz.
+- Storage yuklenmeden seed uygulanirsa audio ozelligi sahte basari yerine eksik kaynak olarak davranir.
+
+### Test Sonucu
+- `flutter test test\readme_operational_docs_test.dart test\offline_audio_service_test.dart test\sukun_audio_sources_provider_test.dart test\duas_data_test.dart test\asma_ul_husna_data_test.dart` PASS (`30/30`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`346/346`)
+
+### Risk Değişimi
+- Runtime audio'nun external URL fallback'e bagimli kalmasi riski: `16/25 -> 1/25`
+- Storage yuklenmeden audio'nun playable kabul edilmesi riski: `12/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude `AudioSovereigntyService.playSource` ve dogrudan cloudSources enjekte edilen test/ekran yuzeyleri incelenecek; Supabase Storage disi remote URL'lerin UI veya servis katmaninda yanlislikla oynatilabilir kabul edilip edilmedigi kanitla ayrilacak.

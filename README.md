@@ -61,7 +61,7 @@ flutter build apk \
 `PLACES_TILE_URL_TEMPLATE` is intentionally empty by default. Without it, the Places screen shows an honest map-unavailable state instead of silently using a public tile server. `PLACES_OVERPASS_API_URL` is also intentionally empty by default; configure it with a monitored proxy, an approved provider, or your own rate-limited Overpass-compatible endpoint before enabling nearby search in production.
 
 ## Quran Audio Sovereignty Workflow
-The runtime prefers Supabase Storage-backed `storage_path` rows over external audio URLs. Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded to the `quran-audio` bucket.
+The runtime requires Supabase Storage-backed `storage_path` rows for playable audio. External audio URLs in seed data are only verified mirror inputs and are not used as playback fallbacks. Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded to the `quran-audio` bucket.
 
 1. Mirror the verified source audio locally:
 ```bash

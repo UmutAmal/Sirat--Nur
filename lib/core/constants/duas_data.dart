@@ -90,7 +90,7 @@ String _resolveCloudDuaAudioUrl(Map<String, dynamic> row) {
     );
   }
 
-  return _readDuaString(row, const ['audio_url', 'audioUrl', 'url']);
+  return '';
 }
 
 String _readDuaString(Map<String, dynamic> row, List<String> keys) {

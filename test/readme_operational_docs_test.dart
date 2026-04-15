@@ -26,6 +26,16 @@ void main() {
           'Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded',
         ),
       );
+      expect(
+        readme,
+        contains(
+          'The runtime requires Supabase Storage-backed `storage_path` rows for playable audio',
+        ),
+      );
+      expect(
+        readme,
+        isNot(contains('runtime prefers Supabase Storage-backed')),
+      );
     });
 
     test('does not document stale persistence dependencies', () {

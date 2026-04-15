@@ -12,7 +12,7 @@ void main() {
       expect(resolved.first['audioUrl'], isEmpty);
     });
 
-    test('cloud rows map Supabase fields into bundled item shape', () {
+    test('cloud rows map Supabase fields without external audio fallback', () {
       final resolved = resolveCloudAsmaUlHusnaRows([
         {
           'id': '1',
@@ -38,12 +38,12 @@ void main() {
         (resolved.first['translations'] as Map<String, dynamic>)['en'],
         'The Beneficent',
       );
-      expect(resolved.first['audioUrl'], 'https://example.com/001.mp3');
+      expect(resolved.first['audioUrl'], isEmpty);
       expect(resolved.first['source'], 'TDV Islam Ansiklopedisi');
       expect(resolved.first['verifiedAt'], '2026-04-15T00:00:00Z');
     });
 
-    test('cloud rows prefer Supabase Storage-backed audio when available', () {
+    test('cloud rows use Supabase Storage-backed audio when available', () {
       final resolved = resolveCloudAsmaUlHusnaRows([
         {
           'id': '1',

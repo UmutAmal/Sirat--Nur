@@ -98,7 +98,7 @@ void main() {
       },
     );
 
-    test('prefers Supabase Storage-backed audio for verified cloud duas', () {
+    test('uses Supabase Storage-backed audio for verified cloud duas', () {
       final resolved = resolveCloudDuas([
         {
           'id': 'cloud-audio',
@@ -119,25 +119,22 @@ void main() {
       );
     });
 
-    test(
-      'keeps verified cloud dua external audio only when storage is absent',
-      () {
-        final resolved = resolveCloudDuas([
-          {
-            'id': 'cloud-audio',
-            'text_ar': 'دعاء',
-            'text_tr': 'Turkce dua',
-            'text_en': 'English dua',
-            'audio_url': 'https://cdn.example.com/dua/001.mp3',
-            'source': 'Diyanet',
-            'verified_at': '2026-04-15T00:00:00Z',
-            'category': 'Sabah Akşam',
-          },
-        ]);
+    test('drops verified cloud dua external audio when storage is absent', () {
+      final resolved = resolveCloudDuas([
+        {
+          'id': 'cloud-audio',
+          'text_ar': 'دعاء',
+          'text_tr': 'Turkce dua',
+          'text_en': 'English dua',
+          'audio_url': 'https://cdn.example.com/dua/001.mp3',
+          'source': 'Diyanet',
+          'verified_at': '2026-04-15T00:00:00Z',
+          'category': 'Sabah Akşam',
+        },
+      ]);
 
-        expect(resolved.first.audioUrl, 'https://cdn.example.com/dua/001.mp3');
-      },
-    );
+      expect(resolved.first.audioUrl, isEmpty);
+    });
   });
 }
 

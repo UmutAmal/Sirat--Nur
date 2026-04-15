@@ -957,7 +957,7 @@ String _resolveCloudAsmaAudioUrl(Map<String, dynamic> row) {
     );
   }
 
-  return _readAsmaString(row, ['audio_url', 'audioUrl', 'url']);
+  return '';
 }
 
 Map<String, dynamic> normalizeAsmaUlHusnaRow(Map<String, dynamic> row) {
