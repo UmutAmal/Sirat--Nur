@@ -34,8 +34,15 @@ void main() {
       );
       expect(
         readme,
+        contains(
+          '`content_seed_quran_audio.sql` and external audio URLs in seed data are mirror inputs only',
+        ),
+      );
+      expect(
+        readme,
         isNot(contains('runtime prefers Supabase Storage-backed')),
       );
+      expect(readme, isNot(contains('MP3 CDN endpoint')));
     });
 
     test('does not document stale persistence dependencies', () {

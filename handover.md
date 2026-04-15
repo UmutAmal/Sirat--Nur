@@ -6730,3 +6730,41 @@
 
 ### Sonraki Adım
 - Sonraki dongude content/schema/seed tarafinda `audio_files.url` alaninin mirror/provenance disinda runtime anlam tasimadigi README ve tooling guard'lariyla tamamen kanitlanacak; ardindan kalan TODO/placeholder ve hardcoded string taramasina donulecek.
+
+## 2026-04-16 TUR-174 — Mark Legacy Quran Audio Seed As Mirror-Only
+
+### Yapılan İşlem
+- README'deki eski "MP3 CDN endpoint" iddiasi Storage-backed audio politikasina uygun hale getirildi.
+- `content_seed_quran_audio.sql` ve `tool/generate_quran_audio_seed.dart` basliklari "mirror input only" diye acik etiketlendi.
+- README Quran Audio Sovereignty bolumu `content_seed_quran_audio.sql` dosyasinin runtime playback seed veya fallback olmadigini netlestirdi.
+- Test guard'lari legacy seed'in mirror-only oldugunu ve README'nin stale CDN ifadesini yeniden tasimadigini dogrulayacak sekilde genisletildi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\README.md:15` hala audio voice selector'larin "MP3 CDN endpoint" kaydirdigini soyluyordu; TUR-172/TUR-173 sonrasi bu yanlis ve operasyonel olarak riskliydi.
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_audio.sql:1` ve `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_seed.dart:35` dosyayi sadece "verified seed" diye etiketliyordu; oysa satirlar external `url` + NULL `storage_path` tasiyor ve runtime icin tek basina uygulanmamali.
+- Storage-backed runtime akisinda bu dosya sadece mirror/upload pipeline'inin kaynak katalog girdisidir; bu ayrim yazili ve testli olmazsa operator yanlis seed uygulayabilir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\README.md`
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_audio.sql`
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\quran_audio_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\readme_operational_docs_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Operator artik legacy external URL seed'ini runtime audio seed'i sanmayacak; production playback icin Storage seed zorunlulugu README, SQL ve generator seviyesinde gorunur.
+- Testler `content_seed_quran_audio.sql` mirror-only basligini ve README'deki Storage-backed runtime metnini koruyor.
+- Kod runtime davranisi degismedi; bu tur sadece dokumantasyon/tooling belirsizligini kapatti.
+
+### Test Sonucu
+- `flutter test test\quran_audio_seed_test.dart test\readme_operational_docs_test.dart` PASS (`5/5`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`351/351`)
+
+### Risk Değişimi
+- Legacy Quran audio seed'inin production playback seed'i sanilmasi riski: `12/25 -> 1/25`
+- README'nin direct CDN audio mimarisini yeniden normalleştirmesi riski: `10/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude kalan `TODO`/`placeholder`/stale README ve test fixture bulgulari daraltip gercek production risklerinden baslanacak; ozellikle debug log sanitization ve raw error copy guard'lari yeniden taranacak.

@@ -59,5 +59,24 @@ void main() {
         ),
       );
     });
+
+    test('is documented as mirror input rather than runtime playback seed', () {
+      final seed = seedFile.readAsStringSync();
+
+      expect(
+        seed,
+        contains(
+          'Mirror input only: runtime playback requires storage_path rows',
+        ),
+      );
+      expect(
+        seed,
+        contains(
+          'Generate runtime rows with tool/generate_quran_audio_storage_seed.dart',
+        ),
+      );
+      expect(seed, contains("'quran_surah', 'Surah 1'"));
+      expect(seed, contains(', NULL, 1, NULL,'));
+    });
   });
 }

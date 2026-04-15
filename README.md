@@ -12,7 +12,7 @@ The guiding philosophy of this rewrite was: **"100% Functionality, Zero Placehol
 4. **The 189-Language Matrix**: Using a highly optimized Dart translation automation script, we generated 192 localized `.arb` files dynamically translating the English localization map into every supported standard language code, giving the app massive global reach instantly.
 5. **Geospatial Independence**: Google Maps was removed due to API key barriers and replaced with **flutter_map**. Production builds must provide a verified tile source instead of relying on public demo tile servers.
 6. **Permanent Live TV**: YouTube iframe widgets with expiring `videoId` strings were thrown out. We integrated raw channel WebViews, meaning the Mekkah/Madinah live feeds will auto-resolve regardless of the current active broadcast URL.
-7. **The 109-Point "No Dummy" Sweep**: A massive sweep eradicated placeholder UIs. "Buy" buttons on the Paywall actually toggle a Riverpod Premium state saved to SharedPreferences. "Daily Verses" actively read the day of the year to pull from `daily_ayat_data.dart`. The Qibla Offset slider actually mathematically alters the user's GPS magnetometer vector. Audio Voice selectors accurately shift the MP3 CDN endpoint for the `just_audio` player.
+7. **The 109-Point "No Dummy" Sweep**: A massive sweep eradicated placeholder UIs. "Buy" buttons on the Paywall actually toggle a Riverpod Premium state saved to SharedPreferences. "Daily Verses" actively read the day of the year to pull from `daily_ayat_data.dart`. The Qibla Offset slider actually mathematically alters the user's GPS magnetometer vector. Audio voice selectors use verified Supabase Storage-backed rows instead of direct third-party MP3 playback.
 
 ## Core Architecture
 - **Framework**: Flutter (Dart)
@@ -61,7 +61,7 @@ flutter build apk \
 `PLACES_TILE_URL_TEMPLATE` is intentionally empty by default. Without it, the Places screen shows an honest map-unavailable state instead of silently using a public tile server. `PLACES_OVERPASS_API_URL` is also intentionally empty by default; configure it with a monitored proxy, an approved provider, or your own rate-limited Overpass-compatible endpoint before enabling nearby search in production.
 
 ## Quran Audio Sovereignty Workflow
-The runtime requires Supabase Storage-backed `storage_path` rows for playable audio. External audio URLs in seed data are only verified mirror inputs and are not used as playback fallbacks. Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded to the `quran-audio` bucket.
+The runtime requires Supabase Storage-backed `storage_path` rows for playable audio. `content_seed_quran_audio.sql` and external audio URLs in seed data are mirror inputs only; they are not runtime playback seeds or fallbacks. Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded to the `quran-audio` bucket.
 
 1. Mirror the verified source audio locally:
 ```bash
