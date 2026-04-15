@@ -4856,3 +4856,37 @@
 
 ### Sonraki Adım
 - Yeni döngüde content/README operatör belgeleri taranacak; download -> upload -> seed sırasının dokümante edilip edilmediği ve yanlış sırada seed uygulama riskinin kapalı olup olmadığı doğrulanacak.
+
+## 2026-04-15 TUR-125 — Document Quran Audio Storage Import Order
+
+### Yapılan İşlem
+- `README.md` içindeki stale `flutter_secure_storage` dependency ifadesi kaldırıldı.
+- Normal local geliştirme için gizli key gerekmediği, production build için Supabase `--dart-define` değerlerinin açıkça verileceği netleştirildi.
+- README'e Kur'an ses egemenliği akışı eklendi: verified download, dry-run upload plan, Supabase Storage upload, storage-backed seed üretimi ve son olarak schema/seed uygulama sırası.
+- `test/readme_operational_docs_test.dart` eklendi; README'in import sırasını ve stale dependency'nin geri dönmemesini doğruluyor.
+
+### Neden Yapıldı
+- `README.md:23` projede olmayan `flutter_secure_storage` dependency'sini yazıyordu.
+- `README.md:47` önce "No API hoops" diyerek production/Supabase import gerçekliğini fazla basitleştiriyordu.
+- Kur'an audio storage seed dosyası, MP3 dosyaları bucket'a yüklenmeden uygulanırsa runtime 404 üretebilir; doğru sıra README'de guard edilmeliydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\README.md`
+- `A:\Way of Allah\sirat_i_nur\test\readme_operational_docs_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Yeni dev/operatörler external URL seed, Storage upload ve storage-backed DB seed sırasını karıştırmaz.
+- Service-role key'in komut satırına değil env'e konması README'de açıkça belirtilir.
+- README regresyon testi operasyonel dokümanın tekrar eksilmesini engeller.
+
+### Test Sonucu
+- `flutter test test\readme_operational_docs_test.dart --reporter compact` PASS (`2/2`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`266/266`)
+
+### Risk Değişimi
+- Kur'an audio storage seed'in dosyalar upload edilmeden uygulanma riski: `10/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde gerçek content seed / storage seed testleri taranacak; README sırası dışında otomatik guard eksikliği kalıp kalmadığı kontrol edilecek.

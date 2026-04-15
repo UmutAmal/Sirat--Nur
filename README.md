@@ -20,7 +20,7 @@ The guiding philosophy of this rewrite was: **"100% Functionality, Zero Placehol
 - **Navigation**: `go_router`
 - **Networking/Audio**: `just_audio`, `audio_session`, `webview_flutter`
 - **Location/Math**: `adhan` (Prayer calculation), `flutter_compass`, `geolocator`, `flutter_map`
-- **Persistence**: `shared_preferences`, `flutter_secure_storage`
+- **Persistence**: `shared_preferences`
 - **BaaS**: Supabase (Initialized and ready, though the app operates completely offline-first)
 
 ## Folder Structure
@@ -44,9 +44,49 @@ lib/
 ```
 
 ## Setup & Compilation
-No hidden keys. No API hoops.
+No hidden keys are required for normal local development.
 1. `flutter pub get`
-2. `flutter run` -> Instantly functional.
+2. `flutter run` -> Instantly functional with bundled/offline-first data.
+
+Production builds should inject Supabase values explicitly when needed:
+```bash
+flutter build apk \
+  --dart-define=SUPABASE_URL=https://... \
+  --dart-define=SUPABASE_ANON_KEY=sb_... \
+  --dart-define=SUPABASE_QURAN_AUDIO_BUCKET=quran-audio
+```
+
+## Quran Audio Sovereignty Workflow
+The runtime prefers Supabase Storage-backed `storage_path` rows over external audio URLs. Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded to the `quran-audio` bucket.
+
+1. Mirror the verified source audio locally:
+```bash
+dart run tool/download_verified_quran_audio.dart --overwrite
+```
+
+2. Validate the upload plan without writing to Storage:
+```bash
+dart run tool/upload_quran_audio_storage.dart \
+  --manifest=build/verified_quran_audio/manifest.json \
+  --supabase-url=https://your-project.supabase.co \
+  --dry-run
+```
+
+3. Upload the mirrored MP3 files with a service-role key stored in the environment, never in command history:
+```bash
+$env:SUPABASE_URL="https://your-project.supabase.co"
+$env:SUPABASE_SERVICE_ROLE_KEY="..."
+dart run tool/upload_quran_audio_storage.dart --manifest=build/verified_quran_audio/manifest.json
+```
+
+4. Generate the storage-backed database seed from the completed manifest:
+```bash
+dart run tool/generate_quran_audio_storage_seed.dart \
+  --manifest=build/verified_quran_audio/manifest.json \
+  --output=content_seed_quran_audio_storage.sql
+```
+
+5. Apply `content_schema.sql` first, then apply the generated storage seed. The generator rejects incomplete or failed mirror manifests, so a partial download cannot silently become a database seed.
 
 ---
 *Generated for Codex and future AI iterations to understand the absolute structural integrity of the V2 codebase.*
