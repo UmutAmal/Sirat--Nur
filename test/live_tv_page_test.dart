@@ -5,12 +5,20 @@ import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 void main() {
   group('Live TV localized copy helpers', () {
-    test('provider error text uses localized error label', () {
+    test('provider error text is localized and hides raw exceptions', () {
       final en = lookupAppLocalizations(const Locale('en'));
       final tr = lookupAppLocalizations(const Locale('tr'));
 
-      expect(buildLiveTvProviderErrorText(en, 'timeout'), 'Error: timeout');
-      expect(buildLiveTvProviderErrorText(tr, 'zaman asimi'), 'Hata: zaman asimi');
+      expect(
+        buildLiveTvProviderErrorText(en),
+        'Stream error\nPlease check your connection',
+      );
+      expect(
+        buildLiveTvProviderErrorText(tr),
+        'Yayın hatası\nLütfen bağlantınızı kontrol edin',
+      );
+      expect(buildLiveTvProviderErrorText(en), isNot(contains('timeout')));
+      expect(buildLiveTvProviderErrorText(tr), isNot(contains('zaman asimi')));
     });
 
     test('empty-state text uses localized no-results label', () {

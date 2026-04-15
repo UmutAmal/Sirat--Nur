@@ -4322,3 +4322,39 @@
 
 ### Sonraki Adım
 - Yeni tarama döngüsünde kalan kullanıcıya görünen raw hata/placeholder/TODO yüzeyleri tekrar aranacak; öncelik `lib/features/**` UI akışları ve audio/download false-success zinciri olacak.
+
+## 2026-04-15 TUR-110 — Sanitize Live TV Error Copy
+
+### Yapılan İşlem
+- `lib/features/tv/live_tv_page.dart` içindeki `buildLiveTvProviderErrorText` artık raw provider exception parametresi almaz.
+- Provider hata state'i `l10n.streamError` + `l10n.checkConnection` ile güvenli lokalize mesaja çevrildi.
+- WebView main-frame hatasında `error.description` artık overlay'e yazılmıyor.
+- Live TV error overlay'i her zaman `l10n.streamError` ve `l10n.checkConnection` gösteriyor.
+- Debug log da raw description yerine WebView `errorCode` ve `errorType` ile sınırlı tutuldu.
+- `test/live_tv_page_test.dart` provider error helper'ının TR/EN lokalize kaldığını ve `timeout` / `zaman asimi` raw exception parçalarını göstermediğini doğruluyor.
+
+### Neden Yapıldı
+- `live_tv_page.dart:9` `${l10n.error}: $error` döndürüyordu.
+- `live_tv_page.dart:119` WebView `error.description` değerini `_errorText` üzerinden kullanıcıya basıyordu.
+- Bu iki yol canlı yayın provider veya WebView teknik hata metinlerini kullanıcıya İngilizce/ham olarak gösterebiliyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\live_tv_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Canlı TV hata yüzeyi raw provider/WebView açıklamalarını sızdırmaz.
+- Kullanıcıya tek, anlaşılır ve lokalize aksiyon verilir: yayın hatası + bağlantıyı kontrol et.
+
+### Test Sonucu
+- `flutter test test/live_tv_page_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`248/248`)
+- `git diff --check` PASS
+
+### Risk Değişimi
+- Live TV hata yüzeyinde raw teknik hata gösterme riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- Ham hata sızıntısı taramasına devam edilecek; sıradaki adaylar `main.dart` global bootstrap logları, qibla placeholder hata ayrıntıları ve premium refresh placeholder zincirinin kullanıcıya açık olup olmadığıdır.

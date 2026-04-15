@@ -6,8 +6,8 @@ import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-String buildLiveTvProviderErrorText(AppLocalizations l10n, Object error) {
-  return '${l10n.error}: $error';
+String buildLiveTvProviderErrorText(AppLocalizations l10n) {
+  return '${l10n.streamError}\n${l10n.checkConnection}';
 }
 
 String buildLiveTvEmptyStateText(AppLocalizations l10n) {
@@ -27,14 +27,13 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
   late final WebViewController _controller;
   bool _isLoading = true;
   bool _hasError = false;
-  String? _errorText;
-  
+
   // Data retrieved from Supabase
   List<Map<String, dynamic>> _streams = [];
 
   List<String> get _currentCandidates {
     if (_streams.isEmpty || _selectedIndex >= _streams.length) return [];
-    
+
     final stream = _streams[_selectedIndex];
     final urls = <String>[];
 
@@ -101,12 +100,17 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
             setState(() => _isLoading = false);
           },
           onNavigationRequest: (request) {
-            if (request.url.startsWith('intent://')) return NavigationDecision.prevent;
+            if (request.url.startsWith('intent://')) {
+              return NavigationDecision.prevent;
+            }
             return NavigationDecision.navigate;
           },
           onWebResourceError: (error) {
             if (!mounted) return;
             if (error.isForMainFrame != true) return;
+            debugPrint(
+              'Live TV main frame load failed: code=${error.errorCode}, type=${error.errorType}',
+            );
             final next = _candidateIndex + 1;
             if (next < _currentCandidates.length) {
               _candidateIndex = next;
@@ -116,7 +120,6 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
             setState(() {
               _isLoading = false;
               _hasError = true;
-              _errorText = error.description;
             });
           },
         ),
@@ -129,7 +132,6 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
       setState(() {
         _isLoading = false;
         _hasError = true;
-        _errorText = null;
       });
       return;
     }
@@ -146,7 +148,6 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
       setState(() {
         _isLoading = false;
         _hasError = true;
-        _errorText = null;
       });
       return;
     }
@@ -160,7 +161,6 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
     setState(() {
       _isLoading = true;
       _hasError = false;
-      _errorText = null;
     });
     _loadCurrentCandidate();
   }
@@ -172,7 +172,6 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
       _candidateIndex = 0;
       _isLoading = true;
       _hasError = false;
-      _errorText = null;
     });
     _loadCurrentCandidate();
   }
@@ -226,22 +225,24 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
         ],
       ),
       body: liveTvAsync.when(
-        loading: () => const Center(child: CircularProgressIndicator(color: AppColors.emerald)),
+        loading: () => const Center(
+          child: CircularProgressIndicator(color: AppColors.emerald),
+        ),
         error: (e, s) =>
-            Center(child: Text(buildLiveTvProviderErrorText(l10n, e))),
+            Center(child: Text(buildLiveTvProviderErrorText(l10n))),
         data: (fetchedStreams) {
           if (fetchedStreams.isEmpty) {
             return Center(child: Text(buildLiveTvEmptyStateText(l10n)));
           }
-          
+
           // Triggers load on first successful fetch
           if (_streams.isEmpty) {
             _streams = fetchedStreams;
             WidgetsBinding.instance.addPostFrameCallback((_) {
-               _loadSelectedStream();
+              _loadSelectedStream();
             });
           } else {
-             _streams = fetchedStreams;
+            _streams = fetchedStreams;
           }
 
           final stream = _streams[_selectedIndex];
@@ -264,7 +265,9 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
                     WebViewWidget(controller: _controller),
                     if (_isLoading)
                       const Center(
-                        child: CircularProgressIndicator(color: AppColors.emerald),
+                        child: CircularProgressIndicator(
+                          color: AppColors.emerald,
+                        ),
                       ),
                     if (_hasError)
                       Center(
@@ -277,17 +280,22 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
                             children: [
                               Text(
                                 l10n.streamError,
-                                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 16),
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 16,
+                                ),
                               ),
                               const SizedBox(height: 8),
-                              if ((_errorText ?? '').isNotEmpty) ...[
-                                Text(
-                                  _errorText!,
-                                  textAlign: TextAlign.center,
-                                  style: const TextStyle(color: Colors.white70, fontSize: 12),
+                              Text(
+                                l10n.checkConnection,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  color: Colors.white70,
+                                  fontSize: 12,
                                 ),
-                                const SizedBox(height: 12),
-                              ],
+                              ),
+                              const SizedBox(height: 12),
                               Wrap(
                                 alignment: WrapAlignment.center,
                                 spacing: 8,
@@ -330,7 +338,9 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
-                          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.onSurface.withValues(alpha: 0.6),
                         ),
                       ),
                     ),
@@ -350,32 +360,63 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
                       decoration: BoxDecoration(
                         color: isSelected
                             ? AppColors.emeraldSurface
-                            : (isDark ? AppColors.darkCard : AppColors.cardLight),
+                            : (isDark
+                                  ? AppColors.darkCard
+                                  : AppColors.cardLight),
                         borderRadius: BorderRadius.circular(16),
-                        border: isSelected ? Border.all(color: AppColors.emerald, width: 2) : null,
-                        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 12)],
+                        border: isSelected
+                            ? Border.all(color: AppColors.emerald, width: 2)
+                            : null,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.06),
+                            blurRadius: 12,
+                          ),
+                        ],
                       ),
                       child: ListTile(
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                        contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 8,
+                        ),
                         leading: Container(
-                          width: 48, height: 48,
+                          width: 48,
+                          height: 48,
                           decoration: BoxDecoration(
                             color: AppColors.emeraldSurface,
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          child: const Icon(Icons.mosque_rounded, color: AppColors.emerald),
+                          child: const Icon(
+                            Icons.mosque_rounded,
+                            color: AppColors.emerald,
+                          ),
                         ),
                         title: Text(
                           item['title'] ?? '',
-                          style: TextStyle(fontWeight: FontWeight.w900, color: isSelected ? AppColors.emerald : null),
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            color: isSelected ? AppColors.emerald : null,
+                          ),
                         ),
                         subtitle: Text(
                           item['subtitle'] ?? '',
-                          style: TextStyle(fontSize: 12, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5)),
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Theme.of(
+                              context,
+                            ).colorScheme.onSurface.withValues(alpha: 0.5),
+                          ),
                         ),
                         trailing: isSelected
-                            ? const Icon(Icons.play_circle_filled_rounded, color: AppColors.emerald, size: 32)
-                            : const Icon(Icons.play_circle_outline_rounded, size: 28),
+                            ? const Icon(
+                                Icons.play_circle_filled_rounded,
+                                color: AppColors.emerald,
+                                size: 32,
+                              )
+                            : const Icon(
+                                Icons.play_circle_outline_rounded,
+                                size: 28,
+                              ),
                         onTap: () => _changeStream(index),
                       ),
                     );
