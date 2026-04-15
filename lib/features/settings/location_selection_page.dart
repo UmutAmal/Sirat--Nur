@@ -140,8 +140,8 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
       if (!mounted) return;
       _showMessage('${l10n.location}: $locationName');
       context.pop();
-    } catch (error) {
-      debugPrint('Location detection failed: $error');
+    } catch (_) {
+      debugPrint('Location detection failed');
       _showMessage(l10n.locationDetectionFailed);
     } finally {
       if (mounted) {

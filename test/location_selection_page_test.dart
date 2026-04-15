@@ -77,6 +77,7 @@ void main() {
       ).readAsStringSync();
 
       expect(source, isNot(contains(r"'${l10n.error}: $error'")));
+      expect(source, isNot(contains(r'Location detection failed: $error')));
       expect(source, contains('l10n.locationDetectionFailed'));
     });
   });

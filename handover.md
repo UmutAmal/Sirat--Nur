@@ -4582,3 +4582,37 @@
 
 ### Sonraki Adım
 - Yeni döngüde konum algılama, namaz bildirim senkronu ve Kur'an indeks/jüz yükleme loglarındaki kalan raw hata desenleri kapatılacak.
+
+## 2026-04-15 TUR-117 — Sanitize Location Detection Error Log
+
+### Yapılan İşlem
+- `lib/features/settings/location_selection_page.dart` konum algılama catch bloğunda raw `error` loglanması kaldırıldı.
+- Kullanıcıya gösterilen `l10n.locationDetectionFailed` snackbar davranışı aynen korundu.
+- `test/location_selection_page_test.dart` eski `Location detection failed: $error` deseninin geri dönmesini yakalayacak şekilde genişletildi.
+
+### Neden Yapıldı
+- `lib/features/settings/location_selection_page.dart:144` önce konum algılama başarısızlığında ham exception metnini logluyordu.
+- Konum akışı kullanıcı lokasyon izinleri ve cihaz servislerine yakın olduğu için ham hata ayrıntısı loglanmamalı.
+- UI zaten lokalize ve güvenli hata mesajı gösterdiği için log tarafında da genel mesaj yeterlidir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\location_selection_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Konum algılama başarısızlıkları artık ham exception içeriği loglamaz.
+- Kullanıcı manuel şehir seçimine yönlendiren lokalize hata mesajını görmeye devam eder.
+- Regresyon testi eski raw log deseninin geri dönmesini engeller.
+
+### Test Sonucu
+- `flutter test test\location_selection_page_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`254/254`)
+- `git diff --check` PASS (sadece CRLF uyarıları)
+
+### Risk Değişimi
+- Konum algılama raw exception loglama riski: `9/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde namaz bildirim senkronu ve Kur'an indeks/jüz yükleme loglarındaki kalan raw hata desenleri kapatılacak.
