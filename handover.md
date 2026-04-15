@@ -6327,3 +6327,37 @@
 
 ### Sonraki Adım
 - Sonraki dongude `liveTvProvider`, `educationCategoriesProvider` ve `educationTopicsProvider` gibi gercek cloud-only provider'lar icin client-unavailable durumunun UI'da lokalize hata state'iyle kaldigini ve raw exception sızdırmadigini test guard'lariyla dogrula.
+
+## 2026-04-15 TUR-164 — Sanitize Cloud-Only Provider Unavailable Errors
+
+### Yapılan İşlem
+- `kCloudContentUnavailableErrorCode` ve `readRequiredSupabaseClient` helper'i eklendi.
+- `liveTvProvider`, `educationCategoriesProvider` ve `educationTopicsProvider` dogrudan `ref.read(supabaseClientProvider)` yerine `readRequiredSupabaseClient(ref)` kullanacak sekilde guncellendi.
+- Supabase client yoksa bu cloud-only provider'lar sahte/yerel veri uretmiyor; kontrollu `StateError('cloud_content_unavailable')` uretiyor.
+- `daily_ayat_provider_test.dart` icine Supabase client override'i raw/secret hata firlatsa bile cloud-only provider'larin yalnizca kontrollu hata kodunu dondurdugunu dogrulayan test eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart:187`, `:325` ve `:338` onceki akista Supabase client edinme hatasini oldugu gibi provider error'a tasiyordu.
+- Live TV ve education cloud-only yuzeylerinde local fallback yok; bu dogru. Ancak client edinme hatasi raw exception olarak kalirsa log/UI/debug yuzeylerine detay sizma riski tasir.
+- Kök sebep, fallback-backed provider'lar icin kurulan optional client sinirinin cloud-only provider'larda kontrollu hata sinirina donusturulmemesiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart`
+- `A:\Way of Allah\sirat_i_nur\test\daily_ayat_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Cloud-only provider'lar Supabase yokken sahte basari/yerel icerik uretmez.
+- Raw Supabase init/client detaylari kontrollu hata koduyla maskelenir.
+- UI tarafindaki mevcut lokalize error state'ler bu kontrollu hata uzerinden calismaya devam eder.
+
+### Test Sonucu
+- `flutter test test\daily_ayat_provider_test.dart` PASS (`7/7`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`337/337`)
+
+### Risk Değişimi
+- Cloud-only provider'larda Supabase client edinme hatasinin raw exception olarak sizma riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki dongude Settings/About ve Places directions gibi external URL launch yuzeyleri taranacak; sabit URL'ler bile bozulursa `Uri.parse` kaynakli crash veya sessiz launch failure uretmemesi icin helper/test guard degerlendirilecek.

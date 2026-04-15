@@ -14,12 +14,23 @@ final supabaseClientProvider = Provider<SupabaseClient>((ref) {
   return Supabase.instance.client;
 });
 
+const String kCloudContentUnavailableErrorCode = 'cloud_content_unavailable';
+
 SupabaseClient? readOptionalSupabaseClient(Ref ref) {
   try {
     return ref.read(supabaseClientProvider);
   } catch (_) {
     return null;
   }
+}
+
+SupabaseClient readRequiredSupabaseClient(Ref ref) {
+  final supabase = readOptionalSupabaseClient(ref);
+  if (supabase == null) {
+    throw StateError(kCloudContentUnavailableErrorCode);
+  }
+
+  return supabase;
 }
 
 const Duration dailyAyatCacheTtl = Duration(hours: 24);
@@ -173,7 +184,7 @@ final dailyAyatProvider = FutureProvider<Map<String, dynamic>>((ref) async {
 });
 
 final liveTvProvider = FutureProvider<List<Map<String, dynamic>>>((ref) async {
-  final supabase = ref.read(supabaseClientProvider);
+  final supabase = readRequiredSupabaseClient(ref);
   final res = await supabase
       .from('live_tv_channels')
       .select()
@@ -311,7 +322,7 @@ List<Map<String, dynamic>> resolveEducationTopics(
 final educationCategoriesProvider = FutureProvider<List<Map<String, dynamic>>>((
   ref,
 ) async {
-  final supabase = ref.read(supabaseClientProvider);
+  final supabase = readRequiredSupabaseClient(ref);
   final res = await supabase
       .from('education_categories')
       .select()
@@ -324,7 +335,7 @@ final educationTopicsProvider =
       ref,
       categoryId,
     ) async {
-      final supabase = ref.read(supabaseClientProvider);
+      final supabase = readRequiredSupabaseClient(ref);
       final res = await supabase
           .from('education_topics')
           .select()

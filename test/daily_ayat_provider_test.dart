@@ -157,4 +157,38 @@ void main() {
       expect(asmaNames, hasLength(99));
     },
   );
+
+  test(
+    'cloud-only providers report a controlled unavailable error when Supabase is unavailable',
+    () async {
+      final prefs = await SharedPreferences.getInstance();
+      final container = ProviderContainer(
+        overrides: [
+          sharedPreferencesProvider.overrideWithValue(prefs),
+          supabaseClientProvider.overrideWith(
+            (_) => throw StateError('raw_supabase_secret'),
+          ),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      final controlledError = throwsA(
+        isA<StateError>().having(
+          (error) => error.message,
+          'message',
+          kCloudContentUnavailableErrorCode,
+        ),
+      );
+
+      await expectLater(container.read(liveTvProvider.future), controlledError);
+      await expectLater(
+        container.read(educationCategoriesProvider.future),
+        controlledError,
+      );
+      await expectLater(
+        container.read(educationTopicsProvider('faith').future),
+        controlledError,
+      );
+    },
+  );
 }
