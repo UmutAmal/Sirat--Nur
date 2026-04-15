@@ -4923,3 +4923,36 @@
 
 ### Sonraki Adım
 - Yeni döngüde upload tool path güvenliği taranacak; manifestteki reciter/local_path değerleriyle bucket dışı veya beklenmeyen object path üretme riski kontrol edilecek.
+
+## 2026-04-15 TUR-127 — Harden Quran Audio Mirror Path Validation
+
+### Yapılan İşlem
+- `tool/generate_quran_audio_storage_seed.dart` manifest parser'ı reciter id değerini canonical `a-z`, `0-9`, `_`, `-` karakter setiyle sınırlandırdı.
+- `local_path` dosya adının sure numarasına karşılık gelen `NNN.mp3` formatıyla eşleşmesi zorunlu hale getirildi.
+- `test/generate_quran_audio_storage_seed_test.dart` path traversal benzeri reciter id ve sure numarasıyla uyuşmayan dosya adı senaryolarını reddeden testler kazandı.
+
+### Neden Yapıldı
+- `tool/upload_quran_audio_storage.dart:24` object path'i `reciterId/basename(localPath)` ile üretiyor.
+- `tool/generate_quran_audio_storage_seed.dart:69` önce reciter değerini yalnızca boş değil diye kabul ediyordu.
+- Elle bozulmuş veya güvenilmeyen manifest, beklenmeyen storage object path üretimine yol açabilirdi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Storage seed ve upload zinciri yalnızca canonical reciter klasörleri ve beklenen sure MP3 adlarıyla ilerler.
+- Path traversal veya yanlış sure/dosya eşleşmesi erken `FormatException` ile durur.
+- Upload tool, parser'dan gelen daha güvenli manifest satırlarına dayanır.
+
+### Test Sonucu
+- `flutter test test\generate_quran_audio_storage_seed_test.dart --reporter compact` PASS (`8/8`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`268/268`)
+
+### Risk Değişimi
+- Bozulmuş Quran audio manifestinden beklenmeyen Supabase Storage object path üretme riski: `10/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde dini içerik metinleri tarafına geri dönülecek; önce chatbot system prompt ve dua/asr içeriklerinde hardcoded/uydurma içerik riski taranacak.

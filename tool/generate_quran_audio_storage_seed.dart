@@ -6,6 +6,7 @@ import 'package:path/path.dart' as p;
 const String _defaultManifestPath = 'build/verified_quran_audio/manifest.json';
 const String _defaultOutputPath = 'content_seed_quran_audio_storage.sql';
 const String _defaultBucketName = 'quran-audio';
+final RegExp _reciterIdPattern = RegExp(r'^[a-z0-9_-]+$');
 
 class MirroredAudioFile {
   const MirroredAudioFile({
@@ -73,6 +74,9 @@ List<MirroredAudioFile> parseMirroredAudioManifest(String manifestJson) {
       if (reciterId == null || reciterId.isEmpty) {
         throw FormatException('Missing reciter in manifest row: $row');
       }
+      if (!_reciterIdPattern.hasMatch(reciterId)) {
+        throw FormatException('Invalid reciter id in manifest row: $reciterId');
+      }
       if (sourceUrl == null || sourceUrl.isEmpty) {
         throw FormatException('Missing source in manifest row: $row');
       }
@@ -81,6 +85,14 @@ List<MirroredAudioFile> parseMirroredAudioManifest(String manifestJson) {
       }
       if (localPath == null || localPath.isEmpty) {
         throw FormatException('Missing local_path in manifest row: $row');
+      }
+      final expectedFileName = '${surahNumber.toString().padLeft(3, '0')}.mp3';
+      final localFileName = p.basename(localPath.replaceAll('\\', '/'));
+      if (localFileName != expectedFileName) {
+        throw FormatException(
+          'Invalid local_path file name for reciter $reciterId, '
+          'surah $surahNumber: expected $expectedFileName.',
+        );
       }
 
       return MirroredAudioFile(
