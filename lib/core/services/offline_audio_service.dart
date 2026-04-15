@@ -45,6 +45,25 @@ String? resolvePlayableCloudAudioUrl(Map<String, dynamic> row) {
   return null;
 }
 
+String _readCloudAudioString(Map<String, dynamic> row, List<String> keys) {
+  for (final key in keys) {
+    final value = row[key]?.toString().trim();
+    if (value != null && value.isNotEmpty) {
+      return value;
+    }
+  }
+
+  return '';
+}
+
+bool hasVerifiedCloudAudioProvenance(Map<String, dynamic> row) {
+  return _readCloudAudioString(row, const ['source', 'reference']).isNotEmpty &&
+      _readCloudAudioString(row, const [
+        'verified_at',
+        'verifiedAt',
+      ]).isNotEmpty;
+}
+
 String normalizeStorageObjectPath(
   String storagePath, {
   String bucketName = SupabaseConfig.quranAudioBucket,
@@ -105,6 +124,10 @@ Map<int, String> resolveCloudQuranSurahUrls(
       _ => null,
     };
     if (surahNumber == null || surahNumber < 1 || surahNumber > 114) {
+      continue;
+    }
+
+    if (!hasVerifiedCloudAudioProvenance(row)) {
       continue;
     }
 
@@ -330,7 +353,9 @@ class OfflineReciters {
     try {
       final row = await Supabase.instance.client
           .from('audio_files')
-          .select('type, reciter, surah_number, url, storage_path')
+          .select(
+            'type, reciter, surah_number, url, storage_path, source, verified_at',
+          )
           .eq('type', 'quran_surah')
           .eq('reciter', reciterId)
           .eq('surah_number', surahNumber)
@@ -339,7 +364,12 @@ class OfflineReciters {
         return null;
       }
 
-      return resolvePlayableCloudAudioUrl(Map<String, dynamic>.from(row));
+      final audioRow = Map<String, dynamic>.from(row);
+      if (!hasVerifiedCloudAudioProvenance(audioRow)) {
+        return null;
+      }
+
+      return resolvePlayableCloudAudioUrl(audioRow);
     } catch (_) {
       return null;
     }
@@ -362,7 +392,9 @@ class OfflineReciters {
     try {
       final rows = await Supabase.instance.client
           .from('audio_files')
-          .select('type, reciter, surah_number, url, storage_path')
+          .select(
+            'type, reciter, surah_number, url, storage_path, source, verified_at',
+          )
           .eq('type', 'quran_surah')
           .order('reciter', ascending: true)
           .order('surah_number', ascending: true);

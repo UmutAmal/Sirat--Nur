@@ -5138,3 +5138,39 @@
 
 ### Sonraki Adım
 - Yeni döngüde Quran audio catalog tarafındaki `audio_files` satırlarında `source` ve `verified_at` zorunlu kabul zinciri yeniden taranacak; özellikle `offline_audio_service.dart` cloud catalog parser'ı provenance kontrolü açısından denetlenecek.
+
+## 2026-04-15 TUR-133 — Require Verified Quran Audio Provenance
+
+### Yapılan İşlem
+- `offline_audio_service.dart` içine `hasVerifiedCloudAudioProvenance` helper'ı eklendi.
+- `resolveCloudQuranSurahUrls` artık `quran_surah` row'unu catalog'a almadan önce `source/reference` ve `verified_at/verifiedAt` alanlarını zorunlu kontrol ediyor.
+- `OfflineReciters.getSurahUrl` ve `OfflineReciters.getQuranAudioCatalog` Supabase select listesine `source, verified_at` alanlarını dahil edecek şekilde güncellendi.
+- `getSurahUrl` tekil row dönerken provenance eksikse URL üretmek yerine `null` döndürüyor.
+- `test/offline_audio_service_test.dart` geçerli Quran audio row'larını provenance alanlarıyla güncelledi ve oynatılabilir URL taşıyan ama `source` veya `verified_at` eksik satırların reddedildiğini doğrulayan test kazandı.
+
+### Neden Yapıldı
+- `content_schema.sql` `public.audio_files` için `source` ve `verified_at` alanlarını zorunlu tutuyor.
+- Ancak `OfflineReciters.getSurahUrl` ve `getQuranAudioCatalog` bu alanları hiç seçmiyor, parser da bu bilgileri kontrol etmiyordu.
+- Bu, Kur'an ses indirme/streaming catalog'una kaynağı belirsiz veya doğrulanmamış URL girmesine neden olabilirdi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kur'an audio catalog'u schema provenance kuralıyla uyumlu hale geldi.
+- Tekil surah URL çözümü ve toplu catalog çözümü aynı doğrulama kapısından geçiyor.
+- Supabase Storage-backed owned audio desteği korunurken, doğrulanmamış satırlar sessizce kullanıcıya sunulmuyor.
+
+### Test Sonucu
+- `flutter test test\offline_audio_service_test.dart --reporter compact` PASS (`6/6`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`278/278`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Cloud Quran audio satırlarında doğrulanmamış veya kaynağı belirsiz URL'i indirme/streaming catalog'una alma riski: `16/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde `quran_ayahs` cloud loader tarafında canlı ayet satırları için `source` ve `verified_at` alanlarının select/normalize zincirinde korunup korunmadığı taranacak.
