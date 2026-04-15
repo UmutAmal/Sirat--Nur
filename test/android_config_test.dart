@@ -8,6 +8,9 @@ void main() {
       'android/app/src/main/AndroidManifest.xml',
     ).readAsStringSync();
     final gradle = File('android/app/build.gradle.kts').readAsStringSync();
+    final gradleProperties = File(
+      'android/gradle.properties',
+    ).readAsStringSync();
     final pubspec = File('pubspec.yaml').readAsStringSync();
 
     test('does not ship stale Google Maps or AdMob placeholder metadata', () {
@@ -25,5 +28,12 @@ void main() {
       expect(gradle, isNot(contains('TODO:')));
       expect(gradle, contains('applicationId = "com.umutamal.sirat_i_nur"'));
     });
+
+    test(
+      'disables Kotlin incremental caches for cross-drive Windows builds',
+      () {
+        expect(gradleProperties, contains('kotlin.incremental=false'));
+      },
+    );
   });
 }

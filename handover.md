@@ -5799,3 +5799,42 @@
 
 ### Sonraki Adım
 - Yeni döngüde dependency freshness tablosundaki güvenli patch/minor güncellemeler ile raw error/debug yüzeyleri yeniden skorlanacak; yüksek etkili olan önce kapatılacak.
+
+## 2026-04-15 TUR-150 — Refresh Compatible Dependencies and Stabilize Android Release Build
+
+### Yapılan İşlem
+- `flutter pub upgrade` ile mevcut `pubspec.yaml` constraint'leri içinde kalınarak uyumlu dependency set'i güncellendi.
+- `pubspec.lock` içinde güvenli patch/minor çözümlemeler yenilendi; major constraint değişimi bu turda yapılmadı.
+- Android release build sırasında Windows cross-drive ortamında tetiklenen Kotlin incremental cache stacktrace'i kök sebepten kapatmak için `android/gradle.properties` içine `kotlin.incremental=false` eklendi.
+- `android_config_test.dart` genişletildi; Android release build hattında bu Kotlin incremental cache guard'ı kaldırılırsa test fail edecek.
+
+### Neden Yapıldı
+- TUR-149 sonrası dependency freshness taramasında mevcut constraint'ler içinde güncellenebilen paketler bulundu.
+- Release build doğrulaması, repo `A:\` üzerinde ve pub cache `C:\Users\UMUT\AppData\Local\Pub\Cache` altında olduğu için Kotlin incremental cache'in cross-drive relative path hesaplarında stacktrace üretebildiğini gösterdi.
+- Build APK üretse bile cache stacktrace'i üretim build hattında güvenilmez sinyal ve ileride kırılgan CI riski oluşturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\android\gradle.properties`
+- `A:\Way of Allah\sirat_i_nur\pubspec.lock`
+- `A:\Way of Allah\sirat_i_nur\test\android_config_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Uyumlu dependency set'i güncel hale getirildi; riskli major migration'lar ayrı skorlanmak üzere bilinçli olarak bu turdan ayrıldı.
+- Android release build hattı Windows cross-drive Kotlin incremental cache stacktrace'inden arındırıldı.
+- Kotlin incremental cache ayarı artık testle korunuyor; ileride aynı release-build gürültüsü sessizce geri dönemez.
+
+### Test Sonucu
+- `flutter pub upgrade` PASS
+- `flutter test test\android_config_test.dart --reporter compact` PASS (`3/3`)
+- `flutter clean` PASS
+- `flutter pub get` PASS
+- `flutter build apk --release` PASS (`build\app\outputs\flutter-apk\app-release.apk`, 85.9 MB)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`305/305`)
+
+### Risk Değişimi
+- Compatible dependency drift ve Windows cross-drive Kotlin incremental cache release-build stacktrace riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde major dependency upgrades ayrı ayrı skorlanacak; uygulama davranışını etkileyebilecek major migration'lar resmi changelog/pub.dev kanıtı ve tam regression suite ile parça parça ele alınacak.
