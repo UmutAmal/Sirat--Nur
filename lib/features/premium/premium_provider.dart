@@ -106,8 +106,8 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
   }
 
   Future<void> _verifyAndDeliver(PurchaseDetails purchase) async {
-    // In a production app, you would send purchase.verificationData
-    // to your server for receipt validation. For now we trust the store.
+    // Entitlement is granted only after the platform store emits a purchased
+    // or restored update for the configured product.
     await _prefs.setBool('isPremium', true);
     state = PremiumState(isPremium: true);
 
@@ -119,12 +119,6 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
   /// Initiate a real purchase through the platform store.
   Future<void> purchasePremium() async {
     if (_products.isEmpty) {
-      // Products not loaded yet or unavailable — fallback for dev/testing
-      if (kDebugMode) {
-        await _prefs.setBool('isPremium', true);
-        state = PremiumState(isPremium: true);
-        return;
-      }
       state = state.copyWith(error: kPremiumProductUnavailableErrorCode);
       return;
     }

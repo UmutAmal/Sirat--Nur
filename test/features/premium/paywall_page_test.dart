@@ -47,4 +47,23 @@ void main() {
     expect(providerSource, isNot(contains(r'Premium restore failed: $e')));
     expect(paywallSource, isNot(contains('return error;')));
   });
+
+  test('premium purchase flow does not grant debug fallback entitlement', () {
+    final providerSource = File(
+      'lib/features/premium/premium_provider.dart',
+    ).readAsStringSync();
+    final normalizedProviderSource = providerSource.replaceAll('\r\n', '\n');
+
+    expect(providerSource, isNot(contains('fallback for dev/testing')));
+    expect(providerSource, isNot(contains('if (kDebugMode)')));
+    expect(
+      normalizedProviderSource,
+      isNot(
+        contains(
+          "await _prefs.setBool('isPremium', true);\n        state = PremiumState(isPremium: true);\n        return;",
+        ),
+      ),
+    );
+    expect(providerSource, contains('kPremiumProductUnavailableErrorCode'));
+  });
 }

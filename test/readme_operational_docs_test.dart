@@ -48,5 +48,36 @@ void main() {
     test('does not document stale persistence dependencies', () {
       expect(readme, isNot(contains('flutter_secure_storage')));
     });
+
+    test(
+      'documents platform-backed premium purchases instead of local simulation',
+      () {
+        expect(
+          readme,
+          contains(
+            'Paywall purchase buttons route through the platform in-app purchase flow',
+          ),
+        );
+        expect(
+          readme,
+          contains(
+            'only persist premium entitlement after a purchased or restored store update',
+          ),
+        );
+        expect(
+          readme,
+          contains('premium/ (Platform in-app purchase Paywall provider)'),
+        );
+        expect(
+          readme,
+          isNot(
+            contains(
+              '"Buy" buttons on the Paywall actually toggle a Riverpod Premium state',
+            ),
+          ),
+        );
+        expect(readme, isNot(contains('Local simulated Paywall provider')));
+      },
+    );
   });
 }

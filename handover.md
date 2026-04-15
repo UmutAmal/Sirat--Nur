@@ -6833,3 +6833,42 @@
 
 ### Sonraki Adım
 - Sonraki dongude hardcoded UI metin taramasi daha dar AST/grep kombinasyonuyla surdurulecek; currency/proper noun gibi bilerek sabit kalanlar ayrilip gercek lokalizasyon eksikleri kapatilacak.
+
+## 2026-04-16 TUR-177 — Remove Debug Premium Unlock Fallback
+
+### Yapılan İşlem
+- `PremiumNotifier.purchasePremium()` icindeki debug/dev fallback premium verme blogu kaldirildi.
+- Premium entitlement yorumlari platform store `purchased/restored` event'i disinda local unlock olmayacak sekilde netlestirildi.
+- README'deki stale "Paywall button toggles local state" ve "Local simulated Paywall provider" ifadeleri platform in-app purchase akisina gore duzeltildi.
+- Premium ve README testlerine debug fallback'in geri gelmesini engelleyen guard'lar eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:121` urun listesi bosken debug build'de `kDebugMode` kontroluyle `isPremium=true` yapiyordu.
+- Bu davranis gercek store satin almasi olmadan premium basarisi urettigi icin AGENTS false-success yasagini ihlal ediyordu.
+- `A:\Way of Allah\sirat_i_nur\README.md:15` ve `A:\Way of Allah\sirat_i_nur\README.md:43` hala local simulated/toggle anlatimini tasiyordu; dokumantasyon gercek akisla celisiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\README.md`
+- `A:\Way of Allah\sirat_i_nur\test\features\premium\paywall_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\readme_operational_docs_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Premium artik debug ortaminda bile urun bilgisi yokken local entitlement grant etmiyor; kullaniciya localized product unavailable hatasi donuyor.
+- Store stream'inden `purchased/restored` event gelmeden `SharedPreferences` icine premium yetkisi yazilmiyor.
+- README operasyonel gercegi saklamiyor; paywall'in platform store akisina bagli oldugunu soyluyor.
+- Test guard'lari `kDebugMode` premium fallback'i ve stale README simülasyon metinleri geri gelirse yakalayacak.
+
+### Test Sonucu
+- `flutter test test\features\premium\paywall_page_test.dart test\premium_provider_test.dart` PASS (`11/11`)
+- `flutter test test\readme_operational_docs_test.dart` PASS (`3/3`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`354/354`)
+
+### Risk Değişimi
+- Premium urunleri yuklenmeyince debug/dev build'de satin alma olmadan entitlement verilmesi riski: `16/25 -> 1/25`
+- README'nin simulated premium davranisini normalleştirmesi riski: `10/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude premium receipt/server validation notlari ve kalan stale/fake davranis taramasi ayrilacak; ardindan production false-success yuzeyleri icin offline download, purchase restore timeout ve map fallback akislari tekrar taranacak.
