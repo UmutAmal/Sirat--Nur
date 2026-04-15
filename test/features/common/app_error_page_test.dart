@@ -22,7 +22,7 @@ void main() {
     expect(find.text('Bilinmeyen hata'), findsOneWidget);
   });
 
-  testWidgets('AppErrorPage shows the provided exception message', (
+  testWidgets('AppErrorPage hides the provided exception message', (
     tester,
   ) async {
     await tester.pumpWidget(
@@ -33,7 +33,7 @@ void main() {
     );
 
     expect(find.text('An error occurred'), findsOneWidget);
-    expect(find.textContaining('Network timeout'), findsOneWidget);
-    expect(find.text('Unknown error'), findsNothing);
+    expect(find.text('Unknown error'), findsOneWidget);
+    expect(find.textContaining('Network timeout'), findsNothing);
   });
 }

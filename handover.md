@@ -4170,3 +4170,35 @@
 
 ### Sonraki Adım
 - Kalan UI hata metni adayları sırayla taranacak: `lib/features/common/app_error_page.dart`, `lib/features/settings/location_selection_page.dart`, `lib/features/library/library_page.dart`, `lib/features/library/hadith_list_page.dart`, `lib/features/settings/diagnostics_page.dart`.
+## 2026-04-15 TUR-106 — Hide Raw App Route Errors
+
+### Yapılan İşlem
+- `lib/features/common/app_error_page.dart` genel hata sayfasında `error?.toString()` gösterimi kaldırıldı.
+- Kullanıcıya her durumda localized `l10n.appUnknownError` gösteriliyor; teknik route/app exception metni UI'a basılmıyor.
+- `test/features/common/app_error_page_test.dart` mevcut beklenti tersine çevrilerek `Exception('Network timeout')` metninin görünmediği doğrulandı.
+
+### Neden Yapıldı
+- `app_router.dart:137` router hata durumunda `AppErrorPage(error: state.error)` çağırıyor.
+- `app_error_page.dart:24` bu exception'ı doğrudan `Text(error?.toString()...)` ile kullanıcıya gösterebiliyordu.
+- Bu genel yüzey, route/permission/provider gibi teknik hatalarda İngilizce veya hassas debug metni sızdırma riski taşıyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\common\app_error_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\common\app_error_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Genel route/app hata ekranı artık yalnızca lokalize güvenli mesaj gösterir.
+- Mevcut `appErrorOccurred` ve `appUnknownError` localization zinciri kullanıldığı için yeni ARB anahtarı gerekmedi.
+
+### Test Sonucu
+- `flutter test test/features/common/app_error_page_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`244/244`)
+- `git diff --check` PASS
+
+### Risk Değişimi
+- Genel hata sayfasında teknik exception sızıntısı riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- UI'a görünen ham hata metni adaylarında sıradaki dosya `lib/features/settings/location_selection_page.dart`; `_showMessage('${l10n.error}: $error')` akışı incelenip güvenli localized mesaja çevrilecek.
