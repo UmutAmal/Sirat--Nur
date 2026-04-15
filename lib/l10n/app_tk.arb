@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "-",
   "audioVoiceMisharyAlafasy": "Erkek (Mişary Alafasy)",
   "audioVoiceAbdulBaset": "Erkek (Abdul Basit)",
-  "audioVoiceSudais": "Erkek (Sudais)"
+  "audioVoiceSudais": "Erkek (Sudais)",
+  "qiblaSensorUnavailable": "Kompass datçigi bu enjamda elýeterli däl."
 }

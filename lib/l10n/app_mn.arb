@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Эрэгтэй (Мишари Алафаси)",
   "audioVoiceAbdulBaset": "Эрэгтэй (АбдулБасет)",
-  "audioVoiceSudais": "Эрэгтэй (Судайчууд)"
+  "audioVoiceSudais": "Эрэгтэй (Судайчууд)",
+  "qiblaSensorUnavailable": "Энэ төхөөрөмж дээр луужин мэдрэгч боломжгүй байна."
 }

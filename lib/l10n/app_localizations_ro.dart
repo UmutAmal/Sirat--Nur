@@ -457,6 +457,10 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Senzorul busolă nu este disponibil pe acest dispozitiv.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

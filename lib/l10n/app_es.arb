@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Hombre (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Hombre (Abdul Basit)",
-  "audioVoiceSudais": "Hombre (Sudais)"
+  "audioVoiceSudais": "Hombre (Sudais)",
+  "qiblaSensorUnavailable": "El sensor de brújula no está disponible en este dispositivo."
 }

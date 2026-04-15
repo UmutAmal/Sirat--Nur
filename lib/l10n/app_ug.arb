@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "-",
   "audioVoiceMisharyAlafasy": "ئەر (مىشارى ئالافاسى)",
   "audioVoiceAbdulBaset": "ئەر (Abdul Basit)",
-  "audioVoiceSudais": "ئەر (سۇدايس)"
+  "audioVoiceSudais": "ئەر (سۇدايس)",
+  "qiblaSensorUnavailable": "بۇ ئۈسكۈنىدە كومپاس سېنزور ئىشلەتكىلى بولمايدۇ."
 }

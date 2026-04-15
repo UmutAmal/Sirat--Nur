@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Mâle (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Homme (Abdul Basit)",
-  "audioVoiceSudais": "Mâle (Sudais)"
+  "audioVoiceSudais": "Mâle (Sudais)",
+  "qiblaSensorUnavailable": "Le capteur de boussole n'est pas disponible sur cet appareil."
 }

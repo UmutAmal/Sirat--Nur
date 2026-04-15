@@ -454,6 +454,10 @@ class AppLocalizationsSm extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'E le o maua le masini tapasa i lenei masini.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "-",
   "audioVoiceMisharyAlafasy": "Ир-ат (Мишари Алафаси)",
   "audioVoiceAbdulBaset": "Ир-ат (АбдулБасет)",
-  "audioVoiceSudais": "Ир-ат (Судайлар)"
+  "audioVoiceSudais": "Ир-ат (Судайлар)",
+  "qiblaSensorUnavailable": "Компас сенсоры бу җайланмада мөмкин түгел."
 }

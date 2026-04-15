@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "男性（ミシャリー・アラファシー）",
   "audioVoiceAbdulBaset": "男性 (アブドゥルバセット)",
-  "audioVoiceSudais": "男性（スーダイス）"
+  "audioVoiceSudais": "男性（スーダイス）",
+  "qiblaSensorUnavailable": "このデバイスではコンパス センサーを利用できません。"
 }

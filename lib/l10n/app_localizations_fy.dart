@@ -454,6 +454,10 @@ class AppLocalizationsFy extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Kompassensor is net beskikber op dit apparaat.';
+
+  @override
   String get notifications => 'Notifikaasjes';
 
   @override

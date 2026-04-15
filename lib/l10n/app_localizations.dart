@@ -1312,6 +1312,12 @@ abstract class AppLocalizations {
   /// **'Compass error: {error}'**
   String qiblaCompassErrorDetails(String error);
 
+  /// No description provided for @qiblaSensorUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Compass sensor is unavailable on this device.'**
+  String get qiblaSensorUnavailable;
+
   /// No description provided for @notifications.
   ///
   /// In en, this message translates to:

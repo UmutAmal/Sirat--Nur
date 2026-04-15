@@ -455,6 +455,10 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'O sensor da bússola não está disponível neste dispositivo.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

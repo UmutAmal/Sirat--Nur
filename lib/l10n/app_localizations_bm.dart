@@ -454,6 +454,10 @@ class AppLocalizationsBm extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Boussole sensor tɛ sɔrɔ nin minɛn in kan.';
+
+  @override
   String get notifications => 'Ladɔnniyaliw';
 
   @override

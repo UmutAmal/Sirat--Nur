@@ -454,6 +454,10 @@ class AppLocalizationsSa extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'अस्मिन् यन्त्रे कम्पाससंवेदकः अनुपलब्धः अस्ति ।';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

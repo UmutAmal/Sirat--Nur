@@ -454,6 +454,10 @@ class AppLocalizationsIg extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Ihe mmetụta kompas adịghị na ngwaọrụ a.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -463,7 +463,10 @@ void main() {
     test(
       'priority locales do not fall back to English for qibla error copy',
       () {
-        const localizedKeys = ['qiblaCompassErrorDetails'];
+        const localizedKeys = [
+          'qiblaCompassErrorDetails',
+          'qiblaSensorUnavailable',
+        ];
 
         for (final locale in priorityLocales) {
           final arb = _readArb('lib/l10n/app_$locale.arb');

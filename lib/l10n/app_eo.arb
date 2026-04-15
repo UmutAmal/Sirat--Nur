@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Masklo (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Masklo (Abdul Basit)",
-  "audioVoiceSudais": "Masklo (Sudais)"
+  "audioVoiceSudais": "Masklo (Sudais)",
+  "qiblaSensorUnavailable": "Kompasa sensilo ne disponeblas en ĉi tiu aparato."
 }

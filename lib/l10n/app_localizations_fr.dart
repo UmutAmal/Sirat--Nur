@@ -457,6 +457,10 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Le capteur de boussole n\'est pas disponible sur cet appareil.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

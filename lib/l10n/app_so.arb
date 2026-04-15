@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Lab (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Lab (Abdul Basit)",
-  "audioVoiceSudais": "Lab (Sudais)"
+  "audioVoiceSudais": "Lab (Sudais)",
+  "qiblaSensorUnavailable": "Dareemaha Compass lagama heli karo qalabkan."
 }

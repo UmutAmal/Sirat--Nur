@@ -454,6 +454,10 @@ class AppLocalizationsEu extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Iparrorratza sentsorea ez dago erabilgarri gailu honetan.';
+
+  @override
   String get notifications => 'Jakinarazpenak';
 
   @override

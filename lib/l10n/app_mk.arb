@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Машко (Мишари Алафаси)",
   "audioVoiceAbdulBaset": "Машко (АбдулБасет)",
-  "audioVoiceSudais": "машки (Судаис)"
+  "audioVoiceSudais": "машки (Судаис)",
+  "qiblaSensorUnavailable": "Сензорот за компас е недостапен на овој уред."
 }

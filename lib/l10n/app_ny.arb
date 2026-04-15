@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Mwamuna (Sudais)"
+  "audioVoiceSudais": "Mwamuna (Sudais)",
+  "qiblaSensorUnavailable": "Sensa ya Compass sichikupezeka pachidachi."
 }

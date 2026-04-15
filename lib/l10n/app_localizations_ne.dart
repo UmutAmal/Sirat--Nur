@@ -454,6 +454,9 @@ class AppLocalizationsNe extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'यस यन्त्रमा कम्पास सेन्सर उपलब्ध छैन।';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

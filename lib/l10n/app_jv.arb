@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Lanang (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Lanang (Abdul Basit)",
-  "audioVoiceSudais": "Lanang (Sudais)"
+  "audioVoiceSudais": "Lanang (Sudais)",
+  "qiblaSensorUnavailable": "Sensor kompas ora kasedhiya ing piranti iki."
 }

@@ -454,6 +454,10 @@ class AppLocalizationsEo extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Kompasa sensilo ne disponeblas en ĉi tiu aparato.';
+
+  @override
   String get notifications => 'Sciigoj';
 
   @override

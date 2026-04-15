@@ -454,6 +454,9 @@ class AppLocalizationsAk extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'Compass sensor nni saa afiri yi so.';
+
+  @override
   String get notifications => 'Amanneɛbɔ ahorow';
 
   @override

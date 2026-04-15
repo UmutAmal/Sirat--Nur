@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Murume (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Murume (Abdul Basit)",
-  "audioVoiceSudais": "Murume (Sudais)"
+  "audioVoiceSudais": "Murume (Sudais)",
+  "qiblaSensorUnavailable": "Compass sensor haisi kuwanikwa pamudziyo uyu."
 }

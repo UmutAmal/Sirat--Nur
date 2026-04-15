@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Nam (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Nam (Abdul Basit)",
-  "audioVoiceSudais": "Nam (Sudais)"
+  "audioVoiceSudais": "Nam (Sudais)",
+  "qiblaSensorUnavailable": "Cảm biến la bàn không khả dụng trên thiết bị này."
 }

@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Lalaki (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Lalaki (Abdul Basit)",
-  "audioVoiceSudais": "Lalaki (Sudais)"
+  "audioVoiceSudais": "Lalaki (Sudais)",
+  "qiblaSensorUnavailable": "Sénsor kompas henteu sayogi dina alat ieu."
 }

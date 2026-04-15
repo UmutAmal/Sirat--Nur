@@ -455,6 +455,10 @@ class AppLocalizationsGa extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Níl braiteoir compáis ar fáil ar an ngléas seo.';
+
+  @override
   String get notifications => 'Fógraí';
 
   @override

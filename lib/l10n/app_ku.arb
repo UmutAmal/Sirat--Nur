@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Mêr (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mêr (Abdul Basit)",
-  "audioVoiceSudais": "nêr (Sûdaîs)"
+  "audioVoiceSudais": "nêr (Sûdaîs)",
+  "qiblaSensorUnavailable": "Sensor Compass li ser vê cîhazê ne berdest e."
 }

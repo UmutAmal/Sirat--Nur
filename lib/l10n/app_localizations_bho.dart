@@ -455,6 +455,9 @@ class AppLocalizationsBho extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'एह डिवाइस पर कम्पास सेंसर उपलब्ध नइखे.';
+
+  @override
   String get notifications => 'सूचना दिहल गइल बा';
 
   @override

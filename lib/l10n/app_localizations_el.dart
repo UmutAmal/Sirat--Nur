@@ -456,6 +456,10 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Ο αισθητήρας πυξίδας δεν είναι διαθέσιμος σε αυτήν τη συσκευή.';
+
+  @override
   String get notifications => 'Ειδοποιήσεις';
 
   @override

@@ -454,6 +454,10 @@ class AppLocalizationsBo extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Compass sensor is unavailable on this device.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

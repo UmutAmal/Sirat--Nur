@@ -454,6 +454,10 @@ class AppLocalizationsCo extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'U sensoru di bussola ùn hè micca dispunibule nantu à stu dispusitivu.';
+
+  @override
   String get notifications => 'Notificazioni';
 
   @override

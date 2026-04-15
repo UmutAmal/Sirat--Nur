@@ -452,6 +452,10 @@ class AppLocalizationsAr extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'مستشعر البوصلة غير متوفر على هذا الجهاز.';
+
+  @override
   String get notifications => 'الإشعارات';
 
   @override

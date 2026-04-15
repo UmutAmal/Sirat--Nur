@@ -456,6 +456,10 @@ class AppLocalizationsDv extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'މި ޑިވައިސްގައި ކޮމްޕަސް ސެންސަރެއް ނެތެވެ.';
+
+  @override
   String get notifications => 'ނޮޓިފިކޭޝަންތައް';
 
   @override

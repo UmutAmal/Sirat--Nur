@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Mwanaume (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mwanaume (Abdul Basit)",
-  "audioVoiceSudais": "Mwanaume (Sudais)"
+  "audioVoiceSudais": "Mwanaume (Sudais)",
+  "qiblaSensorUnavailable": "Kihisi cha dira hakipatikani kwenye kifaa hiki."
 }

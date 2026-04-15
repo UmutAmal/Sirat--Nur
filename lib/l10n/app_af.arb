@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Manlik (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Manlik (Abdul Basit)",
-  "audioVoiceSudais": "Manlik (Sudais)"
+  "audioVoiceSudais": "Manlik (Sudais)",
+  "qiblaSensorUnavailable": "Kompassensor is nie op hierdie toestel beskikbaar nie."
 }

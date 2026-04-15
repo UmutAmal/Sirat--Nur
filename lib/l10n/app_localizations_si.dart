@@ -454,6 +454,9 @@ class AppLocalizationsSi extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'මෙම උපාංගයේ මාලිමා සංවේදකය නොමැත.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

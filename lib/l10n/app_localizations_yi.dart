@@ -454,6 +454,10 @@ class AppLocalizationsYi extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'קאָמפּאַס סענסער איז ניט בנימצא אויף דעם מיטל.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

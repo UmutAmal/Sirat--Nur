@@ -455,6 +455,10 @@ class AppLocalizationsSo extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Dareemaha Compass lagama heli karo qalabkan.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

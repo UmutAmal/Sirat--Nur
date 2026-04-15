@@ -50,7 +50,9 @@ void main() {
       overrides: [
         sharedPreferencesProvider.overrideWithValue(prefs),
         qiblaSensorProvider.overrideWith(
-          (ref) => Stream<QiblaOrientation>.error(Exception('Sensor unavailable')),
+          (ref) => Stream<QiblaOrientation>.error(
+            const QiblaSensorUnavailableException(),
+          ),
         ),
       ],
       child: MaterialApp(
@@ -88,7 +90,28 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.textContaining('Pusula hatası:'), findsOneWidget);
-      expect(find.textContaining('Sensor unavailable'), findsOneWidget);
+      expect(
+        find.textContaining('Bu cihazda pusula sensörü kullanılamıyor.'),
+        findsOneWidget,
+      );
+      expect(find.textContaining('Compass sensor unavailable'), findsNothing);
+      expect(find.textContaining('Sensor unavailable'), findsNothing);
+    });
+
+    test('Qibla error resolver hides raw exception details', () async {
+      final l10n = await AppLocalizations.delegate.load(const Locale('tr'));
+
+      expect(
+        resolveQiblaErrorMessage(
+          l10n,
+          const QiblaSensorUnavailableException(),
+        ),
+        'Pusula hatası: Bu cihazda pusula sensörü kullanılamıyor.',
+      );
+      expect(
+        resolveQiblaErrorMessage(l10n, Exception('Sensor unavailable')),
+        'Pusula hatası: Bilinmeyen hata',
+      );
     });
   });
 }

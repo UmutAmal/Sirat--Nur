@@ -454,6 +454,9 @@ class AppLocalizationsYo extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'Kompasi sensọ ko si lori ẹrọ yi.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

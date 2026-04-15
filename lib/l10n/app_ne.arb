@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "पुरुष (मिशारी अलाफासी)",
   "audioVoiceAbdulBaset": "पुरुष (अब्दुलबासेट)",
-  "audioVoiceSudais": "पुरुष (सुडाई)"
+  "audioVoiceSudais": "पुरुष (सुडाई)",
+  "qiblaSensorUnavailable": "यस यन्त्रमा कम्पास सेन्सर उपलब्ध छैन।"
 }

@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Vīrietis (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Vīrietis (Abdul Basit)",
-  "audioVoiceSudais": "Vīrietis (Sudais)"
+  "audioVoiceSudais": "Vīrietis (Sudais)",
+  "qiblaSensorUnavailable": "Kompasa sensors šajā ierīcē nav pieejams."
 }

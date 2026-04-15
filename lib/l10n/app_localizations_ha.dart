@@ -454,6 +454,10 @@ class AppLocalizationsHa extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Babu firikwensin Compass akan wannan na\'urar.';
+
+  @override
   String get notifications => 'Sanarwa';
 
   @override

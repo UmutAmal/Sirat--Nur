@@ -453,6 +453,9 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'このデバイスではコンパス センサーを利用できません。';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

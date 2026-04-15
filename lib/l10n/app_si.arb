@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "පිරිමි (මිෂාරි ඇලෆාසි)",
   "audioVoiceAbdulBaset": "පිරිමි (අබ්දුල්බසෙට්)",
-  "audioVoiceSudais": "පිරිමි (සුදායිස්)"
+  "audioVoiceSudais": "පිරිමි (සුදායිස්)",
+  "qiblaSensorUnavailable": "මෙම උපාංගයේ මාලිමා සංවේදකය නොමැත."
 }

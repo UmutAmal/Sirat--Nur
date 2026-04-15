@@ -22,6 +22,13 @@ class QiblaOrientation {
   });
 }
 
+class QiblaSensorUnavailableException implements Exception {
+  const QiblaSensorUnavailableException();
+
+  @override
+  String toString() => 'qibla_sensor_unavailable';
+}
+
 class QiblaSensorBridge {
   static final QiblaSensorBridge _instance = QiblaSensorBridge._internal();
   factory QiblaSensorBridge() => _instance;
@@ -48,7 +55,7 @@ class QiblaSensorBridge {
 
     final events = FlutterCompass.events;
     if (events == null) {
-      throw StateError('Compass sensor unavailable on this device.');
+      throw const QiblaSensorUnavailableException();
     }
 
     await for (final event in events) {

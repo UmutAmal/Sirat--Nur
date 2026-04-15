@@ -455,6 +455,9 @@ class AppLocalizationsKri extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'Kɔmpas sɛns nɔ de na dis divays.';
+
+  @override
   String get notifications => 'Notis dɛn we dɛn kin gi';
 
   @override

@@ -454,6 +454,10 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Bu cihazda pusula sensörü kullanılamıyor.';
+
+  @override
   String get notifications => 'Bildirimler';
 
   @override

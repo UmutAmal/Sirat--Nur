@@ -453,6 +453,9 @@ class AppLocalizationsHe extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'חיישן מצפן אינו זמין במכשיר זה.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

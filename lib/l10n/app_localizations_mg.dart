@@ -455,6 +455,10 @@ class AppLocalizationsMg extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Tsy misy sensor compass amin\'ity fitaovana ity.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

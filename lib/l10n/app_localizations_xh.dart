@@ -454,6 +454,10 @@ class AppLocalizationsXh extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Isivamvo seCompass asifumaneki kwesi sixhobo.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

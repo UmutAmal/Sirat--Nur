@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Мард (Мишари Алафаси)",
   "audioVoiceAbdulBaset": "Мард (АбдулБасет)",
-  "audioVoiceSudais": "Мард (Судайс)"
+  "audioVoiceSudais": "Мард (Судайс)",
+  "qiblaSensorUnavailable": "Дар ин дастгоҳ сенсори қутбнамо мавҷуд нест."
 }

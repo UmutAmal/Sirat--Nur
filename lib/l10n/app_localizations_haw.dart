@@ -454,6 +454,10 @@ class AppLocalizationsHaw extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'ʻAʻole loaʻa ka mea ʻike panana panana ma kēia hāmeʻa.';
+
+  @override
   String get notifications => 'Hoolaha';
 
   @override

@@ -456,6 +456,10 @@ class AppLocalizationsHy extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Կողմնացույցի սենսորն անհասանելի է այս սարքում:';
+
+  @override
   String get notifications => 'Ծանուցումներ';
 
   @override

@@ -456,6 +456,10 @@ class AppLocalizationsSt extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Compass sensor ha e fumanehe sesebelisoa sena.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

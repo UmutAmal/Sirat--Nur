@@ -759,5 +759,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Lelaki (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Lelaki (Abdul Basit)",
-  "audioVoiceSudais": "Lelaki (Sudais)"
+  "audioVoiceSudais": "Lelaki (Sudais)",
+  "qiblaSensorUnavailable": "Penderia kompas tidak tersedia pada peranti ini."
 }

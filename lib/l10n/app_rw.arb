@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "-",
   "audioVoiceMisharyAlafasy": "Umugabo (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Umugabo (Abdul Basit)",
-  "audioVoiceSudais": "Umugabo (Sudais)"
+  "audioVoiceSudais": "Umugabo (Sudais)",
+  "qiblaSensorUnavailable": "Rukuruzi ya Compass ntishobora kuboneka kuri iki gikoresho."
 }

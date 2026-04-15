@@ -454,6 +454,10 @@ class AppLocalizationsDa extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Kompassensor er ikke tilgængelig på denne enhed.';
+
+  @override
   String get notifications => 'Meddelelser';
 
   @override

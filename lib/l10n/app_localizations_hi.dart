@@ -454,6 +454,10 @@ class AppLocalizationsHi extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'इस डिवाइस पर कंपास सेंसर उपलब्ध नहीं है।';
+
+  @override
   String get notifications => 'सूचनाएं';
 
   @override

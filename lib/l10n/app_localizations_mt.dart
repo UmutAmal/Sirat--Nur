@@ -455,6 +455,10 @@ class AppLocalizationsMt extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Is-sensor tal-boxxla mhux disponibbli fuq dan l-apparat.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

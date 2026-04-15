@@ -452,6 +452,9 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => '이 기기에서는 나침반 센서를 사용할 수 없습니다.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

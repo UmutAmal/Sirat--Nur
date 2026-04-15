@@ -455,6 +455,10 @@ class AppLocalizationsIlo extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Saan a magun-odan ti compass sensor iti daytoy nga alikamen.';
+
+  @override
   String get notifications => 'Dagiti Pakaammo';
 
   @override

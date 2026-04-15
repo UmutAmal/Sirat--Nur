@@ -455,6 +455,10 @@ class AppLocalizationsOm extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Meeshaa kana irratti sensariin koompaasii hin argamu.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

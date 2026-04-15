@@ -456,6 +456,10 @@ class AppLocalizationsBe extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Датчык компаса недаступны на гэтай прыладзе.';
+
+  @override
   String get notifications => 'Апавяшчэнні';
 
   @override

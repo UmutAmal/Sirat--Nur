@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "-- .",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)"
+  "audioVoiceSudais": "Male (Sudais)",
+  "qiblaSensorUnavailable": "Saan a magun-odan ti compass sensor iti daytoy nga alikamen."
 }

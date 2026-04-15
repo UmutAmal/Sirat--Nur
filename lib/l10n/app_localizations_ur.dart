@@ -454,6 +454,10 @@ class AppLocalizationsUr extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'کمپاس سینسر اس ڈیوائس پر دستیاب نہیں ہے۔';
+
+  @override
   String get notifications => 'اطلاعات';
 
   @override

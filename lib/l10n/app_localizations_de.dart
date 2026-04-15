@@ -457,6 +457,10 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Der Kompasssensor ist auf diesem Gerät nicht verfügbar.';
+
+  @override
   String get notifications => 'Benachrichtigungen';
 
   @override

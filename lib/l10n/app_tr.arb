@@ -224,6 +224,7 @@
       }
     }
   },
+  "qiblaSensorUnavailable": "Bu cihazda pusula sensörü kullanılamıyor.",
   "notifications": "Bildirimler",
   "prayerNotifications": "Namaz Bildirimleri",
   "enableNotifications": "Bildirimleri Etkinleştir",

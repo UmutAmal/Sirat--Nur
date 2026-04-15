@@ -455,6 +455,10 @@ class AppLocalizationsMi extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Karekau te pūoko kāpehu i te wātea ki tēnei pūrere.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

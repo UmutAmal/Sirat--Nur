@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Muž (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Muž (Abdul Basit)",
-  "audioVoiceSudais": "Muž (Sudais)"
+  "audioVoiceSudais": "Muž (Sudais)",
+  "qiblaSensorUnavailable": "Snímač kompasu nie je v tomto zariadení k dispozícii."
 }

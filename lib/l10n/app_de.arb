@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Männlich (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Männlich (Abdul Basit)",
-  "audioVoiceSudais": "Männlich (Sudais)"
+  "audioVoiceSudais": "Männlich (Sudais)",
+  "qiblaSensorUnavailable": "Der Kompasssensor ist auf diesem Gerät nicht verfügbar."
 }

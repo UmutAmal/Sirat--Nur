@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Mężczyzna (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mężczyzna (Abdul Basit)",
-  "audioVoiceSudais": "Mężczyzna (Sudais)"
+  "audioVoiceSudais": "Mężczyzna (Sudais)",
+  "qiblaSensorUnavailable": "Czujnik kompasu jest niedostępny na tym urządzeniu."
 }

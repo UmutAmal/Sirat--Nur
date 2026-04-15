@@ -454,6 +454,10 @@ class AppLocalizationsFa extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'سنسور قطب نما در این دستگاه در دسترس نیست.';
+
+  @override
   String get notifications => 'اعلان‌ها';
 
   @override

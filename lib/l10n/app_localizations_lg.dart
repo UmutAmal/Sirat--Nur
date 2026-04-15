@@ -455,6 +455,10 @@ class AppLocalizationsLg extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Sensulo ya kkampasi tesangibwa ku kyuma kino.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

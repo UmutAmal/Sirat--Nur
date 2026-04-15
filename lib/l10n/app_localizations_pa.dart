@@ -454,6 +454,10 @@ class AppLocalizationsPa extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'ਕੰਪਾਸ ਸੈਂਸਰ ਇਸ ਡਿਵਾਈਸ \'ਤੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Namiji (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Namiji (Abdul Basit)",
-  "audioVoiceSudais": "Namiji (Sudais)"
+  "audioVoiceSudais": "Namiji (Sudais)",
+  "qiblaSensorUnavailable": "Babu firikwensin Compass akan wannan na'urar."
 }

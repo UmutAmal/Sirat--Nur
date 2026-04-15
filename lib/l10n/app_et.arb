@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Mees (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mees (Abdul Basit)",
-  "audioVoiceSudais": "Mees (Sudais)"
+  "audioVoiceSudais": "Mees (Sudais)",
+  "qiblaSensorUnavailable": "Kompassi andur pole selles seadmes saadaval."
 }

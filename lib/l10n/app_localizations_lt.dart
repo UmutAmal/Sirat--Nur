@@ -454,6 +454,10 @@ class AppLocalizationsLt extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Šiame įrenginyje kompaso jutiklis nepasiekiamas.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

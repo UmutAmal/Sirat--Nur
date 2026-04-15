@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Laki-laki (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Laki-laki (Abdul Basit)",
-  "audioVoiceSudais": "Laki-laki (Sudais)"
+  "audioVoiceSudais": "Laki-laki (Sudais)",
+  "qiblaSensorUnavailable": "Sensor kompas tidak tersedia di perangkat ini."
 }

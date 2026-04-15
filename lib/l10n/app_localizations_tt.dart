@@ -454,6 +454,10 @@ class AppLocalizationsTt extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Компас сенсоры бу җайланмада мөмкин түгел.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

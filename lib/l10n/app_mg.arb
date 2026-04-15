@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Lahy (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Lehilahy (Abdul Basit)",
-  "audioVoiceSudais": "Lahy (Sudais)"
+  "audioVoiceSudais": "Lahy (Sudais)",
+  "qiblaSensorUnavailable": "Tsy misy sensor compass amin'ity fitaovana ity."
 }

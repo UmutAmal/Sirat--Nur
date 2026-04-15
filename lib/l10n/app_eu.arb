@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Gizonezkoa (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Gizonezkoa (Abdul Basit)",
-  "audioVoiceSudais": "Gizonezkoa (Sudaia)"
+  "audioVoiceSudais": "Gizonezkoa (Sudaia)",
+  "qiblaSensorUnavailable": "Iparrorratza sentsorea ez dago erabilgarri gailu honetan."
 }

@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "مرد (مشري الافسي)",
   "audioVoiceAbdulBaset": "مرد (عبدالباسط)",
-  "audioVoiceSudais": "مرد (سوديس)"
+  "audioVoiceSudais": "مرد (سوديس)",
+  "qiblaSensorUnavailable": "کمپاس سينسر هن ڊوائيس تي دستياب ناهي."
 }

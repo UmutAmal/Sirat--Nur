@@ -455,6 +455,10 @@ class AppLocalizationsTk extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Kompass datçigi bu enjamda elýeterli däl.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

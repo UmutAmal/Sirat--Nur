@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Férfi (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Férfi (Abdul Basit)",
-  "audioVoiceSudais": "férfi (szudai)"
+  "audioVoiceSudais": "férfi (szudai)",
+  "qiblaSensorUnavailable": "Az iránytűérzékelő nem érhető el ezen az eszközön."
 }

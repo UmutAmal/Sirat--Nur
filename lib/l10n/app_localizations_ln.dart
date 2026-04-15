@@ -455,6 +455,10 @@ class AppLocalizationsLn extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Capteur ya boussole ezali te na appareil oyo.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -455,6 +455,10 @@ class AppLocalizationsMy extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'သံလိုက်အိမ်မြှောင်အာရုံခံကိရိယာကို ဤစက်ပစ္စည်းတွင် မရရှိနိုင်ပါ။';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

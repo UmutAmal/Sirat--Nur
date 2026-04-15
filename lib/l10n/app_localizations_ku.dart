@@ -454,6 +454,10 @@ class AppLocalizationsKu extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Sensor Compass li ser vê cîhazê ne berdest e.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

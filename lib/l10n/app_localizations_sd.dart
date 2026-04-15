@@ -454,6 +454,9 @@ class AppLocalizationsSd extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'کمپاس سينسر هن ڊوائيس تي دستياب ناهي.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

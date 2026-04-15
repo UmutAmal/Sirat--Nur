@@ -224,6 +224,7 @@
       }
     }
   },
+  "qiblaSensorUnavailable": "Compass sensor is unavailable on this device.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",

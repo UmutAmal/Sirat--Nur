@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "مرد (میشاری آلفاسی)",
   "audioVoiceAbdulBaset": "مرد (عبدالبسط)",
-  "audioVoiceSudais": "نر (Sudais)"
+  "audioVoiceSudais": "نر (Sudais)",
+  "qiblaSensorUnavailable": "سنسور قطب نما در این دستگاه در دسترس نیست."
 }

@@ -454,6 +454,10 @@ class AppLocalizationsEt extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Kompassi andur pole selles seadmes saadaval.';
+
+  @override
   String get notifications => 'Märguanded';
 
   @override

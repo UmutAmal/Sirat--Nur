@@ -455,6 +455,10 @@ class AppLocalizationsSl extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Senzor kompasa ni na voljo v tej napravi.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

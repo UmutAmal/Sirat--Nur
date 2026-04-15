@@ -454,6 +454,10 @@ class AppLocalizationsSw extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Kihisi cha dira hakipatikani kwenye kifaa hiki.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

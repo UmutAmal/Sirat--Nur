@@ -3979,3 +3979,45 @@
 
 ### Sonraki Adım
 - Taramada kalan kullanıcıya dönük hardcoded copy yüzeyleri yeniden sınıflandırılacak; özellikle [A:\Way of Allah\sirat_i_nur\lib\features\common\main_skeleton.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/common/main_skeleton.dart) sonrası core yüzeylerde başka sabit UI string kalıp kalmadığı yeniden taranacak.
+
+## 2026-04-15 TUR-101 — Localize Qibla Sensor Unavailable Errors
+
+### Ne Yapıldı
+- [A:\Way of Allah\sirat_i_nur\lib\core\services\qibla_sensor_bridge.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/qibla_sensor_bridge.dart) içinde pusula sensörü yokken fırlatılan hardcoded İngilizce `StateError` yerine typed `QiblaSensorUnavailableException` eklendi.
+- [A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/qibla/qibla_page.dart) artık raw `err.toString()` göstermiyor; bilinen sensör yokluğu hatasını localized `qiblaSensorUnavailable` mesajına, bilinmeyen hataları dürüst `appUnknownError` metnine map ediyor.
+- [A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_en.arb) ve [A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb](A:/Way%20of%20Allah/sirat_i_nur/lib/l10n/app_tr.arb) referanslarına `qiblaSensorUnavailable` anahtarı eklendi; ardından `dart run tool/translate_arb_keys.dart qiblaSensorUnavailable` ve `flutter gen-l10n` ile tüm ARB/generated l10n seti güncellendi.
+- [A:\Way of Allah\sirat_i_nur\test\features\qibla\qibla_page_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/features/qibla/qibla_page_test.dart) sensör yokluğu UI'sinin Türkçe çıktısını ve raw exception sızıntısının gizlendiğini doğrulayacak şekilde genişletildi.
+- [A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/arb_ui_localization_test.dart) qibla hata kopyası guard'ına yeni anahtar eklendi.
+
+### Neden Yapıldı
+- Tam proje taramasında [A:\Way of Allah\sirat_i_nur\lib\core\services\qibla_sensor_bridge.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/core/services/qibla_sensor_bridge.dart) sensör yokluğunda `Compass sensor unavailable on this device.` metnini doğrudan exception olarak üretiyordu.
+- [A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart](A:/Way%20of%20Allah/sirat_i_nur/lib/features/qibla/qibla_page.dart) bu exception'ı `err.toString()` ile kullanıcıya gösterebildiği için localization zinciri kırılıyor ve Türkçe kullanımda İngilizce teknik hata sızıyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\qibla_sensor_bridge.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\qibla\qibla_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Qibla ekranı artık pusula sensörü olmayan cihazlarda kullanıcıya localized, anlaşılır ve teknik detay sızdırmayan hata gösteriyor.
+- Eski İngilizce sensör hata metninin UI'a geri dönmesi widget ve ARB guard testleriyle yakalanacak.
+- Full test öncesi `build/verified_quran_audio_smoke/manifest.json` artefact'i temizlenmiş olduğundan resmi seed üzerinden tek surelik smoke mirror tekrar üretildi; bu artefact `build/` altında ignored kalır ve commit kapsamına alınmaz.
+
+### Test Sonucu
+- `dart run tool/download_verified_quran_audio.dart --reciters=alafasy --surahs=1 --output-dir=build/verified_quran_audio_smoke` → PASS (`requested=1`, `downloaded=1`, `failed=0`)
+- `flutter gen-l10n` → PASS
+- `flutter test test/features/qibla/qibla_page_test.dart --reporter compact` → PASS (`3/3`)
+- `flutter test test/arb_ui_localization_test.dart --reporter compact` → PASS (`27/27`)
+- `flutter analyze` → PASS
+- `flutter test --reporter compact` → PASS (`237/237`)
+
+### Risk Değişimi (önceki risk → sonraki risk)
+- Qibla sensor unavailable path leaks raw English exception text to localized UI: `12/25 → 2/25`
+
+### Sonraki Adım
+- [A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart](A:/Way%20of%20Allah/sirat_i_nur/test/generate_quran_audio_storage_seed_test.dart) temiz checkout'ta ignored `build/verified_quran_audio_smoke/manifest.json` dosyasına bağımlı; bu test bir sonraki döngüde self-contained fixture veya deterministic setup ile kalıcı hale getirilecek.
+- Core servislerde kalan kullanıcıya dönük hardcoded string taraması sürdürülecek; özellikle notification/audio/prayer pipeline kullanıcı mesajları yeniden sınıflandırılacak.

@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "男（米沙里·阿拉法西）",
   "audioVoiceAbdulBaset": "男（阿卜杜勒·巴塞特）",
-  "audioVoiceSudais": "男性（苏代斯）"
+  "audioVoiceSudais": "男性（苏代斯）",
+  "qiblaSensorUnavailable": "指南针传感器在此设备上不可用。"
 }

@@ -454,6 +454,10 @@ class AppLocalizationsRw extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Rukuruzi ya Compass ntishobora kuboneka kuri iki gikoresho.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

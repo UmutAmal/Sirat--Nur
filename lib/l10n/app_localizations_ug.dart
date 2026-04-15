@@ -454,6 +454,10 @@ class AppLocalizationsUg extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'بۇ ئۈسكۈنىدە كومپاس سېنزور ئىشلەتكىلى بولمايدۇ.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Άντρας (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Άντρας (Abdul Basit)",
-  "audioVoiceSudais": "Αρσενικό (Sudais)"
+  "audioVoiceSudais": "Αρσενικό (Sudais)",
+  "qiblaSensorUnavailable": "Ο αισθητήρας πυξίδας δεν είναι διαθέσιμος σε αυτήν τη συσκευή."
 }

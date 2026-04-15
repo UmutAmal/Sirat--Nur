@@ -454,6 +454,9 @@ class AppLocalizationsPs extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'په دې وسیله د کمپاس سینسر شتون نلري.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -455,6 +455,10 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Snímač kompasu nie je v tomto zariadení k dispozícii.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

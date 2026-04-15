@@ -455,6 +455,10 @@ class AppLocalizationsNso extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Senthara ya khamphase ga e hwetšagale go sedirišwa se.';
+
+  @override
   String get notifications => 'Ditsebišo';
 
   @override

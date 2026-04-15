@@ -455,6 +455,10 @@ class AppLocalizationsNy extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Sensa ya Compass sichikupezeka pachidachi.';
+
+  @override
   String get notifications => 'Zidziwitso';
 
   @override

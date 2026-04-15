@@ -454,6 +454,10 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Cảm biến la bàn không khả dụng trên thiết bị này.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

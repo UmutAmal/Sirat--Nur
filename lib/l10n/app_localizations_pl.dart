@@ -454,6 +454,10 @@ class AppLocalizationsPl extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Czujnik kompasu jest niedostępny na tym urządzeniu.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

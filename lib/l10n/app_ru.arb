@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Мужской (Мишарий Алафаси)",
   "audioVoiceAbdulBaset": "Мале (АбдулБасет)",
-  "audioVoiceSudais": "Мале (Судаис)"
+  "audioVoiceSudais": "Мале (Судаис)",
+  "qiblaSensorUnavailable": "Датчик компаса недоступен на этом устройстве."
 }

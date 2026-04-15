@@ -454,6 +454,10 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'ఈ పరికరంలో కంపాస్ సెన్సార్ అందుబాటులో లేదు.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

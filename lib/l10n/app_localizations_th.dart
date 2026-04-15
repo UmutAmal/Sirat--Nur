@@ -454,6 +454,10 @@ class AppLocalizationsTh extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'เซ็นเซอร์เข็มทิศไม่พร้อมใช้งานบนอุปกรณ์นี้';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

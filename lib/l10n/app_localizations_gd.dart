@@ -456,6 +456,10 @@ class AppLocalizationsGd extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Chan eil sensor Compass ri fhaighinn air an inneal seo.';
+
+  @override
   String get notifications => 'Brathan';
 
   @override

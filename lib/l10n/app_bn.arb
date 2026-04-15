@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "পুরুষ (মিশারি আলাফাসি)",
   "audioVoiceAbdulBaset": "পুরুষ (আব্দুল বাসেত)",
-  "audioVoiceSudais": "পুরুষ (সুদাইস)"
+  "audioVoiceSudais": "পুরুষ (সুদাইস)",
+  "qiblaSensorUnavailable": "এই ডিভাইসে কম্পাস সেন্সর অনুপলব্ধ৷"
 }

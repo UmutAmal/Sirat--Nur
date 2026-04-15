@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Mand (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mand (Abdul Basit)",
-  "audioVoiceSudais": "Mand (sudais)"
+  "audioVoiceSudais": "Mand (sudais)",
+  "qiblaSensorUnavailable": "Kompassensor er ikke tilgængelig på denne enhed."
 }

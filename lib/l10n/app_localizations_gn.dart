@@ -456,6 +456,10 @@ class AppLocalizationsGn extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Sensor brújula rehegua ndojeguerekói ko tembipuru’ípe.';
+
+  @override
   String get notifications => 'Marandukuéra';
 
   @override

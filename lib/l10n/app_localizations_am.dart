@@ -452,6 +452,9 @@ class AppLocalizationsAm extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'የኮምፓስ ዳሳሽ በዚህ መሳሪያ ላይ የለም።';
+
+  @override
   String get notifications => 'ማሳወቂያዎች';
 
   @override

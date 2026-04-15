@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "ຜູ້ຊາຍ (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "ຜູ້ຊາຍ (Abdul Basit)",
-  "audioVoiceSudais": "ຊາຍ (ຊູໄດ)"
+  "audioVoiceSudais": "ຊາຍ (ຊູໄດ)",
+  "qiblaSensorUnavailable": "ເຊັນເຊີເຂັມທິດບໍ່ສາມາດໃຊ້ໄດ້ໃນອຸປະກອນນີ້."
 }

@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "مرد (مشیری الفاسی)",
   "audioVoiceAbdulBaset": "مرد (عبدالباسط)",
-  "audioVoiceSudais": "مرد (سدیس)"
+  "audioVoiceSudais": "مرد (سدیس)",
+  "qiblaSensorUnavailable": "کمپاس سینسر اس ڈیوائس پر دستیاب نہیں ہے۔"
 }

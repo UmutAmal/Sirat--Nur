@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "-- 1999 में भइल रहे।",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)"
+  "audioVoiceSudais": "Male (Sudais)",
+  "qiblaSensorUnavailable": "एह डिवाइस पर कम्पास सेंसर उपलब्ध नइखे."
 }

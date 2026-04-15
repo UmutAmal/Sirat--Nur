@@ -456,6 +456,10 @@ class AppLocalizationsBg extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Сензорът за компас не е наличен на това устройство.';
+
+  @override
   String get notifications => 'Известия';
 
   @override

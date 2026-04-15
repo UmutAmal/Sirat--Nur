@@ -458,6 +458,10 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'El sensor de la brúixola no està disponible en aquest dispositiu.';
+
+  @override
   String get notifications => 'Notificacions';
 
   @override

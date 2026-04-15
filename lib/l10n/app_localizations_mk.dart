@@ -454,6 +454,10 @@ class AppLocalizationsMk extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Сензорот за компас е недостапен на овој уред.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

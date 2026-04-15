@@ -454,6 +454,9 @@ class AppLocalizationsKn extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'ಈ ಸಾಧನದಲ್ಲಿ ದಿಕ್ಸೂಚಿ ಸಂವೇದಕ ಲಭ್ಯವಿಲ್ಲ.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

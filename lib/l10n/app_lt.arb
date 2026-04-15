@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Vyras (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Vyras (Abdul Basit)",
-  "audioVoiceSudais": "Vyras (Sudais)"
+  "audioVoiceSudais": "Vyras (Sudais)",
+  "qiblaSensorUnavailable": "Šiame įrenginyje kompaso jutiklis nepasiekiamas."
 }

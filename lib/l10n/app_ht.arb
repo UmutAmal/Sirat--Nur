@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Gason (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Gason (Abdul Basit)",
-  "audioVoiceSudais": "Gason (Sudais)"
+  "audioVoiceSudais": "Gason (Sudais)",
+  "qiblaSensorUnavailable": "Capteur konpa pa disponib sou aparèy sa a."
 }

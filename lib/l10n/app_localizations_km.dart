@@ -454,6 +454,10 @@ class AppLocalizationsKm extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'ឧបករណ៍ចាប់សញ្ញាត្រីវិស័យមិនមាននៅលើឧបករណ៍នេះទេ។';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

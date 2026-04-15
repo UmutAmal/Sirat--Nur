@@ -456,6 +456,10 @@ class AppLocalizationsCeb extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Ang sensor sa kompas dili magamit sa kini nga aparato.';
+
+  @override
   String get notifications => 'Mga pahibalo';
 
   @override

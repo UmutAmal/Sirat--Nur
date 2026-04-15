@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "ಪುರುಷ (ಮಿಶರಿ ಅಲಾಫಾಸಿ)",
   "audioVoiceAbdulBaset": "ಪುರುಷ (ಅಬ್ದುಲ್‌ಬಾಸೆಟ್)",
-  "audioVoiceSudais": "ಪುರುಷ (ಸುಡೈಸ್)"
+  "audioVoiceSudais": "ಪುರುಷ (ಸುಡೈಸ್)",
+  "qiblaSensorUnavailable": "ಈ ಸಾಧನದಲ್ಲಿ ದಿಕ್ಸೂಚಿ ಸಂವೇದಕ ಲಭ್ಯವಿಲ್ಲ."
 }

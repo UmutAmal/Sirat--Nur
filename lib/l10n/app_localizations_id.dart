@@ -454,6 +454,10 @@ class AppLocalizationsId extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Sensor kompas tidak tersedia di perangkat ini.';
+
+  @override
   String get notifications => 'Notifikasi';
 
   @override

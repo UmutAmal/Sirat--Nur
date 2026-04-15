@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Kişi (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Kişi (Abdul Basit)",
-  "audioVoiceSudais": "Kişi (Sudais)"
+  "audioVoiceSudais": "Kişi (Sudais)",
+  "qiblaSensorUnavailable": "Bu cihazda kompas sensoru mövcud deyil."
 }

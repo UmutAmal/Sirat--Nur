@@ -455,6 +455,10 @@ class AppLocalizationsOr extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'ଏହି ଡିଭାଇସରେ କମ୍ପାସ୍ ସେନ୍ସର ଉପଲବ୍ଧ ନାହିଁ |';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

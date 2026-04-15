@@ -456,6 +456,10 @@ class AppLocalizationsMai extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'एहि डिवाइस पर कम्पास सेंसर अनुपलब्ध अछि ।';
+
+  @override
   String get notifications => 'अधिसूचना';
 
   @override

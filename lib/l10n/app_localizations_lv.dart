@@ -455,6 +455,10 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Kompasa sensors šajā ierīcē nav pieejams.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

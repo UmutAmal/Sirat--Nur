@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Maschio (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Maschio (Abdul Basit)",
-  "audioVoiceSudais": "Maschio (Sudais)"
+  "audioVoiceSudais": "Maschio (Sudais)",
+  "qiblaSensorUnavailable": "Il sensore della bussola non è disponibile su questo dispositivo."
 }

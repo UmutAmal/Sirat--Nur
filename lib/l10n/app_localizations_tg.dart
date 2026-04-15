@@ -454,6 +454,10 @@ class AppLocalizationsTg extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Дар ин дастгоҳ сенсори қутбнамо мавҷуд нест.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

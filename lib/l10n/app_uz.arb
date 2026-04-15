@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Erkak (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Erkak (Abdul Basit)",
-  "audioVoiceSudais": "Erkak (Sudais)"
+  "audioVoiceSudais": "Erkak (Sudais)",
+  "qiblaSensorUnavailable": "Kompas sensori bu qurilmada ishlamaydi."
 }

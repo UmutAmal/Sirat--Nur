@@ -454,6 +454,10 @@ class AppLocalizationsZu extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Inzwa yekhampasi ayitholakali kule divayisi.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

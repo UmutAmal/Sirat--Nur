@@ -454,6 +454,9 @@ class AppLocalizationsTi extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'ኣብዚ መሳርሒ ኮምፓስ ሴንሰር የለን።';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

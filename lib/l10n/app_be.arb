@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Самец (Мішары Алафасы)",
   "audioVoiceAbdulBaset": "Мужчына (Abdul Basit)",
-  "audioVoiceSudais": "Мужчына (Sudais)"
+  "audioVoiceSudais": "Мужчына (Sudais)",
+  "qiblaSensorUnavailable": "Датчык компаса недаступны на гэтай прыладзе."
 }

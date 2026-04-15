@@ -454,6 +454,9 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'આ ઉપકરણ પર કંપાસ સેન્સર અનુપલબ્ધ છે.';
+
+  @override
   String get notifications => 'સૂચનાઓ';
 
   @override

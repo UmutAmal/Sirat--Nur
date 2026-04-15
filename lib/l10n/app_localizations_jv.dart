@@ -455,6 +455,10 @@ class AppLocalizationsJv extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Sensor kompas ora kasedhiya ing piranti iki.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

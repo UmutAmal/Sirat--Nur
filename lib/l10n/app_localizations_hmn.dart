@@ -454,6 +454,10 @@ class AppLocalizationsHmn extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Compass sensor tsis muaj nyob rau ntawm lub cuab yeej no.';
+
+  @override
   String get notifications => 'Kev ceeb toom';
 
   @override

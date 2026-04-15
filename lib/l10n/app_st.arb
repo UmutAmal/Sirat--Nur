@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Monna (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Monna (Abdul Basit)",
-  "audioVoiceSudais": "Monna (Sudais)"
+  "audioVoiceSudais": "Monna (Sudais)",
+  "qiblaSensorUnavailable": "Compass sensor ha e fumanehe sesebelisoa sena."
 }

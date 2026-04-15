@@ -456,6 +456,10 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Az iránytűérzékelő nem érhető el ezen az eszközön.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

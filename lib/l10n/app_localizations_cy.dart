@@ -455,6 +455,10 @@ class AppLocalizationsCy extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Nid yw synhwyrydd cwmpawd ar gael ar y ddyfais hon.';
+
+  @override
   String get notifications => 'Hysbysiadau';
 
   @override

@@ -454,6 +454,10 @@ class AppLocalizationsAf extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Kompassensor is nie op hierdie toestel beskikbaar nie.';
+
+  @override
   String get notifications => 'Kennisgewings';
 
   @override

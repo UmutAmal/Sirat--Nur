@@ -458,6 +458,10 @@ class AppLocalizationsTl extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Hindi available ang compass sensor sa device na ito.';
+
+  @override
   String get notifications => 'Mga abiso';
 
   @override

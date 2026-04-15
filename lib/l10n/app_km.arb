@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "ប្រុស (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "ប្រុស (Abdul Basit)",
-  "audioVoiceSudais": "ប្រុស (ស៊ុយអែត)"
+  "audioVoiceSudais": "ប្រុស (ស៊ុយអែត)",
+  "qiblaSensorUnavailable": "ឧបករណ៍ចាប់សញ្ញាត្រីវិស័យមិនមាននៅលើឧបករណ៍នេះទេ។"
 }

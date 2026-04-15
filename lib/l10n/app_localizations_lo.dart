@@ -454,6 +454,10 @@ class AppLocalizationsLo extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'ເຊັນເຊີເຂັມທິດບໍ່ສາມາດໃຊ້ໄດ້ໃນອຸປະກອນນີ້.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

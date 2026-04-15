@@ -456,6 +456,10 @@ class AppLocalizationsQu extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Kay aparatopiqa mana brújula sensor nisqa kanchu.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

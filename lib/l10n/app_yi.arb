@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "זכר (מישאַרי אַלאַפאַסי)",
   "audioVoiceAbdulBaset": "זכר (אַבדולבאַסעט)",
-  "audioVoiceSudais": "זכר (סודאַיס)"
+  "audioVoiceSudais": "זכר (סודאַיס)",
+  "qiblaSensorUnavailable": "קאָמפּאַס סענסער איז ניט בנימצא אויף דעם מיטל."
 }

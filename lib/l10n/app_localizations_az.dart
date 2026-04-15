@@ -454,6 +454,10 @@ class AppLocalizationsAz extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Bu cihazda kompas sensoru mövcud deyil.';
+
+  @override
   String get notifications => 'Bildirişlər';
 
   @override

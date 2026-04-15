@@ -447,6 +447,9 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => '指南针传感器在此设备上不可用。';
+
+  @override
   String get notifications => '通知';
 
   @override
@@ -2064,6 +2067,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
+  String get qiblaSensorUnavailable => '指南针传感器在此设备上不可用。';
+
+  @override
   String get notifications => '通知';
 
   @override
@@ -3679,6 +3685,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String qiblaCompassErrorDetails(String error) {
     return '指南針錯誤：$error';
   }
+
+  @override
+  String get qiblaSensorUnavailable => '指南針感測器在此裝置上不可用。';
 
   @override
   String get notifications => '通知';

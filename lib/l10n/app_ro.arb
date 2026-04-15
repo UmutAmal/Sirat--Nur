@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Bărbat (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Bărbat (Abdul Basit)",
-  "audioVoiceSudais": "Masculin (Sudais)"
+  "audioVoiceSudais": "Masculin (Sudais)",
+  "qiblaSensorUnavailable": "Senzorul busolă nu este disponibil pe acest dispozitiv."
 }

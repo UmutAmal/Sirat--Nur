@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Самець (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Чоловік (Abdul Basit)",
-  "audioVoiceSudais": "Чоловік (Sudais)"
+  "audioVoiceSudais": "Чоловік (Sudais)",
+  "qiblaSensorUnavailable": "Датчик компаса недоступний на цьому пристрої."
 }

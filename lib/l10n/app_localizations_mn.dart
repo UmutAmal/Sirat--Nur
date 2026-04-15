@@ -454,6 +454,10 @@ class AppLocalizationsMn extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Энэ төхөөрөмж дээр луужин мэдрэгч боломжгүй байна.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

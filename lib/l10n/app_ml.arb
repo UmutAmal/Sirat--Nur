@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "പുരുഷൻ (മിഷാരി അലഫാസി)",
   "audioVoiceAbdulBaset": "പുരുഷൻ (അബ്ദുൾബാസെറ്റ്)",
-  "audioVoiceSudais": "പുരുഷൻ (സുദൈസ്)"
+  "audioVoiceSudais": "പുരുഷൻ (സുദൈസ്)",
+  "qiblaSensorUnavailable": "ഈ ഉപകരണത്തിൽ കോമ്പസ് സെൻസർ ലഭ്യമല്ല."
 }

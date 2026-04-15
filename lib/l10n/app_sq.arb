@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Mashkull (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mashkull (Abdul Basit)",
-  "audioVoiceSudais": "Mashkull (Sudais)"
+  "audioVoiceSudais": "Mashkull (Sudais)",
+  "qiblaSensorUnavailable": "Sensori i busullës nuk ofrohet në këtë pajisje."
 }

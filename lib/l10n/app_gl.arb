@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Masculino (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Masculino (Abdul Basit)",
-  "audioVoiceSudais": "Masculino (Sudais)"
+  "audioVoiceSudais": "Masculino (Sudais)",
+  "qiblaSensorUnavailable": "O sensor do compás non está dispoñible neste dispositivo."
 }

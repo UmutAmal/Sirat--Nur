@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Tane (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Tane (Abdul Basit)",
-  "audioVoiceSudais": "Tane (Sudais)"
+  "audioVoiceSudais": "Tane (Sudais)",
+  "qiblaSensorUnavailable": "Karekau te pūoko kāpehu i te wātea ki tēnei pūrere."
 }

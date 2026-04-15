@@ -454,6 +454,10 @@ class AppLocalizationsLa extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Sensorem Compass est in hac fabrica unavailable.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

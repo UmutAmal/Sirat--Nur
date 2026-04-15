@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)"
+  "audioVoiceSudais": "Male (Sudais)",
+  "qiblaSensorUnavailable": "เซ็นเซอร์เข็มทิศไม่พร้อมใช้งานบนอุปกรณ์นี้"
 }

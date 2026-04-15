@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "ஆண் (மிஷரி அலஃபாஸி)",
   "audioVoiceAbdulBaset": "ஆண் (அப்துல்பாசெட்)",
-  "audioVoiceSudais": "ஆண் (சுதைஸ்)"
+  "audioVoiceSudais": "ஆண் (சுதைஸ்)",
+  "qiblaSensorUnavailable": "இந்தச் சாதனத்தில் திசைகாட்டி சென்சார் இல்லை."
 }

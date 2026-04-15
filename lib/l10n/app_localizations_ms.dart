@@ -454,6 +454,10 @@ class AppLocalizationsMs extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Penderia kompas tidak tersedia pada peranti ini.';
+
+  @override
   String get notifications => 'Pemberitahuan';
 
   @override

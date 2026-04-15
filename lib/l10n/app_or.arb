@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "-",
   "audioVoiceMisharyAlafasy": "ପୁରୁଷ (ମିଶରୀ ଆଲାଫାସୀ)",
   "audioVoiceAbdulBaset": "ପୁରୁଷ (ଅବଦୁଲବେସେଟ୍)",
-  "audioVoiceSudais": "ପୁରୁଷ (ସୁଦାଇସ୍)"
+  "audioVoiceSudais": "ପୁରୁଷ (ସୁଦାଇସ୍)",
+  "qiblaSensorUnavailable": "ଏହି ଡିଭାଇସରେ କମ୍ପାସ୍ ସେନ୍ସର ଉପଲବ୍ଧ ନାହିଁ |"
 }

@@ -454,6 +454,10 @@ class AppLocalizationsKa extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'კომპასის სენსორი მიუწვდომელია ამ მოწყობილობაზე.';
+
+  @override
   String get notifications => 'შეტყობინებები';
 
   @override

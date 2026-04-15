@@ -457,6 +457,10 @@ class AppLocalizationsKy extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Компас сенсору бул түзмөктө жеткиликсиз.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

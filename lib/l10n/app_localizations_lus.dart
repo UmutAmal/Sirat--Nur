@@ -456,6 +456,10 @@ class AppLocalizationsLus extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'He device ah hian Compass sensor a awm lo.';
+
+  @override
   String get notifications => 'Hriattirna te';
 
   @override

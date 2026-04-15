@@ -8,6 +8,15 @@ import 'package:sirat_i_nur/core/utils/qibla_utils.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
+String resolveQiblaErrorMessage(AppLocalizations l10n, Object error) {
+  if (error is QiblaSensorUnavailableException ||
+      error.toString().contains('Compass sensor unavailable')) {
+    return l10n.qiblaCompassErrorDetails(l10n.qiblaSensorUnavailable);
+  }
+
+  return l10n.qiblaCompassErrorDetails(l10n.appUnknownError);
+}
+
 class QiblaPage extends ConsumerStatefulWidget {
   const QiblaPage({super.key});
 
@@ -82,7 +91,7 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
             ),
             error: (err, stack) => Center(
               child: Text(
-                l10n.qiblaCompassErrorDetails(err.toString()),
+                resolveQiblaErrorMessage(l10n, err),
                 textAlign: TextAlign.center,
               ),
             ),

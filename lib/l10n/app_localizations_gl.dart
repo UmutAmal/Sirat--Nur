@@ -456,6 +456,10 @@ class AppLocalizationsGl extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'O sensor do compás non está dispoñible neste dispositivo.';
+
+  @override
   String get notifications => 'Notificacións';
 
   @override

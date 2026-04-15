@@ -464,6 +464,10 @@ class AppLocalizationsAy extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Sensor de brújula ukax janiw aka dispositivo ukanx utjkiti.';
+
+  @override
   String get notifications => 'Yatiyawinaka';
 
   @override

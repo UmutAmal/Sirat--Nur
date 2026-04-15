@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "ወንድ (ሚሻሪ አላፋሲ)",
   "audioVoiceAbdulBaset": "ወንድ (አብዱልባሴት)",
-  "audioVoiceSudais": "ወንድ (ሱዳይስ)"
+  "audioVoiceSudais": "ወንድ (ሱዳይስ)",
+  "qiblaSensorUnavailable": "የኮምፓስ ዳሳሽ በዚህ መሳሪያ ላይ የለም።"
 }

@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Masculus (Sudais)"
+  "audioVoiceSudais": "Masculus (Sudais)",
+  "qiblaSensorUnavailable": "Sensorem Compass est in hac fabrica unavailable."
 }

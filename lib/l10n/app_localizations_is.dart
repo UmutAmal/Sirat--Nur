@@ -454,6 +454,10 @@ class AppLocalizationsIs extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Áttavitaskynjari er ekki tiltækur á þessu tæki.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

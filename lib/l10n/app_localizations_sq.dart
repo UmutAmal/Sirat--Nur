@@ -455,6 +455,10 @@ class AppLocalizationsSq extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Sensori i busullës nuk ofrohet në këtë pajisje.';
+
+  @override
   String get notifications => 'Njoftimet';
 
   @override

@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Owesilisa (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Owesilisa (Abdul Basit)",
-  "audioVoiceSudais": "Owesilisa (Sudais)"
+  "audioVoiceSudais": "Owesilisa (Sudais)",
+  "qiblaSensorUnavailable": "Inzwa yekhampasi ayitholakali kule divayisi."
 }

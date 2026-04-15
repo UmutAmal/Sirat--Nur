@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Արական (Միշարի Ալաֆասի)",
   "audioVoiceAbdulBaset": "Արական (ԱբդուլԲասեթ)",
-  "audioVoiceSudais": "Արական (Սուդայ)"
+  "audioVoiceSudais": "Արական (Սուդայ)",
+  "qiblaSensorUnavailable": "Կողմնացույցի սենսորն անհասանելի է այս սարքում:"
 }

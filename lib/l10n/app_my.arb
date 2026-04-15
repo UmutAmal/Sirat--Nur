@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "ယောကျာ်းလေး (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "ယောကျာ်းလေး (Abdul Basit)",
-  "audioVoiceSudais": "ယောကျာ်းလေး (Sudais)"
+  "audioVoiceSudais": "ယောကျာ်းလေး (Sudais)",
+  "qiblaSensorUnavailable": "သံလိုက်အိမ်မြှောင်အာရုံခံကိရိယာကို ဤစက်ပစ္စည်းတွင် မရရှိနိုင်ပါ။"
 }

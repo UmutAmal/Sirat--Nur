@@ -455,6 +455,9 @@ class AppLocalizationsBn extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'এই ডিভাইসে কম্পাস সেন্সর অনুপলব্ধ৷';
+
+  @override
   String get notifications => 'নোটিফিকেশন';
 
   @override

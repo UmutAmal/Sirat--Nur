@@ -454,6 +454,10 @@ class AppLocalizationsHt extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Capteur konpa pa disponib sou aparèy sa a.';
+
+  @override
   String get notifications => 'Notifikasyon';
 
   @override

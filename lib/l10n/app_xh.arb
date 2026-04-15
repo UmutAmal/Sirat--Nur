@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Indoda (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Indoda (Abdul Basit)",
-  "audioVoiceSudais": "Indoda (Sudais)"
+  "audioVoiceSudais": "Indoda (Sudais)",
+  "qiblaSensorUnavailable": "Isivamvo seCompass asifumaneki kwesi sixhobo."
 }

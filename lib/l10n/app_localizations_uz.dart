@@ -454,6 +454,10 @@ class AppLocalizationsUz extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Kompas sensori bu qurilmada ishlamaydi.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

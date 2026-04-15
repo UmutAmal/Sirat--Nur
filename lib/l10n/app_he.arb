@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "זכר (מישרי אלאפסי)",
   "audioVoiceAbdulBaset": "זכר (Abdul Basit)",
-  "audioVoiceSudais": "זכר (סודאים)"
+  "audioVoiceSudais": "זכר (סודאים)",
+  "qiblaSensorUnavailable": "חיישן מצפן אינו זמין במכשיר זה."
 }

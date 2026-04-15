@@ -758,5 +758,6 @@
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "მამაკაცი (მიშარი ალაფასი)",
   "audioVoiceAbdulBaset": "მამაკაცი (აბდულბასეტი)",
-  "audioVoiceSudais": "მამაკაცი (სუდაისი)"
+  "audioVoiceSudais": "მამაკაცი (სუდაისი)",
+  "qiblaSensorUnavailable": "კომპასის სენსორი მიუწვდომელია ამ მოწყობილობაზე."
 }

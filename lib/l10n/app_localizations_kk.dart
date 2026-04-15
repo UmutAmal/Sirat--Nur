@@ -454,6 +454,9 @@ class AppLocalizationsKk extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'Бұл құрылғыда компас сенсоры жоқ.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

@@ -455,6 +455,10 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Kompassin tunnistin ei ole käytettävissä tässä laitteessa.';
+
+  @override
   String get notifications => 'Ilmoitukset';
 
   @override

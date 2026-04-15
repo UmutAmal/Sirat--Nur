@@ -454,6 +454,9 @@ class AppLocalizationsMl extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable => 'ഈ ഉപകരണത്തിൽ കോമ്പസ് സെൻസർ ലഭ്യമല്ല.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

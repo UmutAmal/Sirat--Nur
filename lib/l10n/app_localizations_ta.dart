@@ -455,6 +455,10 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'இந்தச் சாதனத்தில் திசைகாட்டி சென்சார் இல்லை.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override

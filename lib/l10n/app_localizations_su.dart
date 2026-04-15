@@ -455,6 +455,10 @@ class AppLocalizationsSu extends AppLocalizations {
   }
 
   @override
+  String get qiblaSensorUnavailable =>
+      'Sénsor kompas henteu sayogi dina alat ieu.';
+
+  @override
   String get notifications => 'Notifications';
 
   @override
