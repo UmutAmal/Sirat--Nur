@@ -164,6 +164,27 @@ void main() {
       );
     });
 
+    test(
+      'Qibla sensor error classification avoids raw toString dependency',
+      () {
+        expect(
+          isQiblaSensorUnavailableError(
+            Exception('Compass sensor unavailable'),
+          ),
+          isTrue,
+        );
+        expect(
+          isQiblaSensorUnavailableError(Exception('Sensor unavailable')),
+          isFalse,
+        );
+
+        final source = File(
+          'lib/features/qibla/qibla_page.dart',
+        ).readAsStringSync();
+        expect(source, isNot(contains('error.toString()')));
+      },
+    );
+
     test('hasQiblaLocation requires both coordinates', () {
       expect(hasQiblaLocation(SettingsState()), isFalse);
       expect(hasQiblaLocation(SettingsState(latitude: 41.0082)), isFalse);

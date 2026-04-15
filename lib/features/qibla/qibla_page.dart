@@ -9,12 +9,22 @@ import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 String resolveQiblaErrorMessage(AppLocalizations l10n, Object error) {
-  if (error is QiblaSensorUnavailableException ||
-      error.toString().contains('Compass sensor unavailable')) {
+  if (isQiblaSensorUnavailableError(error)) {
     return l10n.qiblaCompassErrorDetails(l10n.qiblaSensorUnavailable);
   }
 
   return l10n.qiblaCompassErrorDetails(l10n.appUnknownError);
+}
+
+bool isQiblaSensorUnavailableError(Object error) {
+  if (error is QiblaSensorUnavailableException) {
+    return true;
+  }
+
+  final fingerprint = StringBuffer()..write(error);
+  final normalized = fingerprint.toString().toLowerCase();
+  return normalized.contains('qibla_sensor_unavailable') ||
+      normalized.contains('compass sensor unavailable');
 }
 
 bool hasQiblaLocation(SettingsState settings) {

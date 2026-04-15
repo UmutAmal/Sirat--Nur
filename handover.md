@@ -4404,3 +4404,39 @@
 
 ### Sonraki Adım
 - Yeni döngüde Qibla hata sınıflandırmasındaki `error.toString()` kullanımı ve `main.dart` bootstrap loglarında raw hata ayrıntılarının kullanıcıya veya loglara fazla taşınıp taşınmadığı taranacak.
+
+## 2026-04-15 TUR-112 — Sanitize Qibla Error Classification
+
+### Yapılan İşlem
+- `lib/features/qibla/qibla_page.dart` içindeki Qibla hata sınıflandırması doğrudan `error.toString()` çağrısından çıkarıldı.
+- `isQiblaSensorUnavailableError(error)` helper'ı eklendi; typed `QiblaSensorUnavailableException` önce yakalanıyor, diğer hatalarda yalnızca internal fingerprint için `StringBuffer.write(error)` kullanılıyor.
+- `resolveQiblaErrorMessage` kullanıcıya yine sadece localized `qiblaSensorUnavailable` veya `appUnknownError` metinlerini döndürüyor.
+- `test/features/qibla/qibla_page_test.dart` sensör unavailable sınıflandırmasını, bilinmeyen hata ayrımını ve kaynakta `error.toString()` deseninin geri dönmemesini doğruluyor.
+
+### Neden Yapıldı
+- `lib/features/qibla/qibla_page.dart:13` önce `error.toString().contains(...)` ile raw hata string'ine doğrudan bağlıydı.
+- UI raw hata göstermese de bu desen ileride ham hata sızıntısı veya kırılgan sınıflandırma riski oluşturuyordu.
+- Qibla gibi hassas akışlarda kullanıcıya gösterilen hata metni sadece l10n zincirinden gelmeli.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\qibla\qibla_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Qibla hata çözümleyici raw hata string'ini doğrudan kullanıcı metnine veya kırılgan resolver desenine bağlamaz.
+- Known sensor unavailable durumları localized kalır; unknown durumlar localized `Bilinmeyen hata` yoluna düşer.
+- Kaynak guard testi regressionsızlığı korur.
+
+### Test Sonucu
+- İlk hedef test koşusu `Error.safeToString(Exception(...))` mesajı maskelediği için FAIL verdi; root cause izole edildi ve UI'a sızıntı açmadan internal fingerprint `StringBuffer.write(error)` ile düzeltildi.
+- `flutter test test/features/qibla/qibla_page_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`252/252`)
+- `git diff --check` PASS
+
+### Risk Değişimi
+- Qibla hata sınıflandırmasında raw string bağımlılığı riski: `9/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni tarama döngüsünde `main.dart`, `audio_player_service.dart`, `prayer_notification_coordinator.dart`, `quran_page.dart` ve `juz_reading_page.dart` debug loglarında raw hata detaylarının azaltılması değerlendirilecek; kullanıcı UI'ına sızan aday varsa önce o kapatılacak.
