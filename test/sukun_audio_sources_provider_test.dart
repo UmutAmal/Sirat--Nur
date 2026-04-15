@@ -9,11 +9,15 @@ void main() {
           'type': 'sukun',
           'title': 'Rain of Mercy',
           'url': 'https://cdn.example.com/audio/rain.mp3',
+          'source': 'verified audio catalog',
+          'verified_at': '2026-04-15T00:00:00Z',
         },
         {
           'type': 'nature',
           'title': 'forest',
           'url': 'https://cdn.example.com/audio/forest.mp3',
+          'source': 'verified audio catalog',
+          'verified_at': '2026-04-15T00:00:00Z',
         },
       ]);
 
@@ -29,12 +33,41 @@ void main() {
           'type': 'adhan',
           'title': 'Rain of Mercy',
           'url': 'https://cdn.example.com/audio/rain.mp3',
+          'source': 'verified audio catalog',
+          'verified_at': '2026-04-15T00:00:00Z',
         },
-        {'type': 'sukun', 'title': 'Ocean Tawheed', 'url': ''},
+        {
+          'type': 'sukun',
+          'title': 'Ocean Tawheed',
+          'url': '',
+          'source': 'verified audio catalog',
+          'verified_at': '2026-04-15T00:00:00Z',
+        },
         {
           'type': 'sukun',
           'title': 'Unknown stream',
           'url': 'https://cdn.example.com/audio/unknown.mp3',
+          'source': 'verified audio catalog',
+          'verified_at': '2026-04-15T00:00:00Z',
+        },
+      ]);
+
+      expect(resolved, isEmpty);
+    });
+
+    test('rejects playable rows without source and verified_at provenance', () {
+      final resolved = resolveCloudSukunSources([
+        {
+          'type': 'sukun',
+          'title': 'Rain of Mercy',
+          'url': 'https://cdn.example.com/audio/rain.mp3',
+          'verified_at': '2026-04-15T00:00:00Z',
+        },
+        {
+          'type': 'nature',
+          'title': 'forest',
+          'url': 'https://cdn.example.com/audio/forest.mp3',
+          'source': 'verified audio catalog',
         },
       ]);
 

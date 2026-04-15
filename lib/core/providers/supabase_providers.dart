@@ -172,20 +172,27 @@ Map<String, String> resolveCloudSukunSources(List<Map<String, dynamic>> rows) {
       continue;
     }
 
-    final source = _readFirstAyatValue(row, ['url']);
-    if (source == null) {
+    final hasVerifiedProvenance =
+        _readFirstAyatValue(row, ['source', 'reference']) != null &&
+        _readFirstAyatValue(row, ['verified_at', 'verifiedAt']) != null;
+    if (!hasVerifiedProvenance) {
+      continue;
+    }
+
+    final url = _readFirstAyatValue(row, ['url']);
+    if (url == null) {
       continue;
     }
 
     final soundType =
         resolveSukunSoundType(row['title']?.toString() ?? '') ??
         resolveSukunSoundType(row['storage_path']?.toString() ?? '') ??
-        resolveSukunSoundType(source);
+        resolveSukunSoundType(url);
     if (soundType == null) {
       continue;
     }
 
-    sources.putIfAbsent(soundType, () => source);
+    sources.putIfAbsent(soundType, () => url);
   }
 
   return Map.unmodifiable(sources);

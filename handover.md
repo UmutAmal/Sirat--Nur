@@ -5102,3 +5102,39 @@
 
 ### Sonraki Adım
 - Yeni döngüde `audio_files` tablosundan gelen sukun/nature audio satırlarında `source` ve `verified_at` zorlanıp zorlanmadığı kontrol edilecek; ses içeriğinde doğrulanmamış URL gösterimi riski kapatılacak.
+
+## 2026-04-15 TUR-132 — Require Verified Sukun Audio Provenance
+
+### Yapılan İşlem
+- `resolveCloudSukunSources` artık `sukun` veya `nature` tipindeki `audio_files` satırını yalnızca `source/reference` ve `verified_at/verifiedAt` doluysa kabul ediyor.
+- URL değişkeni `source` ismiyle karışmayacak şekilde `url` olarak ayrıldı; provenance `source` alanı ile playable URL alanı netleşti.
+- `test/sukun_audio_sources_provider_test.dart` geçerli cloud audio satırlarını provenance alanlarıyla güncelledi.
+- Playable URL taşısa bile `source` veya `verified_at` eksik satırların reddedildiğini doğrulayan regresyon testi eklendi.
+
+### Neden Yapıldı
+- `content_schema.sql` içindeki `public.audio_files` tablosu `source text not null` ve `verified_at timestamptz not null` şartı taşıyor.
+- Flutter tarafındaki `resolveCloudSukunSources` daha önce yalnızca `type`, `url` ve sound type çıkarımına bakıyordu.
+- Bu durum, manuel/bozuk cloud satırlarında doğrulanmamış ses URL'lerinin sukun/nature playback'e çıkmasına yol açabilirdi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart`
+- `A:\Way of Allah\sirat_i_nur\test\sukun_audio_sources_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Sukun/nature cloud audio kaynakları artık schema provenance kuralıyla uygulama parser'ında tutarlı.
+- Doğrulanmamış veya kaynağı belirsiz ses URL'leri kullanıcıya "çalışan içerik" gibi gösterilmez.
+- `sukun_audio_page` ve Library sukun entry akışı var olan doğrulanmış provider sözleşmesini korur.
+
+### Test Sonucu
+- `flutter test test\sukun_audio_sources_provider_test.dart test\sukun_audio_page_test.dart --reporter compact` PASS (`19/19`)
+- `flutter test test\library_page_test.dart --reporter compact` PASS (`13/13`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`277/277`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Cloud sukun/nature audio satırlarında doğrulanmamış veya kaynağı belirsiz ses URL'i oynatma riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde Quran audio catalog tarafındaki `audio_files` satırlarında `source` ve `verified_at` zorunlu kabul zinciri yeniden taranacak; özellikle `offline_audio_service.dart` cloud catalog parser'ı provenance kontrolü açısından denetlenecek.
