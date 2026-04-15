@@ -7,8 +7,8 @@ import 'package:sirat_i_nur/features/library/hadith_collection_copy.dart';
 import 'package:sirat_i_nur/features/library/providers/hadith_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
-String buildHadithListErrorText(AppLocalizations l10n, Object error) {
-  return '${l10n.error}: $error\n${l10n.checkConnection}';
+String buildHadithListErrorText(AppLocalizations l10n) {
+  return '${l10n.error}\n${l10n.checkConnection}';
 }
 
 String buildHadithListEmptyText(AppLocalizations l10n) {
@@ -67,7 +67,7 @@ class HadithListPage extends ConsumerWidget {
         ),
       );
     }
-    
+
     final hadithReq = HadithRequest(collectionId, lang);
     final hadithData = ref.watch(hadithSectionProvider(hadithReq));
 
@@ -88,9 +88,21 @@ class HadithListPage extends ConsumerWidget {
               ),
               child: Column(
                 children: [
-                  const Icon(Icons.library_books_rounded, color: Colors.white, size: 40),
+                  const Icon(
+                    Icons.library_books_rounded,
+                    color: Colors.white,
+                    size: 40,
+                  ),
                   const SizedBox(height: 12),
-                  Text(name, style: const TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w900), textAlign: TextAlign.center),
+                  Text(
+                    name,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: FontWeight.w900,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
                 ],
               ),
             ),
@@ -107,9 +119,11 @@ class HadithListPage extends ConsumerWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(32.0),
                   child: Text(
-                    buildHadithListErrorText(l10n, err),
+                    buildHadithListErrorText(l10n),
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Theme.of(context).colorScheme.error),
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.error,
+                    ),
                   ),
                 ),
               ),
@@ -129,21 +143,34 @@ class HadithListPage extends ConsumerWidget {
                           Row(
                             children: [
                               Container(
-                                width: 32, height: 32,
+                                width: 32,
+                                height: 32,
                                 decoration: const BoxDecoration(
                                   color: AppColors.emeraldSurface,
                                   shape: BoxShape.circle,
                                 ),
-                                child: Center(child: Text('${h.number}', style: const TextStyle(
-                                  fontWeight: FontWeight.w900, color: AppColors.emerald, fontSize: 12))),
+                                child: Center(
+                                  child: Text(
+                                    '${h.number}',
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.w900,
+                                      color: AppColors.emerald,
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ),
                               ),
                               const SizedBox(width: 12),
                               Expanded(
                                 child: Text(
-                                  h.heading ?? name, 
+                                  h.heading ?? name,
                                   style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.w700,
-                                    color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5)
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onSurface
+                                        .withValues(alpha: 0.5),
                                   ),
                                 ),
                               ),
@@ -151,14 +178,28 @@ class HadithListPage extends ConsumerWidget {
                           ),
                           const SizedBox(height: 12),
                           if (h.arabic.isNotEmpty) ...[
-                            Text(h.arabic, style: const TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w900, height: 2.0),
-                              textDirection: TextDirection.rtl, textAlign: TextAlign.right),
+                            Text(
+                              h.arabic,
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w900,
+                                height: 2.0,
+                              ),
+                              textDirection: TextDirection.rtl,
+                              textAlign: TextAlign.right,
+                            ),
                             const SizedBox(height: 12),
                           ],
-                          Text(h.translation, style: TextStyle(
-                            fontSize: 13, height: 1.7,
-                            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.8))),
+                          Text(
+                            h.translation,
+                            style: TextStyle(
+                              fontSize: 13,
+                              height: 1.7,
+                              color: Theme.of(
+                                context,
+                              ).colorScheme.onSurface.withValues(alpha: 0.8),
+                            ),
+                          ),
                         ],
                       ),
                     );
@@ -171,5 +212,4 @@ class HadithListPage extends ConsumerWidget {
       ),
     );
   }
-
 }

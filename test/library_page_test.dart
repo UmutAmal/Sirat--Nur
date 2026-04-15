@@ -24,12 +24,17 @@ class _NoopAudioEngine implements SovereignAudioEngine {
 
 void main() {
   group('Library localized copy helpers', () {
-    test('error text uses the localized error label', () {
+    test('error text is localized and hides raw exceptions', () {
       final en = lookupAppLocalizations(const Locale('en'));
       final tr = lookupAppLocalizations(const Locale('tr'));
 
-      expect(buildLibraryErrorText(en, 'timeout'), 'Error: timeout');
-      expect(buildLibraryErrorText(tr, 'zaman asimi'), 'Hata: zaman asimi');
+      expect(buildLibraryErrorText(en), 'Error\nPlease check your connection');
+      expect(
+        buildLibraryErrorText(tr),
+        'Hata\nLütfen bağlantınızı kontrol edin',
+      );
+      expect(buildLibraryErrorText(en), isNot(contains('timeout')));
+      expect(buildLibraryErrorText(tr), isNot(contains('zaman asimi')));
     });
 
     test('empty text uses the localized no-results label', () {
@@ -55,68 +60,86 @@ void main() {
       expect(resolveDuaMeaning(tr, dua, const Locale('tr')), 'Turkce anlam');
     });
 
-    test('dua meaning uses localized bundled fallback for supported locales', () {
-      final de = lookupAppLocalizations(const Locale('de'));
-      const dua = DuaData(
-        id: '1',
-        arabic: 'arabic',
-        transliteration: 'transliteration',
-        turkish: 'Turkce anlam',
-        english: 'English meaning',
-        source: 'source',
-        category: 'category',
-      );
+    test(
+      'dua meaning uses localized bundled fallback for supported locales',
+      () {
+        final de = lookupAppLocalizations(const Locale('de'));
+        const dua = DuaData(
+          id: '1',
+          arabic: 'arabic',
+          transliteration: 'transliteration',
+          turkish: 'Turkce anlam',
+          english: 'English meaning',
+          source: 'source',
+          category: 'category',
+        );
 
-      expect(resolveDuaMeaning(de, dua, const Locale('de')), de.duaMeaning1);
-    });
+        expect(resolveDuaMeaning(de, dua, const Locale('de')), de.duaMeaning1);
+      },
+    );
 
-    test('dua meaning uses locale-specific cloud translations when available', () {
-      final de = lookupAppLocalizations(const Locale('de'));
-      const dua = DuaData(
-        id: 'cloud-1',
-        arabic: 'arabic',
-        transliteration: 'transliteration',
-        turkish: 'Turkce anlam',
-        english: 'English meaning',
-        source: 'source',
-        category: 'category',
-        translations: {'de': 'Deutsche Bedeutung'},
-      );
+    test(
+      'dua meaning uses locale-specific cloud translations when available',
+      () {
+        final de = lookupAppLocalizations(const Locale('de'));
+        const dua = DuaData(
+          id: 'cloud-1',
+          arabic: 'arabic',
+          transliteration: 'transliteration',
+          turkish: 'Turkce anlam',
+          english: 'English meaning',
+          source: 'source',
+          category: 'category',
+          translations: {'de': 'Deutsche Bedeutung'},
+        );
 
-      expect(
-        resolveDuaMeaning(de, dua, const Locale('de')),
-        'Deutsche Bedeutung',
-      );
-    });
+        expect(
+          resolveDuaMeaning(de, dua, const Locale('de')),
+          'Deutsche Bedeutung',
+        );
+      },
+    );
 
-    test('dua meaning falls back to English for non-bundled rows without locale data', () {
-      final de = lookupAppLocalizations(const Locale('de'));
-      const dua = DuaData(
-        id: 'cloud-1',
-        arabic: 'arabic',
-        transliteration: 'transliteration',
-        turkish: 'Turkce anlam',
-        english: 'English meaning',
-        source: 'source',
-        category: 'category',
-      );
+    test(
+      'dua meaning falls back to English for non-bundled rows without locale data',
+      () {
+        final de = lookupAppLocalizations(const Locale('de'));
+        const dua = DuaData(
+          id: 'cloud-1',
+          arabic: 'arabic',
+          transliteration: 'transliteration',
+          turkish: 'Turkce anlam',
+          english: 'English meaning',
+          source: 'source',
+          category: 'category',
+        );
 
-      expect(resolveDuaMeaning(de, dua, const Locale('de')), 'English meaning');
-    });
+        expect(
+          resolveDuaMeaning(de, dua, const Locale('de')),
+          'English meaning',
+        );
+      },
+    );
 
-    test('cloud duas fall back to verified bundled Quran duas when rows are empty', () {
-      final resolved = resolveCloudDuas([]);
-      final bundled = bundledDailyDuaFallback();
+    test(
+      'cloud duas fall back to verified bundled Quran duas when rows are empty',
+      () {
+        final resolved = resolveCloudDuas([]);
+        final bundled = bundledDailyDuaFallback();
 
-      expect(resolved, isNotEmpty);
-      expect(bundled, hasLength(8));
-      expect(resolved, bundled);
-      expect(hasVerifiedBundledDuas, isTrue);
-      expect(bundled.every((dua) => dua.category == quranicDuaCategory), isTrue);
-      expect(bundled.first.source, 'Quran 2:201');
-      expect(bundled[1].source, 'Quran 2:286');
-      expect(bundled.every((dua) => dua.transliteration.isEmpty), isTrue);
-    });
+        expect(resolved, isNotEmpty);
+        expect(bundled, hasLength(8));
+        expect(resolved, bundled);
+        expect(hasVerifiedBundledDuas, isTrue);
+        expect(
+          bundled.every((dua) => dua.category == quranicDuaCategory),
+          isTrue,
+        );
+        expect(bundled.first.source, 'Quran 2:201');
+        expect(bundled[1].source, 'Quran 2:286');
+        expect(bundled.every((dua) => dua.transliteration.isEmpty), isTrue);
+      },
+    );
 
     test('cloud duas map Supabase rows into DuaData objects', () {
       final resolved = resolveCloudDuas([

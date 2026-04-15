@@ -11,8 +11,8 @@ import 'package:sirat_i_nur/features/library/hadith_collection_copy.dart';
 import 'package:sirat_i_nur/features/library/dua_meaning_localization.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
-String buildLibraryErrorText(AppLocalizations l10n, Object error) {
-  return '${l10n.error}: $error';
+String buildLibraryErrorText(AppLocalizations l10n) {
+  return '${l10n.error}\n${l10n.checkConnection}';
 }
 
 String buildLibraryEmptyText(AppLocalizations l10n) {
@@ -70,11 +70,7 @@ String resolveDuaMeaning(AppLocalizations l10n, DuaData dua, Locale locale) {
   final localeTag = locale.toLanguageTag();
   final normalizedTag = localeTag.replaceAll('-', '_');
 
-  for (final candidate in {
-    localeTag,
-    normalizedTag,
-    locale.languageCode,
-  }) {
+  for (final candidate in {localeTag, normalizedTag, locale.languageCode}) {
     final value = translations[candidate];
     if (value != null && value.trim().isNotEmpty) {
       return value;
@@ -354,7 +350,7 @@ class LibraryPage extends ConsumerWidget {
                   ),
                   error: (e, s) => PremiumCard(
                     child: Text(
-                      buildLibraryErrorText(l10n, e),
+                      buildLibraryErrorText(l10n),
                       style: const TextStyle(color: Colors.red),
                     ),
                   ),
@@ -379,7 +375,10 @@ class LibraryPage extends ConsumerWidget {
               return AnimatedPremiumCard(
                 animationDelay: 600 + (i * 80),
                 onTap: areHadithsAvailable
-                    ? () => context.push('/library/hadith/${h.id}', extra: hadithName)
+                    ? () => context.push(
+                        '/library/hadith/${h.id}',
+                        extra: hadithName,
+                      )
                     : null,
                 child: Row(
                   children: [
@@ -706,8 +705,7 @@ class _EducationView extends ConsumerWidget {
             loading: () => const Center(
               child: CircularProgressIndicator(color: AppColors.emerald),
             ),
-            error: (e, s) =>
-                Center(child: Text(buildLibraryErrorText(l10n, e))),
+            error: (e, s) => Center(child: Text(buildLibraryErrorText(l10n))),
           ),
     );
   }

@@ -4243,3 +4243,41 @@
 
 ### Sonraki Adım
 - Kalan ham hata adayları sırayla taranacak: `lib/features/library/library_page.dart`, `lib/features/library/hadith_list_page.dart`, `lib/features/settings/diagnostics_page.dart`, `lib/features/settings/quran_diagnostics.dart`.
+
+## 2026-04-15 TUR-108 — Hide Raw Library Load Errors
+
+### Yapılan İşlem
+- `lib/features/library/library_page.dart` içindeki `buildLibraryErrorText` artık exception parametresi almaz ve UI'a ham `$error` basmaz.
+- `lib/features/library/hadith_list_page.dart` içindeki `buildHadithListErrorText` aynı şekilde ham hata metnini kaldırdı.
+- İki akış da mevcut localized `l10n.error` + `l10n.checkConnection` metnini kullanıyor; yeni ARB anahtarı eklenmedi çünkü zincirde kapsayıcı ve çevrilmiş copy zaten vardı.
+- `test/library_page_test.dart` ve `test/features/library/hadith_list_copy_test.dart` beklentileri tersine çevrildi: hata metni lokalize kalmalı, `timeout` / `zaman asimi` gibi raw exception parçaları görünmemeli.
+
+### Neden Yapıldı
+- `library_page.dart:15` doğrudan `${l10n.error}: $error` döndürüyordu.
+- `hadith_list_page.dart:11` doğrudan `${l10n.error}: $error\n${l10n.checkConnection}` döndürüyordu.
+- Bu iki helper, Supabase/network/provider exception metinlerini kullanıcıya teknik ve çoğu durumda İngilizce olarak gösterebiliyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_list_copy_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kütüphane ve hadis listesi hata durumlarında kullanıcı artık raw network/provider exception metni görmez.
+- Mesajlar mevcut localization zincirinden gelir ve bağlantı kontrolü için kullanıcıya anlaşılır aksiyon verir.
+
+### Test Sonucu
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`245/245`) baseline PASS
+- `flutter test test/library_page_test.dart test/features/library/hadith_list_copy_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`245/245`)
+- `git diff --check` PASS
+
+### Risk Değişimi
+- Library/Hadith hata yüzeylerinde ham exception gösterme riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- Kalan ham/teknik hata adaylarında `lib/features/settings/diagnostics_page.dart` ve `lib/features/settings/quran_diagnostics.dart` incelenecek; diagnostics yüzeyinde kullanıcıya güvenli özet, geliştiriciye yeterli ayrıntı dengesi korunacak.

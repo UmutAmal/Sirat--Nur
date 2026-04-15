@@ -5,18 +5,20 @@ import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 void main() {
   group('Hadith list localized copy helpers', () {
-    test('error text uses localized labels', () {
+    test('error text is localized and hides raw exceptions', () {
       final en = lookupAppLocalizations(const Locale('en'));
       final tr = lookupAppLocalizations(const Locale('tr'));
 
       expect(
-        buildHadithListErrorText(en, 'timeout'),
-        'Error: timeout\nPlease check your connection',
+        buildHadithListErrorText(en),
+        'Error\nPlease check your connection',
       );
       expect(
-        buildHadithListErrorText(tr, 'zaman asimi'),
-        'Hata: zaman asimi\nLütfen bağlantınızı kontrol edin',
+        buildHadithListErrorText(tr),
+        'Hata\nLütfen bağlantınızı kontrol edin',
       );
+      expect(buildHadithListErrorText(en), isNot(contains('timeout')));
+      expect(buildHadithListErrorText(tr), isNot(contains('zaman asimi')));
     });
 
     test('empty text uses localized no-results label', () {
