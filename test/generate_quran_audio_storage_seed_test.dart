@@ -36,12 +36,44 @@ void main() {
     }
   ]
 }
-''');
+''', requireCompleteCatalog: false);
 
       expect(files, hasLength(1));
       expect(files.first.surahNumber, 1);
       expect(files.first.reciterId, 'alafasy');
     });
+
+    test(
+      'rejects partial manifests by default for production storage seeds',
+      () {
+        expect(
+          () => parseMirroredAudioManifest('''
+{
+  "requested": 1,
+  "downloaded": 1,
+  "skipped": 0,
+  "failed": [],
+  "files": [
+    {
+      "surah_number": 1,
+      "reciter": "alafasy",
+      "source": "https://api.quran.com/api/v4/chapter_recitations/7",
+      "verified_at": "2026-04-08T19:00:42.228933Z",
+      "local_path": "build/verified_quran_audio/alafasy/001.mp3"
+    }
+  ]
+}
+'''),
+          throwsA(
+            isA<FormatException>().having(
+              (error) => error.message,
+              'message',
+              contains('complete Quran audio catalog'),
+            ),
+          ),
+        );
+      },
+    );
 
     test('rejects manifests with failed audio downloads', () {
       expect(
@@ -111,7 +143,7 @@ void main() {
     }
   ]
 }
-'''),
+''', requireCompleteCatalog: false),
         throwsA(
           isA<FormatException>().having(
             (error) => error.message,
@@ -140,7 +172,7 @@ void main() {
     }
   ]
 }
-'''),
+''', requireCompleteCatalog: false),
         throwsA(
           isA<FormatException>().having(
             (error) => error.message,
@@ -216,7 +248,10 @@ void main() {
               }),
             );
 
-      final files = parseMirroredAudioManifest(manifestFile.readAsStringSync());
+      final files = parseMirroredAudioManifest(
+        manifestFile.readAsStringSync(),
+        requireCompleteCatalog: false,
+      );
       final sql = buildQuranAudioStorageSeedSql(files);
 
       expect(files, hasLength(1));

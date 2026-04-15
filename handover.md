@@ -5407,3 +5407,41 @@
 
 ### Sonraki Adım
 - Yeni döngüde canlı provider hesaplama çekirdeği daha test edilebilir hale getirilecek veya dini içerik/audio provenance tarafındaki kalan yüksek riskli boşluklar yeniden taranacak; öncelik kullanıcıya yanlış dini zaman/içerik gösterme ihtimali en yüksek olan akışta olacak.
+
+## 2026-04-15 TUR-140 — Require Complete Quran Audio Storage Catalog
+
+### Yapılan İşlem
+- `generate_quran_audio_storage_seed.dart` varsayılan olarak tam Kur'an ses kataloğu zorunlu olacak şekilde sertleştirildi.
+- Tam katalog kuralı 6 desteklenen reciter x 114 sure = 684 storage-backed MP3 satırı olarak doğrulanıyor.
+- Eksik reciter, eksik sure, duplicate sure veya desteklenmeyen reciter manifestleri storage seed üretmeden önce `FormatException` ile durduruluyor.
+- Yerel smoke/development akışları için açık `--allow-partial` bayrağı eklendi; üretim varsayılanı tam katalog zorunluluğu olarak kaldı.
+- README audio sovereignty yönergesi `--allow-partial` bayrağının prod audio seeding için kullanılmaması gerektiğini belirtecek şekilde güncellendi.
+- `generate_quran_audio_storage_seed_test.dart` kısmi manifestin varsayılan olarak reddedildiğini ve smoke testlerin yalnız explicit partial modda çalıştığını doğruluyor.
+
+### Neden Yapıldı
+- Storage-backed runtime doğru şekilde `storage_path` satırlarını external URL'lere tercih ediyordu; ancak seed generator sadece manifest'in kendi `requested` sayısını tamamlamasını kontrol ediyordu.
+- Bir operatör yanlışlıkla 1 surelik veya tek reciter'lı mirror manifestiyle `content_seed_quran_audio_storage.sql` üretebilir, sonra database'de eksik ama storage-backed görünen bir katalog oluşturabilirdi.
+- Kök sebep, generator'ın “manifest kendi içinde tutarlı mı?” kontrolü yapması fakat “ürün için tam desteklenen Quran audio kataloğu mu?” kontrolü yapmamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\README.md`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Üretim storage audio seed'i artık eksik mirror manifestten sessizce üretilemiyor.
+- 684 dosyalık tam katalog tamamlanmadan Supabase Storage-backed audio seed oluşturma akışı güvenli şekilde fail ediyor.
+- Local smoke test ihtiyacı korunuyor ancak açık `--allow-partial` gerektirdiği için production yolu yanlışlıkla gevşemiyor.
+
+### Test Sonucu
+- `flutter test test\generate_quran_audio_storage_seed_test.dart test\download_verified_quran_audio_test.dart test\upload_quran_audio_storage_test.dart test\offline_audio_service_test.dart test\readme_operational_docs_test.dart --reporter compact` PASS (`26/26`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`290/290`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Eksik Quran audio mirror manifestinden production storage seed üretilmesi riski: `16/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde audio/database hattında gerçek upload manifestinin dosya varlığı ve boyut doğrulaması taranacak; ardından kalan l10n fallback ölçümü veya dini içerik provenance boşlukları yeniden skorlanacak.

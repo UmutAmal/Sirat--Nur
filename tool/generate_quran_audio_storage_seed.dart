@@ -6,6 +6,15 @@ import 'package:path/path.dart' as p;
 const String _defaultManifestPath = 'build/verified_quran_audio/manifest.json';
 const String _defaultOutputPath = 'content_seed_quran_audio_storage.sql';
 const String _defaultBucketName = 'quran-audio';
+const int _surahsPerReciter = 114;
+const Set<String> _expectedReciterIds = {
+  'abdul_basit_mujawwad',
+  'abdul_basit_murattal',
+  'alafasy',
+  'husary',
+  'shuraim',
+  'sudais',
+};
 final RegExp _reciterIdPattern = RegExp(r'^[a-z0-9_-]+$');
 
 class MirroredAudioFile {
@@ -47,7 +56,10 @@ String _normalizeStorageObjectPath(
   return withoutLeadingSlash;
 }
 
-List<MirroredAudioFile> parseMirroredAudioManifest(String manifestJson) {
+List<MirroredAudioFile> parseMirroredAudioManifest(
+  String manifestJson, {
+  bool requireCompleteCatalog = true,
+}) {
   final decoded = jsonDecode(manifestJson);
   if (decoded is! Map<String, dynamic>) {
     throw const FormatException('Manifest root must be a JSON object.');
@@ -59,8 +71,8 @@ List<MirroredAudioFile> parseMirroredAudioManifest(String manifestJson) {
   }
   _validateMirrorManifestSummary(decoded, mirroredFileCount: files.length);
 
-  return List.unmodifiable(
-    files.map((item) {
+  final mirroredFiles = List<MirroredAudioFile>.unmodifiable(
+    files.map<MirroredAudioFile>((item) {
       final row = Map<String, dynamic>.from(item as Map);
       final surahNumber = row['surah_number'];
       if (surahNumber is! int || surahNumber < 1 || surahNumber > 114) {
@@ -104,6 +116,49 @@ List<MirroredAudioFile> parseMirroredAudioManifest(String manifestJson) {
       );
     }),
   );
+  if (requireCompleteCatalog) {
+    _validateCompleteQuranAudioCatalog(mirroredFiles);
+  }
+
+  return mirroredFiles;
+}
+
+void _validateCompleteQuranAudioCatalog(List<MirroredAudioFile> files) {
+  final expectedRows = _expectedReciterIds.length * _surahsPerReciter;
+  if (files.length != expectedRows) {
+    throw FormatException(
+      'Mirror manifest is not a complete Quran audio catalog: expected '
+      '$expectedRows files but found ${files.length}.',
+    );
+  }
+
+  final seen = <String, Set<int>>{};
+  for (final file in files) {
+    if (!_expectedReciterIds.contains(file.reciterId)) {
+      throw FormatException(
+        'Unsupported reciter in complete Quran audio manifest: '
+        '${file.reciterId}.',
+      );
+    }
+
+    final surahs = seen.putIfAbsent(file.reciterId, () => <int>{});
+    if (!surahs.add(file.surahNumber)) {
+      throw FormatException(
+        'Duplicate Quran audio file for reciter ${file.reciterId}, '
+        'surah ${file.surahNumber}.',
+      );
+    }
+  }
+
+  for (final reciterId in _expectedReciterIds) {
+    final surahs = seen[reciterId] ?? const <int>{};
+    if (surahs.length != _surahsPerReciter) {
+      throw FormatException(
+        'Incomplete Quran audio manifest for reciter $reciterId: expected '
+        '$_surahsPerReciter surahs but found ${surahs.length}.',
+      );
+    }
+  }
 }
 
 void _validateMirrorManifestSummary(
@@ -209,6 +264,7 @@ Options:
   --manifest=<path>   Mirror manifest path. Default: $_defaultManifestPath
   --output=<path>     Output SQL path. Default: $_defaultOutputPath
   --bucket=<name>     Storage bucket name. Default: $_defaultBucketName
+  --allow-partial     Allow development-only partial manifests
   --help              Show this help
 ''');
 }
@@ -217,11 +273,16 @@ Future<void> main(List<String> args) async {
   var manifestPath = _defaultManifestPath;
   var outputPath = _defaultOutputPath;
   var bucketName = _defaultBucketName;
+  var allowPartial = false;
 
   for (final arg in args) {
     if (arg == '--help') {
       _printUsage();
       return;
+    }
+    if (arg == '--allow-partial') {
+      allowPartial = true;
+      continue;
     }
     if (arg.startsWith('--manifest=')) {
       manifestPath = arg.substring('--manifest='.length);
@@ -247,7 +308,10 @@ Future<void> main(List<String> args) async {
     );
   }
 
-  final files = parseMirroredAudioManifest(manifestFile.readAsStringSync());
+  final files = parseMirroredAudioManifest(
+    manifestFile.readAsStringSync(),
+    requireCompleteCatalog: !allowPartial,
+  );
   final sql = buildQuranAudioStorageSeedSql(files, bucketName: bucketName);
   final outputFile = File(outputPath);
   await outputFile.writeAsString(sql);
