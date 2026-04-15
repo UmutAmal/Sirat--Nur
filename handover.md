@@ -4822,3 +4822,37 @@
 
 ### Sonraki Adım
 - Yeni döngüde gerçek storage import ergonomisi incelenecek: mirror tamamlandıktan sonra hangi dosyaların Supabase Storage'a yükleneceği ve DB seed sırası operatör açısından kanıtlanacak.
+
+## 2026-04-15 TUR-124 — Add Quran Audio Supabase Storage Uploader
+
+### Yapılan İşlem
+- `tool/upload_quran_audio_storage.dart` eklendi.
+- Araç tamamlanmış mirror manifestini okur, local MP3 dosyalarını Supabase Storage `quran-audio` bucket'ına yükler ve service-role anahtarını yalnızca env üzerinden alır.
+- `--dry-run`, `--no-upsert`, `--supabase-url`, `--bucket` ve custom `--service-role-key-env` seçenekleri eklendi.
+- `test/upload_quran_audio_storage_test.dart` upload URL üretimini, header davranışını, object path türetimini ve raw upload hata sanitization'ını doğruluyor.
+
+### Neden Yapıldı
+- Önceki zincirde `tool/download_verified_quran_audio.dart` local mirror üretir, `tool/generate_quran_audio_storage_seed.dart` DB seed üretirdi; fakat gerçek dosyaları Supabase Storage'a koyan tekrarlanabilir repo aracı yoktu.
+- Bu eksik adım operatörü manuel ve hataya açık upload'a zorluyordu.
+- User beklentisi "sesler bizim database/storage zincirimizden alınmalı" olduğu için download -> upload -> storage seed sırası repo içinde otomasyonla desteklenmeli.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart`
+- `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kur'an ses import zinciri artık üç aşamalı ve tekrar çalıştırılabilir hale geldi: verified download, Supabase Storage upload, storage-backed DB seed.
+- Service-role anahtarı komut satırına yazılmaz; env üzerinden okunur ve stdout/stderr'e basılmaz.
+- Upload hataları raw exception yerine güvenli kategorilerle raporlanır.
+
+### Test Sonucu
+- `flutter test test\upload_quran_audio_storage_test.dart --reporter compact` PASS (`4/4`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`264/264`)
+
+### Risk Değişimi
+- Kur'an audio storage import adımının manuel/eksik kalma riski: `12/25 -> 4/25`
+
+### Sonraki Adım
+- Yeni döngüde content/README operatör belgeleri taranacak; download -> upload -> seed sırasının dokümante edilip edilmediği ve yanlış sırada seed uygulama riskinin kapalı olup olmadığı doğrulanacak.
