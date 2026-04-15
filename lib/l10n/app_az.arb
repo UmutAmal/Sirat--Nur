@@ -419,7 +419,7 @@
       }
     }
   },
-  "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
+  "quranAudioSourcesUnavailable": "Təsdiqlənmiş Quran audio mənbələri hazırda əlçatan deyil.",
   "quranAudioSourcesIncomplete": "Təsdiqlənmiş Quran audio paketi natamamdır ({available}/{total}). Bulud toxumunu yeniləyin və yenidən cəhd edin.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {

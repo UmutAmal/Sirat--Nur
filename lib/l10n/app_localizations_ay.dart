@@ -1270,7 +1270,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+      'Quran audio fuentes chiqapar uñjatanakax janiw jichhax utjkiti.';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {

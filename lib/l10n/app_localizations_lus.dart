@@ -1253,7 +1253,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+      'Tunah hian Quran audio source verified a awm lo.';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {

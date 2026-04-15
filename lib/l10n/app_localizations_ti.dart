@@ -1233,7 +1233,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+      'ዝተረጋገጹ ምንጪ ድምጺ ቁርኣን ኣብዚ ሕጂ እዋን የለን።';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {

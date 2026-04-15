@@ -5247,3 +5247,52 @@
 
 ### Sonraki Adım
 - Yeni döngüde canlı Supabase dini içerik akışlarında kalan provenance veya false-success boşlukları taranacak; öncelik `quran_integrity`/offline indirme ve kullanıcıya başarı mesajı gösteren akışlar olacak.
+
+## 2026-04-15 TUR-136 — Extend Quran Audio Unavailable Translations
+
+### Yapılan İşlem
+- `tool/translate_arb_keys.dart` download/diagnostics anahtar kümesi için çalıştırıldı; mevcut doğru çevirileri koruyan ve placeholder bozulursa İngilizce referansa geri dönen güvenli yol kullanıldı.
+- Güvenli çeviri sonucu üreten `ay`, `az`, `kk`, `lus`, `mai`, `sa`, `ti` locale dosyalarında `quranAudioSourcesUnavailable` artık İngilizce fallback değil.
+- `flutter gen-l10n` çalıştırılarak ilgili generated localization Dart dosyaları ARB ile senkronlandı.
+- `arb_ui_localization_test.dart` içine bu 7 locale için `quranAudioSourcesUnavailable` İngilizceye geri düşmesin diye regresyon testi eklendi.
+
+### Neden Yapıldı
+- Ön taramada `quranAudioSourcesUnavailable` dahil download/diagnostics kümesinde çok sayıda locale'in `app_en.arb` ile birebir aynı kaldığı doğrulandı.
+- Çeviri aracı bazı nadir/az desteklenen dillerde güvenli sonuç üretemediğinde İngilizce referansa geri dönüyor; AGENTS kuralı gereği belirsiz dilde uydurma yapılmadı.
+- Güvenli sonuç veren locale'lerde elde edilen gerçek çeviri kazanımı kalıcı testle korunmalıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_az.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_kk.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lus.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mai.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ay.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_az.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_kk.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_lus.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_mai.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_sa.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ti.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kur'an ses kaynakları yok mesajı 7 ek locale'de kullanıcıya İngilizce fallback yerine hedef dilde gösterilir.
+- Generated l10n dosyaları ARB değişiklikleriyle tutarlı kaldı.
+- Kalan nadir/az desteklenen locale'lerde otomatik araç güvenli çeviri üretmediği için İngilizce referans korunmuştur; bu alan sonraki l10n döngülerinde daha güvenilir çeviri kaynağı veya manuel uzman doğrulamasıyla ele alınacak.
+
+### Test Sonucu
+- `flutter test test\arb_ui_localization_test.dart test\arb_coverage_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`283/283`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- `quranAudioSourcesUnavailable` için İngilizce fallback kalan non-EN locale sayısı: `92 -> 85`
+- Download/diagnostics genel l10n fallback riski: `20/25 -> 18/25`
+
+### Sonraki Adım
+- Yeni döngüde l10n fallback sayısını otomatik ölçen kalıcı rapor/test eklenecek veya desteklenen locale grupları için bir sonraki güvenli anahtar batch'i çevrilecek; zorla uydurma çeviri yapılmayacak.

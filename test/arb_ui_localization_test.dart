@@ -702,6 +702,23 @@ void main() {
     );
 
     test(
+      'extended Quran audio unavailable locales do not fall back to English',
+      () {
+        const extendedLocales = ['ay', 'az', 'kk', 'lus', 'mai', 'sa', 'ti'];
+
+        for (final locale in extendedLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+          expect(
+            arb['quranAudioSourcesUnavailable'],
+            isNot(english['quranAudioSourcesUnavailable']),
+            reason:
+                'app_$locale.arb still uses English for quranAudioSourcesUnavailable',
+          );
+        }
+      },
+    );
+
+    test(
       'safe priority locales do not fall back to English for basic status copy',
       () {
         const safeLocales = [
