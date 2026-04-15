@@ -6065,3 +6065,44 @@
 
 ### Sonraki Adım
 - Sonraki döngüde Android native widget preview metinleri ve widget_service çağrılarının gerçek ürün akışlarında tetiklenme kapsamı taranacak.
+
+## 2026-04-15 TUR-157 — Wire Qibla and Ayah Widget Data Sync
+
+### Yapılan İşlem
+- `main.dart` bootstrap akışı Android widget kapsamı için genişletildi; `settingsProvider` değişimlerinde Prayer, AllPrayers ve Qibla widget'ları locale-aware şekilde güncelleniyor.
+- `dailyAyatProvider` için `listenManual` aboneliği eklendi; Supabase/cache üzerinden doğrulanmış günlük ayet geldiğinde Ayah widget verileri native HomeWidget preferences içine aktarılıyor.
+- Ayah widget metni için boş/eksik `content_ar`, locale uyumlu çeviri veya `reference` alanı varsa widget'a eksik veri basmayan koruma eklendi.
+- Qibla widget yönü artık `QiblaUtils.calculateQiblaDirection` ile kayıtlı konumdan hesaplanıyor; başlık ve durum metni `PrayerLocalizer` üzerinden ARB/l10n zincirinden geliyor.
+- Prayer, Qibla ve Ayah widget güncellemeleri birbirinden izole hata bloklarına ayrıldı; tek widget yüzeyindeki hata diğer yüzeyleri susturmuyor.
+- `main_bootstrap_logging_test.dart` Android widget bootstrap bağlantısını ve loglarda ham exception nesnesi sızmamasını koruyacak şekilde genişletildi.
+- `prayer_name_localization_test.dart` Qibla yön label helper'ını kapsayacak şekilde genişletildi.
+
+### Neden Yapıldı
+- Önceki turlarda Qibla/Ayah provider, manifest ve layout zinciri tamamlanmıştı; fakat ana uygulama akışı bu widget'lara veri göndermiyordu.
+- Kök sebep, `WidgetService.updateQiblaWidget` ve `WidgetService.updateAyahWidget` API'lerinin ürün bootstrap akışında yalnızca toplu helper içinde kalması ve gerçek provider/state değişimlerine bağlanmamasıydı.
+- Kullanıcı Android ana ekranına Qibla veya Günün Ayeti widget'ını eklediğinde widget boş/stale kalabilirdi; bu false-success niteliğinde ürün riskiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\main.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\prayer_name_localization.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\common\main_bootstrap_logging_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_name_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Android Qibla widget'ı artık kayıtlı kullanıcı konumundan gerçek Kıble açısını alır.
+- Android Günün Ayeti widget'ı artık Supabase/cache kaynaklı günlük ayet içeriğini kullanır; dini içerik uygulama içindeki doğrulanmış provider zincirinden gelir, uydurma veri üretilmez.
+- Locale ayarı değiştiğinde widget başlıkları ve Ayah çeviri tercihi uygulama diliyle uyumlu kalır.
+- Prayer/Qibla/Ayah widget güncelleme hataları birbirinden izole olduğu için tek yüzey arızası tüm widget senkronizasyonunu kesmez.
+
+### Test Sonucu
+- `flutter test test\features\common\main_bootstrap_logging_test.dart test\prayer_name_localization_test.dart test\android_widget_localization_test.dart --reporter compact` PASS (`13/13`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`323/323`)
+- `flutter build apk --debug` PASS (`build\app\outputs\flutter-apk\app-debug.apk`)
+
+### Risk Değişimi
+- Qibla/Ayah Android widget'larının provider/manifest var olduğu halde gerçek ürün veri akışına bağlanmama riski: `16/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki döngüde Android widget XML preview/default metinlerinin kullanıcıya stale veya hardcoded içerik göstermediği ve widget servis sözleşmesinin tüm native kaynaklarla birebir eşleştiği tekrar taranacak.

@@ -33,6 +33,7 @@ void main() {
       expect(PrayerLocalizer.nextPrayerLabel('tr'), 'Sıradaki Namaz');
       expect(PrayerLocalizer.prayerTimesLabel('tr'), 'Namaz Vakitleri');
       expect(PrayerLocalizer.qiblaLabel('tr'), 'Kıble');
+      expect(PrayerLocalizer.qiblaDirectionLabel('tr'), 'Kıble Yönü');
       expect(PrayerLocalizer.dailyVerseLabel('tr'), 'Günün Ayeti');
     });
 

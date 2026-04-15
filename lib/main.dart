@@ -5,12 +5,15 @@ import 'package:sirat_i_nur/l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/network/app_router.dart';
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
+import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/core/services/prayer_notification_coordinator.dart';
 import 'package:sirat_i_nur/core/services/widget_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_widget_sync_service.dart';
 
 import 'package:sirat_i_nur/core/theme/app_theme.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:sirat_i_nur/core/utils/prayer_name_localization.dart';
+import 'package:sirat_i_nur/core/utils/qibla_utils.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/core/utils/locale_utils.dart';
 import 'package:timezone/data/latest.dart' as tz;
@@ -127,6 +130,26 @@ void main() async {
   );
 }
 
+String _readDailyAyatWidgetValue(Map<String, dynamic> dailyAyat, String key) {
+  return dailyAyat[key]?.toString().trim() ?? '';
+}
+
+String _resolveDailyAyatWidgetTranslation(
+  Map<String, dynamic> dailyAyat,
+  Locale locale,
+) {
+  final preferredKeys = locale.languageCode == 'tr'
+      ? const ['content_tr', 'content_en']
+      : const ['content_en', 'content_tr'];
+
+  for (final key in preferredKeys) {
+    final value = _readDailyAyatWidgetValue(dailyAyat, key);
+    if (value.isNotEmpty) return value;
+  }
+
+  return '';
+}
+
 class SiratINurApp extends ConsumerStatefulWidget {
   final SharedPreferences prefs;
   const SiratINurApp({super.key, required this.prefs});
@@ -142,6 +165,8 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
   final PrayerWidgetSyncService _prayerWidgetSyncService =
       PrayerWidgetSyncService();
   ProviderSubscription<SettingsState>? _settingsSubscription;
+  ProviderSubscription<AsyncValue<Map<String, dynamic>>>?
+  _dailyAyatSubscription;
 
   @override
   void initState() {
@@ -170,9 +195,19 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
           }
           unawaited(_prayerNotificationCoordinator.sync(next));
           unawaited(_updateHomeWidgets(next));
+          _syncCurrentAyahWidget();
         },
         fireImmediately: true,
       );
+      _dailyAyatSubscription = ref
+          .listenManual<AsyncValue<Map<String, dynamic>>>(dailyAyatProvider, (
+            _,
+            next,
+          ) {
+            next.whenData((dailyAyat) {
+              unawaited(_updateAyahWidget(dailyAyat));
+            });
+          }, fireImmediately: true);
     } catch (_, stackTrace) {
       debugPrint('Prayer notification bootstrap failed');
       debugPrintStack(stackTrace: stackTrace);
@@ -180,19 +215,83 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
   }
 
   Future<void> _updateHomeWidgets(SettingsState settings) async {
+    final locale = _resolveWidgetLocale(settings);
+    await _updatePrayerWidgets(settings, locale);
+    await _updateQiblaWidget(settings, locale);
+  }
+
+  Future<void> _updatePrayerWidgets(
+    SettingsState settings,
+    Locale locale,
+  ) async {
     try {
       final entity = _prayerWidgetSyncService.buildPrayerTimesEntity(settings);
       if (entity == null) return;
-      await WidgetService().updatePrayerWidget(entity);
-      await WidgetService().updateAllPrayersWidget(entity);
+      await WidgetService().updatePrayerWidget(entity, locale: locale);
+      await WidgetService().updateAllPrayersWidget(entity, locale: locale);
     } catch (_) {
-      debugPrint('Widget update failed (non-blocking)');
+      debugPrint('Prayer widget update failed (non-blocking)');
     }
+  }
+
+  Future<void> _updateQiblaWidget(SettingsState settings, Locale locale) async {
+    try {
+      final latitude = settings.latitude;
+      final longitude = settings.longitude;
+      if (latitude == null || longitude == null) return;
+
+      final direction = QiblaUtils.calculateQiblaDirection(latitude, longitude);
+      final languageCode = localeKey(locale);
+      await WidgetService().updateQiblaWidget(
+        direction: direction,
+        directionText: PrayerLocalizer.qiblaDirectionLabel(languageCode),
+        locale: locale,
+      );
+    } catch (_) {
+      debugPrint('Qibla widget update failed (non-blocking)');
+    }
+  }
+
+  void _syncCurrentAyahWidget() {
+    ref.read(dailyAyatProvider).whenData((dailyAyat) {
+      unawaited(_updateAyahWidget(dailyAyat));
+    });
+  }
+
+  Future<void> _updateAyahWidget(Map<String, dynamic> dailyAyat) async {
+    try {
+      final settings = ref.read(settingsProvider);
+      final locale = _resolveWidgetLocale(settings);
+      final arabic = _readDailyAyatWidgetValue(dailyAyat, 'content_ar');
+      final translation = _resolveDailyAyatWidgetTranslation(dailyAyat, locale);
+      final reference = _readDailyAyatWidgetValue(dailyAyat, 'reference');
+
+      if (arabic.isEmpty || translation.isEmpty || reference.isEmpty) {
+        return;
+      }
+
+      await WidgetService().updateAyahWidget(
+        arabic: arabic,
+        translation: translation,
+        reference: reference,
+        locale: locale,
+      );
+    } catch (_) {
+      debugPrint('Ayah widget update failed (non-blocking)');
+    }
+  }
+
+  Locale _resolveWidgetLocale(SettingsState settings) {
+    final configuredLocale = parseLocaleCode(settings.languageCode);
+    final requested =
+        configuredLocale ?? WidgetsBinding.instance.platformDispatcher.locale;
+    return resolveSupportedLocale(requested, AppLocalizations.supportedLocales);
   }
 
   @override
   void dispose() {
     _settingsSubscription?.close();
+    _dailyAyatSubscription?.close();
     super.dispose();
   }
 

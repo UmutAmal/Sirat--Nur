@@ -52,6 +52,10 @@ class PrayerLocalizer {
     return _lookup(languageCode).qibla;
   }
 
+  static String qiblaDirectionLabel(String languageCode) {
+    return _lookup(languageCode).qiblaDirection;
+  }
+
   static String dailyVerseLabel(String languageCode) {
     return _lookup(languageCode).dailyVerse;
   }
