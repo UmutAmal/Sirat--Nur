@@ -6256,3 +6256,41 @@
 
 ### Sonraki Adım
 - Sonraki dongude `educationCategoriesProvider` ve `educationTopicsProvider` ile `LibraryPage` cloud-only egitim icerigi tuketimi ayni veri-hijyeni perspektifiyle taranacak; non-string title/content, bos kategori ve Supabase client unavailable hallerinin kullaniciya raw crash yerine durust lokalize state verip vermedigi dogrulanacak.
+
+## 2026-04-15 TUR-162 — Harden Library Education Cloud Rows
+
+### Yapılan İşlem
+- `resolveEducationCategories`, `resolveEducationTopics`, `resolveEducationCategoryId`, `resolveEducationText` ve `resolveEducationIcon` helper'lari eklendi.
+- `educationCategoriesProvider`, Supabase `education_categories` sonucunu UI'ya vermeden once id + title zorunlu olacak sekilde normalize ediyor; eksik/bos/uygunsuz satirlar filtreleniyor.
+- `educationTopicsProvider`, topic title + content zorunlu olacak sekilde normalize ediyor; bos veya non-string dini/egitim icerigi gosterilmiyor.
+- `LibraryPage`, provider zaten normalize etse bile test override veya gelecekteki ham veri kacislarina karsi kategorileri tekrar `resolveEducationCategories` ile filtreliyor.
+- Kategori bos kalirsa egitim bolumu artik sessiz bos Column yerine lokalize `noResults` empty-state gosteriyor.
+- Kategori id/title/icon/title_en ve topic title/title_en/content alanlari widget'a dynamic olarak gecirilmiyor; text/icon helper'lari ile guvenli string'e indirgeniyor.
+- `library_page_cloud_duas_test.dart` icine kategori/topic sanitizer unit testleri ve bozuk kategori satirlarinin render oncesi filtrelendigini dogrulayan widget testi eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart:303` onceki akista `cat['id']` ve `cat['title']` dynamic olarak navigation fonksiyonuna veriliyordu; Supabase satirinda non-string/bos id veya title varsa runtime type/range akisi bozulabilirdi.
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart:688` topic `title`, `title_en`, `content` alanlarini dogrudan `Text` widget'ina tasiyordu; non-string veya bos content hem crash hem de anlamsiz dini/egitim karti riski tasiyordu.
+- Kök sebep, cloud-only egitim tablolarinda UI'dan once veri-hijyeni katmaninin olmamasiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Library egitim bolumu bozuk cloud satirlariyla crash uretmez ve bos/uydurma egitim metni gostermez.
+- Provider ve UI katmaninda cift guard oldugu icin test override, Supabase response sapmasi veya gelecekteki refactor ayni veri sinifini kolayca yeniden acamaz.
+- Bos kategori sonucu artik kullaniciya durust empty-state olarak gorunur.
+
+### Test Sonucu
+- `flutter test test\features\library\library_page_cloud_duas_test.dart` PASS (`8/8`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`335/335`)
+
+### Risk Değişimi
+- Library egitim cloud satirlarindan non-string/bos id, title veya content nedeniyle crash ya da anlamsiz kart gosterme riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki dongude cloud-only provider client-unavailable davranisi ve ekranlarda raw exception sızıntısı taranacak; ozellikle `liveTvProvider`, `educationCategoriesProvider`, `educationTopicsProvider` hata state'lerinin lokalize ve kullaniciya durust kalmasi icin provider/UI test guard'lari kontrol edilecek.

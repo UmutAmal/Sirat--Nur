@@ -235,6 +235,79 @@ final sukunAudioSourcesProvider = FutureProvider<Map<String, String>>((
   }
 });
 
+String? _readCloudText(Object? value) {
+  if (value is! String) return null;
+
+  final trimmed = value.trim();
+  return trimmed.isEmpty ? null : trimmed;
+}
+
+String? _readCloudIdentifier(Object? value) {
+  if (value is String || value is num) {
+    final trimmed = value.toString().trim();
+    return trimmed.isEmpty ? null : trimmed;
+  }
+
+  return null;
+}
+
+String? resolveEducationCategoryId(Map<String, dynamic> row) {
+  return _readCloudIdentifier(row['id']);
+}
+
+String resolveEducationText(Map<String, dynamic> row, String key) {
+  return _readCloudText(row[key]) ?? '';
+}
+
+String resolveEducationIcon(Map<String, dynamic> row) {
+  return _readCloudText(row['icon']) ?? '📚';
+}
+
+List<Map<String, dynamic>> resolveEducationCategories(
+  List<Map<String, dynamic>> rows,
+) {
+  final categories = <Map<String, dynamic>>[];
+
+  for (final row in rows) {
+    final id = resolveEducationCategoryId(row);
+    final title = _readCloudText(row['title']);
+    if (id == null || title == null) {
+      continue;
+    }
+
+    categories.add({
+      'id': id,
+      'title': title,
+      'title_en': _readCloudText(row['title_en']) ?? '',
+      'icon': resolveEducationIcon(row),
+    });
+  }
+
+  return List.unmodifiable(categories);
+}
+
+List<Map<String, dynamic>> resolveEducationTopics(
+  List<Map<String, dynamic>> rows,
+) {
+  final topics = <Map<String, dynamic>>[];
+
+  for (final row in rows) {
+    final title = _readCloudText(row['title']);
+    final content = _readCloudText(row['content']);
+    if (title == null || content == null) {
+      continue;
+    }
+
+    topics.add({
+      'title': title,
+      'title_en': _readCloudText(row['title_en']) ?? '',
+      'content': content,
+    });
+  }
+
+  return List.unmodifiable(topics);
+}
+
 final educationCategoriesProvider = FutureProvider<List<Map<String, dynamic>>>((
   ref,
 ) async {
@@ -243,7 +316,7 @@ final educationCategoriesProvider = FutureProvider<List<Map<String, dynamic>>>((
       .from('education_categories')
       .select()
       .order('sort_order', ascending: true);
-  return List<Map<String, dynamic>>.from(res);
+  return resolveEducationCategories(List<Map<String, dynamic>>.from(res));
 });
 
 final educationTopicsProvider =
@@ -257,7 +330,7 @@ final educationTopicsProvider =
           .select()
           .eq('category_id', categoryId)
           .order('sort_order', ascending: true);
-      return List<Map<String, dynamic>>.from(res);
+      return resolveEducationTopics(List<Map<String, dynamic>>.from(res));
     });
 
 final dailyDuasProvider = FutureProvider<List<DuaData>>((ref) async {

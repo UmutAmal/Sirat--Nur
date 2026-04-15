@@ -286,60 +286,73 @@ class LibraryPage extends ConsumerWidget {
             ref
                 .watch(educationCategoriesProvider)
                 .when(
-                  data: (categories) => Column(
-                    children: categories.asMap().entries.map((entry) {
-                      final i = entry.key;
-                      final cat = entry.value;
-                      return AnimatedPremiumCard(
-                        animationDelay: 200 + (i * 80),
-                        onTap: () => _openEducationCategory(
-                          context,
-                          cat['id'],
-                          cat['title'],
-                        ),
-                        child: Row(
-                          children: [
-                            Text(
-                              cat['icon'] ?? '📚',
-                              style: const TextStyle(fontSize: 28),
-                            ),
-                            const SizedBox(width: 16),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    cat['title'] ?? '',
-                                    style: const TextStyle(
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: 15,
-                                    ),
-                                  ),
-                                  Text(
-                                    cat['title_en'] ?? '',
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSurface
-                                          .withValues(alpha: 0.5),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const Icon(
-                              Icons.cloud_rounded,
-                              size: 16,
-                              color: AppColors.emerald,
-                            ),
-                            const SizedBox(width: 8),
-                            const Icon(Icons.chevron_right_rounded),
-                          ],
-                        ),
+                  data: (categories) {
+                    final visibleCategories = resolveEducationCategories(
+                      categories,
+                    );
+                    if (visibleCategories.isEmpty) {
+                      return PremiumCard(
+                        child: Text(buildLibraryEmptyText(l10n)),
                       );
-                    }).toList(),
-                  ),
+                    }
+
+                    return Column(
+                      children: visibleCategories.asMap().entries.map((entry) {
+                        final i = entry.key;
+                        final cat = entry.value;
+                        final categoryId = resolveEducationCategoryId(cat)!;
+                        final title = resolveEducationText(cat, 'title');
+                        return AnimatedPremiumCard(
+                          animationDelay: 200 + (i * 80),
+                          onTap: () => _openEducationCategory(
+                            context,
+                            categoryId,
+                            title,
+                          ),
+                          child: Row(
+                            children: [
+                              Text(
+                                resolveEducationIcon(cat),
+                                style: const TextStyle(fontSize: 28),
+                              ),
+                              const SizedBox(width: 16),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      title,
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.w900,
+                                        fontSize: 15,
+                                      ),
+                                    ),
+                                    Text(
+                                      resolveEducationText(cat, 'title_en'),
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onSurface
+                                            .withValues(alpha: 0.5),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const Icon(
+                                Icons.cloud_rounded,
+                                size: 16,
+                                color: AppColors.emerald,
+                              ),
+                              const SizedBox(width: 8),
+                              const Icon(Icons.chevron_right_rounded),
+                            ],
+                          ),
+                        );
+                      }).toList(),
+                    );
+                  },
                   loading: () => const Center(
                     child: Padding(
                       padding: EdgeInsets.all(24),
@@ -657,28 +670,29 @@ class _EducationView extends ConsumerWidget {
           .watch(educationTopicsProvider(categoryId))
           .when(
             data: (topics) {
-              if (topics.isEmpty) {
+              final visibleTopics = resolveEducationTopics(topics);
+              if (visibleTopics.isEmpty) {
                 return Center(child: Text(buildLibraryEmptyText(l10n)));
               }
               return ListView.builder(
                 padding: const EdgeInsets.all(16),
-                itemCount: topics.length,
+                itemCount: visibleTopics.length,
                 itemBuilder: (context, i) {
-                  final topic = topics[i];
+                  final topic = visibleTopics[i];
                   return PremiumCard(
                     margin: const EdgeInsets.only(bottom: 16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          topic['title'] ?? '',
+                          resolveEducationText(topic, 'title'),
                           style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w900,
                           ),
                         ),
                         Text(
-                          topic['title_en'] ?? '',
+                          resolveEducationText(topic, 'title_en'),
                           style: const TextStyle(
                             fontSize: 13,
                             fontWeight: FontWeight.w700,
@@ -687,7 +701,7 @@ class _EducationView extends ConsumerWidget {
                         ),
                         const SizedBox(height: 12),
                         Text(
-                          topic['content'] ?? '',
+                          resolveEducationText(topic, 'content'),
                           style: TextStyle(
                             fontSize: 14,
                             height: 1.7,
