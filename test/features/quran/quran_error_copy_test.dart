@@ -46,4 +46,50 @@ void main() {
       );
     }
   });
+
+  test('quran audio logs do not include raw urls or exception objects', () {
+    final guardedSources = {
+      'lib/features/quran/surah_reading_page.dart': File(
+        'lib/features/quran/surah_reading_page.dart',
+      ).readAsStringSync(),
+      'lib/core/services/audio_player_service.dart': File(
+        'lib/core/services/audio_player_service.dart',
+      ).readAsStringSync(),
+    };
+
+    for (final entry in guardedSources.entries) {
+      final source = entry.value;
+
+      expect(
+        source,
+        isNot(contains(r'Audio source failed: $url, error: $error')),
+        reason: '${entry.key} logs Quran audio URL and raw error together',
+      );
+      expect(
+        source,
+        isNot(contains(r'Audio playback failed for all sources: $lastError')),
+        reason: '${entry.key} logs raw final Quran audio failure',
+      );
+      expect(
+        source,
+        isNot(contains(r'Playing remote URL: $url')),
+        reason: '${entry.key} logs remote audio URLs',
+      );
+      expect(
+        source,
+        isNot(contains(r'URL playback error: $e')),
+        reason: '${entry.key} logs raw remote playback errors',
+      );
+      expect(
+        source,
+        isNot(contains(r'Playing local asset: $assetPath')),
+        reason: '${entry.key} logs local asset paths',
+      );
+      expect(
+        source,
+        isNot(contains(r'Asset playback error: $e')),
+        reason: '${entry.key} logs raw asset playback errors',
+      );
+    }
+  });
 }

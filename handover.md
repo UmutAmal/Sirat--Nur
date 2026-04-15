@@ -4477,3 +4477,40 @@
 
 ### Sonraki Adım
 - Yeni döngüde kullanıcıya görünen veya loglarda gereksiz ham hata ayrıntısı taşıyan `debugPrint` adayları taranacak; UI'a sızma ihtimali en yüksek olan akış önce kapatılacak.
+
+## 2026-04-15 TUR-114 — Sanitize Quran Audio Playback Logs
+
+### Yapılan İşlem
+- `lib/features/quran/surah_reading_page.dart` ses oynatma fallback döngüsünde başarısız URL ve raw exception loglanması kaldırıldı.
+- Aynı dosyada son hata nesnesi tutulmadan yalnızca `hadAudioFailure` bayrağıyla güvenli, genel başarısızlık logu bırakıldı.
+- `lib/core/services/audio_player_service.dart` remote URL, local asset path ve raw playback exception loglarını genel durum mesajlarına çevirdi.
+- `test/features/quran/quran_error_copy_test.dart` Kur'an ses loglarında URL, asset path ve raw exception desenlerinin geri dönmesini yakalayan kaynak guard testi kazandı.
+
+### Neden Yapıldı
+- `lib/features/quran/surah_reading_page.dart` önce `Audio source failed: $url, error: $error` ve `Audio playback failed for all sources: $lastError` ile dış ses URL'lerini ve ham exception ayrıntılarını logluyordu.
+- `lib/core/services/audio_player_service.dart` önce `Playing remote URL: $url`, `URL playback error: $e`, `Playing local asset: $assetPath` ve `Asset playback error: $e` desenleriyle gereksiz ayrıntı taşıyordu.
+- Kur'an ses hattı dini içerik ve dış kaynak sürekliliği açısından hassas olduğu için kullanıcıya ve loglara ham altyapı ayrıntısı taşımadan dürüst hata davranışı korunmalı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\audio_player_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\quran_error_copy_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kur'an ses kaynakları başarısız olduğunda UI hâlâ lokalize `streamError/checkConnection` mesajını gösterir; davranış değişmedi.
+- Loglar artık dış URL, local asset path veya raw exception nesnesi içermez.
+- Regresyon guard testi bu desenlerin geri dönmesini engeller.
+
+### Test Sonucu
+- İlk hedef test derlemesi test içindeki `$url/$error` stringlerinin yanlışlıkla interpolation sayılması nedeniyle FAIL verdi; test guard stringleri raw string'e çevrildi.
+- `flutter test test\features\quran\quran_error_copy_test.dart --reporter compact` PASS
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`253/253`)
+- `git diff --check` PASS (sadece CRLF uyarıları)
+
+### Risk Değişimi
+- Kur'an ses hattında URL/raw exception loglama riski: `9/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde `main.dart`, `prayer_notification_coordinator.dart`, `premium_provider.dart`, `quran_page.dart`, `juz_reading_page.dart` ve `location_selection_page.dart` içindeki kalan raw debug log desenleri sınıflandırılacak; kullanıcıya veya hassas veriye yakın olanlar önce sanitize edilecek.

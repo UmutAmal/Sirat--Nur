@@ -134,15 +134,19 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
       final candidates = await _audioCandidatesForVoice(normalizedVoice);
 
-      Object? lastError;
-      for (final url in candidates) {
+      var hadAudioFailure = false;
+      for (var index = 0; index < candidates.length; index++) {
+        final url = candidates[index];
         try {
           await _audioPlayer.setUrl(url);
           await _audioPlayer.play();
           return;
-        } catch (error) {
-          lastError = error;
-          debugPrint('Audio source failed: $url, error: $error');
+        } catch (_) {
+          hadAudioFailure = true;
+          debugPrint(
+            'Audio source failed for reciter $reciterId '
+            'at candidate ${index + 1}/${candidates.length}',
+          );
         }
       }
 
@@ -155,8 +159,8 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
         );
       }
 
-      if (lastError != null) {
-        debugPrint('Audio playback failed for all sources: $lastError');
+      if (hadAudioFailure) {
+        debugPrint('Audio playback failed for all verified sources');
       }
     } finally {
       if (mounted) {

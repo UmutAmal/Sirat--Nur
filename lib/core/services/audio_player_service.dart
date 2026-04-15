@@ -62,10 +62,10 @@ class AudioPlayerService {
       await _player.stop();
       await _player.setUrl(url);
       await _player.play();
-      debugPrint('Playing remote URL: $url');
+      debugPrint('Remote audio playback started');
       return true;
-    } catch (e) {
-      debugPrint('URL playback error: $e');
+    } catch (_) {
+      debugPrint('Remote audio playback failed');
       return false;
     }
   }
@@ -76,10 +76,10 @@ class AudioPlayerService {
       await _player.stop();
       await _player.setAsset(assetPath);
       await _player.play();
-      debugPrint('Playing local asset: $assetPath');
+      debugPrint('Local audio playback started');
       return true;
-    } catch (e) {
-      debugPrint('Asset playback error: $e');
+    } catch (_) {
+      debugPrint('Local audio playback failed');
       return false;
     }
   }
