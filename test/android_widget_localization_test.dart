@@ -110,5 +110,22 @@ void main() {
       expect(manifest, contains('@xml/widget_info_qibla'));
       expect(manifest, contains('@xml/widget_info_ayah'));
     });
+
+    test('does not ship unregistered appwidget provider XML files', () {
+      final manifest = File(
+        'android/app/src/main/AndroidManifest.xml',
+      ).readAsStringSync();
+      final referencedXml = RegExp(
+        r'@xml/([A-Za-z0-9_]+)',
+      ).allMatches(manifest).map((match) => match.group(1)!).toSet();
+      final widgetInfoXml = Directory('android/app/src/main/res/xml')
+          .listSync()
+          .whereType<File>()
+          .where((file) => file.uri.pathSegments.last.startsWith('widget_info'))
+          .map((file) => file.uri.pathSegments.last.replaceAll('.xml', ''))
+          .toSet();
+
+      expect(widgetInfoXml.difference(referencedXml), isEmpty);
+    });
   });
 }

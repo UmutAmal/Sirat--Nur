@@ -6031,3 +6031,37 @@
 
 ### Sonraki Adım
 - Sonraki döngüde Android widget XML dosyalarındaki kullanılmayan/duplicate provider info kayıtları ve native widget preview metinlerinin test kapsamı taranacak.
+
+## 2026-04-15 TUR-156 — Remove Unregistered Android Widget Info XML
+
+### Yapılan İşlem
+- `android/app/src/main/res/xml/widget_info_all_prayers.xml` kaldırıldı.
+- Aktif AllPrayers widget receiver zaten `@xml/widget_info_all` kullanıyor; kaldırılan dosya hiçbir manifest kaydında veya kod referansında kullanılmıyordu.
+- `android_widget_localization_test.dart` genişletildi; `res/xml/widget_info*.xml` dosyalarından manifestte referanslanmayan olursa test artık fail ediyor.
+
+### Neden Yapıldı
+- Widget audit sırasında aynı `widget_all_prayers` layout'una işaret eden iki ayrı provider XML bulundu.
+- `widget_info_all_prayers.xml` kullanılmadığı halde repoda kaldığı için ileride yanlış dosyanın güncellenip aktif sanılması veya widget davranışı hakkında hatalı varsayım oluşması riski vardı.
+- Kök sebep, Android widget kaynakları için manifest-referans bütünlüğünü doğrulayan test bulunmamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\android\app\src\main\res\xml\widget_info_all_prayers.xml`
+- `A:\Way of Allah\sirat_i_nur\test\android_widget_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Android widget provider XML kaynakları manifestle birebir tutarlı hale geldi.
+- Kullanılmayan widget metadata dosyaları üretim paketine taşınmaz.
+- Yeni test, gelecekte manifestte kayıtlı olmayan widget provider XML dosyalarını yakalar.
+
+### Test Sonucu
+- `flutter test test\android_widget_localization_test.dart --reporter compact` PASS (`5/5`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`322/322`)
+- `flutter build apk --debug` PASS (`build\app\outputs\flutter-apk\app-debug.apk`)
+
+### Risk Değişimi
+- Kullanılmayan/yanlış widget provider XML dosyasıyla Android widget davranışının karışması riski: `8/25 -> 2/25`
+
+### Sonraki Adım
+- Sonraki döngüde Android native widget preview metinleri ve widget_service çağrılarının gerçek ürün akışlarında tetiklenme kapsamı taranacak.
