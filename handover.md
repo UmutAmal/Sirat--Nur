@@ -6361,3 +6361,39 @@
 
 ### Sonraki Adım
 - Sonraki dongude Settings/About ve Places directions gibi external URL launch yuzeyleri taranacak; sabit URL'ler bile bozulursa `Uri.parse` kaynakli crash veya sessiz launch failure uretmemesi icin helper/test guard degerlendirilecek.
+
+## 2026-04-15 TUR-165 — Harden External URL Launches
+
+### Yapılan İşlem
+- `external_url.dart` helper'i eklendi; yalnizca host iceren `http`/`https` URI'leri dis uygulamaya acilabilir hale getirildi.
+- `settings_page.dart` icindeki resmi namaz kaynagi, Play Store puanlama ve gizlilik politikasi linkleri ortak `launchExternalHttpUrl` helper'ina tasindi.
+- `places_map_page.dart` icindeki Google Maps arama linki string interpolation yerine `Uri.https` ile uretilir hale getirildi ve ortak `launchExternalUri` helper'iyle aciliyor.
+- `external_url_test.dart` icinde gecersiz semalar, bos/relative URL'ler, host'suz HTTPS ve Google Maps query encoding regresyonlari icin test guard eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:113`, `:254` ve `:275` onceki akista sabit linkleri dogrudan parse edip launch ediyordu; ileride config/sabit degisirse invalid URL crash veya sessiz basarisizlik riski vardi.
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:307` onceki akista harita koordinatlarini URL string'i icine elle yerlestiriyordu; merkezi encode/guard olmadigi icin ayni hata sinifi tekrar uretilebilirdi.
+- Kök sebep, dis URL acma sinirinin her ekranda ayri ve guard'siz kurulmasiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\external_url.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\external_url_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Dis linklerde host'suz, relative, `mailto:` veya `javascript:` gibi uygulama disi web linki olmayan girdiler acilmaz.
+- Launch basarisiz olursa kullanici lokalize hata snackbar'i gorur; false success veya sessiz yutma yoktur.
+- Google Maps linki query parametreleriyle encode edildigi icin koordinat linki daha dayanikli hale geldi.
+
+### Test Sonucu
+- `flutter test test\external_url_test.dart test\features\settings\settings_page_test.dart test\features\places\places_map_page_test.dart` PASS (`12/12`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`339/339`)
+
+### Risk Değişimi
+- External URL launch parse/failure crash veya sessiz basarisizlik riski: `10/25 -> 2/25`
+
+### Sonraki Adım
+- Sonraki dongude kalan `Uri.parse` / `launchUrl` yuzeyleri taranacak; test veya kontrollu helper disinda kalan dis link akisi varsa ayni merkezi sinira alinacak, yoksa ARB kalite/regresyon ve premium hata metni risklerine gecilecek.

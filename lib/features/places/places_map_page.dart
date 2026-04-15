@@ -7,9 +7,9 @@ import 'package:latlong2/latlong.dart';
 import 'package:http/http.dart' as http;
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:sirat_i_nur/core/utils/external_url.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 enum PlaceCategory { mosque, halalFood, education }
 
@@ -304,10 +304,11 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
   }
 
   Future<void> _openDirections(_PlaceWithDistance place) async {
-    final uri = Uri.parse(
-      'https://www.google.com/maps/search/?api=1&query=${place.place.position.latitude},${place.place.position.longitude}',
+    final uri = buildGoogleMapsSearchUri(
+      latitude: place.place.position.latitude,
+      longitude: place.place.position.longitude,
     );
-    await launchUrl(uri, mode: LaunchMode.externalApplication);
+    await launchExternalUri(context, uri);
   }
 
   void _focusPlace(_PlaceWithDistance p) {

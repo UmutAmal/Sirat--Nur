@@ -6,11 +6,11 @@ import 'package:sirat_i_nur/core/constants/app_constants.dart';
 import 'package:sirat_i_nur/core/services/app_metadata_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:sirat_i_nur/core/utils/external_url.dart';
 import 'package:sirat_i_nur/core/utils/locale_utils.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 String displayAudioVoiceLabel(AppLocalizations l10n, String voice) {
   switch (normalizeAudioVoice(voice)) {
@@ -110,7 +110,10 @@ class SettingsPage extends ConsumerWidget {
                       size: 20,
                     ),
                     onTap: prayerAuthorityIsOfficial
-                        ? () => launchUrl(Uri.parse(prayerProfile.sourceUrl))
+                        ? () => launchExternalHttpUrl(
+                            context,
+                            prayerProfile.sourceUrl,
+                          )
                         : null,
                   ),
                   const Divider(height: 1),
@@ -248,7 +251,7 @@ class SettingsPage extends ConsumerWidget {
                     icon: Icons.star_rate_rounded,
                     title: l10n.rateApp,
                     value: '',
-                    onTap: () => launchUrl(Uri.parse(playStoreUrl)),
+                    onTap: () => launchExternalHttpUrl(context, playStoreUrl),
                   ),
                   const Divider(height: 1),
                   _settingsTile(
@@ -268,7 +271,8 @@ class SettingsPage extends ConsumerWidget {
                     icon: Icons.privacy_tip_outlined,
                     title: l10n.privacyPolicy,
                     value: '',
-                    onTap: () => launchUrl(Uri.parse(privacyPolicyUrl)),
+                    onTap: () =>
+                        launchExternalHttpUrl(context, privacyPolicyUrl),
                   ),
                 ],
               ),
