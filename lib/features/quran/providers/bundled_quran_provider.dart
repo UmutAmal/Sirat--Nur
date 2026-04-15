@@ -63,7 +63,7 @@ Future<List<Map<String, dynamic>>?> loadCloudQuranRows({
     final surahResponse = await supabase
         .from('quran_surahs')
         .select(
-          'id, surah_number, name_ar, name_en, name_transliteration, ayah_count, revelation_type',
+          'id, surah_number, name_ar, name_en, name_transliteration, ayah_count, revelation_type, source, verified_at',
         )
         .order('surah_number', ascending: true);
     final ayahResponse = await _loadCloudAyahRows(supabase);
@@ -82,13 +82,17 @@ Future<List<dynamic>> _loadCloudAyahRows(SupabaseClient supabase) async {
   try {
     return await supabase
         .from('quran_ayahs')
-        .select('surah_id, ayah_number, juz_number, text_ar, text_tr, text_en')
+        .select(
+          'surah_id, ayah_number, juz_number, text_ar, text_tr, text_en, source, verified_at',
+        )
         .order('surah_id', ascending: true)
         .order('ayah_number', ascending: true);
   } catch (_) {
     return supabase
         .from('quran_ayahs')
-        .select('surah_id, ayah_number, text_ar, text_tr, text_en')
+        .select(
+          'surah_id, ayah_number, text_ar, text_tr, text_en, source, verified_at',
+        )
         .order('surah_id', ascending: true)
         .order('ayah_number', ascending: true);
   }
@@ -115,8 +119,7 @@ List<Map<String, dynamic>>? normalizeCloudQuranRows({
     }
 
     bundledSurahByNumber[surahNumber] = bundledSurah;
-    final ayahs =
-        bundledSurah['ayahs'] as List<dynamic>? ?? const <dynamic>[];
+    final ayahs = bundledSurah['ayahs'] as List<dynamic>? ?? const <dynamic>[];
     for (final ayah in ayahs.whereType<Map>()) {
       final ayahMap = Map<String, dynamic>.from(ayah);
       final ayahNumber = _toInt(ayahMap['numberInSurah']);
@@ -183,8 +186,17 @@ List<Map<String, dynamic>>? normalizeCloudQuranRows({
     final revelationType =
         _nonEmptyString(surahRow['revelation_type']) ??
         _nonEmptyString(bundledSurah['revelationType']);
+    final source = _nonEmptyString(surahRow['source']);
+    final verifiedAt =
+        _nonEmptyString(surahRow['verified_at']) ??
+        _nonEmptyString(surahRow['verifiedAt']);
 
-    if (nameArabic == null || transliteration == null || revelationType == null) {
+    if (nameArabic == null ||
+        transliteration == null ||
+        revelationType == null) {
+      return null;
+    }
+    if (source == null || verifiedAt == null) {
       return null;
     }
 
@@ -227,17 +239,24 @@ List<Map<String, dynamic>>? normalizeCloudQuranRows({
     final textArabic = _nonEmptyString(ayahRow['text_ar']);
     final textTurkish = _nonEmptyString(ayahRow['text_tr']);
     final textEnglish = _nonEmptyString(ayahRow['text_en']);
+    final source = _nonEmptyString(ayahRow['source']);
+    final verifiedAt =
+        _nonEmptyString(ayahRow['verified_at']) ??
+        _nonEmptyString(ayahRow['verifiedAt']);
     final juzNumber =
         _toInt(ayahRow['juz_number']) ?? _toInt(bundledAyahMeta['juz']);
     if (textArabic == null ||
         textTurkish == null ||
         textEnglish == null ||
+        source == null ||
+        verifiedAt == null ||
         juzNumber == null ||
         juzNumber <= 0) {
       return null;
     }
 
-    final normalizedAyahs = normalizedSurah['ayahs'] as List<Map<String, dynamic>>;
+    final normalizedAyahs =
+        normalizedSurah['ayahs'] as List<Map<String, dynamic>>;
     normalizedAyahs.add(<String, dynamic>{
       'number': _toInt(bundledAyahMeta['number']) ?? ayahNumber,
       'text': textArabic,
@@ -250,8 +269,9 @@ List<Map<String, dynamic>>? normalizeCloudQuranRows({
 
   for (final surah in normalizedRows) {
     final surahNumber = _toInt(surah['number']);
-    final expectedAyahCountForSurah =
-        surahNumber == null ? null : expectedAyahCountBySurah[surahNumber];
+    final expectedAyahCountForSurah = surahNumber == null
+        ? null
+        : expectedAyahCountBySurah[surahNumber];
     final ayahs = surah['ayahs'] as List<Map<String, dynamic>>;
     if (expectedAyahCountForSurah == null ||
         ayahs.length != expectedAyahCountForSurah) {
@@ -280,15 +300,15 @@ String? _nonEmptyString(dynamic value) {
   return normalized;
 }
 
-final bundledQuranProvider = FutureProvider<List<Map<String, dynamic>>>((ref) async {
+final bundledQuranProvider = FutureProvider<List<Map<String, dynamic>>>((
+  ref,
+) async {
   final bundledRows = await loadBundledQuranRows(rootBundle);
   final supabase = ref.read(supabaseClientProvider);
 
   return resolveQuranRows(
-    loadCloudRows: () => loadCloudQuranRows(
-      supabase: supabase,
-      bundledRows: bundledRows,
-    ),
+    loadCloudRows: () =>
+        loadCloudQuranRows(supabase: supabase, bundledRows: bundledRows),
     loadBundledRows: () async => bundledRows,
   );
 });

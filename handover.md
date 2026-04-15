@@ -5174,3 +5174,38 @@
 
 ### Sonraki Adım
 - Yeni döngüde `quran_ayahs` cloud loader tarafında canlı ayet satırları için `source` ve `verified_at` alanlarının select/normalize zincirinde korunup korunmadığı taranacak.
+
+## 2026-04-15 TUR-134 — Require Verified Quran Text Provenance
+
+### Yapılan İşlem
+- `loadCloudQuranRows` Supabase `quran_surahs` sorgusuna `source, verified_at` alanlarını ekledi.
+- `_loadCloudAyahRows` Supabase `quran_ayahs` birincil ve fallback sorgularına `source, verified_at` alanlarını ekledi.
+- `normalizeCloudQuranRows` artık hem sure metadata satırlarında hem ayet metni satırlarında `source/source` ve `verified_at/verifiedAt` değerleri dolu değilse canlı cloud verisini reddediyor.
+- `test/features/quran/providers/bundled_quran_provider_test.dart` geçerli cloud fixture'larını provenance alanlarıyla güncelledi; eksik provenance'lı cloud Kur'an satırlarını reddeden ve canlı sorguların provenance kolonlarını istediğini doğrulayan regresyon testleri eklendi.
+
+### Neden Yapıldı
+- `content_schema.sql` içindeki `quran_surahs` ve `quran_ayahs` tabloları `source` ve `verified_at` alanlarını dinî içerik doğrulama zincirinin zorunlu parçası olarak tanımlıyor.
+- Flutter loader daha önce bu alanları seçmediği için canlı cloud metin/metadata satırı, doğrulanmış kaynak bilgisi olmadan bundled Kur'an asset'inin üstüne geçebilirdi.
+- Bu risk dinî metin doğruluğu ve kullanıcıya dürüst veri sunma prensibi açısından P1 seviyesindeydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\providers\bundled_quran_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\providers\bundled_quran_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Canlı Kur'an sure metadata ve ayet metinleri artık source/verified_at bilgisi olmadan uygulama içine alınmaz.
+- Doğrulanmamış cloud veri varsa uygulama bundled, test korumalı Kur'an asset'ine geri düşer; kullanıcıya kaynağı belirsiz dinî metin gösterilmez.
+- `quran_surahs` ve `quran_ayahs` schema sözleşmesi loader ve test seviyesinde uygulanır hale geldi.
+
+### Test Sonucu
+- `flutter test test\features\quran\providers\bundled_quran_provider_test.dart --reporter compact` PASS (`11/11`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`280/280`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Canlı Kur'an metin/metadata satırlarında doğrulanmamış veya kaynağı belirsiz içeriğin bundled asset'i override etme riski: `20/25 -> 4/25`
+
+### Sonraki Adım
+- Yeni döngüde `quran_diagnostics.dart` tarafı taranacak; diagnostics sadece sayım/juz yapısını değil, `quran_surahs` ve `quran_ayahs` provenance eksiklerini de kullanıcıya dürüst fallback uyarısı olarak gösteriyor mu doğrulanacak.
