@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 
@@ -114,6 +116,21 @@ void main() {
       expect(
         url,
         'https://amevotnudldbbwogtrtw.supabase.co/storage/v1/object/public/quran-audio/alafasy/001.mp3',
+      );
+    });
+
+    test('live quran audio queries include storage_path for owned audio', () {
+      final source = File(
+        'lib/core/services/offline_audio_service.dart',
+      ).readAsStringSync();
+
+      expect(
+        source,
+        isNot(contains(".select('type, reciter, surah_number, url')")),
+      );
+      expect(
+        source,
+        contains(".select('type, reciter, surah_number, url, storage_path')"),
       );
     });
   });

@@ -330,7 +330,7 @@ class OfflineReciters {
     try {
       final row = await Supabase.instance.client
           .from('audio_files')
-          .select('type, reciter, surah_number, url')
+          .select('type, reciter, surah_number, url, storage_path')
           .eq('type', 'quran_surah')
           .eq('reciter', reciterId)
           .eq('surah_number', surahNumber)
@@ -362,7 +362,7 @@ class OfflineReciters {
     try {
       final rows = await Supabase.instance.client
           .from('audio_files')
-          .select('type, reciter, surah_number, url')
+          .select('type, reciter, surah_number, url, storage_path')
           .eq('type', 'quran_surah')
           .order('reciter', ascending: true)
           .order('surah_number', ascending: true);

@@ -4720,3 +4720,37 @@
 
 ### Sonraki Adım
 - Yeni döngüde raw log taraması temizse hardcoded chatbot system prompt, offline download logging ve l10n coverage kalanları risk sırasına göre incelenecek.
+
+## 2026-04-15 TUR-121 — Load Storage-Backed Quran Audio URLs
+
+### Yapılan İşlem
+- `lib/core/services/offline_audio_service.dart` canlı Supabase `audio_files` sorguları `storage_path` alanını da seçecek şekilde güncellendi.
+- `resolvePlayableCloudAudioUrl()` zaten `storage_path` değerini Supabase Storage public URL'ine çeviriyordu; fakat canlı sorgu bu alanı çekmediği için owned/storage-backed ses yolu devreye giremiyordu.
+- `test/offline_audio_service_test.dart` canlı Kur'an ses sorgularının `storage_path` alanını seçmesini zorunlu kılan regresyon testi kazandı.
+
+### Neden Yapıldı
+- `lib/core/services/offline_audio_service.dart:330` ve `lib/core/services/offline_audio_service.dart:362` önce yalnızca `type, reciter, surah_number, url` seçiyordu.
+- Bu yüzden veritabanında Supabase Storage yolu mevcut olsa bile uygulama external `url` alanına bağımlı kalabiliyordu.
+- Kullanıcının "sesler bizim database/storage zincirimizden alınmalı, external linkler ilerde kapanabilir" beklentisi için canlı sorgunun owned audio metadata'sını tam çekmesi gerekiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Canlı Kur'an ses tek sure ve katalog sorguları artık `storage_path` döndürür.
+- `storage_path` varsa Supabase Storage public URL'i external URL'e tercih edilir.
+- Regresyon testi eski eksik select listesinin geri dönmesini engeller.
+
+### Test Sonucu
+- `flutter test test\offline_audio_service_test.dart --reporter compact` PASS (`5/5`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`257/257`)
+- `git diff --check` PASS (sadece CRLF uyarıları)
+
+### Risk Değişimi
+- Owned/storage-backed Kur'an ses yolunun canlı sorguda bypass edilme riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde Kur'an ses seed ve storage seed bütünlüğü incelenecek; external URL seed'lerinin storage mirror/import akışıyla doğrulanıp doğrulanmadığı kanıtlanacak.
