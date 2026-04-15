@@ -93,6 +93,32 @@ String describeQuranAudioStorageUploadFailure(Object error) {
   return 'unexpected upload error';
 }
 
+List<String> validateMirroredQuranAudioUploadPlan(
+  Iterable<MirroredAudioFile> files,
+) {
+  final failed = <String>[];
+  final seenObjectPaths = <String>{};
+
+  for (final row in files) {
+    final objectPath = storageObjectPathForMirroredAudioFile(row);
+    if (!seenObjectPaths.add(objectPath)) {
+      failed.add('$objectPath: duplicate storage object path');
+      continue;
+    }
+
+    final localFile = File(row.localPath);
+    if (!localFile.existsSync()) {
+      failed.add('$objectPath: missing local file');
+      continue;
+    }
+    if (localFile.lengthSync() == 0) {
+      failed.add('$objectPath: empty local file');
+    }
+  }
+
+  return List.unmodifiable(failed);
+}
+
 Future<QuranAudioStorageUploadSummary> uploadMirroredQuranAudioFiles({
   required Iterable<MirroredAudioFile> files,
   required Uri supabaseUrl,
@@ -102,6 +128,15 @@ Future<QuranAudioStorageUploadSummary> uploadMirroredQuranAudioFiles({
   HttpClient? httpClient,
 }) async {
   final rows = files.toList();
+  final planFailures = validateMirroredQuranAudioUploadPlan(rows);
+  if (planFailures.isNotEmpty) {
+    return QuranAudioStorageUploadSummary(
+      requested: rows.length,
+      uploaded: 0,
+      failed: planFailures,
+    );
+  }
+
   final client = httpClient ?? HttpClient();
   final closeClient = httpClient == null;
   final failed = <String>[];
@@ -111,15 +146,6 @@ Future<QuranAudioStorageUploadSummary> uploadMirroredQuranAudioFiles({
     for (final row in rows) {
       final localFile = File(row.localPath);
       final objectPath = storageObjectPathForMirroredAudioFile(row);
-
-      if (!localFile.existsSync()) {
-        failed.add('$objectPath: missing local file');
-        continue;
-      }
-      if (localFile.lengthSync() == 0) {
-        failed.add('$objectPath: empty local file');
-        continue;
-      }
 
       try {
         final uploadUri = buildSupabaseStorageObjectUploadUri(
@@ -235,7 +261,16 @@ Future<void> main(List<String> args) async {
   }
 
   final files = parseMirroredAudioManifest(manifestFile.readAsStringSync());
+  final planFailures = validateMirroredQuranAudioUploadPlan(files);
   if (dryRun) {
+    if (planFailures.isNotEmpty) {
+      for (final failure in planFailures) {
+        stderr.writeln('FAILED: $failure');
+      }
+      exitCode = 1;
+      return;
+    }
+
     stdout.writeln(
       'Verified upload plan: files=${files.length}, bucket=$bucketName, '
       'supabase=${supabaseUrl.host}',
@@ -246,6 +281,14 @@ Future<void> main(List<String> args) async {
   final serviceRoleKey = Platform.environment[serviceRoleKeyEnv]?.trim();
   if (serviceRoleKey == null || serviceRoleKey.isEmpty) {
     throw StateError('$serviceRoleKeyEnv env is required for upload.');
+  }
+
+  if (planFailures.isNotEmpty) {
+    for (final failure in planFailures) {
+      stderr.writeln('FAILED: $failure');
+    }
+    exitCode = 1;
+    return;
   }
 
   final summary = await uploadMirroredQuranAudioFiles(

@@ -5445,3 +5445,39 @@
 
 ### Sonraki Adım
 - Yeni döngüde audio/database hattında gerçek upload manifestinin dosya varlığı ve boyut doğrulaması taranacak; ardından kalan l10n fallback ölçümü veya dini içerik provenance boşlukları yeniden skorlanacak.
+
+## 2026-04-15 TUR-141 — Preflight Quran Audio Storage Upload Files
+
+### Yapılan İşlem
+- `upload_quran_audio_storage.dart` içine `validateMirroredQuranAudioUploadPlan` helper'ı eklendi.
+- Upload planı artık her manifest satırı için local MP3 dosyasının varlığını, boş olmamasını ve duplicate storage object path üretmemesini kontrol ediyor.
+- `uploadMirroredQuranAudioFiles` networke çıkmadan önce preflight failure varsa upload'u `uploaded=0` ile durduruyor.
+- CLI `--dry-run` yolu da aynı preflight kontrolünü kullanıyor; eksik/boş/duplicate dosya varsa planı başarılı göstermiyor ve `FAILED:` satırlarıyla `exitCode=1` bırakıyor.
+- `upload_quran_audio_storage_test.dart` eksik dosya, boş dosya, duplicate object path ve networke çıkmadan abort davranışlarını kapsayacak şekilde genişletildi.
+
+### Neden Yapıldı
+- TUR-140 production storage seed'in tam katalog olmasını zorunlu kıldı; ancak upload aracının `--dry-run` yolu sadece manifest parse edip local MP3 dosyalarının gerçekten var ve dolu olduğunu doğrulamıyordu.
+- Bu, operatöre “upload plan doğrulandı” hissi verip gerçek upload aşamasında eksik dosya failure'larıyla karşılaşma veya kısmi süreç riski oluşturuyordu.
+- Kök sebep, local dosya bütünlüğü kontrolünün yalnız gerçek upload loop içinde yapılması ve dry-run ile ortak preflight katmanı olmamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart`
+- `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Supabase Storage audio yükleme planı artık network yazımı başlamadan önce local dosya bütünlüğünü doğruluyor.
+- Eksik veya boş MP3 dosyası bulunan manifest dry-run'da başarı gibi görünmüyor.
+- Duplicate object path yanlışlıkları tek dosyanın başka sure/reciter satırını ezmesi riskini upload öncesi yakalıyor.
+
+### Test Sonucu
+- `flutter test test\upload_quran_audio_storage_test.dart test\generate_quran_audio_storage_seed_test.dart test\readme_operational_docs_test.dart --reporter compact` PASS (`17/17`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`292/292`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Quran audio upload dry-run'ın eksik/boş local MP3 dosyalarını başarı gibi göstermesi riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde kalan l10n fallback ölçümü veya dini içerik provenance boşlukları tekrar skorlanacak; özellikle kullanıcıya hâlâ İngilizce kalan download/diagnostics/chatbot metinleri için güvenli otomatik ölçüm raporu eklenecek.
