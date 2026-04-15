@@ -150,6 +150,7 @@ void main() {
           'text_tr': 'Turkce dua',
           'text_en': 'English dua',
           'source': 'Diyanet',
+          'verified_at': '2026-04-15T00:00:00Z',
           'category': 'Sabah Akşam',
         },
       ]);
@@ -162,6 +163,7 @@ void main() {
       expect(resolved.first.resolvedTranslations['tr'], 'Turkce dua');
       expect(resolved.first.resolvedTranslations['en'], 'English dua');
       expect(resolved.first.source, 'Diyanet');
+      expect(resolved.first.verifiedAt, '2026-04-15T00:00:00Z');
       expect(resolved.first.category, 'Sabah Akşam');
     });
 

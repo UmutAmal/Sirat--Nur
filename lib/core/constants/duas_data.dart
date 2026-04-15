@@ -8,6 +8,7 @@ class DuaData {
   final String english;
   final String source;
   final String category;
+  final String verifiedAt;
   final Map<String, String> translations;
 
   const DuaData({
@@ -18,6 +19,7 @@ class DuaData {
     required this.english,
     required this.source,
     required this.category,
+    this.verifiedAt = '',
     this.translations = const {},
   });
 
@@ -65,6 +67,7 @@ class DuaData {
       english: english,
       source: readFirst(['source', 'reference']),
       category: readFirst(['category', 'title_tr', 'title_en']),
+      verifiedAt: readFirst(['verified_at', 'verifiedAt']),
       translations: translations,
     );
   }
@@ -163,7 +166,7 @@ const List<DuaData> dailyDuas = [
         'فَتَعَـٰلَى ٱللَّهُ ٱلْمَلِكُ ٱلْحَقُّ ۗ وَلَا تَعْجَلْ بِٱلْقُرْءَانِ مِن قَبْلِ أَن يُقْضَىٰٓ إِلَيْكَ وَحْيُهُۥ ۖ وَقُل رَّبِّ زِدْنِى عِلْمًا',
     transliteration: '',
     turkish:
-        'Hükmü her yerde geçerli gerçek hükümdar olan Allah yücedir. (Ey Muhammed!) Kur''ân sana vahyedilirken, vahiy bitmeden önce (unutma korkusu ile) Kur''ân''ı okumada acele etme; "Rabbim! benim ilmimi artır" de.',
+        "Hükmü her yerde geçerli gerçek hükümdar olan Allah yücedir. (Ey Muhammed!) Kur'ân sana vahyedilirken, vahiy bitmeden önce (unutma korkusu ile) Kur'ân'ı okumada acele etme; \"Rabbim! benim ilmimi artır\" de.",
     english:
         'exalted be God, the one who is truly in control. [Prophet], do not rush to recite before the revelation is fully complete but say, ‘Lord, increase me in knowledge!’',
     source: 'Quran 20:114',
@@ -204,7 +207,9 @@ List<DuaData> resolveCloudDuas(List<Map<String, dynamic>> rows) {
       .where(
         (dua) =>
             dua.arabic.isNotEmpty &&
-            (dua.turkish.isNotEmpty || dua.english.isNotEmpty),
+            (dua.turkish.isNotEmpty || dua.english.isNotEmpty) &&
+            dua.source.isNotEmpty &&
+            dua.verifiedAt.isNotEmpty,
       )
       .toList();
 

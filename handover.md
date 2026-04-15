@@ -5029,3 +5029,41 @@
 
 ### Sonraki Adım
 - Yeni döngüde dini içerik veri yüzeyleri taranacak; önce dua/asr/asma içeriklerinde kaynak, uydurma metin ve Supabase'e taşınmamış hardcoded içerik riski kontrol edilecek.
+
+## 2026-04-15 TUR-130 — Require Verified Dua Provenance
+
+### Yapılan İşlem
+- `DuaData` modeline Supabase `verified_at` bilgisini taşıyan `verifiedAt` alanı eklendi.
+- `resolveCloudDuas` artık canlı Supabase dua satırını yalnızca Arapça metin, TR/EN anlam, `source` ve `verified_at` birlikte doluysa kabul ediyor; eksik provenance varsa doğrulanmış bundled Kur'an fallback'e dönüyor.
+- `duas_data.dart` içindeki 20:114 Türkçe fallback mealinde Dart string concatenation yüzünden düşen `Kur'ân` apostrofları doğrulanmış `assets/data/full_quran.json` metniyle birebir hizalandı.
+- `test/duas_data_test.dart` bundled dua fallback'in her Arapça/TR/EN metnini `assets/data/full_quran.json` içindeki doğrulanmış ayet payload'ı ile birebir karşılaştıran guard kazandı.
+- Cloud dua testleri `source + verified_at` olmayan satırları reddetmeyi ve doğrulanmış satır provenance'ını korumayı doğrulayacak şekilde güncellendi.
+
+### Neden Yapıldı
+- `lib/core/constants/duas_data.dart:203` önce cloud dua satırını yalnızca Arapça ve TR/EN metin dolu diye kabul ediyordu.
+- Bu, Supabase tablosuna yanlışlıkla `source` veya `verified_at` eksik satır girerse uygulamanın doğrulanmamış dinî içeriği göstermesine yol açabilirdi.
+- Yeni asset eşleşme testi, bundled fallback içinde Kur'an metni/mealinden sessiz sapmaları yakaladı ve 20:114'teki `Kur'ân` yazım bozulmasını gerçek kanıtla ortaya çıkardı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart`
+- `A:\Way of Allah\sirat_i_nur\test\duas_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\library_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Canlı dua içeriği artık doğrulanmış provenance olmadan UI'a çıkmaz.
+- Bundled Kur'an dua fallback'i, repo içindeki doğrulanmış Quran.com seed zincirinden üretilen asset ile testte birebir bağlıdır.
+- Dini içerikte yanlış yazım veya kaynak/provenance boşluğu sessizce üretime sızmadan testte yakalanır.
+
+### Test Sonucu
+- `flutter test test\duas_data_test.dart test\library_page_test.dart --reporter compact` PASS (`18/18`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`275/275`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Cloud dua satırlarında doğrulanmamış/eksik kaynaklı dinî içerik gösterme riski: `16/25 -> 4/25`
+- Bundled dua fallback metninin doğrulanmış Kur'an asset'inden sessiz sapma riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde Asma-ul-Husna cloud satırları aynı provenance kuralıyla taranacak; `source` ve `verified_at` eksik canlı satırların bundled verified fallback'i gölgeleme riski kontrol edilecek.
