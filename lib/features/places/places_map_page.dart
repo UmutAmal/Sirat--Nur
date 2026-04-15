@@ -11,7 +11,7 @@ import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-enum _PlaceCategory { mosque, halalFood, education }
+enum PlaceCategory { mosque, halalFood, education }
 
 enum PlacesMapAvailability { ready, locationRequired, tileConfigRequired }
 
@@ -40,6 +40,177 @@ PlacesMapAvailability resolvePlacesMapAvailability(
   return PlacesMapAvailability.ready;
 }
 
+Uri resolvePlacesOverpassEndpoint(String rawEndpoint) {
+  final endpoint = rawEndpoint.trim();
+  final uri = Uri.tryParse(endpoint);
+  if (uri == null || !uri.hasScheme || uri.host.isEmpty) {
+    throw const FormatException('Places Overpass endpoint must be an URL.');
+  }
+
+  return uri;
+}
+
+String buildOverpassPlacesQuery({
+  required LatLng center,
+  required PlaceCategory category,
+  int radiusMeters = 5000,
+}) {
+  final queryTags = _overpassQueryTagsForCategory(category);
+
+  return '''
+        [out:json][timeout:15];
+        (
+          node$queryTags(around:$radiusMeters, ${center.latitude}, ${center.longitude});
+          way$queryTags(around:$radiusMeters, ${center.latitude}, ${center.longitude});
+        );
+        out center;
+      ''';
+}
+
+String _overpassQueryTagsForCategory(PlaceCategory category) {
+  return switch (category) {
+    PlaceCategory.mosque =>
+      '["amenity"="place_of_worship"]["religion"="muslim"]',
+    PlaceCategory.halalFood => '["diet:halal"="yes"]',
+    PlaceCategory.education => '["amenity"="school"]["religion"="muslim"]',
+  };
+}
+
+List<IslamicPlace> parseOverpassPlacesPayload(
+  String responseBody, {
+  required PlaceCategory category,
+  required String unknownPlaceName,
+  required String fallbackDescription,
+}) {
+  final decoded = jsonDecode(responseBody);
+  if (decoded is! Map<String, dynamic>) {
+    throw const FormatException('Overpass response root must be an object.');
+  }
+
+  final elements = decoded['elements'];
+  if (elements is! List) {
+    throw const FormatException('Overpass response elements must be a list.');
+  }
+
+  final places = <IslamicPlace>[];
+  for (final element in elements) {
+    if (element is! Map) {
+      continue;
+    }
+
+    final row = Map<String, dynamic>.from(element);
+    final tags = _readOverpassTags(row['tags']);
+    final lat = _readOverpassCoordinate(
+      row['lat'] ?? _readOverpassCenterValue(row['center'], 'lat'),
+    );
+    final lon = _readOverpassCoordinate(
+      row['lon'] ?? _readOverpassCenterValue(row['center'], 'lon'),
+    );
+    if (lat == null || lon == null) {
+      continue;
+    }
+
+    final id = row['id']?.toString().trim();
+    if (id == null || id.isEmpty) {
+      continue;
+    }
+
+    final style = _placeStyleForCategory(category);
+    places.add(
+      IslamicPlace(
+        id: id,
+        name: _readFirstTag(tags, const [
+          'name',
+          'name:en',
+        ], fallback: unknownPlaceName),
+        description: _readFirstTag(tags, const [
+          'amenity',
+          'shop',
+        ], fallback: fallbackDescription),
+        position: LatLng(lat, lon),
+        icon: style.icon,
+        color: style.color,
+        category: category,
+      ),
+    );
+  }
+
+  return List.unmodifiable(places);
+}
+
+Map<String, String> _readOverpassTags(dynamic rawTags) {
+  if (rawTags is! Map) {
+    return const <String, String>{};
+  }
+
+  final tags = <String, String>{};
+  rawTags.forEach((key, value) {
+    final normalizedKey = key?.toString().trim();
+    final normalizedValue = value?.toString().trim();
+    if (normalizedKey == null ||
+        normalizedKey.isEmpty ||
+        normalizedValue == null ||
+        normalizedValue.isEmpty) {
+      return;
+    }
+    tags[normalizedKey] = normalizedValue;
+  });
+
+  return tags;
+}
+
+dynamic _readOverpassCenterValue(dynamic rawCenter, String key) {
+  if (rawCenter is Map) {
+    return rawCenter[key];
+  }
+
+  return null;
+}
+
+double? _readOverpassCoordinate(dynamic rawCoordinate) {
+  if (rawCoordinate is num) {
+    return rawCoordinate.toDouble();
+  }
+
+  if (rawCoordinate is String) {
+    return double.tryParse(rawCoordinate.trim());
+  }
+
+  return null;
+}
+
+String _readFirstTag(
+  Map<String, String> tags,
+  List<String> keys, {
+  required String fallback,
+}) {
+  for (final key in keys) {
+    final value = tags[key]?.trim();
+    if (value != null && value.isNotEmpty) {
+      return value;
+    }
+  }
+
+  return fallback;
+}
+
+({IconData icon, Color color}) _placeStyleForCategory(PlaceCategory category) {
+  return switch (category) {
+    PlaceCategory.mosque => (
+      icon: Icons.mosque_rounded,
+      color: AppColors.emerald,
+    ),
+    PlaceCategory.halalFood => (
+      icon: Icons.restaurant_rounded,
+      color: Colors.deepOrange,
+    ),
+    PlaceCategory.education => (
+      icon: Icons.school_rounded,
+      color: Colors.indigo,
+    ),
+  };
+}
+
 class PlacesMapPage extends ConsumerStatefulWidget {
   const PlacesMapPage({super.key});
 
@@ -51,11 +222,11 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
   final MapController _mapController = MapController();
   final Distance _distance = const Distance();
 
-  _PlaceCategory _selectedCategory = _PlaceCategory.mosque;
+  PlaceCategory _selectedCategory = PlaceCategory.mosque;
   LatLng? _currentCenter;
   LatLng? _lastFetchCenter;
 
-  List<_IslamicPlace> _places = [];
+  List<IslamicPlace> _places = [];
   bool _isLoading = false;
   String? _error;
   bool _anchorSyncQueued = false;
@@ -75,7 +246,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
     });
   }
 
-  Future<void> _fetchPlaces(LatLng center, _PlaceCategory category) async {
+  Future<void> _fetchPlaces(LatLng center, PlaceCategory category) async {
     if (_isLoading) return;
     setState(() {
       _isLoading = true;
@@ -84,75 +255,20 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
     });
 
     try {
-      String queryTags = '';
-      if (category == _PlaceCategory.mosque) {
-        queryTags = '["amenity"="place_of_worship"]["religion"="muslim"]';
-      } else if (category == _PlaceCategory.halalFood) {
-        queryTags = '["diet:halal"="yes"]';
-      } else if (category == _PlaceCategory.education) {
-        queryTags =
-            '["amenity"="school"]["religion"="muslim"]'; // Basic approximation
-      }
-
-      // 5km radius search
-      final query =
-          '''
-        [out:json][timeout:15];
-        (
-          node$queryTags(around:5000, ${center.latitude}, ${center.longitude});
-          way$queryTags(around:5000, ${center.latitude}, ${center.longitude});
-        );
-        out center;
-      ''';
-
       final response = await http.post(
-        Uri.parse('https://overpass-api.de/api/interpreter'),
-        body: query,
+        resolvePlacesOverpassEndpoint(SupabaseConfig.placesOverpassApiUrl),
+        body: buildOverpassPlacesQuery(center: center, category: category),
       );
 
       if (response.statusCode == 200) {
         if (!mounted) return;
         final l10n = AppLocalizations.of(context)!;
-        final data = json.decode(response.body);
-        final elements = data['elements'] as List;
-
-        final List<_IslamicPlace> fetchedPlaces = [];
-
-        for (final el in elements) {
-          final tags = el['tags'] ?? {};
-          final name = tags['name'] ?? tags['name:en'] ?? l10n.unknownPlaceName;
-          final lat = el['lat'] ?? el['center']?['lat'];
-          final lon = el['lon'] ?? el['center']?['lon'];
-
-          if (lat != null && lon != null) {
-            IconData icon = Icons.mosque_rounded;
-            Color color = AppColors.emerald;
-
-            if (category == _PlaceCategory.halalFood) {
-              icon = Icons.restaurant_rounded;
-              color = Colors.deepOrange;
-            } else if (category == _PlaceCategory.education) {
-              icon = Icons.school_rounded;
-              color = Colors.indigo;
-            }
-
-            fetchedPlaces.add(
-              _IslamicPlace(
-                id: el['id'].toString(),
-                name: name,
-                description:
-                    tags['amenity'] ??
-                    tags['shop'] ??
-                    l10n.islamicPlaceFallback,
-                position: LatLng(lat, lon),
-                icon: icon,
-                color: color,
-                category: category,
-              ),
-            );
-          }
-        }
-
+        final fetchedPlaces = parseOverpassPlacesPayload(
+          response.body,
+          category: category,
+          unknownPlaceName: l10n.unknownPlaceName,
+          fallbackDescription: l10n.islamicPlaceFallback,
+        );
         setState(() {
           _places = fetchedPlaces;
         });
@@ -176,7 +292,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
     }
   }
 
-  void _changeCategory(_PlaceCategory cat) {
+  void _changeCategory(PlaceCategory cat) {
     if (cat == _selectedCategory) return;
     setState(() {
       _selectedCategory = cat;
@@ -441,22 +557,22 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                     context: context,
                     label: l10n.mosques,
                     icon: Icons.mosque_rounded,
-                    selected: _selectedCategory == _PlaceCategory.mosque,
-                    onTap: () => _changeCategory(_PlaceCategory.mosque),
+                    selected: _selectedCategory == PlaceCategory.mosque,
+                    onTap: () => _changeCategory(PlaceCategory.mosque),
                   ),
                   _categoryChip(
                     context: context,
                     label: l10n.halalFood,
                     icon: Icons.restaurant_rounded,
-                    selected: _selectedCategory == _PlaceCategory.halalFood,
-                    onTap: () => _changeCategory(_PlaceCategory.halalFood),
+                    selected: _selectedCategory == PlaceCategory.halalFood,
+                    onTap: () => _changeCategory(PlaceCategory.halalFood),
                   ),
                   _categoryChip(
                     context: context,
                     label: l10n.islamicEducation,
                     icon: Icons.school_rounded,
-                    selected: _selectedCategory == _PlaceCategory.education,
-                    onTap: () => _changeCategory(_PlaceCategory.education),
+                    selected: _selectedCategory == PlaceCategory.education,
+                    onTap: () => _changeCategory(PlaceCategory.education),
                   ),
                 ],
               ),
@@ -578,9 +694,9 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                       child: Row(
                         children: [
                           Text(
-                            _selectedCategory == _PlaceCategory.mosque
+                            _selectedCategory == PlaceCategory.mosque
                                 ? l10n.nearbyMosques
-                                : _selectedCategory == _PlaceCategory.halalFood
+                                : _selectedCategory == PlaceCategory.halalFood
                                 ? l10n.halalFood
                                 : l10n.islamicSchools,
                             style: const TextStyle(
@@ -863,22 +979,22 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
 }
 
 class _PlaceWithDistance {
-  final _IslamicPlace place;
+  final IslamicPlace place;
   final double distanceKm;
 
   const _PlaceWithDistance(this.place, this.distanceKm);
 }
 
-class _IslamicPlace {
+class IslamicPlace {
   final String id;
   final String name;
   final String description;
   final LatLng position;
   final IconData icon;
   final Color color;
-  final _PlaceCategory category;
+  final PlaceCategory category;
 
-  const _IslamicPlace({
+  const IslamicPlace({
     required this.id,
     required this.name,
     required this.description,

@@ -53,6 +53,11 @@ class SupabaseConfig {
     defaultValue: '',
   );
 
+  static const String placesOverpassApiUrl = String.fromEnvironment(
+    'PLACES_OVERPASS_API_URL',
+    defaultValue: 'https://overpass-api.de/api/interpreter',
+  );
+
   static SupabaseClient get client => Supabase.instance.client;
 
   static Future<void> initialize() async {

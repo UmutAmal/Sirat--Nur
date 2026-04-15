@@ -10,7 +10,7 @@ The guiding philosophy of this rewrite was: **"100% Functionality, Zero Placehol
 2. **State Management**: Full migration to **Riverpod** for predictable state, alongside **GoRouter** for declarative navigation.
 3. **The Local Data Revolution**: Because relying heavily on 3rd party APIs creates points of failure, we imported gigabytes of `assets/data/`. `full_quran.json` provides instantaneous Arabic and translated text for all 114 Surahs offline.
 4. **The 189-Language Matrix**: Using a highly optimized Dart translation automation script, we generated 192 localized `.arb` files dynamically translating the English localization map into every supported standard language code, giving the app massive global reach instantly.
-5. **Geospatial Independence**: Google Maps was entirely ripped out due to API Key barriers and replaced with **flutter_map** running completely free and unrestricted OpenStreetMap grids.
+5. **Geospatial Independence**: Google Maps was removed due to API key barriers and replaced with **flutter_map**. Production builds must provide a verified tile source instead of relying on public demo tile servers.
 6. **Permanent Live TV**: YouTube iframe widgets with expiring `videoId` strings were thrown out. We integrated raw channel WebViews, meaning the Mekkah/Madinah live feeds will auto-resolve regardless of the current active broadcast URL.
 7. **The 109-Point "No Dummy" Sweep**: A massive sweep eradicated placeholder UIs. "Buy" buttons on the Paywall actually toggle a Riverpod Premium state saved to SharedPreferences. "Daily Verses" actively read the day of the year to pull from `daily_ayat_data.dart`. The Qibla Offset slider actually mathematically alters the user's GPS magnetometer vector. Audio Voice selectors accurately shift the MP3 CDN endpoint for the `just_audio` player.
 
@@ -53,8 +53,12 @@ Production builds should inject Supabase values explicitly when needed:
 flutter build apk \
   --dart-define=SUPABASE_URL=https://... \
   --dart-define=SUPABASE_ANON_KEY=sb_... \
-  --dart-define=SUPABASE_QURAN_AUDIO_BUCKET=quran-audio
+  --dart-define=SUPABASE_QURAN_AUDIO_BUCKET=quran-audio \
+  --dart-define=PLACES_TILE_URL_TEMPLATE=https://tiles.example.com/{z}/{x}/{y}.png \
+  --dart-define=PLACES_OVERPASS_API_URL=https://overpass-api.de/api/interpreter
 ```
+
+`PLACES_TILE_URL_TEMPLATE` is intentionally empty by default. Without it, the Places screen shows an honest map-unavailable state instead of silently using a public tile server. `PLACES_OVERPASS_API_URL` defaults to the public Overpass endpoint for development, but production can point it at a monitored proxy or approved provider.
 
 ## Quran Audio Sovereignty Workflow
 The runtime prefers Supabase Storage-backed `storage_path` rows over external audio URLs. Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded to the `quran-audio` bucket.

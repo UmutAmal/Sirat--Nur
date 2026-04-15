@@ -5719,3 +5719,43 @@
 
 ### Sonraki Adım
 - Yeni döngüde Places/Overpass parsing ve map data hata yüzeyi taranacak; özellikle beklenmeyen JSON tiplerinin kullanıcıya yanlış veya ham hata olarak yansıma ihtimali skorlanacak.
+
+## 2026-04-15 TUR-148 — Harden Places Overpass Data Pipeline
+
+### Yapılan İşlem
+- `places_map_page.dart` içinde harita kategori enum'u ve place modeli testlenebilir public tipler olarak düzenlendi.
+- Overpass query üretimi `buildOverpassPlacesQuery` helper'ına taşındı; cami, helal gıda ve İslami eğitim kategorileri tek sözleşmeden üretiliyor.
+- Overpass endpoint çözümü `resolvePlacesOverpassEndpoint` helper'ına taşındı ve URL doğrulaması eklendi.
+- `SupabaseConfig` içine `PLACES_OVERPASS_API_URL` dart-define desteği eklendi; varsayılan development endpoint mevcut Overpass API.
+- Overpass JSON parse akışı `parseOverpassPlacesPayload` helper'ına taşındı; malformed row'lar atlanıyor, malformed response envelope ise kontrollü `FormatException` ile mevcut localized network fallback'e düşüyor.
+- `places_map_page_test.dart` malformed coordinate, center coordinate, tag fallback, endpoint doğrulama ve kategori query sözleşmesini kapsayacak şekilde genişletildi.
+- `README.md` içindeki eski "unrestricted OpenStreetMap grids" ifadesi düzeltildi; üretimde verified tile source ve Overpass proxy/provider konfigürasyonu belgelendi.
+
+### Neden Yapıldı
+- Global risk taramasında `places_map_page.dart:116-147` aralığında Overpass response parse işleminin doğrudan `json.decode`, `data['elements'] as List`, dynamic tag ve dynamic coordinate kullanımına bağlı olduğu görüldü.
+- Aynı akış `https://overpass-api.de/api/interpreter` endpoint'ine doğrudan bağlıydı; ileride üretimde monitored proxy veya onaylı provider'a geçiş için build-time konfigürasyon yoktu.
+- README hâlâ harita katmanını "free and unrestricted" olarak anlatıyordu; bu, public tile server riskini kapatan önceki davranışla çelişiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\README.md`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Places ekranı tek bozuk Overpass satırı yüzünden tüm geçerli sonuçları kaybetmez.
+- Overpass response şeması bozulursa kullanıcı raw exception görmez; mevcut localized fallback korunur.
+- Places API endpoint'i artık production build'de `PLACES_OVERPASS_API_URL` ile approved provider/proxy'ye yönlendirilebilir.
+- Operasyon dokümantasyonu public tile/API bağımlılıklarını daha dürüst ve uygulanabilir anlatır.
+
+### Test Sonucu
+- `flutter test test\features\places\places_map_page_test.dart --reporter compact` PASS (`5/5`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`302/302`)
+
+### Risk Değişimi
+- Places Overpass parse/config hattında malformed data ve public endpoint drift riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde global taramadaki raw debug/error yüzeyleri ve dependency freshness çıktısı skorlanacak; ilk olarak kullanıcıya açık hata mesajı veya üretim davranışı etkileyen yüzeyler kapatılacak.
