@@ -1,12 +1,16 @@
 import 'dart:io';
 
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/features/quran/providers/bundled_quran_provider.dart';
 
 const _verifiedSource = 'Quran.com API';
 const _verifiedAt = '2026-04-15T00:00:00Z';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+
   group('parseBundledQuranRows', () {
     test('maps bundled quran payload into typed rows', () {
       final rows = parseBundledQuranRows('''
@@ -298,5 +302,31 @@ void main() {
 
       expect(rows.single['name'], 'الفاتحة');
     });
+  });
+
+  group('bundledQuranProvider', () {
+    test(
+      'returns the verified bundled asset when Supabase client is unavailable',
+      () async {
+        final container = ProviderContainer(
+          overrides: [
+            supabaseClientProvider.overrideWith(
+              (_) => throw StateError('supabase_unavailable'),
+            ),
+          ],
+        );
+        addTearDown(container.dispose);
+
+        final rows = await container.read(bundledQuranProvider.future);
+        final firstSurah = findBundledSurahData(rows, 1);
+        final lastSurah = findBundledSurahData(rows, expectedQuranSurahCount);
+
+        expect(rows, hasLength(expectedQuranSurahCount));
+        expect(firstSurah, isNotNull);
+        expect(lastSurah, isNotNull);
+        expect(firstSurah!['ayahs'], isNotEmpty);
+        expect(lastSurah!['ayahs'], isNotEmpty);
+      },
+    );
   });
 }

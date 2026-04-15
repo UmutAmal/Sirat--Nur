@@ -304,11 +304,12 @@ final bundledQuranProvider = FutureProvider<List<Map<String, dynamic>>>((
   ref,
 ) async {
   final bundledRows = await loadBundledQuranRows(rootBundle);
-  final supabase = ref.read(supabaseClientProvider);
+  final supabase = readOptionalSupabaseClient(ref);
 
   return resolveQuranRows(
-    loadCloudRows: () =>
-        loadCloudQuranRows(supabase: supabase, bundledRows: bundledRows),
+    loadCloudRows: () => supabase == null
+        ? Future<List<Map<String, dynamic>>?>.value(null)
+        : loadCloudQuranRows(supabase: supabase, bundledRows: bundledRows),
     loadBundledRows: () async => bundledRows,
   );
 });

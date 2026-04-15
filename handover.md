@@ -6294,3 +6294,36 @@
 
 ### Sonraki Adım
 - Sonraki dongude cloud-only provider client-unavailable davranisi ve ekranlarda raw exception sızıntısı taranacak; ozellikle `liveTvProvider`, `educationCategoriesProvider`, `educationTopicsProvider` hata state'lerinin lokalize ve kullaniciya durust kalmasi icin provider/UI test guard'lari kontrol edilecek.
+
+## 2026-04-15 TUR-163 — Preserve Bundled Quran When Supabase Client Is Missing
+
+### Yapılan İşlem
+- `bundledQuranProvider`, Supabase client'i dogrudan `ref.read(supabaseClientProvider)` ile okumak yerine `readOptionalSupabaseClient(ref)` kullanacak sekilde guncellendi.
+- Supabase client yoksa `loadCloudRows` bilincli olarak `null` donuyor ve mevcut `resolveQuranRows` zinciri dogrulanmis bundled Kur'an asset'ine dusuyor.
+- `bundled_quran_provider_test.dart` icine provider seviyesinde Supabase client unavailable test eklendi; test gercek `assets/data/full_quran.json` dosyasini okuyup 114 surelik bundled payload'in dondugunu dogruluyor.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\providers\bundled_quran_provider.dart:307` onceki akista Supabase client edinme hatasi, `resolveQuranRows` fallback zincirine ulasmadan provider'i kirabiliyordu.
+- Bu durum Quran ana ekran, sure okuma ve cuz okuma yuzeylerinde dogrulanmis bundled asset mevcut olsa bile kullaniciya hata gosterebilirdi.
+- Kök sebep, cloud client edinme adiminin Kur'an bundled fallback zincirinin disinda kalmasiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\providers\bundled_quran_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\providers\bundled_quran_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Supabase init/client hatasinda Kur'an icerigi sahte uretilmez; mevcut dogrulanmis bundled Kur'an asset'i kullanilir.
+- Core Quran akisi offline/konfig hatasi senaryosunda daha dayanikli hale geldi.
+- Provider seviyesinde regresyon testi, client edinme hatasinin fallback'i tekrar bypass etmesini engeller.
+
+### Test Sonucu
+- `flutter test test\features\quran\providers\bundled_quran_provider_test.dart` PASS (`12/12`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`336/336`)
+
+### Risk Değişimi
+- Supabase client edinme hatasinin Quran bundled fallback zincirini bypass etme riski: `16/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki dongude `liveTvProvider`, `educationCategoriesProvider` ve `educationTopicsProvider` gibi gercek cloud-only provider'lar icin client-unavailable durumunun UI'da lokalize hata state'iyle kaldigini ve raw exception sızdırmadigini test guard'lariyla dogrula.
