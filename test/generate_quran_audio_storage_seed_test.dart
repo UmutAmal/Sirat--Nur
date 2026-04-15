@@ -22,6 +22,10 @@ void main() {
     test('parseMirroredAudioManifest reads mirrored files safely', () {
       final files = parseMirroredAudioManifest('''
 {
+  "requested": 1,
+  "downloaded": 1,
+  "skipped": 0,
+  "failed": [],
   "files": [
     {
       "surah_number": 1,
@@ -37,6 +41,56 @@ void main() {
       expect(files, hasLength(1));
       expect(files.first.surahNumber, 1);
       expect(files.first.reciterId, 'alafasy');
+    });
+
+    test('rejects manifests with failed audio downloads', () {
+      expect(
+        () => parseMirroredAudioManifest('''
+{
+  "requested": 1,
+  "downloaded": 0,
+  "skipped": 0,
+  "failed": ["alafasy/001.mp3: HTTP 404"],
+  "files": []
+}
+'''),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('failed audio downloads'),
+          ),
+        ),
+      );
+    });
+
+    test('rejects manifests missing mirrored file rows', () {
+      expect(
+        () => parseMirroredAudioManifest('''
+{
+  "requested": 2,
+  "downloaded": 1,
+  "skipped": 1,
+  "failed": [],
+  "files": [
+    {
+      "surah_number": 1,
+      "reciter": "alafasy",
+      "source": "https://api.quran.com/api/v4/chapter_recitations/7",
+      "verified_at": "2026-04-08T19:00:42.228933Z",
+      "local_path": "build/verified_quran_audio/alafasy/001.mp3"
+    }
+  ]
+}
+'''),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('Manifest is incomplete'),
+          ),
+        ),
+      );
     });
 
     test('buildQuranAudioStorageSeedSql creates storage-backed upserts', () {

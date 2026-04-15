@@ -56,6 +56,7 @@ List<MirroredAudioFile> parseMirroredAudioManifest(String manifestJson) {
   if (files is! List) {
     throw const FormatException('Manifest must contain a files array.');
   }
+  _validateMirrorManifestSummary(decoded, mirroredFileCount: files.length);
 
   return List.unmodifiable(
     files.map((item) {
@@ -91,6 +92,43 @@ List<MirroredAudioFile> parseMirroredAudioManifest(String manifestJson) {
       );
     }),
   );
+}
+
+void _validateMirrorManifestSummary(
+  Map<String, dynamic> manifest, {
+  required int mirroredFileCount,
+}) {
+  final requested = _requiredManifestCount(manifest, 'requested');
+  final downloaded = _requiredManifestCount(manifest, 'downloaded');
+  final skipped = _requiredManifestCount(manifest, 'skipped');
+  final failed = manifest['failed'];
+  if (failed is! List) {
+    throw const FormatException('Manifest failed field must be an array.');
+  }
+  if (failed.isNotEmpty) {
+    throw FormatException(
+      'Manifest contains ${failed.length} failed audio downloads.',
+    );
+  }
+  if (downloaded + skipped != requested) {
+    throw FormatException(
+      'Manifest summary mismatch: downloaded + skipped must equal requested.',
+    );
+  }
+  if (mirroredFileCount != requested) {
+    throw FormatException(
+      'Manifest is incomplete: requested $requested files but contains '
+      '$mirroredFileCount mirrored file rows.',
+    );
+  }
+}
+
+int _requiredManifestCount(Map<String, dynamic> manifest, String key) {
+  final value = manifest[key];
+  if (value is! int || value < 0) {
+    throw FormatException('Manifest $key must be a non-negative integer.');
+  }
+  return value;
 }
 
 String buildQuranAudioStorageSeedSql(

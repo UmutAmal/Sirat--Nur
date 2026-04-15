@@ -4754,3 +4754,37 @@
 
 ### Sonraki Adım
 - Yeni döngüde Kur'an ses seed ve storage seed bütünlüğü incelenecek; external URL seed'lerinin storage mirror/import akışıyla doğrulanıp doğrulanmadığı kanıtlanacak.
+
+## 2026-04-15 TUR-122 — Reject Incomplete Quran Audio Storage Mirrors
+
+### Yapılan İşlem
+- `tool/generate_quran_audio_storage_seed.dart` mirror manifest özetini zorunlu doğrulayacak şekilde sertleştirildi.
+- Manifestte `failed` listesi boş değilse, `downloaded + skipped != requested` ise veya `files.length != requested` ise storage-backed SQL üretimi durduruluyor.
+- `test/generate_quran_audio_storage_seed_test.dart` başarısız indirme ve eksik mirrored row senaryolarını regresyon testiyle kilitledi.
+
+### Neden Yapıldı
+- `tool/generate_quran_audio_storage_seed.dart:56` önce yalnızca `files` dizisini okuyordu.
+- Bu durumda download aracı bazı sureleri indirememiş olsa bile manifestteki kısmi `files` listesiyle storage seed üretilebilirdi.
+- Gerçek ses dosyası Storage'a alınmadan veritabanına storage yolu yazmak false-success riski doğurur; bu özellikle Kur'an ses zincirinde kabul edilemez.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Eksik veya başarısız mirror manifestleri artık storage seed SQL üretemez.
+- Tamamlanmamış ses indirme akışı veritabanında sahte owned-audio durumuna dönüşmez.
+- Storage import sürecinde "önce gerçek dosya, sonra DB seed" güvenliği güçlendi.
+
+### Test Sonucu
+- `flutter test test\generate_quran_audio_storage_seed_test.dart --reporter compact` PASS (`6/6`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`259/259`)
+- `git diff --check` PASS (sadece CRLF uyarıları)
+
+### Risk Değişimi
+- Eksik Kur'an audio mirror manifestinden storage seed üretme false-success riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde `tool/download_verified_quran_audio.dart` failure çıktıları incelenecek; raw hata metni/partial manifest davranışı ve import operatör güvenliği taranacak.
