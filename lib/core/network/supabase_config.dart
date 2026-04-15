@@ -28,6 +28,11 @@ class SupabaseConfig {
     defaultValue: 'quran-audio',
   );
 
+  static const String sukunAudioBucket = String.fromEnvironment(
+    'SUPABASE_SUKUN_AUDIO_BUCKET',
+    defaultValue: 'audio-sukun',
+  );
+
   static const String placesTileUrlTemplate = String.fromEnvironment(
     'PLACES_TILE_URL_TEMPLATE',
     defaultValue: '',

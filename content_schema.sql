@@ -139,8 +139,19 @@ values ('quran-audio', 'quran-audio', true)
 on conflict (id) do update
 set public = excluded.public;
 
+insert into storage.buckets (id, name, public)
+values ('audio-sukun', 'audio-sukun', true)
+on conflict (id) do update
+set public = excluded.public;
+
 drop policy if exists "Public read quran audio bucket" on storage.objects;
 create policy "Public read quran audio bucket"
 on storage.objects
 for select
 using (bucket_id = 'quran-audio');
+
+drop policy if exists "Public read sukun audio bucket" on storage.objects;
+create policy "Public read sukun audio bucket"
+on storage.objects
+for select
+using (bucket_id = 'audio-sukun');

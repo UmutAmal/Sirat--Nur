@@ -4,7 +4,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/constants/asma_ul_husna_data.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
+import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
+import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -179,7 +181,10 @@ Map<String, String> resolveCloudSukunSources(List<Map<String, dynamic>> rows) {
       continue;
     }
 
-    final url = _readFirstAyatValue(row, ['url']);
+    final url = resolvePlayableCloudAudioUrl(
+      row,
+      bucketName: SupabaseConfig.sukunAudioBucket,
+    );
     if (url == null) {
       continue;
     }

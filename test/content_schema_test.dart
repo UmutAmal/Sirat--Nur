@@ -41,6 +41,12 @@ void main() {
         expect(
           schema,
           contains(
+            "insert into storage.buckets (id, name, public)\nvalues ('audio-sukun', 'audio-sukun', true)",
+          ),
+        );
+        expect(
+          schema,
+          contains(
             'create unique index if not exists audio_files_quran_surah_unique_idx',
           ),
         );
@@ -81,6 +87,11 @@ void main() {
         contains('create policy "Public read quran audio bucket"'),
       );
       expect(schema, contains("using (bucket_id = 'quran-audio');"));
+      expect(
+        schema,
+        contains('create policy "Public read sukun audio bucket"'),
+      );
+      expect(schema, contains("using (bucket_id = 'audio-sukun');"));
     });
   });
 }

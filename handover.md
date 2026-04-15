@@ -5562,3 +5562,43 @@
 ### Sonraki Adım
 - Yeni döngüde l10n fallback sayıları yeniden ölçülecek; çeviri aracıyla güvenli azaltılabilecek kalan kullanıcı-facing İngilizce fallback kümeleri seçilecek.
 - Dini içerik/audio Supabase hattında ise storage-backed Quran audio dışında kalan dua/sukun/adhan içeriklerinin kaynak ve storage bağı yeniden skorlanacak.
+
+## 2026-04-15 TUR-144 — Prefer Supabase Storage for Sukun Audio
+
+### Yapılan İşlem
+- `SupabaseConfig` içine `SUPABASE_SUKUN_AUDIO_BUCKET` dart-define desteği eklendi; varsayılan bucket `audio-sukun`.
+- `resolvePlayableCloudAudioUrl` helper'ı bucket parametresi alacak şekilde genişletildi; Quran audio için mevcut `quran-audio` varsayılanı korundu.
+- `resolveCloudSukunSources` artık `audio_files.storage_path` doluysa dış `url` yerine Supabase Storage public URL'i üretip onu kullanıyor.
+- `content_schema.sql` içine `audio-sukun` storage bucket bootstrap satırı ve public read RLS policy'si eklendi.
+- `sukun_audio_sources_provider_test.dart` storage-backed sukun satırının external URL yerine Supabase Storage URL'ine çözüldüğünü doğruluyor.
+- `content_schema_test.dart` `audio-sukun` bucket ve policy sözleşmesini sabitliyor.
+
+### Neden Yapıldı
+- Audio taramasında Quran audio hattının storage-backed çalıştığı, fakat sukun/nature seslerinin `url` alanına doğrudan bağlı kaldığı görüldü.
+- Bu, external CDN linki kapanırsa sukun seslerinin Supabase Storage'daki sahipli kopya varken bile dış linke bağımlı kalması riskini doğuruyordu.
+- Kök sebep, sukun provider'ın `storage_path` alanını hiç playable URL çözümüne sokmamasıydı.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\providers\supabase_providers.dart`
+- `A:\Way of Allah\sirat_i_nur\content_schema.sql`
+- `A:\Way of Allah\sirat_i_nur\test\sukun_audio_sources_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Sukun/nature audio satırları artık doğrulanmış `source` + `verified_at` yanında `storage_path` verdiğinde bizim Supabase Storage bucket'ımızdan oynatılır.
+- External `url` alanı sadece storage path yoksa fallback olarak kalır; bu davranış Quran audio ile tutarlı hale geldi.
+- Schema bootstrap `audio-sukun` bucket'ının public read policy ile kurulmasını garanti eder.
+
+### Test Sonucu
+- `flutter test test\sukun_audio_sources_provider_test.dart test\offline_audio_service_test.dart test\content_schema_test.dart --reporter compact` PASS (`12/12`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`294/294`)
+
+### Risk Değişimi
+- Sukun/nature audio'nun external URL kapanınca Supabase Storage kopyasını tercih etmemesi riski: `12/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde adhan ve dua audio bucket/storage_path desteği taranacak; özellikle `duas.audio_url` ve adhan asset/static fallback hattının Supabase Storage sahipli kopyalara bağlanma durumu skorlanacak.

@@ -29,10 +29,13 @@ class OfflineDownloadBatchResult {
   bool get allSucceeded => !wasCanceled && succeededSurahs == totalSurahs;
 }
 
-String? resolvePlayableCloudAudioUrl(Map<String, dynamic> row) {
+String? resolvePlayableCloudAudioUrl(
+  Map<String, dynamic> row, {
+  String bucketName = SupabaseConfig.quranAudioBucket,
+}) {
   final storagePath = row['storage_path']?.toString().trim();
   if (storagePath != null && storagePath.isNotEmpty) {
-    return buildSupabaseStoragePublicUrl(storagePath);
+    return buildSupabaseStoragePublicUrl(storagePath, bucketName: bucketName);
   }
 
   for (final key in const ['url']) {

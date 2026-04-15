@@ -27,6 +27,24 @@ void main() {
       });
     });
 
+    test('prefers Supabase storage-backed sukun rows over external urls', () {
+      final resolved = resolveCloudSukunSources([
+        {
+          'type': 'sukun',
+          'title': 'Rain of Mercy',
+          'storage_path': 'audio-sukun/rain.mp3',
+          'url': 'https://cdn.example.com/audio/rain.mp3',
+          'source': 'verified audio catalog',
+          'verified_at': '2026-04-15T00:00:00Z',
+        },
+      ]);
+
+      expect(resolved, const {
+        'rain':
+            'https://amevotnudldbbwogtrtw.supabase.co/storage/v1/object/public/audio-sukun/rain.mp3',
+      });
+    });
+
     test('ignores rows without supported types or playable urls', () {
       final resolved = resolveCloudSukunSources([
         {
