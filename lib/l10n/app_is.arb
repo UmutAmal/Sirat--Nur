@@ -764,5 +764,7 @@
   "quranLoadFailed": "Ekki var hægt að hlaða efni Kóransins. Vinsamlegast reyndu aftur.",
   "locationDetectionFailed": "Gat ekki greint staðsetningu þína. Vinsamlegast veldu borg handvirkt eða reyndu aftur.",
   "qiblaLocationRequiredTitle": "Staðsetning krafist fyrir Qibla",
-  "qiblaLocationRequiredBody": "Stilltu raunverulega staðsetningu þína áður en þú notar Qibla áttavitann svo hægt sé að reikna stefnuna nákvæmlega."
+  "qiblaLocationRequiredBody": "Stilltu raunverulega staðsetningu þína áður en þú notar Qibla áttavitann svo hægt sé að reikna stefnuna nákvæmlega.",
+  "placesDataSourceUnavailableTitle": "Gögn um staði eru ekki tiltæk",
+  "placesDataSourceUnavailableBody": "Staðfestur gagnaendapunktur er ekki stilltur fyrir þessa byggingu ennþá. Stilltu PLACES_OVERPASS_API_URL á samþykktan umboðsmann eða þjónustuaðila áður en þú kveikir á nærliggjandi leit."
 }

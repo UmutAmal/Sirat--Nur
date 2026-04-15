@@ -764,5 +764,7 @@
   "quranLoadFailed": "Impossibile caricare il contenuto del Corano. Per favore riprova.",
   "locationDetectionFailed": "Impossibile rilevare la tua posizione. Scegli una città manualmente o riprova.",
   "qiblaLocationRequiredTitle": "Posizione richiesta per Qibla",
-  "qiblaLocationRequiredBody": "Imposta la tua posizione effettiva prima di utilizzare la bussola Qibla in modo che la direzione possa essere calcolata con precisione."
+  "qiblaLocationRequiredBody": "Imposta la tua posizione effettiva prima di utilizzare la bussola Qibla in modo che la direzione possa essere calcolata con precisione.",
+  "placesDataSourceUnavailableTitle": "Dati sui luoghi non disponibili",
+  "placesDataSourceUnavailableBody": "Un endpoint dati dei luoghi verificati non è ancora configurato per questa build. Imposta PLACES_OVERPASS_API_URL su un proxy o provider approvato prima di abilitare la ricerca nelle vicinanze."
 }

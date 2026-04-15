@@ -6595,3 +6595,47 @@
 
 ### Sonraki Adım
 - Sonraki dongude public/external servis bagimliliklari taramasi devam edecek; ozellikle Overpass varsayilan endpoint'in operasyonel sureklilik riski ve Supabase proxy/edge-function gereksinimi kanitla ayrilacak.
+
+## 2026-04-15 TUR-171 — Remove Public Overpass Default Dependency
+
+### Yapılan İşlem
+- `PLACES_OVERPASS_API_URL` default degeri bos yapildi; uygulama artik define verilmeden public Overpass servisine cikmiyor.
+- Places veri kaynagi icin `PlacesDataAvailability` ve `canFetchPlaces` helper'lari eklendi.
+- Endpoint yoksa veya HTTP(S) degilse Places fetch zinciri baslamadan duruyor; UI lokalize ve durust "mekan verisi kullanilamiyor" durumunu gosteriyor.
+- Yeni `placesDataSourceUnavailableTitle` ve `placesDataSourceUnavailableBody` anahtarlari 196 ARB dosyasina eklendi, `flutter gen-l10n` ile generated API yenilendi.
+- Uzun localized empty-state metinleri icin bottom sheet bos durum UI'i scroll toleransli hale getirildi.
+- README production konfigurasyon ornegi public Overpass yerine onayli proxy/provider yonlendirmesine cekildi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart:56` onceki default `https://overpass-api.de/api/interpreter` idi.
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:273` init akisi ve `:388` anchor sync akisi kayitli konum varsa endpoint explicit olmadan fetch baslatabiliyordu.
+- `A:\Way of Allah\sirat_i_nur\README.md:61` public Overpass default'unu development icin normal kabul ediyordu; bu, production sureklilik ve servis politikasi acisindan gizli dis bagimlilik yaratiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\README.md`
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Public Overpass endpoint artik uygulamanin sessiz varsayilani degil; yakin mekan aramasi ancak operator acikca onayli HTTP(S) endpoint verdiginde baslar.
+- Konum var ama endpoint yoksa arka planda false network error uretmek yerine veri kaynagi eksigi lokalize olarak anlatilir.
+- Yeni widget testi, endpoint yokken `Network error. Please try again.` gosterilmedigini ve durust data-source state'in gorundugunu dogrular.
+- `rg -n "overpass-api\.de|tile\.openstreetmap\.org" README.md lib test tool` temiz dondu; dogrudan public harita/Overpass bagimliligi kalmadi.
+
+### Test Sonucu
+- `flutter test test\features\places\places_map_page_test.dart test\arb_ui_localization_test.dart test\translate_arb_keys_test.dart` PASS (`45/45`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`344/344`)
+
+### Risk Değişimi
+- Places akisini public Overpass varsayilanina sessiz baglama riski: `16/25 -> 1/25`
+- Uzun localized Places empty-state metinlerinde bottom sheet overflow riski: `9/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude kalan dis URL ve cloud data provenance riskleri taranacak; ozellikle Supabase seed/storage ses kaynaklarinda external URL kaldiysa runtime'in Storage-backed kaynagi zorunlu tutup tutmadigi tekrar kanitlanacak.

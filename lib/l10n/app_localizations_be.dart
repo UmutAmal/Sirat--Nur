@@ -1370,6 +1370,13 @@ class AppLocalizationsBe extends AppLocalizations {
       'Правераная крыніца пліткі карты яшчэ не настроена для гэтай зборкі. Месцы паблізу могуць загружацца з вашага захаванага месцазнаходжання.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Даныя аб месцах недаступныя';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Правераная канчатковая кропка даных аб месцах яшчэ не настроена для гэтай зборкі. Усталюйце PLACES_OVERPASS_API_URL на зацверджаны проксі або пастаўшчыка, перш чым уключыць пошук паблізу.';
+
+  @override
   String get unknownPlaceName => 'Невядомае імя';
 
   @override

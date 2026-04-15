@@ -1361,6 +1361,13 @@ class AppLocalizationsLo extends AppLocalizations {
       'ແຫຼ່ງທີ່ມາຂອງກະເບື້ອງແຜນທີ່ທີ່ຢືນຢັນແລ້ວຍັງບໍ່ທັນໄດ້ກຳນົດຄ່າສຳລັບການສ້າງນີ້ເທື່ອ. ສະຖານທີ່ໃກ້ຄຽງຍັງສາມາດໂຫລດຈາກສະຖານທີ່ທີ່ທ່ານບັນທຶກໄວ້.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'ບໍ່ມີຂໍ້ມູນສະຖານທີ່';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'ຈຸດສິ້ນສຸດຂໍ້ມູນສະຖານທີ່ທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ໄດ້ຖືກຕັ້ງຄ່າສໍາລັບການກໍ່ສ້າງນີ້ເທື່ອ. ຕັ້ງ PLACES_OVERPASS_API_URL ເປັນພຣັອກຊີ ຫຼືຜູ້ໃຫ້ບໍລິການທີ່ໄດ້ຮັບອະນຸມັດກ່ອນທີ່ຈະເປີດໃຊ້ການຄົ້ນຫາທີ່ຢູ່ໃກ້ຄຽງ.';
+
+  @override
   String get unknownPlaceName => 'ຊື່ທີ່ບໍ່ຮູ້ຈັກ';
 
   @override

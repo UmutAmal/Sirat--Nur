@@ -764,5 +764,7 @@
   "quranLoadFailed": "קווראַן אינהאַלט קען נישט זיין לאָודיד. ביטע פּרוּווט ווידער.",
   "locationDetectionFailed": "קען נישט דעטעקט דיין אָרט. ביטע קלייַבן אַ שטאָט מאַניואַלי אָדער פּרובירן ווידער.",
   "qiblaLocationRequiredTitle": "אָרט פארלאנגט פֿאַר קיבלאַ",
-  "qiblaLocationRequiredBody": "שטעלן דיין פאַקטיש אָרט איידער ניצן די Qibla קאָמפּאַס אַזוי די ריכטונג קענען זיין קאַלקיאַלייטיד אַקיעראַטלי."
+  "qiblaLocationRequiredBody": "שטעלן דיין פאַקטיש אָרט איידער ניצן די Qibla קאָמפּאַס אַזוי די ריכטונג קענען זיין קאַלקיאַלייטיד אַקיעראַטלי.",
+  "placesDataSourceUnavailableTitle": "Places data unavailable",
+  "placesDataSourceUnavailableBody": "א וועראַפייד ערטער דאַטן ענדפּוינט איז נישט קאַנפיגיערד פֿאַר דעם בויען נאָך. שטעלן PLACES_OVERPASS_API_URL צו אַ באוויליקט פראקסי אָדער שפּייַזער איידער איר געבן נירביי זוכן."
 }

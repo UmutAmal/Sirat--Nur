@@ -1367,6 +1367,14 @@ class AppLocalizationsNl extends AppLocalizations {
       'Er is nog geen geverifieerde kaarttegelbron geconfigureerd voor deze build. Plaatsen in de buurt kunnen nog steeds worden geladen vanaf uw opgeslagen locatie.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Plaatsgegevens niet beschikbaar';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Er is nog geen geverifieerd gegevenseindpunt voor plaatsen geconfigureerd voor deze build. Stel PLACES_OVERPASS_API_URL in op een goedgekeurde proxy of provider voordat u zoeken in de buurt inschakelt.';
+
+  @override
   String get unknownPlaceName => 'Onbekende naam';
 
   @override

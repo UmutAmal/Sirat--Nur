@@ -1365,6 +1365,13 @@ class AppLocalizationsSw extends AppLocalizations {
       'Chanzo cha kigae cha ramani kilichothibitishwa bado hakijasanidiwa kwa muundo huu. Maeneo ya karibu bado yanaweza kupakia kutoka eneo lako lililohifadhiwa.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Data ya maeneo haipatikani';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Mwisho wa data ya maeneo yaliyothibitishwa bado haujasanidiwa kwa muundo huu. Weka PLACES_OVERPASS_API_URL iwe proksi au mtoa huduma aliyeidhinishwa kabla ya kuwezesha utafutaji ulio karibu.';
+
+  @override
   String get unknownPlaceName => 'Jina lisilojulikana';
 
   @override

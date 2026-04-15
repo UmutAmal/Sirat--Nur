@@ -764,5 +764,7 @@
   "quranLoadFailed": "Quran content a load thei lo. Khawngaihin han lo try leh teh.",
   "locationDetectionFailed": "I awmna hmun a detect thei lo. Khawpui pakhat chu manual-in thlang la, a nih loh leh han tum leh rawh.",
   "qiblaLocationRequiredTitle": "Qibla tan hmun mamawh a ni",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "placesDataSourceUnavailableTitle": "Data awm lohna hmunah a dah",
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
 }

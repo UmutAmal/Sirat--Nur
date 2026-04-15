@@ -764,5 +764,7 @@
   "quranLoadFailed": "कुरान सामग्री लोड् कर्तुं न शक्यते स्म। कृपया पुनः प्रयासं कुर्वन्तु।",
   "locationDetectionFailed": "भवतः स्थानं ज्ञातुं न शक्तवान्। कृपया हस्तचलितरूपेण नगरं चिनुत अथवा पुनः प्रयासं कुर्वन्तु।",
   "qiblaLocationRequiredTitle": "किब्ला कृते स्थानं आवश्यकम्",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "placesDataSourceUnavailableTitle": "दत्तांशं अनुपलब्धं स्थापयति",
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
 }

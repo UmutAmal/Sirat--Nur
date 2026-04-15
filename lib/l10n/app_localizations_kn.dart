@@ -1364,6 +1364,13 @@ class AppLocalizationsKn extends AppLocalizations {
       'ಈ ನಿರ್ಮಾಣಕ್ಕಾಗಿ ಪರಿಶೀಲಿಸಿದ ನಕ್ಷೆಯ ಟೈಲ್ ಮೂಲವನ್ನು ಇನ್ನೂ ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ. ನೀವು ಉಳಿಸಿದ ಸ್ಥಳದಿಂದ ಸಮೀಪದ ಸ್ಥಳಗಳು ಇನ್ನೂ ಲೋಡ್ ಆಗಬಹುದು.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'ಸ್ಥಳಗಳ ಡೇಟಾ ಲಭ್ಯವಿಲ್ಲ';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'ಈ ಬಿಲ್ಡ್‌ಗಾಗಿ ಪರಿಶೀಲಿಸಿದ ಸ್ಥಳಗಳ ಡೇಟಾ ಎಂಡ್‌ಪಾಯಿಂಟ್ ಅನ್ನು ಇನ್ನೂ ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ. ಹತ್ತಿರದ ಹುಡುಕಾಟವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುವ ಮೊದಲು PLACES_OVERPASS_API_URL ಅನ್ನು ಅನುಮೋದಿತ ಪ್ರಾಕ್ಸಿ ಅಥವಾ ಪೂರೈಕೆದಾರರಿಗೆ ಹೊಂದಿಸಿ.';
+
+  @override
   String get unknownPlaceName => 'ಅಪರಿಚಿತ ಹೆಸರು';
 
   @override

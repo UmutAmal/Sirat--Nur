@@ -764,5 +764,7 @@
   "quranLoadFailed": "eusi Quran teu bisa dimuat. Mangga cobian deui.",
   "locationDetectionFailed": "Teu bisa ngadeteksi lokasi anjeun. Mangga pilih kota sacara manual atawa cobian deui.",
   "qiblaLocationRequiredTitle": "Lokasi diperlukeun pikeun Kiblat",
-  "qiblaLocationRequiredBody": "Setel lokasi saleresna anjeun sateuacan nganggo kompas kiblat supados arahna tiasa diitung sacara akurat."
+  "qiblaLocationRequiredBody": "Setel lokasi saleresna anjeun sateuacan nganggo kompas kiblat supados arahna tiasa diitung sacara akurat.",
+  "placesDataSourceUnavailableTitle": "Data tempat teu sadia",
+  "placesDataSourceUnavailableBody": "Titik data tempat anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Setel PLACES_OVERPASS_API_URL ka proksi atanapi panyadia anu disatujuan sateuacan ngaktipkeun milarian caket dieu."
 }

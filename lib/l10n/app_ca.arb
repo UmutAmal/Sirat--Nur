@@ -764,5 +764,7 @@
   "quranLoadFailed": "No s'ha pogut carregar el contingut de l'Alcorà. Si us plau, torna-ho a provar.",
   "locationDetectionFailed": "No s'ha pogut detectar la teva ubicació. Trieu una ciutat manualment o torneu-ho a provar.",
   "qiblaLocationRequiredTitle": "Ubicació necessària per a la Qibla",
-  "qiblaLocationRequiredBody": "Establiu la vostra ubicació real abans d'utilitzar la brúixola Qibla perquè la direcció es pugui calcular amb precisió."
+  "qiblaLocationRequiredBody": "Establiu la vostra ubicació real abans d'utilitzar la brúixola Qibla perquè la direcció es pugui calcular amb precisió.",
+  "placesDataSourceUnavailableTitle": "Les dades de llocs no estan disponibles",
+  "placesDataSourceUnavailableBody": "Un punt final de dades de llocs verificats encara no està configurat per a aquesta compilació. Estableix PLACES_OVERPASS_API_URL en un servidor intermediari o proveïdor aprovat abans d'activar la cerca a prop."
 }

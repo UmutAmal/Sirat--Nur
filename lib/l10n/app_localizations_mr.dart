@@ -1362,6 +1362,13 @@ class AppLocalizationsMr extends AppLocalizations {
       'या बिल्डसाठी सत्यापित नकाशा टाइल स्रोत अद्याप कॉन्फिगर केलेला नाही. तुमच्या सेव्ह केलेल्या स्थानावरून जवळपासची ठिकाणे अजूनही लोड होऊ शकतात.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'ठिकाणे डेटा अनुपलब्ध';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'या बिल्डसाठी सत्यापित ठिकाणे डेटा एंडपॉइंट अद्याप कॉन्फिगर केलेला नाही. जवळपासचा शोध सक्षम करण्यापूर्वी PLACES_OVERPASS_API_URL मंजूर प्रॉक्सी किंवा प्रदात्यावर सेट करा.';
+
+  @override
   String get unknownPlaceName => 'अज्ञात नाव';
 
   @override

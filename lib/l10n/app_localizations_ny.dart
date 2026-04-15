@@ -1363,6 +1363,13 @@ class AppLocalizationsNy extends AppLocalizations {
       'Malo otsimikizika a matailosi amapu sanakhazikitsidwebe kuti apangidwe pano. Malo apafupi atha kutsegulabe kuchokera komwe mwasungidwa.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Deta yamalo palibe';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Malo otsimikizika omaliza sanakhazikitsidwe kuti apangidwe pano. Khazikitsani PLACES_OVERPASS_API_URL kukhala wovomerezeka kapena wopereka chithandizo musanayatse kusaka pafupi.';
+
+  @override
   String get unknownPlaceName => 'Dzina Losadziwika';
 
   @override

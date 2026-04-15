@@ -764,5 +764,7 @@
   "quranLoadFailed": "Kaore i taea te utaina nga ihirangi Quran. Me ngana ano.",
   "locationDetectionFailed": "Kaore i kitea to waahi. Kōwhiria ā-ringatia tētahi tāone ka ngana anō rānei.",
   "qiblaLocationRequiredTitle": "Ko te waahi e hiahiatia ana mo Qibla",
-  "qiblaLocationRequiredBody": "Tautuhia to waahi tuturu i mua i te whakamahi i te kapehu Qibla kia tika ai te tatau i te ahunga."
+  "qiblaLocationRequiredBody": "Tautuhia to waahi tuturu i mua i te whakamahi i te kapehu Qibla kia tika ai te tatau i te ahunga.",
+  "placesDataSourceUnavailableTitle": "Ko nga raraunga waahi kaore i te waatea",
+  "placesDataSourceUnavailableBody": "Kaore ano kia whirihorahia he waahi mutunga raraunga mo tenei hanga. Tautuhia te PLACES_OVERPASS_API_URL ki tetahi takawaenga kua whakaaetia, kaiwhakarato ranei i mua i te whakaahei rapunga tata."
 }

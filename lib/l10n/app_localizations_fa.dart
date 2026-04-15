@@ -1362,6 +1362,14 @@ class AppLocalizationsFa extends AppLocalizations {
       'منبع کاشی نقشه تأیید شده هنوز برای این ساخت پیکربندی نشده است. مکان‌های اطراف همچنان می‌توانند از مکان ذخیره‌شده شما بارگیری شوند.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'داده‌های مکان‌ها در دسترس نیست';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'نقطه پایانی داده مکان های تأیید شده هنوز برای این ساخت پیکربندی نشده است. قبل از فعال کردن جستجوی اطراف، PLACES_OVERPASS_API_URL را روی یک پروکسی یا ارائه دهنده تأیید شده تنظیم کنید.';
+
+  @override
   String get unknownPlaceName => 'نام نامعلوم';
 
   @override

@@ -1374,6 +1374,14 @@ class AppLocalizationsEl extends AppLocalizations {
       'Μια επαληθευμένη πηγή πλακιδίων χάρτη δεν έχει διαμορφωθεί ακόμα για αυτήν την έκδοση. Τα κοντινά μέρη μπορούν ακόμα να φορτώσουν από την αποθηκευμένη τοποθεσία σας.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Τα δεδομένα μερών δεν είναι διαθέσιμα';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Ένα επαληθευμένο τελικό σημείο δεδομένων τοποθεσιών δεν έχει διαμορφωθεί ακόμα για αυτήν την έκδοση. Ορίστε το PLACES_OVERPASS_API_URL σε έναν εγκεκριμένο διακομιστή μεσολάβησης ή πάροχο προτού ενεργοποιήσετε την κοντινή αναζήτηση.';
+
+  @override
   String get unknownPlaceName => 'Άγνωστο Όνομα';
 
   @override

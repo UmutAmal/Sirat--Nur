@@ -1367,6 +1367,14 @@ class AppLocalizationsZu extends AppLocalizations {
       'Umthombo wethayela lemephu oqinisekisiwe awulungiselelwe lesi sakhiwo okwamanje. Izindawo eziseduze zisengalayisha zisuka endaweni yakho elondoloziwe.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Idatha yezindawo ayitholakali';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Indawo yokugcina idatha yezindawo eqinisekisiwe ayilungiselwe lesi sakhiwo okwamanje. Setha i-PLACES_OVERPASS_API_URL kummeleli ogunyaziwe noma umhlinzeki ngaphambi kokunika amandla ukusesha okuseduze.';
+
+  @override
   String get unknownPlaceName => 'Igama Elingaziwa';
 
   @override

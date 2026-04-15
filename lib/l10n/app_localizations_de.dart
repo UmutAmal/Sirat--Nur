@@ -1371,6 +1371,13 @@ class AppLocalizationsDe extends AppLocalizations {
       'Für diesen Build ist noch keine verifizierte Kartenkachelquelle konfiguriert. Orte in der Nähe können weiterhin von Ihrem gespeicherten Standort geladen werden.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Ortsdaten nicht verfügbar';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Für diesen Build ist noch kein Datenendpunkt für verifizierte Orte konfiguriert. Legen Sie PLACES_OVERPASS_API_URL auf einen zugelassenen Proxy oder Anbieter fest, bevor Sie die Suche in der Nähe aktivieren.';
+
+  @override
   String get unknownPlaceName => 'Unbekannter Name';
 
   @override

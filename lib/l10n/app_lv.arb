@@ -764,5 +764,7 @@
   "quranLoadFailed": "Korāna saturu nevarēja ielādēt. Lūdzu, mēģiniet vēlreiz.",
   "locationDetectionFailed": "Nevarēja noteikt jūsu atrašanās vietu. Lūdzu, izvēlieties pilsētu manuāli vai mēģiniet vēlreiz.",
   "qiblaLocationRequiredTitle": "Nepieciešama vieta Qiblai",
-  "qiblaLocationRequiredBody": "Pirms Qibla kompasa lietošanas iestatiet savu faktisko atrašanās vietu, lai varētu precīzi aprēķināt virzienu."
+  "qiblaLocationRequiredBody": "Pirms Qibla kompasa lietošanas iestatiet savu faktisko atrašanās vietu, lai varētu precīzi aprēķināt virzienu.",
+  "placesDataSourceUnavailableTitle": "Vietu dati nav pieejami",
+  "placesDataSourceUnavailableBody": "Verificēto vietu datu galapunkts šai būvei vēl nav konfigurēts. Pirms tuvumā esošās meklēšanas iespējošanas iestatiet vietni PLACES_OVERPASS_API_URL apstiprinātam starpniekserveri vai pakalpojumu sniedzējam."
 }

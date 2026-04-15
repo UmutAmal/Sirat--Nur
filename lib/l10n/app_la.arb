@@ -764,5 +764,7 @@
   "quranLoadFailed": "Quran contentus non oneratus. Quaeso, iterum conare.",
   "locationDetectionFailed": "Non locum tuum deprehendere. Elige civitatem tincidunt vel rursum.",
   "qiblaLocationRequiredTitle": "Locus requisiti Qibla",
-  "qiblaLocationRequiredBody": "Pone actualem locum tuum antequam Qibla circumdabit utens directio accurate computari potest."
+  "qiblaLocationRequiredBody": "Pone actualem locum tuum antequam Qibla circumdabit utens directio accurate computari potest.",
+  "placesDataSourceUnavailableTitle": "Loca notitia unavailable",
+  "placesDataSourceUnavailableBody": "Loca veri- ta notitia terminorum non configuratur ad hoc adhuc constructum. PLACES_OVERPASS_API_URL ad probatum procuratorem vel provisorem pone antequam inquisitionem proximam capias."
 }

@@ -1363,6 +1363,13 @@ class AppLocalizationsEo extends AppLocalizations {
       'Kontrolita mapo-fonto ankoraŭ ne estas agordita por ĉi tiu konstruo. Proksimaj lokoj ankoraŭ povas ŝargi de via konservita loko.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Lokaj datumoj nedisponeblaj';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Kontrolita loko-finpunkto ankoraŭ ne estas agordita por ĉi tiu konstruo. Agordu PLACES_OVERPASS_API_URL al aprobita prokurilo aŭ provizanto antaŭ ebligi proksiman serĉon.';
+
+  @override
   String get unknownPlaceName => 'Nekonata Nomo';
 
   @override

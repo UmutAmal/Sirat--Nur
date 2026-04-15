@@ -1367,6 +1367,14 @@ class AppLocalizationsSl extends AppLocalizations {
       'Preverjen vir ploščic zemljevida še ni konfiguriran za to zgradbo. Mesta v bližini se lahko še vedno naložijo z vaše shranjene lokacije.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Podatki o mestih niso na voljo';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Preverjena končna točka podatkov o mestih še ni konfigurirana za to zgradbo. Preden omogočite iskanje v bližini, nastavite PLACES_OVERPASS_API_URL na odobrenega posrednika ali ponudnika.';
+
+  @override
   String get unknownPlaceName => 'Neznano ime';
 
   @override

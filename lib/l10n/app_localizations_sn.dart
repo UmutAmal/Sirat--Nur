@@ -1360,6 +1360,13 @@ class AppLocalizationsSn extends AppLocalizations {
       'Matairi emepu akasimbiswa haasati agadzirirwa kuvaka uku. Nzvimbo dziri pedyo dzinogona kurodha kubva panzvimbo yako yakachengetedzwa.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Data yenzvimbo haisipo';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Nzvimbo dzakasimbiswa data yekupedzisira haisati yagadzirirwa kuvaka iyi. Isa PLACES_OVERPASS_API_URL kumumiririri akatenderwa kana mubatsiri usati wabvumira kutsvaga kuri pedyo.';
+
+  @override
   String get unknownPlaceName => 'Zita risingazivikanwe';
 
   @override

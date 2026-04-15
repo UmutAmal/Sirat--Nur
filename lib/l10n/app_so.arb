@@ -764,5 +764,7 @@
   "quranLoadFailed": "Waxa ku jira Quraanka lama rari karo Fadlan isku day mar kale",
   "locationDetectionFailed": "Lama ogaan karo goobtaada Fadlan gacanta ku dooro magaalo ama isku day mar kale.",
   "qiblaLocationRequiredTitle": "Meesha loo baahan yahay Qibla",
-  "qiblaLocationRequiredBody": "Deji goobtaada dhabta ah ka hor intaadan isticmaalin kombuyuutarka Qibla si jihada loo xisaabiyo si sax ah."
+  "qiblaLocationRequiredBody": "Deji goobtaada dhabta ah ka hor intaadan isticmaalin kombuyuutarka Qibla si jihada loo xisaabiyo si sax ah.",
+  "placesDataSourceUnavailableTitle": "Xogta meelaha lama heli karo",
+  "placesDataSourceUnavailableBody": "Meesha la xaqiijiyay barta dhamaadka xogta looma habeynin dhismahan wali. Deji PLACES_OVERPASS_API_URL wakiil ama bixiye la ansixiyay ka hor inta aanad awood u gelin raadinta dhow."
 }

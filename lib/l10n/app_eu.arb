@@ -764,5 +764,7 @@
   "quranLoadFailed": "Ezin izan da Koranaren edukia kargatu. Mesedez, saiatu berriro.",
   "locationDetectionFailed": "Ezin izan da zure kokapena hauteman. Aukeratu hiri bat eskuz edo saiatu berriro.",
   "qiblaLocationRequiredTitle": "Qiblarako beharrezkoa den kokapena",
-  "qiblaLocationRequiredBody": "Ezarri zure benetako kokapena Qibla iparrorratza erabili aurretik, norabidea zehaztasunez kalkulatu ahal izateko."
+  "qiblaLocationRequiredBody": "Ezarri zure benetako kokapena Qibla iparrorratza erabili aurretik, norabidea zehaztasunez kalkulatu ahal izateko.",
+  "placesDataSourceUnavailableTitle": "Tokien datuak ez daude erabilgarri",
+  "placesDataSourceUnavailableBody": "Egiaztatutako lekuen datuen amaiera-puntua ez dago konfiguratuta oraindik konfigurazio honetarako. Ezarri PLACES_OVERPASS_API_URL onartutako proxy edo hornitzaile batean inguruko bilaketa gaitu aurretik."
 }

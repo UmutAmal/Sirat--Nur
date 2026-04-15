@@ -1364,6 +1364,13 @@ class AppLocalizationsSu extends AppLocalizations {
       'Sumber ubin peta anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Tempat-tempat caket dieu masih tiasa ngamuat tina lokasi anu anjeun simpen.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Data tempat teu sadia';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Titik data tempat anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Setel PLACES_OVERPASS_API_URL ka proksi atanapi panyadia anu disatujuan sateuacan ngaktipkeun milarian caket dieu.';
+
+  @override
   String get unknownPlaceName => 'Ngaran teu kanyahoan';
 
   @override

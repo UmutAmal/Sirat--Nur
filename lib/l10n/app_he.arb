@@ -764,5 +764,7 @@
   "quranLoadFailed": "לא ניתן היה לטעון את תוכן הקוראן. אנא נסה שוב.",
   "locationDetectionFailed": "לא ניתן היה לזהות את המיקום שלך. אנא בחר עיר באופן ידני או נסה שוב.",
   "qiblaLocationRequiredTitle": "נדרש מיקום עבור Qibla",
-  "qiblaLocationRequiredBody": "הגדר את המיקום האמיתי שלך לפני השימוש במצפן Qibla כך שניתן יהיה לחשב את הכיוון במדויק."
+  "qiblaLocationRequiredBody": "הגדר את המיקום האמיתי שלך לפני השימוש במצפן Qibla כך שניתן יהיה לחשב את הכיוון במדויק.",
+  "placesDataSourceUnavailableTitle": "נתוני המקומות אינם זמינים",
+  "placesDataSourceUnavailableBody": "עדיין לא הוגדרה נקודת קצה נתונים של מקומות מאומתים עבור המבנה הזה. הגדר את PLACES_OVERPASS_API_URL לשרת proxy או ספק מאושר לפני הפעלת חיפוש בקרבת מקום."
 }

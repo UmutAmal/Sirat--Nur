@@ -764,5 +764,7 @@
   "quranLoadFailed": "Nepavyko įkelti Korano turinio. Bandykite dar kartą.",
   "locationDetectionFailed": "Nepavyko aptikti jūsų vietos. Pasirinkite miestą rankiniu būdu arba bandykite dar kartą.",
   "qiblaLocationRequiredTitle": "Reikalinga vieta Qiblai",
-  "qiblaLocationRequiredBody": "Prieš naudodami Qibla kompasą, nustatykite savo tikrąją vietą, kad būtų galima tiksliai apskaičiuoti kryptį."
+  "qiblaLocationRequiredBody": "Prieš naudodami Qibla kompasą, nustatykite savo tikrąją vietą, kad būtų galima tiksliai apskaičiuoti kryptį.",
+  "placesDataSourceUnavailableTitle": "Vietų duomenys nepasiekiami",
+  "placesDataSourceUnavailableBody": "Patvirtintų vietų duomenų galutinis taškas šiai versijai dar nesukonfigūruotas. Prieš įjungdami netoliese esančią paiešką, nustatykite PLACES_OVERPASS_API_URL patvirtintą tarpinį serverį arba teikėją."
 }

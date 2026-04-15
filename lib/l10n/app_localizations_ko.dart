@@ -1348,6 +1348,13 @@ class AppLocalizationsKo extends AppLocalizations {
       '이 빌드에는 확인된 지도 타일 소스가 아직 구성되지 않았습니다. 저장된 위치에서 주변 장소를 계속 로드할 수 있습니다.';
 
   @override
+  String get placesDataSourceUnavailableTitle => '장소 데이터를 사용할 수 없습니다.';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      '이 빌드에는 확인된 장소 데이터 엔드포인트가 아직 구성되지 않았습니다. 주변 검색을 활성화하기 전에 PLACES_OVERPASS_API_URL을 승인된 프록시 또는 공급자로 설정하세요.';
+
+  @override
   String get unknownPlaceName => '알 수 없는 이름';
 
   @override

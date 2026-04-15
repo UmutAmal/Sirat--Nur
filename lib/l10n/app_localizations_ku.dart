@@ -1363,6 +1363,13 @@ class AppLocalizationsKu extends AppLocalizations {
       'Çavkaniyek nexşeya pejirandî ji bo vê çêkirinê hêj nehatiye mîheng kirin. Cihên nêzîk hîn jî dikarin ji cîhê weya tomarkirî bar bikin.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Daneyên cihan ne berdest in';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Xala dawîya daneya cîhên pejirandî ji bo vê çêkirinê hêj nehatine mîheng kirin. Berî ku lêgerîna nêzîk çalak bike, PLACES_OVERPASS_API_URL bike wekî navendek an pêşkêşkerek pejirandî.';
+
+  @override
   String get unknownPlaceName => 'Navê nenas';
 
   @override

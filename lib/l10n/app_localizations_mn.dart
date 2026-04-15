@@ -1366,6 +1366,13 @@ class AppLocalizationsMn extends AppLocalizations {
       'Баталгаажсан газрын зургийн хавтангийн эх сурвалжийг энэ бүтээцэд хараахан тохируулаагүй байна. Ойролцоох газруудыг таны хадгалсан байршлаас ачаалах боломжтой хэвээр байна.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Газрын мэдээлэл боломжгүй';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Баталгаажсан газруудын өгөгдлийн төгсгөлийн цэгийг энэ бүтээцэд хараахан тохируулаагүй байна. Ойролцоох хайлтыг идэвхжүүлэхийн өмнө PLACES_OVERPASS_API_URL-г зөвшөөрөгдсөн прокси эсвэл үйлчилгээ үзүүлэгч рүү тохируулна уу.';
+
+  @override
   String get unknownPlaceName => 'Үл мэдэгдэх нэр';
 
   @override

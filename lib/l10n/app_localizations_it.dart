@@ -1373,6 +1373,14 @@ class AppLocalizationsIt extends AppLocalizations {
       'Un\'origine del riquadro mappa verificata non è ancora configurata per questa build. I luoghi nelle vicinanze possono comunque essere caricati dalla posizione salvata.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Dati sui luoghi non disponibili';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Un endpoint dati dei luoghi verificati non è ancora configurato per questa build. Imposta PLACES_OVERPASS_API_URL su un proxy o provider approvato prima di abilitare la ricerca nelle vicinanze.';
+
+  @override
   String get unknownPlaceName => 'Nome sconosciuto';
 
   @override

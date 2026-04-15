@@ -1356,6 +1356,13 @@ class AppLocalizationsHe extends AppLocalizations {
       'מקור אריחי מפה מאומת עדיין לא מוגדר עבור המבנה הזה. מקומות קרובים עדיין יכולים להיטען מהמיקום השמור שלך.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'נתוני המקומות אינם זמינים';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'עדיין לא הוגדרה נקודת קצה נתונים של מקומות מאומתים עבור המבנה הזה. הגדר את PLACES_OVERPASS_API_URL לשרת proxy או ספק מאושר לפני הפעלת חיפוש בקרבת מקום.';
+
+  @override
   String get unknownPlaceName => 'שם לא ידוע';
 
   @override

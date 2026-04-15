@@ -1360,6 +1360,13 @@ class AppLocalizationsGu extends AppLocalizations {
       'આ બિલ્ડ માટે ચકાસાયેલ નકશા ટાઇલ સ્ત્રોત હજુ સુધી ગોઠવેલ નથી. નજીકના સ્થાનો હજુ પણ તમારા સાચવેલા સ્થાન પરથી લોડ થઈ શકે છે.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'સ્થાનોનો ડેટા અનુપલબ્ધ છે';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'આ બિલ્ડ માટે ચકાસાયેલ સ્થાનો ડેટા એન્ડપોઇન્ટ હજુ સુધી ગોઠવેલ નથી. નજીકની શોધને સક્ષમ કરતા પહેલા PLACES_OVERPASS_API_URL ને મંજૂર પ્રોક્સી અથવા પ્રદાતા પર સેટ કરો.';
+
+  @override
   String get unknownPlaceName => 'અજ્ઞાત નામ';
 
   @override

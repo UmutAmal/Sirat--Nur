@@ -1366,6 +1366,14 @@ class AppLocalizationsCo extends AppLocalizations {
       'Una fonte di tile di mappa verificata ùn hè ancu cunfigurata per questa custruzzione. Lochi vicini ponu sempre carica da u vostru locu salvatu.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Dati di i posti ùn sò micca dispunibili';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Un endpoint di dati di i posti verificati ùn hè ancu cunfiguratu per sta custruzzione. Pone PLACES_OVERPASS_API_URL à un proxy o fornitore appruvatu prima di attivà a ricerca vicinu.';
+
+  @override
   String get unknownPlaceName => 'Nome scunnisciutu';
 
   @override

@@ -1362,6 +1362,13 @@ class AppLocalizationsHi extends AppLocalizations {
       'इस निर्माण के लिए सत्यापित मानचित्र टाइल स्रोत अभी तक कॉन्फ़िगर नहीं किया गया है। आस-पास के स्थान अभी भी आपके सहेजे गए स्थान से लोड हो सकते हैं।';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'स्थानों का डेटा अनुपलब्ध है';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'इस बिल्ड के लिए सत्यापित स्थान डेटा एंडपॉइंट अभी तक कॉन्फ़िगर नहीं किया गया है। आस-पास की खोज को सक्षम करने से पहले PLACES_OVERPASS_API_URL को किसी स्वीकृत प्रॉक्सी या प्रदाता पर सेट करें।';
+
+  @override
   String get unknownPlaceName => 'अज्ञात नाम';
 
   @override

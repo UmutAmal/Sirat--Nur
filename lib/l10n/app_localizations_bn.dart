@@ -1362,6 +1362,13 @@ class AppLocalizationsBn extends AppLocalizations {
       'এই বিল্ডের জন্য একটি যাচাইকৃত মানচিত্র টাইল উত্স এখনও কনফিগার করা হয়নি৷ আশেপাশের জায়গাগুলি এখনও আপনার সংরক্ষিত অবস্থান থেকে লোড হতে পারে৷';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'স্থানের ডেটা অনুপলব্ধ৷';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'একটি যাচাইকৃত স্থান ডেটা এন্ডপয়েন্ট এখনও এই বিল্ডের জন্য কনফিগার করা হয়নি৷ কাছাকাছি অনুসন্ধান সক্ষম করার আগে PLACES_OVERPASS_API_URL একটি অনুমোদিত প্রক্সি বা প্রদানকারীতে সেট করুন৷';
+
+  @override
   String get unknownPlaceName => 'অজানা নাম';
 
   @override

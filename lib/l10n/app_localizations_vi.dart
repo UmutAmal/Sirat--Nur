@@ -1363,6 +1363,14 @@ class AppLocalizationsVi extends AppLocalizations {
       'Nguồn ô bản đồ đã được xác minh chưa được định cấu hình cho bản dựng này. Các địa điểm lân cận vẫn có thể tải từ vị trí đã lưu của bạn.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Dữ liệu địa điểm không có sẵn';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Điểm cuối dữ liệu địa điểm đã xác minh chưa được định cấu hình cho bản dựng này. Đặt PLACES_OVERPASS_API_URL thành proxy hoặc nhà cung cấp được phê duyệt trước khi bật tìm kiếm lân cận.';
+
+  @override
   String get unknownPlaceName => 'Tên không xác định';
 
   @override

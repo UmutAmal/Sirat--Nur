@@ -1366,6 +1366,14 @@ class AppLocalizationsSm extends AppLocalizations {
       'E le\'i fa\'atulagaina se fa\'apogai o fa\'afanua fa\'amaonia mo lenei faufale. O nofoaga lata ane e mafai lava ona la\'u mai lou nofoaga sefe.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Le avanoa fa\'amatalaga nofoaga';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'E le\'i fa\'atulagaina se nofoaga fa\'amautu fa\'amaumauga mo lenei faufale. Seti le PLACES_OVERPASS_API_URL i se sui po\'o se kamupani fa\'amaonia a\'o le\'i fa\'agasolo su\'esu\'ega lata ane.';
+
+  @override
   String get unknownPlaceName => 'Le Igoa';
 
   @override

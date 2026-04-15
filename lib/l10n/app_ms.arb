@@ -765,5 +765,7 @@
   "quranLoadFailed": "Kandungan al-Quran tidak dapat dimuatkan. Sila cuba lagi.",
   "locationDetectionFailed": "Tidak dapat mengesan lokasi anda. Sila pilih bandar secara manual atau cuba lagi.",
   "qiblaLocationRequiredTitle": "Lokasi diperlukan untuk kiblat",
-  "qiblaLocationRequiredBody": "Tetapkan lokasi sebenar anda sebelum menggunakan kompas kiblat supaya arah boleh dikira dengan tepat."
+  "qiblaLocationRequiredBody": "Tetapkan lokasi sebenar anda sebelum menggunakan kompas kiblat supaya arah boleh dikira dengan tepat.",
+  "placesDataSourceUnavailableTitle": "Data tempat tidak tersedia",
+  "placesDataSourceUnavailableBody": "Titik akhir data tempat yang disahkan belum dikonfigurasikan untuk binaan ini lagi. Tetapkan PLACES_OVERPASS_API_URL kepada proksi atau pembekal yang diluluskan sebelum mendayakan carian berdekatan."
 }

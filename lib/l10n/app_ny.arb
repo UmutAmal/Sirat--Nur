@@ -764,5 +764,7 @@
   "quranLoadFailed": "Zomwe zili mu Quran sizinathe kuyikidwa. Chonde yesaninso.",
   "locationDetectionFailed": "Sitinathe kuzindikira komwe muli. Chonde sankhani mzinda pamanja kapena yesaninso.",
   "qiblaLocationRequiredTitle": "Malo ofunikira ku Qibla",
-  "qiblaLocationRequiredBody": "Khazikitsani malo anu enieni musanagwiritse ntchito kampasi ya Qibla kuti kolowera kuwerengedwe molondola."
+  "qiblaLocationRequiredBody": "Khazikitsani malo anu enieni musanagwiritse ntchito kampasi ya Qibla kuti kolowera kuwerengedwe molondola.",
+  "placesDataSourceUnavailableTitle": "Deta yamalo palibe",
+  "placesDataSourceUnavailableBody": "Malo otsimikizika omaliza sanakhazikitsidwe kuti apangidwe pano. Khazikitsani PLACES_OVERPASS_API_URL kukhala wovomerezeka kapena wopereka chithandizo musanayatse kusaka pafupi."
 }

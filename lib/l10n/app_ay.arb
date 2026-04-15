@@ -764,5 +764,7 @@
   "quranLoadFailed": "Quran ukax janiw cargañjamäkänti. Ukhamaraki, mayampi yant’apxañani.",
   "locationDetectionFailed": "Janiw kawkhans jikxataskta uk uñt’ayañjamäkänti. Please choose a city manually or try again.",
   "qiblaLocationRequiredTitle": "Qibla markatakix kawkhantix utjki ukax wakisiwa",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "placesDataSourceUnavailableTitle": "Ukax datos jan utjki ukanak uñt’ayi",
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
 }

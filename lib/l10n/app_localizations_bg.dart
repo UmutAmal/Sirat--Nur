@@ -1371,6 +1371,13 @@ class AppLocalizationsBg extends AppLocalizations {
       'Все още не е конфигуриран потвърден източник на плочки за тази компилация. Местата наблизо все още могат да се зареждат от запазеното ви местоположение.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Няма налични данни за места';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Крайна точка за данни за проверени места все още не е конфигурирана за тази компилация. Задайте PLACES_OVERPASS_API_URL на одобрен прокси или доставчик, преди да активирате търсенето наблизо.';
+
+  @override
   String get unknownPlaceName => 'Неизвестно име';
 
   @override

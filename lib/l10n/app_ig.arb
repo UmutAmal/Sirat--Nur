@@ -764,5 +764,7 @@
   "quranLoadFailed": "Enweghị ike ibunye ọdịnaya Quran. Biko nwaa ọzọ.",
   "locationDetectionFailed": "Enweghị ike ịchọpụta ọnọdụ gị. Biko jiri aka họrọ obodo ma ọ bụ nwaa ọzọ.",
   "qiblaLocationRequiredTitle": "Ebe achọrọ maka Qibla",
-  "qiblaLocationRequiredBody": "Tọọ ọnọdụ gị n'ezie tupu i jiri kompas Qibla ka e nwee ike gbakọọ ntụzịaka nke ọma."
+  "qiblaLocationRequiredBody": "Tọọ ọnọdụ gị n'ezie tupu i jiri kompas Qibla ka e nwee ike gbakọọ ntụzịaka nke ọma.",
+  "placesDataSourceUnavailableTitle": "Ebe data adịghị",
+  "placesDataSourceUnavailableBody": "Ahaziri ebe njedebe data akwadoro maka iwulite a. Tọọ PLACES_OVERPASS_API_URL ka ọ bụrụ onye nnọchi anya ma ọ bụ onye na-eweta akwadoro tupu ịmee ọchụchọ dị nso."
 }

@@ -764,5 +764,7 @@
   "quranLoadFailed": "Korano-enhavo ne povis esti ŝargita. Bonvolu provi denove.",
   "locationDetectionFailed": "Ne eblis detekti vian lokon. Bonvolu elekti urbon permane aŭ provi denove.",
   "qiblaLocationRequiredTitle": "Loko necesa por Ĉiblo",
-  "qiblaLocationRequiredBody": "Agordu vian realan lokon antaŭ ol uzi la Qibla kompason, por ke la direkto estu precize kalkulita."
+  "qiblaLocationRequiredBody": "Agordu vian realan lokon antaŭ ol uzi la Qibla kompason, por ke la direkto estu precize kalkulita.",
+  "placesDataSourceUnavailableTitle": "Lokaj datumoj nedisponeblaj",
+  "placesDataSourceUnavailableBody": "Kontrolita loko-finpunkto ankoraŭ ne estas agordita por ĉi tiu konstruo. Agordu PLACES_OVERPASS_API_URL al aprobita prokurilo aŭ provizanto antaŭ ebligi proksiman serĉon."
 }

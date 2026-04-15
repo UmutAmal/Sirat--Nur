@@ -764,5 +764,7 @@
   "quranLoadFailed": "Vsebine Korana ni bilo mogoče naložiti. prosim poskusite ponovno",
   "locationDetectionFailed": "Vaše lokacije ni bilo mogoče zaznati. Izberite mesto ročno ali poskusite znova.",
   "qiblaLocationRequiredTitle": "Zahtevana lokacija za Qiblo",
-  "qiblaLocationRequiredBody": "Pred uporabo kompasa Qibla nastavite svojo dejansko lokacijo, da lahko smer natančno izračunate."
+  "qiblaLocationRequiredBody": "Pred uporabo kompasa Qibla nastavite svojo dejansko lokacijo, da lahko smer natančno izračunate.",
+  "placesDataSourceUnavailableTitle": "Podatki o mestih niso na voljo",
+  "placesDataSourceUnavailableBody": "Preverjena končna točka podatkov o mestih še ni konfigurirana za to zgradbo. Preden omogočite iskanje v bližini, nastavite PLACES_OVERPASS_API_URL na odobrenega posrednika ali ponudnika."
 }

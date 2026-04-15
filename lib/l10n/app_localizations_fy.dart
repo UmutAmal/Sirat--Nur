@@ -1362,6 +1362,14 @@ class AppLocalizationsFy extends AppLocalizations {
       'In ferifiearre kaarttegelboarne is noch net ynsteld foar dizze build. Plakken yn \'e buert kinne noch laden wurde fan jo bewarre lokaasje.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Plakken gegevens net beskikber';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'In ferifiearre plakken gegevenseinpunt is noch net ynsteld foar dizze build. Stel PLACES_OVERPASS_API_URL yn op in goedkarde proxy of provider foardat jo sykjen yn \'e buert ynskeakelje.';
+
+  @override
   String get unknownPlaceName => 'Unbekende namme';
 
   @override

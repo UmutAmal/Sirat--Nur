@@ -1363,6 +1363,13 @@ class AppLocalizationsMai extends AppLocalizations {
       'एकटा सत्यापित मैप टाइल स्रोत एखन धरि एहि बिल्ड क लेल कॉन्फ़िगर नहि कएल गेल अछि. पास के जगह एखनो अहां के सेव कएल गेल लोकेशन सं लोड भ सकैत अछि.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'डेटा अनुपलब्ध राखैत अछि';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+
+  @override
   String get unknownPlaceName => 'अज्ञात नाम';
 
   @override

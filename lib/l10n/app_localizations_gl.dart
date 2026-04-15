@@ -1370,6 +1370,14 @@ class AppLocalizationsGl extends AppLocalizations {
       'Unha fonte de mosaico de mapa verificada aínda non está configurada para esta compilación. Os lugares próximos aínda poden cargar desde a túa localización gardada.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Os datos de lugares non están dispoñibles';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Un punto final de datos de lugares verificados aínda non está configurado para esta compilación. Establece PLACES_OVERPASS_API_URL nun proxy ou provedor aprobado antes de activar a busca nas proximidades.';
+
+  @override
   String get unknownPlaceName => 'Nome descoñecido';
 
   @override

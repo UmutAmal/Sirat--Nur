@@ -764,5 +764,7 @@
   "quranLoadFailed": "Diteng tša Quran di be di sa kgone go laetšwa. Hle leka gape.",
   "locationDetectionFailed": "Ga se ya kgona go lemoga lefelo la gago. Hle kgetha motse ka seatla goba o leke gape.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "placesDataSourceUnavailableTitle": "Places data unavailable",
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
 }

@@ -764,5 +764,7 @@
   "quranLoadFailed": "Koraninhoud kon niet worden geladen. Probeer het opnieuw.",
   "locationDetectionFailed": "Kan uw locatie niet detecteren. Kies handmatig een stad of probeer het opnieuw.",
   "qiblaLocationRequiredTitle": "Locatie vereist voor Qibla",
-  "qiblaLocationRequiredBody": "Stel uw werkelijke locatie in voordat u het Qibla-kompas gebruikt, zodat de richting nauwkeurig kan worden berekend."
+  "qiblaLocationRequiredBody": "Stel uw werkelijke locatie in voordat u het Qibla-kompas gebruikt, zodat de richting nauwkeurig kan worden berekend.",
+  "placesDataSourceUnavailableTitle": "Plaatsgegevens niet beschikbaar",
+  "placesDataSourceUnavailableBody": "Er is nog geen geverifieerd gegevenseindpunt voor plaatsen geconfigureerd voor deze build. Stel PLACES_OVERPASS_API_URL in op een goedgekeurde proxy of provider voordat u zoeken in de buurt inschakelt."
 }

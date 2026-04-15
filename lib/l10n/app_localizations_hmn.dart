@@ -1368,6 +1368,14 @@ class AppLocalizationsHmn extends AppLocalizations {
       'Ib daim ntawv qhia cov pobzeb cov ntaub ntawv pov thawj tseem tsis tau teeb tsa rau qhov kev tsim no. Cov chaw nyob ze tseem tuaj yeem thauj khoom los ntawm koj qhov chaw khaws cia.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Qhov chaw cov ntaub ntawv tsis muaj';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Ib qho kev txheeb xyuas qhov chaw cov ntaub ntawv kawg tsis tau teeb tsa rau qhov kev tsim no tseem. Teem PLACES_OVERPASS_API_URL rau lub npe lossis tus kws kho mob pom zoo ua ntej qhib kev tshawb nrhiav nyob ze.';
+
+  @override
   String get unknownPlaceName => 'Tsis paub lub npe';
 
   @override

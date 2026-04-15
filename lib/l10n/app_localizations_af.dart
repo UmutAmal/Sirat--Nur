@@ -1365,6 +1365,13 @@ class AppLocalizationsAf extends AppLocalizations {
       '\'n Geverifieerde kaartteëlbron is nog nie vir hierdie bou opgestel nie. Nabygeleë plekke kan steeds vanaf jou gestoorde ligging laai.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Plaas data onbeskikbaar';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      '\'n Geverifieerde plekdata-eindpunt is nog nie vir hierdie bou opgestel nie. Stel PLACES_OVERPASS_API_URL op \'n goedgekeurde instaanbediener of verskaffer voordat nabygeleë soektog geaktiveer word.';
+
+  @override
   String get unknownPlaceName => 'Onbekende Naam';
 
   @override

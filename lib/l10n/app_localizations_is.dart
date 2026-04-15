@@ -1363,6 +1363,14 @@ class AppLocalizationsIs extends AppLocalizations {
       'Staðfestur kortaflisuppspretta er ekki stilltur fyrir þessa smíði ennþá. Nálægir staðir geta samt hlaðið inn frá vistaða staðsetningu þinni.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Gögn um staði eru ekki tiltæk';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Staðfestur gagnaendapunktur er ekki stilltur fyrir þessa byggingu ennþá. Stilltu PLACES_OVERPASS_API_URL á samþykktan umboðsmann eða þjónustuaðila áður en þú kveikir á nærliggjandi leit.';
+
+  @override
   String get unknownPlaceName => 'Óþekkt nafn';
 
   @override

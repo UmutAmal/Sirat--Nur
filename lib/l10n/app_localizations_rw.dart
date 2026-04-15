@@ -1361,6 +1361,13 @@ class AppLocalizationsRw extends AppLocalizations {
       'Ikarita yagenzuwe neza ntabwo yashyizweho kugirango yubake. Ahantu hegereye harashobora gutwarwa aho wabitswe.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Shyira amakuru ataboneka';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Ahantu hagenzuwe amakuru yanyuma ntabwo yashyizweho kugirango yubake. Shyira PLACES_OVERPASS_API_URL kuri proksi yemewe cyangwa uyitanga mbere yo gushakisha hafi.';
+
+  @override
   String get unknownPlaceName => 'Izina ritazwi';
 
   @override

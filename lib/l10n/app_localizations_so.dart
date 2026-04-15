@@ -1364,6 +1364,13 @@ class AppLocalizationsSo extends AppLocalizations {
       'Isha foornada khariidad ee la xaqiijiyay wali looma habeynin dhismahan. Meelaha u dhow weli way ka soo rari karaan goobtaada kaydsan.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Xogta meelaha lama heli karo';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Meesha la xaqiijiyay barta dhamaadka xogta looma habeynin dhismahan wali. Deji PLACES_OVERPASS_API_URL wakiil ama bixiye la ansixiyay ka hor inta aanad awood u gelin raadinta dhow.';
+
+  @override
   String get unknownPlaceName => 'Magaca Aan La Aqoon';
 
   @override

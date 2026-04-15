@@ -1368,6 +1368,13 @@ class AppLocalizationsKy extends AppLocalizations {
       'Текшерилген карта плиткасынын булагы бул куруу үчүн азырынча конфигурациялана элек. Жакын жердеги жерлер сакталган жериңизден дагы эле жүктөй берет.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Жер дайындары жеткиликсиз';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Текшерилген жерлер маалыматынын акыркы чекити бул куруу үчүн конфигурациялана элек. Жакын арадагы издөөнү иштетүүдөн мурун PLACES_OVERPASS_API_URL дарегин бекитилген проксиге же провайдерге коюңуз.';
+
+  @override
   String get unknownPlaceName => 'Белгисиз ысым';
 
   @override

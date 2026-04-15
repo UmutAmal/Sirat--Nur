@@ -1348,6 +1348,13 @@ class AppLocalizationsJa extends AppLocalizations {
       '検証済みのマップ タイル ソースは、このビルドに対してまだ構成されていません。近くの場所は、保存した場所から読み込むことができます。';
 
   @override
+  String get placesDataSourceUnavailableTitle => '場所のデータが利用できない';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      '検証済みの場所データ エンドポイントは、このビルドに対してまだ構成されていません。近くの検索を有効にする前に、PLACES_OVERPASS_API_URL を承認されたプロキシまたはプロバイダーに設定します。';
+
+  @override
   String get unknownPlaceName => '不明な名前';
 
   @override

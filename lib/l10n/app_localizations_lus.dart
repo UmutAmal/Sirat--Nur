@@ -1372,6 +1372,13 @@ class AppLocalizationsLus extends AppLocalizations {
       'He build atan hian verified map tile source hi configure a la ni lo. I saved location atang hian hmun hnai tak tak te chu a la load thei tho.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Data awm lohna hmunah a dah';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+
+  @override
   String get unknownPlaceName => 'Hming hriat loh';
 
   @override

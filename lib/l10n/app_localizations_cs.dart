@@ -1365,6 +1365,14 @@ class AppLocalizationsCs extends AppLocalizations {
       'Pro toto sestavení zatím není nakonfigurován ověřený zdroj mapových dlaždic. Místa v okolí se mohou stále načítat z vašeho uloženého místa.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Údaje o místech nejsou k dispozici';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Koncový bod dat ověřených míst zatím není pro toto sestavení nakonfigurován. Než povolíte vyhledávání v okolí, nastavte PLACES_OVERPASS_API_URL na schváleného proxy nebo poskytovatele.';
+
+  @override
   String get unknownPlaceName => 'Neznámé jméno';
 
   @override

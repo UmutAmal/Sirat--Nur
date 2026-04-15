@@ -1349,6 +1349,13 @@ class AppLocalizationsTi extends AppLocalizations {
       'ዝተረጋገጸ ምንጪ ካርታ ታይል ነዚ ህንጸት ገና ኣይተዋቕረን። ኣብ ቀረባ ዝርከቡ ቦታታት ገና ካብቲ ዝተዓቀብካዮ ቦታ ክጽዕኑ ይኽእሉ እዮም።';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'ዳታ ኣብ ዘይርከብ ቦታ የቐምጥ';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+
+  @override
   String get unknownPlaceName => 'ዘይፍለጥ ስም';
 
   @override

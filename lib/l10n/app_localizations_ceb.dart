@@ -1369,6 +1369,14 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Ang usa ka napamatud-an nga tinubdan sa tile sa mapa wala pa ma-configure alang niini nga pagtukod. Ang mga duol nga lugar mahimo gihapon nga magkarga gikan sa imong gitipig nga lokasyon.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Dili magamit ang datos sa mga lugar';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Ang usa ka napamatud-an nga mga lugar nga endpoint sa data wala pa ma-configure alang niini nga pagtukod. Ibutang ang PLACES_OVERPASS_API_URL sa usa ka aprobahan nga proxy o provider sa dili pa i-enable ang duol nga pagpangita.';
+
+  @override
   String get unknownPlaceName => 'Wala mailhi nga Ngalan';
 
   @override

@@ -764,5 +764,7 @@
   "quranLoadFailed": "Gurhanyň mazmuny ýüklenip bilinmedi. Gaýtadan synanyşmagyňyzy haýyş edýäris.",
   "locationDetectionFailed": "Locationeriňizi anyklap bilmedim El bilen şäheri saýlaň ýa-da gaýtadan synanyşyň.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "“Qibla” kompasyny ulanmazdan ozal hakyky ýeriňizi kesgitläň, ugry takyk hasaplap bolar."
+  "qiblaLocationRequiredBody": "“Qibla” kompasyny ulanmazdan ozal hakyky ýeriňizi kesgitläň, ugry takyk hasaplap bolar.",
+  "placesDataSourceUnavailableTitle": "Maglumatlary elýeterli däl",
+  "placesDataSourceUnavailableBody": "Barlanan ýerler maglumat nokady bu gurluş üçin entek düzülenok. Nearbyakyn gözlegleri açmazdan ozal PLACES_OVERPASS_API_URL tassyklanan proksi ýa-da üpjün edijä düzüň."
 }

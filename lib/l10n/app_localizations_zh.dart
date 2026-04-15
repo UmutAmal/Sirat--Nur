@@ -1332,6 +1332,13 @@ class AppLocalizationsZh extends AppLocalizations {
       '尚未为此构建配置经过验证的地图图块源。附近的地点仍然可以从您保存的位置加载。';
 
   @override
+  String get placesDataSourceUnavailableTitle => '地点数据不可用';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      '尚未为此构建配置经过验证的地点数据端点。在启用附近搜索之前，将 PLACES_OVERPASS_API_URL 设置为已批准的代理或提供商。';
+
+  @override
   String get unknownPlaceName => '未知名称';
 
   @override
@@ -2963,6 +2970,13 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
       '尚未为此构建配置经过验证的地图图块源。附近的地点仍然可以从您保存的位置加载。';
 
   @override
+  String get placesDataSourceUnavailableTitle => '地点数据不可用';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      '尚未为此构建配置经过验证的地点数据端点。在启用附近搜索之前，将 PLACES_OVERPASS_API_URL 设置为已批准的代理或提供商。';
+
+  @override
   String get unknownPlaceName => '未知名称';
 
   @override
@@ -4592,6 +4606,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   @override
   String get placesMapTilesUnavailableBody =>
       '尚未為此建構配置經過驗證的地圖圖塊來源。附近的地點仍然可以從您儲存的位置載入。';
+
+  @override
+  String get placesDataSourceUnavailableTitle => '地點資料不可用';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      '尚未為此建置配置經過驗證的地點資料端點。在啟用附近搜尋之前，將 PLACES_OVERPASS_API_URL 設定為已核准的代理或提供者。';
 
   @override
   String get unknownPlaceName => '未知名稱';

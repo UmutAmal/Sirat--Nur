@@ -1369,6 +1369,14 @@ class AppLocalizationsHy extends AppLocalizations {
       'Քարտեզի սալիկի հաստատված աղբյուրը դեռ կազմաձևված չէ այս կառուցման համար: Մոտակա վայրերը դեռ կարող են բեռնվել ձեր պահված վայրից:';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Վայրերի տվյալները անհասանելի են';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Հաստատված վայրերի տվյալների վերջնակետը դեռ կազմաձևված չէ այս կառուցման համար: Սահմանեք PLACES_OVERPASS_API_URL-ը հաստատված վստահված անձի կամ մատակարարի՝ նախքան մոտակա որոնումը միացնելը:';
+
+  @override
   String get unknownPlaceName => 'Անհայտ անուն';
 
   @override

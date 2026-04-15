@@ -764,5 +764,7 @@
   "quranLoadFailed": "An kasa loda abun cikin Al-Qur'ani. Da fatan za a sake gwadawa.",
   "locationDetectionFailed": "An kasa gano wurin ku. Da fatan za a zaɓi birni da hannu ko a sake gwadawa.",
   "qiblaLocationRequiredTitle": "Wurin da ake buƙata don alƙibla",
-  "qiblaLocationRequiredBody": "Saita ainihin wurinka kafin amfani da kamfas ɗin alƙibla domin a iya ƙididdige alkibla daidai."
+  "qiblaLocationRequiredBody": "Saita ainihin wurinka kafin amfani da kamfas ɗin alƙibla domin a iya ƙididdige alkibla daidai.",
+  "placesDataSourceUnavailableTitle": "Babu bayanan wuraren",
+  "placesDataSourceUnavailableBody": "Ba a saita madaidaitan wuraren ƙarshen bayanan don wannan ginin ba tukuna. Saita PLACES_OVERPASS_API_URL zuwa amintaccen wakili ko mai bayarwa kafin kunna bincike na kusa."
 }

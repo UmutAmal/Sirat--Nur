@@ -1169,6 +1169,8 @@ void main() {
           'placesLocationRequiredBody',
           'placesMapTilesUnavailableTitle',
           'placesMapTilesUnavailableBody',
+          'placesDataSourceUnavailableTitle',
+          'placesDataSourceUnavailableBody',
         ];
 
         for (final locale in safeLocales) {

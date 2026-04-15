@@ -664,6 +664,8 @@
   "placesLocationRequiredBody": "Yakındaki cami, helal gıda ve İslami eğitim noktalarını doğru arayabilmek için önce bir konum ayarlayın.",
   "placesMapTilesUnavailableTitle": "Harita katmanları kullanılamıyor",
   "placesMapTilesUnavailableBody": "Bu sürüm için doğrulanmış bir harita katman kaynağı henüz yapılandırılmadı. Yakındaki mekanlar yine de kayıtlı konumunuzdan yüklenebilir.",
+  "placesDataSourceUnavailableTitle": "Mekan verisi kullanılamıyor",
+  "placesDataSourceUnavailableBody": "Bu sürüm için doğrulanmış bir mekan verisi uç noktası henüz yapılandırılmadı. Yakındaki aramayı açmadan önce PLACES_OVERPASS_API_URL değerini onaylı bir proxy veya sağlayıcıya ayarlayın.",
   "unknownPlaceName": "Bilinmeyen Ad",
   "islamicPlaceFallback": "İslami Mekan",
   "asmaMeaning1": "Dünyadaki bütün yaratılmışlara merhamet eden, acıyan, esirgeyen.",

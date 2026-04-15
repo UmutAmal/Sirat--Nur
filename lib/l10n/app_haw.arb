@@ -764,5 +764,7 @@
   "quranLoadFailed": "ʻAʻole hiki ke hoʻouka ʻia ka ʻike Quran. E ʻoluʻolu e hoʻāʻo hou.",
   "locationDetectionFailed": "ʻAʻole hiki ke ʻike i kou wahi. E ʻoluʻolu e koho lima i ke kūlanakauhale a i ʻole e hoʻāʻo hou.",
   "qiblaLocationRequiredTitle": "Pono kahi wahi no Qibla",
-  "qiblaLocationRequiredBody": "E hoʻonoho i kou wahi maoli ma mua o ka hoʻohana ʻana i ka panana Qibla i hiki ke helu pololei ʻia ke kuhikuhi."
+  "qiblaLocationRequiredBody": "E hoʻonoho i kou wahi maoli ma mua o ka hoʻohana ʻana i ka panana Qibla i hiki ke helu pololei ʻia ke kuhikuhi.",
+  "placesDataSourceUnavailableTitle": "Loaʻa ʻole ka ʻikepili wahi",
+  "placesDataSourceUnavailableBody": "ʻAʻole i hoʻonohonoho ʻia kahi ʻikepili wahi i hōʻoia ʻia no kēia kūkulu ʻana. E hoʻonoho iā PLACES_OVERPASS_API_URL i kahi koho koho a mea hoʻolako i ʻāpono ʻia ma mua o ka hoʻā ʻana i ka hulina kokoke."
 }

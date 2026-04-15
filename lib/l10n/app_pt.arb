@@ -764,5 +764,7 @@
   "quranLoadFailed": "O conteúdo do Alcorão não pôde ser carregado. Por favor, tente novamente.",
   "locationDetectionFailed": "Não foi possível detectar sua localização. Escolha uma cidade manualmente ou tente novamente.",
   "qiblaLocationRequiredTitle": "Localização necessária para Qibla",
-  "qiblaLocationRequiredBody": "Defina sua localização real antes de usar a bússola Qibla para que a direção possa ser calculada com precisão."
+  "qiblaLocationRequiredBody": "Defina sua localização real antes de usar a bússola Qibla para que a direção possa ser calculada com precisão.",
+  "placesDataSourceUnavailableTitle": "Dados de lugares indisponíveis",
+  "placesDataSourceUnavailableBody": "Um endpoint de dados de locais verificados ainda não está configurado para esta compilação. Defina PLACES_OVERPASS_API_URL como um proxy ou provedor aprovado antes de ativar a pesquisa nas proximidades."
 }

@@ -1365,6 +1365,13 @@ class AppLocalizationsSa extends AppLocalizations {
       'अस्य निर्माणस्य कृते अद्यापि सत्यापितः मानचित्रटाइलस्रोतः विन्यस्तः नास्ति । समीपस्थानि स्थानानि अद्यापि भवतः रक्षितस्थानात् लोड् कर्तुं शक्नुवन्ति ।';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'दत्तांशं अनुपलब्धं स्थापयति';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+
+  @override
   String get unknownPlaceName => 'अज्ञात नाम';
 
   @override

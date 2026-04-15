@@ -1365,6 +1365,13 @@ class AppLocalizationsLb extends AppLocalizations {
       'Eng verifizéiert Kaartfliesquell ass nach net fir dëse Build konfiguréiert. Nopesch Plazen kënnen nach ëmmer vun Ärer gespäichert Plaz lueden.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Plaze Donnéeën net sinn';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'E verifizéiert Plaze Datenendpunkt ass nach net fir dëse Bau konfiguréiert. Setzt PLACES_OVERPASS_API_URL op e genehmegt Proxy oder Provider ier Dir Emgéigend Sich aktivéiert.';
+
+  @override
   String get unknownPlaceName => 'Onbekannt Numm';
 
   @override

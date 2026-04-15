@@ -1367,6 +1367,13 @@ class AppLocalizationsMg extends AppLocalizations {
       'Mbola tsy voarafitra ho an\'ity fananganana ity ny loharano misy sarintany voamarina. Mbola afaka misintona avy amin\'ny toerana voatahiry ny toerana akaiky anao.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Tsy misy angona toerana';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Mbola tsy voafefy ho an\'ity fananganana ity ny tondro fiafaran\'ny angona toerana voamarina. Mametraha PLACES_OVERPASS_API_URL amin\'ny proxy na mpanome ankatoavina alohan\'ny handefasana ny fikarohana eo akaiky eo.';
+
+  @override
   String get unknownPlaceName => 'Anarana tsy fantatra';
 
   @override

@@ -1385,6 +1385,14 @@ class AppLocalizationsAy extends AppLocalizations {
       'Mä chiqanchata mapa azulejo phuqhawix janiw aka lurañatakix wakicht’atäkiti. Jak’a chiqanakax waliw qhispiyat chiqat apkatasispa.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Ukax datos jan utjki ukanak uñt’ayi';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+
+  @override
   String get unknownPlaceName => 'Jan uñt’at Suti';
 
   @override

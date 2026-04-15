@@ -1363,6 +1363,13 @@ class AppLocalizationsHaw extends AppLocalizations {
       'ʻAʻole i hoʻonohonoho ʻia kahi kumu kile palapala ʻāina i hoʻopaʻa ʻia no kēia kūkulu ʻana. Hiki ke hoʻouka ʻia nā wahi kokoke mai kou wahi i mālama ʻia.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Loaʻa ʻole ka ʻikepili wahi';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'ʻAʻole i hoʻonohonoho ʻia kahi ʻikepili wahi i hōʻoia ʻia no kēia kūkulu ʻana. E hoʻonoho iā PLACES_OVERPASS_API_URL i kahi koho koho a mea hoʻolako i ʻāpono ʻia ma mua o ka hoʻā ʻana i ka hulina kokoke.';
+
+  @override
   String get unknownPlaceName => 'Inoa ʻike ʻole';
 
   @override

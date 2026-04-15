@@ -1365,6 +1365,14 @@ class AppLocalizationsEu extends AppLocalizations {
       'Egiaztatutako mapa-lauza-iturburua ez dago konfiguratuta oraindik konfigurazio honetarako. Inguruko tokiek gordetako kokapenetik karga daitezke oraindik.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Tokien datuak ez daude erabilgarri';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Egiaztatutako lekuen datuen amaiera-puntua ez dago konfiguratuta oraindik konfigurazio honetarako. Ezarri PLACES_OVERPASS_API_URL onartutako proxy edo hornitzaile batean inguruko bilaketa gaitu aurretik.';
+
+  @override
   String get unknownPlaceName => 'Izen ezezaguna';
 
   @override

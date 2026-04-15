@@ -2931,6 +2931,18 @@ abstract class AppLocalizations {
   /// **'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.'**
   String get placesMapTilesUnavailableBody;
 
+  /// No description provided for @placesDataSourceUnavailableTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Places data unavailable'**
+  String get placesDataSourceUnavailableTitle;
+
+  /// No description provided for @placesDataSourceUnavailableBody.
+  ///
+  /// In en, this message translates to:
+  /// **'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.'**
+  String get placesDataSourceUnavailableBody;
+
   /// No description provided for @unknownPlaceName.
   ///
   /// In en, this message translates to:

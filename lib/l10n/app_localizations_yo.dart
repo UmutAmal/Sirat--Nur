@@ -1360,6 +1360,13 @@ class AppLocalizationsYo extends AppLocalizations {
       'Orisun tile maapu ti a ti rii daju ko ni tunto fun kikọ yii sibẹsibẹ. Awọn aaye to wa nitosi tun le ṣajọpọ lati ipo ti o fipamọ.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Awọn aaye data ko si';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Ojuami ipari data ti a rii daju ko ni tunto fun kikọ yii sibẹsibẹ. Ṣeto PLACES_OVERPASS_API_URL si aṣoju tabi olupese ti a fọwọsi ṣaaju ṣiṣe wiwa nitosi.';
+
+  @override
   String get unknownPlaceName => 'Orukọ Aimọ';
 
   @override

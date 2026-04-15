@@ -764,5 +764,7 @@
   "quranLoadFailed": "Qabiyyeen Qur'aanaa fe'amuu hin dandeenye. Mee irra deebi'ii yaalaa.",
   "locationDetectionFailed": "Bakka jirtu adda baasuu hin dandeenye. Maaloo magaalaa harkaan filadhu ykn irra deebi'ii yaali.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "placesDataSourceUnavailableTitle": "Places data unavailable",
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
 }

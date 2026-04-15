@@ -1370,6 +1370,14 @@ class AppLocalizationsRo extends AppLocalizations {
       'O sursă de dale de hartă verificată nu este încă configurată pentru această versiune. Locațiile din apropiere se pot încărca în continuare din locația dvs. salvată.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Datele locațiilor nu sunt disponibile';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Un punct final de date pentru locații verificate nu este încă configurat pentru această versiune. Setați PLACES_OVERPASS_API_URL la un proxy sau un furnizor aprobat înainte de a activa căutarea în apropiere.';
+
+  @override
   String get unknownPlaceName => 'Nume necunoscut';
 
   @override

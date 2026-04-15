@@ -1365,6 +1365,13 @@ class AppLocalizationsLv extends AppLocalizations {
       'Verificēts kartes elementu avots šai būvei vēl nav konfigurēts. Netālu esošās vietas joprojām var ielādēt no jūsu saglabātās atrašanās vietas.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Vietu dati nav pieejami';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Verificēto vietu datu galapunkts šai būvei vēl nav konfigurēts. Pirms tuvumā esošās meklēšanas iespējošanas iestatiet vietni PLACES_OVERPASS_API_URL apstiprinātam starpniekserveri vai pakalpojumu sniedzējam.';
+
+  @override
   String get unknownPlaceName => 'Nezināms Vārds';
 
   @override

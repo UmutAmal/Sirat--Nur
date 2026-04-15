@@ -764,5 +764,7 @@
   "quranLoadFailed": "ትሕዝቶ ቁርኣን ክጽዓን ኣይከኣለን። በጃኹም ደጊምኩም ፈትኑ።",
   "locationDetectionFailed": "ኣቀማምጣኻ ክፈልጥ ኣይከኣለን። በጃኹም ብኢድኩም ከተማ ምረጹ ወይ ድማ እንደገና ፈትኑ።",
   "qiblaLocationRequiredTitle": "ንቂብላ ዘድሊ ቦታ",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "placesDataSourceUnavailableTitle": "ዳታ ኣብ ዘይርከብ ቦታ የቐምጥ",
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
 }

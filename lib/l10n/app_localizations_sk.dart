@@ -1365,6 +1365,14 @@ class AppLocalizationsSk extends AppLocalizations {
       'Overený zdroj dlaždíc mapy ešte nie je nakonfigurovaný pre túto zostavu. Miesta v okolí sa stále môžu načítať z vašej uloženej polohy.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Údaje o miestach nie sú k dispozícii';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Pre túto zostavu ešte nie je nakonfigurovaný koncový bod údajov overených miest. Pred povolením vyhľadávania v okolí nastavte PLACES_OVERPASS_API_URL na schváleného proxy alebo poskytovateľa.';
+
+  @override
   String get unknownPlaceName => 'Neznáme meno';
 
   @override

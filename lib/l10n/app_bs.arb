@@ -764,5 +764,7 @@
   "quranLoadFailed": "Sadržaj Kur'ana nije mogao biti učitan. Molimo pokušajte ponovo.",
   "locationDetectionFailed": "Nije moguće otkriti vašu lokaciju. Molimo odaberite grad ručno ili pokušajte ponovo.",
   "qiblaLocationRequiredTitle": "Lokacija je potrebna za Qibla",
-  "qiblaLocationRequiredBody": "Postavite svoju stvarnu lokaciju prije korištenja Qibla kompasa kako bi se smjer mogao točno izračunati."
+  "qiblaLocationRequiredBody": "Postavite svoju stvarnu lokaciju prije korištenja Qibla kompasa kako bi se smjer mogao točno izračunati.",
+  "placesDataSourceUnavailableTitle": "Podaci o mjestima nedostupni",
+  "placesDataSourceUnavailableBody": "Krajnja tačka podataka o potvrđenim mjestima još nije konfigurirana za ovu izgradnju. Postavite PLACES_OVERPAS_API_URL na odobreni proxy ili provajder prije nego što omogućite pretragu u blizini."
 }

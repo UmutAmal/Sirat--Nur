@@ -1360,6 +1360,13 @@ class AppLocalizationsTt extends AppLocalizations {
       'Тикшерелгән карта плиткасы чыганагы бу төзелеш өчен конфигурацияләнмәгән. Якындагы урыннар сезнең сакланган урыныгыздан йөкләнә ала.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Мәгълүматлар юк';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Тикшерелгән урыннар мәгълүмат ахыры бу төзелеш өчен конфигурацияләнмәгән. Якындагы эзләүне рөхсәт итәр алдыннан PLACES_OVERPASS_API_URL расланган прокси яки провайдерга куегыз.';
+
+  @override
   String get unknownPlaceName => 'Билгесез исем';
 
   @override

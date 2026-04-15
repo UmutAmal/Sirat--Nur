@@ -1360,6 +1360,14 @@ class AppLocalizationsKk extends AppLocalizations {
       'Тексерілген карта тақтасының көзі бұл құрастыру үшін әлі конфигурацияланбаған. Маңайдағы орындар сақталған орыннан әлі де жүктей алады.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Орындар деректері қолжетімді емес';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Тексерілген орындар деректерінің соңғы нүктесі бұл құрастыру үшін әлі конфигурацияланбаған. Маңайдағы іздеуді қоспас бұрын, PLACES_OVERPASS_API_URL мекенжайын бекітілген проксиге немесе провайдерге орнатыңыз.';
+
+  @override
   String get unknownPlaceName => 'Белгісіз аты';
 
   @override

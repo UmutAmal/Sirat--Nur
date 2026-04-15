@@ -1367,6 +1367,13 @@ class AppLocalizationsLt extends AppLocalizations {
       'Patvirtintas žemėlapio išklotinės šaltinis šiai versijai dar nesukonfigūruotas. Netoliese esančias vietas vis tiek galima įkelti iš jūsų išsaugotos vietos.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Vietų duomenys nepasiekiami';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Patvirtintų vietų duomenų galutinis taškas šiai versijai dar nesukonfigūruotas. Prieš įjungdami netoliese esančią paiešką, nustatykite PLACES_OVERPASS_API_URL patvirtintą tarpinį serverį arba teikėją.';
+
+  @override
   String get unknownPlaceName => 'Nežinomas vardas';
 
   @override

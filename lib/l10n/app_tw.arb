@@ -764,5 +764,7 @@
   "quranLoadFailed": "Wɔantumi amfa Quran mu nsɛm anhyɛ mu. Yɛsrɛ sɛ sɔ hwɛ bio.",
   "locationDetectionFailed": "Antumi anhu baabi a wowɔ. Yɛsrɛ sɛ fa nsa paw kurow bi anaa sɔ hwɛ bio.",
   "qiblaLocationRequiredTitle": "Beae ho hia ma Qibla",
-  "qiblaLocationRequiredBody": "Hyehye wo beae ankasa ansa na wode Qibla kompas no adi dwuma, sɛnea wɔbɛtumi abu kwan no pɛpɛɛpɛ."
+  "qiblaLocationRequiredBody": "Hyehye wo beae ankasa ansa na wode Qibla kompas no adi dwuma, sɛnea wɔbɛtumi abu kwan no pɛpɛɛpɛ.",
+  "placesDataSourceUnavailableTitle": "Places data unavailable",
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
 }

@@ -764,5 +764,7 @@
   "quranLoadFailed": "Korani yatadza kurodha. Ndapota edza zvakare.",
   "locationDetectionFailed": "Hatina kukwanisa kuona nzvimbo yako. Ndapota sarudza guta nemaoko kana edza zvakare.",
   "qiblaLocationRequiredTitle": "Nzvimbo inodiwa kuQibla",
-  "qiblaLocationRequiredBody": "Seta nzvimbo yako chaiyo usati washandisa kambasi yeQibla kuti gwara rigone kuverengerwa nemazvo."
+  "qiblaLocationRequiredBody": "Seta nzvimbo yako chaiyo usati washandisa kambasi yeQibla kuti gwara rigone kuverengerwa nemazvo.",
+  "placesDataSourceUnavailableTitle": "Data yenzvimbo haisipo",
+  "placesDataSourceUnavailableBody": "Nzvimbo dzakasimbiswa data yekupedzisira haisati yagadzirirwa kuvaka iyi. Isa PLACES_OVERPASS_API_URL kumumiririri akatenderwa kana mubatsiri usati wabvumira kutsvaga kuri pedyo."
 }

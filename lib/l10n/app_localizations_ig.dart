@@ -1361,6 +1361,13 @@ class AppLocalizationsIg extends AppLocalizations {
       'Ahaziri isi iyi taịlị maapụ akwadoro maka nrụpụta a. Ebe ndị dị nso ka nwere ike ibunye na ebe echekwara gị.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Ebe data adịghị';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Ahaziri ebe njedebe data akwadoro maka iwulite a. Tọọ PLACES_OVERPASS_API_URL ka ọ bụrụ onye nnọchi anya ma ọ bụ onye na-eweta akwadoro tupu ịmee ọchụchọ dị nso.';
+
+  @override
   String get unknownPlaceName => 'Aha amaghi ama';
 
   @override

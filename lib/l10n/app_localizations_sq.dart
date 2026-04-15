@@ -1366,6 +1366,14 @@ class AppLocalizationsSq extends AppLocalizations {
       'Një burim i verifikuar i pllakës së hartës nuk është konfiguruar ende për këtë ndërtim. Vendet në afërsi mund të ngarkohen ende nga vendndodhja jote e ruajtur.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Të dhënat e vendeve të padisponueshme';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Një pikë fundore e të dhënave të verifikuara të vendeve nuk është konfiguruar ende për këtë ndërtim. Cakto PLACES_OVERPASS_API_URL te një përfaqësues ose ofrues i miratuar përpara se të aktivizosh kërkimin në afërsi.';
+
+  @override
   String get unknownPlaceName => 'Emër i panjohur';
 
   @override

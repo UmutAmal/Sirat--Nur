@@ -1362,6 +1362,14 @@ class AppLocalizationsAz extends AppLocalizations {
       'Doğrulanmış xəritə mənbəsi hələ bu quruluş üçün konfiqurasiya edilməyib. Yaxınlıqdakı yerlər hələ də saxladığınız yerdən yükləyə bilər.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Yer məlumatları əlçatan deyil';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Doğrulanmış yerlər datasının son nöqtəsi bu quruluş üçün hələ konfiqurasiya edilməyib. Yaxınlıqda axtarışı aktiv etməzdən əvvəl PLACES_OVERPASS_API_URL-ni təsdiq edilmiş proksi və ya provayderə təyin edin.';
+
+  @override
   String get unknownPlaceName => 'Naməlum Ad';
 
   @override

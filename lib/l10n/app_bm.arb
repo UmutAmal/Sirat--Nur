@@ -764,5 +764,7 @@
   "quranLoadFailed": "Kuranɛ kɔnɔkow ma se ka doni. Aw ye aw jija ka segin a kan.",
   "locationDetectionFailed": "A ma se k’i sigiyɔrɔ dɔn. Aw ye dugu dɔ sugandi aw bolo fɛ walima aw k’a lajɛ kokura.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "placesDataSourceUnavailableTitle": "Places data unavailable",
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
 }

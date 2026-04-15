@@ -764,5 +764,7 @@
   "quranLoadFailed": "Likahare tsa Quran ha lia khona ho kenngoa. Ka kopo, leka hape.",
   "locationDetectionFailed": "Ha e khone ho bona sebaka sa hau. Ka kopo, khetha toropo ka bouena kapa u leke hape.",
   "qiblaLocationRequiredTitle": "Sebaka se hlokahalang bakeng sa Qibla",
-  "qiblaLocationRequiredBody": "Beha sebaka sa hau sa 'nete pele u sebelisa sesupa-tsela sa Qibla e le hore tataiso e ka baloa ka nepo."
+  "qiblaLocationRequiredBody": "Beha sebaka sa hau sa 'nete pele u sebelisa sesupa-tsela sa Qibla e le hore tataiso e ka baloa ka nepo.",
+  "placesDataSourceUnavailableTitle": "Lintlha tsa libaka ha li fumanehe",
+  "placesDataSourceUnavailableBody": "Qetello ea lintlha tsa libaka tse netefalitsoeng ha e so lokisoe molemong oa moaho ona hajoale. Beha PLACES_OVERPASS_API_URL ho moemeli kapa mofani ea lumelletsoeng pele o lumella patlo e haufi."
 }

@@ -764,5 +764,7 @@
   "quranLoadFailed": "Obsah Koránu sa nepodarilo načítať. Skúste to znova.",
   "locationDetectionFailed": "Nepodarilo sa zistiť vašu polohu. Vyberte mesto ručne alebo to skúste znova.",
   "qiblaLocationRequiredTitle": "Miesto požadované pre Qibla",
-  "qiblaLocationRequiredBody": "Pred použitím kompasu Qibla nastavte svoju skutočnú polohu, aby bolo možné presne vypočítať smer."
+  "qiblaLocationRequiredBody": "Pred použitím kompasu Qibla nastavte svoju skutočnú polohu, aby bolo možné presne vypočítať smer.",
+  "placesDataSourceUnavailableTitle": "Údaje o miestach nie sú k dispozícii",
+  "placesDataSourceUnavailableBody": "Pre túto zostavu ešte nie je nakonfigurovaný koncový bod údajov overených miest. Pred povolením vyhľadávania v okolí nastavte PLACES_OVERPASS_API_URL na schváleného proxy alebo poskytovateľa."
 }

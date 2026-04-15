@@ -1368,6 +1368,14 @@ class AppLocalizationsMt extends AppLocalizations {
       'Sors tal-madum tal-mappa vverifikat għadu mhux ikkonfigurat għal din il-bini. Postijiet fil-qrib xorta jistgħu jgħabbu mill-lokalità salvata tiegħek.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Id-data tal-postijiet mhix disponibbli';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Punt finali tad-dejta tal-postijiet verifikati għadu mhux ikkonfigurat għal din il-bini. Issettja PLACES_OVERPASS_API_URL għal proxy jew fornitur approvat qabel ma tippermetti t-tfittxija fil-qrib.';
+
+  @override
   String get unknownPlaceName => 'Isem Mhux Magħruf';
 
   @override

@@ -1367,6 +1367,14 @@ class AppLocalizationsPt extends AppLocalizations {
       'Uma origem de bloco de mapa verificada ainda não está configurada para esta compilação. Os lugares próximos ainda podem ser carregados a partir do seu local salvo.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Dados de lugares indisponíveis';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Um endpoint de dados de locais verificados ainda não está configurado para esta compilação. Defina PLACES_OVERPASS_API_URL como um proxy ou provedor aprovado antes de ativar a pesquisa nas proximidades.';
+
+  @override
   String get unknownPlaceName => 'Nome desconhecido';
 
   @override

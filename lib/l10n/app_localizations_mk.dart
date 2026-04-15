@@ -1365,6 +1365,14 @@ class AppLocalizationsMk extends AppLocalizations {
       'Потврден извор на плочка од карта сè уште не е конфигуриран за оваа верзија. Местата во близина сè уште може да се вчитаат од вашата зачувана локација.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Податоците за местата се недостапни';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Потврдена крајна точка за податоци за места сè уште не е конфигурирана за оваа верзија. Поставете PLACES_OVERPASS_API_URL на одобрен прокси или добавувач пред да овозможите пребарување во близина.';
+
+  @override
   String get unknownPlaceName => 'Непознато име';
 
   @override

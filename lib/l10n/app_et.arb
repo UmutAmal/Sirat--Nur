@@ -764,5 +764,7 @@
   "quranLoadFailed": "Koraani sisu ei saanud laadida. Palun proovi uuesti.",
   "locationDetectionFailed": "Teie asukohta ei õnnestunud tuvastada. Valige linn käsitsi või proovige uuesti.",
   "qiblaLocationRequiredTitle": "Qibla jaoks vajalik asukoht",
-  "qiblaLocationRequiredBody": "Enne Qibla kompassi kasutamist määrake oma tegelik asukoht, et suunda saaks täpselt arvutada."
+  "qiblaLocationRequiredBody": "Enne Qibla kompassi kasutamist määrake oma tegelik asukoht, et suunda saaks täpselt arvutada.",
+  "placesDataSourceUnavailableTitle": "Kohtade andmed pole saadaval",
+  "placesDataSourceUnavailableBody": "Kinnitatud kohtade andmete lõpp-punkt pole selle järgu jaoks veel konfigureeritud. Enne läheduses asuva otsingu lubamist määrake PLACES_OVERPASS_API_URL kinnitatud puhverserverile või pakkujale."
 }

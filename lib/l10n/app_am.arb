@@ -764,5 +764,7 @@
   "quranLoadFailed": "የቁርኣን ይዘት ሊጫን አልቻለም። እባክህ እንደገና ሞክር።",
   "locationDetectionFailed": "አካባቢህን ማወቅ አልተቻለም። እባክዎ ከተማን እራስዎ ይምረጡ ወይም እንደገና ይሞክሩ።",
   "qiblaLocationRequiredTitle": "ለቂብላ ቦታ ያስፈልጋል",
-  "qiblaLocationRequiredBody": "የቂብላ ኮምፓስን ከመጠቀምዎ በፊት ትክክለኛ ቦታዎን ያዘጋጁ አቅጣጫው በትክክል እንዲሰላ ያድርጉ።"
+  "qiblaLocationRequiredBody": "የቂብላ ኮምፓስን ከመጠቀምዎ በፊት ትክክለኛ ቦታዎን ያዘጋጁ አቅጣጫው በትክክል እንዲሰላ ያድርጉ።",
+  "placesDataSourceUnavailableTitle": "የቦታዎች ውሂብ አይገኝም",
+  "placesDataSourceUnavailableBody": "የተረጋገጠ የቦታዎች ውሂብ መጨረሻ ነጥብ ለዚህ ግንባታ ገና አልተዋቀረም። በአቅራቢያ ፍለጋን ከማንቃትዎ በፊት PLACES_OVERPASS_API_URL ወደ ተቀባይነት ያለው ተኪ ወይም አቅራቢ ያቀናብሩ።"
 }

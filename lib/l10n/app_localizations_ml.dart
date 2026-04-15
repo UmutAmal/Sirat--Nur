@@ -1365,6 +1365,13 @@ class AppLocalizationsMl extends AppLocalizations {
       'ഈ ബിൽഡിനായി പരിശോധിച്ച മാപ്പ് ടൈൽ ഉറവിടം ഇതുവരെ കോൺഫിഗർ ചെയ്‌തിട്ടില്ല. നിങ്ങളുടെ സംരക്ഷിച്ച ലൊക്കേഷനിൽ നിന്ന് സമീപ സ്ഥലങ്ങൾക്ക് തുടർന്നും ലോഡ് ചെയ്യാൻ കഴിയും.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'സ്ഥലങ്ങളുടെ ഡാറ്റ ലഭ്യമല്ല';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'ഈ ബിൽഡിനായി പരിശോധിച്ച സ്ഥലങ്ങളുടെ ഡാറ്റ എൻഡ്‌പോയിൻ്റ് ഇതുവരെ കോൺഫിഗർ ചെയ്‌തിട്ടില്ല. സമീപത്തുള്ള തിരയൽ പ്രവർത്തനക്ഷമമാക്കുന്നതിന് മുമ്പ് PLACES_OVERPASS_API_URL ഒരു അംഗീകൃത പ്രോക്സി അല്ലെങ്കിൽ ദാതാവായി സജ്ജമാക്കുക.';
+
+  @override
   String get unknownPlaceName => 'അജ്ഞാത നാമം';
 
   @override

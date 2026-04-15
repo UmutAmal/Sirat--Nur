@@ -764,5 +764,7 @@
   "quranLoadFailed": "قرآنی مواد لوڈ نہیں ہو سکا۔ براہ کرم دوبارہ کوشش کریں۔",
   "locationDetectionFailed": "آپ کے مقام کا پتہ نہیں چل سکا۔ براہ کرم دستی طور پر شہر کا انتخاب کریں یا دوبارہ کوشش کریں۔",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "قبلہ کمپاس استعمال کرنے سے پہلے اپنی اصل جگہ کا تعین کریں تاکہ سمت کا درست اندازہ لگایا جا سکے۔"
+  "qiblaLocationRequiredBody": "قبلہ کمپاس استعمال کرنے سے پہلے اپنی اصل جگہ کا تعین کریں تاکہ سمت کا درست اندازہ لگایا جا سکے۔",
+  "placesDataSourceUnavailableTitle": "مقامات کا ڈیٹا دستیاب نہیں ہے۔",
+  "placesDataSourceUnavailableBody": "ایک تصدیق شدہ مقامات کا ڈیٹا اینڈ پوائنٹ ابھی تک اس تعمیر کے لیے کنفیگر نہیں ہوا ہے۔ قریبی تلاش کو فعال کرنے سے پہلے PLACES_OVERPASS_API_URL کو منظور شدہ پراکسی یا فراہم کنندہ پر سیٹ کریں۔"
 }

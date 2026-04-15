@@ -15,6 +15,12 @@ enum PlaceCategory { mosque, halalFood, education }
 
 enum PlacesMapAvailability { ready, locationRequired, tileConfigRequired }
 
+enum PlacesDataAvailability {
+  ready,
+  locationRequired,
+  dataSourceConfigRequired,
+}
+
 LatLng? resolvePlacesAnchor(SettingsState settings) {
   final latitude = settings.latitude;
   final longitude = settings.longitude;
@@ -38,6 +44,31 @@ PlacesMapAvailability resolvePlacesMapAvailability(
   }
 
   return PlacesMapAvailability.ready;
+}
+
+PlacesDataAvailability resolvePlacesDataAvailability(
+  SettingsState settings, {
+  required String overpassApiUrl,
+}) {
+  if (resolvePlacesAnchor(settings) == null) {
+    return PlacesDataAvailability.locationRequired;
+  }
+
+  try {
+    resolvePlacesOverpassEndpoint(overpassApiUrl);
+  } on FormatException {
+    return PlacesDataAvailability.dataSourceConfigRequired;
+  }
+
+  return PlacesDataAvailability.ready;
+}
+
+bool canFetchPlaces(SettingsState settings, {required String overpassApiUrl}) {
+  return resolvePlacesDataAvailability(
+        settings,
+        overpassApiUrl: overpassApiUrl,
+      ) ==
+      PlacesDataAvailability.ready;
 }
 
 Uri resolvePlacesOverpassEndpoint(String rawEndpoint) {
@@ -242,7 +273,11 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
       final settings = ref.read(settingsProvider);
       final initialAnchor = resolvePlacesAnchor(settings);
       setState(() => _currentCenter = initialAnchor);
-      if (initialAnchor != null) {
+      if (initialAnchor != null &&
+          canFetchPlaces(
+            settings,
+            overpassApiUrl: SupabaseConfig.placesOverpassApiUrl,
+          )) {
         _fetchPlaces(initialAnchor, _selectedCategory);
       }
     });
@@ -250,6 +285,17 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
 
   Future<void> _fetchPlaces(LatLng center, PlaceCategory category) async {
     if (_isLoading) return;
+    if (!canFetchPlaces(
+      ref.read(settingsProvider),
+      overpassApiUrl: SupabaseConfig.placesOverpassApiUrl,
+    )) {
+      setState(() {
+        _places.clear();
+        _lastFetchCenter = null;
+      });
+      return;
+    }
+
     setState(() {
       _isLoading = true;
       _error = null;
@@ -300,7 +346,11 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
       _selectedCategory = cat;
       _places.clear(); // Clear old results immediately
     });
-    if (_currentCenter != null) {
+    if (_currentCenter != null &&
+        canFetchPlaces(
+          ref.read(settingsProvider),
+          overpassApiUrl: SupabaseConfig.placesOverpassApiUrl,
+        )) {
       _fetchPlaces(_currentCenter!, cat);
     }
   }
@@ -317,8 +367,8 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
     _mapController.move(p.place.position, 15.5);
   }
 
-  void _queueAnchorSync(LatLng? anchor) {
-    if (anchor == null || _isLoading || _anchorSyncQueued) {
+  void _queueAnchorSync(LatLng? anchor, {required bool canFetch}) {
+    if (anchor == null || !canFetch || _isLoading || _anchorSyncQueued) {
       return;
     }
 
@@ -336,6 +386,25 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
       setState(() => _currentCenter = anchor);
       _fetchPlaces(anchor, _selectedCategory);
     });
+  }
+
+  (String, String?, IconData) _buildPlacesEmptyStateCopy(
+    AppLocalizations l10n,
+    PlacesDataAvailability dataAvailability,
+  ) {
+    return switch (dataAvailability) {
+      PlacesDataAvailability.locationRequired => (
+        l10n.placesLocationRequiredTitle,
+        l10n.placesLocationRequiredBody,
+        Icons.location_off_rounded,
+      ),
+      PlacesDataAvailability.dataSourceConfigRequired => (
+        l10n.placesDataSourceUnavailableTitle,
+        l10n.placesDataSourceUnavailableBody,
+        Icons.cloud_off_rounded,
+      ),
+      PlacesDataAvailability.ready => (l10n.noResults, null, Icons.search_off),
+    };
   }
 
   Widget _buildMapUnavailableState(
@@ -403,13 +472,25 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
     final settings = ref.watch(settingsProvider);
     final anchor = resolvePlacesAnchor(settings);
     final tileUrlTemplate = SupabaseConfig.placesTileUrlTemplate;
+    final overpassApiUrl = SupabaseConfig.placesOverpassApiUrl;
     final mapAvailability = resolvePlacesMapAvailability(
       settings,
       tileUrlTemplate: tileUrlTemplate,
     );
+    final dataAvailability = resolvePlacesDataAvailability(
+      settings,
+      overpassApiUrl: overpassApiUrl,
+    );
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
-    _queueAnchorSync(anchor);
+    _queueAnchorSync(
+      anchor,
+      canFetch: dataAvailability == PlacesDataAvailability.ready,
+    );
+    final (emptyTitle, emptyBody, emptyIcon) = _buildPlacesEmptyStateCopy(
+      l10n,
+      dataAvailability,
+    );
 
     // Sort places by distance from current anchor (or last fetched center)
     final mapCenter = _currentCenter ?? anchor ?? _lastFetchCenter;
@@ -730,63 +811,61 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                               ),
                             )
                           : enrichedPlaces.isEmpty && !_isLoading
-                          ? Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    mapAvailability ==
-                                            PlacesMapAvailability
-                                                .locationRequired
-                                        ? Icons.location_off_rounded
-                                        : mapAvailability ==
-                                              PlacesMapAvailability
-                                                  .tileConfigRequired
-                                        ? Icons.map_rounded
-                                        : Icons.location_off_rounded,
-                                    size: 48,
-                                    color: Colors.grey.withValues(alpha: 0.5),
+                          ? LayoutBuilder(
+                              builder: (context, constraints) {
+                                final minHeight = constraints.maxHeight > 32
+                                    ? constraints.maxHeight - 32
+                                    : 0.0;
+
+                                return SingleChildScrollView(
+                                  padding: const EdgeInsets.symmetric(
+                                    vertical: 16,
                                   ),
-                                  const SizedBox(height: 16),
-                                  Text(
-                                    mapAvailability ==
-                                            PlacesMapAvailability
-                                                .locationRequired
-                                        ? l10n.placesLocationRequiredTitle
-                                        : mapAvailability ==
-                                              PlacesMapAvailability
-                                                  .tileConfigRequired
-                                        ? l10n.placesMapTilesUnavailableTitle
-                                        : l10n.noResults,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w700,
-                                      color: Colors.grey,
+                                  child: ConstrainedBox(
+                                    constraints: BoxConstraints(
+                                      minHeight: minHeight,
                                     ),
-                                  ),
-                                  if (mapAvailability !=
-                                      PlacesMapAvailability.ready) ...[
-                                    const SizedBox(height: 8),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 24,
-                                      ),
-                                      child: Text(
-                                        mapAvailability ==
-                                                PlacesMapAvailability
-                                                    .locationRequired
-                                            ? l10n.placesLocationRequiredBody
-                                            : l10n.placesMapTilesUnavailableBody,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          emptyIcon,
+                                          size: 48,
                                           color: Colors.grey.withValues(
-                                            alpha: 0.8,
+                                            alpha: 0.5,
                                           ),
                                         ),
-                                      ),
+                                        const SizedBox(height: 16),
+                                        Text(
+                                          emptyTitle,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                        if (emptyBody != null) ...[
+                                          const SizedBox(height: 8),
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                              horizontal: 24,
+                                            ),
+                                            child: Text(
+                                              emptyBody,
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                color: Colors.grey.withValues(
+                                                  alpha: 0.8,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ],
                                     ),
-                                  ],
-                                ],
-                              ),
+                                  ),
+                                );
+                              },
                             )
                           : ListView.separated(
                               controller: scrollController,

@@ -1360,6 +1360,13 @@ class AppLocalizationsSd extends AppLocalizations {
       'هڪ تصديق ٿيل نقشي جي ٽائل جو ماخذ اڃا تائين هن تعمير لاءِ ترتيب نه ڏنو ويو آهي. ويجھي جڳھون اڃا تائين توھان جي محفوظ ڪيل جڳھ تان لوڊ ڪري سگھن ٿيون.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'هنڌن جي ڊيٽا دستياب ناهي';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'هڪ تصديق ٿيل جڳهن جي ڊيٽا جي آخري پوائنٽ اڃا تائين هن تعمير لاء ترتيب نه ڏني وئي آهي. سيٽ ڪريو PLACES_OVERPASS_API_URL کي منظور ٿيل پراکسي يا فراهم ڪندڙ کي ويجھي ڳولا کي فعال ڪرڻ کان اڳ.';
+
+  @override
   String get unknownPlaceName => 'اڻڄاتل نالو';
 
   @override

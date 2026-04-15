@@ -1364,6 +1364,13 @@ class AppLocalizationsMs extends AppLocalizations {
       'Sumber jubin peta yang disahkan belum dikonfigurasikan untuk binaan ini lagi. Tempat berdekatan masih boleh dimuatkan dari lokasi anda yang disimpan.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Data tempat tidak tersedia';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Titik akhir data tempat yang disahkan belum dikonfigurasikan untuk binaan ini lagi. Tetapkan PLACES_OVERPASS_API_URL kepada proksi atau pembekal yang diluluskan sebelum mendayakan carian berdekatan.';
+
+  @override
   String get unknownPlaceName => 'Nama Tidak Diketahui';
 
   @override

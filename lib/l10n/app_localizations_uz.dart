@@ -1363,6 +1363,14 @@ class AppLocalizationsUz extends AppLocalizations {
       'Tasdiqlangan xaritalar manbasi hali bu tuzilish uchun sozlanmagan. Yaqin-atrofdagi joylar hali ham saqlangan joylashuvingizdan yuklanishi mumkin.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Joylar maʼlumotlari mavjud emas';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Tasdiqlangan joylar maʼlumotlarining soʻnggi nuqtasi bu tuzilish uchun hali sozlanmagan. Yaqin atrofdagi qidiruvni yoqishdan oldin PLACES_OVERPASS_API_URL manzilini tasdiqlangan proksi-server yoki provayderga sozlang.';
+
+  @override
   String get unknownPlaceName => 'Noma\'lum ism';
 
   @override

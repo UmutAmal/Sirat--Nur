@@ -334,6 +334,8 @@ bool _mustStaySingleLine(String key) {
       key == 'downloadPartiallyFinishedForReciter' ||
       key == 'diagnosticsQuranCloudTablesMissing' ||
       key == 'diagnosticsQuranCloudJuzMissing' ||
+      key == 'placesDataSourceUnavailableTitle' ||
+      key == 'placesDataSourceUnavailableBody' ||
       key == 'chatbotOfflineSwitched' ||
       key == 'chatbotLocalNoInfo';
 }

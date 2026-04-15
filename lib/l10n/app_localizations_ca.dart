@@ -1374,6 +1374,14 @@ class AppLocalizationsCa extends AppLocalizations {
       'Encara no s\'ha configurat una font de mosaic de mapa verificada per a aquesta compilació. Els llocs propers encara es poden carregar des de la ubicació desada.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Les dades de llocs no estan disponibles';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Un punt final de dades de llocs verificats encara no està configurat per a aquesta compilació. Estableix PLACES_OVERPASS_API_URL en un servidor intermediari o proveïdor aprovat abans d\'activar la cerca a prop.';
+
+  @override
   String get unknownPlaceName => 'Nom desconegut';
 
   @override

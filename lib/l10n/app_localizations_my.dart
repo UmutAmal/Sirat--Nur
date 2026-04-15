@@ -1369,6 +1369,13 @@ class AppLocalizationsMy extends AppLocalizations {
       'ဤတည်ဆောက်မှုအတွက် အတည်ပြုထားသော မြေပုံအကွက်အရင်းအမြစ်ကို မသတ်မှတ်ရသေးပါ။ အနီးတဝိုက်ရှိ နေရာများသည် သင်သိမ်းဆည်းထားသော တည်နေရာမှ စတင်နိုင်သေးသည်။';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'နေရာများ ဒေတာ မရနိုင်ပါ။';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'ဤတည်ဆောက်မှုအတွက် အတည်ပြုထားသော နေရာများဒေတာ အဆုံးမှတ်ကို မသတ်မှတ်ရသေးပါ။ အနီးနားရှိ ရှာဖွေမှုကို မဖွင့်မီ PLACES_OVERPASS_API_URL အား အတည်ပြုထားသော ပရောက်စီ သို့မဟုတ် ဝန်ဆောင်မှုပေးသူအဖြစ် သတ်မှတ်ပါ။';
+
+  @override
   String get unknownPlaceName => 'အမည်မသိ';
 
   @override

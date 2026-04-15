@@ -1359,6 +1359,13 @@ class AppLocalizationsAr extends AppLocalizations {
       'لم يتم تكوين مصدر تجانب الخريطة الذي تم التحقق منه لهذا الإصدار حتى الآن. لا يزال من الممكن تحميل الأماكن القريبة من موقعك المحفوظ.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'بيانات الأماكن غير متاحة';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'لم يتم تكوين نقطة نهاية بيانات الأماكن التي تم التحقق منها لهذا الإصدار حتى الآن. قم بتعيين PLACES_OVERPASS_API_URL على وكيل أو مزود معتمد قبل تمكين البحث القريب.';
+
+  @override
   String get unknownPlaceName => 'اسم غير معروف';
 
   @override

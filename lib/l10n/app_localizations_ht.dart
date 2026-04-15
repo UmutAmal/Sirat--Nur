@@ -1362,6 +1362,13 @@ class AppLocalizationsHt extends AppLocalizations {
       'Yon sous mozayik kat jeyografik verifye poko configuré pou konstriksyon sa a. Kote ki tou pre yo ka toujou chaje nan kote ou te sove yo.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Kote done yo pa disponib';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Yon pwen final done kote verifye poko konfigirasyon pou konstriksyon sa a. Mete PLACES_OVERPASS_API_URL sou yon proxy oswa yon founisè apwouve anvan ou pèmèt rechèch ki tou pre.';
+
+  @override
   String get unknownPlaceName => 'Non enkoni';
 
   @override

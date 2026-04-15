@@ -764,5 +764,7 @@
   "quranLoadFailed": "无法加载《古兰经》内容。请再试一次。",
   "locationDetectionFailed": "无法检测到您的位置。请手动选择城市或重试。",
   "qiblaLocationRequiredTitle": "朝拜所需地点",
-  "qiblaLocationRequiredBody": "在使用朝拜指南针之前设置您的实际位置，以便可以准确计算方向。"
+  "qiblaLocationRequiredBody": "在使用朝拜指南针之前设置您的实际位置，以便可以准确计算方向。",
+  "placesDataSourceUnavailableTitle": "地点数据不可用",
+  "placesDataSourceUnavailableBody": "尚未为此构建配置经过验证的地点数据端点。在启用附近搜索之前，将 PLACES_OVERPASS_API_URL 设置为已批准的代理或提供商。"
 }

@@ -1360,6 +1360,13 @@ class AppLocalizationsJv extends AppLocalizations {
       'Sumber kothak peta sing wis diverifikasi durung dikonfigurasi kanggo mbangun iki. Panggonan sing cedhak isih bisa dimuat saka lokasi sing disimpen.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Data panggonan ora kasedhiya';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Titik pungkasan data panggonan sing wis diverifikasi durung dikonfigurasi kanggo mbangun iki. Setel PLACES_OVERPASS_API_URL menyang proxy utawa panyedhiya sing disetujoni sadurunge ngaktifake panelusuran sing cedhak.';
+
+  @override
   String get unknownPlaceName => 'Jeneng sing ora dingerteni';
 
   @override

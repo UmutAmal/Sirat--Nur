@@ -1366,6 +1366,14 @@ class AppLocalizationsFi extends AppLocalizations {
       'Vahvistettua karttaruutulähdettä ei ole vielä määritetty tälle koontiversiolle. Läheiset paikat voivat silti ladata tallennetusta sijainnistasi.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Paikkatiedot eivät ole käytettävissä';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Vahvistettua paikkatietojen päätepistettä ei ole vielä määritetty tälle koontiversiolle. Aseta PLACES_OVERPASS_API_URL hyväksytylle välityspalvelimelle tai palveluntarjoajalle ennen kuin otat lähihaun käyttöön.';
+
+  @override
   String get unknownPlaceName => 'Tuntematon nimi';
 
   @override

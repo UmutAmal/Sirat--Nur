@@ -1367,6 +1367,14 @@ class AppLocalizationsXh extends AppLocalizations {
       'Umthombo wethayile wemephu oqinisekisiweyo awukalungiselelwanga olu lwakhiwo okwangoku. Iindawo ezikufuphi zisengalayisha kwindawo yakho egciniweyo.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Idatha yeendawo ayifumanekiyo';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Indawo engqinisisiweyo yokuphela kwedatha ayilungiselelwanga kolu lwakhiwo okwangoku. Cwangcisa PLACES_OVERPASS_API_URL kummeli ovunyiweyo okanye umboneleli phambi kokuvumela ukhangelo olukufutshane.';
+
+  @override
   String get unknownPlaceName => 'Igama elingaziwayo';
 
   @override

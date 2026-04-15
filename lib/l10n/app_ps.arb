@@ -764,5 +764,7 @@
   "quranLoadFailed": "د قرآن محتوا نشي پورته کولی. مهرباني وکړئ بیا هڅه وکړئ.",
   "locationDetectionFailed": "ستاسو ځای نشی معلومولی. مهرباني وکړئ په لاسي ډول یو ښار وټاکئ یا بیا هڅه وکړئ.",
   "qiblaLocationRequiredTitle": "د قبلې لپاره ځای اړین دی",
-  "qiblaLocationRequiredBody": "د قبلې کمپاس کارولو دمخه خپل اصلي ځای وټاکئ ترڅو سمت په دقیق ډول محاسبه شي."
+  "qiblaLocationRequiredBody": "د قبلې کمپاس کارولو دمخه خپل اصلي ځای وټاکئ ترڅو سمت په دقیق ډول محاسبه شي.",
+  "placesDataSourceUnavailableTitle": "د ځایونو ډاټا شتون نلري",
+  "placesDataSourceUnavailableBody": "د تایید شوي ځایونو ډیټا پای ټکی لاهم د دې جوړونې لپاره نه دی ترتیب شوی. د نږدې لټون فعالولو دمخه PLACES_OVERPASS_API_URL یو منظور شوي پراکسي یا چمتو کونکي ته تنظیم کړئ."
 }

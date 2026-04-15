@@ -1368,6 +1368,14 @@ class AppLocalizationsSt extends AppLocalizations {
       'Mohloli o netefalitsoeng oa lithaele ha o so lokisoe molemong oa moaho ona hajoale. Libaka tse haufi li ntse li ka bula ho tsoa sebakeng sa hau se bolokiloeng.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Lintlha tsa libaka ha li fumanehe';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Qetello ea lintlha tsa libaka tse netefalitsoeng ha e so lokisoe molemong oa moaho ona hajoale. Beha PLACES_OVERPASS_API_URL ho moemeli kapa mofani ea lumelletsoeng pele o lumella patlo e haufi.';
+
+  @override
   String get unknownPlaceName => 'Lebitso le sa Tsejweng';
 
   @override

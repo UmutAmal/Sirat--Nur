@@ -764,5 +764,7 @@
   "quranLoadFailed": "Ang sulod sa Quran dili makarga. Palihug sulayi pag-usab.",
   "locationDetectionFailed": "Dili makit-an ang imong lokasyon. Palihug pagpili ug siyudad sa mano-mano o sulayi pag-usab.",
   "qiblaLocationRequiredTitle": "Lokasyon gikinahanglan para sa Qibla",
-  "qiblaLocationRequiredBody": "Ibutang ang imong aktuwal nga lokasyon sa dili pa gamiton ang Qibla compass aron ang direksyon makalkula sa tukma."
+  "qiblaLocationRequiredBody": "Ibutang ang imong aktuwal nga lokasyon sa dili pa gamiton ang Qibla compass aron ang direksyon makalkula sa tukma.",
+  "placesDataSourceUnavailableTitle": "Dili magamit ang datos sa mga lugar",
+  "placesDataSourceUnavailableBody": "Ang usa ka napamatud-an nga mga lugar nga endpoint sa data wala pa ma-configure alang niini nga pagtukod. Ibutang ang PLACES_OVERPASS_API_URL sa usa ka aprobahan nga proxy o provider sa dili pa i-enable ang duol nga pagpangita."
 }

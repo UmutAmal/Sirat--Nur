@@ -1363,6 +1363,13 @@ class AppLocalizationsLa extends AppLocalizations {
       'Fons tegularum chartarum certificatus non configuratur ad hoc adhuc constructum. Loca vicina adhuc onerare possunt ex loco servato tuo.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Loca notitia unavailable';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Loca veri- ta notitia terminorum non configuratur ad hoc adhuc constructum. PLACES_OVERPASS_API_URL ad probatum procuratorem vel provisorem pone antequam inquisitionem proximam capias.';
+
+  @override
   String get unknownPlaceName => 'Nomen ignotum';
 
   @override

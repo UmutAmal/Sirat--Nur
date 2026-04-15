@@ -1369,6 +1369,13 @@ class AppLocalizationsOr extends AppLocalizations {
       'ଏହି ବିଲ୍ଡ ପାଇଁ ଏକ ଯାଞ୍ଚ ହୋଇଥିବା ମାନଚିତ୍ର ଟାଇଲ୍ ଉତ୍ସ ଏପର୍ଯ୍ୟନ୍ତ ବିନ୍ୟାସ ହୋଇନାହିଁ | ନିକଟସ୍ଥ ସ୍ଥାନଗୁଡିକ ତଥାପି ଆପଣଙ୍କର ସଞ୍ଚିତ ସ୍ଥାନରୁ ଲୋଡ୍ ହୋଇପାରେ |';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'ତଥ୍ୟ ଉପଲବ୍ଧ ନାହିଁ |';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'ଏକ ଯାଞ୍ଚ ହୋଇଥିବା ସ୍ଥାନ ଡାଟା ଏଣ୍ଡପଏଣ୍ଟ ଏପର୍ଯ୍ୟନ୍ତ ଏହି ବିଲ୍ଡ ପାଇଁ ବିନ୍ୟାସ ହୋଇନାହିଁ | ନିକଟସ୍ଥ ସନ୍ଧାନକୁ ସକ୍ଷମ କରିବା ପୂର୍ବରୁ PLACES_OVERPASS_API_URL କୁ ଏକ ଅନୁମୋଦିତ ପ୍ରକ୍ସି କିମ୍ବା ପ୍ରଦାନକାରୀକୁ ସେଟ୍ କରନ୍ତୁ |';
+
+  @override
   String get unknownPlaceName => 'ଅଜ୍ଞାତ ନାମ |';
 
   @override

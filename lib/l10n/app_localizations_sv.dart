@@ -1362,6 +1362,14 @@ class AppLocalizationsSv extends AppLocalizations {
       'En verifierad kartbrickakälla är inte konfigurerad för den här versionen ännu. Platser i närheten kan fortfarande laddas från din sparade plats.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Platsdata är inte tillgänglig';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'En verifierad platsdataslutpunkt är inte konfigurerad för den här versionen ännu. Ställ in PLACES_OVERPASS_API_URL till en godkänd proxy eller leverantör innan du aktiverar sökning i närheten.';
+
+  @override
   String get unknownPlaceName => 'Okänt namn';
 
   @override

@@ -1364,6 +1364,13 @@ class AppLocalizationsPa extends AppLocalizations {
       'ਇੱਕ ਪ੍ਰਮਾਣਿਤ ਨਕਸ਼ਾ ਟਾਇਲ ਸਰੋਤ ਅਜੇ ਤੱਕ ਇਸ ਬਿਲਡ ਲਈ ਕੌਂਫਿਗਰ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ। ਨੇੜਲੇ ਸਥਾਨ ਅਜੇ ਵੀ ਤੁਹਾਡੇ ਸੁਰੱਖਿਅਤ ਕੀਤੇ ਟਿਕਾਣੇ ਤੋਂ ਲੋਡ ਹੋ ਸਕਦੇ ਹਨ।';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'ਸਥਾਨਾਂ ਦਾ ਡਾਟਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'ਇੱਕ ਪ੍ਰਮਾਣਿਤ ਸਥਾਨ ਡੇਟਾ ਅੰਤਮ ਬਿੰਦੂ ਅਜੇ ਇਸ ਬਿਲਡ ਲਈ ਕੌਂਫਿਗਰ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ। ਨਜ਼ਦੀਕੀ ਖੋਜ ਨੂੰ ਸਮਰੱਥ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ PLACES_OVERPASS_API_URL ਨੂੰ ਇੱਕ ਪ੍ਰਵਾਨਿਤ ਪ੍ਰੌਕਸੀ ਜਾਂ ਪ੍ਰਦਾਤਾ ਲਈ ਸੈੱਟ ਕਰੋ।';
+
+  @override
   String get unknownPlaceName => 'ਅਗਿਆਤ ਨਾਮ';
 
   @override

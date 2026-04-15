@@ -1362,6 +1362,13 @@ class AppLocalizationsSi extends AppLocalizations {
       'මෙම ගොඩනැගීම සඳහා සත්‍යාපිත සිතියම් ටයිල් මූලාශ්‍රයක් තවම වින්‍යාස කර නොමැත. අවට ස්ථාන තවමත් ඔබගේ සුරැකි ස්ථානයෙන් පූරණය කළ හැක.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'ස්ථාන දත්ත නොමැත';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'මෙම ගොඩනැගීම සඳහා සත්‍යාපිත ස්ථාන දත්ත අන්ත ලක්ෂ්‍යයක් තවම වින්‍යාස කර නොමැත. අවට සෙවීම සක්‍රීය කිරීමට පෙර PLACES_OVERPASS_API_URL අනුමත ප්‍රොක්සියක් හෝ සපයන්නෙකු ලෙස සකසන්න.';
+
+  @override
   String get unknownPlaceName => 'නොදන්නා නම';
 
   @override

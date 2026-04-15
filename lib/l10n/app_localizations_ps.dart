@@ -1361,6 +1361,13 @@ class AppLocalizationsPs extends AppLocalizations {
       'د دې جوړونې لپاره د تایید شوي نقشې ټایل سرچینه لا نه ده ترتیب شوې. نږدې ځایونه لاهم ستاسو له خوندي شوي ځای څخه بار کولی شي.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'د ځایونو ډاټا شتون نلري';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'د تایید شوي ځایونو ډیټا پای ټکی لاهم د دې جوړونې لپاره نه دی ترتیب شوی. د نږدې لټون فعالولو دمخه PLACES_OVERPASS_API_URL یو منظور شوي پراکسي یا چمتو کونکي ته تنظیم کړئ.';
+
+  @override
   String get unknownPlaceName => 'نامعلوم نوم';
 
   @override

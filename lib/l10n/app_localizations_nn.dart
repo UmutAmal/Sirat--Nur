@@ -1365,6 +1365,13 @@ class AppLocalizationsNn extends AppLocalizations {
       'En bekreftet kartbrikkekilde er ikke konfigurert for denne versjonen ennå. Steder i nærheten kan fortsatt lastes inn fra det lagrede stedet.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Stedsdata er utilgjengelige';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Et verifisert stedsdataendepunkt er ikke konfigurert for denne versjonen ennå. Sett PLACES_OVERPASS_API_URL til en godkjent proxy eller leverandør før du aktiverer søk i nærheten.';
+
+  @override
   String get unknownPlaceName => 'Ukjent navn';
 
   @override

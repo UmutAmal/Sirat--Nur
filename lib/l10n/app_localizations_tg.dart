@@ -1364,6 +1364,13 @@ class AppLocalizationsTg extends AppLocalizations {
       'Манбаи сафҳаи тасдиқшудаи харита барои ин сохтмон ҳанӯз танзим нашудааст. Ҷойҳои ҳамсоя ҳоло ҳам метавонанд аз макони захирашудаи шумо бор кунанд.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Маълумоти ҷойҳо дастрас нест';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Нуқтаи ниҳоии маълумотҳои тасдиқшудаи ҷойҳо барои ин сохтмон ҳанӯз танзим нашудааст. Пеш аз фаъол кардани ҷустуҷӯи наздик PLACES_OVERPASS_API_URL-ро ба прокси ё провайдери тасдиқшуда насб кунед.';
+
+  @override
   String get unknownPlaceName => 'Номи номаълум';
 
   @override

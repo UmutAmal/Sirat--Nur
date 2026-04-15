@@ -1361,6 +1361,13 @@ class AppLocalizationsNe extends AppLocalizations {
       'यो निर्माणको लागि प्रमाणित नक्सा टाइल स्रोत अझै कन्फिगर गरिएको छैन। नजिकैका ठाउँहरू अझै पनि तपाईंको सुरक्षित स्थानबाट लोड हुन सक्छन्।';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'स्थान डेटा उपलब्ध छैन';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'यो निर्माणको लागि प्रमाणित ठाउँहरूको डेटा अन्त्य बिन्दु अझै कन्फिगर गरिएको छैन। नजिकैको खोज सक्षम गर्नु अघि PLACES_OVERPASS_API_URL लाई अनुमोदित प्रोक्सी वा प्रदायकमा सेट गर्नुहोस्।';
+
+  @override
   String get unknownPlaceName => 'अज्ञात नाम';
 
   @override

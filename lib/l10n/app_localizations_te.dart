@@ -1365,6 +1365,13 @@ class AppLocalizationsTe extends AppLocalizations {
       'ఈ బిల్డ్ కోసం ధృవీకరించబడిన మ్యాప్ టైల్ మూలం ఇంకా కాన్ఫిగర్ చేయబడలేదు. మీరు సేవ్ చేసిన స్థానం నుండి సమీప స్థలాలు ఇప్పటికీ లోడ్ అవుతాయి.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'స్థలాల డేటా అందుబాటులో లేదు';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'ఈ బిల్డ్ కోసం ధృవీకరించబడిన స్థలాల డేటా ముగింపు పాయింట్ ఇంకా కాన్ఫిగర్ చేయబడలేదు. సమీపంలోని శోధనను ప్రారంభించే ముందు PLACES_OVERPASS_API_URLని ఆమోదించబడిన ప్రాక్సీ లేదా ప్రొవైడర్‌కి సెట్ చేయండి.';
+
+  @override
   String get unknownPlaceName => 'తెలియని పేరు';
 
   @override

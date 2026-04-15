@@ -1366,6 +1366,14 @@ class AppLocalizationsPl extends AppLocalizations {
       'Zweryfikowane źródło kafelków mapy nie zostało jeszcze skonfigurowane dla tej kompilacji. Miejsca w pobliżu można nadal wczytywać z zapisanej lokalizacji.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Dane o miejscach są niedostępne';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Punkt końcowy danych zweryfikowanych miejsc nie jest jeszcze skonfigurowany dla tej kompilacji. Przed włączeniem wyszukiwania w pobliżu ustaw PLACES_OVERPASS_API_URL na zatwierdzonego proxy lub dostawcę.';
+
+  @override
   String get unknownPlaceName => 'Nieznane imię';
 
   @override

@@ -764,5 +764,7 @@
   "quranLoadFailed": "Koraninnehåll kunde inte laddas. Försök igen.",
   "locationDetectionFailed": "Kunde inte identifiera din plats. Välj en stad manuellt eller försök igen.",
   "qiblaLocationRequiredTitle": "Plats krävs för Qibla",
-  "qiblaLocationRequiredBody": "Ställ in din faktiska plats innan du använder Qibla-kompassen så att riktningen kan beräknas korrekt."
+  "qiblaLocationRequiredBody": "Ställ in din faktiska plats innan du använder Qibla-kompassen så att riktningen kan beräknas korrekt.",
+  "placesDataSourceUnavailableTitle": "Platsdata är inte tillgänglig",
+  "placesDataSourceUnavailableBody": "En verifierad platsdataslutpunkt är inte konfigurerad för den här versionen ännu. Ställ in PLACES_OVERPASS_API_URL till en godkänd proxy eller leverantör innan du aktiverar sökning i närheten."
 }

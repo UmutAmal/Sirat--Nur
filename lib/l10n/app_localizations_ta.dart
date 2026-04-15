@@ -1368,6 +1368,13 @@ class AppLocalizationsTa extends AppLocalizations {
       'சரிபார்க்கப்பட்ட வரைபட ஓடு மூலமானது இந்தக் கட்டமைப்பிற்கு இன்னும் உள்ளமைக்கப்படவில்லை. நீங்கள் சேமித்த இடத்திலிருந்து அருகிலுள்ள இடங்கள் இன்னும் ஏற்றப்படலாம்.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'இடங்களின் தரவு கிடைக்கவில்லை';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'சரிபார்க்கப்பட்ட இடங்களின் தரவு இறுதிப்புள்ளி இன்னும் இந்தக் கட்டமைப்பிற்கு உள்ளமைக்கப்படவில்லை. அருகிலுள்ள தேடலை இயக்கும் முன், PLACES_OVERPASS_API_URL ஐ அங்கீகரிக்கப்பட்ட ப்ராக்ஸி அல்லது வழங்குநராக அமைக்கவும்.';
+
+  @override
   String get unknownPlaceName => 'தெரியாத பெயர்';
 
   @override

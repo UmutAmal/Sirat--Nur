@@ -1363,6 +1363,14 @@ class AppLocalizationsUg extends AppLocalizations {
       'بۇ قۇرۇلۇش ئۈچۈن دەلىللەنگەن خەرىتە كاھىش مەنبەسى تېخى سەپلەنمىگەن. يېقىن جايلار يەنىلا ساقلانغان ئورنىڭىزدىن يۈكلىيەلەيدۇ.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'سانلىق مەلۇماتلارنى ئىشلەتكىلى بولمايدۇ';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'دەلىللەنگەن ئورۇنلارنىڭ سانلىق مەلۇمات نۇقتىسى بۇ قۇرۇلۇش ئۈچۈن تېخى تەڭشەلمىگەن. يېقىن ئەتراپتىكى ئىزدەشنى قوزغىتىشتىن بۇرۇن PLACES_OVERPASS_API_URL نى تەستىقلانغان ۋاكالەتچى ياكى تەمىنلىگۈچىگە تەڭشەڭ.';
+
+  @override
   String get unknownPlaceName => 'نامەلۇم ئىسىم';
 
   @override

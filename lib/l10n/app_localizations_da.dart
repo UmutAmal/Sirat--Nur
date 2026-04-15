@@ -1365,6 +1365,13 @@ class AppLocalizationsDa extends AppLocalizations {
       'En bekræftet kortfeltkilde er ikke konfigureret til denne build endnu. Steder i nærheden kan stadig indlæses fra din gemte placering.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Stedsdata er utilgængelige';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Et verificeret steds dataendepunkt er ikke konfigureret til denne build endnu. Indstil PLACES_OVERPASS_API_URL til en godkendt proxy eller udbyder, før du aktiverer søgning i nærheden.';
+
+  @override
   String get unknownPlaceName => 'Ukendt navn';
 
   @override

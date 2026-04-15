@@ -1364,6 +1364,13 @@ class AppLocalizationsEt extends AppLocalizations {
       'Kinnitatud kaardipaani allikat pole selle järgu jaoks veel konfigureeritud. Läheduses olevaid kohti saab siiski laadida teie salvestatud asukohast.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Kohtade andmed pole saadaval';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Kinnitatud kohtade andmete lõpp-punkt pole selle järgu jaoks veel konfigureeritud. Enne läheduses asuva otsingu lubamist määrake PLACES_OVERPASS_API_URL kinnitatud puhverserverile või pakkujale.';
+
+  @override
   String get unknownPlaceName => 'Tundmatu nimi';
 
   @override

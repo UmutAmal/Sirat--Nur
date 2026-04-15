@@ -1373,6 +1373,14 @@ class AppLocalizationsFr extends AppLocalizations {
       'Une source de tuiles de carte vérifiée n’est pas encore configurée pour cette version. Les lieux à proximité peuvent toujours être chargés à partir de votre position enregistrée.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Données sur les lieux indisponibles';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Un point de terminaison de données de lieux vérifiés n’est pas encore configuré pour cette version. Définissez PLACES_OVERPASS_API_URL sur un proxy ou un fournisseur approuvé avant d\'activer la recherche à proximité.';
+
+  @override
   String get unknownPlaceName => 'Nom inconnu';
 
   @override

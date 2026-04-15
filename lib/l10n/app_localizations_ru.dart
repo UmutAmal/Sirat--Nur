@@ -1369,6 +1369,13 @@ class AppLocalizationsRu extends AppLocalizations {
       'Подтвержденный источник фрагментов карты еще не настроен для этой сборки. Места поблизости по-прежнему могут загружаться из сохраненного вами местоположения.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Данные о местах недоступны.';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Конечная точка данных проверенных мест еще не настроена для этой сборки. Прежде чем включать поиск поблизости, установите для PLACES_OVERPASS_API_URL утвержденный прокси-сервер или поставщика.';
+
+  @override
   String get unknownPlaceName => 'Неизвестное имя';
 
   @override

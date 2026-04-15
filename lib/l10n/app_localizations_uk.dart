@@ -1365,6 +1365,13 @@ class AppLocalizationsUk extends AppLocalizations {
       'Перевірене джерело плитки карти ще не налаштовано для цієї збірки. Місця поблизу можуть завантажуватися зі збереженого місцезнаходження.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Дані про місця недоступні';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Перевірену кінцеву точку даних місць ще не налаштовано для цієї збірки. Установіть PLACES_OVERPASS_API_URL на затверджений проксі-сервер або постачальника, перш ніж увімкнути пошук поблизу.';
+
+  @override
   String get unknownPlaceName => 'Невідоме ім\'я';
 
   @override

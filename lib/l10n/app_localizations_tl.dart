@@ -1373,6 +1373,14 @@ class AppLocalizationsTl extends AppLocalizations {
       'Ang isang na-verify na pinagmulan ng tile ng mapa ay hindi pa naka-configure para sa build na ito. Maaari pa ring mag-load ang mga kalapit na lugar mula sa iyong naka-save na lokasyon.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Hindi available ang data ng mga lugar';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Ang isang na-verify na endpoint ng data ng mga lugar ay hindi pa naka-configure para sa build na ito. Itakda ang PLACES_OVERPASS_API_URL sa isang aprubadong proxy o provider bago i-enable ang paghahanap sa malapit.';
+
+  @override
   String get unknownPlaceName => 'Hindi Kilalang Pangalan';
 
   @override

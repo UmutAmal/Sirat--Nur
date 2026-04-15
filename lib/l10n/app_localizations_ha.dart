@@ -1364,6 +1364,13 @@ class AppLocalizationsHa extends AppLocalizations {
       'Ba a saita ingantaccen tushen tayal taswira don wannan ginin ba tukuna. Wuraren da ke kusa za su iya ɗauka daga wurin da aka ajiye.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Babu bayanan wuraren';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Ba a saita madaidaitan wuraren ƙarshen bayanan don wannan ginin ba tukuna. Saita PLACES_OVERPASS_API_URL zuwa amintaccen wakili ko mai bayarwa kafin kunna bincike na kusa.';
+
+  @override
   String get unknownPlaceName => 'Sunan da ba a sani ba';
 
   @override

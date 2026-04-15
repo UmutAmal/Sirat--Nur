@@ -1366,6 +1366,13 @@ class AppLocalizationsTr extends AppLocalizations {
       'Bu sürüm için doğrulanmış bir harita katman kaynağı henüz yapılandırılmadı. Yakındaki mekanlar yine de kayıtlı konumunuzdan yüklenebilir.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Mekan verisi kullanılamıyor';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Bu sürüm için doğrulanmış bir mekan verisi uç noktası henüz yapılandırılmadı. Yakındaki aramayı açmadan önce PLACES_OVERPASS_API_URL değerini onaylı bir proxy veya sağlayıcıya ayarlayın.';
+
+  @override
   String get unknownPlaceName => 'Bilinmeyen Ad';
 
   @override

@@ -1363,6 +1363,13 @@ class AppLocalizationsId extends AppLocalizations {
       'Sumber ubin peta terverifikasi belum dikonfigurasi untuk build ini. Tempat-tempat terdekat masih dapat dimuat dari lokasi tersimpan Anda.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Data tempat tidak tersedia';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Titik akhir data tempat terverifikasi belum dikonfigurasi untuk build ini. Setel PLACES_OVERPASS_API_URL ke proksi atau penyedia yang disetujui sebelum mengaktifkan penelusuran terdekat.';
+
+  @override
   String get unknownPlaceName => 'Nama Tidak Diketahui';
 
   @override

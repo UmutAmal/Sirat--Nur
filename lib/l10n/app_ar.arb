@@ -764,5 +764,7 @@
   "quranLoadFailed": "لا يمكن تحميل محتوى القرآن. يرجى المحاولة مرة أخرى.",
   "locationDetectionFailed": "لا يمكن الكشف عن موقعك. يرجى اختيار المدينة يدويًا أو حاول مرة أخرى.",
   "qiblaLocationRequiredTitle": "الموقع المطلوب للقبلة",
-  "qiblaLocationRequiredBody": "قم بتعيين موقعك الفعلي قبل استخدام بوصلة القبلة حتى يمكن حساب الاتجاه بدقة."
+  "qiblaLocationRequiredBody": "قم بتعيين موقعك الفعلي قبل استخدام بوصلة القبلة حتى يمكن حساب الاتجاه بدقة.",
+  "placesDataSourceUnavailableTitle": "بيانات الأماكن غير متاحة",
+  "placesDataSourceUnavailableBody": "لم يتم تكوين نقطة نهاية بيانات الأماكن التي تم التحقق منها لهذا الإصدار حتى الآن. قم بتعيين PLACES_OVERPASS_API_URL على وكيل أو مزود معتمد قبل تمكين البحث القريب."
 }

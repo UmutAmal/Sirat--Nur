@@ -55,10 +55,10 @@ flutter build apk \
   --dart-define=SUPABASE_ANON_KEY=sb_... \
   --dart-define=SUPABASE_QURAN_AUDIO_BUCKET=quran-audio \
   --dart-define=PLACES_TILE_URL_TEMPLATE=https://tiles.example.com/{z}/{x}/{y}.png \
-  --dart-define=PLACES_OVERPASS_API_URL=https://overpass-api.de/api/interpreter
+  --dart-define=PLACES_OVERPASS_API_URL=https://places-proxy.example.com/api/interpreter
 ```
 
-`PLACES_TILE_URL_TEMPLATE` is intentionally empty by default. Without it, the Places screen shows an honest map-unavailable state instead of silently using a public tile server. `PLACES_OVERPASS_API_URL` defaults to the public Overpass endpoint for development, but production can point it at a monitored proxy or approved provider.
+`PLACES_TILE_URL_TEMPLATE` is intentionally empty by default. Without it, the Places screen shows an honest map-unavailable state instead of silently using a public tile server. `PLACES_OVERPASS_API_URL` is also intentionally empty by default; configure it with a monitored proxy, an approved provider, or your own rate-limited Overpass-compatible endpoint before enabling nearby search in production.
 
 ## Quran Audio Sovereignty Workflow
 The runtime prefers Supabase Storage-backed `storage_path` rows over external audio URLs. Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded to the `quran-audio` bucket.

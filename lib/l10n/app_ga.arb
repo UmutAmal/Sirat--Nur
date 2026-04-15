@@ -764,5 +764,7 @@
   "quranLoadFailed": "Níorbh fhéidir ábhar an Quran a lódáil. Bain triail eile as.",
   "locationDetectionFailed": "Níorbh fhéidir do shuíomh a bhrath. Roghnaigh cathair de láimh nó bain triail eile as.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "placesDataSourceUnavailableTitle": "Places data unavailable",
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
 }

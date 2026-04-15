@@ -1364,6 +1364,14 @@ class AppLocalizationsUr extends AppLocalizations {
       'ایک تصدیق شدہ نقشہ ٹائل ماخذ ابھی تک اس تعمیر کے لیے کنفیگر نہیں کیا گیا ہے۔ قریبی مقامات اب بھی آپ کے محفوظ کردہ مقام سے لوڈ ہو سکتے ہیں۔';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'مقامات کا ڈیٹا دستیاب نہیں ہے۔';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'ایک تصدیق شدہ مقامات کا ڈیٹا اینڈ پوائنٹ ابھی تک اس تعمیر کے لیے کنفیگر نہیں ہوا ہے۔ قریبی تلاش کو فعال کرنے سے پہلے PLACES_OVERPASS_API_URL کو منظور شدہ پراکسی یا فراہم کنندہ پر سیٹ کریں۔';
+
+  @override
   String get unknownPlaceName => 'نامعلوم نام';
 
   @override

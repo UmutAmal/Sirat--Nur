@@ -1364,6 +1364,13 @@ class AppLocalizationsHu extends AppLocalizations {
       'Ellenőrzött térképmozaik forrás még nincs konfigurálva ehhez a buildhez. A közeli helyek továbbra is betölthetők az Ön mentett helyéről.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'A helyadatok nem érhetők el';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Ellenőrzött helyek adatvégpontja még nincs konfigurálva ehhez a buildhez. A közeli keresés engedélyezése előtt állítsa be a PLACES_OVERPASS_API_URL-t egy jóváhagyott proxyra vagy szolgáltatóra.';
+
+  @override
   String get unknownPlaceName => 'Ismeretlen név';
 
   @override

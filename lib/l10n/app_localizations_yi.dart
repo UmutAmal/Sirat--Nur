@@ -1363,6 +1363,13 @@ class AppLocalizationsYi extends AppLocalizations {
       'א וועראַפייד מאַפּע קאַכל מקור איז נישט קאַנפיגיערד פֿאַר דעם בויען נאָך. נעאַרבי ערטער קענען נאָך לאָדן פֿון דיין געראטעוועט אָרט.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'א וועראַפייד ערטער דאַטן ענדפּוינט איז נישט קאַנפיגיערד פֿאַר דעם בויען נאָך. שטעלן PLACES_OVERPASS_API_URL צו אַ באוויליקט פראקסי אָדער שפּייַזער איידער איר געבן נירביי זוכן.';
+
+  @override
   String get unknownPlaceName => 'אומבאַקאַנט נאָמען';
 
   @override

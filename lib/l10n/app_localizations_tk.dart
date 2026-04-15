@@ -1365,6 +1365,13 @@ class AppLocalizationsTk extends AppLocalizations {
       'Barlanylan karta kafel çeşmesi entek bu gurluş üçin düzülenok. Byakyn ýerler henizem saklanan ýeriňizden ýükläp biler.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Maglumatlary elýeterli däl';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Barlanan ýerler maglumat nokady bu gurluş üçin entek düzülenok. Nearbyakyn gözlegleri açmazdan ozal PLACES_OVERPASS_API_URL tassyklanan proksi ýa-da üpjün edijä düzüň.';
+
+  @override
   String get unknownPlaceName => 'Näbelli';
 
   @override

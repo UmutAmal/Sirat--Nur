@@ -1351,6 +1351,13 @@ class AppLocalizationsAm extends AppLocalizations {
       'የተረጋገጠ የካርታ ንጣፍ ምንጭ እስካሁን ለዚህ ግንባታ አልተዋቀረም። በአቅራቢያ ያሉ ቦታዎች አሁንም ከተቀመጠው ቦታዎ መጫን ይችላሉ።';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'የቦታዎች ውሂብ አይገኝም';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'የተረጋገጠ የቦታዎች ውሂብ መጨረሻ ነጥብ ለዚህ ግንባታ ገና አልተዋቀረም። በአቅራቢያ ፍለጋን ከማንቃትዎ በፊት PLACES_OVERPASS_API_URL ወደ ተቀባይነት ያለው ተኪ ወይም አቅራቢ ያቀናብሩ።';
+
+  @override
   String get unknownPlaceName => 'ያልታወቀ ስም';
 
   @override

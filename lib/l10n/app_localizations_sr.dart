@@ -1363,6 +1363,13 @@ class AppLocalizationsSr extends AppLocalizations {
       'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+
+  @override
   String get unknownPlaceName => 'Непознато име';
 
   @override

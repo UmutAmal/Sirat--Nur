@@ -1368,6 +1368,14 @@ class AppLocalizationsMi extends AppLocalizations {
       'Kaore ano kia whirihorahia he puna taera mapi mo tenei hanga. Ka taea tonu e nga waahi tata te uta mai i to waahi kua tiakina.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'Ko nga raraunga waahi kaore i te waatea';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Kaore ano kia whirihorahia he waahi mutunga raraunga mo tenei hanga. Tautuhia te PLACES_OVERPASS_API_URL ki tetahi takawaenga kua whakaaetia, kaiwhakarato ranei i mua i te whakaahei rapunga tata.';
+
+  @override
   String get unknownPlaceName => 'Ingoa Kaore i mohiotia';
 
   @override

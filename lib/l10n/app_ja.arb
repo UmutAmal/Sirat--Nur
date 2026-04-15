@@ -764,5 +764,7 @@
   "quranLoadFailed": "コーランのコンテンツをロードできませんでした。もう一度試してください。",
   "locationDetectionFailed": "現在地を検出できませんでした。都市を手動で選択するか、もう一度試してください。",
   "qiblaLocationRequiredTitle": "キブラに必要な場所",
-  "qiblaLocationRequiredBody": "方向を正確に計算できるように、キブラ コンパスを使用する前に実際の位置を設定してください。"
+  "qiblaLocationRequiredBody": "方向を正確に計算できるように、キブラ コンパスを使用する前に実際の位置を設定してください。",
+  "placesDataSourceUnavailableTitle": "場所のデータが利用できない",
+  "placesDataSourceUnavailableBody": "検証済みの場所データ エンドポイントは、このビルドに対してまだ構成されていません。近くの検索を有効にする前に、PLACES_OVERPASS_API_URL を承認されたプロキシまたはプロバイダーに設定します。"
 }

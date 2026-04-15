@@ -764,5 +764,7 @@
   "quranLoadFailed": "Koraninnhold kunne ikke lastes. Vennligst prøv igjen.",
   "locationDetectionFailed": "Kunne ikke finne posisjonen din. Velg en by manuelt eller prøv på nytt.",
   "qiblaLocationRequiredTitle": "Plassering kreves for Qibla",
-  "qiblaLocationRequiredBody": "Still inn din faktiske posisjon før du bruker Qibla-kompasset slik at retningen kan beregnes nøyaktig."
+  "qiblaLocationRequiredBody": "Still inn din faktiske posisjon før du bruker Qibla-kompasset slik at retningen kan beregnes nøyaktig.",
+  "placesDataSourceUnavailableTitle": "Stedsdata er utilgjengelige",
+  "placesDataSourceUnavailableBody": "Et verifisert stedsdataendepunkt er ikke konfigurert for denne versjonen ennå. Sett PLACES_OVERPASS_API_URL til en godkjent proxy eller leverandør før du aktiverer søk i nærheten."
 }

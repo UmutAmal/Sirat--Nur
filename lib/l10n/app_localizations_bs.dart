@@ -1363,6 +1363,13 @@ class AppLocalizationsBs extends AppLocalizations {
       'Provjereni izvor pločica karte još nije konfiguriran za ovu izgradnju. Mjesta u blizini se i dalje mogu učitavati s vaše sačuvane lokacije.';
 
   @override
+  String get placesDataSourceUnavailableTitle => 'Podaci o mjestima nedostupni';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'Krajnja tačka podataka o potvrđenim mjestima još nije konfigurirana za ovu izgradnju. Postavite PLACES_OVERPAS_API_URL na odobreni proxy ili provajder prije nego što omogućite pretragu u blizini.';
+
+  @override
   String get unknownPlaceName => 'Nepoznato ime';
 
   @override

@@ -1366,6 +1366,14 @@ class AppLocalizationsKa extends AppLocalizations {
       'დადასტურებული რუკის ფილა წყარო ჯერ არ არის კონფიგურირებული ამ კონსტრუქციისთვის. ახლომდებარე ადგილები კვლავ შეიძლება ჩაიტვირთოს თქვენი შენახული მდებარეობიდან.';
 
   @override
+  String get placesDataSourceUnavailableTitle =>
+      'ადგილების მონაცემები მიუწვდომელია';
+
+  @override
+  String get placesDataSourceUnavailableBody =>
+      'დადასტურებული ადგილების მონაცემების ბოლო წერტილი ჯერ არ არის კონფიგურირებული ამ კონსტრუქციისთვის. ახლომდებარე ძიების ჩართვამდე დააყენეთ PLACES_OVERPASS_API_URL დამტკიცებულ პროქსი ან პროვაიდერი.';
+
+  @override
   String get unknownPlaceName => 'უცნობი სახელი';
 
   @override

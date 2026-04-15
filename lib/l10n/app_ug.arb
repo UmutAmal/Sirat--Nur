@@ -764,5 +764,7 @@
   "quranLoadFailed": "قۇرئان مەزمۇنىنى يۈكلەشكە بولمىدى. قايتا سىناڭ.",
   "locationDetectionFailed": "ئورنىڭىزنى بايقىيالمىدى. قولدا شەھەر تاللاڭ ياكى قايتا سىناڭ.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately."
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "placesDataSourceUnavailableTitle": "سانلىق مەلۇماتلارنى ئىشلەتكىلى بولمايدۇ",
+  "placesDataSourceUnavailableBody": "دەلىللەنگەن ئورۇنلارنىڭ سانلىق مەلۇمات نۇقتىسى بۇ قۇرۇلۇش ئۈچۈن تېخى تەڭشەلمىگەن. يېقىن ئەتراپتىكى ئىزدەشنى قوزغىتىشتىن بۇرۇن PLACES_OVERPASS_API_URL نى تەستىقلانغان ۋاكالەتچى ياكى تەمىنلىگۈچىگە تەڭشەڭ."
 }
