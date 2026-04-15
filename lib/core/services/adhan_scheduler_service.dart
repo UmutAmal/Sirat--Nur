@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:sirat_i_nur/core/utils/prayer_name_localization.dart';
 import 'package:sirat_i_nur/domain/entities/prayer_times_entity.dart';
@@ -6,6 +7,10 @@ import 'package:timezone/data/latest.dart' as tzdata;
 import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
 
 class AdhanSchedulerService {
+  static const int _scheduleDays = 30;
+  static const int _dailyPrayerCount = 5;
+  static const int _notificationIdStride = 10;
+
   final FlutterLocalNotificationsPlugin _notifications =
       FlutterLocalNotificationsPlugin();
 
@@ -39,7 +44,7 @@ class AdhanSchedulerService {
   }
 
   Future<void> clearScheduledAdhans() async {
-    await _notifications.cancelAll();
+    await _cancelScheduledAdhans();
   }
 
   /// Proactive 30-Day Adhan Scheduling
@@ -54,11 +59,11 @@ class AdhanSchedulerService {
     double? fajrAngle,
     double? ishaAngle,
   }) async {
-    // 1. Clear existing schedules to avoid duplicates
-    await _notifications.cancelAll();
+    // Clear only adhan schedules to avoid deleting unrelated notifications.
+    await _cancelScheduledAdhans();
 
     final now = TimezoneUtils.nowForTimezone(timezoneName);
-    for (int i = 0; i < 30; i++) {
+    for (int i = 0; i < _scheduleDays; i++) {
       final date = now.add(Duration(days: i));
       final times = PrayerCalendarService.calculatePrayerTimes(
         latitude: lat,
@@ -80,6 +85,25 @@ class AdhanSchedulerService {
     }
   }
 
+  Future<void> _cancelScheduledAdhans() async {
+    for (int dayIndex = 0; dayIndex < _scheduleDays; dayIndex++) {
+      for (
+        int prayerIndex = 0;
+        prayerIndex < _dailyPrayerCount;
+        prayerIndex++
+      ) {
+        await _notifications.cancel(
+          id: adhanNotificationId(dayIndex, prayerIndex),
+        );
+      }
+    }
+  }
+
+  @visibleForTesting
+  static int adhanNotificationId(int dayIndex, int prayerIndex) {
+    return dayIndex * _notificationIdStride + prayerIndex;
+  }
+
   Future<void> _scheduleDailyEvents(
     PrayerTimesEntity times,
     int dayIndex, {
@@ -94,7 +118,7 @@ class AdhanSchedulerService {
       'Isha': times.isha,
     };
 
-    int baseId = dayIndex * 10;
+    int prayerIndex = 0;
     final now = TimezoneUtils.nowForTimezone(timezoneName);
     final normalizedLanguageCode = languageCode.trim();
 
@@ -111,7 +135,7 @@ class AdhanSchedulerService {
       );
 
       await _notifications.zonedSchedule(
-        id: baseId++,
+        id: adhanNotificationId(dayIndex, prayerIndex++),
         title: title,
         body: body,
         scheduledDate: TimezoneUtils.toTZDateTime(entry.value, timezoneName),

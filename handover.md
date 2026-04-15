@@ -5334,3 +5334,39 @@
 
 ### Sonraki Adım
 - Yeni döngüde prayer/notification pipeline derin taramasına devam edilecek; öncelik DST/yarınki Fajr ve notification scheduling zincirinde `cancelAll`/yeniden planlama çakışması olup olmadığını kanıtla doğrulamak olacak.
+
+## 2026-04-15 TUR-138 — Scope Adhan Notification Cancellation
+
+### Yapılan İşlem
+- `AdhanSchedulerService` içindeki iki geniş `cancelAll()` kullanımı kaldırıldı.
+- 30 günlük adhan planlama penceresi, günlük 5 vakit ve ID stride değeri sabitlere taşındı.
+- `clearScheduledAdhans()` ve `scheduleAdhans()` artık yalnızca deterministik adhan ID aralığını `_cancelScheduledAdhans()` üzerinden iptal ediyor.
+- `adhanNotificationId(dayIndex, prayerIndex)` helper'ı eklenerek planlanan ve iptal edilen ID'lerin aynı formülü kullanması sağlandı.
+- `notification_service_guard_test.dart` içine `cancelAll()` geri dönüşünü ve ID aralığı regresyonunu yakalayan test eklendi.
+
+### Neden Yapıldı
+- `adhan_scheduler_service.dart:42` ve `adhan_scheduler_service.dart:58` tüm bildirim havuzunu silen `cancelAll()` çağrıları içeriyordu.
+- Bugün projede legacy notification servisi kaldırılmış olsa da bu geniş silme, sonraki hatırlatıcı/uyarı özellikleri eklendiğinde adhan yenilemesinin unrelated bildirimleri de sessizce iptal etmesine yol açabilirdi.
+- Kök sebep, adhan bildirimlerinin kendi ID alanı varken iptal operasyonunun bu alana scope edilmemesiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\notification_service_guard_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Adhan planını yenilemek veya konum kaldırıldığında adhanları temizlemek artık yalnız adhan ID'lerini etkiliyor.
+- Gelecekte zikir, ders, premium, içerik veya widget kaynaklı ayrı bildirimler eklendiğinde adhan scheduling onları topluca silmeyecek.
+- Mevcut 30 günlük adhan planlama davranışı korunuyor; schedule ID'leri aynı stride içinde kalıyor.
+
+### Test Sonucu
+- `flutter test test\notification_service_guard_test.dart test\prayer_notification_coordinator_test.dart --reporter compact` PASS (`9/9`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`287/287`)
+- `git diff --check` PASS (yalnızca CRLF çalışma kopyası uyarıları)
+
+### Risk Değişimi
+- Adhan yenilemesinin unrelated bildirimleri geniş `cancelAll()` ile silmesi riski: `10/25 -> 3/25`
+
+### Sonraki Adım
+- Yeni döngüde prayer pipeline'da kalan zaman/hesaplama edge-case'leri taranacak; özellikle canlı provider'ın `now` bağımlılığı test edilebilir hale getirilip yarınki Fajr/DST senaryosu kaynak guard yerine davranış testiyle korunacak.
