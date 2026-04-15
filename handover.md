@@ -4788,3 +4788,37 @@
 
 ### Sonraki Adım
 - Yeni döngüde `tool/download_verified_quran_audio.dart` failure çıktıları incelenecek; raw hata metni/partial manifest davranışı ve import operatör güvenliği taranacak.
+
+## 2026-04-15 TUR-123 — Sanitize Quran Audio Mirror Failure Output
+
+### Yapılan İşlem
+- `tool/download_verified_quran_audio.dart` mirror catch bloğunda raw exception metnini manifest `failed` listesine yazma davranışı kaldırıldı.
+- `describeQuranAudioMirrorFailure()` eklendi; timeout, network, TLS, HTTP, dosya sistemi ve beklenmeyen hata türleri sabit güvenli kategorilere ayrılıyor.
+- `test/download_verified_quran_audio_test.dart` private host/raw detay içeren exception metninin manifest mesajına sızmamasını doğrulayan test kazandı.
+
+### Neden Yapıldı
+- `tool/download_verified_quran_audio.dart:228` önce `catch (error)` ile yakalanan ham exception'ı `failures.add(... $error)` olarak manifest ve stderr hattına taşıyordu.
+- Mirror manifestleri handover/import zincirinde paylaşılabileceği için ham ağ, host veya sistem ayrıntıları kalıcı çıktı olmamalı.
+- Storage seed generator artık başarısız manifestleri reddediyor; bu turda reddedilen hata listesinin kendisi de güvenli hale getirildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart`
+- `A:\Way of Allah\sirat_i_nur\test\download_verified_quran_audio_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kur'an ses mirror aracı başarısız indirmelerde raw exception metni yazmaz.
+- Operatör hâlâ failure kategorisini görür (`network error`, `tls error`, `file system error` vb.).
+- Regresyon testi private host/raw detayların geri dönmesini engeller.
+
+### Test Sonucu
+- `flutter test test\download_verified_quran_audio_test.dart --reporter compact` PASS (`5/5`)
+- `flutter analyze` PASS
+- `flutter test --reporter compact` PASS (`260/260`)
+- Raw hata taraması (`$error`, `$e`, `Error.safeToString`, `.toString()`) ilgili tool/test dosyalarında temiz.
+
+### Risk Değişimi
+- Kur'an audio mirror manifest/stderr raw exception sızıntısı riski: `8/25 -> 2/25`
+
+### Sonraki Adım
+- Yeni döngüde gerçek storage import ergonomisi incelenecek: mirror tamamlandıktan sonra hangi dosyaların Supabase Storage'a yükleneceği ve DB seed sırası operatör açısından kanıtlanacak.

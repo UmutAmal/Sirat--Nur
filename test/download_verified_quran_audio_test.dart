@@ -83,5 +83,18 @@ INSERT INTO public.audio_files (
       expect(() => parseSurahSelection('115'), throwsFormatException);
       expect(() => parseSurahSelection('x'), throwsFormatException);
     });
+
+    test('sanitizes transport failures before writing manifest entries', () {
+      final message = describeQuranAudioMirrorFailure(
+        const SocketException('lookup failed for private-host.local'),
+      );
+
+      expect(message, 'network error');
+      expect(message, isNot(contains('private-host.local')));
+      expect(
+        describeQuranAudioMirrorFailure(StateError('secret raw detail')),
+        'unexpected mirror error',
+      );
+    });
   });
 }

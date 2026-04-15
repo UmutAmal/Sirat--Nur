@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -49,6 +50,25 @@ class VerifiedQuranAudioMirrorSummary {
   final int skipped;
   final List<String> failed;
   final Directory outputDir;
+}
+
+String describeQuranAudioMirrorFailure(Object error) {
+  if (error is TimeoutException) {
+    return 'network timeout';
+  }
+  if (error is SocketException) {
+    return 'network error';
+  }
+  if (error is HandshakeException) {
+    return 'tls error';
+  }
+  if (error is HttpException) {
+    return 'http error';
+  }
+  if (error is FileSystemException) {
+    return 'file system error';
+  }
+  return 'unexpected mirror error';
 }
 
 List<VerifiedQuranAudioSeedRow> parseVerifiedQuranAudioSeed(String sql) {
@@ -226,7 +246,10 @@ Future<VerifiedQuranAudioMirrorSummary> mirrorVerifiedQuranAudio({
         downloaded++;
         manifest.add(row.toJson(targetFile.path));
       } catch (error) {
-        failures.add('${row.reciterId}/${row.fileName}: $error');
+        failures.add(
+          '${row.reciterId}/${row.fileName}: '
+          '${describeQuranAudioMirrorFailure(error)}',
+        );
         if (targetFile.existsSync()) {
           targetFile.deleteSync();
         }
