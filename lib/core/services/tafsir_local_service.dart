@@ -97,6 +97,9 @@ class TafsirLocalService {
       final parts = verseKey.split(':');
       if (parts.length != 2) continue;
 
+      final verseSurahNumber = int.tryParse(parts[0]);
+      if (verseSurahNumber != surahNumber) continue;
+
       final verseNumber = int.tryParse(parts[1]);
       if (verseNumber == null || verseNumber < 1) continue;
 

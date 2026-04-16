@@ -7095,3 +7095,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude Tafsir servisinin remote bagimliligi ve offline/provenance modeli daha derin incelenecek; kalici cozum olarak Supabase/bundled verified tafsir katalog ihtiyaci handover risklerine ayrilacak veya dusuk kapsamli guard eklenecek.
+
+## 2026-04-16 TUR-184 — Validate Tafsir Verse-Key Surah Alignment
+
+### Yapılan İşlem
+- Tafsir API satiri normalize edilirken `verse_key` icindeki sure numarasi istenen sureyle eslesmiyorsa satir cache disinda birakiliyor.
+- Tafsir test fixture'ina farkli sureden donen `verse_key` eklendi ve bunun cache satirina donusmedigi dogrulandi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:97` once `verse_key` icindeki sure bolumunu kontrol etmiyor, yalnizca ayet numarasini okuyordu.
+- API veya veri sekli bozulursa `3:5` gibi baska sureye ait tefsir, istenen sure numarasiyla cache'e yazilabilirdi.
+- Bu, dini icerikte ayet-tefsir eslesmesini bozabilecek yuksek etkili ama kucuk kapsamli bir dogruluk riskidir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Tafsir cache satirlari artik hem istenen sure numarasina hem de `verse_key` kaynak sure numarasina uyumlu olmak zorunda.
+- API'den yanlis sureye ait entry gelirse sessizce atilir; gecerli satir kalmazsa TUR-183'teki `no_entries` korumasi eski cache'i silmeden hata uretir.
+
+### Test Sonucu
+- `flutter test test\features\quran\tafsir_page_test.dart` PASS (`3/3`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`360/360`)
+
+### Risk Değişimi
+- Baska sureye ait Tafsir entry'sinin istenen sure altinda cache'lenmesi riski: `12/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude remaining debug logging ve production operator ciktilari tekrar taranacak; raw teknik hata/metaveri kullaniciya veya release loguna siziyor mu kanitla ayrilacak.

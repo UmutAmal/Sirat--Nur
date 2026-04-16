@@ -58,6 +58,7 @@ void main() {
     final rows = TafsirLocalService.normalizeApiTafsirRows(
       [
         {'verse_key': '2:255', 'text': '<p>Allah &amp; His mercy</p>'},
+        {'verse_key': '3:5', 'text': 'Wrong surah must be ignored'},
         {'verse_key': '2:not-a-number', 'text': 'Invalid verse'},
         {'verse_key': '2:256', 'text': '   '},
         {'unexpected': 'shape'},
