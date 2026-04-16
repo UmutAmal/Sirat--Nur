@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/services/tafsir_local_service.dart';
@@ -33,6 +35,7 @@ void main() {
   });
 
   test('tafsir service canonicalizes only verified source aliases', () {
+    expect(TafsirLocalService.defaultTafsirSourceId, 'en.ibn_kathir');
     expect(
       TafsirLocalService.canonicalTafsirSource('en.sahih'),
       'en.ibn_kathir',
@@ -73,5 +76,14 @@ void main() {
     expect(rows.single['verse_number'], 255);
     expect(rows.single['tafsir_text'], 'Allah & His mercy');
     expect(rows.single['tafsir_source'], 'en.ibn_kathir');
+  });
+
+  test('tafsir page default source avoids force unwraps', () {
+    final source = File(
+      'lib/features/quran/tafsir_page.dart',
+    ).readAsStringSync();
+
+    expect(source, contains('TafsirLocalService.defaultTafsirSourceId'));
+    expect(source, isNot(contains("availableTafsirs.first['id']!")));
   });
 }

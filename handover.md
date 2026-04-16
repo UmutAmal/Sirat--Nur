@@ -7513,3 +7513,36 @@
 
 ### Sonraki Adım
 - Sonraki dongude `A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart` hadith route parametresi ve `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart` tafsir id default'u incelenecek; gercek runtime risk olan kisim once kapatilacak.
+
+## 2026-04-16 TUR-197 — Guard Tafsir Default Source Selection
+
+### Yapılan İşlem
+- TafsirLocalService icine `defaultTafsirSourceId` eklendi; default kaynak secimi verified `availableTafsirs` listesinden null-safe ve canonical olarak uretiliyor.
+- TafsirPage `_selectedTafsir` baslangici static map force-unwrap yerine servis default resolver'ina baglandi.
+- Tafsir testlerine default kaynak beklentisi ve `availableTafsirs.first['id']!` geri donusunu engelleyen source guard eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:82` default tafsir source secimini servis seviyesinde merkezilestiriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart:79` sayfa state init'i artik force-unwrap kullanmadan verified canonical default aliyor.
+- Eski akista static liste bugun dolu olsa da `availableTafsirs.first['id']!` UI init sirasinda gereksiz runtime crash yuzeyi olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Mevcut default tafsir kaynagi degismedi: `en.ibn_kathir`.
+- Liste ileride bozulursa silent null crash yerine kontrollu `TafsirException('no_tafsir_sources')` yuzeyi olusur.
+
+### Test Sonucu
+- `flutter test test\features\quran\tafsir_page_test.dart` PASS (`4/4`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`369/369`)
+
+### Risk Değişimi
+- Tafsir page default source force-unwrap crash yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart` database getter force-unwrap kullanimi ve `_apiIdForSource` fallback mantigi incelenecek; gercek hata yuzeyi varsa servis testleriyle kapatilacak.

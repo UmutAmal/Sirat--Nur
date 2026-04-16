@@ -79,6 +79,17 @@ class TafsirLocalService {
   static String canonicalTafsirSource(String source) =>
       _canonicalSource(source);
 
+  static String get defaultTafsirSourceId {
+    for (final tafsir in availableTafsirs) {
+      final id = tafsir['id']?.trim();
+      if (id != null && id.isNotEmpty) {
+        return _canonicalSource(id);
+      }
+    }
+
+    throw TafsirException('no_tafsir_sources');
+  }
+
   static List<Map<String, Object>> normalizeApiTafsirRows(
     List<dynamic> tafsirs, {
     required int surahNumber,

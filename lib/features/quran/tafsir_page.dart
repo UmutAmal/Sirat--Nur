@@ -76,7 +76,7 @@ class TafsirPage extends ConsumerStatefulWidget {
 
 class _TafsirPageState extends ConsumerState<TafsirPage> {
   List<Map<String, dynamic>> _tafsirs = const [];
-  String _selectedTafsir = TafsirLocalService.availableTafsirs.first['id']!;
+  String _selectedTafsir = TafsirLocalService.defaultTafsirSourceId;
   bool _isLoading = true;
   String? _error;
   double _progress = 0;
