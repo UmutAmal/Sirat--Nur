@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
+import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 void main() {
   group('general ARB localization coverage', () {
@@ -1335,6 +1337,46 @@ void main() {
         }
       },
     );
+
+    test(
+      'Arabic bundled asma meanings avoid known machine mistranslations',
+      () {
+        final arabic = _readArb('lib/l10n/app_ar.arb');
+        const bannedFragments = [
+          'الجارديان',
+          'السلفه',
+          'الكليمنت',
+          'المريض',
+          'المُخلص',
+        ];
+
+        for (var index = 1; index <= 99; index++) {
+          final key = 'asmaMeaning$index';
+          final value = arabic[key] as String;
+
+          for (final fragment in bannedFragments) {
+            expect(
+              value,
+              isNot(contains(fragment)),
+              reason: 'app_ar.arb $key keeps a machine mistranslation',
+            );
+          }
+        }
+
+        expect(arabic['asmaMeaning7'], contains('الرقيب'));
+        expect(arabic['asmaMeaning32'], contains('لا يعاجل بالعقوبة'));
+        expect(arabic['asmaMeaning83'], contains('شديد الرحمة'));
+        expect(arabic['asmaMeaning99'], contains('لا يعجل بالعقوبة'));
+      },
+    );
+
+    test('Arabic runtime asma meanings use regenerated safe copy', () async {
+      final l10n = await AppLocalizations.delegate.load(const Locale('ar'));
+
+      expect(l10n.asmaMeaning7, contains('الرقيب'));
+      expect(l10n.asmaMeaning99, contains('لا يعجل بالعقوبة'));
+      expect(l10n.asmaMeaning99, isNot(contains('المريض')));
+    });
 
     test(
       'safe priority locales do not fall back to English for bundled dua meanings',

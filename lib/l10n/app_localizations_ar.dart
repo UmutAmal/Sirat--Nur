@@ -1377,299 +1377,300 @@ class AppLocalizationsAr extends AppLocalizations {
   String get islamicPlaceFallback => 'المكان الاسلامي';
 
   @override
-  String get asmaMeaning1 => 'الخير';
+  String get asmaMeaning1 => 'واسع الرحمة بجميع الخلق.';
 
   @override
-  String get asmaMeaning2 => 'الرحمن';
+  String get asmaMeaning2 => 'كثير الرحمة بالمؤمنين.';
 
   @override
-  String get asmaMeaning3 => 'الملك / الرب الأبدي';
+  String get asmaMeaning3 => 'المالك المتصرف في كل شيء.';
 
   @override
-  String get asmaMeaning4 => 'قدس الأقداس';
+  String get asmaMeaning4 => 'المنزه عن كل نقص وعيب.';
 
   @override
-  String get asmaMeaning5 => 'مصدر السلام';
+  String get asmaMeaning5 => 'السالم من كل نقص ومانح السلام.';
 
   @override
-  String get asmaMeaning6 => 'مانح الأمان';
+  String get asmaMeaning6 => 'الذي يؤمن عباده ويصدق وعده.';
 
   @override
-  String get asmaMeaning7 => 'الجارديان';
+  String get asmaMeaning7 => 'الرقيب الحافظ القائم على كل شيء.';
 
   @override
-  String get asmaMeaning8 => 'الغالي / الأعز';
+  String get asmaMeaning8 => 'الغالب القوي الذي لا يغلب.';
 
   @override
-  String get asmaMeaning9 => 'المجبر';
+  String get asmaMeaning9 => 'العظيم القاهر الذي يجبر كسر عباده.';
 
   @override
-  String get asmaMeaning10 => 'الأعظم';
+  String get asmaMeaning10 => 'المتفرد بالكبرياء والعظمة.';
 
   @override
-  String get asmaMeaning11 => 'الخالق';
+  String get asmaMeaning11 => 'المبدع والموجد لكل شيء.';
 
   @override
-  String get asmaMeaning12 => 'صانع النظام';
+  String get asmaMeaning12 => 'المنشئ للخلق على غير مثال سابق.';
 
   @override
-  String get asmaMeaning13 => 'مشكل الجمال';
+  String get asmaMeaning13 => 'الذي يصور الخلق ويمنحهم هيئاتهم.';
 
   @override
-  String get asmaMeaning14 => 'المتسامح';
+  String get asmaMeaning14 => 'كثير المغفرة والستر.';
 
   @override
-  String get asmaMeaning15 => 'المخضع';
+  String get asmaMeaning15 => 'الغالب القاهر فوق عباده.';
 
   @override
-  String get asmaMeaning16 => 'مانح الكل';
+  String get asmaMeaning16 => 'كثير العطاء بلا عوض.';
 
   @override
-  String get asmaMeaning17 => 'الرزاق';
+  String get asmaMeaning17 => 'الذي يرزق جميع خلقه.';
 
   @override
-  String get asmaMeaning18 => 'الافتتاحية';
+  String get asmaMeaning18 => 'الذي يفتح أبواب الرحمة والرزق والحكم.';
 
   @override
-  String get asmaMeaning19 => 'العليم بالجميع';
+  String get asmaMeaning19 => 'المحيط علمه بكل شيء.';
 
   @override
-  String get asmaMeaning20 => 'المضيق';
+  String get asmaMeaning20 => 'الذي يقبض الأرزاق والأرواح بحكمته.';
 
   @override
-  String get asmaMeaning21 => 'المُخلص';
+  String get asmaMeaning21 => 'الذي يبسط الرزق والفضل بحكمته.';
 
   @override
-  String get asmaMeaning22 => 'المذل';
+  String get asmaMeaning22 => 'الذي يخفض من شاء بعدله.';
 
   @override
-  String get asmaMeaning23 => 'الممجد';
+  String get asmaMeaning23 => 'الذي يرفع من شاء بفضله.';
 
   @override
-  String get asmaMeaning24 => 'صاحب الشرف';
+  String get asmaMeaning24 => 'الذي يهب العزة لمن شاء.';
 
   @override
-  String get asmaMeaning25 => 'المذل';
+  String get asmaMeaning25 => 'الذي يذل من شاء بعدله.';
 
   @override
-  String get asmaMeaning26 => 'السامع للجميع';
+  String get asmaMeaning26 => 'الذي يسمع كل شيء.';
 
   @override
-  String get asmaMeaning27 => 'رائي الكل';
+  String get asmaMeaning27 => 'الذي يرى كل شيء.';
 
   @override
-  String get asmaMeaning28 => 'القاضي';
+  String get asmaMeaning28 => 'الحاكم العدل الذي يفصل بين عباده.';
 
   @override
-  String get asmaMeaning29 => 'العادل';
+  String get asmaMeaning29 => 'المنزه عن الظلم، العادل في حكمه.';
 
   @override
-  String get asmaMeaning30 => 'الخفي';
+  String get asmaMeaning30 => 'الرفيق بعباده، العليم بدقائق الأمور.';
 
   @override
-  String get asmaMeaning31 => 'العارفون';
+  String get asmaMeaning31 => 'العليم ببواطن الأشياء وحقائقها.';
 
   @override
-  String get asmaMeaning32 => 'السلفه';
+  String get asmaMeaning32 => 'الذي لا يعاجل بالعقوبة.';
 
   @override
-  String get asmaMeaning33 => 'العظيم';
+  String get asmaMeaning33 => 'ذو العظمة والجلال.';
 
   @override
-  String get asmaMeaning34 => 'المغفر العظيم';
+  String get asmaMeaning34 => 'كثير المغفرة لعباده.';
 
   @override
-  String get asmaMeaning35 => 'مكافأة الشكر';
+  String get asmaMeaning35 => 'الذي يقبل القليل ويثيب عليه كثيرا.';
 
   @override
-  String get asmaMeaning36 => 'الأعلى';
+  String get asmaMeaning36 => 'المتعالي فوق خلقه قدرا وقهرا.';
 
   @override
-  String get asmaMeaning37 => 'الأعظم';
+  String get asmaMeaning37 => 'العظيم الذي لا أكبر منه.';
 
   @override
-  String get asmaMeaning38 => 'الحافظ';
+  String get asmaMeaning38 => 'الحافظ لكل شيء.';
 
   @override
-  String get asmaMeaning39 => 'المغذي';
+  String get asmaMeaning39 => 'المتكفل بأقوات الخلق والقائم عليهم.';
 
   @override
-  String get asmaMeaning40 => 'الحساب';
+  String get asmaMeaning40 => 'الكافي لعباده والمحاسب لهم.';
 
   @override
-  String get asmaMeaning41 => 'المهيب';
+  String get asmaMeaning41 => 'ذو الجلال والعظمة.';
 
   @override
-  String get asmaMeaning42 => 'الكريم';
+  String get asmaMeaning42 => 'كثير الخير والعطاء.';
 
   @override
-  String get asmaMeaning43 => 'المراقب';
+  String get asmaMeaning43 => 'المطلع على كل شيء.';
 
   @override
-  String get asmaMeaning44 => 'مستجيب الدعاء';
+  String get asmaMeaning44 => 'الذي يجيب دعاء عباده.';
 
   @override
-  String get asmaMeaning45 => 'الفهم الشامل';
+  String get asmaMeaning45 => 'الذي وسعت رحمته وعلمه كل شيء.';
 
   @override
-  String get asmaMeaning46 => 'الحكيم التام';
+  String get asmaMeaning46 => 'الذي يضع كل شيء في موضعه.';
 
   @override
-  String get asmaMeaning47 => 'المحب';
+  String get asmaMeaning47 => 'المحب لعباده الصالحين والمحبوب لهم.';
 
   @override
-  String get asmaMeaning48 => 'العظيم';
+  String get asmaMeaning48 => 'واسع المجد كامل الشرف.';
 
   @override
-  String get asmaMeaning49 => 'القائم';
+  String get asmaMeaning49 => 'باعث الخلق بعد الموت.';
 
   @override
-  String get asmaMeaning50 => 'الشاهد';
+  String get asmaMeaning50 => 'الحاضر الذي لا يغيب عنه شيء.';
 
   @override
-  String get asmaMeaning51 => 'الحقيقة';
+  String get asmaMeaning51 => 'الثابت الذي لا شك فيه.';
 
   @override
-  String get asmaMeaning52 => 'الوصي الكافي';
+  String get asmaMeaning52 => 'الكافي لمن توكل عليه.';
 
   @override
-  String get asmaMeaning53 => 'صاحب كل القوة';
+  String get asmaMeaning53 => 'كامل القوة والقدرة.';
 
   @override
-  String get asmaMeaning54 => 'القوي';
+  String get asmaMeaning54 => 'شديد القوة الذي لا يلحقه ضعف.';
 
   @override
-  String get asmaMeaning55 => 'الحامي';
+  String get asmaMeaning55 => 'الناصر والمتولي لعباده المؤمنين.';
 
   @override
-  String get asmaMeaning56 => 'المحمود';
+  String get asmaMeaning56 => 'المستحق للحمد والثناء.';
 
   @override
-  String get asmaMeaning57 => 'المثمن';
+  String get asmaMeaning57 => 'الذي أحصى كل شيء عددا وعلما.';
 
   @override
-  String get asmaMeaning58 => 'المنشئ';
+  String get asmaMeaning58 => 'الذي يبدأ الخلق من العدم.';
 
   @override
-  String get asmaMeaning59 => 'المرمم';
+  String get asmaMeaning59 => 'الذي يعيد الخلق بعد فنائهم.';
 
   @override
-  String get asmaMeaning60 => 'واهب الحياة';
+  String get asmaMeaning60 => 'الذي يهب الحياة.';
 
   @override
-  String get asmaMeaning61 => 'آخذ الحياة';
+  String get asmaMeaning61 => 'الذي يقدر الموت على كل حي.';
 
   @override
-  String get asmaMeaning62 => 'الحي الدائم';
+  String get asmaMeaning62 => 'كامل الحياة التي لا تزول.';
 
   @override
-  String get asmaMeaning63 => 'الرزاق القائم بذاته';
+  String get asmaMeaning63 => 'القائم بنفسه المقيم لغيره.';
 
   @override
-  String get asmaMeaning64 => 'الباحث';
+  String get asmaMeaning64 => 'الغني الذي لا يفوته شيء.';
 
   @override
-  String get asmaMeaning65 => 'المجيدة';
+  String get asmaMeaning65 => 'ذو المجد والكرم.';
 
   @override
-  String get asmaMeaning66 => 'الوحيد';
+  String get asmaMeaning66 => 'المتفرد في ذاته وصفاته.';
 
   @override
-  String get asmaMeaning67 => 'الواحد';
+  String get asmaMeaning67 => 'الذي لا شريك له ولا مثيل.';
 
   @override
-  String get asmaMeaning68 => 'الشخص الذي يبحث عنه الجميع';
+  String get asmaMeaning68 => 'المقصود في الحوائج، الغني عن خلقه.';
 
   @override
-  String get asmaMeaning69 => 'القوي';
+  String get asmaMeaning69 => 'الذي يقدر على كل شيء.';
 
   @override
-  String get asmaMeaning70 => 'خالق كل قوة';
+  String get asmaMeaning70 => 'كامل القدرة النافذة.';
 
   @override
-  String get asmaMeaning71 => 'المعجّل';
+  String get asmaMeaning71 => 'الذي يقدم من شاء بحكمته.';
 
   @override
-  String get asmaMeaning72 => 'المؤخر';
+  String get asmaMeaning72 => 'الذي يؤخر من شاء بحكمته.';
 
   @override
-  String get asmaMeaning73 => 'الأول';
+  String get asmaMeaning73 => 'الذي ليس قبله شيء.';
 
   @override
-  String get asmaMeaning74 => 'الأخير';
+  String get asmaMeaning74 => 'الذي ليس بعده شيء.';
 
   @override
-  String get asmaMeaning75 => 'البيان';
+  String get asmaMeaning75 => 'العالي فوق كل شيء، الظاهر بآياته.';
 
   @override
-  String get asmaMeaning76 => 'المخفي';
+  String get asmaMeaning76 =>
+      'الذي لا تحيط به الأبصار وهو أقرب إلى عباده بعلمه.';
 
   @override
-  String get asmaMeaning77 => 'المحافظ';
+  String get asmaMeaning77 => 'المالك المتولي لأمر خلقه.';
 
   @override
-  String get asmaMeaning78 => 'الأعلى';
+  String get asmaMeaning78 => 'المنزه عن صفات الخلق، العالي فوقهم.';
 
   @override
-  String get asmaMeaning79 => 'فاعل الخير';
+  String get asmaMeaning79 => 'كثير الإحسان والبر بعباده.';
 
   @override
-  String get asmaMeaning80 => 'دليل التوبة';
+  String get asmaMeaning80 => 'الذي يوفق للتوبة ويقبلها.';
 
   @override
-  String get asmaMeaning81 => 'المنتقم';
+  String get asmaMeaning81 => 'الذي ينتقم من الظالمين بعدله.';
 
   @override
-  String get asmaMeaning82 => 'المسامح';
+  String get asmaMeaning82 => 'كثير العفو عن الذنوب.';
 
   @override
-  String get asmaMeaning83 => 'الكليمنت';
+  String get asmaMeaning83 => 'شديد الرحمة واللطف بعباده.';
 
   @override
-  String get asmaMeaning84 => 'المالك / صاحب السيادة على الجميع';
+  String get asmaMeaning84 => 'مالك كل ملك والمتصرف فيه.';
 
   @override
-  String get asmaMeaning85 => 'ذو الجلال والإكرام';
+  String get asmaMeaning85 => 'صاحب العظمة والكمال والإكرام.';
 
   @override
-  String get asmaMeaning86 => 'العادل';
+  String get asmaMeaning86 => 'العادل الذي يقيم القسط.';
 
   @override
-  String get asmaMeaning87 => 'المجمع';
+  String get asmaMeaning87 => 'الذي يجمع الخلائق ليوم الحساب.';
 
   @override
-  String get asmaMeaning88 => 'الغني';
+  String get asmaMeaning88 => 'الذي لا يحتاج إلى أحد.';
 
   @override
-  String get asmaMeaning89 => 'المثري';
+  String get asmaMeaning89 => 'الذي يغني من شاء بفضله.';
 
   @override
-  String get asmaMeaning90 => 'مانع الضرر';
+  String get asmaMeaning90 => 'الذي يمنع الضرر أو العطاء بحكمته.';
 
   @override
-  String get asmaMeaning91 => 'جالب الضرر';
+  String get asmaMeaning91 => 'الذي يقدر الضر بحكمته وعدله.';
 
   @override
-  String get asmaMeaning92 => 'مانح الفوائد';
+  String get asmaMeaning92 => 'الذي يقدر النفع لعباده.';
 
   @override
-  String get asmaMeaning93 => 'النور';
+  String get asmaMeaning93 => 'منور السماوات والأرض وهادي القلوب.';
 
   @override
-  String get asmaMeaning94 => 'الدليل';
+  String get asmaMeaning94 => 'الذي يهدي من يشاء إلى الصراط المستقيم.';
 
   @override
-  String get asmaMeaning95 => 'المنشئ';
+  String get asmaMeaning95 => 'المبدع على غير مثال سابق.';
 
   @override
-  String get asmaMeaning96 => 'الأبدي';
+  String get asmaMeaning96 => 'الدائم الذي لا يفنى.';
 
   @override
-  String get asmaMeaning97 => 'الوريث';
+  String get asmaMeaning97 => 'الباقي بعد فناء الخلق.';
 
   @override
-  String get asmaMeaning98 => 'الدليل الصالح';
+  String get asmaMeaning98 => 'المرشد إلى مصالح الدين والدنيا.';
 
   @override
-  String get asmaMeaning99 => 'المريض الأول';
+  String get asmaMeaning99 => 'الذي لا يعجل بالعقوبة.';
 }

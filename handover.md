@@ -10124,3 +10124,54 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude yeni risk taramasini localization/dini icerik/audio pipeline ekseninde surdur: once kanitli en yuksek riskli tek sorunu sec, minimal patch + test + analyze + full test + commit/push dongusunu uygula.
+
+## 2026-04-16 TUR-255 — Repair Arabic Asma Meaning Copy
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ar.arb` icindeki `asmaMeaning1..asmaMeaning99` Arapca aciklamalari makine ceviri kalintilarindan arindirildi.
+- Ozellikle `الجارديان`, `السلفه`, `الكليمنت`, `المريض الأول`, `المُخلص` gibi yanlis baglamli veya transliterasyon artiklari kaldirildi.
+- `flutter gen-l10n` calistirildi ve `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ar.dart` runtime localization ciktisi yenilendi.
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart` icine Arapca Esma anlamlarinda bilinen makine ceviri kalintilarini yasaklayan ARB guard'i eklendi.
+- Ayni test dosyasina `Locale('ar')` runtime guard'i eklendi; generated localization'in da guvenli metni yukledigi dogrulaniyor.
+
+### Neden Yapildi
+- Risk taramasinda `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ar.arb:552`, `:577`, `:628`, `:644` civarinda Arapca Esma anlamlari icinde dogrudan yanlis/garip makine ceviri kalintilari goruldu.
+- Bu metinler `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart` uzerinden Arapca locale'de kullaniciya gosterilen dini icerik oldugu icin UI copy kalitesinden daha yuksek, dini icerik guvenilirligi riski tasiyordu.
+- Dini icerikte sahte veya anlamsiz ifade gosterilmemesi icin yalniz Arapca Esma anlamlari tek yuzey olarak ele alindi; veri modeli, Arapca isimler ve audio akisi degistirilmedi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ar.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ar.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Arapca Asma ekraninda artik bilinen makine ceviri artigi veya yanlis baglamli "hasta/sick", "guardian" transliterasyonu, "clement" transliterasyonu gibi ifadeler gosterilmez.
+- Generated runtime localization ARB ile senkron kalir; test hem kaynak ARB'yi hem runtime delegate ciktisini korur.
+- Safe priority locale testleri genisledi; ileride ayni kalintilar yeniden girerse full test yakalar.
+
+### Test Sonucu
+- Odak test: `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS (`58/58`)
+- Asma regresyon testi: `flutter test test\features\library\asma_ul_husna_page_test.dart test\asma_ul_husna_data_test.dart --reporter compact` PASS (`17/17`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`462/462`)
+
+### Risk Degisimi
+- Arapca Esma anlamlarinda makine ceviri kalintisi riski: `16/25 -> 3/25`
+- Arapca runtime generated l10n ile ARB ayrisma riski: `9/25 -> 2/25`
+- Tum locale dini icerik kalite borcu: `16/25 -> 14/25` (Arapca ana yuzey duzeldi; diger locale dini metinleri icin tarama devam etmeli)
+
+### Rollback Plani
+- `app_ar.arb` icindeki `asmaMeaning1..99` degerleri onceki haline dondurulur.
+- `flutter gen-l10n` tekrar calistirilerek `app_localizations_ar.dart` eski metinlere senkronlanir.
+- `arb_ui_localization_test.dart` icindeki Arapca Asma machine-mistranslation ve runtime guard testleri geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Not
+- Ayni turda offline indirme false-success riski yeniden kontrol edildi; `OfflineDownloadBatchResult`, `resolveOfflineDownloadResultMessage` ve partial/cancel testleri zaten mevcut oldugu icin yeni patch gerektirmedi.
+- Places harita riskleri yeniden kontrol edildi; `PLACES_TILE_URL_TEMPLATE` ve `PLACES_OVERPASS_API_URL` icin explicit config guard'lari ve testleri mevcut.
+
+### Sonraki Adim
+- Bir sonraki dongude kalan dini localization kalitesini taramaya devam et: ozellikle `duaMeaning` ve nadir locale Asma metinlerinde bilinen kotu kalintilari kanitla, tek locale/tek yuzey patch'leriyle kapat.
