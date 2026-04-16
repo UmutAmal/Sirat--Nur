@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/features/library/asma_ul_husna_page.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
@@ -73,7 +74,8 @@ void main() {
                 'en': 'Provider English Meaning',
                 'tr': 'Saglayici Turkce anlam',
               },
-              'audioUrl': 'https://example.com/audio.mp3',
+              'audioUrl':
+                  '${SupabaseConfig.url}/storage/v1/object/public/audio-asma/101.mp3',
             },
           ],
         ),
@@ -83,6 +85,27 @@ void main() {
       expect(find.text('Al Wudood'), findsOneWidget);
       expect(find.text('Provider English Meaning'), findsOneWidget);
       expect(find.byIcon(Icons.volume_up_rounded), findsOneWidget);
+    });
+
+    testWidgets('Hides external-only cloud asma audio rows', (tester) async {
+      await tester.pumpWidget(
+        createWidgetUnderTest(
+          asmaNames: [
+            {
+              'id': 101,
+              'arabic': 'الْوَدُودُ',
+              'transliteration': 'Al Wudood',
+              'translations': {'en': 'Provider English Meaning'},
+              'audioUrl': 'https://example.com/audio.mp3',
+            },
+          ],
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.text('Al Wudood'), findsOneWidget);
+      expect(find.byIcon(Icons.volume_off_rounded), findsOneWidget);
+      expect(find.byIcon(Icons.volume_up_rounded), findsNothing);
     });
 
     testWidgets('Uses locale-specific cloud translation when available', (
@@ -101,7 +124,8 @@ void main() {
                 'tr': 'Saglayici Turkce anlam',
                 'de': 'Deutsche Bedeutung',
               },
-              'audioUrl': 'https://example.com/audio.mp3',
+              'audioUrl':
+                  '${SupabaseConfig.url}/storage/v1/object/public/audio-asma/101.mp3',
             },
           ],
         ),
@@ -112,18 +136,21 @@ void main() {
       expect(find.text('Provider English Meaning'), findsNothing);
     });
 
-    testWidgets('Uses localized bundled fallback meaning when cloud data is absent', (
-      tester,
-    ) async {
-      await tester.pumpWidget(createWidgetUnderTest(locale: const Locale('de')));
-      await tester.pumpAndSettle();
+    testWidgets(
+      'Uses localized bundled fallback meaning when cloud data is absent',
+      (tester) async {
+        await tester.pumpWidget(
+          createWidgetUnderTest(locale: const Locale('de')),
+        );
+        await tester.pumpAndSettle();
 
-      final context = tester.element(find.byType(AsmaUlHusnaPage));
-      final l10n = AppLocalizations.of(context)!;
+        final context = tester.element(find.byType(AsmaUlHusnaPage));
+        final l10n = AppLocalizations.of(context)!;
 
-      expect(find.text(l10n.asmaMeaning1), findsWidgets);
-      expect(find.text('The Beneficent'), findsNothing);
-    });
+        expect(find.text(l10n.asmaMeaning1), findsWidgets);
+        expect(find.text('The Beneficent'), findsNothing);
+      },
+    );
 
     testWidgets('Search matches locale-specific cloud translations', (
       tester,
@@ -169,7 +196,9 @@ void main() {
     testWidgets('Search matches localized bundled fallback meanings', (
       tester,
     ) async {
-      await tester.pumpWidget(createWidgetUnderTest(locale: const Locale('de')));
+      await tester.pumpWidget(
+        createWidgetUnderTest(locale: const Locale('de')),
+      );
       await tester.pumpAndSettle();
 
       final context = tester.element(find.byType(AsmaUlHusnaPage));
@@ -178,8 +207,14 @@ void main() {
       await tester.enterText(find.byType(TextField), l10n.asmaMeaning1);
       await tester.pumpAndSettle();
 
-      expect(find.textContaining('Ar Rahmaan', skipOffstage: false), findsWidgets);
-      expect(find.textContaining('Al Malik', skipOffstage: false), findsNothing);
+      expect(
+        find.textContaining('Ar Rahmaan', skipOffstage: false),
+        findsWidgets,
+      );
+      expect(
+        find.textContaining('Al Malik', skipOffstage: false),
+        findsNothing,
+      );
     });
   });
 }

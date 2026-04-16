@@ -10937,3 +10937,63 @@
 ### Sonraki Adim
 - Storage/audio pipeline icinde Supabase URL disinda kalan runtime medya gecisleri yeniden taranacak.
 - Ardindan localization fallback borcu icin `diagnosticsQuranCloudTablesMissing`, `diagnosticsQuranCloudJuzMissing`, download ve chatbot copy kumesindeki Ingilizce kalan locale'ler batch bazinda onarilacak.
+
+## 2026-04-16 TUR-269 — Hide External-Only Asma Audio in UI
+
+### Yapilan Islem
+- Asma-ul-Husna sayfasinda ses ikonunun gorunmesi artik yalniz Supabase Storage uzerinden gecen oynatilabilir remote audio kaynaklarina baglandi.
+- `_playAudio` artik null, bos veya Supabase disi URL'lerde sessizce donmek yerine localized `audioPlayFailed` snack bar gosteriyor.
+- `AudioPlayerService.playUrl` false dondururse kullaniciya basarisiz oynatma geri bildirimi veriliyor.
+- Widget testi dis URL iceren cloud kaydinin `volume_up` degil `volume_off` gosterdigini kilitledi.
+
+### Kanit
+- Patch oncesi risk:
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart` icinde `hasPlayableAsmaAudio` herhangi bos olmayan `audioUrl` degerini oynatilabilir sayiyordu.
+- Patch sonrasi oynatilabilirlik kontrolu:
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart:17`,
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart:19`,
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart:162`.
+- Patch sonrasi oynatma basarisizlik geri bildirimi:
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart:273`,
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart:278`,
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart:289`,
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart:296`.
+- Guard:
+  `A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart:78`,
+  `A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart:90`,
+  `A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart:99`,
+  `A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart:107`,
+  `A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart:108`,
+  `A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart:128`.
+
+### Neden Yapildi
+- Section 13'e gore dini ses icerigi runtime'da bizim Supabase-backed audio zincirinden gelmeli; dis linkler ileride kapanabilir veya kontrolsuz icerik sunabilir.
+- UI'nin dis URL icin `volume_up` gostermesi kullaniciya "oynatilabilir/dogrulanmis" algisi veriyordu, fakat servis zaten Supabase disini reddettigi icin false-success/false-affordance riski olusuyordu.
+- Cozum, data modelini genisletmeden mevcut audio sovereignty helper'ini UI karar noktasina tasiyan dar ve dogrulanabilir patch olarak uygulandi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\asma_ul_husna_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Odak test: `flutter test test\features\library\asma_ul_husna_page_test.dart --reporter compact` PASS (`28/28`)
+- Ek audio/data guard: `flutter test test\asma_ul_husna_data_test.dart test\audio_sovereignty_service_test.dart --reporter compact` PASS (`19/19`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`479/479`)
+
+### Risk Degisimi
+- Asma external-only audio false-playable UI riski: `12/25 -> 2/25`
+- Audio basarisizlikta sessiz/yaniltici feedback riski: `9/25 -> 2/25`
+
+### Rollback Plani
+- `hasPlayableAsmaAudio` onceki bos olmayan string kontrolune dondurulur.
+- `_playAudio` icindeki invalid URL ve false-result snack bar geri bildirimi kaldirilir.
+- `asma_ul_husna_page_test.dart` icindeki dis URL guard'i ve Supabase URL test fixture degisikligi geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Dua/library audio UI yuzeyleri ayni "bos olmayan external audioUrl oynatilabilir gorunuyor mu" riski icin taranacak.
+- Runtime medya pipeline'inda Supabase-backed olmayan ses gecisleri icin UI, servis ve test katmani birlikte dogrulanacak.

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/constants/asma_ul_husna_data.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
+import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/features/library/asma_meaning_localization.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 import 'package:sirat_i_nur/core/services/audio_player_service.dart';
@@ -15,7 +16,7 @@ List<Map<String, dynamic>> resolveAsmaUlHusnaItems(
 
 bool hasPlayableAsmaAudio(Map<String, dynamic> item) {
   final audioUrl = item['audioUrl'];
-  return audioUrl is String && audioUrl.trim().isNotEmpty;
+  return audioUrl is String && isPlayableRemoteAudioSource(audioUrl);
 }
 
 String resolveAsmaMeaning(
@@ -269,9 +270,24 @@ class _AsmaUlHusnaPageState extends ConsumerState<AsmaUlHusnaPage> {
   }
 
   void _playAudio(String? url) async {
-    if (url == null || url.isEmpty) return;
+    if (url == null || !isPlayableRemoteAudioSource(url)) {
+      if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(l10n.audioPlayFailed)));
+      }
+      return;
+    }
+
     try {
-      await _audioService.playUrl(url);
+      final played = await _audioService.playUrl(url);
+      if (!played && mounted) {
+        final l10n = AppLocalizations.of(context)!;
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(l10n.audioPlayFailed)));
+      }
     } catch (e) {
       if (mounted) {
         final l10n = AppLocalizations.of(context)!;
