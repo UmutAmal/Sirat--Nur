@@ -544,7 +544,7 @@ void main() {
     test(
       'priority locales do not fall back to English for zikr completion copy',
       () {
-        const localizedKeys = ['tapToCount', 'zikrCompletedMashAllah'];
+        const localizedKeys = ['zikr', 'tapToCount', 'zikrCompletedMashAllah'];
 
         for (final locale in priorityLocales) {
           final arb = _readArb('lib/l10n/app_$locale.arb');

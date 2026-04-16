@@ -8275,3 +8275,49 @@
 
 ### Sonraki Adım
 - Sonraki dongude aktif l10n fallback taramasini yenile; bilincli placeholder/proper noun anahtarlarini eleyip `juz`, `tafsir`, `dailyChecklist`, `dailyProgress` veya benzer gorunur anahtarlar arasindan en yuksek etkili tek yuzeyi sec.
+
+## 2026-04-16 TUR-218 — Localize Zikr Navigation Label
+
+### Yapılan İşlem
+- `zikr` anahtari korumali ARB batch'i ile genis locale kumesinde lokalize edildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Priority Latin-script locale'lerde Google ceviri ayni `Zikr` degerini biraktigi icin dini terim uydurulmadan kabul goren alternatif transliterasyon `Dhikr` kullanildi.
+- `tool\translate_arb_keys.dart` single-line guard listesine `zikr` eklendi.
+- `test\arb_ui_localization_test.dart` zikr completion guard kapsaminda `zikr` navigasyon basligini da kontrol ediyor.
+- `test\translate_arb_keys_test.dart` multiline `zikr` output regresyon testiyle ceviri debris korumasi ekledi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\common\main_skeleton.dart:67` ana navigasyonda `l10n.zikr` etiketini gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart:59` zikir sayfasi basligini `l10n.zikr` ile gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\analytics\analytics_page.dart:40` analytics kartinda `l10n.zikr` degerini kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb:8` kaynak metin olarak `"Zikr"` degerini tasiyor.
+- TUR-218 oncesi aktif kullanilan l10n fallback taramasinda `zikr` icin `16` priority locale ve `168` toplam locale `app_en.arb` ile birebir ayniydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Priority locale setinde `zikr` Ingilizce fallback riski kapandi.
+- `zikr` fallback sayisi `168 -> 126` seviyesine indi.
+- Kalan fallback'ler Google ceviri destegi olmayan veya guvenli aday uretilemeyen nadir/legacy locale grubunda birakildi; dini terim uydurulmadi.
+- Tek satir guard'i ile gelecekteki batch debris/newline riski azaltildi.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\arb_religious_localization_test.dart test\features\common\main_skeleton_test.dart test\tracker_test.dart test\features\analytics\analytics_page_test.dart` PASS (`63/63`)
+- Priority fallback taramasi PASS: `priority_same=[]`
+- `git diff --check` PASS (yalnizca mevcut Windows CRLF uyarilari)
+- `flutter analyze` PASS
+- `flutter test` PASS (`386/386`)
+
+### Risk Değişimi
+- Priority locale zikr navigation fallback riski: `16/25 -> 2/25`
+- Tum locale zikr navigation fallback riski: `16/25 -> 7/25`
+- Zikr translation batch debris tekrar riski: `10/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki dongude aktif l10n fallback taramasini yenile; bilincli canonical terimleri eleyip `juz`, `tafsir`, `qibla`, `version`, `darkMode`, `systemDefault` veya benzer gorunur anahtarlar arasindan en yuksek etkili tek yuzeyi sec.

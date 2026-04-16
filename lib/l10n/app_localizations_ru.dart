@@ -24,7 +24,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get qibla => 'Qibla';
 
   @override
-  String get zikr => 'Zikr';
+  String get zikr => 'Зикр';
 
   @override
   String get calendar => 'Calendar';

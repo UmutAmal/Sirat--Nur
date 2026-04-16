@@ -347,6 +347,7 @@ bool _mustStaySingleLine(String key) {
       key == 'quranLoadFailed' ||
       key == 'locationDetectionFailed' ||
       key == 'tapToCount' ||
+      key == 'zikr' ||
       key == 'qiblaCalibration' ||
       key == 'calibrationOffset' ||
       key == 'currentOffset' ||

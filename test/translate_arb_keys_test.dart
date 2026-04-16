@@ -130,6 +130,13 @@ void main() {
     });
 
     test('rejects multiline zikr counter hint output', () {
+      final labelValue = resolveTranslatedArbValue(
+        key: 'zikr',
+        source: 'Zikr',
+        currentValue: 'Zikir',
+        candidate: 'means the following.\nZikir',
+      );
+
       final value = resolveTranslatedArbValue(
         key: 'tapToCount',
         source: 'Tap to count',
@@ -137,6 +144,7 @@ void main() {
         candidate: 'means the following.\nSaymak icin dokunun',
       );
 
+      expect(labelValue, 'Zikir');
       expect(value, 'Saymak icin dokunun');
     });
 

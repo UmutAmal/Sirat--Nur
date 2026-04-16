@@ -24,7 +24,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get qibla => 'Qibla';
 
   @override
-  String get zikr => 'Zikr';
+  String get zikr => 'ซิกร์';
 
   @override
   String get calendar => 'Calendar';
