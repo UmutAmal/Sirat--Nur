@@ -8771,3 +8771,60 @@
 
 ### Sonraki Adım
 - Commit/push sonrasi yeni dongude aktif l10n fallback taramasini yenile; `qiblaDirection`, `compass`, `turnDevice`, `qiblaFound`, `search`, `searchHint`, `retry`, `save`, `addBookmark`, `removeBookmark`, `downloading` gibi gorunur yuzeylerden en yuksek riskli tek cluster sec.
+
+## 2026-04-16 TUR-228 — Localize Qibla Compass Shell Copy
+
+### Yapılan İşlem
+- Kible pusulasi yuzeyinde kullanilan `qiblaDirection`, `compass`, `turnDevice`, `qiblaFound` anahtarlari guvenli ARB batch'i ile guncellendi.
+- `flutter gen-l10n` calistirilarak generated `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Safe/priority locale setinde `tr`, `de`, `fr`, `es`, `ar`, `da`, `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi`, `zh`, `zh_CN`, `zh_TW` icin kible pusulasi shell metinlerinde Ingilizce fallback kalmadigi dogrulandi.
+- Otomatik cevirinin zayif urettigi degerler elle duzeltildi: `es qiblaDirection=Dirección de la qibla`, `da/nb/nn/no qiblaDirection=Qibla-retning`, `he qiblaFound=הקיבלה נמצאה!`, `ja qiblaFound=キブラ方向を検出しました！`, `pt qiblaDirection=Direção da qibla`, `vi turnDevice=Xoay thiết bị của bạn về hướng Qibla`, `zh/zh_CN qiblaFound=已找到朝拜方向！`, `zh_TW turnDevice=請將裝置朝向朝拜方向` gibi baglama uygun kopyalar uygulandi.
+- `tool\translate_arb_keys.dart` single-line guard listesine `qiblaDirection`, `compass`, `turnDevice`, `qiblaFound` eklendi.
+- `test\arb_ui_localization_test.dart` icine safe/priority fallback guard'i ve bilinen zayif ceviri kalintisi guard'i eklendi.
+- `test\translate_arb_keys_test.dart` icine multiline qibla compass shell output regresyon testi eklendi.
+- Standalone `qibla` anahtari bu turda zorlanmadi; bazi dillerde dogru kullanim transliterasyon/proper noun oldugu icin yalanci kalite kazanci uretmemek adina kapsam disinda birakildi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart:134` hizalama durumunda `l10n.qiblaFound` veya `l10n.turnDevice` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart:331` pusula label'i icin `l10n.compass` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart:349` yon satirinda `l10n.qiblaDirection` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\common\main_skeleton.dart:62` alt navigasyonda standalone `l10n.qibla` kullaniyor; bu proper-name yuzey oldugu icin TUR-228'de degistirilmedi.
+- TUR-228 oncesi fallback taramasinda hedef kible pusulasi anahtarlarinda `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi` safe locale setinde app_en ile birebir ayni degerler vardi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe/priority locale setinde kible pusulasi yon, pusula, cihazi cevir ve kible bulundu metinlerinde Ingilizce fallback riski kapandi.
+- Bilinen zayif makine cevirileri icin regresyon bariyeri eklendi; `known_bad_hits=[]` taramasi PASS.
+- Single-line guard ile pusula shell etiketlerinde batch debris/newline riski kapatildi.
+- Kalan tum-locale birebir Ingilizce degerler cogunlukla ceviri servisinin guvenli aday uretmedigi nadir/legacy locale grubunda birakildi; sahte veya uydurma ceviri yazilmadi. TUR-228 sonrasi toplam fallback sayilari: `qiblaDirection 71`, `compass 73`, `turnDevice 65`, `qiblaFound 65`.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart` PASS (`71/71`)
+- UI odak test: `flutter test test\features\qibla\qibla_page_test.dart` PASS (`8/8`)
+- Safe fallback taramasi PASS: hedef qibla compass shell anahtarlarinda `safe_same=[]`
+- Single-line taramasi PASS: hedef qibla compass shell anahtarlarinda `newline=[]`
+- Bilinen zayif ceviri taramasi PASS: `known_bad_hits=[]`
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`408/408`)
+- `flutter gen-l10n` PASS
+- `flutter doctor -v` Android/test hattinda PASS; Chrome ve Visual Studio eksikleri yalniz web/Windows hedefleri icin kayitli, bu Android/test dongusunu bloke etmiyor.
+
+### Risk Değişimi
+- Safe/priority locale qibla compass shell fallback riski: `8/25 -> 2/25`
+- Zayif makine cevirisi riski: `12/25 -> 3/25`
+- Qibla shell etiketlerinde multiline/batch debris riski: `10/25 -> 3/25`
+- Tum-locale nadir/legacy fallback riski: `8/25 -> 5/25`
+
+### Rollback Planı
+- `lib\l10n\app_*.arb`, `lib\l10n\app_localizations_*.dart`, `test\arb_ui_localization_test.dart`, `test\translate_arb_keys_test.dart` ve `tool\translate_arb_keys.dart` icindeki TUR-228 degisiklikleri geri alinir; production Dart UI logic degismedigi icin runtime rollback dar kapsamli kalir.
+
+### Sonraki Adım
+- Commit/push sonrasi yeni dongude aktif l10n fallback taramasini yenile; `search`, `searchHint`, `retry`, `save`, `addBookmark`, `removeBookmark`, `downloading`, `settings`, `themeMode`, `aboutApp` gibi gorunur yuzeylerden en yuksek riskli tek cluster sec.

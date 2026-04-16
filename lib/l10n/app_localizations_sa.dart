@@ -439,7 +439,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get laylatAlQadr => 'Laylat Al-Qadr';
 
   @override
-  String get qiblaDirection => 'Qibla Direction';
+  String get qiblaDirection => 'किब्ला दिशा';
 
   @override
   String get compass => 'Compass';

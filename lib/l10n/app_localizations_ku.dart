@@ -451,10 +451,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get north => 'North';
 
   @override
-  String get qiblaFound => 'Qibla found!';
+  String get qiblaFound => 'Qibla dît!';
 
   @override
-  String get turnDevice => 'Turn your device to face the Qibla';
+  String get turnDevice => 'Amûra xwe bizivirîne ber Qiblayê';
 
   @override
   String qiblaCompassErrorDetails(String error) {

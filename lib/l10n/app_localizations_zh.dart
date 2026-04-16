@@ -442,10 +442,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get north => '北';
 
   @override
-  String get qiblaFound => '朝拜发现了！';
+  String get qiblaFound => '已找到朝拜方向！';
 
   @override
-  String get turnDevice => '将您的设备转向朝拜';
+  String get turnDevice => '请将设备朝向朝拜方向';
 
   @override
   String qiblaCompassErrorDetails(String error) {
@@ -2078,10 +2078,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get north => '北';
 
   @override
-  String get qiblaFound => '朝拜发现了！';
+  String get qiblaFound => '已找到朝拜方向！';
 
   @override
-  String get turnDevice => '将您的设备转向朝拜';
+  String get turnDevice => '请将设备朝向朝拜方向';
 
   @override
   String qiblaCompassErrorDetails(String error) {
@@ -3714,10 +3714,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get north => '北';
 
   @override
-  String get qiblaFound => '朝拜發現了！';
+  String get qiblaFound => '已找到朝拜方向！';
 
   @override
-  String get turnDevice => '將您的裝置轉向朝拜';
+  String get turnDevice => '請將裝置朝向朝拜方向';
 
   @override
   String qiblaCompassErrorDetails(String error) {

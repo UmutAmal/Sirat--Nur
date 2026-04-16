@@ -360,6 +360,10 @@ bool _mustStaySingleLine(String key) {
       key == 'tapToCount' ||
       key == 'zikr' ||
       key == 'qiblaCalibration' ||
+      key == 'qiblaDirection' ||
+      key == 'compass' ||
+      key == 'turnDevice' ||
+      key == 'qiblaFound' ||
       key == 'calibrationOffset' ||
       key == 'currentOffset' ||
       key == 'theme' ||

@@ -435,7 +435,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get laylatAlQadr => 'Laylat Al-Qadr';
 
   @override
-  String get qiblaDirection => 'Qibla Direction';
+  String get qiblaDirection => 'ኣንፈት ቂብላ';
 
   @override
   String get compass => 'Compass';

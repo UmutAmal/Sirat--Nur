@@ -442,7 +442,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get qiblaDirection => 'Qibla Direction';
 
   @override
-  String get compass => 'Compass';
+  String get compass => 'Ikhampasi';
 
   @override
   String get degrees => 'degrees';
@@ -451,10 +451,10 @@ class AppLocalizationsZu extends AppLocalizations {
   String get north => 'North';
 
   @override
-  String get qiblaFound => 'Qibla found!';
+  String get qiblaFound => 'I-Qibla itholakele!';
 
   @override
-  String get turnDevice => 'Turn your device to face the Qibla';
+  String get turnDevice => 'Vula idivayisi yakho ibhekane ne-Qibla';
 
   @override
   String qiblaCompassErrorDetails(String error) {

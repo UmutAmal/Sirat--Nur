@@ -439,10 +439,10 @@ class AppLocalizationsSi extends AppLocalizations {
   String get laylatAlQadr => 'Laylat Al-Qadr';
 
   @override
-  String get qiblaDirection => 'Qibla Direction';
+  String get qiblaDirection => 'කිබ්ලා දිශාව';
 
   @override
-  String get compass => 'Compass';
+  String get compass => 'මාලිමා යන්ත්‍රය';
 
   @override
   String get degrees => 'degrees';
@@ -451,10 +451,10 @@ class AppLocalizationsSi extends AppLocalizations {
   String get north => 'North';
 
   @override
-  String get qiblaFound => 'Qibla found!';
+  String get qiblaFound => 'කිබ්ලා හමු විය!';
 
   @override
-  String get turnDevice => 'Turn your device to face the Qibla';
+  String get turnDevice => 'කිබ්ලා දෙසට ඔබේ උපාංගය හරවන්න';
 
   @override
   String qiblaCompassErrorDetails(String error) {

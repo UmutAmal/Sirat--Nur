@@ -451,10 +451,10 @@ class AppLocalizationsUg extends AppLocalizations {
   String get north => 'North';
 
   @override
-  String get qiblaFound => 'Qibla found!';
+  String get qiblaFound => 'قىبلە تاپتى!';
 
   @override
-  String get turnDevice => 'Turn your device to face the Qibla';
+  String get turnDevice => 'ئۈسكۈنىڭىزنى Qibla غا يۈزلەندۈرۈڭ';
 
   @override
   String qiblaCompassErrorDetails(String error) {

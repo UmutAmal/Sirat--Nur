@@ -227,6 +227,25 @@ void main() {
       expect(value, 'Kible Kalibrasyonu');
     });
 
+    test('rejects multiline qibla compass shell output', () {
+      final directionValue = resolveTranslatedArbValue(
+        key: 'qiblaDirection',
+        source: 'Qibla Direction',
+        currentValue: 'Kible Yonu',
+        candidate: 'means the following.\nKible Yonu',
+      );
+
+      final turnValue = resolveTranslatedArbValue(
+        key: 'turnDevice',
+        source: 'Turn your device to face the Qibla',
+        currentValue: 'Cihazinizi kibleye cevirin',
+        candidate: 'means the following.\nCihazinizi kibleye cevirin',
+      );
+
+      expect(directionValue, 'Kible Yonu');
+      expect(turnValue, 'Cihazinizi kibleye cevirin');
+    });
+
     test('rejects multiline theme mode output', () {
       final value = resolveTranslatedArbValue(
         key: 'systemDefault',

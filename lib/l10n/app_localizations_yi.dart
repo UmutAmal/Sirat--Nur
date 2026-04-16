@@ -442,7 +442,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get qiblaDirection => 'Qibla Direction';
 
   @override
-  String get compass => 'Compass';
+  String get compass => 'קאָמפּאַס';
 
   @override
   String get degrees => 'degrees';
@@ -451,10 +451,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get north => 'North';
 
   @override
-  String get qiblaFound => 'Qibla found!';
+  String get qiblaFound => 'קיבלאַ געפונען!';
 
   @override
-  String get turnDevice => 'Turn your device to face the Qibla';
+  String get turnDevice => 'קער דיין מיטל צו די Qibla';
 
   @override
   String qiblaCompassErrorDetails(String error) {

@@ -861,6 +861,81 @@ void main() {
     );
 
     test(
+      'safe priority locales do not fall back to English for qibla compass shell copy',
+      () {
+        const safeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'da',
+          'he',
+          'ja',
+          'nb',
+          'nn',
+          'no',
+          'pt',
+          'ru',
+          'vi',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const localizedKeys = [
+          'qiblaDirection',
+          'compass',
+          'turnDevice',
+          'qiblaFound',
+        ];
+
+        for (final locale in safeLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
+    test(
+      'safe priority qibla compass shell copy avoids known mistranslations',
+      () {
+        const knownBadValues = {
+          'es': {'qiblaDirection': 'Dirección qibla'},
+          'he': {
+            'qiblaFound': 'קיבלה נמצא!',
+            'turnDevice': 'סובב את המכשיר שלך כדי להתמודד עם ה-Qibla',
+          },
+          'ja': {'qiblaFound': 'キブラ発見！', 'turnDevice': 'デバイスをキブラに向けて向けます'},
+          'pt': {'qiblaDirection': 'Direção Qibla'},
+          'vi': {'turnDevice': 'Xoay thiết bị của bạn đối mặt với Qibla'},
+          'zh': {'qiblaFound': '朝拜发现了！'},
+          'zh_CN': {'qiblaFound': '朝拜发现了！'},
+          'zh_TW': {'qiblaFound': '朝拜發現了！'},
+        };
+
+        for (final localeEntry in knownBadValues.entries) {
+          final arb = _readArb('lib/l10n/app_${localeEntry.key}.arb');
+
+          for (final badEntry in localeEntry.value.entries) {
+            expect(
+              arb[badEntry.key],
+              isNot(badEntry.value),
+              reason:
+                  'app_${localeEntry.key}.arb kept a known weak qibla translation for ${badEntry.key}',
+            );
+          }
+        }
+      },
+    );
+
+    test(
       'priority locales do not fall back to English for zikr completion copy',
       () {
         const localizedKeys = ['zikr', 'tapToCount', 'zikrCompletedMashAllah'];

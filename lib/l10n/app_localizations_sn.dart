@@ -450,10 +450,10 @@ class AppLocalizationsSn extends AppLocalizations {
   String get north => 'North';
 
   @override
-  String get qiblaFound => 'Qibla found!';
+  String get qiblaFound => 'Qibla yakawanikwa!';
 
   @override
-  String get turnDevice => 'Turn your device to face the Qibla';
+  String get turnDevice => 'Shandura mudziyo wako kutarisana neQibla';
 
   @override
   String qiblaCompassErrorDetails(String error) {
