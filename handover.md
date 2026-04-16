@@ -7189,3 +7189,37 @@
 
 ### Sonraki Adım
 - Sonraki dongude audio ve offline download log/sonuc akislari tekrar taranacak; URL/path/partial-success ya da raw exception yuzeyi kaldiysa ayni sekilde kucuk patch ile kapatilacak.
+
+## 2026-04-16 TUR-187 — Harden Offline Quran Audio Download Gate
+
+### Yapılan İşlem
+- Offline Quran audio download kapisina desteklenen reciter, 1-114 sure araligi ve `quran-audio` Supabase Storage public URL kontrolu eklendi.
+- `getAudioPath`, `isAudioDownloaded`, `downloadSurahAudio`, `getDownloadedSurahs` ve `deleteReciterAudio` desteklenmeyen reciter/sure degerlerinde dosya sistemine dusmeden guvenli cikiyor.
+- Offline audio testleri, dis CDN URL'si, yanlis bucket, gecersiz sure ve path traversal benzeri reciter degerlerinin IO/network oncesi reddedildigini dogruluyor.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:211` once public `downloadSurahAudio(...)` metodunda URL ownership kontrolu yapmadan `dio.download(...)` cagirabiliyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:185` once `reciterId` degerini dosya adina dogrudan katarak path olusturuyordu.
+- UI katalog akisi Storage-backed olsa bile servis siniri kendi basina sert olmadiginda gelecekteki call-site hatalari dis URL indirme veya guvensiz dosya yolu riskine donebilirdi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran offline indirme artik yalnizca uygulamanin kendi Supabase `quran-audio` bucket public URL'lerinden dosya indirebilir.
+- Yanlis reciter/sure degeri dosya sistemi veya ag cagrisi baslatmadan reddedilir.
+- Mevcut UI akisi etkilenmez; reciter listesi ve katalog zaten ayni canonical id'leri uretiyor.
+
+### Test Sonucu
+- `flutter test test\offline_audio_service_test.dart` PASS (`10/10`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`363/363`)
+
+### Risk Değişimi
+- Public offline download metodunun dis URL indirmesi riski: `12/25 -> 1/25`
+- Desteklenmeyen reciter degeriyle guvensiz dosya yolu uretilmesi riski: `12/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude Surah okuma sayfasindaki playback loglari ve audio candidate zinciri kontrol edilecek; raw reciter/candidate metadata veya kontrolsuz exception yuzeyi kaldiysa kucuk patch ile kapatilacak.

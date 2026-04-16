@@ -141,6 +141,19 @@ List<int> missingQuranSurahAudioSources(Map<int, String> surahUrls) {
   return List.unmodifiable(missing);
 }
 
+bool _isValidQuranSurahNumber(int surahNumber) =>
+    surahNumber >= 1 && surahNumber <= 114;
+
+bool _isSupportedOfflineReciter(String reciterId) =>
+    OfflineReciters.reciters.containsKey(reciterId);
+
+bool _isDownloadableQuranAudioUrl(String audioUrl) {
+  return storage_url.isSupabaseStoragePublicUrl(
+    audioUrl,
+    bucketNames: const {SupabaseConfig.quranAudioBucket},
+  );
+}
+
 Map<String, Map<int, String>> resolveCloudQuranAudioCatalog(
   List<Map<String, dynamic>> rows,
 ) {
@@ -170,6 +183,13 @@ class OfflineAudioService {
   }
 
   static Future<String> getAudioPath(int surahNumber, String reciterId) async {
+    if (!_isValidQuranSurahNumber(surahNumber)) {
+      throw ArgumentError('Unsupported Quran surah number');
+    }
+    if (!_isSupportedOfflineReciter(reciterId)) {
+      throw ArgumentError('Unsupported offline reciter');
+    }
+
     final dir = await _audioDir;
     final paddedSurah = surahNumber.toString().padLeft(3, '0');
     return '${dir.path}/${reciterId}_$paddedSurah.mp3';
@@ -179,6 +199,11 @@ class OfflineAudioService {
     int surahNumber,
     String reciterId,
   ) async {
+    if (!_isValidQuranSurahNumber(surahNumber) ||
+        !_isSupportedOfflineReciter(reciterId)) {
+      return false;
+    }
+
     final path = await getAudioPath(surahNumber, reciterId);
     return File(path).exists();
   }
@@ -190,12 +215,19 @@ class OfflineAudioService {
     void Function(double progress)? onProgress,
     CancelToken? cancelToken,
   }) async {
+    final normalizedAudioUrl = audioUrl.trim();
+    if (!_isValidQuranSurahNumber(surahNumber) ||
+        !_isSupportedOfflineReciter(reciterId) ||
+        !_isDownloadableQuranAudioUrl(normalizedAudioUrl)) {
+      return false;
+    }
+
     try {
       final dio = Dio();
       final savePath = await getAudioPath(surahNumber, reciterId);
 
       await dio.download(
-        audioUrl,
+        normalizedAudioUrl,
         savePath,
         cancelToken: cancelToken,
         onReceiveProgress: (received, total) {
@@ -263,6 +295,10 @@ class OfflineAudioService {
   }
 
   static Future<List<int>> getDownloadedSurahs(String reciterId) async {
+    if (!_isSupportedOfflineReciter(reciterId)) {
+      return const [];
+    }
+
     final downloaded = <int>[];
     final dir = await _audioDir;
 
@@ -288,6 +324,10 @@ class OfflineAudioService {
   }
 
   static Future<void> deleteReciterAudio(String reciterId) async {
+    if (!_isSupportedOfflineReciter(reciterId)) {
+      return;
+    }
+
     final dir = await _audioDir;
     final files = await dir.list().toList();
 

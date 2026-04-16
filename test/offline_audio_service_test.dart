@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 
 void main() {
@@ -217,6 +218,55 @@ void main() {
         contains(
           ".select(\n            'type, reciter, surah_number, url, storage_path, source, verified_at',\n          )",
         ),
+      );
+    });
+
+    test(
+      'downloadSurahAudio rejects unowned or invalid requests before IO',
+      () async {
+        final validStorageUrl =
+            '${SupabaseConfig.url}/storage/v1/object/public/quran-audio/alafasy/001.mp3';
+
+        expect(
+          await OfflineAudioService.downloadSurahAudio(
+            surahNumber: 1,
+            reciterId: 'alafasy',
+            audioUrl: 'https://cdn.example.com/alafasy/001.mp3',
+          ),
+          isFalse,
+        );
+        expect(
+          await OfflineAudioService.downloadSurahAudio(
+            surahNumber: 1,
+            reciterId: 'alafasy',
+            audioUrl:
+                '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3',
+          ),
+          isFalse,
+        );
+        expect(
+          await OfflineAudioService.downloadSurahAudio(
+            surahNumber: 0,
+            reciterId: 'alafasy',
+            audioUrl: validStorageUrl,
+          ),
+          isFalse,
+        );
+        expect(
+          await OfflineAudioService.downloadSurahAudio(
+            surahNumber: 1,
+            reciterId: '../alafasy',
+            audioUrl: validStorageUrl,
+          ),
+          isFalse,
+        );
+      },
+    );
+
+    test('getAudioPath rejects unsupported reciters before path building', () {
+      expect(
+        OfflineAudioService.getAudioPath(1, '../alafasy'),
+        throwsA(isA<ArgumentError>()),
       );
     });
   });
