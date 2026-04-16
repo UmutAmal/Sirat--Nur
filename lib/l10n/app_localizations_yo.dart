@@ -164,7 +164,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get refreshAction => 'Tuntun';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Fagilee';
 
   @override
   String get save => 'Save';
@@ -547,7 +547,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get downloadFailed => 'Gbigba lati ayelujara kuna';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Aisinipo Ipo';
 
   @override
   String get noInternet => 'Ko si Asopọ Ayelujara';

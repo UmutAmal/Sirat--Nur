@@ -164,7 +164,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get refreshAction => 'ໂຫຼດຂໍ້ມູນຄືນໃໝ່';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'ຍົກເລີກ';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get downloadFailed => 'ການດາວໂຫຼດລົ້ມເຫລວ';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'ໂໝດອອບໄລນ໌';
 
   @override
   String get noInternet => 'ບໍ່ມີການເຊື່ອມຕໍ່ອິນເຕີເນັດ';

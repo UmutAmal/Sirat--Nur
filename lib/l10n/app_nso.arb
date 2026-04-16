@@ -353,8 +353,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Moedi wa dipotšišo tša letšatši le letšatši o fihleletšwe. Ntlafatsa go Premium bakeng sa e sa lekanyetsoang.",
   "chatbotErrorMsg": "Ke be ke sa kgone go tšweletša karabelo. Hle leka gape.",
-  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflinePrompt": "Motheo wa tsebo ya Boiselamo wo o netefaditšwego wa ka ntle ga inthanete o sa dutše o hlokomelwa. O ka kgontšha go boela morago ka ntle ga inthanete bjale, eupša e tla bontšha fela melaetša ye e bolokegilego ye e lekanyeditšwego go fihlela sete ya datha ye e hweditšwego e lokile.\n\nNa o ka rata go kgontšha go boela morago ka ntle ga inthanete?",
+  "chatbotOfflineSwitched": "Fallback ya ka ntle ga inthanete e kgontšhitšwe. Dikarabo tša selegae tša Boiselamo tše di netefaditšwego ga se tša lokela ga bjale.",
   "chatbotOfflineDownloadLabel": "Kgontšha Fallback ya ka ntle ga inthanete",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -447,7 +447,7 @@
   "bestStreak": "Mothaladi o mobotse kudu",
   "chatbotCloudAiLabel": "AI ya leru",
   "chatbotLocalAiLabel": "Fallback ya ka ntle ga inthanete",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Diriša AI ya Leru (Gemini) .",
   "chatbotDownloadLocalAi": "Kgontšha Fallback ya ka ntle ga inthanete",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "API ya leru ga se ya beakanywa. Tlhahlo ya Boiselamo yeo e netefaditšwego ya ka ntle ga inthanete ga e hwetšagale ga bjale.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Tlhahlo ya selegae ya Boiselamo ye e netefaditšwego ga e hwetšagale ga bjale. Fetogela go Cloud AI bakeng sa dikarabo tše di hweditšwego.",
   "mosques": "Dimoskete",
   "halalFood": "Dijo tša Halal",
   "placesSearchArea": "Nyaka lefelo le",

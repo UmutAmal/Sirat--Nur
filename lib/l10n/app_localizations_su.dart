@@ -164,7 +164,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get refreshAction => 'Nyegerkeun';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Ngabolaykeun';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get downloadFailed => 'Ngundeur Gagal';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Modeu Offline';
 
   @override
   String get noInternet => 'Taya Konéksi Internét';

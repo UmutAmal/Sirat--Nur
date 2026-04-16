@@ -1165,11 +1165,11 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'Tha am bunait eòlais Ioslamach far-loidhne dearbhte fhathast ga chur air dòigh. Faodaidh tu cùl-taic far loidhne a chomasachadh a-nis, ach cha sheall e ach teachdaireachdan cuibhrichte sàbhailte gus am bi an stòr-dàta a fhuaireadh deiseil.\n\nAm bu toil leat cùl-taic far loidhne a chomasachadh?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Cùl-taic far-loidhne air a chomasachadh. Chan eil freagairtean Ioslamach ionadail dearbhte deiseil fhathast.';
 
   @override
   String get chatbotOfflineDownloadLabel =>
@@ -1302,7 +1302,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Fallback far loidhne';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cleachd Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Dèan comas air cùl-taic far-loidhne';
@@ -1318,7 +1318,7 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[OFFLINE] Chan eil stiùireadh Ioslamach ionadail dearbhte ri fhaighinn fhathast. Gluais gu Cloud AI airson freagairtean fhaighinn.';
 
   @override
   String get mosques => 'Mosg';

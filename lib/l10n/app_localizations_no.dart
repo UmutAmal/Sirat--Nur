@@ -164,7 +164,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get refreshAction => 'Oppdater';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Avbryt';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get downloadFailed => 'Nedlasting mislyktes';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Frakoblet modus';
 
   @override
   String get noInternet => 'Ingen Internett-tilkobling';
@@ -1169,7 +1169,7 @@ class AppLocalizationsNo extends AppLocalizations {
       'Offline reserveback aktivert. Verifiserte lokale islamske svar er ikke klare ennå.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Aktiver Offline Fallback';
+  String get chatbotOfflineDownloadLabel => 'Aktiver frakoblet reserve';
 
   @override
   String get downloadPreparing => 'Forbereder nedlasting...';
@@ -1295,13 +1295,13 @@ class AppLocalizationsNo extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Skybasert KI';
 
   @override
-  String get chatbotLocalAiLabel => 'Offline Fallback';
+  String get chatbotLocalAiLabel => 'Frakoblet reserve';
 
   @override
   String get chatbotUseCloudAi => 'Bruk Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Aktiver Offline Fallback';
+  String get chatbotDownloadLocalAi => 'Aktiver frakoblet reserve';
 
   @override
   String chatbotQueriesLeft(String count) {

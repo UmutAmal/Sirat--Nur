@@ -164,7 +164,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get refreshAction => 'Dib u cusboonaysii';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Jooji';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get downloadFailed => 'Soo dajisku wuu fashilmay';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Qaabka khadka tooska ah';
 
   @override
   String get noInternet => 'Xiriir internet ma jiro';

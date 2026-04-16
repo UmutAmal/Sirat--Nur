@@ -165,7 +165,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get refreshAction => 'Tāmata';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Whakakore';
 
   @override
   String get save => 'Save';
@@ -550,7 +550,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get downloadFailed => 'I Rahua te Tikiake';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Aratau Tuimotu';
 
   @override
   String get noInternet => 'Kaore he Hononga Ipurangi';

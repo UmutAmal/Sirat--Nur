@@ -59,7 +59,7 @@ void main() {
       await pumpChatbotPage(tester, const Locale('tr'));
 
       expect(find.text('Asistan'), findsOneWidget);
-      expect(find.text('Çevrimdışı Fallback'), findsOneWidget);
+      expect(find.text('Çevrimdışı Yedek'), findsOneWidget);
       expect(find.text('Bulut AI'), findsNothing);
       expect(find.text('20 kaldı'), findsOneWidget);
 
@@ -67,7 +67,7 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.text('Bulut AI Kullan (Gemini)'), findsOneWidget);
-      expect(find.text("Çevrimdışı Fallback'i Etkinleştir"), findsOneWidget);
+      expect(find.text('Çevrimdışı Yedeği Etkinleştir'), findsOneWidget);
       final cloudItem = tester.widget<PopupMenuItem<String>>(
         find.widgetWithText(PopupMenuItem<String>, 'Bulut AI Kullan (Gemini)'),
       );

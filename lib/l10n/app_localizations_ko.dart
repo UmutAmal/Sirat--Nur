@@ -163,7 +163,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get refreshAction => '새로고침';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => '취소';
 
   @override
   String get save => 'Save';
@@ -543,7 +543,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get downloadFailed => '다운로드 실패';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => '오프라인 모드';
 
   @override
   String get noInternet => '인터넷에 연결되어 있지 않음';

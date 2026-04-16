@@ -99,6 +99,33 @@ void main() {
       );
     });
 
+    test('rejects multiline chatbot mode control output', () {
+      final offlineModeValue = resolveTranslatedArbValue(
+        key: 'offlineMode',
+        source: 'Offline Mode',
+        currentValue: 'Cevrimdisi Mod',
+        candidate: 'means the following.\nCevrimdisi Mod',
+      );
+
+      final localLabelValue = resolveTranslatedArbValue(
+        key: 'chatbotLocalAiLabel',
+        source: 'Offline Fallback',
+        currentValue: 'Cevrimdisi Yedek',
+        candidate: 'means the following.\nCevrimdisi Yedek',
+      );
+
+      final cancelValue = resolveTranslatedArbValue(
+        key: 'cancel',
+        source: 'Cancel',
+        currentValue: 'Iptal',
+        candidate: 'means the following.\nIptal',
+      );
+
+      expect(offlineModeValue, 'Cevrimdisi Mod');
+      expect(localLabelValue, 'Cevrimdisi Yedek');
+      expect(cancelValue, 'Iptal');
+    });
+
     test('rejects multiline analytics label output', () {
       final streaksValue = resolveTranslatedArbValue(
         key: 'streaks',

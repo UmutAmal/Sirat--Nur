@@ -420,6 +420,13 @@ bool _mustStaySingleLine(String key) {
       key == 'diagnosticsQuranCloudJuzMissing' ||
       key == 'placesDataSourceUnavailableTitle' ||
       key == 'placesDataSourceUnavailableBody' ||
+      key == 'chatbotLocalAiLabel' ||
+      key == 'chatbotCloudAiLabel' ||
+      key == 'chatbotUseCloudAi' ||
+      key == 'chatbotDownloadLocalAi' ||
+      key == 'chatbotOfflineDownloadLabel' ||
+      key == 'offlineMode' ||
+      key == 'cancel' ||
       key == 'chatbotGreeting' ||
       key == 'chatbotHint' ||
       key == 'chatbotThinking' ||

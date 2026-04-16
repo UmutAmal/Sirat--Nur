@@ -164,7 +164,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get refreshAction => 'تازو ڪريو';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'منسوخ ڪريو';
 
   @override
   String get save => 'Save';
@@ -547,7 +547,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get downloadFailed => 'ڊائون لوڊ ناڪام';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'آف لائن موڊ';
 
   @override
   String get noInternet => 'انٽرنيٽ ڪنيڪشن ناهي';

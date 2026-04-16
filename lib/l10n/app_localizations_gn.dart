@@ -1163,11 +1163,11 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'Ko base de conocimiento islámico verificado offline oime gueteri comisariado. Ikatu emboguata fallback offline ko’áĝa, ha katu ohechaukáta marandu seguro limitado añoite pe datokuéra ryru osẽva’ekue oĩma peve.\n\n¿Remboguatasépa fallback offline?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Ojeheja rei fallback offline-pe. Umi respuesta islámica local verificado noĩri gueteri listo.';
 
   @override
   String get chatbotOfflineDownloadLabel =>
@@ -1317,7 +1317,7 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[OFFLINE] Ndojeguerekói gueteri orientación islámica local ojehechaukáva. Embohasa Cloud AI-pe ñembohovái fuente-pe g̃uarã.';
 
   @override
   String get mosques => 'Mezquita-kuéra';

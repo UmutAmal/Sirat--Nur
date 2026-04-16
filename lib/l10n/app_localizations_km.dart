@@ -164,7 +164,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get refreshAction => 'ធ្វើឱ្យស្រស់';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'បោះបង់';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get downloadFailed => 'ការទាញយកបរាជ័យ';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'របៀបក្រៅបណ្តាញ';
 
   @override
   String get noInternet => 'គ្មានការភ្ជាប់អ៊ីនធឺណិត';
@@ -1293,7 +1293,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get bestStreak => 'កម្រិតល្អបំផុត';
 
   @override
-  String get chatbotCloudAiLabel => 'Cloud AI';
+  String get chatbotCloudAiLabel => 'ពពក AI';
 
   @override
   String get chatbotLocalAiLabel => 'Offline Fallback';

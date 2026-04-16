@@ -164,7 +164,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get refreshAction => 'Сэргээх';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Цуцлах';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get downloadFailed => 'Татаж чадсангүй';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Офлайн горим';
 
   @override
   String get noInternet => 'Интернет холболт байхгүй';

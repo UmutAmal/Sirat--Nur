@@ -48,7 +48,7 @@
   "loading": "Laster inn...",
   "error": "Feil",
   "retry": "Retry",
-  "cancel": "Cancel",
+  "cancel": "Avbryt",
   "save": "Save",
   "delete": "Slett",
   "edit": "Edit",
@@ -140,7 +140,7 @@
   "downloading": "Downloading...",
   "downloadComplete": "Nedlasting fullført",
   "downloadFailed": "Nedlasting mislyktes",
-  "offlineMode": "Offline Mode",
+  "offlineMode": "Fråkopla modus",
   "noInternet": "Ingen Internett-tilkobling",
   "checkConnection": "Vennligst sjekk tilkoblingen din",
   "premium": "Premium",
@@ -355,7 +355,7 @@
   "chatbotErrorMsg": "Jeg kunne ikke generere et svar. Vennligst prøv igjen.",
   "chatbotOfflinePrompt": "Den bekreftede frakoblede islamske kunnskapsbasen blir fortsatt kurert. Du kan aktivere offline fallback nå, men det vil bare vise begrensede sikre meldinger inntil det hentede datasettet er klart.\n\nVil du aktivere frakoblet fallback?",
   "chatbotOfflineSwitched": "Offline reserveback aktivert. Verifiserte lokale islamske svar er ikke klare ennå.",
-  "chatbotOfflineDownloadLabel": "Aktiver Offline Fallback",
+  "chatbotOfflineDownloadLabel": "Aktiver fråkopla reserve",
   "downloadPreparing": "Forbereder nedlasting...",
   "downloadingSurah": "Laster ned surah {surah} / {total}",
   "@downloadingSurah": {
@@ -446,9 +446,9 @@
   "dayStreak": "Dagsrekke",
   "bestStreak": "Beste rekke",
   "chatbotCloudAiLabel": "Skybasert KI",
-  "chatbotLocalAiLabel": "Offline Fallback",
+  "chatbotLocalAiLabel": "Fråkopla reserve",
   "chatbotUseCloudAi": "Bruk Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Aktiver Offline Fallback",
+  "chatbotDownloadLocalAi": "Aktiver fråkopla reserve",
   "chatbotQueriesLeft": "{count} igjen",
   "@chatbotQueriesLeft": {
     "placeholders": {

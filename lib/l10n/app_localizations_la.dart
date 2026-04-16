@@ -548,7 +548,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get downloadFailed => 'Download Deficio';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Offline Modus';
 
   @override
   String get noInternet => 'Non Internet Connection';

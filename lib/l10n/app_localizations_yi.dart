@@ -164,7 +164,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get refreshAction => 'דערפרישן';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'באָטל מאַכן';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get downloadFailed => 'אראפקאפיע ניט אַנדערש';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'אָפפלינע מאָדע';
 
   @override
   String get noInternet => 'קיין אינטערנעט פֿאַרבינדונג';

@@ -165,7 +165,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get refreshAction => 'Odśwież';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Anuluj';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get downloadFailed => 'Pobieranie nie powiodło się';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Tryb offline';
 
   @override
   String get noInternet => 'Brak połączenia z Internetem';

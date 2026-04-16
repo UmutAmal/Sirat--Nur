@@ -163,7 +163,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get refreshAction => 'Uppdatera';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Avbryt';
 
   @override
   String get save => 'Save';
@@ -547,7 +547,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get downloadFailed => 'Nedladdningen misslyckades';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Offlineläge';
 
   @override
   String get noInternet => 'Ingen Internetanslutning';

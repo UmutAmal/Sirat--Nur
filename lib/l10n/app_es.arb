@@ -447,7 +447,7 @@
   "bestStreak": "Mejor racha",
   "chatbotCloudAiLabel": "IA en la nube",
   "chatbotLocalAiLabel": "Reserva sin conexión",
-  "chatbotUseCloudAi": "Utilice la IA en la nube (Gemini)",
+  "chatbotUseCloudAi": "Usar IA en la nube (Gemini)",
   "chatbotDownloadLocalAi": "Habilitar respaldo sin conexión",
   "chatbotQueriesLeft": "{count} izquierda",
   "@chatbotQueriesLeft": {

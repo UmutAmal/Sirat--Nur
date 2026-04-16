@@ -166,7 +166,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get refreshAction => 'Reîmprospătați';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Anulează';
 
   @override
   String get save => 'Save';
@@ -551,7 +551,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get downloadFailed => 'Descărcarea eșuată';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Modul offline';
 
   @override
   String get noInternet => 'Fără conexiune la internet';

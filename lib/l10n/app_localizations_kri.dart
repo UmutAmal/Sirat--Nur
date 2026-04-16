@@ -1160,11 +1160,11 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'Di verified oflain Islamik no bies stil de curate. Yu kin ɛnabul ɔflayn fɔlbak naw, bɔt i go jɔs sho limited sef mɛsej dɛn te di sɔs datasɛt rɛdi.\n\nYu go lɛk fɔ ɛnabul ɔflayn fɔlbak?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Ɔflayn fɔlbak dɔn ɛnabul. Verified lokal Islamic ansa dem no redi yet.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Enable Ɔflayn Fɔlbak';
@@ -1297,7 +1297,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Ɔflayn Falbak';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Yuz Klɔd AI (Gemini) .';
 
   @override
   String get chatbotDownloadLocalAi => 'Enable Ɔflayn Fɔlbak';
@@ -1313,7 +1313,7 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[OFFLINE] Verified lokal Islamik gayd nɔ de yet. Switch to Cloud AI fɔ sɔs ansa dɛn.';
 
   @override
   String get mosques => 'Moskɛt dɛn';

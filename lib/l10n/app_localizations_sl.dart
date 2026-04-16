@@ -164,7 +164,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get refreshAction => 'Osveži';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Prekliči';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get downloadFailed => 'Prenos ni uspel';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Način brez povezave';
 
   @override
   String get noInternet => 'Ni internetne povezave';

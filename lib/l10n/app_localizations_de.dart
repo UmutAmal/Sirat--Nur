@@ -165,7 +165,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get refreshAction => 'Aktualisieren';
 
   @override
-  String get cancel => 'Stornieren';
+  String get cancel => 'Abbrechen';
 
   @override
   String get save => 'Speichern';
@@ -1175,7 +1175,7 @@ class AppLocalizationsDe extends AppLocalizations {
       'Offline-Fallback aktiviert. Verifizierte lokale islamische Antworten sind noch nicht fertig.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Offline-Fallback aktivieren';
+  String get chatbotOfflineDownloadLabel => 'Offline-Ersatz aktivieren';
 
   @override
   String get downloadPreparing => 'Download wird vorbereitet...';
@@ -1301,13 +1301,13 @@ class AppLocalizationsDe extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Cloud-KI';
 
   @override
-  String get chatbotLocalAiLabel => 'Offline-Fallback';
+  String get chatbotLocalAiLabel => 'Offline-Ersatz';
 
   @override
-  String get chatbotUseCloudAi => 'Verwenden Sie Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI verwenden (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Offline-Fallback aktivieren';
+  String get chatbotDownloadLocalAi => 'Offline-Ersatz aktivieren';
 
   @override
   String chatbotQueriesLeft(String count) {

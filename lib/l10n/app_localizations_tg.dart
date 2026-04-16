@@ -164,7 +164,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get refreshAction => 'Навсозӣ';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Бекор кардан';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get downloadFailed => 'Зеркашӣ карда нашуд';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Ҳолати офлайн';
 
   @override
   String get noInternet => 'Пайвасти интернет нест';

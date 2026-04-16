@@ -1168,11 +1168,11 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'ވެރިފައިޑް އޮފްލައިން އިސްލާމިކް ނޮލެޖް ބޭސް މިހާރުވެސް ދަނީ ކިއުރެޓް ކުރަމުންނެވެ. މިހާރު އޮފްލައިން ފޯލްބެކް އެނެބަލް ކުރެވޭނެ ނަމަވެސް ސޯސްޑް ޑޭޓާސެޓް ތައްޔާރުވާންދެން އެއިން ދައްކާނީ ލިމިޓެޑް ސޭފް މެސެޖްތަކެކެވެ.\n\nއޮފްލައިން ފޯލްބެކް އެނެބަލް ކުރަން ބޭނުން ހެއްޔެވެ؟';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'އޮފްލައިން ފޯލްބެކް އެނެބަލްކޮށްފައި. ވެރިފައިޑް ލޯކަލް އިސްލާމިކް ޖަވާބުތައް އަދި ތައްޔާރު ނުވެއެވެ.';
 
   @override
   String get chatbotOfflineDownloadLabel =>
@@ -1321,7 +1321,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[އޮފްލައިން] ވެރިފައިޑް ލޯކަލް އިސްލާމިކް ގައިޑްލައިން އަދި ނުލިބެއެވެ. ސޯސްޑް ޖަވާބުތަކަށް ކްލައުޑް އެއައި އަށް ބަދަލުވާށެވެ.';
 
   @override
   String get mosques => 'މިސްކިތްތަކެވެ';

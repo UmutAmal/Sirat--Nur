@@ -1172,7 +1172,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Offline fallback tih theih a ni. Verified local Islamic chhanna chu a la inpeih lo.';
 
   @override
   String get chatbotOfflineDownloadLabel =>

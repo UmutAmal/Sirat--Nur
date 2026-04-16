@@ -164,7 +164,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get refreshAction => 'Onyesha upya';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Ghairi';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get downloadFailed => 'Imeshindwa Kupakua';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Hali ya Nje ya Mtandao';
 
   @override
   String get noInternet => 'Hakuna Muunganisho wa Mtandao';

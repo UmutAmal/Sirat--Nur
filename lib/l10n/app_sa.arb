@@ -354,7 +354,7 @@
   "chatbotLimitReached": "दैनिकप्रश्नसीमा प्राप्ता। असीमितस्य कृते प्रीमियमं प्रति उन्नयनं कुर्वन्तु।",
   "chatbotErrorMsg": "अहं प्रतिक्रियां जनयितुं न शक्तवान्। कृपया पुनः प्रयासं कुर्वन्तु।",
   "chatbotOfflinePrompt": "सत्यापितं अफलाइन इस्लामिकज्ञानकोशम् अद्यापि क्यूरेटिङ्ग् क्रियते। इदानीं भवान् offline fallback सक्षमं कर्तुं शक्नोति, परन्तु स्रोतः दत्तांशसमूहः सज्जः न भवति तावत् केवलं सीमितसुरक्षितसन्देशान् एव दर्शयिष्यति ।\n\nकिं भवान् अफलाइन-फॉलबैक् सक्षमं कर्तुम् इच्छति?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "अफलाइन fallback सक्षमम्। सत्यापितस्थानीय इस्लामिक उत्तराणि अद्यापि सज्जाः न सन्ति।",
   "chatbotOfflineDownloadLabel": "Offline Fallback सक्षमं कुर्वन्तु",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

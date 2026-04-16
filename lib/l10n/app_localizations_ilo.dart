@@ -1169,11 +1169,11 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'Ti naberipikado nga offline Islamic knowledge base ket ma-curate pay laeng. Mabalinmo nga ipalubos ti offline fallback ita, ngem ipakitana laeng dagiti limitado a natalged a mensahe agingga a nakasaganan ti nagtaudan a dataset.\n\nKayatmo kadi nga ipalubos ti offline fallback?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Na-enable ti offline a fallback. Saan pay a nakasagana dagiti naberipikado a lokal nga Islamiko a sungbat.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Pagbalinen nga Offline Fallback';
@@ -1305,7 +1305,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline nga Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Usaren ti Cloud AI (Gemini) .';
 
   @override
   String get chatbotDownloadLocalAi => 'Pagbalinen nga Offline Fallback';
@@ -1321,7 +1321,7 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[OFFLINE] Saan pay a magun-od ti naberipikado a lokal nga Islamiko a panangiwanwan. Agbalbaliw iti Cloud AI para kadagiti nagtaudan a sungbat.';
 
   @override
   String get mosques => 'Dagiti Moske';

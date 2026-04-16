@@ -164,7 +164,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get refreshAction => 'Vuselela';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Khansela';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get downloadFailed => 'Ukulanda Kwehlulekile';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Imodi engaxhunyiwe ku-inthanethi';
 
   @override
   String get noInternet => 'Alukho Uxhumo Lwe-inthanethi';

@@ -163,7 +163,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get refreshAction => 'リフレッシュ';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'キャンセル';
 
   @override
   String get save => 'Save';
@@ -544,7 +544,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get downloadFailed => 'ダウンロードに失敗しました';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'オフラインモード';
 
   @override
   String get noInternet => 'インターネット接続なし';

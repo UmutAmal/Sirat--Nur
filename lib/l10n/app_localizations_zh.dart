@@ -1140,7 +1140,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatbotOfflineSwitched => '启用离线回退。经过验证的本地伊斯兰答案尚未准备好。';
 
   @override
-  String get chatbotOfflineDownloadLabel => '启用离线回退';
+  String get chatbotOfflineDownloadLabel => '启用离线备用';
 
   @override
   String get downloadPreparing => '正在准备下载...';
@@ -1263,13 +1263,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatbotCloudAiLabel => '云端人工智能';
 
   @override
-  String get chatbotLocalAiLabel => '离线回退';
+  String get chatbotLocalAiLabel => '离线备用';
 
   @override
-  String get chatbotUseCloudAi => '使用云人工智能（Gemini）';
+  String get chatbotUseCloudAi => '使用 Cloud AI（Gemini）';
 
   @override
-  String get chatbotDownloadLocalAi => '启用离线回退';
+  String get chatbotDownloadLocalAi => '启用离线备用';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -2776,7 +2776,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get chatbotOfflineSwitched => '启用离线回退。经过验证的本地伊斯兰答案尚未准备好。';
 
   @override
-  String get chatbotOfflineDownloadLabel => '启用离线回退';
+  String get chatbotOfflineDownloadLabel => '启用离线备用';
 
   @override
   String get downloadPreparing => '正在准备下载...';
@@ -2899,13 +2899,13 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get chatbotCloudAiLabel => '云端人工智能';
 
   @override
-  String get chatbotLocalAiLabel => '离线回退';
+  String get chatbotLocalAiLabel => '离线备用';
 
   @override
-  String get chatbotUseCloudAi => '使用云人工智能（Gemini）';
+  String get chatbotUseCloudAi => '使用 Cloud AI（Gemini）';
 
   @override
-  String get chatbotDownloadLocalAi => '启用离线回退';
+  String get chatbotDownloadLocalAi => '启用离线备用';
 
   @override
   String chatbotQueriesLeft(String count) {
@@ -4412,7 +4412,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get chatbotOfflineSwitched => '啟用離線回退。經過驗證的本地伊斯蘭答案尚未準備好。';
 
   @override
-  String get chatbotOfflineDownloadLabel => '啟用離線回退';
+  String get chatbotOfflineDownloadLabel => '啟用離線備援';
 
   @override
   String get downloadPreparing => '正在準備下載...';
@@ -4535,13 +4535,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get chatbotCloudAiLabel => '雲端人工智慧';
 
   @override
-  String get chatbotLocalAiLabel => '離線回退';
+  String get chatbotLocalAiLabel => '離線備援';
 
   @override
-  String get chatbotUseCloudAi => '使用雲端人工智慧（Gemini）';
+  String get chatbotUseCloudAi => '使用 Cloud AI（Gemini）';
 
   @override
-  String get chatbotDownloadLocalAi => '啟用離線回退';
+  String get chatbotDownloadLocalAi => '啟用離線備援';
 
   @override
   String chatbotQueriesLeft(String count) {

@@ -164,7 +164,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get refreshAction => 'Жаңарту';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Болдырмау';
 
   @override
   String get save => 'Save';
@@ -547,7 +547,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get downloadFailed => 'Жүктеп алу сәтсіз аяқталды';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Офлайн режимі';
 
   @override
   String get noInternet => 'Интернет қосылымы жоқ';

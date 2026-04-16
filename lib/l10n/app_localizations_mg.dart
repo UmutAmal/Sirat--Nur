@@ -164,7 +164,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get refreshAction => 'Havaozina';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Manafoana';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get downloadFailed => 'Tsy nahomby ny fampidinana';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Fomba an-tserasera';
 
   @override
   String get noInternet => 'Tsy misy fifandraisana Internet';

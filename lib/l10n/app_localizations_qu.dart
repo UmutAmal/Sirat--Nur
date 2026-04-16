@@ -166,7 +166,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get refreshAction => 'Refresh';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Sayachiy';
 
   @override
   String get save => 'Save';
@@ -550,7 +550,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get downloadFailed => 'Download Failed';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Modo mana tinkisqa';
 
   @override
   String get noInternet => 'No Internet Connection';
@@ -1164,11 +1164,11 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'Chay chiqapchasqa mana tinkisqa islam yachaypa tiyanan kunankamapas curado kachkan. Kunan mana tinkisqa kutiy kutichiyta atichiyta atikunki, ichaqa pisi waqaychasqa willakuykunatalla rikuchinqa pukyuta willay huñu wakichisqa kanankama.\n\n¿Mana tinkisqa fallback atichiyta munankichu?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Mana tinkisqa fallback atichisqa. Chiqapchasqa llaqta islam kutichiykuna manaraqmi wakichisqachu.';
 
   @override
   String get chatbotOfflineDownloadLabel =>
@@ -1301,7 +1301,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Mana tinkisqa Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini) nisqawan llamk\'achiy.';
 
   @override
   String get chatbotDownloadLocalAi => 'Mana tinkisqa Fallback nisqa atichiy';
@@ -1317,7 +1317,7 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[OFFLINE] Chiqapchasqa llaqta islam pusayqa manaraqmi kanchu. Puyu AI kaqman tikray pukyuta kutichiykunapaq.';
 
   @override
   String get mosques => 'Mezquitakuna';

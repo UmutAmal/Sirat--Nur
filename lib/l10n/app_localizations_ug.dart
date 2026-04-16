@@ -164,7 +164,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get refreshAction => 'يېڭىلاش';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'بىكار قىلىش';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get downloadFailed => 'چۈشۈرۈش مەغلۇب بولدى';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'تورسىز ھالەت';
 
   @override
   String get noInternet => 'تور ئۇلىنىشى يوق';

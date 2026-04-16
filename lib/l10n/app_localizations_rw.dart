@@ -164,7 +164,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get refreshAction => 'Ongera';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Kureka';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get downloadFailed => 'Gukuramo birananirana';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Uburyo bwa Offline';
 
   @override
   String get noInternet => 'Nta murongo wa interineti';

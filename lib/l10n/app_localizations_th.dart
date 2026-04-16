@@ -164,7 +164,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get refreshAction => 'Refresh';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'ยกเลิก';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get downloadFailed => 'Download Failed';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'โหมดออฟไลน์';
 
   @override
   String get noInternet => 'No Internet Connection';
@@ -1162,11 +1162,11 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'ฐานความรู้อิสลามแบบออฟไลน์ที่ได้รับการตรวจสอบแล้วยังคงได้รับการดูแลจัดการ คุณสามารถเปิดใช้งานทางเลือกแบบออฟไลน์ได้ในขณะนี้ แต่จะแสดงเฉพาะข้อความที่ปลอดภัยแบบจำกัดจนกว่าชุดข้อมูลที่มาจะพร้อม\n\nคุณต้องการเปิดใช้งานทางเลือกแบบออฟไลน์หรือไม่';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'เปิดใช้งานทางเลือกแบบออฟไลน์แล้ว คำตอบของศาสนาอิสลามในท้องถิ่นที่ได้รับการยืนยันแล้วยังไม่พร้อม';
 
   @override
   String get chatbotOfflineDownloadLabel => 'เปิดใช้งานทางเลือกสำรองแบบออฟไลน์';
@@ -1314,7 +1314,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[ออฟไลน์] ยังไม่มีคำแนะนำอิสลามในท้องถิ่นที่ได้รับการยืนยัน เปลี่ยนไปใช้ Cloud AI เพื่อดูคำตอบที่มา';
 
   @override
   String get mosques => 'มัสยิด';

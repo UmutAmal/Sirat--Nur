@@ -1170,8 +1170,7 @@ class AppLocalizationsTr extends AppLocalizations {
       'Çevrimdışı fallback etkinleştirildi. Doğrulanmış yerel İslami cevaplar henüz hazır değil.';
 
   @override
-  String get chatbotOfflineDownloadLabel =>
-      'Çevrimdışı Fallback\'i Etkinleştir';
+  String get chatbotOfflineDownloadLabel => 'Çevrimdışı Yedeği Etkinleştir';
 
   @override
   String get downloadPreparing => 'İndirme hazırlanıyor...';
@@ -1296,13 +1295,13 @@ class AppLocalizationsTr extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Bulut AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Çevrimdışı Fallback';
+  String get chatbotLocalAiLabel => 'Çevrimdışı Yedek';
 
   @override
   String get chatbotUseCloudAi => 'Bulut AI Kullan (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Çevrimdışı Fallback\'i Etkinleştir';
+  String get chatbotDownloadLocalAi => 'Çevrimdışı Yedeği Etkinleştir';
 
   @override
   String chatbotQueriesLeft(String count) {

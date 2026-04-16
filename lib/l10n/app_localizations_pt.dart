@@ -165,7 +165,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get refreshAction => 'Atualizar';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Cancelar';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get downloadFailed => 'Falha no download';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Modo offline';
 
   @override
   String get noInternet => 'Sem conexão com a Internet';
@@ -1172,7 +1172,7 @@ class AppLocalizationsPt extends AppLocalizations {
       'Fallback off-line ativado. As respostas islâmicas locais verificadas ainda não estão prontas.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Ativar substituto off-line';
+  String get chatbotOfflineDownloadLabel => 'Ativar reserva offline';
 
   @override
   String get downloadPreparing => 'Preparando download...';
@@ -1298,13 +1298,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get chatbotCloudAiLabel => 'IA na nuvem';
 
   @override
-  String get chatbotLocalAiLabel => 'Reserva off-line';
+  String get chatbotLocalAiLabel => 'Reserva offline';
 
   @override
-  String get chatbotUseCloudAi => 'Usar IA na nuvem (Gemini)';
+  String get chatbotUseCloudAi => 'Usar Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Ativar substituto off-line';
+  String get chatbotDownloadLocalAi => 'Ativar reserva offline';
 
   @override
   String chatbotQueriesLeft(String count) {

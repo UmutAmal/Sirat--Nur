@@ -1305,7 +1305,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Reserva sin conexión';
 
   @override
-  String get chatbotUseCloudAi => 'Utilice la IA en la nube (Gemini)';
+  String get chatbotUseCloudAi => 'Usar IA en la nube (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Habilitar respaldo sin conexión';

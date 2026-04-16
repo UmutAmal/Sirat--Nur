@@ -164,7 +164,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get refreshAction => 'Yangilash';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Bekor qilish';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get downloadFailed => 'Yuklab olinmadi';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Oflayn rejim';
 
   @override
   String get noInternet => 'Internetga ulanmagan';

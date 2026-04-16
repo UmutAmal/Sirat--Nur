@@ -165,7 +165,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get refreshAction => 'புதுப்பிக்கவும்';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'ரத்து செய்';
 
   @override
   String get save => 'Save';
@@ -550,7 +550,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get downloadFailed => 'பதிவிறக்கம் தோல்வியடைந்தது';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'ஆஃப்லைன் பயன்முறை';
 
   @override
   String get noInternet => 'இணைய இணைப்பு இல்லை';

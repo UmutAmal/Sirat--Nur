@@ -353,8 +353,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Cyrhaeddwyd terfyn ymholiad dyddiol. Uwchraddio i Premiwm ar gyfer diderfyn.",
   "chatbotErrorMsg": "Ni allwn gynhyrchu ymateb. Ceisiwch eto.",
-  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflinePrompt": "Mae'r sylfaen wybodaeth Islamaidd all-lein wedi'i dilysu yn dal i gael ei churadu. Gallwch chi alluogi wrth gefn all-lein nawr, ond dim ond negeseuon diogel cyfyngedig y bydd yn eu dangos nes bod y set ddata o ffynonellau yn barod.\n\nHoffech chi alluogi wrth gefn all-lein?",
+  "chatbotOfflineSwitched": "Galluogi wrth gefn all-lein. Nid yw atebion Islamaidd lleol wedi'u dilysu yn barod eto.",
   "chatbotOfflineDownloadLabel": "Galluogi All-lein Wrth Gefn",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -447,7 +447,7 @@
   "bestStreak": "Rhediad gorau",
   "chatbotCloudAiLabel": "Cwmwl AI",
   "chatbotLocalAiLabel": "All-lein wrth gefn",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Defnyddiwch Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Galluogi All-lein Wrth Gefn",
   "chatbotQueriesLeft": "{count} chwith",
   "@chatbotQueriesLeft": {
@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Nid yw Cloud API wedi'i ffurfweddu. Nid yw canllawiau Islamaidd all-lein wedi'u dilysu ar gael eto.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[All-lein] Nid yw canllawiau Islamaidd lleol wedi'u dilysu ar gael eto. Newidiwch i Cloud AI am atebion o ffynonellau.",
   "mosques": "Mosgiau",
   "halalFood": "Bwyd Halal",
   "placesSearchArea": "Chwiliwch yr ardal hon",

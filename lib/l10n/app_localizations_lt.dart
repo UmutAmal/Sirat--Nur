@@ -164,7 +164,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get refreshAction => 'Atnaujinti';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Atšaukti';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get downloadFailed => 'Atsisiųsti nepavyko';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Režimas neprisijungus';
 
   @override
   String get noInternet => 'Nėra interneto ryšio';

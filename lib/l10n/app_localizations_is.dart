@@ -164,7 +164,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get refreshAction => 'Endurnýja';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Hætta við';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get downloadFailed => 'Niðurhal mistókst';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Ótengdur háttur';
 
   @override
   String get noInternet => 'Engin nettenging';

@@ -164,7 +164,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get refreshAction => 'Hlaziya';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Rhoxisa';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get downloadFailed => 'Ukukhuphela Akuphumelelanga';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Imo engasebenziyo';
 
   @override
   String get noInternet => 'Alukho uQhagamshelwano lwe-Intanethi';

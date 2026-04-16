@@ -166,7 +166,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get refreshAction => 'ပြန်လည်စတင်ပါ။';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'မလုပ်တော့';
 
   @override
   String get save => 'Save';
@@ -550,7 +550,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get downloadFailed => 'ဒေါင်းလုဒ် မအောင်မြင်ပါ။';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'အော့ဖ်လိုင်းမုဒ်';
 
   @override
   String get noInternet => 'အင်တာနက်ချိတ်ဆက်မှု မရှိပါ။';

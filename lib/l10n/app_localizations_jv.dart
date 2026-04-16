@@ -163,7 +163,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get refreshAction => 'Refresh';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Batal';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get downloadFailed => 'Ngundhuh Gagal';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Mode Offline';
 
   @override
   String get noInternet => 'Ora Ana Sambungan Internet';

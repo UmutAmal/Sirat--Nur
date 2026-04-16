@@ -48,7 +48,7 @@
   "loading": "Indlæser...",
   "error": "Fejl",
   "retry": "Prøv igen",
-  "cancel": "Ophæve",
+  "cancel": "Annuller",
   "save": "Spare",
   "delete": "Slet",
   "edit": "Redigere",
@@ -140,7 +140,7 @@
   "downloading": "Downloader...",
   "downloadComplete": "Download fuldført",
   "downloadFailed": "Download mislykkedes",
-  "offlineMode": "Offline tilstand",
+  "offlineMode": "Offlinetilstand",
   "noInternet": "Ingen internetforbindelse",
   "checkConnection": "Tjek venligst din forbindelse",
   "premium": "Præmie",
@@ -355,7 +355,7 @@
   "chatbotErrorMsg": "Jeg kunne ikke generere et svar. Prøv venligst igen.",
   "chatbotOfflinePrompt": "Den verificerede offline islamiske videnbase bliver stadig kureret. Du kan aktivere offline fallback nu, men det vil kun vise begrænsede sikre meddelelser, indtil det kildedatasæt er klar.\n\nVil du aktivere offline fallback?",
   "chatbotOfflineSwitched": "Offline fallback aktiveret. Verificerede lokale islamiske svar er ikke klar endnu.",
-  "chatbotOfflineDownloadLabel": "Aktiver Offline Fallback",
+  "chatbotOfflineDownloadLabel": "Aktiver offline-reserve",
   "downloadPreparing": "Forbereder download...",
   "downloadingSurah": "Downloader surah {surah} / {total}",
   "@downloadingSurah": {
@@ -446,9 +446,9 @@
   "dayStreak": "Dagsrække",
   "bestStreak": "Bedste streak",
   "chatbotCloudAiLabel": "Skybaseret AI",
-  "chatbotLocalAiLabel": "Offline Fallback",
+  "chatbotLocalAiLabel": "Offline-reserve",
   "chatbotUseCloudAi": "Brug Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Aktiver Offline Fallback",
+  "chatbotDownloadLocalAi": "Aktiver offline-reserve",
   "chatbotQueriesLeft": "{count} tilbage",
   "@chatbotQueriesLeft": {
     "placeholders": {

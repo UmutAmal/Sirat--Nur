@@ -1165,7 +1165,7 @@ class AppLocalizationsAr extends AppLocalizations {
       'تم تمكين الرجوع دون اتصال بالإنترنت. الإجابات الإسلامية المحلية التي تم التحقق منها ليست جاهزة بعد.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'تمكين الرجوع دون اتصال';
+  String get chatbotOfflineDownloadLabel => 'تفعيل البديل دون اتصال';
 
   @override
   String get downloadPreparing => 'جاري التحضير للتحميل...';
@@ -1290,13 +1290,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get chatbotCloudAiLabel => 'سحابة الذكاء الاصطناعي';
 
   @override
-  String get chatbotLocalAiLabel => 'احتياطي دون اتصال';
+  String get chatbotLocalAiLabel => 'بديل دون اتصال';
 
   @override
-  String get chatbotUseCloudAi => 'استخدم Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'استخدام Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'تمكين الرجوع دون اتصال';
+  String get chatbotDownloadLocalAi => 'تفعيل البديل دون اتصال';
 
   @override
   String chatbotQueriesLeft(String count) {

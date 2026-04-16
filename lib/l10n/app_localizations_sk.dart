@@ -165,7 +165,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get refreshAction => 'Obnoviť';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Zrušiť';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get downloadFailed => 'Sťahovanie zlyhalo';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Režim offline';
 
   @override
   String get noInternet => 'Žiadne internetové pripojenie';

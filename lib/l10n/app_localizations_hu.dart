@@ -166,7 +166,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get refreshAction => 'Frissítés';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Mégse';
 
   @override
   String get save => 'Save';
@@ -550,7 +550,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get downloadFailed => 'Letöltés sikertelen';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Offline mód';
 
   @override
   String get noInternet => 'Nincs internetkapcsolat';

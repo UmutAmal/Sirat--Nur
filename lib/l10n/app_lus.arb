@@ -354,7 +354,7 @@
   "chatbotLimitReached": "Nitin zawhna neih theihna tur limit a thleng. Unlimited atan Premium ah upgrade rawh.",
   "chatbotErrorMsg": "Response ka generate thei lo. Khawngaihin han lo try leh teh.",
   "chatbotOfflinePrompt": "Offline Islamic knowledge base verified chu an la curate mek a ni. Tunah chuan offline fallback i enable thei tawh a, mahse sourced dataset a inpeih hma chuan safe message tlemte chauh a lantir ang.\n\nOffline fallback hi enable i duh em?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Offline fallback tih theih a ni. Verified local Islamic chhanna chu a la inpeih lo.",
   "chatbotOfflineDownloadLabel": "Offline Fallback tih kha enable rawh",
   "downloadPreparing": "Download buatsaih mek...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

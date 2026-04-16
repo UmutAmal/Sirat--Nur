@@ -355,7 +355,7 @@
   "chatbotErrorMsg": "我無法產生響應。請再試一次。",
   "chatbotOfflinePrompt": "經過驗證的離線伊斯蘭知識庫仍在整理中。現在您可以啟用離線回退，但在來源資料集準備就緒之前，它只會顯示有限的安全訊息。\n\n您想啟用離線回退嗎？",
   "chatbotOfflineSwitched": "啟用離線回退。經過驗證的本地伊斯蘭答案尚未準備好。",
-  "chatbotOfflineDownloadLabel": "啟用離線回退",
+  "chatbotOfflineDownloadLabel": "啟用離線備援",
   "downloadPreparing": "正在準備下載...",
   "downloadingSurah": "下載古蘭經 {surah} / {total}",
   "@downloadingSurah": {
@@ -446,9 +446,9 @@
   "dayStreak": "連續日數",
   "bestStreak": "最佳連勝紀錄",
   "chatbotCloudAiLabel": "雲端人工智慧",
-  "chatbotLocalAiLabel": "離線回退",
-  "chatbotUseCloudAi": "使用雲端人工智慧（Gemini）",
-  "chatbotDownloadLocalAi": "啟用離線回退",
+  "chatbotLocalAiLabel": "離線備援",
+  "chatbotUseCloudAi": "使用 Cloud AI（Gemini）",
+  "chatbotDownloadLocalAi": "啟用離線備援",
   "chatbotQueriesLeft": "{count} 左",
   "@chatbotQueriesLeft": {
     "placeholders": {

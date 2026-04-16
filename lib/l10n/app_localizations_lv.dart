@@ -165,7 +165,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get refreshAction => 'Atsvaidzināt';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Atcelt';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get downloadFailed => 'Lejupielāde neizdevās';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Bezsaistes režīms';
 
   @override
   String get noInternet => 'Nav interneta savienojuma';

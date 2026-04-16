@@ -166,7 +166,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get refreshAction => 'Обновить';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Отмена';
 
   @override
   String get save => 'Save';
@@ -550,7 +550,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get downloadFailed => 'Загрузка не удалась';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Офлайн-режим';
 
   @override
   String get noInternet => 'Нет подключения к Интернету';
@@ -1173,8 +1173,7 @@ class AppLocalizationsRu extends AppLocalizations {
       'Автономный резерв включен. Проверенные местные исламские ответы еще не готовы.';
 
   @override
-  String get chatbotOfflineDownloadLabel =>
-      'Включить автономный резервный режим';
+  String get chatbotOfflineDownloadLabel => 'Включить офлайн-резерв';
 
   @override
   String get downloadPreparing => 'Подготовка загрузки...';
@@ -1299,14 +1298,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Облачный ИИ';
 
   @override
-  String get chatbotLocalAiLabel => 'Автономный резерв';
+  String get chatbotLocalAiLabel => 'Офлайн-резерв';
 
   @override
-  String get chatbotUseCloudAi =>
-      'Используйте облачный искусственный интеллект (Gemini)';
+  String get chatbotUseCloudAi => 'Использовать Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Включить автономный резервный режим';
+  String get chatbotDownloadLocalAi => 'Включить офлайн-резерв';
 
   @override
   String chatbotQueriesLeft(String count) {

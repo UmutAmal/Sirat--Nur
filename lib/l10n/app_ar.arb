@@ -355,7 +355,7 @@
   "chatbotErrorMsg": "لم أتمكن من توليد الرد. يرجى المحاولة مرة أخرى.",
   "chatbotOfflinePrompt": "لا تزال قاعدة المعرفة الإسلامية غير المتصلة بالإنترنت قيد التنظيم. يمكنك تمكين التراجع دون اتصال الآن، ولكنه لن يعرض سوى رسائل آمنة محدودة حتى تصبح مجموعة البيانات المصدر جاهزة.\n\nهل ترغب في تمكين الرجوع دون اتصال؟",
   "chatbotOfflineSwitched": "تم تمكين الرجوع دون اتصال بالإنترنت. الإجابات الإسلامية المحلية التي تم التحقق منها ليست جاهزة بعد.",
-  "chatbotOfflineDownloadLabel": "تمكين الرجوع دون اتصال",
+  "chatbotOfflineDownloadLabel": "تفعيل البديل دون اتصال",
   "downloadPreparing": "جاري التحضير للتحميل...",
   "downloadingSurah": "تحميل سورة {surah} / {total}",
   "@downloadingSurah": {
@@ -446,9 +446,9 @@
   "dayStreak": "أيام متتالية",
   "bestStreak": "أفضل خط",
   "chatbotCloudAiLabel": "سحابة الذكاء الاصطناعي",
-  "chatbotLocalAiLabel": "احتياطي دون اتصال",
-  "chatbotUseCloudAi": "استخدم Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "تمكين الرجوع دون اتصال",
+  "chatbotLocalAiLabel": "بديل دون اتصال",
+  "chatbotUseCloudAi": "استخدام Cloud AI (Gemini)",
+  "chatbotDownloadLocalAi": "تفعيل البديل دون اتصال",
   "chatbotQueriesLeft": "{count} اليسار",
   "@chatbotQueriesLeft": {
     "placeholders": {

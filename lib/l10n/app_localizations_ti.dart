@@ -1152,7 +1152,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'ካብ መስመር ወጻኢ ፋልባክ ተኸፊቱ። ዝተረጋገጹ ናይ ከባቢ እስላማዊ መልስታት ገና ድሉዋት ኣይኮኑን።';
 
   @override
   String get chatbotOfflineDownloadLabel => 'ካብ መስመር ወጻኢ Fallback ኣንቅሕ';

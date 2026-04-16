@@ -164,7 +164,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get refreshAction => 'تازه کړئ';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'لغوه کړئ';
 
   @override
   String get save => 'Save';
@@ -547,7 +547,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get downloadFailed => 'ډاونلوډ ناکام شو';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'آف لائن حالت';
 
   @override
   String get noInternet => 'د انټرنیټ اتصال نشته';

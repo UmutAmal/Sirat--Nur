@@ -8603,3 +8603,57 @@
 ### Sonraki Adım
 - Commit kapisinda `git diff --check`, `flutter analyze`, `flutter test` calistir; hepsi gecerse commit/push yap.
 - Sonraki dongude aktif l10n fallback taramasini yenile; `offlineMode`, `hijriCalendar`, `searchHint`, `weeklyProgress`, `quranReading`, `prayers`, `fasting`, `calendar` gibi gorunur ve guvenle cevrilebilir anahtarlar arasindan en yuksek etkili tek yuzeyi sec.
+
+## 2026-04-16 TUR-225 — Localize Chatbot Mode Controls
+
+### Yapılan İşlem
+- Chatbot mode/offline kontrol yuzeyinde kullanilan `chatbotLocalAiLabel`, `chatbotCloudAiLabel`, `chatbotUseCloudAi`, `chatbotDownloadLocalAi`, `chatbotOfflineDownloadLabel`, `chatbotOfflinePrompt`, `chatbotOfflineSwitched`, `chatbotLocalNoInfo`, `offlineMode`, `cancel` anahtarlari guvenli ARB batch'i ile guncellendi.
+- `flutter gen-l10n` calistirilarak generated `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Safe/priority locale setinde `tr`, `de`, `fr`, `es`, `ar`, `da`, `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi`, `zh`, `zh_CN`, `zh_TW` icin bu chatbot mode anahtarlarinda Ingilizce fallback kalmadigi dogrulandi.
+- Otomatik cevirinin hatali urettigi veya Ingilizce biraktigi kisa UI degerleri elle duzeltildi: ozellikle `he` icin "סתירה לא מקוונת" hatali anlami `גיבוי לא מקוון` olarak, `tr` icin "Çevrimdışı Fallback" mekanik kopyasi `Çevrimdışı Yedek` olarak, `da/nb/nn/no` fallback kopyalari yerel "reserve" ifadeleriyle duzeltildi.
+- `tool\translate_arb_keys.dart` single-line guard listesine chatbot mode kontrol anahtarlari eklendi.
+- `test\arb_ui_localization_test.dart` icine safe/priority locale chatbot mode fallback guard'i eklendi.
+- `test\translate_arb_keys_test.dart` icine multiline chatbot mode output regresyon testi eklendi.
+- `test\features\chatbot\chatbot_page_test.dart` Turkce widget beklentisi yeni dogal copy ile guncellendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart:171-172` AppBar mode badge icin `l10n.chatbotLocalAiLabel` ve `l10n.chatbotCloudAiLabel` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart:418-421` offline dialog basligi ve aciklama metnini `l10n.offlineMode` ve `l10n.chatbotOfflinePrompt` ile gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart:425` iptal aksiyonunu `l10n.cancel` ile gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart:439` offline fallback etkinlestirme butonunu `l10n.chatbotOfflineDownloadLabel` ile gosteriyor.
+- TUR-225 oncesi fallback taramasinda `offlineMode` ve `cancel` safe/priority setinde `8` locale, `chatbotLocalAiLabel` ise `4` safe locale icin app_en ile birebir ayniydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\chatbot\chatbot_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Chatbot mode badge, offline dialog basligi, iptal butonu ve offline fallback butonu safe/priority locale setinde artik Ingilizce fallback gostermiyor.
+- Single-line guard ile kisa UI etiketlerinde batch debris/newline riski kapatildi.
+- `chatbotUseCloudAi` icinde `Gemini` proper noun'u tum safe/priority locale setinde korundu.
+- Kalan tum-locale birebir Ingilizce degerler cogunlukla ceviri servisinin guvenli aday uretmedigi nadir/legacy locale grubunda birakildi; sahte veya uydurma ceviri yazilmadi. TUR-225 sonrasi toplam fallback sayilari: `chatbotLocalAiLabel 83`, `chatbotCloudAiLabel 98`, `chatbotUseCloudAi 69`, `chatbotDownloadLocalAi 63`, `chatbotOfflineDownloadLabel 63`, `chatbotOfflinePrompt 63`, `chatbotOfflineSwitched 63`, `chatbotLocalNoInfo 68`, `offlineMode 70`, `cancel 67`.
+
+### Test Sonucu
+- Ilk odak testte `test\features\chatbot\chatbot_page_test.dart:62` eski Turkce "Çevrimdışı Fallback" beklentisi nedeniyle fail etti; test yeni `Çevrimdışı Yedek` copy'sine guncellendi.
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\features\chatbot\chatbot_page_test.dart` PASS (`64/64`)
+- Safe fallback taramasi PASS: hedef chatbot mode anahtarlarinda `safe_same=[]`
+- Single-line taramasi PASS: hedef tek satir anahtarlarinda newline yok.
+- Proper noun taramasi PASS: `chatbotUseCloudAi` icinde `Gemini` tum safe/priority locale setinde korundu.
+- `flutter gen-l10n` PASS
+
+### Risk Değişimi
+- Safe/priority locale chatbot mode fallback riski: `16/25 -> 2/25`
+- Chatbot mode tek satir batch debris riski: `10/25 -> 3/25`
+- Tum-locale nadir/legacy fallback riski: `8/25 -> 5/25`
+
+### Rollback Planı
+- `lib\l10n\app_*.arb`, `lib\l10n\app_localizations_*.dart`, `test\arb_ui_localization_test.dart`, `test\translate_arb_keys_test.dart`, `test\features\chatbot\chatbot_page_test.dart` ve `tool\translate_arb_keys.dart` icindeki TUR-225 degisiklikleri geri alinir; production Dart UI logic degismedigi icin runtime rollback dar kapsamli kalir.
+
+### Sonraki Adım
+- Commit kapisinda `git diff --check`, `flutter analyze`, `flutter test` calistir; hepsi gecerse commit/push yap.
+- Sonraki dongude aktif l10n fallback taramasini yenile; `hijriCalendar`, `weeklyProgress`, `quranReading`, `prayers`, `fasting`, `calendar`, `searchHint` veya `qiblaDirection` gibi gorunur yuzeylerden en yuksek riskli tek cluster sec.

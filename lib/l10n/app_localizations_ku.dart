@@ -164,7 +164,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get refreshAction => 'Refresh';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Betal bike';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get downloadFailed => 'Daxistin Biserneket';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Moda Offline';
 
   @override
   String get noInternet => 'Têkiliya Înternetê tune';

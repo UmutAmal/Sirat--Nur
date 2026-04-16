@@ -353,8 +353,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Di limit fɔ di kwɛstyɔn dɛn we dɛn kin aks ɛvride dɔn rich. Upgrade to Premium fɔ we nɔ gɛt limit.",
   "chatbotErrorMsg": "A nɔ bin ebul fɔ jenarayz wan ansa. Duya tray bak.",
-  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflinePrompt": "Di verified oflain Islamik no bies stil de curate. Yu kin ɛnabul ɔflayn fɔlbak naw, bɔt i go jɔs sho limited sef mɛsej dɛn te di sɔs datasɛt rɛdi.\n\nYu go lɛk fɔ ɛnabul ɔflayn fɔlbak?",
+  "chatbotOfflineSwitched": "Ɔflayn fɔlbak dɔn ɛnabul. Verified lokal Islamic ansa dem no redi yet.",
   "chatbotOfflineDownloadLabel": "Enable Ɔflayn Fɔlbak",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -447,7 +447,7 @@
   "bestStreak": "Di bɛst streak",
   "chatbotCloudAiLabel": "Klaud AI",
   "chatbotLocalAiLabel": "Ɔflayn Falbak",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Yuz Klɔd AI (Gemini) .",
   "chatbotDownloadLocalAi": "Enable Ɔflayn Fɔlbak",
   "chatbotQueriesLeft": "{count} lɛf",
   "@chatbotQueriesLeft": {
@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Klayd API nɔ kɔnfigyut. Verified offline Islamik gayd nɔ de yet.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Verified lokal Islamik gayd nɔ de yet. Switch to Cloud AI fɔ sɔs ansa dɛn.",
   "mosques": "Moskɛt dɛn",
   "halalFood": "Halal Fɔd fɔ it",
   "placesSearchArea": "Sɔch dis eria",

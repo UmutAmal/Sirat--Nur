@@ -164,7 +164,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get refreshAction => 'רענן';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'בטל';
 
   @override
   String get save => 'Save';
@@ -546,7 +546,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get downloadFailed => 'ההורדה נכשלה';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'מצב לא מקוון';
 
   @override
   String get noInternet => 'אין חיבור לאינטרנט';
@@ -1161,7 +1161,7 @@ class AppLocalizationsHe extends AppLocalizations {
       'החזרה במצב לא מקוון מופעלת. תשובות אסלאמיות מקומיות מאומתות עדיין אינן מוכנות.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'אפשר סתירה לא מקוונת';
+  String get chatbotOfflineDownloadLabel => 'הפעל גיבוי לא מקוון';
 
   @override
   String get downloadPreparing => 'מכין הורדה...';
@@ -1286,13 +1286,13 @@ class AppLocalizationsHe extends AppLocalizations {
   String get chatbotCloudAiLabel => 'ענן AI';
 
   @override
-  String get chatbotLocalAiLabel => 'סתירה לא מקוונת';
+  String get chatbotLocalAiLabel => 'גיבוי לא מקוון';
 
   @override
-  String get chatbotUseCloudAi => 'השתמש בענן AI (Gemini)';
+  String get chatbotUseCloudAi => 'השתמש ב-Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'אפשר סתירה לא מקוונת';
+  String get chatbotDownloadLocalAi => 'הפעל גיבוי לא מקוון';
 
   @override
   String chatbotQueriesLeft(String count) {

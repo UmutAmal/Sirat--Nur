@@ -355,7 +355,7 @@
   "chatbotErrorMsg": "我无法生成响应。请再试一次。",
   "chatbotOfflinePrompt": "经过验证的离线伊斯兰知识库仍在整理中。您现在可以启用离线回退，但在源数据集准备就绪之前，它只会显示有限的安全消息。\n\n您想启用离线回退吗？",
   "chatbotOfflineSwitched": "启用离线回退。经过验证的本地伊斯兰答案尚未准备好。",
-  "chatbotOfflineDownloadLabel": "启用离线回退",
+  "chatbotOfflineDownloadLabel": "启用离线备用",
   "downloadPreparing": "正在准备下载...",
   "downloadingSurah": "下载古兰经 {surah} / {total}",
   "@downloadingSurah": {
@@ -446,9 +446,9 @@
   "dayStreak": "连续日数",
   "bestStreak": "最佳连胜纪录",
   "chatbotCloudAiLabel": "云端人工智能",
-  "chatbotLocalAiLabel": "离线回退",
-  "chatbotUseCloudAi": "使用云人工智能（Gemini）",
-  "chatbotDownloadLocalAi": "启用离线回退",
+  "chatbotLocalAiLabel": "离线备用",
+  "chatbotUseCloudAi": "使用 Cloud AI（Gemini）",
+  "chatbotDownloadLocalAi": "启用离线备用",
   "chatbotQueriesLeft": "{count} 左",
   "@chatbotQueriesLeft": {
     "placeholders": {

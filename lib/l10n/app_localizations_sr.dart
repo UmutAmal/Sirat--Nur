@@ -164,7 +164,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get refreshAction => 'Refresh';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Откажи';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get downloadFailed => 'Download Failed';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Оффлине Моде';
 
   @override
   String get noInternet => 'No Internet Connection';
@@ -1162,11 +1162,11 @@ class AppLocalizationsSr extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'Верификована ванмрежна исламска база знања се још увек курира. Сада можете да омогућите резервни приступ ван мреже, али ће приказивати само ограничене безбедне поруке док изворни скуп података не буде спреман.\n\nДа ли желите да омогућите резервни приступ ван мреже?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Оффлине резервни је омогућен. Провјерени локални исламски одговори још нису спремни.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Омогући резервни режим ван мреже';
@@ -1314,7 +1314,7 @@ class AppLocalizationsSr extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[ОФФЛИНЕ] Верификоване локалне исламске смернице још увек нису доступне. Пређите на вештачку интелигенцију у облаку да бисте добили одговоре.';
 
   @override
   String get mosques => 'џамије';

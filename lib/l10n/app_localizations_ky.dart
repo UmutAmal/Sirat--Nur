@@ -166,7 +166,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get refreshAction => 'Жаңылоо';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Жокко чыгаруу';
 
   @override
   String get save => 'Save';
@@ -552,7 +552,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get downloadFailed => 'Жүктөп алуу ишке ашкан жок';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Оффлайн режими';
 
   @override
   String get noInternet => 'Интернет байланышы жок';

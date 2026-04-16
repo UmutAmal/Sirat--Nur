@@ -164,7 +164,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get refreshAction => 'പുതുക്കുക';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'റദ്ദാക്കുക';
 
   @override
   String get save => 'Save';
@@ -547,7 +547,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get downloadFailed => 'ഡൗൺലോഡ് പരാജയപ്പെട്ടു';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'ഓഫ്‌ലൈൻ മോഡ്';
 
   @override
   String get noInternet => 'ഇൻ്റർനെറ്റ് കണക്ഷനില്ല';

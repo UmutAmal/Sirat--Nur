@@ -164,7 +164,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get refreshAction => 'Refresh';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Kolongola';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get downloadFailed => 'Download Failed';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Mode Hors Connexion';
 
   @override
   String get noInternet => 'No Internet Connection';
@@ -1163,11 +1163,11 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'Base ya boyebi ya Islam oyo e vérifié hors ligne ezali kaka ko curer. Okoki ko activer fallback hors ligne sikoyo, kasi ekolakisa kaka ba messages ya sécurité limitée tii tango ensemble ya ba données sourced ekozala prêt.\n\nOlingi ko activer fallback hors ligne?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Fallback hors ligne efungolami. Ba réponses islamiques locales vérifiées ezali nanu prêt te.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Activer Fallback hors ligne';
@@ -1299,7 +1299,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback ya sima';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Salelá AI ya Lipata (Gemini) .';
 
   @override
   String get chatbotDownloadLocalAi => 'Activer Fallback hors ligne';
@@ -1315,7 +1315,7 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[OFFLINE] Bokambami ya Islam ya mboka oyo e vérifié ezali nanu te. Bobongola na Cloud AI mpo na biyano oyo euti na source.';
 
   @override
   String get mosques => 'Ba Mosquées';

@@ -164,7 +164,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get refreshAction => 'ਤਾਜ਼ਾ ਕਰੋ';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'ਰੱਦ ਕਰੋ';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get downloadFailed => 'ਡਾਊਨਲੋਡ ਅਸਫਲ ਰਿਹਾ';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'ਔਫਲਾਈਨ ਮੋਡ';
 
   @override
   String get noInternet => 'ਕੋਈ ਇੰਟਰਨੈਟ ਕਨੈਕਸ਼ਨ ਨਹੀਂ';

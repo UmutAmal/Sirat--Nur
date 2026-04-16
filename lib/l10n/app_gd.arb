@@ -353,8 +353,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Ràinig crìoch ceist làitheil. Àrdaich gu Premium airson gun chrìoch.",
   "chatbotErrorMsg": "Cha b’ urrainn dhomh freagairt a ghineadh. Feuch ris a-rithist.",
-  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflinePrompt": "Tha am bunait eòlais Ioslamach far-loidhne dearbhte fhathast ga chur air dòigh. Faodaidh tu cùl-taic far loidhne a chomasachadh a-nis, ach cha sheall e ach teachdaireachdan cuibhrichte sàbhailte gus am bi an stòr-dàta a fhuaireadh deiseil.\n\nAm bu toil leat cùl-taic far loidhne a chomasachadh?",
+  "chatbotOfflineSwitched": "Cùl-taic far-loidhne air a chomasachadh. Chan eil freagairtean Ioslamach ionadail dearbhte deiseil fhathast.",
   "chatbotOfflineDownloadLabel": "Dèan comas air cùl-taic far-loidhne",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -447,7 +447,7 @@
   "bestStreak": "An t-sreath as fheàrr",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Fallback far loidhne",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Cleachd Cloud AI (Gemini)",
   "chatbotDownloadLocalAi": "Dèan comas air cùl-taic far-loidhne",
   "chatbotQueriesLeft": "Dh’fhalbh {count}",
   "@chatbotQueriesLeft": {
@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Chan eil Cloud API air a rèiteachadh. Chan eil stiùireadh Ioslamach dearbhte far-loidhne ri fhaighinn fhathast.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Chan eil stiùireadh Ioslamach ionadail dearbhte ri fhaighinn fhathast. Gluais gu Cloud AI airson freagairtean fhaighinn.",
   "mosques": "Mosg",
   "halalFood": "Biadh Halal",
   "placesSearchArea": "Rannsaich an raon seo",

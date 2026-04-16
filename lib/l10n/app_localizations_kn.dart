@@ -164,7 +164,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get refreshAction => 'ರಿಫ್ರೆಶ್ ಮಾಡಿ';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'ರದ್ದುಮಾಡಿ';
 
   @override
   String get save => 'Save';
@@ -547,7 +547,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get downloadFailed => 'ಡೌನ್‌ಲೋಡ್ ವಿಫಲವಾಗಿದೆ';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'ಆಫ್‌ಲೈನ್ ಮೋಡ್';
 
   @override
   String get noInternet => 'ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವಿಲ್ಲ';

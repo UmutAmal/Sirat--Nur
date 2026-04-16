@@ -1165,11 +1165,11 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'सत्यापन कइल ऑफलाइन इस्लामी ज्ञान आधार के अबहीं ले क्यूरेट कइल जा रहल बा. अब रउआँ ऑफलाइन फॉलबैक सक्षम क सकत बानी, बाकी ई तबले सीमित सुरक्षित संदेश तब ले देखावे ला जब ले सोर्स कइल गइल डाटासेट तइयार ना हो जाई।\n\nका रउआँ ऑफलाइन फॉलबैक सक्षम कइल चाहत बानी?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'ऑफलाइन फॉलबैक सक्षम हो गइल बा. सत्यापन स्थानीय इस्लामी जवाब अभी तक तैयार नईखे।';
 
   @override
   String get chatbotOfflineDownloadLabel => 'ऑफलाइन फॉलबैक के सक्षम करीं';
@@ -1317,7 +1317,7 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[OFFLINE] सत्यापन स्थानीय इस्लामी मार्गदर्शन अभी तक उपलब्ध नइखे। स्रोत से मिलल जवाब खातिर क्लाउड एआई पर स्विच करीं।';
 
   @override
   String get mosques => 'मस्जिद के बा';

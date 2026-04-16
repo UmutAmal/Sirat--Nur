@@ -429,6 +429,52 @@ void main() {
       },
     );
 
+    test(
+      'safe priority locales do not fall back to English for chatbot mode controls',
+      () {
+        const safeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'da',
+          'he',
+          'ja',
+          'nb',
+          'nn',
+          'no',
+          'pt',
+          'ru',
+          'vi',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const localizedKeys = [
+          'chatbotLocalAiLabel',
+          'chatbotCloudAiLabel',
+          'chatbotUseCloudAi',
+          'chatbotDownloadLocalAi',
+          'chatbotOfflineDownloadLabel',
+          'offlineMode',
+          'cancel',
+        ];
+
+        for (final locale in safeLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
     test('priority locales do not fall back to English for paywall copy', () {
       const localizedKeys = [
         'paywallFeature1Title',

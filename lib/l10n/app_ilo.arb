@@ -353,8 +353,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Inaldaw a limitasion ti saludsod ti naabot. Upgrade iti Premium para iti awan limitasionna.",
   "chatbotErrorMsg": "Diak makapataud iti sungbat. Pangngaasiyo ta padasenyo manen.",
-  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflinePrompt": "Ti naberipikado nga offline Islamic knowledge base ket ma-curate pay laeng. Mabalinmo nga ipalubos ti offline fallback ita, ngem ipakitana laeng dagiti limitado a natalged a mensahe agingga a nakasaganan ti nagtaudan a dataset.\n\nKayatmo kadi nga ipalubos ti offline fallback?",
+  "chatbotOfflineSwitched": "Na-enable ti offline a fallback. Saan pay a nakasagana dagiti naberipikado a lokal nga Islamiko a sungbat.",
   "chatbotOfflineDownloadLabel": "Pagbalinen nga Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -447,7 +447,7 @@
   "bestStreak": "Kasayaatan nga streak",
   "chatbotCloudAiLabel": "Cloud AI",
   "chatbotLocalAiLabel": "Offline nga Fallback",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Usaren ti Cloud AI (Gemini) .",
   "chatbotDownloadLocalAi": "Pagbalinen nga Offline Fallback",
   "chatbotQueriesLeft": "{count} ti kannigid",
   "@chatbotQueriesLeft": {
@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Saan a naikonfigura ti Cloud API. Saan pay a magun-od ti naberipikado nga offline nga Islamiko a panangiwanwan.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Saan pay a magun-od ti naberipikado a lokal nga Islamiko a panangiwanwan. Agbalbaliw iti Cloud AI para kadagiti nagtaudan a sungbat.",
   "mosques": "Dagiti Moske",
   "halalFood": "Taraon ti Halal",
   "placesSearchArea": "Sukisoken daytoy a lugar",

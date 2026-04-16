@@ -165,7 +165,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get refreshAction => 'Täzele';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Elatyr';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get downloadFailed => 'Downloadüklemek şowsuz';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Oflayn tertip';
 
   @override
   String get noInternet => 'Internet birikmesi ýok';

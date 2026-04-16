@@ -164,7 +164,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get refreshAction => 'Яңарту';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Баш тарту';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get downloadFailed => 'Йөкләү уңышсыз';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Оффлайн режим';
 
   @override
   String get noInternet => 'Интернетка тоташу юк';

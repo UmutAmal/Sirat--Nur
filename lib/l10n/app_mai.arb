@@ -354,7 +354,7 @@
   "chatbotLimitReached": "दैनिक क्वेरी सीमा पहुँचि गेल। असीमित के लेल प्रीमियम मे अपग्रेड करू।",
   "chatbotErrorMsg": "हम कोनो प्रतिक्रिया नहि उत्पन्न क सकलहुं। कृपया पुनः प्रयास करू।",
   "chatbotOfflinePrompt": "सत्यापित ऑफलाइन इस्लामी ज्ञानकोश केरऽ क्यूरेटिंग अखनी भी करलऽ जाय रहलऽ छै । अहां अखन ऑफलाइन फॉलबैक कें सक्षम कयर सकय छी, मुदा इ केवल सीमित सुरक्षित संदेशक कें देखायत जखन तइक स्रोत डाटासेट तैयार नहि भ जायत.\n\nकी अहाँ ऑफलाइन फॉलबैक सक्षम करय चाहब?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "ऑफलाइन फॉलबैक सक्षम। सत्यापित स्थानीय इस्लामी जवाब एखन धरि तैयार नहि अछि।",
   "chatbotOfflineDownloadLabel": "ऑफलाइन फॉलबैक सक्षम करू",
   "downloadPreparing": "डाउनलोड के तैयारी में...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

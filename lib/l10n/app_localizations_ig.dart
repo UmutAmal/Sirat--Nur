@@ -164,7 +164,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get refreshAction => 'Weghachite ume';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Kagbuo';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get downloadFailed => 'Nbudata agaghị';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Ụdị anọghị n\'ịntanetị';
 
   @override
   String get noInternet => 'Enweghị njikọ ịntanetị';

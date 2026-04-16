@@ -353,8 +353,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Gbesiagbe biabia ƒe seɖoƒe ɖo. Do ŋgɔ na Premium na seɖoƒemanɔsitɔ.",
   "chatbotErrorMsg": "Nyemete ŋu na ŋuɖoɖo aɖeke vɛ o. Taflatse gadze agbagba ake.",
-  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflinePrompt": "Wogale Islamtɔwo ƒe sidzedze ƒe dɔwɔƒe si ŋu woɖo kpee si mele Internet dzi o la dzi kpɔm kokoko. Àte ŋu awɔ offline fallback fifia, gake gbedasi dedie siwo seɖoƒe li na koe wòaɖe afia vaseɖe esime nyatakakatsoƒe si wokpɔ tso eme la nasɔ.\n\nÀdi be yeana offline fallback nawɔ dɔa?",
+  "chatbotOfflineSwitched": "Offline fallback wowɔ dɔ. Islamtɔwo ƒe ŋuɖoɖo siwo ŋu woɖo kpee le nutoa me la mesu te haɖe o.",
   "chatbotOfflineDownloadLabel": "Na Offline Fallback nawɔ dɔ",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -447,7 +447,7 @@
   "bestStreak": "Streak nyuitɔ kekeake",
   "chatbotCloudAiLabel": "Alilikpo me AI",
   "chatbotLocalAiLabel": "Offline ƒe Fallback",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Zã Alilikpo me AI (Gemini) .",
   "chatbotDownloadLocalAi": "Na Offline Fallback nawɔ dɔ",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Womeɖo alilikpo API o. Islamtɔwo ƒe mɔfiame siwo ŋu woɖo kpee le internet dzi la meli haɖe o.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Islamtɔwo ƒe mɔfiame siwo ŋu woɖo kpee le nutoa me la meli haɖe o. Trɔ ɖe Cloud AI ŋu hena ŋuɖoɖo siwo tso teƒe aɖe.",
   "mosques": "Mosquewo",
   "halalFood": "Halal Nuɖuɖu",
   "placesSearchArea": "Di nuto sia me",

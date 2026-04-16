@@ -48,7 +48,7 @@
   "loading": "Laden...",
   "error": "Fehler",
   "retry": "Wiederholen",
-  "cancel": "Stornieren",
+  "cancel": "Abbrechen",
   "save": "Speichern",
   "delete": "Löschen",
   "edit": "Bearbeiten",
@@ -355,7 +355,7 @@
   "chatbotErrorMsg": "Ich konnte keine Antwort generieren. Bitte versuchen Sie es erneut.",
   "chatbotOfflinePrompt": "Die verifizierte Offline-Islam-Wissensdatenbank wird noch kuratiert. Sie können jetzt den Offline-Fallback aktivieren, es werden jedoch nur begrenzte sichere Meldungen angezeigt, bis der Quelldatensatz bereit ist.\n\nMöchten Sie den Offline-Fallback aktivieren?",
   "chatbotOfflineSwitched": "Offline-Fallback aktiviert. Verifizierte lokale islamische Antworten sind noch nicht fertig.",
-  "chatbotOfflineDownloadLabel": "Offline-Fallback aktivieren",
+  "chatbotOfflineDownloadLabel": "Offline-Ersatz aktivieren",
   "downloadPreparing": "Download wird vorbereitet...",
   "downloadingSurah": "Sure {surah} / {total} wird heruntergeladen",
   "@downloadingSurah": {
@@ -446,9 +446,9 @@
   "dayStreak": "Tage in Folge",
   "bestStreak": "Beste Serie",
   "chatbotCloudAiLabel": "Cloud-KI",
-  "chatbotLocalAiLabel": "Offline-Fallback",
-  "chatbotUseCloudAi": "Verwenden Sie Cloud AI (Gemini)",
-  "chatbotDownloadLocalAi": "Offline-Fallback aktivieren",
+  "chatbotLocalAiLabel": "Offline-Ersatz",
+  "chatbotUseCloudAi": "Cloud AI verwenden (Gemini)",
+  "chatbotDownloadLocalAi": "Offline-Ersatz aktivieren",
   "chatbotQueriesLeft": "{count} übrig",
   "@chatbotQueriesLeft": {
     "placeholders": {

@@ -165,7 +165,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get refreshAction => 'Refresh';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Haquu';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get downloadFailed => 'Download Failed';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Haala Toora Alaa';
 
   @override
   String get noInternet => 'No Internet Connection';
@@ -1165,11 +1165,11 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'Bu\'uurri beekumsa Islaamaa toora ala ta\'ee mirkanaa\'e ammallee qophaa\'aa jira. Amma kufaatii sarara ala dandeessisuu dandeessa, garuu hanga kuusaan deetaa madda ta\'etti ergaawwan nageenya qaban daangeffaman qofa agarsiisa.\n\nOffline fallback dandeessisuun barbaadduu?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Kufaatii sarara ala ta\'e dandeessifameera. Deebiin Islaamaa naannoo mirkanaa\'e ammallee qophii miti.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Fallback Sarara Alaa dandeessisi';
@@ -1301,7 +1301,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Toora ala Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini) fayyadamuu .';
 
   @override
   String get chatbotDownloadLocalAi => 'Fallback Sarara Alaa dandeessisi';
@@ -1317,7 +1317,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[OFFLINE] Qajeelfamni Islaamaa naannoo mirkanaa\'e ammallee hin jiru. Deebii madda irraa argamuuf gara Cloud AI tti jijjiiraa.';
 
   @override
   String get mosques => 'Masjiidota';

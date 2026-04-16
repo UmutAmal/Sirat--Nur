@@ -166,7 +166,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get refreshAction => 'Refresh';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Khansela';
 
   @override
   String get save => 'Save';
@@ -550,7 +550,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get downloadFailed => 'Download Failed';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Mode ya le Handle ka Inthanete';
 
   @override
   String get noInternet => 'No Internet Connection';
@@ -1165,11 +1165,11 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'Xivandla xa vutivi bya Xiislam lexi tiyisisiweke xa le handle ka inthanete xa ha hlayisiwa. U nga pfumelela ku tlhelela endzhaku ka le handle ka inthanete sweswi, kambe yi ta kombisa ntsena marungula lama hlayisekeke lama nga nyawuriki ku kondza dataset leyi humaka eka xihlovo yi lunghekile.\n\nXana u nga tsakela ku endla leswaku ku va na ku tlhelela endzhaku ka offline?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Offline fallback yi tirhisiwile. Tinhlamulo ta Xiislam ta laha kaya leti tiyisisiweke a ti si lungheka.';
 
   @override
   String get chatbotOfflineDownloadLabel =>
@@ -1303,7 +1303,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Tirhisa Cloud AI (Gemini) .';
 
   @override
   String get chatbotDownloadLocalAi =>
@@ -1320,7 +1320,7 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[OFFLINE] Nkongomiso wa laha kaya lowu tiyisisiweke wa Xiislam a wu si kumeka. Cinca eka Cloud AI ku kuma tinhlamulo leti humaka eka xihlovo.';
 
   @override
   String get mosques => 'Timosque';

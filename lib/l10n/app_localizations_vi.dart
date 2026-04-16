@@ -164,7 +164,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get refreshAction => 'Làm mới';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Hủy';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get downloadFailed => 'Tải xuống không thành công';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Chế độ ngoại tuyến';
 
   @override
   String get noInternet => 'Không có kết nối Internet';
@@ -1298,7 +1298,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Dự phòng ngoại tuyến';
 
   @override
-  String get chatbotUseCloudAi => 'Sử dụng Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Dùng Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Bật dự phòng ngoại tuyến';

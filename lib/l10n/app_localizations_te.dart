@@ -164,7 +164,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get refreshAction => 'రిఫ్రెష్ చేయండి';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'రద్దు చేయి';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get downloadFailed => 'డౌన్‌లోడ్ విఫలమైంది';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'ఆఫ్‌లైన్ మోడ్';
 
   @override
   String get noInternet => 'ఇంటర్నెట్ కనెక్షన్ లేదు';

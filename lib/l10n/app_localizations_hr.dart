@@ -1163,11 +1163,11 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'Verificirana izvanmrežna islamska baza znanja još uvijek se priprema. Sada možete omogućiti izvanmrežnu zamjenu, ali će prikazivati ​​samo ograničene sigurne poruke dok izvorni skup podataka ne bude spreman.\n\nŽelite li omogućiti offline zamjenu?';
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Omogućen izvanmrežni rezervni način. Provjereni domaći islamski odgovori još nisu spremni.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Omogući izvanmrežnu zamjenu';
@@ -1299,7 +1299,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Izvanmrežna zamjena';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Koristite Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Omogući izvanmrežnu zamjenu';
@@ -1315,7 +1315,7 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[OFFLINE] Potvrđeno lokalno islamsko vodstvo još nije dostupno. Prijeđite na Cloud AI za izvorne odgovore.';
 
   @override
   String get mosques => 'Džamije';

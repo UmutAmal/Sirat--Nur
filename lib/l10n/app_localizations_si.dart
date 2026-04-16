@@ -164,7 +164,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get refreshAction => 'නැවුම් කරන්න';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'අවලංගු කරන්න';
 
   @override
   String get save => 'Save';
@@ -547,7 +547,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get downloadFailed => 'බාගැනීම අසාර්ථකයි';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'නොබැඳි මාදිලිය';
 
   @override
   String get noInternet => 'අන්තර්ජාල සම්බන්ධතාවයක් නොමැත';

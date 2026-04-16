@@ -164,7 +164,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get refreshAction => 'Hlasimolla';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Hlakola';
 
   @override
   String get save => 'Save';

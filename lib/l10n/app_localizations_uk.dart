@@ -165,7 +165,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get refreshAction => 'Оновити';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Скасувати';
 
   @override
   String get save => 'Save';
@@ -549,7 +549,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get downloadFailed => 'Помилка завантаження';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Автономний режим';
 
   @override
   String get noInternet => 'Немає підключення до Інтернету';

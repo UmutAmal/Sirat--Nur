@@ -353,8 +353,8 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Da biara da asɛmmisa anohyeto a woduu ho. Upgrade to Premium ma anohyeto biara nni ho.",
   "chatbotErrorMsg": "Mantumi amma mmuae biara amma. Yɛsrɛ sɛ sɔ hwɛ bio.",
-  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflinePrompt": "Wɔda so ara reyɛ Islam nimdeɛ a wɔagye atom wɔ offline no so. Wubetumi ama offline fallback ayɛ adwuma mprempren, nanso ɛbɛkyerɛ nkrasɛm a ahobammɔ wom kakraa bi pɛ kosi sɛ dataset a wonya fii mu no bɛyɛ krado.\n\nWopɛ sɛ woma offline fallback yɛ adwuma?",
+  "chatbotOfflineSwitched": "Offline fallback a wɔama ayɛ adwuma. Mmuaeɛ Islamfoɔ mmuaeɛ a wɔagye atom no nsiesiee wɔn ho nyɛɛ saa.",
   "chatbotOfflineDownloadLabel": "Ma Offline Fallback nyɛ adwuma",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
@@ -447,7 +447,7 @@
   "bestStreak": "Streak a eye sen biara",
   "chatbotCloudAiLabel": "Mununkum AI",
   "chatbotLocalAiLabel": "Offline Fallback a ɛwɔ hɔ",
-  "chatbotUseCloudAi": "Use Cloud AI (Gemini)",
+  "chatbotUseCloudAi": "Fa Cloud AI (Gemini) di dwuma .",
   "chatbotDownloadLocalAi": "Ma Offline Fallback nyɛ adwuma",
   "chatbotQueriesLeft": "{count} left",
   "@chatbotQueriesLeft": {
@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Wɔanhyehyɛ Cloud API no. Verified offline Islam akwankyerɛ no nnya mmaeɛ.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Mpɔtam hɔ Islam akwankyerɛ a wɔagye atom no nnya mmaa. Dan kɔ Cloud AI so na woanya mmuae a wonya fi mu.",
   "mosques": "Asɔredan ahorow",
   "halalFood": "Halal Aduan a Wɔde Di Dwuma",
   "placesSearchArea": "Hwehwɛ beae yi",

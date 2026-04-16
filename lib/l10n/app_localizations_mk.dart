@@ -164,7 +164,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get refreshAction => 'Освежи';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Откажи';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get downloadFailed => 'Преземањето не успеа';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Офлајн режим';
 
   @override
   String get noInternet => 'Нема интернет конекција';

@@ -164,7 +164,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get refreshAction => 'Toe faafou';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Fa\'aleaogaina';
 
   @override
   String get save => 'Save';
@@ -548,7 +548,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get downloadFailed => 'Le manuia le la\'uina';
 
   @override
-  String get offlineMode => 'Offline Mode';
+  String get offlineMode => 'Faiga e leai se initaneti';
 
   @override
   String get noInternet => 'Leai se Feso\'ota\'iga Initaneti';

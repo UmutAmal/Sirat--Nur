@@ -164,7 +164,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get refreshAction => 'Opdater';
 
   @override
-  String get cancel => 'Ophæve';
+  String get cancel => 'Annuller';
 
   @override
   String get save => 'Spare';
@@ -548,7 +548,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get downloadFailed => 'Download mislykkedes';
 
   @override
-  String get offlineMode => 'Offline tilstand';
+  String get offlineMode => 'Offlinetilstand';
 
   @override
   String get noInternet => 'Ingen internetforbindelse';
@@ -1169,7 +1169,7 @@ class AppLocalizationsDa extends AppLocalizations {
       'Offline fallback aktiveret. Verificerede lokale islamiske svar er ikke klar endnu.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Aktiver Offline Fallback';
+  String get chatbotOfflineDownloadLabel => 'Aktiver offline-reserve';
 
   @override
   String get downloadPreparing => 'Forbereder download...';
@@ -1295,13 +1295,13 @@ class AppLocalizationsDa extends AppLocalizations {
   String get chatbotCloudAiLabel => 'Skybaseret AI';
 
   @override
-  String get chatbotLocalAiLabel => 'Offline Fallback';
+  String get chatbotLocalAiLabel => 'Offline-reserve';
 
   @override
   String get chatbotUseCloudAi => 'Brug Cloud AI (Gemini)';
 
   @override
-  String get chatbotDownloadLocalAi => 'Aktiver Offline Fallback';
+  String get chatbotDownloadLocalAi => 'Aktiver offline-reserve';
 
   @override
   String chatbotQueriesLeft(String count) {
