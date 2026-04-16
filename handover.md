@@ -7641,3 +7641,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude premium/paywall error unwrap ve places/tafsir `_error!` render yuzeyleri local snapshot standardina alinacak.
+
+## 2026-04-16 TUR-201 — Guard Premium Error Render Snapshot
+
+### Yapılan İşlem
+- PaywallPage build akisi `premiumState.error` degerini local `premiumError` snapshot olarak okuyor.
+- Hata metni render'i `premiumError != null` guardindan sonra sanitize edilmiş `localizePremiumError` zincirine snapshot degeriyle gidiyor.
+- Premium paywall testine `premiumState.error!` geri gelmesini engelleyen source guard eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart:25` premium error state'ini local snapshot'a aliyor.
+- Eski akista `premiumState.error != null` guardindan sonra `premiumState.error!` kullaniliyordu; UI state refactor'larinda gereksiz crash yuzeyi olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\premium\paywall_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Premium hata copy'si ve store exception redaction davranisi degismedi.
+- Paywall error render akisi nullable state force-unwrap kullanmadan calisiyor.
+
+### Test Sonucu
+- `flutter test test\features\premium\paywall_page_test.dart` PASS (`3/3`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`373/373`)
+
+### Risk Değişimi
+- Premium paywall error render force-unwrap crash yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude places ve tafsir `_error!` render yuzeyleri local snapshot standardina alinacak; once daha aktif/harici veri akisi olan Places ele alinacak.

@@ -47,6 +47,8 @@ void main() {
     expect(providerSource, isNot(contains(r'Premium purchase failed: $e')));
     expect(providerSource, isNot(contains(r'Premium restore failed: $e')));
     expect(paywallSource, isNot(contains('return error;')));
+    expect(paywallSource, contains('final premiumError = premiumState.error;'));
+    expect(paywallSource, isNot(contains('premiumState.error!')));
   });
 
   test('premium purchase flow does not grant debug fallback entitlement', () {

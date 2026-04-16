@@ -22,6 +22,7 @@ class PaywallPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final premiumState = ref.watch(premiumProvider);
+    final premiumError = premiumState.error;
     final l10n = AppLocalizations.of(context)!;
 
     // If already premium, just show confirmation and pop
@@ -138,11 +139,11 @@ class PaywallPage extends ConsumerWidget {
                       ),
                       const SizedBox(height: 40),
                       // Error message
-                      if (premiumState.error != null)
+                      if (premiumError != null)
                         Padding(
                           padding: const EdgeInsets.only(bottom: 16),
                           child: Text(
-                            localizePremiumError(l10n, premiumState.error!),
+                            localizePremiumError(l10n, premiumError),
                             textAlign: TextAlign.center,
                             style: const TextStyle(
                               color: Colors.redAccent,
