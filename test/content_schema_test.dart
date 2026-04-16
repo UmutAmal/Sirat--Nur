@@ -27,6 +27,10 @@ void main() {
         );
         expect(
           schema,
+          contains('create table if not exists public.tafsir_entries'),
+        );
+        expect(
+          schema,
           contains('create table if not exists public.audio_files'),
         );
         expect(schema, contains('storage_path text'));
@@ -44,6 +48,13 @@ void main() {
         );
         expect(schema, contains('surah_number smallint'));
         expect(schema, contains('juz_number smallint'));
+        expect(schema, contains('tafsir_source text not null'));
+        expect(schema, contains('tafsir_text text not null'));
+        expect(schema, contains('source_license text'));
+        expect(
+          schema,
+          contains('unique (surah_number, ayah_number, tafsir_source)'),
+        );
         expect(
           schema,
           contains(
@@ -107,6 +118,13 @@ void main() {
         contains('alter table public.quran_ayahs enable row level security;'),
       );
       expect(schema, contains('create policy "Public read quran ayahs"'));
+      expect(
+        schema,
+        contains(
+          'alter table public.tafsir_entries enable row level security;',
+        ),
+      );
+      expect(schema, contains('create policy "Public read tafsir entries"'));
       expect(
         schema,
         contains('alter table public.audio_files enable row level security;'),

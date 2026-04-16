@@ -9646,3 +9646,49 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude verified tafsir dataset icin database/storage seed hattini kur: `content_schema.sql` icinde tafsir kaynak/provenance tablosu, operator import/generate tool'u ve runtime sync/read path tasarla. Harici API sadece operator seed mirror asamasinda kullanilmali; uygulama runtime'i yine cache/storage-backed kalmali.
+
+## 2026-04-16 TUR-245 — Add Verified Tafsir Cloud Schema
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\content_schema.sql` icine `public.tafsir_entries` tablosu eklendi.
+- Tablo `surah_number`, `ayah_number`, `tafsir_source`, `language`, `tafsir_text`, `source`, `source_license`, `verified_at` ve `created_at` alanlariyla kaynak/provenance odakli kuruldu.
+- `surah_number` icin `1..114`, `ayah_number > 0` ve bos `tafsir_text` engeli eklendi.
+- `unique (surah_number, ayah_number, tafsir_source)` constraint'i eklendi; ayni ayet/kaynak icin duplicate seed engellenir.
+- `tafsir_entries_source_surah_ayah_idx` index'i eklendi; runtime ve seed dogrulama sorgulari source/sure/ayet sirasina gore hizli calisir.
+- `public.tafsir_entries` icin RLS etkinlestirildi ve public select policy eklendi.
+- `A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart` schema guard'i tafsir tablosu, provenance alanlari, unique constraint ve RLS policy'yi dogrulayacak sekilde genisletildi.
+
+### Neden Yapildi
+- TUR-244 runtime external API fallback'ini kapatti, ancak verified tafsir iceriginin bizim cloud/database hattina seed edilebilecegi tablo yoktu.
+- Kanit: TUR-244 oncesi `content_schema.sql` yalniz `duas`, `asma_ul_husna`, `quran_surahs`, `quran_ayahs` ve `audio_files` tablolarini iceriyordu; tafsir icin public tablo/RLS/index bulunmuyordu.
+- Tablo olmadan seed/import araci veya runtime Supabase sync'i dogru hedefe yazamaz; bu nedenle once database kontrati sabitlendi.
+- Dini icerik icin `source`, `source_license` ve `verified_at` alanlari zorunlu tutuldu; kaynaksiz/sahte tafsir metni seed edilemez.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\content_schema.sql`
+- `A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Supabase tarafinda verified tafsir dataset'i icin resmi tablo kontrati olustu.
+- Runtime hala TUR-244 ile cache-only kalir; bu patch tek basina uygulamaya yeni tafsir icerigi yuklemez.
+- Sonraki seed/import ve runtime sync patch'leri artik net tablo hedefi uzerinden ilerleyebilir.
+
+### Test Sonucu
+- Odak test: `flutter test test\content_schema_test.dart --reporter compact` PASS (`2/2`)
+- `git diff --check` PASS (yalniz CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`433/433`)
+
+### Risk Degisimi
+- Verified tafsir cloud schema yoklugu riski: `12/25 -> 2/25`
+- Duplicate/unclear tafsir seed kontrati riski: `10/25 -> 3/25`
+- Verified tafsir dataset eksikligi riski: `12/25 -> 10/25` (tablo hazir, seed/import ve runtime sync henuz yok)
+
+### Rollback Plani
+- `content_schema.sql` icindeki `public.tafsir_entries` tablo/index/RLS/policy blogu kaldirilir.
+- `test\content_schema_test.dart` icindeki tafsir schema beklentileri geri alinir.
+- `flutter test test\content_schema_test.dart`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude `tool\generate_tafsir_seed.dart` ve testi ekle: operator tarafindan hazirlanan dogrulanmis JSON/manifest'ten `public.tafsir_entries` SQL seed'i uretmeli, bos metin/eksik kaynak/eksik lisans/duplicate ayetleri reddetmeli. Uygulama runtime'i yine harici API'ye donmemeli.
