@@ -29,6 +29,7 @@ void main() {
           schema,
           contains('create table if not exists public.tafsir_entries'),
         );
+        expect(schema, contains('create table if not exists public.hadiths'));
         expect(
           schema,
           contains('create table if not exists public.audio_files'),
@@ -55,6 +56,22 @@ void main() {
           schema,
           contains('unique (surah_number, ayah_number, tafsir_source)'),
         );
+        expect(schema, contains('collection_id text not null'));
+        expect(schema, contains('book text not null'));
+        expect(
+          schema,
+          contains('hadith_number integer not null check (hadith_number > 0)'),
+        );
+        expect(
+          schema,
+          contains('text_ar text not null check (length(trim(text_ar)) > 0)'),
+        );
+        expect(schema, contains('text_tr text'));
+        expect(schema, contains('text_en text'));
+        expect(schema, contains('narrator text'));
+        expect(schema, contains('grade text'));
+        expect(schema, contains('source_license text'));
+        expect(schema, contains('unique (collection_id, hadith_number)'));
         expect(
           schema,
           contains(
@@ -125,6 +142,11 @@ void main() {
         ),
       );
       expect(schema, contains('create policy "Public read tafsir entries"'));
+      expect(
+        schema,
+        contains('alter table public.hadiths enable row level security;'),
+      );
+      expect(schema, contains('create policy "Public read hadiths"'));
       expect(
         schema,
         contains('alter table public.audio_files enable row level security;'),

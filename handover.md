@@ -9788,3 +9788,49 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude en yuksek kalan dini icerik riski olarak verified tafsir seed/import eksigini veya audio storage provenance hattini ele al: gercek kaynak manifestleri olmadan sahte icerik ekleme, yalniz kabul edilen kaynaklardan source/license/verified_at ile ilerle.
+
+## 2026-04-16 TUR-248 — Add Verified Hadith Schema
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\content_schema.sql` icine `public.hadiths` tablosu eklendi.
+- Tablo `collection_id`, `book`, `hadith_number`, `text_ar`, `text_tr`, `text_en`, `narrator`, `grade`, `source`, `source_license`, `verified_at` ve `created_at` alanlarini icerir.
+- Arapca hadis metni, kaynak ve hadis numarasi icin bos/gecersiz degerleri reddeden check constraint'leri eklendi.
+- `unique (collection_id, hadith_number)` ve `hadiths_collection_number_idx` eklendi.
+- `public.hadiths` icin RLS aktif edildi ve public read policy tanimlandi.
+- `A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart` hadis tablo, provenance, unique/index ve RLS policy beklentileriyle genisletildi.
+
+### Neden Yapildi
+- Kanit: `A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart` satir 1 `hasVerifiedHadithDataset = false`; runtime hadis rotalari bilerek kapali.
+- Kanit: TUR-248 oncesi `content_schema.sql` icinde `public.hadiths` tablosu yoktu; verified hadis dataset'i icin Supabase hedef kontrati bulunmuyordu.
+- Sahte veya dogrulanmamis hadis metni uretmek yasak oldugu icin once sadece kaynak/lisans/dogrulama bilgisini zorlayan database kontrati kuruldu.
+- Runtime bu turda acilmadi; seed/import ve local/cloud provider hatti dogrulanmadan hadis gezintisini etkinlestirmek false-success ve dini icerik riski olustururdu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\content_schema.sql`
+- `A:\Way of Allah\sirat_i_nur\test\content_schema_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Verified hadis dataset'i icin Supabase hedefi hazirlandi.
+- Uygulama henuz hadis okumayi acmaz; `hasVerifiedHadithDataset = false` guvenli kapali modda kalir.
+- Sonraki turda manifest -> SQL seed generator veya runtime cloud provider hatti net tablo uzerinden uygulanabilir.
+
+### Test Sonucu
+- Odak test: `flutter test test\content_schema_test.dart --reporter compact` PASS (`2/2`)
+- `git diff --check` PASS (yalniz CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`442/442`)
+
+### Risk Degisimi
+- Verified hadis schema yoklugu riski: `12/25 -> 2/25`
+- Dogrulanmamis hadis runtime acilma riski: `16/25 -> 4/25` (runtime kapali kaldi)
+- Verified hadis dataset eksikligi riski: `16/25 -> 12/25` (schema hazir; seed/import/runtime sync henuz yok)
+
+### Rollback Plani
+- `content_schema.sql` icindeki `public.hadiths` tablo/index/RLS/policy blogu kaldirilir.
+- `test\content_schema_test.dart` icindeki hadis schema beklentileri geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude `tool\generate_hadith_seed.dart` ekle: yalniz operator tarafindan dogrulanmis hadis manifest'inden `public.hadiths` SQL seed'i uretmeli; bos Arapca metin, eksik source/source_license/verified_at, duplicate collection-number ve gecersiz collection id durumlarini reddetmeli.
