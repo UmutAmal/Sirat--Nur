@@ -285,7 +285,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get duaMeaning4 =>
-      '\"Ey Rabbim! Beni ve soyumdan gelecekleri namazını dosdoğru kılanlardan eyle! Ey Rabbimiz! duamı kabul et!';
+      '\"Ey Rabbim! Beni ve soyumdan gelecekleri namazını dosdoğru kılanlardan eyle! Ey Rabbimiz! duamı kabul et!\"';
 
   @override
   String get duaMeaning5 =>

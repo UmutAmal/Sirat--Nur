@@ -1,8 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
+import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/constants/duas_data.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 void main() {
   group('Verified bundled dua fallback', () {
@@ -42,6 +44,16 @@ void main() {
       expect(bundled.every((dua) => dua.transliteration.isEmpty), isTrue);
     });
 
+    test('keeps Turkish fallback quotation marks balanced', () {
+      for (final dua in bundledDailyDuaFallback()) {
+        expect(
+          '"'.allMatches(dua.turkish).length.isEven,
+          isTrue,
+          reason: '${dua.source} has unmatched Turkish quote marks',
+        );
+      }
+    });
+
     test('matches the verified bundled Quran ayah payload exactly', () {
       final quranRows =
           jsonDecode(File('assets/data/full_quran.json').readAsStringSync())
@@ -54,6 +66,15 @@ void main() {
         expect(dua.turkish, ayah['tr_translation']);
         expect(dua.english, ayah['en_translation']);
       }
+    });
+
+    test('keeps Turkish localized Quran 14:40 copy aligned', () async {
+      final l10n = await AppLocalizations.delegate.load(const Locale('tr'));
+      final quran1440 = bundledDailyDuaFallback().singleWhere(
+        (dua) => dua.source == 'Quran 14:40',
+      );
+
+      expect(l10n.duaMeaning4, quran1440.turkish);
     });
 
     test('rejects cloud rows without source and verified_at provenance', () {

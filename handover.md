@@ -10073,3 +10073,54 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude dogrulanmis icerik/audio zincirinde kalan en yuksek riski ara: Supabase seed/manifest, offline indirme false-success veya localization kalintisi gibi alanlardan kanitli ve minimal bir sonraki patch sec.
+
+## 2026-04-16 TUR-254 — Fix Quran 14:40 Turkish Quote Consistency
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql` icindeki Quran 14:40 `text_tr` degerinde acik kalan Turkce cift tirnak kapatildi.
+- `A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json` icindeki Surah 14 Ayah 40 `tr_translation` degeri seed SQL ile ayni hale getirildi.
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart` icindeki `Quran 14:40` fallback duasinin Turkce metni ayni kapali tirnakla guncellendi.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb` icindeki `duaMeaning4` ayni metne cekildi ve `flutter gen-l10n` ile `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_tr.dart` yenilendi.
+- `A:\Way of Allah\sirat_i_nur\test\duas_data_test.dart` icine Turkce fallback tirnak dengesi ve runtime Turkce localization/Fallback hizalama guard'i eklendi.
+
+### Neden Yapildi
+- Full test once `test\bundled_quran_asset_test.dart` icinde seed SQL ile bundled asset arasinda Quran 14:40 farki yakaladi.
+- Kok neden, ayni dogrulanmis ayetin Turkce meal metninin seed, bundled asset, fallback dua ve Turkce l10n zincirinde farkli noktalarda acik tirnakla kalmasiydi.
+- Dini icerikte kullaniciya gosterilen metinler kaynak zincirinde birebir tutarli olmali; bu patch Arapca metni veya meal cumlesini degistirmeden yalniz eksik kapanis tirnagini tamamlar.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql`
+- `A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json`
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_tr.dart`
+- `A:\Way of Allah\sirat_i_nur\test\duas_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran 14:40 Turkce dua metni artik seed SQL, bundled JSON, fallback data, ARB ve generated l10n runtime katmanlarinda ayni.
+- `bundled_quran_asset_test` seed/asset driftini; yeni dua guard'lari fallback tirnak dengesini ve Turkce runtime l10n hizalamasini yakalar.
+- Kullaniciya acik kalan tirnakla veya seed/asset farkiyla dini metin gosterilme riski kapatildi.
+
+### Test Sonucu
+- Odak test: `flutter test test\bundled_quran_asset_test.dart test\duas_data_test.dart --reporter compact` PASS (`11/11`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`460/460`)
+
+### Risk Degisimi
+- Quran 14:40 Turkce fallback metninde acik tirnak riski: `12/25 -> 2/25`
+- Seed SQL ile bundled Quran asset drift riski: `12/25 -> 2/25`
+- Turkce l10n duaMeaning4 ile runtime fallback ayrisma riski: `9/25 -> 2/25`
+
+### Rollback Plani
+- `content_seed_quran_ayahs.sql`, `assets\data\full_quran.json`, `duas_data.dart`, `app_tr.arb` ve `app_localizations_tr.dart` icindeki Quran 14:40 kapanis tirnagi degisiklikleri geri alinir.
+- `test\duas_data_test.dart` icindeki tirnak dengesi ve Turkce runtime l10n hizalama testleri geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Not
+- Dependency guncellik denetiminde `share_plus 13.0.0` denenmis, ancak `geolocator 14.0.2 -> geolocator_linux -> package_info_plus -> win32 <6` zinciri ile `share_plus >=13.0.0 -> win32 ^6.0.0` solver cakismasi nedeniyle uygulanmamistir. Degisiklik commitlenmeden geri alinmistir; dependency guncellemesi icin once geolocator/package_info_plus/win32 uyum yolu cozulecek.
+
+### Sonraki Adim
+- Bir sonraki dongude yeni risk taramasini localization/dini icerik/audio pipeline ekseninde surdur: once kanitli en yuksek riskli tek sorunu sec, minimal patch + test + analyze + full test + commit/push dongusunu uygula.

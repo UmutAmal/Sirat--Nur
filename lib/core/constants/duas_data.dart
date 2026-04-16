@@ -173,7 +173,7 @@ const List<DuaData> dailyDuas = [
         'رَبِّ ٱجْعَلْنِى مُقِيمَ ٱلصَّلَوٰةِ وَمِن ذُرِّيَّتِى ۚ رَبَّنَا وَتَقَبَّلْ دُعَآءِ',
     transliteration: '',
     turkish:
-        '"Ey Rabbim! Beni ve soyumdan gelecekleri namazını dosdoğru kılanlardan eyle! Ey Rabbimiz! duamı kabul et!',
+        '"Ey Rabbim! Beni ve soyumdan gelecekleri namazını dosdoğru kılanlardan eyle! Ey Rabbimiz! duamı kabul et!"',
     english:
         'Lord, grant that I and my offspring may keep up the prayer. Our Lord, accept my request.',
     source: 'Quran 14:40',
