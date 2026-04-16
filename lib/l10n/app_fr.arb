@@ -220,7 +220,7 @@
   "apply": "Apply",
   "resetOnboarding": "Reset Onboarding",
   "rerunSetup": "Re-run the initial setup process.",
-  "diagnostics": "Diagnostics",
+  "diagnostics": "Diagnostic",
   "diagnosticsNotSet": "Non défini",
   "diagnosticsPrayerProfile": "Profil de prière",
   "diagnosticsPrayerSource": "Autorité de prière",

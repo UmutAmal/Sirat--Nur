@@ -845,7 +845,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => 'ರೋಗನಿರ್ಣಯ';
 
   @override
   String get diagnosticsNotSet => 'ಹೊಂದಿಸಿಲ್ಲ';

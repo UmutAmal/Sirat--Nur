@@ -848,7 +848,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => 'Diagnosachd';
 
   @override
   String get diagnosticsNotSet => 'Gun a shuidheachadh';

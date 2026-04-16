@@ -71,6 +71,7 @@ void main() {
       'priority locales do not fall back to English for diagnostics labels',
       () {
         const localizedKeys = [
+          'diagnostics',
           'diagnosticsNotSet',
           'diagnosticsPrayerProfile',
           'diagnosticsPrayerSource',

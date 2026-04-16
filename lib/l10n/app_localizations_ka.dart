@@ -847,7 +847,7 @@ class AppLocalizationsKa extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => 'დიაგნოსტიკა';
 
   @override
   String get diagnosticsNotSet => 'არ არის დაყენებული';

@@ -220,7 +220,7 @@
   "apply": "Apply",
   "resetOnboarding": "Reset Onboarding",
   "rerunSetup": "Re-run the initial setup process.",
-  "diagnostics": "Diagnostics",
+  "diagnostics": "การวินิจฉัย",
   "diagnosticsNotSet": "ไม่ได้ตั้งค่า",
   "diagnosticsPrayerProfile": "รายละเอียดการสวดมนต์",
   "diagnosticsPrayerSource": "อำนาจอธิษฐาน",

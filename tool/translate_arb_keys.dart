@@ -376,6 +376,7 @@ bool _mustStaySingleLine(String key) {
       key == 'downloadPartiallyFinishedForReciter' ||
       key == 'deletedOfflineFilesForReciter' ||
       key == 'audioPlayFailed' ||
+      key == 'diagnostics' ||
       key == 'diagnosticsUiAudioAssets' ||
       key == 'diagnosticsQuranAudioAssets' ||
       key == 'diagnosticsSupportedCount' ||

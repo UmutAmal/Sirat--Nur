@@ -847,7 +847,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => 'Diagnostika';
 
   @override
   String get diagnosticsNotSet => 'Nie je nastavené';

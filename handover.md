@@ -8231,3 +8231,47 @@
 
 ### Sonraki Adım
 - Sonraki dongude aktif l10n fallback taramasini yenile; bilincli placeholder/proper noun anahtarlarini eleyip `diagnostics`, `juz`, `tafsir`, `dailyChecklist`, `dailyProgress` veya benzer gorunur anahtarlar arasindan en yuksek etkili tek yuzeyi sec.
+
+## 2026-04-16 TUR-217 — Localize Diagnostics Screen Title
+
+### Yapılan İşlem
+- `diagnostics` anahtari korumali ARB batch'i ile genis locale kumesinde lokalize edildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- `tool\translate_arb_keys.dart` single-line guard listesine `diagnostics` eklendi.
+- `test\arb_ui_localization_test.dart` diagnostics label priority locale guard kapsaminda `diagnostics` basligini da kontrol ediyor.
+- `test\translate_arb_keys_test.dart` multiline diagnostics title output regresyon testiyle ceviri debris korumasi ekledi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:225` ayarlar yuzeyinde diagnostics kart basligini `l10n.diagnostics` ile gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb:356` kaynak metin olarak `"Diagnostics"` degerini tasiyor.
+- TUR-217 oncesi aktif l10n fallback taramasinda `diagnostics` icin `21` priority locale ve `187` toplam locale `app_en.arb` ile birebir ayniydi.
+- Bu baslik kullaniciya dogrudan gorunen ayarlar navigasyon yuzeyi oldugu icin Ingilizce fallback tam lokalizasyon hedefiyle uyumsuzdu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Priority locale setinde `diagnostics` Ingilizce fallback riski kapandi.
+- `diagnostics` fallback sayisi `187 -> 69` seviyesine indi.
+- Kalan fallback'ler Google ceviri destegi olmayan veya guvenli aday uretilemeyen nadir/legacy locale grubunda birakildi; UI metni uydurulmadi.
+- Tek satir guard'i ile gelecekteki batch debris/newline riski azaltildi.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\features\settings\diagnostics_page_test.dart test\quran_diagnostics_test.dart` PASS (`69/69`)
+- Priority fallback taramasi PASS: `priority_same=[]`
+- `git diff --check` PASS (yalnizca mevcut Windows CRLF uyarilari)
+- `flutter analyze` PASS
+- `flutter test` PASS (`386/386`)
+
+### Risk Değişimi
+- Priority locale diagnostics title fallback riski: `12/25 -> 2/25`
+- Tum locale diagnostics title fallback riski: `12/25 -> 6/25`
+- Diagnostics title ceviri batch debris tekrar riski: `10/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki dongude aktif l10n fallback taramasini yenile; bilincli placeholder/proper noun anahtarlarini eleyip `juz`, `tafsir`, `dailyChecklist`, `dailyProgress` veya benzer gorunur anahtarlar arasindan en yuksek etkili tek yuzeyi sec.

@@ -847,7 +847,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => 'Diagnostika';
 
   @override
   String get diagnosticsNotSet => 'Nav iestatīts';

@@ -829,7 +829,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => '诊断';
 
   @override
   String get diagnosticsNotSet => '未设置';
@@ -2465,7 +2465,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => '诊断';
 
   @override
   String get diagnosticsNotSet => '未设置';
@@ -4101,7 +4101,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => '診斷';
 
   @override
   String get diagnosticsNotSet => '未設定';

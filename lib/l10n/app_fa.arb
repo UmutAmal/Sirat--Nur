@@ -220,7 +220,7 @@
   "apply": "Apply",
   "resetOnboarding": "Reset Onboarding",
   "rerunSetup": "Re-run the initial setup process.",
-  "diagnostics": "Diagnostics",
+  "diagnostics": "تشخیص",
   "diagnosticsNotSet": "تنظیم نشده است",
   "diagnosticsPrayerProfile": "نمایه دعا",
   "diagnosticsPrayerSource": "مرجع نماز",

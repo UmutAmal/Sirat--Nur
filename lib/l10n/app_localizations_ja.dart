@@ -840,7 +840,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => '診断';
 
   @override
   String get diagnosticsNotSet => '未設定';

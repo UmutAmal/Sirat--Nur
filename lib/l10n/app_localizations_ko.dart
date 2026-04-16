@@ -839,7 +839,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => '진단';
 
   @override
   String get diagnosticsNotSet => '설정되지 않음';

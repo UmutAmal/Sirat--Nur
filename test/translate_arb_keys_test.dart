@@ -152,6 +152,13 @@ void main() {
     });
 
     test('rejects multiline diagnostics output', () {
+      final labelValue = resolveTranslatedArbValue(
+        key: 'diagnostics',
+        source: 'Diagnostics',
+        currentValue: 'Tanilama',
+        candidate: 'means the following.\nTanilama',
+      );
+
       final value = resolveTranslatedArbValue(
         key: 'diagnosticsQuranCloudCheckFailed',
         source: 'Cloud check failed: {error}',
@@ -159,6 +166,7 @@ void main() {
         candidate: 'means the following.\nBulut kontrolu basarisiz: {error}',
       );
 
+      expect(labelValue, 'Tanilama');
       expect(value, 'Bulut kontrolu basarisiz: {error}');
     });
   });

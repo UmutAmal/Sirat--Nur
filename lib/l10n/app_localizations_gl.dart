@@ -849,7 +849,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => 'Diagnóstico';
 
   @override
   String get diagnosticsNotSet => 'Non definido';

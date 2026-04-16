@@ -850,7 +850,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => 'Ախտորոշում';
 
   @override
   String get diagnosticsNotSet => 'Սահմանված չէ';

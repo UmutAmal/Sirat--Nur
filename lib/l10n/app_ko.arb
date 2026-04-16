@@ -220,7 +220,7 @@
   "apply": "Apply",
   "resetOnboarding": "Reset Onboarding",
   "rerunSetup": "Re-run the initial setup process.",
-  "diagnostics": "Diagnostics",
+  "diagnostics": "진단",
   "diagnosticsNotSet": "설정되지 않음",
   "diagnosticsPrayerProfile": "기도 프로필",
   "diagnosticsPrayerSource": "기도의 권위",

@@ -849,7 +849,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => 'நோய் கண்டறிதல்';
 
   @override
   String get diagnosticsNotSet => 'அமைக்கப்படவில்லை';

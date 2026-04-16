@@ -847,7 +847,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => 'ogaanshaha';
 
   @override
   String get diagnosticsNotSet => 'Lama dejin';

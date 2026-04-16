@@ -848,7 +848,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => 'Ukuxilonga';
 
   @override
   String get diagnosticsNotSet => 'Akusethiwe';

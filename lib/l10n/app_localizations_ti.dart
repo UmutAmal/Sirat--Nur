@@ -839,7 +839,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get rerunSetup => 'Re-run the initial setup process.';
 
   @override
-  String get diagnostics => 'Diagnostics';
+  String get diagnostics => 'መርመራታት';
 
   @override
   String get diagnosticsNotSet => 'ኣይተቐመጠን።';
