@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -207,6 +208,15 @@ void main() {
       educationQuery,
       contains('["amenity"="school"]["religion"="muslim"]'),
     );
+  });
+
+  test('PlacesMapPage avoids force-unwrapping nullable map centers', () {
+    final source = File(
+      'lib/features/places/places_map_page.dart',
+    ).readAsStringSync();
+
+    expect(source, isNot(contains('_lastFetchCenter!')));
+    expect(source, isNot(contains('_currentCenter!')));
   });
 
   testWidgets(

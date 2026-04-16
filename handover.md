@@ -7353,3 +7353,35 @@
 
 ### Sonraki Adım
 - Sonraki dongude places ve qibla tarafindaki nullable coordinate unwrap'leri yeniden incelenecek; guard kosullari ile unwrap kullanimlari ayrilacak ve gercek crash yuzeyi kaldiysa kapatilacak.
+
+## 2026-04-16 TUR-192 — Remove Places Map Center Force-Unwraps
+
+### Yapılan İşlem
+- Places map state icindeki `_currentCenter` ve `_lastFetchCenter` kullanımları local snapshot degiskenlerine alindi.
+- `_changeCategory`, `_queueAnchorSync`, `showSearchHere` ve search-area button akislari `!` kullanmadan ayni guard mantigini koruyor.
+- Places testine source guard eklendi; `_lastFetchCenter!` ve `_currentCenter!` geri gelirse test fail edecek.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:372` once null check sonrasi `_currentCenter!` ile fetch cagiriyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:395` ve `:533` once `_lastFetchCenter!` / `_currentCenter!` kullaniyordu.
+- Stateful map UI'da ayni nullable field'i guard sonrasi tekrar force-unwrap etmek gereksiz crash yuzeyi ve bakim riski olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Places UI davranisi degismedi; sadece nullable center degerleri tek anlik snapshot olarak kullaniliyor.
+- Search area ve category refresh akislari center null ise sessizce cikmaya devam eder.
+
+### Test Sonucu
+- `flutter test test\features\places\places_map_page_test.dart` PASS (`8/8`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`365/365`)
+
+### Risk Değişimi
+- Places map center state degisimi sonrasi force-unwrap crash riski: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude Qibla sensor bridge ve prayer widget latitude/longitude unwrap'leri kontrol edilecek; guard ile local snapshot ayrimi yetersizse ayni null-safety sertlestirmesi uygulanacak.

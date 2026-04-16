@@ -364,12 +364,13 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
       _selectedCategory = cat;
       _places.clear(); // Clear old results immediately
     });
-    if (_currentCenter != null &&
+    final currentCenter = _currentCenter;
+    if (currentCenter != null &&
         canFetchPlaces(
           ref.read(settingsProvider),
           overpassApiUrl: SupabaseConfig.placesOverpassApiUrl,
         )) {
-      _fetchPlaces(_currentCenter!, cat);
+      _fetchPlaces(currentCenter, cat);
     }
   }
 
@@ -390,9 +391,10 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
       return;
     }
 
+    final lastFetchCenter = _lastFetchCenter;
     final needsFetch =
-        _lastFetchCenter == null ||
-        _distance.as(LengthUnit.Meter, _lastFetchCenter!, anchor) > 25;
+        lastFetchCenter == null ||
+        _distance.as(LengthUnit.Meter, lastFetchCenter, anchor) > 25;
     if (!needsFetch) {
       return;
     }
@@ -525,13 +527,14 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
     enrichedPlaces.sort((a, b) => a.distanceKm.compareTo(b.distanceKm));
 
     // Determine if "Search Here" button should show
+    final lastFetchCenter = _lastFetchCenter;
+    final currentCenter = _currentCenter;
     final showSearchHere =
         mapAvailability == PlacesMapAvailability.ready &&
         !_isLoading &&
-        _lastFetchCenter != null &&
-        _currentCenter != null &&
-        _distance.as(LengthUnit.Meter, _lastFetchCenter!, _currentCenter!) >
-            1000;
+        lastFetchCenter != null &&
+        currentCenter != null &&
+        _distance.as(LengthUnit.Meter, lastFetchCenter, currentCenter) > 1000;
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -697,8 +700,9 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                       opacity: val,
                       child: ElevatedButton.icon(
                         onPressed: () {
-                          if (_currentCenter != null) {
-                            _fetchPlaces(_currentCenter!, _selectedCategory);
+                          final currentCenter = _currentCenter;
+                          if (currentCenter != null) {
+                            _fetchPlaces(currentCenter, _selectedCategory);
                           }
                         },
                         style: ElevatedButton.styleFrom(
