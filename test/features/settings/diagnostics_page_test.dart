@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
+import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/features/settings/diagnostics_page.dart';
@@ -195,6 +196,21 @@ void main() {
     expect(buildDiagnosticsErrorText(tr), isNot(contains('schema cache')));
   });
 
+  test('resolveHadithDiagnosticsValue reports availability honestly', () {
+    final en = lookupAppLocalizations(const Locale('en'));
+
+    expect(
+      resolveHadithDiagnosticsValue(en, isAvailable: false),
+      en.hadithSourcePending,
+    );
+    expect(
+      resolveHadithDiagnosticsValue(en, isAvailable: true),
+      en.diagnosticsSupportedCount(
+        '${supportedHadithCollectionIds.length}/${supportedHadithCollectionIds.length}',
+      ),
+    );
+  });
+
   test('asset manifest diagnostics log hides raw exceptions', () {
     final source = File(
       'lib/features/settings/diagnostics_page.dart',
@@ -203,6 +219,19 @@ void main() {
     expect(source, isNot(contains('Diagnostics asset manifest read failed:')));
     expect(source, isNot(contains('Error.safeToString(error)')));
     expect(source, contains('Diagnostics asset manifest read failed'));
+  });
+
+  test('diagnostics reports verified hadith dataset availability', () {
+    final source = File(
+      'lib/features/settings/diagnostics_page.dart',
+    ).readAsStringSync();
+
+    expect(
+      source,
+      contains('verifiedHadithDatasetAvailabilityProvider.future'),
+    );
+    expect(source, contains('resolveHadithDiagnosticsValue'));
+    expect(source, contains('l10n.hadithCollections'));
   });
 
   test('Quran diagnostics queries require provenance columns', () {

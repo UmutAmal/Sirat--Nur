@@ -9983,3 +9983,48 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude diagnostics/yayin oncesi kontrol yuzeyine hadis dataset completeness durumunu ekle veya daha yuksek risk bulunursa once onu ele al. Gercek hadis manifest/Supabase seed olmadan dini icerik uretme, uydurma satir veya sahte audio ekleme.
+
+## 2026-04-16 TUR-252 — Surface Hadith Completeness In Diagnostics
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart` icine `resolveHadithDiagnosticsValue` helper'i eklendi.
+- Diagnostics satir uretimi `verifiedHadithDatasetAvailabilityProvider.future` sonucunu okuyarak `hadithCollections` satiri ekleyecek sekilde genisletildi.
+- Dataset tamam degilse diagnostics mevcut `hadithSourcePending` metnini sagliksiz satir olarak gosterir.
+- Dataset tamam ise diagnostics mevcut `diagnosticsSupportedCount` metniyle desteklenen tum hadis koleksiyonlarinin hazir oldugunu gosterir.
+- Yeni l10n anahtari acilmadi; mevcut 180+ locale kapsami korunarak ceviri borcu olusturulmadi.
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart` hadis diagnostics helper ve provider baglantisi guard testleriyle genisletildi.
+
+### Neden Yapildi
+- TUR-251 hadis UI kapisini runtime completeness guard'a bagladi, ancak operator/yayin oncesi diagnostics ekrani bu durumu raporlamiyordu.
+- Bu bosluk build-time flag veya Supabase seed hatasinin UI kapali kalmasina neden oldugu durumda kok sebebi diagnostics yuzeyinde saklardi.
+- Dini icerikte dogrulanmamis veri acilmamali; ayni zamanda kapali kalma sebebi de operator tarafindan acikca gorulmelidir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Diagnostics zinciri artik `hadithCollections -> verifiedHadithDatasetAvailabilityProvider -> hadithSourcePending/destek sayaci` akisiyla hadis dataset sagligini raporlar.
+- Eksik Supabase hadis dataset'i sessiz kalmaz; yayin oncesi kalite kontrol ekraninda sagliksiz olarak gorunur.
+- L10n anahtar kapsami degismedigi icin 180+ ARB dosyasinda yeni eksik anahtar riski dogmadi.
+
+### Test Sonucu
+- Odak test: `flutter test test\features\settings\diagnostics_page_test.dart --reporter compact` PASS (`14/14`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`458/458`)
+
+### Risk Degisimi
+- Hadis completeness durumunun diagnostics'te gorunmemesi riski: `12/25 -> 2/25`
+- Build-time flag/Supabase seed hatasinin operator tarafindan gec fark edilme riski: `12/25 -> 3/25`
+- Verified hadis dataset eksikligi riski: `8/25 -> 8/25` (durum gorunur oldu; gercek kaynak manifest/Supabase seed halen gerekli)
+
+### Rollback Plani
+- `diagnostics_page.dart` icindeki `resolveHadithDiagnosticsValue` helper'i, hadis provider import'u ve `hadithCollections` diagnostics satiri geri alinir.
+- `diagnostics_page_test.dart` icindeki iki hadis diagnostics testi geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude verified dini/audio dataset tamamlama zincirinde en yuksek kalan riski sec: gercek manifest/Supabase seed yoksa uydurma veri ekleme; once mevcut kodda false-success, hardcoded icerik veya operator guard eksigi ara.

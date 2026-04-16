@@ -9,9 +9,11 @@ import 'package:sirat_i_nur/core/services/app_metadata_service.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import 'package:sirat_i_nur/core/services/audio_player_service.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
+import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/features/library/providers/hadith_provider.dart';
 import 'package:sirat_i_nur/features/settings/quran_diagnostics.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
@@ -129,6 +131,20 @@ String resolvePrayerSourceValue(
 @visibleForTesting
 String buildDiagnosticsErrorText(AppLocalizations l10n) {
   return '${l10n.error}\n${l10n.checkConnection}';
+}
+
+@visibleForTesting
+String resolveHadithDiagnosticsValue(
+  AppLocalizations l10n, {
+  required bool isAvailable,
+}) {
+  if (!isAvailable) {
+    return l10n.hadithSourcePending;
+  }
+
+  return l10n.diagnosticsSupportedCount(
+    '${supportedHadithCollectionIds.length}/${supportedHadithCollectionIds.length}',
+  );
 }
 
 @visibleForTesting
@@ -307,6 +323,20 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
     ];
 
     rows.add(_DiagnosticRow(l10n.liveTv, l10n.diagnosticsCloudDriven, true));
+
+    final isHadithDatasetAvailable = await ref.read(
+      verifiedHadithDatasetAvailabilityProvider.future,
+    );
+    rows.add(
+      _DiagnosticRow(
+        l10n.hadithCollections,
+        resolveHadithDiagnosticsValue(
+          l10n,
+          isAvailable: isHadithDatasetAvailable,
+        ),
+        isHadithDatasetAvailable,
+      ),
+    );
 
     try {
       final supabase = ref.read(supabaseClientProvider);
