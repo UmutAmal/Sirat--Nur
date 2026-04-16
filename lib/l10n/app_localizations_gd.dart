@@ -215,43 +215,45 @@ class AppLocalizationsGd extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'A\' luchdachadh tafsir...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'Stòr Tafsir';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound =>
+      'Cha deach tafsir a lorg airson an surah seo.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Cha deach tafsir a lorg airson ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Cha b\' urrainn dhuinn Tafsir a luchdachadh.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah =>
+      'Chan eil teacsa tafsir ann airson an ayah seo.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
-    return 'Downloading tafsir $current/$total';
+    return 'A’ luchdachadh sìos tafsir $current/$total';
   }
 
   @override
   String tafsirLoadingProgress(String current, String total) {
-    return 'Loading tafsir $current/$total';
+    return 'A’ luchdachadh tafsir $current/$total';
   }
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Thill stòr Tafsir mearachd HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Cha do thill an stòr tafsir a chaidh a thaghadh a-steach.';
 
   @override
   String get bookmarks => 'Comharran-leabhair';

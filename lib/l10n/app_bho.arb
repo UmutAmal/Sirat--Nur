@@ -667,10 +667,10 @@
       }
     }
   },
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoading": "तफसीर लोड हो रहल बा...",
+  "tafsirSourceLabel": "तफसीर के स्रोत बा",
+  "tafsirNoSurahFound": "एह सूरह खातिर कवनो तफसीर ना मिलल.",
+  "tafsirNoAyahFound": "आयत {ayah} खातिर कवनो तफसीर ना मिलल।",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -678,8 +678,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "तफसीर के लोड ना हो पावल।",
+  "tafsirNoTextForAyah": "एह आयत खातिर कवनो तफसीर पाठ नइखे.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -702,7 +702,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "तफसीर स्रोत एगो HTTP {statusCode} त्रुटि वापस कइले बा।",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -710,7 +710,7 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "tafsirNoEntriesReturned": "चुनल तफसीर स्रोत कवनो प्रविष्टि ना लवटा दिहलसि.",
   "premiumProductUnavailable": "प्रीमियम उत्पाद अभी उपलब्ध नईखे। कृपया बाद में दोबारा कोशिश करीं।",
   "premiumPurchaseFailed": "खरीददारी पूरा ना हो पावल। कृपया दोबारा कोशिश करीं।",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",

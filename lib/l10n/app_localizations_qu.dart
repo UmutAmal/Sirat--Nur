@@ -216,24 +216,24 @@ class AppLocalizationsQu extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Cargando tafsir...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'Tafsir pukyuta';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Mana tafsir tarisqachu kay surahpaq.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Mana tafsir tarisqachu ayah $ayah nisqapaq.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir mana cargayta atirqankuchu.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Mana tafsir texto kay ayahpaq.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -247,12 +247,12 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsir pukyuta HTTP $statusCode pantayta kutichirqa.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Akllasqa tafsir pukyuta mana qillqasqakunata kutichirqanchu.';
 
   @override
   String get bookmarks => 'Bookmarks';

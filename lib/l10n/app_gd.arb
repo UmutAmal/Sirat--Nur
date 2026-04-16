@@ -667,10 +667,10 @@
       }
     }
   },
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoading": "A' luchdachadh tafsir...",
+  "tafsirSourceLabel": "Stòr Tafsir",
+  "tafsirNoSurahFound": "Cha deach tafsir a lorg airson an surah seo.",
+  "tafsirNoAyahFound": "Cha deach tafsir a lorg airson ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -678,9 +678,9 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "tafsirLoadFailed": "Cha b' urrainn dhuinn Tafsir a luchdachadh.",
+  "tafsirNoTextForAyah": "Chan eil teacsa tafsir ann airson an ayah seo.",
+  "tafsirDownloadingProgress": "A’ luchdachadh sìos tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
       "current": {
@@ -691,7 +691,7 @@
       }
     }
   },
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "tafsirLoadingProgress": "A’ luchdachadh tafsir {current}/{total}",
   "@tafsirLoadingProgress": {
     "placeholders": {
       "current": {
@@ -702,7 +702,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Thill stòr Tafsir mearachd HTTP {statusCode}.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -710,7 +710,7 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "tafsirNoEntriesReturned": "Cha do thill an stòr tafsir a chaidh a thaghadh a-steach.",
   "premiumProductUnavailable": "Chan eil toradh Premium ri fhaighinn an-dràsta. Feuch ris a-rithist nas anmoiche.",
   "premiumPurchaseFailed": "Cha b’ urrainnear an ceannach a chrìochnachadh. Feuch ris a-rithist.",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",

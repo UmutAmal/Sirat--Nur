@@ -214,43 +214,43 @@ class AppLocalizationsGa extends AppLocalizations {
   String get tafsir => 'Taisceir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'tafsir á lódáil...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'Foinse tafsir';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Níor aimsíodh aon tafsir don surah seo.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Níor aimsíodh aon tafsir le haghaidh ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Níorbh fhéidir Tafsir a lódáil.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Gan téacs tafsir don ayah seo.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
-    return 'Downloading tafsir $current/$total';
+    return 'Tasir á íoslódáil $current/$total';
   }
 
   @override
   String tafsirLoadingProgress(String current, String total) {
-    return 'Loading tafsir $current/$total';
+    return 'Tasir á lódáil $current/$total';
   }
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Chuir foinse Tafsir earráid HTTP $statusCode ar ais.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Níor chuir an fhoinse tafsir roghnaithe aon iontrálacha ar ais.';
 
   @override
   String get bookmarks => 'Leabharmharcanna';

@@ -667,10 +667,10 @@
       }
     }
   },
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoading": "লোড হচ্ছে tafsir...",
+  "tafsirSourceLabel": "তফছিৰ উৎস",
+  "tafsirNoSurahFound": "এই চুৰাটোৰ বাবে কোনো তফছিৰ পোৱা নগ’ল।",
+  "tafsirNoAyahFound": "ayah {ayah} ৰ বাবে কোনো tafsir পোৱা নগ'ল।",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -678,8 +678,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "তফছিৰ লোড কৰিব পৰা নগ’ল।",
+  "tafsirNoTextForAyah": "এই আয়াহৰ বাবে কোনো তফছিৰ গ্ৰন্থ নাই।",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -702,7 +702,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir উৎসে এটা HTTP {statusCode} ভুল ঘূৰাই দিলে।",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -710,7 +710,7 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "tafsirNoEntriesReturned": "নিৰ্বাচিত tafsir উৎসই কোনো প্ৰৱেশ ঘূৰাই নিদিলে।",
   "premiumProductUnavailable": "বৰ্তমান প্ৰিমিয়াম প্ৰডাক্ট উপলব্ধ নহয়। অনুগ্ৰহ কৰি পিছত পুনৰ চেষ্টা কৰক।",
   "premiumPurchaseFailed": "ক্ৰয় সম্পূৰ্ণ কৰিব পৰা নগ’ল। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",

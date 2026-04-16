@@ -584,6 +584,16 @@ bool _mustStaySingleLine(String key) {
       key == 'targetCount' ||
       key == 'resetCounter' ||
       key == 'resetOnboarding' ||
+      key == 'tafsirLoading' ||
+      key == 'tafsirSourceLabel' ||
+      key == 'tafsirNoSurahFound' ||
+      key == 'tafsirNoAyahFound' ||
+      key == 'tafsirLoadFailed' ||
+      key == 'tafsirNoTextForAyah' ||
+      key == 'tafsirDownloadingProgress' ||
+      key == 'tafsirLoadingProgress' ||
+      key == 'tafsirApiStatusError' ||
+      key == 'tafsirNoEntriesReturned' ||
       key == 'premiumProductUnavailable' ||
       key == 'premiumPurchaseFailed' ||
       key == 'prayerCompletion' ||

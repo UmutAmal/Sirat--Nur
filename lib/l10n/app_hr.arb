@@ -667,10 +667,10 @@
       }
     }
   },
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoading": "Učitavanje tefsira...",
+  "tafsirSourceLabel": "Izvor tefsira",
+  "tafsirNoSurahFound": "Nije pronađen tefsir za ovu suru.",
+  "tafsirNoAyahFound": "Nije pronađen tefsir za ajet {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -678,9 +678,9 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "tafsirLoadFailed": "Tefsir nije moguće učitati.",
+  "tafsirNoTextForAyah": "Nema tefsirskog teksta za ovaj ajet.",
+  "tafsirDownloadingProgress": "Preuzimanje tefsira {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
       "current": {
@@ -691,7 +691,7 @@
       }
     }
   },
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Učitavanje tefsira {current}/{total}",
   "@tafsirLoadingProgress": {
     "placeholders": {
       "current": {
@@ -702,7 +702,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir izvor vratio je HTTP {statusCode} pogrešku.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -710,7 +710,7 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "tafsirNoEntriesReturned": "Odabrani izvor tefsira nije vratio nijedan unos.",
   "premiumProductUnavailable": "Premium proizvod trenutno nije dostupan. Pokušajte ponovno kasnije.",
   "premiumPurchaseFailed": "Kupnja nije mogla biti dovršena. Molimo pokušajte ponovo.",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",

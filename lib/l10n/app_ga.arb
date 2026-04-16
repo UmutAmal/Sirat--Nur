@@ -667,10 +667,10 @@
       }
     }
   },
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoading": "tafsir á lódáil...",
+  "tafsirSourceLabel": "Foinse tafsir",
+  "tafsirNoSurahFound": "Níor aimsíodh aon tafsir don surah seo.",
+  "tafsirNoAyahFound": "Níor aimsíodh aon tafsir le haghaidh ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -678,9 +678,9 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "tafsirLoadFailed": "Níorbh fhéidir Tafsir a lódáil.",
+  "tafsirNoTextForAyah": "Gan téacs tafsir don ayah seo.",
+  "tafsirDownloadingProgress": "Tasir á íoslódáil {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
       "current": {
@@ -691,7 +691,7 @@
       }
     }
   },
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Tasir á lódáil {current}/{total}",
   "@tafsirLoadingProgress": {
     "placeholders": {
       "current": {
@@ -702,7 +702,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Chuir foinse Tafsir earráid HTTP {statusCode} ar ais.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -710,7 +710,7 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "tafsirNoEntriesReturned": "Níor chuir an fhoinse tafsir roghnaithe aon iontrálacha ar ais.",
   "premiumProductUnavailable": "Níl an táirge préimhe ar fáil faoi láthair. Bain triail eile as ar ball.",
   "premiumPurchaseFailed": "Níorbh fhéidir an ceannach a chur i gcrích. Bain triail eile as.",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",

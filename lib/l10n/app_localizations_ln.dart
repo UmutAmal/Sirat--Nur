@@ -214,24 +214,24 @@ class AppLocalizationsLn extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Ezali ko charger tafsir...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'Liziba ya Tafsir';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Tafsir moko te ezwami mpo na surah oyo.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Tafsir moko te ezwami mpo na ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir ekokaki kozala na chargement te.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Texte ya tafsir te pona ayah oyo.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,12 +245,12 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Liziba ya Tafsir ezongisaki libunga ya HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Source ya tafsir oyo eponami ezongisaki ba entrées te.';
 
   @override
   String get bookmarks => 'Bookmarks';

@@ -667,10 +667,10 @@
       }
     }
   },
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoading": "Ojekarga hína tafsir...",
+  "tafsirSourceLabel": "Tafsir fuente",
+  "tafsirNoSurahFound": "Ndaipóri tafsir ojejuhúva ko surah-pe guarã.",
+  "tafsirNoAyahFound": "Ndaipóri tafsir ojejuhúva ayah {ayah}-pe g̃uarã.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -678,8 +678,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir ndaikatúi ojekarga.",
+  "tafsirNoTextForAyah": "Ndaipóri texto tafsir ko ayah-pe guarã.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -702,7 +702,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir ypykue ombojevy peteĩ HTTP {statusCode} jejavy.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -710,7 +710,7 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "tafsirNoEntriesReturned": "Pe tafsir ypykue ojeporavóva ndoguerúi mba’eveichagua jeike.",
   "premiumProductUnavailable": "Producto premium ndojeguerekói ko'ágãite. Eñeha’ã jey upe rire.",
   "premiumPurchaseFailed": "Ndikatúi oñemohu'ã jogua. Eñeha’ã jey.",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",

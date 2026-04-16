@@ -214,43 +214,42 @@ class AppLocalizationsTh extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'กำลังโหลดทาฟเซอร์...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'แหล่งที่มาของตัฟซีร์';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'ไม่พบตัฟซีร์สำหรับซูเราะห์นี้';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'ไม่พบตัฟซีร์สำหรับอายะห์ $ayah';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'ไม่สามารถโหลด Tafsir ได้';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'ไม่มีข้อความตัฟซีร์สำหรับอายะห์นี้';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
-    return 'Downloading tafsir $current/$total';
+    return 'กำลังดาวน์โหลดทาฟซีร์ $current/$total';
   }
 
   @override
   String tafsirLoadingProgress(String current, String total) {
-    return 'Loading tafsir $current/$total';
+    return 'กำลังโหลดทาฟซีร์ $current/$total';
   }
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'แหล่งที่มาของ Tafsir ส่งคืนข้อผิดพลาด HTTP $statusCode';
   }
 
   @override
-  String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+  String get tafsirNoEntriesReturned => 'แหล่ง tafsir ที่เลือกไม่ส่งคืนรายการ';
 
   @override
   String get bookmarks => 'Bookmarks';

@@ -215,24 +215,26 @@ class AppLocalizationsNso extends AppLocalizations {
   String get tafsir => 'Tafsir e ile ya re';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Go laetša tafsir...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'Mohlodi wa Tafsir';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound =>
+      'Ga go na tafsir yeo e hweditšwego bakeng sa surah ye.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Ga go na tafsir yeo e hweditšwego bakeng sa ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir e be e sa kgone go imelwa.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah =>
+      'Ga go na sengwalwa sa tafsir bakeng sa ayah ye.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -246,12 +248,12 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Mohlodi wa Tafsir o bušitše phošo ya HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Mohlodi wa tafsir wo o kgethilwego ga se wa bušetša dikeno.';
 
   @override
   String get bookmarks => 'Dipuku tša go swaya';

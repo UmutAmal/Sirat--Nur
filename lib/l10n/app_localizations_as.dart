@@ -214,24 +214,24 @@ class AppLocalizationsAs extends AppLocalizations {
   String get tafsir => 'তফছিৰ';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'লোড হচ্ছে tafsir...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'তফছিৰ উৎস';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'এই চুৰাটোৰ বাবে কোনো তফছিৰ পোৱা নগ’ল।';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'ayah $ayah ৰ বাবে কোনো tafsir পোৱা নগ\'ল।';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'তফছিৰ লোড কৰিব পৰা নগ’ল।';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'এই আয়াহৰ বাবে কোনো তফছিৰ গ্ৰন্থ নাই।';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,12 +245,12 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsir উৎসে এটা HTTP $statusCode ভুল ঘূৰাই দিলে।';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'নিৰ্বাচিত tafsir উৎসই কোনো প্ৰৱেশ ঘূৰাই নিদিলে।';
 
   @override
   String get bookmarks => 'বুকমাৰ্ক';

@@ -667,10 +667,10 @@
       }
     }
   },
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoading": "Wrthi'n llwytho tafsir...",
+  "tafsirSourceLabel": "ffynhonnell Tafsir",
+  "tafsirNoSurahFound": "Ni chafwyd hyd i tafsir ar gyfer y surah hwn.",
+  "tafsirNoAyahFound": "Ni chafwyd hyd i tafsir ar gyfer ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -678,9 +678,9 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "tafsirLoadFailed": "Nid oedd modd llwytho Tafsir.",
+  "tafsirNoTextForAyah": "Dim testun tafsir ar gyfer y ayah hwn.",
+  "tafsirDownloadingProgress": "Lawrlwytho tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
       "current": {
@@ -691,7 +691,7 @@
       }
     }
   },
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "tafsirLoadingProgress": "Yn llwytho tafsir {current}/{total}",
   "@tafsirLoadingProgress": {
     "placeholders": {
       "current": {
@@ -702,7 +702,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Dychwelodd ffynhonnell Tafsir wall HTTP {statusCode}.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -710,7 +710,7 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "tafsirNoEntriesReturned": "Ni ddychwelodd y ffynhonnell tafsir a ddewiswyd unrhyw gofnodion.",
   "premiumProductUnavailable": "Nid yw cynnyrch premiwm ar gael ar hyn o bryd. Ceisiwch eto yn nes ymlaen.",
   "premiumPurchaseFailed": "Ni ellid cwblhau'r pryniant. Ceisiwch eto.",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",

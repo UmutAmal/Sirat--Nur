@@ -215,24 +215,24 @@ class AppLocalizationsBho extends AppLocalizations {
   String get tafsir => 'तफसीर के बा';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'तफसीर लोड हो रहल बा...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'तफसीर के स्रोत बा';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'एह सूरह खातिर कवनो तफसीर ना मिलल.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'आयत $ayah खातिर कवनो तफसीर ना मिलल।';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'तफसीर के लोड ना हो पावल।';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'एह आयत खातिर कवनो तफसीर पाठ नइखे.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -246,12 +246,12 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'तफसीर स्रोत एगो HTTP $statusCode त्रुटि वापस कइले बा।';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'चुनल तफसीर स्रोत कवनो प्रविष्टि ना लवटा दिहलसि.';
 
   @override
   String get bookmarks => 'बुकमार्क के बारे में बतावल गइल बा';

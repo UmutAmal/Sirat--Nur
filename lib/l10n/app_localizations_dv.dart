@@ -216,24 +216,25 @@ class AppLocalizationsDv extends AppLocalizations {
   String get tafsir => 'ތަފްސީރެވެ';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'ލޯޑިންގ ތަފްސީރު...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'ތަފްސީރު މަސްދަރު';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound =>
+      'މި ސޫރަތަށް އެއްވެސް ތަފްސީރެއް ނުފެނެއެވެ.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'އާޔަތް $ayah އަށް ތަފްސީރެއް ނުފެނެއެވެ.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'ތަފްސީރު ލޯޑް ކުރެވޭ ގޮތެއް ނުވިއެވެ.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'މި އާޔަތަށް ތަފްސީރު ލިޔުމެއް ނެތެވެ.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -247,12 +248,12 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'ތަފްސީރު ސޯސް އިން އެޗްޓީޓީޕީ $statusCode އެރަރ އެއް ރިޓަރން ކުރިއެވެ.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'ހޮވާލެވުނު ތަފްސީރު ސޯސްއިން އެއްވެސް އެންޓްރީއެއް އަނބުރާ ނުލިބެއެވެ.';
 
   @override
   String get bookmarks => 'ބުކްމާކްސް';

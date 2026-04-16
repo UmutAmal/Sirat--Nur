@@ -215,13 +215,13 @@ class AppLocalizationsOm extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Tafsir fe\'amaa jira...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'Tafsir madda';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Suuraa kanaaf tafsiirri hin argamne.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
@@ -229,10 +229,11 @@ class AppLocalizationsOm extends AppLocalizations {
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsiir fe\'amuu hin dandeenye.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah =>
+      'Ayyaana kanaaf barreeffamni tafsiira hin jiru.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -246,12 +247,12 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Maddi Tafsir dogongora HTTP $statusCode deebise.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Maddi tafsir filatame galtee tokkollee hin deebisne.';
 
   @override
   String get bookmarks => 'Bookmarks';

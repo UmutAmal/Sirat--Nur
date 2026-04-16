@@ -214,43 +214,43 @@ class AppLocalizationsHr extends AppLocalizations {
   String get tafsir => 'tefsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Učitavanje tefsira...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'Izvor tefsira';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Nije pronađen tefsir za ovu suru.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Nije pronađen tefsir za ajet $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tefsir nije moguće učitati.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Nema tefsirskog teksta za ovaj ajet.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
-    return 'Downloading tafsir $current/$total';
+    return 'Preuzimanje tefsira $current/$total';
   }
 
   @override
   String tafsirLoadingProgress(String current, String total) {
-    return 'Loading tafsir $current/$total';
+    return 'Učitavanje tefsira $current/$total';
   }
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsir izvor vratio je HTTP $statusCode pogrešku.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Odabrani izvor tefsira nije vratio nijedan unos.';
 
   @override
   String get bookmarks => 'Knjižne oznake';

@@ -215,24 +215,26 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get tafsir => 'Tafsir nga';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Nagkarga ti tafsir...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'Tafsir a nagtaudan';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound =>
+      'Awan ti nasarakan a tafsir para iti daytoy a surah.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Awan ti nasarakan a tafsir para iti ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Saan a makarga ti Tafsir.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah =>
+      'Awan ti tafsir text para iti daytoy nga ayah.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -246,12 +248,12 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Ti taudan ti Tafsir ket nangisubli ti biddut ti HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Ti napili a taudan ti tafsir ket awan ti insublina nga entry.';
 
   @override
   String get bookmarks => 'Dagiti Bookmark';

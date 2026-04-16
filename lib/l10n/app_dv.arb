@@ -667,10 +667,10 @@
       }
     }
   },
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoading": "ލޯޑިންގ ތަފްސީރު...",
+  "tafsirSourceLabel": "ތަފްސީރު މަސްދަރު",
+  "tafsirNoSurahFound": "މި ސޫރަތަށް އެއްވެސް ތަފްސީރެއް ނުފެނެއެވެ.",
+  "tafsirNoAyahFound": "އާޔަތް {ayah} އަށް ތަފްސީރެއް ނުފެނެއެވެ.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -678,8 +678,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "ތަފްސީރު ލޯޑް ކުރެވޭ ގޮތެއް ނުވިއެވެ.",
+  "tafsirNoTextForAyah": "މި އާޔަތަށް ތަފްސީރު ލިޔުމެއް ނެތެވެ.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -702,7 +702,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "ތަފްސީރު ސޯސް އިން އެޗްޓީޓީޕީ {statusCode} އެރަރ އެއް ރިޓަރން ކުރިއެވެ.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -710,7 +710,7 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "tafsirNoEntriesReturned": "ހޮވާލެވުނު ތަފްސީރު ސޯސްއިން އެއްވެސް އެންޓްރީއެއް އަނބުރާ ނުލިބެއެވެ.",
   "premiumProductUnavailable": "ޕްރީމިއަމް ޕްރޮޑަކްޓެއް މިވަގުތު ލިބެން ނެތެވެ. ފަހުން އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ.",
   "premiumPurchaseFailed": "ގަތުން ފުރިހަމަ ނުކުރެވުނެވެ. އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ.",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",

@@ -215,24 +215,24 @@ class AppLocalizationsKri extends AppLocalizations {
   String get tafsir => 'Tafsir bin de du am';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Loading tafsir we yu de lod...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'Tafsir sos';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'No tafsir fain fo dis surah.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'No tafsir fain fɔ ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir nɔ bin ebul fɔ lod.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'No tafsir teks fo dis ayah.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -246,12 +246,12 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsir sɔs bin ritɔn wan HTTP $statusCode mistek.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Di tafsir sɔs we dɛn pik nɔ bin ritɔn ɛni ɛntri.';
 
   @override
   String get bookmarks => 'Bukmak dɛn';

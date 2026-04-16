@@ -667,10 +667,10 @@
       }
     }
   },
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoading": "Chargement tafsir ka...",
+  "tafsirSourceLabel": "Tafsir sɔrɔyɔrɔ",
+  "tafsirNoSurahFound": "Tafsir si ma Sɔrɔ nin sura in na.",
+  "tafsirNoAyahFound": "Tafsir si ma sɔrɔ ayah {ayah} la.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -678,8 +678,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir tun tɛ se ka doni ta.",
+  "tafsirNoTextForAyah": "Tafsir sɛbɛn si tɛ nin ayah in na.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -702,7 +702,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir sɔrɔyɔrɔ ye HTTP {statusCode} fili dɔ segin.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -710,7 +710,7 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "tafsirNoEntriesReturned": "Tafsir sɔrɔyɔrɔ sugandilen ma sɛbɛnni si segin.",
   "premiumProductUnavailable": "Premium product tɛ sɔrɔ sisan. Aw ye aw jija ka segin ka a lajɛ kɔfɛ.",
   "premiumPurchaseFailed": "Sanni ma se ka ban. Aw ye aw jija ka segin a kan.",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",

@@ -2001,6 +2001,10 @@ void main() {
           'tafsirNoAyahFound',
           'tafsirLoadFailed',
           'tafsirNoTextForAyah',
+          'tafsirDownloadingProgress',
+          'tafsirLoadingProgress',
+          'tafsirApiStatusError',
+          'tafsirNoEntriesReturned',
           'quranLoadFailed',
           'placesLocationRequiredTitle',
           'placesLocationRequiredBody',
@@ -2018,6 +2022,46 @@ void main() {
               arb[key],
               isNot(english[key]),
               reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
+    test(
+      'tafsir runtime copy stays single-line and preserves placeholders in all locales',
+      () {
+        const tafsirKeys = [
+          'tafsirLoading',
+          'tafsirSourceLabel',
+          'tafsirNoSurahFound',
+          'tafsirNoAyahFound',
+          'tafsirLoadFailed',
+          'tafsirNoTextForAyah',
+          'tafsirDownloadingProgress',
+          'tafsirLoadingProgress',
+          'tafsirApiStatusError',
+          'tafsirNoEntriesReturned',
+        ];
+
+        for (final file
+            in Directory('lib/l10n').listSync().whereType<File>().where(
+              (file) => file.path.endsWith('.arb'),
+            )) {
+          final arb = _readArb(file.path);
+
+          for (final key in tafsirKeys) {
+            final value = arb[key] as String;
+            expect(
+              value.contains('\n') || value.contains('\r'),
+              isFalse,
+              reason: '${file.uri.pathSegments.last} keeps multiline $key',
+            );
+            expect(
+              _placeholderSet(value),
+              _placeholderSet(english[key] as String),
+              reason:
+                  '${file.uri.pathSegments.last} lost placeholders for $key',
             );
           }
         }

@@ -9537,3 +9537,51 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude kalan dependency disi riskleri tekrar tara: ozellikle kalan i18n fallback cluster'lari, dini icerik dogrulugu, ses verilerinin Supabase storage baglantisi ve external URL bagimliliklari.
+
+## 2026-04-16 TUR-243 — Localize Tafsir Runtime Copy
+
+### Yapilan Islem
+- Tafsir runtime UI/hata/progress anahtarlari icin kalan Ingilizce fallback'ler azaltildi: `tafsirLoading`, `tafsirSourceLabel`, `tafsirNoSurahFound`, `tafsirNoAyahFound`, `tafsirLoadFailed`, `tafsirNoTextForAyah`, `tafsirDownloadingProgress`, `tafsirLoadingProgress`, `tafsirApiStatusError`, `tafsirNoEntriesReturned`.
+- `tool\translate_arb_keys.dart` icinde bu tafsir anahtarlari tek satir zorunlu listeye eklendi.
+- `test\arb_ui_localization_test.dart` icinde tafsir runtime copy'nin tum locale'lerde tek satir kalmasi ve placeholder kaybetmemesi guard edildi.
+- `flutter gen-l10n` calistirildi ve ilgili generated localization dosyalari tazelendi.
+
+### Neden Yapildi
+- TUR-242 sonrasi dini icerik/i18n taramasinda tafsir runtime cluster'inda cok sayida Ingilizce fallback bulundu.
+- On tarama fallback sayilari: `tafsirLoading 89`, `tafsirSourceLabel 88`, `tafsirNoSurahFound 86`, `tafsirNoAyahFound 92`, `tafsirLoadFailed 86`, `tafsirNoTextForAyah 87`, `tafsirDownloadingProgress 102`, `tafsirLoadingProgress 106`, `tafsirApiStatusError 86`, `tafsirNoEntriesReturned 86`.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart` runtime copy'yi `AppLocalizations` uzerinden kullaniyor; kok eksik ARB kapsaminda ve guard seviyesindeydi.
+- `--force` kullanilmadi; mevcut gecen yerellestirmeler ezilmeden sadece Ingilizce/bozuk fallback kalan adaylar guncellendi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- 46 dosyalik dar tafsir localization batch'i olustu.
+- Son fallback sayilari: `tafsirLoading 69`, `tafsirSourceLabel 66`, `tafsirNoSurahFound 64`, `tafsirNoAyahFound 72`, `tafsirLoadFailed 64`, `tafsirNoTextForAyah 65`, `tafsirDownloadingProgress 97`, `tafsirLoadingProgress 101`, `tafsirApiStatusError 65`, `tafsirNoEntriesReturned 64`.
+- Kalan fallback'ler ceviri aracinin guvenli aday uretmedigi locale'lerde durust kaynak metin olarak birakildi; dini terimlerde uydurma ceviri yapilmadi.
+- Tafsir progress copy icin `{current}`, `{total}` ve `{statusCode}` placeholder kaybi artik testle yakalaniyor.
+
+### Test Sonucu
+- Odak test: `flutter test test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\translate_arb_keys_test.dart` PASS (`89/89`)
+- Tafsir multiline taramasi PASS (`tafsir_multiline_findings=0`)
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`432/432`)
+
+### Risk Degisimi
+- Tafsir runtime Ingilizce fallback riski: `12/25 -> 7/25`
+- Tafsir placeholder/multiline regression riski: `8/25 -> 2/25`
+- Dini terimlerde uydurma ceviri riski: `10/25 -> 6/25` (force kullanilmadi, guard eklendi)
+- Runtime tafsir external API bagimlilik riski: `16/25 -> 16/25` (ayri mimari dongude ele alinmali)
+
+### Rollback Plani
+- TUR-243 kapsamindaki ARB/generated dosyalari, `test\arb_ui_localization_test.dart` ve `tool\translate_arb_keys.dart` degisiklikleri geri alinir.
+- `flutter gen-l10n`, odak l10n testleri, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+- `handover.md` append-only kalacagi icin gerekirse yeni revert kaydi eklenir.
+
+### Sonraki Adim
+- Commit/push sonrasi tafsir external API bagimliligini incele: `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart` su an `https://api.quran.com/api/v4/tafsirs/...` kaynagina runtime refresh icin bagli. Offline-first ve "harici link kapanirsa bozulmasin" hedefi icin seed/storage veya acik veri paketi stratejisi ayrica tasarlanip uygulanmali.

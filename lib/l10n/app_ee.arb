@@ -667,10 +667,10 @@
       }
     }
   },
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirLoading": "Wole tafsir xɔm...",
+  "tafsirSourceLabel": "Tafsir ƒe dzɔtsoƒe",
+  "tafsirNoSurahFound": "Womekpɔ tafsir aɖeke na surah sia o.",
+  "tafsirNoAyahFound": "Womekpɔ tafsir aɖeke na ayah {ayah} o.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -678,8 +678,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Womete ŋu tsɔ agba ɖe Tafsir dzi o.",
+  "tafsirNoTextForAyah": "Tafsir nuŋɔŋlɔ aɖeke meli na ayah sia o.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -702,7 +702,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir dzɔtsoƒe trɔ HTTP {statusCode} vodada.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -710,7 +710,7 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "tafsirNoEntriesReturned": "Tafsir dzɔtsoƒe si wotia la metrɔ nya aɖeke si woŋlɔ o.",
   "premiumProductUnavailable": "Premium product mele asiwò fifia o. Taflatse gadze agbagba ake emegbe.",
   "premiumPurchaseFailed": "Womete ŋu wu nuƒle nu o. Taflatse gadze agbagba ake.",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",

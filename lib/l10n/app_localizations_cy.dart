@@ -215,43 +215,44 @@ class AppLocalizationsCy extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Wrthi\'n llwytho tafsir...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'ffynhonnell Tafsir';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound =>
+      'Ni chafwyd hyd i tafsir ar gyfer y surah hwn.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Ni chafwyd hyd i tafsir ar gyfer ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Nid oedd modd llwytho Tafsir.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Dim testun tafsir ar gyfer y ayah hwn.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
-    return 'Downloading tafsir $current/$total';
+    return 'Lawrlwytho tafsir $current/$total';
   }
 
   @override
   String tafsirLoadingProgress(String current, String total) {
-    return 'Loading tafsir $current/$total';
+    return 'Yn llwytho tafsir $current/$total';
   }
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Dychwelodd ffynhonnell Tafsir wall HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Ni ddychwelodd y ffynhonnell tafsir a ddewiswyd unrhyw gofnodion.';
 
   @override
   String get bookmarks => 'Llyfrnodau';

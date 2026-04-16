@@ -216,24 +216,25 @@ class AppLocalizationsGn extends AppLocalizations {
   String get tafsir => 'Tafsir rehegua';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Ojekarga hína tafsir...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'Tafsir fuente';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound =>
+      'Ndaipóri tafsir ojejuhúva ko surah-pe guarã.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Ndaipóri tafsir ojejuhúva ayah $ayah-pe g̃uarã.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir ndaikatúi ojekarga.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Ndaipóri texto tafsir ko ayah-pe guarã.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -247,12 +248,12 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsir ypykue ombojevy peteĩ HTTP $statusCode jejavy.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Pe tafsir ypykue ojeporavóva ndoguerúi mba’eveichagua jeike.';
 
   @override
   String get bookmarks => 'Marcadores rehegua';

@@ -214,13 +214,13 @@ class AppLocalizationsSr extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Учитавање тафсира...';
 
   @override
-  String get tafsirSourceLabel => 'Tafsir source';
+  String get tafsirSourceLabel => 'Тафсир извор';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'За ову суру није пронађен тефсир.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
@@ -228,10 +228,10 @@ class AppLocalizationsSr extends AppLocalizations {
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Тафсир није могао да се учита.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Нема текста тефсира за овај ајет.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -250,7 +250,7 @@ class AppLocalizationsSr extends AppLocalizations {
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Одабрани извор тафсира није вратио ниједан унос.';
 
   @override
   String get bookmarks => 'Bookmarks';
