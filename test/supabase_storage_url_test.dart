@@ -28,6 +28,17 @@ void main() {
       );
     });
 
+    test('rejects insecure Supabase storage bases', () {
+      expect(
+        () => buildSupabaseStoragePublicUrl(
+          'audio-dua/morning/001.mp3',
+          supabaseUrl: 'http://example.supabase.co',
+          bucketName: SupabaseConfig.duaAudioBucket,
+        ),
+        throwsFormatException,
+      );
+    });
+
     test('recognizes only configured public audio storage URLs', () {
       expect(
         isSupabaseStoragePublicUrl(
@@ -48,6 +59,13 @@ void main() {
       expect(
         isSupabaseStoragePublicUrl(
           '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/',
+        ),
+        isFalse,
+      );
+      expect(
+        isSupabaseStoragePublicUrl(
+          'http://example.supabase.co/storage/v1/object/public/audio-sukun/rain.mp3',
+          supabaseUrl: 'http://example.supabase.co',
         ),
         isFalse,
       );

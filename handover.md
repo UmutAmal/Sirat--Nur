@@ -10879,3 +10879,61 @@
 ### Sonraki Adim
 - `hasOfficialPrayerAuthority` mantigi incelenecek; generic MWL/ISNA fallback'lerin "official authority" gibi sunulup sunulmadigi settings/diagnostics yuzeylerinde kanitlanacak.
 - Exact yerel resmi prayer schedule ihtiyaci olan ulkeler icin Supabase-backed schedule/provenance veri modeli tasarimi devam edecek.
+
+## 2026-04-16 TUR-268 — Require HTTPS for Supabase Storage Audio URLs
+
+### Yapilan Islem
+- Supabase Storage public URL builder artik yalniz HTTPS Supabase base URL kabul ediyor.
+- Supabase Storage public URL validator artik `http://` storage URL'lerini, base URL de `http://` olsa bile, oynatilabilir/owned audio olarak kabul etmiyor.
+- Audio/storage testleri insecure storage base ve insecure public URL reddini kilitleyecek sekilde genisletildi.
+
+### Kanit
+- Patch oncesi risk:
+  `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart` icinde `isSupabaseStoragePublicUrl` hem `https` hem `http` scheme'ini kabul edebiliyordu.
+- Patch sonrasi builder HTTPS base validation:
+  `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:26`,
+  `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:37`,
+  `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:81`,
+  `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:83`.
+- Patch sonrasi validator HTTPS-only kontrol:
+  `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:57`,
+  `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:58`.
+- Guard:
+  `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart:31`,
+  `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart:35`,
+  `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart:38`,
+  `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart:67`,
+  `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart:70`.
+
+### Neden Yapildi
+- Section 13'e gore dini ses ve medya kullaniciya bizim Supabase storage zincirimizden ve dogrulanmis provenance ile sunulmali.
+- `http://` storage URL kabul etmek, audio pipeline'da owned-storage kontrolunu gecen ama transport guvenligi olmayan bir medya yoluna izin verebilirdi.
+- Bu turda dis link/audio politikasini genisletmeden yalnizca Supabase public audio URL esigini HTTPS-only hale getiren dar patch uygulandi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart`
+- `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Odak test: `flutter test test\supabase_storage_url_test.dart test\offline_audio_service_test.dart test\audio_sovereignty_service_test.dart test\sukun_audio_sources_provider_test.dart --reporter compact` PASS (`30/30`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Ilk full test komutu 10 dakikalik arac timeout'una takildi; arkada Dart/Flutter sureci kalmadigi dogrulandi.
+- Tam test rerun: `flutter test --reporter compact` PASS (`478/478`)
+
+### Risk Degisimi
+- Insecure `http://` Supabase public audio URL kabul riski: `12/25 -> 2/25`
+- Owned-storage audio validator'in transport guvenligi acigi: `12/25 -> 2/25`
+
+### Rollback Plani
+- `_requireHttpsSupabaseBaseUri` helper'i kaldirilir.
+- `buildSupabaseStoragePublicUrl` onceki string birlestirme davranisina dondurulur.
+- `isSupabaseStoragePublicUrl` onceki `http`/`https` scheme kabul kosuluna dondurulur.
+- `supabase_storage_url_test.dart` icindeki TUR-268 guard'lari geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Storage/audio pipeline icinde Supabase URL disinda kalan runtime medya gecisleri yeniden taranacak.
+- Ardindan localization fallback borcu icin `diagnosticsQuranCloudTablesMissing`, `diagnosticsQuranCloudJuzMissing`, download ve chatbot copy kumesindeki Ingilizce kalan locale'ler batch bazinda onarilacak.

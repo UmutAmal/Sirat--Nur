@@ -23,6 +23,7 @@ String buildSupabaseStoragePublicUrl(
   String supabaseUrl = SupabaseConfig.url,
   String bucketName = SupabaseConfig.quranAudioBucket,
 }) {
+  final baseUri = _requireHttpsSupabaseBaseUri(supabaseUrl);
   final normalizedPath = normalizeSupabaseStorageObjectPath(
     storagePath,
     bucketName: bucketName,
@@ -33,7 +34,7 @@ String buildSupabaseStoragePublicUrl(
       .map(Uri.encodeComponent)
       .join('/');
 
-  return '$supabaseUrl/storage/v1/object/public/$bucketName/$encodedSegments';
+  return '${baseUri.origin}/storage/v1/object/public/$bucketName/$encodedSegments';
 }
 
 bool isSupabaseStoragePublicUrl(
@@ -53,8 +54,8 @@ bool isSupabaseStoragePublicUrl(
     return false;
   }
 
-  if ((uri.scheme != 'https' && uri.scheme != 'http') ||
-      uri.scheme != baseUri.scheme ||
+  if (!uri.isScheme('https') ||
+      !baseUri.isScheme('https') ||
       uri.host != baseUri.host) {
     return false;
   }
@@ -75,4 +76,13 @@ bool isSupabaseStoragePublicUrl(
   final bucket = segments[4];
   final hasObjectPath = segments.skip(5).any((segment) => segment.isNotEmpty);
   return bucketNames.contains(bucket) && hasObjectPath;
+}
+
+Uri _requireHttpsSupabaseBaseUri(String supabaseUrl) {
+  final baseUri = Uri.tryParse(supabaseUrl.trim());
+  if (baseUri == null || !baseUri.isScheme('https') || baseUri.host.isEmpty) {
+    throw const FormatException('Supabase Storage public URLs must use HTTPS.');
+  }
+
+  return baseUri;
 }
