@@ -1046,11 +1046,11 @@ class AppLocalizationsTw extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Premium product no nni hɔ mprempren. Yɛsrɛ sɛ sɔ hwɛ bio akyiri yi.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Wɔantumi anwie adetɔ no. Yɛsrɛ sɛ sɔ hwɛ bio.';
 
   @override
   String get paywallFeature1Title => 'Ntini mu Boafo Plus';

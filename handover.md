@@ -9201,3 +9201,53 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude hardcoded/fallback UI risklerini ve runtime content risklerini tekrar tara; ozellikle `shareAppMessage` rare-locale fallback'leri, Places tile/provider konfigurasyonu ve Premium/Paywall hata copy guard'lari arasindan en yuksek riskli tek cluster'i sec.
+
+## 2026-04-16 TUR-236 — Localize Premium Error Copy and Guard Single-Line Output
+
+### Yapilan Islem
+- Paywall/premium hata metinlerinde kullanilan `premiumProductUnavailable` ve `premiumPurchaseFailed` anahtarlari guvenli ARB batch'i ile yeniden islendi.
+- `flutter gen-l10n` calistirilarak generated localization dosyalari ARB kaynaklariyla senkronlandi.
+- `tool\translate_arb_keys.dart` single-line guard listesine `premiumProductUnavailable` ve `premiumPurchaseFailed` eklendi.
+- `test\translate_arb_keys_test.dart` icine premium hata metinleri icin multiline output regresyon testi eklendi.
+- `test\arb_ui_localization_test.dart` icine tum locale'lerde premium hata copy'sinin tek satir kaldigini dogrulayan regresyon testi eklendi.
+- Otomatik batch sonucunda 22 locale'de iki premium hata mesaji Ingilizce fallback'ten cikarildi: `ak`, `as`, `bho`, `bm`, `cy`, `dv`, `ee`, `ga`, `gd`, `gn`, `hr`, `ilo`, `kri`, `lg`, `ln`, `nso`, `om`, `qu`, `sr`, `th`, `ts`, `tw`.
+
+### Neden Yapildi
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart:11` urun bulunamadiginda `l10n.premiumProductUnavailable` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart:13` ve `A:\Way of Allah\sirat_i_nur\lib\features\premium\paywall_page.dart:15` satin alma hatalarinda `l10n.premiumPurchaseFailed` gosteriyor.
+- TUR-236 oncesi iki anahtar da 85 locale'de app_en ile birebir ayniydi; odeme/store hatasinda kullanici Ingilizce fallback gorebiliyordu.
+- TUR-236 sonrasi exact fallback sayisi iki anahtar icin `85 -> 63`; kalan 63 locale ceviri servisinin guvenilir aday uretmedigi nadir/legacy locale grubunda birakildi, sahte ceviri yazilmadi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- 22 locale'de premium/paywall hata deneyimi kullanicinin diline yaklastirildi.
+- Premium hata metinleri icin multiline/batch debris riski test ve tool seviyesinde kapatildi.
+- Safe/priority locale setindeki premium hata copy'si Ingilizceye dusmeme guard'i korunuyor; tum locale'lerde tek satir guard'i eklendi.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\features\premium\paywall_page_test.dart test\premium_provider_test.dart` PASS (`92/92`)
+- Exact fallback taramasi: `premiumProductUnavailable 85 -> 63`, `premiumPurchaseFailed 85 -> 63`
+- Single-line taramasi: `premiumProductUnavailable newline_count=0`, `premiumPurchaseFailed newline_count=0`
+- `flutter gen-l10n` PASS
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`426/426`)
+
+### Risk Degisimi
+- Premium/paywall hata copy'sinde genis Ingilizce fallback riski: `12/25 -> 8/25`
+- Safe/priority locale premium hata fallback riski: `8/25 -> 2/25`
+- Premium hata copy'sinde multiline/batch debris riski: `8/25 -> 2/25`
+
+### Rollback Plani
+- `lib\l10n\app_*.arb` ve `lib\l10n\app_localizations_*.dart` icindeki TUR-236 premium hata copy batch'i geri alinir.
+- `test\arb_ui_localization_test.dart`, `test\translate_arb_keys_test.dart` ve `tool\translate_arb_keys.dart` icindeki TUR-236 guard ekleri kaldirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude kalan UI fallbacklerden `shareAppMessage` cluster'ini veya premium rare-locale kalanlarini yeniden riskle; yalniz guvenilir aday ureten locale'leri guncelle, uydurma ceviri yazma.

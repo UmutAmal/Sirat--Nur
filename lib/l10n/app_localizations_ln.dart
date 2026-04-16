@@ -1049,11 +1049,11 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Produit premium ezali te sikoyo. Svp meka lisusu sima.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Kosomba ekokaki kosila te. Svp meka lisusu.';
 
   @override
   String get paywallFeature1Title => 'Assistant neuronaux Plus';

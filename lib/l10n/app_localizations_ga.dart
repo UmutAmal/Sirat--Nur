@@ -1046,11 +1046,11 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Níl an táirge préimhe ar fáil faoi láthair. Bain triail eile as ar ball.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Níorbh fhéidir an ceannach a chur i gcrích. Bain triail eile as.';
 
   @override
   String get paywallFeature1Title => 'Cúntóir Néarúil Plus';

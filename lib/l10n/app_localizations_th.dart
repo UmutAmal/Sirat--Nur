@@ -1047,11 +1047,11 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'สินค้าพรีเมี่ยมไม่มีจำหน่ายในขณะนี้ โปรดลองอีกครั้งในภายหลัง';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'ไม่สามารถดำเนินการซื้อให้เสร็จสิ้นได้ โปรดลองอีกครั้ง';
 
   @override
   String get paywallFeature1Title => 'ผู้ช่วยระบบประสาทพลัส';

@@ -1055,11 +1055,11 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Setšweletšwa sa Premium ga se hwetšagale gona bjale. Hle leka gape ka morago.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Go reka go be go sa kgone go phethwa. Hle leka gape.';
 
   @override
   String get paywallFeature1Title => 'Mothuši wa Neural Plus';

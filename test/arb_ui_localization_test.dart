@@ -258,31 +258,34 @@ void main() {
       }
     });
 
-    test('safe priority tracker negative status copy avoids known bad values', () {
-      const knownBadValues = {
-        'da': 'Ingen',
-        'de': 'NEIN',
-        'he': 'לֹא',
-        'ja': 'No',
-        'nb': 'Ingen',
-        'nn': 'Ingen',
-        'no': 'Ingen',
-        'pt': 'No',
-        'ru': 'No',
-        'vi': 'KHÔNG',
-      };
+    test(
+      'safe priority tracker negative status copy avoids known bad values',
+      () {
+        const knownBadValues = {
+          'da': 'Ingen',
+          'de': 'NEIN',
+          'he': 'לֹא',
+          'ja': 'No',
+          'nb': 'Ingen',
+          'nn': 'Ingen',
+          'no': 'Ingen',
+          'pt': 'No',
+          'ru': 'No',
+          'vi': 'KHÔNG',
+        };
 
-      for (final localeEntry in knownBadValues.entries) {
-        final arb = _readArb('lib/l10n/app_${localeEntry.key}.arb');
+        for (final localeEntry in knownBadValues.entries) {
+          final arb = _readArb('lib/l10n/app_${localeEntry.key}.arb');
 
-        expect(
-          arb['no'],
-          isNot(localeEntry.value),
-          reason:
-              'app_${localeEntry.key}.arb kept a known weak translation for no',
-        );
-      }
-    });
+          expect(
+            arb['no'],
+            isNot(localeEntry.value),
+            reason:
+                'app_${localeEntry.key}.arb kept a known weak translation for no',
+          );
+        }
+      },
+    );
 
     test(
       'safe priority locales do not fall back to English for quran reading shell copy',
@@ -388,10 +391,7 @@ void main() {
           'zh_CN',
           'zh_TW',
         ];
-        const localizedKeys = [
-          'prayerTimes',
-          'namesOfAllah',
-        ];
+        const localizedKeys = ['prayerTimes', 'namesOfAllah'];
 
         for (final locale in safeLocales) {
           final arb = _readArb('lib/l10n/app_$locale.arb');
@@ -413,28 +413,16 @@ void main() {
         const knownBadValues = {
           'he': {'namesOfAllah': 'שמות של אללה'},
           'ja': {'prayerTimes': '祈りの時間'},
-          'nn': {
-            'prayerTimes': 'Bønnetider',
-            'namesOfAllah': 'Allahs navn',
-          },
+          'nn': {'prayerTimes': 'Bønnetider', 'namesOfAllah': 'Allahs navn'},
           'pt': {'namesOfAllah': 'Nomes de Alá'},
           'ru': {'prayerTimes': 'Время молитв'},
           'vi': {
             'prayerTimes': 'thời gian cầu nguyện',
             'namesOfAllah': 'Tên của Allah',
           },
-          'zh': {
-            'prayerTimes': '祈祷时间',
-            'namesOfAllah': '安拉的名字',
-          },
-          'zh_CN': {
-            'prayerTimes': '祈祷时间',
-            'namesOfAllah': '安拉的名字',
-          },
-          'zh_TW': {
-            'prayerTimes': '祈禱時間',
-            'namesOfAllah': '安拉的名字',
-          },
+          'zh': {'prayerTimes': '祈祷时间', 'namesOfAllah': '安拉的名字'},
+          'zh_CN': {'prayerTimes': '祈祷时间', 'namesOfAllah': '安拉的名字'},
+          'zh_TW': {'prayerTimes': '祈禱時間', 'namesOfAllah': '安拉的名字'},
         };
 
         for (final localeEntry in knownBadValues.entries) {
@@ -1838,6 +1826,33 @@ void main() {
         }
       },
     );
+
+    test('premium error copy stays single-line in all locales', () {
+      final arbFiles = Directory('lib/l10n')
+          .listSync()
+          .whereType<File>()
+          .where((file) => file.path.endsWith('.arb'))
+          .where((file) => file.uri.pathSegments.last.startsWith('app_'));
+
+      const premiumErrorKeys = [
+        'premiumProductUnavailable',
+        'premiumPurchaseFailed',
+      ];
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+
+        for (final key in premiumErrorKeys) {
+          final value = arb[key] as String;
+          expect(
+            value.contains('\n') || value.contains('\r'),
+            isFalse,
+            reason:
+                '${file.uri.pathSegments.last} has multiline premium error copy for $key',
+          );
+        }
+      }
+    });
 
     test(
       'safe priority locales do not fall back to English for audio voice labels',

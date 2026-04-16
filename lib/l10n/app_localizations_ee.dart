@@ -1045,11 +1045,11 @@ class AppLocalizationsEe extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Premium product mele asiwò fifia o. Taflatse gadze agbagba ake emegbe.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Womete ŋu wu nuƒle nu o. Taflatse gadze agbagba ake.';
 
   @override
   String get paywallFeature1Title => 'Ahɔhɔ̃mekawo ƒe Kpeɖeŋutɔ Plus';

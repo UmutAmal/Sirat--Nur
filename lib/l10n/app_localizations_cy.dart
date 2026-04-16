@@ -1048,11 +1048,11 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Nid yw cynnyrch premiwm ar gael ar hyn o bryd. Ceisiwch eto yn nes ymlaen.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Ni ellid cwblhau\'r pryniant. Ceisiwch eto.';
 
   @override
   String get paywallFeature1Title => 'Cynorthwy-ydd Niwral Plws';

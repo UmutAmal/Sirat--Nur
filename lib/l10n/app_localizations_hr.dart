@@ -1047,11 +1047,11 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Premium proizvod trenutno nije dostupan. Pokušajte ponovno kasnije.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Kupnja nije mogla biti dovršena. Molimo pokušajte ponovo.';
 
   @override
   String get paywallFeature1Title => 'Neuralni pomoćnik Plus';

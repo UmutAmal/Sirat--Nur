@@ -1050,11 +1050,11 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Premium product tesangibwa mu kiseera kino. Nsaba oddemu ogezeeko oluvannyuma.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Okugula tekwasobodde kumalibwa. Nsaba oddemu ogezeeko.';
 
   @override
   String get paywallFeature1Title => 'Omuyambi w’obusimu Plus';

@@ -1049,11 +1049,11 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Omishni sadarkaa olaanaa qabu yeroo ammaa kana hin argamu. Mee booda irra deebi\'ii yaalaa.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Bittaa xumuramuu hin dandeenye. Mee irra deebi\'ii yaalaa.';
 
   @override
   String get paywallFeature1Title => 'Gargaaraa Niwuroonii Plus';

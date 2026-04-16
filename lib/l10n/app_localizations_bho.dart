@@ -1048,11 +1048,11 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'प्रीमियम उत्पाद अभी उपलब्ध नईखे। कृपया बाद में दोबारा कोशिश करीं।';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'खरीददारी पूरा ना हो पावल। कृपया दोबारा कोशिश करीं।';
 
   @override
   String get paywallFeature1Title => 'न्यूरल असिस्टेंट प्लस के बा';

@@ -711,8 +711,8 @@
     }
   },
   "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "premiumProductUnavailable": "Premium product is not available right now. Please try again later.",
-  "premiumPurchaseFailed": "Purchase could not be completed. Please try again.",
+  "premiumProductUnavailable": "प्रीमियम उत्पाद अभी उपलब्ध नईखे। कृपया बाद में दोबारा कोशिश करीं।",
+  "premiumPurchaseFailed": "खरीददारी पूरा ना हो पावल। कृपया दोबारा कोशिश करीं।",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "@prayerRemainingHoursMinutes": {
     "placeholders": {

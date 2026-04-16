@@ -1049,11 +1049,11 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Premium nisqa ruruqa manam kunan pachaqa kanchu. Ama hina kaspa, qhipaman hukmanta kallpachakuy.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Rantinakuyqa manam tukusqachu karqa. Ama hina kaspa, hukmanta kallpachakuy.';
 
   @override
   String get paywallFeature1Title => 'Yanapakuq Neural Plus';

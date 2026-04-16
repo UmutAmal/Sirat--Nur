@@ -1050,11 +1050,11 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Premium product ayi kumeki sweswi. Hi kombela u ringeta nakambe endzhaku.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Ku xava a ku swi kotanga ku hetiwa. Hi kombela u ringeta nakambe.';
 
   @override
   String get paywallFeature1Title => 'Mupfuni wa Tinyiyo Plus';

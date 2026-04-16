@@ -444,6 +444,30 @@ void main() {
       expect(value, 'Uygulamayi Paylas');
     });
 
+    test('rejects multiline premium error output', () {
+      final productUnavailableValue = resolveTranslatedArbValue(
+        key: 'premiumProductUnavailable',
+        source:
+            'Premium product is not available right now. Please try again later.',
+        currentValue: 'Premium urun su anda kullanilamiyor.',
+        candidate: 'means the following.\nPremium urun su anda kullanilamiyor.',
+      );
+
+      final purchaseFailedValue = resolveTranslatedArbValue(
+        key: 'premiumPurchaseFailed',
+        source: 'Purchase could not be completed. Please try again.',
+        currentValue: 'Satin alma tamamlanamadi. Lutfen tekrar deneyin.',
+        candidate:
+            'means the following.\nSatin alma tamamlanamadi. Lutfen tekrar deneyin.',
+      );
+
+      expect(productUnavailableValue, 'Premium urun su anda kullanilamiyor.');
+      expect(
+        purchaseFailedValue,
+        'Satin alma tamamlanamadi. Lutfen tekrar deneyin.',
+      );
+    });
+
     test('rejects multiline diagnostics output', () {
       final labelValue = resolveTranslatedArbValue(
         key: 'diagnostics',

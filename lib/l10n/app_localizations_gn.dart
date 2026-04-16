@@ -1048,11 +1048,10 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Producto premium ndojeguerekói ko\'ágãite. Eñeha’ã jey upe rire.';
 
   @override
-  String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+  String get premiumPurchaseFailed => 'Ndikatúi oñemohu\'ã jogua. Eñeha’ã jey.';
 
   @override
   String get paywallFeature1Title => 'Asistente Neural Plus rehegua';

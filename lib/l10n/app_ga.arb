@@ -711,8 +711,8 @@
     }
   },
   "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "premiumProductUnavailable": "Premium product is not available right now. Please try again later.",
-  "premiumPurchaseFailed": "Purchase could not be completed. Please try again.",
+  "premiumProductUnavailable": "Níl an táirge préimhe ar fáil faoi láthair. Bain triail eile as ar ball.",
+  "premiumPurchaseFailed": "Níorbh fhéidir an ceannach a chur i gcrích. Bain triail eile as.",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "@prayerRemainingHoursMinutes": {
     "placeholders": {

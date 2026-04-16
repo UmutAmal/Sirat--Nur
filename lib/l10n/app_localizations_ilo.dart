@@ -1053,11 +1053,11 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Saan a magun-odan ti premium product ita. Pangngaasiyo ta padasenyo manen inton agangay.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Saan a nakompleto ti panaggatang. Pangngaasiyo ta padasenyo manen.';
 
   @override
   String get paywallFeature1Title => 'Katulongan ti Neural Plus';

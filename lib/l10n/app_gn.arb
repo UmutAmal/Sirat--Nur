@@ -711,8 +711,8 @@
     }
   },
   "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "premiumProductUnavailable": "Premium product is not available right now. Please try again later.",
-  "premiumPurchaseFailed": "Purchase could not be completed. Please try again.",
+  "premiumProductUnavailable": "Producto premium ndojeguerekói ko'ágãite. Eñeha’ã jey upe rire.",
+  "premiumPurchaseFailed": "Ndikatúi oñemohu'ã jogua. Eñeha’ã jey.",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "@prayerRemainingHoursMinutes": {
     "placeholders": {

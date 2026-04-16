@@ -1044,11 +1044,11 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Premium prodak nɔ de rayt naw. Duya tray bak leta.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Dɛn nɔ bin ebul fɔ dɔn fɔ bay tin dɛn. Duya tray bak.';
 
   @override
   String get paywallFeature1Title => 'Nyural Asisten Plɔs';

@@ -1045,11 +1045,11 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'বৰ্তমান প্ৰিমিয়াম প্ৰডাক্ট উপলব্ধ নহয়। অনুগ্ৰহ কৰি পিছত পুনৰ চেষ্টা কৰক।';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'ক্ৰয় সম্পূৰ্ণ কৰিব পৰা নগ’ল। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।';
 
   @override
   String get paywallFeature1Title => 'স্নায়ু সহায়ক প্লাছ';

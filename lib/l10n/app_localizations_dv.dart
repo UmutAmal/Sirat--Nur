@@ -1050,11 +1050,11 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'ޕްރީމިއަމް ޕްރޮޑަކްޓެއް މިވަގުތު ލިބެން ނެތެވެ. ފަހުން އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'ގަތުން ފުރިހަމަ ނުކުރެވުނެވެ. އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ.';
 
   @override
   String get paywallFeature1Title => 'ނިއުރަލް އެސިސްޓެންޓް ޕްލަސް އެވެ';

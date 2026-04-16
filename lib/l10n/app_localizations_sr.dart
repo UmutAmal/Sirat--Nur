@@ -1047,11 +1047,11 @@ class AppLocalizationsSr extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Премиум производ тренутно није доступан. Покушајте поново касније.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Куповина није могла да се заврши. Покушајте поново.';
 
   @override
   String get paywallFeature1Title => 'Неурал Ассистант Плус';

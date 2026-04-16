@@ -1049,11 +1049,11 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Chan eil toradh Premium ri fhaighinn an-dràsta. Feuch ris a-rithist nas anmoiche.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Cha b’ urrainnear an ceannach a chrìochnachadh. Feuch ris a-rithist.';
 
   @override
   String get paywallFeature1Title => 'Neach-taic Neural Plus';

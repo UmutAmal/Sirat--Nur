@@ -1046,11 +1046,11 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+      'Premium product tɛ sɔrɔ sisan. Aw ye aw jija ka segin ka a lajɛ kɔfɛ.';
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Sanni ma se ka ban. Aw ye aw jija ka segin a kan.';
 
   @override
   String get paywallFeature1Title =>

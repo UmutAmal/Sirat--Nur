@@ -711,8 +711,8 @@
     }
   },
   "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "premiumProductUnavailable": "Premium product is not available right now. Please try again later.",
-  "premiumPurchaseFailed": "Purchase could not be completed. Please try again.",
+  "premiumProductUnavailable": "Premium product tɛ sɔrɔ sisan. Aw ye aw jija ka segin ka a lajɛ kɔfɛ.",
+  "premiumPurchaseFailed": "Sanni ma se ka ban. Aw ye aw jija ka segin a kan.",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "@prayerRemainingHoursMinutes": {
     "placeholders": {
