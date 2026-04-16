@@ -123,6 +123,7 @@ class _ZakatCalculatorPageState extends State<ZakatCalculatorPage> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final result = _result;
     return Scaffold(
       appBar: AppBar(
         title: Text(l10n.zakatCalculator),
@@ -184,13 +185,13 @@ class _ZakatCalculatorPageState extends State<ZakatCalculatorPage> {
                 child: Text(l10n.calculateZakat, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900)),
               ),
             ),
-            if (_result != null) ...[
+            if (result != null) ...[
               const SizedBox(height: 24),
               AnimatedPremiumCard(
                 animationDelay: 0,
                 child: Column(
                   children: [
-                    if (!_result!.isNisabMet)
+                    if (!result.isNisabMet)
                       Container(
                         margin: const EdgeInsets.only(bottom: 12),
                         padding: const EdgeInsets.all(12),
@@ -209,17 +210,17 @@ class _ZakatCalculatorPageState extends State<ZakatCalculatorPage> {
                       color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
                       fontWeight: FontWeight.w700)),
                     const SizedBox(height: 8),
-                    Text(_fmt(_result!.totalZakat), style: const TextStyle(
+                    Text(_fmt(result.totalZakat), style: const TextStyle(
                       fontSize: 32, fontWeight: FontWeight.w900, color: AppColors.emerald)),
                     const SizedBox(height: 4),
-                    Text(l10n.nisabSummary(_fmt(_result!.nisabValue), _fmt(_result!.totalAssets)),
+                    Text(l10n.nisabSummary(_fmt(result.nisabValue), _fmt(result.totalAssets)),
                       style: TextStyle(fontSize: 12, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4))),
                     const SizedBox(height: 16),
-                    _resultRow(l10n.zakatGoldZakat, _result!.goldZakat),
-                    _resultRow(l10n.zakatSilverZakat, _result!.silverZakat),
-                    _resultRow(l10n.zakatCashZakat, _result!.cashZakat),
-                    _resultRow(l10n.zakatBusinessZakat, _result!.businessZakat),
-                    _resultRow(l10n.zakatInvestmentZakat, _result!.investmentZakat),
+                    _resultRow(l10n.zakatGoldZakat, result.goldZakat),
+                    _resultRow(l10n.zakatSilverZakat, result.silverZakat),
+                    _resultRow(l10n.zakatCashZakat, result.cashZakat),
+                    _resultRow(l10n.zakatBusinessZakat, result.businessZakat),
+                    _resultRow(l10n.zakatInvestmentZakat, result.investmentZakat),
                   ],
                 ),
               ),

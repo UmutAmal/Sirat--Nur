@@ -7609,3 +7609,35 @@
 
 ### Sonraki Adım
 - Sonraki dongude route builder ve premium/paywall error unwrap gibi kalan runtime `!` kullanimlari yeniden taranacak; gercek kullanıcı akışına en yakin olan once kapatilacak.
+
+## 2026-04-16 TUR-200 — Guard Zakat Result Render Snapshot
+
+### Yapılan İşlem
+- ZakatCalculatorPage build akisi `_result` degerini local `result` snapshot olarak okuyor.
+- Result karti null guard sonrasi `result` uzerinden render ediliyor; `_result!` force-unwrap kullanimi kaldirildi.
+- Zakat test dosyasi eklendi; mevcut gold nisab hesap davranisi ve `_result!` geri donus guard'i doğrulandi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:126` render icin local result snapshot aliyor.
+- Eski akista `_result != null` guardindan sonra `_result!` sekiz kez kullaniliyordu; UI state refactor'larinda gereksiz crash yuzeyi olusturuyordu.
+- Zakat hesap mantigi dini hassasiyet tasidigi icin formule dokunulmadi; test mevcut altin nisab davranisini kilitledi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Zakat hesap formulu ve UI sonucu degismedi.
+- Result render akisi nullable state force-unwrap kullanmadan calisiyor.
+
+### Test Sonucu
+- `flutter test test\features\library\zakat_calculator_page_test.dart` PASS (`2/2`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`373/373`)
+
+### Risk Değişimi
+- Zakat result render force-unwrap crash yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude premium/paywall error unwrap ve places/tafsir `_error!` render yuzeyleri local snapshot standardina alinacak.
