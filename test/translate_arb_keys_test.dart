@@ -268,9 +268,17 @@ void main() {
         candidate: 'means the following.\nYer imi ekle',
       );
 
+      final noValue = resolveTranslatedArbValue(
+        key: 'no',
+        source: 'No',
+        currentValue: 'Hayir',
+        candidate: 'means the following.\nHayir',
+      );
+
       expect(searchValue, 'Ara');
       expect(retryValue, 'Tekrar dene');
       expect(bookmarkValue, 'Yer imi ekle');
+      expect(noValue, 'Hayir');
     });
 
     test('rejects multiline quran reading shell output', () {

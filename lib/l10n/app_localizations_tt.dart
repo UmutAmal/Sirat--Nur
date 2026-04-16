@@ -185,7 +185,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => '.К';
 
   @override
   String get surah => 'Сүрә';

@@ -184,7 +184,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => '아니요';
 
   @override
   String get surah => '수라';

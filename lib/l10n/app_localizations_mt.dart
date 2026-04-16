@@ -186,7 +186,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => 'Nru';
 
   @override
   String get surah => 'Surah';

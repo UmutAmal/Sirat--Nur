@@ -185,7 +185,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => 'ياق';
 
   @override
   String get surah => 'سۈرە';

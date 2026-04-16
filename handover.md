@@ -9007,3 +9007,55 @@
 
 ### Sonraki Adım
 - Commit/push sonrasi yeni dongude aktif l10n fallback taramasini yenile; proper-name bozulmasi yapmadan `asmaulHusna`, `hadith`, `analytics`, `assistant`, `ok`, `no` ve ozel gun isimleri arasindan en yuksek riskli tek cluster sec.
+
+## 2026-04-16 TUR-232 — Localize Tracker Negative Status Copy
+
+### Yapılan İşlem
+- Ibadah tracker fasting durumunda kullanilan `no` anahtari guvenli ARB batch'i ile guncellendi.
+- `flutter gen-l10n` calistirilarak generated `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Safe/priority locale setinde `tr`, `de`, `fr`, `ar`, `da`, `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi`, `zh`, `zh_CN`, `zh_TW` icin `no` anahtarinda Ingilizce fallback kalmadigi dogrulandi; `es:no=No` mesru ayni-yazim oldugu icin bilerek istisna tutuldu.
+- Otomatik cevirinin UI baglaminda zayif urettigi degerler elle duzeltildi: `de no=Nein`, `da no=Nej`, `he no=לא`, `nb/nn/no no=Nei`, `vi no=Không`.
+- `tool\translate_arb_keys.dart` single-line guard listesine `no` eklendi.
+- `test\arb_ui_localization_test.dart` icine tracker negative status fallback guard'i, Ispanyolca mesru ayni-yazim istisnasi ve bilinen zayif ceviri kalintisi guard'i eklendi.
+- `test\translate_arb_keys_test.dart` icindeki common action single-line testine `no` eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\tracker\tracker_page.dart:280` fasting kapali durumunda `${l10n.fasting}: ${l10n.no}` gosteriyor.
+- TUR-232 oncesi fallback taramasinda `no` safe locale setinde `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi` icin app_en ile birebir ayniydi; `es` ayni yazim oldugu icin risk sayilmadi.
+- Batch sonrasi `da/nb/nn/no=Ingen`, `de=NEIN`, `vi=KHÔNG` gibi UI baglaminda zayif degerler tespit edilip elle duzeltildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe/priority locale setinde tracker fasting negative durumunda Ingilizce `No` gosteren UI riski kapandi.
+- `Ingen`, `NEIN`, `KHÔNG` gibi baglama/tonlama acisindan zayif otomatik ceviri degerleri icin regresyon bariyeri eklendi.
+- Single-line guard ile kisa status etiketinde batch debris/newline riski kapatildi.
+- Kalan tum-locale birebir Ingilizce degerler cogunlukla ceviri servisinin guvenli aday uretmedigi nadir/legacy locale grubunda veya mesru ayni-yazim dillerinde birakildi; sahte veya uydurma ceviri yazilmadi. TUR-232 sonrasi exact fallback sayisi: `no 67`.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\features\tracker\tracker_page_test.dart test\tracker_test.dart` PASS (`92/92`)
+- Safe fallback taramasi PASS: `es:no` mesru ayni-yazim istisnasi disinda `safe_same=[]`
+- Single-line taramasi PASS: hedef `no` anahtarinda `newline=[]`
+- Bilinen zayif ceviri taramasi PASS: `known_bad_hits=[]`
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`419/419`)
+- `flutter gen-l10n` PASS
+
+### Risk Değişimi
+- Safe/priority locale tracker negative status fallback riski: `9/25 -> 2/25`
+- UI baglaminda zayif makine cevirisi riski: `12/25 -> 3/25`
+- Kisa status etiketinde multiline/batch debris riski: `8/25 -> 2/25`
+- Tum-locale nadir/legacy fallback riski: `8/25 -> 5/25`
+
+### Rollback Planı
+- `lib\l10n\app_*.arb`, `lib\l10n\app_localizations_*.dart`, `test\arb_ui_localization_test.dart`, `test\translate_arb_keys_test.dart` ve `tool\translate_arb_keys.dart` icindeki TUR-232 degisiklikleri geri alinir; production Dart UI logic degismedigi icin runtime rollback dar kapsamli kalir.
+
+### Sonraki Adım
+- Commit/push sonrasi yeni dongude aktif risk taramasini yenile; proper-name terimleri zorlamadan `analytics`, `assistant`, `ok`, `premium`, `asmaulHusna` ve ozel gun/vakit adlari arasindan en yuksek riskli, gercek UI etkisi olan tek cluster sec.

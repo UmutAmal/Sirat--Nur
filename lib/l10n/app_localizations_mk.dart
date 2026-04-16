@@ -185,7 +185,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => 'бр';
 
   @override
   String get surah => 'Сура';

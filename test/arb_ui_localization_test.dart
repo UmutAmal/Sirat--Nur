@@ -227,6 +227,63 @@ void main() {
       }
     });
 
+    test('safe priority locales localize tracker negative status copy', () {
+      const safeLocales = [
+        'tr',
+        'de',
+        'fr',
+        'ar',
+        'da',
+        'he',
+        'ja',
+        'nb',
+        'nn',
+        'no',
+        'pt',
+        'ru',
+        'vi',
+        'zh',
+        'zh_CN',
+        'zh_TW',
+      ];
+
+      for (final locale in safeLocales) {
+        final arb = _readArb('lib/l10n/app_$locale.arb');
+
+        expect(
+          arb['no'],
+          isNot(english['no']),
+          reason: 'app_$locale.arb still uses English for no',
+        );
+      }
+    });
+
+    test('safe priority tracker negative status copy avoids known bad values', () {
+      const knownBadValues = {
+        'da': 'Ingen',
+        'de': 'NEIN',
+        'he': 'לֹא',
+        'ja': 'No',
+        'nb': 'Ingen',
+        'nn': 'Ingen',
+        'no': 'Ingen',
+        'pt': 'No',
+        'ru': 'No',
+        'vi': 'KHÔNG',
+      };
+
+      for (final localeEntry in knownBadValues.entries) {
+        final arb = _readArb('lib/l10n/app_${localeEntry.key}.arb');
+
+        expect(
+          arb['no'],
+          isNot(localeEntry.value),
+          reason:
+              'app_${localeEntry.key}.arb kept a known weak translation for no',
+        );
+      }
+    });
+
     test(
       'safe priority locales do not fall back to English for quran reading shell copy',
       () {

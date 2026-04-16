@@ -185,7 +185,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => 'ಸಂ';
 
   @override
   String get surah => 'ಸೂರಾ';

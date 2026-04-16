@@ -186,7 +186,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => '.Ok';
 
   @override
   String get surah => 'Sura';

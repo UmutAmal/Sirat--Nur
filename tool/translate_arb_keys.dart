@@ -368,6 +368,7 @@ bool _mustStaySingleLine(String key) {
       key == 'searchHint' ||
       key == 'retry' ||
       key == 'save' ||
+      key == 'no' ||
       key == 'addBookmark' ||
       key == 'removeBookmark' ||
       key == 'downloading' ||

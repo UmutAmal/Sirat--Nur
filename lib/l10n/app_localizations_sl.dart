@@ -185,7 +185,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => 'št';
 
   @override
   String get surah => 'Sura';

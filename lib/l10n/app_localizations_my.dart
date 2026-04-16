@@ -187,7 +187,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => 'မရှိ';
 
   @override
   String get surah => 'စူရဟ်';

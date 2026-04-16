@@ -185,7 +185,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => 'Hayi';
 
   @override
   String get surah => 'Surah';

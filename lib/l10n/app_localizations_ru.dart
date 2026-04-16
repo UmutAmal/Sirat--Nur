@@ -187,7 +187,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => 'Нет';
 
   @override
   String get surah => 'Сура';

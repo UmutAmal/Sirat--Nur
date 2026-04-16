@@ -185,7 +185,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => 'Na';
 
   @override
   String get surah => 'Surah';

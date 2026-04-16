@@ -185,7 +185,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get yes => 'Yes';
 
   @override
-  String get no => 'No';
+  String get no => 'Жоқ';
 
   @override
   String get surah => 'сүре';
