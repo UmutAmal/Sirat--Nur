@@ -64,6 +64,16 @@ void main() {
       }
     });
 
+    test('keeps Quran 2:286 English fallback prose intact', () {
+      final quran2286 = bundledDailyDuaFallback().singleWhere(
+        (dua) => dua.source == 'Quran 2:286',
+      );
+
+      expect(quran2286.english, contains('suffers whatever bad it has done'));
+      expect(quran2286.english, isNot(contains('suffers its bad-')));
+      expect(quran2286.english, isNot(contains('‘ Lord')));
+    });
+
     test('matches the verified bundled Quran ayah payload exactly', () {
       final quranRows =
           jsonDecode(File('assets/data/full_quran.json').readAsStringSync())

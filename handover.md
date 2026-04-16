@@ -10232,3 +10232,59 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude kalan `duaMeaning` locale kalitesini ve Quran/duas seed zincirini taramaya devam et; cok dilli acik tirnak, batch debris veya English fallback kalanlarini kanitli tek yuzey halinde kapat.
+
+## 2026-04-16 TUR-257 — Repair Quran 2:286 Dua Canonical Prose
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql` icindeki Quran 2:286 `text_en` degerinde bozuk kalan `suffers its bad- ‘ Lord` parcasi temizlendi.
+- `A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json` icindeki Surah 2 Ayah 286 `en_translation` ayni temiz canonical metne cekildi.
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart` icindeki `Quran 2:286` fallback duasinin English metni seed ve bundled asset ile senkronlandi.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb` ve eski English exact fallback tasiyan 63 locale ARB dosyasindaki `duaMeaning2` ayni temiz English fallback metnine guncellendi.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_de.arb` icindeki `duaMeaning2` yarim English/German karisimindan tam Almanca, anlam korunmus metne cekildi.
+- `flutter gen-l10n` calistirildi; ilgili generated `app_localizations*.dart` dosyalari yenilendi.
+- `A:\Way of Allah\sirat_i_nur\test\duas_data_test.dart` Quran 2:286 English fallback prose guard'i ile genisletildi.
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart` Quran 2:286 EN/DE runtime stale-fragment guard'i ile genisletildi.
+
+### Neden Yapildi
+- Risk taramasinda `A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql:4686`, `assets\data\full_quran.json:2359`, `duas_data.dart:154` ve `app_en.arb:147` ayni Quran 2:286 English metninde bozuk `suffers its bad- ‘ Lord` zincirini tasiyordu.
+- ARB taramasinda 64 locale `duaMeaning2` degerini bu bozuk English kaynakla birebir tasiyordu; `app_de.arb:646` ise ayni bozuk kaynagi Almanca parcalar ile karisik halde gosteriyordu.
+- Dini dua metinlerinde seed, bundled asset, fallback constant ve runtime localization katmanlari tek temiz kaynak zinciri olarak kalmali; patch yeni spekulatif icerik eklemeden bozuk noktalama/gramer zincirini ve Almanca yarim-localization borcunu kapatir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql`
+- `A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json`
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_de.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` exact English fallback tasiyan ilgili 63 locale
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart` generated l10n karsiliklari
+- `A:\Way of Allah\sirat_i_nur\test\duas_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran 2:286 English dua metni artik seed SQL, bundled JSON, fallback data, EN ARB ve generated runtime localization katmanlarinda ayni ve bozuk `suffers its bad-` / `‘ Lord` kalintilarini tasimiyor.
+- English fallback kullanmasi zorunlu kalan nadir locale dosyalari artik bozuk kaynak metni yaymiyor.
+- Almanca safe-priority locale icin Quran 2:286 dua metni yarim English/German karisimindan kurtuldu.
+- Yeni guard'lar bu bozuk fragmentlerin fallback data ve runtime localization katmanlarina geri donmesini engeller.
+
+### Test Sonucu
+- Odak test: `flutter test test\duas_data_test.dart test\arb_ui_localization_test.dart test\bundled_quran_asset_test.dart --reporter compact` PASS (`73/73`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`466/466`)
+
+### Risk Degisimi
+- Quran 2:286 English canonical dua metninde bozuk fragment riski: `16/25 -> 2/25`
+- Exact English fallback locale'lerde bozuk dini metnin yayilma riski: `16/25 -> 4/25`
+- Almanca `duaMeaning2` yarim-localization riski: `12/25 -> 2/25`
+
+### Rollback Plani
+- `content_seed_quran_ayahs.sql`, `assets\data\full_quran.json`, `duas_data.dart`, `app_en.arb`, `app_de.arb` ve exact fallback ARB batch'indeki Quran 2:286 degisiklikleri geri alinir.
+- `flutter gen-l10n` tekrar calistirilerek generated l10n dosyalari eski metne senkronlanir.
+- `duas_data_test.dart` ve `arb_ui_localization_test.dart` icindeki Quran 2:286 guard'lari geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude dini icerik kalite taramasina devam et: ozellikle safe-priority locale Esma anlamlarinda bilinen yanlis baglam kalintilarini (`Der Würger`, `The Compeller`, `The Clement`, `The Reliever`) kanitli ve kaynak-zincirli patch'lerle kapat.

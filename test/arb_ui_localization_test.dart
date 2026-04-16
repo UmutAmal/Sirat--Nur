@@ -1394,6 +1394,28 @@ void main() {
       expect(arabicL10n.duaMeaning3, contains('إنك أنت الوهاب'));
     });
 
+    test('Quran 2:286 dua localization copy avoids stale fragments', () async {
+      final englishL10n = await AppLocalizations.delegate.load(
+        const Locale('en'),
+      );
+      final germanL10n = await AppLocalizations.delegate.load(
+        const Locale('de'),
+      );
+
+      expect(
+        englishL10n.duaMeaning2,
+        contains('suffers whatever bad it has done'),
+      );
+      expect(englishL10n.duaMeaning2, isNot(contains('suffers its bad-')));
+      expect(englishL10n.duaMeaning2, isNot(contains('‘ Lord')));
+      expect(
+        '‘'.allMatches(englishL10n.duaMeaning2).length,
+        '’'.allMatches(englishL10n.duaMeaning2).length,
+      );
+      expect(germanL10n.duaMeaning2, contains('Allah belastet keine Seele'));
+      expect(germanL10n.duaMeaning2, isNot(contains('God does not burden')));
+    });
+
     test(
       'safe priority locales do not fall back to English for bundled dua meanings',
       () {

@@ -279,7 +279,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get duaMeaning2 =>
-      'God does not burden any soul with more than it can bear: each gains whatever good it has done, and suffers its bad- ‘ Lord, do not take us to task if we forget or make mistakes. Herr, belaste uns nicht, wie Du denen vor uns eine Last auferlegt hast. Herr, belaste uns nicht mit mehr, als wir ertragen können. Vergib uns, vergib uns und erbarme dich unser. Du bist unser Beschützer, also hilf uns gegen die Ungläubigen.“';
+      'Allah belastet keine Seele über ihr Vermögen hinaus. Ihr kommt zugute, was sie erworben hat, und ihr fällt zur Last, was sie begangen hat. Unser Herr, zieh uns nicht zur Rechenschaft, wenn wir vergessen oder Fehler machen. Unser Herr, lege uns keine Last auf, wie Du sie denen vor uns auferlegt hast. Unser Herr, belaste uns nicht mit dem, wozu wir keine Kraft haben. Verzeih uns, vergib uns und erbarme Dich unser. Du bist unser Schutzherr; hilf uns gegen das ungläubige Volk.';
 
   @override
   String get duaMeaning3 =>
