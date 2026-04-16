@@ -1402,13 +1402,15 @@ class AppLocalizationsLb extends AppLocalizations {
   String get asmaMeaning6 => 'The Giver of Security';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Déi wäertvoll / Déi meescht Mighty';
 
   @override
-  String get asmaMeaning9 => 'The Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'The Greatest';
@@ -1441,10 +1443,12 @@ class AppLocalizationsLb extends AppLocalizations {
   String get asmaMeaning19 => 'De Kenner vun All';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
-  String get asmaMeaning21 => 'The Reliever';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'The Abaser';
@@ -1612,7 +1616,8 @@ class AppLocalizationsLb extends AppLocalizations {
   String get asmaMeaning76 => 'The Hidden';
 
   @override
-  String get asmaMeaning77 => 'De Gouverneur';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'The Supreme One';
@@ -1630,7 +1635,8 @@ class AppLocalizationsLb extends AppLocalizations {
   String get asmaMeaning82 => 'The Forgiver';
 
   @override
-  String get asmaMeaning83 => 'De Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'De Besëtzer / Souverän vun All';
@@ -1678,5 +1684,6 @@ class AppLocalizationsLb extends AppLocalizations {
   String get asmaMeaning98 => 'The Most Gerecht Guide';
 
   @override
-  String get asmaMeaning99 => 'The Patient One';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

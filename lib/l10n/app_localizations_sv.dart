@@ -1399,7 +1399,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get asmaMeaning6 => 'Säkerhetsgivaren';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Den dyrbara / den mäktigaste';
@@ -1441,7 +1442,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get asmaMeaning20 => 'Konstriktorn';
 
   @override
-  String get asmaMeaning21 => 'Reliever';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'Abaser';

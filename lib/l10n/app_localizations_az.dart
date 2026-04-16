@@ -1399,7 +1399,8 @@ class AppLocalizationsAz extends AppLocalizations {
   String get asmaMeaning6 => 'Təhlükəsizlik Verən';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Qiymətli / Ən Qüdrətli';
@@ -1438,7 +1439,8 @@ class AppLocalizationsAz extends AppLocalizations {
   String get asmaMeaning19 => 'Hər şeyi biləndir';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Rahatlaşdırıcı';
@@ -1627,7 +1629,8 @@ class AppLocalizationsAz extends AppLocalizations {
   String get asmaMeaning82 => 'Bağışlayan';
 
   @override
-  String get asmaMeaning83 => 'Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Hamının Sahibi / Hökmdarı';

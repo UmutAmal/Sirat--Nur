@@ -1437,7 +1437,8 @@ class AppLocalizationsMr extends AppLocalizations {
   String get asmaMeaning19 => 'सर्वांचा जाणता';
 
   @override
-  String get asmaMeaning20 => 'Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'रिलीव्हर';

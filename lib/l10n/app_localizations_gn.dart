@@ -1443,7 +1443,8 @@ class AppLocalizationsGn extends AppLocalizations {
   String get asmaMeaning19 => 'Opa mba’e Oikuaáva';
 
   @override
-  String get asmaMeaning20 => 'Pe Constrictor rehegua';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Pe Relevador';
@@ -1632,7 +1633,8 @@ class AppLocalizationsGn extends AppLocalizations {
   String get asmaMeaning82 => 'Pe Operdonáva';
 
   @override
-  String get asmaMeaning83 => 'Pe Clemente';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Opavave Jára / Mburuvicha Guasu';

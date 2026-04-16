@@ -1444,7 +1444,8 @@ class AppLocalizationsXh extends AppLocalizations {
   String get asmaMeaning19 => 'UMazi Wako Konke';
 
   @override
-  String get asmaMeaning20 => 'IConstrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'UMhlanguli';
@@ -1633,7 +1634,8 @@ class AppLocalizationsXh extends AppLocalizations {
   String get asmaMeaning82 => 'UMxoleli';
 
   @override
-  String get asmaMeaning83 => 'UClement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'UMnini/uMongami wazo zonke';

@@ -1463,10 +1463,12 @@ class AppLocalizationsAy extends AppLocalizations {
   String get asmaMeaning19 => 'Taqinir Uñt’iri';
 
   @override
-  String get asmaMeaning20 => 'Uka Constrictor ukaxa';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
-  String get asmaMeaning21 => 'Ukax Reliever satawa';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'Uka Abaser sat jaqixa';
@@ -1652,7 +1654,8 @@ class AppLocalizationsAy extends AppLocalizations {
   String get asmaMeaning82 => 'Uka pampachirixa';
 
   @override
-  String get asmaMeaning83 => 'Uka Clemente sat chachajja';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Taqiniruw Dueño / Soberano';

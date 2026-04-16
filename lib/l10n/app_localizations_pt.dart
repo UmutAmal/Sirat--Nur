@@ -1406,14 +1406,15 @@ class AppLocalizationsPt extends AppLocalizations {
   String get asmaMeaning6 => 'O Doador de Segurança';
 
   @override
-  String get asmaMeaning7 => 'O Guardião';
+  String get asmaMeaning7 =>
+      'O Guardião vigilante, que observa e protege toda a criação.';
 
   @override
   String get asmaMeaning8 => 'O Precioso / O Mais Poderoso';
 
   @override
   String get asmaMeaning9 =>
-      'O Todo-Poderoso, que faz prevalecer Sua vontade e restaura o que está quebrado.';
+      'O Restaurador e Irresistível, cuja vontade prevalece com poder perfeito.';
 
   @override
   String get asmaMeaning10 => 'O melhor';
@@ -1446,10 +1447,12 @@ class AppLocalizationsPt extends AppLocalizations {
   String get asmaMeaning19 => 'O Conhecedor de Tudo';
 
   @override
-  String get asmaMeaning20 => 'O Constritor';
+  String get asmaMeaning20 =>
+      'Aquele que restringe com sabedoria e retém segundo Sua vontade.';
 
   @override
-  String get asmaMeaning21 => 'O Apaziguador';
+  String get asmaMeaning21 =>
+      'Aquele que amplia, facilita e concede abundância com sabedoria.';
 
   @override
   String get asmaMeaning22 => 'O Humilde';
@@ -1617,7 +1620,8 @@ class AppLocalizationsPt extends AppLocalizations {
   String get asmaMeaning76 => 'O Oculto';
 
   @override
-  String get asmaMeaning77 => 'O Governador';
+  String get asmaMeaning77 =>
+      'O Protetor e Administrador, que governa e cuida de toda a criação.';
 
   @override
   String get asmaMeaning78 => 'O Supremo';
@@ -1635,7 +1639,8 @@ class AppLocalizationsPt extends AppLocalizations {
   String get asmaMeaning82 => 'O Perdoador';
 
   @override
-  String get asmaMeaning83 => 'O Compassivo, cheio de misericórdia e cuidado.';
+  String get asmaMeaning83 =>
+      'O Mais Bondoso e Compassivo, cheio de misericórdia e ternura.';
 
   @override
   String get asmaMeaning84 => 'O Proprietário/Soberano de Todos';
@@ -1683,5 +1688,6 @@ class AppLocalizationsPt extends AppLocalizations {
   String get asmaMeaning98 => 'O Guia Mais Justo';
 
   @override
-  String get asmaMeaning99 => 'O Paciente';
+  String get asmaMeaning99 =>
+      'O Longânimo, que não apressa o castigo e age com perfeita indulgência.';
 }

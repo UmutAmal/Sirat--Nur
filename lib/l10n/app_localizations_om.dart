@@ -1451,7 +1451,8 @@ class AppLocalizationsOm extends AppLocalizations {
   String get asmaMeaning20 => 'Konstiraaktarichi';
 
   @override
-  String get asmaMeaning21 => 'The Reliever';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'Warra Abasaa';

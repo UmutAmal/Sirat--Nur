@@ -1411,13 +1411,15 @@ class AppLocalizationsEs extends AppLocalizations {
   String get asmaMeaning6 => 'El dador de seguridad';
 
   @override
-  String get asmaMeaning7 => 'El Guardián';
+  String get asmaMeaning7 =>
+      'El Guardián vigilante, que observa y protege toda la creación.';
 
   @override
   String get asmaMeaning8 => 'El Precioso / El Más Poderoso';
 
   @override
-  String get asmaMeaning9 => 'El Obligador';
+  String get asmaMeaning9 =>
+      'El Restaurador e Irresistible, cuya voluntad prevalece con poder perfecto.';
 
   @override
   String get asmaMeaning10 => 'El más grande';
@@ -1450,10 +1452,11 @@ class AppLocalizationsEs extends AppLocalizations {
   String get asmaMeaning19 => 'El Conocedor de Todo';
 
   @override
-  String get asmaMeaning20 => 'El Constrictor';
+  String get asmaMeaning20 => 'El que retiene y estrecha con sabiduría.';
 
   @override
-  String get asmaMeaning21 => 'El relevista';
+  String get asmaMeaning21 =>
+      'El que expande, facilita y concede abundancia con sabiduría.';
 
   @override
   String get asmaMeaning22 => 'El Abastecedor';
@@ -1621,7 +1624,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String get asmaMeaning76 => 'El Oculto';
 
   @override
-  String get asmaMeaning77 => 'El Gobernador';
+  String get asmaMeaning77 =>
+      'El Protector y Administrador, que gobierna y cuida toda la creación.';
 
   @override
   String get asmaMeaning78 => 'El Supremo';
@@ -1640,7 +1644,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get asmaMeaning83 =>
-      'El Compasivo, lleno de misericordia, ternura y cuidado.';
+      'El Más Bondadoso y Compasivo, lleno de misericordia y ternura.';
 
   @override
   String get asmaMeaning84 => 'El Dueño/Soberano de Todo';
@@ -1688,5 +1692,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get asmaMeaning98 => 'La guía más justa';
 
   @override
-  String get asmaMeaning99 => 'El paciente';
+  String get asmaMeaning99 =>
+      'El Longánimo, que no apresura el castigo y actúa con perfecta indulgencia.';
 }

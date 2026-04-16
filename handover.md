@@ -10392,3 +10392,71 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude tum safe-priority locale duaMeaning ve Asma metinleri icin daha genis stale-fragment taramasi yap; ozellikle partial English karisimlari ve yanlis baglamli literal cevirileri kanitla.
+
+## 2026-04-16 TUR-260 — Repair High-Risk Asma Meaning Chain
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart` icindeki yuksek riskli yedi Ingilizce bundled fallback anlam daha baglamli aciklamalara cekildi:
+  `asmaMeaning7`, `asmaMeaning9`, `asmaMeaning20`, `asmaMeaning21`, `asmaMeaning77`, `asmaMeaning83`, `asmaMeaning99`.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb` ayni yeni Ingilizce referansla senkronlandi.
+- Safe-priority locale'lerde ayni yedi anahtar icin tespit edilen bariz machine-translation / yanlis baglam kalintilari duzeltildi:
+  `fr`, `es`, `da`, `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi`, `zh`, `zh_CN`, `zh_TW`.
+- Nadir locale dosyalarinda birebir veya hybrid sekilde kalan eski Ingilizce parcalar temizlendi:
+  `The Guardian`, `Compeller`, `Constrictor`, `Reliever`, `Governor`, `Gouverneur`, `Clement`, `Clemente`, `Patient One`.
+- `flutter gen-l10n` calistirildi; generated `app_localizations*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart` bundled Ingilizce high-risk meaning guard'i ile genisletildi.
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart` iki yeni guard ile genisletildi:
+  tum locale'lerde eski Ingilizce/hybrid high-risk fragment yoklugu ve safe-priority locale'lerde bilinen machine-fragment yoklugu.
+
+### Kanit
+- Koku:
+  `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart:68`, `:87`, `:186`, `:195`, `:690`, `:739`, `:883` onceki kisa/yanlis baglama acik fallback'leri tasiyordu.
+- Referans zinciri:
+  `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb:678`, `:680`, `:691`, `:692`, `:748`, `:754`, `:770` ayni kisa metinleri template olarak dagitiyordu.
+- Test guard:
+  `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart:206`,
+  `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:1471`,
+  `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:1504`.
+- Patch sonrasi scan:
+  `stale_high_risk_asma_hits 0`.
+
+### Neden Yapildi
+- Allah'in isimleri uygulama icinde dogrudan dini bilgi olarak gosteriliyor; kisa literal/machine kalintilar kullaniciyi yanlis anlama goturebilir.
+- Ingilizce template kisa kaldigi icin nadir locale'lerde aynen veya hybrid bicimde cogaliyordu; sadece tek locale duzeltmek kalici cozum degildi.
+- Bu turda kapsam genis gorunse de degisiklik tek kok soruna sinirli tutuldu: yedi high-risk Asma meaning anahtari ve bu anahtarlarin generated l10n zinciri.
+
+### Degistirilen Dosya Kapsami
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` icinde sadece ilgili high-risk `asmaMeaning*` degerleri.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart` generated l10n ciktisi.
+- `A:\Way of Allah\sirat_i_nur\test\asma_ul_husna_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Odak test: `flutter test test\asma_ul_husna_data_test.dart test\arb_ui_localization_test.dart test\features\library\asma_ul_husna_page_test.dart --reporter compact` PASS (`83/83`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`472/472`)
+
+### Ortam Notu
+- `flutter doctor` Android toolchain, Flutter ve connected device icin yesil.
+- Chrome ve Visual Studio eksik gorunuyor; bu tur Android/test hedefini bloklamayan web/Windows hedef eksigi olarak degerlendirildi.
+
+### Risk Degisimi
+- High-risk Asma English template/fallback riski: `16/25 -> 3/25`
+- Safe-priority high-risk Asma machine-translation riski: `16/25 -> 5/25`
+- Nadir locale hybrid English Asma fragment riski: `12/25 -> 3/25`
+- Generated l10n stale Asma runtime riski: `9/25 -> 2/25`
+
+### Rollback Plani
+- `asma_ul_husna_data.dart` icindeki yedi Ingilizce fallback onceki degerlerine dondurulur.
+- Ilgili `app_*.arb` high-risk `asmaMeaning*` degerleri onceki haline dondurulur.
+- `flutter gen-l10n` tekrar calistirilir.
+- `asma_ul_husna_data_test.dart` ve `arb_ui_localization_test.dart` icindeki TUR-260 guard'lari geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Kullanici talimati geregi bu islem commit + push sonrasi duracak.
+- Yeniden baslatma sonrasi devam edilecek ilk risk: safe-priority disi locale'lerde `asmaMeaning*` icin yerel dilde kalan yanlis baglamli machine cevirileri taramak; ozellikle `Patient/Paciente/Pasienten`, `guardian newspaper`, `governor political office`, `constrictor snake` anlamina kayan yerel kopyalar kanitlanip tek tek temizlenecek.

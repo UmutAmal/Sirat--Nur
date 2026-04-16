@@ -1628,7 +1628,8 @@ class AppLocalizationsPa extends AppLocalizations {
   String get asmaMeaning82 => 'ਮਾਫ਼ ਕਰਨ ਵਾਲਾ';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'ਸਭ ਦਾ ਮਾਲਕ / ਪ੍ਰਭੂਸੱਤਾ';

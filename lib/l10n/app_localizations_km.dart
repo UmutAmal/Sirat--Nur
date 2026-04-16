@@ -1402,7 +1402,8 @@ class AppLocalizationsKm extends AppLocalizations {
   String get asmaMeaning6 => 'អ្នកផ្តល់សុវត្ថិភាព';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'វត្ថុមានតម្លៃ / ខ្លាំងបំផុត។';
@@ -1630,7 +1631,8 @@ class AppLocalizationsKm extends AppLocalizations {
   String get asmaMeaning82 => 'អ្នកអភ័យទោស';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'ម្ចាស់/អធិបតេយ្យភាពនៃទាំងអស់។';

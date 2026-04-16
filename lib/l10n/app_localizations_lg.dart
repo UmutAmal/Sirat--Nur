@@ -1634,7 +1634,8 @@ class AppLocalizationsLg extends AppLocalizations {
   String get asmaMeaning82 => 'Omusonyiwa';
 
   @override
-  String get asmaMeaning83 => 'Omusajja Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Nnannyini / Omufuzi wa Bonna';

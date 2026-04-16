@@ -1411,7 +1411,8 @@ class AppLocalizationsMi extends AppLocalizations {
   String get asmaMeaning8 => 'The Precious / Te Kaha Rawa';
 
   @override
-  String get asmaMeaning9 => 'The Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'Te Nui Rawa';
@@ -1444,7 +1445,8 @@ class AppLocalizationsMi extends AppLocalizations {
   String get asmaMeaning19 => 'Te Moohio o te Katoa';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Te Kaiawhina';
@@ -1633,7 +1635,8 @@ class AppLocalizationsMi extends AppLocalizations {
   String get asmaMeaning82 => 'Ko te muru hara';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'The Owner / Sovereign of All';

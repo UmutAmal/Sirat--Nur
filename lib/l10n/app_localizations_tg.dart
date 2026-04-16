@@ -1400,7 +1400,8 @@ class AppLocalizationsTg extends AppLocalizations {
   String get asmaMeaning6 => 'Офарандаи амният';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Қиматбаҳо / Бузургтарин';
@@ -1439,7 +1440,8 @@ class AppLocalizationsTg extends AppLocalizations {
   String get asmaMeaning19 => 'Донои ҳама';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Раоҳдиҳанда';

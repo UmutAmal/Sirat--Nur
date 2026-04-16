@@ -1399,7 +1399,8 @@ class AppLocalizationsNy extends AppLocalizations {
   String get asmaMeaning6 => 'Wopereka Chitetezo';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Wamtengo wapatali / Wamphamvu Kwambiri';
@@ -1438,7 +1439,8 @@ class AppLocalizationsNy extends AppLocalizations {
   String get asmaMeaning19 => 'Wodziwa Zonse';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Wopulumutsa';
@@ -1627,7 +1629,8 @@ class AppLocalizationsNy extends AppLocalizations {
   String get asmaMeaning82 => 'Wokhululuka';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Mwini / Wolamulira wa Zonse';

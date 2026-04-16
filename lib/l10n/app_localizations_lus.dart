@@ -1414,7 +1414,8 @@ class AppLocalizationsLus extends AppLocalizations {
   String get asmaMeaning8 => 'A Hlu / Thiltithei Ber';
 
   @override
-  String get asmaMeaning9 => 'A Compeller chu a ni';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'A ropui ber';
@@ -1447,7 +1448,8 @@ class AppLocalizationsLus extends AppLocalizations {
   String get asmaMeaning19 => 'Mi zawng zawng hretu';
 
   @override
-  String get asmaMeaning20 => 'A Constrictor chu a ni';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Chhawmdawltu chu';
@@ -1636,7 +1638,8 @@ class AppLocalizationsLus extends AppLocalizations {
   String get asmaMeaning82 => 'Ngaidamtu';
 
   @override
-  String get asmaMeaning83 => 'Clement-a chuan a rawn ti a';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Mi zawng zawng neitu / Lalber';

@@ -1625,7 +1625,8 @@ class AppLocalizationsLo extends AppLocalizations {
   String get asmaMeaning82 => 'ຜູ້ໃຫ້ອະໄພ';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'ເຈົ້າຂອງ / ເຈົ້າຂອງທັງໝົດ';

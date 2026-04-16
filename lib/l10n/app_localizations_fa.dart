@@ -1438,7 +1438,8 @@ class AppLocalizationsFa extends AppLocalizations {
   String get asmaMeaning19 => 'دانای همه';
 
   @override
-  String get asmaMeaning20 => 'Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'تسکین دهنده';

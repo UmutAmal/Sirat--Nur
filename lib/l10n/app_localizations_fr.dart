@@ -1413,13 +1413,15 @@ class AppLocalizationsFr extends AppLocalizations {
   String get asmaMeaning6 => 'Le donneur de sécurité';
 
   @override
-  String get asmaMeaning7 => 'Le Gardien';
+  String get asmaMeaning7 =>
+      'Le Gardien vigilant, qui observe et protège toute la création.';
 
   @override
   String get asmaMeaning8 => 'Le Précieux / Le Plus Puissant';
 
   @override
-  String get asmaMeaning9 => 'Le Contraint';
+  String get asmaMeaning9 =>
+      'Le Restaurateur et l\'Irrésistible, dont la volonté prévaut avec une puissance parfaite.';
 
   @override
   String get asmaMeaning10 => 'Le plus grand';
@@ -1452,10 +1454,11 @@ class AppLocalizationsFr extends AppLocalizations {
   String get asmaMeaning19 => 'Le connaisseur de tous';
 
   @override
-  String get asmaMeaning20 => 'Le Constricteur';
+  String get asmaMeaning20 => 'Celui qui retient et resserre avec sagesse.';
 
   @override
-  String get asmaMeaning21 => 'Le soulageur';
+  String get asmaMeaning21 =>
+      'Celui qui élargit, facilite et accorde l\'abondance avec sagesse.';
 
   @override
   String get asmaMeaning22 => 'L\'Abaser';
@@ -1642,7 +1645,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get asmaMeaning82 => 'Le Pardonneur';
 
   @override
-  String get asmaMeaning83 => 'Le Clément';
+  String get asmaMeaning83 =>
+      'Le Très Bienveillant et Compatissant, plein de tendre miséricorde.';
 
   @override
   String get asmaMeaning84 => 'Le propriétaire/souverain de tous';
@@ -1690,5 +1694,6 @@ class AppLocalizationsFr extends AppLocalizations {
   String get asmaMeaning98 => 'Le guide le plus juste';
 
   @override
-  String get asmaMeaning99 => 'Le patient';
+  String get asmaMeaning99 =>
+      'Le Longanime, qui ne hâte pas le châtiment et agit avec une indulgence parfaite.';
 }

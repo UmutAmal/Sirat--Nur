@@ -1439,7 +1439,8 @@ class AppLocalizationsMs extends AppLocalizations {
   String get asmaMeaning19 => 'Yang Maha Mengetahui';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Yang Melegakan';
@@ -1628,7 +1629,8 @@ class AppLocalizationsMs extends AppLocalizations {
   String get asmaMeaning82 => 'Maha Pengampun';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Pemilik / Penguasa Semua';

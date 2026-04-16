@@ -1407,7 +1407,8 @@ class AppLocalizationsAf extends AppLocalizations {
   String get asmaMeaning8 => 'Die Kosbare / Die Magtigste';
 
   @override
-  String get asmaMeaning9 => 'The Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'Die Grootste';
@@ -1440,7 +1441,8 @@ class AppLocalizationsAf extends AppLocalizations {
   String get asmaMeaning19 => 'Die Kenner van Almal';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Die Verligter';
@@ -1629,7 +1631,8 @@ class AppLocalizationsAf extends AppLocalizations {
   String get asmaMeaning82 => 'Die Vergewer';
 
   @override
-  String get asmaMeaning83 => 'Die Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Die Eienaar / Soewerein van Almal';

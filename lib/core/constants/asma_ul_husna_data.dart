@@ -65,7 +65,8 @@ class AsmaUlHusnaData {
       'arabic': 'الْمُهَيْمِنُ',
       'transliteration': 'Al Muhaymin',
       'translations': {
-        'en': 'The Guardian',
+        'en':
+            'The Watchful Guardian, who observes and safeguards all creation.',
         'tr':
             'Her şeyi görüp gözeten, denetleyen, kâinatın hâkim ve yöneticisi.',
       },
@@ -84,7 +85,8 @@ class AsmaUlHusnaData {
       'arabic': 'الْجَبَّارُ',
       'transliteration': 'Al Jabbaar',
       'translations': {
-        'en': 'The Compeller',
+        'en':
+            'The Restorer and Irresistible, whose will prevails with perfect power.',
         'tr': 'Azamet ve kudret sahibi, dilediğini yapan ve yaptıran.',
       },
     },
@@ -183,7 +185,7 @@ class AsmaUlHusnaData {
       'arabic': 'الْقَابِضُ',
       'transliteration': 'Al Qaabid',
       'translations': {
-        'en': 'The Constrictor',
+        'en': 'The Withholder, who narrows and restrains by wisdom.',
         'tr': 'Dilediğine darlık veren, sıkan, daraltan.',
       },
     },
@@ -192,7 +194,7 @@ class AsmaUlHusnaData {
       'arabic': 'الْبَاسِطُ',
       'transliteration': 'Al Baasit',
       'translations': {
-        'en': 'The Reliever',
+        'en': 'The Expander, who opens, eases, and grants abundance by wisdom.',
         'tr': 'Dilediğine bolluk veren, açan, genişleten.',
       },
     },
@@ -687,7 +689,10 @@ class AsmaUlHusnaData {
       'id': 77,
       'arabic': 'الْوَالِي',
       'transliteration': 'Al Waali',
-      'translations': {'en': 'The Governor', 'tr': 'Bütün kainatı idare eden.'},
+      'translations': {
+        'en': 'The Protecting Patron, who governs and cares for all creation.',
+        'tr': 'Bütün kainatı idare eden.',
+      },
     },
     {
       'id': 78,
@@ -736,7 +741,7 @@ class AsmaUlHusnaData {
       'arabic': 'الرَّؤُوفُ',
       'transliteration': 'Ar Ra’oof',
       'translations': {
-        'en': 'The Clement',
+        'en': 'The Most Kind and Compassionate, full of tender mercy.',
         'tr': 'Çok merhametli, pek şefkatli.',
       },
     },
@@ -880,7 +885,8 @@ class AsmaUlHusnaData {
       'arabic': 'الصَّبُورُ',
       'transliteration': 'As Saboor',
       'translations': {
-        'en': 'The Patient One',
+        'en':
+            'The Patient, who does not hasten punishment and acts with perfect forbearance.',
         'tr': 'Cezada acele etmeyen, sabırlı olan.',
       },
     },

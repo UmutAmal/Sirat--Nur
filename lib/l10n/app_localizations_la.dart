@@ -1439,10 +1439,12 @@ class AppLocalizationsLa extends AppLocalizations {
   String get asmaMeaning19 => 'Cognitor omnium';
 
   @override
-  String get asmaMeaning20 => 'Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
-  String get asmaMeaning21 => 'The Reliever';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'The Abaser';
@@ -1628,7 +1630,8 @@ class AppLocalizationsLa extends AppLocalizations {
   String get asmaMeaning82 => 'Remissio';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Dominus omnium Dominus /';
@@ -1676,5 +1679,6 @@ class AppLocalizationsLa extends AppLocalizations {
   String get asmaMeaning98 => 'The justissime Guide';
 
   @override
-  String get asmaMeaning99 => 'The Patient One';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

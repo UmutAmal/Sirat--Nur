@@ -1441,7 +1441,8 @@ class AppLocalizationsEo extends AppLocalizations {
   String get asmaMeaning20 => 'La Konstriktanto';
 
   @override
-  String get asmaMeaning21 => 'La Reliever';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'The Abaser';

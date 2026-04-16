@@ -1639,7 +1639,8 @@ class AppLocalizationsTs extends AppLocalizations {
   String get asmaMeaning82 => 'Mu rivaleli';
 
   @override
-  String get asmaMeaning83 => 'Va ka Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'N’wini / Hosi ya Hinkwaswo';

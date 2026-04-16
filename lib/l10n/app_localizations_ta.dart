@@ -1634,7 +1634,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get asmaMeaning82 => 'மன்னிப்பவர்';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'அனைத்தின் உரிமையாளர் / இறையாண்மை';

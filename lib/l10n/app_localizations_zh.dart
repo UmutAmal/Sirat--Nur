@@ -1365,13 +1365,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get asmaMeaning6 => '安全的给予者';
 
   @override
-  String get asmaMeaning7 => '卫报';
+  String get asmaMeaning7 => '警醒的守护者，观察并保护一切被造物。';
 
   @override
   String get asmaMeaning8 => '最珍贵/最强大';
 
   @override
-  String get asmaMeaning9 => '强制器';
+  String get asmaMeaning9 => '修复者与不可抗拒者，以完美的权能成就祂的意志。';
 
   @override
   String get asmaMeaning10 => '最伟大的';
@@ -1404,10 +1404,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get asmaMeaning19 => '万物之知者';
 
   @override
-  String get asmaMeaning20 => '大蟒蛇';
+  String get asmaMeaning20 => '收束者，凭智慧收紧并保留。';
 
   @override
-  String get asmaMeaning21 => '救援者';
+  String get asmaMeaning21 => '开阔者，凭智慧赐予宽裕、便利与丰盛。';
 
   @override
   String get asmaMeaning22 => '阿巴塞人';
@@ -1575,7 +1575,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get asmaMeaning76 => '隐藏的';
 
   @override
-  String get asmaMeaning77 => '总督';
+  String get asmaMeaning77 => '守护的管理者，治理并照料一切被造物。';
 
   @override
   String get asmaMeaning78 => '至尊者';
@@ -1593,7 +1593,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get asmaMeaning82 => '宽恕者';
 
   @override
-  String get asmaMeaning83 => '克莱门特';
+  String get asmaMeaning83 => '至仁至慈者，充满温柔的怜悯。';
 
   @override
   String get asmaMeaning84 => '所有人的所有者/主权者';
@@ -1641,7 +1641,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get asmaMeaning98 => '最正向导';
 
   @override
-  String get asmaMeaning99 => '一号病人';
+  String get asmaMeaning99 => '忍耐者，不急于惩罚，并以完美的宽容行事。';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -3005,13 +3005,13 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get asmaMeaning6 => '安全的给予者';
 
   @override
-  String get asmaMeaning7 => '卫报';
+  String get asmaMeaning7 => '警醒的守护者，观察并保护一切被造物。';
 
   @override
   String get asmaMeaning8 => '最珍贵/最强大';
 
   @override
-  String get asmaMeaning9 => '强制器';
+  String get asmaMeaning9 => '修复者与不可抗拒者，以完美的权能成就祂的意志。';
 
   @override
   String get asmaMeaning10 => '最伟大的';
@@ -3044,10 +3044,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get asmaMeaning19 => '万物之知者';
 
   @override
-  String get asmaMeaning20 => '大蟒蛇';
+  String get asmaMeaning20 => '收束者，凭智慧收紧并保留。';
 
   @override
-  String get asmaMeaning21 => '救援者';
+  String get asmaMeaning21 => '开阔者，凭智慧赐予宽裕、便利与丰盛。';
 
   @override
   String get asmaMeaning22 => '阿巴塞人';
@@ -3215,7 +3215,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get asmaMeaning76 => '隐藏的';
 
   @override
-  String get asmaMeaning77 => '总督';
+  String get asmaMeaning77 => '守护的管理者，治理并照料一切被造物。';
 
   @override
   String get asmaMeaning78 => '至尊者';
@@ -3233,7 +3233,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get asmaMeaning82 => '宽恕者';
 
   @override
-  String get asmaMeaning83 => '克莱门特';
+  String get asmaMeaning83 => '至仁至慈者，充满温柔的怜悯。';
 
   @override
   String get asmaMeaning84 => '所有人的所有者/主权者';
@@ -3281,7 +3281,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get asmaMeaning98 => '最正向导';
 
   @override
-  String get asmaMeaning99 => '一号病人';
+  String get asmaMeaning99 => '忍耐者，不急于惩罚，并以完美的宽容行事。';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -4645,13 +4645,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get asmaMeaning6 => '安全的給予者';
 
   @override
-  String get asmaMeaning7 => '衛報';
+  String get asmaMeaning7 => '警醒的守護者，觀察並保護一切受造物。';
 
   @override
   String get asmaMeaning8 => '最珍貴/最強大';
 
   @override
-  String get asmaMeaning9 => '強制器';
+  String get asmaMeaning9 => '修復者與不可抗拒者，以完美的權能成就祂的旨意。';
 
   @override
   String get asmaMeaning10 => '最棒的';
@@ -4684,10 +4684,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get asmaMeaning19 => '萬物之知者';
 
   @override
-  String get asmaMeaning20 => '大蟒蛇';
+  String get asmaMeaning20 => '收束者，憑智慧收緊並保留。';
 
   @override
-  String get asmaMeaning21 => '救援者';
+  String get asmaMeaning21 => '開闊者，憑智慧賜予寬裕、便利與豐盛。';
 
   @override
   String get asmaMeaning22 => '阿巴塞人';
@@ -4855,7 +4855,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get asmaMeaning76 => '隱藏的';
 
   @override
-  String get asmaMeaning77 => '總督';
+  String get asmaMeaning77 => '守護的管理者，治理並照料一切受造物。';
 
   @override
   String get asmaMeaning78 => '至尊者';
@@ -4873,7 +4873,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get asmaMeaning82 => '寬恕者';
 
   @override
-  String get asmaMeaning83 => '克萊門特';
+  String get asmaMeaning83 => '至仁至慈者，充滿溫柔的憐憫。';
 
   @override
   String get asmaMeaning84 => '所有人的所有者/主權者';
@@ -4921,5 +4921,5 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get asmaMeaning98 => '最正向導';
 
   @override
-  String get asmaMeaning99 => '一號病人';
+  String get asmaMeaning99 => '忍耐者，不急於懲罰，並以完美的寬容行事。';
 }

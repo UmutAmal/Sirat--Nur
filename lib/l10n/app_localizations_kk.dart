@@ -1398,7 +1398,8 @@ class AppLocalizationsKk extends AppLocalizations {
   String get asmaMeaning6 => 'Қауіпсіздікті беруші';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Қымбатты / Ең Құдіретті';

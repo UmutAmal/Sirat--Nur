@@ -1407,7 +1407,8 @@ class AppLocalizationsKn extends AppLocalizations {
   String get asmaMeaning8 => 'ಅಮೂಲ್ಯ / ಅತ್ಯಂತ ಶಕ್ತಿಶಾಲಿ';
 
   @override
-  String get asmaMeaning9 => 'The Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'ಅತ್ಯುತ್ತಮ';

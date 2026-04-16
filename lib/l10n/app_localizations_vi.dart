@@ -1402,13 +1402,15 @@ class AppLocalizationsVi extends AppLocalizations {
   String get asmaMeaning6 => 'Người cung cấp bảo mật';
 
   @override
-  String get asmaMeaning7 => 'Người giám hộ';
+  String get asmaMeaning7 =>
+      'Đấng Giám hộ luôn quan sát, trông nom và bảo vệ toàn thể tạo vật.';
 
   @override
   String get asmaMeaning8 => 'Người quý giá / Người hùng mạnh nhất';
 
   @override
-  String get asmaMeaning9 => 'Người bán hàng';
+  String get asmaMeaning9 =>
+      'Đấng Phục hồi và Không thể cưỡng lại, ý muốn của Ngài thắng thế bằng quyền năng hoàn hảo.';
 
   @override
   String get asmaMeaning10 => 'Tuyệt vời nhất';
@@ -1441,10 +1443,12 @@ class AppLocalizationsVi extends AppLocalizations {
   String get asmaMeaning19 => 'Người biết tất cả';
 
   @override
-  String get asmaMeaning20 => 'Bộ hạn chế';
+  String get asmaMeaning20 =>
+      'Đấng Giữ lại, thu hẹp và kiềm giữ bằng sự khôn ngoan.';
 
   @override
-  String get asmaMeaning21 => 'Thuốc giảm đau';
+  String get asmaMeaning21 =>
+      'Đấng Mở rộng, ban sự dễ dàng, dư dật và rộng rãi bằng sự khôn ngoan.';
 
   @override
   String get asmaMeaning22 => 'Kẻ phản bội';
@@ -1612,7 +1616,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get asmaMeaning76 => 'Ẩn';
 
   @override
-  String get asmaMeaning77 => 'Thống đốc';
+  String get asmaMeaning77 =>
+      'Đấng Bảo hộ và Quản trị, cai quản và chăm sóc toàn thể tạo vật.';
 
   @override
   String get asmaMeaning78 => 'Đấng tối cao';
@@ -1630,7 +1635,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get asmaMeaning82 => 'Người tha thứ';
 
   @override
-  String get asmaMeaning83 => 'Rất từ ​​bi, rất từ ​​bi.';
+  String get asmaMeaning83 =>
+      'Đấng Nhân từ và Thương xót nhất, đầy lòng xót thương dịu dàng.';
 
   @override
   String get asmaMeaning84 => 'Chủ sở hữu / Chủ quyền của tất cả';
@@ -1678,5 +1684,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get asmaMeaning98 => 'Hướng dẫn chính đáng nhất';
 
   @override
-  String get asmaMeaning99 => 'Bệnh nhân Một';
+  String get asmaMeaning99 =>
+      'Đấng Kiên nhẫn, không vội trừng phạt và hành xử với sự khoan dung hoàn hảo.';
 }

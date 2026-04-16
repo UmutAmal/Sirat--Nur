@@ -1409,7 +1409,8 @@ class AppLocalizationsMl extends AppLocalizations {
   String get asmaMeaning8 => 'അമൂല്യമായ / ഏറ്റവും ശക്തൻ';
 
   @override
-  String get asmaMeaning9 => 'The Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'ഏറ്റവും മികച്ചത്';
@@ -1442,7 +1443,8 @@ class AppLocalizationsMl extends AppLocalizations {
   String get asmaMeaning19 => 'എല്ലാം അറിയുന്നവൻ';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'ദി റിലീവർ';
@@ -1631,7 +1633,8 @@ class AppLocalizationsMl extends AppLocalizations {
   String get asmaMeaning82 => 'ക്ഷമിക്കുന്നവൻ';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'എല്ലാവരുടെയും ഉടമ / പരമാധികാരി';

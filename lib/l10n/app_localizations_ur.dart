@@ -1443,7 +1443,8 @@ class AppLocalizationsUr extends AppLocalizations {
   String get asmaMeaning20 => 'کنسٹریکٹر';
 
   @override
-  String get asmaMeaning21 => 'The Reliever';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'The Abaser';
@@ -1629,7 +1630,8 @@ class AppLocalizationsUr extends AppLocalizations {
   String get asmaMeaning82 => 'بخشنے والا';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'سب کا مالک / خود مختار';

@@ -1403,13 +1403,14 @@ class AppLocalizationsNn extends AppLocalizations {
 
   @override
   String get asmaMeaning7 =>
-      'Dommeren og herskeren over universet som ser og våker over alt.';
+      'Den vakande verjaren, som ser og vernar heile skaparverket.';
 
   @override
   String get asmaMeaning8 => 'Den dyrebare / den mektigste';
 
   @override
-  String get asmaMeaning9 => 'Tvingeren';
+  String get asmaMeaning9 =>
+      'Den gjenopprettande og uimotståelege, som lèt viljen sin sigre med fullkomen makt.';
 
   @override
   String get asmaMeaning10 => 'Den største';
@@ -1446,7 +1447,7 @@ class AppLocalizationsNn extends AppLocalizations {
 
   @override
   String get asmaMeaning20 =>
-      'Den som begrenser, klemmer, begrenser hvem han vil.';
+      'Den tilbakehaldande, som snevrar inn og held tilbake med visdom.';
 
   @override
   String get asmaMeaning21 =>
@@ -1623,7 +1624,8 @@ class AppLocalizationsNn extends AppLocalizations {
   String get asmaMeaning76 => 'Det skjulte';
 
   @override
-  String get asmaMeaning77 => 'Guvernøren';
+  String get asmaMeaning77 =>
+      'Den verjande forvaltaren, som styrer og tek vare på heile skaparverket.';
 
   @override
   String get asmaMeaning78 => 'Den øverste';
@@ -1641,7 +1643,8 @@ class AppLocalizationsNn extends AppLocalizations {
   String get asmaMeaning82 => 'Tilgiveren';
 
   @override
-  String get asmaMeaning83 => 'Klementen';
+  String get asmaMeaning83 =>
+      'Den mildt miskunnsame, full av var nåde og omsorg.';
 
   @override
   String get asmaMeaning84 => 'Eieren / suverenen over alle';
@@ -1690,5 +1693,6 @@ class AppLocalizationsNn extends AppLocalizations {
   String get asmaMeaning98 => 'Den mest rettferdige guiden';
 
   @override
-  String get asmaMeaning99 => 'Pasienten';
+  String get asmaMeaning99 =>
+      'Den tolmodige, som ikkje skundar på straffa og handlar med fullkomen overbering.';
 }

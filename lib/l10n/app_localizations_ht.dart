@@ -1404,7 +1404,8 @@ class AppLocalizationsHt extends AppLocalizations {
   String get asmaMeaning8 => 'The Precious / The Most Mighty';
 
   @override
-  String get asmaMeaning9 => 'The Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'Pi gran an';
@@ -1626,7 +1627,8 @@ class AppLocalizationsHt extends AppLocalizations {
   String get asmaMeaning82 => 'The Forgiver';
 
   @override
-  String get asmaMeaning83 => 'Clement la';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Mèt la / Souvren tout moun';

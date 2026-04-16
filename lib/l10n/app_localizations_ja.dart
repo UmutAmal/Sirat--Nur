@@ -1380,13 +1380,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get asmaMeaning6 => 'セキュリティの提供者';
 
   @override
-  String get asmaMeaning7 => 'ガーディアン';
+  String get asmaMeaning7 => 'すべての被造物を見守り守護する御方。';
 
   @override
   String get asmaMeaning8 => '貴重なもの / 最も強力なもの';
 
   @override
-  String get asmaMeaning9 => 'コンペラー';
+  String get asmaMeaning9 => '完全な力で御意志を実現し、壊れたものを回復される御方。';
 
   @override
   String get asmaMeaning10 => '最高のもの';
@@ -1419,10 +1419,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get asmaMeaning19 => 'すべてを知る者';
 
   @override
-  String get asmaMeaning20 => 'コンストリクター';
+  String get asmaMeaning20 => '英知によって狭め、控えさせる御方。';
 
   @override
-  String get asmaMeaning21 => '救済者';
+  String get asmaMeaning21 => '英知によって広げ、安らぎと豊かさを授ける御方。';
 
   @override
   String get asmaMeaning22 => 'アバサー';
@@ -1590,7 +1590,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get asmaMeaning76 => '隠されたもの';
 
   @override
-  String get asmaMeaning77 => '知事';
+  String get asmaMeaning77 => 'すべての被造物を治め、守り育まれる御方。';
 
   @override
   String get asmaMeaning78 => '至高のもの';
@@ -1608,7 +1608,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get asmaMeaning82 => '許す者';
 
   @override
-  String get asmaMeaning83 => 'クレメント';
+  String get asmaMeaning83 => '深い慈悲と優しい思いやりに満ちた御方。';
 
   @override
   String get asmaMeaning84 => 'すべての所有者/主権者';
@@ -1656,5 +1656,5 @@ class AppLocalizationsJa extends AppLocalizations {
   String get asmaMeaning98 => '最も正義のガイド';
 
   @override
-  String get asmaMeaning99 => '患者 1';
+  String get asmaMeaning99 => '罰を急がず、完全な寛容をもって対処される御方。';
 }

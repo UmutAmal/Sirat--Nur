@@ -1401,13 +1401,15 @@ class AppLocalizationsDa extends AppLocalizations {
   String get asmaMeaning6 => 'Sikkerhedsgiveren';
 
   @override
-  String get asmaMeaning7 => 'Vægten';
+  String get asmaMeaning7 =>
+      'Den Vågende Beskytter, der ser og værner om hele skabningen.';
 
   @override
   String get asmaMeaning8 => 'Den dyrebare / den mest mægtige';
 
   @override
-  String get asmaMeaning9 => 'Tvingeren';
+  String get asmaMeaning9 =>
+      'Den Genoprettende og Uimodståelige, hvis vilje sejrer med fuldkommen magt.';
 
   @override
   String get asmaMeaning10 => 'Den Største';
@@ -1443,7 +1445,8 @@ class AppLocalizationsDa extends AppLocalizations {
   String get asmaMeaning19 => 'Alles kender';
 
   @override
-  String get asmaMeaning20 => 'Konstriktoren';
+  String get asmaMeaning20 =>
+      'Den Tilbageholdende, der indsnævrer og holder tilbage med visdom.';
 
   @override
   String get asmaMeaning21 =>
@@ -1619,7 +1622,8 @@ class AppLocalizationsDa extends AppLocalizations {
   String get asmaMeaning76 => 'Det skjulte';
 
   @override
-  String get asmaMeaning77 => 'Guvernøren';
+  String get asmaMeaning77 =>
+      'Den Beskyttende Forvalter, der styrer og tager vare på hele skabningen.';
 
   @override
   String get asmaMeaning78 => 'Den Højeste';
@@ -1637,7 +1641,8 @@ class AppLocalizationsDa extends AppLocalizations {
   String get asmaMeaning82 => 'Tilgiveren';
 
   @override
-  String get asmaMeaning83 => 'Klementen';
+  String get asmaMeaning83 =>
+      'Den Mildt Barmhjertige, fuld af øm nåde og omsorg.';
 
   @override
   String get asmaMeaning84 => 'Ejeren/Alles suveræne';
@@ -1686,5 +1691,5 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get asmaMeaning99 =>
-      'Den, der ikke skynder sig at straffe og er tålmodig.';
+      'Den Tålmodige, der ikke fremskynder straffen og handler med fuldkommen overbærenhed.';
 }

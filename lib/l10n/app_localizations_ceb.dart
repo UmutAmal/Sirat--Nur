@@ -1446,10 +1446,12 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get asmaMeaning19 => 'Ang Nakahibalo sa Tanan';
 
   @override
-  String get asmaMeaning20 => 'Ang Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
-  String get asmaMeaning21 => 'Ang Reliever';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'Ang Abaser';
@@ -1635,7 +1637,8 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get asmaMeaning82 => 'Ang Magpatawad';
 
   @override
-  String get asmaMeaning83 => 'Ang Clemente';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Ang Tag-iya / Soberano sa Tanan';

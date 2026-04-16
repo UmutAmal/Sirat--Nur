@@ -1460,11 +1460,136 @@ void main() {
 
       expect(
         _readArb('lib/l10n/app_pt.arb')['asmaMeaning9'],
-        contains('Todo-Poderoso'),
+        contains('Restaurador'),
       );
       expect(
         _readArb('lib/l10n/app_fr.arb')['asmaMeaning77'],
         contains('Protecteur'),
+      );
+    });
+
+    test('all locales avoid stale English high-risk asma fragments', () {
+      const staleByKey = {
+        'asmaMeaning7': ['The Guardian'],
+        'asmaMeaning9': ['Compeller'],
+        'asmaMeaning20': ['Constrictor'],
+        'asmaMeaning21': ['Reliever'],
+        'asmaMeaning77': ['Governor', 'Gouverneur'],
+        'asmaMeaning83': ['Clement', 'Clemente'],
+        'asmaMeaning99': ['Patient One'],
+      };
+      final arbFiles = Directory('lib/l10n').listSync().whereType<File>().where(
+        (file) =>
+            file.uri.pathSegments.last.startsWith('app_') &&
+            file.path.endsWith('.arb'),
+      );
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+        final localeFile = file.uri.pathSegments.last;
+        for (final entry in staleByKey.entries) {
+          final value = arb[entry.key] as String;
+          for (final fragment in entry.value) {
+            expect(
+              value,
+              isNot(contains(fragment)),
+              reason:
+                  '$localeFile ${entry.key} keeps a stale English asma fragment',
+            );
+          }
+        }
+      }
+    });
+
+    test('priority high-risk asma meanings avoid known machine fragments', () {
+      const staleByLocale = {
+        'fr': [
+          'Le Contraint',
+          'Le Constricteur',
+          'Le soulageur',
+          'Le Clément',
+          'Le patient',
+        ],
+        'es': [
+          'El Obligador',
+          'El Constrictor',
+          'El relevista',
+          'El Gobernador',
+          'El paciente',
+        ],
+        'da': [
+          'Vægten',
+          'Tvingeren',
+          'Konstriktoren',
+          'Guvernøren',
+          'Klementen',
+        ],
+        'he': ['הקומפלר', 'המשחרר', 'המושל', 'הקלמנט', 'המטופל'],
+        'ja': ['ガーディアン', 'コンペラー', 'コンストリクター', '救済者', '知事', 'クレメント', '患者'],
+        'nb': ['Tvingeren', 'klemmer', 'Guvernøren', 'Klementen', 'Pasienten'],
+        'nn': ['Tvingeren', 'klemmer', 'Guvernøren', 'Klementen', 'Pasienten'],
+        'no': ['Tvingeren', 'klemmer', 'Guvernøren', 'Klementen', 'Pasienten'],
+        'pt': ['O Constritor', 'O Apaziguador', 'O Governador', 'O Paciente'],
+        'ru': [
+          'Компеллер',
+          'Констриктор',
+          'Облегчитель',
+          'Губернатор',
+          'Климент',
+        ],
+        'vi': [
+          'Người bán hàng',
+          'Bộ hạn chế',
+          'Thuốc giảm đau',
+          'Thống đốc',
+          'Bệnh nhân',
+        ],
+        'zh': ['卫报', '强制器', '大蟒蛇', '救援者', '总督', '克莱门特', '一号病人'],
+        'zh_CN': ['卫报', '强制器', '大蟒蛇', '救援者', '总督', '克莱门特', '一号病人'],
+        'zh_TW': ['衛報', '強制器', '大蟒蛇', '救援者', '總督', '克萊門特', '一號病人'],
+      };
+      const highRiskKeys = [
+        'asmaMeaning7',
+        'asmaMeaning9',
+        'asmaMeaning20',
+        'asmaMeaning21',
+        'asmaMeaning77',
+        'asmaMeaning83',
+        'asmaMeaning99',
+      ];
+
+      for (final localeEntry in staleByLocale.entries) {
+        final arb = _readArb('lib/l10n/app_${localeEntry.key}.arb');
+        final joinedHighRiskMeanings = highRiskKeys
+            .map((key) => arb[key] as String)
+            .join('\n');
+
+        for (final fragment in localeEntry.value) {
+          expect(
+            joinedHighRiskMeanings,
+            isNot(contains(fragment)),
+            reason:
+                'app_${localeEntry.key}.arb keeps a high-risk machine fragment',
+          );
+        }
+      }
+
+      expect(
+        _readArb('lib/l10n/app_fr.arb')['asmaMeaning9'],
+        contains('Restaurateur'),
+      );
+      expect(
+        _readArb('lib/l10n/app_es.arb')['asmaMeaning21'],
+        contains('abundancia'),
+      );
+      expect(
+        _readArb('lib/l10n/app_ja.arb')['asmaMeaning99'],
+        contains('罰を急がず'),
+      );
+      expect(_readArb('lib/l10n/app_zh.arb')['asmaMeaning20'], contains('收束者'));
+      expect(
+        _readArb('lib/l10n/app_vi.arb')['asmaMeaning77'],
+        contains('Quản trị'),
       );
     });
 

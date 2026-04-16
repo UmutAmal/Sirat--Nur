@@ -1441,7 +1441,8 @@ class AppLocalizationsSw extends AppLocalizations {
   String get asmaMeaning19 => 'Mjuzi wa Yote';
 
   @override
-  String get asmaMeaning20 => 'Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Mkombozi';
@@ -1630,7 +1631,8 @@ class AppLocalizationsSw extends AppLocalizations {
   String get asmaMeaning82 => 'Mwenye kusamehe';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Mmiliki / Mfalme wa Wote';

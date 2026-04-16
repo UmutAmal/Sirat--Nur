@@ -1435,7 +1435,8 @@ class AppLocalizationsSd extends AppLocalizations {
   String get asmaMeaning19 => 'سڀني کي ڄاڻندڙ';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'ريليور';
@@ -1624,7 +1625,8 @@ class AppLocalizationsSd extends AppLocalizations {
   String get asmaMeaning82 => 'بخشيندڙ';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'سڀني جو مالڪ / حاڪم';

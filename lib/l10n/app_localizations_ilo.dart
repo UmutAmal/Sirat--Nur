@@ -1638,7 +1638,8 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get asmaMeaning82 => 'Ti Manangpakawan';
 
   @override
-  String get asmaMeaning83 => 'Ti Clemente';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Ti Agtagikua / Soberano ti Amin';

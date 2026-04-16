@@ -1398,13 +1398,15 @@ class AppLocalizationsSi extends AppLocalizations {
   String get asmaMeaning6 => 'ආරක්ෂාව දෙන්නා';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'වටිනා / බලවත්ම';
 
   @override
-  String get asmaMeaning9 => 'The Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'ශ්‍රේෂ්ඨතම';
@@ -1437,7 +1439,8 @@ class AppLocalizationsSi extends AppLocalizations {
   String get asmaMeaning19 => 'සියල්ල දන්නා තැනැත්තා';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'සහනය';

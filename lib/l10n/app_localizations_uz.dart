@@ -1400,7 +1400,8 @@ class AppLocalizationsUz extends AppLocalizations {
   String get asmaMeaning6 => 'Xavfsizlik beruvchi';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Qimmatli / Eng Qudratli';

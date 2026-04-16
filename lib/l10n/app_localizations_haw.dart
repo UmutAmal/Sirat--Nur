@@ -1627,7 +1627,8 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get asmaMeaning82 => 'Ka Mea kala';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Ka mea nona / Alii o na mea a pau';

@@ -1441,7 +1441,8 @@ class AppLocalizationsCy extends AppLocalizations {
   String get asmaMeaning19 => 'Gwybodaeth Pawb';
 
   @override
-  String get asmaMeaning20 => 'Y Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Y Gwaredwr';
@@ -1630,7 +1631,8 @@ class AppLocalizationsCy extends AppLocalizations {
   String get asmaMeaning82 => 'Y Maddeuwr';
 
   @override
-  String get asmaMeaning83 => 'Y Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Perchennog / Sofran Pawb';

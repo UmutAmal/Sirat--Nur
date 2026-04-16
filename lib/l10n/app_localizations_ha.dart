@@ -1628,7 +1628,8 @@ class AppLocalizationsHa extends AppLocalizations {
   String get asmaMeaning82 => 'Mai Gafara';
 
   @override
-  String get asmaMeaning83 => 'Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Mallakin/Mallakin Duka';

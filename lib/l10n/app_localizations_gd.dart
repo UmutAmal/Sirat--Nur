@@ -1445,7 +1445,8 @@ class AppLocalizationsGd extends AppLocalizations {
   String get asmaMeaning19 => 'Neach-eòlais nan Uile';
 
   @override
-  String get asmaMeaning20 => 'An Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Am Fear-saoraidh';
@@ -1634,7 +1635,8 @@ class AppLocalizationsGd extends AppLocalizations {
   String get asmaMeaning82 => 'Am Machaire';
 
   @override
-  String get asmaMeaning83 => 'An Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'An Sealbhadair/Uachdaran nan Uile';

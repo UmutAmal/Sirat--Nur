@@ -1627,7 +1627,8 @@ class AppLocalizationsRw extends AppLocalizations {
   String get asmaMeaning82 => 'Umubabarira';
 
   @override
-  String get asmaMeaning83 => 'Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Nyirubwite / Umutegetsi wa Byose';

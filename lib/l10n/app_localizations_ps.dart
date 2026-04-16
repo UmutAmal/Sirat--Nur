@@ -1436,7 +1436,8 @@ class AppLocalizationsPs extends AppLocalizations {
   String get asmaMeaning19 => 'په هر څه پوه دی';
 
   @override
-  String get asmaMeaning20 => 'Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'د راحت ورکوونکی';

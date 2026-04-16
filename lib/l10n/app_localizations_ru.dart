@@ -1406,13 +1406,14 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get asmaMeaning7 =>
-      'Судья и правитель вселенной, который видит и наблюдает за всем.';
+      'Бдительный Хранитель, Который видит и оберегает всё творение.';
 
   @override
   String get asmaMeaning8 => 'Драгоценный / Самый Могущественный';
 
   @override
-  String get asmaMeaning9 => 'Компеллер';
+  String get asmaMeaning9 =>
+      'Восстанавливающий и Непреодолимый, Чья воля исполняется совершенной силой.';
 
   @override
   String get asmaMeaning10 => 'Величайший';
@@ -1445,10 +1446,12 @@ class AppLocalizationsRu extends AppLocalizations {
   String get asmaMeaning19 => 'Знающий всё';
 
   @override
-  String get asmaMeaning20 => 'Констриктор';
+  String get asmaMeaning20 =>
+      'Удерживающий, Который с мудростью сужает и удерживает.';
 
   @override
-  String get asmaMeaning21 => 'Облегчитель';
+  String get asmaMeaning21 =>
+      'Расширяющий, Который с мудростью дарует облегчение, простор и изобилие.';
 
   @override
   String get asmaMeaning22 => 'Абасер';
@@ -1616,7 +1619,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get asmaMeaning76 => 'Скрытый';
 
   @override
-  String get asmaMeaning77 => 'Губернатор';
+  String get asmaMeaning77 =>
+      'Покровитель и Управитель, Который руководит всем творением и заботится о нём.';
 
   @override
   String get asmaMeaning78 => 'Высший';
@@ -1634,7 +1638,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get asmaMeaning82 => 'Прощающий';
 
   @override
-  String get asmaMeaning83 => 'Климент';
+  String get asmaMeaning83 =>
+      'Самый Добрый и Сострадательный, полный нежной милости.';
 
   @override
   String get asmaMeaning84 => 'Владелец/Повелитель всего';
@@ -1682,5 +1687,6 @@ class AppLocalizationsRu extends AppLocalizations {
   String get asmaMeaning98 => 'Самый праведный проводник';
 
   @override
-  String get asmaMeaning99 => 'Терпеливый';
+  String get asmaMeaning99 =>
+      'Терпеливый, Который не спешит с наказанием и действует с совершенным долготерпением.';
 }

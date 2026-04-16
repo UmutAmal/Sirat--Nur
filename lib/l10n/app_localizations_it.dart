@@ -1419,7 +1419,8 @@ class AppLocalizationsIt extends AppLocalizations {
   String get asmaMeaning8 => 'Il prezioso / Il più potente';
 
   @override
-  String get asmaMeaning9 => 'Il Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'Il più grande';
@@ -1641,7 +1642,8 @@ class AppLocalizationsIt extends AppLocalizations {
   String get asmaMeaning82 => 'Il Perdonatore';
 
   @override
-  String get asmaMeaning83 => 'Il Clemente';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Il Proprietario/Sovrano di Tutti';

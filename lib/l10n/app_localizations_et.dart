@@ -1400,13 +1400,15 @@ class AppLocalizationsEt extends AppLocalizations {
   String get asmaMeaning6 => 'Turvalisuse andja';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Kallis / Kõige võimsam';
 
   @override
-  String get asmaMeaning9 => 'The Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'Suurim';
@@ -1439,7 +1441,8 @@ class AppLocalizationsEt extends AppLocalizations {
   String get asmaMeaning19 => 'Kõigi teadja';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Leevendus';
@@ -1676,5 +1679,6 @@ class AppLocalizationsEt extends AppLocalizations {
   String get asmaMeaning98 => 'Kõige õigem teejuht';
 
   @override
-  String get asmaMeaning99 => 'Patient One';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

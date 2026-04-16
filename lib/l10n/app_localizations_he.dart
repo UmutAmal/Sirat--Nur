@@ -1391,13 +1391,13 @@ class AppLocalizationsHe extends AppLocalizations {
   String get asmaMeaning6 => 'נותן הביטחון';
 
   @override
-  String get asmaMeaning7 => 'השומר';
+  String get asmaMeaning7 => 'השומר המשגיח, הרואה ומגן על כל הבריאה.';
 
   @override
   String get asmaMeaning8 => 'היקר / האדיר ביותר';
 
   @override
-  String get asmaMeaning9 => 'הקומפלר';
+  String get asmaMeaning9 => 'המשקם והכופה ברצונו, שרצונו מתקיים בכוח מושלם.';
 
   @override
   String get asmaMeaning10 => 'הגדולים ביותר';
@@ -1430,10 +1430,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get asmaMeaning19 => 'היודע מכולם';
 
   @override
-  String get asmaMeaning20 => 'המכווץ';
+  String get asmaMeaning20 => 'המחזיק, המצמצם ומונע בחכמה.';
 
   @override
-  String get asmaMeaning21 => 'המשחרר';
+  String get asmaMeaning21 => 'המרחיב, הפותח ומעניק רווחה ושפע בחכמה.';
 
   @override
   String get asmaMeaning22 => 'האבאסר';
@@ -1601,7 +1601,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get asmaMeaning76 => 'הנסתר';
 
   @override
-  String get asmaMeaning77 => 'המושל';
+  String get asmaMeaning77 => 'המגן והמנהל, המנהיג ודואג לכל הבריאה.';
 
   @override
   String get asmaMeaning78 => 'העליון';
@@ -1619,7 +1619,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get asmaMeaning82 => 'הסולח';
 
   @override
-  String get asmaMeaning83 => 'הקלמנט';
+  String get asmaMeaning83 => 'רב החסד והרחמים, מלא חמלה עדינה.';
 
   @override
   String get asmaMeaning84 => 'הבעלים / הריבון של כולם';
@@ -1667,5 +1667,5 @@ class AppLocalizationsHe extends AppLocalizations {
   String get asmaMeaning98 => 'המדריך הכי צדיק';
 
   @override
-  String get asmaMeaning99 => 'המטופל';
+  String get asmaMeaning99 => 'הסבלן, שאינו ממהר להעניש ופועל באורך רוח מושלם.';
 }

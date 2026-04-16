@@ -1410,13 +1410,15 @@ class AppLocalizationsGl extends AppLocalizations {
   String get asmaMeaning6 => 'O dador da seguridade';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'O precioso / o máis poderoso';
 
   @override
-  String get asmaMeaning9 => 'O Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'O máis grande';
@@ -1449,7 +1451,8 @@ class AppLocalizationsGl extends AppLocalizations {
   String get asmaMeaning19 => 'O Coñecedor de Todo';
 
   @override
-  String get asmaMeaning20 => 'O Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'O Alivio';
@@ -1638,7 +1641,8 @@ class AppLocalizationsGl extends AppLocalizations {
   String get asmaMeaning82 => 'O perdoador';
 
   @override
-  String get asmaMeaning83 => 'O Clemente';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'O propietario/soberano de todos';

@@ -1401,7 +1401,8 @@ class AppLocalizationsHu extends AppLocalizations {
   String get asmaMeaning6 => 'A biztonságot nyújtó';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'A drága / A leghatalmasabb';
@@ -1440,7 +1441,8 @@ class AppLocalizationsHu extends AppLocalizations {
   String get asmaMeaning19 => 'A Mindenek Tudója';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'A tehermentesítő';

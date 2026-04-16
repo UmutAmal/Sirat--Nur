@@ -1402,7 +1402,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get asmaMeaning8 => 'મૂલ્યવાન / સૌથી શકિતશાળી';
 
   @override
-  String get asmaMeaning9 => 'The Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'The Greatest';

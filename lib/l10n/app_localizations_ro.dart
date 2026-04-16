@@ -1409,13 +1409,15 @@ class AppLocalizationsRo extends AppLocalizations {
   String get asmaMeaning6 => 'Dătătorul de securitate';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Cel Prețios / Cel Mai Puternic';
 
   @override
-  String get asmaMeaning9 => 'The Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'Cel mai mare';
@@ -1448,7 +1450,8 @@ class AppLocalizationsRo extends AppLocalizations {
   String get asmaMeaning19 => 'Cunoscătorul tuturor';
 
   @override
-  String get asmaMeaning20 => 'Constrictorul';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Alinatorul';
@@ -1637,7 +1640,8 @@ class AppLocalizationsRo extends AppLocalizations {
   String get asmaMeaning82 => 'The Forgiver';
 
   @override
-  String get asmaMeaning83 => 'Clementul';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Proprietarul / Suveranul tuturor';

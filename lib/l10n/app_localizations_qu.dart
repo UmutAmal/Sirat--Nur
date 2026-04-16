@@ -1405,7 +1405,8 @@ class AppLocalizationsQu extends AppLocalizations {
   String get asmaMeaning6 => 'Seguridad nisqa qoq';
 
   @override
-  String get asmaMeaning7 => 'The Guardian nisqa qelqa';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'El Valor / Aswan atiyniyuq';
@@ -1444,7 +1445,8 @@ class AppLocalizationsQu extends AppLocalizations {
   String get asmaMeaning19 => 'Tukuy Yachaq';
 
   @override
-  String get asmaMeaning20 => 'Chay Constrictor nisqa';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Chay Relevador nisqa';
@@ -1633,7 +1635,8 @@ class AppLocalizationsQu extends AppLocalizations {
   String get asmaMeaning82 => 'Pampachaq';
 
   @override
-  String get asmaMeaning83 => 'Clemente sutiyuq runa';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Tukuypa Dueñon / Soberano';

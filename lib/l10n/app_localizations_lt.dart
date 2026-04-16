@@ -1404,7 +1404,8 @@ class AppLocalizationsLt extends AppLocalizations {
   String get asmaMeaning6 => 'Saugumo teikėjas';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Brangiausias / Galingiausias';

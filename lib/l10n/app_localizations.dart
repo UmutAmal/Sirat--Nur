@@ -3000,7 +3000,7 @@ abstract class AppLocalizations {
   /// No description provided for @asmaMeaning7.
   ///
   /// In en, this message translates to:
-  /// **'The Guardian'**
+  /// **'The Watchful Guardian, who observes and safeguards all creation.'**
   String get asmaMeaning7;
 
   /// No description provided for @asmaMeaning8.
@@ -3012,7 +3012,7 @@ abstract class AppLocalizations {
   /// No description provided for @asmaMeaning9.
   ///
   /// In en, this message translates to:
-  /// **'The Compeller'**
+  /// **'The Restorer and Irresistible, whose will prevails with perfect power.'**
   String get asmaMeaning9;
 
   /// No description provided for @asmaMeaning10.
@@ -3078,13 +3078,13 @@ abstract class AppLocalizations {
   /// No description provided for @asmaMeaning20.
   ///
   /// In en, this message translates to:
-  /// **'The Constrictor'**
+  /// **'The Withholder, who narrows and restrains by wisdom.'**
   String get asmaMeaning20;
 
   /// No description provided for @asmaMeaning21.
   ///
   /// In en, this message translates to:
-  /// **'The Reliever'**
+  /// **'The Expander, who opens, eases, and grants abundance by wisdom.'**
   String get asmaMeaning21;
 
   /// No description provided for @asmaMeaning22.
@@ -3420,7 +3420,7 @@ abstract class AppLocalizations {
   /// No description provided for @asmaMeaning77.
   ///
   /// In en, this message translates to:
-  /// **'The Governor'**
+  /// **'The Protecting Patron, who governs and cares for all creation.'**
   String get asmaMeaning77;
 
   /// No description provided for @asmaMeaning78.
@@ -3456,7 +3456,7 @@ abstract class AppLocalizations {
   /// No description provided for @asmaMeaning83.
   ///
   /// In en, this message translates to:
-  /// **'The Clement'**
+  /// **'The Most Kind and Compassionate, full of tender mercy.'**
   String get asmaMeaning83;
 
   /// No description provided for @asmaMeaning84.
@@ -3552,7 +3552,7 @@ abstract class AppLocalizations {
   /// No description provided for @asmaMeaning99.
   ///
   /// In en, this message translates to:
-  /// **'The Patient One'**
+  /// **'The Patient, who does not hasten punishment and acts with perfect forbearance.'**
   String get asmaMeaning99;
 }
 

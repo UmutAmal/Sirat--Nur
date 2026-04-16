@@ -1403,13 +1403,15 @@ class AppLocalizationsMn extends AppLocalizations {
   String get asmaMeaning6 => 'Аюулгүй байдлыг хангагч';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Эрдэнэт / Хамгийн Хүчирхэг';
 
   @override
-  String get asmaMeaning9 => 'The Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'Хамгийн агуу';
@@ -1442,7 +1444,8 @@ class AppLocalizationsMn extends AppLocalizations {
   String get asmaMeaning19 => 'Бүхнийг мэдэгч';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Амраагч';
@@ -1631,7 +1634,8 @@ class AppLocalizationsMn extends AppLocalizations {
   String get asmaMeaning82 => 'Уучлагч';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Бүхний Эзэмшигч/Бүрэн эрхт';

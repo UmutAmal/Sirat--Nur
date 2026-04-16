@@ -1411,7 +1411,8 @@ class AppLocalizationsNl extends AppLocalizations {
   String get asmaMeaning8 => 'De kostbare / de machtigste';
 
   @override
-  String get asmaMeaning9 => 'De Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'De beste';

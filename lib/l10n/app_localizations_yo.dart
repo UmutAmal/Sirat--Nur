@@ -1396,13 +1396,15 @@ class AppLocalizationsYo extends AppLocalizations {
   String get asmaMeaning6 => 'Olufunni Aabo';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Iyebiye / Alagbara julo';
 
   @override
-  String get asmaMeaning9 => 'The Compeller';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'Ti o tobi julọ';
@@ -1435,7 +1437,8 @@ class AppLocalizationsYo extends AppLocalizations {
   String get asmaMeaning19 => 'Olumo Gbogbo';
 
   @override
-  String get asmaMeaning20 => 'Awọn Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'Olugbala';
@@ -1624,7 +1627,8 @@ class AppLocalizationsYo extends AppLocalizations {
   String get asmaMeaning82 => 'Oludariji';
 
   @override
-  String get asmaMeaning83 => 'The Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Olohun / Oba Gbogbo';

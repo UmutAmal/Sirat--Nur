@@ -1401,7 +1401,8 @@ class AppLocalizationsIs extends AppLocalizations {
   String get asmaMeaning6 => 'Sjávarinn um öryggi';
 
   @override
-  String get asmaMeaning7 => 'The Guardian';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Hið dýrmæta / hið voldugasta';
@@ -1440,10 +1441,12 @@ class AppLocalizationsIs extends AppLocalizations {
   String get asmaMeaning19 => 'Þekkjandi allra';
 
   @override
-  String get asmaMeaning20 => 'The Constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
-  String get asmaMeaning21 => 'The Reliever';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'Abaserinn';
@@ -1677,5 +1680,6 @@ class AppLocalizationsIs extends AppLocalizations {
   String get asmaMeaning98 => 'Réttlátasti leiðarvísirinn';
 
   @override
-  String get asmaMeaning99 => 'The Patient One';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

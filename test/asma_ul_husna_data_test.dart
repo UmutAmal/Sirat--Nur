@@ -202,5 +202,36 @@ void main() {
         'The Bringer of Harm',
       );
     });
+
+    test('bundled English high-risk meanings stay contextual', () {
+      final byId = {for (final item in AsmaUlHusnaData.names) item['id']: item};
+      const expectedFragments = {
+        7: 'Watchful Guardian',
+        9: 'Restorer and Irresistible',
+        20: 'Withholder',
+        21: 'Expander',
+        77: 'Protecting Patron',
+        83: 'Most Kind and Compassionate',
+        99: 'does not hasten punishment',
+      };
+      const staleExactMeanings = {
+        7: 'The Guardian',
+        9: 'The Compeller',
+        20: 'The Constrictor',
+        21: 'The Reliever',
+        77: 'The Governor',
+        83: 'The Clement',
+        99: 'The Patient One',
+      };
+
+      for (final entry in expectedFragments.entries) {
+        final meaning =
+            (byId[entry.key]!['translations'] as Map<String, dynamic>)['en']
+                as String;
+
+        expect(meaning, contains(entry.value));
+        expect(meaning, isNot(staleExactMeanings[entry.key]));
+      }
+    });
   });
 }

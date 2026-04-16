@@ -1643,7 +1643,8 @@ class AppLocalizationsNso extends AppLocalizations {
   String get asmaMeaning82 => 'Motshwareledi';
 
   @override
-  String get asmaMeaning83 => 'Motho wa Clement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Mong / Mmuši wa Bohle';
