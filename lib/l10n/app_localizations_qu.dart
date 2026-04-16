@@ -15,7 +15,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get splashTagline => 'Islamic Way of Light';
 
   @override
-  String get home => 'Home';
+  String get home => 'Wasi';
 
   @override
   String get quran => 'Quran';
@@ -27,13 +27,13 @@ class AppLocalizationsQu extends AppLocalizations {
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Calendario nisqa';
 
   @override
   String get settings => 'Ajustes nisqa';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => 'Qatiqnin Mañakuy';
 
   @override
   String get prayerTimes => 'Prayer Times';
@@ -353,13 +353,13 @@ class AppLocalizationsQu extends AppLocalizations {
   String get ibadahTracker => 'Ibadah qatiq';
 
   @override
-  String get fasting => 'Fasting';
+  String get fasting => 'Ayuno';
 
   @override
-  String get quranReading => 'Quran Reading';
+  String get quranReading => 'Quran Ñawinchay';
 
   @override
-  String get prayers => 'Prayers';
+  String get prayers => 'Mañakuykuna';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -378,7 +378,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get dhikrCount => 'Dhikr Count';
 
   @override
-  String get weeklyProgress => 'Weekly Progress';
+  String get weeklyProgress => 'Sapa semana Progreso';
 
   @override
   String get monthlyProgress => 'Monthly Progress';
@@ -387,13 +387,13 @@ class AppLocalizationsQu extends AppLocalizations {
   String get statistics => 'Statistics';
 
   @override
-  String get hijriCalendar => 'Hijri Calendar';
+  String get hijriCalendar => 'Hijri Calendario nisqa';
 
   @override
   String get gregorianCalendar => 'Gregorian Calendar';
 
   @override
-  String get today => 'Today';
+  String get today => 'Kunan';
 
   @override
   String get tomorrow => 'Tomorrow';
@@ -402,7 +402,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get yesterday => 'Yesterday';
 
   @override
-  String get specialDays => 'Special Days';
+  String get specialDays => 'P’unchawkuna Especial';
 
   @override
   String get ramadan => 'Ramadan';
@@ -589,7 +589,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get next => 'Qatiq';
 
   @override
-  String get done => 'Done';
+  String get done => 'Ñam';
 
   @override
   String get onboarding1Title => 'Allin hamusqayki Sirat-ı Nur';

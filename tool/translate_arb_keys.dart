@@ -374,6 +374,17 @@ bool _mustStaySingleLine(String key) {
       key == 'reload' ||
       key == 'checkConnection' ||
       key == 'settings' ||
+      key == 'home' ||
+      key == 'calendar' ||
+      key == 'nextPrayer' ||
+      key == 'quranReading' ||
+      key == 'prayers' ||
+      key == 'fasting' ||
+      key == 'weeklyProgress' ||
+      key == 'hijriCalendar' ||
+      key == 'today' ||
+      key == 'specialDays' ||
+      key == 'done' ||
       key == 'prayerCalculation' ||
       key == 'method' ||
       key == 'madhab' ||

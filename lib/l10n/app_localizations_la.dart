@@ -27,13 +27,13 @@ class AppLocalizationsLa extends AppLocalizations {
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Calendarium';
 
   @override
   String get settings => 'Occasus';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => 'Oratio altera';
 
   @override
   String get prayerTimes => 'Prayer Times';
@@ -351,13 +351,13 @@ class AppLocalizationsLa extends AppLocalizations {
   String get ibadahTracker => 'Ibadah Tracker';
 
   @override
-  String get fasting => 'Fasting';
+  String get fasting => 'Ieiunium';
 
   @override
-  String get quranReading => 'Quran Reading';
+  String get quranReading => 'Quran Lectio';
 
   @override
-  String get prayers => 'Prayers';
+  String get prayers => 'Orationes';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -391,7 +391,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get gregorianCalendar => 'Gregorian Calendar';
 
   @override
-  String get today => 'Today';
+  String get today => 'hodie';
 
   @override
   String get tomorrow => 'Tomorrow';
@@ -400,7 +400,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get yesterday => 'Yesterday';
 
   @override
-  String get specialDays => 'Special Days';
+  String get specialDays => 'Specialis diebus';
 
   @override
   String get ramadan => 'Ramadan';

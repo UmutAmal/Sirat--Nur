@@ -15,7 +15,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get splashTagline => 'イスラムの光の道';
 
   @override
-  String get home => 'Home';
+  String get home => 'ホーム';
 
   @override
   String get quran => 'Quran';
@@ -27,13 +27,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get zikr => 'ジクル';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'カレンダー';
 
   @override
   String get settings => '設定';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => '次の礼拝';
 
   @override
   String get prayerTimes => 'Prayer Times';
@@ -349,13 +349,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get ibadahTracker => 'イバーダ記録';
 
   @override
-  String get fasting => 'Fasting';
+  String get fasting => '断食';
 
   @override
-  String get quranReading => 'Quran Reading';
+  String get quranReading => 'クルアーンの読誦';
 
   @override
-  String get prayers => 'Prayers';
+  String get prayers => '礼拝';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -374,7 +374,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get dhikrCount => 'Dhikr Count';
 
   @override
-  String get weeklyProgress => 'Weekly Progress';
+  String get weeklyProgress => '週ごとの進捗状況';
 
   @override
   String get monthlyProgress => 'Monthly Progress';
@@ -383,13 +383,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get statistics => 'Statistics';
 
   @override
-  String get hijriCalendar => 'Hijri Calendar';
+  String get hijriCalendar => 'ヒジュラ暦';
 
   @override
   String get gregorianCalendar => 'Gregorian Calendar';
 
   @override
-  String get today => 'Today';
+  String get today => '今日';
 
   @override
   String get tomorrow => 'Tomorrow';
@@ -398,7 +398,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get yesterday => 'Yesterday';
 
   @override
-  String get specialDays => 'Special Days';
+  String get specialDays => '特別な日';
 
   @override
   String get ramadan => 'Ramadan';
@@ -583,7 +583,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get next => '次へ';
 
   @override
-  String get done => 'Done';
+  String get done => '完了';
 
   @override
   String get onboarding1Title => 'シラット・ヌールへようこそ';

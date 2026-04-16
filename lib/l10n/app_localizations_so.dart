@@ -15,7 +15,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get splashTagline => 'Habka Iftiinka Islaamka';
 
   @override
-  String get home => 'Home';
+  String get home => 'Guriga';
 
   @override
   String get quran => 'Quran';
@@ -27,13 +27,13 @@ class AppLocalizationsSo extends AppLocalizations {
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Kalandarka';
 
   @override
   String get settings => 'Dejinta';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => 'Ducada xigta';
 
   @override
   String get prayerTimes => 'Prayer Times';
@@ -352,13 +352,13 @@ class AppLocalizationsSo extends AppLocalizations {
   String get ibadahTracker => 'Cibaado Tracker';
 
   @override
-  String get fasting => 'Fasting';
+  String get fasting => 'Soonka';
 
   @override
-  String get quranReading => 'Quran Reading';
+  String get quranReading => 'Quraan Akhriska';
 
   @override
-  String get prayers => 'Prayers';
+  String get prayers => 'Ducada';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -377,7 +377,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get dhikrCount => 'Dhikr Count';
 
   @override
-  String get weeklyProgress => 'Weekly Progress';
+  String get weeklyProgress => 'Horumarka Todobaadlaha ah';
 
   @override
   String get monthlyProgress => 'Monthly Progress';
@@ -392,7 +392,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get gregorianCalendar => 'Gregorian Calendar';
 
   @override
-  String get today => 'Today';
+  String get today => 'Maanta';
 
   @override
   String get tomorrow => 'Tomorrow';
@@ -401,7 +401,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get yesterday => 'Yesterday';
 
   @override
-  String get specialDays => 'Special Days';
+  String get specialDays => 'Maalmaha gaarka ah';
 
   @override
   String get ramadan => 'Ramadan';
@@ -588,7 +588,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get next => 'Xiga';
 
   @override
-  String get done => 'Done';
+  String get done => 'La sameeyay';
 
   @override
   String get onboarding1Title => 'Ku soo dhawoow Sirat-ı Nur';

@@ -298,6 +298,33 @@ void main() {
       expect(cacheClearedValue, 'Onbellek temizlendi');
     });
 
+    test('rejects multiline home tracking shell output', () {
+      final homeValue = resolveTranslatedArbValue(
+        key: 'home',
+        source: 'Home',
+        currentValue: 'Ana Sayfa',
+        candidate: 'means the following.\nAna Sayfa',
+      );
+
+      final progressValue = resolveTranslatedArbValue(
+        key: 'weeklyProgress',
+        source: 'Weekly Progress',
+        currentValue: 'Haftalik Ilerleme',
+        candidate: 'means the following.\nHaftalik Ilerleme',
+      );
+
+      final doneValue = resolveTranslatedArbValue(
+        key: 'done',
+        source: 'Done',
+        currentValue: 'Tamamlandi',
+        candidate: 'means the following.\nTamamlandi',
+      );
+
+      expect(homeValue, 'Ana Sayfa');
+      expect(progressValue, 'Haftalik Ilerleme');
+      expect(doneValue, 'Tamamlandi');
+    });
+
     test('rejects multiline settings about output', () {
       final value = resolveTranslatedArbValue(
         key: 'shareApp',

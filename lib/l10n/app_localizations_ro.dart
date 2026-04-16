@@ -15,7 +15,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get splashTagline => 'Calea Islamică a Luminii';
 
   @override
-  String get home => 'Home';
+  String get home => 'Acasă';
 
   @override
   String get quran => 'Quran';
@@ -33,7 +33,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get settings => 'Setări';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => 'Următoarea rugăciune';
 
   @override
   String get prayerTimes => 'Prayer Times';
@@ -354,13 +354,13 @@ class AppLocalizationsRo extends AppLocalizations {
   String get ibadahTracker => 'Ibadah Tracker';
 
   @override
-  String get fasting => 'Fasting';
+  String get fasting => 'post';
 
   @override
-  String get quranReading => 'Quran Reading';
+  String get quranReading => 'Citirea Coranului';
 
   @override
-  String get prayers => 'Prayers';
+  String get prayers => 'Rugăciuni';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -379,7 +379,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get dhikrCount => 'Dhikr Count';
 
   @override
-  String get weeklyProgress => 'Weekly Progress';
+  String get weeklyProgress => 'Progresul săptămânal';
 
   @override
   String get monthlyProgress => 'Monthly Progress';
@@ -388,13 +388,13 @@ class AppLocalizationsRo extends AppLocalizations {
   String get statistics => 'Statistics';
 
   @override
-  String get hijriCalendar => 'Hijri Calendar';
+  String get hijriCalendar => 'Calendarul Hijri';
 
   @override
   String get gregorianCalendar => 'Gregorian Calendar';
 
   @override
-  String get today => 'Today';
+  String get today => 'Astăzi';
 
   @override
   String get tomorrow => 'Tomorrow';
@@ -403,7 +403,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get yesterday => 'Yesterday';
 
   @override
-  String get specialDays => 'Special Days';
+  String get specialDays => 'Zile speciale';
 
   @override
   String get ramadan => 'Ramadan';
@@ -590,7 +590,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get next => 'În continuare';
 
   @override
-  String get done => 'Done';
+  String get done => 'Gata';
 
   @override
   String get onboarding1Title => 'Bine ați venit la Sirat-ı Nur';

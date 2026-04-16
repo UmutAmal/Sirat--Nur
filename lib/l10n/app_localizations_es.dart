@@ -15,7 +15,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get splashTagline => 'Camino Islámico de la Luz';
 
   @override
-  String get home => 'Hogar';
+  String get home => 'Inicio';
 
   @override
   String get quran => 'Corán';
@@ -359,7 +359,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get quranReading => 'Lectura del Corán';
 
   @override
-  String get prayers => 'Rezo';
+  String get prayers => 'Oraciones';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -402,7 +402,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get yesterday => 'Ayer';
 
   @override
-  String get specialDays => 'Días Especiales';
+  String get specialDays => 'Días especiales';
 
   @override
   String get ramadan => 'Ramadán';

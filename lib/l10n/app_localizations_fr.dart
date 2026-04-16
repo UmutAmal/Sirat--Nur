@@ -15,7 +15,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get splashTagline => 'Voie Islamique de la Lumière';
 
   @override
-  String get home => 'Maison';
+  String get home => 'Accueil';
 
   @override
   String get quran => 'Coran';
@@ -403,7 +403,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get yesterday => 'Hier';
 
   @override
-  String get specialDays => 'Journées spéciales';
+  String get specialDays => 'Jours spéciaux';
 
   @override
   String get ramadan => 'Ramadan';
@@ -590,7 +590,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get next => 'Suivant';
 
   @override
-  String get done => 'Fait';
+  String get done => 'Terminé';
 
   @override
   String get onboarding1Title => 'Bienvenue sur Sirat-ı Nur';

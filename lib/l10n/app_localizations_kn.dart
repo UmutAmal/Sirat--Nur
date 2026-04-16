@@ -15,7 +15,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get splashTagline => 'ಇಸ್ಲಾಮಿಕ್ ವೇ ಆಫ್ ಲೈಟ್';
 
   @override
-  String get home => 'Home';
+  String get home => 'ಮನೆ';
 
   @override
   String get quran => 'Quran';
@@ -27,13 +27,13 @@ class AppLocalizationsKn extends AppLocalizations {
   String get zikr => 'ಜಿಕ್ರ್';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'ಕ್ಯಾಲೆಂಡರ್';
 
   @override
   String get settings => 'ಸೆಟ್ಟಿಂಗ್‌ಗಳು';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => 'ಮುಂದಿನ ಪ್ರಾರ್ಥನೆ';
 
   @override
   String get prayerTimes => 'Prayer Times';
@@ -351,13 +351,13 @@ class AppLocalizationsKn extends AppLocalizations {
   String get ibadahTracker => 'ಇಬಾದಾ ಟ್ರ್ಯಾಕರ್';
 
   @override
-  String get fasting => 'Fasting';
+  String get fasting => 'ಉಪವಾಸ';
 
   @override
-  String get quranReading => 'Quran Reading';
+  String get quranReading => 'ಕುರಾನ್ ಓದುವಿಕೆ';
 
   @override
-  String get prayers => 'Prayers';
+  String get prayers => 'ಪ್ರಾರ್ಥನೆಗಳು';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -376,7 +376,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get dhikrCount => 'Dhikr Count';
 
   @override
-  String get weeklyProgress => 'Weekly Progress';
+  String get weeklyProgress => 'ಸಾಪ್ತಾಹಿಕ ಪ್ರಗತಿ';
 
   @override
   String get monthlyProgress => 'Monthly Progress';
@@ -385,13 +385,13 @@ class AppLocalizationsKn extends AppLocalizations {
   String get statistics => 'Statistics';
 
   @override
-  String get hijriCalendar => 'Hijri Calendar';
+  String get hijriCalendar => 'ಹಿಜ್ರಿ ಕ್ಯಾಲೆಂಡರ್';
 
   @override
   String get gregorianCalendar => 'Gregorian Calendar';
 
   @override
-  String get today => 'Today';
+  String get today => 'ಇಂದು';
 
   @override
   String get tomorrow => 'Tomorrow';
@@ -400,7 +400,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get yesterday => 'Yesterday';
 
   @override
-  String get specialDays => 'Special Days';
+  String get specialDays => 'ವಿಶೇಷ ದಿನಗಳು';
 
   @override
   String get ramadan => 'Ramadan';
@@ -586,7 +586,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get next => 'ಮುಂದೆ';
 
   @override
-  String get done => 'Done';
+  String get done => 'ಮುಗಿದಿದೆ';
 
   @override
   String get onboarding1Title => 'Sirat-ı Nur ಗೆ ಸುಸ್ವಾಗತ';

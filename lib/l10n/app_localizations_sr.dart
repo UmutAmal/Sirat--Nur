@@ -15,7 +15,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get splashTagline => 'Islamic Way of Light';
 
   @override
-  String get home => 'Home';
+  String get home => 'Хоме';
 
   @override
   String get quran => 'Quran';
@@ -27,13 +27,13 @@ class AppLocalizationsSr extends AppLocalizations {
   String get zikr => 'Зикр';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Календар';
 
   @override
   String get settings => 'Подешавања';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => 'Следећа молитва';
 
   @override
   String get prayerTimes => 'Prayer Times';
@@ -351,13 +351,13 @@ class AppLocalizationsSr extends AppLocalizations {
   String get ibadahTracker => 'Ибадах Трацкер';
 
   @override
-  String get fasting => 'Fasting';
+  String get fasting => 'Пости';
 
   @override
-  String get quranReading => 'Quran Reading';
+  String get quranReading => 'Читање Курана';
 
   @override
-  String get prayers => 'Prayers';
+  String get prayers => 'Молитве';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -376,7 +376,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get dhikrCount => 'Dhikr Count';
 
   @override
-  String get weeklyProgress => 'Weekly Progress';
+  String get weeklyProgress => 'Недељни напредак';
 
   @override
   String get monthlyProgress => 'Monthly Progress';
@@ -385,13 +385,13 @@ class AppLocalizationsSr extends AppLocalizations {
   String get statistics => 'Statistics';
 
   @override
-  String get hijriCalendar => 'Hijri Calendar';
+  String get hijriCalendar => 'Хиџретски календар';
 
   @override
   String get gregorianCalendar => 'Gregorian Calendar';
 
   @override
-  String get today => 'Today';
+  String get today => 'данас';
 
   @override
   String get tomorrow => 'Tomorrow';
@@ -400,7 +400,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get yesterday => 'Yesterday';
 
   @override
-  String get specialDays => 'Special Days';
+  String get specialDays => 'Посебни дани';
 
   @override
   String get ramadan => 'Ramadan';
@@ -587,7 +587,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get next => 'Следеће';
 
   @override
-  String get done => 'Done';
+  String get done => 'Готово';
 
   @override
   String get onboarding1Title => 'Добродошли у Сират-ı Нур';

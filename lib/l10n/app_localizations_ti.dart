@@ -15,7 +15,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get splashTagline => 'እስላማዊ መንገዲ ብርሃን';
 
   @override
-  String get home => 'Home';
+  String get home => 'ገዛ';
 
   @override
   String get quran => 'Quran';

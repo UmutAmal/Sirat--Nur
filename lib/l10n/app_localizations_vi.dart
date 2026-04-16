@@ -15,7 +15,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get splashTagline => 'Con đường ánh sáng Hồi giáo';
 
   @override
-  String get home => 'Home';
+  String get home => 'Trang chủ';
 
   @override
   String get quran => 'Quran';
@@ -27,13 +27,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get zikr => 'Dhikr';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Lịch';
 
   @override
   String get settings => 'Cài đặt';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => 'Giờ cầu nguyện tiếp theo';
 
   @override
   String get prayerTimes => 'Prayer Times';
@@ -351,13 +351,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get ibadahTracker => 'Theo dõi Ibadah';
 
   @override
-  String get fasting => 'Fasting';
+  String get fasting => 'Nhịn chay';
 
   @override
-  String get quranReading => 'Quran Reading';
+  String get quranReading => 'Đọc Kinh Qur\'an';
 
   @override
-  String get prayers => 'Prayers';
+  String get prayers => 'Các buổi cầu nguyện';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -376,7 +376,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get dhikrCount => 'Dhikr Count';
 
   @override
-  String get weeklyProgress => 'Weekly Progress';
+  String get weeklyProgress => 'Tiến độ hàng tuần';
 
   @override
   String get monthlyProgress => 'Monthly Progress';
@@ -385,13 +385,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get statistics => 'Statistics';
 
   @override
-  String get hijriCalendar => 'Hijri Calendar';
+  String get hijriCalendar => 'Lịch Hijri';
 
   @override
   String get gregorianCalendar => 'Gregorian Calendar';
 
   @override
-  String get today => 'Today';
+  String get today => 'Hôm nay';
 
   @override
   String get tomorrow => 'Tomorrow';
@@ -400,7 +400,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get yesterday => 'Yesterday';
 
   @override
-  String get specialDays => 'Special Days';
+  String get specialDays => 'Ngày đặc biệt';
 
   @override
   String get ramadan => 'Ramadan';
@@ -587,7 +587,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get next => 'Tiếp theo';
 
   @override
-  String get done => 'Done';
+  String get done => 'Xong';
 
   @override
   String get onboarding1Title => 'Chào mừng đến với Sirat-ı Nur';

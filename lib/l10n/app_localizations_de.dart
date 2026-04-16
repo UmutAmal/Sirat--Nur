@@ -15,7 +15,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get splashTagline => 'Islamischer Weg des Lichts';
 
   @override
-  String get home => 'Heim';
+  String get home => 'Startseite';
 
   @override
   String get quran => 'Koran';
@@ -378,7 +378,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get dhikrCount => 'Dhikr-Zählung';
 
   @override
-  String get weeklyProgress => 'Wöchentlicher Fortschritt';
+  String get weeklyProgress => 'Wochenfortschritt';
 
   @override
   String get monthlyProgress => 'Monatlicher Fortschritt';
@@ -387,7 +387,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get statistics => 'Statistiken';
 
   @override
-  String get hijriCalendar => 'Hijri-Kalender';
+  String get hijriCalendar => 'Hidschri-Kalender';
 
   @override
   String get gregorianCalendar => 'Gregorianischer Kalender';

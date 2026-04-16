@@ -15,7 +15,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get splashTagline => '이슬람의 빛의 길';
 
   @override
-  String get home => 'Home';
+  String get home => '홈';
 
   @override
   String get quran => 'Quran';
@@ -27,13 +27,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get zikr => '지크르';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => '달력';
 
   @override
   String get settings => '설정';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => '다음기도';
 
   @override
   String get prayerTimes => 'Prayer Times';
@@ -348,13 +348,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get ibadahTracker => '이바다 트래커';
 
   @override
-  String get fasting => 'Fasting';
+  String get fasting => '단식';
 
   @override
-  String get quranReading => 'Quran Reading';
+  String get quranReading => '꾸란 읽기';
 
   @override
-  String get prayers => 'Prayers';
+  String get prayers => '기도';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -373,7 +373,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get dhikrCount => 'Dhikr Count';
 
   @override
-  String get weeklyProgress => 'Weekly Progress';
+  String get weeklyProgress => '주간 진행 상황';
 
   @override
   String get monthlyProgress => 'Monthly Progress';
@@ -382,13 +382,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get statistics => 'Statistics';
 
   @override
-  String get hijriCalendar => 'Hijri Calendar';
+  String get hijriCalendar => '회교식 달력';
 
   @override
   String get gregorianCalendar => 'Gregorian Calendar';
 
   @override
-  String get today => 'Today';
+  String get today => '오늘';
 
   @override
   String get tomorrow => 'Tomorrow';
@@ -397,7 +397,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get yesterday => 'Yesterday';
 
   @override
-  String get specialDays => 'Special Days';
+  String get specialDays => '특별한 날';
 
   @override
   String get ramadan => 'Ramadan';
@@ -582,7 +582,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get next => '다음';
 
   @override
-  String get done => 'Done';
+  String get done => '완료';
 
   @override
   String get onboarding1Title => 'Sirat-ı Nur에 오신 것을 환영합니다.';

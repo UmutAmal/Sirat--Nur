@@ -15,7 +15,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get splashTagline => 'इस्लामिक प्रकाश मार्ग';
 
   @override
-  String get home => 'Home';
+  String get home => 'गृहम्';
 
   @override
   String get quran => 'Quran';

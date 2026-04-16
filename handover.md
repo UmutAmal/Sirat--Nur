@@ -8713,3 +8713,61 @@
 
 ### Sonraki Adım
 - Commit/push sonrasi yeni dongude aktif l10n fallback taramasini yenile; `hijriCalendar`, `weeklyProgress`, `quranReading`, `prayers`, `fasting`, `calendar`, `searchHint` veya `qiblaDirection` gibi gorunur yuzeylerden en yuksek riskli tek cluster sec.
+
+## 2026-04-16 TUR-227 — Localize Home, Tracking and Calendar Shell Copy
+
+### Yapılan İşlem
+- Ana ekran, alt navigasyon, ibadet takibi, analiz ve takvim yuzeylerinde kullanilan `home`, `calendar`, `nextPrayer`, `quranReading`, `prayers`, `fasting`, `weeklyProgress`, `hijriCalendar`, `today`, `specialDays`, `done` anahtarlari guvenli ARB batch'i ile guncellendi.
+- `flutter gen-l10n` calistirilarak generated `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Safe/priority locale setinde `tr`, `de`, `fr`, `es`, `ar`, `da`, `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi`, `zh`, `zh_CN`, `zh_TW` icin bu cekirdek UI anahtarlarinda Ingilizce fallback kalmadigi dogrulandi.
+- Otomatik cevirinin zayif urettigi degerler elle duzeltildi: `fr home=Accueil`, `es home=Inicio`, `zh/zh_CN home=首页`, `zh_TW home=首頁`, `ja hijriCalendar=ヒジュラ暦`, `zh/zh_CN fasting=斋戒`, `zh_TW fasting=齋戒`, `vi fasting=Nhịn chay` gibi baglama uygun kopyalar uygulandi.
+- `tool\translate_arb_keys.dart` single-line guard listesine bu cekirdek shell anahtarlari eklendi.
+- `test\arb_ui_localization_test.dart` icine safe/priority fallback guard'i ve bilinen zayif ceviri kalintisi guard'i eklendi.
+- `test\translate_arb_keys_test.dart` icine multiline home/tracking shell output regresyon testi eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\common\main_skeleton.dart:52` alt navigasyonda `l10n.home` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\common\main_skeleton.dart:72` alt navigasyonda `l10n.calendar` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart:259` ana sayfada `l10n.nextPrayer` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\analytics\analytics_page.dart:27` analiz yuzeyinde `l10n.weeklyProgress` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\analytics\analytics_page.dart:37-39` analiz ozetinde `l10n.prayers` ve `l10n.fasting` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\calendar\calendar_page.dart:90`, `A:\Way of Allah\sirat_i_nur\lib\features\calendar\calendar_page.dart:148`, `A:\Way of Allah\sirat_i_nur\lib\features\calendar\calendar_page.dart:403` takvim yuzeyinde `l10n.calendar`, `l10n.hijriCalendar`, `l10n.specialDays` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\tracker\tracker_page.dart:122-258` ibadet takip yuzeyinde `l10n.prayers`, `l10n.fasting`, `l10n.quranReading`, `l10n.today`, `l10n.done` kullaniyor.
+- TUR-227 oncesi fallback taramasinda bu cekirdek anahtarlar `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi` safe locale setinde app_en ile birebir ayniydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe/priority locale setinde alt navigasyon, ana sayfa, takvim, analiz ve ibadet takip shell metinlerinde Ingilizce fallback riski kapandi.
+- Bilinen zayif makine cevirileri icin regresyon bariyeri eklendi; `known_bad_hits=[]` taramasi PASS.
+- Single-line guard ile kisa shell etiketlerinde batch debris/newline riski kapatildi.
+- Kalan tum-locale birebir Ingilizce degerler cogunlukla ceviri servisinin guvenli aday uretmedigi nadir/legacy locale grubunda birakildi; sahte veya uydurma ceviri yazilmadi. TUR-227 sonrasi toplam fallback sayilari: `home 66`, `calendar 67`, `nextPrayer 65`, `quranReading 66`, `prayers 65`, `fasting 65`, `weeklyProgress 68`, `hijriCalendar 70`, `today 65`, `specialDays 65`, `done 66`.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart` PASS (`68/68`)
+- UI odak test: `flutter test test\features\common\main_skeleton_test.dart test\features\analytics\analytics_page_test.dart test\features\calendar\calendar_page_test.dart test\features\tracker\tracker_page_test.dart` PASS
+- Safe fallback taramasi PASS: hedef home/tracking/calendar shell anahtarlarinda `safe_same=[]`
+- Single-line taramasi PASS: hedef shell anahtarlarinda `newline=[]`
+- Bilinen zayif ceviri taramasi PASS: `known_bad_hits=[]`
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`405/405`)
+- `flutter gen-l10n` PASS
+
+### Risk Değişimi
+- Safe/priority locale home/tracking/calendar shell fallback riski: `8/25 -> 2/25`
+- Zayif makine cevirisi riski: `12/25 -> 3/25`
+- Shell etiketlerinde multiline/batch debris riski: `10/25 -> 3/25`
+- Tum-locale nadir/legacy fallback riski: `8/25 -> 5/25`
+
+### Rollback Planı
+- `lib\l10n\app_*.arb`, `lib\l10n\app_localizations_*.dart`, `test\arb_ui_localization_test.dart`, `test\translate_arb_keys_test.dart` ve `tool\translate_arb_keys.dart` icindeki TUR-227 degisiklikleri geri alinir; production Dart UI logic degismedigi icin runtime rollback dar kapsamli kalir.
+
+### Sonraki Adım
+- Commit/push sonrasi yeni dongude aktif l10n fallback taramasini yenile; `qiblaDirection`, `compass`, `turnDevice`, `qiblaFound`, `search`, `searchHint`, `retry`, `save`, `addBookmark`, `removeBookmark`, `downloading` gibi gorunur yuzeylerden en yuksek riskli tek cluster sec.

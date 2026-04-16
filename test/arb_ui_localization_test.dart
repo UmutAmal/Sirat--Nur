@@ -81,6 +81,84 @@ void main() {
     );
 
     test(
+      'safe priority locales do not fall back to English for home tracking and calendar shell copy',
+      () {
+        const safeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'da',
+          'he',
+          'ja',
+          'nb',
+          'nn',
+          'no',
+          'pt',
+          'ru',
+          'vi',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const localizedKeys = [
+          'home',
+          'calendar',
+          'nextPrayer',
+          'quranReading',
+          'prayers',
+          'fasting',
+          'weeklyProgress',
+          'hijriCalendar',
+          'today',
+          'specialDays',
+          'done',
+        ];
+
+        for (final locale in safeLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
+    test('safe priority home shell copy avoids known mistranslations', () {
+      const knownBadValues = {
+        'de': {'home': 'Heim', 'hijriCalendar': 'Hijri-Kalender'},
+        'fr': {'home': 'Maison', 'specialDays': 'Journées spéciales'},
+        'es': {'home': 'Hogar', 'prayers': 'Rezo'},
+        'he': {'home': 'בית', 'quranReading': 'קריאת קוראן'},
+        'ja': {'hijriCalendar': 'ヒジュラ語カレンダー', 'prayers': '祈り'},
+        'pt': {'hijriCalendar': 'Calendário islâmico'},
+        'vi': {'fasting': 'Ăn chay', 'prayers': 'Lời cầu nguyện'},
+        'zh': {'home': '家', 'prayers': '祈祷'},
+        'zh_CN': {'home': '家', 'prayers': '祈祷'},
+        'zh_TW': {'home': '家', 'prayers': '祈禱'},
+      };
+
+      for (final localeEntry in knownBadValues.entries) {
+        final arb = _readArb('lib/l10n/app_${localeEntry.key}.arb');
+
+        for (final badEntry in localeEntry.value.entries) {
+          expect(
+            arb[badEntry.key],
+            isNot(badEntry.value),
+            reason:
+                'app_${localeEntry.key}.arb kept a known weak translation for ${badEntry.key}',
+          );
+        }
+      }
+    });
+
+    test(
       'priority locales do not fall back to English for diagnostics labels',
       () {
         const localizedKeys = [

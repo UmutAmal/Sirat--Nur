@@ -15,7 +15,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get splashTagline => '伊斯兰之光之路';
 
   @override
-  String get home => '家';
+  String get home => '首页';
 
   @override
   String get quran => '古兰经';
@@ -33,7 +33,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settings => '设置';
 
   @override
-  String get nextPrayer => '下一个祷告';
+  String get nextPrayer => '下一次礼拜';
 
   @override
   String get prayerTimes => '祈祷时间';
@@ -342,13 +342,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get ibadahTracker => '伊巴达记录';
 
   @override
-  String get fasting => '禁食';
+  String get fasting => '斋戒';
 
   @override
-  String get quranReading => '古兰经阅读';
+  String get quranReading => '《古兰经》阅读';
 
   @override
-  String get prayers => '祈祷';
+  String get prayers => '礼拜';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -376,7 +376,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get statistics => '统计数据';
 
   @override
-  String get hijriCalendar => '回历';
+  String get hijriCalendar => '伊斯兰历';
 
   @override
   String get gregorianCalendar => '公历';
@@ -391,7 +391,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get yesterday => '昨天';
 
   @override
-  String get specialDays => '特别的日子';
+  String get specialDays => '特别日子';
 
   @override
   String get ramadan => '斋月';
@@ -575,7 +575,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get next => '下一步';
 
   @override
-  String get done => '完毕';
+  String get done => '完成';
 
   @override
   String get onboarding1Title => '欢迎使用 Sirat-ı Nur';
@@ -1651,7 +1651,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get splashTagline => '伊斯兰之光之路';
 
   @override
-  String get home => '家';
+  String get home => '首页';
 
   @override
   String get quran => '古兰经';
@@ -1669,7 +1669,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get settings => '设置';
 
   @override
-  String get nextPrayer => '下一个祷告';
+  String get nextPrayer => '下一次礼拜';
 
   @override
   String get prayerTimes => '祈祷时间';
@@ -1978,13 +1978,13 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get ibadahTracker => '伊巴达记录';
 
   @override
-  String get fasting => '禁食';
+  String get fasting => '斋戒';
 
   @override
-  String get quranReading => '古兰经阅读';
+  String get quranReading => '《古兰经》阅读';
 
   @override
-  String get prayers => '祈祷';
+  String get prayers => '礼拜';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -2012,7 +2012,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get statistics => '统计数据';
 
   @override
-  String get hijriCalendar => '回历';
+  String get hijriCalendar => '伊斯兰历';
 
   @override
   String get gregorianCalendar => '公历';
@@ -2027,7 +2027,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get yesterday => '昨天';
 
   @override
-  String get specialDays => '特别的日子';
+  String get specialDays => '特别日子';
 
   @override
   String get ramadan => '斋月';
@@ -2211,7 +2211,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get next => '下一步';
 
   @override
-  String get done => '完毕';
+  String get done => '完成';
 
   @override
   String get onboarding1Title => '欢迎使用 Sirat-ı Nur';
@@ -3287,7 +3287,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get splashTagline => '伊斯蘭教之光之路';
 
   @override
-  String get home => '家';
+  String get home => '首頁';
 
   @override
   String get quran => '古蘭經';
@@ -3305,7 +3305,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get settings => '設定';
 
   @override
-  String get nextPrayer => '下一個禱告';
+  String get nextPrayer => '下一次禮拜';
 
   @override
   String get prayerTimes => '祈禱時間';
@@ -3614,13 +3614,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get ibadahTracker => '伊巴達記錄';
 
   @override
-  String get fasting => '禁食';
+  String get fasting => '齋戒';
 
   @override
-  String get quranReading => '古蘭經閱讀';
+  String get quranReading => '《古蘭經》閱讀';
 
   @override
-  String get prayers => '祈禱';
+  String get prayers => '禮拜';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -3648,7 +3648,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get statistics => '統計數據';
 
   @override
-  String get hijriCalendar => '回曆';
+  String get hijriCalendar => '伊斯蘭曆';
 
   @override
   String get gregorianCalendar => '公曆';
@@ -3663,7 +3663,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get yesterday => '昨天';
 
   @override
-  String get specialDays => '特別的日子';
+  String get specialDays => '特別日子';
 
   @override
   String get ramadan => '齋戒月';
@@ -3847,7 +3847,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get next => '下一步';
 
   @override
-  String get done => '完畢';
+  String get done => '完成';
 
   @override
   String get onboarding1Title => '歡迎使用 Sirat-ı Nur';

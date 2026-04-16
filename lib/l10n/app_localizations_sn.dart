@@ -15,7 +15,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get splashTagline => 'Nzira yechiIslam yeChiedza';
 
   @override
-  String get home => 'Home';
+  String get home => 'Kumba';
 
   @override
   String get quran => 'Quran';
@@ -33,7 +33,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get settings => 'Settings';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => 'Munamato Unotevera';
 
   @override
   String get prayerTimes => 'Prayer Times';
@@ -350,13 +350,13 @@ class AppLocalizationsSn extends AppLocalizations {
   String get ibadahTracker => 'Ibadah Tracker';
 
   @override
-  String get fasting => 'Fasting';
+  String get fasting => 'Kutsanya';
 
   @override
-  String get quranReading => 'Quran Reading';
+  String get quranReading => 'Kuverenga Korani';
 
   @override
-  String get prayers => 'Prayers';
+  String get prayers => 'Minamato';
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
@@ -375,7 +375,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get dhikrCount => 'Dhikr Count';
 
   @override
-  String get weeklyProgress => 'Weekly Progress';
+  String get weeklyProgress => 'Kufambira mberi Kwevhiki Nevhiki';
 
   @override
   String get monthlyProgress => 'Monthly Progress';
@@ -390,7 +390,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get gregorianCalendar => 'Gregorian Calendar';
 
   @override
-  String get today => 'Today';
+  String get today => 'Nhasi';
 
   @override
   String get tomorrow => 'Tomorrow';
@@ -399,7 +399,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get yesterday => 'Yesterday';
 
   @override
-  String get specialDays => 'Special Days';
+  String get specialDays => 'Mazuva Akakosha';
 
   @override
   String get ramadan => 'Ramadan';
@@ -586,7 +586,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get next => 'Next';
 
   @override
-  String get done => 'Done';
+  String get done => 'Ndapedza';
 
   @override
   String get onboarding1Title => 'Kugamuchirwa kuSirat-ı Nur';
