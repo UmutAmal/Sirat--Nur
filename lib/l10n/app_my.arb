@@ -350,7 +350,7 @@
   "zakatCashZakat": "ငွေသား Zakat",
   "zakatBusinessZakat": "စီးပွားရေး Zakat",
   "zakatInvestmentZakat": "Zakat ရင်းနှီးမြှုပ်နှံမှု",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! ငါက မင်းရဲ့အစ္စလာမ့်လက်ထောက်ပါ။ ဆုတောင်းခြင်း၊ အစာရှောင်ခြင်း၊ zakat သို့မဟုတ် အစ္စလာမ့်အကြောင်းအရာတစ်ခုခုအကြောင်း ကျွန်ုပ်အား မေးပါ။",
   "chatbotLimitReached": "နေ့စဉ်မေးမြန်းမှု ကန့်သတ်ချက် ပြည့်သွားပါပြီ။ အကန့်အသတ်မရှိအတွက် Premium သို့ အဆင့်မြှင့်ပါ။",
   "chatbotErrorMsg": "တုံ့ပြန်မှု မထုတ်နိုင်ခဲ့ပါ။ ထပ်စမ်းကြည့်ပါ။",
   "chatbotOfflinePrompt": "စိစစ်ပြီး အော့ဖ်လိုင်းအစ္စလာမ့်အသိပညာအခြေခံကို စုစည်းထားဆဲဖြစ်သည်။ အော့ဖ်လိုင်းအလှည့်ကျကို ယခုဖွင့်နိုင်သော်လည်း မူရင်းဒေတာအတွဲအဆင်သင့်မဖြစ်မီအထိ ကန့်သတ်ဘေးကင်းသောစာတိုများကိုသာ ပြသပါမည်။\n\nအော့ဖ်လိုင်း လှည့်စားမှုကို ဖွင့်လိုပါသလား။",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "မေးခွန်းတစ်ခုမေးပါ...",
+  "chatbotThinking": "တွေးရင်း...",
   "sukunMixerSubtitle": "သဘာဝနှင့် ကုရ်အာန် ရောသမမွှေပါ။",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (သဘာဝ)",

@@ -350,7 +350,7 @@
   "zakatCashZakat": "Nyiaj Zakat",
   "zakatBusinessZakat": "Lag luam Zakat",
   "zakatInvestmentZakat": "Kev nqis peev Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Kuv yog koj tus pab cuam Islamic. Nug kuv txog kev thov Vajtswv, yoo mov, zakat, lossis lwm yam lus Islamic.",
   "chatbotLimitReached": "Cov lus nug txhua hnub mus txog qhov txwv. Hloov kho mus rau Premium tsis txwv.",
   "chatbotErrorMsg": "Kuv tsis tuaj yeem tsim cov lus teb. Thov rov sim dua.",
   "chatbotOfflinePrompt": "Lub hauv paus kev paub txog kev paub txog kev txheeb xyuas offline Islamic tseem raug kho. Koj tuaj yeem qhib offline fallback tam sim no, tab sis nws tsuas yog qhia cov lus tsis muaj kev nyab xeeb kom txog thaum cov ntaub ntawv tau npaj txhij.\n\nKoj puas xav qhib offline fallback?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Nug ib lo lus nug...",
+  "chatbotThinking": "Xav...",
   "sukunMixerSubtitle": "Ntuj & Qur'an Mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Nature)",

@@ -350,7 +350,7 @@
   "zakatCashZakat": "زکات نقدی",
   "zakatBusinessZakat": "زکات تجارت",
   "zakatInvestmentZakat": "زکات سرمایه گذاری",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "اسالم علیکم! من دستیار اسلامی شما هستم. در مورد نماز، روزه، زکات یا هر موضوع اسلامی از من بپرسید.",
   "chatbotLimitReached": "به حد مجاز درخواست روزانه رسیده است. به صورت نامحدود به Premium ارتقا دهید.",
   "chatbotErrorMsg": "من نتوانستم پاسخی ایجاد کنم. لطفا دوباره امتحان کنید.",
   "chatbotOfflinePrompt": "پایگاه دانش آفلاین اسلامی تأیید شده هنوز در حال مدیریت است. اکنون می‌توانید بازگشت آفلاین را فعال کنید، اما فقط تا زمانی که مجموعه داده منبع آماده شود، پیام‌های امن محدودی را نشان می‌دهد.\n\nآیا می‌خواهید بازگشت آفلاین را فعال کنید؟",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "سوال بپرس...",
+  "chatbotThinking": "فکر کردن...",
   "sukunMixerSubtitle": "همزن طبیعت و قرآن",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "سوکون (طبیعت)",

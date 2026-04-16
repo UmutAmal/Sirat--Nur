@@ -350,7 +350,7 @@
   "zakatCashZakat": "Te putea moni",
   "zakatBusinessZakat": "Taakaa Pakihi",
   "zakatInvestmentZakat": "Putea Putanga",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Arohanui! Ko ahau to kaiawhina Ihirama. Patai mai ki ahau mo te inoi, te nohopuku, te zakat, tetahi kaupapa Islamic ranei.",
   "chatbotLimitReached": "Kua tae ki te rohe uiui ia ra. Whakapai ake ki te Premium mo te mutunga kore.",
   "chatbotErrorMsg": "Kaore i taea e au te whakaputa whakautu. Me ngana ano.",
   "chatbotOfflinePrompt": "Ko te turanga matauranga Ihirama tuimotu kua whakamanahia kei te whakahaerehia tonutia. Ka taea e koe te whakahoaho tuimotu inaianei, engari ka whakaatu noa i nga karere haumaru kia reri ra ano te huinga raraunga.\n\nKei te pirangi koe ki te whakahohe tuimotu takahuri?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Patai he patai...",
+  "chatbotThinking": "Whakaaro...",
   "sukunMixerSubtitle": "Nature & Qur'an Mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Nature)",

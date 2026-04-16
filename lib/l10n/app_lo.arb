@@ -350,7 +350,7 @@
   "zakatCashZakat": "ເງິນສົດ Zakat",
   "zakatBusinessZakat": "ທຸລະກິດ Zakat",
   "zakatInvestmentZakat": "ການລົງທຶນ Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! ຂ້ອຍເປັນຜູ້ຊ່ວຍອິດສະລາມຂອງເຈົ້າ. ຖາມຂ້ອຍກ່ຽວກັບການອະທິຖານ, ການອົດອາຫານ, zakat, ຫຼືຫົວຂໍ້ອິດສະລາມໃດໆ.",
   "chatbotLimitReached": "ຮອດຂີດຈຳກັດການສອບຖາມປະຈຳວັນແລ້ວ. ອັບເກຣດເປັນ Premium ແບບບໍ່ຈຳກັດ.",
   "chatbotErrorMsg": "ຂ້ອຍບໍ່ສາມາດສ້າງຄໍາຕອບໄດ້. ກະລຸນາລອງອີກຄັ້ງ.",
   "chatbotOfflinePrompt": "ພື້ນຖານຄວາມຮູ້ອິດສະລາມແບບອອບໄລນ໌ທີ່ຢັ້ງຢືນແລ້ວແມ່ນຍັງຖືກຈັດຫາຢູ່. ທ່ານ​ສາ​ມາດ​ເປີດ​ໃຊ້​ງານ offline offline ໃນ​ປັດ​ຈຸ​ບັນ​, ແຕ່​ວ່າ​ມັນ​ຈະ​ສະ​ແດງ​ໃຫ້​ເຫັນ​ພຽງ​ແຕ່​ຂໍ້​ຄວາມ​ປອດ​ໄພ​ຈໍາ​ກັດ​ຈົນ​ກ​່​ວາ​ຊຸດ​ຂໍ້​ມູນ​ທີ່​ມາ​ຈະ​ພ້ອມ​.\n\nທ່ານຕ້ອງການເປີດໃຊ້ທາງເລືອກ offline ບໍ?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "ຖາມຄຳຖາມ...",
+  "chatbotThinking": "ຄິດ...",
   "sukunMixerSubtitle": "ທໍາມະຊາດ & Qur'an Mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "ສຸກັນ (ທຳມະຊາດ)",

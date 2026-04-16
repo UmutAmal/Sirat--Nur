@@ -350,7 +350,7 @@
   "zakatCashZakat": "Grynieji Zakat",
   "zakatBusinessZakat": "Verslas Zakat",
   "zakatInvestmentZakat": "Investicijos Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Aš esu jūsų islamo padėjėjas. Paklauskite manęs apie maldą, pasninką, zakatą ar bet kokią islamo temą.",
   "chatbotLimitReached": "Pasiektas dienos užklausų limitas. Naujovinkite į „Premium“ ir neribokite.",
   "chatbotErrorMsg": "Negalėjau sugeneruoti atsakymo. Bandykite dar kartą.",
   "chatbotOfflinePrompt": "Patvirtinta neprisijungus pasiekiama islamo žinių bazė vis dar kuruojama. Dabar galite įgalinti atsarginį režimą neprisijungus, tačiau bus rodomi tik riboti saugūs pranešimai, kol šaltinio duomenų rinkinys bus paruoštas.\n\nAr norite įgalinti atsarginį režimą neprisijungus?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Užduoti klausimą...",
+  "chatbotThinking": "Galvoju...",
   "sukunMixerSubtitle": "Gamtos ir Korano maišytuvas",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (gamta)",

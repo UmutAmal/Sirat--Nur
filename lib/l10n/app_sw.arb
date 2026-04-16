@@ -350,7 +350,7 @@
   "zakatCashZakat": "Zakat ya Fedha",
   "zakatBusinessZakat": "Zakat ya Biashara",
   "zakatInvestmentZakat": "Zaka ya Uwekezaji",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalam Alaikum! Mimi ni msaidizi wako wa Kiislamu. Niulize kuhusu sala, saumu, zaka, au mada yoyote ya Kiislamu.",
   "chatbotLimitReached": "Kikomo cha hoja za kila siku kimefikiwa. Pata toleo jipya la Premium kwa ukomo.",
   "chatbotErrorMsg": "Sikuweza kutoa jibu. Tafadhali jaribu tena.",
   "chatbotOfflinePrompt": "Msingi wa maarifa ya Kiislamu nje ya mtandao uliothibitishwa bado unaratibiwa. Unaweza kuwezesha urejeshaji mkondo sasa, lakini itaonyesha ujumbe salama tu hadi mkusanyiko wa data uliyotoka uwe tayari.\n\nJe, ungependa kuwezesha urejeshaji wa nje ya mtandao?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Uliza swali...",
+  "chatbotThinking": "Kufikiri...",
   "sukunMixerSubtitle": "Asili na Mchanganyiko wa Kurani",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Asili)",

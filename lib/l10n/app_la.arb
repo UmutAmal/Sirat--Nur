@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Negotium Zakat",
   "zakatInvestmentZakat": "Tractatus Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Ego sum adiutor tuus islamica. Interroga me de oratione, ieiunio, zakat, vel quolibet argumento islamico.",
   "chatbotLimitReached": "Cotidiana quaestionis modum perventum est. Phasellus ut Premium pro illimitata.",
   "chatbotErrorMsg": "Responsum generare non potui. Quaeso, iterum conare.",
   "chatbotOfflinePrompt": "Basis cognitionis islamicae verificatur offline adhuc curatur. Nunc fallback offline efficere potes, sed tantum epistulas tutas limitatas ostendes donec dataset fons paratus est.\n\nVelisne fallback efficiendi online?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Interrogare quaestionem...",
+  "chatbotThinking": "Cogitans...",
   "sukunMixerSubtitle": "Natura & Qur'an Mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Nature)",

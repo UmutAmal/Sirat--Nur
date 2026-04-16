@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zekat",
   "zakatBusinessZakat": "Zekatê Karsaziyê",
   "zakatInvestmentZakat": "Zekatê veberhênanê",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Eselamu Alêkum! Ez alîkarê we yê Îslamî me. Li ser nimêj, rojî, zekat, an mijarên îslamî ji min bipirsin.",
   "chatbotLimitReached": "Sînorê pirsa rojane gihîştiye. Ji bo bêsînor bi Premium nûve bikin.",
   "chatbotErrorMsg": "Min nekarî bersivek biafirînim. Ji kerema xwe dîsa biceribîne.",
   "chatbotOfflinePrompt": "Bingeha zanîna îslamî ya negirêdayî ya pejirandî hîn jî tê rêve kirin. Naha hûn dikarin paşvekêşana offline çalak bikin, lê ew ê tenê peyamên ewledar ên sînordar nîşan bide heya ku daneya jêder amade be.\n\nMa hûn dixwazin paşvekêşana offline çalak bikin?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Pirsekê bipirsin...",
+  "chatbotThinking": "Difikirî...",
   "sukunMixerSubtitle": "Xweza û Qur'an Mikser",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (xweza)",

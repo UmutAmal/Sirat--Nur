@@ -350,7 +350,7 @@
   "zakatCashZakat": "Бэлэн мөнгөний зекат",
   "zakatBusinessZakat": "Бизнесийн Закат",
   "zakatInvestmentZakat": "Хөрөнгө оруулалтын Закат",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Ассаламу алейкум! Би таны Исламын туслах. Залбирал, мацаг барилт, зекат эсвэл Исламын ямар нэгэн сэдвээр надаас асуу.",
   "chatbotLimitReached": "Өдөр тутмын асуулгын хязгаарт хүрсэн. Хязгааргүй төлбөртэйгээр Premium руу шинэчилнэ үү.",
   "chatbotErrorMsg": "Би хариулт үүсгэж чадсангүй. Дахин оролдоно уу.",
   "chatbotOfflinePrompt": "Баталгаажсан офлайн Исламын мэдлэгийн баазыг боловсруулсаар байна. Та одоо офлайн нөхөн сэргээх ажиллагааг идэвхжүүлж болно, гэхдээ эх сурвалжийн өгөгдлийн багц бэлэн болтол энэ нь зөвхөн хязгаарлагдмал аюулгүй мессежийг харуулах болно.\n\nТа офлайн нөөцийг идэвхжүүлэхийг хүсэж байна уу?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Асуулт асуу...",
+  "chatbotThinking": "Бодож байна...",
   "sukunMixerSubtitle": "Байгаль ба Коран судар холигч",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Сукун (Байгаль)",

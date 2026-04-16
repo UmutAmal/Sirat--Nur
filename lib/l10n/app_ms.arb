@@ -350,7 +350,7 @@
   "zakatCashZakat": "Zakat tunai",
   "zakatBusinessZakat": "Zakat Perniagaan",
   "zakatInvestmentZakat": "Zakat Pelaburan",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Saya pembantu Islam awak. Tanya saya tentang solat, puasa, zakat, atau apa-apa topik Islam.",
   "chatbotLimitReached": "Had pertanyaan harian dicapai. Naik taraf kepada Premium untuk tanpa had.",
   "chatbotErrorMsg": "Saya tidak dapat menjana respons. Sila cuba lagi.",
   "chatbotOfflinePrompt": "Pangkalan pengetahuan Islam luar talian yang disahkan masih dipilih susun. Anda boleh mendayakan sandaran luar talian sekarang, tetapi ia hanya akan menunjukkan mesej selamat terhad sehingga set data bersumber sedia.\n\nAdakah anda ingin mendayakan sandaran luar talian?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Tanya soalan...",
+  "chatbotThinking": "Berfikir...",
   "sukunMixerSubtitle": "Pembancuh Alam & Al-Quran",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Nature)",

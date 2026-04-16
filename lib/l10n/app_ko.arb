@@ -350,7 +350,7 @@
   "zakatCashZakat": "캐시자카트",
   "zakatBusinessZakat": "비즈니스 자카트",
   "zakatInvestmentZakat": "투자 자카트",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "아살라무 알라이쿰! 나는 당신의 이슬람 조수입니다. 기도, 금식, 자카트 또는 이슬람 주제에 대해 물어보세요.",
   "chatbotLimitReached": "일일 쿼리 한도에 도달했습니다. 무제한으로 프리미엄으로 업그레이드하세요.",
   "chatbotErrorMsg": "응답을 생성할 수 없습니다. 다시 시도해 주세요.",
   "chatbotOfflinePrompt": "검증된 오프라인 이슬람 지식 베이스는 아직 큐레이팅 중입니다. 지금 오프라인 대체를 활성화할 수 있지만 소스 데이터 세트가 준비될 때까지 제한된 안전 메시지만 표시됩니다.\n\n오프라인 대체를 활성화하시겠습니까?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "질문하세요...",
+  "chatbotThinking": "생각하다...",
   "sukunMixerSubtitle": "자연 및 꾸란 믹서",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "수쿤(자연)",

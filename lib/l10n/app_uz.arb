@@ -350,7 +350,7 @@
   "zakatCashZakat": "Naqd zakot",
   "zakatBusinessZakat": "Biznes zakot",
   "zakatInvestmentZakat": "Investitsiya zakot",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalomu alaykum! Men sizning islomiy yordamchingizman. Mendan namoz, ro'za, zakot yoki biron bir islomiy mavzu haqida so'rang.",
   "chatbotLimitReached": "Kunlik soʻrovlar chegarasiga yetdi. Cheksiz Premiumga yangilang.",
   "chatbotErrorMsg": "Men javob yarata olmadim. Iltimos, qayta urinib koʻring.",
   "chatbotOfflinePrompt": "Tasdiqlangan oflayn islomiy bilimlar bazasi hali ham tuzatilmoqda. Siz hozir oflayn qayta tiklashni yoqishingiz mumkin, ammo manba maʼlumotlar toʻplami tayyor boʻlgunga qadar u faqat cheklangan xavfsiz xabarlarni koʻrsatadi.\n\nOflayn qayta tiklashni yoqmoqchimisiz?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Savol bering...",
+  "chatbotThinking": "O'ylash...",
   "sukunMixerSubtitle": "Tabiat va Qur'on mikser",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (tabiat)",

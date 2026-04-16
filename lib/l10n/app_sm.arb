@@ -350,7 +350,7 @@
   "zakatCashZakat": "Tupe Zakat",
   "zakatBusinessZakat": "Pisinisi Zakat",
   "zakatInvestmentZakat": "Tupe Teufaafaigaluega Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! O aʻu o lou fesoasoani Islama. Fesili mai ia te aʻu e uiga i tatalo, anapogi, zakat, poʻo soʻo se mataupu faʻa-Islam.",
   "chatbotLimitReached": "Ua ausia le tapula'a o fesili i aso taitasi. Fa'afou ile Premium mo le fa'atapula'aina.",
   "chatbotErrorMsg": "Sa le mafai ona ou faia se tali. Fa'amolemole toe taumafai.",
   "chatbotOfflinePrompt": "O lo'o fa'atumauina pea le fa'amaumauga tu'ufa'atasia fa'a-Islam. E mafai ona e fa'agaoioia le fa'afo'i tui i tua i le taimi nei, ae na'o le fa'aalia o fe'au saogalemu fa'atapula'a se'ia o'o ina saunia le fa'amaumauga.\n\nE te mana'o e fa'aagaoioi le fa'afo'i fa'afoma'i?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Fai se fesili...",
+  "chatbotThinking": "Mafaufau...",
   "sukunMixerSubtitle": "Natura & Qur'an Mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Natura)",

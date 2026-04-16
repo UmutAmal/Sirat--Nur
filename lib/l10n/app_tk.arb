@@ -350,7 +350,7 @@
   "zakatCashZakat": "Nagt zekat",
   "zakatBusinessZakat": "Zekat",
   "zakatInvestmentZakat": "Maýa goýum zekaty",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Men siziň yslam kömekçiňiz. Menden doga, agyz beklemek, zekat ýa-da yslam temasy hakda soraň.",
   "chatbotLimitReached": "Gündelik talap çäkleri ýetdi. Çäklendirilmedik Premium-a täzeläň.",
   "chatbotErrorMsg": "Men jogap berip bilmedim. Gaýtadan synanyşmagyňyzy haýyş edýäris.",
   "chatbotOfflinePrompt": "Barlanylan oflayn yslam bilim bazasy henizem dowam etdirilýär. Indi awtonom yza gaýdyp bilersiňiz, ýöne maglumat bazasy taýýar bolýança diňe çäkli ygtybarly habarlary görkezer.\n\nOflayn yza gaýdyp gelmek isleýärsiňizmi?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Sorag beriň ...",
+  "chatbotThinking": "Oýlanmak ...",
   "sukunMixerSubtitle": "Tebigat we Gurhan garyjy",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Tebigat)",

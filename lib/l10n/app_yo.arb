@@ -350,7 +350,7 @@
   "zakatCashZakat": "Zakat owo",
   "zakatBusinessZakat": "Zakat iṣowo",
   "zakatInvestmentZakat": "Zakat idoko-owo",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Emi ni oluranlọwọ Islam rẹ. Beere lọwọ mi nipa adura, ãwẹ, zakat, tabi eyikeyi koko-ọrọ Islam.",
   "chatbotLimitReached": "Opin ibeere ojoojumọ ti de. Igbesoke si Ere fun ailopin.",
   "chatbotErrorMsg": "Emi ko le ṣe ipilẹṣẹ esi. Jọwọ gbiyanju lẹẹkansi.",
   "chatbotOfflinePrompt": "Ipilẹ imọ Islam ti aisinipo ti a fọwọsi ti wa ni ṣiṣatunṣe. O le mu ipadasẹhin aisinipo ṣiṣẹ ni bayi, ṣugbọn yoo ṣafihan awọn ifiranṣẹ ailewu lopin nikan titi di igba ti data orisun orisun ti ṣetan.\n\nṢe iwọ yoo fẹ lati mu ipadasẹhin offline ṣiṣẹ?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Beere ibeere kan...",
+  "chatbotThinking": "N ronu...",
   "sukunMixerSubtitle": "Iseda & Kuran Mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Iseda)",

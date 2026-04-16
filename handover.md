@@ -7891,3 +7891,40 @@
 
 ### Sonraki Adım
 - Sonraki dongude tum `lib/` icin kalan runtime null-assertion yuzeyleri yeniden taranacak; AppLocalizations patternleri haric tutulup en yuksek etkili kalan bulgu secilecek.
+
+## 2026-04-16 TUR-209 — Localize Chatbot Runtime Copy
+
+### Yapılan İşlem
+- `chatbotGreeting`, `chatbotHint` ve `chatbotThinking` UI kopyalari mevcut korumali ARB ceviri araci ile desteklenen locale dosyalarinda Ingilizce fallback'ten cikarildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- `test\arb_ui_localization_test.dart` icine guvenli oncelikli locale seti icin chatbot runtime copy fallback guard'i eklendi.
+- `app_ay.arb`, `app_lus.arb`, `app_mai.arb`, `app_sa.arb`, `app_ti.arb` icinde ceviri servisinden gelen aciklama on ekleri temizlendi ve multiline batch debris riski kapatildi.
+
+### Neden Yapıldı
+- Diff oncesi taramada `chatbotGreeting`, `chatbotHint` ve `chatbotThinking` degerleri bircok locale dosyasinda `app_en.arb` ile birebir ayniydi; bu metinler chatbot ekraninda kullaniciya gorunen runtime UI kopyasidir.
+- Bu tur dini kaynak metni uretmedi; yalnizca UI yardim metinleri lokalizasyon zincirine alindi.
+- Nadir veya translator tarafindan guvenle cevrilemeyen locale dosyalarinda uydurma yapilmadi; AGENTS.md kuralina uygun sekilde EN referansi korunacak kalan alanlar bir sonraki l10n genisletme turuna acik risk olarak birakildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- TR, DE, FR, ES, AR, HI, ID, PT, RU, ZH, ZH_CN ve ZH_TW oncelikli guvenli locale setinde chatbot runtime UI kopyasi artik Ingilizce fallback gostermiyor.
+- ARB format guard'i satir kirilmasi ve batch debris icin bu turdaki bozuk ceviri ciktilarini yakaladi; temizleme sonrasi scan PASS oldu.
+- Kalan nadir/unsupported locale fallback sayisi `255` olarak tespit edildi; bu alan uydurma ceviri yapmadan sonraki genisletme turunda yeniden ele alinacak.
+
+### Test Sonucu
+- `flutter test test\arb_coverage_test.dart test\arb_variant_fallback_sync_test.dart test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart` PASS (`44/44`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`379/379`)
+- `git diff --check` PASS
+
+### Risk Değişimi
+- Oncelikli locale setinde chatbot runtime UI Ingilizce fallback riski: `12/25 -> 2/25`
+- Tum locale setinde nadir/unsupported chatbot runtime fallback riski: `12/25 -> 8/25`
+
+### Sonraki Adım
+- Sonraki dongude l10n fallback sayim raporundaki kalan desteklenen locale/key eslesmeleri ayrilacak; uydurma yapmadan guvenle cevrilebilen anahtarlar icin yeni minimal batch uygulanacak.

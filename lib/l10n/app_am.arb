@@ -350,7 +350,7 @@
   "zakatCashZakat": "ጥሬ ገንዘብ ዘካት",
   "zakatBusinessZakat": "የንግድ ዘካት",
   "zakatInvestmentZakat": "የኢንቨስትመንት ዘካት",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "አሰላሙ አለይኩም እኔ የእናንተ ኢስላማዊ ረዳት ነኝ። ስለ ሶላት ፣ ፆም ፣ ዘካ ፣ ወይም ስለማንኛውም ኢስላማዊ ርዕስ ጠይቁኝ።",
   "chatbotLimitReached": "ዕለታዊ መጠይቅ ገደብ ላይ ደርሷል። ላልተገደበ ወደ ፕሪሚየም ያሻሽሉ።",
   "chatbotErrorMsg": "ምላሽ ማመንጨት አልቻልኩም። እባክህ እንደገና ሞክር።",
   "chatbotOfflinePrompt": "የተረጋገጠው ከመስመር ውጭ የሆነ ኢስላማዊ እውቀት መሰረት አሁንም እየተዘጋጀ ነው። ከመስመር ውጭ መመለስን አሁን ማንቃት ይችላሉ፣ ነገር ግን የተመደበው የውሂብ ስብስብ ዝግጁ እስኪሆን ድረስ የተገደቡ አስተማማኝ መልዕክቶችን ብቻ ያሳያል።\n\nከመስመር ውጭ መመለስን ማንቃት ይፈልጋሉ?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "ጥያቄ ጠይቅ...",
+  "chatbotThinking": "በማሰብ...",
   "sukunMixerSubtitle": "ተፈጥሮ እና ቁርኣን ቀማሚ",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "ሱኩን (ተፈጥሮ)",

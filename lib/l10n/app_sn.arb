@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Business Zakat",
   "zakatInvestmentZakat": "Investment Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Ini ndiri mubatsiri wako wechiIslam. Ndibvunze nezvemunamato, kutsanya, zakat, kana chero musoro weIslam.",
   "chatbotLimitReached": "Zuva rega rega remubvunzo wasvika. Simudzira kuPremium kune isina muganho.",
   "chatbotErrorMsg": "Handina kukwanisa kupa mhinduro. Ndapota edza zvakare.",
   "chatbotOfflinePrompt": "Iyo yakasimbiswa isina Indaneti ruzivo rwechiIslam ichiri kuchengetedzwa. Iwe unogona kugonesa offline fallback izvozvi, asi inongoratidza mashoma akachengeteka mameseji kusvika sourced dataset yagadzirira.\n\nUnoda kugonesa kudzoreredza pasina indaneti here?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Bvunza mubvunzo...",
+  "chatbotThinking": "Kufunga...",
   "sukunMixerSubtitle": "Nature & Qur'an Mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Nature)",

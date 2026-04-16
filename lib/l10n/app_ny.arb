@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Business Zakat",
   "zakatInvestmentZakat": "Investment Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalam Alaikum! Ndine wothandizira wanu wachisilamu. Ndifunseni za pemphero, kusala, zakat, kapena mutu uliwonse wachisilamu.",
   "chatbotLimitReached": "Zofikira tsiku lililonse zafikira. Sinthani kukhala Premium zopanda malire.",
   "chatbotErrorMsg": "Sindinathe kuyankha. Chonde yesaninso.",
   "chatbotOfflinePrompt": "Chidziwitso chachisilamu chotsimikizika pa intaneti chomwe chimatsimikiziridwa chikusungidwabe. Mutha kuloleza kubweza kwapaintaneti tsopano, koma zizingowonetsa mauthenga otetezeka ochepa mpaka dataset yopezeka itakonzeka.\n\nKodi mungakonde kuyatsa kubweza kopanda intaneti?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Funsani funso...",
+  "chatbotThinking": "Kuganiza...",
   "sukunMixerSubtitle": "Chilengedwe & Chosakaniza cha Qur'an",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Chilengedwe)",

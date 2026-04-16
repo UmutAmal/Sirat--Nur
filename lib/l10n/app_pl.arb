@@ -350,7 +350,7 @@
   "zakatCashZakat": "Zakat gotówkowy",
   "zakatBusinessZakat": "Zakat biznesowy",
   "zakatInvestmentZakat": "Zakat Inwestycyjny",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalam Alaikum! Jestem twoim islamskim asystentem. Zapytaj mnie o modlitwę, post, zakat lub jakikolwiek inny temat islamski.",
   "chatbotLimitReached": "Osiągnięto dzienny limit zapytań. Przejdź na Premium bez ograniczeń.",
   "chatbotErrorMsg": "Nie udało mi się wygenerować odpowiedzi. Spróbuj ponownie.",
   "chatbotOfflinePrompt": "Zweryfikowana baza wiedzy islamskiej offline jest nadal w fazie tworzenia. Możesz teraz włączyć funkcję zastępczą w trybie offline, ale będzie ona wyświetlać tylko ograniczoną liczbę bezpiecznych komunikatów, dopóki źródłowy zbiór danych nie będzie gotowy.\n\nCzy chcesz włączyć funkcję zastępczą offline?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Zadaj pytanie...",
+  "chatbotThinking": "Myśląc...",
   "sukunMixerSubtitle": "Mikser natury i Koranu",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Natura)",

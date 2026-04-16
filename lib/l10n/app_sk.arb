@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Obchodný zakat",
   "zakatInvestmentZakat": "Investičný zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Som váš islamský asistent. Opýtajte sa ma na modlitbu, pôst, zakát alebo akúkoľvek islamskú tému.",
   "chatbotLimitReached": "Dosiahli ste denný limit dopytov. Inovujte na Premium neobmedzene.",
   "chatbotErrorMsg": "Nepodarilo sa mi vygenerovať odpoveď. Skúste to znova.",
   "chatbotOfflinePrompt": "Overená offline islamská vedomostná základňa sa stále upravuje. Teraz môžete povoliť núdzový režim offline, ale bude sa zobrazovať iba obmedzené množstvo bezpečných správ, kým nebude pripravená zdrojová množina údajov.\n\nChcete povoliť záložný režim offline?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Položiť otázku...",
+  "chatbotThinking": "Myslenie...",
   "sukunMixerSubtitle": "Mixér prírody a Koránu",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (príroda)",

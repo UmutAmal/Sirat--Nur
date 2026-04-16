@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Zakat de afaceri",
   "zakatInvestmentZakat": "Zakat de investiții",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Sunt asistentul tău islamic. Întrebați-mă despre rugăciune, post, zakat sau orice subiect islamic.",
   "chatbotLimitReached": "Limita zilnică de interogări a fost atinsă. Faceți upgrade la Premium pentru nelimitat.",
   "chatbotErrorMsg": "Nu am putut genera un răspuns. Vă rugăm să încercați din nou.",
   "chatbotOfflinePrompt": "Baza de cunoștințe islamice verificată offline este încă în curs de pregătire. Puteți activa acum back-up offline, dar va afișa doar mesaje sigure limitate până când setul de date sursă este gata.\n\nDoriți să activați alternativa offline?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Pune o intrebare...",
+  "chatbotThinking": "Gândind...",
   "sukunMixerSubtitle": "Mixer Natură și Coran",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Natura)",

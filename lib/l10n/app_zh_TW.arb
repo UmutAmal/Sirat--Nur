@@ -350,7 +350,7 @@
   "zakatCashZakat": "現金天課",
   "zakatBusinessZakat": "商業天課",
   "zakatInvestmentZakat": "投資天課",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "阿薩拉姆·阿拉庫姆！我是你的伊斯蘭助手。向我詢問有關祈禱、禁食、天課或任何伊斯蘭話題的問題。",
   "chatbotLimitReached": "已達到每日查詢限制。升級至高級版無限制。",
   "chatbotErrorMsg": "我無法產生響應。請再試一次。",
   "chatbotOfflinePrompt": "經過驗證的離線伊斯蘭知識庫仍在整理中。現在您可以啟用離線回退，但在來源資料集準備就緒之前，它只會顯示有限的安全訊息。\n\n您想啟用離線回退嗎？",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "問一個問題...",
+  "chatbotThinking": "想著…",
   "sukunMixerSubtitle": "自然與古蘭經混合器",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "蘇坤（自然）",

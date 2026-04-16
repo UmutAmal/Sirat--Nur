@@ -350,7 +350,7 @@
   "zakatCashZakat": "Zakat en efectiu",
   "zakatBusinessZakat": "Zakat empresarial",
   "zakatInvestmentZakat": "Zakat d'inversió",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Sóc el teu assistent islàmic. Pregunteu-me sobre l'oració, el dejuni, el zakat o qualsevol tema islàmic.",
   "chatbotLimitReached": "S'ha arribat al límit de consultes diàries. Actualitza a Premium per il·limitat.",
   "chatbotErrorMsg": "No he pogut generar una resposta. Si us plau, torna-ho a provar.",
   "chatbotOfflinePrompt": "La base de coneixement islàmica fora de línia verificada encara s'està curant. Ara podeu activar la alternativa fora de línia, però només mostrarà missatges segurs limitats fins que el conjunt de dades d'origen estigui llest.\n\nVoleu activar la alternativa fora de línia?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Fes una pregunta...",
+  "chatbotThinking": "Pensant...",
   "sukunMixerSubtitle": "Mesclador de natura i Coran",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Natura)",

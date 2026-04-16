@@ -1149,7 +1149,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get chatbotGreeting =>
-      'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
+      'അസ്സലാമു അലൈക്കും! ഞാൻ നിങ്ങളുടെ ഇസ്ലാമിക സഹായിയാണ്. പ്രാർത്ഥന, ഉപവാസം, സകാത്ത് അല്ലെങ്കിൽ ഏതെങ്കിലും ഇസ്ലാമിക വിഷയത്തെക്കുറിച്ച് എന്നോട് ചോദിക്കൂ.';
 
   @override
   String get chatbotLimitReached =>
@@ -1246,10 +1246,10 @@ class AppLocalizationsMl extends AppLocalizations {
   }
 
   @override
-  String get chatbotHint => 'Ask a question...';
+  String get chatbotHint => 'ഒരു ചോദ്യം ചോദിക്കൂ...';
 
   @override
-  String get chatbotThinking => 'Thinking...';
+  String get chatbotThinking => 'ചിന്തിക്കുന്നു...';
 
   @override
   String get sukunMixerSubtitle => 'പ്രകൃതിയും ഖുറാനും മിക്സർ';

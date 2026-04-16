@@ -350,7 +350,7 @@
   "zakatCashZakat": "Zakat tiền mặt",
   "zakatBusinessZakat": "Zakat kinh doanh",
   "zakatInvestmentZakat": "Zakat đầu tư",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Tôi là trợ lý Hồi giáo của bạn. Hãy hỏi tôi về việc cầu nguyện, nhịn ăn, zakat hoặc bất kỳ chủ đề Hồi giáo nào.",
   "chatbotLimitReached": "Đã đạt đến giới hạn truy vấn hàng ngày. Nâng cấp lên Premium không giới hạn.",
   "chatbotErrorMsg": "Tôi không thể tạo ra phản hồi. Vui lòng thử lại.",
   "chatbotOfflinePrompt": "Cơ sở kiến thức Hồi giáo ngoại tuyến đã được xác minh vẫn đang được quản lý. Bạn có thể bật tính năng dự phòng ngoại tuyến ngay bây giờ nhưng tính năng này sẽ chỉ hiển thị các thông báo an toàn có giới hạn cho đến khi tập dữ liệu có nguồn sẵn sàng.\n\nBạn có muốn bật dự phòng ngoại tuyến không?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Đặt một câu hỏi...",
+  "chatbotThinking": "Đang suy nghĩ...",
   "sukunMixerSubtitle": "Máy trộn thiên nhiên & Qur'an",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Thiên nhiên)",

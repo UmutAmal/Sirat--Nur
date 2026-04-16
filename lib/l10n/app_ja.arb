@@ -350,7 +350,7 @@
   "zakatCashZakat": "キャッシュザカート",
   "zakatBusinessZakat": "ビジネス ザカート",
   "zakatInvestmentZakat": "投資ザカート",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "アッサラーム・アライクム！私はあなたのイスラム教のアシスタントです。祈り、断食、ザカート、その他イスラム教の話題について質問してください。",
   "chatbotLimitReached": "1 日のクエリ制限に達しました。プレミアムにアップグレードすると無制限になります。",
   "chatbotErrorMsg": "応答を生成できませんでした。もう一度試してください。",
   "chatbotOfflinePrompt": "検証済みのオフラインのイスラム知識ベースはまだキュレーション中です。ここでオフライン フォールバックを有効にできますが、ソース データセットの準備ができるまでは、限られた安全なメッセージのみが表示されます。\n\nオフライン フォールバックを有効にしますか?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "質問してください...",
+  "chatbotThinking": "考え中...",
   "sukunMixerSubtitle": "自然とコーランミキサー",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "スクン（自然）",

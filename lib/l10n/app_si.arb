@@ -350,7 +350,7 @@
   "zakatCashZakat": "මුදල් සකාත්",
   "zakatBusinessZakat": "ව්යාපාර සකාත්",
   "zakatInvestmentZakat": "ආයෝජන සකාත්",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "අස්සලාමු අලෙයිකුම්! මම ඔබේ ඉස්ලාමීය සහායකයා. යාච්ඤාව, උපවාසය, සකාත් හෝ ඕනෑම ඉස්ලාමීය මාතෘකාවක් ගැන මගෙන් විමසන්න.",
   "chatbotLimitReached": "දෛනික විමසුම් සීමාව ළඟා විය. අසීමිත සඳහා Premium වෙත උත්ශ්‍රේණි කරන්න.",
   "chatbotErrorMsg": "මට ප්‍රතිචාරයක් ජනනය කිරීමට නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න.",
   "chatbotOfflinePrompt": "සත්‍යාපිත නොබැඳි ඉස්ලාමීය දැනුම පදනම තවමත් පාලනය වෙමින් පවතී. ඔබට දැන් නොබැඳි පසුබැසීම සබල කළ හැක, නමුත් එය මූලාශ්‍ර දත්ත කට්ටලය සූදානම් වන තෙක් සීමිත ආරක්ෂිත පණිවිඩ පමණක් පෙන්වයි.\n\nඔබ නොබැඳි පසුබැසීම සබල කිරීමට කැමතිද?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "ප්‍රශ්නයක් අහන්න...",
+  "chatbotThinking": "සිතමින්...",
   "sukunMixerSubtitle": "සොබාදහම සහ අල් කුර්ආනය මිශ්‍ර කරන්නා",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "සුකුන් (ස්වභාවධර්මය)",

@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakka",
   "zakatBusinessZakat": "Zakkar kasuwanci",
   "zakatInvestmentZakat": "Zakkar Zuba Jari",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Ni ne mataimakin ku na Musulunci. Ku tambaye ni game da sallah, azumi, zakka, ko wani batu na Musulunci.",
   "chatbotLimitReached": "An kai iyakar tambayar yau da kullun. Haɓaka zuwa Premium don Unlimited.",
   "chatbotErrorMsg": "Ba zan iya ba da amsa ba. Da fatan za a sake gwadawa.",
   "chatbotOfflinePrompt": "Har yanzu ana ci gaba da tantance tushen ilimin Islama na intanet da aka tabbatar. Kuna iya kunna koma baya ta layi yanzu, amma zai nuna iyakantaccen saƙon amintattu har sai an shirya saitin bayanan da aka samo asali.\n\nKuna son kunna koma baya a layi?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Yi tambaya...",
+  "chatbotThinking": "Tunani...",
   "sukunMixerSubtitle": "Nature & Qur'an Mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Nature)",

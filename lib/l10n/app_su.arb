@@ -350,7 +350,7 @@
   "zakatCashZakat": "Zakat Tunai",
   "zakatBusinessZakat": "Zakat Usaha",
   "zakatInvestmentZakat": "Zakat Investasi",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu'alaikum! Abdi asistén Islam anjeun. Tanya kuring ngeunaan solat, puasa, zakat, atawa naon baé topik Islam.",
   "chatbotLimitReached": "wates query poean ngahontal. Ningkatkeun ka Premium pikeun henteu terbatas.",
   "chatbotErrorMsg": "Abdi teu bisa ngahasilkeun respon. Mangga cobian deui.",
   "chatbotOfflinePrompt": "Basis pangaweruh Islam offline anu diverifikasi masih dikurasi. Anjeun tiasa ngaktipkeun fallback offline ayeuna, tapi éta ngan bakal nembongkeun pesen aman kawates dugi dataset sourced geus siap.\n\nNaha anjeun badé ngaktipkeun fallback offline?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Tanya patarosan...",
+  "chatbotThinking": "Pikiran...",
   "sukunMixerSubtitle": "Alam & Qur'an Adun",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Alam)",

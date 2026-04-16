@@ -350,7 +350,7 @@
   "zakatCashZakat": "నగదు జకాత్",
   "zakatBusinessZakat": "వ్యాపారం జకాత్",
   "zakatInvestmentZakat": "పెట్టుబడి జకాత్",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "అస్సలాము అలైకుమ్! నేను మీ ఇస్లామిక్ సహాయకుడిని. ప్రార్థన, ఉపవాసం, జకాత్ లేదా ఏదైనా ఇస్లామిక్ అంశం గురించి నన్ను అడగండి.",
   "chatbotLimitReached": "రోజువారీ ప్రశ్న పరిమితిని చేరుకున్నారు. అపరిమితంగా ప్రీమియంకు అప్‌గ్రేడ్ చేయండి.",
   "chatbotErrorMsg": "నేను ప్రతిస్పందనను రూపొందించలేకపోయాను. దయచేసి మళ్లీ ప్రయత్నించండి.",
   "chatbotOfflinePrompt": "ధృవీకరించబడిన ఆఫ్‌లైన్ ఇస్లామిక్ నాలెడ్జ్ బేస్ ఇప్పటికీ క్యూరేట్ చేయబడుతోంది. మీరు ఇప్పుడు ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ను ప్రారంభించవచ్చు, కానీ మూలాధార డేటాసెట్ సిద్ధమయ్యే వరకు ఇది పరిమిత సురక్షిత సందేశాలను మాత్రమే చూపుతుంది.\n\nమీరు ఆఫ్‌లైన్ ఫాల్‌బ్యాక్‌ని ప్రారంభించాలనుకుంటున్నారా?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "ఒక ప్రశ్న అడగండి...",
+  "chatbotThinking": "ఆలోచిస్తూ...",
   "sukunMixerSubtitle": "ప్రకృతి & ఖురాన్ మిక్సర్",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "సుకున్ (ప్రకృతి)",

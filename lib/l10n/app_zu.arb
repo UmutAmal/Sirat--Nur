@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Ibhizinisi Zakat",
   "zakatInvestmentZakat": "Investment Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Ngingumsizi wakho wamaSulumane. Ngibuze ngomthandazo, ukuzila ukudla, zakat, nanoma yisiphi isihloko samaSulumane.",
   "chatbotLimitReached": "Umkhawulo wombuzo wansuku zonke ufinyelelwe. Thuthukela ku-Premium ukuze uthole okungenamkhawulo.",
   "chatbotErrorMsg": "Angikwazanga ukwenza impendulo. Sicela uzame futhi.",
   "chatbotOfflinePrompt": "Isisekelo solwazi lwamaSulumane olungaxhunyiwe ku-inthanethi esiqinisekisiwe sisalungiswa. Ungakwazi ukunika amandla ukubuyela emuva ungaxhunyiwe ku-inthanethi manje, kodwa kuzobonisa kuphela imilayezo ephephile elinganiselwe kuze kube yilapho isethi yedatha etholiwe isilungile.\n\nUngathanda ukunika amandla ukubuyela emuva ungaxhunyiwe ku-inthanethi?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Buza umbuzo...",
+  "chatbotThinking": "Ukucabanga...",
   "sukunMixerSubtitle": "Imvelo & I-Qur'an Mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "I-Sukun (Imvelo)",

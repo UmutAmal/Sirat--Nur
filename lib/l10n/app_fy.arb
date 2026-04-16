@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Business Zakat",
   "zakatInvestmentZakat": "Ynvestearring Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Ik bin jo islamityske assistint. Freegje my oer gebed, fêstjen, zakat, of hokker islamityske ûnderwerp.",
   "chatbotLimitReached": "Deistich query limyt berikt. Upgrade nei Premium foar ûnbeheind.",
   "chatbotErrorMsg": "Ik koe gjin antwurd generearje. Besykje it nochris.",
   "chatbotOfflinePrompt": "De ferifiearre offline islamityske kennisbasis wurdt noch gearstald. Jo kinne offline fallback no ynskeakelje, mar it sil allinich beheinde feilige berjochten sjen litte oant de boarne dataset klear is.\n\nWolle jo offline fallback ynskeakelje?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Stel in fraach ...",
+  "chatbotThinking": "Tinkend...",
   "sukunMixerSubtitle": "Natuer & Koran Mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Natuer)",

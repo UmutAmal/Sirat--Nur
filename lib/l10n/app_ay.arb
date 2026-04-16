@@ -350,7 +350,7 @@
   "zakatCashZakat": "Qullqi Zakat ukax utjiwa",
   "zakatBusinessZakat": "Negocio Zakat ukax mä jach’a uñacht’äwiwa",
   "zakatInvestmentZakat": "Inversión Zakat ukax mä jach’a qullqiwa",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "¡Assalamu Alaikum ukax mä jach’a uñacht’äwiwa! Nayax jumanakan islámico yanapiripätwa. Oración, ayuno, zakat, jan ukax kuna tema islámico ukanakat jiskt’apxita.",
   "chatbotLimitReached": "Sapa uru jiskt’awinaka límite ukaru puriñkama. Premium ukar machaqar tukuyañax jan limitado ukhamawa.",
   "chatbotErrorMsg": "Nayax janiw mä jaysäw uñstayirjamäkti. Ukhamaraki, mayampi yant’apxañani.",
   "chatbotOfflinePrompt": "Base de conocimiento islámico offline ukan chiqapar uñjatax wali curado ukhamawa. Jichhax jan internetan fallback ukar ch’amanchañax wakisispawa, ukampis ukax mä juk’a seguro yatiyawinakakiw uñacht’ayasini, kunawsatix fuente de datos ukax wakicht’atäñapkama.\n\n¿Jumax offline fallback ukar ch’amanchañ munasmati?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Mä jiskt’a jiskt’añani...",
+  "chatbotThinking": "Amuyt’añataki...",
   "sukunMixerSubtitle": "Naturaleza & Qur’an Mixer ukax mä juk’a pachanakanwa",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Pachamama) ukat juk’ampinaka.",

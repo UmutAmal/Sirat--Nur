@@ -1150,7 +1150,7 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String get chatbotGreeting =>
-      'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
+      'Assalam Alaikum! Ndine wothandizira wanu wachisilamu. Ndifunseni za pemphero, kusala, zakat, kapena mutu uliwonse wachisilamu.';
 
   @override
   String get chatbotLimitReached =>
@@ -1245,10 +1245,10 @@ class AppLocalizationsNy extends AppLocalizations {
   }
 
   @override
-  String get chatbotHint => 'Ask a question...';
+  String get chatbotHint => 'Funsani funso...';
 
   @override
-  String get chatbotThinking => 'Thinking...';
+  String get chatbotThinking => 'Kuganiza...';
 
   @override
   String get sukunMixerSubtitle => 'Chilengedwe & Chosakaniza cha Qur\'an';

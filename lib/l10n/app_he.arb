@@ -350,7 +350,7 @@
   "zakatCashZakat": "מזומן זכאת",
   "zakatBusinessZakat": "ביזנס זכאת",
   "zakatInvestmentZakat": "השקעות זכאת",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "אסלמו אלאיקום! אני העוזר האיסלאמי שלך. שאל אותי על תפילה, צום, זקאט או כל נושא אסלאמי.",
   "chatbotLimitReached": "הגעת למגבלת השאילתות היומית. שדרג לפרימיום ללא הגבלה.",
   "chatbotErrorMsg": "לא הצלחתי ליצור תגובה. אנא נסה שוב.",
   "chatbotOfflinePrompt": "בסיס הידע האיסלאמי הלא מקוון המאומת עדיין מאוצר. אתה יכול להפעיל חילוץ לא מקוון עכשיו, אבל זה יציג רק הודעות בטוחות מוגבלות עד שמערך הנתונים של המקור יהיה מוכן.\n\nהאם ברצונך להפעיל חילוץ לא מקוון?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "שאל שאלה...",
+  "chatbotThinking": "חושב...",
   "sukunMixerSubtitle": "מיקסר טבע וקוראן",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "סוקון (טבע)",

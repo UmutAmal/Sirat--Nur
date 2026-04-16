@@ -350,7 +350,7 @@
   "zakatCashZakat": "الزكاة النقدية",
   "zakatBusinessZakat": "زكاة الأعمال",
   "zakatInvestmentZakat": "زكاة الاستثمار",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "السلام عليكم! أنا مساعدك الإسلامي. اسألني عن الصلاة أو الصيام أو الزكاة أو أي موضوع إسلامي.",
   "chatbotLimitReached": "تم الوصول إلى حد الاستعلام اليومي. الترقية إلى Premium لعدد غير محدود.",
   "chatbotErrorMsg": "لم أتمكن من توليد الرد. يرجى المحاولة مرة أخرى.",
   "chatbotOfflinePrompt": "لا تزال قاعدة المعرفة الإسلامية غير المتصلة بالإنترنت قيد التنظيم. يمكنك تمكين التراجع دون اتصال الآن، ولكنه لن يعرض سوى رسائل آمنة محدودة حتى تصبح مجموعة البيانات المصدر جاهزة.\n\nهل ترغب في تمكين الرجوع دون اتصال؟",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "اطرح سؤالا...",
+  "chatbotThinking": "أفكر...",
   "sukunMixerSubtitle": "الطبيعة وخلاط القرآن",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "سكون (طبيعة)",

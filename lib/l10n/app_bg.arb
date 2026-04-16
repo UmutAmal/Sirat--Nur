@@ -350,7 +350,7 @@
   "zakatCashZakat": "Паричен закат",
   "zakatBusinessZakat": "Бизнес зекят",
   "zakatInvestmentZakat": "Инвестиционен закат",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Асаламу алейкум! Аз съм вашият ислямски помощник. Попитайте ме за молитва, пост, зекят или друга ислямска тема.",
   "chatbotLimitReached": "Дневният лимит на заявките е достигнат. Надстройте до Premium за неограничен брой.",
   "chatbotErrorMsg": "Не можах да генерирам отговор. Моля, опитайте отново.",
   "chatbotOfflinePrompt": "Проверената офлайн ислямска база знания все още се подготвя. Можете да активирате офлайн резервен режим сега, но той ще показва само ограничени безопасни съобщения, докато наборът от данни не бъде готов.\n\nИскате ли да активирате резервно офлайн?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Задайте въпрос...",
+  "chatbotThinking": "мислене...",
   "sukunMixerSubtitle": "Смесител на природата и Корана",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "сукун (природа)",

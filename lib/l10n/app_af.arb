@@ -350,7 +350,7 @@
   "zakatCashZakat": "Kontant Zakat",
   "zakatBusinessZakat": "Besigheid Zakat",
   "zakatInvestmentZakat": "Belegging Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Ek is jou Islamitiese assistent. Vra my oor gebed, vas, zakat, of enige Islamitiese onderwerp.",
   "chatbotLimitReached": "Daaglikse navraaglimiet bereik. Gradeer op na Premium vir onbeperk.",
   "chatbotErrorMsg": "Ek kon nie 'n reaksie genereer nie. Probeer asseblief weer.",
   "chatbotOfflinePrompt": "Die geverifieerde vanlyn Islamitiese kennisbasis word steeds saamgestel. Jy kan nou vanlyn terugval aktiveer, maar dit sal slegs beperkte veilige boodskappe wys totdat die verkrygde datastel gereed is.\n\nWil jy vanlyn terugval aktiveer?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Vra 'n vraag...",
+  "chatbotThinking": "Dink...",
   "sukunMixerSubtitle": "Natuur- en Koranmenger",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Natuur)",

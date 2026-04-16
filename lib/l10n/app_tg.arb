@@ -350,7 +350,7 @@
   "zakatCashZakat": "Закот пули нақд",
   "zakatBusinessZakat": "Закоти тиҷорат",
   "zakatInvestmentZakat": "Закоти сармоягузорӣ",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Ассалому алайкум! Ман ёвари исломии шумо ҳастам. Намоз, руза, закот ва ё ягон мавзуи исломиро аз ман пурсед.",
   "chatbotLimitReached": "Ба ҳадди ниҳоии дархости ҳаррӯза расид. Барои бемаҳдуд ба Premium навсозӣ кунед.",
   "chatbotErrorMsg": "Ман ҷавоб тавлид карда натавонистам. Лутфан бори дигар кӯшиш кунед.",
   "chatbotOfflinePrompt": "Пойгоҳи донишҳои исломии тасдиқшудаи офлайнӣ ҳоло ҳам такмил дода мешавад. Шумо ҳоло метавонед бозгашти офлайнро фаъол созед, аммо он танҳо паёмҳои маҳдуди бехатарро то омода шудани маҷмӯи додаҳои сарчашма нишон медиҳад.\n\nОё шумо мехоҳед бозгашти офлайнро фаъол созед?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Савол диҳед...",
+  "chatbotThinking": "Фикр кардан...",
   "sukunMixerSubtitle": "Омехтагари табиат ва Қуръон",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Сукун (Табиат)",

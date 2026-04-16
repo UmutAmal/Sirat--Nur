@@ -350,7 +350,7 @@
   "zakatCashZakat": "Eskudirutan Zakat",
   "zakatBusinessZakat": "Enpresa Zakat",
   "zakatInvestmentZakat": "Inbertsio Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Zure laguntzaile islamiarra naiz. Galde iezadazu otoitz, barau, zakat edo islamiar gaiei buruz.",
   "chatbotLimitReached": "Eguneko kontsulten mugara iritsi da. Igotu Premium-era mugarik gabe.",
   "chatbotErrorMsg": "Ezin izan dut erantzunik sortu. Mesedez, saiatu berriro.",
   "chatbotOfflinePrompt": "Egiaztatutako lineaz kanpoko ezagutza base islamiarra zaintzen ari da oraindik. Lineaz kanpoko babesa gaitu dezakezu orain, baina mezu seguru mugatuak soilik erakutsiko ditu jatorriko datu-multzoa prest dagoen arte.\n\nLineaz kanpoko babesa gaitu nahi duzu?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Galdera bat egin...",
+  "chatbotThinking": "Pentsatzen...",
   "sukunMixerSubtitle": "Natura eta Koranaren nahasketa",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Natura)",

@@ -1126,7 +1126,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get chatbotGreeting =>
-      'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
+      '阿萨拉姆·阿拉库姆！我是你的伊斯兰助手。向我询问有关祈祷、禁食、天课或任何伊斯兰话题的问题。';
 
   @override
   String get chatbotLimitReached => '已达到每日查询限制。升级至高级版无限制。';
@@ -1217,10 +1217,10 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get chatbotHint => 'Ask a question...';
+  String get chatbotHint => '问一个问题...';
 
   @override
-  String get chatbotThinking => 'Thinking...';
+  String get chatbotThinking => '想着……';
 
   @override
   String get sukunMixerSubtitle => '自然与古兰经混合器';
@@ -2764,7 +2764,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String get chatbotGreeting =>
-      'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
+      '阿萨拉姆·阿拉库姆！我是你的伊斯兰助手。向我询问有关祈祷、禁食、天课或任何伊斯兰话题的问题。';
 
   @override
   String get chatbotLimitReached => '已达到每日查询限制。升级至高级版无限制。';
@@ -2855,10 +2855,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get chatbotHint => 'Ask a question...';
+  String get chatbotHint => '问一个问题...';
 
   @override
-  String get chatbotThinking => 'Thinking...';
+  String get chatbotThinking => '想着……';
 
   @override
   String get sukunMixerSubtitle => '自然与古兰经混合器';
@@ -4402,7 +4402,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get chatbotGreeting =>
-      'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
+      '阿薩拉姆·阿拉庫姆！我是你的伊斯蘭助手。向我詢問有關祈禱、禁食、天課或任何伊斯蘭話題的問題。';
 
   @override
   String get chatbotLimitReached => '已達到每日查詢限制。升級至高級版無限制。';
@@ -4493,10 +4493,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get chatbotHint => 'Ask a question...';
+  String get chatbotHint => '問一個問題...';
 
   @override
-  String get chatbotThinking => 'Thinking...';
+  String get chatbotThinking => '想著…';
 
   @override
   String get sukunMixerSubtitle => '自然與古蘭經混合器';

@@ -350,7 +350,7 @@
   "zakatCashZakat": "نقد زڪوات",
   "zakatBusinessZakat": "ڪاروباري زڪوات",
   "zakatInvestmentZakat": "سيڙپڪاري زڪوات",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "السلام عليڪم! مان توهان جو اسلامي مددگار آهيان. مون کان نماز، روزو، زڪوات، يا ڪنهن اسلامي موضوع بابت پڇو.",
   "chatbotLimitReached": "روزاني سوال جي حد تائين پهچي ويو. لامحدود لاءِ پريميئم ۾ اپڊيٽ ڪريو.",
   "chatbotErrorMsg": "مان جواب نه ڏئي سگهيو آهيان. مهرباني ڪري ٻيهر ڪوشش ڪريو.",
   "chatbotOfflinePrompt": "تصديق ٿيل آف لائن اسلامي علم جو بنياد اڃا تائين ڪيو پيو وڃي. توھان ھاڻي چالو ڪري سگھو ٿا آف لائن فال بيڪ کي، پر اھو صرف محدود محفوظ پيغام ڏيکاريندو جيستائين sourced dataset تيار نه ٿئي.\n\nڇا توھان چاھيو ٿا آف لائن فال بيڪ کي فعال ڪرڻ؟",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "سوال پڇو...",
+  "chatbotThinking": "سوچڻ...",
   "sukunMixerSubtitle": "فطرت ۽ قرآن ملائيندڙ",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "سکن (فطرت)",

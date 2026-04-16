@@ -350,7 +350,7 @@
   "zakatCashZakat": "Ego ego Zakat",
   "zakatBusinessZakat": "Zakat azụmahịa",
   "zakatInvestmentZakat": "Zakat itinye ego",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Abụ m onye enyemaka islam gị. Jụọ m gbasara ekpere, ibu ọnụ, zakat, ma ọ bụ isiokwu Islam ọ bụla.",
   "chatbotLimitReached": "Eruola oke ajụjụ ọnụ kwa ụbọchị. Kwalite na Premium maka enweghị oke.",
   "chatbotErrorMsg": "Enweghị m ike iwepụta nzaghachi. Biko nwaa ọzọ.",
   "chatbotOfflinePrompt": "A ka na-echekwa ntọala ihe ọmụma Islam na-anọghị n'ịntanetị. Ị nwere ike mee ka ọ daa azụ na-anọghị n'ịntanetị ugbu a, mana ọ ga-egosi naanị ozi nchekwa nwere oke ruo mgbe nhazi data ewepụtara dị njikere.\n\nỌ ga-amasị gị ịgbalite ọdịda na-anọghị n'ịntanetị?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Jụọ ajụjụ...",
+  "chatbotThinking": "Na-eche...",
   "sukunMixerSubtitle": "Nature & Qur'an mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Nature)",

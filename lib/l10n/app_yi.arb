@@ -350,7 +350,7 @@
   "zakatCashZakat": "מזומן זאקאט",
   "zakatBusinessZakat": "ביזנעס זאקאט",
   "zakatInvestmentZakat": "ינוועסטמענט זאַקאַט",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "אַסאַלאַמו אַלאַקום! איך בין דיין יסלאַמיק אַסיסטאַנט. פרעגן מיר וועגן תפילה, פאסטן, זאַקאַט אָדער קיין יסלאַמיק טעמע.",
   "chatbotLimitReached": "טעגלעך אָנפֿרעג לימיט ריטשט. אַפּגרייד צו פּרעמיום פֿאַר אַנלימאַטאַד.",
   "chatbotErrorMsg": "איך קען נישט געבן אַ ענטפער. ביטע פּרוּווט ווידער.",
   "chatbotOfflinePrompt": "די וועראַפייד אָפפלינע יסלאַמיק וויסן באַזע איז נאָך קערייטיד. איר קענט איצט געבן אָפפלינע פאַלבאַק, אָבער עס וועט בלויז ווייַזן לימיטעד זיכער אַרטיקלען ביז די סאָורסעד דאַטאַסעט איז גרייט.\n\nוואָלט איר ווי צו געבן אָפפלינע פאַלבאַק?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "פרעג א שאלה...",
+  "chatbotThinking": "טראכטן...",
   "sukunMixerSubtitle": "נאַטור & קוור'אַן מיקסער",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "סוקון (נאַטור)",

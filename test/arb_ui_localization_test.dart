@@ -924,6 +924,43 @@ void main() {
       },
     );
 
+    test(
+      'safe priority locales do not fall back to English for chatbot runtime copy',
+      () {
+        const safeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'hi',
+          'id',
+          'pt',
+          'ru',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const localizedKeys = [
+          'chatbotGreeting',
+          'chatbotHint',
+          'chatbotThinking',
+        ];
+
+        for (final locale in safeLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
     test('chatbot cloud fallback copy does not point to retired Local AI', () {
       const staleFragments = [
         'Please switch to Local AI',

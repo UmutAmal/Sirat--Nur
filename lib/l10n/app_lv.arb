@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Bizness Zakat",
   "zakatInvestmentZakat": "Investīcijas Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Es esmu jūsu islāma palīgs. Jautājiet man par lūgšanu, gavēni, zakatu vai jebkuru islāma tēmu.",
   "chatbotLimitReached": "Sasniegts ikdienas vaicājumu ierobežojums. Jauniniet uz Premium bez ierobežojumiem.",
   "chatbotErrorMsg": "Es nevarēju radīt atbildi. Lūdzu, mēģiniet vēlreiz.",
   "chatbotOfflinePrompt": "Pārbaudītā bezsaistes islāma zināšanu bāze joprojām tiek apkopota. Varat iespējot bezsaistes atkāpšanos tūlīt, taču tajā tiks rādīti tikai ierobežoti droši ziņojumi, līdz būs gatava iegūtā datu kopa.\n\nVai vēlaties iespējot bezsaistes atkāpšanos?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Uzdot jautājumu...",
+  "chatbotThinking": "Domājot...",
   "sukunMixerSubtitle": "Dabas un Korāna mikseris",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (daba)",

@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Liiketoiminta Zakat",
   "zakatInvestmentZakat": "Sijoitus Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Olen islamilainen avustajasi. Kysy minulta rukouksesta, paastoamisesta, zakatista tai mistä tahansa islamilaisesta aiheesta.",
   "chatbotLimitReached": "Päivittäinen kyselyraja saavutettu. Päivitä Premiumiin rajattomasti.",
   "chatbotErrorMsg": "En voinut luoda vastausta. Yritä uudelleen.",
   "chatbotOfflinePrompt": "Vahvistettua offline-islamilaista tietopohjaa kuratoidaan edelleen. Voit ottaa offline-varan nyt käyttöön, mutta se näyttää vain rajoitettuja turvaviestejä, kunnes lähdetietojoukko on valmis.\n\nHaluatko ottaa offline-varan käyttöön?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Esitä kysymys...",
+  "chatbotThinking": "Mieti...",
   "sukunMixerSubtitle": "Luonto & Koraani -sekoitin",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (luonto)",

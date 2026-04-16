@@ -350,7 +350,7 @@
   "zakatCashZakat": "Zakada lacagta ah",
   "zakatBusinessZakat": "Sakada ganacsiga",
   "zakatInvestmentZakat": "Sakada maalgashiga",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Asalaamu Calaykum! Waxaan ahay kaaliyahaaga Islaamka. I weydii wax ku saabsan salaadda, soonka, sakada, ama mawduuc kasta oo Islaami ah.",
   "chatbotLimitReached": "Xadka weydiinta maalinlaha ah ayaa la gaarey U cusboonaysii Premium si aan xadidnayn.",
   "chatbotErrorMsg": "Jawaab ma dhalin. Fadlan isku day mar kale",
   "chatbotOfflinePrompt": "Saldhigga aqoonta Islaamka ee khadka tooska ah ee la xaqiijiyey ayaa weli la daabicinayaa. Waxaad awood u siin kartaa dib u dhaca khadka tooska ah hadda, laakiin waxay tusi doontaa oo kaliya fariimaha badbaadada xaddidan ilaa inta xog-ururinta laga keenay diyaar yahay.\n\nMa jeclaan lahayd inaad karti u geliso soo noqoshada khadka tooska ah?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Weydii su'aal...",
+  "chatbotThinking": "Fikirka...",
   "sukunMixerSubtitle": "Dabeecadda & Qur'aanka Isku-dhafka",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Dabeecada)",

@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Zakat sa Negosyo",
   "zakatInvestmentZakat": "Investment Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Ako ang imong katabang sa Islam. Pangutan-a ko bahin sa pag-ampo, pagpuasa, zakat, o bisan unsang hilisgutan sa Islam.",
   "chatbotLimitReached": "Naabot ang limitasyon sa adlaw-adlaw nga pangutana. Pag-upgrade sa Premium alang sa walay kutub.",
   "chatbotErrorMsg": "Wala ko makamugna og tubag. Palihug sulayi pag-usab.",
   "chatbotOfflinePrompt": "Ang napamatud-an nga offline nga base sa kahibalo sa Islam gi-curate pa. Mahimo nimong i-enable ang offline fallback karon, apan magpakita lang kini og limitado nga luwas nga mga mensahe hangtod andam na ang sourced dataset.\n\nGusto ba nimong i-enable ang offline fallback?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Pangutana...",
+  "chatbotThinking": "Naghunahuna...",
   "sukunMixerSubtitle": "Kinaiyahan ug Qur'an Mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Nature)",

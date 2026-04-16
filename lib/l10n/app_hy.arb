@@ -350,7 +350,7 @@
   "zakatCashZakat": "Կանխիկ Զաքաթ",
   "zakatBusinessZakat": "Բիզնես Զաքաթ",
   "zakatInvestmentZakat": "Ներդրումային Զաքաթ",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Ասալամու Ալեյքում! Ես ձեր իսլամական օգնականն եմ: Հարցրեք ինձ աղոթքի, ծոմապահության, զաքաթի կամ որևէ իսլամական թեմայի մասին:",
   "chatbotLimitReached": "Հարցման ամենօրյա սահմանաչափը հասել է: Թարմացրեք Premium-ի անսահմանափակ:",
   "chatbotErrorMsg": "Ես չկարողացա արձագանք առաջացնել: Խնդրում ենք կրկին փորձել:",
   "chatbotOfflinePrompt": "Ստուգված օֆլայն իսլամական գիտելիքի բազան դեռ մշակվում է: Այժմ կարող եք միացնել անցանց հետադարձ կապը, բայց այն ցույց կտա միայն սահմանափակ անվտանգ հաղորդագրություններ, քանի դեռ աղբյուրի տվյալների բազան պատրաստ չէ:\n\nՑանկանու՞մ եք միացնել անցանց հետընտրական տարբերակը:",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Հարց տվեք...",
+  "chatbotThinking": "Մտածելով...",
   "sukunMixerSubtitle": "Բնություն և Ղուրանի խառնիչ",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Սուկուն (Բնություն)",

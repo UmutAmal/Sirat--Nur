@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Zakat ea khoebo",
   "zakatInvestmentZakat": "Investment Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalam Alaikum! Ke mothusi oa hau oa Islamic. Mpotse ka thapelo, ho itima lijo, zakat, kapa taba efe kapa efe ea Boislamo.",
   "chatbotLimitReached": "Lipotso tsa letsatsi le letsatsi li fihletsoe. Ntlafatsa ho Premium bakeng sa se nang moeli.",
   "chatbotErrorMsg": "Ha ke khone ho fana ka karabo. Ka kopo, leka hape.",
   "chatbotOfflinePrompt": "Setsi se netefalitsoeng sa Maislamo kantle ho Marang-rang se ntse se lokisetsoa. O ka lumella ho khutlisa ha kantle ho Marang-rang hona joale, empa e tla bonts'a melaetsa e fokolang e bolokehileng ho fihlela dataset e fumanoeng e se e lokile.\n\nA na u ka rata ho bulela mokhoa oa ho khutlisa kantle ho marang-rang?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Botsa potso...",
+  "chatbotThinking": "Ho nahana...",
   "sukunMixerSubtitle": "Tlhaho le Motsoako oa Qur'an",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Tlhaho)",

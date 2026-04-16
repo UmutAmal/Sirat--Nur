@@ -350,7 +350,7 @@
   "zakatCashZakat": "Μετρητά Zakat",
   "zakatBusinessZakat": "Business Zakat",
   "zakatInvestmentZakat": "Επενδυτικό Ζακάτ",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Είμαι ο ισλαμικός βοηθός σας. Ρωτήστε με για την προσευχή, τη νηστεία, το zakat ή οποιοδήποτε ισλαμικό θέμα.",
   "chatbotLimitReached": "Συμπληρώθηκε το ημερήσιο όριο ερωτημάτων. Αναβάθμιση σε Premium για απεριόριστο αριθμό.",
   "chatbotErrorMsg": "Δεν μπόρεσα να δημιουργήσω απάντηση. Δοκιμάστε ξανά.",
   "chatbotOfflinePrompt": "Η επαληθευμένη βάση ισλαμικών γνώσεων εκτός σύνδεσης βρίσκεται ακόμη υπό επιμέλεια. Μπορείτε να ενεργοποιήσετε την εναλλακτική λύση εκτός σύνδεσης τώρα, αλλά θα εμφανίζει μόνο περιορισμένα ασφαλή μηνύματα μέχρι να είναι έτοιμο το σύνολο δεδομένων προέλευσης.\n\nΘέλετε να ενεργοποιήσετε την εναλλακτική λύση εκτός σύνδεσης;",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Κάντε μια ερώτηση...",
+  "chatbotThinking": "Σκέφτομαι...",
   "sukunMixerSubtitle": "Μίξερ Φύσης & Κορανίου",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Φύση)",

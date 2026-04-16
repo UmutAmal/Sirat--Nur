@@ -350,7 +350,7 @@
   "zakatCashZakat": "பண ஜகாத்",
   "zakatBusinessZakat": "வணிக ஜகாத்",
   "zakatInvestmentZakat": "முதலீடு ஜகாத்",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "அஸ்ஸலாமு அலைக்கும்! நான் உங்கள் இஸ்லாமிய உதவியாளர். தொழுகை, நோன்பு, ஜகாத் அல்லது ஏதேனும் இஸ்லாமிய தலைப்பு பற்றி என்னிடம் கேளுங்கள்.",
   "chatbotLimitReached": "தினசரி வினவல் வரம்பை அடைந்தது. வரம்பற்ற பிரீமியத்திற்கு மேம்படுத்தவும்.",
   "chatbotErrorMsg": "என்னால் பதிலை உருவாக்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.",
   "chatbotOfflinePrompt": "சரிபார்க்கப்பட்ட ஆஃப்லைன் இஸ்லாமிய அறிவுத் தளம் இன்னும் நிர்வகிக்கப்படுகிறது. நீங்கள் இப்போது ஆஃப்லைன் ஃபால்பேக்கை இயக்கலாம், ஆனால் ஆதார் தரவுத்தொகுப்பு தயாராகும் வரை அது வரையறுக்கப்பட்ட பாதுகாப்பான செய்திகளை மட்டுமே காண்பிக்கும்.\n\nஆஃப்லைன் ஃபால்பேக்கை இயக்க விரும்புகிறீர்களா?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "கேள்வி கேள்...",
+  "chatbotThinking": "நினைத்து...",
   "sukunMixerSubtitle": "இயற்கை & குர்ஆன் கலவை",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "சுகுன் (இயற்கை)",

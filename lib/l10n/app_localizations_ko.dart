@@ -1138,7 +1138,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get chatbotGreeting =>
-      'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
+      '아살라무 알라이쿰! 나는 당신의 이슬람 조수입니다. 기도, 금식, 자카트 또는 이슬람 주제에 대해 물어보세요.';
 
   @override
   String get chatbotLimitReached => '일일 쿼리 한도에 도달했습니다. 무제한으로 프리미엄으로 업그레이드하세요.';
@@ -1230,10 +1230,10 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get chatbotHint => 'Ask a question...';
+  String get chatbotHint => '질문하세요...';
 
   @override
-  String get chatbotThinking => 'Thinking...';
+  String get chatbotThinking => '생각하다...';
 
   @override
   String get sukunMixerSubtitle => '자연 및 꾸란 믹서';

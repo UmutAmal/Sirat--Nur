@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Viðskipti Zakat",
   "zakatInvestmentZakat": "Fjárfesting Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Ég er íslamskur aðstoðarmaður þinn. Spyrðu mig um bæn, föstu, zakat eða hvaða íslamska efni sem er.",
   "chatbotLimitReached": "Daglegu hámarki fyrirspurna náð. Uppfærðu í Premium fyrir ótakmarkað.",
   "chatbotErrorMsg": "Ég gat ekki framkallað svar. Vinsamlegast reyndu aftur.",
   "chatbotOfflinePrompt": "Enn er verið að sjá um staðfesta íslamska þekkingargrunninn án nettengingar. Þú getur virkjað afturköllun án nettengingar núna, en það mun aðeins sýna takmörkuð örugg skilaboð þar til gagnasettið er tilbúið.\n\nViltu virkja ónettengdan fallback?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Spyrðu spurningu...",
+  "chatbotThinking": "Er að hugsa...",
   "sukunMixerSubtitle": "Náttúru- og Kóranblandari",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (náttúra)",

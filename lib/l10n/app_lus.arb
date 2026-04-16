@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat pek a ni",
   "zakatBusinessZakat": "Sumdawnna Zakat a ni",
   "zakatInvestmentZakat": "Investment Zakat pek a ni",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum chu! I Islamic assistant ka ni. Tawngtai, chaw nghei, zakat, Islamic topic eng pawh min zawt rawh.",
   "chatbotLimitReached": "Nitin zawhna neih theihna tur limit a thleng. Unlimited atan Premium ah upgrade rawh.",
   "chatbotErrorMsg": "Response ka generate thei lo. Khawngaihin han lo try leh teh.",
   "chatbotOfflinePrompt": "Offline Islamic knowledge base verified chu an la curate mek a ni. Tunah chuan offline fallback i enable thei tawh a, mahse sourced dataset a inpeih hma chuan safe message tlemte chauh a lantir ang.\n\nOffline fallback hi enable i duh em?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Zawhna zawt rawh...",
+  "chatbotThinking": "Ngaihtuah...",
   "sukunMixerSubtitle": "Nature & Qur’an Mixer a ni",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Nature) tih a ni.",

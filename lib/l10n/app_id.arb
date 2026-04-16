@@ -350,7 +350,7 @@
   "zakatCashZakat": "Zakat Tunai",
   "zakatBusinessZakat": "Zakat Bisnis",
   "zakatInvestmentZakat": "Zakat Investasi",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Saya asisten Islam Anda. Tanyakan kepada saya tentang doa, puasa, zakat, atau topik Islami lainnya.",
   "chatbotLimitReached": "Batas kueri harian tercapai. Tingkatkan ke Premium tanpa batas.",
   "chatbotErrorMsg": "Saya tidak dapat memberikan tanggapan. Silakan coba lagi.",
   "chatbotOfflinePrompt": "Basis pengetahuan Islam offline yang terverifikasi masih dalam proses kurasi. Anda dapat mengaktifkan penggantian offline sekarang, namun ini hanya akan menampilkan pesan aman terbatas hingga kumpulan data yang bersumber siap.\n\nApakah Anda ingin mengaktifkan penggantian offline?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Ajukan pertanyaan...",
+  "chatbotThinking": "Berpikir...",
   "sukunMixerSubtitle": "Pengaduk Alam & Al-Qur'an",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Alam)",

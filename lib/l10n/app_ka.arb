@@ -350,7 +350,7 @@
   "zakatCashZakat": "ნაღდი ზაქათი",
   "zakatBusinessZakat": "ბიზნეს ზაქათი",
   "zakatInvestmentZakat": "საინვესტიციო ზაქათი",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "ასსალამუ ალაიკუმ! მე ვარ თქვენი ისლამური თანაშემწე. მკითხეთ ლოცვაზე, მარხვაზე, ზაქატზე ან რომელიმე ისლამურ თემაზე.",
   "chatbotLimitReached": "მიღწეულია მოთხოვნის ყოველდღიური ლიმიტი. განაახლეთ Premium-ზე შეუზღუდავად.",
   "chatbotErrorMsg": "პასუხის მოპოვება ვერ მოვახერხე. გთხოვთ, სცადოთ ხელახლა.",
   "chatbotOfflinePrompt": "დამოწმებული ოფლაინ ისლამური ცოდნის ბაზა ჯერ კიდევ მიმდინარეობს. შეგიძლიათ ახლავე ჩართოთ ხაზგარეშე სარეზერვო საშუალება, მაგრამ ის აჩვენებს მხოლოდ შეზღუდულ უსაფრთხო შეტყობინებებს, სანამ წყაროს მონაცემთა ნაკრები მზად იქნება.\n\nგსურთ ჩართოთ ოფლაინ სარეზერვო?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "დასვით შეკითხვა...",
+  "chatbotThinking": "ფიქრი...",
   "sukunMixerSubtitle": "ბუნებისა და ყურანის შემრევი",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "სუკუნი (ბუნება)",

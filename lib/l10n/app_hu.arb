@@ -350,7 +350,7 @@
   "zakatCashZakat": "Cash Zakat",
   "zakatBusinessZakat": "Üzleti Zakat",
   "zakatInvestmentZakat": "Befektetés Zakat",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Én vagyok az iszlám asszisztense. Kérdezzen imáról, böjtről, zakatról vagy bármilyen iszlám témáról.",
   "chatbotLimitReached": "Elérte a napi lekérdezési korlátot. Frissítsen Premiumra korlátlanul.",
   "chatbotErrorMsg": "Nem tudtam választ generálni. Kérjük, próbálja újra.",
   "chatbotOfflinePrompt": "Az ellenőrzött offline iszlám tudásbázis gondozása még folyamatban van. Most engedélyezheti az offline tartalékot, de csak korlátozott számú biztonságos üzenetet jelenít meg, amíg a forrásból származó adatkészlet el nem készül.\n\nSzeretné engedélyezni az offline tartalékot?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Tegyél fel egy kérdést...",
+  "chatbotThinking": "Gondolkodni...",
   "sukunMixerSubtitle": "Természet és Korán keverő",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (természet)",

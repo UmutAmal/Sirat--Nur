@@ -350,7 +350,7 @@
   "zakatCashZakat": "Zakat Lajan Kach",
   "zakatBusinessZakat": "Zakat biznis",
   "zakatInvestmentZakat": "Zakat envestisman",
-  "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
+  "chatbotGreeting": "Assalamu Alaikum! Mwen se asistan Islamik ou a. Mande m 'sou lapriyè, jèn, zakat, oswa nenpòt sijè Islamik.",
   "chatbotLimitReached": "Limit demann chak jou rive. Upgrade ak Premium pou san limit.",
   "chatbotErrorMsg": "Mwen pa t 'kapab jenere yon repons. Tanpri eseye ankò.",
   "chatbotOfflinePrompt": "Verifye baz konesans Islamik offline la toujou ap òganize. Ou ka aktive replik offline kounye a, men li pral sèlman montre mesaj ki an sekirite limite jiskaske seri done sous la pare.\n\nÈske ou ta renmen aktive offline repli?",
@@ -430,8 +430,8 @@
       }
     }
   },
-  "chatbotHint": "Ask a question...",
-  "chatbotThinking": "Thinking...",
+  "chatbotHint": "Poze yon kesyon...",
+  "chatbotThinking": "Panse...",
   "sukunMixerSubtitle": "Nati & Koran Mixer",
   "audioPlayFailed": "Audio playback failed",
   "sukunNatureLabel": "Sukun (Nati)",
