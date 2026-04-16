@@ -134,7 +134,11 @@ class TafsirLocalService {
 
   static int _apiIdForSource(String source) {
     final canonical = _canonicalSource(source);
-    return _sourceToApiId[canonical] ?? 169;
+    final apiId = _sourceToApiId[canonical];
+    if (apiId == null) {
+      throw TafsirException('unsupported_source', details: canonical);
+    }
+    return apiId;
   }
 
   static String _stripHtml(String input) {

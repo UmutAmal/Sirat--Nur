@@ -7578,3 +7578,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude `_apiIdForSource` icindeki fallback `?? 169` kontrol edilecek; unsupported source zaten exception attigi icin fallback maskesi gereksizse kontrollu hata ile degistirilecek.
+
+## 2026-04-16 TUR-199 — Remove Tafsir API ID Fallback Mask
+
+### Yapılan İşlem
+- `_apiIdForSource` artik `_sourceToApiId[canonical] ?? 169` fallback'i kullanmiyor.
+- Canonical source haritada yoksa kontrollu `TafsirException('unsupported_source')` atiliyor.
+- Tafsir servis testlerine `?? 169` fallback'inin geri gelmesini engelleyen source guard eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:137` API id degerini local `apiId` olarak okuyor.
+- Eski fallback, ileride source haritasi bozulursa kullaniciyi sessizce farkli tafsir kaynagina yonlendirebilirdi; dini icerikte sessiz kaynak degisimi kabul edilemez.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Mevcut desteklenen tafsir kaynaklarinda davranis degismedi.
+- Harita bozulursa yanlis kaynaga dusmek yerine kontrollu unsupported-source hatasi uretilir.
+
+### Test Sonucu
+- `flutter test test\features\quran\tafsir_page_test.dart` PASS (`6/6`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`371/371`)
+
+### Risk Değişimi
+- Tafsir source resolver silent wrong-source fallback riski: `10/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude route builder ve premium/paywall error unwrap gibi kalan runtime `!` kullanimlari yeniden taranacak; gercek kullanıcı akışına en yakin olan once kapatilacak.

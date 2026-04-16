@@ -96,4 +96,13 @@ void main() {
     expect(source, contains('return initializedDatabase;'));
     expect(source, isNot(contains('_database!')));
   });
+
+  test('tafsir service does not mask source resolver failures', () {
+    final source = File(
+      'lib/core/services/tafsir_local_service.dart',
+    ).readAsStringSync();
+
+    expect(source, contains("TafsirException('unsupported_source'"));
+    expect(source, isNot(contains('?? 169')));
+  });
 }
