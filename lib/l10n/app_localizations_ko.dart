@@ -808,26 +808,26 @@ class AppLocalizationsKo extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Qibla 교정';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => '나침반 스무딩';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => '교정 오프셋';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return '현재: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      '나침반에 수동 수정이 필요한 경우 조정하세요. 양수 값은 시계 방향으로 회전합니다.';
 
   @override
   String get apply => 'Apply';
@@ -931,8 +931,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get rotateToFindQibla => 'Rotate to Find Qibla';
 
   @override
-  String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+  String get calibrationRequiredFigure8 => '교정이 필요합니다. 그림-8의 장치를 회전시킵니다.';
 
   @override
   String get dailyVerse => '매일의 구절';

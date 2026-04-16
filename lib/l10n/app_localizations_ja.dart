@@ -809,26 +809,26 @@ class AppLocalizationsJa extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'キブラのキャリブレーション';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'コンパスのスムージング';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'キャリブレーションオフセット';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return '現在: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'コンパスを手動で修正する必要がある場合は調整します。正の値は時計回りに回転します。';
 
   @override
   String get apply => 'Apply';
@@ -932,8 +932,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get rotateToFindQibla => 'Rotate to Find Qibla';
 
   @override
-  String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+  String get calibrationRequiredFigure8 => '校正が必要です。デバイスを図-8のように回転させます。';
 
   @override
   String get dailyVerse => '日々の詩';

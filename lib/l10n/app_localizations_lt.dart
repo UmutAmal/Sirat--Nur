@@ -815,26 +815,26 @@ class AppLocalizationsLt extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Qibla kalibravimas';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Kompaso išlyginimas';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Kalibravimo poslinkis';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Dabartinis: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Sureguliuokite, ar jūsų kompasą reikia taisyti rankiniu būdu. Teigiamos reikšmės sukasi pagal laikrodžio rodyklę.';
 
   @override
   String get apply => 'Apply';
@@ -940,7 +940,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Reikalingas kalibravimas. Pasukite įrenginį 8 paveiksle.';
 
   @override
   String get dailyVerse => 'Dienos eilėraštis';

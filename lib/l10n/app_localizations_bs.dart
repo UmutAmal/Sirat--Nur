@@ -818,7 +818,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Kompas Smoothing';
 
   @override
   String get reduceSensorJitter =>
@@ -829,12 +829,12 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Struja: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Podesite ako je vašem kompasu potrebna ručna korekcija. Pozitivne vrijednosti se rotiraju u smjeru kazaljke na satu.';
 
   @override
   String get apply => 'Apply';
@@ -940,7 +940,7 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Potrebna je kalibracija. Okrenite uređaj na slici-8.';
 
   @override
   String get dailyVerse => 'Daily Verse';

@@ -816,17 +816,17 @@ class AppLocalizationsMs extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Penentukuran Kiblat';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Melicinkan Kompas';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Offset Penentukuran';
 
   @override
   String currentOffset(Object offset) {
@@ -835,7 +835,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Laraskan jika kompas anda memerlukan pembetulan manual. Nilai positif berputar mengikut arah jam.';
 
   @override
   String get apply => 'Apply';
@@ -941,7 +941,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Penentukuran diperlukan. Putar peranti dalam rajah-8.';
 
   @override
   String get dailyVerse => 'Ayat Harian';

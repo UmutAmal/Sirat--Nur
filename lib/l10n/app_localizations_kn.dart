@@ -814,26 +814,26 @@ class AppLocalizationsKn extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'ಕಿಬ್ಲಾ ಮಾಪನಾಂಕ ನಿರ್ಣಯ';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'ಕಂಪಾಸ್ ನಯಗೊಳಿಸುವಿಕೆ';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'ಮಾಪನಾಂಕ ನಿರ್ಣಯ ಆಫ್ಸೆಟ್';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'ಪ್ರಸ್ತುತ: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'ನಿಮ್ಮ ದಿಕ್ಸೂಚಿಗೆ ಹಸ್ತಚಾಲಿತ ತಿದ್ದುಪಡಿ ಅಗತ್ಯವಿದ್ದರೆ ಹೊಂದಿಸಿ. ಧನಾತ್ಮಕ ಮೌಲ್ಯಗಳು ಪ್ರದಕ್ಷಿಣಾಕಾರವಾಗಿ ತಿರುಗುತ್ತವೆ.';
 
   @override
   String get apply => 'Apply';
@@ -939,7 +939,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'ಮಾಪನಾಂಕ ನಿರ್ಣಯದ ಅಗತ್ಯವಿದೆ. ಚಿತ್ರ-8 ರಲ್ಲಿ ಸಾಧನವನ್ನು ತಿರುಗಿಸಿ.';
 
   @override
   String get dailyVerse => 'ದೈನಂದಿನ ಪದ್ಯ';

@@ -816,7 +816,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'किब्ला मापन';
 
   @override
   String get compassSmoothing => 'Compass Smoothing';

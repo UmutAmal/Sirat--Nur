@@ -346,6 +346,12 @@ bool _mustStaySingleLine(String key) {
   return key.startsWith('audioVoice') ||
       key == 'quranLoadFailed' ||
       key == 'locationDetectionFailed' ||
+      key == 'qiblaCalibration' ||
+      key == 'calibrationOffset' ||
+      key == 'currentOffset' ||
+      key == 'compassSmoothing' ||
+      key == 'manualCorrectionDesc' ||
+      key == 'calibrationRequiredFigure8' ||
       key == 'qiblaLocationRequiredTitle' ||
       key == 'qiblaLocationRequiredBody' ||
       key == 'downloadCompleted' ||

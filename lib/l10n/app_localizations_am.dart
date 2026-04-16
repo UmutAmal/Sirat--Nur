@@ -809,26 +809,26 @@ class AppLocalizationsAm extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'የቂብላ መለኪያ';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'ኮምፓስ ማለስለስ';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'የካሊብሬሽን ማካካሻ';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'የአሁኑ፡ $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'ኮምፓስዎ በእጅ እርማት የሚያስፈልገው ከሆነ ያስተካክሉ። አወንታዊ እሴቶች በሰዓት አቅጣጫ ይሽከረከራሉ።';
 
   @override
   String get apply => 'Apply';
@@ -932,8 +932,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get rotateToFindQibla => 'Rotate to Find Qibla';
 
   @override
-  String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+  String get calibrationRequiredFigure8 => 'ልኬት ያስፈልጋል። መሣሪያውን በስእል-8 አሽከርክር።';
 
   @override
   String get dailyVerse => 'ዕለታዊ ጥቅስ';

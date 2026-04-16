@@ -817,26 +817,26 @@ class AppLocalizationsGn extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Qibla Calibración rehegua';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Brújula Ñemopotĩ';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Desplazamiento de calibración rehegua';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Ko’áĝagua: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Emohenda nde brújula oikotevẽramo peteĩ corrección manual. Umi valor positivo ojere reloj gotyo.';
 
   @override
   String get apply => 'Apply';
@@ -942,7 +942,7 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Calibración oñeikotevẽva. Ojere dispositivo figura-8-pe.';
 
   @override
   String get dailyVerse => 'Versíkulo Diario rehegua';

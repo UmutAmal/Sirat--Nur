@@ -799,26 +799,25 @@ class AppLocalizationsZh extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => '朝拜校准';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => '罗盘平滑';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => '校准偏移';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return '当前：$offset°';
   }
 
   @override
-  String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+  String get manualCorrectionDesc => '如果您的指南针需要手动校正，请进行调整。正值顺时针旋转。';
 
   @override
   String get apply => 'Apply';
@@ -920,8 +919,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get rotateToFindQibla => 'Rotate to Find Qibla';
 
   @override
-  String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+  String get calibrationRequiredFigure8 => '需要校准。旋转图 8 中的设备。';
 
   @override
   String get dailyVerse => '每日诗歌';
@@ -2437,26 +2435,25 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => '朝拜校准';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => '罗盘平滑';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => '校准偏移';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return '当前：$offset°';
   }
 
   @override
-  String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+  String get manualCorrectionDesc => '如果您的指南针需要手动校正，请进行调整。正值顺时针旋转。';
 
   @override
   String get apply => 'Apply';
@@ -2558,8 +2555,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get rotateToFindQibla => 'Rotate to Find Qibla';
 
   @override
-  String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+  String get calibrationRequiredFigure8 => '需要校准。旋转图 8 中的设备。';
 
   @override
   String get dailyVerse => '每日诗歌';
@@ -4075,26 +4071,25 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => '朝拜校準';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => '羅盤平滑';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => '校準偏移';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return '目前：$offset°';
   }
 
   @override
-  String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+  String get manualCorrectionDesc => '如果您的指南針需要手動校正，請進行調整。正值順時針旋轉。';
 
   @override
   String get apply => 'Apply';
@@ -4196,8 +4191,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get rotateToFindQibla => 'Rotate to Find Qibla';
 
   @override
-  String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+  String get calibrationRequiredFigure8 => '需要校準。旋轉圖 8 中的設備。';
 
   @override
   String get dailyVerse => '每日詩歌';

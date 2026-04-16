@@ -817,26 +817,26 @@ class AppLocalizationsCy extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Calibradu Qibla';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Llyfnu Cwmpawd';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Graddnodi Gwrthbwyso';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Cyfredol: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Addaswch os oes angen cywiriad â llaw ar eich cwmpawd. Mae gwerthoedd cadarnhaol yn cylchdroi clocwedd.';
 
   @override
   String get apply => 'Apply';
@@ -942,7 +942,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Mae angen graddnodi. Cylchdroi dyfais yn ffigur-8.';
 
   @override
   String get dailyVerse => 'Pennill Dyddiol';

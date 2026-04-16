@@ -819,26 +819,26 @@ class AppLocalizationsDv extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'ޤިބްލާ ކެލިބްރޭޝަން';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'ކޮމްޕަސް ސްމޫތިންގ އެވެ';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'ކެލިބްރޭޝަން އޮފްސެޓް';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'މިހާރު: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'ކޮމްޕަސް މެނުއަލް ކަރެކްޝަން ބޭނުންވާނަމަ އެޖެސްޓް ކުރާށެވެ. ޕޮޒިޓިވް ވެލިއުތައް އެނބުރެނީ ގަޑިއާ ދިމާއަށެވެ.';
 
   @override
   String get apply => 'Apply';
@@ -944,7 +944,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'ކެލިބްރޭޝަން ކުރަން ޖެހެއެވެ. ފޮޓޯ-8 ގައިވާ ޑިވައިސް އެނބުރުވުން.';
 
   @override
   String get dailyVerse => 'ދުވަހުން ދުވަހަށް އާޔަތް';

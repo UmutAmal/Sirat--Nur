@@ -815,26 +815,26 @@ class AppLocalizationsTe extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'ఖిబ్లా క్రమాంకనం';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'కంపాస్ స్మూతింగ్';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'అమరిక ఆఫ్‌సెట్';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'ప్రస్తుత: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'మీ దిక్సూచికి మాన్యువల్ కరెక్షన్ అవసరమైతే సర్దుబాటు చేయండి. సానుకూల విలువలు సవ్యదిశలో తిరుగుతాయి.';
 
   @override
   String get apply => 'Apply';
@@ -940,7 +940,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'క్రమాంకనం అవసరం. ఫిగర్-8లో పరికరాన్ని తిప్పండి.';
 
   @override
   String get dailyVerse => 'రోజువారీ పద్యం';

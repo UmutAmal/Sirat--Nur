@@ -816,26 +816,26 @@ class AppLocalizationsLv extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Kiblas kalibrēšana';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Kompasa izlīdzināšana';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Kalibrēšanas nobīde';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Pašreizējais: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Pielāgojiet, vai jūsu kompasam nepieciešama manuāla korekcija. Pozitīvās vērtības griežas pulksteņrādītāja virzienā.';
 
   @override
   String get apply => 'Apply';
@@ -941,7 +941,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Nepieciešama kalibrēšana. Pagrieziet ierīci attēlā-8.';
 
   @override
   String get dailyVerse => 'Dienas dzejolis';

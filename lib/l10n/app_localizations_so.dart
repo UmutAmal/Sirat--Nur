@@ -819,23 +819,23 @@ class AppLocalizationsSo extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Jilicsan Compass';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Dib u habeynta';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Hadda: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Hagaajin haddii kombuyuutarku u baahan yahay sixid gacanta ah. Qiimayaasha togan waxay u wareegaan saacada.';
 
   @override
   String get apply => 'Apply';
@@ -941,7 +941,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Qalabaynta ayaa loo baahan yahay. Ku wareeji qalabka sawirka-8.';
 
   @override
   String get dailyVerse => 'Aayadda Maalinlaha ah';

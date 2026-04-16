@@ -819,23 +819,23 @@ class AppLocalizationsHa extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Compass Smooting';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Daidaita Rarraba';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Yanzu: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Daidaita idan kamfas ɗin ku yana buƙatar gyaran hannu. Kyawawan dabi\'u suna juyawa agogon hannu.';
 
   @override
   String get apply => 'Apply';
@@ -941,7 +941,7 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Ana buƙatar daidaitawa. Juya na\'urar a adadi-8.';
 
   @override
   String get dailyVerse => 'Aya ta Yau';

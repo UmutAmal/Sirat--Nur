@@ -514,6 +514,12 @@ void main() {
       'priority locales do not fall back to English for qibla error copy',
       () {
         const localizedKeys = [
+          'qiblaCalibration',
+          'calibrationOffset',
+          'currentOffset',
+          'compassSmoothing',
+          'manualCorrectionDesc',
+          'calibrationRequiredFigure8',
           'qiblaCompassErrorDetails',
           'qiblaSensorUnavailable',
           'qiblaLocationRequiredTitle',

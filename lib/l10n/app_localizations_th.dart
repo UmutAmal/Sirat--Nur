@@ -815,26 +815,26 @@ class AppLocalizationsTh extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'การสอบเทียบกิบลัต';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'การปรับเข็มทิศให้เรียบ';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'ชดเชยการปรับเทียบ';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'ปัจจุบัน: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'ปรับหากเข็มทิศของคุณต้องการการแก้ไขด้วยตนเอง ค่าบวกจะหมุนตามเข็มนาฬิกา';
 
   @override
   String get apply => 'Apply';
@@ -940,7 +940,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'จำเป็นต้องมีการสอบเทียบ หมุนอุปกรณ์ในรูปที่ 8';
 
   @override
   String get dailyVerse => 'กลอนประจำวัน';

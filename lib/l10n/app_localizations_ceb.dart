@@ -819,7 +819,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Pag-calibrate sa Qibla';
 
   @override
   String get compassSmoothing => 'Compass Smoothing';
@@ -829,16 +829,16 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Pag-calibrate Offset';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Karon: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'I-adjust kung ang imong kompas nagkinahanglan og manwal nga pagtul-id. Ang mga positibo nga kantidad nagtuyok subay sa orasan.';
 
   @override
   String get apply => 'Apply';
@@ -944,7 +944,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Gikinahanglan ang pag-calibrate. I-rotate ang device sa numero-8.';
 
   @override
   String get dailyVerse => 'Adlaw-adlaw nga Bersikulo';

@@ -816,26 +816,26 @@ class AppLocalizationsMn extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Кибла тохируулга';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Луужин гөлгөр болгох';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Шалгалт тохируулгын офсет';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Одоогийн: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Таны луужинд гараар засвар хийх шаардлагатай бол тохируулна уу. Эерэг утгууд нь цагийн зүүний дагуу эргэлддэг.';
 
   @override
   String get apply => 'Apply';
@@ -941,7 +941,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Шалгалт тохируулга хийх шаардлагатай. Зураг-8 дээрх төхөөрөмжийг эргүүл.';
 
   @override
   String get dailyVerse => 'Өдөр тутмын шүлэг';

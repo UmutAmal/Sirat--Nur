@@ -816,26 +816,26 @@ class AppLocalizationsSl extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Kalibracija Qibla';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Glajenje kompasa';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Odmik kalibracije';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Trenutno: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Prilagodite, če vaš kompas potrebuje ročni popravek. Pozitivne vrednosti se vrtijo v smeri urinega kazalca.';
 
   @override
   String get apply => 'Apply';
@@ -942,7 +942,7 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Potrebna kalibracija. Zavrtite napravo na sliki 8.';
 
   @override
   String get dailyVerse => 'Dnevni verz';

@@ -816,17 +816,17 @@ class AppLocalizationsLg extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Okupima kwa Qibla';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Okugonza Kampasi';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Okukyusakyusa mu kupima';
 
   @override
   String currentOffset(Object offset) {
@@ -835,7 +835,7 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Teekateeka singa kkampasi yo yeetaaga okutereezebwa mu ngalo. Emiwendo emirungi gikyukakyuka mu ssaawa.';
 
   @override
   String get apply => 'Apply';
@@ -943,7 +943,7 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Okupima (calibration) kyetaagisa. Zingulula ekyuma mu kifaananyi-8.';
 
   @override
   String get dailyVerse => 'Olunyiriri lwa Buli lunaku';

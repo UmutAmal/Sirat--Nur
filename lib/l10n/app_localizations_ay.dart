@@ -829,7 +829,8 @@ class AppLocalizationsAy extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration =>
+      'Qibla Calibración ukax mä jach’a uñacht’äwiwa';
 
   @override
   String get compassSmoothing => 'Compass Smoothing';

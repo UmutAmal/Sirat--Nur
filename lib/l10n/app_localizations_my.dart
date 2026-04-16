@@ -822,7 +822,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'သံလိုက်အိမ်မြှောင် ချောချောမွေ့မွေ့';
 
   @override
   String get reduceSensorJitter =>
@@ -833,12 +833,12 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'လက်ရှိ- $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'သင့်အိမ်မြှောင်တွင် လက်ဖြင့် ပြုပြင်မှု လိုအပ်ပါက ချိန်ညှိပါ။ အပြုသဘောဆောင်သောတန်ဖိုးများသည် နာရီလက်တံအတိုင်းလှည့်သည်။';
 
   @override
   String get apply => 'Apply';
@@ -944,7 +944,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'ချိန်ညှိမှု လိုအပ်သည်။ ပုံ-8 တွင် စက်ကိုလှည့်ပါ။';
 
   @override
   String get dailyVerse => 'နေ့စဉ်ကျမ်းပိုဒ်';

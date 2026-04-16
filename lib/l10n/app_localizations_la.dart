@@ -818,14 +818,14 @@ class AppLocalizationsLa extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Compass politurae';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Calibration cinguli';
 
   @override
   String currentOffset(Object offset) {
@@ -834,7 +834,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Apta, si gyrus tuus correctione manuali indiget. Valores positivi clockwise rotantur.';
 
   @override
   String get apply => 'Apply';
@@ -940,7 +940,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Calibratio requiritur. Rotate notae in-8 fig.';
 
   @override
   String get dailyVerse => 'Quotidie Versus';

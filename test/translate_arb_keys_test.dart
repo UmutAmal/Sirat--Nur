@@ -129,6 +129,17 @@ void main() {
       expect(value, 'Ses calinamadi');
     });
 
+    test('rejects multiline qibla calibration output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'qiblaCalibration',
+        source: 'Qibla Calibration',
+        currentValue: 'Kible Kalibrasyonu',
+        candidate: 'means the following.\nKible Kalibrasyonu',
+      );
+
+      expect(value, 'Kible Kalibrasyonu');
+    });
+
     test('rejects multiline diagnostics output', () {
       final value = resolveTranslatedArbValue(
         key: 'diagnosticsQuranCloudCheckFailed',

@@ -211,7 +211,7 @@
   "audioVoice": "ድምጺ ድምጺ",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
-  "qiblaCalibration": "Qibla Calibration",
+  "qiblaCalibration": "ቂብላ ምዕቃን",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
   "calibrationOffset": "Calibration Offset",

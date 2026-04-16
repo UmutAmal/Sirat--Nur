@@ -814,7 +814,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'ການ​ປັບ Qibla​';
 
   @override
   String get compassSmoothing => 'Compass Smoothing';
@@ -828,12 +828,12 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'ປັດຈຸບັນ: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'ປັບຖ້າເຂັມທິດຂອງທ່ານຕ້ອງການການແກ້ໄຂດ້ວຍຕົນເອງ. ຄ່າທາງບວກຈະໝຸນຕາມເຂັມໂມງ.';
 
   @override
   String get apply => 'Apply';
@@ -939,7 +939,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'ຕ້ອງການການປັບທຽບ. ໝຸນອຸປະກອນໃນຮູບ-8.';
 
   @override
   String get dailyVerse => 'ຂໍ້ພຣະຄໍາພີປະຈໍາວັນ';

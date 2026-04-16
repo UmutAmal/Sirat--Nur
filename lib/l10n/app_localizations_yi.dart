@@ -815,26 +815,26 @@ class AppLocalizationsYi extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'קיבלאַ קאַלאַבריישאַן';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'קאָמפּאַס סמאָאָאָטינג';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'קאַלאַבריישאַן אָפסעט';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'קראַנט: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'סטרויערן אויב דיין קאָמפּאַס דאַרף אַ מאַנואַל קערעקשאַן. positive וואַלועס דרייען קלאַקווייז.';
 
   @override
   String get apply => 'Apply';
@@ -940,7 +940,7 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'קאַלאַבריישאַן פארלאנגט. דרייען די מיטל אין פיגור-8.';
 
   @override
   String get dailyVerse => 'טעגלעך ווערס';

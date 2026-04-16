@@ -828,16 +828,16 @@ class AppLocalizationsKy extends AppLocalizations {
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Калибрлөө офсет';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Учурдагы: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Компасыңыз кол менен оңдоого муктаж болсо, тууралаңыз. Оң маанилер саат жебеси боюнча айланат.';
 
   @override
   String get apply => 'Apply';
@@ -943,7 +943,7 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Калибрлөө талап кылынат. 8-сүрөттөгү аппаратты айлантыңыз.';
 
   @override
   String get dailyVerse => 'Daily Verse';

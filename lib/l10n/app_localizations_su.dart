@@ -816,10 +816,10 @@ class AppLocalizationsSu extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Kalibrasi Kiblat';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Kompas Smoothing';
 
   @override
   String get reduceSensorJitter =>
@@ -835,7 +835,7 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Saluyukeun upami kompas anjeun peryogi koreksi manual. Nilai positip muterkeun saarah jarum jam.';
 
   @override
   String get apply => 'Apply';
@@ -941,7 +941,7 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Calibration diperlukeun. Rotasikeun alat dina gambar-8.';
 
   @override
   String get dailyVerse => 'Ayat poean';

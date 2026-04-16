@@ -817,26 +817,26 @@ class AppLocalizationsXh extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Ulungelelwaniso lweQibla';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Ikhampasi egudileyo';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'I-Calibration Offset';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Okwangoku: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Lungisa ukuba ikhampasi yakho ifuna ukulungiswa ngesandla. Amaxabiso akhuthazayo ajikeleza ngokwewotshi.';
 
   @override
   String get apply => 'Apply';
@@ -942,7 +942,7 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Ulungelelwaniso luyafuneka. Jikelezisa isixhobo kumfanekiso-8.';
 
   @override
   String get dailyVerse => 'Ivesi yemihla ngemihla';

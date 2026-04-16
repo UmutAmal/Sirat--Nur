@@ -817,7 +817,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Kwiyoroshya';
 
   @override
   String get reduceSensorJitter =>
@@ -828,12 +828,12 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Ibiriho: $offset °';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Hindura niba compas yawe ikeneye gukosorwa nintoki. Indangagaciro nziza zizunguruka ku isaha.';
 
   @override
   String get apply => 'Apply';
@@ -939,7 +939,7 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Calibration irakenewe. Kuzenguruka igikoresho mumashusho-8.';
 
   @override
   String get dailyVerse => 'Umurongo wa buri munsi';

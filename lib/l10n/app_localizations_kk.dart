@@ -816,23 +816,23 @@ class AppLocalizationsKk extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Компас тегістеу';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Калибрлеудің ауытқуы';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Ағымдағы: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Компасқа қолмен түзету қажет болса, реттеңіз. Оң мәндер сағат тілімен бұрылады.';
 
   @override
   String get apply => 'Apply';
@@ -938,7 +938,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Калибрлеу қажет. 8-суреттегі құрылғыны айналдырыңыз.';
 
   @override
   String get dailyVerse => 'Күнделікті өлең';

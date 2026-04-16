@@ -816,26 +816,26 @@ class AppLocalizationsHu extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Qibla kalibráció';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Iránytű simítás';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Kalibrálási eltolás';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Jelenlegi: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Állítsa be, ha az iránytűt manuálisan kell korrigálni. A pozitív értékek az óramutató járásával megegyező irányban forognak.';
 
   @override
   String get apply => 'Apply';
@@ -941,7 +941,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Kalibrálás szükséges. Forgassa el az eszközt a 8. ábrán.';
 
   @override
   String get dailyVerse => 'Napi vers';

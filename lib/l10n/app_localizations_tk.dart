@@ -814,26 +814,26 @@ class AppLocalizationsTk extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Kibla kalibrlemesi';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Kompas tekizlemek';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Kalibrleme ofset';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Häzirki: $offset °';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Kompasyňyza el bilen düzediş gerek bolsa sazlaň. Oňyn bahalar sagat ugruna aýlanýar.';
 
   @override
   String get apply => 'Apply';
@@ -939,7 +939,7 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Kalibrleme zerur. Enjamy 8-nji suratda aýlaň.';
 
   @override
   String get dailyVerse => 'Gündelik aýat';

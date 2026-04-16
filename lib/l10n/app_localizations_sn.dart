@@ -827,12 +827,12 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Yazvino: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Gadzirisa kana kambasi yako ichida kugadziriswa nemawoko. Positive values ​​inotenderera newachi.';
 
   @override
   String get apply => 'Apply';
@@ -938,7 +938,7 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Calibration inodiwa. Tenderedza mudziyo mumufananidzo-8.';
 
   @override
   String get dailyVerse => 'Daily Verse';

@@ -811,26 +811,26 @@ class AppLocalizationsHe extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'כיול קיבלה';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'החלקת מצפן';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'היסט כיול';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'נוכחי: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'התאם אם המצפן שלך זקוק לתיקון ידני. ערכים חיוביים מסתובבים בכיוון השעון.';
 
   @override
   String get apply => 'Apply';
@@ -935,8 +935,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get rotateToFindQibla => 'Rotate to Find Qibla';
 
   @override
-  String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+  String get calibrationRequiredFigure8 => 'נדרש כיול. סובב את המכשיר באיור 8.';
 
   @override
   String get dailyVerse => 'פסוק יומי';

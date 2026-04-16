@@ -817,7 +817,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Calibration Qibla';
 
   @override
   String get compassSmoothing => 'Compass Smoothing';
@@ -827,16 +827,16 @@ class AppLocalizationsGd extends AppLocalizations {
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Offset Calibration';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'An-dràsta: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Atharraich ma tha feum aig a’ chombaist agad air ceartachadh làimhe. Bidh luachan adhartach a’ tionndadh deiseal.';
 
   @override
   String get apply => 'Apply';
@@ -942,7 +942,7 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Calibration a dhìth. Rothar inneal ann am figear-8.';
 
   @override
   String get dailyVerse => 'Rann làitheil';

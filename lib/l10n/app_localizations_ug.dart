@@ -828,12 +828,12 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'نۆۋەتتىكى: $offset °';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'ئەگەر كومپاس قولدا تۈزىتىشكە ئېھتىياجلىق بولسا تەڭشەڭ. ئاكتىپ قىممەتلەر سائەت يۆنىلىشىدە ئايلىنىدۇ.';
 
   @override
   String get apply => 'Apply';
@@ -939,7 +939,7 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'تەڭشەش تەلەپ قىلىنىدۇ. 8-رەسىمدە ئۈسكۈنىنى ئايلاندۇرۇش.';
 
   @override
   String get dailyVerse => 'كۈندىلىك ئايەت';

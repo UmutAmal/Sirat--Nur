@@ -211,7 +211,7 @@
   "audioVoice": "श्रव्य स्वर",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
-  "qiblaCalibration": "Qibla Calibration",
+  "qiblaCalibration": "किब्ला मापन",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
   "calibrationOffset": "Calibration Offset",

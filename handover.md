@@ -8142,3 +8142,48 @@
 
 ### Sonraki Adım
 - Sonraki dongude kullaniciya gorunen kalan priority fallback'lerden `rawatib`, `fastingDebt`, `qiblaAligned`, `qiblaCalibration`, `dailyChecklist`, `dailyProgress` veya aktif sayfalarda kullanilan benzer anahtarlar arasindan en yuksek etkili tek yuzeyi sec.
+
+## 2026-04-16 TUR-215 — Localize Qibla Calibration Copy
+
+### Yapılan İşlem
+- `qiblaCalibration`, `calibrationOffset`, `currentOffset`, `compassSmoothing`, `manualCorrectionDesc` ve `calibrationRequiredFigure8` anahtarlari korumali ARB batch'i ile genis locale kumesinde lokalize edildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- `tool\translate_arb_keys.dart` single-line guard listesine qibla calibration kumesi eklendi.
+- `test\arb_ui_localization_test.dart` qibla priority locale fallback guard kapsaminda bu kullanici yuzeyi anahtarlarini kontrol ediyor.
+- `test\translate_arb_keys_test.dart` multiline qibla calibration output regresyon testiyle arac seviyesinde batch debris korumasi ekledi.
+- `app_tw.arb` ve `app_ak.arb` icinde `currentOffset` icin guvenli mevcut lokalize deger korundu; placeholder `{offset}` tum ARB dosyalarinda korundu.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart:363` kalibrasyon diyalogu basligini `l10n.qiblaCalibration` ile gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart:366` kalibrasyon gereksinimi metnini `l10n.calibrationRequiredFigure8` ile gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:146`, `:154`, `:155`, `:164`, `:443` ve `:449` ayarlar yuzeyinde ayni qibla calibration kumesini kullaniyor.
+- TUR-215 oncesi bu anahtarlar priority locale setinde Ingilizce fallback uretme riski tasiyordu; bu, aktif Qibla/Ayarlar deneyiminde tam lokalizasyon hedefiyle uyumsuzdu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Priority locale setinde Qibla kalibrasyon ve ayarlar copy Ingilizce fallback riski kapandi.
+- Kalan fallback sayimlari: `qiblaCalibration 78`, `calibrationOffset 79`, `currentOffset 79`, `compassSmoothing 81`, `manualCorrectionDesc 66`, `calibrationRequiredFigure8 66`.
+- Kalan fallback'ler Google ceviri destegi olmayan veya guvenli aday uretilemeyen nadir/legacy locale grubunda birakildi; dini/teknik copy uydurulmadi.
+- Tek satir guard'i ile gelecekteki batch debris/newline riski azaltildi.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\features\qibla\qibla_page_test.dart test\settings_provider_test.dart` PASS (`70/70`)
+- `git diff --check` PASS (yalnizca mevcut Windows CRLF uyarilari)
+- `flutter analyze` PASS
+- `flutter test` PASS (`385/385`)
+- Placeholder/fallback taramasi PASS: `{offset}` korundu, eksik ARB anahtari yok.
+
+### Risk Değişimi
+- Priority locale qibla calibration fallback riski: `12/25 -> 2/25`
+- Tum locale qibla calibration fallback riski: `12/25 -> 7/25`
+- Qibla calibration ceviri batch debris tekrar riski: `10/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki dongude aktif kullanici yuzeylerinde kalan l10n fallback ve hardcoded string taramasini yenile; `tapToCount`, `juz`, `tafsir`, `dailyChecklist`, `dailyProgress` veya benzer gorunur anahtarlar arasindan en yuksek riskli tek yuzeyi sec.

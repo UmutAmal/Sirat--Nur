@@ -817,17 +817,17 @@ class AppLocalizationsOm extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'Safartuu Qiblaa';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Koompaasii Sirreessuu';
 
   @override
   String get reduceSensorJitter =>
       'Reduce sensor jitter for a steadier needle.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Ofseeti Safartuu';
 
   @override
   String currentOffset(Object offset) {
@@ -836,7 +836,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Yoo koompaasiin keessan sirreeffama harkaa barbaade sirreessaa. Gatiin pozaatiivii gara sa\'aatii naanneffama.';
 
   @override
   String get apply => 'Apply';
@@ -942,7 +942,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+      'Safartuu barbaachisa. Meeshaa fakkii-8 irratti mul’atu naannessi.';
 
   @override
   String get dailyVerse => 'Keeyyata Guyyaa Guyyaa';

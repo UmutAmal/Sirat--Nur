@@ -808,7 +808,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get ishaAngle => 'Isha Angle';
 
   @override
-  String get qiblaCalibration => 'Qibla Calibration';
+  String get qiblaCalibration => 'ቂብላ ምዕቃን';
 
   @override
   String get compassSmoothing => 'Compass Smoothing';
