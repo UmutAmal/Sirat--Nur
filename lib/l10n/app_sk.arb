@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Manuálne vlastné uhly (bez inštitucionálneho zdroja)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio aktíva",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Zvukové aktíva používateľského rozhrania",
   "diagnosticsQuranAudioAssets": "Zvukové aktíva Koránu",
   "diagnosticsAudioAssets": "Zvukové aktíva",
   "diagnosticsFilesCount": "{count} súborov",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalizácia Lokality",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} podporované",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Súbor údajov Koránu",
+  "diagnosticsQuranSurahs": "Koránske súry",
+  "diagnosticsQuranAyahs": "Koránové Ayahs",
+  "diagnosticsQuranJuzMetadata": "Metadáta Koránu Juz",
   "diagnosticsQuranCloudTablesMissing": "Cloudové tabuľky chýbajú v Supabase; záložný balík aktívny",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Kontrola cloudu zlyhala: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Chýbajú metadáta cloud juz; združená štrukturálna núdzová aktívna",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Kontrola štruktúry cloudu zlyhala: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

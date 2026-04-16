@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Mores manuales anguli (no fonte institutionali)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "III Audio Assets",
   "diagnosticsQuranAudioAssets": "Quran Audio Assets",
   "diagnosticsAudioAssets": "Audio Assets",
   "diagnosticsFilesCount": "{count} imaginum",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localisation Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} sustentatur",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -268,7 +268,7 @@
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Tabulae nubis desunt in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Defecit reprehendo nubes: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Nubes juz metadata defuit; bundled fabrica activae fallback",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Defecit reprehendo structurarum nubes: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

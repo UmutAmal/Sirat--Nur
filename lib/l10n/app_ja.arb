@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "手動カスタム角度 (機関的な情報源なし)",
   "diagnosticsCloudDriven": "クラウドドリブン",
   "diagnosticsAdhanAudioAssets": "アザーンオーディオアセット",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UIオーディオアセット",
   "diagnosticsQuranAudioAssets": "コーランオーディオアセット",
   "diagnosticsAudioAssets": "オーディオアセット",
   "diagnosticsFilesCount": "{count} ファイル",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "ローカリゼーションロケール",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} がサポートされています",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "コーラン データセット",
+  "diagnosticsQuranSurahs": "コーラン スーラ",
+  "diagnosticsQuranAyahs": "コーラン アヤ",
+  "diagnosticsQuranJuzMetadata": "コーラン ジュズのメタデータ",
   "diagnosticsQuranCloudTablesMissing": "Supabase にクラウド テーブルがありません。バンドルされたフォールバックがアクティブです",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "クラウドチェックが失敗しました: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz メタデータがありません。バンドルされた構造フォールバックがアクティブです",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "クラウドの構造チェックに失敗しました: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

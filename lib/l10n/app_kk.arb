@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Қолмен реттелетін бұрыштар (институционалдық дереккөз жоқ)",
   "diagnosticsCloudDriven": "Бұлтқа негізделген",
   "diagnosticsAdhanAudioAssets": "Азан аудио активтері",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI аудио активтері",
   "diagnosticsQuranAudioAssets": "Құран аудио активтері",
   "diagnosticsAudioAssets": "Аудио активтері",
   "diagnosticsFilesCount": "{count} файлдар",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization Locals",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} қолдау көрсетеді",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Құран деректер жинағы",
+  "diagnosticsQuranSurahs": "Құран сүрелер",
+  "diagnosticsQuranAyahs": "Құран аяттары",
+  "diagnosticsQuranJuzMetadata": "Құран Жүз метадеректері",
   "diagnosticsQuranCloudTablesMissing": "Supabase қолданбасында бұлтты кестелер жоқ; жинақталған қалпына келтіру белсенді",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Бұлтты тексеру сәтсіз аяқталды: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz метадеректері жоқ; жинақталған құрылымдық қалпына келтіру белсенді",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Бұлтты құрылымды тексеру сәтсіз аяқталды: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

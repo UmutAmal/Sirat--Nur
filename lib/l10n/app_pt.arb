@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Ângulos personalizados manuais (sem fonte institucional)",
   "diagnosticsCloudDriven": "Orientado pela nuvem",
   "diagnosticsAdhanAudioAssets": "Recursos de áudio Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Ativos de áudio da IU",
   "diagnosticsQuranAudioAssets": "Ativos de áudio do Alcorão",
   "diagnosticsAudioAssets": "Ativos de áudio",
   "diagnosticsFilesCount": "{count} arquivos",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Locais de localização",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} compatíveis",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Conjunto de dados do Alcorão",
+  "diagnosticsQuranSurahs": "Suratas do Alcorão",
+  "diagnosticsQuranAyahs": "Versículos do Alcorão",
+  "diagnosticsQuranJuzMetadata": "Metadados dos juz do Alcorão",
   "diagnosticsQuranCloudTablesMissing": "Tabelas de nuvem ausentes no Supabase; fallback empacotado ativo",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Falha na verificação da nuvem: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Faltam metadados juz na nuvem; fallback estrutural agrupado ativo",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Falha na verificação estrutural da nuvem: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

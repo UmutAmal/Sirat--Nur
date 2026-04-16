@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "मैनुअल कस्टम कोण (कोई संस्थागत स्रोत ना)",
   "diagnosticsCloudDriven": "बादल संचालित बा",
   "diagnosticsAdhanAudioAssets": "अधान ऑडियो एसेट्स के बा",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "यूआई ऑडियो संपत्ति के बा",
   "diagnosticsQuranAudioAssets": "कुरान के ऑडियो संपत्ति बा",
   "diagnosticsAudioAssets": "ऑडियो एसेट्स के बारे में बतावल गइल बा",
   "diagnosticsFilesCount": "{count} फाइल के बा",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "स्थानीयकरण लोकेल के बारे में बतावल गइल बा",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} समर्थित बा",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "कुरान के डाटासेट के बा",
+  "diagnosticsQuranSurahs": "कुरान के सूरह के बारे में बतावल गइल बा",
+  "diagnosticsQuranAyahs": "कुरान के अयह के बा",
+  "diagnosticsQuranJuzMetadata": "कुरान जुज मेटाडाटा के बारे में बतावल गइल बा",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "क्लाउड जांच विफल हो गइल: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "क्लाउड संरचनात्मक जांच विफल हो गइल: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

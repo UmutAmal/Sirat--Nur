@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "El bilen ýasalan burçlar (institusional çeşme ýok)",
   "diagnosticsCloudDriven": "Bulut sürülýär",
   "diagnosticsAdhanAudioAssets": "Adhan ses baýlyklary",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI ses aktiwleri",
   "diagnosticsQuranAudioAssets": "Kuran ses baýlyklary",
   "diagnosticsAudioAssets": "Ses aktiwleri",
   "diagnosticsFilesCount": "{count} faýllary",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalizasiýa",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} goldaýar",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Kuran maglumat toplumy",
+  "diagnosticsQuranSurahs": "Kuran süreleri",
+  "diagnosticsQuranAyahs": "Kuran aýatlary",
+  "diagnosticsQuranJuzMetadata": "Kuran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Supabase-de ýok bulut tablisalary; birikdirilen yza gaýdyş işjeň",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Bulut barlagy şowsuz: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Bulut juz metadata ýitdi; birikdirilen gurluş yza gaýdyş işjeň",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Bulut gurluş gurluşy şowsuz boldy: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

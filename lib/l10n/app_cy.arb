@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Onglau personol â llaw (dim ffynhonnell sefydliadol)",
   "diagnosticsCloudDriven": "Gyrrwr Cwmwl",
   "diagnosticsAdhanAudioAssets": "Adhan Asedau Sain",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Asedau Sain UI",
   "diagnosticsQuranAudioAssets": "Asedau Sain Quran",
   "diagnosticsAudioAssets": "Asedau Sain",
   "diagnosticsFilesCount": "{count} ffeil",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} cefnogi",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
+  "diagnosticsQuranDataset": "Set ddata Quran",
+  "diagnosticsQuranSurahs": "Surahs Quran",
   "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranJuzMetadata": "Metadata Juz Quran",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Methodd y gwiriad cwmwl: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Methodd gwiriad strwythurol y cwmwl: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

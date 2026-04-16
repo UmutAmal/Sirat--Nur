@@ -877,7 +877,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Ադանի աուդիո ակտիվներ';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI աուդիո ակտիվներ';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Ղուրանի աուդիո ակտիվներ';
@@ -900,17 +900,17 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count աջակցվում է';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Ղուրանի տվյալների հավաքածու';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Ղուրանի սուրաներ';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Ղուրանի Այահներ';
 
   @override
   String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
@@ -921,7 +921,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Ամպային ստուգումը ձախողվեց՝ $error';
   }
 
   @override
@@ -930,7 +930,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Ամպի կառուցվածքի ստուգումը ձախողվեց՝ $error';
   }
 
   @override

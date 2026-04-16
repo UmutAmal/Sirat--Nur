@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Angles personalitzats manuals (sense font institucional)",
   "diagnosticsCloudDriven": "Impulsat al núvol",
   "diagnosticsAdhanAudioAssets": "Actius d'àudio Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Recursos d'àudio de la IU",
   "diagnosticsQuranAudioAssets": "Actius d'àudio de l'Alcorà",
   "diagnosticsAudioAssets": "Actius d'àudio",
   "diagnosticsFilesCount": "{count} fitxers",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localització Locals",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} compatible",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Conjunt de dades de l'Alcorà",
+  "diagnosticsQuranSurahs": "Sures de l'Alcorà",
+  "diagnosticsQuranAyahs": "Alcorà Ayahs",
+  "diagnosticsQuranJuzMetadata": "Metadades de l'Alcorà Juz",
   "diagnosticsQuranCloudTablesMissing": "Falten taules de núvol a Supabase; sistema de reserva agrupat actiu",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "La comprovació del núvol ha fallat: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Falten metadades de núvol; alternativa estructural agrupada activa",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "La comprovació estructural del núvol ha fallat: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

@@ -874,7 +874,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'Hantida Maqalka UI';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Hantida Maqalka Quraanka';
@@ -897,17 +897,17 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count waa la taageeray';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Xogta Quraanka';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Suuradaha Quraanka';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Aayadaha Quraanka';
 
   @override
   String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
@@ -918,7 +918,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Hubinta daruurtu waa fashilantay: $error';
   }
 
   @override
@@ -927,7 +927,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Hubinta qaab dhismeedka daruuraha ayaa fashilmay: $error';
   }
 
   @override

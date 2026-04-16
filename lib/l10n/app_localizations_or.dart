@@ -875,7 +875,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'ଆଦନ ଅଡିଓ ଆସେଟସ୍ |';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI ଅଡିଓ ସମ୍ପତ୍ତି |';
 
   @override
   String get diagnosticsQuranAudioAssets => 'କୁରାନ ଅଡିଓ ସମ୍ପତ୍ତି |';
@@ -898,20 +898,20 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count ସମର୍ଥିତ |';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'କୁରାନ ଡାଟାବେସ';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'କୁରାନ ସୁରା |';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'କୁରାନ ଆୟାସ୍ |';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'କୁରାନ ଜୁଜ ମେଟାଡାଟା |';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -919,7 +919,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'କ୍ଲାଉଡ୍ ଯାଞ୍ଚ ବିଫଳ ହେଲା: $error';
   }
 
   @override
@@ -928,7 +928,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'କ୍ଲାଉଡ୍ ଗଠନମୂଳକ ଯାଞ୍ଚ ବିଫଳ ହେଲା: $error';
   }
 
   @override

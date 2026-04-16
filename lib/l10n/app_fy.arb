@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalisaasje Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} stipe",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -264,11 +264,11 @@
     }
   },
   "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranSurahs": "Koran Surahs",
+  "diagnosticsQuranAyahs": "Koran Ayahs",
+  "diagnosticsQuranJuzMetadata": "Koran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Wolkentabellen ûntbrekke yn Supabase; bondele fallback aktyf",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Wolkkontrôle mislearre: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Wolke juz metadata mist; bondele strukturele fallback aktyf",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Wolke strukturele kontrôle mislearre: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

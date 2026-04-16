@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "মেনুৱেল কাষ্টম এংগেল (কোনো প্ৰতিষ্ঠানিক উৎস নাই)",
   "diagnosticsCloudDriven": "ক্লাউড চালিত",
   "diagnosticsAdhanAudioAssets": "অধন অডিঅ' সম্পত্তি",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI অডিঅ' সম্পত্তি",
   "diagnosticsQuranAudioAssets": "কোৰআন অডিঅ' সম্পত্তি",
   "diagnosticsAudioAssets": "অডিঅ' সম্পত্তি",
   "diagnosticsFilesCount": "{count} ফাইলসমূহ",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "স্থানীয়কৰণ স্থানীয়কৰণসমূহ",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} সমৰ্থিত",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "কোৰআনৰ ডাটাছেট",
+  "diagnosticsQuranSurahs": "কোৰআনৰ চুৰা",
+  "diagnosticsQuranAyahs": "কোৰআন আয়াহ",
+  "diagnosticsQuranJuzMetadata": "কোৰআন জুজ মেটাডাটা",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "ক্লাউড পৰীক্ষা ব্যৰ্থ: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "ক্লাউড গাঁথনিগত পৰীক্ষা ব্যৰ্থ: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

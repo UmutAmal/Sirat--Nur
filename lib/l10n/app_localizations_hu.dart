@@ -874,7 +874,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI audioeszközök';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Korán audioeszközök';
@@ -897,20 +897,20 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count támogatott';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Korán adatkészlet';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Korán szúrák';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Korán Ayahs';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Korán Juz metaadatok';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -918,7 +918,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Felhőellenőrzés sikertelen: $error';
   }
 
   @override
@@ -927,7 +927,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'A felhő szerkezeti ellenőrzése sikertelen: $error';
   }
 
   @override

@@ -873,7 +873,7 @@ class AppLocalizationsMai extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'अधान ऑडियो एसेट्स';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'यूआई ऑडियो संपत्ति';
 
   @override
   String get diagnosticsQuranAudioAssets => 'कुरान ऑडियो संपत्ति';

@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "זוויות מותאמות אישית ידניות (ללא מקור מוסדי)",
   "diagnosticsCloudDriven": "מונע בענן",
   "diagnosticsAdhanAudioAssets": "קובצי שמע של אדהאן",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "נכסי אודיו של ממשק משתמש",
   "diagnosticsQuranAudioAssets": "נכסי אודיו של הקוראן",
   "diagnosticsAudioAssets": "נכסי אודיו",
   "diagnosticsFilesCount": "{count} קבצים",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "מקומות לוקליזציה",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} נתמך",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "מערך נתונים של הקוראן",
+  "diagnosticsQuranSurahs": "סורות הקוראן",
+  "diagnosticsQuranAyahs": "פסוקי הקוראן",
+  "diagnosticsQuranJuzMetadata": "מטא-נתוני ג'וז של הקוראן",
   "diagnosticsQuranCloudTablesMissing": "חסרים טבלאות ענן ב-Supabase; חילופין מאגד פעיל",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "בדיקת ענן נכשלה: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "חסרים מטא נתונים בענן juz; ארוזות נסיגה מבנית פעילה",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "בדיקה מבנית בענן נכשלה: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "మాన్యువల్ అనుకూల కోణాలు (సంస్థాగత మూలం లేదు)",
   "diagnosticsCloudDriven": "క్లౌడ్ నడిచేది",
   "diagnosticsAdhanAudioAssets": "అధాన్ ఆడియో ఆస్తులు",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI ఆడియో ఆస్తులు",
   "diagnosticsQuranAudioAssets": "ఖురాన్ ఆడియో ఆస్తులు",
   "diagnosticsAudioAssets": "ఆడియో ఆస్తులు",
   "diagnosticsFilesCount": "{count} ఫైల్‌లు",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "స్థానికీకరణ లొకేల్స్",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} మద్దతు ఉంది",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "ఖురాన్ డేటాసెట్",
+  "diagnosticsQuranSurahs": "ఖురాన్ సూరాలు",
+  "diagnosticsQuranAyahs": "ఖురాన్ అయాలు",
+  "diagnosticsQuranJuzMetadata": "ఖురాన్ జుజ్ మెటాడేటా",
   "diagnosticsQuranCloudTablesMissing": "సుపాబేస్‌లో క్లౌడ్ పట్టికలు లేవు; బండిల్ ఫాల్‌బ్యాక్ యాక్టివ్",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "క్లౌడ్ తనిఖీ విఫలమైంది: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "క్లౌడ్ జుజ్ మెటాడేటా లేదు; బండిల్డ్ స్ట్రక్చరల్ ఫాల్‌బ్యాక్ యాక్టివ్",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "క్లౌడ్ స్ట్రక్చరల్ చెక్ విఫలమైంది: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

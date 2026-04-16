@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} tohanana",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
+  "diagnosticsQuranDataset": "Takelaka data Quran",
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Tabilao rahona tsy hita ao Supabase; mitambatra fallback mavitrika",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Tsy nahomby ny fisavana rahona: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata tsy hita; mitambatra structural fallback mavitrika",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Tsy nahomby ny fisavana rafitra rahona: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

@@ -369,6 +369,15 @@ bool _mustStaySingleLine(String key) {
       key == 'downloadPartiallyFinishedForReciter' ||
       key == 'deletedOfflineFilesForReciter' ||
       key == 'audioPlayFailed' ||
+      key == 'diagnosticsUiAudioAssets' ||
+      key == 'diagnosticsQuranAudioAssets' ||
+      key == 'diagnosticsSupportedCount' ||
+      key == 'diagnosticsQuranDataset' ||
+      key == 'diagnosticsQuranSurahs' ||
+      key == 'diagnosticsQuranAyahs' ||
+      key == 'diagnosticsQuranJuzMetadata' ||
+      key == 'diagnosticsQuranCloudCheckFailed' ||
+      key == 'diagnosticsQuranCloudStructuralCheckFailed' ||
       key == 'diagnosticsQuranCloudTablesMissing' ||
       key == 'diagnosticsQuranCloudJuzMissing' ||
       key == 'placesDataSourceUnavailableTitle' ||

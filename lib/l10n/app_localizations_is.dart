@@ -873,7 +873,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan hljóðeignir';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'Hljóðeignir HÍ';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Hljóðeignir í Kóraninum';
@@ -896,20 +896,20 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count stutt';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Gagnasett Kóransins';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Kóraninn súra';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Kóraninn Ayahs';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Kóraninn Juz Lýsigögn';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -917,7 +917,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Skýjaskoðun mistókst: $error';
   }
 
   @override
@@ -926,7 +926,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Athugun á byggingu skýja mistókst: $error';
   }
 
   @override

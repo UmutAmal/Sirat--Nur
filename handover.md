@@ -8050,3 +8050,52 @@
 
 ### Final Doğrulama Eki
 - Commit oncesi son kosuda `flutter test` PASS (`382/382`) olarak tamamlandi.
+
+## 2026-04-16 TUR-213 — Localize Diagnostics Runtime Copy
+
+### Yapılan İşlem
+- `diagnosticsUiAudioAssets`, `diagnosticsQuranAudioAssets`, `diagnosticsSupportedCount`, `diagnosticsQuranDataset`, `diagnosticsQuranSurahs`, `diagnosticsQuranAyahs`, `diagnosticsQuranJuzMetadata`, `diagnosticsQuranCloudCheckFailed` ve `diagnosticsQuranCloudStructuralCheckFailed` anahtarlari korumali ARB batch'i ile genis locale kumesinde lokalize edildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- `tool\translate_arb_keys.dart` single-line guard listesine diagnostics runtime anahtarlari eklendi.
+- `test\arb_ui_localization_test.dart` priority locale fallback guard ve diagnostics single-line guard kapsaminda bu anahtarlari kontrol ediyor.
+- `test\translate_arb_keys_test.dart` icine multiline diagnostics hata metni adayini reddeden regresyon testi eklendi.
+- Priority locale kalite gecisinde yanlis veya fazla genel kalan degerler elle duzeltildi: ES, FR, PT, RU, ZH, ZH_CN, ZH_TW, NB, NN, NO, DA, HE, VI.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb` icindeki diagnostics runtime anahtarlari TUR-213 oncesi 194 locale civarinda app_en ile birebir ayniydi.
+- Bu metinler diagnostics ve veri sagligi ekranlarinda kullaniciya gorunen durum/hata metni oldugu icin Ingilizce fallback, tam lokalizasyon hedefiyle uyumsuzdu.
+- Kök risk, onceki batch'lerde oldugu gibi ceviri ciktisinin satir kirilmasi veya placeholder bozmasiydi; bu nedenle arac guard'i ve test guard'i birlikte eklendi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Oncelikli locale setinde diagnostics runtime copy Ingilizce fallback riski kapandi.
+- Fallback sayimlari: `diagnosticsUiAudioAssets 194 -> 79`, `diagnosticsQuranAudioAssets 77 -> 69`, `diagnosticsSupportedCount 194 -> 71`, `diagnosticsQuranDataset 194 -> 79`, `diagnosticsQuranSurahs 194 -> 76`, `diagnosticsQuranAyahs 194 -> 81`, `diagnosticsQuranJuzMetadata 194 -> 90`, `diagnosticsQuranCloudCheckFailed 194 -> 70`, `diagnosticsQuranCloudStructuralCheckFailed 194 -> 74`.
+- `{count}` ve `{error}` placeholder'lari tum ARB dosyalarinda korundu; diagnostics copy icinde newline kalmadi.
+- Kalan fallback'ler Google ceviri destegi olmayan veya guvenli aday uretilemeyen nadir/legacy locale grubunda birakildi; dini veya teknik metin uydurulmadi.
+
+### Test Sonucu
+- Baslangic dogrulamasi: `flutter analyze` PASS
+- Baslangic dogrulamasi: `flutter test` PASS (`382/382`)
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart` PASS (`48/48`)
+- Diff denetimi: `git diff --check` PASS (yalnizca mevcut Windows CRLF uyarilari)
+- Placeholder/newline taramasi PASS: `{count}` ve `{error}` korundu, diagnostics runtime copy tek satir kaldi.
+
+### Risk Değişimi
+- Oncelikli locale setinde diagnostics runtime copy fallback riski: `12/25 -> 2/25`
+- Tum locale setinde diagnostics runtime copy fallback riski: `12/25 -> 7/25`
+- Diagnostics ceviri batch debris tekrar riski: `10/25 -> 3/25`
+
+### Sonraki Adım
+- Commit oncesi tam `flutter analyze` ve tam `flutter test` tekrar calistir; PASS olursa `i18n: localize diagnostics runtime copy` commit'i ile push et.
+- Sonraki dongude genel l10n fallback taramasini yenile ve en yuksek kullanici gorunurlugune sahip kalan anahtar grubunu sec.
+
+### Final Doğrulama Eki
+- Commit oncesi son kosuda `flutter analyze` PASS olarak tamamlandi.
+- Commit oncesi son kosuda `flutter test` PASS (`384/384`) olarak tamamlandi.

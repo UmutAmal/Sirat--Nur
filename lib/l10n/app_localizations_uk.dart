@@ -874,10 +874,10 @@ class AppLocalizationsUk extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'Аудіоресурси інтерфейсу користувача';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'Аудіоактиви Корану';
 
   @override
   String get diagnosticsAudioAssets => 'Аудіоактиви';
@@ -897,20 +897,20 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count підтримується';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Набір даних Корану';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Сура Корану';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Айати Корану';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Метадані Корану Джуз';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -918,7 +918,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Не вдалося перевірити хмару: $error';
   }
 
   @override
@@ -927,7 +927,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Помилка перевірки структури хмари: $error';
   }
 
   @override

@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Angles personnalisés manuels (pas de source institutionnelle)",
   "diagnosticsCloudDriven": "Piloté par le cloud",
   "diagnosticsAdhanAudioAssets": "Actifs audio Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Actifs audio de l'interface utilisateur",
   "diagnosticsQuranAudioAssets": "Actifs audio du Coran",
   "diagnosticsAudioAssets": "Actifs audio",
   "diagnosticsFilesCount": "{count} fichiers",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Paramètres régionaux de localisation",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} pris en charge",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Ensemble de données du Coran",
+  "diagnosticsQuranSurahs": "Sourates du Coran",
+  "diagnosticsQuranAyahs": "Versets du Coran",
+  "diagnosticsQuranJuzMetadata": "Métadonnées des juz du Coran",
   "diagnosticsQuranCloudTablesMissing": "Tables cloud manquantes dans Supabase ; solution de repli groupée active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Échec de la vérification cloud : {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Métadonnées Cloud Juz manquantes ; solution de secours structurelle groupée active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Échec de la vérification structurelle du cloud : {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

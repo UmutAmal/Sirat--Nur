@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Ángulo personalizado manual (ndaipóri fuente institucional) .",
   "diagnosticsCloudDriven": "Arai Ñemboguata",
   "diagnosticsAdhanAudioAssets": "Adhan Audio rehegua mba’ekuaarã",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI Audio rehegua mba’ekuaarã",
   "diagnosticsQuranAudioAssets": "Corán Audio Activos rehegua",
   "diagnosticsAudioAssets": "Umi mba’ekuaarã Audio rehegua",
   "diagnosticsFilesCount": "{count} rembiapokue",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localización Locales rehegua",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} oipytyvõva",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Corán Datos Ñembyaty",
+  "diagnosticsQuranSurahs": "Corán Surah-kuéra rehegua",
+  "diagnosticsQuranAyahs": "Corán Ayahs rehegua",
+  "diagnosticsQuranJuzMetadata": "Corán Juz Metadatos rehegua",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Arai jesareko ndoikói: {error} .",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Arai jesareko estructural ndoikói: {error} .",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

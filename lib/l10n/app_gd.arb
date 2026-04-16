@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Ceàrnan gnàthaichte làimhe (gun stòr institiùideach)",
   "diagnosticsCloudDriven": "Cloud air a stiùireadh",
   "diagnosticsAdhanAudioAssets": "Maoin Fuaim Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Maoin Fuaim UI",
   "diagnosticsQuranAudioAssets": "Stòr-dàta Quran fuaim",
   "diagnosticsAudioAssets": "Maoin Fuaim",
   "diagnosticsFilesCount": "{count} faidhlichean",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Ionadan ionadail",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} a' faighinn taic",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Stòr-dàta Quran",
+  "diagnosticsQuranSurahs": "Quran Surah",
+  "diagnosticsQuranAyahs": "Ayahs an Quran",
+  "diagnosticsQuranJuzMetadata": "Metadata an Quran Juz",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Dh’fhàillig sgrùdadh neòil: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Dh’fhàillig sgrùdadh structarail neòil: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

@@ -877,7 +877,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'Mga Asset sa Audio sa UI';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
@@ -900,17 +900,17 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count gisuportahan';
   }
 
   @override
   String get diagnosticsQuranDataset => 'Quran Dataset';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Mga Surah sa Quran';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Quran Ayah';
 
   @override
   String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
@@ -921,7 +921,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Napakyas ang pagsusi sa panganod: $error';
   }
 
   @override
@@ -930,7 +930,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Napakyas ang pagsusi sa istruktura sa panganod: $error';
   }
 
   @override

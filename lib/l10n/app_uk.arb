@@ -235,8 +235,8 @@
   "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
   "diagnosticsCloudDriven": "Керований хмарою",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsUiAudioAssets": "Аудіоресурси інтерфейсу користувача",
+  "diagnosticsQuranAudioAssets": "Аудіоактиви Корану",
   "diagnosticsAudioAssets": "Аудіоактиви",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} підтримується",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Набір даних Корану",
+  "diagnosticsQuranSurahs": "Сура Корану",
+  "diagnosticsQuranAyahs": "Айати Корану",
+  "diagnosticsQuranJuzMetadata": "Метадані Корану Джуз",
   "diagnosticsQuranCloudTablesMissing": "Хмарні таблиці відсутні в Supabase; пакетний запасний активний",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Не вдалося перевірити хмару: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Відсутні метадані Cloud Juz; пакетний структурний резервний активний",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Помилка перевірки структури хмари: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

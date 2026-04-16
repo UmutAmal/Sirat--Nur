@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Dikhutlo tša tlwaelo tša seatla (ga go na mohlodi wa setheo) .",
   "diagnosticsCloudDriven": "Leru le Kgannwago",
   "diagnosticsAdhanAudioAssets": "Adhan Matlotlo a Modumo",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Matlotlo a Mamelwang a UI",
   "diagnosticsQuranAudioAssets": "Matlotlo a Mamelwang a Quran",
   "diagnosticsAudioAssets": "Matlotlo a Modumo",
   "diagnosticsFilesCount": "{count} files",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Mafelo a go Beakanya Selegae",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} e thekgwa",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Sete ya Datha ya Quran",
+  "diagnosticsQuranSurahs": "Di- Surah tša Quran",
+  "diagnosticsQuranAyahs": "Di-Aya tša Quran",
+  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata ya go swana le yona",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Tlhahlobo ya leru e paletšwe: {error} .",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Tlhahlobo ya sebopego sa leru e paletšwe: {error} .",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

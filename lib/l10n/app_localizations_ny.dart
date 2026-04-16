@@ -899,7 +899,7 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count zothandizidwa';
   }
 
   @override
@@ -909,7 +909,7 @@ class AppLocalizationsNy extends AppLocalizations {
   String get diagnosticsQuranSurahs => 'Quran Surahs';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Quran Ayah';
 
   @override
   String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
@@ -920,7 +920,7 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Kuwona mtambo kwalephera: $error';
   }
 
   @override
@@ -929,7 +929,7 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Kuwunika kwamtambo kwalephera: $error';
   }
 
   @override

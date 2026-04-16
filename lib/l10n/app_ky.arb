@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization Localles",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} колдоого алынат",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Куран маалымат топтому",
+  "diagnosticsQuranSurahs": "Куран сүрөөлөрү",
+  "diagnosticsQuranAyahs": "Куран аяттары",
+  "diagnosticsQuranJuzMetadata": "Quran Juz Metdata",
   "diagnosticsQuranCloudTablesMissing": "Supabase'де булут таблицалары жок; топтоштурулган кайтаруу активдүү",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Булут текшерилбей калды: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz метадайындары жок; бириктирилген структуралык кайра жигердүү",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Булуттун структуралык текшерүүсү ишке ашкан жок: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Eskuzko angelu pertsonalizatuak (iturri instituzionala ez)",
   "diagnosticsCloudDriven": "Hodeian bultzatuta",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Aktiboak",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI Audio aktiboak",
   "diagnosticsQuranAudioAssets": "Quran Audio Aktiboak",
   "diagnosticsAudioAssets": "Audio-aktiboak",
   "diagnosticsFilesCount": "{count} fitxategiak",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalizazio lokalak",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} onartzen da",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
+  "diagnosticsQuranDataset": "Quran datu multzoa",
+  "diagnosticsQuranSurahs": "Koraneko surak",
   "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranJuzMetadata": "Quran Juz metadatuak",
   "diagnosticsQuranCloudTablesMissing": "Supabasen hodei-taulak falta dira; sorta-erresistentzia aktiboa",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Hodeiaren egiaztapenak huts egin du: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadatuak falta dira; Egiturazko Fallback multzoa aktiboa",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Hodeiko egituraren egiaztapenak huts egin du: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

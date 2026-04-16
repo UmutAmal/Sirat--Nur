@@ -894,11 +894,11 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count inotsigirwa';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Korani Dataset';
 
   @override
   String get diagnosticsQuranSurahs => 'Quran Surahs';
@@ -915,7 +915,7 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Cloud check yaramba: $error';
   }
 
   @override
@@ -924,7 +924,7 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Cloud structural check yaramba: $error';
   }
 
   @override

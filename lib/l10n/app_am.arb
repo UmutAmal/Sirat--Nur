@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "በእጅ ብጁ ማዕዘኖች (ተቋማዊ ምንጭ የለም)",
   "diagnosticsCloudDriven": "በደመና የሚነዳ",
   "diagnosticsAdhanAudioAssets": "አድሃን ኦዲዮ ንብረቶች",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "የዩአይ ኦዲዮ ንብረቶች",
   "diagnosticsQuranAudioAssets": "የቁርዓን ኦዲዮ ንብረቶች",
   "diagnosticsAudioAssets": "የድምጽ ንብረቶች",
   "diagnosticsFilesCount": "{count} ፋይሎች",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "አካባቢያዊነት አከባቢዎች",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ይደገፋል",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "የቁርአን ዳታ ስብስብ",
+  "diagnosticsQuranSurahs": "የቁርኣን ሱራዎች",
+  "diagnosticsQuranAyahs": "የቁርኣን አያዎች",
+  "diagnosticsQuranJuzMetadata": "የቁርዓን ጁዝ ሜታዳታ",
   "diagnosticsQuranCloudTablesMissing": "በ Supabase ውስጥ የደመና ጠረጴዛዎች ጠፍተዋል; የተጠቃለለ ውድቀት ንቁ",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "የደመና ፍተሻ አልተሳካም፦ {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "የክላውድ ጁዝ ዲበ ውሂብ ይጎድላል; የተጠቀለለ መዋቅራዊ ውድቀት ንቁ",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "የክላውድ መዋቅራዊ ፍተሻ አልተሳካም፦ {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

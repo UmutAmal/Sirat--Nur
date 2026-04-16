@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Akuku omenala ejiri aka (enweghị isi mmalite)",
   "diagnosticsCloudDriven": "Igwe ojii chụpụrụ",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI Audio Akụ",
   "diagnosticsQuranAudioAssets": "Akụrụngwa ọdịyo nke Quran",
   "diagnosticsAudioAssets": "Akụrụngwa ọdịyo",
   "diagnosticsFilesCount": "faịlụ {count}",
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Dataset nke Quran",
+  "diagnosticsQuranSurahs": "Surah nke Quran",
+  "diagnosticsQuranAyahs": "Quran Ayah",
+  "diagnosticsQuranJuzMetadata": "Quran Juz metadata",
   "diagnosticsQuranCloudTablesMissing": "Tebụl igwe ojii na-efu na Supabase; ngwungwu ọdịda na-arụ ọrụ",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Nyocha igwe ojii dara: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata efu; ngwugwu structural fallback na-arụ ọrụ",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Nlele nhazi igwe ojii dara: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

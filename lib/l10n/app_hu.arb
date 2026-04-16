@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Kézi egyéni szögek (nincs intézményi forrás)",
   "diagnosticsCloudDriven": "Felhővezérelt",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI audioeszközök",
   "diagnosticsQuranAudioAssets": "Korán audioeszközök",
   "diagnosticsAudioAssets": "Audioeszközök",
   "diagnosticsFilesCount": "{count} fájlokat",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalizációs területek",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} támogatott",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Korán adatkészlet",
+  "diagnosticsQuranSurahs": "Korán szúrák",
+  "diagnosticsQuranAyahs": "Korán Ayahs",
+  "diagnosticsQuranJuzMetadata": "Korán Juz metaadatok",
   "diagnosticsQuranCloudTablesMissing": "Felhőtáblák hiányoznak a Supabase-ből; kötegelt tartalék aktív",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Felhőellenőrzés sikertelen: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metaadatok hiányoznak; kötegelt szerkezeti tartalék aktív",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "A felhő szerkezeti ellenőrzése sikertelen: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

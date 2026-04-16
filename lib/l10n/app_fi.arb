@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Manuaaliset mukautetut kulmat (ei institutionaalista lähdettä)",
   "diagnosticsCloudDriven": "Pilvivetoinen",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Käyttöliittymän ääniresurssit",
   "diagnosticsQuranAudioAssets": "Koraanin ääniomaisuus",
   "diagnosticsAudioAssets": "Ääniresurssit",
   "diagnosticsFilesCount": "{count} tiedostot",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalisointipaikat",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} tuettu",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Koraani tietojoukko",
+  "diagnosticsQuranSurahs": "Koraanin suurat",
+  "diagnosticsQuranAyahs": "Koraani Ayahs",
+  "diagnosticsQuranJuzMetadata": "Koraani Juzin metatiedot",
   "diagnosticsQuranCloudTablesMissing": "Pilvitaulukot puuttuvat Supabasesta; niputettu varatoiminto aktiivinen",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Pilvitarkistus epäonnistui: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud Juz -metatiedot puuttuvat; niputettu rakennevaraus aktiivinen",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Pilvirakenteen tarkistus epäonnistui: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

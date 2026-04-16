@@ -873,7 +873,8 @@ class AppLocalizationsSr extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Адхан Аудио Средства';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets =>
+      'Аудио средства корисничког интерфејса';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Аудио средства Курана';
@@ -900,16 +901,16 @@ class AppLocalizationsSr extends AppLocalizations {
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Куран Датасет';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Кур\'ан Сурахс';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Куран Аиахс';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Кур\'ан Јуз Метадата';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>

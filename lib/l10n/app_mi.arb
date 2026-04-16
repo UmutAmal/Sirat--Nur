@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Koki ritenga a-ringa (kaore he puna whakahaere)",
   "diagnosticsCloudDriven": "Kapua Peia",
   "diagnosticsAdhanAudioAssets": "Adhan Ororongo Rawa",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Rawa Ororongo UI",
   "diagnosticsQuranAudioAssets": "Nga Rawa Ororongo Quran",
   "diagnosticsAudioAssets": "Rawa Ororongo",
   "diagnosticsFilesCount": "{count} kōnae",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Rohe Rohe",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} tautokona",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
+  "diagnosticsQuranDataset": "Raraunga Raraunga Quran",
+  "diagnosticsQuranSurahs": "Quran Surah",
+  "diagnosticsQuranAyahs": "Quran Ayah",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Kei te ngaro nga tepu kapua i Supabase; takai whakamuri hohe",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "I rahua te taki kapua: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Kua ngaro te metadata Cloud juz; paihere hanganga takahuri kaha",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "I rahua te tirotiro hanganga kapua: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

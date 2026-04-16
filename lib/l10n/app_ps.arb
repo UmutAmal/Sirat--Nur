@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "د لاسي دودیز زاویې (هیڅ اداري سرچینه نشته)",
   "diagnosticsCloudDriven": "بادل چلول",
   "diagnosticsAdhanAudioAssets": "د اذان آډیو شتمنۍ",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "د UI آډیو شتمنۍ",
   "diagnosticsQuranAudioAssets": "د قرآن آډیو شتمنۍ",
   "diagnosticsAudioAssets": "آډیو شتمنۍ",
   "diagnosticsFilesCount": "{count} دوتنې",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "سیمه ایز کول سیمه ایز کول",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ملاتړ شوی",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "د قرآن ډیټاسیټ",
+  "diagnosticsQuranSurahs": "د قرآن سورتونه",
+  "diagnosticsQuranAyahs": "د قرانکریم ایاتونه",
+  "diagnosticsQuranJuzMetadata": "د قرآن جوز میټاډاټا",
   "diagnosticsQuranCloudTablesMissing": "د کلاوډ میزونه په سوپا بیس کې ورک شوي؛ بنډل فال بیک فعال",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "د کلاوډ چک ناکام شو: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {

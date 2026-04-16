@@ -897,20 +897,20 @@ class AppLocalizationsLb extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count ënnerstëtzt';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Koran Datenset';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Koran Surahs';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Koran Ayahs';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Koran Juz Metadaten';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -918,7 +918,7 @@ class AppLocalizationsLb extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Cloud Check ausgefall: $error';
   }
 
   @override
@@ -927,7 +927,7 @@ class AppLocalizationsLb extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Cloud Strukturkontrolle gescheitert: $error';
   }
 
   @override

@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization Qhov chaw",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} txhawb nqa",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -268,7 +268,7 @@
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Huab rooj ploj hauv Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Kev kuaj huab ua tsis tiav: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Huab juz metadata ploj lawm; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Kev kuaj xyuas huab ua tsis tiav: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

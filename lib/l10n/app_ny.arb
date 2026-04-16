@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Malo Okhazikika",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} zothandizidwa",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -265,10 +265,10 @@
   },
   "diagnosticsQuranDataset": "Quran Dataset",
   "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
+  "diagnosticsQuranAyahs": "Quran Ayah",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Matebulo amtambo akusowa ku Supabase; m'mitolo fallback yogwira",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Kuwona mtambo kwalephera: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata ikusowa; m'mitolo structural fallback yogwira",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Kuwunika kwamtambo kwalephera: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

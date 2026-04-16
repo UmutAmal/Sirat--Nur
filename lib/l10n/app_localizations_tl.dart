@@ -880,7 +880,7 @@ class AppLocalizationsTl extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'Mga UI Audio Asset';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Quran Audio Asset';
@@ -903,17 +903,17 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count suportado';
   }
 
   @override
   String get diagnosticsQuranDataset => 'Quran Dataset';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Mga Surah ng Quran';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Quran Ayah';
 
   @override
   String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
@@ -924,7 +924,7 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Nabigo ang pagsusuri sa ulap: $error';
   }
 
   @override
@@ -933,7 +933,7 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Nabigo ang pagsusuri sa istruktura ng ulap: $error';
   }
 
   @override

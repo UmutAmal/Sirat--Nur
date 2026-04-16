@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "手動自訂角度（無機構來源）",
   "diagnosticsCloudDriven": "雲端驅動",
   "diagnosticsAdhanAudioAssets": "Adhan 音訊資產",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI 音訊資源",
   "diagnosticsQuranAudioAssets": "古蘭經音頻資產",
   "diagnosticsAudioAssets": "音訊資源",
   "diagnosticsFilesCount": "{count} 文件",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "本地化區域設置",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "支援 {count} 項",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "古蘭經資料集",
+  "diagnosticsQuranSurahs": "古蘭經各章",
+  "diagnosticsQuranAyahs": "古蘭經經文",
+  "diagnosticsQuranJuzMetadata": "古蘭經分卷中繼資料",
   "diagnosticsQuranCloudTablesMissing": "Supabase 中缺少雲端表；捆綁後備活動",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "雲端檢查失敗：{error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz 元資料遺失；捆綁結構後備活動",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "雲端結構檢查失敗：{error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

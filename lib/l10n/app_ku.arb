@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} piştgirî kirin",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -264,11 +264,11 @@
     }
   },
   "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
+  "diagnosticsQuranSurahs": "Sûreyên Quranê",
+  "diagnosticsQuranAyahs": "Ayetên Quranê",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Li Supabase tabloyên ewran winda ne; bundled fallback çalak",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Kontrola ewrê têk çû: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata wenda ye; paşvekêşana strukturel a hevgirtî ya çalak",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Kontrolkirina avahîsaziya ewrê têk çû: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

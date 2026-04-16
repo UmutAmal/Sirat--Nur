@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Manual custom angles (asoɛe biara nni hɔ fibea) .",
   "diagnosticsCloudDriven": "Mununkum a Wɔde Di Dwuma",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Nneɛma a Wɔde Yɛ Adwuma",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI Audio Agyapadeɛ",
   "diagnosticsQuranAudioAssets": "Quran Audio Nneɛma a Wɔde Yɛ Adwuma",
   "diagnosticsAudioAssets": "Nneɛma a Wɔde Tie",
   "diagnosticsFilesCount": "{count} fael ahorow no",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Mpɔtam a Wɔyɛ Mpɔtam Hɔ",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} a wɔboa",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Kuran Dataset",
+  "diagnosticsQuranSurahs": "Kur’aan Surah ahodoɔ",
+  "diagnosticsQuranAyahs": "Kur’aan Ayahs",
+  "diagnosticsQuranJuzMetadata": "Kuran Juz Nsɛm a Wɔahyehyɛ",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Mununkum nhwehwɛmu no adi nkogu: {error} .",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Mununkum nhyehyeɛ nhwehwɛmu no adi nkogu: {error} .",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

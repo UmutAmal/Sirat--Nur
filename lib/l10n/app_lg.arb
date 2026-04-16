@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Enkoona z’ennono ez’omu ngalo (tewali nsibuko ya kitongole) .",
   "diagnosticsCloudDriven": "Ekire Ekivugibwa",
   "diagnosticsAdhanAudioAssets": "Adhan Eby'obugagga by'amaloboozi",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Eby’obugagga by’amaloboozi ebya UI",
   "diagnosticsQuranAudioAssets": "Eby'obugagga by'amaloboozi ga Quran",
   "diagnosticsAudioAssets": "Eby’obugagga by’amaloboozi",
   "diagnosticsFilesCount": "{count} fayiro za fayiro",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Ebitundu by’Ekitundu",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ewagirwa",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Ebikwata ku Quran Dataset",
+  "diagnosticsQuranSurahs": "Surah za Quran",
+  "diagnosticsQuranAyahs": "Ayah za Quran",
+  "diagnosticsQuranJuzMetadata": "Kulaani Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Okukebera ekire kulemereddwa: {error} .",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Okukebera enzimba y'ekire kulemereddwa: {error} .",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

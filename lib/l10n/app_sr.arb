@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Ручни прилагођени углови (без институционалног извора)",
   "diagnosticsCloudDriven": "Цлоуд Дривен",
   "diagnosticsAdhanAudioAssets": "Адхан Аудио Средства",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Аудио средства корисничког интерфејса",
   "diagnosticsQuranAudioAssets": "Аудио средства Курана",
   "diagnosticsAudioAssets": "Аудио средства",
   "diagnosticsFilesCount": "{count} files",
@@ -263,10 +263,10 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Куран Датасет",
+  "diagnosticsQuranSurahs": "Кур'ан Сурахс",
+  "diagnosticsQuranAyahs": "Куран Аиахс",
+  "diagnosticsQuranJuzMetadata": "Кур'ан Јуз Метадата",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {

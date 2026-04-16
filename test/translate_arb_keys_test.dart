@@ -120,5 +120,16 @@ void main() {
 
       expect(value, 'Ses calinamadi');
     });
+
+    test('rejects multiline diagnostics output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'diagnosticsQuranCloudCheckFailed',
+        source: 'Cloud check failed: {error}',
+        currentValue: 'Bulut kontrolu basarisiz: {error}',
+        candidate: 'means the following.\nBulut kontrolu basarisiz: {error}',
+      );
+
+      expect(value, 'Bulut kontrolu basarisiz: {error}');
+    });
   });
 }

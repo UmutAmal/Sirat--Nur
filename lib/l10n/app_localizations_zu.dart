@@ -875,10 +875,10 @@ class AppLocalizationsZu extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'I-UI Audio Assets';
 
   @override
-  String get diagnosticsQuranAudioAssets => 'Quran Audio Assets';
+  String get diagnosticsQuranAudioAssets => 'I-Quran Audio Assets';
 
   @override
   String get diagnosticsAudioAssets => 'Izimpahla Zomsindo';
@@ -898,7 +898,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count isekelwe';
   }
 
   @override
@@ -911,7 +911,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get diagnosticsQuranAyahs => 'Quran Ayahs';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Quran Juz imethadatha';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -919,7 +919,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Ukuhlola amafu kuhlulekile: $error';
   }
 
   @override
@@ -928,7 +928,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Ukuhlolwa kwesakhiwo samafu kwehlulekile: $error';
   }
 
   @override

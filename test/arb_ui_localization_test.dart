@@ -193,12 +193,20 @@ void main() {
         ];
         const localizedKeys = [
           'diagnosticsAdhanAudioAssets',
+          'diagnosticsUiAudioAssets',
           'diagnosticsQuranAudioAssets',
           'diagnosticsFilesCount',
           'diagnosticsManifestReadFailed',
           'diagnosticsLocalizationLocales',
           'diagnosticsPrayerCustomProfile',
           'diagnosticsPrayerCustomSource',
+          'diagnosticsSupportedCount',
+          'diagnosticsQuranDataset',
+          'diagnosticsQuranSurahs',
+          'diagnosticsQuranAyahs',
+          'diagnosticsQuranJuzMetadata',
+          'diagnosticsQuranCloudCheckFailed',
+          'diagnosticsQuranCloudStructuralCheckFailed',
         ];
 
         for (final locale in diagnosticsAssetSafeLocales) {
@@ -214,6 +222,41 @@ void main() {
         }
       },
     );
+
+    test('diagnostics status copy stays single-line in all locales', () {
+      const localizedKeys = [
+        'diagnosticsUiAudioAssets',
+        'diagnosticsQuranAudioAssets',
+        'diagnosticsSupportedCount',
+        'diagnosticsQuranDataset',
+        'diagnosticsQuranSurahs',
+        'diagnosticsQuranAyahs',
+        'diagnosticsQuranJuzMetadata',
+        'diagnosticsQuranCloudCheckFailed',
+        'diagnosticsQuranCloudStructuralCheckFailed',
+      ];
+      final arbFiles =
+          Directory('lib/l10n')
+              .listSync()
+              .whereType<File>()
+              .where((file) => file.path.endsWith('.arb'))
+              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+              .toList()
+            ..sort((a, b) => a.path.compareTo(b.path));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+        for (final key in localizedKeys) {
+          final value = arb[key] as String;
+          expect(
+            value.contains('\n') || value.contains('\r'),
+            isFalse,
+            reason:
+                '${file.uri.pathSegments.last} has multiline diagnostics copy for $key',
+          );
+        }
+      }
+    });
 
     test(
       'priority locales do not fall back to English for analytics and zakat labels',

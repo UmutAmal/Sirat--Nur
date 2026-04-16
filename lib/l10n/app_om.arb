@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Kofoota amala harkaan hojjetaman (madda dhaabbataa hin qabu) .",
   "diagnosticsCloudDriven": "Duumeessa Kan Oofamu",
   "diagnosticsAdhanAudioAssets": "Qabeenya Sagalee Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Qabeenya Sagalee UI",
   "diagnosticsQuranAudioAssets": "Qabeenya Sagalee Qur'aana",
   "diagnosticsAudioAssets": "Qabeenya Sagalee",
   "diagnosticsFilesCount": "{count} files",
@@ -263,10 +263,10 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Kuusaa Deetaa Qur'aanaa",
+  "diagnosticsQuranSurahs": "Suuraa Qur'aanaa",
+  "diagnosticsQuranAyahs": "Ayyaana Qur'aanaa",
+  "diagnosticsQuranJuzMetadata": "Qur'aana Juz Meetadaataa",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Sakatta'iinsi caasaa duumessaa hin milkoofne: {error} .",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

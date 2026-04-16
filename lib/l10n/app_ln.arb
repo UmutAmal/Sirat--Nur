@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Ba angles personnalisés manuels (source institutionnelle te) .",
   "diagnosticsCloudDriven": "Lipata Etambwisami",
   "diagnosticsAdhanAudioAssets": "Adhan Biloko ya koyoka",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Biloko ya Audio ya UI",
   "diagnosticsQuranAudioAssets": "Biloko ya Audio ya Coran",
   "diagnosticsAudioAssets": "Biloko ya koyoka",
   "diagnosticsFilesCount": "{count} ba fichiers",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Ba Localisation ya Localisation",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} esungami",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Ensemble ya ba données ya Coran",
+  "diagnosticsQuranSurahs": "Ba Surahs ya Coran",
+  "diagnosticsQuranAyahs": "Ba Ayahs ya Coran",
+  "diagnosticsQuranJuzMetadata": "Ba Métadonnées ya Coran Juz",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Vérification ya cloud elongi te: {error} .",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Vérification structurelle ya lipata elongi te: {error} .",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

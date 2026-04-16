@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "มุมที่กำหนดเองแบบแมนนวล (ไม่มีแหล่งที่มาของสถาบัน)",
   "diagnosticsCloudDriven": "ขับเคลื่อนด้วยคลาวด์",
   "diagnosticsAdhanAudioAssets": "สินทรัพย์เสียง Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "เนื้อหาเสียง UI",
   "diagnosticsQuranAudioAssets": "สินทรัพย์เสียงอัลกุรอาน",
   "diagnosticsAudioAssets": "สินทรัพย์เสียง",
   "diagnosticsFilesCount": "{count} ไฟล์",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "การแปลเป็นภาษาท้องถิ่น",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} รองรับ",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "ชุดข้อมูลอัลกุรอาน",
+  "diagnosticsQuranSurahs": "คัมภีร์อัลกุรอาน Surahs",
+  "diagnosticsQuranAyahs": "อัลกุรอานอายะห์",
+  "diagnosticsQuranJuzMetadata": "ข้อมูลเมตาคัมภีร์อัลกุรอาน Juz",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "การตรวจสอบระบบคลาวด์ล้มเหลว: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "การตรวจสอบโครงสร้างคลาวด์ล้มเหลว: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

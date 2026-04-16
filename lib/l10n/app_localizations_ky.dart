@@ -899,20 +899,20 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count колдоого алынат';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Куран маалымат топтому';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Куран сүрөөлөрү';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Куран аяттары';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metdata';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -920,7 +920,7 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Булут текшерилбей калды: $error';
   }
 
   @override
@@ -929,7 +929,7 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Булуттун структуралык текшерүүсү ишке ашкан жок: $error';
   }
 
   @override

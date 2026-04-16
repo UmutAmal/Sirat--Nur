@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Ročni koti po meri (brez institucionalnega vira)",
   "diagnosticsCloudDriven": "Poganja oblak",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Zvočna sredstva uporabniškega vmesnika",
   "diagnosticsQuranAudioAssets": "Zvočna sredstva Kur'ana",
   "diagnosticsAudioAssets": "Zvočna sredstva",
   "diagnosticsFilesCount": "{count} datotek",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalizacija Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} podprt",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -264,11 +264,11 @@
     }
   },
   "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranSurahs": "Koranske sure",
+  "diagnosticsQuranAyahs": "Kur'anski ajeti",
+  "diagnosticsQuranJuzMetadata": "Metapodatki Quran Juz",
   "diagnosticsQuranCloudTablesMissing": "V Supabase manjkajo tabele v oblaku; paketna nadomestna aktivna",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Preverjanje v oblaku ni uspelo: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Manjkajo metapodatki o oblaku; aktiven strukturni rezervni paket",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Preverjanje strukture oblaka ni uspelo: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

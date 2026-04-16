@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Пользовательские углы вручную (без институционального источника)",
   "diagnosticsCloudDriven": "Облачное управление",
   "diagnosticsAdhanAudioAssets": "Аудиоактивы Адана",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Аудиоактивы пользовательского интерфейса",
   "diagnosticsQuranAudioAssets": "Аудиоматериалы Корана",
   "diagnosticsAudioAssets": "Аудио ресурсы",
   "diagnosticsFilesCount": "{count} файлов",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Локализация",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} поддерживается",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Набор данных Корана",
+  "diagnosticsQuranSurahs": "Суры Корана",
+  "diagnosticsQuranAyahs": "Аяты Корана",
+  "diagnosticsQuranJuzMetadata": "Метаданные джузов Корана",
   "diagnosticsQuranCloudTablesMissing": "В Supabase отсутствуют облачные таблицы; включенный резервный вариант активен",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Проверка облака не удалась: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Метаданные Cloud Juz отсутствуют; включенный структурный резервный вариант активен",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Не удалось выполнить проверку структуры облака: {error}.",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

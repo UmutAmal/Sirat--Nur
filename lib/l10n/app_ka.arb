@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "ხელით მორგებული კუთხეები (ინსტიტუციური წყაროს გარეშე)",
   "diagnosticsCloudDriven": "ღრუბლოვანი",
   "diagnosticsAdhanAudioAssets": "ადანის აუდიო აქტივები",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI აუდიო აქტივები",
   "diagnosticsQuranAudioAssets": "ყურანის აუდიო აქტივები",
   "diagnosticsAudioAssets": "აუდიო აქტივები",
   "diagnosticsFilesCount": "{count} ფაილი",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "ლოკალიზაციის ლოკალები",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} მხარდაჭერა",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "ყურანის მონაცემთა ნაკრები",
+  "diagnosticsQuranSurahs": "ყურანის სურები",
+  "diagnosticsQuranAyahs": "ყურანის აიაები",
+  "diagnosticsQuranJuzMetadata": "ყურანის ჯუზი მეტამონაცემები",
   "diagnosticsQuranCloudTablesMissing": "ღრუბლოვანი ცხრილები აკლია Supabase-ში; შეფუთული სარეზერვო აქტიური",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "ღრუბლოვანი შემოწმება ვერ მოხერხდა: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz მეტამონაცემები აკლია; შეფუთული სტრუქტურული სარეზერვო აქტიური",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "ღრუბლის სტრუქტურული შემოწმება ვერ მოხერხდა: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

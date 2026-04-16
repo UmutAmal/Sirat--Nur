@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Sudut custom manual (euweuh sumber institusional)",
   "diagnosticsCloudDriven": "Awan disetir",
   "diagnosticsAdhanAudioAssets": "Aset Audio Adzan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Aset Audio UI",
   "diagnosticsQuranAudioAssets": "Aset Audio Quran",
   "diagnosticsAudioAssets": "Aset Audio",
   "diagnosticsFilesCount": "{count} file",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalisasi Lokalisasi",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} dirojong",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
+  "diagnosticsQuranDataset": "Dataset Quran",
+  "diagnosticsQuranSurahs": "Surah Al-Quran",
+  "diagnosticsQuranAyahs": "Ayat Quran",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Méja awan leungit di Supabase; dibuntel fallback aktip",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Pamariksaan awan gagal: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Awan juz metadata leungit; dibuntel fallback struktural aktip",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Pamariksaan struktur awan gagal: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

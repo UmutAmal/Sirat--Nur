@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Ručni prilagođeni kutovi (bez institucionalnog izvora)",
   "diagnosticsCloudDriven": "Vođen oblakom",
   "diagnosticsAdhanAudioAssets": "Adhan audio sredstva",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI audio sredstva",
   "diagnosticsQuranAudioAssets": "Audio sredstva iz Kur'ana",
   "diagnosticsAudioAssets": "Audio sredstva",
   "diagnosticsFilesCount": "{count} datoteka",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalizacija Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} podržan",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Skup podataka Kur'ana",
+  "diagnosticsQuranSurahs": "Kur'anske sure",
+  "diagnosticsQuranAyahs": "Kur'anski ajeti",
+  "diagnosticsQuranJuzMetadata": "Metapodaci o džuzu Kur'ana",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Provjera oblaka nije uspjela: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Provjera strukture oblaka nije uspjela: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

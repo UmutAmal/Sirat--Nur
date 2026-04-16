@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Гараар тохируулсан өнцөг (байгууллагын эх сурвалж байхгүй)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI аудио хөрөнгө",
   "diagnosticsQuranAudioAssets": "Коран Коран аудио хөрөнгө",
   "diagnosticsAudioAssets": "Аудио хөрөнгө",
   "diagnosticsFilesCount": "{count} файлууд",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Нутагшуулах нутаг дэвсгэр",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} дэмжигдсэн",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Коран өгөгдлийн багц",
+  "diagnosticsQuranSurahs": "Коран судар",
+  "diagnosticsQuranAyahs": "Коран судар",
+  "diagnosticsQuranJuzMetadata": "Коран Жуз мета өгөгдөл",
   "diagnosticsQuranCloudTablesMissing": "Supabase-д үүлэн хүснэгт байхгүй; багцалсан буцаалт идэвхтэй",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Үүлэн шалгалт амжилтгүй боллоо: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz мета өгөгдөл дутуу байна; багцалсан бүтцийн нөхөн сэргэлт идэвхтэй",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Үүлний бүтцийн шалгалт амжилтгүй боллоо: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

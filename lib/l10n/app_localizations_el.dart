@@ -878,7 +878,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'Στοιχεία ήχου διεπαφής χρήστη';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Στοιχεία ήχου Κορανίου';
@@ -901,20 +901,20 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return 'Υποστηρίζεται $count';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Σύνολο δεδομένων Κορανίου';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Σούρες του Κορανίου';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Κοράνι Ayahs';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Μεταδεδομένα Quran Juz';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -922,7 +922,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Ο έλεγχος στο cloud απέτυχε: $error';
   }
 
   @override
@@ -931,7 +931,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Ο δομικός έλεγχος του cloud απέτυχε: $error';
   }
 
   @override

@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Unghiuri personalizate manual (fără sursă instituțională)",
   "diagnosticsCloudDriven": "Condus pe cloud",
   "diagnosticsAdhanAudioAssets": "Materiale audio Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Elemente audio UI",
   "diagnosticsQuranAudioAssets": "Materiale audio Coran",
   "diagnosticsAudioAssets": "Active audio",
   "diagnosticsFilesCount": "{count} fișiere",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localizare locală",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} acceptat",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Setul de date Coran",
+  "diagnosticsQuranSurahs": "Sure ale Coranului",
+  "diagnosticsQuranAyahs": "Coran Ayahs",
+  "diagnosticsQuranJuzMetadata": "Metadatele Coranului Juz",
   "diagnosticsQuranCloudTablesMissing": "Lipsesc tabele cloud în Supabase; bundled fallback activ",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Verificarea în cloud a eșuat: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Metadatele cloud juz lipsesc; bundled fallback structural activ",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Verificarea structurală în cloud a eșuat: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

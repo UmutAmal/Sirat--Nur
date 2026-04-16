@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "मैनुअल् कस्टम् कोणाः (कोऽपि संस्थागतः स्रोतः नास्ति) २.",
   "diagnosticsCloudDriven": "मेघ चालित",
   "diagnosticsAdhanAudioAssets": "अधन श्रव्य सम्पत्ति",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "यूआई ऑडियो एसेट्स",
   "diagnosticsQuranAudioAssets": "कुरान श्रव्य सम्पत्ति",
   "diagnosticsAudioAssets": "श्रव्य सम्पत्ति",
   "diagnosticsFilesCount": "{count} सञ्चिकाः",

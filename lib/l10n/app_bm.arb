@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Manuel custom angles (sɔrɔyɔrɔ tɛ sigida la) .",
   "diagnosticsCloudDriven": "Sankaba bɛ boli",
   "diagnosticsAdhanAudioAssets": "Adhan Audio nafolomafɛnw",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI Audio nafolomafɛnw",
   "diagnosticsQuranAudioAssets": "Kuranɛ Audio Nafolo",
   "diagnosticsAudioAssets": "Lamɛnni nafolomafɛnw",
   "diagnosticsFilesCount": "{count} filenw",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Sigidaw sigiyɔrɔw",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} dɛmɛna",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Kuranɛ Dataset",
+  "diagnosticsQuranSurahs": "Kuranɛ Suraw",
+  "diagnosticsQuranAyahs": "Kuranɛ Ayahw",
+  "diagnosticsQuranJuzMetadata": "Kuranɛ Juz ka metadata",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Sankaba sɛgɛsɛgɛli ma ɲɛ: {error} .",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Sankaba sigicogo sɛgɛsɛgɛli ma ɲɛ : {error} .",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

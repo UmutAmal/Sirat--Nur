@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Käsitsi kohandatud nurgad (puudub institutsiooniline allikas)",
   "diagnosticsCloudDriven": "Pilvepõhine",
   "diagnosticsAdhanAudioAssets": "Adhani helivarad",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI helivarad",
   "diagnosticsQuranAudioAssets": "Koraani helivarad",
   "diagnosticsAudioAssets": "Helivarad",
   "diagnosticsFilesCount": "{count} faili",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokaliseerimiskohad",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} toetatud",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Koraani andmestik",
+  "diagnosticsQuranSurahs": "Koraani suurad",
+  "diagnosticsQuranAyahs": "Koraani Ayahs",
+  "diagnosticsQuranJuzMetadata": "Koraanjuzi metaandmed",
   "diagnosticsQuranCloudTablesMissing": "Supabases puuduvad pilvetabelid; komplekteeritud varu aktiivne",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Pilvekontroll ebaõnnestus: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud Juz metaandmed puuduvad; komplekteeritud struktuurne varu aktiivne",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Pilve struktuurikontroll ebaõnnestus: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

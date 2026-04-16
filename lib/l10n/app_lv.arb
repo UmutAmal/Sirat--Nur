@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Manuāli pielāgoti leņķi (nav institucionāla avota)",
   "diagnosticsCloudDriven": "Mākoņu vadīts",
   "diagnosticsAdhanAudioAssets": "Adhan audio līdzekļi",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI audio līdzekļi",
   "diagnosticsQuranAudioAssets": "Korāna audio līdzekļi",
   "diagnosticsAudioAssets": "Audio līdzekļi",
   "diagnosticsFilesCount": "{count} faili",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalizācijas lokalizācijas",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} atbalstīts",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Korāna datu kopa",
+  "diagnosticsQuranSurahs": "Korāna suras",
+  "diagnosticsQuranAyahs": "Korāna Ajas",
+  "diagnosticsQuranJuzMetadata": "Korāna Juz metadati",
   "diagnosticsQuranCloudTablesMissing": "Supabase trūkst mākoņa tabulas; kompleksā atkāpšanās aktīva",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Mākoņa pārbaude neizdevās: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Trūkst mākoņa juz metadatu; kompleksā strukturālā atkāpšanās aktīva",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Mākoņa struktūras pārbaude neizdevās: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

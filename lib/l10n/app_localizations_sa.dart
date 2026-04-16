@@ -874,7 +874,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'अधन श्रव्य सम्पत्ति';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'यूआई ऑडियो एसेट्स';
 
   @override
   String get diagnosticsQuranAudioAssets => 'कुरान श्रव्य सम्पत्ति';

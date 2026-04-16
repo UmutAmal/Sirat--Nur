@@ -874,7 +874,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI аудио хөрөнгө';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Коран Коран аудио хөрөнгө';
@@ -897,20 +897,20 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count дэмжигдсэн';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Коран өгөгдлийн багц';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Коран судар';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Коран судар';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Коран Жуз мета өгөгдөл';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -918,7 +918,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Үүлэн шалгалт амжилтгүй боллоо: $error';
   }
 
   @override
@@ -927,7 +927,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Үүлний бүтцийн шалгалт амжилтгүй боллоо: $error';
   }
 
   @override

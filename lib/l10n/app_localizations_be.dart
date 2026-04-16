@@ -877,7 +877,7 @@ class AppLocalizationsBe extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Аўдыярэсурсы Adhan';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'Аўдыярэсурсы карыстацкага інтэрфейсу';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Аўдыярэсурсы Карана';
@@ -900,20 +900,20 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count падтрымліваецца';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Набор дадзеных Карана';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Сура Карана';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Аяты Карана';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Каран Джуз Метададзеныя';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -921,7 +921,7 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Воблачная праверка не атрымалася: $error';
   }
 
   @override
@@ -930,7 +930,7 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Збой структурнай праверкі воблака: $error';
   }
 
   @override

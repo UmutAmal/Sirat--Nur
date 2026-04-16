@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "手动自定义角度（无机构来源）",
   "diagnosticsCloudDriven": "云驱动",
   "diagnosticsAdhanAudioAssets": "Adhan 音频资产",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI 音频资源",
   "diagnosticsQuranAudioAssets": "古兰经音频资产",
   "diagnosticsAudioAssets": "音频资源",
   "diagnosticsFilesCount": "{count} 文件",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "本地化区域设置",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "支持 {count} 项",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "古兰经数据集",
+  "diagnosticsQuranSurahs": "古兰经各章",
+  "diagnosticsQuranAyahs": "古兰经经文",
+  "diagnosticsQuranJuzMetadata": "古兰经分卷元数据",
   "diagnosticsQuranCloudTablesMissing": "Supabase 中缺少云表；捆绑后备活动",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "云检查失败：{error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz 元数据丢失；捆绑结构后备活动",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "云结构检查失败：{error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Angoli manwali tad-dwana (l-ebda sors istituzzjonali)",
   "diagnosticsCloudDriven": "Sħab Immexxi",
   "diagnosticsAdhanAudioAssets": "Assi Awdjo Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Assi Awdjo UI",
   "diagnosticsQuranAudioAssets": "Assi Awdjo Quran",
   "diagnosticsAudioAssets": "Assi Awdjo",
   "diagnosticsFilesCount": "{count} fajls",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalizzazzjoni Lokali",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} appoġġjat",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
+  "diagnosticsQuranDataset": "Sett tad-Data tal-Quran",
+  "diagnosticsQuranSurahs": "Surahs tal-Quran",
   "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranJuzMetadata": "Metadata tal-Quran Juz",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables nieqsa f'Supabase; bundled fallback attiv",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Il-verifika tas-sħab falliet: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Metadata tal-juz tal-cloud nieqsa; bundled riżerva strutturali attiva",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Il-verifika strutturali tas-sħab falliet: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

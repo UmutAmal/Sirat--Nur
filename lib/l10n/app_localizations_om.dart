@@ -875,7 +875,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Qabeenya Sagalee Adhan';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'Qabeenya Sagalee UI';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Qabeenya Sagalee Qur\'aana';
@@ -902,16 +902,16 @@ class AppLocalizationsOm extends AppLocalizations {
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Kuusaa Deetaa Qur\'aanaa';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Suuraa Qur\'aanaa';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Ayyaana Qur\'aanaa';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Qur\'aana Juz Meetadaataa';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -928,7 +928,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Sakatta\'iinsi caasaa duumessaa hin milkoofne: $error .';
   }
 
   @override

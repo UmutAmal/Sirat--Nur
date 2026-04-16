@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Rankiniai pasirinktiniai kampai (be institucinio šaltinio)",
   "diagnosticsCloudDriven": "Varomas debesų",
   "diagnosticsAdhanAudioAssets": "Adhan garso ištekliai",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI garso ištekliai",
   "diagnosticsQuranAudioAssets": "Korano garso ištekliai",
   "diagnosticsAudioAssets": "Garso ištekliai",
   "diagnosticsFilesCount": "{count} failus",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalizacijos vietos",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} palaikoma",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Korano duomenų rinkinys",
+  "diagnosticsQuranSurahs": "Korano suros",
+  "diagnosticsQuranAyahs": "Korano Ayahs",
+  "diagnosticsQuranJuzMetadata": "Korano Juz metaduomenys",
   "diagnosticsQuranCloudTablesMissing": "Supabase trūksta debesų lentelių; sugrupuotas atsarginis aktyvus",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Nepavyko patikrinti debesies: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Trūksta debesies juz metaduomenų; sujungtas struktūrinis atsarginis aktyvus",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Nepavyko patikrinti debesies struktūros: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

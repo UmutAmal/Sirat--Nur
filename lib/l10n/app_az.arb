@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Manual fərdi açılar (institusional mənbə yoxdur)",
   "diagnosticsCloudDriven": "Buludla idarə olunur",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Aktivləri",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI Audio Aktivləri",
   "diagnosticsQuranAudioAssets": "Quran Audio Aktivləri",
   "diagnosticsAudioAssets": "Audio Aktivlər",
   "diagnosticsFilesCount": "{count} faylları",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokallaşdırma Yerləri",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} dəstəklənir",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Quran verilənlər toplusu",
+  "diagnosticsQuranSurahs": "Quran surələri",
+  "diagnosticsQuranAyahs": "Quran ayələri",
+  "diagnosticsQuranJuzMetadata": "Quran Cüz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Supabase-də bulud cədvəlləri yoxdur; yığılmış geri qaytarma aktivdir",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Bulud yoxlaması alınmadı: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata yoxdur; yığılmış struktur geriləmə aktivdir",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Bulud struktur yoxlaması alınmadı: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

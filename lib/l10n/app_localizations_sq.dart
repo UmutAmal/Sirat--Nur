@@ -875,7 +875,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Asetet audio të Ezanit';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'Asetet audio UI';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Asetet audio të Kuranit';
@@ -898,20 +898,20 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count i mbështetur';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Të dhënat e Kuranit';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Suret e Kuranit';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Ajetet e Kuranit';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Metadatat e Kur\'anit Xhuz';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -919,7 +919,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Kontrolli në renë kompjuterike dështoi: $error';
   }
 
   @override
@@ -928,7 +928,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Kontrolli strukturor i resë kompjuterike dështoi: $error';
   }
 
   @override

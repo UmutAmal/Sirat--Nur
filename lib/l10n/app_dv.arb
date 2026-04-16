@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "މެނުއަލް ކަސްޓަމް އެންގްލްސް (އިންސްޓިޓިއުޝަނަލް ސޯސްއެއް ނެތް)",
   "diagnosticsCloudDriven": "ކްލައުޑް ޑްރައިވް ކޮށްގެންނެވެ",
   "diagnosticsAdhanAudioAssets": "އަދަން އޯޑިއޯ އެސެޓްސް",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "ޔޫއައި އޯޑިއޯ އެސެޓްސް",
   "diagnosticsQuranAudioAssets": "ޤުރުއާން އޯޑިއޯ އެސެޓްސް",
   "diagnosticsAudioAssets": "އޯޑިއޯ އެސެޓްސް",
   "diagnosticsFilesCount": "{count} ފައިލްތައް",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "ލޮކަލައިޒޭޝަން ލޮކޭޝަންސް",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ސަޕޯޓް ކުރެއެވެ",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "ޤުރުއާން ޑޭޓާސެޓް",
+  "diagnosticsQuranSurahs": "ޤުރުއާން ސޫރަތްތަކެވެ",
+  "diagnosticsQuranAyahs": "ޤުރުއާން އާޔަތްތަކެވެ",
+  "diagnosticsQuranJuzMetadata": "ޤުރުއާން ޖޫޒް މެޓަޑޭޓާ",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "ކްލައުޑް ޗެކް ފެއިލްވެއްޖެ: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "ކްލައުޑް ސްޓްރަކްޗަރަލް ޗެކް ފެއިލްވެއްޖެ: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

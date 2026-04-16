@@ -877,7 +877,7 @@ class AppLocalizationsDv extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'އަދަން އޯޑިއޯ އެސެޓްސް';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'ޔޫއައި އޯޑިއޯ އެސެޓްސް';
 
   @override
   String get diagnosticsQuranAudioAssets => 'ޤުރުއާން އޯޑިއޯ އެސެޓްސް';
@@ -900,20 +900,20 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count ސަޕޯޓް ކުރެއެވެ';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'ޤުރުއާން ޑޭޓާސެޓް';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'ޤުރުއާން ސޫރަތްތަކެވެ';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'ޤުރުއާން އާޔަތްތަކެވެ';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'ޤުރުއާން ޖޫޒް މެޓަޑޭޓާ';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -921,7 +921,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'ކްލައުޑް ޗެކް ފެއިލްވެއްޖެ: $error';
   }
 
   @override
@@ -930,7 +930,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'ކްލައުޑް ސްޓްރަކްޗަރަލް ޗެކް ފެއިލްވެއްޖެ: $error';
   }
 
   @override

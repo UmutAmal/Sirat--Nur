@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Ձեռքով հարմարեցված անկյուններ (ոչ ինստիտուցիոնալ աղբյուր)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Ադանի աուդիո ակտիվներ",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI աուդիո ակտիվներ",
   "diagnosticsQuranAudioAssets": "Ղուրանի աուդիո ակտիվներ",
   "diagnosticsAudioAssets": "Աուդիո ակտիվներ",
   "diagnosticsFilesCount": "{count} ֆայլեր",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Տեղայնացում Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} աջակցվում է",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
+  "diagnosticsQuranDataset": "Ղուրանի տվյալների հավաքածու",
+  "diagnosticsQuranSurahs": "Ղուրանի սուրաներ",
+  "diagnosticsQuranAyahs": "Ղուրանի Այահներ",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Ամպային աղյուսակները բացակայում են Supabase-ում; փաթեթավորված հետադարձ ակտիվ",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Ամպային ստուգումը ձախողվեց՝ {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz-ի մետատվյալները բացակայում են; միավորված կառուցվածքային հետադարձ ակտիվ",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Ամպի կառուցվածքի ստուգումը ձախողվեց՝ {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

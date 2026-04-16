@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalisatioun Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ënnerstëtzt",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Koran Datenset",
+  "diagnosticsQuranSurahs": "Koran Surahs",
+  "diagnosticsQuranAyahs": "Koran Ayahs",
+  "diagnosticsQuranJuzMetadata": "Koran Juz Metadaten",
   "diagnosticsQuranCloudTablesMissing": "Cloud Dëscher fehlen an Supabase; gebündelte Fallback aktiv",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Cloud Check ausgefall: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz Metadaten feelen; gebündelte strukturelle Fallback aktiv",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud Strukturkontrolle gescheitert: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

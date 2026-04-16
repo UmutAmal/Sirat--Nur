@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "മാനുവൽ ഇഷ്‌ടാനുസൃത ആംഗിളുകൾ (ഇൻസ്റ്റിറ്റ്യൂഷണൽ ഉറവിടങ്ങളില്ല)",
   "diagnosticsCloudDriven": "ക്ലൗഡ് ഡ്രൈവൺ",
   "diagnosticsAdhanAudioAssets": "അധാൻ ഓഡിയോ അസറ്റുകൾ",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI ഓഡിയോ അസറ്റുകൾ",
   "diagnosticsQuranAudioAssets": "ഖുർആൻ ഓഡിയോ അസറ്റുകൾ",
   "diagnosticsAudioAssets": "ഓഡിയോ അസറ്റുകൾ",
   "diagnosticsFilesCount": "{count} ഫയലുകൾ",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "പ്രാദേശികവൽക്കരണം ലോക്കലുകൾ",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} പിന്തുണയ്ക്കുന്നു",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "ഖുറാൻ ഡാറ്റാസെറ്റ്",
+  "diagnosticsQuranSurahs": "ഖുർആൻ സൂറത്തുകൾ",
+  "diagnosticsQuranAyahs": "ഖുർആൻ ആയത്തുകൾ",
+  "diagnosticsQuranJuzMetadata": "ഖുർആൻ ജുസ് മെറ്റാഡാറ്റ",
   "diagnosticsQuranCloudTablesMissing": "സുപാബേസിൽ ക്ലൗഡ് ടേബിളുകൾ കാണുന്നില്ല; ബണ്ടിൽഡ് ഫാൾബാക്ക് സജീവമാണ്",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "ക്ലൗഡ് പരിശോധന പരാജയപ്പെട്ടു: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "ക്ലൗഡ് ജുസ് മെറ്റാഡാറ്റ കാണുന്നില്ല; ബണ്ടിൽഡ് സ്ട്രക്ചറൽ ഫാൾബാക്ക് സജീവമാണ്",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "ക്ലൗഡ് ഘടനാപരമായ പരിശോധന പരാജയപ്പെട്ടു: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

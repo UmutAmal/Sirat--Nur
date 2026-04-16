@@ -873,7 +873,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Nội dung âm thanh Adhan';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets =>
+      'Nội dung âm thanh giao diện người dùng';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Tài sản âm thanh Kinh Qur\'an';
@@ -896,20 +897,20 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count được hỗ trợ';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Bộ dữ liệu Kinh Qur\'an';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Các surah của Kinh Qur\'an';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Các ayah của Kinh Qur\'an';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Siêu dữ liệu juz của Kinh Qur\'an';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -917,7 +918,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Kiểm tra đám mây không thành công: $error';
   }
 
   @override
@@ -926,7 +927,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Kiểm tra cấu trúc đám mây không thành công: $error';
   }
 
   @override

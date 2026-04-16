@@ -873,7 +873,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan garso ištekliai';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI garso ištekliai';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Korano garso ištekliai';
@@ -896,20 +896,20 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count palaikoma';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Korano duomenų rinkinys';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Korano suros';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Korano Ayahs';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Korano Juz metaduomenys';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -917,7 +917,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Nepavyko patikrinti debesies: $error';
   }
 
   @override
@@ -926,7 +926,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Nepavyko patikrinti debesies struktūros: $error';
   }
 
   @override

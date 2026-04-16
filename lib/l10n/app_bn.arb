@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "ম্যানুয়াল কাস্টম কোণ (কোন প্রাতিষ্ঠানিক উত্স নেই)",
   "diagnosticsCloudDriven": "মেঘ চালিত",
   "diagnosticsAdhanAudioAssets": "আযান অডিও সম্পদ",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI অডিও সম্পদ",
   "diagnosticsQuranAudioAssets": "কুরআন অডিও সম্পদ",
   "diagnosticsAudioAssets": "অডিও সম্পদ",
   "diagnosticsFilesCount": "{count} ফাইল",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "স্থানীয়করণ লোকেল",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} সমর্থিত",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "কুরআন ডেটাসেট",
+  "diagnosticsQuranSurahs": "কুরআনের সূরা",
+  "diagnosticsQuranAyahs": "কুরআনের আয়াত",
+  "diagnosticsQuranJuzMetadata": "কুরআন জুজ মেটাডাটা",
   "diagnosticsQuranCloudTablesMissing": "সুপাবেসে ক্লাউড টেবিল অনুপস্থিত; বান্ডিল ফলব্যাক সক্রিয়",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "ক্লাউড চেক ব্যর্থ হয়েছে: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {

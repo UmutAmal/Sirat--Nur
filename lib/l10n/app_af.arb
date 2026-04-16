@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Handmatige pasgemaakte hoeke (geen institusionele bron)",
   "diagnosticsCloudDriven": "Wolkgedrewe",
   "diagnosticsAdhanAudioAssets": "Adhan oudiobates",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI-oudiobates",
   "diagnosticsQuranAudioAssets": "Koran klankbates",
   "diagnosticsAudioAssets": "Oudiobates",
   "diagnosticsFilesCount": "{count} lêers",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalisering Lokale",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ondersteun",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Koran datastel",
+  "diagnosticsQuranSurahs": "Koran Surahs",
+  "diagnosticsQuranAyahs": "Koran Ayahs",
+  "diagnosticsQuranJuzMetadata": "Koran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Wolktabelle ontbreek in Supabase; gebundelde terugval aktief",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Wolkkontrole het misluk: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Wolk juz metadata ontbreek; gebundelde strukturele terugval aktief",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Wolk-struktuurkontrole het misluk: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

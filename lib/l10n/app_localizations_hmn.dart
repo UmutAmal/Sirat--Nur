@@ -898,7 +898,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count txhawb nqa';
   }
 
   @override
@@ -919,7 +919,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Kev kuaj huab ua tsis tiav: $error';
   }
 
   @override
@@ -928,7 +928,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Kev kuaj xyuas huab ua tsis tiav: $error';
   }
 
   @override

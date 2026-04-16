@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "අතින් අභිරුචි කෝණ (ආයතනික මූලාශ්‍ර නැත)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "අදාන් ශ්‍රව්‍ය වත්කම්",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI ශ්‍රව්‍ය වත්කම්",
   "diagnosticsQuranAudioAssets": "කුර්ආන් ශ්‍රව්‍ය වත්කම්",
   "diagnosticsAudioAssets": "ශ්‍රව්‍ය වත්කම්",
   "diagnosticsFilesCount": "{count} ගොනු",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "ප්රාදේශීයකරණය ස්ථාන",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} සහාය දක්වයි",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "කුර්ආන් දත්ත කට්ටලය",
+  "diagnosticsQuranSurahs": "කුර්ආන් සූරත",
+  "diagnosticsQuranAyahs": "කුර්ආන් ආයත",
+  "diagnosticsQuranJuzMetadata": "කුර්ආන් ජුස් පාරදත්ත",
   "diagnosticsQuranCloudTablesMissing": "Supabase හි වලාකුළු වගු අතුරුදහන්; බණ්ඩල්ඩ් ෆෝල්බැක් ක්‍රියාකාරී",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "වලාකුළු පරීක්ෂාව අසාර්ථක විය: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz පාරදත්ත අතුරුදහන්; බණ්ඩල්ඩ් ව්‍යුහාත්මක පසුබැසීම සක්‍රීයයි",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "වළාකුළු ව්‍යුහාත්මක පරීක්ෂාව අසාර්ථක විය: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

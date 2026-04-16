@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Manaj kutimaj anguloj (neniu institucia fonto)",
   "diagnosticsCloudDriven": "Nubo Stirita",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI Audio Aktivoj",
   "diagnosticsQuranAudioAssets": "Quran Audio Aktivoj",
   "diagnosticsAudioAssets": "Audio Aktivoj",
   "diagnosticsFilesCount": "{count} dosieroj",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokaj Lokoj",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} subtenata",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
+  "diagnosticsQuranDataset": "Korana datumaro",
+  "diagnosticsQuranSurahs": "Korano-Suraoj",
   "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranJuzMetadata": "Metadatumoj de Quran Juz",
   "diagnosticsQuranCloudTablesMissing": "Nubaj tabloj mankas en Supabase; pakigita falo aktiva",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Nuba kontrolo malsukcesis: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Nubo juz metadatumoj mankas; pakigita struktura falo aktiva",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Nuba struktura kontrolo malsukcesis: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Рачни приспособени агли (без институционален извор)",
   "diagnosticsCloudDriven": "Облак управувано",
   "diagnosticsAdhanAudioAssets": "Аудио средства на Адан",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Аудио средства за интерфејс",
   "diagnosticsQuranAudioAssets": "Аудио средства на Куранот",
   "diagnosticsAudioAssets": "Аудио средства",
   "diagnosticsFilesCount": "{count} датотеки",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Локали за локализација",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} поддржан",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Збир на податоци на Куранот",
+  "diagnosticsQuranSurahs": "Сура на Куранот",
+  "diagnosticsQuranAyahs": "Куранските ајови",
+  "diagnosticsQuranJuzMetadata": "Метаподатоци за Куранот Џуз",
   "diagnosticsQuranCloudTablesMissing": "Недостасуваат табели за облак во Supabase; пакет резервни активни",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Проверката на облакот не успеа: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Недостасуваат метаподатоци за Cloud juz; комплет структурен резервен активен",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Проверката на структурата на облакот не успеа: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

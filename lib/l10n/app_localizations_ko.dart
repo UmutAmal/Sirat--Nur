@@ -865,7 +865,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan 오디오 자산';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI 오디오 자산';
 
   @override
   String get diagnosticsQuranAudioAssets => '꾸란 오디오 자산';
@@ -888,20 +888,20 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count 지원됨';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => '꾸란 데이터세트';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => '꾸란 수라';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => '꾸란 아야스';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => '꾸란 주즈 메타데이터';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -909,7 +909,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return '클라우드 확인 실패: $error';
   }
 
   @override
@@ -918,7 +918,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return '클라우드 구조 확인 실패: $error';
   }
 
   @override

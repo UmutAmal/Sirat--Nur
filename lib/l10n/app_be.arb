@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Карыстальніцкія куты ўручную (няма інстытуцыйнай крыніцы)",
   "diagnosticsCloudDriven": "Кіраваны воблакам",
   "diagnosticsAdhanAudioAssets": "Аўдыярэсурсы Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Аўдыярэсурсы карыстацкага інтэрфейсу",
   "diagnosticsQuranAudioAssets": "Аўдыярэсурсы Карана",
   "diagnosticsAudioAssets": "Аўдыярэсурсы",
   "diagnosticsFilesCount": "{count} файлы",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Лакалізацыя Лакалі",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} падтрымліваецца",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Набор дадзеных Карана",
+  "diagnosticsQuranSurahs": "Сура Карана",
+  "diagnosticsQuranAyahs": "Аяты Карана",
+  "diagnosticsQuranJuzMetadata": "Каран Джуз Метададзеныя",
   "diagnosticsQuranCloudTablesMissing": "Воблачныя табліцы адсутнічаюць у Supabase; у камплекце рэзервовы актыўны",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Воблачная праверка не атрымалася: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Адсутнічаюць метаданыя Cloud Juz; у камплекце структурны запасны актыўны",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Збой структурнай праверкі воблака: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

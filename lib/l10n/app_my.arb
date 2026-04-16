@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "ကိုယ်တိုင်စိတ်ကြိုက်ထောင့်များ (အဖွဲ့အစည်းဆိုင်ရာ အရင်းအမြစ်မရှိပါ)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan အသံပိုင်ဆိုင်မှုများ",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI အသံ ပိုင်ဆိုင်မှုများ",
   "diagnosticsQuranAudioAssets": "ကုရ်အာန် အသံပိုင်ဆိုင်မှုများ",
   "diagnosticsAudioAssets": "အသံပိုင်ဆိုင်မှုများ",
   "diagnosticsFilesCount": "{count} ဖိုင်များ",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization ဒေသများ",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ပံ့ပိုးထားသည်။",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "ကုရ်အာန်ဒေတာအတွဲ",
+  "diagnosticsQuranSurahs": "ကုရ်အာန်စူရာဟ်များ",
+  "diagnosticsQuranAyahs": "ကုရ်အာန် Ayahs",
+  "diagnosticsQuranJuzMetadata": "ကုရ်အာန် Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Supabase တွင် တိမ်တိုက်ဇယားများ ပျောက်ဆုံးနေပါသည်။ အစုလိုက်အပြုံလိုက် တုံ့ပြန်မှု တက်ကြွနေသည်။",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Cloud စစ်ဆေးမှု မအောင်မြင်ပါ- {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz မက်တာဒေတာ ပျောက်ဆုံးနေခြင်း၊ အစုအပြုံလိုက်ဖွဲ့စည်းပုံဆိုင်ရာ ဆုတ်ယုတ်မှု တက်ကြွမှု",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud တည်ဆောက်ပုံ စစ်ဆေးခြင်း မအောင်မြင်ပါ- {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

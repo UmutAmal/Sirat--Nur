@@ -874,7 +874,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Sócmhainní Fuaime Adhan';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'Sócmhainní Fuaime Chomhéadain';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Sócmhainní fuaime Quran';
@@ -897,20 +897,20 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count tacaithe';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Sraith sonraí Quran';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Surah an Quran';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Ayahs an Quran';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Meiteashonraí Quran Juz';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -918,7 +918,7 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Theip ar sheiceáil scamall: $error';
   }
 
   @override
@@ -927,7 +927,7 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Theip ar sheiceáil struchtúrach néal: $error';
   }
 
   @override

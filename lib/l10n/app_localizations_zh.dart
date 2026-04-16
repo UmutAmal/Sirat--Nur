@@ -856,7 +856,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan 音频资产';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI 音频资源';
 
   @override
   String get diagnosticsQuranAudioAssets => '古兰经音频资产';
@@ -879,27 +879,27 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '支持 $count 项';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => '古兰经数据集';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => '古兰经各章';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => '古兰经经文';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => '古兰经分卷元数据';
 
   @override
   String get diagnosticsQuranCloudTablesMissing => 'Supabase 中缺少云表；捆绑后备活动';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return '云检查失败：$error';
   }
 
   @override
@@ -907,7 +907,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return '云结构检查失败：$error';
   }
 
   @override
@@ -2494,7 +2494,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get diagnosticsAdhanAudioAssets => 'Adhan 音频资产';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI 音频资源';
 
   @override
   String get diagnosticsQuranAudioAssets => '古兰经音频资产';
@@ -2517,27 +2517,27 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '支持 $count 项';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => '古兰经数据集';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => '古兰经各章';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => '古兰经经文';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => '古兰经分卷元数据';
 
   @override
   String get diagnosticsQuranCloudTablesMissing => 'Supabase 中缺少云表；捆绑后备活动';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return '云检查失败：$error';
   }
 
   @override
@@ -2545,7 +2545,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return '云结构检查失败：$error';
   }
 
   @override
@@ -4132,7 +4132,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get diagnosticsAdhanAudioAssets => 'Adhan 音訊資產';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI 音訊資源';
 
   @override
   String get diagnosticsQuranAudioAssets => '古蘭經音頻資產';
@@ -4155,27 +4155,27 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '支援 $count 項';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => '古蘭經資料集';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => '古蘭經各章';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => '古蘭經經文';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => '古蘭經分卷中繼資料';
 
   @override
   String get diagnosticsQuranCloudTablesMissing => 'Supabase 中缺少雲端表；捆綁後備活動';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return '雲端檢查失敗：$error';
   }
 
   @override
@@ -4183,7 +4183,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return '雲端結構檢查失敗：$error';
   }
 
   @override

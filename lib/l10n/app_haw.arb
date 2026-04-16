@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Nā kihi maʻamau maʻamau (ʻaʻohe kumu kumu)",
   "diagnosticsCloudDriven": "Kapua Kapua",
   "diagnosticsAdhanAudioAssets": "Adhan Audio waiwai",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Nā waiwai leo UI",
   "diagnosticsQuranAudioAssets": "Na waiwai leo Quran",
   "diagnosticsAudioAssets": "Na waiwai leo",
   "diagnosticsFilesCount": "{count} waihona",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Nā Kūlana Kūlana",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "Kākoʻo ʻia ʻo {count}",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
+  "diagnosticsQuranDataset": "ʻIkepili Quran",
+  "diagnosticsQuranSurahs": "Nā Surah Quran",
+  "diagnosticsQuranAyahs": "Quran Ayah",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Nalo nā papa ʻaina ma Supabase; pūʻolo fallback hana",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "ʻAʻole hiki ke nānā i ke ao: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Nalo ka metadata cloud juz; pūʻolo structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "ʻAʻole hiki ke nānā i ke ao: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

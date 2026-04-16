@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "ମାନୁଆଲ୍ କଷ୍ଟମ୍ କୋଣ (କ institution ଣସି ଅନୁଷ୍ଠାନିକ ଉତ୍ସ ନାହିଁ)",
   "diagnosticsCloudDriven": "କ୍ଲାଉଡ୍ ଚାଳିତ |",
   "diagnosticsAdhanAudioAssets": "ଆଦନ ଅଡିଓ ଆସେଟସ୍ |",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI ଅଡିଓ ସମ୍ପତ୍ତି |",
   "diagnosticsQuranAudioAssets": "କୁରାନ ଅଡିଓ ସମ୍ପତ୍ତି |",
   "diagnosticsAudioAssets": "ଅଡିଓ ଆସେଟସ୍ |",
   "diagnosticsFilesCount": "{count} ଫାଇଲଗୁଡିକ |",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "ଲୋକାଲାଇଜେସନ୍ ଲୋକାଲ୍ |",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ସମର୍ଥିତ |",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "କୁରାନ ଡାଟାବେସ",
+  "diagnosticsQuranSurahs": "କୁରାନ ସୁରା |",
+  "diagnosticsQuranAyahs": "କୁରାନ ଆୟାସ୍ |",
+  "diagnosticsQuranJuzMetadata": "କୁରାନ ଜୁଜ ମେଟାଡାଟା |",
   "diagnosticsQuranCloudTablesMissing": "କ୍ଲାଉଡ୍ ଟେବୁଲଗୁଡିକ ସୁପେଜ୍ ରେ ନିଖୋଜ | ବାନ୍ଧିତ ଫଲବ୍ୟାକ୍ ସକ୍ରିୟ |",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "କ୍ଲାଉଡ୍ ଯାଞ୍ଚ ବିଫଳ ହେଲା: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "କ୍ଲାଉଡ୍ ଜୁଜ୍ ମେଟାଡାଟା ନିଖୋଜ; ବାନ୍ଧାଯାଇଥିବା ଗଠନମୂଳକ ଫଲବ୍ୟାକ୍ ସକ୍ରିୟ |",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "କ୍ଲାଉଡ୍ ଗଠନମୂଳକ ଯାଞ୍ଚ ବିଫଳ ହେଲା: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

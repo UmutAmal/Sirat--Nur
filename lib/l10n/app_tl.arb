@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Mga manu-manong custom na anggulo (walang institusyonal na pinagmulan)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Mga UI Audio Asset",
   "diagnosticsQuranAudioAssets": "Quran Audio Asset",
   "diagnosticsAudioAssets": "Mga Audio Asset",
   "diagnosticsFilesCount": "{count} file",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Mga Lokal na Lokalisasyon",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} suportado",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -264,11 +264,11 @@
     }
   },
   "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
+  "diagnosticsQuranSurahs": "Mga Surah ng Quran",
+  "diagnosticsQuranAyahs": "Quran Ayah",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Nawawala ang mga cloud table sa Supabase; aktibo ang naka-bundle na fallback",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Nabigo ang pagsusuri sa ulap: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Nawawala ang metadata ng cloud juz; naka-bundle na structural fallback aktibo",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Nabigo ang pagsusuri sa istruktura ng ulap: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

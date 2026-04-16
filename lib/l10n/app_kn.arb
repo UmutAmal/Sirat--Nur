@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "ಹಸ್ತಚಾಲಿತ ಕಸ್ಟಮ್ ಕೋನಗಳು (ಯಾವುದೇ ಸಾಂಸ್ಥಿಕ ಮೂಲವಿಲ್ಲ)",
   "diagnosticsCloudDriven": "ಮೇಘ ಚಾಲಿತ",
   "diagnosticsAdhanAudioAssets": "ಅಧಾನ್ ಆಡಿಯೋ ಸ್ವತ್ತುಗಳು",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI ಆಡಿಯೋ ಸ್ವತ್ತುಗಳು",
   "diagnosticsQuranAudioAssets": "ಕುರಾನ್ ಆಡಿಯೋ ಸ್ವತ್ತುಗಳು",
   "diagnosticsAudioAssets": "ಆಡಿಯೋ ಸ್ವತ್ತುಗಳು",
   "diagnosticsFilesCount": "{count} ಫೈಲ್‌ಗಳು",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "ಸ್ಥಳೀಕರಣ ಸ್ಥಳಗಳು",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ಬೆಂಬಲಿತವಾಗಿದೆ",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "ಖುರಾನ್ ಡೇಟಾಸೆಟ್",
+  "diagnosticsQuranSurahs": "ಖುರಾನ್ ಸೂರಾಗಳು",
+  "diagnosticsQuranAyahs": "ಕುರಾನ್ ಅಯಾಗಳು",
+  "diagnosticsQuranJuzMetadata": "ಖುರಾನ್ ಜುಜ್ ಮೆಟಾಡೇಟಾ",
   "diagnosticsQuranCloudTablesMissing": "ಸುಪಾಬೇಸ್‌ನಲ್ಲಿ ಮೇಘ ಕೋಷ್ಟಕಗಳು ಕಾಣೆಯಾಗಿವೆ; ಕಟ್ಟುಗಳ ಫಾಲ್ಬ್ಯಾಕ್ ಸಕ್ರಿಯವಾಗಿದೆ",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "ಮೇಘ ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "ಕ್ಲೌಡ್ ಜುಜ್ ಮೆಟಾಡೇಟಾ ಕಾಣೆಯಾಗಿದೆ; ಬಂಡಲ್ಡ್ ಸ್ಟ್ರಕ್ಚರಲ್ ಫಾಲ್ಬ್ಯಾಕ್ ಸಕ್ರಿಯವಾಗಿದೆ",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "ಮೇಘ ರಚನಾತ್ಮಕ ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

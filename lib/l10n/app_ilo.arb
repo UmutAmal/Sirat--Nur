@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Dagiti manual a kostumbre nga anggulo (awan ti institusional a gubuayan) .",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Dagiti Asset ti Audio ti Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Dagiti Asset ti Audio ti UI",
   "diagnosticsQuranAudioAssets": "Dagiti Asset ti Audio ti Quran",
   "diagnosticsAudioAssets": "Dagiti Asset ti Audio",
   "diagnosticsFilesCount": "{count} dagiti file",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Dagiti Lokal ti Lokalisasion",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ti nasuportaran",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Dataset ti Quran",
+  "diagnosticsQuranSurahs": "Dagiti Surah ti Quran",
+  "diagnosticsQuranAyahs": "Dagiti Ayah ti Quran",
+  "diagnosticsQuranJuzMetadata": "Metadata ti Quran Juz",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Napaay ti panangsukimat iti ulep: {error} .",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Napaay ti estruktural a tseke ti ulep: {error} .",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

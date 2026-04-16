@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "ការធ្វើមូលដ្ឋានីយកម្ម មូលដ្ឋាន",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} គាំទ្រ",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "សំណុំទិន្នន័យគម្ពីគូរ៉ា",
+  "diagnosticsQuranSurahs": "គម្ពីគូរ៉ាន Surah",
+  "diagnosticsQuranAyahs": "គម្ពីគូរ៉ាន Ayahs",
+  "diagnosticsQuranJuzMetadata": "គម្ពីគូរ៉ា Juz ទិន្នន័យមេតា",
   "diagnosticsQuranCloudTablesMissing": "តារាងពពកបាត់នៅក្នុង Supabase; កញ្ចប់​ត្រឡប់​មកវិញ​សកម្ម",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "ការត្រួតពិនិត្យលើពពកបានបរាជ័យ៖ {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "បាត់ទិន្នន័យ Cloud juz; បណ្តុំរចនាសម្ព័ន្ធថយក្រោយសកម្ម",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "ការត្រួតពិនិត្យរចនាសម្ព័ន្ធពពកបានបរាជ័យ៖ {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

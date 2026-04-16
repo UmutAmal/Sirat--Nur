@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Μη αυτόματες προσαρμοσμένες γωνίες (χωρίς θεσμική πηγή)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Στοιχεία ήχου διεπαφής χρήστη",
   "diagnosticsQuranAudioAssets": "Στοιχεία ήχου Κορανίου",
   "diagnosticsAudioAssets": "Στοιχεία ήχου",
   "diagnosticsFilesCount": "{count} αρχεία",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "Υποστηρίζεται {count}",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Σύνολο δεδομένων Κορανίου",
+  "diagnosticsQuranSurahs": "Σούρες του Κορανίου",
+  "diagnosticsQuranAyahs": "Κοράνι Ayahs",
+  "diagnosticsQuranJuzMetadata": "Μεταδεδομένα Quran Juz",
   "diagnosticsQuranCloudTablesMissing": "Λείπουν πίνακες σύννεφων στο Supabase. ομαδοποιημένη εναλλακτική ενεργή",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Ο έλεγχος στο cloud απέτυχε: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Λείπουν μεταδεδομένα Cloud juz. ομαδοποιημένη δομική εναλλακτική ενεργή",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Ο δομικός έλεγχος του cloud απέτυχε: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

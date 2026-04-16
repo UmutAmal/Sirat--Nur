@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "수동 맞춤 각도(기관 소스 없음)",
   "diagnosticsCloudDriven": "클라우드 기반",
   "diagnosticsAdhanAudioAssets": "Adhan 오디오 자산",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI 오디오 자산",
   "diagnosticsQuranAudioAssets": "꾸란 오디오 자산",
   "diagnosticsAudioAssets": "오디오 자산",
   "diagnosticsFilesCount": "{count} 파일",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "현지화 로케일",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} 지원됨",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "꾸란 데이터세트",
+  "diagnosticsQuranSurahs": "꾸란 수라",
+  "diagnosticsQuranAyahs": "꾸란 아야스",
+  "diagnosticsQuranJuzMetadata": "꾸란 주즈 메타데이터",
   "diagnosticsQuranCloudTablesMissing": "Supabase에 클라우드 테이블이 없습니다. 번들 대체 활성",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "클라우드 확인 실패: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz 메타데이터가 누락되었습니다. 번들 구조적 대체 활성",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "클라우드 구조 확인 실패: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

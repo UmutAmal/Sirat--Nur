@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "زوایای سفارشی دستی (بدون منبع سازمانی)",
   "diagnosticsCloudDriven": "ابر رانده",
   "diagnosticsAdhanAudioAssets": "دارایی های صوتی اذان",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "دارایی های صوتی رابط کاربری",
   "diagnosticsQuranAudioAssets": "دارایی های صوتی قرآن",
   "diagnosticsAudioAssets": "دارایی های صوتی",
   "diagnosticsFilesCount": "فایل {count}",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "محل های محلی سازی",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} پشتیبانی می شود",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "مجموعه داده های قرآن",
+  "diagnosticsQuranSurahs": "سوره های قرآن",
+  "diagnosticsQuranAyahs": "آیات قرآن",
+  "diagnosticsQuranJuzMetadata": "فراداده قرآن جز",
   "diagnosticsQuranCloudTablesMissing": "جداول ابری در Supabase وجود ندارد. بازگشتی همراه فعال",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "بررسی ابر ناموفق بود: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "ابرداده Cloud juz از دست رفته است. بازگشتی ساختاری همراه فعال",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "بررسی ساختاری ابر ناموفق بود: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

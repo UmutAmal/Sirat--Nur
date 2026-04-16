@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "ਮੈਨੁਅਲ ਕਸਟਮ ਐਂਗਲ (ਕੋਈ ਸੰਸਥਾਗਤ ਸਰੋਤ ਨਹੀਂ)",
   "diagnosticsCloudDriven": "ਕਲਾਊਡ ਡਰਾਈਵ",
   "diagnosticsAdhanAudioAssets": "ਅਧਾਨ ਆਡੀਓ ਸੰਪਤੀਆਂ",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI ਆਡੀਓ ਸੰਪਤੀਆਂ",
   "diagnosticsQuranAudioAssets": "ਕੁਰਾਨ ਆਡੀਓ ਸੰਪਤੀਆਂ",
   "diagnosticsAudioAssets": "ਆਡੀਓ ਸੰਪਤੀਆਂ",
   "diagnosticsFilesCount": "{count} ਫਾਈਲਾਂ",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "ਸਥਾਨੀਕਰਨ ਸਥਾਨ",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ਸਮਰਥਿਤ",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "ਕੁਰਾਨ ਡਾਟਾਸੈੱਟ",
+  "diagnosticsQuranSurahs": "ਕੁਰਾਨ ਦੀਆਂ ਸੂਰਤਾਂ",
+  "diagnosticsQuranAyahs": "ਕੁਰਾਨ ਦੀਆਂ ਆਇਤਾਂ",
+  "diagnosticsQuranJuzMetadata": "ਕੁਰਾਨ ਜੁਜ਼ ਮੈਟਾਡੇਟਾ",
   "diagnosticsQuranCloudTablesMissing": "ਸੁਪਾਬੇਸ ਵਿੱਚ ਕਲਾਉਡ ਟੇਬਲ ਲਾਪਤਾ; ਬੰਡਲ ਫਾਲਬੈਕ ਕਿਰਿਆਸ਼ੀਲ",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "ਕਲਾਉਡ ਜਾਂਚ ਅਸਫਲ: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {

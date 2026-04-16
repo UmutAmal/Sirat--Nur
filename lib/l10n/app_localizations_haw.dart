@@ -873,7 +873,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio waiwai';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'Nā waiwai leo UI';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Na waiwai leo Quran';
@@ -896,17 +896,17 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return 'Kākoʻo ʻia ʻo $count';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'ʻIkepili Quran';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Nā Surah Quran';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Quran Ayah';
 
   @override
   String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
@@ -917,7 +917,7 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'ʻAʻole hiki ke nānā i ke ao: $error';
   }
 
   @override
@@ -926,7 +926,7 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'ʻAʻole hiki ke nānā i ke ao: $error';
   }
 
   @override

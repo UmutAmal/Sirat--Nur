@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Pembe maalum za mwongozo (hakuna chanzo cha kitaasisi)",
   "diagnosticsCloudDriven": "Inaendeshwa na Wingu",
   "diagnosticsAdhanAudioAssets": "Mali ya Sauti ya Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Vipengee vya Sauti vya UI",
   "diagnosticsQuranAudioAssets": "Mali za Sauti za Quran",
   "diagnosticsAudioAssets": "Vipengee vya Sauti",
   "diagnosticsFilesCount": "{count} faili",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Maeneo ya Ujanibishaji",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} inatumika",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
+  "diagnosticsQuranDataset": "Hifadhidata ya Quran",
+  "diagnosticsQuranSurahs": "Sura za Quran",
+  "diagnosticsQuranAyahs": "Ayah za Quran",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Meza za wingu hazipo katika Supabase; vifurushi njia mbadala vinatumika",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Imeshindwa kuangalia wingu: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "metadata ya Cloud juz haipo; mrejesho wa muundo uliounganishwa unawashwa",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Ukaguzi wa muundo wa wingu haukufaulu: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

@@ -877,7 +877,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan အသံပိုင်ဆိုင်မှုများ';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI အသံ ပိုင်ဆိုင်မှုများ';
 
   @override
   String get diagnosticsQuranAudioAssets => 'ကုရ်အာန် အသံပိုင်ဆိုင်မှုများ';
@@ -900,20 +900,20 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count ပံ့ပိုးထားသည်။';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'ကုရ်အာန်ဒေတာအတွဲ';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'ကုရ်အာန်စူရာဟ်များ';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'ကုရ်အာန် Ayahs';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'ကုရ်အာန် Juz Metadata';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -921,7 +921,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Cloud စစ်ဆေးမှု မအောင်မြင်ပါ- $error';
   }
 
   @override
@@ -930,7 +930,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Cloud တည်ဆောက်ပုံ စစ်ဆေးခြင်း မအောင်မြင်ပါ- $error';
   }
 
   @override

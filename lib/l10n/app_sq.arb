@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Kënde të personalizuara manuale (pa burim institucional)",
   "diagnosticsCloudDriven": "Drejtuar nga rea",
   "diagnosticsAdhanAudioAssets": "Asetet audio të Ezanit",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Asetet audio UI",
   "diagnosticsQuranAudioAssets": "Asetet audio të Kuranit",
   "diagnosticsAudioAssets": "Asetet audio",
   "diagnosticsFilesCount": "{count} skedarë",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalizimi Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} i mbështetur",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Të dhënat e Kuranit",
+  "diagnosticsQuranSurahs": "Suret e Kuranit",
+  "diagnosticsQuranAyahs": "Ajetet e Kuranit",
+  "diagnosticsQuranJuzMetadata": "Metadatat e Kur'anit Xhuz",
   "diagnosticsQuranCloudTablesMissing": "Mungojnë tabelat e reve në Supabase; backback i paketuar aktiv",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Kontrolli në renë kompjuterike dështoi: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Mungojnë meta të dhënat e Cloud juz; kthim strukturor i paketuar aktiv",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Kontrolli strukturor i resë kompjuterike dështoi: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

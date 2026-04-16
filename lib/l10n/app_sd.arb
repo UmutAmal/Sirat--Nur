@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "دستي حسب ضرورت زاويه (ڪو به ادارو ذريعو نه آهي)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "اذان آڊيو اثاثن",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI آڊيو اثاثو",
   "diagnosticsQuranAudioAssets": "قرآن آڊيو اثاثو",
   "diagnosticsAudioAssets": "آڊيو اثاثو",
   "diagnosticsFilesCount": "{count} فائلون",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} سپورٽ ڪئي وئي",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "قرآن ڊيٽا سيٽ",
+  "diagnosticsQuranSurahs": "قرآن جون سورتون",
+  "diagnosticsQuranAyahs": "قرآن جون آيتون",
+  "diagnosticsQuranJuzMetadata": "قرآن جوز ميٽاداٽا",
   "diagnosticsQuranCloudTablesMissing": "سپابيس ۾ Cloud ٽيبل غائب؛ بنڈل fallback فعال",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "ڪلائوڊ چيڪ ناڪام ٿيو: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {

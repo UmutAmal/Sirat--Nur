@@ -898,11 +898,11 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count tohanana';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Takelaka data Quran';
 
   @override
   String get diagnosticsQuranSurahs => 'Quran Surahs';
@@ -919,7 +919,7 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Tsy nahomby ny fisavana rahona: $error';
   }
 
   @override
@@ -928,7 +928,7 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Tsy nahomby ny fisavana rafitra rahona: $error';
   }
 
   @override

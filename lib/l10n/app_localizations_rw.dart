@@ -872,7 +872,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan Umutungo Wamajwi';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI Umutungo wamajwi';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Qor\'an Umutungo Wamajwi';
@@ -895,20 +895,20 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count ishyigikiwe';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Qor\'an Dataset';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Qor\'an Surat';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Qor\'an Ayahs';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Qor\'an Juz Metadata';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -916,7 +916,7 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Kugenzura ibicu byarananiranye: $error';
   }
 
   @override
@@ -925,7 +925,7 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Igenzura ryubatswe ryananiwe: $error';
   }
 
   @override

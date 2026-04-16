@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Ručni prilagođeni uglovi (bez institucionalnog izvora)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI audio sredstva",
   "diagnosticsQuranAudioAssets": "Audio imovina Kur'ana",
   "diagnosticsAudioAssets": "Audio sredstva",
   "diagnosticsFilesCount": "{count} fajlova",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} podržano",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -264,11 +264,11 @@
     }
   },
   "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
+  "diagnosticsQuranSurahs": "Kur'an Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranJuzMetadata": "Kur'an Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Cloud tabele nedostaju u Supabase; aktivni rezervni paket",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Provjera oblaka nije uspjela: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Nedostaju juz metapodaci u oblaku; uključeni strukturalni rezervni aktivni",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Provjera strukture oblaka nije uspjela: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

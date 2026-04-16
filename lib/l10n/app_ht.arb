@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Manyèl ang koutim (pa gen okenn sous enstitisyonèl)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Byen odyo UI",
   "diagnosticsQuranAudioAssets": "Koran byen odyo",
   "diagnosticsAudioAssets": "Byen odyo",
   "diagnosticsFilesCount": "{count} fichye",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokal lokalizasyon",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} sipòte",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Ansanm done koran",
+  "diagnosticsQuranSurahs": "Sourate koran yo",
+  "diagnosticsQuranAyahs": "Koran Ayahs",
+  "diagnosticsQuranJuzMetadata": "Koran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Tab nwaj ki manke nan Supabase; pake repli aktif",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Tcheke nwaj la echwe: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata ki manke; pake estriktirèl repli aktif",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Tèks estriktirèl nwaj la echwe: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

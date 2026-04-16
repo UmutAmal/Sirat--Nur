@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Góc tùy chỉnh thủ công (không có nguồn tổ chức)",
   "diagnosticsCloudDriven": "Điều khiển bằng đám mây",
   "diagnosticsAdhanAudioAssets": "Nội dung âm thanh Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Nội dung âm thanh giao diện người dùng",
   "diagnosticsQuranAudioAssets": "Tài sản âm thanh Kinh Qur'an",
   "diagnosticsAudioAssets": "Nội dung âm thanh",
   "diagnosticsFilesCount": "{count} tệp",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Địa phương hóa",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} được hỗ trợ",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Bộ dữ liệu Kinh Qur'an",
+  "diagnosticsQuranSurahs": "Các surah của Kinh Qur'an",
+  "diagnosticsQuranAyahs": "Các ayah của Kinh Qur'an",
+  "diagnosticsQuranJuzMetadata": "Siêu dữ liệu juz của Kinh Qur'an",
   "diagnosticsQuranCloudTablesMissing": "Bảng đám mây bị thiếu trong Supabase; dự phòng theo gói đang hoạt động",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Kiểm tra đám mây không thành công: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Thiếu siêu dữ liệu đám mây juz; dự phòng cấu trúc đi kèm đang hoạt động",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Kiểm tra cấu trúc đám mây không thành công: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

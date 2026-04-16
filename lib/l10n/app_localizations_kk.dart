@@ -871,7 +871,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Азан аудио активтері';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI аудио активтері';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Құран аудио активтері';
@@ -894,20 +894,20 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count қолдау көрсетеді';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Құран деректер жинағы';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Құран сүрелер';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Құран аяттары';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Құран Жүз метадеректері';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -915,7 +915,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Бұлтты тексеру сәтсіз аяқталды: $error';
   }
 
   @override
@@ -924,7 +924,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Бұлтты құрылымды тексеру сәтсіз аяқталды: $error';
   }
 
   @override

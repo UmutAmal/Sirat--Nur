@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Кунҷҳои фармоишии дастӣ (манбаи институтсионалӣ нест)",
   "diagnosticsCloudDriven": "Абри рондашуда",
   "diagnosticsAdhanAudioAssets": "Дороиҳои аудио азон",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Дороиҳои UI Audio",
   "diagnosticsQuranAudioAssets": "Воситаҳои аудиоии Қуръон",
   "diagnosticsAudioAssets": "Дороиҳои аудио",
   "diagnosticsFilesCount": "{count} файлҳо",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Маҳалликунонии маҳаллӣ",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} дастгирӣ карда мешавад",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Маҷмӯи маълумотҳои Қуръон",
+  "diagnosticsQuranSurahs": "Сурахои Куръон",
+  "diagnosticsQuranAyahs": "Оятхои Куръон",
+  "diagnosticsQuranJuzMetadata": "Маълумоти Қуръон Ҷуз",
   "diagnosticsQuranCloudTablesMissing": "Ҷадвалҳои абрӣ дар Supabase нестанд; Бозгашти маҷмӯӣ фаъол",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Санҷиши абр ноком шуд: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz метамаълумотҳо нест; бозгашти сохтории маҷмӯи фаъол",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Санҷиши сохтории абр ноком шуд: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

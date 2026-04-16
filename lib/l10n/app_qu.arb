@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Manual costumbre ángulos (mana institucional fuenteyuq) .",
   "diagnosticsCloudDriven": "Puyu purichisqa",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Kaqniyuq",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI Audio kaqmanta kaqniyuq",
   "diagnosticsQuranAudioAssets": "Quran Audio Kaqniyuq",
   "diagnosticsAudioAssets": "Uyarinapaq kaqniyuq",
   "diagnosticsFilesCount": "{count} willañiqikuna",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localización Locales nisqakuna",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} yanapasqa",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
+  "diagnosticsQuranDataset": "Quran Datos nisqa huñusqa",
+  "diagnosticsQuranSurahs": "Quran Surahkuna",
   "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranJuzMetadata": "Quran Juz Metadatos",
   "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Puyu qhawayqa manam atikunchu: {error} .",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Puyu estructural qhawayqa manam atikunchu: {error} .",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

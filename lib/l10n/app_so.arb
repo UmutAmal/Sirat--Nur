@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Xaglaha gaarka ah ee gacanta (malaha il hay'ad)",
   "diagnosticsCloudDriven": "Daruuruhu wadey",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Hantida Maqalka UI",
   "diagnosticsQuranAudioAssets": "Hantida Maqalka Quraanka",
   "diagnosticsAudioAssets": "Hantida Maqalka",
   "diagnosticsFilesCount": "{count} faylasha",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Deegaanaynta",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} waa la taageeray",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
+  "diagnosticsQuranDataset": "Xogta Quraanka",
+  "diagnosticsQuranSurahs": "Suuradaha Quraanka",
+  "diagnosticsQuranAyahs": "Aayadaha Quraanka",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "Miisaska daruuraha ayaa ka maqan Supabase; dib u dhac isku xiran oo firfircoon",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Hubinta daruurtu waa fashilantay: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Xogta badan ee Cloud juz ayaa maqan; dib-u-dhac dhismeed isku xidhan oo firfircoon",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Hubinta qaab dhismeedka daruuraha ayaa fashilmay: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

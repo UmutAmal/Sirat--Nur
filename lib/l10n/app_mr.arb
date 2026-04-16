@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "मॅन्युअल सानुकूल कोन (संस्थागत स्रोत नाही)",
   "diagnosticsCloudDriven": "ढग चालवलेले",
   "diagnosticsAdhanAudioAssets": "अधान ऑडिओ मालमत्ता",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI ऑडिओ मालमत्ता",
   "diagnosticsQuranAudioAssets": "कुराण ऑडिओ मालमत्ता",
   "diagnosticsAudioAssets": "ऑडिओ मालमत्ता",
   "diagnosticsFilesCount": "{count} फायली",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "स्थानिकीकरण लोकेल",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} समर्थित",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "कुराण डेटासेट",
+  "diagnosticsQuranSurahs": "कुराण सुरा",
+  "diagnosticsQuranAyahs": "कुराण आयह",
+  "diagnosticsQuranJuzMetadata": "कुराण जुझ मेटाडेटा",
   "diagnosticsQuranCloudTablesMissing": "सुपाबेसमध्ये क्लाउड टेबल गायब; बंडल फॉलबॅक सक्रिय",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "मेघ तपासणी अयशस्वी: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "क्लाउड juz मेटाडेटा गहाळ आहे; बंडल स्ट्रक्चरल फॉलबॅक सक्रिय",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "मेघ संरचनात्मक तपासणी अयशस्वी: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

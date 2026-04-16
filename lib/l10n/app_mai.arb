@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "मैनुअल कस्टम कोण (कोनो संस्थागत स्रोत नहि)",
   "diagnosticsCloudDriven": "बादल संचालित",
   "diagnosticsAdhanAudioAssets": "अधान ऑडियो एसेट्स",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "यूआई ऑडियो संपत्ति",
   "diagnosticsQuranAudioAssets": "कुरान ऑडियो संपत्ति",
   "diagnosticsAudioAssets": "ऑडियो संपत्ति",
   "diagnosticsFilesCount": "{count} फाइल",

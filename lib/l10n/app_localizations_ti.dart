@@ -865,7 +865,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'ኣድሃን ድምጺ ንብረት';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI ድምጺ ንብረት';
 
   @override
   String get diagnosticsQuranAudioAssets => 'ቁርኣን ድምጺ ንብረት';

@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "ມຸມທີ່ກໍາຫນົດເອງດ້ວຍມື (ບໍ່ມີແຫຼ່ງສະຖາບັນ)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "ຊັບສິນສຽງ Adhan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI ຊັບສິນສຽງ",
   "diagnosticsQuranAudioAssets": "ຊັບສິນສຽງ Quran",
   "diagnosticsAudioAssets": "ຊັບສິນສຽງ",
   "diagnosticsFilesCount": "{count} ໄຟລ໌",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization ທ້ອງຖິ່ນ",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ຮອງຮັບ",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
+  "diagnosticsQuranDataset": "ຊຸດ​ຂໍ້​ມູນ Quran",
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
   "diagnosticsQuranCloudTablesMissing": "ຕາຕະລາງຄລາວຫາຍໄປໃນ Supabase; bundled fallback ເຮັດວຽກ",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "ການກວດສອບຄລາວບໍ່ສຳເລັດ: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata ຫາຍໄປ; bundled fallback ໂຄງສ້າງມີການເຄື່ອນໄຫວ",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "ການກວດສອບໂຄງສ້າງຄລາວລົ້ມເຫລວ: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

@@ -877,7 +877,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio a thil neih te';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI Audio Assets te a awm bawk';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Quran Audio a thil neih te';

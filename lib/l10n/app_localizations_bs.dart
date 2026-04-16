@@ -873,7 +873,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan Audio Assets';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI audio sredstva';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Audio imovina Kur\'ana';
@@ -896,20 +896,20 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count podržano';
   }
 
   @override
   String get diagnosticsQuranDataset => 'Quran Dataset';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Kur\'an Surahs';
 
   @override
   String get diagnosticsQuranAyahs => 'Quran Ayahs';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Kur\'an Juz Metadata';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -917,7 +917,7 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Provjera oblaka nije uspjela: $error';
   }
 
   @override
@@ -926,7 +926,7 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Provjera strukture oblaka nije uspjela: $error';
   }
 
   @override

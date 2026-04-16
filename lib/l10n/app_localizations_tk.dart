@@ -872,7 +872,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'Adhan ses baýlyklary';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI ses aktiwleri';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Kuran ses baýlyklary';
@@ -895,20 +895,20 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count goldaýar';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'Kuran maglumat toplumy';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'Kuran süreleri';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'Kuran aýatlary';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'Kuran Juz Metadata';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -916,7 +916,7 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Bulut barlagy şowsuz: $error';
   }
 
   @override
@@ -925,7 +925,7 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'Bulut gurluş gurluşy şowsuz boldy: $error';
   }
 
   @override

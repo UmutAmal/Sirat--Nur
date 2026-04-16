@@ -874,7 +874,7 @@ class AppLocalizationsKa extends AppLocalizations {
   String get diagnosticsAdhanAudioAssets => 'ადანის აუდიო აქტივები';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI აუდიო აქტივები';
 
   @override
   String get diagnosticsQuranAudioAssets => 'ყურანის აუდიო აქტივები';
@@ -897,20 +897,20 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count მხარდაჭერა';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'ყურანის მონაცემთა ნაკრები';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'ყურანის სურები';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'ყურანის აიაები';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'ყურანის ჯუზი მეტამონაცემები';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -918,7 +918,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'ღრუბლოვანი შემოწმება ვერ მოხერხდა: $error';
   }
 
   @override
@@ -927,7 +927,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'ღრუბლის სტრუქტურული შემოწმება ვერ მოხერხდა: $error';
   }
 
   @override

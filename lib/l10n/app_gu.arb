@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "મેન્યુઅલ કસ્ટમ એંગલ (કોઈ સંસ્થાકીય સ્ત્રોત નથી)",
   "diagnosticsCloudDriven": "મેઘ સંચાલિત",
   "diagnosticsAdhanAudioAssets": "અધાન ઑડિયો અસ્કયામતો",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI ઑડિઓ અસ્કયામતો",
   "diagnosticsQuranAudioAssets": "કુરાન ઓડિયો અસ્કયામતો",
   "diagnosticsAudioAssets": "ઑડિયો અસ્કયામતો",
   "diagnosticsFilesCount": "{count} ફાઇલો",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "સ્થાનિકીકરણ લોકેલ",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} સમર્થિત",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "કુરાન ડેટાસેટ",
+  "diagnosticsQuranSurahs": "કુરાન સુરાઓ",
+  "diagnosticsQuranAyahs": "કુરાન આયહ",
+  "diagnosticsQuranJuzMetadata": "કુરાન જુઝ મેટાડેટા",
   "diagnosticsQuranCloudTablesMissing": "સુપાબેઝમાં મેઘ કોષ્ટકો ખૂટે છે; બંડલ ફોલબેક સક્રિય",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "મેઘ તપાસ નિષ્ફળ: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {

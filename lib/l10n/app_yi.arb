@@ -235,8 +235,8 @@
   "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
   "diagnosticsCloudDriven": "וואָלקן געטריבן",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
-  "diagnosticsQuranAudioAssets": "Quran Audio Assets",
+  "diagnosticsUiAudioAssets": "UI אַודיאָ אַסעץ",
+  "diagnosticsQuranAudioAssets": "קאָראַן אַודיאָ אַסעץ",
   "diagnosticsAudioAssets": "אַודיאָ אַסעץ",
   "diagnosticsFilesCount": "{count} files",
   "@diagnosticsFilesCount": {
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Localization Locales",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} געשטיצט",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "קווראַן דאַטאַסעט",
+  "diagnosticsQuranSurahs": "קוראַן סוראַהס",
+  "diagnosticsQuranAyahs": "קווראַן ייַאַהס",
+  "diagnosticsQuranJuzMetadata": "קווראַן דזשוז מעטאַדאַטאַ",
   "diagnosticsQuranCloudTablesMissing": "וואָלקן טישן פעלנדיק אין Supabase; באַנדאַלד פאַלבאַקק אַקטיוו",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "וואָלקן טשעק ניט אַנדערש: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "וואָלקן דזשוז מעטאַדאַטאַ פעלנדיק; באַנדאַלד סטראַקטשעראַל פאַלבאַק אַקטיוו",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "וואָלקן סטראַקטשעראַל טשעק ניט אַנדערש: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

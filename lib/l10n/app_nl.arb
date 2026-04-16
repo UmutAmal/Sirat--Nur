@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Handmatig aangepaste hoeken (geen institutionele bron)",
   "diagnosticsCloudDriven": "Cloudgedreven",
   "diagnosticsAdhanAudioAssets": "Adhan audio-items",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "UI-audiomiddelen",
   "diagnosticsQuranAudioAssets": "Koran audio-items",
   "diagnosticsAudioAssets": "Audio-items",
   "diagnosticsFilesCount": "{count} bestanden",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Lokalisatie Landinstellingen",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} ondersteund",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "Koran-gegevensset",
+  "diagnosticsQuranSurahs": "Koran soera's",
+  "diagnosticsQuranAyahs": "Koran Ayah's",
+  "diagnosticsQuranJuzMetadata": "Koran Juz-metagegevens",
   "diagnosticsQuranCloudTablesMissing": "Cloudtabellen ontbreken in Supabase; gebundelde fallback actief",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Cloudcontrole mislukt: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Cloud juz-metagegevens ontbreken; gebundelde structurele fallback actief",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Structurele cloudcontrole mislukt: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

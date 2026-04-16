@@ -896,20 +896,20 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String diagnosticsSupportedCount(String count) {
-    return '$count supported';
+    return '$count គាំទ្រ';
   }
 
   @override
-  String get diagnosticsQuranDataset => 'Quran Dataset';
+  String get diagnosticsQuranDataset => 'សំណុំទិន្នន័យគម្ពីគូរ៉ា';
 
   @override
-  String get diagnosticsQuranSurahs => 'Quran Surahs';
+  String get diagnosticsQuranSurahs => 'គម្ពីគូរ៉ាន Surah';
 
   @override
-  String get diagnosticsQuranAyahs => 'Quran Ayahs';
+  String get diagnosticsQuranAyahs => 'គម្ពីគូរ៉ាន Ayahs';
 
   @override
-  String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
+  String get diagnosticsQuranJuzMetadata => 'គម្ពីគូរ៉ា Juz ទិន្នន័យមេតា';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -917,7 +917,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'ការត្រួតពិនិត្យលើពពកបានបរាជ័យ៖ $error';
   }
 
   @override
@@ -926,7 +926,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
-    return 'Cloud structural check failed: $error';
+    return 'ការត្រួតពិនិត្យរចនាសម្ព័ន្ធពពកបានបរាជ័យ៖ $error';
   }
 
   @override

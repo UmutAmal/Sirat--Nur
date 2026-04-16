@@ -889,7 +889,7 @@ class AppLocalizationsAy extends AppLocalizations {
       'Adhan Audio ukax mä activo ukhamawa';
 
   @override
-  String get diagnosticsUiAudioAssets => 'UI Audio Assets';
+  String get diagnosticsUiAudioAssets => 'UI Audio ukax mä activo ukhamawa';
 
   @override
   String get diagnosticsQuranAudioAssets => 'Quran Audio ukan yänakapa';

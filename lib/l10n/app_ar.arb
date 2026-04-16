@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "الزوايا المخصصة اليدوية (لا يوجد مصدر مؤسسي)",
   "diagnosticsCloudDriven": "سحابة مدفوعة",
   "diagnosticsAdhanAudioAssets": "أصول الصوت الأذان",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "الأصول الصوتية لواجهة المستخدم",
   "diagnosticsQuranAudioAssets": "أصول القرآن الصوتية",
   "diagnosticsAudioAssets": "الأصول الصوتية",
   "diagnosticsFilesCount": "{count} الملفات",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "التوطين المحلي",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} مدعوم",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
-  "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranDataset": "مجموعة بيانات القرآن",
+  "diagnosticsQuranSurahs": "سور القرآن",
+  "diagnosticsQuranAyahs": "آيات قرآنية",
+  "diagnosticsQuranJuzMetadata": "بيانات تعريف أجزاء القرآن",
   "diagnosticsQuranCloudTablesMissing": "الجداول السحابية مفقودة في Supabase؛ الاحتياطية المجمعة نشطة",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "فشل التحقق من السحابة: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "البيانات التعريفية لأجزاء السحابة مفقودة؛ الاحتياطي الهيكلي المجمع نشط",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "فشل الفحص الهيكلي للسحابة: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {

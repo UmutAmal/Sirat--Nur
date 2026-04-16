@@ -235,7 +235,7 @@
   "diagnosticsPrayerCustomSource": "Sudut tersuai manual (tiada sumber institusi)",
   "diagnosticsCloudDriven": "Didorong Awan",
   "diagnosticsAdhanAudioAssets": "Aset Audio Adzan",
-  "diagnosticsUiAudioAssets": "UI Audio Assets",
+  "diagnosticsUiAudioAssets": "Aset Audio UI",
   "diagnosticsQuranAudioAssets": "Aset Audio Al-Quran",
   "diagnosticsAudioAssets": "Aset Audio",
   "diagnosticsFilesCount": "{count} fail",
@@ -255,7 +255,7 @@
     }
   },
   "diagnosticsLocalizationLocales": "Tempatan Penyetempatan",
-  "diagnosticsSupportedCount": "{count} supported",
+  "diagnosticsSupportedCount": "{count} disokong",
   "@diagnosticsSupportedCount": {
     "placeholders": {
       "count": {
@@ -263,12 +263,12 @@
       }
     }
   },
-  "diagnosticsQuranDataset": "Quran Dataset",
+  "diagnosticsQuranDataset": "Set Data Al-Quran",
   "diagnosticsQuranSurahs": "Quran Surahs",
-  "diagnosticsQuranAyahs": "Quran Ayahs",
-  "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
+  "diagnosticsQuranAyahs": "Quran Ayah",
+  "diagnosticsQuranJuzMetadata": "Metadata Juz Quran",
   "diagnosticsQuranCloudTablesMissing": "Jadual awan tiada dalam Supabase; sandaran dibundel aktif",
-  "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
+  "diagnosticsQuranCloudCheckFailed": "Pemeriksaan awan gagal: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
       "error": {
@@ -277,7 +277,7 @@
     }
   },
   "diagnosticsQuranCloudJuzMissing": "Metadata juz awan tiada; sandaran struktur dibundel aktif",
-  "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
+  "diagnosticsQuranCloudStructuralCheckFailed": "Pemeriksaan struktur awan gagal: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
       "error": {
