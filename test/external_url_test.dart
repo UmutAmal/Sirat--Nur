@@ -3,20 +3,17 @@ import 'package:sirat_i_nur/core/utils/external_url.dart';
 
 void main() {
   group('external URL helpers', () {
-    test('resolveExternalHttpUri accepts only web URLs with a host', () {
+    test('resolveExternalHttpUri accepts only HTTPS web URLs with a host', () {
       expect(
         resolveExternalHttpUri(' https://siratinur.com/privacy ')?.toString(),
         'https://siratinur.com/privacy',
-      );
-      expect(
-        resolveExternalHttpUri('http://example.com/path')?.toString(),
-        'http://example.com/path',
       );
 
       expect(resolveExternalHttpUri(''), isNull);
       expect(resolveExternalHttpUri('/privacy'), isNull);
       expect(resolveExternalHttpUri('not a url'), isNull);
-      expect(resolveExternalHttpUri('mailto:support@example.com'), isNull);
+      expect(resolveExternalHttpUri('http://siratinur.com/path'), isNull);
+      expect(resolveExternalHttpUri('mailto:support@siratinur.com'), isNull);
       expect(resolveExternalHttpUri('javascript:alert(1)'), isNull);
       expect(resolveExternalHttpUri('https:///missing-host'), isNull);
     });

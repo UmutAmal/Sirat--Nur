@@ -7024,3 +7024,37 @@
 
 ### Sonraki Adım
 - Sonraki dongude kalan runtime external URL ve debug logging yuzeyleri yeniden taranacak; ozellikle `tafsir_local_service.dart`, `external_url.dart` ve bootstrap debug loglari kanitla skorlanacak.
+
+## 2026-04-16 TUR-182 — Require HTTPS for External App Links
+
+### Yapılan İşlem
+- Genel external URL yardimcisi artik hostlu HTTP(S) yerine yalnizca hostlu HTTPS URL'leri kabul ediyor.
+- Mevcut fonksiyon adi call-site stabilitesi icin korundu; davranis yorumla netlestirildi.
+- `external_url_test.dart` HTTP URL'nin reddedildigini ve HTTPS Google Maps/dogru app linklerinin gecmeye devam ettigini dogrulayacak sekilde guncellendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\external_url.dart:5` once `http` ve `https` scheme'lerini birlikte geciriyordu.
+- `A:\Way of Allah\sirat_i_nur\test\external_url_test.dart:6` once `http://example.com/path` kabulunu bekleyerek insecure downgrade davranisini regresyon olarak koruyordu.
+- Settings, privacy, Play Store, prayer authority source ve harita directions gibi kullanici cikis linklerinde HTTP downgrade kapisi acik kalmamali.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\external_url.dart`
+- `A:\Way of Allah\sirat_i_nur\test\external_url_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- App icinden acilan genel external linkler HTTPS disinda baslatilmayacak.
+- Mevcut production linkleri zaten HTTPS oldugu icin Settings, Play Store, privacy, Google Maps directions ve Live TV akislari korunuyor.
+- Gelecekte yanlislikla HTTP link eklendiyse helper null dondurur ve localized launch failure akisi devreye girer.
+
+### Test Sonucu
+- `flutter test test\external_url_test.dart` PASS (`2/2`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`358/358`)
+
+### Risk Değişimi
+- Genel app external linklerinin HTTP downgrade kabul etmesi riski: `10/25 -> 1/25`
+- Testlerin insecure HTTP kabulunu dogru davranis gibi sabitlemesi riski: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude `tafsir_local_service.dart` runtime dini icerik indirme ve cache dogrulama akisi ayrintili incelenecek; kaynak/provenance, hata sanitizasyonu ve test bosluklari skorlanacak.
