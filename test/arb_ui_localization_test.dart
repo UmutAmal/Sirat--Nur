@@ -1378,6 +1378,45 @@ void main() {
       expect(l10n.asmaMeaning99, isNot(contains('المريض')));
     });
 
+    test(
+      'German bundled asma meanings avoid known machine mistranslations',
+      () {
+        final arb = _readArb('lib/l10n/app_de.arb');
+        const staleFragments = [
+          'Der Compeller',
+          'Der Würger',
+          'Der Reliever',
+          'Die Mächtigen',
+          'Das Manifest',
+          'Der Gouverneur',
+          'Der Clemens',
+        ];
+
+        for (var index = 1; index <= 99; index += 1) {
+          final key = 'asmaMeaning$index';
+          final value = arb[key] as String;
+          for (final fragment in staleFragments) {
+            expect(
+              value,
+              isNot(contains(fragment)),
+              reason: 'app_de.arb $key keeps a machine mistranslation',
+            );
+          }
+        }
+
+        expect(arb['asmaMeaning20'], contains('Verengende'));
+        expect(arb['asmaMeaning83'], contains('Mitfühlende'));
+      },
+    );
+
+    test('German runtime asma meanings use regenerated safe copy', () async {
+      final l10n = await AppLocalizations.delegate.load(const Locale('de'));
+
+      expect(l10n.asmaMeaning20, contains('Verengende'));
+      expect(l10n.asmaMeaning83, contains('Mitfühlende'));
+      expect(l10n.asmaMeaning20, isNot(contains('Würger')));
+    });
+
     test('Quran 3:8 dua localization copy stays balanced', () async {
       final englishL10n = await AppLocalizations.delegate.load(
         const Locale('en'),

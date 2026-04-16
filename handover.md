@@ -10288,3 +10288,49 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude dini icerik kalite taramasina devam et: ozellikle safe-priority locale Esma anlamlarinda bilinen yanlis baglam kalintilarini (`Der Würger`, `The Compeller`, `The Clement`, `The Reliever`) kanitli ve kaynak-zincirli patch'lerle kapat.
+
+## 2026-04-16 TUR-258 — Repair German Asma-ul-Husna Meanings
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_de.arb` icindeki `asmaMeaning1..99` Almanca anlamlari bastan sona dini baglama uygun, aciklayici ve tutarli Almanca metinlere cekildi.
+- `flutter gen-l10n` calistirildi; `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_de.dart` generated runtime metinleri ARB ile senkronlandi.
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart` Almanca Esma icin bilinen makine ceviri kalintisi guard'i ile genisletildi.
+- Ayni test dosyasina runtime `Locale('de')` guard'i eklendi; generated Almanca l10n'in `Der Würger` gibi eski kalintilari tasimadigi dogrulandi.
+
+### Neden Yapildi
+- Risk taramasinda `A:\Way of Allah\sirat_i_nur\lib\l10n\app_de.arb:554`, `:565`, `:566`, `:614`, `:620`, `:622`, `:628` satirlarinda `Der Compeller`, `Der Würger`, `Der Reliever`, `Die Mächtigen`, `Das Manifest`, `Der Gouverneur`, `Der Clemens` gibi dini baglamda yanlis veya kaba makine ceviri kalintilari bulundu.
+- Almanca safe-priority locale olarak mevcut test setinde yer aliyor; bu yuzey kullaniciya dogrudan Allah'in isimleri anlamlari olarak gorunuyor.
+- Tek tek kelime esdegeri yerine Turkiye/Arabic anlam zincirindeki aciklayici mana korunarak Almanca kullaniciya daha dogru ve daha guvenli dini icerik sunuldu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_de.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_de.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Almanca Asma-ul-Husna anlamlari artik kaba/yanlis machine-translation parcalari tasimiyor.
+- `asmaMeaning20` artik `Der Würger` degil, `Der Verengende...` olarak baglamsal aciklama verir.
+- `asmaMeaning83` artik `Der Clemens` degil, `Der Mitfühlende...` olarak rahmet/safkat baglaminda anlatilir.
+- Yeni ARB ve runtime guard'lari bu kalintilarin tekrar generated l10n'e sizmasini engeller.
+
+### Test Sonucu
+- Odak test: `flutter test test\arb_ui_localization_test.dart test\features\library\asma_ul_husna_page_test.dart test\asma_ul_husna_data_test.dart --reporter compact` PASS (`79/79`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`468/468`)
+
+### Risk Degisimi
+- Almanca Esma machine-translation kalintisi riski: `16/25 -> 3/25`
+- Almanca generated runtime l10n ile ARB ayrisma riski: `9/25 -> 2/25`
+- Safe-priority dini icerik kalite borcu: `14/25 -> 11/25`
+
+### Rollback Plani
+- `app_de.arb` icindeki `asmaMeaning1..99` degerleri onceki haline dondurulur.
+- `flutter gen-l10n` tekrar calistirilerek `app_localizations_de.dart` eski metinlere senkronlanir.
+- `arb_ui_localization_test.dart` icindeki Almanca Esma machine-mistranslation ve runtime guard testleri geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude kalan safe-priority locale dini icerik kalite taramasina devam et: ozellikle Fransizca/Ispanyolca/Portekizce/Rusca Esma ve dua metinlerinde English residue veya yanlis baglam kalintilarini kanitla.

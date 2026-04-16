@@ -1390,301 +1390,388 @@ class AppLocalizationsDe extends AppLocalizations {
   String get islamicPlaceFallback => 'Islamischer Ort';
 
   @override
-  String get asmaMeaning1 => 'Der Wohltätige';
+  String get asmaMeaning1 =>
+      'Der Allerbarmer, der allen Geschöpfen in dieser Welt Barmherzigkeit erweist.';
 
   @override
-  String get asmaMeaning2 => 'Der Barmherzige';
+  String get asmaMeaning2 =>
+      'Der besonders Barmherzige, der den Gläubigen im Jenseits grenzenlose Gnade und Güte schenkt.';
 
   @override
-  String get asmaMeaning3 => 'Der König / Ewiger Herr';
+  String get asmaMeaning3 =>
+      'Der König, dem Schöpfung, Besitz und Herrschaft uneingeschränkt gehören.';
 
   @override
-  String get asmaMeaning4 => 'Das Allerheiligste';
+  String get asmaMeaning4 =>
+      'Der Heilige, frei von jedem Mangel und jeder Unvollkommenheit.';
 
   @override
-  String get asmaMeaning5 => 'Die Quelle des Friedens';
+  String get asmaMeaning5 =>
+      'Der Frieden Gebende, der vor Gefahren bewahrt und Heil schenkt.';
 
   @override
-  String get asmaMeaning6 => 'Der Geber von Sicherheit';
+  String get asmaMeaning6 =>
+      'Der Sicherheit Gebende, der Vertrauen schenkt, schützt und dessen Verheißung zuverlässig ist.';
 
   @override
-  String get asmaMeaning7 => 'Der Wächter';
+  String get asmaMeaning7 =>
+      'Der Wachsame, der alles sieht, bewahrt und die Schöpfung verwaltet.';
 
   @override
-  String get asmaMeaning8 => 'Der Kostbare / Der Mächtigste';
+  String get asmaMeaning8 =>
+      'Der Allmächtige, dem Ehre gehört und der über alles siegreich ist.';
 
   @override
-  String get asmaMeaning9 => 'Der Compeller';
+  String get asmaMeaning9 =>
+      'Der Allgewaltige, der Seinen Willen durchsetzt und Zerbrochenes wiederherstellt.';
 
   @override
-  String get asmaMeaning10 => 'Der Größte';
+  String get asmaMeaning10 => 'Der Erhabene, dessen Größe ohnegleichen ist.';
 
   @override
-  String get asmaMeaning11 => 'Der Schöpfer';
+  String get asmaMeaning11 =>
+      'Der Schöpfer, der aus dem Nichts erschafft und jedes Wesen bestimmt.';
 
   @override
-  String get asmaMeaning12 => 'Der Ordnungsstifter';
+  String get asmaMeaning12 =>
+      'Der Hervorbringer, der alles vollkommen und in Harmonie erschafft.';
 
   @override
-  String get asmaMeaning13 => 'Der Schöpfer der Schönheit';
+  String get asmaMeaning13 =>
+      'Der Gestalter, der den Geschöpfen ihre Form und Einzigartigkeit gibt.';
 
   @override
-  String get asmaMeaning14 => 'Die Vergebung';
+  String get asmaMeaning14 =>
+      'Der stets Vergebende, der Sünden immer wieder vergibt.';
 
   @override
-  String get asmaMeaning15 => 'Der Unterwerfer';
+  String get asmaMeaning15 =>
+      'Der Bezwinger, dem alles unterworfen ist und den niemand besiegen kann.';
 
   @override
-  String get asmaMeaning16 => 'Der Geber von allem';
+  String get asmaMeaning16 =>
+      'Der Freigebige, der ohne Gegenleistung reichlich schenkt.';
 
   @override
-  String get asmaMeaning17 => 'Der Erhalter';
+  String get asmaMeaning17 =>
+      'Der Versorger, der Nahrung und Unterhalt für Körper und Seele gibt.';
 
   @override
-  String get asmaMeaning18 => 'Der Auftakt';
+  String get asmaMeaning18 =>
+      'Der Öffnende, der Türen des Guten öffnet und gerecht entscheidet.';
 
   @override
-  String get asmaMeaning19 => 'Der Allwissende';
+  String get asmaMeaning19 =>
+      'Der Allwissende, der jedes Ding vollkommen kennt.';
 
   @override
-  String get asmaMeaning20 => 'Der Würger';
+  String get asmaMeaning20 =>
+      'Der Verengende, der nach Weisheit Enge und Zurückhaltung bestimmt.';
 
   @override
-  String get asmaMeaning21 => 'Der Reliever';
+  String get asmaMeaning21 =>
+      'Der Weitende, der nach Weisheit Fülle, Erleichterung und Weite schenkt.';
 
   @override
-  String get asmaMeaning22 => 'Erniedrigend, herabwürdigend.';
+  String get asmaMeaning22 =>
+      'Der Erniedrigende, der nach Gerechtigkeit herabsetzt.';
 
   @override
-  String get asmaMeaning23 => 'Der Exalter';
+  String get asmaMeaning23 =>
+      'Der Erhöhende, der Ehre schenkt und erhöht, wen Er will.';
 
   @override
-  String get asmaMeaning24 => 'Der Ehrengeber';
+  String get asmaMeaning24 =>
+      'Der Ehrende, der Würde, Ehre und Stärke verleiht.';
 
   @override
-  String get asmaMeaning25 => 'Der Demütiger';
+  String get asmaMeaning25 =>
+      'Der Demütigende, der nach Gerechtigkeit erniedrigt, wen Er will.';
 
   @override
-  String get asmaMeaning26 => 'Der Hörer von allem';
+  String get asmaMeaning26 =>
+      'Der Allhörende, der jedes offene und verborgene Wort hört.';
 
   @override
-  String get asmaMeaning27 => 'Der Seher von allem';
+  String get asmaMeaning27 =>
+      'Der Allsehende, der alles Sichtbare und Verborgene sieht.';
 
   @override
-  String get asmaMeaning28 => 'Der Richter';
+  String get asmaMeaning28 =>
+      'Der Richter, der endgültig urteilt und Wahrheit von Falschheit trennt.';
 
   @override
-  String get asmaMeaning29 => 'Der Gerechte';
+  String get asmaMeaning29 =>
+      'Der Gerechte, der vollkommen gerecht handelt und alles an seinen Platz setzt.';
 
   @override
-  String get asmaMeaning30 => 'Der Subtile';
+  String get asmaMeaning30 =>
+      'Der Feinfühlige, der gütig handelt und alle Feinheiten kennt.';
 
   @override
-  String get asmaMeaning31 => 'Der Allbewusste';
+  String get asmaMeaning31 =>
+      'Der Allkundige, dem das Innere und Äußere aller Dinge bekannt ist.';
 
   @override
-  String get asmaMeaning32 => 'Die Voraussicht';
+  String get asmaMeaning32 =>
+      'Der Nachsichtige, der nicht vorschnell straft und milde handelt.';
 
   @override
-  String get asmaMeaning33 => 'Der Prächtige';
+  String get asmaMeaning33 =>
+      'Der Gewaltige, dessen Wesen und Eigenschaften unermesslich erhaben sind.';
 
   @override
-  String get asmaMeaning34 => 'Der große Vergebende';
+  String get asmaMeaning34 =>
+      'Der große Vergebende, dessen Vergebung weit und reich ist.';
 
   @override
-  String get asmaMeaning35 => 'Der Belohner der Dankbarkeit';
+  String get asmaMeaning35 =>
+      'Der Dank Annehmende, der kleine gute Taten mit großem Lohn vergilt.';
 
   @override
-  String get asmaMeaning36 => 'Das Höchste';
+  String get asmaMeaning36 =>
+      'Der Allerhöchste, über jede Vorstellung erhaben.';
 
   @override
-  String get asmaMeaning37 => 'Der Größte';
+  String get asmaMeaning37 => 'Der Große, dessen Größe ohnegleichen ist.';
 
   @override
-  String get asmaMeaning38 => 'Der Bewahrer';
+  String get asmaMeaning38 => 'Der Bewahrer, der alles schützt und erhält.';
 
   @override
-  String get asmaMeaning39 => 'Der Nährer';
+  String get asmaMeaning39 =>
+      'Der Ernährer, der jedem Geschöpf seinen Unterhalt zuteilt.';
 
   @override
   String get asmaMeaning40 =>
-      'Derjenige, der sich am besten um die Diener kümmert.';
+      'Der Abrechnende und Genügende, der die Angelegenheiten Seiner Diener vollkommen wahrnimmt.';
 
   @override
-  String get asmaMeaning41 => 'Der Majestätische';
+  String get asmaMeaning41 =>
+      'Der Majestätische, Besitzer von Erhabenheit und Würde.';
 
   @override
-  String get asmaMeaning42 => 'Der Großzügige';
+  String get asmaMeaning42 =>
+      'Der Großzügige, dessen Güte und Gaben reichlich sind.';
 
   @override
-  String get asmaMeaning43 => 'Der Wachsame';
+  String get asmaMeaning43 =>
+      'Der Beobachtende, der jedes Wesen in jedem Augenblick sieht und bewacht.';
 
   @override
-  String get asmaMeaning44 => 'Der Antworter auf Gebete';
+  String get asmaMeaning44 => 'Der Erhörende, der Gebete und Bitten annimmt.';
 
   @override
-  String get asmaMeaning45 => 'Das Allumfassende';
+  String get asmaMeaning45 =>
+      'Der Umfassende, dessen Wissen und Barmherzigkeit alles umschließen.';
 
   @override
-  String get asmaMeaning46 => 'Die vollkommen Weisen';
+  String get asmaMeaning46 =>
+      'Der Allweise, der jedes Werk mit vollkommener Weisheit erschafft.';
 
   @override
-  String get asmaMeaning47 => 'Der Liebende';
+  String get asmaMeaning47 =>
+      'Der Liebevolle, der Seine Diener liebt und der Liebe am würdigsten ist.';
 
   @override
-  String get asmaMeaning48 => 'Der Herrlichste';
+  String get asmaMeaning48 =>
+      'Der Ruhmwürdige, dem jedes Lob gebührt und dessen Rang groß ist.';
 
   @override
-  String get asmaMeaning49 => 'Der Aufersteher';
+  String get asmaMeaning49 =>
+      'Der Auferwecker, der Tote zum Leben erweckt und Gesandte entsendet.';
 
   @override
-  String get asmaMeaning50 => 'Der Zeuge';
+  String get asmaMeaning50 =>
+      'Der Zeuge, der überall gegenwärtig ist und alles bezeugt.';
 
   @override
-  String get asmaMeaning51 => 'Die Wahrheit';
+  String get asmaMeaning51 =>
+      'Der Wahre, dessen Dasein unveränderlich ist und der die Wahrheit offenbar macht.';
 
   @override
-  String get asmaMeaning52 => 'Der allgenügsame Treuhänder';
+  String get asmaMeaning52 =>
+      'Der Sachwalter, der die Angelegenheiten derer zum besten Ende führt, die auf Ihn vertrauen.';
 
   @override
-  String get asmaMeaning53 => 'Der Besitzer aller Stärke';
+  String get asmaMeaning53 =>
+      'Der Starke, dessen Macht unübertroffen ist und nie abnimmt.';
 
   @override
-  String get asmaMeaning54 => 'Quelle der Stärke und Kraft, sehr mächtig.';
+  String get asmaMeaning54 =>
+      'Der Feste, Quelle aller Stärke und unerschütterlicher Macht.';
 
   @override
-  String get asmaMeaning55 => 'Der Beschützer';
+  String get asmaMeaning55 => 'Der schützende Freund, Helfer und Beistand.';
 
   @override
-  String get asmaMeaning56 => 'Der Gelobte';
+  String get asmaMeaning56 =>
+      'Der Lobwürdige, dem jedes Lob und jeder Dank gebührt.';
 
   @override
-  String get asmaMeaning57 => 'Der Gutachter';
+  String get asmaMeaning57 =>
+      'Der Aufzählende, der Anzahl und Maß aller Dinge kennt.';
 
   @override
-  String get asmaMeaning58 => 'Der Urheber';
+  String get asmaMeaning58 =>
+      'Der Urheber, der die Schöpfung ohne Vorbild und ohne Stoff beginnt.';
 
   @override
-  String get asmaMeaning59 => 'Der Restaurator';
+  String get asmaMeaning59 =>
+      'Der Wiedererschaffende, der nach dem Vergehen erneut zum Leben bringt.';
 
   @override
-  String get asmaMeaning60 => 'Der Lebensspender';
+  String get asmaMeaning60 =>
+      'Der Lebensspender, der belebt und Leben schenkt.';
 
   @override
-  String get asmaMeaning61 => 'Der Lebensvernichter';
+  String get asmaMeaning61 =>
+      'Der Tod Bringende, der jedes Lebewesen den Tod kosten lässt.';
 
   @override
-  String get asmaMeaning62 => 'Das ewige Leben';
+  String get asmaMeaning62 =>
+      'Der Lebendige, der ewige und unvergängliche Leben besitzt.';
 
   @override
-  String get asmaMeaning63 => 'Der autarke Erhalter';
+  String get asmaMeaning63 =>
+      'Der Bestehende, der alles erhält und aus Sich selbst besteht.';
 
   @override
-  String get asmaMeaning64 => 'Der Finder';
+  String get asmaMeaning64 =>
+      'Der Findende, dem nichts fehlt und der alles findet, was Er will.';
 
   @override
   String get asmaMeaning65 =>
-      'Derjenige mit großer Würde und Herrlichkeit, reichlich Großzügigkeit und Wohlwollen.';
+      'Der Edle, dessen Würde, Ruhm und Großzügigkeit überreich sind.';
 
   @override
-  String get asmaMeaning66 => 'Der Einzige';
+  String get asmaMeaning66 =>
+      'Der Eine, ohne Teilhaber in Wesen, Eigenschaften und Taten.';
 
   @override
-  String get asmaMeaning67 => 'Der Eine';
+  String get asmaMeaning67 =>
+      'Der Einzigartige, die betonte Einheit ohne Gleichen.';
 
   @override
-  String get asmaMeaning68 => 'Der von allen Gesuchte';
+  String get asmaMeaning68 =>
+      'Der Unabhängige, auf den alle angewiesen sind und der niemanden braucht.';
 
   @override
-  String get asmaMeaning69 => 'Die Mächtigen';
+  String get asmaMeaning69 =>
+      'Der Allmächtige, der alles erschaffen kann, wie Er will.';
 
   @override
-  String get asmaMeaning70 => 'Der Schöpfer aller Macht';
+  String get asmaMeaning70 =>
+      'Der Bestimmende, der frei verfügt und über alles Macht hat.';
 
   @override
-  String get asmaMeaning71 => 'Der Expediter';
+  String get asmaMeaning71 =>
+      'Der Voranstellende, der erhöht und vorzieht, wen Er will.';
 
   @override
-  String get asmaMeaning72 => 'Der Verzögerer';
+  String get asmaMeaning72 =>
+      'Der Zurückstellende, der verzögert und zurücksetzt, wen Er will.';
 
   @override
-  String get asmaMeaning73 => 'Der Erste';
+  String get asmaMeaning73 => 'Der Erste, ohne Anfang Seines Daseins.';
 
   @override
-  String get asmaMeaning74 => 'Der Letzte';
+  String get asmaMeaning74 => 'Der Letzte, ohne Ende Seines Daseins.';
 
   @override
-  String get asmaMeaning75 => 'Das Manifest';
+  String get asmaMeaning75 =>
+      'Der Offenbare, dessen Zeichen und Wahrheit klar erkennbar sind.';
 
   @override
-  String get asmaMeaning76 => 'Das Verborgene';
+  String get asmaMeaning76 =>
+      'Der Verborgene, dessen erhabene Wirklichkeit der Verstand nicht erfassen kann.';
 
   @override
-  String get asmaMeaning77 => 'Der Gouverneur';
+  String get asmaMeaning77 =>
+      'Der Schutzherr und Verwalter, der die ganze Schöpfung lenkt.';
 
   @override
-  String get asmaMeaning78 => 'Der Höchste';
+  String get asmaMeaning78 => 'Der Hocherhabene, unendlich über allem.';
 
   @override
-  String get asmaMeaning79 => 'Der Gute tun';
+  String get asmaMeaning79 =>
+      'Der Gütige, Quelle von Güte, Wohltat und rechtschaffenem Handeln.';
 
   @override
-  String get asmaMeaning80 => 'Der Leitfaden zur Buße';
+  String get asmaMeaning80 =>
+      'Der Reue Annehmende, der Reue annimmt und Sünden vergibt.';
 
   @override
-  String get asmaMeaning81 => 'Der Rächer';
+  String get asmaMeaning81 =>
+      'Der Vergelter, der den Unterdrückern gerecht Vergeltung gibt.';
 
   @override
-  String get asmaMeaning82 => 'Der Vergebende';
+  String get asmaMeaning82 =>
+      'Der Verzeihende, der Sünden tilgt und reichlich vergibt.';
 
   @override
-  String get asmaMeaning83 => 'Der Clemens';
+  String get asmaMeaning83 =>
+      'Der Mitfühlende, voller Barmherzigkeit und liebevoller Fürsorge.';
 
   @override
-  String get asmaMeaning84 => 'Der Besitzer/Souverän von allem';
+  String get asmaMeaning84 =>
+      'Der Besitzer der Herrschaft, dem jedes Reich und jedes Wesen gehört.';
 
   @override
-  String get asmaMeaning85 => 'Der Besitzer von Majestät und Großzügigkeit';
+  String get asmaMeaning85 =>
+      'Der Herr von Majestät und Ehre, Besitzer erhabener Größe und großzügiger Gaben.';
 
   @override
-  String get asmaMeaning86 => 'Der Gerechte';
+  String get asmaMeaning86 =>
+      'Der Ausgleichende, der gerecht urteilt und alles in vollkommener Harmonie ordnet.';
 
   @override
-  String get asmaMeaning87 => 'Der Sammler';
+  String get asmaMeaning87 =>
+      'Der Versammelnde, der die Geschöpfe am Tag der Auferstehung zusammenbringt.';
 
   @override
-  String get asmaMeaning88 => 'Der Reiche';
+  String get asmaMeaning88 =>
+      'Der Reiche, völlig unabhängig und auf niemanden angewiesen.';
 
   @override
-  String get asmaMeaning89 => 'Der Bereicherer';
+  String get asmaMeaning89 =>
+      'Der Reich Machende, der Bedürfnisse erfüllt und reich macht.';
 
   @override
-  String get asmaMeaning90 => 'Der Verhinderer von Schaden';
+  String get asmaMeaning90 =>
+      'Der Hindernde, der nach Weisheit zurückhält und Schaden abwehrt.';
 
   @override
-  String get asmaMeaning91 => 'Der Schadensbringer';
+  String get asmaMeaning91 =>
+      'Der Schaden Zulassende, der nach Weisheit Prüfung und Schaden eintreten lässt.';
 
   @override
-  String get asmaMeaning92 => 'Der Wohltäter';
+  String get asmaMeaning92 =>
+      'Der Nutzende, der Nutzen, Wohltat und Hilfe schenkt.';
 
   @override
-  String get asmaMeaning93 => 'Das Licht';
+  String get asmaMeaning93 => 'Das Licht, das Himmel, Erde und Herzen erhellt.';
 
   @override
-  String get asmaMeaning94 => 'Der Führer';
+  String get asmaMeaning94 =>
+      'Der Rechtleitende, der auf den geraden Weg führt.';
 
   @override
-  String get asmaMeaning95 => 'Der Urheber';
+  String get asmaMeaning95 =>
+      'Der unvergleichliche Schöpfer, der ohne Vorbild Neues hervorbringt.';
 
   @override
-  String get asmaMeaning96 => 'Der Ewige';
+  String get asmaMeaning96 => 'Der Bleibende, dessen Dasein ewig fortbesteht.';
 
   @override
-  String get asmaMeaning97 => 'Der Erbe';
+  String get asmaMeaning97 =>
+      'Der Erbe, dem alles nach dem Vergehen der Geschöpfe bleibt.';
 
   @override
-  String get asmaMeaning98 => 'Der rechtschaffenste Führer';
+  String get asmaMeaning98 =>
+      'Der Führer zur Rechtschaffenheit, der alles mit vollkommener Weisheit leitet.';
 
   @override
-  String get asmaMeaning99 => 'Der Geduldige';
+  String get asmaMeaning99 =>
+      'Der Geduldige, der nicht zur Strafe eilt und in vollkommener Nachsicht handelt.';
 }
