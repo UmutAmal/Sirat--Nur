@@ -7796,3 +7796,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude offline audio `surahUrls[surahNumber]!` snapshot yuzeyi ve owned-storage download hattindaki false-success riskleri yeniden taranacak.
+
+## 2026-04-16 TUR-206 — Guard Offline Audio URL Entry Snapshot
+
+### Yapılan İşlem
+- OfflineAudioService `downloadAllSurahs` akisi surah URL'lerini sorted key lookup yerine sorted entry snapshot ile geziyor.
+- `surahUrls[surahNumber]!` force-unwrap kaldirildi; her indirme icin `entry.key` ve `entry.value` kullaniliyor.
+- Offline audio testine sorted drain ve source guard eklendi; force lookup geri gelirse test fail edecek.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:252` sorted entry snapshot olusturuyor.
+- Eski akista `surahUrls.keys.toList()` uzerinden siralanan anahtar daha sonra `surahUrls[surahNumber]!` ile tekrar okunuyordu; bu gereksiz force-unwrap hem null-safety standardini zayiflatiyor hem de ileride mutable map/refactor riskine acik yuzey birakiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Indirme sirasinin artan sure numarasina gore isleme davranisi korundu.
+- Invalid/external URL'ler sahte basari uretmeden failedSurahs listesine dusmeye devam ediyor.
+
+### Test Sonucu
+- `flutter test test\offline_audio_service_test.dart` PASS (`11/11`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`375/375`)
+
+### Risk Değişimi
+- Offline audio surah URL force-unwrap yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude app_router route parametre force-unwrap yuzeyleri ve route guard testleri incelenecek.

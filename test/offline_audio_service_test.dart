@@ -263,6 +263,32 @@ void main() {
       },
     );
 
+    test(
+      'downloadAllSurahs drains sorted url entries without force lookups',
+      () async {
+        final completedSurahs = <int>[];
+        final result = await OfflineAudioService.downloadAllSurahs(
+          reciterId: 'alafasy',
+          surahUrls: const {
+            2: 'https://cdn.example.com/alafasy/002.mp3',
+            1: 'https://cdn.example.com/alafasy/001.mp3',
+          },
+          onSurahComplete: (surahNumber, _) {
+            completedSurahs.add(surahNumber);
+          },
+        );
+        final source = File(
+          'lib/core/services/offline_audio_service.dart',
+        ).readAsStringSync();
+
+        expect(result.totalSurahs, 2);
+        expect(result.succeededSurahs, 0);
+        expect(result.failedSurahs, const [1, 2]);
+        expect(completedSurahs, const [1, 2]);
+        expect(source, isNot(contains('surahUrls[surahNumber]!')));
+      },
+    );
+
     test('getAudioPath rejects unsupported reciters before path building', () {
       expect(
         OfflineAudioService.getAudioPath(1, '../alafasy'),

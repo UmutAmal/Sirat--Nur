@@ -249,13 +249,14 @@ class OfflineAudioService {
     void Function(int surahNumber, bool success)? onSurahComplete,
     bool Function()? shouldCancel,
   }) async {
-    final sortedSurahs = surahUrls.keys.toList()..sort();
-    final total = sortedSurahs.length;
+    final sortedEntries = surahUrls.entries.toList()
+      ..sort((left, right) => left.key.compareTo(right.key));
+    final total = sortedEntries.length;
     var completed = 0;
     var succeeded = 0;
     final failedSurahs = <int>[];
 
-    for (final surahNumber in sortedSurahs) {
+    for (final entry in sortedEntries) {
       if (shouldCancel?.call() == true) {
         return OfflineDownloadBatchResult(
           totalSurahs: total,
@@ -265,7 +266,8 @@ class OfflineAudioService {
         );
       }
 
-      final url = surahUrls[surahNumber]!;
+      final surahNumber = entry.key;
+      final url = entry.value;
       final success = await downloadSurahAudio(
         surahNumber: surahNumber,
         reciterId: reciterId,
