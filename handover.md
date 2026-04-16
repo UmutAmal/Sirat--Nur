@@ -9834,3 +9834,50 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude `tool\generate_hadith_seed.dart` ekle: yalniz operator tarafindan dogrulanmis hadis manifest'inden `public.hadiths` SQL seed'i uretmeli; bos Arapca metin, eksik source/source_license/verified_at, duplicate collection-number ve gecersiz collection id durumlarini reddetmeli.
+
+## 2026-04-16 TUR-249 — Add Verified Hadith Seed Generator
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\tool\generate_hadith_seed.dart` eklendi.
+- Tool `content_hadith_manifest.json` formatindan `content_seed_hadith.sql` uretir; hedef tablo TUR-248'de eklenen `public.hadiths`.
+- Manifest kontrati `source`, `source_license`, `verified_at` ve `entries[]` alanlarini ister; entry seviyesinde provenance override edilebilir.
+- Her entry icin `collection_id`, `book`, `hadith_number` ve `text_ar` zorunlu tutuldu; `text_tr`, `text_en`, `narrator`, `grade` opsiyonel ama bos string kabul edilmez.
+- Desteklenen koleksiyonlar app'teki mevcut hadis koleksiyonlariyla sinirlandi: `bukhari`, `muslim`, `tirmidhi`, `abudawud`, `nasai`, `ibnmajah`.
+- Production modda her desteklenen koleksiyonun manifestte temsil edilmesi zorunlu tutuldu; `--allow-partial` sadece local smoke/test icin explicit olarak var.
+- SQL output `ON CONFLICT (collection_id, hadith_number)` ile idempotent upsert uretir.
+- `A:\Way of Allah\sirat_i_nur\test\generate_hadith_seed_test.dart` 10 testle parser, SQL, duplicate, missing provenance, unsupported collection, empty Arabic text ve partial catalog risklerini guard ediyor.
+
+### Neden Yapildi
+- TUR-248 schema hedefini kurdu; ancak operator'in dogrulanmis hadis dataset'ini guvenli SQL seed'e cevirecek arac yoktu.
+- Arac olmadan elle SQL yazmak bos Arapca metin, duplicate hadis, lisanssiz/kaynaksiz veri veya yanlis koleksiyon id riskini artirirdi.
+- Dini icerikte uydurma veri kabul edilemez; test fixture'lari gercek hadis iddiasi tasimayan notr parser verisi olarak tutuldu.
+- Runtime bu turda acilmadi; `hasVerifiedHadithDataset = false` guvenli kapali modda kalir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\generate_hadith_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\generate_hadith_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Verified hadis dataset icin schema sonrasi ikinci halka tamamlandi: operator manifest -> SQL seed.
+- Partial/eksik provenance/duplicate/unsupported collection verisi sessizce production seed'e donusemez.
+- Uygulamada hadis gezintisi hala kapali; gercek kaynak manifest ve runtime Supabase provider hatti tamamlanmadan acilmamali.
+
+### Test Sonucu
+- Odak test: `flutter test test\generate_hadith_seed_test.dart --reporter compact` PASS (`10/10`)
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`; ilk deneme timeout oldu, uzun timeout ile PASS)
+- Tam test: `flutter test --reporter compact` PASS (`452/452`)
+
+### Risk Degisimi
+- Verified hadis seed araci yoklugu riski: `12/25 -> 2/25`
+- Duplicate/unsupported/kaynaksiz hadis seed riski: `16/25 -> 3/25`
+- Verified hadis dataset eksikligi riski: `12/25 -> 10/25` (schema ve tool hazir; gercek manifest ve runtime sync henuz yok)
+
+### Rollback Plani
+- `tool\generate_hadith_seed.dart` ve `test\generate_hadith_seed_test.dart` silinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude hadis runtime zincirini kapali moddan cloud-ready moda hazirla: Supabase `hadiths` provider/local model sadece verified rows okuyabilmeli, ancak dataset completeness guard gecmeden `hasVerifiedHadithDataset` acilmamali.
