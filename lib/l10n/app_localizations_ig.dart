@@ -348,7 +348,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get openInYoutube => 'Mepee na YouTube';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'Ibada Tracker';
 
   @override
   String get fasting => 'Fasting';

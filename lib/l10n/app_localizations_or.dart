@@ -349,7 +349,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get openInYoutube => 'ୟୁଟ୍ୟୁବରେ ଖୋଲନ୍ତୁ |';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'ଇବାଡା ଟ୍ରାକର୍ |';
 
   @override
   String get fasting => 'Fasting';

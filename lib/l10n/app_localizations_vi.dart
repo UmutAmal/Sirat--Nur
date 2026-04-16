@@ -348,7 +348,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get openInYoutube => 'Mở trong YouTube';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'Theo dõi Ibadah';
 
   @override
   String get fasting => 'Fasting';

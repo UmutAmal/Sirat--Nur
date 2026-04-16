@@ -348,7 +348,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get openInYoutube => 'Fungura muri YouTube';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'Ibadah';
 
   @override
   String get fasting => 'Fasting';

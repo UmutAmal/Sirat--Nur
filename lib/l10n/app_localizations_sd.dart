@@ -348,7 +348,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get openInYoutube => 'يوٽيوب ۾ کوليو';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'عبادت ٽريڪٽر';
 
   @override
   String get fasting => 'Fasting';

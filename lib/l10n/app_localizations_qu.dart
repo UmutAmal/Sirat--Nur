@@ -350,7 +350,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get openInYoutube => 'YouTube nisqapi kichasqa';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'Ibadah qatiq';
 
   @override
   String get fasting => 'Fasting';

@@ -349,7 +349,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get openInYoutube => 'Vula eka YouTube';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'Mulandzeri wa Ibadah';
 
   @override
   String get fasting => 'Fasting';

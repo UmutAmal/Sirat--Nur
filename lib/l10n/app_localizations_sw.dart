@@ -348,7 +348,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get openInYoutube => 'Fungua kwenye YouTube';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'Mfuatiliaji wa Ibada';
 
   @override
   String get fasting => 'Fasting';

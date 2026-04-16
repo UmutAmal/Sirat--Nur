@@ -348,7 +348,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get openInYoutube => 'YouTube ನಲ್ಲಿ ತೆರೆಯಿರಿ';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'ಇಬಾದಾ ಟ್ರ್ಯಾಕರ್';
 
   @override
   String get fasting => 'Fasting';

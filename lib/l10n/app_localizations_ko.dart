@@ -345,7 +345,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get openInYoutube => 'YouTube에서 열기';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => '이바다 트래커';
 
   @override
   String get fasting => 'Fasting';

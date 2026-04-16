@@ -181,6 +181,17 @@ void main() {
       expect(value, 'Indirmeler');
     });
 
+    test('rejects multiline ibadah tracker output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'ibadahTracker',
+        source: 'Ibadah Tracker',
+        currentValue: 'Ibadah Takibi',
+        candidate: 'means the following.\nIbadah Takibi',
+      );
+
+      expect(value, 'Ibadah Takibi');
+    });
+
     test('rejects multiline settings about output', () {
       final value = resolveTranslatedArbValue(
         key: 'shareApp',

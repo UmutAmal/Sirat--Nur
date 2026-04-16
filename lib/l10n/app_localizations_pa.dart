@@ -348,7 +348,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get openInYoutube => 'YouTube ਵਿੱਚ ਖੋਲ੍ਹੋ';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'ਇਬਾਦਾਹ ਟਰੈਕਰ';
 
   @override
   String get fasting => 'Fasting';

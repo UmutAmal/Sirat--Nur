@@ -349,7 +349,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get openInYoutube => 'Tuwhera ki YouTube';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'Aroturuki Ibadah';
 
   @override
   String get fasting => 'Fasting';

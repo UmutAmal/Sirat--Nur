@@ -339,7 +339,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get openInYoutube => '在 YouTube 中打开';
 
   @override
-  String get ibadahTracker => '伊巴达追踪器';
+  String get ibadahTracker => '伊巴达记录';
 
   @override
   String get fasting => '禁食';
@@ -1975,7 +1975,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get openInYoutube => '在 YouTube 中打开';
 
   @override
-  String get ibadahTracker => '伊巴达追踪器';
+  String get ibadahTracker => '伊巴达记录';
 
   @override
   String get fasting => '禁食';
@@ -3611,7 +3611,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get openInYoutube => '在 YouTube 中開啟';
 
   @override
-  String get ibadahTracker => '伊巴達追蹤器';
+  String get ibadahTracker => '伊巴達記錄';
 
   @override
   String get fasting => '禁食';

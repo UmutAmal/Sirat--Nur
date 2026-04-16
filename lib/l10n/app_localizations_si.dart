@@ -348,7 +348,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get openInYoutube => 'YouTube හි විවෘත කරන්න';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'ඉබාදා ට්රැකර්';
 
   @override
   String get fasting => 'Fasting';

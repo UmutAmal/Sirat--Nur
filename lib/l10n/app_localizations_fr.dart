@@ -351,7 +351,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get openInYoutube => 'Ouvrir sur YouTube';
 
   @override
-  String get ibadahTracker => 'Traqueur d\'Ibadah';
+  String get ibadahTracker => 'Suivi de l\'ibadah';
 
   @override
   String get fasting => 'Jeûne';

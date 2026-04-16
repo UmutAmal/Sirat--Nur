@@ -349,7 +349,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get openInYoutube => 'YouTube இல் திறக்கவும்';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'இபாதா டிராக்கர்';
 
   @override
   String get fasting => 'Fasting';

@@ -348,7 +348,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get openInYoutube => 'បើកក្នុង YouTube';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'កម្មវិធីតាមដានអ៊ីបាដា';
 
   @override
   String get fasting => 'Fasting';

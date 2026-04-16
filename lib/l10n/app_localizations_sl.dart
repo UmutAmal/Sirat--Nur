@@ -349,7 +349,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get openInYoutube => 'Odpri v YouTubu';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'Ibadah sledilnik';
 
   @override
   String get fasting => 'Fasting';

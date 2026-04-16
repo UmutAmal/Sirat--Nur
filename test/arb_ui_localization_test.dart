@@ -49,6 +49,7 @@ void main() {
           'todaysIbadah',
           'quickAccess',
           'downloads',
+          'ibadahTracker',
           'places',
           'library',
           'islamicEducation',

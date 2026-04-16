@@ -344,7 +344,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get openInYoutube => 'ኣብ ዩቱብ ክፈት';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'ኢባዳ ትራከር';
 
   @override
   String get fasting => 'Fasting';

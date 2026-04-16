@@ -348,7 +348,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get openInYoutube => 'ເປີດໃນ YouTube';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'ບົບຕິດຕາມລຸດ Ibadah';
 
   @override
   String get fasting => 'Fasting';

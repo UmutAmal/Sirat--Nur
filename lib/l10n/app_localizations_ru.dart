@@ -350,7 +350,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get openInYoutube => 'Открыть на YouTube';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'Учёт ибады';
 
   @override
   String get fasting => 'Fasting';

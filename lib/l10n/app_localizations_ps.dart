@@ -348,7 +348,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get openInYoutube => 'په یوټیوب کې خلاص کړئ';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'عبادت تعقیبونکی';
 
   @override
   String get fasting => 'Fasting';

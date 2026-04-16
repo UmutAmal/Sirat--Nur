@@ -348,7 +348,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get openInYoutube => 'Отворете во YouTube';
 
   @override
-  String get ibadahTracker => 'Ibadah Tracker';
+  String get ibadahTracker => 'Ибада Тракер';
 
   @override
   String get fasting => 'Fasting';

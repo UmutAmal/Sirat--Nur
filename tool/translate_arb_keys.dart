@@ -356,6 +356,7 @@ bool _mustStaySingleLine(String key) {
       key == 'darkMode' ||
       key == 'systemDefault' ||
       key == 'downloads' ||
+      key == 'ibadahTracker' ||
       key == 'version' ||
       key == 'rateApp' ||
       key == 'shareApp' ||
