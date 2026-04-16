@@ -30,7 +30,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'ସେଟିଂସମୂହ';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsOr extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'ପ୍ରାର୍ଥନା ଗଣନା';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'ଗଣନା ପଦ୍ଧତି |';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'ଆସର ଜୁରିଷ୍ଟିକ୍ ପଦ୍ଧତି |';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsOr extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'ଡାଟା ଏବଂ ଷ୍ଟୋରେଜ୍ |';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'କ୍ୟାଚ୍ ସଫା କରନ୍ତୁ |';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'କ୍ୟାଚ୍ ସଫଳତାର ସହିତ ସଫା ହେଲା |';
 
   @override
-  String get location => 'Location';
+  String get location => 'ଅବସ୍ଥାନ';
 
   @override
-  String get language => 'Language';
+  String get language => 'ଭାଷା';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'ଭାଷା ଚୟନ କରନ୍ତୁ |';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get systemDefault => 'ସିଷ୍ଟମ୍ ଡିଫଲ୍ଟ |';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'ସାମ୍ପ୍ରତିକ ଅବସ୍ଥାନ (GPS)';
 
   @override
   String get locationServiceDisabled => 'ଅବସ୍ଥାନ ସେବା ଅକ୍ଷମ ହୋଇଛି |';
@@ -508,19 +508,19 @@ class AppLocalizationsOr extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'ବିଷୟରେ';
 
   @override
   String get version => 'ସଂସ୍କରଣ';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'ଗୋପନୀୟତା ନୀତି';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'ସେବା ସର୍ତ୍ତାବଳୀ';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ |';
 
   @override
   String get rateApp => 'ରେଟ୍ ଆପ୍ |';

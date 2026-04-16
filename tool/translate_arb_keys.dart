@@ -362,6 +362,21 @@ bool _mustStaySingleLine(String key) {
       key == 'streamError' ||
       key == 'reload' ||
       key == 'checkConnection' ||
+      key == 'settings' ||
+      key == 'prayerCalculation' ||
+      key == 'method' ||
+      key == 'madhab' ||
+      key == 'location' ||
+      key == 'language' ||
+      key == 'selectLanguage' ||
+      key == 'currentLocation' ||
+      key == 'dataStorage' ||
+      key == 'clearCache' ||
+      key == 'cacheClearedSuccess' ||
+      key == 'about' ||
+      key == 'privacyPolicy' ||
+      key == 'termsOfService' ||
+      key == 'contactUs' ||
       key == 'version' ||
       key == 'rateApp' ||
       key == 'shareApp' ||

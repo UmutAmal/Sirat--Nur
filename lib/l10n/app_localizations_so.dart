@@ -30,7 +30,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Dejinta';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsSo extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Xisaabinta Salaadda';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Habka Xisaabinta';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Habka Garsoorka Casr';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsSo extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Xogta & Kaydinta';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Nadiifi Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache si guul leh ayaa loo nadiifiyay';
 
   @override
-  String get location => 'Location';
+  String get location => 'Goobta';
 
   @override
-  String get language => 'Language';
+  String get language => 'Luuqad';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Dooro Luuqad';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get systemDefault => 'Nidaamka Default';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Goobta Hadda (GPS)';
 
   @override
   String get locationServiceDisabled => 'Adeegga goobta waa naafo';
@@ -508,19 +508,19 @@ class AppLocalizationsSo extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Ku saabsan';
 
   @override
   String get version => 'Nooca';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Siyaasadda Qarsoonnimada';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Shuruudaha Adeegga';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Nala Soo Xidhiidh';
 
   @override
   String get rateApp => 'Qiimaynta App';

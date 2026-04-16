@@ -48,13 +48,13 @@ class AppLocalizationsTr extends AppLocalizations {
   String get unlockTajweed => 'Tecvid ve Gelişmiş Özellikleri Aç';
 
   @override
-  String get prayerCalculation => 'Namaz Hesaplama';
+  String get prayerCalculation => 'Namaz Vakti Hesaplama';
 
   @override
-  String get method => 'Hesaplama Metodu';
+  String get method => 'Hesaplama Yöntemi';
 
   @override
-  String get madhab => 'İkindi Hukuku Metodu';
+  String get madhab => 'İkindi Fıkhî Yöntemi';
 
   @override
   String get surahs => 'Sureler';

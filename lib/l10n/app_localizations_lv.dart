@@ -30,7 +30,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Iestatījumi';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsLv extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Lūgšanu aprēķins';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Aprēķina metode';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr Juridiskā metode';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Dati un krātuve';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Notīrīt kešatmiņu';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Kešatmiņa ir veiksmīgi notīrīta';
 
   @override
-  String get location => 'Location';
+  String get location => 'Atrašanās vieta';
 
   @override
-  String get language => 'Language';
+  String get language => 'Valoda';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Izvēlieties valodu';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get systemDefault => 'Sistēmas noklusējums';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Pašreizējā atrašanās vieta (GPS)';
 
   @override
   String get locationServiceDisabled =>
@@ -508,19 +508,19 @@ class AppLocalizationsLv extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Par';
 
   @override
   String get version => 'Versija';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Privātuma politika';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Pakalpojuma noteikumi';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Sazinieties ar mums';
 
   @override
   String get rateApp => 'Novērtēt lietotni';

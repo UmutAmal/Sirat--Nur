@@ -30,7 +30,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Ensengeka';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsLg extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Okubala Okusaba';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Enkola y’okubalirira';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr Enkola y’Ebyamateeka';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsLg extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Data & Okutereka';
 
   @override
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache yalongoosezza bulungi';
 
   @override
-  String get location => 'Location';
+  String get location => 'Ekifo';
 
   @override
-  String get language => 'Language';
+  String get language => 'Olulimi';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Londa Olulimi';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get systemDefault => 'Enkola Default';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Ekifo ekiriwo kati (GPS) .';
 
   @override
   String get locationServiceDisabled => 'Empeereza y\'ekifo eremeddwa.';
@@ -508,19 +508,19 @@ class AppLocalizationsLg extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Ku';
 
   @override
   String get version => 'Ekika';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Enkola y’Ebyama';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Ebiragiro by’Empeereza';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Tukwasaganye';
 
   @override
   String get rateApp => 'Rate App';

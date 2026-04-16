@@ -48,13 +48,13 @@ class AppLocalizationsEs extends AppLocalizations {
   String get unlockTajweed => 'Desbloquear Tajweed y funciones avanzadas';
 
   @override
-  String get prayerCalculation => 'Cálculo de oración';
+  String get prayerCalculation => 'Cálculo de horarios de oración';
 
   @override
   String get method => 'Método de cálculo';
 
   @override
-  String get madhab => 'Método Jurídico Asr';
+  String get madhab => 'Método jurídico del Asr';
 
   @override
   String get surahs => 'Suras';

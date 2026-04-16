@@ -30,7 +30,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Поставки';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsMk extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Пресметка на молитва';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Начин на пресметка';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Правен метод на Asr';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsMk extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Податоци и складирање';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Исчистете го кешот';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Кешот е успешно исчистен';
 
   @override
-  String get location => 'Location';
+  String get location => 'Локација';
 
   @override
-  String get language => 'Language';
+  String get language => 'Јазик';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Изберете Јазик';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get systemDefault => 'Стандарден систем';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Тековна локација (GPS)';
 
   @override
   String get locationServiceDisabled => 'Услугата за локација е оневозможена.';
@@ -507,19 +507,19 @@ class AppLocalizationsMk extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'За';
 
   @override
   String get version => 'Верзија';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Политика за приватност';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Услови за користење';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Контактирајте со нас';
 
   @override
   String get rateApp => 'Оцени апликација';

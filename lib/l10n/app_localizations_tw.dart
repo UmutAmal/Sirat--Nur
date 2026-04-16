@@ -115,7 +115,7 @@ class AppLocalizationsTw extends AppLocalizations {
   String get systemDefault => 'System Default a Wɔde Di Dwuma';
 
   @override
-  String get currentLocation => 'Mprempren Beae (GPS) .';
+  String get currentLocation => 'Mprempren Beae (GPS)';
 
   @override
   String get locationServiceDisabled => 'Wɔayɛ beaeɛ som adwuma no adwuma.';

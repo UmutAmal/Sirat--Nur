@@ -30,7 +30,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Iisetingi';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsXh extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Umthandazo wokubala';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Indlela yokubala';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Indlela ye-Asr Juristic';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsXh extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Idatha kunye noGcino';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Cima iCache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'I-Cache isuswe ngempumelelo';
 
   @override
-  String get location => 'Location';
+  String get location => 'Indawo';
 
   @override
-  String get language => 'Language';
+  String get language => 'Ulwimi';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Khetha ulwimi';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get systemDefault => 'Inkqubo eMiselweyo';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Indawo yangoku (GPS)';
 
   @override
   String get locationServiceDisabled => 'Inkonzo yendawo ivaliwe.';
@@ -507,19 +507,19 @@ class AppLocalizationsXh extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Malunga';
 
   @override
   String get version => 'Inguqulelo';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Umgaqo-nkqubo wabucala';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Imigaqo yeNkonzo';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Qhagamshelana nathi';
 
   @override
   String get rateApp => 'Rate App';

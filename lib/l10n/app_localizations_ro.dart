@@ -30,7 +30,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Setări';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsRo extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Calcul rugăciunii';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Metoda de calcul';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr Metoda juridică';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Date și stocare';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Goliți memoria cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache-ul a fost golit cu succes';
 
   @override
-  String get location => 'Location';
+  String get location => 'Locație';
 
   @override
-  String get language => 'Language';
+  String get language => 'Limba';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Selectați Limbă';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get systemDefault => 'Implicit sistem';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Locația curentă (GPS)';
 
   @override
   String get locationServiceDisabled =>
@@ -510,19 +510,19 @@ class AppLocalizationsRo extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Despre';
 
   @override
   String get version => 'Versiune';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Politica de confidențialitate';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Termeni și condiții';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Contactați-ne';
 
   @override
   String get rateApp => 'Evaluați aplicația';

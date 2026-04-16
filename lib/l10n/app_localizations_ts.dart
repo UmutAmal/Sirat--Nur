@@ -30,7 +30,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Switirhisiwa';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsTs extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Xibalo xa Xikhongelo';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Ndlela yo Hlayela';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr Ndlela ya Nawu';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,23 @@ class AppLocalizationsTs extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Data & Vuhlayiselo';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Hlawula Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess =>
+      'Cache yi basisiwile hi ndlela leyi humelelaka';
 
   @override
-  String get location => 'Location';
+  String get location => 'Ndhawu';
 
   @override
-  String get language => 'Language';
+  String get language => 'Ririmi';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Hlawula Ririmi';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +116,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get systemDefault => 'Xiyimiso xa Sisiteme';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Ndhawu ya sweswi (GPS) .';
 
   @override
   String get locationServiceDisabled =>
@@ -508,19 +509,19 @@ class AppLocalizationsTs extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Hi';
 
   @override
   String get version => 'Nkandziyiso';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Pholisi ya Vuhlayiseki bya Swihundla';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Mimpimanyeto ya Ntirho';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Tihlanganise na Hina';
 
   @override
   String get rateApp => 'Xiringanyeto xa App';

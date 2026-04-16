@@ -30,7 +30,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'సెట్టింగ్‌లు';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsTe extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'ప్రార్థన గణన';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'గణన పద్ధతి';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'అస్ర్ జురిస్టిక్ పద్ధతి';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'డేటా & నిల్వ';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'కాష్‌ని క్లియర్ చేయండి';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'కాష్ విజయవంతంగా క్లియర్ చేయబడింది';
 
   @override
-  String get location => 'Location';
+  String get location => 'స్థానం';
 
   @override
-  String get language => 'Language';
+  String get language => 'భాష';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'భాషను ఎంచుకోండి';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get systemDefault => 'సిస్టమ్ డిఫాల్ట్';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'ప్రస్తుత స్థానం (GPS)';
 
   @override
   String get locationServiceDisabled => 'స్థాన సేవ నిలిపివేయబడింది.';
@@ -507,19 +507,19 @@ class AppLocalizationsTe extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'గురించి';
 
   @override
   String get version => 'వెర్షన్';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'గోప్యతా విధానం';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'సేవా నిబంధనలు';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'మమ్మల్ని సంప్రదించండి';
 
   @override
   String get rateApp => 'యాప్‌ని రేట్ చేయండి';

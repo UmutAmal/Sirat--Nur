@@ -30,7 +30,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'ការកំណត់';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsKm extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'ការគណនាការអធិស្ឋាន';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'វិធីសាស្រ្តគណនា';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'វិធីសាស្រ្តច្បាប់ Asr';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsKm extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'ទិន្នន័យ និងការផ្ទុក';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'ជម្រះឃ្លាំងសម្ងាត់';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'ឃ្លាំងសម្ងាត់ត្រូវបានសម្អាតដោយជោគជ័យ';
 
   @override
-  String get location => 'Location';
+  String get location => 'ទីតាំង';
 
   @override
-  String get language => 'Language';
+  String get language => 'ភាសា';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'ជ្រើសរើសភាសា';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get systemDefault => 'លំនាំដើមប្រព័ន្ធ';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'ទីតាំងបច្ចុប្បន្ន (GPS)';
 
   @override
   String get locationServiceDisabled => 'សេវាកម្មទីតាំងត្រូវបានបិទ។';
@@ -507,19 +507,19 @@ class AppLocalizationsKm extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'អំពី';
 
   @override
   String get version => 'កំណែ';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'គោលការណ៍ឯកជនភាព';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'លក្ខខណ្ឌនៃសេវាកម្ម';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'ទាក់ទងមកយើងខ្ញុំ';
 
   @override
   String get rateApp => 'វាយតម្លៃកម្មវិធី';

@@ -30,7 +30,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'ການຕັ້ງຄ່າ';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsLo extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'ການຄິດໄລ່ການອະທິຖານ';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'ວິທີການຄິດໄລ່';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr ວິທີການນິຕິບຸກຄົນ';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsLo extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'ຂໍ້ມູນ & ການເກັບຮັກສາ';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'ລຶບລ້າງແຄດ';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'ລ້າງແຄດສຳເລັດແລ້ວ';
 
   @override
-  String get location => 'Location';
+  String get location => 'ສະຖານທີ່';
 
   @override
-  String get language => 'Language';
+  String get language => 'ພາສາ';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'ເລືອກພາສາ';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get systemDefault => 'ຄ່າເລີ່ມຕົ້ນຂອງລະບົບ';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'ສະຖານທີ່ປັດຈຸບັນ (GPS)';
 
   @override
   String get locationServiceDisabled => 'ບໍລິການສະຖານທີ່ຖືກປິດໃຊ້ງານ.';
@@ -507,19 +507,19 @@ class AppLocalizationsLo extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'ກ່ຽວກັບ';
 
   @override
   String get version => 'ຮຸ່ນ';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'ເງື່ອນໄຂການໃຫ້ບໍລິການ';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'ຕິດຕໍ່ພວກເຮົາ';
 
   @override
   String get rateApp => 'ໃຫ້ຄະແນນ App';

@@ -48,13 +48,13 @@ class AppLocalizationsDa extends AppLocalizations {
   String get unlockTajweed => 'Lås Tajweed og avancerede funktioner op';
 
   @override
-  String get prayerCalculation => 'Bønberegning';
+  String get prayerCalculation => 'Beregning af bønnetider';
 
   @override
   String get method => 'Beregningsmetode';
 
   @override
-  String get madhab => 'Asr Juridisk Metode';
+  String get madhab => 'Asr-fiqh-metode';
 
   @override
   String get surahs => 'Surahs';

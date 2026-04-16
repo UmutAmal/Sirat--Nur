@@ -30,7 +30,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Litlhophiso';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsSt extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Thapelo Palo';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Mokhoa oa Palo';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Mokhoa oa Asr Juristic';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsSt extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Lintlha le Polokelo';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Hlakola Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache e hlakotsoe ka katleho';
 
   @override
-  String get location => 'Location';
+  String get location => 'Sebaka';
 
   @override
-  String get language => 'Language';
+  String get language => 'Puo';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Kgetha Puo';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get systemDefault => 'Sistimi ea kamehla';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Sebaka sa Hajoale (GPS)';
 
   @override
   String get locationServiceDisabled => 'Ts\'ebeletso ea sebaka e koetsoe.';
@@ -516,13 +516,13 @@ class AppLocalizationsSt extends AppLocalizations {
   String get version => 'Phetolelo';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Leano la Lekunutu';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Melao ea Ts\'ebeletso';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Ikopanye le Rona';
 
   @override
   String get rateApp => 'Reita App';

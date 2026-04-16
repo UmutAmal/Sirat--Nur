@@ -30,7 +30,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Ustawienia';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsPl extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Obliczanie modlitwy';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Metoda obliczeniowa';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Metoda prawnicza Asr';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,23 @@ class AppLocalizationsPl extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Dane i przechowywanie';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Wyczyść pamięć podręczną';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess =>
+      'Pamięć podręczna została pomyślnie wyczyszczona';
 
   @override
-  String get location => 'Location';
+  String get location => 'Lokalizacja';
 
   @override
-  String get language => 'Language';
+  String get language => 'Język';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Wybierz Język';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +116,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get systemDefault => 'Domyślne systemowe';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Aktualna lokalizacja (GPS)';
 
   @override
   String get locationServiceDisabled => 'Usługa lokalizacyjna jest wyłączona.';
@@ -507,19 +508,19 @@ class AppLocalizationsPl extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'O';
 
   @override
   String get version => 'Wersja';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Polityka prywatności';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Warunki świadczenia usług';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Skontaktuj się z nami';
 
   @override
   String get rateApp => 'Oceń aplikację';

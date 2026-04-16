@@ -30,7 +30,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Innstillinger';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsNo extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Beregning av bønnetider';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Beregningsmetode';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr-fiqh-metode';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Data og lagring';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Tøm buffer';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Bufferen ble tømt';
 
   @override
-  String get location => 'Location';
+  String get location => 'Beliggenhet';
 
   @override
-  String get language => 'Language';
+  String get language => 'Språk';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Velg Språk';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get systemDefault => 'Systemstandard';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Nåværende posisjon (GPS)';
 
   @override
   String get locationServiceDisabled => 'Plasseringstjenesten er deaktivert.';
@@ -507,19 +507,19 @@ class AppLocalizationsNo extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Om';
 
   @override
   String get version => 'Versjon';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Personvernerklæring';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Vilkår for bruk';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Kontakt oss';
 
   @override
   String get rateApp => 'Vurder appen';

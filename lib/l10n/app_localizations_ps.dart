@@ -30,7 +30,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'ترتیبات';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsPs extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'د لمانځه حساب';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'د محاسبې طریقه';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'د عصر فقهي طریقه';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsPs extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'ډاټا او ذخیره کول';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'کیچ پاک کړئ';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'زیرمه په بریالیتوب سره پاکه شوه';
 
   @override
-  String get location => 'Location';
+  String get location => 'ځای';
 
   @override
-  String get language => 'Language';
+  String get language => 'ژبه';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'ژبه غوره کړئ';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get systemDefault => 'د سیسټم ډیفالټ';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'اوسنی ځای (GPS)';
 
   @override
   String get locationServiceDisabled => 'د ځای خدمت غیر فعال دی.';
@@ -506,19 +506,19 @@ class AppLocalizationsPs extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'په اړه';
 
   @override
   String get version => 'نسخه';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'د محرمیت پالیسي';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'د خدمت شرایط';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'موږ سره اړیکه ونیسئ';
 
   @override
   String get rateApp => 'د اپلیکیشن درجه بندي کړئ';

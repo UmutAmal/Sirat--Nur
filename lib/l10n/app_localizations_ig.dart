@@ -30,7 +30,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Ntọala';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsIg extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Ngụkọ ekpere';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Usoro mgbako';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Usoro iwu nke Asr';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsIg extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Data & Nchekwa';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Kpochapụ cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'A kpochapụrụ cache nke ọma';
 
   @override
-  String get location => 'Location';
+  String get location => 'Ebe';
 
   @override
-  String get language => 'Language';
+  String get language => 'Asụsụ';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Họrọ Asụsụ';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get systemDefault => 'Sistemụ ndabara';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Ebe dị ugbu a (GPS)';
 
   @override
   String get locationServiceDisabled => 'Agbanyụrụ ọrụ ebe.';
@@ -507,19 +507,19 @@ class AppLocalizationsIg extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Ihe gbasara';
 
   @override
   String get version => 'Ụdị';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Amụma nzuzo';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Usoro ọrụ';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Kpọtụrụ anyị';
 
   @override
   String get rateApp => 'Ọnụ ego ngwa';

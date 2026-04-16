@@ -30,7 +30,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Fa\'atonu';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,10 +48,10 @@ class AppLocalizationsSm extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Fa\'atatau ole Tatalo';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Metotia Fa\'atatau';
 
   @override
   String get madhab => 'Asr Juristic Method';
@@ -91,22 +91,22 @@ class AppLocalizationsSm extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Fa\'amatalaga & Teuina';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Fa\'amama Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Ua manuia le kilia o le cache';
 
   @override
-  String get location => 'Location';
+  String get location => 'Nofoaga';
 
   @override
-  String get language => 'Language';
+  String get language => 'Gagana';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Filifili Gagana';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get systemDefault => 'System Default';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Nofoaga o iai nei (GPS)';
 
   @override
   String get locationServiceDisabled => 'Ua le atoatoa le auaunaga mo nofoaga.';
@@ -507,19 +507,19 @@ class AppLocalizationsSm extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'E uiga i';
 
   @override
   String get version => 'Fa\'aliliuga';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Faiga Fa\'alilolilo';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Tuutuuga o Auaunaga';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Fa\'afeso\'ota\'i matou';
 
   @override
   String get rateApp => 'Fua o le App';

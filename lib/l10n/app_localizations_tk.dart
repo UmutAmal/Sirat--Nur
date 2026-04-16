@@ -30,7 +30,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Sazlamalar';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsTk extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Namazyň hasaplamasy';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Hasaplama usuly';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr hukuk usuly';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsTk extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Maglumat we ammar';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Keşi arassalaň';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Keş üstünlikli arassalandy';
 
   @override
-  String get location => 'Location';
+  String get location => 'Locationerleşýän ýeri';
 
   @override
-  String get language => 'Language';
+  String get language => 'Dil';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Dil saýlaň';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get systemDefault => 'Ulgam standarty';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Häzirki ýerleşýän ýeri (GPS)';
 
   @override
   String get locationServiceDisabled => 'Locationerleşiş hyzmaty ýapyk';
@@ -508,19 +508,19 @@ class AppLocalizationsTk extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Takmynan';
 
   @override
   String get version => 'Wersiýa';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Gizlinlik syýasaty';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Hyzmat şertleri';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Biz bilen habarlaşyň';
 
   @override
   String get rateApp => 'Programma bahasy';

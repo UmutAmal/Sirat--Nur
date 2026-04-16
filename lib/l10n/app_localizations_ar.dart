@@ -48,13 +48,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get unlockTajweed => 'فتح التجويد والميزات المتقدمة';
 
   @override
-  String get prayerCalculation => 'حساب الصلاة';
+  String get prayerCalculation => 'حساب أوقات الصلاة';
 
   @override
   String get method => 'طريقة الحساب';
 
   @override
-  String get madhab => 'طريقة حساب العصر';
+  String get madhab => 'طريقة فقهية لصلاة العصر';
 
   @override
   String get surahs => 'السور';

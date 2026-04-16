@@ -30,7 +30,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Налаштування';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsUk extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Розрахунок молитви';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Метод розрахунку';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Юристичний метод Asr';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsUk extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Дані та зберігання';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Очистити кеш';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Кеш успішно очищено';
 
   @override
-  String get location => 'Location';
+  String get location => 'Розташування';
 
   @override
-  String get language => 'Language';
+  String get language => 'Мова';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Виберіть мову';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get systemDefault => 'Системне значення за замовчуванням';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Поточне місцезнаходження (GPS)';
 
   @override
   String get locationServiceDisabled => 'Службу локації вимкнено.';
@@ -508,19 +508,19 @@ class AppLocalizationsUk extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'про';
 
   @override
   String get version => 'Версія';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Політика конфіденційності';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Умови обслуговування';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Зв\'яжіться з нами';
 
   @override
   String get rateApp => 'Оцініть додаток';

@@ -30,7 +30,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'सेटिंग्स्';
 
   @override
   String get nextPrayer => 'Next Prayer';

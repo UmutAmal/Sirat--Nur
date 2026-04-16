@@ -30,7 +30,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Параметрлер';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsKk extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Намазды есептеу';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Есептеу әдісі';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Аср заңдық әдісі';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsKk extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Деректер және сақтау';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Кэшті тазалау';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Кэш сәтті тазаланды';
 
   @override
-  String get location => 'Location';
+  String get location => 'Орналасқан жері';
 
   @override
-  String get language => 'Language';
+  String get language => 'Тіл';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Тіл таңдаңыз';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get systemDefault => 'Жүйе әдепкі';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Ағымдағы орын (GPS)';
 
   @override
   String get locationServiceDisabled => 'Орынды анықтау қызметі өшірілген.';
@@ -506,19 +506,19 @@ class AppLocalizationsKk extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'туралы';
 
   @override
   String get version => 'Нұсқа';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Құпиялық саясаты';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Қызмет көрсету шарттары';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Бізбен байланысыңыз';
 
   @override
   String get rateApp => 'Қолданбаны бағалаңыз';

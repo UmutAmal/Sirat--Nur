@@ -30,7 +30,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => '設定';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => '礼拝時刻の計算';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => '計算方法';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'アスルの法学的方式';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'データとストレージ';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'キャッシュのクリア';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'キャッシュが正常にクリアされました';
 
   @override
-  String get location => 'Location';
+  String get location => '場所';
 
   @override
-  String get language => 'Language';
+  String get language => '言語';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => '言語の選択';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get systemDefault => 'システムのデフォルト';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => '現在地（GPS）';
 
   @override
   String get locationServiceDisabled => '位置情報サービスが無効になっています。';
@@ -503,19 +503,19 @@ class AppLocalizationsJa extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'について';
 
   @override
   String get version => 'バージョン';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'プライバシーポリシー';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => '利用規約';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'お問い合わせ';
 
   @override
   String get rateApp => 'アプリを評価';

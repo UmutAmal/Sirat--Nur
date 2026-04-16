@@ -30,7 +30,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'அமைப்புகள்';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsTa extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'பிரார்த்தனை கணக்கீடு';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'கணக்கீட்டு முறை';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'அஸ்ர் ஜூரிஸ்டிக் முறை';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,23 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'தரவு & சேமிப்பு';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'தற்காலிக சேமிப்பை அழிக்கவும்';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess =>
+      'தற்காலிக சேமிப்பு வெற்றிகரமாக அழிக்கப்பட்டது';
 
   @override
-  String get location => 'Location';
+  String get location => 'இடம்';
 
   @override
-  String get language => 'Language';
+  String get language => 'மொழி';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'மொழியைத் தேர்ந்தெடுக்கவும்';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +116,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get systemDefault => 'கணினி இயல்புநிலை';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'தற்போதைய இடம் (GPS)';
 
   @override
   String get locationServiceDisabled => 'இருப்பிடச் சேவை முடக்கப்பட்டுள்ளது.';
@@ -508,19 +509,19 @@ class AppLocalizationsTa extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'பற்றி';
 
   @override
   String get version => 'பதிப்பு';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'தனியுரிமைக் கொள்கை';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'சேவை விதிமுறைகள்';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'எங்களை தொடர்பு கொள்ளவும்';
 
   @override
   String get rateApp => 'பயன்பாட்டை மதிப்பிடவும்';

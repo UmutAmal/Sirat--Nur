@@ -30,7 +30,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'تەڭشەك';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,10 +48,10 @@ class AppLocalizationsUg extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'ناماز ھېسابلاش';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'ھېسابلاش ئۇسۇلى';
 
   @override
   String get madhab => 'Asr Juristic Method';
@@ -91,22 +91,22 @@ class AppLocalizationsUg extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'سانلىق مەلۇمات ۋە ساقلاش';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Cache نى تازىلاش';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'غەملەك مۇۋەپپەقىيەتلىك تازىلاندى';
 
   @override
-  String get location => 'Location';
+  String get location => 'ئورنى';
 
   @override
-  String get language => 'Language';
+  String get language => 'تىل';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'تىل تاللاڭ';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get systemDefault => 'سىستېما كۆڭۈلدىكى قىممىتى';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'نۆۋەتتىكى ئورنى (GPS)';
 
   @override
   String get locationServiceDisabled => 'ئورۇن مۇلازىمىتى چەكلەنگەن.';
@@ -507,19 +507,19 @@ class AppLocalizationsUg extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'ھەققىدە';
 
   @override
   String get version => 'نەشرى';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'مەخپىيەتلىك تۈزۈمى';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'مۇلازىمەت شەرتلىرى';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'بىز بىلەن ئالاقىلىشىڭ';
 
   @override
   String get rateApp => 'Rate App';

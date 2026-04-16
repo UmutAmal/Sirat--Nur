@@ -174,6 +174,60 @@ void main() {
     );
 
     test(
+      'safe priority locales do not fall back to English for settings shell copy',
+      () {
+        const settingsShellSafeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'da',
+          'he',
+          'ja',
+          'nb',
+          'nn',
+          'no',
+          'pt',
+          'ru',
+          'vi',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const localizedKeys = [
+          'settings',
+          'prayerCalculation',
+          'method',
+          'madhab',
+          'location',
+          'language',
+          'selectLanguage',
+          'currentLocation',
+          'dataStorage',
+          'clearCache',
+          'cacheClearedSuccess',
+          'about',
+          'privacyPolicy',
+          'termsOfService',
+          'contactUs',
+        ];
+
+        for (final locale in settingsShellSafeLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
+    test(
       'safe priority locales do not fall back to English for location copy',
       () {
         const locationSafeLocales = [

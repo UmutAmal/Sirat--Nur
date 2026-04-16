@@ -30,7 +30,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'הגדרות';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsHe extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'חישוב זמני תפילה';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'שיטת חישוב';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'שיטה הלכתית לעסר';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsHe extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'נתונים ואחסון';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'נקה את המטמון';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'המטמון נוקה בהצלחה';
 
   @override
-  String get location => 'Location';
+  String get location => 'מיקום';
 
   @override
-  String get language => 'Language';
+  String get language => 'שפה';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'בחר שפה';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get systemDefault => 'מערכת ברירת מחדל';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'מיקום נוכחי (GPS)';
 
   @override
   String get locationServiceDisabled => 'שירות המיקום מושבת.';
@@ -505,19 +505,19 @@ class AppLocalizationsHe extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'אודות';
 
   @override
   String get version => 'גרסה';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'מדיניות פרטיות';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'תנאים והגבלות';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'צור קשר';
 
   @override
   String get rateApp => 'דרג את האפליקציה';

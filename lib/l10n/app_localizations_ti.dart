@@ -30,7 +30,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'ቅጥዕታት';
 
   @override
   String get nextPrayer => 'Next Prayer';

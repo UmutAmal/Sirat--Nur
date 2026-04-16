@@ -30,7 +30,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Настройки';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Расчет времени намаза';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Метод расчета';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Метод фикха для асра';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsRu extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Данные и хранение';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Очистить кэш';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Кэш успешно очищен';
 
   @override
-  String get location => 'Location';
+  String get location => 'Расположение';
 
   @override
-  String get language => 'Language';
+  String get language => 'Язык';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Выберите язык';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get systemDefault => 'Системные настройки по умолчанию';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Текущее местоположение (GPS)';
 
   @override
   String get locationServiceDisabled =>
@@ -509,19 +509,19 @@ class AppLocalizationsRu extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'О';
 
   @override
   String get version => 'Версия';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Политика конфиденциальности';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Условия использования';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Свяжитесь с нами';
 
   @override
   String get rateApp => 'Оцените приложение';

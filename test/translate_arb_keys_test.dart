@@ -211,6 +211,25 @@ void main() {
       expect(checkConnectionValue, 'Lutfen baglantinizi kontrol edin');
     });
 
+    test('rejects multiline settings shell output', () {
+      final currentLocationValue = resolveTranslatedArbValue(
+        key: 'currentLocation',
+        source: 'Current Location (GPS)',
+        currentValue: 'Guncel Konum (GPS)',
+        candidate: 'means the following.\nGuncel Konum (GPS)',
+      );
+
+      final cacheClearedValue = resolveTranslatedArbValue(
+        key: 'cacheClearedSuccess',
+        source: 'Cache cleared successfully',
+        currentValue: 'Onbellek temizlendi',
+        candidate: 'means the following.\nOnbellek temizlendi',
+      );
+
+      expect(currentLocationValue, 'Guncel Konum (GPS)');
+      expect(cacheClearedValue, 'Onbellek temizlendi');
+    });
+
     test('rejects multiline settings about output', () {
       final value = resolveTranslatedArbValue(
         key: 'shareApp',

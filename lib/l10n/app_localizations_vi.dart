@@ -30,7 +30,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Cài đặt';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Tính giờ lễ nguyện';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Phương pháp tính toán';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Phương pháp pháp lý cho Asr';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Dữ liệu & Lưu trữ';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Xóa bộ nhớ đệm';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Đã xóa bộ nhớ đệm thành công';
 
   @override
-  String get location => 'Location';
+  String get location => 'Vị trí';
 
   @override
-  String get language => 'Language';
+  String get language => 'Ngôn ngữ';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Chọn ngôn ngữ';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get systemDefault => 'Mặc định hệ thống';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Vị trí hiện tại (GPS)';
 
   @override
   String get locationServiceDisabled => 'Dịch vụ định vị bị vô hiệu hóa.';
@@ -507,19 +507,19 @@ class AppLocalizationsVi extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Giới thiệu';
 
   @override
   String get version => 'Phiên bản';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Chính sách bảo mật';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Điều khoản dịch vụ';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Liên hệ với chúng tôi';
 
   @override
   String get rateApp => 'Đánh giá ứng dụng';

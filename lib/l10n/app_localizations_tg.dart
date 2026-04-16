@@ -30,7 +30,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Танзимотҳо';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsTg extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Ҳисоб кардани намоз';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Усули ҳисоб';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Усули ҳуқуқшиносии аср';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsTg extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Маълумот ва нигоҳдорӣ';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Тоза кардани кэш';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Кэш бомуваффақият тоза карда шуд';
 
   @override
-  String get location => 'Location';
+  String get location => 'Ҷойгиршавӣ';
 
   @override
-  String get language => 'Language';
+  String get language => 'Забон';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Забонро интихоб кунед';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get systemDefault => 'Системаи пешфарз';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Ҷойгиршавии ҷорӣ (GPS)';
 
   @override
   String get locationServiceDisabled => 'Хадамоти ҷойгиршавӣ ғайрифаъол аст.';
@@ -507,19 +507,19 @@ class AppLocalizationsTg extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Дар бораи';
 
   @override
   String get version => 'Версия';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Сиёсати махфият';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Шартҳои хизматрасонӣ';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Бо мо тамос гиред';
 
   @override
   String get rateApp => 'Барномаи нархгузорӣ';

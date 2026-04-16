@@ -30,7 +30,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Nastavenia';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsSk extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Výpočet modlitby';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Metóda výpočtu';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr Juristická metóda';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Dáta a úložisko';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Vymazať vyrovnávaciu pamäť';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Vyrovnávacia pamäť bola úspešne vymazaná';
 
   @override
-  String get location => 'Location';
+  String get location => 'Poloha';
 
   @override
-  String get language => 'Language';
+  String get language => 'Jazyk';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Vyberte Jazyk';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get systemDefault => 'Predvolené nastavenie systému';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Aktuálna poloha (GPS)';
 
   @override
   String get locationServiceDisabled => 'Služba určovania polohy je zakázaná.';
@@ -508,19 +508,19 @@ class AppLocalizationsSk extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'O';
 
   @override
   String get version => 'Verzia';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Zásady ochrany osobných údajov';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Zmluvné podmienky';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Kontaktujte nás';
 
   @override
   String get rateApp => 'Hodnotiť aplikáciu';

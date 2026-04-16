@@ -48,13 +48,13 @@ class AppLocalizationsMt extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Kalkolu tat-Talb';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Metodu ta\' Kalkolu';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr Metodu Ġuristiku';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsMt extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Dejta u Ħażna';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Ċar Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Il-cache tnaddaf b\'suċċess';
 
   @override
-  String get location => 'Location';
+  String get location => 'Post';
 
   @override
-  String get language => 'Language';
+  String get language => 'Lingwa';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Agħżel Lingwa';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get systemDefault => 'Default tas-Sistema';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Post kurrenti (GPS)';
 
   @override
   String get locationServiceDisabled =>
@@ -508,19 +508,19 @@ class AppLocalizationsMt extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Dwar';
 
   @override
   String get version => 'Verżjoni';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Politika ta\' Privatezza';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Termini tas-Servizz';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Ikkuntattjana';
 
   @override
   String get rateApp => 'Rata App';

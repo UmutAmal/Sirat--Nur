@@ -30,7 +30,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'ಸೆಟ್ಟಿಂಗ್‌ಗಳು';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsKn extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'ಪ್ರಾರ್ಥನೆ ಲೆಕ್ಕಾಚಾರ';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'ಲೆಕ್ಕಾಚಾರದ ವಿಧಾನ';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'ಅಸ್ರ್ ನ್ಯಾಯಶಾಸ್ತ್ರದ ವಿಧಾನ';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsKn extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'ಡೇಟಾ ಮತ್ತು ಸಂಗ್ರಹಣೆ';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'ಸಂಗ್ರಹವನ್ನು ತೆರವುಗೊಳಿಸಿ';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'ಸಂಗ್ರಹವನ್ನು ಯಶಸ್ವಿಯಾಗಿ ತೆರವುಗೊಳಿಸಲಾಗಿದೆ';
 
   @override
-  String get location => 'Location';
+  String get location => 'ಸ್ಥಳ';
 
   @override
-  String get language => 'Language';
+  String get language => 'ಭಾಷೆ';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get systemDefault => 'ಸಿಸ್ಟಮ್ ಡೀಫಾಲ್ಟ್';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'ಪ್ರಸ್ತುತ ಸ್ಥಳ (GPS)';
 
   @override
   String get locationServiceDisabled => 'ಸ್ಥಳ ಸೇವೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ.';
@@ -506,19 +506,19 @@ class AppLocalizationsKn extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'ಬಗ್ಗೆ';
 
   @override
   String get version => 'ಆವೃತ್ತಿ';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'ಗೌಪ್ಯತೆ ನೀತಿ';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'ಸೇವಾ ನಿಯಮಗಳು';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ';
 
   @override
   String get rateApp => 'ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ರೇಟ್ ಮಾಡಿ';

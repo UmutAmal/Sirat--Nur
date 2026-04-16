@@ -30,7 +30,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'ဆက်တင်များ';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsMy extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'ဆုတောင်းတွက်ချက်မှု';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'တွက်ချက်နည်း';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr တရားဥပဒေနည်းလမ်း';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,23 @@ class AppLocalizationsMy extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'ဒေတာနှင့် သိုလှောင်မှု';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Cache ကိုရှင်းလင်းပါ။';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess =>
+      'Cache ကို အောင်မြင်စွာ ရှင်းလင်းပြီးပါပြီ။';
 
   @override
-  String get location => 'Location';
+  String get location => 'တည်နေရာ';
 
   @override
-  String get language => 'Language';
+  String get language => 'ဘာသာစကား';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'ဘာသာစကားကို ရွေးပါ။';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +116,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get systemDefault => 'စနစ် ပုံသေ';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'လက်ရှိတည်နေရာ (GPS)';
 
   @override
   String get locationServiceDisabled => 'တည်နေရာဝန်ဆောင်မှုကို ပိတ်ထားသည်။';
@@ -508,19 +509,19 @@ class AppLocalizationsMy extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'အကြောင်း';
 
   @override
   String get version => 'ဗားရှင်း';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'ကိုယ်ရေးကိုယ်တာမူဝါဒ';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'ဝန်ဆောင်မှုစည်းမျဉ်းများ';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'ကျွန်ုပ်တို့ကို ဆက်သွယ်ပါ။';
 
   @override
   String get rateApp => 'အက်ပ်ကို အဆင့်သတ်မှတ်ပါ။';

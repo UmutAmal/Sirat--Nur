@@ -48,13 +48,13 @@ class AppLocalizationsMg extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Kajy Vavaka';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Fomba kajy';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Fomba Juristic Asr';
 
   @override
   String get surahs => 'Surahs';
@@ -91,19 +91,19 @@ class AppLocalizationsMg extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Data & fitahirizana';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Hamafa Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Voafafa soa aman-tsara ny cache';
 
   @override
-  String get location => 'Location';
+  String get location => 'Toerana';
 
   @override
-  String get language => 'Language';
+  String get language => 'Fiteny';
 
   @override
   String get selectLanguage => 'Select Language';
@@ -115,7 +115,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get systemDefault => 'System Default';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Toerana ankehitriny (GPS)';
 
   @override
   String get locationServiceDisabled => 'Tsy miasa ny serivisy toerana.';
@@ -508,19 +508,19 @@ class AppLocalizationsMg extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Momba ny';
 
   @override
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Politika momba ny fiainana manokana';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Fepetran\'ny serivisy';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Mifandraisa aminay';
 
   @override
   String get rateApp => 'Rate App';

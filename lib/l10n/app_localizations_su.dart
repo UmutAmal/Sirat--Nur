@@ -30,7 +30,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Setélan';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsSu extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Itungan Sholat';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Métode itungan';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Métode Yuristik Ashar';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsSu extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Data & Panyimpenan';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Hapus Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache suksés dipupus';
 
   @override
-  String get location => 'Location';
+  String get location => 'Lokasi';
 
   @override
-  String get language => 'Language';
+  String get language => 'Basa';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Pilih Basa';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get systemDefault => 'System Default';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Lokasi Ayeuna (GPS)';
 
   @override
   String get locationServiceDisabled => 'Ladenan lokasi ditumpurkeun.';
@@ -508,19 +508,19 @@ class AppLocalizationsSu extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Ngeunaan';
 
   @override
   String get version => 'Vérsi';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Kawijakan Privasi';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Sarat Service';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Kontak Kami';
 
   @override
   String get rateApp => 'Meunteun App';

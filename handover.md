@@ -8553,3 +8553,53 @@
 ### Sonraki Adım
 - Commit kapisinda `git diff --check`, `flutter analyze`, `flutter test` calistir; hepsi gecerse commit/push yap.
 - Sonraki dongude aktif l10n fallback taramasini yenile; `offlineMode`, `clearCache`, `hijriCalendar`, `home`, `settings`, `searchHint`, `weeklyProgress`, `quranReading` gibi gorunur ve guvenle cevrilebilir anahtarlar arasindan en yuksek etkili tek yuzeyi sec.
+
+## 2026-04-16 TUR-224 — Localize Settings Shell, Storage, Location and Legal Copy
+
+### Yapılan İşlem
+- Settings ana yuzeyinde kullanilan `settings`, `prayerCalculation`, `method`, `madhab`, `location`, `language`, `selectLanguage`, `currentLocation`, `dataStorage`, `clearCache`, `cacheClearedSuccess`, `about`, `privacyPolicy`, `termsOfService`, `contactUs` anahtarlari korumali ARB batch'i ile genis locale kumesinde lokalize edildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Safe/priority locale kalite gecisinde `tr`, `de`, `fr`, `es`, `ar`, `da`, `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `tw`, `vi`, `zh`, `zh_CN`, `zh_TW` icin Ingilizce fallback kalmadigi dogrulandi.
+- `prayerCalculation` ve `madhab` icin TR/DE/FR/ES/AR/DA/HE/JA/NB/NN/NO/PT/RU/VI/ZH degerleri elle duzeltildi; "namaz vakti hesaplama" ve "Asr/ikindi fıkhî yöntem" anlami korunacak sekilde Google ceviri mekanikligi giderildi.
+- `tool\translate_arb_keys.dart` single-line guard listesine settings shell anahtarlari eklendi.
+- `test\arb_ui_localization_test.dart` settings shell fallback guard'i eklendi.
+- `test\translate_arb_keys_test.dart` multiline settings shell output regresyon testiyle ceviri debris korumasi eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:47` AppBar basliginda `l10n.settings` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:55-74` namaz hesaplama ve Asr fıkhî yontem ayarlarini `l10n.prayerCalculation`, `l10n.method`, `l10n.madhab` ile gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:131-143` konum bolumunde `l10n.location` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:190-197` dil secimi yuzeyinde `l10n.language` ve secim akisini kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:203-217` veri/depolama bolumunde `l10n.dataStorage`, `l10n.clearCache`, `l10n.cacheClearedSuccess` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:232-273` about/legal yuzeylerinde `l10n.about`, `l10n.privacyPolicy`, `l10n.termsOfService`, `l10n.contactUs` gosteriyor.
+- TUR-224 oncesi aktif l10n fallback taramasinda bu anahtarlarin safe/priority setinde ortak `8` locale, toplam locale setinde yaklasik `134-137` locale app_en ile birebir ayniydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe/priority locale setinde settings shell/storage/location/legal copy icin Ingilizce fallback riski kapandi.
+- Kalan toplam fallback sayilari: `settings 68`, `prayerCalculation 66`, `method 65`, `madhab 70`, `location 66`, `language 65`, `selectLanguage 66`, `currentLocation 66`, `dataStorage 67`, `clearCache 68`, `cacheClearedSuccess 65`, `about 68`, `privacyPolicy 68`, `termsOfService 68`, `contactUs 67`.
+- Kalan fallback'ler ceviri servisinin guvenli aday uretmedigi nadir/legacy locale grubunda birakildi; "tamamlamak" adina sahte veya uydurma metin yazilmadi.
+- Dini hassasiyet: `madhab` rastgele mezhep yorumu olarak degil, Asr/ikindi fıkhî yontem etiketi olarak tutuldu.
+- Tek satir guard'i ile gelecekteki batch debris/newline riski azaltildi.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\features\settings\settings_page_test.dart test\features\settings\diagnostics_page_test.dart test\location_selection_page_test.dart` PASS (`81/81`)
+- Safe fallback taramasi PASS: settings shell/storage/location/legal anahtarlarinda `safe_same=[]`
+- Single-line taramasi PASS: settings shell anahtarlarinda bos veya multiline locale degeri yok.
+- `flutter gen-l10n` PASS
+
+### Risk Değişimi
+- Safe/priority locale settings shell fallback riski: `8/25 -> 2/25`
+- Tum locale settings shell fallback riski: `8/25 -> 5/25`
+- Settings shell ceviri batch debris tekrar riski: `10/25 -> 3/25`
+
+### Sonraki Adım
+- Commit kapisinda `git diff --check`, `flutter analyze`, `flutter test` calistir; hepsi gecerse commit/push yap.
+- Sonraki dongude aktif l10n fallback taramasini yenile; `offlineMode`, `hijriCalendar`, `searchHint`, `weeklyProgress`, `quranReading`, `prayers`, `fasting`, `calendar` gibi gorunur ve guvenle cevrilebilir anahtarlar arasindan en yuksek etkili tek yuzeyi sec.

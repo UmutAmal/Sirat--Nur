@@ -30,7 +30,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Configurações';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Cálculo dos horários de oração';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Método de cálculo';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Método jurídico do Asr';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Dados e armazenamento';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Limpar Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache limpo com sucesso';
 
   @override
-  String get location => 'Location';
+  String get location => 'Localização';
 
   @override
-  String get language => 'Language';
+  String get language => 'Idioma';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Selecione o idioma';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get systemDefault => 'Padrão do sistema';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Localização Atual (GPS)';
 
   @override
   String get locationServiceDisabled =>
@@ -508,19 +508,19 @@ class AppLocalizationsPt extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Sobre';
 
   @override
   String get version => 'Versão';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Política de Privacidade';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Termos de Serviço';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Contate-nos';
 
   @override
   String get rateApp => 'Avaliar o aplicativo';

@@ -508,7 +508,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get systemTheme => 'System Thupui a ni';
 
   @override
-  String get about => 'About';
+  String get about => 'Lam';
 
   @override
   String get version => 'Version a ni';

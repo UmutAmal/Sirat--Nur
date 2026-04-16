@@ -49,13 +49,13 @@ class AppLocalizationsFr extends AppLocalizations {
       'Débloquez Tajweed et les fonctionnalités avancées';
 
   @override
-  String get prayerCalculation => 'Calcul de la prière';
+  String get prayerCalculation => 'Calcul des horaires de prière';
 
   @override
   String get method => 'Méthode de calcul';
 
   @override
-  String get madhab => 'Méthode juridique Asr';
+  String get madhab => 'Méthode juridique pour l\'Asr';
 
   @override
   String get surahs => 'Sourates';

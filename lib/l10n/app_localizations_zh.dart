@@ -48,13 +48,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get unlockTajweed => '解锁 Tajweed 和高级功能';
 
   @override
-  String get prayerCalculation => '祷告计算';
+  String get prayerCalculation => '礼拜时间计算';
 
   @override
   String get method => '计算方法';
 
   @override
-  String get madhab => '晡礼法律方法';
+  String get madhab => '晡礼法学方法';
 
   @override
   String get surahs => '古兰经';
@@ -1684,13 +1684,13 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get unlockTajweed => '解锁 Tajweed 和高级功能';
 
   @override
-  String get prayerCalculation => '祷告计算';
+  String get prayerCalculation => '礼拜时间计算';
 
   @override
   String get method => '计算方法';
 
   @override
-  String get madhab => '晡礼法律方法';
+  String get madhab => '晡礼法学方法';
 
   @override
   String get surahs => '古兰经';
@@ -3320,13 +3320,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get unlockTajweed => '解鎖 Tajweed 和高級功能';
 
   @override
-  String get prayerCalculation => '禱告計算';
+  String get prayerCalculation => '禮拜時間計算';
 
   @override
   String get method => '計算方法';
 
   @override
-  String get madhab => '晡禮法律方法';
+  String get madhab => '晡禮法學方法';
 
   @override
   String get surahs => '古蘭經';

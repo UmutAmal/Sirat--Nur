@@ -30,7 +30,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Ajustes nisqa';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsQu extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Mañakuy Yupay';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Yupay ruway';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr Método Jurídico nisqa';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsQu extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Datos & Waqaychay';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Cache nisqa chuyanchay';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache allinta chuyanchasqa';
 
   @override
-  String get location => 'Location';
+  String get location => 'Tarikusqan';
 
   @override
-  String get language => 'Language';
+  String get language => 'Simi';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Simita akllay';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get systemDefault => 'Sistema Default nisqa';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Kunan Maypi kasqan (GPS) .';
 
   @override
   String get locationServiceDisabled =>
@@ -509,19 +509,19 @@ class AppLocalizationsQu extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Sobre';
 
   @override
   String get version => 'Ima niraq';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Sapanchasqa willakuy';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Serviciomanta kamachiykuna';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Ñoqaykuwan rimanakuy';
 
   @override
   String get rateApp => 'Tarifa App';

@@ -30,7 +30,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'סעטטינגס';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsYi extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'תפילה קאַלקולאַטיאָן';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'קאַלקולאַטיאָן מעטאַד';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'אַסר דזשוסטיק מעטאָד';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsYi extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'דאַטאַ & סטאָרידזש';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'קלאָר קאַש';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'קאַש קלירד הצלחה';
 
   @override
-  String get location => 'Location';
+  String get location => 'אָרט';
 
   @override
-  String get language => 'Language';
+  String get language => 'שפּראַך';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'אויסקלייַבן שפּראַך';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get systemDefault => 'סיסטעם פעליקייַט';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'קראַנט אָרט (GPS)';
 
   @override
   String get locationServiceDisabled => 'אָרט דינסט איז פאַרקריפּלט.';
@@ -507,19 +507,19 @@ class AppLocalizationsYi extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'וועגן';
 
   @override
   String get version => 'ווערסיע';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'פּריוואַטקייט פּאָליטיק';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'תּנאָים פון סערוויס';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'קאָנטאַקט אונדז';
 
   @override
   String get rateApp => 'קורס אַפּ';

@@ -30,7 +30,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => '설정';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => '기도 계산';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => '계산방법';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr 법률적 방법';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => '데이터 및 스토리지';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => '캐시 지우기';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => '캐시가 성공적으로 지워졌습니다.';
 
   @override
-  String get location => 'Location';
+  String get location => '위치';
 
   @override
-  String get language => 'Language';
+  String get language => '언어';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => '언어 선택';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get systemDefault => '시스템 기본값';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => '현재 위치(GPS)';
 
   @override
   String get locationServiceDisabled => '위치 서비스가 비활성화되었습니다.';
@@ -502,19 +502,19 @@ class AppLocalizationsKo extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => '소개';
 
   @override
   String get version => '버전';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => '개인 정보 보호 정책';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => '서비스 약관';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => '문의하기';
 
   @override
   String get rateApp => '앱 평가';

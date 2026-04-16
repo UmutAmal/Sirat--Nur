@@ -30,7 +30,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Eto';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsYo extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Iṣiro Adura';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Ilana Iṣiro';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr Juristic Ọna';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsYo extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Data & Ibi ipamọ';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Ko kaṣe kuro';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Kaṣe nu daradara';
 
   @override
-  String get location => 'Location';
+  String get location => 'Ipo';
 
   @override
-  String get language => 'Language';
+  String get language => 'Ede';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Yan Ede';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get systemDefault => 'Eto Aiyipada';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Ibi lọwọlọwọ (GPS)';
 
   @override
   String get locationServiceDisabled => 'Iṣẹ agbegbe jẹ alaabo.';
@@ -506,19 +506,19 @@ class AppLocalizationsYo extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Nipa';
 
   @override
   String get version => 'Ẹya';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Asiri Afihan';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Awọn ofin ti Service';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Kan si Wa';
 
   @override
   String get rateApp => 'Oṣuwọn App';

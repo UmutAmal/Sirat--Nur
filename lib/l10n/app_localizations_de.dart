@@ -49,13 +49,13 @@ class AppLocalizationsDe extends AppLocalizations {
       'Schalten Sie Tajweed und erweiterte Funktionen frei';
 
   @override
-  String get prayerCalculation => 'Gebetsberechnung';
+  String get prayerCalculation => 'Gebetszeiten-Berechnung';
 
   @override
   String get method => 'Berechnungsmethode';
 
   @override
-  String get madhab => 'Asr Juristische Methode';
+  String get madhab => 'Asr-Rechtsmethode';
 
   @override
   String get surahs => 'Suren';
@@ -510,7 +510,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get systemTheme => 'Systemthema';
 
   @override
-  String get about => 'Um';
+  String get about => 'Über';
 
   @override
   String get version => 'App-Version';

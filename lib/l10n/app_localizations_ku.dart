@@ -48,13 +48,13 @@ class AppLocalizationsKu extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Hesabkirina Nimêjê';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Rêbaza Hesabkirinê';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Rêbaza Hiqûqê ya Asr';
 
   @override
   String get surahs => 'Surahs';
@@ -94,19 +94,19 @@ class AppLocalizationsKu extends AppLocalizations {
   String get dataStorage => 'Data & Storage';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Cache paqij bike';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache bi serkeftî hate paqij kirin';
 
   @override
-  String get location => 'Location';
+  String get location => 'Cih';
 
   @override
-  String get language => 'Language';
+  String get language => 'Ziman';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Ziman hilbijêrin';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get systemDefault => 'System Default';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Cihê Niha (GPS)';
 
   @override
   String get locationServiceDisabled => 'Xizmeta cihan neçalak e.';
@@ -516,10 +516,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get privacyPolicy => 'Privacy Policy';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Mercên Xizmetê';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Têkilî Bi me re';
 
   @override
   String get rateApp => 'Rate App';

@@ -30,7 +30,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Igenamiterere';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsRw extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Kubara Amasengesho';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Uburyo bwo Kubara';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Uburyo bwa Asr Juristic';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsRw extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Ububiko & Ububiko';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Kuraho Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Ubwihisho bwakuweho neza';
 
   @override
-  String get location => 'Location';
+  String get location => 'Aho biherereye';
 
   @override
-  String get language => 'Language';
+  String get language => 'Ururimi';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Hitamo Ururimi';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get systemDefault => 'Sisitemu Mburabuzi';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Aho uherereye (GPS)';
 
   @override
   String get locationServiceDisabled => 'Serivisi yaho irahagarikwa.';
@@ -507,19 +507,19 @@ class AppLocalizationsRw extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Ibyerekeye';
 
   @override
   String get version => 'Inyandiko';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Politiki Yibanga';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Amasezerano ya serivisi';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Twandikire';
 
   @override
   String get rateApp => 'Igipimo cya porogaramu';

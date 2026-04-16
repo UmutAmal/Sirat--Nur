@@ -30,7 +30,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Stillingar';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsIs extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Bænaútreikningur';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Reikniaðferð';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr lögfræðiaðferð';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsIs extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Gögn og geymsla';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Hreinsaðu skyndiminni';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Skyndiminni var hreinsað';
 
   @override
-  String get location => 'Location';
+  String get location => 'Staðsetning';
 
   @override
-  String get language => 'Language';
+  String get language => 'Tungumál';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Veldu Tungumál';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get systemDefault => 'Kerfi Sjálfgefið';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Núverandi staðsetning (GPS)';
 
   @override
   String get locationServiceDisabled => 'Staðsetningarþjónusta er óvirk.';
@@ -507,19 +507,19 @@ class AppLocalizationsIs extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Um';
 
   @override
   String get version => 'Útgáfa';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Persónuverndarstefna';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Þjónustuskilmálar';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Hafðu samband';
 
   @override
   String get rateApp => 'Gefa app';

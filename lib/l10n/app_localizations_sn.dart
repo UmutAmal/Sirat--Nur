@@ -48,13 +48,13 @@ class AppLocalizationsSn extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Kuverenga munamato';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Maverengero eNzira';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr Juristic Nzira';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsSn extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Data & Kuchengeta';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Bvisa Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache yakapedzwa zvakanaka';
 
   @override
-  String get location => 'Location';
+  String get location => 'Nzvimbo';
 
   @override
-  String get language => 'Language';
+  String get language => 'Mutauro';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Sarudza Mutauro';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get systemDefault => 'System Default';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Nzvimbo Yazvino (GPS)';
 
   @override
   String get locationServiceDisabled => 'Sevhisi yenzvimbo yakadzimwa.';

@@ -30,7 +30,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Tautuhinga';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsMi extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Tatau Karakia';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Tikanga Tatau';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Tikanga Ture a Asr';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsMi extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Raraunga me te Rokiroki';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Ūkui Keteroki';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'I tutuki pai te keteroki';
 
   @override
-  String get location => 'Location';
+  String get location => 'Tauwāhi';
 
   @override
-  String get language => 'Language';
+  String get language => 'Reo';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Tīpakohia te Reo';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get systemDefault => 'Pūnaha Taunoa';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Wāhi o nāianei (GPS)';
 
   @override
   String get locationServiceDisabled => 'Kua monoa te ratonga tauwāhi.';
@@ -509,19 +509,19 @@ class AppLocalizationsMi extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Mō';
 
   @override
   String get version => 'Putanga';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Kaupapahere Tūmataiti';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Nga Ture Ratonga';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Whakapā mai';
 
   @override
   String get rateApp => 'Reiti App';

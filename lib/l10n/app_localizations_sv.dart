@@ -30,7 +30,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Inställningar';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsSv extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Bönberäkning';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Beräkningsmetod';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr juridisk metod';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsSv extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Data & Lagring';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Rensa cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cacheminnet rensades';
 
   @override
-  String get location => 'Location';
+  String get location => 'Plats';
 
   @override
-  String get language => 'Language';
+  String get language => 'Språk';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Välj Språk';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get systemDefault => 'System Standard';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Aktuell plats (GPS)';
 
   @override
   String get locationServiceDisabled => 'Platstjänsten är inaktiverad.';
@@ -506,19 +506,19 @@ class AppLocalizationsSv extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Om';
 
   @override
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Sekretesspolicy';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Användarvillkor';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Kontakta oss';
 
   @override
   String get rateApp => 'Betygsätt App';

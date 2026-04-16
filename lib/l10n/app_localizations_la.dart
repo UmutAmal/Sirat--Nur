@@ -30,7 +30,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Occasus';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsLa extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Oratio Calculus';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Calculus Methodus';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr Juristica Methodus';
 
   @override
   String get surahs => 'Surahs';
@@ -94,19 +94,19 @@ class AppLocalizationsLa extends AppLocalizations {
   String get dataStorage => 'Data & Storage';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Patet Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache purgata feliciter';
 
   @override
-  String get location => 'Location';
+  String get location => 'Locus';
 
   @override
-  String get language => 'Language';
+  String get language => 'Linguae';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Linguae Selectae';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -507,7 +507,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'De';
 
   @override
   String get version => 'Version';
@@ -516,7 +516,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get privacyPolicy => 'Privacy Policy';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Termini servitii';
 
   @override
   String get contactUs => 'Contact Us';

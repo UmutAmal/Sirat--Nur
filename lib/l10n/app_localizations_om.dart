@@ -30,7 +30,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Sajoo';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsOm extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Shallaggii Kadhannaa';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Mala Shallaggii';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr Mala Seeraa';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsOm extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Daataa fi Kuusaa';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Cache Qulqulleessi';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache milkaa\'inaan qulqullaa\'e';
 
   @override
-  String get location => 'Location';
+  String get location => 'Bakka';
 
   @override
-  String get language => 'Language';
+  String get language => 'Afaan';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Afaan Filadhu';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get systemDefault => 'Sirna Durtii';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Bakka Ammaa (GPS) .';
 
   @override
   String get locationServiceDisabled =>
@@ -508,19 +508,19 @@ class AppLocalizationsOm extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Waa\'ee';
 
   @override
   String get version => 'Gosa';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Imaammata Dhuunfaa';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Haala Tajaajilaa';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Nu Qunnamaa';
 
   @override
   String get rateApp => 'Sadarkaa App';

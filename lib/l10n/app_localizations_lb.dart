@@ -30,7 +30,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Astellungen';
 
   @override
   String get nextPrayer => 'Next Prayer';
@@ -48,13 +48,13 @@ class AppLocalizationsLb extends AppLocalizations {
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
 
   @override
-  String get prayerCalculation => 'Prayer Calculation';
+  String get prayerCalculation => 'Gebied Berechnung';
 
   @override
-  String get method => 'Calculation Method';
+  String get method => 'Berechnung Method';
 
   @override
-  String get madhab => 'Asr Juristic Method';
+  String get madhab => 'Asr Juristesch Method';
 
   @override
   String get surahs => 'Surahs';
@@ -91,22 +91,22 @@ class AppLocalizationsLb extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Daten & Stockage';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Cache läschen';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache erfollegräich geläscht';
 
   @override
   String get location => 'Location';
 
   @override
-  String get language => 'Language';
+  String get language => 'Sprooch';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Wielt Sprooch';
 
   @override
   String get searchLanguage => 'Search 180+ languages...';
@@ -115,7 +115,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get systemDefault => 'System Standard';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Aktuelle Location (GPS)';
 
   @override
   String get locationServiceDisabled => 'Location Service ass behënnert.';
@@ -507,19 +507,19 @@ class AppLocalizationsLb extends AppLocalizations {
   String get systemTheme => 'System Theme';
 
   @override
-  String get about => 'About';
+  String get about => 'Iwwer';
 
   @override
   String get version => 'Versioun';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Privatsphär Politik';
 
   @override
-  String get termsOfService => 'Terms of Service';
+  String get termsOfService => 'Konditioune vum Service';
 
   @override
-  String get contactUs => 'Contact Us';
+  String get contactUs => 'Kontaktéiert eis';
 
   @override
   String get rateApp => 'Bewäertung App';
