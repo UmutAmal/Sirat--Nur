@@ -1278,7 +1278,7 @@ class AppLocalizationsFy extends AppLocalizations {
       'Dizze build omfettet de fereaske Sukun soundscape-aktiva noch net.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Gebed foltôging';
 
   @override
   String get streaks => 'Strepen';

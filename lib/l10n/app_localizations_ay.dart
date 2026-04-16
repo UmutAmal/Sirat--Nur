@@ -1301,7 +1301,7 @@ class AppLocalizationsAy extends AppLocalizations {
       'Aka lurawix janiw Sukun soundscape ukan wakiskir yänakap uñt’aykiti.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Oracion tukuyaña';
 
   @override
   String get streaks => 'Rayas ukanakaw utji';

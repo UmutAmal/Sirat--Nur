@@ -1282,7 +1282,7 @@ class AppLocalizationsBm extends AppLocalizations {
       'Nin jɔli in tɛ Sukun mankan nafolo wajibiyalenw Dòn a la fɔlɔ.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Delili dafali';
 
   @override
   String get streaks => 'Streaks (Sɛbɛnw).';

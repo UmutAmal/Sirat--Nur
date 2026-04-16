@@ -1280,7 +1280,7 @@ class AppLocalizationsHu extends AppLocalizations {
       'Ez a build még nem tartalmazza a szükséges Sukun soundscape eszközöket.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Az ima befejezése';
 
   @override
   String get streaks => 'Csíkok';

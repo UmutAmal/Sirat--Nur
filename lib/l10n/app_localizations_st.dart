@@ -1283,7 +1283,7 @@ class AppLocalizationsSt extends AppLocalizations {
       'Moaho ona ha o kenyelletse matlotlo a hlokahalang a Sukun soundscape hajoale.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Ho Phetha Thapelo';
 
   @override
   String get streaks => 'Methapo';

@@ -1278,7 +1278,7 @@ class AppLocalizationsBn extends AppLocalizations {
       'এই বিল্ডটিতে এখনও প্রয়োজনীয় Sukun সাউন্ডস্কেপ সম্পদ অন্তর্ভুক্ত করা হয়নি।';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'প্রার্থনা সমাপ্তি';
 
   @override
   String get streaks => 'স্ট্রিকস';

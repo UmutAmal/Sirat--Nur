@@ -1280,7 +1280,7 @@ class AppLocalizationsEu extends AppLocalizations {
       'Eraikuntza honek oraindik ez ditu Sukunen soinu-paisaia-aktiborik behar.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Otoitza Osatzea';
 
   @override
   String get streaks => 'Marrak';

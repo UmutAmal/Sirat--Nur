@@ -1278,7 +1278,7 @@ class AppLocalizationsKu extends AppLocalizations {
       'Ev avahî hê jî hebûnên dengê Sukun-ê yên pêwîst nagire.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Temamkirina Nimêjê';
 
   @override
   String get streaks => 'Streaks';

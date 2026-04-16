@@ -1280,7 +1280,7 @@ class AppLocalizationsEt extends AppLocalizations {
       'See konstruktsioon ei sisalda veel vajalikke Sukuni helimaastiku varasid.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Palve lõpetamine';
 
   @override
   String get streaks => 'Triibud';

@@ -1280,7 +1280,7 @@ class AppLocalizationsTh extends AppLocalizations {
       'โครงสร้างนี้ยังไม่รวมเนื้อหาด้านเสียงของ Sukun ที่จำเป็น';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'สวดมนต์เสร็จ';
 
   @override
   String get streaks => 'มีลายทาง';

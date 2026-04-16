@@ -1278,7 +1278,7 @@ class AppLocalizationsSv extends AppLocalizations {
       'Den här konstruktionen inkluderar inte de nödvändiga Sukun ljudlandskapstillgångarna ännu.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Bön avslutning';
 
   @override
   String get streaks => 'Strimmor';

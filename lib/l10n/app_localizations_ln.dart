@@ -1281,7 +1281,7 @@ class AppLocalizationsLn extends AppLocalizations {
       'Build oyo ezali naino te na ba biens ya surface soundscape ya Sukun oyo esengeli.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Kosilisa libondeli';
 
   @override
   String get streaks => 'Ba streaks ya ba streaks';

@@ -1280,7 +1280,7 @@ class AppLocalizationsTk extends AppLocalizations {
       'Bu gurluş entek zerur Sukun ses keşbini öz içine almaýar.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Namazyň tamamlanmagy';
 
   @override
   String get streaks => 'Köçeler';

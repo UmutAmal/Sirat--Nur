@@ -1279,7 +1279,7 @@ class AppLocalizationsKn extends AppLocalizations {
       'ಈ ಬಿಲ್ಡ್ ಇನ್ನೂ ಅಗತ್ಯವಿರುವ ಸುಕುನ್ ಸೌಂಡ್‌ಸ್ಕೇಪ್ ಸ್ವತ್ತುಗಳನ್ನು ಒಳಗೊಂಡಿಲ್ಲ.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'ಪ್ರಾರ್ಥನೆ ಮುಕ್ತಾಯ';
 
   @override
   String get streaks => 'ಗೆರೆಗಳು';

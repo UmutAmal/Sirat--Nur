@@ -1282,7 +1282,7 @@ class AppLocalizationsPl extends AppLocalizations {
       'Ta kompilacja nie zawiera jeszcze wymaganych zasobów dźwiękowych Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Zakończenie modlitwy';
 
   @override
   String get streaks => 'Pasemko';

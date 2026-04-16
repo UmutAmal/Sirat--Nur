@@ -1284,7 +1284,7 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Kini nga pagtukod wala pa maglakip sa gikinahanglan nga Sukun soundscape asset pa.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Pagkompleto sa Pag-ampo';
 
   @override
   String get streaks => 'Mga streak';

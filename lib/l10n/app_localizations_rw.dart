@@ -1277,7 +1277,7 @@ class AppLocalizationsRw extends AppLocalizations {
       'Iyi nyubako ntabwo ikubiyemo umutungo ukenewe wa Sukun amajwi.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Kurangiza amasengesho';
 
   @override
   String get streaks => 'Inzira';

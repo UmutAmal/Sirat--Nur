@@ -1281,7 +1281,7 @@ class AppLocalizationsSk extends AppLocalizations {
       'Táto zostava zatiaľ neobsahuje požadované prvky zvukovej scény Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Dokončenie modlitby';
 
   @override
   String get streaks => 'Pruhy';

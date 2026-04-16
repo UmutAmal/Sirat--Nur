@@ -1280,7 +1280,7 @@ class AppLocalizationsVi extends AppLocalizations {
       'Bản dựng này chưa bao gồm nội dung cảnh quan âm thanh Sukun cần thiết.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Hoàn thành các buổi cầu nguyện';
 
   @override
   String get streaks => 'Vệt';

@@ -1272,7 +1272,7 @@ class AppLocalizationsHe extends AppLocalizations {
       'המבנה הזה עדיין לא כולל את הנכסים הדרושים לנוף הסאונד של Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'השלמת התפילות';
 
   @override
   String get streaks => 'פסים';

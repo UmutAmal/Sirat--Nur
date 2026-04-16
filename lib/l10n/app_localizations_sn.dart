@@ -1276,7 +1276,7 @@ class AppLocalizationsSn extends AppLocalizations {
       'Ichi chivakwa hachisanganisi chinodiwa Sukun soundscape assets parizvino.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Munamato Wapera';
 
   @override
   String get streaks => 'Mitsetse';

@@ -1280,7 +1280,7 @@ class AppLocalizationsSr extends AppLocalizations {
       'Ова верзија још увек не укључује потребна средства Сукун звучне сцене.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Завршетак молитве';
 
   @override
   String get streaks => 'Стреакс';

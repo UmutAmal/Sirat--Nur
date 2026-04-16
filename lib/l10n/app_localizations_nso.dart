@@ -1293,7 +1293,7 @@ class AppLocalizationsNso extends AppLocalizations {
       'Kago ye ga e akaretše dithoto tše di nyakegago tša sebopego sa modumo sa Sukun go fihla ga bjale.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Phetho ya Thapelo';
 
   @override
   String get streaks => 'Methaladi';

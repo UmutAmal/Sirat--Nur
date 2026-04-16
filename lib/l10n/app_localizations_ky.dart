@@ -1283,7 +1283,7 @@ class AppLocalizationsKy extends AppLocalizations {
       'Бул куруу талап кылынган Сукун үн пейзажынын активдерин камтыбайт.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Намаз бүтүрүү';
 
   @override
   String get streaks => 'Streaks';

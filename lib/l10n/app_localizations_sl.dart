@@ -1283,7 +1283,7 @@ class AppLocalizationsSl extends AppLocalizations {
       'Ta zgradba še ne vključuje zahtevanih sredstev zvočne pokrajine Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Dokončanje molitve';
 
   @override
   String get streaks => 'Proge';

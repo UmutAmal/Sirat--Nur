@@ -1281,7 +1281,7 @@ class AppLocalizationsXh extends AppLocalizations {
       'Olu lwakhiwo alubandakanyi i-asethi yesandi sesandi esifunekayo seSukun okwangoku.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Ukugqitywa komthandazo';
 
   @override
   String get streaks => 'Imivimbo';

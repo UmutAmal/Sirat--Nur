@@ -1280,7 +1280,7 @@ class AppLocalizationsLb extends AppLocalizations {
       'Dëse Bau enthält nach net déi erfuerderlech Sukun Soundscape Verméigen.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Gebiet Ofschloss';
 
   @override
   String get streaks => 'Sträifen';

@@ -1276,7 +1276,7 @@ class AppLocalizationsNe extends AppLocalizations {
       'यो निर्माणले आवश्यक Sukun soundscape सम्पत्तिहरू समावेश गर्दैन।';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'प्रार्थना समाप्ति';
 
   @override
   String get streaks => 'स्ट्रेक्स';

@@ -1288,7 +1288,7 @@ class AppLocalizationsEl extends AppLocalizations {
       'Αυτή η έκδοση δεν περιλαμβάνει ακόμη τα απαιτούμενα στοιχεία ήχου Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Ολοκλήρωση προσευχής';
 
   @override
   String get streaks => 'Σειρές';

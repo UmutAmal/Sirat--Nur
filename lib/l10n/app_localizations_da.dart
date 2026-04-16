@@ -1280,7 +1280,7 @@ class AppLocalizationsDa extends AppLocalizations {
       'Denne build inkluderer endnu ikke de nødvendige Sukun soundscape-aktiver.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Fuldførelse af bøn';
 
   @override
   String get streaks => 'Striber';

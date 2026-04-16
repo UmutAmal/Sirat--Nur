@@ -1288,7 +1288,7 @@ class AppLocalizationsLus extends AppLocalizations {
       'He build hian Sukun soundscape assets mamawh chu a la huam lo.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Tawngtai zawhfel';
 
   @override
   String get streaks => 'Streaks a awm';

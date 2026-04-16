@@ -1280,7 +1280,7 @@ class AppLocalizationsTe extends AppLocalizations {
       'ఈ బిల్డ్‌లో ఇంకా అవసరమైన సుకున్ సౌండ్‌స్కేప్ ఆస్తులు లేవు.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'ప్రార్థన పూర్తి';
 
   @override
   String get streaks => 'గీతలు';

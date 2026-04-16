@@ -1278,7 +1278,7 @@ class AppLocalizationsSi extends AppLocalizations {
       'මෙම ගොඩනැගීමට තවමත් අවශ්‍ය සුකුන් ශබ්ද දර්ශන වත්කම් ඇතුළත් නොවේ.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'යාච්ඤාව සම්පූර්ණ කිරීම';
 
   @override
   String get streaks => 'ඉරි';

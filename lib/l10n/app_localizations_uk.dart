@@ -1281,7 +1281,7 @@ class AppLocalizationsUk extends AppLocalizations {
       'Ця збірка ще не містить необхідних ресурсів звукового ландшафту Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Завершення молитви';
 
   @override
   String get streaks => 'Смуги';

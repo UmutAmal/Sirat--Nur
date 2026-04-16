@@ -1275,7 +1275,7 @@ class AppLocalizationsKk extends AppLocalizations {
       'Бұл құрастыруға әлі қажет Sukun дыбыстық пейзаж активтері кірмейді.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Намаздың аяқталуы';
 
   @override
   String get streaks => 'Жолақтар';

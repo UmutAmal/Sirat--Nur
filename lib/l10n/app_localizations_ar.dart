@@ -1275,7 +1275,7 @@ class AppLocalizationsAr extends AppLocalizations {
       'لا يتضمن هذا الإصدار أصول Sukun soundscape المطلوبة حتى الآن.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'إتمام الصلوات';
 
   @override
   String get streaks => 'سلاسل مستمرة';

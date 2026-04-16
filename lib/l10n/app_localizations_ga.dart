@@ -1280,7 +1280,7 @@ class AppLocalizationsGa extends AppLocalizations {
       'Níl na sócmhainní fuaimdhreacha Sukun riachtanach san áireamh fós sa tógáil seo.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Críochnú Paidir';
 
   @override
   String get streaks => 'Sruthanna';

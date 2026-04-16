@@ -1279,7 +1279,7 @@ class AppLocalizationsEo extends AppLocalizations {
       'Ĉi tiu konstruo ankoraŭ ne inkluzivas la bezonatajn Sukun-sonpejzaĝajn aktivaĵojn.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Preĝo Fino';
 
   @override
   String get streaks => 'Strioj';

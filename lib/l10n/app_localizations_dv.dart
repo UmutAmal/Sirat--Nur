@@ -1287,7 +1287,7 @@ class AppLocalizationsDv extends AppLocalizations {
       'މި ބިލްޑްގައި އަދި ބޭނުންވާ ސުކޫން ސައުންޑްސްކޭޕް އެސެޓްތައް ހިމަނާފައެއް ނުވެއެވެ.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'ނަމާދު ފުރިހަމަކުރުން';
 
   @override
   String get streaks => 'ސްޓްރީކްސް އެވެ';

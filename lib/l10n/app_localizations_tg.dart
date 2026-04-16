@@ -1278,7 +1278,7 @@ class AppLocalizationsTg extends AppLocalizations {
       'Ин сохтмон дороиҳои зарурии садои Сукунро ҳанӯз дар бар намегирад.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Анҷоми намоз';
 
   @override
   String get streaks => 'Стрейкҳо';

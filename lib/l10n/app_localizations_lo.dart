@@ -1277,7 +1277,7 @@ class AppLocalizationsLo extends AppLocalizations {
       'ການກໍ່ສ້າງນີ້ບໍ່ໄດ້ລວມເອົາຊັບສິນ Sukun soundscape ທີ່ຕ້ອງການເທື່ອ.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'ການອະທິຖານສໍາເລັດ';
 
   @override
   String get streaks => 'ສາຍ';

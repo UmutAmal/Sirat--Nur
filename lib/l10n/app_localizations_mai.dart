@@ -1279,7 +1279,7 @@ class AppLocalizationsMai extends AppLocalizations {
       'एहि बिल्ड मे एखन धरि आवश्यक सुकुन साउंडस्केप संपत्ति शामिल नहि अछि ।';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'प्रार्थना समापन';
 
   @override
   String get streaks => 'लकीर';

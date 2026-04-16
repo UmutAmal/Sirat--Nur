@@ -1279,7 +1279,7 @@ class AppLocalizationsKri extends AppLocalizations {
       'Dis bild nɔ inklud di Sukun sawnd skay asɛt dɛn we dɛn nid yet.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Fɔ Kɔmplit di Prea';
 
   @override
   String get streaks => 'Strik dɛn';

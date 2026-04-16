@@ -1278,7 +1278,7 @@ class AppLocalizationsHi extends AppLocalizations {
       'इस बिल्ड में अभी तक आवश्यक सुकुन साउंडस्केप संपत्तियां शामिल नहीं हैं।';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'नमाज़ पूर्णता';
 
   @override
   String get streaks => 'श्रृंखलाएँ';

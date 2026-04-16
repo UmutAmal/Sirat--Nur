@@ -1276,7 +1276,7 @@ class AppLocalizationsTt extends AppLocalizations {
       'Бу корылма әле кирәкле Сукун тавыш күренешләрен кертми.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Дога тәмамлау';
 
   @override
   String get streaks => 'Стрекс';

@@ -1278,7 +1278,7 @@ class AppLocalizationsPa extends AppLocalizations {
       'ਇਸ ਬਿਲਡ ਵਿੱਚ ਹਾਲੇ ਲੋੜੀਂਦੀ Sukun ਸਾਊਂਡਸਕੇਪ ਸੰਪਤੀਆਂ ਸ਼ਾਮਲ ਨਹੀਂ ਹਨ।';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'ਪ੍ਰਾਰਥਨਾ ਸੰਪੂਰਨਤਾ';
 
   @override
   String get streaks => 'ਸਟ੍ਰੀਕਸ';

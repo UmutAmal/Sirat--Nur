@@ -1281,7 +1281,7 @@ class AppLocalizationsHr extends AppLocalizations {
       'Ova verzija još ne uključuje potrebne Sukun zvučne elemente.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Završetak molitve';
 
   @override
   String get streaks => 'Pruge';

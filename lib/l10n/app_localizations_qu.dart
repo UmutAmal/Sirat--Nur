@@ -1283,7 +1283,7 @@ class AppLocalizationsQu extends AppLocalizations {
       'Kay ruwayqa manaraqmi Sukun soundscape kaqpa mañasqa kaqninkunata churanchu.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Mañakuy Tukuchiy';
 
   @override
   String get streaks => 'Rayakuna';

@@ -1286,7 +1286,7 @@ class AppLocalizationsDe extends AppLocalizations {
       'Dieser Build enthält noch nicht die erforderlichen Sukun-Soundscape-Assets.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Gebetsabschluss';
 
   @override
   String get streaks => 'Serien';

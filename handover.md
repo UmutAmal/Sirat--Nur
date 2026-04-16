@@ -8099,3 +8099,46 @@
 ### Final Doğrulama Eki
 - Commit oncesi son kosuda `flutter analyze` PASS olarak tamamlandi.
 - Commit oncesi son kosuda `flutter test` PASS (`384/384`) olarak tamamlandi.
+
+## 2026-04-16 TUR-214 — Localize Analytics Prayer Completion Label
+
+### Yapılan İşlem
+- `prayerCompletion` anahtari korumali ARB batch'i ile genis locale kumesinde lokalize edildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- `tool\translate_arb_keys.dart` single-line guard listesine `prayerCompletion` eklendi.
+- `test\arb_ui_localization_test.dart` analytics/zakat priority locale guard kapsaminda `prayerCompletion` degerini kontrol ediyor.
+- `test\translate_arb_keys_test.dart` multiline analytics label output testine `prayerCompletion` senaryosu eklendi.
+- Priority locale kalite gecisinde genel "dua/prayer" anlamina kayan degerler namaz tamamlama baglamina uygun sekilde elle duzeltildi: DE, FR, ES, AR, HI, ID, PT, RU, ZH, ZH_CN, ZH_TW, JA, KO, NL, IT, DA, HE, NB, NN, NO, VI.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\analytics\analytics_page.dart:49` analytics ekraninda `l10n.prayerCompletion` basligini gosteriyor.
+- TUR-214 oncesi `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb:615` degeri "Prayer Completion" iken DE/FR/ES/AR/HI/ID/PT/RU/ZH gibi priority locale dosyalarinda ayni Ingilizce deger kaliyordu.
+- Kök risk, kullaniciya gorunen analytics basliginin tam lokalizasyon zincirine girmemesi ve ceviri aracinin tek satir UI etiketlerinde aciklama/newline uretme ihtimaliydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Priority locale setinde analytics "Prayer Completion" Ingilizce fallback riski kapandi.
+- `prayerCompletion` fallback sayisi `194 -> 63` seviyesine indi.
+- Kalan fallback'ler Google ceviri destegi olmayan veya guvenli aday uretilemeyen nadir/legacy locale grubunda birakildi; dini UI etiketi uydurulmadi.
+- Tek satir guard'i ile gelecekteki batch debris/newline riski azaltildi.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\features\analytics\analytics_page_test.dart` PASS (`50/50`)
+- `git diff --check` PASS (yalnizca mevcut Windows CRLF uyarilari)
+- `flutter analyze` PASS
+- `flutter test` PASS (`384/384`)
+- `prayerCompletion` single-line taramasi PASS
+
+### Risk Değişimi
+- Priority locale analytics prayer completion fallback riski: `12/25 -> 2/25`
+- Tum locale setinde analytics prayer completion fallback riski: `12/25 -> 6/25`
+
+### Sonraki Adım
+- Sonraki dongude kullaniciya gorunen kalan priority fallback'lerden `rawatib`, `fastingDebt`, `qiblaAligned`, `qiblaCalibration`, `dailyChecklist`, `dailyProgress` veya aktif sayfalarda kullanilan benzer anahtarlar arasindan en yuksek etkili tek yuzeyi sec.

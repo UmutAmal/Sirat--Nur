@@ -1281,7 +1281,7 @@ class AppLocalizationsLv extends AppLocalizations {
       'Šajā būvniecībā vēl nav iekļauti nepieciešamie Sukun skaņas ainavas līdzekļi.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Lūgšanas pabeigšana';
 
   @override
   String get streaks => 'Svītras';

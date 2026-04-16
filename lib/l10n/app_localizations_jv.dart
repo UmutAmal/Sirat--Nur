@@ -1276,7 +1276,7 @@ class AppLocalizationsJv extends AppLocalizations {
       'Bangunan iki durung kalebu aset soundscape Sukun sing dibutuhake.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Pandonga Rampung';
 
   @override
   String get streaks => 'streak';

@@ -1284,7 +1284,7 @@ class AppLocalizationsZu extends AppLocalizations {
       'Lesi sakhiwo asifaki amafa we-Sukun soundscape okwamanje.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Ukuqedwa Komthandazo';
 
   @override
   String get streaks => 'Imivimbo';

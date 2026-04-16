@@ -1278,7 +1278,7 @@ class AppLocalizationsFa extends AppLocalizations {
       'این ساخت هنوز شامل دارایی های صوتی Sukun مورد نیاز نیست.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'اتمام نماز';
 
   @override
   String get streaks => 'رگه ها';

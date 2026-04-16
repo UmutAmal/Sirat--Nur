@@ -1280,7 +1280,7 @@ class AppLocalizationsMl extends AppLocalizations {
       'ഈ ബിൽഡിൽ ഇതുവരെ ആവശ്യമായ സുകുൻ സൗണ്ട്‌സ്‌കേപ്പ് അസറ്റുകൾ ഉൾപ്പെട്ടിട്ടില്ല.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'പ്രാർത്ഥന പൂർത്തീകരണം';
 
   @override
   String get streaks => 'വരകൾ';

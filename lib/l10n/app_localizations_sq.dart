@@ -1282,7 +1282,7 @@ class AppLocalizationsSq extends AppLocalizations {
       'Ky ndërtim nuk përfshin ende asetet e kërkuara të pamjes zanore të Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Përfundimi i lutjes';
 
   @override
   String get streaks => 'Vijat';

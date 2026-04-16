@@ -1284,7 +1284,7 @@ class AppLocalizationsOr extends AppLocalizations {
       'ଏହି ବିଲ୍ଡ ଏପର୍ଯ୍ୟନ୍ତ ଆବଶ୍ୟକ ସୁକୁନ୍ ସାଉଣ୍ଡସ୍କେପ୍ ସମ୍ପତ୍ତି ଅନ୍ତର୍ଭୂକ୍ତ କରେ ନାହିଁ |';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'ପ୍ରାର୍ଥନା ସମାପ୍ତି |';
 
   @override
   String get streaks => 'ଷ୍ଟ୍ରିକ୍ସ';

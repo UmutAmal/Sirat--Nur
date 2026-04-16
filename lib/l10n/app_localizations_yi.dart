@@ -1279,7 +1279,7 @@ class AppLocalizationsYi extends AppLocalizations {
       'דער בויען טוט נישט אַרייַננעמען די פארלאנגט סוקונ סאָונדסקאַפּע אַסעץ נאָך.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'תפילה קאַמפּלישאַן';
 
   @override
   String get streaks => 'סטרייקס';

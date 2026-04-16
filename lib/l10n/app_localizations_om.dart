@@ -1283,7 +1283,7 @@ class AppLocalizationsOm extends AppLocalizations {
       'Ijaarsi kun hanga ammaatti qabeenya Sukun soundscape barbaachisu hin dabalatu.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Xumura Kadhannaa';
 
   @override
   String get streaks => 'Streaks kan jedhu';

@@ -1278,7 +1278,7 @@ class AppLocalizationsHt extends AppLocalizations {
       'Konstwiksyon sa a pa gen ladann byen Sukun yo obligatwa yo ankò.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Konplete Lapriyè';
 
   @override
   String get streaks => 'Streaks';

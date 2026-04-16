@@ -1277,7 +1277,7 @@ class AppLocalizationsPs extends AppLocalizations {
       'په دې جوړونه کې تر اوسه د Sukun soundscape اثاثې شاملې ندي.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'د لمانځه تکمیل';
 
   @override
   String get streaks => 'سټریکس';

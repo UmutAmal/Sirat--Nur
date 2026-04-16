@@ -1284,7 +1284,7 @@ class AppLocalizationsGd extends AppLocalizations {
       'Chan eil an togail seo a’ toirt a-steach na maoinean cruth-fuaim Sukun a tha a dhìth fhathast.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Crìochnachadh Ùrnaigh';
 
   @override
   String get streaks => 'Sruthan';

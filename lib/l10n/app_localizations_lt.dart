@@ -1281,7 +1281,7 @@ class AppLocalizationsLt extends AppLocalizations {
       'Į šią konstrukciją dar neįtraukti reikiami „Sukun soundscape“ ištekliai.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Maldos užbaigimas';
 
   @override
   String get streaks => 'Dryžiai';

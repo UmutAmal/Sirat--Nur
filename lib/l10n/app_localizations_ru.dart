@@ -1284,7 +1284,7 @@ class AppLocalizationsRu extends AppLocalizations {
       'Эта сборка еще не включает необходимые звуковые ресурсы Сукуна.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Выполнение намазов';
 
   @override
   String get streaks => 'Серии';

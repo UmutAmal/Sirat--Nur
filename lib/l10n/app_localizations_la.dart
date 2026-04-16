@@ -1279,7 +1279,7 @@ class AppLocalizationsLa extends AppLocalizations {
       'Hoc constructum Sukun soundscape bona nondum requiritur.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Perfectio orationis';
 
   @override
   String get streaks => 'Striae';

@@ -1281,7 +1281,7 @@ class AppLocalizationsSw extends AppLocalizations {
       'Muundo huu bado haujumuishi vipengee vinavyohitajika vya mwonekano wa sauti wa Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Kukamilika kwa Maombi';
 
   @override
   String get streaks => 'Michirizi';

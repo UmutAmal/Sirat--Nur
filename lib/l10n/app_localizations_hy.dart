@@ -1284,7 +1284,7 @@ class AppLocalizationsHy extends AppLocalizations {
       'Այս կառուցումը դեռ չի ներառում Sukun ձայնային պատկերի պահանջվող ակտիվները:';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Աղոթքի ավարտ';
 
   @override
   String get streaks => 'Շերտեր';

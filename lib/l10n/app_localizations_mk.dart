@@ -1279,7 +1279,7 @@ class AppLocalizationsMk extends AppLocalizations {
       'Оваа конструкција сè уште не ги вклучува потребните средства за звучен пејзаж на Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Завршување на молитвата';
 
   @override
   String get streaks => 'ленти';

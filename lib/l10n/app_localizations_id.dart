@@ -1279,7 +1279,7 @@ class AppLocalizationsId extends AppLocalizations {
       'Pembangunan ini belum mencakup aset soundscape Sukun yang dibutuhkan.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Penyelesaian salat';
 
   @override
   String get streaks => 'Rangkaian';

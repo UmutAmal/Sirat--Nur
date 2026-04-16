@@ -1280,7 +1280,7 @@ class AppLocalizationsNo extends AppLocalizations {
       'Denne konstruksjonen inkluderer ikke de nødvendige Sukun-lydbildemidlene ennå.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Fullførte bønner';
 
   @override
   String get streaks => 'Streker';

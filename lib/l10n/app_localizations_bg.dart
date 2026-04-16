@@ -1287,7 +1287,7 @@ class AppLocalizationsBg extends AppLocalizations {
       'Тази компилация все още не включва необходимите активи за звуков пейзаж на Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Завършване на молитвата';
 
   @override
   String get streaks => 'ивици';

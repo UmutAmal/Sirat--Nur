@@ -1281,7 +1281,7 @@ class AppLocalizationsKm extends AppLocalizations {
       'ការស្ថាបនានេះមិនទាន់រួមបញ្ចូលទ្រព្យសម្បត្តិ Sukun soundscape ដែលត្រូវការនៅឡើយទេ។';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'ការបញ្ចប់ការអធិស្ឋាន';
 
   @override
   String get streaks => 'ស្ទ្រីម';

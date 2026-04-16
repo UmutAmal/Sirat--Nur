@@ -1278,7 +1278,7 @@ class AppLocalizationsAs extends AppLocalizations {
       'এই বিল্ডত এতিয়াও প্ৰয়োজনীয় সুকুন চাউণ্ডস্কেপ সম্পত্তি অন্তৰ্ভুক্ত কৰা হোৱা নাই।';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'প্ৰাৰ্থনা সম্পূৰ্ণ কৰা';
 
   @override
   String get streaks => 'ষ্ট্ৰেইক';

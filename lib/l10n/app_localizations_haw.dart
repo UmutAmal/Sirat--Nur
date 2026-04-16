@@ -1279,7 +1279,7 @@ class AppLocalizationsHaw extends AppLocalizations {
       'ʻAʻole i hoʻokomo ʻia kēia kūkulu i nā waiwai Sukun soundscape pono.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Pau ka pule';
 
   @override
   String get streaks => 'Kahakaha';

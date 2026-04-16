@@ -1280,7 +1280,7 @@ class AppLocalizationsSu extends AppLocalizations {
       'Wangunan ieu henteu kalebet aset soundscape Sukun anu diperyogikeun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Doa réngsé';
 
   @override
   String get streaks => 'Gurat-gurat';

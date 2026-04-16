@@ -1278,7 +1278,7 @@ class AppLocalizationsUr extends AppLocalizations {
       'اس تعمیر میں ابھی تک مطلوبہ Sukun soundscape اثاثے شامل نہیں ہیں۔';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'نماز کی تکمیل';
 
   @override
   String get streaks => 'لکیریں';

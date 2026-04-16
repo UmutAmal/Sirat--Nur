@@ -263,6 +263,7 @@ void main() {
       () {
         const localizedKeys = [
           'calculateZakat',
+          'prayerCompletion',
           'streaks',
           'dayStreak',
           'bestStreak',

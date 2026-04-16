@@ -1284,7 +1284,7 @@ class AppLocalizationsTa extends AppLocalizations {
       'இந்தக் கட்டமைப்பில் இன்னும் தேவையான சுகுன் சவுண்ட்ஸ்கேப் சொத்துக்கள் இல்லை.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'பிரார்த்தனை நிறைவு';
 
   @override
   String get streaks => 'கோடுகள்';

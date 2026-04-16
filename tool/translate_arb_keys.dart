@@ -385,6 +385,7 @@ bool _mustStaySingleLine(String key) {
       key == 'chatbotGreeting' ||
       key == 'chatbotHint' ||
       key == 'chatbotThinking' ||
+      key == 'prayerCompletion' ||
       key == 'streaks' ||
       key == 'dayStreak' ||
       key == 'chatbotOfflineSwitched' ||

@@ -1264,7 +1264,7 @@ class AppLocalizationsKo extends AppLocalizations {
       '이 빌드에는 아직 필수 Sukun 사운드스케이프 자산이 포함되어 있지 않습니다.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => '예배 완료도';
 
   @override
   String get streaks => '줄무늬';

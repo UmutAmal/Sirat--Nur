@@ -1284,7 +1284,7 @@ class AppLocalizationsHmn extends AppLocalizations {
       'Qhov kev tsim no tsis suav nrog Sukun soundscape cov cuab tam tseem ceeb.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Kev thov Vajtswv tiav';
 
   @override
   String get streaks => 'Streaks';

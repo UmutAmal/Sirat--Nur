@@ -1283,7 +1283,7 @@ class AppLocalizationsNl extends AppLocalizations {
       'Deze build bevat nog niet de vereiste Sukun-soundscape-items.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Voltooide gebeden';
 
   @override
   String get streaks => 'Strepen';

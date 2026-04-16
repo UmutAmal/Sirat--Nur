@@ -1278,7 +1278,7 @@ class AppLocalizationsIg extends AppLocalizations {
       'Ihe owuwu a agụnyeghị akụ mpaghara ụda Sukun achọrọ.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Emecha ekpere';
 
   @override
   String get streaks => 'Egwu';

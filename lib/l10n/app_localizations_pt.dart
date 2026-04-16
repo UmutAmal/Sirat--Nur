@@ -1283,7 +1283,7 @@ class AppLocalizationsPt extends AppLocalizations {
       'Esta compilação ainda não inclui os recursos de paisagem sonora Sukun necessários.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Orações concluídas';
 
   @override
   String get streaks => 'Sequências';

@@ -1283,7 +1283,7 @@ class AppLocalizationsMi extends AppLocalizations {
       'Ko tenei hanga kaore ano kia uru ki nga rawa o Sukun soundscape.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Karakia Whakaoti';
 
   @override
   String get streaks => 'Nga korikori';

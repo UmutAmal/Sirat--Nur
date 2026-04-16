@@ -1276,7 +1276,7 @@ class AppLocalizationsSd extends AppLocalizations {
       'ھن تعمير ۾ اڃا تائين گهربل Sukun soundscape اثاثا شامل نه آھن.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'دعا جي مڪمل ٿيڻ';
 
   @override
   String get streaks => 'اسٽريڪس';

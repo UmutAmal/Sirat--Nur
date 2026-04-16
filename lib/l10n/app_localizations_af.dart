@@ -1281,7 +1281,7 @@ class AppLocalizationsAf extends AppLocalizations {
       'Hierdie gebou sluit nog nie die vereiste Sukun-klanklandskapbates in nie.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Gebed Voltooiing';
 
   @override
   String get streaks => 'Strepe';

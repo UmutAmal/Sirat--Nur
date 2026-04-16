@@ -1287,7 +1287,7 @@ class AppLocalizationsIlo extends AppLocalizations {
       'Daytoy a panagbangon ket saan pay a mangiraman kadagiti kasapulan nga Sukun soundscape assets.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Panangleppas iti Kararag';
 
   @override
   String get streaks => 'Dagiti garit';

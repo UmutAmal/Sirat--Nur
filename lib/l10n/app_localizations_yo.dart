@@ -1277,7 +1277,7 @@ class AppLocalizationsYo extends AppLocalizations {
       'Itumọ yii ko pẹlu awọn ohun-ini oju ohun Sukun ti o nilo sibẹsibẹ.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Ipari Adura';
 
   @override
   String get streaks => 'Awọn ṣiṣan';

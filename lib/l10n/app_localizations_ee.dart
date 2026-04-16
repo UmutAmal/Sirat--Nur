@@ -1280,7 +1280,7 @@ class AppLocalizationsEe extends AppLocalizations {
       'Tu sia melɔ Sukun soundscape nunɔamesi siwo hiã la ɖe eme haɖe o.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Gbedodoɖa ƒe Nuwuwu';
 
   @override
   String get streaks => 'Streaks ƒe ʋuʋu';

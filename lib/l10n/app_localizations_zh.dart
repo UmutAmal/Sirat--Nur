@@ -1250,7 +1250,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get sukunUnavailableBody => '此版本尚不包括所需的 Sukun 音景资源。';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => '礼拜完成度';
 
   @override
   String get streaks => '连续记录';
@@ -2888,7 +2888,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get sukunUnavailableBody => '此版本尚不包括所需的 Sukun 音景资源。';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => '礼拜完成度';
 
   @override
   String get streaks => '连续记录';
@@ -4526,7 +4526,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get sukunUnavailableBody => '此版本尚不包含所需的 Sukun 音景資源。';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => '禮拜完成度';
 
   @override
   String get streaks => '連續紀錄';

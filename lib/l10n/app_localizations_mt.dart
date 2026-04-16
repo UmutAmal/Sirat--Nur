@@ -1282,7 +1282,7 @@ class AppLocalizationsMt extends AppLocalizations {
       'Din il-bini għadu ma jinkludix l-assi tal-pajsaġġ tal-ħoss Sukun meħtieġa.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Tlestija tat-Talb';
 
   @override
   String get streaks => 'Streaks';

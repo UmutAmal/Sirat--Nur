@@ -1264,7 +1264,7 @@ class AppLocalizationsJa extends AppLocalizations {
       'このビルドには、必要な Sukun サウンドスケープ アセットがまだ含まれていません。';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => '礼拝の完了度';
 
   @override
   String get streaks => '縞模様';

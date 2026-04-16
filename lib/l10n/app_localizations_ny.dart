@@ -1279,7 +1279,7 @@ class AppLocalizationsNy extends AppLocalizations {
       'Kumanga kumeneku sikukuphatikizanso zinthu zomveka za Sukun pano.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Kumaliza Pemphero';
 
   @override
   String get streaks => 'Mipata';

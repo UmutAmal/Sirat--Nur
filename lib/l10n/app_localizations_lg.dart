@@ -1283,7 +1283,7 @@ class AppLocalizationsLg extends AppLocalizations {
       'Okuzimba kuno tekuliimu bintu bya Sukun soundscape ebyetaagisa n\'okutuusa kati.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Okumaliriza Okusaba';
 
   @override
   String get streaks => 'Emisinde egy’enjawulo';

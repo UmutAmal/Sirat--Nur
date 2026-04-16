@@ -100,14 +100,22 @@ void main() {
     });
 
     test('rejects multiline analytics label output', () {
-      final value = resolveTranslatedArbValue(
+      final streaksValue = resolveTranslatedArbValue(
         key: 'streaks',
         source: 'Streaks',
         currentValue: 'Seriler',
         candidate: 'means the following.\nSeriler',
       );
 
-      expect(value, 'Seriler');
+      final prayerCompletionValue = resolveTranslatedArbValue(
+        key: 'prayerCompletion',
+        source: 'Prayer Completion',
+        currentValue: 'Namaz Tamamlama',
+        candidate: 'means the following.\nNamaz Tamamlama',
+      );
+
+      expect(streaksValue, 'Seriler');
+      expect(prayerCompletionValue, 'Namaz Tamamlama');
     });
 
     test('rejects multiline offline audio label output', () {

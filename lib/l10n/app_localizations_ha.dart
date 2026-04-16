@@ -1279,7 +1279,7 @@ class AppLocalizationsHa extends AppLocalizations {
       'Wannan ginin bai haɗa da kadarorin yanayin yanayin sautin Sukun da ake buƙata ba tukuna.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Kammala Sallah';
 
   @override
   String get streaks => 'Rinjaye';

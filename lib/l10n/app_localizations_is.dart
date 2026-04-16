@@ -1279,7 +1279,7 @@ class AppLocalizationsIs extends AppLocalizations {
       'Þessi smíði inniheldur ekki nauðsynlegar Sukun soundscape eignir ennþá.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Bænarlok';
 
   @override
   String get streaks => 'Strákar';

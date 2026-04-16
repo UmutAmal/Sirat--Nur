@@ -1276,7 +1276,7 @@ class AppLocalizationsGu extends AppLocalizations {
       'આ બિલ્ડમાં હજુ સુધી જરૂરી સુકુન સાઉન્ડસ્કેપ એસેટનો સમાવેશ થતો નથી.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'પ્રાર્થના પૂર્ણ';
 
   @override
   String get streaks => 'છટાઓ';

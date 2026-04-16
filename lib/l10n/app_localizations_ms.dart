@@ -1280,7 +1280,7 @@ class AppLocalizationsMs extends AppLocalizations {
       'Binaan ini belum lagi menyertakan aset skap bunyi Sukun yang diperlukan.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Selesai Solat';
 
   @override
   String get streaks => 'coretan';

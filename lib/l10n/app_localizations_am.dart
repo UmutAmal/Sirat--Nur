@@ -1267,7 +1267,7 @@ class AppLocalizationsAm extends AppLocalizations {
       'ይህ ግንባታ የሚፈለጉትን የሱኩን የድምጽ ገጽታ ንብረቶችን እስካሁን አያካትትም።';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'የጸሎት ፍጻሜ';
 
   @override
   String get streaks => 'ጭረቶች';

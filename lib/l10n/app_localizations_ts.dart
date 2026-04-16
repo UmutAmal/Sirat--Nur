@@ -1284,7 +1284,7 @@ class AppLocalizationsTs extends AppLocalizations {
       'Ku aka loku a ku katsi nhundzu ya soundscape ya Sukun leyi lavekaka ku fikela sweswi.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Ku Hetisa Xikhongelo';
 
   @override
   String get streaks => 'Swirhendzevutana';

@@ -1287,7 +1287,7 @@ class AppLocalizationsGl extends AppLocalizations {
       'Esta compilación aínda non inclúe os recursos de paisaxe sonora de Sukun necesarios.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Finalización da oración';
 
   @override
   String get streaks => 'Raias';

@@ -1285,7 +1285,7 @@ class AppLocalizationsMy extends AppLocalizations {
       'ဤတည်ဆောက်မှုတွင် လိုအပ်သော Sukun soundscape ပိုင်ဆိုင်မှုများ မပါဝင်သေးပါ။';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'ဆုတောင်းပြည့်';
 
   @override
   String get streaks => 'ပိန်း';

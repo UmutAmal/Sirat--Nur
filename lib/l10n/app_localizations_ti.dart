@@ -1265,7 +1265,7 @@ class AppLocalizationsTi extends AppLocalizations {
       'እዚ ህንጸት ክሳብ ሕጂ ዘድልዩ ናይ ሱኩን ሳውንድስኬፕ ንብረት ኣየጠቓልልን።';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'ምዝዛም ጸሎት';
 
   @override
   String get streaks => 'ስትሪክስ';

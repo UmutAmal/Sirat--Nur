@@ -1280,7 +1280,7 @@ class AppLocalizationsSo extends AppLocalizations {
       'Dhismahan kuma jiro wali hantida muuqaalka muuqaalka Sukun ee loo baahan yahay.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Dhamaystirka Ducada';
 
   @override
   String get streaks => 'Xarig';

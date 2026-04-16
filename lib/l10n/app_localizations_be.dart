@@ -1285,7 +1285,7 @@ class AppLocalizationsBe extends AppLocalizations {
       'Гэтая зборка пакуль не ўключае неабходныя актывы гукавога ландшафту Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Завяршэнне малітвы';
 
   @override
   String get streaks => 'Палоскі';

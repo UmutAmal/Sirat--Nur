@@ -1283,7 +1283,7 @@ class AppLocalizationsBho extends AppLocalizations {
       'एह बिल्ड में अबहीं ले जरूरी सुकुन साउंडस्केप संपत्ति शामिल नइखे.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'प्रार्थना पूरा हो गइल';
 
   @override
   String get streaks => 'लकीर बा';

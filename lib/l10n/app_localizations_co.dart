@@ -1281,7 +1281,7 @@ class AppLocalizationsCo extends AppLocalizations {
       'Questa custruzzione ùn include micca l\'assi di u paisaghju sonoru Sukun richiesti.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Cumplementu di preghiera';
 
   @override
   String get streaks => 'Streaks';

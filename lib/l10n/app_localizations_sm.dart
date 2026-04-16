@@ -1281,7 +1281,7 @@ class AppLocalizationsSm extends AppLocalizations {
       'O lenei faufale e le\'o aofia ai aseta Sukun soundscape e mana\'omia.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Tatalo Faauma';
 
   @override
   String get streaks => 'Fa\'ailoga';

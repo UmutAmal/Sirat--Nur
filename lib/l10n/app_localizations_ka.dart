@@ -1282,7 +1282,7 @@ class AppLocalizationsKa extends AppLocalizations {
       'ეს კონსტრუქცია ჯერ არ შეიცავს Sukun soundscape-ის აუცილებელ აქტივებს.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'ლოცვის დასრულება';
 
   @override
   String get streaks => 'ზოლები';

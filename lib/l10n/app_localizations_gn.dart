@@ -1283,7 +1283,7 @@ class AppLocalizationsGn extends AppLocalizations {
       'Ko construcción ndoikéiva gueteri umi activo paisaje sonoro Sukun oñeikotevëva.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Ñembo’e Ñemohu’ã';
 
   @override
   String get streaks => 'Rayas rehegua';

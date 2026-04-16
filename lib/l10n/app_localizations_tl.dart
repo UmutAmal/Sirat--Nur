@@ -1288,7 +1288,7 @@ class AppLocalizationsTl extends AppLocalizations {
       'Hindi pa kasama sa build na ito ang mga kinakailangang Sukun soundscape asset.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Pagkumpleto ng Panalangin';
 
   @override
   String get streaks => 'Mga streak';

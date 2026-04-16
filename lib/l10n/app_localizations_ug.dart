@@ -1278,7 +1278,7 @@ class AppLocalizationsUg extends AppLocalizations {
       'بۇ قۇرۇلۇش تېخى تەلەپ قىلىنغان سۇكۇن ئاۋازلىق كۆرۈنۈش مۈلۈكلىرىنى ئۆز ئىچىگە ئالمايدۇ.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'دۇئا تامام';
 
   @override
   String get streaks => 'Streaks';

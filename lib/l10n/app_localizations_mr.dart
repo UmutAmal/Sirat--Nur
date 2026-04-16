@@ -1278,7 +1278,7 @@ class AppLocalizationsMr extends AppLocalizations {
       'या बिल्डमध्ये अद्याप आवश्यक Sukun साउंडस्केप मालमत्ता समाविष्ट नाही.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'प्रार्थना पूर्ण';
 
   @override
   String get streaks => 'पट्ट्या';

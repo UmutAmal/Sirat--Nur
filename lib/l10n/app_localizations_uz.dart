@@ -1278,7 +1278,7 @@ class AppLocalizationsUz extends AppLocalizations {
       'Ushbu tuzilma hali zarur Sukun soundscape aktivlarini o\'z ichiga olmaydi.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Namozni yakunlash';
 
   @override
   String get streaks => 'Chiziqlar';

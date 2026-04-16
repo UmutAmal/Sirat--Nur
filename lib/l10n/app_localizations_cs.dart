@@ -1280,7 +1280,7 @@ class AppLocalizationsCs extends AppLocalizations {
       'Tato sestava zatím nezahrnuje požadované zdroje zvukového prostředí Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Dokončení modlitby';
 
   @override
   String get streaks => 'Pruhy';

@@ -1280,7 +1280,7 @@ class AppLocalizationsSa extends AppLocalizations {
       'अस्मिन् निर्माणे अद्यापि आवश्यकाः सुकुन् ध्वनिदृश्यसम्पत्तयः न समाविष्टाः सन्ति ।';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'प्रार्थना समाप्ति';
 
   @override
   String get streaks => 'धारयः';

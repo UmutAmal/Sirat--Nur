@@ -1281,7 +1281,7 @@ class AppLocalizationsMn extends AppLocalizations {
       'Энэ бүтэц нь шаардлагатай Sukun soundscape хөрөнгийг хараахан оруулаагүй байна.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Залбирал дуусгах';
 
   @override
   String get streaks => 'Судал';

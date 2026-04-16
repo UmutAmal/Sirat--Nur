@@ -1281,7 +1281,7 @@ class AppLocalizationsFi extends AppLocalizations {
       'Tämä versio ei vielä sisällä vaadittuja Sukun-äänimaailman resursseja.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Rukouksen loppuun saattaminen';
 
   @override
   String get streaks => 'Viivoja';

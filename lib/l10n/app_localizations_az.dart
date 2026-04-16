@@ -1278,7 +1278,7 @@ class AppLocalizationsAz extends AppLocalizations {
       'Bu quruluşa hələ tələb olunan Sukun səs mənzərəsi aktivləri daxil deyil.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Namazın tamamlanması';
 
   @override
   String get streaks => 'Çizgilər';

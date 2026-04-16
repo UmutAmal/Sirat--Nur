@@ -1290,7 +1290,7 @@ class AppLocalizationsFr extends AppLocalizations {
       'Cette version n\'inclut pas encore les ressources de paysage sonore Sukun requises.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Prières accomplies';
 
   @override
   String get streaks => 'Séries';

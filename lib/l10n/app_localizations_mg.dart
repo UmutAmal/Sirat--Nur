@@ -1282,7 +1282,7 @@ class AppLocalizationsMg extends AppLocalizations {
       'Ity fananganana ity dia tsy mbola ahitana ny fananana Sukun soundscape ilaina.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Vavaka vita';
 
   @override
   String get streaks => 'vandana';

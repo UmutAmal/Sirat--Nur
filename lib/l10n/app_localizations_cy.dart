@@ -1281,7 +1281,7 @@ class AppLocalizationsCy extends AppLocalizations {
       'Nid yw\'r adeiladwaith hwn yn cynnwys yr asedau seinwedd Sukun gofynnol eto.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Cwblhad Gweddi';
 
   @override
   String get streaks => 'Rhediadau';

@@ -1285,7 +1285,7 @@ class AppLocalizationsRo extends AppLocalizations {
       'Această versiune nu include încă elementele necesare peisajului sonor Sukun.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Finalizarea rugăciunii';
 
   @override
   String get streaks => 'Dâre';
