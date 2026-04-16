@@ -627,7 +627,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Nhấn để đếm';
 
   @override
   String get zikrCompletedMashAllah => 'Hoàn thành! MashAllah';

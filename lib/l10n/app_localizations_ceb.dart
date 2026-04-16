@@ -631,7 +631,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'I-tap para mag-ihap';
 
   @override
   String get zikrCompletedMashAllah => 'Nakompleto na! MashAllah';

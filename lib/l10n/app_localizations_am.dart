@@ -622,7 +622,7 @@ class AppLocalizationsAm extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'ለመቁጠር መታ ያድርጉ';
 
   @override
   String get zikrCompletedMashAllah => 'ተጠናቀቀ! ማሻአላህ';

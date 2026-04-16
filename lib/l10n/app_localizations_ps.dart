@@ -626,7 +626,7 @@ class AppLocalizationsPs extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'د شمیرلو لپاره ټایپ کړئ';
 
   @override
   String get zikrCompletedMashAllah => 'بشپړ شو! ماشاءالله';

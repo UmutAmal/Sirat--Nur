@@ -627,7 +627,7 @@ class AppLocalizationsMr extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'मोजण्यासाठी टॅप करा';
 
   @override
   String get zikrCompletedMashAllah => 'पूर्ण झाले! माशाअल्लाह';

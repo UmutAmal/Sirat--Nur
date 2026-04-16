@@ -629,7 +629,7 @@ class AppLocalizationsCy extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Tapiwch i gyfrif';
 
   @override
   String get zikrCompletedMashAllah => 'Wedi\'i gwblhau! MashAllah';

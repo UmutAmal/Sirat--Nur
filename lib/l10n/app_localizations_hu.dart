@@ -629,7 +629,7 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Koppintson a számláláshoz';
 
   @override
   String get zikrCompletedMashAllah => 'Elkészült! MashAllah';

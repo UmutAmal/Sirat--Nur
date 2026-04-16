@@ -165,7 +165,7 @@
   "changeTarget": "Change Target",
   "newTarget": "New Target",
   "targetCount": "Target: {target}",
-  "tapToCount": "Tap to count",
+  "tapToCount": "లెక్కించడానికి నొక్కండి",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",

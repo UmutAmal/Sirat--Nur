@@ -629,7 +629,7 @@ class AppLocalizationsNy extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Dinani kuti muwerenge';
 
   @override
   String get zikrCompletedMashAllah => 'Zatha! MashaAllah';

@@ -630,7 +630,7 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Πατήστε για μέτρηση';
 
   @override
   String get zikrCompletedMashAllah => 'Ολοκληρώθηκε το! MashAllah';

@@ -129,6 +129,17 @@ void main() {
       expect(value, 'Ses calinamadi');
     });
 
+    test('rejects multiline zikr counter hint output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'tapToCount',
+        source: 'Tap to count',
+        currentValue: 'Saymak icin dokunun',
+        candidate: 'means the following.\nSaymak icin dokunun',
+      );
+
+      expect(value, 'Saymak icin dokunun');
+    });
+
     test('rejects multiline qibla calibration output', () {
       final value = resolveTranslatedArbValue(
         key: 'qiblaCalibration',

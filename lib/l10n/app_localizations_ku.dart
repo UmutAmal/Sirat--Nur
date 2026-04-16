@@ -627,7 +627,7 @@ class AppLocalizationsKu extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Ji bo hejmartinê bikirtînin';
 
   @override
   String get zikrCompletedMashAllah => 'Temam kirin! MashAllah';

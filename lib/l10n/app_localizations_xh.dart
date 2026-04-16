@@ -627,7 +627,7 @@ class AppLocalizationsXh extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Cofa ukubala';
 
   @override
   String get zikrCompletedMashAllah => 'Igqityiwe! MashaAllah';

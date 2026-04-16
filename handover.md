@@ -8187,3 +8187,47 @@
 
 ### Sonraki Adım
 - Sonraki dongude aktif kullanici yuzeylerinde kalan l10n fallback ve hardcoded string taramasini yenile; `tapToCount`, `juz`, `tafsir`, `dailyChecklist`, `dailyProgress` veya benzer gorunur anahtarlar arasindan en yuksek riskli tek yuzeyi sec.
+
+## 2026-04-16 TUR-216 — Localize Zikr Counter Hint
+
+### Yapılan İşlem
+- `tapToCount` anahtari korumali ARB batch'i ile genis locale kumesinde lokalize edildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- `tool\translate_arb_keys.dart` single-line guard listesine `tapToCount` eklendi.
+- `test\arb_ui_localization_test.dart` zikr completion priority locale guard kapsaminda `tapToCount` degerini de kontrol ediyor.
+- `test\translate_arb_keys_test.dart` multiline zikr counter hint output regresyon testiyle ceviri debris korumasi ekledi.
+- Priority kalite gecisinde Korece `tapToCount` degeri "hesapla" anlamindan "say" baglamina elle duzeltildi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart:172` zikir sayacinda `l10n.tapToCount` metnini kullaniciya gosteriyor.
+- TUR-216 oncesi aktif l10n fallback taramasinda `tapToCount` icin `21` priority locale ve `187` toplam locale `app_en.arb` ile birebir ayniydi.
+- Bu metin kullaniciya dogrudan gorunen bir eylem ipucu oldugu icin Ingilizce fallback tam lokalizasyon hedefiyle uyumsuzdu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Priority locale setinde `tapToCount` Ingilizce fallback riski kapandi.
+- `tapToCount` fallback sayisi `187 -> 63` seviyesine indi.
+- Kalan fallback'ler Google ceviri destegi olmayan veya guvenli aday uretilemeyen nadir/legacy locale grubunda birakildi; UI metni uydurulmadi.
+- Tek satir guard'i ile gelecekteki batch debris/newline riski azaltildi.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\tracker_test.dart` PASS (`58/58`)
+- Priority fallback taramasi PASS: `priority_same=[]`
+- `git diff --check` PASS (yalnizca mevcut Windows CRLF uyarilari)
+- `flutter analyze` PASS
+- `flutter test` PASS (`386/386`)
+
+### Risk Değişimi
+- Priority locale zikr counter hint fallback riski: `12/25 -> 2/25`
+- Tum locale zikr counter hint fallback riski: `12/25 -> 6/25`
+- Zikr counter hint ceviri batch debris tekrar riski: `10/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki dongude aktif l10n fallback taramasini yenile; bilincli placeholder/proper noun anahtarlarini eleyip `diagnostics`, `juz`, `tafsir`, `dailyChecklist`, `dailyProgress` veya benzer gorunur anahtarlar arasindan en yuksek etkili tek yuzeyi sec.

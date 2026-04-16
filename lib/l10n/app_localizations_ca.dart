@@ -632,7 +632,7 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Toca per comptar';
 
   @override
   String get zikrCompletedMashAllah => 'Completat! Mashal·là';

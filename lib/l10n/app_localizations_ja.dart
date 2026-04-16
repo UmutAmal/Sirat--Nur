@@ -623,7 +623,7 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'タップして数えます';
 
   @override
   String get zikrCompletedMashAllah => '完成しました！マシュアッラー';

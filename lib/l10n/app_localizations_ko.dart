@@ -622,7 +622,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => '탭해서 세기';
 
   @override
   String get zikrCompletedMashAllah => '완전한! 마쉬알라';

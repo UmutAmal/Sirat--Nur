@@ -630,7 +630,7 @@ class AppLocalizationsDv extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'ގުނަން ޓެޕް ކުރާށެވެ';
 
   @override
   String get zikrCompletedMashAllah => 'ނިމިއްޖެ! މާޝްالله އެވެ';

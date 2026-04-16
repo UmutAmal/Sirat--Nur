@@ -629,7 +629,7 @@ class AppLocalizationsSq extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Trokit për të numëruar';
 
   @override
   String get zikrCompletedMashAllah => 'E përfunduar! MashAllah';

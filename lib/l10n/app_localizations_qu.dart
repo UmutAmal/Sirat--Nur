@@ -629,7 +629,7 @@ class AppLocalizationsQu extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Yupanaykipaq ñit’iy';
 
   @override
   String get zikrCompletedMashAllah => '¡Tukusqaña! MashAllah sutiyuq runa';

@@ -628,7 +628,7 @@ class AppLocalizationsOm extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Lakkaa\'uuf tuqi';
 
   @override
   String get zikrCompletedMashAllah => 'Xumurameera! MashAllah';

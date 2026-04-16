@@ -629,7 +629,7 @@ class AppLocalizationsMi extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Tap ki te tatau';
 
   @override
   String get zikrCompletedMashAllah => 'Kua oti! MashAllah';

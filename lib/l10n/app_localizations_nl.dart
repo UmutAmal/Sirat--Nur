@@ -628,7 +628,7 @@ class AppLocalizationsNl extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Tik om te tellen';
 
   @override
   String get zikrCompletedMashAllah => 'Voltooid! MasAllah';

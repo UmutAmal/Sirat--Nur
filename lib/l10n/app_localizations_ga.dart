@@ -628,7 +628,7 @@ class AppLocalizationsGa extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Tapáil chun comhaireamh';
 
   @override
   String get zikrCompletedMashAllah => 'Críochnaithe! MashAllah';

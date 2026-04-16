@@ -613,7 +613,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => '点击计数';
 
   @override
   String get zikrCompletedMashAllah => '完全的！玛什真主';
@@ -2249,7 +2249,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => '点击计数';
 
   @override
   String get zikrCompletedMashAllah => '完全的！玛什真主';
@@ -3885,7 +3885,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => '點擊計數';
 
   @override
   String get zikrCompletedMashAllah => '完全的！瑪什真主';

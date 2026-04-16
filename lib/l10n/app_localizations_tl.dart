@@ -633,7 +633,7 @@ class AppLocalizationsTl extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'I-tap para magbilang';
 
   @override
   String get zikrCompletedMashAllah => 'Tapos na! MashAllah';

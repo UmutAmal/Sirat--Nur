@@ -629,7 +629,7 @@ class AppLocalizationsGd extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Tap air gus cunntadh';
 
   @override
   String get zikrCompletedMashAllah => 'Crìochnaichte! MashAllah';

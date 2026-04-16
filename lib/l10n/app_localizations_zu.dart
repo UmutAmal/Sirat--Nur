@@ -627,7 +627,7 @@ class AppLocalizationsZu extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Thepha ukuze ubale';
 
   @override
   String get zikrCompletedMashAllah => 'Kuqediwe! MashaAllah';

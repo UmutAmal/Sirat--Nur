@@ -627,7 +627,7 @@ class AppLocalizationsRw extends AppLocalizations {
   }
 
   @override
-  String get tapToCount => 'Tap to count';
+  String get tapToCount => 'Kanda kubara';
 
   @override
   String get zikrCompletedMashAllah => 'Byarangiye! MashAllah';
