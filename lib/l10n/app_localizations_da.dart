@@ -1446,7 +1446,8 @@ class AppLocalizationsDa extends AppLocalizations {
   String get asmaMeaning20 => 'Konstriktoren';
 
   @override
-  String get asmaMeaning21 => 'Relieveren';
+  String get asmaMeaning21 =>
+      'Den Udvidende, der efter visdom giver lettelse, overflod og rummelighed.';
 
   @override
   String get asmaMeaning22 => 'Abaseren';

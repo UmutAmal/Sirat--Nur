@@ -1639,7 +1639,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String get asmaMeaning82 => 'El Perdonador';
 
   @override
-  String get asmaMeaning83 => 'El Clemente';
+  String get asmaMeaning83 =>
+      'El Compasivo, lleno de misericordia, ternura y cuidado.';
 
   @override
   String get asmaMeaning84 => 'El Dueño/Soberano de Todo';

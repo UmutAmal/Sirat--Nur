@@ -10334,3 +10334,61 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude kalan safe-priority locale dini icerik kalite taramasina devam et: ozellikle Fransizca/Ispanyolca/Portekizce/Rusca Esma ve dua metinlerinde English residue veya yanlis baglam kalintilarini kanitla.
+
+## 2026-04-16 TUR-259 — Repair Extended Safe-Priority Asma Fragments
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_fr.arb` icindeki `asmaMeaning77` `Le Gouverneur` kalintisindan baglamsal `Le Protecteur et Administrateur...` metnine cekildi.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_es.arb` icindeki `asmaMeaning83` `El Clemente` kalintisindan `El Compasivo...` metnine cekildi.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_pt.arb` icindeki `asmaMeaning9` ve `asmaMeaning83` `O Compeller` / `O Clemente` kalintilarindan baglamsal Portekizce metinlere cekildi.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_da.arb`, `app_nb.arb`, `app_nn.arb`, `app_no.arb` icindeki `asmaMeaning21` `Relieveren` kalintisindan ilgili locale'e uygun `Udvidende/Utvidende/Utvidande` aciklamalarina cekildi.
+- `flutter gen-l10n` calistirildi; ilgili generated `app_localizations_{fr,es,pt,da,nb,nn,no}.dart` dosyalari yenilendi.
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart` extended safe-priority Asma stale-fragment guard'i ile genisletildi.
+
+### Neden Yapildi
+- TUR-258 sonrasi safe-priority Asma taramasinda `fr`, `es`, `pt`, `da`, `nb`, `nn`, `no` locale'lerinde kalan net machine-translation/English residue kalintilari bulundu.
+- Bu kalintilar kullaniciya Allah'in isimleri anlamlari olarak gorunen dini icerikte yanlis baglam uretme riski tasiyordu.
+- Patch, yeni locale genellemesi yapmadan yalniz kanitlanan stale fragmentleri duzeltti ve ayni yuzey icin test guard'i ekledi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_fr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_es.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_pt.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_da.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_nb.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_nn.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_no.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_fr.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_es.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_pt.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_da.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_nb.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_nn.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_no.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe-priority FR/ES/PT/DA/NB/NN/NO Asma yuzeyinde tespit edilen stale fragmentler temizlendi.
+- Yeni test guard'i bu kalintilarin ARB seviyesine tekrar donmesini engeller.
+- `flutter gen-l10n` sonrasi runtime generated dosyalari ayni temiz metinleri dondurur.
+
+### Test Sonucu
+- Odak test: `flutter test test\arb_ui_localization_test.dart test\features\library\asma_ul_husna_page_test.dart test\asma_ul_husna_data_test.dart --reporter compact` PASS (`80/80`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`469/469`)
+
+### Risk Degisimi
+- Extended safe-priority Asma stale fragment riski: `12/25 -> 2/25`
+- Generated l10n stale fragment riski: `9/25 -> 2/25`
+
+### Rollback Plani
+- Ilgili yedi ARB dosyasindaki `asmaMeaning` degisiklikleri onceki haline dondurulur.
+- `flutter gen-l10n` tekrar calistirilerek generated l10n dosyalari eski metne senkronlanir.
+- `arb_ui_localization_test.dart` icindeki extended safe-priority Asma guard'i geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude tum safe-priority locale duaMeaning ve Asma metinleri icin daha genis stale-fragment taramasi yap; ozellikle partial English karisimlari ve yanlis baglamli literal cevirileri kanitla.

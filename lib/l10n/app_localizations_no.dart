@@ -1449,7 +1449,8 @@ class AppLocalizationsNo extends AppLocalizations {
       'Den som begrenser, klemmer, begrenser hvem han vil.';
 
   @override
-  String get asmaMeaning21 => 'Relieveren';
+  String get asmaMeaning21 =>
+      'Den Utvidende, som etter visdom gir lettelse, overflod og romslighet.';
 
   @override
   String get asmaMeaning22 => 'Abaseren';

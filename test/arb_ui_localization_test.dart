@@ -1417,6 +1417,57 @@ void main() {
       expect(l10n.asmaMeaning20, isNot(contains('Würger')));
     });
 
+    test('extended safe priority asma meanings avoid stale fragments', () {
+      const staleByLocale = {
+        'fr': {
+          'asmaMeaning77': ['Gouverneur'],
+        },
+        'es': {
+          'asmaMeaning83': ['Clemente'],
+        },
+        'pt': {
+          'asmaMeaning9': ['Compeller'],
+          'asmaMeaning83': ['Clemente'],
+        },
+        'da': {
+          'asmaMeaning21': ['Relieveren'],
+        },
+        'nb': {
+          'asmaMeaning21': ['Relieveren'],
+        },
+        'nn': {
+          'asmaMeaning21': ['Relieveren'],
+        },
+        'no': {
+          'asmaMeaning21': ['Relieveren'],
+        },
+      };
+
+      for (final localeEntry in staleByLocale.entries) {
+        final arb = _readArb('lib/l10n/app_${localeEntry.key}.arb');
+        for (final keyEntry in localeEntry.value.entries) {
+          final value = arb[keyEntry.key] as String;
+          for (final fragment in keyEntry.value) {
+            expect(
+              value,
+              isNot(contains(fragment)),
+              reason:
+                  'app_${localeEntry.key}.arb ${keyEntry.key} keeps a stale asma fragment',
+            );
+          }
+        }
+      }
+
+      expect(
+        _readArb('lib/l10n/app_pt.arb')['asmaMeaning9'],
+        contains('Todo-Poderoso'),
+      );
+      expect(
+        _readArb('lib/l10n/app_fr.arb')['asmaMeaning77'],
+        contains('Protecteur'),
+      );
+    });
+
     test('Quran 3:8 dua localization copy stays balanced', () async {
       final englishL10n = await AppLocalizations.delegate.load(
         const Locale('en'),

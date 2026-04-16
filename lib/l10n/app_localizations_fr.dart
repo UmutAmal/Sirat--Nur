@@ -1623,7 +1623,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get asmaMeaning76 => 'Le caché';
 
   @override
-  String get asmaMeaning77 => 'Le Gouverneur';
+  String get asmaMeaning77 =>
+      'Le Protecteur et Administrateur, qui dirige toute la création.';
 
   @override
   String get asmaMeaning78 => 'Le Suprême';
