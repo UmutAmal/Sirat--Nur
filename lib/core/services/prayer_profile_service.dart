@@ -152,6 +152,13 @@ const PrayerCalculationProfile _mwlHanafiProfile = PrayerCalculationProfile(
   sourceUrl: 'https://www.mwl.net/en',
 );
 
+const PrayerCalculationProfile _mwlMalikiProfile = PrayerCalculationProfile(
+  calculationMethod: mwlPrayerMethod,
+  madhab: malikiMadhab,
+  sourceName: 'Muslim World League',
+  sourceUrl: 'https://www.mwl.net/en',
+);
+
 const PrayerCalculationProfile _moroccoProfile = PrayerCalculationProfile(
   calculationMethod: moroccoPrayerMethod,
   madhab: malikiMadhab,
@@ -175,10 +182,10 @@ const PrayerCalculationProfile _customProfile = PrayerCalculationProfile(
 
 const Map<String, PrayerCalculationProfile> _timezoneProfileFallbacks =
     <String, PrayerCalculationProfile>{
-      'Africa/Algiers': _moroccoProfile,
+      'Africa/Algiers': _mwlMalikiProfile,
       'Africa/Cairo': _egyptianProfile,
       'Africa/Casablanca': _moroccoProfile,
-      'Africa/Tunis': _moroccoProfile,
+      'Africa/Tunis': _mwlMalikiProfile,
       'America/Adak': _isnaProfile,
       'America/Anchorage': _isnaProfile,
       'America/Atikokan': _isnaProfile,
@@ -439,9 +446,10 @@ PrayerCalculationProfile resolvePrayerProfile({
     case 'SG':
       return _muisProfile;
     case 'MA':
+      return _moroccoProfile;
     case 'DZ':
     case 'TN':
-      return _moroccoProfile;
+      return _mwlMalikiProfile;
     case 'PK':
     case 'BD':
     case 'AF':

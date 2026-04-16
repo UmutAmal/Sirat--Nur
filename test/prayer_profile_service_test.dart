@@ -46,6 +46,28 @@ void main() {
       expect(profile.madhab, shafiiMadhab);
     });
 
+    test(
+      'does not masquerade Algeria or Tunisia as Moroccan official profiles',
+      () {
+        for (final args in const [
+          (countryCode: 'DZ', timezone: 'Africa/Algiers'),
+          (countryCode: 'TN', timezone: 'Africa/Tunis'),
+          (countryCode: null, timezone: 'Africa/Algiers'),
+          (countryCode: null, timezone: 'Africa/Tunis'),
+        ]) {
+          final profile = resolvePrayerProfile(
+            countryCode: args.countryCode,
+            timezone: args.timezone,
+          );
+
+          expect(profile.calculationMethod, mwlPrayerMethod);
+          expect(profile.madhab, malikiMadhab);
+          expect(profile.sourceName, isNot(contains('Morocco')));
+          expect(profile.sourceUrl, isNot('https://www.habous.gov.ma'));
+        }
+      },
+    );
+
     test('maps Gulf timezones when country code is unavailable', () {
       final cases = <String, String>{
         'Asia/Riyadh': ummAlQuraPrayerMethod,

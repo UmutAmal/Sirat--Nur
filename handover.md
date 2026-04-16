@@ -10704,3 +10704,61 @@
 ### Sonraki Adim
 - Yerel resmi namaz takvimi entegrasyonu icin Bahrain/Oman gibi exact hesap parametresi kodda bulunmayan ulkeler Supabase-backed `prayer_profiles`/`prayer_schedules` tasarimina alinacak.
 - Bir sonraki mikro dongude once mevcut kodda benzer "baska ulkenin resmi profiliyle maskelenen" country/timezone mapping var mi taranacak.
+
+## 2026-04-16 TUR-265 — Remove Algeria/Tunisia Moroccan Prayer Profile Masquerade
+
+### Yapilan Islem
+- Prayer profile resolver'da Algeria (`DZ`, `Africa/Algiers`) ve Tunisia (`TN`, `Africa/Tunis`) icin Morocco Ministry profile fallback'i kaldirildi.
+- Morocco profili yalnizca Morocco (`MA`, `Africa/Casablanca`) icin birakildi.
+- Algeria/Tunisia icin exact yerel resmi takvim parametresi kodda modellenmedigi icin uydurma resmi kaynak eklenmedi; MWL + Maliki fallback profili tanimlandi.
+- `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart` icine Algeria/Tunisia'nin Moroccan sourceName/sourceUrl ile maskelenmemesini zorunlu kilan regresyon testi eklendi.
+
+### Kanit
+- Patch oncesi risk:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart` icinde `Africa/Algiers`, `Africa/Tunis`, `DZ`, `TN` dogrudan `_moroccoProfile` donduruyordu.
+- `_moroccoProfile` sourceName/sourceUrl olarak Morocco resmi otoritesini tasiyor:
+  `Morocco Ministry of Awqaf`, `https://www.habous.gov.ma`.
+- Patch sonrasi MWL + Maliki fallback:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:155`.
+- Patch sonrasi timezone mapping:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:185`.
+- Patch sonrasi country resolver:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:448`,
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:450`.
+- Guard:
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:49`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:63`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:64`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:65`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:66`.
+
+### Neden Yapildi
+- Namaz vakti profilinde baska ulkenin resmi kurumu kullaniciya yerel resmi kaynak gibi sunulamaz.
+- Algeria/Tunisia icin Morocco Ministry kaynagi ile etiketleme dogrudan yanlis attribution riski olusturuyordu.
+- Tam yerel Algeria/Tunisia takvim entegrasyonu icin resmi schedule/parametre kaynagi gerekir; bu turda uydurma yerine yanlis resmi iddia kaldirildi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Odak test: `flutter test test\prayer_profile_service_test.dart test\settings_provider_test.dart test\prayer_times_service_test.dart --reporter compact` PASS (`34/34`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`475/475`)
+
+### Risk Degisimi
+- Algeria/Tunisia icin Morocco resmi profil maskesi riski: `16/25 -> 4/25`
+- Namaz vakti kaynak yanlis-attribution riski: `12/25 -> 5/25`
+- Yerel Algeria/Tunisia exact schedule eksigi: `12/25 -> 10/25` (tam cozum icin resmi takvim/Supabase schedule entegrasyonu gerekir)
+
+### Rollback Plani
+- `Africa/Algiers`, `Africa/Tunis`, `DZ`, `TN` `_moroccoProfile` mapping'leri geri eklenir.
+- `_mwlMalikiProfile` ve TUR-265 test guard'i geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Prayer profile mapping icinde baska ulkenin resmi profiline dusen kalan country/timezone var mi taranacak.
+- Ardindan resmi exact takvim gerektiren ulkeler icin Supabase-backed `prayer_schedules` veri modeli ve offline cache riskleri planlanacak.
