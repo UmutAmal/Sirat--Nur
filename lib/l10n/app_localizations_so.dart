@@ -1183,11 +1183,12 @@ class AppLocalizationsSo extends AppLocalizations {
       'Dhammaan suuradaha mar hore loo soo dejiyay akhristaha.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Xirmooyinka Maqalka Qur\'aanka ee offline';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Ku kaydsan aaladda: $size MB';
   }
 
   @override
@@ -1232,7 +1233,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Faylasha qad la\'aanta ee la tirtiray ee $reciter.';
   }
 
   @override
@@ -1254,7 +1255,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get sukunMixerSubtitle => 'Dabeecadda & Qur\'aanka Isku-dhafka';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Dib-u-soo-celinta maqalka waa fashilantay';
 
   @override
   String get sukunNatureLabel => 'Sukun (Dabeecada)';

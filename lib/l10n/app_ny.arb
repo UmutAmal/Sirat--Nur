@@ -370,7 +370,7 @@
   },
   "downloadCompleted": "Sura zonse zidatsitsidwa kale za wowerenga uyu.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "storedOnDeviceMb": "Zasungidwa pachida: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Fayilo ya {reciter} yachotsedwa.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Funsani funso...",
   "chatbotThinking": "Kuganiza...",
   "sukunMixerSubtitle": "Chilengedwe & Chosakaniza cha Qur'an",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Kusewerera mawu kwalephera",
   "sukunNatureLabel": "Sukun (Chilengedwe)",
   "sukunRainOfMercy": "Mvula ya Chifundo",
   "sukunGardenOfPeace": "Munda Wamtendere",

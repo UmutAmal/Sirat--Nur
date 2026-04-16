@@ -370,7 +370,7 @@
   },
   "downloadCompleted": "ດາວໂຫຼດ Surah ທັງໝົດແລ້ວສຳລັບນັກຂຽນນີ້.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "storedOnDeviceMb": "ເກັບໄວ້ໃນອຸປະກອນ: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "ລຶບໄຟລ໌ອອບລາຍສຳລັບ {reciter} ແລ້ວ.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "ຖາມຄຳຖາມ...",
   "chatbotThinking": "ຄິດ...",
   "sukunMixerSubtitle": "ທໍາມະຊາດ & Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "ການຫຼິ້ນສຽງລົ້ມເຫລວ",
   "sukunNatureLabel": "ສຸກັນ (ທຳມະຊາດ)",
   "sukunRainOfMercy": "ຝົນແຫ່ງຄວາມເມດຕາ",
   "sukunGardenOfPeace": "ສວນແຫ່ງສັນຕິພາບ",

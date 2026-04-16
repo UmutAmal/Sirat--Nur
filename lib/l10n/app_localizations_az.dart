@@ -1182,11 +1182,11 @@ class AppLocalizationsAz extends AppLocalizations {
       'Bu oxuyan üçün bütün surələr artıq yüklənib.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Offline Quran Audio Paketləri';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Cihazda saxlanılır: $size MB';
   }
 
   @override
@@ -1231,7 +1231,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return '$reciter üçün oflayn fayllar silindi.';
   }
 
   @override
@@ -1253,7 +1253,7 @@ class AppLocalizationsAz extends AppLocalizations {
   String get sukunMixerSubtitle => 'Təbiət və Quran qarışdırıcı';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Audio oxutma uğursuz oldu';
 
   @override
   String get sukunNatureLabel => 'Sukun (Təbiət)';

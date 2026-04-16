@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Is-surahs kollha diġà mniżżla għal dan ir-reċiter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Pakketti tal-awdjo tal-Quran offline",
+  "storedOnDeviceMb": "Maħżuna fuq it-tagħmir: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Fajls offline mħassra għal {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Saqsi mistoqsija...",
   "chatbotThinking": "Taħseb...",
   "sukunMixerSubtitle": "Mixer tan-Natura u tal-Koran",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Il-plejbek tal-awdjo falla",
   "sukunNatureLabel": "Sukun (Natura)",
   "sukunRainOfMercy": "Xita tal-Ħniena",
   "sukunGardenOfPeace": "Ġnien tal-Paċi",

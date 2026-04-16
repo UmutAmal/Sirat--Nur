@@ -1180,11 +1180,11 @@ class AppLocalizationsJv extends AppLocalizations {
       'Kabeh surah wis diundhuh kanggo reciter iki.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Paket Audio Quran Offline';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Disimpen ing piranti: $size MB';
   }
 
   @override
@@ -1229,7 +1229,7 @@ class AppLocalizationsJv extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'File offline dibusak kanggo $reciter.';
   }
 
   @override
@@ -1251,7 +1251,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get sukunMixerSubtitle => 'Alam & Qur\'an Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Puter maneh audio gagal';
 
   @override
   String get sukunNatureLabel => 'Sukun (Alam)';

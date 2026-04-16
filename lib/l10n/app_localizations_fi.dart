@@ -1185,11 +1185,11 @@ class AppLocalizationsFi extends AppLocalizations {
   String get downloadCompleted => 'Kaikki tälle lausujalle jo ladatut suurat.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Offline-koraanin äänipaketit';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Tallennettu laitteelle: $size Mt';
   }
 
   @override
@@ -1234,7 +1234,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Poistetut offline-tiedostot kohteelle $reciter.';
   }
 
   @override
@@ -1256,7 +1256,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get sukunMixerSubtitle => 'Luonto & Koraani -sekoitin';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Äänen toisto epäonnistui';
 
   @override
   String get sukunNatureLabel => 'Sukun (luonto)';

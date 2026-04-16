@@ -1184,7 +1184,7 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Zvakachengetwa pachishandiswa: $size MB';
   }
 
   @override
@@ -1229,7 +1229,7 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Dzakadzimwa mafaira e$reciter.';
   }
 
   @override
@@ -1251,7 +1251,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Kuridza redhiyo hakuna kukwanisa';
 
   @override
   String get sukunNatureLabel => 'Sukun (Nature)';

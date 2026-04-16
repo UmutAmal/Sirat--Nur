@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Kõik selle ettelugeja jaoks juba alla laaditud suurad.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Võrguühenduseta Koraani helipaketid",
+  "storedOnDeviceMb": "Seadmesse salvestatud: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Kustutatud võrguühenduseta failid {reciter} jaoks.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Esitage küsimus...",
   "chatbotThinking": "Mõeldes...",
   "sukunMixerSubtitle": "Looduse ja Koraani mikser",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Heli taasesitus ebaõnnestus",
   "sukunNatureLabel": "Sukun (loodus)",
   "sukunRainOfMercy": "Halastuse vihm",
   "sukunGardenOfPeace": "Rahu aed",

@@ -1182,11 +1182,11 @@ class AppLocalizationsUz extends AppLocalizations {
       'Bu qori uchun barcha suralar allaqachon yuklab olingan.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Oflayn Qur\'on audio to\'plamlari';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Qurilmada saqlangan: $size MB';
   }
 
   @override
@@ -1231,7 +1231,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return '$reciter uchun oflayn fayllar o‘chirib tashlandi.';
   }
 
   @override
@@ -1253,7 +1253,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get sukunMixerSubtitle => 'Tabiat va Qur\'on mikser';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Audio ijro qilinmadi';
 
   @override
   String get sukunNatureLabel => 'Sukun (tabiat)';

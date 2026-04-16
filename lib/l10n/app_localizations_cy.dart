@@ -1185,11 +1185,11 @@ class AppLocalizationsCy extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Pecynnau Sain Quran All-lein';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Wedi\'i storio ar ddyfais: $size MB';
   }
 
   @override
@@ -1234,7 +1234,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Ffeiliau all-lein wedi\'u dileu ar gyfer $reciter.';
   }
 
   @override
@@ -1256,7 +1256,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get sukunMixerSubtitle => 'Cymysgydd Natur a Qur\'an';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Wedi methu chwarae sain';
 
   @override
   String get sukunNatureLabel => 'Sukun (Natur)';

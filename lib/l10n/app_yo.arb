@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Gbogbo awọn surah ti ṣe igbasilẹ tẹlẹ fun olukawe yii.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Awọn akopọ ohun afetigbọ Al-Qur’an aisinipo",
+  "storedOnDeviceMb": "Ti a fipamọ sori ẹrọ: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Parẹ awọn faili aisinipo fun {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Beere ibeere kan...",
   "chatbotThinking": "N ronu...",
   "sukunMixerSubtitle": "Iseda & Kuran Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Sisisẹsẹhin ohun kuna",
   "sukunNatureLabel": "Sukun (Iseda)",
   "sukunRainOfMercy": "Ojo Anu",
   "sukunGardenOfPeace": "Ọgba Alafia",

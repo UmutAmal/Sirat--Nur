@@ -1183,11 +1183,11 @@ class AppLocalizationsVi extends AppLocalizations {
       'Tất cả surahs đã được tải xuống cho người đọc thuộc lòng này.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Gói âm thanh Kinh Qur\'an ngoại tuyến';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Được lưu trữ trên thiết bị: $size MB';
   }
 
   @override
@@ -1232,7 +1232,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Đã xóa tệp ngoại tuyến cho $reciter.';
   }
 
   @override
@@ -1254,7 +1254,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get sukunMixerSubtitle => 'Máy trộn thiên nhiên & Qur\'an';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Phát lại âm thanh không thành công';
 
   @override
   String get sukunNatureLabel => 'Sukun (Thiên nhiên)';

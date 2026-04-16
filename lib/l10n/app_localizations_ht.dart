@@ -1182,11 +1182,11 @@ class AppLocalizationsHt extends AppLocalizations {
       'Tout sourate deja telechaje pou resite sa a.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Offline Koran odyo pake';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Ki estoke sou aparèy la: $size MB';
   }
 
   @override
@@ -1231,7 +1231,7 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Efase fichye offline pou $reciter.';
   }
 
   @override
@@ -1253,7 +1253,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get sukunMixerSubtitle => 'Nati & Koran Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Lektur odyo echwe';
 
   @override
   String get sukunNatureLabel => 'Sukun (Nati)';

@@ -1186,11 +1186,12 @@ class AppLocalizationsGn extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Paquetes de Audio Corán Offline rehegua';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Oñongatu tembipuru’ípe: $size MB';
   }
 
   @override
@@ -1235,7 +1236,7 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Oñembogue umi vore osẽva línea-gui $reciter-pe g̃uarã.';
   }
 
   @override
@@ -1257,7 +1258,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get sukunMixerSubtitle => 'Naturaleza & Corán Mezclador rehegua';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Audio ñembopu ndoikói';
 
   @override
   String get sukunNatureLabel => 'Sukun (Tekoha) .';

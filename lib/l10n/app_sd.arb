@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "هن تلاوت ڪندڙ لاءِ سڀ سورتون پهريان ئي ڊائون لوڊ ڪيون ويون آهن.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "آف لائن قرآن آڊيو پيڪ",
+  "storedOnDeviceMb": "ڊوائيس تي ذخيرو ٿيل: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "حذف ٿيل آف لائن فائلون {reciter} لاءِ.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "سوال پڇو...",
   "chatbotThinking": "سوچڻ...",
   "sukunMixerSubtitle": "فطرت ۽ قرآن ملائيندڙ",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "آڊيو پلے بیک ناڪام",
   "sukunNatureLabel": "سکن (فطرت)",
   "sukunRainOfMercy": "رحمت جي برسات",
   "sukunGardenOfPeace": "امن جو باغ",

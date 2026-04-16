@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "All Surahs scho fir dëse Reciter erofgelueden.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline Koran Audio Packs",
+  "storedOnDeviceMb": "Gespäichert um Apparat: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Offline Dateie fir {reciter} geläscht.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Stellt eng Fro ...",
   "chatbotThinking": "Denken...",
   "sukunMixerSubtitle": "Natur & Koran Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "D'Audio-Playback ass gescheitert",
   "sukunNatureLabel": "Sukun (Natur)",
   "sukunRainOfMercy": "Reen vun Mercy",
   "sukunGardenOfPeace": "Gaart vum Fridden",

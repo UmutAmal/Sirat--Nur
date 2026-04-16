@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Ang tanan nga mga surah na-download na para sa kini nga reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline nga Quran Audio Packs",
+  "storedOnDeviceMb": "Gitipigan sa device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Gitangtang ang offline nga mga file para sa {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Pangutana...",
   "chatbotThinking": "Naghunahuna...",
   "sukunMixerSubtitle": "Kinaiyahan ug Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Napakyas ang playback sa audio",
   "sukunNatureLabel": "Sukun (Nature)",
   "sukunRainOfMercy": "Ulan sa Kaluoy",
   "sukunGardenOfPeace": "Tanaman sa Kalinaw",

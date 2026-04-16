@@ -1187,11 +1187,12 @@ class AppLocalizationsTs extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Tiphakiti ta mpfumawulo ta Quran leti nga riki eka inthanete';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Yi hlayisiwile eka xitirhisiwa: $size MB';
   }
 
   @override
@@ -1236,7 +1237,7 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Ku susiwile tifayela ta le handle ka inthanete ta $reciter.';
   }
 
   @override
@@ -1258,7 +1259,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get sukunMixerSubtitle => 'Muhlanganisi wa Ntumbuluko & Qur\'an';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Ku tlanga ka mpfumawulo ku tsandzekile';
 
   @override
   String get sukunNatureLabel => 'Sukun (Ntumbuluko) .';

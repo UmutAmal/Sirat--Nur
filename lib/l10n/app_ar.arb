@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "جميع السور تم تنزيلها بالفعل لهذا القارئ.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "حزم القرآن الصوتية دون اتصال",
+  "storedOnDeviceMb": "مخزنة على الجهاز: {size} ميغابايت",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "تم حذف الملفات غير المتصلة لـ {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "اطرح سؤالا...",
   "chatbotThinking": "أفكر...",
   "sukunMixerSubtitle": "الطبيعة وخلاط القرآن",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "فشل تشغيل الصوت",
   "sukunNatureLabel": "سكون (طبيعة)",
   "sukunRainOfMercy": "أمطار الرحمة",
   "sukunGardenOfPeace": "حديقة السلام",

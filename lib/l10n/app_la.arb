@@ -370,7 +370,7 @@
   },
   "downloadCompleted": "Omnes surahs iam receptae sunt pro hoc recitatore.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "storedOnDeviceMb": "Reposita in fabrica: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Documenta offline deleta pro {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Interrogare quaestionem...",
   "chatbotThinking": "Cogitans...",
   "sukunMixerSubtitle": "Natura & Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Audio playback defuit",
   "sukunNatureLabel": "Sukun (Nature)",
   "sukunRainOfMercy": "Pluvia Misericordiae",
   "sukunGardenOfPeace": "Hortus pacis",

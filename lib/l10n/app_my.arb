@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "ဤရွတ်ဆိုသူအတွက် စူရဟ်များအားလုံးကို ဒေါင်းလုဒ်လုပ်ထားပြီးဖြစ်သည်။",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "အော့ဖ်လိုင်းကုရ်အာန် အသံအထုပ်များ",
+  "storedOnDeviceMb": "စက်ပစ္စည်းပေါ်တွင် သိမ်းဆည်းထားသည်- {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} အတွက် အော့ဖ်လိုင်းဖိုင်များကို ဖျက်ထားသည်။",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "မေးခွန်းတစ်ခုမေးပါ...",
   "chatbotThinking": "တွေးရင်း...",
   "sukunMixerSubtitle": "သဘာဝနှင့် ကုရ်အာန် ရောသမမွှေပါ။",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "အသံပြန်ဖွင့်ခြင်း မအောင်မြင်ပါ။",
   "sukunNatureLabel": "Sukun (သဘာဝ)",
   "sukunRainOfMercy": "ကရုဏာမိုး",
   "sukunGardenOfPeace": "ငြိမ်းချမ်းရေးဥယျာဉ်",

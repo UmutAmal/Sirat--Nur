@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "بۇ قىرائەت ئۈچۈن ئاللىبۇرۇن چۈشۈرۈلگەن بارلىق سۈرە.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "تورسىز قۇرئان ئاۋاز بولىقى",
+  "storedOnDeviceMb": "ئۈسكۈنىدە ساقلانغان: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} ئۈچۈن تورسىز ھۆججەتلەر ئۆچۈرۈلدى.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "سوئال سوراڭ ...",
   "chatbotThinking": "تەپەككۇر ...",
   "sukunMixerSubtitle": "تەبىئەت ۋە قۇرئان ئارىلاشتۇرغۇچى",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "ئاۋاز قويۇش مەغلۇب بولدى",
   "sukunNatureLabel": "سۇكۇن (تەبىئەت)",
   "sukunRainOfMercy": "رەھىم يامغۇر",
   "sukunGardenOfPeace": "تىنچلىق باغچىسى",

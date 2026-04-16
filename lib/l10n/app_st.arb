@@ -370,7 +370,7 @@
   },
   "downloadCompleted": "Li-surah tsohle li se li ntse li jarollotsoe bakeng sa sebali sena.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "storedOnDeviceMb": "E bolokiloe sesebelisoa: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "E hlakotsoe lifaele tse kantle ho Marang-rang tsa {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Botsa potso...",
   "chatbotThinking": "Ho nahana...",
   "sukunMixerSubtitle": "Tlhaho le Motsoako oa Qur'an",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Ho hloleha ho bapala molumo",
   "sukunNatureLabel": "Sukun (Tlhaho)",
   "sukunRainOfMercy": "Pula ya Mohau",
   "sukunGardenOfPeace": "Serapa sa Khotso",

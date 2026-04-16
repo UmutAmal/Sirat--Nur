@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Энэ уншигчид бүх судруудыг аль хэдийн татаж авсан.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Офлайн Коран аудио багцууд",
+  "storedOnDeviceMb": "Төхөөрөмж дээр хадгалагдсан: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter}-д зориулсан офлайн файлуудыг устгасан.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Асуулт асуу...",
   "chatbotThinking": "Бодож байна...",
   "sukunMixerSubtitle": "Байгаль ба Коран судар холигч",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Аудио тоглуулж чадсангүй",
   "sukunNatureLabel": "Сукун (Байгаль)",
   "sukunRainOfMercy": "Нигүүлслийн бороо",
   "sukunGardenOfPeace": "Энх тайвны цэцэрлэг",

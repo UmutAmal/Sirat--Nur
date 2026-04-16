@@ -154,15 +154,12 @@ Future<Map<String, String>> _translateValues(
     );
     final parts = translated.text.split('__ARB_ENTRY_SPLIT__');
     if (parts.length != tokenizedEntries.length) {
-      return {
-        for (final entry in tokenizedEntries)
-          entry.key: resolveTranslatedArbValue(
-            key: entry.key,
-            source: entry.value.originalSource,
-            currentValue: currentValues[entry.key],
-            candidate: entry.value.originalSource,
-          ),
-      };
+      return _translateValuesIndividually(
+        translator,
+        tokenizedEntries,
+        currentValues,
+        locale,
+      );
     }
 
     return {
@@ -189,6 +186,42 @@ Future<Map<String, String>> _translateValues(
         ),
     };
   }
+}
+
+Future<Map<String, String>> _translateValuesIndividually(
+  GoogleTranslator translator,
+  List<MapEntry<String, _TokenizedValue>> tokenizedEntries,
+  Map<String, dynamic> currentValues,
+  String locale,
+) async {
+  final translatedValues = <String, String>{};
+
+  for (final entry in tokenizedEntries) {
+    var candidate = entry.value.originalSource;
+    try {
+      final translated = await translator.translate(
+        entry.value.tokenizedSource,
+        from: 'en',
+        to: locale,
+      );
+      candidate = _restorePlaceholders(
+        translated.text.trim(),
+        entry.value.replacements,
+        entry.value.originalSource,
+      );
+    } catch (_) {
+      candidate = entry.value.originalSource;
+    }
+
+    translatedValues[entry.key] = resolveTranslatedArbValue(
+      key: entry.key,
+      source: entry.value.originalSource,
+      currentValue: currentValues[entry.key],
+      candidate: candidate,
+    );
+  }
+
+  return translatedValues;
 }
 
 _TokenizedValue _tokenizeValue(String source) {
@@ -329,9 +362,13 @@ bool _mustStaySingleLine(String key) {
       key == 'downloadAction' ||
       key == 'resumeDownload' ||
       key == 'deleteDownloadedFiles' ||
+      key == 'offlineQuranAudioPacks' ||
+      key == 'storedOnDeviceMb' ||
       key == 'downloadCanceledForReciter' ||
       key == 'downloadFinishedForReciter' ||
       key == 'downloadPartiallyFinishedForReciter' ||
+      key == 'deletedOfflineFilesForReciter' ||
+      key == 'audioPlayFailed' ||
       key == 'diagnosticsQuranCloudTablesMissing' ||
       key == 'diagnosticsQuranCloudJuzMissing' ||
       key == 'placesDataSourceUnavailableTitle' ||

@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Sve sure su već preuzete za ovog recitatora.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Izvanmrežni audio paketi Kur'ana",
+  "storedOnDeviceMb": "Pohranjeno na uređaju: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Izbrisani vanmrežni fajlovi za {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Postavite pitanje...",
   "chatbotThinking": "Razmišljam...",
   "sukunMixerSubtitle": "Nature & Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Audio reprodukcija nije uspjela",
   "sukunNatureLabel": "sukun (priroda)",
   "sukunRainOfMercy": "Rain of Mercy",
   "sukunGardenOfPeace": "Garden of Peace",

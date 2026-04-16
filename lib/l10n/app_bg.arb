@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Всички сури вече са изтеглени за този рецитатор.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Офлайн аудио пакети от Коран",
+  "storedOnDeviceMb": "Съхранява се на устройство: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Изтрити офлайн файлове за {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Задайте въпрос...",
   "chatbotThinking": "мислене...",
   "sukunMixerSubtitle": "Смесител на природата и Корана",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Неуспешно възпроизвеждане на аудио",
   "sukunNatureLabel": "сукун (природа)",
   "sukunRainOfMercy": "Дъжд от милост",
   "sukunGardenOfPeace": "Градина на мира",

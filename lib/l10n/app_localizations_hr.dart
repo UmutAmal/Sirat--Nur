@@ -1185,11 +1185,11 @@ class AppLocalizationsHr extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Izvanmrežni audio paketi Kur\'ana';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Pohranjeno na uređaju: $size MB';
   }
 
   @override
@@ -1234,7 +1234,7 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Izbrisane izvanmrežne datoteke za $reciter.';
   }
 
   @override
@@ -1256,7 +1256,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get sukunMixerSubtitle => 'Mikser prirode i Kur\'ana';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Audio reprodukcija nije uspjela';
 
   @override
   String get sukunNatureLabel => 'sukun (priroda)';

@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Wonke ama-surah asevele alandiwe kulo mlandeli.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Amaphekhi omsindo we-Quran angaxhunyiwe ku-inthanethi",
+  "storedOnDeviceMb": "Ilondolozwe kudivayisi: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Amafayela angaxhunyiwe ku-inthanethi asusiwe {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Buza umbuzo...",
   "chatbotThinking": "Ukucabanga...",
   "sukunMixerSubtitle": "Imvelo & I-Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Ukudlalwa komsindo kuhlulekile",
   "sukunNatureLabel": "I-Sukun (Imvelo)",
   "sukunRainOfMercy": "Imvula Yomusa",
   "sukunGardenOfPeace": "Insimu Yokuthula",

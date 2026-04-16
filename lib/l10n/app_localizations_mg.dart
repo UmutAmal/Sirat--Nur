@@ -1186,11 +1186,11 @@ class AppLocalizationsMg extends AppLocalizations {
       'Ny surah rehetra dia efa alaina ho an\'ity reciter ity.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Koran Audio Packs an-tserasera';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Voatahiry amin\'ny fitaovana: $size MB';
   }
 
   @override
@@ -1235,7 +1235,7 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Voafafa ny rakitra an-tserasera ho an\'ny $reciter.';
   }
 
   @override
@@ -1257,7 +1257,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get sukunMixerSubtitle => 'Nature & Coran Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Tsy nahomby ny famerenam-peo';
 
   @override
   String get sukunNatureLabel => 'Sukun (Natiora)';

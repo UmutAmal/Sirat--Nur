@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Pacáistí Fuaime Quran As Líne",
+  "storedOnDeviceMb": "Stóráilte ar ghléas: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Scriosadh comhaid as líne le haghaidh {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ask a question...",
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "Meascthóir Dúlra & Qur'an",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Theip ar athsheinm fuaime",
   "sukunNatureLabel": "Sukun (Dúlra)",
   "sukunRainOfMercy": "Báisteach na Trócaire",
   "sukunGardenOfPeace": "Gairdín na Síochána",

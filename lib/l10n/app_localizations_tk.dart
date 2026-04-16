@@ -1183,11 +1183,11 @@ class AppLocalizationsTk extends AppLocalizations {
       'Bu okaýjy üçin eýýäm ähli süreler göçürildi.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Oflayn Kuran ses paketleri';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Enjamda saklanýar: $size MB';
   }
 
   @override
@@ -1233,7 +1233,7 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return '$reciter üçin awtonom faýllar öçürildi.';
   }
 
   @override
@@ -1255,7 +1255,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get sukunMixerSubtitle => 'Tebigat we Gurhan garyjy';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Ses görkezmek şowsuz';
 
   @override
   String get sukunNatureLabel => 'Sukun (Tebigat)';

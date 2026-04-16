@@ -1185,11 +1185,11 @@ class AppLocalizationsMn extends AppLocalizations {
       'Энэ уншигчид бүх судруудыг аль хэдийн татаж авсан.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Офлайн Коран аудио багцууд';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Төхөөрөмж дээр хадгалагдсан: $size MB';
   }
 
   @override
@@ -1234,7 +1234,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return '$reciter-д зориулсан офлайн файлуудыг устгасан.';
   }
 
   @override
@@ -1256,7 +1256,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get sukunMixerSubtitle => 'Байгаль ба Коран судар холигч';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Аудио тоглуулж чадсангүй';
 
   @override
   String get sukunNatureLabel => 'Сукун (Байгаль)';

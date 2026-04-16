@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "この朗読のためにすべてのスーラがすでにダウンロードされています。",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "オフライン コーラン オーディオ パック",
+  "storedOnDeviceMb": "デバイスに保存: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} のオフライン ファイルが削除されました。",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "質問してください...",
   "chatbotThinking": "考え中...",
   "sukunMixerSubtitle": "自然とコーランミキサー",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "オーディオの再生に失敗しました",
   "sukunNatureLabel": "スクン（自然）",
   "sukunRainOfMercy": "慈悲の雨",
   "sukunGardenOfPeace": "平和の庭園",

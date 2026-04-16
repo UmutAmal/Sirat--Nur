@@ -1169,11 +1169,11 @@ class AppLocalizationsTi extends AppLocalizations {
   String get downloadCompleted => 'ኩለን ሱራታት ድሮ ነዚ ቀባኢ ዝወረዳ።';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'ካብ መስመር ወጻኢ ቁርኣን ድምጺ ፓክስ';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'ኣብ መሳርሒ ዝተዓቀበ: $size MB';
   }
 
   @override

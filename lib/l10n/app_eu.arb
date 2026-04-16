@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Errezitatzaile honetarako dagoeneko deskargatuta dauden sura guztiak.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Lineaz kanpoko Quran Audio paketeak",
+  "storedOnDeviceMb": "Gailuan gordeta: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Lineaz kanpoko fitxategiak ezabatu dira {reciter} erabiltzailearentzako.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Galdera bat egin...",
   "chatbotThinking": "Pentsatzen...",
   "sukunMixerSubtitle": "Natura eta Koranaren nahasketa",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Audioa erreproduzitzea huts egin du",
   "sukunNatureLabel": "Sukun (Natura)",
   "sukunRainOfMercy": "Errukiaren euria",
   "sukunGardenOfPeace": "Bakearen Lorategia",

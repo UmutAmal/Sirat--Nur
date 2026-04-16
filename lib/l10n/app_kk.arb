@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Бұл қари үшін барлық сүрелер жүктеліп қойған.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Офлайн Құран аудио бумалары",
+  "storedOnDeviceMb": "Құрылғыда сақталған: {size} МБ",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} үшін офлайн файлдар жойылды.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Сұрақ қойыңыз...",
   "chatbotThinking": "Ойлану...",
   "sukunMixerSubtitle": "Табиғат пен Құран араластырғыш",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Аудио ойнату сәтсіз аяқталды",
   "sukunNatureLabel": "Сукун (табиғат)",
   "sukunRainOfMercy": "Мейірімділік жаңбыры",
   "sukunGardenOfPeace": "Бейбітшілік бағы",

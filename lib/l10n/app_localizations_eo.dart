@@ -1183,11 +1183,11 @@ class AppLocalizationsEo extends AppLocalizations {
       'Ĉiuj suraoj jam elŝutitaj por ĉi tiu deklamanto.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Senkonektaj Koranaj Aŭdio-Pakoj';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Stokita sur aparato: $size MB';
   }
 
   @override
@@ -1232,7 +1232,7 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Forigitaj senkonektaj dosieroj por $reciter.';
   }
 
   @override
@@ -1254,7 +1254,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get sukunMixerSubtitle => 'Miksilo de Naturo kaj Korano';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Sona reprodukto malsukcesis';
 
   @override
   String get sukunNatureLabel => 'Sukun (Naturo)';

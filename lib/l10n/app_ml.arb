@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "ഈ പാരായണക്കാരനായി എല്ലാ സൂറകളും ഇതിനകം ഡൗൺലോഡ് ചെയ്തിട്ടുണ്ട്.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "ഓഫ്‌ലൈൻ ഖുർആൻ ഓഡിയോ പായ്ക്കുകൾ",
+  "storedOnDeviceMb": "ഉപകരണത്തിൽ സംഭരിച്ചിരിക്കുന്നത്: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} എന്നതിനായുള്ള ഓഫ്‌ലൈൻ ഫയലുകൾ ഇല്ലാതാക്കി.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "ഒരു ചോദ്യം ചോദിക്കൂ...",
   "chatbotThinking": "ചിന്തിക്കുന്നു...",
   "sukunMixerSubtitle": "പ്രകൃതിയും ഖുറാനും മിക്സർ",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "ഓഡിയോ പ്ലേബാക്ക് പരാജയപ്പെട്ടു",
   "sukunNatureLabel": "സുകുൻ (പ്രകൃതി)",
   "sukunRainOfMercy": "കാരുണ്യത്തിൻ്റെ മഴ",
   "sukunGardenOfPeace": "സമാധാനത്തിൻ്റെ പൂന്തോട്ടം",

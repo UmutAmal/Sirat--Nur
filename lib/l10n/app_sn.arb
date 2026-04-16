@@ -370,7 +370,7 @@
   },
   "downloadCompleted": "Masurah ese akatodhawunirodha kune ino reciter.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "storedOnDeviceMb": "Zvakachengetwa pachishandiswa: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Dzakadzimwa mafaira e{reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Bvunza mubvunzo...",
   "chatbotThinking": "Kufunga...",
   "sukunMixerSubtitle": "Nature & Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Kuridza redhiyo hakuna kukwanisa",
   "sukunNatureLabel": "Sukun (Nature)",
   "sukunRainOfMercy": "Kunaya kweNgoni",
   "sukunGardenOfPeace": "Bindu reRugare",

@@ -1187,7 +1187,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Reposita in fabrica: $size MB';
   }
 
   @override
@@ -1232,7 +1232,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Documenta offline deleta pro $reciter.';
   }
 
   @override
@@ -1254,7 +1254,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get sukunMixerSubtitle => 'Natura & Qur\'an Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Audio playback defuit';
 
   @override
   String get sukunNatureLabel => 'Sukun (Nature)';

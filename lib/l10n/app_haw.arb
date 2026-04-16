@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Ua hoʻoiho ʻia nā surah āpau no kēia mea heluhelu.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Hoʻopahemo Quran Audio Packs",
+  "storedOnDeviceMb": "Mālama ʻia ma ka hāmeʻa: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Holoi ʻia nā faila hoʻopahemo no {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "E nīnau i kahi nīnau...",
   "chatbotThinking": "Ke noʻonoʻo nei...",
   "sukunMixerSubtitle": "Nature & Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Hāʻule ka pāʻani leo",
   "sukunNatureLabel": "Sukun (Nature)",
   "sukunRainOfMercy": "Ua Aloha",
   "sukunGardenOfPeace": "Kihapai Maluhia",

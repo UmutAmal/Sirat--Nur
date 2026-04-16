@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "ชุดเสียงอัลกุรอานออฟไลน์",
+  "storedOnDeviceMb": "เก็บไว้ในอุปกรณ์: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "ลบไฟล์ออฟไลน์สำหรับ {reciter} แล้ว",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ask a question...",
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "มิกเซอร์ธรรมชาติและอัลกุรอาน",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "การเล่นเสียงล้มเหลว",
   "sukunNatureLabel": "สุกุล (ธรรมชาติ)",
   "sukunRainOfMercy": "ฝนแห่งความเมตตา",
   "sukunGardenOfPeace": "สวนแห่งสันติภาพ",

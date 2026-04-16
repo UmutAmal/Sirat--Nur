@@ -1183,7 +1183,7 @@ class AppLocalizationsSr extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Офлајн аудио пакети Кур\'ана';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1254,7 +1254,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get sukunMixerSubtitle => 'Природа и миксер Кур\'ана';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Аудио репродукција није успела';
 
   @override
   String get sukunNatureLabel => 'Сукун (природа)';

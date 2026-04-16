@@ -8000,3 +8000,53 @@
 
 ### Sonraki Adım
 - Sonraki dongude fallback sayiminda ust siradaki kullaniciya gorunen `audioPlayFailed`, `offlineQuranAudioPacks`, `storedOnDeviceMb`, `deletedOfflineFilesForReciter` veya diagnostics kumesi arasindan en yuksek etkili UI grubunu sec.
+
+## 2026-04-16 TUR-212 — Localize Offline Audio Runtime Copy
+
+### Yapılan İşlem
+- `offlineQuranAudioPacks`, `storedOnDeviceMb`, `deletedOfflineFilesForReciter` ve `audioPlayFailed` anahtarlari korumali ARB batch'i ile genis locale kumesinde lokalize edildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- `tool\translate_arb_keys.dart` single-line guard listesine bu dort anahtar eklendi.
+- Batch separator bozuldugunda tum locale'i Ingilizceye dusuren kok sebep azaltildi: ceviri araci artik batch parcasi ayrilamazsa ayni anahtarlari tek tek cevirerek kurtarmayi deniyor.
+- `test\arb_ui_localization_test.dart` download/diagnostics priority guard ve single-line guard kapsaminda bu dort kullanici yuzeyi anahtarini kontrol ediyor.
+- `test\translate_arb_keys_test.dart` icine multiline offline audio label output regresyon testi eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\downloads\offline_downloads_page.dart:194` silme sonucunu `deletedOfflineFilesForReciter` ile snackbar olarak gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\downloads\offline_downloads_page.dart:232` offline ses paketleri basligini `offlineQuranAudioPacks` ile gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\downloads\offline_downloads_page.dart:239` cihazdaki toplam boyutu `storedOnDeviceMb` ile gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart:248` ve `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart:276` playback hatasini `audioPlayFailed` ile gosteriyor.
+- TUR-212 oncesi bu dort anahtar `194` locale civarinda `app_en.arb` ile birebir ayniydi; bu dogrudan kullanici yuzeyinde Ingilizce fallback uretiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Oncelikli locale setinde offline audio/download runtime copy Ingilizce fallback riski kapandi.
+- `offlineQuranAudioPacks` fallback sayisi `194 -> 70` seviyesine indi.
+- `storedOnDeviceMb` fallback sayisi `194 -> 65` seviyesine indi.
+- `deletedOfflineFilesForReciter` fallback sayisi `194 -> 70` seviyesine indi.
+- `audioPlayFailed` fallback sayisi `194 -> 68` seviyesine indi.
+- Kalan fallback'ler Google ceviri destegi olmayan veya guvenli aday uretilemeyen nadir/legacy locale grubunda birakildi; uydurma hedef dil metni yazilmadi.
+
+### Test Sonucu
+- `flutter analyze` PASS
+- `flutter test` PASS (`381/381`) baseline oncesi
+- `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart` PASS (`46/46`)
+- Tek satir ve placeholder taramasi PASS: `{size}` ve `{reciter}` tum ARB dosyalarinda korundu.
+
+### Risk Değişimi
+- Oncelikli locale setinde offline audio/download runtime copy fallback riski: `12/25 -> 2/25`
+- Tum locale setinde offline audio/download runtime copy fallback riski: `12/25 -> 7/25`
+- Ceviri araci batch separator bozulmasi tekrar riski: `10/25 -> 4/25`
+
+### Sonraki Adım
+- Sonraki dongude diagnostics kumesindeki `diagnosticsQuranDataset`, `diagnosticsQuranSurahs`, `diagnosticsQuranAyahs`, `diagnosticsQuranJuzMetadata`, `diagnosticsQuranCloudCheckFailed` ve `diagnosticsQuranCloudStructuralCheckFailed` fallback riskini ayni guard+batch+quality akisi ile kapat.
+
+### Final Doğrulama Eki
+- Commit oncesi son kosuda `flutter test` PASS (`382/382`) olarak tamamlandi.

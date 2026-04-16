@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Alla surahs har redan laddats ner för denna reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline koranljudpaket",
+  "storedOnDeviceMb": "Lagrat på enheten: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Raderade offlinefiler för {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ställ en fråga...",
   "chatbotThinking": "Funderar...",
   "sukunMixerSubtitle": "Natur & Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Ljuduppspelningen misslyckades",
   "sukunNatureLabel": "Sukun (natur)",
   "sukunRainOfMercy": "Regn av nåd",
   "sukunGardenOfPeace": "Fredens trädgård",

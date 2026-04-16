@@ -1187,11 +1187,11 @@ class AppLocalizationsHy extends AppLocalizations {
       'Բոլոր սուրաներն արդեն ներբեռնված են այս ասմունքողի համար:';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Անցանց Ղուրանի աուդիո փաթեթներ';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Պահված է սարքում՝ $size ՄԲ';
   }
 
   @override
@@ -1237,7 +1237,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Ջնջվել են անցանց ֆայլերը $reciter-ի համար:';
   }
 
   @override
@@ -1259,7 +1259,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get sukunMixerSubtitle => 'Բնություն և Ղուրանի խառնիչ';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Ձայնի նվագարկումը ձախողվեց';
 
   @override
   String get sukunNatureLabel => 'Սուկուն (Բնություն)';

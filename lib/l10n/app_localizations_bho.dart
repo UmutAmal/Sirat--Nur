@@ -1186,11 +1186,11 @@ class AppLocalizationsBho extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'ऑफलाइन कुरान ऑडियो पैक बा';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'डिवाइस पर संग्रहीत बा: $size MB';
   }
 
   @override
@@ -1235,7 +1235,7 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return '$reciter खातिर ऑफलाइन फाइल हटा दिहल गइल।';
   }
 
   @override
@@ -1257,7 +1257,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get sukunMixerSubtitle => 'प्रकृति & कुरान मिक्सर के बा';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'ऑडियो प्लेबैक फेल हो गइल';
 
   @override
   String get sukunNatureLabel => 'सुकुन (प्रकृति) के बा।';

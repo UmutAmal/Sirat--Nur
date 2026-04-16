@@ -1171,11 +1171,11 @@ class AppLocalizationsAm extends AppLocalizations {
   String get downloadCompleted => 'ለዚህ አንባቢ አስቀድመው የወረዱ ሁሉም ሱራዎች።';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'ከመስመር ውጭ የቁርአን ኦዲዮ ጥቅሎች';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'በመሳሪያ ላይ የተከማቸ፡ $size ሜባ';
   }
 
   @override
@@ -1220,7 +1220,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'ለ$reciter ከመስመር ውጭ ፋይሎች ተሰርዘዋል።';
   }
 
   @override
@@ -1242,7 +1242,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get sukunMixerSubtitle => 'ተፈጥሮ እና ቁርኣን ቀማሚ';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'የድምጽ መልሶ ማጫወት አልተሳካም።';
 
   @override
   String get sukunNatureLabel => 'ሱኩን (ተፈጥሮ)';

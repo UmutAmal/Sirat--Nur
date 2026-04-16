@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Tout sourate deja telechaje pou resite sa a.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline Koran odyo pake",
+  "storedOnDeviceMb": "Ki estoke sou aparèy la: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Efase fichye offline pou {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Poze yon kesyon...",
   "chatbotThinking": "Panse...",
   "sukunMixerSubtitle": "Nati & Koran Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Lektur odyo echwe",
   "sukunNatureLabel": "Sukun (Nati)",
   "sukunRainOfMercy": "Lapli mizèrikòd",
   "sukunGardenOfPeace": "Jaden lapè",

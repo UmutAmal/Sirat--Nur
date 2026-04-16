@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Ko nga surah katoa kua oti te tango ake mo tenei kaikorero.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Ko nga Puka Ororongo Quran Tuimotu",
+  "storedOnDeviceMb": "Kua rongoa ki runga taputapu: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Kua mukua nga konae tuimotu mo {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Patai he patai...",
   "chatbotThinking": "Whakaaro...",
   "sukunMixerSubtitle": "Nature & Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "I rahua te purei ororongo",
   "sukunNatureLabel": "Sukun (Nature)",
   "sukunRainOfMercy": "Te ua o te Aroha",
   "sukunGardenOfPeace": "Te kari o te rangimarie",

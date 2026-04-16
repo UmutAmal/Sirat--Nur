@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Visas šim deklamētājam jau lejupielādētās suras.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Bezsaistes Korāna audio pakotnes",
+  "storedOnDeviceMb": "Saglabāts ierīcē: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Izdzēsti bezsaistes faili {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Uzdot jautājumu...",
   "chatbotThinking": "Domājot...",
   "sukunMixerSubtitle": "Dabas un Korāna mikseris",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Audio atskaņošana neizdevās",
   "sukunNatureLabel": "Sukun (daba)",
   "sukunRainOfMercy": "Žēlsirdības lietus",
   "sukunGardenOfPeace": "Miera dārzs",

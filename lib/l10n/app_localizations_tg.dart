@@ -1182,11 +1182,11 @@ class AppLocalizationsTg extends AppLocalizations {
       'Ҳама сураҳо барои ин қироат аллакай бор карда шудаанд.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Бастаҳои аудиоии офлайнии Қуръон';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Дар дастгоҳ захира шудааст: $size MB';
   }
 
   @override
@@ -1231,7 +1231,7 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Файлҳои офлайнӣ барои $reciter нест карда шуданд.';
   }
 
   @override
@@ -1253,7 +1253,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get sukunMixerSubtitle => 'Омехтагари табиат ва Қуръон';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Навозиши аудио ноком шуд';
 
   @override
   String get sukunNatureLabel => 'Сукун (Табиат)';

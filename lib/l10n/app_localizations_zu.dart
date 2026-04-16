@@ -1187,11 +1187,12 @@ class AppLocalizationsZu extends AppLocalizations {
       'Wonke ama-surah asevele alandiwe kulo mlandeli.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Amaphekhi omsindo we-Quran angaxhunyiwe ku-inthanethi';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Ilondolozwe kudivayisi: $size MB';
   }
 
   @override
@@ -1236,7 +1237,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Amafayela angaxhunyiwe ku-inthanethi asusiwe $reciter.';
   }
 
   @override
@@ -1258,7 +1259,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get sukunMixerSubtitle => 'Imvelo & I-Qur\'an Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Ukudlalwa komsindo kuhlulekile';
 
   @override
   String get sukunNatureLabel => 'I-Sukun (Imvelo)';

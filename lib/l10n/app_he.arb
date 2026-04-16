@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "כל הסורות כבר הורדו עבור הדקלם הזה.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "חבילות אודיו של הקוראן לא מקוונות",
+  "storedOnDeviceMb": "מאוחסן במכשיר: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "נמחקו קבצים לא מקוונים עבור {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "שאל שאלה...",
   "chatbotThinking": "חושב...",
   "sukunMixerSubtitle": "מיקסר טבע וקוראן",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "השמעת אודיו נכשלה",
   "sukunNatureLabel": "סוקון (טבע)",
   "sukunRainOfMercy": "גשם של רחמים",
   "sukunGardenOfPeace": "גן השלום",

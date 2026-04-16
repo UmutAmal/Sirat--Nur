@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Tiphakiti ta mpfumawulo ta Quran leti nga riki eka inthanete",
+  "storedOnDeviceMb": "Yi hlayisiwile eka xitirhisiwa: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Ku susiwile tifayela ta le handle ka inthanete ta {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ask a question...",
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "Muhlanganisi wa Ntumbuluko & Qur'an",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Ku tlanga ka mpfumawulo ku tsandzekile",
   "sukunNatureLabel": "Sukun (Ntumbuluko) .",
   "sukunRainOfMercy": "Mpfula ya Tintswalo",
   "sukunGardenOfPeace": "Ntanga wa ku Rhula",

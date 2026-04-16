@@ -370,7 +370,7 @@
   },
   "downloadCompleted": "Alle surahs al ynladen foar dizze reciter.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "storedOnDeviceMb": "Opslein op apparaat: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Offline bestannen wiske foar {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Stel in fraach ...",
   "chatbotThinking": "Tinkend...",
   "sukunMixerSubtitle": "Natuer & Koran Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Audio ôfspieljen mislearre",
   "sukunNatureLabel": "Sukun (Natuer)",
   "sukunRainOfMercy": "Rein fan Mercy",
   "sukunGardenOfPeace": "Tún fan Frede",

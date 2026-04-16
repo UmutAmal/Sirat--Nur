@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Sadaya surah parantos diunduh pikeun qari ieu.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Pek Audio Quran Offline",
+  "storedOnDeviceMb": "Disimpen dina alat: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Ngahapus file offline pikeun {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Tanya patarosan...",
   "chatbotThinking": "Pikiran...",
   "sukunMixerSubtitle": "Alam & Qur'an Adun",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Puteran audio gagal",
   "sukunNatureLabel": "Sukun (Alam)",
   "sukunRainOfMercy": "Hujan Rahmat",
   "sukunGardenOfPeace": "Taman Damai",

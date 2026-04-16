@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Bu oxuyan üçün bütün surələr artıq yüklənib.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline Quran Audio Paketləri",
+  "storedOnDeviceMb": "Cihazda saxlanılır: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} üçün oflayn fayllar silindi.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Sual verin...",
   "chatbotThinking": "Düşünür...",
   "sukunMixerSubtitle": "Təbiət və Quran qarışdırıcı",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Audio oxutma uğursuz oldu",
   "sukunNatureLabel": "Sukun (Təbiət)",
   "sukunRainOfMercy": "Rəhmət yağışı",
   "sukunGardenOfPeace": "Sülh bağı",

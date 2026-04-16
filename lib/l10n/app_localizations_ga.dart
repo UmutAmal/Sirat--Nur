@@ -1184,11 +1184,11 @@ class AppLocalizationsGa extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Pacáistí Fuaime Quran As Líne';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Stóráilte ar ghléas: $size MB';
   }
 
   @override
@@ -1233,7 +1233,7 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Scriosadh comhaid as líne le haghaidh $reciter.';
   }
 
   @override
@@ -1255,7 +1255,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get sukunMixerSubtitle => 'Meascthóir Dúlra & Qur\'an';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Theip ar athsheinm fuaime';
 
   @override
   String get sukunNatureLabel => 'Sukun (Dúlra)';

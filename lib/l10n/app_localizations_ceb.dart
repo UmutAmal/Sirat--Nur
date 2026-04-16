@@ -1188,11 +1188,11 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Ang tanan nga mga surah na-download na para sa kini nga reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Offline nga Quran Audio Packs';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Gitipigan sa device: $size MB';
   }
 
   @override
@@ -1237,7 +1237,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Gitangtang ang offline nga mga file para sa $reciter.';
   }
 
   @override
@@ -1259,7 +1259,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get sukunMixerSubtitle => 'Kinaiyahan ug Qur\'an Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Napakyas ang playback sa audio';
 
   @override
   String get sukunNatureLabel => 'Sukun (Nature)';

@@ -1184,11 +1184,11 @@ class AppLocalizationsCs extends AppLocalizations {
       'Všechny súry jsou již staženy pro tohoto recitátora.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Offline zvukové balíčky Koránu';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Uloženo v zařízení: $size MB';
   }
 
   @override
@@ -1233,7 +1233,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Byly smazány offline soubory pro $reciter.';
   }
 
   @override
@@ -1255,7 +1255,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get sukunMixerSubtitle => 'Mixér přírody a koránu';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Přehrávání zvuku se nezdařilo';
 
   @override
   String get sukunNatureLabel => 'Sukun (příroda)';

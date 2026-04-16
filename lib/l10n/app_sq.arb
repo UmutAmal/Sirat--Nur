@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Të gjitha suret janë shkarkuar tashmë për këtë recitues.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Paketat audio të Kuranit jashtë linje",
+  "storedOnDeviceMb": "Ruajtur në pajisje: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Skedarët jashtë linje u fshinë për {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Bëj një pyetje...",
   "chatbotThinking": "Duke menduar...",
   "sukunMixerSubtitle": "Përzierëse e Natyrës dhe Kuranit",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Riprodhimi i audios dështoi",
   "sukunNatureLabel": "Sukun (Natyrë)",
   "sukunRainOfMercy": "Shiu i Mëshirës",
   "sukunGardenOfPeace": "Kopshti i Paqes",

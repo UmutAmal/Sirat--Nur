@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "ఈ పారాయణకర్త కోసం అన్ని సూరాలు ఇప్పటికే డౌన్‌లోడ్ చేయబడ్డాయి.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "ఆఫ్‌లైన్ ఖురాన్ ఆడియో ప్యాక్‌లు",
+  "storedOnDeviceMb": "పరికరంలో నిల్వ చేయబడింది: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} కోసం ఆఫ్‌లైన్ ఫైల్‌లు తొలగించబడ్డాయి.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "ఒక ప్రశ్న అడగండి...",
   "chatbotThinking": "ఆలోచిస్తూ...",
   "sukunMixerSubtitle": "ప్రకృతి & ఖురాన్ మిక్సర్",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "ఆడియో ప్లేబ్యాక్ విఫలమైంది",
   "sukunNatureLabel": "సుకున్ (ప్రకృతి)",
   "sukunRainOfMercy": "దయ యొక్క వర్షం",
   "sukunGardenOfPeace": "శాంతి తోట",

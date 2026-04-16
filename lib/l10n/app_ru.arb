@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Все суры для этого чтеца уже скачаны.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Офлайн-аудиопакеты Корана",
+  "storedOnDeviceMb": "Хранится на устройстве: {size} МБ.",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Удалены автономные файлы для {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Задайте вопрос...",
   "chatbotThinking": "Думая...",
   "sukunMixerSubtitle": "Миксер природы и Корана",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Воспроизведение аудио не удалось",
   "sukunNatureLabel": "Сукун (Природа)",
   "sukunRainOfMercy": "Дождь милосердия",
   "sukunGardenOfPeace": "Сад Мира",

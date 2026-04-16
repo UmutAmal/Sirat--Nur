@@ -1191,7 +1191,7 @@ class AppLocalizationsSt extends AppLocalizations {
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'E bolokiloe sesebelisoa: $size MB';
   }
 
   @override
@@ -1236,7 +1236,7 @@ class AppLocalizationsSt extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'E hlakotsoe lifaele tse kantle ho Marang-rang tsa $reciter.';
   }
 
   @override
@@ -1258,7 +1258,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get sukunMixerSubtitle => 'Tlhaho le Motsoako oa Qur\'an';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Ho hloleha ho bapala molumo';
 
   @override
   String get sukunNatureLabel => 'Sukun (Tlhaho)';

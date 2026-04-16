@@ -1181,11 +1181,11 @@ class AppLocalizationsKri extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Offlain Quran Odio Pak dɛn';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Dɛn kin kip am na divays: $size MB';
   }
 
   @override
@@ -1230,7 +1230,7 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Dilit ɔflayn fayl dɛn fɔ $reciter.';
   }
 
   @override
@@ -1253,7 +1253,7 @@ class AppLocalizationsKri extends AppLocalizations {
       'Nature & Qur\'an Mixer we de mek yu fil fayn';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Di odio ple bak nɔ bin wok';
 
   @override
   String get sukunNatureLabel => 'Sukun (Nature) .';

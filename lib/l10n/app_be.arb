@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Усе суры ўжо спампаваныя для гэтага чытальніка.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Афлайн-аўдыяпакеты Карана",
+  "storedOnDeviceMb": "Захавана на прыладзе: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Выдалены пазасеткавыя файлы для {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Задайце пытанне...",
   "chatbotThinking": "Думаючы...",
   "sukunMixerSubtitle": "Прырода і Каран Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Памылка прайгравання аўдыя",
   "sukunNatureLabel": "Сукун (прырода)",
   "sukunRainOfMercy": "Дождж міласэрнасці",
   "sukunGardenOfPeace": "Сад міру",

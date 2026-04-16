@@ -1184,11 +1184,11 @@ class AppLocalizationsHu extends AppLocalizations {
       'Ehhez a szavalóhoz már letöltött összes szúra.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Offline Korán audio csomagok';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Az eszközön tárolva: $size MB';
   }
 
   @override
@@ -1233,7 +1233,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'A $reciter offline fájljai törölve.';
   }
 
   @override
@@ -1255,7 +1255,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get sukunMixerSubtitle => 'Természet és Korán keverő';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'A hanglejátszás nem sikerült';
 
   @override
   String get sukunNatureLabel => 'Sukun (természet)';

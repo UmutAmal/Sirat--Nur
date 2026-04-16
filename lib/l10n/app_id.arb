@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Semua surah sudah diunduh untuk pembaca ini.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Paket Audio Quran Offline",
+  "storedOnDeviceMb": "Disimpan di perangkat: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "File offline untuk {reciter} dihapus.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ajukan pertanyaan...",
   "chatbotThinking": "Berpikir...",
   "sukunMixerSubtitle": "Pengaduk Alam & Al-Qur'an",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Pemutaran audio gagal",
   "sukunNatureLabel": "Sukun (Alam)",
   "sukunRainOfMercy": "Hujan Rahmat",
   "sukunGardenOfPeace": "Taman Perdamaian",

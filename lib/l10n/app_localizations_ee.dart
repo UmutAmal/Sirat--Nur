@@ -1183,11 +1183,12 @@ class AppLocalizationsEe extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Quran Odio Packs siwo mele Internet dzi o';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Wodzrae ɖo ɖe mɔ̃ dzi: $size MB';
   }
 
   @override
@@ -1232,7 +1233,7 @@ class AppLocalizationsEe extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Wotutu faɛl siwo mele internet dzi o na $reciter.';
   }
 
   @override
@@ -1254,7 +1255,7 @@ class AppLocalizationsEe extends AppLocalizations {
   String get sukunMixerSubtitle => 'Dzɔdzɔme & Qur\'an Tɔtɔ';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Odio ƒoƒo do kpo nu';
 
   @override
   String get sukunNatureLabel => 'Sukun (Dzɔdzɔmenuwo) .';

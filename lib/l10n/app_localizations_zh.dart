@@ -1156,11 +1156,11 @@ class AppLocalizationsZh extends AppLocalizations {
   String get downloadCompleted => '已为该背诵者下载所有古兰经。';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => '离线古兰经音频包';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return '存储在设备上：$size MB';
   }
 
   @override
@@ -1205,7 +1205,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return '已删除 $reciter 的脱机文件。';
   }
 
   @override
@@ -1226,7 +1226,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get sukunMixerSubtitle => '自然与古兰经混合器';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => '音频播放失败';
 
   @override
   String get sukunNatureLabel => '苏坤（自然）';
@@ -2794,11 +2794,11 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get downloadCompleted => '已为该背诵者下载所有古兰经。';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => '离线古兰经音频包';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return '存储在设备上：$size MB';
   }
 
   @override
@@ -2843,7 +2843,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return '已删除 $reciter 的脱机文件。';
   }
 
   @override
@@ -2864,7 +2864,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get sukunMixerSubtitle => '自然与古兰经混合器';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => '音频播放失败';
 
   @override
   String get sukunNatureLabel => '苏坤（自然）';
@@ -4432,11 +4432,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get downloadCompleted => '已為該背誦者下載所有古蘭經。';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => '離線古蘭經音頻包';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return '儲存在裝置上：$size MB';
   }
 
   @override
@@ -4481,7 +4481,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return '已刪除 $reciter 的離線檔案。';
   }
 
   @override
@@ -4502,7 +4502,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get sukunMixerSubtitle => '自然與古蘭經混合器';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => '音訊播放失敗';
 
   @override
   String get sukunNatureLabel => '蘇坤（自然）';

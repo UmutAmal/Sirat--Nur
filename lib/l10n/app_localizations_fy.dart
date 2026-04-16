@@ -1186,7 +1186,7 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Opslein op apparaat: $size MB';
   }
 
   @override
@@ -1231,7 +1231,7 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Offline bestannen wiske foar $reciter.';
   }
 
   @override
@@ -1253,7 +1253,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get sukunMixerSubtitle => 'Natuer & Koran Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Audio ôfspieljen mislearre';
 
   @override
   String get sukunNatureLabel => 'Sukun (Natuer)';

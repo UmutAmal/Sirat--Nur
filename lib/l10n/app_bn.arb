@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "এই তেলাওয়াতকারীর জন্য ইতিমধ্যেই সমস্ত সূরা ডাউনলোড করা হয়েছে।",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "অফলাইন কুরআন অডিও প্যাক",
+  "storedOnDeviceMb": "ডিভাইসে সংরক্ষিত: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} এর অফলাইন ফাইল মুছে ফেলা হয়েছে৷",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "একটি প্রশ্ন জিজ্ঞাসা করুন...",
   "chatbotThinking": "ভাবছে...",
   "sukunMixerSubtitle": "প্রকৃতি ও কোরআন মিক্সার",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "অডিও প্লেব্যাক ব্যর্থ হয়েছে",
   "sukunNatureLabel": "সুকুন (প্রকৃতি)",
   "sukunRainOfMercy": "রহমতের বৃষ্টি",
   "sukunGardenOfPeace": "শান্তির বাগান",

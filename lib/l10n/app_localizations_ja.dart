@@ -1169,11 +1169,11 @@ class AppLocalizationsJa extends AppLocalizations {
   String get downloadCompleted => 'この朗読のためにすべてのスーラがすでにダウンロードされています。';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'オフライン コーラン オーディオ パック';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'デバイスに保存: $size MB';
   }
 
   @override
@@ -1218,7 +1218,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return '$reciter のオフライン ファイルが削除されました。';
   }
 
   @override
@@ -1239,7 +1239,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get sukunMixerSubtitle => '自然とコーランミキサー';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'オーディオの再生に失敗しました';
 
   @override
   String get sukunNatureLabel => 'スクン（自然）';

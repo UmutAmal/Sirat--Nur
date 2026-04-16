@@ -1183,11 +1183,11 @@ class AppLocalizationsIs extends AppLocalizations {
       'Allar surahs þegar hlaðið niður fyrir þennan reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Ótengdur Kóraninn hljóðpakkar';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Vistað á tæki: $size MB';
   }
 
   @override
@@ -1232,7 +1232,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Eyddum ónettengdum skrám fyrir $reciter.';
   }
 
   @override
@@ -1254,7 +1254,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get sukunMixerSubtitle => 'Náttúru- og Kóranblandari';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Hljóðspilun mistókst';
 
   @override
   String get sukunNatureLabel => 'Sukun (náttúra)';

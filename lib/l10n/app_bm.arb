@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Kuranɛ Audio Packs minnu tɛ ɛntɛrinɛti kan",
+  "storedOnDeviceMb": "A maralen bɛ minɛn kan: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Filenw bɔra ɛntɛrinɛti kan {reciter} kama.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ask a question...",
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "Nature & Kuranɛ Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Odio fɔli ma ɲɛ",
   "sukunNatureLabel": "Sukun (Nature) .",
   "sukunRainOfMercy": "Sanji min bɛ Hinɛ",
   "sukunGardenOfPeace": "Nakɔ min bɛ Hɛrɛ la",

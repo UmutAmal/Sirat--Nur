@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Mana tinkisqa Quran Audio Packs",
+  "storedOnDeviceMb": "Dispositivopi waqaychasqa: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} kaqpaq mana tinkisqa willañiqikunata qullusqa.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ask a question...",
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "Naturaleza & Qur'an Mezclador",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Uyarinapaq uyariyqa manam allinchu karqa",
   "sukunNatureLabel": "Sukun (Pachamama) .",
   "sukunRainOfMercy": "Khuyapayakuy Para",
   "sukunGardenOfPeace": "Hawka Kawsay Huerta",

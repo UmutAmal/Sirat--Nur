@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Diphuthelwana tša Mamelwang tša Quran tša ka ntle ga Inthanete",
+  "storedOnDeviceMb": "E bolokilwe ka sesebediswa: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "E phumotšwe difaele tša ka ntle ga inthanete tša {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ask a question...",
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "Tlhago & Motswako wa Qur'an",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Go bapala ga modumo go paletšwe",
   "sukunNatureLabel": "Sukun (Tlhago) .",
   "sukunRainOfMercy": "Pula ya Mohau",
   "sukunGardenOfPeace": "Serapa sa Khutšo",

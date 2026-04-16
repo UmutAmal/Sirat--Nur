@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Ehhez a szavalóhoz már letöltött összes szúra.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline Korán audio csomagok",
+  "storedOnDeviceMb": "Az eszközön tárolva: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "A {reciter} offline fájljai törölve.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Tegyél fel egy kérdést...",
   "chatbotThinking": "Gondolkodni...",
   "sukunMixerSubtitle": "Természet és Korán keverő",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "A hanglejátszás nem sikerült",
   "sukunNatureLabel": "Sukun (természet)",
   "sukunRainOfMercy": "Irgalom esője",
   "sukunGardenOfPeace": "Béke kertje",

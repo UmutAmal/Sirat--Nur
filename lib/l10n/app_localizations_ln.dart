@@ -1185,11 +1185,11 @@ class AppLocalizationsLn extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Offline Coran Audio Packs';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Ebombami na dispositif: $size MB';
   }
 
   @override
@@ -1234,7 +1234,7 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Elongolami ba fichiers hors ligne pona $reciter.';
   }
 
   @override
@@ -1256,7 +1256,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get sukunMixerSubtitle => 'Nature & Mosangani ya Coran';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Kobɛta mongongo elongaki te';
 
   @override
   String get sukunNatureLabel => 'Sukun (Bozalisi) .';

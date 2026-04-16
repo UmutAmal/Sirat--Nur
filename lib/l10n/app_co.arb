@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Tutte e surah digià scaricate per questu reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Pacchetti audio Coran offline",
+  "storedOnDeviceMb": "Salvatu nant'à u dispusitivu: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "I schedari offline sò stati eliminati per {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Fate una quistione...",
   "chatbotThinking": "Pensendu...",
   "sukunMixerSubtitle": "Mixer Nature & Coran",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "A riproduzione audio hà fiascatu",
   "sukunNatureLabel": "Sukun (Natura)",
   "sukunRainOfMercy": "Pioggia di Misericordia",
   "sukunGardenOfPeace": "Giardinu di a Pace",

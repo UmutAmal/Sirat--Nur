@@ -1186,11 +1186,11 @@ class AppLocalizationsKa extends AppLocalizations {
       'ყველა სურა უკვე გადმოწერილია ამ მკითხავისთვის.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'ოფლაინ ყურანის აუდიო პაკეტები';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'ინახება მოწყობილობაზე: $size მბაიტი';
   }
 
   @override
@@ -1235,7 +1235,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'წაშლილია ოფლაინ ფაილები $reciter-ისთვის.';
   }
 
   @override
@@ -1257,7 +1257,7 @@ class AppLocalizationsKa extends AppLocalizations {
   String get sukunMixerSubtitle => 'ბუნებისა და ყურანის შემრევი';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'აუდიოს დაკვრა ვერ მოხერხდა';
 
   @override
   String get sukunNatureLabel => 'სუკუნი (ბუნება)';

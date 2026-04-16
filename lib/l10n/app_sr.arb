@@ -369,7 +369,7 @@
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "offlineQuranAudioPacks": "Офлајн аудио пакети Кур'ана",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ask a question...",
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "Природа и миксер Кур'ана",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Аудио репродукција није успела",
   "sukunNatureLabel": "Сукун (природа)",
   "sukunRainOfMercy": "Киша милосрђа",
   "sukunGardenOfPeace": "Врт мира",

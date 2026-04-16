@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "एहि पाठक लेल सब सूरह पहिने स डाउनलोड भ गेल अछि।",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "ऑफलाइन कुरान ऑडियो पैक",
+  "storedOnDeviceMb": "डिवाइस पर संग्रहीत: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {

@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "ყველა სურა უკვე გადმოწერილია ამ მკითხავისთვის.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "ოფლაინ ყურანის აუდიო პაკეტები",
+  "storedOnDeviceMb": "ინახება მოწყობილობაზე: {size} მბაიტი",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "წაშლილია ოფლაინ ფაილები {reciter}-ისთვის.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "დასვით შეკითხვა...",
   "chatbotThinking": "ფიქრი...",
   "sukunMixerSubtitle": "ბუნებისა და ყურანის შემრევი",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "აუდიოს დაკვრა ვერ მოხერხდა",
   "sukunNatureLabel": "სუკუნი (ბუნება)",
   "sukunRainOfMercy": "წყალობის წვიმა",
   "sukunGardenOfPeace": "მშვიდობის ბაღი",

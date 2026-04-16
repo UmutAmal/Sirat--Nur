@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Hemî sûre ji bo vî xwîner berê hatine daxistin.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Pakêtên Dengê Quranê yên Offline",
+  "storedOnDeviceMb": "Li cîhazê hilanîn: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Pelên offline ji bo {reciter} hatin jêbirin.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Pirsekê bipirsin...",
   "chatbotThinking": "Difikirî...",
   "sukunMixerSubtitle": "Xweza û Qur'an Mikser",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Veguheztina deng têk çû",
   "sukunNatureLabel": "Sukun (xweza)",
   "sukunRainOfMercy": "Barana Rehmetê",
   "sukunGardenOfPeace": "Baxçeyê Aştiyê",

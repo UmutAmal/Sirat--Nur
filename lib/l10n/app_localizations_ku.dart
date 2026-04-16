@@ -1182,11 +1182,11 @@ class AppLocalizationsKu extends AppLocalizations {
       'Hemî sûre ji bo vî xwîner berê hatine daxistin.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Pakêtên Dengê Quranê yên Offline';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Li cîhazê hilanîn: $size MB';
   }
 
   @override
@@ -1231,7 +1231,7 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Pelên offline ji bo $reciter hatin jêbirin.';
   }
 
   @override
@@ -1253,7 +1253,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get sukunMixerSubtitle => 'Xweza û Qur\'an Mikser';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Veguheztina deng têk çû';
 
   @override
   String get sukunNatureLabel => 'Sukun (xweza)';

@@ -1183,11 +1183,11 @@ class AppLocalizationsYi extends AppLocalizations {
       'אַלע סוראַהס שוין דאַונלאָודיד פֿאַר דעם רעסיטער.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'אָפפלינע קאָראַן אַודיאָ פּאַקס';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'סטאָרד אויף מיטל: $size מב';
   }
 
   @override
@@ -1232,7 +1232,7 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'אויסגעמעקט אָפפלינע טעקעס פֿאַר $reciter.';
   }
 
   @override
@@ -1254,7 +1254,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get sukunMixerSubtitle => 'נאַטור & קוור\'אַן מיקסער';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'אַודיאָ פּלייבאַק ניט אַנדערש';
 
   @override
   String get sukunNatureLabel => 'סוקון (נאַטור)';

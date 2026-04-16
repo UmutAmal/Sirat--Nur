@@ -1180,11 +1180,12 @@ class AppLocalizationsYo extends AppLocalizations {
       'Gbogbo awọn surah ti ṣe igbasilẹ tẹlẹ fun olukawe yii.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Awọn akopọ ohun afetigbọ Al-Qur’an aisinipo';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Ti a fipamọ sori ẹrọ: $size MB';
   }
 
   @override
@@ -1229,7 +1230,7 @@ class AppLocalizationsYo extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Parẹ awọn faili aisinipo fun $reciter.';
   }
 
   @override
@@ -1251,7 +1252,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get sukunMixerSubtitle => 'Iseda & Kuran Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Sisisẹsẹhin ohun kuna';
 
   @override
   String get sukunNatureLabel => 'Sukun (Iseda)';

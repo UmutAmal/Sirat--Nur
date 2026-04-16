@@ -1193,11 +1193,11 @@ class AppLocalizationsFr extends AppLocalizations {
       'Toutes les sourates déjà téléchargées pour ce récitant.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Packs audio du Coran hors ligne';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Stocké sur l\'appareil : $size Mo';
   }
 
   @override
@@ -1242,7 +1242,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Fichiers hors ligne supprimés pour $reciter.';
   }
 
   @override
@@ -1264,7 +1264,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get sukunMixerSubtitle => 'Mélangeur Nature et Coran';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'La lecture audio a échoué';
 
   @override
   String get sukunNatureLabel => 'Sukun (nature)';

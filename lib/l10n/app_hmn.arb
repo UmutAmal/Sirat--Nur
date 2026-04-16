@@ -370,7 +370,7 @@
   },
   "downloadCompleted": "Tag nrho cov surahs twb downloaded rau no reciter.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "storedOnDeviceMb": "Khaws rau ntawm lub cuab yeej: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Tshem tawm cov ntaub ntawv offline rau {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Nug ib lo lus nug...",
   "chatbotThinking": "Xav...",
   "sukunMixerSubtitle": "Ntuj & Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Suab playback ua tsis tau tejyam",
   "sukunNatureLabel": "Sukun (Nature)",
   "sukunRainOfMercy": "Los nag kev hlub",
   "sukunGardenOfPeace": "Lub vaj kaj siab lug",

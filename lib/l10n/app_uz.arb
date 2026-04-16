@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Bu qori uchun barcha suralar allaqachon yuklab olingan.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Oflayn Qur'on audio to'plamlari",
+  "storedOnDeviceMb": "Qurilmada saqlangan: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} uchun oflayn fayllar o‘chirib tashlandi.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Savol bering...",
   "chatbotThinking": "O'ylash...",
   "sukunMixerSubtitle": "Tabiat va Qur'on mikser",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Audio ijro qilinmadi",
   "sukunNatureLabel": "Sukun (tabiat)",
   "sukunRainOfMercy": "Mehribonlik yomg'iri",
   "sukunGardenOfPeace": "Tinchlik bog'i",

@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Sura zose zimaze gukururwa kuriyi soma.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline Koran Amajwi",
+  "storedOnDeviceMb": "Yabitswe ku gikoresho: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Gusiba dosiye kumurongo kuri {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Baza ikibazo ...",
   "chatbotThinking": "Gutekereza ...",
   "sukunMixerSubtitle": "Kamere & Qor'an ivanga",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Gukina amajwi byarananiranye",
   "sukunNatureLabel": "Sukun (Kamere)",
   "sukunRainOfMercy": "Imvura y'imbabazi",
   "sukunGardenOfPeace": "Ubusitani bwamahoro",

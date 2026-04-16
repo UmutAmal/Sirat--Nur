@@ -1181,11 +1181,11 @@ class AppLocalizationsRw extends AppLocalizations {
   String get downloadCompleted => 'Sura zose zimaze gukururwa kuriyi soma.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Offline Koran Amajwi';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Yabitswe ku gikoresho: $size MB';
   }
 
   @override
@@ -1230,7 +1230,7 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Gusiba dosiye kumurongo kuri $reciter.';
   }
 
   @override
@@ -1252,7 +1252,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get sukunMixerSubtitle => 'Kamere & Qor\'an ivanga';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Gukina amajwi byarananiranye';
 
   @override
   String get sukunNatureLabel => 'Sukun (Kamere)';

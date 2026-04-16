@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Tất cả surahs đã được tải xuống cho người đọc thuộc lòng này.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Gói âm thanh Kinh Qur'an ngoại tuyến",
+  "storedOnDeviceMb": "Được lưu trữ trên thiết bị: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Đã xóa tệp ngoại tuyến cho {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Đặt một câu hỏi...",
   "chatbotThinking": "Đang suy nghĩ...",
   "sukunMixerSubtitle": "Máy trộn thiên nhiên & Qur'an",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Phát lại âm thanh không thành công",
   "sukunNatureLabel": "Sukun (Thiên nhiên)",
   "sukunRainOfMercy": "Cơn mưa nhân ái",
   "sukunGardenOfPeace": "Khu vườn hòa bình",

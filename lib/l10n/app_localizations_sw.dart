@@ -1184,11 +1184,12 @@ class AppLocalizationsSw extends AppLocalizations {
       'Sura zote tayari zimepakuliwa kwa msomaji huyu.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Vifurushi vya Sauti vya Kurani za nje ya mtandao';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Imehifadhiwa kwenye kifaa: MB $size';
   }
 
   @override
@@ -1233,7 +1234,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Faili za nje ya mtandao zimefutwa za $reciter.';
   }
 
   @override
@@ -1255,7 +1256,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get sukunMixerSubtitle => 'Asili na Mchanganyiko wa Kurani';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Uchezaji wa sauti umeshindwa';
 
   @override
   String get sukunNatureLabel => 'Sukun (Asili)';

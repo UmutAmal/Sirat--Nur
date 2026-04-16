@@ -109,5 +109,16 @@ void main() {
 
       expect(value, 'Seriler');
     });
+
+    test('rejects multiline offline audio label output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'audioPlayFailed',
+        source: 'Audio playback failed',
+        currentValue: 'Ses calinamadi',
+        candidate: 'means the following.\nSes calinamadi',
+      );
+
+      expect(value, 'Ses calinamadi');
+    });
   });
 }

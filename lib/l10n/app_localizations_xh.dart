@@ -1185,11 +1185,11 @@ class AppLocalizationsXh extends AppLocalizations {
   String get downloadCompleted => 'Zonke iisurahs sele zikhutshelwe lo mfundi.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'I-Offline Quran Audio Packs';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Igcinwe kwisixhobo: $size MB';
   }
 
   @override
@@ -1234,7 +1234,7 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Iifayile ezicinyiweyo ngaphandle kweintanethi $reciter.';
   }
 
   @override
@@ -1256,7 +1256,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get sukunMixerSubtitle => 'Indalo kunye noMxube weKur\'an';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Ukudlala kwakhona kwesandi akuphumelelanga';
 
   @override
   String get sukunNatureLabel => 'USukun (Indalo)';

@@ -1186,11 +1186,11 @@ class AppLocalizationsSq extends AppLocalizations {
       'Të gjitha suret janë shkarkuar tashmë për këtë recitues.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Paketat audio të Kuranit jashtë linje';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Ruajtur në pajisje: $size MB';
   }
 
   @override
@@ -1235,7 +1235,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Skedarët jashtë linje u fshinë për $reciter.';
   }
 
   @override
@@ -1257,7 +1257,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get sukunMixerSubtitle => 'Përzierëse e Natyrës dhe Kuranit';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Riprodhimi i audios dështoi';
 
   @override
   String get sukunNatureLabel => 'Sukun (Natyrë)';

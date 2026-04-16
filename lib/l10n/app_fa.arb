@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "همه سوره ها قبلا برای این قاری دانلود شده است.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "بسته های صوتی قرآن آفلاین",
+  "storedOnDeviceMb": "ذخیره شده در دستگاه: {size} مگابایت",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "فایل‌های آفلاین برای {reciter} حذف شد.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "سوال بپرس...",
   "chatbotThinking": "فکر کردن...",
   "sukunMixerSubtitle": "همزن طبیعت و قرآن",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "پخش صدا انجام نشد",
   "sukunNatureLabel": "سوکون (طبیعت)",
   "sukunRainOfMercy": "باران رحمت",
   "sukunGardenOfPeace": "باغ صلح",

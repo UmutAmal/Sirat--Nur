@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "已为该背诵者下载所有古兰经。",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "离线古兰经音频包",
+  "storedOnDeviceMb": "存储在设备上：{size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "已删除 {reciter} 的脱机文件。",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "问一个问题...",
   "chatbotThinking": "想着……",
   "sukunMixerSubtitle": "自然与古兰经混合器",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "音频播放失败",
   "sukunNatureLabel": "苏坤（自然）",
   "sukunRainOfMercy": "慈悲之雨",
   "sukunGardenOfPeace": "和平花园",

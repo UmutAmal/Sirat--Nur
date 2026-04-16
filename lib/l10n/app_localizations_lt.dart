@@ -1185,11 +1185,11 @@ class AppLocalizationsLt extends AppLocalizations {
       'Visos jau atsisiųstos šio deklamuotojo suros.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Korano garso paketai neprisijungus';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Išsaugota įrenginyje: $size MB';
   }
 
   @override
@@ -1234,7 +1234,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Ištrinti neprisijungus pasiekiami $reciter failai.';
   }
 
   @override
@@ -1256,7 +1256,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get sukunMixerSubtitle => 'Gamtos ir Korano maišytuvas';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Nepavyko atkurti garso';
 
   @override
   String get sukunNatureLabel => 'Sukun (gamta)';

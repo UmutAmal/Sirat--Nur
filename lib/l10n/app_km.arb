@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Surah ទាំងអស់ត្រូវបានទាញយករួចហើយសម្រាប់អ្នកសូត្រនេះ។",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "កញ្ចប់សំឡេងគម្ពីគូរ៉ាក្រៅបណ្តាញ",
+  "storedOnDeviceMb": "រក្សាទុកនៅលើឧបករណ៍៖ {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "បានលុបឯកសារក្រៅបណ្តាញសម្រាប់ {reciter} ។",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "សួរសំណួរ...",
   "chatbotThinking": "ការគិត...",
   "sukunMixerSubtitle": "ឧបករណ៍លាយធម្មជាតិ និងគម្ពីគូរ៉ា",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "ការ​ចាក់​សំឡេង​បាន​បរាជ័យ",
   "sukunNatureLabel": "សុគន្ធ (ធម្មជាតិ)",
   "sukunRainOfMercy": "ភ្លៀងនៃមេត្តា",
   "sukunGardenOfPeace": "សួនសន្តិភាព",

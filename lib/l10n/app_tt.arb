@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Бу сүрә өчен барлык сүрәләр йөкләнгән инде.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Оффлайн Коръән аудио пакетлары",
+  "storedOnDeviceMb": "Deviceайланмада сакланган: {size} Мб",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} өчен оффлайн файллар бетерелде.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Сорау бир ...",
   "chatbotThinking": "Уйлау ...",
   "sukunMixerSubtitle": "Табигать һәм Коръән Миксеры",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Аудио уйнату уңышсыз калды",
   "sukunNatureLabel": "Сукун (Табигать)",
   "sukunRainOfMercy": "Шәфкатьле яңгыр",
   "sukunGardenOfPeace": "Тынычлык бакчасы",

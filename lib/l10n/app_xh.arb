@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Zonke iisurahs sele zikhutshelwe lo mfundi.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "I-Offline Quran Audio Packs",
+  "storedOnDeviceMb": "Igcinwe kwisixhobo: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Iifayile ezicinyiweyo ngaphandle kweintanethi {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Buza umbuzo...",
   "chatbotThinking": "Ukucinga...",
   "sukunMixerSubtitle": "Indalo kunye noMxube weKur'an",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Ukudlala kwakhona kwesandi akuphumelelanga",
   "sukunNatureLabel": "USukun (Indalo)",
   "sukunRainOfMercy": "Imvula yeNceba",
   "sukunGardenOfPeace": "Umyezo woXolo",

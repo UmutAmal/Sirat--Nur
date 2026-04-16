@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline Coran Audio Packs",
+  "storedOnDeviceMb": "Ebombami na dispositif: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Elongolami ba fichiers hors ligne pona {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ask a question...",
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "Nature & Mosangani ya Coran",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Kobɛta mongongo elongaki te",
   "sukunNatureLabel": "Sukun (Bozalisi) .",
   "sukunRainOfMercy": "Mbula ya Mawa",
   "sukunGardenOfPeace": "Elanga ya Kimya",

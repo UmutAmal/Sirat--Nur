@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "ଏହି ପାଠକ ପାଇଁ ସମସ୍ତ ସୁରା ଡାଉନଲୋଡ୍ ହୋଇସାରିଛି |",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "ଅଫଲାଇନ୍ କୁରାନ ଅଡିଓ ପ୍ୟାକ୍ |",
+  "storedOnDeviceMb": "ଡିଭାଇସରେ ଗଚ୍ଛିତ: {size} MB |",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} ପାଇଁ ଅଫଲାଇନ୍ ଫାଇଲଗୁଡିକ ବିଲୋପ ହେଲା |",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "ଏକ ପ୍ରଶ୍ନ ପଚାର ...",
   "chatbotThinking": "ଭାବୁଛି ...",
   "sukunMixerSubtitle": "ପ୍ରକୃତି ଏବଂ କୁରାନ ମିକ୍ସର୍ |",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "ଅଡିଓ ପ୍ଲେକ୍ ବିଫଳ ହେଲା |",
   "sukunNatureLabel": "ସୁକୁନ୍ (ପ୍ରକୃତି)",
   "sukunRainOfMercy": "ଦୟା ବର୍ଷା",
   "sukunGardenOfPeace": "ଶାନ୍ତି ଉଦ୍ୟାନ",

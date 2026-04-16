@@ -1187,11 +1187,11 @@ class AppLocalizationsPt extends AppLocalizations {
       'Todas as suratas já baixadas para este recitador.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Pacotes de áudio offline do Alcorão';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Armazenado no dispositivo: $size MB';
   }
 
   @override
@@ -1236,7 +1236,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Arquivos off-line excluídos para $reciter.';
   }
 
   @override
@@ -1258,7 +1258,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get sukunMixerSubtitle => 'Misturador de Natureza e Alcorão';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Falha na reprodução de áudio';
 
   @override
   String get sukunNatureLabel => 'Sukun (Natureza)';

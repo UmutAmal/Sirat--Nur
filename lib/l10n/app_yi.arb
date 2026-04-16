@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "אַלע סוראַהס שוין דאַונלאָודיד פֿאַר דעם רעסיטער.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "אָפפלינע קאָראַן אַודיאָ פּאַקס",
+  "storedOnDeviceMb": "סטאָרד אויף מיטל: {size} מב",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "אויסגעמעקט אָפפלינע טעקעס פֿאַר {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "פרעג א שאלה...",
   "chatbotThinking": "טראכטן...",
   "sukunMixerSubtitle": "נאַטור & קוור'אַן מיקסער",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "אַודיאָ פּלייבאַק ניט אַנדערש",
   "sukunNatureLabel": "סוקון (נאַטור)",
   "sukunRainOfMercy": "רעגן פון רחמנות",
   "sukunGardenOfPeace": "גאָרטן פון שלום",

@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Kabeh surah wis diundhuh kanggo reciter iki.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Paket Audio Quran Offline",
+  "storedOnDeviceMb": "Disimpen ing piranti: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "File offline dibusak kanggo {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Njaluk pitakon...",
   "chatbotThinking": "Dipikir...",
   "sukunMixerSubtitle": "Alam & Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Puter maneh audio gagal",
   "sukunNatureLabel": "Sukun (Alam)",
   "sukunRainOfMercy": "Udan Welas Asih",
   "sukunGardenOfPeace": "Taman Damai",

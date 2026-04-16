@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Усі сури вже завантажені для цього читача.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline Audio Packs Корану",
+  "storedOnDeviceMb": "Зберігається на пристрої: {size} МБ",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Видалено офлайн-файли для {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Задайте питання...",
   "chatbotThinking": "Думаючи...",
   "sukunMixerSubtitle": "Змішувач природи та Корану",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Помилка відтворення аудіо",
   "sukunNatureLabel": "Сукун (Природа)",
   "sukunRainOfMercy": "Дощ Милосердя",
   "sukunGardenOfPeace": "Сад Миру",

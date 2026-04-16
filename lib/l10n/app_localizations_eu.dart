@@ -1184,11 +1184,11 @@ class AppLocalizationsEu extends AppLocalizations {
       'Errezitatzaile honetarako dagoeneko deskargatuta dauden sura guztiak.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Lineaz kanpoko Quran Audio paketeak';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Gailuan gordeta: $size MB';
   }
 
   @override
@@ -1233,7 +1233,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Lineaz kanpoko fitxategiak ezabatu dira $reciter erabiltzailearentzako.';
   }
 
   @override
@@ -1255,7 +1255,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get sukunMixerSubtitle => 'Natura eta Koranaren nahasketa';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Audioa erreproduzitzea huts egin du';
 
   @override
   String get sukunNatureLabel => 'Sukun (Natura)';

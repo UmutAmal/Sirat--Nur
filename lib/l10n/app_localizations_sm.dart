@@ -1185,11 +1185,11 @@ class AppLocalizationsSm extends AppLocalizations {
       'O surah uma ua uma ona la\'uina mo lenei tusi faitau.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Fa\'asalalauga fa\'aleo leo Quran';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Teuina i le masini: $size MB';
   }
 
   @override
@@ -1234,7 +1234,7 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Ave\'ese faila e lē faaaogāina ai le initaneti mo $reciter.';
   }
 
   @override
@@ -1256,7 +1256,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get sukunMixerSubtitle => 'Natura & Qur\'an Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Ua le mafai ona toe taina leo';
 
   @override
   String get sukunNatureLabel => 'Sukun (Natura)';

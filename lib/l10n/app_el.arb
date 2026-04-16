@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Όλες οι σούρες έχουν ήδη κατέβει για αυτόν τον απαγγέλλοντα.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Πακέτα ήχου εκτός σύνδεσης Κορανίου",
+  "storedOnDeviceMb": "Αποθηκευμένο στη συσκευή: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Διαγράφηκαν αρχεία εκτός σύνδεσης για {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Κάντε μια ερώτηση...",
   "chatbotThinking": "Σκέφτομαι...",
   "sukunMixerSubtitle": "Μίξερ Φύσης & Κορανίου",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Η αναπαραγωγή ήχου απέτυχε",
   "sukunNatureLabel": "Sukun (Φύση)",
   "sukunRainOfMercy": "Βροχή Ελέους",
   "sukunGardenOfPeace": "Κήπος της Ειρήνης",

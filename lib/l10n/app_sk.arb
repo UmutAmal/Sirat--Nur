@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Všetky súry sú už stiahnuté pre tohto recitátora.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline zvukové balíčky Koránu",
+  "storedOnDeviceMb": "Uložené v zariadení: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Boli odstránené offline súbory pre {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Položiť otázku...",
   "chatbotThinking": "Myslenie...",
   "sukunMixerSubtitle": "Mixér prírody a Koránu",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Prehrávanie zvuku zlyhalo",
   "sukunNatureLabel": "Sukun (príroda)",
   "sukunRainOfMercy": "Dážď milosrdenstva",
   "sukunGardenOfPeace": "Záhrada mieru",

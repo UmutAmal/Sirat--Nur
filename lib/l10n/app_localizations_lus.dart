@@ -1191,11 +1191,12 @@ class AppLocalizationsLus extends AppLocalizations {
       'He reciter tan hian surah download vek tawh zawng zawng.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Offline Quran Audio Packs te pawh a awm bawk';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Device-ah dah a ni: $size MB';
   }
 
   @override

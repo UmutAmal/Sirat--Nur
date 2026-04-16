@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "अस्य पाठकस्य कृते सर्वाणि सूराः पूर्वमेव अवतरणं कृतवन्तः।",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "ऑफलाइन कुरान ऑडियो पैक",
+  "storedOnDeviceMb": "उपकरणे संगृहीतम्: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {

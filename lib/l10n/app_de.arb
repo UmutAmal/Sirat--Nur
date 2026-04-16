@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Alle Suren, die für diesen Rezitator bereits heruntergeladen wurden.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline-Koran-Audiopakete",
+  "storedOnDeviceMb": "Auf dem Gerät gespeichert: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Offlinedateien für {reciter} gelöscht.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Stellen Sie eine Frage...",
   "chatbotThinking": "Denken...",
   "sukunMixerSubtitle": "Natur- und Koranmischer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Die Audiowiedergabe ist fehlgeschlagen",
   "sukunNatureLabel": "Sukun (Natur)",
   "sukunRainOfMercy": "Regen der Gnade",
   "sukunGardenOfPeace": "Garten des Friedens",

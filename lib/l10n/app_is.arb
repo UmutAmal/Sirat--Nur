@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Allar surahs þegar hlaðið niður fyrir þennan reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Ótengdur Kóraninn hljóðpakkar",
+  "storedOnDeviceMb": "Vistað á tæki: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Eyddum ónettengdum skrám fyrir {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Spyrðu spurningu...",
   "chatbotThinking": "Er að hugsa...",
   "sukunMixerSubtitle": "Náttúru- og Kóranblandari",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Hljóðspilun mistókst",
   "sukunNatureLabel": "Sukun (náttúra)",
   "sukunRainOfMercy": "Miskunnarregn",
   "sukunGardenOfPeace": "Friðargarðurinn",

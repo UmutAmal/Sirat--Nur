@@ -1183,7 +1183,7 @@ class AppLocalizationsHa extends AppLocalizations {
       'An riga an saukar da dukkan surori don wannan mai karatun.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Fakitin Audio na Alqur\'ani Offline';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1254,7 +1254,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'An kasa sake kunna sautin';
 
   @override
   String get sukunNatureLabel => 'Sukun (Nature)';

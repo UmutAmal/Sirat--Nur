@@ -1180,11 +1180,11 @@ class AppLocalizationsSd extends AppLocalizations {
       'هن تلاوت ڪندڙ لاءِ سڀ سورتون پهريان ئي ڊائون لوڊ ڪيون ويون آهن.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'آف لائن قرآن آڊيو پيڪ';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'ڊوائيس تي ذخيرو ٿيل: $size MB';
   }
 
   @override
@@ -1229,7 +1229,7 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'حذف ٿيل آف لائن فائلون $reciter لاءِ.';
   }
 
   @override
@@ -1251,7 +1251,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get sukunMixerSubtitle => 'فطرت ۽ قرآن ملائيندڙ';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'آڊيو پلے بیک ناڪام';
 
   @override
   String get sukunNatureLabel => 'سکن (فطرت)';

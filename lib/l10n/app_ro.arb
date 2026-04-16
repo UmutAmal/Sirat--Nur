@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Toate surele au fost deja descărcate pentru acest recitator.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Pachete audio offline Coran",
+  "storedOnDeviceMb": "Stocat pe dispozitiv: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Fișierele offline au fost șterse pentru {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Pune o intrebare...",
   "chatbotThinking": "Gândind...",
   "sukunMixerSubtitle": "Mixer Natură și Coran",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Redarea audio a eșuat",
   "sukunNatureLabel": "Sukun (Natura)",
   "sukunRainOfMercy": "Ploaie de milă",
   "sukunGardenOfPeace": "Grădina Păcii",

@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Kaikki tälle lausujalle jo ladatut suurat.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline-koraanin äänipaketit",
+  "storedOnDeviceMb": "Tallennettu laitteelle: {size} Mt",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Poistetut offline-tiedostot kohteelle {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Esitä kysymys...",
   "chatbotThinking": "Mieti...",
   "sukunMixerSubtitle": "Luonto & Koraani -sekoitin",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Äänen toisto epäonnistui",
   "sukunNatureLabel": "Sukun (luonto)",
   "sukunRainOfMercy": "Armon sade",
   "sukunGardenOfPeace": "Rauhan puutarha",

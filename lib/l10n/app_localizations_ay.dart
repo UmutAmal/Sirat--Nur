@@ -1203,11 +1203,12 @@ class AppLocalizationsAy extends AppLocalizations {
       'Taqi surahanakax nayraqatw aka recitador ukatakix apkatata.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Quran Audio Packs ukax jan internetankiwa';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Dispositivo ukan imatäxiwa: $size MB';
   }
 
   @override

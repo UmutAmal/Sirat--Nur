@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Dhammaan suuradaha mar hore loo soo dejiyay akhristaha.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Xirmooyinka Maqalka Qur'aanka ee offline",
+  "storedOnDeviceMb": "Ku kaydsan aaladda: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Faylasha qad la'aanta ee la tirtiray ee {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Weydii su'aal...",
   "chatbotThinking": "Fikirka...",
   "sukunMixerSubtitle": "Dabeecadda & Qur'aanka Isku-dhafka",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Dib-u-soo-celinta maqalka waa fashilantay",
   "sukunNatureLabel": "Sukun (Dabeecada)",
   "sukunRainOfMercy": "Roobka Naxariista",
   "sukunGardenOfPeace": "Beerta Nabadda",

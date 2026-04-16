@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "இந்த ஓதுபவருக்கு ஏற்கனவே அனைத்து சூராக்களும் பதிவிறக்கம் செய்யப்பட்டுள்ளன.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "ஆஃப்லைன் குர்ஆன் ஆடியோ பேக்குகள்",
+  "storedOnDeviceMb": "சாதனத்தில் சேமிக்கப்பட்டது: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter}க்கான ஆஃப்லைன் கோப்புகள் நீக்கப்பட்டன.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "கேள்வி கேள்...",
   "chatbotThinking": "நினைத்து...",
   "sukunMixerSubtitle": "இயற்கை & குர்ஆன் கலவை",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "ஆடியோ பிளேபேக் தோல்வியடைந்தது",
   "sukunNatureLabel": "சுகுன் (இயற்கை)",
   "sukunRainOfMercy": "கருணை மழை",
   "sukunGardenOfPeace": "அமைதி பூங்கா",

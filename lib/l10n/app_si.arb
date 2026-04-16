@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "මෙම පාරායනය සඳහා සියලුම සූරත දැනටමත් බාගත කර ඇත.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "නොබැඳි කුර්ආන් ශ්‍රව්‍ය ඇසුරුම්",
+  "storedOnDeviceMb": "උපාංගයේ ගබඩා කර ඇත: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} සඳහා නොබැඳි ගොනු මකා ඇත.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "ප්‍රශ්නයක් අහන්න...",
   "chatbotThinking": "සිතමින්...",
   "sukunMixerSubtitle": "සොබාදහම සහ අල් කුර්ආනය මිශ්‍ර කරන්නා",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "ශ්‍රව්‍ය නැවත ධාවනය අසාර්ථක විය",
   "sukunNatureLabel": "සුකුන් (ස්වභාවධර්මය)",
   "sukunRainOfMercy": "දයාවේ වැස්ස",
   "sukunGardenOfPeace": "සාමයේ උයන",

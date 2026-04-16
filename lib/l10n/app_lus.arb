@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "He reciter tan hian surah download vek tawh zawng zawng.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline Quran Audio Packs te pawh a awm bawk",
+  "storedOnDeviceMb": "Device-ah dah a ni: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {

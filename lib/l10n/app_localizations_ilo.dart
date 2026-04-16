@@ -1191,11 +1191,11 @@ class AppLocalizationsIlo extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Offline nga Quran nga Audio Packs';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Naidulin iti alikamen: $size MB';
   }
 
   @override
@@ -1240,7 +1240,7 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Naikkat dagiti offline a file para iti $reciter.';
   }
 
   @override
@@ -1262,7 +1262,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get sukunMixerSubtitle => 'Nakaparsuaan & Qur\'an Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Napaay ti panagtokar ti audio';
 
   @override
   String get sukunNatureLabel => 'Sukun (Nakaparsuaan) .';

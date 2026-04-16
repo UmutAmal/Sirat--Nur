@@ -1185,11 +1185,11 @@ class AppLocalizationsLv extends AppLocalizations {
       'Visas šim deklamētājam jau lejupielādētās suras.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Bezsaistes Korāna audio pakotnes';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Saglabāts ierīcē: $size MB';
   }
 
   @override
@@ -1234,7 +1234,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Izdzēsti bezsaistes faili $reciter.';
   }
 
   @override
@@ -1256,7 +1256,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get sukunMixerSubtitle => 'Dabas un Korāna mikseris';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Audio atskaņošana neizdevās';
 
   @override
   String get sukunNatureLabel => 'Sukun (daba)';

@@ -1185,7 +1185,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'ເກັບໄວ້ໃນອຸປະກອນ: $size MB';
   }
 
   @override
@@ -1230,7 +1230,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'ລຶບໄຟລ໌ອອບລາຍສຳລັບ $reciter ແລ້ວ.';
   }
 
   @override
@@ -1252,7 +1252,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get sukunMixerSubtitle => 'ທໍາມະຊາດ & Qur\'an Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'ການຫຼິ້ນສຽງລົ້ມເຫລວ';
 
   @override
   String get sukunNatureLabel => 'ສຸກັນ (ທຳມະຊາດ)';

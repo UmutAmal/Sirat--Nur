@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "O surah uma ua uma ona la'uina mo lenei tusi faitau.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Fa'asalalauga fa'aleo leo Quran",
+  "storedOnDeviceMb": "Teuina i le masini: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Ave'ese faila e lē faaaogāina ai le initaneti mo {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Fai se fesili...",
   "chatbotThinking": "Mafaufau...",
   "sukunMixerSubtitle": "Natura & Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Ua le mafai ona toe taina leo",
   "sukunNatureLabel": "Sukun (Natura)",
   "sukunRainOfMercy": "Uaga o le Alofa Mutimutivale",
   "sukunGardenOfPeace": "Faatoaga o le Filemu",

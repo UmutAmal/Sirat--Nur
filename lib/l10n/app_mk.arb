@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Сите сура се веќе преземени за овој рецитатор.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Офлајн аудио пакети на Куранот",
+  "storedOnDeviceMb": "Зачувано на уред: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Избришани офлајн датотеки за {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Поставете прашање...",
   "chatbotThinking": "Размислувајќи...",
   "sukunMixerSubtitle": "Мешалка за природа и Куран",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Репродукцијата на аудио не успеа",
   "sukunNatureLabel": "Сукун (Природа)",
   "sukunRainOfMercy": "Дожд на милоста",
   "sukunGardenOfPeace": "Градина на мирот",

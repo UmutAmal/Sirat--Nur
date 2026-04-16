@@ -1188,11 +1188,11 @@ class AppLocalizationsGd extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Pacaidean fuaim Quran far loidhne';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Air a stòradh air inneal: $size MB';
   }
 
   @override
@@ -1237,7 +1237,7 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Faidhlichean far loidhne air an toirt às airson $reciter.';
   }
 
   @override
@@ -1259,7 +1259,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get sukunMixerSubtitle => 'Measgadair nàdair agus Qur\'an';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Dh\'fhàillig ath-chluich fuaim';
 
   @override
   String get sukunNatureLabel => 'Sukun (nàdar)';

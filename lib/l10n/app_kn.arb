@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "ಈ ವಾಚನಕಾರರಿಗಾಗಿ ಎಲ್ಲಾ ಸೂರಾಗಳನ್ನು ಈಗಾಗಲೇ ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗಿದೆ.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "ಆಫ್‌ಲೈನ್ ಕುರಾನ್ ಆಡಿಯೋ ಪ್ಯಾಕ್‌ಗಳು",
+  "storedOnDeviceMb": "ಸಾಧನದಲ್ಲಿ ಸಂಗ್ರಹಿಸಲಾಗಿದೆ: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} ಗಾಗಿ ಆಫ್‌ಲೈನ್ ಫೈಲ್‌ಗಳನ್ನು ಅಳಿಸಲಾಗಿದೆ.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "ಪ್ರಶ್ನೆ ಕೇಳಿ...",
   "chatbotThinking": "ಯೋಚಿಸುತ್ತಿದೆ...",
   "sukunMixerSubtitle": "ಪ್ರಕೃತಿ ಮತ್ತು ಕುರಾನ್ ಮಿಕ್ಸರ್",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "ಆಡಿಯೋ ಪ್ಲೇಬ್ಯಾಕ್ ವಿಫಲವಾಗಿದೆ",
   "sukunNatureLabel": "ಸುಕುನ್ (ಪ್ರಕೃತಿ)",
   "sukunRainOfMercy": "ಕರುಣೆಯ ಮಳೆ",
   "sukunGardenOfPeace": "ಶಾಂತಿಯ ಉದ್ಯಾನ",

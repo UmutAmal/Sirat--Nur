@@ -1192,7 +1192,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Khaws rau ntawm lub cuab yeej: $size MB';
   }
 
   @override
@@ -1237,7 +1237,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Tshem tawm cov ntaub ntawv offline rau $reciter.';
   }
 
   @override
@@ -1259,7 +1259,7 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get sukunMixerSubtitle => 'Ntuj & Qur\'an Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Suab playback ua tsis tau tejyam';
 
   @override
   String get sukunNatureLabel => 'Sukun (Nature)';

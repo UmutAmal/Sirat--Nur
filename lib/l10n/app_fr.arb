@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Toutes les sourates déjà téléchargées pour ce récitant.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Packs audio du Coran hors ligne",
+  "storedOnDeviceMb": "Stocké sur l'appareil : {size} Mo",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Fichiers hors ligne supprimés pour {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Posez une question...",
   "chatbotThinking": "En pensant...",
   "sukunMixerSubtitle": "Mélangeur Nature et Coran",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "La lecture audio a échoué",
   "sukunNatureLabel": "Sukun (nature)",
   "sukunRainOfMercy": "Pluie de miséricorde",
   "sukunGardenOfPeace": "Jardin de la Paix",

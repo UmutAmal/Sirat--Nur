@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Ebudatalarị surah niile maka onye na-agụ akwụkwọ a.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Ngwungwu ọdịyo Quran na-anọghị n'ịntanetị",
+  "storedOnDeviceMb": "Echekwara na ngwaọrụ: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "ehichapụ faịlụ ndị na-adịghị n'ịntanetị maka {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Jụọ ajụjụ...",
   "chatbotThinking": "Na-eche...",
   "sukunMixerSubtitle": "Nature & Qur'an mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Nkpọghachi ọdịyo dara",
   "sukunNatureLabel": "Sukun (Nature)",
   "sukunRainOfMercy": "Mmiri ozuzo nke ebere",
   "sukunGardenOfPeace": "Ogige Udo",

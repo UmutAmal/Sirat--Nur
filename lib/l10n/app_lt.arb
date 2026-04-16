@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Visos jau atsisiųstos šio deklamuotojo suros.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Korano garso paketai neprisijungus",
+  "storedOnDeviceMb": "Išsaugota įrenginyje: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Ištrinti neprisijungus pasiekiami {reciter} failai.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Užduoti klausimą...",
   "chatbotThinking": "Galvoju...",
   "sukunMixerSubtitle": "Gamtos ir Korano maišytuvas",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Nepavyko atkurti garso",
   "sukunNatureLabel": "Sukun (gamta)",
   "sukunRainOfMercy": "Gailestingumo lietus",
   "sukunGardenOfPeace": "Taikos sodas",

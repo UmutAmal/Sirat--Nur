@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Semua surah sudah dimuat turun untuk qari ini.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Pek Audio Al-Quran Luar Talian",
+  "storedOnDeviceMb": "Disimpan pada peranti: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Fail luar talian dipadamkan untuk {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Tanya soalan...",
   "chatbotThinking": "Berfikir...",
   "sukunMixerSubtitle": "Pembancuh Alam & Al-Quran",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Main balik audio gagal",
   "sukunNatureLabel": "Sukun (Nature)",
   "sukunRainOfMercy": "Hujan Rahmat",
   "sukunGardenOfPeace": "Taman Damai",

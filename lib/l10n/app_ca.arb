@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Totes les sures ja s'han descarregat per a aquest recitador.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Paquets d'àudio d'Alcorà fora de línia",
+  "storedOnDeviceMb": "Emmagatzemat al dispositiu: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "S'han suprimit els fitxers fora de línia per a {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Fes una pregunta...",
   "chatbotThinking": "Pensant...",
   "sukunMixerSubtitle": "Mesclador de natura i Coran",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "La reproducció d'àudio ha fallat",
   "sukunNatureLabel": "Sukun (Natura)",
   "sukunRainOfMercy": "Pluja de Misericòrdia",
   "sukunGardenOfPeace": "Jardí de la Pau",

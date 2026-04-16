@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Pacaidean fuaim Quran far loidhne",
+  "storedOnDeviceMb": "Air a stòradh air inneal: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Faidhlichean far loidhne air an toirt às airson {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ask a question...",
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "Measgadair nàdair agus Qur'an",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Dh'fhàillig ath-chluich fuaim",
   "sukunNatureLabel": "Sukun (nàdar)",
   "sukunRainOfMercy": "Uisge na Tròcair",
   "sukunGardenOfPeace": "Gàradh na Sìthe",

@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Tutte le sure già scaricate per questo recitatore.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Pacchetti audio Corano offline",
+  "storedOnDeviceMb": "Memorizzato sul dispositivo: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "File offline eliminati per {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Fai una domanda...",
   "chatbotThinking": "Pensando...",
   "sukunMixerSubtitle": "Mixer Natura e Corano",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "La riproduzione audio non è riuscita",
   "sukunNatureLabel": "Sukun (Natura)",
   "sukunRainOfMercy": "Pioggia di Misericordia",
   "sukunGardenOfPeace": "Giardino della Pace",

@@ -1183,11 +1183,11 @@ class AppLocalizationsMai extends AppLocalizations {
       'एहि पाठक लेल सब सूरह पहिने स डाउनलोड भ गेल अछि।';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'ऑफलाइन कुरान ऑडियो पैक';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'डिवाइस पर संग्रहीत: $size MB';
   }
 
   @override

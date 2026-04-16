@@ -1183,11 +1183,11 @@ class AppLocalizationsHaw extends AppLocalizations {
       'Ua hoʻoiho ʻia nā surah āpau no kēia mea heluhelu.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Hoʻopahemo Quran Audio Packs';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Mālama ʻia ma ka hāmeʻa: $size MB';
   }
 
   @override
@@ -1232,7 +1232,7 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Holoi ʻia nā faila hoʻopahemo no $reciter.';
   }
 
   @override
@@ -1254,7 +1254,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Hāʻule ka pāʻani leo';
 
   @override
   String get sukunNatureLabel => 'Sukun (Nature)';

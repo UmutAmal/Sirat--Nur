@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "ਇਸ ਪਾਠਕ ਲਈ ਪਹਿਲਾਂ ਹੀ ਸਾਰੀਆਂ ਸੁਰਾਂ ਡਾਊਨਲੋਡ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ।",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "ਔਫਲਾਈਨ ਕੁਰਾਨ ਆਡੀਓ ਪੈਕ",
+  "storedOnDeviceMb": "ਡਿਵਾਈਸ 'ਤੇ ਸਟੋਰ ਕੀਤਾ ਗਿਆ: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} ਲਈ ਔਫਲਾਈਨ ਫਾਈਲਾਂ ਮਿਟਾਈਆਂ ਗਈਆਂ।",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "ਇੱਕ ਸਵਾਲ ਪੁੱਛੋ...",
   "chatbotThinking": "ਸੋਚ ਰਿਹਾ...",
   "sukunMixerSubtitle": "ਕੁਦਰਤ ਅਤੇ ਕੁਰਾਨ ਮਿਕਸਰ",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "ਆਡੀਓ ਪਲੇਬੈਕ ਅਸਫਲ ਰਿਹਾ",
   "sukunNatureLabel": "ਸੁਕੁਨ (ਕੁਦਰਤ)",
   "sukunRainOfMercy": "ਦਇਆ ਦੀ ਵਰਖਾ",
   "sukunGardenOfPeace": "ਸ਼ਾਂਤੀ ਦਾ ਬਾਗ",

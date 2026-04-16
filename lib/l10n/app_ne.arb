@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "यस पाठकको लागि सबै सुराहरू पहिले नै डाउनलोड गरिएका छन्।",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "अफलाइन कुरान अडियो प्याक",
+  "storedOnDeviceMb": "यन्त्रमा भण्डारण गरिएको: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} का लागि अफलाइन फाइलहरू मेटाइयो।",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "प्रश्न सोध्नुहोस्...",
   "chatbotThinking": "सोच्दै...",
   "sukunMixerSubtitle": "प्रकृति र कुरान मिक्सर",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "अडियो प्लेब्याक असफल भयो",
   "sukunNatureLabel": "सुकुन (प्रकृति)",
   "sukunRainOfMercy": "दयाको वर्षा",
   "sukunGardenOfPeace": "शान्ति बगैंचा",

@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Na-download na ang lahat ng surah para sa reciter na ito.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline na Quran Audio Pack",
+  "storedOnDeviceMb": "Naka-store sa device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Tinanggal ang mga offline na file para sa {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Magtanong...",
   "chatbotThinking": "Iniisip...",
   "sukunMixerSubtitle": "Panghalo ng Kalikasan at Qur'an",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Nabigo ang pag-playback ng audio",
   "sukunNatureLabel": "Sukun (Kalikasan)",
   "sukunRainOfMercy": "Ulan ng Awa",
   "sukunGardenOfPeace": "Hardin ng Kapayapaan",

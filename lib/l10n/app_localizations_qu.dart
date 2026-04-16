@@ -1187,11 +1187,11 @@ class AppLocalizationsQu extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Mana tinkisqa Quran Audio Packs';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Dispositivopi waqaychasqa: $size MB';
   }
 
   @override
@@ -1236,7 +1236,7 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return '$reciter kaqpaq mana tinkisqa willañiqikunata qullusqa.';
   }
 
   @override
@@ -1258,7 +1258,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get sukunMixerSubtitle => 'Naturaleza & Qur\'an Mezclador';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Uyarinapaq uyariyqa manam allinchu karqa';
 
   @override
   String get sukunNatureLabel => 'Sukun (Pachamama) .';

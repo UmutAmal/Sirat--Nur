@@ -1186,11 +1186,12 @@ class AppLocalizationsLg extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Ebipapula by\'amaloboozi ga Quran ebitali ku mutimbagano';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Eterekeddwa ku kyuma: $size MB';
   }
 
   @override
@@ -1235,7 +1236,7 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Fayiro ezitali ku mutimbagano zasaziddwamu ku $reciter.';
   }
 
   @override
@@ -1257,7 +1258,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get sukunMixerSubtitle => 'Obutonde & Qur\'an Omutabula';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Okuzannya amaloboozi kulemereddwa';
 
   @override
   String get sukunNatureLabel => 'Sukun (Obutonde) .';

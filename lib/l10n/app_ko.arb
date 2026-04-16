@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "이 암송자에 대한 모든 수라가 이미 다운로드되었습니다.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "오프라인 꾸란 오디오 팩",
+  "storedOnDeviceMb": "기기에 저장됨: {size}MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter}의 오프라인 파일을 삭제했습니다.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "질문하세요...",
   "chatbotThinking": "생각하다...",
   "sukunMixerSubtitle": "자연 및 꾸란 믹서",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "오디오 재생 실패",
   "sukunNatureLabel": "수쿤(자연)",
   "sukunRainOfMercy": "자비의 비",
   "sukunGardenOfPeace": "평화의 정원",

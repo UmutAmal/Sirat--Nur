@@ -1184,11 +1184,11 @@ class AppLocalizationsSa extends AppLocalizations {
       'अस्य पाठकस्य कृते सर्वाणि सूराः पूर्वमेव अवतरणं कृतवन्तः।';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'ऑफलाइन कुरान ऑडियो पैक';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'उपकरणे संगृहीतम्: $size MB';
   }
 
   @override

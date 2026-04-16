@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Sura zote tayari zimepakuliwa kwa msomaji huyu.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Vifurushi vya Sauti vya Kurani za nje ya mtandao",
+  "storedOnDeviceMb": "Imehifadhiwa kwenye kifaa: MB {size}",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Faili za nje ya mtandao zimefutwa za {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Uliza swali...",
   "chatbotThinking": "Kufikiri...",
   "sukunMixerSubtitle": "Asili na Mchanganyiko wa Kurani",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Uchezaji wa sauti umeshindwa",
   "sukunNatureLabel": "Sukun (Asili)",
   "sukunRainOfMercy": "Mvua ya Rehema",
   "sukunGardenOfPeace": "Bustani ya Amani",

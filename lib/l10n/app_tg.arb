@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Ҳама сураҳо барои ин қироат аллакай бор карда шудаанд.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Бастаҳои аудиоии офлайнии Қуръон",
+  "storedOnDeviceMb": "Дар дастгоҳ захира шудааст: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Файлҳои офлайнӣ барои {reciter} нест карда шуданд.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Савол диҳед...",
   "chatbotThinking": "Фикр кардан...",
   "sukunMixerSubtitle": "Омехтагари табиат ва Қуръон",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Навозиши аудио ноком шуд",
   "sukunNatureLabel": "Сукун (Табиат)",
   "sukunRainOfMercy": "Борони раҳмат",
   "sukunGardenOfPeace": "Боги сулх",

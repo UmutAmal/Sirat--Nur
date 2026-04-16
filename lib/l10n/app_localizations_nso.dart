@@ -1195,11 +1195,12 @@ class AppLocalizationsNso extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Diphuthelwana tša Mamelwang tša Quran tša ka ntle ga Inthanete';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'E bolokilwe ka sesebediswa: $size MB';
   }
 
   @override
@@ -1244,7 +1245,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'E phumotšwe difaele tša ka ntle ga inthanete tša $reciter.';
   }
 
   @override
@@ -1266,7 +1267,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get sukunMixerSubtitle => 'Tlhago & Motswako wa Qur\'an';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Go bapala ga modumo go paletšwe';
 
   @override
   String get sukunNatureLabel => 'Sukun (Tlhago) .';

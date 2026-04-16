@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Բոլոր սուրաներն արդեն ներբեռնված են այս ասմունքողի համար:",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Անցանց Ղուրանի աուդիո փաթեթներ",
+  "storedOnDeviceMb": "Պահված է սարքում՝ {size} ՄԲ",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Ջնջվել են անցանց ֆայլերը {reciter}-ի համար:",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Հարց տվեք...",
   "chatbotThinking": "Մտածելով...",
   "sukunMixerSubtitle": "Բնություն և Ղուրանի խառնիչ",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Ձայնի նվագարկումը ձախողվեց",
   "sukunNatureLabel": "Սուկուն (Բնություն)",
   "sukunRainOfMercy": "Գթասրտության անձրեւ",
   "sukunGardenOfPeace": "Խաղաղության այգի",

@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Xa se descargaron todas as suras para este recitador.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Paquetes de audio do Corán sen conexión",
+  "storedOnDeviceMb": "Almacenado no dispositivo: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Elimináronse ficheiros sen conexión para {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Fai unha pregunta...",
   "chatbotThinking": "Pensando...",
   "sukunMixerSubtitle": "Mesturador de Natureza e Corán",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Produciuse un erro na reprodución de audio",
   "sukunNatureLabel": "Sukun (Natureza)",
   "sukunRainOfMercy": "Choiva de Misericordia",
   "sukunGardenOfPeace": "Xardín da Paz",

@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Alle soera's zijn al gedownload voor deze voordrager.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline Koran-audiopakketten",
+  "storedOnDeviceMb": "Opgeslagen op apparaat: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Offline bestanden verwijderd voor {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Stel een vraag...",
   "chatbotThinking": "Denken...",
   "sukunMixerSubtitle": "Natuur & Koran Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Het afspelen van audio is mislukt",
   "sukunNatureLabel": "Sukun (Natuur)",
   "sukunRainOfMercy": "Regen van genade",
   "sukunGardenOfPeace": "Tuin van de Vrede",

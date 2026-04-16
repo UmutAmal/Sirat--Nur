@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Alle suraer er allerede downloadet til denne reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Offline Koran-lydpakker",
+  "storedOnDeviceMb": "Gemt på enheden: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Slettede offlinefiler for {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Stil et spørgsmål...",
   "chatbotThinking": "Tænker...",
   "sukunMixerSubtitle": "Natur & Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Lydafspilning mislykkedes",
   "sukunNatureLabel": "Sukun (natur)",
   "sukunRainOfMercy": "Barmhjertighedens regn",
   "sukunGardenOfPeace": "Fredens Have",

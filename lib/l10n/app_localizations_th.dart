@@ -1184,11 +1184,11 @@ class AppLocalizationsTh extends AppLocalizations {
       'All surahs already downloaded for this reciter.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'ชุดเสียงอัลกุรอานออฟไลน์';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'เก็บไว้ในอุปกรณ์: $size MB';
   }
 
   @override
@@ -1233,7 +1233,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'ลบไฟล์ออฟไลน์สำหรับ $reciter แล้ว';
   }
 
   @override
@@ -1255,7 +1255,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get sukunMixerSubtitle => 'มิกเซอร์ธรรมชาติและอัลกุรอาน';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'การเล่นเสียงล้มเหลว';
 
   @override
   String get sukunNatureLabel => 'สุกุล (ธรรมชาติ)';

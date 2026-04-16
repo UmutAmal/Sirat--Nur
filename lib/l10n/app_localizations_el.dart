@@ -1192,11 +1192,11 @@ class AppLocalizationsEl extends AppLocalizations {
       'Όλες οι σούρες έχουν ήδη κατέβει για αυτόν τον απαγγέλλοντα.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Πακέτα ήχου εκτός σύνδεσης Κορανίου';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Αποθηκευμένο στη συσκευή: $size MB';
   }
 
   @override
@@ -1241,7 +1241,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Διαγράφηκαν αρχεία εκτός σύνδεσης για $reciter.';
   }
 
   @override
@@ -1263,7 +1263,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get sukunMixerSubtitle => 'Μίξερ Φύσης & Κορανίου';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Η αναπαραγωγή ήχου απέτυχε';
 
   @override
   String get sukunNatureLabel => 'Sukun (Φύση)';

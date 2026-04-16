@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Quran Odio Packs siwo mele Internet dzi o",
+  "storedOnDeviceMb": "Wodzrae ɖo ɖe mɔ̃ dzi: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Wotutu faɛl siwo mele internet dzi o na {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ask a question...",
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "Dzɔdzɔme & Qur'an Tɔtɔ",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Odio ƒoƒo do kpo nu",
   "sukunNatureLabel": "Sukun (Dzɔdzɔmenuwo) .",
   "sukunRainOfMercy": "Nublanuikpɔkpɔ ƒe Tsidzadza",
   "sukunGardenOfPeace": "Ŋutifafa ƒe Abɔ",

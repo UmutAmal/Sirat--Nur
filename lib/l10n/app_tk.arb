@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Bu okaýjy üçin eýýäm ähli süreler göçürildi.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Oflayn Kuran ses paketleri",
+  "storedOnDeviceMb": "Enjamda saklanýar: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} üçin awtonom faýllar öçürildi.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Sorag beriň ...",
   "chatbotThinking": "Oýlanmak ...",
   "sukunMixerSubtitle": "Tebigat we Gurhan garyjy",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Ses görkezmek şowsuz",
   "sukunNatureLabel": "Sukun (Tebigat)",
   "sukunRainOfMercy": "Merhemet ýagyşy",
   "sukunGardenOfPeace": "Parahatçylyk bagy",

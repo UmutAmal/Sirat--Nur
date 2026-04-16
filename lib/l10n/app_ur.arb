@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "اس تلاوت کرنے والے کے لیے تمام سورتیں پہلے ہی ڈاؤن لوڈ ہو چکی ہیں۔",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "آف لائن قرآن آڈیو پیک",
+  "storedOnDeviceMb": "ڈیوائس پر اسٹور کردہ: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "{reciter} کے لیے آف لائن فائلیں حذف کر دی گئیں۔",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "ایک سوال پوچھیں...",
   "chatbotThinking": "سوچ رہا ہے...",
   "sukunMixerSubtitle": "فطرت اور قرآن مکسر",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "آڈیو پلے بیک ناکام ہو گیا۔",
   "sukunNatureLabel": "سکن (فطرت)",
   "sukunRainOfMercy": "رحمت کی بارش",
   "sukunGardenOfPeace": "امن کا باغ",

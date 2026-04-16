@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Ny surah rehetra dia efa alaina ho an'ity reciter ity.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Koran Audio Packs an-tserasera",
+  "storedOnDeviceMb": "Voatahiry amin'ny fitaovana: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Voafafa ny rakitra an-tserasera ho an'ny {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Mametraha fanontaniana...",
   "chatbotThinking": "Mieritreritra...",
   "sukunMixerSubtitle": "Nature & Coran Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Tsy nahomby ny famerenam-peo",
   "sukunNatureLabel": "Sukun (Natiora)",
   "sukunRainOfMercy": "Ranon'ny famindram-po",
   "sukunGardenOfPeace": "Zaridaina fiadanana",

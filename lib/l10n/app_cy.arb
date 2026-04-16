@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Pecynnau Sain Quran All-lein",
+  "storedOnDeviceMb": "Wedi'i storio ar ddyfais: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Ffeiliau all-lein wedi'u dileu ar gyfer {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Ask a question...",
   "chatbotThinking": "Thinking...",
   "sukunMixerSubtitle": "Cymysgydd Natur a Qur'an",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Wedi methu chwarae sain",
   "sukunNatureLabel": "Sukun (Natur)",
   "sukunRainOfMercy": "Glaw Trugaredd",
   "sukunGardenOfPeace": "Gardd Heddwch",

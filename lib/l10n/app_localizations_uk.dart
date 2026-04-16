@@ -1185,11 +1185,11 @@ class AppLocalizationsUk extends AppLocalizations {
   String get downloadCompleted => 'Усі сури вже завантажені для цього читача.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Offline Audio Packs Корану';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'Зберігається на пристрої: $size МБ';
   }
 
   @override
@@ -1234,7 +1234,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return 'Видалено офлайн-файли для $reciter.';
   }
 
   @override
@@ -1256,7 +1256,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get sukunMixerSubtitle => 'Змішувач природи та Корану';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'Помилка відтворення аудіо';
 
   @override
   String get sukunNatureLabel => 'Сукун (Природа)';

@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Alle surahs is reeds vir hierdie voorleser afgelaai.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Vanlyn Koran-oudiopakkette",
+  "storedOnDeviceMb": "Geberg op toestel: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Het vanlyn lêers vir {reciter} uitgevee.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Vra 'n vraag...",
   "chatbotThinking": "Dink...",
   "sukunMixerSubtitle": "Natuur- en Koranmenger",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Oudioterugspeel het misluk",
   "sukunNatureLabel": "Sukun (Natuur)",
   "sukunRainOfMercy": "Reën van Genade",
   "sukunGardenOfPeace": "Tuin van Vrede",

@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "ለዚህ አንባቢ አስቀድመው የወረዱ ሁሉም ሱራዎች።",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "ከመስመር ውጭ የቁርአን ኦዲዮ ጥቅሎች",
+  "storedOnDeviceMb": "በመሳሪያ ላይ የተከማቸ፡ {size} ሜባ",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "ለ{reciter} ከመስመር ውጭ ፋይሎች ተሰርዘዋል።",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "ጥያቄ ጠይቅ...",
   "chatbotThinking": "በማሰብ...",
   "sukunMixerSubtitle": "ተፈጥሮ እና ቁርኣን ቀማሚ",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "የድምጽ መልሶ ማጫወት አልተሳካም።",
   "sukunNatureLabel": "ሱኩን (ተፈጥሮ)",
   "sukunRainOfMercy": "የምህረት ዝናብ",
   "sukunGardenOfPeace": "የሰላም ገነት",

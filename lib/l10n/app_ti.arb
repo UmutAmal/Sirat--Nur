@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "ኩለን ሱራታት ድሮ ነዚ ቀባኢ ዝወረዳ።",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "ካብ መስመር ወጻኢ ቁርኣን ድምጺ ፓክስ",
+  "storedOnDeviceMb": "ኣብ መሳርሒ ዝተዓቀበ: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {

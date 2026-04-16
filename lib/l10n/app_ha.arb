@@ -369,7 +369,7 @@
     }
   },
   "downloadCompleted": "An riga an saukar da dukkan surori don wannan mai karatun.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "offlineQuranAudioPacks": "Fakitin Audio na Alqur'ani Offline",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Yi tambaya...",
   "chatbotThinking": "Tunani...",
   "sukunMixerSubtitle": "Nature & Qur'an Mixer",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "An kasa sake kunna sautin",
   "sukunNatureLabel": "Sukun (Nature)",
   "sukunRainOfMercy": "Ruwan Rahma",
   "sukunGardenOfPeace": "Lambun Aminci",

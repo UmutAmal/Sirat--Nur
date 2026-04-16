@@ -1169,11 +1169,11 @@ class AppLocalizationsKo extends AppLocalizations {
   String get downloadCompleted => '이 암송자에 대한 모든 수라가 이미 다운로드되었습니다.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => '오프라인 꾸란 오디오 팩';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return '기기에 저장됨: ${size}MB';
   }
 
   @override
@@ -1218,7 +1218,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return '$reciter의 오프라인 파일을 삭제했습니다.';
   }
 
   @override
@@ -1239,7 +1239,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get sukunMixerSubtitle => '자연 및 꾸란 믹서';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => '오디오 재생 실패';
 
   @override
   String get sukunNatureLabel => '수쿤(자연)';

@@ -1189,11 +1189,11 @@ class AppLocalizationsMy extends AppLocalizations {
       'ဤရွတ်ဆိုသူအတွက် စူရဟ်များအားလုံးကို ဒေါင်းလုဒ်လုပ်ထားပြီးဖြစ်သည်။';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'အော့ဖ်လိုင်းကုရ်အာန် အသံအထုပ်များ';
 
   @override
   String storedOnDeviceMb(String size) {
-    return 'Stored on device: $size MB';
+    return 'စက်ပစ္စည်းပေါ်တွင် သိမ်းဆည်းထားသည်- $size MB';
   }
 
   @override
@@ -1238,7 +1238,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String deletedOfflineFilesForReciter(String reciter) {
-    return 'Deleted offline files for $reciter.';
+    return '$reciter အတွက် အော့ဖ်လိုင်းဖိုင်များကို ဖျက်ထားသည်။';
   }
 
   @override
@@ -1260,7 +1260,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get sukunMixerSubtitle => 'သဘာဝနှင့် ကုရ်အာန် ရောသမမွှေပါ။';
 
   @override
-  String get audioPlayFailed => 'Audio playback failed';
+  String get audioPlayFailed => 'အသံပြန်ဖွင့်ခြင်း မအောင်မြင်ပါ။';
 
   @override
   String get sukunNatureLabel => 'Sukun (သဘာဝ)';

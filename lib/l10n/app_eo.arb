@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Ĉiuj suraoj jam elŝutitaj por ĉi tiu deklamanto.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Senkonektaj Koranaj Aŭdio-Pakoj",
+  "storedOnDeviceMb": "Stokita sur aparato: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
@@ -410,7 +410,7 @@
       }
     }
   },
-  "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
+  "deletedOfflineFilesForReciter": "Forigitaj senkonektaj dosieroj por {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
       "reciter": {
@@ -433,7 +433,7 @@
   "chatbotHint": "Faru demandon...",
   "chatbotThinking": "Pensante...",
   "sukunMixerSubtitle": "Miksilo de Naturo kaj Korano",
-  "audioPlayFailed": "Audio playback failed",
+  "audioPlayFailed": "Sona reprodukto malsukcesis",
   "sukunNatureLabel": "Sukun (Naturo)",
   "sukunRainOfMercy": "Pluvo de Kompato",
   "sukunGardenOfPeace": "Ĝardeno de Paco",

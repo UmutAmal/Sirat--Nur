@@ -369,8 +369,8 @@
     }
   },
   "downloadCompleted": "Taqi surahanakax nayraqatw aka recitador ukatakix apkatata.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
-  "storedOnDeviceMb": "Stored on device: {size} MB",
+  "offlineQuranAudioPacks": "Quran Audio Packs ukax jan internetankiwa",
+  "storedOnDeviceMb": "Dispositivo ukan imatäxiwa: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
       "size": {
