@@ -9384,3 +9384,44 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi direct major risklerden `fl_chart` icin usage/changelog taramasi yap; grafik API migration yuzeyi buyukse once source-level guard/test ekle, sonra constraint dene. `flutter_riverpod 3.x` genis state-management migration oldugu icin en sona birak.
+
+## 2026-04-16 TUR-240 — Remove Unused Chart Dependency
+
+### Yapilan Islem
+- `fl_chart` direct dependency'si `pubspec.yaml` dosyasindan kaldirildi.
+- `pubspec.lock` icinden kullanilmayan `fl_chart 0.66.2` ve transitive `equatable 2.0.8` kilitleri dustu.
+- `test\dependency_hygiene_test.dart` eklendi; `fl_chart` tekrar pubspec'e girerse gercek Dart import'u bulunmasini guard ediyor.
+
+### Neden Yapildi
+- `rg -n "fl_chart|LineChart|BarChart|PieChart|FlSpot|LineChartData|BarChartData|PieChartData" .` taramasi `pubspec` ve handover notlari disinda uretim/test/tool kullanimi bulmadi.
+- `flutter pub outdated` TUR-239 sonrasi `fl_chart 0.66.2 -> 1.2.0` direct major adayini gosteriyordu; ancak paket uygulamada kullanilmadigi icin major upgrade yerine dependency yuzeyini kaldirmak daha dogru kok sebep cozumudur.
+- Unused UI dependency uygulama cozumleme/agac yuzeyini buyutur ve gelecekte sahte feature bagimliligi olusturur.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\pubspec.yaml`
+- `A:\Way of Allah\sirat_i_nur\pubspec.lock`
+- `A:\Way of Allah\sirat_i_nur\test\dependency_hygiene_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Direct outdated listesinde `fl_chart` artik yok.
+- Kullanilmayan `equatable` transitive kilidi de lock dosyasindan kalkti.
+- Gelecekte grafik ozelligi gercekten eklenirse dependency ancak Dart import'u ile birlikte geri gelebilecek.
+
+### Test Sonucu
+- Odak test: `flutter test test\dependency_hygiene_test.dart` PASS (`1/1`)
+- `flutter pub outdated` PASS; direct outdated listesi `flutter_riverpod` ve resolver-blokajli `share_plus` ile sinirlandi.
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`428/428`)
+
+### Risk Degisimi
+- Kullanilmayan `fl_chart` dependency eskime riski: `12/25 -> 0/25`
+- Gereksiz chart dependency yuzeyi riski: `8/25 -> 1/25`
+- Future accidental reintroduction riski: `6/25 -> 2/25`
+
+### Rollback Plani
+- Gercek chart feature ihtiyaci dogarsa `flutter pub add fl_chart:^1.2.0` ile paket geri eklenir.
+- Ilgili chart Dart import'u ve feature testi ayni commit kapsaminda eklenir; aksi halde `test\dependency_hygiene_test.dart` guard'i fail eder.
+
+### Sonraki Adim
+- Commit/push sonrasi direct outdated kalan iki riski ayir: `share_plus 13.0.0` resolver blokaji icin `geolocator/package_info_plus/win32` zincirini izle; `flutter_riverpod 3.x` icin once provider API usage envanteri cikar, sonra migration planini parcalara bol.
