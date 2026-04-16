@@ -9881,3 +9881,51 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude hadis runtime zincirini kapali moddan cloud-ready moda hazirla: Supabase `hadiths` provider/local model sadece verified rows okuyabilmeli, ancak dataset completeness guard gecmeden `hasVerifiedHadithDataset` acilmamali.
+
+## 2026-04-16 TUR-250 — Prepare Verified Hadith Runtime Provider
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart` icindeki `hasVerifiedHadithDataset` sabit `false` yerine compile-time `SIRAT_HAS_VERIFIED_HADITH_DATASET` dart-define gate'ine baglandi; default yine `false`.
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart` eski external/static fetch yolundan ayrildi.
+- Provider artik gate acilmis buildlerde Supabase `hadiths` tablosundan `collection_id`, `book`, `hadith_number`, `text_ar`, `text_tr`, `text_en`, `source`, `source_license`, `verified_at` alanlarini sorgulayacak sekilde hazirlandi.
+- `resolveVerifiedHadithItems` eklendi; sadece collection eslesen, hadis numarasi pozitif, Arapca metni dolu, guvenli TR/EN translation'i olan, `source`, `source_license` ve parse edilebilir `verified_at` tasiyan satirlari UI modeline cevirir.
+- Duplicate hadis numaralari satir bazinda reddedilir ve sonuc hadis numarasina gore siralanir.
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_provider_test.dart` eklendi; verified row filtreleme, TR/EN fallback ve provider'in sadece `hadiths` tablosuna baglanmasi guard edildi.
+
+### Neden Yapildi
+- TUR-248 schema ve TUR-249 seed generator hazirdi; fakat runtime provider hala eski API formuna bagliydi ve dataset hazir olsa bile build-time acma yolu yoktu.
+- Hadis gezintisini hemen acmak dogru olmazdi: gercek manifest/Supabase seed ve completeness kaniti henuz yok.
+- Bu patch runtime'i cloud-ready yapar ama default kapali tutar; kullaniciya dogrulanmamis/eksik hadis gostermez.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Hadis runtime zinciri `Supabase hadiths -> verified normalize -> HadithItem UI model` icin hazirlandi.
+- Default build davranisi degismedi: `SIRAT_HAS_VERIFIED_HADITH_DATASET` verilmezse router/list/search kapali kalir.
+- Eski `fetchHadiths` / `fetchArabicHadiths` provider call chain'i kaldirildi; harici unverified API'ye sessiz donus yok.
+
+### Test Sonucu
+- Odak test: `flutter test test\features\library\hadith_provider_test.dart --reporter compact` PASS (`3/3`)
+- `git diff --check` PASS (yalniz CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`455/455`)
+
+### Risk Degisimi
+- Hadis runtime external/static API bagimliligi riski: `12/25 -> 3/25`
+- Gate olmadan verified dataset acilamama riski: `10/25 -> 3/25`
+- Eksik/provenance'siz hadis satirinin UI'a cikma riski: `16/25 -> 4/25`
+- Verified hadis dataset/completeness eksikligi riski: `10/25 -> 9/25` (runtime hazir, gercek seed/completeness kaniti henuz yok)
+
+### Rollback Plani
+- `hadith_api_service.dart` gate tekrar sabit `false` yapilir.
+- `hadith_provider.dart` Supabase query/normalizer degisikligi geri alinir.
+- `test\features\library\hadith_provider_test.dart` silinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude hadis dataset completeness guard'i ekle: build-time gate acilsa bile Supabase `hadiths` tablosunda desteklenen 6 koleksiyonun her biri icin verified/provenance'li satir yoksa router/list yine kapali kalmali ve diagnostics/handover bunu acik raporlamali.

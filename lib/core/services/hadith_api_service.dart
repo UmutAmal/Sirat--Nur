@@ -1,4 +1,7 @@
-const bool hasVerifiedHadithDataset = false;
+const bool hasVerifiedHadithDataset = bool.fromEnvironment(
+  'SIRAT_HAS_VERIFIED_HADITH_DATASET',
+  defaultValue: false,
+);
 
 class VerifiedHadithDatasetUnavailable implements Exception {
   const VerifiedHadithDatasetUnavailable();
