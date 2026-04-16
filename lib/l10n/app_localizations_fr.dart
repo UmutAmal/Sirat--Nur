@@ -593,7 +593,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get done => 'Fait';
 
   @override
-  String get onboarding1Title => 'Bienvenue sur la Voie d\'Allah';
+  String get onboarding1Title => 'Bienvenue sur Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>

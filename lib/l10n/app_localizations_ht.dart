@@ -590,7 +590,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get done => 'Fè';
 
   @override
-  String get onboarding1Title => 'Byenveni nan Way of Allah';
+  String get onboarding1Title => 'Byenveni nan Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>

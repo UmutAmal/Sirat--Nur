@@ -590,7 +590,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'सिराट्-ı नूर इत्यत्र स्वागतम्';
 
   @override
   String get onboarding1Desc =>

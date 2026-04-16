@@ -293,10 +293,17 @@ String resolveTranslatedArbValue({
   }
 
   final existingValue = currentValue;
-  if (existingValue is String &&
-      _isUsableTranslationCandidate(key, source, existingValue) &&
-      existingValue != _normalizeProperNames(source)) {
-    return existingValue;
+  if (existingValue is String) {
+    final processedExistingValue = _postProcessTranslation(
+      key: key,
+      translated: existingValue,
+      source: source,
+    );
+
+    if (_isUsableTranslationCandidate(key, source, processedExistingValue) &&
+        processedExistingValue != _normalizeProperNames(source)) {
+      return processedExistingValue;
+    }
   }
 
   return _normalizeProperNames(source);
@@ -333,6 +340,10 @@ String _postProcessTranslation({
 
   if (key == 'chatbotUseCloudAi') {
     return _normalizeGeminiLabel(normalizedTranslated, normalizedSource);
+  }
+
+  if (key == 'onboarding1Title') {
+    return _normalizeOnboardingBrand(normalizedTranslated, normalizedSource);
   }
 
   if (_mustStaySingleLine(key) && _hasLineBreak(normalizedTranslated)) {
@@ -427,6 +438,14 @@ bool _mustStaySingleLine(String key) {
       key == 'chatbotOfflineDownloadLabel' ||
       key == 'offlineMode' ||
       key == 'cancel' ||
+      key == 'onboarding1Title' ||
+      key == 'onboarding1Desc' ||
+      key == 'onboarding2Title' ||
+      key == 'onboarding2Desc' ||
+      key == 'onboarding3Title' ||
+      key == 'onboarding3Desc' ||
+      key == 'next' ||
+      key == 'getStarted' ||
       key == 'chatbotGreeting' ||
       key == 'chatbotHint' ||
       key == 'chatbotThinking' ||
@@ -454,6 +473,28 @@ String _normalizeGeminiLabel(String translated, String source) {
   }
 
   return translated.replaceAllMapped(RegExp(r'\([^)]*\)'), (_) => '(Gemini)');
+}
+
+String _normalizeOnboardingBrand(String translated, String source) {
+  if (!source.contains('Sirat-ı Nur')) {
+    return translated;
+  }
+
+  const appBrand = 'Sirat-ı Nur';
+  const translatedBrandFragments = [
+    'Way of Allah',
+    "Voie d'Allah",
+    'Camino de Allah',
+    'Allahs vej',
+    'طريقة الله',
+    '阿拉之道',
+  ];
+
+  var normalized = translated;
+  for (final fragment in translatedBrandFragments) {
+    normalized = normalized.replaceAll(fragment, appBrand);
+  }
+  return normalized;
 }
 
 String _toTranslatorLocale(String locale) {

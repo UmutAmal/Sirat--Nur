@@ -585,7 +585,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'እንቋዕ ናብ ሲራት-ı ኑር ብደሓን መጻእኩም';
 
   @override
   String get onboarding1Desc =>

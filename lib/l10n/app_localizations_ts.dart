@@ -580,36 +580,37 @@ class AppLocalizationsTs extends AppLocalizations {
   String get welcome => 'Welcome';
 
   @override
-  String get getStarted => 'Get Started';
+  String get getStarted => 'Sungula';
 
   @override
   String get skip => 'Skip';
 
   @override
-  String get next => 'Next';
+  String get next => 'Landzelaka';
 
   @override
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Mi amukeriwile eka Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
-      'Your complete Islamic companion app for prayer times, Quran, and more';
+      'App ya wena leyi heleleke ya munghana wa Islam ya minkarhi ya xikhongelo, Quran, na swin’wana';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Minkarhi ya Xikhongelo';
 
   @override
-  String get onboarding2Desc => 'Accurate prayer times based on your location';
+  String get onboarding2Desc =>
+      'Minkarhi ya xikhongelo leyi kongomeke hi ku ya hi ndhawu leyi u nga eka yona';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Quran & Swin\'wana';
 
   @override
   String get onboarding3Desc =>
-      'Read Quran, track your reading, and explore Islamic content';
+      'Hlaya Quran, landzelela ku hlaya ka wena, naswona u kambisisa leswi nga endzeni ka Vuislem';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';

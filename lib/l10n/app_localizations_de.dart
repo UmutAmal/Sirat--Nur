@@ -587,13 +587,13 @@ class AppLocalizationsDe extends AppLocalizations {
   String get skip => 'Überspringen';
 
   @override
-  String get next => 'Nächste';
+  String get next => 'Weiter';
 
   @override
   String get done => 'Erledigt';
 
   @override
-  String get onboarding1Title => 'Willkommen bei Way of Allah';
+  String get onboarding1Title => 'Willkommen bei Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>

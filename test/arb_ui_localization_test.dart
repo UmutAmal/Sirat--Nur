@@ -475,6 +475,101 @@ void main() {
       },
     );
 
+    test(
+      'safe priority locales do not fall back to English for onboarding copy',
+      () {
+        const safeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'da',
+          'he',
+          'ja',
+          'nb',
+          'nn',
+          'no',
+          'pt',
+          'ru',
+          'vi',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const localizedKeys = [
+          'onboarding1Title',
+          'onboarding1Desc',
+          'onboarding2Title',
+          'onboarding2Desc',
+          'onboarding3Title',
+          'onboarding3Desc',
+          'next',
+          'getStarted',
+        ];
+
+        for (final locale in safeLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
+    test(
+      'safe priority onboarding titles preserve the Sirat-i Nur app brand',
+      () {
+        const safeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'da',
+          'he',
+          'ja',
+          'nb',
+          'nn',
+          'no',
+          'pt',
+          'ru',
+          'vi',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const forbiddenBrandFragments = [
+          'Way of Allah',
+          "Voie d'Allah",
+          'Camino de Allah',
+          'Allahs vej',
+          'طريقة الله',
+          '阿拉之道',
+        ];
+
+        for (final locale in safeLocales) {
+          final title = _readArb(
+            'lib/l10n/app_$locale.arb',
+          )['onboarding1Title'];
+
+          for (final fragment in forbiddenBrandFragments) {
+            expect(
+              title,
+              isNot(contains(fragment)),
+              reason:
+                  'app_$locale.arb translated the Sirat-i Nur brand as $fragment',
+            );
+          }
+        }
+      },
+    );
+
     test('priority locales do not fall back to English for paywall copy', () {
       const localizedKeys = [
         'paywallFeature1Title',

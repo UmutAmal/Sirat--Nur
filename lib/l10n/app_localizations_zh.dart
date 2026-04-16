@@ -572,13 +572,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get skip => '跳过';
 
   @override
-  String get next => '下一个';
+  String get next => '下一步';
 
   @override
   String get done => '完毕';
 
   @override
-  String get onboarding1Title => '欢迎来到阿拉之道';
+  String get onboarding1Title => '欢迎使用 Sirat-ı Nur';
 
   @override
   String get onboarding1Desc => '您完整的伊斯兰伴侣应用程序，用于祈祷时间、古兰经等';
@@ -2208,13 +2208,13 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get skip => '跳过';
 
   @override
-  String get next => '下一个';
+  String get next => '下一步';
 
   @override
   String get done => '完毕';
 
   @override
-  String get onboarding1Title => '欢迎来到阿拉之道';
+  String get onboarding1Title => '欢迎使用 Sirat-ı Nur';
 
   @override
   String get onboarding1Desc => '您完整的伊斯兰伴侣应用程序，用于祈祷时间、古兰经等';
@@ -3844,13 +3844,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get skip => '跳過';
 
   @override
-  String get next => '下一個';
+  String get next => '下一步';
 
   @override
   String get done => '完畢';
 
   @override
-  String get onboarding1Title => '歡迎來到阿拉之道';
+  String get onboarding1Title => '歡迎使用 Sirat-ı Nur';
 
   @override
   String get onboarding1Desc => '您完整的伊斯蘭伴侶應用程序，用於祈禱時間、古蘭經等';

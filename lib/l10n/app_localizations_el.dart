@@ -592,7 +592,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get done => 'Γινώμενος';
 
   @override
-  String get onboarding1Title => 'Καλώς ήρθατε στο Way of Allah';
+  String get onboarding1Title => 'Καλώς ήρθατε στο Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>

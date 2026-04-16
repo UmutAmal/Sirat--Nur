@@ -126,6 +126,47 @@ void main() {
       expect(cancelValue, 'Iptal');
     });
 
+    test('rejects multiline onboarding output', () {
+      final titleValue = resolveTranslatedArbValue(
+        key: 'onboarding1Title',
+        source: 'Welcome to Sirat-ı Nur',
+        currentValue: "Sirat-ı Nur'a Hos Geldiniz",
+        candidate: "means the following.\nSirat-ı Nur'a Hos Geldiniz",
+      );
+
+      final nextValue = resolveTranslatedArbValue(
+        key: 'next',
+        source: 'Next',
+        currentValue: 'Sonraki',
+        candidate: 'means the following.\nSonraki',
+      );
+
+      expect(titleValue, "Sirat-ı Nur'a Hos Geldiniz");
+      expect(nextValue, 'Sonraki');
+    });
+
+    test('preserves Sirat-i Nur brand in onboarding output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'onboarding1Title',
+        source: 'Welcome to Sirat-ı Nur',
+        currentValue: 'Welcome to Sirat-ı Nur',
+        candidate: 'Willkommen bei Way of Allah',
+      );
+
+      expect(value, 'Willkommen bei Sirat-ı Nur');
+    });
+
+    test('repairs stale onboarding brand in existing values', () {
+      final value = resolveTranslatedArbValue(
+        key: 'onboarding1Title',
+        source: 'Welcome to Sirat-ı Nur',
+        currentValue: 'Welcome to Way of Allah',
+        candidate: 'Welcome to Sirat-ı Nur',
+      );
+
+      expect(value, 'Welcome to Sirat-ı Nur');
+    });
+
     test('rejects multiline analytics label output', () {
       final streaksValue = resolveTranslatedArbValue(
         key: 'streaks',

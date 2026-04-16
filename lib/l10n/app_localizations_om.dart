@@ -579,36 +579,37 @@ class AppLocalizationsOm extends AppLocalizations {
   String get welcome => 'Welcome';
 
   @override
-  String get getStarted => 'Get Started';
+  String get getStarted => 'Jalqabaa';
 
   @override
   String get skip => 'Skip';
 
   @override
-  String get next => 'Next';
+  String get next => 'Kan itti aanu';
 
   @override
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Baga gara Sirat-ı Nur dhuftan';
 
   @override
   String get onboarding1Desc =>
-      'Your complete Islamic companion app for prayer times, Quran, and more';
+      'Yeroo salaataa, Qur\'aana, fi kkf appii hiriyyaa Islaamaa guutuu keessan';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Yeroo Kadhannaa';
 
   @override
-  String get onboarding2Desc => 'Accurate prayer times based on your location';
+  String get onboarding2Desc =>
+      'Yeroo kadhannaa sirrii bakka jirtu irratti hundaa’uun';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Qur\'aana & Kanneen biroo';
 
   @override
   String get onboarding3Desc =>
-      'Read Quran, track your reading, and explore Islamic content';
+      'Qur\'aana dubbisi, dubbisa kee hordofi, qabiyyee Islaamaa qoradhu';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';

@@ -586,13 +586,13 @@ class AppLocalizationsEs extends AppLocalizations {
   String get skip => 'Saltar';
 
   @override
-  String get next => 'Próximo';
+  String get next => 'Siguiente';
 
   @override
   String get done => 'Hecho';
 
   @override
-  String get onboarding1Title => 'Bienvenidos al Camino de Allah';
+  String get onboarding1Title => 'Bienvenido a Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>

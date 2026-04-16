@@ -590,7 +590,7 @@ class AppLocalizationsAf extends AppLocalizations {
   String get done => 'Klaar';
 
   @override
-  String get onboarding1Title => 'Welkom by Way of Allah';
+  String get onboarding1Title => 'Welkom by Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>

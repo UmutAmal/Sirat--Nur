@@ -579,36 +579,37 @@ class AppLocalizationsSo extends AppLocalizations {
   String get welcome => 'Welcome';
 
   @override
-  String get getStarted => 'Get Started';
+  String get getStarted => 'Bilow';
 
   @override
   String get skip => 'Skip';
 
   @override
-  String get next => 'Next';
+  String get next => 'Xiga';
 
   @override
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Ku soo dhawoow Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
-      'Your complete Islamic companion app for prayer times, Quran, and more';
+      'App-ka saxaabigaaga Islaamka oo dhammaystiran ee waqtiyada salaadda, Qur\'aanka, iyo in ka badan';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Waqtiyada Salaadda';
 
   @override
-  String get onboarding2Desc => 'Accurate prayer times based on your location';
+  String get onboarding2Desc =>
+      'Waqtiyada salaadda saxda ah ee ku salaysan goobtaada';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Quraan & Ka sii badan';
 
   @override
   String get onboarding3Desc =>
-      'Read Quran, track your reading, and explore Islamic content';
+      'Qur\'aanka akhri, akhrintaada raadi, oo sahmi nuxurka Islaamka';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';

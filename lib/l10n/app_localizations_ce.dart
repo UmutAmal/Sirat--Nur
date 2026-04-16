@@ -590,7 +590,7 @@ class AppLocalizationsCe extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Way of Allah';
+  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>

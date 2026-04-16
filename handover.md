@@ -8657,3 +8657,59 @@
 ### Sonraki Adım
 - Commit kapisinda `git diff --check`, `flutter analyze`, `flutter test` calistir; hepsi gecerse commit/push yap.
 - Sonraki dongude aktif l10n fallback taramasini yenile; `hijriCalendar`, `weeklyProgress`, `quranReading`, `prayers`, `fasting`, `calendar`, `searchHint` veya `qiblaDirection` gibi gorunur yuzeylerden en yuksek riskli tek cluster sec.
+
+## 2026-04-16 TUR-226 — Localize Onboarding Copy and Preserve App Brand
+
+### Yapılan İşlem
+- Onboarding yuzeyinde kullanilan `onboarding1Title`, `onboarding1Desc`, `onboarding2Title`, `onboarding2Desc`, `onboarding3Title`, `onboarding3Desc`, `next`, `getStarted` anahtarlari guvenli ARB batch'i ile guncellendi.
+- `flutter gen-l10n` calistirilarak generated `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Safe/priority locale setinde `tr`, `de`, `fr`, `es`, `ar`, `da`, `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi`, `zh`, `zh_CN`, `zh_TW` icin onboarding anahtarlarinda Ingilizce fallback kalmadigi dogrulandi.
+- Otomatik cevirinin `Sirat-ı Nur` uygulama adini bazi dillerde `Way of Allah`, `Voie d'Allah`, `Camino de Allah`, `Allahs vej`, `طريقة الله`, `阿拉之道` gibi anlam cevirisine kaydirdigi tespit edildi ve tum `app_*.arb` dosyalarinda bu onboarding marka kalintilari temizlendi.
+- `tool\translate_arb_keys.dart` mevcut degerleri de post-process edecek sekilde guclendirildi; `onboarding1Title` icin app brand korumasi ve onboarding single-line guard'i eklendi.
+- `test\arb_ui_localization_test.dart` icine safe/priority onboarding fallback guard'i ve app brand koruma guard'i eklendi.
+- `test\translate_arb_keys_test.dart` icine multiline onboarding output, yeni adayda brand koruma ve mevcut stale brand repair regresyon testleri eklendi.
+- `test\features\onboarding\onboarding_page_test.dart` eklendi; Turkce onboarding flow'u gercek generated l10n ile render edilip `İleri` aksiyonu uzerinden ikinci sayfaya gecis dogrulandi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\onboarding\onboarding_page.dart:34-35` ilk onboarding slaytinda `l10n.onboarding1Title` ve `l10n.onboarding1Desc` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\onboarding\onboarding_page.dart:40-41` ikinci slaytta `l10n.onboarding2Title` ve `l10n.onboarding2Desc` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\onboarding\onboarding_page.dart:46-47` ucuncu slaytta `l10n.onboarding3Title` ve `l10n.onboarding3Desc` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\onboarding\onboarding_page.dart:94` ileri/baslama butonu icin `l10n.next` ve `l10n.getStarted` kullaniyor.
+- TUR-226 oncesi fallback taramasinda onboarding anahtarlarinda safe/priority sette `8` locale app_en ile birebir ayniydi; ayrica `app_aa`, `app_ab`, `app_ae`, `app_af`, `app_an`, `app_av`, `app_ba`, `app_bh`, `app_bi`, `app_bo`, `app_br`, `app_ce`, `app_ch`, `app_cr`, `app_cu`, `app_cv`, `app_dz`, `app_el`, `app_ff`, `app_fj`, `app_fo`, `app_fy`, `app_ht` icinde stale `Way of Allah` onboarding title kalintisi vardi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\onboarding\onboarding_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe/priority locale setinde onboarding ekraninda Ingilizce fallback riski kapandi.
+- Tum ARB setinde onboarding title icin yanlis uygulama adi / anlam cevirisi kalintisi kapandi; `forbidden_brand_hits=[]`.
+- Single-line guard ile onboarding kisa UI metinlerinde batch debris/newline riski kapatildi.
+- Kalan tum-locale birebir Ingilizce degerler cogunlukla ceviri servisinin guvenli aday uretmedigi nadir/legacy locale grubunda birakildi; sahte veya uydurma ceviri yazilmadi. TUR-226 sonrasi toplam fallback sayilari: `onboarding1Title 63`, `onboarding1Desc 65`, `onboarding2Title 66`, `onboarding2Desc 65`, `onboarding3Title 69`, `onboarding3Desc 65`, `next 68`, `getStarted 65`.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\features\onboarding\onboarding_page_test.dart` PASS (`66/66`)
+- Safe fallback taramasi PASS: hedef onboarding anahtarlarinda `safe_same=[]`
+- Single-line taramasi PASS: hedef onboarding anahtarlarinda `newline=[]`
+- Brand taramasi PASS: tum `app_*.arb` dosyalarinda onboarding title icin `forbidden_brand_hits=[]`
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`402/402`)
+- `flutter gen-l10n` PASS
+
+### Risk Değişimi
+- Safe/priority locale onboarding fallback riski: `8/25 -> 2/25`
+- Onboarding marka yanlis ceviri riski: `12/25 -> 2/25`
+- Onboarding tek satir batch debris riski: `10/25 -> 3/25`
+- Tum-locale nadir/legacy fallback riski: `8/25 -> 5/25`
+
+### Rollback Planı
+- `lib\l10n\app_*.arb`, `lib\l10n\app_localizations_*.dart`, `test\arb_ui_localization_test.dart`, `test\translate_arb_keys_test.dart`, `test\features\onboarding\onboarding_page_test.dart` ve `tool\translate_arb_keys.dart` icindeki TUR-226 degisiklikleri geri alinir; production Dart UI logic degismedigi icin runtime rollback dar kapsamli kalir.
+
+### Sonraki Adım
+- Commit/push sonrasi yeni dongude aktif l10n fallback taramasini yenile; `hijriCalendar`, `weeklyProgress`, `quranReading`, `prayers`, `fasting`, `calendar`, `searchHint` veya `qiblaDirection` gibi gorunur yuzeylerden en yuksek riskli tek cluster sec.

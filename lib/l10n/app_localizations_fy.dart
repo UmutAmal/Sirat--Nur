@@ -590,7 +590,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get done => 'Dien';
 
   @override
-  String get onboarding1Title => 'Wolkom by Way of Allah';
+  String get onboarding1Title => 'Wolkom by Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>

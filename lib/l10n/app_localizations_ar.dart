@@ -588,7 +588,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get done => 'تم';
 
   @override
-  String get onboarding1Title => 'مرحباً بك في طريقة الله';
+  String get onboarding1Title => 'مرحباً بك في Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
