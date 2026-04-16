@@ -1292,10 +1292,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Séries';
 
   @override
-  String get dayStreak => 'Séquence d\'une journée';
+  String get dayStreak => 'Jours consécutifs';
 
   @override
   String get bestStreak => 'Meilleure séquence';

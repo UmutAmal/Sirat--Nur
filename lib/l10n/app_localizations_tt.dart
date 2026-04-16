@@ -1279,7 +1279,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Стрекс';
 
   @override
   String get dayStreak => 'Көн сызыгы';

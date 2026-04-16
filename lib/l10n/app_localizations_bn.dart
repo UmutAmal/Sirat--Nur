@@ -1281,7 +1281,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'স্ট্রিকস';
 
   @override
   String get dayStreak => 'দিনের ধারা';

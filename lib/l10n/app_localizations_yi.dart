@@ -1282,10 +1282,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'סטרייקס';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'טאָג סטריק';
 
   @override
   String get bestStreak => 'Best streak';

@@ -1288,10 +1288,10 @@ class AppLocalizationsEs extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Rachas';
 
   @override
-  String get dayStreak => 'racha de dias';
+  String get dayStreak => 'Días seguidos';
 
   @override
   String get bestStreak => 'Mejor racha';

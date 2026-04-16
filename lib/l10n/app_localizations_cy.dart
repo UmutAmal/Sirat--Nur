@@ -1284,7 +1284,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Rhediadau';
 
   @override
   String get dayStreak => 'Rhediad dydd';

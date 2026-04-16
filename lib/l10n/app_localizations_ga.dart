@@ -1283,7 +1283,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Sruthanna';
 
   @override
   String get dayStreak => 'Stráice lae';

@@ -1283,7 +1283,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Striber';
 
   @override
   String get dayStreak => 'Dagsrække';

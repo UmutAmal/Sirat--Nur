@@ -1282,7 +1282,7 @@ class AppLocalizationsMai extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'लकीर';
 
   @override
   String get dayStreak => 'दिन के लकीर';

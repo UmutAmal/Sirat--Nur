@@ -1285,7 +1285,7 @@ class AppLocalizationsKa extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'ზოლები';
 
   @override
   String get dayStreak => 'დღის სტრიქონი';

@@ -1282,7 +1282,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Rinjaye';
 
   @override
   String get dayStreak => 'Tsawon rana';

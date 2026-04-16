@@ -1279,7 +1279,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'છટાઓ';
 
   @override
   String get dayStreak => 'દિવસનો દોર';

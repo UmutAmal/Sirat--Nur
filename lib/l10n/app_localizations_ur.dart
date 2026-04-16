@@ -1281,10 +1281,10 @@ class AppLocalizationsUr extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'لکیریں';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'دن کا سلسلہ';
 
   @override
   String get bestStreak => 'Best streak';

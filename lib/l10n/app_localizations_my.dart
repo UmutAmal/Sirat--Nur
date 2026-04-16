@@ -1288,7 +1288,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'ပိန်း';
 
   @override
   String get dayStreak => 'နေ့စဥ်';

@@ -7959,3 +7959,44 @@
 
 ### Sonraki Adım
 - Sonraki dongude kalan l10n fallback sayimini anahtar bazinda yeniden raporla; guvenli desteklenen locale/key kumesinde en yuksek gorunurlukteki UI metinlerini sec.
+
+## 2026-04-16 TUR-211 — Localize Analytics Streak Labels
+
+### Yapılan İşlem
+- `streaks` ve `dayStreak` analytics UI etiketleri korumali ARB batch'i ile genis locale kumesinde Ingilizce fallback'ten cikarildi.
+- `flutter gen-l10n` calistirilarak uretilmis l10n Dart dosyalari ARB kaynaklariyla senkronlandi.
+- `tool\translate_arb_keys.dart` single-line guard listesine `streaks` ve `dayStreak` eklendi.
+- `test\translate_arb_keys_test.dart` icine multiline analytics label output regresyon testi eklendi.
+- `test\arb_ui_localization_test.dart` analytics/zakat guard kapsaminda `streaks` degerini de kontrol ediyor.
+- Oncelikli locale setinde makine cevirisinin baglami bozdugu `streaks/dayStreak` degerleri elle duzeltildi: DE, FR, ES, AR, HI, ID, PT, RU, ZH, ZH_CN, ZH_TW.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\analytics\analytics_page.dart:73` analytics ekraninda `l10n.streaks` gosteriyor.
+- Diff oncesi `app_de.arb`, `app_ar.arb`, `app_fr.arb`, `app_es.arb` gibi oncelikli locale dosyalarinda `streaks` degeri dogrudan `"Streaks"` olarak kaliyordu.
+- Ilk batch sonrasi Almanca/Fransizca/Ispanyolca gibi dillerde "stripe/spot" anlamina kayan ceviriler goruldu; commit oncesi kalite duzeltmesi yapildi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Oncelikli locale setinde `streaks/dayStreak` Ingilizce fallback riski kapandi.
+- `streaks` toplam fallback sayisi `194 -> 71` seviyesine indi.
+- `dayStreak` kalan fallback sayisi `65` olarak olculdu; kalanlar nadir/unsupported locale grubunda sonraki l10n turuna aday.
+- Analytics streak label'lari artik tek satir kalmak zorunda; ceviri aciklama on eki gelirse arac tarafinda reddedilecek.
+
+### Test Sonucu
+- `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\features\analytics\analytics_page_test.dart` PASS (`47/47`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`381/381`)
+
+### Risk Değişimi
+- Oncelikli locale setinde analytics streak Ingilizce fallback riski: `12/25 -> 2/25`
+- Tum locale setinde analytics streak fallback riski: `12/25 -> 7/25`
+
+### Sonraki Adım
+- Sonraki dongude fallback sayiminda ust siradaki kullaniciya gorunen `audioPlayFailed`, `offlineQuranAudioPacks`, `storedOnDeviceMb`, `deletedOfflineFilesForReciter` veya diagnostics kumesi arasindan en yuksek etkili UI grubunu sec.

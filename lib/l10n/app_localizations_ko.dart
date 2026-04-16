@@ -1267,7 +1267,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => '줄무늬';
 
   @override
   String get dayStreak => '하루 연속';

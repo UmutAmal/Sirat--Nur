@@ -1268,7 +1268,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'ስትሪክስ';
 
   @override
   String get dayStreak => 'ናይ መዓልቲ መስርዕ';

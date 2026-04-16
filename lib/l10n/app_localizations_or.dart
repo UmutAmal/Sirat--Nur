@@ -1287,7 +1287,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'ଷ୍ଟ୍ରିକ୍ସ';
 
   @override
   String get dayStreak => 'ଦିନ ଧାରା';

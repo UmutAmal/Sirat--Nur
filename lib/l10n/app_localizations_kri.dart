@@ -1281,7 +1281,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Strik dɛn';
 
   @override
   String get dayStreak => 'Day streak we yu de du';

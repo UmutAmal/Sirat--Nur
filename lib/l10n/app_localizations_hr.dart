@@ -1284,7 +1284,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Pruge';
 
   @override
   String get dayStreak => 'Dnevni niz';

@@ -1286,7 +1286,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Rayakuna';
 
   @override
   String get dayStreak => 'P’unchaw racha';

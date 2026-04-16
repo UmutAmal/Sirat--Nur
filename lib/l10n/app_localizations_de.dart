@@ -1289,10 +1289,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Serien';
 
   @override
-  String get dayStreak => 'Tagessträhne';
+  String get dayStreak => 'Tage in Folge';
 
   @override
   String get bestStreak => 'Beste Serie';

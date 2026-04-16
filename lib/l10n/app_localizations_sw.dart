@@ -1283,7 +1283,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Michirizi';
 
   @override
   String get dayStreak => 'Mfululizo wa siku';

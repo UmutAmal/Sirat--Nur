@@ -1279,7 +1279,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'स्ट्रेक्स';
 
   @override
   String get dayStreak => 'दिनको सिलसिला';

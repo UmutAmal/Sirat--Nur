@@ -1278,10 +1278,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'سلاسل مستمرة';
 
   @override
-  String get dayStreak => 'خط اليوم';
+  String get dayStreak => 'أيام متتالية';
 
   @override
   String get bestStreak => 'أفضل خط';

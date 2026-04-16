@@ -1284,7 +1284,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get streaks => 'Streaks';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'كۈن تەرتىپى';
 
   @override
   String get bestStreak => 'Best streak';

@@ -1280,7 +1280,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'ສາຍ';
 
   @override
   String get dayStreak => 'ໄລຍະມື້';

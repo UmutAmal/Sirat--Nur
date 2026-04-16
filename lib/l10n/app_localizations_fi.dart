@@ -1284,7 +1284,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Viivoja';
 
   @override
   String get dayStreak => 'Päivän sarja';

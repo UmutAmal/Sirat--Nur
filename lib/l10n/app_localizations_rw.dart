@@ -1280,7 +1280,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Inzira';
 
   @override
   String get dayStreak => 'Umunsi';

@@ -1287,7 +1287,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'கோடுகள்';
 
   @override
   String get dayStreak => 'நாள் ஸ்ட்ரீக்';

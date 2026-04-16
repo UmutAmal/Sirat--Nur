@@ -1284,7 +1284,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Fa\'ailoga';
 
   @override
   String get dayStreak => 'Fa\'asologa o le aso';

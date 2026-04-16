@@ -1286,10 +1286,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Серии';
 
   @override
-  String get dayStreak => 'Дневная полоса';
+  String get dayStreak => 'Дней подряд';
 
   @override
   String get bestStreak => 'Лучшая серия';

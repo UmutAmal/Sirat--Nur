@@ -1281,7 +1281,7 @@ class AppLocalizationsAz extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Çizgilər';
 
   @override
   String get dayStreak => 'Gün zolağı';

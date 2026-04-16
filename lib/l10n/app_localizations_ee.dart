@@ -1282,7 +1282,7 @@ class AppLocalizationsEe extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Streaks ƒe ʋuʋu';
 
   @override
   String get dayStreak => 'Ŋkeke ƒe streak';

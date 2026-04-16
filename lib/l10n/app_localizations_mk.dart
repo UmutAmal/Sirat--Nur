@@ -1282,7 +1282,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'ленти';
 
   @override
   String get dayStreak => 'Дневна низа';

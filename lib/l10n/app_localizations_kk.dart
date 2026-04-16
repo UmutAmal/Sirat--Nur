@@ -1278,7 +1278,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Жолақтар';
 
   @override
   String get dayStreak => 'Күндізгі кезең';

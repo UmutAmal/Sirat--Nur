@@ -1281,10 +1281,10 @@ class AppLocalizationsUz extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Chiziqlar';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'Kunlik chiziq';
 
   @override
   String get bestStreak => 'Best streak';

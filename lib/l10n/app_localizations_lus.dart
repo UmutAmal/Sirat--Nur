@@ -1290,7 +1290,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Streaks a awm';
 
   @override
   String get dayStreak => 'Ni khat chhunga awm';

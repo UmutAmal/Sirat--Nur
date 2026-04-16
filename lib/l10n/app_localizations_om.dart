@@ -1286,7 +1286,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Streaks kan jedhu';
 
   @override
   String get dayStreak => 'Guyyaa walitti aansuun';

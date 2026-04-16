@@ -1267,7 +1267,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => '縞模様';
 
   @override
   String get dayStreak => '日連続';

@@ -98,5 +98,16 @@ void main() {
         'Selamun Aleykum! Ben Islami asistaninizim. Namaz, oruc, zekat veya herhangi bir Islami konu hakkinda soru sorun.',
       );
     });
+
+    test('rejects multiline analytics label output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'streaks',
+        source: 'Streaks',
+        currentValue: 'Seriler',
+        candidate: 'means the following.\nSeriler',
+      );
+
+      expect(value, 'Seriler');
+    });
   });
 }

@@ -1280,7 +1280,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'سټریکس';
 
   @override
   String get dayStreak => 'د ورځې جریان';

@@ -1285,7 +1285,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Pasemko';
 
   @override
   String get dayStreak => 'Pasja dnia';

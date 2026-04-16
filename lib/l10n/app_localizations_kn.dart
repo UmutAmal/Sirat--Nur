@@ -1282,7 +1282,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'ಗೆರೆಗಳು';
 
   @override
   String get dayStreak => 'ದಿನದ ಗೆರೆ';

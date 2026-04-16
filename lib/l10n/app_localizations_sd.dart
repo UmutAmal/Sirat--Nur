@@ -1279,7 +1279,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'اسٽريڪس';
 
   @override
   String get dayStreak => 'ڏينهن جو سلسلو';

@@ -1284,7 +1284,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Судал';
 
   @override
   String get dayStreak => 'Өдрийн дараалал';

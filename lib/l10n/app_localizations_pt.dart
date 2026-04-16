@@ -1286,10 +1286,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Sequências';
 
   @override
-  String get dayStreak => 'Sequência do dia';
+  String get dayStreak => 'Dias seguidos';
 
   @override
   String get bestStreak => 'Melhor sequência';

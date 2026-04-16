@@ -1285,7 +1285,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Rayas rehegua';
 
   @override
   String get dayStreak => 'Ára racha';

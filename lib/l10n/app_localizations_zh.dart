@@ -1253,7 +1253,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => '连续记录';
 
   @override
   String get dayStreak => '连续日数';
@@ -2891,7 +2891,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => '连续记录';
 
   @override
   String get dayStreak => '连续日数';
@@ -4529,7 +4529,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => '連續紀錄';
 
   @override
   String get dayStreak => '連續日數';

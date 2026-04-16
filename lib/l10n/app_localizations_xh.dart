@@ -1284,10 +1284,10 @@ class AppLocalizationsXh extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Imivimbo';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'Usuku streak';
 
   @override
   String get bestStreak => 'Best streak';

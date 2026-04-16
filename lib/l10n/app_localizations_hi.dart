@@ -1281,10 +1281,10 @@ class AppLocalizationsHi extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'श्रृंखलाएँ';
 
   @override
-  String get dayStreak => 'दिन का सिलसिला';
+  String get dayStreak => 'लगातार दिन';
 
   @override
   String get bestStreak => 'सर्वोत्तम स्ट्रीक';

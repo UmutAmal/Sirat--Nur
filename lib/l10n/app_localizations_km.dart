@@ -1284,7 +1284,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'ស្ទ្រីម';
 
   @override
   String get dayStreak => 'ស្ទ្រីមថ្ងៃ';

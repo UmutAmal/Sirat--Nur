@@ -1290,7 +1290,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Dagiti garit';
 
   @override
   String get dayStreak => 'Aldaw a panagsasaruno';

@@ -1281,7 +1281,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get prayerCompletion => 'Prayer Completion';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Strimmor';
 
   @override
   String get dayStreak => 'Dagsserie';
