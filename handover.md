@@ -7223,3 +7223,37 @@
 
 ### Sonraki Adım
 - Sonraki dongude Surah okuma sayfasindaki playback loglari ve audio candidate zinciri kontrol edilecek; raw reciter/candidate metadata veya kontrolsuz exception yuzeyi kaldiysa kucuk patch ile kapatilacak.
+
+## 2026-04-16 TUR-188 — Harden Surah Audio Playback Fallbacks
+
+### Yapılan İşlem
+- Surah okuma sayfasinda yerel Quran mp3 lookup/playback hatalari kontrollu yakalaniyor.
+- Bozuk/yarim yerel mp3 playback'i cloud Storage-backed adaylara fallback etmeyi engellemiyor.
+- Remote audio candidate hatalari reciter id, candidate index veya URL basmadan sabit log mesajiyla sinirlandi.
+- Quran audio log guard testi raw reciter/candidate metadata loglarinin geri gelmesini engelleyecek sekilde genisletildi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart:132` once local `setFilePath/play` hatasi yakalanmadan `_togglePlay` future'undan disari cikabiliyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart:149` remote `setUrl/play` hatasi yakalaniyordu ama onceki log reciter ve candidate metadata'si basiyordu.
+- Offline indirme kapisi sertlestirildikten sonra playback hattinin da bozuk local cache ve log sanitization acisindan ayni seviyede davranmasi gerekiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\quran_error_copy_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kullanici bozuk/yarim inmis local mp3 yuzunden ses akisini tamamen kaybetmez; uygulama cloud adaya gecer ve gerekirse mevcut localized stream error snackbar'ini gosterir.
+- Loglar artik URL, exception, reciter id veya candidate index yuzeyi tasimaz.
+
+### Test Sonucu
+- `flutter test test\features\quran\quran_error_copy_test.dart` PASS (`3/3`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`363/363`)
+
+### Risk Değişimi
+- Bozuk local Quran mp3 dosyasinin playback future'unu kontrolsuz fail ettirmesi riski: `12/25 -> 1/25`
+- Quran audio remote fallback loglarinda raw reciter/candidate metadata sizmasi riski: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude router path parsing ve Quran/Tafsir/Juz route parametreleri kontrol edilecek; gecersiz id ile crash riski varsa uygulama seviyesinde kontrollu redirect veya safe parse guard eklenecek.

@@ -105,6 +105,21 @@ void main() {
         isNot(contains(r'Asset playback error: $e')),
         reason: '${entry.key} logs raw asset playback errors',
       );
+      expect(
+        source,
+        isNot(contains(r'Audio source failed for reciter $reciterId')),
+        reason: '${entry.key} logs raw reciter metadata',
+      );
+      expect(
+        source,
+        isNot(contains(r'candidate ${index + 1}')),
+        reason: '${entry.key} logs raw candidate metadata',
+      );
     }
+
+    final surahReaderSource =
+        guardedSources['lib/features/quran/surah_reading_page.dart']!;
+    expect(surahReaderSource, contains('Local Quran audio playback failed'));
+    expect(surahReaderSource, contains('Remote Quran audio source failed'));
   });
 }

@@ -119,34 +119,39 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     final normalizedVoice = audioVoice.toLowerCase();
 
     try {
+      var hadAudioFailure = false;
       final reciterId = _reciterIdForVoice(normalizedVoice);
       if (reciterId != null) {
-        final localPath = await OfflineAudioService.getAudioPath(
-          widget.surahNumber,
-          reciterId,
-        );
-        if (await File(localPath).exists()) {
-          await _audioPlayer.setFilePath(localPath);
-          await _audioPlayer.play();
-          return;
+        try {
+          final localPath = await OfflineAudioService.getAudioPath(
+            widget.surahNumber,
+            reciterId,
+          );
+          if (await File(localPath).exists()) {
+            try {
+              await _audioPlayer.setFilePath(localPath);
+              await _audioPlayer.play();
+              return;
+            } catch (_) {
+              hadAudioFailure = true;
+              debugPrint('Local Quran audio playback failed');
+            }
+          }
+        } catch (_) {
+          debugPrint('Local Quran audio lookup failed');
         }
       }
 
       final candidates = await _audioCandidatesForVoice(normalizedVoice);
 
-      var hadAudioFailure = false;
-      for (var index = 0; index < candidates.length; index++) {
-        final url = candidates[index];
+      for (final url in candidates) {
         try {
           await _audioPlayer.setUrl(url);
           await _audioPlayer.play();
           return;
         } catch (_) {
           hadAudioFailure = true;
-          debugPrint(
-            'Audio source failed for reciter $reciterId '
-            'at candidate ${index + 1}/${candidates.length}',
-          );
+          debugPrint('Remote Quran audio source failed');
         }
       }
 
