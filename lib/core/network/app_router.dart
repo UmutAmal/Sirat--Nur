@@ -147,6 +147,14 @@ String? resolveQuranJuzRouteRedirect(String? rawValue) {
   return parseQuranJuzRouteId(rawValue) == null ? '/quran' : null;
 }
 
+String resolveHadithCollectionRouteId(String? rawValue) {
+  return rawValue?.trim() ?? '';
+}
+
+String? resolveHadithCollectionRouteRedirect(String? rawValue) {
+  return resolveHadithCollectionRouteId(rawValue).isEmpty ? '/library' : null;
+}
+
 String? resolveAppRedirect(
   SharedPreferences prefs,
   String matchedLocation,
@@ -326,8 +334,13 @@ final appRouterProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: 'hadith/:id',
             name: 'hadith_list',
+            redirect: (context, state) => resolveHadithCollectionRouteRedirect(
+              state.pathParameters['id'],
+            ),
             pageBuilder: (ctx, state) {
-              final collectionId = state.pathParameters['id']!;
+              final collectionId = resolveHadithCollectionRouteId(
+                state.pathParameters['id'],
+              );
               return _slideTransition(
                 ctx,
                 state,

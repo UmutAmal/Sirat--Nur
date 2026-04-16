@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/network/app_router.dart';
@@ -79,6 +81,22 @@ void main() {
         expect(resolveQuranSurahRouteRedirect('2'), isNull);
         expect(resolveQuranJuzRouteRedirect('31'), '/quran');
         expect(resolveQuranJuzRouteRedirect('7'), isNull);
+      },
+    );
+
+    test(
+      'redirects missing hadith collection ids before page builders use them',
+      () {
+        final source = File(
+          'lib/core/network/app_router.dart',
+        ).readAsStringSync();
+
+        expect(resolveHadithCollectionRouteId(' bukhari '), 'bukhari');
+        expect(resolveHadithCollectionRouteId(null), isEmpty);
+        expect(resolveHadithCollectionRouteRedirect(null), '/library');
+        expect(resolveHadithCollectionRouteRedirect('  '), '/library');
+        expect(resolveHadithCollectionRouteRedirect('muslim'), isNull);
+        expect(source, isNot(contains("pathParameters['id']!")));
       },
     );
   });

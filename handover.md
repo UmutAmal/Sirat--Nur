@@ -7827,3 +7827,36 @@
 
 ### Sonraki Adım
 - Sonraki dongude app_router route parametre force-unwrap yuzeyleri ve route guard testleri incelenecek.
+
+## 2026-04-16 TUR-207 — Guard Hadith Route Collection Id
+
+### Yapılan İşlem
+- App router hadith collection route id icin `resolveHadithCollectionRouteId` helper'i eklendi.
+- Bos veya missing hadith collection id durumunda route `/library` ekranina redirect ediliyor.
+- Hadith list page builder `state.pathParameters['id']!` yerine trim edilmis helper sonucunu kullaniyor.
+- App router testine missing/blank id guard'i ve source guard eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart:150` hadith collection id'yi kontrollu normalize ediyor.
+- Eski akista `A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart:330` route parametresi `!` ile okunuyordu; GoRouter normalde `:id` saglasa bile page builder tarafinda gereksiz crash yuzeyi kalmisti.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart`
+- `A:\Way of Allah\sirat_i_nur\test\app_router_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran route id guard davranisi degismedi.
+- Hadith dataset global block onceligi korunuyor.
+- Hadith collection id eksik/blank olursa crash yerine `/library` fallback uygulanıyor.
+
+### Test Sonucu
+- `flutter test test\app_router_test.dart` PASS (`6/6`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`376/376`)
+
+### Risk Değişimi
+- App router hadith collection route force-unwrap yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude locale_utils nullable countryCode snapshot yuzeyi ve locale fallback testleri incelenecek.
