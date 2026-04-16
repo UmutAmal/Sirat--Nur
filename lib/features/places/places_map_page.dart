@@ -489,6 +489,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final error = _error;
     final settings = ref.watch(settingsProvider);
     final anchor = resolvePlacesAnchor(settings);
     final tileUrlTemplate = SupabaseConfig.placesTileUrlTemplate;
@@ -825,10 +826,10 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                     const Divider(height: 1),
                     // List
                     Expanded(
-                      child: _error != null
+                      child: error != null
                           ? Center(
                               child: Text(
-                                _error!,
+                                error,
                                 style: const TextStyle(color: Colors.red),
                               ),
                             )

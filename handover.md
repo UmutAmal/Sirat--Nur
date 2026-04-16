@@ -7672,3 +7672,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude places ve tafsir `_error!` render yuzeyleri local snapshot standardina alinacak; once daha aktif/harici veri akisi olan Places ele alinacak.
+
+## 2026-04-16 TUR-202 — Guard Places Error Render Snapshot
+
+### Yapılan İşlem
+- PlacesMapPage build akisi `_error` degerini local `error` snapshot olarak okuyor.
+- Liste panelindeki hata render'i `error != null` guardindan sonra snapshot degeriyle calisiyor.
+- Places testindeki source guard genisletildi; `_error!` geri gelirse test fail edecek.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:492` places error state'ini local snapshot'a aliyor.
+- Eski akista `_error != null` guardindan sonra `_error!` kullaniliyordu; harici veri/Overpass hata akisi olan bu ekranda gereksiz render crash yuzeyi olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Places hata copy'si ve honest unavailable state davranisi degismedi.
+- Places list paneli nullable error state force-unwrap kullanmadan render ediliyor.
+
+### Test Sonucu
+- `flutter test test\features\places\places_map_page_test.dart` PASS (`8/8`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`373/373`)
+
+### Risk Değişimi
+- Places error render force-unwrap crash yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude TafsirPage `_error!` render yuzeyi local snapshot standardina alinacak.

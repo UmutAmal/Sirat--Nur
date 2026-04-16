@@ -217,6 +217,8 @@ void main() {
 
     expect(source, isNot(contains('_lastFetchCenter!')));
     expect(source, isNot(contains('_currentCenter!')));
+    expect(source, contains('final error = _error;'));
+    expect(source, isNot(contains('_error!')));
   });
 
   testWidgets(
