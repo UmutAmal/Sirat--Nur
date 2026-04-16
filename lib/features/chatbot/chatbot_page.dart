@@ -40,7 +40,6 @@ class ChatbotPage extends ConsumerStatefulWidget {
 class _ChatbotPageState extends ConsumerState<ChatbotPage> {
   final _controller = TextEditingController();
   final _scrollController = ScrollController();
-  GenerativeModel? _model;
   ChatSession? _chat;
   bool _isOfflineMode = _geminiApiKey.isEmpty;
 
@@ -55,12 +54,12 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
       return;
     }
 
-    _model = GenerativeModel(
+    final model = GenerativeModel(
       model: 'gemini-2.0-flash',
       apiKey: _geminiApiKey,
       systemInstruction: Content.system(islamicChatbotSystemInstruction),
     );
-    _chat = _model!.startChat();
+    _chat = model.startChat();
     _isOfflineMode = false;
   }
 
@@ -93,6 +92,7 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
 
     try {
       String response;
+      final chat = _chat;
 
       if (_isOfflineMode) {
         // Fallback or Local LLM Database
@@ -100,9 +100,9 @@ class _ChatbotPageState extends ConsumerState<ChatbotPage> {
         final isTurkish = locale.languageCode == 'tr';
         final localResponse = IslamicChatbotData.getResponse(text, isTurkish);
         response = localResponse ?? l10n.chatbotLocalNoInfo;
-      } else if (_chat != null) {
+      } else if (chat != null) {
         // Use Gemini LLM
-        final geminiResponse = await _chat!.sendMessage(Content.text(text));
+        final geminiResponse = await chat.sendMessage(Content.text(text));
         response = geminiResponse.text ?? l10n.chatbotErrorMsg;
       } else {
         response = l10n.chatbotCloudNotConfigured;

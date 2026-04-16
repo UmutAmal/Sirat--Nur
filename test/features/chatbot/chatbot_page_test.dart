@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -115,5 +117,17 @@ void main() {
     } finally {
       await disposeChatbotPage(tester);
     }
+  });
+
+  test('ChatbotPage uses local Gemini session snapshots', () {
+    final source = File(
+      'lib/features/chatbot/chatbot_page.dart',
+    ).readAsStringSync();
+
+    expect(source, contains('final model = GenerativeModel('));
+    expect(source, contains('final chat = _chat;'));
+    expect(source, isNot(contains('GenerativeModel? _model')));
+    expect(source, isNot(contains('_model!.startChat()')));
+    expect(source, isNot(contains('_chat!.sendMessage')));
   });
 }

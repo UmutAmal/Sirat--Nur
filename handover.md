@@ -7481,3 +7481,35 @@
 
 ### Sonraki Adım
 - Sonraki dongude kalan `!` kullanimlari icinde gercek crash yuzeyi olan runtime path'ler ayrilacak; safe static map/index pattern'leri test guard ile belgelenip riskli olanlar snapshot'a alinacak.
+
+## 2026-04-16 TUR-196 — Guard Chatbot Gemini Session Snapshots
+
+### Yapılan İşlem
+- Chatbot Gemini model init akisi local `model` snapshot ile ChatSession olusturuyor; kullanilmayan `_model` state alani kaldirildi.
+- Mesaj gonderme akisi `_chat` degerini local `chat` snapshot olarak okuyor ve null guard sonrasi force-unwrap kullanmiyor.
+- Chatbot testlerine `_model!` / `_chat!` geri gelmesini ve kullanilmayan model state alanini engelleyen source guard eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart:57` model init icin local snapshot kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart:95` message send call chain'inde chat session local snapshot'a aliniyor.
+- Onceki akista `_model!.startChat()` ve `_chat!.sendMessage(...)` guard sonrasi force-unwrap kullaniyordu; bu lifecycle refactor'larinda gereksiz crash yuzeyi olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\chatbot\chatbot_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Offline fallback ve Gemini mode davranisi degismedi.
+- Chatbot icinde kullanilmayan model state'i temizlendi; session sadece `_chat` uzerinden tutuluyor.
+
+### Test Sonucu
+- `flutter test test\features\chatbot\chatbot_page_test.dart` PASS (`4/4`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`368/368`)
+
+### Risk Değişimi
+- Chatbot Gemini session force-unwrap/lifecycle crash yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude `A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart` hadith route parametresi ve `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart` tafsir id default'u incelenecek; gercek runtime risk olan kisim once kapatilacak.
