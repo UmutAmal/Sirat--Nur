@@ -7292,3 +7292,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude kalan `int.parse`/`!` route ve user-input parse yuzeyleri repo genelinde taranacak; ayni siniftan crash riski varsa dosya bazli kucuk guard eklenecek.
+
+## 2026-04-16 TUR-190 — Guard Library Education Category Id Rendering
+
+### Yapılan İşlem
+- Library Islamic Education kategori render akisi `resolveEducationCategoryId(cat)!` force unwrap kullanmayacak sekilde guvenli hale getirildi.
+- Kategori id beklenmedik sekilde null gelirse UI satiri crash yerine bos placeholder ile atliyor.
+- Existing education category widget testine source guard eklendi; force unwrap geri gelirse test fail edecek.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart:307` once resolver sonucunu `!` ile aciyordu.
+- `resolveEducationCategories(...)` normalde id/title filtreliyor; ancak UI katmaninin bu varsayima sert baglanmasi ileride provider/refactor kaynakli null id durumunda build crash riski olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\library_page_cloud_duas_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Cloud education kategori verisi beklenmedik sekilde sekil degistirse bile Library ekrani build asamasinda patlamaz.
+- Mevcut valid kategori rendering davranisi degismedi.
+
+### Test Sonucu
+- `flutter test test\features\library\library_page_cloud_duas_test.dart` PASS (`8/8`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`364/364`)
+
+### Risk Değişimi
+- Library education kategori id null durumunda build crash riski: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude kalan force unwrap yuzeyleri icinden runtime data'ya bagli olanlar ayrilacak; route parametresi, provider sonucu veya cloud row kaynakli yeni bir crash yuzeyi varsa kapatilacak.

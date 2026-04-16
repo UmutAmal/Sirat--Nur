@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -266,6 +268,11 @@ void main() {
         expect(find.text('No id category'), findsNothing);
         expect(find.text('99'), findsNothing);
         expect(find.text('📚'), findsOneWidget);
+
+        final source = File(
+          'lib/features/library/library_page.dart',
+        ).readAsStringSync();
+        expect(source, isNot(contains('resolveEducationCategoryId(cat)!')));
       } finally {
         await disposeLibraryPage(tester);
       }

@@ -304,7 +304,11 @@ class LibraryPage extends ConsumerWidget {
                       children: visibleCategories.asMap().entries.map((entry) {
                         final i = entry.key;
                         final cat = entry.value;
-                        final categoryId = resolveEducationCategoryId(cat)!;
+                        final categoryId = resolveEducationCategoryId(cat);
+                        if (categoryId == null) {
+                          return const SizedBox.shrink();
+                        }
+
                         final title = resolveEducationText(cat, 'title');
                         return AnimatedPremiumCard(
                           animationDelay: 200 + (i * 80),
