@@ -537,7 +537,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get downloadManager => 'Správca sťahovania';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'sťahovanie';
 
   @override
   String get downloading => 'Downloading...';

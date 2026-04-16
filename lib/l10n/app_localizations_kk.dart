@@ -535,7 +535,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get downloadManager => 'Жүктеу менеджері';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Жүктеулер';
 
   @override
   String get downloading => 'Downloading...';

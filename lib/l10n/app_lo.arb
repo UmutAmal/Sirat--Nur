@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "ຜູ້ຈັດການດາວໂຫຼດ",
-  "downloads": "Downloads",
+  "downloads": "ດາວໂຫຼດ",
   "downloading": "Downloading...",
   "downloadComplete": "ດາວໂຫຼດສຳເລັດ",
   "downloadFailed": "ການດາວໂຫຼດລົ້ມເຫລວ",

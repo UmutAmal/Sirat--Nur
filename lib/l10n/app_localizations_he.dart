@@ -534,7 +534,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get downloadManager => 'מנהל הורדות';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'הורדות';
 
   @override
   String get downloading => 'Downloading...';

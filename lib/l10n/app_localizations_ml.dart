@@ -535,7 +535,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get downloadManager => 'ഡൗൺലോഡ് മാനേജർ';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'ഡൗൺലോഡുകൾ';
 
   @override
   String get downloading => 'Downloading...';

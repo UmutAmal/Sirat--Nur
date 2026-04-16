@@ -538,7 +538,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get downloadManager => 'Letöltéskezelő';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Letöltések';
 
   @override
   String get downloading => 'Downloading...';

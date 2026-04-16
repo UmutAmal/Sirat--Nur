@@ -536,7 +536,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get downloadManager => 'ਡਾਊਨਲੋਡ ਮੈਨੇਜਰ';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'ਡਾਊਨਲੋਡ';
 
   @override
   String get downloading => 'Downloading...';

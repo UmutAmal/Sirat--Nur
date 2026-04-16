@@ -536,7 +536,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get downloadManager => 'Downloadadministrator';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Hentede filer';
 
   @override
   String get downloading => 'Downloader...';

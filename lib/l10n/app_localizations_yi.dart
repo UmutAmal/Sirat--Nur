@@ -536,7 +536,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get downloadManager => 'דאַונלאָוד מאַנאַגער';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'דאַונלאָודז';
 
   @override
   String get downloading => 'Downloading...';

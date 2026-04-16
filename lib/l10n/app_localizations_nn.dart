@@ -536,7 +536,7 @@ class AppLocalizationsNn extends AppLocalizations {
   String get downloadManager => 'Nedlastingsbehandler';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Nedlastinger';
 
   @override
   String get downloading => 'Downloading...';

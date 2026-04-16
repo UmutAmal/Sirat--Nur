@@ -536,7 +536,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get downloadManager => 'چۈشۈرۈش باشقۇرغۇچى';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'چۈشۈرۈش';
 
   @override
   String get downloading => 'Downloading...';

@@ -536,7 +536,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get downloadManager => 'Download Manager';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Ngundhuh';
 
   @override
   String get downloading => 'Downloading...';

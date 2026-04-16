@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Beheerder downloaden",
-  "downloads": "Downloads",
+  "downloads": "Gedownloade bestanden",
   "downloading": "Downloaden...",
   "downloadComplete": "Downloaden voltooid",
   "downloadFailed": "Downloaden mislukt",

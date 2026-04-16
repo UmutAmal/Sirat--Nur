@@ -535,7 +535,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get downloadManager => 'ډاونلوډ مدیر';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'ډاونلوډونه';
 
   @override
   String get downloading => 'Downloading...';

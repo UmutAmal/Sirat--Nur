@@ -531,7 +531,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get downloadManager => 'ዳውንሎድ ማናጀር';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'ዳውንሎድ ምግባር';
 
   @override
   String get downloading => 'Downloading...';

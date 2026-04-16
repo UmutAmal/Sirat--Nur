@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Download Manager",
-  "downloads": "Downloads",
+  "downloads": "Nedladdningar",
   "downloading": "Downloading...",
   "downloadComplete": "Nedladdningen är klar",
   "downloadFailed": "Nedladdningen misslyckades",

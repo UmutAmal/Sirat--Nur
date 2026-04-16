@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Nedlastingsbehandler",
-  "downloads": "Downloads",
+  "downloads": "Nedlastinger",
   "downloading": "Downloading...",
   "downloadComplete": "Nedlasting fullført",
   "downloadFailed": "Nedlasting mislyktes",

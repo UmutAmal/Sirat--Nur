@@ -540,7 +540,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get downloadManager => 'Жүктөө менеджери';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Жүктөлүп алынгандар';
 
   @override
   String get downloading => 'Downloading...';

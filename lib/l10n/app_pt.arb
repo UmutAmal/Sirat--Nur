@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Gerenciador de downloads",
-  "downloads": "Downloads",
+  "downloads": "Transferências",
   "downloading": "Downloading...",
   "downloadComplete": "Download completo",
   "downloadFailed": "Falha no download",

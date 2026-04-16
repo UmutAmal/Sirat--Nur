@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Download Manager",
-  "downloads": "Downloads",
+  "downloads": "ดาวน์โหลด",
   "downloading": "Downloading...",
   "downloadComplete": "Download Complete",
   "downloadFailed": "Download Failed",

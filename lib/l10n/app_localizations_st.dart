@@ -539,7 +539,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get downloadManager => 'Download Manager';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Lisebelisoa';
 
   @override
   String get downloading => 'Downloading...';

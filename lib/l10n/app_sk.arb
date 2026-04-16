@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Správca sťahovania",
-  "downloads": "Downloads",
+  "downloads": "sťahovanie",
   "downloading": "Downloading...",
   "downloadComplete": "Sťahovanie dokončené",
   "downloadFailed": "Sťahovanie zlyhalo",

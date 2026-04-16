@@ -355,6 +355,7 @@ bool _mustStaySingleLine(String key) {
       key == 'lightMode' ||
       key == 'darkMode' ||
       key == 'systemDefault' ||
+      key == 'downloads' ||
       key == 'compassSmoothing' ||
       key == 'manualCorrectionDesc' ||
       key == 'calibrationRequiredFigure8' ||

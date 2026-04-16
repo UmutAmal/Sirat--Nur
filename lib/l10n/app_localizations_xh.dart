@@ -536,7 +536,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get downloadManager => 'Khuphela uMphathi';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Khuphela';
 
   @override
   String get downloading => 'Downloading...';

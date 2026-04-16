@@ -538,7 +538,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get downloadManager => 'Scarica Gestore';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Download';
 
   @override
   String get downloading => 'Downloading...';

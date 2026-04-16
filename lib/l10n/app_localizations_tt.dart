@@ -536,7 +536,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get downloadManager => 'Йөкләү менеджеры';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Йөкләүләр';
 
   @override
   String get downloading => 'Downloading...';

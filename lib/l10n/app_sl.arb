@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Upravitelj prenosov",
-  "downloads": "Downloads",
+  "downloads": "Prenosi",
   "downloading": "Downloading...",
   "downloadComplete": "Prenos končan",
   "downloadFailed": "Prenos ni uspel",

@@ -536,7 +536,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get downloadManager => 'Gukuramo Umuyobozi';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Gukuramo';
 
   @override
   String get downloading => 'Downloading...';

@@ -535,7 +535,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get downloadManager => 'ڊائون لوڊ مئنيجر';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'ڊائون لوڊ';
 
   @override
   String get downloading => 'Downloading...';

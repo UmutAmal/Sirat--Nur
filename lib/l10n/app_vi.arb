@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Trình quản lý tải xuống",
-  "downloads": "Downloads",
+  "downloads": "Tải xuống",
   "downloading": "Downloading...",
   "downloadComplete": "Tải xuống hoàn tất",
   "downloadFailed": "Tải xuống không thành công",

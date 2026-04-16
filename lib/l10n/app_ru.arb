@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Менеджер загрузок",
-  "downloads": "Downloads",
+  "downloads": "Загрузки",
   "downloading": "Downloading...",
   "downloadComplete": "Загрузка завершена",
   "downloadFailed": "Загрузка не удалась",

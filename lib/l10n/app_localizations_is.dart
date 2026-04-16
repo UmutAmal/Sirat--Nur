@@ -536,7 +536,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get downloadManager => 'Niðurhalsstjóri';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Niðurhal';
 
   @override
   String get downloading => 'Downloading...';

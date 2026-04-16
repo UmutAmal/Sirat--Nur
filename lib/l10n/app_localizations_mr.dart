@@ -536,7 +536,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get downloadManager => 'व्यवस्थापक डाउनलोड करा';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'डाउनलोड';
 
   @override
   String get downloading => 'Downloading...';

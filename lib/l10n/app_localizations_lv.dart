@@ -537,7 +537,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get downloadManager => 'Lejupielādes pārvaldnieks';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Lejupielādes';
 
   @override
   String get downloading => 'Downloading...';

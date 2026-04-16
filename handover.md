@@ -8367,3 +8367,49 @@
 
 ### Sonraki Adım
 - Sonraki dongude aktif l10n fallback taramasini yenile; canonical dini terimleri ayri risk olarak isaretleyip `version`, `downloads`, `premium`, `ayahs`, `surah` veya benzer gorunur ama guvenle cevrilebilir anahtarlar arasindan en yuksek etkili tek yuzeyi sec.
+
+## 2026-04-16 TUR-220 — Localize Downloads Quick Access Label
+
+### Yapılan İşlem
+- `downloads` anahtari korumali ARB batch'i ile genis locale kumesinde lokalize edildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Priority locale kalite gecisinde `da`, `de`, `nl` icin Ingilizceyle birebir kalan degerler elle duzeltildi: `Hentede filer`, `Heruntergeladenes`, `Gedownloade bestanden`.
+- `tool\translate_arb_keys.dart` single-line guard listesine `downloads` eklendi.
+- `test\arb_ui_localization_test.dart` home dashboard copy guard'ina `downloads` eklendi.
+- `test\translate_arb_keys_test.dart` multiline `downloads` output regresyon testiyle ceviri debris korumasi ekledi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart:370` ana ekran quick access satirinda `l10n.downloads` etiketini gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb:262` kaynak metin olarak `"Downloads"` degerini tasiyor.
+- TUR-220 oncesi aktif l10n fallback taramasinda `downloads` icin `13` priority locale ve `140` toplam locale `app_en.arb` ile birebir ayniydi.
+- Bu yuzey ana ekranda gorundugu icin kullanici ilk temasinda Ingilizce kalinti riski olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Priority locale setinde `downloads` Ingilizce fallback riski kapandi.
+- `downloads` fallback sayisi `140 -> 72` seviyesine indi.
+- Kalan fallback'ler Google ceviri destegi olmayan veya guvenli aday uretilemeyen nadir/legacy locale grubunda birakildi; UI metni uydurulmadi.
+- Tek satir guard'i ile gelecekteki batch debris/newline riski azaltildi.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\features\home\home_page_test.dart` PASS (`55/55`)
+- Priority fallback taramasi PASS: `priority_same=[]`
+- `git diff --check` PASS (yalnizca mevcut Windows CRLF uyarilari)
+- `flutter analyze` PASS
+- `flutter test` PASS (`389/389`)
+- Ortam dogrulama: `flutter doctor -v` Android/test hatti icin PASS; Chrome ve Visual Studio eksikligi yalniz web/Windows desktop hedefleri icin non-kritik olarak kaydedildi.
+
+### Risk Değişimi
+- Priority locale downloads quick access fallback riski: `13/25 -> 2/25`
+- Tum locale downloads quick access fallback riski: `13/25 -> 6/25`
+- Downloads ceviri batch debris tekrar riski: `10/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki dongude aktif l10n fallback taramasini yenile; canonical dini terimleri ayri risk olarak isaretleyip `premium`, `ayahs`, `surah`, `version`, `rateApp`, `shareApp` veya benzer gorunur ama guvenle cevrilebilir anahtarlar arasindan en yuksek etkili tek yuzeyi sec.

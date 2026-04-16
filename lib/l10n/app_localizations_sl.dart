@@ -537,7 +537,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get downloadManager => 'Upravitelj prenosov';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Prenosi';
 
   @override
   String get downloading => 'Downloading...';

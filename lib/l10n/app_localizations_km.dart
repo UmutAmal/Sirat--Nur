@@ -536,7 +536,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get downloadManager => 'កម្មវិធីគ្រប់គ្រងការទាញយក';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'ការទាញយក';
 
   @override
   String get downloading => 'Downloading...';

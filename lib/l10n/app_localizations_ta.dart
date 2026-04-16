@@ -537,7 +537,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get downloadManager => 'பதிவிறக்க மேலாளர்';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'பதிவிறக்கங்கள்';
 
   @override
   String get downloading => 'Downloading...';

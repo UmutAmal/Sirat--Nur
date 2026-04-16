@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Atsisiuntimų tvarkyklė",
-  "downloads": "Downloads",
+  "downloads": "Atsisiuntimai",
   "downloading": "Downloading...",
   "downloadComplete": "Atsisiuntimas baigtas",
   "downloadFailed": "Atsisiųsti nepavyko",

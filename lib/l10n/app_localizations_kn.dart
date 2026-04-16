@@ -535,7 +535,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get downloadManager => 'ಡೌನ್‌ಲೋಡ್ ಮ್ಯಾನೇಜರ್';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'ಡೌನ್‌ಲೋಡ್‌ಗಳು';
 
   @override
   String get downloading => 'Downloading...';

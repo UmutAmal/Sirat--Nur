@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Lejupielādes pārvaldnieks",
-  "downloads": "Downloads",
+  "downloads": "Lejupielādes",
   "downloading": "Downloading...",
   "downloadComplete": "Lejupielāde pabeigta",
   "downloadFailed": "Lejupielāde neizdevās",

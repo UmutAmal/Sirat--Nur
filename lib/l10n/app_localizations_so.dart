@@ -537,7 +537,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get downloadManager => 'Download Manager';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Soo dejinta';
 
   @override
   String get downloading => 'Downloading...';

@@ -536,7 +536,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get downloadManager => 'Pule o le download';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Si\'itia';
 
   @override
   String get downloading => 'Downloading...';

@@ -536,7 +536,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get downloadManager => 'Trình quản lý tải xuống';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Tải xuống';
 
   @override
   String get downloading => 'Downloading...';

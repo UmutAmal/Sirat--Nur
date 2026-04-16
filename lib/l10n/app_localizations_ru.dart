@@ -538,7 +538,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get downloadManager => 'Менеджер загрузок';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Загрузки';
 
   @override
   String get downloading => 'Downloading...';

@@ -537,7 +537,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get downloadManager => 'Managerükleme dolandyryjysy';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => '.Üklemeler';
 
   @override
   String get downloading => 'Downloading...';

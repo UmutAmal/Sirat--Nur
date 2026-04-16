@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Менаџер за преземање",
-  "downloads": "Downloads",
+  "downloads": "Преземања",
   "downloading": "Downloading...",
   "downloadComplete": "Преземањето е завршено",
   "downloadFailed": "Преземањето не успеа",

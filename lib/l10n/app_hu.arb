@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Letöltéskezelő",
-  "downloads": "Downloads",
+  "downloads": "Letöltések",
   "downloading": "Downloading...",
   "downloadComplete": "Letöltés kész",
   "downloadFailed": "Letöltés sikertelen",

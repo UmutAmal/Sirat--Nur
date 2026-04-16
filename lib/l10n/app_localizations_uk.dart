@@ -537,7 +537,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get downloadManager => 'Менеджер завантажень';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Завантаження';
 
   @override
   String get downloading => 'Downloading...';

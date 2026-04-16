@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Download-Manager",
-  "downloads": "Downloads",
+  "downloads": "Heruntergeladenes",
   "downloading": "Herunterladen...",
   "downloadComplete": "Download abgeschlossen",
   "downloadFailed": "Download fehlgeschlagen",

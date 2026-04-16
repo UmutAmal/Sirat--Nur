@@ -48,6 +48,7 @@ void main() {
           'dailyVerse',
           'todaysIbadah',
           'quickAccess',
+          'downloads',
           'places',
           'library',
           'islamicEducation',

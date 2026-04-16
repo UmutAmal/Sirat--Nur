@@ -536,7 +536,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get downloadManager => 'Onye njikwa nbudata';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Nbudata';
 
   @override
   String get downloading => 'Downloading...';

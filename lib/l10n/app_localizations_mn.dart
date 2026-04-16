@@ -537,7 +537,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get downloadManager => 'Татаж авах менежер';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Татаж авсан зүйлс';
 
   @override
   String get downloading => 'Downloading...';

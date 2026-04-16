@@ -536,7 +536,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get downloadManager => 'Download Manager';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'ดาวน์โหลด';
 
   @override
   String get downloading => 'Downloading...';

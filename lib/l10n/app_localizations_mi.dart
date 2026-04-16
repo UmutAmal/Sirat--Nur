@@ -538,7 +538,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get downloadManager => 'Kaiwhakahaere Tikiake';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Tikiake';
 
   @override
   String get downloading => 'Downloading...';

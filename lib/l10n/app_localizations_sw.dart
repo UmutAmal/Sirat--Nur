@@ -536,7 +536,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get downloadManager => 'Kidhibiti cha Upakuaji';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Vipakuliwa';
 
   @override
   String get downloading => 'Downloading...';

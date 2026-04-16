@@ -532,7 +532,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get downloadManager => 'ダウンロードマネージャー';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'ダウンロード';
 
   @override
   String get downloading => 'Downloading...';

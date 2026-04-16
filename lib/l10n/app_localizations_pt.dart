@@ -537,7 +537,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get downloadManager => 'Gerenciador de downloads';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Transferências';
 
   @override
   String get downloading => 'Downloading...';

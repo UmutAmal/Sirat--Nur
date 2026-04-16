@@ -531,7 +531,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get downloadManager => '다운로드 관리자';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => '다운로드';
 
   @override
   String get downloading => 'Downloading...';

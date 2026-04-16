@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Downloadadministrator",
-  "downloads": "Downloads",
+  "downloads": "Hentede filer",
   "downloading": "Downloader...",
   "downloadComplete": "Download fuldført",
   "downloadFailed": "Download mislykkedes",

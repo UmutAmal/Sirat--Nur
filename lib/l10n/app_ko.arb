@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "다운로드 관리자",
-  "downloads": "Downloads",
+  "downloads": "다운로드",
   "downloading": "Downloading...",
   "downloadComplete": "다운로드 완료",
   "downloadFailed": "다운로드 실패",

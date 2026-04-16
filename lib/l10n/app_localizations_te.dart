@@ -536,7 +536,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get downloadManager => 'డౌన్‌లోడ్ మేనేజర్';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'డౌన్‌లోడ్‌లు';
 
   @override
   String get downloading => 'Downloading...';

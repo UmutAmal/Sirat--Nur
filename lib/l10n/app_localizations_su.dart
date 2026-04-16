@@ -537,7 +537,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get downloadManager => 'Unduh Manajer';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Undeuran';
 
   @override
   String get downloading => 'Downloading...';

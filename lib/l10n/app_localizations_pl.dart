@@ -536,7 +536,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get downloadManager => 'Menedżer pobierania';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Pliki do pobrania';
 
   @override
   String get downloading => 'Downloading...';

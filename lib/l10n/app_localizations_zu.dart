@@ -536,7 +536,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get downloadManager => 'Landa Umphathi';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Okulandwayo';
 
   @override
   String get downloading => 'Downloading...';

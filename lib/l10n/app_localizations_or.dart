@@ -537,7 +537,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get downloadManager => 'ମ୍ୟାନେଜର୍ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'ଡାଉନଲୋଡ୍ |';
 
   @override
   String get downloading => 'Downloading...';

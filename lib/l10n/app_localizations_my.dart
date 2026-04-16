@@ -537,7 +537,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get downloadManager => 'ဒေါင်းလုဒ်မန်နေဂျာ';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'ဒေါင်းလုဒ်များ';
 
   @override
   String get downloading => 'Downloading...';

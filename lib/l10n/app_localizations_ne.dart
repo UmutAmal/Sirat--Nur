@@ -535,7 +535,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get downloadManager => 'डाउनलोड प्रबन्धक';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'डाउनलोडहरू';
 
   @override
   String get downloading => 'Downloading...';

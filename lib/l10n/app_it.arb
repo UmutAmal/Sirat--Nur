@@ -136,7 +136,7 @@
     }
   },
   "downloadManager": "Scarica Gestore",
-  "downloads": "Downloads",
+  "downloads": "Download",
   "downloading": "Downloading...",
   "downloadComplete": "Scarica completo",
   "downloadFailed": "Download non riuscito",

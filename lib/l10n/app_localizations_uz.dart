@@ -536,7 +536,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get downloadManager => 'Yuklab olish menejeri';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Yuklashlar';
 
   @override
   String get downloading => 'Downloading...';

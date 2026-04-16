@@ -536,7 +536,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get downloadManager => 'ຜູ້ຈັດການດາວໂຫຼດ';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'ດາວໂຫຼດ';
 
   @override
   String get downloading => 'Downloading...';

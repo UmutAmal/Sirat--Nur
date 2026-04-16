@@ -170,6 +170,17 @@ void main() {
       expect(value, 'Sistem Varsayilani');
     });
 
+    test('rejects multiline downloads output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'downloads',
+        source: 'Downloads',
+        currentValue: 'Indirmeler',
+        candidate: 'means the following.\nIndirmeler',
+      );
+
+      expect(value, 'Indirmeler');
+    });
+
     test('rejects multiline diagnostics output', () {
       final labelValue = resolveTranslatedArbValue(
         key: 'diagnostics',

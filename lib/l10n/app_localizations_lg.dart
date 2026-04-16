@@ -537,7 +537,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get downloadManager => 'Download Manager';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Ebiwanuddwa';
 
   @override
   String get downloading => 'Downloading...';

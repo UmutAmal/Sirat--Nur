@@ -536,7 +536,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get downloadManager => 'Atsisiuntimų tvarkyklė';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Atsisiuntimai';
 
   @override
   String get downloading => 'Downloading...';
