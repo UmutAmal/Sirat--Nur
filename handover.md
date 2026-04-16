@@ -7860,3 +7860,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude locale_utils nullable countryCode snapshot yuzeyi ve locale fallback testleri incelenecek.
+
+## 2026-04-16 TUR-208 — Guard Locale Country Snapshot
+
+### Yapılan İşlem
+- Locale resolver `requested.countryCode` degerini local `requestedCountry` snapshot olarak okuyor.
+- Language + region fallback karsilastirmasi snapshot deger uzerinden yapiliyor.
+- Locale utils icin parse, region fallback, language fallback ve source guard testleri eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\locale_utils.dart:67` requested country code'u local snapshot'a aliyor.
+- Eski akista `requested.countryCode != null` guardindan sonra `requested.countryCode!` kullaniliyordu; bu gereksiz nullable force-unwrap pattern'i locale fallback hattinda kalmisti.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\locale_utils.dart`
+- `A:\Way of Allah\sirat_i_nur\test\locale_utils_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Exact match, language+region fallback ve language-only fallback sirasi korundu.
+- Locale resolver force-unwrap kullanmadan ayni sonuc setini uretiyor.
+
+### Test Sonucu
+- `flutter test test\locale_utils_test.dart` PASS (`2/2`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`378/378`)
+
+### Risk Değişimi
+- Locale countryCode force-unwrap yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude tum `lib/` icin kalan runtime null-assertion yuzeyleri yeniden taranacak; AppLocalizations patternleri haric tutulup en yuksek etkili kalan bulgu secilecek.

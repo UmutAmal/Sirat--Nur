@@ -64,10 +64,11 @@ Locale resolveSupportedLocale(
   }
 
   // Second pass: language + region (ignoring script).
-  if (requested.countryCode != null && requested.countryCode!.isNotEmpty) {
+  final requestedCountry = requested.countryCode;
+  if (requestedCountry != null && requestedCountry.isNotEmpty) {
     for (final candidate in supportedLocales) {
       if (candidate.languageCode == requested.languageCode &&
-          candidate.countryCode == requested.countryCode) {
+          candidate.countryCode == requestedCountry) {
         return candidate;
       }
     }
