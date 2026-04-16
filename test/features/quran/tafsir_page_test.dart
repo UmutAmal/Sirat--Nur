@@ -86,4 +86,14 @@ void main() {
     expect(source, contains('TafsirLocalService.defaultTafsirSourceId'));
     expect(source, isNot(contains("availableTafsirs.first['id']!")));
   });
+
+  test('tafsir service database getter avoids force unwraps', () {
+    final source = File(
+      'lib/core/services/tafsir_local_service.dart',
+    ).readAsStringSync();
+
+    expect(source, contains('final existingDatabase = _database;'));
+    expect(source, contains('return initializedDatabase;'));
+    expect(source, isNot(contains('_database!')));
+  });
 }

@@ -7546,3 +7546,35 @@
 
 ### Sonraki Adım
 - Sonraki dongude `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart` database getter force-unwrap kullanimi ve `_apiIdForSource` fallback mantigi incelenecek; gercek hata yuzeyi varsa servis testleriyle kapatilacak.
+
+## 2026-04-16 TUR-198 — Guard Tafsir Database Getter Snapshot
+
+### Yapılan İşlem
+- TafsirLocalService `database` getter'i `_database!` force-unwrap yerine local `existingDatabase` ve `initializedDatabase` snapshot'lari kullanıyor.
+- Ilk init akisi ayni sekilde `_initDatabase()` cagiriyor, sonucu cache'e yaziyor ve direkt initialized snapshot'i donduruyor.
+- Tafsir servis testlerine `_database!` geri gelmesini engelleyen source guard eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:42` mevcut cache'i local snapshot olarak okuyor.
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:45` init sonucunu local snapshot olarak tutup `:47` dogrudan donduruyor.
+- Eski akista null check sonrasi `_database!` iki kez kullaniliyordu; servis lifecycle refactor'larinda gereksiz crash yuzeyi olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Database init/cache davranisi degismedi.
+- Null-safety standardi servis getter seviyesinde de force-unwrap'siz hale getirildi.
+
+### Test Sonucu
+- `flutter test test\features\quran\tafsir_page_test.dart` PASS (`5/5`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`370/370`)
+
+### Risk Değişimi
+- Tafsir database getter force-unwrap/lifecycle crash yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude `_apiIdForSource` icindeki fallback `?? 169` kontrol edilecek; unsupported source zaten exception attigi icin fallback maskesi gereksizse kontrollu hata ile degistirilecek.

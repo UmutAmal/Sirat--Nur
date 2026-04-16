@@ -39,9 +39,12 @@ class TafsirLocalService {
   };
 
   static Future<Database> get database async {
-    if (_database != null) return _database!;
-    _database = await _initDatabase();
-    return _database!;
+    final existingDatabase = _database;
+    if (existingDatabase != null) return existingDatabase;
+
+    final initializedDatabase = await _initDatabase();
+    _database = initializedDatabase;
+    return initializedDatabase;
   }
 
   static Future<Database> _initDatabase() async {
