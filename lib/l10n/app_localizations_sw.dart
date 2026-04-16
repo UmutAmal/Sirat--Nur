@@ -133,10 +133,10 @@ class AppLocalizationsSw extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Tafuta';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Tafuta...';
 
   @override
   String get noResults => 'Hakuna matokeo yaliyopatikana';
@@ -158,7 +158,7 @@ class AppLocalizationsSw extends AppLocalizations {
       'Maudhui ya Quran hayakuweza kupakiwa. Tafadhali jaribu tena.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Jaribu tena';
 
   @override
   String get refreshAction => 'Onyesha upya';
@@ -167,7 +167,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get cancel => 'Ghairi';
 
   @override
-  String get save => 'Save';
+  String get save => 'Hifadhi';
 
   @override
   String get delete => 'Futa';
@@ -256,10 +256,10 @@ class AppLocalizationsSw extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Ongeza Alamisho';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Ondoa Alamisho';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get downloads => 'Vipakuliwa';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Inapakua...';
 
   @override
   String get downloadComplete => 'Upakuaji umekamilika';

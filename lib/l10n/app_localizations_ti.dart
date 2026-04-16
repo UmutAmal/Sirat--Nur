@@ -133,7 +133,7 @@ class AppLocalizationsTi extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'ድለዩ።';
 
   @override
   String get searchHint => 'Search...';

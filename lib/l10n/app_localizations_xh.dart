@@ -133,10 +133,10 @@ class AppLocalizationsXh extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Khangela';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Phendla...';
 
   @override
   String get noResults => 'Akukho ziphumo zifunyenweyo';
@@ -158,7 +158,7 @@ class AppLocalizationsXh extends AppLocalizations {
       'Umxholo weQuran awukwazanga kulayishwa. Nceda zama kwakhona.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Zama kwakhona';
 
   @override
   String get refreshAction => 'Hlaziya';
@@ -167,7 +167,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get cancel => 'Rhoxisa';
 
   @override
-  String get save => 'Save';
+  String get save => 'Gcina';
 
   @override
   String get delete => 'Cima';
@@ -256,10 +256,10 @@ class AppLocalizationsXh extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Yongeza iBookmark';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Susa ibhukumaki';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get downloads => 'Khuphela';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Iyakhuphela...';
 
   @override
   String get downloadComplete => 'Ukukhuphela Kugqityiwe';

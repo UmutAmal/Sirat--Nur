@@ -133,10 +133,10 @@ class AppLocalizationsOr extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'ସନ୍ଧାନ କର |';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'ସନ୍ଧାନ ...';
 
   @override
   String get noResults => 'କ results ଣସି ଫଳାଫଳ ମିଳିଲା ନାହିଁ |';
@@ -158,7 +158,7 @@ class AppLocalizationsOr extends AppLocalizations {
       'କୁରାନ ବିଷୟବସ୍ତୁ ଲୋଡ୍ ହୋଇପାରିଲା ନାହିଁ | ଦୟାକରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'ପୁନ ry ଚେଷ୍ଟା କରନ୍ତୁ |';
 
   @override
   String get refreshAction => 'ସତେଜ କରନ୍ତୁ |';
@@ -167,7 +167,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get cancel => 'ବାତିଲ୍ କରନ୍ତୁ |';
 
   @override
-  String get save => 'Save';
+  String get save => 'ସଞ୍ଚୟ କରନ୍ତୁ |';
 
   @override
   String get delete => 'ବିଲୋପ କରନ୍ତୁ |';
@@ -257,10 +257,10 @@ class AppLocalizationsOr extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'ବୁକମାର୍କ ଯୋଡନ୍ତୁ |';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'ବୁକମାର୍କ ଅପସାରଣ କରନ୍ତୁ |';
 
   @override
   String get lastRead => 'Last Read';
@@ -541,7 +541,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get downloads => 'ଡାଉନଲୋଡ୍ |';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'ଡାଉନଲୋଡ୍ ...';
 
   @override
   String get downloadComplete => 'ସମ୍ପୂର୍ଣ୍ଣ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |';

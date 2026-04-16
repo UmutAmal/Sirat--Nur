@@ -133,10 +133,10 @@ class AppLocalizationsLo extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'ຊອກຫາ';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'ຊອກຫາ...';
 
   @override
   String get noResults => 'ບໍ່ພົບຜົນການຊອກຫາ';
@@ -158,7 +158,7 @@ class AppLocalizationsLo extends AppLocalizations {
       'ເນື້ອຫາ Quran ບໍ່ສາມາດໂຫລດໄດ້. ກະລຸນາລອງອີກຄັ້ງ.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'ລອງໃໝ່';
 
   @override
   String get refreshAction => 'ໂຫຼດຂໍ້ມູນຄືນໃໝ່';
@@ -167,7 +167,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get cancel => 'ຍົກເລີກ';
 
   @override
-  String get save => 'Save';
+  String get save => 'ບັນທຶກ';
 
   @override
   String get delete => 'ລຶບ';
@@ -256,10 +256,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'ເພີ່ມບຸກມາກ';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'ເອົາບຸກມາກອອກ';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get downloads => 'ດາວໂຫຼດ';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'ກຳລັງດາວໂຫຼດ...';
 
   @override
   String get downloadComplete => 'ດາວໂຫຼດສຳເລັດ';

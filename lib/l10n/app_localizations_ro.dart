@@ -135,10 +135,10 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Caută';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Cauta...';
 
   @override
   String get noResults => 'Nu s-au găsit rezultate';
@@ -160,7 +160,7 @@ class AppLocalizationsRo extends AppLocalizations {
       'Conținutul Coranului nu a putut fi încărcat. Vă rugăm să încercați din nou.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Reîncercați';
 
   @override
   String get refreshAction => 'Reîmprospătați';
@@ -169,7 +169,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get cancel => 'Anulează';
 
   @override
-  String get save => 'Save';
+  String get save => 'Salvați';
 
   @override
   String get delete => 'Ștergeți';
@@ -259,10 +259,10 @@ class AppLocalizationsRo extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Adăugați marcaj';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Eliminați marcajul';
 
   @override
   String get lastRead => 'Last Read';
@@ -542,7 +542,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get downloads => 'Descărcări';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Se descarcă...';
 
   @override
   String get downloadComplete => 'Descărcare finalizată';

@@ -133,10 +133,10 @@ class AppLocalizationsIs extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Leita';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Leita...';
 
   @override
   String get noResults => 'Engar niðurstöður fundust';
@@ -158,7 +158,7 @@ class AppLocalizationsIs extends AppLocalizations {
       'Ekki var hægt að hlaða efni Kóransins. Vinsamlegast reyndu aftur.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Reyndu aftur';
 
   @override
   String get refreshAction => 'Endurnýja';
@@ -167,7 +167,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get cancel => 'Hætta við';
 
   @override
-  String get save => 'Save';
+  String get save => 'Vista';
 
   @override
   String get delete => 'Eyða';
@@ -256,10 +256,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Bæta við bókamerki';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Fjarlægja bókamerki';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get downloads => 'Niðurhal';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Sækir...';
 
   @override
   String get downloadComplete => 'Niðurhali lokið';

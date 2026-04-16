@@ -135,10 +135,10 @@ class AppLocalizationsTs extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Secha';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Secha...';
 
   @override
   String get noResults => 'No results found';
@@ -160,7 +160,7 @@ class AppLocalizationsTs extends AppLocalizations {
       'Swilo leswi nga endzeni ka Quran a swi nga ta layichiwa. Hi kombela u ringeta nakambe.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Ringeta nakambe';
 
   @override
   String get refreshAction => 'Refresh';
@@ -169,7 +169,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get cancel => 'Khansela';
 
   @override
-  String get save => 'Save';
+  String get save => 'Hlayisa';
 
   @override
   String get delete => 'Delete';
@@ -258,10 +258,10 @@ class AppLocalizationsTs extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Engetelani Buku-nkulu';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Susa Buku-xikombiso';
 
   @override
   String get lastRead => 'Last Read';
@@ -542,7 +542,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get downloads => 'Swilo leswi dawunilodiwaka';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Ku dawuniloda...';
 
   @override
   String get downloadComplete => 'Download Complete';

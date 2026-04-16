@@ -135,10 +135,10 @@ class AppLocalizationsRu extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Поиск';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Искать...';
 
   @override
   String get noResults => 'Результаты не найдены';
@@ -160,7 +160,7 @@ class AppLocalizationsRu extends AppLocalizations {
       'Не удалось загрузить содержимое Корана. Пожалуйста, попробуйте еще раз.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Повторить попытку';
 
   @override
   String get refreshAction => 'Обновить';
@@ -169,7 +169,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get cancel => 'Отмена';
 
   @override
-  String get save => 'Save';
+  String get save => 'Сохранить';
 
   @override
   String get delete => 'Удалить';
@@ -258,10 +258,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Добавить закладку';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Удалить закладку';
 
   @override
   String get lastRead => 'Last Read';
@@ -541,7 +541,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get downloads => 'Загрузки';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Загрузка...';
 
   @override
   String get downloadComplete => 'Загрузка завершена';

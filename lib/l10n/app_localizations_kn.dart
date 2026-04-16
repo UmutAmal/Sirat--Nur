@@ -133,10 +133,10 @@ class AppLocalizationsKn extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'ಹುಡುಕು';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'ಹುಡುಕು...';
 
   @override
   String get noResults => 'ಯಾವುದೇ ಫಲಿತಾಂಶಗಳು ಕಂಡುಬಂದಿಲ್ಲ';
@@ -158,7 +158,7 @@ class AppLocalizationsKn extends AppLocalizations {
       'ಕುರಾನ್ ವಿಷಯವನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'ಮರುಪ್ರಯತ್ನಿಸಿ';
 
   @override
   String get refreshAction => 'ರಿಫ್ರೆಶ್ ಮಾಡಿ';
@@ -167,7 +167,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get cancel => 'ರದ್ದುಮಾಡಿ';
 
   @override
-  String get save => 'Save';
+  String get save => 'ಉಳಿಸಿ';
 
   @override
   String get delete => 'ಅಳಿಸಿ';
@@ -256,10 +256,10 @@ class AppLocalizationsKn extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'ಬುಕ್ಮಾರ್ಕ್ ಸೇರಿಸಿ';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'ಬುಕ್ಮಾರ್ಕ್ ತೆಗೆದುಹಾಕಿ';
 
   @override
   String get lastRead => 'Last Read';
@@ -538,7 +538,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get downloads => 'ಡೌನ್‌ಲೋಡ್‌ಗಳು';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ...';
 
   @override
   String get downloadComplete => 'ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣಗೊಂಡಿದೆ';

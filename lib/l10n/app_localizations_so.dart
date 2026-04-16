@@ -133,10 +133,10 @@ class AppLocalizationsSo extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Raadi';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Raadi...';
 
   @override
   String get noResults => 'Wax natiijooyin ah lama helin';
@@ -158,7 +158,7 @@ class AppLocalizationsSo extends AppLocalizations {
       'Waxa ku jira Quraanka lama rari karo Fadlan isku day mar kale';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Isku day';
 
   @override
   String get refreshAction => 'Dib u cusboonaysii';
@@ -167,7 +167,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get cancel => 'Jooji';
 
   @override
-  String get save => 'Save';
+  String get save => 'Badbaadin';
 
   @override
   String get delete => 'Tirtir';
@@ -257,10 +257,10 @@ class AppLocalizationsSo extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Ku dar Bookmark';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Ka saar Bookmark';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get downloads => 'Soo dejinta';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Soo dejinaya...';
 
   @override
   String get downloadComplete => 'Download Dhamaystiran';

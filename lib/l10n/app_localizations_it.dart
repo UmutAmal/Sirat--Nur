@@ -135,10 +135,10 @@ class AppLocalizationsIt extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Cerca';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Cerca...';
 
   @override
   String get noResults => 'Nessun risultato trovato';
@@ -160,7 +160,7 @@ class AppLocalizationsIt extends AppLocalizations {
       'Impossibile caricare il contenuto del Corano. Per favore riprova.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Riprova';
 
   @override
   String get refreshAction => 'Aggiorna';
@@ -169,7 +169,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get cancel => 'Annulla';
 
   @override
-  String get save => 'Save';
+  String get save => 'Salva';
 
   @override
   String get delete => 'Elimina';
@@ -258,10 +258,10 @@ class AppLocalizationsIt extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Aggiungi segnalibro';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Rimuovi segnalibro';
 
   @override
   String get lastRead => 'Last Read';
@@ -541,7 +541,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get downloads => 'Download';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Download in corso...';
 
   @override
   String get downloadComplete => 'Scarica completo';

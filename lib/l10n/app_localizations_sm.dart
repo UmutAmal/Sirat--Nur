@@ -133,10 +133,10 @@ class AppLocalizationsSm extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Saili';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Su\'e...';
 
   @override
   String get noResults => 'Leai se fa\'ai\'uga na maua';
@@ -158,7 +158,7 @@ class AppLocalizationsSm extends AppLocalizations {
       'E le mafai ona utaina mataupu o le Quran. Fa\'amolemole toe taumafai.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Toe taumafai';
 
   @override
   String get refreshAction => 'Toe faafou';
@@ -167,7 +167,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get cancel => 'Fa\'aleaogaina';
 
   @override
-  String get save => 'Save';
+  String get save => 'Faasaoina';
 
   @override
   String get delete => 'Aveese';
@@ -256,10 +256,10 @@ class AppLocalizationsSm extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Fa\'aopoopo le Fa\'ailoga';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Aveese Faailoga Tusi';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get downloads => 'Si\'itia';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'La\'uina mai...';
 
   @override
   String get downloadComplete => 'Fa\'auma uma';

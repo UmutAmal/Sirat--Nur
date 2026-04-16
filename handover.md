@@ -8828,3 +8828,65 @@
 
 ### Sonraki Adım
 - Commit/push sonrasi yeni dongude aktif l10n fallback taramasini yenile; `search`, `searchHint`, `retry`, `save`, `addBookmark`, `removeBookmark`, `downloading`, `settings`, `themeMode`, `aboutApp` gibi gorunur yuzeylerden en yuksek riskli tek cluster sec.
+
+## 2026-04-16 TUR-229 — Localize Common Action Copy
+
+### Yapılan İşlem
+- Quran, Tafsir, Hadith, Asma, Settings ve Downloads yuzeylerinde kullanilan `search`, `searchHint`, `retry`, `save`, `addBookmark`, `removeBookmark`, `downloading` anahtarlari guvenli ARB batch'i ile guncellendi.
+- `flutter gen-l10n` calistirilarak generated `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Safe/priority locale setinde `tr`, `de`, `fr`, `es`, `ar`, `da`, `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi`, `zh`, `zh_CN`, `zh_TW` icin ortak aksiyon metinlerinde Ingilizce fallback kalmadigi dogrulandi.
+- Otomatik cevirinin zayif urettigi degerler elle duzeltildi: `da search=Søg`, `da searchHint=Søg...`, `da save=Gem`, `es retry=Reintentar`, `es save=Guardar`, `zh/zh_CN save=保存`, `zh_TW save=儲存`.
+- `tool\translate_arb_keys.dart` single-line guard listesine ortak aksiyon anahtarlari eklendi.
+- `test\arb_ui_localization_test.dart` icine safe/priority fallback guard'i ve bilinen zayif ceviri kalintisi guard'i eklendi.
+- `test\translate_arb_keys_test.dart` icine multiline common action output regresyon testi eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\quran_page.dart:98` Quran arama hint'inde `l10n.search` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\quran_page.dart:354` hata aksiyonunda `l10n.retry` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart:242` bookmark snackbar'inda `l10n.addBookmark` / `l10n.removeBookmark` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart:511` retry aksiyonunda `l10n.retry` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\juz_reading_page.dart:350` retry aksiyonunda `l10n.retry` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart:271` retry aksiyonunda `l10n.retry` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart:226` konum arama hint'inde `l10n.searchHint` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:485` kaydet butonunda `l10n.save` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart:131` Asma arama hint'inde `l10n.search` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_search_page.dart:79` ve `A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_search_page.dart:89` Hadith arama yuzeyinde `l10n.searchHint` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\downloads\offline_downloads_page.dart:376` indirme durumunda `l10n.downloading` kullaniyor.
+- TUR-229 oncesi fallback taramasinda `search`, `searchHint`, `retry`, `save`, `addBookmark`, `removeBookmark`, `downloading` anahtarlari `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi` safe locale setinde app_en ile birebir ayniydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe/priority locale setinde ortak arama, tekrar dene, kaydet, bookmark ve indirme durum metinlerinde Ingilizce fallback riski kapandi.
+- Bilinen zayif makine cevirileri icin regresyon bariyeri eklendi; `known_bad_hits=[]` taramasi PASS.
+- Single-line guard ile kisa aksiyon etiketlerinde batch debris/newline riski kapatildi.
+- Kalan tum-locale birebir Ingilizce degerler cogunlukla ceviri servisinin guvenli aday uretmedigi nadir/legacy locale grubunda birakildi; sahte veya uydurma ceviri yazilmadi. TUR-229 sonrasi toplam fallback sayilari: `search 65`, `searchHint 65`, `retry 66`, `save 66`, `addBookmark 67`, `removeBookmark 65`, `downloading 67`.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart` PASS (`74/74`)
+- UI odak test: `flutter test test\features\library\asma_ul_husna_page_test.dart test\features\quran\tafsir_page_test.dart test\features\quran\quran_error_copy_test.dart test\features\downloads\offline_downloads_test.dart test\features\settings\settings_page_test.dart test\location_selection_page_test.dart` PASS (`31/31`)
+- Safe fallback taramasi PASS: hedef ortak aksiyon anahtarlarinda `safe_same=[]`
+- Single-line taramasi PASS: hedef ortak aksiyon anahtarlarinda `newline=[]`
+- Bilinen zayif ceviri taramasi PASS: `known_bad_hits=[]`
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`411/411`)
+- `flutter gen-l10n` PASS
+
+### Risk Değişimi
+- Safe/priority locale common action fallback riski: `8/25 -> 2/25`
+- Zayif makine cevirisi riski: `12/25 -> 3/25`
+- Kisa aksiyon etiketlerinde multiline/batch debris riski: `10/25 -> 3/25`
+- Tum-locale nadir/legacy fallback riski: `8/25 -> 5/25`
+
+### Rollback Planı
+- `lib\l10n\app_*.arb`, `lib\l10n\app_localizations_*.dart`, `test\arb_ui_localization_test.dart`, `test\translate_arb_keys_test.dart` ve `tool\translate_arb_keys.dart` icindeki TUR-229 degisiklikleri geri alinir; production Dart UI logic degismedigi icin runtime rollback dar kapsamli kalir.
+
+### Sonraki Adım
+- Commit/push sonrasi yeni dongude aktif l10n fallback taramasini yenile; `surah`, `ayah`, `readQuran`, `prayerTimes`, `zakat`, `duas`, `asmaUlHusna`, `hadith` gibi ana dini navigasyon/icerik yuzeylerinden en yuksek riskli tek cluster sec.

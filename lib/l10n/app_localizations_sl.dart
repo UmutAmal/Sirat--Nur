@@ -133,10 +133,10 @@ class AppLocalizationsSl extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Iskanje';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Iskanje ...';
 
   @override
   String get noResults => 'Ni rezultatov';
@@ -158,7 +158,7 @@ class AppLocalizationsSl extends AppLocalizations {
       'Vsebine Korana ni bilo mogoče naložiti. prosim poskusite ponovno';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Poskusite znova';
 
   @override
   String get refreshAction => 'Osveži';
@@ -167,7 +167,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get cancel => 'Prekliči';
 
   @override
-  String get save => 'Save';
+  String get save => 'Shrani';
 
   @override
   String get delete => 'Izbriši';
@@ -257,10 +257,10 @@ class AppLocalizationsSl extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Dodaj zaznamek';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Odstrani zaznamek';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get downloads => 'Prenosi';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Prenašanje ...';
 
   @override
   String get downloadComplete => 'Prenos končan';

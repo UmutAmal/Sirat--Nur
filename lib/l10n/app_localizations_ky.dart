@@ -135,10 +135,10 @@ class AppLocalizationsKy extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Издөө';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Издөө...';
 
   @override
   String get noResults => 'Эч натыйжа табылган жок';
@@ -160,7 +160,7 @@ class AppLocalizationsKy extends AppLocalizations {
       'Куран мазмунун жүктөө мүмкүн эмес. Сураныч, кайра аракет кылыңыз.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Кайталап көрүңүз';
 
   @override
   String get refreshAction => 'Жаңылоо';
@@ -169,7 +169,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get cancel => 'Жокко чыгаруу';
 
   @override
-  String get save => 'Save';
+  String get save => 'Сактоо';
 
   @override
   String get delete => 'Жок кылуу';
@@ -259,10 +259,10 @@ class AppLocalizationsKy extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Кыстарма кошуу';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Кыстарманы алып салуу';
 
   @override
   String get lastRead => 'Last Read';
@@ -543,7 +543,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get downloads => 'Жүктөлүп алынгандар';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Жүктөлүүдө...';
 
   @override
   String get downloadComplete => 'Жүктөлүп бүттү';

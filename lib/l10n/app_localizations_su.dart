@@ -133,10 +133,10 @@ class AppLocalizationsSu extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Pilarian';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Pilarian...';
 
   @override
   String get noResults => 'Teu kapanggih hasil';
@@ -158,7 +158,7 @@ class AppLocalizationsSu extends AppLocalizations {
       'eusi Quran teu bisa dimuat. Mangga cobian deui.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Coba deui';
 
   @override
   String get refreshAction => 'Nyegerkeun';
@@ -167,7 +167,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get cancel => 'Ngabolaykeun';
 
   @override
-  String get save => 'Save';
+  String get save => 'Simpen';
 
   @override
   String get delete => 'Hapus';
@@ -257,10 +257,10 @@ class AppLocalizationsSu extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Tambahkeun Bookmark';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Cabut Bookmark';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get downloads => 'Undeuran';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Ngundeur...';
 
   @override
   String get downloadComplete => 'Ngundeur Lengkep';

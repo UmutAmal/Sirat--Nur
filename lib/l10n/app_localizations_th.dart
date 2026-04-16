@@ -133,10 +133,10 @@ class AppLocalizationsTh extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'ค้นหา';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'ค้นหา...';
 
   @override
   String get noResults => 'No results found';
@@ -158,7 +158,7 @@ class AppLocalizationsTh extends AppLocalizations {
       'ไม่สามารถโหลดเนื้อหาอัลกุรอานได้ โปรดลองอีกครั้ง';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'ลองอีกครั้ง';
 
   @override
   String get refreshAction => 'Refresh';
@@ -167,7 +167,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get cancel => 'ยกเลิก';
 
   @override
-  String get save => 'Save';
+  String get save => 'บันทึก';
 
   @override
   String get delete => 'Delete';
@@ -256,10 +256,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'เพิ่มบุ๊กมาร์ก';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'ลบบุ๊กมาร์ก';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get downloads => 'ดาวน์โหลด';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'กำลังดาวน์โหลด...';
 
   @override
   String get downloadComplete => 'Download Complete';

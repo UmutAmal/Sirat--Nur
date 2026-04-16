@@ -159,6 +159,75 @@ void main() {
     });
 
     test(
+      'safe priority locales do not fall back to English for common action copy',
+      () {
+        const commonActionSafeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'da',
+          'he',
+          'ja',
+          'nb',
+          'nn',
+          'no',
+          'pt',
+          'ru',
+          'vi',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const localizedKeys = [
+          'search',
+          'searchHint',
+          'retry',
+          'save',
+          'addBookmark',
+          'removeBookmark',
+          'downloading',
+        ];
+
+        for (final locale in commonActionSafeLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
+    test('safe priority common action copy avoids known mistranslations', () {
+      const knownBadValues = {
+        'da': {'search': 'Søge', 'searchHint': 'Søge...', 'save': 'Spare'},
+        'es': {'retry': 'Rever', 'save': 'Ahorrar'},
+        'zh': {'save': '节省'},
+        'zh_CN': {'save': '节省'},
+        'zh_TW': {'save': '節省'},
+      };
+
+      for (final localeEntry in knownBadValues.entries) {
+        final arb = _readArb('lib/l10n/app_${localeEntry.key}.arb');
+
+        for (final badEntry in localeEntry.value.entries) {
+          expect(
+            arb[badEntry.key],
+            isNot(badEntry.value),
+            reason:
+                'app_${localeEntry.key}.arb kept a known weak translation for ${badEntry.key}',
+          );
+        }
+      }
+    });
+
+    test(
       'priority locales do not fall back to English for diagnostics labels',
       () {
         const localizedKeys = [

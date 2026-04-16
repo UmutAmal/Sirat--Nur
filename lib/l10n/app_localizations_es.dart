@@ -159,7 +159,7 @@ class AppLocalizationsEs extends AppLocalizations {
       'No se pudo cargar el contenido del Corán. Por favor inténtalo de nuevo.';
 
   @override
-  String get retry => 'Rever';
+  String get retry => 'Reintentar';
 
   @override
   String get refreshAction => 'Actualizar';
@@ -168,7 +168,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get cancel => 'Cancelar';
 
   @override
-  String get save => 'Ahorrar';
+  String get save => 'Guardar';
 
   @override
   String get delete => 'Eliminar';

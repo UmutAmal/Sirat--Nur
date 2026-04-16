@@ -133,10 +133,10 @@ class AppLocalizationsSi extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'සොයන්න';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'සොයන්න...';
 
   @override
   String get noResults => 'ප්‍රතිඵල හමු නොවිණි';
@@ -158,7 +158,7 @@ class AppLocalizationsSi extends AppLocalizations {
       'කුර්ආන් අන්තර්ගතය පූරණය කළ නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'නැවත උත්සාහ කරන්න';
 
   @override
   String get refreshAction => 'නැවුම් කරන්න';
@@ -167,7 +167,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get cancel => 'අවලංගු කරන්න';
 
   @override
-  String get save => 'Save';
+  String get save => 'සුරකින්න';
 
   @override
   String get delete => 'මකන්න';
@@ -256,10 +256,10 @@ class AppLocalizationsSi extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'පිටු සලකුණ එක් කරන්න';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'පිටු සලකුණ ඉවත් කරන්න';
 
   @override
   String get lastRead => 'Last Read';
@@ -538,7 +538,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get downloads => 'බාගැනීම්';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'බාගනිමින්...';
 
   @override
   String get downloadComplete => 'බාගත කිරීම සම්පූර්ණයි';

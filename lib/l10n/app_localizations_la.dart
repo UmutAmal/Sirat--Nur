@@ -133,10 +133,10 @@ class AppLocalizationsLa extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Investigatio';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Quaerere...';
 
   @override
   String get noResults => 'Eventus inventus';
@@ -167,7 +167,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get cancel => 'Cancel';
 
   @override
-  String get save => 'Save';
+  String get save => 'Servare';
 
   @override
   String get delete => 'Delere';
@@ -259,7 +259,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get addBookmark => 'Add Bookmark';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Aufer Bookmark';
 
   @override
   String get lastRead => 'Last Read';

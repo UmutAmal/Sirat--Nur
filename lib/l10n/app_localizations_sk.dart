@@ -134,10 +134,10 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Hľadať';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Hľadať...';
 
   @override
   String get noResults => 'Nenašli sa žiadne výsledky';
@@ -159,7 +159,7 @@ class AppLocalizationsSk extends AppLocalizations {
       'Obsah Koránu sa nepodarilo načítať. Skúste to znova.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Skúste to znova';
 
   @override
   String get refreshAction => 'Obnoviť';
@@ -168,7 +168,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get cancel => 'Zrušiť';
 
   @override
-  String get save => 'Save';
+  String get save => 'Uložiť';
 
   @override
   String get delete => 'Odstrániť';
@@ -257,10 +257,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Pridať záložku';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Odstrániť záložku';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get downloads => 'sťahovanie';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Sťahuje sa...';
 
   @override
   String get downloadComplete => 'Sťahovanie dokončené';

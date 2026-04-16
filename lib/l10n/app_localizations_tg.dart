@@ -133,10 +133,10 @@ class AppLocalizationsTg extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Ҷустуҷӯ';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Ҷустуҷӯ...';
 
   @override
   String get noResults => 'Ягон натиҷа ёфт нашуд';
@@ -158,7 +158,7 @@ class AppLocalizationsTg extends AppLocalizations {
       'Мундариҷаи Қуръон бор карда нашуд. Лутфан бори дигар кӯшиш кунед.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Аз нав кӯшиш кунед';
 
   @override
   String get refreshAction => 'Навсозӣ';
@@ -167,7 +167,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get cancel => 'Бекор кардан';
 
   @override
-  String get save => 'Save';
+  String get save => 'Захира кунед';
 
   @override
   String get delete => 'Нобуд кунед';
@@ -256,10 +256,10 @@ class AppLocalizationsTg extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Иловаи хатчӯб';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Хатчӯбро хориҷ кунед';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get downloads => 'Боргириҳо';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Зеркашӣ карда мешавад...';
 
   @override
   String get downloadComplete => 'Зеркашӣ пурра';

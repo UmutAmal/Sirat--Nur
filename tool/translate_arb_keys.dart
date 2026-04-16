@@ -364,6 +364,13 @@ bool _mustStaySingleLine(String key) {
       key == 'compass' ||
       key == 'turnDevice' ||
       key == 'qiblaFound' ||
+      key == 'search' ||
+      key == 'searchHint' ||
+      key == 'retry' ||
+      key == 'save' ||
+      key == 'addBookmark' ||
+      key == 'removeBookmark' ||
+      key == 'downloading' ||
       key == 'calibrationOffset' ||
       key == 'currentOffset' ||
       key == 'theme' ||

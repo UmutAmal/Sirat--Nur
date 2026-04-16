@@ -133,10 +133,10 @@ class AppLocalizationsJv extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Nggoleki';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Nggoleki...';
 
   @override
   String get noResults => 'Ora ana asil sing ditemokake';
@@ -157,7 +157,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get quranLoadFailed => 'Isi Quran ora bisa dimuat. Coba maneh.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Coba maneh';
 
   @override
   String get refreshAction => 'Refresh';
@@ -166,7 +166,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get cancel => 'Batal';
 
   @override
-  String get save => 'Save';
+  String get save => 'Simpen';
 
   @override
   String get delete => 'Mbusak';
@@ -256,10 +256,10 @@ class AppLocalizationsJv extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Tambah Bookmark';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Mbusak Bookmark';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get downloads => 'Ngundhuh';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Ngundhuh...';
 
   @override
   String get downloadComplete => 'Download Lengkap';

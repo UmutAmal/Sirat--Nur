@@ -133,10 +133,10 @@ class AppLocalizationsUz extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Qidiruv';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Qidiruv...';
 
   @override
   String get noResults => 'Hech qanday natija topilmadi';
@@ -158,7 +158,7 @@ class AppLocalizationsUz extends AppLocalizations {
       'Qur\'on mazmunini yuklab bo\'lmadi. Iltimos, qayta urinib koʻring.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Qayta urinish';
 
   @override
   String get refreshAction => 'Yangilash';
@@ -167,7 +167,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get cancel => 'Bekor qilish';
 
   @override
-  String get save => 'Save';
+  String get save => 'Saqlash';
 
   @override
   String get delete => 'Oʻchirish';
@@ -256,10 +256,10 @@ class AppLocalizationsUz extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Xatcho‘p qo‘shish';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Xatcho‘pni olib tashlash';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get downloads => 'Yuklashlar';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Yuklab olinmoqda...';
 
   @override
   String get downloadComplete => 'Yuklab olish tugallandi';

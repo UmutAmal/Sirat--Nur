@@ -133,10 +133,10 @@ class AppLocalizationsYi extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'זוכן';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'זוך...';
 
   @override
   String get noResults => 'קיין רעזולטאטן געפונען';
@@ -158,7 +158,7 @@ class AppLocalizationsYi extends AppLocalizations {
       'קווראַן אינהאַלט קען נישט זיין לאָודיד. ביטע פּרוּווט ווידער.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'פרובירט ווידער';
 
   @override
   String get refreshAction => 'דערפרישן';
@@ -167,7 +167,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get cancel => 'באָטל מאַכן';
 
   @override
-  String get save => 'Save';
+  String get save => 'היט';
 
   @override
   String get delete => 'ויסמעקן';
@@ -256,10 +256,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'לייג לייענ - צייכן';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'אַראָפּנעמען לייענ - צייכן';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get downloads => 'דאַונלאָודז';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'דאַונלאָודינג...';
 
   @override
   String get downloadComplete => 'אראפקאפיע גאַנץ';

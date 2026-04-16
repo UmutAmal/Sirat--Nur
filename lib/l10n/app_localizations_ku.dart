@@ -136,7 +136,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get search => 'Search';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Lêgerîn...';
 
   @override
   String get noResults => 'Encam nehat dîtin';
@@ -158,7 +158,7 @@ class AppLocalizationsKu extends AppLocalizations {
       'Naveroka Quranê nehat barkirin. Ji kerema xwe dîsa biceribîne.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Ji nû ve biceribîne';
 
   @override
   String get refreshAction => 'Refresh';
@@ -256,10 +256,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Bookmark lê zêde bike';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Nîşanê jêbirin';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get downloads => 'Downloads';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Daxistin...';
 
   @override
   String get downloadComplete => 'Daxistin Temam';

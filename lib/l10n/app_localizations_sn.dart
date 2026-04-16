@@ -136,7 +136,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get search => 'Search';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Tsvaga...';
 
   @override
   String get noResults => 'Hapana zvawanikwa';
@@ -157,7 +157,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get quranLoadFailed => 'Korani yatadza kurodha. Ndapota edza zvakare.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Edza zvakare';
 
   @override
   String get refreshAction => 'Refresh';
@@ -166,7 +166,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get cancel => 'Cancel';
 
   @override
-  String get save => 'Save';
+  String get save => 'Sevha';
 
   @override
   String get delete => 'Delete';
@@ -255,10 +255,10 @@ class AppLocalizationsSn extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Wedzera Bookmark';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Bvisa Bookmark';
 
   @override
   String get lastRead => 'Last Read';
@@ -538,7 +538,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get downloads => 'Vadivelu Comedy Downloads';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Kudhaunirodha...';
 
   @override
   String get downloadComplete => 'Download Complete';

@@ -134,10 +134,10 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Meklēt';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Meklēt...';
 
   @override
   String get noResults => 'Nav atrasts neviens rezultāts';
@@ -159,7 +159,7 @@ class AppLocalizationsLv extends AppLocalizations {
       'Korāna saturu nevarēja ielādēt. Lūdzu, mēģiniet vēlreiz.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Mēģiniet vēlreiz';
 
   @override
   String get refreshAction => 'Atsvaidzināt';
@@ -168,7 +168,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get cancel => 'Atcelt';
 
   @override
-  String get save => 'Save';
+  String get save => 'Saglabāt';
 
   @override
   String get delete => 'Dzēst';
@@ -257,10 +257,10 @@ class AppLocalizationsLv extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Pievienot grāmatzīmi';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Noņemt grāmatzīmi';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get downloads => 'Lejupielādes';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Notiek lejupielāde...';
 
   @override
   String get downloadComplete => 'Lejupielāde pabeigta';

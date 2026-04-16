@@ -133,10 +133,10 @@ class AppLocalizationsPs extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'لټون';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'لټون...';
 
   @override
   String get noResults => 'هیڅ پایله ونه موندل شوه';
@@ -158,7 +158,7 @@ class AppLocalizationsPs extends AppLocalizations {
       'د قرآن محتوا نشي پورته کولی. مهرباني وکړئ بیا هڅه وکړئ.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'بیا هڅه وکړئ';
 
   @override
   String get refreshAction => 'تازه کړئ';
@@ -167,7 +167,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get cancel => 'لغوه کړئ';
 
   @override
-  String get save => 'Save';
+  String get save => 'خوندي کړئ';
 
   @override
   String get delete => 'ړنګول';
@@ -256,10 +256,10 @@ class AppLocalizationsPs extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'بک مارک اضافه کړئ';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'بک مارک لرې کړئ';
 
   @override
   String get lastRead => 'Last Read';
@@ -538,7 +538,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get downloads => 'ډاونلوډونه';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'کښته کول...';
 
   @override
   String get downloadComplete => 'ډاونلوډ بشپړ شو';

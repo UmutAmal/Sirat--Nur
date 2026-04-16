@@ -134,10 +134,10 @@ class AppLocalizationsMi extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Rapu';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Rapu...';
 
   @override
   String get noResults => 'Karekau he hua i kitea';
@@ -159,7 +159,7 @@ class AppLocalizationsMi extends AppLocalizations {
       'Kaore i taea te utaina nga ihirangi Quran. Me ngana ano.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Ngana ano';
 
   @override
   String get refreshAction => 'Tāmata';
@@ -168,7 +168,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get cancel => 'Whakakore';
 
   @override
-  String get save => 'Save';
+  String get save => 'Tiaki';
 
   @override
   String get delete => 'Mukua';
@@ -257,10 +257,10 @@ class AppLocalizationsMi extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Tāpiri Tohuwāhi';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Tango Tohuwāhi';
 
   @override
   String get lastRead => 'Last Read';
@@ -541,7 +541,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get downloads => 'Tikiake';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Tikiake ana...';
 
   @override
   String get downloadComplete => 'Kua oti te tango';

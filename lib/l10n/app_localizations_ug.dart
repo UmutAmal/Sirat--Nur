@@ -133,10 +133,10 @@ class AppLocalizationsUg extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'ئىزدەش';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'ئىزدەش ...';
 
   @override
   String get noResults => 'ھېچقانداق نەتىجە تېپىلمىدى';
@@ -158,7 +158,7 @@ class AppLocalizationsUg extends AppLocalizations {
       'قۇرئان مەزمۇنىنى يۈكلەشكە بولمىدى. قايتا سىناڭ.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'قايتا سىناڭ';
 
   @override
   String get refreshAction => 'يېڭىلاش';
@@ -167,7 +167,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get cancel => 'بىكار قىلىش';
 
   @override
-  String get save => 'Save';
+  String get save => 'ساقلاش';
 
   @override
   String get delete => 'ئۆچۈرۈش';
@@ -256,10 +256,10 @@ class AppLocalizationsUg extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'خەتكۈچ قوشۇڭ';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'خەتكۈچنى ئۆچۈرۈڭ';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get downloads => 'چۈشۈرۈش';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'چۈشۈرۈش ...';
 
   @override
   String get downloadComplete => 'چۈشۈرۈش تامام';

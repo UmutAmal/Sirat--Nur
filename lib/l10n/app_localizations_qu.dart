@@ -135,10 +135,10 @@ class AppLocalizationsQu extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Maskay';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Maskay...';
 
   @override
   String get noResults => 'No results found';
@@ -160,7 +160,7 @@ class AppLocalizationsQu extends AppLocalizations {
       'Quranpa contenidonqa manam cargayta atirqakuchu. Ama hina kaspa, hukmanta kallpachakuy.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Wakmanta kallpachakuy';
 
   @override
   String get refreshAction => 'Refresh';
@@ -169,7 +169,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get cancel => 'Sayachiy';
 
   @override
-  String get save => 'Save';
+  String get save => 'Waqaychay';
 
   @override
   String get delete => 'Delete';
@@ -258,10 +258,10 @@ class AppLocalizationsQu extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Marcadorta yapay';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Marcadorta hurquy';
 
   @override
   String get lastRead => 'Last Read';
@@ -541,7 +541,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get downloads => 'Descargas nisqakuna';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Uraykachispa...';
 
   @override
   String get downloadComplete => 'Download Complete';

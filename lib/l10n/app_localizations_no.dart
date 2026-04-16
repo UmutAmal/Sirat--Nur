@@ -133,10 +133,10 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Søk';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Søk...';
 
   @override
   String get noResults => 'Ingen resultater funnet';
@@ -158,7 +158,7 @@ class AppLocalizationsNo extends AppLocalizations {
       'Koraninnhold kunne ikke lastes. Vennligst prøv igjen.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Prøv på nytt';
 
   @override
   String get refreshAction => 'Oppdater';
@@ -167,7 +167,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get cancel => 'Avbryt';
 
   @override
-  String get save => 'Save';
+  String get save => 'Lagre';
 
   @override
   String get delete => 'Slett';
@@ -256,10 +256,10 @@ class AppLocalizationsNo extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Legg til bokmerke';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Fjern bokmerke';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get downloads => 'Nedlastinger';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Laster ned...';
 
   @override
   String get downloadComplete => 'Nedlasting fullført';

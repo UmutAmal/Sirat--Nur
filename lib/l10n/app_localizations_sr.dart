@@ -133,10 +133,10 @@ class AppLocalizationsSr extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Тражи';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Тражи...';
 
   @override
   String get noResults => 'No results found';
@@ -158,7 +158,7 @@ class AppLocalizationsSr extends AppLocalizations {
       'Није могуће учитати садржај Курана. Покушајте поново.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Покушајте поново';
 
   @override
   String get refreshAction => 'Refresh';
@@ -167,7 +167,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get cancel => 'Откажи';
 
   @override
-  String get save => 'Save';
+  String get save => 'Сачувај';
 
   @override
   String get delete => 'Delete';
@@ -256,10 +256,10 @@ class AppLocalizationsSr extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Додај обележивач';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Уклони обележивач';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get downloads => 'Преузимања';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Преузимање...';
 
   @override
   String get downloadComplete => 'Download Complete';

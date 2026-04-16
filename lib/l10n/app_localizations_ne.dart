@@ -133,10 +133,10 @@ class AppLocalizationsNe extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'खोज्नुहोस्';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'खोज...';
 
   @override
   String get noResults => 'कुनै परिणाम फेला परेन';
@@ -158,7 +158,7 @@ class AppLocalizationsNe extends AppLocalizations {
       'कुरान सामग्री लोड गर्न सकिएन। कृपया पुन: प्रयास गर्नुहोस्।';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'पुन: प्रयास गर्नुहोस्';
 
   @override
   String get refreshAction => 'रिफ्रेस गर्नुहोस्';
@@ -167,7 +167,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get cancel => 'रद्द गर्नुहोस्';
 
   @override
-  String get save => 'Save';
+  String get save => 'बचत गर्नुहोस्';
 
   @override
   String get delete => 'मेट्नुहोस्';
@@ -256,10 +256,10 @@ class AppLocalizationsNe extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'बुकमार्क थप्नुहोस्';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'बुकमार्क हटाउनुहोस्';
 
   @override
   String get lastRead => 'Last Read';
@@ -538,7 +538,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get downloads => 'डाउनलोडहरू';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'डाउनलोड गर्दै...';
 
   @override
   String get downloadComplete => 'डाउनलोड पूरा';

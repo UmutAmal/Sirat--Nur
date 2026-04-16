@@ -133,10 +133,10 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => '검색';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => '검색...';
 
   @override
   String get noResults => '검색결과가 없습니다';
@@ -157,7 +157,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get quranLoadFailed => '꾸란 콘텐츠를 로드할 수 없습니다. 다시 시도해 주세요.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => '재시도';
 
   @override
   String get refreshAction => '새로고침';
@@ -166,7 +166,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get cancel => '취소';
 
   @override
-  String get save => 'Save';
+  String get save => '저장';
 
   @override
   String get delete => '삭제';
@@ -254,10 +254,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => '북마크 추가';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => '북마크 제거';
 
   @override
   String get lastRead => 'Last Read';
@@ -534,7 +534,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get downloads => '다운로드';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => '다운로드 중...';
 
   @override
   String get downloadComplete => '다운로드 완료';

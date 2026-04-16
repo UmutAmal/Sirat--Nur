@@ -133,10 +133,10 @@ class AppLocalizationsIg extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Chọọ';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Chọọ...';
 
   @override
   String get noResults => 'Ọnweghị nsonaazụ ahụrụ';
@@ -158,7 +158,7 @@ class AppLocalizationsIg extends AppLocalizations {
       'Enweghị ike ibunye ọdịnaya Quran. Biko nwaa ọzọ.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Gbalịa ọzọ';
 
   @override
   String get refreshAction => 'Weghachite ume';
@@ -167,7 +167,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get cancel => 'Kagbuo';
 
   @override
-  String get save => 'Save';
+  String get save => 'Chekwa';
 
   @override
   String get delete => 'Hichapụ';
@@ -256,10 +256,10 @@ class AppLocalizationsIg extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Tinye ibe edokọbara';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Wepu ibe edokọbara';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get downloads => 'Nbudata';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Na-ebudata...';
 
   @override
   String get downloadComplete => 'Budata zuru ezu';

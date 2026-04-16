@@ -133,10 +133,10 @@ class AppLocalizationsSv extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Sök';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Sök...';
 
   @override
   String get noResults => 'Inga resultat hittades';
@@ -157,7 +157,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get quranLoadFailed => 'Koraninnehåll kunde inte laddas. Försök igen.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Försök igen';
 
   @override
   String get refreshAction => 'Uppdatera';
@@ -166,7 +166,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get cancel => 'Avbryt';
 
   @override
-  String get save => 'Save';
+  String get save => 'Spara';
 
   @override
   String get delete => 'Ta bort';
@@ -255,10 +255,10 @@ class AppLocalizationsSv extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Lägg till bokmärke';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Ta bort bokmärke';
 
   @override
   String get lastRead => 'Last Read';
@@ -538,7 +538,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get downloads => 'Nedladdningar';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Laddar ned...';
 
   @override
   String get downloadComplete => 'Nedladdningen är klar';

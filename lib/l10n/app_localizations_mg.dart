@@ -133,10 +133,10 @@ class AppLocalizationsMg extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Fikarohana';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Karoka...';
 
   @override
   String get noResults => 'Tsy misy valiny hita';
@@ -158,7 +158,7 @@ class AppLocalizationsMg extends AppLocalizations {
       'Tsy azo nalaina ny votoatin\'ny CORAN. Andramo indray azafady.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Andramo indray';
 
   @override
   String get refreshAction => 'Havaozina';
@@ -167,7 +167,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get cancel => 'Manafoana';
 
   @override
-  String get save => 'Save';
+  String get save => 'Vonjeo';
 
   @override
   String get delete => 'Fafao';
@@ -257,10 +257,10 @@ class AppLocalizationsMg extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Ampio Bookmark';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Esory Bookmark';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get downloads => 'Downloads';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Misintona...';
 
   @override
   String get downloadComplete => 'Download feno';

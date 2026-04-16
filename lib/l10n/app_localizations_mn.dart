@@ -133,10 +133,10 @@ class AppLocalizationsMn extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Хайх';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Хайх...';
 
   @override
   String get noResults => 'Үр дүн олдсонгүй';
@@ -158,7 +158,7 @@ class AppLocalizationsMn extends AppLocalizations {
       'Коран судрын агуулгыг ачаалж чадсангүй. Дахин оролдоно уу.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Дахин оролдоно уу';
 
   @override
   String get refreshAction => 'Сэргээх';
@@ -167,7 +167,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get cancel => 'Цуцлах';
 
   @override
-  String get save => 'Save';
+  String get save => 'Хадгалах';
 
   @override
   String get delete => 'Устгах';
@@ -256,10 +256,10 @@ class AppLocalizationsMn extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Хавчуурга нэмэх';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Хавчуурга устгах';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get downloads => 'Татаж авсан зүйлс';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Татаж авч байна...';
 
   @override
   String get downloadComplete => 'Татаж дууссан';

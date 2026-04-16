@@ -135,10 +135,10 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Keresés';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Keresés...';
 
   @override
   String get noResults => 'Nincs találat';
@@ -160,7 +160,7 @@ class AppLocalizationsHu extends AppLocalizations {
       'A Korán tartalmat nem sikerült betölteni. Kérjük, próbálja újra.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Próbálja újra';
 
   @override
   String get refreshAction => 'Frissítés';
@@ -169,7 +169,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get cancel => 'Mégse';
 
   @override
-  String get save => 'Save';
+  String get save => 'Mentés';
 
   @override
   String get delete => 'Törölje';
@@ -258,10 +258,10 @@ class AppLocalizationsHu extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Könyvjelző hozzáadása';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Könyvjelző eltávolítása';
 
   @override
   String get lastRead => 'Last Read';
@@ -541,7 +541,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get downloads => 'Letöltések';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Letöltés...';
 
   @override
   String get downloadComplete => 'Letöltés kész';

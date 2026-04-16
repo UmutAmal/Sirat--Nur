@@ -134,10 +134,10 @@ class AppLocalizationsTk extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Gözlemek';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Gözleg ...';
 
   @override
   String get noResults => 'Netije tapylmady';
@@ -159,7 +159,7 @@ class AppLocalizationsTk extends AppLocalizations {
       'Gurhanyň mazmuny ýüklenip bilinmedi. Gaýtadan synanyşmagyňyzy haýyş edýäris.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Gaýtadan synanyşyň';
 
   @override
   String get refreshAction => 'Täzele';
@@ -168,7 +168,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get cancel => 'Elatyr';
 
   @override
-  String get save => 'Save';
+  String get save => 'Saklaň';
 
   @override
   String get delete => 'Öçür';
@@ -257,10 +257,10 @@ class AppLocalizationsTk extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Bellik goşuň';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Belligi aýyryň';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get downloads => '.Üklemeler';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Ingüklemek ...';
 
   @override
   String get downloadComplete => 'Doly göçürip al';

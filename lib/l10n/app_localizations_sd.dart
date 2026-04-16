@@ -133,10 +133,10 @@ class AppLocalizationsSd extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'ڳولا';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'ڳولهي...';
 
   @override
   String get noResults => 'ڪي به نتيجا نه مليا';
@@ -158,7 +158,7 @@ class AppLocalizationsSd extends AppLocalizations {
       'قرآن جو مواد لوڊ نه ٿي سگهيو. مهرباني ڪري ٻيهر ڪوشش ڪريو.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'ٻيهر ڪوشش ڪريو';
 
   @override
   String get refreshAction => 'تازو ڪريو';
@@ -167,7 +167,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get cancel => 'منسوخ ڪريو';
 
   @override
-  String get save => 'Save';
+  String get save => 'بچايو';
 
   @override
   String get delete => 'حذف ڪريو';
@@ -256,10 +256,10 @@ class AppLocalizationsSd extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'بک مارڪ شامل ڪريو';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'بک مارڪ هٽايو';
 
   @override
   String get lastRead => 'Last Read';
@@ -538,7 +538,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get downloads => 'ڊائون لوڊ';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'ڊائون لوڊ ٿي رهيو آهي...';
 
   @override
   String get downloadComplete => 'ڊائون لوڊ مڪمل';

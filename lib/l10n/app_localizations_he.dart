@@ -133,10 +133,10 @@ class AppLocalizationsHe extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'חפש';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'חפש...';
 
   @override
   String get noResults => 'לא נמצאו תוצאות';
@@ -158,7 +158,7 @@ class AppLocalizationsHe extends AppLocalizations {
       'לא ניתן היה לטעון את תוכן הקוראן. אנא נסה שוב.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'נסה שוב';
 
   @override
   String get refreshAction => 'רענן';
@@ -167,7 +167,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get cancel => 'בטל';
 
   @override
-  String get save => 'Save';
+  String get save => 'שמור';
 
   @override
   String get delete => 'מחק';
@@ -255,10 +255,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'הוסף סימניה';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'הסר סימניה';
 
   @override
   String get lastRead => 'Last Read';
@@ -537,7 +537,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get downloads => 'הורדות';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'מוריד...';
 
   @override
   String get downloadComplete => 'ההורדה הושלמה';

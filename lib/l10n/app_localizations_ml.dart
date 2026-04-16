@@ -133,10 +133,10 @@ class AppLocalizationsMl extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'തിരയുക';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'തിരയുക...';
 
   @override
   String get noResults => 'ഫലങ്ങളൊന്നും കണ്ടെത്തിയില്ല';
@@ -158,7 +158,7 @@ class AppLocalizationsMl extends AppLocalizations {
       'ഖുറാൻ ഉള്ളടക്കം ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'വീണ്ടും ശ്രമിക്കുക';
 
   @override
   String get refreshAction => 'പുതുക്കുക';
@@ -167,7 +167,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get cancel => 'റദ്ദാക്കുക';
 
   @override
-  String get save => 'Save';
+  String get save => 'സംരക്ഷിക്കുക';
 
   @override
   String get delete => 'ഇല്ലാതാക്കുക';
@@ -256,10 +256,10 @@ class AppLocalizationsMl extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'ബുക്ക്മാർക്ക് ചേർക്കുക';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'ബുക്ക്മാർക്ക് നീക്കം ചെയ്യുക';
 
   @override
   String get lastRead => 'Last Read';
@@ -538,7 +538,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get downloads => 'ഡൗൺലോഡുകൾ';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'ഡൗൺലോഡ് ചെയ്യുന്നു...';
 
   @override
   String get downloadComplete => 'ഡൗൺലോഡ് പൂർത്തിയായി';

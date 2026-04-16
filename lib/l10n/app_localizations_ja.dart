@@ -133,10 +133,10 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => '検索';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => '検索...';
 
   @override
   String get noResults => '結果が見つかりませんでした';
@@ -157,7 +157,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get quranLoadFailed => 'コーランのコンテンツをロードできませんでした。もう一度試してください。';
 
   @override
-  String get retry => 'Retry';
+  String get retry => '再試行';
 
   @override
   String get refreshAction => 'リフレッシュ';
@@ -166,7 +166,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get cancel => 'キャンセル';
 
   @override
-  String get save => 'Save';
+  String get save => '保存';
 
   @override
   String get delete => '削除';
@@ -254,10 +254,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'ブックマークを追加';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'ブックマークを削除';
 
   @override
   String get lastRead => 'Last Read';
@@ -535,7 +535,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get downloads => 'ダウンロード';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'ダウンロード中...';
 
   @override
   String get downloadComplete => 'ダウンロード完了';

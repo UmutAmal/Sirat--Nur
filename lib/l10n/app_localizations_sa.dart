@@ -133,7 +133,7 @@ class AppLocalizationsSa extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'अन्वेषणम्';
 
   @override
   String get searchHint => 'Search...';

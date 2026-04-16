@@ -133,10 +133,10 @@ class AppLocalizationsRw extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Shakisha';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Shakisha ...';
 
   @override
   String get noResults => 'Nta bisubizo byabonetse';
@@ -158,7 +158,7 @@ class AppLocalizationsRw extends AppLocalizations {
       'Ibirimo Qor\'ani ntibishobora kuremerwa. Nyamuneka gerageza.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Ongera ugerageze';
 
   @override
   String get refreshAction => 'Ongera';
@@ -167,7 +167,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get cancel => 'Kureka';
 
   @override
-  String get save => 'Save';
+  String get save => 'Bika';
 
   @override
   String get delete => 'Siba';
@@ -256,10 +256,10 @@ class AppLocalizationsRw extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Ongeraho Ikimenyetso';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Kuraho Ikimenyetso';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get downloads => 'Gukuramo';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Gukuramo ...';
 
   @override
   String get downloadComplete => 'Kuramo Byuzuye';

@@ -135,10 +135,10 @@ class AppLocalizationsMy extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'ရှာရန်';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'ရှာဖွေပါ...';
 
   @override
   String get noResults => 'ရလဒ်များမတွေ့ပါ။';
@@ -160,7 +160,7 @@ class AppLocalizationsMy extends AppLocalizations {
       'ကုရ်အာန်အကြောင်းအရာကို တင်၍မရပါ။ ထပ်စမ်းကြည့်ပါ။';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'ပြန်ကြိုးစားပါ။';
 
   @override
   String get refreshAction => 'ပြန်လည်စတင်ပါ။';
@@ -169,7 +169,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get cancel => 'မလုပ်တော့';
 
   @override
-  String get save => 'Save';
+  String get save => 'သိမ်းဆည်းပါ။';
 
   @override
   String get delete => 'ဖျက်ပါ။';
@@ -258,10 +258,10 @@ class AppLocalizationsMy extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'လိပ်စာထည့်ပါ။';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'လိပ်စာကို ဖယ်ရှားပါ။';
 
   @override
   String get lastRead => 'Last Read';
@@ -541,7 +541,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get downloads => 'ဒေါင်းလုဒ်များ';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'ဒေါင်းလုဒ်လုပ်နေသည်...';
 
   @override
   String get downloadComplete => 'ဒေါင်းလုဒ် ပြီးအောင်လုပ်ပါ။';

@@ -42,14 +42,14 @@
       }
     }
   },
-  "search": "Søge",
-  "searchHint": "Søge...",
+  "search": "Søg",
+  "searchHint": "Søg...",
   "noResults": "Ingen resultater fundet",
   "loading": "Indlæser...",
   "error": "Fejl",
   "retry": "Prøv igen",
   "cancel": "Annuller",
-  "save": "Spare",
+  "save": "Gem",
   "delete": "Slet",
   "edit": "Redigere",
   "close": "Tæt",

@@ -133,10 +133,10 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'శోధించండి';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'శోధన...';
 
   @override
   String get noResults => 'ఫలితాలు ఏవీ కనుగొనబడలేదు';
@@ -158,7 +158,7 @@ class AppLocalizationsTe extends AppLocalizations {
       'ఖురాన్ కంటెంట్ లోడ్ చేయబడలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'మళ్లీ ప్రయత్నించండి';
 
   @override
   String get refreshAction => 'రిఫ్రెష్ చేయండి';
@@ -167,7 +167,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get cancel => 'రద్దు చేయి';
 
   @override
-  String get save => 'Save';
+  String get save => 'సేవ్ చేయండి';
 
   @override
   String get delete => 'తొలగించు';
@@ -256,10 +256,10 @@ class AppLocalizationsTe extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'బుక్‌మార్క్‌ని జోడించండి';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'బుక్‌మార్క్‌ని తీసివేయండి';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get downloads => 'డౌన్‌లోడ్‌లు';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'డౌన్‌లోడ్ చేస్తోంది...';
 
   @override
   String get downloadComplete => 'డౌన్‌లోడ్ పూర్తయింది';

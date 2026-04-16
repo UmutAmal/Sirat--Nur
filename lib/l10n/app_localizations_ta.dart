@@ -134,10 +134,10 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'தேடு';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'தேடு...';
 
   @override
   String get noResults => 'முடிவுகள் எதுவும் கிடைக்கவில்லை';
@@ -159,7 +159,7 @@ class AppLocalizationsTa extends AppLocalizations {
       'குர்ஆன் உள்ளடக்கத்தை ஏற்ற முடியவில்லை. மீண்டும் முயற்சிக்கவும்.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'மீண்டும் முயற்சிக்கவும்';
 
   @override
   String get refreshAction => 'புதுப்பிக்கவும்';
@@ -168,7 +168,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get cancel => 'ரத்து செய்';
 
   @override
-  String get save => 'Save';
+  String get save => 'சேமிக்கவும்';
 
   @override
   String get delete => 'நீக்கு';
@@ -258,10 +258,10 @@ class AppLocalizationsTa extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'புக்மார்க்கைச் சேர்க்கவும்';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'புக்மார்க்கை அகற்று';
 
   @override
   String get lastRead => 'Last Read';
@@ -541,7 +541,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get downloads => 'பதிவிறக்கங்கள்';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'பதிவிறக்குகிறது...';
 
   @override
   String get downloadComplete => 'பதிவிறக்கம் முடிந்தது';

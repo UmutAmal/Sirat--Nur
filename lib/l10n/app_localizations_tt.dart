@@ -133,10 +133,10 @@ class AppLocalizationsTt extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Эзләү';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Эзләү ...';
 
   @override
   String get noResults => 'Нәтиҗә табылмады';
@@ -158,7 +158,7 @@ class AppLocalizationsTt extends AppLocalizations {
       'Коръән эчтәлеген йөкләп булмады. Зинһар, кабатлап карагыз.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Кабатлап карагыз';
 
   @override
   String get refreshAction => 'Яңарту';
@@ -167,7 +167,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get cancel => 'Баш тарту';
 
   @override
-  String get save => 'Save';
+  String get save => 'Саклагыз';
 
   @override
   String get delete => 'Бетерү';
@@ -256,10 +256,10 @@ class AppLocalizationsTt extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Bookmark өстәргә';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Кыстарманы бетерегез';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get downloads => 'Йөкләүләр';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Йөкләү ...';
 
   @override
   String get downloadComplete => 'Йөкләү';

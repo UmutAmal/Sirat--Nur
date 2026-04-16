@@ -246,6 +246,33 @@ void main() {
       expect(turnValue, 'Cihazinizi kibleye cevirin');
     });
 
+    test('rejects multiline common action output', () {
+      final searchValue = resolveTranslatedArbValue(
+        key: 'search',
+        source: 'Search',
+        currentValue: 'Ara',
+        candidate: 'means the following.\nAra',
+      );
+
+      final retryValue = resolveTranslatedArbValue(
+        key: 'retry',
+        source: 'Retry',
+        currentValue: 'Tekrar dene',
+        candidate: 'means the following.\nTekrar dene',
+      );
+
+      final bookmarkValue = resolveTranslatedArbValue(
+        key: 'addBookmark',
+        source: 'Add Bookmark',
+        currentValue: 'Yer imi ekle',
+        candidate: 'means the following.\nYer imi ekle',
+      );
+
+      expect(searchValue, 'Ara');
+      expect(retryValue, 'Tekrar dene');
+      expect(bookmarkValue, 'Yer imi ekle');
+    });
+
     test('rejects multiline theme mode output', () {
       final value = resolveTranslatedArbValue(
         key: 'systemDefault',

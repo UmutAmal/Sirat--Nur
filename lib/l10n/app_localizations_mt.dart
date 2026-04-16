@@ -134,10 +134,10 @@ class AppLocalizationsMt extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Fittex';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Fittex...';
 
   @override
   String get noResults => 'Ma nstab l-ebda riżultat';
@@ -159,7 +159,7 @@ class AppLocalizationsMt extends AppLocalizations {
       'Il-kontenut tal-Quran ma setax jitgħabba. Jekk jogħġbok erġa\' pprova.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Ipprova mill-ġdid';
 
   @override
   String get refreshAction => 'Aġġorna';
@@ -168,7 +168,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get cancel => 'Ikkanċella';
 
   @override
-  String get save => 'Save';
+  String get save => 'Ħlief';
 
   @override
   String get delete => 'Ħassar';
@@ -257,10 +257,10 @@ class AppLocalizationsMt extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Żid Bookmark';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Neħħi Bookmark';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get downloads => 'Downloads';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Niżżel...';
 
   @override
   String get downloadComplete => 'Niżżel Tlesti';

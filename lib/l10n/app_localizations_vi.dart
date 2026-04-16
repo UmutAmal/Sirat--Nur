@@ -133,10 +133,10 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Tìm kiếm';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Tìm kiếm...';
 
   @override
   String get noResults => 'Không tìm thấy kết quả nào';
@@ -158,7 +158,7 @@ class AppLocalizationsVi extends AppLocalizations {
       'Không thể tải nội dung Kinh Qur\'an. Vui lòng thử lại.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Thử lại';
 
   @override
   String get refreshAction => 'Làm mới';
@@ -167,7 +167,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get cancel => 'Hủy';
 
   @override
-  String get save => 'Save';
+  String get save => 'Lưu';
 
   @override
   String get delete => 'Xóa';
@@ -256,10 +256,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Thêm dấu trang';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Xóa dấu trang';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get downloads => 'Tải xuống';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Đang tải xuống...';
 
   @override
   String get downloadComplete => 'Tải xuống hoàn tất';

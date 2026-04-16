@@ -133,10 +133,10 @@ class AppLocalizationsDa extends AppLocalizations {
   }
 
   @override
-  String get search => 'Søge';
+  String get search => 'Søg';
 
   @override
-  String get searchHint => 'Søge...';
+  String get searchHint => 'Søg...';
 
   @override
   String get noResults => 'Ingen resultater fundet';
@@ -167,7 +167,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get cancel => 'Annuller';
 
   @override
-  String get save => 'Spare';
+  String get save => 'Gem';
 
   @override
   String get delete => 'Slet';

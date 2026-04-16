@@ -136,7 +136,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get search => 'Search rawh';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Zawng...';
 
   @override
   String get noResults => 'Results hmuh tur a awm lo';

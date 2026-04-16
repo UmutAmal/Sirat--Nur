@@ -133,10 +133,10 @@ class AppLocalizationsLt extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Ieškoti';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Ieškoti...';
 
   @override
   String get noResults => 'Rezultatų nerasta';
@@ -158,7 +158,7 @@ class AppLocalizationsLt extends AppLocalizations {
       'Nepavyko įkelti Korano turinio. Bandykite dar kartą.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Bandykite dar kartą';
 
   @override
   String get refreshAction => 'Atnaujinti';
@@ -167,7 +167,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get cancel => 'Atšaukti';
 
   @override
-  String get save => 'Save';
+  String get save => 'Išsaugoti';
 
   @override
   String get delete => 'Ištrinti';
@@ -256,10 +256,10 @@ class AppLocalizationsLt extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Pridėti žymę';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Pašalinti žymę';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get downloads => 'Atsisiuntimai';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Atsisiunčiama...';
 
   @override
   String get downloadComplete => 'Atsisiuntimas baigtas';

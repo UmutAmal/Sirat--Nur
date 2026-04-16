@@ -133,10 +133,10 @@ class AppLocalizationsLn extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Koluka';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Koluka...';
 
   @override
   String get noResults => 'No results found';
@@ -158,7 +158,7 @@ class AppLocalizationsLn extends AppLocalizations {
       'Contenu ya Coran ekokaki kozala chargé te. Svp meka lisusu.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Meká lisusu';
 
   @override
   String get refreshAction => 'Refresh';
@@ -167,7 +167,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get cancel => 'Kolongola';
 
   @override
-  String get save => 'Save';
+  String get save => 'Kobikisa';
 
   @override
   String get delete => 'Delete';
@@ -256,10 +256,10 @@ class AppLocalizationsLn extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Bakisa Marque-page';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Longola Marque-pages';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get downloads => 'Ba téléchargements';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Kozwa téléchargement...';
 
   @override
   String get downloadComplete => 'Download Complete';

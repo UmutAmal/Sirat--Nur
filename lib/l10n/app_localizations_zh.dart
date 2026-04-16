@@ -165,7 +165,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get cancel => '取消';
 
   @override
-  String get save => '节省';
+  String get save => '保存';
 
   @override
   String get delete => '删除';
@@ -1801,7 +1801,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get cancel => '取消';
 
   @override
-  String get save => '节省';
+  String get save => '保存';
 
   @override
   String get delete => '删除';
@@ -3437,7 +3437,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get cancel => '取消';
 
   @override
-  String get save => '節省';
+  String get save => '儲存';
 
   @override
   String get delete => '刪除';

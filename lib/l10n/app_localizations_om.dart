@@ -134,10 +134,10 @@ class AppLocalizationsOm extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Barbaaduu';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Barbaaduu...';
 
   @override
   String get noResults => 'No results found';
@@ -159,7 +159,7 @@ class AppLocalizationsOm extends AppLocalizations {
       'Qabiyyeen Qur\'aanaa fe\'amuu hin dandeenye. Mee irra deebi\'ii yaalaa.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Irra deebi\'ii yaali';
 
   @override
   String get refreshAction => 'Refresh';
@@ -168,7 +168,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get cancel => 'Haquu';
 
   @override
-  String get save => 'Save';
+  String get save => 'Qusachuu';
 
   @override
   String get delete => 'Delete';
@@ -257,10 +257,10 @@ class AppLocalizationsOm extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Bookmark Dabaluu';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Bookmark haqi';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get downloads => 'Downloads';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Buufachuuf...';
 
   @override
   String get downloadComplete => 'Download Complete';

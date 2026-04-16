@@ -134,10 +134,10 @@ class AppLocalizationsUk extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Пошук';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'пошук...';
 
   @override
   String get noResults => 'Результатів не знайдено';
@@ -159,7 +159,7 @@ class AppLocalizationsUk extends AppLocalizations {
       'Не вдалося завантажити вміст Корану. Спробуйте ще раз.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Повторіть спробу';
 
   @override
   String get refreshAction => 'Оновити';
@@ -168,7 +168,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get cancel => 'Скасувати';
 
   @override
-  String get save => 'Save';
+  String get save => 'зберегти';
 
   @override
   String get delete => 'Видалити';
@@ -257,10 +257,10 @@ class AppLocalizationsUk extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Додати закладку';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Видалити закладку';
 
   @override
   String get lastRead => 'Last Read';
@@ -540,7 +540,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get downloads => 'Завантаження';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'Завантаження...';
 
   @override
   String get downloadComplete => 'Завантаження завершено';

@@ -133,10 +133,10 @@ class AppLocalizationsKm extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'ស្វែងរក';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'ស្វែងរក...';
 
   @override
   String get noResults => 'រកមិនឃើញលទ្ធផលទេ។';
@@ -158,7 +158,7 @@ class AppLocalizationsKm extends AppLocalizations {
       'មាតិកាគម្ពីគូរ៉ាមិនអាចផ្ទុកបានទេ។ សូមព្យាយាមម្តងទៀត។';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'ព្យាយាមម្តងទៀត';
 
   @override
   String get refreshAction => 'ធ្វើឱ្យស្រស់';
@@ -167,7 +167,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get cancel => 'បោះបង់';
 
   @override
-  String get save => 'Save';
+  String get save => 'រក្សាទុក';
 
   @override
   String get delete => 'លុប';
@@ -256,10 +256,10 @@ class AppLocalizationsKm extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'បន្ថែមចំណាំ';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'លុបចំណាំ';
 
   @override
   String get lastRead => 'Last Read';
@@ -539,7 +539,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get downloads => 'ការទាញយក';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'កំពុងទាញយក...';
 
   @override
   String get downloadComplete => 'ការទាញយកពេញលេញ';
