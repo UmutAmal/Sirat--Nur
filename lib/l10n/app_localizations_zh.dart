@@ -36,7 +36,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get nextPrayer => '下一次礼拜';
 
   @override
-  String get prayerTimes => '祈祷时间';
+  String get prayerTimes => '礼拜时间';
 
   @override
   String get continueReading => '继续阅读';
@@ -321,7 +321,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get asmaulHusna => '阿斯玛乌斯纳';
 
   @override
-  String get namesOfAllah => '安拉的名字';
+  String get namesOfAllah => '安拉的尊名';
 
   @override
   String get liveTv => '电视直播';
@@ -1672,7 +1672,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get nextPrayer => '下一次礼拜';
 
   @override
-  String get prayerTimes => '祈祷时间';
+  String get prayerTimes => '礼拜时间';
 
   @override
   String get continueReading => '继续阅读';
@@ -1957,7 +1957,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get asmaulHusna => '阿斯玛乌斯纳';
 
   @override
-  String get namesOfAllah => '安拉的名字';
+  String get namesOfAllah => '安拉的尊名';
 
   @override
   String get liveTv => '电视直播';
@@ -3308,7 +3308,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get nextPrayer => '下一次禮拜';
 
   @override
-  String get prayerTimes => '祈禱時間';
+  String get prayerTimes => '禮拜時間';
 
   @override
   String get continueReading => '繼續閱讀';
@@ -3593,7 +3593,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get asmaulHusna => '阿斯瑪烏斯納';
 
   @override
-  String get namesOfAllah => '安拉的名字';
+  String get namesOfAllah => '安拉的尊名';
 
   @override
   String get liveTv => '電視直播';

@@ -36,7 +36,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get nextPrayer => 'Next Prayer';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'ናይ ጸሎት ግዜ';
 
   @override
   String get continueReading => 'Continue Reading';

@@ -371,6 +371,7 @@ bool _mustStaySingleLine(String key) {
       key == 'addBookmark' ||
       key == 'removeBookmark' ||
       key == 'downloading' ||
+      key == 'prayerTimes' ||
       key == 'quran' ||
       key == 'surah' ||
       key == 'surahs' ||
@@ -399,6 +400,7 @@ bool _mustStaySingleLine(String key) {
       key == 'fasting' ||
       key == 'weeklyProgress' ||
       key == 'hijriCalendar' ||
+      key == 'namesOfAllah' ||
       key == 'today' ||
       key == 'specialDays' ||
       key == 'done' ||

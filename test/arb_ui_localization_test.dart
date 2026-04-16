@@ -310,6 +310,92 @@ void main() {
     );
 
     test(
+      'safe priority locales do not fall back to English for prayer and Allah names shell copy',
+      () {
+        const safeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'da',
+          'he',
+          'ja',
+          'nb',
+          'nn',
+          'no',
+          'pt',
+          'ru',
+          'vi',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const localizedKeys = [
+          'prayerTimes',
+          'namesOfAllah',
+        ];
+
+        for (final locale in safeLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
+    test(
+      'safe priority prayer and Allah names shell copy avoids known mistranslations',
+      () {
+        const knownBadValues = {
+          'he': {'namesOfAllah': 'שמות של אללה'},
+          'ja': {'prayerTimes': '祈りの時間'},
+          'nn': {
+            'prayerTimes': 'Bønnetider',
+            'namesOfAllah': 'Allahs navn',
+          },
+          'pt': {'namesOfAllah': 'Nomes de Alá'},
+          'ru': {'prayerTimes': 'Время молитв'},
+          'vi': {
+            'prayerTimes': 'thời gian cầu nguyện',
+            'namesOfAllah': 'Tên của Allah',
+          },
+          'zh': {
+            'prayerTimes': '祈祷时间',
+            'namesOfAllah': '安拉的名字',
+          },
+          'zh_CN': {
+            'prayerTimes': '祈祷时间',
+            'namesOfAllah': '安拉的名字',
+          },
+          'zh_TW': {
+            'prayerTimes': '祈禱時間',
+            'namesOfAllah': '安拉的名字',
+          },
+        };
+
+        for (final localeEntry in knownBadValues.entries) {
+          final arb = _readArb('lib/l10n/app_${localeEntry.key}.arb');
+
+          for (final badEntry in localeEntry.value.entries) {
+            expect(
+              arb[badEntry.key],
+              isNot(badEntry.value),
+              reason:
+                  'app_${localeEntry.key}.arb kept a known weak translation for ${badEntry.key}',
+            );
+          }
+        }
+      },
+    );
+
+    test(
       'priority locales do not fall back to English for diagnostics labels',
       () {
         const localizedKeys = [

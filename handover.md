@@ -8951,3 +8951,59 @@
 
 ### Sonraki Adım
 - Commit/push sonrasi yeni dongude aktif risk taramasini yenile; `prayerTimes`, `asmaUlHusna`, `hadith`, `zakat`, `dua`, `library`, `islamicEducation` gibi ana dini navigasyon/icerik yuzeylerinden en yuksek riskli tek cluster sec.
+
+## 2026-04-16 TUR-231 — Localize Prayer Times and Allah Names Shell Copy
+
+### Yapılan İşlem
+- Namaz vakitleri widget etiketi ve kutuphane Allah isimleri kartinda kullanilan `prayerTimes` ve `namesOfAllah` anahtarlari guvenli ARB batch'i ile guncellendi.
+- `flutter gen-l10n` calistirilarak generated `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Safe/priority locale setinde `tr`, `de`, `fr`, `es`, `ar`, `da`, `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi`, `zh`, `zh_CN`, `zh_TW` icin `prayerTimes` ve `namesOfAllah` anahtarlarinda Ingilizce fallback kalmadigi dogrulandi.
+- Otomatik cevirinin dini baglamda fazla genel urettigi degerler elle duzeltildi: `he namesOfAllah=שמות אללה`, `ja prayerTimes=礼拝時刻`, `nn prayerTimes=Bønetider`, `nn namesOfAllah=Allahs namn`, `pt namesOfAllah=Nomes de Allah`, `ru prayerTimes=Время намаза`, `vi prayerTimes=Giờ cầu nguyện`, `vi namesOfAllah=Các danh xưng của Allah`, `zh/zh_CN prayerTimes=礼拜时间`, `zh_TW prayerTimes=禮拜時間`, `zh/zh_CN/zh_TW namesOfAllah=安拉的尊名`.
+- `tool\translate_arb_keys.dart` single-line guard listesine `prayerTimes` ve `namesOfAllah` eklendi.
+- `test\arb_ui_localization_test.dart` icine safe/priority fallback guard'i ve bilinen zayif dini baglam cevirisi guard'i eklendi.
+- `test\translate_arb_keys_test.dart` icine multiline prayer/library shell output regresyon testi eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\widget_service.dart:99` tum namazlar widget basliginda `PrayerLocalizer.prayerTimesLabel(languageCode)` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\prayer_name_localization.dart:47-48` widget basligini generated `prayerTimes` l10n degerinden cozumluyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart:155` kutuphane karti alt metninde `l10n.namesOfAllah` gosteriyor.
+- TUR-231 oncesi fallback taramasinda `prayerTimes` safe locale setinde `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi`; `namesOfAllah` safe locale setinde `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi` icin app_en ile birebir ayniydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe/priority locale setinde namaz vakitleri widget basligi ve Allah'in isimleri kutuphane copy'sinde Ingilizce fallback riski kapandi.
+- Dini baglamda fazla genel "prayer/molitva/祈祷" benzeri ceviri kalintilari icin regresyon bariyeri eklendi; `known_bad_hits=[]` taramasi PASS.
+- Single-line guard ile iki kisa shell etiketinde batch debris/newline riski kapatildi.
+- Kalan tum-locale birebir Ingilizce degerler cogunlukla ceviri servisinin guvenli aday uretmedigi nadir/legacy locale grubunda birakildi; sahte veya uydurma ceviri yazilmadi. TUR-231 sonrasi exact fallback sayilari: `prayerTimes 64`, `namesOfAllah 65`.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart` PASS (`80/80`)
+- Prayer localizer test: `flutter test test\prayer_name_localization_test.dart` PASS (`6/6`)
+- Library odak test: `flutter test test\library_page_test.dart` PASS (`14/14`)
+- Asma UI odak test: `flutter test test\features\library\asma_ul_husna_page_test.dart` PASS (`8/8`)
+- Safe fallback taramasi PASS: hedef prayer/library shell anahtarlarinda `safe_same=[]`
+- Single-line taramasi PASS: hedef prayer/library shell anahtarlarinda `newline=[]`
+- Bilinen zayif ceviri taramasi PASS: `known_bad_hits=[]`
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`417/417`)
+- `flutter gen-l10n` PASS
+
+### Risk Değişimi
+- Safe/priority locale prayer/library shell fallback riski: `12/25 -> 2/25`
+- Dini baglamda zayif makine cevirisi riski: `16/25 -> 4/25`
+- Kisa prayer/library shell etiketlerinde multiline/batch debris riski: `10/25 -> 3/25`
+- Tum-locale nadir/legacy fallback riski: `8/25 -> 5/25`
+
+### Rollback Planı
+- `lib\l10n\app_*.arb`, `lib\l10n\app_localizations_*.dart`, `test\arb_ui_localization_test.dart`, `test\translate_arb_keys_test.dart` ve `tool\translate_arb_keys.dart` icindeki TUR-231 degisiklikleri geri alinir; production Dart UI logic degismedigi icin runtime rollback dar kapsamli kalir.
+
+### Sonraki Adım
+- Commit/push sonrasi yeni dongude aktif l10n fallback taramasini yenile; proper-name bozulmasi yapmadan `asmaulHusna`, `hadith`, `analytics`, `assistant`, `ok`, `no` ve ozel gun isimleri arasindan en yuksek riskli tek cluster sec.

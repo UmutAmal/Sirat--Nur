@@ -36,7 +36,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get nextPrayer => 'Кийинки Намаз';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Намаз убакыттары';
 
   @override
   String get continueReading => 'Continue Reading';
@@ -333,7 +333,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get asmaulHusna => 'Асма-ул-Хусна';
 
   @override
-  String get namesOfAllah => 'Names of Allah';
+  String get namesOfAllah => 'Аллахтын ысымдары';
 
   @override
   String get liveTv => 'Түз ТВ';

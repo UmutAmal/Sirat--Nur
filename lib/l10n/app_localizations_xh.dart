@@ -36,7 +36,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get nextPrayer => 'Umthandazo olandelayo';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Amaxesha Omthandazo';
 
   @override
   String get continueReading => 'Continue Reading';
@@ -330,7 +330,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get asmaulHusna => 'Asma-ul-Husna';
 
   @override
-  String get namesOfAllah => 'Names of Allah';
+  String get namesOfAllah => 'Amagama ka-Allah';
 
   @override
   String get liveTv => 'I-TV ebukhoma';

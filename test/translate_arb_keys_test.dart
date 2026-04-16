@@ -300,6 +300,25 @@ void main() {
       expect(pageValue, 'Sayfa');
     });
 
+    test('rejects multiline prayer and library shell output', () {
+      final prayerTimesValue = resolveTranslatedArbValue(
+        key: 'prayerTimes',
+        source: 'Prayer Times',
+        currentValue: 'Namaz Vakitleri',
+        candidate: 'means the following.\nNamaz Vakitleri',
+      );
+
+      final namesOfAllahValue = resolveTranslatedArbValue(
+        key: 'namesOfAllah',
+        source: 'Names of Allah',
+        currentValue: "Allah'in Isimleri",
+        candidate: "means the following.\nAllah'in Isimleri",
+      );
+
+      expect(prayerTimesValue, 'Namaz Vakitleri');
+      expect(namesOfAllahValue, "Allah'in Isimleri");
+    });
+
     test('rejects multiline theme mode output', () {
       final value = resolveTranslatedArbValue(
         key: 'systemDefault',

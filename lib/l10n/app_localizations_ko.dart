@@ -36,7 +36,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get nextPrayer => '다음기도';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => '기도 시간';
 
   @override
   String get continueReading => 'Continue Reading';
@@ -327,7 +327,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get asmaulHusna => '아스마울후스나';
 
   @override
-  String get namesOfAllah => 'Names of Allah';
+  String get namesOfAllah => '알라의 이름';
 
   @override
   String get liveTv => '라이브 TV';

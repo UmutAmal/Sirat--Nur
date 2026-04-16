@@ -36,7 +36,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get nextPrayer => 'അടുത്ത പ്രാർത്ഥന';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'പ്രാർത്ഥന സമയം';
 
   @override
   String get continueReading => 'Continue Reading';
@@ -330,7 +330,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get asmaulHusna => 'അസ്മ-ഉൽ-ഹുസ്ന';
 
   @override
-  String get namesOfAllah => 'Names of Allah';
+  String get namesOfAllah => 'അല്ലാഹുവിൻ്റെ നാമങ്ങൾ';
 
   @override
   String get liveTv => 'ലൈവ് ടി.വി';

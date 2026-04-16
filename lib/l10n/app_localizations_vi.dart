@@ -36,7 +36,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get nextPrayer => 'Giờ cầu nguyện tiếp theo';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Giờ cầu nguyện';
 
   @override
   String get continueReading => 'Continue Reading';
@@ -330,7 +330,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get asmaulHusna => 'Asma-ul-Husna';
 
   @override
-  String get namesOfAllah => 'Names of Allah';
+  String get namesOfAllah => 'Các danh xưng của Allah';
 
   @override
   String get liveTv => 'Truyền hình trực tiếp';

@@ -36,7 +36,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get nextPrayer => 'Next Prayer';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'प्रार्थना समय';
 
   @override
   String get continueReading => 'Continue Reading';
