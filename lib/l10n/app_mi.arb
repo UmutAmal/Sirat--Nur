@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Ko te waahi e hiahiatia ana mo Qibla",
   "qiblaLocationRequiredBody": "Tautuhia to waahi tuturu i mua i te whakamahi i te kapehu Qibla kia tika ai te tatau i te ahunga.",
   "placesDataSourceUnavailableTitle": "Ko nga raraunga waahi kaore i te waatea",
-  "placesDataSourceUnavailableBody": "Kaore ano kia whirihorahia he waahi mutunga raraunga mo tenei hanga. Tautuhia te PLACES_OVERPASS_API_URL ki tetahi takawaenga kua whakaaetia, kaiwhakarato ranei i mua i te whakaahei rapunga tata."
+  "placesDataSourceUnavailableBody": "Kaore ano kia whirihorahia he waahi mutunga raraunga mo tenei hanga. Tautuhia te PLACES_OVERPASS_API_URL ki tetahi takawaenga kua whakaaetia, kaiwhakarato ranei i mua i te whakaahei rapunga tata.",
+  "tafsirCacheUnavailable": "Ko te tafsir kua whakamanahia kaore i te waatea tuimotu. Tukutahia he huinga raraunga tafsir i mua i te tirotiro."
 }

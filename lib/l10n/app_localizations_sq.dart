@@ -254,6 +254,10 @@ class AppLocalizationsSq extends AppLocalizations {
       'Burimi i zgjedhur i tefsirit nuk ktheu asnjë hyrje.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tefsir i verifikuar nuk ofrohet ende jashtë linje. Sinkronizoni një grup të dhënash tafsir me burim përpara se të shfletoni.';
+
+  @override
   String get bookmarks => 'Faqerojtësit';
 
   @override

@@ -254,6 +254,10 @@ class AppLocalizationsOr extends AppLocalizations {
       'ମନୋନୀତ ତାଫସିର ଉତ୍ସ କ no ଣସି ପ୍ରବିଷ୍ଟ ଫେରସ୍ତ କଲା ନାହିଁ |';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'ଯାଞ୍ଚ ହୋଇଥିବା ତାଫସିର ଏପର୍ଯ୍ୟନ୍ତ ଅଫଲାଇନରେ ଉପଲବ୍ଧ ନାହିଁ | ବ୍ରାଉଜିଂ କରିବା ପୂର୍ବରୁ ଏକ ସୋର୍ସଡ୍ ଟାଫସିର ଡାଟାସେଟକୁ ସିଙ୍କ କରନ୍ତୁ |';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

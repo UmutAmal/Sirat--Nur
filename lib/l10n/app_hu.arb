@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Hely szükséges a Qibla számára",
   "qiblaLocationRequiredBody": "A Qibla iránytű használata előtt állítsa be a tényleges tartózkodási helyét, hogy az irányt pontosan ki lehessen számítani.",
   "placesDataSourceUnavailableTitle": "A helyadatok nem érhetők el",
-  "placesDataSourceUnavailableBody": "Ellenőrzött helyek adatvégpontja még nincs konfigurálva ehhez a buildhez. A közeli keresés engedélyezése előtt állítsa be a PLACES_OVERPASS_API_URL-t egy jóváhagyott proxyra vagy szolgáltatóra."
+  "placesDataSourceUnavailableBody": "Ellenőrzött helyek adatvégpontja még nincs konfigurálva ehhez a buildhez. A közeli keresés engedélyezése előtt állítsa be a PLACES_OVERPASS_API_URL-t egy jóváhagyott proxyra vagy szolgáltatóra.",
+  "tafsirCacheUnavailable": "Az ellenőrzött tafsir még nem érhető el offline módban. Böngészés előtt szinkronizáljon egy forrásból származó tafsir adatkészletet."
 }

@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Plaz néideg fir Qibla",
   "qiblaLocationRequiredBody": "Setzt Är aktuell Positioun ier Dir de Qibla Kompass benotzt, sou datt d'Richtung genau berechent ka ginn.",
   "placesDataSourceUnavailableTitle": "Plaze Donnéeën net sinn",
-  "placesDataSourceUnavailableBody": "E verifizéiert Plaze Datenendpunkt ass nach net fir dëse Bau konfiguréiert. Setzt PLACES_OVERPASS_API_URL op e genehmegt Proxy oder Provider ier Dir Emgéigend Sich aktivéiert."
+  "placesDataSourceUnavailableBody": "E verifizéiert Plaze Datenendpunkt ass nach net fir dëse Bau konfiguréiert. Setzt PLACES_OVERPASS_API_URL op e genehmegt Proxy oder Provider ier Dir Emgéigend Sich aktivéiert.",
+  "tafsirCacheUnavailable": "Verifizéiert Tafsir ass nach net offline verfügbar. Synchroniséiert e sourced tafsir Dataset virum Surfen."
 }

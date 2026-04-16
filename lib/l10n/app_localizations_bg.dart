@@ -255,6 +255,10 @@ class AppLocalizationsBg extends AppLocalizations {
       'Избраният източник на тафсир не върна записи.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Провереният тафсир все още не е достъпен офлайн. Синхронизирайте набор от данни за tafsir, преди да сърфирате.';
+
+  @override
   String get bookmarks => 'Отметки';
 
   @override

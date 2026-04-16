@@ -253,6 +253,10 @@ class AppLocalizationsYo extends AppLocalizations {
       'Orisun tafsir ti a yan ko da awọn titẹ sii.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir ti o ni idaniloju ko si ni aisinipo sibẹsibẹ. Muṣiṣẹpọ dataset tafsir ti o ti jade ṣaaju lilọ kiri ayelujara.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

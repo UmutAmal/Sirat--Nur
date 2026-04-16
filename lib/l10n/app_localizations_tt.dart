@@ -253,6 +253,10 @@ class AppLocalizationsTt extends AppLocalizations {
       'Сайланган тафсир чыганагы бернинди язуны да кайтармады.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Тикшерелгән тафсир әле оффлайнда юк. Каралганчы, тафсир мәгълүматлар җыелмасын синхронлаштырыгыз.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

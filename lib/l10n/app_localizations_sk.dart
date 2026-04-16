@@ -254,6 +254,10 @@ class AppLocalizationsSk extends AppLocalizations {
       'Vybraný zdroj tafsir nevrátil žiadne záznamy.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Overený tafsir zatiaľ nie je dostupný offline. Pred prehliadaním synchronizujte zdrojovú množinu údajov tafsir.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

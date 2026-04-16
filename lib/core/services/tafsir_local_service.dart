@@ -320,11 +320,18 @@ class TafsirLocalService {
   ];
 }
 
+enum TafsirFetchPolicy { cacheOnly, allowExternalRefresh }
+
 class TafsirLoader {
   final int surahNumber;
   final String tafsirSource;
+  final TafsirFetchPolicy fetchPolicy;
 
-  TafsirLoader({required this.surahNumber, required this.tafsirSource});
+  TafsirLoader({
+    required this.surahNumber,
+    required this.tafsirSource,
+    this.fetchPolicy = TafsirFetchPolicy.cacheOnly,
+  });
 
   Future<List<Map<String, dynamic>>> loadTafsir({
     bool forceRefresh = false,
@@ -335,8 +342,13 @@ class TafsirLoader {
       tafsirSource: tafsirSource,
     );
 
-    if (localTafsir.isNotEmpty && !forceRefresh) {
+    if (localTafsir.isNotEmpty &&
+        (!forceRefresh || fetchPolicy == TafsirFetchPolicy.cacheOnly)) {
       return localTafsir;
+    }
+
+    if (fetchPolicy == TafsirFetchPolicy.cacheOnly) {
+      throw TafsirException('cache_missing');
     }
 
     await TafsirLocalService.downloadTafsirForSurah(

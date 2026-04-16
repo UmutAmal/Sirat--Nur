@@ -253,6 +253,10 @@ class AppLocalizationsNo extends AppLocalizations {
       'Den valgte tafsir-kilden returnerte ingen oppføringer.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verifisert tafsir er ikke tilgjengelig offline ennå. Synkroniser et hentet tafsir-datasett før du surfer.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

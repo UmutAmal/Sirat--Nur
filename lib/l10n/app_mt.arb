@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Post meħtieġ għall-Qibla",
   "qiblaLocationRequiredBody": "Issettja l-post attwali tiegħek qabel tuża l-boxxla Qibla sabiex id-direzzjoni tkun tista 'tiġi kkalkulata b'mod preċiż.",
   "placesDataSourceUnavailableTitle": "Id-data tal-postijiet mhix disponibbli",
-  "placesDataSourceUnavailableBody": "Punt finali tad-dejta tal-postijiet verifikati għadu mhux ikkonfigurat għal din il-bini. Issettja PLACES_OVERPASS_API_URL għal proxy jew fornitur approvat qabel ma tippermetti t-tfittxija fil-qrib."
+  "placesDataSourceUnavailableBody": "Punt finali tad-dejta tal-postijiet verifikati għadu mhux ikkonfigurat għal din il-bini. Issettja PLACES_OVERPASS_API_URL għal proxy jew fornitur approvat qabel ma tippermetti t-tfittxija fil-qrib.",
+  "tafsirCacheUnavailable": "Tafsir ivverifikat għadu mhux disponibbli offline. Issinkronizza sett tad-dejta ta' tafsir li ġej qabel ma tibbrawżja."
 }

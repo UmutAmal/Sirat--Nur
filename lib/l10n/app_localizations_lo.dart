@@ -253,6 +253,10 @@ class AppLocalizationsLo extends AppLocalizations {
       'ແຫຼ່ງ tafsir ທີ່ເລືອກສົ່ງຄືນບໍ່ມີລາຍການ.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'tafsir ທີ່ຢັ້ງຢືນແລ້ວແມ່ນຍັງບໍ່ມີໃຫ້ອອບລາຍເທື່ອ. ຊິ້ງຂໍ້ມູນຊຸດຂໍ້ມູນ tafsir ທີ່ມາກ່ອນການທ່ອງເວັບ.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

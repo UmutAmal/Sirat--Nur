@@ -252,6 +252,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get tafsirNoEntriesReturned => 'แหล่ง tafsir ที่เลือกไม่ส่งคืนรายการ';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'tafsir ที่ตรวจสอบแล้วยังไม่พร้อมใช้งานแบบออฟไลน์ ซิงค์ชุดข้อมูล tafsir ที่มาก่อนที่จะเรียกดู';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

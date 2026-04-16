@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "キブラに必要な場所",
   "qiblaLocationRequiredBody": "方向を正確に計算できるように、キブラ コンパスを使用する前に実際の位置を設定してください。",
   "placesDataSourceUnavailableTitle": "場所のデータが利用できない",
-  "placesDataSourceUnavailableBody": "検証済みの場所データ エンドポイントは、このビルドに対してまだ構成されていません。近くの検索を有効にする前に、PLACES_OVERPASS_API_URL を承認されたプロキシまたはプロバイダーに設定します。"
+  "placesDataSourceUnavailableBody": "検証済みの場所データ エンドポイントは、このビルドに対してまだ構成されていません。近くの検索を有効にする前に、PLACES_OVERPASS_API_URL を承認されたプロキシまたはプロバイダーに設定します。",
+  "tafsirCacheUnavailable": "タフシルはまだオフラインでは利用できないことを確認しました。参照する前に、ソースされたタフシル データセットを同期します。"
 }

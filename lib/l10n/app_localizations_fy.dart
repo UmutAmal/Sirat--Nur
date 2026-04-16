@@ -253,6 +253,10 @@ class AppLocalizationsFy extends AppLocalizations {
       'De selektearre tafsir boarne joech gjin ynstjoerings.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Ferifiearre tafsir is noch net offline beskikber. Syngronisearje in boarne tafsir-dataset foardat jo blêdzje.';
+
+  @override
   String get bookmarks => 'Blêdwizers';
 
   @override

@@ -253,6 +253,10 @@ class AppLocalizationsLt extends AppLocalizations {
       'Pasirinktas tafsir šaltinis nepateikė jokių įrašų.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Patvirtinta tafsir dar nepasiekiama neprisijungus. Prieš naršydami sinchronizuokite gautą tafsir duomenų rinkinį.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

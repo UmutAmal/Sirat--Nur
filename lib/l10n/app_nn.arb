@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Plassering kreves for Qibla",
   "qiblaLocationRequiredBody": "Still inn din faktiske posisjon før du bruker Qibla-kompasset slik at retningen kan beregnes nøyaktig.",
   "placesDataSourceUnavailableTitle": "Stedsdata er utilgjengelige",
-  "placesDataSourceUnavailableBody": "Et verifisert stedsdataendepunkt er ikke konfigurert for denne versjonen ennå. Sett PLACES_OVERPASS_API_URL til en godkjent proxy eller leverandør før du aktiverer søk i nærheten."
+  "placesDataSourceUnavailableBody": "Et verifisert stedsdataendepunkt er ikke konfigurert for denne versjonen ennå. Sett PLACES_OVERPASS_API_URL til en godkjent proxy eller leverandør før du aktiverer søk i nærheten.",
+  "tafsirCacheUnavailable": "Verifisert tafsir er ikke tilgjengelig offline ennå. Synkroniser et hentet tafsir-datasett før du surfer."
 }

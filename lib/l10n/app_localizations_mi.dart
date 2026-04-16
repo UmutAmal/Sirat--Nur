@@ -254,6 +254,10 @@ class AppLocalizationsMi extends AppLocalizations {
       'Ko te puna tafsir i tohua kaore he whakaurunga.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Ko te tafsir kua whakamanahia kaore i te waatea tuimotu. Tukutahia he huinga raraunga tafsir i mua i te tirotiro.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

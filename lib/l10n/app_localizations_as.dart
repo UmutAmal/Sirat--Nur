@@ -253,6 +253,10 @@ class AppLocalizationsAs extends AppLocalizations {
       'নিৰ্বাচিত tafsir উৎসই কোনো প্ৰৱেশ ঘূৰাই নিদিলে।';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir এতিয়াও অফলাইনত উপলব্ধ নহয়। ব্ৰাউজ কৰাৰ আগতে এটা উৎসযুক্ত tafsir ডাটাছেট ছিঙ্ক কৰক।';
+
+  @override
   String get bookmarks => 'বুকমাৰ্ক';
 
   @override

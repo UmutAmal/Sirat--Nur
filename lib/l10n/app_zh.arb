@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "朝拜所需地点",
   "qiblaLocationRequiredBody": "在使用朝拜指南针之前设置您的实际位置，以便可以准确计算方向。",
   "placesDataSourceUnavailableTitle": "地点数据不可用",
-  "placesDataSourceUnavailableBody": "尚未为此构建配置经过验证的地点数据端点。在启用附近搜索之前，将 PLACES_OVERPASS_API_URL 设置为已批准的代理或提供商。"
+  "placesDataSourceUnavailableBody": "尚未为此构建配置经过验证的地点数据端点。在启用附近搜索之前，将 PLACES_OVERPASS_API_URL 设置为已批准的代理或提供商。",
+  "tafsirCacheUnavailable": "已验证的 tafsir 尚无法离线使用。在浏览之前同步来源的 tafsir 数据集。"
 }

@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Toerana ilaina amin'ny Qibla",
   "qiblaLocationRequiredBody": "Apetraho ny toerana misy anao alohan'ny hampiasana ny kompas Qibla mba ho azo kajy tsara ny lalana.",
   "placesDataSourceUnavailableTitle": "Tsy misy angona toerana",
-  "placesDataSourceUnavailableBody": "Mbola tsy voafefy ho an'ity fananganana ity ny tondro fiafaran'ny angona toerana voamarina. Mametraha PLACES_OVERPASS_API_URL amin'ny proxy na mpanome ankatoavina alohan'ny handefasana ny fikarohana eo akaiky eo."
+  "placesDataSourceUnavailableBody": "Mbola tsy voafefy ho an'ity fananganana ity ny tondro fiafaran'ny angona toerana voamarina. Mametraha PLACES_OVERPASS_API_URL amin'ny proxy na mpanome ankatoavina alohan'ny handefasana ny fikarohana eo akaiky eo.",
+  "tafsirCacheUnavailable": "Mbola tsy misy an-tserasera ny tafsir voamarina. Ampifanaraho ny angon-drakitra misy tafsir alohan'ny hijerena."
 }

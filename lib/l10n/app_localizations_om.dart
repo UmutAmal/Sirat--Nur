@@ -255,6 +255,10 @@ class AppLocalizationsOm extends AppLocalizations {
       'Maddi tafsir filatame galtee tokkollee hin deebisne.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir hanga ammaatti offline hin argamu. Daawwachuu dura kuusaa deetaa tafsir madda ta\'e walsimsiisi.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

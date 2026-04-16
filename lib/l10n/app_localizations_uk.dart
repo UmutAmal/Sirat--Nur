@@ -254,6 +254,10 @@ class AppLocalizationsUk extends AppLocalizations {
       'Вибране джерело тафсіру не повернуло жодного запису.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Перевірений тафсір ще не доступний офлайн. Перед переглядом синхронізуйте отриманий набір даних тафсір.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

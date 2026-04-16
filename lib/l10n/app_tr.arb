@@ -137,6 +137,7 @@
     }
   },
   "tafsirNoEntriesReturned": "Seçilen tefsir kaynağı hiç kayıt döndürmedi.",
+  "tafsirCacheUnavailable": "Doğrulanmış tefsir henüz çevrimdışı hazır değil. Gezinmeden önce kaynaklandırılmış bir tefsir veri kümesini senkronlayın.",
   "bookmarks": "Yer İşaretleri",
   "addBookmark": "Yer İşareti Ekle",
   "removeBookmark": "Yer İşaretini Kaldır",

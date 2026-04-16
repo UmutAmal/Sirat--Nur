@@ -253,6 +253,10 @@ class AppLocalizationsAf extends AppLocalizations {
       'Die geselekteerde tafsir-bron het geen inskrywings teruggegee nie.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Geverifieerde tafsir is nog nie vanlyn beskikbaar nie. Sinkroniseer \'n verkrygde tafsir-datastel voordat u blaai.';
+
+  @override
   String get bookmarks => 'Boekmerke';
 
   @override

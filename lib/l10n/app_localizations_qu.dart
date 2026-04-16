@@ -255,6 +255,10 @@ class AppLocalizationsQu extends AppLocalizations {
       'Akllasqa tafsir pukyuta mana qillqasqakunata kutichirqanchu.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir manaraqmi mana internetpi tarikunchu. Manaraq maskachkaspa huk pukyuta tafsir willay huñuta tinkiy.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

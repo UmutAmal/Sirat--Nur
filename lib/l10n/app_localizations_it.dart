@@ -255,6 +255,10 @@ class AppLocalizationsIt extends AppLocalizations {
       'La fonte tafsir selezionata non ha restituito voci.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir verificato non è ancora disponibile offline. Sincronizza un set di dati tafsir di origine prima della navigazione.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

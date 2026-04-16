@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Qiblalle vaaditaan sijainti",
   "qiblaLocationRequiredBody": "Aseta todellinen sijaintisi ennen Qibla-kompassin käyttöä, jotta suunta voidaan laskea tarkasti.",
   "placesDataSourceUnavailableTitle": "Paikkatiedot eivät ole käytettävissä",
-  "placesDataSourceUnavailableBody": "Vahvistettua paikkatietojen päätepistettä ei ole vielä määritetty tälle koontiversiolle. Aseta PLACES_OVERPASS_API_URL hyväksytylle välityspalvelimelle tai palveluntarjoajalle ennen kuin otat lähihaun käyttöön."
+  "placesDataSourceUnavailableBody": "Vahvistettua paikkatietojen päätepistettä ei ole vielä määritetty tälle koontiversiolle. Aseta PLACES_OVERPASS_API_URL hyväksytylle välityspalvelimelle tai palveluntarjoajalle ennen kuin otat lähihaun käyttöön.",
+  "tafsirCacheUnavailable": "Vahvistettu tafsir ei ole vielä saatavilla offline-tilassa. Synkronoi peräisin oleva tafsir-tietojoukko ennen selaamista."
 }

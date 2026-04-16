@@ -254,6 +254,10 @@ class AppLocalizationsTk extends AppLocalizations {
       'Saýlanan tafsir çeşmesi hiç hili ýazgy yzyna gaýtarmady.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Barlanylan tafsir entek awtonom görnüşde elýeterli däl. Göz aýlamazdan ozal berlen tafsir maglumat toplumyny sinhronlaň.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

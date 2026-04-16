@@ -255,6 +255,10 @@ class AppLocalizationsRu extends AppLocalizations {
       'Выбранный источник тафсира не дал записей.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Проверенный тафсир пока недоступен в автономном режиме. Перед просмотром синхронизируйте исходный набор данных Тафсир.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

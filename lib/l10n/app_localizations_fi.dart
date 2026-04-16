@@ -254,6 +254,10 @@ class AppLocalizationsFi extends AppLocalizations {
       'Valittu tafsir-lähde ei palauttanut merkintöjä.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Vahvistettu tafsir ei ole vielä saatavilla offline-tilassa. Synkronoi peräisin oleva tafsir-tietojoukko ennen selaamista.';
+
+  @override
   String get bookmarks => 'Kirjanmerkit';
 
   @override

@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Beae ho hia ma Qibla",
   "qiblaLocationRequiredBody": "Hyehye wo beae ankasa ansa na wode Qibla kompas no adi dwuma, sɛnea wɔbɛtumi abu kwan no pɛpɛɛpɛ.",
   "placesDataSourceUnavailableTitle": "Places data unavailable",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "tafsirCacheUnavailable": "Verified tafsir no ntumi nkɔ offline de besi nnɛ. Sync tafsir dataset a woanya fibea ansa na woakɔ browse."
 }

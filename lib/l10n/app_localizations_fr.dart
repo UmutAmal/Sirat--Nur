@@ -256,6 +256,10 @@ class AppLocalizationsFr extends AppLocalizations {
       'La source tafsir sélectionnée n\'a renvoyé aucune entrée.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir vérifié n’est pas encore disponible hors ligne. Synchronisez un ensemble de données tafsir provenant d\'une source avant de naviguer.';
+
+  @override
   String get bookmarks => 'Signets';
 
   @override

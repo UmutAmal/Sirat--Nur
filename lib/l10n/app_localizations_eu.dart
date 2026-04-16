@@ -253,6 +253,10 @@ class AppLocalizationsEu extends AppLocalizations {
       'Hautatutako tafsir iturburuak ez du sarrerarik itzuli.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Egiaztatutako tafsir ez dago oraindik lineaz kanpo erabilgarri. Sinkronizatu iturriko tafsir datu-multzo bat arakatu aurretik.';
+
+  @override
   String get bookmarks => 'Laster-markak';
 
   @override

@@ -253,6 +253,10 @@ class AppLocalizationsSi extends AppLocalizations {
       'තෝරාගත් tafsir මූලාශ්‍රය කිසිදු ප්‍රවේශයක් ලබා දුන්නේ නැත.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'තහවුරු කළ tafsir තවමත් නොබැඳිව නොමැත. බ්‍රවුස් කිරීමට පෙර මූලාශ්‍රගත tafsir දත්ත කට්ටලයක් සමමුහුර්ත කරන්න.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

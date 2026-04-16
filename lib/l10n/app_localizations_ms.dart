@@ -253,6 +253,10 @@ class AppLocalizationsMs extends AppLocalizations {
       'Sumber tafsir yang dipilih tidak mengembalikan sebarang entri.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir yang disahkan belum tersedia di luar talian lagi. Segerakkan set data tafsir bersumber sebelum menyemak imbas.';
+
+  @override
   String get bookmarks => 'Penanda';
 
   @override

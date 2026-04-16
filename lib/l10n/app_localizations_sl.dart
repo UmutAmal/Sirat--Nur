@@ -254,6 +254,10 @@ class AppLocalizationsSl extends AppLocalizations {
       'Izbrani vir tafsirja ni vrnil nobenega vnosa.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Preverjeni tafsir še ni na voljo brez povezave. Pred brskanjem sinhronizirajte pridobljeni nabor podatkov tafsir.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

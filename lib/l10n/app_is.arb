@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Staðsetning krafist fyrir Qibla",
   "qiblaLocationRequiredBody": "Stilltu raunverulega staðsetningu þína áður en þú notar Qibla áttavitann svo hægt sé að reikna stefnuna nákvæmlega.",
   "placesDataSourceUnavailableTitle": "Gögn um staði eru ekki tiltæk",
-  "placesDataSourceUnavailableBody": "Staðfestur gagnaendapunktur er ekki stilltur fyrir þessa byggingu ennþá. Stilltu PLACES_OVERPASS_API_URL á samþykktan umboðsmann eða þjónustuaðila áður en þú kveikir á nærliggjandi leit."
+  "placesDataSourceUnavailableBody": "Staðfestur gagnaendapunktur er ekki stilltur fyrir þessa byggingu ennþá. Stilltu PLACES_OVERPASS_API_URL á samþykktan umboðsmann eða þjónustuaðila áður en þú kveikir á nærliggjandi leit.",
+  "tafsirCacheUnavailable": "Staðfest tafsir er ekki enn í boði án nettengingar. Samstilltu gagnasett af tafsir áður en þú vafrar."
 }

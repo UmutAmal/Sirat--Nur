@@ -255,6 +255,10 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Ang gipili nga tinubdan sa tafsir walay gibalik nga mga entri.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Ang gipamatud-an nga tafsir dili pa magamit offline. I-sync ang usa ka gigikanan nga tafsir dataset sa dili pa mag-browse.';
+
+  @override
   String get bookmarks => 'Mga bookmark';
 
   @override

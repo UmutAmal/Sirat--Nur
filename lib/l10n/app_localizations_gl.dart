@@ -255,6 +255,10 @@ class AppLocalizationsGl extends AppLocalizations {
       'A fonte tafsir seleccionada non devolveu entradas.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'O tafsir verificado aínda non está dispoñible sen conexión. Sincroniza un conxunto de datos tafsir de orixe antes de navegar.';
+
+  @override
   String get bookmarks => 'Marcadores';
 
   @override

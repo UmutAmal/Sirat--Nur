@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Nepieciešama vieta Qiblai",
   "qiblaLocationRequiredBody": "Pirms Qibla kompasa lietošanas iestatiet savu faktisko atrašanās vietu, lai varētu precīzi aprēķināt virzienu.",
   "placesDataSourceUnavailableTitle": "Vietu dati nav pieejami",
-  "placesDataSourceUnavailableBody": "Verificēto vietu datu galapunkts šai būvei vēl nav konfigurēts. Pirms tuvumā esošās meklēšanas iespējošanas iestatiet vietni PLACES_OVERPASS_API_URL apstiprinātam starpniekserveri vai pakalpojumu sniedzējam."
+  "placesDataSourceUnavailableBody": "Verificēto vietu datu galapunkts šai būvei vēl nav konfigurēts. Pirms tuvumā esošās meklēšanas iespējošanas iestatiet vietni PLACES_OVERPASS_API_URL apstiprinātam starpniekserveri vai pakalpojumu sniedzējam.",
+  "tafsirCacheUnavailable": "Verified tafsir vēl nav pieejams bezsaistē. Pirms pārlūkošanas sinhronizējiet iegūto tafsir datu kopu."
 }

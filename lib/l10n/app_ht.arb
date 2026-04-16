@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Kote obligatwa pou Qibla",
   "qiblaLocationRequiredBody": "Mete pozisyon aktyèl ou anvan ou sèvi ak konpa Qibla pou direksyon an ka kalkile avèk presizyon.",
   "placesDataSourceUnavailableTitle": "Kote done yo pa disponib",
-  "placesDataSourceUnavailableBody": "Yon pwen final done kote verifye poko konfigirasyon pou konstriksyon sa a. Mete PLACES_OVERPASS_API_URL sou yon proxy oswa yon founisè apwouve anvan ou pèmèt rechèch ki tou pre."
+  "placesDataSourceUnavailableBody": "Yon pwen final done kote verifye poko konfigirasyon pou konstriksyon sa a. Mete PLACES_OVERPASS_API_URL sou yon proxy oswa yon founisè apwouve anvan ou pèmèt rechèch ki tou pre.",
+  "tafsirCacheUnavailable": "Tafsir verifye poko disponib offline. Senkronize yon seri done tafsir souse anvan ou navige."
 }

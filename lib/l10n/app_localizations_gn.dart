@@ -256,6 +256,10 @@ class AppLocalizationsGn extends AppLocalizations {
       'Pe tafsir ypykue ojeporavóva ndoguerúi mba’eveichagua jeike.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verificado tafsir ndojeguerekói gueteri offline. Embojoaju peteĩ tafsir datokuéra ryru oúva eheka mboyve.';
+
+  @override
   String get bookmarks => 'Marcadores rehegua';
 
   @override

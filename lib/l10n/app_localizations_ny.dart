@@ -253,6 +253,10 @@ class AppLocalizationsNy extends AppLocalizations {
       'Magwero osankhidwa a tafsir sanabweze chilichonse.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir yotsimikizika sinapezekebe pa intaneti. Gwirizanitsani deta ya tafsir yochokera musanayambe kusakatula.';
+
+  @override
   String get bookmarks => 'Zosungira';
 
   @override

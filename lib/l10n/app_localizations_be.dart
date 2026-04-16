@@ -255,6 +255,10 @@ class AppLocalizationsBe extends AppLocalizations {
       'Выбраная крыніца тафсіра не дала запісаў.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Правераны тафсір пакуль недаступны ў аўтаномным рэжыме. Перад праглядам сінхранізуйце атрыманы набор даных тафсір.';
+
+  @override
   String get bookmarks => 'Закладкі';
 
   @override

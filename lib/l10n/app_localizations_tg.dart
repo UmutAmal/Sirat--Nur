@@ -253,6 +253,10 @@ class AppLocalizationsTg extends AppLocalizations {
       'Сарчашмаи интихобшудаи тафсир ягон сабтро барнагардондааст.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Тафсири тасдиқшуда ҳанӯз офлайн дастрас нест. Пеш аз дидан, маҷмӯи додаҳои тафсирро ҳамоҳанг созед.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

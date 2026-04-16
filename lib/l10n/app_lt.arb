@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Reikalinga vieta Qiblai",
   "qiblaLocationRequiredBody": "Prieš naudodami Qibla kompasą, nustatykite savo tikrąją vietą, kad būtų galima tiksliai apskaičiuoti kryptį.",
   "placesDataSourceUnavailableTitle": "Vietų duomenys nepasiekiami",
-  "placesDataSourceUnavailableBody": "Patvirtintų vietų duomenų galutinis taškas šiai versijai dar nesukonfigūruotas. Prieš įjungdami netoliese esančią paiešką, nustatykite PLACES_OVERPASS_API_URL patvirtintą tarpinį serverį arba teikėją."
+  "placesDataSourceUnavailableBody": "Patvirtintų vietų duomenų galutinis taškas šiai versijai dar nesukonfigūruotas. Prieš įjungdami netoliese esančią paiešką, nustatykite PLACES_OVERPASS_API_URL patvirtintą tarpinį serverį arba teikėją.",
+  "tafsirCacheUnavailable": "Patvirtinta tafsir dar nepasiekiama neprisijungus. Prieš naršydami sinchronizuokite gautą tafsir duomenų rinkinį."
 }

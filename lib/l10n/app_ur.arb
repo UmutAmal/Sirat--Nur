@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Location required for Qibla",
   "qiblaLocationRequiredBody": "قبلہ کمپاس استعمال کرنے سے پہلے اپنی اصل جگہ کا تعین کریں تاکہ سمت کا درست اندازہ لگایا جا سکے۔",
   "placesDataSourceUnavailableTitle": "مقامات کا ڈیٹا دستیاب نہیں ہے۔",
-  "placesDataSourceUnavailableBody": "ایک تصدیق شدہ مقامات کا ڈیٹا اینڈ پوائنٹ ابھی تک اس تعمیر کے لیے کنفیگر نہیں ہوا ہے۔ قریبی تلاش کو فعال کرنے سے پہلے PLACES_OVERPASS_API_URL کو منظور شدہ پراکسی یا فراہم کنندہ پر سیٹ کریں۔"
+  "placesDataSourceUnavailableBody": "ایک تصدیق شدہ مقامات کا ڈیٹا اینڈ پوائنٹ ابھی تک اس تعمیر کے لیے کنفیگر نہیں ہوا ہے۔ قریبی تلاش کو فعال کرنے سے پہلے PLACES_OVERPASS_API_URL کو منظور شدہ پراکسی یا فراہم کنندہ پر سیٹ کریں۔",
+  "tafsirCacheUnavailable": "تصدیق شدہ تفسیر ابھی آف لائن دستیاب نہیں ہے۔ براؤز کرنے سے پہلے سورس شدہ تفسیر ڈیٹاسیٹ کو سنک کریں۔"
 }

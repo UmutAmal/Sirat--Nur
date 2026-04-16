@@ -253,6 +253,10 @@ class AppLocalizationsKk extends AppLocalizations {
       'Таңдалған тәфсир көзі ешбір жазбаны қайтармады.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Расталған тәфсир әлі желіден тыс қолжетімді емес. Шолудан бұрын бастапқы тафсир деректер жинағын синхрондаңыз.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

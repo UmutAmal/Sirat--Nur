@@ -254,6 +254,10 @@ class AppLocalizationsSu extends AppLocalizations {
       'Sumber tafsir anu dipilih teu aya deui entri.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir anu diverifikasi henteu acan sayogi offline. Nyingkronkeun dataset tafsir sumber samemeh browsing.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

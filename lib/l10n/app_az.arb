@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Qiblə üçün yer tələb olunur",
   "qiblaLocationRequiredBody": "Qiblə kompasından istifadə etməzdən əvvəl faktiki yerinizi təyin edin ki, istiqamət dəqiq hesablana bilsin.",
   "placesDataSourceUnavailableTitle": "Yer məlumatları əlçatan deyil",
-  "placesDataSourceUnavailableBody": "Doğrulanmış yerlər datasının son nöqtəsi bu quruluş üçün hələ konfiqurasiya edilməyib. Yaxınlıqda axtarışı aktiv etməzdən əvvəl PLACES_OVERPASS_API_URL-ni təsdiq edilmiş proksi və ya provayderə təyin edin."
+  "placesDataSourceUnavailableBody": "Doğrulanmış yerlər datasının son nöqtəsi bu quruluş üçün hələ konfiqurasiya edilməyib. Yaxınlıqda axtarışı aktiv etməzdən əvvəl PLACES_OVERPASS_API_URL-ni təsdiq edilmiş proksi və ya provayderə təyin edin.",
+  "tafsirCacheUnavailable": "Doğrulanmış təfsir hələ oflayn olaraq mövcud deyil. Baxışdan əvvəl mənbəli təfsir verilənlər bazasını sinxronlaşdırın."
 }

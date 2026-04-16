@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Miesto požadované pre Qibla",
   "qiblaLocationRequiredBody": "Pred použitím kompasu Qibla nastavte svoju skutočnú polohu, aby bolo možné presne vypočítať smer.",
   "placesDataSourceUnavailableTitle": "Údaje o miestach nie sú k dispozícii",
-  "placesDataSourceUnavailableBody": "Pre túto zostavu ešte nie je nakonfigurovaný koncový bod údajov overených miest. Pred povolením vyhľadávania v okolí nastavte PLACES_OVERPASS_API_URL na schváleného proxy alebo poskytovateľa."
+  "placesDataSourceUnavailableBody": "Pre túto zostavu ešte nie je nakonfigurovaný koncový bod údajov overených miest. Pred povolením vyhľadávania v okolí nastavte PLACES_OVERPASS_API_URL na schváleného proxy alebo poskytovateľa.",
+  "tafsirCacheUnavailable": "Overený tafsir zatiaľ nie je dostupný offline. Pred prehliadaním synchronizujte zdrojovú množinu údajov tafsir."
 }

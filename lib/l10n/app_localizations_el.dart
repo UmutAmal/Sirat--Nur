@@ -255,6 +255,10 @@ class AppLocalizationsEl extends AppLocalizations {
       'Η επιλεγμένη πηγή tafsir δεν επέστρεψε καταχωρήσεις.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Το επαληθευμένο tafsir δεν είναι ακόμη διαθέσιμο εκτός σύνδεσης. Συγχρονίστε ένα σύνολο δεδομένων tafsir προέλευσης πριν από την περιήγηση.';
+
+  @override
   String get bookmarks => 'Σελιδοδείκτες';
 
   @override

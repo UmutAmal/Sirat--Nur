@@ -253,6 +253,10 @@ class AppLocalizationsIs extends AppLocalizations {
       'Valin tafsir heimild skilaði engum færslum.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Staðfest tafsir er ekki enn í boði án nettengingar. Samstilltu gagnasett af tafsir áður en þú vafrar.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

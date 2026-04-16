@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Qibla tan hmun mamawh a ni",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
   "placesDataSourceUnavailableTitle": "Data awm lohna hmunah a dah",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "tafsirCacheUnavailable": "Verified tafsir hi offline ah a la awm lo. Browse hmain sourced tafsir dataset chu sync hmasa phawt ang che."
 }

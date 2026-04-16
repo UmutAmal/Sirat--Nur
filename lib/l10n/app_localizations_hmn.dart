@@ -253,6 +253,10 @@ class AppLocalizationsHmn extends AppLocalizations {
       'Cov xaiv tafsir qhov chaw xa rov qab tsis muaj kev nkag.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir tseem tsis tau muaj offline. Sync ib qhov chaw tafsir dataset ua ntej browsing.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

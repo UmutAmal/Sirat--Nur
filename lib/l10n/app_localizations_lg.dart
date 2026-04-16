@@ -253,6 +253,10 @@ class AppLocalizationsLg extends AppLocalizations {
       'Ensibuko ya tafsir erongooseddwa teyazzaayo biwandiiko byonna.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir tennafuna ku mukutu gwa yintaneeti. Sync sourced tafsir dataset nga tonnaba kugenda mu maaso.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

@@ -253,6 +253,10 @@ class AppLocalizationsKa extends AppLocalizations {
       'არჩეული tafsir წყარო არ დააბრუნა ჩანაწერები.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'დადასტურებული tafsir ჯერ არ არის ხელმისაწვდომი ხაზგარეშე. დაათვალიერეთ წყაროდან მიღებული tafsir მონაცემთა ნაკრების სინქრონიზაცია.';
+
+  @override
   String get bookmarks => 'სანიშნეები';
 
   @override

@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Wurin da ake buƙata don alƙibla",
   "qiblaLocationRequiredBody": "Saita ainihin wurinka kafin amfani da kamfas ɗin alƙibla domin a iya ƙididdige alkibla daidai.",
   "placesDataSourceUnavailableTitle": "Babu bayanan wuraren",
-  "placesDataSourceUnavailableBody": "Ba a saita madaidaitan wuraren ƙarshen bayanan don wannan ginin ba tukuna. Saita PLACES_OVERPASS_API_URL zuwa amintaccen wakili ko mai bayarwa kafin kunna bincike na kusa."
+  "placesDataSourceUnavailableBody": "Ba a saita madaidaitan wuraren ƙarshen bayanan don wannan ginin ba tukuna. Saita PLACES_OVERPASS_API_URL zuwa amintaccen wakili ko mai bayarwa kafin kunna bincike na kusa.",
+  "tafsirCacheUnavailable": "Babu tabbacin tafsirin har yanzu. Daidaita saitin bayanan tafsir da aka samo asali kafin lilo."
 }

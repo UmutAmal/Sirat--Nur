@@ -253,6 +253,10 @@ class AppLocalizationsHt extends AppLocalizations {
       'Sous tafsir ki te chwazi a pa retounen okenn antre.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir verifye poko disponib offline. Senkronize yon seri done tafsir souse anvan ou navige.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

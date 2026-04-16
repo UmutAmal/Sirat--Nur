@@ -253,6 +253,10 @@ class AppLocalizationsMk extends AppLocalizations {
       'Избраниот извор на тафсир не врати записи.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Потврдениот тафсир сè уште не е достапен офлајн. Синхронизирајте изворна база на податоци за тафсири пред да прелистувате.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

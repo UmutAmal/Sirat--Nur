@@ -257,6 +257,10 @@ class AppLocalizationsTl extends AppLocalizations {
       'Walang naibalik na mga entry ang napiling tafsir source.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Ang na-verify na tafsir ay hindi pa available offline. Mag-sync ng isang pinagkunan na dataset ng tafsir bago mag-browse.';
+
+  @override
   String get bookmarks => 'Mga bookmark';
 
   @override

@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Malo ofunikira ku Qibla",
   "qiblaLocationRequiredBody": "Khazikitsani malo anu enieni musanagwiritse ntchito kampasi ya Qibla kuti kolowera kuwerengedwe molondola.",
   "placesDataSourceUnavailableTitle": "Deta yamalo palibe",
-  "placesDataSourceUnavailableBody": "Malo otsimikizika omaliza sanakhazikitsidwe kuti apangidwe pano. Khazikitsani PLACES_OVERPASS_API_URL kukhala wovomerezeka kapena wopereka chithandizo musanayatse kusaka pafupi."
+  "placesDataSourceUnavailableBody": "Malo otsimikizika omaliza sanakhazikitsidwe kuti apangidwe pano. Khazikitsani PLACES_OVERPASS_API_URL kukhala wovomerezeka kapena wopereka chithandizo musanayatse kusaka pafupi.",
+  "tafsirCacheUnavailable": "Tafsir yotsimikizika sinapezekebe pa intaneti. Gwirizanitsani deta ya tafsir yochokera musanayambe kusakatula."
 }

@@ -2005,6 +2005,7 @@ void main() {
           'tafsirLoadingProgress',
           'tafsirApiStatusError',
           'tafsirNoEntriesReturned',
+          'tafsirCacheUnavailable',
           'quranLoadFailed',
           'placesLocationRequiredTitle',
           'placesLocationRequiredBody',
@@ -2042,6 +2043,7 @@ void main() {
           'tafsirLoadingProgress',
           'tafsirApiStatusError',
           'tafsirNoEntriesReturned',
+          'tafsirCacheUnavailable',
         ];
 
         for (final file

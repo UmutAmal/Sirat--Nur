@@ -255,6 +255,10 @@ class AppLocalizationsDe extends AppLocalizations {
       'Die ausgewählte Tafsir-Quelle hat keine Einträge zurückgegeben.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verifizierter Tafsir ist noch nicht offline verfügbar. Synchronisieren Sie einen Tafsir-Datensatz mit Quellen, bevor Sie ihn durchsuchen.';
+
+  @override
   String get bookmarks => 'Lesezeichen';
 
   @override

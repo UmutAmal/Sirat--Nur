@@ -254,6 +254,10 @@ class AppLocalizationsMt extends AppLocalizations {
       'Is-sors ta\' tafsir magħżul ma rritorna l-ebda dħul.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir ivverifikat għadu mhux disponibbli offline. Issinkronizza sett tad-dejta ta\' tafsir li ġej qabel ma tibbrawżja.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

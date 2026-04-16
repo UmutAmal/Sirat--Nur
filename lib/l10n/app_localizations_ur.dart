@@ -253,6 +253,10 @@ class AppLocalizationsUr extends AppLocalizations {
       'منتخب کردہ تفسیر ماخذ نے کوئی اندراج نہیں لوٹایا۔';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'تصدیق شدہ تفسیر ابھی آف لائن دستیاب نہیں ہے۔ براؤز کرنے سے پہلے سورس شدہ تفسیر ڈیٹاسیٹ کو سنک کریں۔';
+
+  @override
   String get bookmarks => 'بک مارکس';
 
   @override

@@ -32,6 +32,10 @@ void main() {
       localizeTafsirError(en, TafsirException('no_entries')),
       'The selected tafsir source returned no entries.',
     );
+    expect(
+      localizeTafsirError(en, TafsirException('cache_missing')),
+      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.',
+    );
   });
 
   test('tafsir service canonicalizes only verified source aliases', () {
@@ -85,6 +89,7 @@ void main() {
 
     expect(source, contains('TafsirLocalService.defaultTafsirSourceId'));
     expect(source, isNot(contains("availableTafsirs.first['id']!")));
+    expect(source, isNot(contains('TafsirFetchPolicy.allowExternalRefresh')));
     expect(source, contains('final error = _error;'));
     expect(source, isNot(contains('_error!')));
   });
@@ -106,5 +111,19 @@ void main() {
 
     expect(source, contains("TafsirException('unsupported_source'"));
     expect(source, isNot(contains('?? 169')));
+  });
+
+  test('tafsir loader defaults to cache-only runtime fetch policy', () {
+    final source = File(
+      'lib/core/services/tafsir_local_service.dart',
+    ).readAsStringSync();
+    final loaderSource = source.substring(source.indexOf('class TafsirLoader'));
+
+    expect(source, contains('this.fetchPolicy = TafsirFetchPolicy.cacheOnly'));
+    expect(loaderSource, contains("TafsirException('cache_missing'"));
+    expect(
+      loaderSource.indexOf('fetchPolicy == TafsirFetchPolicy.cacheOnly'),
+      lessThan(loaderSource.indexOf('downloadTafsirForSurah')),
+    );
   });
 }

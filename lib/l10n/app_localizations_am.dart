@@ -251,6 +251,10 @@ class AppLocalizationsAm extends AppLocalizations {
   String get tafsirNoEntriesReturned => 'የተመረጠው የተፍሲር ምንጭ ምንም ግቤት አልተመለሰም።';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'የተረጋገጠ ተፍሲር እስካሁን ከመስመር ውጭ አይገኝም። ከማሰስዎ በፊት የተገኘ የታፍሲር ዳታ ስብስብ ያመሳስሉ።';
+
+  @override
   String get bookmarks => 'ዕልባቶች';
 
   @override

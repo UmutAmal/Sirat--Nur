@@ -257,6 +257,10 @@ class AppLocalizationsAy extends AppLocalizations {
       'Ajllit tafsir phunchhawix janiw kuna qillqt’atanakas kutt’ayawaykiti.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verificado tafsir ukax janiw offline ukankiti. Mä fuente tafsir datos conjunto ukar sincronización janïr uñakipt’kasa.';
+
+  @override
   String get bookmarks => 'Markachirinaka';
 
   @override

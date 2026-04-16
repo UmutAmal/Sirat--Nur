@@ -253,6 +253,10 @@ class AppLocalizationsMn extends AppLocalizations {
       'Сонгогдсон тафсир эх сурвалж ямар ч оруулга ирүүлээгүй.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Баталгаажсан тафсир хараахан офлайнаар байхгүй байна. Хайлтын өмнө эх сурвалжийн тафсир датасетийг синк хийнэ үү.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

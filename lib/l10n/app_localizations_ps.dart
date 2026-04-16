@@ -253,6 +253,10 @@ class AppLocalizationsPs extends AppLocalizations {
       'د تفسير غوره شوې سرچينه هيڅ داخله نه ده راګرځولې.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'تصدیق شوی تفسیر لا تر اوسه آفلاین شتون نلري. د لټون کولو دمخه د منبع شوي تفسیر ډیټاسیټ همغږي کړئ.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

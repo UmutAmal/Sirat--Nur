@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "ንቂብላ ዘድሊ ቦታ",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
   "placesDataSourceUnavailableTitle": "ዳታ ኣብ ዘይርከብ ቦታ የቐምጥ",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "tafsirCacheUnavailable": "Verified tafsir ገና ካብ መስመር ወጻኢ ኣይርከብን። ቅድሚ ምድህሳስ ምንጪ ዘለዎ tafsir ዳታሴት ምትእስሳር።"
 }

@@ -934,6 +934,12 @@ abstract class AppLocalizations {
   /// **'The selected tafsir source returned no entries.'**
   String get tafsirNoEntriesReturned;
 
+  /// No description provided for @tafsirCacheUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.'**
+  String get tafsirCacheUnavailable;
+
   /// No description provided for @bookmarks.
   ///
   /// In en, this message translates to:

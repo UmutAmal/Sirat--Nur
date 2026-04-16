@@ -257,6 +257,10 @@ class AppLocalizationsCa extends AppLocalizations {
       'La font de tafsir seleccionada no ha retornat cap entrada.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir verificat encara no està disponible fora de línia. Sincronitza un conjunt de dades tafsir d\'origen abans de navegar.';
+
+  @override
   String get bookmarks => 'Adreces d\'interès';
 
   @override

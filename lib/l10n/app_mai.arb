@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "किबला के लिये स्थान आवश्यक",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
   "placesDataSourceUnavailableTitle": "डेटा अनुपलब्ध राखैत अछि",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "tafsirCacheUnavailable": "सत्यापित tafsir एखन धरि ऑफलाइन उपलब्ध नहि अछि। ब्राउजिंग सं पहिने एकटा स्रोत तफसीर डाटासेट सिंक करू."
 }

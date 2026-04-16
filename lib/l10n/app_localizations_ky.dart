@@ -256,6 +256,10 @@ class AppLocalizationsKy extends AppLocalizations {
       'Тандалган тафсир булагы эч кандай жазууларды кайтарган жок.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Текшерилген тафсир азырынча оффлайнда жеткиликтүү эмес. Серептөөдөн мурун булактан алынган тафсир маалымат топтомун синхрондоштуруу.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

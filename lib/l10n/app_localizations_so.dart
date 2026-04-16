@@ -254,6 +254,10 @@ class AppLocalizationsSo extends AppLocalizations {
       'Isha tafsiir ee la xushay ma soo celin wax gelinta';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsiir la xaqiijiyay weli lama heli karo offline. Isku xidh xogta tafsiirka laga soo xigtay ka hor inta aanad baadhin';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

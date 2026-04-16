@@ -253,6 +253,10 @@ class AppLocalizationsLa extends AppLocalizations {
       'Electus fons tafsir ingressus nullos reddidit.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset ante pasco.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

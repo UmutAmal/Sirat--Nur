@@ -137,6 +137,7 @@
     }
   },
   "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
+  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

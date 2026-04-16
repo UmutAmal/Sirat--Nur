@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Qiblarako beharrezkoa den kokapena",
   "qiblaLocationRequiredBody": "Ezarri zure benetako kokapena Qibla iparrorratza erabili aurretik, norabidea zehaztasunez kalkulatu ahal izateko.",
   "placesDataSourceUnavailableTitle": "Tokien datuak ez daude erabilgarri",
-  "placesDataSourceUnavailableBody": "Egiaztatutako lekuen datuen amaiera-puntua ez dago konfiguratuta oraindik konfigurazio honetarako. Ezarri PLACES_OVERPASS_API_URL onartutako proxy edo hornitzaile batean inguruko bilaketa gaitu aurretik."
+  "placesDataSourceUnavailableBody": "Egiaztatutako lekuen datuen amaiera-puntua ez dago konfiguratuta oraindik konfigurazio honetarako. Ezarri PLACES_OVERPASS_API_URL onartutako proxy edo hornitzaile batean inguruko bilaketa gaitu aurretik.",
+  "tafsirCacheUnavailable": "Egiaztatutako tafsir ez dago oraindik lineaz kanpo erabilgarri. Sinkronizatu iturriko tafsir datu-multzo bat arakatu aurretik."
 }

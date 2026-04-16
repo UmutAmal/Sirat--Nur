@@ -253,6 +253,10 @@ class AppLocalizationsAr extends AppLocalizations {
       'لم يُرجع مصدر التفسير المحدد أي إدخالات.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'التفسير الذي تم التحقق منه غير متوفر حاليا. مزامنة مجموعة بيانات التفسير المصدرية قبل التصفح.';
+
+  @override
   String get bookmarks => 'الإشارات المرجعية';
 
   @override

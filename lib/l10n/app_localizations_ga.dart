@@ -253,6 +253,10 @@ class AppLocalizationsGa extends AppLocalizations {
       'Níor chuir an fhoinse tafsir roghnaithe aon iontrálacha ar ais.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Níl tafsir deimhnithe ar fáil as líne fós. Sioncronaigh tacar sonraí tafsir foinsithe roimh bhrabhsáil.';
+
+  @override
   String get bookmarks => 'Leabharmharcanna';
 
   @override

@@ -254,6 +254,10 @@ class AppLocalizationsMg extends AppLocalizations {
       'Ny loharanon\'ny tafsir nofantenana dia tsy naveriny.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Mbola tsy misy an-tserasera ny tafsir voamarina. Ampifanaraho ny angon-drakitra misy tafsir alohan\'ny hijerena.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

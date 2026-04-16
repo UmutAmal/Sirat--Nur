@@ -253,6 +253,10 @@ class AppLocalizationsCo extends AppLocalizations {
       'A fonte di tafsir selezziunata ùn hà restituutu micca entrate.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir verificatu ùn hè micca dispunibule ancu offline. Sincronizza un inseme di dati tafsir prima di navigà.';
+
+  @override
   String get bookmarks => 'Segnalibri';
 
   @override

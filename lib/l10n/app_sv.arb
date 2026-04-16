@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Plats krävs för Qibla",
   "qiblaLocationRequiredBody": "Ställ in din faktiska plats innan du använder Qibla-kompassen så att riktningen kan beräknas korrekt.",
   "placesDataSourceUnavailableTitle": "Platsdata är inte tillgänglig",
-  "placesDataSourceUnavailableBody": "En verifierad platsdataslutpunkt är inte konfigurerad för den här versionen ännu. Ställ in PLACES_OVERPASS_API_URL till en godkänd proxy eller leverantör innan du aktiverar sökning i närheten."
+  "placesDataSourceUnavailableBody": "En verifierad platsdataslutpunkt är inte konfigurerad för den här versionen ännu. Ställ in PLACES_OVERPASS_API_URL till en godkänd proxy eller leverantör innan du aktiverar sökning i närheten.",
+  "tafsirCacheUnavailable": "Verifierad tafsir är inte tillgänglig offline än. Synkronisera en hämtad tafsir-datauppsättning innan du surfar."
 }

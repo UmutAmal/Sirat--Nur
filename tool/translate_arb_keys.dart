@@ -594,6 +594,7 @@ bool _mustStaySingleLine(String key) {
       key == 'tafsirLoadingProgress' ||
       key == 'tafsirApiStatusError' ||
       key == 'tafsirNoEntriesReturned' ||
+      key == 'tafsirCacheUnavailable' ||
       key == 'premiumProductUnavailable' ||
       key == 'premiumPurchaseFailed' ||
       key == 'prayerCompletion' ||

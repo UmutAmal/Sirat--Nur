@@ -253,6 +253,10 @@ class AppLocalizationsMai extends AppLocalizations {
       'चयनित तफसीर स्रोत कोनो प्रविष्टि वापस नहि केलक.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'सत्यापित tafsir एखन धरि ऑफलाइन उपलब्ध नहि अछि। ब्राउजिंग सं पहिने एकटा स्रोत तफसीर डाटासेट सिंक करू.';
+
+  @override
   String get bookmarks => 'बुकमार्क';
 
   @override

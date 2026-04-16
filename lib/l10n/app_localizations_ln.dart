@@ -253,6 +253,10 @@ class AppLocalizationsLn extends AppLocalizations {
       'Source ya tafsir oyo eponami ezongisaki ba entrées te.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verifié tafsir ezali nanu te hors ligne. Sync ensemble ya ba données ya tafsir sourced avant ya ko naviguer.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

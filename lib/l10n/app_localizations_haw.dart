@@ -253,6 +253,10 @@ class AppLocalizationsHaw extends AppLocalizations {
       'ʻAʻole i hoʻihoʻi mai ke kumu tafsir i koho ʻia.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'ʻAʻole loaʻa ka tafsir i hōʻoia ʻia ma waho. E hoʻopaʻa i kahi waihona tafsir kumu ma mua o ka nānā ʻana.';
+
+  @override
   String get bookmarks => 'Nā kaha puke';
 
   @override

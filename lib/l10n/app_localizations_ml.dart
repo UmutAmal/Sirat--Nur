@@ -253,6 +253,10 @@ class AppLocalizationsMl extends AppLocalizations {
       'തിരഞ്ഞെടുത്ത തഫ്സീർ ഉറവിടം എൻട്രികളൊന്നും നൽകിയിട്ടില്ല.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'പരിശോധിച്ച തഫ്സീർ ഇതുവരെ ഓഫ്‌ലൈനിൽ ലഭ്യമല്ല. ബ്രൗസുചെയ്യുന്നതിന് മുമ്പ് ഒരു ഉറവിട തഫ്‌സിർ ഡാറ്റാസെറ്റ് സമന്വയിപ്പിക്കുക.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

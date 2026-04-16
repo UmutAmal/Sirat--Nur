@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Lokasi diperlukeun pikeun Kiblat",
   "qiblaLocationRequiredBody": "Setel lokasi saleresna anjeun sateuacan nganggo kompas kiblat supados arahna tiasa diitung sacara akurat.",
   "placesDataSourceUnavailableTitle": "Data tempat teu sadia",
-  "placesDataSourceUnavailableBody": "Titik data tempat anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Setel PLACES_OVERPASS_API_URL ka proksi atanapi panyadia anu disatujuan sateuacan ngaktipkeun milarian caket dieu."
+  "placesDataSourceUnavailableBody": "Titik data tempat anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Setel PLACES_OVERPASS_API_URL ka proksi atanapi panyadia anu disatujuan sateuacan ngaktipkeun milarian caket dieu.",
+  "tafsirCacheUnavailable": "Tafsir anu diverifikasi henteu acan sayogi offline. Nyingkronkeun dataset tafsir sumber samemeh browsing."
 }

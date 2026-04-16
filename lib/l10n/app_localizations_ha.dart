@@ -253,6 +253,10 @@ class AppLocalizationsHa extends AppLocalizations {
       'Madogarar tafsirin da aka zaɓa ba ta dawo ba.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Babu tabbacin tafsirin har yanzu. Daidaita saitin bayanan tafsir da aka samo asali kafin lilo.';
+
+  @override
   String get bookmarks => 'Alamomi';
 
   @override

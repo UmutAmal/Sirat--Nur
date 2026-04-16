@@ -252,6 +252,10 @@ class AppLocalizationsSv extends AppLocalizations {
       'Den valda tafsirkällan returnerade inga poster.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verifierad tafsir är inte tillgänglig offline än. Synkronisera en hämtad tafsir-datauppsättning innan du surfar.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

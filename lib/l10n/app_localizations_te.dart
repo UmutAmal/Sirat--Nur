@@ -253,6 +253,10 @@ class AppLocalizationsTe extends AppLocalizations {
       'ఎంచుకున్న తఫ్సీర్ మూలం ఎలాంటి ఎంట్రీలను అందించలేదు.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'ధృవీకరించబడిన తఫ్సీర్ ఇంకా ఆఫ్‌లైన్‌లో అందుబాటులో లేదు. బ్రౌజ్ చేయడానికి ముందు మూలాధారమైన tafsir డేటాసెట్‌ను సమకాలీకరించండి.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

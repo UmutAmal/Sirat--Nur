@@ -254,6 +254,10 @@ class AppLocalizationsBn extends AppLocalizations {
       'নির্বাচিত তাফসির উৎস কোনো এন্ট্রি ফেরত দেয়নি।';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'যাচাইকৃত তাফসির এখনও অফলাইনে উপলব্ধ নয়। ব্রাউজ করার আগে একটি উৎসকৃত তাফসির ডেটাসেট সিঙ্ক করুন।';
+
+  @override
   String get bookmarks => 'বুকমার্ক';
 
   @override

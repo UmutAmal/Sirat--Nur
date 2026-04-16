@@ -252,6 +252,10 @@ class AppLocalizationsSn extends AppLocalizations {
       'Mabviro etafsir akasarudzwa haana kudzoka.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir haisati yave kuwanikwa kunze kwenyika. Batanidza dataset yakatorwa tafsir usati wabhurawuza.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

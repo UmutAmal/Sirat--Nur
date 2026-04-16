@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Qibla jaoks vajalik asukoht",
   "qiblaLocationRequiredBody": "Enne Qibla kompassi kasutamist määrake oma tegelik asukoht, et suunda saaks täpselt arvutada.",
   "placesDataSourceUnavailableTitle": "Kohtade andmed pole saadaval",
-  "placesDataSourceUnavailableBody": "Kinnitatud kohtade andmete lõpp-punkt pole selle järgu jaoks veel konfigureeritud. Enne läheduses asuva otsingu lubamist määrake PLACES_OVERPASS_API_URL kinnitatud puhverserverile või pakkujale."
+  "placesDataSourceUnavailableBody": "Kinnitatud kohtade andmete lõpp-punkt pole selle järgu jaoks veel konfigureeritud. Enne läheduses asuva otsingu lubamist määrake PLACES_OVERPASS_API_URL kinnitatud puhverserverile või pakkujale.",
+  "tafsirCacheUnavailable": "Kinnitatud tafsir pole veel võrguühenduseta saadaval. Enne sirvimist sünkroonige pärit tafsiri andmestik."
 }

@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Location required for Qibla",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
   "placesDataSourceUnavailableTitle": "سانلىق مەلۇماتلارنى ئىشلەتكىلى بولمايدۇ",
-  "placesDataSourceUnavailableBody": "دەلىللەنگەن ئورۇنلارنىڭ سانلىق مەلۇمات نۇقتىسى بۇ قۇرۇلۇش ئۈچۈن تېخى تەڭشەلمىگەن. يېقىن ئەتراپتىكى ئىزدەشنى قوزغىتىشتىن بۇرۇن PLACES_OVERPASS_API_URL نى تەستىقلانغان ۋاكالەتچى ياكى تەمىنلىگۈچىگە تەڭشەڭ."
+  "placesDataSourceUnavailableBody": "دەلىللەنگەن ئورۇنلارنىڭ سانلىق مەلۇمات نۇقتىسى بۇ قۇرۇلۇش ئۈچۈن تېخى تەڭشەلمىگەن. يېقىن ئەتراپتىكى ئىزدەشنى قوزغىتىشتىن بۇرۇن PLACES_OVERPASS_API_URL نى تەستىقلانغان ۋاكالەتچى ياكى تەمىنلىگۈچىگە تەڭشەڭ.",
+  "tafsirCacheUnavailable": "دەلىللەنگەن تەفسىر تېخى تورسىز ھالەتتە يوق. كۆرۈشتىن بۇرۇن مەنبەلىك تەفسىر سانلىق مەلۇمات جەدۋىلىنى ماسقەدەملەڭ."
 }

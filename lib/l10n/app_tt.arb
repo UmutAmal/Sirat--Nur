@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Location required for Qibla",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
   "placesDataSourceUnavailableTitle": "Мәгълүматлар юк",
-  "placesDataSourceUnavailableBody": "Тикшерелгән урыннар мәгълүмат ахыры бу төзелеш өчен конфигурацияләнмәгән. Якындагы эзләүне рөхсәт итәр алдыннан PLACES_OVERPASS_API_URL расланган прокси яки провайдерга куегыз."
+  "placesDataSourceUnavailableBody": "Тикшерелгән урыннар мәгълүмат ахыры бу төзелеш өчен конфигурацияләнмәгән. Якындагы эзләүне рөхсәт итәр алдыннан PLACES_OVERPASS_API_URL расланган прокси яки провайдерга куегыз.",
+  "tafsirCacheUnavailable": "Тикшерелгән тафсир әле оффлайнда юк. Каралганчы, тафсир мәгълүматлар җыелмасын синхронлаштырыгыз."
 }

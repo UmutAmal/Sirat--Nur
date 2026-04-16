@@ -253,6 +253,10 @@ class AppLocalizationsSw extends AppLocalizations {
       'Chanzo cha tafsir kilichochaguliwa hakikurejesha maingizo.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir iliyothibitishwa bado haipatikani nje ya mtandao. Sawazisha mkusanyiko wa data wa tafsir kabla ya kuvinjari.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

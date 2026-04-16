@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Locatie vereist voor Qibla",
   "qiblaLocationRequiredBody": "Stel uw werkelijke locatie in voordat u het Qibla-kompas gebruikt, zodat de richting nauwkeurig kan worden berekend.",
   "placesDataSourceUnavailableTitle": "Plaatsgegevens niet beschikbaar",
-  "placesDataSourceUnavailableBody": "Er is nog geen geverifieerd gegevenseindpunt voor plaatsen geconfigureerd voor deze build. Stel PLACES_OVERPASS_API_URL in op een goedgekeurde proxy of provider voordat u zoeken in de buurt inschakelt."
+  "placesDataSourceUnavailableBody": "Er is nog geen geverifieerd gegevenseindpunt voor plaatsen geconfigureerd voor deze build. Stel PLACES_OVERPASS_API_URL in op een goedgekeurde proxy of provider voordat u zoeken in de buurt inschakelt.",
+  "tafsirCacheUnavailable": "Geverifieerde tafsir is nog niet offline beschikbaar. Synchroniseer een afkomstige tafsir-dataset voordat u gaat browsen."
 }

@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Mahali panahitajika kwa Qibla",
   "qiblaLocationRequiredBody": "Weka eneo lako halisi kabla ya kutumia dira ya Qibla ili mwelekeo uweze kuhesabiwa kwa usahihi.",
   "placesDataSourceUnavailableTitle": "Data ya maeneo haipatikani",
-  "placesDataSourceUnavailableBody": "Mwisho wa data ya maeneo yaliyothibitishwa bado haujasanidiwa kwa muundo huu. Weka PLACES_OVERPASS_API_URL iwe proksi au mtoa huduma aliyeidhinishwa kabla ya kuwezesha utafutaji ulio karibu."
+  "placesDataSourceUnavailableBody": "Mwisho wa data ya maeneo yaliyothibitishwa bado haujasanidiwa kwa muundo huu. Weka PLACES_OVERPASS_API_URL iwe proksi au mtoa huduma aliyeidhinishwa kabla ya kuwezesha utafutaji ulio karibu.",
+  "tafsirCacheUnavailable": "Tafsir iliyothibitishwa bado haipatikani nje ya mtandao. Sawazisha mkusanyiko wa data wa tafsir kabla ya kuvinjari."
 }

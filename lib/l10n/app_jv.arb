@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Lokasi dibutuhake kanggo Kiblat",
   "qiblaLocationRequiredBody": "Setel lokasi asline sadurunge nggunakake kompas kiblat supaya arah bisa diitung kanthi akurat.",
   "placesDataSourceUnavailableTitle": "Data panggonan ora kasedhiya",
-  "placesDataSourceUnavailableBody": "Titik pungkasan data panggonan sing wis diverifikasi durung dikonfigurasi kanggo mbangun iki. Setel PLACES_OVERPASS_API_URL menyang proxy utawa panyedhiya sing disetujoni sadurunge ngaktifake panelusuran sing cedhak."
+  "placesDataSourceUnavailableBody": "Titik pungkasan data panggonan sing wis diverifikasi durung dikonfigurasi kanggo mbangun iki. Setel PLACES_OVERPASS_API_URL menyang proxy utawa panyedhiya sing disetujoni sadurunge ngaktifake panelusuran sing cedhak.",
+  "tafsirCacheUnavailable": "Tafsir sing diverifikasi durung kasedhiya offline. Nyelarasake dataset tafsir sumber sadurunge browsing."
 }

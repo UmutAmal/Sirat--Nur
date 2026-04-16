@@ -253,6 +253,10 @@ class AppLocalizationsGu extends AppLocalizations {
       'પસંદ કરેલ તફસીર સ્ત્રોતે કોઈ એન્ટ્રી પાછી આપી નથી.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'ચકાસાયેલ તફસીર હજી ઑફલાઇન ઉપલબ્ધ નથી. બ્રાઉઝ કરતા પહેલા સ્ત્રોત કરેલ તફસીર ડેટાસેટને સમન્વયિત કરો.';
+
+  @override
   String get bookmarks => 'બુકમાર્ક્સ';
 
   @override

@@ -255,6 +255,10 @@ class AppLocalizationsHy extends AppLocalizations {
       'Ընտրված թաֆսիրի աղբյուրը ոչ մի գրառում չի վերադարձրել:';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Ստուգված տաֆսիրը դեռ հասանելի չէ անցանց: Զննարկումից առաջ համաժամեցեք աղբյուրից ստացված թաֆսիրի տվյալների հավաքածուն:';
+
+  @override
   String get bookmarks => 'Էջանիշեր';
 
   @override

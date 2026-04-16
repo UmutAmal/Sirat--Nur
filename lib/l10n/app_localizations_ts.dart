@@ -256,6 +256,10 @@ class AppLocalizationsTs extends AppLocalizations {
       'Xihlovo xa tafsir lexi hlawuriweke a xi vuyisanga na swilo leswi nghenisiweke.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir a yi kumeki offline ku fikela sweswi. Fambisanisa dataset ya tafsir leyi nga na xihlovo u nga si pfula.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

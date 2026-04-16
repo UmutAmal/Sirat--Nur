@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Vendndodhja e kërkuar për Kibla",
   "qiblaLocationRequiredBody": "Vendosni vendndodhjen tuaj aktuale përpara se të përdorni busullën e Kiblës në mënyrë që drejtimi të mund të llogaritet me saktësi.",
   "placesDataSourceUnavailableTitle": "Të dhënat e vendeve të padisponueshme",
-  "placesDataSourceUnavailableBody": "Një pikë fundore e të dhënave të verifikuara të vendeve nuk është konfiguruar ende për këtë ndërtim. Cakto PLACES_OVERPASS_API_URL te një përfaqësues ose ofrues i miratuar përpara se të aktivizosh kërkimin në afërsi."
+  "placesDataSourceUnavailableBody": "Një pikë fundore e të dhënave të verifikuara të vendeve nuk është konfiguruar ende për këtë ndërtim. Cakto PLACES_OVERPASS_API_URL te një përfaqësues ose ofrues i miratuar përpara se të aktivizosh kërkimin në afërsi.",
+  "tafsirCacheUnavailable": "Tefsir i verifikuar nuk ofrohet ende jashtë linje. Sinkronizoni një grup të dhënash tafsir me burim përpara se të shfletoni."
 }

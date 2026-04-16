@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Wymagana lokalizacja dla Qibla",
   "qiblaLocationRequiredBody": "Przed użyciem kompasu Qibla ustaw swoją rzeczywistą lokalizację, aby móc dokładnie obliczyć kierunek.",
   "placesDataSourceUnavailableTitle": "Dane o miejscach są niedostępne",
-  "placesDataSourceUnavailableBody": "Punkt końcowy danych zweryfikowanych miejsc nie jest jeszcze skonfigurowany dla tej kompilacji. Przed włączeniem wyszukiwania w pobliżu ustaw PLACES_OVERPASS_API_URL na zatwierdzonego proxy lub dostawcę."
+  "placesDataSourceUnavailableBody": "Punkt końcowy danych zweryfikowanych miejsc nie jest jeszcze skonfigurowany dla tej kompilacji. Przed włączeniem wyszukiwania w pobliżu ustaw PLACES_OVERPASS_API_URL na zatwierdzonego proxy lub dostawcę.",
+  "tafsirCacheUnavailable": "Zweryfikowany tafsir nie jest jeszcze dostępny w trybie offline. Przed przeglądaniem zsynchronizuj źródłowy zbiór danych Tafsir."
 }

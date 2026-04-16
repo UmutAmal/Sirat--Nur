@@ -253,6 +253,10 @@ class AppLocalizationsAz extends AppLocalizations {
       'Seçilmiş təfsir mənbəyi heç bir qeydi qaytarmadı.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Doğrulanmış təfsir hələ oflayn olaraq mövcud deyil. Baxışdan əvvəl mənbəli təfsir verilənlər bazasını sinxronlaşdırın.';
+
+  @override
   String get bookmarks => 'Əlfəcinlər';
 
   @override

@@ -9585,3 +9585,64 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi tafsir external API bagimliligini incele: `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart` su an `https://api.quran.com/api/v4/tafsirs/...` kaynagina runtime refresh icin bagli. Offline-first ve "harici link kapanirsa bozulmasin" hedefi icin seed/storage veya acik veri paketi stratejisi ayrica tasarlanip uygulanmali.
+
+## 2026-04-16 TUR-244 — Keep Tafsir Runtime Offline-First
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart` icinde `TafsirFetchPolicy` eklendi ve `TafsirLoader` varsayilani `cacheOnly` yapildi.
+- `TafsirLoader.loadTafsir` artik local cache bosken veya runtime refresh cache-only moddayken harici HTTP indirme baslatmiyor; `TafsirException('cache_missing')` uretiyor.
+- `downloadTafsirForSurah` ve `downloadAllTafsirs` fonksiyonlari tamamen silinmedi; seed/operator veri hazirlama yolu olarak opt-in kaldi, ancak uygulama sayfasi bu moda gecmiyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart` icinde `cache_missing` hatasi `AppLocalizations` uzerinden kullaniciya durust unavailable mesaji olarak baglandi.
+- `tafsirCacheUnavailable` anahtari `lib\l10n\app_*.arb` dosyalarinin tamamina eklendi ve `flutter gen-l10n` ile generated localization dosyalari yenilendi.
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart` ve `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart` yeni tafsir cache mesajini tek satir/placeholder guard kapsaminda izliyor.
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart` runtime loader'in cache-only kalmasini ve `cache_missing` mesajinin localize edilmesini guard ediyor.
+
+### Neden Yapildi
+- TUR-243 sonrasi kalan en yuksek tafsir riski runtime external API bagimliligiydi.
+- Kanit: `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:156` `downloadTafsirForSurah` fonksiyonunu tanimliyor ve `:168` satirinda `https://api.quran.com/api/v4/tafsirs/...` adresine gidiyordu.
+- Kanit: ayni dosyada `TafsirLoader.loadTafsir` cache bosken `downloadTafsirForSurah` cagiriyordu; kullanici tarafindan acilan Tafsir sayfasi bunun uzerinden runtime HTTP'ye dusuyordu.
+- Dini icerikte harici link kapanmasi, kaynak degismesi veya gecici API hatasi uygulamanin yanlis/eksik veri gostermesine yol acabilirdi.
+- Kullanici hedefi "harici linkler kapanabilir, database/storage kaynakli olsun" oldugu icin runtime fallback kapatildi; veri yoksa sahte basari veya sessiz harici kaynak yerine acik unavailable state gosteriliyor.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Runtime tafsir ekraninin varsayilan yolu artik local cache disina cikmiyor.
+- Harici Quran.com tafsir endpoint'i uygulama browsing akisi icin zorunlu degil; sadece ileride operator/seed araci tarafindan explicit policy ile kullanilabilecek.
+- Cache bos oldugunda kullanici "tefsir yok" veya genel hata yerine dogrulanmis offline tafsir dataset'i bekledigini acikca gorur.
+- Yeni `tafsirCacheUnavailable` anahtari 196 ARB dosyasina eklendi; 64 locale guvenli ceviri uretilemedigi icin Ingilizce fallback'te kaldi, uydurma dini ceviri yapilmadi.
+- Generated l10n yuzeyi yeni anahtari tum locale siniflarina tasidi.
+
+### Test Sonucu
+- Baseline `flutter analyze` PASS (`No issues found!`)
+- Baseline tam test: `flutter test --reporter compact` PASS (`432/432`)
+- `dart run tool/translate_arb_keys.dart tafsirCacheUnavailable` PASS; tum `app_*.arb` dosyalari guncellendi.
+- `flutter gen-l10n` PASS.
+- Odak test: `flutter test test\features\quran\tafsir_page_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\translate_arb_keys_test.dart --reporter compact` PASS (`96/96`)
+- `git diff --check` PASS (yalniz CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`433/433`)
+
+### Risk Degisimi
+- Runtime tafsir external API bagimlilik riski: `16/25 -> 4/25`
+- Tafsir cache bosken yanlis/sessiz harici fetch riski: `16/25 -> 2/25`
+- Kullaniciya belirsiz genel hata gosterme riski: `8/25 -> 2/25`
+- Verified tafsir dataset eksikligi riski: `12/25 -> 12/25` (icerigin gercek database/storage seed'i ayri dongude kurulacak)
+- Nadir locale dini mesaj kalite riski: `8/25 -> 6/25` (64/196 locale fallback; uydurma ceviri yerine guvenli fallback korundu)
+
+### Rollback Plani
+- `TafsirFetchPolicy`, `fetchPolicy` constructor parametresi ve `cache_missing` guard'i `tafsir_local_service.dart` icinden geri alinir.
+- `tafsir_page.dart` icindeki `cache_missing -> tafsirCacheUnavailable` case'i kaldirilir.
+- `tafsirCacheUnavailable` ARB/generated l10n batch'i, `tool\translate_arb_keys.dart` tek-satir listesi ve iki test guard'i revert edilir.
+- `flutter gen-l10n`, odak tafsir/l10n testleri, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude verified tafsir dataset icin database/storage seed hattini kur: `content_schema.sql` icinde tafsir kaynak/provenance tablosu, operator import/generate tool'u ve runtime sync/read path tasarla. Harici API sadece operator seed mirror asamasinda kullanilmali; uygulama runtime'i yine cache/storage-backed kalmali.

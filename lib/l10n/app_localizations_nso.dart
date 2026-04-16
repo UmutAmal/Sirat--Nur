@@ -256,6 +256,10 @@ class AppLocalizationsNso extends AppLocalizations {
       'Mohlodi wa tafsir wo o kgethilwego ga se wa bušetša dikeno.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir ga e hwetšagale ka ntle ga inthanete ga bjale. Nyalantšha sete ya data ya tafsir yeo e hweditšwego pele o phetla.';
+
+  @override
   String get bookmarks => 'Dipuku tša go swaya';
 
   @override

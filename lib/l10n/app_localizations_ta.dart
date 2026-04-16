@@ -255,6 +255,10 @@ class AppLocalizationsTa extends AppLocalizations {
       'தேர்ந்தெடுக்கப்பட்ட தஃப்சீர் மூலம் உள்ளீடுகள் எதுவும் இல்லை.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'சரிபார்க்கப்பட்ட தஃப்சீர் இன்னும் ஆஃப்லைனில் கிடைக்கவில்லை. உலாவுவதற்கு முன் ஒரு ஆதாரமான tafsir தரவுத்தொகுப்பை ஒத்திசைக்கவும்.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

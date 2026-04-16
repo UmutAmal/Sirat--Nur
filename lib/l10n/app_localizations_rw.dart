@@ -253,6 +253,10 @@ class AppLocalizationsRw extends AppLocalizations {
       'Inkomoko yatoranijwe ya tafsir yagarutse nta byinjira.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir yemejwe ntishobora kuboneka kumurongo. Gereranya na tafsir dataset ikomoka mbere yo gushakisha.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

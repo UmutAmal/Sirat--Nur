@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Nzvimbo inodiwa kuQibla",
   "qiblaLocationRequiredBody": "Seta nzvimbo yako chaiyo usati washandisa kambasi yeQibla kuti gwara rigone kuverengerwa nemazvo.",
   "placesDataSourceUnavailableTitle": "Data yenzvimbo haisipo",
-  "placesDataSourceUnavailableBody": "Nzvimbo dzakasimbiswa data yekupedzisira haisati yagadzirirwa kuvaka iyi. Isa PLACES_OVERPASS_API_URL kumumiririri akatenderwa kana mubatsiri usati wabvumira kutsvaga kuri pedyo."
+  "placesDataSourceUnavailableBody": "Nzvimbo dzakasimbiswa data yekupedzisira haisati yagadzirirwa kuvaka iyi. Isa PLACES_OVERPASS_API_URL kumumiririri akatenderwa kana mubatsiri usati wabvumira kutsvaga kuri pedyo.",
+  "tafsirCacheUnavailable": "Verified tafsir haisati yave kuwanikwa kunze kwenyika. Batanidza dataset yakatorwa tafsir usati wabhurawuza."
 }

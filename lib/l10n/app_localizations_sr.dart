@@ -253,6 +253,10 @@ class AppLocalizationsSr extends AppLocalizations {
       'Одабрани извор тафсира није вратио ниједан унос.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Верификовани тафсир још увек није доступан ван мреже. Синхронизујте изворни скуп података тафсира пре прегледавања.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

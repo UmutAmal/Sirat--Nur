@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Location required for Qibla",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
   "placesDataSourceUnavailableTitle": "Awọn aaye data ko si",
-  "placesDataSourceUnavailableBody": "Ojuami ipari data ti a rii daju ko ni tunto fun kikọ yii sibẹsibẹ. Ṣeto PLACES_OVERPASS_API_URL si aṣoju tabi olupese ti a fọwọsi ṣaaju ṣiṣe wiwa nitosi."
+  "placesDataSourceUnavailableBody": "Ojuami ipari data ti a rii daju ko ni tunto fun kikọ yii sibẹsibẹ. Ṣeto PLACES_OVERPASS_API_URL si aṣoju tabi olupese ti a fọwọsi ṣaaju ṣiṣe wiwa nitosi.",
+  "tafsirCacheUnavailable": "Tafsir ti o ni idaniloju ko si ni aisinipo sibẹsibẹ. Muṣiṣẹpọ dataset tafsir ti o ti jade ṣaaju lilọ kiri ayelujara."
 }

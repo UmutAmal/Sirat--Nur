@@ -253,6 +253,10 @@ class AppLocalizationsEo extends AppLocalizations {
       'La elektita tafsir-fonto resendis neniujn enskribojn.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Kontrolita tafsir ankoraŭ ne haveblas eksterrete. Sinkronigi fontan tafsir-datumaron antaŭ foliumi.';
+
+  @override
   String get bookmarks => 'Legosignoj';
 
   @override

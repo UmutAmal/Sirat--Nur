@@ -253,6 +253,10 @@ class AppLocalizationsYi extends AppLocalizations {
       'דער אויסגעקליבטער טאַפסיר מקור האָט ניט אומגעקערט קיין איינסן.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'וועראַפייד טאַפסיר איז נישט בנימצא אָפפלינע נאָך. סינק אַ מקור דאַטאַבייס איידער בראַוזינג.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

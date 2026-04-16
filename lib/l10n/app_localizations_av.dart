@@ -253,6 +253,10 @@ class AppLocalizationsAv extends AppLocalizations {
       'The selected tafsir source returned no entries.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

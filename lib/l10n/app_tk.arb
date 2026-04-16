@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Location required for Qibla",
   "qiblaLocationRequiredBody": "“Qibla” kompasyny ulanmazdan ozal hakyky ýeriňizi kesgitläň, ugry takyk hasaplap bolar.",
   "placesDataSourceUnavailableTitle": "Maglumatlary elýeterli däl",
-  "placesDataSourceUnavailableBody": "Barlanan ýerler maglumat nokady bu gurluş üçin entek düzülenok. Nearbyakyn gözlegleri açmazdan ozal PLACES_OVERPASS_API_URL tassyklanan proksi ýa-da üpjün edijä düzüň."
+  "placesDataSourceUnavailableBody": "Barlanan ýerler maglumat nokady bu gurluş üçin entek düzülenok. Nearbyakyn gözlegleri açmazdan ozal PLACES_OVERPASS_API_URL tassyklanan proksi ýa-da üpjün edijä düzüň.",
+  "tafsirCacheUnavailable": "Barlanylan tafsir entek awtonom görnüşde elýeterli däl. Göz aýlamazdan ozal berlen tafsir maglumat toplumyny sinhronlaň."
 }

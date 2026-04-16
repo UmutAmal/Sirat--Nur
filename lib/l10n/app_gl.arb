@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Localización necesaria para Qibla",
   "qiblaLocationRequiredBody": "Establece a túa localización real antes de usar o compás Qibla para que se poida calcular a dirección con precisión.",
   "placesDataSourceUnavailableTitle": "Os datos de lugares non están dispoñibles",
-  "placesDataSourceUnavailableBody": "Un punto final de datos de lugares verificados aínda non está configurado para esta compilación. Establece PLACES_OVERPASS_API_URL nun proxy ou provedor aprobado antes de activar a busca nas proximidades."
+  "placesDataSourceUnavailableBody": "Un punto final de datos de lugares verificados aínda non está configurado para esta compilación. Establece PLACES_OVERPASS_API_URL nun proxy ou provedor aprobado antes de activar a busca nas proximidades.",
+  "tafsirCacheUnavailable": "O tafsir verificado aínda non está dispoñible sen conexión. Sincroniza un conxunto de datos tafsir de orixe antes de navegar."
 }

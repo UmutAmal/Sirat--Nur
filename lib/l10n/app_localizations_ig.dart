@@ -253,6 +253,10 @@ class AppLocalizationsIg extends AppLocalizations {
       'Isi mmalite tafsir ahọpụtara weghachighị ndenye ọ bụla.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Ekwenyere tafsir adịkwaghị na ntanetị. Mekọrịta dataset tafsir ewepụtara tupu ịme nchọgharị.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

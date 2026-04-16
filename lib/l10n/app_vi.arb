@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Vị trí cần thiết cho Qibla",
   "qiblaLocationRequiredBody": "Đặt vị trí thực tế của bạn trước khi sử dụng la bàn Qibla để có thể tính toán hướng chính xác.",
   "placesDataSourceUnavailableTitle": "Dữ liệu địa điểm không có sẵn",
-  "placesDataSourceUnavailableBody": "Điểm cuối dữ liệu địa điểm đã xác minh chưa được định cấu hình cho bản dựng này. Đặt PLACES_OVERPASS_API_URL thành proxy hoặc nhà cung cấp được phê duyệt trước khi bật tìm kiếm lân cận."
+  "placesDataSourceUnavailableBody": "Điểm cuối dữ liệu địa điểm đã xác minh chưa được định cấu hình cho bản dựng này. Đặt PLACES_OVERPASS_API_URL thành proxy hoặc nhà cung cấp được phê duyệt trước khi bật tìm kiếm lân cận.",
+  "tafsirCacheUnavailable": "Tafsir đã được xác minh chưa khả dụng ngoại tuyến. Đồng bộ hóa tập dữ liệu tafsir có nguồn gốc trước khi duyệt."
 }

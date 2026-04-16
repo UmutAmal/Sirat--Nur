@@ -253,6 +253,10 @@ class AppLocalizationsSa extends AppLocalizations {
       'चयनितः tafsir स्रोतः कोऽपि प्रविष्टिः न प्रत्यागच्छत् ।';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'सत्यापितं tafsir अद्यापि अफलाइनरूपेण उपलब्धं नास्ति। ब्राउजिंग् करणात् पूर्वं स्रोतः tafsir दत्तांशसमूहं समन्वययन्तु ।';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

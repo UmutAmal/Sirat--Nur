@@ -255,6 +255,10 @@ class AppLocalizationsCy extends AppLocalizations {
       'Ni ddychwelodd y ffynhonnell tafsir a ddewiswyd unrhyw gofnodion.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Nid yw tafsir wedi\'i ddilysu ar gael all-lein eto. Cysoni set ddata tafsir o ffynhonnell cyn pori.';
+
+  @override
   String get bookmarks => 'Llyfrnodau';
 
   @override

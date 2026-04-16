@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Ahantu hakenewe Qibla",
   "qiblaLocationRequiredBody": "Shiraho aho uherereye mbere yo gukoresha Qibla compas kugirango icyerekezo kibare neza.",
   "placesDataSourceUnavailableTitle": "Shyira amakuru ataboneka",
-  "placesDataSourceUnavailableBody": "Ahantu hagenzuwe amakuru yanyuma ntabwo yashyizweho kugirango yubake. Shyira PLACES_OVERPASS_API_URL kuri proksi yemewe cyangwa uyitanga mbere yo gushakisha hafi."
+  "placesDataSourceUnavailableBody": "Ahantu hagenzuwe amakuru yanyuma ntabwo yashyizweho kugirango yubake. Shyira PLACES_OVERPASS_API_URL kuri proksi yemewe cyangwa uyitanga mbere yo gushakisha hafi.",
+  "tafsirCacheUnavailable": "Tafsir yemejwe ntishobora kuboneka kumurongo. Gereranya na tafsir dataset ikomoka mbere yo gushakisha."
 }

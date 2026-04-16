@@ -253,6 +253,10 @@ class AppLocalizationsSm extends AppLocalizations {
       'O le puna tafsir ua filifilia e leai ni fa\'amaumauga.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Fa\'amaonia tafsir e le\'o maua tuimotu. Fa\'asa\'o se fa\'amatalaga fa\'amatalaga fa\'apogai a\'o le\'i su\'esu\'e.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

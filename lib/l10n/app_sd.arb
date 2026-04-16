@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "قبله لاءِ گهربل مقام",
   "qiblaLocationRequiredBody": "قبله کمپاس استعمال ڪرڻ کان اڳ پنھنجي اصل جڳھ کي سيٽ ڪريو ته جيئن ھدايت جي صحيح حساب ڪري سگھجي.",
   "placesDataSourceUnavailableTitle": "هنڌن جي ڊيٽا دستياب ناهي",
-  "placesDataSourceUnavailableBody": "هڪ تصديق ٿيل جڳهن جي ڊيٽا جي آخري پوائنٽ اڃا تائين هن تعمير لاء ترتيب نه ڏني وئي آهي. سيٽ ڪريو PLACES_OVERPASS_API_URL کي منظور ٿيل پراکسي يا فراهم ڪندڙ کي ويجھي ڳولا کي فعال ڪرڻ کان اڳ."
+  "placesDataSourceUnavailableBody": "هڪ تصديق ٿيل جڳهن جي ڊيٽا جي آخري پوائنٽ اڃا تائين هن تعمير لاء ترتيب نه ڏني وئي آهي. سيٽ ڪريو PLACES_OVERPASS_API_URL کي منظور ٿيل پراکسي يا فراهم ڪندڙ کي ويجھي ڳولا کي فعال ڪرڻ کان اڳ.",
+  "tafsirCacheUnavailable": "تصديق ٿيل تفسير اڃا تائين آف لائن دستياب ناهي. برائوزنگ کان اڳ هڪ sourced tafsir dataset کي هم وقت سازي ڪريو."
 }

@@ -256,6 +256,10 @@ class AppLocalizationsGd extends AppLocalizations {
       'Cha do thill an stòr tafsir a chaidh a thaghadh a-steach.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Chan eil tafsir dearbhte ri fhaighinn far loidhne fhathast. Sioncronaich stòr-dàta tafsir a fhuair thu mus brobhsadh thu.';
+
+  @override
   String get bookmarks => 'Comharran-leabhair';
 
   @override

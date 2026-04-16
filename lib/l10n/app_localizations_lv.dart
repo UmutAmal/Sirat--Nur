@@ -254,6 +254,10 @@ class AppLocalizationsLv extends AppLocalizations {
       'Atlasītais tafsir avots neatgrieza nevienu ierakstu.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir vēl nav pieejams bezsaistē. Pirms pārlūkošanas sinhronizējiet iegūto tafsir datu kopu.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

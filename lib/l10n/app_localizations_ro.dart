@@ -256,6 +256,10 @@ class AppLocalizationsRo extends AppLocalizations {
       'Sursa tafsir selectată nu a returnat nicio intrare.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir verificat nu este încă disponibil offline. Sincronizați un set de date tafsir din sursă înainte de a naviga.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

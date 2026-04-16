@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Meesha loo baahan yahay Qibla",
   "qiblaLocationRequiredBody": "Deji goobtaada dhabta ah ka hor intaadan isticmaalin kombuyuutarka Qibla si jihada loo xisaabiyo si sax ah.",
   "placesDataSourceUnavailableTitle": "Xogta meelaha lama heli karo",
-  "placesDataSourceUnavailableBody": "Meesha la xaqiijiyay barta dhamaadka xogta looma habeynin dhismahan wali. Deji PLACES_OVERPASS_API_URL wakiil ama bixiye la ansixiyay ka hor inta aanad awood u gelin raadinta dhow."
+  "placesDataSourceUnavailableBody": "Meesha la xaqiijiyay barta dhamaadka xogta looma habeynin dhismahan wali. Deji PLACES_OVERPASS_API_URL wakiil ama bixiye la ansixiyay ka hor inta aanad awood u gelin raadinta dhow.",
+  "tafsirCacheUnavailable": "Tafsiir la xaqiijiyay weli lama heli karo offline. Isku xidh xogta tafsiirka laga soo xigtay ka hor inta aanad baadhin"
 }

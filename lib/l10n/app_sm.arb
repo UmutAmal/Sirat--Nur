@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Manaomia nofoaga mo Qibla",
   "qiblaLocationRequiredBody": "Seti lou nofoaga sa'o a'o le'i fa'aogaina le tapasa Qibla ina ia mafai ona fa'atatau tonu le itu.",
   "placesDataSourceUnavailableTitle": "Le avanoa fa'amatalaga nofoaga",
-  "placesDataSourceUnavailableBody": "E le'i fa'atulagaina se nofoaga fa'amautu fa'amaumauga mo lenei faufale. Seti le PLACES_OVERPASS_API_URL i se sui po'o se kamupani fa'amaonia a'o le'i fa'agasolo su'esu'ega lata ane."
+  "placesDataSourceUnavailableBody": "E le'i fa'atulagaina se nofoaga fa'amautu fa'amaumauga mo lenei faufale. Seti le PLACES_OVERPASS_API_URL i se sui po'o se kamupani fa'amaonia a'o le'i fa'agasolo su'esu'ega lata ane.",
+  "tafsirCacheUnavailable": "Fa'amaonia tafsir e le'o maua tuimotu. Fa'asa'o se fa'amatalaga fa'amatalaga fa'apogai a'o le'i su'esu'e."
 }

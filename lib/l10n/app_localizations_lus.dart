@@ -254,6 +254,10 @@ class AppLocalizationsLus extends AppLocalizations {
       'Tafsir source thlan chuan entry a rawn pe lo.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir hi offline ah a la awm lo. Browse hmain sourced tafsir dataset chu sync hmasa phawt ang che.';
+
+  @override
   String get bookmarks => 'Bookmarks te pawh a awm';
 
   @override

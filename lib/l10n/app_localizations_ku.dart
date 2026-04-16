@@ -253,6 +253,10 @@ class AppLocalizationsKu extends AppLocalizations {
       'Çavkaniya tefsîrê ya hilbijartî tu têketin venegeriya.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tefsîreke verastkirî hîn negirêdayî ye. Berî gerokê danehevek tefsîrê ya jêderkî hevdeng bikin.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

@@ -253,6 +253,10 @@ class AppLocalizationsFa extends AppLocalizations {
       'منبع تفسیری انتخاب شده هیچ مدخلی برنگشت.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'تفسیر تأیید شده هنوز به صورت آفلاین در دسترس نیست. قبل از مرور، یک مجموعه داده تفسیر منبع را همگام کنید.';
+
+  @override
   String get bookmarks => 'نشانک‌ها';
 
   @override

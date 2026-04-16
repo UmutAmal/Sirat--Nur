@@ -252,6 +252,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get tafsirNoEntriesReturned => 'מקור התפסר שנבחר לא החזיר ערכים.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir מאומת עדיין לא זמין במצב לא מקוון. סנכרן מערך נתונים ממקור tafsir לפני הגלישה.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

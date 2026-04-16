@@ -255,6 +255,10 @@ class AppLocalizationsSt extends AppLocalizations {
       'Mohloli o khethiloeng oa tafsir ha oa khutlisa mangolo.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir e netefalitsoeng ha e fumanehe kantle ho Marang-rang. Ikamahanya le pokello ea data ea tafsir pele u e bala.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

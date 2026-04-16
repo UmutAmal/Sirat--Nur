@@ -253,6 +253,10 @@ class AppLocalizationsKn extends AppLocalizations {
       'ಆಯ್ಕೆಮಾಡಿದ ತಫ್ಸಿರ್ ಮೂಲವು ಯಾವುದೇ ನಮೂದುಗಳನ್ನು ಹಿಂತಿರುಗಿಸಿಲ್ಲ.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'ಪರಿಶೀಲಿಸಿದ ತಫ್ಸಿರ್ ಇನ್ನೂ ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿ ಲಭ್ಯವಿಲ್ಲ. ಬ್ರೌಸ್ ಮಾಡುವ ಮೊದಲು ಮೂಲ ತಫ್ಸಿರ್ ಡೇಟಾಸೆಟ್ ಅನ್ನು ಸಿಂಕ್ ಮಾಡಿ.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

@@ -253,6 +253,10 @@ class AppLocalizationsVi extends AppLocalizations {
       'Nguồn tafsir đã chọn không trả lại mục nào.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir đã được xác minh chưa khả dụng ngoại tuyến. Đồng bộ hóa tập dữ liệu tafsir có nguồn gốc trước khi duyệt.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

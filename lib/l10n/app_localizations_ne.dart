@@ -253,6 +253,10 @@ class AppLocalizationsNe extends AppLocalizations {
       'चयन गरिएको tafsir स्रोतले कुनै प्रविष्टिहरू फिर्ता गरेन।';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'प्रमाणित tafsir अझै अफलाइन उपलब्ध छैन। ब्राउज गर्नु अघि स्रोत tafsir डेटासेट सिंक गर्नुहोस्।';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

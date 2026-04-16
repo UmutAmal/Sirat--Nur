@@ -253,6 +253,10 @@ class AppLocalizationsSd extends AppLocalizations {
       'منتخب ٿيل تفسير ماخذ ڪو به داخل نه ڪيو.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'تصديق ٿيل تفسير اڃا تائين آف لائن دستياب ناهي. برائوزنگ کان اڳ هڪ sourced tafsir dataset کي هم وقت سازي ڪريو.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

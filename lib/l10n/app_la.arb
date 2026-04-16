@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Locus requisiti Qibla",
   "qiblaLocationRequiredBody": "Pone actualem locum tuum antequam Qibla circumdabit utens directio accurate computari potest.",
   "placesDataSourceUnavailableTitle": "Loca notitia unavailable",
-  "placesDataSourceUnavailableBody": "Loca veri- ta notitia terminorum non configuratur ad hoc adhuc constructum. PLACES_OVERPASS_API_URL ad probatum procuratorem vel provisorem pone antequam inquisitionem proximam capias."
+  "placesDataSourceUnavailableBody": "Loca veri- ta notitia terminorum non configuratur ad hoc adhuc constructum. PLACES_OVERPASS_API_URL ad probatum procuratorem vel provisorem pone antequam inquisitionem proximam capias.",
+  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset ante pasco."
 }

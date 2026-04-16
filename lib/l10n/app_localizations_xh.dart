@@ -253,6 +253,10 @@ class AppLocalizationsXh extends AppLocalizations {
       'Umthombo wetafsir okhethiweyo awubuyisanga mangeniso.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'I-tafsir eqinisekisiweyo ayikafumaneki ngaphandle kweintanethi okwangoku. Ngqamanisa isethi yedatha ye-tafsir efunyenweyo phambi kokukhangela.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

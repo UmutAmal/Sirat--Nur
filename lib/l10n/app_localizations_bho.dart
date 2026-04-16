@@ -254,6 +254,10 @@ class AppLocalizationsBho extends AppLocalizations {
       'चुनल तफसीर स्रोत कवनो प्रविष्टि ना लवटा दिहलसि.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'सत्यापन तफसिर अभी तक ऑफलाइन उपलब्ध नइखे। ब्राउजिंग से पहिले कवनो सोर्स कइल तफसीर डाटासेट के सिंक करीं।';
+
+  @override
   String get bookmarks => 'बुकमार्क के बारे में बतावल गइल बा';
 
   @override

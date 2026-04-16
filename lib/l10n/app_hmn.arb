@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Qhov chaw xav tau rau Qibla",
   "qiblaLocationRequiredBody": "Teem koj qhov chaw tiag tiag ua ntej siv Qibla compass kom cov kev taw qhia tuaj yeem suav tau raug.",
   "placesDataSourceUnavailableTitle": "Qhov chaw cov ntaub ntawv tsis muaj",
-  "placesDataSourceUnavailableBody": "Ib qho kev txheeb xyuas qhov chaw cov ntaub ntawv kawg tsis tau teeb tsa rau qhov kev tsim no tseem. Teem PLACES_OVERPASS_API_URL rau lub npe lossis tus kws kho mob pom zoo ua ntej qhib kev tshawb nrhiav nyob ze."
+  "placesDataSourceUnavailableBody": "Ib qho kev txheeb xyuas qhov chaw cov ntaub ntawv kawg tsis tau teeb tsa rau qhov kev tsim no tseem. Teem PLACES_OVERPASS_API_URL rau lub npe lossis tus kws kho mob pom zoo ua ntej qhib kev tshawb nrhiav nyob ze.",
+  "tafsirCacheUnavailable": "Verified tafsir tseem tsis tau muaj offline. Sync ib qhov chaw tafsir dataset ua ntej browsing."
 }

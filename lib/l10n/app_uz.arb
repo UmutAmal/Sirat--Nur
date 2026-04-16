@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Qibla uchun joy kerak",
   "qiblaLocationRequiredBody": "Qibla kompasidan foydalanishdan oldin oʻzingizning haqiqiy joylashuvingizni oʻrnating, shunda yoʻnalish aniq hisoblab chiqiladi.",
   "placesDataSourceUnavailableTitle": "Joylar maʼlumotlari mavjud emas",
-  "placesDataSourceUnavailableBody": "Tasdiqlangan joylar maʼlumotlarining soʻnggi nuqtasi bu tuzilish uchun hali sozlanmagan. Yaqin atrofdagi qidiruvni yoqishdan oldin PLACES_OVERPASS_API_URL manzilini tasdiqlangan proksi-server yoki provayderga sozlang."
+  "placesDataSourceUnavailableBody": "Tasdiqlangan joylar maʼlumotlarining soʻnggi nuqtasi bu tuzilish uchun hali sozlanmagan. Yaqin atrofdagi qidiruvni yoqishdan oldin PLACES_OVERPASS_API_URL manzilini tasdiqlangan proksi-server yoki provayderga sozlang.",
+  "tafsirCacheUnavailable": "Tasdiqlangan tafsir hali oflayn rejimda mavjud emas. Ko‘rishdan oldin manba tafsir ma’lumotlar to‘plamini sinxronlashtiring."
 }

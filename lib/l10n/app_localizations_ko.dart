@@ -251,6 +251,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tafsirNoEntriesReturned => '선택한 tafsir 소스에서 반환된 항목이 없습니다.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      '인증된 tafsir는 아직 오프라인에서 사용할 수 없습니다. 탐색하기 전에 소스 tafsir 데이터세트를 동기화하세요.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

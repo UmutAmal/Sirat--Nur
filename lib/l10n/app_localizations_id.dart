@@ -253,6 +253,10 @@ class AppLocalizationsId extends AppLocalizations {
       'Sumber tafsir yang dipilih tidak menghasilkan entri apa pun.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir terverifikasi belum tersedia secara offline. Sinkronkan kumpulan data tafsir yang bersumber sebelum menjelajah.';
+
+  @override
   String get bookmarks => 'Penanda';
 
   @override

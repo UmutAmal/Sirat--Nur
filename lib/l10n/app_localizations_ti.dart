@@ -251,6 +251,10 @@ class AppLocalizationsTi extends AppLocalizations {
   String get tafsirNoEntriesReturned => 'እቲ ዝተመርጸ ምንጪ ታፍሲር ዝኾነ ምእታው ኣይመለሰን።';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir ገና ካብ መስመር ወጻኢ ኣይርከብን። ቅድሚ ምድህሳስ ምንጪ ዘለዎ tafsir ዳታሴት ምትእስሳር።';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

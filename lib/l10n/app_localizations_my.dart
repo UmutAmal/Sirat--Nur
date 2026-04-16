@@ -255,6 +255,10 @@ class AppLocalizationsMy extends AppLocalizations {
       'ရွေးချယ်ထားသော tafsir ရင်းမြစ်သည် ထည့်သွင်းခြင်းမရှိပါ။';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'အတည်ပြုထားသော tafsir ကို အော့ဖ်လိုင်းတွင် မရရှိနိုင်သေးပါ။ ရှာဖွေခြင်းမပြုမီ အရင်းအမြစ်ရရှိထားသော tafsir ဒေတာအတွဲကို စင့်ခ်လုပ်ပါ။';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

@@ -253,6 +253,10 @@ class AppLocalizationsUz extends AppLocalizations {
       'Tanlangan tafsir manbasi hech qanday yozuvni qaytarmadi.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tasdiqlangan tafsir hali oflayn rejimda mavjud emas. Ko‘rishdan oldin manba tafsir ma’lumotlar to‘plamini sinxronlashtiring.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

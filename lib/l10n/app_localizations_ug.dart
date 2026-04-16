@@ -253,6 +253,10 @@ class AppLocalizationsUg extends AppLocalizations {
       'تاللانغان تەفسىر مەنبەسى ھېچقانداق جاۋاب قايتۇرمىدى.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'دەلىللەنگەن تەفسىر تېخى تورسىز ھالەتتە يوق. كۆرۈشتىن بۇرۇن مەنبەلىك تەفسىر سانلىق مەلۇمات جەدۋىلىنى ماسقەدەملەڭ.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

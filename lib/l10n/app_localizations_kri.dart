@@ -254,6 +254,10 @@ class AppLocalizationsKri extends AppLocalizations {
       'Di tafsir sɔs we dɛn pik nɔ bin ritɔn ɛni ɛntri.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir nɔ de ɔflayna yet. Sink wan sɔs tafsir datasɛt bifo yu browz.';
+
+  @override
   String get bookmarks => 'Bukmak dɛn';
 
   @override

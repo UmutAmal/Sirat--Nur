@@ -255,6 +255,10 @@ class AppLocalizationsHu extends AppLocalizations {
       'A kiválasztott tafsir-forrás nem adott vissza bejegyzést.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Az ellenőrzött tafsir még nem érhető el offline módban. Böngészés előtt szinkronizáljon egy forrásból származó tafsir adatkészletet.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

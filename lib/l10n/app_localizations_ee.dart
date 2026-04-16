@@ -253,6 +253,10 @@ class AppLocalizationsEe extends AppLocalizations {
       'Tafsir dzɔtsoƒe si wotia la metrɔ nya aɖeke si woŋlɔ o.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir mele internet dzi haɖe o. Wɔ ɖeka kple tafsir nyatakakadzraɖoƒe si wokpɔ tso eme hafi nàʋu.';
+
+  @override
   String get bookmarks => 'Dzesiwo ƒe dzesiwo';
 
   @override

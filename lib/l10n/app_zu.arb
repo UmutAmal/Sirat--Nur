@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Indawo iyadingeka ku-Qibla",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
   "placesDataSourceUnavailableTitle": "Idatha yezindawo ayitholakali",
-  "placesDataSourceUnavailableBody": "Indawo yokugcina idatha yezindawo eqinisekisiwe ayilungiselwe lesi sakhiwo okwamanje. Setha i-PLACES_OVERPASS_API_URL kummeleli ogunyaziwe noma umhlinzeki ngaphambi kokunika amandla ukusesha okuseduze."
+  "placesDataSourceUnavailableBody": "Indawo yokugcina idatha yezindawo eqinisekisiwe ayilungiselwe lesi sakhiwo okwamanje. Setha i-PLACES_OVERPASS_API_URL kummeleli ogunyaziwe noma umhlinzeki ngaphambi kokunika amandla ukusesha okuseduze.",
+  "tafsirCacheUnavailable": "I-tafsir eqinisekisiwe ayitholakali ungaxhunyiwe ku-inthanethi okwamanje. Vumelanisa isethi yedatha ye-tafsir etholakala kumthombo ngaphambi kokuphequlula."
 }

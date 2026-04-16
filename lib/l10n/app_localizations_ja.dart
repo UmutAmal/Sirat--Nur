@@ -251,6 +251,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get tafsirNoEntriesReturned => '選択したタフシル ソースはエントリを返しませんでした。';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'タフシルはまだオフラインでは利用できないことを確認しました。参照する前に、ソースされたタフシル データセットを同期します。';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

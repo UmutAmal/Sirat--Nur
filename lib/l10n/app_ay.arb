@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Qibla markatakix kawkhantix utjki ukax wakisiwa",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
   "placesDataSourceUnavailableTitle": "Ukax datos jan utjki ukanak uñt’ayi",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search."
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "tafsirCacheUnavailable": "Verificado tafsir ukax janiw offline ukankiti. Mä fuente tafsir datos conjunto ukar sincronización janïr uñakipt’kasa."
 }

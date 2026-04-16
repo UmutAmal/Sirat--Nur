@@ -256,6 +256,10 @@ class AppLocalizationsIlo extends AppLocalizations {
       'Ti napili a taudan ti tafsir ket awan ti insublina nga entry.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Ti naberipikado a tafsir ket saan pay a magun-od iti offline. I-sync ti nagtaudan a tafsir dataset sakbay ti panag-browse.';
+
+  @override
   String get bookmarks => 'Dagiti Bookmark';
 
   @override

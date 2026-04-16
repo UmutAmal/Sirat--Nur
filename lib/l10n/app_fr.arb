@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Emplacement requis pour la Qibla",
   "qiblaLocationRequiredBody": "Définissez votre position réelle avant d'utiliser la boussole Qibla afin que la direction puisse être calculée avec précision.",
   "placesDataSourceUnavailableTitle": "Données sur les lieux indisponibles",
-  "placesDataSourceUnavailableBody": "Un point de terminaison de données de lieux vérifiés n’est pas encore configuré pour cette version. Définissez PLACES_OVERPASS_API_URL sur un proxy ou un fournisseur approuvé avant d'activer la recherche à proximité."
+  "placesDataSourceUnavailableBody": "Un point de terminaison de données de lieux vérifiés n’est pas encore configuré pour cette version. Définissez PLACES_OVERPASS_API_URL sur un proxy ou un fournisseur approuvé avant d'activer la recherche à proximité.",
+  "tafsirCacheUnavailable": "Tafsir vérifié n’est pas encore disponible hors ligne. Synchronisez un ensemble de données tafsir provenant d'une source avant de naviguer."
 }

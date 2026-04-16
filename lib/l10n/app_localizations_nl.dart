@@ -253,6 +253,10 @@ class AppLocalizationsNl extends AppLocalizations {
       'De geselecteerde tafsirbron heeft geen gegevens geretourneerd.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Geverifieerde tafsir is nog niet offline beschikbaar. Synchroniseer een afkomstige tafsir-dataset voordat u gaat browsen.';
+
+  @override
   String get bookmarks => 'Bladwijzers';
 
   @override

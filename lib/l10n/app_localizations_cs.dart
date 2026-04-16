@@ -253,6 +253,10 @@ class AppLocalizationsCs extends AppLocalizations {
       'Vybraný zdroj tafsir nevrátil žádné záznamy.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Ověřený tafsir zatím není dostupný offline. Před procházením synchronizujte zdrojovou datovou sadu tafsir.';
+
+  @override
   String get bookmarks => 'Záložky';
 
   @override

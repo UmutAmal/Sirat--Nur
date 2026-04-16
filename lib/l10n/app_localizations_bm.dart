@@ -253,6 +253,10 @@ class AppLocalizationsBm extends AppLocalizations {
       'Tafsir sɔrɔyɔrɔ sugandilen ma sɛbɛnni si segin.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir tɛ sɔrɔ ɛntɛrinɛti kan fɔlɔ. Tafsir dataset sourced dɔ sinsin sani i ka navigatiɔn kɛ.';
+
+  @override
   String get bookmarks => 'Taamaʃyɛnw (bookmarks).';
 
   @override

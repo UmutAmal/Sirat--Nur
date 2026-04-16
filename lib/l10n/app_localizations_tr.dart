@@ -253,6 +253,10 @@ class AppLocalizationsTr extends AppLocalizations {
       'Seçilen tefsir kaynağı hiç kayıt döndürmedi.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Doğrulanmış tefsir henüz çevrimdışı hazır değil. Gezinmeden önce kaynaklandırılmış bir tefsir veri kümesini senkronlayın.';
+
+  @override
   String get bookmarks => 'Yer İşaretleri';
 
   @override

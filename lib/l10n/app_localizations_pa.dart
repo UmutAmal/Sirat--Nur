@@ -253,6 +253,10 @@ class AppLocalizationsPa extends AppLocalizations {
       'ਚੁਣੇ ਗਏ ਤਫ਼ਸੀਰ ਸਰੋਤ ਨੇ ਕੋਈ ਐਂਟਰੀਆਂ ਨਹੀਂ ਦਿੱਤੀਆਂ।';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'ਪ੍ਰਮਾਣਿਤ ਤਫ਼ਸੀਰ ਅਜੇ ਔਫਲਾਈਨ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਬ੍ਰਾਊਜ਼ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਇੱਕ ਸਰੋਤ ਤਫਸੀਰ ਡੇਟਾਸੈਟ ਨੂੰ ਸਿੰਕ ਕਰੋ।';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

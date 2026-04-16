@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "الموقع المطلوب للقبلة",
   "qiblaLocationRequiredBody": "قم بتعيين موقعك الفعلي قبل استخدام بوصلة القبلة حتى يمكن حساب الاتجاه بدقة.",
   "placesDataSourceUnavailableTitle": "بيانات الأماكن غير متاحة",
-  "placesDataSourceUnavailableBody": "لم يتم تكوين نقطة نهاية بيانات الأماكن التي تم التحقق منها لهذا الإصدار حتى الآن. قم بتعيين PLACES_OVERPASS_API_URL على وكيل أو مزود معتمد قبل تمكين البحث القريب."
+  "placesDataSourceUnavailableBody": "لم يتم تكوين نقطة نهاية بيانات الأماكن التي تم التحقق منها لهذا الإصدار حتى الآن. قم بتعيين PLACES_OVERPASS_API_URL على وكيل أو مزود معتمد قبل تمكين البحث القريب.",
+  "tafsirCacheUnavailable": "التفسير الذي تم التحقق منه غير متوفر حاليا. مزامنة مجموعة بيانات التفسير المصدرية قبل التصفح."
 }

@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Lokasi diperlukan untuk Kiblat",
   "qiblaLocationRequiredBody": "Atur lokasi sebenarnya Anda sebelum menggunakan kompas kiblat agar arahnya dapat dihitung secara akurat.",
   "placesDataSourceUnavailableTitle": "Data tempat tidak tersedia",
-  "placesDataSourceUnavailableBody": "Titik akhir data tempat terverifikasi belum dikonfigurasi untuk build ini. Setel PLACES_OVERPASS_API_URL ke proksi atau penyedia yang disetujui sebelum mengaktifkan penelusuran terdekat."
+  "placesDataSourceUnavailableBody": "Titik akhir data tempat terverifikasi belum dikonfigurasi untuk build ini. Setel PLACES_OVERPASS_API_URL ke proksi atau penyedia yang disetujui sebelum mengaktifkan penelusuran terdekat.",
+  "tafsirCacheUnavailable": "Tafsir terverifikasi belum tersedia secara offline. Sinkronkan kumpulan data tafsir yang bersumber sebelum menjelajah."
 }

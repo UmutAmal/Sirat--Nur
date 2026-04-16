@@ -250,6 +250,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tafsirNoEntriesReturned => '所选的 tafsir 源未返回任何条目。';
 
   @override
+  String get tafsirCacheUnavailable =>
+      '已验证的 tafsir 尚无法离线使用。在浏览之前同步来源的 tafsir 数据集。';
+
+  @override
   String get bookmarks => '书签';
 
   @override
@@ -1886,6 +1890,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get tafsirNoEntriesReturned => '所选的 tafsir 源未返回任何条目。';
 
   @override
+  String get tafsirCacheUnavailable =>
+      '已验证的 tafsir 尚无法离线使用。在浏览之前同步来源的 tafsir 数据集。';
+
+  @override
   String get bookmarks => '书签';
 
   @override
@@ -3520,6 +3528,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get tafsirNoEntriesReturned => '所選的 tafsir 來源未傳回任何條目。';
+
+  @override
+  String get tafsirCacheUnavailable =>
+      '已驗證的 tafsir 尚無法離線使用。在瀏覽之前同步來源的 tafsir 資料集。';
 
   @override
   String get bookmarks => '書籤';

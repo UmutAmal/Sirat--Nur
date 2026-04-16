@@ -256,6 +256,10 @@ class AppLocalizationsDv extends AppLocalizations {
       'ހޮވާލެވުނު ތަފްސީރު ސޯސްއިން އެއްވެސް އެންޓްރީއެއް އަނބުރާ ނުލިބެއެވެ.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'ވެރިފައިޑް ތަފްސީރު އަދި އޮފްލައިންކޮށް ލިބެން ނެތް. ބްރައުޒް ކުރުމުގެ ކުރިން ސޯސްޑް ތަފްސީރު ޑޭޓާސެޓެއް ސިންކް ކުރުން.';
+
+  @override
   String get bookmarks => 'ބުކްމާކްސް';
 
   @override

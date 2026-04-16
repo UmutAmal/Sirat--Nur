@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "U locu necessariu per a Qibla",
   "qiblaLocationRequiredBody": "Definite u vostru locu attuale prima di utilizà a bussola Qibla per chì a direzzione pò esse calculata accuratamente.",
   "placesDataSourceUnavailableTitle": "Dati di i posti ùn sò micca dispunibili",
-  "placesDataSourceUnavailableBody": "Un endpoint di dati di i posti verificati ùn hè ancu cunfiguratu per sta custruzzione. Pone PLACES_OVERPASS_API_URL à un proxy o fornitore appruvatu prima di attivà a ricerca vicinu."
+  "placesDataSourceUnavailableBody": "Un endpoint di dati di i posti verificati ùn hè ancu cunfiguratu per sta custruzzione. Pone PLACES_OVERPASS_API_URL à un proxy o fornitore appruvatu prima di attivà a ricerca vicinu.",
+  "tafsirCacheUnavailable": "Tafsir verificatu ùn hè micca dispunibule ancu offline. Sincronizza un inseme di dati tafsir prima di navigà."
 }

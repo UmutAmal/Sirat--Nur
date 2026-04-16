@@ -253,6 +253,10 @@ class AppLocalizationsLb extends AppLocalizations {
       'Der gewielter tafsir Quell huet keng Entréen zréck.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verifizéiert Tafsir ass nach net offline verfügbar. Synchroniséiert e sourced tafsir Dataset virum Surfen.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

@@ -253,6 +253,10 @@ class AppLocalizationsEt extends AppLocalizations {
       'Valitud tafsiiri allikas ei tagastanud ühtegi kirjet.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Kinnitatud tafsir pole veel võrguühenduseta saadaval. Enne sirvimist sünkroonige pärit tafsiri andmestik.';
+
+  @override
   String get bookmarks => 'Järjehoidjad';
 
   @override

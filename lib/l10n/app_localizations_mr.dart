@@ -253,6 +253,10 @@ class AppLocalizationsMr extends AppLocalizations {
       'निवडलेल्या तफसीर स्त्रोताने कोणत्याही प्रविष्ट्या परत केल्या नाहीत.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'सत्यापित तफसीर अद्याप ऑफलाइन उपलब्ध नाही. ब्राउझिंग करण्यापूर्वी स्रोत तफसीर डेटासेट समक्रमित करा.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

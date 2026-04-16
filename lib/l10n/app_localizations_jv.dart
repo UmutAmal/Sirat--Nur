@@ -253,6 +253,10 @@ class AppLocalizationsJv extends AppLocalizations {
       'Sumber tafsir sing dipilih ora ana entri.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Tafsir sing diverifikasi durung kasedhiya offline. Nyelarasake dataset tafsir sumber sadurunge browsing.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

@@ -52,6 +52,8 @@ String localizeTafsirError(AppLocalizations l10n, Object error) {
         return l10n.tafsirApiStatusError(error.details ?? '?');
       case 'no_entries':
         return l10n.tafsirNoEntriesReturned;
+      case 'cache_missing':
+        return l10n.tafsirCacheUnavailable;
     }
   }
 

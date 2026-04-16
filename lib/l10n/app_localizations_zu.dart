@@ -253,6 +253,10 @@ class AppLocalizationsZu extends AppLocalizations {
       'Umthombo we-tafsir okhethiwe awuzange ubuyise okufakiwe.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'I-tafsir eqinisekisiwe ayitholakali ungaxhunyiwe ku-inthanethi okwamanje. Vumelanisa isethi yedatha ye-tafsir etholakala kumthombo ngaphambi kokuphequlula.';
+
+  @override
   String get bookmarks => 'Bookmarks';
 
   @override

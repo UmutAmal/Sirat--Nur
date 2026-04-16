@@ -766,5 +766,6 @@
   "qiblaLocationRequiredTitle": "Cihê ji bo Qibla hewce ye",
   "qiblaLocationRequiredBody": "Berî ku hûn qursa Qibla bikar bînin cîhê xweya rastîn bicîh bikin da ku rêgez rast were hesibandin.",
   "placesDataSourceUnavailableTitle": "Daneyên cihan ne berdest in",
-  "placesDataSourceUnavailableBody": "Xala dawîya daneya cîhên pejirandî ji bo vê çêkirinê hêj nehatine mîheng kirin. Berî ku lêgerîna nêzîk çalak bike, PLACES_OVERPASS_API_URL bike wekî navendek an pêşkêşkerek pejirandî."
+  "placesDataSourceUnavailableBody": "Xala dawîya daneya cîhên pejirandî ji bo vê çêkirinê hêj nehatine mîheng kirin. Berî ku lêgerîna nêzîk çalak bike, PLACES_OVERPASS_API_URL bike wekî navendek an pêşkêşkerek pejirandî.",
+  "tafsirCacheUnavailable": "Tefsîreke verastkirî hîn negirêdayî ye. Berî gerokê danehevek tefsîrê ya jêderkî hevdeng bikin."
 }

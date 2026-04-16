@@ -255,6 +255,10 @@ class AppLocalizationsAk extends AppLocalizations {
       'Tafsir fibea a wɔapaw no ansan amfa nsɛm biara amma.';
 
   @override
+  String get tafsirCacheUnavailable =>
+      'Verified tafsir no ntumi nkɔ offline de besi nnɛ. Sync tafsir dataset a woanya fibea ansa na woakɔ browse.';
+
+  @override
   String get bookmarks => 'Nwoma a Wɔde Yɛ Nwoma';
 
   @override
