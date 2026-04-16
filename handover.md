@@ -9296,3 +9296,49 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi share copy icin daha guvenilir ceviri stratejisi ara: once desteklenen ve dini/kulturel risk dusuk locale alt kumesi belirlenmeli, sonra sadece dogrulanabilir adaylar ARB'ye alinmali. Alternatif olarak yeni dongude non-i18n runtime risklerinden en yuksek skorlu olani sec.
+
+## 2026-04-16 TUR-238 — Refresh Patch Dependencies
+
+### Yapilan Islem
+- `flutter pub outdated` ile dependency kilit durumu tarandi.
+- `flutter pub upgrade supabase_flutter` calistirilarak Supabase patch zinciri guncellendi.
+- `flutter pub upgrade` calistirilarak constraint icinde kalan transitive patch guncellemesi alindi.
+- `pubspec.yaml` degistirilmedi; major/breaking migration isteyen paketler bu turda kapsam disi birakildi.
+
+### Neden Yapildi
+- `flutter pub outdated` TUR-238 oncesi `supabase_flutter 2.12.2 -> 2.12.4` icin constraint icinde patch guncellemesi gosteriyordu.
+- Supabase runtime hattinda auth, postgrest, realtime ve storage client zinciri kullaniliyor; lock dosyasinin constraint icindeki en guncel patch seviyesine alinmasi servis davranisi ve bugfix tazeligini artirir.
+- Kalan direct major adaylari (`fl_chart 0.66.2 -> 1.2.0`, `flutter_riverpod 2.6.1 -> 3.3.1`, `geocoding 3.0.0 -> 4.0.0`, `share_plus 12.0.2 -> 13.0.0`) API migration gerektirdigi icin tek minimal patch dongusune dahil edilmedi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\pubspec.lock`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `supabase_flutter` `2.12.2 -> 2.12.4`
+- `supabase` `2.10.4 -> 2.10.6`
+- `gotrue` `2.19.0 -> 2.20.0`
+- `postgrest` `2.6.0 -> 2.7.0`
+- `realtime_client` `2.7.1 -> 2.7.3`
+- `storage_client` `2.5.1 -> 2.5.2`
+- `vibration_platform_interface` `0.1.1 -> 0.1.2`
+- Constraint disi major upgrade riski takipte kaldi; bu paketler ayri migration dongulerinde ele alinmali.
+
+### Test Sonucu
+- `flutter pub outdated` PASS; constraint icinde kalan patch update'ler uygulandi, major/breaking adaylar listelendi.
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`427/427`)
+- `flutter doctor -v` Android/test hatti icin kritik hata gostermedi; Chrome ve Visual Studio eksikligi web/Windows desktop hedefleri icin ortam notu olarak takipte.
+
+### Risk Degisimi
+- Supabase patch tazelik riski: `8/25 -> 2/25`
+- Constraint icindeki transitive patch eskime riski: `6/25 -> 2/25`
+- Major dependency migration riski: `12/25 -> 12/25` (bilerek ayrildi; scope buyutulmedi)
+
+### Rollback Plani
+- `pubspec.lock` TUR-238 oncesi kilit surumlerine geri alinir ve `flutter pub get` calistirilir.
+- `handover.md` icindeki TUR-238 kaydi append-only kalacagi icin gerekirse yeni bir revert kaydi eklenir.
+
+### Sonraki Adim
+- Commit/push sonrasi siradaki dongude direct major dependency adaylarini risk skoruna gore ayri ayri ele al: once en dusuk migration yuzeyi olan `share_plus`, sonra `geocoding`; `flutter_riverpod` ve `fl_chart` icin kod etkisi taranmadan pubspec constraint'i genisletme.
