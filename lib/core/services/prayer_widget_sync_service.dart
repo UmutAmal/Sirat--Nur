@@ -16,7 +16,9 @@ class PrayerWidgetSyncService {
     SettingsState settings, {
     DateTime Function(String? timezone)? nowResolver,
   }) {
-    if (settings.latitude == null || settings.longitude == null) {
+    final latitude = settings.latitude;
+    final longitude = settings.longitude;
+    if (latitude == null || longitude == null) {
       return null;
     }
 
@@ -25,8 +27,8 @@ class PrayerWidgetSyncService {
       nowResolver: nowResolver,
     );
     return PrayerCalendarService.calculatePrayerTimes(
-      latitude: settings.latitude!,
-      longitude: settings.longitude!,
+      latitude: latitude,
+      longitude: longitude,
       date: referenceNow,
       method: settings.calculationMethod,
       madhab: settings.madhab,

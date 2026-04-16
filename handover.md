@@ -7416,3 +7416,37 @@
 
 ### Sonraki Adım
 - Sonraki dongude PrayerWidgetSyncService ve PrayerNotificationCoordinator latitude/longitude unwrap'leri local snapshot ile kapatilacak; ardindan QiblaSensorBridge heading unwrap'i ayrica incelenecek.
+
+## 2026-04-16 TUR-194 — Guard Prayer Coordinate Snapshots
+
+### Yapılan İşlem
+- PrayerNotificationCoordinator scheduler akisi latitude/longitude degerlerini tek seferlik local snapshot olarak okuyor.
+- PrayerWidgetSyncService widget entity uretiminde ayni snapshot standardina gecildi; null koordinatta mevcut `null` sonuc korunuyor.
+- Prayer coordinator ve widget sync testlerine `settings.latitude!` / `settings.longitude!` force-unwrap kullanimini engelleyen source guard eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart:64` ve `:65` scheduler call chain'inde koordinatlar artik local snapshot'a aliniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_widget_sync_service.dart:19` ve `:20` widget call chain'inde koordinatlar artik local snapshot'a aliniyor.
+- Onceki guard mantigi dogru olsa da nullable field'i guard sonrasi force-unwrap etmek gereksiz crash yuzeyi ve ileride refactor hatasi riski olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_widget_sync_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_notification_coordinator_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_widget_sync_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Prayer notification schedule ve Android widget davranisi degismedi; sadece koordinat erisimi null-safe snapshot ile yapiliyor.
+- Konum eksikse scheduler yine adhans temizliyor, widget entity uretimi yine `null` donuyor.
+
+### Test Sonucu
+- `flutter test test\prayer_notification_coordinator_test.dart test\prayer_widget_sync_service_test.dart` PASS (`10/10`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`366/366`)
+
+### Risk Değişimi
+- Prayer scheduler/widget coordinate force-unwrap crash yuzeyi: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude `A:\Way of Allah\sirat_i_nur\lib\core\services\qibla_sensor_bridge.dart` icindeki `event.heading!` kullanimi local heading snapshot ile kapatilacak.

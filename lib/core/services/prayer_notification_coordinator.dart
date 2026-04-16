@@ -61,12 +61,14 @@ class PrayerNotificationCoordinator {
       }
 
       try {
-        if (!_hasLocation(settings)) {
+        final latitude = settings.latitude;
+        final longitude = settings.longitude;
+        if (latitude == null || longitude == null) {
           await _scheduler.clearScheduledAdhans();
         } else {
           await _scheduler.scheduleAdhans(
-            settings.latitude!,
-            settings.longitude!,
+            latitude,
+            longitude,
             settings.calculationMethod,
             settings.madhab,
             timezoneName: settings.timezone,
@@ -100,10 +102,6 @@ class PrayerNotificationCoordinator {
       settings.ishaAngle.toStringAsFixed(2),
       _resolveLanguageCode(settings.languageCode),
     ].join('|');
-  }
-
-  static bool _hasLocation(SettingsState settings) {
-    return settings.latitude != null && settings.longitude != null;
   }
 
   static String _resolveLanguageCode(String? languageCode) {
