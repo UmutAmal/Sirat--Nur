@@ -118,12 +118,12 @@
   "darkMode": "Ọnọdụ gbara ọchịchịrị",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Ụdị",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Ọnụ ego ngwa",
+  "shareApp": "Kekọrịta ngwa",
   "shareAppMessage": "Lelee {appName}: Ngwa kacha ebi ndụ islam! {url}",
   "@shareAppMessage": {
     "placeholders": {

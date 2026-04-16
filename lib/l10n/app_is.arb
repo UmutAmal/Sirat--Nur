@@ -118,12 +118,12 @@
   "darkMode": "Dark Mode",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Útgáfa",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Gefa app",
+  "shareApp": "Deila app",
   "shareAppMessage": "Skoðaðu {appName}: Fullkomið íslamska lífsstílsforritið! {url}",
   "@shareAppMessage": {
     "placeholders": {

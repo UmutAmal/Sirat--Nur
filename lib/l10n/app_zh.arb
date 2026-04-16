@@ -122,8 +122,8 @@
   "privacyPolicy": "隐私政策",
   "termsOfService": "服务条款",
   "contactUs": "联系我们",
-  "rateApp": "评价应用程序",
-  "shareApp": "分享应用程序",
+  "rateApp": "评价应用",
+  "shareApp": "分享应用",
   "shareAppMessage": "查看{appName}：终极伊斯兰生活方式应用程序！ {url}",
   "@shareAppMessage": {
     "placeholders": {

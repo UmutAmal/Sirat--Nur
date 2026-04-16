@@ -118,12 +118,12 @@
   "darkMode": "របៀបងងឹត",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "កំណែ",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "វាយតម្លៃកម្មវិធី",
+  "shareApp": "ចែករំលែកកម្មវិធី",
   "shareAppMessage": "ពិនិត្យមើល {appName}៖ កម្មវិធីរបៀបរស់នៅបែបឥស្លាមចុងក្រោយ! {url}",
   "@shareAppMessage": {
     "placeholders": {

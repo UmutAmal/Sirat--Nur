@@ -118,12 +118,12 @@
   "darkMode": "Караңгы режим",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Версия",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Колдонмого баа берүү",
+  "shareApp": "Колдонмону бөлүшүү",
   "shareAppMessage": "{appName} карап көрүңүз: Исламдык жашоо образынын эң сонун колдонмосу! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -118,12 +118,12 @@
   "darkMode": "Qaab Madow",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Nooca",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Qiimaynta App",
+  "shareApp": "La wadaag App-ka",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

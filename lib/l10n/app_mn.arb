@@ -118,12 +118,12 @@
   "darkMode": "Харанхуй горим",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Хувилбар",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Аппликейшнийг үнэлэх",
+  "shareApp": "Аппликешн хуваалцах",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

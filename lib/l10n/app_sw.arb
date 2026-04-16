@@ -118,12 +118,12 @@
   "darkMode": "Hali ya Giza",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Toleo",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Kadiria Programu",
+  "shareApp": "Shiriki Programu",
   "shareAppMessage": "Angalia {appName}: Programu bora zaidi ya mtindo wa maisha ya Kiislamu! {url}",
   "@shareAppMessage": {
     "placeholders": {

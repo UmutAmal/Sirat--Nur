@@ -510,7 +510,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'Версия';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -522,10 +522,10 @@ class AppLocalizationsTg extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Барномаи нархгузорӣ';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Мубодилаи барнома';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -118,12 +118,12 @@
   "darkMode": "Ipo Dudu",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Ẹya",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Oṣuwọn App",
+  "shareApp": "Pin App",
   "shareAppMessage": "Ṣayẹwo {appName}: Ohun elo igbesi aye Islam ti o ga julọ! {url}",
   "@shareAppMessage": {
     "placeholders": {

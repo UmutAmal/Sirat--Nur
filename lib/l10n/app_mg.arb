@@ -123,7 +123,7 @@
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
   "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "shareApp": "Mizara App",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

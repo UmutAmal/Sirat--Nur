@@ -513,7 +513,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get about => 'Um';
 
   @override
-  String get version => 'Version';
+  String get version => 'App-Version';
 
   @override
   String get privacyPolicy => 'Datenschutzrichtlinie';

@@ -118,12 +118,12 @@
   "darkMode": "Mode peteng",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Versi",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
   "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "shareApp": "Nuduhake App",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

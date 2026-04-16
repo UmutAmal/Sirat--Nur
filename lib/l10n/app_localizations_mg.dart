@@ -526,7 +526,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get rateApp => 'Rate App';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Mizara App';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -118,12 +118,12 @@
   "darkMode": "Modul întunecat",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Versiune",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Evaluați aplicația",
+  "shareApp": "Partajați aplicația",
   "shareAppMessage": "Consultați {appName}: Aplicația supremă pentru stilul de viață islamic! {url}",
   "@shareAppMessage": {
     "placeholders": {

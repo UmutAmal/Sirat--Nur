@@ -118,12 +118,12 @@
   "darkMode": "Tumšais režīms",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Versija",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Novērtēt lietotni",
+  "shareApp": "Kopīgot lietotni",
   "shareAppMessage": "Apskatiet {appName}: labāko islāma dzīvesveida lietotni! {url}",
   "@shareAppMessage": {
     "placeholders": {

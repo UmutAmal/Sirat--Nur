@@ -118,12 +118,12 @@
   "darkMode": "ダークモード",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "バージョン",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "アプリを評価",
+  "shareApp": "アプリを共有",
   "shareAppMessage": "{appName} をチェックしてください: 究極のイスラム ライフスタイル アプリ! {url}",
   "@shareAppMessage": {
     "placeholders": {

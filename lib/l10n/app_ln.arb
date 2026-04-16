@@ -118,12 +118,12 @@
   "darkMode": "Mode ya Molili",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Ya",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Taux App",
+  "shareApp": "Kokabola App",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

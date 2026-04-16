@@ -505,7 +505,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'ስሪት እዩ።';
 
   @override
   String get privacyPolicy => 'Privacy Policy';

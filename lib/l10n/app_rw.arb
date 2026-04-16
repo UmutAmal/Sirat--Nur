@@ -118,12 +118,12 @@
   "darkMode": "Uburyo bwijimye",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Inyandiko",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Igipimo cya porogaramu",
+  "shareApp": "Sangira Porogaramu",
   "shareAppMessage": "Reba {appName}: Porogaramu yanyuma yubuzima bwa kisilamu! {url}",
   "@shareAppMessage": {
     "placeholders": {

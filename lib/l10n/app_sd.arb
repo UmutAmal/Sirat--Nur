@@ -118,12 +118,12 @@
   "darkMode": "ڊارڪ موڊ",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "نسخو",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "شرح ايپ",
+  "shareApp": "حصيداري ڪريو ايپ",
   "shareAppMessage": "چيڪ آئوٽ ڪريو {appName}: انتهائي اسلامي طرز زندگي ايپ! {url}",
   "@shareAppMessage": {
     "placeholders": {

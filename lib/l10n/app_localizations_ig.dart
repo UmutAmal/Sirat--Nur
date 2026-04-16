@@ -510,7 +510,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'Ụdị';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -522,10 +522,10 @@ class AppLocalizationsIg extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Ọnụ ego ngwa';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Kekọrịta ngwa';
 
   @override
   String shareAppMessage(String appName, String url) {

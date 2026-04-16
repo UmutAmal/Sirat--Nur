@@ -118,12 +118,12 @@
   "darkMode": "Караңгы режим",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Вариант",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Кушымта бәясе",
+  "shareApp": "Кушымта бүлешү",
   "shareAppMessage": "{appName} карагыз: Ислам тормышының соңгы кушымтасы! {url}",
   "@shareAppMessage": {
     "placeholders": {

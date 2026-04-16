@@ -521,10 +521,10 @@ class AppLocalizationsSv extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Betygsätt App';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Dela appen';
 
   @override
   String shareAppMessage(String appName, String url) {

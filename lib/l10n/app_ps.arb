@@ -118,12 +118,12 @@
   "darkMode": "تیاره حالت",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "نسخه",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "د اپلیکیشن درجه بندي کړئ",
+  "shareApp": "اپلیکیشن شریک کړئ",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

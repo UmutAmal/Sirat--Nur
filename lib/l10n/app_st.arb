@@ -118,12 +118,12 @@
   "darkMode": "Mokhoa o Lefifi",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Phetolelo",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Reita App",
+  "shareApp": "Arolelana App",
   "shareAppMessage": "Sheba {appName}: Sesebelisoa sa ho qetela sa bophelo sa Islamic! {url}",
   "@shareAppMessage": {
     "placeholders": {

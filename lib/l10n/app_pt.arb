@@ -118,12 +118,12 @@
   "darkMode": "Modo escuro",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Versão",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Avaliar o aplicativo",
+  "shareApp": "Compartilhar o aplicativo",
   "shareAppMessage": "Confira {appName}: O melhor aplicativo de estilo de vida islâmico! {url}",
   "@shareAppMessage": {
     "placeholders": {

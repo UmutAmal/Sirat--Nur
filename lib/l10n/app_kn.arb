@@ -118,12 +118,12 @@
   "darkMode": "ಡಾರ್ಕ್ ಮೋಡ್",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "ಆವೃತ್ತಿ",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ರೇಟ್ ಮಾಡಿ",
+  "shareApp": "ಅಪ್ಲಿಕೇಶನ್ ಹಂಚಿಕೊಳ್ಳಿ",
   "shareAppMessage": "{appName} ಪರಿಶೀಲಿಸಿ: ಅಂತಿಮ ಇಸ್ಲಾಮಿಕ್ ಜೀವನಶೈಲಿ ಅಪ್ಲಿಕೇಶನ್! {url}",
   "@shareAppMessage": {
     "placeholders": {

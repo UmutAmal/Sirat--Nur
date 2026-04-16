@@ -510,7 +510,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'संस्करणम्';
 
   @override
   String get privacyPolicy => 'Privacy Policy';

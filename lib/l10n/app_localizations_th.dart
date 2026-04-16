@@ -510,7 +510,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'เวอร์ชัน';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -522,10 +522,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'ให้คะแนนแอป';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'แชร์แอป';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -509,7 +509,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'نسخه';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -521,10 +521,10 @@ class AppLocalizationsPs extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'د اپلیکیشن درجه بندي کړئ';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'اپلیکیشن شریک کړئ';
 
   @override
   String shareAppMessage(String appName, String url) {

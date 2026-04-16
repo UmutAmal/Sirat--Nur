@@ -118,12 +118,12 @@
   "darkMode": "Faiga Pogisa",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Fa'aliliuga",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Fua o le App",
+  "shareApp": "Fa'asoa le App",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

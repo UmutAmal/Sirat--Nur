@@ -118,12 +118,12 @@
   "darkMode": "අඳුරු මාදිලිය",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "අනුවාදය",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "යෙදුම අගයන්න",
+  "shareApp": "යෙදුම බෙදාගන්න",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

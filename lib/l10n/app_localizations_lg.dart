@@ -511,7 +511,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'Ekika';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -526,7 +526,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get rateApp => 'Rate App';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Gabana App';
 
   @override
   String shareAppMessage(String appName, String url) {

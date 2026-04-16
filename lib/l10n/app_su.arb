@@ -118,12 +118,12 @@
   "darkMode": "Mode poék",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Vérsi",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Meunteun App",
+  "shareApp": "Bagikeun App",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

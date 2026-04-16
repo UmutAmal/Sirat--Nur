@@ -118,12 +118,12 @@
   "darkMode": "Tryb ciemny",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Wersja",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Oceń aplikację",
+  "shareApp": "Udostępnij aplikację",
   "shareAppMessage": "Sprawdź {appName}: najlepszą islamską aplikację lifestylową! {url}",
   "@shareAppMessage": {
     "placeholders": {

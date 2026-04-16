@@ -118,12 +118,12 @@
   "darkMode": "Mørk modus",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Versjon",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Vurder appen",
+  "shareApp": "Del appen",
   "shareAppMessage": "Sjekk ut {appName}: Den ultimate islamske livsstilsappen! {url}",
   "@shareAppMessage": {
     "placeholders": {

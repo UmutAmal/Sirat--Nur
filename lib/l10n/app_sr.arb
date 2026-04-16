@@ -118,12 +118,12 @@
   "darkMode": "Дарк Моде",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Версион",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Оцените апликацију",
+  "shareApp": "Делите апликацију",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

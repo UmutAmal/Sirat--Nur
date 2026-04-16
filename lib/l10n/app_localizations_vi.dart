@@ -510,7 +510,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'Phiên bản';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -522,10 +522,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Đánh giá ứng dụng';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Chia sẻ ứng dụng';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -511,7 +511,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'Хувилбар';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -523,10 +523,10 @@ class AppLocalizationsMn extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Аппликейшнийг үнэлэх';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Аппликешн хуваалцах';
 
   @override
   String shareAppMessage(String appName, String url) {

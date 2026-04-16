@@ -118,12 +118,12 @@
   "darkMode": "ଗା ark ମୋଡ୍ |",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "ସଂସ୍କରଣ",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "ରେଟ୍ ଆପ୍ |",
+  "shareApp": "ଆପ୍ ଅଂଶୀଦାର କରନ୍ତୁ |",
   "shareAppMessage": "{appName} ଦେଖନ୍ତୁ: ଚରମ ଇସଲାମ ଜୀବନଶ lifestyle ଳୀ ଆପ୍! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -122,8 +122,8 @@
   "privacyPolicy": "política de privacidad",
   "termsOfService": "Términos de servicio",
   "contactUs": "Contáctenos",
-  "rateApp": "Calificar aplicación",
-  "shareApp": "Compartir aplicación",
+  "rateApp": "Calificar la aplicación",
+  "shareApp": "Compartir la aplicación",
   "shareAppMessage": "Descubre {appName}: ¡la aplicación definitiva para el estilo de vida islámico! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -118,12 +118,12 @@
   "darkMode": "အမှောင်မုဒ်",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "ဗားရှင်း",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "အက်ပ်ကို အဆင့်သတ်မှတ်ပါ။",
+  "shareApp": "အက်ပ်ကို မျှဝေပါ။",
   "shareAppMessage": "{appName} ကိုကြည့်ပါ- အဆုံးစွန်သော အစ္စလာမ့်လူနေမှုပုံစံအက်ပ်။ {url}",
   "@shareAppMessage": {
     "placeholders": {

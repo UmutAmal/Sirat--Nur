@@ -511,7 +511,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'Verzia';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -523,10 +523,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Hodnotiť aplikáciu';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Zdieľať aplikáciu';
 
   @override
   String shareAppMessage(String appName, String url) {

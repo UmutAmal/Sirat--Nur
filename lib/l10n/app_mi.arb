@@ -118,12 +118,12 @@
   "darkMode": "Aratau pouri",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Putanga",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Reiti App",
+  "shareApp": "Tiria App",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

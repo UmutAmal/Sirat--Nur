@@ -118,12 +118,12 @@
   "darkMode": "Moda Dark",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Versiyon",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
   "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "shareApp": "App Share",
   "shareAppMessage": "Binihêrin {appName}: Serlêdana herî dawî ya şêwaza jiyanê ya Îslamî! {url}",
   "@shareAppMessage": {
     "placeholders": {

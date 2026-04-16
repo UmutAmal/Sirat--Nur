@@ -511,7 +511,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'Gosa';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -523,7 +523,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Sadarkaa App';
 
   @override
   String get shareApp => 'Share App';

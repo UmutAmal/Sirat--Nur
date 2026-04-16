@@ -181,6 +181,17 @@ void main() {
       expect(value, 'Indirmeler');
     });
 
+    test('rejects multiline settings about output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'shareApp',
+        source: 'Share App',
+        currentValue: 'Uygulamayi Paylas',
+        candidate: 'means the following.\nUygulamayi Paylas',
+      );
+
+      expect(value, 'Uygulamayi Paylas');
+    });
+
     test('rejects multiline diagnostics output', () {
       final labelValue = resolveTranslatedArbValue(
         key: 'diagnostics',

@@ -118,12 +118,12 @@
   "darkMode": "מצב כהה",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "גרסה",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "דרג את האפליקציה",
+  "shareApp": "שתף את האפליקציה",
   "shareAppMessage": "בדוק את {appName}: אפליקציית סגנון החיים האיסלאמי האולטימטיבית! {url}",
   "@shareAppMessage": {
     "placeholders": {

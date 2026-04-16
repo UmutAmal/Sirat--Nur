@@ -513,7 +513,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'Phetolelo';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -525,10 +525,10 @@ class AppLocalizationsSt extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Reita App';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Arolelana App';
 
   @override
   String shareAppMessage(String appName, String url) {

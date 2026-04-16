@@ -118,12 +118,12 @@
   "darkMode": "Qorong'i rejim",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Versiya",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Ilovani baholang",
+  "shareApp": "Ilovani ulashish",
   "shareAppMessage": "{appName} ni ko‘ring: Islomiy hayot tarziga oid so‘nggi ilova! {url}",
   "@shareAppMessage": {
     "placeholders": {

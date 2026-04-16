@@ -356,6 +356,9 @@ bool _mustStaySingleLine(String key) {
       key == 'darkMode' ||
       key == 'systemDefault' ||
       key == 'downloads' ||
+      key == 'version' ||
+      key == 'rateApp' ||
+      key == 'shareApp' ||
       key == 'compassSmoothing' ||
       key == 'manualCorrectionDesc' ||
       key == 'calibrationRequiredFigure8' ||

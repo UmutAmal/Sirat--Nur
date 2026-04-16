@@ -118,12 +118,12 @@
   "darkMode": "Mod skur",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Verżjoni",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Rata App",
+  "shareApp": "Aqsam l-App",
   "shareAppMessage": "Ara {appName}: L-app aħħarija tal-istil tal-ħajja Iżlamiku! {url}",
   "@shareAppMessage": {
     "placeholders": {

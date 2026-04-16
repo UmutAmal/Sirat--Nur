@@ -118,12 +118,12 @@
   "darkMode": "다크 모드",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "버전",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "앱 평가",
+  "shareApp": "앱 공유",
   "shareAppMessage": "{appName}을 확인해 보세요: 최고의 이슬람 라이프스타일 앱! {url}",
   "@shareAppMessage": {
     "placeholders": {

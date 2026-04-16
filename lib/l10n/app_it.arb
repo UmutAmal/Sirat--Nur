@@ -118,12 +118,12 @@
   "darkMode": "Modalità oscura",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Versione",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Valuta l'app",
+  "shareApp": "Condividi l'app",
   "shareAppMessage": "Dai un'occhiata a {appName}: l'app definitiva per lo stile di vita islamico! {url}",
   "@shareAppMessage": {
     "placeholders": {

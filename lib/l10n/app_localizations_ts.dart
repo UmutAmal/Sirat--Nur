@@ -511,7 +511,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'Nkandziyiso';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -523,7 +523,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Xiringanyeto xa App';
 
   @override
   String get shareApp => 'Share App';

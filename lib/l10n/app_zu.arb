@@ -118,12 +118,12 @@
   "darkMode": "Imodi Emnyama",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Inguqulo",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Linganisa uhlelo lokusebenza",
+  "shareApp": "Yabelana ngohlelo lokusebenza",
   "shareAppMessage": "Hlola {appName}: Uhlelo lokusebenza oluhle kakhulu lwendlela yokuphila yamaSulumane! {url}",
   "@shareAppMessage": {
     "placeholders": {

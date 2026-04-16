@@ -118,12 +118,12 @@
   "darkMode": "โหมดมืด",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "เวอร์ชัน",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "ให้คะแนนแอป",
+  "shareApp": "แชร์แอป",
   "shareAppMessage": "ลองดู {appName}: สุดยอดแอปไลฟ์สไตล์อิสลาม! {url}",
   "@shareAppMessage": {
     "placeholders": {

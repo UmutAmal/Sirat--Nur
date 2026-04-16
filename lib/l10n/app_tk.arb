@@ -118,12 +118,12 @@
   "darkMode": "Garaňky re .im",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Wersiýa",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Programma bahasy",
+  "shareApp": "Programmany paýlaş",
   "shareAppMessage": "{appName} gözden geçiriň: Yslam durmuşynyň iň soňky programmasy! {url}",
   "@shareAppMessage": {
     "placeholders": {

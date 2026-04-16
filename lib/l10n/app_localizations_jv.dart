@@ -510,7 +510,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'Versi';
 
   @override
   String get privacyPolicy => 'Privacy Policy';
@@ -525,7 +525,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get rateApp => 'Rate App';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Nuduhake App';
 
   @override
   String shareAppMessage(String appName, String url) {

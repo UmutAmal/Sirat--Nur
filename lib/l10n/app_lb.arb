@@ -118,12 +118,12 @@
   "darkMode": "Däischter Modus",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Versioun",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Bewäertung App",
+  "shareApp": "Deelen App",
   "shareAppMessage": "Préift {appName}: Déi ultimativ islamesch Lifestyle App! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -118,12 +118,12 @@
   "darkMode": "Tamsusis režimas",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Versija",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Įvertinkite programą",
+  "shareApp": "Bendrinti programą",
   "shareAppMessage": "Peržiūrėkite {appName}: geriausią islamiško gyvenimo būdo programą! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -118,12 +118,12 @@
   "darkMode": "Chế độ tối",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Phiên bản",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Đánh giá ứng dụng",
+  "shareApp": "Chia sẻ ứng dụng",
   "shareAppMessage": "Hãy xem {appName}: Ứng dụng phong cách sống Hồi giáo tối ưu! {url}",
   "@shareAppMessage": {
     "placeholders": {

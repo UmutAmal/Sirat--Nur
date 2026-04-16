@@ -8413,3 +8413,50 @@
 
 ### Sonraki Adım
 - Sonraki dongude aktif l10n fallback taramasini yenile; canonical dini terimleri ayri risk olarak isaretleyip `premium`, `ayahs`, `surah`, `version`, `rateApp`, `shareApp` veya benzer gorunur ama guvenle cevrilebilir anahtarlar arasindan en yuksek etkili tek yuzeyi sec.
+
+## 2026-04-16 TUR-221 — Localize Settings About Share Labels
+
+### Yapılan İşlem
+- Ayarlar/About yuzeyindeki `version`, `rateApp`, `shareApp` anahtarlari korumali ARB batch'i ile genis locale kumesinde lokalize edildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Priority/safe locale kalite gecisinde Danca, Almanca, Fransizca, Ispanyolca, Ibranice, Japonca, Norvec varyantlari, Portekizce ve Cince varyantlarindaki kaba veya Ingilizceyle birebir kalan ifadeler elle duzeltildi.
+- `tool\translate_arb_keys.dart` single-line guard listesine `version`, `rateApp`, `shareApp` eklendi.
+- `test\arb_ui_localization_test.dart` share/about copy guard'i `version`, `rateApp`, `shareApp`, `shareAppMessage` kumesini birlikte denetleyecek sekilde genisletildi.
+- `test\translate_arb_keys_test.dart` multiline settings about output regresyon testiyle ceviri debris korumasi eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:240` About bolumunde `l10n.version` etiketini gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:253` `l10n.rateApp` satirini gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:261` `l10n.shareApp` satirini gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:608` paylasim metnini `l10n.shareAppMessage` ile uretiyor.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb:244`, `:248`, `:249` kaynak metin olarak sirasiyla `"Version"`, `"Rate App"`, `"Share App"` degerlerini tasiyor.
+- TUR-221 oncesi aktif l10n fallback taramasinda `version`, `rateApp`, `shareApp` icin safe/priority fallback sayilari sirasiyla `11`, `8`, `8` idi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe/priority locale setinde settings About/Share copy icin Ingilizce fallback riski kapandi.
+- Fallback sayilari: `version 139 -> 69`, `rateApp 141 -> 81`, `shareApp 138 -> 74`.
+- `shareAppMessage` mevcut guard kapsaminda tekrar tarandi; safe locale setinde Ingilizce fallback kalmadigi dogrulandi.
+- Kalan fallback'ler Google ceviri destegi olmayan veya guvenli aday uretilemeyen nadir/legacy locale grubunda birakildi; gorunur UI metni uydurulmadi.
+- Tek satir guard'i ile gelecekteki batch debris/newline riski azaltildi.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\features\settings\settings_page_test.dart` PASS (`60/60`)
+- Safe fallback taramasi PASS: `version`, `rateApp`, `shareApp`, `shareAppMessage` icin `safe_same=[]`
+- `flutter gen-l10n` PASS
+
+### Risk Değişimi
+- Safe/priority locale settings About/Share fallback riski: `11/25 -> 2/25`
+- Tum locale settings About/Share fallback riski: `11/25 -> 6/25`
+- Settings about/share ceviri batch debris tekrar riski: `10/25 -> 3/25`
+
+### Sonraki Adım
+- Commit kapisinda `git diff --check`, `flutter analyze`, `flutter test` calistir; hepsi gecerse commit/push yap.
+- Sonraki dongude aktif l10n fallback taramasini yenile; `ok`, `liveTv`, `offlineMode`, `clearCache`, `hijriCalendar`, `home`, `settings`, `searchHint` gibi gorunur ve dini terim olmayan anahtarlar arasindan en yuksek etkili tek yuzeyi sec.

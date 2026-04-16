@@ -140,14 +140,23 @@ void main() {
           'zh_CN',
           'zh_TW',
         ];
+        const localizedKeys = [
+          'version',
+          'rateApp',
+          'shareApp',
+          'shareAppMessage',
+        ];
 
         for (final locale in shareSafeLocales) {
           final arb = _readArb('lib/l10n/app_$locale.arb');
-          expect(
-            arb['shareAppMessage'],
-            isNot(english['shareAppMessage']),
-            reason: 'app_$locale.arb still uses English for shareAppMessage',
-          );
+
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
         }
       },
     );

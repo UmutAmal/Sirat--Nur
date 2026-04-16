@@ -118,12 +118,12 @@
   "darkMode": "טונקל מאָדע",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "ווערסיע",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "קורס אַפּ",
+  "shareApp": "ייַנטיילן אַפּ",
   "shareAppMessage": "טשעק {appName}: די לעצט יסלאַמיק לייפסטייל אַפּ! {url}",
   "@shareAppMessage": {
     "placeholders": {

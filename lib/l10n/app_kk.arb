@@ -118,12 +118,12 @@
   "darkMode": "Қараңғы режим",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Нұсқа",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Қолданбаны бағалаңыз",
+  "shareApp": "Қолданбаны бөлісу",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

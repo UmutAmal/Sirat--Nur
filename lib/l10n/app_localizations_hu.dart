@@ -512,7 +512,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get about => 'About';
 
   @override
-  String get version => 'Version';
+  String get version => 'Verzió';
 
   @override
   String get privacyPolicy => 'Privacy Policy';

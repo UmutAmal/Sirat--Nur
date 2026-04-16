@@ -118,12 +118,12 @@
   "darkMode": "Темний режим",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Версія",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Оцініть додаток",
+  "shareApp": "Поділитися додатком",
   "shareAppMessage": "Перегляньте {appName}: найкращий додаток для ісламського способу життя! {url}",
   "@shareAppMessage": {
     "placeholders": {

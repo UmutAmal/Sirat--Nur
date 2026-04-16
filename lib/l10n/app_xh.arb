@@ -118,12 +118,12 @@
   "darkMode": "Imo Emnyama",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Inguqulelo",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
   "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "shareApp": "Yabelana ngeApp",
   "shareAppMessage": "Jonga {appName}: Eyona app yokuphila yamaSilamsi! {url}",
   "@shareAppMessage": {
     "placeholders": {

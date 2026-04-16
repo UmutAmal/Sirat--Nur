@@ -118,12 +118,12 @@
   "darkMode": "ഡാർക്ക് മോഡ്",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "പതിപ്പ്",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "ആപ്പ് റേറ്റ് ചെയ്യുക",
+  "shareApp": "ആപ്പ് പങ്കിടുക",
   "shareAppMessage": "{appName} പരിശോധിക്കുക: പരമമായ ഇസ്ലാമിക ജീവിതശൈലി ആപ്പ്! {url}",
   "@shareAppMessage": {
     "placeholders": {

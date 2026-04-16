@@ -118,12 +118,12 @@
   "darkMode": "ໂໝດມືດ",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "ຮຸ່ນ",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "ໃຫ້ຄະແນນ App",
+  "shareApp": "ແບ່ງປັນແອັບ",
   "shareAppMessage": "ກວດເບິ່ງ {appName}: ສຸດຍອດແອັບວິຖີຊີວິດອິດສະລາມ! {url}",
   "@shareAppMessage": {
     "placeholders": {

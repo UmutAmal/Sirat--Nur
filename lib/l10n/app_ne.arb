@@ -118,12 +118,12 @@
   "darkMode": "गाढा मोड",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "संस्करण",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "मूल्याङ्कन एप",
+  "shareApp": "सेयर एप",
   "shareAppMessage": "{appName} को जाँच गर्नुहोस्: परम इस्लामी जीवन शैली एप! {url}",
   "@shareAppMessage": {
     "placeholders": {

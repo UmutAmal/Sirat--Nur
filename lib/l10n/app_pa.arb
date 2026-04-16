@@ -118,12 +118,12 @@
   "darkMode": "ਡਾਰਕ ਮੋਡ",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "ਸੰਸਕਰਣ",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "ਐਪ ਨੂੰ ਰੇਟ ਕਰੋ",
+  "shareApp": "ਐਪ ਸ਼ੇਅਰ ਕਰੋ",
   "shareAppMessage": "{appName} ਦੇਖੋ: ਅਤਿਅੰਤ ਇਸਲਾਮੀ ਜੀਵਨ ਸ਼ੈਲੀ ਐਪ! {url}",
   "@shareAppMessage": {
     "placeholders": {

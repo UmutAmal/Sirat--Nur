@@ -118,12 +118,12 @@
   "darkMode": "Mørk tilstand",
   "systemTheme": "System tema",
   "about": "Om",
-  "version": "Version",
+  "version": "Versionsnummer",
   "privacyPolicy": "Privatlivspolitik",
   "termsOfService": "Servicevilkår",
   "contactUs": "Kontakt os",
-  "rateApp": "Bedøm app",
-  "shareApp": "Del app",
+  "rateApp": "Bedøm appen",
+  "shareApp": "Del appen",
   "shareAppMessage": "Tjek {appName}: Den ultimative islamiske livsstilsapp! {url}",
   "@shareAppMessage": {
     "placeholders": {

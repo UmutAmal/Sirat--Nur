@@ -118,12 +118,12 @@
   "darkMode": "قاراڭغۇ ھالەت",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "نەشرى",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
   "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "shareApp": "ئورتاقلىشىش دېتالى",
   "shareAppMessage": "{appName} نى تەكشۈرۈپ بېقىڭ: ئەڭ ئاخىرقى ئىسلام تۇرمۇش ئۇسۇلى! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -118,12 +118,12 @@
   "darkMode": "Tmavý režim",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Verzia",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Hodnotiť aplikáciu",
+  "shareApp": "Zdieľať aplikáciu",
   "shareAppMessage": "Vyskúšajte {appName}: Najlepšia aplikácia pre islamský životný štýl! {url}",
   "@shareAppMessage": {
     "placeholders": {

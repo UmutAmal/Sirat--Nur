@@ -510,10 +510,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get contactUs => '联系我们';
 
   @override
-  String get rateApp => '评价应用程序';
+  String get rateApp => '评价应用';
 
   @override
-  String get shareApp => '分享应用程序';
+  String get shareApp => '分享应用';
 
   @override
   String shareAppMessage(String appName, String url) {
@@ -2146,10 +2146,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get contactUs => '联系我们';
 
   @override
-  String get rateApp => '评价应用程序';
+  String get rateApp => '评价应用';
 
   @override
-  String get shareApp => '分享应用程序';
+  String get shareApp => '分享应用';
 
   @override
   String shareAppMessage(String appName, String url) {
@@ -3782,10 +3782,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get contactUs => '聯絡我們';
 
   @override
-  String get rateApp => '評價應用程式';
+  String get rateApp => '評價應用';
 
   @override
-  String get shareApp => '分享應用程式';
+  String get shareApp => '分享應用';
 
   @override
   String shareAppMessage(String appName, String url) {

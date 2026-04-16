@@ -118,12 +118,12 @@
   "darkMode": "Темный режим",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Версия",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Оцените приложение",
+  "shareApp": "Поделиться приложением",
   "shareAppMessage": "Попробуйте {appName}: лучшее приложение для исламского образа жизни! {url}",
   "@shareAppMessage": {
     "placeholders": {

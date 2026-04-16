@@ -118,12 +118,12 @@
   "darkMode": "Temni način",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "Različica",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Ocenite aplikacijo",
+  "shareApp": "Deli aplikacijo",
   "shareAppMessage": "Oglejte si {appName}: Najboljša aplikacija za islamski življenjski slog! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -118,12 +118,12 @@
   "darkMode": "गडद मोड",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "आवृत्ती",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "ॲपला रेट करा",
+  "shareApp": "ॲप शेअर करा",
   "shareAppMessage": "{appName} पहा: अंतिम इस्लामिक जीवनशैली ॲप! {url}",
   "@shareAppMessage": {
     "placeholders": {

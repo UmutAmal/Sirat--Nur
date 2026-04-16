@@ -118,12 +118,12 @@
   "darkMode": "డార్క్ మోడ్",
   "systemTheme": "System Theme",
   "about": "About",
-  "version": "Version",
+  "version": "వెర్షన్",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "యాప్‌ని రేట్ చేయండి",
+  "shareApp": "యాప్‌ను భాగస్వామ్యం చేయండి",
   "shareAppMessage": "{appName}ని తనిఖీ చేయండి: అంతిమ ఇస్లామిక్ జీవనశైలి యాప్! {url}",
   "@shareAppMessage": {
     "placeholders": {
