@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/core/services/tafsir_local_service.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 String buildTafsirTitle(
   AppLocalizations l10n,
@@ -104,6 +106,7 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
       final loader = TafsirLoader(
         surahNumber: widget.surahNumber,
         tafsirSource: _selectedTafsir,
+        verifiedRowsLoader: _loadVerifiedCloudTafsirRows,
       );
 
       final loaded = await loader.loadTafsir(
@@ -151,6 +154,46 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
       if (item['id'] == id) return item['name'] ?? id;
     }
     return id;
+  }
+
+  Future<List<Map<String, dynamic>>> _loadVerifiedCloudTafsirRows({
+    required int surahNumber,
+    required String tafsirSource,
+  }) async {
+    final supabase = _readOptionalSupabaseClient();
+    if (supabase == null) {
+      return const [];
+    }
+
+    try {
+      final canonicalSource = TafsirLocalService.canonicalTafsirSource(
+        tafsirSource,
+      );
+      final rows = await supabase
+          .from('tafsir_entries')
+          .select(
+            'surah_number, ayah_number, tafsir_source, language, tafsir_text, source, source_license, verified_at',
+          )
+          .eq('surah_number', surahNumber)
+          .eq('tafsir_source', canonicalSource)
+          .order('ayah_number', ascending: true);
+
+      return TafsirLocalService.normalizeVerifiedTafsirRows(
+        List<Map<String, dynamic>>.from(rows),
+        surahNumber: surahNumber,
+        tafsirSource: canonicalSource,
+      );
+    } catch (_) {
+      return const [];
+    }
+  }
+
+  SupabaseClient? _readOptionalSupabaseClient() {
+    try {
+      return ref.read(supabaseClientProvider);
+    } catch (_) {
+      return null;
+    }
   }
 
   @override

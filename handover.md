@@ -9739,3 +9739,52 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude runtime cloud sync halkasini kur: `TafsirLoader` cache-only kalmaya devam ederken Supabase `tafsir_entries` tablosundan verified rows cekilip local sqflite cache'e yazilabilmeli. Cloud veri eksik/provenance eksikse yine `cache_missing` kalmali; harici API runtime'a geri donmemeli.
+
+## 2026-04-16 TUR-247 — Sync Verified Tafsir Cache
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart` DB versiyonu `2` yapildi ve local tafsir cache tablosuna `language`, `source`, `source_license`, `verified_at` kolonlari eklendi.
+- Eski DB'ler icin migration eklendi; yeni kurulumlarda ayni schema dogrudan olusuyor.
+- Local tafsir okuma/count sorgulari yalniz `source`, `source_license` ve `verified_at` dolu olan verified satirlari kabul edecek sekilde daraltildi.
+- Supabase `tafsir_entries` satirlarini local cache formatina ceviren `normalizeVerifiedTafsirRows` ve surah/source bazli replace akisi eklendi.
+- `TafsirLoader` cache-only varsayilani korunarak once verified local cache, sonra opsiyonel verified cloud loader, sonra yine local fallback, en sonda sadece explicit `allowExternalRefresh` halinde legacy external refresh sirasi kullanacak sekilde guncellendi.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart` Supabase `tafsir_entries` sorgusunu bagladi; Supabase client yoksa veya cloud veri gecersizse UI false-success gostermeden cache-missing yolunda kalir.
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart` verified provenance, desteklenmeyen kaynak, eksik kaynak/lisans/dogrulama zamani ve runtime external API guardlarini kapsayacak sekilde genisletildi.
+
+### Neden Yapildi
+- TUR-245 schema ve TUR-246 seed generator hazirdi; ancak uygulama runtime'i bizim verified database satirlarini okuyup local offline cache'e yazamiyordu.
+- Eski/provenance'siz local sqflite satirlari dini icerik icin guvenilir kabul edilemezdi; kullaniciya kaynak/lisans/dogrulama bilgisi olmayan tafsir gostermek kabul edilemez.
+- Harici API runtime bagimliligi yeniden acilmadi; cloud loader yalniz bizim Supabase tablomuzdan verified satir kabul eder.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Tafsir runtime zinciri artik `Supabase tafsir_entries -> verified normalize -> sqflite cache -> offline read` hattina baglandi.
+- Provenance'siz veya malformed cloud satiri tum paketi bozmaz; satir bazinda reddedilir.
+- Supabase yoksa uygulama dis servise kosmaz; kullaniciya cache unavailable akisi doner.
+- Gercek dini icerik dataset'i hala operator tarafindan dogrulanmis manifest ile seed edilmelidir; bu patch sahte/AI icerik uretmez.
+
+### Test Sonucu
+- Odak test: `flutter test test\features\quran\tafsir_page_test.dart --reporter compact` PASS (`8/8`)
+- `git diff --check` PASS (yalniz CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`442/442`)
+
+### Risk Degisimi
+- Runtime verified tafsir sync eksikligi riski: `10/25 -> 3/25`
+- Provenance'siz local tafsir cache gosterme riski: `16/25 -> 2/25`
+- Harici tafsir API runtime regresyon riski: `12/25 -> 3/25`
+- Verified tafsir dataset eksikligi riski: `10/25 -> 8/25` (schema/tool/runtime hazir; gercek manifest ve Supabase seed/import henuz uygulanmadi)
+
+### Rollback Plani
+- `TafsirLocalService` DB version/migration/provenance filter ve verified cloud replace helper'lari geri alinir.
+- `TafsirPage` icindeki `verifiedRowsLoader` ve Supabase `tafsir_entries` sorgusu geri alinir.
+- `test\features\quran\tafsir_page_test.dart` icindeki TUR-247 beklentileri kaldirilir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude en yuksek kalan dini icerik riski olarak verified tafsir seed/import eksigini veya audio storage provenance hattini ele al: gercek kaynak manifestleri olmadan sahte icerik ekleme, yalniz kabul edilen kaynaklardan source/license/verified_at ile ilerle.
