@@ -7765,3 +7765,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude PrayerNotificationCoordinator `_queuedSettings!` drain yuzeyi incelenecek ve local snapshot standardina alinacak.
+
+## 2026-04-16 TUR-205 — Guard Prayer Queue Settings Snapshot
+
+### Yapılan İşlem
+- PrayerNotificationCoordinator queue drain akisi `_queuedSettings` degerini local `settings` snapshot olarak okuyor.
+- Queue bos ise `_drainQueuedSyncs` artik force-unwrap yerine kontrollu `return` ile cikiyor.
+- Prayer notification coordinator testindeki source guard genisletildi; `_queuedSettings!` geri gelirse test fail edecek.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart:56` queued settings degerini local snapshot'a aliyor.
+- Eski akista `while (_queuedSettings != null)` guardindan sonra `_queuedSettings!` kullaniliyordu; notification scheduling queue hattinda gereksiz nullable force-unwrap pattern'i birakmak ileride refactor/race hatasina acik yuzey olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_notification_coordinator_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Hızlı konum/ayar degisikliklerini serialize etme davranisi degismedi.
+- Queue drain akisi nullable state force-unwrap kullanmadan calisiyor.
+
+### Test Sonucu
+- `flutter test test\prayer_notification_coordinator_test.dart` PASS (`7/7`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`374/374`)
+
+### Risk Değişimi
+- Prayer notification queued settings force-unwrap yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude offline audio `surahUrls[surahNumber]!` snapshot yuzeyi ve owned-storage download hattindaki false-success riskleri yeniden taranacak.

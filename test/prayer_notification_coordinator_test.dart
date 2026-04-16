@@ -315,6 +315,7 @@ void main() {
         isNot(contains(r'Prayer notification sync failed: $error')),
       );
       expect(source, isNot(contains('debugPrintStack')));
+      expect(source, isNot(contains('_queuedSettings!')));
       expect(source, isNot(contains('settings.latitude!')));
       expect(source, isNot(contains('settings.longitude!')));
       expect(source, contains('Prayer notification sync failed'));

@@ -52,8 +52,12 @@ class PrayerNotificationCoordinator {
   }
 
   Future<void> _drainQueuedSyncs() async {
-    while (_queuedSettings != null) {
-      final settings = _queuedSettings!;
+    while (true) {
+      final settings = _queuedSettings;
+      if (settings == null) {
+        return;
+      }
+
       _queuedSettings = null;
       final fingerprint = settingsFingerprint(settings);
       if (_lastFingerprint == fingerprint) {
