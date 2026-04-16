@@ -1684,5 +1684,6 @@ class AppLocalizationsQu extends AppLocalizations {
   String get asmaMeaning98 => 'Aswan chanin pusaq';
 
   @override
-  String get asmaMeaning99 => 'Paciente kaq';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

@@ -1399,13 +1399,15 @@ class AppLocalizationsYi extends AppLocalizations {
   String get asmaMeaning6 => 'דער גיטער פון זיכערהייט';
 
   @override
-  String get asmaMeaning7 => 'דער גאַרדיאַן';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'די טייַער / די מערסט גוואַלדיק';
 
   @override
-  String get asmaMeaning9 => 'דער קאָמפּעלער';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'די גרעסטע';
@@ -1438,10 +1440,12 @@ class AppLocalizationsYi extends AppLocalizations {
   String get asmaMeaning19 => 'דער קענער פון אלע';
 
   @override
-  String get asmaMeaning20 => 'דער קאָנסטריקטאָר';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
-  String get asmaMeaning21 => 'דער ריליווער';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'דער אַבאַסער';
@@ -1609,7 +1613,8 @@ class AppLocalizationsYi extends AppLocalizations {
   String get asmaMeaning76 => 'די פאַרבאָרגן';
 
   @override
-  String get asmaMeaning77 => 'דער גאווערנאר';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'דער העכסטער';
@@ -1627,7 +1632,8 @@ class AppLocalizationsYi extends AppLocalizations {
   String get asmaMeaning82 => 'דער פארגיער';
 
   @override
-  String get asmaMeaning83 => 'דער קלעמענט';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'דער באַזיצער / הערשער פון אַלע';
@@ -1675,5 +1681,6 @@ class AppLocalizationsYi extends AppLocalizations {
   String get asmaMeaning98 => 'דער מערסט צדיקים גייד';
 
   @override
-  String get asmaMeaning99 => 'דער פאציענט איינער';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

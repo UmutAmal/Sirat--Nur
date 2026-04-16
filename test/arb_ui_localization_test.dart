@@ -1470,13 +1470,36 @@ void main() {
 
     test('all locales avoid stale English high-risk asma fragments', () {
       const staleByKey = {
-        'asmaMeaning7': ['The Guardian'],
-        'asmaMeaning9': ['Compeller'],
-        'asmaMeaning20': ['Constrictor'],
-        'asmaMeaning21': ['Reliever'],
-        'asmaMeaning77': ['Governor', 'Gouverneur'],
-        'asmaMeaning83': ['Clement', 'Clemente'],
-        'asmaMeaning99': ['Patient One'],
+        'asmaMeaning7': ['The Guardian', 'Uka Guardian', 'גאַרדיאַן'],
+        'asmaMeaning9': ['Compeller', 'קאָמפּעלער'],
+        'asmaMeaning20': ['Constrictor', 'Constritor', 'קאָנסטריקטאָר'],
+        'asmaMeaning21': ['Reliever', 'Apaziguador', 'ריליווער'],
+        'asmaMeaning77': [
+          'Governor',
+          'Gouverneur',
+          'Governador',
+          'Gobernador',
+          'Guvern',
+          'Губернатор',
+          'גאווערנאר',
+        ],
+        'asmaMeaning83': [
+          'Clement',
+          'Clemente',
+          'Clément',
+          'Klement',
+          'Климент',
+          'קלעמענט',
+        ],
+        'asmaMeaning99': [
+          'Patient One',
+          'Paciente',
+          'Pasienten',
+          'Alaisan',
+          'Isiguli',
+          'Bệnh nhân',
+          'פאציענט',
+        ],
       };
       final arbFiles = Directory('lib/l10n').listSync().whereType<File>().where(
         (file) =>
@@ -1500,6 +1523,23 @@ void main() {
         }
       }
     });
+
+    test(
+      'extended high-risk asma meanings fall back safely when uncertain',
+      () {
+        final aymara = _readArb('lib/l10n/app_ay.arb');
+        final yiddish = _readArb('lib/l10n/app_yi.arb');
+        final zulu = _readArb('lib/l10n/app_zu.arb');
+
+        expect(aymara['asmaMeaning7'], english['asmaMeaning7']);
+        expect(aymara['asmaMeaning77'], english['asmaMeaning77']);
+        expect(aymara['asmaMeaning99'], english['asmaMeaning99']);
+        expect(yiddish['asmaMeaning9'], english['asmaMeaning9']);
+        expect(yiddish['asmaMeaning20'], english['asmaMeaning20']);
+        expect(yiddish['asmaMeaning21'], english['asmaMeaning21']);
+        expect(zulu['asmaMeaning99'], english['asmaMeaning99']);
+      },
+    );
 
     test('priority high-risk asma meanings avoid known machine fragments', () {
       const staleByLocale = {

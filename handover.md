@@ -10460,3 +10460,74 @@
 ### Sonraki Adim
 - Kullanici talimati geregi bu islem commit + push sonrasi duracak.
 - Yeniden baslatma sonrasi devam edilecek ilk risk: safe-priority disi locale'lerde `asmaMeaning*` icin yerel dilde kalan yanlis baglamli machine cevirileri taramak; ozellikle `Patient/Paciente/Pasienten`, `guardian newspaper`, `governor political office`, `constrictor snake` anlamina kayan yerel kopyalar kanitlanip tek tek temizlenecek.
+
+## 2026-04-16 TUR-261 — Repair Non-Priority High-Risk Asma Context Drift
+
+### Yapilan Islem
+- TUR-260 sonrasi safe-priority disi `app_*.arb` dosyalarinda kalan yanlis baglamli `asmaMeaning*` kopyalari tarandi.
+- `asmaMeaning7`, `asmaMeaning9`, `asmaMeaning20`, `asmaMeaning21`, `asmaMeaning77`, `asmaMeaning83`, `asmaMeaning99` icin 60 kanitli drift temizlendi.
+- 40 ARB kaynagi, emin olunmayan yerel ceviri uydurulmadan, ilgili anahtarin dogrulanmis Ingilizce referans fallback'ine cekildi.
+- `flutter gen-l10n` calistirildi; ilgili generated `app_localizations_*.dart` dosyalari yenilendi.
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart` genisletildi:
+  `all locales avoid stale English high-risk asma fragments` testi artik yerel drift fragmentlerini de yasakliyor,
+  `extended high-risk asma meanings fall back safely when uncertain` testi eklendi.
+
+### Kanit
+- Patch oncesi scan:
+  `bad_context_high_risk_asma_hits 60`.
+- Kanit ornekleri:
+  `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb:552` once `Uka Guardian sat revistanjja`,
+  `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb:622` once `Uka Gobernadoraxa`,
+  `A:\Way of Allah\sirat_i_nur\lib\l10n\app_yi.arb:552` once `דער גאַרדיאַן`,
+  `A:\Way of Allah\sirat_i_nur\lib\l10n\app_zu.arb:644` once `Isiguli`.
+- Patch sonrasi ornekler:
+  `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb:552`,
+  `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb:622`,
+  `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb:644`,
+  `A:\Way of Allah\sirat_i_nur\lib\l10n\app_yi.arb:552`,
+  `A:\Way of Allah\sirat_i_nur\lib\l10n\app_yi.arb:622`,
+  `A:\Way of Allah\sirat_i_nur\lib\l10n\app_yi.arb:644`,
+  `A:\Way of Allah\sirat_i_nur\lib\l10n\app_zu.arb:644`.
+- Patch sonrasi scan:
+  `bad_context_high_risk_asma_hits 0`.
+- Test guard:
+  `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:1471`,
+  `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:1528`.
+
+### Neden Yapildi
+- Bu alan dogrudan Allah'in isimlerinin anlamini gosterir; `hasta`, `vali`, `yilan`, `gazete`, `aziz Clement` gibi yanlis baglamli ceviriler dini icerik guvenini bozar.
+- AGENTS.md Section 13 geregi dini icerikte uydurma yasak; yerel dilde dogrulama belirsizse guvenli EN referans fallback'i daha dogru tercihtir.
+- Degisiklik tek kok soruna sinirli tutuldu: high-risk Asma meaning drift temizligi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` icinde 40 dosyada yalniz kanitlanan high-risk `asmaMeaning*` degerleri.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` generated ciktisi.
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe-priority disi 40 locale'de toplam 60 yanlis baglamli dini icerik kopyasi temizlendi.
+- Runtime generated l10n degeri ARB kaynaklariyla senkronlandi.
+- Yeni guard, ayni wrong-context parcalarinin tekrar ARB'lere girmesini engeller.
+
+### Test Sonucu
+- Odak test: `flutter test test\arb_ui_localization_test.dart test\features\library\asma_ul_husna_page_test.dart test\asma_ul_husna_data_test.dart --reporter compact` PASS (`84/84`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`473/473`)
+
+### Risk Degisimi
+- Safe-priority disi high-risk Asma wrong-context riski: `16/25 -> 4/25`
+- Generated l10n wrong-context runtime riski: `12/25 -> 3/25`
+- Nadir locale'de uydurma dini ceviri riski: `12/25 -> 5/25` (guvenli EN fallback ile azaltildi, tam yerel dogrulama ileride kaynakli ceviri gerektirir)
+
+### Rollback Plani
+- TUR-261 kapsamindaki 40 ARB dosyasinda ilgili high-risk `asmaMeaning*` degerleri onceki haline dondurulur.
+- `flutter gen-l10n` tekrar calistirilir.
+- `arb_ui_localization_test.dart` icindeki TUR-261 guard genisletmeleri geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude Section 13'e gore hardcoded dini/ses icerigi ve Supabase baglantisini tara:
+  `audio_files`, `quran_ayahs`, `duas`, `hadiths` tablolarinda source/verified_at/storage_path zinciri ile uygulama provider'lari arasinda stub veya external-only fallback kaliyor mu kanitla.

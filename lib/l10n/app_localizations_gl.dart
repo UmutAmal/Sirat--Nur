@@ -1623,7 +1623,8 @@ class AppLocalizationsGl extends AppLocalizations {
   String get asmaMeaning76 => 'O oculto';
 
   @override
-  String get asmaMeaning77 => 'O Gobernador';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'O Supremo';
@@ -1690,5 +1691,6 @@ class AppLocalizationsGl extends AppLocalizations {
   String get asmaMeaning98 => 'A guía máis xusta';
 
   @override
-  String get asmaMeaning99 => 'O paciente';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

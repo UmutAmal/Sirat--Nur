@@ -1617,7 +1617,8 @@ class AppLocalizationsCo extends AppLocalizations {
   String get asmaMeaning76 => 'U Hidden';
 
   @override
-  String get asmaMeaning77 => 'U guvernatore';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'U Supremu';

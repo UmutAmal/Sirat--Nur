@@ -1606,7 +1606,8 @@ class AppLocalizationsTt extends AppLocalizations {
   String get asmaMeaning76 => 'Яшерен';
 
   @override
-  String get asmaMeaning77 => 'Губернатор';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'Аллаһы Тәгалә';

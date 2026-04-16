@@ -1676,5 +1676,6 @@ class AppLocalizationsYo extends AppLocalizations {
   String get asmaMeaning98 => 'Itọsọna Olododo Julọ';
 
   @override
-  String get asmaMeaning99 => 'Alaisan naa';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

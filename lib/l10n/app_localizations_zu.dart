@@ -1684,5 +1684,6 @@ class AppLocalizationsZu extends AppLocalizations {
   String get asmaMeaning98 => 'Umhlahlandlela Olungile Kakhulu';
 
   @override
-  String get asmaMeaning99 => 'Isiguli';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

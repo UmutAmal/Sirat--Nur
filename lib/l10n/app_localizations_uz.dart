@@ -1629,7 +1629,8 @@ class AppLocalizationsUz extends AppLocalizations {
   String get asmaMeaning82 => 'Kechiruvchi';
 
   @override
-  String get asmaMeaning83 => 'Klement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Hammaning Egasi/Hukmdori';

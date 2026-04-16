@@ -1620,7 +1620,8 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get asmaMeaning76 => 'Ti Nalimed';
 
   @override
-  String get asmaMeaning77 => 'Ti Gobernador';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'Ti Katan-okan';

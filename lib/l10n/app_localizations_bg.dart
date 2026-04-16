@@ -1623,7 +1623,8 @@ class AppLocalizationsBg extends AppLocalizations {
   String get asmaMeaning76 => 'Скритият';
 
   @override
-  String get asmaMeaning77 => 'Губернаторът';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'Върховният';
@@ -1641,7 +1642,8 @@ class AppLocalizationsBg extends AppLocalizations {
   String get asmaMeaning82 => 'Прощаващият';
 
   @override
-  String get asmaMeaning83 => 'Климент';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Собственикът / Суверенът на всичко';

@@ -1614,7 +1614,8 @@ class AppLocalizationsHr extends AppLocalizations {
   String get asmaMeaning76 => 'Skriveno';
 
   @override
-  String get asmaMeaning77 => 'Guverner';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'Najviši';
@@ -1632,7 +1633,8 @@ class AppLocalizationsHr extends AppLocalizations {
   String get asmaMeaning82 => 'Opraštač';
 
   @override
-  String get asmaMeaning83 => 'Klement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Vlasnik / Vladar svega';

@@ -1612,7 +1612,8 @@ class AppLocalizationsTg extends AppLocalizations {
   String get asmaMeaning76 => 'Пинҳон';
 
   @override
-  String get asmaMeaning77 => 'Губернатор';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'Оли Олӣ';

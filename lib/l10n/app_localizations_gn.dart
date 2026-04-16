@@ -1682,5 +1682,6 @@ class AppLocalizationsGn extends AppLocalizations {
   String get asmaMeaning98 => 'Pe Guía Hekojojavéva';
 
   @override
-  String get asmaMeaning99 => 'Pe Paciente Peteĩva';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

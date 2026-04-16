@@ -1611,7 +1611,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get asmaMeaning76 => 'The Hidden';
 
   @override
-  String get asmaMeaning77 => 'Guvernören';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'Den Supreme One';
@@ -1629,7 +1630,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get asmaMeaning82 => 'Förlåtaren';
 
   @override
-  String get asmaMeaning83 => 'Klementen';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Allas ägare/suverän';

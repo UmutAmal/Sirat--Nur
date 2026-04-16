@@ -1631,7 +1631,8 @@ class AppLocalizationsEt extends AppLocalizations {
   String get asmaMeaning82 => 'Andestaja';
 
   @override
-  String get asmaMeaning83 => 'Klement';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Kõigi omanik / suverään';

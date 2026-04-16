@@ -1616,7 +1616,8 @@ class AppLocalizationsNl extends AppLocalizations {
   String get asmaMeaning76 => 'Het verborgene';
 
   @override
-  String get asmaMeaning77 => 'De gouverneur';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'De Allerhoogste';

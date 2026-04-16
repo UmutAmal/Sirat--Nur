@@ -1628,7 +1628,8 @@ class AppLocalizationsEo extends AppLocalizations {
   String get asmaMeaning82 => 'La Pardonanto';
 
   @override
-  String get asmaMeaning83 => 'La Klemento';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'La Posedanto / Suvereno de Ĉiuj';

@@ -1424,7 +1424,8 @@ class AppLocalizationsAy extends AppLocalizations {
   String get asmaMeaning6 => 'Seguridad uka churirixa';
 
   @override
-  String get asmaMeaning7 => 'Uka Guardian sat revistanjja';
+  String get asmaMeaning7 =>
+      'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'Wali valorani / Wali ch’amani';
@@ -1636,7 +1637,8 @@ class AppLocalizationsAy extends AppLocalizations {
   String get asmaMeaning76 => 'Ukax Imantatawa';
 
   @override
-  String get asmaMeaning77 => 'Uka Gobernadoraxa';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'Jachʼa Jachʼa Diosawa';
@@ -1703,5 +1705,6 @@ class AppLocalizationsAy extends AppLocalizations {
   String get asmaMeaning98 => 'Taqi kunat sipansa chiqapar uñjir guia';
 
   @override
-  String get asmaMeaning99 => 'Uka Pacientejj';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

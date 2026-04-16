@@ -1614,7 +1614,8 @@ class AppLocalizationsSq extends AppLocalizations {
   String get asmaMeaning76 => 'E fshehura';
 
   @override
-  String get asmaMeaning77 => 'Guvernatori';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'I Lartësuari';
@@ -1632,7 +1633,8 @@ class AppLocalizationsSq extends AppLocalizations {
   String get asmaMeaning82 => 'Falësi';
 
   @override
-  String get asmaMeaning83 => 'Klementi';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Pronari / Sovrani i të Gjithëve';

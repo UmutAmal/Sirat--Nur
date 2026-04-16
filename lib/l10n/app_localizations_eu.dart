@@ -1616,7 +1616,8 @@ class AppLocalizationsEu extends AppLocalizations {
   String get asmaMeaning76 => 'Ezkutukoa';
 
   @override
-  String get asmaMeaning77 => 'Gobernadoreak';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'Gorena';
@@ -1634,7 +1635,8 @@ class AppLocalizationsEu extends AppLocalizations {
   String get asmaMeaning82 => 'Barkatzailea';
 
   @override
-  String get asmaMeaning83 => 'Klementoa';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Guztion jabea / subiranoa';

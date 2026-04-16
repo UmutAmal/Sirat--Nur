@@ -1619,7 +1619,8 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get asmaMeaning76 => 'Ang Tinago';
 
   @override
-  String get asmaMeaning77 => 'Ang Gobernador';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'Ang Supremo';

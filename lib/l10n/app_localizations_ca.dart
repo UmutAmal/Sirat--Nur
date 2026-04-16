@@ -1455,7 +1455,8 @@ class AppLocalizationsCa extends AppLocalizations {
   String get asmaMeaning19 => 'El coneixedor de tot';
 
   @override
-  String get asmaMeaning20 => 'El constrictor';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
   String get asmaMeaning21 => 'El alleujador';
@@ -1626,7 +1627,8 @@ class AppLocalizationsCa extends AppLocalizations {
   String get asmaMeaning76 => 'L\'ocult';
 
   @override
-  String get asmaMeaning77 => 'El governador';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'El Suprem';
