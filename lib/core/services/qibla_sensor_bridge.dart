@@ -59,10 +59,11 @@ class QiblaSensorBridge {
     }
 
     await for (final event in events) {
-      if (event.heading == null) continue;
+      final heading = event.heading;
+      if (heading == null) continue;
 
       _lastFilteredHeading = AstronomicalMathUtil.ekfUpdate(
-        event.heading!,
+        heading,
         _lastFilteredHeading,
         _lastVariance,
       );
@@ -71,7 +72,7 @@ class QiblaSensorBridge {
 
       yield QiblaOrientation(
         trueHeading: trueHeading,
-        magneticHeading: event.heading!,
+        magneticHeading: heading,
         declination: declination,
         accuracy: event.accuracy ?? 0.0,
       );

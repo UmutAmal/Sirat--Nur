@@ -206,5 +206,14 @@ void main() {
       expect(source, isNot(contains('settings.latitude!')));
       expect(source, isNot(contains('settings.longitude!')));
     });
+
+    test('Qibla sensor bridge uses local heading snapshots', () {
+      final source = File(
+        'lib/core/services/qibla_sensor_bridge.dart',
+      ).readAsStringSync();
+
+      expect(source, contains('final heading = event.heading;'));
+      expect(source, isNot(contains('event.heading!')));
+    });
   });
 }

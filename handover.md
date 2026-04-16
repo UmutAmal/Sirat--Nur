@@ -7450,3 +7450,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude `A:\Way of Allah\sirat_i_nur\lib\core\services\qibla_sensor_bridge.dart` icindeki `event.heading!` kullanimi local heading snapshot ile kapatilacak.
+
+## 2026-04-16 TUR-195 — Guard Qibla Sensor Heading Snapshot
+
+### Yapılan İşlem
+- QiblaSensorBridge compass event akisi `event.heading` degerini local `heading` snapshot olarak okuyor.
+- Null heading durumunda mevcut `continue` davranisi korunuyor; dolu heading ayni snapshot ile EKF filtreye ve `QiblaOrientation.magneticHeading` alanina aktariliyor.
+- Qibla testlerine `event.heading!` force-unwrap kullanimini engelleyen source guard eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\qibla_sensor_bridge.dart:62` artik sensor heading degerini local snapshot olarak aliyor.
+- Eski akista `event.heading == null` guardindan sonra `event.heading!` iki kez kullaniliyordu; bu gereksiz force-unwrap refactor sonrasi crash riski ve null-safety standart sapmasi olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\qibla_sensor_bridge.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\qibla\qibla_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Qibla sensor davranisi degismedi; null heading event'leri yine atlanir, dolu heading event'leri ayni hesap zincirinden gecer.
+- Force-unwrap geri gelirse `Qibla sensor bridge uses local heading snapshots` testi fail edecek.
+
+### Test Sonucu
+- `flutter test test\features\qibla\qibla_page_test.dart` PASS (`8/8`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`367/367`)
+
+### Risk Değişimi
+- Qibla sensor heading force-unwrap crash yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude kalan `!` kullanimlari icinde gercek crash yuzeyi olan runtime path'ler ayrilacak; safe static map/index pattern'leri test guard ile belgelenip riskli olanlar snapshot'a alinacak.
