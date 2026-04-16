@@ -7126,3 +7126,33 @@
 
 ### Sonraki Adım
 - Sonraki dongude remaining debug logging ve production operator ciktilari tekrar taranacak; raw teknik hata/metaveri kullaniciya veya release loguna siziyor mu kanitla ayrilacak.
+
+## 2026-04-16 TUR-185 — Sanitize Live TV WebView Error Logs
+
+### Yapılan İşlem
+- Live TV WebView main-frame load hata logu, WebView `errorCode` ve `errorType` metadata'sini basmayacak sekilde sabit mesaja indirildi.
+- `live_tv_page_test.dart` kaynak guard'i eklenerek `error.errorCode` ve `error.errorType` log ifadelerinin geri gelmesi engellendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart:153` once WebView hata kodu ve hata tipini debug loguna yaziyordu.
+- Kullaniciya ham hata gosterilmese bile release/debug loglarinda teknik hata metadata'si gereksiz telemetri yuzeyi olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\live_tv_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Live TV hata akisi aynen calisir: fallback candidate denenir, bittiginde localized stream error UI gosterilir.
+- Log artik sadece olay sinyali verir; raw WebView hata metadata'si yazilmaz.
+
+### Test Sonucu
+- `flutter test test\live_tv_page_test.dart` PASS (`8/8`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`361/361`)
+
+### Risk Değişimi
+- Live TV WebView hata metadata'sinin loglara sizmasi riski: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude kalan debugPrint yuzeyleri, ozellikle premium/IAP ve audio player servisleri icin raw state, URL, path veya exception sizintisi acisindan tekrar skorlanacak.

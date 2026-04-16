@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/features/tv/live_tv_page.dart';
@@ -5,6 +7,16 @@ import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 void main() {
   group('Live TV localized copy helpers', () {
+    test('webview load logs do not expose raw error metadata', () {
+      final source = File(
+        'lib/features/tv/live_tv_page.dart',
+      ).readAsStringSync();
+
+      expect(source, contains("debugPrint('Live TV main frame load failed')"));
+      expect(source, isNot(contains('error.errorCode')));
+      expect(source, isNot(contains('error.errorType')));
+    });
+
     test('provider error text is localized and hides raw exceptions', () {
       final en = lookupAppLocalizations(const Locale('en'));
       final tr = lookupAppLocalizations(const Locale('tr'));

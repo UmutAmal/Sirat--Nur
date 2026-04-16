@@ -150,9 +150,7 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
           onWebResourceError: (error) {
             if (!mounted) return;
             if (error.isForMainFrame != true) return;
-            debugPrint(
-              'Live TV main frame load failed: code=${error.errorCode}, type=${error.errorType}',
-            );
+            debugPrint('Live TV main frame load failed');
             final next = _candidateIndex + 1;
             if (next < _currentCandidates.length) {
               _candidateIndex = next;
