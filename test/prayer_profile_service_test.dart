@@ -105,6 +105,28 @@ void main() {
       }
     });
 
+    test(
+      'does not masquerade Bangladesh or Afghanistan as Karachi profiles',
+      () {
+        for (final args in const [
+          (countryCode: 'BD', timezone: 'Asia/Dhaka'),
+          (countryCode: 'AF', timezone: 'Asia/Kabul'),
+          (countryCode: null, timezone: 'Asia/Dhaka'),
+          (countryCode: null, timezone: 'Asia/Kabul'),
+        ]) {
+          final profile = resolvePrayerProfile(
+            countryCode: args.countryCode,
+            timezone: args.timezone,
+          );
+
+          expect(profile.calculationMethod, mwlPrayerMethod);
+          expect(profile.madhab, hanafiMadhab);
+          expect(profile.sourceName, isNot(contains('Karachi')));
+          expect(profile.sourceUrl, isNot('https://www.uis.edu.pk'));
+        }
+      },
+    );
+
     test('maps regional Indonesia and Malaysia timezones', () {
       final cases = <String, String>{
         'Asia/Jakarta': kemenagPrayerMethod,

@@ -10818,3 +10818,64 @@
 ### Sonraki Adim
 - Prayer profile resolver'da Pakistan/Karachi profiline dusen Bangladesh/Afghanistan gibi kalan ulke/timezone mapping'leri kaynak dogrulugu acisindan incelenecek.
 - Exact yerel resmi takvim modeli gerektiren ulkeler icin uydurma algoritma eklemeden Supabase-backed schedule/provenance tasarimi hazirlanacak.
+
+## 2026-04-16 TUR-267 — Remove Bangladesh/Afghanistan Karachi Prayer Profile Masquerade
+
+### Yapilan Islem
+- Bangladesh (`BD`, `Asia/Dhaka`) ve Afghanistan (`AF`, `Asia/Kabul`) icin Karachi profil fallback'i kaldirildi.
+- Pakistan (`PK`, `Asia/Karachi`) icin Karachi profili korunurken Bangladesh/Afghanistan artik yanlis Pakistan/Karachi sourceName/sourceUrl gostermeyen MWL + Hanafi fallback'e dusuyor.
+- Country-code ve timezone-only akislari birlikte koruyan regresyon testi eklendi.
+
+### Kanit
+- Patch oncesi risk:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart` icinde `Asia/Dhaka`, `Asia/Kabul`, `BD`, `AF` dogrudan `_karachiProfile` donduruyordu.
+- `_karachiProfile` sourceName/sourceUrl olarak Pakistan/Karachi kaynagini tasiyor:
+  `University of Islamic Sciences, Karachi`, `https://www.uis.edu.pk`.
+- Patch sonrasi timezone fallback:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:250`,
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:254`.
+- Patch sonrasi country resolver:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:463`,
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:465`,
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:466`,
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:467`.
+- Guard:
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:109`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:112`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:113`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:124`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:125`.
+- Web dogrulama notu:
+  Bangladesh icin Islamic Foundation resmi sitesi ve imam.gov.bd resmi portalinda namaz/islami hizmet varligi goruldu; exact hesap algoritmasi bu patch'te kodlanmadi.
+  Afghanistan icin Ministry of Hajj and Religious Affairs resmi portali (`https://www.mohia.gov.af/index.php/en`) goruldu; exact hesap algoritmasi bu patch'te kodlanmadi.
+
+### Neden Yapildi
+- Bangladesh/Afghanistan kullanicisina Pakistan/Karachi kaynagi yerel veya resmi profil gibi gosterilemez.
+- Exact yerel takvim parametresi/provenance kodda yokken yeni resmi profil uydurmak Section 13'e aykiri olurdu.
+- Bu turda dini hesap sonucu icin en guvenli dar scope uygulandi: yanlis kaynak iddiasi kaldirildi, Hanafi madhab etiketi korundu, exact yerel schedule borcu handover'da acik birakildi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Odak test: `flutter test test\prayer_profile_service_test.dart test\settings_provider_test.dart test\prayer_times_service_test.dart --reporter compact` PASS (`36/36`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`477/477`)
+
+### Risk Degisimi
+- Bangladesh/Afghanistan icin Karachi kaynak maskesi riski: `16/25 -> 4/25`
+- Country-code/timezone-only namaz profili yanlis-attribution riski: `12/25 -> 4/25`
+- Bangladesh/Afghanistan exact yerel resmi schedule eksigi: `12/25 -> 10/25` (Supabase-backed resmi schedule entegrasyonu gerekir)
+
+### Rollback Plani
+- `Asia/Dhaka`, `Asia/Kabul`, `BD`, `AF` mapping'leri tekrar `_karachiProfile` yapilir.
+- `prayer_profile_service_test.dart` icindeki TUR-267 guard geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- `hasOfficialPrayerAuthority` mantigi incelenecek; generic MWL/ISNA fallback'lerin "official authority" gibi sunulup sunulmadigi settings/diagnostics yuzeylerinde kanitlanacak.
+- Exact yerel resmi prayer schedule ihtiyaci olan ulkeler icin Supabase-backed schedule/provenance veri modeli tasarimi devam edecek.
