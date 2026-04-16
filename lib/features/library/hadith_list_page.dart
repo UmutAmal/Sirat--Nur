@@ -24,8 +24,12 @@ class HadithListPage extends ConsumerWidget {
     final lang = Localizations.localeOf(context).languageCode;
     final name = resolveHadithCollectionName(collectionId, lang);
     final l10n = AppLocalizations.of(context)!;
+    final isHadithDatasetComplete =
+        ref.watch(verifiedHadithDatasetAvailabilityProvider).value ?? false;
 
-    if (!hasVerifiedHadithDataset) {
+    if (!isVerifiedHadithRuntimeAvailable(
+      cloudDatasetComplete: isHadithDatasetComplete,
+    )) {
       return Scaffold(
         appBar: AppBar(title: Text(name)),
         body: Center(

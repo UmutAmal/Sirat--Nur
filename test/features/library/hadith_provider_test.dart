@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
 import 'package:sirat_i_nur/features/library/providers/hadith_provider.dart';
 
 void main() {
@@ -84,6 +85,27 @@ void main() {
       expect(items.last.translation, 'Doğrulanmış Türkçe test çevirisi.');
     });
 
+    test('completeness guard requires every supported collection', () {
+      final completeRows = supportedHadithCollectionIds
+          .map(
+            (collectionId) => _row(collectionId: collectionId, hadithNumber: 1),
+          )
+          .toList();
+
+      expect(hasCompleteVerifiedHadithDataset(completeRows), isTrue);
+
+      final incompleteRows = completeRows
+          .where((row) => row['collection_id'] != 'nasai')
+          .toList();
+      expect(hasCompleteVerifiedHadithDataset(incompleteRows), isFalse);
+
+      final malformedRows = completeRows
+          .map((row) => Map<String, dynamic>.from(row))
+          .toList();
+      malformedRows.first['source_license'] = null;
+      expect(hasCompleteVerifiedHadithDataset(malformedRows), isFalse);
+    });
+
     test('provider stays gated and queries only the verified hadith table', () {
       final serviceSource = File(
         'lib/core/services/hadith_api_service.dart',
@@ -99,8 +121,14 @@ void main() {
         ),
       );
       expect(providerSource, contains("from('hadiths')"));
+      expect(
+        providerSource,
+        contains('verifiedHadithDatasetAvailabilityProvider'),
+      );
+      expect(providerSource, contains('hasCompleteVerifiedHadithDataset'));
       expect(providerSource, contains('source_license'));
       expect(providerSource, contains('verified_at'));
+      expect(providerSource, contains('readOptionalSupabaseClient(ref)'));
       expect(providerSource, isNot(contains('fetchHadiths(')));
       expect(providerSource, isNot(contains('fetchArabicHadiths(')));
     });

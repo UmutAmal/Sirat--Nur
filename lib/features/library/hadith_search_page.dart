@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/features/library/providers/hadith_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
-class HadithSearchPage extends StatefulWidget {
+class HadithSearchPage extends ConsumerStatefulWidget {
   const HadithSearchPage({super.key});
   @override
-  State<HadithSearchPage> createState() => _HadithSearchPageState();
+  ConsumerState<HadithSearchPage> createState() => _HadithSearchPageState();
 }
 
-class _HadithSearchPageState extends State<HadithSearchPage> {
+class _HadithSearchPageState extends ConsumerState<HadithSearchPage> {
   final _controller = TextEditingController();
 
   @override
@@ -23,8 +25,12 @@ class _HadithSearchPageState extends State<HadithSearchPage> {
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final l10n = AppLocalizations.of(context)!;
+    final isHadithDatasetComplete =
+        ref.watch(verifiedHadithDatasetAvailabilityProvider).value ?? false;
 
-    if (!hasVerifiedHadithDataset) {
+    if (!isVerifiedHadithRuntimeAvailable(
+      cloudDatasetComplete: isHadithDatasetComplete,
+    )) {
       return Scaffold(
         appBar: AppBar(title: Text(l10n.searchHadith)),
         body: Center(
@@ -78,18 +84,29 @@ class _HadithSearchPageState extends State<HadithSearchPage> {
               decoration: InputDecoration(
                 hintText: l10n.searchHint,
                 prefixIcon: const Icon(Icons.search_rounded),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(16),
+                  borderSide: BorderSide.none,
+                ),
                 filled: true,
-                fillColor: isDark ? AppColors.darkSurface : AppColors.emeraldSurface,
+                fillColor: isDark
+                    ? AppColors.darkSurface
+                    : AppColors.emeraldSurface,
               ),
             ),
             const SizedBox(height: 24),
             Expanded(
               child: Center(
-                child: Text(l10n.searchHint,
+                child: Text(
+                  l10n.searchHint,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 14,
-                    color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4))),
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Theme.of(
+                      context,
+                    ).colorScheme.onSurface.withValues(alpha: 0.4),
+                  ),
+                ),
               ),
             ),
           ],

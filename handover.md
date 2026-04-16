@@ -9929,3 +9929,57 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude hadis dataset completeness guard'i ekle: build-time gate acilsa bile Supabase `hadiths` tablosunda desteklenen 6 koleksiyonun her biri icin verified/provenance'li satir yoksa router/list yine kapali kalmali ve diagnostics/handover bunu acik raporlamali.
+
+## 2026-04-16 TUR-251 — Guard Verified Hadith Dataset Completeness
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart` icine desteklenen verified hadis koleksiyon id listesi ve `isVerifiedHadithRuntimeAvailable` runtime guard'i eklendi.
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart` icinde Supabase `hadiths` tablosunu provenance alanlariyla okuyan `verifiedHadithDatasetAvailabilityProvider` eklendi.
+- `hasCompleteVerifiedHadithDataset` eklendi; `bukhari`, `muslim`, `tirmidhi`, `abudawud`, `nasai`, `ibnmajah` koleksiyonlarinin her biri icin en az bir verified/provenance'li satir yoksa dataset tamam sayilmaz.
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`, `A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart` ve `A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_search_page.dart` build-time gate'i tek basina yeterli saymayacak sekilde runtime completeness guard'a baglandi.
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_provider_test.dart` completeness guard icin koleksiyon eksigi ve provenance eksigi testleriyle genisletildi.
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_gate_test.dart` Riverpod provider okumalari icin `ProviderScope` ile guncellendi.
+
+### Neden Yapildi
+- TUR-250 runtime provider'i cloud-ready yapti, ancak sadece `SIRAT_HAS_VERIFIED_HADITH_DATASET` dart-define'i acildiginda Supabase tarafindaki dataset'in gercekten tamam oldugunu kanitlayan ikinci bir runtime kontrol yoktu.
+- Bu bosluk build-time flag yanlislikla acilirsa eksik veya provenance'siz hadis koleksiyonlarinin UI'a cikmasina yol acabilirdi.
+- Dini icerikte eksik veya dogrulanmamis veri gostermek kabul edilemez; bu nedenle UI sadece build-time gate ve cloud completeness guard ayni anda gecerse acilir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_list_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\hadith_search_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_gate_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Hadis UI acilma zinciri artik `dart-define gate -> Supabase client -> verified hadiths rows -> all supported collections complete` sirasina baglandi.
+- Eksik `source`, `source_license`, `verified_at`, Arapca metin veya koleksiyon kapsami olan dataset UI'i acamaz.
+- Default build davranisi hala guvenli kapali modda kalir; gercek verified manifest ve Supabase seed olmadan hadis koleksiyonlari kullaniciya acilmaz.
+
+### Test Sonucu
+- Odak test: `flutter test test\features\library\hadith_provider_test.dart test\features\library\hadith_gate_test.dart --reporter compact` PASS (`6/6`)
+- Library regresyon testi: `flutter test test\library_page_test.dart --reporter compact` PASS (`14/14`)
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`456/456`)
+- Not: Ilk odak test denemesinde iki `flutter test` prosesi paralel calistigi icin Flutter native-assets kopyalama yarisi olustu; kod hatasi degildi. Sonraki dogrulamalar tek test prosesiyle PASS aldi.
+
+### Risk Degisimi
+- Build-time flag ile eksik hadis UI acilma riski: `12/25 -> 3/25`
+- Provenance eksik hadis koleksiyonunun UI'a cikma riski: `16/25 -> 3/25`
+- Verified hadis dataset eksikligi riski: `9/25 -> 8/25` (guard tamamlandi; gercek kaynak manifest/Supabase seed halen gerekli)
+
+### Rollback Plani
+- `hadith_api_service.dart` icindeki `supportedHadithCollectionIds` ve `isVerifiedHadithRuntimeAvailable` ekleri geri alinir.
+- `hadith_provider.dart` icindeki `verifiedHadithDatasetAvailabilityProvider` ve `hasCompleteVerifiedHadithDataset` ekleri geri alinir.
+- Library/list/search sayfalarindaki runtime completeness okumasi eski build-time gate'e dondurulur.
+- `test\features\library\hadith_gate_test.dart` ve `test\features\library\hadith_provider_test.dart` ek beklentileri geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude diagnostics/yayin oncesi kontrol yuzeyine hadis dataset completeness durumunu ekle veya daha yuksek risk bulunursa once onu ele al. Gercek hadis manifest/Supabase seed olmadan dini icerik uretme, uydurma satir veya sahte audio ekleme.

@@ -9,6 +9,7 @@ import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
 import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
 import 'package:sirat_i_nur/features/library/hadith_collection_copy.dart';
 import 'package:sirat_i_nur/features/library/dua_meaning_localization.dart';
+import 'package:sirat_i_nur/features/library/providers/hadith_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 String buildLibraryErrorText(AppLocalizations l10n) {
@@ -42,12 +43,19 @@ String resolveSukunLibrarySubtitle(AppLocalizations l10n, bool isAvailable) {
   return isAvailable ? l10n.sukunMixerSubtitle : l10n.sukunUnavailableTitle;
 }
 
-bool areHadithCollectionsAvailable() {
-  return hasVerifiedHadithDataset;
+bool areHadithCollectionsAvailable({bool cloudDatasetComplete = false}) {
+  return isVerifiedHadithRuntimeAvailable(
+    cloudDatasetComplete: cloudDatasetComplete,
+  );
 }
 
-String resolveHadithLibrarySubtitle(AppLocalizations l10n) {
-  return areHadithCollectionsAvailable()
+String resolveHadithLibrarySubtitle(
+  AppLocalizations l10n, {
+  bool cloudDatasetComplete = false,
+}) {
+  return areHadithCollectionsAvailable(
+        cloudDatasetComplete: cloudDatasetComplete,
+      )
       ? l10n.hadithBooks
       : l10n.hadithSourcePending;
 }
@@ -112,7 +120,11 @@ class LibraryPage extends ConsumerWidget {
       cloudSources: cloudSukunSources,
     );
     final areDuasAvailable = areDailyDuasAvailable(duas);
-    final areHadithsAvailable = areHadithCollectionsAvailable();
+    final isHadithDatasetComplete =
+        ref.watch(verifiedHadithDatasetAvailabilityProvider).value ?? false;
+    final areHadithsAvailable = areHadithCollectionsAvailable(
+      cloudDatasetComplete: isHadithDatasetComplete,
+    );
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.library)),
@@ -433,7 +445,10 @@ class LibraryPage extends ConsumerWidget {
                             ),
                           ),
                           Text(
-                            resolveHadithLibrarySubtitle(l10n),
+                            resolveHadithLibrarySubtitle(
+                              l10n,
+                              cloudDatasetComplete: isHadithDatasetComplete,
+                            ),
                             style: TextStyle(
                               fontSize: 12,
                               color: Theme.of(

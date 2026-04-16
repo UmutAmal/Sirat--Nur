@@ -3,6 +3,19 @@ const bool hasVerifiedHadithDataset = bool.fromEnvironment(
   defaultValue: false,
 );
 
+const Set<String> supportedHadithCollectionIds = {
+  'bukhari',
+  'muslim',
+  'tirmidhi',
+  'abudawud',
+  'nasai',
+  'ibnmajah',
+};
+
+bool isVerifiedHadithRuntimeAvailable({required bool cloudDatasetComplete}) {
+  return hasVerifiedHadithDataset && cloudDatasetComplete;
+}
+
 class VerifiedHadithDatasetUnavailable implements Exception {
   const VerifiedHadithDatasetUnavailable();
 

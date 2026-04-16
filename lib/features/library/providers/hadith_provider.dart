@@ -33,6 +33,35 @@ class HadithRequest {
   int get hashCode => collectionId.hashCode ^ langCode.hashCode;
 }
 
+const String _hadithSelectColumns =
+    'collection_id, book, hadith_number, text_ar, text_tr, text_en, narrator, grade, source, source_license, verified_at';
+
+final verifiedHadithDatasetAvailabilityProvider = FutureProvider<bool>((
+  ref,
+) async {
+  if (!hasVerifiedHadithDataset) {
+    return false;
+  }
+
+  final supabase = readOptionalSupabaseClient(ref);
+  if (supabase == null) {
+    return false;
+  }
+
+  try {
+    final rows = await supabase
+        .from('hadiths')
+        .select(_hadithSelectColumns)
+        .order('collection_id', ascending: true)
+        .order('hadith_number', ascending: true);
+    return hasCompleteVerifiedHadithDataset(
+      List<Map<String, dynamic>>.from(rows),
+    );
+  } catch (_) {
+    return false;
+  }
+});
+
 final hadithSectionProvider =
     FutureProvider.family<List<HadithItem>, HadithRequest>((ref, req) async {
       if (!hasVerifiedHadithDataset) {
@@ -42,9 +71,7 @@ final hadithSectionProvider =
       final supabase = readRequiredSupabaseClient(ref);
       final rows = await supabase
           .from('hadiths')
-          .select(
-            'collection_id, book, hadith_number, text_ar, text_tr, text_en, narrator, grade, source, source_license, verified_at',
-          )
+          .select(_hadithSelectColumns)
           .eq('collection_id', req.collectionId)
           .order('hadith_number', ascending: true);
 
@@ -54,6 +81,21 @@ final hadithSectionProvider =
         langCode: req.langCode,
       );
     }, retry: _retryHadithSectionProvider);
+
+bool hasCompleteVerifiedHadithDataset(List<Map<String, dynamic>> rows) {
+  for (final collectionId in supportedHadithCollectionIds) {
+    final items = resolveVerifiedHadithItems(
+      rows,
+      collectionId: collectionId,
+      langCode: 'en',
+    );
+    if (items.isEmpty) {
+      return false;
+    }
+  }
+
+  return true;
+}
 
 List<HadithItem> resolveVerifiedHadithItems(
   List<Map<String, dynamic>> rows, {
