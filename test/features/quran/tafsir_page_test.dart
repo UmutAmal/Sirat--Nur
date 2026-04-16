@@ -61,27 +61,6 @@ void main() {
     );
   });
 
-  test('tafsir service normalizes API rows before cache writes', () {
-    final rows = TafsirLocalService.normalizeApiTafsirRows(
-      [
-        {'verse_key': '2:255', 'text': '<p>Allah &amp; His mercy</p>'},
-        {'verse_key': '3:5', 'text': 'Wrong surah must be ignored'},
-        {'verse_key': '2:not-a-number', 'text': 'Invalid verse'},
-        {'verse_key': '2:256', 'text': '   '},
-        {'unexpected': 'shape'},
-        'not a map',
-      ],
-      surahNumber: 2,
-      tafsirSource: 'en.sahih',
-    );
-
-    expect(rows, hasLength(1));
-    expect(rows.single['surah_number'], 2);
-    expect(rows.single['verse_number'], 255);
-    expect(rows.single['tafsir_text'], 'Allah & His mercy');
-    expect(rows.single['tafsir_source'], 'en.ibn_kathir');
-  });
-
   test('tafsir service normalizes only verified cloud rows', () {
     final rows = TafsirLocalService.normalizeVerifiedTafsirRows(
       [
@@ -177,22 +156,24 @@ void main() {
     expect(source, isNot(contains('?? 169')));
   });
 
-  test('tafsir loader defaults to cache-only runtime fetch policy', () {
+  test('tafsir loader stays cache-only and avoids runtime tafsir APIs', () {
     final source = File(
       'lib/core/services/tafsir_local_service.dart',
     ).readAsStringSync();
     final loaderSource = source.substring(source.indexOf('class TafsirLoader'));
 
+    expect(source, isNot(contains("import 'package:dio/dio.dart'")));
+    expect(source, isNot(contains('api.quran.com/api/v4/tafsirs')));
+    expect(source, isNot(contains('normalizeApiTafsirRows')));
+    expect(source, isNot(contains('downloadTafsirForSurah')));
+    expect(source, isNot(contains('downloadAllTafsirs')));
     expect(source, contains('this.fetchPolicy = TafsirFetchPolicy.cacheOnly'));
     expect(source, contains('VerifiedTafsirRowsLoader? verifiedRowsLoader'));
     expect(loaderSource, contains("TafsirException('cache_missing'"));
+    expect(loaderSource, isNot(contains('allowExternalRefresh')));
     expect(
       loaderSource.indexOf('_loadVerifiedRowsFromCloud'),
       lessThan(loaderSource.indexOf("TafsirException('cache_missing'")),
-    );
-    expect(
-      loaderSource.indexOf('fetchPolicy == TafsirFetchPolicy.cacheOnly'),
-      lessThan(loaderSource.indexOf('downloadTafsirForSurah')),
     );
   });
 }

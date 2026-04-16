@@ -10531,3 +10531,59 @@
 ### Sonraki Adim
 - Bir sonraki dongude Section 13'e gore hardcoded dini/ses icerigi ve Supabase baglantisini tara:
   `audio_files`, `quran_ayahs`, `duas`, `hadiths` tablolarinda source/verified_at/storage_path zinciri ile uygulama provider'lari arasinda stub veya external-only fallback kaliyor mu kanitla.
+
+## 2026-04-16 TUR-262 — Remove Runtime External Tafsir Fetch Path
+
+### Yapilan Islem
+- AGENTS.md Section 13 sonrasi runtime dini icerik/Supabase zinciri tarandi.
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart` icindeki dogrudan `https://api.quran.com/api/v4/tafsirs/...` indirme yolu kaldirildi.
+- `Dio` importu, `normalizeApiTafsirRows`, `_apiIdForSource`, `_stripHtml`, `downloadTafsirForSurah` ve `downloadAllTafsirs` kaldirildi.
+- `TafsirLoader` cache-only kaldi: once local verified cache, sonra Supabase `verifiedRowsLoader`, sonra varsa mevcut verified cache, yoksa durust `cache_missing`.
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart` guard'i guncellendi; tafsir servisinde `Dio`, runtime tafsir API endpoint'i, unverified API normalizer ve eski download metodlari geri gelirse test kirilir.
+
+### Kanit
+- Patch oncesi risk:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:299` runtime'da `Dio().get(...)` ile dis tafsir API'ye gidiyordu.
+- Patch oncesi false-success kok sebep:
+  ayni dosyada eski `normalizeApiTafsirRows` cache satirlarina `source`, `source_license`, `verified_at` yazmiyordu; okuma sorgulari ise `_verifiedWhere` ile bu alanlari zorunlu tutuyordu.
+- Patch sonrasi loader kaniti:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:336` sadece `TafsirFetchPolicy.cacheOnly`,
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:370` Supabase/verified loader,
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:379` dogru `cache_missing`.
+- Guard kaniti:
+  `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart:159`,
+  `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart:165`,
+  `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart:166`,
+  `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart:167`,
+  `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart:168`,
+  `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart:169`.
+
+### Neden Yapildi
+- Tafsir dogrudan dini icerik oldugu icin runtime dis API'den kaynaksiz/cache'e eksik provenance ile yazilamaz.
+- Eski yol, kullanici refresh yaptiginda teknik olarak indirme denemesi yapip sonra verified filtreye takilan gorunmeyen satirlar uretebilirdi.
+- Dogru mimari: tafsir verisi once kaynak lisansi ve `verified_at` ile Supabase seed/manifest zincirinden gelir; uygulama runtime'da sadece bu verified satirlari okur ve offline cache'e alir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Odak test: `flutter test test\features\quran\tafsir_page_test.dart test\generate_tafsir_seed_test.dart --reporter compact` PASS (`15/15`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`472/472`)
+
+### Risk Degisimi
+- Runtime external tafsir API bagimliligi: `16/25 -> 4/25`
+- Unverified tafsir cache write riski: `16/25 -> 3/25`
+- Tafsir refresh false-success riski: `12/25 -> 3/25`
+
+### Rollback Plani
+- `tafsir_local_service.dart` icindeki kaldirilan download/API normalizer bolumleri geri eklenir.
+- `tafsir_page_test.dart` icindeki TUR-262 guard beklentileri onceki haline dondurulur.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Section 13 taramasi devam edecek: `hadith_provider`, `bundled_quran_provider`, `duas_data`, `asma_ul_husna_data`, `offline_audio_service`, `sukun_audio_page` icinde source/verified_at/storage_path disinda runtime dini icerik veya external-only fallback kaliyor mu kanitlanacak.

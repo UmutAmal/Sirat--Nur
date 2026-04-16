@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -236,140 +235,6 @@ class TafsirLocalService {
     throw TafsirException('no_tafsir_sources');
   }
 
-  static List<Map<String, Object>> normalizeApiTafsirRows(
-    List<dynamic> tafsirs, {
-    required int surahNumber,
-    required String tafsirSource,
-  }) {
-    final canonicalSource = _canonicalSource(tafsirSource);
-    final rows = <Map<String, Object>>[];
-
-    for (final item in tafsirs) {
-      if (item is! Map) {
-        continue;
-      }
-
-      final tafsir = Map<String, dynamic>.from(item);
-      final verseKey = (tafsir['verse_key'] ?? '').toString();
-      final parts = verseKey.split(':');
-      if (parts.length != 2) continue;
-
-      final verseSurahNumber = int.tryParse(parts[0]);
-      if (verseSurahNumber != surahNumber) continue;
-
-      final verseNumber = int.tryParse(parts[1]);
-      if (verseNumber == null || verseNumber < 1) continue;
-
-      final rawText = (tafsir['text'] ?? '').toString();
-      final cleanedText = _stripHtml(rawText);
-      if (cleanedText.isEmpty) continue;
-
-      rows.add({
-        'surah_number': surahNumber,
-        'verse_number': verseNumber,
-        'tafsir_text': cleanedText,
-        'tafsir_source': canonicalSource,
-      });
-    }
-
-    return List<Map<String, Object>>.unmodifiable(rows);
-  }
-
-  static int _apiIdForSource(String source) {
-    final canonical = _canonicalSource(source);
-    final apiId = _sourceToApiId[canonical];
-    if (apiId == null) {
-      throw TafsirException('unsupported_source', details: canonical);
-    }
-    return apiId;
-  }
-
-  static String _stripHtml(String input) {
-    final noTags = input
-        .replaceAll(RegExp(r'<[^>]*>'), ' ')
-        .replaceAll('&nbsp;', ' ')
-        .replaceAll('&amp;', '&')
-        .replaceAll('&quot;', '"')
-        .replaceAll('&#39;', '\'')
-        .replaceAll('&lt;', '<')
-        .replaceAll('&gt;', '>');
-    return noTags.replaceAll(RegExp(r'\s+'), ' ').trim();
-  }
-
-  static Future<void> downloadTafsirForSurah({
-    required int surahNumber,
-    required String tafsirSource,
-    void Function(int current, int total)? onProgress,
-  }) async {
-    final db = await database;
-    final canonicalSource = _canonicalSource(tafsirSource);
-    final apiId = _apiIdForSource(canonicalSource);
-    final dio = Dio();
-
-    final response = await dio
-        .get(
-          'https://api.quran.com/api/v4/tafsirs/$apiId/by_chapter/$surahNumber',
-          options: Options(headers: {'Accept': 'application/json'}),
-        )
-        .timeout(const Duration(minutes: 2));
-
-    if (response.statusCode != 200) {
-      throw TafsirException(
-        'api_status',
-        details: response.statusCode?.toString(),
-      );
-    }
-
-    final data = response.data as Map<String, dynamic>;
-    final tafsirs = (data['tafsirs'] as List<dynamic>? ?? const <dynamic>[]);
-    if (tafsirs.isEmpty) {
-      throw TafsirException('no_entries');
-    }
-
-    final cacheRows = normalizeApiTafsirRows(
-      tafsirs,
-      surahNumber: surahNumber,
-      tafsirSource: canonicalSource,
-    );
-    if (cacheRows.isEmpty) {
-      throw TafsirException('no_entries');
-    }
-
-    await db.delete(
-      _tableName,
-      where: 'surah_number = ? AND tafsir_source = ?',
-      whereArgs: [surahNumber, canonicalSource],
-    );
-    final batch = db.batch();
-    for (var index = 0; index < cacheRows.length; index++) {
-      batch.insert(_tableName, cacheRows[index]);
-      onProgress?.call(index + 1, cacheRows.length);
-    }
-
-    await batch.commit(noResult: true);
-  }
-
-  static Future<void> downloadAllTafsirs({
-    required String tafsirSource,
-    void Function(double progress, String message)? onProgress,
-  }) async {
-    const totalSurahs = 114;
-    var completed = 0;
-
-    for (var surah = 1; surah <= totalSurahs; surah++) {
-      await downloadTafsirForSurah(
-        surahNumber: surah,
-        tafsirSource: tafsirSource,
-        onProgress: (current, total) {
-          final currentSurahProgress = current / total;
-          final overall = (completed + currentSurahProgress) / totalSurahs;
-          onProgress?.call(overall, 'download:$surah:$totalSurahs');
-        },
-      );
-      completed++;
-    }
-  }
-
   static Future<String?> getTafsir({
     required int surahNumber,
     required int verseNumber,
@@ -468,7 +333,7 @@ class TafsirLocalService {
   ];
 }
 
-enum TafsirFetchPolicy { cacheOnly, allowExternalRefresh }
+enum TafsirFetchPolicy { cacheOnly }
 
 typedef VerifiedTafsirRowsLoader =
     Future<List<Map<String, dynamic>>> Function({
@@ -507,27 +372,11 @@ class TafsirLoader {
       return cloudTafsir;
     }
 
-    if (localTafsir.isNotEmpty && fetchPolicy == TafsirFetchPolicy.cacheOnly) {
+    if (localTafsir.isNotEmpty) {
       return localTafsir;
     }
 
-    if (fetchPolicy == TafsirFetchPolicy.cacheOnly) {
-      throw TafsirException('cache_missing');
-    }
-
-    await TafsirLocalService.downloadTafsirForSurah(
-      surahNumber: surahNumber,
-      tafsirSource: tafsirSource,
-      onProgress: (current, total) {
-        final progress = total == 0 ? 0.0 : current / total;
-        onProgress?.call(progress, 'load:$current:$total');
-      },
-    );
-
-    return TafsirLocalService.getTafsirsForSurah(
-      surahNumber: surahNumber,
-      tafsirSource: tafsirSource,
-    );
+    throw TafsirException('cache_missing');
   }
 
   Future<List<Map<String, dynamic>>> _loadVerifiedRowsFromCloud(
