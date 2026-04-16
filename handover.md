@@ -9342,3 +9342,45 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi siradaki dongude direct major dependency adaylarini risk skoruna gore ayri ayri ele al: once en dusuk migration yuzeyi olan `share_plus`, sonra `geocoding`; `flutter_riverpod` ve `fl_chart` icin kod etkisi taranmadan pubspec constraint'i genisletme.
+
+## 2026-04-16 TUR-239 — Upgrade Geocoding Major
+
+### Yapilan Islem
+- `geocoding` direct dependency constraint'i `^3.0.0 -> ^4.0.0` olarak guncellendi.
+- `pubspec.lock` icinde `geocoding 3.0.0 -> 4.0.0` ve `geocoding_android 3.3.1 -> 4.0.1` cozuldu.
+- `share_plus 13.0.0` icin dry-run yapildi; `geolocator -> geolocator_linux -> package_info_plus -> win32` zinciri nedeniyle cozumleyici catismasi kanitlandi, bu turda zorlanmadi.
+
+### Neden Yapildi
+- `flutter pub outdated` TUR-238 sonrasi `geocoding 3.0.0 -> 4.0.0` direct major adayini cozulur olarak gosteriyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart:108` uretimde tek `placemarkFromCoordinates` kullanim noktasi; changelog'a gore 4.0.0 icin app-facing reverse geocoding API degisikligi yok, ana breaking sart Flutter 3.29+.
+- Ortam `flutter doctor -v` ile Flutter `3.41.4` gosteriyor; bu sart saglandigi icin migration scope'u dusuk tutuldu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\pubspec.yaml`
+- `A:\Way of Allah\sirat_i_nur\pubspec.lock`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Location detection reverse geocoding hatti daha guncel Android federated paketiyle calisacak.
+- `geocoding` artik direct outdated listesinden cikti.
+- Kalan direct outdated major adaylari `fl_chart`, `flutter_riverpod` ve `share_plus`; `share_plus` icin mevcut blokaj `win32` transitive constraint catismasi.
+
+### Test Sonucu
+- Dry-run: `flutter pub add geocoding:^4.0.0 --dry-run` PASS, 2 dependency degisimi ongoruldu.
+- Odak test: `flutter test test\location_selection_page_test.dart` PASS (`5/5`)
+- `flutter pub outdated` PASS; `geocoding` direct outdated listesinden kalkti.
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`427/427`)
+
+### Risk Degisimi
+- `geocoding` major eskime riski: `12/25 -> 2/25`
+- Location reverse geocoding API regression riski: `8/25 -> 3/25` (odak test + analyze + full test ile korundu)
+- `share_plus` major eskime riski: `12/25 -> 12/25` (resolver blokaji nedeniyle bilerek ertelendi)
+
+### Rollback Plani
+- `pubspec.yaml` icinde `geocoding: ^4.0.0` satiri `^3.0.0` yapilir.
+- `flutter pub get` calistirilir ve `pubspec.lock` eski `geocoding 3.0.0 / geocoding_android 3.3.1` cozumune dondurulur.
+- Location focused test, analyze ve full test tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi direct major risklerden `fl_chart` icin usage/changelog taramasi yap; grafik API migration yuzeyi buyukse once source-level guard/test ekle, sonra constraint dene. `flutter_riverpod 3.x` genis state-management migration oldugu icin en sona birak.
