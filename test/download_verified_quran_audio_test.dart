@@ -96,5 +96,15 @@ INSERT INTO public.audio_files (
         'unexpected mirror error',
       );
     });
+
+    test('guards mirrored files with MP3 signature checks', () {
+      final source = File(
+        'tool/download_verified_quran_audio.dart',
+      ).readAsStringSync();
+
+      expect(source, contains('hasLikelyMp3Header(targetFile)'));
+      expect(source, contains('invalid mp3 file'));
+      expect(source, contains('_deleteFileIfExistsSync(targetFile)'));
+    });
   });
 }

@@ -4,6 +4,8 @@ import 'dart:io';
 
 import 'package:path/path.dart' as p;
 
+import 'quran_audio_file_validation.dart';
+
 final RegExp _seedRowPattern = RegExp(
   r"'quran_surah', 'Surah (\d+)', '([^']+)', NULL, (\d+), NULL, '([^']+)', 'ar', '([^']+)', TIMESTAMPTZ '([^']+)'",
   multiLine: true,
@@ -50,6 +52,16 @@ class VerifiedQuranAudioMirrorSummary {
   final int skipped;
   final List<String> failed;
   final Directory outputDir;
+}
+
+void _deleteFileIfExistsSync(File file) {
+  try {
+    if (file.existsSync()) {
+      file.deleteSync();
+    }
+  } catch (_) {
+    // Cleanup is best-effort; the caller records the mirror failure separately.
+  }
 }
 
 String describeQuranAudioMirrorFailure(Object error) {
@@ -212,12 +224,13 @@ Future<VerifiedQuranAudioMirrorSummary> mirrorVerifiedQuranAudio({
       await reciterDir.create(recursive: true);
       final targetFile = File(p.join(reciterDir.path, row.fileName));
 
-      if (!overwrite &&
-          targetFile.existsSync() &&
-          targetFile.lengthSync() > 0) {
-        skipped++;
-        manifest.add(row.toJson(targetFile.path));
-        continue;
+      if (!overwrite && targetFile.existsSync()) {
+        if (hasLikelyMp3Header(targetFile)) {
+          skipped++;
+          manifest.add(row.toJson(targetFile.path));
+          continue;
+        }
+        _deleteFileIfExistsSync(targetFile);
       }
 
       try {
@@ -237,9 +250,12 @@ Future<VerifiedQuranAudioMirrorSummary> mirrorVerifiedQuranAudio({
 
         if (!targetFile.existsSync() || targetFile.lengthSync() == 0) {
           failures.add('${row.reciterId}/${row.fileName}: empty file');
-          if (targetFile.existsSync()) {
-            targetFile.deleteSync();
-          }
+          _deleteFileIfExistsSync(targetFile);
+          continue;
+        }
+        if (!hasLikelyMp3Header(targetFile)) {
+          failures.add('${row.reciterId}/${row.fileName}: invalid mp3 file');
+          _deleteFileIfExistsSync(targetFile);
           continue;
         }
 
@@ -250,9 +266,7 @@ Future<VerifiedQuranAudioMirrorSummary> mirrorVerifiedQuranAudio({
           '${row.reciterId}/${row.fileName}: '
           '${describeQuranAudioMirrorFailure(error)}',
         );
-        if (targetFile.existsSync()) {
-          targetFile.deleteSync();
-        }
+        _deleteFileIfExistsSync(targetFile);
       }
     }
   } finally {

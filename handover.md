@@ -9152,3 +9152,52 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude audio/content hattindan devam et: `download_verified_quran_audio`, `upload_quran_audio_storage`, seed SQL ve runtime catalog arasinda dis linklerin yalniz mirror input olarak kaldigini ve runtime playback'in sadece Supabase Storage'dan beslendigini tekrar tara; ardindan en yuksek riskli tek bulguyu kapat.
+
+## 2026-04-16 TUR-235 — Validate Quran Audio Mirror and Upload MP3 Payloads
+
+### Yapilan Islem
+- Quran audio mirror/upload tool zincirine MP3 imza kontrolu eklendi.
+- Yeni `tool\quran_audio_file_validation.dart` yardimcisi ID3 ve MPEG frame-sync basliklarini taniyor; bos veya HTML gibi non-audio payload'lari reddediyor.
+- `tool\download_verified_quran_audio.dart` artik mevcut dosyayi sadece non-empty diye skip etmiyor; dosya MP3 imzasi tasimiyorsa best-effort silip yeniden indirmeye calisiyor.
+- Mirror download sonrasi dosya 0 byte veya MP3 olmayan payload ise manifest'e girmiyor, failure olarak `empty file` veya `invalid mp3 file` yaziliyor.
+- `tool\upload_quran_audio_storage.dart` upload/dry-run plani artik missing, empty ve duplicate kontrollerine ek olarak invalid MP3 dosyasini da storage'a yuklemeden reddediyor.
+- Unit testlere ID3/frame-sync kabul testi, empty/HTML red testi, mirror source guard'i ve upload invalid MP3 failure beklentisi eklendi.
+
+### Neden Yapildi
+- `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart:218` mirror skip karari TUR-235 oncesi sadece dosyanin var ve non-empty olmasina dayanabiliyordu.
+- `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart:248` download sonrasi non-empty ama MP3 olmayan dosya manifest'e girebilirdi.
+- `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:97` upload plani dosyanin mevcut ve non-empty oldugunu kontrol ediyordu, fakat MP3 payload oldugunu dogrulamiyordu.
+- Kullanici etkisi: external mirror kaynagindan HTML hata sayfasi, redirect govdesi veya baska non-audio payload gelirse Supabase Storage'a ses diye yuklenebilir; sonra runtime Storage-backed URL kullansa bile icerik bozuk olur.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\quran_audio_file_validation.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart`
+- `A:\Way of Allah\sirat_i_nur\test\quran_audio_file_validation_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\download_verified_quran_audio_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran audio database/storage hattinda "external link runtime'a sizmasin" kuralinin yanina "storage'a yuklenen payload gercek MP3 olsun" bariyeri eklendi.
+- Mevcut invalid mirror dosyasi artik sessizce skip edilmez; tool onu silip yeniden indirmeye calisir.
+- Upload dry-run/operator akisi invalid MP3 dosyasini network yazimi baslamadan durdurur.
+
+### Test Sonucu
+- Odak test: `flutter test test\quran_audio_file_validation_test.dart test\download_verified_quran_audio_test.dart test\upload_quran_audio_storage_test.dart` PASS (`14/14`)
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`424/424`)
+
+### Risk Degisimi
+- Mirror kaynakli non-audio payload'in storage'a ses gibi girmesi riski: `16/25 -> 4/25`
+- Invalid mevcut mirror dosyasinin skip edilip manifest'e girmesi riski: `12/25 -> 3/25`
+- Upload/dry-run operator hatasiyla invalid MP3 yukleme riski: `12/25 -> 3/25`
+
+### Rollback Plani
+- `tool\quran_audio_file_validation.dart` ve `test\quran_audio_file_validation_test.dart` kaldirilir.
+- `tool\download_verified_quran_audio.dart` ve `tool\upload_quran_audio_storage.dart` icindeki TUR-235 MP3 imza guard'lari geri alinir.
+- Ilgili iki test dosyasindaki TUR-235 beklentileri kaldirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude hardcoded/fallback UI risklerini ve runtime content risklerini tekrar tara; ozellikle `shareAppMessage` rare-locale fallback'leri, Places tile/provider konfigurasyonu ve Premium/Paywall hata copy guard'lari arasindan en yuksek riskli tek cluster'i sec.

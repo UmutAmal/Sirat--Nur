@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 
 import 'generate_quran_audio_storage_seed.dart';
+import 'quran_audio_file_validation.dart';
 
 const String _defaultManifestPath = 'build/verified_quran_audio/manifest.json';
 const String _defaultBucketName = 'quran-audio';
@@ -113,6 +114,10 @@ List<String> validateMirroredQuranAudioUploadPlan(
     }
     if (localFile.lengthSync() == 0) {
       failed.add('$objectPath: empty local file');
+      continue;
+    }
+    if (!hasLikelyMp3Header(localFile)) {
+      failed.add('$objectPath: invalid mp3 file');
     }
   }
 

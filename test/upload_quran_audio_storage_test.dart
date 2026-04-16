@@ -52,9 +52,12 @@ void main() {
 
       final existingFile = File(
         '${tempDir.path}${Platform.pathSeparator}001.mp3',
-      )..writeAsBytesSync(<int>[1, 2, 3]);
+      )..writeAsBytesSync(<int>[0x49, 0x44, 0x33, 0x04]);
       final emptyFile = File('${tempDir.path}${Platform.pathSeparator}003.mp3')
         ..writeAsBytesSync(<int>[]);
+      final invalidFile = File(
+        '${tempDir.path}${Platform.pathSeparator}005.mp3',
+      )..writeAsStringSync('<html>not audio</html>');
       final missingPath = '${tempDir.path}${Platform.pathSeparator}002.mp3';
 
       final failures = validateMirroredQuranAudioUploadPlan([
@@ -86,10 +89,18 @@ void main() {
           verifiedAt: DateTime.utc(2026, 4, 8),
           localPath: existingFile.path,
         ),
+        MirroredAudioFile(
+          surahNumber: 5,
+          reciterId: 'alafasy',
+          sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
+          verifiedAt: DateTime.utc(2026, 4, 8),
+          localPath: invalidFile.path,
+        ),
       ]);
 
       expect(failures, contains('alafasy/002.mp3: missing local file'));
       expect(failures, contains('alafasy/003.mp3: empty local file'));
+      expect(failures, contains('alafasy/005.mp3: invalid mp3 file'));
       expect(
         failures,
         contains('alafasy/001.mp3: duplicate storage object path'),
