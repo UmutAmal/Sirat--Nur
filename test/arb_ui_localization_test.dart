@@ -735,6 +735,7 @@ void main() {
       'priority locales do not fall back to English for analytics and zakat labels',
       () {
         const localizedKeys = [
+          'analytics',
           'calculateZakat',
           'prayerCompletion',
           'streaks',

@@ -9059,3 +9059,52 @@
 
 ### Sonraki Adım
 - Commit/push sonrasi yeni dongude aktif risk taramasini yenile; proper-name terimleri zorlamadan `analytics`, `assistant`, `ok`, `premium`, `asmaulHusna` ve ozel gun/vakit adlari arasindan en yuksek riskli, gercek UI etkisi olan tek cluster sec.
+
+## 2026-04-16 TUR-233 — Localize Analytics Shell Copy
+
+### Yapılan İşlem
+- Ana sayfa quick access ve Analytics sayfa basliginda kullanilan `analytics` anahtari guvenli ARB batch'i ile guncellendi.
+- `flutter gen-l10n` calistirilarak generated `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Safe/priority locale setinde `tr`, `de`, `fr`, `es`, `ar`, `da`, `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi`, `zh`, `zh_CN`, `zh_TW` icin `analytics` anahtarinda Ingilizce fallback kalmadigi dogrulandi.
+- Otomatik cevirinin Ingilizce biraktigi Kuzey dili degerleri elle duzeltildi: `da/nb/nn/no analytics=Analyse`.
+- `tool\translate_arb_keys.dart` single-line guard listesine `analytics` eklendi.
+- `test\arb_ui_localization_test.dart` icindeki analytics/zakat fallback guard kapsamına `analytics` anahtari eklendi.
+- `test\translate_arb_keys_test.dart` icindeki analytics single-line guard testine `analytics` eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\analytics\analytics_page.dart:15` AppBar basliginda `l10n.analytics` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart:371` ana sayfa quick access kartinda `l10n.analytics` gosteriyor.
+- TUR-233 oncesi fallback taramasinda `analytics` safe locale setinde `da`, `nb`, `nn`, `no` icin app_en ile birebir ayniydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe/priority locale setinde ana sayfa ve analytics AppBar yuzeylerinde Ingilizce `Analytics` fallback riski kapandi.
+- Single-line guard ile kisa analytics shell etiketinde batch debris/newline riski kapatildi.
+- Kalan tum-locale birebir Ingilizce degerler cogunlukla ceviri servisinin guvenli aday uretmedigi nadir/legacy locale grubunda birakildi; sahte veya uydurma ceviri yazilmadi. TUR-233 sonrasi exact fallback sayisi: `analytics 87`.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\features\analytics\analytics_page_test.dart test\features\home\home_page_test.dart` PASS (`86/86`)
+- Safe fallback taramasi PASS: hedef `analytics` anahtarinda `safe_same=[]`
+- Single-line taramasi PASS: hedef `analytics` anahtarinda `newline=[]`
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`419/419`)
+- `flutter gen-l10n` PASS
+
+### Risk Değişimi
+- Safe/priority locale analytics shell fallback riski: `8/25 -> 2/25`
+- Kisa analytics etiketinde multiline/batch debris riski: `8/25 -> 2/25`
+- Tum-locale nadir/legacy fallback riski: `7/25 -> 5/25`
+
+### Rollback Planı
+- `lib\l10n\app_*.arb`, `lib\l10n\app_localizations_*.dart`, `test\arb_ui_localization_test.dart`, `test\translate_arb_keys_test.dart` ve `tool\translate_arb_keys.dart` icindeki TUR-233 degisiklikleri geri alinir; production Dart UI logic degismedigi icin runtime rollback dar kapsamli kalir.
+
+### Sonraki Adım
+- Commit/push sonrasi yeni dongude aktif risk taramasini yenile; proper-name ve mesru transliterasyonlari zorlamadan `assistant`, `ok`, `premium`, `hadithBooks`, `duaCategoryProtection` gibi gorunur ve cevrilebilir UI etiketlerinden en yuksek riskli tek cluster sec.

@@ -399,6 +399,7 @@ bool _mustStaySingleLine(String key) {
       key == 'quranReading' ||
       key == 'prayers' ||
       key == 'fasting' ||
+      key == 'analytics' ||
       key == 'weeklyProgress' ||
       key == 'hijriCalendar' ||
       key == 'namesOfAllah' ||

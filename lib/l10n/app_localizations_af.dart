@@ -961,7 +961,7 @@ class AppLocalizationsAf extends AppLocalizations {
   String get library => 'Biblioteek';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Ontleding';
 
   @override
   String get dailyDuas => 'Daaglikse Duas';

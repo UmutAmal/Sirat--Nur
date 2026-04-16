@@ -961,7 +961,7 @@ class AppLocalizationsNn extends AppLocalizations {
   String get library => 'Bibliotek';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Analyse';
 
   @override
   String get dailyDuas => 'Daglig Duas';

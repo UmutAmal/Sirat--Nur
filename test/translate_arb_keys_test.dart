@@ -168,6 +168,13 @@ void main() {
     });
 
     test('rejects multiline analytics label output', () {
+      final analyticsValue = resolveTranslatedArbValue(
+        key: 'analytics',
+        source: 'Analytics',
+        currentValue: 'Analitik',
+        candidate: 'means the following.\nAnalitik',
+      );
+
       final streaksValue = resolveTranslatedArbValue(
         key: 'streaks',
         source: 'Streaks',
@@ -182,6 +189,7 @@ void main() {
         candidate: 'means the following.\nNamaz Tamamlama',
       );
 
+      expect(analyticsValue, 'Analitik');
       expect(streaksValue, 'Seriler');
       expect(prayerCompletionValue, 'Namaz Tamamlama');
     });
