@@ -154,6 +154,17 @@ void main() {
       expect(params.ishaAngle, isNull);
     });
 
+    test('preserves non-Hanafi MWL madhab labels in profile displays', () {
+      expect(
+        profileForMethod(mwlPrayerMethod, madhab: malikiMadhab).madhab,
+        malikiMadhab,
+      );
+      expect(
+        profileForMethod(mwlPrayerMethod, madhab: hanbaliMadhab).madhab,
+        hanbaliMadhab,
+      );
+    });
+
     test(
       'builds Tehran profile with maghrib angle and jafari-compatible shadow factor',
       () {

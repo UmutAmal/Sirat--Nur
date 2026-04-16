@@ -10762,3 +10762,59 @@
 ### Sonraki Adim
 - Prayer profile mapping icinde baska ulkenin resmi profiline dusen kalan country/timezone var mi taranacak.
 - Ardindan resmi exact takvim gerektiren ulkeler icin Supabase-backed `prayer_schedules` veri modeli ve offline cache riskleri planlanacak.
+
+## 2026-04-16 TUR-266 — Preserve MWL Madhab Profile Displays
+
+### Yapilan Islem
+- `profileForMethod(mwlPrayerMethod, madhab: ...)` artik Hanafi disindaki tum MWL profillerini otomatik Shafii etikete dusurmuyor.
+- MWL + Maliki ve MWL + Hanbali icin ayri display profilleri korunur hale getirildi.
+- Settings/diagnostics gibi profil gosteren yuzeylerde hesaplanan veya secilen mezhep etiketi ile gorunen mezhep etiketi ayni kalacak sekilde regresyon testi eklendi.
+
+### Kanit
+- Patch oncesi risk:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart` icinde `profileForMethod` `mwlPrayerMethod` icin yalnizca Hanafi'yi ayiriyor, diger tum madhab degerlerini `_mwlShafiiProfile` olarak donduruyordu.
+- Patch sonrasi MWL + Maliki profil sabiti:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:155`.
+- Patch sonrasi MWL + Hanbali profil sabiti:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:162`.
+- Patch sonrasi `profileForMethod` MWL switch'i Maliki ve Hanbali'yi koruyor:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:411`,
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:414`,
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:415`.
+- Guard:
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:157`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:159`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:163`.
+
+### Neden Yapildi
+- TUR-265 ile Algeria/Tunisia icin Morocco resmi profil maskesi kaldirilip MWL + Maliki fallback secildi; ancak settings/diagnostics zinciri `profileForMethod` uzerinden tekrar okundugunda Maliki etiketi Shafii'ye donebiliyordu.
+- Namaz vakti ve mezhep bilgisi kullaniciya dini pratik etkisi olan bir bilgi olarak sunuldugu icin gorunen etiket, uygulanan ayar ve kaynak iddiasi tutarli olmak zorunda.
+- Bu turda yeni dini hesap parametresi uydurulmadi; yalnizca mevcut MWL profilinin madhab etiketi kayipsiz hale getirildi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Odak test: `flutter test test\prayer_profile_service_test.dart test\features\settings\diagnostics_page_test.dart test\features\settings\settings_page_test.dart --reporter compact` PASS (`36/36`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`476/476`)
+- `flutter doctor` Android/test hattinda PASS; Chrome ve Visual Studio eksikleri web/Windows hedefleri icin non-blocking olarak kaldi.
+
+### Risk Degisimi
+- MWL + Maliki/Hanbali display mismatch riski: `12/25 -> 3/25`
+- Settings/diagnostics mezhep yanlis-etiket riski: `12/25 -> 3/25`
+- Yerel resmi exact schedule eksigi: `10/25 -> 10/25` (bu tur display dogrulugu icin dar scope'ta tutuldu)
+
+### Rollback Plani
+- `_mwlHanbaliProfile` sabiti kaldirilir.
+- `profileForMethod` icindeki `mwlPrayerMethod` switch'i onceki Hanafi/disi ternary yapisina dondurulur.
+- `prayer_profile_service_test.dart` icindeki TUR-266 guard geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Prayer profile resolver'da Pakistan/Karachi profiline dusen Bangladesh/Afghanistan gibi kalan ulke/timezone mapping'leri kaynak dogrulugu acisindan incelenecek.
+- Exact yerel resmi takvim modeli gerektiren ulkeler icin uydurma algoritma eklemeden Supabase-backed schedule/provenance tasarimi hazirlanacak.

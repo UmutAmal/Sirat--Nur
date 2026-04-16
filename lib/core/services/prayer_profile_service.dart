@@ -159,6 +159,13 @@ const PrayerCalculationProfile _mwlMalikiProfile = PrayerCalculationProfile(
   sourceUrl: 'https://www.mwl.net/en',
 );
 
+const PrayerCalculationProfile _mwlHanbaliProfile = PrayerCalculationProfile(
+  calculationMethod: mwlPrayerMethod,
+  madhab: hanbaliMadhab,
+  sourceName: 'Muslim World League',
+  sourceUrl: 'https://www.mwl.net/en',
+);
+
 const PrayerCalculationProfile _moroccoProfile = PrayerCalculationProfile(
   calculationMethod: moroccoPrayerMethod,
   madhab: malikiMadhab,
@@ -402,9 +409,12 @@ PrayerCalculationProfile profileForMethod(String method, {String? madhab}) {
             )
           : _isnaProfile;
     case mwlPrayerMethod:
-      return normalizedMadhab == hanafiMadhab
-          ? _mwlHanafiProfile
-          : _mwlShafiiProfile;
+      return switch (normalizedMadhab) {
+        hanafiMadhab => _mwlHanafiProfile,
+        malikiMadhab => _mwlMalikiProfile,
+        hanbaliMadhab => _mwlHanbaliProfile,
+        _ => _mwlShafiiProfile,
+      };
     case moroccoPrayerMethod:
       return _moroccoProfile;
     case tehranPrayerMethod:
