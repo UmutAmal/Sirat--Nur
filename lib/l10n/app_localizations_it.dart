@@ -335,16 +335,16 @@ class AppLocalizationsIt extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'TV in diretta';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Guarda dal vivo';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Errore di flusso';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Ricarica';
 
   @override
   String get openInYoutube => 'Apri su YouTube';
@@ -556,7 +556,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get noInternet => 'Nessuna connessione Internet';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Per favore controlla la tua connessione';
 
   @override
   String get premium => 'Premium';

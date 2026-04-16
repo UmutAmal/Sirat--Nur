@@ -8505,3 +8505,51 @@
 ### Sonraki Adım
 - Commit kapisinda `git diff --check`, `flutter analyze`, `flutter test` calistir; hepsi gecerse commit/push yap.
 - Sonraki dongude aktif l10n fallback taramasini yenile; `offlineMode`, `liveTv`, `clearCache`, `hijriCalendar`, `home`, `settings`, `searchHint`, `weeklyProgress` gibi gorunur ve guvenle cevrilebilir anahtarlar arasindan en yuksek etkili tek yuzeyi sec.
+
+## 2026-04-16 TUR-223 — Localize Live TV Runtime Copy
+
+### Yapılan İşlem
+- Live TV yuzeyinde kullanilan `liveTv`, `watchLive`, `streamError`, `reload`, `checkConnection` anahtarlari korumali ARB batch'i ile genis locale kumesinde lokalize edildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Safe/priority locale kalite gecisinde `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi` fallback'lerinin kapandigi dogrulandi.
+- `tool\translate_arb_keys.dart` single-line guard listesine Live TV runtime anahtarlari eklendi.
+- `test\arb_ui_localization_test.dart` live tv actions guard'i `liveTv`, `watchLive`, `streamError`, `reload`, `checkConnection`, `openInYoutube` kumesini kapsayacak sekilde genisletildi.
+- `test\translate_arb_keys_test.dart` multiline Live TV output regresyon testiyle ceviri debris korumasi eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart:10` hata metnini `l10n.streamError` ve `l10n.checkConnection` ile birlestiriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart:248` AppBar basliginda `l10n.liveTv` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart:256` refresh tooltip'inde `l10n.reload` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart:328`, `:352`, `:374` hata/aksiyon yuzeylerinde `streamError`, `reload`, `watchLive` anahtarlarini gosteriyor.
+- TUR-223 oncesi aktif l10n fallback taramasinda bu bes anahtar icin `8` safe/priority locale ve yaklasik `134-137` toplam locale `app_en.arb` ile birebir ayniydi.
+- Live TV sayfasi ana ekran quick access yuzeyinden acildigi icin bu Ingilizce kalintilar gorunur UI riski olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe/priority locale setinde Live TV runtime/action copy icin Ingilizce fallback riski kapandi.
+- Fallback sayilari: `liveTv 137 -> 72`, `watchLive 134 -> 67`, `streamError 134 -> 65`, `reload 135 -> 70`, `checkConnection 134 -> 65`.
+- `openInYoutube` mevcut guard kapsaminda tekrar dogrulandi; safe locale setinde Ingilizce fallback kalmadigi teyit edildi.
+- Kalan fallback'ler ceviri servisinin guvenli aday uretmedigi nadir/legacy locale grubunda birakildi; "tamamlamak" adina sahte veya uydurma metin yazilmadi.
+- Tek satir guard'i ile gelecekteki batch debris/newline riski azaltildi.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\live_tv_page_test.dart` PASS (`64/64`)
+- Safe fallback taramasi PASS: `liveTv`, `watchLive`, `streamError`, `reload`, `checkConnection`, `openInYoutube` icin `safe_same=[]`
+- Single-line taramasi PASS: Live TV runtime/action anahtarlarinda bos veya multiline locale degeri yok.
+- `flutter gen-l10n` PASS
+
+### Risk Değişimi
+- Safe/priority locale Live TV fallback riski: `8/25 -> 2/25`
+- Tum locale Live TV fallback riski: `8/25 -> 5/25`
+- Live TV ceviri batch debris tekrar riski: `10/25 -> 3/25`
+
+### Sonraki Adım
+- Commit kapisinda `git diff --check`, `flutter analyze`, `flutter test` calistir; hepsi gecerse commit/push yap.
+- Sonraki dongude aktif l10n fallback taramasini yenile; `offlineMode`, `clearCache`, `hijriCalendar`, `home`, `settings`, `searchHint`, `weeklyProgress`, `quranReading` gibi gorunur ve guvenle cevrilebilir anahtarlar arasindan en yuksek etkili tek yuzeyi sec.

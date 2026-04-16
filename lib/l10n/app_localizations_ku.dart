@@ -333,16 +333,16 @@ class AppLocalizationsKu extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'TV Zindî';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Zindî Temaşe bikin';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Çewtiya Stream';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Ji nû ve barkirin';
 
   @override
   String get openInYoutube => 'Di YouTube de vekin';
@@ -554,7 +554,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get noInternet => 'Têkiliya Înternetê tune';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Ji kerema xwe pêwendiya xwe kontrol bikin';
 
   @override
   String get premium => 'Premium';

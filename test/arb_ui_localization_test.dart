@@ -30,13 +30,24 @@ void main() {
     test(
       'priority locales do not fall back to English for live tv actions',
       () {
+        const localizedKeys = [
+          'liveTv',
+          'watchLive',
+          'streamError',
+          'reload',
+          'checkConnection',
+          'openInYoutube',
+        ];
+
         for (final locale in priorityLocales) {
           final arb = _readArb('lib/l10n/app_$locale.arb');
-          expect(
-            arb['openInYoutube'],
-            isNot(english['openInYoutube']),
-            reason: 'app_$locale.arb still uses English for openInYoutube',
-          );
+          for (final key in localizedKeys) {
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
         }
       },
     );

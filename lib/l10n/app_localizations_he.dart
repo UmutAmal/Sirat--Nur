@@ -332,16 +332,16 @@ class AppLocalizationsHe extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'טלוויזיה בשידור חי';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'צפו בשידור חי';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'שגיאת זרם';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'טען מחדש';
 
   @override
   String get openInYoutube => 'פתח ביוטיוב';
@@ -552,7 +552,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get noInternet => 'אין חיבור לאינטרנט';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'אנא בדוק את החיבור שלך';
 
   @override
   String get premium => 'Premium';

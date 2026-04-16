@@ -357,6 +357,11 @@ bool _mustStaySingleLine(String key) {
       key == 'systemDefault' ||
       key == 'downloads' ||
       key == 'ibadahTracker' ||
+      key == 'liveTv' ||
+      key == 'watchLive' ||
+      key == 'streamError' ||
+      key == 'reload' ||
+      key == 'checkConnection' ||
       key == 'version' ||
       key == 'rateApp' ||
       key == 'shareApp' ||

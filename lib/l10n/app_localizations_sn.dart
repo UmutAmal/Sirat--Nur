@@ -338,7 +338,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get watchLive => 'Watch Live';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Kukanganisa kwekuyerera';
 
   @override
   String get reload => 'Reload';
@@ -553,7 +553,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get noInternet => 'Hapana Indaneti';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Ndokumbira utarise kubatana kwako';
 
   @override
   String get premium => 'Premium';

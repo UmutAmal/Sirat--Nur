@@ -333,16 +333,16 @@ class AppLocalizationsVi extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'Truyền hình trực tiếp';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Xem trực tiếp';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Lỗi phát trực tiếp';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Tải lại';
 
   @override
   String get openInYoutube => 'Mở trong YouTube';
@@ -554,7 +554,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get noInternet => 'Không có kết nối Internet';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Vui lòng kiểm tra kết nối của bạn';
 
   @override
   String get premium => 'Premium';

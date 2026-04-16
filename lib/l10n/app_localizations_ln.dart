@@ -333,16 +333,16 @@ class AppLocalizationsLn extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'TV en direct';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Botala En direct';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Libunga ya koleka';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Recharger lisusu';
 
   @override
   String get openInYoutube => 'Fungola na YouTube';
@@ -555,7 +555,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get noInternet => 'No Internet Connection';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Svp tala connexion na yo';
 
   @override
   String get premium => 'Premium';

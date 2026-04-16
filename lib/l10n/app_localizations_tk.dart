@@ -334,16 +334,16 @@ class AppLocalizationsTk extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'Göni telewizor';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Göni tomaşa ediň';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Akym ýalňyşlygy';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Gaýtadan ýükläň';
 
   @override
   String get openInYoutube => 'YouTube-da açyň';
@@ -555,7 +555,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get noInternet => 'Internet birikmesi ýok';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Baglanyşygyňyzy barlaň';
 
   @override
   String get premium => 'Premium';

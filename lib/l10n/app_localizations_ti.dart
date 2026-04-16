@@ -329,7 +329,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'ቀጥታዊ ቲቪ';
 
   @override
   String get watchLive => 'Watch Live';

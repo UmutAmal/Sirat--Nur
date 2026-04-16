@@ -338,13 +338,13 @@ class AppLocalizationsSt extends AppLocalizations {
   String get liveTv => 'Live TV';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Shebella Live';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Phoso ea ho phallela';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Kenya hape';
 
   @override
   String get openInYoutube => 'Bula ho YouTube';
@@ -557,7 +557,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get noInternet => 'Ha ho Khokahano ea Marang-rang';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Ka kopo, sheba khokahano ea hau';
 
   @override
   String get premium => 'Premium';

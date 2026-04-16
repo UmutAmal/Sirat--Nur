@@ -337,13 +337,13 @@ class AppLocalizationsSu extends AppLocalizations {
   String get liveTv => 'Live TV';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Lalajo Live';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Kasalahan aliran';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Muatan deui';
 
   @override
   String get openInYoutube => 'Buka dina YouTube';
@@ -555,7 +555,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get noInternet => 'Taya Konéksi Internét';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Mangga parios sambungan anjeun';
 
   @override
   String get premium => 'Premium';

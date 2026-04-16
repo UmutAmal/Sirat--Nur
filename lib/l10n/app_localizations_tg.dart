@@ -333,16 +333,16 @@ class AppLocalizationsTg extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'Телевизиони зинда';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Зиндагӣ тамошо кунед';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Хатогии ҷараён';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Аз нав бор кунед';
 
   @override
   String get openInYoutube => 'Дар YouTube кушоед';
@@ -554,7 +554,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get noInternet => 'Пайвасти интернет нест';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Лутфан пайвасти худро санҷед';
 
   @override
   String get premium => 'Premium';

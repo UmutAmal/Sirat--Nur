@@ -335,16 +335,16 @@ class AppLocalizationsHu extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'Élő TV';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Nézd élőben';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Adatfolyam hiba';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Újratöltés';
 
   @override
   String get openInYoutube => 'Nyissa meg a YouTube-on';
@@ -556,7 +556,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get noInternet => 'Nincs internetkapcsolat';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Kérjük, ellenőrizze a kapcsolatot';
 
   @override
   String get premium => 'Premium';

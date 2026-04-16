@@ -334,16 +334,16 @@ class AppLocalizationsMy extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'တိုက်ရိုက်တီဗီ';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'တိုက်ရိုက်ကြည့်ရှုပါ။';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'ထုတ်လွှင့်မှုအမှား';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'ပြန်တင်ပါ။';
 
   @override
   String get openInYoutube => 'YouTube တွင်ဖွင့်ပါ။';
@@ -555,7 +555,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get noInternet => 'အင်တာနက်ချိတ်ဆက်မှု မရှိပါ။';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'သင့်ချိတ်ဆက်မှုကို စစ်ဆေးပါ။';
 
   @override
   String get premium => 'Premium';

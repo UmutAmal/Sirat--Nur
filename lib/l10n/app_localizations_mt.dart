@@ -340,7 +340,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get watchLive => 'Watch Live';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Żball tal-fluss';
 
   @override
   String get reload => 'Reload';
@@ -555,7 +555,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get noInternet => 'Ebda Konnessjoni tal-Internet';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Jekk jogħġbok iċċekkja l-konnessjoni tiegħek';
 
   @override
   String get premium => 'Premium';

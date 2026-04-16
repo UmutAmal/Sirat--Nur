@@ -331,16 +331,16 @@ class AppLocalizationsJa extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'ライブテレビ';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'ライブを見る';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'ストリームエラー';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'リロード';
 
   @override
   String get openInYoutube => 'YouTube で開く';
@@ -550,7 +550,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get noInternet => 'インターネット接続なし';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => '接続を確認してください';
 
   @override
   String get premium => 'Premium';

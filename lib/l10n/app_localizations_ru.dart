@@ -335,16 +335,16 @@ class AppLocalizationsRu extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'Прямой эфир';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Смотреть в прямом эфире';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Ошибка трансляции';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Перезагрузить';
 
   @override
   String get openInYoutube => 'Открыть на YouTube';
@@ -556,7 +556,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get noInternet => 'Нет подключения к Интернету';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Пожалуйста, проверьте ваше соединение';
 
   @override
   String get premium => 'Premium';

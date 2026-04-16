@@ -333,16 +333,16 @@ class AppLocalizationsSm extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'TV ola';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Matamata Live';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Fa\'asao sese';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Toe utaina';
 
   @override
   String get openInYoutube => 'Tatala ile YouTube';
@@ -554,7 +554,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get noInternet => 'Leai se Feso\'ota\'iga Initaneti';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Fa\'amolemole siaki lau feso\'ota\'iga';
 
   @override
   String get premium => 'Premium';

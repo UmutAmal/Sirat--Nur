@@ -192,6 +192,25 @@ void main() {
       expect(value, 'Ibadah Takibi');
     });
 
+    test('rejects multiline live tv action output', () {
+      final streamErrorValue = resolveTranslatedArbValue(
+        key: 'streamError',
+        source: 'Stream error',
+        currentValue: 'Yayin hatasi',
+        candidate: 'means the following.\nYayin hatasi',
+      );
+
+      final checkConnectionValue = resolveTranslatedArbValue(
+        key: 'checkConnection',
+        source: 'Please check your connection',
+        currentValue: 'Lutfen baglantinizi kontrol edin',
+        candidate: 'means the following.\nLutfen baglantinizi kontrol edin',
+      );
+
+      expect(streamErrorValue, 'Yayin hatasi');
+      expect(checkConnectionValue, 'Lutfen baglantinizi kontrol edin');
+    });
+
     test('rejects multiline settings about output', () {
       final value = resolveTranslatedArbValue(
         key: 'shareApp',

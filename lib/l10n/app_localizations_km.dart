@@ -333,16 +333,16 @@ class AppLocalizationsKm extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'ទូរទស្សន៍ផ្សាយបន្តផ្ទាល់';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'មើលការផ្សាយបន្តផ្ទាល់';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'កំហុសក្នុងការស្ទ្រីម';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'ផ្ទុកឡើងវិញ';
 
   @override
   String get openInYoutube => 'បើកក្នុង YouTube';
@@ -554,7 +554,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get noInternet => 'គ្មានការភ្ជាប់អ៊ីនធឺណិត';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'សូមពិនិត្យមើលការតភ្ជាប់របស់អ្នក។';
 
   @override
   String get premium => 'Premium';

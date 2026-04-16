@@ -336,13 +336,13 @@ class AppLocalizationsUg extends AppLocalizations {
   String get liveTv => 'Live TV';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'نەق مەيداننى كۆرۈڭ';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'ئېقىم خاتالىقى';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'قايتا يۈكلەڭ';
 
   @override
   String get openInYoutube => 'YouTube دا ئېچىڭ';
@@ -554,7 +554,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get noInternet => 'تور ئۇلىنىشى يوق';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'ئۇلىنىشىڭىزنى تەكشۈرۈپ بېقىڭ';
 
   @override
   String get premium => 'Premium';

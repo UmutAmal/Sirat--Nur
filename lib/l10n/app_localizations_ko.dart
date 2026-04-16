@@ -330,16 +330,16 @@ class AppLocalizationsKo extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => '라이브 TV';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => '실시간 시청';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => '스트림 오류';
 
   @override
-  String get reload => 'Reload';
+  String get reload => '새로고침';
 
   @override
   String get openInYoutube => 'YouTube에서 열기';
@@ -549,7 +549,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get noInternet => '인터넷에 연결되어 있지 않음';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => '연결을 확인해주세요';
 
   @override
   String get premium => 'Premium';

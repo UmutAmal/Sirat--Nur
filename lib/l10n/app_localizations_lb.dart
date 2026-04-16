@@ -336,10 +336,10 @@ class AppLocalizationsLb extends AppLocalizations {
   String get liveTv => 'Live TV';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Live kucken';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Stream Feeler';
 
   @override
   String get reload => 'Reload';
@@ -554,7 +554,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get noInternet => 'Keng Internetverbindung';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Kuckt w.e.g. Är Verbindung';
 
   @override
   String get premium => 'Premium';

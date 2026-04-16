@@ -333,16 +333,16 @@ class AppLocalizationsZu extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'I-TV ebukhoma';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Buka Bukhoma';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Iphutha lokusakaza';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Layisha kabusha';
 
   @override
   String get openInYoutube => 'Vula ku-YouTube';
@@ -554,7 +554,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get noInternet => 'Alukho Uxhumo Lwe-inthanethi';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Sicela uhlole ukuxhumana kwakho';
 
   @override
   String get premium => 'Premium';

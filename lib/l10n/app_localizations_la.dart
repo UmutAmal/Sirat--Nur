@@ -333,13 +333,13 @@ class AppLocalizationsLa extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'Vivamus TV';
 
   @override
-  String get watchLive => 'Watch Live';
+  String get watchLive => 'Vigilate Vive';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'amnis error';
 
   @override
   String get reload => 'Reload';
@@ -554,7 +554,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get noInternet => 'Non Internet Connection';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Quaeso reprehendo tuum connexionem';
 
   @override
   String get premium => 'Premium';
