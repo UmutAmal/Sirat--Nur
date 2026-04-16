@@ -46,28 +46,39 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
   }
 
   Future<void> _init() async {
-    final available = await _iap.isAvailable();
-    if (!available) {
-      debugPrint('IAP not available on this device');
-      return;
-    }
+    try {
+      final available = await _iap.isAvailable();
+      if (!available) {
+        debugPrint('IAP not available on this device');
+        state = state.copyWith(error: kPremiumProductUnavailableErrorCode);
+        return;
+      }
 
-    // Listen to purchase updates
-    _subscription = _iap.purchaseStream.listen(
-      _onPurchaseUpdate,
-      onError: (_) {
-        debugPrint('IAP stream error');
-        state = state.copyWith(
-          isLoading: false,
-          error: kPremiumPurchaseFailedErrorCode,
-        );
-      },
-    );
+      // Listen to purchase updates
+      _subscription = _iap.purchaseStream.listen(
+        _onPurchaseUpdate,
+        onError: (_) {
+          debugPrint('IAP stream error');
+          state = state.copyWith(
+            isLoading: false,
+            error: kPremiumPurchaseFailedErrorCode,
+          );
+        },
+      );
 
-    // Query available products
-    final response = await _iap.queryProductDetails({kPremiumProductId});
-    if (response.productDetails.isNotEmpty) {
-      _products = response.productDetails;
+      // Query available products
+      final response = await _iap.queryProductDetails({kPremiumProductId});
+      if (response.productDetails.isNotEmpty) {
+        _products = response.productDetails;
+      } else {
+        state = state.copyWith(error: kPremiumProductUnavailableErrorCode);
+      }
+    } catch (_) {
+      debugPrint('IAP bootstrap failed');
+      state = state.copyWith(
+        isLoading: false,
+        error: kPremiumProductUnavailableErrorCode,
+      );
     }
   }
 

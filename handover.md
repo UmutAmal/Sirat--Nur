@@ -7156,3 +7156,36 @@
 
 ### Sonraki Adım
 - Sonraki dongude kalan debugPrint yuzeyleri, ozellikle premium/IAP ve audio player servisleri icin raw state, URL, path veya exception sizintisi acisindan tekrar skorlanacak.
+
+## 2026-04-16 TUR-186 — Harden Premium IAP Bootstrap Failures
+
+### Yapılan İşlem
+- Premium provider bootstrap akisi `try/catch` ile sarildi.
+- Store kullanilamazsa, urun listesi bos donerse veya IAP bootstrap cagrisinda exception olursa state artik `premium_product_unavailable` koduna dusuyor.
+- Paywall guard testi, bootstrap hatasinin raw exception metniyle loglanmamasini ve kontrollu unavailable kodunun korunmasini dogruluyor.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:50` once `_iap.isAvailable()` hatasini yakalamiyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:70` once `_iap.queryProductDetails(...)` hatasini yakalamiyordu.
+- Bu iki cagri constructor tarafindan fire-and-forget baslatilan `_init()` icinde oldugu icin store/plugin bootstrap hatasi UI'nin localized hata zincirine girmeden zone'a dusme riski tasiyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\premium\paywall_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Premium satin alma ekrani store hazir degilken sahte basari veya ham hata uretmez; kontrollu ve localized `premium_product_unavailable` mesajina baglanir.
+- Satin alma ve restore hata akislari aynen korunur; yalnizca bootstrap asamasindaki eksik koruma tamamlandi.
+
+### Test Sonucu
+- `flutter test test\features\premium\paywall_page_test.dart test\premium_provider_test.dart` PASS (`8/8`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`361/361`)
+
+### Risk Değişimi
+- IAP bootstrap exception'inin kontrolsuz sekilde kacmasi riski: `12/25 -> 1/25`
+- Urun listesi bosken kullanicinin belirsiz premium durumu gormesi riski: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude audio ve offline download log/sonuc akislari tekrar taranacak; URL/path/partial-success ya da raw exception yuzeyi kaldiysa ayni sekilde kucuk patch ile kapatilacak.
