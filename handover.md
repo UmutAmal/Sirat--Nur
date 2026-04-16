@@ -9692,3 +9692,50 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude `tool\generate_tafsir_seed.dart` ve testi ekle: operator tarafindan hazirlanan dogrulanmis JSON/manifest'ten `public.tafsir_entries` SQL seed'i uretmeli, bos metin/eksik kaynak/eksik lisans/duplicate ayetleri reddetmeli. Uygulama runtime'i yine harici API'ye donmemeli.
+
+## 2026-04-16 TUR-246 — Add Verified Tafsir Seed Generator
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\tool\generate_tafsir_seed.dart` eklendi.
+- Tool `content_tafsir_manifest.json` formatindan `content_seed_tafsir.sql` uretir; hedef tablo TUR-245'te eklenen `public.tafsir_entries`.
+- Manifest kontrati `source`, `source_license`, `verified_at` ve `entries[]` alanlarini ister; entry seviyesinde bu provenance alanlari override edilebilir.
+- Her entry icin `surah_number`, `ayah_number`, `tafsir_source`, `language` ve `tafsir_text` zorunlu tutuldu.
+- Quran ayet sayisi tablosu eklendi ve referans disi ayetler reddediliyor; test toplam 6236 ayeti guard ediyor.
+- Production modda partial manifest reddediliyor; `--allow-partial` sadece local smoke/test icin var.
+- SQL output `ON CONFLICT (surah_number, ayah_number, tafsir_source)` ile idempotent upsert uretiyor.
+- `A:\Way of Allah\sirat_i_nur\test\generate_tafsir_seed_test.dart` 8 testle parser, SQL, duplicate, missing provenance, invalid ayah ve partial catalog risklerini guard ediyor.
+
+### Neden Yapildi
+- TUR-245 schema hedefini kurdu; ancak operator'in dogrulanmis tafsir dataset'ini guvenli SQL seed'e cevirecek arac yoktu.
+- Arac olmadan dogrudan elle SQL yazmak bos metin, duplicate ayet, lisanssiz/kaynaksiz tafsir veya eksik katalog riskini artirirdi.
+- Dini icerikte uydurma/eksik veri kabul edilemez; bu nedenle kaynak, lisans ve dogrulama zamani zorunlu hale getirildi.
+- Harici API runtime'a geri alinmadi; bu tool sadece operator tarafinda hazirlanmis verified manifest'i database seed'e donusturur.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\generate_tafsir_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\generate_tafsir_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Verified tafsir dataset icin schema sonrasi ikinci halka tamamlandi: operator manifest -> SQL seed.
+- Partial/eksik veri uretim seed'ine sessizce donusemez.
+- Katalog tamligi varsayilan olarak 6236 entry/source bekler; gelistirme smoke senaryolari icin partial mod bilerek explicit olmalidir.
+
+### Test Sonucu
+- Odak test: `flutter test test\generate_tafsir_seed_test.dart --reporter compact` PASS (`8/8`)
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`441/441`)
+
+### Risk Degisimi
+- Verified tafsir seed araci yoklugu riski: `12/25 -> 2/25`
+- Partial/duplicate/kaynaksiz tafsir seed riski: `16/25 -> 3/25`
+- Runtime verified tafsir sync eksikligi riski: `12/25 -> 10/25` (siradaki dongu)
+
+### Rollback Plani
+- `tool\generate_tafsir_seed.dart` ve `test\generate_tafsir_seed_test.dart` silinir.
+- Handover append-only oldugu icin yeni revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude runtime cloud sync halkasini kur: `TafsirLoader` cache-only kalmaya devam ederken Supabase `tafsir_entries` tablosundan verified rows cekilip local sqflite cache'e yazilabilmeli. Cloud veri eksik/provenance eksikse yine `cache_missing` kalmali; harici API runtime'a geri donmemeli.
