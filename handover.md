@@ -10175,3 +10175,60 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude kalan dini localization kalitesini taramaya devam et: ozellikle `duaMeaning` ve nadir locale Asma metinlerinde bilinen kotu kalintilari kanitla, tek locale/tek yuzey patch'leriyle kapat.
+
+## 2026-04-16 TUR-256 — Balance Quran 3:8 Dua Quote Chain
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql` icindeki Quran 3:8 `text_en` degerinde acik kalan English smart quote kapatildi.
+- `A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json` icindeki Surah 3 Ayah 8 `en_translation` seed SQL ile ayni dengeli alinti metnine cekildi.
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart` icindeki `Quran 3:8` fallback duasinin English metni ayni kapali smart quote ile guncellendi.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb` icindeki `duaMeaning3` ayni English metne cekildi.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ar.arb` icindeki `duaMeaning3` acik `"` yerine dengeli Arapca ayet anlamiyla guncellendi: `إنك أنت الوهاب` ifadesi korunur.
+- `flutter gen-l10n` calistirildi; `app_localizations.dart`, `app_localizations_en.dart` ve `app_localizations_ar.dart` yenilendi.
+- `A:\Way of Allah\sirat_i_nur\test\duas_data_test.dart` English smart quote denge guard'i ile genisletildi.
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart` Quran 3:8 EN/AR runtime l10n dengesini dogrulayan guard ile genisletildi.
+
+### Neden Yapildi
+- Risk taramasinda `A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql:4814`, `assets\data\full_quran.json:2432`, `duas_data.dart:166` ve `app_en.arb:148` ayni Quran 3:8 English metninde acilan `‘` isaretinin kapanmadigini gosterdi.
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ar.arb:647` Arapca `duaMeaning3` de acik `"` ile kalmisti.
+- Dini metinlerde seed, bundled asset, fallback data ve runtime localization ayni tutarli kaynak zincirini gostermeli; bu patch kelime icerigini uydurmadan yalniz noktalama/tutarlilik borcunu kapatir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_ayahs.sql`
+- `A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json`
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ar.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_en.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ar.dart`
+- `A:\Way of Allah\sirat_i_nur\test\duas_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran 3:8 English dua metni artik seed SQL, bundled JSON, fallback data, EN ARB ve generated runtime localization katmanlarinda ayni ve dengeli.
+- Arapca `duaMeaning3` artik acik cift tirnak tasimaz ve ayetin ana ifadesini dogrudan Arapca verir.
+- Yeni guard'lar English fallback smart quote driftini ve EN/AR runtime l10n noktalama bozulmasini yakalar.
+
+### Test Sonucu
+- Odak test: `flutter test test\bundled_quran_asset_test.dart test\duas_data_test.dart test\arb_ui_localization_test.dart --reporter compact` PASS (`71/71`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter json *> .dart_tool\codex_full_test_tur256.json` PASS (`success=True`, non-success test yok)
+- Not: Ilk `flutter test --reporter compact` full kosusu assertion fail uretmeden komut zaman sinirina takildi; JSON raporlu tekrar 60 saniye civarinda basariyla tamamlandi.
+
+### Risk Degisimi
+- Quran 3:8 English fallback/asset/seed acik smart quote riski: `12/25 -> 2/25`
+- Arapca `duaMeaning3` acik cift tirnak riski: `9/25 -> 2/25`
+- Seed/bundled/l10n dini metin ayrisma riski: `12/25 -> 3/25`
+
+### Rollback Plani
+- `content_seed_quran_ayahs.sql`, `assets\data\full_quran.json`, `duas_data.dart`, `app_en.arb` ve `app_ar.arb` icindeki Quran 3:8 degisiklikleri geri alinir.
+- `flutter gen-l10n` tekrar calistirilerek generated l10n dosyalari eski metne senkronlanir.
+- `duas_data_test.dart` ve `arb_ui_localization_test.dart` icindeki Quran 3:8 quote guard'lari geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude kalan `duaMeaning` locale kalitesini ve Quran/duas seed zincirini taramaya devam et; cok dilli acik tirnak, batch debris veya English fallback kalanlarini kanitli tek yuzey halinde kapat.

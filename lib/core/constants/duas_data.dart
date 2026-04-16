@@ -163,7 +163,7 @@ const List<DuaData> dailyDuas = [
     turkish:
         'Ey Rabbimiz! Bize ihsan ettiğin hidayetten sonra kalblerimizi haktan saptırma, bize kendi katından rahmet ihsan eyle! Şüphesiz ki, Sen bol ihsan sahibisin.',
     english:
-        '‘Our Lord, do not let our hearts deviate after You have guided us. Grant us Your mercy: You are the Ever Giving.',
+        '‘Our Lord, do not let our hearts deviate after You have guided us. Grant us Your mercy: You are the Ever Giving.’',
     source: 'Quran 3:8',
     category: quranicDuaCategory,
   ),

@@ -54,6 +54,16 @@ void main() {
       }
     });
 
+    test('keeps English fallback smart quotation marks balanced', () {
+      for (final dua in bundledDailyDuaFallback()) {
+        expect(
+          '‘'.allMatches(dua.english).length,
+          '’'.allMatches(dua.english).length,
+          reason: '${dua.source} has unmatched English smart quote marks',
+        );
+      }
+    });
+
     test('matches the verified bundled Quran ayah payload exactly', () {
       final quranRows =
           jsonDecode(File('assets/data/full_quran.json').readAsStringSync())

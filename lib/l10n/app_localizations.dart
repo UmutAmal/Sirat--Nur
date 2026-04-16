@@ -985,7 +985,7 @@ abstract class AppLocalizations {
   /// No description provided for @duaMeaning3.
   ///
   /// In en, this message translates to:
-  /// **'‘Our Lord, do not let our hearts deviate after You have guided us. Grant us Your mercy: You are the Ever Giving.'**
+  /// **'‘Our Lord, do not let our hearts deviate after You have guided us. Grant us Your mercy: You are the Ever Giving.’'**
   String get duaMeaning3;
 
   /// No description provided for @duaMeaning4.

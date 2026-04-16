@@ -281,7 +281,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get duaMeaning3 =>
-      '\"ربنا لا تزغ قلوبنا بعد إذ هديتنا. امنحنا رحمتك: أنت المعطاء.';
+      'ربنا لا تزغ قلوبنا بعد إذ هديتنا، وهب لنا من لدنك رحمة؛ إنك أنت الوهاب.';
 
   @override
   String get duaMeaning4 => 'رب أجعلني وذريتي مقيمين الصلاة. ربنا تقبل طلبي.';

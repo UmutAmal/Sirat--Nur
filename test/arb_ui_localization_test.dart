@@ -1378,6 +1378,22 @@ void main() {
       expect(l10n.asmaMeaning99, isNot(contains('المريض')));
     });
 
+    test('Quran 3:8 dua localization copy stays balanced', () async {
+      final englishL10n = await AppLocalizations.delegate.load(
+        const Locale('en'),
+      );
+      final arabicL10n = await AppLocalizations.delegate.load(
+        const Locale('ar'),
+      );
+
+      expect(
+        '‘'.allMatches(englishL10n.duaMeaning3).length,
+        '’'.allMatches(englishL10n.duaMeaning3).length,
+      );
+      expect(arabicL10n.duaMeaning3, isNot(contains('"')));
+      expect(arabicL10n.duaMeaning3, contains('إنك أنت الوهاب'));
+    });
+
     test(
       'safe priority locales do not fall back to English for bundled dua meanings',
       () {
