@@ -81,5 +81,22 @@ void main() {
         );
       },
     );
+
+    test('rejects multiline chatbot runtime output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'chatbotGreeting',
+        source:
+            'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.',
+        currentValue:
+            'Selamun Aleykum! Ben Islami asistaninizim. Namaz, oruc, zekat veya herhangi bir Islami konu hakkinda soru sorun.',
+        candidate:
+            'means the following.\nSelamun Aleykum! Ben Islami asistaninizim.',
+      );
+
+      expect(
+        value,
+        'Selamun Aleykum! Ben Islami asistaninizim. Namaz, oruc, zekat veya herhangi bir Islami konu hakkinda soru sorun.',
+      );
+    });
   });
 }

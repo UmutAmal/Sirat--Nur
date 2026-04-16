@@ -7928,3 +7928,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude l10n fallback sayim raporundaki kalan desteklenen locale/key eslesmeleri ayrilacak; uydurma yapmadan guvenle cevrilebilen anahtarlar icin yeni minimal batch uygulanacak.
+
+## 2026-04-16 TUR-210 — Guard Chatbot Translation Debris
+
+### Yapılan İşlem
+- `tool\translate_arb_keys.dart` single-line guard listesine `chatbotGreeting`, `chatbotHint` ve `chatbotThinking` eklendi.
+- `test\translate_arb_keys_test.dart` icine multiline chatbot runtime ceviri adayini reddeden regresyon testi eklendi.
+
+### Neden Yapıldı
+- TUR-209 odak testinde ceviri batch'i bazi locale degerlerine aciklama on eki ve satir kirilmasi eklemisti.
+- Kök sebep `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:339` civarinda bu chatbot runtime anahtarlarinin single-line guard kapsaminda olmamasiydi.
+- Yeni test `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:85` multiline aday geldiginde mevcut guvenli lokalize degerin korunmasini kanitliyor.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Gelecek ARB batch'lerinde chatbot runtime UI metinleri satir kirilmasi veya ceviri aciklama on ekiyle kirlenirse kaynakta reddedilecek.
+- Mevcut ARB coverage debris testiyle arac seviyesi guard birbirini tamamliyor.
+
+### Test Sonucu
+- `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart` PASS (`10/10`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`380/380`)
+
+### Risk Değişimi
+- Chatbot runtime ceviri batch debris tekrar riski: `10/25 -> 2/25`
+
+### Sonraki Adım
+- Sonraki dongude kalan l10n fallback sayimini anahtar bazinda yeniden raporla; guvenli desteklenen locale/key kumesinde en yuksek gorunurlukteki UI metinlerini sec.

@@ -336,6 +336,9 @@ bool _mustStaySingleLine(String key) {
       key == 'diagnosticsQuranCloudJuzMissing' ||
       key == 'placesDataSourceUnavailableTitle' ||
       key == 'placesDataSourceUnavailableBody' ||
+      key == 'chatbotGreeting' ||
+      key == 'chatbotHint' ||
+      key == 'chatbotThinking' ||
       key == 'chatbotOfflineSwitched' ||
       key == 'chatbotLocalNoInfo';
 }
