@@ -1,10 +1,14 @@
 import 'dart:io';
 
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:path/path.dart' as p;
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+
   group('OfflineReciters helpers', () {
     test('maps storage-backed cloud quran rows into a surah url index', () {
       final urls = resolveCloudQuranSurahUrls(const [
@@ -219,6 +223,52 @@ void main() {
           ".select(\n            'type, reciter, surah_number, url, storage_path, source, verified_at',\n          )",
         ),
       );
+    });
+
+    test(
+      'validateDownloadedQuranAudioFile rejects empty audio files',
+      () async {
+        final tempDir = await Directory.systemTemp.createTemp(
+          'sir_audio_validate_',
+        );
+        addTearDown(() => tempDir.delete(recursive: true));
+
+        final emptyFile = File(p.join(tempDir.path, 'empty.mp3'));
+        final audioFile = File(p.join(tempDir.path, 'valid.mp3'));
+        await emptyFile.writeAsBytes(const []);
+        await audioFile.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+
+        expect(await validateDownloadedQuranAudioFile(emptyFile.path), isFalse);
+        expect(await emptyFile.exists(), isFalse);
+        expect(await validateDownloadedQuranAudioFile(audioFile.path), isTrue);
+        expect(await audioFile.exists(), isTrue);
+      },
+    );
+
+    test('getDownloadedSurahs ignores and removes empty audio files', () async {
+      final tempDir = await Directory.systemTemp.createTemp(
+        'sir_audio_catalog_',
+      );
+      addTearDown(() => tempDir.delete(recursive: true));
+
+      const channel = MethodChannel('plugins.flutter.io/path_provider');
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(channel, (_) async => tempDir.path);
+      addTearDown(
+        () => TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+            .setMockMethodCallHandler(channel, null),
+      );
+
+      final audioDir = Directory(p.join(tempDir.path, 'quran_audio'));
+      await audioDir.create(recursive: true);
+      final emptySurah = File(p.join(audioDir.path, 'alafasy_001.mp3'));
+      final validSurah = File(p.join(audioDir.path, 'alafasy_002.mp3'));
+      await emptySurah.writeAsBytes(const []);
+      await validSurah.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+
+      expect(await OfflineAudioService.getDownloadedSurahs('alafasy'), [2]);
+      expect(await emptySurah.exists(), isFalse);
+      expect(await validSurah.exists(), isTrue);
     });
 
     test(

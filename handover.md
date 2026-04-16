@@ -9108,3 +9108,47 @@
 
 ### Sonraki Adım
 - Commit/push sonrasi yeni dongude aktif risk taramasini yenile; proper-name ve mesru transliterasyonlari zorlamadan `assistant`, `ok`, `premium`, `hadithBooks`, `duaCategoryProtection` gibi gorunur ve cevrilebilir UI etiketlerinden en yuksek riskli tek cluster sec.
+
+## 2026-04-16 TUR-234 — Reject Empty Offline Quran Audio Files
+
+### Yapilan Islem
+- Offline Kur'an ses indirme hattinda basarili HTTP sonucu alinsa bile dosyanin gercekten olustugunu ve bos olmadigini dogrulayan `validateDownloadedQuranAudioFile` guard'i eklendi.
+- `downloadSurahAudio` artik `Dio.download` sonrasinda dogrudan `true` donmuyor; kaydedilen dosya yoksa veya 0 byte ise indirme basarisiz sayiliyor.
+- Indirme hatasinda veya bos dosya kalintisinda partial/corrupt MP3 dosyasi best-effort siliniyor.
+- `isAudioDownloaded` ve `getDownloadedSurahs` var olan eski 0 byte kalintilari indirildi saymiyor; listeleme sirasinda bos dosyayi temizliyor.
+- Unit testlere bos dosya reddi ve bos MP3 kalintisinin sure listesine girmemesi icin regresyon guard'i eklendi.
+
+### Neden Yapildi
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:240` offline sure indirme girisi.
+- TUR-234 oncesi `downloadSurahAudio` icinde `Dio.download` tamamlaninca kaydedilen dosyanin varligi veya boyutu dogrulanmadan `true` donuluyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:237` `isAudioDownloaded` sadece dosya varligini sayiyordu; 0 byte kalinti dosya indirildi kabul edilebilirdi.
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:332` `getDownloadedSurahs` dosya adini parse ederek sureyi listeye aliyordu; dosya icerigi dogrulanmiyordu.
+- Kullanici etkisi: bozuk/0 byte MP3 dosyasi cihazda kalirsa offline indirme tamamlanmis gorunebilir, sonraki oynatma ise sessiz veya hatali olabilir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Offline Kur'an ses paketlerinde bos/bozuk dosyanin basarili indirme olarak sayilmasi engellendi.
+- Eski surumlerden kalmis 0 byte MP3 kalintilari otomatik temizlenerek downloaded count daha durust hale getirildi.
+- Supabase Storage disi external link reddi korunuyor; bu tur sadece cihazdaki dosya butunlugu guard'ini ekledi.
+
+### Test Sonucu
+- Odak test: `flutter test test\offline_audio_service_test.dart` PASS (`13/13`)
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`421/421`)
+
+### Risk Degisimi
+- Offline audio false-success / corrupt file count riski: `16/25 -> 4/25`
+- Eski bos MP3 kalintilarinin downloaded count'u bozma riski: `12/25 -> 3/25`
+- Rollback riski: `4/25`; degisiklik tek servis ve tek test dosyasi ile sinirli.
+
+### Rollback Plani
+- `lib\core\services\offline_audio_service.dart` icindeki TUR-234 guard ve cleanup degisiklikleri geri alinir.
+- `test\offline_audio_service_test.dart` icindeki iki yeni bos dosya regresyon testi kaldirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude audio/content hattindan devam et: `download_verified_quran_audio`, `upload_quran_audio_storage`, seed SQL ve runtime catalog arasinda dis linklerin yalniz mirror input olarak kaldigini ve runtime playback'in sadece Supabase Storage'dan beslendigini tekrar tara; ardindan en yuksek riskli tek bulguyu kapat.

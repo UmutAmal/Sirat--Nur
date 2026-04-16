@@ -154,6 +154,35 @@ bool _isDownloadableQuranAudioUrl(String audioUrl) {
   );
 }
 
+Future<void> _deleteDownloadedQuranAudioFile(String filePath) async {
+  try {
+    final file = File(filePath);
+    if (await file.exists()) {
+      await file.delete();
+    }
+  } catch (_) {
+    // Best-effort cleanup only; callers still treat the download as failed.
+  }
+}
+
+Future<bool> validateDownloadedQuranAudioFile(String filePath) async {
+  try {
+    final file = File(filePath);
+    if (!await file.exists()) {
+      return false;
+    }
+
+    if (await file.length() <= 0) {
+      await _deleteDownloadedQuranAudioFile(filePath);
+      return false;
+    }
+
+    return true;
+  } catch (_) {
+    return false;
+  }
+}
+
 Map<String, Map<int, String>> resolveCloudQuranAudioCatalog(
   List<Map<String, dynamic>> rows,
 ) {
@@ -205,7 +234,7 @@ class OfflineAudioService {
     }
 
     final path = await getAudioPath(surahNumber, reciterId);
-    return File(path).exists();
+    return validateDownloadedQuranAudioFile(path);
   }
 
   static Future<bool> downloadSurahAudio({
@@ -222,9 +251,10 @@ class OfflineAudioService {
       return false;
     }
 
+    String? savePath;
     try {
       final dio = Dio();
-      final savePath = await getAudioPath(surahNumber, reciterId);
+      savePath = await getAudioPath(surahNumber, reciterId);
 
       await dio.download(
         normalizedAudioUrl,
@@ -236,8 +266,11 @@ class OfflineAudioService {
         },
       );
 
-      return true;
+      return validateDownloadedQuranAudioFile(savePath);
     } catch (_) {
+      if (savePath != null) {
+        await _deleteDownloadedQuranAudioFile(savePath);
+      }
       return false;
     }
   }
@@ -309,6 +342,9 @@ class OfflineAudioService {
       if (entity is! File) continue;
       final fileName = p.basename(entity.path);
       if (!fileName.startsWith('${reciterId}_') || !fileName.endsWith('.mp3')) {
+        continue;
+      }
+      if (!await validateDownloadedQuranAudioFile(entity.path)) {
         continue;
       }
 
