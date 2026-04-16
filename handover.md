@@ -7257,3 +7257,38 @@
 
 ### Sonraki Adım
 - Sonraki dongude router path parsing ve Quran/Tafsir/Juz route parametreleri kontrol edilecek; gecersiz id ile crash riski varsa uygulama seviyesinde kontrollu redirect veya safe parse guard eklenecek.
+
+## 2026-04-16 TUR-189 — Guard Quran Route Id Parsing
+
+### Yapılan İşlem
+- Quran Surah, Juz ve Tafsir route id'leri icin bounded safe parse helper'lari eklendi.
+- Gecersiz Surah/Tafsir id'leri (`null`, non-numeric, 1-114 disi) pageBuilder'a girmeden `/quran` route'una yonlendiriliyor.
+- Gecersiz Juz id'leri (`null`, non-numeric, 1-30 disi) pageBuilder'a girmeden `/quran` route'una yonlendiriliyor.
+- PageBuilder tarafinda da parse fallback'i korundu; redirect calismasa bile `int.parse` crash yuzeyi kalmadi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart:200` Surah route'u once path parametresini dogrudan `int.parse` ile okuyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart:216` Juz route'u once path parametresini dogrudan `int.parse` ile okuyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart:232` Tafsir route'u once path parametresini dogrudan `int.parse` ile okuyordu.
+- Deep link veya elle yazilan gecersiz URL uygulamayi error page yerine pageBuilder exception riskine sokabiliyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\app_router.dart`
+- `A:\Way of Allah\sirat_i_nur\test\app_router_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `/quran/reading/foo`, `/quran/reading/115`, `/quran/juz/31` ve benzeri URL'ler artik crash uretmeden Quran ana ekranina doner.
+- Router testleri valid boundary degerlerini ve invalid redirect kararlarini kapsar.
+- `dart format` ayni dosyadaki uzun satirlari da normalize etti; davranissal kapsam safe route parsing ile sinirlidir.
+
+### Test Sonucu
+- `flutter test test\app_router_test.dart` PASS (`5/5`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`364/364`)
+
+### Risk Değişimi
+- Gecersiz Quran route id'sinin pageBuilder icinde crash uretmesi riski: `12/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude kalan `int.parse`/`!` route ve user-input parse yuzeyleri repo genelinde taranacak; ayni siniftan crash riski varsa dosya bazli kucuk guard eklenecek.

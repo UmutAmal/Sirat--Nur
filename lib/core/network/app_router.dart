@@ -34,7 +34,9 @@ import 'package:sirat_i_nur/features/library/asma_ul_husna_page.dart';
 
 // Smooth slide + fade transition
 CustomTransitionPage<T> _slideTransition<T>(
-  BuildContext context, GoRouterState state, Widget child,
+  BuildContext context,
+  GoRouterState state,
+  Widget child,
 ) {
   return CustomTransitionPage<T>(
     key: state.pageKey,
@@ -44,7 +46,9 @@ CustomTransitionPage<T> _slideTransition<T>(
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       return SlideTransition(
         position: Tween<Offset>(begin: const Offset(1, 0), end: Offset.zero)
-            .animate(CurvedAnimation(parent: animation, curve: Curves.easeOutCubic)),
+            .animate(
+              CurvedAnimation(parent: animation, curve: Curves.easeOutCubic),
+            ),
         child: FadeTransition(
           opacity: CurvedAnimation(parent: animation, curve: Curves.easeOut),
           child: child,
@@ -56,7 +60,9 @@ CustomTransitionPage<T> _slideTransition<T>(
 
 // Scale + fade for modals
 CustomTransitionPage<T> _scaleTransition<T>(
-  BuildContext context, GoRouterState state, Widget child,
+  BuildContext context,
+  GoRouterState state,
+  Widget child,
 ) {
   return CustomTransitionPage<T>(
     key: state.pageKey,
@@ -65,8 +71,9 @@ CustomTransitionPage<T> _scaleTransition<T>(
     reverseTransitionDuration: const Duration(milliseconds: 350),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       return ScaleTransition(
-        scale: Tween<double>(begin: 0.85, end: 1.0)
-            .animate(CurvedAnimation(parent: animation, curve: Curves.easeOutBack)),
+        scale: Tween<double>(begin: 0.85, end: 1.0).animate(
+          CurvedAnimation(parent: animation, curve: Curves.easeOutBack),
+        ),
         child: FadeTransition(
           opacity: CurvedAnimation(parent: animation, curve: Curves.easeOut),
           child: child,
@@ -111,6 +118,35 @@ bool _isDisabledHadithRoute(String uriPath) {
   return uriPath == '/library/search' || uriPath.startsWith('/library/hadith/');
 }
 
+int? _parseBoundedRouteInt(
+  String? rawValue, {
+  required int min,
+  required int max,
+}) {
+  final value = int.tryParse(rawValue ?? '');
+  if (value == null || value < min || value > max) {
+    return null;
+  }
+
+  return value;
+}
+
+int? parseQuranSurahRouteId(String? rawValue) {
+  return _parseBoundedRouteInt(rawValue, min: 1, max: 114);
+}
+
+int? parseQuranJuzRouteId(String? rawValue) {
+  return _parseBoundedRouteInt(rawValue, min: 1, max: 30);
+}
+
+String? resolveQuranSurahRouteRedirect(String? rawValue) {
+  return parseQuranSurahRouteId(rawValue) == null ? '/quran' : null;
+}
+
+String? resolveQuranJuzRouteRedirect(String? rawValue) {
+  return parseQuranJuzRouteId(rawValue) == null ? '/quran' : null;
+}
+
 String? resolveAppRedirect(
   SharedPreferences prefs,
   String matchedLocation,
@@ -141,7 +177,8 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/onboarding',
         name: 'onboarding',
-        pageBuilder: (ctx, state) => _scaleTransition(ctx, state, const OnboardingPage()),
+        pageBuilder: (ctx, state) =>
+            _scaleTransition(ctx, state, const OnboardingPage()),
       ),
       ShellRoute(
         navigatorKey: _shellNavigatorKey,
@@ -150,45 +187,61 @@ final appRouterProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: '/home',
             name: 'home',
-            pageBuilder: (ctx, state) => _slideTransition(ctx, state, const HomePage()),
+            pageBuilder: (ctx, state) =>
+                _slideTransition(ctx, state, const HomePage()),
           ),
           GoRoute(
             path: '/quran',
             name: 'quran',
-            pageBuilder: (ctx, state) => _slideTransition(ctx, state, const QuranPage()),
+            pageBuilder: (ctx, state) =>
+                _slideTransition(ctx, state, const QuranPage()),
             routes: [
               GoRoute(
                 path: 'reading/:id',
                 name: 'surah_reading',
                 parentNavigatorKey: _rootNavigatorKey,
+                redirect: (context, state) =>
+                    resolveQuranSurahRouteRedirect(state.pathParameters['id']),
                 pageBuilder: (ctx, state) {
-                  final surahNumber = int.parse(state.pathParameters['id']!);
-                  return _scaleTransition(ctx, state, SurahReadingPage(
-                    surahNumber: surahNumber,
-                  ));
+                  final surahNumber =
+                      parseQuranSurahRouteId(state.pathParameters['id']) ?? 1;
+                  return _scaleTransition(
+                    ctx,
+                    state,
+                    SurahReadingPage(surahNumber: surahNumber),
+                  );
                 },
               ),
               GoRoute(
                 path: 'juz/:id',
                 name: 'juz_reading',
                 parentNavigatorKey: _rootNavigatorKey,
+                redirect: (context, state) =>
+                    resolveQuranJuzRouteRedirect(state.pathParameters['id']),
                 pageBuilder: (ctx, state) {
-                  final juzNumber = int.parse(state.pathParameters['id']!);
-                  return _scaleTransition(ctx, state, JuzReadingPage(
-                    juzNumber: juzNumber,
-                  ));
+                  final juzNumber =
+                      parseQuranJuzRouteId(state.pathParameters['id']) ?? 1;
+                  return _scaleTransition(
+                    ctx,
+                    state,
+                    JuzReadingPage(juzNumber: juzNumber),
+                  );
                 },
               ),
               GoRoute(
                 path: 'tafsir/:id',
                 name: 'tafsir_reading',
                 parentNavigatorKey: _rootNavigatorKey,
+                redirect: (context, state) =>
+                    resolveQuranSurahRouteRedirect(state.pathParameters['id']),
                 pageBuilder: (ctx, state) {
-                  final surahNumber = int.parse(state.pathParameters['id']!);
-                  return _slideTransition(ctx, state, TafsirPage(
-                    surahNumber: surahNumber,
-                    surahName: '',
-                  ));
+                  final surahNumber =
+                      parseQuranSurahRouteId(state.pathParameters['id']) ?? 1;
+                  return _slideTransition(
+                    ctx,
+                    state,
+                    TafsirPage(surahNumber: surahNumber, surahName: ''),
+                  );
                 },
               ),
             ],
@@ -196,17 +249,20 @@ final appRouterProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: '/qibla',
             name: 'qibla',
-            pageBuilder: (ctx, state) => _slideTransition(ctx, state, const QiblaPage()),
+            pageBuilder: (ctx, state) =>
+                _slideTransition(ctx, state, const QiblaPage()),
           ),
           GoRoute(
             path: '/zikr',
             name: 'zikr',
-            pageBuilder: (ctx, state) => _slideTransition(ctx, state, const ZikrPage()),
+            pageBuilder: (ctx, state) =>
+                _slideTransition(ctx, state, const ZikrPage()),
           ),
           GoRoute(
             path: '/calendar',
             name: 'calendar',
-            pageBuilder: (ctx, state) => _slideTransition(ctx, state, const CalendarPage()),
+            pageBuilder: (ctx, state) =>
+                _slideTransition(ctx, state, const CalendarPage()),
           ),
         ],
       ),
@@ -214,93 +270,109 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/settings',
         name: 'settings',
-        pageBuilder: (ctx, state) => _slideTransition(ctx, state, const SettingsPage()),
+        pageBuilder: (ctx, state) =>
+            _slideTransition(ctx, state, const SettingsPage()),
         routes: [
           GoRoute(
             path: 'location',
             name: 'location_selection',
-            pageBuilder: (ctx, state) => _slideTransition(ctx, state, const LocationSelectionPage()),
+            pageBuilder: (ctx, state) =>
+                _slideTransition(ctx, state, const LocationSelectionPage()),
           ),
           GoRoute(
             path: 'diagnostics',
             name: 'diagnostics',
-            pageBuilder: (ctx, state) => _slideTransition(ctx, state, const DiagnosticsPage()),
+            pageBuilder: (ctx, state) =>
+                _slideTransition(ctx, state, const DiagnosticsPage()),
           ),
         ],
       ),
       GoRoute(
         path: '/paywall',
         name: 'paywall',
-        pageBuilder: (ctx, state) => _scaleTransition(ctx, state, const PaywallPage()),
+        pageBuilder: (ctx, state) =>
+            _scaleTransition(ctx, state, const PaywallPage()),
       ),
       GoRoute(
         path: '/livetv',
         name: 'livetv',
-        pageBuilder: (ctx, state) => _slideTransition(ctx, state, const LiveTvPage()),
+        pageBuilder: (ctx, state) =>
+            _slideTransition(ctx, state, const LiveTvPage()),
       ),
       GoRoute(
         path: '/places',
         name: 'places',
-        pageBuilder: (ctx, state) => _slideTransition(ctx, state, const PlacesMapPage()),
+        pageBuilder: (ctx, state) =>
+            _slideTransition(ctx, state, const PlacesMapPage()),
       ),
       GoRoute(
         path: '/tracker',
         name: 'tracker',
-        pageBuilder: (ctx, state) => _slideTransition(ctx, state, const TrackerPage()),
+        pageBuilder: (ctx, state) =>
+            _slideTransition(ctx, state, const TrackerPage()),
       ),
       GoRoute(
         path: '/library',
         name: 'library',
-        pageBuilder: (ctx, state) => _slideTransition(ctx, state, const LibraryPage()),
+        pageBuilder: (ctx, state) =>
+            _slideTransition(ctx, state, const LibraryPage()),
         routes: [
           GoRoute(
             path: 'search',
             name: 'hadith_search',
-            pageBuilder: (ctx, state) => _slideTransition(ctx, state, const HadithSearchPage()),
+            pageBuilder: (ctx, state) =>
+                _slideTransition(ctx, state, const HadithSearchPage()),
           ),
           GoRoute(
             path: 'hadith/:id',
             name: 'hadith_list',
             pageBuilder: (ctx, state) {
               final collectionId = state.pathParameters['id']!;
-              return _slideTransition(ctx, state, HadithListPage(
-                collectionId: collectionId,
-              ));
+              return _slideTransition(
+                ctx,
+                state,
+                HadithListPage(collectionId: collectionId),
+              );
             },
           ),
           GoRoute(
             path: 'sukun-audio',
             name: 'sukun_audio',
-            pageBuilder: (ctx, state) => _slideTransition(ctx, state, const SukunAudioPage()),
+            pageBuilder: (ctx, state) =>
+                _slideTransition(ctx, state, const SukunAudioPage()),
           ),
           GoRoute(
             path: 'asma-ul-husna',
             name: 'asma_ul_husna',
-            pageBuilder: (ctx, state) => _slideTransition(ctx, state, const AsmaUlHusnaPage()),
+            pageBuilder: (ctx, state) =>
+                _slideTransition(ctx, state, const AsmaUlHusnaPage()),
           ),
         ],
       ),
       GoRoute(
         path: '/chatbot',
         name: 'chatbot',
-        pageBuilder: (ctx, state) => _slideTransition(ctx, state, const ChatbotPage()),
+        pageBuilder: (ctx, state) =>
+            _slideTransition(ctx, state, const ChatbotPage()),
       ),
       GoRoute(
         path: '/downloads',
         name: 'downloads',
-        pageBuilder: (ctx, state) => _slideTransition(ctx, state, const OfflineDownloadsPage()),
+        pageBuilder: (ctx, state) =>
+            _slideTransition(ctx, state, const OfflineDownloadsPage()),
       ),
       GoRoute(
         path: '/analytics',
         name: 'analytics',
-        pageBuilder: (ctx, state) => _slideTransition(ctx, state, const AnalyticsPage()),
+        pageBuilder: (ctx, state) =>
+            _slideTransition(ctx, state, const AnalyticsPage()),
       ),
       GoRoute(
         path: '/zakat',
         name: 'zakat',
-        pageBuilder: (ctx, state) => _slideTransition(ctx, state, const ZakatCalculatorPage()),
+        pageBuilder: (ctx, state) =>
+            _slideTransition(ctx, state, const ZakatCalculatorPage()),
       ),
     ],
   );
 });
-

@@ -35,7 +35,10 @@ void main() {
       SharedPreferences.setMockInitialValues({'isFirstLaunch': false});
       final prefs = await SharedPreferences.getInstance();
 
-      expect(resolveAppRedirect(prefs, '/library/search', '/library/search'), '/library');
+      expect(
+        resolveAppRedirect(prefs, '/library/search', '/library/search'),
+        '/library',
+      );
       expect(
         resolveAppRedirect(
           prefs,
@@ -56,5 +59,27 @@ void main() {
         '/onboarding',
       );
     });
+
+    test(
+      'redirects invalid Quran route ids before page builders parse them',
+      () {
+        expect(parseQuranSurahRouteId('1'), 1);
+        expect(parseQuranSurahRouteId('114'), 114);
+        expect(parseQuranSurahRouteId('0'), isNull);
+        expect(parseQuranSurahRouteId('115'), isNull);
+        expect(parseQuranSurahRouteId('abc'), isNull);
+
+        expect(parseQuranJuzRouteId('1'), 1);
+        expect(parseQuranJuzRouteId('30'), 30);
+        expect(parseQuranJuzRouteId('31'), isNull);
+        expect(parseQuranJuzRouteId('abc'), isNull);
+
+        expect(resolveQuranSurahRouteRedirect('abc'), '/quran');
+        expect(resolveQuranSurahRouteRedirect('115'), '/quran');
+        expect(resolveQuranSurahRouteRedirect('2'), isNull);
+        expect(resolveQuranJuzRouteRedirect('31'), '/quran');
+        expect(resolveQuranJuzRouteRedirect('7'), isNull);
+      },
+    );
   });
 }
