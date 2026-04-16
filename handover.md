@@ -7058,3 +7058,40 @@
 
 ### Sonraki Adım
 - Sonraki dongude `tafsir_local_service.dart` runtime dini icerik indirme ve cache dogrulama akisi ayrintili incelenecek; kaynak/provenance, hata sanitizasyonu ve test bosluklari skorlanacak.
+
+## 2026-04-16 TUR-183 — Prevent Wrong Tafsir Source Fallbacks
+
+### Yapılan İşlem
+- Tafsir kaynak eslestirmesi sessiz `en.ibn_kathir` fallback'i yerine yalnizca bilinen canonical kaynaklari ve dogrulanmis EN legacy alias'larini kabul edecek sekilde degistirildi.
+- `tr.yazir`, `tr.suati`, `tr.ozturk` gibi dogrulanmamis legacy alias'lar artik Ingilizce tafsir gibi etiketlenmiyor; `unsupported_source` hatasi uretiyor.
+- `en.muhammadtaqiusmani` legacy alias'i yanlis `Ibn Kathir` eslesmesi yerine `en.maarif` canonical kaynagina alindi.
+- Quran.com API tafsir satirlari cache'e yazilmadan once `normalizeApiTafsirRows` ile temizleniyor; malformed entry, bos metin ve gecersiz ayet numarasi atiliyor.
+- API cevap zarfi dolu olsa bile hic gecerli tafsir metni yoksa eski cache silinmeden `no_entries` hatasi uretiliyor.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:74` once bilinmeyen kaynaklari otomatik `en.ibn_kathir`'e dusuruyordu.
+- Eski kodda TR kaynak alias'lari Ingilizce API id'siyle eslenerek dini icerikte yanlis kaynak/provenance etiketi uretebiliyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:137` civarindaki eski satir isleme, API entry sekline guveniyor ve gecerli satir sayisi sifir olsa bile batch'i basarili tamamlayabiliyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Tafsir ekrani sadece dogrulanmis canonical kaynak veya dogru canonical EN alias ile cache yazar.
+- Kaynak adi ile gercek tafsir icerigi arasinda sessiz uyumsuzluk uretilmez.
+- Malformed/empty API response eski saglam cache'i silmez; kullaniciya mevcut localized hata akisi doner.
+
+### Test Sonucu
+- `flutter test test\features\quran\tafsir_page_test.dart` PASS (`3/3`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`360/360`)
+
+### Risk Değişimi
+- Bilinmeyen/legacy Tafsir kaynaginin sessizce Ibn Kathir gibi gosterilmesi riski: `16/25 -> 1/25`
+- TR legacy alias'larin Ingilizce tafsir ile yanlis provenance uretmesi riski: `16/25 -> 1/25`
+- Gecersiz API entry'lerinin cache'i bos basari gibi tamamlamasi riski: `12/25 -> 2/25`
+
+### Sonraki Adım
+- Sonraki dongude Tafsir servisinin remote bagimliligi ve offline/provenance modeli daha derin incelenecek; kalici cozum olarak Supabase/bundled verified tafsir katalog ihtiyaci handover risklerine ayrilacak veya dusuk kapsamli guard eklenecek.

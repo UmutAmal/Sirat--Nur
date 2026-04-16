@@ -18,7 +18,6 @@ class TafsirLocalService {
   static const String _tableName = 'tafsir';
 
   static final Map<String, int> _sourceToApiId = {
-    // Canonical keys
     'en.ibn_kathir': 169,
     'en.maarif': 168,
     'en.tazkir': 817,
@@ -29,17 +28,14 @@ class TafsirLocalService {
     'ar.qurtubi': 90,
     'ar.saadi': 91,
     'ar.baghawi': 94,
+  };
 
-    // Legacy aliases kept for backward compatibility
-    'en.sahih': 169,
-    'en.arabicexpert': 168,
-    'en.aisah': 817,
-    'en.khalifamag': 168,
-    'en.muhammadtaqiusmani': 169,
-    'tr.yazir': 169,
-    'tr.suati': 169,
-    'tr.ozturk': 169,
-    'ar.maqdisi': 16,
+  static final Map<String, String> _legacySourceAliases = {
+    'en.sahih': 'en.ibn_kathir',
+    'en.arabicexpert': 'en.maarif',
+    'en.aisah': 'en.tazkir',
+    'en.khalifamag': 'en.maarif',
+    'en.muhammadtaqiusmani': 'en.maarif',
   };
 
   static Future<Database> get database async {
@@ -74,8 +70,49 @@ class TafsirLocalService {
   }
 
   static String _canonicalSource(String source) {
-    if (_sourceToApiId.containsKey(source)) return source;
-    return 'en.ibn_kathir';
+    final normalized = source.trim();
+    final canonical = _legacySourceAliases[normalized] ?? normalized;
+    if (_sourceToApiId.containsKey(canonical)) return canonical;
+    throw TafsirException('unsupported_source', details: normalized);
+  }
+
+  static String canonicalTafsirSource(String source) =>
+      _canonicalSource(source);
+
+  static List<Map<String, Object>> normalizeApiTafsirRows(
+    List<dynamic> tafsirs, {
+    required int surahNumber,
+    required String tafsirSource,
+  }) {
+    final canonicalSource = _canonicalSource(tafsirSource);
+    final rows = <Map<String, Object>>[];
+
+    for (final item in tafsirs) {
+      if (item is! Map) {
+        continue;
+      }
+
+      final tafsir = Map<String, dynamic>.from(item);
+      final verseKey = (tafsir['verse_key'] ?? '').toString();
+      final parts = verseKey.split(':');
+      if (parts.length != 2) continue;
+
+      final verseNumber = int.tryParse(parts[1]);
+      if (verseNumber == null || verseNumber < 1) continue;
+
+      final rawText = (tafsir['text'] ?? '').toString();
+      final cleanedText = _stripHtml(rawText);
+      if (cleanedText.isEmpty) continue;
+
+      rows.add({
+        'surah_number': surahNumber,
+        'verse_number': verseNumber,
+        'tafsir_text': cleanedText,
+        'tafsir_source': canonicalSource,
+      });
+    }
+
+    return List<Map<String, Object>>.unmodifiable(rows);
   }
 
   static int _apiIdForSource(String source) {
@@ -125,37 +162,24 @@ class TafsirLocalService {
       throw TafsirException('no_entries');
     }
 
+    final cacheRows = normalizeApiTafsirRows(
+      tafsirs,
+      surahNumber: surahNumber,
+      tafsirSource: canonicalSource,
+    );
+    if (cacheRows.isEmpty) {
+      throw TafsirException('no_entries');
+    }
+
     await db.delete(
       _tableName,
       where: 'surah_number = ? AND tafsir_source = ?',
       whereArgs: [surahNumber, canonicalSource],
     );
-
     final batch = db.batch();
-    var count = 0;
-
-    for (final item in tafsirs) {
-      final tafsir = item as Map<String, dynamic>;
-      final verseKey = (tafsir['verse_key'] ?? '').toString();
-      final parts = verseKey.split(':');
-      if (parts.length != 2) continue;
-
-      final verseNumber = int.tryParse(parts[1]);
-      if (verseNumber == null) continue;
-
-      final rawText = (tafsir['text'] ?? '').toString();
-      final cleanedText = _stripHtml(rawText);
-      if (cleanedText.isEmpty) continue;
-
-      batch.insert(_tableName, {
-        'surah_number': surahNumber,
-        'verse_number': verseNumber,
-        'tafsir_text': cleanedText,
-        'tafsir_source': canonicalSource,
-      });
-
-      count++;
-      onProgress?.call(count, tafsirs.length);
+    for (var index = 0; index < cacheRows.length; index++) {
+      batch.insert(_tableName, cacheRows[index]);
+      onProgress?.call(index + 1, cacheRows.length);
     }
 
     await batch.commit(noResult: true);
