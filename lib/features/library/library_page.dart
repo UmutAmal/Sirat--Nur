@@ -53,7 +53,7 @@ String resolveHadithLibrarySubtitle(AppLocalizations l10n) {
 }
 
 List<DuaData> resolveLibraryDuas(AsyncValue<List<DuaData>> asyncDuas) {
-  return asyncDuas.valueOrNull ?? bundledDailyDuaFallback();
+  return asyncDuas.value ?? bundledDailyDuaFallback();
 }
 
 bool areDailyDuasAvailable(List<DuaData> duas) {
@@ -106,7 +106,7 @@ class LibraryPage extends ConsumerWidget {
     final duas = resolveLibraryDuas(ref.watch(dailyDuasProvider));
     final audio = ref.watch(audioSovereigntyServiceProvider);
     final cloudSukunSources =
-        ref.watch(sukunAudioSourcesProvider).valueOrNull ?? const {};
+        ref.watch(sukunAudioSourcesProvider).value ?? const {};
     final isSukunAvailable = resolveSukunAvailability(
       audio,
       cloudSources: cloudSukunSources,

@@ -29,7 +29,7 @@ class _SukunAudioPageState extends ConsumerState<SukunAudioPage> {
   Widget build(BuildContext context) {
     final audio = ref.watch(audioSovereigntyServiceProvider);
     final cloudSourcesAsync = ref.watch(sukunAudioSourcesProvider);
-    final cloudSources = cloudSourcesAsync.valueOrNull ?? const {};
+    final cloudSources = cloudSourcesAsync.value ?? const {};
     final l10n = AppLocalizations.of(context)!;
     final soundOptions = _buildSoundOptions(l10n);
     final localSoundTypes = audio.configuredSukunTypes.where(

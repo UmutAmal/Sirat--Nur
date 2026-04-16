@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
@@ -41,7 +42,11 @@ class ZikrPage extends ConsumerWidget {
     _ZikrItem('ٱللَّهُ أَكْبَرُ', 'Allahu Akbar', 33),
     _ZikrItem('لَا إِلَٰهَ إِلَّا ٱللَّهُ', 'La ilaha illallah', 100),
     _ZikrItem('أَسْتَغْفِرُ ٱللَّهَ', 'Astaghfirullah', 100),
-    _ZikrItem('لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِٱللَّهِ', 'La hawla wa la quwwata illa billah', 33),
+    _ZikrItem(
+      'لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِٱللَّهِ',
+      'La hawla wa la quwwata illa billah',
+      33,
+    ),
   ];
 
   @override
@@ -79,18 +84,21 @@ class ZikrPage extends ConsumerWidget {
                   return Padding(
                     padding: const EdgeInsets.only(right: 8),
                     child: ChoiceChip(
-                      label: Text(_zikrs[i].transliteration,
+                      label: Text(
+                        _zikrs[i].transliteration,
                         style: TextStyle(
                           fontWeight: FontWeight.w800,
                           color: isSelected ? Colors.white : null,
                           fontSize: 12,
-                        )),
+                        ),
+                      ),
                       selected: isSelected,
                       selectedColor: AppColors.emerald,
                       onSelected: (_) {
                         ref.read(_selectedZikrProvider.notifier).state = i;
                         ref.read(_zikrCountProvider.notifier).state = 0;
-                        ref.read(_zikrTargetProvider.notifier).state = _zikrs[i].defaultTarget;
+                        ref.read(_zikrTargetProvider.notifier).state =
+                            _zikrs[i].defaultTarget;
                       },
                     ),
                   );
@@ -99,16 +107,36 @@ class ZikrPage extends ConsumerWidget {
             ),
             const SizedBox(height: 32),
             // Arabic text
-            Text(zikr.arabic,
-              style: const TextStyle(fontSize: 36, fontWeight: FontWeight.w900, height: 1.8),
-              textAlign: TextAlign.center),
+            Text(
+              zikr.arabic,
+              style: const TextStyle(
+                fontSize: 36,
+                fontWeight: FontWeight.w900,
+                height: 1.8,
+              ),
+              textAlign: TextAlign.center,
+            ),
             const SizedBox(height: 8),
-            Text(zikr.transliteration,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700,
-                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5))),
+            Text(
+              zikr.transliteration,
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                color: Theme.of(
+                  context,
+                ).colorScheme.onSurface.withValues(alpha: 0.5),
+              ),
+            ),
             const SizedBox(height: 4),
-            Text(resolveZikrMeaning(l10n, selectedIdx),
-              style: TextStyle(fontSize: 13, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4))),
+            Text(
+              resolveZikrMeaning(l10n, selectedIdx),
+              style: TextStyle(
+                fontSize: 13,
+                color: Theme.of(
+                  context,
+                ).colorScheme.onSurface.withValues(alpha: 0.4),
+              ),
+            ),
             const SizedBox(height: 40),
             // Counter circle
             GestureDetector(
@@ -124,11 +152,13 @@ class ZikrPage extends ConsumerWidget {
                 alignment: Alignment.center,
                 children: [
                   SizedBox(
-                    width: 200, height: 200,
+                    width: 200,
+                    height: 200,
                     child: CircularProgressIndicator(
                       value: progress,
                       strokeWidth: 8,
-                      backgroundColor: (isDark ? Colors.white : Colors.black).withValues(alpha: 0.08),
+                      backgroundColor: (isDark ? Colors.white : Colors.black)
+                          .withValues(alpha: 0.08),
                       valueColor: AlwaysStoppedAnimation<Color>(
                         count >= target ? AppColors.gold : AppColors.emerald,
                       ),
@@ -137,14 +167,26 @@ class ZikrPage extends ConsumerWidget {
                   Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text('$count',
+                      Text(
+                        '$count',
                         style: TextStyle(
-                          fontSize: 56, fontWeight: FontWeight.w900,
-                          color: count >= target ? AppColors.gold : AppColors.emerald,
-                        )),
-                      Text('/ $target',
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700,
-                          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4))),
+                          fontSize: 56,
+                          fontWeight: FontWeight.w900,
+                          color: count >= target
+                              ? AppColors.gold
+                              : AppColors.emerald,
+                        ),
+                      ),
+                      Text(
+                        '/ $target',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700,
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.onSurface.withValues(alpha: 0.4),
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -156,7 +198,10 @@ class ZikrPage extends ConsumerWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Icon(Icons.celebration_rounded, color: AppColors.gold),
+                    const Icon(
+                      Icons.celebration_rounded,
+                      color: AppColors.gold,
+                    ),
                     const SizedBox(width: 8),
                     Text(
                       resolveZikrCompletedText(l10n),
@@ -169,8 +214,15 @@ class ZikrPage extends ConsumerWidget {
                 ),
               ),
             const SizedBox(height: 24),
-            Text(l10n.tapToCount, style: TextStyle(
-              fontSize: 13, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4))),
+            Text(
+              l10n.tapToCount,
+              style: TextStyle(
+                fontSize: 13,
+                color: Theme.of(
+                  context,
+                ).colorScheme.onSurface.withValues(alpha: 0.4),
+              ),
+            ),
           ],
         ),
       ),

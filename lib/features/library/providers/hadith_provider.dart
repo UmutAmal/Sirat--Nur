@@ -6,7 +6,7 @@ class HadithItem {
   final String arabic;
   final String translation;
   final String? heading;
-  
+
   HadithItem({
     required this.number,
     required this.arabic,
@@ -18,7 +18,7 @@ class HadithItem {
 class HadithRequest {
   final String collectionId;
   final String langCode;
-  
+
   HadithRequest(this.collectionId, this.langCode);
 
   @override
@@ -32,45 +32,56 @@ class HadithRequest {
   int get hashCode => collectionId.hashCode ^ langCode.hashCode;
 }
 
-final hadithSectionProvider = FutureProvider.family<List<HadithItem>, HadithRequest>((ref, req) async {
-  if (!hasVerifiedHadithDataset) {
-    throw const VerifiedHadithDatasetUnavailable();
+final hadithSectionProvider =
+    FutureProvider.family<List<HadithItem>, HadithRequest>((ref, req) async {
+      if (!hasVerifiedHadithDataset) {
+        throw const VerifiedHadithDatasetUnavailable();
+      }
+
+      // Try fetching section 1 as a proof of concept.
+      // In a full app, we would paginate, but section 1 alone contains enough typical hadiths for view.
+      final translations = await HadithApiService.fetchHadiths(
+        collectionId: req.collectionId,
+        langCode: req.langCode,
+        section: 1,
+      );
+
+      final arabics = await HadithApiService.fetchArabicHadiths(
+        collectionId: req.collectionId,
+        section: 1,
+      );
+
+      final List<HadithItem> items = [];
+
+      for (int i = 0; i < translations.length; i++) {
+        final trans = translations[i];
+        final hadithNum = trans['hadithnumber'] as num? ?? i;
+
+        // Find matching arabic by hadithnumber if possible.
+        final arabicMatch = arabics.firstWhere(
+          (a) => a['hadithnumber'] == trans['hadithnumber'],
+          orElse: () => arabics.length > i ? arabics[i] : {},
+        );
+
+        if (trans['text'] != null && trans['text'].toString().isNotEmpty) {
+          items.add(
+            HadithItem(
+              number: hadithNum.toInt(),
+              arabic: arabicMatch['text']?.toString() ?? '',
+              translation: trans['text'].toString(),
+              heading: arabicMatch['reference']?['book']?.toString(),
+            ),
+          );
+        }
+      }
+
+      return items;
+    }, retry: _retryHadithSectionProvider);
+
+Duration? _retryHadithSectionProvider(int retryCount, Object error) {
+  if (error is VerifiedHadithDatasetUnavailable) {
+    return null;
   }
 
-  // Try fetching section 1 as a proof of concept. 
-  // In a full app, we would paginate, but section 1 alone contains enough typical hadiths for view.
-  final translations = await HadithApiService.fetchHadiths(
-    collectionId: req.collectionId, 
-    langCode: req.langCode, 
-    section: 1,
-  );
-  
-  final arabics = await HadithApiService.fetchArabicHadiths(
-    collectionId: req.collectionId, 
-    section: 1,
-  );
-
-  final List<HadithItem> items = [];
-  
-  for (int i = 0; i < translations.length; i++) {
-    final trans = translations[i];
-    final hadithNum = trans['hadithnumber'] as num? ?? i;
-    
-    // Find matching arabic by hadithnumber if possible
-    final arabicMatch = arabics.firstWhere(
-      (a) => a['hadithnumber'] == trans['hadithnumber'], 
-      orElse: () => arabics.length > i ? arabics[i] : {},
-    );
-    
-    if (trans['text'] != null && trans['text'].toString().isNotEmpty) {
-      items.add(HadithItem(
-        number: hadithNum.toInt(),
-        arabic: arabicMatch['text']?.toString() ?? '',
-        translation: trans['text'].toString(),
-        heading: arabicMatch['reference']?['book']?.toString(), // optional heading
-      ));
-    }
-  }
-  
-  return items;
-});
+  return ProviderContainer.defaultRetry(retryCount, error);
+}

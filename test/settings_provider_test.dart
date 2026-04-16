@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
@@ -16,10 +17,14 @@ void main() {
       expect(
         () => container.read(sharedPreferencesProvider),
         throwsA(
-          isA<StateError>().having(
-            (error) => error.message,
-            'message',
-            kSharedPreferencesProviderNotBootstrappedErrorCode,
+          isA<ProviderException>().having(
+            (error) => error.exception,
+            'exception',
+            isA<StateError>().having(
+              (error) => error.message,
+              'message',
+              kSharedPreferencesProviderNotBootstrappedErrorCode,
+            ),
           ),
         ),
       );

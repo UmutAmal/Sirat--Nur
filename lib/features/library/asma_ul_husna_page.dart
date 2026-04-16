@@ -10,7 +10,7 @@ import 'package:sirat_i_nur/core/services/audio_player_service.dart';
 List<Map<String, dynamic>> resolveAsmaUlHusnaItems(
   AsyncValue<List<Map<String, dynamic>>> asyncNames,
 ) {
-  return asyncNames.valueOrNull ?? buildBundledAsmaUlHusnaFallback();
+  return asyncNames.value ?? buildBundledAsmaUlHusnaFallback();
 }
 
 bool hasPlayableAsmaAudio(Map<String, dynamic> item) {
@@ -74,13 +74,17 @@ bool matchesAsmaSearchQuery(
     return true;
   }
 
-  final transliteration = (item['transliteration'] ?? '').toString().toLowerCase();
+  final transliteration = (item['transliteration'] ?? '')
+      .toString()
+      .toLowerCase();
   final arabic = (item['arabic'] ?? '').toString().toLowerCase();
   final translations = item['translations'];
 
-  final translationMatch = translations is Map &&
+  final translationMatch =
+      translations is Map &&
       translations.values.any(
-        (value) => value is String && value.toLowerCase().contains(normalizedQuery),
+        (value) =>
+            value is String && value.toLowerCase().contains(normalizedQuery),
       );
   final localizedMeaningMatch =
       localizedMeaning != null &&

@@ -9425,3 +9425,63 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi direct outdated kalan iki riski ayir: `share_plus 13.0.0` resolver blokaji icin `geolocator/package_info_plus/win32` zincirini izle; `flutter_riverpod 3.x` icin once provider API usage envanteri cikar, sonra migration planini parcalara bol.
+
+## 2026-04-16 TUR-241 — Upgrade Riverpod 3 Migration
+
+### Yapilan Islem
+- `flutter_riverpod` direct dependency constraint'i `^2.6.1 -> ^3.3.1` olarak guncellendi.
+- `riverpod` transitive kilidi `2.6.1 -> 3.2.1` olarak cozuldu.
+- Riverpod 3 ile legacy alana tasinan `StateProvider`, `StateNotifier` ve `StateNotifierProvider` kullanan dosyalara `package:flutter_riverpod/legacy.dart` import'u eklendi.
+- Riverpod 3'te kaldirilan `AsyncValue.valueOrNull` kullanimlari `.value ?? fallback` seklinde guncellendi.
+- `sharedPreferencesProvider` bootstrap testinde Riverpod 3 `ProviderException` sarmalamasina uygun olarak ic `StateError` ve hata kodu dogrulandi.
+- `hadithSectionProvider` icin `VerifiedHadithDatasetUnavailable` hatasinda retry kapatildi; gecici diger hatalarda `ProviderContainer.defaultRetry` davranisi korundu.
+
+### Neden Yapildi
+- `flutter pub outdated` TUR-240 sonrasi `flutter_riverpod 2.6.1 -> 3.3.1` direct major adayini cozulur olarak gosteriyordu.
+- `rg` envanteri Riverpod kullanim yuzeyinin 233 eslesme oldugunu gosterdi; bu nedenle migration sadece derleyici ve changelog tarafindan gerekli sembollere indirildi.
+- Riverpod 3 changelog'una gore `StateProvider` ve `StateNotifierProvider` `flutter_riverpod/legacy.dart` altina tasindi, `AsyncValue.valueOrNull` kaldirildi ve provider hatalari `ProviderException` ile sariliyor.
+- Full testte `hadith_provider_test` once timeout verdi; kok sebep Riverpod 3 otomatik retry davranisinin kalici "verified dataset yok" hatasini tekrar denemesiydi. Bu hata kullaniciya durust unavailable state olarak hizli donmeli, retry edilmemeli.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\pubspec.yaml`
+- `A:\Way of Allah\sirat_i_nur\pubspec.lock`
+- `A:\Way of Allah\sirat_i_nur\lib\features\chatbot\chatbot_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\asma_ul_husna_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\library_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\sukun_audio_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\tracker\tracker_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\zikr\zikr_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `flutter_riverpod` direct outdated listesinden kalkti.
+- State-management hatti Riverpod 3 API yuzeyiyle uyumlu hale geldi.
+- Hadith provider, veri seti bilincli olarak kapaliyken 30 saniyelik retry/timeout yerine hizli ve durust unavailable hatasi uretiyor.
+- Kalan direct outdated risk sadece `share_plus 13.0.0`; mevcut blokaj `geolocator/package_info_plus/win32` transitive constraint catismasi.
+
+### Test Sonucu
+- Dry-run: `flutter pub add flutter_riverpod:^3.3.1 --dry-run` PASS, 21 dependency degisimi ongoruldu.
+- Odak test: `flutter test test\settings_provider_test.dart test\tracker_test.dart test\premium_provider_test.dart test\features\chatbot\chatbot_page_test.dart test\sukun_audio_page_test.dart test\features\library\library_page_cloud_duas_test.dart test\features\library\asma_ul_husna_page_test.dart` PASS (`50/50`)
+- Hadith odak test: `flutter test test\hadith_provider_test.dart --reporter expanded` PASS (`2/2`)
+- `flutter pub outdated` PASS; direct outdated listesinde yalniz `share_plus` kaldi.
+- `dart format` PASS (10 dosya tarandi, 4 dosya formatlandi)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`428/428`)
+
+### Risk Degisimi
+- `flutter_riverpod` major eskime riski: `12/25 -> 2/25`
+- Riverpod legacy provider API kirilma riski: `16/25 -> 3/25`
+- Hadith provider kalici unavailable retry/timeout riski: `12/25 -> 2/25`
+
+### Rollback Plani
+- `pubspec.yaml` icinde `flutter_riverpod: ^3.3.1` satiri `^2.6.1` yapilir.
+- `flutter pub get` ile `pubspec.lock` eski Riverpod 2.6.1 cozumune dondurulur.
+- Legacy import ekleri, `.value` donusumleri, `ProviderException` test beklentisi ve `hadithSectionProvider` retry callback'i geri alinir.
+- Odak Riverpod testleri, hadith provider testi, analyze ve full test tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi direct dependency tarafinda kalan tek risk `share_plus 13.0.0`; resolver blokaji cozulmedigi surece zorlamadan, once `geolocator_linux -> package_info_plus -> win32` zincirindeki upstream uyumlulugu takip et. Yeni dongude dependency disi risk taramasina gec ve hardcoded/TODO/orphan/asset/config alanlarini yeniden tara.
