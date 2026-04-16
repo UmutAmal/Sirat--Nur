@@ -31,6 +31,7 @@ class SettingsPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final settings = ref.watch(settingsProvider);
     final l10n = AppLocalizations.of(context)!;
+    final locationName = settings.locationName;
     final appVersion = resolveAppVersion();
     final prayerProfile = profileForMethod(
       settings.calculationMethod,
@@ -134,11 +135,11 @@ class SettingsPage extends ConsumerWidget {
                 context,
                 icon: Icons.location_on_rounded,
                 title: l10n.location,
-                value: settings.locationName == null
+                value: locationName == null
                     ? '-'
                     : (settings.timezone == null
-                          ? settings.locationName!
-                          : '${settings.locationName} (${settings.timezone})'),
+                          ? locationName
+                          : '$locationName (${settings.timezone})'),
                 onTap: () => context.push('/settings/location'),
               ),
             ),

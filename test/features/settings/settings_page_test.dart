@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -113,18 +115,26 @@ void main() {
     );
   });
 
-  testWidgets('SettingsPage localizes audio voice labels from canonical state', (
-    tester,
-  ) async {
-    await pumpSettingsPage(
-      tester,
-      prefsValues: const {
-        'audioVoice': sudaisVoice,
-      },
-      locale: const Locale('tr'),
-    );
+  testWidgets(
+    'SettingsPage localizes audio voice labels from canonical state',
+    (tester) async {
+      await pumpSettingsPage(
+        tester,
+        prefsValues: const {'audioVoice': sudaisVoice},
+        locale: const Locale('tr'),
+      );
 
-    expect(find.text('Ses Seçimi'), findsOneWidget);
-    expect(find.text('Erkek (Sudais)'), findsOneWidget);
+      expect(find.text('Ses Seçimi'), findsOneWidget);
+      expect(find.text('Erkek (Sudais)'), findsOneWidget);
+    },
+  );
+
+  test('SettingsPage renders location names from a local snapshot', () {
+    final source = File(
+      'lib/features/settings/settings_page.dart',
+    ).readAsStringSync();
+
+    expect(source, contains('final locationName = settings.locationName;'));
+    expect(source, isNot(contains('settings.locationName!')));
   });
 }

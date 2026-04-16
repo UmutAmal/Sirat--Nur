@@ -7734,3 +7734,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude settings locationName ve prayer queuedSettings runtime force-unwrap yuzeyleri incelenecek; state race etkisi daha yuksek olan once kapatilacak.
+
+## 2026-04-16 TUR-204 — Guard Settings Location Name Snapshot
+
+### Yapılan İşlem
+- SettingsPage build akisi `settings.locationName` degerini local `locationName` snapshot olarak okuyor.
+- Konum satiri `locationName == null` guardindan sonra snapshot degeriyle render ediliyor.
+- SettingsPage testine source guard eklendi; `settings.locationName!` geri gelirse test fail edecek.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:34` settings location adini local snapshot'a aliyor.
+- Eski akista `settings.locationName == null` guardindan sonra `settings.locationName!` kullaniliyordu; provider state'i render boyunca tekrar okunmasa bile bu pattern ileride refactor/race hatasina acik gereksiz nullable force-unwrap yuzeyi olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\settings_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Settings konum gostergesi ve timezone formati degismedi.
+- Konum adi render akisi nullable state force-unwrap kullanmadan calisiyor.
+
+### Test Sonucu
+- `flutter test test\features\settings\settings_page_test.dart` PASS (`6/6`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`374/374`)
+
+### Risk Değişimi
+- Settings locationName render force-unwrap crash yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude PrayerNotificationCoordinator `_queuedSettings!` drain yuzeyi incelenecek ve local snapshot standardina alinacak.
