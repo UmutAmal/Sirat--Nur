@@ -10028,3 +10028,48 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude verified dini/audio dataset tamamlama zincirinde en yuksek kalan riski sec: gercek manifest/Supabase seed yoksa uydurma veri ekleme; once mevcut kodda false-success, hardcoded icerik veya operator guard eksigi ara.
+
+## 2026-04-16 TUR-253 — Bound Hadith Completeness Probe
+
+### Yapilan Islem
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart` icindeki `verifiedHadithDatasetAvailabilityProvider` tum `hadiths` tablosunu cekmek yerine `hasCompleteVerifiedHadithDatasetInCloud` helper'ina baglandi.
+- Yeni cloud helper her `supportedHadithCollectionIds` koleksiyonu icin ayri, bounded ve provenance filtreli Supabase probe calistirir.
+- Her koleksiyon icin en fazla `_hadithCompletenessProbeLimit = 100` satir okunur.
+- Probe `book`, `text_ar`, `source`, `source_license`, `verified_at` alanlarinda null/bos degerleri server tarafinda eler; son karar yine `resolveVerifiedHadithItems` normalizer'i ile verilir.
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_provider_test.dart` provider kaynak guard'i, availability kontrolunun koleksiyon bazli `.eq('collection_id', collectionId)` ve `.limit(_hadithCompletenessProbeLimit)` kullanmasini zorunlu kilacak sekilde genisletildi.
+
+### Neden Yapildi
+- TUR-251 guard'i dogruydu ancak availability provider `hadiths` tablosundaki tum satirlari cekiyordu.
+- Gercek Kütüb-i Sitte dataset'i buyudugunde bu davranis library/diagnostics acilisinda gereksiz ag trafiği, bellek kullanimi ve gecikme riski dogururdu.
+- Completeness icin tum tabloyu indirmek gerekmez; her desteklenen koleksiyonda en az bir verified/provenance'li normalize edilebilir satir kaniti yeterlidir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Hadis dataset availability kontrolu O(tum hadis satirlari) yerine O(desteklenen koleksiyon sayisi x 100 probe) sinirina cekildi.
+- Eksik/provenance'siz satirlar yine UI'a cikamaz; guvenlik modeli korunur.
+- Buyuk dogrulanmis hadis dataset'i yuklendiginde diagnostics/library acilisinin tablo tamamini indirme riski azalir.
+
+### Test Sonucu
+- Odak test: `flutter test test\features\library\hadith_provider_test.dart --reporter compact` PASS (`4/4`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesajlari)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`458/458`)
+
+### Risk Degisimi
+- Hadis completeness kontrolunun tum tabloyu indirme riski: `12/25 -> 3/25`
+- Buyuk dataset'te library/diagnostics gecikme riski: `12/25 -> 4/25`
+- Verified hadis dataset eksikligi riski: `8/25 -> 8/25` (performans guard'i tamamlandi; gercek kaynak manifest/Supabase seed halen gerekli)
+
+### Rollback Plani
+- `hasCompleteVerifiedHadithDatasetInCloud`, `_hadithCompletenessProbeLimit` ve `SupabaseClient` import'u geri alinir.
+- `verifiedHadithDatasetAvailabilityProvider` tekrar eski tum tablo `select(_hadithSelectColumns)` akisana dondurulur.
+- `hadith_provider_test.dart` icindeki bounded probe kaynak guard beklentileri geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Bir sonraki dongude dogrulanmis icerik/audio zincirinde kalan en yuksek riski ara: Supabase seed/manifest, offline indirme false-success veya localization kalintisi gibi alanlardan kanitli ve minimal bir sonraki patch sec.

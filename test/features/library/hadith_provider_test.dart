@@ -129,6 +129,13 @@ void main() {
       expect(providerSource, contains('source_license'));
       expect(providerSource, contains('verified_at'));
       expect(providerSource, contains('readOptionalSupabaseClient(ref)'));
+      expect(
+        providerSource,
+        contains('hasCompleteVerifiedHadithDatasetInCloud'),
+      );
+      expect(providerSource, contains('.limit(_hadithCompletenessProbeLimit)'));
+      expect(providerSource, contains(".eq('collection_id', collectionId)"));
+      expect(providerSource, isNot(contains(".order('collection_id'")));
       expect(providerSource, isNot(contains('fetchHadiths(')));
       expect(providerSource, isNot(contains('fetchArabicHadiths(')));
     });

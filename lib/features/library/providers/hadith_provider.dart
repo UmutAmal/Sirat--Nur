@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class HadithItem {
   final int number;
@@ -35,6 +36,7 @@ class HadithRequest {
 
 const String _hadithSelectColumns =
     'collection_id, book, hadith_number, text_ar, text_tr, text_en, narrator, grade, source, source_license, verified_at';
+const int _hadithCompletenessProbeLimit = 100;
 
 final verifiedHadithDatasetAvailabilityProvider = FutureProvider<bool>((
   ref,
@@ -49,14 +51,7 @@ final verifiedHadithDatasetAvailabilityProvider = FutureProvider<bool>((
   }
 
   try {
-    final rows = await supabase
-        .from('hadiths')
-        .select(_hadithSelectColumns)
-        .order('collection_id', ascending: true)
-        .order('hadith_number', ascending: true);
-    return hasCompleteVerifiedHadithDataset(
-      List<Map<String, dynamic>>.from(rows),
-    );
+    return await hasCompleteVerifiedHadithDatasetInCloud(supabase);
   } catch (_) {
     return false;
   }
@@ -86,6 +81,38 @@ bool hasCompleteVerifiedHadithDataset(List<Map<String, dynamic>> rows) {
   for (final collectionId in supportedHadithCollectionIds) {
     final items = resolveVerifiedHadithItems(
       rows,
+      collectionId: collectionId,
+      langCode: 'en',
+    );
+    if (items.isEmpty) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+Future<bool> hasCompleteVerifiedHadithDatasetInCloud(
+  SupabaseClient supabase,
+) async {
+  for (final collectionId in supportedHadithCollectionIds) {
+    final rows = await supabase
+        .from('hadiths')
+        .select(_hadithSelectColumns)
+        .eq('collection_id', collectionId)
+        .not('book', 'is', null)
+        .not('book', 'eq', '')
+        .not('text_ar', 'is', null)
+        .not('text_ar', 'eq', '')
+        .not('source', 'is', null)
+        .not('source', 'eq', '')
+        .not('source_license', 'is', null)
+        .not('source_license', 'eq', '')
+        .not('verified_at', 'is', null)
+        .order('hadith_number', ascending: true)
+        .limit(_hadithCompletenessProbeLimit);
+    final items = resolveVerifiedHadithItems(
+      List<Map<String, dynamic>>.from(rows),
       collectionId: collectionId,
       langCode: 'en',
     );
