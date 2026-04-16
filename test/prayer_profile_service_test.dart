@@ -52,8 +52,6 @@ void main() {
         'Asia/Dubai': dubaiPrayerMethod,
         'Asia/Kuwait': kuwaitPrayerMethod,
         'Asia/Qatar': qatarPrayerMethod,
-        'Asia/Bahrain': ummAlQuraPrayerMethod,
-        'Asia/Muscat': ummAlQuraPrayerMethod,
       };
 
       for (final entry in cases.entries) {
@@ -64,6 +62,24 @@ void main() {
           entry.value,
           reason: '${entry.key} must not fall through to generic MWL',
         );
+      }
+    });
+
+    test('does not masquerade Bahrain or Oman as Saudi official profiles', () {
+      for (final args in const [
+        (countryCode: 'BH', timezone: 'Asia/Bahrain'),
+        (countryCode: 'OM', timezone: 'Asia/Muscat'),
+        (countryCode: null, timezone: 'Asia/Bahrain'),
+        (countryCode: null, timezone: 'Asia/Muscat'),
+      ]) {
+        final profile = resolvePrayerProfile(
+          countryCode: args.countryCode,
+          timezone: args.timezone,
+        );
+
+        expect(profile.calculationMethod, mwlPrayerMethod);
+        expect(profile.sourceName, isNot(contains('Saudi')));
+        expect(profile.sourceUrl, isNot('https://quran.gov.sa'));
       }
     });
 

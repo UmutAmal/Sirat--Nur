@@ -233,7 +233,6 @@ const Map<String, PrayerCalculationProfile> _timezoneProfileFallbacks =
       'America/Winnipeg': _isnaProfile,
       'America/Yakutat': _isnaProfile,
       'America/Yellowknife': _isnaProfile,
-      'Asia/Bahrain': _ummAlQuraProfile,
       'Asia/Dhaka': _karachiProfile,
       'Asia/Dubai': _dubaiProfile,
       'Asia/Jakarta': _kemenagProfile,
@@ -244,7 +243,6 @@ const Map<String, PrayerCalculationProfile> _timezoneProfileFallbacks =
       'Asia/Kuching': _jakimProfile,
       'Asia/Kuwait': _kuwaitProfile,
       'Asia/Makassar': _kemenagProfile,
-      'Asia/Muscat': _ummAlQuraProfile,
       'Asia/Pontianak': _kemenagProfile,
       'Asia/Qatar': _qatarProfile,
       'Asia/Riyadh': _ummAlQuraProfile,
@@ -457,9 +455,6 @@ PrayerCalculationProfile resolvePrayerProfile({
     case 'UZ':
     case 'AZ':
       return _mwlHanafiProfile;
-    case 'BH':
-    case 'OM':
-      return _ummAlQuraProfile;
     default:
       break;
   }

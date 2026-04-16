@@ -10648,3 +10648,59 @@
 
 ### Sonraki Adim
 - Section 13 taramasinda Quran/Dua/Asma fallback zincirleri ve prayer profile dini kaynak secimi incelenecek; resmi kaynak metadata'si olmadan kullaniciya dini hukum/icerik sunan bir akisin kalip kalmadigi kanitlanacak.
+
+## 2026-04-16 TUR-264 — Remove Bahrain/Oman Saudi Prayer Profile Masquerade
+
+### Yapilan Islem
+- Prayer profile resolver'da Bahrain (`BH`, `Asia/Bahrain`) ve Oman (`OM`, `Asia/Muscat`) icin Saudi `Umm al-Qura / Saudi official profile` fallback'i kaldirildi.
+- Yerel resmi metodoloji parametreleri kodda modellenmedigi icin bu iki ulke artik Saudi resmi profil gibi sunulmuyor; mevcut sistemde genel MWL fallback'e dusuyor.
+- `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart` icine Bahrain/Oman'in Saudi sourceName/sourceUrl ile maskelenmemesini zorunlu kilan regresyon testi eklendi.
+
+### Kanit
+- Patch oncesi risk:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart` icinde `Asia/Bahrain`, `Asia/Muscat`, `BH`, `OM` dogrudan `_ummAlQuraProfile` donduruyordu.
+- `_ummAlQuraProfile` sourceName/sourceUrl olarak Saudi resmi profili tasiyor:
+  `Umm al-Qura / Saudi official profile`, `https://quran.gov.sa`.
+- Patch sonrasi timezone map'te Bahrain/Muscat satirlari yok:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:176`.
+- Patch sonrasi country resolver'da `BH`/`OM` explicit Saudi case'i yok:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:445`.
+- Guard:
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:68`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:80`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:81`,
+  `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart:82`.
+- Web dogrulama notu:
+  Oman MARA resmi sitesinde "Prayer Time" hizmeti goruluyor (`https://www.mara.gov.om/ServiceDetails.aspx?MID=33&id=34` ve `https://www.mara.gov.om/Pages.aspx?ID=22&MID=41`).
+  Bahrain icin `pray.bh` sayfasi "AWQAF methodology" ifadesi tasiyor; ancak exact algoritma/parametre kodda modellenmedigi icin yeni Bahrain profili uydurulmadi.
+
+### Neden Yapildi
+- Namaz vakti dini/pratik bir yukumluluk alanidir; ulke bazli profil yanlis resmi otoriteyle etiketlenemez.
+- Saudi Umm al-Qura profili Saudi Arabistan icin anlamli olsa da Bahrain/Oman icin yerel kurum yerine gosterilmesi kullaniciyi yanlis otoriteye yonlendirebilir.
+- Bu turda yeni parametre uydurulmadan yalnizca kanitli yanlis resmi-otorite iddiasi kaldirildi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_profile_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Odak test: `flutter test test\prayer_profile_service_test.dart test\settings_provider_test.dart test\prayer_times_service_test.dart --reporter compact` PASS (`33/33`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`474/474`)
+
+### Risk Degisimi
+- Bahrain/Oman icin Saudi resmi profil maskesi riski: `16/25 -> 4/25`
+- Namaz vakti kaynak yanlis-attribution riski: `12/25 -> 5/25`
+- Yerel resmi Bahrain/Oman exact schedule eksigi: `12/25 -> 10/25` (tam cozum icin resmi takvim/Supabase schedule entegrasyonu gerekir)
+
+### Rollback Plani
+- `Asia/Bahrain`, `Asia/Muscat`, `BH`, `OM` `_ummAlQuraProfile` mapping'leri geri eklenir.
+- `prayer_profile_service_test.dart` icindeki TUR-264 guard geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yerel resmi namaz takvimi entegrasyonu icin Bahrain/Oman gibi exact hesap parametresi kodda bulunmayan ulkeler Supabase-backed `prayer_profiles`/`prayer_schedules` tasarimina alinacak.
+- Bir sonraki mikro dongude once mevcut kodda benzer "baska ulkenin resmi profiliyle maskelenen" country/timezone mapping var mi taranacak.
