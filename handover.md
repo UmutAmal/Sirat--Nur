@@ -7323,3 +7323,33 @@
 
 ### Sonraki Adım
 - Sonraki dongude kalan force unwrap yuzeyleri icinden runtime data'ya bagli olanlar ayrilacak; route parametresi, provider sonucu veya cloud row kaynakli yeni bir crash yuzeyi varsa kapatilacak.
+
+## 2026-04-16 TUR-191 — Sanitize Prayer Notification Sync Failure Logs
+
+### Yapılan İşlem
+- Prayer notification coordinator sync failure catch blogu raw stack trace basmayacak sekilde sadeleştirildi.
+- Test guard'i `debugPrintStack` kullanimini yasaklayacak sekilde guncellendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart:80` sabit hata mesaji basiyordu, ancak hemen ardindan stack trace basarak dosya yolu ve teknik call-chain metadata'sini loglara tasiyordu.
+- Namaz bildirim planlama hatti core dini zamanlama akisi oldugu icin failure loglari kullanici/veri/gizlilik acisindan minimum sinyal uretmeli; raw stack sadece lokal debug ihtiyacidir, runtime log yuzeyi degildir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_notification_coordinator_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Scheduler exception durumunda uygulama davranisi degismez; hata yutulur ve sonraki sync dongusu calismaya devam eder.
+- Loglarda artik raw stack trace/path metadata'si yoktur.
+
+### Test Sonucu
+- `flutter test test\prayer_notification_coordinator_test.dart` PASS (`7/7`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`364/364`)
+
+### Risk Değişimi
+- Prayer notification sync failure loglarinda raw stack trace sizmasi riski: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude places ve qibla tarafindaki nullable coordinate unwrap'leri yeniden incelenecek; guard kosullari ile unwrap kullanimlari ayrilacak ve gercek crash yuzeyi kaldiysa kapatilacak.

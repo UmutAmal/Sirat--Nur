@@ -314,8 +314,8 @@ void main() {
         source,
         isNot(contains(r'Prayer notification sync failed: $error')),
       );
+      expect(source, isNot(contains('debugPrintStack')));
       expect(source, contains('Prayer notification sync failed'));
-      expect(source, contains('debugPrintStack'));
     });
   });
 }
