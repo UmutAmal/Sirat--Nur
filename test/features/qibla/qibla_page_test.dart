@@ -203,6 +203,8 @@ void main() {
       expect(source, isNot(contains('41.0082')));
       expect(source, isNot(contains('28.9784')));
       expect(source, isNot(contains('Fallback to Istanbul')));
+      expect(source, isNot(contains('settings.latitude!')));
+      expect(source, isNot(contains('settings.longitude!')));
     });
   });
 }

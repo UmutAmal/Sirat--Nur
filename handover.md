@@ -7385,3 +7385,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude Qibla sensor bridge ve prayer widget latitude/longitude unwrap'leri kontrol edilecek; guard ile local snapshot ayrimi yetersizse ayni null-safety sertlestirmesi uygulanacak.
+
+## 2026-04-16 TUR-193 — Remove Qibla Page Coordinate Force-Unwraps
+
+### Yapılan İşlem
+- QiblaPage build akisi latitude/longitude degerlerini local snapshot olarak okuyor.
+- Null koordinat durumunda mevcut location-required state korunuyor; dolu koordinat durumunda Qibla bearing hesabi `!` kullanmadan yapiliyor.
+- Qibla testine `settings.latitude!` / `settings.longitude!` kullaniminin geri gelmesini engelleyen source guard eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart:57` ve `:58` once `hasQiblaLocation(settings)` guardindan sonra field'lari force-unwrap ediyordu.
+- `SettingsState` immutable olsa da UI tarafinda nullable coordinate guard'ini local snapshot ile yapmak daha guvenli ve Places dongusundeki null-safety standardiyla tutarlidir.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\qibla\qibla_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\qibla\qibla_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Qibla ekrani davranisi degismedi; sadece koordinat force-unwrap yuzeyi kaldirildi.
+- Eksik konumda sensor provider yine izlenmez, gercek konum gerektiren honest state gosterilir.
+
+### Test Sonucu
+- `flutter test test\features\qibla\qibla_page_test.dart` PASS (`7/7`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`365/365`)
+
+### Risk Değişimi
+- Qibla UI coordinate force-unwrap crash yuzeyi: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude PrayerWidgetSyncService ve PrayerNotificationCoordinator latitude/longitude unwrap'leri local snapshot ile kapatilacak; ardindan QiblaSensorBridge heading unwrap'i ayrica incelenecek.

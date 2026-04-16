@@ -48,14 +48,16 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
 
     final settings = ref.watch(settingsProvider);
     final Widget content;
+    final latitude = settings.latitude;
+    final longitude = settings.longitude;
 
-    if (!hasQiblaLocation(settings)) {
+    if (latitude == null || longitude == null) {
       content = _buildLocationRequiredState(context, l10n);
     } else {
       final qiblaStream = ref.watch(qiblaSensorProvider);
       final qiblaBearing = QiblaUtils.calculateQiblaDirection(
-        settings.latitude!,
-        settings.longitude!,
+        latitude,
+        longitude,
       );
 
       content = qiblaStream.when(
