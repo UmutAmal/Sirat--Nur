@@ -614,7 +614,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Vynulovať počítadlo';
 
   @override
   String get changeTarget => 'Change Target';
@@ -624,7 +624,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'Cieľový počet: $target';
   }
 
   @override
@@ -672,7 +672,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'Denný pokrok';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -705,23 +705,25 @@ class AppLocalizationsSk extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium =>
+      'Znova skontrolujte stav prémiového predplatného';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'Synchronizujte s obchodom s aplikáciami a potvrďte svoje prémiové predplatné.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'Overené prémiové predplatné.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'Prémiové predplatné sa nenašlo.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'Nepodarilo sa obnoviť stav prémiového odberu: $error';
   }
 
   @override
@@ -743,7 +745,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'Kontrola databázy Koránu...';
 
   @override
   String get okLabel => 'OK';
@@ -755,11 +757,11 @@ class AppLocalizationsSk extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'Stav databázy Koránu';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'Stav: $status';
   }
 
   @override
@@ -838,10 +840,10 @@ class AppLocalizationsSk extends AppLocalizations {
       'Upravte, ak váš kompas potrebuje manuálnu korekciu. Kladné hodnoty sa otáčajú v smere hodinových ručičiek.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Použiť zmeny';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Obnoviť úvodné nastavenie';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

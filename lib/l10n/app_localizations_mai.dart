@@ -837,7 +837,7 @@ class AppLocalizationsMai extends AppLocalizations {
       'यदि अहां कें कम्पास कें मैनुअल सुधार कें जरूरत छै त समायोजित करूं. सकारात्मक मान घड़ीक दिशा मे घुमैत अछि।';
 
   @override
-  String get apply => 'आवेदन करू';
+  String get apply => 'परिवर्तन लागू करब';
 
   @override
   String get resetOnboarding => 'ऑनबोर्डिंग रीसेट करू';

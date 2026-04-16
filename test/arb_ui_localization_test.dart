@@ -2023,9 +2023,59 @@ void main() {
         }
       },
     );
+
+    test(
+      'status and account action copy stays single-line and preserves placeholders in all locales',
+      () {
+        const singleLineKeys = [
+          'okLabel',
+          'apply',
+          'statusLabel',
+          'recheckPremium',
+          'syncStore',
+          'premiumNotFound',
+          'premiumVerified',
+          'premiumRefreshError',
+          'quranDbStatus',
+          'checkingQuranDb',
+          'dailyProgress',
+          'targetCount',
+          'resetCounter',
+          'resetOnboarding',
+        ];
+
+        for (final file
+            in Directory('lib/l10n').listSync().whereType<File>().where(
+              (file) => file.path.endsWith('.arb'),
+            )) {
+          final arb = _readArb(file.path);
+
+          for (final key in singleLineKeys) {
+            final value = arb[key] as String;
+            expect(
+              value.contains('\n') || value.contains('\r'),
+              isFalse,
+              reason: '${file.uri.pathSegments.last} keeps multiline $key',
+            );
+            expect(
+              _placeholderSet(value),
+              _placeholderSet(english[key] as String),
+              reason:
+                  '${file.uri.pathSegments.last} lost placeholders for $key',
+            );
+          }
+        }
+      },
+    );
   });
 }
 
 Map<String, dynamic> _readArb(String path) {
   return jsonDecode(File(path).readAsStringSync()) as Map<String, dynamic>;
+}
+
+Set<String> _placeholderSet(String value) {
+  return RegExp(
+    r'\{[^}]+\}',
+  ).allMatches(value).map((match) => match.group(0)!).toSet();
 }

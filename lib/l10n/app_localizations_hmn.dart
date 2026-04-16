@@ -624,7 +624,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Hom phiaj: $target';
+    return 'Lub hom phiaj suav: $target';
   }
 
   @override
@@ -709,7 +709,8 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get recheckPremium => 'Recheck Premium Status';
 
   @override
-  String get syncStore => 'Sync nrog lub khw kom paub meej tias koj txoj cai.';
+  String get syncStore =>
+      'Sync nrog lub khw app kom paub meej tias koj qhov kev tso npe hwm.';
 
   @override
   String get checkingPremium => 'Tshawb xyuas cov xwm txheej premium...';
@@ -718,11 +719,11 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get premiumVerified => 'Hwm pov thawj.';
 
   @override
-  String get premiumNotFound => 'Hwm tsis pom.';
+  String get premiumNotFound => 'Tsis pom qhov kev tso npe premium.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Tsis tuaj yeem hloov kho cov xwm txheej hwm: $error';
+    return 'Tsis tuaj yeem hloov kho tus nqi them nqi kho mob: $error';
   }
 
   @override
@@ -839,10 +840,10 @@ class AppLocalizationsHmn extends AppLocalizations {
       'Kho yog tias koj lub compass xav tau phau ntawv kho. Cov txiaj ntsig zoo tig clockwise.';
 
   @override
-  String get apply => 'Thov';
+  String get apply => 'Siv cov kev hloov pauv';
 
   @override
-  String get resetOnboarding => 'Pib dua Onboarding';
+  String get resetOnboarding => 'Pib dua kev teeb tsa intro';
 
   @override
   String get rerunSetup => 'Rov ua dua txheej txheem kev teeb tsa thawj zaug.';

@@ -613,7 +613,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'รีเซ็ตตัวนับ';
 
   @override
   String get changeTarget => 'Change Target';
@@ -623,7 +623,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'จำนวนเป้าหมาย: $target';
   }
 
   @override
@@ -671,7 +671,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'ความคืบหน้ารายวัน';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -704,23 +704,24 @@ class AppLocalizationsTh extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => 'ตรวจสอบสถานะการสมัครสมาชิกแบบพรีเมียมอีกครั้ง';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'ซิงค์กับ App Store เพื่อยืนยันการสมัครสมาชิกระดับพรีเมียมของคุณ';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'ยืนยันการสมัครสมาชิกแบบพรีเมียมแล้ว';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'ไม่พบการสมัครสมาชิกแบบพรีเมียม';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'ไม่สามารถรีเฟรชสถานะการสมัครรับข้อมูลแบบพรีเมียม: $error';
   }
 
   @override
@@ -742,7 +743,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'กำลังตรวจสอบฐานข้อมูลอัลกุรอาน...';
 
   @override
   String get okLabel => 'OK';
@@ -754,11 +755,11 @@ class AppLocalizationsTh extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'สถานะฐานข้อมูลอัลกุรอาน';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'สถานะ: $status';
   }
 
   @override
@@ -837,10 +838,10 @@ class AppLocalizationsTh extends AppLocalizations {
       'ปรับหากเข็มทิศของคุณต้องการการแก้ไขด้วยตนเอง ค่าบวกจะหมุนตามเข็มนาฬิกา';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'ใช้การเปลี่ยนแปลง';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'รีเซ็ตการตั้งค่าอินโทร';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

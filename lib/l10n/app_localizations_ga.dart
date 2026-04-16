@@ -614,7 +614,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Athshocraigh Áiritheoir';
 
   @override
   String get changeTarget => 'Change Target';
@@ -624,7 +624,7 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'Comhaireamh sprice: $target';
   }
 
   @override
@@ -672,7 +672,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'Dul Chun Cinn Laethúil';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -705,23 +705,24 @@ class AppLocalizationsGa extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => 'Athsheiceáil stádas síntiús préimhe';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'Sioncronaigh leis an appstore chun do shíntiús préimhe a dheimhniú.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'Síntiús préimhe fíoraithe.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'Níor aimsíodh síntiús préimhe.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'Níorbh fhéidir stádas síntiúis phréimhe a athnuachan: $error';
   }
 
   @override
@@ -743,7 +744,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'Bunachar sonraí Quran a sheiceáil. .';
 
   @override
   String get okLabel => 'OK';
@@ -755,11 +756,11 @@ class AppLocalizationsGa extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'Stádas bunachar sonraí Quran';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'Stádas: $status';
   }
 
   @override
@@ -838,10 +839,10 @@ class AppLocalizationsGa extends AppLocalizations {
       'Coigeartaigh má tá ceartúchán láimhe de dhíth ar do chompás. Rothlaíonn luachanna dearfacha deiseal.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Cuir athruithe i bhfeidhm';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Athshocraigh socrú an intro';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

@@ -617,7 +617,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'ကောင်တာကို ပြန်သတ်မှတ်ပါ။';
 
   @override
   String get changeTarget => 'Change Target';
@@ -627,7 +627,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'ပစ်မှတ်အရေအတွက်- $target';
   }
 
   @override
@@ -678,7 +678,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'နေ့စဉ်တိုးတက်မှု';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -711,23 +711,25 @@ class AppLocalizationsMy extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium =>
+      'ပရီမီယံ စာရင်းသွင်းမှု အခြေအနေကို ပြန်လည်စစ်ဆေးပါ။';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'သင်၏ ပရီမီယံ စာရင်းသွင်းမှုကို အတည်ပြုရန် အက်ပ်စတိုးနှင့် စင့်ခ်လုပ်ပါ။';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'ပရီမီယံ စာရင်းသွင်းမှုကို အတည်ပြုပြီးပါပြီ။';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'ပရီမီယံ စာရင်းသွင်းမှုကို ရှာမတွေ့ပါ။';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'ပရီမီယံ စာရင်းသွင်းမှု အခြေအနေကို ပြန်လည်ဆန်းသစ်၍ မရပါ- $error';
   }
 
   @override
@@ -749,7 +751,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'ကုရ်အာန်ဒေတာဘေ့စ်ကို စစ်ဆေးနေသည်...';
 
   @override
   String get okLabel => 'OK';
@@ -761,11 +763,11 @@ class AppLocalizationsMy extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'ကုရ်အာန် ဒေတာဘေ့စ် အခြေအနေ';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'အခြေအနေ- $status';
   }
 
   @override
@@ -844,10 +846,10 @@ class AppLocalizationsMy extends AppLocalizations {
       'သင့်အိမ်မြှောင်တွင် လက်ဖြင့် ပြုပြင်မှု လိုအပ်ပါက ချိန်ညှိပါ။ အပြုသဘောဆောင်သောတန်ဖိုးများသည် နာရီလက်တံအတိုင်းလှည့်သည်။';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'အပြောင်းအလဲများကို အသုံးချပါ။';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'မိတ်ဆက်စနစ်ထည့်သွင်းမှုကို ပြန်လည်သတ်မှတ်ပါ။';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

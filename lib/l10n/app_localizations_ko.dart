@@ -606,7 +606,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => '카운터 재설정';
 
   @override
   String get changeTarget => 'Change Target';
@@ -616,7 +616,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return '대상 수: $target';
   }
 
   @override
@@ -662,7 +662,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => '일일 진행 상황';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -695,23 +695,23 @@ class AppLocalizationsKo extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => '프리미엄 구독 상태 다시 확인';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore => '프리미엄 구독을 확인하려면 앱 스토어와 동기화하세요.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => '프리미엄 구독이 확인되었습니다.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => '프리미엄 구독을 찾을 수 없습니다.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return '프리미엄 구독 상태를 새로 고칠 수 없습니다: $error';
   }
 
   @override
@@ -733,7 +733,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => '꾸란 데이터베이스를 확인하는 중...';
 
   @override
   String get okLabel => 'OK';
@@ -745,11 +745,11 @@ class AppLocalizationsKo extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => '꾸란 데이터베이스 상태';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return '상태: $status';
   }
 
   @override
@@ -828,10 +828,10 @@ class AppLocalizationsKo extends AppLocalizations {
       '나침반에 수동 수정이 필요한 경우 조정하세요. 양수 값은 시계 방향으로 회전합니다.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => '변경사항 적용';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => '인트로 설정 재설정';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

@@ -615,7 +615,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Számláló visszaállítása';
 
   @override
   String get changeTarget => 'Change Target';
@@ -625,7 +625,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'Célszám: $target';
   }
 
   @override
@@ -672,7 +672,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'Napi fejlődés';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -705,23 +705,25 @@ class AppLocalizationsHu extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium =>
+      'Ellenőrizze újra a prémium előfizetés állapotát';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'Szinkronizáljon az alkalmazásbolttal a prémium előfizetés megerősítéséhez.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'Prémium előfizetés ellenőrizve.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'Prémium előfizetés nem található.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'Nem sikerült frissíteni a prémium előfizetés állapotát: $error';
   }
 
   @override
@@ -743,7 +745,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'A Korán adatbázis ellenőrzése...';
 
   @override
   String get okLabel => 'OK';
@@ -755,11 +757,11 @@ class AppLocalizationsHu extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'Korán adatbázis állapota';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'Állapot: $status';
   }
 
   @override
@@ -838,10 +840,10 @@ class AppLocalizationsHu extends AppLocalizations {
       'Állítsa be, ha az iránytűt manuálisan kell korrigálni. A pozitív értékek az óramutató járásával megegyező irányban forognak.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Módosítások alkalmazása';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Állítsa vissza a bevezető beállítást';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

@@ -608,7 +608,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'ቆጣሪን ዳግም አስጀምር';
 
   @override
   String get changeTarget => 'Change Target';
@@ -618,7 +618,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'የዒላማ ብዛት፡ $target';
   }
 
   @override
@@ -665,7 +665,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'ዕለታዊ እድገት';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -698,23 +698,23 @@ class AppLocalizationsAm extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => 'የፕሪሚየም የደንበኝነት ምዝገባ ሁኔታን እንደገና ያረጋግጡ';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore => 'የፕሪሚየም ደንበኝነት ምዝገባዎን ለማረጋገጥ ከመተግበሪያው መደብር ጋር ያመሳስሉ።';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'የፕሪሚየም ምዝገባ ተረጋግጧል።';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'የፕሪሚየም ምዝገባ አልተገኘም።';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'የፕሪሚየም የደንበኝነት ሁኔታን ማደስ አልተቻለም፡$error';
   }
 
   @override
@@ -736,7 +736,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'የቁርኣን ዳታቤዝ በመፈተሽ ላይ...';
 
   @override
   String get okLabel => 'OK';
@@ -748,11 +748,11 @@ class AppLocalizationsAm extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'የቁርአን ዳታቤዝ ሁኔታ';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'ሁኔታ፡ $status';
   }
 
   @override
@@ -831,10 +831,10 @@ class AppLocalizationsAm extends AppLocalizations {
       'ኮምፓስዎ በእጅ እርማት የሚያስፈልገው ከሆነ ያስተካክሉ። አወንታዊ እሴቶች በሰዓት አቅጣጫ ይሽከረከራሉ።';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'ለውጦችን ይተግብሩ';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'የመግቢያ ማዋቀርን ዳግም አስጀምር';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

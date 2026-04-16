@@ -613,7 +613,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Teller weromsette';
 
   @override
   String get changeTarget => 'Change Target';
@@ -623,7 +623,7 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'Doeltelling: $target';
   }
 
   @override
@@ -704,23 +704,25 @@ class AppLocalizationsFy extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium =>
+      'Kontrolearje de status fan premium abonnemint opnij';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'Syngronisearje mei de app store om jo premium abonnemint te befêstigjen.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'Premium abonnemint ferifiearre.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'Premium abonnemint net fûn.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'Koe premium abonnemintstatus net ferfarskje: $error';
   }
 
   @override
@@ -742,7 +744,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'Kontrolearje de Koran-database ...';
 
   @override
   String get okLabel => 'OK';
@@ -837,10 +839,10 @@ class AppLocalizationsFy extends AppLocalizations {
       'Pas oan as jo kompas in manuele korreksje nedich is. Positive wearden draaie mei de klok yn.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Feroarings tapasse';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Reset yntro opset';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

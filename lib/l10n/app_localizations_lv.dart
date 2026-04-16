@@ -615,7 +615,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Atiestatīt skaitītāju';
 
   @override
   String get changeTarget => 'Change Target';
@@ -625,7 +625,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'Mērķa skaits: $target';
   }
 
   @override
@@ -673,7 +673,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'Ikdienas progress';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -706,23 +706,25 @@ class AppLocalizationsLv extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium =>
+      'Atkārtoti pārbaudiet premium abonementa statusu';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'Sinhronizējiet ar lietotņu veikalu, lai apstiprinātu premium klases abonementu.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'Premium abonements ir pārbaudīts.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'Premium abonements nav atrasts.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'Nevarēja atsvaidzināt premium abonementa statusu: $error';
   }
 
   @override
@@ -744,7 +746,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'Tiek pārbaudīta Korāna datubāze...';
 
   @override
   String get okLabel => 'OK';
@@ -756,11 +758,11 @@ class AppLocalizationsLv extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'Korāna datu bāzes statuss';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'Statuss: $status';
   }
 
   @override
@@ -839,10 +841,10 @@ class AppLocalizationsLv extends AppLocalizations {
       'Pielāgojiet, vai jūsu kompasam nepieciešama manuāla korekcija. Pozitīvās vērtības griežas pulksteņrādītāja virzienā.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Lietot izmaiņas';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Atiestatīt ievada iestatījumus';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

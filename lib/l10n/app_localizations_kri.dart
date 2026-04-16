@@ -704,23 +704,24 @@ class AppLocalizationsKri extends AppLocalizations {
   String get premiumIntegrity => 'Prɛmiɔm Intɛgriti';
 
   @override
-  String get recheckPremium => 'Richɛk di Prɛmiɔm Status';
+  String get recheckPremium => 'Richɛk di prɛmiɔm sabskripshɔn stetɔs';
 
   @override
-  String get syncStore => 'Sink wit di stoa fɔ kɔnfɔm yu rayt.';
+  String get syncStore =>
+      'Sink wit di ap stoa fɔ kɔnfɔm yu prɛmiɔm sabskripshɔn.';
 
   @override
   String get checkingPremium => 'Chek di prɛmiɔm stetɔs...';
 
   @override
-  String get premiumVerified => 'Premium we dɛn dɔn chɛk.';
+  String get premiumVerified => 'Premium sabskripshɔn we dɛn dɔn chɛk.';
 
   @override
-  String get premiumNotFound => 'Premium nɔ fɛn.';
+  String get premiumNotFound => 'Premium sabskripshɔn nɔ de.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Nɔ ebul fɔ rifresh prɛmiɔm stetɔs: $error';
+    return 'Nɔ ebul fɔ rifresh prɛmiɔm sabskripshɔn stetɔs: $error';
   }
 
   @override
@@ -836,10 +837,10 @@ class AppLocalizationsKri extends AppLocalizations {
       'Ajɔst if yu kɔmpas nid fɔ kɔrɛkt yu wit yu an. Pozitiv valyu dɛn de rɔta kloksayz.';
 
   @override
-  String get apply => 'Aplay fɔ yu';
+  String get apply => 'Yuz di chenj dɛn we yu dɔn mek';
 
   @override
-  String get resetOnboarding => 'Riset Ɔnbɔdin';
+  String get resetOnboarding => 'Riset di intro sɛtup';
 
   @override
   String get rerunSetup => 'Ri-rɔn di fɔs sɛtup prɔses.';

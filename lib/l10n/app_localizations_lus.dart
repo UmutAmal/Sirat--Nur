@@ -841,7 +841,7 @@ class AppLocalizationsLus extends AppLocalizations {
       'I compass-in manual correction a mamawh chuan siamrem rawh. Positive value te chu darkar lam hawiin a inher thin.';
 
   @override
-  String get apply => 'Dil rawh';
+  String get apply => 'Hrilhfiahnate chu hmang rawh';
 
   @override
   String get resetOnboarding => 'Onboarding chu reset rawh';

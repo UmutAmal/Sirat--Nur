@@ -217,7 +217,7 @@
   "calibrationOffset": "Calibration Offset",
   "currentOffset": "Current: {offset}°",
   "manualCorrectionDesc": "Adjust if your compass needs a manual correction. Positive values rotate clockwise.",
-  "apply": "Apply",
+  "apply": "परिवर्तनं प्रयोजयन्तु",
   "resetOnboarding": "Reset Onboarding",
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "निदानम्",

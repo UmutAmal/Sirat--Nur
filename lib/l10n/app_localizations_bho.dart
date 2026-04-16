@@ -703,23 +703,24 @@ class AppLocalizationsBho extends AppLocalizations {
   String get premiumIntegrity => 'प्रीमियम इंटीग्रेटी के बा';
 
   @override
-  String get recheckPremium => 'प्रीमियम के स्थिति के दोबारा जांच करीं';
+  String get recheckPremium => 'प्रीमियम सदस्यता के स्थिति के दोबारा जांच करीं';
 
   @override
-  String get syncStore => 'अपना हक के पुष्टि करे खातिर स्टोर से सिंक करीं।';
+  String get syncStore =>
+      'अपना प्रीमियम सदस्यता के पुष्टि करे खातिर ऐप स्टोर से सिंक करीं।';
 
   @override
   String get checkingPremium => 'प्रीमियम के स्थिति के जांच हो रहल बा...';
 
   @override
-  String get premiumVerified => 'प्रीमियम के सत्यापन हो गइल.';
+  String get premiumVerified => 'प्रीमियम सदस्यता के सत्यापन हो गइल.';
 
   @override
-  String get premiumNotFound => 'प्रीमियम ना मिलल.';
+  String get premiumNotFound => 'प्रीमियम सदस्यता ना मिलल.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'प्रीमियम के स्थिति ताजा ना हो पावल: $error';
+    return 'प्रीमियम सदस्यता के स्थिति ताजा ना हो पावल: $error';
   }
 
   @override
@@ -742,7 +743,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get verifyQuranContent => '114 सूरह आ 6236 आयत के सत्यापन करीं।';
 
   @override
-  String get checkingQuranDb => 'कुरान के डाटाबेस के जांच करत बानी...';
+  String get checkingQuranDb => 'कुरान के डाटाबेस के जांच करत...';
 
   @override
   String get okLabel => 'ठीक बा';
@@ -836,10 +837,10 @@ class AppLocalizationsBho extends AppLocalizations {
       'अगर आपके कम्पास के मैनुअल सुधार के जरूरत बा त समायोजित करीं। सकारात्मक मान घड़ी के दिशा में घूमेला।';
 
   @override
-  String get apply => 'आवेदन करे के बा';
+  String get apply => 'बदलाव के लागू करीं';
 
   @override
-  String get resetOnboarding => 'ऑनबोर्डिंग के रीसेट करीं';
+  String get resetOnboarding => 'परिचय सेटअप के रीसेट करीं';
 
   @override
   String get rerunSetup => 'शुरुआती सेटअप प्रक्रिया के दोबारा चलाईं।';

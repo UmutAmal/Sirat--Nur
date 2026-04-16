@@ -613,7 +613,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Toe seti le Counter';
 
   @override
   String get changeTarget => 'Change Target';
@@ -623,7 +623,7 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'Faitauga fa\'atatau: $target';
   }
 
   @override
@@ -672,7 +672,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'Alualu i Aso Taitasi';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -705,23 +705,24 @@ class AppLocalizationsSm extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => 'Toe siaki le tulaga o saofaga tau tupe';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'Fa\'atasi ma le app store e fa\'amaonia ai lau saofaga tau tupe.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'Fa\'amaonia le saofaga fa\'apitoa.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'E le\'i maua le saofaga fa\'apitoa.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'Le mafai ona toe fa\'afou le tulaga o le saofaga tau tupe: $error';
   }
 
   @override
@@ -743,7 +744,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'Siaki le Quran database...';
 
   @override
   String get okLabel => 'OK';
@@ -755,11 +756,11 @@ class AppLocalizationsSm extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'Tulaga Fa\'amaumauga a le Quran';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'Tulaga: $status';
   }
 
   @override
@@ -838,10 +839,10 @@ class AppLocalizationsSm extends AppLocalizations {
       'Fetuuna\'i pe a mana\'omia e lau tapasa se faasa\'oga tusi lesona. O tau lelei e taamilo i le uati.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Fa\'aoga suiga';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Toe seti le seti folasaga';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

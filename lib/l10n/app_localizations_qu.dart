@@ -616,7 +616,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Yupaqta kutichiy';
 
   @override
   String get changeTarget => 'Change Target';
@@ -674,7 +674,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'Sapa punchaw ñawpariy';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -707,23 +707,24 @@ class AppLocalizationsQu extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => 'Premium suscripción estadota wakmanta qhaway';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'App tiendawan tinkiy premium suscripcionniyki takyachinaykipaq.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'Suscripción premium nisqa chiqapchasqa.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'Suscripción premium mana tarisqachu.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'Mana premium suscripción estadota musuqyachiyta atirqanchu: $error .';
   }
 
   @override
@@ -745,7 +746,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'Quranpa willay tantanapi qhawaspa...';
 
   @override
   String get okLabel => 'OK';
@@ -757,7 +758,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'Quranpa Base de Datos nisqap kaynin';
 
   @override
   String statusLabel(Object status) {
@@ -840,10 +841,10 @@ class AppLocalizationsQu extends AppLocalizations {
       'Brújulayki makiwan allichayta necesitan chayqa, allichay. Allin chanikunaqa relojpa muyusqanman hinam muyunku.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Cambiokunata churay';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Intro churayta musuqmanta churay';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

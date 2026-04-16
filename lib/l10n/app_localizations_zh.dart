@@ -599,7 +599,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => '重置计数器';
 
   @override
   String get changeTarget => 'Change Target';
@@ -609,7 +609,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return '目标计数：$target';
   }
 
   @override
@@ -655,7 +655,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => '每日进步';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -688,23 +688,23 @@ class AppLocalizationsZh extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => '重新检查高级订阅状态';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore => '与应用商店同步以确认您的高级订阅。';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => '高级订阅已验证。';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => '未找到高级订阅。';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return '无法刷新高级订阅状态：$error';
   }
 
   @override
@@ -726,7 +726,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => '检查古兰经数据库...';
 
   @override
   String get okLabel => 'OK';
@@ -738,11 +738,11 @@ class AppLocalizationsZh extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => '古兰经数据库状态';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return '状态：$status';
   }
 
   @override
@@ -820,10 +820,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get manualCorrectionDesc => '如果您的指南针需要手动校正，请进行调整。正值顺时针旋转。';
 
   @override
-  String get apply => 'Apply';
+  String get apply => '应用更改';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => '重置简介设置';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';
@@ -2235,7 +2235,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => '重置计数器';
 
   @override
   String get changeTarget => 'Change Target';
@@ -2245,7 +2245,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return '目标计数：$target';
   }
 
   @override
@@ -2291,7 +2291,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => '每日进步';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -2324,23 +2324,23 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => '重新检查高级订阅状态';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore => '与应用商店同步以确认您的高级订阅。';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => '高级订阅已验证。';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => '未找到高级订阅。';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return '无法刷新高级订阅状态：$error';
   }
 
   @override
@@ -2362,7 +2362,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => '检查古兰经数据库...';
 
   @override
   String get okLabel => 'OK';
@@ -2374,11 +2374,11 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => '古兰经数据库状态';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return '状态：$status';
   }
 
   @override
@@ -2456,10 +2456,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get manualCorrectionDesc => '如果您的指南针需要手动校正，请进行调整。正值顺时针旋转。';
 
   @override
-  String get apply => 'Apply';
+  String get apply => '应用更改';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => '重置简介设置';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';
@@ -3871,7 +3871,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => '重置計數器';
 
   @override
   String get changeTarget => 'Change Target';
@@ -3881,7 +3881,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return '目標計數：$target';
   }
 
   @override
@@ -3927,7 +3927,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => '每日進步';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -3960,23 +3960,23 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => '重新檢查高級訂閱狀態';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore => '與應用程式商店同步以確認您的高級訂閱。';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => '高級訂閱已驗證。';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => '未找到高級訂閱。';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return '無法刷新進階訂閱狀態：$error';
   }
 
   @override
@@ -3998,7 +3998,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => '檢查古蘭經資料庫...';
 
   @override
   String get okLabel => 'OK';
@@ -4010,11 +4010,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => '古蘭經資料庫狀態';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return '狀態：$status';
   }
 
   @override
@@ -4092,10 +4092,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get manualCorrectionDesc => '如果您的指南針需要手動校正，請進行調整。正值順時針旋轉。';
 
   @override
-  String get apply => 'Apply';
+  String get apply => '應用程式變更';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => '重置簡介設定';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

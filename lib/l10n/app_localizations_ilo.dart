@@ -707,24 +707,25 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get premiumIntegrity => 'Premium nga Integridad';
 
   @override
-  String get recheckPremium => 'Sukimaten manen ti Kasasaad ti Premium';
+  String get recheckPremium =>
+      'Sukimaten manen ti kasasaad ti premium subscription';
 
   @override
   String get syncStore =>
-      'Ag-sync iti tiendaan tapno mapasingkedan ti entitlement-mo.';
+      'Ag-sync iti app store tapno mapasingkedan ti premium subscription-mo.';
 
   @override
   String get checkingPremium => 'Ti panangsukimat iti kasasaad ti premium...';
 
   @override
-  String get premiumVerified => 'Naberipika ti premium.';
+  String get premiumVerified => 'Naberipika ti premium a suskripsion.';
 
   @override
-  String get premiumNotFound => 'Premium saan a nasarakan.';
+  String get premiumNotFound => 'Saan a nasarakan ti premium subscription.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Saan a ma-refresh ti kasasaad ti premium: $error';
+    return 'Saan a ma-refresh ti kasasaad ti suskrision ti premium: $error .';
   }
 
   @override
@@ -843,10 +844,10 @@ class AppLocalizationsIlo extends AppLocalizations {
       'Ibagaymo no kasapulan ti kompasmo ti manual a panangkorehir. Agturong dagiti positibo a pateg iti agpakannawan ti relo.';
 
   @override
-  String get apply => 'Agaplikar';
+  String get apply => 'Iyaplikar dagiti panagbalbaliw';
 
   @override
-  String get resetOnboarding => 'I-reset ti Onboarding';
+  String get resetOnboarding => 'I-reset ti intro a panagisaad';
 
   @override
   String get rerunSetup => 'Ipataray manen ti umuna a proseso ti panagisaad.';

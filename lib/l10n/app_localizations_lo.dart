@@ -613,7 +613,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'ຣີເຊັດໂຕນັບ';
 
   @override
   String get changeTarget => 'Change Target';
@@ -623,7 +623,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'ຈຳນວນເປົ້າໝາຍ: $target';
   }
 
   @override
@@ -670,7 +670,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'ຄວາມຄືບຫນ້າປະຈໍາວັນ';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -703,23 +703,24 @@ class AppLocalizationsLo extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => 'ກວດເບິ່ງສະຖານະການສະໝັກໃຊ້ແບບພຣີມຽມຄືນໃໝ່';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'ຊິງຄ໌ກັບຮ້ານ app ເພື່ອຢືນຢັນການເປັນສະມາຊິກພຣີມຽມຂອງທ່ານ.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'ຢັ້ງຢືນການສະໝັກໃຊ້ພຣີມຽມແລ້ວ.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'ບໍ່ພົບການສະໝັກໃຊ້ Premium.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'ບໍ່ສາມາດໂຫຼດຂໍ້ມູນສະຖານະການສະໝັກໃຊ້ພຣີມຽມໄດ້: $error';
   }
 
   @override
@@ -741,7 +742,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'ກຳລັງກວດສອບຖານຂໍ້ມູນ Quran...';
 
   @override
   String get okLabel => 'OK';
@@ -753,11 +754,11 @@ class AppLocalizationsLo extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'ສະຖານະພາບຖານຂໍ້ມູນ Quran';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'ສະຖານະ: $status';
   }
 
   @override
@@ -836,10 +837,10 @@ class AppLocalizationsLo extends AppLocalizations {
       'ປັບຖ້າເຂັມທິດຂອງທ່ານຕ້ອງການການແກ້ໄຂດ້ວຍຕົນເອງ. ຄ່າທາງບວກຈະໝຸນຕາມເຂັມໂມງ.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'ນຳໃຊ້ການປ່ຽນແປງ';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'ຣີເຊັດການຕັ້ງຄ່າແນະນຳ';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

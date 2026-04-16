@@ -615,7 +615,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Ailosod Cownter';
 
   @override
   String get changeTarget => 'Change Target';
@@ -625,7 +625,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'Cyfrif targed: $target';
   }
 
   @override
@@ -673,7 +673,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'Cynnydd Dyddiol';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -706,23 +706,24 @@ class AppLocalizationsCy extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => 'Ailwirio statws tanysgrifiad premiwm';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'Cysoni gyda\'r app store i gadarnhau eich tanysgrifiad premiwm.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'Tanysgrifiad premiwm wedi\'i ddilysu.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'Heb ganfod tanysgrifiad premiwm.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'Methu ag adnewyddu statws tanysgrifiad premiwm: $error';
   }
 
   @override
@@ -744,7 +745,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'Wrthi\'n gwirio cronfa ddata Quran...';
 
   @override
   String get okLabel => 'OK';
@@ -756,11 +757,11 @@ class AppLocalizationsCy extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'Statws Cronfa Ddata Quran';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'Statws: $status';
   }
 
   @override
@@ -839,10 +840,10 @@ class AppLocalizationsCy extends AppLocalizations {
       'Addaswch os oes angen cywiriad â llaw ar eich cwmpawd. Mae gwerthoedd cadarnhaol yn cylchdroi clocwedd.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Cymhwyso newidiadau';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Ailosod gosodiad y cyflwyniad';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

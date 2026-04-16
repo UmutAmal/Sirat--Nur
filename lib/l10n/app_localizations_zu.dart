@@ -614,7 +614,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Setha kabusha Ikhawunta';
 
   @override
   String get changeTarget => 'Change Target';
@@ -624,7 +624,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'Ukubalwa okuhlosiwe: $target';
   }
 
   @override
@@ -673,7 +673,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'Intuthuko Yansuku zonke';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -706,23 +706,24 @@ class AppLocalizationsZu extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => 'Hlola kabusha isimo sokubhaliselwe kwe-premium';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'Vumelanisa nesitolo sohlelo lokusebenza ukuze uqinisekise ukubhalisa kwakho kwe-premium.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'Ukubhaliswa kwe-Premium kuqinisekisiwe.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'Okubhaliselwe kwe-Premium akutholakali.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'Ayikwazanga ukuvuselela isimo sokubhaliselwe kwe-premium: $error';
   }
 
   @override
@@ -745,7 +746,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'Ihlola i-Quran database...';
 
   @override
   String get okLabel => 'OK';
@@ -757,11 +758,11 @@ class AppLocalizationsZu extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'Isimo se-Quran Database';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'Isimo: $status';
   }
 
   @override
@@ -840,10 +841,10 @@ class AppLocalizationsZu extends AppLocalizations {
       'Lungisa uma ikhampasi yakho idinga ukulungiswa mathupha. Amanani amahle azungeza njengokuhamba kwewashi.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Faka izinguquko';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Setha kabusha ukusethwa kwesingeniso';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

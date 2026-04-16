@@ -139,7 +139,7 @@ Future<Map<String, String>> _translateValues(
 ) async {
   final tokenizedEntries = <MapEntry<String, _TokenizedValue>>[
     for (final entry in sources.entries)
-      MapEntry(entry.key, _tokenizeValue(entry.value)),
+      MapEntry(entry.key, _tokenizeValue(entry.key, entry.value)),
   ];
   const separator = '\n__ARB_ENTRY_SPLIT__\n';
   final joinedSource = tokenizedEntries
@@ -168,10 +168,13 @@ Future<Map<String, String>> _translateValues(
           key: tokenizedEntries[index].key,
           source: tokenizedEntries[index].value.originalSource,
           currentValue: currentValues[tokenizedEntries[index].key],
-          candidate: _restorePlaceholders(
-            parts[index].trim(),
-            tokenizedEntries[index].value.replacements,
-            tokenizedEntries[index].value.originalSource,
+          candidate: _withoutPromptFallback(
+            candidate: _restorePlaceholders(
+              parts[index].trim(),
+              tokenizedEntries[index].value.replacements,
+              tokenizedEntries[index].value.originalSource,
+            ),
+            tokenizedValue: tokenizedEntries[index].value,
           ),
         ),
     };
@@ -217,16 +220,22 @@ Future<Map<String, String>> _translateValuesIndividually(
       key: entry.key,
       source: entry.value.originalSource,
       currentValue: currentValues[entry.key],
-      candidate: candidate,
+      candidate: _withoutPromptFallback(
+        candidate: candidate,
+        tokenizedValue: entry.value,
+      ),
     );
   }
 
   return translatedValues;
 }
 
-_TokenizedValue _tokenizeValue(String source) {
-  final placeholderMatches = RegExp(r'\{[^}]+\}').allMatches(source).toList();
-  var tokenizedSource = source;
+_TokenizedValue _tokenizeValue(String key, String source) {
+  final translationSource = _translationPromptSourceForKey(key, source);
+  final placeholderMatches = RegExp(
+    r'\{[^}]+\}',
+  ).allMatches(translationSource).toList();
+  var tokenizedSource = translationSource;
   final replacements = <MapEntry<String, String>>[];
 
   for (var index = 0; index < placeholderMatches.length; index++) {
@@ -238,9 +247,54 @@ _TokenizedValue _tokenizeValue(String source) {
 
   return _TokenizedValue(
     originalSource: source,
+    translationSource: translationSource,
     tokenizedSource: tokenizedSource,
     replacements: replacements,
   );
+}
+
+String _translationPromptSourceForKey(String key, String source) {
+  switch (key) {
+    case 'apply':
+      return 'Apply changes';
+    case 'targetCount':
+      return 'Target count: {target}';
+    case 'recheckPremium':
+      return 'Recheck premium subscription status';
+    case 'syncStore':
+      return 'Sync with the app store to confirm your premium subscription.';
+    case 'premiumVerified':
+      return 'Premium subscription verified.';
+    case 'premiumNotFound':
+      return 'Premium subscription not found.';
+    case 'premiumRefreshError':
+      return 'Could not refresh premium subscription status: {error}';
+    case 'checkingQuranDb':
+      return 'Checking the Quran database...';
+    case 'resetOnboarding':
+      return 'Reset intro setup';
+    default:
+      return source;
+  }
+}
+
+String _withoutPromptFallback({
+  required String candidate,
+  required _TokenizedValue tokenizedValue,
+}) {
+  if (tokenizedValue.translationSource == tokenizedValue.originalSource) {
+    return candidate;
+  }
+
+  final normalizedCandidate = _normalizeProperNames(candidate.trim());
+  final normalizedPrompt = _normalizeProperNames(
+    tokenizedValue.translationSource.trim(),
+  );
+  if (normalizedCandidate == normalizedPrompt) {
+    return tokenizedValue.originalSource;
+  }
+
+  return candidate;
 }
 
 String _restorePlaceholders(
@@ -265,11 +319,13 @@ String _restorePlaceholders(
 class _TokenizedValue {
   _TokenizedValue({
     required this.originalSource,
+    required this.translationSource,
     required this.tokenizedSource,
     required this.replacements,
   });
 
   final String originalSource;
+  final String translationSource;
   final String tokenizedSource;
   final List<MapEntry<String, String>> replacements;
 }
@@ -327,7 +383,39 @@ bool _isUsableTranslationCandidate(
     return false;
   }
 
+  if (_hasKnownWrongContext(key, trimmed)) {
+    return false;
+  }
+
   return true;
+}
+
+bool _hasKnownWrongContext(String key, String value) {
+  if (key == 'apply') {
+    return _containsAny(value, const ['Bewerben', '申请']);
+  }
+
+  if (key == 'resetOnboarding') {
+    return _containsAny(value, const ['入职']);
+  }
+
+  if (_isPremiumSubscriptionKey(key)) {
+    return _containsAny(value, const ['Prämie', '保费', 'قسط']);
+  }
+
+  return false;
+}
+
+bool _isPremiumSubscriptionKey(String key) {
+  return key == 'recheckPremium' ||
+      key == 'syncStore' ||
+      key == 'premiumNotFound' ||
+      key == 'premiumVerified' ||
+      key == 'premiumRefreshError';
+}
+
+bool _containsAny(String value, List<String> needles) {
+  return needles.any(value.contains);
 }
 
 String _postProcessTranslation({
@@ -482,6 +570,20 @@ bool _mustStaySingleLine(String key) {
       key == 'chatbotGreeting' ||
       key == 'chatbotHint' ||
       key == 'chatbotThinking' ||
+      key == 'okLabel' ||
+      key == 'apply' ||
+      key == 'statusLabel' ||
+      key == 'recheckPremium' ||
+      key == 'syncStore' ||
+      key == 'premiumNotFound' ||
+      key == 'premiumVerified' ||
+      key == 'premiumRefreshError' ||
+      key == 'quranDbStatus' ||
+      key == 'checkingQuranDb' ||
+      key == 'dailyProgress' ||
+      key == 'targetCount' ||
+      key == 'resetCounter' ||
+      key == 'resetOnboarding' ||
       key == 'premiumProductUnavailable' ||
       key == 'premiumPurchaseFailed' ||
       key == 'prayerCompletion' ||

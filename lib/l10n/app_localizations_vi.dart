@@ -614,7 +614,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Đặt lại bộ đếm';
 
   @override
   String get changeTarget => 'Change Target';
@@ -624,7 +624,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'Số mục tiêu: $target';
   }
 
   @override
@@ -672,7 +672,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'Tiến độ hàng ngày';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -705,23 +705,24 @@ class AppLocalizationsVi extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => 'Kiểm tra lại trạng thái đăng ký trả phí';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'Đồng bộ hóa với cửa hàng ứng dụng để xác nhận đăng ký trả phí của bạn.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'Đã xác minh đăng ký trả phí.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'Không tìm thấy đăng ký trả phí.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'Không thể làm mới trạng thái đăng ký trả phí: $error';
   }
 
   @override
@@ -743,7 +744,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'Đang kiểm tra cơ sở dữ liệu Kinh Qur\'an...';
 
   @override
   String get okLabel => 'OK';
@@ -755,11 +756,11 @@ class AppLocalizationsVi extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'Trạng thái cơ sở dữ liệu Kinh Qur\'an';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'Trạng thái: $status';
   }
 
   @override
@@ -838,10 +839,10 @@ class AppLocalizationsVi extends AppLocalizations {
       'Điều chỉnh nếu la bàn của bạn cần chỉnh sửa thủ công. Giá trị dương xoay theo chiều kim đồng hồ.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Áp dụng thay đổi';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Đặt lại thiết lập phần giới thiệu';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

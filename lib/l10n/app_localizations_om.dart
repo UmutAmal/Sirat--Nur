@@ -615,7 +615,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Lakkaawwii Irra Deebi\'i';
 
   @override
   String get changeTarget => 'Change Target';
@@ -674,7 +674,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'Adeemsa Guyyaa Guyyaa';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -707,23 +707,27 @@ class AppLocalizationsOm extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium =>
+      'Haala maallaqa maallaqaan bitamuu (premium subscription) irra deebi\'ii ilaali';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'App store waliin walsimsiisuun maallaqa gatii olaanaa (premium subscription) keessan mirkaneessaa.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified =>
+      'Maallaqni maallaqaan bitamuu (premium subscription) mirkanaa\'eera.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound =>
+      'Maallaqni maallaqaa (premium subscription) hin argamne.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'Haala maallaqa maallaqa gatii olaanaa haaromsuu hin dandeenye: $error .';
   }
 
   @override
@@ -745,7 +749,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'Kuusaa deetaa Qur\'aanaa sakatta\'uu...';
 
   @override
   String get okLabel => 'OK';
@@ -757,7 +761,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'Haala Kuusaa Deetaa Qur\'aanaa';
 
   @override
   String statusLabel(Object status) {
@@ -840,10 +844,10 @@ class AppLocalizationsOm extends AppLocalizations {
       'Yoo koompaasiin keessan sirreeffama harkaa barbaade sirreessaa. Gatiin pozaatiivii gara sa\'aatii naanneffama.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Jijjiirama hojiirra oolchuu';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Saagi seensa irra deebi\'ii saagi';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

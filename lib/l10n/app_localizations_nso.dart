@@ -615,7 +615,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get dhikrLibrary => 'Bokgobapuku bja Dhikr';
 
   @override
-  String get resetCounter => 'Seta gape Sebadi';
+  String get resetCounter => 'Seta Sebadi gape';
 
   @override
   String get changeTarget => 'Fetoša Sepheo';
@@ -706,24 +706,24 @@ class AppLocalizationsNso extends AppLocalizations {
   String get premiumIntegrity => 'Botshepegi bja Premium';
 
   @override
-  String get recheckPremium => 'Lekola Boemo bja Premium gape';
+  String get recheckPremium => 'Hlahloba gape maemo a peeletšo ya premium';
 
   @override
   String get syncStore =>
-      'Nyalantšha le lebenkele go tiišetša tshwanelo ya gago.';
+      'Nyalantšha le lebenkele la tirišo go tiišetša peeletšo ya gago ya premium.';
 
   @override
   String get checkingPremium => 'Go hlahloba maemo a premium...';
 
   @override
-  String get premiumVerified => 'Premium e netefaditšwe.';
+  String get premiumVerified => 'Peeletšo ya Premium e netefaditšwe.';
 
   @override
-  String get premiumNotFound => 'Premium ga se ya hwetšwa.';
+  String get premiumNotFound => 'Peeletšo ya Premium ga se ya hwetšwa.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Ga se ya kgona go hlabolla maemo a premium: $error';
+    return 'Ga se ya kgona go hlabolla maemo a peeletšo ya premium: $error .';
   }
 
   @override
@@ -843,10 +843,10 @@ class AppLocalizationsNso extends AppLocalizations {
       'Beakanya ge e ba khamphase ya gago e nyaka phošollo ya seatla. Ditekanyetšo tše dibotse di dikologa ka go lebana le tšhupamabaka.';
 
   @override
-  String get apply => 'Dira kgopelo';
+  String get apply => 'Diriša diphetogo';
 
   @override
-  String get resetOnboarding => 'Seta gape go Tsenya ka Sekepeng';
+  String get resetOnboarding => 'Seta gape peakanyo ya matseno';
 
   @override
   String get rerunSetup => 'Matha gape tshepedišo ya mathomo ya go hloma.';

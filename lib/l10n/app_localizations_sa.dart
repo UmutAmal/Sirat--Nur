@@ -838,7 +838,7 @@ class AppLocalizationsSa extends AppLocalizations {
       'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'परिवर्तनं प्रयोजयन्तु';
 
   @override
   String get resetOnboarding => 'Reset Onboarding';

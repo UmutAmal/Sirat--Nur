@@ -217,7 +217,7 @@
   "calibrationOffset": "Calibration Offset a ni",
   "currentOffset": "Tunah hian: {offset}°",
   "manualCorrectionDesc": "I compass-in manual correction a mamawh chuan siamrem rawh. Positive value te chu darkar lam hawiin a inher thin.",
-  "apply": "Dil rawh",
+  "apply": "Hrilhfiahnate chu hmang rawh",
   "resetOnboarding": "Onboarding chu reset rawh",
   "rerunSetup": "Setup hmasa ber process kha run leh rawh.",
   "diagnostics": "Diagnostics te pawh a awm",

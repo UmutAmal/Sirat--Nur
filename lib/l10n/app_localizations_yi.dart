@@ -613,7 +613,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'באַשטעטיק קאָונטער';
 
   @override
   String get changeTarget => 'Change Target';
@@ -623,7 +623,7 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'ציל ציילן: $target';
   }
 
   @override
@@ -671,7 +671,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'טעגלעך פּראָגרעס';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -704,23 +704,24 @@ class AppLocalizationsYi extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium => 'קאָנטראָלירן די פּרעמיע אַבאָנעמענט סטאַטוס';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'סינק מיט די אַפּ קראָם צו באַשטעטיקן דיין פּרעמיע אַבאָנעמענט.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'פּרעמיום אַבאָנעמענט וועראַפייד.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'פּרעמיע אַבאָנעמענט ניט געפֿונען.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'קען נישט דערפרישן פּרעמיע אַבאָנעמענט סטאַטוס: $error';
   }
 
   @override
@@ -742,7 +743,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'קאָנטראָלירן די קאָראַן דאַטאַבייס ...';
 
   @override
   String get okLabel => 'OK';
@@ -754,11 +755,11 @@ class AppLocalizationsYi extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'קאָראַן דאַטאַבאַסע סטאַטוס';
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'סטאַטוס: $status';
   }
 
   @override
@@ -837,10 +838,10 @@ class AppLocalizationsYi extends AppLocalizations {
       'סטרויערן אויב דיין קאָמפּאַס דאַרף אַ מאַנואַל קערעקשאַן. positive וואַלועס דרייען קלאַקווייז.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'צולייגן ענדערונגען';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'באַשטעטיק ינטראָו סעטאַפּ';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

@@ -615,7 +615,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Irrisettja Counter';
 
   @override
   String get changeTarget => 'Change Target';
@@ -625,7 +625,7 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'Għadd fil-mira: $target';
   }
 
   @override
@@ -674,7 +674,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'Progress ta \'Kuljum';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -707,23 +707,25 @@ class AppLocalizationsMt extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium =>
+      'Iċċekkja mill-ġdid l-istatus ta \'abbonament premium';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'Issinkronizza mal-app store biex tikkonferma l-abbonament premium tiegħek.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'Abbonament premium ivverifikat.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'Abbonament premium ma nstabx.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'Ma setax jġedded l-istatus ta\' abbonament premium: $error';
   }
 
   @override
@@ -745,7 +747,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'Tiċċekkja d-database tal-Quran...';
 
   @override
   String get okLabel => 'OK';
@@ -757,7 +759,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'Status tad-Database tal-Quran';
 
   @override
   String statusLabel(Object status) {
@@ -840,10 +842,10 @@ class AppLocalizationsMt extends AppLocalizations {
       'Aġġusta jekk il-boxxla tiegħek teħtieġ korrezzjoni manwali. Valuri pożittivi jduru lejn l-arloġġ.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Applika bidliet';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Irrisettja s-setup tal-introduzzjoni';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

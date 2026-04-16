@@ -617,7 +617,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get dhikrLibrary => 'Dhikr Library';
 
   @override
-  String get resetCounter => 'Reset Counter';
+  String get resetCounter => 'Seta Xibalo xa Vuntshwa';
 
   @override
   String get changeTarget => 'Change Target';
@@ -675,7 +675,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get tahajjud => 'Tahajjud';
 
   @override
-  String get dailyProgress => 'Daily Progress';
+  String get dailyProgress => 'Nhluvuko wa Siku na Siku';
 
   @override
   String get mandatoryPrayers => 'Mandatory Prayers';
@@ -708,23 +708,25 @@ class AppLocalizationsTs extends AppLocalizations {
   String get premiumIntegrity => 'Premium Integrity';
 
   @override
-  String get recheckPremium => 'Recheck Premium Status';
+  String get recheckPremium =>
+      'Languta nakambe xiyimo xa xikhokhelo xa premium';
 
   @override
-  String get syncStore => 'Sync with the store to confirm your entitlement.';
+  String get syncStore =>
+      'Sync na app store ku tiyisisa xikhokhelo xa wena xa premium.';
 
   @override
   String get checkingPremium => 'Checking premium status...';
 
   @override
-  String get premiumVerified => 'Premium verified.';
+  String get premiumVerified => 'Xikhokhelo xa premium xi tiyisisiwile.';
 
   @override
-  String get premiumNotFound => 'Premium not found.';
+  String get premiumNotFound => 'Xikhokhelo xa premium a xi kumeki.';
 
   @override
   String premiumRefreshError(Object error) {
-    return 'Could not refresh premium status: $error';
+    return 'A swi swi kotanga ku pfuxeta xiyimo xa xikhokhelo xa premium: $error .';
   }
 
   @override
@@ -746,7 +748,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
 
   @override
-  String get checkingQuranDb => 'Checking Quran database...';
+  String get checkingQuranDb => 'Ku kambela database ya Quran...';
 
   @override
   String get okLabel => 'OK';
@@ -758,7 +760,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get notSeeded => 'Not seeded';
 
   @override
-  String get quranDbStatus => 'Quran Database Status';
+  String get quranDbStatus => 'Xiyimo xa Dathabeyisi ya Quran';
 
   @override
   String statusLabel(Object status) {
@@ -841,10 +843,10 @@ class AppLocalizationsTs extends AppLocalizations {
       'Lulamisa loko khampasi ya wena yi lava ku lulamisiwa hi voko. Mimpimo leyinene yi rhendzeleka hi tlhelo ra wachi.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Tirhisa ku cinca';
 
   @override
-  String get resetOnboarding => 'Reset Onboarding';
+  String get resetOnboarding => 'Seta xiyimiso xa xingheniso';
 
   @override
   String get rerunSetup => 'Re-run the initial setup process.';

@@ -830,7 +830,7 @@ class AppLocalizationsTi extends AppLocalizations {
       'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'ለውጢ ተግባራዊ ምግባር';
 
   @override
   String get resetOnboarding => 'Reset Onboarding';

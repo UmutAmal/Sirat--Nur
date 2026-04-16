@@ -482,6 +482,68 @@ void main() {
       );
     });
 
+    test('rejects known wrong-context status action translations', () {
+      final applyValue = resolveTranslatedArbValue(
+        key: 'apply',
+        source: 'Apply',
+        currentValue: 'Bewerben',
+        candidate: 'Änderungen anwenden',
+      );
+
+      final premiumValue = resolveTranslatedArbValue(
+        key: 'premiumNotFound',
+        source: 'Premium not found.',
+        currentValue: 'Prämie nicht gefunden.',
+        candidate: 'Premium-Abonnement nicht gefunden.',
+      );
+
+      final arabicPremiumValue = resolveTranslatedArbValue(
+        key: 'premiumVerified',
+        source: 'Premium verified.',
+        currentValue: 'تم التحقق من قسط.',
+        candidate: 'تم التحقق من الاشتراك المميز.',
+      );
+
+      final onboardingValue = resolveTranslatedArbValue(
+        key: 'resetOnboarding',
+        source: 'Reset Onboarding',
+        currentValue: '重置入职',
+        candidate: '重置入门设置',
+      );
+
+      expect(applyValue, 'Änderungen anwenden');
+      expect(premiumValue, 'Premium-Abonnement nicht gefunden.');
+      expect(arabicPremiumValue, 'تم التحقق من الاشتراك المميز.');
+      expect(onboardingValue, '重置入门设置');
+    });
+
+    test('falls back to source when only wrong-context copy exists', () {
+      final applyValue = resolveTranslatedArbValue(
+        key: 'apply',
+        source: 'Apply',
+        currentValue: 'Bewerben',
+        candidate: 'Bewerben',
+      );
+
+      final chinesePremiumValue = resolveTranslatedArbValue(
+        key: 'premiumVerified',
+        source: 'Premium verified.',
+        currentValue: '保费已验证。',
+        candidate: '保费已验证。',
+      );
+
+      final onboardingValue = resolveTranslatedArbValue(
+        key: 'resetOnboarding',
+        source: 'Reset Onboarding',
+        currentValue: '重置入职',
+        candidate: '重置入职',
+      );
+
+      expect(applyValue, 'Apply');
+      expect(chinesePremiumValue, 'Premium verified.');
+      expect(onboardingValue, 'Reset Onboarding');
+    });
+
     test('rejects multiline diagnostics output', () {
       final labelValue = resolveTranslatedArbValue(
         key: 'diagnostics',

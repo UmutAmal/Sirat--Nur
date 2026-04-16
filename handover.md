@@ -9485,3 +9485,55 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi direct dependency tarafinda kalan tek risk `share_plus 13.0.0`; resolver blokaji cozulmedigi surece zorlamadan, once `geolocator_linux -> package_info_plus -> win32` zincirindeki upstream uyumlulugu takip et. Yeni dongude dependency disi risk taramasina gec ve hardcoded/TODO/orphan/asset/config alanlarini yeniden tara.
+
+## 2026-04-16 TUR-242 — Localize Status and Account Action Copy
+
+### Yapilan Islem
+- `apply`, `statusLabel`, `recheckPremium`, `syncStore`, `premiumNotFound`, `premiumVerified`, `premiumRefreshError`, `quranDbStatus`, `checkingQuranDb`, `dailyProgress`, `targetCount`, `resetCounter` ve `resetOnboarding` anahtarlari tum `lib/l10n/app_*.arb` dosyalari icin yeniden uretildi.
+- `flutter gen-l10n` calistirildi ve ilgili `app_localizations_*.dart` generated ciktilari tazelendi.
+- `tool\translate_arb_keys.dart` kisa/ambiguous UI copy icin anahtar bazli baglamli ceviri kaynagi kullanacak sekilde sertlestirildi.
+- Yanlis baglam ornekleri guard edildi: `Apply -> Bewerben`, premium subscription -> sigorta/taksit anlamlari (`Prämie`, `保费`, `قسط`) ve onboarding -> is baslangici anlamlari (`入职`) artik kabul edilmiyor.
+- `test\arb_ui_localization_test.dart` icinde status/account action copy icin tum locale'lerde tek satir ve placeholder koruma guard'i eklendi.
+- `test\translate_arb_keys_test.dart` icinde yanlis baglam reddi ve gecersizse kaynak metne guvenli dusme senaryolari eklendi.
+
+### Neden Yapildi
+- TUR-241 sonrasi i18n taramasinda status/account action cluster'inda genis Ingilizce fallback kalintisi bulundu.
+- On tarama fallback sayilari: `apply 187`, `statusLabel 187`, `recheckPremium 188`, `syncStore 187`, `premiumNotFound 187`, `premiumVerified 187`, `premiumRefreshError 187`, `quranDbStatus 188`, `checkingQuranDb 187`, `dailyProgress 187`, `targetCount 187`, `resetCounter 187`, `resetOnboarding 187`.
+- Ilk ceviri diff incelemesi `Apply/Premium/Onboarding` gibi kisa metinlerde baglamsiz makine cevirisi riski gosterdi; bu yuzden commit oncesi arac kok sebebi duzeltildi ve batch `--force` ile yeniden uretildi.
+- Uydurma ceviri yapilmadi: arac sadece placeholder/tek-satir/baglam guard'larindan gecen adaylari kabul ediyor; guvenli aday yoksa kaynak metne dusuyor.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- 263 dosyalik localization/generated/test/tool batch'i olustu; kapsam ARB kaynaklari, generated l10n ve iki test guard'i ile sinirlandi.
+- Son fallback sayilari: `apply 64`, `statusLabel 104`, `recheckPremium 68`, `syncStore 67`, `premiumNotFound 67`, `premiumVerified 67`, `premiumRefreshError 68`, `quranDbStatus 72`, `checkingQuranDb 67`, `dailyProgress 68`, `targetCount 77`, `resetCounter 74`, `resetOnboarding 68`.
+- Kalan birebir Ingilizce degerler otomatik guard tarafindan guvenli olmayan/ceviri kalitesi belirsiz adaylarda korunmus fallback'lerdir; sahte veya dini/finansal baglami bozuk ceviri yerine durust fallback tercih edildi.
+- Kotu baglam taramasi secilen anahtarlar icin temiz: `bad_context_findings=0`.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart` PASS (`88/88`)
+- Kotu baglam taramasi PASS (`bad_context_findings=0`)
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Ilk full test denemesi 20 dakika sonunda runner pipe kapanmasi/time-out verdi; eski orphan `flutter_tester` surecleri temizlendi.
+- Tam test tekrar: `flutter test --reporter compact` PASS (`431/431`)
+
+### Risk Degisimi
+- Status/account action Ingilizce fallback riski: `12/25 -> 6/25`
+- Kisa UI copy yanlis baglam riski: `16/25 -> 4/25`
+- Placeholder veya multiline l10n regression riski: `8/25 -> 2/25`
+- Kalan localization kalite riski: `10/25 -> 10/25` (tum app icin devam eden genis ceviri denetimi ayri dongulere kaldi)
+
+### Rollback Plani
+- TUR-242 kapsamindaki `lib/l10n/app_*.arb`, `lib/l10n/app_localizations_*.dart`, `tool\translate_arb_keys.dart`, `test\arb_ui_localization_test.dart` ve `test\translate_arb_keys_test.dart` degisiklikleri geri alinir.
+- `flutter gen-l10n`, odak l10n testleri, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+- `handover.md` append-only kalacagi icin gerekirse yeni bir revert kaydi eklenir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude kalan dependency disi riskleri tekrar tara: ozellikle kalan i18n fallback cluster'lari, dini icerik dogrulugu, ses verilerinin Supabase storage baglantisi ve external URL bagimliliklari.
