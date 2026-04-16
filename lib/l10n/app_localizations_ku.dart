@@ -57,7 +57,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get madhab => 'Rêbaza Hiqûqê ya Asr';
 
   @override
-  String get surahs => 'Surahs';
+  String get surahs => 'Sûreyên';
 
   @override
   String get ayahs => 'Ayahs';

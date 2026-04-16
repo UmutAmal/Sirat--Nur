@@ -57,7 +57,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get madhab => 'Asr Enkola y’Ebyamateeka';
 
   @override
-  String get surahs => 'Surahs';
+  String get surahs => 'Surahs eziyitibwa Surahs';
 
   @override
   String get ayahs => 'Ayahs';
@@ -196,10 +196,10 @@ class AppLocalizationsLg extends AppLocalizations {
   }
 
   @override
-  String get juz => 'Juz';
+  String get juz => 'Juzu';
 
   @override
-  String get page => 'Page';
+  String get page => 'Omuko';
 
   @override
   String get reading => 'Reading';

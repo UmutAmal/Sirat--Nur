@@ -57,7 +57,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get madhab => 'Asr Juristic Method';
 
   @override
-  String get surahs => 'Surahs';
+  String get surahs => 'Surah';
 
   @override
   String get ayahs => 'Ayahs';
@@ -199,7 +199,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Itulau';
 
   @override
   String get reading => 'Reading';

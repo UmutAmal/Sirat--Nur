@@ -273,6 +273,33 @@ void main() {
       expect(bookmarkValue, 'Yer imi ekle');
     });
 
+    test('rejects multiline quran reading shell output', () {
+      final quranValue = resolveTranslatedArbValue(
+        key: 'quran',
+        source: 'Quran',
+        currentValue: 'Kuran',
+        candidate: 'means the following.\nKuran',
+      );
+
+      final surahValue = resolveTranslatedArbValue(
+        key: 'surah',
+        source: 'Surah',
+        currentValue: 'Sure',
+        candidate: 'means the following.\nSure',
+      );
+
+      final pageValue = resolveTranslatedArbValue(
+        key: 'page',
+        source: 'Page',
+        currentValue: 'Sayfa',
+        candidate: 'means the following.\nSayfa',
+      );
+
+      expect(quranValue, 'Kuran');
+      expect(surahValue, 'Sure');
+      expect(pageValue, 'Sayfa');
+    });
+
     test('rejects multiline theme mode output', () {
       final value = resolveTranslatedArbValue(
         key: 'systemDefault',

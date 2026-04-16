@@ -61,7 +61,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get surahs => 'Sourates';
 
   @override
-  String get ayahs => 'Ayahs';
+  String get ayahs => 'Versets';
 
   @override
   String get fajr => 'Fajr';
@@ -199,7 +199,7 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
-  String get juz => 'Juz';
+  String get juz => 'Juzʾ';
 
   @override
   String get page => 'Page';

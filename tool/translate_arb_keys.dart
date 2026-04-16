@@ -371,6 +371,12 @@ bool _mustStaySingleLine(String key) {
       key == 'addBookmark' ||
       key == 'removeBookmark' ||
       key == 'downloading' ||
+      key == 'quran' ||
+      key == 'surah' ||
+      key == 'surahs' ||
+      key == 'ayahs' ||
+      key == 'juz' ||
+      key == 'page' ||
       key == 'calibrationOffset' ||
       key == 'currentOffset' ||
       key == 'theme' ||

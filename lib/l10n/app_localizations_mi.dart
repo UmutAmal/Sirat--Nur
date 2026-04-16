@@ -57,10 +57,10 @@ class AppLocalizationsMi extends AppLocalizations {
   String get madhab => 'Tikanga Ture a Asr';
 
   @override
-  String get surahs => 'Surahs';
+  String get surahs => 'Nga Surah';
 
   @override
-  String get ayahs => 'Ayahs';
+  String get ayahs => 'Nga papa';
 
   @override
   String get fajr => 'Karaka';
@@ -200,7 +200,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Whārangi';
 
   @override
   String get reading => 'Reading';

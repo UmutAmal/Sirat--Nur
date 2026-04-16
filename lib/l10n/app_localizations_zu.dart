@@ -199,7 +199,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Ikhasi';
 
   @override
   String get reading => 'Reading';

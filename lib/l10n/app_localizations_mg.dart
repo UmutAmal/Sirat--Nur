@@ -18,7 +18,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get home => 'Trano';
 
   @override
-  String get quran => 'Quran';
+  String get quran => 'CORAN';
 
   @override
   String get qibla => 'Qibla';
@@ -199,7 +199,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Pejy';
 
   @override
   String get reading => 'Reading';

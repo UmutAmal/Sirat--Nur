@@ -18,7 +18,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get home => 'ገዛ';
 
   @override
-  String get quran => 'Quran';
+  String get quran => 'ቁርኣን';
 
   @override
   String get qibla => 'Qibla';

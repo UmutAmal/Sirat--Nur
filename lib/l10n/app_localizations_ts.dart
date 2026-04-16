@@ -57,7 +57,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get madhab => 'Asr Ndlela ya Nawu';
 
   @override
-  String get surahs => 'Surahs';
+  String get surahs => 'Ti- surah';
 
   @override
   String get ayahs => 'Ayahs';
@@ -190,7 +190,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get no => 'No';
 
   @override
-  String get surah => 'Surah';
+  String get surah => 'Surah ya xirhendzevutani';
 
   @override
   String ayahLabel(String ayah) {
@@ -198,10 +198,10 @@ class AppLocalizationsTs extends AppLocalizations {
   }
 
   @override
-  String get juz => 'Juz';
+  String get juz => 'Yuz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Tluka';
 
   @override
   String get reading => 'Reading';

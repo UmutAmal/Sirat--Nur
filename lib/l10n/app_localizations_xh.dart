@@ -57,7 +57,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get madhab => 'Indlela ye-Asr Juristic';
 
   @override
-  String get surahs => 'Surahs';
+  String get surahs => 'IiSurahs';
 
   @override
   String get ayahs => 'Ayahs';
@@ -199,7 +199,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Iphepha';
 
   @override
   String get reading => 'Reading';

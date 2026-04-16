@@ -18,7 +18,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get home => 'דף הבית';
 
   @override
-  String get quran => 'Quran';
+  String get quran => 'קוראן';
 
   @override
   String get qibla => 'Qibla';
@@ -57,10 +57,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get madhab => 'שיטה הלכתית לעסר';
 
   @override
-  String get surahs => 'Surahs';
+  String get surahs => 'סורות';
 
   @override
-  String get ayahs => 'Ayahs';
+  String get ayahs => 'איאת';
 
   @override
   String get fajr => 'פאג\'ר';
@@ -188,7 +188,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get no => 'No';
 
   @override
-  String get surah => 'Surah';
+  String get surah => 'סורה';
 
   @override
   String ayahLabel(String ayah) {
@@ -196,10 +196,10 @@ class AppLocalizationsHe extends AppLocalizations {
   }
 
   @override
-  String get juz => 'Juz';
+  String get juz => 'ג׳וז';
 
   @override
-  String get page => 'Page';
+  String get page => 'עמוד';
 
   @override
   String get reading => 'Reading';

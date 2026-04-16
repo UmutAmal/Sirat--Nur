@@ -228,6 +228,88 @@ void main() {
     });
 
     test(
+      'safe priority locales do not fall back to English for quran reading shell copy',
+      () {
+        const quranReadingShellSafeLocales = [
+          'tr',
+          'de',
+          'fr',
+          'es',
+          'ar',
+          'da',
+          'he',
+          'ja',
+          'nb',
+          'nn',
+          'no',
+          'pt',
+          'ru',
+          'vi',
+          'zh',
+          'zh_CN',
+          'zh_TW',
+        ];
+        const localizedKeys = [
+          'quran',
+          'surah',
+          'surahs',
+          'ayahs',
+          'juz',
+          'page',
+        ];
+
+        for (final locale in quranReadingShellSafeLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          for (final key in localizedKeys) {
+            if (locale == 'fr' && key == 'page') {
+              continue;
+            }
+            expect(
+              arb[key],
+              isNot(english[key]),
+              reason: 'app_$locale.arb still uses English for $key',
+            );
+          }
+        }
+      },
+    );
+
+    test(
+      'safe priority quran reading shell copy avoids known mistranslations',
+      () {
+        const knownBadValues = {
+          'da': {'surah': 'Surah', 'surahs': 'Surahs', 'ayahs': 'Ayahs'},
+          'de': {'ayahs': 'Ayahs'},
+          'fr': {'ayahs': 'Ayahs', 'page': 'Pages'},
+          'he': {'surahs': 'סורה', 'ayahs': 'איהס', 'juz': 'Juz'},
+          'ja': {'quran': 'コーラン', 'ayahs': 'アヤス'},
+          'nb': {'surah': 'Surah', 'surahs': 'Surahs', 'ayahs': 'Ayahs'},
+          'nn': {'surah': 'Surah', 'surahs': 'Surahs', 'ayahs': 'Ayahs'},
+          'no': {'surah': 'Surah', 'surahs': 'Surahs', 'ayahs': 'Ayahs'},
+          'ru': {'ayahs': 'Айи'},
+          'vi': {'surah': 'Surah', 'surahs': 'Surah', 'ayahs': 'Ayah'},
+          'zh': {'surah': '古兰经', 'surahs': '古兰经', 'ayahs': '阿亚斯'},
+          'zh_CN': {'surah': '古兰经', 'surahs': '古兰经', 'ayahs': '阿亚斯'},
+          'zh_TW': {'surah': '古蘭經', 'surahs': '古蘭經', 'ayahs': '阿亞斯'},
+        };
+
+        for (final localeEntry in knownBadValues.entries) {
+          final arb = _readArb('lib/l10n/app_${localeEntry.key}.arb');
+
+          for (final badEntry in localeEntry.value.entries) {
+            expect(
+              arb[badEntry.key],
+              isNot(badEntry.value),
+              reason:
+                  'app_${localeEntry.key}.arb kept a known weak translation for ${badEntry.key}',
+            );
+          }
+        }
+      },
+    );
+
+    test(
       'priority locales do not fall back to English for diagnostics labels',
       () {
         const localizedKeys = [

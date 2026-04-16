@@ -57,10 +57,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get madhab => '晡礼法学方法';
 
   @override
-  String get surahs => '古兰经';
+  String get surahs => '苏拉';
 
   @override
-  String get ayahs => '阿亚斯';
+  String get ayahs => '阿亚';
 
   @override
   String get fajr => '晨曦';
@@ -186,7 +186,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get no => '不';
 
   @override
-  String get surah => '古兰经';
+  String get surah => '苏拉';
 
   @override
   String ayahLabel(String ayah) {
@@ -1693,10 +1693,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get madhab => '晡礼法学方法';
 
   @override
-  String get surahs => '古兰经';
+  String get surahs => '苏拉';
 
   @override
-  String get ayahs => '阿亚斯';
+  String get ayahs => '阿亚';
 
   @override
   String get fajr => '晨曦';
@@ -1822,7 +1822,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get no => '不';
 
   @override
-  String get surah => '古兰经';
+  String get surah => '苏拉';
 
   @override
   String ayahLabel(String ayah) {
@@ -3329,10 +3329,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get madhab => '晡禮法學方法';
 
   @override
-  String get surahs => '古蘭經';
+  String get surahs => '蘇拉';
 
   @override
-  String get ayahs => '阿亞斯';
+  String get ayahs => '阿亞';
 
   @override
   String get fajr => '晨曦';
@@ -3458,7 +3458,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get no => '不';
 
   @override
-  String get surah => '古蘭經';
+  String get surah => '蘇拉';
 
   @override
   String ayahLabel(String ayah) {
@@ -3466,7 +3466,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get juz => '茱茲';
+  String get juz => '朱茲';
 
   @override
   String get page => '頁';

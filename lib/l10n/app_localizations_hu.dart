@@ -18,7 +18,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get home => 'Otthon';
 
   @override
-  String get quran => 'Quran';
+  String get quran => 'Korán';
 
   @override
   String get qibla => 'Qibla';
@@ -57,7 +57,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get madhab => 'Asr jogi módszer';
 
   @override
-  String get surahs => 'Surahs';
+  String get surahs => 'Szúrák';
 
   @override
   String get ayahs => 'Ayahs';
@@ -201,7 +201,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'oldal';
 
   @override
   String get reading => 'Reading';

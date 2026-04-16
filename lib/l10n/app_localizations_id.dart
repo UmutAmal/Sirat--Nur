@@ -188,7 +188,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get no => 'Tidak';
 
   @override
-  String get surah => 'Surah';
+  String get surah => 'Surat';
 
   @override
   String ayahLabel(String ayah) {

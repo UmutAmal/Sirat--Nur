@@ -18,7 +18,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get home => 'गृहम्';
 
   @override
-  String get quran => 'Quran';
+  String get quran => 'कुरान';
 
   @override
   String get qibla => 'Qibla';

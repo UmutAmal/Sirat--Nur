@@ -8890,3 +8890,64 @@
 
 ### Sonraki Adım
 - Commit/push sonrasi yeni dongude aktif l10n fallback taramasini yenile; `surah`, `ayah`, `readQuran`, `prayerTimes`, `zakat`, `duas`, `asmaUlHusna`, `hadith` gibi ana dini navigasyon/icerik yuzeylerinden en yuksek riskli tek cluster sec.
+
+## 2026-04-16 TUR-230 — Localize Quran Reading Shell Terms
+
+### Yapılan İşlem
+- Quran okuma, cüz listesi, sure listesi, ayet sayisi ve sayfa takip yuzeylerinde kullanilan `quran`, `surah`, `surahs`, `ayahs`, `juz`, `page` anahtarlari guvenli ARB batch'i ile guncellendi.
+- `flutter gen-l10n` calistirilarak generated `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Safe/priority locale setinde `tr`, `de`, `fr`, `es`, `ar`, `da`, `he`, `ja`, `nb`, `nn`, `no`, `pt`, `ru`, `vi`, `zh`, `zh_CN`, `zh_TW` icin Quran reading shell metinlerinde Ingilizce fallback kalmadigi dogrulandi; `fr:page` mesru ayni-yazim oldugu icin bilerek istisna tutuldu.
+- Otomatik cevirinin dini baglamda zayif urettigi degerler elle duzeltildi: `da surah=Sura`, `da surahs=Suraer`, `da ayahs=Ayat`, `de ayahs=Ayat`, `es ayahs=Aleyas`, `fr ayahs=Versets`, `he surahs=סורות`, `he ayahs=איאת`, `ja quran=クルアーン`, `ru ayahs=Аяты`, `vi surah=Chương`, `zh/zh_CN surah=苏拉`, `zh_TW surah=蘇拉` gibi baglama uygun kopyalar uygulandi.
+- `tool\translate_arb_keys.dart` single-line guard listesine Quran reading shell anahtarlari eklendi.
+- `test\arb_ui_localization_test.dart` icine safe/priority fallback guard'i, `fr:page` mesru ayni-yazim istisnasi ve bilinen zayif dini terim kalintisi guard'i eklendi.
+- `test\translate_arb_keys_test.dart` icine multiline Quran reading shell output regresyon testi eklendi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\common\main_skeleton.dart:57` alt navigasyonda `l10n.quran` gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\quran_page.dart:75` Quran sayfa basliginda `l10n.quran` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\quran_page.dart:79-80` tab etiketlerinde `l10n.surahs` ve `l10n.juz` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\quran_page.dart:234` sure kartinda `l10n.ayahs` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\quran_page.dart:301-315` juz/page listelerinde `l10n.juz` ve `l10n.page` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\juz_reading_page.dart:177` cüz okuma ozetinde `l10n.ayahs` ve `l10n.surah` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart:346` sure detayinda `l10n.ayahs` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart:14` fallback baslikta `l10n.surah` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\tracker\tracker_page.dart:129` ve `A:\Way of Allah\sirat_i_nur\lib\features\tracker\tracker_page.dart:235` Quran sayfa takibinde `l10n.page` kullaniyor.
+- TUR-230 oncesi fallback taramasinda bu cluster'da safe locale setinde genis Ingilizce kalinti vardi: `quran` 8 locale, `surah` 9 locale, `surahs` 9 locale, `ayahs` 11 locale, `juz` 12 locale, `page` 9 locale.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Safe/priority locale setinde Quran ana navigasyon, sure/cüz/ayet/sayfa shell metinlerinde Ingilizce fallback riski kapandi.
+- Dini terimlerde zayif makine cevirisi bariyeri eklendi; `known_bad_hits=[]` taramasi PASS.
+- Single-line guard ile Quran reading shell etiketlerinde batch debris/newline riski kapatildi.
+- Kalan tum-locale birebir Ingilizce degerler cogunlukla ceviri servisinin guvenli aday uretmedigi nadir/legacy locale grubunda birakildi; sahte veya uydurma ceviri yazilmadi. TUR-230 sonrasi exact fallback sayilari: `quran 91`, `surah 101`, `surahs 82`, `ayahs 109`, `juz 133`, `page 72`.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart` PASS (`77/77`)
+- UI odak test: `flutter test test\features\quran\quran_error_copy_test.dart test\features\quran\tafsir_page_test.dart test\features\tracker\tracker_page_test.dart test\features\analytics\analytics_page_test.dart test\features\common\main_skeleton_test.dart test\sukun_audio_page_test.dart` PASS (`19/19`)
+- Safe fallback taramasi PASS: `fr:page` mesru ayni-yazim istisnasi disinda `safe_same=[]`
+- Single-line taramasi PASS: hedef Quran reading shell anahtarlarinda `newline=[]`
+- Bilinen zayif dini terim taramasi PASS: `known_bad_hits=[]`
+- `git diff --check` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`414/414`)
+- `flutter gen-l10n` PASS
+- `flutter doctor -v` Android/test hattinda PASS; Chrome ve Visual Studio eksikleri yalniz web/Windows hedefleri icin kayitli, bu Android/test dongusunu bloke etmiyor.
+
+### Risk Değişimi
+- Safe/priority locale Quran reading shell fallback riski: `12/25 -> 2/25`
+- Dini terimlerde zayif makine cevirisi riski: `16/25 -> 4/25`
+- Quran shell etiketlerinde multiline/batch debris riski: `10/25 -> 3/25`
+- Tum-locale nadir/legacy fallback riski: `8/25 -> 5/25`
+
+### Rollback Planı
+- `lib\l10n\app_*.arb`, `lib\l10n\app_localizations_*.dart`, `test\arb_ui_localization_test.dart`, `test\translate_arb_keys_test.dart` ve `tool\translate_arb_keys.dart` icindeki TUR-230 degisiklikleri geri alinir; production Dart UI logic degismedigi icin runtime rollback dar kapsamli kalir.
+
+### Sonraki Adım
+- Commit/push sonrasi yeni dongude aktif risk taramasini yenile; `prayerTimes`, `asmaUlHusna`, `hadith`, `zakat`, `dua`, `library`, `islamicEducation` gibi ana dini navigasyon/icerik yuzeylerinden en yuksek riskli tek cluster sec.

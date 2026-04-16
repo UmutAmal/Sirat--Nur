@@ -57,7 +57,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get madhab => 'Mokhoa oa Asr Juristic';
 
   @override
-  String get surahs => 'Surahs';
+  String get surahs => 'Li-Surahs';
 
   @override
   String get ayahs => 'Ayahs';
@@ -199,7 +199,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Leqephe';
 
   @override
   String get reading => 'Reading';
