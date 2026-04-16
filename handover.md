@@ -9251,3 +9251,48 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude kalan UI fallbacklerden `shareAppMessage` cluster'ini veya premium rare-locale kalanlarini yeniden riskle; yalniz guvenilir aday ureten locale'leri guncelle, uydurma ceviri yazma.
+
+## 2026-04-16 TUR-237 — Guard Share App Message Placeholders
+
+### Yapilan Islem
+- `shareAppMessage` anahtari guvenli ARB batch'inden gecirildi.
+- `tool\translate_arb_keys.dart` single-line guard listesine `shareAppMessage` eklendi.
+- `test\translate_arb_keys_test.dart` icindeki settings/about guard'i `shareAppMessage` icin placeholder'li multiline adaylari reddedecek sekilde genisletildi.
+- `test\arb_ui_localization_test.dart` icine tum locale'lerde `shareAppMessage` icin `{appName}` ve `{url}` placeholder'larinin korunmasini ve metnin tek satir kalmasini dogrulayan test eklendi.
+- `flutter gen-l10n` calistirildi; ARB degerlerinde guvenilir yeni ceviri uretilemedigi icin generated l10n dosyalarinda content degisimi olusmadi.
+
+### Neden Yapildi
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:608` uygulama paylasim metnini `l10n.shareAppMessage(l10n.appTitle, appUrl)` ile uretiyor.
+- `shareAppMessage` TUR-237 oncesi 109 locale'de app_en ile birebir ayniydi; batch denemesi sonrasi exact fallback sayisi yine 109 kaldi.
+- Bu anahtar placeholder'li oldugu icin hatali ceviri `{appName}` veya `{url}` placeholder'larini dusurebilir ya da multiline/batch debris uretebilir; bu risk test/tool seviyesinde kapatildi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `shareAppMessage` icin tum locale'lerde placeholder kaybi ve multiline metin riski regresyonla korunuyor.
+- Bu turda yeni guvenilir locale cevirisi uretilemedi; sahte/uydurma ceviri yazilmadi.
+- Kalan UI fallback riski aynen takipte: `shareAppMessage exact_en_count=109`.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart` PASS (`85/85`)
+- Exact fallback taramasi: `shareAppMessage exact_en_count=109`
+- Placeholder taramasi: `missing_placeholder_count=0`
+- Single-line taramasi: `newline_count=0`
+- `flutter gen-l10n` PASS
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test` PASS (`427/427`)
+
+### Risk Degisimi
+- `shareAppMessage` placeholder kaybi riski: `10/25 -> 2/25`
+- `shareAppMessage` multiline/batch debris riski: `8/25 -> 2/25`
+- `shareAppMessage` genis Ingilizce fallback riski: `12/25 -> 12/25` (guvenilir ceviri uretilemedi; bilincli olarak sahte ceviri yazilmadi)
+
+### Rollback Plani
+- `test\arb_ui_localization_test.dart`, `test\translate_arb_keys_test.dart` ve `tool\translate_arb_keys.dart` icindeki TUR-237 guard ekleri geri alinir.
+
+### Sonraki Adim
+- Commit/push sonrasi share copy icin daha guvenilir ceviri stratejisi ara: once desteklenen ve dini/kulturel risk dusuk locale alt kumesi belirlenmeli, sonra sadece dogrulanabilir adaylar ARB'ye alinmali. Alternatif olarak yeni dongude non-i18n runtime risklerinden en yuksek skorlu olani sec.

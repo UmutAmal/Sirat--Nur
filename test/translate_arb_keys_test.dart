@@ -434,14 +434,28 @@ void main() {
     });
 
     test('rejects multiline settings about output', () {
-      final value = resolveTranslatedArbValue(
+      final shareAppValue = resolveTranslatedArbValue(
         key: 'shareApp',
         source: 'Share App',
         currentValue: 'Uygulamayi Paylas',
         candidate: 'means the following.\nUygulamayi Paylas',
       );
 
-      expect(value, 'Uygulamayi Paylas');
+      final shareAppMessageValue = resolveTranslatedArbValue(
+        key: 'shareAppMessage',
+        source:
+            'Check out {appName}: The ultimate Islamic lifestyle app! {url}',
+        currentValue:
+            '{appName} uygulamasina goz atin: En kapsamli Islami yasam uygulamasi! {url}',
+        candidate:
+            'means the following.\n{appName} uygulamasina goz atin: En kapsamli Islami yasam uygulamasi! {url}',
+      );
+
+      expect(shareAppValue, 'Uygulamayi Paylas');
+      expect(
+        shareAppMessageValue,
+        '{appName} uygulamasina goz atin: En kapsamli Islami yasam uygulamasi! {url}',
+      );
     });
 
     test('rejects multiline premium error output', () {

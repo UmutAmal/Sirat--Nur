@@ -533,6 +533,38 @@ void main() {
       },
     );
 
+    test('share app message keeps placeholders and single-line copy', () {
+      final arbFiles = Directory('lib/l10n')
+          .listSync()
+          .whereType<File>()
+          .where((file) => file.path.endsWith('.arb'))
+          .where((file) => file.uri.pathSegments.last.startsWith('app_'));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+        final value = arb['shareAppMessage'] as String;
+
+        expect(
+          value.contains('{appName}'),
+          isTrue,
+          reason:
+              '${file.uri.pathSegments.last} dropped {appName} from shareAppMessage',
+        );
+        expect(
+          value.contains('{url}'),
+          isTrue,
+          reason:
+              '${file.uri.pathSegments.last} dropped {url} from shareAppMessage',
+        );
+        expect(
+          value.contains('\n') || value.contains('\r'),
+          isFalse,
+          reason:
+              '${file.uri.pathSegments.last} has multiline shareAppMessage copy',
+        );
+      }
+    });
+
     test(
       'safe priority locales do not fall back to English for settings shell copy',
       () {

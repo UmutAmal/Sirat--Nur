@@ -423,6 +423,7 @@ bool _mustStaySingleLine(String key) {
       key == 'version' ||
       key == 'rateApp' ||
       key == 'shareApp' ||
+      key == 'shareAppMessage' ||
       key == 'compassSmoothing' ||
       key == 'manualCorrectionDesc' ||
       key == 'calibrationRequiredFigure8' ||
