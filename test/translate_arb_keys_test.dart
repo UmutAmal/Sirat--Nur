@@ -159,6 +159,17 @@ void main() {
       expect(value, 'Kible Kalibrasyonu');
     });
 
+    test('rejects multiline theme mode output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'systemDefault',
+        source: 'System Default',
+        currentValue: 'Sistem Varsayilani',
+        candidate: 'means the following.\nSistem Varsayilani',
+      );
+
+      expect(value, 'Sistem Varsayilani');
+    });
+
     test('rejects multiline diagnostics output', () {
       final labelValue = resolveTranslatedArbValue(
         key: 'diagnostics',

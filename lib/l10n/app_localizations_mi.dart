@@ -112,7 +112,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get searchLanguage => 'Search 180+ languages...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Pūnaha Taunoa';
 
   @override
   String get currentLocation => 'Current Location (GPS)';
@@ -497,13 +497,13 @@ class AppLocalizationsMi extends AppLocalizations {
   String get beforePrayer => 'minutes before prayer';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'Kaupapa';
 
   @override
-  String get lightMode => 'Light Mode';
+  String get lightMode => 'Aratau Maama';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => 'Aratau pouri';
 
   @override
   String get systemTheme => 'System Theme';

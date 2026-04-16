@@ -495,13 +495,13 @@ class AppLocalizationsSm extends AppLocalizations {
   String get beforePrayer => 'minutes before prayer';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'Autu';
 
   @override
-  String get lightMode => 'Light Mode';
+  String get lightMode => 'Faiga Malamalama';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => 'Faiga Pogisa';
 
   @override
   String get systemTheme => 'System Theme';

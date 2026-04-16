@@ -112,7 +112,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get searchLanguage => 'Search 180+ languages...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Ulgam standarty';
 
   @override
   String get currentLocation => 'Current Location (GPS)';
@@ -496,13 +496,13 @@ class AppLocalizationsTk extends AppLocalizations {
   String get beforePrayer => 'minutes before prayer';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'Mowzuk';
 
   @override
-  String get lightMode => 'Light Mode';
+  String get lightMode => 'Lightagtylyk tertibi';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => 'Garaňky re .im';
 
   @override
   String get systemTheme => 'System Theme';

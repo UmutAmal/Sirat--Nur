@@ -486,7 +486,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get theme => '主题';
 
   @override
-  String get lightMode => '灯光模式';
+  String get lightMode => '浅色模式';
 
   @override
   String get darkMode => '深色模式';
@@ -2122,7 +2122,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get theme => '主题';
 
   @override
-  String get lightMode => '灯光模式';
+  String get lightMode => '浅色模式';
 
   @override
   String get darkMode => '深色模式';
@@ -3758,7 +3758,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get theme => '主題';
 
   @override
-  String get lightMode => '燈光模式';
+  String get lightMode => '淺色模式';
 
   @override
   String get darkMode => '深色模式';

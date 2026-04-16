@@ -8321,3 +8321,49 @@
 
 ### Sonraki Adım
 - Sonraki dongude aktif l10n fallback taramasini yenile; bilincli canonical terimleri eleyip `juz`, `tafsir`, `qibla`, `version`, `darkMode`, `systemDefault` veya benzer gorunur anahtarlar arasindan en yuksek etkili tek yuzeyi sec.
+
+## 2026-04-16 TUR-219 — Localize Theme Mode Settings Copy
+
+### Yapılan İşlem
+- `theme`, `lightMode`, `darkMode`, `systemDefault` anahtarlari korumali ARB batch'i ile genis locale kumesinde lokalize edildi.
+- `flutter gen-l10n` calistirilarak uretilmis `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- Cince UI kalite gecisinde `lightMode` icin Google kaynakli "isik/aydinlatma modu" anlami `zh` ve `zh_CN` icin `浅色模式`, `zh_TW` icin `淺色模式` olarak duzeltildi.
+- `tool\translate_arb_keys.dart` single-line guard listesine theme mode anahtarlari eklendi.
+- `test\arb_ui_localization_test.dart` theme mode priority locale fallback guard'i ekledi.
+- `test\translate_arb_keys_test.dart` multiline theme mode output regresyon testiyle ceviri debris korumasi ekledi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:173` ayarlar yuzeyinde `l10n.theme` basligini gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:181` dark mode satirinda `l10n.darkMode` degerini gosteriyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_page.dart:523` ve `:582` sistem varsayilani seceneklerinde `l10n.systemDefault` kullaniyor.
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\diagnostics_page.dart:275`, `:276` ve `:281` diagnostics satirlarinda ayni theme mode copy kumesini gosteriyor.
+- TUR-219 oncesi aktif l10n fallback taramasinda `theme`, `lightMode`, `darkMode`, `systemDefault` icin priority fallback sayilari sirasiyla `10`, `10`, `10`, `10` idi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Priority locale setinde theme mode Ingilizce fallback riski kapandi.
+- Fallback sayilari: `theme 134 -> 66`, `lightMode 136 -> 69`, `darkMode 138 -> 71`, `systemDefault 138 -> 74`.
+- Kalan fallback'ler Google ceviri destegi olmayan veya guvenli aday uretilemeyen nadir/legacy locale grubunda birakildi; UI metni uydurulmadi.
+- Tek satir guard'i ile gelecekteki batch debris/newline riski azaltildi.
+
+### Test Sonucu
+- Odak test 1: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart` PASS (`52/52`)
+- Odak test 2: `flutter test test\features\settings\diagnostics_page_test.dart test\settings_provider_test.dart` PASS (`25/25`)
+- `git diff --check` PASS (yalnizca mevcut Windows CRLF uyarilari)
+- `flutter analyze` PASS
+- `flutter test` PASS (`388/388`)
+
+### Risk Değişimi
+- Priority locale theme mode fallback riski: `10/25 -> 2/25`
+- Tum locale theme mode fallback riski: `10/25 -> 6/25`
+- Theme mode ceviri batch debris tekrar riski: `10/25 -> 3/25`
+
+### Sonraki Adım
+- Sonraki dongude aktif l10n fallback taramasini yenile; canonical dini terimleri ayri risk olarak isaretleyip `version`, `downloads`, `premium`, `ayahs`, `surah` veya benzer gorunur ama guvenle cevrilebilir anahtarlar arasindan en yuksek etkili tek yuzeyi sec.

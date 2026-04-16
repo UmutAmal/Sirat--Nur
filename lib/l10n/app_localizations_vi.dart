@@ -112,7 +112,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get searchLanguage => 'Search 180+ languages...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Mặc định hệ thống';
 
   @override
   String get currentLocation => 'Current Location (GPS)';
@@ -495,13 +495,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get beforePrayer => 'minutes before prayer';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'chủ đề';
 
   @override
-  String get lightMode => 'Light Mode';
+  String get lightMode => 'Chế độ ánh sáng';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => 'Chế độ tối';
 
   @override
   String get systemTheme => 'System Theme';

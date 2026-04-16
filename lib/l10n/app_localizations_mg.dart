@@ -496,7 +496,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get beforePrayer => 'minutes before prayer';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'Lohahevitra';
 
   @override
   String get lightMode => 'Light Mode';

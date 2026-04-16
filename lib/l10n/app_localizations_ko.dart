@@ -112,7 +112,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get searchLanguage => 'Search 180+ languages...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => '시스템 기본값';
 
   @override
   String get currentLocation => 'Current Location (GPS)';
@@ -490,13 +490,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get beforePrayer => 'minutes before prayer';
 
   @override
-  String get theme => 'Theme';
+  String get theme => '테마';
 
   @override
-  String get lightMode => 'Light Mode';
+  String get lightMode => '라이트 모드';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => '다크 모드';
 
   @override
   String get systemTheme => 'System Theme';

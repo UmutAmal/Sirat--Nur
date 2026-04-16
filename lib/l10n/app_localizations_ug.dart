@@ -112,7 +112,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get searchLanguage => 'Search 180+ languages...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'سىستېما كۆڭۈلدىكى قىممىتى';
 
   @override
   String get currentLocation => 'Current Location (GPS)';
@@ -495,13 +495,13 @@ class AppLocalizationsUg extends AppLocalizations {
   String get beforePrayer => 'minutes before prayer';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'باشتېما';
 
   @override
-  String get lightMode => 'Light Mode';
+  String get lightMode => 'يېنىك ھالەت';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => 'قاراڭغۇ ھالەت';
 
   @override
   String get systemTheme => 'System Theme';

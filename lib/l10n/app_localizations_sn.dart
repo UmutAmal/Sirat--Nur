@@ -500,7 +500,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get lightMode => 'Light Mode';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => 'Rima Mode';
 
   @override
   String get systemTheme => 'System Theme';

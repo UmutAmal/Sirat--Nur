@@ -498,10 +498,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get theme => 'Theme';
 
   @override
-  String get lightMode => 'Light Mode';
+  String get lightMode => 'Moda Ronahî';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => 'Moda Dark';
 
   @override
   String get systemTheme => 'System Theme';

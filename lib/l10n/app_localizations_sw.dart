@@ -112,7 +112,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get searchLanguage => 'Search 180+ languages...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Chaguomsingi ya Mfumo';
 
   @override
   String get currentLocation => 'Current Location (GPS)';
@@ -495,13 +495,13 @@ class AppLocalizationsSw extends AppLocalizations {
   String get beforePrayer => 'minutes before prayer';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'Mandhari';
 
   @override
-  String get lightMode => 'Light Mode';
+  String get lightMode => 'Hali ya Mwanga';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => 'Hali ya Giza';
 
   @override
   String get systemTheme => 'System Theme';

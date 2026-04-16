@@ -113,7 +113,7 @@
   "enableNotifications": "Enable Notifications",
   "notificationTime": "Notification Time",
   "beforePrayer": "minutes before prayer",
-  "theme": "Theme",
+  "theme": "विषयः",
   "lightMode": "Light Mode",
   "darkMode": "Dark Mode",
   "systemTheme": "System Theme",

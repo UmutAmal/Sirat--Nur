@@ -112,7 +112,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get searchLanguage => 'Search 180+ languages...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Systema Default';
 
   @override
   String get currentLocation => 'Current Location (GPS)';
@@ -498,10 +498,10 @@ class AppLocalizationsLa extends AppLocalizations {
   String get theme => 'Theme';
 
   @override
-  String get lightMode => 'Light Mode';
+  String get lightMode => 'Lux Modus';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => 'Tenebris Modus';
 
   @override
   String get systemTheme => 'System Theme';

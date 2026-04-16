@@ -351,6 +351,10 @@ bool _mustStaySingleLine(String key) {
       key == 'qiblaCalibration' ||
       key == 'calibrationOffset' ||
       key == 'currentOffset' ||
+      key == 'theme' ||
+      key == 'lightMode' ||
+      key == 'darkMode' ||
+      key == 'systemDefault' ||
       key == 'compassSmoothing' ||
       key == 'manualCorrectionDesc' ||
       key == 'calibrationRequiredFigure8' ||

@@ -112,7 +112,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get searchLanguage => 'Search 180+ languages...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'ຄ່າເລີ່ມຕົ້ນຂອງລະບົບ';
 
   @override
   String get currentLocation => 'Current Location (GPS)';
@@ -495,13 +495,13 @@ class AppLocalizationsLo extends AppLocalizations {
   String get beforePrayer => 'minutes before prayer';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'ຫົວຂໍ້';
 
   @override
-  String get lightMode => 'Light Mode';
+  String get lightMode => 'ໂໝດແສງ';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => 'ໂໝດມືດ';
 
   @override
   String get systemTheme => 'System Theme';

@@ -496,13 +496,13 @@ class AppLocalizationsSu extends AppLocalizations {
   String get beforePrayer => 'minutes before prayer';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'Téma';
 
   @override
-  String get lightMode => 'Light Mode';
+  String get lightMode => 'Mode Lampu';
 
   @override
-  String get darkMode => 'Dark Mode';
+  String get darkMode => 'Mode poék';
 
   @override
   String get systemTheme => 'System Theme';
