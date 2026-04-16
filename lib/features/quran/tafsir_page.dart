@@ -207,6 +207,8 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
   }
 
   Widget _buildBody(AppLocalizations l10n) {
+    final error = _error;
+
     if (_isLoading && _tafsirs.isEmpty) {
       return Center(
         child: Padding(
@@ -239,7 +241,7 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
       );
     }
 
-    if (_error != null) {
+    if (error != null) {
       return Center(
         child: Padding(
           padding: const EdgeInsets.all(24),
@@ -258,7 +260,7 @@ class _TafsirPageState extends ConsumerState<TafsirPage> {
               ),
               const SizedBox(height: 10),
               Text(
-                _error!,
+                error,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyMedium,
               ),

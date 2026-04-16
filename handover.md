@@ -7703,3 +7703,34 @@
 
 ### Sonraki Adım
 - Sonraki dongude TafsirPage `_error!` render yuzeyi local snapshot standardina alinacak.
+
+## 2026-04-16 TUR-203 — Guard Tafsir Error Render Snapshot
+
+### Yapılan İşlem
+- TafsirPage `_buildBody` akisi `_error` degerini local `error` snapshot olarak okuyor.
+- Error state render'i `error != null` guardindan sonra snapshot degeriyle calisiyor.
+- Tafsir testindeki source guard genisletildi; `_error!` geri gelirse test fail edecek.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart:210` tafsir error state'ini local snapshot'a aliyor.
+- Eski akista `_error != null` guardindan sonra `_error!` kullaniliyordu; harici tafsir fetch/cache akisi olan bu ekranda gereksiz render crash yuzeyi olusturuyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\tafsir_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Tafsir hata copy'si ve retry davranisi degismedi.
+- Tafsir error render akisi nullable state force-unwrap kullanmadan calisiyor.
+
+### Test Sonucu
+- `flutter test test\features\quran\tafsir_page_test.dart` PASS (`6/6`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`373/373`)
+
+### Risk Değişimi
+- Tafsir error render force-unwrap crash yuzeyi: `6/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude settings locationName ve prayer queuedSettings runtime force-unwrap yuzeyleri incelenecek; state race etkisi daha yuksek olan once kapatilacak.

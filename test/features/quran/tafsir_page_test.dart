@@ -85,6 +85,8 @@ void main() {
 
     expect(source, contains('TafsirLocalService.defaultTafsirSourceId'));
     expect(source, isNot(contains("availableTafsirs.first['id']!")));
+    expect(source, contains('final error = _error;'));
+    expect(source, isNot(contains('_error!')));
   });
 
   test('tafsir service database getter avoids force unwraps', () {
