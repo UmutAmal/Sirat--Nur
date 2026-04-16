@@ -10,8 +10,8 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 /// Production builds should use:
 /// ```
 /// flutter build apk \
-///   --dart-define=SUPABASE_URL=https://... \
-///   --dart-define=SUPABASE_ANON_KEY=sb_...
+///   --dart-define=SUPABASE_URL="$SUPABASE_URL" \
+///   --dart-define=SUPABASE_ANON_KEY="$SUPABASE_ANON_KEY"
 /// ```
 class SupabaseConfig {
   static const String credentialsMissingErrorCode =

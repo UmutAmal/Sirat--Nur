@@ -51,14 +51,14 @@ No hidden keys are required for normal local development.
 Production builds must inject Supabase values explicitly when cloud content, Storage audio, or diagnostics should be live. The anon key is intentionally empty by default and must not be committed as a fallback value:
 ```bash
 flutter build apk \
-  --dart-define=SUPABASE_URL=https://... \
-  --dart-define=SUPABASE_ANON_KEY=sb_... \
+  --dart-define=SUPABASE_URL="$SUPABASE_URL" \
+  --dart-define=SUPABASE_ANON_KEY="$SUPABASE_ANON_KEY" \
   --dart-define=SUPABASE_QURAN_AUDIO_BUCKET=quran-audio \
-  --dart-define=PLACES_TILE_URL_TEMPLATE=https://tiles.example.com/{z}/{x}/{y}.png \
-  --dart-define=PLACES_OVERPASS_API_URL=https://places-proxy.example.com/api/interpreter
+  --dart-define=PLACES_TILE_URL_TEMPLATE="$PLACES_TILE_URL_TEMPLATE" \
+  --dart-define=PLACES_OVERPASS_API_URL="$PLACES_OVERPASS_API_URL"
 ```
 
-`PLACES_TILE_URL_TEMPLATE` is intentionally empty by default. Without it, the Places screen shows an honest map-unavailable state instead of silently using a public tile server. `PLACES_OVERPASS_API_URL` is also intentionally empty by default; configure it with a monitored proxy, an approved provider, or your own rate-limited Overpass-compatible endpoint before enabling nearby search in production.
+`PLACES_TILE_URL_TEMPLATE` is intentionally empty by default. Without it, the Places screen shows an honest map-unavailable state instead of silently using a public tile server. Production values must be HTTPS tile templates containing `{z}`, `{x}`, and `{y}`. `PLACES_OVERPASS_API_URL` is also intentionally empty by default; configure it with a monitored HTTPS proxy, an approved HTTPS provider, or your own rate-limited HTTPS Overpass-compatible endpoint before enabling nearby search in production.
 
 ## Quran Audio Sovereignty Workflow
 The runtime requires Supabase Storage-backed `storage_path` rows for playable audio. `content_seed_quran_audio.sql` and external audio URLs in seed data are mirror inputs only; they are not runtime playback seeds or fallbacks. Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded to the `quran-audio` bucket.
@@ -72,14 +72,11 @@ dart run tool/download_verified_quran_audio.dart --overwrite
 ```bash
 dart run tool/upload_quran_audio_storage.dart \
   --manifest=build/verified_quran_audio/manifest.json \
-  --supabase-url=https://your-project.supabase.co \
   --dry-run
 ```
 
 3. Upload the mirrored MP3 files with a service-role key stored in the environment, never in command history:
 ```bash
-$env:SUPABASE_URL="https://your-project.supabase.co"
-$env:SUPABASE_SERVICE_ROLE_KEY="..."
 dart run tool/upload_quran_audio_storage.dart --manifest=build/verified_quran_audio/manifest.json
 ```
 

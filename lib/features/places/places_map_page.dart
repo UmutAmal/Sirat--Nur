@@ -39,11 +39,29 @@ PlacesMapAvailability resolvePlacesMapAvailability(
     return PlacesMapAvailability.locationRequired;
   }
 
-  if (tileUrlTemplate.trim().isEmpty) {
+  if (!isSecurePlacesTileUrlTemplate(tileUrlTemplate)) {
     return PlacesMapAvailability.tileConfigRequired;
   }
 
   return PlacesMapAvailability.ready;
+}
+
+bool isSecurePlacesTileUrlTemplate(String rawTemplate) {
+  final template = rawTemplate.trim();
+  if (template.isEmpty ||
+      !template.contains('{z}') ||
+      !template.contains('{x}') ||
+      !template.contains('{y}')) {
+    return false;
+  }
+
+  final probeUrl = template
+      .replaceAll('{z}', '0')
+      .replaceAll('{x}', '0')
+      .replaceAll('{y}', '0')
+      .replaceAll('{s}', 'a');
+  final uri = Uri.tryParse(probeUrl);
+  return uri != null && uri.isScheme('https') && uri.host.isNotEmpty;
 }
 
 PlacesDataAvailability resolvePlacesDataAvailability(
@@ -74,9 +92,9 @@ bool canFetchPlaces(SettingsState settings, {required String overpassApiUrl}) {
 Uri resolvePlacesOverpassEndpoint(String rawEndpoint) {
   final endpoint = rawEndpoint.trim();
   final uri = Uri.tryParse(endpoint);
-  if (uri == null || !isExternalHttpUri(uri)) {
+  if (uri == null || !uri.isScheme('https') || uri.host.isEmpty) {
     throw const FormatException(
-      'Places Overpass endpoint must be an HTTP(S) URL.',
+      'Places Overpass endpoint must be an HTTPS URL.',
     );
   }
 

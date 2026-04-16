@@ -6981,3 +6981,46 @@
 
 ### Sonraki Adım
 - Sonraki dongude `example.com`, placeholder URL ve production manifest/config kalintilari yeniden taranacak; ardindan en yuksek false-success veya guvenilmeyen icerik riski secilip ayni analyze/test/commit kapisindan gecirilecek.
+
+## 2026-04-16 TUR-181 — Harden Places HTTPS Configuration
+
+### Yapılan İşlem
+- Places harita tile template kapisi HTTPS ve `{z}`, `{x}`, `{y}` template zorunluluguyla daraltildi.
+- Places Overpass endpoint kabul kapisi HTTP(S) yerine yalnizca HTTPS olacak sekilde sertlestirildi.
+- README production build ornekleri fake endpoint ve fake key degerleri yerine environment variable referanslariyla guncellendi.
+- `supabase_config.dart` yorum blogundaki sahte `https://...` ve `sb_...` ornekleri kaldirildi.
+- Places, README ve Supabase config testleri bu placeholder/insecure config davranislarinin geri gelmesini engelleyecek sekilde genisletildi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:42` once sadece bos tile template'i reddediyor, HTTP veya template olmayan URL'leri hazir sayabiliyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:92` once `isExternalHttpUri` ile HTTP Overpass endpointlerini de kabul ediyordu.
+- Places sorgusu kullanicinin koordinatini Overpass sorgu govdesine koydugu icin HTTP endpoint konumu MITM/telemetri riskine acardi.
+- `A:\Way of Allah\sirat_i_nur\README.md:57` ve `A:\Way of Allah\sirat_i_nur\README.md:58` once `tiles.example.com` ve `places-proxy.example.com` gibi gercek olmayan production endpointleri gosteriyordu.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart`
+- `A:\Way of Allah\sirat_i_nur\README.md`
+- `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\readme_operational_docs_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\supabase_config_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Places ekrani artik HTTP tile veya HTTP Overpass ayariyla sessizce calismiyor; kullaniciya mevcut honest unavailable akisi gosteriliyor.
+- Production operator dokumani fake endpointleri kopyalamaya tesvik etmiyor; gercek degerler environment tarafindan veriliyor.
+- Tile template dogrulamasi, yanlis statik URL girildiginde FlutterMap'e gecmeden once konfigurasyon hatasini yakaliyor.
+
+### Test Sonucu
+- `flutter test test\features\places\places_map_page_test.dart` PASS (`7/7`)
+- `flutter test test\readme_operational_docs_test.dart test\supabase_config_test.dart` PASS (`6/6`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`358/358`)
+
+### Risk Değişimi
+- Places konum sorgusunun HTTP endpoint uzerinden gonderilebilmesi riski: `12/25 -> 1/25`
+- Harita tile template'inin sahte/statik/insecure degerle hazir sayilmasi riski: `10/25 -> 1/25`
+- Production dokumanindan fake endpoint/key ornegi kopyalanmasi riski: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude kalan runtime external URL ve debug logging yuzeyleri yeniden taranacak; ozellikle `tafsir_local_service.dart`, `external_url.dart` ve bootstrap debug loglari kanitla skorlanacak.

@@ -15,6 +15,8 @@ void main() {
 
       expect(source, isNot(contains(publishableKeyPrefix)));
       expect(source, isNot(contains('defaultValue: \'sb_')));
+      expect(source, isNot(contains('--dart-define=SUPABASE_URL=https://')));
+      expect(source, isNot(contains('--dart-define=SUPABASE_ANON_KEY=sb_')));
       expect(source, contains("String.fromEnvironment('SUPABASE_ANON_KEY')"));
     });
 

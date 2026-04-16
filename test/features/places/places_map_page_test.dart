@@ -37,10 +37,31 @@ void main() {
         resolvePlacesMapAvailability(configuredLocation, tileUrlTemplate: ''),
         PlacesMapAvailability.tileConfigRequired,
       );
+      expect(
+        resolvePlacesMapAvailability(
+          configuredLocation,
+          tileUrlTemplate: 'http://tiles.provider.invalid/{z}/{x}/{y}.png',
+        ),
+        PlacesMapAvailability.tileConfigRequired,
+      );
+      expect(
+        resolvePlacesMapAvailability(
+          configuredLocation,
+          tileUrlTemplate: 'https://tiles.provider.invalid/static.png',
+        ),
+        PlacesMapAvailability.tileConfigRequired,
+      );
+      expect(
+        resolvePlacesMapAvailability(
+          configuredLocation,
+          tileUrlTemplate: 'https://tiles.provider.invalid/{z}/{x}/{y}.png',
+        ),
+        PlacesMapAvailability.ready,
+      );
     },
   );
 
-  test('places data availability requires explicit HTTP Overpass config', () {
+  test('places data availability requires explicit HTTPS Overpass config', () {
     final missingLocation = SettingsState();
     final configuredLocation = SettingsState(
       latitude: 41.0151,
@@ -57,6 +78,13 @@ void main() {
     );
     expect(
       resolvePlacesDataAvailability(configuredLocation, overpassApiUrl: ''),
+      PlacesDataAvailability.dataSourceConfigRequired,
+    );
+    expect(
+      resolvePlacesDataAvailability(
+        configuredLocation,
+        overpassApiUrl: 'http://overpass.example/api',
+      ),
       PlacesDataAvailability.dataSourceConfigRequired,
     );
     expect(
@@ -137,6 +165,10 @@ void main() {
     );
     expect(
       () => resolvePlacesOverpassEndpoint('not an endpoint'),
+      throwsFormatException,
+    );
+    expect(
+      () => resolvePlacesOverpassEndpoint('http://overpass.example/api'),
       throwsFormatException,
     );
     expect(

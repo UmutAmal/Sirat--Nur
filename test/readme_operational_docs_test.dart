@@ -49,6 +49,21 @@ void main() {
       expect(readme, isNot(contains('flutter_secure_storage')));
     });
 
+    test('does not publish fake production endpoint placeholders', () {
+      expect(readme, contains('--dart-define=SUPABASE_URL="\$SUPABASE_URL"'));
+      expect(
+        readme,
+        contains(
+          '--dart-define=PLACES_TILE_URL_TEMPLATE="\$PLACES_TILE_URL_TEMPLATE"',
+        ),
+      );
+      expect(readme, isNot(contains('tiles.example.com')));
+      expect(readme, isNot(contains('places-proxy.example.com')));
+      expect(readme, isNot(contains('your-project.supabase.co')));
+      expect(readme, isNot(contains('--dart-define=SUPABASE_URL=https://')));
+      expect(readme, isNot(contains('--dart-define=SUPABASE_ANON_KEY=sb_')));
+    });
+
     test(
       'documents platform-backed premium purchases instead of local simulation',
       () {
