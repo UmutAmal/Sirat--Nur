@@ -6946,3 +6946,38 @@
 
 ### Sonraki Adım
 - Sonraki dongude chatbot offline/local dataset tarafinda gercek veri yokken kalan copy ve mode akislarinin tamamı taranacak; ardindan `example.com`/`tiles.example.com` dokumantasyon placeholder'lari ve production manifest ayarlari tekrar ayrilacak.
+
+## 2026-04-16 TUR-180 — Restrict Live TV Playback Hosts
+
+### Yapılan İşlem
+- Live TV stream/embed URL kabul kapisi `https` ve guvenilir YouTube hostlari ile sinirlandi.
+- `youtube.com`, alt alanlari, `youtube-nocookie.com` ve alt alanlari disindaki cloud `embed_url`, `fallback_embed_url` ve `external_url` degerleri oynatma aday listesine alinmiyor.
+- YouTube arama sonucu filtresi genel `host.contains('youtube')` kontrolu yerine ayni guvenilir host yardimcisina baglandi.
+- Widget/dart unit testleri non-YouTube host, HTTP YouTube ve benzer isimli sahte hostlari reddedecek sekilde genisletildi.
+
+### Neden Yapıldı
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart:24` once yalnizca `isExternalHttpUri(uri)` kontrolu yapiyordu.
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart:42` once YouTube disi URL'leri ham haliyle geri dondurebiliyordu.
+- Live TV WebView `JavaScriptMode.unrestricted` ile calistigi icin Supabase satirina giren rastgele HTTPS hostunu embed etmek production surekliligi ve icerik guveni riskiydi.
+
+### Değiştirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\tv\live_tv_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\live_tv_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Cloud Live TV satirlari artik yalnizca guvenilir YouTube/YouTube-nocookie kaynaklarini oynatir.
+- `http://youtube.com/...`, `https://example.com/...`, `https://not-youtube.example/...` ve benzeri hostlar sessizce aday listesinden dusurulur.
+- Mevcut YouTube embed/watch akisi korunur; normalize edilen URL'ler `autoplay`, `playsinline` ve mute parametrelerini almaya devam eder.
+
+### Test Sonucu
+- `flutter test test\live_tv_page_test.dart` PASS (`7/7`)
+- `flutter analyze` PASS
+- `flutter test` PASS (`357/357`)
+
+### Risk Değişimi
+- Live TV WebView'in Supabase kaynakli rastgele external hostu acabilmesi riski: `16/25 -> 2/25`
+- YouTube arama sonucu filtrelemede benzer alan adi/host yanlis pozitif riski: `8/25 -> 1/25`
+
+### Sonraki Adım
+- Sonraki dongude `example.com`, placeholder URL ve production manifest/config kalintilari yeniden taranacak; ardindan en yuksek false-success veya guvenilmeyen icerik riski secilip ayni analyze/test/commit kapisindan gecirilecek.

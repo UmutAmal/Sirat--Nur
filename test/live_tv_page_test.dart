@@ -31,23 +31,24 @@ void main() {
   });
 
   group('Live TV cloud row sanitizers', () {
-    test('external URL resolver accepts only launch-safe web URLs', () {
+    test('external URL resolver accepts only launch-safe YouTube URLs', () {
       expect(
         resolveLiveTvExternalUri({
           'external_url': ' https://www.youtube.com/watch?v=abc ',
         })?.toString(),
         'https://www.youtube.com/watch?v=abc',
       );
-      expect(
-        resolveLiveTvExternalUri({
-          'external_url': 'http://example.com/live',
-        })?.toString(),
-        'http://example.com/live',
-      );
-
       expect(resolveLiveTvExternalUri({}), isNull);
       expect(resolveLiveTvExternalUri({'external_url': ''}), isNull);
       expect(resolveLiveTvExternalUri({'external_url': 42}), isNull);
+      expect(
+        resolveLiveTvExternalUri({'external_url': 'http://youtube.com/live'}),
+        isNull,
+      );
+      expect(
+        resolveLiveTvExternalUri({'external_url': 'https://example.com/live'}),
+        isNull,
+      );
       expect(resolveLiveTvExternalUri({'external_url': 'not a url'}), isNull);
       expect(
         resolveLiveTvExternalUri({'external_url': 'https:///missing-host'}),
@@ -91,12 +92,28 @@ void main() {
         final candidates = resolveLiveTvCandidateUrls({
           'embed_url': 'https:///missing-host',
           'fallback_embed_url': 7,
-          'external_url': 'https://example.com/live',
+          'external_url': 'https://www.youtube.com/watch?v=abc',
         });
 
-        expect(candidates, ['https://example.com/live']);
+        expect(candidates, hasLength(1));
+        final candidate = Uri.parse(candidates.single);
+        expect(candidate.host, 'www.youtube.com');
+        expect(candidate.queryParameters['v'], 'abc');
+        expect(candidate.queryParameters['autoplay'], '1');
+        expect(candidate.queryParameters['playsinline'], '1');
+        expect(candidate.queryParameters['mute'], '0');
       },
     );
+
+    test('candidate resolver rejects non-YouTube embed hosts', () {
+      final candidates = resolveLiveTvCandidateUrls({
+        'embed_url': 'https://example.com/embed/live',
+        'fallback_embed_url': 'https://player.example.org/live',
+        'external_url': 'https://not-youtube.example/live',
+      });
+
+      expect(candidates, isEmpty);
+    });
 
     test('display text resolver does not trust non-string cloud values', () {
       expect(

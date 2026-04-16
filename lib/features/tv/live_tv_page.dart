@@ -22,17 +22,24 @@ String? _readLiveTvString(Object? value) {
 }
 
 bool _isAllowedLiveTvUrl(Uri uri) {
-  return isExternalHttpUri(uri);
+  return isExternalHttpUri(uri) &&
+      uri.scheme == 'https' &&
+      _isTrustedLiveTvHost(uri.host);
+}
+
+bool _isTrustedLiveTvHost(String host) {
+  final normalizedHost = host.toLowerCase();
+  return normalizedHost == 'youtube.com' ||
+      normalizedHost.endsWith('.youtube.com') ||
+      normalizedHost == 'youtube-nocookie.com' ||
+      normalizedHost.endsWith('.youtube-nocookie.com');
 }
 
 bool _isLiveTvSearchResultUrl(Uri uri) {
-  return uri.host.contains('youtube') && uri.path.contains('/results');
+  return _isTrustedLiveTvHost(uri.host) && uri.path.contains('/results');
 }
 
 String _normalizeLiveTvCandidateUrl(Uri uri, {required bool mutedByDefault}) {
-  if (!uri.host.contains('youtube')) {
-    return uri.toString();
-  }
   final queryParams = <String, String>{
     ...uri.queryParameters,
     'autoplay': uri.queryParameters['autoplay'] ?? '1',
