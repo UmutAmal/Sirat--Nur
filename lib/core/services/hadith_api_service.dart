@@ -12,6 +12,8 @@ const Set<String> supportedHadithCollectionIds = {
   'ibnmajah',
 };
 
+const int minimumVerifiedHadithRowsPerCollection = 100;
+
 bool isVerifiedHadithRuntimeAvailable({required bool cloudDatasetComplete}) {
   return hasVerifiedHadithDataset && cloudDatasetComplete;
 }

@@ -87,12 +87,26 @@ void main() {
 
     test('completeness guard requires every supported collection', () {
       final completeRows = supportedHadithCollectionIds
-          .map(
-            (collectionId) => _row(collectionId: collectionId, hadithNumber: 1),
+          .expand(
+            (collectionId) => List.generate(
+              minimumVerifiedHadithRowsPerCollection,
+              (index) =>
+                  _row(collectionId: collectionId, hadithNumber: index + 1),
+            ),
           )
           .toList();
 
       expect(hasCompleteVerifiedHadithDataset(completeRows), isTrue);
+
+      final representedButTooSmallRows = supportedHadithCollectionIds
+          .map(
+            (collectionId) => _row(collectionId: collectionId, hadithNumber: 1),
+          )
+          .toList();
+      expect(
+        hasCompleteVerifiedHadithDataset(representedButTooSmallRows),
+        isFalse,
+      );
 
       final incompleteRows = completeRows
           .where((row) => row['collection_id'] != 'nasai')
@@ -133,6 +147,11 @@ void main() {
         providerSource,
         contains('hasCompleteVerifiedHadithDatasetInCloud'),
       );
+      expect(
+        providerSource,
+        contains('minimumVerifiedHadithRowsPerCollection'),
+      );
+      expect(providerSource, contains('verifiedCount <'));
       expect(providerSource, contains('.limit(_hadithCompletenessProbeLimit)'));
       expect(providerSource, contains(".eq('collection_id', collectionId)"));
       expect(providerSource, isNot(contains(".order('collection_id'")));

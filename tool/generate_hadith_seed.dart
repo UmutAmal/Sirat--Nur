@@ -1,17 +1,14 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
+
 const String _defaultManifestPath = 'content_hadith_manifest.json';
 const String _defaultOutputPath = 'content_seed_hadith.sql';
 
-const Set<String> supportedHadithCollections = {
-  'bukhari',
-  'muslim',
-  'tirmidhi',
-  'abudawud',
-  'nasai',
-  'ibnmajah',
-};
+const Set<String> supportedHadithCollections = supportedHadithCollectionIds;
+const int minimumHadithRowsPerCollection =
+    minimumVerifiedHadithRowsPerCollection;
 
 final RegExp _identifierPattern = RegExp(r'^[a-z0-9][a-z0-9_-]*$');
 
@@ -91,6 +88,7 @@ List<VerifiedHadithEntry> parseVerifiedHadithManifest(
 
   if (requireAllCollections) {
     _validateAllCollectionsRepresented(parsedEntries);
+    _validateMinimumRowsPerCollection(parsedEntries);
   }
 
   return List.unmodifiable(parsedEntries);
@@ -161,6 +159,29 @@ void _validateAllCollectionsRepresented(List<VerifiedHadithEntry> entries) {
   }
 }
 
+void _validateMinimumRowsPerCollection(List<VerifiedHadithEntry> entries) {
+  final counts = <String, int>{
+    for (final collectionId in supportedHadithCollections) collectionId: 0,
+  };
+  for (final entry in entries) {
+    counts[entry.collectionId] = (counts[entry.collectionId] ?? 0) + 1;
+  }
+
+  final undersized =
+      counts.entries
+          .where((entry) => entry.value < minimumHadithRowsPerCollection)
+          .map((entry) => '${entry.key}:${entry.value}')
+          .toList()
+        ..sort();
+  if (undersized.isNotEmpty) {
+    throw FormatException(
+      'Hadith production manifest must contain at least '
+      '$minimumHadithRowsPerCollection verified rows per supported collection. '
+      'Undersized: ${undersized.join(', ')}.',
+    );
+  }
+}
+
 String buildHadithSeedSql(Iterable<VerifiedHadithEntry> entries) {
   final rows = entries.toList()
     ..sort((left, right) {
@@ -175,6 +196,9 @@ String buildHadithSeedSql(Iterable<VerifiedHadithEntry> entries) {
     ..writeln('-- Apply content_schema.sql before this seed.')
     ..writeln(
       '-- Production manifests must represent every supported hadith collection.',
+    )
+    ..writeln(
+      '-- Production manifests must include at least $minimumHadithRowsPerCollection verified rows per collection.',
     )
     ..writeln();
 

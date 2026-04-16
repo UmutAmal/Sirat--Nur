@@ -10587,3 +10587,64 @@
 
 ### Sonraki Adim
 - Section 13 taramasi devam edecek: `hadith_provider`, `bundled_quran_provider`, `duas_data`, `asma_ul_husna_data`, `offline_audio_service`, `sukun_audio_page` icinde source/verified_at/storage_path disinda runtime dini icerik veya external-only fallback kaliyor mu kanitlanacak.
+
+## 2026-04-16 TUR-263 — Harden Hadith Dataset Coverage Gate
+
+### Yapilan Islem
+- Hadith runtime availability ve seed generator ayni minimum coverage sabitine baglandi.
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart` icine `minimumVerifiedHadithRowsPerCollection = 100` eklendi.
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart` artik her desteklenen koleksiyon icin en az 100 verified/provenance satiri olmadan dataset'i complete saymiyor.
+- Supabase cloud availability kontrolu once filtered `count()` ile 100 satir altini hizli reddediyor, sonra ilk 100 satiri `resolveVerifiedHadithItems` filtresinden gecirip gercek usable item sayisini dogruluyor.
+- `A:\Way of Allah\sirat_i_nur\tool\generate_hadith_seed.dart` production manifestlerinde sadece "her koleksiyon temsil edildi" kontroluyle yetinmiyor; her koleksiyon icin en az 100 verified entry istiyor.
+- Testler tek satirlik temsil manifestinin/datasetinin artik "complete/production" sayilmadigini kilitleyecek sekilde guncellendi.
+
+### Kanit
+- Patch oncesi risk:
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart:81` `hasCompleteVerifiedHadithDataset` sadece `items.isEmpty` kontrol ediyordu.
+- Patch oncesi test kaniti:
+  `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_provider_test.dart` her koleksiyondan 1 satir ile `isTrue` bekliyordu.
+- Patch sonrasi kaynak sabit:
+  `A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart:15`.
+- Patch sonrasi provider gate:
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart:39`,
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart:88`,
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart:100`,
+  `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart:114`.
+- Patch sonrasi seed gate:
+  `A:\Way of Allah\sirat_i_nur\tool\generate_hadith_seed.dart:9`,
+  `A:\Way of Allah\sirat_i_nur\tool\generate_hadith_seed.dart:89`,
+  `A:\Way of Allah\sirat_i_nur\tool\generate_hadith_seed.dart:162`,
+  `A:\Way of Allah\sirat_i_nur\tool\generate_hadith_seed.dart:200`.
+
+### Neden Yapildi
+- Hadithler dogrudan dini icerik oldugu icin "koleksiyon var" iddiasi tek satirlik/temsili veriyle kullaniciya acilamaz.
+- Env flag yanlislikla acilirsa eski gate 6 satirlik bir seed'i bile complete sayabilirdi.
+- Bu patch tam kanonik koleksiyon sayilarini uydurmadan, en azindan production/runtime icin dusuk coverage false-success kapisini kapatir; ileride resmi kaynak manifestleri tam sayi metadata'si tasidiginda bu minimum gate exact-count gate'e yukseltilebilir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\hadith_api_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\providers\hadith_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\generate_hadith_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\hadith_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\generate_hadith_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Odak test: `flutter test test\features\library\hadith_provider_test.dart test\generate_hadith_seed_test.dart test\hadith_provider_test.dart --reporter compact` PASS (`17/17`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Tam test: `flutter test --reporter compact` PASS (`473/473`)
+
+### Risk Degisimi
+- Tek satirlik hadith seed'in production kabul edilme riski: `16/25 -> 4/25`
+- Runtime hadith dataset false-complete riski: `16/25 -> 4/25`
+- Hadith diagnostics/library kapisinin eksik koleksiyonu tam sanma riski: `12/25 -> 5/25`
+
+### Rollback Plani
+- `minimumVerifiedHadithRowsPerCollection` sabiti ve buna bagli provider/tool kontrolleri geri alinir.
+- `hadith_provider_test.dart` ve `generate_hadith_seed_test.dart` onceki tek-satir temsil beklentilerine dondurulur.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Section 13 taramasinda Quran/Dua/Asma fallback zincirleri ve prayer profile dini kaynak secimi incelenecek; resmi kaynak metadata'si olmadan kullaniciya dini hukum/icerik sunan bir akisin kalip kalmadigi kanitlanacak.

@@ -36,7 +36,8 @@ class HadithRequest {
 
 const String _hadithSelectColumns =
     'collection_id, book, hadith_number, text_ar, text_tr, text_en, narrator, grade, source, source_license, verified_at';
-const int _hadithCompletenessProbeLimit = 100;
+const int _hadithCompletenessProbeLimit =
+    minimumVerifiedHadithRowsPerCollection;
 
 final verifiedHadithDatasetAvailabilityProvider = FutureProvider<bool>((
   ref,
@@ -84,7 +85,7 @@ bool hasCompleteVerifiedHadithDataset(List<Map<String, dynamic>> rows) {
       collectionId: collectionId,
       langCode: 'en',
     );
-    if (items.isEmpty) {
+    if (items.length < _hadithCompletenessProbeLimit) {
       return false;
     }
   }
@@ -96,6 +97,24 @@ Future<bool> hasCompleteVerifiedHadithDatasetInCloud(
   SupabaseClient supabase,
 ) async {
   for (final collectionId in supportedHadithCollectionIds) {
+    final verifiedCount = await supabase
+        .from('hadiths')
+        .count()
+        .eq('collection_id', collectionId)
+        .not('book', 'is', null)
+        .not('book', 'eq', '')
+        .not('text_ar', 'is', null)
+        .not('text_ar', 'eq', '')
+        .not('source', 'is', null)
+        .not('source', 'eq', '')
+        .not('source_license', 'is', null)
+        .not('source_license', 'eq', '')
+        .not('verified_at', 'is', null)
+        .not('verified_at', 'eq', '');
+    if (verifiedCount < _hadithCompletenessProbeLimit) {
+      return false;
+    }
+
     final rows = await supabase
         .from('hadiths')
         .select(_hadithSelectColumns)
@@ -109,6 +128,7 @@ Future<bool> hasCompleteVerifiedHadithDatasetInCloud(
         .not('source_license', 'is', null)
         .not('source_license', 'eq', '')
         .not('verified_at', 'is', null)
+        .not('verified_at', 'eq', '')
         .order('hadith_number', ascending: true)
         .limit(_hadithCompletenessProbeLimit);
     final items = resolveVerifiedHadithItems(
@@ -116,7 +136,7 @@ Future<bool> hasCompleteVerifiedHadithDatasetInCloud(
       collectionId: collectionId,
       langCode: 'en',
     );
-    if (items.isEmpty) {
+    if (items.length < _hadithCompletenessProbeLimit) {
       return false;
     }
   }

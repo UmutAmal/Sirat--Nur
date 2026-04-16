@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
 
 import '../tool/generate_hadith_seed.dart';
 
@@ -20,6 +21,10 @@ void main() {
         }),
       );
       expect(supportedHadithCollections, hasLength(6));
+      expect(
+        minimumHadithRowsPerCollection,
+        minimumVerifiedHadithRowsPerCollection,
+      );
     });
 
     test('parseVerifiedHadithManifest reads sourced rows safely', () {
@@ -59,19 +64,37 @@ void main() {
 
     test('accepts production manifests that represent every collection', () {
       final entries = parseVerifiedHadithManifest(
-        _manifestJson(
-          entries: [
-            _entry(collectionId: 'bukhari', hadithNumber: 1),
-            _entry(collectionId: 'muslim', hadithNumber: 1),
-            _entry(collectionId: 'tirmidhi', hadithNumber: 1),
-            _entry(collectionId: 'abudawud', hadithNumber: 1),
-            _entry(collectionId: 'nasai', hadithNumber: 1),
-            _entry(collectionId: 'ibnmajah', hadithNumber: 1),
-          ],
-        ),
+        _manifestJson(entries: _completeProductionEntries()),
       );
 
-      expect(entries, hasLength(6));
+      expect(
+        entries,
+        hasLength(
+          supportedHadithCollections.length * minimumHadithRowsPerCollection,
+        ),
+      );
+    });
+
+    test('rejects represented but undersized production manifests', () {
+      expect(
+        () => parseVerifiedHadithManifest(
+          _manifestJson(
+            entries: supportedHadithCollections
+                .map(
+                  (collectionId) =>
+                      _entry(collectionId: collectionId, hadithNumber: 1),
+                )
+                .toList(),
+          ),
+        ),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('at least $minimumHadithRowsPerCollection verified rows'),
+          ),
+        ),
+      );
     });
 
     test('rejects duplicate hadith rows for the same collection', () {
@@ -216,6 +239,18 @@ Map<String, Object?> _entry({
     'narrator': 'Umar ibn al-Khattab',
     'grade': 'sahih',
   };
+}
+
+List<Map<String, Object?>> _completeProductionEntries() {
+  return supportedHadithCollections
+      .expand(
+        (collectionId) => List.generate(
+          minimumHadithRowsPerCollection,
+          (index) =>
+              _entry(collectionId: collectionId, hadithNumber: index + 1),
+        ),
+      )
+      .toList(growable: false);
 }
 
 String _manifestJson({required List<Map<String, Object?>> entries}) {
