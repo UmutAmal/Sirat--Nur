@@ -105,11 +105,23 @@ List<MirroredAudioFile> parseMirroredAudioManifest(
         throw FormatException('Missing local_path in manifest row: $row');
       }
       final expectedFileName = '${surahNumber.toString().padLeft(3, '0')}.mp3';
-      final normalizedFileName = p.basename(localPath.replaceAll('\\', '/'));
+      final normalizedLocalPath = localPath.replaceAll('\\', '/');
+      final normalizedFileName = p.basename(normalizedLocalPath);
       if (normalizedFileName != expectedFileName) {
         throw FormatException(
           'Invalid local_path file name for reciter $reciterId, '
           'surah $surahNumber: expected $expectedFileName.',
+        );
+      }
+      final localPathSegments = normalizedLocalPath
+          .split('/')
+          .where((segment) => segment.isNotEmpty)
+          .toList(growable: false);
+      if (localPathSegments.length < 2 ||
+          localPathSegments[localPathSegments.length - 2] != reciterId) {
+        throw FormatException(
+          'Invalid local_path reciter directory for reciter $reciterId, '
+          'surah $surahNumber.',
         );
       }
 

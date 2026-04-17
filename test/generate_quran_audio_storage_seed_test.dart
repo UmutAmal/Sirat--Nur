@@ -244,6 +244,35 @@ void main() {
       );
     });
 
+    test('rejects local files outside the declared reciter directory', () {
+      expect(
+        () => parseMirroredAudioManifest('''
+{
+  "requested": 1,
+  "downloaded": 1,
+  "skipped": 0,
+  "failed": [],
+  "files": [
+    {
+      "surah_number": 1,
+      "reciter": "alafasy",
+      "source": "https://api.quran.com/api/v4/chapter_recitations/7",
+      "verified_at": "2026-04-08T19:00:42.228933Z",
+      "local_path": "build/verified_quran_audio/husary/001.mp3"
+    }
+  ]
+}
+''', requireCompleteCatalog: false),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('Invalid local_path reciter directory'),
+          ),
+        ),
+      );
+    });
+
     test('buildQuranAudioStorageSeedSql rejects partial rows by default', () {
       expect(
         () => buildQuranAudioStorageSeedSql([

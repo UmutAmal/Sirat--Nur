@@ -14842,3 +14842,42 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak audio storage seed manifest URL guard'i, l10n debt ve Asma source kaniti taranacak.
+
+## 2026-04-17 TUR-340 - Quran Audio Storage Manifest Reciter Path Guard
+
+### MASTER Karari
+- Risk: `tool/generate_quran_audio_storage_seed.dart:107` manifest parse yalnizca MP3 dosya adinin sure numarasiyla eslesmesini kontrol ediyordu; `local_path` icindeki reciter klasoru `reciter` alaniyla eslesmeyebilirdi.
+- Kanit: `MirroredAudioFile.storagePath` ve upload object path'i `reciterId/fileName` uzerinden kuruluyor; manifestte `reciter=alafasy` ama `local_path=.../husary/001.mp3` olsaydi yanlis reciter ses dosyasi alafasy path'iyle seedlenebilirdi.
+- Etki: Quran seslerinde reciter karismasi, kullanicinin sectigi okuyucudan farkli tilavet dinlemesine yol acabilirdi.
+- Olasilik: Manifest manuel tasinir, Windows path normalize edilir veya mirror klasorleri operator tarafinda karisirse tetiklenebilir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1).
+- Rollback kapsami: `tool/generate_quran_audio_storage_seed.dart`, `test/generate_quran_audio_storage_seed_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `tool/generate_quran_audio_storage_seed.dart:108` `local_path` Windows slash'leri normalize ediliyor.
+- `tool/generate_quran_audio_storage_seed.dart:116` path segmentleri cikariliyor.
+- `tool/generate_quran_audio_storage_seed.dart:120` dosya adindan onceki klasorun `reciterId` ile eslesmesi zorunlu hale getirildi.
+- `tool/generate_quran_audio_storage_seed.dart:123` uyumsuz manifest satiri fail-fast `FormatException` ile reddediliyor.
+
+### TESTER Kapsami
+- `test/generate_quran_audio_storage_seed_test.dart:247` `reciter=alafasy` iken `local_path=.../husary/001.mp3` olan manifest satirinin reddedildigini dogruluyor.
+- Mevcut Windows path normalizasyon ve smoke manifest testleri gecmeye devam etti.
+
+### Test Sonucu
+- Format: `dart format tool\generate_quran_audio_storage_seed.dart test\generate_quran_audio_storage_seed_test.dart` PASS
+- Odak test: `flutter test test\generate_quran_audio_storage_seed_test.dart --reporter compact` PASS (`16/16`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`565/565`)
+
+### Risk Degisimi
+- Yanlis reciter klasorundeki lokal MP3'un dogru reciter storage path'iyle seedlenmesi riski: `12/25 -> 2/25`
+- Kalan risk: MP3 iceriginin semantik olarak gercekten ilgili reciter/sure olup olmadigi checksum veya audio fingerprint dogrulamasi gerektirir; bu tur manifest path tutarliligini kapatti.
+
+### Rollback Plani
+- `localPathSegments` reciter klasoru kontrolu kaldirilir.
+- Eklenen manifest mismatch testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak audio checksum/fingerprint belirsizligi, l10n debt ve Asma source kaniti taranacak.
