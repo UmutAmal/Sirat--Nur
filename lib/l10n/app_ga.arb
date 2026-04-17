@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "Surah an Quran",
   "diagnosticsQuranAyahs": "Ayahs an Quran",
   "diagnosticsQuranJuzMetadata": "Meiteashonraí Quran Juz",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Táblaí scamall in easnamh i Supabase; cúltaca cuachta gníomhach",
   "diagnosticsQuranCloudCheckFailed": "Theip ar sheiceáil scamall: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -276,7 +276,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Meiteashonraí Cloud juz in easnamh; cúltaca struchtúrach cuachta gníomhach",
   "diagnosticsQuranCloudStructuralCheckFailed": "Theip ar sheiceáil struchtúrach néal: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -390,11 +390,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Íosluchtaigh",
+  "resumeDownload": "Íosluchtaigh atosú",
+  "deleteDownloadedFiles": "Scrios Comhaid Íosluchtaithe",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Cuireadh an t-íoslódáil ar ceal le haghaidh {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -402,7 +402,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Íoslódáil críochnaithe do {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -750,10 +750,10 @@
       }
     }
   },
-  "placesLocationRequiredTitle": "Location required",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
-  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesLocationRequiredTitle": "Suíomh ag teastáil",
+  "placesLocationRequiredBody": "Socraigh suíomh ar dtús ionas gur féidir moscanna in aice láimhe, bia halal, agus scoileanna Ioslamacha a chuardach go cruinn.",
+  "placesMapTilesUnavailableTitle": "Níl fáil ar thíleanna léarscáile",
+  "placesMapTilesUnavailableBody": "Níl foinse tíl léarscáile fíoraithe cumraithe don tógáil seo fós. Is féidir le háiteanna in aice láimhe lódáil fós ó do shuíomh sábháilte.",
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
@@ -765,7 +765,7 @@
   "locationDetectionFailed": "Níorbh fhéidir do shuíomh a bhrath. Roghnaigh cathair de láimh nó bain triail eile as.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Places data unavailable",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableTitle": "Níl sonraí faoi áiteanna ar fáil",
+  "placesDataSourceUnavailableBody": "Níl críochphointe sonraí áiteanna fíoraithe cumraithe don leagan seo fós. Socraigh PLACES_OVERPASS_API_URL chuig seachfhreastalaí nó soláthraí ceadaithe roimh duit cuardach in aice láimhe a chumasú.",
   "tafsirCacheUnavailable": "Níl tafsir deimhnithe ar fáil as líne fós. Sioncronaigh tacar sonraí tafsir foinsithe roimh bhrabhsáil."
 }

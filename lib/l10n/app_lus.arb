@@ -390,8 +390,8 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
+  "downloadAction": "Download rawh",
+  "resumeDownload": "Resume Download rawh",
   "deleteDownloadedFiles": "Delete Downloaded Files",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",

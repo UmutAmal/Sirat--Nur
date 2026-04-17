@@ -917,7 +917,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'ตารางคลาวด์หายไปใน Supabase รวมทางเลือกที่ใช้งานอยู่';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -926,7 +926,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'ข้อมูลเมตาของ Cloud juz หายไป ทางเลือกเชิงโครงสร้างแบบรวมที่ใช้งานอยู่';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1204,25 +1204,25 @@ class AppLocalizationsTh extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'ดาวน์โหลด';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'ดาวน์โหลดต่อ';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'ลบไฟล์ที่ดาวน์โหลด';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'การดาวน์โหลดถูกยกเลิกสำหรับ $reciter';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'ดาวน์โหลดเสร็จสมบูรณ์สำหรับ $reciter';
   }
 
   @override
@@ -1354,25 +1354,25 @@ class AppLocalizationsTh extends AppLocalizations {
   String get placesNetworkError => 'ข้อผิดพลาดของเครือข่าย โปรดลองอีกครั้ง';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'จำเป็นต้องระบุตำแหน่ง';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'กำหนดสถานที่ก่อนเพื่อให้สามารถค้นหามัสยิดใกล้เคียง อาหารฮาลาล และโรงเรียนสอนศาสนาอิสลามได้อย่างแม่นยำ';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'ชิ้นส่วนแผนที่ไม่พร้อมใช้งาน';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'ยังไม่ได้กำหนดค่าแหล่งที่มาของชิ้นส่วนแผนที่ที่ได้รับการยืนยันสำหรับรุ่นนี้ สถานที่ใกล้เคียงยังคงสามารถโหลดจากตำแหน่งที่คุณบันทึกไว้ได้';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'ไม่มีข้อมูลสถานที่';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'ยังไม่ได้กำหนดค่าปลายทางข้อมูลสถานที่ที่ยืนยันแล้วสำหรับบิลด์นี้ ตั้งค่า PLACES_OVERPASS_API_URL เป็นพร็อกซีหรือผู้ให้บริการที่ได้รับอนุมัติก่อนเปิดใช้งานการค้นหาในบริเวณใกล้เคียง';
 
   @override
   String get unknownPlaceName => 'ชื่อที่ไม่รู้จัก';

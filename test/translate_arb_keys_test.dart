@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 
 import '../tool/translate_arb_keys.dart';
@@ -141,6 +144,71 @@ void main() {
           '- downloadFinishedForReciter: same-as-English=fr; '
           'missing-or-empty=de; placeholder-mismatch=es',
         ),
+      );
+    });
+
+    test('tracks committed low-resource l10n debt reduction', () {
+      const keys = [
+        'downloadAction',
+        'resumeDownload',
+        'deleteDownloadedFiles',
+        'downloadCanceledForReciter',
+        'downloadFinishedForReciter',
+        'diagnosticsQuranCloudTablesMissing',
+        'diagnosticsQuranCloudJuzMissing',
+        'chatbotCloudNotConfigured',
+        'chatbotLocalNoInfo',
+        'chatbotOfflinePrompt',
+        'chatbotOfflineSwitched',
+        'placesSearchArea',
+        'nearbyMosques',
+        'placesFoundCount',
+        'distanceAwayKm',
+        'placesApiError',
+        'placesNetworkError',
+        'placesLocationRequiredTitle',
+        'placesLocationRequiredBody',
+        'placesMapTilesUnavailableTitle',
+        'placesMapTilesUnavailableBody',
+        'placesDataSourceUnavailableTitle',
+        'placesDataSourceUnavailableBody',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1558));
+      expect(
+        localeArbs['ak']!['downloadAction'],
+        isNot(english['downloadAction']),
+      );
+      expect(
+        localeArbs['cy']!['placesDataSourceUnavailableBody'],
+        isNot(english['placesDataSourceUnavailableBody']),
+      );
+      expect(
+        localeArbs['ga']!['diagnosticsQuranCloudTablesMissing'],
+        isNot(english['diagnosticsQuranCloudTablesMissing']),
+      );
+      expect(
+        localeArbs['th']!['placesLocationRequiredBody'],
+        isNot(english['placesLocationRequiredBody']),
       );
     });
 
@@ -660,6 +728,38 @@ void main() {
       expect(value, 'Bulut kontrolu basarisiz: {error}');
     });
 
+    test('preserves technical provider and config tokens', () {
+      final placesValue = resolveTranslatedArbValue(
+        key: 'placesDataSourceUnavailableBody',
+        source:
+            'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.',
+        currentValue: 'Подесите ПЛАЦЕС_ОВЕРПАСС_АПИ_УРЛ пре претраге.',
+        candidate:
+            'Verifikovana krajnja tacka nije podesena. Podesite PLACES_OVERPASS_API_URL pre pretrage.',
+      );
+
+      final diagnosticsValue = resolveTranslatedArbValue(
+        key: 'diagnosticsQuranCloudTablesMissing',
+        source: 'Cloud tables missing in Supabase; bundled fallback active',
+        currentValue: 'सुपाबेस में क्लाउड टेबल गायब बा; बंडल फॉलबैक सक्रिय बा',
+        candidate: 'Supabase icinde bulut tablolari eksik; paket yedek aktif.',
+      );
+
+      expect(placesValue, contains('PLACES_OVERPASS_API_URL'));
+      expect(diagnosticsValue, contains('Supabase'));
+    });
+
+    test('rejects multiline places runtime output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'placesMapTilesUnavailableTitle',
+        source: 'Map tiles unavailable',
+        currentValue: 'Map\nTiles',
+        candidate: 'Map\nTiles',
+      );
+
+      expect(value, 'Map tiles unavailable');
+    });
+
     test('preserves chatbot offline status token', () {
       final translatedPrefixValue = resolveTranslatedArbValue(
         key: 'chatbotLocalNoInfo',
@@ -690,4 +790,8 @@ void main() {
       );
     });
   });
+}
+
+Map<String, dynamic> _readArbFile(String path) {
+  return jsonDecode(File(path).readAsStringSync()) as Map<String, dynamic>;
 }

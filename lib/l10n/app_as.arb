@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "কোৰআনৰ চুৰা",
   "diagnosticsQuranAyahs": "কোৰআন আয়াহ",
   "diagnosticsQuranJuzMetadata": "কোৰআন জুজ মেটাডাটা",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Supabase ত ক্লাউড টেবুল অনুপস্থিত; বাণ্ডিল কৰা ফ'লবেক সক্ৰিয়",
   "diagnosticsQuranCloudCheckFailed": "ক্লাউড পৰীক্ষা ব্যৰ্থ: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -276,7 +276,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "ক্লাউড juz মেটাডাটা অনুপস্থিত; বাণ্ডিলড ষ্ট্ৰাকচাৰেল ফ'লবেক সক্ৰিয়",
   "diagnosticsQuranCloudStructuralCheckFailed": "ক্লাউড গাঁথনিগত পৰীক্ষা ব্যৰ্থ: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -390,11 +390,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "ডাউনল’ড",
+  "resumeDownload": "ডাউনলোড পুনৰ আৰম্ভ কৰক",
+  "deleteDownloadedFiles": "ডাউনলোড কৰা ফাইলসমূহ মচি পেলাওক",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} ৰ বাবে ডাউনলোড বাতিল কৰা হৈছে।",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -402,7 +402,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter} ৰ বাবে ডাউনলোড সম্পূৰ্ণ হৈছে।",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -750,10 +750,10 @@
       }
     }
   },
-  "placesLocationRequiredTitle": "Location required",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
-  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesLocationRequiredTitle": "স্থানৰ প্ৰয়োজন",
+  "placesLocationRequiredBody": "প্ৰথমে এটা স্থান নিৰ্ধাৰণ কৰক যাতে ওচৰৰ মছজিদ, হালাল খাদ্য, আৰু ইছলামিক স্কুলবোৰ সঠিকভাৱে বিচাৰিব পৰা যায়।",
+  "placesMapTilesUnavailableTitle": "মেপ টাইল উপলব্ধ নহয়",
+  "placesMapTilesUnavailableBody": "এই নিৰ্মাণৰ বাবে এটা পৰীক্ষা কৰা মেপ টাইল উৎস এতিয়াও বিন্যাস কৰা হোৱা নাই । ওচৰৰ ঠাইসমূহে এতিয়াও আপোনাৰ সংৰক্ষিত অৱস্থানৰ পৰা লোড কৰিব পাৰে।",
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
@@ -765,7 +765,7 @@
   "locationDetectionFailed": "আপোনাৰ অৱস্থান ধৰা পেলাব পৰা নগ'ল। অনুগ্ৰহ কৰি এখন চহৰ হস্তচালিতভাৱে বাছক বা পুনৰ চেষ্টা কৰক।",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Places data unavailable",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableTitle": "তথ্য অনুপলব্ধ কৰি ৰাখে",
+  "placesDataSourceUnavailableBody": "এই নিৰ্মাণৰ বাবে এটা পৰীক্ষা কৰা স্থান তথ্য শেষবিন্দু এতিয়াও বিন্যাস কৰা হোৱা নাই । ওচৰৰ সন্ধান সামৰ্থবান কৰাৰ আগতে PLACES_OVERPASS_API_URLক এটা অনুমোদিত প্ৰক্সি বা প্ৰদানকাৰীলৈ সংহতি কৰক।",
   "tafsirCacheUnavailable": "Verified tafsir এতিয়াও অফলাইনত উপলব্ধ নহয়। ব্ৰাউজ কৰাৰ আগতে এটা উৎসযুক্ত tafsir ডাটাছেট ছিঙ্ক কৰক।"
 }

@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "Kur'anske sure",
   "diagnosticsQuranAyahs": "Kur'anski ajeti",
   "diagnosticsQuranJuzMetadata": "Metapodaci o džuzu Kur'ana",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "U Supabaseu nedostaju tablice u oblaku; zamjena u paketu aktivna",
   "diagnosticsQuranCloudCheckFailed": "Provjera oblaka nije uspjela: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -276,7 +276,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Nedostaju metapodaci Cloud Juza; paketni strukturni rezervni aktivan",
   "diagnosticsQuranCloudStructuralCheckFailed": "Provjera strukture oblaka nije uspjela: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -390,11 +390,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "preuzimanje",
+  "resumeDownload": "Nastavi preuzimanje",
+  "deleteDownloadedFiles": "Brisanje preuzetih datoteka",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Otkazano preuzimanje za {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -402,7 +402,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Preuzimanje je dovršeno za {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -750,10 +750,10 @@
       }
     }
   },
-  "placesLocationRequiredTitle": "Location required",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
-  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesLocationRequiredTitle": "Potrebna lokacija",
+  "placesLocationRequiredBody": "Najprije postavite lokaciju kako bi se obližnje džamije, halal hrana i islamske škole mogle točno pretražiti.",
+  "placesMapTilesUnavailableTitle": "Pločice karte nisu dostupne",
+  "placesMapTilesUnavailableBody": "Potvrđeni izvor pločica karte još nije konfiguriran za ovu verziju. Mjesta u blizini i dalje se mogu učitati s vaše spremljene lokacije.",
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
@@ -765,7 +765,7 @@
   "locationDetectionFailed": "Nije moguće otkriti vašu lokaciju. Please choose a city manually or try again.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Places data unavailable",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableTitle": "Podaci o mjestima nisu dostupni",
+  "placesDataSourceUnavailableBody": "Potvrđena krajnja točka podataka o mjestima još nije konfigurirana za ovu međugradnju. Postavite PLACES_OVERPASS_API_URL na odobreni proxy ili pružatelja usluga prije nego što omogućite pretraživanje u blizini.",
   "tafsirCacheUnavailable": "Potvrđeni tefsir još nije dostupan izvan mreže. Prije pregledavanja sinkronizirajte izvorni skup podataka tefsira."
 }

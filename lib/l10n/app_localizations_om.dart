@@ -925,7 +925,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Gabateewwan duumessaa Supabase keessatti dhabaman; bundled fallback sochiirra jira';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -934,7 +934,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Meetadaataan duumessa juz dhabame; bundled caasaa kufaatii duubatti deebi’uu sochii';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1213,13 +1213,13 @@ class AppLocalizationsOm extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Buusuu';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Resume Download gochuudhaan';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Faayilota Buufaman Haquu';
 
   @override
   String get downloadCancelling => 'Cancelling...';
@@ -1364,25 +1364,26 @@ class AppLocalizationsOm extends AppLocalizations {
       'Dogoggora networkii. Mee irra deebi\'ii yaalaa.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Bakki barbaachisaadha';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Dursa bakka kaa\'i akka masjiidota dhiyoo jiran, nyaanni halaala, fi manneen barnootaa Islaamaa sirritti sakatta\'amuu danda\'uuf.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Tiloonni kaartaa hin argaman';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Maddi taayilii kaartaa mirkanaa\'e hanga ammaatti ijaarsa kanaaf hin qindaa\'in. Bakkeewwan dhiyoo jiran ammallee bakka qusatte irraa fe\'uu danda\'u.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Deetaan akka hin argamne kaa\'a';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Qabxiin xumura deetaa iddoowwan mirkanaa\'e ammallee ijaarsa kanaaf hin qindaa\'in. Barbaacha dhiyoo dandeessisuun dura PLACES_OVERPASS_API_URL gara bakka bu\'aa ykn dhiyeessaa mirkanaa\'etti saagi.';
 
   @override
   String get unknownPlaceName => 'Maqaa Hin Beekamne';

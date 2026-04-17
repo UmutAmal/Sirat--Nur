@@ -922,7 +922,7 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Umi tabla arai rehegua ofaltáva Supabase-pe; fallback paquete rehegua activo';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -931,7 +931,7 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Arai juz metadato ofalta; paquete estructural fallback activo rehegua';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1209,25 +1209,25 @@ class AppLocalizationsGn extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Mboguejy';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Resumen Descarga rehegua';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Embogue umi Archivo Ojegueruva’ekue';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Oñemboguejy oñembogue $reciter-pe g̃uarã.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Ojegueru oñembotýma $reciter-pe g̃uarã.';
   }
 
   @override
@@ -1359,25 +1359,25 @@ class AppLocalizationsGn extends AppLocalizations {
   String get placesNetworkError => 'Red jejavy. Eñeha’ã jey.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Ubicación oñeikotevẽva';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Oñemohenda raẽ peteĩ tenda ikatu haguã ojeheka hekopete umi mezquita hi’aguĩva, tembi’u halal ha mbo’ehao islámico.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Mapa azulejos ndojeguerekói';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Peteĩ fuente azulejo mapa rehegua oñembohekopyréva noñembohekopyrýi gueteri ko ñemopu’ãme g̃uarã. Umi tenda hi’aguĩva ikatu gueteri okargá nde tenda reñongatuva’ekuégui.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Omoĩ dato ndojeguerekóiva';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Peteĩ punto paha dato tenda rehegua oñembohekopyréva noñembohekopyrýi gueteri ko ñemopu’ãme g̃uarã. Emohenda PLACES_OVERPASS_API_URL peteĩ proxy térã proveedor oñemoneĩvape emboguata mboyve jeheka hi’aguĩva.';
 
   @override
   String get unknownPlaceName => 'Ndojekuaáiva Téra';

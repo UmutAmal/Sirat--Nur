@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "Quran Surah",
   "diagnosticsQuranAyahs": "Ayahs an Quran",
   "diagnosticsQuranJuzMetadata": "Metadata an Quran Juz",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Clàran neòil a dhìth ann an Supabase; fallback cuachta gnìomhach",
   "diagnosticsQuranCloudCheckFailed": "Dh’fhàillig sgrùdadh neòil: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -276,7 +276,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz meata-dàta a dhìth; tuiteam air ais structarail cuachta gnìomhach",
   "diagnosticsQuranCloudStructuralCheckFailed": "Dh’fhàillig sgrùdadh structarail neòil: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -390,11 +390,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Luchdaich sìos",
+  "resumeDownload": "Ath-thòiseachadh a luchdachadh sìos",
+  "deleteDownloadedFiles": "Sguab às Faidhlichean a chaidh a luchdachadh sìos",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Chaidh an luchdachadh sìos a chuir dheth airson {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -402,7 +402,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Luchdaich sìos crìochnaichte airson {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -750,10 +750,10 @@
       }
     }
   },
-  "placesLocationRequiredTitle": "Location required",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
-  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesLocationRequiredTitle": "Àite a dhìth",
+  "placesLocationRequiredBody": "Suidhich àite an toiseach gus an tèid mosg faisg air làimh, biadh halal, agus sgoiltean Ioslamach a sgrùdadh gu ceart.",
+  "placesMapTilesUnavailableTitle": "Chan eil leacan mapa ri fhaighinn",
+  "placesMapTilesUnavailableBody": "Chan eil stòr leac mapa dearbhte air a rèiteachadh airson an togail seo fhathast. Faodaidh àiteachan faisg air làimh luchdachadh bhon àite a chaidh a shàbhaladh fhathast.",
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
@@ -765,7 +765,7 @@
   "locationDetectionFailed": "Cha b' urrainn dhuinn d' ionad a lorg. Tagh baile-mòr le làimh no feuch ris a-rithist.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Places data unavailable",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableTitle": "Chan eil dàta àite ri fhaighinn",
+  "placesDataSourceUnavailableBody": "Chan eil ceann-uidhe dàta àiteachan dearbhte air a rèiteachadh airson an togail seo fhathast. Suidhich PLACES_OVERPASS_API_URL gu neach-ionaid no solaraiche aontaichte mus cuir thu an comas rannsachadh faisg air làimh.",
   "tafsirCacheUnavailable": "Chan eil tafsir dearbhte ri fhaighinn far loidhne fhathast. Sioncronaich stòr-dàta tafsir a fhuair thu mus brobhsadh thu."
 }

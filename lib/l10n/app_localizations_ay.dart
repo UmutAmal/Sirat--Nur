@@ -1225,10 +1225,10 @@ class AppLocalizationsAy extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Ukax mä juk’a pachanakanwa';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Resumen Descarga ukax mä juk’a pachanakanwa';
 
   @override
   String get deleteDownloadedFiles => 'Uñstayata Archivonaka chhaqtayaña';

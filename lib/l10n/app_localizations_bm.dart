@@ -918,7 +918,7 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Sankaba tabali minnu tununna Supabase kɔnɔ; bundled fallback bɛ baara kɛ';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -927,7 +927,7 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Sankaba juz metadata tununna; bundled structurel fallback bɛ baara kɛ';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1207,10 +1207,10 @@ class AppLocalizationsBm extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Ka telesarize';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Téléchargement (Téléchargement) daminɛ';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';
@@ -1220,12 +1220,12 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Téléchargement cancellé pour $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Téléchargement dafalen don $reciter kama.';
   }
 
   @override
@@ -1358,25 +1358,26 @@ class AppLocalizationsBm extends AppLocalizations {
       'Réseau fili ye. Aw ye aw jija ka segin a kan.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Yɔrɔ min ka kan ka kɛ';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Aw ye yɔrɔ dɔ sigi fɔlɔ walasa misiri minnu bɛ kɛrɛfɛ, halal dumuniw, ani silamɛya kalansow ka se ka ɲini ka ɲɛ.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Karta tilew tɛ sɔrɔ';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Karta tile sɔrɔyɔrɔ sɛgɛsɛgɛlen ma labɛn nin jɔli in kama fɔlɔ. Yɔrɔ minnu bɛ i kɛrɛfɛ, olu bɛ se ka doni ta hali bi ka bɔ i ka yɔrɔ maralen na.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Yɔrɔ minnu bɛ dataw sɔrɔ minnu tɛ sɔrɔ';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Yɔrɔw kunnafoni labanyɔrɔ sɛgɛsɛgɛlen ma labɛn nin jɔli in kama fɔlɔ. PLACES_OVERPASS_API_URL sigi proxy walima provider dabɔlen dɔ la sani i ka ɲinini kɛ kɛrɛfɛ.';
 
   @override
   String get unknownPlaceName => 'Tɔgɔ Dɔnbali';

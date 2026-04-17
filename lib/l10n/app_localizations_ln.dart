@@ -921,7 +921,7 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Ba tableaux ya mapata ezangi na Supabase; bundled fallback ezali kosala';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -930,7 +930,7 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Ba métadonnées ya clou juz ezangi; bundled structurel fallback ezali kosala';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1207,13 +1207,13 @@ class AppLocalizationsLn extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Kozwa';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Kozongela Téléchargement';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Bolongola ba fichiers oyo o télécharger';
 
   @override
   String get downloadCancelling => 'Cancelling...';
@@ -1357,25 +1357,26 @@ class AppLocalizationsLn extends AppLocalizations {
   String get placesNetworkError => 'Libunga ya réseau. Svp meka lisusu.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Esika esengeli kozala';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Botia esika liboso po ba mosquées ya pembeni, biloko ya kolia ya halal, na ba écoles islamiques ekoki kolukama na bosikisiki.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Carreaux ya carte ezali te';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Source ya carreaux ya carte oyo e vérifié e configuré nanu te pona botongi oyo. Bisika ya penepene ekoki kaka ko charger uta na esika oyo obombi.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Ezali kotya ba données oyo ezali te';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Point d\'arrêt ya ba données ya places vérifié e configuré nanu te pona construction oyo. Botia PLACES_OVERPASS_API_URL na proxy to mopesi oyo endimami yambo ya kofungola boluki ya penepene.';
 
   @override
   String get unknownPlaceName => 'Kombo eyebani te';

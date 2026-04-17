@@ -924,7 +924,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase ގައި ނެތް ކްލައުޑް ޓޭބަލްތައް؛ ބަންޑްލްޑް ފޯލްބެކް އެކްޓިވް';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -933,7 +933,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'ކްލައުޑް ޖޫޒް މެޓަޑޭޓާ ގެއްލިފައިވުން؛ ބަންޑްލްޑް ސްޓްރަކްޗަރަލް ފޯލްބެކް އެކްޓިވް';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1214,25 +1214,26 @@ class AppLocalizationsDv extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'ޑައުންލޯޑް';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'ރިޒުޔޫ ޑައުންލޯޑް';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles =>
+      'ޑައުންލޯޑް ކުރެވިފައިވާ ފައިލްތައް ޑިލީޓްކުރުން';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter އަށް ޑައުންލޯޑް ކެންސަލް ކޮށްފި އެވެ.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter އަށް ޑައުންލޯޑް ނިމިއްޖެއެވެ.';
   }
 
   @override
@@ -1365,25 +1366,26 @@ class AppLocalizationsDv extends AppLocalizations {
       'ނެޓްވޯކް އެރަރ. އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'ލޮކޭޝަން ބޭނުންވެއެވެ';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'ފުރަތަމަ ލޮކޭޝަނެއް ކަނޑައަޅާނީ ކައިރީގައި ހުންނަ މިސްކިތްތަކާއި، ހަލާލު ކާނާއާއި، އިސްލާމީ ސްކޫލްތައް ޞަރީޙަކޮށް ހޯދައި ބެލޭނެ ގޮތަކަށެވެ.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'މެޕް ޓައިލްސް ނުލިބޭ';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'މި ބިލްޑަށް އަދި ވެރިފައިޑް މެޕް ޓައިލް ސޯސްއެއް ކޮންފިގްރޭޓްކޮށްފައެއް ނުވެއެވެ. ކައިރީގައި ހުންނަ ތަންތަނަށް އަދިވެސް ތިބާގެ ސޭވްކޮށްފައިވާ ތަނުން ލޯޑް ކުރެވޭނެއެވެ.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'ޑޭޓާ ނުލިބޭ ގޮތަށް ބެހެއްޓުން';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'މި ބިލްޑަށް އަދި ވެރިފައިޑް ޕްލޭސްސް ޑޭޓާ އެންޑްޕޮއިންޓެއް ކޮންފިގްރޭޓްކޮށްފައެއް ނުވެއެވެ. ކައިރީގައި ހުރި ހޯދުން އެނެބަލް ކުރުމުގެ ކުރިން PLACES_OVERPASS_API_URL އަށް އެޕްރޫވް ކުރެވިފައިވާ ޕްރޮކްސީ ނުވަތަ ޕްރޮވައިޑަރަކަށް ސެޓް ކުރާށެވެ.';
 
   @override
   String get unknownPlaceName => 'ނޭނގޭ ނަމެކެވެ';

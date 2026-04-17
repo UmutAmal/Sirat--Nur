@@ -921,7 +921,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Tablau cwmwl ar goll yn Supabase; bwndelu wrth gefn yn weithredol';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -930,7 +930,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Metadata cwmwl juz ar goll; bwndelu strwythurol wrth gefn yn weithredol';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1207,25 +1207,25 @@ class AppLocalizationsCy extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Lawrlwythwch';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Ailddechrau Lawrlwytho';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Dileu Ffeiliau Wedi\'u Lawrlwytho';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Llawrlwythiad wedi\'i ganslo ar gyfer $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Lawrlwytho wedi\'i gwblhau ar gyfer $reciter.';
   }
 
   @override
@@ -1357,25 +1357,25 @@ class AppLocalizationsCy extends AppLocalizations {
   String get placesNetworkError => 'Gwall rhwydwaith. Ceisiwch eto.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Angen lleoliad';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Gosodwch leoliad yn gyntaf fel y gellir chwilio\'n gywir am fosgiau cyfagos, bwyd halal, ac ysgolion Islamaidd.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Nid yw teils map ar gael';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Nid yw ffynhonnell teils map wedi\'i dilysu wedi\'i ffurfweddu ar gyfer yr adeilad hwn eto. Gall lleoedd cyfagos ddal i lwytho o\'ch lleoliad sydd wedi\'i gadw.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Nid yw data lleoedd ar gael';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Nid yw pwynt terfyn data lleoedd wedi\'i ddilysu wedi\'i ffurfweddu ar gyfer yr adeilad hwn eto. Gosod PLACES_OVERPASS_API_URL i ddirprwy neu ddarparwr cymeradwy cyn galluogi chwiliad cyfagos.';
 
   @override
   String get unknownPlaceName => 'Enw Anhysbys';

@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "Di Sura dɛn we de na di Kɔran",
   "diagnosticsQuranAyahs": "Di Ayah dɛn we de na di Kɔran",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata we de na di wɔl",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Klaud tebul dɛn we nɔ de na Supabase; bundled fallback aktif",
   "diagnosticsQuranCloudCheckFailed": "Klaud chɛk nɔ wok: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -276,7 +276,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Klaud juz mɛtadata nɔ de; bundled strɔkchɔral fɔlbak aktif",
   "diagnosticsQuranCloudStructuralCheckFailed": "Klaud strɔkchɔral chɛk nɔ wok: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -390,11 +390,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Dɔŋlod",
+  "resumeDownload": "Risum Daunlod",
+  "deleteDownloadedFiles": "Dilit Fayl dɛn we yu dɔn Daunlod",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Daunlod kansel fɔ {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -402,7 +402,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Daunlod dɔn dɔn fɔ {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -750,10 +750,10 @@
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "Islamic Way of Light",
   "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
-  "placesLocationRequiredTitle": "Location required",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
-  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesLocationRequiredTitle": "Di say we dɛn nid fɔ de",
+  "placesLocationRequiredBody": "Set ples fɔs so dat dɛn go ebul fɔ fɛn di moskɛt dɛn we de nia de, halal it, ɛn Islamik skul dɛn kɔrɛkt wan.",
+  "placesMapTilesUnavailableTitle": "Map tayl dɛn nɔ de",
+  "placesMapTilesUnavailableBody": "Wan verified map tayl sɔs nɔ kɔnfigyut fɔ dis bild yet. Ples dɛn we de nia yu kin stil lod frɔm di say we yu dɔn sev.",
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
@@ -765,7 +765,7 @@
   "locationDetectionFailed": "Nɔ bin ebul fɔ no usay yu de. Duya pik wan siti wit yu an ɔ tray bak.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Places data unavailable",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableTitle": "Ples di data we nɔ de",
+  "placesDataSourceUnavailableBody": "Wan verified ples data endpoint nɔ kɔnfigyut fɔ dis bild yet. Set PLACES_OVERPASS_API_URL to wan apruv prɔksi ɔ prɔvayda bifo yu ɛnabul sɔch we de nia.",
   "tafsirCacheUnavailable": "Verified tafsir nɔ de ɔflayna yet. Sink wan sɔs tafsir datasɛt bifo yu browz."
 }

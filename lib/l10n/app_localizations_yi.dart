@@ -1368,7 +1368,7 @@ class AppLocalizationsYi extends AppLocalizations {
       'א וועראַפייד מאַפּע קאַכל מקור איז נישט קאַנפיגיערד פֿאַר דעם בויען נאָך. נעאַרבי ערטער קענען נאָך לאָדן פֿון דיין געראטעוועט אָרט.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'ערטער דאַטן אַנאַוויילאַבאַל';
 
   @override
   String get placesDataSourceUnavailableBody =>

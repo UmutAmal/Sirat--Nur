@@ -390,7 +390,7 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
+  "downloadAction": "डाउनलोड करें",
   "resumeDownload": "Resume Download",
   "deleteDownloadedFiles": "Delete Downloaded Files",
   "downloadCancelling": "Cancelling...",

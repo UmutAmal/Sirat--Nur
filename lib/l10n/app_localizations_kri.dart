@@ -918,7 +918,7 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Klaud tebul dɛn we nɔ de na Supabase; bundled fallback aktif';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -927,7 +927,7 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Klaud juz mɛtadata nɔ de; bundled strɔkchɔral fɔlbak aktif';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1203,25 +1203,25 @@ class AppLocalizationsKri extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Dɔŋlod';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Risum Daunlod';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Dilit Fayl dɛn we yu dɔn Daunlod';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Daunlod kansel fɔ $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Daunlod dɔn dɔn fɔ $reciter.';
   }
 
   @override
@@ -1354,25 +1354,25 @@ class AppLocalizationsKri extends AppLocalizations {
   String get placesNetworkError => 'Netwok mistek. Duya tray bak.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Di say we dɛn nid fɔ de';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Set ples fɔs so dat dɛn go ebul fɔ fɛn di moskɛt dɛn we de nia de, halal it, ɛn Islamik skul dɛn kɔrɛkt wan.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Map tayl dɛn nɔ de';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Wan verified map tayl sɔs nɔ kɔnfigyut fɔ dis bild yet. Ples dɛn we de nia yu kin stil lod frɔm di say we yu dɔn sev.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Ples di data we nɔ de';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Wan verified ples data endpoint nɔ kɔnfigyut fɔ dis bild yet. Set PLACES_OVERPASS_API_URL to wan apruv prɔksi ɔ prɔvayda bifo yu ɛnabul sɔch we de nia.';
 
   @override
   String get unknownPlaceName => 'Nem we wi nɔ no';

@@ -926,7 +926,7 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Dagiti lamisaan ti ulep ket awan idiay Supabase; bundled fallback nga aktibo';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -935,7 +935,7 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Awan ti metadata ti ulep juz; bundled nga estruktural a fallback aktibo';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1214,25 +1214,25 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'I-download';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Ituloy ti Panag-download';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Buraken Dagiti Nai-download a File';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Nakansela ti panag-download para iti $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Nakompleto ti panag-download para iti $reciter.';
   }
 
   @override
@@ -1365,25 +1365,27 @@ class AppLocalizationsIlo extends AppLocalizations {
       'Biddut ti network. Pangngaasiyo ta padasenyo manen.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Masapul ti lokasion';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Mangipasdek nga umuna iti lokasion tapno dagiti asideg a moske, halal a taraon, ken dagiti eskuelaan ti Islam ket umiso a mabirokan.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle =>
+      'Saan a magun-od dagiti baldosa ti mapa';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Ti naberipikado a taudan ti baldosa ti mapa ket saan pay a naikonfigura para iti daytoy a panagbangon. Mabalin pay laeng nga agkarga dagiti asideg a lugar manipud iti naidulin a lokasionmo.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Ikabilna ti datos a saan a magun-od';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Ti naberipikado a puntos ti panagpatingga ti datos ti lugar ket saan pay a naikonfigura para iti daytoy a panagbangon. Itakderan ti PLACES_OVERPASS_API_URL iti naaprobaran a proxy wenno mangipapaay sakbay a mapalubosan ti asideg a panagbiruk.';
 
   @override
   String get unknownPlaceName => 'Di Ammo a Nagan';

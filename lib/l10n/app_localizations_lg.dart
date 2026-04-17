@@ -923,7 +923,7 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Emmeeza z’ebire ezibula mu Supabase; bundled fallback ekola';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -932,7 +932,7 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata ebuze; bundled enzimba fallback ekola';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1210,25 +1210,25 @@ class AppLocalizationsLg extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Okufuna';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Ddamu Okuwanula';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Sazaamu Fayiro Eziwanuliddwa';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Download esaziddwamu ku lwa $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Download ewedde ku $reciter.';
   }
 
   @override
@@ -1361,25 +1361,26 @@ class AppLocalizationsLg extends AppLocalizations {
       'Ensobi mu mutimbagano. Nsaba oddemu ogezeeko.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Ekifo kyetaagisa';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Sooka oteekewo ekifo olwo emizikiti egy’okumpi, emmere ya halal, n’amasomero g’Obusiraamu bisobole okunoonyezebwa mu butuufu.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Tiles za maapu teziriiwo';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Ensibuko ya tile ya maapu ekakasiddwa tetegekebwa kuzimba kuno n\'okutuusa kati. Ebifo ebiriraanyewo bikyayinza okutikka okuva mu kifo ky’otereka.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Ateeka data nga tesobola kusangibwa';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Enkomerero ya data y\'ebifo ekakasiddwa tetegekeddwa kuzimba kuno n\'okutuusa kati. Teeka PLACES_OVERPASS_API_URL ku proxy oba omuwa akkirizibwa nga tonnasobozesa kunoonya okumpi.';
 
   @override
   String get unknownPlaceName => 'Erinnya eritamanyiddwa';

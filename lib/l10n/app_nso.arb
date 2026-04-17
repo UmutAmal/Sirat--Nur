@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "Di- Surah tša Quran",
   "diagnosticsQuranAyahs": "Di-Aya tša Quran",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata ya go swana le yona",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Ditafola tša maru di hlaela ka Supabase; bundled fallback mafolofolo",
   "diagnosticsQuranCloudCheckFailed": "Tlhahlobo ya leru e paletšwe: {error} .",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -276,7 +276,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Leru juz metadata e hlaela; bundled sebopeho fallback mafolofolo",
   "diagnosticsQuranCloudStructuralCheckFailed": "Tlhahlobo ya sebopego sa leru e paletšwe: {error} .",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -390,9 +390,9 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Taonelouta",
+  "resumeDownload": "Thoma gape go Taonelouta",
+  "deleteDownloadedFiles": "Phimola Difaele tše di Taoneloutšwago",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
@@ -750,10 +750,10 @@
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "Islamic Way of Light",
   "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
-  "placesLocationRequiredTitle": "Location required",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
-  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesLocationRequiredTitle": "Lefelo le a nyakega",
+  "placesLocationRequiredBody": "Bea lefelo pele gore mafelo a kgauswi a borapedi, dijo tša halal le dikolo tša Boiselamo di ka phuruphutšwa ka mo go nepagetšego.",
+  "placesMapTilesUnavailableTitle": "Dithaele tša mmapa ga di hwetšagale",
+  "placesMapTilesUnavailableBody": "Mothopo wa thaele ya mmapa wo o netefaditšwego ga se wa beakanywa bakeng sa go aga mo ga bjale. Mafelo a kgauswi a sa dutše a ka laetša go tšwa lefelong la gago leo le bolokilwego.",
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
@@ -765,7 +765,7 @@
   "locationDetectionFailed": "Ga se ya kgona go lemoga lefelo la gago. Hle kgetha motse ka seatla goba o leke gape.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
   "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Places data unavailable",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableTitle": "E bea ya data yeo e sa hwetšagalego",
+  "placesDataSourceUnavailableBody": "Ntlha ya mafelelo ya datha ya mafelo ao a netefaditšwego ga se ya beakanywa bakeng sa go aga mo ga bjale. Beakanya PLACES_OVERPASS_API_URL go moemedi yo a dumeletšwego goba moabi pele o kgontšha nyakišišo ya kgauswi.",
   "tafsirCacheUnavailable": "Verified tafsir ga e hwetšagale ka ntle ga inthanete ga bjale. Nyalantšha sete ya data ya tafsir yeo e hweditšwego pele o phetla."
 }

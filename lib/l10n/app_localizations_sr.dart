@@ -928,7 +928,7 @@ class AppLocalizationsSr extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Цлоуд јуз метаподаци недостају; укључени структурални резервни активни';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1205,13 +1205,13 @@ class AppLocalizationsSr extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Преузми';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Настави преузимање';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Избришите преузете датотеке';
 
   @override
   String get downloadCancelling => 'Cancelling...';
@@ -1355,21 +1355,22 @@ class AppLocalizationsSr extends AppLocalizations {
   String get placesNetworkError => 'Мрежна грешка. Покушајте поново.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Потребна је локација';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Прво поставите локацију тако да се оближње џамије, халал храна и исламске школе могу прецизно претраживати.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Плочице мапе су недоступне';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Верификовани извор плочице мапе још увек није конфигурисан за ову верзију. Места у близини и даље могу да се учитавају са ваше сачуване локације.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Подаци о местима су недоступни';
 
   @override
   String get placesDataSourceUnavailableBody =>

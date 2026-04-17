@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "Kur’aan Surah ahodoɔ",
   "diagnosticsQuranAyahs": "Kur’aan Ayahs",
   "diagnosticsQuranJuzMetadata": "Kuran Juz Nsɛm a Wɔahyehyɛ",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Mununkum pon ahorow a ɛyera wɔ Supabase; bundled fallback a ɛyɛ adwuma",
   "diagnosticsQuranCloudCheckFailed": "Mununkum nhwehwɛmu no adi nkogu: {error} .",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
@@ -276,7 +276,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata a ɛyera; bundled structure fallback a ɛyɛ adwuma",
   "diagnosticsQuranCloudStructuralCheckFailed": "Mununkum nhyehyeɛ nhwehwɛmu no adi nkogu: {error} .",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {
@@ -390,11 +390,11 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "downloadAction": "Twe",
+  "resumeDownload": "San Fi ase Twe",
+  "deleteDownloadedFiles": "Popa Fael Ahorow a Wɔatwe no",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Wɔatwa download no mu ama {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
@@ -402,7 +402,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Download awie ama {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {
@@ -750,10 +750,10 @@
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "Islamic Way of Light",
   "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
-  "placesLocationRequiredTitle": "Location required",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
-  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesLocationRequiredTitle": "Beae a wɔhwehwɛ",
+  "placesLocationRequiredBody": "Fa beae bi di kan sɛnea ɛbɛyɛ a wobetumi ahwehwɛ asɔredan ahorow a ɛbɛn hɔ, halal nnuan, ne Nkramofo sukuu ahorow mu pɛpɛɛpɛ.",
+  "placesMapTilesUnavailableTitle": "Map tiles a wontumi nnya",
+  "placesMapTilesUnavailableBody": "Wɔnnya nhyehyɛɛ map tile fibea a wɔagye atom ama saa ɔdansi yi. Mmeae a ɛbɛn hɔ no da so ara tumi load fi beae a woakora so.",
   "prayerRemainingUnavailable": "--",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
@@ -765,7 +765,7 @@
   "locationDetectionFailed": "Antumi anhu baabi a wowɔ. Yɛsrɛ sɛ fa nsa paw kurow bi anaa sɔ hwɛ bio.",
   "qiblaLocationRequiredTitle": "Beae ho hia ma Qibla",
   "qiblaLocationRequiredBody": "Hyehye wo beae ankasa ansa na wode Qibla kompas no adi dwuma, sɛnea wɔbɛtumi abu kwan no pɛpɛɛpɛ.",
-  "placesDataSourceUnavailableTitle": "Places data unavailable",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableTitle": "De data a enni hɔ no si hɔ",
+  "placesDataSourceUnavailableBody": "Wɔnnya nhyehyɛɛ mmeae data endpoint a wɔagye atom ama saa ɔdan yi de besi nnɛ. Set PLACES_OVERPASS_API_URL to proxy anaa provider a wɔapene so ansa na woama hwehwɛ a ɛbɛn no ayɛ adwuma.",
   "tafsirCacheUnavailable": "Verified tafsir no ntumi nkɔ offline de besi nnɛ. Sync tafsir dataset a woanya fibea ansa na woakɔ browse."
 }

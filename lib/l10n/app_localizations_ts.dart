@@ -924,7 +924,7 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Matafula ya mapapa ya kayivela eSupabase; bundled fallback yi tirha';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -933,7 +933,7 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Cloud juz metadata yi kayivela; bundled xivumbeko xa fallback active';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1214,25 +1214,25 @@ class AppLocalizationsTs extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Downloda';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Sungula ku Download';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Susa Tifayili Leti Dawunilodiweke';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Download yi khanseliwile eka $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Download yi hetisiwile ya $reciter.';
   }
 
   @override
@@ -1366,25 +1366,26 @@ class AppLocalizationsTs extends AppLocalizations {
       'Xihoxo xa netiweke. Hi kombela u ringeta nakambe.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Ndhawu ya laveka';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Kusungula veka ndzhawu leswaku ti mosque tale kusuhi, swakudya swa halal, na swikolo swa Islam swinga sechiwa kahle.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Tithayile ta mepe a ti kumeki';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Xihlovo xa tile ya mepe lexi tiyisisiweke a xi si lulamisiwa eka ku aka loku ku fikela sweswi. Tindhawu ta le kusuhi ta ha kota ku layicha ku suka endhawini ya wena leyi hlayisiweke.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Swi veka data leyi nga kumeki';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Ndhawu yo hetelela ya datha ya tindhawu leyi tiyisisiweke a yi lulamisiwanga eka ku aka loku ku fikela sweswi. Seta PLACES_OVERPASS_API_URL eka vuyimeri lebyi pfumeleriweke kumbe muphakeri u nga si pfumelela ku lavisisa ka le kusuhi.';
 
   @override
   String get unknownPlaceName => 'Vito leri nga tiviwiki';

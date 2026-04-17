@@ -926,7 +926,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Ditafola tša maru di hlaela ka Supabase; bundled fallback mafolofolo';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -935,7 +935,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Leru juz metadata e hlaela; bundled sebopeho fallback mafolofolo';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1219,13 +1219,13 @@ class AppLocalizationsNso extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Taonelouta';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Thoma gape go Taonelouta';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Phimola Difaele tše di Taoneloutšwago';
 
   @override
   String get downloadCancelling => 'Cancelling...';
@@ -1370,25 +1370,27 @@ class AppLocalizationsNso extends AppLocalizations {
   String get placesNetworkError => 'Phošo ya netweke. Hle leka gape.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Lefelo le a nyakega';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Bea lefelo pele gore mafelo a kgauswi a borapedi, dijo tša halal le dikolo tša Boiselamo di ka phuruphutšwa ka mo go nepagetšego.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle =>
+      'Dithaele tša mmapa ga di hwetšagale';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Mothopo wa thaele ya mmapa wo o netefaditšwego ga se wa beakanywa bakeng sa go aga mo ga bjale. Mafelo a kgauswi a sa dutše a ka laetša go tšwa lefelong la gago leo le bolokilwego.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'E bea ya data yeo e sa hwetšagalego';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Ntlha ya mafelelo ya datha ya mafelo ao a netefaditšwego ga se ya beakanywa bakeng sa go aga mo ga bjale. Beakanya PLACES_OVERPASS_API_URL go moemedi yo a dumeletšwego goba moabi pele o kgontšha nyakišišo ya kgauswi.';
 
   @override
   String get unknownPlaceName => 'Leina leo le sa Tsebjego';

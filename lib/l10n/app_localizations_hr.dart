@@ -919,7 +919,7 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'U Supabaseu nedostaju tablice u oblaku; zamjena u paketu aktivna';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -928,7 +928,7 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Nedostaju metapodaci Cloud Juza; paketni strukturni rezervni aktivan';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1206,25 +1206,25 @@ class AppLocalizationsHr extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'preuzimanje';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Nastavi preuzimanje';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Brisanje preuzetih datoteka';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Otkazano preuzimanje za $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Preuzimanje je dovršeno za $reciter.';
   }
 
   @override
@@ -1356,25 +1356,26 @@ class AppLocalizationsHr extends AppLocalizations {
   String get placesNetworkError => 'Mrežna greška. Molimo pokušajte ponovo.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Potrebna lokacija';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Najprije postavite lokaciju kako bi se obližnje džamije, halal hrana i islamske škole mogle točno pretražiti.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Pločice karte nisu dostupne';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Potvrđeni izvor pločica karte još nije konfiguriran za ovu verziju. Mjesta u blizini i dalje se mogu učitati s vaše spremljene lokacije.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Podaci o mjestima nisu dostupni';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Potvrđena krajnja točka podataka o mjestima još nije konfigurirana za ovu međugradnju. Postavite PLACES_OVERPASS_API_URL na odobreni proxy ili pružatelja usluga prije nego što omogućite pretraživanje u blizini.';
 
   @override
   String get unknownPlaceName => 'Nepoznato ime';

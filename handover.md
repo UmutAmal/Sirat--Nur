@@ -12234,3 +12234,60 @@
 
 ### Sonraki Adim
 - L10n tarafindaki kalan low-resource English fallback borcu ve Places/Supabase diagnostics copy icin sahte ceviri uretmeden yeni analiz/guard turu acilacak.
+
+## 2026-04-17 TUR-293 — Reduce Low-Resource L10n Fallback Debt With Token Guards
+
+### Yapilan Islem
+- Download, diagnostics, chatbot offline ve Places runtime copy icin 23 yuksek riskli l10n anahtari tekrar tarandi.
+- `tool\translate_arb_keys.dart` guvenlik hattina teknik token koruma eklendi: `Supabase`, `PLACES_OVERPASS_API_URL`, `HTTP`.
+- Places runtime copy anahtarlari tek satir zorunluluguna eklendi.
+- Guvenli ceviri araci ayni 23 anahtar icin yeniden calistirildi; sahte veya bozuk cikti uretmek yerine desteklenmeyen locale'lerde mevcut guvenli fallback korundu.
+- `flutter gen-l10n` calistirilarak ARB ve generated localization Dart dosyalari senkronlandi.
+- Gercek ARB dosyalarindaki borc azalmasini ve token korumasini kilitleyen regresyon testleri eklendi.
+
+### Kanit
+- Baslangic l10n debt raporu: 23 anahtar, `same-as-English=1839`, `missing/empty=0`, `placeholder mismatch=0`.
+- Son l10n debt raporu: 23 anahtar, `same-as-English=1558`, `missing/empty=0`, `placeholder mismatch=0`.
+- Arac guard'i: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- Regresyon testi: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- Odak testler once Tigrinya multiline, Serbian `PLACES_OVERPASS_API_URL`, Bhojpuri `Supabase` token bozulmasini yakaladi; guard sonrasi ayni test setleri PASS oldu.
+
+### Neden Yapildi
+- Kullanici tum diller icin eksiksiz ve sahte olmayan ceviri istiyor.
+- Mevcut rapor Places, diagnostics, download ve chatbot offline copy alanlarinda dusuk kaynak locale'lerde Ingilizce kalintilar oldugunu gosteriyordu.
+- Tum locale'lerde uydurma dini/teknik metin uretmek yerine, yalniz guvenli arac ciktisi kabul edildi; belirsiz dillerde fallback borcu acik sekilde kayitta tutuldu.
+- Teknik konfigurasyon token'lari cevrilirse operator mesaji yanlis hale gelir ve kullanici hangi ortam degiskenini ayarlayacagini anlayamaz.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ak.arb`, `app_as.arb`, `app_ay.arb`, `app_bho.arb`, `app_bm.arb`, `app_cy.arb`, `app_dv.arb`, `app_ee.arb`, `app_ga.arb`, `app_gd.arb`, `app_gn.arb`, `app_hr.arb`, `app_ilo.arb`, `app_kri.arb`, `app_lg.arb`, `app_ln.arb`, `app_lus.arb`, `app_mai.arb`, `app_nso.arb`, `app_om.arb`, `app_qu.arb`, `app_sa.arb`, `app_sr.arb`, `app_th.arb`, `app_ts.arb`, `app_tw.arb`, `app_yi.arb`
+- Bu ARB dosyalarina karsilik gelen generated `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` dosyalari
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- 281 adet kullaniciya gorunen same-as-English fallback, guvenli sekilde locale copy'ye dondu.
+- Placeholder bozulmasi ve eksik/empty l10n degeri eklenmedi.
+- `Supabase`, `PLACES_OVERPASS_API_URL`, `HTTP` gibi teknik token'lar bundan sonraki ceviri turlarinda cevrilmeyecek.
+- Places runtime copy icin multiline/batch debris riski guard altina alindi.
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart` PASS
+- Odak test: `flutter test test\translate_arb_keys_test.dart` PASS (`36/36`)
+- Odak test: `flutter test test\arb_coverage_test.dart test\arb_ui_localization_test.dart` PASS (`75/75`)
+- L10n debt report: PASS; `same-as-English=1558`, `missing/empty=0`, `placeholder mismatch=0`
+
+### Risk Degisimi
+- Download/diagnostics/chatbot/Places copy icin same-as-English fallback borcu: `1839 -> 1558`
+- Teknik token'larin ceviri tarafindan bozulmasi riski: `16/25 -> 1/25`
+- Places runtime copy icin multiline bozulma riski: `12/25 -> 1/25`
+
+### Rollback Plani
+- `tool\translate_arb_keys.dart` icindeki teknik token guard'i ve Places tek satir ekleri geri alinir.
+- Bu turda degisen ARB ve generated localization dosyalarindaki ilgili anahtarlar onceki degerlerine dondurulur.
+- `test\translate_arb_keys_test.dart` icindeki TUR-293 regresyonlari kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni bir tur olarak eklenir.
+- `flutter gen-l10n`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Kalan 1558 same-as-English borc icin uydurma yapmadan daha guvenilir kaynak veya insan/onayli ceviri sozlugu gerektiren locale'ler ayristirilacak; siradaki teknik risk olarak Places/Overpass runtime provider ve tile source sozlesmesi yeniden taranacak.

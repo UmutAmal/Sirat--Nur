@@ -918,7 +918,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase ত ক্লাউড টেবুল অনুপস্থিত; বাণ্ডিল কৰা ফ\'লবেক সক্ৰিয়';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -927,7 +927,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'ক্লাউড juz মেটাডাটা অনুপস্থিত; বাণ্ডিলড ষ্ট্ৰাকচাৰেল ফ\'লবেক সক্ৰিয়';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1204,25 +1204,25 @@ class AppLocalizationsAs extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'ডাউনল’ড';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'ডাউনলোড পুনৰ আৰম্ভ কৰক';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'ডাউনলোড কৰা ফাইলসমূহ মচি পেলাওক';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter ৰ বাবে ডাউনলোড বাতিল কৰা হৈছে।';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter ৰ বাবে ডাউনলোড সম্পূৰ্ণ হৈছে।';
   }
 
   @override
@@ -1355,25 +1355,25 @@ class AppLocalizationsAs extends AppLocalizations {
       'নেটৱৰ্ক ত্ৰুটি। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'স্থানৰ প্ৰয়োজন';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'প্ৰথমে এটা স্থান নিৰ্ধাৰণ কৰক যাতে ওচৰৰ মছজিদ, হালাল খাদ্য, আৰু ইছলামিক স্কুলবোৰ সঠিকভাৱে বিচাৰিব পৰা যায়।';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'মেপ টাইল উপলব্ধ নহয়';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'এই নিৰ্মাণৰ বাবে এটা পৰীক্ষা কৰা মেপ টাইল উৎস এতিয়াও বিন্যাস কৰা হোৱা নাই । ওচৰৰ ঠাইসমূহে এতিয়াও আপোনাৰ সংৰক্ষিত অৱস্থানৰ পৰা লোড কৰিব পাৰে।';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'তথ্য অনুপলব্ধ কৰি ৰাখে';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'এই নিৰ্মাণৰ বাবে এটা পৰীক্ষা কৰা স্থান তথ্য শেষবিন্দু এতিয়াও বিন্যাস কৰা হোৱা নাই । ওচৰৰ সন্ধান সামৰ্থবান কৰাৰ আগতে PLACES_OVERPASS_API_URLক এটা অনুমোদিত প্ৰক্সি বা প্ৰদানকাৰীলৈ সংহতি কৰক।';
 
   @override
   String get unknownPlaceName => 'অজ্ঞাত নাম';

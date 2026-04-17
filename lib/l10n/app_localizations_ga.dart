@@ -919,7 +919,7 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Táblaí scamall in easnamh i Supabase; cúltaca cuachta gníomhach';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -928,7 +928,7 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Meiteashonraí Cloud juz in easnamh; cúltaca struchtúrach cuachta gníomhach';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -1205,25 +1205,25 @@ class AppLocalizationsGa extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Íosluchtaigh';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Íosluchtaigh atosú';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Scrios Comhaid Íosluchtaithe';
 
   @override
   String get downloadCancelling => 'Cancelling...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Cuireadh an t-íoslódáil ar ceal le haghaidh $reciter.';
   }
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Íoslódáil críochnaithe do $reciter.';
   }
 
   @override
@@ -1355,25 +1355,27 @@ class AppLocalizationsGa extends AppLocalizations {
   String get placesNetworkError => 'Earráid líonra. Bain triail eile as.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Suíomh ag teastáil';
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Socraigh suíomh ar dtús ionas gur féidir moscanna in aice láimhe, bia halal, agus scoileanna Ioslamacha a chuardach go cruinn.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle =>
+      'Níl fáil ar thíleanna léarscáile';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Níl foinse tíl léarscáile fíoraithe cumraithe don tógáil seo fós. Is féidir le háiteanna in aice láimhe lódáil fós ó do shuíomh sábháilte.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Níl sonraí faoi áiteanna ar fáil';
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Níl críochphointe sonraí áiteanna fíoraithe cumraithe don leagan seo fós. Socraigh PLACES_OVERPASS_API_URL chuig seachfhreastalaí nó soláthraí ceadaithe roimh duit cuardach in aice láimhe a chumasú.';
 
   @override
   String get unknownPlaceName => 'Ainm Anaithnid';

@@ -272,6 +272,10 @@ bool _shouldPreserve(String key, dynamic currentValue, dynamic englishValue) {
     return false;
   }
 
+  if (!_hasRequiredTechnicalTokens(currentValue, englishValue)) {
+    return false;
+  }
+
   return currentValue != englishValue;
 }
 
@@ -416,6 +420,15 @@ _TokenizedValue _tokenizeValue(String key, String source) {
     replacements.add(MapEntry(token, placeholder));
   }
 
+  for (final protectedToken in _protectedTechnicalTokens) {
+    if (!tokenizedSource.contains(protectedToken)) {
+      continue;
+    }
+    final token = '__PRAYER_PROTECTED_TOKEN_${replacements.length}__';
+    tokenizedSource = tokenizedSource.replaceAll(protectedToken, token);
+    replacements.add(MapEntry(token, protectedToken));
+  }
+
   return _TokenizedValue(
     originalSource: source,
     translationSource: translationSource,
@@ -547,6 +560,10 @@ bool _isUsableTranslationCandidate(
   }
 
   if (!_hasMatchingPlaceholders(trimmed, source)) {
+    return false;
+  }
+
+  if (!_hasRequiredTechnicalTokens(trimmed, source)) {
     return false;
   }
 
@@ -749,6 +766,16 @@ bool _mustStaySingleLine(String key) {
       key == 'diagnosticsQuranCloudStructuralCheckFailed' ||
       key == 'diagnosticsQuranCloudTablesMissing' ||
       key == 'diagnosticsQuranCloudJuzMissing' ||
+      key == 'placesSearchArea' ||
+      key == 'nearbyMosques' ||
+      key == 'placesFoundCount' ||
+      key == 'distanceAwayKm' ||
+      key == 'placesApiError' ||
+      key == 'placesNetworkError' ||
+      key == 'placesLocationRequiredTitle' ||
+      key == 'placesLocationRequiredBody' ||
+      key == 'placesMapTilesUnavailableTitle' ||
+      key == 'placesMapTilesUnavailableBody' ||
       key == 'placesDataSourceUnavailableTitle' ||
       key == 'placesDataSourceUnavailableBody' ||
       key == 'chatbotLocalAiLabel' ||
@@ -805,6 +832,21 @@ bool _mustStaySingleLine(String key) {
 
 bool _hasLineBreak(String value) {
   return value.contains('\n') || value.contains('\r');
+}
+
+const _protectedTechnicalTokens = [
+  'Supabase',
+  'PLACES_OVERPASS_API_URL',
+  'HTTP',
+];
+
+bool _hasRequiredTechnicalTokens(String translated, String source) {
+  for (final token in _protectedTechnicalTokens) {
+    if (source.contains(token) && !translated.contains(token)) {
+      return false;
+    }
+  }
+  return true;
 }
 
 String _normalizeProperNames(String value) {

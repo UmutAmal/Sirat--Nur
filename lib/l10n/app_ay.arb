@@ -390,8 +390,8 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
+  "downloadAction": "Ukax mä juk’a pachanakanwa",
+  "resumeDownload": "Resumen Descarga ukax mä juk’a pachanakanwa",
   "deleteDownloadedFiles": "Uñstayata Archivonaka chhaqtayaña",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
