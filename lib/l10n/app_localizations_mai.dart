@@ -1608,7 +1608,8 @@ class AppLocalizationsMai extends AppLocalizations {
   String get asmaMeaning76 => 'द हिडन';
 
   @override
-  String get asmaMeaning77 => 'राज्यपाल जी';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'परमात्मा';
@@ -1626,7 +1627,8 @@ class AppLocalizationsMai extends AppLocalizations {
   String get asmaMeaning82 => 'क्षमाकर्ता';
 
   @override
-  String get asmaMeaning83 => 'द क्लेमेंट';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'सब के मालिक / सार्वभौम';

@@ -1613,7 +1613,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get asmaMeaning74 => 'Акыркы';
 
   @override
-  String get asmaMeaning75 => 'Манифест';
+  String get asmaMeaning75 => 'The Manifest';
 
   @override
   String get asmaMeaning76 => 'Жашыруун';

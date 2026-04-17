@@ -1627,7 +1627,8 @@ class AppLocalizationsHi extends AppLocalizations {
   String get asmaMeaning82 => 'क्षमा करने वाला';
 
   @override
-  String get asmaMeaning83 => 'क्लेमेंट';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'सबका स्वामी/संप्रभु';

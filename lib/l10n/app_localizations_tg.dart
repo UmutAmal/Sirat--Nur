@@ -1607,7 +1607,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get asmaMeaning74 => 'Охирин';
 
   @override
-  String get asmaMeaning75 => 'Манифест';
+  String get asmaMeaning75 => 'The Manifest';
 
   @override
   String get asmaMeaning76 => 'Пинҳон';
@@ -1632,7 +1632,8 @@ class AppLocalizationsTg extends AppLocalizations {
   String get asmaMeaning82 => 'бахшанда';
 
   @override
-  String get asmaMeaning83 => 'Клемент';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Соҳиб / Ҳокими Ҳама';

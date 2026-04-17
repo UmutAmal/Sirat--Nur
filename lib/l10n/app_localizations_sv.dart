@@ -1679,5 +1679,6 @@ class AppLocalizationsSv extends AppLocalizations {
   String get asmaMeaning98 => 'Den mest rättfärdiga guiden';
 
   @override
-  String get asmaMeaning99 => 'Den patienten';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

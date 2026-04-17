@@ -14925,3 +14925,45 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Quran audio download skip davranisinin yeni minimum boyutla operator tecrubesine etkisi, checksum/fingerprint eksigi, l10n debt ve dini icerik provenance taranacak.
+
+## 2026-04-17 TUR-342 - High-Risk Asma Meanings Remove Machine Mistranslations
+
+### MASTER Karari
+- Risk: `lib/l10n/app_kk.arb:565`, `lib/l10n/app_ko.arb:565`, `lib/l10n/app_is.arb:622`, `lib/l10n/app_bho.arb:622`, `lib/l10n/app_mr.arb:644` ve benzer ARB satirlarinda Asma-ul-Husna anlamlari "device/compressor/governor/Clement/patient person/manifesto" gibi dini baglam disi makine fragmentlerine kaymisti.
+- Kanit: Tarama `asmaMeaning20`, `asmaMeaning21`, `asmaMeaning75`, `asmaMeaning77`, `asmaMeaning83`, `asmaMeaning99` icin `Құрылғы`, `압축기`, `Манифест`, `राज्यपाल`, `Klemens`, `Клемент`, `Den patienten`, `रुग्ण`, `환자 1호`, `Науқас` gibi yanlis anlamlari buldu.
+- Etki: Allah'in isimlerinin anlamlari kullaniciya yanlis veya saygisiz semantik ile gosterilebilirdi; bu dini icerik dogrulugu acisindan yuksek etkili bir hatadir.
+- Olasilik: ARB dosyalari runtime'da dogrudan kullaniliyor ve Asma sayfasi 180+ locale icin bu degerleri gosteriyor.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1).
+- Rollback kapsami: Bu turda degisen `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `test/arb_ui_localization_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- Kanitli kotu fragmentler yeni uydurma ceviriyle degil, guvenli ve daha acik EN referans anlamlariyla degistirildi.
+- Priority locale olan Rusca icin `asmaMeaning75` English fallback yerine "Явный, Чьё существование очевидно." olarak baglama uygun lokalize edildi; safe-priority testin "English fallback yok" kurali korundu.
+- `kk`, `ko`, `is`, `bho`, `fy`, `hi`, `id`, `mai`, `mr`, `ne`, `nl`, `sa`, `sv`, `bg`, `ky`, `mk`, `mn`, `ru`, `sr`, `tg`, `tt` ARB dosyalarindaki kanitli high-risk Asma sapmalari temizlendi.
+- `flutter gen-l10n` calistirilarak generated localization sinifi ARB ile senkronlandi.
+
+### TESTER Kapsami
+- `test/arb_ui_localization_test.dart:1471` all-locale high-risk Asma stale fragment guard'i `Манифест`, `राज्यपाल`, `Klemens/Clemens`, `Клемент`, `क्लेमेंट`, `Den patienten`, `रुग्ण` fragmentlerini kapsayacak sekilde genisletildi.
+- `test/arb_ui_localization_test.dart:1536` belirsiz `kk`, `ko`, `is` Asma anlamlari icin guvenli fallback beklentisi eklendi.
+- `test/arb_ui_localization_test.dart:1586` priority high-risk locale guard'i `kk`, `ko`, `is` fragmentlerini yakalayacak sekilde genisletildi.
+
+### Test Sonucu
+- `flutter gen-l10n` PASS
+- Format: `dart format test\arb_ui_localization_test.dart lib\l10n\app_localizations_*.dart` PASS
+- Odak test: `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS (`71/71`)
+- Odak test: `flutter test test\arb_coverage_test.dart --reporter compact` PASS (`4/4`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`566/566`)
+
+### Risk Degisimi
+- Bilinen high-risk Asma machine mistranslation riski: `15/25 -> 3/25`
+- Kalan risk: ARB'lerde baska diller icin halen taranmasi gereken dusuk/orta guvenli Asma ceviri kalintilari olabilir; bir sonraki dongu ayni kanitli tarama metoduyla devam etmeli ve uydurma ceviri yapmadan yalniz dogrulanmis/localize veya guvenli fallback uygulanmali.
+
+### Rollback Plani
+- Bu turdaki ARB ve generated l10n degisiklikleri revert edilir.
+- Eklenen stale-fragment guard listeleri `test/arb_ui_localization_test.dart` icinden kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter gen-l10n`, `flutter analyze`, full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak kalan Asma transliterasyon/yanlis anlam fragmentleri, l10n debt ve audio checksum/fingerprint eksigi taranacak.

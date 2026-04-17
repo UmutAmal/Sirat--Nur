@@ -1386,7 +1386,8 @@ class AppLocalizationsKo extends AppLocalizations {
   String get asmaMeaning8 => '귀중한/가장 강력한';
 
   @override
-  String get asmaMeaning9 => '컴펠러';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => '최고';
@@ -1419,16 +1420,18 @@ class AppLocalizationsKo extends AppLocalizations {
   String get asmaMeaning19 => '모든 것을 아시는 분';
 
   @override
-  String get asmaMeaning20 => '압축기';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
-  String get asmaMeaning21 => '구원자';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => '저격자';
 
   @override
-  String get asmaMeaning23 => '숭배자';
+  String get asmaMeaning23 => 'The Exalter';
 
   @override
   String get asmaMeaning24 => '명예를 주시는 분';
@@ -1455,7 +1458,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get asmaMeaning31 => '올 어웨어(All Aware)';
 
   @override
-  String get asmaMeaning32 => '선배';
+  String get asmaMeaning32 => 'The Forebearing';
 
   @override
   String get asmaMeaning33 => '웅장함';
@@ -1500,7 +1503,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get asmaMeaning46 => '완전히 현명한 사람';
 
   @override
-  String get asmaMeaning47 => '사랑하는 사람';
+  String get asmaMeaning47 => 'The Loving One';
 
   @override
   String get asmaMeaning48 => '가장 영광스러운 분';
@@ -1584,13 +1587,14 @@ class AppLocalizationsKo extends AppLocalizations {
   String get asmaMeaning74 => '마지막';
 
   @override
-  String get asmaMeaning75 => '매니페스트';
+  String get asmaMeaning75 => 'The Manifest';
 
   @override
   String get asmaMeaning76 => '숨겨진 것';
 
   @override
-  String get asmaMeaning77 => '지사';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => '최고의 존재';
@@ -1608,7 +1612,8 @@ class AppLocalizationsKo extends AppLocalizations {
   String get asmaMeaning82 => '용서하시는 분';
 
   @override
-  String get asmaMeaning83 => '클레멘트';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => '모든 것의 소유자/주권자';
@@ -1656,5 +1661,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get asmaMeaning98 => '가장 의로운 인도자';
 
   @override
-  String get asmaMeaning99 => '환자 1호';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

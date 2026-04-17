@@ -1614,7 +1614,8 @@ class AppLocalizationsBho extends AppLocalizations {
   String get asmaMeaning76 => 'द हिडन के बा';
 
   @override
-  String get asmaMeaning77 => 'राज्यपाल के कहनाम बा';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'परमात्मा के ह';
@@ -1632,7 +1633,8 @@ class AppLocalizationsBho extends AppLocalizations {
   String get asmaMeaning82 => 'माफ करे वाला के';
 
   @override
-  String get asmaMeaning83 => 'क्लेमेंट के नाम से जानल जाला';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'सब के मालिक / सार्वभौम';

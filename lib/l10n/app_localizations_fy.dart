@@ -1632,7 +1632,8 @@ class AppLocalizationsFy extends AppLocalizations {
   String get asmaMeaning82 => 'De Forgiver';
 
   @override
-  String get asmaMeaning83 => 'De Klemens';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'De eigner / soeverein fan alles';

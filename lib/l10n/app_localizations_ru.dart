@@ -1614,7 +1614,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get asmaMeaning74 => 'Последний';
 
   @override
-  String get asmaMeaning75 => 'Манифест';
+  String get asmaMeaning75 => 'Явный, Чьё существование очевидно.';
 
   @override
   String get asmaMeaning76 => 'Скрытый';

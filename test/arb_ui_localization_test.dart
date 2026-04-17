@@ -1474,6 +1474,7 @@ void main() {
         'asmaMeaning9': ['Compeller', 'קאָמפּעלער'],
         'asmaMeaning20': ['Constrictor', 'Constritor', 'קאָנסטריקטאָר'],
         'asmaMeaning21': ['Reliever', 'Apaziguador', 'ריליווער'],
+        'asmaMeaning75': ['Манифест'],
         'asmaMeaning77': [
           'Governor',
           'Gouverneur',
@@ -1482,13 +1483,18 @@ void main() {
           'Guvern',
           'Губернатор',
           'גאווערנאר',
+          'राज्यपाल',
         ],
         'asmaMeaning83': [
           'Clement',
           'Clemente',
           'Clément',
           'Klement',
+          'Klemens',
+          'Clemens',
           'Климент',
+          'Клемент',
+          'क्लेमेंट',
           'קלעמענט',
         ],
         'asmaMeaning99': [
@@ -1499,6 +1505,8 @@ void main() {
           'Isiguli',
           'Bệnh nhân',
           'פאציענט',
+          'Den patienten',
+          'रुग्ण',
         ],
       };
       final arbFiles = Directory('lib/l10n').listSync().whereType<File>().where(
@@ -1534,6 +1542,40 @@ void main() {
         expect(aymara['asmaMeaning7'], english['asmaMeaning7']);
         expect(aymara['asmaMeaning77'], english['asmaMeaning77']);
         expect(aymara['asmaMeaning99'], english['asmaMeaning99']);
+        final kazakh = _readArb('lib/l10n/app_kk.arb');
+        final korean = _readArb('lib/l10n/app_ko.arb');
+        final icelandic = _readArb('lib/l10n/app_is.arb');
+
+        for (final key in const [
+          'asmaMeaning9',
+          'asmaMeaning20',
+          'asmaMeaning21',
+          'asmaMeaning23',
+          'asmaMeaning47',
+          'asmaMeaning75',
+          'asmaMeaning83',
+          'asmaMeaning99',
+        ]) {
+          expect(kazakh[key], english[key]);
+        }
+
+        for (final key in const [
+          'asmaMeaning9',
+          'asmaMeaning20',
+          'asmaMeaning21',
+          'asmaMeaning23',
+          'asmaMeaning32',
+          'asmaMeaning47',
+          'asmaMeaning75',
+          'asmaMeaning77',
+          'asmaMeaning83',
+          'asmaMeaning99',
+        ]) {
+          expect(korean[key], english[key]);
+        }
+
+        expect(icelandic['asmaMeaning77'], english['asmaMeaning77']);
+        expect(icelandic['asmaMeaning83'], english['asmaMeaning83']);
         expect(yiddish['asmaMeaning9'], english['asmaMeaning9']);
         expect(yiddish['asmaMeaning20'], english['asmaMeaning20']);
         expect(yiddish['asmaMeaning21'], english['asmaMeaning21']);
@@ -1565,7 +1607,29 @@ void main() {
           'Klementen',
         ],
         'he': ['הקומפלר', 'המשחרר', 'המושל', 'הקלמנט', 'המטופל'],
+        'is': ['Seðlabankastjóri', 'Klemens'],
         'ja': ['ガーディアン', 'コンペラー', 'コンストリクター', '救済者', '知事', 'クレメント', '患者'],
+        'kk': [
+          'Компеллер',
+          'Құрылғы',
+          'Жеңілдеткіш',
+          'Сүйікті адам',
+          'Манифест',
+          'Клемент',
+          'Науқас',
+        ],
+        'ko': [
+          '컴펠러',
+          '압축기',
+          '구원자',
+          '숭배자',
+          '선배',
+          '사랑하는 사람',
+          '매니페스트',
+          '지사',
+          '클레멘트',
+          '환자',
+        ],
         'nb': ['Tvingeren', 'klemmer', 'Guvernøren', 'Klementen', 'Pasienten'],
         'nn': ['Tvingeren', 'klemmer', 'Guvernøren', 'Klementen', 'Pasienten'],
         'no': ['Tvingeren', 'klemmer', 'Guvernøren', 'Klementen', 'Pasienten'],
@@ -1593,6 +1657,10 @@ void main() {
         'asmaMeaning9',
         'asmaMeaning20',
         'asmaMeaning21',
+        'asmaMeaning23',
+        'asmaMeaning32',
+        'asmaMeaning47',
+        'asmaMeaning75',
         'asmaMeaning77',
         'asmaMeaning83',
         'asmaMeaning99',

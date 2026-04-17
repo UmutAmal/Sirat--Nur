@@ -1406,7 +1406,8 @@ class AppLocalizationsKk extends AppLocalizations {
   String get asmaMeaning8 => 'Қымбатты / Ең Құдіретті';
 
   @override
-  String get asmaMeaning9 => 'Компеллер';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'Ең керемет';
@@ -1439,16 +1440,18 @@ class AppLocalizationsKk extends AppLocalizations {
   String get asmaMeaning19 => 'Барлығын Білуші';
 
   @override
-  String get asmaMeaning20 => 'Құрылғы';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
-  String get asmaMeaning21 => 'Жеңілдеткіш';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'Абазер';
 
   @override
-  String get asmaMeaning23 => 'Exalter';
+  String get asmaMeaning23 => 'The Exalter';
 
   @override
   String get asmaMeaning24 => 'Құрмет беруші';
@@ -1520,7 +1523,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get asmaMeaning46 => 'Керемет Дана';
 
   @override
-  String get asmaMeaning47 => 'Сүйікті адам';
+  String get asmaMeaning47 => 'The Loving One';
 
   @override
   String get asmaMeaning48 => 'Ең Даңқты';
@@ -1604,7 +1607,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get asmaMeaning74 => 'Соңғы';
 
   @override
-  String get asmaMeaning75 => 'Манифест';
+  String get asmaMeaning75 => 'The Manifest';
 
   @override
   String get asmaMeaning76 => 'Жасырын';
@@ -1629,7 +1632,8 @@ class AppLocalizationsKk extends AppLocalizations {
   String get asmaMeaning82 => 'Кешіруші';
 
   @override
-  String get asmaMeaning83 => 'Клемент';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Барлығының Иесі/Егемені';
@@ -1677,5 +1681,6 @@ class AppLocalizationsKk extends AppLocalizations {
   String get asmaMeaning98 => 'Ең әділ жетекші';
 
   @override
-  String get asmaMeaning99 => 'Науқас';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

@@ -1611,7 +1611,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get asmaMeaning74 => 'Сүүлчийн';
 
   @override
-  String get asmaMeaning75 => 'Манифест';
+  String get asmaMeaning75 => 'The Manifest';
 
   @override
   String get asmaMeaning76 => 'Нуугдсан';

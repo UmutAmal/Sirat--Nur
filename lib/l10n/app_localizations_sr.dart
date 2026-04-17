@@ -1606,7 +1606,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get asmaMeaning74 => 'Последњи';
 
   @override
-  String get asmaMeaning75 => 'Манифест';
+  String get asmaMeaning75 => 'The Manifest';
 
   @override
   String get asmaMeaning76 => 'Тхе Хидден';

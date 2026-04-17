@@ -1608,7 +1608,8 @@ class AppLocalizationsNe extends AppLocalizations {
   String get asmaMeaning76 => 'लुकेको';
 
   @override
-  String get asmaMeaning77 => 'राज्यपाल';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'सर्वोच्च एक';

@@ -1628,7 +1628,8 @@ class AppLocalizationsId extends AppLocalizations {
   String get asmaMeaning82 => 'Yang Maha Pemaaf';
 
   @override
-  String get asmaMeaning83 => 'Klemens';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'Pemilik / Penguasa Segalanya';

@@ -1609,7 +1609,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get asmaMeaning74 => 'Последниот';
 
   @override
-  String get asmaMeaning75 => 'Манифестот';
+  String get asmaMeaning75 => 'The Manifest';
 
   @override
   String get asmaMeaning76 => 'Скриено';

@@ -1618,7 +1618,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get asmaMeaning74 => 'Последният';
 
   @override
-  String get asmaMeaning75 => 'Манифестът';
+  String get asmaMeaning75 => 'The Manifest';
 
   @override
   String get asmaMeaning76 => 'Скритият';

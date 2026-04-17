@@ -1610,7 +1610,8 @@ class AppLocalizationsMr extends AppLocalizations {
   String get asmaMeaning76 => 'लपलेले';
 
   @override
-  String get asmaMeaning77 => 'राज्यपाल';
+  String get asmaMeaning77 =>
+      'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'सर्वोच्च';
@@ -1628,7 +1629,8 @@ class AppLocalizationsMr extends AppLocalizations {
   String get asmaMeaning82 => 'क्षमा करणारा';
 
   @override
-  String get asmaMeaning83 => 'द क्लेमेंट';
+  String get asmaMeaning83 =>
+      'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'सर्वांचा मालक/सार्वभौम';
@@ -1676,5 +1678,6 @@ class AppLocalizationsMr extends AppLocalizations {
   String get asmaMeaning98 => 'सर्वात योग्य मार्गदर्शक';
 
   @override
-  String get asmaMeaning99 => 'रुग्ण एक';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }
