@@ -269,6 +269,21 @@ void main() {
       expect(sql, isNot(contains('download.quranicaudio.com')));
     });
 
+    test('buildQuranAudioStorageSeedSql normalizes Windows manifest paths', () {
+      final sql = buildQuranAudioStorageSeedSql([
+        MirroredAudioFile(
+          surahNumber: 1,
+          reciterId: 'alafasy',
+          sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
+          verifiedAt: DateTime.utc(2026, 4, 8, 19, 0, 42),
+          localPath: r'build\verified_quran_audio\alafasy\001.mp3',
+        ),
+      ]);
+
+      expect(sql, contains("'alafasy/001.mp3'"));
+      expect(sql, isNot(contains(r'build\verified_quran_audio')));
+    });
+
     test('rejects non-Quran audio buckets for storage seed generation', () {
       expect(
         () => buildQuranAudioStorageSeedSql([

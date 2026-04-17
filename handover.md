@@ -12943,3 +12943,61 @@
 
 ### Sonraki Adim
 - Yeni turda storage manifest/local path portability, Supabase upload dry-run guvenceleri ve kalan audio ownership riskleri taranacak.
+
+## 2026-04-17 TUR-306 - Quran Audio Storage Path Portability
+
+### Yapilan Islem
+- Mirror manifest local path'lerinden storage object filename uretimi OS bagimsiz hale getirildi.
+- `MirroredAudioFile.fileName` helper'i Windows `\` separator'lerini `/` olarak normalize edip basename cikariyor.
+- Storage seed SQL ve Supabase upload object path hesaplari ayni normalize edilmis filename'i kullanacak sekilde baglandi.
+- Supabase project URL guard'i userinfo, non-default port ve bos/dolu fragment tasiyan origin'leri reddedecek sekilde sertlestirildi.
+- Windows-style manifest path ve unsafe Supabase URL testleri eklendi/genisletildi.
+
+### Kanit
+- OS bagimsiz filename helper'i: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:50`
+- Storage seed path helper'i normalize filename kullaniyor: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:52`
+- Upload object path helper'i normalize filename kullaniyor: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:23`
+- Supabase URL userinfo guard'i: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:31`
+- Supabase URL port guard'i: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:34`
+- Supabase URL fragment guard'i: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:37`
+- Storage seed Windows path testi: `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart:272`
+- Upload object path Windows path testi: `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart:91`
+- Unsafe Supabase URL testi: `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart:22`
+
+### Neden Yapildi
+- Manifest `local_path` Windows separator'i ile uretilirse `p.basename(localPath)` farkli OS kosullarinda tum path'i filename sanabilir.
+- Bu durum storage seed veya upload object path'inde `build\verified_quran_audio\...` gibi yerel path parcalarinin Supabase object path'ine sizmasina yol acabilirdi.
+- Upload tool'u Supabase project origin'ini path/query icin koruyordu, ancak userinfo ve fragment varligi da secret/ambiguous URL riski tasiyordu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart`
+- `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Storage seed ve upload object path'leri artik manifest hangi OS'te uretilirse uretilsin `reciter/NNN.mp3` formatinda kaliyor.
+- Supabase upload URL'si daha dar ve denetlenebilir bir project origin kuralina baglandi.
+- Runtime audio davranisi degismedi; yalnizca operator tool zinciri guvenli hale getirildi.
+
+### Test Sonucu
+- Odak test: `flutter test test\generate_quran_audio_storage_seed_test.dart` PASS (`13/13`)
+- Odak test: `flutter test test\upload_quran_audio_storage_test.dart` PASS (`9/9`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`532/532`)
+
+### Risk Degisimi
+- Windows manifest path'inin storage object path'ine yerel klasor parcasi sizdirmasi riski: `12/25 -> 2/25`
+- Supabase upload origin'inde userinfo/fragment ile ambiguous URL kabul edilmesi riski: `10/25 -> 2/25`
+
+### Rollback Plani
+- `MirroredAudioFile.fileName` helper'i kaldirilir.
+- `storagePath` ve `storageObjectPathForMirroredAudioFile` eski `p.basename(localPath)` davranisina dondurulur.
+- Supabase URL guard'i eski path/query/fragment-string kontrolune dondurulur.
+- Eklenen Windows path ve URL guard testleri kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda audio storage pipeline disinda kalan yuksek riskli runtime false-success, l10n guard ve dini icerik provenance bosluklari taranacak.

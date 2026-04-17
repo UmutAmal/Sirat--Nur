@@ -47,8 +47,9 @@ class MirroredAudioFile {
   final DateTime verifiedAt;
   final String localPath;
 
+  String get fileName => p.basename(localPath.replaceAll('\\', '/'));
+
   String storagePath({required String bucketName}) {
-    final fileName = p.basename(localPath);
     return '$bucketName/$reciterId/$fileName';
   }
 }
@@ -104,8 +105,8 @@ List<MirroredAudioFile> parseMirroredAudioManifest(
         throw FormatException('Missing local_path in manifest row: $row');
       }
       final expectedFileName = '${surahNumber.toString().padLeft(3, '0')}.mp3';
-      final localFileName = p.basename(localPath.replaceAll('\\', '/'));
-      if (localFileName != expectedFileName) {
+      final normalizedFileName = p.basename(localPath.replaceAll('\\', '/'));
+      if (normalizedFileName != expectedFileName) {
         throw FormatException(
           'Invalid local_path file name for reciter $reciterId, '
           'surah $surahNumber: expected $expectedFileName.',

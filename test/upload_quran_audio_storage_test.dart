@@ -22,9 +22,12 @@ void main() {
     test('rejects unsafe Supabase project upload URLs', () {
       for (final rawUrl in const [
         'http://example.supabase.co',
+        'https://service@example.supabase.co',
         'https://example.com',
+        'https://example.supabase.co:8443',
         'https://example.supabase.co/storage/v1',
         'https://example.supabase.co?apikey=secret',
+        'https://example.supabase.co#',
         'https://example.supabase.co#secret',
       ]) {
         expect(
@@ -80,6 +83,18 @@ void main() {
         sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
         verifiedAt: DateTime.utc(2026, 4, 8),
         localPath: 'build/verified_quran_audio/alafasy/001.mp3',
+      );
+
+      expect(storageObjectPathForMirroredAudioFile(file), 'alafasy/001.mp3');
+    });
+
+    test('normalizes Windows manifest paths for storage object paths', () {
+      final file = MirroredAudioFile(
+        surahNumber: 1,
+        reciterId: 'alafasy',
+        sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
+        verifiedAt: DateTime.utc(2026, 4, 8),
+        localPath: r'build\verified_quran_audio\alafasy\001.mp3',
       );
 
       expect(storageObjectPathForMirroredAudioFile(file), 'alafasy/001.mp3');

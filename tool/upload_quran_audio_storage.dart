@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:path/path.dart' as p;
-
 import 'generate_quran_audio_storage_seed.dart';
 import 'quran_audio_file_validation.dart';
 
@@ -23,19 +21,20 @@ class QuranAudioStorageUploadSummary {
 }
 
 String storageObjectPathForMirroredAudioFile(MirroredAudioFile file) {
-  final fileName = p.basename(file.localPath);
-  return '${file.reciterId}/$fileName';
+  return '${file.reciterId}/${file.fileName}';
 }
 
 Uri normalizeSupabaseProjectUrl(Uri supabaseUrl) {
   final hasPath = supabaseUrl.pathSegments.any((segment) => segment.isNotEmpty);
   final host = supabaseUrl.host.toLowerCase();
   if (!supabaseUrl.isScheme('https') ||
+      supabaseUrl.userInfo.isNotEmpty ||
       host.isEmpty ||
       !host.endsWith('.supabase.co') ||
+      supabaseUrl.hasPort ||
       hasPath ||
       supabaseUrl.hasQuery ||
-      supabaseUrl.fragment.isNotEmpty) {
+      supabaseUrl.hasFragment) {
     throw ArgumentError.value(
       supabaseUrl.toString(),
       'supabaseUrl',
