@@ -341,20 +341,27 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
                       Icons.arrow_forward_ios_rounded,
                       size: 14,
                     ),
-                    onTap: () {
-                      ref
-                          .read(settingsProvider.notifier)
-                          .updateLocation(
-                            city.lat,
-                            city.lng,
-                            '${city.name}, ${city.country}',
-                            timezone: city.timezone,
-                            countryCode: city.countryCode,
-                          );
-                      _showMessage(
-                        '${l10n.location}: ${city.name}, ${city.country} (${city.timezone})',
-                      );
-                      context.pop();
+                    onTap: () async {
+                      try {
+                        await ref
+                            .read(settingsProvider.notifier)
+                            .updateLocation(
+                              city.lat,
+                              city.lng,
+                              '${city.name}, ${city.country}',
+                              timezone: city.timezone,
+                              countryCode: city.countryCode,
+                            );
+                        if (!context.mounted) return;
+                        _showMessage(
+                          '${l10n.location}: ${city.name}, ${city.country} (${city.timezone})',
+                        );
+                        context.pop();
+                      } catch (_) {
+                        debugPrint('Manual location update failed');
+                        if (!context.mounted) return;
+                        _showMessage(l10n.appUnknownError);
+                      }
                     },
                   ),
                 );

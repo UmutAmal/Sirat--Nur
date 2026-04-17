@@ -12660,3 +12660,52 @@
 
 ### Sonraki Adim
 - Premium restore zaman asimi ve location/prayer notification zinciri, gercek kullanici etkisi olan sessiz hata/yanlis durum riskleri acisindan taranmaya devam edecek.
+
+## 2026-04-17 TUR-301 — Manual City Selection Awaited Persistence
+
+### Yapilan Islem
+- Manuel sehir secimi akisi, `settingsProvider.notifier.updateLocation(...)` tamamlanmadan basari mesaji gosterip sayfayi kapatmayacak sekilde `async/await` ile sertlestirildi.
+- Persistence veya state update hatasinda kullaniciya genel hata mesaji gosteriliyor, sayfa kapatilmiyor.
+- Debug log sanitizasyonu korundu; raw exception kullaniciya veya log satirina interpolasyonla basilmiyor.
+- Regresyon icin kaynak koruma testi eklendi.
+
+### Kanit
+- Manuel sehir `onTap` artik async: `A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart:344`
+- `updateLocation` await ediliyor: `A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart:346`
+- Hata logu sanitize edildi: `A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart:361`
+- Kullanici hata mesaji l10n zincirinden geliyor: `A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart:363`
+- Regresyon testi: `A:\Way of Allah\sirat_i_nur\test\location_selection_page_test.dart:84`
+
+### Neden Yapildi
+- Onceki manuel sehir akisi `updateLocation(...)` future'unu beklemeden hemen basari mesaji gosterip `context.pop()` cagiriyordu.
+- SharedPreferences yazimi veya provider state update'i hata verse bile kullanici basarili sanabilir ve ayar gercekte kaydedilmemis kalabilirdi.
+- Bu false-success, namaz vakti ve bildirim zincirinde yanlis lokasyon/timezone kullanilmasina kadar uzanabilecek bir kok risk olusturuyordu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\location_selection_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\location_selection_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Manuel sehir secimi artik persistence tamamlanmadan basarili sayilmiyor.
+- Basarisiz kayit durumunda sayfa kullaniciyi ayni ekranda tutarak tekrar deneme imkani veriyor.
+- Prayer/location zincirine yanlis guven veren UI durumu azaltilmis oldu.
+
+### Test Sonucu
+- Odak test: `flutter test test\location_selection_page_test.dart test\settings_provider_test.dart` PASS (`20/20`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`519/519`)
+
+### Risk Degisimi
+- Manuel sehir seciminde false-success riski: `12/25 -> 2/25`
+- Kaydedilmeyen lokasyonun namaz/bildirim zincirine sessizce yansimasi riski: `12/25 -> 3/25`
+
+### Rollback Plani
+- Manuel sehir `onTap` tekrar senkron hale getirilir.
+- `await updateLocation` ve `try/catch` blogu kaldirilir.
+- Kaynak koruma testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda repo/doctor dogrulanacak; ardindan premium restore timeout, timezone dogrulama ve notification scheduling zincirindeki sessiz hata riskleri kanitla taranacak.

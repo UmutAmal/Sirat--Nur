@@ -80,5 +80,17 @@ void main() {
       expect(source, isNot(contains(r'Location detection failed: $error')));
       expect(source, contains('l10n.locationDetectionFailed'));
     });
+
+    test('manual city selection awaits settings update before closing', () {
+      final source = File(
+        'lib/features/settings/location_selection_page.dart',
+      ).readAsStringSync();
+
+      expect(source, contains('onTap: () async'));
+      expect(source, contains('await ref'));
+      expect(source, contains("debugPrint('Manual location update failed')"));
+      expect(source, contains('_showMessage(l10n.appUnknownError)'));
+      expect(source, isNot(contains(r'Manual location update failed: $error')));
+    });
   });
 }
