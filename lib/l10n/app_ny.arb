@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Mawu otsimikizika a Quran sakupezeka pakali pano.",
-  "quranAudioSourcesIncomplete": "Paketi yotsimikizika ya Korani yotsimikizika ndi yosakwanira ({available}/{total}). Tsitsaninso mbewu zamtambo ndikuyesanso.",
+  "quranAudioSourcesIncomplete": "Paketi yotsimikizika ya Korani yotsimikizika ndi yosakwanira ({available}/{total}). Yesaninso mndandanda wamawu ukasinthidwa.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "د قرآن کريم آډیو منابع اوس مهال شتون نلري.",
-  "quranAudioSourcesIncomplete": "تصدیق شوی د قرآن آډیو کڅوړه نیمګړې ده ({available}/{total}). د بادل تخم تازه کړئ او بیا هڅه وکړئ.",
+  "quranAudioSourcesIncomplete": "تصدیق شوی د قرآن آډیو کڅوړه نیمګړې ده ({available}/{total}). د آډیو کتلاګ تازه کیدو وروسته بیا هڅه وکړئ.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

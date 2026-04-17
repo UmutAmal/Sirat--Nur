@@ -1227,7 +1227,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return '확인된 꾸란 오디오 팩이 불완전합니다($available/$total). 클라우드 시드를 새로고침하고 다시 시도하세요.';
+    return '확인된 꾸란 오디오 팩이 불완전합니다($available/$total). 오디오 카탈로그가 업데이트된 후 다시 시도하세요.';
   }
 
   @override

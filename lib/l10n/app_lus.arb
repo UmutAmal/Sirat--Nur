@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Tunah hian Quran audio source verified a awm lo.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesIncomplete": "Quran audio pack finfiah tawh chu a kim lo ({available}/{total}). Audio catalog update hnuah han try leh teh.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

@@ -1249,7 +1249,7 @@ class AppLocalizationsMk extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Потврдениот аудио пакет од Куранот е нецелосен ($available/$total). Освежете го семето на облак и обидете се повторно.';
+    return 'Потврдениот аудио пакет од Куранот е нецелосен ($available/$total). Обидете се повторно откако ќе се ажурира аудио каталогот.';
   }
 
   @override

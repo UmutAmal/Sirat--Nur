@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Kontrollitud Koraani heliallikad pole praegu saadaval.",
-  "quranAudioSourcesIncomplete": "Kinnitatud Koraani helipakett ei ole täielik ({available}/{total}). Värskendage pilve seemet ja proovige uuesti.",
+  "quranAudioSourcesIncomplete": "Kinnitatud Koraani helipakett ei ole täielik ({available}/{total}). Proovige uuesti pärast helikataloogi värskendamist.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

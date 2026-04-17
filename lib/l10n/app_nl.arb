@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Geverifieerde Koran-audiobronnen zijn momenteel niet beschikbaar.",
-  "quranAudioSourcesIncomplete": "Het geverifieerde Koran-audiopakket is onvolledig ({available}/{total}). Vernieuw cloud-seed en probeer het opnieuw.",
+  "quranAudioSourcesIncomplete": "Het geverifieerde Koran-audiopakket is onvolledig ({available}/{total}). Probeer het opnieuw nadat de audiocatalogus is bijgewerkt.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

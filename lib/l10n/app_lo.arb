@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "ແຫຼ່ງສຽງ Quran ທີ່ຢັ້ງຢືນແລ້ວແມ່ນບໍ່ສາມາດໃຊ້ໄດ້ໃນຕອນນີ້.",
-  "quranAudioSourcesIncomplete": "ຊຸດສຽງ Quran ຢັ້ງຢືນບໍ່ສົມບູນ ({available}/{total}). ໂຫຼດເມັດຄລາວຄືນໃໝ່ແລ້ວລອງອີກຄັ້ງ.",
+  "quranAudioSourcesIncomplete": "ຊຸດສຽງ Quran ຢັ້ງຢືນບໍ່ຄົບຖ້ວນ ({available}/{total}). ລອງອີກຄັ້ງຫຼັງຈາກລາຍການສຽງຖືກອັບເດດ.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

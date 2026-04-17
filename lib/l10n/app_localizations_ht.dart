@@ -1245,7 +1245,7 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Pake odyo koran verifye pa konplè ($available/$total). Rafrechi grenn nwaj epi eseye ankò.';
+    return 'Pake odyo koran verifye pa konplè ($available/$total). Eseye ankò apre katalòg odyo a mete ajou.';
   }
 
   @override

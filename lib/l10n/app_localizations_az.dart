@@ -1246,7 +1246,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Təsdiqlənmiş Quran audio paketi natamamdır ($available/$total). Bulud toxumunu yeniləyin və yenidən cəhd edin.';
+    return 'Təsdiqlənmiş Quran audio paketi natamamdır ($available/$total). Audio kataloq yeniləndikdən sonra yenidən cəhd edin.';
   }
 
   @override

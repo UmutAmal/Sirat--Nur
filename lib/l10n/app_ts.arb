@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesIncomplete": "Phakeji ya mpfumawulo ya Quran leyi tiyisisiweke a yi helelanga ({available}/{total}). Ringeta nakambe endzhaku ka loko khathalogi ya mpfumawulo yi pfuxetiwile.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

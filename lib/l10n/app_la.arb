@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Verified Quran audio fontes perpendat nunc.",
-  "quranAudioSourcesIncomplete": "Verificata Quran auditio sarcina incompleta est ({available}/{total}). refice nube semen, et iterum tenta.",
+  "quranAudioSourcesIncomplete": "Verificata Quran auditionis sarcina incompleta est ({available}/{total}). Iterum conare postquam catalogus audio renovatus est.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

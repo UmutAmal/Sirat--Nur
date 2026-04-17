@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Sursele audio verificate ale Coranului nu sunt disponibile momentan.",
-  "quranAudioSourcesIncomplete": "Pachetul audio Coran verificat este incomplet ({available}/{total}). Actualizează cloud seed și încearcă din nou.",
+  "quranAudioSourcesIncomplete": "Pachetul audio Coran verificat este incomplet ({available}/{total}). Încercați din nou după ce catalogul audio este actualizat.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

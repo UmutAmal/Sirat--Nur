@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Awọn orisun ohun afetigbọ Al-Qur’an ti a fọwọsi ko si ni bayi.",
-  "quranAudioSourcesIncomplete": "Ididi ohun afetigbọ Al-Qur’an ti ko pe ({available}/{total}). Sọ irugbin awọsanma sọ ​​ki o tun gbiyanju lẹẹkansi.",
+  "quranAudioSourcesIncomplete": "Ididi ohun afetigbọ Al-Qur’an ti ko pe ({available}/{total}). Gbiyanju lẹẹkansi lẹhin ti o ti ni imudojuiwọn katalogi ohun.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

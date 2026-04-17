@@ -1251,7 +1251,7 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Preverjen zvočni paket Quran je nepopoln ($available/$total). Osvežite seme v oblaku in poskusite znova.';
+    return 'Preverjen zvočni paket Quran je nepopoln ($available/$total). Poskusite znova, ko bo zvočni katalog posodobljen.';
   }
 
   @override

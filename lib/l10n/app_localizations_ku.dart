@@ -1246,7 +1246,7 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Pakêta dengî ya Quranê ya verastkirî ne temam e ($available/$total). Tovê ewr nûve bikin û dîsa biceribînin.';
+    return 'Pakêta dengî ya Quranê ya verastkirî ne temam e ($available/$total). Piştî nûvekirina kataloga dengî dîsa biceribîne.';
   }
 
   @override

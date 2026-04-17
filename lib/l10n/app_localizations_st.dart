@@ -1252,7 +1252,7 @@ class AppLocalizationsSt extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Sephutheloana sa molumo oa Quran se netefalitsoeng ha se ea fella ($available/$total). Hlahisa peo ea leru \'me u leke hape.';
+    return 'Sephutheloana sa molumo oa Quran se netefalitsoeng ha se ea fella ($available/$total). Leka hape ka mor\'a hore lethathamo la molumo le ntlafatsoe.';
   }
 
   @override

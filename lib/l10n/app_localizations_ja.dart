@@ -1227,7 +1227,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Quran オーディオ パックが不完全であることを確認しました ($available/$total)。クラウド シードを更新して再試行してください。';
+    return 'Quran オーディオ パックが不完全であることを確認しました ($available/$total)。オーディオ カタログが更新されてから、もう一度お試しください。';
   }
 
   @override

@@ -1257,7 +1257,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'အတည်ပြုထားသော ကုရ်အာန် အသံအထုပ်သည် မပြည့်စုံပါ ($available/$total)။ Cloud Seed ကို ပြန်လည်ဆန်းသစ်ပြီး ထပ်စမ်းကြည့်ပါ။';
+    return 'အတည်ပြုထားသော ကုရ်အာန် အသံအထုပ်သည် မပြည့်စုံပါ ($available/$total)။ အော်ဒီယိုကတ်တလောက်ကို အပ်ဒိတ်လုပ်ပြီးနောက် ထပ်လုပ်ကြည့်ပါ။';
   }
 
   @override

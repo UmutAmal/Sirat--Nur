@@ -1251,7 +1251,7 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Ko te kete ororongo Quran kua whakamanahia kaore i oti ($available/$total). Tāmatahia te kākano kapua ka ngana anō.';
+    return 'Ko te kete ororongo Quran kua whakamanahia kaore i oti ($available/$total). Ngana ano i muri i te whakahōutanga o te putumōhio ororongo.';
   }
 
   @override

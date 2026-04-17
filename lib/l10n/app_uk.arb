@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Перевірені аудіоджерела Корану зараз недоступні.",
-  "quranAudioSourcesIncomplete": "Перевірений аудіопакет Корану неповний ({available}/{total}). Оновіть хмарний код і повторіть спробу.",
+  "quranAudioSourcesIncomplete": "Перевірений аудіопакет Корану неповний ({available}/{total}). Повторіть спробу після оновлення аудіокаталогу.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

@@ -1253,7 +1253,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Ang napamatud-an nga Quran audio pack dili kompleto ($available/$total). I-refresh ang cloud seed ug sulayi pag-usab.';
+    return 'Ang napamatud-an nga Quran audio pack dili kompleto ($available/$total). Sulayi pag-usab human ma-update ang audio catalog.';
   }
 
   @override

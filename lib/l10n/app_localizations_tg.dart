@@ -1246,7 +1246,7 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Бастаи аудиоии тасдиқшудаи Қуръон нопурра аст ($available/$total). Насли абрро нав кунед ва бори дигар кӯшиш кунед.';
+    return 'Бастаи аудиоии тасдиқшудаи Қуръон нопурра аст ($available/$total). Пас аз навсозии феҳристи аудио дубора кӯшиш кунед.';
   }
 
   @override

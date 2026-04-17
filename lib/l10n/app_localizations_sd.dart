@@ -1243,7 +1243,7 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'تصديق ٿيل قرآن آڊيو پيڪ نامڪمل آهي ($available/$total). بادل جي ٻج کي تازو ڪريو ۽ ٻيهر ڪوشش ڪريو.';
+    return 'تصديق ٿيل قرآن آڊيو پيڪ نامڪمل آهي ($available/$total). آڊيو فهرست اپڊيٽ ٿيڻ کان پوءِ ٻيهر ڪوشش ڪريو.';
   }
 
   @override

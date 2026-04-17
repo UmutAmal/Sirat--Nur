@@ -1248,7 +1248,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Egiaztatutako Quran audio paketea osatu gabe dago ($available/$total). Freskatu hodei-hazia eta saiatu berriro.';
+    return 'Egiaztatutako Quran audio paketea osatu gabe dago ($available/$total). Saiatu berriro audio-katalogoa eguneratu ondoren.';
   }
 
   @override

@@ -1215,7 +1215,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return '已验证的《古兰经》音频包不完整 ($available/$total)。刷新云种子并重试。';
+    return '已验证的《古兰经》音频包不完整 ($available/$total)。更新音频目录后重试。';
   }
 
   @override
@@ -2856,7 +2856,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return '已验证的《古兰经》音频包不完整 ($available/$total)。刷新云种子并重试。';
+    return '已验证的《古兰经》音频包不完整 ($available/$total)。更新音频目录后重试。';
   }
 
   @override
@@ -4497,7 +4497,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return '已驗證的《古蘭經》音訊包不完整 ($available/$total)。刷新雲種子並重試。';
+    return '已驗證的《古蘭經》音訊包不完整 ($available/$total)。更新音頻目錄後重試。';
   }
 
   @override

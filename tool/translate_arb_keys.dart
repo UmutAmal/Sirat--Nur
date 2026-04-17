@@ -640,6 +640,10 @@ bool _hasKnownWrongContext(String key, String value) {
     return _containsAny(value, _knownDownloadTranslationDebris);
   }
 
+  if (key == 'quranAudioSourcesIncomplete') {
+    return _containsAny(value, _knownQuranAudioSourceStatusDebris);
+  }
+
   if (key == 'splashTagline') {
     return _containsAny(value, _knownSplashTaglineTranslationDebris) ||
         _englishFallbackComparisonToken(
@@ -676,6 +680,19 @@ const _knownDownloadTranslationDebris = [
   'резюме',
   'Ռեզյում',
   'რეზიუმ',
+];
+
+const _knownQuranAudioSourceStatusDebris = [
+  'Refresh cloud seed',
+  'refresh cloud seed',
+  'Cloud seed',
+  'cloud seed',
+  'wolksaad',
+  'semilla de la nube',
+  'semente da nube',
+  'semente da nuvem',
+  'nube semen',
+  'nube semine',
 ];
 
 const _knownSplashTaglineTranslationDebris = ['के बारे में', 'बतावल', 'nisqa'];

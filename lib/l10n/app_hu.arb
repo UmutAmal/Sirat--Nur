@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Az ellenőrzött Korán hangforrások jelenleg nem érhetők el.",
-  "quranAudioSourcesIncomplete": "Az ellenőrzött Korán hangcsomag hiányos ({available}/{total}). Frissítse a felhőmagot, és próbálkozzon újra.",
+  "quranAudioSourcesIncomplete": "Az ellenőrzött Korán hangcsomag hiányos ({available}/{total}). Próbálja újra az audiokatalógus frissítése után.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

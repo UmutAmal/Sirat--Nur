@@ -1247,7 +1247,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'যাচাইকৃত কুরআন অডিও প্যাক অসম্পূর্ণ ($available/$total)। মেঘের বীজ রিফ্রেশ করুন এবং আবার চেষ্টা করুন।';
+    return 'যাচাইকৃত কুরআন অডিও প্যাক অসম্পূর্ণ ($available/$total)। অডিও ক্যাটালগ আপডেট হওয়ার পরে আবার চেষ্টা করুন।';
   }
 
   @override

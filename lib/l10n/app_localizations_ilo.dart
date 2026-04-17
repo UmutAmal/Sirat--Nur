@@ -1256,7 +1256,7 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return 'Ti naberipikado nga audio pack ti Quran ket saan a kompleto ($available/$total). Padasem manen kalpasan a ma-update ti audio catalog.';
   }
 
   @override

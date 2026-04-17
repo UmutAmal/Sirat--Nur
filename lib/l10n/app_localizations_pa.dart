@@ -1246,7 +1246,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'ਪ੍ਰਮਾਣਿਤ ਕੁਰਾਨ ਆਡੀਓ ਪੈਕ ਅਧੂਰਾ ਹੈ ($available/$total)। ਕਲਾਉਡ ਸੀਡ ਨੂੰ ਤਾਜ਼ਾ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
+    return 'ਪ੍ਰਮਾਣਿਤ ਕੁਰਾਨ ਆਡੀਓ ਪੈਕ ਅਧੂਰਾ ਹੈ ($available/$total)। ਆਡੀਓ ਕੈਟਾਲਾਗ ਅੱਪਡੇਟ ਹੋਣ ਤੋਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
   }
 
   @override

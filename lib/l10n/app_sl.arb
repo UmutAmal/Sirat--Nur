@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Preverjeni zvočni viri iz Korana trenutno niso na voljo.",
-  "quranAudioSourcesIncomplete": "Preverjen zvočni paket Quran je nepopoln ({available}/{total}). Osvežite seme v oblaku in poskusite znova.",
+  "quranAudioSourcesIncomplete": "Preverjen zvočni paket Quran je nepopoln ({available}/{total}). Poskusite znova, ko bo zvočni katalog posodobljen.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

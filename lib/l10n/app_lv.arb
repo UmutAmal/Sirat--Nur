@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Verificētie Korāna audio avoti pašlaik nav pieejami.",
-  "quranAudioSourcesIncomplete": "Verificētā Korāna audio pakotne ir nepilnīga ({available}/{total}). Atsvaidziniet mākoņa sēklu un mēģiniet vēlreiz.",
+  "quranAudioSourcesIncomplete": "Verificētā Korāna audio pakotne ir nepilnīga ({available}/{total}). Mēģiniet vēlreiz pēc audio kataloga atjaunināšanas.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

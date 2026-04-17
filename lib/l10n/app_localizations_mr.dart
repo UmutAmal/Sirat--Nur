@@ -1246,7 +1246,7 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'सत्यापित कुराण ऑडिओ पॅक अपूर्ण आहे ($available/$total). क्लाउड सीड रिफ्रेश करा आणि पुन्हा प्रयत्न करा.';
+    return 'सत्यापित कुराण ऑडिओ पॅक अपूर्ण आहे ($available/$total). ऑडिओ कॅटलॉग अपडेट केल्यानंतर पुन्हा प्रयत्न करा.';
   }
 
   @override

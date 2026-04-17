@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Ověřené zdroje zvuku z Koránu jsou momentálně nedostupné.",
-  "quranAudioSourcesIncomplete": "Ověřený zvukový balíček Koránu je neúplný ({available}/{total}). Obnovte zdroj cloudu a zkuste to znovu.",
+  "quranAudioSourcesIncomplete": "Ověřený zvukový balíček Koránu je neúplný ({available}/{total}). Zkuste to znovu po aktualizaci audio katalogu.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

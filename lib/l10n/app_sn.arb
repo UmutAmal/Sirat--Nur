@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Verified Quran audio sources haasi kuwanikwa pari zvino.",
-  "quranAudioSourcesIncomplete": "Everified Quran audio pack haina kukwana ({available}/{total}). Zorora mbeu yegore uye edza zvakare.",
+  "quranAudioSourcesIncomplete": "Everified Quran audio pack haina kukwana ({available}/{total}). Edza zvakare mushure mekunge bhuku reodhiyo ragadziridzwa.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

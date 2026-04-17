@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Staðfestir hljóðgjafar í Kóraninum eru ekki tiltækir eins og er.",
-  "quranAudioSourcesIncomplete": "Staðfestur hljóðpakki frá Kóraninum er ófullkominn ({available}/{total}). Endurnýjaðu skýjafræ og reyndu aftur.",
+  "quranAudioSourcesIncomplete": "Staðfestur hljóðpakki Kóranans er ófullkominn ({available}/{total}). Reyndu aftur eftir að hljóðskráin hefur verið uppfærð.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

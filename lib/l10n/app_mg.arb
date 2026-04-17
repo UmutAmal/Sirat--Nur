@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Loharanom-peo Quran voamarina dia tsy misy amin'izao fotoana izao.",
-  "quranAudioSourcesIncomplete": "Ny fonosan-peo Quran voamarina dia tsy feno ({available}/{total}). Havaozy ny voa rahona ary andramo indray.",
+  "quranAudioSourcesIncomplete": "Ny fonosan-peo Quran voamarina dia tsy feno ({available}/{total}). Andramo indray rehefa avy nohavaozina ny katalaogin'ny feo.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

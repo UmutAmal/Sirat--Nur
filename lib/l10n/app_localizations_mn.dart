@@ -1250,7 +1250,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Баталгаажсан Коран судрын аудио багц дутуу байна ($available/$total). Үүлний үрийг сэргээгээд дахин оролдоно уу.';
+    return 'Баталгаажсан Коран судрын аудио багц дутуу байна ($available/$total). Аудио каталог шинэчлэгдсэний дараа дахин оролдоно уу.';
   }
 
   @override

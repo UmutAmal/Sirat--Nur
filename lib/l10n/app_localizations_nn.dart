@@ -1248,7 +1248,7 @@ class AppLocalizationsNn extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verifisert Koran-lydpakke er ufullstendig ($available/$total). Oppdater skyfrø og prøv igjen.';
+    return 'Verifisert Koran-lydpakke er ufullstendig ($available/$total). Prøv igjen etter at lydkatalogen er oppdatert.';
   }
 
   @override

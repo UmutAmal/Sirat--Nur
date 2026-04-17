@@ -1250,7 +1250,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Перевірений аудіопакет Корану неповний ($available/$total). Оновіть хмарний код і повторіть спробу.';
+    return 'Перевірений аудіопакет Корану неповний ($available/$total). Повторіть спробу після оновлення аудіокаталогу.';
   }
 
   @override

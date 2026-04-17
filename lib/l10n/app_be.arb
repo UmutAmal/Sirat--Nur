@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Правераныя аўдыякрыніцы Карана зараз недаступныя.",
-  "quranAudioSourcesIncomplete": "Пацверджаны аўдыяпакет Карана няпоўны ({available}/{total}). Абнавіце воблачнае запаўненне і паўтарыце спробу.",
+  "quranAudioSourcesIncomplete": "Пацверджаны аўдыяпакет Карана няпоўны ({available}/{total}). Паўтарыце спробу пасля абнаўлення аўдыякаталога.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

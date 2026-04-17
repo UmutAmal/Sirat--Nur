@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "تصديق ٿيل قرآن آڊيو ذريعن في الحال دستياب ناهي.",
-  "quranAudioSourcesIncomplete": "تصديق ٿيل قرآن آڊيو پيڪ نامڪمل آهي ({available}/{total}). بادل جي ٻج کي تازو ڪريو ۽ ٻيهر ڪوشش ڪريو.",
+  "quranAudioSourcesIncomplete": "تصديق ٿيل قرآن آڊيو پيڪ نامڪمل آهي ({available}/{total}). آڊيو فهرست اپڊيٽ ٿيڻ کان پوءِ ٻيهر ڪوشش ڪريو.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

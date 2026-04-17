@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Οι επαληθευμένες πηγές ήχου του Κορανίου δεν είναι διαθέσιμες αυτήν τη στιγμή.",
-  "quranAudioSourcesIncomplete": "Το επαληθευμένο πακέτο ήχου Κορανίου δεν είναι πλήρες ({available}/{total}). Ανανεώστε το cloud seed και δοκιμάστε ξανά.",
+  "quranAudioSourcesIncomplete": "Το επαληθευμένο πακέτο ήχου Κορανίου δεν είναι πλήρες ({available}/{total}). Δοκιμάστε ξανά μετά την ενημέρωση του καταλόγου ήχου.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

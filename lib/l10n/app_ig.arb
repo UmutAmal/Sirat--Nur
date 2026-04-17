@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Isi mmalite ọdịyo Quran akwadoro adịghị ugbu a.",
-  "quranAudioSourcesIncomplete": "Ngwungwu ọdịyo nke Quran ezughị oke ({available}/{total}). Weghachite mkpụrụ ojii wee nwaa ọzọ.",
+  "quranAudioSourcesIncomplete": "Ngwungwu ọdịyo nke Quran ezughị oke ({available}/{total}). Gbalịa ọzọ ka emelitere katalọgụ ọdịyo.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

@@ -1247,7 +1247,7 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'וועראַפייד קווראַן אַודיאָ פּאַק איז דערענדיקט ($available/$total). דערפרישן וואָלקן זוימען און פּרוּווט ווידער.';
+    return 'וועראַפייד קווראַן אַודיאָ פּאַק איז דערענדיקט ($available/$total). פּרוּווט ווידער נאָך דערהייַנטיקט די אַודיאָ קאַטאַלאָג.';
   }
 
   @override

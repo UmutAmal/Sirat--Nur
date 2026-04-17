@@ -1247,7 +1247,7 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Ferifiearre Quran-audiopakket is net kompleet ($available/$total). Ferfarskje wolkseed en besykje it nochris.';
+    return 'Ferifiearre Quran-audiopakket is net kompleet ($available/$total). Besykje it nochris nei\'t de audiokatalogus bywurke is.';
   }
 
   @override

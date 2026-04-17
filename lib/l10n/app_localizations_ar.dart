@@ -1243,7 +1243,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'حزمة القرآن الصوتية التي تم التحقق منها غير مكتملة ($available/$total). قم بتحديث بذور السحابة وحاول مرة أخرى.';
+    return 'حزمة القرآن الصوتية التي تم التحقق منها غير مكتملة ($available/$total). حاول مرة أخرى بعد تحديث الكتالوج الصوتي.';
   }
 
   @override

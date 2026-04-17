@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "ਪ੍ਰਮਾਣਿਤ ਕੁਰਾਨ ਆਡੀਓ ਸਰੋਤ ਇਸ ਸਮੇਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
-  "quranAudioSourcesIncomplete": "ਪ੍ਰਮਾਣਿਤ ਕੁਰਾਨ ਆਡੀਓ ਪੈਕ ਅਧੂਰਾ ਹੈ ({available}/{total})। ਕਲਾਉਡ ਸੀਡ ਨੂੰ ਤਾਜ਼ਾ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+  "quranAudioSourcesIncomplete": "ਪ੍ਰਮਾਣਿਤ ਕੁਰਾਨ ਆਡੀਓ ਪੈਕ ਅਧੂਰਾ ਹੈ ({available}/{total})। ਆਡੀਓ ਕੈਟਾਲਾਗ ਅੱਪਡੇਟ ਹੋਣ ਤੋਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

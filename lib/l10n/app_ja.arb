@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "現在、検証済みのコーラン音源は利用できません。",
-  "quranAudioSourcesIncomplete": "Quran オーディオ パックが不完全であることを確認しました ({available}/{total})。クラウド シードを更新して再試行してください。",
+  "quranAudioSourcesIncomplete": "Quran オーディオ パックが不完全であることを確認しました ({available}/{total})。オーディオ カタログが更新されてから、もう一度お試しください。",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

@@ -1250,7 +1250,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return 'Mae pecyn sain Verified Quran yn anghyflawn ($available/$total). Ceisiwch eto ar ôl i\'r catalog sain gael ei ddiweddaru.';
   }
 
   @override

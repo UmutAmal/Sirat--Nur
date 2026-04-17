@@ -1246,7 +1246,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'بسته صوتی قرآن تأیید شده ناقص است ($available/$total). دانه ابر را تازه کنید و دوباره امتحان کنید.';
+    return 'بسته صوتی قرآن تأیید شده ناقص است ($available/$total). پس از به‌روزرسانی کاتالوگ صوتی، دوباره امتحان کنید.';
   }
 
   @override

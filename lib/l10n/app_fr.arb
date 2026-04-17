@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Les sources audio vérifiées du Coran ne sont pas disponibles pour le moment.",
-  "quranAudioSourcesIncomplete": "Le pack audio du Coran vérifié est incomplet ({available}/{total}). Actualisez la graine de nuage et réessayez.",
+  "quranAudioSourcesIncomplete": "Le pack audio du Coran vérifié est incomplet ({available}/{total}). Réessayez une fois le catalogue audio mis à jour.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

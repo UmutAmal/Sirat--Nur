@@ -1249,7 +1249,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Kifurushi cha sauti cha Kurani kilichothibitishwa hakijakamilika ($available/$total). Onyesha upya mbegu za wingu na ujaribu tena.';
+    return 'Kifurushi cha sauti cha Kurani kilichothibitishwa hakijakamilika ($available/$total). Jaribu tena baada ya katalogi ya sauti kusasishwa.';
   }
 
   @override

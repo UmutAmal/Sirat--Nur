@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "دەلىللەنگەن قۇرئان ئاۋاز مەنبەلىرىنى ھازىرچە ئىشلەتكىلى بولمايدۇ.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Try again after the audio catalog is updated.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

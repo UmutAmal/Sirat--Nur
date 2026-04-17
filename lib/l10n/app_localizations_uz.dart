@@ -1246,7 +1246,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Tasdiqlangan Qurʼon audio toʻplami toʻliq emas ($available/$total). Bulut urugʻini yangilang va qaytadan urinib koʻring.';
+    return 'Tasdiqlangan Qurʼon audio toʻplami toʻliq emas ($available/$total). Audio katalog yangilangandan keyin qayta urinib ko\'ring.';
   }
 
   @override

@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Txheeb xyuas Quran cov ntaub ntawv suab tsis muaj tam sim no.",
-  "quranAudioSourcesIncomplete": "Txheeb xyuas Quran lub pob tsis tiav ({available}/{total}). Refresh huab noob thiab sim dua.",
+  "quranAudioSourcesIncomplete": "Txheeb xyuas Quran lub pob tsis tiav ({available}/{total}). Sim dua tom qab lub suab catalog hloov kho.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

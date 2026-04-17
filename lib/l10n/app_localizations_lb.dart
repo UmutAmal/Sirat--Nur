@@ -1248,7 +1248,7 @@ class AppLocalizationsLb extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verifizéiert Koran Audio Pack ass onkomplett ($available/$total). D\'Wollekeed erfrëschen a probéiert nach eng Kéier.';
+    return 'Verifizéiert Koran Audio Pack ass onkomplett ($available/$total). Try again after the audio catalog is updated.';
   }
 
   @override

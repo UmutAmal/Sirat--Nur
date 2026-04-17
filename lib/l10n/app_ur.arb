@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "تصدیق شدہ قرآن کے آڈیو ذرائع ابھی دستیاب نہیں ہیں۔",
-  "quranAudioSourcesIncomplete": "تصدیق شدہ قرآن آڈیو پیک نامکمل ہے ({available}/{total})۔ بادل کے بیج کو ریفریش کریں اور دوبارہ کوشش کریں۔",
+  "quranAudioSourcesIncomplete": "تصدیق شدہ قرآن آڈیو پیک نامکمل ہے ({available}/{total})۔ آڈیو کیٹلاگ اپ ڈیٹ ہونے کے بعد دوبارہ کوشش کریں۔",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

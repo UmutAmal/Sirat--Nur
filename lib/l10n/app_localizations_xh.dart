@@ -1250,7 +1250,7 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Ipakethi yomsindo yeQuran eqinisekisiweyo ayigqitywanga ($available/$total). Hlaziya imbewu yelifu kwaye uzame kwakhona.';
+    return 'Ipakethi yomsindo yeQuran eqinisekisiweyo ayigqitywanga ($available/$total). Zama kwakhona emva kokuba ikhathalogu yomsindo ihlaziywe.';
   }
 
   @override

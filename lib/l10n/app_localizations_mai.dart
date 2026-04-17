@@ -1245,7 +1245,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return 'सत्यापित कुरान ऑडियो पैक अपूर्ण अछि ($available/$total)। ऑडियो कैटलॉग अपडेट भेलाक बाद फेरसँ प्रयास करू.';
   }
 
   @override

@@ -1244,7 +1244,7 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'प्रमाणित कुरान अडियो प्याक अपूर्ण छ ($available/$total)। क्लाउड सीड रिफ्रेस गर्नुहोस् र फेरि प्रयास गर्नुहोस्।';
+    return 'प्रमाणित कुरान अडियो प्याक अपूर्ण छ ($available/$total)। अडियो क्याटलग अपडेट भएपछि फेरि प्रयास गर्नुहोस्।';
   }
 
   @override

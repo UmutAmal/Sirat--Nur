@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Vyanzo vya sauti vya Kurani vilivyothibitishwa havipatikani kwa sasa.",
-  "quranAudioSourcesIncomplete": "Kifurushi cha sauti cha Kurani kilichothibitishwa hakijakamilika ({available}/{total}). Onyesha upya mbegu za wingu na ujaribu tena.",
+  "quranAudioSourcesIncomplete": "Kifurushi cha sauti cha Kurani kilichothibitishwa hakijakamilika ({available}/{total}). Jaribu tena baada ya katalogi ya sauti kusasishwa.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

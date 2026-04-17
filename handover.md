@@ -15202,3 +15202,47 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki l10n/icerik riski olarak downloadAction/deleteDownloadedFiles same-as-English kalintilari ile diger yanlis "resume/CV" disi semantic debris taranacak.
+
+## 2026-04-17 TUR-349 - Quran Audio Incomplete Copy No Longer Exposes Cloud Seed Jargon
+
+### MASTER Karari
+- Risk: `quranAudioSourcesIncomplete` kullaniciya gosterilen hata metni operator ic jargonunu tasiyordu; eski EN kaynak `Refresh cloud seed and try again` diyordu ve bu ifade normal kullanici icin uygulanabilir bir cozum degildi.
+- Kanit: `lib/l10n/app_en.arb:594` eski kaynak cloud seed yenileme talimati veriyordu; `tool/translate_arb_keys.dart` once bu anahtar icin cloud-seed kalintisini yanlis baglam olarak reddetmiyordu.
+- Kok neden: Ses katalog/seed yonetimi operator tarafindaki import pipeline'ina aitken runtime copy kullaniciya teknik seed terminolojisini sizdiriyordu.
+- Etki: Eksik dogrulanmis Quran audio paketi durumunda kullanici ne yapamayacagini soyleyen bir mesaj goruyor, destek/guven riski olusuyordu.
+- Olasilik: `quranAudioSourcesIncomplete` runtime offline audio source availability zincirinde aktif kullaniliyor ve tum locale'lere yayilan bir kaynak string.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1).
+- Rollback kapsami: `lib/l10n/app_*.arb`, `lib/l10n/app_localizations_*.dart`, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/arb_ui_localization_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `lib/l10n/app_en.arb:594` kaynak mesaj kullaniciya uygulanabilir ve durust bir metne cevrildi: audio catalog guncellendikten sonra tekrar dene.
+- `lib/l10n/app_tr.arb:594` TR referans ayni anlamla yazildi: ses katalog guncellemesi sonrasi tekrar dene.
+- `dart run tool\translate_arb_keys.dart --force quranAudioSourcesIncomplete` ile tum locale ARB degerleri ayni turda yenilendi; `flutter gen-l10n` ile generated localizations senkronlandi.
+- `tool/translate_arb_keys.dart:643` bu anahtar icin cloud-seed ve bilinen otomatik ceviri kalintilarini reddeden wrong-context guard ekledi.
+
+### TESTER Kapsami
+- `test/translate_arb_keys_test.dart:1002` cloud seed iceren current/candidate degerlerinin reddedildigini ve temiz placeholder'li metnin kabul edildigini dogruluyor.
+- `test/arb_ui_localization_test.dart:1939` tum `app_*.arb` dosyalarinda `quranAudioSourcesIncomplete` placeholder setinin korundugunu ve cloud-seed jargonunun kalmadigini dogruluyor.
+- Manuel debris taramasi: `rg -n --glob 'app_*.arb' '(Refresh cloud seed|refresh cloud seed|Cloud seed|cloud seed|wolksaad|semilla de la nube|semente da nube|semente da nuvem|nube semen|nube semine)' lib\l10n` sonucunda eslesme bulunmadi.
+- L10n debt raporu: `dart run tool\translate_arb_keys.dart --report quranAudioSourcesIncomplete` missing/empty `0`, placeholder mismatch `0`, same-as-English `79`.
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart` PASS
+- L10n generate: `flutter gen-l10n` PASS
+- Odak testler: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS (`46/46`), `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS (`72/72`), `flutter test test\arb_coverage_test.dart --reporter compact` PASS (`4/4`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`574/574`)
+- Diff hijyeni: `git diff --check` PASS; yalniz Windows CRLF uyarilari goruldu, whitespace hatasi yok.
+
+### Risk Degisimi
+- Runtime Quran audio eksik kaynak mesajinda operator jargon sizmasi riski: `12/25 -> 2/25`
+- Kalan risk: `quranAudioSourcesIncomplete` icin 79 dusuk kaynak locale EN ile ayni kaldi; guard uydurma ceviri yerine guvenli fallback'i koruyor. Bir sonraki dar dongude diger download/audio same-as-English borclari ve semantik debris taranacak.
+
+### Rollback Plani
+- `quranAudioSourcesIncomplete` ARB/generated l10n satirlari onceki commit'e dondurulur.
+- Cloud-seed wrong-context guard'i ve iki test guard'i revert edilir.
+- Handover append-only oldugu icin silinmez; revert gerekirse yeni tur olarak kaydedilir.
+- `flutter gen-l10n`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak download/audio localization same-as-English borcu, kullaniciya gorunen operator jargonu ve runtime source availability mesajlari taranacak.

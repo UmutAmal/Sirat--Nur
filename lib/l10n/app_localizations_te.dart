@@ -1249,7 +1249,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'ధృవీకరించబడిన ఖురాన్ ఆడియో ప్యాక్ అసంపూర్ణంగా ఉంది ($available/$total). క్లౌడ్ సీడ్‌ని రిఫ్రెష్ చేసి, మళ్లీ ప్రయత్నించండి.';
+    return 'ధృవీకరించబడిన ఖురాన్ ఆడియో ప్యాక్ అసంపూర్ణంగా ఉంది ($available/$total). ఆడియో కేటలాగ్ నవీకరించబడిన తర్వాత మళ్లీ ప్రయత్నించండి.';
   }
 
   @override

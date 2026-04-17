@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "מקורות אודיו מאומתים של הקוראן אינם זמינים כעת.",
-  "quranAudioSourcesIncomplete": "חבילת האודיו המאומתת של הקוראן אינה שלמה ({available}/{total}). רענן את זרע הענן ונסה שוב.",
+  "quranAudioSourcesIncomplete": "חבילת האודיו המאומתת של הקוראן אינה שלמה ({available}/{total}). נסה שוב לאחר עדכון קטלוג האודיו.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "经过验证的《古兰经》音频源目前不可用。",
-  "quranAudioSourcesIncomplete": "已验证的《古兰经》音频包不完整 ({available}/{total})。刷新云种子并重试。",
+  "quranAudioSourcesIncomplete": "已验证的《古兰经》音频包不完整 ({available}/{total})。更新音频目录后重试。",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

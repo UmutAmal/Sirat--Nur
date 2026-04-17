@@ -1249,7 +1249,7 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'E le\'o atoatoa le pusa leo fa\'amaonia o le Quran ($available/$total). Toe faafou fatu ao ma toe taumafai.';
+    return 'E le\'o atoatoa le pusa leo fa\'amaonia o le Quran ($available/$total). Toe taumafai pe a uma ona faafou le lisi o leo.';
   }
 
   @override

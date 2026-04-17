@@ -1247,7 +1247,7 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'ʻAʻole i piha ka pūʻolo leo Quran i hōʻoia ʻia ($available/$total). E hōʻano hou i ka hua ao a hoʻāʻo hou.';
+    return 'ʻAʻole i piha ka pūʻolo leo Quran i hōʻoia ʻia ($available/$total). E ho\'āʻo hou ma hope o ka hōʻano hou ʻana o ka waihona leo.';
   }
 
   @override

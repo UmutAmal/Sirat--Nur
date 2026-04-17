@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Sumber audio Al-Quran terverifikasi tidak tersedia saat ini.",
-  "quranAudioSourcesIncomplete": "Paket audio Quran terverifikasi tidak lengkap ({available}/{total}). Segarkan benih cloud dan coba lagi.",
+  "quranAudioSourcesIncomplete": "Paket audio Quran terverifikasi tidak lengkap ({available}/{total}). Coba lagi setelah katalog audio diperbarui.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

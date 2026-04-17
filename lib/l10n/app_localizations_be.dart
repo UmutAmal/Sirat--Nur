@@ -1253,7 +1253,7 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Пацверджаны аўдыяпакет Карана няпоўны ($available/$total). Абнавіце воблачнае запаўненне і паўтарыце спробу.';
+    return 'Пацверджаны аўдыяпакет Карана няпоўны ($available/$total). Паўтарыце спробу пасля абнаўлення аўдыякаталога.';
   }
 
   @override

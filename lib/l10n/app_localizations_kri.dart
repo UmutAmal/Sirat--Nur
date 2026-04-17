@@ -1245,7 +1245,7 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return 'Verified Quran odio pak nɔ kɔmplit ($available/$total). Tray bak afta dɛn dɔn ɔpdet di odio katalog.';
   }
 
   @override

@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "וועראַפייד קאָראַן אַודיאָ קוואלן זענען אַנאַוויילאַבאַל רעכט איצט.",
-  "quranAudioSourcesIncomplete": "וועראַפייד קווראַן אַודיאָ פּאַק איז דערענדיקט ({available}/{total}). דערפרישן וואָלקן זוימען און פּרוּווט ווידער.",
+  "quranAudioSourcesIncomplete": "וועראַפייד קווראַן אַודיאָ פּאַק איז דערענדיקט ({available}/{total}). פּרוּווט ווידער נאָך דערהייַנטיקט די אַודיאָ קאַטאַלאָג.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

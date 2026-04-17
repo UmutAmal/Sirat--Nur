@@ -1252,7 +1252,7 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Il-pakkett tal-awdjo tal-Quran ivverifikat mhuwiex komplut ($available/$total). Aġġorna ż-żerriegħa tas-sħab u erġa\' pprova.';
+    return 'Il-pakkett tal-awdjo tal-Quran ivverifikat mhuwiex komplut ($available/$total). Erġa\' pprova wara li l-katalgu awdjo jiġi aġġornat.';
   }
 
   @override

@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "დადასტურებული ყურანის აუდიო წყაროები ამჟამად მიუწვდომელია.",
-  "quranAudioSourcesIncomplete": "დადასტურებული ყურანის აუდიო პაკეტი არასრულია ({available}/{total}). განაახლეთ ღრუბლის თესლი და სცადეთ ხელახლა.",
+  "quranAudioSourcesIncomplete": "დადასტურებული ყურანის აუდიო პაკეტი არასრულია ({available}/{total}). სცადეთ ხელახლა აუდიო კატალოგის განახლების შემდეგ.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

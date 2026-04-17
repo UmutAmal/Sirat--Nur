@@ -1256,7 +1256,7 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Потвърденият аудио пакет от Корана е непълен ($available/$total). Обновете облачното семе и опитайте отново.';
+    return 'Потвърденият аудио пакет от Корана е непълен ($available/$total). Опитайте отново, след като аудио каталогът бъде актуализиран.';
   }
 
   @override

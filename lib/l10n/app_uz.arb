@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Tasdiqlangan Qur'on audio manbalari hozirda mavjud emas.",
-  "quranAudioSourcesIncomplete": "Tasdiqlangan Qurʼon audio toʻplami toʻliq emas ({available}/{total}). Bulut urugʻini yangilang va qaytadan urinib koʻring.",
+  "quranAudioSourcesIncomplete": "Tasdiqlangan Qurʼon audio toʻplami toʻliq emas ({available}/{total}). Audio katalog yangilangandan keyin qayta urinib ko'ring.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Verifizéiert Koran Audioquellen sinn elo net verfügbar.",
-  "quranAudioSourcesIncomplete": "Verifizéiert Koran Audio Pack ass onkomplett ({available}/{total}). D'Wollekeed erfrëschen a probéiert nach eng Kéier.",
+  "quranAudioSourcesIncomplete": "Verifizéiert Koran Audio Pack ass onkomplett ({available}/{total}). Try again after the audio catalog is updated.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

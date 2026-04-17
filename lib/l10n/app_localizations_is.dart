@@ -1248,7 +1248,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Staðfestur hljóðpakki frá Kóraninum er ófullkominn ($available/$total). Endurnýjaðu skýjafræ og reyndu aftur.';
+    return 'Staðfestur hljóðpakki Kóranans er ófullkominn ($available/$total). Reyndu aftur eftir að hljóðskráin hefur verið uppfærð.';
   }
 
   @override

@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "සත්‍යාපිත කුර්ආන් ශ්‍රව්‍ය මූලාශ්‍ර දැන් නොමැත.",
-  "quranAudioSourcesIncomplete": "සත්‍යාපිත කුර්ආන් ශ්‍රව්‍ය ඇසුරුම අසම්පූර්ණයි ({available}/{total}). වලාකුළු බීජ නැවුම් කර නැවත උත්සාහ කරන්න.",
+  "quranAudioSourcesIncomplete": "සත්‍යාපිත කුර්ආන් ශ්‍රව්‍ය ඇසුරුම අසම්පූර්ණයි ({available}/{total}). ශ්‍රව්‍ය නාමාවලිය යාවත්කාලීන කළ පසු නැවත උත්සාහ කරන්න.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

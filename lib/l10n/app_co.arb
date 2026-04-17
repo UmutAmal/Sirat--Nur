@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "E fonti audio verificate di u Coran ùn sò micca dispunibili avà.",
-  "quranAudioSourcesIncomplete": "U pacchettu audio Coran verificatu hè incompletu ({available}/{total}). Refresh seed cloud è pruvate di novu.",
+  "quranAudioSourcesIncomplete": "U pacchettu audio Coran verificatu hè incompletu ({available}/{total}). Pruvate di novu dopu chì u catalogu audio hè aghjurnatu.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

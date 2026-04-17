@@ -1244,7 +1244,7 @@ class AppLocalizationsPs extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'تصدیق شوی د قرآن آډیو کڅوړه نیمګړې ده ($available/$total). د بادل تخم تازه کړئ او بیا هڅه وکړئ.';
+    return 'تصدیق شوی د قرآن آډیو کڅوړه نیمګړې ده ($available/$total). د آډیو کتلاګ تازه کیدو وروسته بیا هڅه وکړئ.';
   }
 
   @override

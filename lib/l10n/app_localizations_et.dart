@@ -1248,7 +1248,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Kinnitatud Koraani helipakett ei ole täielik ($available/$total). Värskendage pilve seemet ja proovige uuesti.';
+    return 'Kinnitatud Koraani helipakett ei ole täielik ($available/$total). Proovige uuesti pärast helikataloogi värskendamist.';
   }
 
   @override

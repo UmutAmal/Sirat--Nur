@@ -1232,7 +1232,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'የተረጋገጠ የቁርአን ኦዲዮ ጥቅል አልተጠናቀቀም ($available/$total)። የደመና ዘርን ያድሱ እና እንደገና ይሞክሩ።';
+    return 'የተረጋገጠ የቁርአን ኦዲዮ ጥቅል አልተጠናቀቀም ($available/$total)። የድምጽ ካታሎግ ከተዘመነ በኋላ እንደገና ይሞክሩ።';
   }
 
   @override

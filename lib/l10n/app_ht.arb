@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Sous odyo koran verifye yo pa disponib kounye a.",
-  "quranAudioSourcesIncomplete": "Pake odyo koran verifye pa konplè ({available}/{total}). Rafrechi grenn nwaj epi eseye ankò.",
+  "quranAudioSourcesIncomplete": "Pake odyo koran verifye pa konplè ({available}/{total}). Eseye ankò apre katalòg odyo a mete ajou.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

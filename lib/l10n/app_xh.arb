@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Imithombo yomsindo yeQuran eqinisekisiweyo ayifumaneki ngoku.",
-  "quranAudioSourcesIncomplete": "Ipakethi yomsindo yeQuran eqinisekisiweyo ayigqitywanga ({available}/{total}). Hlaziya imbewu yelifu kwaye uzame kwakhona.",
+  "quranAudioSourcesIncomplete": "Ipakethi yomsindo yeQuran eqinisekisiweyo ayigqitywanga ({available}/{total}). Zama kwakhona emva kokuba ikhathalogu yomsindo ihlaziywe.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

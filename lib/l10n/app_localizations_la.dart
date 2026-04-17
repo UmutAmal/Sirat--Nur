@@ -1248,7 +1248,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verificata Quran auditio sarcina incompleta est ($available/$total). refice nube semen, et iterum tenta.';
+    return 'Verificata Quran auditionis sarcina incompleta est ($available/$total). Iterum conare postquam catalogus audio renovatus est.';
   }
 
   @override

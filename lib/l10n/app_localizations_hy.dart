@@ -1252,7 +1252,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Ստուգված Ղուրանի աուդիո փաթեթը թերի է ($available/$total): Թարմացրեք ամպի սերմերը և նորից փորձեք:';
+    return 'Ստուգված Ղուրանի աուդիո փաթեթը թերի է ($available/$total): Նորից փորձեք աուդիո կատալոգը թարմացնելուց հետո:';
   }
 
   @override

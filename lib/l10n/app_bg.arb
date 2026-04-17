@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Потвърдените аудио източници на Коран не са налични в момента.",
-  "quranAudioSourcesIncomplete": "Потвърденият аудио пакет от Корана е непълен ({available}/{total}). Обновете облачното семе и опитайте отново.",
+  "quranAudioSourcesIncomplete": "Потвърденият аудио пакет от Корана е непълен ({available}/{total}). Опитайте отново, след като аудио каталогът бъде актуализиран.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

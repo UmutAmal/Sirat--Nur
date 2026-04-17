@@ -1246,7 +1246,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'تصدیق شدہ قرآن آڈیو پیک نامکمل ہے ($available/$total)۔ بادل کے بیج کو ریفریش کریں اور دوبارہ کوشش کریں۔';
+    return 'تصدیق شدہ قرآن آڈیو پیک نامکمل ہے ($available/$total)۔ آڈیو کیٹلاگ اپ ڈیٹ ہونے کے بعد دوبارہ کوشش کریں۔';
   }
 
   @override

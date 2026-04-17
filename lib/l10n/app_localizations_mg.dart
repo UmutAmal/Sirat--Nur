@@ -1252,7 +1252,7 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Ny fonosan-peo Quran voamarina dia tsy feno ($available/$total). Havaozy ny voa rahona ary andramo indray.';
+    return 'Ny fonosan-peo Quran voamarina dia tsy feno ($available/$total). Andramo indray rehefa avy nohavaozina ny katalaogin\'ny feo.';
   }
 
   @override

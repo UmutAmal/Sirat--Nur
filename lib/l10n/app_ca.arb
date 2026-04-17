@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Les fonts d'àudio verificades de l'Alcorà no estan disponibles en aquest moment.",
-  "quranAudioSourcesIncomplete": "El paquet d'àudio de l'Alcorà verificat està incomplet ({available}/{total}). Actualitza la llavor del núvol i torna-ho a provar.",
+  "quranAudioSourcesIncomplete": "El paquet d'àudio de l'Alcorà verificat està incomplet ({available}/{total}). Torna-ho a provar un cop s'hagi actualitzat el catàleg d'àudio.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

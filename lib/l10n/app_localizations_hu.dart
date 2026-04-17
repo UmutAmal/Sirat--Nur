@@ -1249,7 +1249,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Az ellenőrzött Korán hangcsomag hiányos ($available/$total). Frissítse a felhőmagot, és próbálkozzon újra.';
+    return 'Az ellenőrzött Korán hangcsomag hiányos ($available/$total). Próbálja újra az audiokatalógus frissítése után.';
   }
 
   @override

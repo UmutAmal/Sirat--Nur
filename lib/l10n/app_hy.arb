@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Ղուրանի ստուգված աուդիո աղբյուրներն այս պահին անհասանելի են:",
-  "quranAudioSourcesIncomplete": "Ստուգված Ղուրանի աուդիո փաթեթը թերի է ({available}/{total}): Թարմացրեք ամպի սերմերը և նորից փորձեք:",
+  "quranAudioSourcesIncomplete": "Ստուգված Ղուրանի աուդիո փաթեթը թերի է ({available}/{total}): Նորից փորձեք աուդիո կատալոգը թարմացնելուց հետո:",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

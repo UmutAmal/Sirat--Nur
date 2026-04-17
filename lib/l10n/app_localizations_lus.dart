@@ -1254,7 +1254,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Refresh cloud seed and try again.';
+    return 'Quran audio pack finfiah tawh chu a kim lo ($available/$total). Audio catalog update hnuah han try leh teh.';
   }
 
   @override

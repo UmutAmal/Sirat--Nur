@@ -1249,7 +1249,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Gói âm thanh Kinh Qur\'an đã được xác minh chưa đầy đủ ($available/$total). Hãy làm mới hạt giống đám mây và thử lại.';
+    return 'Gói âm thanh Kinh Qur\'an đã được xác minh chưa đầy đủ ($available/$total). Hãy thử lại sau khi danh mục âm thanh được cập nhật.';
   }
 
   @override

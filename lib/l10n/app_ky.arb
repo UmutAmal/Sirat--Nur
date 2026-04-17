@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Тастыкталган Куран аудио булактары азыр жеткиликсиз.",
-  "quranAudioSourcesIncomplete": "Текшерилген Курандын аудио топтому толук эмес ({available}/{total}). Булут уругун жаңыртып, кайра аракет кылыңыз.",
+  "quranAudioSourcesIncomplete": "Текшерилген Курандын аудио топтому толук эмес ({available}/{total}). Аудио каталог жаңыртылгандан кийин кайра аракет кылыңыз.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

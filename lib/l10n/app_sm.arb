@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "E le maua i le taimi nei puna'oa fa'alogo Quran fa'amaonia.",
-  "quranAudioSourcesIncomplete": "E le'o atoatoa le pusa leo fa'amaonia o le Quran ({available}/{total}). Toe faafou fatu ao ma toe taumafai.",
+  "quranAudioSourcesIncomplete": "E le'o atoatoa le pusa leo fa'amaonia o le Quran ({available}/{total}). Toe taumafai pe a uma ona faafou le lisi o leo.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

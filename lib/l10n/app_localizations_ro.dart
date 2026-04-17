@@ -1255,7 +1255,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Pachetul audio Coran verificat este incomplet ($available/$total). Actualizează cloud seed și încearcă din nou.';
+    return 'Pachetul audio Coran verificat este incomplet ($available/$total). Încercați din nou după ce catalogul audio este actualizat.';
   }
 
   @override

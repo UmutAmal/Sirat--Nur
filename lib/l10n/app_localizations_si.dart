@@ -1246,7 +1246,7 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'සත්‍යාපිත කුර්ආන් ශ්‍රව්‍ය ඇසුරුම අසම්පූර්ණයි ($available/$total). වලාකුළු බීජ නැවුම් කර නැවත උත්සාහ කරන්න.';
+    return 'සත්‍යාපිත කුර්ආන් ශ්‍රව්‍ය ඇසුරුම අසම්පූර්ණයි ($available/$total). ශ්‍රව්‍ය නාමාවලිය යාවත්කාලීන කළ පසු නැවත උත්සාහ කරන්න.';
   }
 
   @override

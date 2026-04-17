@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Hindi available sa ngayon ang mga na-verify na mapagkukunan ng audio ng Quran.",
-  "quranAudioSourcesIncomplete": "Ang na-verify na Quran audio pack ay hindi kumpleto ({available}/{total}). I-refresh ang cloud seed at subukang muli.",
+  "quranAudioSourcesIncomplete": "Ang na-verify na Quran audio pack ay hindi kumpleto ({available}/{total}). Subukang muli pagkatapos ma-update ang audio catalog.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

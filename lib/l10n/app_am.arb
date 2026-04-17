@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "የተረጋገጡ የቁርአን የድምጽ ምንጮች አሁን አይገኙም።",
-  "quranAudioSourcesIncomplete": "የተረጋገጠ የቁርአን ኦዲዮ ጥቅል አልተጠናቀቀም ({available}/{total})። የደመና ዘርን ያድሱ እና እንደገና ይሞክሩ።",
+  "quranAudioSourcesIncomplete": "የተረጋገጠ የቁርአን ኦዲዮ ጥቅል አልተጠናቀቀም ({available}/{total})። የድምጽ ካታሎግ ከተዘመነ በኋላ እንደገና ይሞክሩ።",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

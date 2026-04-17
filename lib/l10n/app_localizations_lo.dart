@@ -1244,7 +1244,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'ຊຸດສຽງ Quran ຢັ້ງຢືນບໍ່ສົມບູນ ($available/$total). ໂຫຼດເມັດຄລາວຄືນໃໝ່ແລ້ວລອງອີກຄັ້ງ.';
+    return 'ຊຸດສຽງ Quran ຢັ້ງຢືນບໍ່ຄົບຖ້ວນ ($available/$total). ລອງອີກຄັ້ງຫຼັງຈາກລາຍການສຽງຖືກອັບເດດ.';
   }
 
   @override

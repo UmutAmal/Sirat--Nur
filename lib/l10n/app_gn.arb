@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesIncomplete": "Corán audio paquete oñembohapéva ndojejapói ({available}/{total}). Eñeha’ã jey oñembopyahu rire pe catálogo de audio.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

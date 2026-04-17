@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "ዝተረጋገጹ ምንጪ ድምጺ ቁርኣን ኣብዚ ሕጂ እዋን የለን።",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesIncomplete": "ዝተረጋገጸ ናይ ቁርኣን ድምጺ ፓክ ምሉእ ኣይኮነን ({available}/{total})። እቲ ናይ ድምጺ ካታሎግ ምስ ተሓድሰ እንደገና ፈትን።",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

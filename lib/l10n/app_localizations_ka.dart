@@ -1250,7 +1250,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'დადასტურებული ყურანის აუდიო პაკეტი არასრულია ($available/$total). განაახლეთ ღრუბლის თესლი და სცადეთ ხელახლა.';
+    return 'დადასტურებული ყურანის აუდიო პაკეტი არასრულია ($available/$total). სცადეთ ხელახლა აუდიო კატალოგის განახლების შემდეგ.';
   }
 
   @override

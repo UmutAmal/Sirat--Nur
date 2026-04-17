@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesIncomplete": "পৰীক্ষা কৰা কোৰআন অডিঅ' পেক অসম্পূৰ্ণ ({available}/{total})। অডিঅ' কেটেলগ আপডেট কৰাৰ পিছত পুনৰ চেষ্টা কৰক।",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

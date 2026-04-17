@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Imithombo yomsindo ye-Quran eqinisekisiwe ayitholakali okwamanje.",
-  "quranAudioSourcesIncomplete": "Iphekhi yomsindo ye-Quran eqinisekisiwe ayiphelele ({available}/{total}). Vuselela imbewu yefu bese uzama futhi.",
+  "quranAudioSourcesIncomplete": "Iphekhi yomsindo ye-Quran eqinisekisiwe ayiphelele ({available}/{total}). Zama futhi ngemva kokubuyekezwa kwekhathalogi yomsindo.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

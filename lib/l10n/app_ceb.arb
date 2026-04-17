@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Ang gipamatud-an nga mga tinubdan sa audio sa Quran dili magamit karon.",
-  "quranAudioSourcesIncomplete": "Ang napamatud-an nga Quran audio pack dili kompleto ({available}/{total}). I-refresh ang cloud seed ug sulayi pag-usab.",
+  "quranAudioSourcesIncomplete": "Ang napamatud-an nga Quran audio pack dili kompleto ({available}/{total}). Sulayi pag-usab human ma-update ang audio catalog.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

@@ -1244,7 +1244,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'ચકાસાયેલ કુરાન ઓડિયો પેક અપૂર્ણ છે ($available/$total). ક્લાઉડ સીડ રિફ્રેશ કરો અને ફરી પ્રયાસ કરો.';
+    return 'ચકાસાયેલ કુરાન ઓડિયો પેક અપૂર્ણ છે ($available/$total). ઑડિયો કૅટેલોગ અપડેટ થઈ જાય પછી ફરી પ્રયાસ કરો.';
   }
 
   @override

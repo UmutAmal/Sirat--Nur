@@ -1245,7 +1245,7 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Everified Quran audio pack haina kukwana ($available/$total). Zorora mbeu yegore uye edza zvakare.';
+    return 'Everified Quran audio pack haina kukwana ($available/$total). Edza zvakare mushure mekunge bhuku reodhiyo ragadziridzwa.';
   }
 
   @override

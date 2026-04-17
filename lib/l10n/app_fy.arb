@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Ferifiearre Quran-audioboarnen binne op it stuit net beskikber.",
-  "quranAudioSourcesIncomplete": "Ferifiearre Quran-audiopakket is net kompleet ({available}/{total}). Ferfarskje wolkseed en besykje it nochris.",
+  "quranAudioSourcesIncomplete": "Ferifiearre Quran-audiopakket is net kompleet ({available}/{total}). Besykje it nochris nei't de audiokatalogus bywurke is.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

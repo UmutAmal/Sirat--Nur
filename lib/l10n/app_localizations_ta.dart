@@ -1254,7 +1254,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'சரிபார்க்கப்பட்ட குர்ஆன் ஆடியோ பேக் முழுமையடையவில்லை ($available/$total). மேக விதையைப் புதுப்பித்து மீண்டும் முயற்சிக்கவும்.';
+    return 'சரிபார்க்கப்பட்ட குர்ஆன் ஆடியோ பேக் முழுமையடையவில்லை ($available/$total). ஆடியோ அட்டவணை புதுப்பிக்கப்பட்ட பிறகு மீண்டும் முயற்சிக்கவும்.';
   }
 
   @override

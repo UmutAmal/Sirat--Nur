@@ -999,6 +999,34 @@ void main() {
       expect(georgianValue, 'ჩამოტვირთვის გაგრძელება');
     });
 
+    test('rejects quran audio source status copy that exposes cloud seed', () {
+      const source =
+          'Verified Quran audio pack is incomplete ({available}/{total}). Try again after the audio catalog is updated.';
+
+      final englishValue = resolveTranslatedArbValue(
+        key: 'quranAudioSourcesIncomplete',
+        source: source,
+        currentValue:
+            'Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.',
+        candidate: source,
+      );
+
+      final spanishValue = resolveTranslatedArbValue(
+        key: 'quranAudioSourcesIncomplete',
+        source: source,
+        currentValue:
+            'El paquete de audio del Corán verificado está incompleto ({available}/{total}). Actualice la semilla de la nube y vuelva a intentarlo.',
+        candidate:
+            'El paquete de audio del Corán verificado está incompleto ({available}/{total}). Vuelve a intentarlo después de actualizar el catálogo de audio.',
+      );
+
+      expect(englishValue, source);
+      expect(
+        spanishValue,
+        'El paquete de audio del Corán verificado está incompleto ({available}/{total}). Vuelve a intentarlo después de actualizar el catálogo de audio.',
+      );
+    });
+
     test('rejects multiline diagnostics output', () {
       final labelValue = resolveTranslatedArbValue(
         key: 'diagnostics',

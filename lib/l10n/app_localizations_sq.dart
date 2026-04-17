@@ -1251,7 +1251,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Paketa audio e verifikuar e Kuranit është e paplotë ($available/$total). Rifresko farën e resë dhe provo sërish.';
+    return 'Paketa audio e verifikuar e Kuranit është e paplotë ($available/$total). Provo sërish pasi të përditësohet katalogu audio.';
   }
 
   @override

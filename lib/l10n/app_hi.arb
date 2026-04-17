@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "सत्यापित कुरान ऑडियो स्रोत अभी उपलब्ध नहीं हैं।",
-  "quranAudioSourcesIncomplete": "सत्यापित कुरान ऑडियो पैक अधूरा है ({available}/{total})। क्लाउड सीड को ताज़ा करें और पुनः प्रयास करें।",
+  "quranAudioSourcesIncomplete": "सत्यापित कुरान ऑडियो पैक अधूरा है ({available}/{total})। ऑडियो कैटलॉग अपडेट होने के बाद पुनः प्रयास करें।",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

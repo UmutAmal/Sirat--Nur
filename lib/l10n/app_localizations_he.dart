@@ -1239,7 +1239,7 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'חבילת האודיו המאומתת של הקוראן אינה שלמה ($available/$total). רענן את זרע הענן ונסה שוב.';
+    return 'חבילת האודיו המאומתת של הקוראן אינה שלמה ($available/$total). נסה שוב לאחר עדכון קטלוג האודיו.';
   }
 
   @override

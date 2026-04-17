@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Манбаъҳои аудиоии тасдиқшудаи Қуръон ҳоло дастрас нестанд.",
-  "quranAudioSourcesIncomplete": "Бастаи аудиоии тасдиқшудаи Қуръон нопурра аст ({available}/{total}). Насли абрро нав кунед ва бори дигар кӯшиш кунед.",
+  "quranAudioSourcesIncomplete": "Бастаи аудиоии тасдиқшудаи Қуръон нопурра аст ({available}/{total}). Пас аз навсозии феҳристи аудио дубора кӯшиш кунед.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

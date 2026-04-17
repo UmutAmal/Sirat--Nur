@@ -1251,7 +1251,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verificētā Korāna audio pakotne ir nepilnīga ($available/$total). Atsvaidziniet mākoņa sēklu un mēģiniet vēlreiz.';
+    return 'Verificētā Korāna audio pakotne ir nepilnīga ($available/$total). Mēģiniet vēlreiz pēc audio kataloga atjaunināšanas.';
   }
 
   @override

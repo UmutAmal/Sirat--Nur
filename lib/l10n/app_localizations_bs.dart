@@ -1247,7 +1247,7 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verificirani audio paket Kur\'ana je nepotpun ($available/$total). Osvježite sjeme oblaka i pokušajte ponovo.';
+    return 'Verificirani audio paket Kur\'ana je nepotpun ($available/$total). Pokušajte ponovo nakon što se audio katalog ažurira.';
   }
 
   @override

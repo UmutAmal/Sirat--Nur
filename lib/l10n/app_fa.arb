@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "منابع صوتی قرآن تأیید شده در حال حاضر در دسترس نیستند.",
-  "quranAudioSourcesIncomplete": "بسته صوتی قرآن تأیید شده ناقص است ({available}/{total}). دانه ابر را تازه کنید و دوباره امتحان کنید.",
+  "quranAudioSourcesIncomplete": "بسته صوتی قرآن تأیید شده ناقص است ({available}/{total}). پس از به‌روزرسانی کاتالوگ صوتی، دوباره امتحان کنید.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

@@ -1249,7 +1249,7 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Geverifieerde Koran-oudiopak is onvolledig ($available/$total). Verfris wolksaad en probeer weer.';
+    return 'Geverifieerde Koran-oudiopak is onvolledig ($available/$total). Probeer weer nadat die oudiokatalogus opgedateer is.';
   }
 
   @override

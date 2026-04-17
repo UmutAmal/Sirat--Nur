@@ -1247,7 +1247,7 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Paketi yotsimikizika ya Korani yotsimikizika ndi yosakwanira ($available/$total). Tsitsaninso mbewu zamtambo ndikuyesanso.';
+    return 'Paketi yotsimikizika ya Korani yotsimikizika ndi yosakwanira ($available/$total). Yesaninso mndandanda wamawu ukasinthidwa.';
   }
 
   @override

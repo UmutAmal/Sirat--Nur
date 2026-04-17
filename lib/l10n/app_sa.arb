@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "सत्यापिताः कुरानस्य श्रव्यस्रोताः अधुना अनुपलब्धाः सन्ति।",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesIncomplete": "सत्यापितं कुरान ऑडियो पैक अपूर्णम् अस्ति ({available}/{total})। श्रव्यसूची अद्यतनीकरणानन्तरं पुनः प्रयासं कुर्वन्तु।",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

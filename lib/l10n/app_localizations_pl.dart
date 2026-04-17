@@ -1252,7 +1252,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Zweryfikowany pakiet audio Koranu jest niekompletny ($available/$total). Odśwież ziarno chmury i spróbuj ponownie.';
+    return 'Zweryfikowany pakiet audio Koranu jest niekompletny ($available/$total). Spróbuj ponownie po zaktualizowaniu katalogu audio.';
   }
 
   @override

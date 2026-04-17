@@ -1251,7 +1251,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Txheeb xyuas Quran lub pob tsis tiav ($available/$total). Refresh huab noob thiab sim dua.';
+    return 'Txheeb xyuas Quran lub pob tsis tiav ($available/$total). Sim dua tom qab lub suab catalog hloov kho.';
   }
 
   @override

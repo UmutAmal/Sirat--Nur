@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Egiaztatutako Quran audio iturriak ez daude erabilgarri une honetan.",
-  "quranAudioSourcesIncomplete": "Egiaztatutako Quran audio paketea osatu gabe dago ({available}/{total}). Freskatu hodei-hazia eta saiatu berriro.",
+  "quranAudioSourcesIncomplete": "Egiaztatutako Quran audio paketea osatu gabe dago ({available}/{total}). Saiatu berriro audio-katalogoa eguneratu ondoren.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

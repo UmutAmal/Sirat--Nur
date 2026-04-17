@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "المصادر الصوتية للقرآن الكريم التي تم التحقق منها غير متوفرة في الوقت الحالي.",
-  "quranAudioSourcesIncomplete": "حزمة القرآن الصوتية التي تم التحقق منها غير مكتملة ({available}/{total}). قم بتحديث بذور السحابة وحاول مرة أخرى.",
+  "quranAudioSourcesIncomplete": "حزمة القرآن الصوتية التي تم التحقق منها غير مكتملة ({available}/{total}). حاول مرة أخرى بعد تحديث الكتالوج الصوتي.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

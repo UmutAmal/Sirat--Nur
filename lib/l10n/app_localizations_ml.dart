@@ -1250,7 +1250,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'പരിശോധിച്ച ഖുറാൻ ഓഡിയോ പായ്ക്ക് അപൂർണ്ണമാണ് ($available/$total). ക്ലൗഡ് സീഡ് പുതുക്കി വീണ്ടും ശ്രമിക്കുക.';
+    return 'പരിശോധിച്ച ഖുറാൻ ഓഡിയോ പായ്ക്ക് അപൂർണ്ണമാണ് ($available/$total). ഓഡിയോ കാറ്റലോഗ് അപ്ഡേറ്റ് ചെയ്ത ശേഷം വീണ്ടും ശ്രമിക്കുക.';
   }
 
   @override

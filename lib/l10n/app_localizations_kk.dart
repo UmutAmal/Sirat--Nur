@@ -1244,7 +1244,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Құранның расталған аудио жинағы толық емес ($available/$total). Бұлт тұқымын жаңартып, әрекетті қайталаңыз.';
+    return 'Құранның расталған аудио жинағы толық емес ($available/$total). Аудио каталог жаңартылғаннан кейін әрекетті қайталаңыз.';
   }
 
   @override

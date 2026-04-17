@@ -1248,7 +1248,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'ಪರಿಶೀಲಿಸಿದ ಕುರಾನ್ ಆಡಿಯೊ ಪ್ಯಾಕ್ ಅಪೂರ್ಣವಾಗಿದೆ ($available/$total). ಕ್ಲೌಡ್ ಸೀಡ್ ಅನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.';
+    return 'ಪರಿಶೀಲಿಸಿದ ಕುರಾನ್ ಆಡಿಯೊ ಪ್ಯಾಕ್ ಅಪೂರ್ಣವಾಗಿದೆ ($available/$total). ಆಡಿಯೊ ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ನವೀಕರಿಸಿದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.';
   }
 
   @override

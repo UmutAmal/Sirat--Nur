@@ -1250,7 +1250,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Overený zvukový balík Koránu je neúplný ($available/$total). Obnovte zdroj cloudu a skúste to znova.';
+    return 'Overený zvukový balík Koránu je neúplný ($available/$total). Skúste to znova po aktualizácii zvukového katalógu.';
   }
 
   @override

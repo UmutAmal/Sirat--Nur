@@ -1250,7 +1250,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Patvirtintas Korano garso paketas yra neužbaigtas ($available/$total). Atnaujinkite debesies sėklą ir bandykite dar kartą.';
+    return 'Patvirtintas Korano garso paketas neužbaigtas ($available/$total). Bandykite dar kartą, kai garso įrašų katalogas bus atnaujintas.';
   }
 
   @override

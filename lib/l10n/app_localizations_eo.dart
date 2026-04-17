@@ -1247,7 +1247,7 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Kontrolita Korana sonpako estas nekompleta ($available/$total). Refreŝigu nuban semon kaj provu denove.';
+    return 'Kontrolita Korana sonpako estas nekompleta ($available/$total). Provu denove post kiam la sonkatalogo estas ĝisdatigita.';
   }
 
   @override

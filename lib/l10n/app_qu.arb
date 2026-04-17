@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.",
+  "quranAudioSourcesIncomplete": "Chiqapchasqa Quran uyarina paquete mana hunt'asqachu ({available}/{total}). Audio catálogo musuqyachisqa kaptin hukmanta kallpanchakuy.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

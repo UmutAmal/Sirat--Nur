@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Verificerede Koran-lydkilder er ikke tilgængelige lige nu.",
-  "quranAudioSourcesIncomplete": "Den bekræftede Koran-lydpakke er ufuldstændig ({available}/{total}). Opdater skyfrø, og prøv igen.",
+  "quranAudioSourcesIncomplete": "Den bekræftede Koran-lydpakke er ufuldstændig ({available}/{total}). Prøv igen, efter at lydkataloget er opdateret.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

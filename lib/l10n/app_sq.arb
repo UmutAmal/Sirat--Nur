@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Burimet audio të verifikuara të Kuranit nuk janë të disponueshme për momentin.",
-  "quranAudioSourcesIncomplete": "Paketa audio e verifikuar e Kuranit është e paplotë ({available}/{total}). Rifresko farën e resë dhe provo sërish.",
+  "quranAudioSourcesIncomplete": "Paketa audio e verifikuar e Kuranit është e paplotë ({available}/{total}). Provo sërish pasi të përditësohet katalogu audio.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

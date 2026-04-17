@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Patvirtinti Korano garso šaltiniai šiuo metu nepasiekiami.",
-  "quranAudioSourcesIncomplete": "Patvirtintas Korano garso paketas yra neužbaigtas ({available}/{total}). Atnaujinkite debesies sėklą ir bandykite dar kartą.",
+  "quranAudioSourcesIncomplete": "Patvirtintas Korano garso paketas neužbaigtas ({available}/{total}). Bandykite dar kartą, kai garso įrašų katalogas bus atnaujintas.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

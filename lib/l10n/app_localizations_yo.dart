@@ -1244,7 +1244,7 @@ class AppLocalizationsYo extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Ididi ohun afetigbọ Al-Qur’an ti ko pe ($available/$total). Sọ irugbin awọsanma sọ ​​ki o tun gbiyanju lẹẹkansi.';
+    return 'Ididi ohun afetigbọ Al-Qur’an ti ko pe ($available/$total). Gbiyanju lẹẹkansi lẹhin ti o ti ni imudojuiwọn katalogi ohun.';
   }
 
   @override

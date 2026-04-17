@@ -1249,7 +1249,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Vahvistettu Koraanin äänipaketti on epätäydellinen ($available/$total). Päivitä pilven siemen ja yritä uudelleen.';
+    return 'Vahvistettu Koraanin äänipaketti on epätäydellinen ($available/$total). Yritä uudelleen, kun ääniluettelo on päivitetty.';
   }
 
   @override

@@ -2724,7 +2724,7 @@ abstract class AppLocalizations {
   /// No description provided for @quranAudioSourcesIncomplete.
   ///
   /// In en, this message translates to:
-  /// **'Verified Quran audio pack is incomplete ({available}/{total}). Refresh cloud seed and try again.'**
+  /// **'Verified Quran audio pack is incomplete ({available}/{total}). Try again after the audio catalog is updated.'**
   String quranAudioSourcesIncomplete(String available, String total);
 
   /// No description provided for @chatbotHint.

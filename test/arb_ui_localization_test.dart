@@ -1936,6 +1936,44 @@ void main() {
       },
     );
 
+    test('quran audio incomplete copy does not expose cloud seed jargon', () {
+      const staleFragments = [
+        'Refresh cloud seed',
+        'refresh cloud seed',
+        'Cloud seed',
+        'cloud seed',
+        'wolksaad',
+        'semilla de la nube',
+        'semente da nube',
+        'semente da nuvem',
+        'nube semen',
+        'nube semine',
+      ];
+
+      for (final file
+          in Directory('lib/l10n').listSync().whereType<File>().where(
+            (file) => file.path.endsWith('.arb'),
+          )) {
+        final arb = _readArb(file.path);
+        final value = arb['quranAudioSourcesIncomplete'] as String;
+
+        expect(
+          _placeholderSet(value),
+          _placeholderSet(english['quranAudioSourcesIncomplete'] as String),
+          reason:
+              '${file.uri.pathSegments.last} lost placeholders for quranAudioSourcesIncomplete',
+        );
+        for (final fragment in staleFragments) {
+          expect(
+            value,
+            isNot(contains(fragment)),
+            reason:
+                '${file.uri.pathSegments.last} still exposes "$fragment" in quranAudioSourcesIncomplete',
+          );
+        }
+      }
+    });
+
     test(
       'safe priority locales do not fall back to English for basic status copy',
       () {

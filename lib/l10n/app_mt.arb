@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Sorsi awdjo vverifikati tal-Quran mhumiex disponibbli bħalissa.",
-  "quranAudioSourcesIncomplete": "Il-pakkett tal-awdjo tal-Quran ivverifikat mhuwiex komplut ({available}/{total}). Aġġorna ż-żerriegħa tas-sħab u erġa' pprova.",
+  "quranAudioSourcesIncomplete": "Il-pakkett tal-awdjo tal-Quran ivverifikat mhuwiex komplut ({available}/{total}). Erġa' pprova wara li l-katalgu awdjo jiġi aġġornat.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

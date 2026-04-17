@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Mehloli ea molumo e netefalitsoeng ea Quran ha e fumanehe hajoale.",
-  "quranAudioSourcesIncomplete": "Sephutheloana sa molumo oa Quran se netefalitsoeng ha se ea fella ({available}/{total}). Hlahisa peo ea leru 'me u leke hape.",
+  "quranAudioSourcesIncomplete": "Sephutheloana sa molumo oa Quran se netefalitsoeng ha se ea fella ({available}/{total}). Leka hape ka mor'a hore lethathamo la molumo le ntlafatsoe.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

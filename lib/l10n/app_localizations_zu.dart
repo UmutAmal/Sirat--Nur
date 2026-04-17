@@ -1253,7 +1253,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Iphekhi yomsindo ye-Quran eqinisekisiwe ayiphelele ($available/$total). Vuselela imbewu yefu bese uzama futhi.';
+    return 'Iphekhi yomsindo ye-Quran eqinisekisiwe ayiphelele ($available/$total). Zama futhi ngemva kokubuyekezwa kwekhathalogi yomsindo.';
   }
 
   @override

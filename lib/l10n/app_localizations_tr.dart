@@ -1246,7 +1246,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Doğrulanmış Kur\'an ses paketi eksik ($available/$total). Cloud seed\'i yenileyip tekrar deneyin.';
+    return 'Doğrulanmış Kur\'an ses paketi eksik ($available/$total). Ses kataloğu güncellendikten sonra tekrar deneyin.';
   }
 
   @override

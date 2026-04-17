@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "ચકાસાયેલ કુરાન ઓડિયો સ્ત્રોતો અત્યારે અનુપલબ્ધ છે.",
-  "quranAudioSourcesIncomplete": "ચકાસાયેલ કુરાન ઓડિયો પેક અપૂર્ણ છે ({available}/{total}). ક્લાઉડ સીડ રિફ્રેશ કરો અને ફરી પ્રયાસ કરો.",
+  "quranAudioSourcesIncomplete": "ચકાસાયેલ કુરાન ઓડિયો પેક અપૂર્ણ છે ({available}/{total}). ઑડિયો કૅટેલોગ અપડેટ થઈ જાય પછી ફરી પ્રયાસ કરો.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

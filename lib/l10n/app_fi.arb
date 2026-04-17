@@ -419,7 +419,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Vahvistetut Koraanin äänilähteet eivät ole tällä hetkellä saatavilla.",
-  "quranAudioSourcesIncomplete": "Vahvistettu Koraanin äänipaketti on epätäydellinen ({available}/{total}). Päivitä pilven siemen ja yritä uudelleen.",
+  "quranAudioSourcesIncomplete": "Vahvistettu Koraanin äänipaketti on epätäydellinen ({available}/{total}). Yritä uudelleen, kun ääniluettelo on päivitetty.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {
