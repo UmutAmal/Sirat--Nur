@@ -80,7 +80,6 @@ flutter:
     - assets/data/
     - assets/audio/adhan/
     - assets/audio/ui/
-    - assets/audio/quran/
 
 flutter_launcher_icons:
   android: "launcher_icon"

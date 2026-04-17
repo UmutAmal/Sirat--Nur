@@ -17,24 +17,6 @@ class LocalAudio {
   static const String prayerReminder = 'assets/audio/ui/prayer_reminder.wav';
   static const String pageFlip = 'assets/audio/ui/page_flip.wav';
   static const String success = 'assets/audio/ui/success.wav';
-
-  // Quran reciters info (for downloadable content)
-  static const Map<String, String> quranReciters = {
-    'mishary_rashid_alafasy': 'Mishary Rashid Alafasy',
-    'mahmoud_khalil_al-husary': 'Mahmoud Khalil Al-Husary',
-    'saad_al_ghamdi': 'Saad Al-Ghamdi',
-    'abdul_basit': 'Abdul Basit Abdul Samad',
-    'abu_bakr_al_shatri': 'Abu Bakr Al-Shatri',
-    'hani_ar_rifai': 'Hani Ar-Rifai',
-    'maher_al_muaiqly': 'Maher Al-Muaiqly',
-    'ahmed_al_ajmi': 'Ahmed Al-Ajmi',
-  };
-
-  /// Get local Quran audio path (for downloaded surahs)
-  static String getQuranLocalPath(String reciter, int surahNumber) {
-    final padded = surahNumber.toString().padLeft(3, '0');
-    return 'assets/audio/quran/${reciter}_$padded.mp3';
-  }
 }
 
 final audioPlayerServiceProvider = Provider((ref) {
@@ -124,15 +106,6 @@ class AudioPlayerService {
 
   /// Play success sound
   Future<bool> playSuccess() async => await playAsset(LocalAudio.success);
-
-  /// Play Quran surah from local download
-  Future<bool> playQuranSurah(
-    int surahNumber, {
-    String reciter = 'mishary_rashid_alafasy',
-  }) async {
-    final path = LocalAudio.getQuranLocalPath(reciter, surahNumber);
-    return await playAsset(path);
-  }
 
   Future<void> pause() async => await _player.pause();
   Future<void> resume() async => await _player.play();

@@ -12458,3 +12458,55 @@
 
 ### Sonraki Adim
 - Quran/audio pipeline'da orphan veya yanlis baglanmis servis kalintilari taranacak; ozellikle runtime'da Supabase-owned storage disina kacabilen veya yaniltici lokal asset path'i gosteren akislara bakilacak.
+
+## 2026-04-17 TUR-297 — Legacy Bundled Quran Audio Flow Removed
+
+### Yapilan Islem
+- `AudioPlayerService` icindeki kullanilmayan eski `playQuranSurah()` API'si kaldirildi.
+- `LocalAudio.getQuranLocalPath()` ve eski bundled reciter map'i kaldirildi; bu kod `assets/audio/quran/...mp3` gibi gercekte paketlenmeyen dosya yollarina isaret ediyordu.
+- `pubspec.yaml` icindeki bos `assets/audio/quran/` asset kaydi kaldirildi ve `.gitkeep` silindi.
+- Quran dependency guard testine, runtime Quran audio'nun bundled asset akisiyle geri gelmemesini denetleyen regresyon eklendi.
+
+### Kanit
+- Aktif audio servisinde yalniz storage guard'li URL ve UI/adhan asset oynatma kaldi: `A:\Way of Allah\sirat_i_nur\lib\core\services\audio_player_service.dart:43`, `A:\Way of Allah\sirat_i_nur\lib\core\services\audio_player_service.dart:63`
+- `pubspec.yaml` artik yalniz data, adhan ve UI audio assetlerini paketliyor: `A:\Way of Allah\sirat_i_nur\pubspec.yaml:80`, `A:\Way of Allah\sirat_i_nur\pubspec.yaml:81`, `A:\Way of Allah\sirat_i_nur\pubspec.yaml:82`
+- Legacy bundled Quran audio guard testi: `A:\Way of Allah\sirat_i_nur\test\quran_dependency_guard_test.dart:29`
+- Guard, `assets/audio/quran/`, `playQuranSurah`, `getQuranLocalPath` stringlerinin geri gelmesini yakaliyor: `A:\Way of Allah\sirat_i_nur\test\quran_dependency_guard_test.dart:43`, `A:\Way of Allah\sirat_i_nur\test\quran_dependency_guard_test.dart:44`, `A:\Way of Allah\sirat_i_nur\test\quran_dependency_guard_test.dart:45`, `A:\Way of Allah\sirat_i_nur\test\quran_dependency_guard_test.dart:46`
+- Gercek runtime Quran audio akisi zaten `OfflineAudioService` uzerinden downloaded file veya Supabase Storage-backed `storage_path` kullanmaya devam ediyor: `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart:202`, `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:415`
+
+### Neden Yapildi
+- Tarama sonucunda `playQuranSurah()` ve `LocalAudio.getQuranLocalPath()` icin uretim/test cagrisi bulunmadi; `rg` yalniz kendi tanim satirlarini gosterdi.
+- Bu orphan API, kullanici tarafindan istenen "sesler bizim database/Supabase storage akisimiza bagli olmali" kuralina ters eski bir asset modelini kodda yasatiyordu.
+- `assets/audio/quran/` klasorunde yalniz `.gitkeep` vardi; gercek MP3 yoktu. Bu nedenle bu yolun ileride yanlislikla runtime fallback gibi kullanilmasi false-audio/false-success riski tasiyordu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\audio_player_service.dart`
+- `A:\Way of Allah\sirat_i_nur\pubspec.yaml`
+- `A:\Way of Allah\sirat_i_nur\assets\audio\quran\.gitkeep`
+- `A:\Way of Allah\sirat_i_nur\test\quran_dependency_guard_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran audio icin yanlis bundled asset yolu artik servis API'sinde yok.
+- APK icine bos Quran audio asset dizini kaydi paketlenmiyor.
+- Gelecekte biri tekrar bundled Quran MP3 akisi eklemeye calisirsa guard testi bunu yakalayacak.
+- UI sesleri ve adhan local asset akisi degismedi; Quran audio akisi Supabase/downloaded dosya modelinde kaldi.
+
+### Test Sonucu
+- Odak test: `flutter test test\quran_dependency_guard_test.dart test\offline_audio_service_test.dart` PASS (`15/15`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`514/514`)
+
+### Risk Degisimi
+- Orphan bundled Quran audio API'sinin ileride yanlis fallback olarak kullanilma riski: `12/25 -> 1/25`
+- APK'ye bos/yaniltici Quran audio asset dizini paketleme riski: `6/25 -> 1/25`
+
+### Rollback Plani
+- `playQuranSurah()`, `LocalAudio.getQuranLocalPath()` ve eski reciter map'i geri eklenir.
+- `pubspec.yaml` icine `assets/audio/quran/` kaydi ve `.gitkeep` dosyasi geri getirilir.
+- `test\quran_dependency_guard_test.dart` icindeki legacy bundled Quran audio guard'i kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Siradaki turda genel risk taramasi devam edecek; ozellikle locale-aware olmayan UI formatlari, dis URL acma guard'lari ve gercek kullanici aksiyonlarinda sessiz fallback davranislari tekrar skorlanacak.
