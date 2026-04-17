@@ -31,4 +31,35 @@ void main() {
     expect(source, contains('final result = _result;'));
     expect(source, isNot(contains('_result!')));
   });
+
+  test('zakat amount parser accepts common decimal separators', () {
+    expect(parseZakatAmount('70.50'), 70.5);
+    expect(parseZakatAmount('70,50'), 70.5);
+    expect(parseZakatAmount('1,234.50'), 1234.5);
+    expect(parseZakatAmount('1.234,50'), 1234.5);
+    expect(parseZakatAmount(''), 0);
+    expect(parseZakatAmount('not a number'), 0);
+  });
+
+  test('zakat money formatter never applies stale exchange rates', () {
+    final source = File(
+      'lib/features/library/zakat_calculator_page.dart',
+    ).readAsStringSync();
+
+    expect(formatZakatMoney(100, 'USD', localeName: 'en'), r'$100.00');
+    expect(formatZakatMoney(100, 'TRY', localeName: 'tr'), '₺100,00');
+    expect(formatZakatMoney(100, 'EUR', localeName: 'en'), '€100.00');
+    expect(source, isNot(contains('34.0')));
+    expect(source, isNot(contains('0.92')));
+    expect(source, isNot(contains('v * rate')));
+  });
+
+  test('zakat price fields do not ship stale market defaults', () {
+    final source = File(
+      'lib/features/library/zakat_calculator_page.dart',
+    ).readAsStringSync();
+
+    expect(source, isNot(contains("TextEditingController(text: '70')")));
+    expect(source, isNot(contains("TextEditingController(text: '0.90')")));
+  });
 }

@@ -12557,3 +12557,58 @@
 
 ### Sonraki Adim
 - Sessiz fallback risklerine geri donulecek; ozellikle konum, para birimi/sabit oran, prayer/timezone ve premium/bootstrap hata yollarinda kullaniciya yanlis guven veren durumlar taranacak.
+
+## 2026-04-17 TUR-299 — Zakat Calculator Stale Rate Removal
+
+### Yapilan Islem
+- Zekat hesaplayicisindaki sabit USD->TRY/EUR kur cevrimi kaldirildi.
+- Para birimi artik yalniz kullanicinin girdigi fiyat/varlik birimini ve sonuc formatini temsil ediyor; uygulama guncel kur bildigi iddiasinda bulunmuyor.
+- Altin ve gumus gram fiyatlarindaki eski varsayilan degerler kaldirildi; kullanici guncel fiyat/g degerini kendisi girmeli.
+- `parseZakatAmount` helper'i eklendi; `70,50`, `1,234.50`, `1.234,50` gibi yaygin yerel sayi bicimleri 0'a dusmeden okunuyor.
+- Para formatlama `NumberFormat.currency` ile locale-aware hale getirildi.
+
+### Kanit
+- Desteklenen para birimi sembolleri: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:7`
+- Locale-friendly miktar parser'i: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:9`
+- Locale-aware para formati ve kur cevrimsiz sonuc: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:31`, `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:163`
+- Eski market defaultlari kaldirilan fiyat alanlari: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:124`, `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:126`
+- Parser regresyon testi: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:35`
+- Stale kur regresyon testi: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:44`
+- Stale fiyat default regresyon testi: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:57`
+
+### Neden Yapildi
+- `zakat_calculator_page.dart` once sonuc formatinda `TRY=34.0` ve `EUR=0.92` gibi sabit carpimlar kullaniyordu; 2026-04-17 itibariyla bu degerlerin guncel oldugu garanti edilemez.
+- Dini/finansal hassasiyet nedeniyle uygulamanin kullaniciya sessizce eski kurla hesaplanmis zekat tutari gostermesi kabul edilemez.
+- Gercek zamanli kur/metal fiyat servisi eklemek bu tur icin yeni altyapi ve kaynak guvenilirligi gerektirirdi; en durust kucuk kapsamli cozum, hesaplamayi kullanicinin girdigi para biriminde yapmak ve sahte guncellik iddiasini kaldirmaktir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Zekat sonucu artik sabit ve eski kurla carpilmiyor.
+- Kullanici hangi para birimini sectiyse tum fiyat ve varlik degerlerini o birimde giriyor; sonuc ayni birimde formatlaniyor.
+- Virgul kullanan locale'lerde tutar girisi 0'a dusup yanlis nisap/zekat sonucu uretme riski azaldi.
+- Mevcut dini nisap mantigi ve %2.5 hesaplama davranisi korunuyor.
+
+### Test Sonucu
+- Odak test: `flutter test test\features\library\zakat_calculator_page_test.dart` PASS (`5/5`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`518/518`)
+
+### Risk Degisimi
+- Zekat sonucunu stale sabit doviz kuru ile yanlis gostermesi riski: `16/25 -> 1/25`
+- Eski altin/gumus fiyat defaultlarinin guncel veri sanilmasi riski: `12/25 -> 1/25`
+- Virgullu sayi girislerinin 0'a duserek nisap sonucunu bozmasi riski: `12/25 -> 2/25`
+
+### Rollback Plani
+- `parseZakatAmount`, `formatZakatMoney` ve `zakatCurrencySymbols` helper'lari kaldirilir.
+- `_calculate` tekrar `double.tryParse` kullanir.
+- `_fmt` eski sabit kur carpani davranisina dondurulur ve fiyat alanlarina eski default degerler geri eklenir.
+- Zekat regresyon testleri kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Premium restore/purchase bekleme akisi, konum secimi ve prayer notification scheduler icin sessiz hata veya sonsuz loading riski taranmaya devam edilecek.
