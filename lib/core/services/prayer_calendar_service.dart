@@ -24,6 +24,11 @@ class PrayerCalendarService {
     DateTime? currentTime,
   }) {
     final coordinates = Coordinates(latitude, longitude);
+    final resolvedTimezone = TimezoneUtils.resolveTimezoneName(
+      timezoneName: timezone,
+      latitude: latitude,
+      longitude: longitude,
+    );
     final params = buildCalculationParameters(
       method,
       fajrAngle: fajrAngle,
@@ -43,28 +48,31 @@ class PrayerCalendarService {
     final prayerTimes = PrayerTimes(coordinates, dateComponents, params);
     final fajr = TimezoneUtils.adjustCalculationTime(
       prayerTimes.fajr,
-      timezone,
+      resolvedTimezone,
     );
     final sunrise = TimezoneUtils.adjustCalculationTime(
       prayerTimes.sunrise,
-      timezone,
+      resolvedTimezone,
     );
     final dhuhr = TimezoneUtils.adjustCalculationTime(
       prayerTimes.dhuhr,
-      timezone,
+      resolvedTimezone,
     );
-    final asr = TimezoneUtils.adjustCalculationTime(prayerTimes.asr, timezone);
+    final asr = TimezoneUtils.adjustCalculationTime(
+      prayerTimes.asr,
+      resolvedTimezone,
+    );
     final maghrib = TimezoneUtils.adjustCalculationTime(
       prayerTimes.maghrib,
-      timezone,
+      resolvedTimezone,
     );
     final isha = TimezoneUtils.adjustCalculationTime(
       prayerTimes.isha,
-      timezone,
+      resolvedTimezone,
     );
 
     // Calculate next prayer
-    final now = currentTime ?? TimezoneUtils.nowForTimezone(timezone);
+    final now = currentTime ?? TimezoneUtils.nowForTimezone(resolvedTimezone);
     DateTime nextTime = fajr;
     String nextName = 'Fajr';
 
@@ -96,7 +104,7 @@ class PrayerCalendarService {
       );
       nextTime = TimezoneUtils.adjustCalculationTime(
         tomorrowPrayerTimes.fajr,
-        timezone,
+        resolvedTimezone,
       );
       nextName = 'Fajr';
     }
@@ -159,7 +167,12 @@ class PrayerCalendarService {
     double? ishaAngle,
   }) {
     final List<PrayerTimesEntity> allTimes = [];
-    final now = TimezoneUtils.nowForTimezone(timezone);
+    final resolvedTimezone = TimezoneUtils.resolveTimezoneName(
+      timezoneName: timezone,
+      latitude: latitude,
+      longitude: longitude,
+    );
+    final now = TimezoneUtils.nowForTimezone(resolvedTimezone);
 
     for (int year = now.year; year <= now.year + 10; year++) {
       for (int month = 1; month <= 12; month++) {
@@ -173,7 +186,7 @@ class PrayerCalendarService {
           month: month,
           method: method,
           madhab: madhab,
-          timezone: timezone,
+          timezone: resolvedTimezone,
           fajrAngle: fajrAngle,
           ishaAngle: ishaAngle,
         );
@@ -196,12 +209,17 @@ class PrayerCalendarService {
     double? ishaAngle,
   }) async {
     final prefs = await SharedPreferences.getInstance();
+    final resolvedTimezone = TimezoneUtils.resolveTimezoneName(
+      timezoneName: timezone,
+      latitude: latitude,
+      longitude: longitude,
+    );
     final times = calculate10Years(
       latitude: latitude,
       longitude: longitude,
       method: method,
       madhab: madhab,
-      timezone: timezone,
+      timezone: resolvedTimezone,
       fajrAngle: fajrAngle,
       ishaAngle: ishaAngle,
     );
@@ -228,7 +246,7 @@ class PrayerCalendarService {
         'longitude': longitude,
         'method': method,
         'madhab': madhab,
-        'timezone': timezone,
+        'timezone': resolvedTimezone,
         'times': jsonList,
       }),
     );

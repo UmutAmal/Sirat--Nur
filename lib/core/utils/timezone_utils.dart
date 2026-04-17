@@ -1,12 +1,65 @@
+import 'package:lat_lng_to_timezone/lat_lng_to_timezone.dart' as tzmap;
 import 'package:timezone/timezone.dart' as tz;
 
 class TimezoneUtils {
+  static String? normalizeTimezoneName(String? timezoneName) {
+    final normalized = timezoneName?.trim();
+    if (normalized == null || normalized.isEmpty) {
+      return null;
+    }
+
+    try {
+      tz.getLocation(normalized);
+      return normalized;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  static String? inferTimezoneName(double latitude, double longitude) {
+    if (!latitude.isFinite ||
+        !longitude.isFinite ||
+        latitude < -90 ||
+        latitude > 90 ||
+        longitude < -180 ||
+        longitude > 180) {
+      return null;
+    }
+
+    try {
+      return normalizeTimezoneName(
+        tzmap.latLngToTimezoneString(latitude, longitude),
+      );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  static String? resolveTimezoneName({
+    String? timezoneName,
+    double? latitude,
+    double? longitude,
+  }) {
+    final normalized = normalizeTimezoneName(timezoneName);
+    if (normalized != null) {
+      return normalized;
+    }
+
+    if (latitude != null && longitude != null) {
+      return inferTimezoneName(latitude, longitude);
+    }
+
+    return null;
+  }
+
   static tz.Location resolveLocation(String? timezoneName) {
-    if (timezoneName == null || timezoneName.trim().isEmpty) {
+    final normalized = normalizeTimezoneName(timezoneName);
+    if (normalized == null) {
       return tz.local;
     }
+
     try {
-      return tz.getLocation(timezoneName);
+      return tz.getLocation(normalized);
     } catch (_) {
       return tz.local;
     }
@@ -55,11 +108,13 @@ class TimezoneUtils {
     DateTime targetDate,
     String? timezoneName,
   ) {
-    if (timezoneName == null || timezoneName.trim().isEmpty) {
+    final normalized = normalizeTimezoneName(timezoneName);
+    if (normalized == null) {
       return Duration.zero;
     }
+
     try {
-      final location = tz.getLocation(timezoneName);
+      final location = tz.getLocation(normalized);
       final targetTz = tz.TZDateTime(
         location,
         targetDate.year,
@@ -84,12 +139,13 @@ class TimezoneUtils {
     DateTime earlier,
     String? timezoneName,
   ) {
-    if (timezoneName == null || timezoneName.trim().isEmpty) {
+    final normalized = normalizeTimezoneName(timezoneName);
+    if (normalized == null) {
       return later.difference(earlier);
     }
 
     try {
-      final location = tz.getLocation(timezoneName);
+      final location = tz.getLocation(normalized);
       final laterTz = tz.TZDateTime(
         location,
         later.year,

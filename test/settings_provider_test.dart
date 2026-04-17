@@ -6,8 +6,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'package:timezone/data/latest.dart' as tzdata;
+import 'package:timezone/timezone.dart' as tz;
 
 void main() {
+  tzdata.initializeTimeZones();
+  tz.setLocalLocation(tz.getLocation('Etc/UTC'));
+
   test(
     'sharedPreferencesProvider reports a controlled bootstrap error when not overridden',
     () {
@@ -123,6 +128,22 @@ void main() {
       },
     );
 
+    test('repairs invalid stored timezone from saved coordinates', () async {
+      SharedPreferences.setMockInitialValues({
+        'latitude': 41.0082,
+        'longitude': 28.9784,
+        'locationName': 'Istanbul, Turkey',
+        'timezone': 'Mars/Olympus',
+      });
+      prefs = await SharedPreferences.getInstance();
+
+      final notifier = SettingsNotifier(prefs);
+      await Future<void>.delayed(Duration.zero);
+
+      expect(notifier.state.timezone, 'Europe/Istanbul');
+      expect(prefs.getString('timezone'), 'Europe/Istanbul');
+    });
+
     test(
       'updateLocation persists timezone and country in state and storage',
       () async {
@@ -142,6 +163,24 @@ void main() {
         expect(notifier.state.calculationMethod, diyanetPrayerMethod);
         expect(notifier.state.madhab, hanafiMadhab);
         expect(prefs.getString('countryCode'), 'TR');
+        expect(prefs.getString('timezone'), 'Europe/Istanbul');
+      },
+    );
+
+    test(
+      'updateLocation infers timezone when supplied value is invalid',
+      () async {
+        final notifier = SettingsNotifier(prefs);
+
+        await notifier.updateLocation(
+          41.0082,
+          28.9784,
+          'Istanbul, Turkey',
+          timezone: 'Invalid/Zone',
+          countryCode: 'TR',
+        );
+
+        expect(notifier.state.timezone, 'Europe/Istanbul');
         expect(prefs.getString('timezone'), 'Europe/Istanbul');
       },
     );

@@ -37,15 +37,20 @@ PrayerTimesData? buildPrayerTimesData(
 
   if (lat == null || lng == null) return null;
 
+  final resolvedTimezone = TimezoneUtils.resolveTimezoneName(
+    timezoneName: settings.timezone,
+    latitude: lat,
+    longitude: lng,
+  );
   final referenceTime =
-      currentTime ?? TimezoneUtils.nowForTimezone(settings.timezone);
+      currentTime ?? TimezoneUtils.nowForTimezone(resolvedTimezone);
   final prayerTimes = PrayerCalendarService.calculatePrayerTimes(
     latitude: lat,
     longitude: lng,
     date: referenceTime,
     method: settings.calculationMethod,
     madhab: settings.madhab,
-    timezone: settings.timezone,
+    timezone: resolvedTimezone,
     fajrAngle: settings.fajrAngle,
     ishaAngle: settings.ishaAngle,
     currentTime: referenceTime,
@@ -53,7 +58,7 @@ PrayerTimesData? buildPrayerTimesData(
   final remaining = TimezoneUtils.differenceInTimezone(
     prayerTimes.nextPrayerTime,
     referenceTime,
-    settings.timezone,
+    resolvedTimezone,
   );
 
   return PrayerTimesData(

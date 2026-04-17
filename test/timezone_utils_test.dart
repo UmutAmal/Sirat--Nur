@@ -39,4 +39,23 @@ void main() {
       const Duration(hours: 1),
     );
   });
+
+  test('normalizes valid timezone names and rejects invalid names', () {
+    expect(
+      TimezoneUtils.normalizeTimezoneName(' Europe/Istanbul '),
+      'Europe/Istanbul',
+    );
+    expect(TimezoneUtils.normalizeTimezoneName('Mars/Olympus'), isNull);
+  });
+
+  test('infers timezone from coordinates when supplied name is invalid', () {
+    expect(
+      TimezoneUtils.resolveTimezoneName(
+        timezoneName: 'Invalid/Zone',
+        latitude: 41.0082,
+        longitude: 28.9784,
+      ),
+      'Europe/Istanbul',
+    );
+  });
 }

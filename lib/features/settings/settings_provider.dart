@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
+import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
 
 const String kSharedPreferencesProviderNotBootstrappedErrorCode =
     'shared_preferences_provider_not_bootstrapped';
@@ -129,44 +132,25 @@ const Object _unset = Object();
 class SettingsNotifier extends StateNotifier<SettingsState> {
   final SharedPreferences _prefs;
 
-  SettingsNotifier(this._prefs)
-    : super(
-        (() {
-          final storedMethod = normalizeCalculationMethod(
-            _prefs.getString('calculationMethod') ?? diyanetPrayerMethod,
-          );
-          final storedMadhab = normalizeMadhab(
-            _prefs.getString('madhab') ?? hanafiMadhab,
-          );
-          final (defaultFajrAngle, defaultIshaAngle) = _defaultAnglesForMethod(
-            storedMethod,
-          );
+  SettingsNotifier(this._prefs) : super(_loadSettingsState(_prefs)) {
+    _repairStoredTimezone();
+  }
 
-          return SettingsState(
-            calculationMethod: storedMethod,
-            madhab: storedMadhab,
-            audioVoice: normalizeAudioVoice(
-              _prefs.getString('audioVoice') ?? misharyAlafasyVoice,
-            ),
-            qiblaOffset: _prefs.getDouble('qiblaOffset') ?? 0.0,
-            qiblaSmoothingEnabled:
-                _prefs.getBool('qiblaSmoothingEnabled') ?? true,
-            fajrAngle: storedMethod == customPrayerMethod
-                ? _prefs.getDouble('fajrAngle') ?? 18.0
-                : defaultFajrAngle,
-            ishaAngle: storedMethod == customPrayerMethod
-                ? _prefs.getDouble('ishaAngle') ?? 17.0
-                : defaultIshaAngle,
-            languageCode: _prefs.getString('languageCode'),
-            latitude: _prefs.getDouble('latitude'),
-            longitude: _prefs.getDouble('longitude'),
-            locationName: _prefs.getString('locationName'),
-            countryCode: _prefs.getString('countryCode'),
-            timezone: _prefs.getString('timezone'),
-            isDarkMode: _prefs.getBool('isDarkMode') ?? true,
-          );
-        })(),
-      );
+  void _repairStoredTimezone() {
+    final storedTimezone = _prefs.getString('timezone');
+    final resolvedTimezone = state.timezone;
+
+    if (resolvedTimezone == null) {
+      if (storedTimezone != null) {
+        unawaited(_prefs.remove('timezone'));
+      }
+      return;
+    }
+
+    if (storedTimezone != resolvedTimezone) {
+      unawaited(_prefs.setString('timezone', resolvedTimezone));
+    }
+  }
 
   Future<void> updateCalculationMethod(String method) async {
     final normalizedMethod = normalizeCalculationMethod(method);
@@ -233,9 +217,14 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
     String? countryCode,
   }) async {
     final normalizedCountryCode = _normalizeOptionalCountryCode(countryCode);
+    final normalizedTimezone = TimezoneUtils.resolveTimezoneName(
+      timezoneName: timezone,
+      latitude: lat,
+      longitude: lng,
+    );
     final profile = resolvePrayerProfile(
       countryCode: normalizedCountryCode,
-      timezone: timezone,
+      timezone: normalizedTimezone,
     );
     final (fajrAngle, ishaAngle) = _defaultAnglesForMethod(
       profile.calculationMethod,
@@ -253,10 +242,10 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
     } else {
       await _prefs.setString('countryCode', normalizedCountryCode);
     }
-    if (timezone == null || timezone.trim().isEmpty) {
+    if (normalizedTimezone == null) {
       await _prefs.remove('timezone');
     } else {
-      await _prefs.setString('timezone', timezone);
+      await _prefs.setString('timezone', normalizedTimezone);
     }
     state = state.copyWith(
       calculationMethod: profile.calculationMethod,
@@ -267,7 +256,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
       longitude: lng,
       locationName: name,
       countryCode: normalizedCountryCode,
-      timezone: timezone,
+      timezone: normalizedTimezone,
     );
   }
 
@@ -298,6 +287,48 @@ final settingsProvider = StateNotifierProvider<SettingsNotifier, SettingsState>(
     return SettingsNotifier(prefs);
   },
 );
+
+SettingsState _loadSettingsState(SharedPreferences prefs) {
+  final storedMethod = normalizeCalculationMethod(
+    prefs.getString('calculationMethod') ?? diyanetPrayerMethod,
+  );
+  final storedMadhab = normalizeMadhab(
+    prefs.getString('madhab') ?? hanafiMadhab,
+  );
+  final (defaultFajrAngle, defaultIshaAngle) = _defaultAnglesForMethod(
+    storedMethod,
+  );
+  final latitude = prefs.getDouble('latitude');
+  final longitude = prefs.getDouble('longitude');
+  final timezone = TimezoneUtils.resolveTimezoneName(
+    timezoneName: prefs.getString('timezone'),
+    latitude: latitude,
+    longitude: longitude,
+  );
+
+  return SettingsState(
+    calculationMethod: storedMethod,
+    madhab: storedMadhab,
+    audioVoice: normalizeAudioVoice(
+      prefs.getString('audioVoice') ?? misharyAlafasyVoice,
+    ),
+    qiblaOffset: prefs.getDouble('qiblaOffset') ?? 0.0,
+    qiblaSmoothingEnabled: prefs.getBool('qiblaSmoothingEnabled') ?? true,
+    fajrAngle: storedMethod == customPrayerMethod
+        ? prefs.getDouble('fajrAngle') ?? 18.0
+        : defaultFajrAngle,
+    ishaAngle: storedMethod == customPrayerMethod
+        ? prefs.getDouble('ishaAngle') ?? 17.0
+        : defaultIshaAngle,
+    languageCode: prefs.getString('languageCode'),
+    latitude: latitude,
+    longitude: longitude,
+    locationName: prefs.getString('locationName'),
+    countryCode: prefs.getString('countryCode'),
+    timezone: timezone,
+    isDarkMode: prefs.getBool('isDarkMode') ?? true,
+  );
+}
 
 (double, double) _defaultAnglesForMethod(String method) {
   if (normalizeCalculationMethod(method) == customPrayerMethod) {

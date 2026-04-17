@@ -86,12 +86,12 @@ void main() {
     });
 
     test('buildPrayerTimesData mirrors centralized tomorrow-fajr logic', () {
-      const latitude = 41.0082;
-      const longitude = 28.9784;
+      const latitude = 21.3891;
+      const longitude = 39.8579;
       final currentTime = DateTime(2026, 4, 8, 23, 30);
       final settings = SettingsState(
-        calculationMethod: diyanetPrayerMethod,
-        madhab: hanafiMadhab,
+        calculationMethod: ummAlQuraPrayerMethod,
+        madhab: hanbaliMadhab,
         latitude: latitude,
         longitude: longitude,
       );
@@ -101,8 +101,8 @@ void main() {
         latitude: latitude,
         longitude: longitude,
         date: currentTime,
-        method: diyanetPrayerMethod,
-        madhab: hanafiMadhab,
+        method: ummAlQuraPrayerMethod,
+        madhab: hanbaliMadhab,
         currentTime: currentTime,
       );
 
@@ -114,6 +114,37 @@ void main() {
       );
       expect(data.timeRemaining, greaterThan(Duration.zero));
     });
+
+    test(
+      'buildPrayerTimesData resolves timezone from location coordinates',
+      () {
+        const latitude = 52.52;
+        const longitude = 13.405;
+        final currentTime = DateTime(2026, 6, 15, 12);
+        final settings = SettingsState(
+          calculationMethod: mwlPrayerMethod,
+          madhab: shafiiMadhab,
+          latitude: latitude,
+          longitude: longitude,
+          timezone: 'Invalid/Zone',
+        );
+
+        final data = buildPrayerTimesData(settings, currentTime: currentTime)!;
+        final explicit = PrayerCalendarService.calculatePrayerTimes(
+          latitude: latitude,
+          longitude: longitude,
+          date: currentTime,
+          method: mwlPrayerMethod,
+          madhab: shafiiMadhab,
+          timezone: 'Europe/Berlin',
+          currentTime: currentTime,
+        );
+
+        expect(data.fajr, _formatExpectedTime(explicit.fajr));
+        expect(data.dhuhr, _formatExpectedTime(explicit.dhuhr));
+        expect(data.isha, _formatExpectedTime(explicit.isha));
+      },
+    );
   });
 }
 

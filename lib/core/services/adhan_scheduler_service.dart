@@ -62,7 +62,12 @@ class AdhanSchedulerService {
     // Clear only adhan schedules to avoid deleting unrelated notifications.
     await _cancelScheduledAdhans();
 
-    final now = TimezoneUtils.nowForTimezone(timezoneName);
+    final resolvedTimezoneName = TimezoneUtils.resolveTimezoneName(
+      timezoneName: timezoneName,
+      latitude: lat,
+      longitude: lon,
+    );
+    final now = TimezoneUtils.nowForTimezone(resolvedTimezoneName);
     for (int i = 0; i < _scheduleDays; i++) {
       final date = now.add(Duration(days: i));
       final times = PrayerCalendarService.calculatePrayerTimes(
@@ -71,7 +76,7 @@ class AdhanSchedulerService {
         date: date,
         method: method,
         madhab: madhab,
-        timezone: timezoneName,
+        timezone: resolvedTimezoneName,
         fajrAngle: fajrAngle,
         ishaAngle: ishaAngle,
       );
@@ -79,7 +84,7 @@ class AdhanSchedulerService {
       await _scheduleDailyEvents(
         times,
         i,
-        timezoneName: timezoneName,
+        timezoneName: resolvedTimezoneName,
         languageCode: languageCode,
       );
     }

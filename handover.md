@@ -12762,3 +12762,72 @@
 
 ### Sonraki Adim
 - Yeni turda location timezone validasyonu ve prayer notification scheduling zincirindeki sessiz fallback riskleri kanitla taranacak.
+
+## 2026-04-17 TUR-303 - Timezone Normalization For Prayer Pipeline
+
+### Yapilan Islem
+- Merkezi `TimezoneUtils` katmanina timezone trim/validasyon, koordinattan timezone inference ve tek girisli resolve helper'i eklendi.
+- Settings load/update akisi gecersiz timezone'u artik state'e tasimiyor; kayitli koordinatlar varsa timezone'u koordinattan onariyor ve prefs'i sessizce tamir ediyor.
+- Prayer calendar, home prayer data ve adhan scheduler hesaplari eksik/gecersiz timezone durumunda koordinattan resolve edilen timezone'u kullaniyor.
+- Namaz vakti ve bildirim scheduling hattinda `tz.local`/cihaz local fallback'ine sessiz dusme riski azaltildi.
+- Timezone, settings, prayer calendar, prayer times ve scheduler guard testleri eklendi/guncellendi.
+
+### Kanit
+- Timezone normalize helper'i: `A:\Way of Allah\sirat_i_nur\lib\core\utils\timezone_utils.dart:5`
+- Koordinattan timezone inference helper'i: `A:\Way of Allah\sirat_i_nur\lib\core\utils\timezone_utils.dart:19`
+- Merkezi timezone resolve helper'i: `A:\Way of Allah\sirat_i_nur\lib\core\utils\timezone_utils.dart:38`
+- Prayer calendar resolved timezone kullaniyor: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart:27`
+- Prayer times data resolved timezone kullaniyor: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_times_service.dart:40`
+- Adhan scheduler resolved timezone kullaniyor: `A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart:65`
+- Settings load timezone repair akisi: `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart:135`
+- Settings updateLocation timezone resolve akisi: `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart:220`
+- Stored invalid timezone repair testi: `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart:131`
+- Invalid updateLocation timezone inference testi: `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart:171`
+- Prayer calendar inference testi: `A:\Way of Allah\sirat_i_nur\test\prayer_calendar_service_test.dart:116`
+- Prayer times inference testi: `A:\Way of Allah\sirat_i_nur\test\prayer_times_service_test.dart:119`
+- Scheduler guard testi: `A:\Way of Allah\sirat_i_nur\test\prayer_notification_coordinator_test.dart:358`
+- Timezone util testleri: `A:\Way of Allah\sirat_i_nur\test\timezone_utils_test.dart:45`
+
+### Neden Yapildi
+- Onceki `TimezoneUtils.resolveLocation` ve hesap helper'lari gecersiz timezone alinca `tz.local`/zero delta fallback'e dusuyordu.
+- Cihaz timezone'u kullanici konumundan farkliysa namaz vakti, kalan sure ve bildirim schedule zamanlari yanlis bolgeye gore hesaplanabilirdi.
+- Manuel/GPS location akisi dogru koordinata sahip olsa bile invalid veya eksik timezone, dini vakit hassasiyeti icin kabul edilemez sessiz sapma riski olusturuyordu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\timezone_utils.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_times_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\timezone_utils_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_calendar_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_times_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_notification_coordinator_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Gecersiz timezone stringleri state/prefs icinde kalici hale gelmeden koordinattan onariliyor.
+- Eksik timezone ile gelen prayer calculation ve adhan scheduling cagirilari, koordinat mevcutsa bolge timezone'una baglaniyor.
+- DST ve yerel saat farklari icin mevcut test guvencesi korunurken, missing/invalid timezone regresyon guard'lari eklendi.
+
+### Test Sonucu
+- Odak test: `flutter test test\timezone_utils_test.dart test\settings_provider_test.dart test\prayer_calendar_service_test.dart test\prayer_times_service_test.dart test\prayer_notification_coordinator_test.dart` PASS (`40/40`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`527/527`)
+
+### Risk Degisimi
+- Gecersiz timezone'un namaz vakti hesaplarini cihaz local saatine sessiz dusurmesi riski: `16/25 -> 3/25`
+- Eksik timezone'un adhan scheduler'da yanlis bolgeyle schedule uretmesi riski: `16/25 -> 3/25`
+- Legacy prefs icindeki invalid timezone'un kalici kalmasi riski: `12/25 -> 2/25`
+
+### Rollback Plani
+- `TimezoneUtils.normalizeTimezoneName`, `inferTimezoneName` ve `resolveTimezoneName` helper'lari kaldirilir.
+- Prayer calendar/times/scheduler cagirilari eski `timezone` parametresine dondurulur.
+- Settings load/update timezone repair logic'i kaldirilir.
+- Eklenen timezone/settings/prayer testleri kaldirilir veya eski beklentilere dondurulur.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda offline audio/download integrity, Supabase audio mirror operasyonu ve kalan high-risk l10n debt guvenli sekilde taranacak.

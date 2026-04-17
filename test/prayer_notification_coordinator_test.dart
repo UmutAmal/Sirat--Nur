@@ -355,6 +355,23 @@ void main() {
       },
     );
 
+    test('adhan scheduler resolves timezone before scheduling dates', () {
+      final source = File(
+        'lib/core/services/adhan_scheduler_service.dart',
+      ).readAsStringSync();
+
+      expect(
+        source,
+        contains(
+          'final resolvedTimezoneName = TimezoneUtils.resolveTimezoneName(',
+        ),
+      );
+      expect(source, contains('latitude: lat,'));
+      expect(source, contains('longitude: lon,'));
+      expect(source, contains('timezone: resolvedTimezoneName'));
+      expect(source, contains('timezoneName: resolvedTimezoneName'));
+    });
+
     test('sync failure log does not include raw scheduler exceptions', () {
       final source = File(
         'lib/core/services/prayer_notification_coordinator.dart',

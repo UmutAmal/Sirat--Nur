@@ -12,8 +12,8 @@ void main() {
 
   group('PrayerCalendarService', () {
     test('returns tomorrow fajr as next prayer after isha has passed', () {
-      const latitude = 41.0082;
-      const longitude = 28.9784;
+      const latitude = 21.3891;
+      const longitude = 39.8579;
       final date = DateTime(2026, 4, 8);
       final afterIsha = DateTime(2026, 4, 8, 23, 30);
 
@@ -21,16 +21,16 @@ void main() {
         latitude: latitude,
         longitude: longitude,
         date: date,
-        method: 'Turkey',
-        madhab: 'Shafii',
+        method: ummAlQuraPrayerMethod,
+        madhab: hanbaliMadhab,
         currentTime: afterIsha,
       );
       final tomorrow = PrayerCalendarService.calculatePrayerTimes(
         latitude: latitude,
         longitude: longitude,
         date: date.add(const Duration(days: 1)),
-        method: 'Turkey',
-        madhab: 'Shafii',
+        method: ummAlQuraPrayerMethod,
+        madhab: hanbaliMadhab,
         currentTime: afterIsha,
       );
 
@@ -111,6 +111,34 @@ void main() {
 
       expect(expectedFajr, isNot(referenceAdjustedFajr));
       expect(calculated.fajr, expectedFajr);
+    });
+
+    test('infers timezone from coordinates when timezone is missing', () {
+      const latitude = 52.52;
+      const longitude = 13.405;
+      final date = DateTime(2026, 6, 15, 12);
+
+      final inferred = PrayerCalendarService.calculatePrayerTimes(
+        latitude: latitude,
+        longitude: longitude,
+        date: date,
+        method: mwlPrayerMethod,
+        madhab: shafiiMadhab,
+        currentTime: date,
+      );
+      final explicit = PrayerCalendarService.calculatePrayerTimes(
+        latitude: latitude,
+        longitude: longitude,
+        date: date,
+        method: mwlPrayerMethod,
+        madhab: shafiiMadhab,
+        timezone: 'Europe/Berlin',
+        currentTime: date,
+      );
+
+      expect(inferred.fajr, explicit.fajr);
+      expect(inferred.dhuhr, explicit.dhuhr);
+      expect(inferred.isha, explicit.isha);
     });
   });
 }
