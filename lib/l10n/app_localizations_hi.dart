@@ -1405,7 +1405,8 @@ class AppLocalizationsHi extends AppLocalizations {
   String get asmaMeaning8 => 'सबसे कीमती/सबसे ताकतवर';
 
   @override
-  String get asmaMeaning9 => 'कंपेलर';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'महानतम';
@@ -1438,10 +1439,12 @@ class AppLocalizationsHi extends AppLocalizations {
   String get asmaMeaning19 => 'सब कुछ जानने वाला';
 
   @override
-  String get asmaMeaning20 => 'कंस्ट्रिक्टर';
+  String get asmaMeaning20 =>
+      'The Withholder, who narrows and restrains by wisdom.';
 
   @override
-  String get asmaMeaning21 => 'राहत देने वाला';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'अबेसर';
@@ -1676,5 +1679,6 @@ class AppLocalizationsHi extends AppLocalizations {
   String get asmaMeaning98 => 'सबसे धर्मी मार्गदर्शक';
 
   @override
-  String get asmaMeaning99 => 'रोगी एक';
+  String get asmaMeaning99 =>
+      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }

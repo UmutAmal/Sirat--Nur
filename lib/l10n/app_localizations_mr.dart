@@ -1405,7 +1405,8 @@ class AppLocalizationsMr extends AppLocalizations {
   String get asmaMeaning8 => 'द मौल्यवान / सर्वात पराक्रमी';
 
   @override
-  String get asmaMeaning9 => 'द कंपेलर';
+  String get asmaMeaning9 =>
+      'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'सर्वश्रेष्ठ';
@@ -1442,7 +1443,8 @@ class AppLocalizationsMr extends AppLocalizations {
       'The Withholder, who narrows and restrains by wisdom.';
 
   @override
-  String get asmaMeaning21 => 'रिलीव्हर';
+  String get asmaMeaning21 =>
+      'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'Abaser';

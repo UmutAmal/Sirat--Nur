@@ -14967,3 +14967,43 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak kalan Asma transliterasyon/yanlis anlam fragmentleri, l10n debt ve audio checksum/fingerprint eksigi taranacak.
+
+## 2026-04-17 TUR-343 - Devanagari Asma Transliterations Fall Back Safely
+
+### MASTER Karari
+- Risk: TUR-342 sonrasi tarama `lib/l10n/app_bho.arb:554`, `lib/l10n/app_hi.arb:565`, `lib/l10n/app_mai.arb:566`, `lib/l10n/app_ne.arb:644`, `lib/l10n/app_sa.arb:644` gibi satirlarda "Compeller/Constrictor/Reliever/Patient" kelimelerinin Devanagari transliterasyonlarini veya "hasta" anlamlarini buldu.
+- Kanit: `द कम्पेलर`, `कंपेलर`, `कंस्ट्रिक्टर`, `द रिलीवर`, `रिलिभर`, `रिलीव्हर`, `मरीज`, `रोगी`, `बिरामी` fragmentleri Asma anlamini aciklamiyor; yalniz makine/transliterasyon kalintisi tasiyor.
+- Etki: Allah'in isimlerinin anlamlari Bhojpuri/Hindi/Maithili/Marathi/Nepali/Sanskrit lokallerinde yanlis dini semantik ile gosterilebilirdi.
+- Olasilik: ARB degerleri runtime'da dogrudan kullaniliyor; kullanici locale'i bu dillerden biriyse Asma sayfasinda gorunur.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1).
+- Rollback kapsami: `app_bho.arb`, `app_hi.arb`, `app_mai.arb`, `app_mr.arb`, `app_ne.arb`, `app_sa.arb`, ilgili generated localization dosyalari, `test/arb_ui_localization_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- Guvenilir yerel ceviri uretmek yerine, belirsiz ve yanlis Devanagari fragmentler EN referans anlamlarina dusuruldu.
+- `asmaMeaning9`, `asmaMeaning20`, `asmaMeaning21`, `asmaMeaning99` icin Bhojpuri/Hindi/Maithili/Marathi/Nepali/Sanskrit dosyalarindaki kanitli sapmalar temizlendi.
+- `flutter gen-l10n` ile generated localization siniflari ARB dosyalariyla senkronlandi.
+
+### TESTER Kapsami
+- `test/arb_ui_localization_test.dart:1471` all-locale stale Asma guard'i Devanagari transliterasyon ve hasta/person fragmentlerini kapsayacak sekilde genisletildi.
+- `test/arb_ui_localization_test.dart:1536` belirsiz `bho`, `hi`, `mai`, `mr`, `ne`, `sa` high-risk Asma anahtarlari icin guvenli EN fallback beklentisi eklendi.
+
+### Test Sonucu
+- `flutter gen-l10n` PASS
+- Format: `dart format test\arb_ui_localization_test.dart lib\l10n\app_localizations_bho.dart lib\l10n\app_localizations_hi.dart lib\l10n\app_localizations_mai.dart lib\l10n\app_localizations_mr.dart lib\l10n\app_localizations_ne.dart lib\l10n\app_localizations_sa.dart` PASS
+- Odak test: `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS (`71/71`)
+- Odak test: `flutter test test\arb_coverage_test.dart --reporter compact` PASS (`4/4`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`566/566`)
+
+### Risk Degisimi
+- Devanagari high-risk Asma transliterasyon/hasta-anlami riski: `15/25 -> 3/25`
+- Kalan risk: `asmaMeaning75` ve baska Asma anahtarlarinda low-resource dillerde halen EN fallback veya zayif lokalizasyon olabilir; dogrulanmamis yeni ceviri uretmeden kanitli tarama devam etmeli.
+
+### Rollback Plani
+- Bu turdaki 6 ARB ve generated l10n degisikligi revert edilir.
+- Eklenen Devanagari stale-fragment guard'lari testten kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter gen-l10n`, `flutter analyze`, full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak kalan Asma `Manifest`/low-resource fallback borcu, audio checksum/fingerprint eksigi ve runtime content provenance taranacak.

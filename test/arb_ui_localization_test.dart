@@ -1471,9 +1471,23 @@ void main() {
     test('all locales avoid stale English high-risk asma fragments', () {
       const staleByKey = {
         'asmaMeaning7': ['The Guardian', 'Uka Guardian', 'גאַרדיאַן'],
-        'asmaMeaning9': ['Compeller', 'קאָמפּעלער'],
-        'asmaMeaning20': ['Constrictor', 'Constritor', 'קאָנסטריקטאָר'],
-        'asmaMeaning21': ['Reliever', 'Apaziguador', 'ריליווער'],
+        'asmaMeaning9': ['Compeller', 'קאָמפּעלער', 'कम्पेलर', 'कंपेलर'],
+        'asmaMeaning20': [
+          'Constrictor',
+          'Constritor',
+          'קאָנסטריקטאָר',
+          'कंस्ट्रिक्टर',
+          'कन्स्ट्र',
+        ],
+        'asmaMeaning21': [
+          'Reliever',
+          'Apaziguador',
+          'ריליווער',
+          'रिलीवर',
+          'रिलिभर',
+          'रिलीव्हर',
+          'राहत देने वाला',
+        ],
         'asmaMeaning75': ['Манифест'],
         'asmaMeaning77': [
           'Governor',
@@ -1507,6 +1521,9 @@ void main() {
           'פאציענט',
           'Den patienten',
           'रुग्ण',
+          'मरीज',
+          'रोगी',
+          'बिरामी',
         ],
       };
       final arbFiles = Directory('lib/l10n').listSync().whereType<File>().where(
@@ -1545,6 +1562,12 @@ void main() {
         final kazakh = _readArb('lib/l10n/app_kk.arb');
         final korean = _readArb('lib/l10n/app_ko.arb');
         final icelandic = _readArb('lib/l10n/app_is.arb');
+        final bhojpuri = _readArb('lib/l10n/app_bho.arb');
+        final hindi = _readArb('lib/l10n/app_hi.arb');
+        final maithili = _readArb('lib/l10n/app_mai.arb');
+        final marathi = _readArb('lib/l10n/app_mr.arb');
+        final nepali = _readArb('lib/l10n/app_ne.arb');
+        final sanskrit = _readArb('lib/l10n/app_sa.arb');
 
         for (final key in const [
           'asmaMeaning9',
@@ -1576,6 +1599,23 @@ void main() {
 
         expect(icelandic['asmaMeaning77'], english['asmaMeaning77']);
         expect(icelandic['asmaMeaning83'], english['asmaMeaning83']);
+        for (final arb in [
+          bhojpuri,
+          hindi,
+          maithili,
+          marathi,
+          nepali,
+          sanskrit,
+        ]) {
+          for (final key in const [
+            'asmaMeaning9',
+            'asmaMeaning20',
+            'asmaMeaning21',
+            'asmaMeaning99',
+          ]) {
+            expect(arb[key], english[key]);
+          }
+        }
         expect(yiddish['asmaMeaning9'], english['asmaMeaning9']);
         expect(yiddish['asmaMeaning20'], english['asmaMeaning20']);
         expect(yiddish['asmaMeaning21'], english['asmaMeaning21']);
