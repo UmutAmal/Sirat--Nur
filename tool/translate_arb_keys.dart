@@ -151,7 +151,7 @@ L10nDebtReport buildL10nDebtReport({
       if (currentValue is! String || currentValue.trim().isEmpty) {
         missingOrEmptyLocales.add(locale);
       } else if (englishValue is String &&
-          currentValue.trim() == englishValue.trim()) {
+          _isEnglishFallbackEquivalent(currentValue, englishValue)) {
         sameAsEnglishLocales.add(locale);
       } else if (englishValue is String &&
           !_hasMatchingPlaceholders(currentValue, englishValue)) {
@@ -276,7 +276,7 @@ bool _shouldPreserve(String key, dynamic currentValue, dynamic englishValue) {
     return false;
   }
 
-  return currentValue != englishValue;
+  return !_isEnglishFallbackEquivalent(currentValue, englishValue);
 }
 
 bool _hasMatchingPlaceholders(String currentValue, String englishValue) {
@@ -527,7 +527,7 @@ String resolveTranslatedArbValue({
   );
 
   if (_isUsableTranslationCandidate(key, source, processedCandidate)) {
-    if (processedCandidate != _normalizeProperNames(source)) {
+    if (!_isEnglishFallbackEquivalent(processedCandidate, source)) {
       return processedCandidate;
     }
   }
@@ -541,12 +541,21 @@ String resolveTranslatedArbValue({
     );
 
     if (_isUsableTranslationCandidate(key, source, processedExistingValue) &&
-        processedExistingValue != _normalizeProperNames(source)) {
+        !_isEnglishFallbackEquivalent(processedExistingValue, source)) {
       return processedExistingValue;
     }
   }
 
   return _normalizeProperNames(source);
+}
+
+bool _isEnglishFallbackEquivalent(String value, String source) {
+  return _englishFallbackComparisonToken(value) ==
+      _englishFallbackComparisonToken(source);
+}
+
+String _englishFallbackComparisonToken(String value) {
+  return _normalizeProperNames(value).trim().toLowerCase();
 }
 
 bool _isUsableTranslationCandidate(

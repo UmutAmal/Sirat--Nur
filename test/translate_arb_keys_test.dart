@@ -126,16 +126,25 @@ void main() {
             'downloadAction': '',
           },
           'de': {'downloadAction': 'Herunterladen'},
+          'pt': {
+            'downloadFinishedForReciter':
+                'Transferencia concluida para {reciter}.',
+            'downloadAction': 'DOWNLOAD',
+          },
         },
       );
 
       final reciterEntry = report.entries.firstWhere(
         (entry) => entry.key == 'downloadFinishedForReciter',
       );
+      final actionEntry = report.entries.firstWhere(
+        (entry) => entry.key == 'downloadAction',
+      );
       expect(reciterEntry.sameAsEnglishLocales, ['fr']);
+      expect(actionEntry.sameAsEnglishLocales, ['fr', 'pt']);
       expect(reciterEntry.missingOrEmptyLocales, ['de']);
       expect(reciterEntry.placeholderMismatchLocales, ['es']);
-      expect(report.sameAsEnglishCount, 2);
+      expect(report.sameAsEnglishCount, 3);
       expect(report.missingOrEmptyCount, 2);
       expect(report.placeholderMismatchCount, 1);
       expect(
@@ -193,9 +202,13 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1558));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1557));
       expect(
         localeArbs['ak']!['downloadAction'],
+        isNot(english['downloadAction']),
+      );
+      expect(
+        localeArbs['ti']!['downloadAction'],
         isNot(english['downloadAction']),
       );
       expect(
@@ -526,6 +539,17 @@ void main() {
       );
 
       expect(value, 'Indirmeler');
+    });
+
+    test('rejects case-only English download output', () {
+      final value = resolveTranslatedArbValue(
+        key: 'downloadAction',
+        source: 'Download',
+        currentValue: 'Download',
+        candidate: 'DOWNLOAD',
+      );
+
+      expect(value, 'Download');
     });
 
     test('rejects multiline ibadah tracker output', () {

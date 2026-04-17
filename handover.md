@@ -13108,3 +13108,60 @@
 
 ### Sonraki Adim
 - Yeni turda kalan l10n debt ve translation fallback sinirlari, ardindan dependency outdated riskleri resmi paket constraint'leriyle dar kapsamli incelenecek.
+
+## 2026-04-17 TUR-309 - L10n Case-Only English Fallback Guard
+
+### Yapilan Islem
+- `downloadAction` icin korumali ceviri araci calistirildi; yalnizca gercek degisen Tigrinya (`ti`) UI cevirisi kabul edildi.
+- Malagasy (`mg`) icin arac `DOWNLOAD` uretti; bu gercek ceviri olmadigi icin geri alindi.
+- L10n debt raporu, preserve karari ve translation candidate kabul mantigi case-only English fallback'leri artik borc/sahte cikti sayacak sekilde sertlestirildi.
+- `DOWNLOAD` gibi sadece buyuk-kucuk harf farki tasiyan İngilizce cikti icin regresyon testi eklendi.
+- `flutter gen-l10n` calistirilarak ARB ve generated runtime Dart dosyalari senkron tutuldu.
+
+### Kanit
+- Debt raporu case-insensitive English fallback guard'i: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:153`
+- Mevcut degeri preserve ederken case-only English reddi: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:279`
+- Candidate kabulunde case-only English reddi: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:529`
+- Ortak fallback karsilastirma helper'i: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:552`
+- Debt raporu `DOWNLOAD` test fixture'i: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:129`
+- Case-only English regresyon testi: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:544`
+- Tigrinya ARB `downloadAction` cevirisi: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb:393`
+- Tigrinya generated runtime cevirisi: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ti.dart:1193`
+
+### Neden Yapildi
+- L10n debt sayaci once yalnizca exact string esitligine bakiyordu; `DOWNLOAD` gibi case-only İngilizce farklari borc olmaktan cikmis gorunebilirdi.
+- Bu, kullaniciya tam ceviri yapildigi izlenimi veren sahte bir basari riskiydi.
+- UI cevirileri ilerlerken dini icerik uydurmamak kadar, teknik olarak İngilizceyi sekil degistirip "ceviri" saymamak da kritik.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ti.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- L10n debt raporu artik case-only İngilizceyi de same-as-English fallback olarak yakaliyor.
+- Cevri araci benzer sahte ciktilari yeni ARB degeri olarak kabul etmiyor; once mevcut guvenli lokal degeri, yoksa kaynak fallback'i koruyor.
+- `downloadAction` debt sayisi sadece dogrulanabilir bir locale kadar azaldi: rapor `1558 -> 1557`.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart` PASS (`110/110`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`534/534`)
+- Read-only debt raporu: `dart run tool\translate_arb_keys.dart --report ...` PASS, `Same-as-English locales: 1557`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`
+
+### Risk Degisimi
+- Case-only İngilizce l10n ciktisinin ceviri gibi kabul edilmesi riski: `12/25 -> 2/25`
+- `downloadAction` icin takip edilen low-resource l10n debt sayisi: `1558 -> 1557`
+
+### Rollback Plani
+- `_isEnglishFallbackEquivalent` ve `_englishFallbackComparisonToken` helper'lari kaldirilir.
+- `buildL10nDebtReport`, `_shouldPreserve` ve `resolveTranslatedArbValue` eski case-sensitive karsilastirmalara dondurulur.
+- `app_ti.arb` ve `app_localizations_ti.dart` icindeki `downloadAction` eski `Download` degerine dondurulur.
+- Eklenen test fixture ve case-only English regresyon testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter gen-l10n`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda l10n debt icin tek anahtar/tek guvenli locale ilerleme veya dependency outdated riskleri resmi pub.dev constraint bilgisiyle dar kapsamli taranacak.

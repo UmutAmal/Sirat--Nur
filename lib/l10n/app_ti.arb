@@ -390,7 +390,7 @@
     }
   },
   "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
+  "downloadAction": "ምውራድ",
   "resumeDownload": "Resume Download",
   "deleteDownloadedFiles": "Delete Downloaded Files",
   "downloadCancelling": "Cancelling...",
