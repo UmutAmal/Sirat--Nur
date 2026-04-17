@@ -14066,6 +14066,61 @@
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak audio catalog veri dolulugu, Zekat UI seffafligi veya l10n same-as-English borcu taranacak.
 
+## 2026-04-17 TUR-328 - Remove Legacy Hardcoded Prayer Name Helpers
+
+### Yapilan Islem
+- Repo/remote/branch/status AGENTS dongusu basinda yeniden dogrulandi: `origin` dogru GitHub remote, branch `master`, calisma agaci remote ile senkrondu.
+- `flutter doctor -v` calistirildi; Flutter 3.41.4 ve Android toolchain saglikli. Chrome ve Visual Studio eksikleri web/Windows desktop hedefleri icin non-blocking olarak not edildi.
+- `flutter analyze` temiz bazda PASS verdi.
+- Full test temiz bazda PASS verdi (`549/549`).
+- Namaz vakti/profil hattinda `prayer_profile_service`, `settings_provider`, `prayer_times_service`, `prayer_calendar_service` ve ilgili testler incelendi.
+- `PrayerCalendarService` sonunda kullanilmayan, l10n zincirine bagli olmayan TR/EN legacy namaz adi extension'i kaldirildi.
+- Aynı dosyada bu helper'larin geri gelmesini yakalayan kaynak guard testi eklendi.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart:320` `getPrayerNameTurkish` icinde `Sabah (Fajr)`, `Gunes (Sunrise)`, `Ogle (Dhuhr)` gibi hardcoded TR/EN karisik metinler tutuluyordu.
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart:333` `getPrayerNameEnglish` icinde `Fajr (Dawn)`, `Dhuhr (Noon)` gibi l10n disi user-facing metinler tutuluyordu.
+- Kök risk: `rg getPrayerNameTurkish|getPrayerNameEnglish|formattedTimes lib test` sadece `prayer_calendar_service.dart` icinde referans buldu; extension runtime call-chain'de kullanilmiyordu.
+- Dogru aktif zincir: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart:44` hesap zinciri mezhebi `params.madhab = resolveAdhanMadhab(madhab)` ile aktif olarak uyguluyor.
+- Dogru aktif zincir: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_times_service.dart:40` timezone koordinat ve ayar uzerinden cozuluyor, `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_times_service.dart:47` hesap servisine aktariliyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\prayer_calendar_service_test.dart:145` legacy hardcoded helper adlarinin ve eski TR/EN metinlerinin kaynakta kalmadigini dogruluyor.
+
+### Neden Yapildi
+- AGENTS.md hardcoded user-facing metin ve dead-code kalintilarini kapatmayi zorunlu tutuyor.
+- Namaz vakti hattinda kullanilmayan TR/EN helper'lar runtime davranisina katkı vermiyor, ama gelecek refactorlarda l10n zincirini by-pass eden eski API gibi tekrar kullanilma riski tasiyordu.
+- Kök hesap zincirine dokunmadan, yalniz kullanilmayan hardcoded yuzeyi kaldirmak en dusuk yan etkiyle riski azaltti.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_calendar_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_calendar_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kullanilmayan legacy prayer-name extension'i kaldirildi.
+- Namaz vakti hesaplari, timezone duzeltmesi, mezhep uygulamasi, cache ve widget sync davranisi degismedi.
+- `PrayerCalendarService` icinde l10n disi TR/EN namaz adi yuzeyi azaldi.
+- Regresyon guard'i, bu helper'larin ayni isim/metinlerle geri gelmesini yakalar.
+
+### Test Sonucu
+- Format: `dart format lib\core\services\prayer_calendar_service.dart test\prayer_calendar_service_test.dart` PASS
+- Odak test: `flutter test test\prayer_calendar_service_test.dart` PASS (`5/5`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`550/550`)
+
+### Risk Degisimi
+- Kullanilmayan hardcoded prayer-name helper'larinin tekrar runtime'a baglanma riski: `8/25 -> 1/25`
+- L10n disi legacy namaz adi yuzeyi riski: `6/25 -> 1/25`
+- Kalan risk: Ulke/bölge resmi kurum profilleri runtime'da offline hesap yaklasimlariyla temsil ediliyor; tam resmi kurum API senkronizasyonu/kurum saat tabloları daha buyuk veri entegrasyon turu gerektirir.
+
+### Rollback Plani
+- `PrayerTimesEntityExtension` eski haliyle geri eklenir.
+- `prayer_calendar_service_test.dart` icindeki legacy helper guard testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert gerekirse yeni tur kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi dongu basa alinacak; siradaki taramada resmi kurum profili veri kapsami, l10n same-as-English borcu, Supabase content/audio seed zinciri ve kalan tracked artifact/dead-file riskleri yeniden skorlanacak.
+
 ## 2026-04-17 TUR-326 - Zakat Result Shows Nisab Basis
 
 ### Yapilan Islem

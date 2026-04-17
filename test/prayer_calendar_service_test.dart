@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:adhan/adhan.dart';
 import 'package:sirat_i_nur/core/services/prayer_calendar_service.dart';
@@ -139,6 +141,17 @@ void main() {
       expect(inferred.fajr, explicit.fajr);
       expect(inferred.dhuhr, explicit.dhuhr);
       expect(inferred.isha, explicit.isha);
+    });
+
+    test('does not keep legacy hardcoded prayer-name helpers', () {
+      final source = File(
+        'lib/core/services/prayer_calendar_service.dart',
+      ).readAsStringSync();
+
+      expect(source, isNot(contains('getPrayerNameTurkish')));
+      expect(source, isNot(contains('getPrayerNameEnglish')));
+      expect(source, isNot(contains('Sabah (Fajr)')));
+      expect(source, isNot(contains('Fajr (Dawn)')));
     });
   });
 }
