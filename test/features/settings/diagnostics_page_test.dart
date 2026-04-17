@@ -160,6 +160,14 @@ void main() {
     },
   );
 
+  test('resolvePrayerProfileValue reflects selected madhab overrides', () {
+    final profile = profileForMethod(diyanetPrayerMethod, madhab: shafiiMadhab);
+
+    expect(resolvePrayerProfileValue(profile), "Diyanet / Shafi'i");
+    expect(profile.sourceUrl, 'https://namazvakitleri.diyanet.gov.tr');
+    expect(isOfficialPrayerProfile(profile), isTrue);
+  });
+
   test('resolvePrayerProfileValue flags custom profiles honestly', () {
     final profile = profileForMethod(customPrayerMethod, madhab: jafariMadhab);
 

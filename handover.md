@@ -11362,3 +11362,50 @@
 ### Sonraki Adim
 - Prayer profile resolver icin resmi kurum kaynakli country/timezone coverage bosluklari daha fazla kanitla taranacak.
 - L10n same-as-English borcu icin report-first batch hazirligi devam edecek.
+
+## 2026-04-17 TUR-277 — Align Prayer Profile Madhab Display
+
+### Yapilan Islem
+- `profileForMethod` artik secili `madhab` parametresini Diyanet, Egyptian, Karachi, Gulf, MUIS, JAKIM, KEMENAG, ISNA, Morocco ve Tehran profillerinde de koruyor.
+- `PrayerCalculationProfile.withMadhab` helper'i eklendi; kaynak/metot bilgisi degismeden yalniz UI/diagnostics tarafinda gorunen mezhep secili state ile hizalaniyor.
+- Diagnostics testi, Diyanet metodu + Shafii mezhep seciminde profil satirinin `Diyanet / Shafi'i` gosterdigini dogruluyor.
+
+### Kanit
+- Madhab preserving helper: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:16`
+- Diyanet profile override kullanimi: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:373`
+- Profile resolver entrypoint: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart:368`
+- Diagnostics regression testi: `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart:163`
+
+### Neden Yapildi
+- Hesaplama motoru `PrayerCalendarService.calculatePrayerTimes` icinde gercek `settings.madhab` degerini kullaniyor, fakat `profileForMethod` bazi resmi metotlarda secili mezhebi yok sayip profil varsayilanini donduruyordu.
+- Bu durum kullanici Shafii/Maliki/Hanbali gibi farkli bir mezhep sectiginde diagnostics/settings yuzeyinde hesaplamayla ayni olmayan mezhep bilgisinin gorunmesine yol acabiliyordu.
+- Cozum resmi kaynak/metot iddiasini genisletmedi; sadece ekranda gorunen profil mezhebini kullanicinin secili ayariyla hizaladi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_profile_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\diagnostics_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Format: `dart format lib\core\services\prayer_profile_service.dart test\features\settings\diagnostics_page_test.dart` PASS
+- Odak test: `flutter test test\features\settings\diagnostics_page_test.dart test\prayer_profile_service_test.dart` PASS (`32/32`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- Ilk `flutter analyze`: FAIL, `_mwlHanbaliProfile` unused uyarisi yakalandi.
+- Analyze fix: MWL switch tekrar canonical Hanafi/Maliki/Hanbali profil sabitlerini kullanacak hale getirildi.
+- Son `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`490/490`)
+
+### Risk Degisimi
+- Diagnostics/settings profil satirinda secili mezhebin yanlis gosterilmesi riski: `12/25 -> 2/25`
+- Resmi metot + manuel mezhep kombinasyonunda kullanici guven sinyali tutarsizligi riski: `12/25 -> 4/25`
+
+### Rollback Plani
+- `PrayerCalculationProfile.withMadhab` helper'i kaldirilir.
+- `profileForMethod` onceki sabit profil donduren davranisina geri alinir.
+- Diagnostics regression testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Prayer location pipeline icin `countryCode` kaliciligi ve settings restart sonrasi profil izlenebilirligi taranacak.
+- Global city listesi ile resolver coverage karsilastirilip yalniz guvenilir kaynaga dayali yeni mapping/test adaylari ayrilacak.

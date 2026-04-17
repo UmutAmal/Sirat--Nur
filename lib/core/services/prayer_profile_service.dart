@@ -12,6 +12,24 @@ class PrayerCalculationProfile {
     required this.sourceName,
     required this.sourceUrl,
   });
+
+  PrayerCalculationProfile withMadhab(String? madhab) {
+    if (madhab == null) {
+      return this;
+    }
+
+    final normalizedMadhab = normalizeMadhab(madhab);
+    if (normalizedMadhab == this.madhab) {
+      return this;
+    }
+
+    return PrayerCalculationProfile(
+      calculationMethod: calculationMethod,
+      madhab: normalizedMadhab,
+      sourceName: sourceName,
+      sourceUrl: sourceUrl,
+    );
+  }
 }
 
 const String customPrayerMethod = 'Custom';
@@ -352,73 +370,38 @@ PrayerCalculationProfile profileForMethod(String method, {String? madhab}) {
   final normalizedMadhab = madhab == null ? null : normalizeMadhab(madhab);
   switch (normalizedMethod) {
     case diyanetPrayerMethod:
-      return _diyanetProfile;
+      return _diyanetProfile.withMadhab(normalizedMadhab);
     case egyptianPrayerMethod:
-      return _egyptianProfile;
+      return _egyptianProfile.withMadhab(normalizedMadhab);
     case karachiPrayerMethod:
-      return _karachiProfile;
+      return _karachiProfile.withMadhab(normalizedMadhab);
     case ummAlQuraPrayerMethod:
-      return normalizedMadhab == shafiiMadhab
-          ? const PrayerCalculationProfile(
-              calculationMethod: ummAlQuraPrayerMethod,
-              madhab: shafiiMadhab,
-              sourceName: 'Umm al-Qura / Saudi official profile',
-              sourceUrl: 'https://quran.gov.sa',
-            )
-          : _ummAlQuraProfile;
+      return _ummAlQuraProfile.withMadhab(normalizedMadhab);
     case dubaiPrayerMethod:
-      return normalizedMadhab == shafiiMadhab
-          ? const PrayerCalculationProfile(
-              calculationMethod: dubaiPrayerMethod,
-              madhab: shafiiMadhab,
-              sourceName: 'UAE Awqaf',
-              sourceUrl: 'https://www.awqaf.gov.ae',
-            )
-          : _dubaiProfile;
+      return _dubaiProfile.withMadhab(normalizedMadhab);
     case kuwaitPrayerMethod:
-      return normalizedMadhab == shafiiMadhab
-          ? const PrayerCalculationProfile(
-              calculationMethod: kuwaitPrayerMethod,
-              madhab: shafiiMadhab,
-              sourceName: 'Kuwait Ministry of Awqaf',
-              sourceUrl: 'https://www.islam.gov.kw',
-            )
-          : _kuwaitProfile;
+      return _kuwaitProfile.withMadhab(normalizedMadhab);
     case qatarPrayerMethod:
-      return normalizedMadhab == shafiiMadhab
-          ? const PrayerCalculationProfile(
-              calculationMethod: qatarPrayerMethod,
-              madhab: shafiiMadhab,
-              sourceName: 'Qatar Ministry of Awqaf',
-              sourceUrl: 'https://www.awqaf.gov.qa',
-            )
-          : _qatarProfile;
+      return _qatarProfile.withMadhab(normalizedMadhab);
     case muisPrayerMethod:
-      return _muisProfile;
+      return _muisProfile.withMadhab(normalizedMadhab);
     case jakimPrayerMethod:
-      return _jakimProfile;
+      return _jakimProfile.withMadhab(normalizedMadhab);
     case kemenagPrayerMethod:
-      return _kemenagProfile;
+      return _kemenagProfile.withMadhab(normalizedMadhab);
     case isnaPrayerMethod:
-      return normalizedMadhab == hanafiMadhab
-          ? const PrayerCalculationProfile(
-              calculationMethod: isnaPrayerMethod,
-              madhab: hanafiMadhab,
-              sourceName: 'Islamic Society of North America',
-              sourceUrl: 'https://www.isna.net',
-            )
-          : _isnaProfile;
+      return _isnaProfile.withMadhab(normalizedMadhab);
     case mwlPrayerMethod:
       return switch (normalizedMadhab) {
         hanafiMadhab => _mwlHanafiProfile,
         malikiMadhab => _mwlMalikiProfile,
         hanbaliMadhab => _mwlHanbaliProfile,
-        _ => _mwlShafiiProfile,
+        _ => _mwlShafiiProfile.withMadhab(normalizedMadhab),
       };
     case moroccoPrayerMethod:
-      return _moroccoProfile;
+      return _moroccoProfile.withMadhab(normalizedMadhab);
     case tehranPrayerMethod:
-      return _tehranProfile;
+      return _tehranProfile.withMadhab(normalizedMadhab);
     case customPrayerMethod:
       return PrayerCalculationProfile(
         calculationMethod: customPrayerMethod,
