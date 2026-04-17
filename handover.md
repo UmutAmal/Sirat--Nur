@@ -14066,6 +14066,77 @@
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak audio catalog veri dolulugu, Zekat UI seffafligi veya l10n same-as-English borcu taranacak.
 
+## 2026-04-17 TUR-331 - Harden Supabase Storage Object Paths
+
+### Yapilan Islem
+- TUR-330 commit/push sonrasi repo tekrar dogrulandi: remote `origin`, branch `master`, status yalniz bu tur dosyalariyla kirliydi.
+- Supabase Storage public URL uretimi ve Quran audio upload tool zinciri incelendi.
+- Storage object path artik bos path, `://`, query/fragment karakterleri ve `.` / `..` traversal segmentleri icin fail-fast yapiyor.
+- Runtime cloud audio mapper'lari malformed `storage_path` satirlarinda crash yerine ilgili satiri guvenli sekilde yok sayiyor.
+- Quran audio upload plani, object path guvenligini file/network kontrollerinden once dogruluyor.
+
+### Kanit
+- Kok risk: `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:21` `buildSupabaseStoragePublicUrl` once object path'i guvenli segment validasyonu yapmadan URL'e cevirmeye musaitti.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:27` public URL uretimi artik `_safeStorageObjectPathSegments` sonucunu kullaniyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:35` `isSupabaseStoragePublicUrl` traversal segmentlerini reddediyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:108` `_safeStorageObjectPathSegments` bos, remote/decorated ve traversal object path'leri reddediyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:47` malformed storage path `FormatException` ile feature crash'e donusmeden `null` olarak ele aliniyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart:92` Dua cloud audio path'i malformed ise bos audio URL'e dusuyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart:965` Asma cloud audio path'i malformed ise bos audio URL'e dusuyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:27` upload object path segment guard'i eklendi.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:85` upload URI uretimi safe object segmentlerini kullaniyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:147` upload plan guvenlik validasyonu file/network islerinden once calisiyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart:51` unsafe storage object path'lerin reddedildigini dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart:212` malformed storage path'in cloud audio mapping'i crash etmeden skip ettigini dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart:68` upload URL builder'in unsafe object path'leri reddettigini dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart:189` upload plan'in unsafe object path'i network'e cikmadan reddettigini dogruluyor.
+
+### Neden Yapildi
+- Audio sovereignty akisi Supabase Storage uzerinden calistigi icin storage object path'leri dis kaynaktan gelen veriyle guvenli sekilde sinirlanmali.
+- Malformed DB satiri uygulama yuzeyinde crash veya false-success uretmemeli; hatali satir yok sayilmali ve diger gecerli audio kaynaklari calismaya devam etmeli.
+- Upload tool tarafinda hatali object path, dosya veya network operasyonu baslamadan once deterministik olarak reddedilmeli.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\duas_data.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\core\constants\asma_ul_husna_data.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart`
+- `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Supabase Storage URL ve upload path zinciri traversal/decorated object path riskine karsi kapatildi.
+- Offline Quran audio, Dua ve Asma cloud mapping hatali storage path satirlarinda crash etmeden guvenli fallback yapiyor.
+- Upload tool, unsafe object path'i network operasyonundan once yakaladigi icin partial veya yanlis bucket yazimi riski azaldi.
+
+### Test Sonucu
+- Format: `dart format lib\core\network\supabase_storage_url.dart lib\core\services\offline_audio_service.dart lib\core\constants\duas_data.dart lib\core\constants\asma_ul_husna_data.dart tool\upload_quran_audio_storage.dart test\supabase_storage_url_test.dart test\offline_audio_service_test.dart test\upload_quran_audio_storage_test.dart` PASS
+- Odak test: `flutter test test\supabase_storage_url_test.dart test\offline_audio_service_test.dart test\upload_quran_audio_storage_test.dart --reporter compact` PASS (`32/32`)
+- Etkilenen data testleri: `flutter test test\duas_data_test.dart test\sukun_audio_sources_provider_test.dart --reporter compact` PASS (`25/25`)
+- Asma data testi: `flutter test test\asma_ul_husna_data_test.dart --reporter compact` PASS (`10/10`)
+- Diff check: `git diff --check` PASS (yalniz CRLF warning)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`557/557`)
+
+### Risk Degisimi
+- Unsafe Supabase Storage object path uretimi riski: `12/25 -> 2/25`
+- Malformed cloud `storage_path` satirinin feature crash'e donusme riski: `10/25 -> 2/25`
+- Upload tool'un unsafe object path ile network operasyonuna baslama riski: `10/25 -> 2/25`
+- Kalan risk: Gercek Supabase bucket icerigi ve DB storage path katalog kalitesi operator seed/upload pipeline dogrulamasina bagli.
+
+### Rollback Plani
+- `_safeStorageObjectPathSegments` ve `_safeUploadObjectSegments` guard'lari kaldirilir.
+- Runtime `FormatException` fallback bloklari kaldirilir ve onceki mapping davranisina donulur.
+- Eklenen storage/upload/offline audio testleri kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak l10n same-as-English borcu, dini icerik dogrulama guard'lari ve audio catalog kapsami taranacak.
+
 ## 2026-04-17 TUR-328 - Remove Legacy Hardcoded Prayer Name Helpers
 
 ### Yapilan Islem

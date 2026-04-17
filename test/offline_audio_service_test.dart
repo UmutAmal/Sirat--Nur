@@ -208,6 +208,22 @@ void main() {
       expect(url, isNull);
     });
 
+    test(
+      'skips unsafe storage paths instead of crashing cloud audio mapping',
+      () {
+        final url = resolvePlayableCloudAudioUrl(const {
+          'type': 'quran_surah',
+          'reciter': 'alafasy',
+          'surah_number': 1,
+          'storage_path': '../alafasy/001.mp3',
+          'source': 'QuranFoundation',
+          'verified_at': '2026-04-15T00:00:00Z',
+        });
+
+        expect(url, isNull);
+      },
+    );
+
     test('live quran audio queries include storage_path for owned audio', () {
       final source = File(
         'lib/core/services/offline_audio_service.dart',

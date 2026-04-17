@@ -24,15 +24,10 @@ String buildSupabaseStoragePublicUrl(
   String bucketName = SupabaseConfig.quranAudioBucket,
 }) {
   final baseUri = _requireHttpsSupabaseBaseUri(supabaseUrl);
-  final normalizedPath = normalizeSupabaseStorageObjectPath(
+  final encodedSegments = _safeStorageObjectPathSegments(
     storagePath,
     bucketName: bucketName,
-  );
-  final encodedSegments = normalizedPath
-      .split('/')
-      .where((segment) => segment.isNotEmpty)
-      .map(Uri.encodeComponent)
-      .join('/');
+  ).map(Uri.encodeComponent).join('/');
 
   return '${baseUri.origin}/storage/v1/object/public/$bucketName/$encodedSegments';
 }
@@ -80,8 +75,13 @@ bool isSupabaseStoragePublicUrl(
   }
 
   final bucket = segments[4];
-  final hasObjectPath = segments.skip(5).any((segment) => segment.isNotEmpty);
-  return bucketNames.contains(bucket) && hasObjectPath;
+  final objectSegments = segments
+      .skip(5)
+      .where((segment) => segment.isNotEmpty)
+      .toList();
+  return bucketNames.contains(bucket) &&
+      objectSegments.isNotEmpty &&
+      !_hasUnsafeObjectPathSegments(objectSegments);
 }
 
 Uri _requireHttpsSupabaseBaseUri(String supabaseUrl) {
@@ -103,4 +103,38 @@ bool _isHttpsSupabaseOrigin(Uri uri) {
       !uri.hasQuery &&
       !uri.hasFragment &&
       !hasPath;
+}
+
+List<String> _safeStorageObjectPathSegments(
+  String storagePath, {
+  required String bucketName,
+}) {
+  final normalizedPath = normalizeSupabaseStorageObjectPath(
+    storagePath,
+    bucketName: bucketName,
+  );
+  if (normalizedPath.isEmpty ||
+      normalizedPath.contains('://') ||
+      normalizedPath.contains('?') ||
+      normalizedPath.contains('#')) {
+    throw const FormatException(
+      'Supabase Storage object paths must be clean relative paths.',
+    );
+  }
+
+  final objectSegments = normalizedPath
+      .split('/')
+      .where((segment) => segment.isNotEmpty)
+      .toList();
+  if (objectSegments.isEmpty || _hasUnsafeObjectPathSegments(objectSegments)) {
+    throw const FormatException(
+      'Supabase Storage object paths must not contain traversal segments.',
+    );
+  }
+
+  return objectSegments;
+}
+
+bool _hasUnsafeObjectPathSegments(Iterable<String> segments) {
+  return segments.any((segment) => segment == '.' || segment == '..');
 }

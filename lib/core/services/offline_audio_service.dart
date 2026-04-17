@@ -39,10 +39,14 @@ String? resolvePlayableCloudAudioUrl(
 }) {
   final storagePath = row['storage_path']?.toString().trim();
   if (storagePath != null && storagePath.isNotEmpty) {
-    return storage_url.buildSupabaseStoragePublicUrl(
-      storagePath,
-      bucketName: bucketName,
-    );
+    try {
+      return storage_url.buildSupabaseStoragePublicUrl(
+        storagePath,
+        bucketName: bucketName,
+      );
+    } on FormatException {
+      return null;
+    }
   }
 
   return null;

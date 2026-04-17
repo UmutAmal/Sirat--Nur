@@ -65,6 +65,27 @@ void main() {
       );
     });
 
+    test('rejects unsafe object paths before building upload URLs', () {
+      for (final objectPath in const [
+        '',
+        '../secret.mp3',
+        'alafasy/../001.mp3',
+        'https://cdn.example.com/alafasy/001.mp3',
+        'alafasy/001.mp3?token=secret',
+        'alafasy/001.mp3#secret',
+      ]) {
+        expect(
+          () => buildSupabaseStorageObjectUploadUri(
+            supabaseUrl: Uri.parse('https://example.supabase.co'),
+            bucketName: 'quran-audio',
+            objectPath: objectPath,
+          ),
+          throwsArgumentError,
+          reason: objectPath,
+        );
+      }
+    });
+
     test('builds upload headers with service role key only in headers', () {
       final headers = buildSupabaseStorageUploadHeaders(
         serviceRoleKey: 'service-secret',
@@ -163,6 +184,30 @@ void main() {
         failures,
         contains('alafasy/001.mp3: duplicate storage object path'),
       );
+    });
+
+    test('upload plan rejects unsafe derived object paths before network', () {
+      final tempDir = Directory.systemTemp.createTempSync('sirat_upload_path_');
+      addTearDown(() {
+        if (tempDir.existsSync()) {
+          tempDir.deleteSync(recursive: true);
+        }
+      });
+      final existingFile = File(
+        '${tempDir.path}${Platform.pathSeparator}001.mp3',
+      )..writeAsBytesSync(<int>[0x49, 0x44, 0x33, 0x04]);
+
+      final failures = validateMirroredQuranAudioUploadPlan([
+        MirroredAudioFile(
+          surahNumber: 1,
+          reciterId: '..',
+          sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
+          verifiedAt: DateTime.utc(2026, 4, 8),
+          localPath: existingFile.path,
+        ),
+      ]);
+
+      expect(failures, const ['../001.mp3: unsafe storage object path']);
     });
 
     test('upload aborts before network when local files are invalid', () async {

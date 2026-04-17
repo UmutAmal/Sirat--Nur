@@ -84,10 +84,14 @@ String _resolveCloudDuaAudioUrl(Map<String, dynamic> row) {
     'storagePath',
   ]);
   if (storagePath.isNotEmpty) {
-    return buildSupabaseStoragePublicUrl(
-      storagePath,
-      bucketName: SupabaseConfig.duaAudioBucket,
-    );
+    try {
+      return buildSupabaseStoragePublicUrl(
+        storagePath,
+        bucketName: SupabaseConfig.duaAudioBucket,
+      );
+    } on FormatException {
+      return '';
+    }
   }
 
   return '';

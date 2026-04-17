@@ -957,10 +957,14 @@ Map<String, dynamic> _readAsmaTranslations(Map<String, dynamic> row) {
 String _resolveCloudAsmaAudioUrl(Map<String, dynamic> row) {
   final storagePath = _readAsmaString(row, ['storage_path', 'storagePath']);
   if (storagePath.isNotEmpty) {
-    return buildSupabaseStoragePublicUrl(
-      storagePath,
-      bucketName: SupabaseConfig.asmaAudioBucket,
-    );
+    try {
+      return buildSupabaseStoragePublicUrl(
+        storagePath,
+        bucketName: SupabaseConfig.asmaAudioBucket,
+      );
+    } on FormatException {
+      return '';
+    }
   }
 
   return '';

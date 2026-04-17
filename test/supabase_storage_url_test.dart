@@ -48,6 +48,27 @@ void main() {
       }
     });
 
+    test('rejects unsafe storage object paths', () {
+      for (final storagePath in const [
+        '',
+        '../secret.mp3',
+        'audio-dua/../secret.mp3',
+        'https://cdn.example.com/audio.mp3',
+        'audio-dua/morning/001.mp3?token=secret',
+        'audio-dua/morning/001.mp3#secret',
+      ]) {
+        expect(
+          () => buildSupabaseStoragePublicUrl(
+            storagePath,
+            supabaseUrl: 'https://example.supabase.co',
+            bucketName: SupabaseConfig.duaAudioBucket,
+          ),
+          throwsFormatException,
+          reason: storagePath,
+        );
+      }
+    });
+
     test('recognizes only configured public audio storage URLs', () {
       expect(
         isSupabaseStoragePublicUrl(
@@ -82,6 +103,7 @@ void main() {
         '${SupabaseConfig.url.replaceFirst('https://', 'https://token@')}/storage/v1/object/public/audio-sukun/rain.mp3',
         '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3?token=secret',
         '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3#secret',
+        '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/../rain.mp3',
       ]) {
         expect(isSupabaseStoragePublicUrl(rawUrl), isFalse, reason: rawUrl);
       }

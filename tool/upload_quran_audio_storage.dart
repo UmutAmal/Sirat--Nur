@@ -24,6 +24,36 @@ String storageObjectPathForMirroredAudioFile(MirroredAudioFile file) {
   return '${file.reciterId}/${file.fileName}';
 }
 
+List<String> _safeUploadObjectSegments(String objectPath) {
+  final normalizedObjectPath = objectPath.trim().replaceAll('\\', '/');
+  if (normalizedObjectPath.isEmpty ||
+      normalizedObjectPath.contains('://') ||
+      normalizedObjectPath.contains('?') ||
+      normalizedObjectPath.contains('#')) {
+    throw ArgumentError.value(
+      objectPath,
+      'objectPath',
+      'must be a clean relative object path',
+    );
+  }
+
+  final objectSegments = normalizedObjectPath
+      .split('/')
+      .map((segment) => segment.trim())
+      .where((segment) => segment.isNotEmpty)
+      .toList();
+  if (objectSegments.isEmpty ||
+      objectSegments.any((segment) => segment == '.' || segment == '..')) {
+    throw ArgumentError.value(
+      objectPath,
+      'objectPath',
+      'must not contain traversal segments',
+    );
+  }
+
+  return objectSegments;
+}
+
 Uri normalizeSupabaseProjectUrl(Uri supabaseUrl) {
   final hasPath = supabaseUrl.pathSegments.any((segment) => segment.isNotEmpty);
   final host = supabaseUrl.host.toLowerCase();
@@ -52,15 +82,7 @@ Uri buildSupabaseStorageObjectUploadUri({
 }) {
   final normalizedSupabaseUrl = normalizeSupabaseProjectUrl(supabaseUrl);
   final normalizedBucketName = normalizeQuranAudioBucketName(bucketName);
-  final normalizedObjectPath = objectPath.trim().replaceAll('\\', '/');
-  final objectSegments = normalizedObjectPath
-      .split('/')
-      .map((segment) => segment.trim())
-      .where((segment) => segment.isNotEmpty)
-      .toList();
-  if (objectSegments.isEmpty) {
-    throw ArgumentError.value(objectPath, 'objectPath', 'must not be empty');
-  }
+  final objectSegments = _safeUploadObjectSegments(objectPath);
 
   return normalizedSupabaseUrl.replace(
     pathSegments: <String>[
@@ -121,6 +143,12 @@ List<String> validateMirroredQuranAudioUploadPlan(
 
   for (final row in files) {
     final objectPath = storageObjectPathForMirroredAudioFile(row);
+    try {
+      _safeUploadObjectSegments(objectPath);
+    } on ArgumentError {
+      failed.add('$objectPath: unsafe storage object path');
+      continue;
+    }
     if (!seenObjectPaths.add(objectPath)) {
       failed.add('$objectPath: duplicate storage object path');
       continue;
