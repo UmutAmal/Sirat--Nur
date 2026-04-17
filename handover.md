@@ -15049,3 +15049,38 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak kalan Quran audio operator dokumantasyonu, runtime storage provenance ve kalan i18n/content guard'lari taranacak.
+
+## 2026-04-17 TUR-345 - Quran Audio Manifest Contract Documented
+
+### MASTER Karari
+- Risk: `README.md:64` Quran Audio Sovereignty Workflow mirror/upload/seed sirasini anlatiyordu ancak TUR-344 ile zorunlu hale gelen `size_bytes` ve `sha256` manifest sozlesmesini belirtmiyordu.
+- Kanit: `README.md:74` upload dry-run komutunu gosteriyor, fakat eski `build/verified_quran_audio/manifest.json` dosyalarinin yeni parser tarafindan reddedilecegini ve checksum/size mismatch'in network oncesi durdurulacagini aciklamiyordu.
+- Etki: Sonraki operator veya agent eski manifestle upload/seed adimina girerse gereksiz hata alir ya da yeni guvenlik sozlesmesini atlamaya calisabilirdi.
+- Olasilik: README bu repoda operasyon sirasi icin birincil insan/agent referansi olarak kullaniliyor ve `test/readme_operational_docs_test.dart` zaten bu akisi guard ediyor.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1).
+- Rollback kapsami: `README.md`, `test/readme_operational_docs_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `README.md:66` mirror manifestin download/upload/seed arasindaki integrity contract oldugunu aciklayacak sekilde guncellendi.
+- README `size_bytes`, 64 karakter `sha256`, dry-run'in size/checksum mismatch reddi ve eski manifestlerin regenerate edilmesi gerektigini belgeledi.
+
+### TESTER Kapsami
+- `test/readme_operational_docs_test.dart:41` README'nin `size_bytes`, `sha256`, checksum/size mismatch ve eski manifest reddi metinlerini tasidigini dogrulayacak guard'larla genisletildi.
+
+### Test Sonucu
+- Format: `dart format test\readme_operational_docs_test.dart` PASS
+- Odak test: `flutter test test\readme_operational_docs_test.dart --reporter compact` PASS (`5/5`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`570/570`)
+
+### Risk Degisimi
+- Quran audio operator dokumantasyonunun yeni manifest sozlesmesini eksik anlatma riski: `12/25 -> 2/25`
+- Kalan risk: Runtime audio URL secimi ve database kaynaklarinda storage-backed seslerin harici URL fallback'e dusmemesi tekrar taranmali.
+
+### Rollback Plani
+- README ve operational docs testindeki bu tur ekleri revert edilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak runtime audio URL secimi, Supabase storage provenance ve external fallback kalintilari taranacak.

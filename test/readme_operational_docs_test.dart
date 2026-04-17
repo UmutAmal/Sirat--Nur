@@ -38,6 +38,18 @@ void main() {
           '`content_seed_quran_audio.sql` and external audio URLs in seed data are mirror inputs only',
         ),
       );
+      expect(readme, contains('Every file row must include `size_bytes`'));
+      expect(readme, contains('64-character `sha256` checksum'));
+      expect(
+        readme,
+        contains(
+          'rejects missing files, MP3 shape failures, size mismatches, and checksum mismatches',
+        ),
+      );
+      expect(
+        readme,
+        contains('rejects old manifests that do not include this evidence'),
+      );
       expect(
         readme,
         isNot(contains('runtime prefers Supabase Storage-backed')),

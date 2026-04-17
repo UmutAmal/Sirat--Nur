@@ -63,6 +63,8 @@ flutter build apk \
 ## Quran Audio Sovereignty Workflow
 The runtime requires Supabase Storage-backed `storage_path` rows for playable audio. `content_seed_quran_audio.sql` and external audio URLs in seed data are mirror inputs only; they are not runtime playback seeds or fallbacks. Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded to the `quran-audio` bucket.
 
+The mirror manifest is the integrity contract between download, upload, and seed generation. Every file row must include `size_bytes` and a 64-character `sha256` checksum produced by `tool/download_verified_quran_audio.dart`. `tool/upload_quran_audio_storage.dart --dry-run` rejects missing files, MP3 shape failures, size mismatches, and checksum mismatches before any network write. `tool/generate_quran_audio_storage_seed.dart` rejects old manifests that do not include this evidence, so regenerate `build/verified_quran_audio/manifest.json` after pulling changes that update the manifest schema.
+
 1. Mirror the verified source audio locally:
 ```bash
 dart run tool/download_verified_quran_audio.dart --overwrite
