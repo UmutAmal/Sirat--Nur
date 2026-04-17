@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "ክላውድ ኤፒኣይ ኣይተዋቕረን። ካብ መስመር ወጻኢ ዝተረጋገጸ እስላማዊ መምርሒ ገና ኣይተረኽበን።",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] ዝተረጋገጸ ናይ ከባቢ እስላማዊ መምርሒ ገና ኣይተረኽበን። ምንጪ መልሲ ንምርካብ ናብ Cloud AI ቀይሩ።",
   "mosques": "መሳጊድ",
   "halalFood": "ሓላል መግቢ",
   "placesSearchArea": "ኣብዚ ከባቢ ድለዩ።",

@@ -11859,3 +11859,66 @@
 
 ### Sonraki Adim
 - `chatbotCloudNotConfigured`, `chatbotLocalNoInfo`, `chatbotOfflinePrompt`, `chatbotOfflineSwitched` icin kalan English fallback borcu sahte ceviri uretmeden olculecek; dogrulanabilir locale'ler `tool\translate_arb_keys.dart` guvenlik katmanlariyla cevrilecek, belirsiz nadir locale'ler icin rapor/guard stratejisi uygulanacak.
+
+## 2026-04-17 TUR-286 — Reduce Chatbot Local Fallback English Debt Without Fake Translation
+
+### Yapilan Islem
+- `tool\translate_arb_keys.dart --report` ile chatbot offline/verified copy kumesindeki English fallback borcu olculdu.
+- `tool\translate_arb_keys.dart chatbotCloudNotConfigured chatbotLocalNoInfo chatbotOfflinePrompt chatbotOfflineSwitched` force kullanmadan calistirildi; arac yalnizca guvenli aday urettigi locale'leri yazdi.
+- `chatbotLocalNoInfo` icin 5 locale (`ay`, `lus`, `mai`, `sa`, `ti`) English fallback'ten cikti.
+- Cevrilemeyen dusuk-kaynak locale'lerde uydurma metin uretilmedi; arac bunlari kaynak degerde birakti ve rapor borc olarak gosterdi.
+- Bu 5 locale'in tekrar English fallback'e donmemesi icin hedefli regression testi eklendi.
+
+### Kanit
+- Aymara ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb:461`
+- Mizo/Lushai ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lus.arb:461`
+- Maithili ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mai.arb:461`
+- Sanskrit ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb:461`
+- Tigrinya ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb:461`
+- Generated Aymara getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ay.dart:1342`
+- Regression testi: `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:2036`
+- Locale listesi: `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:2038`
+- English fallback kontrolu: `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:2045`
+
+### Neden Yapildi
+- Chatbot offline fallback metni kullaniciya "dogrulanmis offline icerik hazir degil" bilgisini durust sekilde verir; locale'de tamamen Ingilizce kalmasi UX ve tam lokalizasyon hedefini zayiflatir.
+- Force kullanilmadi; mevcut guvenli lokalize degerler korunurken sadece ayni-Ingilizce kalan degerler cevrilmeye calisildi.
+- Cevrilemeyen 252 borc girdisi sahte ceviriyle kapatilmadi; kalan liste sonraki turda alias/kaynak stratejisiyle tekrar analiz edilecek.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lus.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mai.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ay.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_lus.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_mai.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_sa.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ti.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Baslangic raporu: `Same-as-English locales: 257`
+- Generate: `flutter gen-l10n` PASS
+- Format: `dart format test\arb_ui_localization_test.dart` PASS
+- Odak test: `flutter test test\arb_ui_localization_test.dart --plain-name "rescued chatbot local fallback locales do not fall back to English"` PASS (`1/1`)
+- Son rapor: `Same-as-English locales: 252`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`499/499`)
+
+### Risk Degisimi
+- `chatbotLocalNoInfo` icin dogrulanabilir 5 locale'de English fallback riski: `6/25 -> 1/25`
+- Geriye kalan dusuk-kaynak locale'lerde sahte ceviri uretilmesi riski: `6/25 -> 2/25` (force kullanilmadigi icin dusuk tutuldu)
+
+### Rollback Plani
+- 5 ARB dosyasindaki `chatbotLocalNoInfo` degerleri onceki English source degerine dondurulur.
+- `flutter gen-l10n` tekrar calistirilir.
+- `arb_ui_localization_test.dart` icindeki rescued locale regression testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Kalan 252 same-as-English chatbot offline borcu icin dusuk-kaynak locale listesi parcalanacak; translator alias'i guvenilir olanlar ayri turda eklenecek, gercek kaynak bulunamayanlar ise sahte ceviri yerine rapor/guard olarak tutulacak.

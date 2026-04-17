@@ -2033,6 +2033,23 @@ void main() {
     );
 
     test(
+      'rescued chatbot local fallback locales do not fall back to English',
+      () {
+        const rescuedLocales = ['ay', 'lus', 'mai', 'sa', 'ti'];
+
+        for (final locale in rescuedLocales) {
+          final arb = _readArb('lib/l10n/app_$locale.arb');
+
+          expect(
+            arb['chatbotLocalNoInfo'],
+            isNot(english['chatbotLocalNoInfo']),
+            reason: 'app_$locale.arb still uses English for chatbotLocalNoInfo',
+          );
+        }
+      },
+    );
+
+    test(
       'safe priority locales do not fall back to English for chatbot runtime copy',
       () {
         const safeLocales = [
