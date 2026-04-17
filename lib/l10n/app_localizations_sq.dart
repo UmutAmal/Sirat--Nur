@@ -1212,7 +1212,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get downloadAction => 'Shkarkoni';
 
   @override
-  String get resumeDownload => 'Rifillimi i shkarkimit';
+  String get resumeDownload => 'Vazhdo shkarkimin';
 
   @override
   String get deleteDownloadedFiles => 'Fshi skedarët e shkarkuar';

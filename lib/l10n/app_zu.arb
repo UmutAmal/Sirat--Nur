@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Ukulungisa / Ukulanda Akukho",
   "downloadAction": "Landa",
-  "resumeDownload": "Qalisa kabusha Ukulanda",
+  "resumeDownload": "Qhubeka nokulanda",
   "deleteDownloadedFiles": "Susa Amafayela Alandiwe",
   "downloadCancelling": "Iyakhansela...",
   "downloadCanceledForReciter": "Ukulanda kukhanselwe i-{reciter}.",

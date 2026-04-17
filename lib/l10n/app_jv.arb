@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Ilang",
   "downloadAction": "Ngundhuh",
-  "resumeDownload": "Resume Download",
+  "resumeDownload": "Terusake download",
   "deleteDownloadedFiles": "Busak File sing Diundhuh",
   "downloadCancelling": "Batal...",
   "downloadCanceledForReciter": "Download dibatalake kanggo {reciter}.",

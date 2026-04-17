@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Riparo / Elŝuto Mankas",
   "downloadAction": "Elŝutu",
-  "resumeDownload": "Rekomencu Elŝuton",
+  "resumeDownload": "Daŭrigu elŝuton",
   "deleteDownloadedFiles": "Forigu elŝutitajn dosierojn",
   "downloadCancelling": "Nuligo...",
   "downloadCanceledForReciter": "Elŝuto nuligita por {reciter}.",

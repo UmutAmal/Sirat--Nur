@@ -1205,7 +1205,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get downloadAction => 'Йөкләү';
 
   @override
-  String get resumeDownload => 'Йөкләү';
+  String get resumeDownload => 'Йөкләүне дәвам итегез';
 
   @override
   String get deleteDownloadedFiles => 'Йөкләнгән файлларны бетерегез';

@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Perbaiki / Unduh Hilang",
   "downloadAction": "Unduh",
-  "resumeDownload": "Lanjutkan Unduhan",
+  "resumeDownload": "Lanjutkan pengunduhan",
   "deleteDownloadedFiles": "Hapus File yang Diunduh",
   "downloadCancelling": "Membatalkan...",
   "downloadCanceledForReciter": "Pengunduhan dibatalkan untuk {reciter}.",

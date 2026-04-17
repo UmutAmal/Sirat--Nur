@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Falta reparació/descàrrega",
   "downloadAction": "Descarregar",
-  "resumeDownload": "Descàrrega de currículum",
+  "resumeDownload": "Continua la baixada",
   "deleteDownloadedFiles": "Suprimeix els fitxers descarregats",
   "downloadCancelling": "S'està cancel·lant...",
   "downloadCanceledForReciter": "La baixada s'ha cancel·lat per a {reciter}.",

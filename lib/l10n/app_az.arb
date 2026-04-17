@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Təmir / Yükləmə yoxdur",
   "downloadAction": "Yüklə",
-  "resumeDownload": "Yükləməni davam etdirin",
+  "resumeDownload": "Endirməyə davam edin",
   "deleteDownloadedFiles": "Yüklənmiş faylları silin",
   "downloadCancelling": "Ləğv edilir...",
   "downloadCanceledForReciter": "{reciter} üçün endirmə ləğv edildi.",

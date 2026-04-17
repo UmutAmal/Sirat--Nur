@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Ta'mirlash / Yuklab olish yo'qolgan",
   "downloadAction": "Yuklab oling",
-  "resumeDownload": "Yuklashni davom ettirish",
+  "resumeDownload": "Yuklab olishda davom eting",
   "deleteDownloadedFiles": "Yuklab olingan fayllarni o'chirish",
   "downloadCancelling": "Bekor qilinmoqda...",
   "downloadCanceledForReciter": "{reciter} uchun yuklab olish bekor qilindi.",

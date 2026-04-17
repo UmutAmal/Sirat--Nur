@@ -1218,7 +1218,7 @@ class AppLocalizationsDv extends AppLocalizations {
   String get downloadAction => 'ޑައުންލޯޑް';
 
   @override
-  String get resumeDownload => 'ރިޒުޔޫ ޑައުންލޯޑް';
+  String get resumeDownload => 'ޑައުންލޯޑް ކުރިއަށް ގެންދަވާށެވެ';
 
   @override
   String get deleteDownloadedFiles =>

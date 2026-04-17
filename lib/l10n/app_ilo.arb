@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "I-download",
-  "resumeDownload": "Ituloy ti Panag-download",
+  "resumeDownload": "Ituloy ti panag-download",
   "deleteDownloadedFiles": "Buraken Dagiti Nai-download a File",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Nakansela ti panag-download para iti {reciter}.",

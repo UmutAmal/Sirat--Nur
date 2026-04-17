@@ -1207,7 +1207,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get downloadAction => 'ڈاؤن لوڈ کریں۔';
 
   @override
-  String get resumeDownload => 'ڈاؤن لوڈ دوبارہ شروع کریں۔';
+  String get resumeDownload => 'ڈاؤن لوڈ جاری رکھیں';
 
   @override
   String get deleteDownloadedFiles => 'ڈاؤن لوڈ کردہ فائلوں کو حذف کریں۔';

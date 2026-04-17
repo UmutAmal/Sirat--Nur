@@ -1211,7 +1211,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get downloadAction => 'Татаж авах';
 
   @override
-  String get resumeDownload => 'Татаж авахыг үргэлжлүүлнэ үү';
+  String get resumeDownload => 'Үргэлжлүүлэн татаж авах';
 
   @override
   String get deleteDownloadedFiles => 'Татаж авсан файлуудыг устгах';

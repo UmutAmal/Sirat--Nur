@@ -1210,7 +1210,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get downloadAction => 'Ngundeur';
 
   @override
-  String get resumeDownload => 'Neruskeun Ngundeur';
+  String get resumeDownload => 'Nuluykeun ngundeur';
 
   @override
   String get deleteDownloadedFiles => 'Pupus Payil anu Diunduh';

@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "رېمونت قىلىش / چۈشۈرۈش يوقاپ كەتتى",
   "downloadAction": "چۈشۈرۈش",
-  "resumeDownload": "چۈشۈرۈشنى ئەسلىگە كەلتۈرۈش",
+  "resumeDownload": "چۈشۈرۈشنى داۋاملاشتۇرۇڭ",
   "deleteDownloadedFiles": "چۈشۈرۈلگەن ھۆججەتلەرنى ئۆچۈرۈڭ",
   "downloadCancelling": "بىكار قىلىش ...",
   "downloadCanceledForReciter": "چۈشۈرۈش {reciter} ئۈچۈن ئەمەلدىن قالدۇرۇلدى.",

@@ -15161,3 +15161,44 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; l10n debt raporu help belirsizligi giderilmis aracla tekrar calistirilip en guvenli dar kapsamli anahtar/locale secilecek.
+
+## 2026-04-17 TUR-348 - resumeDownload Wrong-Context L10n Repair
+
+### MASTER Karari
+- Risk: `resumeDownload` anahtari bazi locale'lerde "indirmeye devam et" yerine CV/ozgecmis indirme anlamina kaymisti; ornek kanitlar `lib/l10n/app_ca.arb:394` eski `Descàrrega de currículum`, `lib/l10n/app_gl.arb:394` eski `Descargar curriculum vitae`, `lib/l10n/app_zh.arb:394` eski `简历下载`, `lib/l10n/app_hy.arb:394` eski `Ռեզյումեի ներբեռնում`, `lib/l10n/app_ka.arb:394` eski `რეზიუმეს ჩამოტვირთვა`.
+- Kok neden: `tool/translate_arb_keys.dart` tek basina `Resume Download` kaynak metnini kullaniyordu; "resume" kelimesi hem devam etmek hem ozgecmis anlamina geldigi icin otomatik ceviri bazi dillerde yanlis baglama dusuyordu.
+- Etki: Offline indirme ekraninda kullaniciya dini ses/veri indirme akisi yerine CV/ozgecmis indirme gibi anlamsiz bir eylem gosterilebilirdi.
+- Olasilik: `resumeDownload` aktif download/diagnostics localization borcunda izlenen anahtarlar arasinda ve birden fazla locale'de kanitli yanlis baglam bulunuyordu.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1).
+- Rollback kapsami: `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `lib/l10n/app_*.arb`, `lib/l10n/app_localizations_*.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `tool/translate_arb_keys.dart` icinde `resumeDownload` ceviri prompt'u `Continue download` olarak baglama sabitlendi; gelecekteki batch'lerde "resume = CV" belirsizligi azaltiliyor.
+- Download copy guard listesine CV/ozgecmis baglam kalintilari eklendi: `curriculum`, `vitae`, `简历`, `履歷`, Ermenice ve Gurcuce resume kokleri.
+- `dart run tool\translate_arb_keys.dart --force resumeDownload` yalniz bu anahtar icin calistirildi; ARB ve generated l10n dosyalari `flutter gen-l10n` ile senkronlandi.
+- Kanitli duzelen ornekler: `app_ca.arb` artik `Continua la baixada`, `app_gl.arb` `Continuar descargando`, `app_zh*.arb` `继续下载`/`繼續下載`, `app_hy.arb` `Շարունակել ներբեռնումը`, `app_ka.arb` `განაგრძეთ ჩამოტვირთვა`.
+
+### TESTER Kapsami
+- `test/translate_arb_keys_test.dart` icine `resumeDownload` icin CV/ozgecmis anlamina kayan current value'lari reddeden ve temiz candidate'i kabul eden guard eklendi.
+- Low-resource l10n debt guard `1535` seviyesine sikilastirildi; `ca`, `gl`, `hy`, `ka`, `zh`, `zh_CN`, `zh_TW` locale'leri icin `resumeDownload` hem English fallback olmama hem CV/ozgecmis fragment'i tasimama kosulu eklendi.
+- `rg` taramasi ile `resumeDownload` satirlarinda `Curriculum|curriculum|Currículum|currículum|vitae|简历|履歷|Ռեզյում|რეზიუმ` kalintisi bulunmadi.
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart` PASS
+- L10n generate: `flutter gen-l10n` PASS
+- Odak testler: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS (`45/45`), `flutter test test\arb_coverage_test.dart --reporter compact` PASS (`4/4`), `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS (`71/71`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test ilk denemede 15 dk runner timeout'a carpti; arka plan test sureci kalmadi. Uzatilmis timeout ile tekrar: `flutter test --reporter compact` PASS (`572/572`).
+
+### Risk Degisimi
+- `resumeDownload` yanlis CV/ozgecmis baglami riski: `12/25 -> 2/25`
+- 23 anahtarlik aktif l10n borcunda same-as-English toplam sayisi `1542 -> 1535`; kalanlar cogunlukla translator'un guvenli cikti veremedigi dusuk kaynak locale'lerdir ve uydurma ceviri yapilmadan bir sonraki dar turda ele alinmalidir.
+
+### Rollback Plani
+- `resumeDownload` prompt ve guard fragment ekleri revert edilir.
+- Bu turda degisen `resumeDownload` ARB/generated l10n satirlari onceki commit'e dondurulur.
+- Handover append-only oldugu icin silinmez; revert gerekirse yeni tur olarak kaydedilir.
+- `flutter gen-l10n`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki l10n/icerik riski olarak downloadAction/deleteDownloadedFiles same-as-English kalintilari ile diger yanlis "resume/CV" disi semantic debris taranacak.

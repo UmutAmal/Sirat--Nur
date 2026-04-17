@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Ukulungisa / Ukhuphelo Olulahlekileyo",
   "downloadAction": "Khuphela",
-  "resumeDownload": "Qalisa kwakhona Ukukhuphela",
+  "resumeDownload": "Qhubeka nokukhuphela",
   "deleteDownloadedFiles": "Cima Iifayile Ezithotyiweyo",
   "downloadCancelling": "Iyarhoxisa...",
   "downloadCanceledForReciter": "Ukukhuphela kurhoxisiwe kwe- {reciter}.",

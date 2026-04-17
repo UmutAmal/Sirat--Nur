@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Trūkst remonta/lejupielādes",
   "downloadAction": "Lejupielādēt",
-  "resumeDownload": "Atsākt lejupielādi",
+  "resumeDownload": "Turpināt lejupielādi",
   "deleteDownloadedFiles": "Dzēst lejupielādētos failus",
   "downloadCancelling": "Notiek atcelšana...",
   "downloadCanceledForReciter": "Lejupielāde ir atcelta {reciter}.",

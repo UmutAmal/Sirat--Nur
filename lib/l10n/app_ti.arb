@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "ምውራድ",
-  "resumeDownload": "ዳግመ-ምጅማር ዳውንሎድ",
+  "resumeDownload": "ምውራድ ቀጽል",
   "deleteDownloadedFiles": "ዝወረዱ ፋይላት ምድምሳስ",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "ን {reciter} ዳውንሎድ ተሰሪዙ።",

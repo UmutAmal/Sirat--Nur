@@ -1204,7 +1204,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get downloadAction => 'ڊائون لوڊ ڪريو';
 
   @override
-  String get resumeDownload => 'ٻيهر شروع ڪريو ڊائون لوڊ';
+  String get resumeDownload => 'ڊائون لوڊ جاري رکو';
 
   @override
   String get deleteDownloadedFiles => 'ڊائون لوڊ ڪيل فائلن کي ختم ڪريو';

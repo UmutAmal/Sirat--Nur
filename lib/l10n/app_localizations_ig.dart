@@ -1207,7 +1207,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get downloadAction => 'Budata';
 
   @override
-  String get resumeDownload => 'Malitegharịa nbudata';
+  String get resumeDownload => 'Gaa n\'ihu nbudata';
 
   @override
   String get deleteDownloadedFiles => 'Hichapụ faịlụ ebudatara';

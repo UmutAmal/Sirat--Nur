@@ -1204,7 +1204,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get downloadAction => 'تحميل';
 
   @override
-  String get resumeDownload => 'استئناف التنزيل';
+  String get resumeDownload => 'متابعة التنزيل';
 
   @override
   String get deleteDownloadedFiles => 'حذف الملفات التي تم تنزيلها';

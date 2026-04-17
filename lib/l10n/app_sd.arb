@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "مرمت / ڊائون لوڊ غائب",
   "downloadAction": "ڊائون لوڊ ڪريو",
-  "resumeDownload": "ٻيهر شروع ڪريو ڊائون لوڊ",
+  "resumeDownload": "ڊائون لوڊ جاري رکو",
   "deleteDownloadedFiles": "ڊائون لوڊ ڪيل فائلن کي ختم ڪريو",
   "downloadCancelling": "منسوخ ٿي رهيو آهي...",
   "downloadCanceledForReciter": "ڊائون لوڊ منسوخ ڪيو ويو {reciter} لاءِ.",

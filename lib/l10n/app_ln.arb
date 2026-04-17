@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Kozwa",
-  "resumeDownload": "Kozongela Téléchargement",
+  "resumeDownload": "Koba ko télécharger",
   "deleteDownloadedFiles": "Bolongola ba fichiers oyo o télécharger",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",

@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "ترمیم / ډاونلوډ ورک شوی",
   "downloadAction": "ډاونلوډ کړئ",
-  "resumeDownload": "ډاونلوډ بیا پیل کړئ",
+  "resumeDownload": "ډاونلوډ ته دوام ورکړئ",
   "deleteDownloadedFiles": "ډاونلوډ شوي فایلونه حذف کړئ",
   "downloadCancelling": "لغوه کول...",
   "downloadCanceledForReciter": "ډاونلوډ د {reciter} لپاره لغوه شو.",

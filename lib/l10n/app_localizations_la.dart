@@ -1209,7 +1209,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload => 'Proin Download';
+  String get resumeDownload => 'continue download';
 
   @override
   String get deleteDownloadedFiles => 'Delere Downloaded Lima';

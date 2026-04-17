@@ -1213,7 +1213,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get downloadAction => 'Բեռնել';
 
   @override
-  String get resumeDownload => 'Ռեզյումեի ներբեռնում';
+  String get resumeDownload => 'Շարունակել ներբեռնումը';
 
   @override
   String get deleteDownloadedFiles => 'Ջնջել ներբեռնված ֆայլերը';

@@ -1209,7 +1209,7 @@ class AppLocalizationsMs extends AppLocalizations {
   String get downloadAction => 'Muat turun';
 
   @override
-  String get resumeDownload => 'Sambung Muat Turun';
+  String get resumeDownload => 'Teruskan muat turun';
 
   @override
   String get deleteDownloadedFiles => 'Padam Fail yang Dimuat Turun';

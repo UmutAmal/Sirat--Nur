@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Oprava / stiahnutie chýba",
   "downloadAction": "Stiahnuť",
-  "resumeDownload": "Obnoviť sťahovanie",
+  "resumeDownload": "Pokračujte v sťahovaní",
   "deleteDownloadedFiles": "Odstrániť stiahnuté súbory",
   "downloadCancelling": "Prebieha rušenie...",
   "downloadCanceledForReciter": "Sťahovanie pre {reciter} bolo zrušené.",

@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Reparasjon / nedlasting mangler",
   "downloadAction": "Last ned",
-  "resumeDownload": "Fortsett nedlasting",
+  "resumeDownload": "Fortsett nedlastingen",
   "deleteDownloadedFiles": "Slett nedlastede filer",
   "downloadCancelling": "Avbryter …",
   "downloadCanceledForReciter": "Nedlastingen avbrutt for {reciter}.",

@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "ပြုပြင်/ဒေါင်းလုဒ် ပျောက်ဆုံးနေပါသည်။",
   "downloadAction": "ဒေါင်းလုဒ်လုပ်ပါ။",
-  "resumeDownload": "ဒေါင်းလုဒ်ပြန်လုပ်ပါ။",
+  "resumeDownload": "ဆက်လက်ဒေါင်းလုဒ်လုပ်ပါ။",
   "deleteDownloadedFiles": "ဒေါင်းလုဒ်လုပ်ထားသောဖိုင်များကိုဖျက်ပါ။",
   "downloadCancelling": "ပယ်ဖျက်နေသည်...",
   "downloadCanceledForReciter": "{reciter} အတွက် ဒေါင်းလုဒ်ကို ပယ်ဖျက်လိုက်ပါပြီ။",

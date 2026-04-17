@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Riparimi / Shkarkimi mungon",
   "downloadAction": "Shkarkoni",
-  "resumeDownload": "Rifillimi i shkarkimit",
+  "resumeDownload": "Vazhdo shkarkimin",
   "deleteDownloadedFiles": "Fshi skedarët e shkarkuar",
   "downloadCancelling": "Po anulohet...",
   "downloadCanceledForReciter": "Shkarkimi u anulua për {reciter}.",

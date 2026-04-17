@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Адрамантаваць / спампаваць Адсутнічае",
   "downloadAction": "Спампаваць",
-  "resumeDownload": "Аднавіць загрузку",
+  "resumeDownload": "Працягнуць загрузку",
   "deleteDownloadedFiles": "Выдаліць спампаваныя файлы",
   "downloadCancelling": "Адмена...",
   "downloadCanceledForReciter": "Спампоўка для {reciter} скасавана.",

@@ -1211,7 +1211,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get downloadAction => 'Lawrlwythwch';
 
   @override
-  String get resumeDownload => 'Ailddechrau Lawrlwytho';
+  String get resumeDownload => 'Parhewch i lawrlwytho';
 
   @override
   String get deleteDownloadedFiles => 'Dileu Ffeiliau Wedi\'u Lawrlwytho';

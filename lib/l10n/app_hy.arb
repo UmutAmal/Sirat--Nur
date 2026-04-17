@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Վերանորոգում / Ներբեռնում բացակայում է",
   "downloadAction": "Բեռնել",
-  "resumeDownload": "Ռեզյումեի ներբեռնում",
+  "resumeDownload": "Շարունակել ներբեռնումը",
   "deleteDownloadedFiles": "Ջնջել ներբեռնված ֆայլերը",
   "downloadCancelling": "Չեղարկում...",
   "downloadCanceledForReciter": "Ներբեռնումը չեղարկվել է {reciter}-ի համար:",

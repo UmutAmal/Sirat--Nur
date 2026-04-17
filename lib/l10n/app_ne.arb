@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "मर्मत / डाउनलोड छुटेको छ",
   "downloadAction": "डाउनलोड गर्नुहोस्",
-  "resumeDownload": "डाउनलोड पुन: सुरु गर्नुहोस्",
+  "resumeDownload": "डाउनलोड जारी राख्नुहोस्",
   "deleteDownloadedFiles": "डाउनलोड गरिएका फाइलहरू मेटाउनुहोस्",
   "downloadCancelling": "रद्द गर्दै...",
   "downloadCanceledForReciter": "{reciter} को लागि डाउनलोड रद्द गरियो।",

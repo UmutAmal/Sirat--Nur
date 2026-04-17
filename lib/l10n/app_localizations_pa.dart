@@ -1207,7 +1207,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get downloadAction => 'ਡਾਊਨਲੋਡ ਕਰੋ';
 
   @override
-  String get resumeDownload => 'ਡਾਊਨਲੋਡ ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ';
+  String get resumeDownload => 'ਡਾਊਨਲੋਡ ਜਾਰੀ ਰੱਖੋ';
 
   @override
   String get deleteDownloadedFiles => 'ਡਾਊਨਲੋਡ ਕੀਤੀਆਂ ਫ਼ਾਈਲਾਂ ਨੂੰ ਮਿਟਾਓ';

@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Íosluchtaigh",
-  "resumeDownload": "Íosluchtaigh atosú",
+  "resumeDownload": "Leanúint ar aghaidh íoslódáil",
   "deleteDownloadedFiles": "Scrios Comhaid Íosluchtaithe",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Cuireadh an t-íoslódáil ar ceal le haghaidh {reciter}.",

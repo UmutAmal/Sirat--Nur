@@ -1189,7 +1189,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get downloadAction => '다운로드';
 
   @override
-  String get resumeDownload => '다운로드 재개';
+  String get resumeDownload => '계속 다운로드';
 
   @override
   String get deleteDownloadedFiles => '다운로드한 파일 삭제';

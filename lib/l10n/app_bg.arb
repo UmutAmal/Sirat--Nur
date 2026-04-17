@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Липсва поправка/изтегляне",
   "downloadAction": "Изтегляне",
-  "resumeDownload": "Възобновете изтеглянето",
+  "resumeDownload": "Продължете изтеглянето",
   "deleteDownloadedFiles": "Изтриване на изтеглените файлове",
   "downloadCancelling": "Отменя се...",
   "downloadCanceledForReciter": "Изтеглянето е анулирано за {reciter}.",

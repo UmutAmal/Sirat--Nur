@@ -1211,7 +1211,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get downloadAction => 'Ka telesarize';
 
   @override
-  String get resumeDownload => 'Téléchargement (Téléchargement) daminɛ';
+  String get resumeDownload => 'Aw bɛ taa a fɛ ka telesarse';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

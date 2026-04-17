@@ -1206,7 +1206,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Ramba uchidhawunirodha';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

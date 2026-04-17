@@ -1213,7 +1213,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get downloadAction => 'Niżżel';
 
   @override
-  String get resumeDownload => 'Kompli Niżżel';
+  String get resumeDownload => 'Kompli niżżel';
 
   @override
   String get deleteDownloadedFiles => 'Ħassar Fajls Mniżżla';

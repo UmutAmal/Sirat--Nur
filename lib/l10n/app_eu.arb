@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Konponketa / Deskarga falta da",
   "downloadAction": "Deskargatu",
-  "resumeDownload": "Berekin deskargatu",
+  "resumeDownload": "Jarraitu deskargatzen",
   "deleteDownloadedFiles": "Ezabatu deskargatutako fitxategiak",
   "downloadCancelling": "Bertan behera uzten...",
   "downloadCanceledForReciter": "Deskarga bertan behera utzi da {reciter}-rako.",

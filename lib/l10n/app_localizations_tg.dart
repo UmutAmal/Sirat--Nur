@@ -1207,7 +1207,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get downloadAction => 'Зеркашӣ кунед';
 
   @override
-  String get resumeDownload => 'Боргириро идома диҳед';
+  String get resumeDownload => 'Зеркаширо идома диҳед';
 
   @override
   String get deleteDownloadedFiles => 'Файлҳои зеркашидашударо нест кунед';

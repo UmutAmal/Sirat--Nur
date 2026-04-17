@@ -1214,7 +1214,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get downloadAction => 'Pag-download';
 
   @override
-  String get resumeDownload => 'Ipadayon ang Pag-download';
+  String get resumeDownload => 'Ipadayon ang pag-download';
 
   @override
   String get deleteDownloadedFiles => 'I-delete ang Na-download nga mga File';

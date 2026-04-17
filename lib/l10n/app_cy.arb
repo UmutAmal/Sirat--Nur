@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Lawrlwythwch",
-  "resumeDownload": "Ailddechrau Lawrlwytho",
+  "resumeDownload": "Parhewch i lawrlwytho",
   "deleteDownloadedFiles": "Dileu Ffeiliau Wedi'u Lawrlwytho",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Llawrlwythiad wedi'i ganslo ar gyfer {reciter}.",

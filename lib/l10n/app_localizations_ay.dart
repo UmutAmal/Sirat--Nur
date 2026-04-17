@@ -1229,7 +1229,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get downloadAction => 'Ukax mä juk’a pachanakanwa';
 
   @override
-  String get resumeDownload => 'Resumen Descarga ukax mä juk’a pachanakanwa';
+  String get resumeDownload => 'Uka apsuñatakix sarantaskakiniwa';
 
   @override
   String get deleteDownloadedFiles => 'Uñstayata Archivonaka chhaqtayaña';

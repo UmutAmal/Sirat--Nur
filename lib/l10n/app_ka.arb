@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "შეკეთება / ჩამოტვირთვა აკლია",
   "downloadAction": "ჩამოტვირთვა",
-  "resumeDownload": "რეზიუმეს ჩამოტვირთვა",
+  "resumeDownload": "განაგრძეთ ჩამოტვირთვა",
   "deleteDownloadedFiles": "ჩამოტვირთული ფაილების წაშლა",
   "downloadCancelling": "გაუქმება...",
   "downloadCanceledForReciter": "ჩამოტვირთვა გაუქმდა {reciter}-ისთვის.",

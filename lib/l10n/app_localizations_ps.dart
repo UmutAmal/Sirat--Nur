@@ -1205,7 +1205,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get downloadAction => 'ډاونلوډ کړئ';
 
   @override
-  String get resumeDownload => 'ډاونلوډ بیا پیل کړئ';
+  String get resumeDownload => 'ډاونلوډ ته دوام ورکړئ';
 
   @override
   String get deleteDownloadedFiles => 'ډاونلوډ شوي فایلونه حذف کړئ';

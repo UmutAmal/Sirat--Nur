@@ -1218,7 +1218,7 @@ class AppLocalizationsTl extends AppLocalizations {
   String get downloadAction => 'I-download';
 
   @override
-  String get resumeDownload => 'Ipagpatuloy ang Pag-download';
+  String get resumeDownload => 'Ipagpatuloy ang pag-download';
 
   @override
   String get deleteDownloadedFiles => 'Tanggalin ang mga Na-download na File';

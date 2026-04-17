@@ -1209,7 +1209,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get downloadAction => 'Last ned';
 
   @override
-  String get resumeDownload => 'Fortsett nedlasting';
+  String get resumeDownload => 'Fortsett nedlastingen';
 
   @override
   String get deleteDownloadedFiles => 'Slett nedlastede filer';

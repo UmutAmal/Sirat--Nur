@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "修復/下載遺失",
   "downloadAction": "下載",
-  "resumeDownload": "履歷下載",
+  "resumeDownload": "繼續下載",
   "deleteDownloadedFiles": "刪除下載的文件",
   "downloadCancelling": "正在取消...",
   "downloadCanceledForReciter": "{reciter} 的下載已取消。",

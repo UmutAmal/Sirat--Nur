@@ -1213,7 +1213,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get downloadAction => 'Mboguejy';
 
   @override
-  String get resumeDownload => 'Resumen Descarga rehegua';
+  String get resumeDownload => 'Eñepyrũ emboguejy';
 
   @override
   String get deleteDownloadedFiles => 'Embogue umi Archivo Ojegueruva’ekue';

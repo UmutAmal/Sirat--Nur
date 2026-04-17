@@ -1208,7 +1208,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get downloadAction => 'डाउनलोड करें';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'डाउनलोड् करणं निरन्तरं कुर्वन्तु';
 
   @override
   String get deleteDownloadedFiles => 'डाउनलोड् कृतानि सञ्चिकाः विलोपयन्तु';

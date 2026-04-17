@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "दुरुस्ती / डाउनलोड गहाळ",
   "downloadAction": "डाउनलोड करा",
-  "resumeDownload": "डाउनलोड पुन्हा सुरू करा",
+  "resumeDownload": "डाउनलोड सुरू ठेवा",
   "deleteDownloadedFiles": "डाउनलोड केलेल्या फाइल्स हटवा",
   "downloadCancelling": "रद्द करत आहे...",
   "downloadCanceledForReciter": "{reciter} साठी डाउनलोड रद्द केले.",

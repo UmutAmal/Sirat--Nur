@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Kho / Download Ntxim Hlub",
   "downloadAction": "Download tau",
-  "resumeDownload": "Rov qab Download",
+  "resumeDownload": "Txuas ntxiv mus download tau",
   "deleteDownloadedFiles": "Rho tawm cov ntaub ntawv Downloaded",
   "downloadCancelling": "Ncua tseg...",
   "downloadCanceledForReciter": "Download tau muab tso tseg rau {reciter}.",

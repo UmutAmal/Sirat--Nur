@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Napraw/pobierz brakujące",
   "downloadAction": "Pobierz",
-  "resumeDownload": "Wznów pobieranie",
+  "resumeDownload": "Kontynuuj pobieranie",
   "deleteDownloadedFiles": "Usuń pobrane pliki",
   "downloadCancelling": "Anulowanie...",
   "downloadCanceledForReciter": "Pobieranie anulowane dla {reciter}.",

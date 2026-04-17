@@ -1208,7 +1208,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get downloadAction => 'Hoʻoiho';
 
   @override
-  String get resumeDownload => 'Hoʻouka hou';
+  String get resumeDownload => 'E hoʻomau i ka hoʻoili ʻana';
 
   @override
   String get deleteDownloadedFiles => 'Holoi i nā faila i hoʻoiho ʻia';

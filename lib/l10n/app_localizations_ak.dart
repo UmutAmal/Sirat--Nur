@@ -1210,7 +1210,7 @@ class AppLocalizationsAk extends AppLocalizations {
   String get downloadAction => 'Twe';
 
   @override
-  String get resumeDownload => 'San Fi ase Twe';
+  String get resumeDownload => 'Kɔ so twe';
 
   @override
   String get deleteDownloadedFiles => 'Popa Fael Ahorow a Wɔatwe no';

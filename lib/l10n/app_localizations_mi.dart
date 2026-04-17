@@ -1212,7 +1212,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get downloadAction => 'Tikiake';
 
   @override
-  String get resumeDownload => 'Tukuna ano';
+  String get resumeDownload => 'Haere tonu te tango';
 
   @override
   String get deleteDownloadedFiles => 'Mukua nga Kōnae kua Tikiake';

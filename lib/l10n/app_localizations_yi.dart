@@ -1208,7 +1208,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get downloadAction => 'אראפקאפיע';
 
   @override
-  String get resumeDownload => 'נעמענ זיכ ווידער אראפקאפיע';
+  String get resumeDownload => 'פאָרזעצן אראפקאפיע';
 
   @override
   String get deleteDownloadedFiles => 'ויסמעקן דאַונלאָודיד טעקעס';

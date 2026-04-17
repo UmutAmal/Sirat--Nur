@@ -1222,7 +1222,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get downloadAction => 'Taonelouta';
 
   @override
-  String get resumeDownload => 'Thoma gape go Taonelouta';
+  String get resumeDownload => 'Tswela pele go taonelouta';
 
   @override
   String get deleteDownloadedFiles => 'Phimola Difaele tše di Taoneloutšwago';

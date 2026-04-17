@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Reparar/Descargar",
   "downloadAction": "Descargar",
-  "resumeDownload": "Descargar curriculum vitae",
+  "resumeDownload": "Continuar descargando",
   "deleteDownloadedFiles": "Eliminar ficheiros descargados",
   "downloadCancelling": "Cancelando...",
   "downloadCanceledForReciter": "Descarga cancelada para {reciter}.",

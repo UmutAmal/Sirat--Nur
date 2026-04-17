@@ -1209,7 +1209,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get downloadAction => 'Íosluchtaigh';
 
   @override
-  String get resumeDownload => 'Íosluchtaigh atosú';
+  String get resumeDownload => 'Leanúint ar aghaidh íoslódáil';
 
   @override
   String get deleteDownloadedFiles => 'Scrios Comhaid Íosluchtaithe';

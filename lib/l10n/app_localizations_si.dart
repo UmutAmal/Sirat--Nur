@@ -1207,7 +1207,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get downloadAction => 'බාගන්න';
 
   @override
-  String get resumeDownload => 'බාගත කිරීම නැවත ආරම්භ කරන්න';
+  String get resumeDownload => 'බාගත කිරීම දිගටම කරගෙන යන්න';
 
   @override
   String get deleteDownloadedFiles => 'බාගත කළ ගොනු මකන්න';

@@ -1216,7 +1216,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get downloadAction => 'Descargar';
 
   @override
-  String get resumeDownload => 'Descargar curriculum vitae';
+  String get resumeDownload => 'Continuar descargando';
 
   @override
   String get deleteDownloadedFiles => 'Eliminar ficheiros descargados';

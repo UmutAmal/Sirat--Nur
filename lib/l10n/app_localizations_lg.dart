@@ -1213,7 +1213,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get downloadAction => 'Okufuna';
 
   @override
-  String get resumeDownload => 'Ddamu Okuwanula';
+  String get resumeDownload => 'Weeyongere okuwanula';
 
   @override
   String get deleteDownloadedFiles => 'Sazaamu Fayiro Eziwanuliddwa';

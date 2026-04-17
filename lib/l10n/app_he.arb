@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "תיקון / הורדה חסר",
   "downloadAction": "הורד",
-  "resumeDownload": "המשך הורדה",
+  "resumeDownload": "המשך להוריד",
   "deleteDownloadedFiles": "מחק קבצים שהורדת",
   "downloadCancelling": "מבטל...",
   "downloadCanceledForReciter": "ההורדה בוטלה עבור {reciter}.",

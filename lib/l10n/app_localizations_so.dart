@@ -1210,7 +1210,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload => 'Dib u bilaw soo dejinta';
+  String get resumeDownload => 'Sii wad soo dejinta';
 
   @override
   String get deleteDownloadedFiles => 'Tirtir faylalka la soo dejiyay';

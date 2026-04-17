@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "መጠገን/ አውርድ ጠፍቷል",
   "downloadAction": "አውርድ",
-  "resumeDownload": "ማውረድ ከቆመበት ቀጥል",
+  "resumeDownload": "ማውረድ ይቀጥሉ",
   "deleteDownloadedFiles": "የወረዱ ፋይሎችን ሰርዝ",
   "downloadCancelling": "በመሰረዝ ላይ...",
   "downloadCanceledForReciter": "ለ{reciter} ማውረድ ተሰርዟል።",

@@ -1211,7 +1211,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get downloadAction => 'Khuphela';
 
   @override
-  String get resumeDownload => 'Qalisa kwakhona Ukukhuphela';
+  String get resumeDownload => 'Qhubeka nokukhuphela';
 
   @override
   String get deleteDownloadedFiles => 'Cima Iifayile Ezithotyiweyo';

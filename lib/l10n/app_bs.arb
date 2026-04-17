@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Nedostaje popravka / preuzimanje",
   "downloadAction": "Preuzmi",
-  "resumeDownload": "Nastavi preuzimanje",
+  "resumeDownload": "Nastavite preuzimanje",
   "deleteDownloadedFiles": "Izbrišite preuzete datoteke",
   "downloadCancelling": "Otkazivanje...",
   "downloadCanceledForReciter": "Preuzimanje je otkazano za {reciter}.",

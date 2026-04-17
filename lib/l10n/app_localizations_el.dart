@@ -1217,7 +1217,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get downloadAction => 'Λήψη';
 
   @override
-  String get resumeDownload => 'Λήψη βιογραφικού';
+  String get resumeDownload => 'Συνέχεια λήψης';
 
   @override
   String get deleteDownloadedFiles => 'Διαγραφή ληφθέντων αρχείων';

@@ -1216,7 +1216,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get downloadAction => 'Herunterladen';
 
   @override
-  String get resumeDownload => 'Download fortsetzen';
+  String get resumeDownload => 'Weiter herunterladen';
 
   @override
   String get deleteDownloadedFiles => 'Heruntergeladene Dateien löschen';

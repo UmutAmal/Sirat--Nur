@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Buusuu",
-  "resumeDownload": "Resume Download gochuudhaan",
+  "resumeDownload": "Download itti fufaa",
   "deleteDownloadedFiles": "Faayilota Buufaman Haquu",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",

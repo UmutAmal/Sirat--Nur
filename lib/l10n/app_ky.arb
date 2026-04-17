@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Оңдоо / Жүктөө Жок",
   "downloadAction": "Жүктөп алуу",
-  "resumeDownload": "Жүктөөнү улантуу",
+  "resumeDownload": "Жүктөп алууну улантуу",
   "deleteDownloadedFiles": "Жүктөлгөн файлдарды жок кылуу",
   "downloadCancelling": "Жокко чыгарылууда...",
   "downloadCanceledForReciter": "{reciter} үчүн жүктөп алуу жокко чыгарылды.",

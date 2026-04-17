@@ -1210,7 +1210,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get downloadAction => 'డౌన్‌లోడ్ చేయండి';
 
   @override
-  String get resumeDownload => 'డౌన్‌లోడ్ పునఃప్రారంభించండి';
+  String get resumeDownload => 'డౌన్‌లోడ్‌ను కొనసాగించండి';
 
   @override
   String get deleteDownloadedFiles => 'డౌన్‌లోడ్ చేసిన ఫైల్‌లను తొలగించండి';

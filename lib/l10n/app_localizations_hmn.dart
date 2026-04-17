@@ -1212,7 +1212,7 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get downloadAction => 'Download tau';
 
   @override
-  String get resumeDownload => 'Rov qab Download';
+  String get resumeDownload => 'Txuas ntxiv mus download tau';
 
   @override
   String get deleteDownloadedFiles => 'Rho tawm cov ntaub ntawv Downloaded';

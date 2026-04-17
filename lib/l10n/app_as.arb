@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "ডাউনল’ড",
-  "resumeDownload": "ডাউনলোড পুনৰ আৰম্ভ কৰক",
+  "resumeDownload": "ডাউনলোড অব্যাহত ৰাখক",
   "deleteDownloadedFiles": "ডাউনলোড কৰা ফাইলসমূহ মচি পেলাওক",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "{reciter} ৰ বাবে ডাউনলোড বাতিল কৰা হৈছে।",

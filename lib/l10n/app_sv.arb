@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Reparation/nedladdning saknas",
   "downloadAction": "Ladda ner",
-  "resumeDownload": "Återuppta nedladdning",
+  "resumeDownload": "Fortsätt nedladdningen",
   "deleteDownloadedFiles": "Ta bort nedladdade filer",
   "downloadCancelling": "Avbryter...",
   "downloadCanceledForReciter": "Nedladdningen avbröts för {reciter}.",

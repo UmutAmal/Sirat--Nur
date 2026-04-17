@@ -1214,7 +1214,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get downloadAction => 'Landa';
 
   @override
-  String get resumeDownload => 'Qalisa kabusha Ukulanda';
+  String get resumeDownload => 'Qhubeka nokulanda';
 
   @override
   String get deleteDownloadedFiles => 'Susa Amafayela Alandiwe';

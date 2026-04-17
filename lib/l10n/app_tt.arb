@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Ремонт / Йөкләү",
   "downloadAction": "Йөкләү",
-  "resumeDownload": "Йөкләү",
+  "resumeDownload": "Йөкләүне дәвам итегез",
   "deleteDownloadedFiles": "Йөкләнгән файлларны бетерегез",
   "downloadCancelling": "Баш тарту ...",
   "downloadCanceledForReciter": "Йөкләү {reciter} өчен юкка чыгарылды.",

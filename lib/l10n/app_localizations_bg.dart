@@ -1217,7 +1217,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get downloadAction => 'Изтегляне';
 
   @override
-  String get resumeDownload => 'Възобновете изтеглянето';
+  String get resumeDownload => 'Продължете изтеглянето';
 
   @override
   String get deleteDownloadedFiles => 'Изтриване на изтеглените файлове';

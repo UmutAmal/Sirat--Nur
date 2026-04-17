@@ -1212,7 +1212,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get downloadAction => 'Lejupielādēt';
 
   @override
-  String get resumeDownload => 'Atsākt lejupielādi';
+  String get resumeDownload => 'Turpināt lejupielādi';
 
   @override
   String get deleteDownloadedFiles => 'Dzēst lejupielādētos failus';

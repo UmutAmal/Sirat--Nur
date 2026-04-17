@@ -1209,7 +1209,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get downloadAction => 'Sækja';
 
   @override
-  String get resumeDownload => 'Halda niðurhal';
+  String get resumeDownload => 'Haltu áfram að hlaða niður';
 
   @override
   String get deleteDownloadedFiles => 'Eyða niðurhaluðum skrám';

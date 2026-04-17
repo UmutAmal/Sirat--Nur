@@ -1213,7 +1213,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get downloadAction => 'Uraykachiy';
 
   @override
-  String get resumeDownload => 'Currículum descargar nisqa';
+  String get resumeDownload => 'Hinalla uraykachiy';
 
   @override
   String get deleteDownloadedFiles => 'Descargasqa Archivokunata chinkachiy';

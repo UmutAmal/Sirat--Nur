@@ -1213,7 +1213,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get downloadAction => 'Khoasolla';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Tsoela pele ho jarolla';
 
   @override
   String get deleteDownloadedFiles => 'Hlakola Lifaele tse Jarollotsoeng';

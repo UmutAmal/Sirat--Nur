@@ -1207,7 +1207,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get downloadAction => 'دانلود کنید';
 
   @override
-  String get resumeDownload => 'دانلود رزومه';
+  String get resumeDownload => 'ادامه دانلود';
 
   @override
   String get deleteDownloadedFiles => 'حذف فایل های دانلود شده';

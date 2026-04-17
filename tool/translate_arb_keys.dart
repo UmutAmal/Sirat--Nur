@@ -480,6 +480,8 @@ String _translationPromptSourceForKey(String key, String source) {
       return 'Checking the Quran database...';
     case 'resetOnboarding':
       return 'Reset intro setup';
+    case 'resumeDownload':
+      return 'Continue download';
     default:
       return source;
   }
@@ -663,6 +665,17 @@ const _knownDownloadTranslationDebris = [
   'Téléchargement Manager',
   'Fichier Téléchargées',
   'Filew Téléchargements',
+  'Curriculum',
+  'curriculum',
+  'Currículum',
+  'currículum',
+  'vitae',
+  '简历',
+  '履歷',
+  'Резюме',
+  'резюме',
+  'Ռեզյում',
+  'რეზიუმ',
 ];
 
 const _knownSplashTaglineTranslationDebris = ['के बारे में', 'बतावल', 'nisqa'];

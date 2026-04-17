@@ -1214,7 +1214,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get downloadAction => 'பதிவிறக்கவும்';
 
   @override
-  String get resumeDownload => 'பதிவிறக்கத்தை மீண்டும் தொடங்கவும்';
+  String get resumeDownload => 'பதிவிறக்கத்தை தொடரவும்';
 
   @override
   String get deleteDownloadedFiles =>

@@ -1211,7 +1211,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get downloadAction => 'Завантажити';
 
   @override
-  String get resumeDownload => 'Відновити завантаження';
+  String get resumeDownload => 'Продовжити завантаження';
 
   @override
   String get deleteDownloadedFiles => 'Видалити завантажені файли';

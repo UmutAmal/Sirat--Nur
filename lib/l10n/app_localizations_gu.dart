@@ -1205,7 +1205,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get downloadAction => 'ડાઉનલોડ કરો';
 
   @override
-  String get resumeDownload => 'ડાઉનલોડ ફરી શરૂ કરો';
+  String get resumeDownload => 'ડાઉનલોડ ચાલુ રાખો';
 
   @override
   String get deleteDownloadedFiles => 'ડાઉનલોડ કરેલી ફાઇલો કાઢી નાખો';

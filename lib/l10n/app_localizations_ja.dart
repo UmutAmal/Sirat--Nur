@@ -1189,7 +1189,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get downloadAction => 'ダウンロード';
 
   @override
-  String get resumeDownload => 'ダウンロードを再開する';
+  String get resumeDownload => 'ダウンロードを続ける';
 
   @override
   String get deleteDownloadedFiles => 'ダウンロードしたファイルを削除する';

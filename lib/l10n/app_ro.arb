@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Reparare/Descărcare lipsă",
   "downloadAction": "Descărcați",
-  "resumeDownload": "Reluați descărcarea",
+  "resumeDownload": "Continuați descărcarea",
   "deleteDownloadedFiles": "Ștergeți fișierele descărcate",
   "downloadCancelling": "Se anulează...",
   "downloadCanceledForReciter": "Descărcarea a fost anulată pentru {reciter}.",

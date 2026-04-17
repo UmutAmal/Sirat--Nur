@@ -1205,7 +1205,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get downloadAction => 'डाउनलोड गर्नुहोस्';
 
   @override
-  String get resumeDownload => 'डाउनलोड पुन: सुरु गर्नुहोस्';
+  String get resumeDownload => 'डाउनलोड जारी राख्नुहोस्';
 
   @override
   String get deleteDownloadedFiles => 'डाउनलोड गरिएका फाइलहरू मेटाउनुहोस्';

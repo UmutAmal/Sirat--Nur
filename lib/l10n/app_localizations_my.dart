@@ -1218,7 +1218,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get downloadAction => 'ဒေါင်းလုဒ်လုပ်ပါ။';
 
   @override
-  String get resumeDownload => 'ဒေါင်းလုဒ်ပြန်လုပ်ပါ။';
+  String get resumeDownload => 'ဆက်လက်ဒေါင်းလုဒ်လုပ်ပါ။';
 
   @override
   String get deleteDownloadedFiles => 'ဒေါင်းလုဒ်လုပ်ထားသောဖိုင်များကိုဖျက်ပါ။';

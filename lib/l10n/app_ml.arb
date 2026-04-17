@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "നന്നാക്കൽ / ഡൗൺലോഡ് നഷ്‌ടമായി",
   "downloadAction": "ഡൗൺലോഡ് ചെയ്യുക",
-  "resumeDownload": "ഡൗൺലോഡ് പുനരാരംഭിക്കുക",
+  "resumeDownload": "ഡൗൺലോഡ് തുടരുക",
   "deleteDownloadedFiles": "ഡൗൺലോഡ് ചെയ്ത ഫയലുകൾ ഇല്ലാതാക്കുക",
   "downloadCancelling": "റദ്ദാക്കുന്നു...",
   "downloadCanceledForReciter": "{reciter} എന്നതിനായി ഡൗൺലോഡ് റദ്ദാക്കി.",

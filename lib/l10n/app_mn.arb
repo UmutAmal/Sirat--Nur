@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Засвар / Татаж авахгүй",
   "downloadAction": "Татаж авах",
-  "resumeDownload": "Татаж авахыг үргэлжлүүлнэ үү",
+  "resumeDownload": "Үргэлжлүүлэн татаж авах",
   "deleteDownloadedFiles": "Татаж авсан файлуудыг устгах",
   "downloadCancelling": "Цуцалж байна...",
   "downloadCanceledForReciter": "{reciter}-д татахыг цуцалсан.",

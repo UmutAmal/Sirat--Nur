@@ -1209,7 +1209,7 @@ class AppLocalizationsEe extends AppLocalizations {
   String get downloadAction => 'Hee ɖa anyi';
 
   @override
-  String get resumeDownload => 'Gbugbɔ Gbugbɔ Wɔ Ðeɖe Ðe Edzi';
+  String get resumeDownload => 'Yi edzi nànɔ eƒe kɔpi wɔm';
 
   @override
   String get deleteDownloadedFiles =>

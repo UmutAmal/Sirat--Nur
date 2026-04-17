@@ -1208,7 +1208,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload => 'Ferfetsje Download';
+  String get resumeDownload => 'Trochgean download';
 
   @override
   String get deleteDownloadedFiles => 'Wiskje ynladen triemmen';

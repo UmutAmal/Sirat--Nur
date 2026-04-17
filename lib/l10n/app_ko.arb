@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "수리/다운로드 누락",
   "downloadAction": "다운로드",
-  "resumeDownload": "다운로드 재개",
+  "resumeDownload": "계속 다운로드",
   "deleteDownloadedFiles": "다운로드한 파일 삭제",
   "downloadCancelling": "취소 중...",
   "downloadCanceledForReciter": "{reciter} 다운로드가 취소되었습니다.",

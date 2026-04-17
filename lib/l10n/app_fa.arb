@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "تعمیر / دانلود از دست رفته",
   "downloadAction": "دانلود کنید",
-  "resumeDownload": "دانلود رزومه",
+  "resumeDownload": "ادامه دانلود",
   "deleteDownloadedFiles": "حذف فایل های دانلود شده",
   "downloadCancelling": "در حال لغو...",
   "downloadCanceledForReciter": "دانلود برای {reciter} لغو شد.",

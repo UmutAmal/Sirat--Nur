@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "අලුත්වැඩියා කිරීම / බාගත කිරීම අතුරුදහන්",
   "downloadAction": "බාගන්න",
-  "resumeDownload": "බාගත කිරීම නැවත ආරම්භ කරන්න",
+  "resumeDownload": "බාගත කිරීම දිගටම කරගෙන යන්න",
   "deleteDownloadedFiles": "බාගත කළ ගොනු මකන්න",
   "downloadCancelling": "අවලංගු කරමින්...",
   "downloadCanceledForReciter": "{reciter} සඳහා බාගැනීම අවලංගු විය.",

@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Επισκευή / Λήψη Λείπει",
   "downloadAction": "Λήψη",
-  "resumeDownload": "Λήψη βιογραφικού",
+  "resumeDownload": "Συνέχεια λήψης",
   "deleteDownloadedFiles": "Διαγραφή ληφθέντων αρχείων",
   "downloadCancelling": "Ακύρωση...",
   "downloadCanceledForReciter": "Η λήψη ακυρώθηκε για {reciter}.",

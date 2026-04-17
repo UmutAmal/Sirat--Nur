@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Reparar/baixar ausente",
   "downloadAction": "Baixar",
-  "resumeDownload": "Retomar download",
+  "resumeDownload": "Continuar download",
   "deleteDownloadedFiles": "Excluir arquivos baixados",
   "downloadCancelling": "Cancelando...",
   "downloadCanceledForReciter": "Download cancelado para {reciter}.",

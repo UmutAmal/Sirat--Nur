@@ -1215,7 +1215,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get downloadAction => 'ଡାଉନଲୋଡ୍ କରନ୍ତୁ |';
 
   @override
-  String get resumeDownload => 'ଡାଉନଲୋଡ୍ ଆରମ୍ଭ କରନ୍ତୁ |';
+  String get resumeDownload => 'ଡାଉନଲୋଡ୍ ଜାରି ରଖ |';
 
   @override
   String get deleteDownloadedFiles =>

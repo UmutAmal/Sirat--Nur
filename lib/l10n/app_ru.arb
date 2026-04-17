@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Восстановление/загрузка отсутствует",
   "downloadAction": "Скачать",
-  "resumeDownload": "Возобновить загрузку",
+  "resumeDownload": "Продолжить загрузку",
   "deleteDownloadedFiles": "Удалить загруженные файлы",
   "downloadCancelling": "Отмена...",
   "downloadCanceledForReciter": "Загрузка отменена для {reciter}.",

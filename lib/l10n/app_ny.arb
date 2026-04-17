@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Kukonza / Kutsitsa Kukusowa",
   "downloadAction": "Tsitsani",
-  "resumeDownload": "Yambitsaninso Kutsitsa",
+  "resumeDownload": "Pitirizani kutsitsa",
   "deleteDownloadedFiles": "Chotsani Mafayilo Otsitsa",
   "downloadCancelling": "Ikuletsa...",
   "downloadCanceledForReciter": "Kutsitsa kwalephereka kwa {reciter}.",

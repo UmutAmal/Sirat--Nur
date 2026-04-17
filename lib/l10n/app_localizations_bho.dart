@@ -1211,7 +1211,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get downloadAction => 'डाउनलोड करीं';
 
   @override
-  String get resumeDownload => 'रिज्यूमे डाउनलोड करीं';
+  String get resumeDownload => 'डाउनलोड जारी राखीं';
 
   @override
   String get deleteDownloadedFiles => 'डाउनलोड भइल फाइल के हटा दिहल जाव';

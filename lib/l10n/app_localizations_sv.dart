@@ -1206,7 +1206,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get downloadAction => 'Ladda ner';
 
   @override
-  String get resumeDownload => 'Återuppta nedladdning';
+  String get resumeDownload => 'Fortsätt nedladdningen';
 
   @override
   String get deleteDownloadedFiles => 'Ta bort nedladdade filer';

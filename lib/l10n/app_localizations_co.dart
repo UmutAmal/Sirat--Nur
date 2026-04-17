@@ -1211,7 +1211,7 @@ class AppLocalizationsCo extends AppLocalizations {
   String get downloadAction => 'Scaricate';
 
   @override
-  String get resumeDownload => 'Curriculum Download';
+  String get resumeDownload => 'Cuntinuà a scaricamentu';
 
   @override
   String get deleteDownloadedFiles => 'Sguassà i schedari telecaricati';

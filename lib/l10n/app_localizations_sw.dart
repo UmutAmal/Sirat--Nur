@@ -1210,7 +1210,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get downloadAction => 'Pakua';
 
   @override
-  String get resumeDownload => 'Endelea Kupakua';
+  String get resumeDownload => 'Endelea kupakua';
 
   @override
   String get deleteDownloadedFiles => 'Futa Faili Zilizopakuliwa';

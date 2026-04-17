@@ -1207,7 +1207,7 @@ class AppLocalizationsAz extends AppLocalizations {
   String get downloadAction => 'Yüklə';
 
   @override
-  String get resumeDownload => 'Yükləməni davam etdirin';
+  String get resumeDownload => 'Endirməyə davam edin';
 
   @override
   String get deleteDownloadedFiles => 'Yüklənmiş faylları silin';

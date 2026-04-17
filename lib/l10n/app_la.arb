@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Reparare / Download Absentis",
   "downloadAction": "Download",
-  "resumeDownload": "Proin Download",
+  "resumeDownload": "continue download",
   "deleteDownloadedFiles": "Delere Downloaded Lima",
   "downloadCancelling": "Revocatio...",
   "downloadCanceledForReciter": "Download cancellatum pro {reciter}.",

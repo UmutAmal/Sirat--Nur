@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Herstel / Aflaai ontbreek",
   "downloadAction": "Laai af",
-  "resumeDownload": "Hervat aflaai",
+  "resumeDownload": "Gaan voort met aflaai",
   "deleteDownloadedFiles": "Vee afgelaaide lêers uit",
   "downloadCancelling": "Kanselleer tans …",
   "downloadCanceledForReciter": "Aflaai is gekanselleer vir {reciter}.",

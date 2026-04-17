@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Tamîrkirin / Daxistin winda ye",
   "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
+  "resumeDownload": "Daxistinê bidomînin",
   "deleteDownloadedFiles": "Pelên dakêşandî jêbirin",
   "downloadCancelling": "Betalkirin...",
   "downloadCanceledForReciter": "Daxistin ji bo {reciter} hat betalkirin.",

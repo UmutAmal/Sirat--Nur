@@ -1206,7 +1206,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get downloadAction => 'Ngundhuh';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Terusake download';
 
   @override
   String get deleteDownloadedFiles => 'Busak File sing Diundhuh';

@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Reparation/download mangler",
   "downloadAction": "Hent",
-  "resumeDownload": "Genoptag download",
+  "resumeDownload": "Fortsæt med at downloade",
   "deleteDownloadedFiles": "Slet downloadede filer",
   "downloadCancelling": "Annullerer...",
   "downloadCanceledForReciter": "Download annulleret for {reciter}.",

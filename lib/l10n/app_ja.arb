@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "修復/ダウンロードがありません",
   "downloadAction": "ダウンロード",
-  "resumeDownload": "ダウンロードを再開する",
+  "resumeDownload": "ダウンロードを続ける",
   "deleteDownloadedFiles": "ダウンロードしたファイルを削除する",
   "downloadCancelling": "キャンセル中...",
   "downloadCanceledForReciter": "{reciter} のダウンロードがキャンセルされました。",

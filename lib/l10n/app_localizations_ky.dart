@@ -1213,7 +1213,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get downloadAction => 'Жүктөп алуу';
 
   @override
-  String get resumeDownload => 'Жүктөөнү улантуу';
+  String get resumeDownload => 'Жүктөп алууну улантуу';
 
   @override
   String get deleteDownloadedFiles => 'Жүктөлгөн файлдарды жок кылуу';

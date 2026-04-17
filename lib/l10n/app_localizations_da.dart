@@ -1209,7 +1209,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get downloadAction => 'Hent';
 
   @override
-  String get resumeDownload => 'Genoptag download';
+  String get resumeDownload => 'Fortsæt med at downloade';
 
   @override
   String get deleteDownloadedFiles => 'Slet downloadede filer';

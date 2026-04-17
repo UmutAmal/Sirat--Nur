@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Pembaikan / Muat Turun Hilang",
   "downloadAction": "Muat turun",
-  "resumeDownload": "Sambung Muat Turun",
+  "resumeDownload": "Teruskan muat turun",
   "deleteDownloadedFiles": "Padam Fail yang Dimuat Turun",
   "downloadCancelling": "Membatalkan...",
   "downloadCanceledForReciter": "Muat turun dibatalkan untuk {reciter}.",

@@ -1210,7 +1210,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get downloadAction => 'La\'u mai';
 
   @override
-  String get resumeDownload => 'Toe sii maia';
+  String get resumeDownload => 'Fa\'aauau le download';
 
   @override
   String get deleteDownloadedFiles => 'Aveese faila ua siiina mai';

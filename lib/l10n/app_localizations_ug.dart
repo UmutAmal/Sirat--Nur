@@ -1208,7 +1208,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get downloadAction => 'چۈشۈرۈش';
 
   @override
-  String get resumeDownload => 'چۈشۈرۈشنى ئەسلىگە كەلتۈرۈش';
+  String get resumeDownload => 'چۈشۈرۈشنى داۋاملاشتۇرۇڭ';
 
   @override
   String get deleteDownloadedFiles => 'چۈشۈرۈلگەن ھۆججەتلەرنى ئۆچۈرۈڭ';

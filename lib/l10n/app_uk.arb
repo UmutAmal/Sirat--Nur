@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Відновлення/завантаження відсутні",
   "downloadAction": "Завантажити",
-  "resumeDownload": "Відновити завантаження",
+  "resumeDownload": "Продовжити завантаження",
   "deleteDownloadedFiles": "Видалити завантажені файли",
   "downloadCancelling": "Скасування...",
   "downloadCanceledForReciter": "Завантаження для {reciter} скасовано.",

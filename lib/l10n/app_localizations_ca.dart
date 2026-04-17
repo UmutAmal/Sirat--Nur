@@ -1219,7 +1219,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get downloadAction => 'Descarregar';
 
   @override
-  String get resumeDownload => 'Descàrrega de currículum';
+  String get resumeDownload => 'Continua la baixada';
 
   @override
   String get deleteDownloadedFiles => 'Suprimeix els fitxers descarregats';

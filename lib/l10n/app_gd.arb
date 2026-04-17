@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Luchdaich sìos",
-  "resumeDownload": "Ath-thòiseachadh a luchdachadh sìos",
+  "resumeDownload": "Lean air adhart leis an luchdachadh sìos",
   "deleteDownloadedFiles": "Sguab às Faidhlichean a chaidh a luchdachadh sìos",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Chaidh an luchdachadh sìos a chuir dheth airson {reciter}.",

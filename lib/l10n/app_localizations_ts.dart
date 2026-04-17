@@ -1219,7 +1219,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get downloadAction => 'Downloda';
 
   @override
-  String get resumeDownload => 'Sungula ku Download';
+  String get resumeDownload => 'Yana emahlweni u kopa';
 
   @override
   String get deleteDownloadedFiles => 'Susa Tifayili Leti Dawunilodiweke';

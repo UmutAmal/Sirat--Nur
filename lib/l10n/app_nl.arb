@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Reparatie/download ontbreekt",
   "downloadAction": "Downloaden",
-  "resumeDownload": "Hervatten downloaden",
+  "resumeDownload": "Ga door met downloaden",
   "deleteDownloadedFiles": "Verwijder gedownloade bestanden",
   "downloadCancelling": "Annuleren...",
   "downloadCanceledForReciter": "Download geannuleerd voor {reciter}.",

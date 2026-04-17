@@ -1211,7 +1211,7 @@ class AppLocalizationsKa extends AppLocalizations {
   String get downloadAction => 'ჩამოტვირთვა';
 
   @override
-  String get resumeDownload => 'რეზიუმეს ჩამოტვირთვა';
+  String get resumeDownload => 'განაგრძეთ ჩამოტვირთვა';
 
   @override
   String get deleteDownloadedFiles => 'ჩამოტვირთული ფაილების წაშლა';

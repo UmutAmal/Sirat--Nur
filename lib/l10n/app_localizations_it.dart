@@ -1219,7 +1219,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get downloadAction => 'Scarica';
 
   @override
-  String get resumeDownload => 'Riprendi il download';
+  String get resumeDownload => 'Continua il download';
 
   @override
   String get deleteDownloadedFiles => 'Elimina i file scaricati';

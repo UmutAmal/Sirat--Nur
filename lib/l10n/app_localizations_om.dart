@@ -1217,7 +1217,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get downloadAction => 'Buusuu';
 
   @override
-  String get resumeDownload => 'Resume Download gochuudhaan';
+  String get resumeDownload => 'Download itti fufaa';
 
   @override
   String get deleteDownloadedFiles => 'Faayilota Buufaman Haquu';

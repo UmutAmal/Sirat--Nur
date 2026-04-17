@@ -1215,7 +1215,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get downloadAction => 'Luchdaich sìos';
 
   @override
-  String get resumeDownload => 'Ath-thòiseachadh a luchdachadh sìos';
+  String get resumeDownload => 'Lean air adhart leis an luchdachadh sìos';
 
   @override
   String get deleteDownloadedFiles =>

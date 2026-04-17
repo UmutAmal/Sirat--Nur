@@ -1208,7 +1208,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get downloadAction => 'Elŝutu';
 
   @override
-  String get resumeDownload => 'Rekomencu Elŝuton';
+  String get resumeDownload => 'Daŭrigu elŝuton';
 
   @override
   String get deleteDownloadedFiles => 'Forigu elŝutitajn dosierojn';

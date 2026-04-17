@@ -1193,7 +1193,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get downloadAction => 'አውርድ';
 
   @override
-  String get resumeDownload => 'ማውረድ ከቆመበት ቀጥል';
+  String get resumeDownload => 'ማውረድ ይቀጥሉ';
 
   @override
   String get deleteDownloadedFiles => 'የወረዱ ፋይሎችን ሰርዝ';

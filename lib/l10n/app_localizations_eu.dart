@@ -1209,7 +1209,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get downloadAction => 'Deskargatu';
 
   @override
-  String get resumeDownload => 'Berekin deskargatu';
+  String get resumeDownload => 'Jarraitu deskargatzen';
 
   @override
   String get deleteDownloadedFiles => 'Ezabatu deskargatutako fitxategiak';

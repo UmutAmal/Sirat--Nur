@@ -1221,7 +1221,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get downloadAction => 'Télécharger';
 
   @override
-  String get resumeDownload => 'Reprendre le téléchargement';
+  String get resumeDownload => 'Continuer le téléchargement';
 
   @override
   String get deleteDownloadedFiles => 'Supprimer les fichiers téléchargés';

@@ -1212,7 +1212,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get downloadAction => 'Downloaden';
 
   @override
-  String get resumeDownload => 'Hervatten downloaden';
+  String get resumeDownload => 'Ga door met downloaden';
 
   @override
   String get deleteDownloadedFiles => 'Verwijder gedownloade bestanden';

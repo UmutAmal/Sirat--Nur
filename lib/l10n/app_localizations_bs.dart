@@ -1208,7 +1208,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get downloadAction => 'Preuzmi';
 
   @override
-  String get resumeDownload => 'Nastavi preuzimanje';
+  String get resumeDownload => 'Nastavite preuzimanje';
 
   @override
   String get deleteDownloadedFiles => 'Izbrišite preuzete datoteke';

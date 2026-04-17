@@ -1207,7 +1207,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Daxistinê bidomînin';
 
   @override
   String get deleteDownloadedFiles => 'Pelên dakêşandî jêbirin';

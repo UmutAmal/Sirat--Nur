@@ -1213,7 +1213,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get downloadAction => 'Pobierz';
 
   @override
-  String get resumeDownload => 'Wznów pobieranie';
+  String get resumeDownload => 'Kontynuuj pobieranie';
 
   @override
   String get deleteDownloadedFiles => 'Usuń pobrane pliki';

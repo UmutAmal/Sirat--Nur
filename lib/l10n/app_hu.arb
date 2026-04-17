@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Javítás/letöltés hiányzik",
   "downloadAction": "Letöltés",
-  "resumeDownload": "Letöltés folytatása",
+  "resumeDownload": "Folytassa a letöltést",
   "deleteDownloadedFiles": "Letöltött fájlok törlése",
   "downloadCancelling": "Lemondás...",
   "downloadCanceledForReciter": "A {reciter} letöltése megszakítva.",

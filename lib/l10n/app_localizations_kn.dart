@@ -1209,7 +1209,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get downloadAction => 'ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ';
 
   @override
-  String get resumeDownload => 'ಡೌನ್‌ಲೋಡ್ ಅನ್ನು ಪುನರಾರಂಭಿಸಿ';
+  String get resumeDownload => 'ಡೌನ್‌ಲೋಡ್ ಮುಂದುವರಿಸಿ';
 
   @override
   String get deleteDownloadedFiles => 'ಡೌನ್‌ಲೋಡ್ ಮಾಡಿದ ಫೈಲ್‌ಗಳನ್ನು ಅಳಿಸಿ';

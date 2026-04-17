@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "ޑައުންލޯޑް",
-  "resumeDownload": "ރިޒުޔޫ ޑައުންލޯޑް",
+  "resumeDownload": "ޑައުންލޯޑް ކުރިއަށް ގެންދަވާށެވެ",
   "deleteDownloadedFiles": "ޑައުންލޯޑް ކުރެވިފައިވާ ފައިލްތައް ޑިލީޓްކުރުން",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "{reciter} އަށް ޑައުންލޯޑް ކެންސަލް ކޮށްފި އެވެ.",

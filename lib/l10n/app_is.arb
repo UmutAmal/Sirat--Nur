@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Viðgerð / niðurhal vantar",
   "downloadAction": "Sækja",
-  "resumeDownload": "Halda niðurhal",
+  "resumeDownload": "Haltu áfram að hlaða niður",
   "deleteDownloadedFiles": "Eyða niðurhaluðum skrám",
   "downloadCancelling": "Hættir við...",
   "downloadCanceledForReciter": "Niðurhali hætt fyrir {reciter}.",

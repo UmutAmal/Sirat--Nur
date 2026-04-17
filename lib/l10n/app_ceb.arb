@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Pag-ayo / Pag-download Nawala",
   "downloadAction": "Pag-download",
-  "resumeDownload": "Ipadayon ang Pag-download",
+  "resumeDownload": "Ipadayon ang pag-download",
   "deleteDownloadedFiles": "I-delete ang Na-download nga mga File",
   "downloadCancelling": "Nagkanselar...",
   "downloadCanceledForReciter": "Gikansela ang pag-download alang sa {reciter}.",

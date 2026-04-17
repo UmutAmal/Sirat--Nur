@@ -1213,7 +1213,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Tohizo ny fampidinana';
 
   @override
   String get deleteDownloadedFiles => 'Fafao ny rakitra voasintona';

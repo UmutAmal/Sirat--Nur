@@ -1206,7 +1206,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get downloadAction => 'Telechaje';
 
   @override
-  String get resumeDownload => 'Rezime Telechaje';
+  String get resumeDownload => 'Kontinye telechaje';
 
   @override
   String get deleteDownloadedFiles => 'Efase fichye telechaje yo';

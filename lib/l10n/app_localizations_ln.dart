@@ -1212,7 +1212,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get downloadAction => 'Kozwa';
 
   @override
-  String get resumeDownload => 'Kozongela Téléchargement';
+  String get resumeDownload => 'Koba ko télécharger';
 
   @override
   String get deleteDownloadedFiles => 'Bolongola ba fichiers oyo o télécharger';

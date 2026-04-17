@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Whakatikaina / Tikiake Ngaro",
   "downloadAction": "Tikiake",
-  "resumeDownload": "Tukuna ano",
+  "resumeDownload": "Haere tonu te tango",
   "deleteDownloadedFiles": "Mukua nga Kōnae kua Tikiake",
   "downloadCancelling": "Whakakore...",
   "downloadCanceledForReciter": "Kua whakakorehia te tikiake mo {reciter}.",

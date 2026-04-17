@@ -210,7 +210,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1542));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1535));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -223,6 +223,32 @@ void main() {
         localeArbs['ti']!['resumeDownload'],
         isNot(english['resumeDownload']),
       );
+      for (final locale in ['ca', 'gl', 'hy', 'ka', 'zh', 'zh_CN', 'zh_TW']) {
+        final value = localeArbs[locale]!['resumeDownload'] as String;
+        expect(
+          value,
+          isNot(english['resumeDownload']),
+          reason: 'app_$locale.arb still uses English for resumeDownload',
+        );
+        expect(
+          value,
+          predicate<String>(
+            (text) => !const [
+              'curriculum',
+              'Curriculum',
+              'currículum',
+              'Currículum',
+              'vitae',
+              '简历',
+              '履歷',
+              'Ռեզյում',
+              'რეზიუმ',
+            ].any(text.contains),
+            'not a CV/resume-noun translation',
+          ),
+          reason: 'app_$locale.arb maps resumeDownload to a CV/resume noun',
+        );
+      }
       for (final locale in ['lus', 'mai', 'sa', 'ti']) {
         expect(
           localeArbs[locale]!['deleteDownloadedFiles'],
@@ -944,6 +970,33 @@ void main() {
       expect(failedValue, 'Falha ao baixar');
       expect(managerValue, 'Download Manager');
       expect(deleteValue, 'Delete Downloaded Files');
+    });
+
+    test('rejects resume download translations that mean curriculum vitae', () {
+      final catalanValue = resolveTranslatedArbValue(
+        key: 'resumeDownload',
+        source: 'Resume Download',
+        currentValue: 'Descàrrega de currículum',
+        candidate: 'Continua la baixada',
+      );
+
+      final chineseValue = resolveTranslatedArbValue(
+        key: 'resumeDownload',
+        source: 'Resume Download',
+        currentValue: '简历下载',
+        candidate: '继续下载',
+      );
+
+      final georgianValue = resolveTranslatedArbValue(
+        key: 'resumeDownload',
+        source: 'Resume Download',
+        currentValue: 'რეზიუმეს ჩამოტვირთვა',
+        candidate: 'ჩამოტვირთვის გაგრძელება',
+      );
+
+      expect(catalanValue, 'Continua la baixada');
+      expect(chineseValue, '继续下载');
+      expect(georgianValue, 'ჩამოტვირთვის გაგრძელება');
     });
 
     test('rejects multiline diagnostics output', () {

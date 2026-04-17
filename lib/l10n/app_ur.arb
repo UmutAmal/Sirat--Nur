@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "مرمت / ڈاؤن لوڈ غائب",
   "downloadAction": "ڈاؤن لوڈ کریں۔",
-  "resumeDownload": "ڈاؤن لوڈ دوبارہ شروع کریں۔",
+  "resumeDownload": "ڈاؤن لوڈ جاری رکھیں",
   "deleteDownloadedFiles": "ڈاؤن لوڈ کردہ فائلوں کو حذف کریں۔",
   "downloadCancelling": "منسوخ ہو رہا ہے...",
   "downloadCanceledForReciter": "{reciter} کے لیے ڈاؤن لوڈ منسوخ کر دیا گیا۔",

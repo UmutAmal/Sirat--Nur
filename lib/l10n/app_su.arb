@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Ngalereskeun / Ngundeur Leungit",
   "downloadAction": "Ngundeur",
-  "resumeDownload": "Neruskeun Ngundeur",
+  "resumeDownload": "Nuluykeun ngundeur",
   "deleteDownloadedFiles": "Pupus Payil anu Diunduh",
   "downloadCancelling": "Ngabolaykeun...",
   "downloadCanceledForReciter": "Ngundeur dibatalkeun pikeun {reciter}.",

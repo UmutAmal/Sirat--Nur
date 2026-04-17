@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "修复/下载丢失",
   "downloadAction": "下载",
-  "resumeDownload": "简历下载",
+  "resumeDownload": "继续下载",
   "deleteDownloadedFiles": "删除下载的文件",
   "downloadCancelling": "正在取消...",
   "downloadCanceledForReciter": "{reciter} 的下载已取消。",

@@ -1208,7 +1208,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get downloadAction => 'Unduh';
 
   @override
-  String get resumeDownload => 'Lanjutkan Unduhan';
+  String get resumeDownload => 'Lanjutkan pengunduhan';
 
   @override
   String get deleteDownloadedFiles => 'Hapus File yang Diunduh';

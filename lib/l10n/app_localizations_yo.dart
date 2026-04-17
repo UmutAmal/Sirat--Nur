@@ -1205,7 +1205,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get downloadAction => 'Gba lati ayelujara';
 
   @override
-  String get resumeDownload => 'Bẹrẹ Gbigbasilẹ';
+  String get resumeDownload => 'Tesiwaju gbigba lati ayelujara';
 
   @override
   String get deleteDownloadedFiles => 'Pa awọn faili ti a gbasile';

@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Tsy hita",
   "downloadAction": "Download",
-  "resumeDownload": "Resume Download",
+  "resumeDownload": "Tohizo ny fampidinana",
   "deleteDownloadedFiles": "Fafao ny rakitra voasintona",
   "downloadCancelling": "Manafoana...",
   "downloadCanceledForReciter": "Nofoanana ny fampidinana noho ny {reciter}.",

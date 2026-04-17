@@ -1211,7 +1211,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get downloadAction => 'ഡൗൺലോഡ് ചെയ്യുക';
 
   @override
-  String get resumeDownload => 'ഡൗൺലോഡ് പുനരാരംഭിക്കുക';
+  String get resumeDownload => 'ഡൗൺലോഡ് തുടരുക';
 
   @override
   String get deleteDownloadedFiles => 'ഡൗൺലോഡ് ചെയ്ത ഫയലുകൾ ഇല്ലാതാക്കുക';

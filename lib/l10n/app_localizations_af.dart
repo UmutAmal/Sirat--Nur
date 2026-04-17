@@ -1210,7 +1210,7 @@ class AppLocalizationsAf extends AppLocalizations {
   String get downloadAction => 'Laai af';
 
   @override
-  String get resumeDownload => 'Hervat aflaai';
+  String get resumeDownload => 'Gaan voort met aflaai';
 
   @override
   String get deleteDownloadedFiles => 'Vee afgelaaide lêers uit';

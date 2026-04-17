@@ -1216,7 +1216,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get downloadAction => 'Descărcați';
 
   @override
-  String get resumeDownload => 'Reluați descărcarea';
+  String get resumeDownload => 'Continuați descărcarea';
 
   @override
   String get deleteDownloadedFiles => 'Ștergeți fișierele descărcate';

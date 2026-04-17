@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Reparaasje / Download Missing",
   "downloadAction": "Download",
-  "resumeDownload": "Ferfetsje Download",
+  "resumeDownload": "Trochgean download",
   "deleteDownloadedFiles": "Wiskje ynladen triemmen",
   "downloadCancelling": "Annulearje...",
   "downloadCanceledForReciter": "Download annulearre foar {reciter}.",

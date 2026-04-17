@@ -1177,7 +1177,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get downloadAction => '下载';
 
   @override
-  String get resumeDownload => '简历下载';
+  String get resumeDownload => '继续下载';
 
   @override
   String get deleteDownloadedFiles => '删除下载的文件';
@@ -2818,7 +2818,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get downloadAction => '下载';
 
   @override
-  String get resumeDownload => '简历下载';
+  String get resumeDownload => '继续下载';
 
   @override
   String get deleteDownloadedFiles => '删除下载的文件';
@@ -4459,7 +4459,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get downloadAction => '下載';
 
   @override
-  String get resumeDownload => '履歷下載';
+  String get resumeDownload => '繼續下載';
 
   @override
   String get deleteDownloadedFiles => '刪除下載的文件';

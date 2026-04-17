@@ -1213,7 +1213,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get downloadAction => 'Скачать';
 
   @override
-  String get resumeDownload => 'Возобновить загрузку';
+  String get resumeDownload => 'Продолжить загрузку';
 
   @override
   String get deleteDownloadedFiles => 'Удалить загруженные файлы';

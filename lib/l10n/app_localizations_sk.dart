@@ -1211,7 +1211,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get downloadAction => 'Stiahnuť';
 
   @override
-  String get resumeDownload => 'Obnoviť sťahovanie';
+  String get resumeDownload => 'Pokračujte v sťahovaní';
 
   @override
   String get deleteDownloadedFiles => 'Odstrániť stiahnuté súbory';

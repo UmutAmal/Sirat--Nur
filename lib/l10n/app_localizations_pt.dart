@@ -1214,7 +1214,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get downloadAction => 'Baixar';
 
   @override
-  String get resumeDownload => 'Retomar download';
+  String get resumeDownload => 'Continuar download';
 
   @override
   String get deleteDownloadedFiles => 'Excluir arquivos baixados';

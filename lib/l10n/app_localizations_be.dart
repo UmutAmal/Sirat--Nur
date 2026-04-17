@@ -1214,7 +1214,7 @@ class AppLocalizationsBe extends AppLocalizations {
   String get downloadAction => 'Спампаваць';
 
   @override
-  String get resumeDownload => 'Аднавіць загрузку';
+  String get resumeDownload => 'Працягнуць загрузку';
 
   @override
   String get deleteDownloadedFiles => 'Выдаліць спампаваныя файлы';

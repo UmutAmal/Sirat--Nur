@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Таъмир / Зеркашӣ гумшуда",
   "downloadAction": "Зеркашӣ кунед",
-  "resumeDownload": "Боргириро идома диҳед",
+  "resumeDownload": "Зеркаширо идома диҳед",
   "deleteDownloadedFiles": "Файлҳои зеркашидашударо нест кунед",
   "downloadCancelling": "Бекор карда мешавад...",
   "downloadCanceledForReciter": "Зеркашӣ барои {reciter} бекор карда шуд.",

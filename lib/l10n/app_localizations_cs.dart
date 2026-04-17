@@ -1209,7 +1209,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get downloadAction => 'Stáhnout';
 
   @override
-  String get resumeDownload => 'Obnovit stahování';
+  String get resumeDownload => 'Pokračujte ve stahování';
 
   @override
   String get deleteDownloadedFiles => 'Smazat stažené soubory';

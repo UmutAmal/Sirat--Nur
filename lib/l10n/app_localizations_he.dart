@@ -1200,7 +1200,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get downloadAction => 'הורד';
 
   @override
-  String get resumeDownload => 'המשך הורדה';
+  String get resumeDownload => 'המשך להוריד';
 
   @override
   String get deleteDownloadedFiles => 'מחק קבצים שהורדת';

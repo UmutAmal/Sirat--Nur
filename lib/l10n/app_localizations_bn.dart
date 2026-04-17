@@ -1208,7 +1208,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get downloadAction => 'ডাউনলোড করুন';
 
   @override
-  String get resumeDownload => 'ডাউনলোড পুনরায় শুরু করুন';
+  String get resumeDownload => 'ডাউনলোড চালিয়ে যান';
 
   @override
   String get deleteDownloadedFiles => 'ডাউনলোড করা ফাইল মুছুন';

@@ -1209,7 +1209,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get downloadAction => 'Download';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Weider eroflueden';
 
   @override
   String get deleteDownloadedFiles => 'Läschen erofgeluede Dateien';

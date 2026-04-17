@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "إصلاح / تنزيل مفقود",
   "downloadAction": "تحميل",
-  "resumeDownload": "استئناف التنزيل",
+  "resumeDownload": "متابعة التنزيل",
   "deleteDownloadedFiles": "حذف الملفات التي تم تنزيلها",
   "downloadCancelling": "جارٍ الإلغاء...",
   "downloadCanceledForReciter": "تم إلغاء التنزيل لـ {reciter}.",

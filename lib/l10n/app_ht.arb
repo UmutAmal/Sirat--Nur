@@ -391,7 +391,7 @@
   },
   "redownloadMissingRepair": "Reparasyon / Telechaje ki manke",
   "downloadAction": "Telechaje",
-  "resumeDownload": "Rezime Telechaje",
+  "resumeDownload": "Kontinye telechaje",
   "deleteDownloadedFiles": "Efase fichye telechaje yo",
   "downloadCancelling": "Anile...",
   "downloadCanceledForReciter": "Telechajman anile pou {reciter}.",
