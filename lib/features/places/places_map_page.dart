@@ -65,8 +65,8 @@ bool isSecurePlacesTileUrlTemplate(String rawTemplate) {
       uri.isScheme('https') &&
       uri.host.isNotEmpty &&
       uri.userInfo.isEmpty &&
-      uri.query.isEmpty &&
-      uri.fragment.isEmpty &&
+      !uri.hasQuery &&
+      !uri.hasFragment &&
       !_isPublicPlacesTileHost(uri.host);
 }
 
@@ -102,8 +102,8 @@ Uri resolvePlacesOverpassEndpoint(String rawEndpoint) {
       !uri.isScheme('https') ||
       uri.host.isEmpty ||
       uri.userInfo.isNotEmpty ||
-      uri.query.isNotEmpty ||
-      uri.fragment.isNotEmpty ||
+      uri.hasQuery ||
+      uri.hasFragment ||
       _isPublicOverpassHost(uri.host)) {
     throw const FormatException(
       'Places Overpass endpoint must be an HTTPS proxy/provider URL without public Overpass hosts, user info, query, or fragment.',

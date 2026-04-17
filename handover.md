@@ -13057,3 +13057,54 @@
 
 ### Sonraki Adim
 - Yeni turda Places URL guard'larinda empty query/fragment ve public provider bypass ihtimali, ardindan kalan l10n debt raporu dar kapsamli incelenecek.
+
+## 2026-04-17 TUR-308 - Places Provider URL Empty Query Fragment Guard
+
+### Yapilan Islem
+- Places tile template guard'i query/fragment icerigini degil query/fragment varligini denetleyecek sekilde sertlestirildi.
+- Overpass proxy/provider endpoint guard'i bos `?` ve bos `#` tasiyan URL'leri de reddedecek hale getirildi.
+- Tile template ve Overpass endpoint icin bos query/fragment regresyon testleri eklendi.
+
+### Kanit
+- Tile URL query varligi reddi: `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:68`
+- Tile URL fragment varligi reddi: `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:69`
+- Overpass endpoint query varligi reddi: `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:105`
+- Overpass endpoint fragment varligi reddi: `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:106`
+- Bos tile query testi: `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart:70`
+- Bos tile fragment testi: `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart:77`
+- Bos Overpass query testi: `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart:244`
+- Bos Overpass fragment testi: `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart:253`
+
+### Neden Yapildi
+- Onceki kontrol `uri.query.isEmpty` ve `uri.fragment.isEmpty` uzerindeydi; bu, URL'de bos `?` veya bos `#` isaretinin bulunmasini ayrica reddetmiyordu.
+- Places harita ve Overpass saglayici ayarlari kullanici konumuna dayali dini/yerel mekan onerileri urettigi icin provider URL'si suslenmemis, denetlenebilir ve explicit olmali.
+- Bos query/fragment kabul edilirse ileride token veya cache-bypass gibi URL dekorasyonlariyla ayni policy boslugunun tekrar acilma riski kalirdi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Places tile ve Overpass endpoint guard'lari artik query/fragment varligini bos bile olsa reddediyor.
+- Gecerli `https://provider/{z}/{x}/{y}.png` tile template'i ve temiz HTTPS proxy endpoint'i calismaya devam ediyor.
+- Runtime harita akisi degismedi; yalnizca konfigrasyon guvenlik kapisi daraltildi.
+
+### Test Sonucu
+- Odak test: `flutter test test\features\places\places_map_page_test.dart` PASS (`8/8`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`533/533`)
+
+### Risk Degisimi
+- Bos query/fragment iceren Places tile template'in temiz provider URL'si sayilmasi riski: `10/25 -> 2/25`
+- Bos query/fragment iceren Overpass endpoint'in temiz proxy/provider URL'si sayilmasi riski: `10/25 -> 2/25`
+
+### Rollback Plani
+- `isSecurePlacesTileUrlTemplate` icindeki `!uri.hasQuery` ve `!uri.hasFragment` kontrolleri eski `query.isEmpty` / `fragment.isEmpty` kontrolune dondurulur.
+- `resolvePlacesOverpassEndpoint` icindeki `uri.hasQuery` ve `uri.hasFragment` kontrolleri eski `query.isNotEmpty` / `fragment.isNotEmpty` kontrolune dondurulur.
+- Eklenen bos query/fragment Places testleri kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda kalan l10n debt ve translation fallback sinirlari, ardindan dependency outdated riskleri resmi paket constraint'leriyle dar kapsamli incelenecek.

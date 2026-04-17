@@ -70,6 +70,20 @@ void main() {
       expect(
         resolvePlacesMapAvailability(
           configuredLocation,
+          tileUrlTemplate: 'https://tiles.provider.invalid/{z}/{x}/{y}.png?',
+        ),
+        PlacesMapAvailability.tileConfigRequired,
+      );
+      expect(
+        resolvePlacesMapAvailability(
+          configuredLocation,
+          tileUrlTemplate: 'https://tiles.provider.invalid/{z}/{x}/{y}.png#',
+        ),
+        PlacesMapAvailability.tileConfigRequired,
+      );
+      expect(
+        resolvePlacesMapAvailability(
+          configuredLocation,
           tileUrlTemplate:
               'https://user:pass@tiles.provider.invalid/{z}/{x}/{y}.png',
         ),
@@ -228,8 +242,16 @@ void main() {
       throwsFormatException,
     );
     expect(
+      () => resolvePlacesOverpassEndpoint('https://overpass.example/api?'),
+      throwsFormatException,
+    );
+    expect(
       () =>
           resolvePlacesOverpassEndpoint('https://overpass.example/api#secret'),
+      throwsFormatException,
+    );
+    expect(
+      () => resolvePlacesOverpassEndpoint('https://overpass.example/api#'),
       throwsFormatException,
     );
     expect(
