@@ -101,6 +101,16 @@ void main() {
           'source_license': 'verified-open-license',
           'verified_at': '2026-04-16T00:00:00Z',
         },
+        {
+          'surah_number': 2,
+          'ayah_number': 287,
+          'tafsir_source': 'en.sahih',
+          'language': 'en',
+          'tafsir_text': 'Out-of-range ayah must be ignored',
+          'source': 'Verified tafsir archive',
+          'source_license': 'verified-open-license',
+          'verified_at': '2026-04-16T00:00:00Z',
+        },
       ],
       surahNumber: 2,
       tafsirSource: 'en.ibn_kathir',
@@ -113,6 +123,27 @@ void main() {
     expect(rows.single['source'], 'Verified tafsir archive');
     expect(rows.single['source_license'], 'verified-open-license');
     expect(rows.single['verified_at'], '2026-04-16T00:00:00.000Z');
+  });
+
+  test('tafsir service rejects out-of-range Quran references', () {
+    final rows = TafsirLocalService.normalizeVerifiedTafsirRows(
+      [
+        {
+          'surah_number': 115,
+          'ayah_number': 1,
+          'tafsir_source': 'en.ibn_kathir',
+          'language': 'en',
+          'tafsir_text': 'Out-of-range surah must be ignored',
+          'source': 'Verified tafsir archive',
+          'source_license': 'verified-open-license',
+          'verified_at': '2026-04-16T00:00:00Z',
+        },
+      ],
+      surahNumber: 115,
+      tafsirSource: 'en.ibn_kathir',
+    );
+
+    expect(rows, isEmpty);
   });
 
   test('tafsir page default source avoids force unwraps', () {

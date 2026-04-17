@@ -14590,3 +14590,59 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Quran/tafsir semantik kaynak guard'i, l10n debt ve runtime config yuzeyleri taranacak.
+
+## 2026-04-17 TUR-334 - Tafsir Runtime Rejects Out-Of-Range Quran References
+
+### Yapilan Islem
+- TUR-333 commit/push sonrasi repo tekrar dogrulandi: remote `origin`, branch `master`, status temiz ve remote ile senkrondu.
+- Yeni dongude `flutter doctor` calistirildi; Android/Flutter zinciri saglikli, Chrome/Visual Studio eksikleri web/Windows hedefleri icin non-blocking olarak not edildi.
+- Tafsir seed generator ve runtime local service karsilastirildi.
+- Seed generator zaten canonical Quran ayet sayilarina gore `ayah_number` ust sinirini dogruluyordu.
+- Runtime `TafsirLocalService.normalizeVerifiedTafsirRows` ise provenance'li cloud satirlarinda yalniz `ayah_number >= 1` kontrolu yapiyordu.
+- Lib tarafina canonical 114 sure ayet sayisi tablosu eklendi.
+- Runtime normalization artik hem surah araligini hem de ilgili surenin ayet ust sinirini kontrol ediyor.
+
+### Kanit
+- Kok risk: `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:270` once ayet validasyonu sadece `verseNumber == null || verseNumber < 1` seviyesindeydi.
+- Referans: `A:\Way of Allah\sirat_i_nur\tool\generate_tafsir_seed.dart:257` seed generator `quranAyahCountsBySurah[surahNumber]` ile ust siniri zaten kontrol ediyordu.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:36` runtime icin canonical `_quranAyahCountsBySurah` tablosu eklendi.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:243` `_isValidQuranReference` surah ve ayah araligini tek noktada dogruluyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart:274` normalization artik out-of-range referansi cache satirina cevirmeden skip ediyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart:109` Bakara 287 gibi out-of-range ayetin provenance olsa bile ignore edildigini dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart:128` surah 115 gibi out-of-range surenin ignore edildigini dogruluyor.
+
+### Neden Yapildi
+- Tafsir icerigi Quran referansina birebir bagli oldugu icin gecersiz sure/ayet numarali satirlar hicbir kosulda cache'e girmemeli.
+- Cloud verisi source/source_license/verified_at tasisa bile Quran referansinin canonical araliga uymasi zorunlu.
+- Bu fix seed pipeline ile runtime ingestion davranisini ayni dini referans guard'ina getirir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\tafsir_local_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\tafsir_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Runtime cloud tafsir satirlari artik canonical Quran referansina uymadan cache'e yazilamaz.
+- Mevcut desteklenen kaynak alias/canonicalization davranisi degismedi.
+- Cache-only tafsir loader ve UI hata lokalizasyon akisi degismedi.
+
+### Test Sonucu
+- Format: `dart format lib\core\services\tafsir_local_service.dart test\features\quran\tafsir_page_test.dart` PASS
+- Odak test: `flutter test test\features\quran\tafsir_page_test.dart --reporter compact` PASS (`8/8`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`561/561`)
+
+### Risk Degisimi
+- Provenance'li ama Quran referansi gecersiz tafsir satirinin cache'e girmesi riski: `12/25 -> 2/25`
+- Seed/runtime tafsir validasyonunun ayrismasi riski: `10/25 -> 2/25`
+- Kalan risk: Tafsir metninin semantik/dini dogrulugu kaynak manifest kalitesi ve operator audit'ine bagli.
+
+### Rollback Plani
+- `_quranAyahCountsBySurah` ve `_isValidQuranReference` kaldirilir.
+- `normalizeVerifiedTafsirRows` ayet validasyonu onceki `verseNumber < 1` kontrolune dondurulur.
+- Eklenen out-of-range tafsir testleri kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Supabase config, l10n debt ve offline/audio katalog guard'lari taranacak.
