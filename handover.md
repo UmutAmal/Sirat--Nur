@@ -14121,6 +14121,71 @@
 ### Sonraki Adim
 - Commit/push sonrasi dongu basa alinacak; siradaki taramada resmi kurum profili veri kapsami, l10n same-as-English borcu, Supabase content/audio seed zinciri ve kalan tracked artifact/dead-file riskleri yeniden skorlanacak.
 
+## 2026-04-17 TUR-329 - Lock Partial Quran Audio Storage Seeds To Dev Output
+
+### Yapilan Islem
+- TUR-328 commit/push sonrasi repo tekrar dogrulandi: remote `origin` dogru, branch `master`, calisma agaci remote ile senkrondu.
+- Quran audio sovereignty workflow yeniden incelendi.
+- `download_verified_quran_audio.dart`, `upload_quran_audio_storage.dart`, `generate_quran_audio_storage_seed.dart`, README workflow ve ilgili testler tarandi.
+- Production storage seed uretiminde parse asamasina ek olarak SQL builder asamasinda da tam katalog zorunlulugu eklendi.
+- `--allow-partial` ile uretilen SQL artik acik `DEVELOPMENT-ONLY PARTIAL SEED` basligi tasiyor.
+- `--allow-partial` kullanildiginda output path sadece `build/` altinda kabul ediliyor; production seed dosyasi `content_seed_quran_audio_storage.sql` kazayla kismen uretilemiyor.
+- README Quran Audio Sovereignty Workflow, partial seedlerin sadece `build/` altina yazilabilecegini belirtecek sekilde guncellendi.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:320` parse `requireCompleteCatalog: !allowPartial` ile partial manifesti kabul edebiliyordu.
+- Kök risk: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:324` builder'a partial liste aktarilsa da builder eski davranista tam katalog kontrolu yapmiyordu.
+- Kök risk: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:229` eski SQL basligi partial modda bile `Incomplete mirror manifests are rejected` diyerek yanlis guvence verebiliyordu.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:211` `buildQuranAudioStorageSeedSql` artik `allowPartial` parametresi aliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:221` builder default modda `_validateCompleteQuranAudioCatalog(rows)` cagiriyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:235` partial SQL basligi development-only ve production'a uygulanmamasi gerektigini yaziyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:277` `validateQuranAudioStorageSeedOutputMode` partial output'u `build/` altina kilitliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:352` CLI output guvenlik kontrolunu parse/generate oncesi uyguluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart:247` builder'in partial row listesini default olarak reddettigini dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart:276` partial SQL'in development-only baslik tasidigini dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart:393` partial output'un production seed path'e yazilamayacagini dogruluyor.
+- Dokumantasyon: `A:\Way of Allah\sirat_i_nur\README.md:90` `--allow-partial` icin `build/` altina yazma zorunlulugunu belgeledi.
+
+### Neden Yapildi
+- Kullanici Quran seslerinin external runtime linklere bagli kalmamasi ve veritabanimiz/Supabase Storage zincirine alinmasi gerektigini ozellikle belirtti.
+- Partial manifestten yanlislikla production storage seed uretmek, uygulamanin bazi sure/okuyucular icin eksik audio datasini tamam sanmasina yol acabilir.
+- Kök cozum, yalniz parse asamasinda degil SQL generation ve operator output modunda da production guard eklemekti.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\README.md`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Production Quran audio storage seed uretimi tam 6 okuyucu x 114 sure katalog disinda default olarak reddediliyor.
+- Development smoke SQL'i halen mumkun, fakat acikca development-only olarak isaretleniyor ve sadece `build/` altina yazilabiliyor.
+- Runtime audio oynatma davranisi degismedi; Supabase Storage-backed `storage_path` zorunlulugu korunuyor.
+- README operator akisi partial seed riskini daha net kapatiyor.
+
+### Test Sonucu
+- Format: `dart format tool\generate_quran_audio_storage_seed.dart test\generate_quran_audio_storage_seed_test.dart` PASS
+- Odak test: `flutter test test\generate_quran_audio_storage_seed_test.dart` PASS (`15/15`)
+- README test: `flutter test test\readme_operational_docs_test.dart` PASS (`5/5`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`552/552`)
+
+### Risk Degisimi
+- Partial Quran audio manifestin production storage seed'e donusme riski: `16/25 -> 2/25`
+- Partial SQL'in yanlis "tam katalog reddedildi" guvencesi vermesi riski: `12/25 -> 1/25`
+- Kalan risk: Gercek MP3 dosyalari operator tarafindan mirror/upload komutlariyla Supabase Storage'a yuklenmeli; bu patch canli Storage'a dosya yuklemez ve sahte audio uretmez.
+
+### Rollback Plani
+- `allowPartial` parametresi ve builder tam katalog guard'i kaldirilir.
+- `validateQuranAudioStorageSeedOutputMode` ve CLI cagrisi kaldirilir.
+- Yeni generator testleri geri alinir.
+- README partial output cumlesi eski haline dondurulur.
+- Handover append-only oldugu icin silinmez; revert gerekirse yeni tur kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi dongu yeniden baslatilacak; siradaki odak audio upload manifestinin local dosya varligi/MP3 imzasi guard'lari, tracked stale patch artifact riski ve l10n residual borcu uzerinden skorlanacak.
+
 ## 2026-04-17 TUR-326 - Zakat Result Shows Nisab Basis
 
 ### Yapilan Islem

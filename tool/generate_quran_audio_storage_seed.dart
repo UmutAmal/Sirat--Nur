@@ -207,7 +207,9 @@ int _requiredManifestCount(Map<String, dynamic> manifest, String key) {
 String buildQuranAudioStorageSeedSql(
   Iterable<MirroredAudioFile> files, {
   String bucketName = _defaultBucketName,
+  bool allowPartial = false,
 }) {
+  final normalizedBucketName = normalizeQuranAudioBucketName(bucketName);
   final rows = files.toList()
     ..sort((left, right) {
       final reciterCompare = left.reciterId.compareTo(right.reciterId);
@@ -216,7 +218,9 @@ String buildQuranAudioStorageSeedSql(
       }
       return left.surahNumber.compareTo(right.surahNumber);
     });
-  final normalizedBucketName = normalizeQuranAudioBucketName(bucketName);
+  if (!allowPartial) {
+    _validateCompleteQuranAudioCatalog(rows);
+  }
 
   final buffer = StringBuffer()
     ..writeln('-- Auto-generated Quran audio storage seed SQL')
@@ -224,11 +228,21 @@ String buildQuranAudioStorageSeedSql(
     ..writeln('-- Target bucket: $normalizedBucketName')
     ..writeln(
       '-- Apply only after all matching MP3 files are uploaded to the target Supabase Storage bucket.',
-    )
-    ..writeln(
+    );
+  if (allowPartial) {
+    buffer
+      ..writeln(
+        '-- DEVELOPMENT-ONLY PARTIAL SEED: do not apply to production databases.',
+      )
+      ..writeln(
+        '-- This file was generated with --allow-partial and may omit Quran audio rows.',
+      );
+  } else {
+    buffer.writeln(
       '-- Incomplete mirror manifests are rejected before this file is generated.',
-    )
-    ..writeln();
+    );
+  }
+  buffer.writeln();
 
   for (final file in rows) {
     final storagePath = normalizeSupabaseStorageObjectPath(
@@ -259,6 +273,25 @@ String buildQuranAudioStorageSeedSql(
 }
 
 String _escapeSql(String value) => value.replaceAll("'", "''");
+
+void validateQuranAudioStorageSeedOutputMode({
+  required bool allowPartial,
+  required String outputPath,
+}) {
+  if (!allowPartial) {
+    return;
+  }
+
+  final normalizedOutput = p.normalize(outputPath.trim()).replaceAll('\\', '/');
+  if (normalizedOutput == 'build' || normalizedOutput.startsWith('build/')) {
+    return;
+  }
+
+  throw StateError(
+    '--allow-partial output must stay under build/ and must not overwrite '
+    'production seed files.',
+  );
+}
 
 void _printUsage() {
   stdout.writeln('''
@@ -316,12 +349,20 @@ Future<void> main(List<String> args) async {
       manifestFile.path,
     );
   }
+  validateQuranAudioStorageSeedOutputMode(
+    allowPartial: allowPartial,
+    outputPath: outputPath,
+  );
 
   final files = parseMirroredAudioManifest(
     manifestFile.readAsStringSync(),
     requireCompleteCatalog: !allowPartial,
   );
-  final sql = buildQuranAudioStorageSeedSql(files, bucketName: bucketName);
+  final sql = buildQuranAudioStorageSeedSql(
+    files,
+    bucketName: bucketName,
+    allowPartial: allowPartial,
+  );
   final outputFile = File(outputPath);
   await outputFile.writeAsString(sql);
   stdout.writeln(

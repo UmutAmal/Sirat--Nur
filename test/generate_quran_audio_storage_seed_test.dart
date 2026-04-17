@@ -244,6 +244,27 @@ void main() {
       );
     });
 
+    test('buildQuranAudioStorageSeedSql rejects partial rows by default', () {
+      expect(
+        () => buildQuranAudioStorageSeedSql([
+          MirroredAudioFile(
+            surahNumber: 1,
+            reciterId: 'alafasy',
+            sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
+            verifiedAt: DateTime.utc(2026, 4, 8, 19, 0, 42),
+            localPath: 'build/verified_quran_audio/alafasy/001.mp3',
+          ),
+        ]),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('complete Quran audio catalog'),
+          ),
+        ),
+      );
+    });
+
     test('buildQuranAudioStorageSeedSql creates storage-backed upserts', () {
       final sql = buildQuranAudioStorageSeedSql([
         MirroredAudioFile(
@@ -253,7 +274,7 @@ void main() {
           verifiedAt: DateTime.utc(2026, 4, 8, 19, 0, 42),
           localPath: 'build/verified_quran_audio/alafasy/001.mp3',
         ),
-      ]);
+      ], allowPartial: true);
 
       expect(sql, contains("NULL, 'alafasy/001.mp3', 1"));
       expect(
@@ -262,6 +283,8 @@ void main() {
           'Apply only after all matching MP3 files are uploaded to the target Supabase Storage bucket.',
         ),
       );
+      expect(sql, contains('DEVELOPMENT-ONLY PARTIAL SEED'));
+      expect(sql, isNot(contains('Incomplete mirror manifests are rejected')));
       expect(
         sql,
         contains('ON CONFLICT (type, reciter, surah_number) DO UPDATE SET'),
@@ -278,7 +301,7 @@ void main() {
           verifiedAt: DateTime.utc(2026, 4, 8, 19, 0, 42),
           localPath: r'build\verified_quran_audio\alafasy\001.mp3',
         ),
-      ]);
+      ], allowPartial: true);
 
       expect(sql, contains("'alafasy/001.mp3'"));
       expect(sql, isNot(contains(r'build\verified_quran_audio')));
@@ -349,13 +372,45 @@ void main() {
         manifestFile.readAsStringSync(),
         requireCompleteCatalog: false,
       );
-      final sql = buildQuranAudioStorageSeedSql(files);
+      final sql = buildQuranAudioStorageSeedSql(files, allowPartial: true);
 
       expect(files, hasLength(1));
       expect(sql, contains("'alafasy/001.mp3'"));
+      expect(sql, contains('DEVELOPMENT-ONLY PARTIAL SEED'));
       expect(
         sql,
         contains("'https://api.quran.com/api/v4/chapter_recitations/7'"),
+      );
+    });
+
+    test('allow-partial cannot overwrite production seed output paths', () {
+      expect(
+        () => validateQuranAudioStorageSeedOutputMode(
+          allowPartial: true,
+          outputPath: 'content_seed_quran_audio_storage.sql',
+        ),
+        throwsA(
+          isA<StateError>().having(
+            (error) => error.message,
+            'message',
+            contains('must stay under build/'),
+          ),
+        ),
+      );
+
+      expect(
+        () => validateQuranAudioStorageSeedOutputMode(
+          allowPartial: true,
+          outputPath: r'build\partial_quran_audio_storage.sql',
+        ),
+        returnsNormally,
+      );
+      expect(
+        () => validateQuranAudioStorageSeedOutputMode(
+          allowPartial: false,
+          outputPath: 'content_seed_quran_audio_storage.sql',
+        ),
+        returnsNormally,
       );
     });
   });

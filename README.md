@@ -87,7 +87,7 @@ dart run tool/generate_quran_audio_storage_seed.dart \
   --output=content_seed_quran_audio_storage.sql
 ```
 
-5. Apply `content_schema.sql` first, then apply the generated storage seed. The generator rejects incomplete or failed mirror manifests, so a partial download cannot silently become a database seed. `--allow-partial` is only for local smoke tests and must not be used for production audio seeding.
+5. Apply `content_schema.sql` first, then apply the generated storage seed. The generator rejects incomplete or failed mirror manifests, so a partial download cannot silently become a database seed. `--allow-partial` is only for local smoke tests, may only write under `build/`, and must not be used for production audio seeding.
 
 ---
 *Generated for Codex and future AI iterations to understand the absolute structural integrity of the V2 codebase.*
