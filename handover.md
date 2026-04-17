@@ -13612,3 +13612,56 @@
 
 ### Sonraki Adim
 - Yeni dongude kalan l10n same-as-English borcu icin guvenli tek anahtar/locale ilerlemesi veya prayer/timezone pipeline'da kanitli edge-case riski secilecek.
+
+## 2026-04-17 TUR-317 - Prayer Widget Coordinate Timezone Resolution
+
+### Yapilan Islem
+- AGENTS dongusu yeniden baslatildi; repo/remote/branch/status ve `flutter doctor` dogrulandi.
+- Baslangic kalite kapisi calistirildi: `flutter analyze` PASS, full `flutter test --reporter compact` PASS (`536/536`).
+- Prayer/notification pipeline taramasinda app ici namaz hesaplayicisi ile Android widget sync hattinin timezone cozumleme davranisi karsilastirildi.
+- `PrayerWidgetSyncService` artik widget icin referans zamani uretmeden once `settings.timezone` degerini latitude/longitude ile birlikte `TimezoneUtils.resolveTimezoneName` uzerinden cozer.
+- Ayni cozulmus timezone hem `resolveReferenceNow` hem de `PrayerCalendarService.calculatePrayerTimes` cagrisina veriliyor.
+- Invalid timezone state'i icin Berlin koordinatlariyla regresyon testi eklendi.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_widget_sync_service.dart:30` once raw `settings.timezone` ile `resolveReferenceNow` cagiriyordu; invalid/null timezone durumunda koordinattan timezone infer edilmiyordu.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_widget_sync_service.dart:25` - `TimezoneUtils.resolveTimezoneName(timezoneName: settings.timezone, latitude: latitude, longitude: longitude)` eklendi.
+- Hesaplama zinciri: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_widget_sync_service.dart:30` ve `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_widget_sync_service.dart:40` artik ayni `resolvedTimezone` degerini kullaniyor.
+- Regresyon testi: `A:\Way of Allah\sirat_i_nur\test\prayer_widget_sync_service_test.dart:49` invalid timezone + Berlin koordinati senaryosunda `Europe/Berlin` cozumunu ve explicit Berlin hesaplariyla eslesmeyi dogruluyor.
+
+### Neden Yapildi
+- AGENTS Section 8 prayer pipeline odagi DST/timezone edge-case kontrolunu zorunlu tutuyor.
+- App ici `buildPrayerTimesData` koordinattan timezone cozerken widget sync servisi eski/bozuk/null timezone state'inde cihaz lokal timezone'una dusebiliyordu.
+- Bu, ozellikle gun siniri/DST zamanlarinda widget'in yanlis tarih icin Fajr veya sonraki vakit hesaplamasina neden olabilecek sessiz yanlis hesap riskidir.
+- Kök sebep widget hattinin timezone cozumunu app hattiyla paylasmamasi oldugu icin minimal patch tek servis fonksiyonunda tutuldu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_widget_sync_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_widget_sync_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Widget namaz vakti hesaplari invalid/null timezone durumunda bile koordinata gore cozulmus bolge timezone'u ile referans tarih uretiyor.
+- App ici prayer service ve widget sync service ayni timezone contract'ina yaklasti.
+- Kullaniciya yanlis gune ait vakit gosterme riski azaldi; UI copy, dini metin ve notification schedule davranisi bu turda degismedi.
+
+### Test Sonucu
+- Format: `dart format lib\core\services\prayer_widget_sync_service.dart test\prayer_widget_sync_service_test.dart` PASS
+- Odak test: `flutter test test\prayer_widget_sync_service_test.dart --reporter compact` PASS (`4/4`)
+- Diff check: `git diff --check` PASS (yalniz CRLF warning)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`537/537`)
+
+### Risk Degisimi
+- Widget prayer sync invalid/null timezone ile yanlis gun/vakit hesaplama riski: `12/25 -> 2/25`
+- Prayer calculation method/madhab profile riski degismedi; mevcut profil resolver testleri TR, MY, IR, Gulf, Kuzey Amerika, Magrib ve high-latitude guard'larini kapsiyor.
+- Dini icerik dogrulugu riski degismedi; bu tur dini metin veya ses icerigi uretmedi.
+
+### Rollback Plani
+- `prayer_widget_sync_service.dart` icindeki `resolvedTimezone` ara degiskeni kaldirilir ve `settings.timezone` tekrar `resolveReferenceNow` ile `calculatePrayerTimes` cagrisina verilir.
+- `prayer_widget_sync_service_test.dart` icindeki invalid timezone/Berlin regresyon testi ve ek importlar kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki en somut risk olarak kalan l10n same-as-English borcu veya hardcoded dini/teknik icerik taramasindan kanitli tek yuzey secilecek.

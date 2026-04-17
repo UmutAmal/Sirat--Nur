@@ -22,8 +22,13 @@ class PrayerWidgetSyncService {
       return null;
     }
 
+    final resolvedTimezone = TimezoneUtils.resolveTimezoneName(
+      timezoneName: settings.timezone,
+      latitude: latitude,
+      longitude: longitude,
+    );
     final referenceNow = resolveReferenceNow(
-      settings.timezone,
+      resolvedTimezone,
       nowResolver: nowResolver,
     );
     return PrayerCalendarService.calculatePrayerTimes(
@@ -32,7 +37,7 @@ class PrayerWidgetSyncService {
       date: referenceNow,
       method: settings.calculationMethod,
       madhab: settings.madhab,
-      timezone: settings.timezone,
+      timezone: resolvedTimezone,
       fajrAngle: settings.fajrAngle,
       ishaAngle: settings.ishaAngle,
       currentTime: referenceNow,
