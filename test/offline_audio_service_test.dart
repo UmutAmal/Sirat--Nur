@@ -284,6 +284,50 @@ void main() {
     );
 
     test(
+      'getTotalDownloadedSize counts only managed verified quran audio files',
+      () async {
+        final tempDir = await Directory.systemTemp.createTemp(
+          'sir_audio_size_',
+        );
+        addTearDown(() => tempDir.delete(recursive: true));
+
+        const channel = MethodChannel('plugins.flutter.io/path_provider');
+        TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+            .setMockMethodCallHandler(channel, (_) async => tempDir.path);
+        addTearDown(
+          () => TestDefaultBinaryMessengerBinding
+              .instance
+              .defaultBinaryMessenger
+              .setMockMethodCallHandler(channel, null),
+        );
+
+        final audioDir = Directory(p.join(tempDir.path, 'quran_audio'));
+        await audioDir.create(recursive: true);
+        final validManaged = File(p.join(audioDir.path, 'alafasy_001.mp3'));
+        final corruptManaged = File(p.join(audioDir.path, 'alafasy_002.mp3'));
+        final unknownReciter = File(p.join(audioDir.path, 'unknown_001.mp3'));
+        final invalidSurah = File(p.join(audioDir.path, 'alafasy_999.mp3'));
+        final nonAudio = File(p.join(audioDir.path, 'notes.txt'));
+
+        await validManaged.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+        await corruptManaged.writeAsString('<html>not audio</html>');
+        await unknownReciter.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+        await invalidSurah.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+        await nonAudio.writeAsString('not managed');
+
+        expect(
+          await OfflineAudioService.getTotalDownloadedSize(),
+          closeTo(4 / (1024 * 1024), 0.000001),
+        );
+        expect(await validManaged.exists(), isTrue);
+        expect(await corruptManaged.exists(), isFalse);
+        expect(await unknownReciter.exists(), isTrue);
+        expect(await invalidSurah.exists(), isTrue);
+        expect(await nonAudio.exists(), isTrue);
+      },
+    );
+
+    test(
       'downloadSurahAudio rejects unowned or invalid requests before IO',
       () async {
         final validStorageUrl =

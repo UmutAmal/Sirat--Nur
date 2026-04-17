@@ -149,6 +149,26 @@ bool _isValidQuranSurahNumber(int surahNumber) =>
 bool _isSupportedOfflineReciter(String reciterId) =>
     OfflineReciters.reciters.containsKey(reciterId);
 
+bool _isManagedDownloadedQuranAudioFileName(String fileName) {
+  if (!fileName.endsWith('.mp3')) {
+    return false;
+  }
+
+  for (final reciterId in OfflineReciters.reciters.keys) {
+    if (!fileName.startsWith('${reciterId}_')) {
+      continue;
+    }
+
+    final surahPart = fileName
+        .replaceFirst('${reciterId}_', '')
+        .replaceFirst('.mp3', '');
+    final surahNumber = int.tryParse(surahPart);
+    return surahNumber != null && _isValidQuranSurahNumber(surahNumber);
+  }
+
+  return false;
+}
+
 bool _isDownloadableQuranAudioUrl(String audioUrl) {
   return storage_url.isSupabaseStoragePublicUrl(
     audioUrl,
@@ -451,7 +471,13 @@ class OfflineAudioService {
 
     final files = await dir.list().toList();
     for (final entity in files) {
-      if (entity is File) {
+      if (entity is! File) {
+        continue;
+      }
+
+      final fileName = p.basename(entity.path);
+      if (_isManagedDownloadedQuranAudioFileName(fileName) &&
+          await validateDownloadedQuranAudioFile(entity.path)) {
         totalBytes += await entity.length();
       }
     }

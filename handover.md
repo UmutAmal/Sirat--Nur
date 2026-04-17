@@ -14065,3 +14065,65 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak audio catalog veri dolulugu, Zekat UI seffafligi veya l10n same-as-English borcu taranacak.
+
+## 2026-04-17 TUR-325 - Offline Audio Size Counts Only Managed Verified Files
+
+### Yapilan Islem
+- TUR-324 sonrasi repo/remote/branch/status yeniden dogrulandi; `master` remote ile senkrondu ve yalniz bu tur dosyalari degismisti.
+- `flutter doctor` calistirildi; Android toolchain, Flutter ve connected device saglikli. Chrome/Visual Studio eksikleri web/Windows hedefleri icin non-blocking olarak not edildi.
+- Offline Quran audio depolama boyutu hesabi incelendi.
+- `getTotalDownloadedSize` artik `quran_audio` klasorundeki her `File` girdisini dogrudan saymiyor.
+- Dosya adi once uygulamanin yonettigi formata indiriliyor: desteklenen okuyucu prefix'i, `.mp3` uzantisi ve 1-114 arasi sure numarasi zorunlu.
+- Boyuta eklemeden once `validateDownloadedQuranAudioFile` ile dosyanin gercek, indirilebilir audio imzasina sahip oldugu tekrar dogrulaniyor.
+- Corrupt managed dosya validasyon sirasinda temizleniyor; unmanaged dosyalar kullanici/veri kaybi riskini onlemek icin silinmeden yok sayiliyor.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:472` once `dir.list()` sonucu butun dosyalari gezip her `File` icin boyut eklemeye musaitti.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:152` `_isManagedDownloadedQuranAudioFileName` yalniz uygulama tarafindan yonetilen Quran audio dosya adlarini kabul ediyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:157` desteklenen okuyucu listesi `OfflineReciters.reciters.keys` uzerinden kontrol ediliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:165` sure numarasi parse ediliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:166` sure numarasinin 1-114 araliginda oldugu dogrulaniyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:479` boyut toplama artik managed dosya adi guard'i ile basliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:480` boyuta eklemeden once MP3/audio validasyonu calisiyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart:287` valid managed, corrupt managed, unknown reciter, invalid surah ve non-audio dosyalari ayni klasorde siniyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart:318` toplam boyutun yalniz valid managed dosyadan geldigini dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart:323` corrupt managed dosyanin temizlendigini dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart:324` unmanaged ama gecerli gorunen dosyanin silinmeden yok sayildigini dogruluyor.
+
+### Neden Yapildi
+- Offline depolama boyutu kullaniciya gercek uygulama audio datasini temsil etmeli; klasore karismis not, cache, bozuk veya eski dosya basari/alan raporunu sisirmemeli.
+- Quran audio varliklari icin false reporting, kullanicinin indirme ve temizlik kararlarini yanlis yonlendirir.
+- Silme davranisi sadece uygulamanin yonettigi corrupt audio dosyasinda kalmali; bilinmeyen dosyalari otomatik silmek veri kaybi riski olusturur.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Offline audio depolama metrikleri daha dogru hale geldi.
+- Bozuk managed audio dosyalari boyuta eklenmeden validasyonla temizleniyor.
+- Desteklenmeyen okuyucu, gecersiz sure numarasi ve non-audio dosyalar boyuta dahil edilmiyor.
+- Indirme, oynatma, silme ve Supabase-owned audio URL guard'lari degismedi.
+
+### Test Sonucu
+- Format: `dart format lib\core\services\offline_audio_service.dart test\offline_audio_service_test.dart` PASS
+- Odak test: `flutter test test\offline_audio_service_test.dart --reporter compact` PASS (`15/15`)
+- Diff check: `git diff --check` PASS (yalniz CRLF warning)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`547/547`)
+
+### Risk Degisimi
+- Offline audio depolama boyutunun bozuk/unmanaged dosyalarla sisirilmesi riski: `10/25 -> 2/25`
+- Corrupt managed audio dosyasinin raporlanan boyuta dahil edilmesi riski: `8/25 -> 2/25`
+- Kalan risk: Gercek Supabase bucket dolulugu ve reciter bazli 114 sure kapsami veritabaninda periyodik operator dogrulamasina bagli.
+
+### Rollback Plani
+- `_isManagedDownloadedQuranAudioFileName` yardimcisi kaldirilir.
+- `getTotalDownloadedSize` tekrar her `File` icin `entity.length()` toplayacak eski davranisa dondurulur.
+- `offline_audio_service_test.dart` icindeki managed/verified boyut testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak audio catalog veri dolulugu, Zekat UI seffafligi veya l10n same-as-English borcu taranacak.
