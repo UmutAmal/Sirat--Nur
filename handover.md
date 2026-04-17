@@ -14126,6 +14126,66 @@
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Zekat aciklama paneli, audio catalog veri dolulugu veya l10n same-as-English borcu taranacak.
 
+## 2026-04-17 TUR-327 - Translation Tool Preserves Case-Only Fallbacks
+
+### Yapilan Islem
+- TUR-326 commit/push sonrasi repo/remote/branch/status yeniden dogrulandi; `master` remote ile senkron ve calisma agaci temizdi.
+- L10n borc raporlari calistirildi:
+  - 23 anahtarli download/diagnostics/chatbot/places kumesi: `1542` same-as-English, `0` missing, `0` placeholder mismatch.
+  - Splash/onboarding kumesi: `129` same-as-English, `0` missing, `0` placeholder mismatch.
+  - Settings audio/hadith kumesi: `590` same-as-English, `0` missing, `0` placeholder mismatch.
+  - Zekat kumesi: `301` same-as-English, `0` missing, `0` placeholder mismatch.
+- `dart run tool\translate_arb_keys.dart totalZakat` kontrollu denendi.
+- Araç `app_ht.arb` icin `Total zakat` -> `Total Zakat` case-only degisikligi uretmeye calisti; bu gercek ceviri olmadigi ve borcu azaltmadigi icin ARB degisikligi kabul edilmedi.
+- Kök sebep `resolveTranslatedArbValue` icinde guvenli ceviri bulunamadiginda mevcut case-only fallback'i korumak yerine kaynak Ingilizce normalize edilerek donulmesiydi.
+- Araç, mevcut deger kaynakla case-insensitive ayniysa ve bos degilse bu mevcut degeri aynen koruyacak sekilde sertlestirildi.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:539` mevcut deger okunuyor fakat usable non-English degilse onceki davranis en sonda kaynak Ingilizceye donuyordu.
+- Kök risk: `dart run tool\translate_arb_keys.dart totalZakat` once `lib/l10n/app_ht.arb` icin sadece `Total zakat` -> `Total Zakat` diff'i uretmeye calisti; bu case-only churn idi.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:553` mevcut string bos degilse ikinci koruma katmani calisiyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:559` mevcut deger kaynakla English-fallback equivalent ise kaynakla degistirilmeden korunuyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:564` yalniz mevcut guvenli fallback yoksa kaynak normalize edilip donuluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:681` `Total zakat` mevcut degerinin `Total Zakat` adayina ragmen aynen korundugunu dogruluyor.
+- Dogrulama: Sertlestirme sonrasi `dart run tool\translate_arb_keys.dart totalZakat` tum ARB dosyalari icin `Unchanged` dondu.
+- Rapor: Sertlestirme sonrasi `dart run tool\translate_arb_keys.dart --report totalZakat` halen `72` same-as-English, `0` missing, `0` placeholder mismatch raporluyor; yani sahte azalma yok.
+
+### Neden Yapildi
+- Kullanici cevirilerin sahte olmamasini ve eksiklerin dogru sekilde kapatilmasini istedi.
+- Case-only kaynak Ingilizceye yaklastirma gercek localization degildir; diff olusturur ama kullaniciya kalite kazandirmi gibi gorunur.
+- Bu guard olmadan buyuk batch l10n islemleri ARB dosyalarinda anlamsiz churn uretebilir ve gercek riskleri gizleyebilir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- L10n araci artik guvenli ceviri yoksa mevcut case-only fallback'i korur.
+- ARB dosyalari bu turda degismedi; generated l10n dosyalari senkron gerektirmedi.
+- Gelecek l10n batch'leri borcu sahte sekilde azaltan case-only diff uretmeyecek.
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart` PASS
+- Odak test: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS (`43/43`)
+- Diff check: `git diff --check` PASS (yalniz CRLF warning)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`549/549`)
+
+### Risk Degisimi
+- L10n aracinin case-only Ingilizce fallback churn uretme riski: `12/25 -> 2/25`
+- Sahte l10n borc azalmasi raporlama riski: `10/25 -> 2/25`
+- Kalan risk: Gercek same-as-English borcu hala mevcut; ama bu turda arac guvenligi saglanmadan buyuk batch'e girilmedi.
+
+### Rollback Plani
+- `resolveTranslatedArbValue` icindeki case-only fallback koruma blogu kaldirilir.
+- `translate_arb_keys_test.dart` icindeki yeni case-only fallback testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; l10n aracini guvenli hale getirdikten sonra gercek ceviri kalitesi veya Zekat aciklama paneli tekrar ele alinacak.
+
 ## 2026-04-17 TUR-325 - Offline Audio Size Counts Only Managed Verified Files
 
 ### Yapilan Islem

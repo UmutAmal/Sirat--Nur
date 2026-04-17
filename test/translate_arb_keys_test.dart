@@ -678,6 +678,17 @@ void main() {
       expect(value, 'Download');
     });
 
+    test('preserves existing case-only English fallback without churn', () {
+      final value = resolveTranslatedArbValue(
+        key: 'totalZakat',
+        source: 'Total Zakat',
+        currentValue: 'Total zakat',
+        candidate: 'Total Zakat',
+      );
+
+      expect(value, 'Total zakat');
+    });
+
     test('rejects wrong-context splash tagline output', () {
       const source = 'Islamic Way of Light';
 

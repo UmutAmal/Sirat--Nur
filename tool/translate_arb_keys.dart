@@ -550,6 +550,17 @@ String resolveTranslatedArbValue({
     }
   }
 
+  if (existingValue is String && existingValue.trim().isNotEmpty) {
+    final processedExistingValue = _postProcessTranslation(
+      key: key,
+      translated: existingValue,
+      source: source,
+    );
+    if (_isEnglishFallbackEquivalent(processedExistingValue, source)) {
+      return processedExistingValue;
+    }
+  }
+
   return _normalizeProperNames(source);
 }
 
