@@ -11158,3 +11158,58 @@
 ### Sonraki Adim
 - L10n borcu icin yazma yapmayan rapor/dry-run modu eklenecek; hangi key ve locale'lerin app_en ile ayni kaldigi kanitli listeye dokulecek.
 - Rapor cikmadan broad auto-translation yapilmayacak; once kalite kapilari genisletilecek.
+
+## 2026-04-17 TUR-273 — Add Write-Free L10n Debt Report Mode
+
+### Yapilan Islem
+- `tool/translate_arb_keys.dart` icin `--report` ve `--dry-run` bayraklari eklendi.
+- Report mode translator/network cagirmadan ve ARB dosyasi yazmadan same-as-English, missing/empty ve placeholder mismatch borcunu hesapliyor.
+- `L10nDebtReport` / `L10nDebtEntry` modelleriyle rapor cikisi testlenebilir hale getirildi.
+- `test/translate_arb_keys_test.dart` raporun same-as-English, eksik/boş ve placeholder uyumsuzluklarini dogru saydigini dogruluyor.
+
+### Kanit
+- CLI flag parse: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:7`
+- Report-only erken cikis: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:47`
+- Rapor hesaplayici: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:131`
+- Rapor toplam modeli: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:179`
+- Rapor entry modeli: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:225`
+- Regresyon testi: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:101`
+
+### Neden Yapildi
+- Onceki broad translation denemesi kalite kapisini gecmedi; dogrudan otomatik ceviri yapmak yerine once borcun tam olarak hangi key/locale'lerde oldugu yazmasiz sekilde olculmeli.
+- Report mode, Translation Engine icin kontrolsuz ARB mutasyonu riskini dusurur ve sonraki batch'leri kanitli parcalara ayirir.
+- Bu patch ceviri uretmez; sadece dogru ceviri turu icin guvenli envanter cikarir.
+
+### Gercek Rapor Bulgusu
+- Komut: `dart run tool\translate_arb_keys.dart --report downloadAction resumeDownload deleteDownloadedFiles diagnosticsQuranCloudTablesMissing diagnosticsQuranCloudJuzMissing chatbotOfflinePrompt chatbotOfflineSwitched`
+- Sonuc: `7` key icin `584` same-as-English locale, `0` missing/empty locale, `0` placeholder mismatch locale.
+- Etkilenen key'ler: `downloadAction`, `resumeDownload`, `deleteDownloadedFiles`, `diagnosticsQuranCloudTablesMissing`, `diagnosticsQuranCloudJuzMissing`, `chatbotOfflinePrompt`, `chatbotOfflineSwitched`.
+- Git status rapordan sonra sadece beklenen kod/test dosyalarini gosterdi; ARB dosyasi degismedi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart` PASS
+- Odak test: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS (`32/32`)
+- Manual report: `dart run tool\translate_arb_keys.dart --report ...` PASS, ARB mutasyonu yok
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`483/483`)
+
+### Risk Degisimi
+- L10n borcunu kanitsiz/manuel listeyle takip etme riski: `16/25 -> 4/25`
+- Rapor almadan broad ARB mutasyonu yapma riski: `16/25 -> 5/25`
+- Tum-locale gercek ceviri borcu: `16/25 -> 16/25` (bu tur sadece guvenli envanter cikardi)
+
+### Rollback Plani
+- `_reportFlag`, `_dryRunFlag`, `_optionFlags` ve report-only branch kaldirilir.
+- `buildL10nDebtReport`, `L10nDebtReport`, `L10nDebtEntry` ve ilgili test kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Report modunu kullanarak download/diagnostics/chatbot kumesindeki same-as-English locale'ler kucuk ve kalite kapili batch'lere bolunecek.
+- `sync_arb_keys.dart` icin English fallback yazma riski ayrica guard'lanacak veya report-first akisa baglanacak.

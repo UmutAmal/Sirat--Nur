@@ -98,6 +98,52 @@ void main() {
       );
     });
 
+    test('reports l10n debt without translating or mutating files', () {
+      final report = buildL10nDebtReport(
+        keys: ['downloadFinishedForReciter', 'downloadAction'],
+        english: {
+          'downloadFinishedForReciter': 'Download completed for {reciter}.',
+          'downloadAction': 'Download',
+        },
+        localeArbs: {
+          'en': {
+            'downloadFinishedForReciter': 'Download completed for {reciter}.',
+            'downloadAction': 'Download',
+          },
+          'tr': {
+            'downloadFinishedForReciter': 'Indirme {reciter} icin tamamlandi.',
+            'downloadAction': 'Indir',
+          },
+          'fr': {
+            'downloadFinishedForReciter': 'Download completed for {reciter}.',
+            'downloadAction': 'Download',
+          },
+          'es': {
+            'downloadFinishedForReciter': 'Descarga completa.',
+            'downloadAction': '',
+          },
+          'de': {'downloadAction': 'Herunterladen'},
+        },
+      );
+
+      final reciterEntry = report.entries.firstWhere(
+        (entry) => entry.key == 'downloadFinishedForReciter',
+      );
+      expect(reciterEntry.sameAsEnglishLocales, ['fr']);
+      expect(reciterEntry.missingOrEmptyLocales, ['de']);
+      expect(reciterEntry.placeholderMismatchLocales, ['es']);
+      expect(report.sameAsEnglishCount, 2);
+      expect(report.missingOrEmptyCount, 2);
+      expect(report.placeholderMismatchCount, 1);
+      expect(
+        report.format(),
+        contains(
+          '- downloadFinishedForReciter: same-as-English=fr; '
+          'missing-or-empty=de; placeholder-mismatch=es',
+        ),
+      );
+    });
+
     test('rejects multiline chatbot runtime output', () {
       final value = resolveTranslatedArbValue(
         key: 'chatbotGreeting',

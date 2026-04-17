@@ -3,13 +3,23 @@ import 'dart:io';
 
 import 'package:translator/translator.dart';
 
+const _forceFlag = '--force';
+const _reportFlag = '--report';
+const _dryRunFlag = '--dry-run';
+const _optionFlags = <String>{_forceFlag, _reportFlag, _dryRunFlag};
+
 Future<void> main(List<String> arguments) async {
-  final force = arguments.contains('--force');
-  final keys = arguments.where((argument) => argument != '--force').toList();
+  final force = arguments.contains(_forceFlag);
+  final reportOnly =
+      arguments.contains(_reportFlag) || arguments.contains(_dryRunFlag);
+  final keys = arguments
+      .where((argument) => !_optionFlags.contains(argument))
+      .toList();
 
   if (keys.isEmpty) {
     stderr.writeln(
-      'Usage: dart run tool/translate_arb_keys.dart [--force] <key> [<key> ...]',
+      'Usage: dart run tool/translate_arb_keys.dart '
+      '[--force] [--report|--dry-run] <key> [<key> ...]',
     );
     exitCode = 64;
     return;
@@ -17,7 +27,6 @@ Future<void> main(List<String> arguments) async {
 
   final english = _readArb('lib/l10n/app_en.arb');
   final turkish = _readArb('lib/l10n/app_tr.arb');
-  final translator = GoogleTranslator();
   final arbFiles =
       Directory('lib/l10n')
           .listSync()
@@ -34,6 +43,26 @@ Future<void> main(List<String> arguments) async {
       return;
     }
   }
+
+  if (reportOnly) {
+    final localeArbs = <String, Map<String, dynamic>>{
+      for (final file in arbFiles)
+        file.uri.pathSegments.last
+            .replaceFirst('app_', '')
+            .replaceFirst('.arb', ''): _readArb(
+          file.path,
+        ),
+    };
+    final report = buildL10nDebtReport(
+      keys: keys,
+      english: english,
+      localeArbs: localeArbs,
+    );
+    stdout.writeln(report.format());
+    return;
+  }
+
+  final translator = GoogleTranslator();
 
   for (final file in arbFiles) {
     final locale = file.uri.pathSegments.last
@@ -97,6 +126,133 @@ bool shouldWriteArbFileContent(String currentContent, String nextContent) {
 
 String _normalizeLineEndings(String value) {
   return value.replaceAll('\r\n', '\n').replaceAll('\r', '\n');
+}
+
+L10nDebtReport buildL10nDebtReport({
+  required List<String> keys,
+  required Map<String, dynamic> english,
+  required Map<String, Map<String, dynamic>> localeArbs,
+}) {
+  final entries = <L10nDebtEntry>[];
+
+  for (final key in keys) {
+    final englishValue = english[key];
+    final sameAsEnglishLocales = <String>[];
+    final missingOrEmptyLocales = <String>[];
+    final placeholderMismatchLocales = <String>[];
+
+    for (final localeEntry in localeArbs.entries) {
+      final locale = localeEntry.key;
+      if (locale == 'en') {
+        continue;
+      }
+
+      final currentValue = localeEntry.value[key];
+      if (currentValue is! String || currentValue.trim().isEmpty) {
+        missingOrEmptyLocales.add(locale);
+      } else if (englishValue is String &&
+          currentValue.trim() == englishValue.trim()) {
+        sameAsEnglishLocales.add(locale);
+      } else if (englishValue is String &&
+          !_hasMatchingPlaceholders(currentValue, englishValue)) {
+        placeholderMismatchLocales.add(locale);
+      }
+    }
+
+    entries.add(
+      L10nDebtEntry(
+        key: key,
+        sameAsEnglishLocales: _sorted(sameAsEnglishLocales),
+        missingOrEmptyLocales: _sorted(missingOrEmptyLocales),
+        placeholderMismatchLocales: _sorted(placeholderMismatchLocales),
+      ),
+    );
+  }
+
+  return L10nDebtReport(entries);
+}
+
+List<String> _sorted(List<String> values) {
+  return values..sort();
+}
+
+class L10nDebtReport {
+  const L10nDebtReport(this.entries);
+
+  final List<L10nDebtEntry> entries;
+
+  int get sameAsEnglishCount => entries.fold(
+    0,
+    (total, entry) => total + entry.sameAsEnglishLocales.length,
+  );
+
+  int get missingOrEmptyCount => entries.fold(
+    0,
+    (total, entry) => total + entry.missingOrEmptyLocales.length,
+  );
+
+  int get placeholderMismatchCount => entries.fold(
+    0,
+    (total, entry) => total + entry.placeholderMismatchLocales.length,
+  );
+
+  bool get hasDebt =>
+      sameAsEnglishCount > 0 ||
+      missingOrEmptyCount > 0 ||
+      placeholderMismatchCount > 0;
+
+  String format() {
+    final buffer = StringBuffer()
+      ..writeln('L10n debt report')
+      ..writeln('Keys: ${entries.length}')
+      ..writeln('Same-as-English locales: $sameAsEnglishCount')
+      ..writeln('Missing/empty locales: $missingOrEmptyCount')
+      ..writeln('Placeholder mismatch locales: $placeholderMismatchCount');
+
+    final debtEntries = entries.where((entry) => entry.hasDebt);
+    if (debtEntries.isEmpty) {
+      buffer.writeln('No l10n debt found for selected keys.');
+    } else {
+      for (final entry in debtEntries) {
+        buffer.writeln('- ${entry.key}: ${entry.summary}');
+      }
+    }
+
+    return buffer.toString().trimRight();
+  }
+}
+
+class L10nDebtEntry {
+  const L10nDebtEntry({
+    required this.key,
+    required this.sameAsEnglishLocales,
+    required this.missingOrEmptyLocales,
+    required this.placeholderMismatchLocales,
+  });
+
+  final String key;
+  final List<String> sameAsEnglishLocales;
+  final List<String> missingOrEmptyLocales;
+  final List<String> placeholderMismatchLocales;
+
+  bool get hasDebt =>
+      sameAsEnglishLocales.isNotEmpty ||
+      missingOrEmptyLocales.isNotEmpty ||
+      placeholderMismatchLocales.isNotEmpty;
+
+  String get summary {
+    final parts = <String>[];
+    if (sameAsEnglishLocales.isNotEmpty) {
+      parts.add('same-as-English=${sameAsEnglishLocales.join(',')}');
+    }
+    if (missingOrEmptyLocales.isNotEmpty) {
+      parts.add('missing-or-empty=${missingOrEmptyLocales.join(',')}');
+    }
+    if (placeholderMismatchLocales.isNotEmpty) {
+      parts.add('placeholder-mismatch=${placeholderMismatchLocales.join(',')}');
+    }
+    return parts.join('; ');
+  }
 }
 
 bool _shouldPreserve(String key, dynamic currentValue, dynamic englishValue) {
