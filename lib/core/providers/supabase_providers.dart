@@ -262,6 +262,14 @@ String? _readCloudIdentifier(Object? value) {
   return null;
 }
 
+bool _hasVerifiedCloudContentProvenance(Map<String, dynamic> row) {
+  return (_readCloudText(row['source']) ?? _readCloudText(row['reference'])) !=
+          null &&
+      (_readCloudText(row['verified_at']) ??
+              _readCloudText(row['verifiedAt'])) !=
+          null;
+}
+
 String? resolveEducationCategoryId(Map<String, dynamic> row) {
   return _readCloudIdentifier(row['id']);
 }
@@ -282,7 +290,9 @@ List<Map<String, dynamic>> resolveEducationCategories(
   for (final row in rows) {
     final id = resolveEducationCategoryId(row);
     final title = _readCloudText(row['title']);
-    if (id == null || title == null) {
+    if (id == null ||
+        title == null ||
+        !_hasVerifiedCloudContentProvenance(row)) {
       continue;
     }
 
@@ -305,7 +315,9 @@ List<Map<String, dynamic>> resolveEducationTopics(
   for (final row in rows) {
     final title = _readCloudText(row['title']);
     final content = _readCloudText(row['content']);
-    if (title == null || content == null) {
+    if (title == null ||
+        content == null ||
+        !_hasVerifiedCloudContentProvenance(row)) {
       continue;
     }
 

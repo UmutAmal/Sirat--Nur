@@ -14686,3 +14686,44 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak dependency freshness, l10n debt, offline/audio katalog guard'lari ve TODO/placeholder taramasi tekrar calistirilacak.
+
+## 2026-04-17 TUR-336 - Education Cloud Content Requires Verified Provenance
+
+### MASTER Karari
+- Risk: `lib/core/providers/supabase_providers.dart:285` ve `lib/core/providers/supabase_providers.dart:310` egitim kategori/konu satirlarini yalnizca id/title/content ile kabul ediyordu; `source` veya `verified_at` olmayan dini egitim icerigi UI'a girebilirdi.
+- Kanit: `resolveCloudSukunSources` tarafinda `lib/core/providers/supabase_providers.dart:206` verified provenance zaten zorunluydu; egitim icerigi ayni Section 13 icerik kuraliyla korunmuyordu.
+- Etki: Supabase'e hatali/eksik operator verisi girerse kullanici dogrulanmamis dini egitim metni gorebilirdi.
+- Olasilik: Cloud tablo satirlari manuel seed/operator islemlerinden gelebilir; eksik provenance alanlari uygulama tarafinda filtrelenmiyordu.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1).
+- Rollback kapsami: `lib/core/providers/supabase_providers.dart`, `test/features/library/library_page_cloud_duas_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `lib/core/providers/supabase_providers.dart:265` `_hasVerifiedCloudContentProvenance` helper'i eklendi.
+- `lib/core/providers/supabase_providers.dart:295` egitim kategorileri artik `source/reference` ve `verified_at/verifiedAt` tasimiyorsa filtreleniyor.
+- `lib/core/providers/supabase_providers.dart:320` egitim konulari artik `source/reference` ve `verified_at/verifiedAt` tasimiyorsa filtreleniyor.
+- Bu degisiklik hardcoded fallback eklemedi; dogrulanmamis cloud icerigi sessizce liste disi kalir.
+
+### TESTER Kapsami
+- `test/features/library/library_page_cloud_duas_test.dart:71` kategori sanitizer testi provenance zorunlulugunu dogruluyor.
+- `test/features/library/library_page_cloud_duas_test.dart:111` konu sanitizer testi provenance zorunlulugunu dogruluyor.
+- `test/features/library/library_page_cloud_duas_test.dart:291` widget testi dogrulanmamis egitim satirinin render edilmedigini dogruluyor.
+
+### Test Sonucu
+- Format: `dart format lib\core\providers\supabase_providers.dart test\features\library\library_page_cloud_duas_test.dart` PASS
+- Odak test: `flutter test test\features\library\library_page_cloud_duas_test.dart --reporter compact` PASS (`8/8`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`562/562`)
+
+### Risk Degisimi
+- Dogrulanmamis egitim iceriginin UI'a cikmasi riski: `12/25 -> 2/25`
+- Kalan risk: Mevcut Supabase verisinin gercek dini dogrulugu operator/source audit ve RLS kalitesine bagli; uygulama tarafi eksik provenance satirlarini artik reddediyor.
+
+### Rollback Plani
+- `_hasVerifiedCloudContentProvenance` helper'i kaldirilir.
+- `resolveEducationCategories` ve `resolveEducationTopics` icindeki provenance filtreleri kaldirilir.
+- Eklenen provenance test fixture'lari eski haline dondurulur.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak daily ayat provenance/cache guard'i, l10n same-as-English debt ve audio seed/source dogrulamalari taranacak.

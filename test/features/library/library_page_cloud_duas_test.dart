@@ -68,17 +68,32 @@ Future<void> disposeLibraryPage(WidgetTester tester) async {
 
 void main() {
   group('Education cloud row sanitizers', () {
-    test('categories keep only rows with usable id and title', () {
+    test('categories keep only rows with usable id, title, and provenance', () {
       final categories = resolveEducationCategories([
         {
           'id': ' faith ',
           'title': '  Faith Basics  ',
           'title_en': ' Basics ',
           'icon': ' 🕌 ',
+          'source': 'https://islamansiklopedisi.org.tr',
+          'verified_at': '2026-04-17T00:00:00Z',
         },
         {'id': '', 'title': 'No id'},
         {'id': 'missing-title', 'title': ' '},
-        {'id': 7, 'title': 'Numeric id', 'title_en': 99, 'icon': 42},
+        {
+          'id': 'missing-provenance',
+          'title': 'No provenance',
+          'source': ' ',
+          'verified_at': '2026-04-17T00:00:00Z',
+        },
+        {
+          'id': 7,
+          'title': 'Numeric id',
+          'title_en': 99,
+          'icon': 42,
+          'reference': 'https://islamansiklopedisi.org.tr',
+          'verifiedAt': '2026-04-17T00:00:00Z',
+        },
       ]);
 
       expect(categories, [
@@ -92,26 +107,36 @@ void main() {
       ]);
     });
 
-    test('topics keep only rows with usable title and content', () {
-      final topics = resolveEducationTopics([
-        {
-          'title': '  Prayer  ',
-          'title_en': ' Salah ',
-          'content': '  Verified lesson body  ',
-        },
-        {'title': 'Missing content', 'content': ' '},
-        {'title': 99, 'content': 'Non-string title'},
-        {'title': 'Non-string content', 'content': 99},
-      ]);
+    test(
+      'topics keep only rows with usable title, content, and provenance',
+      () {
+        final topics = resolveEducationTopics([
+          {
+            'title': '  Prayer  ',
+            'title_en': ' Salah ',
+            'content': '  Verified lesson body  ',
+            'source': 'https://islamansiklopedisi.org.tr',
+            'verified_at': '2026-04-17T00:00:00Z',
+          },
+          {'title': 'Missing content', 'content': ' '},
+          {
+            'title': 'Missing provenance',
+            'content': 'Body without source',
+            'source': 'https://islamansiklopedisi.org.tr',
+          },
+          {'title': 99, 'content': 'Non-string title'},
+          {'title': 'Non-string content', 'content': 99},
+        ]);
 
-      expect(topics, [
-        {
-          'title': 'Prayer',
-          'title_en': 'Salah',
-          'content': 'Verified lesson body',
-        },
-      ]);
-    });
+        expect(topics, [
+          {
+            'title': 'Prayer',
+            'title_en': 'Salah',
+            'content': 'Verified lesson body',
+          },
+        ]);
+      },
+    );
   });
 
   testWidgets('LibraryPage uses cloud dua data when provider resolves', (
@@ -258,6 +283,13 @@ void main() {
               'title': '  Faith Basics  ',
               'title_en': 99,
               'icon': 7,
+              'source': 'https://islamansiklopedisi.org.tr',
+              'verified_at': '2026-04-17T00:00:00Z',
+            },
+            {
+              'id': 'unverified',
+              'title': 'Unverified lesson',
+              'source': 'https://islamansiklopedisi.org.tr',
             },
           ],
         );
@@ -266,6 +298,7 @@ void main() {
         expect(tester.takeException(), isNull);
         expect(find.text('Faith Basics'), findsOneWidget);
         expect(find.text('No id category'), findsNothing);
+        expect(find.text('Unverified lesson'), findsNothing);
         expect(find.text('99'), findsNothing);
         expect(find.text('📚'), findsOneWidget);
 
