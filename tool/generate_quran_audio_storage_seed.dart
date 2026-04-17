@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 import 'package:sirat_i_nur/core/network/supabase_storage_url.dart';
 
+import 'quran_audio_file_validation.dart';
 import 'quran_audio_source_validation.dart';
 
 const String _defaultManifestPath = 'build/verified_quran_audio/manifest.json';
@@ -39,6 +40,8 @@ class MirroredAudioFile {
     required this.sourceUrl,
     required this.verifiedAt,
     required this.localPath,
+    required this.sizeBytes,
+    required this.sha256,
   });
 
   final int surahNumber;
@@ -46,6 +49,8 @@ class MirroredAudioFile {
   final String sourceUrl;
   final DateTime verifiedAt;
   final String localPath;
+  final int sizeBytes;
+  final String sha256;
 
   String get fileName => p.basename(localPath.replaceAll('\\', '/'));
 
@@ -81,6 +86,8 @@ List<MirroredAudioFile> parseMirroredAudioManifest(
       final sourceUrl = row['source']?.toString().trim();
       final verifiedAtRaw = row['verified_at']?.toString().trim();
       final localPath = row['local_path']?.toString().trim();
+      final sizeBytes = row['size_bytes'];
+      final sha256Raw = row['sha256']?.toString().trim();
       if (reciterId == null || reciterId.isEmpty) {
         throw FormatException('Missing reciter in manifest row: $row');
       }
@@ -103,6 +110,15 @@ List<MirroredAudioFile> parseMirroredAudioManifest(
       }
       if (localPath == null || localPath.isEmpty) {
         throw FormatException('Missing local_path in manifest row: $row');
+      }
+      if (sizeBytes is! int || sizeBytes <= 0) {
+        throw FormatException('Invalid size_bytes in manifest row: $row');
+      }
+      if (sha256Raw == null || sha256Raw.isEmpty) {
+        throw FormatException('Missing sha256 in manifest row: $row');
+      }
+      if (!isValidQuranAudioSha256Hex(sha256Raw)) {
+        throw FormatException('Invalid sha256 in manifest row: $row');
       }
       final expectedFileName = '${surahNumber.toString().padLeft(3, '0')}.mp3';
       final normalizedLocalPath = localPath.replaceAll('\\', '/');
@@ -131,6 +147,8 @@ List<MirroredAudioFile> parseMirroredAudioManifest(
         sourceUrl: sourceUrl,
         verifiedAt: DateTime.parse(verifiedAtRaw).toUtc(),
         localPath: localPath,
+        sizeBytes: sizeBytes,
+        sha256: sha256Raw.toLowerCase(),
       );
     }),
   );

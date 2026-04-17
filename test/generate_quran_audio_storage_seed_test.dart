@@ -5,6 +5,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import '../tool/generate_quran_audio_storage_seed.dart';
+import '../tool/quran_audio_file_validation.dart';
+
+const int _validManifestSizeBytes = 1024;
+const String _validManifestSha256 =
+    '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef';
 
 void main() {
   group('generate_quran_audio_storage_seed tool', () {
@@ -32,7 +37,9 @@ void main() {
       "reciter": "alafasy",
       "source": "https://api.quran.com/api/v4/chapter_recitations/7",
       "verified_at": "2026-04-08T19:00:42.228933Z",
-      "local_path": "build/verified_quran_audio/alafasy/001.mp3"
+      "local_path": "build/verified_quran_audio/alafasy/001.mp3",
+      "size_bytes": $_validManifestSizeBytes,
+      "sha256": "$_validManifestSha256"
     }
   ]
 }
@@ -41,6 +48,98 @@ void main() {
       expect(files, hasLength(1));
       expect(files.first.surahNumber, 1);
       expect(files.first.reciterId, 'alafasy');
+      expect(files.first.sizeBytes, _validManifestSizeBytes);
+      expect(files.first.sha256, _validManifestSha256);
+    });
+
+    test('rejects manifest rows without checksum evidence', () {
+      expect(
+        () => parseMirroredAudioManifest('''
+{
+  "requested": 1,
+  "downloaded": 1,
+  "skipped": 0,
+  "failed": [],
+  "files": [
+    {
+      "surah_number": 1,
+      "reciter": "alafasy",
+      "source": "https://api.quran.com/api/v4/chapter_recitations/7",
+      "verified_at": "2026-04-08T19:00:42.228933Z",
+      "local_path": "build/verified_quran_audio/alafasy/001.mp3",
+      "size_bytes": $_validManifestSizeBytes
+    }
+  ]
+}
+''', requireCompleteCatalog: false),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('Missing sha256'),
+          ),
+        ),
+      );
+    });
+
+    test('rejects manifest rows with invalid size or checksum values', () {
+      expect(
+        () => parseMirroredAudioManifest('''
+{
+  "requested": 1,
+  "downloaded": 1,
+  "skipped": 0,
+  "failed": [],
+  "files": [
+    {
+      "surah_number": 1,
+      "reciter": "alafasy",
+      "source": "https://api.quran.com/api/v4/chapter_recitations/7",
+      "verified_at": "2026-04-08T19:00:42.228933Z",
+      "local_path": "build/verified_quran_audio/alafasy/001.mp3",
+      "size_bytes": 0,
+      "sha256": "$_validManifestSha256"
+    }
+  ]
+}
+''', requireCompleteCatalog: false),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('Invalid size_bytes'),
+          ),
+        ),
+      );
+
+      expect(
+        () => parseMirroredAudioManifest('''
+{
+  "requested": 1,
+  "downloaded": 1,
+  "skipped": 0,
+  "failed": [],
+  "files": [
+    {
+      "surah_number": 1,
+      "reciter": "alafasy",
+      "source": "https://api.quran.com/api/v4/chapter_recitations/7",
+      "verified_at": "2026-04-08T19:00:42.228933Z",
+      "local_path": "build/verified_quran_audio/alafasy/001.mp3",
+      "size_bytes": $_validManifestSizeBytes,
+      "sha256": "not-a-checksum"
+    }
+  ]
+}
+''', requireCompleteCatalog: false),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('Invalid sha256'),
+          ),
+        ),
+      );
     });
 
     test(
@@ -59,7 +158,9 @@ void main() {
       "reciter": "alafasy",
       "source": "https://api.quran.com/api/v4/chapter_recitations/7",
       "verified_at": "2026-04-08T19:00:42.228933Z",
-      "local_path": "build/verified_quran_audio/alafasy/001.mp3"
+      "local_path": "build/verified_quran_audio/alafasy/001.mp3",
+      "size_bytes": $_validManifestSizeBytes,
+      "sha256": "$_validManifestSha256"
     }
   ]
 }
@@ -110,7 +211,9 @@ void main() {
       "reciter": "alafasy",
       "source": "https://api.quran.com/api/v4/chapter_recitations/7",
       "verified_at": "2026-04-08T19:00:42.228933Z",
-      "local_path": "build/verified_quran_audio/alafasy/001.mp3"
+      "local_path": "build/verified_quran_audio/alafasy/001.mp3",
+      "size_bytes": $_validManifestSizeBytes,
+      "sha256": "$_validManifestSha256"
     }
   ]
 }
@@ -229,7 +332,9 @@ void main() {
       "reciter": "alafasy",
       "source": "https://api.quran.com/api/v4/chapter_recitations/7",
       "verified_at": "2026-04-08T19:00:42.228933Z",
-      "local_path": "build/verified_quran_audio/alafasy/002.mp3"
+      "local_path": "build/verified_quran_audio/alafasy/002.mp3",
+      "size_bytes": $_validManifestSizeBytes,
+      "sha256": "$_validManifestSha256"
     }
   ]
 }
@@ -258,7 +363,9 @@ void main() {
       "reciter": "alafasy",
       "source": "https://api.quran.com/api/v4/chapter_recitations/7",
       "verified_at": "2026-04-08T19:00:42.228933Z",
-      "local_path": "build/verified_quran_audio/husary/001.mp3"
+      "local_path": "build/verified_quran_audio/husary/001.mp3",
+      "size_bytes": $_validManifestSizeBytes,
+      "sha256": "$_validManifestSha256"
     }
   ]
 }
@@ -282,6 +389,8 @@ void main() {
             sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
             verifiedAt: DateTime.utc(2026, 4, 8, 19, 0, 42),
             localPath: 'build/verified_quran_audio/alafasy/001.mp3',
+            sizeBytes: _validManifestSizeBytes,
+            sha256: _validManifestSha256,
           ),
         ]),
         throwsA(
@@ -302,6 +411,8 @@ void main() {
           sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
           verifiedAt: DateTime.utc(2026, 4, 8, 19, 0, 42),
           localPath: 'build/verified_quran_audio/alafasy/001.mp3',
+          sizeBytes: _validManifestSizeBytes,
+          sha256: _validManifestSha256,
         ),
       ], allowPartial: true);
 
@@ -329,6 +440,8 @@ void main() {
           sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
           verifiedAt: DateTime.utc(2026, 4, 8, 19, 0, 42),
           localPath: r'build\verified_quran_audio\alafasy\001.mp3',
+          sizeBytes: _validManifestSizeBytes,
+          sha256: _validManifestSha256,
         ),
       ], allowPartial: true);
 
@@ -345,6 +458,8 @@ void main() {
             sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
             verifiedAt: DateTime.utc(2026, 4, 8, 19, 0, 42),
             localPath: 'build/verified_quran_audio/alafasy/001.mp3',
+            sizeBytes: _validManifestSizeBytes,
+            sha256: _validManifestSha256,
           ),
         ], bucketName: 'audio-sukun'),
         throwsA(
@@ -392,6 +507,8 @@ void main() {
                         'https://api.quran.com/api/v4/chapter_recitations/7',
                     'verified_at': '2026-04-08T19:00:42.228933Z',
                     'local_path': audioFile.path,
+                    'size_bytes': 4,
+                    'sha256': sha256HexForFile(audioFile),
                   },
                 ],
               }),

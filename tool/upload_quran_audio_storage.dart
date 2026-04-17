@@ -163,6 +163,14 @@ List<String> validateMirroredQuranAudioUploadPlan(
       failed.add('$objectPath: empty local file');
       continue;
     }
+    if (localFile.lengthSync() != row.sizeBytes) {
+      failed.add('$objectPath: size mismatch');
+      continue;
+    }
+    if (sha256HexForFile(localFile) != row.sha256) {
+      failed.add('$objectPath: checksum mismatch');
+      continue;
+    }
     if (!hasLikelyMp3Header(localFile)) {
       failed.add('$objectPath: invalid mp3 file');
     }

@@ -15007,3 +15007,45 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak kalan Asma `Manifest`/low-resource fallback borcu, audio checksum/fingerprint eksigi ve runtime content provenance taranacak.
+
+## 2026-04-17 TUR-344 - Quran Audio Mirror Manifest Integrity
+
+### MASTER Karari
+- Risk: `tool/download_verified_quran_audio.dart:39`, `tool/generate_quran_audio_storage_seed.dart:89` ve `tool/upload_quran_audio_storage.dart:170` zincirinde mirror manifest dosyasi yalniz `local_path` ve kaynak bilgisi tasiyordu; upload dry-run ayni dosyanin degismedigini checksum ile kanitlamiyordu.
+- Kanit: Eski manifest satirlari `size_bytes`/`sha256` icermiyordu; upload planinda MP3 sekli dogrulaniyor ama dosyanin mirror aninda yazilan byte dizisiyle ayni kaldigi kanitlanmiyordu.
+- Etki: Indirme sonrasi lokal dosya yanlislikla degistirilirse ya da operator farkli MP3'u ayni path'e koyarsa Supabase Storage'a yanlis Quran audio nesnesi yuklenebilirdi.
+- Olasilik: Mirror, seed ve upload araclari operator tarafindan arka arkaya kullaniliyor; lokal build klasoru ve manuel upload arasi mudahale/bozulma ihtimali var.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1).
+- Rollback kapsami: `pubspec.yaml`, `pubspec.lock`, `tool/quran_audio_file_validation.dart`, `tool/download_verified_quran_audio.dart`, `tool/generate_quran_audio_storage_seed.dart`, `tool/upload_quran_audio_storage.dart`, ilgili 4 test dosyasi, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `crypto: ^3.0.7` dogrudan dependency yapildi; SHA-256 icin transitive pakete yaslanma riski kaldirildi.
+- `tool/quran_audio_file_validation.dart:12` ortak `sha256HexForFile` ve `isValidQuranAudioSha256Hex` yardimcilari eklendi.
+- `tool/download_verified_quran_audio.dart:39` mirror manifest satirlarina `size_bytes` ve `sha256` yazmaya basladi; skipped ve yeni indirilen dosyalar ayni formatta kanit uretiyor.
+- `tool/generate_quran_audio_storage_seed.dart:89` manifest parser'i `size_bytes` ve 64 haneli SHA-256 alanlarini zorunlu tuttu; uppercase checksum degerleri normalize edilerek saklaniyor.
+- `tool/upload_quran_audio_storage.dart:167` dry-run/upload oncesinde lokal dosya boyutu ve checksum manifestle eslesmezse ag yazimi baslamadan `size mismatch` veya `checksum mismatch` hatasi donuyor.
+
+### TESTER Kapsami
+- `test/quran_audio_file_validation_test.dart` SHA-256 deterministik hash guard'i eklendi.
+- `test/download_verified_quran_audio_test.dart` manifest row'un `local_path`, `size_bytes`, `sha256` urettigini dogruluyor.
+- `test/generate_quran_audio_storage_seed_test.dart` checksum kaniti olmayan, gecersiz size veya gecersiz checksum tasiyan manifestleri reddediyor.
+- `test/upload_quran_audio_storage_test.dart` size mismatch ve checksum mismatch dosyalarini dry-run/upload oncesi yakaliyor.
+
+### Test Sonucu
+- Format: `dart format tool\quran_audio_file_validation.dart tool\download_verified_quran_audio.dart tool\generate_quran_audio_storage_seed.dart tool\upload_quran_audio_storage.dart test\quran_audio_file_validation_test.dart test\download_verified_quran_audio_test.dart test\generate_quran_audio_storage_seed_test.dart test\upload_quran_audio_storage_test.dart` PASS
+- Odak test: `flutter test test\quran_audio_file_validation_test.dart test\download_verified_quran_audio_test.dart test\generate_quran_audio_storage_seed_test.dart test\upload_quran_audio_storage_test.dart --reporter compact` PASS (`43/43`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`570/570`)
+
+### Risk Degisimi
+- Quran audio mirror/upload false-integrity riski: `15/25 -> 4/25`
+- Kalan risk: Mevcut eski `build/verified_quran_audio/manifest.json` dosyalari yeni parser tarafindan bilincli olarak reddedilecek; operator full mirror aracini tekrar calistirarak yeni `size_bytes`/`sha256` manifest uretmeli.
+
+### Rollback Plani
+- Bu turdaki tool/test degisiklikleri revert edilir.
+- `crypto` dogrudan dependency olmaktan cikarilir ve `flutter pub get` ile lock eski transitive durumuna dondurulur.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak kalan Quran audio operator dokumantasyonu, runtime storage provenance ve kalan i18n/content guard'lari taranacak.

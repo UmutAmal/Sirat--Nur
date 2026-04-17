@@ -1,10 +1,21 @@
 import 'dart:io';
 
+import 'package:crypto/crypto.dart';
+
 const int minimumQuranAudioFileBytes = 1024;
 const int _id3HeaderBytes = 10;
 const int _id3FooterBytes = 10;
 const int _mp3FrameHeaderBytes = 4;
 const int _mp3FrameProbeBytes = 8192;
+final RegExp _quranAudioSha256HexPattern = RegExp(r'^[0-9a-fA-F]{64}$');
+
+String sha256HexForFile(File file) {
+  return sha256.convert(file.readAsBytesSync()).toString();
+}
+
+bool isValidQuranAudioSha256Hex(String value) {
+  return _quranAudioSha256HexPattern.hasMatch(value.trim());
+}
 
 bool hasMp3AudioSignature(List<int> bytes) {
   if (bytes.length >= 3 &&

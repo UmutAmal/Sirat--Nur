@@ -61,5 +61,24 @@ void main() {
 
       expect(hasLikelyMp3Header(audioFile), isTrue);
     });
+
+    test('derives stable SHA-256 checksums for mirrored audio files', () {
+      final tempDir = Directory.systemTemp.createTempSync('sir_audio_hash_');
+      addTearDown(() {
+        if (tempDir.existsSync()) {
+          tempDir.deleteSync(recursive: true);
+        }
+      });
+
+      final audioFile = File('${tempDir.path}${Platform.pathSeparator}001.mp3')
+        ..writeAsBytesSync(const <int>[1, 2, 3]);
+
+      expect(
+        sha256HexForFile(audioFile),
+        '039058c6f2c0cb492c533b0a4d14ef77cc0f78abccced5287d84a1a2011cfb81',
+      );
+      expect(isValidQuranAudioSha256Hex(sha256HexForFile(audioFile)), isTrue);
+      expect(isValidQuranAudioSha256Hex('not-a-checksum'), isFalse);
+    });
   });
 }

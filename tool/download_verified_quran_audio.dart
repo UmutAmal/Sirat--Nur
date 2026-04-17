@@ -29,13 +29,15 @@ class VerifiedQuranAudioSeedRow {
 
   String get fileName => '${surahNumber.toString().padLeft(3, '0')}.mp3';
 
-  Map<String, Object?> toJson(String localPath) => {
+  Map<String, Object?> toJson(File localFile) => {
     'surah_number': surahNumber,
     'reciter': reciterId,
     'audio_url': audioUrl.toString(),
     'source': sourceUrl.toString(),
     'verified_at': verifiedAt.toUtc().toIso8601String(),
-    'local_path': localPath,
+    'local_path': localFile.path,
+    'size_bytes': localFile.lengthSync(),
+    'sha256': sha256HexForFile(localFile),
   };
 }
 
@@ -230,7 +232,7 @@ Future<VerifiedQuranAudioMirrorSummary> mirrorVerifiedQuranAudio({
       if (!overwrite && targetFile.existsSync()) {
         if (hasLikelyMp3Header(targetFile)) {
           skipped++;
-          manifest.add(row.toJson(targetFile.path));
+          manifest.add(row.toJson(targetFile));
           continue;
         }
         _deleteFileIfExistsSync(targetFile);
@@ -263,7 +265,7 @@ Future<VerifiedQuranAudioMirrorSummary> mirrorVerifiedQuranAudio({
         }
 
         downloaded++;
-        manifest.add(row.toJson(targetFile.path));
+        manifest.add(row.toJson(targetFile));
       } catch (error) {
         failures.add(
           '${row.reciterId}/${row.fileName}: '

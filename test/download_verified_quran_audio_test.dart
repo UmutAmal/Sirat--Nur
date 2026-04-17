@@ -126,6 +126,41 @@ INSERT INTO public.audio_files (
       ]);
     });
 
+    test('writes file size and checksum evidence into manifest rows', () {
+      final tempDir = Directory.systemTemp.createTempSync(
+        'sir_quran_manifest_row_',
+      );
+      addTearDown(() {
+        if (tempDir.existsSync()) {
+          tempDir.deleteSync(recursive: true);
+        }
+      });
+
+      final mirroredFile = File(
+        '${tempDir.path}${Platform.pathSeparator}001.mp3',
+      )..writeAsBytesSync(const <int>[1, 2, 3]);
+      final row = VerifiedQuranAudioSeedRow(
+        surahNumber: 1,
+        reciterId: 'alafasy',
+        audioUrl: Uri.parse(
+          'https://download.quranicaudio.com/qdc/alafasy/1.mp3',
+        ),
+        sourceUrl: Uri.parse(
+          'https://api.quran.com/api/v4/chapter_recitations/7',
+        ),
+        verifiedAt: DateTime.utc(2026, 4, 8, 19),
+      );
+
+      final json = row.toJson(mirroredFile);
+
+      expect(json['local_path'], mirroredFile.path);
+      expect(json['size_bytes'], 3);
+      expect(
+        json['sha256'],
+        '039058c6f2c0cb492c533b0a4d14ef77cc0f78abccced5287d84a1a2011cfb81',
+      );
+    });
+
     test('loads the committed seed and exposes the full 684 row catalog', () {
       final seedFile = File('content_seed_quran_audio.sql');
       final rows = parseVerifiedQuranAudioSeed(seedFile.readAsStringSync());
@@ -165,6 +200,7 @@ INSERT INTO public.audio_files (
       expect(source, contains('hasLikelyMp3Header(targetFile)'));
       expect(source, contains('invalid mp3 file'));
       expect(source, contains('_deleteFileIfExistsSync(targetFile)'));
+      expect(source, contains('sha256HexForFile(localFile)'));
     });
   });
 }

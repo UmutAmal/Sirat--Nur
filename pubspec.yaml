@@ -64,6 +64,7 @@ dependencies:
   share_plus: ^12.0.1
   http: ^1.6.0
   lat_lng_to_timezone: ^0.2.0
+  crypto: ^3.0.7
 
 dev_dependencies:
   flutter_test:

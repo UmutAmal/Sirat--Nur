@@ -7,6 +7,9 @@ import '../tool/upload_quran_audio_storage.dart';
 
 const int _mpeg1Layer3FrameLength = 417;
 const List<int> _mpeg1Layer3FrameHeader = <int>[0xFF, 0xFB, 0x90, 0x64];
+const int _validManifestSizeBytes = minimumQuranAudioFileBytes;
+const String _validManifestSha256 =
+    '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef';
 
 List<int> _quranMp3FixtureBytes() {
   final bytes = List<int>.filled(minimumQuranAudioFileBytes, 0);
@@ -119,6 +122,8 @@ void main() {
         sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
         verifiedAt: DateTime.utc(2026, 4, 8),
         localPath: 'build/verified_quran_audio/alafasy/001.mp3',
+        sizeBytes: _validManifestSizeBytes,
+        sha256: _validManifestSha256,
       );
 
       expect(storageObjectPathForMirroredAudioFile(file), 'alafasy/001.mp3');
@@ -131,6 +136,8 @@ void main() {
         sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
         verifiedAt: DateTime.utc(2026, 4, 8),
         localPath: r'build\verified_quran_audio\alafasy\001.mp3',
+        sizeBytes: _validManifestSizeBytes,
+        sha256: _validManifestSha256,
       );
 
       expect(storageObjectPathForMirroredAudioFile(file), 'alafasy/001.mp3');
@@ -155,6 +162,12 @@ void main() {
       final tinyHeaderFile = File(
         '${tempDir.path}${Platform.pathSeparator}006.mp3',
       )..writeAsBytesSync(<int>[0x49, 0x44, 0x33, 0x04]);
+      final checksumMismatchFile = File(
+        '${tempDir.path}${Platform.pathSeparator}007.mp3',
+      )..writeAsBytesSync(_quranMp3FixtureBytes());
+      final sizeMismatchFile = File(
+        '${tempDir.path}${Platform.pathSeparator}008.mp3',
+      )..writeAsBytesSync(_quranMp3FixtureBytes());
       final missingPath = '${tempDir.path}${Platform.pathSeparator}002.mp3';
 
       final failures = validateMirroredQuranAudioUploadPlan([
@@ -164,6 +177,8 @@ void main() {
           sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
           verifiedAt: DateTime.utc(2026, 4, 8),
           localPath: existingFile.path,
+          sizeBytes: existingFile.lengthSync(),
+          sha256: sha256HexForFile(existingFile),
         ),
         MirroredAudioFile(
           surahNumber: 2,
@@ -171,6 +186,8 @@ void main() {
           sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
           verifiedAt: DateTime.utc(2026, 4, 8),
           localPath: missingPath,
+          sizeBytes: _validManifestSizeBytes,
+          sha256: _validManifestSha256,
         ),
         MirroredAudioFile(
           surahNumber: 3,
@@ -178,6 +195,8 @@ void main() {
           sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
           verifiedAt: DateTime.utc(2026, 4, 8),
           localPath: emptyFile.path,
+          sizeBytes: _validManifestSizeBytes,
+          sha256: _validManifestSha256,
         ),
         MirroredAudioFile(
           surahNumber: 4,
@@ -185,6 +204,8 @@ void main() {
           sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
           verifiedAt: DateTime.utc(2026, 4, 8),
           localPath: existingFile.path,
+          sizeBytes: existingFile.lengthSync(),
+          sha256: sha256HexForFile(existingFile),
         ),
         MirroredAudioFile(
           surahNumber: 5,
@@ -192,6 +213,8 @@ void main() {
           sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
           verifiedAt: DateTime.utc(2026, 4, 8),
           localPath: invalidFile.path,
+          sizeBytes: invalidFile.lengthSync(),
+          sha256: sha256HexForFile(invalidFile),
         ),
         MirroredAudioFile(
           surahNumber: 6,
@@ -199,6 +222,27 @@ void main() {
           sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
           verifiedAt: DateTime.utc(2026, 4, 8),
           localPath: tinyHeaderFile.path,
+          sizeBytes: tinyHeaderFile.lengthSync(),
+          sha256: sha256HexForFile(tinyHeaderFile),
+        ),
+        MirroredAudioFile(
+          surahNumber: 7,
+          reciterId: 'alafasy',
+          sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
+          verifiedAt: DateTime.utc(2026, 4, 8),
+          localPath: checksumMismatchFile.path,
+          sizeBytes: checksumMismatchFile.lengthSync(),
+          sha256:
+              '0000000000000000000000000000000000000000000000000000000000000000',
+        ),
+        MirroredAudioFile(
+          surahNumber: 8,
+          reciterId: 'alafasy',
+          sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
+          verifiedAt: DateTime.utc(2026, 4, 8),
+          localPath: sizeMismatchFile.path,
+          sizeBytes: sizeMismatchFile.lengthSync() + 1,
+          sha256: sha256HexForFile(sizeMismatchFile),
         ),
       ]);
 
@@ -206,6 +250,8 @@ void main() {
       expect(failures, contains('alafasy/003.mp3: empty local file'));
       expect(failures, contains('alafasy/005.mp3: invalid mp3 file'));
       expect(failures, contains('alafasy/006.mp3: invalid mp3 file'));
+      expect(failures, contains('alafasy/007.mp3: checksum mismatch'));
+      expect(failures, contains('alafasy/008.mp3: size mismatch'));
       expect(
         failures,
         contains('alafasy/001.mp3: duplicate storage object path'),
@@ -230,6 +276,8 @@ void main() {
           sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
           verifiedAt: DateTime.utc(2026, 4, 8),
           localPath: existingFile.path,
+          sizeBytes: existingFile.lengthSync(),
+          sha256: sha256HexForFile(existingFile),
         ),
       ]);
 
@@ -245,6 +293,8 @@ void main() {
             sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
             verifiedAt: DateTime.utc(2026, 4, 8),
             localPath: 'missing/001.mp3',
+            sizeBytes: _validManifestSizeBytes,
+            sha256: _validManifestSha256,
           ),
         ],
         supabaseUrl: Uri.parse('https://example.supabase.co'),
