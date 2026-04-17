@@ -28,6 +28,46 @@ INSERT INTO public.audio_files (
       );
     });
 
+    test('rejects unapproved Quran audio mirror hosts', () {
+      expect(
+        () => parseVerifiedQuranAudioSeed('''
+INSERT INTO public.audio_files (
+  type, title, url, storage_path, surah_number, duration_seconds, reciter, language, source, verified_at
+) VALUES (
+  'quran_surah', 'Surah 1', 'https://example.com/qdc/alafasy/1.mp3', NULL, 1, NULL, 'alafasy', 'ar', 'https://api.quran.com/api/v4/chapter_recitations/7', TIMESTAMPTZ '2026-04-08T19:00:42.228933Z'
+) ON CONFLICT (type, reciter, surah_number) DO UPDATE SET
+  title = EXCLUDED.title;
+'''),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('approved Quran audio mirror host'),
+          ),
+        ),
+      );
+    });
+
+    test('rejects unapproved Quran source endpoints', () {
+      expect(
+        () => parseVerifiedQuranAudioSeed('''
+INSERT INTO public.audio_files (
+  type, title, url, storage_path, surah_number, duration_seconds, reciter, language, source, verified_at
+) VALUES (
+  'quran_surah', 'Surah 1', 'https://download.quranicaudio.com/qdc/alafasy/1.mp3', NULL, 1, NULL, 'alafasy', 'ar', 'https://example.com/api/v4/chapter_recitations/7', TIMESTAMPTZ '2026-04-08T19:00:42.228933Z'
+) ON CONFLICT (type, reciter, surah_number) DO UPDATE SET
+  title = EXCLUDED.title;
+'''),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('approved Quran.com chapter recitation endpoint'),
+          ),
+        ),
+      );
+    });
+
     test('groups verified rows into a sorted per-reciter catalog', () {
       final catalog = buildVerifiedQuranAudioCatalog([
         VerifiedQuranAudioSeedRow(

@@ -11967,3 +11967,59 @@
 
 ### Sonraki Adim
 - Kalan 252 same-as-English chatbot offline borcu icin guvenilir alias/kaynak stratejisi ayri turlarda incelenecek; artik yeni ceviri denemeleri `[OFFLINE]` token'ini bozmayacak.
+
+## 2026-04-17 TUR-288 — Guard Quran Audio Mirroring Against Unapproved Hosts
+
+### Yapilan Islem
+- `tool\download_verified_quran_audio.dart` icindeki seed parser artik sadece HTTPS kontroluyle yetinmiyor.
+- Quran ses dosyasi mirror URL'leri `download.quranicaudio.com/qdc/...mp3` sekliyle sinirlandi.
+- Kaynak/dogrulama URL'leri `api.quran.com/api/v4/chapter_recitations/{id}` sekliyle sinirlandi.
+- Seed dosyasi bozulursa veya yanlis kaynaktan yenilenirse mirror araci "verified" adi altinda onaysiz dini ses indirmeden once `FormatException` firlatiyor.
+- Bu guard icin iki regresyon testi eklendi: onaysiz audio host ve onaysiz source endpoint.
+
+### Kanit
+- Approved audio host sabiti: `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart:13`
+- Audio URL host/path guard'i: `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart:88`
+- Source URL endpoint guard'i: `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart:97`
+- Parser audio guard'i: `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart:123`
+- Parser source guard'i: `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart:130`
+- Onaysiz audio host testi: `A:\Way of Allah\sirat_i_nur\test\download_verified_quran_audio_test.dart:31`
+- Onaysiz source endpoint testi: `A:\Way of Allah\sirat_i_nur\test\download_verified_quran_audio_test.dart:51`
+
+### Neden Yapildi
+- AGENTS.md Section 13 dini ses iceriginde sadece dogrulanmis ve kabul edilen kaynaklari kullanmayi zorunlu kiliyor.
+- Eski parser `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart:103` ve `:108` seviyesinde yalnizca HTTPS kontrol ediyordu; bu, seed zehirlenirse `https://example.com/...` gibi onaysiz kaynaklarin mirror pipeline'ina girmesine izin verebilirdi.
+- Runtime dis MP3 linkleri reddetse bile mirror/import pipeline'i Storage'a yanlis icerik tasiyabilecek kadar kritik oldugu icin kok sebep arac katmaninda kapatildi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart`
+- `A:\Way of Allah\sirat_i_nur\test\download_verified_quran_audio_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran audio mirror pipeline'i yalniz mevcut onayli seed hostlariyla calisir.
+- Mevcut 684 satirlik `content_seed_quran_audio.sql` parse edilmeye devam eder; cunku host taramasinda yalniz `api.quran.com` ve `download.quranicaudio.com` bulundu.
+- Onaysiz hostlara karsi hata erken ve deterministik hale geldi.
+
+### Test Sonucu
+- Format: `dart format tool\download_verified_quran_audio.dart test\download_verified_quran_audio_test.dart` PASS
+- Odak test: `flutter test test\download_verified_quran_audio_test.dart` PASS (`8/8`)
+- Tool help smoke: `dart run tool\download_verified_quran_audio.dart --help` PASS
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`502/502`)
+
+### Risk Degisimi
+- Onaysiz Quran audio host'unun verified mirror pipeline'ina girmesi riski: `12/25 -> 1/25`
+- Onaysiz source endpoint'in dogrulanmis kaynak gibi kabul edilmesi riski: `12/25 -> 1/25`
+- Mevcut seed ile geriye uyumluluk riski: `4/25 -> 1/25` (684 satirlik committed seed full testte parse edildi)
+
+### Rollback Plani
+- `tool\download_verified_quran_audio.dart` icindeki approved host sabitleri ve `_isApprovedQuranAudioUrl` / `_isApprovedQuranSourceUrl` helper'lari kaldirilir.
+- Parser'daki host/path guard'lari eski HTTPS-only kontrole dondurulur.
+- `test\download_verified_quran_audio_test.dart` icindeki iki unapproved host regression testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Quran audio sahiplik zincirinde bir sonraki risk `content_seed_quran_audio.sql` dosyasinin operator tarafindan yanlislikla runtime seed gibi uygulanmasi ihtimalidir; bunu SQL seviyesinde daha zor yanlis kullanilir hale getirme veya ayrik mirror manifest formatina tasima secenekleri degerlendirilecek.
