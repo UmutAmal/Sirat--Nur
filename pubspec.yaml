@@ -59,6 +59,8 @@ dependencies:
   latlong2: ^0.9.1
   webview_flutter: ^4.13.1
   audio_session: ^0.2.3
+  # share_plus 13.0.0 requires Flutter >=3.41.6; this repo currently validates
+  # on Flutter 3.41.4, so keep the supported 12.x line until the toolchain moves.
   share_plus: ^12.0.1
   http: ^1.6.0
   lat_lng_to_timezone: ^0.2.0

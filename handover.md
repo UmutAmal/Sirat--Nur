@@ -13165,3 +13165,51 @@
 
 ### Sonraki Adim
 - Yeni turda l10n debt icin tek anahtar/tek guvenli locale ilerleme veya dependency outdated riskleri resmi pub.dev constraint bilgisiyle dar kapsamli taranacak.
+
+## 2026-04-17 TUR-310 - share_plus Toolchain Compatibility Guard
+
+### Yapilan Islem
+- Dependency freshness taramasinda `share_plus` icin current/resolvable `12.0.2`, latest `13.0.0` goruldu.
+- Resmi pub.dev changelog kaynagina gore `share_plus 13.0.0` Flutter `>=3.41.6` isterken yerel dogrulama ortami Flutter `3.41.4`.
+- Bu nedenle desteklenmeyen "latest" bump yapilmadi; `pubspec.yaml` icinde desteklenen 12.x satirinin neden korundugu belgelendi.
+- Ileride arac/insan tarafindan kontrolsuz 13.x constraint acilmasini yakalayacak regresyon testi eklendi.
+
+### Kanit
+- Yerel Flutter surumu: `flutter doctor` cikti ozeti `Flutter 3.41.4`.
+- Dependency guard yorumu: `A:\Way of Allah\sirat_i_nur\pubspec.yaml:62`
+- Korunan dependency constraint'i: `A:\Way of Allah\sirat_i_nur\pubspec.yaml:64`
+- Regresyon testi: `A:\Way of Allah\sirat_i_nur\test\dependency_version_guard_test.dart:6`
+- Toolchain gerekcesi test mesaji: `A:\Way of Allah\sirat_i_nur\test\dependency_version_guard_test.dart:18`
+- Resmi kaynak: `https://pub.dev/packages/share_plus/changelog` (`13.0.0`: Flutter requirement `>=3.41.6`)
+
+### Neden Yapildi
+- "Tum paketler en guncel olsun" hedefi dogru ama her latest surum mevcut toolchain ile uyumlu degil.
+- Flutter 3.41.4 uzerinde `share_plus 13.x` acmak cozum degil, build kirma riski tasiyan sahte guncellik olurdu.
+- Guard, toolchain Flutter `>=3.41.6` seviyesine tasinmadan bu paketin 13.x hattina yanlislikla gecmesini engeller.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\pubspec.yaml`
+- `A:\Way of Allah\sirat_i_nur\test\dependency_version_guard_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Direct dependency freshness riski kanitli olarak kapatilmis oldu: mevcut toolchain icin en yuksek guvenli hat korunuyor.
+- Gelecekte Flutter toolchain yukseltildiginde test bilerek guncellenerek `share_plus 13.x` gecisine temiz bir kapı acilabilir.
+- Runtime share akisi degismedi; yalnizca dependency constraint yonetimi ve regresyon guvencesi eklendi.
+
+### Test Sonucu
+- Odak test: `flutter test test\dependency_version_guard_test.dart` PASS (`1/1`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`535/535`)
+
+### Risk Degisimi
+- Flutter 3.41.4 ortaminda `share_plus 13.x` constraint'inin build'i kirma riski: `12/25 -> 2/25`
+
+### Rollback Plani
+- `pubspec.yaml` icindeki iki satirlik `share_plus 13.0.0` toolchain notu kaldirilir.
+- `test\dependency_version_guard_test.dart` silinir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda dependency scan'de kalan transitive latest farklari resmi pub.dev constraint'leriyle ayrilacak; dogrudan uygulama riski cikmazsa l10n same-as-English debt icin bir guvenli anahtar/locale daha ilerletilecek.
