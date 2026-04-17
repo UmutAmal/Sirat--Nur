@@ -25,6 +25,7 @@ void main() {
           'content_tr': 'Gunun ayeti',
           'content_en': 'Verse of the day',
           'reference': 'Al-Baqarah 2:255',
+          'verified_at': '2026-04-08T00:00:00Z',
         },
         fetchFallbackAyat: () async => null,
       );
@@ -43,6 +44,7 @@ void main() {
       'content_tr': 'Onbellek',
       'content_en': 'Cached',
       'reference': 'Al-Fatihah 1:1',
+      'verified_at': '2026-04-08T00:00:00Z',
     }, now: cachedAt);
 
     final ayat = await resolveDailyAyat(
@@ -67,6 +69,7 @@ void main() {
         'content_tr': 'Eski',
         'content_en': 'Old',
         'reference': 'Al-Fatihah 1:1',
+        'verified_at': '2026-04-06T00:00:00Z',
       }, now: cachedAt);
 
       expect(
@@ -92,6 +95,7 @@ void main() {
         'content_tr': 'Kayitli ayet',
         'content_en': 'Cached verse',
         'reference': 'Al-Fatihah 1:1',
+        'verified_at': '2026-04-08T00:00:00Z',
       }, now: cachedAt);
 
       final container = ProviderContainer(
@@ -191,4 +195,33 @@ void main() {
       );
     },
   );
+
+  test('normalizeDailyAyat rejects rows without verified provenance', () {
+    expect(
+      normalizeDailyAyat({
+        'content_ar': 'آية',
+        'content_tr': 'Ayet',
+        'content_en': 'Verse',
+        'reference': 'Al-Fatihah 1:1',
+      }),
+      isNull,
+    );
+
+    expect(
+      normalizeDailyAyat({
+        'text_ar': 'آية',
+        'text_tr': 'Ayet',
+        'text_en': 'Verse',
+        'reference': 'Al-Fatihah 1:1',
+        'verifiedAt': '2026-04-08T00:00:00Z',
+      }),
+      {
+        'content_ar': 'آية',
+        'content_tr': 'Ayet',
+        'content_en': 'Verse',
+        'reference': 'Al-Fatihah 1:1',
+        'verified_at': '2026-04-08T00:00:00Z',
+      },
+    );
+  });
 }

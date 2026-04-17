@@ -59,6 +59,7 @@ Map<String, dynamic>? normalizeDailyAyat(Map<String, dynamic>? row) {
     'content_tr': _readFirstAyatValue(row, ['content_tr', 'text_tr']),
     'content_en': _readFirstAyatValue(row, ['content_en', 'text_en']),
     'reference': _readFirstAyatValue(row, ['reference', 'source']),
+    'verified_at': _readFirstAyatValue(row, ['verified_at', 'verifiedAt']),
   };
 
   final hasMissingField = normalized.values.any(

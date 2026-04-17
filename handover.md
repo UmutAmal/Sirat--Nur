@@ -14727,3 +14727,41 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak daily ayat provenance/cache guard'i, l10n same-as-English debt ve audio seed/source dogrulamalari taranacak.
+
+## 2026-04-17 TUR-337 - Daily Ayat Cache Requires Verified Provenance
+
+### MASTER Karari
+- Risk: `lib/core/providers/supabase_providers.dart:52` `normalizeDailyAyat` gunluk ayet satirini Arapca/TR/EN/reference alanlari varsa kabul ediyordu; `verified_at` olmayan dini icerik cache'e alinabiliyordu.
+- Kanit: `lib/core/providers/supabase_providers.dart:77` cache yazimi normalizasyon sonucunu kalici kaydediyor; eksik provenance satiri 24 saatlik offline cache'e tasinabilirdi.
+- Etki: Operator/API hatasi durumunda dogrulanmamis gunluk ayet metni ana sayfada ve Android ayet widget'inda gorunebilirdi.
+- Olasilik: Daily content cloud satirlari manuel seed/operator islemlerinden gelebilir; eski cache de ayni normalizasyonla okunuyordu.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1).
+- Rollback kapsami: `lib/core/providers/supabase_providers.dart`, `test/daily_ayat_provider_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `lib/core/providers/supabase_providers.dart:62` normalized daily ayat payload'ina `verified_at` eklendi.
+- `normalizeDailyAyat` mevcut `hasMissingField` kontrolu sayesinde `verified_at/verifiedAt` olmayan satirlari artik reddediyor.
+- `readCachedDailyAyat` eski veya eksik provenance cache'lerini yeniden normalizasyonla reddeder; dogrulanmamis cache UI'a cikmaz.
+
+### TESTER Kapsami
+- `test/daily_ayat_provider_test.dart:28`, `test/daily_ayat_provider_test.dart:47`, `test/daily_ayat_provider_test.dart:72`, `test/daily_ayat_provider_test.dart:98` mevcut valid fixture'lar verified provenance tasiyacak sekilde guncellendi.
+- `test/daily_ayat_provider_test.dart:199` `verified_at` olmayan daily ayat satirinin reddedildigini ve `verifiedAt` varyantinin normalize edildigini dogruluyor.
+
+### Test Sonucu
+- Format: `dart format lib\core\providers\supabase_providers.dart test\daily_ayat_provider_test.dart` PASS
+- Odak test: `flutter test test\daily_ayat_provider_test.dart --reporter compact` PASS (`8/8`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`563/563`)
+
+### Risk Degisimi
+- Dogrulanmamis gunluk ayetin cache/UI/widget hattina girmesi riski: `12/25 -> 2/25`
+- Kalan risk: Daily content semantik/dini dogrulugu upstream Supabase seed ve operator kaynak audit'ine bagli; uygulama artik provenance eksigini reddediyor.
+
+### Rollback Plani
+- `normalizeDailyAyat` icindeki `verified_at` alan zorunlulugu kaldirilir.
+- Eklenen daily ayat provenance testi ve fixture `verified_at` alanlari eski haline dondurulur.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak dua/asma cloud provenance, l10n same-as-English debt ve audio seed source URL dogrulamasi taranacak.
