@@ -43,5 +43,35 @@ void main() {
         isTrue,
       );
     });
+
+    test('runtime credentials reject unsafe Supabase project URLs', () {
+      const unsafeUrls = [
+        'http://example.supabase.co',
+        'https://token@example.supabase.co',
+        'https://example.supabase.co/rest/v1',
+        'https://example.supabase.co?apikey=secret',
+        'https://example.supabase.co#secret',
+        'not-a-url',
+      ];
+
+      for (final unsafeUrl in unsafeUrls) {
+        expect(
+          SupabaseConfig.hasRuntimeCredentials(
+            candidateUrl: unsafeUrl,
+            candidateAnonKey: 'anon_test_key',
+          ),
+          isFalse,
+          reason: unsafeUrl,
+        );
+      }
+
+      expect(
+        SupabaseConfig.hasRuntimeCredentials(
+          candidateUrl: ' https://example.supabase.co/ ',
+          candidateAnonKey: ' anon_test_key ',
+        ),
+        isTrue,
+      );
+    });
   });
 }

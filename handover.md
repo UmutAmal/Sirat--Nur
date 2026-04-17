@@ -14646,3 +14646,43 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Supabase config, l10n debt ve offline/audio katalog guard'lari taranacak.
+
+## 2026-04-17 TUR-335 - Supabase Runtime Credentials Reject Unsafe Project URLs
+
+### MASTER Karari
+- Risk: `lib/core/network/supabase_config.dart:62` runtime credential kontrolu Supabase URL icin yalnizca bos degil kontrolu yapiyordu; `http`, user-info, query, fragment veya REST path iceren guvensiz URL'ler "configured" sayilabilirdi.
+- Etki: Yanlis veya sizan Supabase endpoint'iyle runtime servislerin baslamasi, storage/DB akisini kirabilir ve gizli token'larin URL icinde tasinmasina yol acabilirdi.
+- Olasilik: Ortam degiskeni, CI secret veya build config yanlis girildiginde dogrudan tetiklenebilir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1).
+- Rollback kapsami: `lib/core/network/supabase_config.dart`, `test/supabase_config_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `lib/core/network/supabase_config.dart:66` `hasRuntimeCredentials` artik URL icin `isValidProjectUrl` sonucunu zorunlu tutuyor.
+- `lib/core/network/supabase_config.dart:70` yeni `isValidProjectUrl` helper'i eklendi.
+- `lib/core/network/supabase_config.dart:78` yalnizca `https`, bos olmayan host, query/fragment/userInfo icermeyen ve path'i bos veya `/` olan proje URL'leri kabul ediliyor.
+- `lib/core/network/supabase_config.dart:86` REST path gibi proje root'u disindaki path'ler reddediliyor.
+
+### TESTER Kapsami
+- `test/supabase_config_test.dart:47` `http`, user-info, REST path, query, fragment ve parse edilemeyen URL'lerin runtime credential olarak reddedildigini dogruluyor.
+- Trimlenmis `https://example.supabase.co/` + trimlenmis anon key hala kabul ediliyor; mevcut pozitif akisi bozmuyor.
+
+### Test Sonucu
+- Format: `dart format lib\core\network\supabase_config.dart test\supabase_config_test.dart` PASS
+- Odak test: `flutter test test\supabase_config_test.dart --reporter compact` PASS (`3/3`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`562/562`)
+- `flutter doctor` Android/Flutter hedefleri icin PASS; Chrome ve Visual Studio eksikleri web/Windows desktop hedefleri icin non-blocking olarak kaldi.
+
+### Risk Degisimi
+- Guvensiz/malformed Supabase URL'nin configured sayilmasi riski: `12/25 -> 2/25`
+- Kalan risk: Supabase projesinin gercek erisilebilirligi runtime network/secret kalitesine bagli; bu tur yalnizca statik URL sekil guvenligini kapatti.
+
+### Rollback Plani
+- `isValidProjectUrl` helper'i kaldirilir.
+- `hasRuntimeCredentials` onceki bos degil kontrolune dondurulur.
+- Eklenen unsafe URL testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak dependency freshness, l10n debt, offline/audio katalog guard'lari ve TODO/placeholder taramasi tekrar calistirilacak.

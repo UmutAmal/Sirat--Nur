@@ -63,7 +63,27 @@ class SupabaseConfig {
     String candidateUrl = url,
     String candidateAnonKey = anonKey,
   }) {
-    return candidateUrl.trim().isNotEmpty && candidateAnonKey.trim().isNotEmpty;
+    return isValidProjectUrl(candidateUrl) &&
+        candidateAnonKey.trim().isNotEmpty;
+  }
+
+  static bool isValidProjectUrl(String candidateUrl) {
+    final trimmed = candidateUrl.trim();
+    if (trimmed.isEmpty) {
+      return false;
+    }
+
+    final uri = Uri.tryParse(trimmed);
+    if (uri == null ||
+        uri.scheme != 'https' ||
+        uri.host.trim().isEmpty ||
+        uri.hasQuery ||
+        uri.hasFragment ||
+        uri.userInfo.isNotEmpty) {
+      return false;
+    }
+
+    return uri.path.isEmpty || uri.path == '/';
   }
 
   static bool get isConfigured => hasRuntimeCredentials();
