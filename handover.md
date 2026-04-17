@@ -12884,3 +12884,62 @@
 
 ### Sonraki Adim
 - Yeni turda Quran audio mirror/upload tool zinciri ve kalan l10n debt, uydurma ceviri yapmadan guvenli guard'larla taranacak.
+
+## 2026-04-17 TUR-305 - Quran Audio Mirror Provenance URL Validation
+
+### Yapilan Islem
+- Quran audio mirror/download ve storage seed tool'lari icin ortak source URL validation helper'i eklendi.
+- Download seed parser eski private URL kontrolleri yerine ortak helper'i kullanacak sekilde baglandi.
+- Storage seed manifest parser'i artik `source` alanini yalnizca resmi Quran.com chapter recitation endpointi olarak kabul ediyor.
+- HTTPS olmayan, farkli host kullanan, userinfo/query/fragment iceren veya endpoint path'i farkli olan URL'ler manifest/seed zincirinde reddediliyor.
+- Manifest provenance ve mirror URL guard testleri eklendi.
+
+### Kanit
+- Ortak URL shape guard'i: `A:\Way of Allah\sirat_i_nur\tool\quran_audio_source_validation.dart:4`
+- Quran audio mirror host guard'i: `A:\Way of Allah\sirat_i_nur\tool\quran_audio_source_validation.dart:11`
+- Quran.com source endpoint guard'i: `A:\Way of Allah\sirat_i_nur\tool\quran_audio_source_validation.dart:19`
+- Download seed parser ortak mirror guard kullaniyor: `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart:104`
+- Download seed parser ortak source guard kullaniyor: `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart:110`
+- Storage manifest parser source guard kullaniyor: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:94`
+- Unsafe mirror URL testi: `A:\Way of Allah\sirat_i_nur\test\download_verified_quran_audio_test.dart:51`
+- Non-Quran.com manifest source testi: `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart:158`
+- Unsafe manifest source adornment testi: `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart:189`
+
+### Neden Yapildi
+- Mirror download tool'u SQL seed kaynagini dogruluyordu, ancak storage seed generator manifestten gelen `source` alanini sadece bos degil diye kabul ediyordu.
+- Manifest elle degistirilirse storage seed icindeki provenance `source` alani resmi Quran.com endpointi disina cikabilirdi.
+- Quran audio zincirinde runtime dosyalar storage-backed olsa bile dini icerik kaynak zincirinin resmi ve denetlenebilir kalmasi gerekiyor.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\quran_audio_source_validation.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\download_verified_quran_audio.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\download_verified_quran_audio_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Storage seed uretimi artik manifest provenance satirlarini resmi Quran.com endpointiyle sinirliyor.
+- Download ve storage seed tool'lari ayni URL kuralini paylastigi icin gelecekteki drift riski azaldi.
+- Runtime'a external audio fallback eklenmedi; Supabase Storage ownership hedefi korunuyor.
+
+### Test Sonucu
+- Odak test: `flutter test test\generate_quran_audio_storage_seed_test.dart` PASS (`12/12`)
+- Odak test: `flutter test test\download_verified_quran_audio_test.dart` PASS (`9/9`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`530/530`)
+
+### Risk Degisimi
+- Storage seed manifest provenance kaynaginin resmi Quran.com endpointi disina sessiz cikmasi riski: `12/25 -> 2/25`
+- Download ve storage tool'lari arasinda URL validation drift riski: `10/25 -> 2/25`
+
+### Rollback Plani
+- `tool\quran_audio_source_validation.dart` kaldirilir.
+- `download_verified_quran_audio.dart` icindeki private URL helper'lari eski haline getirilir.
+- `generate_quran_audio_storage_seed.dart` manifest source guard'i kaldirilir.
+- Eklenen URL provenance testleri kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda storage manifest/local path portability, Supabase upload dry-run guvenceleri ve kalan audio ownership riskleri taranacak.

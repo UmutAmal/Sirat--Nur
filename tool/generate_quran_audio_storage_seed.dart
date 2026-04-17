@@ -4,6 +4,8 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 import 'package:sirat_i_nur/core/network/supabase_storage_url.dart';
 
+import 'quran_audio_source_validation.dart';
+
 const String _defaultManifestPath = 'build/verified_quran_audio/manifest.json';
 const String _defaultOutputPath = 'content_seed_quran_audio_storage.sql';
 const String _defaultBucketName = 'quran-audio';
@@ -86,6 +88,14 @@ List<MirroredAudioFile> parseMirroredAudioManifest(
       }
       if (sourceUrl == null || sourceUrl.isEmpty) {
         throw FormatException('Missing source in manifest row: $row');
+      }
+      final parsedSourceUrl = Uri.tryParse(sourceUrl);
+      if (parsedSourceUrl == null ||
+          !isApprovedQuranSourceUrl(parsedSourceUrl)) {
+        throw FormatException(
+          'Source URL must use approved Quran.com chapter recitation endpoint '
+          'for reciter $reciterId, surah $surahNumber',
+        );
       }
       if (verifiedAtRaw == null || verifiedAtRaw.isEmpty) {
         throw FormatException('Missing verified_at in manifest row: $row');

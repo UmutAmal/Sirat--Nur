@@ -154,6 +154,67 @@ void main() {
       );
     });
 
+    test(
+      'rejects manifest source URLs outside the verified Quran.com endpoint',
+      () {
+        expect(
+          () => parseMirroredAudioManifest('''
+{
+  "requested": 1,
+  "downloaded": 1,
+  "skipped": 0,
+  "failed": [],
+  "files": [
+    {
+      "surah_number": 1,
+      "reciter": "alafasy",
+      "source": "https://example.com/api/v4/chapter_recitations/7",
+      "verified_at": "2026-04-08T19:00:42.228933Z",
+      "local_path": "build/verified_quran_audio/alafasy/001.mp3"
+    }
+  ]
+}
+''', requireCompleteCatalog: false),
+          throwsA(
+            isA<FormatException>().having(
+              (error) => error.message,
+              'message',
+              contains('approved Quran.com chapter recitation endpoint'),
+            ),
+          ),
+        );
+      },
+    );
+
+    test('rejects manifest source URLs with unsafe URI adornments', () {
+      expect(
+        () => parseMirroredAudioManifest('''
+{
+  "requested": 1,
+  "downloaded": 1,
+  "skipped": 0,
+  "failed": [],
+  "files": [
+    {
+      "surah_number": 1,
+      "reciter": "alafasy",
+      "source": "https://audit@example.com/api/v4/chapter_recitations/7#row",
+      "verified_at": "2026-04-08T19:00:42.228933Z",
+      "local_path": "build/verified_quran_audio/alafasy/001.mp3"
+    }
+  ]
+}
+''', requireCompleteCatalog: false),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('approved Quran.com chapter recitation endpoint'),
+          ),
+        ),
+      );
+    });
+
     test('rejects local files that do not match the surah number', () {
       expect(
         () => parseMirroredAudioManifest('''

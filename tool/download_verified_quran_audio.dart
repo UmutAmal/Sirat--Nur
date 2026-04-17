@@ -5,13 +5,12 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 
 import 'quran_audio_file_validation.dart';
+import 'quran_audio_source_validation.dart';
 
 final RegExp _seedRowPattern = RegExp(
   r"'quran_surah', 'Surah (\d+)', '([^']+)', NULL, (\d+), NULL, '([^']+)', 'ar', '([^']+)', TIMESTAMPTZ '([^']+)'",
   multiLine: true,
 );
-const String _approvedQuranAudioHost = 'download.quranicaudio.com';
-const String _approvedQuranSourceHost = 'api.quran.com';
 
 class VerifiedQuranAudioSeedRow {
   const VerifiedQuranAudioSeedRow({
@@ -85,24 +84,6 @@ String describeQuranAudioMirrorFailure(Object error) {
   return 'unexpected mirror error';
 }
 
-bool _isApprovedQuranAudioUrl(Uri uri) {
-  return uri.isScheme('https') &&
-      uri.host.toLowerCase() == _approvedQuranAudioHost &&
-      uri.pathSegments.isNotEmpty &&
-      uri.pathSegments.first == 'qdc' &&
-      uri.path.toLowerCase().endsWith('.mp3');
-}
-
-bool _isApprovedQuranSourceUrl(Uri uri) {
-  return uri.isScheme('https') &&
-      uri.host.toLowerCase() == _approvedQuranSourceHost &&
-      uri.pathSegments.length == 4 &&
-      uri.pathSegments[0] == 'api' &&
-      uri.pathSegments[1] == 'v4' &&
-      uri.pathSegments[2] == 'chapter_recitations' &&
-      int.tryParse(uri.pathSegments[3]) != null;
-}
-
 List<VerifiedQuranAudioSeedRow> parseVerifiedQuranAudioSeed(String sql) {
   final rows = <VerifiedQuranAudioSeedRow>[];
 
@@ -120,13 +101,13 @@ List<VerifiedQuranAudioSeedRow> parseVerifiedQuranAudioSeed(String sql) {
         '$surahFromTitle != $surahNumber',
       );
     }
-    if (!_isApprovedQuranAudioUrl(audioUrl)) {
+    if (!isApprovedQuranAudioMirrorUrl(audioUrl)) {
       throw FormatException(
         'Audio URL must use approved Quran audio mirror host for reciter '
         '$reciterId, surah $surahNumber',
       );
     }
-    if (!_isApprovedQuranSourceUrl(sourceUrl)) {
+    if (!isApprovedQuranSourceUrl(sourceUrl)) {
       throw FormatException(
         'Source URL must use approved Quran.com chapter recitation endpoint '
         'for reciter $reciterId, surah $surahNumber',
