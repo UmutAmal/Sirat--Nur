@@ -305,6 +305,56 @@ void main() {
       },
     );
 
+    test(
+      'queues a return to the last fingerprint while another schedule is active',
+      () async {
+        final scheduler = BlockingAdhanSchedulerService();
+        final coordinator = PrayerNotificationCoordinator(scheduler: scheduler);
+        final istanbulSettings = SettingsState(
+          latitude: 41.0082,
+          longitude: 28.9784,
+          locationName: 'Istanbul, Turkey',
+          timezone: 'Europe/Istanbul',
+        );
+        final makkahSettings = SettingsState(
+          latitude: 21.4225,
+          longitude: 39.8262,
+          locationName: 'Makkah, Saudi Arabia',
+          timezone: 'Asia/Riyadh',
+        );
+
+        await coordinator.sync(istanbulSettings);
+        scheduler
+          ..enqueueOperationBlocker()
+          ..enqueueOperationBlocker();
+
+        final makkahSync = coordinator.sync(makkahSettings);
+        await Future<void>.delayed(Duration.zero);
+
+        final returnSync = coordinator.sync(istanbulSettings);
+        await Future<void>.delayed(Duration.zero);
+
+        expect(scheduler.scheduleCalls, 2);
+
+        scheduler.releaseNextOperation();
+        await Future<void>.delayed(Duration.zero);
+
+        expect(scheduler.scheduleCalls, 3);
+
+        scheduler.releaseNextOperation();
+        await Future.wait([makkahSync, returnSync]);
+
+        expect(scheduler.lat, 41.0082);
+        expect(scheduler.lon, 28.9784);
+        expect(scheduler.timezoneName, 'Europe/Istanbul');
+        expect(scheduler.operations, <String>[
+          'schedule:41.0082,28.9784',
+          'schedule:21.4225,39.8262',
+          'schedule:41.0082,28.9784',
+        ]);
+      },
+    );
+
     test('sync failure log does not include raw scheduler exceptions', () {
       final source = File(
         'lib/core/services/prayer_notification_coordinator.dart',

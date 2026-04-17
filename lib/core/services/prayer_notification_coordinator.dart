@@ -26,7 +26,11 @@ class PrayerNotificationCoordinator {
     }
 
     final fingerprint = settingsFingerprint(settings);
-    if (_lastFingerprint == fingerprint) return;
+    if (_activeSync == null &&
+        _queuedSettings == null &&
+        _lastFingerprint == fingerprint) {
+      return;
+    }
     _queuedSettings = settings;
 
     while (true) {

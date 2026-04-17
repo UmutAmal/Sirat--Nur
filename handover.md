@@ -11461,3 +11461,49 @@
 ### Sonraki Adim
 - Global city listesi country code coverage'i resolver ile karsilastirilacak; resmi olmayan komsu ulke masquerade riskleri testle korunacak.
 - Notification/prayer coordinator zincirinde location/timezone degisimi sonrasi scheduling yenileme akisi tekrar taranacak.
+
+## 2026-04-17 TUR-279 — Fix In-Flight Prayer Schedule Revert Race
+
+### Yapilan Islem
+- `PrayerNotificationCoordinator.sync` icindeki erken-return guard'i daraltildi.
+- Artik sadece aktif sync yoksa, kuyruk bos ise ve yeni fingerprint son basarili fingerprint ile ayniysa skip ediliyor.
+- Aktif B schedule'i devam ederken kullanici tekrar son basarili A ayarina donerse A artik kuyruğa aliniyor ve B bittikten sonra tekrar schedule ediliyor.
+- Regression testi, Istanbul -> Makkah in-flight -> Istanbul geri donus senaryosunu engelleyecek sekilde eklendi.
+
+### Kanit
+- Daraltilmis early-return guard: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart:29`
+- Kuyruga alma noktasi: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart:34`
+- Drain fingerprint kontrolu: `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart:66`
+- Regression testi: `A:\Way of Allah\sirat_i_nur\test\prayer_notification_coordinator_test.dart:309`
+
+### Neden Yapildi
+- Eski akista `_lastFingerprint == fingerprint` kontrolu aktif sync durumunu dikkate almadan return ediyordu.
+- Son basarili ayar A iken B schedule'i devam ediyorsa ve kullanici son anda A'ya geri donerse A istegi yok sayilabiliyordu.
+- B schedule'i tamamlandiktan sonra en guncel kullanici ayari A olmasina ragmen notification schedule B'de kalabiliyordu.
+- Cozum scheduling isini paralellestirmedi; mevcut serial queue modelini koruyup yalniz stale early-return davranisini kapatti.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\prayer_notification_coordinator.dart`
+- `A:\Way of Allah\sirat_i_nur\test\prayer_notification_coordinator_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Format: `dart format lib\core\services\prayer_notification_coordinator.dart test\prayer_notification_coordinator_test.dart` PASS
+- Odak test: `flutter test test\prayer_notification_coordinator_test.dart` PASS (`8/8`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`492/492`)
+
+### Risk Degisimi
+- Hizli konum/timezone degisiminde notification schedule'in eski lokasyonda kalmasi riski: `16/25 -> 3/25`
+- In-flight sync sirasinda latest-wins semantiginin bozulmasi riski: `16/25 -> 3/25`
+
+### Rollback Plani
+- `sync` early-return guard'i onceki tek satir `_lastFingerprint == fingerprint` kontrolune dondurulur.
+- Yeni regression testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Adhan scheduler icinde gunluk notification id üretiminin past-prayer skip ile cakisip cakismadigi incelenecek.
+- Global city listesi/resolver masquerade guard testleri icin kaynakli coverage taramasi devam edecek.
