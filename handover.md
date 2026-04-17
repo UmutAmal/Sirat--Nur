@@ -13564,3 +13564,51 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude dependency latest/constraint riski ve kalan l10n same-as-English debt birlikte taranacak; dini icerik dogrulugu icin ayri, kaynakli ve dar kapsamli audit basligi secilecek.
+
+## 2026-04-17 TUR-316 - Places AppBar Title Context Fix
+
+### Yapilan Islem
+- Yeni dongude repo/remote/branch/status ve `flutter doctor` tekrar dogrulandi; Android toolchain saglam, Chrome/Visual Studio eksikleri Android hedefi icin bloklayici degil.
+- `flutter pub outdated --json` calistirildi; 17 paket latest'ten geride gorundu ancak hepsi mevcut SDK/constraint ile `resolvable == current` ve advisory/retracted isareti yok. `share_plus` icin repo notu Flutter 3.41.4 nedeniyle 12.x hattinda kalmayi dogruluyor.
+- Places harita riski tekrar incelendi; public OSM tile hostlari runtime'da reddediliyor ve README/testler explicit provider zorunlulugunu dogruluyor.
+- Inceleme sirasinda Places ekraninin AppBar basliginda copy-paste kaynakli yanlis baglam bulundu: `Location • Prayers`.
+- Baslik `Location • Places` olacak sekilde tek satir degistirildi ve widget regresyon testi eklendi.
+
+### Kanit
+- Hata kaynagi/fix: `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:583`
+- Regresyon testi: `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart:322`
+- Yanlis baslik yokluk guard'i: `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart:323`
+
+### Neden Yapildi
+- Places ekrani cami, helal gida ve Islam egitimi noktalarini gosterirken AppBar'da `Prayers` yazmasi kullaniciyi yanlis ozellikte oldugu izlenimine sokuyordu.
+- Kök sebep sadece UI copy baglami oldugu icin global l10n veya navigation refactor gerekmedi; mevcut `places` anahtari zaten tum locale zincirinde vardi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Places ekraninda yanlis `Location • Prayers` basligi artik gorunmeyecek.
+- Widget testi hem dogru `Location • Places` basligini hem de eski yanlis basligin yoklugunu kilitliyor.
+- Dini icerik, hesaplama veya harita veri kaynagi davranisi degismedi.
+
+### Test Sonucu
+- Format: `dart format lib\features\places\places_map_page.dart test\features\places\places_map_page_test.dart` PASS
+- Odak test: `flutter test test\features\places\places_map_page_test.dart --reporter compact` PASS (`8/8`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`536/536`)
+
+### Risk Degisimi
+- Places AppBar yanlis ozellik basligi riski: `8/25 -> 1/25`
+- Public OSM tile riski bu turda tekrar dogrulandi: mevcut testlerle kapali kalmaya devam ediyor.
+- Dependency latest riski: simdilik `advisory=false`, `resolvable=current`; toolchain yukselmeden zorla upgrade yapilmadi.
+
+### Rollback Plani
+- `places_map_page.dart` basligi eski `${l10n.location} • ${l10n.prayers}` ifadesine dondurulur.
+- `places_map_page_test.dart` icindeki `Location • Places` / `Location • Prayers` beklentileri kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni dongude kalan l10n same-as-English borcu icin guvenli tek anahtar/locale ilerlemesi veya prayer/timezone pipeline'da kanitli edge-case riski secilecek.

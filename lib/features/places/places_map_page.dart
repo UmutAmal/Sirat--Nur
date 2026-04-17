@@ -580,7 +580,7 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: Text(
-          '${l10n.location} • ${l10n.prayers}',
+          '${l10n.location} • ${l10n.places}',
           style: const TextStyle(
             fontWeight: FontWeight.w800,
             color: Colors.white,

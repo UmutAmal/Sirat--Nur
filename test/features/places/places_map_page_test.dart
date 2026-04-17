@@ -319,6 +319,8 @@ void main() {
       );
       await tester.pump();
 
+      expect(find.text('Location • Places'), findsOneWidget);
+      expect(find.text('Location • Prayers'), findsNothing);
       expect(find.text('Location required'), findsNWidgets(2));
       expect(
         find.text(
