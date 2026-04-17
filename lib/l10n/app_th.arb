@@ -748,7 +748,7 @@
   "premiumPurchaseFailed": "ไม่สามารถดำเนินการซื้อให้เสร็จสิ้นได้ โปรดลองอีกครั้ง",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islamic Way of Light",
+  "splashTagline": "วิถีแห่งแสงสว่างของอิสลาม",
   "downloadPartiallyFinishedForReciter": "ดาวน์โหลดเสร็จสิ้นสำหรับ {reciter} โดยมี {failed} ล้มเหลวใน Surahs ({downloaded}/{total} ดาวน์โหลดแล้ว)",
   "placesLocationRequiredTitle": "จำเป็นต้องระบุตำแหน่ง",
   "placesLocationRequiredBody": "กำหนดสถานที่ก่อนเพื่อให้สามารถค้นหามัสยิดใกล้เคียง อาหารฮาลาล และโรงเรียนสอนศาสนาอิสลามได้อย่างแม่นยำ",

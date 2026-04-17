@@ -732,7 +732,7 @@
       }
     }
   },
-  "splashTagline": "Islamic Way of Light",
+  "splashTagline": "Dòigh Solas Ioslamach",
   "downloadPartiallyFinishedForReciter": "Chrìochnaich an luchdachadh sìos airson {reciter} le {failed} surahs air fàiligeadh ({downloaded}/{total} air a luchdachadh sìos).",
   "@downloadPartiallyFinishedForReciter": {
     "placeholders": {

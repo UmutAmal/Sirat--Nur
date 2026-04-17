@@ -12,7 +12,7 @@ class AppLocalizationsAk extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
-  String get splashTagline => 'Islamic Way of Light';
+  String get splashTagline => 'Islamfoɔ Kwan a Ɛfa Hann Ho';
 
   @override
   String get home => 'Fie';

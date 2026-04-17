@@ -732,7 +732,7 @@
       }
     }
   },
-  "splashTagline": "Islamic Way of Light",
+  "splashTagline": "އިސްލާމީ އަލިކަމުގެ ގޮތެވެ",
   "downloadPartiallyFinishedForReciter": "{reciter} އަށް ޑައުންލޯޑް ނިމިފައިވަނީ {failed} ނާކާމިޔާބު ސޫރަތްތަކާއެކު ({downloaded}/{total} ޑައުންލޯޑް ކުރެވިއްޖެ) އެވެ.",
   "@downloadPartiallyFinishedForReciter": {
     "placeholders": {

@@ -12,7 +12,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
-  String get splashTagline => 'Islamic Way of Light';
+  String get splashTagline => 'Tsela ya Boiselamo ya Lesedi';
 
   @override
   String get home => 'Gae';

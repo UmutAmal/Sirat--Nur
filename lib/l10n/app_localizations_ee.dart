@@ -12,7 +12,7 @@ class AppLocalizationsEe extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
-  String get splashTagline => 'Islamic Way of Light';
+  String get splashTagline => 'Islamtɔwo ƒe Kekeli Mɔ';
 
   @override
   String get home => 'Aƒeme';

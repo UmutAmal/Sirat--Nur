@@ -732,7 +732,7 @@
       }
     }
   },
-  "splashTagline": "Islamic Way of Light",
+  "splashTagline": "Bealach an tSolais Ioslamach",
   "downloadPartiallyFinishedForReciter": "Chríochnaigh an íoslódáil do {reciter} le {failed} surahs teipthe ({downloaded}/{total} íoslódáil).",
   "@downloadPartiallyFinishedForReciter": {
     "placeholders": {

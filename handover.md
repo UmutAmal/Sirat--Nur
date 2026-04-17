@@ -13768,3 +13768,64 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki en somut kaynak kod hardcoded copy veya Supabase/audio provenance riski secilecek.
+
+## 2026-04-17 TUR-320 - Splash Tagline L10n Guard And Safe Batch
+
+### Yapilan Islem
+- AGENTS dongusu devam ettirildi; repo/remote/branch/status temiz dogrulandi.
+- `translate_arb_keys.dart` icin `splashTagline` single-line guard'i eklendi.
+- `splashTagline` icin yanlis baglam/debris filtresi eklendi; kaynak metni aciklama cumlesine ceviren veya kaynak Ingilizce ifadeyi artik olarak tasiyan adaylar reddediliyor.
+- Guvenli bulunan 20 `splashTagline` locale'i Ingilizce fallback'ten cikarildi.
+- `bho`, `qu` ve `lus` icin supheli/yanlis baglamli splash metinleri temiz ceviri gelene kadar bilincli Ingilizce fallback'te tutuldu.
+- `flutter gen-l10n` calistirilarak generated localization Dart dosyalari ARB ile senkronlandi.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:267` once `splashTagline` icin single-line guard kapsaminda degildi.
+- Kök risk: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:594` once `splashTagline` yanlis baglam/debris kontrolu yapmiyordu.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:279` mevcut yanlis baglamli degerlerin preserve edilmesini engelliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:611` `splashTagline` icin known debris ve kaynak ifade artigi kontrolu ekliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:638` bilinen splash debris orneklerini kayit altina aliyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:256` splash/onboarding l10n borcunu `<=129` same-as-English ile kilitliyor ve `bho/qu/lus` fallback kararini dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:681` wrong-context splash adaylarini reddedip temiz Welsh adayini kabul ediyor.
+- Rapor: `dart run tool\translate_arb_keys.dart --report splashTagline onboarding1Title` final sonucu `same-as-English=129`, `missing=0`, `placeholder mismatch=0`.
+
+### Neden Yapildi
+- Tam localization hedefi sadece "Ingilizce olmayan metin" uretmek degil, baglamca dogru ve tek satir UI copy uretmektir.
+- Makine cevirisi bazi low-resource locale'lerde "Islamic Way of Light nisqa" veya "hakkinda anlatildi" benzeri aciklama/debris uretme riski tasiyor.
+- Bu nedenle borc azaltilirken supheli metinler commit edilmedi; fallback bilincli olarak korundu ve guard testle sabitlendi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` icinde guvenli splash locale batch'i
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` generated l10n senkronu
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Splash tagline icin 20 locale daha Ingilizce fallback'ten cikti.
+- Supheli `bho/qu/lus` metinleri yanlis veya aciklama kokan copy ile kapatilmadi; temiz kaynak bulunana kadar durust fallback birakildi.
+- Gelecek l10n batch'lerinde ayni debris tekrar kabul edilmeyecek.
+- Dini metin, prayer/audio/location zinciri ve runtime davranisi degismedi.
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart` PASS
+- L10n generation: `flutter gen-l10n` PASS
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart --reporter compact` PASS
+- Diff check: `git diff --check` PASS (yalniz CRLF warning)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`540/540`)
+
+### Risk Degisimi
+- Splash tagline low-resource same-as-English borcu: azaltildi; final 2-key raporda `129` same-as-English kaldi.
+- Splash tagline wrong-context/debris kabul riski: `12/25 -> 2/25`
+- Kalan fallback'ler uydurma ceviriyle kapatilmadi; bu borc temiz kaynak/aday bulunana kadar bilerek acik tutuluyor.
+
+### Rollback Plani
+- `translate_arb_keys.dart` icindeki `splashTagline` guard'lari ve debris listesi kaldirilir.
+- `translate_arb_keys_test.dart` icindeki splash debt/wrong-context testleri kaldirilir.
+- Degisen ARB ve generated l10n dosyalari onceki commit'e dondurulur.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter gen-l10n`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki somut risk olarak hardcoded UI copy veya audio/Supabase storage provenance hattindan kanitli tek yuzey secilecek.

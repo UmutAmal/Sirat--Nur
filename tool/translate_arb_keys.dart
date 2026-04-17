@@ -276,6 +276,10 @@ bool _shouldPreserve(String key, dynamic currentValue, dynamic englishValue) {
     return false;
   }
 
+  if (_hasKnownWrongContext(key, currentValue)) {
+    return false;
+  }
+
   return !_isEnglishFallbackEquivalent(currentValue, englishValue);
 }
 
@@ -604,6 +608,13 @@ bool _hasKnownWrongContext(String key, String value) {
     return _containsAny(value, _knownDownloadTranslationDebris);
   }
 
+  if (key == 'splashTagline') {
+    return _containsAny(value, _knownSplashTaglineTranslationDebris) ||
+        _englishFallbackComparisonToken(
+          value,
+        ).contains(_englishFallbackComparisonToken('Islamic Way of Light'));
+  }
+
   return false;
 }
 
@@ -623,6 +634,8 @@ const _knownDownloadTranslationDebris = [
   'Fichier Téléchargées',
   'Filew Téléchargements',
 ];
+
+const _knownSplashTaglineTranslationDebris = ['के बारे में', 'बतावल', 'nisqa'];
 
 bool _isPremiumSubscriptionKey(String key) {
   return key == 'recheckPremium' ||
@@ -763,6 +776,7 @@ bool _mustStaySingleLine(String key) {
       key == 'downloadFinishedForReciter' ||
       key == 'downloadPartiallyFinishedForReciter' ||
       key == 'deletedOfflineFilesForReciter' ||
+      key == 'splashTagline' ||
       key == 'audioPlayFailed' ||
       key == 'diagnostics' ||
       key == 'diagnosticsUiAudioAssets' ||

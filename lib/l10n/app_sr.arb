@@ -748,7 +748,7 @@
   "premiumPurchaseFailed": "Куповина није могла да се заврши. Покушајте поново.",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islamic Way of Light",
+  "splashTagline": "Исламски пут светлости",
   "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
   "placesLocationRequiredTitle": "Потребна је локација",
   "placesLocationRequiredBody": "Прво поставите локацију тако да се оближње џамије, халал храна и исламске школе могу прецизно претраживати.",

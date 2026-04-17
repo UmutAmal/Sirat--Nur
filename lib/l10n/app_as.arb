@@ -732,7 +732,7 @@
       }
     }
   },
-  "splashTagline": "Islamic Way of Light",
+  "splashTagline": "ইছলামিক ৱে অৱ লাইট",
   "downloadPartiallyFinishedForReciter": "{reciter} ৰ বাবে ডাউনলোড সমাপ্ত হৈছে {failed} ব্যৰ্থ চুৰাসমূহৰ সৈতে ({downloaded}/{total} ডাউনলোড কৰা হৈছে)।",
   "@downloadPartiallyFinishedForReciter": {
     "placeholders": {

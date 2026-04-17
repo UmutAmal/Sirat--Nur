@@ -12,7 +12,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
-  String get splashTagline => 'Islamic Way of Light';
+  String get splashTagline => 'Dòigh Solas Ioslamach';
 
   @override
   String get home => 'Dhachaigh';

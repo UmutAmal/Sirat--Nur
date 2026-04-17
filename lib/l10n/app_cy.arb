@@ -732,7 +732,7 @@
       }
     }
   },
-  "splashTagline": "Islamic Way of Light",
+  "splashTagline": "Ffordd Goleuni Islamaidd",
   "downloadPartiallyFinishedForReciter": "Gorffennodd y llwytho i lawr ar gyfer {reciter} gyda {failed} swrahs wedi methu ({downloaded}/{total} llwytho i lawr).",
   "@downloadPartiallyFinishedForReciter": {
     "placeholders": {

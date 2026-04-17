@@ -732,7 +732,7 @@
       }
     }
   },
-  "splashTagline": "Islamic Way of Light",
+  "splashTagline": "Islamski put svjetla",
   "downloadPartiallyFinishedForReciter": "Preuzimanje je završeno za {reciter} sa {failed} neuspjelih sura ({downloaded}/{total} preuzeto).",
   "@downloadPartiallyFinishedForReciter": {
     "placeholders": {

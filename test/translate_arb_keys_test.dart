@@ -253,6 +253,47 @@ void main() {
       );
     });
 
+    test('tracks splash tagline l10n debt without accepting debris', () {
+      const keys = ['splashTagline', 'onboarding1Title'];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(129));
+      expect(
+        localeArbs['sr']!['splashTagline'],
+        isNot(english['splashTagline']),
+      );
+      expect(
+        localeArbs['th']!['splashTagline'],
+        isNot(english['splashTagline']),
+      );
+      for (final locale in ['bho', 'qu', 'lus']) {
+        expect(
+          localeArbs[locale]!['splashTagline'],
+          english['splashTagline'],
+          reason:
+              'app_$locale.arb must fall back until a clean translation exists',
+        );
+      }
+    });
+
     test('tracks partial download result l10n debt reduction', () {
       const key = 'downloadPartiallyFinishedForReciter';
       const localizedLocales = [
@@ -635,6 +676,33 @@ void main() {
       );
 
       expect(value, 'Download');
+    });
+
+    test('rejects wrong-context splash tagline output', () {
+      const source = 'Islamic Way of Light';
+
+      final sourceResidueValue = resolveTranslatedArbValue(
+        key: 'splashTagline',
+        source: source,
+        currentValue: source,
+        candidate: 'Islamic Way of Light nisqa',
+      );
+      final explanatoryValue = resolveTranslatedArbValue(
+        key: 'splashTagline',
+        source: source,
+        currentValue: source,
+        candidate: 'इस्लामी वे ऑफ लाइट के बारे में बतावल गइल बा',
+      );
+      final validValue = resolveTranslatedArbValue(
+        key: 'splashTagline',
+        source: source,
+        currentValue: source,
+        candidate: 'Ffordd Goleuni Islamaidd',
+      );
+
+      expect(sourceResidueValue, source);
+      expect(explanatoryValue, source);
+      expect(validValue, 'Ffordd Goleuni Islamaidd');
     });
 
     test('rejects multiline ibadah tracker output', () {

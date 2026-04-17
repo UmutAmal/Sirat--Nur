@@ -12,7 +12,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
-  String get splashTagline => 'Islamic Way of Light';
+  String get splashTagline => 'Islamik We fɔ Layt';
 
   @override
   String get home => 'Na os';
