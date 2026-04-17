@@ -11,6 +11,7 @@ const String kPremiumProductId = 'sirat_nur_premium_lifetime';
 const String kPremiumPurchaseFailedErrorCode = 'premium_purchase_failed';
 const String kPremiumProductUnavailableErrorCode =
     'premium_product_unavailable';
+const Object _premiumUnset = Object();
 
 /// Premium state: tracks whether the user has premium access.
 class PremiumState {
@@ -24,11 +25,15 @@ class PremiumState {
     this.error,
   });
 
-  PremiumState copyWith({bool? isPremium, bool? isLoading, String? error}) {
+  PremiumState copyWith({
+    bool? isPremium,
+    bool? isLoading,
+    Object? error = _premiumUnset,
+  }) {
     return PremiumState(
       isPremium: isPremium ?? this.isPremium,
       isLoading: isLoading ?? this.isLoading,
-      error: error,
+      error: identical(error, _premiumUnset) ? this.error : error as String?,
     );
   }
 }

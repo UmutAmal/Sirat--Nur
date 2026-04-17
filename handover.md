@@ -12612,3 +12612,51 @@
 
 ### Sonraki Adim
 - Premium restore/purchase bekleme akisi, konum secimi ve prayer notification scheduler icin sessiz hata veya sonsuz loading riski taranmaya devam edilecek.
+
+## 2026-04-17 TUR-300 — PremiumState copyWith Error Preservation
+
+### Yapilan Islem
+- `PremiumState.copyWith` icin sentinel tabanli `error` parametresi eklendi.
+- `error` parametresi verilmediginde mevcut hata korunuyor; `error: null` acikca verildiginde hata temizleniyor.
+- Premium state testleri, hem hata koruma hem de acik temizleme davranisini dogrulayacak sekilde guncellendi.
+
+### Kanit
+- Sentinel tanimi: `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:14`
+- `copyWith` error parametresi artik sentinel kullaniyor: `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:31`
+- Hata koruma/temizleme ayrimi: `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:36`
+- Error preservation testi: `A:\Way of Allah\sirat_i_nur\test\premium_provider_test.dart:28`
+- Explicit clear testi: `A:\Way of Allah\sirat_i_nur\test\premium_provider_test.dart:48`
+
+### Neden Yapildi
+- Onceki `copyWith({String? error})` imzasi, `error` verilmediginde bile default `null` yuzunden mevcut hatayi sessizce temizliyordu.
+- Bu durum premium bootstrap/purchase/restore gibi async state gecislerinde kullanicinin gormesi gereken store hatasinin yanlislikla kaybolmasina yol acabilir.
+- State modelinde standart ve beklenen copyWith davranisi, verilmemis alanlari korumak; temizleme gerekiyorsa bunun acikca `error: null` ile yapilmasidir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\premium_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Premium hata mesaji artik sadece ilgili akisin bilincli state guncellemesiyle temizleniyor.
+- Purchase/restore state gecislerinde "hata kayboldu ama sorun cozulmedi" tarzi false-success riski azaldi.
+- Mevcut paywall error localization ve raw exception gizleme davranisi korunuyor.
+
+### Test Sonucu
+- Odak test: `flutter test test\premium_provider_test.dart test\features\premium\paywall_page_test.dart` PASS (`8/8`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`518/518`)
+
+### Risk Degisimi
+- Premium error state'in istemeden temizlenmesi riski: `10/25 -> 1/25`
+- Paywall'in store hatasini kullaniciya gosterememesi riski: `8/25 -> 1/25`
+
+### Rollback Plani
+- `_premiumUnset` sentinel kaldirilir.
+- `PremiumState.copyWith` eski `String? error` imzasina dondurulur.
+- `test\premium_provider_test.dart` icindeki hata koruma ve explicit clear beklentileri eski hale alinir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Premium restore zaman asimi ve location/prayer notification zinciri, gercek kullanici etkisi olan sessiz hata/yanlis durum riskleri acisindan taranmaya devam edecek.

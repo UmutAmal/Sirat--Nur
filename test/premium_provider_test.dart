@@ -26,11 +26,15 @@ void main() {
     });
 
     test('copyWith preserves unchanged fields', () {
-      const state = PremiumState(isPremium: true, isLoading: true);
-      final updated = state.copyWith(error: 'Oops');
+      const state = PremiumState(
+        isPremium: true,
+        isLoading: true,
+        error: 'Previous error',
+      );
+      final updated = state.copyWith(isLoading: false);
       expect(updated.isPremium, true);
-      expect(updated.isLoading, true);
-      expect(updated.error, 'Oops');
+      expect(updated.isLoading, false);
+      expect(updated.error, 'Previous error');
     });
 
     test('copyWith with no arguments returns equivalent state', () {
@@ -44,10 +48,7 @@ void main() {
     test('error can be cleared by passing null explicitly', () {
       final state = const PremiumState().copyWith(error: 'fail');
       expect(state.error, 'fail');
-      // copyWith(error: null) keeps error because of ?? operator,
-      // but a fresh PremiumState clears it
-      const fresh = PremiumState(isPremium: true);
-      expect(fresh.error, isNull);
+      expect(state.copyWith(error: null).error, isNull);
     });
   });
 
