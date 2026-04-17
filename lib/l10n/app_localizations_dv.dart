@@ -248,7 +248,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'ތަފްސީރު ސޯސް އިން އެޗްޓީޓީޕީ $statusCode އެރަރ އެއް ރިޓަރން ކުރިއެވެ.';
+    return 'ތަފްސީރު ސޯސް އިން HTTP $statusCode އެރަރ އެއް ރިޓަރން ކުރިއެވެ.';
   }
 
   @override

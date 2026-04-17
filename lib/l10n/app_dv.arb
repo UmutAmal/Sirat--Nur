@@ -702,7 +702,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "ތަފްސީރު ސޯސް އިން އެޗްޓީޓީޕީ {statusCode} އެރަރ އެއް ރިޓަރން ކުރިއެވެ.",
+  "tafsirApiStatusError": "ތަފްސީރު ސޯސް އިން HTTP {statusCode} އެރަރ އެއް ރިޓަރން ކުރިއެވެ.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {

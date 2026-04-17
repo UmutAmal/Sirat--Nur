@@ -2393,6 +2393,29 @@ void main() {
       }
     });
 
+    test('tafsir status copy preserves the HTTP technical token', () {
+      final arbFiles =
+          Directory('lib/l10n')
+              .listSync()
+              .whereType<File>()
+              .where((file) => file.path.endsWith('.arb'))
+              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+              .toList()
+            ..sort((a, b) => a.path.compareTo(b.path));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+        final value = arb['tafsirApiStatusError'] as String;
+
+        expect(
+          value,
+          contains('HTTP'),
+          reason:
+              '${file.uri.pathSegments.last} translated the HTTP protocol token',
+        );
+      }
+    });
+
     test(
       'tafsir runtime copy stays single-line and preserves placeholders in all locales',
       () {

@@ -11655,3 +11655,50 @@
 ### Sonraki Adim
 - L10n technical token taramasinda kalan `chatbotLocalNoInfo` icin `[OFFLINE]`, `diagnosticsQuranCloudTablesMissing` icin `Supabase`, `tafsirApiStatusError` icin `HTTP` korunumu ele alinacak.
 - Bu kalan token borclari marka fix'iyle karistirilmadan ayri minimal turlarda kapatilacak.
+
+## 2026-04-17 TUR-283 — Preserve HTTP Token in Dhivehi Tafsir Error Copy
+
+### Yapilan Islem
+- Dhivehi `tafsirApiStatusError` metnindeki HTTP teknik protokol token'i transliterasyon yerine birebir `HTTP` olacak sekilde duzeltildi.
+- `flutter gen-l10n` calistirilip generated Dhivehi localization cikisi ARB ile senkronlandi.
+- Tum `app_*.arb` dosyalari icin `tafsirApiStatusError` icinde `HTTP` token'inin korunmasini zorunlu kilan regression testi eklendi.
+
+### Kanit
+- Duzeltilen ARB metni: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_dv.arb:705`
+- Generated Dhivehi getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_dv.dart:251`
+- Regression testi: `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:2396`
+- HTTP token beklentisi: `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:2412`
+
+### Neden Yapildi
+- `HTTP` kullaniciya/operatore teknik hata tipini anlatan protokol token'idir; locale transliterasyonu log/diagnostic copy'sinde arama ve destek akisini zayiflatir.
+- Bu degisiklik tafsir icerigi uretmedi veya dini metin degistirmedi; yalnizca teknik protokol token'inin birebir korunmasini sagladi.
+- Yeni test, ayni token driftinin baska locale'de tekrar etmesini engelliyor.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_dv.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_dv.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Generate: `flutter gen-l10n` PASS
+- Format: `dart format test\arb_ui_localization_test.dart` PASS
+- Odak test: `flutter test test\arb_ui_localization_test.dart` PASS (`68/68`)
+- Token scan: `tafsir_http_missing=0`
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`496/496`)
+
+### Risk Degisimi
+- Tafsir HTTP hata kopyasinda teknik protokol token'inin cevrilmesi riski: `6/25 -> 1/25`
+- Tek locale teknik token driftinin testten kacmasi riski: `6/25 -> 1/25`
+
+### Rollback Plani
+- `app_dv.arb` icindeki `HTTP` token'i onceki Dhivehi transliterasyonuna dondurulur.
+- `flutter gen-l10n` tekrar calistirilir.
+- `arb_ui_localization_test.dart` icindeki HTTP token regression testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Kalan l10n technical token borclari: `chatbotLocalNoInfo` icin `[OFFLINE]` ve `diagnosticsQuranCloudTablesMissing` icin `Supabase` korunumu ayri turlarda kapatilacak.
