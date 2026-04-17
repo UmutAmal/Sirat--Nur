@@ -24,5 +24,11 @@ void main() {
       expect(buildAyahShareHeader(tr, surahInfo, '3'), 'Al-Fatihah - 3. Ayet');
       expect(buildAyahShareHeader(fr, surahInfo, '3'), 'Al-Fatihah - Verset 3');
     });
+
+    test('does not duplicate standalone bismillah for Fatihah or Tawbah', () {
+      expect(shouldShowStandaloneBismillah(1), isFalse);
+      expect(shouldShowStandaloneBismillah(9), isFalse);
+      expect(shouldShowStandaloneBismillah(2), isTrue);
+    });
   });
 }

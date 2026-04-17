@@ -13665,3 +13665,56 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki en somut risk olarak kalan l10n same-as-English borcu veya hardcoded dini/teknik icerik taramasindan kanitli tek yuzey secilecek.
+
+## 2026-04-17 TUR-318 - Quran Bismillah Duplicate Guard
+
+### Yapilan Islem
+- AGENTS dongusu yeniden baslatildi; repo/remote/branch/status ve `flutter doctor` dogrulandi.
+- Surah okuma ekraninda standalone Besmele render karari helper'a cikarildi.
+- Fatiha (`1`) ve Tevbe (`9`) icin standalone Besmele gosterilmemesi, Bakara (`2`) gibi diger surelerde gosterilmesi testle kilitlendi.
+- Dini metnin kendisi degistirilmedi; mevcut paketli Kur'an verisi ve seed guard'lari aynen korundu.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart:364` ilk satir bolumunde her sure icin ek Besmele render akisini baslatiyordu.
+- Eski kosul: `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart:365` yalniz `widget.surahNumber != 9` kontrolu yapiyordu.
+- Paketli veri: `A:\Way of Allah\sirat_i_nur\assets\data\full_quran.json:11` Fatiha 1:1 metnini Besmele olarak iceriyor.
+- Mevcut guard: `A:\Way of Allah\sirat_i_nur\test\bundled_quran_asset_test.dart:49` Fatiha 1:1 metninin paketli asset'te korunmasini dogruluyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart:23` `shouldShowStandaloneBismillah` helper'i Fatiha ve Tevbe icin `false`, diger sureler icin `true` donduruyor.
+- Regresyon testi: `A:\Way of Allah\sirat_i_nur\test\features\quran\surah_reading_page_test.dart:28` Fatiha/Tevbe/Bakara kararlarini dogruluyor.
+
+### Neden Yapildi
+- Fatiha'nin birinci ayeti paketli ve seed kaynakli Kur'an verisinde zaten Besmele oldugu icin UI'daki ek standalone Besmele ayni dini metnin iki kez gosterilmesine yol acabilirdi.
+- Tevbe icin standalone Besmele zaten gizleniyordu; bu davranis korunup testle sabitlendi.
+- Kök sebep metin verisi degil, render kosulunun Fatiha'yi ayri ele almamasiydi; bu nedenle patch sadece karar helper'i ve testle sinirli tutuldu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\surah_reading_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Fatiha sayfasinda Besmele artik paketli Kur'an verisindeki 1. ayetten gelir; ek banner ile cift gosterim riski kapandi.
+- Tevbe icin standalone Besmele gizleme davranisi korunur.
+- Bakara ve diger surelerde sayfa basindaki standalone Besmele davranisi devam eder.
+- Dini metin, meal, audio, seed veya Supabase icerik zinciri degismedi.
+
+### Test Sonucu
+- Format: `dart format lib\features\quran\surah_reading_page.dart test\features\quran\surah_reading_page_test.dart` PASS
+- Odak test: `flutter test test\features\quran\surah_reading_page_test.dart --reporter compact` PASS (`2/2`)
+- Diff check: `git diff --check` PASS (yalniz CRLF warning)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`538/538`)
+
+### Risk Degisimi
+- Fatiha'da Besmele'nin UI tarafindan iki kez gosterilme riski: `10/25 -> 1/25`
+- Kur'an asset/seed dogrulugu riski degismedi; mevcut asset guard'lari korunuyor.
+- Canli Supabase icerik ve ses dosyasi egemenligi riski bu turda degismedi.
+
+### Rollback Plani
+- `surah_reading_page.dart` icindeki `shouldShowStandaloneBismillah` helper'i kaldirilir ve kosul eski `widget.surahNumber != 9` haline dondurulur.
+- `surah_reading_page_test.dart` icindeki standalone Besmele karar testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak canli Supabase/audio icerik zinciri veya kalan hardcoded/l10n same-as-English borcu icin kanitli tek yuzey secilecek.

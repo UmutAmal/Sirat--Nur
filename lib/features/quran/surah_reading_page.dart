@@ -20,6 +20,10 @@ String buildAyahShareHeader(
   return '${surahInfo.transliteration} - ${l10n.ayahLabel(ayahNumber)}';
 }
 
+bool shouldShowStandaloneBismillah(int surahNumber) {
+  return surahNumber != 1 && surahNumber != 9;
+}
+
 class SurahReadingPage extends ConsumerStatefulWidget {
   final int surahNumber;
 
@@ -362,7 +366,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                 }
 
                 if (i == 1) {
-                  if (widget.surahNumber != 9) {
+                  if (shouldShowStandaloneBismillah(widget.surahNumber)) {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 24),
                       child: Text(
