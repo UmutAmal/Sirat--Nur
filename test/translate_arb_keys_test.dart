@@ -202,7 +202,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1557));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1556));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -210,6 +210,10 @@ void main() {
       expect(
         localeArbs['ti']!['downloadAction'],
         isNot(english['downloadAction']),
+      );
+      expect(
+        localeArbs['ti']!['resumeDownload'],
+        isNot(english['resumeDownload']),
       );
       expect(
         localeArbs['cy']!['placesDataSourceUnavailableBody'],

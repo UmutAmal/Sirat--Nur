@@ -13213,3 +13213,54 @@
 
 ### Sonraki Adim
 - Yeni turda dependency scan'de kalan transitive latest farklari resmi pub.dev constraint'leriyle ayrilacak; dogrudan uygulama riski cikmazsa l10n same-as-English debt icin bir guvenli anahtar/locale daha ilerletilecek.
+
+## 2026-04-17 TUR-311 - Tigrinya Resume Download L10n Debt Reduction
+
+### Yapilan Islem
+- Kritik download/diagnostics/chatbot/places l10n borc raporunda 23 anahtar tekrar tarandi.
+- `resumeDownload` icin yalnizca tek guvenli locale degisimi kabul edildi: Tigrinya (`ti`) degeri English fallback'ten cikti.
+- `flutter gen-l10n` calistirildi; generated runtime getter ARB ile senkronlandi.
+- L10n debt regresyon testi `1557` yerine `1556` ust sinirini bekleyecek ve Tigrinya `resumeDownload` degerini English fallback'e donmeyecek sekilde kilitleyecek bicimde guncellendi.
+
+### Kanit
+- Tigrinya ARB `resumeDownload`: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb:394`
+- Tigrinya generated runtime getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ti.dart:1196`
+- L10n debt threshold guard'i: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:205`
+- Tigrinya `resumeDownload` fallback guard'i: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:215`
+- Read-only l10n report: `Same-as-English locales: 1556`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`
+
+### Neden Yapildi
+- `resumeDownload` runtime/UI metni 23 anahtarlik P1 l10n borc kumesinde English fallback olarak kaliyordu.
+- Bu anahtar dini icerik uretmiyor, teknik token tasimiyor ve tek satirlik UI aksiyonu oldugu icin guvenli sekilde dar kapsamli ilerlenebildi.
+- Arac diger locale'lerde guvenli ve English olmayan cikti uretmedigi icin onlar bilerek korunarak sahte ceviri riski alinmadi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ti.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Takip edilen 23 anahtar icin same-as-English l10n borcu `1557 -> 1556` seviyesine indi.
+- Tigrinya kullanicilar icin `Resume Download` aksiyonu artik runtime'da English fallback olarak gorunmeyecek.
+- Test guard'i bu ilerlemenin sonraki batch veya gen-l10n turlarinda geri kaymasini engelliyor.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart` PASS (`110/110`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`535/535`)
+- Read-only debt raporu: `dart run tool\translate_arb_keys.dart --report ...` PASS, `Same-as-English locales: 1556`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`
+
+### Risk Degisimi
+- `resumeDownload` Tigrinya runtime/UI English fallback riski: `12/25 -> 2/25`
+- Takip edilen P1 l10n borc toplam sayisi: `1557 -> 1556`
+
+### Rollback Plani
+- `app_ti.arb` icindeki `resumeDownload` degeri eski `Resume Download` fallback'ine dondurulur.
+- `flutter gen-l10n` calistirilir ve `app_localizations_ti.dart` senkronlanir.
+- `test\translate_arb_keys_test.dart` icindeki threshold tekrar `1557` yapilir ve Tigrinya `resumeDownload` guard'i kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda l10n same-as-English debt icin bir sonraki guvenli tek anahtar/locale ilerlemesi veya transitive dependency risklerinin resmi constraint analizi yapilacak.

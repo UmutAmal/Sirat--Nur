@@ -1193,7 +1193,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get downloadAction => 'ምውራድ';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'ዳግመ-ምጅማር ዳውንሎድ';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';
