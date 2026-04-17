@@ -815,6 +815,33 @@ void main() {
       expect(maghribValue, 'Maghrib');
     });
 
+    test('rejects known runtime status debris', () {
+      final loadingValue = resolveTranslatedArbValue(
+        key: 'loading',
+        source: 'Loading...',
+        currentValue: 'Ukax mä...',
+        candidate: 'Ukax mä...',
+      );
+
+      final downloadingValue = resolveTranslatedArbValue(
+        key: 'downloading',
+        source: 'Downloading...',
+        currentValue: 'Ukax mä...',
+        candidate: 'Ukax mä...',
+      );
+
+      final downloadCompleteValue = resolveTranslatedArbValue(
+        key: 'downloadComplete',
+        source: 'Download Complete',
+        currentValue: 'Descargar Completo ukax mä juk’a pachanakanwa',
+        candidate: 'Descargar Completo ukax mä juk’a pachanakanwa',
+      );
+
+      expect(loadingValue, 'Loading...');
+      expect(downloadingValue, 'Downloading...');
+      expect(downloadCompleteValue, 'Download Complete');
+    });
+
     test('rejects wrong-context splash tagline output', () {
       const source = 'Islamic Way of Light';
 

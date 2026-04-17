@@ -15423,3 +15423,49 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki yuksek risk olarak Aymara runtime status metinleri (`loading`, `downloading`, `downloadComplete`) ve home dashboard labels (`analytics`, `ibadahTracker`, `liveTv`) karsilastirilacak.
+
+## 2026-04-17 TUR-354 - Aymara Runtime Status Labels Cleaned
+
+### MASTER Karari
+- Risk: Aymara locale'de runtime durum metinleri `loading`, `downloading`, `downloadComplete` makine ceviri enkazi veya karisik dil tasiyordu.
+- Kanit: `lib/l10n/app_ay.arb:48` `Ukax mä...`, `lib/l10n/app_ay.arb:140` `Ukax mä...`, `lib/l10n/app_ay.arb:141` `Descargar Completo ukax...`; generated runtime karsiliklari `lib/l10n/app_localizations_ay.dart:147`, `lib/l10n/app_localizations_ay.dart:553`, `lib/l10n/app_localizations_ay.dart:556`.
+- Aktif kullanim: `lib/features/settings/location_selection_page.dart:201` `l10n.loading`; `lib/features/downloads/offline_downloads_page.dart:376` `l10n.downloading`. `downloadComplete` su an dogrudan runtime'da kullanilmiyor ama ARB/generated API yuzeyinde kalip olarak risk tasiyor.
+- Kok neden: Dusuk kaynak Aymara ceviri `Loading...`/`Downloading...` gibi kisa durum etiketlerini anlamsiz yarim cumleye cevirdi; `downloadComplete` ise Ispanyolca + Aymara debris karisimi oldu.
+- Etki: Kullanici islem durumunu yanlis/anlamsiz metinle goruyor; indirme/konum akisi guveni zedeleniyor.
+- Olasilik: Loading ve downloading etiketleri aktif UI'da kullanimda; downloadComplete ileride kullanilirsa ayni debt runtime'a cikabilir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1).
+- Rollback kapsami: `lib/l10n/app_ay.arb`, `lib/l10n/app_localizations_ay.dart`, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/arb_ui_localization_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `lib/l10n/app_ay.arb:48`, `lib/l10n/app_ay.arb:140`, `lib/l10n/app_ay.arb:141` guvenilir fallback'e cekildi: `Loading...`, `Downloading...`, `Download Complete`.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_ay.dart:147`, `lib/l10n/app_localizations_ay.dart:553`, `lib/l10n/app_localizations_ay.dart:556` senkronlandi.
+- `tool/translate_arb_keys.dart:678` runtime status guard'i download-copy guard'indan once calisacak sekilde eklendi; test ilk denemede `downloading` siralama bug'ini yakaladi ve duzeltildi.
+- `tool/translate_arb_keys.dart:712` runtime status key seti `loading`, `downloading` ile sinirlandi.
+- `tool/translate_arb_keys.dart:756` bilinen yarim status debris `Ukax mä...` tekrar kabul edilmemek uzere listelendi.
+
+### TESTER Kapsami
+- `test/translate_arb_keys_test.dart:818` `loading`, `downloading`, `downloadComplete` icin bilinen debris current/candidate degerlerinin kaynak fallback'e dondugunu dogruluyor.
+- `test/arb_ui_localization_test.dart:465` Aymara runtime status copy'sinde `Ukax mä...`, `Descargar Completo` ve `ukax mä juk’a pachanakanwa` fragmentlerinin geri gelmemesini dogruluyor.
+- Manuel tarama: `rg -n "(Ukax mä\\.\\.\\.|Descargar Completo|downloadComplete.*ukax mä|loading.*Ukax|downloading.*Ukax)" lib\l10n\app_ay.arb lib\l10n\app_localizations_ay.dart` eslesme dondurmedi.
+- Debt raporu: `dart run tool\translate_arb_keys.dart --report loading downloading downloadComplete` same-as-English `249`, missing/empty `0`, placeholder mismatch `0`. Aymara bu uc status key'inde sahte ceviri yerine EN fallback kullaniyor.
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart` PASS
+- L10n generate: `flutter gen-l10n` PASS
+- Odak testler: ilk `translate_arb_keys_test` denemesi `downloading` guard sirasi nedeniyle fail etti; runtime status guard'i download guard'indan onceye alindi. Tekrar: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS (`50/50`), `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS (`76/76`), `flutter test test\arb_coverage_test.dart --reporter compact` PASS (`4/4`)
+- Diff hijyeni: `git diff --check` PASS; yalniz Windows CRLF uyarilari goruldu, whitespace hatasi yok.
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`582/582`)
+
+### Risk Degisimi
+- Aymara runtime status copy debris riski: `12/25 -> 2/25`
+- Kalan risk: Aymara home/dashboard ve feature labels icinde `analytics`, `ibadahTracker`, `liveTv`, `shareApp`, `dataStorage`, diagnostics copy gibi debris izleri devam ediyor. Sonraki turda en gorunur dashboard label'lari secilecek.
+
+### Rollback Plani
+- `loading`, `downloading`, `downloadComplete` Aymara ARB/generated degerleri onceki commit'e dondurulur.
+- Runtime status guard'i ve iki test guard'i revert edilir.
+- Handover append-only oldugu icin silinmez; revert gerekirse yeni tur olarak kaydedilir.
+- `flutter gen-l10n`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki aktif UI riski olarak Aymara home/dashboard labels (`analytics`, `ibadahTracker`, `liveTv`) incelenecek.

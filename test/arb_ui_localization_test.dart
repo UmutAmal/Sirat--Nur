@@ -462,6 +462,28 @@ void main() {
       }
     });
 
+    test('Aymara runtime status copy avoids known machine debris', () {
+      final arb = _readArb('lib/l10n/app_ay.arb');
+      const staleValues = {
+        'loading': ['Ukax mä...'],
+        'downloading': ['Ukax mä...'],
+        'downloadComplete': [
+          'Descargar Completo',
+          'ukax mä juk’a pachanakanwa',
+        ],
+      };
+
+      for (final entry in staleValues.entries) {
+        for (final fragment in entry.value) {
+          expect(
+            arb[entry.key],
+            isNot(contains(fragment)),
+            reason: 'app_ay.arb has known status debris for ${entry.key}',
+          );
+        }
+      }
+    });
+
     test(
       'priority locales do not fall back to English for diagnostics labels',
       () {

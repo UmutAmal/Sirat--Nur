@@ -144,7 +144,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get noResults => 'Janiw kuna askis jikxataskiti';
 
   @override
-  String get loading => 'Ukax mä...';
+  String get loading => 'Loading...';
 
   @override
   String get error => 'Pantjasiwi';
@@ -550,11 +550,10 @@ class AppLocalizationsAy extends AppLocalizations {
   String get downloads => 'Downloads';
 
   @override
-  String get downloading => 'Ukax mä...';
+  String get downloading => 'Downloading...';
 
   @override
-  String get downloadComplete =>
-      'Descargar Completo ukax mä juk’a pachanakanwa';
+  String get downloadComplete => 'Download Complete';
 
   @override
   String get downloadFailed => 'Uñstayañax janiw phuqhaskiti';

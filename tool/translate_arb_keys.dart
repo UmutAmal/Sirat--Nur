@@ -675,6 +675,10 @@ bool _hasKnownWrongContext(String key, String value) {
     return _containsAny(value, const ['Prämie', '保费', 'قسط']);
   }
 
+  if (_isRuntimeStatusKey(key)) {
+    return _containsAny(value, _knownRuntimeStatusDebris);
+  }
+
   if (_isDownloadCopyKey(key)) {
     return _containsAny(value, _knownDownloadTranslationDebris);
   }
@@ -703,6 +707,10 @@ bool _isDownloadCopyKey(String key) {
 
 bool _isPrayerMethodOrNameKey(String key) {
   return const {'madhab', 'dhuhr', 'maghrib'}.contains(key);
+}
+
+bool _isRuntimeStatusKey(String key) {
+  return const {'loading', 'downloading'}.contains(key);
 }
 
 const _knownDownloadTranslationDebris = [
@@ -744,6 +752,8 @@ const _knownGeneralTranslationDebris = [
 ];
 
 const _knownPrayerMethodOrNameDebris = ['Método Jurídico', 'ukat juk’ampinaka'];
+
+const _knownRuntimeStatusDebris = ['Ukax mä...'];
 
 const _knownQuranAudioSourceStatusDebris = [
   'Refresh cloud seed',
