@@ -47,6 +47,7 @@ void main() {
       expect(state.languageCode, isNull);
       expect(state.latitude, isNull);
       expect(state.longitude, isNull);
+      expect(state.countryCode, isNull);
       expect(state.qiblaOffset, 0.0);
       expect(state.qiblaSmoothingEnabled, true);
     });
@@ -105,6 +106,7 @@ void main() {
           'languageCode': 'tr',
           'latitude': 41.0,
           'longitude': 29.0,
+          'countryCode': 'TR',
         });
         prefs = await SharedPreferences.getInstance();
         final notifier = SettingsNotifier(prefs);
@@ -117,25 +119,47 @@ void main() {
         expect(notifier.state.languageCode, 'tr');
         expect(notifier.state.latitude, 41.0);
         expect(notifier.state.longitude, 29.0);
+        expect(notifier.state.countryCode, 'TR');
       },
     );
 
-    test('updateLocation persists timezone in state and storage', () async {
+    test(
+      'updateLocation persists timezone and country in state and storage',
+      () async {
+        final notifier = SettingsNotifier(prefs);
+
+        await notifier.updateLocation(
+          41.0082,
+          28.9784,
+          'Istanbul, Turkey',
+          timezone: 'Europe/Istanbul',
+          countryCode: 'TR',
+        );
+
+        expect(notifier.state.locationName, 'Istanbul, Turkey');
+        expect(notifier.state.countryCode, 'TR');
+        expect(notifier.state.timezone, 'Europe/Istanbul');
+        expect(notifier.state.calculationMethod, diyanetPrayerMethod);
+        expect(notifier.state.madhab, hanafiMadhab);
+        expect(prefs.getString('countryCode'), 'TR');
+        expect(prefs.getString('timezone'), 'Europe/Istanbul');
+      },
+    );
+
+    test('updateLocation normalizes lowercase country codes', () async {
       final notifier = SettingsNotifier(prefs);
 
       await notifier.updateLocation(
-        41.0082,
-        28.9784,
-        'Istanbul, Turkey',
-        timezone: 'Europe/Istanbul',
-        countryCode: 'TR',
+        3.1390,
+        101.6869,
+        'Kuala Lumpur, Malaysia',
+        timezone: 'Asia/Kuala_Lumpur',
+        countryCode: ' my ',
       );
 
-      expect(notifier.state.locationName, 'Istanbul, Turkey');
-      expect(notifier.state.timezone, 'Europe/Istanbul');
-      expect(notifier.state.calculationMethod, diyanetPrayerMethod);
-      expect(notifier.state.madhab, hanafiMadhab);
-      expect(prefs.getString('timezone'), 'Europe/Istanbul');
+      expect(notifier.state.countryCode, 'MY');
+      expect(notifier.state.calculationMethod, jakimPrayerMethod);
+      expect(prefs.getString('countryCode'), 'MY');
     });
 
     test(
@@ -198,12 +222,13 @@ void main() {
     );
 
     test(
-      'clearManualLocation removes timezone from state and storage',
+      'clearManualLocation removes timezone and country from state and storage',
       () async {
         SharedPreferences.setMockInitialValues({
           'latitude': 21.3891,
           'longitude': 39.8579,
           'locationName': 'Makkah, Saudi Arabia',
+          'countryCode': 'SA',
           'timezone': 'Asia/Riyadh',
         });
         prefs = await SharedPreferences.getInstance();
@@ -214,7 +239,9 @@ void main() {
         expect(notifier.state.latitude, isNull);
         expect(notifier.state.longitude, isNull);
         expect(notifier.state.locationName, isNull);
+        expect(notifier.state.countryCode, isNull);
         expect(notifier.state.timezone, isNull);
+        expect(prefs.containsKey('countryCode'), isFalse);
         expect(prefs.containsKey('timezone'), isFalse);
       },
     );

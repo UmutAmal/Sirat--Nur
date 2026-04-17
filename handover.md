@@ -11409,3 +11409,55 @@
 ### Sonraki Adim
 - Prayer location pipeline icin `countryCode` kaliciligi ve settings restart sonrasi profil izlenebilirligi taranacak.
 - Global city listesi ile resolver coverage karsilastirilip yalniz guvenilir kaynaga dayali yeni mapping/test adaylari ayrilacak.
+
+## 2026-04-17 TUR-278 — Persist Prayer Location Country Code
+
+### Yapilan Islem
+- `SettingsState` icine `countryCode` alani eklendi.
+- `SettingsNotifier` app restart sirasinda `countryCode` degerini `SharedPreferences` icinden yukluyor.
+- `updateLocation` artik country code degerini trim + uppercase normalize ediyor, profil cozumlemede normalize degeri kullaniyor ve prefs/state icine kalici yaziyor.
+- `clearManualLocation` artik latitude/longitude/locationName/timezone ile birlikte `countryCode` degerini de temizliyor.
+- Settings provider testleri default null, restart load, normalized update ve clear davranisini kapsayacak sekilde genisletildi.
+
+### Kanit
+- State alani: `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart:58`
+- Prefs load: `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart:164`
+- Normalize + resolve kullanimi: `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart:235`
+- Prefs persist/remove: `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart:252`
+- State update: `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart:269`
+- Clear remove: `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart:278`
+- Normalize helper: `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart:311`
+- Persist regression testi: `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart:127`
+- Normalize regression testi: `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart:149`
+- Clear regression testi: `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart:225`
+
+### Neden Yapildi
+- `LocationSelectionPage` GPS ve city-list akislari `updateLocation` icine country code gonderiyor, `updateLocation` da bu degeri resmi/bolgesel prayer profile cozumlemede kullaniyordu.
+- Eski state modeli country code bilgisini saklamadigi icin restart/diagnostics/future re-resolution akislarinda ulke hassasiyeti kayboluyordu.
+- Bu tur yeni dini mapping eklemedi; sadece mevcut kanitli country code bilgisinin kaybolmasini engelledi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\settings\settings_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\settings_provider_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Format: `dart format lib\features\settings\settings_provider.dart test\settings_provider_test.dart` PASS
+- Odak test: `flutter test test\settings_provider_test.dart` PASS (`14/14`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`491/491`)
+
+### Risk Degisimi
+- Location country code bilgisinin profil cozumleme sonrasi kaybolmasi riski: `12/25 -> 2/25`
+- Restart sonrasi future diagnostics/re-resolution icin ulke izlenebilirligi riski: `10/25 -> 3/25`
+
+### Rollback Plani
+- `SettingsState.countryCode`, copyWith alani, prefs load/persist/remove ve normalize helper kaldirilir.
+- `settings_provider_test.dart` icindeki country code beklentileri geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Global city listesi country code coverage'i resolver ile karsilastirilacak; resmi olmayan komsu ulke masquerade riskleri testle korunacak.
+- Notification/prayer coordinator zincirinde location/timezone degisimi sonrasi scheduling yenileme akisi tekrar taranacak.

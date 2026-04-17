@@ -55,6 +55,7 @@ class SettingsState {
   final double? latitude;
   final double? longitude;
   final String? locationName;
+  final String? countryCode;
   final String? timezone;
   final bool isDarkMode;
 
@@ -70,6 +71,7 @@ class SettingsState {
     this.latitude,
     this.longitude,
     this.locationName,
+    this.countryCode,
     this.timezone,
     this.isDarkMode = true,
   });
@@ -86,6 +88,7 @@ class SettingsState {
     Object? latitude = _unset,
     Object? longitude = _unset,
     Object? locationName = _unset,
+    Object? countryCode = _unset,
     Object? timezone = _unset,
     bool? isDarkMode,
   }) {
@@ -110,6 +113,9 @@ class SettingsState {
       locationName: identical(locationName, _unset)
           ? this.locationName
           : locationName as String?,
+      countryCode: identical(countryCode, _unset)
+          ? this.countryCode
+          : countryCode as String?,
       timezone: identical(timezone, _unset)
           ? this.timezone
           : timezone as String?,
@@ -155,6 +161,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
             latitude: _prefs.getDouble('latitude'),
             longitude: _prefs.getDouble('longitude'),
             locationName: _prefs.getString('locationName'),
+            countryCode: _prefs.getString('countryCode'),
             timezone: _prefs.getString('timezone'),
             isDarkMode: _prefs.getBool('isDarkMode') ?? true,
           );
@@ -225,8 +232,9 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
     String? timezone,
     String? countryCode,
   }) async {
+    final normalizedCountryCode = _normalizeOptionalCountryCode(countryCode);
     final profile = resolvePrayerProfile(
-      countryCode: countryCode,
+      countryCode: normalizedCountryCode,
       timezone: timezone,
     );
     final (fajrAngle, ishaAngle) = _defaultAnglesForMethod(
@@ -240,6 +248,11 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
     await _prefs.setString('madhab', profile.madhab);
     await _prefs.setDouble('fajrAngle', fajrAngle);
     await _prefs.setDouble('ishaAngle', ishaAngle);
+    if (normalizedCountryCode == null) {
+      await _prefs.remove('countryCode');
+    } else {
+      await _prefs.setString('countryCode', normalizedCountryCode);
+    }
     if (timezone == null || timezone.trim().isEmpty) {
       await _prefs.remove('timezone');
     } else {
@@ -253,6 +266,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
       latitude: lat,
       longitude: lng,
       locationName: name,
+      countryCode: normalizedCountryCode,
       timezone: timezone,
     );
   }
@@ -261,11 +275,13 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
     await _prefs.remove('latitude');
     await _prefs.remove('longitude');
     await _prefs.remove('locationName');
+    await _prefs.remove('countryCode');
     await _prefs.remove('timezone');
     state = state.copyWith(
       latitude: null,
       longitude: null,
       locationName: null,
+      countryCode: null,
       timezone: null,
     );
   }
@@ -290,4 +306,13 @@ final settingsProvider = StateNotifierProvider<SettingsNotifier, SettingsState>(
 
   final params = buildCalculationParameters(method);
   return (params.fajrAngle, params.ishaAngle ?? 0.0);
+}
+
+String? _normalizeOptionalCountryCode(String? countryCode) {
+  final normalizedCountryCode = countryCode?.trim().toUpperCase();
+  if (normalizedCountryCode == null || normalizedCountryCode.isEmpty) {
+    return null;
+  }
+
+  return normalizedCountryCode;
 }
