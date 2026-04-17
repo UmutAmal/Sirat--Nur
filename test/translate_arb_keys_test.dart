@@ -659,5 +659,35 @@ void main() {
       expect(labelValue, 'Tanilama');
       expect(value, 'Bulut kontrolu basarisiz: {error}');
     });
+
+    test('preserves chatbot offline status token', () {
+      final translatedPrefixValue = resolveTranslatedArbValue(
+        key: 'chatbotLocalNoInfo',
+        source:
+            '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.',
+        currentValue:
+            '[OFFLINE] Dogrulanmis yerel Islami rehberlik henuz hazir degil.',
+        candidate:
+            '[CEVRIMDISI] Dogrulanmis yerel Islami rehberlik henuz hazir degil.',
+      );
+
+      final missingPrefixValue = resolveTranslatedArbValue(
+        key: 'chatbotLocalNoInfo',
+        source:
+            '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.',
+        currentValue:
+            '[OFFLINE] Dogrulanmis yerel Islami rehberlik henuz hazir degil.',
+        candidate: 'Dogrulanmis yerel Islami rehberlik henuz hazir degil.',
+      );
+
+      expect(
+        translatedPrefixValue,
+        '[OFFLINE] Dogrulanmis yerel Islami rehberlik henuz hazir degil.',
+      );
+      expect(
+        missingPrefixValue,
+        '[OFFLINE] Dogrulanmis yerel Islami rehberlik henuz hazir degil.',
+      );
+    });
   });
 }

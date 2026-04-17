@@ -11922,3 +11922,48 @@
 
 ### Sonraki Adim
 - Kalan 252 same-as-English chatbot offline borcu icin dusuk-kaynak locale listesi parcalanacak; translator alias'i guvenilir olanlar ayri turda eklenecek, gercek kaynak bulunamayanlar ise sahte ceviri yerine rapor/guard olarak tutulacak.
+
+## 2026-04-17 TUR-287 — Guard Translation Tool Against OFFLINE Prefix Drift
+
+### Yapilan Islem
+- `tool\translate_arb_keys.dart` icinde `chatbotLocalNoInfo` icin post-process katmani eklendi.
+- Kaynak metin `[OFFLINE]` ile basliyorsa, ceviri adayi prefix'i cevirmis olsa da tamamen dusurmus olsa da sonuc literal `[OFFLINE]` ile normalize ediliyor.
+- `translate_arb_keys_test.dart` icine prefix cevrilmesi ve prefix'in tamamen dusmesi senaryolarini kapsayan regression testi eklendi.
+
+### Kanit
+- `chatbotLocalNoInfo` post-process hook'u: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:625`
+- Offline prefix normalizer: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:825`
+- Regression testi: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:663`
+- Cevrilmis prefix senaryosu: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:671`
+- Eksik prefix senaryosu: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:674`
+
+### Neden Yapildi
+- Onceki iki tur ARB degerlerini duzeltti, fakat arac seviyesi korunmazsa `tool\translate_arb_keys.dart` gelecekte ayni anahtar icin `[OFFLINE]` etiketini tekrar cevirebilir veya dusurebilirdi.
+- Bu degisiklik dini icerik uretmez; yalnizca teknik runtime durum etiketinin ceviri pipeline'inda sabit kalmasini saglar.
+- Kalan chatbot English fallback borcu cozulurken ayni prefix driftinin tekrar dogmasi engellendi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart` PASS
+- Odak test: `flutter test test\translate_arb_keys_test.dart --plain-name "preserves chatbot offline status token"` PASS (`1/1`)
+- Tool test: `flutter test test\translate_arb_keys_test.dart` PASS (`33/33`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`500/500`)
+
+### Risk Degisimi
+- Gelecekte `chatbotLocalNoInfo` ceviri batch'i calistiginda `[OFFLINE]` prefix'inin tekrar cevrilmesi/dusmesi riski: `12/25 -> 1/25`
+- Prefix driftinin sadece ARB testiyle gec yakalanmasi riski: `6/25 -> 1/25`
+
+### Rollback Plani
+- `tool\translate_arb_keys.dart` icindeki `chatbotLocalNoInfo` post-process hook'u ve `_normalizeOfflineStatusPrefix` helper'i kaldirilir.
+- `translate_arb_keys_test.dart` icindeki offline status token testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Kalan 252 same-as-English chatbot offline borcu icin guvenilir alias/kaynak stratejisi ayri turlarda incelenecek; artik yeni ceviri denemeleri `[OFFLINE]` token'ini bozmayacak.

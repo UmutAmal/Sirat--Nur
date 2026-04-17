@@ -622,6 +622,13 @@ String _postProcessTranslation({
     return _normalizeGeminiLabel(normalizedTranslated, normalizedSource);
   }
 
+  if (key == 'chatbotLocalNoInfo') {
+    return _normalizeOfflineStatusPrefix(
+      normalizedTranslated,
+      normalizedSource,
+    );
+  }
+
   if (key == 'onboarding1Title') {
     return _normalizeOnboardingBrand(normalizedTranslated, normalizedSource);
   }
@@ -813,6 +820,27 @@ String _normalizeGeminiLabel(String translated, String source) {
   }
 
   return translated.replaceAllMapped(RegExp(r'\([^)]*\)'), (_) => '(Gemini)');
+}
+
+String _normalizeOfflineStatusPrefix(String translated, String source) {
+  if (!source.startsWith('[OFFLINE]')) {
+    return translated;
+  }
+
+  final trimmedLeft = translated.trimLeft();
+  final leadingWhitespaceLength = translated.length - trimmedLeft.length;
+  final leadingWhitespace = translated.substring(0, leadingWhitespaceLength);
+  if (trimmedLeft.startsWith('[OFFLINE]')) {
+    return translated;
+  }
+
+  final bracketMatch = RegExp(r'^\[[^\]]+\]\s*').firstMatch(trimmedLeft);
+  if (bracketMatch != null) {
+    final body = trimmedLeft.substring(bracketMatch.end).trimLeft();
+    return '$leadingWhitespace[OFFLINE] $body';
+  }
+
+  return '$leadingWhitespace[OFFLINE] $trimmedLeft';
 }
 
 String _normalizeOnboardingBrand(String translated, String source) {
