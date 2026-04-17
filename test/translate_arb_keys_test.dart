@@ -82,6 +82,22 @@ void main() {
       },
     );
 
+    test('skips ARB file writes when only newline style differs', () {
+      expect(
+        shouldWriteArbFileContent('{\r\n  "key": "value"\r\n}\r\n', '''
+{
+  "key": "value"
+}
+'''),
+        isFalse,
+      );
+
+      expect(
+        shouldWriteArbFileContent('{"key":"value"}\n', '{"key":"changed"}\n'),
+        isTrue,
+      );
+    });
+
     test('rejects multiline chatbot runtime output', () {
       final value = resolveTranslatedArbValue(
         key: 'chatbotGreeting',

@@ -75,13 +75,28 @@ Future<void> main(List<String> arguments) async {
     }
 
     const encoder = JsonEncoder.withIndent('  ');
-    file.writeAsStringSync('${encoder.convert(updated)}\n');
-    stdout.writeln('Updated ${file.path}');
+    final nextContent = '${encoder.convert(updated)}\n';
+    final currentContent = file.readAsStringSync();
+    if (shouldWriteArbFileContent(currentContent, nextContent)) {
+      file.writeAsStringSync(nextContent);
+      stdout.writeln('Updated ${file.path}');
+    } else {
+      stdout.writeln('Unchanged ${file.path}');
+    }
   }
 }
 
 Map<String, dynamic> _readArb(String path) {
   return jsonDecode(File(path).readAsStringSync()) as Map<String, dynamic>;
+}
+
+bool shouldWriteArbFileContent(String currentContent, String nextContent) {
+  return _normalizeLineEndings(currentContent) !=
+      _normalizeLineEndings(nextContent);
+}
+
+String _normalizeLineEndings(String value) {
+  return value.replaceAll('\r\n', '\n').replaceAll('\r', '\n');
 }
 
 bool _shouldPreserve(String key, dynamic currentValue, dynamic englishValue) {

@@ -11111,3 +11111,50 @@
 ### Sonraki Adim
 - L10n borcunu guvenli kapatmak icin `translate_arb_keys.dart` uzerinde locale bazli rapor/dry-run ve kalite esigi genisletilecek.
 - Ardindan ayni-ingilizce kalan download/diagnostics/chatbot anahtarlari kontrollu, testli ve revert edilebilir batch'lere ayrilacak.
+
+## 2026-04-17 TUR-272 — Skip Unchanged ARB Writes
+
+### Yapilan Islem
+- `tool/translate_arb_keys.dart` artik ARB dosyasini yazmadan once mevcut icerik ile yeni icerigi line-ending normalize ederek karsilastiriyor.
+- Icerik ayniysa dosya yazilmiyor ve `Unchanged ...` mesaji basiliyor.
+- `test/translate_arb_keys_test.dart` CRLF/LF farkinin tek basina write gerektirmedigini dogrulayan regresyon testiyle genisletildi.
+
+### Kanit
+- Write guard: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:79`
+- Karar noktasi: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:80`
+- No-op mesaji: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:84`
+- Normalize helper: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:93`
+- Regresyon testi: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:85`
+
+### Neden Yapildi
+- Bir onceki guvenlik turunda otomatik ceviri denemesi commit edilmeden geri alindi; buna ragmen ARB dosyalarinda LF/CRLF kaynakli gereksiz dirty-status riski goruldu.
+- Translation Engine icin genis l10n batch'leri ileride kontrollu calisacaksa, arac yalnizca gercek icerik farkinda yazmali.
+- Bu patch ceviri uretmiyor; sadece kalite kapili aracin dosya-mutasyon davranisini daraltiyor.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart` PASS
+- Odak test: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS (`31/31`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`482/482`)
+
+### Risk Degisimi
+- ARB batch aracinin yalnizca line-ending farki yuzunden 180+ dosyayi dirty yapma riski: `12/25 -> 2/25`
+- Genis l10n batch review gurultusu riski: `12/25 -> 3/25`
+- Tum-locale kalan gercek ceviri borcu: `16/25 -> 16/25` (bu tur ceviri uretmedi)
+
+### Rollback Plani
+- `shouldWriteArbFileContent` ve `_normalizeLineEndings` helper'lari kaldirilir.
+- `translate_arb_keys.dart` tekrar dogrudan `file.writeAsStringSync(...)` davranisina dondurulur.
+- `translate_arb_keys_test.dart` icindeki newline no-op testi geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- L10n borcu icin yazma yapmayan rapor/dry-run modu eklenecek; hangi key ve locale'lerin app_en ile ayni kaldigi kanitli listeye dokulecek.
+- Rapor cikmadan broad auto-translation yapilmayacak; once kalite kapilari genisletilecek.
