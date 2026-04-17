@@ -61,7 +61,13 @@ bool isSecurePlacesTileUrlTemplate(String rawTemplate) {
       .replaceAll('{y}', '0')
       .replaceAll('{s}', 'a');
   final uri = Uri.tryParse(probeUrl);
-  return uri != null && uri.isScheme('https') && uri.host.isNotEmpty;
+  return uri != null &&
+      uri.isScheme('https') &&
+      uri.host.isNotEmpty &&
+      uri.userInfo.isEmpty &&
+      uri.query.isEmpty &&
+      uri.fragment.isEmpty &&
+      !_isPublicPlacesTileHost(uri.host);
 }
 
 PlacesDataAvailability resolvePlacesDataAvailability(
@@ -92,13 +98,46 @@ bool canFetchPlaces(SettingsState settings, {required String overpassApiUrl}) {
 Uri resolvePlacesOverpassEndpoint(String rawEndpoint) {
   final endpoint = rawEndpoint.trim();
   final uri = Uri.tryParse(endpoint);
-  if (uri == null || !uri.isScheme('https') || uri.host.isEmpty) {
+  if (uri == null ||
+      !uri.isScheme('https') ||
+      uri.host.isEmpty ||
+      uri.userInfo.isNotEmpty ||
+      uri.query.isNotEmpty ||
+      uri.fragment.isNotEmpty ||
+      _isPublicOverpassHost(uri.host)) {
     throw const FormatException(
-      'Places Overpass endpoint must be an HTTPS URL.',
+      'Places Overpass endpoint must be an HTTPS proxy/provider URL without public Overpass hosts, user info, query, or fragment.',
     );
   }
 
   return uri;
+}
+
+bool _isPublicPlacesTileHost(String host) {
+  return _hostMatchesAny(host, const [
+    'tile.openstreetmap.org',
+    'tile.openstreetmap.de',
+  ]);
+}
+
+bool _isPublicOverpassHost(String host) {
+  return _hostMatchesAny(host, const [
+    'overpass-api.de',
+    'overpass.kumi.systems',
+    'overpass.openstreetmap.fr',
+    'overpass.openstreetmap.ru',
+    'overpass.osm.ch',
+    'overpass.osm.rambler.ru',
+  ]);
+}
+
+bool _hostMatchesAny(String host, List<String> blockedHosts) {
+  final normalizedHost = host.toLowerCase();
+  return blockedHosts.any(
+    (blockedHost) =>
+        normalizedHost == blockedHost ||
+        normalizedHost.endsWith('.$blockedHost'),
+  );
 }
 
 String buildOverpassPlacesQuery({

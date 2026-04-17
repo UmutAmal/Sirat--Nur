@@ -12291,3 +12291,64 @@
 
 ### Sonraki Adim
 - Kalan 1558 same-as-English borc icin uydurma yapmadan daha guvenilir kaynak veya insan/onayli ceviri sozlugu gerektiren locale'ler ayristirilacak; siradaki teknik risk olarak Places/Overpass runtime provider ve tile source sozlesmesi yeniden taranacak.
+
+## 2026-04-17 TUR-294 — Harden Places Tile And Overpass Provider Contract
+
+### Yapilan Islem
+- Places harita ve yakin mekan veri kaynaklari icin runtime endpoint sozlesmesi sertlestirildi.
+- `PLACES_TILE_URL_TEMPLATE` dogrulayicisi artik yalniz HTTPS + `{z}/{x}/{y}` kontrolu yapmakla kalmiyor; user-info, query, fragment ve public OpenStreetMap tile hostlarini da reddediyor.
+- `PLACES_OVERPASS_API_URL` dogrulayicisi artik HTTPS disinda user-info, query, fragment ve bilinen public community Overpass hostlarini reddediyor.
+- README production kurulum dokumani ayni sozlesmeyi acikca anlatiyor.
+- Places ve README regresyon testleri public tile/public Overpass/direct secret tasima senaryolarini kilitleyecek sekilde genisletildi.
+
+### Kanit
+- Tile URL guard'i: `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:49`
+- Tile public host reddi: `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:116`
+- Overpass endpoint guard'i: `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:98`
+- Public Overpass host reddi: `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:123`
+- Host match helper'i: `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart:134`
+- Public OSM tile regresyon testi: `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart:58`
+- Public Overpass regresyon testi: `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart:208`
+- README guardrail testi: `A:\Way of Allah\sirat_i_nur\test\readme_operational_docs_test.dart:67`
+- README production dokumani: `A:\Way of Allah\sirat_i_nur\README.md:61`
+
+### Neden Yapildi
+- Daha once Places ekrani varsayilan olarak public tile server kullanmiyordu; fakat build-time config ile `https://tile.openstreetmap.org/{z}/{x}/{y}.png` gibi public OSM tile hostlari hala gecis alabiliyordu.
+- Overpass endpoint guard'i sadece HTTPS/host kontrolu yapiyordu; bu da public community Overpass hostlarina dogrudan trafik, client-side query tokeni veya URL fragmenti ile gizli veri tasima riskini acik birakiyordu.
+- Uretim uygulamasinda yakin mekan aramasi ancak izlenen/rate-limited proxy, onayli provider veya operatorun kendi Overpass uyumlu endpointi ile acilmali.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\places\places_map_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\places\places_map_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\README.md`
+- `A:\Way of Allah\sirat_i_nur\test\readme_operational_docs_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Public OSM tile hostlari artik runtime config ile sessizce kullanilamaz.
+- Bilinen public community Overpass hostlari artik runtime config ile dogrudan kullanilamaz.
+- Endpoint URL'lerinde user-info, query string veya fragment ile client tarafina secret gomulmesi engellendi.
+- Places ekrani yanlis provider configinde mevcut dürüst unavailable state'leri gostermeye devam eder.
+
+### Test Sonucu
+- Format: `dart format lib\features\places\places_map_page.dart test\features\places\places_map_page_test.dart test\readme_operational_docs_test.dart` PASS
+- Odak test: `flutter test test\features\places\places_map_page_test.dart` PASS (`8/8`)
+- Odak test: `flutter test test\readme_operational_docs_test.dart` PASS (`5/5`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`510/510`)
+
+### Risk Degisimi
+- Public OSM tile hostunun build-time config ile production'a girmesi riski: `16/25 -> 1/25`
+- Public community Overpass endpointlerine dogrudan client trafigi gonderme riski: `16/25 -> 1/25`
+- Places endpoint URL'inde query/fragment/user-info ile secret sizdirma riski: `12/25 -> 1/25`
+
+### Rollback Plani
+- `isSecurePlacesTileUrlTemplate` ve `resolvePlacesOverpassEndpoint` guard'lari onceki yalniz HTTPS/placeholder kontrollerine dondurulur.
+- Public host ve URL secret regresyon testleri kaldirilir.
+- README Places provider guardrail paragrafi onceki daha gevsek metne dondurulur.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Places provider sozlesmesinden sonra siradaki tarama, hardcoded dini/teknik icerik ve TODO/FIXME/stub kalintilarini yeniden risk skoruna baglayip en yuksek somut bulguyu kapatmak olacak.

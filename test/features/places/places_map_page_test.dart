@@ -55,6 +55,29 @@ void main() {
       expect(
         resolvePlacesMapAvailability(
           configuredLocation,
+          tileUrlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+        ),
+        PlacesMapAvailability.tileConfigRequired,
+      );
+      expect(
+        resolvePlacesMapAvailability(
+          configuredLocation,
+          tileUrlTemplate:
+              'https://tiles.provider.invalid/{z}/{x}/{y}.png?token=secret',
+        ),
+        PlacesMapAvailability.tileConfigRequired,
+      );
+      expect(
+        resolvePlacesMapAvailability(
+          configuredLocation,
+          tileUrlTemplate:
+              'https://user:pass@tiles.provider.invalid/{z}/{x}/{y}.png',
+        ),
+        PlacesMapAvailability.tileConfigRequired,
+      );
+      expect(
+        resolvePlacesMapAvailability(
+          configuredLocation,
           tileUrlTemplate: 'https://tiles.provider.invalid/{z}/{x}/{y}.png',
         ),
         PlacesMapAvailability.ready,
@@ -178,6 +201,41 @@ void main() {
     );
     expect(
       () => resolvePlacesOverpassEndpoint('https:///missing-host'),
+      throwsFormatException,
+    );
+    expect(
+      () => resolvePlacesOverpassEndpoint(
+        'https://overpass-api.de/api/interpreter',
+      ),
+      throwsFormatException,
+    );
+    expect(
+      () => resolvePlacesOverpassEndpoint(
+        'https://lz4.overpass-api.de/api/interpreter',
+      ),
+      throwsFormatException,
+    );
+    expect(
+      () => resolvePlacesOverpassEndpoint(
+        'https://overpass.kumi.systems/api/interpreter',
+      ),
+      throwsFormatException,
+    );
+    expect(
+      () => resolvePlacesOverpassEndpoint(
+        'https://overpass.example/api?token=secret',
+      ),
+      throwsFormatException,
+    );
+    expect(
+      () =>
+          resolvePlacesOverpassEndpoint('https://overpass.example/api#secret'),
+      throwsFormatException,
+    );
+    expect(
+      () => resolvePlacesOverpassEndpoint(
+        'https://user:pass@overpass.example/api',
+      ),
       throwsFormatException,
     );
     expect(SupabaseConfig.placesOverpassApiUrl, isEmpty);

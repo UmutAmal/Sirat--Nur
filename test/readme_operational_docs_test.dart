@@ -64,6 +64,18 @@ void main() {
       expect(readme, isNot(contains('--dart-define=SUPABASE_ANON_KEY=sb_')));
     });
 
+    test('documents Places provider guardrails', () {
+      expect(
+        readme,
+        contains('must not point directly at public OpenStreetMap tile hosts'),
+      );
+      expect(
+        readme,
+        contains('The app refuses known public community Overpass hosts'),
+      );
+      expect(readme, contains('user info, query strings, or fragments'));
+    });
+
     test(
       'documents platform-backed premium purchases instead of local simulation',
       () {
