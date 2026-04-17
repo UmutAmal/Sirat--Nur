@@ -14765,3 +14765,41 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak dua/asma cloud provenance, l10n same-as-English debt ve audio seed source URL dogrulamasi taranacak.
+
+## 2026-04-17 TUR-338 - Bundled Quranic Duas Carry Verification Timestamp
+
+### MASTER Karari
+- Risk: `lib/core/constants/duas_data.dart:134` bundled dua fallback genel olarak verified kabul ediliyordu, fakat her `DuaData` satirinin `verifiedAt` alani bos kaliyordu.
+- Kanit: `lib/core/constants/duas_data.dart:245` cloud dua bulunamayinca bundled fallback runtime'a veriliyor; satir bazli `verifiedAt` bos oldugunda downstream audit/provenance gorunurlugu kayboluyordu.
+- Etki: Dini dua icerigi verified fallback'ten gelse bile satir seviyesinde dogrulama tarihi izlenemiyordu; AGENTS Section 13 source + verified_at kuralinin yerel fallback tarafinda zayif halkasiydi.
+- Olasilik: Cloud dua bos veya Supabase unavailable oldugunda fallback her kullanicida devreye girebilir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1).
+- Rollback kapsami: `lib/core/constants/duas_data.dart`, `test/duas_data_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `lib/core/constants/duas_data.dart:136` `bundledQuranDuaVerifiedAt` audit timestamp sabiti eklendi.
+- `lib/core/constants/duas_data.dart:150`, `:163`, `:176`, `:189`, `:202`, `:215`, `:227`, `:240` tum bundled Quranic dua satirlari ayni verified timestamp'i tasiyor.
+- Cloud dua path'i degistirilmedi; Supabase satirlari kendi `verified_at/verifiedAt` degerlerini kullanmaya devam ediyor.
+
+### TESTER Kapsami
+- `test/duas_data_test.dart:31` bundled dua fallback'teki her satirin `bundledQuranDuaVerifiedAt` tasidigini dogruluyor.
+- Mevcut Quran payload equality testi ayni kaldigi icin Arapca/TR/EN dua metinlerinde degisiklik yapilmadigi kilitlendi.
+
+### Test Sonucu
+- Format: `dart format lib\core\constants\duas_data.dart test\duas_data_test.dart` PASS
+- Odak test: `flutter test test\duas_data_test.dart --reporter compact` PASS (`11/11`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`563/563`)
+
+### Risk Degisimi
+- Verified bundled dua fallback'in satir bazli `verifiedAt` bos kalmasi riski: `12/25 -> 2/25`
+- Kalan risk: Dua metinlerinin semantik dogrulugu `assets/data/full_quran.json` zinciri ve mevcut equality testine bagli; bu tur yalnizca provenance metadata boslugunu kapatti.
+
+### Rollback Plani
+- `bundledQuranDuaVerifiedAt` sabiti ve bundled dua satirlarindaki `verifiedAt` atamalari kaldirilir.
+- `test/duas_data_test.dart` icindeki bundled verifiedAt beklentisi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Asma bundled provenance, l10n debt ve audio/storage seed zinciri taranacak.

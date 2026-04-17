@@ -133,6 +133,7 @@ Map<String, String> _readDuaTranslations(dynamic rawTranslations) {
 
 const bool hasVerifiedBundledDuas = true;
 const String quranicDuaCategory = 'quranic_dua';
+const String bundledQuranDuaVerifiedAt = '2026-04-17T00:00:00Z';
 
 const List<DuaData> dailyDuas = [
   DuaData(
@@ -146,6 +147,7 @@ const List<DuaData> dailyDuas = [
         'others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’',
     source: 'Quran 2:201',
     category: quranicDuaCategory,
+    verifiedAt: bundledQuranDuaVerifiedAt,
   ),
   DuaData(
     id: '2',
@@ -158,6 +160,7 @@ const List<DuaData> dailyDuas = [
         'God does not burden any soul with more than it can bear: each gains whatever good it has done, and suffers whatever bad it has done. ‘Lord, do not take us to task if we forget or make mistakes. Lord, do not burden us as You burdened those before us. Lord, do not burden us with more than we have strength to bear. Pardon us, forgive us, and have mercy on us. You are our Protector, so help us against the disbelievers.’',
     source: 'Quran 2:286',
     category: quranicDuaCategory,
+    verifiedAt: bundledQuranDuaVerifiedAt,
   ),
   DuaData(
     id: '3',
@@ -170,6 +173,7 @@ const List<DuaData> dailyDuas = [
         '‘Our Lord, do not let our hearts deviate after You have guided us. Grant us Your mercy: You are the Ever Giving.’',
     source: 'Quran 3:8',
     category: quranicDuaCategory,
+    verifiedAt: bundledQuranDuaVerifiedAt,
   ),
   DuaData(
     id: '4',
@@ -182,6 +186,7 @@ const List<DuaData> dailyDuas = [
         'Lord, grant that I and my offspring may keep up the prayer. Our Lord, accept my request.',
     source: 'Quran 14:40',
     category: quranicDuaCategory,
+    verifiedAt: bundledQuranDuaVerifiedAt,
   ),
   DuaData(
     id: '5',
@@ -194,6 +199,7 @@ const List<DuaData> dailyDuas = [
         'and lower your wing in humility towards them in kindness and say, ‘Lord, have mercy on them, just as they cared for me when I was little.’',
     source: 'Quran 17:24',
     category: quranicDuaCategory,
+    verifiedAt: bundledQuranDuaVerifiedAt,
   ),
   DuaData(
     id: '6',
@@ -206,6 +212,7 @@ const List<DuaData> dailyDuas = [
         'exalted be God, the one who is truly in control. [Prophet], do not rush to recite before the revelation is fully complete but say, ‘Lord, increase me in knowledge!’',
     source: 'Quran 20:114',
     category: quranicDuaCategory,
+    verifiedAt: bundledQuranDuaVerifiedAt,
   ),
   DuaData(
     id: '7',
@@ -217,6 +224,7 @@ const List<DuaData> dailyDuas = [
         'Say [Prophet], ‘Lord, forgive and have mercy: You are the most merciful of all.’',
     source: 'Quran 23:118',
     category: quranicDuaCategory,
+    verifiedAt: bundledQuranDuaVerifiedAt,
   ),
   DuaData(
     id: '8',
@@ -229,6 +237,7 @@ const List<DuaData> dailyDuas = [
         'those who pray, ‘Our Lord, give us joy in our spouses and offspring. Make us good examples to those who are aware of You’.',
     source: 'Quran 25:74',
     category: quranicDuaCategory,
+    verifiedAt: bundledQuranDuaVerifiedAt,
   ),
 ];
 

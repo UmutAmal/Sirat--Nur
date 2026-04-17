@@ -27,6 +27,10 @@ void main() {
         bundled.every((dua) => dua.category == quranicDuaCategory),
         isTrue,
       );
+      expect(
+        bundled.every((dua) => dua.verifiedAt == bundledQuranDuaVerifiedAt),
+        isTrue,
+      );
     });
 
     test('keeps unverified transliteration out of the fallback payload', () {
