@@ -1196,7 +1196,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get resumeDownload => 'ዳግመ-ምጅማር ዳውንሎድ';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'ዝወረዱ ፋይላት ምድምሳስ';
 
   @override
   String get downloadCancelling => 'Cancelling...';

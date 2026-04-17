@@ -13264,3 +13264,67 @@
 
 ### Sonraki Adim
 - Yeni turda l10n same-as-English debt icin bir sonraki guvenli tek anahtar/locale ilerlemesi veya transitive dependency risklerinin resmi constraint analizi yapilacak.
+
+## 2026-04-17 TUR-312 - Delete Downloaded Files L10n Debt Reduction
+
+### Yapilan Islem
+- Kritik 23 anahtarlik l10n debt raporu tekrar calistirildi; baslangic borcu `1556` same-as-English idi.
+- `deleteDownloadedFiles` icin yalnizca guvenli, tek satirlik, placeholder'siz ve English fallback olmayan locale ciktilari kabul edildi.
+- Dört locale guncellendi: `lus`, `mai`, `sa`, `ti`.
+- `flutter gen-l10n` calistirilerek generated runtime Dart dosyalari ARB ile senkronlandi.
+- L10n debt guard'i `1552` ust sinirine indirildi ve bu dört locale icin `deleteDownloadedFiles` English fallback'e geri donmesin diye regresyon testi eklendi.
+
+### Kanit
+- Mizo/Lushai ARB degeri: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lus.arb:395`
+- Maithili ARB degeri: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mai.arb:395`
+- Sanskrit ARB degeri: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb:395`
+- Tigrinya ARB degeri: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb:395`
+- Mizo/Lushai runtime getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_lus.dart:1221`
+- Maithili runtime getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_mai.dart:1212`
+- Sanskrit runtime getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_sa.dart:1214`
+- Tigrinya runtime getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ti.dart:1199`
+- L10n debt threshold guard'i: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:205`
+- Dört-locale fallback guard'i: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:220`
+- Read-only l10n report: `Same-as-English locales: 1552`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`
+
+### Neden Yapildi
+- `deleteDownloadedFiles` kullaniciya veri silme aksiyonunu anlatan kritik UI metni; English fallback kalmasi yerellesme kalitesi ve acik iletisim riskiydi.
+- Metin dini icerik veya mezhebi hukum uretmiyor; bu nedenle guvenli ceviri borcu olarak dar kapsamli ele alindi.
+- Arac yalnizca dort locale'de guvenli sonuc uretti; diger locale'lerde sahte ceviri yazmak yerine mevcut durum korundu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lus.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mai.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_lus.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_mai.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_sa.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ti.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Takip edilen 23 anahtar icin same-as-English l10n borcu `1556 -> 1552` seviyesine indi.
+- Dört locale'de indirilmis dosyalari silme aksiyonu artik runtime'da birebir English fallback olarak gorunmeyecek.
+- Regresyon testi bu kazanimin sonraki ceviri veya generated l10n turlarinda kaybolmasini engelliyor.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart` PASS (`110/110`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`535/535`)
+- Read-only debt raporu: `dart run tool\translate_arb_keys.dart --report ...` PASS, `Same-as-English locales: 1552`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`
+
+### Risk Degisimi
+- `deleteDownloadedFiles` icin dort locale runtime/UI English fallback riski: `12/25 -> 2/25`
+- Takip edilen P1 l10n borc toplam sayisi: `1556 -> 1552`
+
+### Rollback Plani
+- Dort ARB dosyasindaki `deleteDownloadedFiles` degerleri eski `Delete Downloaded Files` fallback'ine dondurulur.
+- `flutter gen-l10n` calistirilir ve dort generated runtime getter senkronlanir.
+- `test\translate_arb_keys_test.dart` icindeki threshold tekrar `1556` yapilir ve dort-locale fallback guard'i kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda ayni P1 l10n debt kumesinden bir sonraki guvenli anahtar/locale ilerlemesi denenebilir; guvenli cikti yoksa dependency transitive latest farklari resmi constraint'lerle incelenecek.

@@ -1209,7 +1209,7 @@ class AppLocalizationsMai extends AppLocalizations {
   String get resumeDownload => 'रिज्यूमे डाउनलोड';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'डाउनलोड फाइल मेटाउ';
 
   @override
   String get downloadCancelling => 'Cancelling...';

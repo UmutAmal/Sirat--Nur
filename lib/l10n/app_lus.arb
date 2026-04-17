@@ -392,7 +392,7 @@
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Download rawh",
   "resumeDownload": "Resume Download rawh",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "deleteDownloadedFiles": "Download tawh file te chu Delete rawh",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
