@@ -74,6 +74,18 @@ void main() {
         resolveLiveTvExternalUri({'external_url': 'youtube://watch?v=abc'}),
         isNull,
       );
+      expect(
+        resolveLiveTvExternalUri({
+          'external_url': 'https://token@www.youtube.com/watch?v=abc',
+        }),
+        isNull,
+      );
+      expect(
+        resolveLiveTvExternalUri({
+          'external_url': 'https://www.youtube.com/watch?v=abc#secret',
+        }),
+        isNull,
+      );
     });
 
     test(
@@ -125,6 +137,17 @@ void main() {
       });
 
       expect(candidates, isEmpty);
+    });
+
+    test('candidate resolver rejects user-info and fragment-bearing URLs', () {
+      expect(
+        resolveLiveTvCandidateUrls({
+          'embed_url': 'https://token@www.youtube.com/embed/live',
+          'fallback_embed_url': 'https://www.youtube.com/embed/live#secret',
+          'external_url': 'https://www.youtube.com/watch?v=abc#secret',
+        }),
+        isEmpty,
+      );
     });
 
     test('display text resolver does not trust non-string cloud values', () {

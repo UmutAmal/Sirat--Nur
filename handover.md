@@ -12510,3 +12510,50 @@
 
 ### Sonraki Adim
 - Siradaki turda genel risk taramasi devam edecek; ozellikle locale-aware olmayan UI formatlari, dis URL acma guard'lari ve gercek kullanici aksiyonlarinda sessiz fallback davranislari tekrar skorlanacak.
+
+## 2026-04-17 TUR-298 — External URL User-Info And Fragment Guard
+
+### Yapilan Islem
+- Genel dis URL resolver'i artik HTTPS+host disinda `userInfo` ve `fragment` tasiyan URL'leri de reddediyor.
+- Live TV URL resolver/candidate akisi ayni helper'i kullandigi icin YouTube hostlu olsa bile `token@host` veya `#secret` iceren satirlar reddediliyor.
+- External URL ve Live TV testlerine user-info/fragment regresyonlari eklendi.
+
+### Kanit
+- Genel guard: `A:\Way of Allah\sirat_i_nur\lib\core\utils\external_url.dart:9`, `A:\Way of Allah\sirat_i_nur\lib\core\utils\external_url.dart:10`
+- Genel URL user-info/fragment testi: `A:\Way of Allah\sirat_i_nur\test\external_url_test.dart:20`, `A:\Way of Allah\sirat_i_nur\test\external_url_test.dart:24`
+- Live TV external URL user-info testi: `A:\Way of Allah\sirat_i_nur\test\live_tv_page_test.dart:79`
+- Live TV candidate user-info/fragment testi: `A:\Way of Allah\sirat_i_nur\test\live_tv_page_test.dart:142`, `A:\Way of Allah\sirat_i_nur\test\live_tv_page_test.dart:145`
+
+### Neden Yapildi
+- `isExternalHttpUri` once yalniz `host.isNotEmpty` ve HTTPS kontrol ediyordu; `https://user:pass@siratinur.com/...` gibi URL'ler geciyordu.
+- Live TV trusted host kontrolu `uri.host` uzerinden calistigi icin `https://token@www.youtube.com/...` host olarak YouTube gorunup kabul edilebilirdi.
+- Query parametreleri Google Maps aramasi ve YouTube `v` parametresi icin gerekli oldugundan bu turda query yasaklanmadi; secret tasima riski en yuksek user-info ve fragment parcalari kucuk kapsamla kapatildi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\utils\external_url.dart`
+- `A:\Way of Allah\sirat_i_nur\test\external_url_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\live_tv_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Kullanici harici uygulamaya veya WebView'a yonlendirilirken URL user-info bolumunden kimlik/sembolik secret tasinmasi engellendi.
+- Fragment ile Supabase/Cloud satirlarindan yanlislikla secret veya takip bilgisi WebView/harici tarayiciya aktarilmasi engellendi.
+- Normal HTTPS privacy linkleri, Google Maps query URI'si ve YouTube video id query akisi korunuyor.
+
+### Test Sonucu
+- Odak test: `flutter test test\external_url_test.dart test\live_tv_page_test.dart` PASS (`11/11`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`515/515`)
+
+### Risk Degisimi
+- External URL user-info/fragment leak riski: `12/25 -> 1/25`
+- Live TV trusted-host bypass ile user-info/fragment tasima riski: `12/25 -> 1/25`
+
+### Rollback Plani
+- `isExternalHttpUri` guard'i tekrar yalniz host+HTTPS kontrolune dondurulur.
+- `test\external_url_test.dart` ve `test\live_tv_page_test.dart` icindeki user-info/fragment regresyonlari kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Sessiz fallback risklerine geri donulecek; ozellikle konum, para birimi/sabit oran, prayer/timezone ve premium/bootstrap hata yollarinda kullaniciya yanlis guven veren durumlar taranacak.

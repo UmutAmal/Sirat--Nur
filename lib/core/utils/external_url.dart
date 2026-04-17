@@ -5,7 +5,10 @@ import 'package:url_launcher/url_launcher.dart';
 bool isExternalHttpUri(Uri uri) {
   // Legacy helper name is kept for call-site stability; runtime launch targets
   // must still be HTTPS so app links do not downgrade user traffic.
-  return uri.host.isNotEmpty && uri.isScheme('https');
+  return uri.host.isNotEmpty &&
+      uri.userInfo.isEmpty &&
+      uri.fragment.isEmpty &&
+      uri.isScheme('https');
 }
 
 Uri? resolveExternalHttpUri(String rawUrl) {

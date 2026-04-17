@@ -16,6 +16,14 @@ void main() {
       expect(resolveExternalHttpUri('mailto:support@siratinur.com'), isNull);
       expect(resolveExternalHttpUri('javascript:alert(1)'), isNull);
       expect(resolveExternalHttpUri('https:///missing-host'), isNull);
+      expect(
+        resolveExternalHttpUri('https://user:pass@siratinur.com/privacy'),
+        isNull,
+      );
+      expect(
+        resolveExternalHttpUri('https://siratinur.com/privacy#token'),
+        isNull,
+      );
     });
 
     test('buildGoogleMapsSearchUri encodes map directions safely', () {
