@@ -12709,3 +12709,56 @@
 
 ### Sonraki Adim
 - Yeni turda repo/doctor dogrulanacak; ardindan premium restore timeout, timezone dogrulama ve notification scheduling zincirindeki sessiz hata riskleri kanitla taranacak.
+
+## 2026-04-17 TUR-302 - Premium Restore Timeout Cancellation
+
+### Yapilan Islem
+- Premium restore timeout akisi iptal edilebilir `Timer` yapisina tasindi.
+- Basarili purchase/restore, hata, iptal, yeni restore denemesi ve provider dispose noktalarinda bekleyen restore timeout temizleniyor.
+- Timeout callback'i artik `mounted`, `state.isLoading` ve `!state.isPremium` guard'lari olmadan state yazmiyor.
+- Regresyon icin premium kaynak guard testi eklendi.
+
+### Kanit
+- Timeout timer alani: `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:45`
+- Purchase/restore basarisinda timeout iptali: `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:102`
+- Purchase hata/iptal durumunda timeout iptali: `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:107`
+- Restore basinda onceki timeout iptali: `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:164`
+- Cancellable timer kurulumu: `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:170`
+- Dispose-safe state guard: `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:171`
+- Merkezi iptal helper'i: `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:186`
+- Dispose cleanup: `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart:193`
+- Regresyon testi: `A:\Way of Allah\sirat_i_nur\test\features\premium\paywall_page_test.dart:74`
+
+### Neden Yapildi
+- Onceki `Future.delayed(const Duration(seconds: 5), ...)` restore timeout'u iptal edilemiyordu.
+- Provider dispose edildikten sonra callback'in state yazmasi veya eski restore timeout'unun sonraki akisla carpisma riski vardi.
+- Store restore stream'i gec dondugunde stale timeout'un premium state'e gereksiz mudahale etmesini engellemek gerekiyordu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\premium\premium_provider.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\premium\paywall_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Premium restore bekleme akisi dispose sonrasinda state yazma riskinden arindirildi.
+- Arka arkaya restore denemelerinde eski timeout yeni akisi etkilemiyor.
+- Premium entitlement teslim edildikten sonra timeout callback'i loading state'e dokunmuyor.
+
+### Test Sonucu
+- Odak test: `flutter test test\premium_provider_test.dart test\features\premium\paywall_page_test.dart` PASS (`9/9`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`520/520`)
+
+### Risk Degisimi
+- Premium restore timeout'unun dispose sonrasi state yazma riski: `12/25 -> 2/25`
+- Stale restore timeout'unun yeni restore/purchase akisina karisma riski: `10/25 -> 2/25`
+
+### Rollback Plani
+- `_restoreTimeout` alani ve `_cancelRestoreTimeout()` helper'i kaldirilir.
+- `restorePurchases()` icinde eski `Future.delayed` davranisina donulur.
+- Premium restore timeout kaynak guard testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda location timezone validasyonu ve prayer notification scheduling zincirindeki sessiz fallback riskleri kanitla taranacak.

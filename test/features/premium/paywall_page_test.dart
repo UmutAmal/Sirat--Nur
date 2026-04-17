@@ -70,4 +70,27 @@ void main() {
     expect(providerSource, contains('kPremiumProductUnavailableErrorCode'));
     expect(providerSource, contains('IAP bootstrap failed'));
   });
+
+  test('premium restore timeout is cancellable and dispose safe', () {
+    final providerSource = File(
+      'lib/features/premium/premium_provider.dart',
+    ).readAsStringSync();
+
+    expect(providerSource, isNot(contains('Future.delayed')));
+    expect(providerSource, contains('Timer? _restoreTimeout;'));
+    expect(
+      providerSource,
+      contains('_restoreTimeout = Timer(const Duration(seconds: 5), () {'),
+    );
+    expect(
+      providerSource,
+      contains('if (mounted && state.isLoading && !state.isPremium)'),
+    );
+    expect(providerSource, contains('void _cancelRestoreTimeout()'));
+    expect(providerSource, contains('_restoreTimeout?.cancel();'));
+    expect(
+      '_cancelRestoreTimeout();'.allMatches(providerSource).length,
+      greaterThanOrEqualTo(5),
+    );
+  });
 }

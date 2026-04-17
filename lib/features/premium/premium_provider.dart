@@ -42,6 +42,7 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
   final SharedPreferences _prefs;
   final InAppPurchase _iap;
   StreamSubscription<List<PurchaseDetails>>? _subscription;
+  Timer? _restoreTimeout;
   List<ProductDetails> _products = [];
 
   PremiumNotifier(this._prefs)
@@ -98,10 +99,12 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
 
         case PurchaseStatus.purchased:
         case PurchaseStatus.restored:
+          _cancelRestoreTimeout();
           _verifyAndDeliver(purchase);
           break;
 
         case PurchaseStatus.error:
+          _cancelRestoreTimeout();
           state = state.copyWith(
             isLoading: false,
             error: kPremiumPurchaseFailedErrorCode,
@@ -112,6 +115,7 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
           break;
 
         case PurchaseStatus.canceled:
+          _cancelRestoreTimeout();
           state = state.copyWith(isLoading: false);
           if (purchase.pendingCompletePurchase) {
             _iap.completePurchase(purchase);
@@ -157,17 +161,20 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
 
   /// Restore previous purchases from the store.
   Future<void> restorePurchases() async {
+    _cancelRestoreTimeout();
     state = state.copyWith(isLoading: true, error: null);
     try {
       await _iap.restorePurchases();
       // The stream listener will handle the restored purchases.
       // If nothing is restored after a timeout, clear loading.
-      Future.delayed(const Duration(seconds: 5), () {
-        if (state.isLoading) {
+      _restoreTimeout = Timer(const Duration(seconds: 5), () {
+        if (mounted && state.isLoading && !state.isPremium) {
           state = state.copyWith(isLoading: false);
         }
+        _restoreTimeout = null;
       });
     } catch (_) {
+      _cancelRestoreTimeout();
       debugPrint('Premium restore failed');
       state = state.copyWith(
         isLoading: false,
@@ -176,8 +183,14 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
     }
   }
 
+  void _cancelRestoreTimeout() {
+    _restoreTimeout?.cancel();
+    _restoreTimeout = null;
+  }
+
   @override
   void dispose() {
+    _cancelRestoreTimeout();
     _subscription?.cancel();
     super.dispose();
   }
