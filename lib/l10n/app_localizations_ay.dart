@@ -30,7 +30,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get calendar => 'Calendario ukat juk’ampinaka';
 
   @override
-  String get settings => 'Ukax mä juk’a pachanakanwa';
+  String get settings => 'Settings';
 
   @override
   String get nextPrayer => 'Jutïr Oración luraña';
@@ -201,7 +201,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Ukax mä juk’a pachanakanwa';
+  String get page => 'Page';
 
   @override
   String get reading => 'Ullaña';
@@ -547,7 +547,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get downloadManager => 'Uñstayaña Gestor';
 
   @override
-  String get downloads => 'Ukax mä juk’a pachanakanwa';
+  String get downloads => 'Downloads';
 
   @override
   String get downloading => 'Ukax mä...';

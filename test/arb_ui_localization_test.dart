@@ -2165,6 +2165,19 @@ void main() {
       }
     });
 
+    test('Aymara active navigation copy avoids known machine debris', () {
+      final arb = _readArb('lib/l10n/app_ay.arb');
+      const activeKeys = ['settings', 'page', 'downloads', 'downloadAction'];
+
+      for (final key in activeKeys) {
+        expect(
+          arb[key],
+          isNot(contains('Ukax mä juk’a pachanakanwa')),
+          reason: 'app_ay.arb has known machine debris for $key',
+        );
+      }
+    });
+
     test(
       'safe priority locales do not fall back to English for chatbot offline copy',
       () {

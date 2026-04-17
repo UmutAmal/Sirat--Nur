@@ -761,6 +761,25 @@ void main() {
       },
     );
 
+    test('rejects known general machine translation debris', () {
+      final settingsValue = resolveTranslatedArbValue(
+        key: 'settings',
+        source: 'Settings',
+        currentValue: 'Ukax mä juk’a pachanakanwa',
+        candidate: 'Ukax mä juk’a pachanakanwa',
+      );
+
+      final pageValue = resolveTranslatedArbValue(
+        key: 'page',
+        source: 'Page',
+        currentValue: 'Ukax mä juk’a pachanakanwa',
+        candidate: 'Ukax mä juk’a pachanakanwa',
+      );
+
+      expect(settingsValue, 'Settings');
+      expect(pageValue, 'Page');
+    });
+
     test('rejects wrong-context splash tagline output', () {
       const source = 'Islamic Way of Light';
 

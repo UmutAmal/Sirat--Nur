@@ -15288,3 +15288,48 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; `downloadAction` borcu yapay azaltma olmadan kalacak, siradaki dar risk olarak diger download sonucu metinleri ve Aymara'daki baska ayni zayif kalintilar (`settings`, `page`, `downloads`) aktif UI kullanimina gore taranacak.
+
+## 2026-04-17 TUR-351 - Aymara Active UI Machine Debris Rejected
+
+### MASTER Karari
+- Risk: Aymara locale'de aktif UI anahtarlari `settings`, `page` ve `downloads` bilinen makine ceviri enkazi `Ukax mä juk’a pachanakanwa` degerini tasiyordu.
+- Kanit: `lib/l10n/app_ay.arb:9`, `lib/l10n/app_ay.arb:61`, `lib/l10n/app_ay.arb:139` ayni anlamsiz ifadeyi gosteriyordu; generated runtime karsiliklari `lib/l10n/app_localizations_ay.dart:33`, `lib/l10n/app_localizations_ay.dart:204`, `lib/l10n/app_localizations_ay.dart:550` uzerinden uygulamaya cikiyordu.
+- Aktif kullanim: `settings` ayarlar ekran basliginda, `page` Quran/tracker sayfa etiketlerinde, `downloads` home/download entry copy akisi icinde kullaniliyor.
+- Kok neden: Dusuk kaynak Aymara otomatik ceviri ciktilari genel bir aciklama kalibini buton/baslik etiketi gibi yazmisti; Google translate smoke denemesi ayni kotu adayi dondurdugu icin guvenilir yeni Aymara ceviri yoktu.
+- Etki: Kullaniciya sacma, yanlis baglamli UI metni gosteriliyor; localization guveni ve dini uygulama ciddiyeti zedeleniyor.
+- Olasilik: Bu anahtarlar app navigation/status yuzeylerinde aktif; locale secilirse runtime'da dogrudan gorunur.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1).
+- Rollback kapsami: `lib/l10n/app_ay.arb`, `lib/l10n/app_localizations_ay.dart`, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/arb_ui_localization_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `lib/l10n/app_ay.arb:9`, `lib/l10n/app_ay.arb:61`, `lib/l10n/app_ay.arb:139` guvenilir Aymara ceviri bulunamadigi icin uydurma yerine durust EN fallback'e alindi: `Settings`, `Page`, `Downloads`.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_ay.dart:33`, `lib/l10n/app_localizations_ay.dart:204`, `lib/l10n/app_localizations_ay.dart:550` senkronlandi.
+- `tool/translate_arb_keys.dart:661` genel wrong-context kontrolu bilinen makine ceviri enkazini reddedecek sekilde genisletildi.
+- `tool/translate_arb_keys.dart:733` tekrar batch'lerinde ayni kotu kalibin kabul edilmesini engelleyen `_knownGeneralTranslationDebris` listesi eklendi.
+
+### TESTER Kapsami
+- `test/translate_arb_keys_test.dart:764` `settings` ve `page` icin current/candidate ayni bilinen enkaz geldiginde kaynak fallback'e donuldugunu dogruluyor.
+- `test/arb_ui_localization_test.dart:2168` Aymara aktif UI anahtarlari `settings`, `page`, `downloads`, `downloadAction` icin bilinen enkaz kalibinin geri gelmemesini dogruluyor.
+- Manuel tarama: `rg -n "Ukax mä juk’a pachanakanwa" lib\l10n\app_ay.arb lib\l10n\app_localizations_ay.dart` artik exact aktif kalip eslesmesi dondurmuyor.
+- Debt raporu: `dart run tool\translate_arb_keys.dart --report settings page downloads downloadAction` same-as-English `285`, missing/empty `0`, placeholder mismatch `0`. Bu tur same-as-English borcunu bilincli olarak artirdi; sahte Aymara metni yerine durust fallback tercih edildi.
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart` PASS
+- L10n generate: `flutter gen-l10n` PASS
+- Odak testler: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS (`48/48`), `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS (`74/74`), `flutter test test\arb_coverage_test.dart --reporter compact` PASS (`4/4`)
+- Diff hijyeni: `git diff --check` PASS; yalniz Windows CRLF uyarilari goruldu, whitespace hatasi yok.
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`578/578`)
+
+### Risk Degisimi
+- Aymara aktif UI anahtarlarinda bilinen makine ceviri enkazi riski: `12/25 -> 2/25`
+- Kalan risk: `rg -n -i "ukax mä|juk.a pachanakanwa|juk’a pachanakanwa" lib\l10n\app_ay.arb lib\l10n\app_localizations_ay.dart` daha genis Aymara debris izleri buluyor (`quran`, `zikr`, `downloading`, `downloadComplete` vb.). Bu tur minimal tutuldu; sonraki dongude aktif kullanim ve guvenilir fallback/ceviri stratejisiyle ayri patch'e alinacak.
+
+### Rollback Plani
+- `settings`, `page`, `downloads` Aymara ARB/generated degerleri onceki commit'e dondurulur.
+- `_knownGeneralTranslationDebris` guard'i ve iki test guard'i revert edilir.
+- Handover append-only oldugu icin silinmez; revert gerekirse yeni tur olarak kaydedilir.
+- `flutter gen-l10n`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; Aymara'daki kalan `ukax...`/`juk’a pachanakanwa` debris izleri aktif UI kullanimina gore risk skorlanacak ve bir sonraki en yuksek riskli dar patch uygulanacak.

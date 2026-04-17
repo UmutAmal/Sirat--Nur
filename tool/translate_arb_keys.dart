@@ -659,6 +659,10 @@ bool _isUsableTranslationCandidate(
 }
 
 bool _hasKnownWrongContext(String key, String value) {
+  if (_containsAny(value, _knownGeneralTranslationDebris)) {
+    return true;
+  }
+
   if (key == 'apply') {
     return _containsAny(value, const ['Bewerben', '申请']);
   }
@@ -725,6 +729,8 @@ const _knownWeakDownloadActionCandidates = [
   'अवाहरन',
   'Yuklab olish',
 ];
+
+const _knownGeneralTranslationDebris = ['Ukax mä juk’a pachanakanwa'];
 
 const _knownQuranAudioSourceStatusDebris = [
   'Refresh cloud seed',
