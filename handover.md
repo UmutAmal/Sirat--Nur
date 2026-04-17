@@ -15574,3 +15574,27 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi raw GitHub privacy URL HEAD ile 200 kontrol edilecek. Sonraki dongude P1/P2 kalan store-ready dis operasyon listesi, Quran audio gercek storage manifest/upload durumu ve Play Console metadata ekranlari incelenecek.
+
+## 2026-04-18 TUR-357 - Android Exact Alarm Permission Scope Hardened
+
+### MASTER Karari
+- Risk: `android/app/src/main/AndroidManifest.xml:5` hem `android.permission.USE_EXACT_ALARM` hem `android.permission.SCHEDULE_EXACT_ALARM` declare ediyordu. Android resmi dokumani exact alarm icin iki permission'dan yalniz birinin istenmesi gerektigini, `USE_EXACT_ALARM` icin Google Play politika sinirlamasi oldugunu belirtiyor. Uygulama runtime'da `canScheduleExactNotifications()` + request + inexact fallback zincirine zaten `SCHEDULE_EXACT_ALARM` ile uyumlu.
+- Etki: Store review reddi veya Play Console restricted permission incelemesi riski.
+- Olasilik: Manifest her Android release artefact'ina giriyor.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 (P0 store policy blocker).
+- Rollback plani: `android/app/src/main/AndroidManifest.xml` icindeki `USE_EXACT_ALARM` satiri geri eklenir ve `test/android_config_test.dart` guard'i revert edilir; fakat bu rollback Play policy riskini geri getirir.
+
+### BUILDER Degisikligi
+- `android/app/src/main/AndroidManifest.xml:5` icindeki `android.permission.USE_EXACT_ALARM` kaldirildi; manifest yalniz revocable `SCHEDULE_EXACT_ALARM` akisini kullaniyor.
+- `test/android_config_test.dart:42` store policy guard'i eklendi; manifest `SCHEDULE_EXACT_ALARM` icermeli ve `USE_EXACT_ALARM` icermemeli.
+
+### Dogrulama Sonucu
+- Odak test: `flutter test test/android_config_test.dart --reporter compact` PASS (`6/6`).
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`597/597`).
+
+### Risk Degisimi
+- Android exact alarm restricted permission review riski: `20/25 -> 3/25`.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude store readiness'i tek komutla kontrol eden release checker eklenecek; checker prod env, service-role upload hazirligi, privacy URL, local key ve audio manifest durumunu sahte basari olmadan raporlayacak.

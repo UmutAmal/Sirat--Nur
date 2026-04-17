@@ -46,6 +46,11 @@ void main() {
       expect(gradle, contains('abortOnError = true'));
     });
 
+    test('exact alarm permission uses the revocable runtime flow only', () {
+      expect(manifest, contains('android.permission.SCHEDULE_EXACT_ALARM'));
+      expect(manifest, isNot(contains('android.permission.USE_EXACT_ALARM')));
+    });
+
     test(
       'disables Kotlin incremental caches for cross-drive Windows builds',
       () {
