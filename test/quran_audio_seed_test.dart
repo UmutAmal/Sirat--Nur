@@ -2,7 +2,37 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 
+import '../tool/generate_quran_audio_seed.dart';
+
 void main() {
+  group('generate_quran_audio_seed URL guards', () {
+    test('accepts only official QuranAudio qdc mp3 download URLs', () {
+      expect(
+        isVerifiedQuranAudioDownloadUrl(
+          ' https://download.quranicaudio.com/qdc/alafasy/001.mp3 ',
+        ),
+        isTrue,
+      );
+
+      for (final unsafeUrl in [
+        'http://download.quranicaudio.com/qdc/alafasy/001.mp3',
+        'https://token@download.quranicaudio.com/qdc/alafasy/001.mp3',
+        'https://download.quranicaudio.com/qdc/alafasy/001.mp3?token=secret',
+        'https://download.quranicaudio.com/qdc/alafasy/001.mp3#secret',
+        'https://example.com/qdc/alafasy/001.mp3',
+        'https://download.quranicaudio.com/other/alafasy/001.mp3',
+        'https://download.quranicaudio.com/qdc/alafasy/001.wav',
+        'not-a-url',
+      ]) {
+        expect(
+          isVerifiedQuranAudioDownloadUrl(unsafeUrl),
+          isFalse,
+          reason: unsafeUrl,
+        );
+      }
+    });
+  });
+
   group('content_seed_quran_audio.sql', () {
     final seedFile = File('content_seed_quran_audio.sql');
 

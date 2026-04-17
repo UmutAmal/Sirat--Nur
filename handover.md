@@ -14803,3 +14803,42 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Asma bundled provenance, l10n debt ve audio/storage seed zinciri taranacak.
+
+## 2026-04-17 TUR-339 - Quran Audio Mirror Seed Validates Download URL Origin
+
+### MASTER Karari
+- Risk: `tool/generate_quran_audio_seed.dart:140` onceki akista Quran.com response icindeki `audio_url` yalnizca bos degil diye kabul ediliyordu; host/path/query/user-info/fragment dogrulamasi yoktu.
+- Kanit: Mirror seed dosyasi runtime seed olarak uygulanamasa da Storage upload pipeline icin operator input'u uretiyor; beklenmeyen URL source chain'e girebilirdi.
+- Etki: Upstream/API veya MITM/proxy hatasi durumunda harici, query token'li veya yanlis formatli ses URL'si mirror/download hattina tasinabilirdi.
+- Olasilik: Tool ag uzerinden canli JSON ceker; URL guard yoksa tek satirlik upstream sapma tum seed'e yayilabilir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1).
+- Rollback kapsami: `tool/generate_quran_audio_seed.dart`, `test/quran_audio_seed_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `tool/generate_quran_audio_seed.dart:6` resmi mirror download host sabiti `download.quranicaudio.com` olarak tanimlandi.
+- `tool/generate_quran_audio_seed.dart:140` generator artik her `audio_url` icin `isVerifiedQuranAudioDownloadUrl` kontrolu yapiyor ve beklenmeyen URL'de fail-fast ediyor.
+- `tool/generate_quran_audio_seed.dart:165` URL helper'i yalnizca `https`, host `download.quranicaudio.com`, path ilk segmenti `qdc`, temiz path segmentleri ve `.mp3` uzantisini kabul ediyor.
+- Query, fragment ve user-info iceren URL'ler reddediliyor.
+
+### TESTER Kapsami
+- `test/quran_audio_seed_test.dart:8` generator URL guard grubu eklendi.
+- `test/quran_audio_seed_test.dart:9` resmi QuranAudio qdc mp3 URL'sinin kabul edildigini; http, user-info, query, fragment, baska host, baska path, wav ve parse edilemeyen URL'lerin reddedildigini dogruluyor.
+
+### Test Sonucu
+- Format: `dart format tool\generate_quran_audio_seed.dart test\quran_audio_seed_test.dart` PASS
+- Odak test: `flutter test test\quran_audio_seed_test.dart --reporter compact` PASS (`5/5`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`564/564`)
+
+### Risk Degisimi
+- Quran audio mirror seed'e beklenmeyen harici/malformed URL girmesi riski: `12/25 -> 2/25`
+- Kalan risk: Bu tool canli ag bagimlidir; network failure veya Quran.com API kesintisi operator kosusunda fail edecektir, fakat artik guvensiz URL ile devam etmez.
+
+### Rollback Plani
+- `isVerifiedQuranAudioDownloadUrl` helper'i ve `_fetchAudioFiles` icindeki fail-fast guard kaldirilir.
+- `test/quran_audio_seed_test.dart` URL guard testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak audio storage seed manifest URL guard'i, l10n debt ve Asma source kaniti taranacak.

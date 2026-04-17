@@ -3,6 +3,7 @@ import 'dart:io';
 
 const String sourceApiBaseUrl =
     'https://api.quran.com/api/v4/chapter_recitations';
+const String verifiedQuranAudioDownloadHost = 'download.quranicaudio.com';
 const String outputFileName = 'content_seed_quran_audio.sql';
 const String mirrorSeedAbortMessage =
     'content_seed_quran_audio.sql is mirror input only; generate and apply '
@@ -136,6 +137,11 @@ Future<List<Map<String, dynamic>>> _fetchAudioFiles(
     if (url == null || url.isEmpty) {
       continue;
     }
+    if (!isVerifiedQuranAudioDownloadUrl(url)) {
+      throw StateError(
+        'Unexpected audio_url for chapter_id $surahNumber from $uri.',
+      );
+    }
     if (normalized.containsKey(surahNumber)) {
       throw StateError(
         'Duplicate chapter_id $surahNumber in payload from $uri.',
@@ -154,6 +160,31 @@ Future<List<Map<String, dynamic>>> _fetchAudioFiles(
   }
 
   return sorted.map((entry) => entry.value).toList();
+}
+
+bool isVerifiedQuranAudioDownloadUrl(String audioUrl) {
+  final uri = Uri.tryParse(audioUrl.trim());
+  if (uri == null ||
+      uri.scheme != 'https' ||
+      uri.host.toLowerCase() != verifiedQuranAudioDownloadHost ||
+      uri.userInfo.isNotEmpty ||
+      uri.hasQuery ||
+      uri.hasFragment) {
+    return false;
+  }
+
+  final segments = uri.pathSegments;
+  if (segments.length < 3 || segments.first != 'qdc') {
+    return false;
+  }
+
+  if (segments.any(
+    (segment) => segment.isEmpty || segment == '.' || segment == '..',
+  )) {
+    return false;
+  }
+
+  return segments.last.toLowerCase().endsWith('.mp3');
 }
 
 Future<Map<String, dynamic>> _fetchJsonMap(HttpClient client, Uri uri) async {
