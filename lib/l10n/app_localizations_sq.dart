@@ -9,7 +9,7 @@ class AppLocalizationsSq extends AppLocalizations {
   AppLocalizationsSq([String locale = 'sq']) : super(locale);
 
   @override
-  String get appTitle => 'Rruga e Allahut';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Rruga Islame e Dritës';

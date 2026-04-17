@@ -9,7 +9,7 @@ class AppLocalizationsSk extends AppLocalizations {
   AppLocalizationsSk([String locale = 'sk']) : super(locale);
 
   @override
-  String get appTitle => 'Way Of Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamská cesta svetla';

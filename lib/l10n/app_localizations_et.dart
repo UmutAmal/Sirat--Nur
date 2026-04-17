@@ -9,7 +9,7 @@ class AppLocalizationsEt extends AppLocalizations {
   AppLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
-  String get appTitle => 'Allahi tee';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islami valguse tee';

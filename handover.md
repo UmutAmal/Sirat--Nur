@@ -11600,3 +11600,58 @@
 ### Sonraki Adim
 - L10n technical/proper noun token taramasi, config/env anahtarlari ve provider adlari icin genisletilecek.
 - Prayer/timezone DST edge-case testleri icinde scheduler date iteration davranisi tekrar incelenecek.
+
+## 2026-04-17 TUR-282 — Restore App Brand in All Locale Titles
+
+### Yapilan Islem
+- `appTitle` anahtari icin tum non-English locale'lerde eski/cevrilmis `Way Of Allah`, `Voie d'Allah`, `Camino de Allah`, `安拉之道` gibi marka driftleri kaldirildi.
+- `app_en.arb` template degeri `Sirat-i Nur` olarak korundu; diger 195 locale/variant ARB degeri uygulamanin mevcut onboarding marka yazimiyla uyumlu `Sirat-ı Nur` yapildi.
+- `flutter gen-l10n` calistirilarak generated localization siniflari ARB ile senkronlandi.
+- `arb_proper_noun_test.dart` icine appTitle brand guard eklendi.
+- Fransizca settings share testi, cevrilmis marka yerine `Sirat-ı Nur` markasini bekleyecek sekilde guncellendi.
+
+### Kanit
+- Non-English ARB ornegi: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_aa.arb:3`
+- Fransizca ARB ornegi: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_fr.arb:3`
+- Chinese variant ARB ornegi: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh_TW.arb:3`
+- Turkish ARB ornegi: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb:3`
+- Generated Fransizca getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_fr.dart:12`
+- Generated Chinese variant getterleri: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_zh.dart:12`
+- AppTitle brand guard testi: `A:\Way of Allah\sirat_i_nur\test\arb_proper_noun_test.dart:8`
+- Beklenen marka sozcukleri: `A:\Way of Allah\sirat_i_nur\test\arb_proper_noun_test.dart:22`
+- Fransizca share regression beklentisi: `A:\Way of Allah\sirat_i_nur\test\features\settings\settings_page_test.dart:114`
+
+### Neden Yapildi
+- `appTitle` uygulama markasidir; marka adinin locale'e gore `Allah'in yolu` gibi cevrilmesi share sheet, app bar, about dialog ve store/copy tutarliligini bozar.
+- Mevcut onboarding copy zaten markayi `Sirat-ı Nur` olarak koruyordu; `appTitle` bu sozlesmeden kopmustu.
+- Bu tur dini icerik veya yeni ceviri uydurmadi; sadece brand/proper-noun korunumu saglandi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb` non-English appTitle degerleri
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` generated l10n ciktilari
+- `A:\Way of Allah\sirat_i_nur\test\arb_proper_noun_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\settings\settings_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Generate: `flutter gen-l10n` PASS
+- Format: `dart format test\arb_proper_noun_test.dart test\features\settings\settings_page_test.dart` PASS
+- Odak test: `flutter test test\arb_proper_noun_test.dart test\features\settings\settings_page_test.dart` PASS (`8/8`)
+- AppTitle scan: `bad_app_titles=0`, brand dagilimi `{'Sirat-ı Nur': 195, 'Sirat-i Nur': 1}`
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`495/495`)
+
+### Risk Degisimi
+- Uygulama markasinin appTitle uzerinden farkli dillere cevrilmesi riski: `16/25 -> 1/25`
+- Share/about/app bar yuzeylerinde eski `Way Of Allah` marka driftinin kullaniciya gorunmesi riski: `12/25 -> 1/25`
+
+### Rollback Plani
+- `appTitle` ARB degerleri onceki locale-specific degerlerine dondurulur ve `flutter gen-l10n` tekrar calistirilir.
+- `arb_proper_noun_test.dart` icindeki appTitle guard testi ve settings share beklenti guncellemesi geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- L10n technical token taramasinda kalan `chatbotLocalNoInfo` icin `[OFFLINE]`, `diagnosticsQuranCloudTablesMissing` icin `Supabase`, `tafsirApiStatusError` icin `HTTP` korunumu ele alinacak.
+- Bu kalan token borclari marka fix'iyle karistirilmadan ayri minimal turlarda kapatilacak.

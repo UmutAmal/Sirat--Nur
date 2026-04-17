@@ -9,7 +9,7 @@ class AppLocalizationsUg extends AppLocalizations {
   AppLocalizationsUg([String locale = 'ug']) : super(locale);
 
   @override
-  String get appTitle => 'Way Of Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'ئىسلام نۇر يولى';

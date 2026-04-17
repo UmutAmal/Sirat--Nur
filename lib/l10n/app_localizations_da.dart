@@ -9,7 +9,7 @@ class AppLocalizationsDa extends AppLocalizations {
   AppLocalizationsDa([String locale = 'da']) : super(locale);
 
   @override
-  String get appTitle => 'Allahs vej';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamisk lysets vej';

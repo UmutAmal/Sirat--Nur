@@ -9,7 +9,7 @@ class AppLocalizationsHt extends AppLocalizations {
   AppLocalizationsHt([String locale = 'ht']) : super(locale);
 
   @override
-  String get appTitle => 'Chemen Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Fason Limyè Islamik';

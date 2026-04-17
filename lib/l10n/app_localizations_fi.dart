@@ -9,7 +9,7 @@ class AppLocalizationsFi extends AppLocalizations {
   AppLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
-  String get appTitle => 'Allahin tie';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamilainen valon tie';

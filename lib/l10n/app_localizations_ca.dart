@@ -9,7 +9,7 @@ class AppLocalizationsCa extends AppLocalizations {
   AppLocalizationsCa([String locale = 'ca']) : super(locale);
 
   @override
-  String get appTitle => 'Camí d\'Al·là';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Via Islàmica de la Llum';

@@ -9,7 +9,7 @@ class AppLocalizationsDe extends AppLocalizations {
   AppLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
-  String get appTitle => 'Weg Allahs';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamischer Weg des Lichts';

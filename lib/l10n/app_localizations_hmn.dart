@@ -9,7 +9,7 @@ class AppLocalizationsHmn extends AppLocalizations {
   AppLocalizationsHmn([String locale = 'hmn']) : super(locale);
 
   @override
-  String get appTitle => 'Sirat-i Nur';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamic Txoj Kev ntawm Lub Teeb';

@@ -9,7 +9,7 @@ class AppLocalizationsKa extends AppLocalizations {
   AppLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
-  String get appTitle => 'ალლაჰის გზა';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'სინათლის ისლამური გზა';

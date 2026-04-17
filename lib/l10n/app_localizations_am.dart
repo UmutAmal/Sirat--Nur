@@ -9,7 +9,7 @@ class AppLocalizationsAm extends AppLocalizations {
   AppLocalizationsAm([String locale = 'am']) : super(locale);
 
   @override
-  String get appTitle => 'የአላህ መንገድ';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'ኢስላማዊ የብርሃን መንገድ';

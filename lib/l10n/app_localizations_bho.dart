@@ -9,7 +9,7 @@ class AppLocalizationsBho extends AppLocalizations {
   AppLocalizationsBho([String locale = 'bho']) : super(locale);
 
   @override
-  String get appTitle => 'सिरात-ı नूर के बा';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamic Way of Light';

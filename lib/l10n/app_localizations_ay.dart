@@ -9,7 +9,7 @@ class AppLocalizationsAy extends AppLocalizations {
   AppLocalizationsAy([String locale = 'ay']) : super(locale);
 
   @override
-  String get appTitle => 'Way Of Allah ukax mä jach’a thakhiwa';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islámica Way of Light ukax mä jach’a thakhiwa';

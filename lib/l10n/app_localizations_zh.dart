@@ -9,7 +9,7 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get appTitle => 'Way Of Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => '伊斯兰之光之路';
@@ -1649,7 +1649,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   AppLocalizationsZhCn() : super('zh_CN');
 
   @override
-  String get appTitle => '安拉之道';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => '伊斯兰之光之路';
@@ -3289,7 +3289,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   AppLocalizationsZhTw() : super('zh_TW');
 
   @override
-  String get appTitle => '安拉之道';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => '伊斯蘭教之光之路';

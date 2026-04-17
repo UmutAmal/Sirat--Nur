@@ -9,7 +9,7 @@ class AppLocalizationsCv extends AppLocalizations {
   AppLocalizationsCv([String locale = 'cv']) : super(locale);
 
   @override
-  String get appTitle => 'Way Of Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamic Way of Light';

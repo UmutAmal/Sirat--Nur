@@ -5,6 +5,30 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('ARB proper nouns', () {
+    test('appTitle keeps the Sirat-i Nur brand across all locales', () {
+      final files =
+          Directory('lib/l10n')
+              .listSync()
+              .whereType<File>()
+              .where((file) => file.path.endsWith('.arb'))
+              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+              .toList()
+            ..sort((a, b) => a.path.compareTo(b.path));
+
+      for (final file in files) {
+        final data =
+            jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;
+        final locale = data['@@locale'] as String;
+        final expectedTitle = locale == 'en' ? 'Sirat-i Nur' : 'Sirat-ı Nur';
+
+        expect(
+          data['appTitle'],
+          expectedTitle,
+          reason: '${file.path} translated the Sirat-i Nur app brand',
+        );
+      }
+    });
+
     test('hadith source keys keep canonical names across all locales', () {
       const expected = {
         'duaSourceBukhari': 'Bukhari',
@@ -14,16 +38,18 @@ void main() {
         'duaSourceAhmad': 'Ahmad',
       };
 
-      final files = Directory('lib/l10n')
-          .listSync()
-          .whereType<File>()
-          .where((file) => file.path.endsWith('.arb'))
-          .where((file) => file.uri.pathSegments.last.startsWith('app_'))
-          .toList()
-        ..sort((a, b) => a.path.compareTo(b.path));
+      final files =
+          Directory('lib/l10n')
+              .listSync()
+              .whereType<File>()
+              .where((file) => file.path.endsWith('.arb'))
+              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+              .toList()
+            ..sort((a, b) => a.path.compareTo(b.path));
 
       for (final file in files) {
-        final data = jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;
+        final data =
+            jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;
         for (final entry in expected.entries) {
           expect(
             data[entry.key],

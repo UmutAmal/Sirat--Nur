@@ -9,7 +9,7 @@ class AppLocalizationsBg extends AppLocalizations {
   AppLocalizationsBg([String locale = 'bg']) : super(locale);
 
   @override
-  String get appTitle => 'Пътят на Аллах';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Ислямският път на светлината';

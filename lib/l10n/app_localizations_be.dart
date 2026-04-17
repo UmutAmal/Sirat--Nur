@@ -9,7 +9,7 @@ class AppLocalizationsBe extends AppLocalizations {
   AppLocalizationsBe([String locale = 'be']) : super(locale);
 
   @override
-  String get appTitle => 'Шлях Алаха';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Ісламскі шлях святла';

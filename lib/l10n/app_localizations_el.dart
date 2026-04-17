@@ -9,7 +9,7 @@ class AppLocalizationsEl extends AppLocalizations {
   AppLocalizationsEl([String locale = 'el']) : super(locale);
 
   @override
-  String get appTitle => 'Ο δρόμος του Αλλάχ';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Ισλαμικός Δρόμος του Φωτός';

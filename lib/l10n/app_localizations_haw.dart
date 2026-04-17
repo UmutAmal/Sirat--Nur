@@ -9,7 +9,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   AppLocalizationsHaw([String locale = 'haw']) : super(locale);
 
   @override
-  String get appTitle => 'Ala o Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Ala Islam o ka Malamalama';

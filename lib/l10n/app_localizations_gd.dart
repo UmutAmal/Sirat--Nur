@@ -9,7 +9,7 @@ class AppLocalizationsGd extends AppLocalizations {
   AppLocalizationsGd([String locale = 'gd']) : super(locale);
 
   @override
-  String get appTitle => 'Slighe Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamic Way of Light';

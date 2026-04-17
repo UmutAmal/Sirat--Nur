@@ -9,7 +9,7 @@ class AppLocalizationsAz extends AppLocalizations {
   AppLocalizationsAz([String locale = 'az']) : super(locale);
 
   @override
-  String get appTitle => 'Allahın yolu';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'İslam İşıq Yolu';

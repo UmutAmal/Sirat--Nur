@@ -9,7 +9,7 @@ class AppLocalizationsCr extends AppLocalizations {
   AppLocalizationsCr([String locale = 'cr']) : super(locale);
 
   @override
-  String get appTitle => 'Way Of Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamic Way of Light';

@@ -9,7 +9,7 @@ class AppLocalizationsCo extends AppLocalizations {
   AppLocalizationsCo([String locale = 'co']) : super(locale);
 
   @override
-  String get appTitle => 'Via di Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Via islamica di luce';

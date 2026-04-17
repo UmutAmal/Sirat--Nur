@@ -9,7 +9,7 @@ class AppLocalizationsLo extends AppLocalizations {
   AppLocalizationsLo([String locale = 'lo']) : super(locale);
 
   @override
-  String get appTitle => 'Way Of Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'ວິ​ທີ​ການ​ອິດ​ສະ​ລາມ​ຂອງ​ແສງ​ສະ​ຫວ່າງ​';

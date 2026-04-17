@@ -9,7 +9,7 @@ class AppLocalizationsLa extends AppLocalizations {
   AppLocalizationsLa([String locale = 'la']) : super(locale);
 
   @override
-  String get appTitle => 'Way Of Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Via lux islamica';

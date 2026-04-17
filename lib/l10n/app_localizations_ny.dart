@@ -9,7 +9,7 @@ class AppLocalizationsNy extends AppLocalizations {
   AppLocalizationsNy([String locale = 'ny']) : super(locale);
 
   @override
-  String get appTitle => 'Njira Ya Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Njira Yachisilamu Yowala';

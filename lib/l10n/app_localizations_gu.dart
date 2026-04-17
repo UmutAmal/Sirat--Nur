@@ -9,7 +9,7 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
-  String get appTitle => 'અલ્લાહનો માર્ગ';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'પ્રકાશનો ઇસ્લામિક માર્ગ';

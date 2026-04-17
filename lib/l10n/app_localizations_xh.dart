@@ -9,7 +9,7 @@ class AppLocalizationsXh extends AppLocalizations {
   AppLocalizationsXh([String locale = 'xh']) : super(locale);
 
   @override
-  String get appTitle => 'Way Of Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Indlela yamaSilamsi yokuKhanya';

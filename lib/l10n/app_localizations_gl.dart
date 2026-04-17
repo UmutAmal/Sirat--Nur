@@ -9,7 +9,7 @@ class AppLocalizationsGl extends AppLocalizations {
   AppLocalizationsGl([String locale = 'gl']) : super(locale);
 
   @override
-  String get appTitle => 'Camiño de Alá';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Camiño Islámico da Luz';

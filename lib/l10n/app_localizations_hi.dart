@@ -9,7 +9,7 @@ class AppLocalizationsHi extends AppLocalizations {
   AppLocalizationsHi([String locale = 'hi']) : super(locale);
 
   @override
-  String get appTitle => 'अल्लाह का रास्ता';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'प्रकाश का इस्लामी तरीका';

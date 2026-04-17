@@ -9,7 +9,7 @@ class AppLocalizationsKri extends AppLocalizations {
   AppLocalizationsKri([String locale = 'kri']) : super(locale);
 
   @override
-  String get appTitle => 'Sirat-ı Nɔr';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamic Way of Light';

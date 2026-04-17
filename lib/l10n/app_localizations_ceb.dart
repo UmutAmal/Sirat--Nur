@@ -9,7 +9,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   AppLocalizationsCeb([String locale = 'ceb']) : super(locale);
 
   @override
-  String get appTitle => 'Dalan sa Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamikong Dalan sa Kahayag';

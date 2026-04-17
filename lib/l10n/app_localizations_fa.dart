@@ -9,7 +9,7 @@ class AppLocalizationsFa extends AppLocalizations {
   AppLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get appTitle => 'راه الله';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'راه اسلامي نور';

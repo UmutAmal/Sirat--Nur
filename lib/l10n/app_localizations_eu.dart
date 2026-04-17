@@ -9,7 +9,7 @@ class AppLocalizationsEu extends AppLocalizations {
   AppLocalizationsEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get appTitle => 'Ala Bidea';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Argiaren Bide Islamikoa';

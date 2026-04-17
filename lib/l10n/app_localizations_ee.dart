@@ -9,7 +9,7 @@ class AppLocalizationsEe extends AppLocalizations {
   AppLocalizationsEe([String locale = 'ee']) : super(locale);
 
   @override
-  String get appTitle => 'Mɔ Na Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamic Way of Light';

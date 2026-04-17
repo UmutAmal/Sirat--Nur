@@ -9,7 +9,7 @@ class AppLocalizationsLus extends AppLocalizations {
   AppLocalizationsLus([String locale = 'lus']) : super(locale);
 
   @override
-  String get appTitle => 'Sirat-ı Nur chuan a rawn ti a';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamic Way of Light tih hi a ni';

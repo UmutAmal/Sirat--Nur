@@ -9,7 +9,7 @@ class AppLocalizationsEo extends AppLocalizations {
   AppLocalizationsEo([String locale = 'eo']) : super(locale);
 
   @override
-  String get appTitle => 'Vojo de Alaho';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islama Vojo de Lumo';

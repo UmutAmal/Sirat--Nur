@@ -9,7 +9,7 @@ class AppLocalizationsMai extends AppLocalizations {
   AppLocalizationsMai([String locale = 'mai']) : super(locale);
 
   @override
-  String get appTitle => 'सिरात-ı नूर';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'इस्लामी प्रकाश के तरीका';

@@ -9,7 +9,7 @@ class AppLocalizationsHy extends AppLocalizations {
   AppLocalizationsHy([String locale = 'hy']) : super(locale);
 
   @override
-  String get appTitle => 'Ալլահի ճանապարհը';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Լույսի իսլամական ճանապարհ';

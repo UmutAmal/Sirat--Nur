@@ -9,7 +9,7 @@ class AppLocalizationsFy extends AppLocalizations {
   AppLocalizationsFy([String locale = 'fy']) : super(locale);
 
   @override
-  String get appTitle => 'Way Of Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamityske Way of Light';

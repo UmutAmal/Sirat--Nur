@@ -9,7 +9,7 @@ class AppLocalizationsKv extends AppLocalizations {
   AppLocalizationsKv([String locale = 'kv']) : super(locale);
 
   @override
-  String get appTitle => 'Way Of Allah';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamic Way of Light';

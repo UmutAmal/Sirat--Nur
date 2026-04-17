@@ -111,7 +111,7 @@ void main() {
 
     expect(
       buildSettingsShareText(l10n),
-      "Découvrez Voie d'Allah : l'application ultime pour le mode de vie islamique ! https://siratinur.com",
+      "Découvrez Sirat-ı Nur : l'application ultime pour le mode de vie islamique ! https://siratinur.com",
     );
   });
 

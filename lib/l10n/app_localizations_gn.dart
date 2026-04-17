@@ -9,7 +9,7 @@ class AppLocalizationsGn extends AppLocalizations {
   AppLocalizationsGn([String locale = 'gn']) : super(locale);
 
   @override
-  String get appTitle => 'Allah Rape rehegua';
+  String get appTitle => 'Sirat-ı Nur';
 
   @override
   String get splashTagline => 'Islamic Way of Light';
