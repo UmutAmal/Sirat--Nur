@@ -14881,3 +14881,47 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak audio checksum/fingerprint belirsizligi, l10n debt ve Asma source kaniti taranacak.
+
+## 2026-04-17 TUR-341 - Quran Audio Upload Rejects Tiny Header-Only Files
+
+### MASTER Karari
+- Risk: `tool/quran_audio_file_validation.dart:57` onceki akista `hasLikelyMp3Header` yalnizca ilk baytlarda `ID3` veya frame-sync imzasi ariyordu; `test/upload_quran_audio_storage_test.dart:149` 4 baytlik `ID3` fixture'i gecerlilik kaniti olarak kullaniyordu.
+- Kanit: `tool/upload_quran_audio_storage.dart:166` upload plani ayni helper'a guveniyor; 4 baytlik sahte dosya `invalid mp3 file` guard'ini atlayabilirdi.
+- Etki: Quran audio mirror/storage hattinda sahte veya eksik dosya upload edilip kullaniciya bozuk tilavet dosyasi sunulabilirdi.
+- Olasilik: Operator tarafinda yarim indirme, HTML hata sayfasi veya header-only placeholder dosya olusursa eski guard bu turleri yeterince ayirmiyordu.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1).
+- Rollback kapsami: `tool/quran_audio_file_validation.dart`, `test/quran_audio_file_validation_test.dart`, `test/upload_quran_audio_storage_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `tool/quran_audio_file_validation.dart:3` Quran audio icin minimum lokal dosya boyutu 1024 bayt olarak tanimlandi.
+- `tool/quran_audio_file_validation.dart:57` `hasLikelyMp3Header` artik dosya varligi, minimum boyut ve ardarda iki gecerli MP3 frame yapisi olmadan true donmuyor.
+- `tool/quran_audio_file_validation.dart:103` frame sequence kontrolu eklendi; tek bir rastgele frame-sync bayti yeterli sayilmiyor.
+- `tool/quran_audio_file_validation.dart:123` MP3 version/layer/bitrate/sample-rate alanlari parse edilerek gercek frame uzunlugu hesaplanip ikinci frame bekleniyor.
+- ID3 tag'i olan dosyalarda tag boyutu synchsafe alandan okunarak ses frame aramasi tag sonrasinda yapiliyor.
+
+### TESTER Kapsami
+- `test/quran_audio_file_validation_test.dart:28` bos, HTML ve sadece 4 baytlik `ID3` dosyalarinin reddedildigini dogruluyor.
+- `test/quran_audio_file_validation_test.dart:51` iki gecerli MPEG frame header'i tasiyan minimum boyutlu fixture'in kabul edildigini dogruluyor.
+- `test/upload_quran_audio_storage_test.dart:155` upload planina header-only `006.mp3` eklendi.
+- `test/upload_quran_audio_storage_test.dart:208` header-only dosyanin `alafasy/006.mp3: invalid mp3 file` olarak raporlandigini dogruluyor.
+
+### Test Sonucu
+- Format: `dart format tool\quran_audio_file_validation.dart test\quran_audio_file_validation_test.dart test\upload_quran_audio_storage_test.dart` PASS
+- Odak test: `flutter test test\quran_audio_file_validation_test.dart --reporter compact` PASS (`3/3`)
+- Odak test: `flutter test test\upload_quran_audio_storage_test.dart --reporter compact` PASS (`11/11`)
+- Ek regresyon: `flutter test test\download_verified_quran_audio_test.dart --reporter compact` PASS (`9/9`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`566/566`)
+
+### Risk Degisimi
+- Header-only veya cok kucuk sahte Quran audio dosyasinin mirror/storage hattinda basarili gorunmesi riski: `12/25 -> 2/25`
+- Kalan risk: Bu guard codec-level decode veya reciter/sure fingerprint dogrulamasi yapmaz; gercek icerik dogrulama icin ileride checksum/fingerprint manifesti gerekir.
+
+### Rollback Plani
+- `minimumQuranAudioFileBytes`, frame sequence parser ve ID3 tag offset logic'i kaldirilip onceki `hasMp3AudioSignature(readFileHeaderSync(file))` davranisina donulur.
+- Header-only rejection testleri ve yeni MP3 fixture helper'lari kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Quran audio download skip davranisinin yeni minimum boyutla operator tecrubesine etkisi, checksum/fingerprint eksigi, l10n debt ve dini icerik provenance taranacak.
