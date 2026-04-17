@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:intl/intl.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/core/services/prayer_times_service.dart';
@@ -18,12 +19,58 @@ String formatPrayerRemainingText(AppLocalizations l10n, Duration? remaining) {
 
   if (hours > 0) {
     return l10n.prayerRemainingHoursMinutes(
-      hours.toString(),
-      minutes.toString(),
+      _formatPrayerRemainingNumber(l10n, hours),
+      _formatPrayerRemainingNumber(l10n, minutes),
     );
   }
 
-  return l10n.prayerRemainingMinutes(minutes.toString());
+  return l10n.prayerRemainingMinutes(
+    _formatPrayerRemainingNumber(l10n, minutes),
+  );
+}
+
+String _formatPrayerRemainingNumber(AppLocalizations l10n, int value) {
+  final formatted = NumberFormat.decimalPattern(l10n.localeName).format(value);
+  return _shapePrayerRemainingDigits(l10n.localeName, formatted);
+}
+
+String _shapePrayerRemainingDigits(String localeName, String value) {
+  final languageCode = localeName.split('_').first.toLowerCase();
+  return switch (languageCode) {
+    'ar' => _replaceAsciiDigits(value, const [
+      '٠',
+      '١',
+      '٢',
+      '٣',
+      '٤',
+      '٥',
+      '٦',
+      '٧',
+      '٨',
+      '٩',
+    ]),
+    'fa' || 'ur' => _replaceAsciiDigits(value, const [
+      '۰',
+      '۱',
+      '۲',
+      '۳',
+      '۴',
+      '۵',
+      '۶',
+      '۷',
+      '۸',
+      '۹',
+    ]),
+    _ => value,
+  };
+}
+
+String _replaceAsciiDigits(String value, List<String> digits) {
+  var shaped = value;
+  for (var index = 0; index < digits.length; index++) {
+    shaped = shaped.replaceAll('$index', digits[index]);
+  }
+  return shaped;
 }
 
 class HomePage extends ConsumerWidget {

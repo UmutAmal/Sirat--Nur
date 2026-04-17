@@ -11315,3 +11315,50 @@
 ### Sonraki Adim
 - L10n report moduyla tespit edilen same-as-English download/diagnostics/chatbot locale borcu kucuk, reviewed ve kalite kapili batch'lere ayrilacak.
 - Runtime media/audio pipeline taramasi tekrar yapilarak external-only source kabul eden yeni bir yuzey kalip kalmadigi dogrulanacak.
+
+## 2026-04-17 TUR-276 — Localize Prayer Remaining Digits
+
+### Yapilan Islem
+- `formatPrayerRemainingText` artik saat/dakika sayilarini `intl` `NumberFormat.decimalPattern` ile locale baglaminda formatliyor.
+- `ar`, `fa` ve `ur` locale aileleri icin ASCII digit shaping eklenerek gorunur kalan-sure rakamlari yerel rakam sistemine donusturuluyor.
+- Home page testi Arapca kalan sureyi `٢ س ٥ د` olarak dogruluyor.
+
+### Kanit
+- Locale number formatter: `A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart:32`
+- Digit shaping helper: `A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart:37`
+- Arabic digit mapping: `A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart:40`
+- Persian/Urdu digit mapping: `A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart:52`
+- Regression test: `A:\Way of Allah\sirat_i_nur\test\features\home\home_page_test.dart:50`
+
+### Neden Yapildi
+- Eski akista home banner kalan sure sayilari `hours.toString()` ve `minutes.toString()` ile Latin rakam olarak kalabiliyordu.
+- Metin sablonu lokalize olsa bile sayi bicimi locale-aware degildi; RTL/Arabic-script kullanicilar icin gorunen UI borcuydu.
+- Ilk test denemesi `intl` tek basina `ar` icin Latin `2` dondurdugunu yakaladi; bu nedenle test gevsetilmedi, digit shaping eklendi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\home\home_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\home\home_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Format: `dart format lib\features\home\home_page.dart test\features\home\home_page_test.dart` PASS
+- Ilk odak test: FAIL, `intl` `ar` icin Latin `2` dondurdu; patch digit shaping ile genisletildi.
+- Odak test rerun: `flutter test test\features\home\home_page_test.dart --reporter compact` PASS (`2/2`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`489/489`)
+
+### Risk Degisimi
+- Home kalan surede locale-aware olmayan sayi bicimi riski: `10/25 -> 2/25`
+- RTL/Arabic-script UI tutarsizligi riski: `10/25 -> 3/25`
+
+### Rollback Plani
+- `_formatPrayerRemainingNumber`, `_shapePrayerRemainingDigits`, `_replaceAsciiDigits` helper'lari kaldirilir.
+- `formatPrayerRemainingText` tekrar `hours.toString()` / `minutes.toString()` kullanacak hale dondurulur.
+- Arapca beklenti testi geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Prayer profile resolver icin resmi kurum kaynakli country/timezone coverage bosluklari daha fazla kanitla taranacak.
+- L10n same-as-English borcu icin report-first batch hazirligi devam edecek.

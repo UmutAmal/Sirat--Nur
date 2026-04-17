@@ -36,6 +36,7 @@ void main() {
   test('formatPrayerRemainingText localizes hour and minute output', () async {
     final en = await AppLocalizations.delegate.load(const Locale('en'));
     final tr = await AppLocalizations.delegate.load(const Locale('tr'));
+    final ar = await AppLocalizations.delegate.load(const Locale('ar'));
 
     expect(
       formatPrayerRemainingText(en, const Duration(hours: 2, minutes: 5)),
@@ -44,6 +45,10 @@ void main() {
     expect(
       formatPrayerRemainingText(tr, const Duration(hours: 2, minutes: 5)),
       '2s 5d',
+    );
+    expect(
+      formatPrayerRemainingText(ar, const Duration(hours: 2, minutes: 5)),
+      '٢ س ٥ د',
     );
     expect(formatPrayerRemainingText(en, null), '--');
   });
