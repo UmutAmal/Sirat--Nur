@@ -19,6 +19,32 @@ void main() {
       );
     });
 
+    test('rejects unsafe Supabase project upload URLs', () {
+      for (final rawUrl in const [
+        'http://example.supabase.co',
+        'https://example.com',
+        'https://example.supabase.co/storage/v1',
+        'https://example.supabase.co?apikey=secret',
+        'https://example.supabase.co#secret',
+      ]) {
+        expect(
+          () => buildSupabaseStorageObjectUploadUri(
+            supabaseUrl: Uri.parse(rawUrl),
+            bucketName: 'quran-audio',
+            objectPath: 'alafasy/001.mp3',
+          ),
+          throwsA(
+            isA<ArgumentError>().having(
+              (error) => error.message,
+              'message',
+              contains('HTTPS Supabase project origin'),
+            ),
+          ),
+          reason: rawUrl,
+        );
+      }
+    });
+
     test('rejects non-Quran audio buckets before building upload URLs', () {
       expect(
         () => buildSupabaseStorageObjectUploadUri(

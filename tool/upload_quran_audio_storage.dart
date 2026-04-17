@@ -27,11 +27,31 @@ String storageObjectPathForMirroredAudioFile(MirroredAudioFile file) {
   return '${file.reciterId}/$fileName';
 }
 
+Uri normalizeSupabaseProjectUrl(Uri supabaseUrl) {
+  final hasPath = supabaseUrl.pathSegments.any((segment) => segment.isNotEmpty);
+  final host = supabaseUrl.host.toLowerCase();
+  if (!supabaseUrl.isScheme('https') ||
+      host.isEmpty ||
+      !host.endsWith('.supabase.co') ||
+      hasPath ||
+      supabaseUrl.hasQuery ||
+      supabaseUrl.fragment.isNotEmpty) {
+    throw ArgumentError.value(
+      supabaseUrl.toString(),
+      'supabaseUrl',
+      'must be an HTTPS Supabase project origin without path, query, or fragment',
+    );
+  }
+
+  return supabaseUrl.replace(path: '', query: null, fragment: null);
+}
+
 Uri buildSupabaseStorageObjectUploadUri({
   required Uri supabaseUrl,
   required String bucketName,
   required String objectPath,
 }) {
+  final normalizedSupabaseUrl = normalizeSupabaseProjectUrl(supabaseUrl);
   final normalizedBucketName = normalizeQuranAudioBucketName(bucketName);
   final normalizedObjectPath = objectPath.trim().replaceAll('\\', '/');
   final objectSegments = normalizedObjectPath
@@ -43,9 +63,8 @@ Uri buildSupabaseStorageObjectUploadUri({
     throw ArgumentError.value(objectPath, 'objectPath', 'must not be empty');
   }
 
-  return supabaseUrl.replace(
+  return normalizedSupabaseUrl.replace(
     pathSegments: <String>[
-      ...supabaseUrl.pathSegments.where((segment) => segment.isNotEmpty),
       'storage',
       'v1',
       'object',
@@ -134,6 +153,7 @@ Future<QuranAudioStorageUploadSummary> uploadMirroredQuranAudioFiles({
   HttpClient? httpClient,
 }) async {
   final rows = files.toList();
+  final normalizedSupabaseUrl = normalizeSupabaseProjectUrl(supabaseUrl);
   final normalizedBucketName = normalizeQuranAudioBucketName(bucketName);
   final planFailures = validateMirroredQuranAudioUploadPlan(rows);
   if (planFailures.isNotEmpty) {
@@ -156,7 +176,7 @@ Future<QuranAudioStorageUploadSummary> uploadMirroredQuranAudioFiles({
 
       try {
         final uploadUri = buildSupabaseStorageObjectUploadUri(
-          supabaseUrl: supabaseUrl,
+          supabaseUrl: normalizedSupabaseUrl,
           bucketName: normalizedBucketName,
           objectPath: objectPath,
         );
@@ -261,7 +281,9 @@ Future<void> main(List<String> args) async {
     throw StateError('SUPABASE_URL env or --supabase-url is required.');
   }
   bucketName = normalizeQuranAudioBucketName(bucketName);
-  final supabaseUrl = Uri.parse(supabaseUrlRaw.trim());
+  final supabaseUrl = normalizeSupabaseProjectUrl(
+    Uri.parse(supabaseUrlRaw.trim()),
+  );
   final manifestFile = File(manifestPath);
   if (!manifestFile.existsSync()) {
     throw FileSystemException(

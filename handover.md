@@ -12135,3 +12135,54 @@
 
 ### Sonraki Adim
 - Quran audio import zincirinde geriye kalan somut risk, service role key ile upload aracinin operator ciktilarinda veya URL'lerde gizli bilgi sizdirmedigini ve partial manifestlerin hicbir yoldan production seed'e donusemedigini tekrar taramak olacak.
+
+## 2026-04-17 TUR-291 — Guard Quran Audio Uploads Against Unsafe Supabase URLs
+
+### Yapilan Islem
+- `tool\upload_quran_audio_storage.dart` icine `normalizeSupabaseProjectUrl` guard'i eklendi.
+- Upload tool artik Supabase project URL olarak yalniz HTTPS, `.supabase.co` hostlu, path/query/fragment icermeyen origin kabul ediyor.
+- `buildSupabaseStorageObjectUploadUri`, upload fonksiyonu ve CLI parse akisi ayni normalizer'a baglandi.
+- Service-role key'in HTTP, Supabase disi host, query iceren veya path/fragment tasiyan bir URL'ye gonderilmesini engelleyen regresyon testi eklendi.
+
+### Kanit
+- Supabase URL normalizer: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:30`
+- Upload URI builder guard'i: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:54`
+- Upload function guard'i: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:156`
+- CLI Supabase URL guard'i: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:284`
+- Unsafe URL regression testi: `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart:22`
+
+### Neden Yapildi
+- Upload tool service-role key ile calisiyor; bu anahtar sadece dogru Supabase project origin'ine gonderilmeli.
+- Eski URI builder verilen `supabaseUrl` path segmentlerini koruyordu ve HTTP/Supabase disi/query/fragment durumlarini reddetmiyordu.
+- Operator hatasi veya copy-paste ile `?apikey=...`, `#secret`, HTTP URL veya Supabase disi host verilirse anahtar ve upload istegi yanlis hedefe gidebilirdi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart`
+- `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran audio Storage upload araci network istegi kurmadan once Supabase project origin'ini dogrular.
+- Query ve fragment kabul edilmedigi icin gizli bilgi tasiyan URL'ler upload endpointine eklenmez.
+- Mevcut dogru proje URL formati (`https://<project>.supabase.co`) degismeden calismaya devam eder.
+
+### Test Sonucu
+- Format: `dart format tool\upload_quran_audio_storage.dart test\upload_quran_audio_storage_test.dart` PASS
+- Odak test: `flutter test test\upload_quran_audio_storage_test.dart` PASS (`8/8`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`506/506`)
+
+### Risk Degisimi
+- Service-role key'in yanlis veya guvensiz upload URL'ine gonderilmesi riski: `16/25 -> 1/25`
+- Upload URI'sine query/fragment ile gizli bilgi tasinmasi riski: `12/25 -> 1/25`
+
+### Rollback Plani
+- `normalizeSupabaseProjectUrl` helper'i kaldirilir.
+- Upload URI builder, upload function ve CLI parse akisi eski dogrudan `Uri.parse` / `replace` davranisina dondurulur.
+- Unsafe URL regresyon testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Audio import hattindan sonra l10n tarafindaki kalan low-resource English fallback borcu ve Places/Supabase diagnostics copy icin sahte ceviri uretmeden yeni rapor/guard turu acilacak.
