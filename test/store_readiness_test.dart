@@ -23,8 +23,10 @@ void main() {
         'store/play/exact_alarm_declaration.md',
         'store/play/billing_test_plan.md',
         'store/appstore/app_privacy.md',
+        'store/release_checklist.md',
         'store/listing/en-US.md',
         'store/listing/tr-TR.md',
+        'tool/check_store_readiness.ps1',
         'tool/build_store_appbundle.ps1',
       ]) {
         final file = File(path);
@@ -79,6 +81,23 @@ void main() {
       expect(script, contains('tile.openstreetmap.org'));
       expect(script, contains('overpass-api.de'));
       expect(script, contains('flutter build appbundle --release'));
+    });
+
+    test('store readiness checker refuses hidden external blockers', () {
+      final script = File('tool/check_store_readiness.ps1').readAsStringSync();
+      final checklist = File('store/release_checklist.md').readAsStringSync();
+
+      expect(script, contains('SUPABASE_SERVICE_ROLE_KEY'));
+      expect(script, contains('build/verified_quran_audio/manifest.json'));
+      expect(script, contains('requested -eq 684'));
+      expect(script, contains('files.Count -eq 684'));
+      expect(script, contains('android.permission.USE_EXACT_ALARM'));
+      expect(script, contains('Remote privacy policy URL returns HTTP 200'));
+      expect(checklist, contains('Google Play Data safety form'));
+      expect(checklist, contains('Android exact alarm behavior'));
+      expect(checklist, contains('Apple App Privacy details'));
+      expect(checklist, contains('requested=684'));
+      expect(checklist, contains('jarsigner -verify'));
     });
 
     test('Gradle release packaging refuses missing runtime dart-defines', () {

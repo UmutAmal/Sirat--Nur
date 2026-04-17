@@ -15598,3 +15598,31 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude store readiness'i tek komutla kontrol eden release checker eklenecek; checker prod env, service-role upload hazirligi, privacy URL, local key ve audio manifest durumunu sahte basari olmadan raporlayacak.
+
+## 2026-04-18 TUR-358 - Store Readiness Checker Added
+
+### MASTER Karari
+- Risk: Store-ready durumunu tek komutla kanitlayan bir gate yoktu; prod env, service-role upload hazirligi, verified Quran audio manifest ve public privacy URL eksikligi dokumanlarda yazsa bile operator tarafinda gozden kacabilir ve "hazir" gibi davranilabilirdi.
+- Kanit: `tool/build_store_appbundle.ps1` sadece AAB runtime env/signing kapisini kontrol ediyordu; `SUPABASE_SERVICE_ROLE_KEY`, `build/verified_quran_audio/manifest.json`, public privacy URL ve official policy checklist'i tek raporda birlesmiyordu.
+- Etki: Eksik audio upload veya eksik prod env ile piyasaya cikis hazir sanilabilir.
+- Olasilik: Mevcut makinede `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL`, `SUPABASE_SERVICE_ROLE_KEY` eksik ve `build/verified_quran_audio/manifest.json` yok.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 (P0 release blocker visibility).
+- Rollback plani: `tool/check_store_readiness.ps1`, `store/release_checklist.md`, README ve `test/store_readiness_test.dart` ekleri revert edilir.
+
+### BUILDER Degisikligi
+- `tool/check_store_readiness.ps1` eklendi. Kontroller: policy dokumanlari, Android exact alarm permission scope'u, `android/key.properties`, keystore dosyasi, prod runtime env'leri, Supabase service-role key, complete Quran audio manifest (`684/684`, zero failures), remote privacy URL, istege bagli `flutter analyze` ve `flutter test`.
+- `store/release_checklist.md` eklendi. Resmi policy referanslari: Google Play Data safety, Android exact alarm davranisi/schedule alarms dokumani, Apple App Privacy, App Store Connect privacy ve Apple App Review Guidelines privacy policy gereksinimi.
+- `README.md` store release gate bolumu checker'i zorunlu operator kapisi olarak belgeledi.
+- `test/store_readiness_test.dart` checker ve checklist icin regresyon guard'i ekledi.
+
+### Dogrulama Sonucu
+- Odak test: `flutter test test/store_readiness_test.dart --reporter compact` PASS (`8/8`).
+- Checker dry run: `tool/check_store_readiness.ps1 -SkipFlutterValidation` beklenen sekilde FAIL etti ve 6 blokaj saydi: `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `build/verified_quran_audio/manifest.json`.
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`598/598`).
+
+### Risk Degisimi
+- Hidden external release blocker risk: `20/25 -> 4/25`. Risk sifir degil cunku gercek secret/audio upload hala dis sistemde tamamlanmali; artik checker bunu sahte basari olmadan fail ediyor.
+
+### Sonraki Adim
+- Yeni dongude mevcut makinede verified Quran audio mirror indirme imkani denenebilir. Bu islem buyuk disk/network kullanir; basarili olursa manifest uretilir. Supabase upload yine `SUPABASE_SERVICE_ROLE_KEY` olmadan yapilamaz.
