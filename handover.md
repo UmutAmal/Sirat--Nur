@@ -12412,3 +12412,49 @@
 
 ### Sonraki Adim
 - Kalan l10n borcu icin anahtar bazli tarama surdurulecek; ayni zamanda URL/audio/content pipeline'larinda dis kaynak, false-success ve sessiz fallback riskleri tekrar skorlanacak.
+
+## 2026-04-17 TUR-296 — Quran Ayah Share Header L10n Guard
+
+### Yapilan Islem
+- Quran sure okuma ekranindaki ayet paylasim basligi hardcoded TR/EN metinden mevcut `ayahLabel` localization zincirine alindi.
+- Paylasim basligi helper fonksiyonuna ayrildi ve EN/TR/FR icin widget bagimsiz regresyon testi eklendi.
+- Ayet metni/meal kaynagi degistirilmedi; mevcut veri setinde sadece TR/EN meal bulundugu icin dini icerik uydurulmadan yalniz UI basligi yerellestirildi.
+
+### Kanit
+- Lokalize share header helper'i: `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart:15`
+- Paylasim akisi helper'i kullaniyor: `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart:221`
+- EN/TR/FR regresyon testi: `A:\Way of Allah\sirat_i_nur\test\features\quran\surah_reading_page_test.dart:8`
+- Beklenen locale ciktilari: `A:\Way of Allah\sirat_i_nur\test\features\quran\surah_reading_page_test.dart:23`, `A:\Way of Allah\sirat_i_nur\test\features\quran\surah_reading_page_test.dart:24`, `A:\Way of Allah\sirat_i_nur\test\features\quran\surah_reading_page_test.dart:25`
+
+### Neden Yapildi
+- Tarama sirasinda `SurahReadingPage._shareAyah` icindeki paylasim basliginin TR ve EN inline stringlerle uretildigi goruldu.
+- Bu yuzey, Quran okuma ekraninda kullanicinin dis uygulamalara paylastigi metnin gorunen ilk satiri oldugu icin yuksek gorunurluklu l10n riski tasiyordu.
+- Mevcut `l10n.ayahLabel(ayahNumber)` anahtari tum ARB setinde bulundugu icin yeni dini icerik uretmeden guvenli ve kucuk kapsamli fix uygulanabildi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\quran\surah_reading_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\quran\surah_reading_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Ayet paylasim basligi artik kullanicinin aktif locale'ine gore `Ayah/Verset/3. Ayet` gibi mevcut ARB cevirilerini kullaniyor.
+- TR disindaki locale'lerde paylasim basliginin zorunlu EN fallback'e dusmesi engellendi.
+- Paylasilan ayetin Arapca metni veya meal icerigi degistirilmedi; dogrulanmamis Quran cevirisi uretilmedi.
+
+### Test Sonucu
+- Odak test: `flutter test test\features\quran\surah_reading_page_test.dart` PASS (`1/1`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`513/513`)
+
+### Risk Degisimi
+- Quran ayet paylasim basliginda hardcoded TR/EN UI metni riski: `10/25 -> 1/25`
+- Dini meal icerigini otomatik ceviriyle yanlis uretme riski: `12/25 -> 12/25` (bilerek degistirilmedi; ayri content pipeline gerektirir)
+
+### Rollback Plani
+- `buildAyahShareHeader` helper'i kaldirilir ve `_shareAyah` eski inline TR/EN header uretimine dondurulur.
+- `test\features\quran\surah_reading_page_test.dart` kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Quran/audio pipeline'da orphan veya yanlis baglanmis servis kalintilari taranacak; ozellikle runtime'da Supabase-owned storage disina kacabilen veya yaniltici lokal asset path'i gosteren akislara bakilacak.

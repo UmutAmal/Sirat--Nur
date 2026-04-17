@@ -12,6 +12,14 @@ import 'package:sirat_i_nur/features/quran/surah_display_info.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
+String buildAyahShareHeader(
+  AppLocalizations l10n,
+  SurahDisplayInfo surahInfo,
+  String ayahNumber,
+) {
+  return '${surahInfo.transliteration} - ${l10n.ayahLabel(ayahNumber)}';
+}
+
 class SurahReadingPage extends ConsumerStatefulWidget {
   final int surahNumber;
 
@@ -209,9 +217,8 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
         ?.toString()
         .trim();
 
-    final header = isTr
-        ? '${surahInfo.transliteration} Suresi - Ayet $ayahNumber'
-        : '${surahInfo.transliteration} - Ayah $ayahNumber';
+    final l10n = AppLocalizations.of(context)!;
+    final header = buildAyahShareHeader(l10n, surahInfo, ayahNumber);
 
     await SharePlus.instance.share(
       ShareParams(
