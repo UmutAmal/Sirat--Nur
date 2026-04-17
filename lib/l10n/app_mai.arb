@@ -394,7 +394,7 @@
   "resumeDownload": "रिज्यूमे डाउनलोड",
   "deleteDownloadedFiles": "डाउनलोड फाइल मेटाउ",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} क लेल डाउनलोड रद्द कएल गेल.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

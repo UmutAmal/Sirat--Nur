@@ -1203,7 +1203,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'ን $reciter ዳውንሎድ ተሰሪዙ።';
   }
 
   @override

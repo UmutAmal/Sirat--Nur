@@ -13328,3 +13328,71 @@
 
 ### Sonraki Adim
 - Yeni turda ayni P1 l10n debt kumesinden bir sonraki guvenli anahtar/locale ilerlemesi denenebilir; guvenli cikti yoksa dependency transitive latest farklari resmi constraint'lerle incelenecek.
+
+## 2026-04-17 TUR-313 - Download Canceled Reciter L10n Debt Reduction
+
+### Yapilan Islem
+- Kritik 23 anahtarlik l10n debt raporu tekrar calistirildi; baslangic borcu `1552` same-as-English idi.
+- `downloadCanceledForReciter` icin yalnizca tek satirlik, `{reciter}` placeholder'ini koruyan ve English fallback olmayan locale ciktilari kabul edildi.
+- Bes locale guncellendi: `ay`, `lus`, `mai`, `sa`, `ti`.
+- `flutter gen-l10n` calistirildi; generated runtime Dart dosyalari ARB ile senkronlandi.
+- L10n debt guard'i `1547` ust sinirine indirildi ve bu bes locale icin `downloadCanceledForReciter` English fallback'e geri donmesin diye regresyon testi eklendi.
+
+### Kanit
+- Aymara ARB degeri: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb:397`
+- Mizo/Lushai ARB degeri: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lus.arb:397`
+- Maithili ARB degeri: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mai.arb:397`
+- Sanskrit ARB degeri: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb:397`
+- Tigrinya ARB degeri: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb:397`
+- Aymara runtime getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ay.dart:1241`
+- Mizo/Lushai runtime getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_lus.dart:1227`
+- Maithili runtime getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_mai.dart:1218`
+- Sanskrit runtime getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_sa.dart:1220`
+- Tigrinya runtime getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ti.dart:1205`
+- L10n debt threshold guard'i: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:205`
+- Bes-locale fallback guard'i: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:226`
+- Read-only l10n report: `Same-as-English locales: 1547`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`
+
+### Neden Yapildi
+- `downloadCanceledForReciter` kullaniciya belli bir okuyucu icin indirme iptalini bildiren kritik durum metni; English fallback kalmasi yerellesme ve acik hata iletimi riskiydi.
+- Metin dini hukum veya Kur'an icerigi uretmiyor; teknik UI durumu oldugu icin dar kapsamli ve dogrulanabilir sekilde ilerletildi.
+- `{reciter}` placeholder'i korunmayan veya English'e donen ciktilar kabul edilmedi; sahte ceviri yazmamak icin yalnizca guvenli bes locale kayda alindi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lus.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mai.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ay.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_lus.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_mai.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_sa.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ti.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Takip edilen 23 anahtar icin same-as-English l10n borcu `1552 -> 1547` seviyesine indi.
+- Bes locale'de okuyucu bazli indirme iptali mesaji artik runtime'da birebir English fallback olarak gorunmeyecek.
+- Regresyon testi bu kazanimin sonraki ceviri veya generated l10n turlarinda kaybolmasini engelliyor.
+
+### Test Sonucu
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart` PASS (`110/110`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`535/535`)
+- Read-only debt raporu: `dart run tool\translate_arb_keys.dart --report ...` PASS, `Same-as-English locales: 1547`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`
+
+### Risk Degisimi
+- `downloadCanceledForReciter` icin bes locale runtime/UI English fallback riski: `12/25 -> 2/25`
+- Takip edilen P1 l10n borc toplam sayisi: `1552 -> 1547`
+
+### Rollback Plani
+- Bes ARB dosyasindaki `downloadCanceledForReciter` degerleri eski `{reciter} download canceled.` fallback'ine dondurulur.
+- `flutter gen-l10n` calistirilir ve bes generated runtime getter senkronlanir.
+- `test\translate_arb_keys_test.dart` icindeki threshold tekrar `1552` yapilir ve bes-locale fallback guard'i kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda ayni P1 l10n debt kumesinden `downloadFinishedForReciter` veya raporda en yuksek guvenli etkiye sahip bir sonraki tek anahtar/locale ilerlemesi denenebilir; placeholder ve tek satir guvenligi saglanmazsa cikti kabul edilmeyecek.

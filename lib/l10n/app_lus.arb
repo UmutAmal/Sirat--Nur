@@ -394,7 +394,7 @@
   "resumeDownload": "Resume Download rawh",
   "deleteDownloadedFiles": "Download tawh file te chu Delete rawh",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} tan download tihtawp a ni.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

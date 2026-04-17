@@ -1225,7 +1225,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter tan download tihtawp a ni.';
   }
 
   @override

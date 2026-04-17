@@ -394,7 +394,7 @@
   "resumeDownload": "Resume Download",
   "deleteDownloadedFiles": "डाउनलोड् कृतानि सञ्चिकाः विलोपयन्तु",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} कृते डाउनलोड् रद्दम्।",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

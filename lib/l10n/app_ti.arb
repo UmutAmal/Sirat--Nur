@@ -394,7 +394,7 @@
   "resumeDownload": "ዳግመ-ምጅማር ዳውንሎድ",
   "deleteDownloadedFiles": "ዝወረዱ ፋይላት ምድምሳስ",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "ን {reciter} ዳውንሎድ ተሰሪዙ።",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

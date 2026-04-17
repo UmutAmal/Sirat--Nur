@@ -1216,7 +1216,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter क लेल डाउनलोड रद्द कएल गेल.';
   }
 
   @override
