@@ -14186,6 +14186,57 @@
 ### Sonraki Adim
 - Commit/push sonrasi dongu yeniden baslatilacak; siradaki odak audio upload manifestinin local dosya varligi/MP3 imzasi guard'lari, tracked stale patch artifact riski ve l10n residual borcu uzerinden skorlanacak.
 
+## 2026-04-17 TUR-330 - Remove Stale Root Patch Artifact
+
+### Yapilan Islem
+- TUR-329 commit/push sonrasi repo tekrar dogrulandi: remote `origin`, branch `master`, status temiz ve remote ile senkrondu.
+- Root seviye tracked artifact taramasi yapildi.
+- `codex_diff.patch` dosyasinin Git tarafindan takip edildigi, fakat repo icinde hicbir runtime/test/dokumantasyon referansi olmadigi kanitlandi.
+- Eski diff artifact'i repo kokunden kaldirildi.
+- Root seviye `.patch` artifact'lerinin geri gelmesini yakalayan `repository_hygiene_test.dart` eklendi.
+
+### Kanit
+- Kök risk: `git ls-files | rg "(^|/)codex_diff\\.patch$|\\.patch$"` yalniz `codex_diff.patch` dosyasini dondurdu.
+- Kök risk: `rg -n "codex_diff\\.patch|codex_diff|\\.patch" . --glob "!build/**" --glob "!handover.md"` hicbir kullanim bulmadi.
+- Kök risk: `A:\Way of Allah\sirat_i_nur\codex_diff.patch:1` eski `adhan_scheduler_service.dart` diff'i ile basliyordu; bu calisma kaynagi degil, uygulanmis/eskimis patch artifact'iydi.
+- Fix: `A:\Way of Allah\sirat_i_nur\codex_diff.patch` silindi.
+- Test: `A:\Way of Allah\sirat_i_nur\test\repository_hygiene_test.dart:7` repo kokundeki `.patch` dosyalarini tarayip listenin bos oldugunu dogruluyor.
+
+### Neden Yapildi
+- AGENTS.md tek kaynak repo ve kanitli is akisi istiyor; eski patch dosyalari gelecekteki ajanlara yanlis "uygulanacak diff" sinyali verebilir.
+- Root artifact, uygulama veya test tarafinda kullanilmadigi icin kaldirilmasi davranis degistirmez.
+- Guard test, ayni turden stale patch dosyalarinin tekrar sessizce commit edilmesini engeller.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\codex_diff.patch` silindi.
+- `A:\Way of Allah\sirat_i_nur\test\repository_hygiene_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Repo kokundeki eski patch artifact'i kaldirildi.
+- Gelecek full testlerde root `.patch` artifact'leri otomatik yakalanacak.
+- Runtime, asset, localization ve seed davranisi degismedi.
+
+### Test Sonucu
+- Format: `dart format test\repository_hygiene_test.dart` PASS
+- Odak test: `flutter test test\repository_hygiene_test.dart` PASS (`1/1`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`553/553`)
+
+### Risk Degisimi
+- Eski root patch artifact'inin gelecekteki otomasyonu yanlis yonlendirme riski: `8/25 -> 1/25`
+- Repo kokunde yeni stale `.patch` dosyalarinin sessiz kalma riski: `6/25 -> 1/25`
+- Kalan risk: SQL seed dosyalari ve handover buyuk oldugu icin URL/metin taramalarinda gürültü uretmeye devam ediyor; sonraki taramalarda production/runtime scope filtreleri korunmali.
+
+### Rollback Plani
+- `codex_diff.patch` Git history'den geri alinabilir.
+- `repository_hygiene_test.dart` kaldirilir.
+- Handover append-only oldugu icin silinmez; revert gerekirse yeni kayit eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi dongu basa alinacak; siradaki risk icin upload tool object-path guard'lari, production runtime external URL taramasi ve l10n residual borcu skorlanacak.
+
 ## 2026-04-17 TUR-326 - Zakat Result Shows Nisab Basis
 
 ### Yapilan Islem
