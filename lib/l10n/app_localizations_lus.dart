@@ -1230,7 +1230,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter tan download zawh tawh a ni.';
   }
 
   @override

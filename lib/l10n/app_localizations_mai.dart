@@ -1221,7 +1221,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter क लेल डाउनलोड पूरा भ गेल।';
   }
 
   @override

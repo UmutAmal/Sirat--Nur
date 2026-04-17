@@ -402,7 +402,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter} ukatakix apkatañ tukuyata.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

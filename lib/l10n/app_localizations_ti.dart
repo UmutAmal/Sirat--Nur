@@ -1208,7 +1208,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'ን $reciter ዳውንሎድ ተዛዚሙ።';
   }
 
   @override

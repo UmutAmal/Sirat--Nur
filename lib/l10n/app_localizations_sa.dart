@@ -1223,7 +1223,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter कृते डाउनलोड् सम्पन्नम्।';
   }
 
   @override

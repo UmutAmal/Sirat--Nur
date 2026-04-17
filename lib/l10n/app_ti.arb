@@ -402,7 +402,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "ን {reciter} ዳውንሎድ ተዛዚሙ።",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

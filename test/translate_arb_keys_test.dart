@@ -202,7 +202,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1547));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1542));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -229,6 +229,14 @@ void main() {
           isNot(english['downloadCanceledForReciter']),
           reason:
               'app_$locale.arb still uses English for downloadCanceledForReciter',
+        );
+      }
+      for (final locale in ['ay', 'lus', 'mai', 'sa', 'ti']) {
+        expect(
+          localeArbs[locale]!['downloadFinishedForReciter'],
+          isNot(english['downloadFinishedForReciter']),
+          reason:
+              'app_$locale.arb still uses English for downloadFinishedForReciter',
         );
       }
       expect(
