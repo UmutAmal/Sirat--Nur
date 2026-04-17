@@ -1314,7 +1314,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[غير متصل] التوجيه الإسلامي المحلي الذي تم التحقق منه غير متوفر بعد. قم بالتبديل إلى Cloud AI للحصول على إجابات من مصادر.';
+      '[OFFLINE] التوجيه الإسلامي المحلي الذي تم التحقق منه غير متوفر بعد. قم بالتبديل إلى Cloud AI للحصول على إجابات من مصادر.';
 
   @override
   String get mosques => 'المساجد';

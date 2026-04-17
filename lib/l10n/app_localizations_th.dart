@@ -1318,7 +1318,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ออฟไลน์] ยังไม่มีคำแนะนำอิสลามในท้องถิ่นที่ได้รับการยืนยัน เปลี่ยนไปใช้ Cloud AI เพื่อดูคำตอบที่มา';
+      '[OFFLINE] ยังไม่มีคำแนะนำอิสลามในท้องถิ่นที่ได้รับการยืนยัน เปลี่ยนไปใช้ Cloud AI เพื่อดูคำตอบที่มา';
 
   @override
   String get mosques => 'มัสยิด';

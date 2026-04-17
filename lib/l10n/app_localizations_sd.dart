@@ -1315,7 +1315,7 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[آف لائن] تصديق ٿيل مقامي اسلامي ھدايت اڃا موجود نه آھي. Cloud AI ڏانھن وڃو sourced جوابن لاءِ.';
+      '[OFFLINE] تصديق ٿيل مقامي اسلامي ھدايت اڃا موجود نه آھي. Cloud AI ڏانھن وڃو sourced جوابن لاءِ.';
 
   @override
   String get mosques => 'مسجدون';

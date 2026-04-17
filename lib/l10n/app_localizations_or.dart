@@ -1326,7 +1326,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFINE] ଯାଞ୍ଚ ହୋଇଥିବା ସ୍ଥାନୀୟ ଇସଲାମିକ ମାର୍ଗଦର୍ଶନ ଏପର୍ଯ୍ୟନ୍ତ ଉପଲବ୍ଧ ନାହିଁ | ସୋର୍ସଡ୍ ଉତ୍ତରଗୁଡିକ ପାଇଁ କ୍ଲାଉଡ୍ AI କୁ ସୁଇଚ୍ କରନ୍ତୁ |';
+      '[OFFLINE] ଯାଞ୍ଚ ହୋଇଥିବା ସ୍ଥାନୀୟ ଇସଲାମିକ ମାର୍ଗଦର୍ଶନ ଏପର୍ଯ୍ୟନ୍ତ ଉପଲବ୍ଧ ନାହିଁ | ସୋର୍ସଡ୍ ଉତ୍ତରଗୁଡିକ ପାଇଁ କ୍ଲାଉଡ୍ AI କୁ ସୁଇଚ୍ କରନ୍ତୁ |';
 
   @override
   String get mosques => 'ମସଜିଦ';

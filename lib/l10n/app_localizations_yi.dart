@@ -1318,7 +1318,7 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[אָפפלינע] וועראַפייד היגע יסלאַמיק גיידאַנס איז נישט בנימצא נאָך. באַשטימען צו קלאָוד אַי פֿאַר מקור ענטפֿערס.';
+      '[OFFLINE] וועראַפייד היגע יסלאַמיק גיידאַנס איז נישט בנימצא נאָך. באַשטימען צו קלאָוד אַי פֿאַר מקור ענטפֿערס.';
 
   @override
   String get mosques => 'מאָסקוועס';

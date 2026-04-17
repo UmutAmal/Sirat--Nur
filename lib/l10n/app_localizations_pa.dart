@@ -1317,7 +1317,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ਆਫਲਾਈਨ] ਪ੍ਰਮਾਣਿਤ ਸਥਾਨਕ ਇਸਲਾਮੀ ਮਾਰਗਦਰਸ਼ਨ ਅਜੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਸਰੋਤ ਕੀਤੇ ਜਵਾਬਾਂ ਲਈ ਕਲਾਉਡ AI \'ਤੇ ਸਵਿਚ ਕਰੋ।';
+      '[OFFLINE] ਪ੍ਰਮਾਣਿਤ ਸਥਾਨਕ ਇਸਲਾਮੀ ਮਾਰਗਦਰਸ਼ਨ ਅਜੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਸਰੋਤ ਕੀਤੇ ਜਵਾਬਾਂ ਲਈ ਕਲਾਉਡ AI \'ਤੇ ਸਵਿਚ ਕਰੋ।';
 
   @override
   String get mosques => 'ਮਸਜਿਦਾਂ';

@@ -630,7 +630,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Bulut API ayarlanmadı. Doğrulanmış çevrimdışı İslami rehberlik henüz hazır değil.",
-  "chatbotLocalNoInfo": "[ÇEVRİMDIŞI] Doğrulanmış yerel İslami rehberlik henüz hazır değil. Kaynaklı cevaplar için Bulut AI moduna geçin.",
+  "chatbotLocalNoInfo": "[OFFLINE] Doğrulanmış yerel İslami rehberlik henüz hazır değil. Kaynaklı cevaplar için Bulut AI moduna geçin.",
   "mosques": "Camiler",
   "halalFood": "Helal Gıda",
   "placesSearchArea": "Bu alanı ara",

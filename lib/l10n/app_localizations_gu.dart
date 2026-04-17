@@ -1315,7 +1315,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ઓફલાઇન] ચકાસાયેલ સ્થાનિક ઇસ્લામિક માર્ગદર્શન હજી ઉપલબ્ધ નથી. સોર્સ કરેલા જવાબો માટે Cloud AI પર સ્વિચ કરો.';
+      '[OFFLINE] ચકાસાયેલ સ્થાનિક ઇસ્લામિક માર્ગદર્શન હજી ઉપલબ્ધ નથી. સોર્સ કરેલા જવાબો માટે Cloud AI પર સ્વિચ કરો.';
 
   @override
   String get mosques => 'મસ્જિદો';

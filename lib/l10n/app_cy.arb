@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Nid yw Cloud API wedi'i ffurfweddu. Nid yw canllawiau Islamaidd all-lein wedi'u dilysu ar gael eto.",
-  "chatbotLocalNoInfo": "[All-lein] Nid yw canllawiau Islamaidd lleol wedi'u dilysu ar gael eto. Newidiwch i Cloud AI am atebion o ffynonellau.",
+  "chatbotLocalNoInfo": "[OFFLINE] Nid yw canllawiau Islamaidd lleol wedi'u dilysu ar gael eto. Newidiwch i Cloud AI am atebion o ffynonellau.",
   "mosques": "Mosgiau",
   "halalFood": "Bwyd Halal",
   "placesSearchArea": "Chwiliwch yr ardal hon",

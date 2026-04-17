@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Níl Cloud API cumraithe. Níl treoir Ioslamach deimhnithe as líne ar fáil go fóill.",
-  "chatbotLocalNoInfo": "[AR LÍNE] Níl treoir Ioslamach áitiúil fíoraithe ar fáil fós. Athraigh go Cloud AI le haghaidh freagraí foinsithe.",
+  "chatbotLocalNoInfo": "[OFFLINE] Níl treoir Ioslamach áitiúil fíoraithe ar fáil fós. Athraigh go Cloud AI le haghaidh freagraí foinsithe.",
   "mosques": "Moscanna",
   "halalFood": "Bia Halal",
   "placesSearchArea": "Cuardaigh an réimse seo",

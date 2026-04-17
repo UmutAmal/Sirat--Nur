@@ -1315,7 +1315,7 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[अफलाइन] प्रमाणित स्थानीय इस्लामिक मार्गदर्शन अझै उपलब्ध छैन। सोर्स गरिएका उत्तरहरूको लागि क्लाउड एआईमा स्विच गर्नुहोस्।';
+      '[OFFLINE] प्रमाणित स्थानीय इस्लामिक मार्गदर्शन अझै उपलब्ध छैन। सोर्स गरिएका उत्तरहरूको लागि क्लाउड एआईमा स्विच गर्नुहोस्।';
 
   @override
   String get mosques => 'मस्जिदहरू';

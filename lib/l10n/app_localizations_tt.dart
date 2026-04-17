@@ -1315,7 +1315,7 @@ class AppLocalizationsTt extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ОФЛИН] Тикшерелгән җирле ислам җитәкчелеге әлегә юк. Каты җаваплар өчен Cloud AI\'ка күчә.';
+      '[OFFLINE] Тикшерелгән җирле ислам җитәкчелеге әлегә юк. Каты җаваплар өчен Cloud AI\'ка күчә.';
 
   @override
   String get mosques => 'Мәчетләр';

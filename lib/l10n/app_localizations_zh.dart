@@ -1284,7 +1284,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get chatbotCloudNotConfigured => '未配置云API。经验证的离线伊斯兰指南尚不可用。';
 
   @override
-  String get chatbotLocalNoInfo => '[离线] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。';
+  String get chatbotLocalNoInfo =>
+      '[OFFLINE] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。';
 
   @override
   String get mosques => '清真寺';
@@ -2924,7 +2925,8 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get chatbotCloudNotConfigured => '未配置云API。经验证的离线伊斯兰指南尚不可用。';
 
   @override
-  String get chatbotLocalNoInfo => '[离线] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。';
+  String get chatbotLocalNoInfo =>
+      '[OFFLINE] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。';
 
   @override
   String get mosques => '清真寺';
@@ -4564,7 +4566,8 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get chatbotCloudNotConfigured => '未配置雲API。經驗證的離線伊斯蘭指南尚不可用。';
 
   @override
-  String get chatbotLocalNoInfo => '[離線] 尚未提供經過驗證的當地伊斯蘭指南。切換到 Cloud AI 取得來源答案。';
+  String get chatbotLocalNoInfo =>
+      '[OFFLINE] 尚未提供經過驗證的當地伊斯蘭指南。切換到 Cloud AI 取得來源答案。';
 
   @override
   String get mosques => '清真寺';

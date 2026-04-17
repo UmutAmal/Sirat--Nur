@@ -2102,6 +2102,29 @@ void main() {
       }
     });
 
+    test('chatbot local fallback copy preserves the OFFLINE status token', () {
+      final arbFiles =
+          Directory('lib/l10n')
+              .listSync()
+              .whereType<File>()
+              .where((file) => file.path.endsWith('.arb'))
+              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+              .toList()
+            ..sort((a, b) => a.path.compareTo(b.path));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+        final value = arb['chatbotLocalNoInfo'] as String;
+
+        expect(
+          value,
+          startsWith('[OFFLINE]'),
+          reason:
+              '${file.uri.pathSegments.last} translated the OFFLINE status token',
+        );
+      }
+    });
+
     test(
       'chatbotUseCloudAi preserves Gemini as a proper noun across locales',
       () {

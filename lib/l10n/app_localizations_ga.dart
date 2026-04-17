@@ -1319,7 +1319,7 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[AR LÍNE] Níl treoir Ioslamach áitiúil fíoraithe ar fáil fós. Athraigh go Cloud AI le haghaidh freagraí foinsithe.';
+      '[OFFLINE] Níl treoir Ioslamach áitiúil fíoraithe ar fáil fós. Athraigh go Cloud AI le haghaidh freagraí foinsithe.';
 
   @override
   String get mosques => 'Moscanna';

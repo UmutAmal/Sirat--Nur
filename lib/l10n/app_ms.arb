@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API tidak dikonfigurasikan. Panduan Islam luar talian yang disahkan belum tersedia lagi.",
-  "chatbotLocalNoInfo": "[LUAR TALIAN] Bimbingan Islam tempatan yang disahkan belum tersedia lagi. Tukar kepada Cloud AI untuk mendapatkan jawapan bersumber.",
+  "chatbotLocalNoInfo": "[OFFLINE] Bimbingan Islam tempatan yang disahkan belum tersedia lagi. Tukar kepada Cloud AI untuk mendapatkan jawapan bersumber.",
   "mosques": "Masjid-masjid",
   "halalFood": "Makanan Halal",
   "placesSearchArea": "Cari kawasan ini",

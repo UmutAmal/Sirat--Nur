@@ -1316,7 +1316,7 @@ class AppLocalizationsPs extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[افلاین] تایید شوی محلي اسلامي لارښود لا تر اوسه شتون نلري. د سرچینې ځوابونو لپاره کلاوډ AI ته لاړشئ.';
+      '[OFFLINE] تایید شوی محلي اسلامي لارښود لا تر اوسه شتون نلري. د سرچینې ځوابونو لپاره کلاوډ AI ته لاړشئ.';
 
   @override
   String get mosques => 'جوماتونه';

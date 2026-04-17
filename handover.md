@@ -11768,3 +11768,94 @@
 
 ### Sonraki Adim
 - Kalan l10n technical token borcu olan `chatbotLocalNoInfo` icin `[OFFLINE]` korunumu ayri minimal turda kapatilacak.
+
+## 2026-04-17 TUR-285 — Preserve OFFLINE Status Token in Chatbot Local Fallback
+
+### Yapilan Islem
+- `chatbotLocalNoInfo` metninde 40 locale'de cevrilerek/translitere edilerek kaybolan `[OFFLINE]` runtime durum etiketi birebir korunacak sekilde duzeltildi.
+- Mevcut lokalize govde metinleri korunarak yalnizca bracket icindeki teknik prefix `[OFFLINE]` yapildi.
+- `flutter gen-l10n` calistirilip ilgili generated localization siniflari ARB dosyalariyla senkronlandi.
+- Tum `app_*.arb` dosyalari icin `chatbotLocalNoInfo` metninin `[OFFLINE]` ile baslamasini zorunlu kilan regression testi eklendi.
+
+### Kanit
+- Arabic ARB ornegi: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ar.arb:461`
+- Turkish ARB ornegi: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb:633`
+- Traditional Chinese ARB ornegi: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh_TW.arb:461`
+- Generated Arabic getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ar.dart:1316`
+- Generated Turkish getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_tr.dart:1320`
+- Regression testi: `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:2105`
+- OFFLINE token beklentisi: `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:2121`
+
+### Neden Yapildi
+- `[OFFLINE]` kullaniciya gosterilen normal cumle parcasi degil, chatbot modunun runtime durumunu isaretleyen teknik etikettir; cevrilmesi log/diagnostic aramalarini ve destek akisini bozar.
+- Bu degisiklik dini icerik uretmedi; sadece teknik durum etiketi korunurken var olan lokalize aciklama metinleri aynen birakildi.
+- Yeni test, ayni prefix driftinin baska locale'de tekrar etmesini engelliyor.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_am.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ar.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_be.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bg.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bn.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_cy.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_dv.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_eo.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_es.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_fa.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_fr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ga.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_gu.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_hi.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_hy.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ja.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ka.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_km.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_kn.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ko.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lo.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mk.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ml.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ms.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ne.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_or.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_pa.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ps.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sd.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ta.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_th.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tt.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ur.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_yi.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh_CN.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_zh_TW.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` ilgili generated l10n ciktilari
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Generate: `flutter gen-l10n` PASS
+- Format: `dart format test\arb_ui_localization_test.dart` PASS
+- Odak test: `flutter test test\arb_ui_localization_test.dart --plain-name "chatbot local fallback copy preserves the OFFLINE status token"` PASS (`1/1`)
+- Token scan: `chatbot_offline_prefix_missing=0`
+- Ek borc tespiti: `chatbot_local_no_info_english_fallback=68`; bu turda sahte ceviri uretmeden sonraki tura ayrildi.
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`498/498`)
+
+### Risk Degisimi
+- Chatbot offline fallback durum etiketinin cevrilip teknik arama/destek akisini bozmasi riski: `6/25 -> 1/25`
+- Prefix driftinin testten kacmasi riski: `6/25 -> 1/25`
+
+### Rollback Plani
+- 40 ARB dosyasindaki `[OFFLINE]` prefix'i onceki locale-specific bracket degerlerine dondurulur.
+- `flutter gen-l10n` tekrar calistirilir.
+- `arb_ui_localization_test.dart` icindeki OFFLINE prefix regression testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- `chatbotCloudNotConfigured`, `chatbotLocalNoInfo`, `chatbotOfflinePrompt`, `chatbotOfflineSwitched` icin kalan English fallback borcu sahte ceviri uretmeden olculecek; dogrulanabilir locale'ler `tool\translate_arb_keys.dart` guvenlik katmanlariyla cevrilecek, belirsiz nadir locale'ler icin rapor/guard stratejisi uygulanacak.

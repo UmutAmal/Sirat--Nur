@@ -1318,7 +1318,7 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[SENLINE] Kontrolita loka islama gvidado ankoraŭ ne haveblas. Ŝanĝu al Cloud AI por fontaj respondoj.';
+      '[OFFLINE] Kontrolita loka islama gvidado ankoraŭ ne haveblas. Ŝanĝu al Cloud AI por fontaj respondoj.';
 
   @override
   String get mosques => 'Moskeoj';

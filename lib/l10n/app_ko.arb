@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API가 구성되지 않았습니다. 검증된 오프라인 이슬람 지침은 아직 제공되지 않습니다.",
-  "chatbotLocalNoInfo": "[오프라인] 검증된 현지 이슬람 지침은 아직 제공되지 않습니다. 소스 답변을 얻으려면 Cloud AI로 전환하세요.",
+  "chatbotLocalNoInfo": "[OFFLINE] 검증된 현지 이슬람 지침은 아직 제공되지 않습니다. 소스 답변을 얻으려면 Cloud AI로 전환하세요.",
   "mosques": "모스크",
   "halalFood": "할랄 음식",
   "placesSearchArea": "이 지역 검색",

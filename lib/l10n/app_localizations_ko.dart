@@ -1299,7 +1299,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[오프라인] 검증된 현지 이슬람 지침은 아직 제공되지 않습니다. 소스 답변을 얻으려면 Cloud AI로 전환하세요.';
+      '[OFFLINE] 검증된 현지 이슬람 지침은 아직 제공되지 않습니다. 소스 답변을 얻으려면 Cloud AI로 전환하세요.';
 
   @override
   String get mosques => '모스크';

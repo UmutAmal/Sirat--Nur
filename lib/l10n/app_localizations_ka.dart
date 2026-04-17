@@ -1321,7 +1321,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ოფლაინ] დადასტურებული ადგილობრივი ისლამური სახელმძღვანელო ჯერ არ არის ხელმისაწვდომი. გადაერთეთ Cloud AI-ზე წყაროს პასუხებისთვის.';
+      '[OFFLINE] დადასტურებული ადგილობრივი ისლამური სახელმძღვანელო ჯერ არ არის ხელმისაწვდომი. გადაერთეთ Cloud AI-ზე წყაროს პასუხებისთვის.';
 
   @override
   String get mosques => 'მეჩეთები';

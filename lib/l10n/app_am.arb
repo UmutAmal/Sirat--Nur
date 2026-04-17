@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API አልተዋቀረም። የተረጋገጠ ከመስመር ውጭ እስላማዊ መመሪያ እስካሁን የለም።",
-  "chatbotLocalNoInfo": "[ከመስመር ውጭ] የተረጋገጠ የአካባቢ እስላማዊ መመሪያ እስካሁን አይገኝም። ምንጭ ለሆኑ መልሶች ወደ Cloud AI ቀይር።",
+  "chatbotLocalNoInfo": "[OFFLINE] የተረጋገጠ የአካባቢ እስላማዊ መመሪያ እስካሁን አይገኝም። ምንጭ ለሆኑ መልሶች ወደ Cloud AI ቀይር።",
   "mosques": "መስጊዶች",
   "halalFood": "ሃላል ምግብ",
   "placesSearchArea": "ይህንን አካባቢ ይፈልጉ",

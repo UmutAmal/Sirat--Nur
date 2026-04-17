@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API ترتيب نه ڏني وئي آهي. تصديق ٿيل آف لائن اسلامي ھدايت اڃا موجود نه آھي.",
-  "chatbotLocalNoInfo": "[آف لائن] تصديق ٿيل مقامي اسلامي ھدايت اڃا موجود نه آھي. Cloud AI ڏانھن وڃو sourced جوابن لاءِ.",
+  "chatbotLocalNoInfo": "[OFFLINE] تصديق ٿيل مقامي اسلامي ھدايت اڃا موجود نه آھي. Cloud AI ڏانھن وڃو sourced جوابن لاءِ.",
   "mosques": "مسجدون",
   "halalFood": "حلال کاڌو",
   "placesSearchArea": "هن علائقي جي ڳولا ڪريو",

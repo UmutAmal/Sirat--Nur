@@ -1299,7 +1299,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[オフライン] 検証済みの現地のイスラム教ガイダンスはまだ利用できません。クラウド AI に切り替えて、情報源に基づいた回答を得ることができます。';
+      '[OFFLINE] 検証済みの現地のイスラム教ガイダンスはまだ利用できません。クラウド AI に切り替えて、情報源に基づいた回答を得ることができます。';
 
   @override
   String get mosques => 'モスク';

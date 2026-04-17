@@ -1327,7 +1327,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[FUERA DE CONEXIÓN] La guía islámica local verificada aún no está disponible. Cambie a Cloud AI para obtener respuestas obtenidas.';
+      '[OFFLINE] La guía islámica local verificada aún no está disponible. Cambie a Cloud AI para obtener respuestas obtenidas.';
 
   @override
   String get mosques => 'Mezquitas';

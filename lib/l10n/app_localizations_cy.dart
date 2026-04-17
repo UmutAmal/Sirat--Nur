@@ -1321,7 +1321,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[All-lein] Nid yw canllawiau Islamaidd lleol wedi\'u dilysu ar gael eto. Newidiwch i Cloud AI am atebion o ffynonellau.';
+      '[OFFLINE] Nid yw canllawiau Islamaidd lleol wedi\'u dilysu ar gael eto. Newidiwch i Cloud AI am atebion o ffynonellau.';
 
   @override
   String get mosques => 'Mosgiau';

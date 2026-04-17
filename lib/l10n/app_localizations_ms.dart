@@ -1319,7 +1319,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[LUAR TALIAN] Bimbingan Islam tempatan yang disahkan belum tersedia lagi. Tukar kepada Cloud AI untuk mendapatkan jawapan bersumber.';
+      '[OFFLINE] Bimbingan Islam tempatan yang disahkan belum tersedia lagi. Tukar kepada Cloud AI untuk mendapatkan jawapan bersumber.';
 
   @override
   String get mosques => 'Masjid-masjid';

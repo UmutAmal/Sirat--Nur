@@ -1325,7 +1325,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ஆஃப்லைன்] சரிபார்க்கப்பட்ட உள்ளூர் இஸ்லாமிய வழிகாட்டுதல் இன்னும் கிடைக்கவில்லை. ஆதாரமான பதில்களுக்கு Cloud AIக்கு மாறவும்.';
+      '[OFFLINE] சரிபார்க்கப்பட்ட உள்ளூர் இஸ்லாமிய வழிகாட்டுதல் இன்னும் கிடைக்கவில்லை. ஆதாரமான பதில்களுக்கு Cloud AIக்கு மாறவும்.';
 
   @override
   String get mosques => 'மசூதிகள்';

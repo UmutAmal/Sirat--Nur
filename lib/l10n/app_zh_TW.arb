@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "未配置雲API。經驗證的離線伊斯蘭指南尚不可用。",
-  "chatbotLocalNoInfo": "[離線] 尚未提供經過驗證的當地伊斯蘭指南。切換到 Cloud AI 取得來源答案。",
+  "chatbotLocalNoInfo": "[OFFLINE] 尚未提供經過驗證的當地伊斯蘭指南。切換到 Cloud AI 取得來源答案。",
   "mosques": "清真寺",
   "halalFood": "清真食品",
   "placesSearchArea": "搜尋該區域",

@@ -1316,7 +1316,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFLINE] ການຊີ້ນໍາອິດສະລາມທ້ອງຖິ່ນທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ທັນມີໃຫ້ເທື່ອ. ສະຫຼັບໄປໃຊ້ Cloud AI ສໍາລັບຄໍາຕອບທີ່ມາຈາກ.';
+      '[OFFLINE] ການຊີ້ນໍາອິດສະລາມທ້ອງຖິ່ນທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ທັນມີໃຫ້ເທື່ອ. ສະຫຼັບໄປໃຊ້ Cloud AI ສໍາລັບຄໍາຕອບທີ່ມາຈາກ.';
 
   @override
   String get mosques => 'ໂບດ';

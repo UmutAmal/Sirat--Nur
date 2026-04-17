@@ -1323,7 +1323,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ՕՖԼԱՅՆ] Ստուգված տեղական իսլամական ուղեցույցը դեռ հասանելի չէ: Անցեք Cloud AI-ին՝ աղբյուրի պատասխանների համար:';
+      '[OFFLINE] Ստուգված տեղական իսլամական ուղեցույցը դեռ հասանելի չէ: Անցեք Cloud AI-ին՝ աղբյուրի պատասխանների համար:';
 
   @override
   String get mosques => 'Մզկիթներ';

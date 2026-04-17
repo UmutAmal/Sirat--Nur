@@ -1304,7 +1304,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ከመስመር ውጭ] የተረጋገጠ የአካባቢ እስላማዊ መመሪያ እስካሁን አይገኝም። ምንጭ ለሆኑ መልሶች ወደ Cloud AI ቀይር።';
+      '[OFFLINE] የተረጋገጠ የአካባቢ እስላማዊ መመሪያ እስካሁን አይገኝም። ምንጭ ለሆኑ መልሶች ወደ Cloud AI ቀይር።';
 
   @override
   String get mosques => 'መስጊዶች';

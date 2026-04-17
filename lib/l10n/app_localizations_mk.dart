@@ -1320,7 +1320,7 @@ class AppLocalizationsMk extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ОФЛАЈН] Потврдено локално исламско упатство сè уште не е достапно. Префрлете се на Cloud AI за одговори со извори.';
+      '[OFFLINE] Потврдено локално исламско упатство сè уште не е достапно. Префрлете се на Cloud AI за одговори со извори.';
 
   @override
   String get mosques => 'Џамии';

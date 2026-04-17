@@ -1318,7 +1318,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ÇEVRİMDIŞI] Doğrulanmış yerel İslami rehberlik henüz hazır değil. Kaynaklı cevaplar için Bulut AI moduna geçin.';
+      '[OFFLINE] Doğrulanmış yerel İslami rehberlik henüz hazır değil. Kaynaklı cevaplar için Bulut AI moduna geçin.';
 
   @override
   String get mosques => 'Camiler';

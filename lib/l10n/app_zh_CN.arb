@@ -458,7 +458,7 @@
     }
   },
   "chatbotCloudNotConfigured": "未配置云API。经验证的离线伊斯兰指南尚不可用。",
-  "chatbotLocalNoInfo": "[离线] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。",
+  "chatbotLocalNoInfo": "[OFFLINE] 尚未提供经过验证的当地伊斯兰指南。切换到 Cloud AI 获取来源答案。",
   "mosques": "清真寺",
   "halalFood": "清真食品",
   "placesSearchArea": "搜索该区域",

@@ -1320,7 +1320,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ಆಫ್‌ಲೈನ್] ಪರಿಶೀಲಿಸಿದ ಸ್ಥಳೀಯ ಇಸ್ಲಾಮಿಕ್ ಮಾರ್ಗದರ್ಶನ ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ. ಮೂಲದ ಉತ್ತರಗಳಿಗಾಗಿ ಕ್ಲೌಡ್ AI ಗೆ ಬದಲಿಸಿ.';
+      '[OFFLINE] ಪರಿಶೀಲಿಸಿದ ಸ್ಥಳೀಯ ಇಸ್ಲಾಮಿಕ್ ಮಾರ್ಗದರ್ಶನ ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ. ಮೂಲದ ಉತ್ತರಗಳಿಗಾಗಿ ಕ್ಲೌಡ್ AI ಗೆ ಬದಲಿಸಿ.';
 
   @override
   String get mosques => 'ಮಸೀದಿಗಳು';

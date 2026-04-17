@@ -1321,7 +1321,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[ഓഫ്‌ലൈൻ] പരിശോധിച്ചുറപ്പിച്ച പ്രാദേശിക ഇസ്ലാമിക മാർഗ്ഗനിർദ്ദേശം ഇതുവരെ ലഭ്യമല്ല. ഉറവിട ഉത്തരങ്ങൾക്കായി ക്ലൗഡ് AI-ലേക്ക് മാറുക.';
+      '[OFFLINE] പരിശോധിച്ചുറപ്പിച്ച പ്രാദേശിക ഇസ്ലാമിക മാർഗ്ഗനിർദ്ദേശം ഇതുവരെ ലഭ്യമല്ല. ഉറവിട ഉത്തരങ്ങൾക്കായി ക്ലൗഡ് AI-ലേക്ക് മാറുക.';
 
   @override
   String get mosques => 'മസ്ജിദുകൾ';
