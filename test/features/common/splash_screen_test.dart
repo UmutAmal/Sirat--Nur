@@ -14,7 +14,7 @@ void main() {
       ),
     );
 
-    expect(find.text('Sirat-i Nur'), findsOneWidget);
+    expect(find.text('Sirat-ı Nur'), findsOneWidget);
     expect(find.text('İslami Işık Yolu'), findsOneWidget);
   });
 }

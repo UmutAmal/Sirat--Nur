@@ -52,9 +52,9 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 32),
-            const Text(
-              'Sirat-i Nur',
-              style: TextStyle(
+            Text(
+              l10n?.appTitle ?? 'Sirat-i Nur',
+              style: const TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.w900,
                 color: Colors.white,

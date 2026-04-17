@@ -13718,3 +13718,53 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak canli Supabase/audio icerik zinciri veya kalan hardcoded/l10n same-as-English borcu icin kanitli tek yuzey secilecek.
+
+## 2026-04-17 TUR-319 - Splash App Title Localization
+
+### Yapilan Islem
+- AGENTS dongusu devam ettirildi; repo/remote/branch/status temiz dogrulandi.
+- Splash ekranindaki marka basligi hardcoded `Sirat-i Nur` yerine `AppLocalizations.appTitle` kaynagina baglandi.
+- Mevcut splash widget testi TR locale icin guncellendi ve basligin `Sirat-ı Nur` olarak ARB'den gelmesi dogrulandi.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\main.dart:55` splash basligini `const Text('Sirat-i Nur')` olarak sabitliyordu.
+- Mevcut TR kaynak: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tr.arb:3` `appTitle` degerini `Sirat-ı Nur` olarak tutuyor.
+- Mevcut EN kaynak: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_en.arb:3` `appTitle` degerini `Sirat-i Nur` olarak tutuyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\main.dart:55` splash basligi artik `l10n?.appTitle ?? 'Sirat-i Nur'` okuyor.
+- Regresyon testi: `A:\Way of Allah\sirat_i_nur\test\features\common\splash_screen_test.dart:17` TR locale'de `Sirat-ı Nur` basligini dogruluyor.
+
+### Neden Yapildi
+- Splash tagline l10n'a bagli olsa da marka basligi acilis ekraninda locale zincirini bypass ediyordu.
+- Uygulamanin ilk gorunen yuzeyi oldugu icin bu, tam localization hedefiyle uyumsuz gorunur bir borctu.
+- Kök sebep ARB eksikligi degil, UI'nin mevcut `appTitle` anahtarini kullanmamasiydi; patch tek UI satiri ve mevcut testle sinirli tutuldu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\main.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\common\splash_screen_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Splash ekrani artik uygulama basligini aktif locale'in `appTitle` degerinden gosteriyor.
+- EN davranisi fallback/ARB ile korunur; TR ve diger locale'ler kendi marka yazimini kullanabilir.
+- Dini metin, prayer/audio/location zinciri ve ARB dosyalari degismedi.
+
+### Test Sonucu
+- Format: `dart format lib\main.dart test\features\common\splash_screen_test.dart` PASS
+- Odak test: `flutter test test\features\common\splash_screen_test.dart --reporter compact` PASS (`1/1`)
+- Diff check: `git diff --check` PASS (yalniz CRLF warning)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`538/538`)
+
+### Risk Degisimi
+- Splash basliginda hardcoded EN marka yazimi/l10n bypass riski: `6/25 -> 1/25`
+- Splash tagline riski daha once kapaliydi; bu tur baslik icin kalan borc kapandi.
+- Kalan low-resource ARB same-as-English borcu bu turda degismedi.
+
+### Rollback Plani
+- `main.dart` splash basligi eski `const Text('Sirat-i Nur')` haline dondurulur.
+- `splash_screen_test.dart` TR baslik beklentisi tekrar `Sirat-i Nur` yapilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki en somut kaynak kod hardcoded copy veya Supabase/audio provenance riski secilecek.
