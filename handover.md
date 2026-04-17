@@ -11052,3 +11052,62 @@
 ### Sonraki Adim
 - L10n borcu icin once quality gate genisletilecek: download/diagnostics/chatbot/splash/premium gibi runtime kopyalarda ayni-ingilizce kalan locale'ler raporlanacak, fakat kaynak kalite esigi gecmeyen otomatik ceviri commit edilmeyecek.
 - Section 13 kapsaminda Supabase-backed olmayan runtime medya gecisleri ve dua/library audio UI tekrar taranmaya devam edecek.
+
+## 2026-04-17 TUR-271 — Retire Unsafe One-Off ARB Mutation Tools
+
+### Yapilan Islem
+- `tool/add_keys.dart` artik ARB dosyasi yazmiyor; calistirilirse emniyetli sekilde retired mesaji basip `exitCode = 64` ile duruyor.
+- `tool/translate_arbs.dart` artik tum ARB dosyalarini metadata/placeholder guard olmadan makine cevirisine gondermiyor; calistirilirse retired mesaji basip `exitCode = 64` ile duruyor.
+- `test/islamic_chatbot_data_test.dart` bu iki legacy arac icin geri-donus guard'i ile genisletildi.
+
+### Kanit
+- Patch oncesi `tool/add_keys.dart`:
+  `json.putIfAbsent(entry.key, () => entry.value)` ile non-TR locale'lere English fallback kopya yazabilecek durumdaydi.
+- Patch oncesi `tool/translate_arbs.dart`:
+  `GoogleTranslator` ile butun `app_en.arb` girdilerini, metadata ayirt etmeden, yeni locale dosyalarina yazabilecek durumdaydi.
+- Patch sonrasi fail-safe:
+  `A:\Way of Allah\sirat_i_nur\tool\add_keys.dart:5`,
+  `A:\Way of Allah\sirat_i_nur\tool\add_keys.dart:10`,
+  `A:\Way of Allah\sirat_i_nur\tool\translate_arbs.dart:5`,
+  `A:\Way of Allah\sirat_i_nur\tool\translate_arbs.dart:9`.
+- Guard:
+  `A:\Way of Allah\sirat_i_nur\test\islamic_chatbot_data_test.dart:26`,
+  `A:\Way of Allah\sirat_i_nur\test\islamic_chatbot_data_test.dart:30`,
+  `A:\Way of Allah\sirat_i_nur\test\islamic_chatbot_data_test.dart:40`,
+  `A:\Way of Allah\sirat_i_nur\test\islamic_chatbot_data_test.dart:44`.
+
+### Neden Yapildi
+- Translation Engine kuralina gore her locale esit kapsamda olmali ve uydurma/kalitesiz otomatik ceviri uygulamaya girmemeli.
+- Bu iki legacy script, yeni locale veya eksik key durumunda mevcut `translate_arb_keys.dart` kalite kapilarini atlayarak cok genis dosya mutasyonu yapabilecek bir footgun idi.
+- Cozum silmek yerine fail-safe retired hale getirilerek komutun varligini belgeledi, fakat dosya yazma davranisini kapatti.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\add_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arbs.dart`
+- `A:\Way of Allah\sirat_i_nur\test\islamic_chatbot_data_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Odak test: `flutter test test\islamic_chatbot_data_test.dart --reporter compact` PASS (`4/4`)
+- Manual fail-safe check: `dart run tool\add_keys.dart` `exit=64`
+- Manual fail-safe check: `dart run tool\translate_arbs.dart` `exit=64`
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Ilk full test komutu 5 dakikalik arac timeout'una takildi; arkada Dart/Flutter sureci kalmadigi dogrulandi.
+- Full test rerun: `flutter test --reporter compact` PASS (`481/481`)
+
+### Risk Degisimi
+- Legacy `add_keys.dart` ile English fallback yayma riski: `12/25 -> 2/25`
+- Legacy `translate_arbs.dart` ile metadata/placeholder bozuk ARB uretme riski: `16/25 -> 2/25`
+- Tum-locale kalan gercek ceviri borcu: `16/25 -> 16/25` (bu tur kalite kapisi disindaki mutasyon araclari kapatildi)
+
+### Rollback Plani
+- `tool/add_keys.dart` onceki map + `putIfAbsent` davranisina dondurulur.
+- `tool/translate_arbs.dart` onceki `GoogleTranslator` tabanli full-file ceviri davranisina dondurulur.
+- `islamic_chatbot_data_test.dart` icindeki retired-tool guard'lari geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- L10n borcunu guvenli kapatmak icin `translate_arb_keys.dart` uzerinde locale bazli rapor/dry-run ve kalite esigi genisletilecek.
+- Ardindan ayni-ingilizce kalan download/diagnostics/chatbot anahtarlari kontrollu, testli ve revert edilebilir batch'lere ayrilacak.

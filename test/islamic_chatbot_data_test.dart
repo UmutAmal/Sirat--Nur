@@ -26,11 +26,23 @@ void main() {
   test('ARB key helper does not reintroduce retired local AI copy', () {
     final source = File('tool/add_keys.dart').readAsStringSync();
 
+    expect(source.contains('is retired'), isTrue);
+    expect(source.contains('putIfAbsent'), isFalse);
+    expect(source.contains('writeAsStringSync'), isFalse);
     expect(source.contains('Download Local AI'), isFalse);
     expect(source.contains('Please switch to Local AI'), isFalse);
     expect(source.contains('[LOCAL AI]'), isFalse);
     expect(source.contains("Yerel AI'yi İndir"), isFalse);
     expect(source.contains('Lütfen Yerel AI moduna geçin'), isFalse);
     expect(source.contains('[YEREL AI]'), isFalse);
+  });
+
+  test('legacy full ARB translator stays retired', () {
+    final source = File('tool/translate_arbs.dart').readAsStringSync();
+
+    expect(source.contains('is retired'), isTrue);
+    expect(source.contains('GoogleTranslator'), isFalse);
+    expect(source.contains('writeAsString'), isFalse);
+    expect(source.contains("Directory('lib/l10n')"), isFalse);
   });
 }
