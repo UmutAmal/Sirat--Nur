@@ -101,6 +101,14 @@ void main() {
       );
     });
 
+    test('recognizes help flags before validating ARB template keys', () {
+      expect(isTranslateArbKeysHelpRequest(['--help']), isTrue);
+      expect(isTranslateArbKeysHelpRequest(['-h']), isTrue);
+      expect(isTranslateArbKeysHelpRequest(['--report']), isFalse);
+      expect(translateArbKeysUsage(), contains('translate_arb_keys.dart'));
+      expect(translateArbKeysUsage(), contains('[--report|--dry-run]'));
+    });
+
     test('reports l10n debt without translating or mutating files', () {
       final report = buildL10nDebtReport(
         keys: ['downloadFinishedForReciter', 'downloadAction'],

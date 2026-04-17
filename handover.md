@@ -15124,3 +15124,40 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Quran audio seed/operator schema guards, l10n debt ve runtime content provenance taranacak.
+
+## 2026-04-17 TUR-347 - translate_arb_keys Help Flag No Longer Looks Like A Missing ARB Key
+
+### MASTER Karari
+- Risk: `tool/translate_arb_keys.dart:11` arguman ayrimi `--help` veya `-h` bayragini tanimiyordu; standart yardim cagrisinda `--help` app_en.arb icinde aranacak bir template key gibi isleniyordu.
+- Kanit: Bu tur basinda `dart run tool\translate_arb_keys.dart --help` komutu `Missing template key in app_en.arb: --help` hatasiyla dondu.
+- Etki: L10n debt dongulerinde sik kullanilan arac kendi kullanim bilgisini veremedigi icin sonraki agent/operator yanlis komutlari deneyebilir ve gercek l10n hatasiyla CLI kullanim hatasini karistirabilirdi.
+- Olasilik: Araç repo icinde aktif olarak report, dry-run ve batch ceviri islerinde kullaniliyor.
+- Risk skoru: Etki 2 x Olasilik 4 = 8/25 (P2).
+- Rollback kapsami: `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `tool/translate_arb_keys.dart:19` `translateArbKeysUsage()` yardimcisi eklendi; usage metni tek kaynaktan basiliyor.
+- `tool/translate_arb_keys.dart:24` `isTranslateArbKeysHelpRequest()` eklendi ve `main()` template key validasyonundan once `--help`/`-h` bayraklarini yakaliyor.
+- Bos key hatasi da ayni usage yardimcisini kullaniyor; metin drift riski azaldi.
+
+### TESTER Kapsami
+- `test/translate_arb_keys_test.dart:104` help bayraklarinin `--report` gibi diger bayraklarla karismadan tanindigini dogruluyor.
+- Manuel CLI smoke: `dart run tool\translate_arb_keys.dart --help` PASS, usage stdout'a basildi.
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart` PASS
+- Odak test: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS (`44/44`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`571/571`)
+
+### Risk Degisimi
+- L10n tooling help bayragi yanlis template key gibi islenme riski: `8/25 -> 1/25`
+- Kalan risk: L10n same-as-English borcu halen mevcut; artik report komutlari help belirsizligi olmadan calistirilabilir.
+
+### Rollback Plani
+- Help helper'lari ve test guard'i revert edilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; l10n debt raporu help belirsizligi giderilmis aracla tekrar calistirilip en guvenli dar kapsamli anahtar/locale secilecek.

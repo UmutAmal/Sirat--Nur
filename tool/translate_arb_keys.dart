@@ -6,9 +6,31 @@ import 'package:translator/translator.dart';
 const _forceFlag = '--force';
 const _reportFlag = '--report';
 const _dryRunFlag = '--dry-run';
-const _optionFlags = <String>{_forceFlag, _reportFlag, _dryRunFlag};
+const _helpFlag = '--help';
+const _shortHelpFlag = '-h';
+const _optionFlags = <String>{
+  _forceFlag,
+  _reportFlag,
+  _dryRunFlag,
+  _helpFlag,
+  _shortHelpFlag,
+};
+
+String translateArbKeysUsage() {
+  return 'Usage: dart run tool/translate_arb_keys.dart '
+      '[--force] [--report|--dry-run] <key> [<key> ...]';
+}
+
+bool isTranslateArbKeysHelpRequest(List<String> arguments) {
+  return arguments.contains(_helpFlag) || arguments.contains(_shortHelpFlag);
+}
 
 Future<void> main(List<String> arguments) async {
+  if (isTranslateArbKeysHelpRequest(arguments)) {
+    stdout.writeln(translateArbKeysUsage());
+    return;
+  }
+
   final force = arguments.contains(_forceFlag);
   final reportOnly =
       arguments.contains(_reportFlag) || arguments.contains(_dryRunFlag);
@@ -17,10 +39,7 @@ Future<void> main(List<String> arguments) async {
       .toList();
 
   if (keys.isEmpty) {
-    stderr.writeln(
-      'Usage: dart run tool/translate_arb_keys.dart '
-      '[--force] [--report|--dry-run] <key> [<key> ...]',
-    );
+    stderr.writeln(translateArbKeysUsage());
     exitCode = 64;
     return;
   }
