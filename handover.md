@@ -11553,3 +11553,50 @@
 ### Sonraki Adim
 - Adhan scheduler icinde gunluk notification id uretiminin past-prayer skip ile cakisip cakismadigi incelenecek.
 - L10n technical/proper noun token taramasi, config/env anahtarlari ve provider adlari icin genisletilecek.
+
+## 2026-04-17 TUR-281 — Keep Adhan Notification IDs Stable Across Past-Prayer Skips
+
+### Yapilan Islem
+- `AdhanSchedulerService._scheduleDailyEvents` icinde notification id hesaplama sirasi sabitlendi.
+- Gecmis namaz vakti skip edilmeden once daily `prayerIndex` artik ilerletiliyor.
+- Böylece ayni gun icinde Fajr/Dhuhr/Asr/Maghrib/Isha slotlari skip durumuna gore sikismiyor; her vakit kendi sabit notification id slotunu koruyor.
+- Kaynak guard testi, eski `id: adhanNotificationId(dayIndex, prayerIndex++)` deseninin geri gelmesini engelleyecek sekilde eklendi.
+
+### Kanit
+- Id hesaplama skip kontrolunden once: `A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart:126`
+- Index advance skip kontrolunden once: `A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart:127`
+- Past-prayer skip noktasi: `A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart:128`
+- Stable id kullanimi: `A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart:140`
+- Regression testi: `A:\Way of Allah\sirat_i_nur\test\notification_service_guard_test.dart:52`
+- Eski sikistiran id desenini engelleyen guard: `A:\Way of Allah\sirat_i_nur\test\notification_service_guard_test.dart:78`
+
+### Neden Yapildi
+- Eski akis sadece schedule edilen kayitlarda `prayerIndex++` yaptigi icin bugunku gecmis vakitler atlandiginda kalan notification id'leri namaz sirasi ile eslesmiyordu.
+- Cancel loop genis id araligini temizledigi icin bu P0 degildi; ancak deterministic notification id sozlesmesini zayiflatip future maintenance/test aciklari birakiyordu.
+- Cozum yeni dini hesaplama veya yeni servis davranisi eklemedi; sadece mevcut id slot sozlesmesini skip durumlarinda da korudu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\adhan_scheduler_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\notification_service_guard_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Format: `dart format lib\core\services\adhan_scheduler_service.dart test\notification_service_guard_test.dart` PASS
+- Odak test: `flutter test test\notification_service_guard_test.dart` PASS (`3/3`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`494/494`)
+
+### Risk Degisimi
+- Past-prayer skip sonrasi gunluk notification id'lerinin namaz slotundan kopmasi riski: `8/25 -> 1/25`
+- Scheduler id sozlesmesinin ileride tekrar sikistirilmasi riski: `6/25 -> 1/25`
+
+### Rollback Plani
+- `notificationId` ara degiskeni kaldirilir ve `id: adhanNotificationId(dayIndex, prayerIndex++)` eski haline dondurulur.
+- `notification_service_guard_test.dart` icindeki stable id regression testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- L10n technical/proper noun token taramasi, config/env anahtarlari ve provider adlari icin genisletilecek.
+- Prayer/timezone DST edge-case testleri icinde scheduler date iteration davranisi tekrar incelenecek.

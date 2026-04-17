@@ -123,6 +123,8 @@ class AdhanSchedulerService {
     final normalizedLanguageCode = languageCode.trim();
 
     for (var entry in dailyPrayers.entries) {
+      final notificationId = adhanNotificationId(dayIndex, prayerIndex);
+      prayerIndex++;
       if (entry.value.isBefore(now)) continue;
 
       final title = PrayerLocalizer.notificationTitle(
@@ -135,7 +137,7 @@ class AdhanSchedulerService {
       );
 
       await _notifications.zonedSchedule(
-        id: adhanNotificationId(dayIndex, prayerIndex++),
+        id: notificationId,
         title: title,
         body: body,
         scheduledDate: TimezoneUtils.toTZDateTime(entry.value, timezoneName),

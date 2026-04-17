@@ -47,4 +47,36 @@ void main() {
     expect(AdhanSchedulerService.adhanNotificationId(1, 0), 10);
     expect(AdhanSchedulerService.adhanNotificationId(29, 4), 294);
   });
+
+  test(
+    'adhan scheduler keeps stable prayer ids when past times are skipped',
+    () {
+      final source = File(
+        'lib/core/services/adhan_scheduler_service.dart',
+      ).readAsStringSync();
+
+      final idBeforeSkip = source.indexOf(
+        'final notificationId = adhanNotificationId(dayIndex, prayerIndex);',
+      );
+      final incrementBeforeSkip = source.indexOf(
+        'prayerIndex++;',
+        idBeforeSkip,
+      );
+      final pastPrayerSkip = source.indexOf(
+        'if (entry.value.isBefore(now)) continue;',
+        idBeforeSkip,
+      );
+
+      expect(idBeforeSkip, isNonNegative);
+      expect(incrementBeforeSkip, isNonNegative);
+      expect(pastPrayerSkip, isNonNegative);
+      expect(idBeforeSkip, lessThan(pastPrayerSkip));
+      expect(incrementBeforeSkip, lessThan(pastPrayerSkip));
+      expect(source, contains('id: notificationId'));
+      expect(
+        source,
+        isNot(contains('id: adhanNotificationId(dayIndex, prayerIndex++)')),
+      );
+    },
+  );
 }
