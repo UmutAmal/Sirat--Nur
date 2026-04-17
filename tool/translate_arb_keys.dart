@@ -730,7 +730,10 @@ const _knownWeakDownloadActionCandidates = [
   'Yuklab olish',
 ];
 
-const _knownGeneralTranslationDebris = ['Ukax mä juk’a pachanakanwa'];
+const _knownGeneralTranslationDebris = [
+  'Ukax mä juk’a pachanakanwa',
+  'ukax mä juk’a pachanakanwa',
+];
 
 const _knownQuranAudioSourceStatusDebris = [
   'Refresh cloud seed',

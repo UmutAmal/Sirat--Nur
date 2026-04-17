@@ -18,13 +18,13 @@ class AppLocalizationsAy extends AppLocalizations {
   String get home => 'Uta';
 
   @override
-  String get quran => 'Quran ukax mä juk’a pachanakanwa';
+  String get quran => 'Quran';
 
   @override
   String get qibla => 'Qibla';
 
   @override
-  String get zikr => 'Zikr ukax mä juk’a pachanakanwa';
+  String get zikr => 'Zikr';
 
   @override
   String get calendar => 'Calendario ukat juk’ampinaka';
@@ -213,7 +213,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get translation => 'Jaqukipaña';
 
   @override
-  String get tafsir => 'Tafsir ukax mä juk’a pachanakanwa';
+  String get tafsir => 'Tafsir';
 
   @override
   String get tafsirLoading => 'Ukax tafsir...';

@@ -2167,14 +2167,28 @@ void main() {
 
     test('Aymara active navigation copy avoids known machine debris', () {
       final arb = _readArb('lib/l10n/app_ay.arb');
-      const activeKeys = ['settings', 'page', 'downloads', 'downloadAction'];
+      const activeKeys = [
+        'quran',
+        'zikr',
+        'settings',
+        'page',
+        'tafsir',
+        'downloads',
+        'downloadAction',
+      ];
+      const staleFragments = [
+        'Ukax mä juk’a pachanakanwa',
+        'ukax mä juk’a pachanakanwa',
+      ];
 
       for (final key in activeKeys) {
-        expect(
-          arb[key],
-          isNot(contains('Ukax mä juk’a pachanakanwa')),
-          reason: 'app_ay.arb has known machine debris for $key',
-        );
+        for (final fragment in staleFragments) {
+          expect(
+            arb[key],
+            isNot(contains(fragment)),
+            reason: 'app_ay.arb has known machine debris for $key',
+          );
+        }
       }
     });
 

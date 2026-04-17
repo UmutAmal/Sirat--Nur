@@ -776,8 +776,16 @@ void main() {
         candidate: 'Ukax mä juk’a pachanakanwa',
       );
 
+      final quranValue = resolveTranslatedArbValue(
+        key: 'quran',
+        source: 'Quran',
+        currentValue: 'Quran ukax mä juk’a pachanakanwa',
+        candidate: 'Quran ukax mä juk’a pachanakanwa',
+      );
+
       expect(settingsValue, 'Settings');
       expect(pageValue, 'Page');
+      expect(quranValue, 'Quran');
     });
 
     test('rejects wrong-context splash tagline output', () {

@@ -15333,3 +15333,47 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; Aymara'daki kalan `ukax...`/`juk’a pachanakanwa` debris izleri aktif UI kullanimina gore risk skorlanacak ve bir sonraki en yuksek riskli dar patch uygulanacak.
+
+## 2026-04-17 TUR-352 - Aymara Canonical Quran/Zikr/Tafsir Labels Cleaned
+
+### MASTER Karari
+- Risk: Aymara locale'de alt navigasyon ve appbar uzerinde aktif dini-kanonik etiketler `Quran ukax mä juk’a pachanakanwa`, `Zikr ukax mä juk’a pachanakanwa`, `Tafsir ukax mä juk’a pachanakanwa` olarak gorunuyordu.
+- Kanit: `lib/l10n/app_ay.arb:5`, `lib/l10n/app_ay.arb:7`, `lib/l10n/app_ay.arb:65`; generated runtime karsiliklari `lib/l10n/app_localizations_ay.dart:21`, `lib/l10n/app_localizations_ay.dart:27`, `lib/l10n/app_localizations_ay.dart:216`.
+- Aktif kullanim: `lib/features/common/main_skeleton.dart:57` `l10n.quran`, `lib/features/common/main_skeleton.dart:67` `l10n.zikr`, `lib/features/quran/quran_page.dart:75` `l10n.quran`, `lib/features/zikr/zikr_page.dart:64` `l10n.zikr`, `lib/features/quran/tafsir_page.dart:18` `l10n.tafsir`.
+- Kok neden: Aymara otomatik ceviri ciktisi kanonik terimi korumak yerine anlamsiz aciklama kuyrugu eklemisti; bu tur dini proper-noun/terimlerde uydurma yerel karsilik risklidir.
+- Etki: Ana ibadet/okuma navigasyonu kullaniciya sacma ve yanlis baglamli gorunuyor, dini uygulama guvenilirligini zedeliyor.
+- Olasilik: Bu etiketler app acilisindan itibaren bottom nav/appbar'da gorunuyor.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 (P1).
+- Rollback kapsami: `lib/l10n/app_ay.arb`, `lib/l10n/app_localizations_ay.dart`, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/arb_ui_localization_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `lib/l10n/app_ay.arb:5`, `lib/l10n/app_ay.arb:7`, `lib/l10n/app_ay.arb:65` kanonik terime cekildi: `Quran`, `Zikr`, `Tafsir`.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_ay.dart:21`, `lib/l10n/app_localizations_ay.dart:27`, `lib/l10n/app_localizations_ay.dart:216` senkronlandi.
+- `tool/translate_arb_keys.dart:733` genel debris listesine lowercase `ukax mä juk’a pachanakanwa` kalibi eklendi; boylece prefixed kanonik terim + debris adaylari da reddediliyor.
+
+### TESTER Kapsami
+- `test/translate_arb_keys_test.dart:764` `Quran ukax mä juk’a pachanakanwa` current/candidate degerinin reddedilip `Quran` fallback'e dondugunu dogruluyor.
+- `test/arb_ui_localization_test.dart:2168` Aymara aktif navigation listesine `quran`, `zikr`, `tafsir` eklendi ve uppercase/lowercase debris fragmentleri yasaklandi.
+- Manuel tarama: `rg -n "(Quran|Zikr|Tafsir) ukax mä juk’a pachanakanwa" lib\l10n\app_ay.arb lib\l10n\app_localizations_ay.dart` eslesme dondurmedi.
+- Debt raporu: `dart run tool\translate_arb_keys.dart --report quran zikr tafsir` same-as-English `381`, missing/empty `0`, placeholder mismatch `0`. Aymara bu uc kanonik terimde EN fallback olarak kaldi; sahte ceviri uretilmedi.
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart` PASS
+- L10n generate: `flutter gen-l10n` PASS
+- Odak testler: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS (`48/48`), `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS (`74/74`), `flutter test test\arb_coverage_test.dart --reporter compact` PASS (`4/4`)
+- Diff hijyeni: `git diff --check` PASS; yalniz Windows CRLF uyarilari goruldu, whitespace hatasi yok.
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`578/578`)
+
+### Risk Degisimi
+- Aymara core Quran/Zikr/Tafsir etiketlerinde makine ceviri enkazi riski: `16/25 -> 2/25`
+- Kalan risk: Aymara'da diger aktif UI keys icin `ukax`/`pachanakanwa` izleri devam ediyor (`loading`, `downloading`, `maghrib`, `analytics`, `ibadahTracker`, `liveTv`, settings/diagnostics copy vb.). Sonraki turda en yuksek aktif kullanici etkisine gore ayrica ele alinacak.
+
+### Rollback Plani
+- `quran`, `zikr`, `tafsir` Aymara ARB/generated degerleri onceki commit'e dondurulur.
+- Lowercase debris guard'i ve test genisletmeleri revert edilir.
+- Handover append-only oldugu icin silinmez; revert gerekirse yeni tur olarak kaydedilir.
+- `flutter gen-l10n`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; kalan Aymara aktif UI debris tablosundan bir sonraki risk olarak `loading`/`downloading` status metinleri veya `maghrib` prayer label secilecek.
