@@ -544,6 +544,41 @@ void main() {
       expect(onboardingValue, 'Reset Onboarding');
     });
 
+    test('rejects known mixed-language download translations', () {
+      final completeValue = resolveTranslatedArbValue(
+        key: 'downloadComplete',
+        source: 'Download Complete',
+        currentValue: 'Download Complete',
+        candidate: 'Télécharger Complete',
+      );
+
+      final failedValue = resolveTranslatedArbValue(
+        key: 'downloadFailed',
+        source: 'Download Failed',
+        currentValue: 'Falha ao baixar',
+        candidate: 'Téléchargement Failed',
+      );
+
+      final managerValue = resolveTranslatedArbValue(
+        key: 'downloadManager',
+        source: 'Download Manager',
+        currentValue: 'Download Manager',
+        candidate: 'Télécharger Manager (Téléchargement Manager).',
+      );
+
+      final deleteValue = resolveTranslatedArbValue(
+        key: 'deleteDownloadedFiles',
+        source: 'Delete Downloaded Files',
+        currentValue: '',
+        candidate: 'Fichier Téléchargées (Filew Téléchargements) Bɔ',
+      );
+
+      expect(completeValue, 'Download Complete');
+      expect(failedValue, 'Falha ao baixar');
+      expect(managerValue, 'Download Manager');
+      expect(deleteValue, 'Delete Downloaded Files');
+    });
+
     test('rejects multiline diagnostics output', () {
       final labelValue = resolveTranslatedArbValue(
         key: 'diagnostics',

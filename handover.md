@@ -10997,3 +10997,58 @@
 ### Sonraki Adim
 - Dua/library audio UI yuzeyleri ayni "bos olmayan external audioUrl oynatilabilir gorunuyor mu" riski icin taranacak.
 - Runtime medya pipeline'inda Supabase-backed olmayan ses gecisleri icin UI, servis ve test katmani birlikte dogrulanacak.
+
+## 2026-04-17 TUR-270 — Guard Translation Batch Against Mixed Download Debris
+
+### Yapilan Islem
+- Repo, branch ve remote dogrulandi: `master`, `origin https://github.com/UmutAmal/Sirat--Nur.git`.
+- Onceki otomatik download/diagnostics/chatbot ceviri batch denemesinde gorulen kotu karisik dil ciktisi uygulamaya alinmadi; calisma agaci diff'siz hale getirildi.
+- `tool/translate_arb_keys.dart` icinde download copy anahtarlari icin bilinen karisik dil/debris adaylari reddedilecek hale getirildi.
+- `test/translate_arb_keys_test.dart` kotu adaylarin kaynak veya mevcut guvenli ceviriye dusmesini dogrulayan regresyon testiyle genisletildi.
+- `test/arb_coverage_test.dart` tum ARB dosyalarinda ayni debris parcalarini yakalayacak genel guard ile genisletildi.
+
+### Kanit
+- Patch oncesi risk: `tool/translate_arb_keys.dart` icinde `resolveTranslatedArbValue` yalniz placeholder, multiline ve birkac wrong-context kontrolu yapiyordu; `Télécharger Complete`, `Téléchargement Failed`, `Télécharger Manager (Téléchargement Manager).` gibi adaylar placeholder icermedigi ve tek satir oldugu icin kabul edilebilir durumdaydi.
+- Patch sonrasi download debris reddi:
+  `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:407`,
+  `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:417`.
+- Guard:
+  `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:547`,
+  `A:\Way of Allah\sirat_i_nur\test\arb_coverage_test.dart:100`,
+  `A:\Way of Allah\sirat_i_nur\test\arb_coverage_test.dart:181`.
+
+### Neden Yapildi
+- Translation Engine tum locale'leri kapsamali, fakat kotu veya karisik makine cevirisi dini/urun metni icin kabul edilemez.
+- Bu turda 180+ ARB dosyasina yeni otomatik ceviri basmak yerine once batch aracinin kalite kapisi sertlestirildi; boylece ileride tum-dil onarimi tekrar denenirken ayni bilinen debris uygulamaya sizamaz.
+- Kullanici "sacma yazilar bulunmasin" uyarisi verdigi icin kalite esigi gecmeyen ceviri batch'i commit edilmedi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_coverage_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Baseline: `flutter doctor -v` Android/test hattinda PASS; Chrome ve Visual Studio eksikleri web/Windows hedefleri icin non-blocking.
+- Baseline: `flutter analyze` PASS (`No issues found!`)
+- Baseline: `flutter test --reporter compact` PASS (`479/479`)
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart --reporter compact` PASS (`34/34`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- Final: `flutter analyze` PASS (`No issues found!`)
+- Final full test: `flutter test --reporter compact` PASS (`480/480`)
+
+### Risk Degisimi
+- Bilinen karisik download ceviri adayinin ARB'ye sizma riski: `16/25 -> 3/25`
+- ARB batch debris regresyonunun testte yakalanmama riski: `12/25 -> 3/25`
+- Kalan tum-locale English fallback borcu: `16/25 -> 16/25` (bilerek ceviri basilmadi; sonraki tur kaynak/kalite guvenceli batch stratejisi gerektirir)
+
+### Rollback Plani
+- `_isDownloadCopyKey` ve `_knownDownloadTranslationDebris` helper'lari kaldirilir.
+- `translate_arb_keys_test.dart` icindeki mixed-language download testi geri alinir.
+- `arb_coverage_test.dart` icindeki `_translationBatchFragments` kontrolu geri alinir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- L10n borcu icin once quality gate genisletilecek: download/diagnostics/chatbot/splash/premium gibi runtime kopyalarda ayni-ingilizce kalan locale'ler raporlanacak, fakat kaynak kalite esigi gecmeyen otomatik ceviri commit edilmeyecek.
+- Section 13 kapsaminda Supabase-backed olmayan runtime medya gecisleri ve dua/library audio UI tekrar taranmaya devam edecek.

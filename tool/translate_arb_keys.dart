@@ -403,8 +403,29 @@ bool _hasKnownWrongContext(String key, String value) {
     return _containsAny(value, const ['Prämie', '保费', 'قسط']);
   }
 
+  if (_isDownloadCopyKey(key)) {
+    return _containsAny(value, _knownDownloadTranslationDebris);
+  }
+
   return false;
 }
+
+bool _isDownloadCopyKey(String key) {
+  return key.toLowerCase().contains('download');
+}
+
+const _knownDownloadTranslationDebris = [
+  'Telecharger Complete',
+  'Telechargement Failed',
+  'Telecharger Manager',
+  'Telechargement Manager',
+  'Télécharger Complete',
+  'Téléchargement Failed',
+  'Télécharger Manager',
+  'Téléchargement Manager',
+  'Fichier Téléchargées',
+  'Filew Téléchargements',
+];
 
 bool _isPremiumSubscriptionKey(String key) {
   return key == 'recheckPremium' ||

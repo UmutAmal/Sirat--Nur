@@ -97,6 +97,16 @@ void main() {
             );
           }
 
+          for (final debris in _translationBatchFragments) {
+            expect(
+              normalized.contains(debris),
+              isFalse,
+              reason:
+                  '${file.path} contains translation batch debris in "$key": '
+                  '$normalized',
+            );
+          }
+
           expect(
             _hasRepeatedWordRun(normalized),
             isFalse,
@@ -166,6 +176,19 @@ const _translationBatchDebris = {
   'के लिये।\n',
   'इति .\n',
   'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\n',
+};
+
+const _translationBatchFragments = {
+  'Telecharger Complete',
+  'Telechargement Failed',
+  'Telecharger Manager',
+  'Telechargement Manager',
+  'Télécharger Complete',
+  'Téléchargement Failed',
+  'Télécharger Manager',
+  'Téléchargement Manager',
+  'Fichier Téléchargées',
+  'Filew Téléchargements',
 };
 
 bool _hasRepeatedWordRun(String value) {
