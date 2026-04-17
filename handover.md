@@ -11267,3 +11267,51 @@
 ### Sonraki Adim
 - `sync_variant_arb_fallbacks.dart` icin benzer no-op write guard ve source-quality guard'i incelenecek.
 - L10n report ciktilari kullanilarak download/diagnostics/chatbot key'leri icin kaliteli ve kucuk ceviri batch planina gecilecek.
+
+## 2026-04-17 TUR-275 — Guard Variant Locale Fallback Sync
+
+### Yapilan Islem
+- `tool/sync_variant_arb_fallbacks.dart` artik sibling source locale degerini target locale'e kopyalamadan once degerin bos olmadigini, beklenmeyen multiline icermedigini ve placeholder setinin English template ile uyumlu oldugunu dogruluyor.
+- Variant fallback sync artik her calismada hedef ARB dosyasini yazmiyor; line-ending normalize edilmis icerik gercekten degistiyse yaziyor.
+- `test/arb_variant_fallback_sync_test.dart` unsafe source fallback ve no-op write regresyon testleriyle genisletildi.
+
+### Kanit
+- Plan helper: `A:\Way of Allah\sirat_i_nur\tool\sync_variant_arb_fallbacks.dart:46`
+- Safe source guard: `A:\Way of Allah\sirat_i_nur\tool\sync_variant_arb_fallbacks.dart:84`
+- No-op write guard: `A:\Way of Allah\sirat_i_nur\tool\sync_variant_arb_fallbacks.dart:99`
+- Placeholder match helper: `A:\Way of Allah\sirat_i_nur\tool\sync_variant_arb_fallbacks.dart:112`
+- Plan modeli: `A:\Way of Allah\sirat_i_nur\tool\sync_variant_arb_fallbacks.dart:139`
+- Unsafe source testi: `A:\Way of Allah\sirat_i_nur\test\arb_variant_fallback_sync_test.dart:54`
+- No-op write testi: `A:\Way of Allah\sirat_i_nur\test\arb_variant_fallback_sync_test.dart:83`
+
+### Neden Yapildi
+- Onceki script sadece `targetValue == englishValue && sourceValue != englishValue` kosuluyla source degeri kopyaliyordu; source placeholder kaybetmisse veya beklenmeyen multiline icermisse variant locale'e bozuk runtime copy yayilabilirdi.
+- Variant sync araci ayrica her calismada hedef dosyalari yaziyordu; bu da genis ARB review gurultusu ve gereksiz dirty status riski uretiyordu.
+- Cozum ceviri uretmez; sadece var olan sibling locale kopyalama akisini guvenli hale getirir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\sync_variant_arb_fallbacks.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_variant_fallback_sync_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Format: `dart format tool\sync_variant_arb_fallbacks.dart test\arb_variant_fallback_sync_test.dart` PASS
+- Odak test: `flutter test test\arb_variant_fallback_sync_test.dart --reporter compact` PASS (`3/3`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`489/489`)
+
+### Risk Degisimi
+- Variant locale'e bozuk placeholder/empty/multiline fallback yayma riski: `12/25 -> 3/25`
+- Variant sync ile gereksiz ARB dosya churn riski: `10/25 -> 2/25`
+- Tum-locale gercek ceviri borcu: `16/25 -> 16/25` (bu tur sadece sync guard eklendi)
+
+### Rollback Plani
+- `buildVariantFallbackPlan`, `isSafeVariantFallbackValue`, no-op write helper'lari ve yeni testler kaldirilir.
+- Script onceki dogrudan source-to-target kopyalama ve her calismada write davranisina dondurulur.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- L10n report moduyla tespit edilen same-as-English download/diagnostics/chatbot locale borcu kucuk, reviewed ve kalite kapili batch'lere ayrilacak.
+- Runtime media/audio pipeline taramasi tekrar yapilarak external-only source kabul eden yeni bir yuzey kalip kalmadigi dogrulanacak.
